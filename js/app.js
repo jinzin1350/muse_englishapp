@@ -80,13 +80,41 @@ function initOneSignal() {
   } catch (e) { /* push optional */ }
 }
 
-async function promptPush() {
+async function promptPush(btn) {
+  const statusEl = document.getElementById('push-status');
+  const setStatus = function (t) { if (statusEl) statusEl.textContent = t; };
   try {
-    if (typeof window.OneSignalDeferred === 'undefined') return;
-    window.OneSignalDeferred.push(async function (OneSignal) {
-      try { await OneSignal.Slidedown.promptPush(); } catch (e) {}
+    if (!oneSignalReady()) { setStatus('Push is not configured on this site yet.'); return; }
+    if (btn) { btn.disabled = true; btn.textContent = 'Enabling…'; }
+    setStatus('Waiting for the browser permission prompt…');
+    const outcome = await new Promise(function (resolve) {
+      try {
+        window.OneSignalDeferred.push(async function (OneSignal) {
+          try {
+            await OneSignal.Notifications.requestPermission();
+            resolve(OneSignal.Notifications.permission === true ? 'granted' : 'denied');
+          } catch (e) { resolve('error: ' + (e && e.message || e)); }
+        });
+      } catch (e) { resolve('error: ' + (e && e.message || e)); }
+      setTimeout(function () { resolve('timeout'); }, 15000);
     });
-  } catch (e) {}
+    if (outcome === 'granted') {
+      setStatus('✓ Notifications are on — you’ll get a short note when each lesson is ready.');
+      if (btn) btn.style.display = 'none';
+    } else if (outcome === 'denied') {
+      setStatus('Permission was not granted. Allow notifications in the browser’s site settings, then try again.');
+      if (btn) { btn.disabled = false; btn.textContent = 'Enable notifications'; }
+    } else if (outcome === 'timeout') {
+      setStatus('The browser didn’t answer the permission prompt. Try again.');
+      if (btn) { btn.disabled = false; btn.textContent = 'Enable notifications'; }
+    } else {
+      setStatus('Couldn’t enable notifications (' + outcome.replace('error: ', '') + '). In your OneSignal dashboard, check Settings → Push & In-App → Web: the Site URL must be exactly https://muse-englishapp.pages.dev');
+      if (btn) { btn.disabled = false; btn.textContent = 'Enable notifications'; }
+    }
+  } catch (e) {
+    setStatus('Couldn’t enable notifications.');
+    if (btn) { btn.disabled = false; btn.textContent = 'Enable notifications'; }
+  }
 }
 
 function oneSignalReady() {
@@ -488,6 +516,7 @@ function renderHome(v) {
 
   if (oneSignalReady() && !state.user.demo) {
     html += '<div class="card plain"><b>🔔 Lesson notifications</b><p class="muted">Get a short notification when your daily lesson is ready.</p>' +
+      '<p class="muted" id="push-status"></p>' +
       '<button class="btn btn-sm" data-action="enable-push">Enable notifications</button></div>';
   }
 
@@ -902,7 +931,7 @@ function bindEvents() {
       if (lsGet('mistakes').length) startQuiz('mistakes');
       else show('mistakes');
     }
-    else if (a === 'enable-push') promptPush();
+    else if (a === 'enable-push') promptPush(t);
   });
 
   $('#view').addEventListener('change', function (e) {
