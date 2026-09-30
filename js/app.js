@@ -425,6 +425,29 @@ function refreshTrackCards() {
   });
 }
 
+function toggleTranscript(btn) {
+  const card = btn.closest('[data-audio-card]');
+  const panel = card && card.querySelector('.transcript-panel');
+  if (!panel) return;
+  if (panel.classList.contains('hidden')) {
+    panel.classList.remove('hidden');
+    btn.textContent = '📝 Hide transcript';
+    if (!panel.dataset.loaded) {
+      panel.textContent = 'Loading transcript…';
+      fetch(btn.getAttribute('data-transcript')).then(function (r) {
+        if (!r.ok) throw new Error('http ' + r.status);
+        return r.text();
+      }).then(function (t) {
+        panel.dataset.loaded = '1';
+        panel.innerHTML = '<p>' + esc(t.trim()).replace(/\n\s*\n/g, '</p><p>').replace(/\n/g, '<br>') + '</p>';
+      }).catch(function () { panel.textContent = 'Could not load the transcript.'; });
+    }
+  } else {
+    panel.classList.add('hidden');
+    btn.textContent = '📝 Transcript';
+  }
+}
+
 function playTrack(src, title) {
   if (!src) return;
   if (player.src === src) {
@@ -460,10 +483,13 @@ async function audioAvailable(url) {
 
 /* Render an audio card. Wires itself after insertion. */
 function audioCardHTML(o) {
-  // o: { id, src, title, sub, cover, speeds:boolean, download:boolean }
+  // o: { id, src, title, sub, cover, speeds:boolean, download:boolean, transcript:url }
   const speeds = o.speeds ? [0.75, 1, 1.25, 1.5].map(function (r) {
     return '<button class="speed-btn" data-action="speed" data-rate="' + r + '">' + r + 'x</button>';
   }).join('') : '';
+  const transcriptBtn = o.transcript
+    ? '<button class="btn btn-ghost btn-sm" data-action="toggle-transcript" data-transcript="' + esc(o.transcript) + '">📝 Transcript</button>'
+    : '';
   return '' +
   '<div class="card audio-card" data-audio-card data-src="' + esc(o.src) + '" id="' + esc(o.id) + '">' +
     '<div class="audio-top">' +
@@ -479,7 +505,9 @@ function audioCardHTML(o) {
     '<div class="audio-actions">' +
       (speeds ? '<div class="speed-row">' + speeds + '</div>' : '') +
       (o.download ? '<a class="btn btn-ghost btn-sm" href="' + esc(o.src) + '" download>⬇ Download</a>' : '') +
+      transcriptBtn +
     '</div>' +
+    '<div class="transcript-panel hidden"></div>' +
     '<div class="coming-soon hidden">🎵 Audio is coming soon — it will appear here automatically once published.</div>' +
   '</div>';
 }
@@ -875,7 +903,7 @@ function podcastTabHTML(m) {
       id: 'card-podcast', src: m.podcast.audio,
       title: m.podcast.title || 'Word Kitchen',
       sub: 'Podcast episode', cover: m.podcast.cover,
-      speeds: false, download: true
+      speeds: false, download: true, transcript: m.podcast.transcript || null
     });
   }
   if (m.pronunciation_audio) {
@@ -898,7 +926,7 @@ function shadowingTabHTML(m) {
       id: 'card-shadow', src: m.shadowing.audio,
       title: m.shadowing.title || 'Shadowing story',
       sub: 'Read twice · adjust speed below',
-      speeds: true, download: true
+      speeds: true, download: true, transcript: m.shadowing.transcript || null
     });
 }
 
@@ -935,15 +963,15 @@ function grammarTabHTML(m) {
     ? '<div class="quiz-cta"><p class="quiz-cta-text">Ready to test yourself?</p>' +
       '<button class="btn btn-block" data-action="quiz-start" data-kind="grammar">Start grammar quiz · ' + g.quiz.length + ' questions</button></div>'
     : '';
-  // Persian voice explanation (A1/A2 only)
-  const faAudio = (m.level === 'a1' || m.level === 'a2') && g.fa_audio
-    ? audioCardHTML({ id: 'grammar-fa-' + m.date, src: g.fa_audio,
-        title: '🎧 توضیح فارسی گرامر', sub: 'Grammar explained in Persian', speeds: true, download: true })
+  // Simple slow English grammar explanation (A1/A2 only)
+  const enAudio = (m.level === 'a1' || m.level === 'a2') && g.audio
+    ? audioCardHTML({ id: 'grammar-en-' + m.date, src: g.audio,
+        title: '🎧 Grammar explained simply', sub: 'Slow and easy English', speeds: true, download: true })
     : '';
   return '<div class="grammar-page"><div class="grammar-hero"><span class="hero-kicker">📖 Grammar of the day</span>' +
     '<h2 class="hero-title">' + esc(g.title || 'Grammar') + '</h2>' +
     '<span class="hero-badge">' + esc(levelLabel(m.level)) + '</span></div>' +
-    faAudio +
+    enAudio +
     (paras ? '<div class="section-kicker">The rules</div>' + paras : '') +
     (examples ? '<div class="section-kicker">Examples</div>' + examples : '') +
     (practice ? '<div class="section-kicker">Quick practice</div>' + practice : '') +
@@ -1178,6 +1206,7 @@ function bindEvents() {
       renderLessonTab($('#lesson-body'));
     }
     else if (a === 'play-track') playTrack(t.getAttribute('data-src'), t.getAttribute('data-title'));
+    else if (a === 'toggle-transcript') toggleTranscript(t);
     else if (a === 'speed') { player.el.playbackRate = parseFloat(t.getAttribute('data-rate')); refreshTrackCards(); }
     else if (a === 'quiz-start') startQuiz(t.getAttribute('data-kind'));
     else if (a === 'quiz-opt') answerQuiz(parseInt(t.getAttribute('data-idx'), 10));

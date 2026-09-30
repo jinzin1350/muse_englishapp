@@ -209,11 +209,13 @@
   "podcast": {
     "title": "Word Kitchen: Travel & Holidays",
     "audio": "media/b1/2026-09-30/podcast.mp3",
-    "cover": null
+    "cover": null,
+    "transcript": "media/b1/2026-09-30/podcast-transcript.txt"
   },
   "shadowing": {
     "title": "Shadowing: A Holiday Journey",
-    "audio": "media/b1/2026-09-30/shadowing.mp3"
+    "audio": "media/b1/2026-09-30/shadowing.mp3",
+    "transcript": "media/b1/2026-09-30/shadowing-transcript.txt"
   },
   "quiz": [
     {

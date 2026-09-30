@@ -159,11 +159,13 @@
   "podcast": {
     "title": "Word Kitchen: Daily Routines",
     "audio": "media/a2/2026-09-30/podcast.mp3",
-    "cover": null
+    "cover": null,
+    "transcript": "media/a2/2026-09-30/podcast-transcript.txt"
   },
   "shadowing": {
     "title": "My Busy Day",
-    "audio": "media/a2/2026-09-30/shadowing.mp3"
+    "audio": "media/a2/2026-09-30/shadowing.mp3",
+    "transcript": "media/a2/2026-09-30/shadowing-transcript.txt"
   },
   "quiz": [
     {
@@ -431,6 +433,6 @@
         "answer": 2
       }
     ],
-    "fa_audio": "media/a2/2026-09-30/grammar-fa.mp3"
+    "audio": "media/a2/2026-09-30/grammar-en.mp3"
   }
 }

@@ -115,13 +115,14 @@
       }
     ],
     "title": "Present simple: I / you / we / they",
-    "fa_audio": "media/a1/2026-09-30/grammar-fa.mp3"
+    "audio": "media/a1/2026-09-30/grammar-en.mp3"
   },
   "level": "a1",
   "podcast": {
     "audio": "media/a1/2026-09-30/podcast.mp3",
     "cover": null,
-    "title": "Word Kitchen: My Home"
+    "title": "Word Kitchen: My Home",
+    "transcript": "media/a1/2026-09-30/podcast-transcript.txt"
   },
   "pronunciation_audio": "media/a1/2026-09-30/pronunciation.mp3",
   "quiz": [
@@ -248,7 +249,8 @@
   ],
   "shadowing": {
     "audio": "media/a1/2026-09-30/shadowing.mp3",
-    "title": "Shadowing: My Home"
+    "title": "Shadowing: My Home",
+    "transcript": "media/a1/2026-09-30/shadowing-transcript.txt"
   },
   "theme": "My Home",
   "words": [
