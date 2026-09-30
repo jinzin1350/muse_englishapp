@@ -886,7 +886,13 @@ function bindEvents() {
     else if (a === 'goto') show(t.getAttribute('data-view'));
     else if (a === 'toggle-cats') { state.showAllCats = !state.showAllCats; show('home'); }
     else if (a === 'open-lesson') { state.lessonTab = 'words'; show('lesson', t.getAttribute('data-date')); }
-    else if (a === 'lesson-tab') { state.lessonTab = t.getAttribute('data-tab'); renderLessonTab($('#lesson-body')); }
+    else if (a === 'lesson-tab') {
+      state.lessonTab = t.getAttribute('data-tab');
+      document.querySelectorAll('.lesson-tab').forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-tab') === state.lessonTab);
+      });
+      renderLessonTab($('#lesson-body'));
+    }
     else if (a === 'play-track') playTrack(t.getAttribute('data-src'), t.getAttribute('data-title'));
     else if (a === 'speed') { player.el.playbackRate = parseFloat(t.getAttribute('data-rate')); refreshTrackCards(); }
     else if (a === 'quiz-start') startQuiz(t.getAttribute('data-kind'));
