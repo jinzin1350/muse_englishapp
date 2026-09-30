@@ -1054,7 +1054,6 @@ async function init() {
   bindEvents();
   initSupabase();
   initOneSignal();
-  registerAppWorker();
   playerUI();
 
   if (sb) {
@@ -1064,16 +1063,6 @@ async function init() {
     } catch (e) {}
   }
   show('auth');
-}
-
-/* App's own service worker (PWA install + offline). OneSignal keeps its own worker file. */
-function registerAppWorker() {
-  try {
-    if (!('serviceWorker' in navigator)) return;
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('/sw.js').catch(function () {});
-    });
-  } catch (e) {}
 }
 
 document.addEventListener('DOMContentLoaded', init);
