@@ -3,7 +3,7 @@
    custom-worker pattern): a single root-scope worker, so push keeps working. */
 importScripts('https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js');
 
-const CACHE = 'engapp-v1';
+const CACHE = 'engapp-v2';
 const CORE = [
   '/',
   '/index.html',
@@ -16,9 +16,14 @@ const CORE = [
 ];
 
 self.addEventListener('install', function (e) {
+  // Cache core files, but never let one bad file break worker installation
+  // (a failed install would block OneSignal push subscription entirely).
   e.waitUntil(
-    caches.open(CACHE).then(function (c) { return c.addAll(CORE); })
-      .then(function () { return self.skipWaiting(); })
+    caches.open(CACHE).then(function (c) {
+      return Promise.all(CORE.map(function (url) {
+        return c.add(url).catch(function () { /* ignore single-file failures */ });
+      }));
+    }).then(function () { return self.skipWaiting(); })
   );
 });
 
