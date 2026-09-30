@@ -842,7 +842,7 @@ function renderLessonTab(body) {
   else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); }
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
-  else if (tab === 'grammar') body.innerHTML = grammarTabHTML(m);
+  else if (tab === 'grammar') { body.innerHTML = grammarTabHTML(m); wireAudioCards(body); }
   refreshTrackCards();
 }
 
@@ -935,9 +935,15 @@ function grammarTabHTML(m) {
     ? '<div class="quiz-cta"><p class="quiz-cta-text">Ready to test yourself?</p>' +
       '<button class="btn btn-block" data-action="quiz-start" data-kind="grammar">Start grammar quiz · ' + g.quiz.length + ' questions</button></div>'
     : '';
+  // Persian voice explanation (A1/A2 only)
+  const faAudio = (m.level === 'a1' || m.level === 'a2') && g.fa_audio
+    ? audioCardHTML({ id: 'grammar-fa-' + m.date, src: g.fa_audio,
+        title: '🎧 توضیح فارسی گرامر', sub: 'Grammar explained in Persian', speeds: true, download: true })
+    : '';
   return '<div class="grammar-page"><div class="grammar-hero"><span class="hero-kicker">📖 Grammar of the day</span>' +
     '<h2 class="hero-title">' + esc(g.title || 'Grammar') + '</h2>' +
     '<span class="hero-badge">' + esc(levelLabel(m.level)) + '</span></div>' +
+    faAudio +
     (paras ? '<div class="section-kicker">The rules</div>' + paras : '') +
     (examples ? '<div class="section-kicker">Examples</div>' + examples : '') +
     (practice ? '<div class="section-kicker">Quick practice</div>' + practice : '') +
