@@ -108,6 +108,7 @@ async function promptPush(btn) {
       }
     }
     setStatus('Permission granted — registering this device…');
+    let optInError = null;
     const ok = await new Promise(function (resolve) {
       let done = false;
       const fin = function (v) { if (!done) { done = true; resolve(v); } };
@@ -122,10 +123,14 @@ async function promptPush(btn) {
               } catch (e) {}
               await new Promise(function (r) { setTimeout(r, 500); });
             }
+            try {
+              const s = OneSignal.User.PushSubscription;
+              optInError = 'optedIn=' + (s && s.optedIn) + ' id=' + (s && s.id) + ' perm=' + OneSignal.Notifications.permission;
+            } catch (e) { optInError = String((e && e.message) || e); }
             fin(false);
-          } catch (e) { fin(false); }
+          } catch (e) { optInError = String((e && e.message) || e); fin(false); }
         });
-      } catch (e) { fin(false); }
+      } catch (e) { optInError = String((e && e.message) || e); fin(false); }
       setTimeout(function () { fin(false); }, 16000);
     });
     if (ok) {
@@ -133,7 +138,8 @@ async function promptPush(btn) {
       if (btn) btn.style.display = 'none';
     } else {
       const initErr = window.__osInitError ? ' OneSignal says: ' + window.__osInitError : '';
-      setStatus('Permission is on, but this device did not register. In your OneSignal dashboard check Settings → Push & In-App → Web: the Site URL must be exactly https://muse-englishapp.pages.dev — then tap Enable again.' + initErr);
+      const subDbg = optInError ? ' [' + optInError + ']' : '';
+      setStatus('Permission is on, but this device did not register. In your OneSignal dashboard check Settings → Push & In-App → Web: the Site URL must be exactly https://muse-englishapp.pages.dev — then tap Enable again.' + initErr + subDbg);
       resetBtn();
     }
   } catch (e) {
