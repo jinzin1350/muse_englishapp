@@ -94,6 +94,29 @@ function oneSignalReady() {
   return id && id.indexOf('YOUR-ONESIGNAL') === -1 && typeof window.OneSignalDeferred !== 'undefined';
 }
 
+/* Identify the signed-in user to OneSignal (external ID + level tag),
+   so lesson-ready pushes can later be targeted per level. */
+function identifyPushUser(userId, email, level) {
+  try {
+    if (!oneSignalReady()) return;
+    window.OneSignalDeferred.push(async function (OneSignal) {
+      try {
+        await OneSignal.login(userId);
+        await OneSignal.User.addTags({ level: level || 'pending', email: email || '' });
+      } catch (e) { /* push optional */ }
+    });
+  } catch (e) { /* push optional */ }
+}
+
+function logoutPushUser() {
+  try {
+    if (!oneSignalReady()) return;
+    window.OneSignalDeferred.push(async function (OneSignal) {
+      try { await OneSignal.logout(); } catch (e) {}
+    });
+  } catch (e) {}
+}
+
 /* ---------------- localStorage: scores & mistakes ---------------- */
 function lsKey(kind) {
   const email = state.user ? state.user.email : 'anon';
@@ -370,6 +393,7 @@ async function enterApp() {
   } catch (e) { /* RLS or missing row -> treat as pending */ }
   const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
   state.user = { email: u.email, level: level, isAdmin: isAdmin, demo: false };
+  identifyPushUser(u.id, u.email, level);
   await afterLogin();
 }
 
@@ -383,6 +407,7 @@ async function afterLogin() {
 
 async function doLogout() {
   try { if (sb) await sb.auth.signOut(); } catch (e) {}
+  logoutPushUser();
   state.user = null; state.lessons = []; state.lesson = null; state.adminUsers = [];
   show('auth');
 }
