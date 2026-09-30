@@ -365,14 +365,26 @@ function renderAuth(v) {
     '<h1>Welcome 👋</h1>' +
     '<p class="muted">Sign in to get your daily English lesson.</p>' +
     (configured ?
-      '<div class="field"><label for="auth-email">Email</label>' +
-      '<input id="auth-email" type="email" autocomplete="email" placeholder="you@example.com"></div>' +
-      '<div class="field"><label for="auth-pass">Password</label>' +
-      '<input id="auth-pass" type="password" autocomplete="current-password" placeholder="••••••••"></div>' +
-      '<div class="form-error" id="auth-error"></div>' +
-      '<div class="btn-row">' +
-        '<button class="btn" data-action="login">Sign in</button>' +
-        '<button class="btn btn-ghost" data-action="signup">Create account</button>' +
+      '<div class="auth-pane">' +
+        '<h3>① New here? Create your account</h3>' +
+        '<p class="muted">First time? Start here — pick an email and password.</p>' +
+        '<div class="field"><label for="su-email">Email</label>' +
+        '<input id="su-email" type="email" autocomplete="email" placeholder="you@example.com"></div>' +
+        '<div class="field"><label for="su-pass">Password</label>' +
+        '<input id="su-pass" type="password" autocomplete="new-password" placeholder="Choose a password (min 6 characters)"></div>' +
+        '<div class="form-error" id="su-error"></div>' +
+        '<button class="btn btn-block" data-action="signup">Create account</button>' +
+      '</div>' +
+      '<div class="auth-divider"><span>or</span></div>' +
+      '<div class="auth-pane">' +
+        '<h3>② Already have an account? Sign in</h3>' +
+        '<p class="muted">Created your account before? Enter it here.</p>' +
+        '<div class="field"><label for="li-email">Email</label>' +
+        '<input id="li-email" type="email" autocomplete="email" placeholder="you@example.com"></div>' +
+        '<div class="field"><label for="li-pass">Password</label>' +
+        '<input id="li-pass" type="password" autocomplete="current-password" placeholder="••••••••"></div>' +
+        '<div class="form-error" id="li-error"></div>' +
+        '<button class="btn btn-ghost btn-block" data-action="login">Sign in</button>' +
       '</div>'
     :
       '<div class="coming-soon">🔑 Real login is not connected yet — add your Supabase keys in <b>js/config.js</b> to enable it.</div>' +
@@ -382,32 +394,34 @@ function renderAuth(v) {
   '</div>';
 }
 
-async function authError(msg) {
-  const el = $('#auth-error');
+function paneError(id, msg) {
+  const el = document.getElementById(id);
   if (el) el.textContent = msg;
 }
 
 async function doLogin() {
-  const email = $('#auth-email').value.trim();
-  const pass = $('#auth-pass').value;
-  if (!email || !pass) { authError('Enter your email and password.'); return; }
+  const email = document.getElementById('li-email').value.trim();
+  const pass = document.getElementById('li-pass').value;
+  if (!email || !pass) { paneError('li-error', 'Enter your email and password.'); return; }
+  paneError('li-error', '');
   try {
     const { error } = await sb.auth.signInWithPassword({ email: email, password: pass });
     if (error) throw error;
     await enterApp();
-  } catch (e) { authError(e.message || 'Sign in failed.'); }
+  } catch (e) { paneError('li-error', e.message || 'Sign in failed.'); }
 }
 
 async function doSignup() {
-  const email = $('#auth-email').value.trim();
-  const pass = $('#auth-pass').value;
-  if (!email || !pass) { authError('Enter your email and password.'); return; }
-  if (pass.length < 6) { authError('Password must be at least 6 characters.'); return; }
+  const email = document.getElementById('su-email').value.trim();
+  const pass = document.getElementById('su-pass').value;
+  if (!email || !pass) { paneError('su-error', 'Enter your email and password.'); return; }
+  if (pass.length < 6) { paneError('su-error', 'Password must be at least 6 characters.'); return; }
+  paneError('su-error', '');
   try {
     const { error } = await sb.auth.signUp({ email: email, password: pass });
     if (error) throw error;
     await enterApp();
-  } catch (e) { authError(e.message || 'Sign up failed.'); }
+  } catch (e) { paneError('su-error', e.message || 'Sign up failed.'); }
 }
 
 async function enterApp() {
@@ -940,7 +954,8 @@ function bindEvents() {
   });
 
   $('#view').addEventListener('keydown', function (e) {
-    if (e.key === 'Enter' && (e.target.id === 'auth-email' || e.target.id === 'auth-pass')) doLogin();
+    if (e.key === 'Enter' && (e.target.id === 'su-email' || e.target.id === 'su-pass')) doSignup();
+    if (e.key === 'Enter' && (e.target.id === 'li-email' || e.target.id === 'li-pass')) doLogin();
   });
 
   $$('#tabbar .tab').forEach(function (t) {

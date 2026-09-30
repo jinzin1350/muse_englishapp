@@ -143,6 +143,32 @@ p { margin: 0 0 0.75em; }
 }
 .field input:focus, .field select:focus { outline: 2px solid var(--mist); border-color: var(--ink); }
 .form-error { color: var(--red); font-size: 0.9rem; margin: 0.5rem 0; min-height: 1.2em; }
+
+/* ---------- Auth: two separate sections ---------- */
+.auth-pane {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1rem 1.1rem 1.1rem;
+  margin-top: 1rem;
+}
+.auth-pane h3 { margin: 0 0 0.25rem; font-size: 1.02rem; }
+.auth-pane .muted { margin: 0 0 0.8rem; }
+.auth-pane .btn { margin-top: 0.4rem; }
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1.1rem 0 0.2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.auth-divider::before, .auth-divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--line);
+}
 .link { color: var(--tomato); cursor: pointer; font-weight: 600; text-decoration: underline; }
 .muted { color: var(--muted); font-size: 0.9rem; }
 
