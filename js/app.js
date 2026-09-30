@@ -73,11 +73,18 @@ function initOneSignal() {
   try {
     const id = APP_CONFIG.ONESIGNAL_APP_ID;
     if (!id || id.indexOf('YOUR-ONESIGNAL') !== -1) return;
-    if (typeof window.OneSignalDeferred === 'undefined') return;
+    if (window.__osInitPushed) return; // push init only once
+    window.__osInitPushed = true;
+    // Create the deferred queue ourselves (the documented pattern): the SDK
+    // drains it whenever its bundle finishes loading, so there is no race with
+    // DOMContentLoaded. Previously we returned early when the SDK hadn't loaded
+    // yet, which meant init() was never called and optIn() hung forever.
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
     window.OneSignalDeferred.push(async function (OneSignal) {
       try {
         try { window.__osLogs.push('INIT-CALLBACK-START'); } catch (e) {}
         await OneSignal.init({ appId: id });
+        window.__osInitDone = true;
         try { window.__osLogs.push('INIT-OK'); } catch (e) {}
       }
       catch (e) {
@@ -113,6 +120,24 @@ async function promptPush(btn) {
       }
     }
     setStatus('Permission granted — registering this device…');
+    // Make sure init was queued (idempotent) and wait for it to finish;
+    // optIn() hangs forever if init() never ran (the original bug).
+    try { initOneSignal(); } catch (e) {}
+    const initDone = await new Promise(function (resolve) {
+      const start = Date.now();
+      (function poll() {
+        if (window.__osInitDone) return resolve(true);
+        if (window.__osInitError) return resolve(false);
+        if (Date.now() - start > 20000) return resolve(false);
+        setTimeout(poll, 400);
+      })();
+    });
+    if (!initDone) {
+      const initErr = window.__osInitError ? ' OneSignal says: ' + window.__osInitError : '';
+      setStatus('The push service did not start.' + initErr + ' Please reload the page and try again.');
+      resetBtn();
+      return;
+    }
     let optInError = null;
     const ok = await new Promise(function (resolve) {
       let done = false;
@@ -153,7 +178,7 @@ async function promptPush(btn) {
         var logs = (window.__osLogs || []).slice(-6);
         if (logs.length) osLogStr = ' logs=[' + logs.join(' ~ ') + ']';
       } catch (e) {}
-      const subDbg = ' [dbg build=20260930h ' + sdkState + osLogStr + ' ' + (optInError || 'no-optin-error') + ']';
+      const subDbg = ' [dbg build=20260930i ' + sdkState + osLogStr + ' ' + (optInError || 'no-optin-error') + ']';
       setStatus('Permission is on, but this device did not register. In your OneSignal dashboard check Settings → Push & In-App → Web: the Site URL must be exactly https://muse-englishapp.pages.dev — then tap Enable again.' + initErr + subDbg);
       resetBtn();
     }
