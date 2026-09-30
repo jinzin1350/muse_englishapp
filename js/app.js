@@ -52,6 +52,30 @@ const state = {
   adminUsers: []
 };
 
+/* Deep link from push notifications: ?lesson=latest opens the newest lesson
+   for the user's level right after login. */
+let pendingDeepLink = null;
+try {
+  const q = new URLSearchParams(window.location.search);
+  if (q.get('lesson') === 'latest') pendingDeepLink = 'latest';
+} catch (e) { /* ignore */ }
+
+function consumeDeepLink() {
+  if (pendingDeepLink !== 'latest') return false;
+  pendingDeepLink = null;
+  try {
+    const u = new URL(window.location.href);
+    u.searchParams.delete('lesson');
+    window.history.replaceState(null, '', u.pathname + u.search + u.hash);
+  } catch (e) { /* ignore */ }
+  if (state.lessons.length) {
+    state.lessonTab = 'words';
+    show('lesson', state.lessons[0].date);
+    return true;
+  }
+  return false;
+}
+
 /* ---------------- config / integrations ---------------- */
 let sb = null; // supabase client
 
@@ -592,6 +616,7 @@ async function afterLogin() {
   state.lessons = await loadLessons(level);
   state.lesson = state.lessons[0] || null;
   show('home');
+  consumeDeepLink(); // push notification deep link -> newest lesson
 }
 
 async function doLogout() {
@@ -619,6 +644,7 @@ async function demoLogin(asAdmin) {
   state.lessons = await loadLessons('intermediate');
   state.lesson = state.lessons[0] || null;
   show('home');
+  consumeDeepLink();
 }
 
 /* ---------------- waiting view ---------------- */
