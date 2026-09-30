@@ -49,7 +49,8 @@ const state = {
   lessonTab: 'words',
   showAllCats: false,
   quiz: null,          // active quiz session
-  adminUsers: []
+  adminUsers: [],
+  pushOptedIn: null    // OneSignal subscription state: true/false/null(unknown)
 };
 
 /* Deep link from push notifications: ?lesson=latest opens the newest lesson
@@ -192,6 +193,8 @@ async function promptPush(btn) {
     if (ok) {
       setStatus('✓ Notifications are on — you’ll get a short note when each lesson is ready.');
       if (btn) btn.style.display = 'none';
+      state.pushOptedIn = true;
+      try { localStorage.setItem('el_push_opted_in', '1'); } catch (e) {}
     } else {
       const initErr = window.__osInitError ? ' OneSignal says: ' + window.__osInitError : '';
       const sdkState = 'sdkCount=' + (window.__oneSignalSdkLoadCount || 0) +
@@ -215,6 +218,29 @@ async function promptPush(btn) {
 function oneSignalReady() {
   const id = APP_CONFIG.ONESIGNAL_APP_ID;
   return id && id.indexOf('YOUR-ONESIGNAL') === -1 && typeof window.OneSignalDeferred !== 'undefined';
+}
+
+/* Reconcile the "enable notifications" card with the real subscription state.
+   Runs on boot after OneSignal init: if the device is already subscribed the
+   card stays hidden; if the user unsubscribed elsewhere the card comes back. */
+function syncPushState() {
+  try {
+    if (!oneSignalReady()) return;
+    window.OneSignalDeferred.push(function (OneSignal) {
+      try {
+        const sub = OneSignal.User && OneSignal.User.PushSubscription;
+        const optedIn = !!(sub && sub.optedIn);
+        state.pushOptedIn = optedIn;
+        try {
+          if (optedIn) localStorage.setItem('el_push_opted_in', '1');
+          else localStorage.removeItem('el_push_opted_in');
+        } catch (e) {}
+        if (state.view === 'home' && state.user && !state.user.demo) {
+          try { renderHome($('#view')); } catch (e) {}
+        }
+      } catch (e) { /* push optional */ }
+    });
+  } catch (e) { /* push optional */ }
 }
 
 /* Identify the signed-in user to OneSignal (external ID + level tag),
@@ -701,7 +727,17 @@ async function renderHome(v) {
 
   let html = '';
 
-  if (oneSignalReady() && !state.user.demo) {
+  // Only show the enable-push card when the device is not already subscribed.
+  // pushOptedIn is synced from OneSignal on boot; the localStorage flag covers
+  // the case where the user opted in during an earlier visit.
+  let pushDone = state.pushOptedIn === true;
+  if (!pushDone) {
+    try {
+      pushDone = localStorage.getItem('el_push_opted_in') === '1' &&
+        (typeof Notification === 'undefined' || Notification.permission === 'granted');
+    } catch (e) { /* ignore */ }
+  }
+  if (oneSignalReady() && !state.user.demo && !pushDone) {
     html += '<div class="card plain"><b>🔔 Lesson notifications</b><p class="muted">Get a short notification when your daily lesson is ready.</p>' +
       '<p class="muted" id="push-status"></p>' +
       '<button class="btn btn-sm" data-action="enable-push">Enable notifications</button></div>';
@@ -1151,6 +1187,7 @@ async function init() {
   bindEvents();
   initSupabase();
   initOneSignal();
+  syncPushState();
   playerUI();
 
   if (sb) {
