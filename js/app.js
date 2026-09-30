@@ -1033,7 +1033,13 @@ async function doSignup() {
   if (!sb) { authError('su', 'Signup service couldn’t load. Check your connection and try again.'); return; }
   setAuthBusy('su', true, 'Creating your account…');
   try {
-    const { error } = await sb.auth.signUp({ email: email, password: pass });
+    // After clicking the email link, Supabase returns the user to the app
+    // they signed up from (production -> production, localhost -> localhost).
+    const { error } = await sb.auth.signUp({
+      email: email,
+      password: pass,
+      options: { emailRedirectTo: window.location.origin + '/' },
+    });
     if (error) throw error;
     state.justSignedUp = true;
     authNote('su', '✓ Account created — loading your lessons…');
