@@ -83,37 +83,57 @@ function initOneSignal() {
 async function promptPush(btn) {
   const statusEl = document.getElementById('push-status');
   const setStatus = function (t) { if (statusEl) statusEl.textContent = t; };
+  const resetBtn = function () { if (btn) { btn.disabled = false; btn.textContent = 'Enable notifications'; } };
   try {
     if (!oneSignalReady()) { setStatus('Push is not configured on this site yet.'); return; }
+    if (!('Notification' in window)) { setStatus('This browser does not support notifications.'); return; }
     if (btn) { btn.disabled = true; btn.textContent = 'Enabling…'; }
-    setStatus('Waiting for the browser permission prompt…');
-    const outcome = await new Promise(function (resolve) {
+    // Ask the browser directly inside the click gesture: Chrome only shows the
+    // permission prompt while the tap/click is still "active".
+    if (Notification.permission !== 'granted') {
+      setStatus('Waiting for the browser permission prompt…');
+      let perm = null;
+      try { perm = await Notification.requestPermission(); }
+      catch (e) { perm = null; }
+      if (perm !== 'granted' && Notification.permission !== 'granted') {
+        setStatus(perm === 'denied' || Notification.permission === 'denied'
+          ? 'Notifications are blocked for this site. Allow them in the browser’s site settings, then try again.'
+          : 'Permission was not granted. Tap Enable again and choose Allow.');
+        resetBtn();
+        return;
+      }
+    }
+    setStatus('Permission granted — registering this device…');
+    const ok = await new Promise(function (resolve) {
+      let done = false;
+      const fin = function (v) { if (!done) { done = true; resolve(v); } };
       try {
         window.OneSignalDeferred.push(async function (OneSignal) {
           try {
-            await OneSignal.Notifications.requestPermission();
-            resolve(OneSignal.Notifications.permission === true ? 'granted' : 'denied');
-          } catch (e) { resolve('error: ' + (e && e.message || e)); }
+            await OneSignal.User.PushSubscription.optIn();
+            for (let i = 0; i < 20; i++) {
+              try {
+                const sub = OneSignal.User.PushSubscription;
+                if (sub && sub.optedIn && sub.id) { fin(true); return; }
+              } catch (e) {}
+              await new Promise(function (r) { setTimeout(r, 500); });
+            }
+            fin(false);
+          } catch (e) { fin(false); }
         });
-      } catch (e) { resolve('error: ' + (e && e.message || e)); }
-      setTimeout(function () { resolve('timeout'); }, 15000);
+      } catch (e) { fin(false); }
+      setTimeout(function () { fin(false); }, 16000);
     });
-    if (outcome === 'granted') {
+    if (ok) {
       setStatus('✓ Notifications are on — you’ll get a short note when each lesson is ready.');
       if (btn) btn.style.display = 'none';
-    } else if (outcome === 'denied') {
-      setStatus('Permission was not granted. Allow notifications in the browser’s site settings, then try again.');
-      if (btn) { btn.disabled = false; btn.textContent = 'Enable notifications'; }
-    } else if (outcome === 'timeout') {
-      setStatus('The browser didn’t answer the permission prompt. Try again.');
-      if (btn) { btn.disabled = false; btn.textContent = 'Enable notifications'; }
     } else {
-      setStatus('Couldn’t enable notifications (' + outcome.replace('error: ', '') + '). In your OneSignal dashboard, check Settings → Push & In-App → Web: the Site URL must be exactly https://muse-englishapp.pages.dev');
-      if (btn) { btn.disabled = false; btn.textContent = 'Enable notifications'; }
+      setStatus('Permission is on, but this device did not register. In your OneSignal dashboard check Settings → Push & In-App → Web: the Site URL must be exactly https://muse-englishapp.pages.dev — then tap Enable again.');
+      resetBtn();
     }
   } catch (e) {
     setStatus('Couldn’t enable notifications.');
-    if (btn) { btn.disabled = false; btn.textContent = 'Enable notifications'; }
+    resetBtn();
   }
 }
 
