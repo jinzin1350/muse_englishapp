@@ -75,7 +75,11 @@ function initOneSignal() {
     if (!id || id.indexOf('YOUR-ONESIGNAL') !== -1) return;
     if (typeof window.OneSignalDeferred === 'undefined') return;
     window.OneSignalDeferred.push(async function (OneSignal) {
-      try { await OneSignal.init({ appId: id }); } catch (e) { /* push optional */ }
+      try { await OneSignal.init({ appId: id }); }
+      catch (e) {
+        window.__osInitError = (e && e.message) || String(e);
+        console.warn('[push] OneSignal init failed:', e);
+      }
     });
   } catch (e) { /* push optional */ }
 }
@@ -128,7 +132,8 @@ async function promptPush(btn) {
       setStatus('✓ Notifications are on — you’ll get a short note when each lesson is ready.');
       if (btn) btn.style.display = 'none';
     } else {
-      setStatus('Permission is on, but this device did not register. In your OneSignal dashboard check Settings → Push & In-App → Web: the Site URL must be exactly https://muse-englishapp.pages.dev — then tap Enable again.');
+      const initErr = window.__osInitError ? ' OneSignal says: ' + window.__osInitError : '';
+      setStatus('Permission is on, but this device did not register. In your OneSignal dashboard check Settings → Push & In-App → Web: the Site URL must be exactly https://muse-englishapp.pages.dev — then tap Enable again.' + initErr);
       resetBtn();
     }
   } catch (e) {
