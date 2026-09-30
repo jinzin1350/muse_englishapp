@@ -1,32 +1,38 @@
 #!/usr/bin/env python3
 """Build the English Learning App logo + PWA icon set with PIL."""
 import os
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)))
 TOMATO = (200, 75, 49)        # #C84B31
 CREAM = (255, 253, 246)       # #FFFDF6
+SERIF_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf"
 
 def draw_mark(d, cx, cy, s):
-    """Speech bubble with text lines, centered at (cx, cy), overall size s."""
-    bw, bh = int(s * 0.62), int(s * 0.46)          # bubble w/h
+    """Cream speech bubble with 'ABC' in tomato serif, centered at (cx, cy), size s."""
+    bw, bh = int(s * 0.66), int(s * 0.50)          # bubble w/h
     x0, y0 = cx - bw // 2, cy - bh // 2 - int(s * 0.02)
     x1, y1 = x0 + bw, y0 + bh
-    r = int(s * 0.09)
+    r = int(s * 0.10)
     # tail (draw first, behind bubble)
     tx = x0 + int(bw * 0.28)
     d.polygon([(tx, y1 - r), (tx + int(s * 0.10), y1 - r),
                (tx + int(s * 0.015), y1 + int(s * 0.13))], fill=CREAM)
     d.rounded_rectangle([x0, y0, x1, y1], radius=r, fill=CREAM)
-    # three text lines
-    lw = int(bw * 0.68)
-    lh = int(s * 0.045)
-    lx = x0 + int(bw * 0.16)
-    widths = [lw, int(lw * 0.72), int(lw * 0.85)]
-    y = y0 + int(bh * 0.22)
-    for w in widths:
-        d.rounded_rectangle([lx, y, lx + w, y + lh], radius=lh // 2, fill=TOMATO)
-        y += int(s * 0.105)
+    # 'ABC' fitted inside the bubble
+    target_w = int(bw * 0.72)
+    size = int(s * 0.30)
+    font = ImageFont.truetype(SERIF_BOLD, size)
+    bbox = d.textbbox((0, 0), "ABC", font=font)
+    tw = bbox[2] - bbox[0]
+    if tw > target_w:
+        size = int(size * target_w / tw)
+        font = ImageFont.truetype(SERIF_BOLD, size)
+        bbox = d.textbbox((0, 0), "ABC", font=font)
+        tw = bbox[2] - bbox[0]
+    th = bbox[3] - bbox[1]
+    d.text((cx - tw / 2 - bbox[0], y0 + (bh - th) / 2 - bbox[1]),
+           "ABC", font=font, fill=TOMATO)
 
 def standard(size, rounded_bg=True):
     img = Image.new("RGBA", (size, size), (0, 0, 0, 0))
