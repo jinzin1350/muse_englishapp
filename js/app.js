@@ -1,0 +1,917 @@
+/* ============================================================
+   English Learning App — static frontend
+   Plain JS, no build step. Views: auth / waiting / home /
+   lesson / scores / mistakes / admin. Audio: one shared
+   element + persistent mini-player. Scores & mistakes in
+   localStorage (keyed per user email).
+   ============================================================ */
+(function () {
+'use strict';
+
+/* ---------------- helpers ---------------- */
+const $ = (sel, root) => (root || document).querySelector(sel);
+const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+
+function pad2(n) { return (n < 10 ? '0' : '') + n; }
+
+function fmtDate(d) {
+  return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
+}
+function todayStr() { return fmtDate(new Date()); }
+
+function fmtTime(sec) {
+  if (!isFinite(sec) || sec < 0) sec = 0;
+  const m = Math.floor(sec / 60), s = Math.floor(sec % 60);
+  return m + ':' + pad2(s);
+}
+
+function fmtDateTime(ts) {
+  const d = new Date(ts);
+  return fmtDate(d) + ' ' + pad2(d.getHours()) + ':' + pad2(d.getMinutes());
+}
+
+function uid() {
+  return 'm' + Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+}
+
+/* ---------------- state ---------------- */
+const state = {
+  user: null,          // { email, level, isAdmin, demo }
+  lessons: [],         // manifests for user's level, newest first
+  lesson: null,        // currently open manifest
+  view: 'auth',
+  lessonTab: 'words',
+  showAllCats: false,
+  quiz: null,          // active quiz session
+  adminUsers: []
+};
+
+/* ---------------- config / integrations ---------------- */
+let sb = null; // supabase client
+
+function supabaseConfigured() {
+  return APP_CONFIG.SUPABASE_URL &&
+    APP_CONFIG.SUPABASE_URL.indexOf('YOUR-PROJECT') === -1 &&
+    typeof window.supabase !== 'undefined';
+}
+
+function initSupabase() {
+  try {
+    if (!supabaseConfigured()) return null;
+    sb = window.supabase.createClient(APP_CONFIG.SUPABASE_URL, APP_CONFIG.SUPABASE_ANON_KEY);
+    return sb;
+  } catch (e) { return null; }
+}
+
+function initOneSignal() {
+  try {
+    const id = APP_CONFIG.ONESIGNAL_APP_ID;
+    if (!id || id.indexOf('YOUR-ONESIGNAL') !== -1) return;
+    if (typeof window.OneSignalDeferred === 'undefined') return;
+    window.OneSignalDeferred.push(async function (OneSignal) {
+      try { await OneSignal.init({ appId: id }); } catch (e) { /* push optional */ }
+    });
+  } catch (e) { /* push optional */ }
+}
+
+async function promptPush() {
+  try {
+    if (typeof window.OneSignalDeferred === 'undefined') return;
+    window.OneSignalDeferred.push(async function (OneSignal) {
+      try { await OneSignal.Slidedown.promptPush(); } catch (e) {}
+    });
+  } catch (e) {}
+}
+
+function oneSignalReady() {
+  const id = APP_CONFIG.ONESIGNAL_APP_ID;
+  return id && id.indexOf('YOUR-ONESIGNAL') === -1 && typeof window.OneSignalDeferred !== 'undefined';
+}
+
+/* ---------------- localStorage: scores & mistakes ---------------- */
+function lsKey(kind) {
+  const email = state.user ? state.user.email : 'anon';
+  return 'ela_' + kind + '_' + email;
+}
+function lsGet(kind) {
+  try { return JSON.parse(localStorage.getItem(lsKey(kind)) || '[]'); }
+  catch (e) { return []; }
+}
+function lsSet(kind, val) {
+  try { localStorage.setItem(lsKey(kind), JSON.stringify(val)); } catch (e) {}
+}
+function saveAttempt(a) {
+  const arr = lsGet('scores');
+  arr.unshift(Object.assign({ ts: Date.now() }, a));
+  lsSet('scores', arr.slice(0, 200));
+}
+function saveMistake(m) {
+  const arr = lsGet('mistakes');
+  // avoid exact duplicates
+  if (!arr.some(x => x.question === m.question && x.date === m.date)) {
+    arr.unshift(Object.assign({ id: uid() }, m));
+    lsSet('mistakes', arr.slice(0, 500));
+  }
+}
+function removeMistake(id) {
+  lsSet('mistakes', lsGet('mistakes').filter(x => x.id !== id));
+}
+function overallAverage() {
+  const arr = lsGet('scores');
+  let c = 0, t = 0;
+  arr.forEach(a => { c += a.score; t += a.total; });
+  return t ? Math.round((c / t) * 100) : null;
+}
+
+/* ---------------- audio engine (one shared element) ---------------- */
+const player = {
+  el: new Audio(),
+  src: null,
+  title: ''
+};
+
+function playerUI() {
+  const has = !!player.src;
+  $('#mini-player').classList.toggle('hidden', !has);
+  const playing = has && !player.el.paused;
+  $('#mp-toggle').textContent = playing ? '⏸' : '▶';
+  $('#mp-title').textContent = player.title || '—';
+}
+
+function refreshTrackCards() {
+  const dur = player.el.duration || 0;
+  const cur = player.el.currentTime || 0;
+  const pct = dur ? (cur / dur) * 100 : 0;
+  $('#mp-bar').style.width = pct + '%';
+  $('#mp-time').textContent = fmtTime(cur);
+  $$('[data-audio-card]').forEach(function (card) {
+    const active = card.getAttribute('data-src') === player.src;
+    const bar = $('.progress > div', card);
+    const tcur = $('.t-cur', card);
+    const tbtn = $('.play-btn', card);
+    if (bar) bar.style.width = (active ? pct : 0) + '%';
+    if (tcur) tcur.textContent = active ? fmtTime(cur) : '0:00';
+    if (tbtn && !tbtn.disabled) tbtn.textContent = (active && !player.el.paused) ? '⏸' : '▶';
+  });
+  $$('.speed-btn').forEach(function (b) {
+    b.classList.toggle('active', parseFloat(b.getAttribute('data-rate')) === player.el.playbackRate);
+  });
+}
+
+function playTrack(src, title) {
+  if (!src) return;
+  if (player.src === src) {
+    if (player.el.paused) player.el.play().catch(function () {});
+    else player.el.pause();
+  } else {
+    player.src = src;
+    player.title = title || 'Audio';
+    player.el.src = src;
+    player.el.play().catch(function () {});
+  }
+  playerUI();
+}
+
+function initAudio() {
+  player.el.preload = 'none';
+  player.el.addEventListener('timeupdate', refreshTrackCards);
+  player.el.addEventListener('play', function () { playerUI(); refreshTrackCards(); });
+  player.el.addEventListener('pause', function () { playerUI(); refreshTrackCards(); });
+  player.el.addEventListener('ended', function () { playerUI(); refreshTrackCards(); });
+  player.el.addEventListener('error', function () {
+    player.title = 'Could not load audio';
+    playerUI();
+  });
+}
+
+async function audioAvailable(url) {
+  try {
+    const r = await fetch(url, { method: 'HEAD' });
+    return r.ok;
+  } catch (e) { return false; }
+}
+
+/* Render an audio card. Wires itself after insertion. */
+function audioCardHTML(o) {
+  // o: { id, src, title, sub, cover, speeds:boolean, download:boolean }
+  const speeds = o.speeds ? [0.75, 1, 1.25, 1.5].map(function (r) {
+    return '<button class="speed-btn" data-action="speed" data-rate="' + r + '">' + r + 'x</button>';
+  }).join('') : '';
+  return '' +
+  '<div class="card audio-card" data-audio-card data-src="' + esc(o.src) + '" id="' + esc(o.id) + '">' +
+    '<div class="audio-top">' +
+      (o.cover ? '<img class="podcast-cover" src="' + esc(o.cover) + '" alt="" onerror="this.style.display=\'none\'">' : '') +
+      '<button class="play-btn" data-action="play-track" data-src="' + esc(o.src) + '" data-title="' + esc(o.title) + '" aria-label="Play">▶</button>' +
+      '<div class="audio-meta">' +
+        '<div class="audio-title">' + esc(o.title) + '</div>' +
+        (o.sub ? '<div class="muted">' + esc(o.sub) + '</div>' : '') +
+        '<div class="progress"><div></div></div>' +
+        '<div class="audio-times"><span class="t-cur">0:00</span><span class="t-dur">--:--</span></div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="audio-actions">' +
+      (speeds ? '<div class="speed-row">' + speeds + '</div>' : '') +
+      (o.download ? '<a class="btn btn-ghost btn-sm" href="' + esc(o.src) + '" download>⬇ Download</a>' : '') +
+    '</div>' +
+    '<div class="coming-soon hidden">🎵 Audio is coming soon — it will appear here automatically once published.</div>' +
+  '</div>';
+}
+
+function wireAudioCards(root) {
+  $$('[data-audio-card]', root).forEach(function (card) {
+    const src = card.getAttribute('data-src');
+    const btn = $('.play-btn', card);
+    const note = $('.coming-soon', card);
+    const durEl = $('.t-dur', card);
+    // duration probe (non-blocking)
+    const probe = new Audio();
+    probe.preload = 'metadata';
+    probe.addEventListener('loadedmetadata', function () {
+      if (durEl && isFinite(probe.duration)) durEl.textContent = fmtTime(probe.duration);
+    });
+    probe.src = src;
+    // availability check -> graceful "coming soon"
+    audioAvailable(src).then(function (ok) {
+      if (!ok) {
+        btn.disabled = true;
+        btn.textContent = '…';
+        note.classList.remove('hidden');
+        const dl = $('a[download]', card);
+        if (dl) { dl.classList.add('hidden'); }
+      }
+    });
+  });
+}
+
+/* ---------------- lesson loading ---------------- */
+async function fetchLesson(level, dateStr) {
+  const r = await fetch('lessons/' + level + '/' + dateStr + '.json', { cache: 'no-store' });
+  if (!r.ok) throw new Error('not found');
+  return r.json();
+}
+
+async function loadLessons(level) {
+  const found = [];
+  let misses = 0;
+  const d = new Date();
+  for (let i = 0; i < 45; i++) {
+    const ds = fmtDate(d);
+    try {
+      const m = await fetchLesson(level, ds);
+      found.push(m);
+      misses = 0;
+    } catch (e) { misses++; }
+    if (found.length > 0 && misses >= 10) break;
+    d.setDate(d.getDate() - 1);
+  }
+  return found; // newest first
+}
+
+/* ---------------- chrome (header / tabs / player) ---------------- */
+function setChrome() {
+  const logged = !!state.user;
+  $('#app-header').classList.toggle('hidden', !logged);
+  $('#tabbar').classList.toggle('hidden', !logged);
+  if (logged) {
+    $('#header-user').textContent = state.user.email;
+    $('#tab-admin').classList.toggle('hidden', !state.user.isAdmin);
+    $$('#tabbar .tab').forEach(function (t) {
+      t.classList.toggle('active', t.getAttribute('data-view') === state.view);
+    });
+  } else {
+    player.src = null;
+    try { player.el.pause(); } catch (e) {}
+    playerUI();
+  }
+}
+
+function show(view, arg) {
+  state.view = view;
+  state.quiz = null;
+  setChrome();
+  const v = $('#view');
+  window.scrollTo(0, 0);
+  if (view === 'auth') renderAuth(v);
+  else if (view === 'waiting') renderWaiting(v);
+  else if (view === 'home') renderHome(v);
+  else if (view === 'lesson') renderLesson(v, arg);
+  else if (view === 'scores') renderScores(v);
+  else if (view === 'mistakes') renderMistakes(v);
+  else if (view === 'admin') renderAdmin(v);
+}
+
+/* ---------------- auth view ---------------- */
+function renderAuth(v) {
+  const configured = supabaseConfigured();
+  v.innerHTML =
+  '<div class="card">' +
+    '<h1>Welcome 👋</h1>' +
+    '<p class="muted">Sign in to get your daily English lesson.</p>' +
+    (configured ?
+      '<div class="field"><label for="auth-email">Email</label>' +
+      '<input id="auth-email" type="email" autocomplete="email" placeholder="you@example.com"></div>' +
+      '<div class="field"><label for="auth-pass">Password</label>' +
+      '<input id="auth-pass" type="password" autocomplete="current-password" placeholder="••••••••"></div>' +
+      '<div class="form-error" id="auth-error"></div>' +
+      '<div class="btn-row">' +
+        '<button class="btn" data-action="login">Sign in</button>' +
+        '<button class="btn btn-ghost" data-action="signup">Create account</button>' +
+      '</div>'
+    :
+      '<div class="coming-soon">🔑 Real login is not connected yet — add your Supabase keys in <b>js/config.js</b> to enable it.</div>' +
+      '<button class="btn btn-block" data-action="demo-learner">Continue in demo mode (learner)</button>' +
+      '<button class="btn btn-ghost btn-block" data-action="demo-admin">Continue in demo mode (admin)</button>'
+    ) +
+  '</div>';
+}
+
+async function authError(msg) {
+  const el = $('#auth-error');
+  if (el) el.textContent = msg;
+}
+
+async function doLogin() {
+  const email = $('#auth-email').value.trim();
+  const pass = $('#auth-pass').value;
+  if (!email || !pass) { authError('Enter your email and password.'); return; }
+  try {
+    const { error } = await sb.auth.signInWithPassword({ email: email, password: pass });
+    if (error) throw error;
+    await enterApp();
+  } catch (e) { authError(e.message || 'Sign in failed.'); }
+}
+
+async function doSignup() {
+  const email = $('#auth-email').value.trim();
+  const pass = $('#auth-pass').value;
+  if (!email || !pass) { authError('Enter your email and password.'); return; }
+  if (pass.length < 6) { authError('Password must be at least 6 characters.'); return; }
+  try {
+    const { error } = await sb.auth.signUp({ email: email, password: pass });
+    if (error) throw error;
+    await enterApp();
+  } catch (e) { authError(e.message || 'Sign up failed.'); }
+}
+
+async function enterApp() {
+  const { data } = await sb.auth.getUser();
+  const u = data.user;
+  if (!u) { show('auth'); return; }
+  let level = null;
+  try {
+    const { data: prof } = await sb.from('profiles').select('level').eq('id', u.id).single();
+    if (prof) level = prof.level;
+  } catch (e) { /* RLS or missing row -> treat as pending */ }
+  const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
+  state.user = { email: u.email, level: level, isAdmin: isAdmin, demo: false };
+  await afterLogin();
+}
+
+async function afterLogin() {
+  if (!state.user.level && !state.user.isAdmin) { show('waiting'); return; }
+  const level = state.user.level || 'intermediate';
+  state.lessons = await loadLessons(level);
+  state.lesson = state.lessons[0] || null;
+  show('home');
+}
+
+async function doLogout() {
+  try { if (sb) await sb.auth.signOut(); } catch (e) {}
+  state.user = null; state.lessons = []; state.lesson = null; state.adminUsers = [];
+  show('auth');
+}
+
+/* Demo mode (no Supabase configured) */
+const DEMO_USERS = [
+  { id: 'demo-u1', email: 'sara@example.com', level: null, created_at: Date.now() - 86400000 },
+  { id: 'demo-u2', email: 'reza@example.com', level: 'beginner', created_at: Date.now() - 3 * 86400000 },
+  { id: 'demo-u3', email: 'mina@example.com', level: 'intermediate', created_at: Date.now() - 5 * 86400000 }
+];
+
+async function demoLogin(asAdmin) {
+  state.user = {
+    email: asAdmin ? String(APP_CONFIG.ADMIN_EMAIL) : 'demo-learner@example.com',
+    level: asAdmin ? 'intermediate' : 'intermediate',
+    isAdmin: !!asAdmin,
+    demo: true
+  };
+  state.adminUsers = DEMO_USERS.map(function (u) { return Object.assign({}, u); });
+  state.lessons = await loadLessons('intermediate');
+  state.lesson = state.lessons[0] || null;
+  show('home');
+}
+
+/* ---------------- waiting view ---------------- */
+function renderWaiting(v) {
+  v.innerHTML =
+  '<div class="card">' +
+    '<h1>Almost there ⏳</h1>' +
+    '<p>Your account is created. Your teacher is assigning your level — check back soon and your daily lessons will appear here.</p>' +
+    '<button class="btn btn-block" data-action="check-level">Check again</button>' +
+    '<p class="muted" style="margin-top:0.8rem">Signed in as ' + esc(state.user.email) + '</p>' +
+  '</div>';
+}
+
+async function checkLevel() {
+  if (state.user.demo) { await afterLogin(); return; }
+  try {
+    const { data: u } = await sb.auth.getUser();
+    const { data: prof } = await sb.from('profiles').select('level').eq('id', u.user.id).single();
+    if (prof && prof.level) {
+      state.user.level = prof.level;
+      await afterLogin();
+    } else {
+      show('waiting');
+    }
+  } catch (e) { show('waiting'); }
+}
+
+/* ---------------- home view ---------------- */
+function catCardHTML(m) {
+  const isToday = m.date === todayStr();
+  const first = (m.words && m.words[0]) || {};
+  const img = first.photo
+    ? '<div class="cat-placeholder">📚</div>' +
+      '<img src="' + esc(first.photo) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+    : '<div class="cat-placeholder">📚</div>';
+  return '' +
+  '<button class="cat-card" data-action="open-lesson" data-date="' + esc(m.date) + '">' +
+    (isToday ? '<span class="today-badge">TODAY</span>' : '') +
+    img +
+    '<div class="cat-scrim"></div>' +
+    '<div class="cat-body">' +
+      '<div class="cat-theme">' + esc(m.theme || 'Lesson') + '</div>' +
+      '<div class="cat-date">' + esc(m.date) + ' · ' + esc(m.level || '') + '</div>' +
+    '</div>' +
+  '</button>';
+}
+
+function renderHome(v) {
+  const lessons = state.lessons;
+  const shown = state.showAllCats ? lessons : lessons.slice(0, 4);
+  const avg = overallAverage();
+  const scores = lsGet('scores').slice(0, 3);
+  const mistakes = lsGet('mistakes');
+
+  let html = '';
+
+  if (oneSignalReady() && !state.user.demo) {
+    html += '<div class="card plain"><b>🔔 Lesson notifications</b><p class="muted">Get a short notification when your daily lesson is ready.</p>' +
+      '<button class="btn btn-sm" data-action="enable-push">Enable notifications</button></div>';
+  }
+
+  // 01 Lesson categories
+  html += '<div class="section-title"><h2>01 · Lessons</h2>' +
+    (lessons.length > 4 ? '<button class="btn btn-ghost btn-sm" data-action="toggle-cats">' + (state.showAllCats ? 'Show less' : 'More') + '</button>' : '') +
+    '</div>';
+  if (!lessons.length) {
+    html += '<div class="empty">No lessons published yet — check back tomorrow.</div>';
+  } else {
+    html += '<div class="cat-grid">' + shown.map(catCardHTML).join('') + '</div>';
+  }
+
+  // 02 My Scores
+  html += '<div class="section-title"><h2>02 · My Scores</h2>' +
+    (scores.length ? '<button class="btn btn-ghost btn-sm" data-action="goto" data-view="scores">View all</button>' : '') + '</div>';
+  if (avg === null) {
+    html += '<div class="card plain"><p class="muted" style="margin:0">No quiz attempts yet. Finish a quiz to see your scores here.</p></div>';
+  } else {
+    html += '<div class="card avg-card"><div class="avg-num">' + avg + '%</div><div class="muted">overall average</div></div>';
+    html += scores.map(attemptCardHTML).join('');
+  }
+
+  // 03 My Mistakes
+  html += '<div class="section-title"><h2>03 · My Mistakes</h2>' +
+    (mistakes.length ? '<button class="btn btn-ghost btn-sm" data-action="goto" data-view="mistakes">View all</button>' : '') + '</div>';
+  if (!mistakes.length) {
+    html += '<div class="card plain"><p class="muted" style="margin:0">No mistakes yet — nice work! Wrong answers will appear here so you can practice them again.</p></div>';
+  } else {
+    html += '<div class="card"><b>' + mistakes.length + ' word' + (mistakes.length === 1 ? '' : 's') + ' to review</b>' +
+      '<p class="muted">' + esc(mistakes[0].question) + (mistakes.length > 1 ? ' …' : '') + '</p>' +
+      '<button class="btn btn-green btn-block" data-action="practice-again">Practice again</button></div>';
+  }
+
+  v.innerHTML = html;
+}
+
+function attemptCardHTML(a) {
+  const pct = a.total ? Math.round((a.score / a.total) * 100) : 0;
+  const kindLabel = a.kind === 'grammar' ? 'Grammar quiz' : (a.kind === 'mistakes' ? 'Mistakes review' : 'Word quiz');
+  return '' +
+  '<div class="card plain"><div class="attempt-card">' +
+    '<div class="attempt-info">' +
+      '<div class="attempt-theme">' + esc(a.theme || 'Lesson') + '</div>' +
+      '<div class="attempt-meta">' + esc(kindLabel) + ' · ' + esc(a.date || '') + ' · ' + esc(fmtDateTime(a.ts)) + '</div>' +
+    '</div>' +
+    '<div class="percent-wrap"><div class="percent-num">' + a.score + '/' + a.total + '</div>' +
+    '<div class="progress"><div style="width:' + pct + '%"></div></div></div>' +
+  '</div></div>';
+}
+
+/* ---------------- lesson view ---------------- */
+function lessonTabsHTML() {
+  const tabs = [
+    ['words', 'Words'],
+    ['podcast', 'Podcast'],
+    ['shadowing', 'Shadowing'],
+    ['quiz', 'Quiz'],
+    ['grammar', 'Grammar']
+  ];
+  return '<div class="lesson-tabs">' + tabs.map(function (t) {
+    return '<button class="lesson-tab' + (state.lessonTab === t[0] ? ' active' : '') + '" data-action="lesson-tab" data-tab="' + t[0] + '">' + t[1] + '</button>';
+  }).join('') + '</div>';
+}
+
+function renderLesson(v, dateStr) {
+  if (dateStr) {
+    const found = state.lessons.find(function (m) { return m.date === dateStr; });
+    if (found) state.lesson = found;
+  }
+  const m = state.lesson;
+  if (!m) { v.innerHTML = '<div class="empty">No lesson available.</div>'; return; }
+
+  let html = '<div class="hero-date">' + esc(m.date) + (m.date === todayStr() ? ' · <b>Today</b>' : '') + '</div>' +
+    '<h1 style="text-transform:capitalize">' + esc(m.theme || 'Daily lesson') + '</h1>' +
+    '<p><span class="badge-level">' + esc(m.level || '') + (m.cefr ? ' · ' + esc(m.cefr) : '') + '</span></p>' +
+    lessonTabsHTML() + '<div id="lesson-body"></div>';
+  v.innerHTML = html;
+  renderLessonTab($('#lesson-body'));
+}
+
+function renderLessonTab(body) {
+  const m = state.lesson;
+  const tab = state.lessonTab;
+  if (tab === 'words') body.innerHTML = wordsTabHTML(m);
+  else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); }
+  else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); }
+  else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
+  else if (tab === 'grammar') body.innerHTML = grammarTabHTML(m);
+  refreshTrackCards();
+}
+
+function wordsTabHTML(m) {
+  return (m.words || []).map(function (w) {
+    return '' +
+    '<div class="card plain word-card">' +
+      (w.photo
+        ? '<img class="word-photo" src="' + esc(w.photo) + '" alt="' + esc(w.word) + '" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\';">' +
+          '<div class="word-photo-fallback" style="display:none">🖼️</div>'
+        : '<div class="word-photo-fallback">🖼️</div>') +
+      '<div class="word-head"><h3 class="word-title">' + esc(w.word) + '</h3>' +
+        (w.word_audio
+          ? '<button class="speaker-btn" data-action="play-track" data-src="' + esc(w.word_audio) + '" data-title="' + esc(w.word) + '" aria-label="Hear pronunciation">🔊</button>'
+          : '') +
+      '</div>' +
+      (w.pos ? '<div class="word-pos">' + esc(w.pos) + '</div>' : '') +
+      (w.pronunciation ? '<div class="word-pron">/' + esc(w.pronunciation) + '/</div>' : '') +
+      (w.meaning ? '<div class="word-meaning">' + esc(w.meaning) + '</div>' : '') +
+      (w.example ? '<div class="word-example">"' + esc(w.example) + '"</div>' : '') +
+      (w.persian ? '<div class="word-fa" dir="auto">' + esc(w.persian) + '</div>' : '') +
+    '</div>';
+  }).join('') || '<div class="empty">No words in this lesson.</div>';
+}
+
+function podcastTabHTML(m) {
+  let html = '';
+  if (m.podcast && m.podcast.audio) {
+    html += audioCardHTML({
+      id: 'card-podcast', src: m.podcast.audio,
+      title: m.podcast.title || 'Word Kitchen',
+      sub: 'Podcast episode', cover: m.podcast.cover,
+      speeds: false, download: true
+    });
+  }
+  if (m.pronunciation_audio) {
+    html += audioCardHTML({
+      id: 'card-pron', src: m.pronunciation_audio,
+      title: 'Pronunciation — words with examples',
+      sub: 'All ' + (m.words || []).length + ' words read aloud',
+      speeds: false, download: true
+    });
+  }
+  if (!html) html = '<div class="empty">No audio in this lesson yet.</div>';
+  return html;
+}
+
+function shadowingTabHTML(m) {
+  if (!m.shadowing || !m.shadowing.audio) return '<div class="empty">No shadowing story for this lesson.</div>';
+  return '<div class="card plain"><h3 class="serif">' + esc(m.shadowing.title || 'Shadowing story') + '</h3>' +
+    '<p class="muted">Listen first, then speak along. Each sentence is read twice.</p></div>' +
+    audioCardHTML({
+      id: 'card-shadow', src: m.shadowing.audio,
+      title: m.shadowing.title || 'Shadowing story',
+      sub: 'Read twice · adjust speed below',
+      speeds: true, download: true
+    });
+}
+
+function quizTabHTML(m) {
+  const n = (m.quiz || []).length;
+  if (!n) return '<div class="empty">No quiz for this lesson.</div>';
+  return '<div class="card"><h3>📝 Word quiz</h3>' +
+    '<p class="muted">' + n + ' questions on today\'s words. One at a time, instant feedback — wrong answers go straight to My Mistakes.</p>' +
+    '<button class="btn btn-block" data-action="quiz-start" data-kind="word">Start quiz</button></div>';
+}
+
+function grammarTabHTML(m) {
+  const g = m.grammar;
+  if (!g) return '<div class="empty">No grammar lesson for this date.</div>';
+  const paras = String(g.explanation || '').split(/\n\s*\n/).map(function (p) {
+    return '<p>' + esc(p) + '</p>';
+  }).join('');
+  const examples = (g.examples || []).map(function (e) {
+    return '<div class="example-card">' + esc(e) + '</div>';
+  }).join('');
+  const practice = (g.practice || []).map(function (p) {
+    return '<details class="practice"><summary>' + esc(p.q) + '</summary><p style="margin:0.5rem 0 0">' + esc(p.a) + '</p></details>';
+  }).join('');
+  const quizBtn = (g.quiz && g.quiz.length)
+    ? '<button class="btn btn-block" data-action="quiz-start" data-kind="grammar">Start grammar quiz (' + g.quiz.length + ' questions)</button>'
+    : '';
+  return '<div class="card"><h3>' + esc(g.title || 'Grammar') + '</h3>' +
+    '<div class="grammar-body">' + paras + '</div>' +
+    (examples ? '<h3>Examples</h3>' + examples : '') +
+    (practice ? '<h3>Practice</h3>' + practice : '') +
+    quizBtn + '</div>';
+}
+
+/* ---------------- quiz engine ---------------- */
+function startQuiz(kind) {
+  const m = state.lesson;
+  let questions = [];
+  if (kind === 'word') {
+    questions = (m.quiz || []).map(function (q) {
+      return { question: q.question, options: q.options, answer: q.answer, kind: 'word' };
+    });
+  } else if (kind === 'grammar') {
+    questions = ((m.grammar && m.grammar.quiz) || []).map(function (q) {
+      return { question: q.question, options: q.options, answer: q.answer, kind: 'grammar' };
+    });
+  } else if (kind === 'mistakes') {
+    questions = lsGet('mistakes').map(function (mk) {
+      return { question: mk.question, options: mk.options, answer: mk.answer, kind: mk.kind || 'word', mistakeId: mk.id };
+    });
+  }
+  if (!questions.length) return;
+  state.quiz = {
+    kind: kind, questions: questions, idx: 0, correct: 0,
+    answered: false, picked: -1,
+    date: m.date, level: m.level, theme: m.theme
+  };
+  renderQuizView();
+}
+
+function renderQuizView() {
+  const q = state.quiz;
+  const v = $('#view');
+  const cur = q.questions[q.idx];
+  const total = q.questions.length;
+  let html = '<div class="quiz-progress">Question ' + (q.idx + 1) + ' of ' + total +
+    (q.kind === 'mistakes' ? ' · reviewing mistakes' : '') + '</div>' +
+    '<div class="card"><div class="quiz-q">' + esc(cur.question) + '</div><div id="quiz-opts">' +
+    cur.options.map(function (opt, i) {
+      let cls = 'opt-btn';
+      if (q.answered) {
+        if (i === cur.answer) cls += ' correct';
+        else if (i === q.picked) cls += ' wrong';
+        else cls += ' dim';
+      }
+      return '<button class="' + cls + '" data-action="quiz-opt" data-idx="' + i + '"' +
+        (q.answered ? ' disabled' : '') + '>' + esc(opt) + '</button>';
+    }).join('') + '</div>';
+
+  if (q.answered) {
+    const good = q.picked === cur.answer;
+    html += '<div class="quiz-feedback ' + (good ? 'good' : 'bad') + '">' +
+      (good ? '✅ Correct!' : '❌ Not quite — the correct answer is: <b>' + esc(cur.options[cur.answer]) + '</b>') +
+      '</div>' +
+      '<button class="btn btn-block" data-action="quiz-next">' +
+      (q.idx + 1 < total ? 'Next question →' : 'See my score →') + '</button>';
+  }
+  html += '</div>';
+  v.innerHTML = html;
+  window.scrollTo(0, 0);
+}
+
+function answerQuiz(idx) {
+  const q = state.quiz;
+  if (!q || q.answered) return;
+  q.answered = true;
+  q.picked = idx;
+  const cur = q.questions[q.idx];
+  if (idx === cur.answer) {
+    q.correct++;
+    if (q.kind === 'mistakes' && cur.mistakeId) removeMistake(cur.mistakeId);
+  } else if (q.kind !== 'mistakes') {
+    saveMistake({
+      date: q.date, level: q.level, kind: cur.kind,
+      question: cur.question, options: cur.options,
+      answer: cur.answer, picked: idx
+    });
+  }
+  renderQuizView();
+}
+
+function nextQuiz() {
+  const q = state.quiz;
+  if (q.idx + 1 < q.questions.length) {
+    q.idx++; q.answered = false; q.picked = -1;
+    renderQuizView();
+  } else {
+    finishQuiz();
+  }
+}
+
+function finishQuiz() {
+  const q = state.quiz;
+  const total = q.questions.length;
+  const pct = Math.round((q.correct / total) * 100);
+  saveAttempt({
+    date: q.date, level: q.level, theme: q.theme,
+    kind: q.kind, score: q.correct, total: total
+  });
+  state.quiz = null;
+  $('#view').innerHTML =
+  '<div class="card"><div class="score-hero">' +
+    '<div class="score-big">' + q.correct + '/' + total + '</div>' +
+    '<div class="score-sub">' + pct + '% · ' +
+    (pct >= 85 ? 'Excellent work! 🌟' : pct >= 60 ? 'Good — keep practicing! 💪' : 'Keep going — review your mistakes below. 📚') +
+    '</div></div>' +
+    '<div class="btn-row">' +
+      '<button class="btn" data-action="goto" data-view="home">Home</button>' +
+      '<button class="btn btn-ghost" data-action="goto" data-view="mistakes">My Mistakes</button>' +
+    '</div></div>';
+  window.scrollTo(0, 0);
+}
+
+/* ---------------- scores view ---------------- */
+function renderScores(v) {
+  const arr = lsGet('scores');
+  const avg = overallAverage();
+  let html = '<h1>My Scores</h1>';
+  if (avg === null) {
+    html += '<div class="empty">No quiz attempts yet.<br>Finish a quiz and your scores will appear here.</div>';
+  } else {
+    html += '<div class="card avg-card"><div class="avg-num">' + avg + '%</div><div class="muted">overall average · ' + arr.length + ' attempts</div></div>';
+    html += arr.map(attemptCardHTML).join('');
+  }
+  v.innerHTML = html;
+}
+
+/* ---------------- mistakes view ---------------- */
+function renderMistakes(v) {
+  const arr = lsGet('mistakes');
+  let html = '<h1>My Mistakes</h1>';
+  if (!arr.length) {
+    html += '<div class="empty">No mistakes — everything you got wrong will land here for review. 🎉</div>';
+  } else {
+    html += '<div class="card plain"><b>' + arr.length + ' to review</b>' +
+      '<p class="muted" style="margin:0.4rem 0 0">Answer one correctly and it leaves the list.</p>' +
+      '<button class="btn btn-green btn-block" data-action="practice-again">Practice again</button></div>';
+    html += arr.map(function (m) {
+      return '<div class="card plain">' +
+        '<div class="mistake-q">' + esc(m.question) + '</div>' +
+        '<div class="mistake-a">✅ ' + esc(m.options[m.answer]) + '</div>' +
+        (typeof m.picked === 'number' && m.picked !== m.answer
+          ? '<div class="mistake-was">You chose: ' + esc(m.options[m.picked]) + '</div>' : '') +
+        '<div class="muted" style="margin-top:0.4rem;font-size:0.78rem">' + esc(m.date || '') + ' · ' + esc(m.kind || 'word') + ' quiz</div>' +
+      '</div>';
+    }).join('');
+  }
+  v.innerHTML = html;
+}
+
+/* ---------------- admin view ---------------- */
+function renderAdmin(v) {
+  v.innerHTML = '<h1>Admin</h1><div class="card plain"><p class="muted" style="margin:0">Set each user\'s level. New users appear as <b>pending</b> first.</p></div><div id="admin-list"><div class="empty">Loading…</div></div>';
+  loadAdminUsers();
+}
+
+async function loadAdminUsers() {
+  const list = $('#admin-list');
+  try {
+    if (state.user.demo) {
+      state.adminUsers = state.adminUsers.length ? state.adminUsers : DEMO_USERS.map(function (u) { return Object.assign({}, u); });
+    } else if (sb) {
+      const { data, error } = await sb.from('profiles').select('id,email,level,created_at').order('created_at', { ascending: true });
+      if (error) throw error;
+      state.adminUsers = data || [];
+    }
+  } catch (e) {
+    if (list) list.innerHTML = '<div class="empty">Could not load users: ' + esc(e.message || e) + '</div>';
+    return;
+  }
+  if (!list) return;
+  const users = state.adminUsers.slice().sort(function (a, b) {
+    const ap = a.level ? 1 : 0, bp = b.level ? 1 : 0;
+    return ap - bp;
+  });
+  list.innerHTML = '<div class="card">' + (users.length ? users.map(function (u) {
+    const pending = !u.level;
+    return '<div class="user-row">' +
+      '<div class="user-info">' +
+        '<div class="user-email">' + esc(u.email) + (pending ? '<span class="pending-tag">PENDING</span>' : '') + '</div>' +
+        '<div class="user-date">joined ' + esc(String(u.created_at || '').slice(0, 10)) + '</div>' +
+      '</div>' +
+      '<select class="level-select" data-user-id="' + esc(u.id) + '" aria-label="Set level">' +
+        '<option value="">— set level —</option>' +
+        ['beginner', 'intermediate', 'advanced'].map(function (lv) {
+          return '<option value="' + lv + '"' + (u.level === lv ? ' selected' : '') + '>' + lv + '</option>';
+        }).join('') +
+      '</select>' +
+    '</div>';
+  }).join('') : '<div class="empty">No users yet.</div>') + '</div>';
+}
+
+async function setUserLevel(id, level) {
+  if (!level) return;
+  try {
+    if (state.user.demo) {
+      const u = state.adminUsers.find(function (x) { return String(x.id) === String(id); });
+      if (u) u.level = level;
+    } else if (sb) {
+      const { error } = await sb.from('profiles').update({ level: level }).eq('id', id);
+      if (error) throw error;
+    }
+    await loadAdminUsers();
+  } catch (e) {
+    alert('Could not update level: ' + (e.message || e));
+    await loadAdminUsers();
+  }
+}
+
+/* ---------------- events (delegation) ---------------- */
+function bindEvents() {
+  $('#view').addEventListener('click', async function (e) {
+    const t = e.target.closest('[data-action]');
+    if (!t) return;
+    const a = t.getAttribute('data-action');
+
+    if (a === 'login') doLogin();
+    else if (a === 'signup') doSignup();
+    else if (a === 'demo-learner') demoLogin(false);
+    else if (a === 'demo-admin') demoLogin(true);
+    else if (a === 'check-level') checkLevel();
+    else if (a === 'goto') show(t.getAttribute('data-view'));
+    else if (a === 'toggle-cats') { state.showAllCats = !state.showAllCats; show('home'); }
+    else if (a === 'open-lesson') { state.lessonTab = 'words'; show('lesson', t.getAttribute('data-date')); }
+    else if (a === 'lesson-tab') { state.lessonTab = t.getAttribute('data-tab'); renderLessonTab($('#lesson-body')); }
+    else if (a === 'play-track') playTrack(t.getAttribute('data-src'), t.getAttribute('data-title'));
+    else if (a === 'speed') { player.el.playbackRate = parseFloat(t.getAttribute('data-rate')); refreshTrackCards(); }
+    else if (a === 'quiz-start') startQuiz(t.getAttribute('data-kind'));
+    else if (a === 'quiz-opt') answerQuiz(parseInt(t.getAttribute('data-idx'), 10));
+    else if (a === 'quiz-next') nextQuiz();
+    else if (a === 'practice-again') {
+      if (lsGet('mistakes').length) startQuiz('mistakes');
+      else show('mistakes');
+    }
+    else if (a === 'enable-push') promptPush();
+  });
+
+  $('#view').addEventListener('change', function (e) {
+    const t = e.target.closest('[data-user-id]');
+    if (t) setUserLevel(t.getAttribute('data-user-id'), t.value);
+  });
+
+  $('#view').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && (e.target.id === 'auth-email' || e.target.id === 'auth-pass')) doLogin();
+  });
+
+  $$('#tabbar .tab').forEach(function (t) {
+    t.addEventListener('click', function () { show(t.getAttribute('data-view')); });
+  });
+
+  $('#btn-logout').addEventListener('click', doLogout);
+  $('#mp-toggle').addEventListener('click', function () {
+    if (!player.src) return;
+    if (player.el.paused) player.el.play().catch(function () {});
+    else player.el.pause();
+  });
+}
+
+/* ---------------- init ---------------- */
+async function init() {
+  initAudio();
+  bindEvents();
+  initSupabase();
+  initOneSignal();
+  playerUI();
+
+  if (sb) {
+    try {
+      const { data } = await sb.auth.getSession();
+      if (data.session && data.session.user) { await enterApp(); return; }
+    } catch (e) {}
+  }
+  show('auth');
+}
+
+document.addEventListener('DOMContentLoaded', init);
+
+})();
