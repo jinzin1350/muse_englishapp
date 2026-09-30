@@ -615,7 +615,7 @@ async function loadPreviewLesson() {
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview'];
-const LEARNER_VIEWS = ['home', 'lesson', 'scores', 'review', 'profile', 'admin', 'waiting'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -675,6 +675,7 @@ function show(view, arg) {
   else if (view === 'waiting') renderWaiting(v);
   else if (view === 'home') renderHome(v);
   else if (view === 'lesson') renderLesson(v, arg);
+  else if (view === 'lessons') renderLessons(v);
   else if (view === 'scores') renderScores(v);
   else if (view === 'review') renderMistakes(v);
   else if (view === 'profile') renderProfile(v);
@@ -695,7 +696,8 @@ function setChrome() {
     $('#profile-admin').classList.toggle('hidden', !state.user.isAdmin);
     $$('#tabbar .tab').forEach(function (t) {
       const tv = t.getAttribute('data-view');
-      const active = tv === state.view;
+      // The lessons archive is a sub-page of Home: keep Home highlighted there.
+      const active = tv === state.view || (state.view === 'lessons' && tv === 'home');
       t.classList.toggle('active', active);
       if (active) t.setAttribute('aria-current', 'page');
       else t.removeAttribute('aria-current');
@@ -1179,6 +1181,72 @@ function todayCardHTML(m) {
   '</section>';
 }
 
+/* ---------------- lessons archive (previous days) ---------------- */
+function lessonCover(m) {
+  const w = (m.words && m.words[0]) || {};
+  return w.photo || '';
+}
+function fmtDateShort(ds) {
+  try {
+    const p = String(ds).split('-');
+    const d = new Date(parseInt(p[0], 10), parseInt(p[1], 10) - 1, parseInt(p[2], 10), 12);
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  } catch (e) { return ds; }
+}
+function lessonWordCount(m) { return (m.words && m.words.length) || 0; }
+
+function prevLessonsHTML(lessons) {
+  const older = lessons.slice(1, 7);
+  let html = '<section aria-labelledby="prev-h">' +
+    '<div class="section-title"><h2 id="prev-h">Previous lessons</h2>' +
+    (older.length ? '<a class="btn btn-ghost btn-sm" href="#/lessons">View all</a>' : '') + '</div>';
+  if (!older.length) {
+    html += '<div class="card plain"><p class="muted" style="margin:0">Yesterday’s lesson will appear here — come back tomorrow for a new one.</p></div>';
+  } else {
+    html += '<div class="prev-strip">' + older.map(function (m) {
+      const cover = lessonCover(m);
+      return '<button class="prev-card" data-action="open-lesson" data-date="' + esc(m.date) + '" aria-label="Open lesson ' + esc(m.theme || m.date) + '">' +
+        (cover
+          ? '<img src="' + esc(cover) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+          : '<div class="prev-ph" aria-hidden="true">📚</div>') +
+        '<div class="pc-body"><div class="pc-date">' + esc(fmtDateShort(m.date)) + '</div>' +
+        '<div class="pc-theme">' + esc(m.theme || 'Lesson') + '</div></div></button>';
+    }).join('') + '</div>';
+  }
+  return html + '</section>';
+}
+
+function archiveCardHTML(m) {
+  const cover = lessonCover(m);
+  const done = dayDoneCount(m.date);
+  const pct = Math.round((done / STEPS.length) * 100);
+  return '<button class="archive-card" data-action="open-lesson" data-date="' + esc(m.date) + '" aria-label="Open lesson ' + esc(m.theme || m.date) + '">' +
+    (cover
+      ? '<img class="ac-photo" src="' + esc(cover) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+      : '<div class="ac-photo ac-ph" aria-hidden="true">📚</div>') +
+    '<div class="ac-body">' +
+      '<div class="ac-date">' + esc(fmtDateShort(m.date)) + ' · ' + esc(m.date) + '</div>' +
+      '<div class="ac-theme">' + esc(m.theme || 'Lesson') + '</div>' +
+      '<div class="ac-meta">' + esc(levelLabel(normalizeLevel(m.level))) + ' · ' + lessonWordCount(m) + ' words</div>' +
+      '<div class="progress" role="progressbar" aria-label="Lesson progress" aria-valuenow="' + done + '" aria-valuemin="0" aria-valuemax="' + STEPS.length + '"><div style="width:' + pct + '%"></div></div>' +
+      '<div class="ac-steps">' + done + ' of ' + STEPS.length + ' steps</div>' +
+    '</div>' +
+    '<div class="ac-chev" aria-hidden="true">›</div>' +
+  '</button>';
+}
+
+function renderLessons(v) {
+  const lessons = state.lessons;
+  let html = '<div class="archive-head"><h1>Past lessons</h1>' +
+    '<p class="muted" style="margin:.2rem 0 0">' + lessons.length + (lessons.length === 1 ? ' lesson' : ' lessons') + ' · ' + esc(levelLabel(normalizeLevel(state.user.level))) + '</p></div>';
+  if (!lessons.length) {
+    html += '<div class="empty">No lessons published yet — check back tomorrow.</div>';
+  } else {
+    html += '<div class="archive-list">' + lessons.map(archiveCardHTML).join('') + '</div>';
+  }
+  v.innerHTML = html;
+}
+
 async function renderHome(v) {
   const lessons = state.lessons;
   const today = lessons[0] || null;
@@ -1193,6 +1261,9 @@ async function renderHome(v) {
   } else {
     html += todayCardHTML(today);
   }
+
+  // 1b — Previous lessons (days before today) → archive page
+  html += prevLessonsHTML(lessons);
 
   // 2 — Review (mistakes), learner-facing label "Review"
   const todayMistakes = today ? mistakes.filter(function (x) { return x.date === today.date; }) : [];
@@ -1236,18 +1307,6 @@ async function renderHome(v) {
       '<p class="muted">You’re on a roll — get a short notification when each new lesson is ready.</p>' +
       '<p class="muted" id="push-status" role="status"></p>' +
       '<button class="btn btn-sm" data-action="enable-push">Enable notifications</button></div>';
-  }
-
-  // 5 — Older lessons (accessible, not competing)
-  if (lessons.length > 1) {
-    html += '<div class="section-title"><h2>Older lessons</h2></div>';
-    html += '<div class="older-strip">' + lessons.slice(1, 8).map(function (m) {
-      const first = (m.words && m.words[0]) || {};
-      return '<button class="older-card" data-action="open-lesson" data-date="' + esc(m.date) + '">' +
-        (first.photo ? '<img src="' + esc(first.photo) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">' : '') +
-        '<div class="oc-body"><div class="oc-theme">' + esc(m.theme || 'Lesson') + '</div>' +
-        '<div class="oc-date">' + esc(m.date) + '</div></div></button>';
-    }).join('') + '</div>';
   }
 
   v.innerHTML = html;
