@@ -75,9 +75,14 @@ function initOneSignal() {
     if (!id || id.indexOf('YOUR-ONESIGNAL') !== -1) return;
     if (typeof window.OneSignalDeferred === 'undefined') return;
     window.OneSignalDeferred.push(async function (OneSignal) {
-      try { await OneSignal.init({ appId: id }); }
+      try {
+        try { window.__osLogs.push('INIT-CALLBACK-START'); } catch (e) {}
+        await OneSignal.init({ appId: id });
+        try { window.__osLogs.push('INIT-OK'); } catch (e) {}
+      }
       catch (e) {
         window.__osInitError = (e && e.message) || String(e);
+        try { window.__osLogs.push('INIT-ERR: ' + window.__osInitError); } catch (e2) {}
         console.warn('[push] OneSignal init failed:', e);
       }
     });
@@ -115,7 +120,9 @@ async function promptPush(btn) {
       try {
         window.OneSignalDeferred.push(async function (OneSignal) {
           try {
+            try { window.__osLogs.push('OPTIN-CALLBACK-START'); } catch (e) {}
             await OneSignal.User.PushSubscription.optIn();
+            try { window.__osLogs.push('OPTIN-RESOLVED'); } catch (e) {}
             for (let i = 0; i < 20; i++) {
               try {
                 const sub = OneSignal.User.PushSubscription;
@@ -146,7 +153,7 @@ async function promptPush(btn) {
         var logs = (window.__osLogs || []).slice(-6);
         if (logs.length) osLogStr = ' logs=[' + logs.join(' ~ ') + ']';
       } catch (e) {}
-      const subDbg = ' [dbg build=20260930g ' + sdkState + osLogStr + ' ' + (optInError || 'no-optin-error') + ']';
+      const subDbg = ' [dbg build=20260930h ' + sdkState + osLogStr + ' ' + (optInError || 'no-optin-error') + ']';
       setStatus('Permission is on, but this device did not register. In your OneSignal dashboard check Settings → Push & In-App → Web: the Site URL must be exactly https://muse-englishapp.pages.dev — then tap Enable again.' + initErr + subDbg);
       resetBtn();
     }
