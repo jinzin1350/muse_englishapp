@@ -145,7 +145,10 @@ function logoutPushUser() {
   } catch (e) {}
 }
 
-/* ---------------- localStorage: scores & mistakes ---------------- */
+/* ---------------- scores & mistakes: per-user on Supabase, localStorage fallback ---------------- */
+function cloudReady() {
+  return !!(typeof sb !== 'undefined' && sb && state.user && !state.user.demo && state.user.id);
+}
 function lsKey(kind) {
   const email = state.user ? state.user.email : 'anon';
   return 'ela_' + kind + '_' + email;
@@ -157,27 +160,99 @@ function lsGet(kind) {
 function lsSet(kind, val) {
   try { localStorage.setItem(lsKey(kind), JSON.stringify(val)); } catch (e) {}
 }
-function saveAttempt(a) {
+function rowToMistake(r) {
+  return { id: r.id, date: r.date, level: r.level, kind: r.kind,
+           question: r.question, options: r.options || [], answer: r.answer, picked: r.picked };
+}
+function rowToAttempt(r) {
+  return { id: r.id, ts: r.created_at ? new Date(r.created_at).getTime() : Date.now(),
+           date: r.date, level: r.level, theme: r.theme, kind: r.kind, score: r.score, total: r.total };
+}
+async function getMistakes() {
+  if (cloudReady()) {
+    try {
+      const res = await sb.from('mistakes').select('*')
+        .eq('user_id', state.user.id).order('created_at', { ascending: false }).limit(500);
+      if (!res.error && res.data) return res.data.map(rowToMistake);
+    } catch (e) {}
+  }
+  return lsGet('mistakes');
+}
+async function getAttempts() {
+  if (cloudReady()) {
+    try {
+      const res = await sb.from('quiz_attempts').select('*')
+        .eq('user_id', state.user.id).order('created_at', { ascending: false }).limit(200);
+      if (!res.error && res.data) return res.data.map(rowToAttempt);
+    } catch (e) {}
+  }
+  return lsGet('scores');
+}
+async function saveAttempt(a) {
+  const rec = Object.assign({ ts: Date.now() }, a);
+  if (cloudReady()) {
+    try {
+      const res = await sb.from('quiz_attempts').insert({
+        user_id: state.user.id, date: a.date || null, level: a.level || null,
+        theme: a.theme || null, kind: a.kind || null, score: a.score, total: a.total
+      });
+      if (!res.error) return;
+    } catch (e) {}
+  }
   const arr = lsGet('scores');
-  arr.unshift(Object.assign({ ts: Date.now() }, a));
+  arr.unshift(rec);
   lsSet('scores', arr.slice(0, 200));
 }
-function saveMistake(m) {
+async function saveMistake(m) {
+  if (cloudReady()) {
+    try {
+      const dup = await sb.from('mistakes').select('id')
+        .eq('user_id', state.user.id).eq('question', m.question).limit(1);
+      if (!dup.error && dup.data && dup.data.length) return;
+      const res = await sb.from('mistakes').insert({
+        user_id: state.user.id, date: m.date || null, level: m.level || null, kind: m.kind || null,
+        question: m.question, options: m.options || [], answer: m.answer,
+        picked: (typeof m.picked === 'number' ? m.picked : null)
+      });
+      if (!res.error) return;
+    } catch (e) {}
+  }
   const arr = lsGet('mistakes');
   // avoid exact duplicates
-  if (!arr.some(x => x.question === m.question && x.date === m.date)) {
+  if (!arr.some(function (x) { return x.question === m.question && x.date === m.date; })) {
     arr.unshift(Object.assign({ id: uid() }, m));
     lsSet('mistakes', arr.slice(0, 500));
   }
 }
-function removeMistake(id) {
-  lsSet('mistakes', lsGet('mistakes').filter(x => x.id !== id));
+async function removeMistake(id) {
+  if (cloudReady()) {
+    try {
+      const res = await sb.from('mistakes').delete().eq('id', id).eq('user_id', state.user.id);
+      if (!res.error) return;
+    } catch (e) {}
+  }
+  lsSet('mistakes', lsGet('mistakes').filter(function (x) { return x.id !== id; }));
 }
-function overallAverage() {
-  const arr = lsGet('scores');
+async function getOverallAverage() {
+  const arr = await getAttempts();
   let c = 0, t = 0;
-  arr.forEach(a => { c += a.score; t += a.total; });
+  arr.forEach(function (a) { c += a.score; t += a.total; });
   return t ? Math.round((c / t) * 100) : null;
+}
+/* one-time: push this device's local scores/mistakes to the user's cloud rows after login */
+async function migrateLocalToCloud() {
+  if (!cloudReady()) return;
+  try {
+    const lm = lsGet('mistakes'), la = lsGet('scores');
+    for (const m of lm) { await saveMistake(m); }
+    for (const a of la) {
+      await sb.from('quiz_attempts').insert({
+        user_id: state.user.id, date: a.date || null, level: a.level || null,
+        theme: a.theme || null, kind: a.kind || null, score: a.score, total: a.total
+      });
+    }
+    if (lm.length || la.length) { lsSet('mistakes', []); lsSet('scores', []); }
+  } catch (e) {}
 }
 
 /* ---------------- audio engine (one shared element) ---------------- */
@@ -434,8 +509,9 @@ async function enterApp() {
     if (prof) level = prof.level;
   } catch (e) { /* RLS or missing row -> treat as pending */ }
   const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
-  state.user = { email: u.email, level: level, isAdmin: isAdmin, demo: false };
+  state.user = { id: u.id, email: u.email, level: level, isAdmin: isAdmin, demo: false };
   identifyPushUser(u.id, u.email, level);
+  await migrateLocalToCloud();
   await afterLogin();
 }
 
@@ -519,12 +595,12 @@ function catCardHTML(m) {
   '</button>';
 }
 
-function renderHome(v) {
+async function renderHome(v) {
   const lessons = state.lessons;
   const shown = state.showAllCats ? lessons : lessons.slice(0, 4);
-  const avg = overallAverage();
-  const scores = lsGet('scores').slice(0, 3);
-  const mistakes = lsGet('mistakes');
+  const avg = await getOverallAverage();
+  const scores = (await getAttempts()).slice(0, 3);
+  const mistakes = await getMistakes();
 
   let html = '';
 
@@ -710,7 +786,7 @@ function grammarTabHTML(m) {
 }
 
 /* ---------------- quiz engine ---------------- */
-function startQuiz(kind) {
+async function startQuiz(kind) {
   const m = state.lesson;
   let questions = [];
   if (kind === 'word') {
@@ -722,7 +798,7 @@ function startQuiz(kind) {
       return { question: q.question, options: q.options, answer: q.answer, kind: 'grammar' };
     });
   } else if (kind === 'mistakes') {
-    questions = lsGet('mistakes').map(function (mk) {
+    questions = (await getMistakes()).map(function (mk) {
       return { question: mk.question, options: mk.options, answer: mk.answer, kind: mk.kind || 'word', mistakeId: mk.id };
     });
   }
@@ -819,9 +895,9 @@ function finishQuiz() {
 }
 
 /* ---------------- scores view ---------------- */
-function renderScores(v) {
-  const arr = lsGet('scores');
-  const avg = overallAverage();
+async function renderScores(v) {
+  const arr = await getAttempts();
+  const avg = await getOverallAverage();
   let html = '<h1>My Scores</h1>';
   if (avg === null) {
     html += '<div class="empty">No quiz attempts yet.<br>Finish a quiz and your scores will appear here.</div>';
@@ -833,8 +909,8 @@ function renderScores(v) {
 }
 
 /* ---------------- mistakes view ---------------- */
-function renderMistakes(v) {
-  const arr = lsGet('mistakes');
+async function renderMistakes(v) {
+  const arr = await getMistakes();
   let html = '<h1>My Mistakes</h1>';
   if (!arr.length) {
     html += '<div class="empty">No mistakes — everything you got wrong will land here for review. 🎉</div>';
@@ -942,8 +1018,10 @@ function bindEvents() {
     else if (a === 'quiz-opt') answerQuiz(parseInt(t.getAttribute('data-idx'), 10));
     else if (a === 'quiz-next') nextQuiz();
     else if (a === 'practice-again') {
-      if (lsGet('mistakes').length) startQuiz('mistakes');
-      else show('mistakes');
+      getMistakes().then(function (arr) {
+        if (arr.length) startQuiz('mistakes');
+        else show('mistakes');
+      });
     }
     else if (a === 'enable-push') promptPush(t);
   });
