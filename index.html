@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#C84B31">
-  <title>English Learning App</title>
+  <meta name="description" content="Muse English — build real English, one daily lesson at a time. Words, listening, shadowing, grammar and a quiz for your level, A1 to C2.">
+  <title>Muse English — Build real English, one daily lesson at a time</title>
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png">
@@ -13,7 +14,7 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="EnglishApp">
+  <meta name="apple-mobile-web-app-title" content="Muse English">
   <link rel="stylesheet" href="css/styles.css">
   <!-- Supabase JS client (auth + database) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -44,20 +45,51 @@
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 </head>
 <body>
-  <header id="app-header" class="hidden">
-    <div class="header-inner">
-      <div class="brand">
-        <span class="brand-mark">📖</span>
-        <span class="brand-name">English Learning</span>
-      </div>
-      <div class="header-right">
-        <span id="header-user" class="header-user"></span>
-        <button id="btn-logout" class="btn btn-ghost btn-sm">Log out</button>
+  <a class="skip-link" href="#view">Skip to content</a>
+
+  <!-- Public landing header (logged out) -->
+  <header id="landing-header" class="landing-header hidden">
+    <div class="landing-header-inner">
+      <a class="brand" href="#/" aria-label="Muse English home">
+        <span class="brand-mark" aria-hidden="true">📖</span>
+        <span class="brand-name">Muse English</span>
+      </a>
+      <nav class="landing-nav" aria-label="Product">
+        <a href="#how-it-works">How it works</a>
+        <a href="#levels">Levels</a>
+      </nav>
+      <div class="landing-actions">
+        <a class="btn btn-ghost btn-sm" href="#/signin">Sign in</a>
+        <a class="btn btn-sm" href="#/signup">Create account</a>
       </div>
     </div>
   </header>
 
-  <main id="view" aria-live="polite"></main>
+  <!-- Logged-in app header: brand + compact profile menu -->
+  <header id="app-header" class="hidden">
+    <div class="header-inner">
+      <a class="brand" href="#/home" aria-label="Muse English home">
+        <span class="brand-mark" aria-hidden="true">📖</span>
+        <span class="brand-name">Muse English</span>
+      </a>
+      <div class="header-right">
+        <div class="profile-menu">
+          <button id="btn-profile" class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-label="Account menu">
+            <span id="profile-initial" class="profile-initial">?</span>
+          </button>
+          <div id="profile-dropdown" class="profile-dropdown hidden" role="menu" aria-label="Account">
+            <div class="profile-email" id="profile-email"></div>
+            <div class="profile-level" id="profile-level"></div>
+            <a href="#/profile" class="profile-item" role="menuitem">👤 Profile &amp; settings</a>
+            <a href="#/admin" class="profile-item hidden" id="profile-admin" role="menuitem">🛠 Admin</a>
+            <button class="profile-item" id="btn-logout" role="menuitem">Log out</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="view" aria-live="polite" tabindex="-1"></main>
 
   <!-- Persistent audio mini-player (stays visible across views) -->
   <div id="mini-player" class="mini-player hidden" aria-label="Audio player">
@@ -69,16 +101,16 @@
     <div id="mp-time" class="mp-time">0:00</div>
   </div>
 
-  <!-- Bottom tab bar (mobile-first, one-handed) -->
+  <!-- Learner navigation: bottom bar on mobile, sidebar on desktop -->
   <nav id="tabbar" class="tabbar hidden" aria-label="Main navigation">
-    <button class="tab" data-view="home"><span class="tab-icon">🏠</span><span class="tab-label">Home</span></button>
-    <button class="tab" data-view="lesson"><span class="tab-icon">📖</span><span class="tab-label">Lesson</span></button>
-    <button class="tab" data-view="scores"><span class="tab-icon">🏆</span><span class="tab-label">Scores</span></button>
-    <button class="tab" data-view="mistakes"><span class="tab-icon">📝</span><span class="tab-label">Mistakes</span></button>
-    <button class="tab hidden" data-view="admin" id="tab-admin"><span class="tab-icon">🛠</span><span class="tab-label">Admin</span></button>
+    <button class="tab" data-view="home"><span class="tab-icon" aria-hidden="true">🏠</span><span class="tab-label">Home</span></button>
+    <button class="tab" data-view="lesson"><span class="tab-icon" aria-hidden="true">📖</span><span class="tab-label">Learn</span></button>
+    <button class="tab" data-view="review"><span class="tab-icon" aria-hidden="true">📝</span><span class="tab-label">Review</span></button>
+    <button class="tab" data-view="scores"><span class="tab-icon" aria-hidden="true">🏆</span><span class="tab-label">Progress</span></button>
+    <button class="tab" data-view="profile"><span class="tab-icon" aria-hidden="true">👤</span><span class="tab-label">Profile</span></button>
   </nav>
 
   <script src="js/config.js"></script>
-  <script src="js/app.js?v=20260930p"></script>
+  <script src="js/app.js?v=20260930q"></script>
 </body>
 </html>
