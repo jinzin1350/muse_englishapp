@@ -17,6 +17,29 @@
   <link rel="stylesheet" href="css/styles.css">
   <!-- Supabase JS client (auth + database) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Capture OneSignal SDK console output for diagnostics (runs before the SDK) -->
+  <script>
+  window.__osLogs = [];
+  (function () {
+    ['log', 'info', 'warn', 'error', 'debug'].forEach(function (m) {
+      try {
+        var orig = console[m].bind(console);
+        console[m] = function () {
+          try {
+            var msg = Array.prototype.map.call(arguments, function (a) {
+              try { return typeof a === 'string' ? a : JSON.stringify(a); } catch (e) { return String(a); }
+            }).join(' ').slice(0, 220);
+            if (/onesignal|duplicate init|skipping|incompatible|service worker|push/i.test(msg)) {
+              window.__osLogs.push(msg);
+              if (window.__osLogs.length > 30) window.__osLogs.shift();
+            }
+          } catch (e) {}
+          return orig.apply(null, arguments);
+        };
+      } catch (e) {}
+    });
+  })();
+  </script>
   <!-- OneSignal Web Push SDK (initialized only when a real App ID is configured) -->
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 </head>
@@ -56,6 +79,6 @@
   </nav>
 
   <script src="js/config.js"></script>
-  <script src="js/app.js?v=20260930f"></script>
+  <script src="js/app.js?v=20260930g"></script>
 </body>
 </html>

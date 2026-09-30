@@ -141,7 +141,12 @@ async function promptPush(btn) {
       const sdkState = 'sdkCount=' + (window.__oneSignalSdkLoadCount || 0) +
         ' hasOneSignal=' + (typeof window.OneSignal) +
         ' inited=' + (window.OneSignal && window.OneSignal.initialized);
-      const subDbg = ' [dbg build=20260930f ' + sdkState + ' ' + (optInError || 'no-optin-error') + ']';
+      let osLogStr = '';
+      try {
+        var logs = (window.__osLogs || []).slice(-6);
+        if (logs.length) osLogStr = ' logs=[' + logs.join(' ~ ') + ']';
+      } catch (e) {}
+      const subDbg = ' [dbg build=20260930g ' + sdkState + osLogStr + ' ' + (optInError || 'no-optin-error') + ']';
       setStatus('Permission is on, but this device did not register. In your OneSignal dashboard check Settings → Push & In-App → Web: the Site URL must be exactly https://muse-englishapp.pages.dev — then tap Enable again.' + initErr + subDbg);
       resetBtn();
     }
