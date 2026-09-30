@@ -138,7 +138,7 @@ async function promptPush(btn) {
       if (btn) btn.style.display = 'none';
     } else {
       const initErr = window.__osInitError ? ' OneSignal says: ' + window.__osInitError : '';
-      const subDbg = optInError ? ' [' + optInError + ']' : '';
+      const subDbg = ' [dbg build=20260930e ' + (optInError || 'no-optin-error') + ']';
       setStatus('Permission is on, but this device did not register. In your OneSignal dashboard check Settings → Push & In-App → Web: the Site URL must be exactly https://muse-englishapp.pages.dev — then tap Enable again.' + initErr + subDbg);
       resetBtn();
     }
