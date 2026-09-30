@@ -913,22 +913,34 @@ function quizTabHTML(m) {
 function grammarTabHTML(m) {
   const g = m.grammar;
   if (!g) return '<div class="empty">No grammar lesson for this date.</div>';
-  const paras = String(g.explanation || '').split(/\n\s*\n/).map(function (p) {
-    return '<p>' + esc(p) + '</p>';
+  // explanation paragraphs -> numbered rule cards, **bold** -> highlighted
+  const paras = String(g.explanation || '').split(/\n\s*\n/).map(function (p, i) {
+    const html = esc(p).replace(/\*\*(.+?)\*\*/g, '<strong class="hl">$1</strong>');
+    return '<div class="rule-card"><span class="rule-num">' + (i + 1) + '</span><p>' + html + '</p></div>';
   }).join('');
+  // examples: trailing (note) becomes a caption pill
   const examples = (g.examples || []).map(function (e) {
-    return '<div class="example-card">' + esc(e) + '</div>';
+    let text = String(e), note = '';
+    const mm = text.match(/\(([^()]*)\)\s*$/);
+    if (mm) { note = mm[1]; text = text.slice(0, mm.index).trim(); }
+    const html = esc(text).replace(/\*(.+?)\*/g, '<em class="ex-em">$1</em>');
+    return '<div class="example-card"><span class="ex-quote">&ldquo;</span>' +
+      '<p class="ex-text">' + html + '</p>' +
+      (note ? '<span class="ex-note">' + esc(note) + '</span>' : '') + '</div>';
   }).join('');
   const practice = (g.practice || []).map(function (p) {
-    return '<details class="practice"><summary>' + esc(p.q) + '</summary><p style="margin:0.5rem 0 0">' + esc(p.a) + '</p></details>';
+    return '<details class="practice"><summary>' + esc(p.q) + '</summary><p>' + esc(p.a) + '</p></details>';
   }).join('');
   const quizBtn = (g.quiz && g.quiz.length)
-    ? '<button class="btn btn-block" data-action="quiz-start" data-kind="grammar">Start grammar quiz (' + g.quiz.length + ' questions)</button>'
+    ? '<div class="quiz-cta"><p class="quiz-cta-text">Ready to test yourself?</p>' +
+      '<button class="btn btn-block" data-action="quiz-start" data-kind="grammar">Start grammar quiz · ' + g.quiz.length + ' questions</button></div>'
     : '';
-  return '<div class="card"><h3>' + esc(g.title || 'Grammar') + '</h3>' +
-    '<div class="grammar-body">' + paras + '</div>' +
-    (examples ? '<h3>Examples</h3>' + examples : '') +
-    (practice ? '<h3>Practice</h3>' + practice : '') +
+  return '<div class="grammar-page"><div class="grammar-hero"><span class="hero-kicker">📖 Grammar of the day</span>' +
+    '<h2 class="hero-title">' + esc(g.title || 'Grammar') + '</h2>' +
+    '<span class="hero-badge">' + esc(levelLabel(m.level)) + '</span></div>' +
+    (paras ? '<div class="section-kicker">The rules</div>' + paras : '') +
+    (examples ? '<div class="section-kicker">Examples</div>' + examples : '') +
+    (practice ? '<div class="section-kicker">Quick practice</div>' + practice : '') +
     quizBtn + '</div>';
 }
 
