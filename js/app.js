@@ -53,6 +53,20 @@ const state = {
   pushOptedIn: null    // OneSignal subscription state: true/false/null(unknown)
 };
 
+/* Six CEFR levels. Legacy 3-level values are mapped so existing assignments keep working. */
+const LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
+const LEVEL_LABELS = { a1: 'A1 · Beginner', a2: 'A2 · Elementary', b1: 'B1 · Intermediate', b2: 'B2 · Upper-Intermediate', c1: 'C1 · Advanced', c2: 'C2 · Proficiency' };
+function normalizeLevel(lv) {
+  if (!lv) return null;
+  const v = String(lv).toLowerCase();
+  if (LEVELS.indexOf(v) !== -1) return v;
+  if (v === 'beginner') return 'a1';
+  if (v === 'intermediate') return 'b2';
+  if (v === 'advanced') return 'c1';
+  return null;
+}
+function levelLabel(lv) { return LEVEL_LABELS[lv] || lv || '—'; }
+
 /* Deep link from push notifications: ?lesson=latest opens the newest lesson
    for the user's level right after login. */
 let pendingDeepLink = null;
@@ -631,14 +645,14 @@ async function enterApp() {
   } catch (e) { /* RLS or missing row -> treat as pending */ }
   const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
   state.user = { id: u.id, email: u.email, level: level, isAdmin: isAdmin, demo: false };
-  identifyPushUser(u.id, u.email, level);
+  identifyPushUser(u.id, u.email, normalizeLevel(level));
   await migrateLocalToCloud();
   await afterLogin();
 }
 
 async function afterLogin() {
   if (!state.user.level && !state.user.isAdmin) { show('waiting'); return; }
-  const level = state.user.level || 'intermediate';
+  const level = normalizeLevel(state.user.level) || 'b2';
   state.lessons = await loadLessons(level);
   state.lesson = state.lessons[0] || null;
   show('home');
@@ -655,19 +669,19 @@ async function doLogout() {
 /* Demo mode (no Supabase configured) */
 const DEMO_USERS = [
   { id: 'demo-u1', email: 'sara@example.com', level: null, created_at: Date.now() - 86400000 },
-  { id: 'demo-u2', email: 'reza@example.com', level: 'beginner', created_at: Date.now() - 3 * 86400000 },
-  { id: 'demo-u3', email: 'mina@example.com', level: 'intermediate', created_at: Date.now() - 5 * 86400000 }
+  { id: 'demo-u2', email: 'reza@example.com', level: 'a1', created_at: Date.now() - 3 * 86400000 },
+  { id: 'demo-u3', email: 'mina@example.com', level: 'b2', created_at: Date.now() - 5 * 86400000 }
 ];
 
 async function demoLogin(asAdmin) {
   state.user = {
     email: asAdmin ? String(APP_CONFIG.ADMIN_EMAIL) : 'demo-learner@example.com',
-    level: asAdmin ? 'intermediate' : 'intermediate',
+    level: 'b2',
     isAdmin: !!asAdmin,
     demo: true
   };
   state.adminUsers = DEMO_USERS.map(function (u) { return Object.assign({}, u); });
-  state.lessons = await loadLessons('intermediate');
+  state.lessons = await loadLessons('b2');
   state.lesson = state.lessons[0] || null;
   show('home');
   consumeDeepLink();
@@ -1098,8 +1112,8 @@ async function loadAdminUsers() {
       '</div>' +
       '<select class="level-select" data-user-id="' + esc(u.id) + '" aria-label="Set level">' +
         '<option value="">— set level —</option>' +
-        ['beginner', 'intermediate', 'advanced'].map(function (lv) {
-          return '<option value="' + lv + '"' + (u.level === lv ? ' selected' : '') + '>' + lv + '</option>';
+        LEVELS.map(function (lv) {
+          return '<option value="' + lv + '"' + (normalizeLevel(u.level) === lv ? ' selected' : '') + '>' + levelLabel(lv) + '</option>';
         }).join('') +
       '</select>' +
     '</div>';
