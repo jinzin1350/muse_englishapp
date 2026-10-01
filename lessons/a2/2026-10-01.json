@@ -1,0 +1,437 @@
+{
+  "date": "2026-10-01",
+  "theme": "travel & transport",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "train",
+      "pos": "noun",
+      "meaning": "a long vehicle that carries people on rails",
+      "example": "We took the train to the city.",
+      "pronunciation": "TRAYN",
+      "persian": "قطار",
+      "photo": "media/a2/2026-10-01/photos/train.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/train.mp3"
+    },
+    {
+      "word": "station",
+      "pos": "noun",
+      "meaning": "the building where trains and buses stop",
+      "example": "The station is full of people.",
+      "pronunciation": "STAY-shun",
+      "persian": "ایستگاه",
+      "photo": "media/a2/2026-10-01/photos/station.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/station.mp3"
+    },
+    {
+      "word": "ticket",
+      "pos": "noun",
+      "meaning": "a small paper you buy to travel",
+      "example": "I bought a ticket for the train.",
+      "pronunciation": "TIK-it",
+      "persian": "بلیت",
+      "photo": "media/a2/2026-10-01/photos/ticket.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/ticket.mp3"
+    },
+    {
+      "word": "luggage",
+      "pos": "noun",
+      "meaning": "the bags you carry when you travel",
+      "example": "My luggage is very heavy.",
+      "pronunciation": "LUG-ij",
+      "persian": "چمدان‌ها",
+      "photo": "media/a2/2026-10-01/photos/luggage.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/luggage.mp3"
+    },
+    {
+      "word": "map",
+      "pos": "noun",
+      "meaning": "a picture that shows roads and places",
+      "example": "Look at the map and find the hotel.",
+      "pronunciation": "MAP",
+      "persian": "نقشه",
+      "photo": "media/a2/2026-10-01/photos/map.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/map.mp3"
+    },
+    {
+      "word": "journey",
+      "pos": "noun",
+      "meaning": "a long trip from one place to another",
+      "example": "The journey took three hours.",
+      "pronunciation": "JUR-nee",
+      "persian": "سفر",
+      "photo": "media/a2/2026-10-01/photos/journey.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/journey.mp3"
+    },
+    {
+      "word": "hotel",
+      "pos": "noun",
+      "meaning": "a building where travellers sleep and pay for rooms",
+      "example": "Our hotel is near the station.",
+      "pronunciation": "ho-TEL",
+      "persian": "هتل",
+      "photo": "media/a2/2026-10-01/photos/hotel.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/hotel.mp3"
+    },
+    {
+      "word": "guest",
+      "pos": "noun",
+      "meaning": "a person staying at a hotel or visiting your home",
+      "example": "She is a guest at our hotel.",
+      "pronunciation": "GEST",
+      "persian": "مهمان",
+      "photo": "media/a2/2026-10-01/photos/guest.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/guest.mp3"
+    },
+    {
+      "word": "passport",
+      "pos": "noun",
+      "meaning": "the small book that lets you travel to other countries",
+      "example": "You need your passport to fly.",
+      "pronunciation": "PAS-port",
+      "persian": "گذرنامه",
+      "photo": "media/a2/2026-10-01/photos/passport.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/passport.mp3"
+    },
+    {
+      "word": "taxi",
+      "pos": "noun",
+      "meaning": "a car with a driver that you pay to take you somewhere",
+      "example": "We took a taxi to the hotel.",
+      "pronunciation": "TAK-see",
+      "persian": "تاکسی",
+      "photo": "media/a2/2026-10-01/photos/taxi.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/taxi.mp3"
+    },
+    {
+      "word": "arrival",
+      "pos": "noun",
+      "meaning": "the time or moment you come to a place",
+      "example": "Our arrival time is ten in the morning.",
+      "pronunciation": "uh-RY-vul",
+      "persian": "رسیدن",
+      "photo": "media/a2/2026-10-01/photos/arrival.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/arrival.mp3"
+    },
+    {
+      "word": "departure",
+      "pos": "noun",
+      "meaning": "the time or moment you leave a place",
+      "example": "The departure is at nine o'clock.",
+      "pronunciation": "dee-PAR-chur",
+      "persian": "عزیمت",
+      "photo": "media/a2/2026-10-01/photos/departure.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/departure.mp3"
+    },
+    {
+      "word": "platform",
+      "pos": "noun",
+      "meaning": "the raised area where you wait for a train",
+      "example": "The train leaves from platform two.",
+      "pronunciation": "PLAT-form",
+      "persian": "سکو",
+      "photo": "media/a2/2026-10-01/photos/platform.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/platform.mp3"
+    },
+    {
+      "word": "bus",
+      "pos": "noun",
+      "meaning": "a big vehicle that carries many people on the road",
+      "example": "The bus stops near my house.",
+      "pronunciation": "BUS",
+      "persian": "اتوبوس",
+      "photo": "media/a2/2026-10-01/photos/bus.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/bus.mp3"
+    },
+    {
+      "word": "bridge",
+      "pos": "noun",
+      "meaning": "a road over a river or valley",
+      "example": "The bus went over the old bridge.",
+      "pronunciation": "BRIJ",
+      "persian": "پل",
+      "photo": "media/a2/2026-10-01/photos/bridge.jpg",
+      "word_audio": "media/a2/2026-10-01/word-audio/bridge.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-01/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Travel and Transport",
+    "audio": "media/a2/2026-10-01/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-01/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sam's Journey",
+    "audio": "media/a2/2026-10-01/shadowing.mp3",
+    "transcript": "media/a2/2026-10-01/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'train' mean?",
+      "options": [
+        "a small paper you buy to travel",
+        "a big vehicle that carries many people on the road",
+        "a long vehicle that carries people on rails",
+        "the building where trains and buses stop"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'station' mean?",
+      "options": [
+        "the building where trains and buses stop",
+        "a long trip from one place to another",
+        "a small paper you buy to travel",
+        "a building where travellers sleep and pay for rooms"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'ticket' mean?",
+      "options": [
+        "the time or moment you come to a place",
+        "the time or moment you leave a place",
+        "the building where trains and buses stop",
+        "a small paper you buy to travel"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'luggage' mean?",
+      "options": [
+        "a person staying at a hotel or visiting your home",
+        "the bags you carry when you travel",
+        "a road over a river or valley",
+        "the raised area where you wait for a train"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'map' mean?",
+      "options": [
+        "a picture that shows roads and places",
+        "a picture that shows roads and places",
+        "the bags you carry when you travel",
+        "a long vehicle that carries people on rails"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'journey' mean?",
+      "options": [
+        "a car with a driver that you pay to take you somewhere",
+        "a picture that shows roads and places",
+        "a long trip from one place to another",
+        "a road over a river or valley"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'hotel' mean?",
+      "options": [
+        "a person staying at a hotel or visiting your home",
+        "a big vehicle that carries many people on the road",
+        "a building where travellers sleep and pay for rooms",
+        "a building where travellers sleep and pay for rooms"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'guest' mean?",
+      "options": [
+        "the time or moment you come to a place",
+        "a long trip from one place to another",
+        "the small book that lets you travel to other countries",
+        "a person staying at a hotel or visiting your home"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'passport' mean?",
+      "options": [
+        "a small paper you buy to travel",
+        "the small book that lets you travel to other countries",
+        "the bags you carry when you travel",
+        "a car with a driver that you pay to take you somewhere"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'taxi' mean?",
+      "options": [
+        "a building where travellers sleep and pay for rooms",
+        "a person staying at a hotel or visiting your home",
+        "a car with a driver that you pay to take you somewhere",
+        "the building where trains and buses stop"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'arrival' mean?",
+      "options": [
+        "the time or moment you come to a place",
+        "the time or moment you come to a place",
+        "the raised area where you wait for a train",
+        "the time or moment you leave a place"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'departure' mean?",
+      "options": [
+        "the time or moment you come to a place",
+        "the time or moment you leave a place",
+        "the time or moment you leave a place",
+        "a road over a river or valley"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'platform' mean?",
+      "options": [
+        "a big vehicle that carries many people on the road",
+        "a picture that shows roads and places",
+        "the small book that lets you travel to other countries",
+        "the raised area where you wait for a train"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'bus' mean?",
+      "options": [
+        "a big vehicle that carries many people on the road",
+        "the raised area where you wait for a train",
+        "a car with a driver that you pay to take you somewhere",
+        "a long vehicle that carries people on rails"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bridge' mean?",
+      "options": [
+        "a person staying at a hotel or visiting your home",
+        "a road over a river or valley",
+        "a road over a river or valley",
+        "the time or moment you come to a place"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Obligation and prohibition: have to, must, should",
+    "explanation": "We use have to, must, and should to talk about rules and advice.\n\nUse have to when something is a rule or a need: You have to show your passport at the airport.\n\nUse must for a very strong rule. It is like have to, but stronger: You must stop at the red light.\n\nUse don't have to when something is not needed: You don't have to take a taxi. The hotel is near the station.\n\nUse must not (mustn't) when something is not allowed: You must not smoke on the train.\n\nUse should for good advice: You should check your ticket before the departure time.",
+    "examples": [
+      "You have to show your passport at the airport.",
+      "You must stop at the red light.",
+      "You don't have to take a taxi. The hotel is near the station.",
+      "You must not smoke on the train.",
+      "You should check your ticket before departure."
+    ],
+    "practice": [],
+    "quiz": [
+      {
+        "question": "You ___ show your passport at the airport.",
+        "options": [
+          "have to",
+          "has to",
+          "must to",
+          "should to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You ___ stop at the red light.",
+        "options": [
+          "must to",
+          "have",
+          "should to",
+          "must"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The hotel is near the station. You ___ take a taxi.",
+        "options": [
+          "don't have to",
+          "must not",
+          "has to",
+          "must"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You ___ smoke on the train. It is not allowed.",
+        "options": [
+          "don't have to",
+          "should",
+          "must not",
+          "have not to"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Good advice: you ___ check your ticket before departure.",
+        "options": [
+          "should to",
+          "must not",
+          "don't have to",
+          "should"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She ___ wear a coat. It is very cold today.",
+        "options": [
+          "has to",
+          "have to",
+          "must to",
+          "should to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You ___ walk here. It is for buses only.",
+        "options": [
+          "should",
+          "don't have to",
+          "must not",
+          "has to"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We ___ hurry. The departure is in ten minutes.",
+        "options": [
+          "has to",
+          "have to",
+          "must to",
+          "don't have"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ bring your passport for this trip. It is not needed.",
+        "options": [
+          "must not",
+          "have to",
+          "don't have to",
+          "should to"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The doctor says: you ___ rest for two days.",
+        "options": [
+          "must to",
+          "should",
+          "have not to",
+          "must not"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-10-01/grammar-en.mp3"
+  }
+}

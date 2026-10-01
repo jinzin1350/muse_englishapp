@@ -1,0 +1,539 @@
+{
+  "date": "2026-10-01",
+  "theme": "Work & Careers",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "meritocracy",
+      "pos": "noun",
+      "meaning": "a system in which power and rewards go to the most talented and hardworking people, not the best connected",
+      "example": "She believes in meritocracy, where promotions go to the hardest-working employees, not the boss's friends.",
+      "pronunciation": "mer-i-TOK-ruh-see",
+      "persian": "شایسته‌سالاری",
+      "photo": "media/c2/2026-10-01/photos/meritocracy.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/meritocracy.mp3"
+    },
+    {
+      "word": "nepotism",
+      "pos": "noun",
+      "meaning": "the unfair practice of giving jobs or advantages to relatives and friends rather than the most qualified people",
+      "example": "Nepotism in the family firm meant the founder's nephew became director at twenty-five.",
+      "pronunciation": "NEP-uh-tiz-um",
+      "persian": "خویشاوندسالاری، پارتی‌بازی",
+      "photo": "media/c2/2026-10-01/photos/nepotism.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/nepotism.mp3"
+    },
+    {
+      "word": "sycophant",
+      "pos": "noun",
+      "meaning": "a person who praises powerful people excessively and insincerely in order to gain favor",
+      "example": "The office sycophant laughed at every one of the manager's jokes, however unfunny.",
+      "pronunciation": "SIK-uh-funt",
+      "persian": "چاپلوس، تملق‌گو",
+      "photo": "media/c2/2026-10-01/photos/sycophant.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/sycophant.mp3"
+    },
+    {
+      "word": "acumen",
+      "pos": "noun",
+      "meaning": "the ability to make good, quick judgments, especially in business",
+      "example": "Her financial acumen turned a failing startup into a market leader.",
+      "pronunciation": "uh-KYOO-men",
+      "persian": "تیزبینی، شمّ تجاری",
+      "photo": "media/c2/2026-10-01/photos/acumen.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/acumen.mp3"
+    },
+    {
+      "word": "shrewd",
+      "pos": "adjective",
+      "meaning": "clever and sharp in practical judgment, especially in business; able to see what will be advantageous",
+      "example": "The shrewd investor bought shares when everyone else was panicking.",
+      "pronunciation": "SHROOD",
+      "persian": "زیرک، باتدبیر",
+      "photo": "media/c2/2026-10-01/photos/shrewd.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/shrewd.mp3"
+    },
+    {
+      "word": "industrious",
+      "pos": "adjective",
+      "meaning": "hardworking and diligent",
+      "example": "The industrious apprentice stayed late every evening to master the machinery.",
+      "pronunciation": "in-DUS-tree-us",
+      "persian": "سخت‌کوش، پرکار",
+      "photo": "media/c2/2026-10-01/photos/industrious.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/industrious.mp3"
+    },
+    {
+      "word": "assiduous",
+      "pos": "adjective",
+      "meaning": "showing great care, attention, and persistence in one's work",
+      "example": "Assiduous networking over five years finally opened doors for her in the industry.",
+      "pronunciation": "uh-SIJ-oo-us",
+      "persian": "پیگیر و دقیق، کوشای خستگی‌ناپذیر",
+      "photo": "media/c2/2026-10-01/photos/assiduous.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/assiduous.mp3"
+    },
+    {
+      "word": "conscientious",
+      "pos": "adjective",
+      "meaning": "careful, thorough, and guided by a strong sense of duty",
+      "example": "A conscientious auditor double-checks every figure before signing off.",
+      "pronunciation": "kon-shee-EN-shus",
+      "persian": "وظیفه‌شناس، باوجدان",
+      "photo": "media/c2/2026-10-01/photos/conscientious.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/conscientious.mp3"
+    },
+    {
+      "word": "lackadaisical",
+      "pos": "adjective",
+      "meaning": "lacking enthusiasm, energy, or care; casually lazy",
+      "example": "His lackadaisical attitude toward deadlines cost him the promotion.",
+      "pronunciation": "lak-uh-DAY-zi-kul",
+      "persian": "بی‌حال و بی‌انگیزه",
+      "photo": "media/c2/2026-10-01/photos/lackadaisical.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/lackadaisical.mp3"
+    },
+    {
+      "word": "drudgery",
+      "pos": "noun",
+      "meaning": "hard, dull, repetitive work that feels like a grind",
+      "example": "Months of data-entry drudgery left her desperate for a more creative role.",
+      "pronunciation": "DRUJ-uh-ree",
+      "persian": "کار طاقت‌فرسا و یکنواخت",
+      "photo": "media/c2/2026-10-01/photos/drudgery.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/drudgery.mp3"
+    },
+    {
+      "word": "sinecure",
+      "pos": "noun",
+      "meaning": "a well-paid position requiring little or no real work",
+      "example": "He treated the advisory board seat as a comfortable sinecure.",
+      "pronunciation": "SY-nih-kyoor",
+      "persian": "شغل راحت و پردرآمد",
+      "photo": "media/c2/2026-10-01/photos/sinecure.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/sinecure.mp3"
+    },
+    {
+      "word": "perquisite",
+      "pos": "noun",
+      "meaning": "an extra benefit or privilege granted in addition to a salary",
+      "example": "Free first-class flights were the most valuable perquisite of her executive role.",
+      "pronunciation": "PUR-kwi-zit",
+      "persian": "مزایای جانبی شغل",
+      "photo": "media/c2/2026-10-01/photos/perquisite.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/perquisite.mp3"
+    },
+    {
+      "word": "remuneration",
+      "pos": "noun",
+      "meaning": "a formal word for payment or reward for work done",
+      "example": "The board approved a generous remuneration package for the incoming CEO.",
+      "pronunciation": "ri-myoo-nuh-RAY-shun",
+      "persian": "دستمزد، حق‌الزحمه (رسمی)",
+      "photo": "media/c2/2026-10-01/photos/remuneration.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/remuneration.mp3"
+    },
+    {
+      "word": "lucrative",
+      "pos": "adjective",
+      "meaning": "producing a large profit or income",
+      "example": "The consultancy contract proved extremely lucrative within its first year.",
+      "pronunciation": "LOO-kruh-tiv",
+      "persian": "سودآور، پرسود",
+      "photo": "media/c2/2026-10-01/photos/lucrative.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/lucrative.mp3"
+    },
+    {
+      "word": "glass ceiling",
+      "pos": "noun",
+      "meaning": "an invisible barrier that prevents women or minorities from rising to top positions",
+      "example": "She shattered the glass ceiling to become the bank's first female chair.",
+      "pronunciation": "GLAS SEE-ling",
+      "persian": "سقف شیشه‌ای",
+      "photo": "media/c2/2026-10-01/photos/glass-ceiling.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/glass-ceiling.mp3"
+    },
+    {
+      "word": "attrition",
+      "pos": "noun",
+      "meaning": "the gradual loss of employees who leave and are not replaced",
+      "example": "High attrition in the support team forced constant, costly recruitment.",
+      "pronunciation": "uh-TRISH-un",
+      "persian": "فرسایش نیرو، ریزش تدریجی کارکنان",
+      "photo": "media/c2/2026-10-01/photos/attrition.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/attrition.mp3"
+    },
+    {
+      "word": "redundancy",
+      "pos": "noun",
+      "meaning": "(British English) job loss caused by a position being eliminated",
+      "example": "The merger led to three hundred redundancies across middle management.",
+      "pronunciation": "ri-DUN-dun-see",
+      "persian": "تعدیل نیرو (حذف پست)",
+      "photo": "media/c2/2026-10-01/photos/redundancy.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/redundancy.mp3"
+    },
+    {
+      "word": "trajectory",
+      "pos": "noun",
+      "meaning": "the path or arc of development that a career follows over time",
+      "example": "His trajectory carried him from junior analyst to partner in nine years.",
+      "pronunciation": "truh-JEK-tuh-ree",
+      "persian": "مسیر شغلی، سیر پیشرفت",
+      "photo": "media/c2/2026-10-01/photos/trajectory.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/trajectory.mp3"
+    },
+    {
+      "word": "micromanage",
+      "pos": "verb",
+      "meaning": "to control every small detail of employees' work excessively",
+      "example": "Good leaders delegate; they don't micromanage every email their team sends.",
+      "pronunciation": "MY-kroh-man-ij",
+      "persian": "کنترل افراطی جزئیات کار دیگران",
+      "photo": "media/c2/2026-10-01/photos/micromanage.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/micromanage.mp3"
+    },
+    {
+      "word": "bootstrapping",
+      "pos": "noun",
+      "meaning": "building a business using only one's own money and revenue, without outside investors",
+      "example": "Bootstrapping kept them debt-free but made growth painfully slow.",
+      "pronunciation": "BOOT-strap-ing",
+      "persian": "راه‌اندازی کسب‌وکار با منابع شخصی",
+      "photo": "media/c2/2026-10-01/photos/bootstrapping.jpg",
+      "word_audio": "media/c2/2026-10-01/word-audio/bootstrapping.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-01/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Work & Careers",
+    "audio": "media/c2/2026-10-01/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-01/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Price of Ambition",
+    "audio": "media/c2/2026-10-01/shadowing.mp3",
+    "transcript": "media/c2/2026-10-01/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'meritocracy' mean?",
+      "options": [
+        "hardworking and diligent",
+        "a system in which power and rewards go to the most talented and hardworking people, not the best connected",
+        "an extra benefit or privilege granted in addition to a salary",
+        "the path or arc of development that a career follows over time"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'nepotism' mean?",
+      "options": [
+        "showing great care, attention, and persistence in one's work",
+        "a formal word for payment or reward for work done",
+        "to control every small detail of employees' work excessively",
+        "the unfair practice of giving jobs or advantages to relatives and friends rather than the most qualified people"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'sycophant' mean?",
+      "options": [
+        "careful, thorough, and guided by a strong sense of duty",
+        "producing a large profit or income",
+        "a person who praises powerful people excessively and insincerely in order to gain favor",
+        "building a business using only one's own money and revenue, without outside investors"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'acumen' mean?",
+      "options": [
+        "the ability to make good, quick judgments, especially in business",
+        "lacking enthusiasm, energy, or care; casually lazy",
+        "an invisible barrier that prevents women or minorities from rising to top positions",
+        "a system in which power and rewards go to the most talented and hardworking people, not the best connected"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'shrewd' mean?",
+      "options": [
+        "hard, dull, repetitive work that feels like a grind",
+        "the gradual loss of employees who leave and are not replaced",
+        "clever and sharp in practical judgment, especially in business; able to see what will be advantageous",
+        "the unfair practice of giving jobs or advantages to relatives and friends rather than the most qualified people"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'industrious' mean?",
+      "options": [
+        "hardworking and diligent",
+        "(British English) job loss caused by a position being eliminated",
+        "a well-paid position requiring little or no real work",
+        "a person who praises powerful people excessively and insincerely in order to gain favor"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'assiduous' mean?",
+      "options": [
+        "an extra benefit or privilege granted in addition to a salary",
+        "the ability to make good, quick judgments, especially in business",
+        "showing great care, attention, and persistence in one's work",
+        "the path or arc of development that a career follows over time"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'conscientious' mean?",
+      "options": [
+        "a formal word for payment or reward for work done",
+        "clever and sharp in practical judgment, especially in business; able to see what will be advantageous",
+        "to control every small detail of employees' work excessively",
+        "careful, thorough, and guided by a strong sense of duty"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'lackadaisical' mean?",
+      "options": [
+        "building a business using only one's own money and revenue, without outside investors",
+        "lacking enthusiasm, energy, or care; casually lazy",
+        "producing a large profit or income",
+        "hardworking and diligent"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'drudgery' mean?",
+      "options": [
+        "a system in which power and rewards go to the most talented and hardworking people, not the best connected",
+        "showing great care, attention, and persistence in one's work",
+        "hard, dull, repetitive work that feels like a grind",
+        "an invisible barrier that prevents women or minorities from rising to top positions"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'sinecure' mean?",
+      "options": [
+        "careful, thorough, and guided by a strong sense of duty",
+        "a well-paid position requiring little or no real work",
+        "the unfair practice of giving jobs or advantages to relatives and friends rather than the most qualified people",
+        "the gradual loss of employees who leave and are not replaced"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'perquisite' mean?",
+      "options": [
+        "lacking enthusiasm, energy, or care; casually lazy",
+        "an extra benefit or privilege granted in addition to a salary",
+        "(British English) job loss caused by a position being eliminated",
+        "a person who praises powerful people excessively and insincerely in order to gain favor"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'remuneration' mean?",
+      "options": [
+        "the path or arc of development that a career follows over time",
+        "hard, dull, repetitive work that feels like a grind",
+        "a formal word for payment or reward for work done",
+        "the ability to make good, quick judgments, especially in business"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'lucrative' mean?",
+      "options": [
+        "clever and sharp in practical judgment, especially in business; able to see what will be advantageous",
+        "producing a large profit or income",
+        "to control every small detail of employees' work excessively",
+        "a well-paid position requiring little or no real work"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'glass ceiling' mean?",
+      "options": [
+        "hardworking and diligent",
+        "building a business using only one's own money and revenue, without outside investors",
+        "an extra benefit or privilege granted in addition to a salary",
+        "an invisible barrier that prevents women or minorities from rising to top positions"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'attrition' mean?",
+      "options": [
+        "a formal word for payment or reward for work done",
+        "showing great care, attention, and persistence in one's work",
+        "a system in which power and rewards go to the most talented and hardworking people, not the best connected",
+        "the gradual loss of employees who leave and are not replaced"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'redundancy' mean?",
+      "options": [
+        "(British English) job loss caused by a position being eliminated",
+        "the unfair practice of giving jobs or advantages to relatives and friends rather than the most qualified people",
+        "producing a large profit or income",
+        "careful, thorough, and guided by a strong sense of duty"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'trajectory' mean?",
+      "options": [
+        "the path or arc of development that a career follows over time",
+        "a person who praises powerful people excessively and insincerely in order to gain favor",
+        "lacking enthusiasm, energy, or care; casually lazy",
+        "an invisible barrier that prevents women or minorities from rising to top positions"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'micromanage' mean?",
+      "options": [
+        "to control every small detail of employees' work excessively",
+        "the ability to make good, quick judgments, especially in business",
+        "hard, dull, repetitive work that feels like a grind",
+        "the gradual loss of employees who leave and are not replaced"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bootstrapping' mean?",
+      "options": [
+        "a well-paid position requiring little or no real work",
+        "(British English) job loss caused by a position being eliminated",
+        "clever and sharp in practical judgment, especially in business; able to see what will be advantageous",
+        "building a business using only one's own money and revenue, without outside investors"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Obligation and prohibition at C2: have to, must, should, ought to, be supposed to, had better",
+    "explanation": "Obligation in English is a ladder of strength, and at C2 you must climb it precisely. At the top sits MUST for the speaker's own urgent decision: 'I must finish this tonight.' It comes from inside you. HAVE TO, by contrast, reports an external rule: 'I have to wear a badge; it's company policy.' Same grammar, opposite source of pressure. Learners mix them constantly; examiners notice.\n\nMUSTN'T is prohibition, full stop: 'You mustn't share passwords.' It is far stronger than SHOULDN'T, which is only advice. The classic trap is confusing MUSTN'T with DON'T HAVE TO. 'You mustn't attend' forbids you; 'You don't have to attend' frees you. One letter's difference, opposite meanings.\n\nSHOULD is advice, weaker than must: 'You should negotiate.' OUGHT TO means the same but sounds more formal and slightly old-fashioned, the version contracts and careful speakers prefer. BE SUPPOSED TO adds the idea of expectation or arrangement: 'You're supposed to file expenses by Friday' means it's expected of you, whether or not anyone enforces it.\n\nHAD BETTER is strong advice with a warning hiding inside it: 'You'd better back up your files' really means 'or you'll regret it.' It is stronger than should but weaker than must, and despite its form it never refers to the past. For the past, C2 speakers reach for the perfect modals of criticism: SHOULD HAVE and OUGHT TO HAVE. 'We should have spotted the attrition problem earlier' judges a decision that is already made.\n\nOne final C2 distinction: MUST also expresses logical deduction, which has nothing to do with obligation. 'You must be exhausted' doesn't order you to be tired; it concludes that you are. Context, as always, decides which must you're hearing.",
+    "examples": [
+      "I have to clock in before nine; it's company policy, not my choice.",
+      "I must finish this proposal tonight, or the client walks away.",
+      "You mustn't share your login details with anyone in the office.",
+      "You don't have to attend the social, but it's good for networking.",
+      "You ought to negotiate your salary before you sign anything.",
+      "You're supposed to submit expenses by Friday, though nobody actually does.",
+      "You'd better back up that presentation; this system crashes constantly.",
+      "We should have flagged the attrition problem months ago."
+    ],
+    "practice": [],
+    "quiz": [
+      {
+        "question": "Staff ___ wear an ID badge at all times; it's in the handbook.",
+        "options": [
+          "have to",
+          "must",
+          "should",
+          "ought to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ lose five kilos before the wedding. I've made up my mind.",
+        "options": [
+          "have to",
+          "must",
+          "should",
+          "had better"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ smoke anywhere on company premises. It's strictly forbidden.",
+        "options": [
+          "shouldn't",
+          "mustn't",
+          "don't have to",
+          "had better not"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ come to the farewell drinks if you're exhausted. It's entirely optional.",
+        "options": [
+          "mustn't",
+          "shouldn't",
+          "don't have to",
+          "ought not to"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You ___ take a coat; the forecast says it will pour all afternoon.",
+        "options": [
+          "must",
+          "have to",
+          "should",
+          "are supposed to"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Under the agreement, investors ___ to receive quarterly reports.",
+        "options": [
+          "must",
+          "have",
+          "are supposed",
+          "should"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You'd ___ hurry. The interview panel is already seated.",
+        "options": [
+          "best",
+          "better",
+          "rather",
+          "rather to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ have turned down that lucrative offer. She regrets it bitterly now.",
+        "options": [
+          "must",
+          "should",
+          "had better",
+          "would"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ be exhausted after surviving that redundancy round.",
+        "options": [
+          "have to",
+          "must",
+          "should",
+          "ought"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Employees ___ not use personal email accounts for client data.",
+        "options": [
+          "don't have to",
+          "should",
+          "must",
+          "had better"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

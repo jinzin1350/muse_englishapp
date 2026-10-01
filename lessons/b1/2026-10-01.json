@@ -1,0 +1,537 @@
+{
+  "date": "2026-10-01",
+  "theme": "Shopping & Money",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "bargain",
+      "pos": "noun",
+      "meaning": "something you buy for a very good, low price",
+      "example": "I got this jacket for forty dollars. What a bargain!",
+      "pronunciation": "BAR-gin",
+      "persian": "معاملهٔ خوب؛ خرید ارزان",
+      "photo": "media/b1/2026-10-01/photos/bargain.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/bargain.mp3"
+    },
+    {
+      "word": "budget",
+      "pos": "noun",
+      "meaning": "a plan for how much money you can spend",
+      "example": "We made a budget so we don't spend too much this month.",
+      "pronunciation": "BUH-jit",
+      "persian": "بودجه",
+      "photo": "media/b1/2026-10-01/photos/budget.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/budget.mp3"
+    },
+    {
+      "word": "discount",
+      "pos": "noun",
+      "meaning": "money taken off the normal price",
+      "example": "The store gave me a twenty percent discount on shoes.",
+      "pronunciation": "DISS-kownt",
+      "persian": "تخفیف",
+      "photo": "media/b1/2026-10-01/photos/discount.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/discount.mp3"
+    },
+    {
+      "word": "receipt",
+      "pos": "noun",
+      "meaning": "a small paper that proves you paid for something",
+      "example": "Keep your receipt in case you want to return the shirt.",
+      "pronunciation": "ree-SEET",
+      "persian": "رسید خرید",
+      "photo": "media/b1/2026-10-01/photos/receipt.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/receipt.mp3"
+    },
+    {
+      "word": "refund",
+      "pos": "noun",
+      "meaning": "money a store gives back to you after a return",
+      "example": "I got a full refund when I took the jacket back.",
+      "pronunciation": "REE-fund",
+      "persian": "بازپرداخت پول",
+      "photo": "media/b1/2026-10-01/photos/refund.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/refund.mp3"
+    },
+    {
+      "word": "afford",
+      "pos": "verb",
+      "meaning": "to have enough money to pay for something",
+      "example": "We can't afford a new car right now.",
+      "pronunciation": "uh-FORD",
+      "persian": "از عهدهٔ هزینه برآمدن؛ توان مالی داشتن",
+      "photo": "media/b1/2026-10-01/photos/afford.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/afford.mp3"
+    },
+    {
+      "word": "wallet",
+      "pos": "noun",
+      "meaning": "a small case where you keep money and cards",
+      "example": "He opened his wallet and paid in cash.",
+      "pronunciation": "WAH-lit",
+      "persian": "کیف پول",
+      "photo": "media/b1/2026-10-01/photos/wallet.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/wallet.mp3"
+    },
+    {
+      "word": "debt",
+      "pos": "noun",
+      "meaning": "money that you owe to someone else",
+      "example": "She worked hard to pay off her credit card debt.",
+      "pronunciation": "det",
+      "persian": "بدهی",
+      "photo": "media/b1/2026-10-01/photos/debt.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/debt.mp3"
+    },
+    {
+      "word": "savings",
+      "pos": "noun",
+      "meaning": "money you keep for the future instead of spending",
+      "example": "We put ten percent of our pay into savings every month.",
+      "pronunciation": "SAY-vingz",
+      "persian": "پس‌انداز",
+      "photo": "media/b1/2026-10-01/photos/savings.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/savings.mp3"
+    },
+    {
+      "word": "cashier",
+      "pos": "noun",
+      "meaning": "the person at a store who takes your money",
+      "example": "The cashier scanned my items and gave me change.",
+      "pronunciation": "ka-SHEER",
+      "persian": "صندوقدار",
+      "photo": "media/b1/2026-10-01/photos/cashier.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/cashier.mp3"
+    },
+    {
+      "word": "coupon",
+      "pos": "noun",
+      "meaning": "a ticket or code that gives you a discount",
+      "example": "I used a coupon and saved fifteen dollars on groceries.",
+      "pronunciation": "KOO-pon",
+      "persian": "کوپن تخفیف",
+      "photo": "media/b1/2026-10-01/photos/coupon.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/coupon.mp3"
+    },
+    {
+      "word": "tip",
+      "pos": "noun",
+      "meaning": "extra money you give a server for good service",
+      "example": "We left a ten-dollar tip for the waiter.",
+      "pronunciation": "tip",
+      "persian": "انعام",
+      "photo": "media/b1/2026-10-01/photos/tip.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/tip.mp3"
+    },
+    {
+      "word": "bill",
+      "pos": "noun",
+      "meaning": "a paper that shows how much you have to pay",
+      "example": "The waiter brought the bill at the end of the meal.",
+      "pronunciation": "bil",
+      "persian": "صورتحساب",
+      "photo": "media/b1/2026-10-01/photos/bill.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/bill.mp3"
+    },
+    {
+      "word": "sale",
+      "pos": "noun",
+      "meaning": "a time when a store sells things at lower prices",
+      "example": "All coats are half price in the winter sale.",
+      "pronunciation": "sayl",
+      "persian": "حراج؛ فروش ویژه",
+      "photo": "media/b1/2026-10-01/photos/sale.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/sale.mp3"
+    },
+    {
+      "word": "price tag",
+      "pos": "noun",
+      "meaning": "the label on a product that shows its price",
+      "example": "Check the price tag before you go to the cashier.",
+      "pronunciation": "PRYSS tag",
+      "persian": "برچسب قیمت",
+      "photo": "media/b1/2026-10-01/photos/price-tag.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/price-tag.mp3"
+    },
+    {
+      "word": "overpriced",
+      "pos": "adjective",
+      "meaning": "costing too much money for what you get",
+      "example": "Twenty dollars for a cup of coffee is overpriced.",
+      "pronunciation": "oh-vur-PRYST",
+      "persian": "بیش از حد گران",
+      "photo": "media/b1/2026-10-01/photos/overpriced.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/overpriced.mp3"
+    },
+    {
+      "word": "exchange",
+      "pos": "verb",
+      "meaning": "to take something back and get a different item",
+      "example": "These shoes are too small. Can I exchange them?",
+      "pronunciation": "iks-CHAYNJ",
+      "persian": "تعویض کردن (کالا)",
+      "photo": "media/b1/2026-10-01/photos/exchange.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/exchange.mp3"
+    },
+    {
+      "word": "return",
+      "pos": "verb",
+      "meaning": "to take something back to the store",
+      "example": "I decided to return the sweater because it didn't fit.",
+      "pronunciation": "ree-TURN",
+      "persian": "برگرداندن (کالا به فروشگاه)",
+      "photo": "media/b1/2026-10-01/photos/return.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/return.mp3"
+    },
+    {
+      "word": "try on",
+      "pos": "verb",
+      "meaning": "to put on clothes in a store to see if they fit",
+      "example": "Can I try on these jeans in the fitting room?",
+      "pronunciation": "TRY on",
+      "persian": "پرو کردن (لباس)",
+      "photo": "media/b1/2026-10-01/photos/try-on.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/try-on.mp3"
+    },
+    {
+      "word": "window shopping",
+      "pos": "noun",
+      "meaning": "looking at shop windows without buying anything",
+      "example": "We went window shopping but didn't spend a dollar.",
+      "pronunciation": "WIN-doh SHAH-ping",
+      "persian": "ویترین‌گردی؛ تماشای مغازه‌ها بدون خرید",
+      "photo": "media/b1/2026-10-01/photos/window-shopping.jpg",
+      "word_audio": "media/b1/2026-10-01/word-audio/window-shopping.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-10-01/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Shopping & Money",
+    "audio": "media/b1/2026-10-01/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-10-01/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: A Smart Shopping Day",
+    "audio": "media/b1/2026-10-01/shadowing.mp3",
+    "transcript": "media/b1/2026-10-01/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'bargain' mean?",
+      "options": [
+        "to have enough money to pay for something",
+        "a time when a store sells things at lower prices",
+        "something you buy for a very good, low price",
+        "extra money you give a server for good service"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'budget' mean?",
+      "options": [
+        "a plan for how much money you can spend",
+        "to take something back to the store",
+        "a paper that shows how much you have to pay",
+        "money taken off the normal price"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'discount' mean?",
+      "options": [
+        "a small paper that proves you paid for something",
+        "money taken off the normal price",
+        "the label on a product that shows its price",
+        "looking at shop windows without buying anything"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'receipt' mean?",
+      "options": [
+        "a small paper that proves you paid for something",
+        "money a store gives back to you after a return",
+        "money you keep for the future instead of spending",
+        "a plan for how much money you can spend"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'refund' mean?",
+      "options": [
+        "a plan for how much money you can spend",
+        "looking at shop windows without buying anything",
+        "money a store gives back to you after a return",
+        "money you keep for the future instead of spending"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'afford' mean?",
+      "options": [
+        "to put on clothes in a store to see if they fit",
+        "money a store gives back to you after a return",
+        "to have enough money to pay for something",
+        "a small paper that proves you paid for something"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'wallet' mean?",
+      "options": [
+        "money that you owe to someone else",
+        "a small case where you keep money and cards",
+        "a paper that shows how much you have to pay",
+        "a small paper that proves you paid for something"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'debt' mean?",
+      "options": [
+        "looking at shop windows without buying anything",
+        "a plan for how much money you can spend",
+        "a small case where you keep money and cards",
+        "money that you owe to someone else"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'savings' mean?",
+      "options": [
+        "money you keep for the future instead of spending",
+        "extra money you give a server for good service",
+        "costing too much money for what you get",
+        "to put on clothes in a store to see if they fit"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cashier' mean?",
+      "options": [
+        "to have enough money to pay for something",
+        "money that you owe to someone else",
+        "the person at a store who takes your money",
+        "money taken off the normal price"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'coupon' mean?",
+      "options": [
+        "the person at a store who takes your money",
+        "costing too much money for what you get",
+        "a ticket or code that gives you a discount",
+        "extra money you give a server for good service"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'tip' mean?",
+      "options": [
+        "money a store gives back to you after a return",
+        "to have enough money to pay for something",
+        "a ticket or code that gives you a discount",
+        "extra money you give a server for good service"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'bill' mean?",
+      "options": [
+        "money taken off the normal price",
+        "to put on clothes in a store to see if they fit",
+        "a paper that shows how much you have to pay",
+        "a ticket or code that gives you a discount"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'sale' mean?",
+      "options": [
+        "a time when a store sells things at lower prices",
+        "money taken off the normal price",
+        "costing too much money for what you get",
+        "to take something back and get a different item"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'price tag' mean?",
+      "options": [
+        "money taken off the normal price",
+        "the person at a store who takes your money",
+        "a plan for how much money you can spend",
+        "the label on a product that shows its price"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'overpriced' mean?",
+      "options": [
+        "something you buy for a very good, low price",
+        "costing too much money for what you get",
+        "extra money you give a server for good service",
+        "the label on a product that shows its price"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'exchange' mean?",
+      "options": [
+        "a plan for how much money you can spend",
+        "to take something back and get a different item",
+        "costing too much money for what you get",
+        "a small case where you keep money and cards"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'return' mean?",
+      "options": [
+        "costing too much money for what you get",
+        "looking at shop windows without buying anything",
+        "to take something back to the store",
+        "a paper that shows how much you have to pay"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'try on' mean?",
+      "options": [
+        "a paper that shows how much you have to pay",
+        "money you keep for the future instead of spending",
+        "to put on clothes in a store to see if they fit",
+        "to take something back to the store"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'window shopping' mean?",
+      "options": [
+        "looking at shop windows without buying anything",
+        "a paper that shows how much you have to pay",
+        "a time when a store sells things at lower prices",
+        "extra money you give a server for good service"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Obligation and prohibition: have to, must, mustn't, don't have to, should",
+    "explanation": "We use **have to** and **must** to talk about things that are necessary — things we are obliged to do. **Have to** is common for rules and everyday obligations: *I have to pay the bill before I leave.* *She has to wear a uniform at work.* In questions and negatives, **have to** uses *do*: *Do you have to work on Saturdays? I don't have to get up early tomorrow.*\n\n**Must** is stronger and more personal. We use it when the speaker decides something is necessary: *I must save more money this year.* *You must keep your receipt — it's important.* **Must** has no *do* in questions and negatives: *Must I pay now?*\n\nBe careful with negatives — they mean different things! **Mustn't** (= must not) means something is **prohibited**, not allowed: *You mustn't steal in a shop. You mustn't park here.* But **don't have to** means something is **not necessary**: *You don't have to tip in every country.* So *mustn't* = don't do it! and *don't have to* = it's not necessary.\n\nWe use **should** for **advice** and recommendations, not rules: *You should compare prices before you buy.* *You shouldn't spend all your savings.* **Should** is softer than **must** — it's a good idea, not an obligation.\n\nQuick summary: **have to / must** = necessary. **mustn't** = prohibited (don't do it). **don't have to** = not necessary. **should / shouldn't** = advice.",
+    "examples": [
+      "I have to pay the bill before we leave the restaurant. (obligation — a rule)",
+      "You must keep your receipt if you want a refund. (strong personal necessity)",
+      "You mustn't take things from a shop without paying. (prohibition — not allowed)",
+      "You don't have to buy anything when you go window shopping. (not necessary)",
+      "You should always check the price tag before you pay. (advice)",
+      "We shouldn't go into debt for things we can't afford. (advice, negative)"
+    ],
+    "practice": [],
+    "quiz": [
+      {
+        "question": "You ___ pay for things before you leave a shop. (obligation)",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "have to",
+          "shouldn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You ___ steal from a store. It's against the law! (prohibition)",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "should",
+          "have to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You ___ tip in every country — in some places it's not common.",
+        "options": [
+          "must",
+          "have to",
+          "don't have to",
+          "should"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You ___ compare prices online. It's a good idea. (advice)",
+        "options": [
+          "mustn't",
+          "should",
+          "don't have to",
+          "must"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ save more money this year. I've decided it's necessary.",
+        "options": [
+          "must",
+          "mustn't",
+          "don't have to",
+          "shouldn't"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ you have to work on Sundays?",
+        "options": [
+          "Must",
+          "Do",
+          "Should",
+          "Have"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ wear a uniform — her company has no dress code.",
+        "options": [
+          "mustn't",
+          "doesn't have to",
+          "has to",
+          "should"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ spend all your savings on one shopping trip! (advice)",
+        "options": [
+          "shouldn't",
+          "mustn't",
+          "don't have to",
+          "have to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We ___ keep the receipt — the store won't give a refund without it.",
+        "options": [
+          "don't have to",
+          "mustn't",
+          "shouldn't",
+          "have to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "You ___ return the jacket today; you have thirty days.",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "must",
+          "should"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}
