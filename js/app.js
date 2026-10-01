@@ -1429,8 +1429,12 @@ async function doSignup() {
     // After clicking the email link, Supabase returns the user to the app
     // they signed up from (production -> production, localhost -> localhost).
     const signupOpts = { emailRedirectTo: window.location.origin + '/' };
+    // Server-side persistence: the handle_new_user trigger saves level (+ref) on the
+    // profile at signup, so email confirmation on another device/browser keeps them.
+    const signupMeta = { level: chosenLevel };
     const signupRef = getRefCode();
-    if (signupRef) signupOpts.data = { referred_by: signupRef }; // backup copy in auth metadata
+    if (signupRef) signupMeta.referred_by = signupRef;
+    signupOpts.data = signupMeta;
     const { data, error } = await sb.auth.signUp({
       email: email,
       password: pass,
