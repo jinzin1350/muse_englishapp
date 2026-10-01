@@ -594,7 +594,13 @@ p { margin: 0 0 0.75em; }
   padding: 0.55rem 0 0.5rem; color: var(--muted); font-family: inherit;
   min-height: 64px; justify-content: center;
 }
-.tab-icon { font-size: 1.25rem; line-height: 1; }
+.tab-icon {
+  width: 42px; height: 42px; display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: background 0.2s ease, transform 0.15s ease;
+}
+.tab-icon svg { width: 24px; height: 24px; display: block; }
+.tab.active .tab-icon { background: rgba(200, 75, 49, 0.12); }
+.tab:active .tab-icon { transform: scale(0.92); }
 .tab-label { font-size: 0.68rem; font-weight: 600; }
 .tab.active { color: var(--tomato); }
 .tab[aria-current="page"] { color: var(--tomato); }
