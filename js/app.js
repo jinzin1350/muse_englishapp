@@ -53,7 +53,8 @@ const state = {
   adminUsers: [],
   pushOptedIn: null,   // OneSignal subscription state: true/false/null(unknown)
   previewLesson: null, // cached public lesson for landing/preview
-  justSignedUp: false
+  justSignedUp: false,
+  afterSignup: null   // email prefilled on signin right after account creation
 };
 
 /* Six CEFR levels. Legacy 3-level values are mapped so existing assignments keep working. */
@@ -946,7 +947,8 @@ function renderSignin(v) {
         '<div class="field"><label for="si-email">Email</label>' +
         '<input id="si-email" name="signin-email" type="email" autocomplete="email" placeholder="you@example.com" required></div>' +
         '<div class="field"><label for="si-pass">Password</label>' +
-        '<input id="si-pass" name="signin-password" type="password" autocomplete="current-password" placeholder="••••••••" required></div>' +
+        '<div class="pw-wrap"><input id="si-pass" name="signin-password" type="password" autocomplete="current-password" placeholder="••••••••" required>' +
+        '<button type="button" class="pw-toggle" data-action="pw-toggle" aria-label="Show password">👁️</button></div></div>' +
         '<div class="form-error" id="si-error" role="alert"></div>' +
         '<div class="form-note" id="si-note" role="status"></div>' +
         '<button class="btn btn-block" type="submit" id="si-submit">Sign in</button>' +
@@ -958,6 +960,13 @@ function renderSignin(v) {
       '<button class="btn btn-ghost btn-block" data-action="demo-admin">Continue in demo mode (admin)</button>'
     )
   );
+  // Arriving here right after signup: prefill email + explain the next step.
+  if (state.afterSignup) {
+    const em = document.getElementById('si-email');
+    if (em) em.value = state.afterSignup;
+    authNote('si', '✓ Account created! Check your inbox for the confirmation email, then sign in.');
+    state.afterSignup = null;
+  }
 }
 
 function renderSignup(v) {
@@ -972,7 +981,8 @@ function renderSignup(v) {
         '<div class="field"><label for="su-email">Email</label>' +
         '<input id="su-email" name="signup-email" type="email" autocomplete="email" placeholder="you@example.com" required></div>' +
         '<div class="field"><label for="su-pass">Password</label>' +
-        '<input id="su-pass" name="signup-password" type="password" autocomplete="new-password" placeholder="Choose a password (min 6 characters)" required minlength="6"></div>' +
+        '<div class="pw-wrap"><input id="su-pass" name="signup-password" type="password" autocomplete="new-password" placeholder="Choose a password (min 6 characters)" required minlength="6">' +
+        '<button type="button" class="pw-toggle" data-action="pw-toggle" aria-label="Show password">👁️</button></div></div>' +
         '<div class="form-error" id="su-error" role="alert"></div>' +
         '<div class="form-note" id="su-note" role="status"></div>' +
         '<button class="btn btn-block" type="submit" id="su-submit">Create account</button>' +
@@ -983,6 +993,16 @@ function renderSignup(v) {
       '<button class="btn btn-block" data-action="demo-learner">Continue in demo mode (learner)</button>'
     )
   );
+}
+
+function togglePw(btn) {
+  const wrap = btn.closest('.pw-wrap');
+  const input = wrap ? wrap.querySelector('input') : null;
+  if (!input) return;
+  const show = input.type === 'password';
+  input.type = show ? 'text' : 'password';
+  btn.textContent = show ? '🙈' : '👁️';
+  btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
 }
 
 function setAuthBusy(kind, busy, label) {
@@ -1035,15 +1055,23 @@ async function doSignup() {
   try {
     // After clicking the email link, Supabase returns the user to the app
     // they signed up from (production -> production, localhost -> localhost).
-    const { error } = await sb.auth.signUp({
+    const { data, error } = await sb.auth.signUp({
       email: email,
       password: pass,
       options: { emailRedirectTo: window.location.origin + '/' },
     });
     if (error) throw error;
-    state.justSignedUp = true;
-    authNote('su', '✓ Account created — loading your lessons…');
-    await enterApp();
+    setAuthBusy('su', false, 'Create account');
+    if (data.session) {
+      // Email confirmation disabled -> already signed in.
+      state.justSignedUp = true;
+      authNote('su', '✓ Account created — loading your lessons…');
+      await enterApp();
+      return;
+    }
+    // Confirmation required: send them to sign-in with email prefilled.
+    state.afterSignup = email;
+    go('signin');
   } catch (e) {
     authError('su', (e && e.message) || 'Sign up failed.');
     setAuthBusy('su', false, 'Create account');
@@ -1742,6 +1770,7 @@ function bindEvents() {
 
     if (a === 'demo-learner') demoLogin(false);
     else if (a === 'demo-admin') demoLogin(true);
+    else if (a === 'pw-toggle') togglePw(t);
     else if (a === 'check-level') checkLevel();
     else if (a === 'logout') doLogout();
     else if (a === 'open-lesson') { state.lessonTab = 'words'; go('lesson', t.getAttribute('data-date')); }
