@@ -504,6 +504,12 @@ function playTrack(src, title) {
 
 function initAudio() {
   player.el.preload = 'none';
+  player._seekQueue = [];
+  player.el.addEventListener('loadedmetadata', function () {
+    const q = player._seekQueue || []; player._seekQueue = [];
+    const d = player.el.duration;
+    if (isFinite(d) && d > 0) q.forEach(function (fn) { fn(d); });
+  });
   player.el.addEventListener('timeupdate', refreshTrackCards);
   player.el.addEventListener('play', function () { playerUI(); refreshTrackCards(); });
   player.el.addEventListener('pause', function () { playerUI(); refreshTrackCards(); });
@@ -521,6 +527,51 @@ async function audioAvailable(url) {
   } catch (e) { return false; }
 }
 
+/* Seek & skip: shared helpers for the audio cards. */
+function cardAudioTitle(card) {
+  const t = card.getAttribute('data-title');
+  if (t) return t;
+  const el = $('.audio-title', card);
+  return el ? el.textContent : 'Audio';
+}
+
+// Make this card's track the active player track (loads + plays if needed).
+function activateCard(card) {
+  const src = card.getAttribute('data-src');
+  if (player.src !== src) {
+    player.src = src;
+    player.title = cardAudioTitle(card);
+    player.el.src = src;
+    player.el.play().catch(function () {});
+    playerUI();
+  }
+}
+
+// Run fn(duration) now if metadata is ready, otherwise queue it for loadedmetadata.
+function withDuration(fn) {
+  const d = player.el.duration;
+  if (player.el.readyState >= 1 && isFinite(d) && d > 0) { fn(d); return; }
+  player._seekQueue = player._seekQueue || [];
+  player._seekQueue.push(fn);
+}
+
+function seekCard(card, frac) {
+  activateCard(card);
+  withDuration(function (d) {
+    player.el.currentTime = Math.min(Math.max(frac, 0), 0.999) * d;
+    refreshTrackCards();
+  });
+}
+
+function skipCard(card, delta) {
+  activateCard(card);
+  const cur = player.el.currentTime || 0;
+  withDuration(function (d) {
+    player.el.currentTime = Math.min(Math.max(cur + delta, 0), d);
+    refreshTrackCards();
+  });
+}
+
 /* Render an audio card. Wires itself after insertion. */
 function audioCardHTML(o) {
   // o: { id, src, title, sub, cover, speeds:boolean, download:boolean, transcript:url }
@@ -530,8 +581,13 @@ function audioCardHTML(o) {
   const transcriptBtn = o.transcript
     ? '<button class="btn btn-ghost btn-sm" data-action="toggle-transcript" data-transcript="' + esc(o.transcript) + '" aria-expanded="false">📝 Transcript</button>'
     : '';
+  const skipBtns =
+    '<div class="skip-row" role="group" aria-label="Skip 10 seconds">' +
+      '<button class="btn btn-ghost btn-sm" data-action="skip-back" aria-label="Back 10 seconds">⏪ 10s</button>' +
+      '<button class="btn btn-ghost btn-sm" data-action="skip-fwd" aria-label="Forward 10 seconds">10s ⏩</button>' +
+    '</div>';
   return '' +
-  '<div class="card audio-card" data-audio-card data-src="' + esc(o.src) + '" id="' + esc(o.id) + '">' +
+  '<div class="card audio-card" data-audio-card data-src="' + esc(o.src) + '" data-title="' + esc(o.title) + '" id="' + esc(o.id) + '">' +
     '<div class="audio-top">' +
       (o.cover ? '<img class="podcast-cover" src="' + esc(o.cover) + '" alt="" onerror="this.style.display=\'none\'">' : '') +
       '<button class="play-btn" data-action="play-track" data-src="' + esc(o.src) + '" data-title="' + esc(o.title) + '" aria-label="Play ' + esc(o.title) + '">▶</button>' +
@@ -543,6 +599,7 @@ function audioCardHTML(o) {
       '</div>' +
     '</div>' +
     '<div class="audio-actions">' +
+      skipBtns +
       (speeds ? '<div class="speed-row" role="group" aria-label="Playback speed">' + speeds + '</div>' : '') +
       (o.download ? '<a class="btn btn-ghost btn-sm" href="' + esc(o.src) + '" download>⬇ Download</a>' : '') +
       transcriptBtn +
@@ -564,6 +621,31 @@ function wireAudioCards(root) {
       if (durEl && isFinite(probe.duration)) durEl.textContent = fmtTime(probe.duration);
     });
     probe.src = src;
+    // Seekable progress bar: click or drag to scrub.
+    const prog = $('.progress', card);
+    if (prog && !prog.dataset.seekWired) {
+      prog.dataset.seekWired = '1';
+      prog.classList.add('seekable');
+      prog.setAttribute('aria-label', 'Seek');
+      let dragging = false;
+      const fracFromEvent = function (e) {
+        const r = prog.getBoundingClientRect();
+        if (!r.width) return 0;
+        return (e.clientX - r.left) / r.width;
+      };
+      prog.addEventListener('pointerdown', function (e) {
+        dragging = true;
+        try { prog.setPointerCapture(e.pointerId); } catch (err) {}
+        seekCard(card, fracFromEvent(e));
+        e.preventDefault();
+      });
+      prog.addEventListener('pointermove', function (e) {
+        if (dragging) seekCard(card, fracFromEvent(e));
+      });
+      const endDrag = function () { dragging = false; };
+      prog.addEventListener('pointerup', endDrag);
+      prog.addEventListener('pointercancel', endDrag);
+    }
     audioAvailable(src).then(function (ok) {
       if (!ok) {
         btn.disabled = true;
@@ -1771,6 +1853,8 @@ function bindEvents() {
     if (a === 'demo-learner') demoLogin(false);
     else if (a === 'demo-admin') demoLogin(true);
     else if (a === 'pw-toggle') togglePw(t);
+    else if (a === 'skip-back') { const card = t.closest('[data-audio-card]'); if (card) skipCard(card, -10); }
+    else if (a === 'skip-fwd') { const card = t.closest('[data-audio-card]'); if (card) skipCard(card, 10); }
     else if (a === 'check-level') checkLevel();
     else if (a === 'logout') doLogout();
     else if (a === 'open-lesson') { state.lessonTab = 'words'; go('lesson', t.getAttribute('data-date')); }
