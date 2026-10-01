@@ -88,6 +88,22 @@ try {
   if (q.get('lesson') === 'latest') pendingDeepLink = 'latest';
 } catch (e) { /* ignore */ }
 
+/* Referral tracking: ?ref=<code> attributes the signup to a referrer
+   (e.g. a blogger/influencer link like ?ref=dance). First touch wins and
+   is kept in localStorage until signup, then saved on the profile as
+   referred_by. Invalid codes are ignored. */
+function getRefCode() {
+  try {
+    const q = new URLSearchParams(window.location.search);
+    const r = q.get('ref');
+    if (r && /^[A-Za-z0-9_-]{1,32}$/.test(r) && !localStorage.getItem('el_ref')) {
+      localStorage.setItem('el_ref', r);
+    }
+    return localStorage.getItem('el_ref');
+  } catch (e) { return null; }
+}
+getRefCode();
+
 /* ---------------- config / integrations ---------------- */
 let sb = null; // supabase client
 
@@ -1412,10 +1428,13 @@ async function doSignup() {
   try {
     // After clicking the email link, Supabase returns the user to the app
     // they signed up from (production -> production, localhost -> localhost).
+    const signupOpts = { emailRedirectTo: window.location.origin + '/' };
+    const signupRef = getRefCode();
+    if (signupRef) signupOpts.data = { referred_by: signupRef }; // backup copy in auth metadata
     const { data, error } = await sb.auth.signUp({
       email: email,
       password: pass,
-      options: { emailRedirectTo: window.location.origin + '/' },
+      options: signupOpts,
     });
     if (error) throw error;
     setAuthBusy('su', false, 'Create account');
@@ -1428,13 +1447,14 @@ async function doSignup() {
     if (data.session) {
       // Email confirmation disabled -> already signed in: save level now.
       try { await sb.from('profiles').upsert({ id: data.user.id, email: email, level: chosenLevel }, { onConflict: 'id' }); } catch (e) {}
+      try { const r = getRefCode(); if (r) await sb.from('profiles').update({ referred_by: r }).eq('id', data.user.id); } catch (e) {}
       state.justSignedUp = true;
       authNote('su', '✓ Account created — loading your lessons…');
       await enterApp();
       return;
     }
     // Confirmation required: stash the level, applied on first sign-in.
-    try { localStorage.setItem('el_pending_level', JSON.stringify({ email: email, level: chosenLevel })); } catch (e) {}
+    try { localStorage.setItem('el_pending_level', JSON.stringify({ email: email, level: chosenLevel, ref: getRefCode() || null })); } catch (e) {}
     state.afterSignup = email;
     state.showConfirmPopup = email;
     go('signin');
@@ -1470,6 +1490,7 @@ async function enterApp() {
         const p = JSON.parse(raw);
         if (p && p.email === u.email && p.level) {
           await sb.from('profiles').upsert({ id: u.id, email: u.email, level: p.level }, { onConflict: 'id' });
+          try { if (p.ref) await sb.from('profiles').update({ referred_by: p.ref }).eq('id', u.id); } catch (e2) {}
           level = p.level;
           localStorage.removeItem('el_pending_level');
         }
@@ -2287,7 +2308,7 @@ async function loadAdminUsers() {
     if (state.user.demo) {
       state.adminUsers = state.adminUsers.length ? state.adminUsers : DEMO_USERS.map(function (u) { return Object.assign({}, u); });
     } else if (sb) {
-      const { data, error } = await sb.from('profiles').select('id,email,level,created_at').order('created_at', { ascending: true });
+      const { data, error } = await sb.from('profiles').select('id,email,level,created_at,referred_by').order('created_at', { ascending: true });
       if (error) throw error;
       state.adminUsers = data || [];
     }
@@ -2300,11 +2321,18 @@ async function loadAdminUsers() {
     const ap = a.level ? 1 : 0, bp = b.level ? 1 : 0;
     return ap - bp;
   });
-  list.innerHTML = '<div class="card">' + (users.length ? users.map(function (u) {
+  const refCounts = {};
+  users.forEach(function (u) { if (u.referred_by) refCounts[u.referred_by] = (refCounts[u.referred_by] || 0) + 1; });
+  const refKeys = Object.keys(refCounts);
+  const refSummary = refKeys.length
+    ? '<div class="card plain"><p class="muted" style="margin:0">📣 Referrals: ' +
+      refKeys.map(function (k) { return '📣 ' + esc(k) + ': <b>' + refCounts[k] + '</b>'; }).join(' &nbsp;·&nbsp; ') + '</p></div>'
+    : '';
+  list.innerHTML = refSummary + '<div class="card">' + (users.length ? users.map(function (u) {
     const pending = !u.level;
     return '<div class="user-row">' +
       '<div class="user-info">' +
-        '<div class="user-email">' + esc(u.email) + (pending ? '<span class="pending-tag">PENDING</span>' : '') + '</div>' +
+        '<div class="user-email">' + esc(u.email) + (pending ? '<span class="pending-tag">PENDING</span>' : '') + (u.referred_by ? '<span class="ref-tag">📣 ' + esc(u.referred_by) + '</span>' : '') + '</div>' +
         '<div class="user-date">joined ' + esc(String(u.created_at || '').slice(0, 10)) + '</div>' +
       '</div>' +
       '<select class="level-select" data-user-id="' + esc(u.id) + '" aria-label="Set level for ' + esc(u.email) + '">' +

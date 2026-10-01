@@ -682,6 +682,11 @@ body:not(.logged-in) #view { max-width: var(--landing-w); }
   background: #F9E4DF; color: var(--tomato-dark); border-radius: 999px; padding: 0.15rem 0.55rem;
   margin-left: 0.4rem; vertical-align: middle;
 }
+.ref-tag {
+  display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.04em;
+  background: #E2F0E4; color: #2E7D32; border-radius: 999px; padding: 0.15rem 0.55rem;
+  margin-left: 0.4rem; vertical-align: middle;
+}
 .level-select {
   font-family: inherit; font-size: 0.9rem; padding: 0.45rem 0.6rem; min-height: 44px;
   border: 1px solid var(--line); border-radius: 10px; background: #fff;
