@@ -523,6 +523,9 @@ p { margin: 0 0 0.75em; }
 .audio-times { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem; }
 .audio-actions { display: flex; gap: 0.6rem; margin-top: 0.8rem; align-items: center; flex-wrap: wrap; }
 .speed-row { display: flex; gap: 0.4rem; }
+.skip-row { display: flex; gap: 0.4rem; }
+/* Seekable audio progress bar (click / drag to scrub) */
+.audio-card .progress.seekable { cursor: pointer; touch-action: pan-y; height: 12px; }
 .speed-btn {
   border: 1px solid var(--line); background: #fff; border-radius: 999px;
   padding: 0.35rem 0.7rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: inherit;
