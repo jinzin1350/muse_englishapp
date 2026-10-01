@@ -667,8 +667,10 @@ function ensureNickname() {
 async function saveNickname(nick) {
   try {
     if (!sb || !state.user || !state.user.id) return false;
-    const r = await sb.from('profiles').upsert({ id: state.user.id, display_name: nick }, { onConflict: 'id' });
-    if (r.error) return false;
+    // Server-side save: profiles has no user UPDATE policy, so a SECURITY
+    // DEFINER function validates + writes display_name (see supabase-nickname-fix.sql).
+    const r = await sb.rpc('set_nickname', { nick: nick });
+    if (r.error || r.data !== true) return false;
     try { await sb.auth.updateUser({ data: { display_name: nick } }); } catch (e) {}
     state.user.displayName = nick;
     return true;
