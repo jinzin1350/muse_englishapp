@@ -1443,7 +1443,6 @@ function show(view, arg) {
   state.view = view;
   if (view !== 'lesson') { state.quiz = null; }
   setChrome();
-  closeProfileMenu();
   const v = $('#view');
   window.scrollTo(0, 0);
   if (view === 'landing') renderLanding(v);
@@ -1471,9 +1470,6 @@ function setChrome() {
   if (logged) {
     const initial = (state.user.email || '?').trim().charAt(0).toUpperCase();
     $('#profile-initial').textContent = initial;
-    $('#profile-email').textContent = state.user.email;
-    $('#profile-level').textContent = state.user.level ? levelLabel(normalizeLevel(state.user.level)) : 'Level pending';
-    $('#profile-admin').classList.toggle('hidden', !state.user.isAdmin);
     $$('#tabbar .tab').forEach(function (t) {
       const tv = t.getAttribute('data-view');
       // The lessons archive is a sub-page of Home: keep Home highlighted there.
@@ -1489,21 +1485,6 @@ function setChrome() {
     try { player.el.pause(); } catch (e) {}
     playerUI();
   }
-}
-
-function closeProfileMenu() {
-  const dd = $('#profile-dropdown');
-  if (dd) dd.classList.add('hidden');
-  const btn = $('#btn-profile');
-  if (btn) btn.setAttribute('aria-expanded', 'false');
-}
-
-function toggleProfileMenu() {
-  const dd = $('#profile-dropdown');
-  const btn = $('#btn-profile');
-  const open = dd.classList.contains('hidden');
-  dd.classList.toggle('hidden', !open);
-  btn.setAttribute('aria-expanded', String(open));
 }
 
 /* ---------------- LANDING (public) ---------------- */
@@ -2175,7 +2156,6 @@ async function doLogout() {
   state.user = null; state.lessons = []; state.lesson = null;
   state.adminUsers = []; state.quiz = null; state.justSignedUp = false;
   try { localStorage.removeItem('el_last_user'); } catch (e) {}
-  closeProfileMenu();
   go('landing');
 }
 
@@ -2493,8 +2473,13 @@ function renderProfile(v) {
     '<button class="btn btn-sm" data-action="save-country">Save country</button>' +
   '</div>' +
 
+  '<div class="section-title"><h2>Support</h2></div>' +
+  '<p class="muted" style="margin-top:0">Questions about lessons, quizzes, scores or audio? Ask right here.</p>' +
+  supportCardHTML() +
+
   '<div class="section-title"><h2>Account</h2></div>' +
   '<div class="card plain"><button class="btn btn-ghost btn-block" data-action="logout" style="margin-top:0">Log out</button></div>';
+  initSupportCard(v);
 }
 
 async function saveCountryManual() {
@@ -2525,13 +2510,8 @@ const SUPPORT_TELEGRAM = 'https://t.me/alirezaaaatehrani';
 let supportLog = [];
 let supportBusy = false;
 
-function renderSupport(v) {
-  supportLog = [];
-  supportBusy = false;
-  v.innerHTML =
-  '<h1>Support</h1>' +
-  '<p class="muted">Ask Muse\u2019s assistant anything about the app \u2014 lessons, quizzes, scores, audio and more.</p>' +
-  '<div class="card plain support-card">' +
+function supportCardHTML() {
+  return '<div class="card plain support-card">' +
     '<div id="support-msgs" class="support-msgs" aria-live="polite"></div>' +
     '<div class="support-chips">' + SUPPORT_QUICK.map(function (q) {
       return '<button class="chip" data-support-q="' + esc(q) + '">' + esc(q) + '</button>';
@@ -2545,12 +2525,27 @@ function renderSupport(v) {
     '<div><b>Still stuck?</b><div class="muted">Chat with us directly on Telegram \u2014 we usually reply fast.</div></div>' +
     '<a class="btn" href="' + SUPPORT_TELEGRAM + '" target="_blank" rel="noopener">\uD83D\uDCAC Open Telegram</a>' +
   '</div>';
+}
+
+function initSupportCard(root) {
+  supportLog = [];
+  supportBusy = false;
   supportAddMsg('ai', "Hi! I'm Muse's assistant. Ask me anything about your lessons, quizzes, scores or the app itself. \uD83D\uDE42", false);
-  $('#support-send').addEventListener('click', supportSend);
-  $('#support-input').addEventListener('keydown', function (e) { if (e.key === 'Enter') supportSend(); });
-  Array.prototype.forEach.call(v.querySelectorAll('[data-support-q]'), function (b) {
+  const sendBtn = document.getElementById('support-send');
+  if (sendBtn) sendBtn.addEventListener('click', supportSend);
+  const input = document.getElementById('support-input');
+  if (input) input.addEventListener('keydown', function (e) { if (e.key === 'Enter') supportSend(); });
+  Array.prototype.forEach.call((root || document).querySelectorAll('[data-support-q]'), function (b) {
     b.addEventListener('click', function () { supportAsk(b.getAttribute('data-support-q')); });
   });
+}
+
+function renderSupport(v) {
+  v.innerHTML =
+  '<h1>Support</h1>' +
+  '<p class="muted">Ask Muse\u2019s assistant anything about the app \u2014 lessons, quizzes, scores, audio and more.</p>' +
+  supportCardHTML();
+  initSupportCard(v);
 }
 
 function supportAddMsg(who, text, save) {
@@ -3087,24 +3082,13 @@ function bindEvents() {
     });
   });
 
-  $('#btn-profile').addEventListener('click', function (e) {
-    e.stopPropagation();
-    toggleProfileMenu();
-  });
-  document.addEventListener('click', function (e) {
-    const dd = $('#profile-dropdown');
-    if (dd && !dd.classList.contains('hidden') && !e.target.closest('.profile-menu')) closeProfileMenu();
-  });
+
   // Modal popups live on document.body (outside #view), so they need their own handler.
   document.addEventListener('click', function (e) {
     const t = e.target.closest('#app-modal [data-action]');
     if (!t) return;
     if (t.getAttribute('data-action') === 'modal-close') closeModal();
   });
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') closeProfileMenu();
-  });
-  $('#btn-logout').addEventListener('click', doLogout);
   $('#mp-toggle').addEventListener('click', function () {
     if (!player.src) return;
     if (player.el.paused) player.el.play().catch(function () {});
