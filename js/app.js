@@ -496,14 +496,47 @@ function playTrack(src, title) {
   } else {
     player.src = src;
     player.title = title || 'Audio';
-    player.el.src = src;
+    player.el.src = playableSrc(src);
     player.el.play().catch(function () {});
   }
   playerUI();
 }
 
+/* Pre-download the lesson podcast as a Blob as soon as the lesson opens.
+   The static host does not honor HTTP Range requests, so the browser can only
+   seek inside audio data it has fully downloaded (a seek past the buffered
+   point restarts the track from the beginning). A Blob URL hands the shared
+   player the whole file locally, so forward/back seek always works, instantly.
+   Only swaps the player while it is not playing; never interrupts playback. */
+function warmPodcast(m) {
+  try {
+    if (!m || !m.podcast || !m.podcast.audio || !window.fetch || !window.URL) return;
+    const url = m.podcast.audio, date = m.date;
+    if (player._warmDate === date) return; // already warming / warmed this lesson
+    player._warmDate = date;
+    fetch(url).then(function (res) {
+      if (!res.ok) throw new Error('bad status ' + res.status);
+      return res.blob();
+    }).then(function (blob) {
+      if (!blob || !blob.size) return;
+      if (!state.lesson || state.lesson.date !== date) return; // moved on
+      if (!player.el.paused) return; // never interrupt playback
+      const t = player.el.currentTime || 0;
+      if (player.src && t > 0.5) return; // real progress on a stream: leave it
+      setWarmBlob(url, URL.createObjectURL(blob));
+      player.src = url; // logical src stays the real URL (card matching)
+      player.title = m.podcast.title || 'Podcast';
+      player.el.src = player._blobUrl;
+      playerUI();
+    }).catch(function () { /* offline/fetch failed: normal progressive play */ });
+  } catch (e) {}
+}
+
 function initAudio() {
-  player.el.preload = 'none';
+  // 'auto': the static host does not honor HTTP Range requests, so the browser
+  // can only seek inside audio data it has already downloaded. Auto preload
+  // fills the buffer up front, making forward/back seek reliable.
+  player.el.preload = 'auto';
   player._seekQueue = [];
   player.el.addEventListener('loadedmetadata', function () {
     const q = player._seekQueue || []; player._seekQueue = [];
@@ -536,12 +569,25 @@ function cardAudioTitle(card) {
 }
 
 // Make this card's track the active player track (loads + plays if needed).
+/* Element-level src for a track: use the pre-downloaded blob when we have one
+   for this exact URL (instant, fully seekable); otherwise the network URL. */
+function playableSrc(src) {
+  if (src && player._blobFor === src && player._blobUrl) return player._blobUrl;
+  return src;
+}
+
+function setWarmBlob(url, blobUrl) {
+  if (player._blobUrl) { try { URL.revokeObjectURL(player._blobUrl); } catch (e) {} }
+  player._blobUrl = blobUrl || null;
+  player._blobFor = blobUrl ? url : null;
+}
+
 function activateCard(card) {
   const src = card.getAttribute('data-src');
   if (player.src !== src) {
     player.src = src;
     player.title = cardAudioTitle(card);
-    player.el.src = src;
+    player.el.src = playableSrc(src);
     player.el.play().catch(function () {});
     playerUI();
   }
@@ -1499,6 +1545,7 @@ function renderLesson(v, dateStr) {
     lessonTabsHTML() + '<div id="lesson-body"></div>';
   v.innerHTML = html;
   renderLessonTab($('#lesson-body'));
+  warmPodcast(m);
 }
 
 function renderLessonTab(body) {
