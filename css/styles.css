@@ -969,6 +969,67 @@ details.practice p { margin: 0.7rem 0 0; color: var(--herb-dark); font-weight: 5
 .lb-title p { margin: 0.2rem 0 0; font-size: 0.85rem; color: rgba(245, 243, 255, 0.55); }
 
 /* segmented control: Team/Local/Global style */
+/* participants count pill */
+.ch-count { display: flex; align-items: center; justify-content: center; gap: 0.45rem;
+  margin: 0 auto 1rem; padding: 0.5rem 1.1rem; width: fit-content;
+  background: rgba(255, 214, 64, 0.10); border: 1px solid rgba(255, 214, 64, 0.35);
+  border-radius: 999px; color: #ffd640; font-size: 0.9rem; }
+.ch-count svg { width: 18px; height: 18px; }
+.ch-count b { font-weight: 800; }
+
+/* challenge promo banner on home — loud game style, dark card on light page */
+@property --chp-ang { syntax: '<angle>'; initial-value: 0deg; inherits: false; }
+.ch-promo { position: relative; display: block; overflow: hidden; text-decoration: none;
+  border-radius: 20px; padding: 1.05rem 1.1rem 1.1rem; margin-bottom: 1rem; color: #fff;
+  background:
+    radial-gradient(ellipse 75% 100% at 8% 0%, rgba(255, 46, 136, 0.4), transparent 65%),
+    radial-gradient(ellipse 65% 90% at 95% 100%, rgba(0, 212, 255, 0.28), transparent 65%),
+    radial-gradient(ellipse 50% 60% at 55% 45%, rgba(122, 60, 255, 0.25), transparent 70%),
+    linear-gradient(150deg, #191238 0%, #0d1129 55%, #230f31 100%);
+  border: 1px solid rgba(255, 214, 64, 0.22);
+  box-shadow: 0 14px 36px rgba(13, 17, 41, 0.45); }
+.ch-promo::before { /* rotating neon border */
+  content: ''; position: absolute; inset: 0; border-radius: 20px; padding: 2px;
+  background: conic-gradient(from var(--chp-ang),
+    rgba(255, 46, 136, 0.0) 0%, #ff2e88 12%, #ffd640 25%, #00d4ff 38%,
+    rgba(0, 212, 255, 0) 50%, rgba(255, 46, 136, 0) 62%, #ff2e88 74%,
+    #ffd640 87%, rgba(255, 214, 64, 0) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: chp-spin 4.5s linear infinite; pointer-events: none; }
+@keyframes chp-spin { to { --chp-ang: 360deg; } }
+.chp-shine { position: absolute; top: -20%; bottom: -20%; left: -30%; width: 45%;
+  background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+  transform: skewX(-18deg); animation: chp-shine 3.8s ease-in-out infinite; pointer-events: none; }
+@keyframes chp-shine { 0%, 55% { left: -30%; } 100% { left: 130%; } }
+.chp-live { position: absolute; top: 0.7rem; right: 0.85rem; display: inline-flex;
+  align-items: center; gap: 0.32rem; font-size: 0.68rem; font-weight: 800;
+  letter-spacing: 0.14em; color: #ff5d5d; }
+.chp-dot { width: 8px; height: 8px; border-radius: 50%; background: #ff3b3b;
+  box-shadow: 0 0 10px #ff3b3b; animation: chp-pulse 1.4s ease-in-out infinite; }
+@keyframes chp-pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.5); opacity: 0.55; } }
+.chp-row { position: relative; display: flex; align-items: center; gap: 0.9rem; }
+.chp-trophy { flex: 0 0 auto; width: 64px; height: 64px; border-radius: 20px;
+  display: flex; align-items: center; justify-content: center; color: #fff;
+  background: linear-gradient(140deg, #ff2e88, #ff6b1a 60%, #ffd400);
+  box-shadow: 0 8px 26px rgba(255, 46, 136, 0.6), 0 0 34px rgba(255, 214, 64, 0.35);
+  animation: chp-float 3s ease-in-out infinite; }
+.chp-trophy svg { width: 34px; height: 34px; }
+@keyframes chp-float { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-5px) rotate(2deg); } }
+.chp-txt { display: flex; flex-direction: column; line-height: 1.05; }
+.chp-txt b { font-size: 2.1rem; font-weight: 900; letter-spacing: -0.01em;
+  background: linear-gradient(100deg, #fff3c4 10%, #ffd640 45%, #ff9d3c 90%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 2px 10px rgba(255, 214, 64, 0.35)); }
+.chp-txt > span { font-size: 0.85rem; color: rgba(245, 243, 255, 0.78); margin-top: 0.2rem; }
+.chp-cta { position: relative; display: flex; align-items: center; justify-content: center;
+  gap: 0.4rem; margin-top: 0.9rem; padding: 0.68rem; border-radius: 14px;
+  font-weight: 800; font-size: 0.98rem; color: #1a1206;
+  background: linear-gradient(100deg, #ffd640, #ffb03c);
+  box-shadow: 0 6px 20px rgba(255, 180, 60, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5); }
+.chp-go { font-size: 1.3rem; line-height: 1; font-weight: 800; }
+.ch-promo:active { transform: scale(0.99); }
+
 /* segmented control: big, half-half */
 .ch-wrap .seg { display: flex; background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.08);

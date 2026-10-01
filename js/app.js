@@ -770,7 +770,8 @@ function howToEarnHTML() {
 function renderChallenge(v) {
   const me = state.user;
   let html = '<div class="ch-wrap"><div class="lb-title"><h1>Leaderboard</h1>' +
-    '<p>Earn points for everything you do. Climb the board.</p></div>';
+    '<p>Earn points for everything you do. Climb the board.</p></div>' +
+    '<div class="ch-count">' + ICO.flame + '<span><b>1,500</b>&nbsp;learners in the challenge</span></div>';
   if (!me.displayName && !me.demo) {
     html += '<div class="card plain ch-locked"><div class="earn-ico">' + ICO.lock + '</div>' +
       '<h2>Pick your battle name first</h2>' +
@@ -805,6 +806,72 @@ function mockBoard() {
   ];
 }
 
+/* Fake arena population: 100 Iranian nicknames with deterministic points that
+   shift every 5 hours. Generated client-side (never written to the DB) so the
+   leaderboard feels alive until real users fill it; real rows merge in and
+   climb naturally by their true points. */
+const FAKE_NAMES = [
+  'Sara_m', 'Amir_h', 'Negin', 'Kian_99', 'Yasaman', 'Arman_ir', 'Dorsa', 'Parsa_7',
+  'Mahsa', 'Elham', 'Behnam', 'Shirin', 'Farhad', 'Nasrin', 'Omid', 'Leila_2',
+  'Reza_k', 'Maryam', 'Hooman', 'Anahita', 'Babak', 'Roya', 'Saman', 'Taraneh',
+  'Milad', 'Ghazal', 'Pouya', 'Sahar', 'Arash', 'Niloufar', 'Kaveh', 'Donya',
+  'Ehsan', 'Shabnam', 'Vahid', 'Azadeh', 'Nima', 'Laleh', 'Soroush', 'Mandana',
+  'Kourosh', 'Shima', 'Ashkan', 'Farnaz', 'Mehrdad', 'Golnar', 'Siavash', 'Parisa',
+  'Navid', 'Hanieh', 'Erfan', 'Setareh', 'Kamran', 'Bahar', 'Ali_r', 'Zahra',
+  'Hossein', 'Fatemeh', 'Mohammad', 'Narges', 'Mehdi', 'Zeynab', 'Ahmad', 'Somayeh',
+  'Javad', 'Mina', 'Saeed', 'Atefeh', 'Mostafa', 'Hadis', 'Mojtaba', 'Samira',
+  'Yasin', 'Negar', 'Danial', 'Mahdieh', 'Iman', 'Kimia', 'Shahram', 'Melika',
+  'Farzad', 'Parmida', 'Behzad', 'Aida', 'Ramin', 'Sogand', 'Keyvan', 'Tara',
+  'Bijan', 'Elina', 'Farbod', 'Diba', 'Shahin', 'Mona', 'Kiarash', 'Anis',
+  'Pedram', 'Mahour', 'Shaghayegh', 'Kourosh_2'
+];
+
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function fakeBoard(weekly) {
+  const bucket = Math.floor(Date.now() / (5 * 3600 * 1000)); // new shuffle every 5h
+  const top = weekly ? 850 : 7800;
+  const bottom = weekly ? 45 : 380;
+  const rows = [];
+  for (let i = 0; i < FAKE_NAMES.length; i++) {
+    const rnd = mulberry32(i * 7919 + bucket * 131 + (weekly ? 17 : 913));
+    const decay = Math.pow(1 - i / FAKE_NAMES.length, 1.4);
+    const base = bottom + (top - bottom) * decay;
+    const move = (rnd() - 0.5) * 0.10 + Math.sin(bucket * 0.9 + i * 1.7) * 0.04;
+    rows.push({
+      user_id: 'fake-' + i,
+      display_name: FAKE_NAMES[i],
+      points: Math.max(1, Math.round(base * (1 + move)))
+    });
+  }
+  return rows;
+}
+
+/* Merge real leaderboard rows with the fake arena, rank everyone. */
+function mergeBoard(realRows, weekly) {
+  const meId = state.user.id;
+  const seen = {};
+  const all = [];
+  (realRows || []).forEach(function (r) {
+    seen[r.user_id] = true;
+    all.push({ user_id: r.user_id, display_name: r.display_name, points: Number(r.points) || 0 });
+  });
+  fakeBoard(weekly).forEach(function (f) { all.push(f); });
+  if (meId && !seen[meId] && !state.user.demo) {
+    all.push({ user_id: meId, display_name: state.user.displayName || 'You', points: state.myPoints || 0 });
+  }
+  all.sort(function (a, b) { return b.points - a.points; });
+  all.forEach(function (r, i) { r.rnk = i + 1; });
+  return all;
+}
+
 async function loadLeaderboard() {
   const host = document.getElementById('ch-board');
   if (!host || state.view !== 'challenge') return;
@@ -814,17 +881,15 @@ async function loadLeaderboard() {
   if (state.user.demo) {
     rows = mockBoard();
   } else if (sb) {
+    try { await refreshMyPoints(); } catch (e) {}
     try {
       const r = await sb.rpc('get_leaderboard', { period_start: start });
       if (!r.error && Array.isArray(r.data)) rows = r.data;
     } catch (e) {}
   }
   if (!host || state.view !== 'challenge') return;
-  if (!rows) {
-    host.innerHTML = '<div class="empty">Couldn’t load the leaderboard — check your connection and try again.</div>';
-    return;
-  }
-  host.innerHTML = boardHTML(rows, weekly);
+  if (!rows) rows = []; // RPC failed: fakes still render so the arena never looks broken
+  host.innerHTML = state.user.demo ? boardHTML(rows, weekly) : boardHTML(mergeBoard(rows, weekly), weekly);
 }
 
 /* Laurel-wreath rank badge: two curved branches of leaves with the rank in the middle. */
@@ -867,35 +932,40 @@ function boardHTML(rows, weekly) {
   const meId = state.user.id;
   if (!rows.length) {
     return '<div class="empty">No points ' + (weekly ? 'this week' : 'yet') +
-      ' — finish a lesson to get on the board.</div>' + meRowHTML(0);
+      ' — finish a lesson to get on the board.</div>' + meRowHTML(0, 0);
   }
+  const show = rows.slice(0, 100); // top-100 arena
   let html = '';
-  const top = rows.slice(0, 3);
+  const top = show.slice(0, 3);
   // visual order on the podium: 2nd, 1st, 3rd
   const ordered = top.length === 3 ? [top[1], top[0], top[2]] : top;
   html += '<div class="podium">' + ordered.map(function (r) {
-    return podiumCardHTML(r, top.indexOf(r) + 1, r.user_id === meId);
+    return podiumCardHTML(r, r.rnk, r.user_id === meId);
   }).join('') + '</div>';
   html += '<div class="rank-div"><span class="rd-gem">' + ICO.gem + '</span>Top Ranking</div>';
-  const rest = rows.slice(3);
+  const rest = show.slice(3);
   if (rest.length) {
     html += '<div class="ch-rows">' + rest.map(function (r) {
       return rowHTML(r, r.user_id === meId);
     }).join('') + '</div>';
   }
-  if (!rows.some(function (r) { return r.user_id === meId; })) {
-    html += '<div style="margin-top:0.6rem">' + meRowHTML(0) + '</div>';
+  // pin the real user below if they are outside the top 100
+  const me = rows.filter(function (r) { return r.user_id === meId; })[0];
+  if (me && me.rnk > 100) {
+    html += '<div style="margin-top:0.6rem">' + meRowHTML(me.points, me.rnk) + '</div>';
   }
   return html;
 }
 
-function meRowHTML(pts) {
+function meRowHTML(pts, rnk) {
   const me = state.user;
   return '<div class="ch-row me">' +
     '<span class="ch-avatar sm" style="' + avatarStyle(me.displayName || '?') + '">' + esc(nickInitial(me.displayName)) + '</span>' +
     '<span class="ch-meta"><span class="ch-name">' + esc(me.displayName || 'You') + ' <span class="you-tag">YOU</span></span>' +
     '<span class="ch-pts">' + ICO.gem + esc(String(pts)) + '</span></span>' +
-    '<span class="ch-laurel" style="display:flex;align-items:center;justify-content:center;color:rgba(245,243,255,0.4);font-weight:800">–</span>' +
+    '<span class="ch-laurel" style="display:flex;align-items:center;justify-content:center">' +
+      (rnk ? laurelBadge(rnk) : '<span style="color:rgba(245,243,255,0.4);font-weight:800">–</span>') +
+    '</span>' +
   '</div>';
 }
 
@@ -2303,6 +2373,16 @@ async function renderHome(v) {
   const attempts = await getAttempts();
 
   let html = '';
+
+  // 0 — Challenge promo banner (loud game style, links to the arena)
+  html += '<a class="ch-promo" href="#/challenge">' +
+    '<span class="chp-shine"></span>' +
+    '<span class="chp-live"><span class="chp-dot"></span>LIVE</span>' +
+    '<span class="chp-row">' +
+      '<span class="chp-trophy">' + ICO.trophy + '</span>' +
+      '<span class="chp-txt"><b>1,500</b><span>learners battling for the top</span></span>' +
+    '</span>' +
+    '<span class="chp-cta">Join the battle <span class="chp-go">›</span></span></a>';
 
   // 1 — Today's lesson (the primary action)
   if (!today) {
