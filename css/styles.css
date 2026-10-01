@@ -867,3 +867,24 @@ details.practice p { margin: 0.7rem 0 0; color: var(--herb-dark); font-weight: 5
 .level-opt input:checked + .level-card { border-color: var(--tomato, #e4572e);
   box-shadow: 0 0 0 3px rgba(228, 87, 46, 0.15); }
 .level-opt input:focus-visible + .level-card { outline: 2px solid var(--tomato, #e4572e); outline-offset: 2px; }
+
+/* ---------------- support chat ---------------- */
+.support-card { padding: 0.9rem; }
+.support-msgs { display: flex; flex-direction: column; gap: 0.5rem;
+  max-height: 46vh; min-height: 220px; overflow-y: auto; padding: 0.2rem 0.1rem 0.6rem; }
+.support-msg { max-width: 85%; padding: 0.55rem 0.8rem; border-radius: 14px;
+  font-size: 0.92rem; line-height: 1.45; white-space: pre-wrap; word-break: break-word; }
+.support-msg.from-ai { align-self: flex-start; background: #F1EAD9; color: var(--ink); border-bottom-left-radius: 4px; }
+.support-msg.from-user { align-self: flex-end; background: var(--tomato); color: #fff; border-bottom-right-radius: 4px; }
+.support-msg.typing { opacity: 0.55; }
+.support-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.2rem 0 0.7rem; }
+.chip { background: transparent; border: 1px solid var(--line); border-radius: 999px;
+  padding: 0.35rem 0.8rem; font-size: 0.8rem; color: var(--ink); cursor: pointer; }
+.chip:hover { border-color: var(--tomato); color: var(--tomato-dark); }
+.support-input-row { display: flex; gap: 0.5rem; }
+.support-input { flex: 1; min-width: 0; border: 1px solid var(--line); border-radius: 12px;
+  padding: 0.6rem 0.8rem; font-size: 0.95rem; background: #fff; color: var(--ink); }
+.support-input:focus { outline: 2px solid var(--tomato); outline-offset: -1px; border-color: var(--tomato); }
+#support-send { min-width: 48px; flex-shrink: 0; }
+.support-tg { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; }
+.support-tg .btn { flex-shrink: 0; }
