@@ -511,13 +511,21 @@ function playTrack(src, title) {
 function warmPodcast(m) {
   try {
     if (!m || !m.podcast || !m.podcast.audio || !window.fetch || !window.URL) return;
+    // Respect the OS/browser data-saver: no pre-download then.
+    try {
+      const conn = navigator.connection || navigator.webkitConnection;
+      if (conn && conn.saveData) return;
+    } catch (e) {}
     const url = m.podcast.audio, date = m.date;
     if (player._warmDate === date) return; // already warming / warmed this lesson
     player._warmDate = date;
-    fetch(url).then(function (res) {
+    player._warmPending = url;
+    const done = function () { if (player._warmPending === url) player._warmPending = null; };
+    player._warmPromise = fetch(url).then(function (res) {
       if (!res.ok) throw new Error('bad status ' + res.status);
       return res.blob();
     }).then(function (blob) {
+      done();
       if (!blob || !blob.size) return;
       if (!state.lesson || state.lesson.date !== date) return; // moved on
       if (!player.el.paused) return; // never interrupt playback
@@ -528,8 +536,20 @@ function warmPodcast(m) {
       player.title = m.podcast.title || 'Podcast';
       player.el.src = player._blobUrl;
       playerUI();
-    }).catch(function () { /* offline/fetch failed: normal progressive play */ });
+    }).catch(function () { done(); /* offline/failed: normal progressive play */ });
   } catch (e) {}
+}
+
+/* If the podcast is still downloading, hold the seek until the full file is
+   ready, then seek on it (instant). Otherwise the seek could land past the
+   downloaded point and restart the track. */
+function seekWhenReady(card, fn) {
+  const src = card.getAttribute('data-src');
+  if (player._warmPending === src && player._warmPromise) {
+    player._warmPromise.then(function () { fn(); });
+    return true;
+  }
+  return false;
 }
 
 function initAudio() {
@@ -602,6 +622,7 @@ function withDuration(fn) {
 }
 
 function seekCard(card, frac) {
+  if (seekWhenReady(card, function () { seekCard(card, frac); })) return;
   activateCard(card);
   withDuration(function (d) {
     player.el.currentTime = Math.min(Math.max(frac, 0), 0.999) * d;
@@ -610,6 +631,7 @@ function seekCard(card, frac) {
 }
 
 function skipCard(card, delta) {
+  if (seekWhenReady(card, function () { skipCard(card, delta); })) return;
   activateCard(card);
   const cur = player.el.currentTime || 0;
   withDuration(function (d) {
@@ -1545,7 +1567,6 @@ function renderLesson(v, dateStr) {
     lessonTabsHTML() + '<div id="lesson-body"></div>';
   v.innerHTML = html;
   renderLessonTab($('#lesson-body'));
-  warmPodcast(m);
 }
 
 function renderLessonTab(body) {
@@ -1558,7 +1579,7 @@ function renderLessonTab(body) {
     else if (tab === 'grammar') markStep(m.date, 'grammar');
   }
   if (tab === 'words') body.innerHTML = wordsTabHTML(m);
-  else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); }
+  else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); }
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
   else if (tab === 'grammar') { body.innerHTML = grammarTabHTML(m); wireAudioCards(body); }
