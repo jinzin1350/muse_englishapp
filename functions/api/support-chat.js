@@ -82,6 +82,6 @@ export async function onRequestPost(context) {
     if (!reply) throw new Error('empty response');
     return json({ reply: reply });
   } catch (e) {
-    return json({ error: 'The assistant is having trouble right now. Please try again or use the Telegram button.' }, 502);
+    return json({ error: 'The assistant is having trouble right now. Please try again or use the Telegram button.', debug: String((e && e.message) || e).slice(0, 300) }, 502);
   }
 }
