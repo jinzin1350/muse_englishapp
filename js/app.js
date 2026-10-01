@@ -1950,12 +1950,10 @@ async function ensureCountrySaved() {
   if (!c) return;
   u.countryCode = c.code; u.country = c.name; u.countrySource = c.source;
   try {
-    await sb.from('profiles').upsert({
-      id: u.id, email: u.email, level: u.level || null,
-      country_code: c.code, country: c.name,
-      country_source: c.source, country_detected_at: new Date().toISOString(),
-    }, { onConflict: 'id' });
-  } catch (e) { /* pre-migration or offline -> retry next open */ }
+    // Server-side write: profiles has no user UPDATE policy, so a direct
+    // upsert is denied by RLS. The RPC writes only the caller's own row.
+    await sb.rpc('set_country', { code: c.code, name: c.name, source: c.source });
+  } catch (e) { /* RPC missing or offline -> retry next open */ }
 }
 
 async function doLogin() {
@@ -2496,12 +2494,8 @@ async function saveCountryManual() {
   const name = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : code;
   u.countryCode = code; u.country = name; u.countrySource = 'manual';
   try {
-    await sb.from('profiles').upsert({
-      id: u.id, email: u.email, level: u.level || null,
-      country_code: code, country: name,
-      country_source: 'manual', country_detected_at: new Date().toISOString(),
-    }, { onConflict: 'id' });
-  } catch (e) { /* pre-migration or offline -> kept locally, retried later */ }
+    await sb.rpc('set_country', { code: code, name: name, source: 'manual' });
+  } catch (e) { /* RPC missing or offline -> kept locally, retried later */ }
   renderProfile(document.getElementById('view'));
 }
 
