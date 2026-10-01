@@ -1,0 +1,537 @@
+{
+  "date": "2026-09-30",
+  "theme": "Travel & Holidays",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "luggage",
+      "pos": "noun",
+      "meaning": "the bags and suitcases you carry when you travel",
+      "example": "We left our luggage at the hotel reception.",
+      "pronunciation": "LUH-gij",
+      "persian": "چمدان‌ها و ساک‌های مسافرتی",
+      "photo": "media/b1/2026-09-30/photos/luggage.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/luggage.mp3"
+    },
+    {
+      "word": "journey",
+      "pos": "noun",
+      "meaning": "a long trip from one place to another",
+      "example": "The journey from Paris to Rome took eight hours.",
+      "pronunciation": "JER-nee",
+      "persian": "سفر (معمولاً طولانی)",
+      "photo": "media/b1/2026-09-30/photos/journey.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/journey.mp3"
+    },
+    {
+      "word": "departure",
+      "pos": "noun",
+      "meaning": "the act of leaving a place",
+      "example": "Our departure is at six in the morning.",
+      "pronunciation": "dee-PAR-chur",
+      "persian": "عزیمت؛ حرکت",
+      "photo": "media/b1/2026-09-30/photos/departure.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/departure.mp3"
+    },
+    {
+      "word": "arrival",
+      "pos": "noun",
+      "meaning": "the act of reaching a place",
+      "example": "They announced our arrival in London.",
+      "pronunciation": "uh-RY-vul",
+      "persian": "ورود؛ رسیدن",
+      "photo": "media/b1/2026-09-30/photos/arrival.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/arrival.mp3"
+    },
+    {
+      "word": "terminal",
+      "pos": "noun",
+      "meaning": "a large building at an airport where journeys begin and end",
+      "example": "Our flight leaves from Terminal 2.",
+      "pronunciation": "TER-muh-nul",
+      "persian": "ترمینال فرودگاه",
+      "photo": "media/b1/2026-09-30/photos/terminal.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/terminal.mp3"
+    },
+    {
+      "word": "suitcase",
+      "pos": "noun",
+      "meaning": "a large bag with a handle for carrying clothes when you travel",
+      "example": "She packed her suitcase the night before.",
+      "pronunciation": "SOOT-kayss",
+      "persian": "چمدان",
+      "photo": "media/b1/2026-09-30/photos/suitcase.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/suitcase.mp3"
+    },
+    {
+      "word": "hostel",
+      "pos": "noun",
+      "meaning": "a cheap place to stay, popular with young travelers",
+      "example": "We stayed in a friendly hostel near the beach.",
+      "pronunciation": "HOSS-tul",
+      "persian": "هاستل؛ مهمان‌پذیر ارزان",
+      "photo": "media/b1/2026-09-30/photos/hostel.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/hostel.mp3"
+    },
+    {
+      "word": "resort",
+      "pos": "noun",
+      "meaning": "a place where many people go on holiday, often by the sea",
+      "example": "The resort has three swimming pools.",
+      "pronunciation": "ree-ZORT",
+      "persian": "تفرجگاه؛ اقامتگاه تفریحی",
+      "photo": "media/b1/2026-09-30/photos/resort.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/resort.mp3"
+    },
+    {
+      "word": "sightseeing",
+      "pos": "noun",
+      "meaning": "visiting famous places as a tourist",
+      "example": "We spent the day sightseeing in the old town.",
+      "pronunciation": "SYTE-see-ing",
+      "persian": "گردش و بازدید از جاهای دیدنی",
+      "photo": "media/b1/2026-09-30/photos/sightseeing.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/sightseeing.mp3"
+    },
+    {
+      "word": "landmark",
+      "pos": "noun",
+      "meaning": "a famous building or place that is easy to recognize",
+      "example": "The Eiffel Tower is a famous landmark.",
+      "pronunciation": "LAND-mark",
+      "persian": "بنای شاخص و معروف",
+      "photo": "media/b1/2026-09-30/photos/landmark.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/landmark.mp3"
+    },
+    {
+      "word": "delay",
+      "pos": "noun",
+      "meaning": "when something happens later than planned",
+      "example": "Our flight was delayed by two hours.",
+      "pronunciation": "dee-LAY",
+      "persian": "تأخیر",
+      "photo": "media/b1/2026-09-30/photos/delay.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/delay.mp3"
+    },
+    {
+      "word": "cancel",
+      "pos": "verb",
+      "meaning": "to stop something that was planned",
+      "example": "They cancelled our flight because of the storm.",
+      "pronunciation": "KAN-sul",
+      "persian": "لغو کردن",
+      "photo": "media/b1/2026-09-30/photos/cancel.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/cancel.mp3"
+    },
+    {
+      "word": "reserve",
+      "pos": "verb",
+      "meaning": "to book something in advance",
+      "example": "I reserved a table at the restaurant.",
+      "pronunciation": "ree-ZERV",
+      "persian": "رزرو کردن",
+      "photo": "media/b1/2026-09-30/photos/reserve.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/reserve.mp3"
+    },
+    {
+      "word": "guidebook",
+      "pos": "noun",
+      "meaning": "a book with information for travelers",
+      "example": "This guidebook lists all the best restaurants.",
+      "pronunciation": "GYDE-book",
+      "persian": "کتاب راهنمای سفر",
+      "photo": "media/b1/2026-09-30/photos/guidebook.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/guidebook.mp3"
+    },
+    {
+      "word": "backpack",
+      "pos": "noun",
+      "meaning": "a bag you carry on your back",
+      "example": "He carried his backpack through the mountains.",
+      "pronunciation": "BAK-pak",
+      "persian": "کوله‌پشتی",
+      "photo": "media/b1/2026-09-30/photos/backpack.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/backpack.mp3"
+    },
+    {
+      "word": "ferry",
+      "pos": "noun",
+      "meaning": "a boat that carries people across water on a regular route",
+      "example": "We took the ferry to the island.",
+      "pronunciation": "FEH-ree",
+      "persian": "کشتی مسافربری (فری)",
+      "photo": "media/b1/2026-09-30/photos/ferry.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/ferry.mp3"
+    },
+    {
+      "word": "cruise",
+      "pos": "noun",
+      "meaning": "a holiday on a large ship that visits different places",
+      "example": "They went on a cruise around the Mediterranean.",
+      "pronunciation": "KROOZ",
+      "persian": "سفر دریایی تفریحی (کروز)",
+      "photo": "media/b1/2026-09-30/photos/cruise.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/cruise.mp3"
+    },
+    {
+      "word": "adventure",
+      "pos": "noun",
+      "meaning": "an exciting or unusual experience",
+      "example": "Our trip to the desert was a real adventure.",
+      "pronunciation": "ad-VEN-chur",
+      "persian": "ماجراجویی",
+      "photo": "media/b1/2026-09-30/photos/adventure.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/adventure.mp3"
+    },
+    {
+      "word": "souvenir",
+      "pos": "noun",
+      "meaning": "something you buy to remember a trip",
+      "example": "I bought a small souvenir for my mother.",
+      "pronunciation": "soo-vuh-NEER",
+      "persian": "سوغاتی",
+      "photo": "media/b1/2026-09-30/photos/souvenir.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/souvenir.mp3"
+    },
+    {
+      "word": "explore",
+      "pos": "verb",
+      "meaning": "to travel around a place to learn about it",
+      "example": "We explored the city on foot.",
+      "pronunciation": "ik-SPLOR",
+      "persian": "گشتن و کشف کردن",
+      "photo": "media/b1/2026-09-30/photos/explore.jpg",
+      "word_audio": "media/b1/2026-09-30/word-audio/explore.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-09-30/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Travel & Holidays",
+    "audio": "media/b1/2026-09-30/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-09-30/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: A Holiday Journey",
+    "audio": "media/b1/2026-09-30/shadowing.mp3",
+    "transcript": "media/b1/2026-09-30/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'luggage' mean?",
+      "options": [
+        "a long trip from one place to another",
+        "a famous building everyone recognizes",
+        "the bags and suitcases you carry when you travel",
+        "a boat that crosses water regularly"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'journey' mean?",
+      "options": [
+        "a long trip from one place to another",
+        "the bags you carry when you travel",
+        "a cheap place for young travelers",
+        "something you buy to remember a trip"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'departure' mean?",
+      "options": [
+        "reaching a place after a trip",
+        "visiting famous places as a tourist",
+        "a holiday on a large ship",
+        "the act of leaving a place"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'arrival' mean?",
+      "options": [
+        "leaving a place to start a trip",
+        "the act of reaching a place",
+        "booking something in advance",
+        "an exciting or unusual experience"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'terminal' mean?",
+      "options": [
+        "a book with information for travelers",
+        "a bag you carry on your back",
+        "a large building at an airport where journeys begin and end",
+        "when something happens later than planned"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'suitcase' mean?",
+      "options": [
+        "a large bag with a handle for carrying clothes when you travel",
+        "a large airport building",
+        "a place where people go on holiday by the sea",
+        "to stop something that was planned"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'hostel' mean?",
+      "options": [
+        "a large bag for carrying clothes",
+        "a cheap place to stay, popular with young travelers",
+        "a famous building everyone recognizes",
+        "to travel around a place to learn about it"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'resort' mean?",
+      "options": [
+        "a cheap place for young travelers",
+        "the act of leaving a place",
+        "a boat that crosses water regularly",
+        "a place where many people go on holiday, often by the sea"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'sightseeing' mean?",
+      "options": [
+        "a long trip from one place to another",
+        "the bags you carry when you travel",
+        "visiting famous places as a tourist",
+        "booking something in advance"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'landmark' mean?",
+      "options": [
+        "visiting famous places as a tourist",
+        "a famous building or place that is easy to recognize",
+        "a book with information for travelers",
+        "when something happens later than planned"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'delay' mean?",
+      "options": [
+        "when something happens later than planned",
+        "to stop something that was planned",
+        "a famous building everyone recognizes",
+        "something you buy to remember a trip"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cancel' mean?",
+      "options": [
+        "when something happens later than planned",
+        "a holiday on a large ship",
+        "a bag you carry on your back",
+        "to stop something that was planned"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'reserve' mean?",
+      "options": [
+        "to stop something that was planned",
+        "to book something in advance",
+        "the act of reaching a place",
+        "a cheap place for young travelers"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'guidebook' mean?",
+      "options": [
+        "a large airport building",
+        "to travel around a place to learn about it",
+        "a book with information for travelers",
+        "an exciting or unusual experience"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'backpack' mean?",
+      "options": [
+        "a bag you carry on your back",
+        "a book with information for travelers",
+        "a large bag for carrying clothes",
+        "the act of leaving a place"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'ferry' mean?",
+      "options": [
+        "a holiday on a large ship",
+        "visiting famous places as a tourist",
+        "the bags you carry when you travel",
+        "a boat that carries people across water on a regular route"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'cruise' mean?",
+      "options": [
+        "a boat that crosses water regularly",
+        "a holiday on a large ship that visits different places",
+        "a long trip from one place to another",
+        "booking something in advance"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'adventure' mean?",
+      "options": [
+        "a place where people go on holiday by the sea",
+        "when something happens later than planned",
+        "an exciting or unusual experience",
+        "a famous building everyone recognizes"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'souvenir' mean?",
+      "options": [
+        "something you buy to remember a trip",
+        "an exciting or unusual experience",
+        "to stop something that was planned",
+        "a large airport building"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'explore' mean?",
+      "options": [
+        "a book with information for travelers",
+        "something you buy to remember a trip",
+        "the act of reaching a place",
+        "to travel around a place to learn about it"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Present perfect: have/has + past participle",
+    "explanation": "We use the **present perfect** to talk about past actions that are connected to the present. Form it with **have** or **has** + the **past participle** of the main verb: *I have visited*, *she has eaten*.\n\nUse **have** with *I, you, we, they* and **has** with *he, she, it*: *they have arrived*, *he has arrived*.\n\nWe often use it for **life experiences** with *ever* and *never*: *Have you ever been to Japan? I have never tried sushi.* The exact time is not important — what matters is the experience itself.\n\nWe also use it for **recent actions** with *just*, *already*, and *yet*: *She has just finished. We have already seen it. Have you booked the hotel yet?*\n\nFor actions that started in the past and **continue now**, use it with **since** and **for**: *They have lived here since 2019. I have known him for ten years.*\n\nRemember: the present perfect connects the past to **now**. If you say exactly when something happened (*yesterday*, *last week*), use the **past simple** instead: *I visited Rome last year.*",
+    "examples": [
+      "I have visited three countries this year. (life experience, time not important)",
+      "She has just arrived at the terminal. (recent action with just)",
+      "Have you ever taken a ferry? (asking about experience with ever)",
+      "They have lived in this city since 2015. (started in the past, still true with since)",
+      "We have already reserved our hostel room. (already = sooner than expected)",
+      "He has never been on a cruise. (never = zero experience)"
+    ],
+    "practice": [],
+    "quiz": [
+      {
+        "question": "I ___ never been to Italy.",
+        "options": [
+          "has",
+          "have",
+          "am",
+          "was"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ just finished her homework.",
+        "options": [
+          "have",
+          "has",
+          "is",
+          "does"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "They ___ lived here since 2019.",
+        "options": [
+          "has",
+          "having",
+          "have",
+          "had have"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ you ever tried sushi?",
+        "options": [
+          "Did",
+          "Have",
+          "Has",
+          "Are"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ broken his arm twice.",
+        "options": [
+          "have",
+          "has",
+          "is",
+          "did"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We ___ already seen this movie.",
+        "options": [
+          "has",
+          "having",
+          "have",
+          "are"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My parents ___ just arrived at the airport.",
+        "options": [
+          "has",
+          "have",
+          "is",
+          "does"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ never ___ a camel before. (choose the pair)",
+        "options": [
+          "has / rode",
+          "have / rode",
+          "has / ridden",
+          "have / ridden"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I ___ lost my keys. Can you help me look?",
+        "options": [
+          "has",
+          "have",
+          "am",
+          "did"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The train ___ just left the station.",
+        "options": [
+          "have",
+          "has",
+          "is",
+          "does"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

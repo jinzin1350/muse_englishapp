@@ -685,10 +685,10 @@ function audioCardHTML(o) {
       '<div class="audio-meta">' +
         '<div class="audio-title">' + esc(o.title) + '</div>' +
         (o.sub ? '<div class="muted">' + esc(o.sub) + '</div>' : '') +
-        '<div class="progress" role="progressbar" aria-label="Playback progress"><div></div></div>' +
-        '<div class="audio-times"><span class="t-cur">0:00</span><span class="t-dur">--:--</span></div>' +
       '</div>' +
     '</div>' +
+    '<div class="progress seekable" role="progressbar" aria-label="Playback progress"><div></div></div>' +
+    '<div class="audio-times"><span class="t-cur">0:00</span><span class="t-dur"></span></div>' +
     '<div class="audio-actions">' +
       skipBtns +
       (speeds ? '<div class="speed-row" role="group" aria-label="Playback speed">' + speeds + '</div>' : '') +
@@ -1750,6 +1750,21 @@ function renderLessonTab(body) {
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
   else if (tab === 'grammar') { body.innerHTML = grammarTabHTML(m); wireAudioCards(body); }
   refreshTrackCards();
+  centerActiveLessonTab();
+}
+
+/* Keep the selected lesson tab visible: scroll the tab strip (not the page)
+   so the active tab sits in view. */
+function centerActiveLessonTab() {
+  const strip = $('.lesson-tabs');
+  const active = strip && strip.querySelector('.lesson-tab[aria-selected="true"]');
+  if (!strip || !active) return;
+  const sr = strip.getBoundingClientRect();
+  const ar = active.getBoundingClientRect();
+  const target = strip.scrollLeft + (ar.left - sr.left) - (strip.clientWidth - ar.width) / 2;
+  if (Math.abs(strip.scrollLeft - target) > 4) {
+    strip.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
+  }
 }
 
 function wordsTabHTML(m) {

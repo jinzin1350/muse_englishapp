@@ -1,0 +1,537 @@
+{
+  "date": "2026-09-30",
+  "theme": "Technology & Society",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "ubiquitous",
+      "pos": "adjective",
+      "meaning": "present everywhere; found in every place",
+      "example": "Facial recognition has become ubiquitous in airports around the world.",
+      "pronunciation": "yoo-BIH-kwih-tus",
+      "persian": "فراگیر، همه‌جاحاضر",
+      "photo": "media/c1/2026-09-30/photos/ubiquitous.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/ubiquitous.mp3"
+    },
+    {
+      "word": "unprecedented",
+      "pos": "adjective",
+      "meaning": "never having happened before",
+      "example": "The pandemic triggered an unprecedented shift toward remote work.",
+      "pronunciation": "un-PREH-seh-den-tid",
+      "persian": "بی‌سابقه",
+      "photo": "media/c1/2026-09-30/photos/unprecedented.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/unprecedented.mp3"
+    },
+    {
+      "word": "exacerbate",
+      "pos": "verb",
+      "meaning": "to make a problem or situation worse",
+      "example": "Sensational headlines only exacerbate public anxiety during a crisis.",
+      "pronunciation": "ig-ZA-ser-bayt",
+      "persian": "تشدید کردن، وخیم‌تر کردن",
+      "photo": "media/c1/2026-09-30/photos/exacerbate.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/exacerbate.mp3"
+    },
+    {
+      "word": "proliferation",
+      "pos": "noun",
+      "meaning": "rapid increase in number or spread",
+      "example": "The proliferation of smart devices has transformed how we communicate.",
+      "pronunciation": "proh-lih-feh-RAY-shun",
+      "persian": "گسترش سریع، تکثیر",
+      "photo": "media/c1/2026-09-30/photos/proliferation.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/proliferation.mp3"
+    },
+    {
+      "word": "dystopian",
+      "pos": "adjective",
+      "meaning": "relating to an imagined frightening, tightly controlled society",
+      "example": "Critics warn that constant tracking could lead to a dystopian future.",
+      "pronunciation": "dis-TOH-pee-un",
+      "persian": "پادآرمان‌شهری، ویران‌شهری",
+      "photo": "media/c1/2026-09-30/photos/dystopian.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/dystopian.mp3"
+    },
+    {
+      "word": "surveillance",
+      "pos": "noun",
+      "meaning": "close observation of people, especially by authorities",
+      "example": "Many citizens are uneasy about the scale of digital surveillance.",
+      "pronunciation": "ser-VAY-lunts",
+      "persian": "نظارت، مراقبت",
+      "photo": "media/c1/2026-09-30/photos/surveillance.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/surveillance.mp3"
+    },
+    {
+      "word": "algorithm",
+      "pos": "noun",
+      "meaning": "a set of rules a computer follows to solve a problem or make decisions",
+      "example": "The algorithm decides which posts appear at the top of your feed.",
+      "pronunciation": "AL-goh-ri-thum",
+      "persian": "الگوریتم",
+      "photo": "media/c1/2026-09-30/photos/algorithm.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/algorithm.mp3"
+    },
+    {
+      "word": "misinformation",
+      "pos": "noun",
+      "meaning": "false information that spreads, regardless of intent",
+      "example": "Misinformation spreads far faster than verified news online.",
+      "pronunciation": "mis-in-fer-MAY-shun",
+      "persian": "اطلاعات نادرست",
+      "photo": "media/c1/2026-09-30/photos/misinformation.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/misinformation.mp3"
+    },
+    {
+      "word": "polarize",
+      "pos": "verb",
+      "meaning": "to divide people into sharply opposing groups",
+      "example": "Heated talk shows tend to polarize viewers rather than inform them.",
+      "pronunciation": "POH-luh-ryze",
+      "persian": "دوقطبی کردن، قطب‌بندی کردن",
+      "photo": "media/c1/2026-09-30/photos/polarize.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/polarize.mp3"
+    },
+    {
+      "word": "doomscroll",
+      "pos": "verb",
+      "meaning": "to keep reading bad news online in a compulsive way",
+      "example": "She stayed up until 3 a.m. doomscrolling through disaster headlines.",
+      "pronunciation": "DOOM-skrohl",
+      "persian": "مرور بی‌وقفه اخبار منفی (اسکرول اخبار بد)",
+      "photo": "media/c1/2026-09-30/photos/doomscroll.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/doomscroll.mp3"
+    },
+    {
+      "word": "deepfake",
+      "pos": "noun",
+      "meaning": "a fake video or audio made with AI to look and sound real",
+      "example": "Experts worry that deepfakes could undermine trust in video evidence.",
+      "pronunciation": "DEEP-fayk",
+      "persian": "دیپ‌فیک (ویدیوی جعلی ساخته هوش مصنوعی)",
+      "photo": "media/c1/2026-09-30/photos/deepfake.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/deepfake.mp3"
+    },
+    {
+      "word": "addictive",
+      "pos": "adjective",
+      "meaning": "causing a strong habit that is hard to break",
+      "example": "Social media apps are deliberately designed to be addictive.",
+      "pronunciation": "uh-DIK-tiv",
+      "persian": "اعتیادآور",
+      "photo": "media/c1/2026-09-30/photos/addictive.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/addictive.mp3"
+    },
+    {
+      "word": "desensitize",
+      "pos": "verb",
+      "meaning": "to make someone less sensitive to shocking things",
+      "example": "Endless violent footage can desensitize viewers to real suffering.",
+      "pronunciation": "dee-SEN-sih-tyze",
+      "persian": "حساسیت‌زدایی کردن، بی‌حس کردن",
+      "photo": "media/c1/2026-09-30/photos/desensitize.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/desensitize.mp3"
+    },
+    {
+      "word": "nuance",
+      "pos": "noun",
+      "meaning": "a subtle difference in meaning, tone, or expression",
+      "example": "Machine translation still misses the nuance of literary language.",
+      "pronunciation": "NOO-ahnss",
+      "persian": "ظرافت، نکته ظریف",
+      "photo": "media/c1/2026-09-30/photos/nuance.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/nuance.mp3"
+    },
+    {
+      "word": "paradox",
+      "pos": "noun",
+      "meaning": "a statement that seems contradictory but may contain truth",
+      "example": "There is a paradox at the heart of social media: it connects us yet leaves us lonelier.",
+      "pronunciation": "PA-ruh-doks",
+      "persian": "پارادوکس، تناقض‌نما",
+      "photo": "media/c1/2026-09-30/photos/paradox.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/paradox.mp3"
+    },
+    {
+      "word": "erode",
+      "pos": "verb",
+      "meaning": "to gradually wear away or weaken something",
+      "example": "Constant interruptions gradually erode our ability to concentrate.",
+      "pronunciation": "ih-ROHD",
+      "persian": "فرسودن، تضعیف کردن",
+      "photo": "media/c1/2026-09-30/photos/erode.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/erode.mp3"
+    },
+    {
+      "word": "pervasive",
+      "pos": "adjective",
+      "meaning": "spreading widely through every part of an area or group",
+      "example": "Advertising has become so pervasive that we barely notice it anymore.",
+      "pronunciation": "per-VAY-siv",
+      "persian": "فراگیر، نافذ",
+      "photo": "media/c1/2026-09-30/photos/pervasive.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/pervasive.mp3"
+    },
+    {
+      "word": "mitigate",
+      "pos": "verb",
+      "meaning": "to make something less severe or serious",
+      "example": "Tech companies claim new filters will mitigate online harassment.",
+      "pronunciation": "MIH-tih-gayt",
+      "persian": "کاهش دادن، تخفیف دادن",
+      "photo": "media/c1/2026-09-30/photos/mitigate.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/mitigate.mp3"
+    },
+    {
+      "word": "accountability",
+      "pos": "noun",
+      "meaning": "responsibility for one's actions, with an obligation to explain them",
+      "example": "There must be greater accountability for how platforms handle personal data.",
+      "pronunciation": "uh-kown-tuh-bih-LIH-tee",
+      "persian": "پاسخگویی، مسئولیت‌پذیری",
+      "photo": "media/c1/2026-09-30/photos/accountability.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/accountability.mp3"
+    },
+    {
+      "word": "orwellian",
+      "pos": "adjective",
+      "meaning": "resembling a totalitarian state with extreme surveillance and control",
+      "example": "The proposal for mandatory location tracking struck many as orwellian.",
+      "pronunciation": "or-WEH-lee-un",
+      "persian": "اورولی (یادآور حکومت تمامیت‌خواه نظارتی)",
+      "photo": "media/c1/2026-09-30/photos/orwellian.jpg",
+      "word_audio": "media/c1/2026-09-30/word-audio/orwellian.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-09-30/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Technology & Society",
+    "audio": "media/c1/2026-09-30/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-09-30/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: Technology & Society",
+    "audio": "media/c1/2026-09-30/shadowing.mp3",
+    "transcript": "media/c1/2026-09-30/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'ubiquitous' mean?",
+      "options": [
+        "rare and hard to find",
+        "limited to one region",
+        "present everywhere; found in every place",
+        "visible only at night"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'unprecedented' mean?",
+      "options": [
+        "never having happened before",
+        "happening every year",
+        "widely expected",
+        "based on long tradition"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'exacerbate' mean?",
+      "options": [
+        "to solve completely",
+        "to ignore politely",
+        "to explain clearly",
+        "to make a problem or situation worse"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'proliferation' mean?",
+      "options": [
+        "a slow and steady decline",
+        "rapid increase in number or spread",
+        "a temporary pause",
+        "a careful reduction"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'dystopian' mean?",
+      "options": [
+        "relating to a perfect society",
+        "relating to ancient history",
+        "relating to an imagined frightening, tightly controlled society",
+        "relating to rural life"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'surveillance' mean?",
+      "options": [
+        "close observation of people, especially by authorities",
+        "a medical treatment",
+        "a public celebration",
+        "a legal document"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'algorithm' mean?",
+      "options": [
+        "a type of computer virus",
+        "a programming language",
+        "a hardware component",
+        "a set of rules a computer follows to solve a problem or make decisions"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'misinformation' mean?",
+      "options": [
+        "verified scientific facts",
+        "false information that spreads, regardless of intent",
+        "an official announcement",
+        "a personal opinion"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'polarize' mean?",
+      "options": [
+        "to unite in full agreement",
+        "to remain strictly neutral",
+        "to divide people into sharply opposing groups",
+        "to delay a decision"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'doomscroll' mean?",
+      "options": [
+        "to keep reading bad news online in a compulsive way",
+        "to scroll quickly past advertisements",
+        "to search only for good news",
+        "to delete old messages"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'deepfake' mean?",
+      "options": [
+        "a high-quality camera",
+        "a video editing application",
+        "a secure password",
+        "a fake video or audio made with AI to look and sound real"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'addictive' mean?",
+      "options": [
+        "easy to forget",
+        "causing a strong habit that is hard to break",
+        "boring and dull",
+        "healthy and natural"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'desensitize' mean?",
+      "options": [
+        "to make someone more emotional",
+        "to increase public awareness",
+        "to make someone less sensitive to shocking things",
+        "to cause confusion"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'nuance' mean?",
+      "options": [
+        "a subtle difference in meaning, tone, or expression",
+        "a loud and clear message",
+        "a major contradiction",
+        "a simple summary"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'paradox' mean?",
+      "options": [
+        "a proven scientific fact",
+        "a funny anecdote",
+        "a direct order",
+        "a statement that seems contradictory but may contain truth"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'erode' mean?",
+      "options": [
+        "to build up quickly",
+        "to gradually wear away or weaken something",
+        "to protect carefully",
+        "to repair fully"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'pervasive' mean?",
+      "options": [
+        "rarely seen anywhere",
+        "limited to experts",
+        "spreading widely through every part of an area or group",
+        "quickly disappearing"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'mitigate' mean?",
+      "options": [
+        "to make something less severe or serious",
+        "to make much worse",
+        "to ignore completely",
+        "to celebrate openly"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'accountability' mean?",
+      "options": [
+        "freedom from all rules",
+        "a financial reward",
+        "a secret agreement",
+        "responsibility for one's actions, with an obligation to explain them"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'orwellian' mean?",
+      "options": [
+        "like a peaceful democracy",
+        "resembling a totalitarian state with extreme surveillance and control",
+        "like a free market",
+        "like an ancient empire"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Conditionals type 2 and 3",
+    "explanation": "Conditional sentences describe what happens, or what would happen, under certain conditions. Type 2 and Type 3 both imagine situations that are <b>not real</b> — but they differ in time.\n\n<b>Second conditional</b> talks about an <b>unreal present or future</b>: something unlikely or impossible right now. Form: <b>If + past simple, would + base verb</b>. Note that after <i>if</i> we use <b>were</b> for all persons: <i>If I were you, I would disconnect for a week.</i>\n\n<b>Third conditional</b> talks about an <b>unreal past</b>: something that already happened differently, so it cannot be changed. Form: <b>If + past perfect, would have + past participle</b>. It often expresses regret or criticism: <i>If the platform had moderated the content, the rumor would not have spread.</i>\n\nA common mistake is mixing the forms. The <i>if</i>-clause <b>never</b> takes <i>would</i>: <i>If I would have known</i> is incorrect — say <i>If I had known</i>.",
+    "examples": [
+      "If algorithms were fully transparent, users would trust them more.",
+      "If I were the minister, I would ban facial recognition in public spaces.",
+      "If the company had disclosed the breach earlier, it would have avoided the scandal.",
+      "If social media had never been invented, our attention spans would have remained intact.",
+      "If governments regulated AI today, innovation would slow down — but safety would improve.",
+      "If she hadn't doomscrolled all night, she wouldn't have felt so anxious this morning."
+    ],
+    "practice": [],
+    "quiz": [
+      {
+        "question": "If I ___ rich, I would fund digital literacy programs.",
+        "options": [
+          "were",
+          "am",
+          "will be",
+          "would be"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "If they had encrypted the data, the leak ___ happened.",
+        "options": [
+          "would happen",
+          "will happen",
+          "wouldn't have",
+          "hadn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She would delete her account if she ___ how addictive it is.",
+        "options": [
+          "will realize",
+          "realized",
+          "would realize",
+          "has realized"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If the deepfake ___ detected sooner, it wouldn't have gone viral.",
+        "options": [
+          "were",
+          "would be",
+          "is",
+          "had been"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We ___ less polarized if the algorithm showed diverse viewpoints.",
+        "options": [
+          "will be",
+          "are",
+          "would have been",
+          "would be"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "If he ___ the notification settings, he wouldn't have been tracked.",
+        "options": [
+          "changed",
+          "had changed",
+          "would change",
+          "changes"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If surveillance ___ this pervasive, people would protest.",
+        "options": [
+          "isn't",
+          "hasn't been",
+          "weren't",
+          "wouldn't be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The company would have faced fines if regulators ___ the violation.",
+        "options": [
+          "discovered",
+          "would discover",
+          "have discovered",
+          "had discovered"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "If I were you, I ___ that suspicious link.",
+        "options": [
+          "wouldn't click",
+          "won't click",
+          "wouldn't have clicked",
+          "don't click"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "If misinformation ___ so quickly, fact-checkers could keep up.",
+        "options": [
+          "doesn't spread",
+          "didn't spread",
+          "wouldn't spread",
+          "hadn't spread"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

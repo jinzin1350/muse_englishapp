@@ -506,29 +506,31 @@ p { margin: 0 0 0.75em; }
 
 /* ---------- Audio cards ---------- */
 .audio-card { border-left-color: var(--ink); }
-.audio-top { display: flex; align-items: center; gap: 0.9rem; }
+.audio-top { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.7rem; }
 .play-btn {
   flex: 0 0 auto;
-  width: 58px; height: 58px; border-radius: 50%;
+  width: 52px; height: 52px; border-radius: 50%;
   border: none; background: var(--tomato); color: #fff;
-  font-size: 1.4rem; cursor: pointer; line-height: 1;
+  font-size: 1.2rem; cursor: pointer; line-height: 1;
   box-shadow: var(--shadow);
 }
 .play-btn:hover { background: var(--tomato-dark); }
 .play-btn:disabled { opacity: 0.4; cursor: not-allowed; }
 .audio-meta { flex: 1; min-width: 0; }
-.audio-title { font-weight: 700; margin: 0 0 0.35rem; }
+.audio-title { font-weight: 700; font-size: 1rem; line-height: 1.35; margin: 0 0 0.15rem; }
+.audio-meta .muted { font-size: 0.85rem; }
 .progress { height: 8px; background: var(--line); border-radius: 999px; overflow: hidden; }
 .progress > div { height: 100%; width: 0%; background: var(--tomato); border-radius: 999px; transition: width 0.2s linear; }
-.audio-times { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem; }
-.audio-actions { display: flex; gap: 0.6rem; margin-top: 0.8rem; align-items: center; flex-wrap: wrap; }
-.speed-row { display: flex; gap: 0.4rem; }
+.audio-times { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--muted); margin-top: 0.3rem; min-height: 1em; }
+.audio-actions { display: flex; gap: 0.5rem; margin-top: 0.7rem; align-items: center; flex-wrap: wrap; }
+.audio-actions .btn-sm { min-height: 40px; padding: 0.45rem 0.85rem; font-size: 0.82rem; border-radius: 999px; }
+.speed-row { display: flex; gap: 0.4rem; flex-wrap: wrap; }
 .skip-row { display: flex; gap: 0.4rem; }
 /* Seekable audio progress bar (click / drag to scrub) */
-.audio-card .progress.seekable { cursor: pointer; touch-action: pan-y; height: 12px; }
+.audio-card .progress.seekable { cursor: pointer; touch-action: pan-y; height: 14px; }
 .speed-btn {
   border: 1px solid var(--line); background: #fff; border-radius: 999px;
-  padding: 0.35rem 0.7rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: inherit;
+  padding: 0.45rem 0.75rem; font-size: 0.8rem; font-weight: 600; cursor: pointer; font-family: inherit;
   min-height: 40px;
 }
 .speed-btn.active { background: var(--ink); color: #fff; border-color: var(--ink); }
@@ -549,13 +551,13 @@ p { margin: 0 0 0.75em; }
 .mini-player {
   position: fixed; left: 0; right: 0; bottom: calc(64px + env(safe-area-inset-bottom));
   z-index: 60; background: var(--ink); color: var(--paper);
-  display: flex; align-items: center; gap: 0.7rem;
-  padding: 0.55rem 0.9rem;
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.45rem 0.8rem;
   box-shadow: 0 -2px 14px rgba(23, 33, 43, 0.25);
 }
 .mp-btn {
-  flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%;
-  border: none; background: var(--tomato); color: #fff; font-size: 1rem; cursor: pointer;
+  flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%;
+  border: none; background: var(--tomato); color: #fff; font-size: 0.95rem; cursor: pointer;
 }
 .mp-info { flex: 1; min-width: 0; }
 .mp-title { font-size: 0.82rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -606,11 +608,16 @@ p { margin: 0 0 0.75em; }
 body:not(.logged-in) #view { max-width: var(--landing-w); }
 
 /* ---------- Lesson tabs ---------- */
-.lesson-tabs { display: flex; gap: 0.4rem; overflow-x: auto; margin-bottom: 1rem; padding-bottom: 0.2rem; }
+.lesson-tabs {
+  display: flex; gap: 0.45rem; overflow-x: auto; margin-bottom: 1rem;
+  padding: 0.1rem 0.1rem 0.35rem;
+  scrollbar-width: none; -ms-overflow-style: none; scroll-behavior: smooth;
+}
+.lesson-tabs::-webkit-scrollbar { display: none; }
 .lesson-tab {
-  flex: 1 0 auto; border: 1px solid var(--line); background: var(--card);
-  border-radius: 999px; padding: 0.55rem 1rem; min-height: 44px; font-family: inherit; font-weight: 600;
-  font-size: 0.88rem; cursor: pointer; color: var(--ink); white-space: nowrap;
+  flex: 0 0 auto; border: 1px solid var(--line); background: var(--card);
+  border-radius: 999px; padding: 0.5rem 0.9rem; min-height: 44px; font-family: inherit; font-weight: 600;
+  font-size: 0.85rem; cursor: pointer; color: var(--ink); white-space: nowrap;
 }
 .lesson-tab[aria-selected="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
 

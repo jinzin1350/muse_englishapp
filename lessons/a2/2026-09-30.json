@@ -1,0 +1,438 @@
+{
+  "date": "2026-09-30",
+  "theme": "daily routines",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "alarm",
+      "pos": "noun",
+      "meaning": "a clock that wakes you with a loud sound",
+      "example": "My alarm rings at six thirty.",
+      "pronunciation": "uh-LARM",
+      "persian": "ساعت زنگ‌دار",
+      "photo": "media/a2/2026-09-30/photos/alarm.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/alarm.mp3"
+    },
+    {
+      "word": "shower",
+      "pos": "noun",
+      "meaning": "washing your body under running water",
+      "example": "I take a shower every morning.",
+      "pronunciation": "SHOU-er",
+      "persian": "دوش",
+      "photo": "media/a2/2026-09-30/photos/shower.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/shower.mp3"
+    },
+    {
+      "word": "brush",
+      "pos": "verb",
+      "meaning": "to clean with a brush",
+      "example": "I brush my teeth twice a day.",
+      "pronunciation": "BRUSH",
+      "persian": "مسواک زدن",
+      "photo": "media/a2/2026-09-30/photos/brush.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/brush.mp3"
+    },
+    {
+      "word": "breakfast",
+      "pos": "noun",
+      "meaning": "the first meal of the day",
+      "example": "We eat breakfast at eight o'clock.",
+      "pronunciation": "BREK-fust",
+      "persian": "صبحانه",
+      "photo": "media/a2/2026-09-30/photos/breakfast.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/breakfast.mp3"
+    },
+    {
+      "word": "lunch",
+      "pos": "noun",
+      "meaning": "the meal in the middle of the day",
+      "example": "I have lunch at noon.",
+      "pronunciation": "LUNCH",
+      "persian": "ناهار",
+      "photo": "media/a2/2026-09-30/photos/lunch.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/lunch.mp3"
+    },
+    {
+      "word": "dinner",
+      "pos": "noun",
+      "meaning": "the meal in the evening",
+      "example": "We eat dinner at seven.",
+      "pronunciation": "DIN-ur",
+      "persian": "شام",
+      "photo": "media/a2/2026-09-30/photos/dinner.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/dinner.mp3"
+    },
+    {
+      "word": "traffic",
+      "pos": "noun",
+      "meaning": "many cars on the road at the same time",
+      "example": "The traffic is bad today.",
+      "pronunciation": "TRAF-ik",
+      "persian": "ترافیک",
+      "photo": "media/a2/2026-09-30/photos/traffic.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/traffic.mp3"
+    },
+    {
+      "word": "office",
+      "pos": "noun",
+      "meaning": "a place where people work",
+      "example": "She works in a big office.",
+      "pronunciation": "OF-is",
+      "persian": "دفتر کار",
+      "photo": "media/a2/2026-09-30/photos/office.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/office.mp3"
+    },
+    {
+      "word": "tired",
+      "pos": "adjective",
+      "meaning": "needing rest, with no energy",
+      "example": "I am tired after work.",
+      "pronunciation": "TYRD",
+      "persian": "خسته",
+      "photo": "media/a2/2026-09-30/photos/tired.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/tired.mp3"
+    },
+    {
+      "word": "hungry",
+      "pos": "adjective",
+      "meaning": "wanting to eat food",
+      "example": "The children are hungry.",
+      "pronunciation": "HUNG-gree",
+      "persian": "گرسنه",
+      "photo": "media/a2/2026-09-30/photos/hungry.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/hungry.mp3"
+    },
+    {
+      "word": "hurry",
+      "pos": "verb",
+      "meaning": "to go fast because you are late",
+      "example": "Hurry up, we are late!",
+      "pronunciation": "HUR-ee",
+      "persian": "عجله کردن",
+      "photo": "media/a2/2026-09-30/photos/hurry.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/hurry.mp3"
+    },
+    {
+      "word": "wake",
+      "pos": "verb",
+      "meaning": "to stop sleeping",
+      "example": "I wake at six every day.",
+      "pronunciation": "WAYK",
+      "persian": "بیدار شدن",
+      "photo": "media/a2/2026-09-30/photos/wake.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/wake.mp3"
+    },
+    {
+      "word": "cook",
+      "pos": "verb",
+      "meaning": "to make food with heat",
+      "example": "He cooks dinner every night.",
+      "pronunciation": "KUK",
+      "persian": "آشپزی کردن",
+      "photo": "media/a2/2026-09-30/photos/cook.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/cook.mp3"
+    },
+    {
+      "word": "clean",
+      "pos": "verb",
+      "meaning": "to make things tidy and not dirty",
+      "example": "We clean the house on Saturday.",
+      "pronunciation": "KLEEN",
+      "persian": "تمیز کردن",
+      "photo": "media/a2/2026-09-30/photos/clean.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/clean.mp3"
+    },
+    {
+      "word": "sleep",
+      "pos": "verb",
+      "meaning": "to rest at night with closed eyes",
+      "example": "Babies sleep a lot.",
+      "pronunciation": "SLEEP",
+      "persian": "خوابیدن",
+      "photo": "media/a2/2026-09-30/photos/sleep.jpg",
+      "word_audio": "media/a2/2026-09-30/word-audio/sleep.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-09-30/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Daily Routines",
+    "audio": "media/a2/2026-09-30/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-09-30/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Busy Day",
+    "audio": "media/a2/2026-09-30/shadowing.mp3",
+    "transcript": "media/a2/2026-09-30/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'alarm' mean?",
+      "options": [
+        "the meal in the evening",
+        "wanting to eat food",
+        "a clock that wakes you with a loud sound",
+        "to make things tidy and not dirty"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'shower' mean?",
+      "options": [
+        "washing your body under running water",
+        "many cars on the road at the same time",
+        "to go fast because you are late",
+        "to rest at night with closed eyes"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'brush' mean?",
+      "options": [
+        "a place where people work",
+        "to stop sleeping",
+        "a clock that wakes you with a loud sound",
+        "to clean with a brush"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'breakfast' mean?",
+      "options": [
+        "needing rest, with no energy",
+        "the first meal of the day",
+        "to make food with heat",
+        "washing your body under running water"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'lunch' mean?",
+      "options": [
+        "wanting to eat food",
+        "to make things tidy and not dirty",
+        "the meal in the middle of the day",
+        "to clean with a brush"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'dinner' mean?",
+      "options": [
+        "the meal in the evening",
+        "to go fast because you are late",
+        "to rest at night with closed eyes",
+        "the first meal of the day"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'traffic' mean?",
+      "options": [
+        "to stop sleeping",
+        "many cars on the road at the same time",
+        "a clock that wakes you with a loud sound",
+        "the meal in the middle of the day"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'office' mean?",
+      "options": [
+        "to make food with heat",
+        "washing your body under running water",
+        "the meal in the evening",
+        "a place where people work"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'tired' mean?",
+      "options": [
+        "to make things tidy and not dirty",
+        "to clean with a brush",
+        "needing rest, with no energy",
+        "many cars on the road at the same time"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'hungry' mean?",
+      "options": [
+        "to rest at night with closed eyes",
+        "wanting to eat food",
+        "the first meal of the day",
+        "a place where people work"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'hurry' mean?",
+      "options": [
+        "to go fast because you are late",
+        "a clock that wakes you with a loud sound",
+        "the meal in the middle of the day",
+        "needing rest, with no energy"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'wake' mean?",
+      "options": [
+        "washing your body under running water",
+        "the meal in the evening",
+        "wanting to eat food",
+        "to stop sleeping"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'cook' mean?",
+      "options": [
+        "to clean with a brush",
+        "to make food with heat",
+        "many cars on the road at the same time",
+        "to go fast because you are late"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'clean' mean?",
+      "options": [
+        "the first meal of the day",
+        "a place where people work",
+        "to make things tidy and not dirty",
+        "to stop sleeping"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'sleep' mean?",
+      "options": [
+        "to rest at night with closed eyes",
+        "the meal in the middle of the day",
+        "needing rest, with no energy",
+        "to make food with heat"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Past simple: regular verbs",
+    "explanation": "We use the past simple for finished actions in the past. Words like yesterday, last night, and this morning often come with it.\n\nFor regular verbs, add -ed to the verb: work -> worked, clean -> cleaned, cook -> cooked.\n\nWatch the spelling. Verbs ending in -e add only -d: like -> liked. Verbs ending in consonant + y change y to i: hurry -> hurried, study -> studied. Short verbs double the last letter: stop -> stopped, plan -> planned.\n\nFor negatives, use did not (didn't) + the verb: I did not sleep well. For questions, put Did at the start: Did you cook dinner?",
+    "examples": [
+      "I worked in an office yesterday.",
+      "She cleaned the house this morning.",
+      "We cooked dinner last night.",
+      "He watched a film after lunch.",
+      "They hurried to work in the traffic.",
+      "I did not sleep well last night."
+    ],
+    "practice": [],
+    "quiz": [
+      {
+        "question": "I ___ late yesterday.",
+        "options": [
+          "work",
+          "worked",
+          "working",
+          "works"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ her room this morning.",
+        "options": [
+          "cleaned",
+          "clean",
+          "cleans",
+          "cleaning"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We ___ dinner together last night.",
+        "options": [
+          "cook",
+          "cooks",
+          "cooked",
+          "cooking"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He ___ a film after lunch.",
+        "options": [
+          "watches",
+          "watch",
+          "watching",
+          "watched"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "They ___ to the bus stop this morning.",
+        "options": [
+          "hurry",
+          "hurried",
+          "hurrying",
+          "hurries"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ my teeth twice yesterday.",
+        "options": [
+          "brush",
+          "brushes",
+          "brushed",
+          "brushing"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She did not ___ the traffic.",
+        "options": [
+          "like",
+          "liked",
+          "likes",
+          "liking"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ you sleep well last night?",
+        "options": [
+          "Do",
+          "Does",
+          "Are",
+          "Did"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We ___ our friends last weekend.",
+        "options": [
+          "visit",
+          "visited",
+          "visits",
+          "visiting"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ at the red light.",
+        "options": [
+          "stop",
+          "stops",
+          "stopped",
+          "stopping"
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a2/2026-09-30/grammar-en.mp3"
+  }
+}

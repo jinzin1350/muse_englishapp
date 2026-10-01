@@ -1,0 +1,538 @@
+{
+  "date": "2026-09-30",
+  "theme": "money & shopping",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "bargain",
+      "pos": "noun/verb",
+      "meaning": "something sold for a very good price; to argue with a seller to get a lower price",
+      "example": "I got a real bargain — this jacket was half price!",
+      "pronunciation": "BAHR-gun",
+      "persian": "معامله به قیمت مناسب",
+      "photo": "media/b2/2026-09-30/photos/bargain.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/bargain.mp3"
+    },
+    {
+      "word": "refund",
+      "pos": "noun/verb",
+      "meaning": "money given back to you when you return something you bought",
+      "example": "The store gave me a full refund for the broken TV.",
+      "pronunciation": "REE-fund",
+      "persian": "بازپرداخت / پس‌گرفتن پول",
+      "photo": "media/b2/2026-09-30/photos/refund.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/refund.mp3"
+    },
+    {
+      "word": "discount",
+      "pos": "noun",
+      "meaning": "a lower price than usual",
+      "example": "Students get a ten percent discount at this shop.",
+      "pronunciation": "DIS-kownt",
+      "persian": "تخفیف",
+      "photo": "media/b2/2026-09-30/photos/discount.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/discount.mp3"
+    },
+    {
+      "word": "receipt",
+      "pos": "noun",
+      "meaning": "the paper the store gives you to show that you paid",
+      "example": "Keep the receipt if you want to return the shoes.",
+      "pronunciation": "ree-SEET",
+      "persian": "رسید خرید",
+      "photo": "media/b2/2026-09-30/photos/receipt.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/receipt.mp3"
+    },
+    {
+      "word": "debt",
+      "pos": "noun",
+      "meaning": "money that you owe to someone",
+      "example": "He finally paid off all his debt.",
+      "pronunciation": "det",
+      "persian": "بدهی",
+      "photo": "media/b2/2026-09-30/photos/debt.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/debt.mp3"
+    },
+    {
+      "word": "afford",
+      "pos": "verb",
+      "meaning": "to have enough money to buy or do something",
+      "example": "I can't afford a new car right now.",
+      "pronunciation": "uh-FORD",
+      "persian": "توانایی مالی داشتن / توان خرید داشتن",
+      "photo": "media/b2/2026-09-30/photos/afford.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/afford.mp3"
+    },
+    {
+      "word": "budget",
+      "pos": "noun",
+      "meaning": "a plan for how you will spend your money",
+      "example": "We have to stick to our monthly budget.",
+      "pronunciation": "BUJ-it",
+      "persian": "بودجه",
+      "photo": "media/b2/2026-09-30/photos/budget.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/budget.mp3"
+    },
+    {
+      "word": "withdraw",
+      "pos": "verb",
+      "meaning": "to take money out of your bank account",
+      "example": "I withdrew two hundred dollars from the ATM.",
+      "pronunciation": "with-DRAW",
+      "persian": "برداشت کردن (از حساب بانکی)",
+      "photo": "media/b2/2026-09-30/photos/withdraw.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/withdraw.mp3"
+    },
+    {
+      "word": "deposit",
+      "pos": "noun/verb",
+      "meaning": "money you put into your bank account; to put money into an account",
+      "example": "She made a deposit of one thousand dollars.",
+      "pronunciation": "dee-POZ-it",
+      "persian": "واریز / سپرده",
+      "photo": "media/b2/2026-09-30/photos/deposit.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/deposit.mp3"
+    },
+    {
+      "word": "currency",
+      "pos": "noun",
+      "meaning": "the type of money used in a country",
+      "example": "The currency of Japan is the yen.",
+      "pronunciation": "KUR-un-see",
+      "persian": "ارز / واحد پول",
+      "photo": "media/b2/2026-09-30/photos/currency.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/currency.mp3"
+    },
+    {
+      "word": "invest",
+      "pos": "verb",
+      "meaning": "to put money into something to make more money later",
+      "example": "She decided to invest in real estate.",
+      "pronunciation": "in-VEST",
+      "persian": "سرمایه‌گذاری کردن",
+      "photo": "media/b2/2026-09-30/photos/invest.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/invest.mp3"
+    },
+    {
+      "word": "profit",
+      "pos": "noun",
+      "meaning": "the money you make after paying all your costs",
+      "example": "The small shop made a big profit this year.",
+      "pronunciation": "PROF-it",
+      "persian": "سود",
+      "photo": "media/b2/2026-09-30/photos/profit.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/profit.mp3"
+    },
+    {
+      "word": "installment",
+      "pos": "noun",
+      "meaning": "one of several payments you make over time",
+      "example": "He bought the phone in monthly installments.",
+      "pronunciation": "in-STAWL-munt",
+      "persian": "قسط",
+      "photo": "media/b2/2026-09-30/photos/installment.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/installment.mp3"
+    },
+    {
+      "word": "exchange",
+      "pos": "noun/verb",
+      "meaning": "to give one thing and get another; to change money of one country into money of another",
+      "example": "Where can I exchange dollars for euros?",
+      "pronunciation": "iks-CHAYNJ",
+      "persian": "مبادله / تعویض",
+      "photo": "media/b2/2026-09-30/photos/exchange.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/exchange.mp3"
+    },
+    {
+      "word": "checkout",
+      "pos": "noun",
+      "meaning": "the place in a store where you pay for things",
+      "example": "The checkout lines were very long.",
+      "pronunciation": "CHEK-owt",
+      "persian": "صندوق فروشگاه",
+      "photo": "media/b2/2026-09-30/photos/checkout.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/checkout.mp3"
+    },
+    {
+      "word": "savings",
+      "pos": "noun, plural",
+      "meaning": "money you keep and do not spend",
+      "example": "He keeps his savings in a bank account.",
+      "pronunciation": "SAY-vingz",
+      "persian": "پس‌انداز",
+      "photo": "media/b2/2026-09-30/photos/savings.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/savings.mp3"
+    },
+    {
+      "word": "loan",
+      "pos": "noun",
+      "meaning": "money you borrow and must pay back later",
+      "example": "They took out a loan to buy a house.",
+      "pronunciation": "lohn",
+      "persian": "وام",
+      "photo": "media/b2/2026-09-30/photos/loan.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/loan.mp3"
+    },
+    {
+      "word": "bankrupt",
+      "pos": "adjective",
+      "meaning": "having no money left; unable to pay your debts",
+      "example": "The company went bankrupt last year.",
+      "pronunciation": "BANG-krupt",
+      "persian": "ورشکسته",
+      "photo": "media/b2/2026-09-30/photos/bankrupt.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/bankrupt.mp3"
+    },
+    {
+      "word": "overpriced",
+      "pos": "adjective",
+      "meaning": "costing more than it should",
+      "example": "The food was good, but the restaurant was overpriced.",
+      "pronunciation": "oh-vur-PRYST",
+      "persian": "بیش‌ازحد گران",
+      "photo": "media/b2/2026-09-30/photos/overpriced.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/overpriced.mp3"
+    },
+    {
+      "word": "warranty",
+      "pos": "noun",
+      "meaning": "a written promise to repair or replace something for free if it breaks",
+      "example": "The laptop comes with a two year warranty.",
+      "pronunciation": "WOR-un-tee",
+      "persian": "گارانتی / ضمانت‌نامه",
+      "photo": "media/b2/2026-09-30/photos/warranty.jpg",
+      "word_audio": "media/b2/2026-09-30/word-audio/warranty.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-09-30/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Smart Shopping and Money",
+    "audio": "media/b2/2026-09-30/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-09-30/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Big Sale",
+    "audio": "media/b2/2026-09-30/shadowing.mp3",
+    "transcript": "media/b2/2026-09-30/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "answer": 2,
+      "options": [
+        "money given back to you when you return something you bought",
+        "the place in a store where you pay for things",
+        "something sold for a very good price",
+        "a lower price than usual"
+      ],
+      "question": "What does 'bargain' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "money given back to you when you return something you bought",
+        "money you keep and do not spend",
+        "money that you owe to someone",
+        "the money you make after paying all your costs"
+      ],
+      "question": "What does 'refund' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "to have enough money to buy or do something",
+        "one of several payments you make over time",
+        "a plan for how you will spend your money",
+        "a lower price than usual"
+      ],
+      "question": "What does 'discount' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "the paper a bank gives you for your account",
+        "the paper the store gives you to show that you paid",
+        "a written promise to repair something for free",
+        "money you put into your bank account"
+      ],
+      "question": "What does 'receipt' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "money you keep and do not spend",
+        "money you borrow and must pay back later",
+        "money that you owe to someone",
+        "the type of money used in a country"
+      ],
+      "question": "What does 'debt' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "to put money into something to make more money later",
+        "to take money out of your bank account",
+        "to give one thing and get another",
+        "to have enough money to buy or do something"
+      ],
+      "question": "What does 'afford' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "a plan for how you will spend your money",
+        "money you keep and do not spend",
+        "having no money left",
+        "costing more than it should"
+      ],
+      "question": "What does 'budget' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "to put money into something to make more money later",
+        "to take money out of your bank account",
+        "to argue with a seller to get a lower price",
+        "to have enough money to buy or do something"
+      ],
+      "question": "What does 'withdraw' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "money you borrow and must pay back later",
+        "money given back to you when you return something",
+        "money that you owe to someone",
+        "money you put into your bank account"
+      ],
+      "question": "What does 'deposit' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "money you keep and do not spend",
+        "the money you make after paying all your costs",
+        "the type of money used in a country",
+        "a lower price than usual"
+      ],
+      "question": "What does 'currency' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "to put money into something to make more money later",
+        "to take money out of your bank account",
+        "to give one thing and get another",
+        "to have enough money to buy or do something"
+      ],
+      "question": "What does 'invest' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "money that you owe to someone",
+        "money you borrow and must pay back later",
+        "the money you make after paying all your costs",
+        "money you keep and do not spend"
+      ],
+      "question": "What does 'profit' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "a written promise to repair something for free",
+        "one of several payments you make over time",
+        "a plan for how you will spend your money",
+        "the place in a store where you pay for things"
+      ],
+      "question": "What does 'installment' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "to take money out of your bank account",
+        "to put money into something to make more money later",
+        "to argue with a seller to get a lower price",
+        "to give one thing and get another"
+      ],
+      "question": "What does 'exchange' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "a plan for how you will spend your money",
+        "the place in a store where you pay for things",
+        "the paper the store gives you to show that you paid",
+        "a lower price than usual"
+      ],
+      "question": "What does 'checkout' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "money you keep and do not spend",
+        "money you put into your bank account",
+        "money you borrow and must pay back later",
+        "the money you make after paying all your costs"
+      ],
+      "question": "What does 'savings' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "money that you owe to someone",
+        "money you keep and do not spend",
+        "money you borrow and must pay back later",
+        "money given back when you return something"
+      ],
+      "question": "What does 'loan' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "costing more than it should",
+        "having enough money to buy something",
+        "making a lot of money",
+        "having no money left; unable to pay your debts"
+      ],
+      "question": "What does 'bankrupt' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "costing more than it should",
+        "sold for a very good price",
+        "having no money left",
+        "a lower price than usual"
+      ],
+      "question": "What does 'overpriced' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "the paper the store gives you to show that you paid",
+        "a written promise to repair or replace something for free if it breaks",
+        "a plan for how you will spend your money",
+        "one of several payments you make over time"
+      ],
+      "question": "What does 'warranty' mean?"
+    }
+  ],
+  "grammar": {
+    "examples": [
+      "It's a nice house. She's a lawyer. (saying what something is / what somebody does)",
+      "I saw an old man with a dog. The dog was barking. (first mention, then the)",
+      "The moon goes round the Earth. (only one of something)",
+      "It's the best restaurant in town. (superlative)",
+      "I love flowers, but I hate the flowers in my garden. (general vs specific)",
+      "She's not at home today. I get back from work at five thirty. (home / work after at / from)",
+      "I never have breakfast. See you next week. (meals; next + week)"
+    ],
+    "explanation": "Use a or an with singular countable nouns: to say what something is or what somebody does (She's a lawyer), the first time you mention a thing or person (I saw an old man with a dog), in What...! exclamations (What an awful day!), and in expressions of frequency (three times a week). Use the when you talk about something you already mentioned (The dog was barking), when it is clear what you mean (The bell rang and my father opened the door), when there is only one of something (the moon), with places in a town (the cinema, the theatre), and with superlatives (the best restaurant). Use no article when you speak in general with plural and uncountable nouns (I love flowers; Love is more important than money), with home, work, school, church after at / to / from (She's not at home today), before meals, days and months (I never have breakfast), and before next / last + day, week, etc. (See you next week).",
+    "practice": [],
+    "quiz": [
+      {
+        "answer": 0,
+        "options": [
+          "weddings",
+          "the weddings",
+          "a weddings",
+          "an weddings"
+        ],
+        "question": "I love ___!"
+      },
+      {
+        "answer": 2,
+        "options": [
+          "nurse",
+          "the nurse",
+          "a nurse",
+          "an nurse"
+        ],
+        "question": "Jess is ___ in a hospital."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "theatre / the month",
+          "the theatre / a month",
+          "a theatre / month",
+          "theatres / a month"
+        ],
+        "question": "We go to ___ about once ___."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "chef / best cook",
+          "the chef / a best cook",
+          "a chef / the best cook",
+          "an chef / best cook"
+        ],
+        "question": "My boyfriend is ___. I think he's ___ in the world."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "the dogs / dogs",
+          "dogs / the dogs",
+          "dogs / dogs",
+          "the dogs / the dogs"
+        ],
+        "question": "In general, I like ___, but I don't like ___ that live next door to me."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "the happiness / the money",
+          "happiness / money",
+          "a happiness / a money",
+          "happiness / the money"
+        ],
+        "question": "I think ___ is more important than ___."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "a / a",
+          "the / the",
+          "no article / no article",
+          "the / a"
+        ],
+        "question": "What time does ___ train leave? Can you drop me off at ___ station?"
+      },
+      {
+        "answer": 2,
+        "options": [
+          "the / a",
+          "a / a",
+          "the / the",
+          "no article / the"
+        ],
+        "question": "What's ___ most interesting place to visit in your town? Probably ___ castle."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "the / the",
+          "a / the",
+          "the / a",
+          "a / a"
+        ],
+        "question": "Have you ever had ___ problem in your relationship? Yes, but we solved ___ problem."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "the / the",
+          "no article / the",
+          "a / a",
+          "no article / no article"
+        ],
+        "question": "What shall we do ___ next weekend? Let's invite Toni for ___ lunch."
+      }
+    ],
+    "title": "3B: Articles - a / an, the, no article"
+  }
+}
