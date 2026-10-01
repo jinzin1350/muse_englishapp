@@ -1142,9 +1142,24 @@ function renderSignin(v) {
   }
 }
 
+/* Self-declared level at signup: 3 buckets auto-mapped to CEFR tracks.
+   No waiting for manual approval — the user enters the app immediately. */
+const SIGNUP_LEVELS = [
+  { id: 'a1', name: 'Elementary', desc: "I'm starting out", icon: '🌱' },
+  { id: 'b1', name: 'Intermediate', desc: 'I can hold a conversation', icon: '📈' },
+  { id: 'c1', name: 'Advanced', desc: "I'm fluent, I want depth", icon: '🚀' },
+];
+function levelPickerHTML(name) {
+  return '<div class="level-pick">' + SIGNUP_LEVELS.map(function (l) {
+    return '<label class="level-opt"><input type="radio" name="' + name + '" value="' + l.id + '">' +
+      '<span class="level-card"><span class="level-ico">' + l.icon + '</span>' +
+      '<span class="level-name">' + l.name + '</span>' +
+      '<span class="level-desc">' + l.desc + '</span></span></label>';
+  }).join('') + '</div>';
+}
+
 function renderSignup(v) {
-  const configured = supabaseKeysPresent();
-  v.innerHTML = authShell(
+  const configured = supabaseKeysPresent();  v.innerHTML = authShell(
     '<h1>Create your account ✨</h1>' +
     '<p class="muted">One lesson a day — words, listening, speaking and a quiz, for your level.</p>' +
     (configured ?
@@ -1156,6 +1171,8 @@ function renderSignup(v) {
         '<div class="field"><label for="su-pass">Password</label>' +
         '<div class="pw-wrap"><input id="su-pass" name="signup-password" type="password" autocomplete="new-password" placeholder="Choose a password (min 6 characters)" required minlength="6">' +
         '<button type="button" class="pw-toggle" data-action="pw-toggle" aria-label="Show password">👁️</button></div></div>' +
+        '<div class="field"><label>Your English level</label>' + levelPickerHTML('su-level') +
+        '<p class="muted" style="margin-top:0.4rem">Pick the closest one — your lessons start right away.</p></div>' +
         '<div class="form-error" id="su-error" role="alert"></div>' +
         '<div class="form-note" id="su-note" role="status"></div>' +
         '<button class="btn btn-block" type="submit" id="su-submit">Create account</button>' +
@@ -1222,6 +1239,9 @@ async function doSignup() {
   const pass = passEl.value;
   if (!email || !pass) { authError('su', 'Enter your email and password.'); return; }
   if (pass.length < 6) { authError('su', 'Password must be at least 6 characters.'); return; }
+  const lvlEl = document.querySelector('input[name="su-level"]:checked');
+  if (!lvlEl) { authError('su', 'Please pick your English level.'); return; }
+  const chosenLevel = lvlEl.value;
   authError('su', '');
   if (!sb) { authError('su', 'Signup service couldn’t load. Check your connection and try again.'); return; }
   setAuthBusy('su', true, 'Creating your account…');
@@ -1236,13 +1256,15 @@ async function doSignup() {
     if (error) throw error;
     setAuthBusy('su', false, 'Create account');
     if (data.session) {
-      // Email confirmation disabled -> already signed in.
+      // Email confirmation disabled -> already signed in: save level now.
+      try { await sb.from('profiles').upsert({ id: data.user.id, email: email, level: chosenLevel }, { onConflict: 'id' }); } catch (e) {}
       state.justSignedUp = true;
       authNote('su', '✓ Account created — loading your lessons…');
       await enterApp();
       return;
     }
-    // Confirmation required: send them to sign-in with email prefilled.
+    // Confirmation required: stash the level, applied on first sign-in.
+    try { localStorage.setItem('el_pending_level', JSON.stringify({ email: email, level: chosenLevel })); } catch (e) {}
     state.afterSignup = email;
     go('signin');
   } catch (e) {
@@ -1260,6 +1282,20 @@ async function enterApp() {
     const { data: prof } = await sb.from('profiles').select('level').eq('id', u.id).single();
     if (prof) level = prof.level;
   } catch (e) { /* RLS or missing row -> treat as pending */ }
+  if (!level) {
+    // Level chosen at signup (confirmation flow): apply it now.
+    try {
+      const raw = localStorage.getItem('el_pending_level');
+      if (raw) {
+        const p = JSON.parse(raw);
+        if (p && p.email === u.email && p.level) {
+          await sb.from('profiles').upsert({ id: u.id, email: u.email, level: p.level }, { onConflict: 'id' });
+          level = p.level;
+          localStorage.removeItem('el_pending_level');
+        }
+      }
+    } catch (e) {}
+  }
   const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
   state.user = { id: u.id, email: u.email, level: level, isAdmin: isAdmin, demo: false };
   try { localStorage.setItem('el_last_user', u.email); } catch (e) {}
@@ -1321,12 +1357,31 @@ async function demoLogin(asAdmin) {
 function renderWaiting(v) {
   v.innerHTML =
   '<div class="card" style="max-width:520px;margin:2rem auto">' +
-    '<h1>Almost there ⏳</h1>' +
+    '<h1>One last step 🎯</h1>' +
     (state.justSignedUp ? '<p class="form-note">✓ Your account is created.</p>' : '') +
-    '<p>Your teacher is assigning your level — check back soon and your daily lessons will appear here.</p>' +
-    '<button class="btn btn-block" data-action="check-level">Check again</button>' +
+    '<p>What\'s your English level? Pick the closest — your lessons start right away.</p>' +
+    levelPickerHTML('wait-level') +
+    '<div class="form-error" id="wait-error" role="alert"></div>' +
+    '<button class="btn btn-block" data-action="save-level">Start learning</button>' +
     '<p class="muted" style="margin-top:0.8rem">Signed in as ' + esc(state.user.email) + '</p>' +
   '</div>';
+}
+
+async function saveWaitingLevel() {
+  const el = document.querySelector('input[name="wait-level"]:checked');
+  const errEl = document.getElementById('wait-error');
+  if (!el) { if (errEl) errEl.textContent = 'Please pick your English level.'; return; }
+  if (errEl) errEl.textContent = '';
+  try {
+    const { data: u } = await sb.auth.getUser();
+    const { error } = await sb.from('profiles').upsert({ id: u.user.id, email: u.user.email, level: el.value }, { onConflict: 'id' });
+    if (error) throw error;
+    state.user.level = el.value;
+    state.justSignedUp = false;
+    try { localStorage.removeItem('el_pending_level'); } catch (e) {}
+    identifyPushUser(u.user.id, u.user.email, normalizeLevel(el.value));
+    await afterLogin();
+  } catch (e) { if (errEl) errEl.textContent = 'Couldn\'t save — check your connection and try again.'; }
 }
 
 async function checkLevel() {
@@ -1947,6 +2002,7 @@ function bindEvents() {
     else if (a === 'skip-back') { const card = t.closest('[data-audio-card]'); if (card) skipCard(card, -10); }
     else if (a === 'skip-fwd') { const card = t.closest('[data-audio-card]'); if (card) skipCard(card, 10); }
     else if (a === 'check-level') checkLevel();
+    else if (a === 'save-level') saveWaitingLevel();
     else if (a === 'logout') doLogout();
     else if (a === 'open-lesson') { state.lessonTab = 'words'; go('lesson', t.getAttribute('data-date')); }
     else if (a === 'today-cta') {
