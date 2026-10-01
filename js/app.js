@@ -508,6 +508,26 @@ function playTrack(src, title) {
    point restarts the track from the beginning). A Blob URL hands the shared
    player the whole file locally, so forward/back seek always works, instantly.
    Only swaps the player while it is not playing; never interrupts playback. */
+function checkWarmOk(res) {
+  if (!res.ok) throw new Error('bad status ' + res.status);
+  return res;
+}
+
+/* Get the full podcast bytes: persistent Cache Storage first (stays on the
+   phone across sessions, works offline), network fetch as fallback. */
+function getWarmBlob(url) {
+  if (!('caches' in window)) return fetch(url).then(checkWarmOk).then(function (r) { return r.blob(); });
+  return caches.open('podcast-v1').then(function (cache) {
+    return cache.match(url).then(function (hit) {
+      if (hit) return hit.blob();
+      return fetch(url).then(checkWarmOk).then(function (res) {
+        try { cache.put(url, res.clone()); } catch (e) {}
+        return res.blob();
+      });
+    });
+  });
+}
+
 function warmPodcast(m) {
   try {
     if (!m || !m.podcast || !m.podcast.audio || !window.fetch || !window.URL) return;
@@ -521,10 +541,7 @@ function warmPodcast(m) {
     player._warmDate = date;
     player._warmPending = url;
     const done = function () { if (player._warmPending === url) player._warmPending = null; };
-    player._warmPromise = fetch(url).then(function (res) {
-      if (!res.ok) throw new Error('bad status ' + res.status);
-      return res.blob();
-    }).then(function (blob) {
+    player._warmPromise = getWarmBlob(url).then(function (blob) {
       done();
       if (!blob || !blob.size) return;
       if (!state.lesson || state.lesson.date !== date) return; // moved on
@@ -574,6 +591,12 @@ function initAudio() {
 }
 
 async function audioAvailable(url) {
+  try {
+    if ('caches' in window) {
+      const cache = await caches.open('podcast-v1');
+      if (await cache.match(url)) return true; // on the phone: available offline
+    }
+  } catch (e) {}
   try {
     const r = await fetch(url, { method: 'HEAD' });
     return r.ok;
