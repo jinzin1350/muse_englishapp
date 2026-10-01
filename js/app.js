@@ -54,7 +54,8 @@ const state = {
   pushOptedIn: null,   // OneSignal subscription state: true/false/null(unknown)
   previewLesson: null, // cached public lesson for landing/preview
   justSignedUp: false,
-  afterSignup: null   // email prefilled on signin right after account creation
+  afterSignup: null,   // email prefilled on signin right after account creation
+  showConfirmPopup: null // email shown in the "confirm your email" popup after signup
 };
 
 /* Six CEFR levels. Legacy 3-level values are mapped so existing assignments keep working. */
@@ -1142,6 +1143,20 @@ function renderSignin(v) {
     authNote('si', '✓ Account created! Check your inbox for the confirmation email, then sign in.');
     state.afterSignup = null;
   }
+  // Signup with email confirmation required: popup explaining they must
+  // confirm the email before they can enter the app.
+  if (state.showConfirmPopup) {
+    const em2 = state.showConfirmPopup;
+    state.showConfirmPopup = null;
+    showModal(
+      '<div class="modal-ico">📧</div>' +
+      '<h2>Check your inbox</h2>' +
+      '<p>We sent a confirmation email to<br><b>' + esc(em2) + '</b>.</p>' +
+      '<p>Click the link inside it to confirm your email address — then you can sign in and enter the app.</p>' +
+      '<button class="btn btn-block" data-action="modal-close">OK, got it</button>',
+      true
+    );
+  }
 }
 
 /* Self-declared level at signup: 3 buckets auto-mapped to CEFR tracks.
@@ -1212,6 +1227,153 @@ function authNote(kind, msg) {
   if (note) note.textContent = msg || '';
 }
 
+/* ---------------- modal (popup) ---------------- */
+function showModal(html, lock) {
+  closeModal();
+  const ov = document.createElement('div');
+  ov.className = 'modal-overlay';
+  ov.id = 'app-modal';
+  ov.innerHTML = '<div class="modal-card" role="dialog" aria-modal="true">' + html + '</div>';
+  document.body.appendChild(ov);
+  if (!lock) ov.addEventListener('click', function (e) { if (e.target === ov) closeModal(); });
+  return ov;
+}
+function closeModal() {
+  const m = document.getElementById('app-modal');
+  if (m) m.remove();
+}
+
+/* ---------------- user region (timezone-based country detection) ---------------- */
+/* VPN-proof: the device timezone reflects where the user actually lives,
+   unlike IP geolocation which follows the VPN exit node. */
+const TZ_COUNTRY = {
+  'Asia/Tehran': ['IR', 'Iran'],
+  'Asia/Dubai': ['AE', 'United Arab Emirates'], 'Asia/Muscat': ['OM', 'Oman'],
+  'Asia/Qatar': ['QA', 'Qatar'], 'Asia/Bahrain': ['BH', 'Bahrain'],
+  'Asia/Kuwait': ['KW', 'Kuwait'], 'Asia/Riyadh': ['SA', 'Saudi Arabia'],
+  'Asia/Baghdad': ['IQ', 'Iraq'], 'Asia/Amman': ['JO', 'Jordan'],
+  'Asia/Beirut': ['LB', 'Lebanon'], 'Asia/Damascus': ['SY', 'Syria'],
+  'Asia/Jerusalem': ['IL', 'Israel'], 'Asia/Gaza': ['PS', 'Palestine'],
+  'Asia/Hebron': ['PS', 'Palestine'], 'Asia/Nicosia': ['CY', 'Cyprus'],
+  'Asia/Yerevan': ['AM', 'Armenia'], 'Asia/Baku': ['AZ', 'Azerbaijan'],
+  'Asia/Tbilisi': ['GE', 'Georgia'], 'Asia/Karachi': ['PK', 'Pakistan'],
+  'Asia/Kolkata': ['IN', 'India'], 'Asia/Colombo': ['LK', 'Sri Lanka'],
+  'Asia/Dhaka': ['BD', 'Bangladesh'], 'Asia/Kathmandu': ['NP', 'Nepal'],
+  'Asia/Yangon': ['MM', 'Myanmar'], 'Asia/Bangkok': ['TH', 'Thailand'],
+  'Asia/Jakarta': ['ID', 'Indonesia'], 'Asia/Makassar': ['ID', 'Indonesia'],
+  'Asia/Jayapura': ['ID', 'Indonesia'], 'Asia/Kuala_Lumpur': ['MY', 'Malaysia'],
+  'Asia/Singapore': ['SG', 'Singapore'], 'Asia/Manila': ['PH', 'Philippines'],
+  'Asia/Hong_Kong': ['HK', 'Hong Kong'], 'Asia/Taipei': ['TW', 'Taiwan'],
+  'Asia/Shanghai': ['CN', 'China'], 'Asia/Urumqi': ['CN', 'China'],
+  'Asia/Seoul': ['KR', 'South Korea'], 'Asia/Tokyo': ['JP', 'Japan'],
+  'Asia/Ulaanbaatar': ['MN', 'Mongolia'], 'Asia/Almaty': ['KZ', 'Kazakhstan'],
+  'Asia/Aqtau': ['KZ', 'Kazakhstan'], 'Asia/Aqtobe': ['KZ', 'Kazakhstan'],
+  'Asia/Oral': ['KZ', 'Kazakhstan'], 'Asia/Qyzylorda': ['KZ', 'Kazakhstan'],
+  'Asia/Tashkent': ['UZ', 'Uzbekistan'], 'Asia/Samarkand': ['UZ', 'Uzbekistan'],
+  'Asia/Ashgabat': ['TM', 'Turkmenistan'], 'Asia/Dushanbe': ['TJ', 'Tajikistan'],
+  'Asia/Bishkek': ['KG', 'Kyrgyzstan'], 'Asia/Kabul': ['AF', 'Afghanistan'],
+  'Asia/Yekaterinburg': ['RU', 'Russia'], 'Asia/Omsk': ['RU', 'Russia'],
+  'Asia/Krasnoyarsk': ['RU', 'Russia'], 'Asia/Irkutsk': ['RU', 'Russia'],
+  'Asia/Yakutsk': ['RU', 'Russia'], 'Asia/Vladivostok': ['RU', 'Russia'],
+  'Asia/Magadan': ['RU', 'Russia'], 'Asia/Kamchatka': ['RU', 'Russia'],
+  'Asia/Novosibirsk': ['RU', 'Russia'], 'Asia/Chita': ['RU', 'Russia'],
+  'Asia/Sakhalin': ['RU', 'Russia'], 'Asia/Anadyr': ['RU', 'Russia'],
+  'Europe/London': ['GB', 'United Kingdom'], 'Europe/Dublin': ['IE', 'Ireland'],
+  'Europe/Lisbon': ['PT', 'Portugal'], 'Europe/Madrid': ['ES', 'Spain'],
+  'Europe/Paris': ['FR', 'France'], 'Europe/Brussels': ['BE', 'Belgium'],
+  'Europe/Amsterdam': ['NL', 'Netherlands'], 'Europe/Berlin': ['DE', 'Germany'],
+  'Europe/Rome': ['IT', 'Italy'], 'Europe/Vienna': ['AT', 'Austria'],
+  'Europe/Zurich': ['CH', 'Switzerland'], 'Europe/Prague': ['CZ', 'Czechia'],
+  'Europe/Warsaw': ['PL', 'Poland'], 'Europe/Budapest': ['HU', 'Hungary'],
+  'Europe/Bratislava': ['SK', 'Slovakia'], 'Europe/Ljubljana': ['SI', 'Slovenia'],
+  'Europe/Zagreb': ['HR', 'Croatia'], 'Europe/Belgrade': ['RS', 'Serbia'],
+  'Europe/Sarajevo': ['BA', 'Bosnia and Herzegovina'], 'Europe/Skopje': ['MK', 'North Macedonia'],
+  'Europe/Tirane': ['AL', 'Albania'], 'Europe/Athens': ['GR', 'Greece'],
+  'Europe/Bucharest': ['RO', 'Romania'], 'Europe/Sofia': ['BG', 'Bulgaria'],
+  'Europe/Chisinau': ['MD', 'Moldova'], 'Europe/Kyiv': ['UA', 'Ukraine'],
+  'Europe/Minsk': ['BY', 'Belarus'], 'Europe/Riga': ['LV', 'Latvia'],
+  'Europe/Tallinn': ['EE', 'Estonia'], 'Europe/Vilnius': ['LT', 'Lithuania'],
+  'Europe/Helsinki': ['FI', 'Finland'], 'Europe/Stockholm': ['SE', 'Sweden'],
+  'Europe/Oslo': ['NO', 'Norway'], 'Europe/Copenhagen': ['DK', 'Denmark'],
+  'Europe/Istanbul': ['TR', 'Turkey'], 'Europe/Moscow': ['RU', 'Russia'],
+  'Europe/Kaliningrad': ['RU', 'Russia'], 'Europe/Samara': ['RU', 'Russia'],
+  'Europe/Volgograd': ['RU', 'Russia'], 'Europe/Saratov': ['RU', 'Russia'],
+  'Europe/Astrakhan': ['RU', 'Russia'],
+  'Africa/Cairo': ['EG', 'Egypt'], 'Africa/Lagos': ['NG', 'Nigeria'],
+  'Africa/Johannesburg': ['ZA', 'South Africa'], 'Africa/Nairobi': ['KE', 'Kenya'],
+  'Africa/Casablanca': ['MA', 'Morocco'], 'Africa/Algiers': ['DZ', 'Algeria'],
+  'Africa/Tunis': ['TN', 'Tunisia'], 'Africa/Tripoli': ['LY', 'Libya'],
+  'Africa/Khartoum': ['SD', 'Sudan'], 'Africa/Addis_Ababa': ['ET', 'Ethiopia'],
+  'Africa/Accra': ['GH', 'Ghana'], 'Africa/Dakar': ['SN', 'Senegal'],
+  'Africa/Abidjan': ['CI', 'Ivory Coast'],
+  'America/Toronto': ['CA', 'Canada'], 'America/Vancouver': ['CA', 'Canada'],
+  'America/Edmonton': ['CA', 'Canada'], 'America/Winnipeg': ['CA', 'Canada'],
+  'America/Halifax': ['CA', 'Canada'], 'America/St_Johns': ['CA', 'Canada'],
+  'America/Regina': ['CA', 'Canada'], 'America/Blanc-Sablon': ['CA', 'Canada'],
+  'America/Atikokan': ['CA', 'Canada'], 'America/Creston': ['CA', 'Canada'],
+  'America/Dawson_Creek': ['CA', 'Canada'], 'America/Fort_Nelson': ['CA', 'Canada'],
+  'America/Cambridge_Bay': ['CA', 'Canada'], 'America/Yellowknife': ['CA', 'Canada'],
+  'America/Inuvik': ['CA', 'Canada'], 'America/Whitehorse': ['CA', 'Canada'],
+  'America/Dawson': ['CA', 'Canada'], 'America/Iqaluit': ['CA', 'Canada'],
+  'America/Pangnirtung': ['CA', 'Canada'], 'America/Resolute': ['CA', 'Canada'],
+  'America/Rankin_Inlet': ['CA', 'Canada'], 'America/Goose_Bay': ['CA', 'Canada'],
+  'America/Moncton': ['CA', 'Canada'], 'America/Glace_Bay': ['CA', 'Canada'],
+  'America/Nipigon': ['CA', 'Canada'], 'America/Thunder_Bay': ['CA', 'Canada'],
+  'America/Swift_Current': ['CA', 'Canada'],
+  'America/New_York': ['US', 'United States'], 'America/Chicago': ['US', 'United States'],
+  'America/Denver': ['US', 'United States'], 'America/Los_Angeles': ['US', 'United States'],
+  'America/Anchorage': ['US', 'United States'], 'America/Phoenix': ['US', 'United States'],
+  'America/Detroit': ['US', 'United States'], 'America/Boise': ['US', 'United States'],
+  'America/Indiana/Indianapolis': ['US', 'United States'], 'America/Kentucky/Louisville': ['US', 'United States'],
+  'America/Juneau': ['US', 'United States'], 'Pacific/Honolulu': ['US', 'United States'],
+  'America/Mexico_City': ['MX', 'Mexico'], 'America/Cancun': ['MX', 'Mexico'],
+  'America/Tijuana': ['MX', 'Mexico'], 'America/Guatemala': ['GT', 'Guatemala'],
+  'America/Costa_Rica': ['CR', 'Costa Rica'], 'America/Panama': ['PA', 'Panama'],
+  'America/Havana': ['CU', 'Cuba'], 'America/Santo_Domingo': ['DO', 'Dominican Republic'],
+  'America/Bogota': ['CO', 'Colombia'], 'America/Lima': ['PE', 'Peru'],
+  'America/Santiago': ['CL', 'Chile'], 'America/Buenos_Aires': ['AR', 'Argentina'],
+  'America/Sao_Paulo': ['BR', 'Brazil'], 'America/Caracas': ['VE', 'Venezuela'],
+  'America/Montevideo': ['UY', 'Uruguay'],
+  'Australia/Sydney': ['AU', 'Australia'], 'Australia/Melbourne': ['AU', 'Australia'],
+  'Australia/Brisbane': ['AU', 'Australia'], 'Australia/Perth': ['AU', 'Australia'],
+  'Australia/Adelaide': ['AU', 'Australia'], 'Australia/Darwin': ['AU', 'Australia'],
+  'Australia/Hobart': ['AU', 'Australia'],
+  'Pacific/Auckland': ['NZ', 'New Zealand'], 'Pacific/Fiji': ['FJ', 'Fiji'],
+};
+function detectCountry() {
+  try {
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (tz && TZ_COUNTRY[tz]) return { code: TZ_COUNTRY[tz][0], name: TZ_COUNTRY[tz][1], source: 'timezone' };
+  } catch (e) {}
+  return null;
+}
+/* Curated list for the manual country picker in the profile. */
+const COUNTRY_OPTIONS = [
+  ['IR', 'Iran'], ['CA', 'Canada'], ['US', 'United States'], ['GB', 'United Kingdom'],
+  ['DE', 'Germany'], ['FR', 'France'], ['NL', 'Netherlands'], ['SE', 'Sweden'],
+  ['AU', 'Australia'], ['TR', 'Turkey'], ['AE', 'United Arab Emirates'],
+  ['SA', 'Saudi Arabia'], ['IQ', 'Iraq'], ['AF', 'Afghanistan'], ['PK', 'Pakistan'],
+  ['IN', 'India'], ['IT', 'Italy'], ['ES', 'Spain'], ['CH', 'Switzerland'],
+  ['NO', 'Norway'],
+];
+/* Detects the country (if not stored yet) and saves it on the profile.
+   Runs as a separate upsert so a missing DB migration can never break
+   the level/profile save — it just retries on the next app open. */
+async function ensureCountrySaved() {
+  const u = state.user;
+  if (!sb || !u || u.demo || u.countryCode) return;
+  const c = detectCountry();
+  if (!c) return;
+  u.countryCode = c.code; u.country = c.name; u.countrySource = c.source;
+  try {
+    await sb.from('profiles').upsert({
+      id: u.id, email: u.email, level: u.level || null,
+      country_code: c.code, country: c.name,
+      country_source: c.source, country_detected_at: new Date().toISOString(),
+    }, { onConflict: 'id' });
+  } catch (e) { /* pre-migration or offline -> retry next open */ }
+}
+
 async function doLogin() {
   const emailEl = document.getElementById('si-email');
   const passEl = document.getElementById('si-pass');
@@ -1268,6 +1430,7 @@ async function doSignup() {
     // Confirmation required: stash the level, applied on first sign-in.
     try { localStorage.setItem('el_pending_level', JSON.stringify({ email: email, level: chosenLevel })); } catch (e) {}
     state.afterSignup = email;
+    state.showConfirmPopup = email;
     go('signin');
   } catch (e) {
     authError('su', (e && e.message) || 'Sign up failed.');
@@ -1280,10 +1443,19 @@ async function enterApp() {
   const u = data.user;
   if (!u) { go('landing'); return; }
   let level = null;
+  let prof = null;
   try {
-    const { data: prof } = await sb.from('profiles').select('level').eq('id', u.id).single();
-    if (prof) level = prof.level;
-  } catch (e) { /* RLS or missing row -> treat as pending */ }
+    const res = await sb.from('profiles').select('level,country_code,country,country_source,welcome_seen_at').eq('id', u.id).single();
+    if (res.error) throw res.error;
+    prof = res.data || null;
+  } catch (e) {
+    // Pre-migration fallback: the new columns may not exist yet.
+    try {
+      const res2 = await sb.from('profiles').select('level').eq('id', u.id).single();
+      prof = (res2 && res2.data) || null;
+    } catch (e2) { /* RLS or missing row -> treat as pending */ }
+  }
+  if (prof) level = prof.level;
   if (!level) {
     // Level chosen at signup (confirmation flow): apply it now.
     try {
@@ -1299,9 +1471,16 @@ async function enterApp() {
     } catch (e) {}
   }
   const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
-  state.user = { id: u.id, email: u.email, level: level, isAdmin: isAdmin, demo: false };
+  state.user = {
+    id: u.id, email: u.email, level: level, isAdmin: isAdmin, demo: false,
+    countryCode: (prof && prof.country_code) || null,
+    country: (prof && prof.country) || null,
+    countrySource: (prof && prof.country_source) || null,
+    welcomeSeenAt: (prof && prof.welcome_seen_at) || null,
+  };
   try { localStorage.setItem('el_last_user', u.email); } catch (e) {}
   identifyPushUser(u.id, u.email, normalizeLevel(level));
+  await ensureCountrySaved();
   await migrateLocalToCloud();
   await afterLogin();
 }
@@ -1312,6 +1491,7 @@ async function afterLogin() {
   state.lessons = await loadLessons(level);
   state.lesson = state.lessons[0] || null;
   go('home');
+  maybeShowWelcome();
   // Push notification deep link -> newest lesson
   if (pendingDeepLink === 'latest') {
     pendingDeepLink = null;
@@ -1322,6 +1502,36 @@ async function afterLogin() {
     } catch (e) {}
     if (state.lessons.length) go('lesson', state.lessons[0].date);
   }
+}
+
+/* First-entry welcome popup: Persian for a1/a2 learners, English for b1+.
+   Shown once per user (tracked in profiles.welcome_seen_at + a local backup). */
+async function maybeShowWelcome() {
+  const u = state.user;
+  if (!u || u.demo || u.isAdmin || !u.level) return;
+  if (u.welcomeSeenAt) return;
+  try { if (localStorage.getItem('el_welcome_seen_' + u.id)) return; } catch (e) {}
+  const lvl = normalizeLevel(u.level);
+  const fa = (lvl === 'a1' || lvl === 'a2');
+  showModal(
+    fa
+      ? '<div dir="rtl" lang="fa"><div class="modal-ico">🎉</div>' +
+        '<h2>خوش اومدی!</h2>' +
+        '<p>هر روز <b>ساعت ۷ صبح</b> به وقت خودت، درس جدیدت آماده‌ست.</p>' +
+        '<p>فقط کافیه روزی حدود <b>۱۵ دقیقه</b> وقت بذاری — کلی کلمه، جمله و نکته جدید یاد می‌گیری.</p>' +
+        '<button class="btn btn-block" data-action="modal-close">شروع کن</button></div>'
+      : '<div class="modal-ico">🎉</div>' +
+        '<h2>Welcome!</h2>' +
+        '<p>Your new lesson is ready every day at <b>7:00 AM</b>, your time.</p>' +
+        '<p>Just spend about <b>15 minutes</b> a day — you\u2019ll pick up loads of new words, sentences and tips.</p>' +
+        '<button class="btn btn-block" data-action="modal-close">Let\u2019s start</button>',
+    true
+  );
+  // Mark as seen (DB first, localStorage as backup so it never double-shows).
+  const now = new Date().toISOString();
+  u.welcomeSeenAt = now;
+  try { localStorage.setItem('el_welcome_seen_' + u.id, '1'); } catch (e) {}
+  try { if (sb) await sb.from('profiles').update({ welcome_seen_at: now }).eq('id', u.id); } catch (e) {}
 }
 
 async function doLogout() {
@@ -1615,8 +1825,38 @@ function renderProfile(v) {
   (u.isAdmin ? '<div class="section-title"><h2>Admin</h2></div>' +
     '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/admin" style="margin-top:0">🛠 Open admin panel</a></div>' : '') +
 
+  '<div class="section-title"><h2>Region</h2></div>' +
+  '<div class="card plain">' +
+    '<p class="muted" style="margin-top:0">Your country: <b>' + esc(u.country || 'Not detected yet') + '</b>' +
+    (u.countrySource === 'timezone' ? ' <span class="muted">(from your device timezone)</span>' : '') + '</p>' +
+    '<div class="field"><label for="pf-country">Change country</label>' +
+    '<select id="pf-country">' +
+      COUNTRY_OPTIONS.map(function (c) {
+        return '<option value="' + c[0] + '"' + (u.countryCode === c[0] ? ' selected' : '') + '>' + esc(c[1]) + '</option>';
+      }).join('') +
+    '</select></div>' +
+    '<button class="btn btn-sm" data-action="save-country">Save country</button>' +
+  '</div>' +
+
   '<div class="section-title"><h2>Account</h2></div>' +
   '<div class="card plain"><button class="btn btn-ghost btn-block" data-action="logout" style="margin-top:0">Log out</button></div>';
+}
+
+async function saveCountryManual() {
+  const sel = document.getElementById('pf-country');
+  const u = state.user;
+  if (!sel || !u || u.demo || !sb) return;
+  const code = sel.value;
+  const name = sel.options[sel.selectedIndex] ? sel.options[sel.selectedIndex].text : code;
+  u.countryCode = code; u.country = name; u.countrySource = 'manual';
+  try {
+    await sb.from('profiles').upsert({
+      id: u.id, email: u.email, level: u.level || null,
+      country_code: code, country: name,
+      country_source: 'manual', country_detected_at: new Date().toISOString(),
+    }, { onConflict: 'id' });
+  } catch (e) { /* pre-migration or offline -> kept locally, retried later */ }
+  renderProfile(document.getElementById('view'));
 }
 
 /* ---------------- SUPPORT (AI chat + Telegram fallback) ---------------- */
@@ -2106,6 +2346,7 @@ function bindEvents() {
     else if (a === 'skip-fwd') { const card = t.closest('[data-audio-card]'); if (card) skipCard(card, 10); }
     else if (a === 'check-level') checkLevel();
     else if (a === 'save-level') saveWaitingLevel();
+    else if (a === 'save-country') saveCountryManual();
     else if (a === 'logout') doLogout();
     else if (a === 'open-lesson') { state.lessonTab = 'words'; go('lesson', t.getAttribute('data-date')); }
     else if (a === 'today-cta') {
@@ -2180,6 +2421,12 @@ function bindEvents() {
     const dd = $('#profile-dropdown');
     if (dd && !dd.classList.contains('hidden') && !e.target.closest('.profile-menu')) closeProfileMenu();
   });
+  // Modal popups live on document.body (outside #view), so they need their own handler.
+  document.addEventListener('click', function (e) {
+    const t = e.target.closest('#app-modal [data-action]');
+    if (!t) return;
+    if (t.getAttribute('data-action') === 'modal-close') closeModal();
+  });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeProfileMenu();
   });
@@ -2213,5 +2460,13 @@ async function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+/* Test/debug hooks (harmless in production). */
+window.MuseApp = {
+  state: state, showModal: showModal, closeModal: closeModal,
+  detectCountry: detectCountry, maybeShowWelcome: maybeShowWelcome,
+  renderSignin: renderSignin, renderProfile: renderProfile,
+  ensureCountrySaved: ensureCountrySaved,
+};
 
 })();

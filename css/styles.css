@@ -895,3 +895,27 @@ details.practice p { margin: 0.7rem 0 0; color: var(--herb-dark); font-weight: 5
 #support-send { min-width: 48px; flex-shrink: 0; }
 .support-tg { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; }
 .support-tg .btn { flex-shrink: 0; }
+
+/* ---------------- modal (popup) ---------------- */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(24, 18, 12, 0.55);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.25rem;
+  animation: modal-fade 0.18s ease-out;
+}
+.modal-card {
+  background: #fffdf7; color: var(--ink);
+  border-radius: 18px; max-width: 400px; width: 100%;
+  padding: 1.6rem 1.4rem 1.4rem;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  text-align: center;
+  animation: modal-pop 0.22s ease-out;
+}
+.modal-card h2 { margin: 0.2rem 0 0.7rem; font-size: 1.35rem; }
+.modal-card p { margin: 0.55rem 0; line-height: 1.65; }
+.modal-card .btn { margin-top: 1rem; }
+.modal-ico { font-size: 2.6rem; line-height: 1; }
+.modal-card [dir="rtl"] { text-align: center; }
+@keyframes modal-fade { from { opacity: 0; } }
+@keyframes modal-pop { from { transform: scale(0.94) translateY(8px); opacity: 0; } }
