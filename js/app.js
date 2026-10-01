@@ -383,10 +383,7 @@ async function removeMistake(id) {
   lsSet('mistakes', lsGet('mistakes').filter(function (x) { return x.id !== id; }));
 }
 async function getOverallAverage() {
-  const arr = await getAttempts();
-  let c = 0, t = 0;
-  arr.forEach(function (a) { c += a.score; t += a.total; });
-  return t ? Math.round((c / t) * 100) : null;
+  return avgOfAttempts(await getAttempts());
 }
 /* one-time: push this device's local scores/mistakes to the user's cloud rows after login */
 async function migrateLocalToCloud() {
@@ -2346,11 +2343,20 @@ function renderLessons(v) {
   v.innerHTML = html;
 }
 
-async function renderHome(v) {
+/* Paint instantly from local data, then refresh from cloud in the background.
+   Awaiting Supabase before the first paint made tab switches feel sluggish. */
+function renderHome(v) {
+  paintHome(v, lsGet('mistakes'), lsGet('scores'));
+  if (cloudReady()) {
+    Promise.all([getMistakes(), getAttempts()]).then(function (res) {
+      if (state.view === 'home' && !state.quiz) paintHome(v, res[0], res[1]);
+    }).catch(function () { /* keep the local paint */ });
+  }
+}
+
+function paintHome(v, mistakes, attempts) {
   const lessons = state.lessons;
   const today = lessons[0] || null;
-  const mistakes = await getMistakes();
-  const attempts = await getAttempts();
 
   let html = '';
 
@@ -2883,9 +2889,23 @@ function finishQuiz() {
 }
 
 /* ---------------- scores view (Progress) ---------------- */
-async function renderScores(v) {
-  const arr = await getAttempts();
-  const avg = await getOverallAverage();
+function avgOfAttempts(arr) {
+  let c = 0, t = 0;
+  arr.forEach(function (a) { c += a.score; t += a.total; });
+  return t ? Math.round((c / t) * 100) : null;
+}
+
+function renderScores(v) {
+  paintScores(v, lsGet('scores'));
+  if (cloudReady()) {
+    getAttempts().then(function (arr) {
+      if (state.view === 'scores' && !state.quiz) paintScores(v, arr);
+    }).catch(function () { /* keep the local paint */ });
+  }
+}
+
+function paintScores(v, arr) {
+  const avg = avgOfAttempts(arr);
   let html = '<h1>Progress</h1>';
   if (avg === null) {
     html += '<div class="empty">No quiz attempts yet.<br>Finish a quiz and your scores will appear here.</div>';
@@ -2897,8 +2917,16 @@ async function renderScores(v) {
 }
 
 /* ---------------- review view (mistakes) ---------------- */
-async function renderMistakes(v) {
-  const arr = await getMistakes();
+function renderMistakes(v) {
+  paintMistakes(v, lsGet('mistakes'));
+  if (cloudReady()) {
+    getMistakes().then(function (arr) {
+      if (state.view === 'review' && !state.quiz) paintMistakes(v, arr);
+    }).catch(function () { /* keep the local paint */ });
+  }
+}
+
+function paintMistakes(v, arr) {
   let html = '<h1>Review</h1><p class="muted">Words you missed, ready to practice again. Get one right and it leaves the list.</p>';
   if (!arr.length) {
     html += '<div class="empty">Nothing to review — nice work! 🎉</div>';
