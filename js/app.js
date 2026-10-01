@@ -55,7 +55,9 @@ const state = {
   previewLesson: null, // cached public lesson for landing/preview
   justSignedUp: false,
   afterSignup: null,   // email prefilled on signin right after account creation
-  showConfirmPopup: null // email shown in the "confirm your email" popup after signup
+  showConfirmPopup: null, // email shown in the "confirm your email" popup after signup
+  challengePeriod: 'weekly', // leaderboard period: 'weekly' | 'alltime'
+  myPoints: null,        // cached personal challenge-points total
 };
 
 /* Six CEFR levels. Legacy 3-level values are mapped so existing assignments keep working. */
@@ -402,6 +404,517 @@ async function migrateLocalToCloud() {
   } catch (e) {}
 }
 
+/* ---------------- challenge: points ledger + leaderboard ----------------
+   Every rewarded action writes one row to public.scores. Dedupe is enforced
+   twice: a per-user localStorage "done" set (fast, offline) and a DB unique
+   index on (user_id, action, ref) via upsert onConflict.
+   The Challenge view reads via get_leaderboard() (display_name/level/points
+   only — emails are never exposed). */
+var NICK_RE = /^[A-Za-z0-9_-]{3,20}$/;
+function validNickname(n) { return NICK_RE.test(n || ''); }
+
+async function nicknameTaken(nick) {
+  if (!sb) return false;
+  try {
+    const r = await sb.rpc('nickname_available', { nick: nick });
+    if (r.error) return false; // fail-open pre-migration; the DB unique index is the backstop
+    return r.data === false;
+  } catch (e) { return false; }
+}
+
+/* Inline SVG icon set for the Challenge UI — same outline style as the tab
+   bar (24 viewBox, 1.8 stroke, round caps). No emojis anywhere in this UI. */
+function svgIcon(paths) {
+  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + paths + '</svg>';
+}
+var ICO = {
+  trophy: svgIcon('<path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H5a2 2 0 0 0 0 4h2"/><path d="M17 6h2a2 2 0 0 1 0 4h-2"/>'),
+  medal: svgIcon('<circle cx="12" cy="14" r="5"/><path d="M8.6 9.7 6 3h4l2 3.6L14 3h4l-2.6 6.7"/>'),
+  gem: svgIcon('<path d="M6 3h12l4 6-10 12L2 9l4-6z"/><path d="M2 9h20"/>'),
+  crown: svgIcon('<path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.735H5.81a1 1 0 0 1-.957-.735L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/>'),
+  zap: svgIcon('<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>'),
+  flame: svgIcon('<path d="M12 22c4.4 0 7.5-3 7.5-7.5 0-3.5-2.5-6-4.5-8-.8 1.8-2.2 2.8-2.2 4.7-1.2-.8-2-2-2.3-3.7C8 9.5 4.5 12 4.5 14.5 4.5 19 7.6 22 12 22z"/>'),
+  eye: svgIcon('<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>'),
+  headphones: svgIcon('<path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>'),
+  mic: svgIcon('<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>'),
+  quiz: svgIcon('<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>'),
+  book: svgIcon('<path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/>'),
+  check: svgIcon('<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>'),
+  refresh: svgIcon('<polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>'),
+  lock: svgIcon('<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>')
+};
+
+var PTS_LABELS = {
+  lesson_open: 'Lesson opened',
+  words_viewed: 'Words explored',
+  podcast_complete: 'Podcast complete',
+  shadowing_complete: 'Shadowing complete',
+  word_quiz: 'Word quiz complete',
+  grammar_quiz: 'Grammar quiz complete',
+  deck_review: 'Review complete',
+  streak_7: '7-day streak'
+};
+
+function ptsKey(kind) {
+  const email = state.user ? state.user.email : 'anon';
+  return 'ela_pts_' + kind + '_' + email;
+}
+function ptsGet(kind) {
+  try { return JSON.parse(localStorage.getItem(ptsKey(kind)) || '{}'); }
+  catch (e) { return {}; }
+}
+function ptsSet(kind, obj) {
+  try { localStorage.setItem(ptsKey(kind), JSON.stringify(obj)); } catch (e) {}
+}
+
+/* Award points for an action. Real logged-in users only; each action+ref
+   awards once. On success the celebratory popup fires; on failure the award
+   is queued and retried on the next login. */
+async function awardPoints(action, points, ref) {
+  try {
+    if (!state.user || state.user.demo || !state.user.id) return;
+    ref = ref || '';
+    const key = action + '|' + ref;
+    const done = ptsGet('done');
+    if (done[key]) return;
+    let ok = false;
+    if (sb) {
+      try {
+        const r = await sb.from('scores').upsert(
+          { user_id: state.user.id, action: action, points: points, ref: ref },
+          { onConflict: 'user_id,action,ref' }
+        );
+        if (!r.error) ok = true;
+      } catch (e) { /* offline / pre-migration -> queue */ }
+    }
+    if (ok) {
+      done[key] = Date.now();
+      ptsSet('done', done);
+      refreshMyPoints();
+      queuePointsPopup(points, PTS_LABELS[action] || action);
+      if (action === 'lesson_open') checkStreakBonus();
+    } else {
+      const pend = ptsGet('pending');
+      pend[key] = { action: action, points: points, ref: ref, ts: Date.now() };
+      ptsSet('pending', pend);
+    }
+  } catch (e) {}
+}
+
+/* Retry queued awards (runs after login). No popups for these — by the time
+   the retry succeeds the moment has passed. */
+async function flushPointsQueue() {
+  try {
+    if (!cloudReady()) return;
+    const pend = ptsGet('pending');
+    const keys = Object.keys(pend);
+    if (!keys.length) return;
+    const done = ptsGet('done');
+    for (let i = 0; i < keys.length; i++) {
+      const k = keys[i], p = pend[k];
+      try {
+        const r = await sb.from('scores').upsert(
+          { user_id: state.user.id, action: p.action, points: p.points, ref: p.ref || '' },
+          { onConflict: 'user_id,action,ref' }
+        );
+        if (!r.error) { done[k] = Date.now(); delete pend[k]; }
+      } catch (e) { /* keep for next login */ }
+    }
+    ptsSet('done', done);
+    ptsSet('pending', pend);
+    refreshMyPoints();
+  } catch (e) {}
+}
+
+/* 7-day streak bonus: consecutive lesson_open days (ending today/yesterday).
+   The ref is the start of the current 7-day window, so the 50 pts award once
+   per window even as the streak keeps growing. */
+async function checkStreakBonus() {
+  try {
+    if (!cloudReady()) return;
+    const r = await sb.from('scores').select('ref')
+      .eq('user_id', state.user.id).eq('action', 'lesson_open')
+      .order('ref', { ascending: false }).limit(14);
+    if (r.error || !r.data) return;
+    const days = {};
+    r.data.forEach(function (row) { if (row.ref) days[row.ref] = 1; });
+    const d = new Date();
+    if (!days[fmtDate(d)]) { d.setDate(d.getDate() - 1); if (!days[fmtDate(d)]) return; }
+    let streak = 0;
+    const c = new Date(d);
+    while (days[fmtDate(c)]) { streak++; c.setDate(c.getDate() - 1); }
+    if (streak >= 7) {
+      const start = new Date(d);
+      start.setDate(start.getDate() - 6);
+      awardPoints('streak_7', 50, fmtDate(start));
+    }
+  } catch (e) {}
+}
+
+async function refreshMyPoints() {
+  try {
+    if (!cloudReady()) return;
+    const r = await sb.rpc('my_points');
+    if (!r.error && typeof r.data === 'number') state.myPoints = r.data;
+  } catch (e) {}
+}
+
+/* ---------- celebratory points popup (prize-like, queued, auto-dismiss) ---------- */
+var ptsPopQueue = [];
+var ptsPopShowing = false;
+
+function queuePointsPopup(points, label) {
+  ptsPopQueue.push({ points: points, label: label });
+  pumpPointsPopup();
+}
+
+function pumpPointsPopup() {
+  if (ptsPopShowing) return;
+  const item = ptsPopQueue.shift();
+  if (!item) return;
+  ptsPopShowing = true;
+  let host = document.getElementById('pts-toast-host');
+  if (!host) {
+    host = document.createElement('div');
+    host.id = 'pts-toast-host';
+    document.body.appendChild(host);
+  }
+  // The total is fetched live so the learner sees the points land in their score.
+  const render = function (total) {
+    host.innerHTML =
+      '<div class="pts-toast" role="status" aria-live="polite">' +
+        '<div class="pts-burst">' + ICO.zap + '</div>' +
+        '<div class="pts-amount">+' + esc(String(item.points)) + '</div>' +
+        '<div class="pts-label">' + esc(item.label) + '</div>' +
+        (total !== null && total !== undefined
+          ? '<div class="pts-total">Total: ' + esc(Number(total).toLocaleString('en-US')) + ' pts</div>' : '') +
+      '</div>';
+    const el = host.firstChild;
+    if (!el) { ptsPopShowing = false; pumpPointsPopup(); return; }
+    void el.offsetWidth; // restart the pop animation
+    el.classList.add('pop');
+    setTimeout(function () {
+      el.classList.add('bye');
+      setTimeout(function () {
+        if (host) host.innerHTML = '';
+        ptsPopShowing = false;
+        pumpPointsPopup();
+      }, 350);
+    }, 2500);
+  };
+  if (sb && cloudReady()) {
+    sb.rpc('my_points').then(function (r) {
+      render(!r.error && typeof r.data === 'number' ? r.data : state.myPoints);
+    }, function () { render(state.myPoints); });
+  } else {
+    render(state.myPoints);
+  }
+}
+
+/* One-time "battle name" prompt: blocking until the user picks a nickname.
+   Used for existing users without display_name, and re-used from the
+   Challenge locked state. */
+function ensureNickname() {
+  return new Promise(function (resolve) {
+    showModal(
+      '<div class="nick-trophy">' + ICO.trophy + '</div>' +
+      '<h2>Choose your battle name</h2>' +
+      '<p class="muted">This is the name everyone sees on the Challenge leaderboard.</p>' +
+      '<div class="field" style="text-align:left"><label for="nick-input">Nickname</label>' +
+      '<input id="nick-input" maxlength="20" placeholder="e.g. word_warrior" autocomplete="off" autocapitalize="off" spellcheck="false">' +
+      '<p class="muted" style="margin:0.3rem 0 0;font-size:0.8rem">3–20 characters: A–Z, 0–9, _ or -</p></div>' +
+      '<div class="form-error" id="nick-error" role="alert"></div>' +
+      '<button class="btn btn-block" id="nick-save">Join the Challenge</button>',
+      true
+    );
+    const save = function () {
+      const inp = document.getElementById('nick-input');
+      const err = document.getElementById('nick-error');
+      const btn = document.getElementById('nick-save');
+      const nick = ((inp && inp.value) || '').trim();
+      if (!validNickname(nick)) {
+        if (err) err.textContent = 'Use 3–20 characters: letters, numbers, _ or -.';
+        return;
+      }
+      if (err) err.textContent = '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Checking…'; }
+      nicknameTaken(nick).then(function (taken) {
+        if (taken) {
+          if (err) err.textContent = 'This nickname is taken, try another.';
+          if (btn) { btn.disabled = false; btn.textContent = 'Join the Challenge'; }
+          return;
+        }
+        if (btn) btn.textContent = 'Saving…';
+        saveNickname(nick).then(function (ok) {
+          if (ok) { closeModal(); resolve(true); }
+          else {
+            if (err) err.textContent = 'Couldn’t save — check your connection and try again.';
+            if (btn) { btn.disabled = false; btn.textContent = 'Join the Challenge'; }
+          }
+        });
+      });
+    };
+    const saveBtn = document.getElementById('nick-save');
+    if (saveBtn) saveBtn.addEventListener('click', save);
+    const inpEl = document.getElementById('nick-input');
+    if (inpEl) {
+      inpEl.addEventListener('keydown', function (e) { if (e.key === 'Enter') save(); });
+      setTimeout(function () { try { inpEl.focus(); } catch (e) {} }, 120);
+    }
+  });
+}
+
+async function saveNickname(nick) {
+  try {
+    if (!sb || !state.user || !state.user.id) return false;
+    const r = await sb.from('profiles').upsert({ id: state.user.id, display_name: nick }, { onConflict: 'id' });
+    if (r.error) return false;
+    try { await sb.auth.updateUser({ data: { display_name: nick } }); } catch (e) {}
+    state.user.displayName = nick;
+    return true;
+  } catch (e) { return false; }
+}
+
+/* Award words_viewed when the learner scrolls to the last word card. */
+var _wordsObs = null;
+function observeWordsEnd(body, m) {
+  try {
+    if (_wordsObs) { try { _wordsObs.disconnect(); } catch (e) {} _wordsObs = null; }
+    if (!m || !m.date || typeof IntersectionObserver === 'undefined') return;
+    const cards = body.querySelectorAll('.word-card');
+    if (!cards.length) return;
+    const last = cards[cards.length - 1];
+    _wordsObs = new IntersectionObserver(function (entries) {
+      for (let i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) {
+          try { _wordsObs.disconnect(); } catch (e) {}
+          _wordsObs = null;
+          awardPoints('words_viewed', 10, m.date);
+          break;
+        }
+      }
+    }, { threshold: 0.35 });
+    _wordsObs.observe(last);
+  } catch (e) {}
+}
+
+/* Podcast/shadowing completion: award when playback passes 90% (or ends).
+   Tracked by logical src so the pre-downloaded blob swap doesn't matter. */
+function trackKindFor(src) {
+  const m = state.lesson;
+  if (!m || !src) return null;
+  if (m.podcast && m.podcast.audio && src === m.podcast.audio) return 'podcast_complete';
+  if (m.shadowing && m.shadowing.audio && src === m.shadowing.audio) return 'shadowing_complete';
+  return null;
+}
+var _trackPtsFired = {};
+function checkTrackCompletion(forceDone) {
+  const d = player.el.duration;
+  if (!isFinite(d) || d <= 0) return;
+  const frac = (player.el.currentTime || 0) / d;
+  if (!forceDone && frac < 0.9) return;
+  const kind = trackKindFor(player.src);
+  if (!kind || !state.lesson || !state.lesson.date) return;
+  const key = kind + '|' + state.lesson.date;
+  if (_trackPtsFired[key]) return;
+  _trackPtsFired[key] = 1;
+  awardPoints(kind, kind === 'podcast_complete' ? 20 : 15, state.lesson.date);
+}
+
+/* ---------------- challenge view (leaderboard) ---------------- */
+function weekStartISO() {
+  const d = new Date();
+  const dow = (d.getDay() + 6) % 7; // Monday = 0
+  d.setDate(d.getDate() - dow);
+  d.setHours(0, 0, 0, 0);
+  return d.toISOString();
+}
+function avatarHue(name) {
+  let h = 0;
+  const s = String(name || '?');
+  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) % 360;
+  return h;
+}
+function avatarStyle(name) {
+  const h = avatarHue(name);
+  return 'background:linear-gradient(135deg,hsl(' + h + ',72%,60%),hsl(' + ((h + 45) % 360) + ',68%,40%))';
+}
+function nickInitial(name) {
+  const s = String(name || '?').trim();
+  return (s.charAt(0) || '?').toUpperCase();
+}
+function levelChip(lv) {
+  const l = normalizeLevel(lv);
+  return l ? '<span class="lvl-chip">' + l.toUpperCase() + '</span>' : '';
+}
+
+var EARN_ROWS = [
+  ['check', 'Open today’s lesson', '5 pts'],
+  ['eye', 'Read all the words', '10 pts'],
+  ['headphones', 'Finish the podcast', '20 pts'],
+  ['mic', 'Finish shadowing', '15 pts'],
+  ['quiz', 'Word quiz', '10 + 1 per correct'],
+  ['book', 'Grammar quiz', '10 pts'],
+  ['refresh', 'Daily review', '10 pts'],
+  ['flame', '7-day streak bonus', '50 pts']
+];
+function howToEarnHTML() {
+  return '<details class="earn-card"><summary><span class="earn-ico">' + ICO.zap + '</span><b>How to earn points</b><span class="earn-chev">›</span></summary>' +
+    '<div class="earn-rows">' + EARN_ROWS.map(function (r) {
+      return '<div class="earn-row"><span class="earn-ico">' + ICO[r[0]] + '</span><span>' + r[1] + '</span><b>' + r[2] + '</b></div>';
+    }).join('') + '</div></details>';
+}
+
+function renderChallenge(v) {
+  const me = state.user;
+  let html = '<div class="ch-wrap"><div class="lb-title"><h1>Leaderboard</h1>' +
+    '<p>Earn points for everything you do. Climb the board.</p></div>';
+  if (!me.displayName && !me.demo) {
+    html += '<div class="card plain ch-locked"><div class="earn-ico">' + ICO.lock + '</div>' +
+      '<h2>Pick your battle name first</h2>' +
+      '<p class="muted">Choose the nickname everyone will see on the leaderboard.</p>' +
+      '<button class="btn" data-action="choose-nickname">Choose nickname</button></div>';
+    html += howToEarnHTML();
+    v.innerHTML = html + '</div>';
+    return;
+  }
+  const p = state.challengePeriod;
+  html += '<div class="seg" role="tablist" aria-label="Leaderboard period">' +
+    '<button class="seg-btn' + (p === 'weekly' ? ' active' : '') + '" data-action="ch-period" data-p="weekly" role="tab" aria-selected="' + (p === 'weekly') + '">Weekly</button>' +
+    '<button class="seg-btn' + (p === 'alltime' ? ' active' : '') + '" data-action="ch-period" data-p="alltime" role="tab" aria-selected="' + (p === 'alltime') + '">All-time</button></div>';
+  html += '<div id="ch-board"><div class="empty">Loading the leaderboard…</div></div>';
+  html += howToEarnHTML();
+  v.innerHTML = html + '</div>';
+  loadLeaderboard();
+}
+
+/* Demo-mode leaderboard so the view never renders broken without Supabase. */
+function mockBoard() {
+  const mk = function (i, name, level, points, id) {
+    return { user_id: id || ('mock-' + i), display_name: name, level: level, points: points, rnk: i };
+  };
+  return [
+    mk(1, 'Demo', 'b2', 320, 'demo-learner'),
+    mk(2, 'aria_learns', 'b1', 285),
+    mk(3, 'Zed-99', 'c1', 240),
+    mk(4, 'maria_eng', 'a2', 190),
+    mk(5, 'kino', 'b2', 150),
+    mk(6, 'word_warrior', 'a1', 95)
+  ];
+}
+
+async function loadLeaderboard() {
+  const host = document.getElementById('ch-board');
+  if (!host || state.view !== 'challenge') return;
+  const weekly = state.challengePeriod === 'weekly';
+  const start = weekly ? weekStartISO() : '1970-01-01T00:00:00.000Z';
+  let rows = null;
+  if (state.user.demo) {
+    rows = mockBoard();
+  } else if (sb) {
+    try {
+      const r = await sb.rpc('get_leaderboard', { period_start: start });
+      if (!r.error && Array.isArray(r.data)) rows = r.data;
+    } catch (e) {}
+  }
+  if (!host || state.view !== 'challenge') return;
+  if (!rows) {
+    host.innerHTML = '<div class="empty">Couldn’t load the leaderboard — check your connection and try again.</div>';
+    return;
+  }
+  host.innerHTML = boardHTML(rows, weekly);
+}
+
+/* Laurel-wreath rank badge: two curved branches of leaves with the rank in the middle. */
+function laurelBadge(rank) {
+  const r = Number(rank) || 0;
+  const suf = r === 1 ? 'st' : r === 2 ? 'nd' : r === 3 ? 'rd' : 'th';
+  const cls = r === 1 ? 'gold' : r === 2 ? 'silver' : r === 3 ? 'bronze' : 'gold';
+  let inner = '';
+  for (let s = -1; s <= 1; s += 2) {
+    let d = '';
+    const pts = [];
+    for (let i = 0; i <= 11; i++) {
+      const t = i / 11;
+      const x = 32 + s * 21.5 * Math.sin(t * 1.9);
+      const y = 55.5 - t * 38;
+      pts.push([x, y, t]);
+      d += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ' ' + y.toFixed(1);
+    }
+    inner += '<path d="' + d + '" fill="none" stroke="currentColor" stroke-width="1.6"/>';
+    pts.forEach(function (p) {
+      const t = p[2];
+      const dx = s * 21.5 * 1.9 * Math.cos(t * 1.9);
+      const dy = -38;
+      const ang = Math.atan2(dy, dx) * 180 / Math.PI;
+      const rx = 3.4 + 2.6 * Math.sin(Math.PI * Math.min(1, t * 1.05));
+      const nl = Math.sqrt(dy * dy + dx * dx);
+      const ox = (-dy / nl) * s * 2.6, oy = (dx / nl) * s * 2.6;
+      const cx = (p[0] + ox).toFixed(1), cy = (p[1] + oy).toFixed(1);
+      inner += '<ellipse cx="' + cx + '" cy="' + cy + '" rx="' + rx.toFixed(1) +
+        '" ry="2.3" transform="rotate(' + ang.toFixed(1) + ' ' + cx + ' ' + cy +
+        ')" fill="currentColor" opacity="0.92"/>';
+    });
+  }
+  inner += '<text x="32" y="34" text-anchor="middle" dominant-baseline="central" font-size="14" ' +
+    'font-weight="800" fill="currentColor">' + r + '<tspan font-size="8">' + suf + '</tspan></text>';
+  return '<span class="laurel ' + cls + '"><svg viewBox="0 0 64 64" aria-hidden="true">' + inner + '</svg></span>';
+}
+
+function boardHTML(rows, weekly) {
+  const meId = state.user.id;
+  if (!rows.length) {
+    return '<div class="empty">No points ' + (weekly ? 'this week' : 'yet') +
+      ' — finish a lesson to get on the board.</div>' + meRowHTML(0);
+  }
+  let html = '';
+  const top = rows.slice(0, 3);
+  // visual order on the podium: 2nd, 1st, 3rd
+  const ordered = top.length === 3 ? [top[1], top[0], top[2]] : top;
+  html += '<div class="podium">' + ordered.map(function (r) {
+    return podiumCardHTML(r, top.indexOf(r) + 1, r.user_id === meId);
+  }).join('') + '</div>';
+  html += '<div class="rank-div"><span class="rd-gem">' + ICO.gem + '</span>Top Ranking</div>';
+  const rest = rows.slice(3);
+  if (rest.length) {
+    html += '<div class="ch-rows">' + rest.map(function (r) {
+      return rowHTML(r, r.user_id === meId);
+    }).join('') + '</div>';
+  }
+  if (!rows.some(function (r) { return r.user_id === meId; })) {
+    html += '<div style="margin-top:0.6rem">' + meRowHTML(0) + '</div>';
+  }
+  return html;
+}
+
+function meRowHTML(pts) {
+  const me = state.user;
+  return '<div class="ch-row me">' +
+    '<span class="ch-avatar sm" style="' + avatarStyle(me.displayName || '?') + '">' + esc(nickInitial(me.displayName)) + '</span>' +
+    '<span class="ch-meta"><span class="ch-name">' + esc(me.displayName || 'You') + ' <span class="you-tag">YOU</span></span>' +
+    '<span class="ch-pts">' + ICO.gem + esc(String(pts)) + '</span></span>' +
+    '<span class="ch-laurel" style="display:flex;align-items:center;justify-content:center;color:rgba(245,243,255,0.4);font-weight:800">–</span>' +
+  '</div>';
+}
+
+function podiumCardHTML(r, place, isMe) {
+  return '<div class="pd-card p' + place + (isMe ? ' me' : '') + '">' +
+    '<div class="pd-avatar" style="' + avatarStyle(r.display_name) + '">' + esc(nickInitial(r.display_name)) + '</div>' +
+    '<div class="pd-laurel">' + laurelBadge(place) + '</div>' +
+    '<div class="pd-name">' + esc(r.display_name) + (isMe ? ' <span class="you-tag">YOU</span>' : '') + '</div>' +
+    '<div class="pd-pts">' + ICO.gem + '<b>' + esc(Number(r.points).toLocaleString('en-US')) + '</b></div>' +
+  '</div>';
+}
+
+function rowHTML(r, isMe) {
+  return '<div class="ch-row' + (isMe ? ' me' : '') + '">' +
+    '<span class="ch-avatar sm" style="' + avatarStyle(r.display_name) + '">' + esc(nickInitial(r.display_name)) + '</span>' +
+    '<span class="ch-meta"><span class="ch-name">' + esc(r.display_name) + (isMe ? ' <span class="you-tag">YOU</span>' : '') + '</span>' +
+    '<span class="ch-pts">' + ICO.gem + esc(Number(r.points).toLocaleString('en-US')) + '</span></span>' +
+    '<span class="ch-laurel">' + laurelBadge(r.rnk) + '</span>' +
+  '</div>';
+}
+
 /* ---------------- lesson progress: lightweight per-user localStorage ----------------
    Tracks which steps of each daily lesson the learner has engaged with.
    Steps: words → podcast → shadowing → grammar → quiz (completed). */
@@ -600,7 +1113,8 @@ function initAudio() {
   player.el.addEventListener('timeupdate', refreshTrackCards);
   player.el.addEventListener('play', function () { playerUI(); refreshTrackCards(); });
   player.el.addEventListener('pause', function () { playerUI(); refreshTrackCards(); });
-  player.el.addEventListener('ended', function () { playerUI(); refreshTrackCards(); });
+  player.el.addEventListener('ended', function () { try { checkTrackCompletion(true); } catch (e) {} playerUI(); refreshTrackCards(); });
+  player.el.addEventListener('timeupdate', function () { try { checkTrackCompletion(false); } catch (e) {} });
   player.el.addEventListener('error', function () {
     player.title = 'Could not load audio';
     playerUI();
@@ -806,7 +1320,7 @@ async function loadPreviewLesson() {
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'support'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support', 'challenge'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -872,6 +1386,7 @@ function show(view, arg) {
   else if (view === 'review') renderMistakes(v);
   else if (view === 'profile') renderProfile(v);
   else if (view === 'support') renderSupport(v);
+  else if (view === 'challenge') renderChallenge(v);
   else if (view === 'admin') renderAdmin(v);
 }
 
@@ -1204,6 +1719,9 @@ function renderSignup(v) {
         '<div class="field"><label for="su-pass">Password</label>' +
         '<div class="pw-wrap"><input id="su-pass" name="signup-password" type="password" autocomplete="new-password" placeholder="Choose a password (min 6 characters)" required minlength="6">' +
         '<button type="button" class="pw-toggle" data-action="pw-toggle" aria-label="Show password">👁️</button></div></div>' +
+        '<div class="field"><label for="su-nick">Nickname</label>' +
+        '<input id="su-nick" name="signup-nickname" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. word_warrior" maxlength="20" required>' +
+        '<p class="muted" style="margin:0.3rem 0 0;font-size:0.8rem">Shown on the Challenge leaderboard · 3–20 characters: A–Z, 0–9, _ or -</p></div>' +
         '<div class="field"><label>Your English level</label>' + levelPickerHTML('su-level') +
         '<p class="muted" style="margin-top:0.4rem">Pick the closest one — your lessons start right away.</p></div>' +
         '<div class="form-error" id="su-error" role="alert"></div>' +
@@ -1422,8 +1940,13 @@ async function doSignup() {
   const lvlEl = document.querySelector('input[name="su-level"]:checked');
   if (!lvlEl) { authError('su', 'Please pick your English level.'); return; }
   const chosenLevel = lvlEl.value;
+  const nickEl = document.getElementById('su-nick');
+  const nickname = nickEl ? nickEl.value.trim() : '';
+  if (!validNickname(nickname)) { authError('su', 'Pick a nickname: 3–20 characters, letters, numbers, _ or -.'); return; }
   authError('su', '');
   if (!sb) { authError('su', 'Signup service couldn’t load. Check your connection and try again.'); return; }
+  const taken = await nicknameTaken(nickname);
+  if (taken) { authError('su', 'This nickname is taken, try another.'); return; }
   setAuthBusy('su', true, 'Creating your account…');
   try {
     // After clicking the email link, Supabase returns the user to the app
@@ -1431,7 +1954,7 @@ async function doSignup() {
     const signupOpts = { emailRedirectTo: window.location.origin + '/' };
     // Server-side persistence: the handle_new_user trigger saves level (+ref) on the
     // profile at signup, so email confirmation on another device/browser keeps them.
-    const signupMeta = { level: chosenLevel };
+    const signupMeta = { level: chosenLevel, display_name: nickname };
     const signupRef = getRefCode();
     if (signupRef) signupMeta.referred_by = signupRef;
     signupOpts.data = signupMeta;
@@ -1475,7 +1998,7 @@ async function enterApp() {
   let level = null;
   let prof = null;
   try {
-    const res = await sb.from('profiles').select('level,country_code,country,country_source,welcome_seen_at').eq('id', u.id).single();
+    const res = await sb.from('profiles').select('level,display_name,country_code,country,country_source,welcome_seen_at').eq('id', u.id).single();
     if (res.error) throw res.error;
     prof = res.data || null;
   } catch (e) {
@@ -1504,6 +2027,7 @@ async function enterApp() {
   const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
   state.user = {
     id: u.id, email: u.email, level: level, isAdmin: isAdmin, demo: false,
+    displayName: (prof && prof.display_name) || null,
     countryCode: (prof && prof.country_code) || null,
     country: (prof && prof.country) || null,
     countrySource: (prof && prof.country_source) || null,
@@ -1513,6 +2037,13 @@ async function enterApp() {
   identifyPushUser(u.id, u.email, normalizeLevel(level));
   await ensureCountrySaved();
   await migrateLocalToCloud();
+  await flushPointsQueue();
+  await refreshMyPoints();
+  // Existing users without a nickname pick one now (blocking) — the
+  // Challenge leaderboard needs a display name.
+  if (!state.user.demo && !state.user.displayName) {
+    await ensureNickname();
+  }
   await afterLogin();
 }
 
@@ -1585,8 +2116,10 @@ const DEMO_USERS = [
 
 async function demoLogin(asAdmin) {
   state.user = {
+    id: 'demo-learner',
     email: asAdmin ? String(APP_CONFIG.ADMIN_EMAIL) : 'demo-learner@example.com',
     level: 'b2',
+    displayName: 'Demo',
     isAdmin: !!asAdmin,
     demo: true
   };
@@ -2006,6 +2539,7 @@ function renderLesson(v, dateStr) {
   }
   const m = state.lesson;
   if (!m) { v.innerHTML = '<div class="empty">No lesson available.</div>'; return; }
+  if (m.date) awardPoints('lesson_open', 5, m.date);
 
   let html = '<div class="hero-date">' + esc(m.date) + (m.date === todayStr() ? ' · <b>Today</b>' : '') + '</div>' +
     '<h1 style="text-transform:capitalize">' + esc(m.theme || 'Daily lesson') + '</h1>' +
@@ -2024,7 +2558,7 @@ function renderLessonTab(body) {
     else if (tab === 'shadowing') markStep(m.date, 'shadowing');
     else if (tab === 'grammar') markStep(m.date, 'grammar');
   }
-  if (tab === 'words') body.innerHTML = wordsTabHTML(m);
+  if (tab === 'words') { body.innerHTML = wordsTabHTML(m); observeWordsEnd(body, m); }
   else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); }
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
@@ -2249,7 +2783,14 @@ function finishQuiz() {
     date: q.date, level: q.level, theme: q.theme,
     kind: q.kind, score: q.correct, total: total
   });
-  if (q.kind === 'word' && q.date) markStep(q.date, 'quiz', { score: q.correct, total: total });
+  if (q.kind === 'word' && q.date) {
+    markStep(q.date, 'quiz', { score: q.correct, total: total });
+    awardPoints('word_quiz', 10 + q.correct, q.date);
+  } else if (q.kind === 'grammar' && q.date) {
+    awardPoints('grammar_quiz', 10, q.date);
+  } else if (q.kind === 'mistakes') {
+    awardPoints('deck_review', 10, q.date || todayStr());
+  }
   state.quiz = null;
   $('#view').innerHTML =
   '<div class="card"><div class="score-hero">' +
@@ -2433,6 +2974,10 @@ function bindEvents() {
       });
     }
     else if (a === 'enable-push') promptPush(t);
+    else if (a === 'ch-period') { state.challengePeriod = t.getAttribute('data-p'); renderChallenge($('#view')); }
+    else if (a === 'choose-nickname') {
+      ensureNickname().then(function () { if (state.view === 'challenge') renderChallenge($('#view')); });
+    }
   });
 
   $('#view').addEventListener('change', function (e) {
@@ -2514,6 +3059,8 @@ window.MuseApp = {
   detectCountry: detectCountry, maybeShowWelcome: maybeShowWelcome,
   renderSignin: renderSignin, renderProfile: renderProfile,
   ensureCountrySaved: ensureCountrySaved,
+  queuePointsPopup: queuePointsPopup, ensureNickname: ensureNickname,
+  renderChallenge: renderChallenge, awardPoints: awardPoints, demoLogin: demoLogin,
 };
 
 })();
