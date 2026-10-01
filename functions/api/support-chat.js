@@ -73,7 +73,7 @@ export async function onRequestPost(context) {
   const system = SYSTEM + (level ? '\n\nThe user asking is at CEFR level ' + level.toUpperCase() + '.' : '');
 
   try {
-    const out = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', {
+    const out = await env.AI.run('@cf/meta/llama-4-scout-17b-16e-instruct', {
       messages: [{ role: 'system', content: system }].concat(messages),
       max_tokens: 400,
       temperature: 0.4,
@@ -82,6 +82,6 @@ export async function onRequestPost(context) {
     if (!reply) throw new Error('empty response');
     return json({ reply: reply });
   } catch (e) {
-    return json({ error: 'The assistant is having trouble right now. Please try again or use the Telegram button.', debug: String((e && e.message) || e).slice(0, 300) }, 502);
+    return json({ error: 'The assistant is having trouble right now. Please try again or use the Telegram button.' }, 502);
   }
 }
