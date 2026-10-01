@@ -370,15 +370,31 @@ p { margin: 0 0 0.75em; }
 }
 .today-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.7rem; flex-wrap: wrap; }
 .today-theme { font-family: Georgia, serif; font-size: 1.6rem; margin: 0.2rem 0 0.3rem; text-transform: capitalize; }
-.today-steps { list-style: none; margin: 0.9rem 0; padding: 0; display: grid; gap: 0.45rem; }
-.today-steps li { display: flex; align-items: center; gap: 0.6rem; font-size: 0.95rem; }
+.today-steps { list-style: none; margin: 0.9rem 0; padding: 0; display: grid; gap: 0.5rem; }
+.today-steps li { margin: 0; padding: 0; }
+.today-step-btn {
+  width: 100%; display: flex; align-items: center; gap: 0.65rem;
+  background: #fff; border: 1px solid var(--line); border-radius: 0.8rem;
+  padding: 0.6rem 0.75rem; font-size: 0.95rem; font-family: inherit; color: var(--ink);
+  cursor: pointer; text-align: left;
+}
+.today-step-btn:active { transform: scale(0.99); }
 .today-steps .st-ck {
   flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; font-size: 0.8rem;
-  border: 2px solid var(--line); background: #fff; color: transparent;
+  display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700;
+  border: 2px solid var(--line); background: #fff; color: var(--muted);
 }
 .today-steps li.done .st-ck { background: var(--herb); border-color: var(--herb); color: #fff; }
 .today-steps li.done .st-name { color: var(--muted); }
+.today-steps li.next .today-step-btn { border: 2px solid var(--tomato); background: #FFF6F1; padding: calc(0.6rem - 1px) calc(0.75rem - 1px); }
+.today-steps li.next .st-ck { border-color: var(--tomato); color: var(--tomato); }
+.today-steps li.next .st-name { font-weight: 700; color: var(--ink); }
+.st-pill {
+  margin-left: auto; background: var(--tomato); color: #fff; font-size: 0.65rem; font-weight: 800;
+  letter-spacing: 0.06em; border-radius: 999px; padding: 0.2rem 0.55rem; font-family: Arial, sans-serif;
+}
+.st-go { color: var(--muted); font-size: 1.25rem; line-height: 1; }
+.today-steps li.next .st-go { color: var(--tomato); }
 .today-progress { margin: 0.6rem 0 0.9rem; }
 .today-progress .tp-label { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--muted); margin-bottom: 0.3rem; }
 .today-progress .progress { height: 10px; }

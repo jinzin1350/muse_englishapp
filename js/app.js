@@ -1419,6 +1419,12 @@ async function doSignup() {
     });
     if (error) throw error;
     setAuthBusy('su', false, 'Create account');
+    if (data.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) {
+      // Duplicate signup: Supabase sends NO confirmation email for an already-registered
+      // address (returns an obfuscated user with empty identities). Tell the user to sign in.
+      authError('su', 'This email is already registered. Please sign in instead.');
+      return;
+    }
     if (data.session) {
       // Email confirmation disabled -> already signed in: save level now.
       try { await sb.from('profiles').upsert({ id: data.user.id, email: email, level: chosenLevel }, { onConflict: 'id' }); } catch (e) {}
@@ -1619,9 +1625,18 @@ function todayCardHTML(m) {
   const ns = nextStep(m.date);
   const isToday = m.date === todayStr();
 
-  const stepsHTML = STEPS.map(function (s) {
-    return '<li class="' + (p[s] ? 'done' : '') + '"><span class="st-ck" aria-hidden="true">✓</span>' +
-      '<span class="st-name">' + STEP_LABELS[s] + '</span></li>';
+  const stepsHTML = STEPS.map(function (s, i) {
+    const isDone = !!p[s];
+    const isNext = !isDone && s === ns;
+    const cls = isDone ? 'done' : (isNext ? 'next' : 'todo');
+    const mark = isDone ? '✓' : String(i + 1);
+    return '<li class="' + cls + '">' +
+      '<button class="today-step-btn" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + s + '" aria-label="Go to ' + STEP_LABELS[s] + '">' +
+      '<span class="st-ck" aria-hidden="true">' + mark + '</span>' +
+      '<span class="st-name">' + STEP_LABELS[s] + '</span>' +
+      (isNext ? '<span class="st-pill">CONTINUE</span>' : '') +
+      '<span class="st-go" aria-hidden="true">›</span>' +
+      '</button></li>';
   }).join('');
 
   let cta, ctaSub;
