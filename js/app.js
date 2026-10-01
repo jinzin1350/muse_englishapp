@@ -788,8 +788,8 @@ async function loadPreviewLesson() {
 }
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
-const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting'];
+const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'support'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -826,7 +826,8 @@ function onRoute() {
   if (!state.user) {
     if (PUBLIC_VIEWS.indexOf(view) === -1) view = 'landing';
   } else {
-    if (PUBLIC_VIEWS.indexOf(view) !== -1 || LEARNER_VIEWS.indexOf(view) === -1) {
+    // Logged-in: learner views win (support lives in both lists so it works before AND after login).
+    if (LEARNER_VIEWS.indexOf(view) === -1) {
       view = 'home';
       if (window.location.hash !== '#/home') { window.location.hash = '#/home'; return; }
     }
@@ -853,6 +854,7 @@ function show(view, arg) {
   else if (view === 'scores') renderScores(v);
   else if (view === 'review') renderMistakes(v);
   else if (view === 'profile') renderProfile(v);
+  else if (view === 'support') renderSupport(v);
   else if (view === 'admin') renderAdmin(v);
 }
 
@@ -1615,6 +1617,92 @@ function renderProfile(v) {
 
   '<div class="section-title"><h2>Account</h2></div>' +
   '<div class="card plain"><button class="btn btn-ghost btn-block" data-action="logout" style="margin-top:0">Log out</button></div>';
+}
+
+/* ---------------- SUPPORT (AI chat + Telegram fallback) ---------------- */
+const SUPPORT_QUICK = [
+  'How do the daily lessons work?',
+  "I can't hear the podcast",
+  'How do I change my level?',
+  'How do I enable notifications?'
+];
+const SUPPORT_TELEGRAM = 'https://t.me/alirezaaaatehrani';
+let supportLog = [];
+let supportBusy = false;
+
+function renderSupport(v) {
+  supportLog = [];
+  supportBusy = false;
+  v.innerHTML =
+  '<h1>Support</h1>' +
+  '<p class="muted">Ask Muse\u2019s assistant anything about the app \u2014 lessons, quizzes, scores, audio and more.</p>' +
+  '<div class="card plain support-card">' +
+    '<div id="support-msgs" class="support-msgs" aria-live="polite"></div>' +
+    '<div class="support-chips">' + SUPPORT_QUICK.map(function (q) {
+      return '<button class="chip" data-support-q="' + esc(q) + '">' + esc(q) + '</button>';
+    }).join('') + '</div>' +
+    '<div class="support-input-row">' +
+      '<input id="support-input" class="support-input" type="text" placeholder="Type your question\u2026" autocomplete="off" maxlength="500" aria-label="Your question">' +
+      '<button id="support-send" class="btn" aria-label="Send message">\u27a4</button>' +
+    '</div>' +
+  '</div>' +
+  '<div class="card mist support-tg">' +
+    '<div><b>Still stuck?</b><div class="muted">Chat with us directly on Telegram \u2014 we usually reply fast.</div></div>' +
+    '<a class="btn" href="' + SUPPORT_TELEGRAM + '" target="_blank" rel="noopener">\uD83D\uDCAC Open Telegram</a>' +
+  '</div>';
+  supportAddMsg('ai', "Hi! I'm Muse's assistant. Ask me anything about your lessons, quizzes, scores or the app itself. \uD83D\uDE42", false);
+  $('#support-send').addEventListener('click', supportSend);
+  $('#support-input').addEventListener('keydown', function (e) { if (e.key === 'Enter') supportSend(); });
+  Array.prototype.forEach.call(v.querySelectorAll('[data-support-q]'), function (b) {
+    b.addEventListener('click', function () { supportAsk(b.getAttribute('data-support-q')); });
+  });
+}
+
+function supportAddMsg(who, text, save) {
+  const box = $('#support-msgs');
+  if (!box) return null;
+  const div = document.createElement('div');
+  div.className = 'support-msg ' + (who === 'user' ? 'from-user' : 'from-ai');
+  div.textContent = text;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+  if (save !== false) supportLog.push({ role: who === 'user' ? 'user' : 'assistant', content: text.slice(0, 1000) });
+  return div;
+}
+
+function supportSend() {
+  const input = $('#support-input');
+  supportAsk(input ? input.value : '');
+}
+
+function supportAsk(text) {
+  if (supportBusy) return;
+  text = (text || '').trim();
+  if (!text) return;
+  supportAddMsg('user', text);
+  const input = $('#support-input');
+  if (input) input.value = '';
+  supportBusy = true;
+  const typing = supportAddMsg('ai', '\u2026', false);
+  if (typing) typing.classList.add('typing');
+  const payload = { messages: supportLog.slice(-12) };
+  if (state.user && state.user.level) payload.level = normalizeLevel(state.user.level);
+  fetch('/api/support-chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  }).then(function (r) {
+    return r.json().then(function (d) { return { ok: r.ok, d: d }; }, function () { return { ok: false, d: null }; });
+  }).then(function (res) {
+    if (typing) typing.remove();
+    supportBusy = false;
+    if (res.ok && res.d && res.d.reply) supportAddMsg('ai', res.d.reply);
+    else supportAddMsg('ai', "Hmm, I couldn't reach the assistant just now. Try again in a bit \u2014 or tap Open Telegram below and we'll help you directly. \uD83D\uDE42", false);
+  }).catch(function () {
+    if (typing) typing.remove();
+    supportBusy = false;
+    supportAddMsg('ai', "You're offline or the assistant is unreachable. Check your connection \u2014 or tap Open Telegram below and we'll help you directly. \uD83D\uDE42", false);
+  });
 }
 
 /* ---------------- lesson view ---------------- */
