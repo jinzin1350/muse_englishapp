@@ -1,539 +1,537 @@
 {
- "date": "2026-10-01",
- "theme": "economics & finance",
- "level": "c1",
- "cefr": "C1",
- "words": [
-  {
-   "word": "leverage",
-   "pos": "verb",
-   "meaning": "to use borrowed money or influence to increase the potential scale of gains (and losses)",
-   "example": "The firm used leverage to buy far more assets than its cash alone would allow.",
-   "pronunciation": "LEH-vuh-rij",
-   "persian": "اهرم؛ استفاده از بدهی یا نفوذ برای افزایش بازده",
-   "photo": "media/c1/2026-10-01/photos/leverage.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/leverage.mp3"
-  },
-  {
-   "word": "liquidity",
-   "pos": "noun",
-   "meaning": "how quickly and easily an asset can be converted to cash without losing value",
-   "example": "Real estate has much lower liquidity than stocks or bonds.",
-   "pronunciation": "lih-KWIH-duh-tee",
-   "persian": "نقدشوندگی",
-   "photo": "media/c1/2026-10-01/photos/liquidity.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/liquidity.mp3"
-  },
-  {
-   "word": "volatility",
-   "pos": "noun",
-   "meaning": "the degree of rapid, unpredictable price changes in a market",
-   "example": "Oil price volatility makes long-term budgeting difficult for airlines.",
-   "pronunciation": "vah-luh-TIH-luh-tee",
-   "persian": "نوسان؛ بی‌ثباتی قیمت",
-   "photo": "media/c1/2026-10-01/photos/volatility.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/volatility.mp3"
-  },
-  {
-   "word": "deficit",
-   "pos": "noun",
-   "meaning": "the amount by which spending exceeds income or revenue",
-   "example": "The government ran a deficit of two percent of GDP last year.",
-   "pronunciation": "DEH-fih-sit",
-   "persian": "کسری بودجه",
-   "photo": "media/c1/2026-10-01/photos/deficit.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/deficit.mp3"
-  },
-  {
-   "word": "surplus",
-   "pos": "noun",
-   "meaning": "an amount left over after spending; the excess of income over expenses",
-   "example": "The trade surplus reached a record high this quarter.",
-   "pronunciation": "SUR-plus",
-   "persian": "مازاد",
-   "photo": "media/c1/2026-10-01/photos/surplus.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/surplus.mp3"
-  },
-  {
-   "word": "arbitrage",
-   "pos": "noun",
-   "meaning": "buying cheap in one market and selling higher in another for a nearly risk-free profit",
-   "example": "Algorithmic traders profit from arbitrage between different exchanges.",
-   "pronunciation": "AR-bih-trahzh",
-   "persian": "آربیتراژ؛ بهره‌برداری از اختلاف قیمت",
-   "photo": "media/c1/2026-10-01/photos/arbitrage.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/arbitrage.mp3"
-  },
-  {
-   "word": "speculation",
-   "pos": "noun",
-   "meaning": "investment in risky assets in the hope of making a large profit",
-   "example": "Pure speculation drove the meme stock to absurd levels.",
-   "pronunciation": "speh-kyuh-LEY-shun",
-   "persian": "سفته‌بازی؛ سوداگری",
-   "photo": "media/c1/2026-10-01/photos/speculation.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/speculation.mp3"
-  },
-  {
-   "word": "collateral",
-   "pos": "noun",
-   "meaning": "an asset pledged as security for a loan, seized if the borrower defaults",
-   "example": "The bank demanded collateral before approving the mortgage.",
-   "pronunciation": "kuh-LAH-tuh-rul",
-   "persian": "وثیقه؛ تضمین",
-   "photo": "media/c1/2026-10-01/photos/collateral.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/collateral.mp3"
-  },
-  {
-   "word": "dividend",
-   "pos": "noun",
-   "meaning": "a share of a company's profits paid out to its shareholders",
-   "example": "The company raised its dividend for the fifth consecutive year.",
-   "pronunciation": "DIH-vih-dend",
-   "persian": "سود سهام",
-   "photo": "media/c1/2026-10-01/photos/dividend.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/dividend.mp3"
-  },
-  {
-   "word": "equity",
-   "pos": "noun",
-   "meaning": "the ownership value in a company or asset after all debts are subtracted",
-   "example": "His equity in the startup grew tenfold after the public offering.",
-   "pronunciation": "EH-kwih-tee",
-   "persian": "حقوق صاحبان سهام؛ ارزش خالص مالکیت",
-   "photo": "media/c1/2026-10-01/photos/equity.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/equity.mp3"
-  },
-  {
-   "word": "bubble",
-   "pos": "noun",
-   "meaning": "a rapid rise in asset prices far above their real value, followed by a crash",
-   "example": "The housing bubble burst in 2008, wiping out trillions in wealth.",
-   "pronunciation": "BUH-bul",
-   "persian": "حباب قیمتی",
-   "photo": "media/c1/2026-10-01/photos/bubble.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/bubble.mp3"
-  },
-  {
-   "word": "downturn",
-   "pos": "noun",
-   "meaning": "a decline in economic or business activity",
-   "example": "Retail sales fell sharply during the economic downturn.",
-   "pronunciation": "DOWN-turn",
-   "persian": "افت؛ کاهش فعالیت اقتصادی",
-   "photo": "media/c1/2026-10-01/photos/downturn.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/downturn.mp3"
-  },
-  {
-   "word": "stimulus",
-   "pos": "noun",
-   "meaning": "government spending or policy measures aimed at boosting the economy",
-   "example": "The central bank announced a stimulus package to revive growth.",
-   "pronunciation": "STIH-myuh-lus",
-   "persian": "بسته محرک اقتصادی",
-   "photo": "media/c1/2026-10-01/photos/stimulus.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/stimulus.mp3"
-  },
-  {
-   "word": "recession",
-   "pos": "noun",
-   "meaning": "a prolonged period of economic decline, typically two quarters of shrinking output",
-   "example": "Economists fear a global recession could begin next year.",
-   "pronunciation": "rih-SEH-shun",
-   "persian": "رکود اقتصادی",
-   "photo": "media/c1/2026-10-01/photos/recession.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/recession.mp3"
-  },
-  {
-   "word": "austerity",
-   "pos": "noun",
-   "meaning": "government policies of strict spending cuts intended to reduce deficits",
-   "example": "Austerity measures sparked protests across the capital.",
-   "pronunciation": "aw-STEH-ruh-tee",
-   "persian": "ریاضت اقتصادی",
-   "photo": "media/c1/2026-10-01/photos/austerity.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/austerity.mp3"
-  },
-  {
-   "word": "subsidize",
-   "pos": "verb",
-   "meaning": "to financially support an industry or product so its price falls",
-   "example": "The state subsidizes renewable energy to encourage adoption.",
-   "pronunciation": "SUB-sih-dyz",
-   "persian": "یارانه دادن؛ حمایت مالی کردن",
-   "photo": "media/c1/2026-10-01/photos/subsidize.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/subsidize.mp3"
-  },
-  {
-   "word": "bailout",
-   "pos": "noun",
-   "meaning": "an emergency financial rescue of a failing company or economy",
-   "example": "The airline received a government bailout to avoid bankruptcy.",
-   "pronunciation": "BAYL-out",
-   "persian": "نجات مالی اضطراری",
-   "photo": "media/c1/2026-10-01/photos/bailout.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/bailout.mp3"
-  },
-  {
-   "word": "diversification",
-   "pos": "noun",
-   "meaning": "spreading investments across different assets to reduce risk",
-   "example": "Diversification protected her portfolio during the market crash.",
-   "pronunciation": "dih-vur-sih-fih-KEY-shun",
-   "persian": "تنوع‌بخشی",
-   "photo": "media/c1/2026-10-01/photos/diversification.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/diversification.mp3"
-  },
-  {
-   "word": "inflationary",
-   "pos": "adjective",
-   "meaning": "causing or relating to inflation; tending to raise prices",
-   "example": "Printing too much money to fund spending is inflationary.",
-   "pronunciation": "in-FLAY-shuh-neh-ree",
-   "persian": "تورم‌زا؛ تورمی",
-   "photo": "media/c1/2026-10-01/photos/inflationary.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/inflationary.mp3"
-  },
-  {
-   "word": "hedge",
-   "pos": "verb",
-   "meaning": "to make investments that reduce the risk of financial losses",
-   "example": "Investors hedge against inflation by buying gold.",
-   "pronunciation": "HEJ",
-   "persian": "پوشش ریسک دادن؛ مصون‌سازی",
-   "photo": "media/c1/2026-10-01/photos/hedge.jpg",
-   "word_audio": "media/c1/2026-10-01/word-audio/hedge.mp3"
-  }
- ],
- "pronunciation_audio": "media/c1/2026-10-01/pronunciation.mp3",
- "podcast": {
-  "title": "Word Kitchen: economics & finance",
-  "audio": "media/c1/2026-10-01/podcast.mp3",
-  "cover": null,
-  "transcript": "media/c1/2026-10-01/podcast-transcript.txt"
- },
- "shadowing": {
-  "title": "Shadowing: economics & finance",
-  "audio": "media/c1/2026-10-01/shadowing.mp3",
-  "transcript": "media/c1/2026-10-01/shadowing-transcript.txt"
- },
- "quiz": [
-  {
-   "question": "What does 'leverage' mean?",
-   "options": [
-    "to reduce all borrowing to zero",
-    "to divide profits equally among investors",
-    "to sell assets at a guaranteed loss",
-    "to use borrowed money or influence to increase the potential scale of gains (and losses)"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'liquidity' mean?",
-   "options": [
-    "the interest rate on a loan",
-    "the number of employees in a firm",
-    "how quickly and easily an asset can be converted to cash without losing value",
-    "the total profit of a company"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'volatility' mean?",
-   "options": [
-    "the total value of all shares",
-    "the degree of rapid, unpredictable price changes in a market",
-    "a steady, predictable increase in prices",
-    "a government tax on trading"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'deficit' mean?",
-   "options": [
-    "the amount by which spending exceeds income or revenue",
-    "money saved for the future",
-    "a profit shared with workers",
-    "a loan with no interest"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'surplus' mean?",
-   "options": [
-    "an amount left over after spending; the excess of income over expenses",
-    "a shortage of essential goods",
-    "money borrowed from a bank",
-    "a loss on an investment"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'arbitrage' mean?",
-   "options": [
-    "selling everything in a panic",
-    "setting prices by government order",
-    "buying cheap in one market and selling higher in another for a nearly risk-free profit",
-    "buying and holding for decades"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'speculation' mean?",
-   "options": [
-    "investment in risky assets in the hope of making a large profit",
-    "a guaranteed government bond",
-    "a fixed monthly salary",
-    "a fully insured bank deposit"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'collateral' mean?",
-   "options": [
-    "a fee for opening an account",
-    "an asset pledged as security for a loan, seized if the borrower defaults",
-    "a gift with no repayment expected",
-    "a tax paid on profits"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'dividend' mean?",
-   "options": [
-    "a penalty for late payment",
-    "the salary of the CEO",
-    "a tax on company revenue",
-    "a share of a company's profits paid out to its shareholders"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'equity' mean?",
-   "options": [
-    "the monthly rent on an office",
-    "the ownership value in a company or asset after all debts are subtracted",
-    "the total debt of a company",
-    "a loan from the government"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'bubble' mean?",
-   "options": [
-    "a government price ceiling",
-    "a rapid rise in asset prices far above their real value, followed by a crash",
-    "a slow, stable price increase",
-    "a permanent fixed price"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'downturn' mean?",
-   "options": [
-    "a sudden economic boom",
-    "a period of full employment",
-    "a rise in consumer spending",
-    "a decline in economic or business activity"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'stimulus' mean?",
-   "options": [
-    "a cut in all public spending",
-    "a ban on foreign trade",
-    "a freeze on bank lending",
-    "government spending or policy measures aimed at boosting the economy"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'recession' mean?",
-   "options": [
-    "a record stock market high",
-    "a surge in new businesses",
-    "a prolonged period of economic decline, typically two quarters of shrinking output",
-    "rapid economic expansion"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'austerity' mean?",
-   "options": [
-    "a generous welfare expansion",
-    "a massive tax cut for all",
-    "government policies of strict spending cuts intended to reduce deficits",
-    "unlimited government spending"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'subsidize' mean?",
-   "options": [
-    "to ban a product entirely",
-    "to nationalize a company",
-    "to financially support an industry or product so its price falls",
-    "to tax an industry heavily"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'bailout' mean?",
-   "options": [
-    "an emergency financial rescue of a failing company or economy",
-    "a routine annual tax payment",
-    "a planned company merger",
-    "a voluntary donation to charity"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'diversification' mean?",
-   "options": [
-    "spreading investments across different assets to reduce risk",
-    "putting all money in one stock",
-    "borrowing the maximum possible",
-    "avoiding all investments"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'inflationary' mean?",
-   "options": [
-    "causing prices to fall",
-    "keeping prices perfectly stable",
-    "reducing the money supply",
-    "causing or relating to inflation; tending to raise prices"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'hedge' mean?",
-   "options": [
-    "to ignore all market dangers",
-    "to sell everything at once",
-    "to make investments that reduce the risk of financial losses",
-    "to take on maximum risk"
-   ],
-   "answer": 2
-  }
- ],
- "grammar": {
-  "title": "Obligation and prohibition: have to, must, should",
-  "explanation": "At C1 level you know the basics; the real skill is choosing the right modal for the right shade of meaning.\n\n1. have to vs must (obligation). Both express obligation, but the source differs. Use have to for external, general rules imposed by someone or something else: 'I have to wear a uniform at work.' Use must for obligation the speaker feels personally, often a decision taken in the moment: 'I must buy a new suit before the interview.' In practice, British speakers lean on this distinction more than Americans, who often use have to for both.\n\n2. mustn't vs don't have to vs needn't (prohibition vs no obligation). These three are the classic exam trap. mustn't = prohibition, something is forbidden: 'You mustn't park here.' don't have to = there is no obligation, you are free to choose: 'You don't have to come if you're busy.' needn't = don't have to in formal British English, often with a perfect infinitive for past: 'You needn't have rushed, we had plenty of time.' Note the nuance: 'You mustn't tell anyone' forbids it; 'You don't have to tell anyone' permits silence.\n\n3. should / ought to (advice and expectation). Both give advice or opinions, weaker than must: 'You should diversify your portfolio.' Ought to is a more formal, slightly old-fashioned alternative: 'Investors ought to read the fine print.' A distinct C1 use is expectation: 'The stimulus should kick in by spring' means we expect it to happen, not that anyone advises it.\n\n4. C1 nuance: strength and speaker attitude. 'You must see this report' (strong personal recommendation) vs 'You have to file by Friday' (external rule) vs 'You should probably hedge that position' (tentative advice). Choosing between them signals how strongly you feel and where the pressure comes from, which is exactly what examiners and native listeners notice.",
-  "examples": [
-   "I have to submit my tax return by the deadline; the law requires it.",
-   "I must stop checking stock prices every five minutes, it's ruining my focus.",
-   "You mustn't trade on insider information; it's a criminal offence.",
-   "You don't have to invest in stocks; bonds are a perfectly valid choice.",
-   "She needn't have sold in a panic; the market recovered within weeks.",
-   "You should keep an emergency fund worth six months of expenses.",
-   "Investors ought to understand leverage before using it.",
-   "With this stimulus, inflation should ease by next year."
+  "date": "2026-10-01",
+  "theme": "economics & finance",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "leverage",
+      "pos": "verb",
+      "meaning": "to use borrowed money or influence to increase the potential scale of gains (and losses)",
+      "example": "The firm used leverage to buy far more assets than its cash alone would allow.",
+      "pronunciation": "LEH-vuh-rij",
+      "persian": "اهرم؛ استفاده از بدهی یا نفوذ برای افزایش بازده",
+      "photo": "media/c1/2026-10-01/photos/leverage.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/leverage.mp3"
+    },
+    {
+      "word": "liquidity",
+      "pos": "noun",
+      "meaning": "how quickly and easily an asset can be converted to cash without losing value",
+      "example": "Real estate has much lower liquidity than stocks or bonds.",
+      "pronunciation": "lih-KWIH-duh-tee",
+      "persian": "نقدشوندگی",
+      "photo": "media/c1/2026-10-01/photos/liquidity.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/liquidity.mp3"
+    },
+    {
+      "word": "volatility",
+      "pos": "noun",
+      "meaning": "the degree of rapid, unpredictable price changes in a market",
+      "example": "Oil price volatility makes long-term budgeting difficult for airlines.",
+      "pronunciation": "vah-luh-TIH-luh-tee",
+      "persian": "نوسان؛ بی‌ثباتی قیمت",
+      "photo": "media/c1/2026-10-01/photos/volatility.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/volatility.mp3"
+    },
+    {
+      "word": "deficit",
+      "pos": "noun",
+      "meaning": "the amount by which spending exceeds income or revenue",
+      "example": "The government ran a deficit of two percent of GDP last year.",
+      "pronunciation": "DEH-fih-sit",
+      "persian": "کسری بودجه",
+      "photo": "media/c1/2026-10-01/photos/deficit.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/deficit.mp3"
+    },
+    {
+      "word": "surplus",
+      "pos": "noun",
+      "meaning": "an amount left over after spending; the excess of income over expenses",
+      "example": "The trade surplus reached a record high this quarter.",
+      "pronunciation": "SUR-plus",
+      "persian": "مازاد",
+      "photo": "media/c1/2026-10-01/photos/surplus.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/surplus.mp3"
+    },
+    {
+      "word": "arbitrage",
+      "pos": "noun",
+      "meaning": "buying cheap in one market and selling higher in another for a nearly risk-free profit",
+      "example": "Algorithmic traders profit from arbitrage between different exchanges.",
+      "pronunciation": "AR-bih-trahzh",
+      "persian": "آربیتراژ؛ بهره‌برداری از اختلاف قیمت",
+      "photo": "media/c1/2026-10-01/photos/arbitrage.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/arbitrage.mp3"
+    },
+    {
+      "word": "speculation",
+      "pos": "noun",
+      "meaning": "investment in risky assets in the hope of making a large profit",
+      "example": "Pure speculation drove the meme stock to absurd levels.",
+      "pronunciation": "speh-kyuh-LEY-shun",
+      "persian": "سفته‌بازی؛ سوداگری",
+      "photo": "media/c1/2026-10-01/photos/speculation.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/speculation.mp3"
+    },
+    {
+      "word": "collateral",
+      "pos": "noun",
+      "meaning": "an asset pledged as security for a loan, seized if the borrower defaults",
+      "example": "The bank demanded collateral before approving the mortgage.",
+      "pronunciation": "kuh-LAH-tuh-rul",
+      "persian": "وثیقه؛ تضمین",
+      "photo": "media/c1/2026-10-01/photos/collateral.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/collateral.mp3"
+    },
+    {
+      "word": "dividend",
+      "pos": "noun",
+      "meaning": "a share of a company's profits paid out to its shareholders",
+      "example": "The company raised its dividend for the fifth consecutive year.",
+      "pronunciation": "DIH-vih-dend",
+      "persian": "سود سهام",
+      "photo": "media/c1/2026-10-01/photos/dividend.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/dividend.mp3"
+    },
+    {
+      "word": "equity",
+      "pos": "noun",
+      "meaning": "the ownership value in a company or asset after all debts are subtracted",
+      "example": "His equity in the startup grew tenfold after the public offering.",
+      "pronunciation": "EH-kwih-tee",
+      "persian": "حقوق صاحبان سهام؛ ارزش خالص مالکیت",
+      "photo": "media/c1/2026-10-01/photos/equity.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/equity.mp3"
+    },
+    {
+      "word": "bubble",
+      "pos": "noun",
+      "meaning": "a rapid rise in asset prices far above their real value, followed by a crash",
+      "example": "The housing bubble burst in 2008, wiping out trillions in wealth.",
+      "pronunciation": "BUH-bul",
+      "persian": "حباب قیمتی",
+      "photo": "media/c1/2026-10-01/photos/bubble.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/bubble.mp3"
+    },
+    {
+      "word": "downturn",
+      "pos": "noun",
+      "meaning": "a decline in economic or business activity",
+      "example": "Retail sales fell sharply during the economic downturn.",
+      "pronunciation": "DOWN-turn",
+      "persian": "افت؛ کاهش فعالیت اقتصادی",
+      "photo": "media/c1/2026-10-01/photos/downturn.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/downturn.mp3"
+    },
+    {
+      "word": "stimulus",
+      "pos": "noun",
+      "meaning": "government spending or policy measures aimed at boosting the economy",
+      "example": "The central bank announced a stimulus package to revive growth.",
+      "pronunciation": "STIH-myuh-lus",
+      "persian": "بسته محرک اقتصادی",
+      "photo": "media/c1/2026-10-01/photos/stimulus.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/stimulus.mp3"
+    },
+    {
+      "word": "recession",
+      "pos": "noun",
+      "meaning": "a prolonged period of economic decline, typically two quarters of shrinking output",
+      "example": "Economists fear a global recession could begin next year.",
+      "pronunciation": "rih-SEH-shun",
+      "persian": "رکود اقتصادی",
+      "photo": "media/c1/2026-10-01/photos/recession.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/recession.mp3"
+    },
+    {
+      "word": "austerity",
+      "pos": "noun",
+      "meaning": "government policies of strict spending cuts intended to reduce deficits",
+      "example": "Austerity measures sparked protests across the capital.",
+      "pronunciation": "aw-STEH-ruh-tee",
+      "persian": "ریاضت اقتصادی",
+      "photo": "media/c1/2026-10-01/photos/austerity.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/austerity.mp3"
+    },
+    {
+      "word": "subsidize",
+      "pos": "verb",
+      "meaning": "to financially support an industry or product so its price falls",
+      "example": "The state subsidizes renewable energy to encourage adoption.",
+      "pronunciation": "SUB-sih-dyz",
+      "persian": "یارانه دادن؛ حمایت مالی کردن",
+      "photo": "media/c1/2026-10-01/photos/subsidize.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/subsidize.mp3"
+    },
+    {
+      "word": "bailout",
+      "pos": "noun",
+      "meaning": "an emergency financial rescue of a failing company or economy",
+      "example": "The airline received a government bailout to avoid bankruptcy.",
+      "pronunciation": "BAYL-out",
+      "persian": "نجات مالی اضطراری",
+      "photo": "media/c1/2026-10-01/photos/bailout.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/bailout.mp3"
+    },
+    {
+      "word": "diversification",
+      "pos": "noun",
+      "meaning": "spreading investments across different assets to reduce risk",
+      "example": "Diversification protected her portfolio during the market crash.",
+      "pronunciation": "dih-vur-sih-fih-KEY-shun",
+      "persian": "تنوع‌بخشی",
+      "photo": "media/c1/2026-10-01/photos/diversification.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/diversification.mp3"
+    },
+    {
+      "word": "inflationary",
+      "pos": "adjective",
+      "meaning": "causing or relating to inflation; tending to raise prices",
+      "example": "Printing too much money to fund spending is inflationary.",
+      "pronunciation": "in-FLAY-shuh-neh-ree",
+      "persian": "تورم‌زا؛ تورمی",
+      "photo": "media/c1/2026-10-01/photos/inflationary.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/inflationary.mp3"
+    },
+    {
+      "word": "hedge",
+      "pos": "verb",
+      "meaning": "to make investments that reduce the risk of financial losses",
+      "example": "Investors hedge against inflation by buying gold.",
+      "pronunciation": "HEJ",
+      "persian": "پوشش ریسک دادن؛ مصون‌سازی",
+      "photo": "media/c1/2026-10-01/photos/hedge.jpg",
+      "word_audio": "media/c1/2026-10-01/word-audio/hedge.mp3"
+    }
   ],
-  "practice": [],
+  "pronunciation_audio": "media/c1/2026-10-01/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: economics & finance",
+    "audio": "media/c1/2026-10-01/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-01/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: economics & finance",
+    "audio": "media/c1/2026-10-01/shadowing.mp3",
+    "transcript": "media/c1/2026-10-01/shadowing-transcript.txt"
+  },
   "quiz": [
-   {
-    "question": "Employees ___ wear a badge at all times; it's company policy.",
-    "options": [
-     "must",
-     "have to",
-     "should",
-     "ought to"
+    {
+      "question": "What does 'leverage' mean?",
+      "options": [
+        "to reduce all borrowing to zero",
+        "to divide profits equally among investors",
+        "to sell assets at a guaranteed loss",
+        "to use borrowed money or influence to increase the potential scale of gains (and losses)"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'liquidity' mean?",
+      "options": [
+        "the interest rate on a loan",
+        "the number of employees in a firm",
+        "how quickly and easily an asset can be converted to cash without losing value",
+        "the total profit of a company"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'volatility' mean?",
+      "options": [
+        "the total value of all shares",
+        "the degree of rapid, unpredictable price changes in a market",
+        "a steady, predictable increase in prices",
+        "a government tax on trading"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'deficit' mean?",
+      "options": [
+        "the amount by which spending exceeds income or revenue",
+        "money saved for the future",
+        "a profit shared with workers",
+        "a loan with no interest"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'surplus' mean?",
+      "options": [
+        "an amount left over after spending; the excess of income over expenses",
+        "a shortage of essential goods",
+        "money borrowed from a bank",
+        "a loss on an investment"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'arbitrage' mean?",
+      "options": [
+        "selling everything in a panic",
+        "setting prices by government order",
+        "buying cheap in one market and selling higher in another for a nearly risk-free profit",
+        "buying and holding for decades"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'speculation' mean?",
+      "options": [
+        "investment in risky assets in the hope of making a large profit",
+        "a guaranteed government bond",
+        "a fixed monthly salary",
+        "a fully insured bank deposit"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'collateral' mean?",
+      "options": [
+        "a fee for opening an account",
+        "an asset pledged as security for a loan, seized if the borrower defaults",
+        "a gift with no repayment expected",
+        "a tax paid on profits"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'dividend' mean?",
+      "options": [
+        "a penalty for late payment",
+        "the salary of the CEO",
+        "a tax on company revenue",
+        "a share of a company's profits paid out to its shareholders"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'equity' mean?",
+      "options": [
+        "the monthly rent on an office",
+        "the ownership value in a company or asset after all debts are subtracted",
+        "the total debt of a company",
+        "a loan from the government"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bubble' mean?",
+      "options": [
+        "a government price ceiling",
+        "a rapid rise in asset prices far above their real value, followed by a crash",
+        "a slow, stable price increase",
+        "a permanent fixed price"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'downturn' mean?",
+      "options": [
+        "a sudden economic boom",
+        "a period of full employment",
+        "a rise in consumer spending",
+        "a decline in economic or business activity"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'stimulus' mean?",
+      "options": [
+        "a cut in all public spending",
+        "a ban on foreign trade",
+        "a freeze on bank lending",
+        "government spending or policy measures aimed at boosting the economy"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'recession' mean?",
+      "options": [
+        "a record stock market high",
+        "a surge in new businesses",
+        "a prolonged period of economic decline, typically two quarters of shrinking output",
+        "rapid economic expansion"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'austerity' mean?",
+      "options": [
+        "a generous welfare expansion",
+        "a massive tax cut for all",
+        "government policies of strict spending cuts intended to reduce deficits",
+        "unlimited government spending"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'subsidize' mean?",
+      "options": [
+        "to ban a product entirely",
+        "to nationalize a company",
+        "to financially support an industry or product so its price falls",
+        "to tax an industry heavily"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bailout' mean?",
+      "options": [
+        "an emergency financial rescue of a failing company or economy",
+        "a routine annual tax payment",
+        "a planned company merger",
+        "a voluntary donation to charity"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'diversification' mean?",
+      "options": [
+        "spreading investments across different assets to reduce risk",
+        "putting all money in one stock",
+        "borrowing the maximum possible",
+        "avoiding all investments"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'inflationary' mean?",
+      "options": [
+        "causing prices to fall",
+        "keeping prices perfectly stable",
+        "reducing the money supply",
+        "causing or relating to inflation; tending to raise prices"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'hedge' mean?",
+      "options": [
+        "to ignore all market dangers",
+        "to sell everything at once",
+        "to make investments that reduce the risk of financial losses",
+        "to take on maximum risk"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Obligation and prohibition: have to, must, should",
+    "explanation": "At C1 level you know the basics. The real skill is choosing the right modal for the right shade of meaning.\n\nUse **have to** for external, general rules: banks **have to** hold enough liquidity by law. Use **must** for obligation the speaker feels personally: I **must** hedge this position before the weekend.\n\nThe classic exam trap: **mustn't** = prohibition (you **mustn't** trade on insider information). **Don't have to** = no obligation, free to choose (you **don't have to** buy equities).\n\n**Needn't** is the formal British **don't have to**. With a perfect infinitive it reaches the past: you **needn't** have sold during the downturn.\n\n**Should** and **ought to** give advice, weaker than **must**: investors **should** diversify their portfolios. A distinct C1 use is expectation: the stimulus **should** ease inflationary pressure by spring.\n\nStrength signals attitude. ‘You **must** read this report’ is a strong personal push. ‘You **have to** file by Friday’ is an external rule.\n\n‘You **should** rely less on a bailout’ is tentative advice. The modal you choose tells the listener how strongly you feel.",
+    "examples": [
+      "Banks *have to* hold enough liquidity; the law requires it. (external rule)",
+      "I *must* hedge this position before the weekend. (personal decision)",
+      "You *mustn't* trade on insider information. (prohibition)",
+      "You *don't have to* buy equities; bonds are a valid choice. (no obligation)",
+      "You *needn't* have sold during the downturn. (formal, past)",
+      "The stimulus *should* ease inflationary pressure by next year. (expectation)"
     ],
-    "answer": 1
-   },
-   {
-    "question": "I ___ finish this report tonight; I've decided it's a priority.",
-    "options": [
-     "have to",
-     "must",
-     "don't have to",
-     "mustn't"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "You ___ park here; you'll get a fine.",
-    "options": [
-     "don't have to",
-     "needn't",
-     "mustn't",
-     "shouldn't"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "The concert is free, so you ___ pay anything.",
-    "options": [
-     "mustn't",
-     "don't have to",
-     "shouldn't",
-     "ought not to"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "You ___ have waited in line; I could have sent you the link.",
-    "options": [
-     "mustn't",
-     "don't",
-     "needn't",
-     "shouldn't"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "You ___ diversify your portfolio; it's just my advice.",
-    "options": [
-     "must",
-     "have to",
-     "should",
-     "mustn't"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "The new policy ___ reduce volatility, or so the minister claims.",
-    "options": [
-     "must",
-     "has to",
-     "should",
-     "mustn't"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "Traders ___ disclose their positions under the new rules.",
-    "options": [
-     "must",
-     "have to",
-     "should",
-     "ought to"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "You ___ tell anyone about the merger yet; it's confidential.",
-    "options": [
-     "don't have to",
-     "mustn't",
-     "needn't",
-     "shouldn't"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "Investors ___ to read the prospectus carefully before committing funds.",
-    "options": [
-     "must",
-     "have",
-     "ought",
-     "should to"
-    ],
-    "answer": 2
-   }
-  ]
- }
+    "practice": [],
+    "quiz": [
+      {
+        "question": "Employees ___ wear a badge at all times; it's company policy.",
+        "options": [
+          "must",
+          "have to",
+          "should",
+          "ought to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ finish this report tonight; I've decided it's a priority.",
+        "options": [
+          "have to",
+          "must",
+          "don't have to",
+          "mustn't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ park here; you'll get a fine.",
+        "options": [
+          "don't have to",
+          "needn't",
+          "mustn't",
+          "shouldn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The concert is free, so you ___ pay anything.",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "shouldn't",
+          "ought not to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ have waited in line; I could have sent you the link.",
+        "options": [
+          "mustn't",
+          "don't",
+          "needn't",
+          "shouldn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You ___ diversify your portfolio; it's just my advice.",
+        "options": [
+          "must",
+          "have to",
+          "should",
+          "mustn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The new policy ___ reduce volatility, or so the minister claims.",
+        "options": [
+          "must",
+          "has to",
+          "should",
+          "mustn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Traders ___ disclose their positions under the new rules.",
+        "options": [
+          "must",
+          "have to",
+          "should",
+          "ought to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ tell anyone about the merger yet; it's confidential.",
+        "options": [
+          "don't have to",
+          "mustn't",
+          "needn't",
+          "shouldn't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Investors ___ to read the prospectus carefully before committing funds.",
+        "options": [
+          "must",
+          "have",
+          "ought",
+          "should to"
+        ],
+        "answer": 2
+      }
+    ]
+  }
 }
