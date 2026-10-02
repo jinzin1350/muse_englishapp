@@ -449,7 +449,8 @@ var PTS_LABELS = {
   word_quiz: 'Word quiz complete',
   grammar_quiz: 'Grammar quiz complete',
   deck_review: 'Review complete',
-  streak_7: '7-day streak'
+  streak_7: '7-day streak',
+  mystery_box: 'Mystery box'
 };
 
 function ptsKey(kind) {
@@ -717,7 +718,7 @@ function checkTrackCompletion(forceDone) {
   const key = kind + '|' + state.lesson.date;
   if (_trackPtsFired[key]) return;
   _trackPtsFired[key] = 1;
-  awardPoints(kind, kind === 'podcast_complete' ? 20 : 15, state.lesson.date);
+  awardPoints(kind, 15, state.lesson.date);
 }
 
 /* ---------------- challenge view (leaderboard) ---------------- */
@@ -986,8 +987,8 @@ function rowHTML(r, isMe) {
 
 /* ---------------- lesson progress: lightweight per-user localStorage ----------------
    Tracks which steps of each daily lesson the learner has engaged with.
-   Steps: words → podcast → shadowing → grammar → quiz (completed). */
-const STEPS = ['words', 'podcast', 'shadowing', 'grammar', 'quiz'];
+   Steps: words → quiz (reward!) → bonus: podcast → shadowing → grammar. */
+const STEPS = ['words', 'quiz', 'podcast', 'shadowing', 'grammar'];
 const STEP_LABELS = { words: 'Words', podcast: 'Podcast', shadowing: 'Shadowing', grammar: 'Grammar', quiz: 'Quiz' };
 function progressKey() {
   return 'ela_progress_' + (state.user ? state.user.email : 'anon');
@@ -2599,9 +2600,9 @@ function supportAsk(text) {
 function lessonTabsHTML() {
   const tabs = [
     ['words', 'Words'],
+    ['quiz', 'Quiz'],
     ['podcast', 'Podcast'],
     ['shadowing', 'Shadowing'],
-    ['quiz', 'Quiz'],
     ['grammar', 'Grammar']
   ];
   return '<div class="lesson-tabs" role="tablist" aria-label="Lesson sections">' + tabs.map(function (t) {
@@ -2861,8 +2862,16 @@ function finishQuiz() {
     kind: q.kind, score: q.correct, total: total
   });
   if (q.kind === 'word' && q.date) {
+    const firstTime = !((getDayProgress(q.date) || {}).quiz);
     markStep(q.date, 'quiz', { score: q.correct, total: total });
     awardPoints('word_quiz', 10 + q.correct, q.date);
+    if (firstTime) {
+      /* Core loop payoff: first word-quiz completion of the day launches the
+         celebration sequence (Lesson Complete → Mystery Box → Streak → bonus nudge). */
+      state.quiz = null;
+      launchCelebration({ correct: q.correct, total: total, date: q.date, xp: 10 + q.correct });
+      return;
+    }
   } else if (q.kind === 'grammar' && q.date) {
     awardPoints('grammar_quiz', 10, q.date);
   } else if (q.kind === 'mistakes') {
@@ -2880,6 +2889,291 @@ function finishQuiz() {
       '<a class="btn btn-ghost" href="#/review">Review</a>' +
     '</div></div>';
   window.scrollTo(0, 0);
+}
+
+/* ---------------- streak engine (local-first, Supabase RPC when migrated) ----------------
+   Rules (mirrored in supabase-streak-migration.sql → record_streak_day):
+   consecutive day → streak+1 · exactly one missed day → freeze auto-consumed ·
+   longer gap → reset to 1 · every 7-day milestone → earn one freeze. */
+function streakKey() {
+  const email = state.user ? state.user.email : 'anon';
+  return 'ela_streak_' + email;
+}
+function getStreakLocal() {
+  try { return JSON.parse(localStorage.getItem(streakKey()) || '{}'); }
+  catch (e) { return {}; }
+}
+function setStreakLocal(s) {
+  try { localStorage.setItem(streakKey(), JSON.stringify(s)); } catch (e) {}
+}
+function recordStreakDayLocal(dateStr) {
+  const s = getStreakLocal();
+  const cur = s.current_streak || 0, best = s.longest_streak || 0;
+  const freezes = s.streak_freezes || 0, last = s.last_streak_date || null;
+  if (last === dateStr) {
+    return { ok: true, is_new: false, current_streak: cur, longest_streak: best,
+             freezes: freezes, frozen: false, milestone: false, source: 'local' };
+  }
+  let ns, frozen = false;
+  if (!last) { ns = 1; }
+  else {
+    const gap = Math.round((new Date(dateStr + 'T12:00:00') - new Date(last + 'T12:00:00')) / 86400000);
+    if (gap === 1) ns = cur + 1;
+    else if (gap === 2 && freezes > 0) { ns = cur + 1; frozen = true; }
+    else ns = 1;
+  }
+  const milestone = ns % 7 === 0;
+  const nf = freezes - (frozen ? 1 : 0) + (milestone ? 1 : 0);
+  setStreakLocal({ current_streak: ns, longest_streak: Math.max(best, ns),
+                   last_streak_date: dateStr, streak_freezes: nf });
+  return { ok: true, is_new: true, current_streak: ns, longest_streak: Math.max(best, ns),
+           freezes: nf, frozen: frozen, milestone: milestone, source: 'local' };
+}
+async function recordStreakDay() {
+  const dateStr = todayStr();
+  if (cloudReady()) {
+    try {
+      const r = await sb.rpc('record_streak_day', { p_date: dateStr });
+      if (!r.error && r.data && r.data.ok) {
+        const d = r.data;
+        return { ok: true, is_new: !!d.is_new, current_streak: d.current_streak,
+                 longest_streak: d.longest_streak, freezes: d.freezes,
+                 frozen: !!d.frozen, milestone: !!d.milestone, source: 'cloud' };
+      }
+    } catch (e) { /* pre-migration → local fallback */ }
+  }
+  return recordStreakDayLocal(dateStr);
+}
+async function grantFreeze() {
+  if (cloudReady()) {
+    try {
+      const r = await sb.rpc('grant_streak_freeze');
+      if (!r.error && r.data && r.data.ok) return r.data.freezes;
+    } catch (e) { /* pre-migration → local fallback */ }
+  }
+  const s = getStreakLocal();
+  const nf = (s.streak_freezes || 0) + 1;
+  s.streak_freezes = nf; setStreakLocal(s);
+  return nf;
+}
+/* Dates (YYYY-MM-DD) with a completed word quiz — for the streak week strip. */
+async function getWordQuizDates() {
+  try {
+    const attempts = await getAttempts();
+    const set = {};
+    attempts.forEach(function (a) { if (a && a.kind === 'word' && a.date) set[a.date] = 1; });
+    return set;
+  } catch (e) { return {}; }
+}
+function weekStripHTML(dateSet) {
+  const now = new Date();
+  const dow = now.getDay(); /* 0 = Su */
+  const start = new Date(now); start.setDate(now.getDate() - dow);
+  const names = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+  let days = '', dots = '';
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(start); d.setDate(start.getDate() + i);
+    const done = !!dateSet[fmtDate(d)];
+    days += '<span class="' + (i === dow ? 'today' : '') + '">' + names[i] + '</span>';
+    dots += '<span><i class="' + (done ? 'on' : (i === 6 ? 'star' : 'off')) + '">' +
+            (done ? '✓' : (i === 6 ? '★' : '')) + '</i></span>';
+  }
+  return '<div class="cel-week"><div class="cel-wdays">' + days +
+         '</div><div class="cel-wdots">' + dots + '</div></div>';
+}
+
+/* ---------------- celebration sequence ----------------
+   Four full-screen moments after the first word-quiz completion of the day:
+   1. Lesson Complete → 2. Mystery Box → 3. Streak → 4. Bonus nudge (+30 XP). */
+var celState = null;
+function launchCelebration(info) {
+  closeCelebration();
+  const root = document.createElement('div');
+  root.id = 'celebration';
+  root.innerHTML =
+  '<div class="cel-stage">' +
+    '<section id="cel-m1" class="cel-moment active">' +
+      '<canvas id="cel-confetti"></canvas>' +
+      '<img id="cel-girl" src="/media/celebration/girl.webp" alt="Celebrating">' +
+      '<div class="cel-m1-body"><h1>Lesson Complete!</h1>' +
+      '<div class="cel-xp">+' + info.xp + ' XP</div>' +
+      '<p class="cel-stats">' + info.total + ' words &nbsp;•&nbsp; Quiz ' + info.correct + '/' + info.total + '</p>' +
+      '<button class="cel-btn" id="cel-to-m2">CONTINUE</button></div>' +
+    '</section>' +
+    '<section id="cel-m2" class="cel-moment">' +
+      '<div class="cel-shake-wrap">' +
+        '<img id="cel-gift-closed" class="cel-bleed" src="/media/celebration/gift-closed.webp" alt="Mystery gift box">' +
+        '<img id="cel-gift-open" class="cel-bleed" src="/media/celebration/gift-open.webp" alt="Opened gift box">' +
+      '</div>' +
+      '<div id="cel-flash"></div>' +
+      '<div class="cel-m2-top"><h1>You earned a<br>Mystery Box!</h1><p>Tap anywhere to open</p></div>' +
+      '<div class="cel-m2-cta"><button id="cel-open">🎁 TAP TO OPEN!</button></div>' +
+      '<div id="cel-reward"><div class="cel-reward-card"><div class="rk">YOUR REWARD</div>' +
+      '<div id="cel-reward-name">+50 XP</div>' +
+      '<button class="cel-btn" id="cel-to-m3">CONTINUE</button></div></div>' +
+    '</section>' +
+    '<section id="cel-m3" class="cel-moment">' +
+      '<img id="cel-flame" src="/media/celebration/flame.webp" alt="Streak flame">' +
+      '<div id="cel-streak-num">0</div><div class="cel-streak-label">day streak!</div>' +
+      '<div id="cel-frozen-note" class="cel-frozen-note"></div>' +
+      '<div id="cel-week"></div>' +
+      '<button class="cel-btn-white" id="cel-share">SHARE MILESTONE</button>' +
+      '<button class="cel-btn-text" id="cel-to-m4">CONTINUE</button>' +
+      '<p class="cel-freezes" id="cel-freezes"></p>' +
+    '</section>' +
+    '<section id="cel-m4" class="cel-moment">' +
+      '<img id="cel-flame-sm" src="/media/celebration/flame.webp" alt="Flame mascot">' +
+      '<div class="cel-nudge-card"><h1>Today\u2019s lesson is done! \uD83C\uDF89</h1>' +
+      '<p>Listen to the <b>podcast</b> and finish <b>shadowing</b> for <b>+30 bonus XP</b> \u2014 and you\u2019ll remember these words far better.</p>' +
+      '<button class="cel-btn" id="cel-to-podcast">GO TO PODCAST</button>' +
+      '<button class="cel-btn-ghost" id="cel-done">MAYBE LATER</button></div>' +
+    '</section>' +
+  '</div>';
+  document.body.appendChild(root);
+  celState = { info: info, opened: false };
+  celState.streakP = recordStreakDay();   /* kicked off early, awaited at moment 3 */
+  celState.datesP = getWordQuizDates();
+  wireCelebration();
+  startCelConfetti();
+}
+function celShow(id) {
+  ['cel-m1', 'cel-m2', 'cel-m3', 'cel-m4'].forEach(function (m) {
+    document.getElementById(m).classList.remove('active');
+  });
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0, 0);
+}
+function wireCelebration() {
+  document.getElementById('cel-to-m2').addEventListener('click', function () {
+    stopCelConfetti(); celShow('cel-m2');
+  });
+  document.getElementById('cel-m2').addEventListener('click', function () {
+    if (!celState || celState.opened) return;
+    celState.opened = true;
+    const m2 = document.getElementById('cel-m2');
+    m2.classList.add('shaking');
+    setTimeout(function () {
+      m2.classList.remove('shaking');
+      document.getElementById('cel-gift-closed').classList.add('fadeout');
+      document.getElementById('cel-gift-open').classList.add('show');
+      document.getElementById('cel-flash').classList.add('on');
+      setTimeout(function () { document.getElementById('cel-flash').classList.remove('on'); }, 450);
+      openMysteryBox();
+      document.querySelector('.cel-m2-cta').classList.add('hidden');
+      document.getElementById('cel-reward').classList.add('up');
+    }, 650);
+  });
+  document.getElementById('cel-to-m3').addEventListener('click', function (e) {
+    e.stopPropagation(); showStreakMoment();
+  });
+  document.getElementById('cel-to-m4').addEventListener('click', function (e) {
+    e.stopPropagation(); celShow('cel-m4');
+  });
+  document.getElementById('cel-share').addEventListener('click', function (e) {
+    e.stopPropagation(); shareMilestone();
+  });
+  document.getElementById('cel-to-podcast').addEventListener('click', function () {
+    const d = celState.info.date;
+    closeCelebration();
+    state.lessonTab = 'podcast';
+    go('lesson', d);
+  });
+  document.getElementById('cel-done').addEventListener('click', function () {
+    closeCelebration();
+    go('home');
+  });
+}
+function openMysteryBox() {
+  const date = celState.info.date;
+  const rewards = [
+    { label: '+50 XP', run: function () { awardPoints('mystery_box', 50, date); } },
+    { label: '+20 XP', run: function () { awardPoints('mystery_box', 20, date); } },
+    { label: '🧊 Streak Freeze', run: function () {
+        grantFreeze().then(function (n) { updateFreezeLine(n); });
+      } },
+    { label: '⭐ Weekly Star', run: function () { awardPoints('mystery_box', 30, date); } }
+  ];
+  const r = rewards[Math.floor(Math.random() * rewards.length)];
+  document.getElementById('cel-reward-name').textContent = r.label;
+  try { r.run(); } catch (e) {}
+}
+async function showStreakMoment() {
+  celShow('cel-m3');
+  let st = { current_streak: 1, freezes: 0, frozen: false, milestone: false };
+  let dates = {};
+  try { st = await celState.streakP; } catch (e) {}
+  try { dates = await celState.datesP; } catch (e) {}
+  if (!celState) return;
+  celState.streak = st;
+  countUpCel(document.getElementById('cel-streak-num'), st.current_streak || 1);
+  document.getElementById('cel-week').innerHTML = weekStripHTML(dates);
+  updateFreezeLine(st.freezes || 0);
+  const fn = document.getElementById('cel-frozen-note');
+  fn.textContent = st.frozen ? '🧊 A freeze saved your streak!'
+    : (st.milestone ? '🎉 Milestone reached — +1 freeze earned!' : '');
+}
+function updateFreezeLine(n) {
+  const el = document.getElementById('cel-freezes');
+  if (el) el.textContent = '🧊 ' + n + ' freeze' + (n === 1 ? '' : 's') + ' ready';
+}
+function shareMilestone() {
+  const n = (celState && celState.streak && celState.streak.current_streak) || 1;
+  const text = '🔥 ' + n + '-day English streak on Muse English! Can you beat it?';
+  if (navigator.share) { navigator.share({ text: text }).catch(function () {}); }
+  else if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).catch(function () {});
+    const b = document.getElementById('cel-share');
+    if (b) { const t = b.textContent; b.textContent = 'COPIED!';
+      setTimeout(function () { if (b.isConnected) b.textContent = t; }, 1500); }
+  }
+}
+function countUpCel(el, target) {
+  let t0 = null;
+  function step(ts) {
+    if (!t0) t0 = ts;
+    const k = Math.min(1, (ts - t0) / 1300);
+    const e = 1 - Math.pow(1 - k, 3);
+    el.textContent = Math.round(e * target);
+    if (k < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+var celRaf = null;
+function startCelConfetti() {
+  const cv = document.getElementById('cel-confetti'); if (!cv) return;
+  const ctx = cv.getContext('2d');
+  const box = document.getElementById('cel-m1').getBoundingClientRect();
+  cv.width = box.width || 390; cv.height = box.height || 700;
+  const cols = ['#C84B31', '#39745A', '#FFC800', '#FF9600', '#ffffff'];
+  const pieces = [];
+  for (let i = 0; i < 130; i++) pieces.push({
+    x: Math.random() * cv.width, y: -Math.random() * cv.height,
+    w: 6 + Math.random() * 7, h: 8 + Math.random() * 8, c: cols[i % cols.length],
+    vy: 2 + Math.random() * 3.5, vx: -1.5 + Math.random() * 3,
+    r: Math.random() * Math.PI, vr: -0.1 + Math.random() * 0.2
+  });
+  function tick() {
+    celRaf = requestAnimationFrame(tick);
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    for (const p of pieces) {
+      p.x += p.vx; p.y += p.vy; p.r += p.vr;
+      if (p.y > cv.height + 20) { p.y = -20; p.x = Math.random() * cv.width; }
+      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.r);
+      ctx.fillStyle = p.c; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore();
+    }
+  }
+  if (!celRaf) tick();
+}
+function stopCelConfetti() {
+  if (celRaf) { cancelAnimationFrame(celRaf); celRaf = null; }
+  const cv = document.getElementById('cel-confetti');
+  if (cv) { try { cv.getContext('2d').clearRect(0, 0, cv.width, cv.height); } catch (e) {} }
+}
+function closeCelebration() {
+  stopCelConfetti();
+  const el = document.getElementById('celebration');
+  if (el && el.parentNode) el.parentNode.removeChild(el);
+  celState = null;
 }
 
 /* ---------------- scores view (Progress) ---------------- */
