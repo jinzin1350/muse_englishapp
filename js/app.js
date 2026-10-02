@@ -438,7 +438,8 @@ var ICO = {
   book: svgIcon('<path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/>'),
   check: svgIcon('<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>'),
   refresh: svgIcon('<polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>'),
-  lock: svgIcon('<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>')
+  lock: svgIcon('<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>'),
+  grid: svgIcon('<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>')
 };
 
 var PTS_LABELS = {
@@ -835,18 +836,18 @@ function mulberry32(a) {
 
 function fakeBoard(weekly) {
   const bucket = Math.floor(Date.now() / (5 * 3600 * 1000)); // new shuffle every 5h
-  const top = weekly ? 850 : 7800;
-  const bottom = weekly ? 45 : 380;
+  const top = 190, bottom = 20;
   const rows = [];
   for (let i = 0; i < FAKE_NAMES.length; i++) {
     const rnd = mulberry32(i * 7919 + bucket * 131 + (weekly ? 17 : 913));
     const decay = Math.pow(1 - i / FAKE_NAMES.length, 1.4);
     const base = bottom + (top - bottom) * decay;
     const move = (rnd() - 0.5) * 0.10 + Math.sin(bucket * 0.9 + i * 1.7) * 0.04;
+    const pts = Math.round(base * (1 + move));
     rows.push({
       user_id: 'fake-' + i,
       display_name: FAKE_NAMES[i],
-      points: Math.max(1, Math.round(base * (1 + move)))
+      points: Math.min(top, Math.max(bottom, pts))
     });
   }
   return rows;
@@ -1053,12 +1054,14 @@ function refreshTrackCards() {
   if (mpTime) mpTime.textContent = fmtTime(cur);
   $$('[data-audio-card]').forEach(function (card) {
     const active = card.getAttribute('data-src') === player.src;
+    const playing = active && !player.el.paused;
+    card.classList.toggle('is-playing', playing);
     const bar = $('.progress > div', card);
     const tcur = $('.t-cur', card);
     const tbtn = $('.play-btn', card);
     if (bar) bar.style.width = (active ? pct : 0) + '%';
     if (tcur) tcur.textContent = active ? fmtTime(cur) : '0:00';
-    if (tbtn && !tbtn.disabled) tbtn.textContent = (active && !player.el.paused) ? '⏸' : '▶';
+    if (tbtn && !tbtn.disabled) tbtn.textContent = playing ? '⏸' : '▶';
   });
   $$('.speed-btn').forEach(function (b) {
     b.classList.toggle('active', parseFloat(b.getAttribute('data-rate')) === player.el.playbackRate);
@@ -1271,30 +1274,28 @@ function audioCardHTML(o) {
     return '<button class="speed-btn" data-action="speed" data-rate="' + r + '" aria-label="Playback speed ' + r + 'x">' + r + 'x</button>';
   }).join('') : '';
   const transcriptBtn = o.transcript
-    ? '<button class="btn btn-ghost btn-sm" data-action="toggle-transcript" data-transcript="' + esc(o.transcript) + '" aria-expanded="false">📝 Transcript</button>'
+    ? '<button class="btn btn-ghost btn-sm ap-chip" data-action="toggle-transcript" data-transcript="' + esc(o.transcript) + '" aria-expanded="false">📝 Transcript</button>'
     : '';
-  const skipBtns =
-    '<div class="skip-row" role="group" aria-label="Skip 10 seconds">' +
-      '<button class="btn btn-ghost btn-sm" data-action="skip-back" aria-label="Back 10 seconds">⏪ 10s</button>' +
-      '<button class="btn btn-ghost btn-sm" data-action="skip-fwd" aria-label="Forward 10 seconds">10s ⏩</button>' +
-    '</div>';
+  const cover = o.cover
+    ? '<div class="ap-cover"><img src="' + esc(o.cover) + '" alt="" loading="lazy" onerror="this.closest(\'.ap-cover\').style.display=\'none\'">' +
+      '<button class="ap-cover-play" data-action="play-track" data-src="' + esc(o.src) + '" data-title="' + esc(o.title) + '" aria-label="Play ' + esc(o.title) + '">▶</button></div>'
+    : '';
   return '' +
-  '<div class="card audio-card" data-audio-card data-src="' + esc(o.src) + '" data-title="' + esc(o.title) + '" id="' + esc(o.id) + '">' +
-    '<div class="audio-top">' +
-      (o.cover ? '<img class="podcast-cover" src="' + esc(o.cover) + '" alt="" onerror="this.style.display=\'none\'">' : '') +
-      '<button class="play-btn" data-action="play-track" data-src="' + esc(o.src) + '" data-title="' + esc(o.title) + '" aria-label="Play ' + esc(o.title) + '">▶</button>' +
-      '<div class="audio-meta">' +
-        '<div class="audio-title">' + esc(o.title) + '</div>' +
-        (o.sub ? '<div class="muted">' + esc(o.sub) + '</div>' : '') +
-      '</div>' +
+  '<div class="card audio-card2" data-audio-card data-src="' + esc(o.src) + '" data-title="' + esc(o.title) + '" id="' + esc(o.id) + '">' +
+    '<div class="ap-title">' + esc(o.title) + '</div>' +
+    (o.sub ? '<div class="ap-sub">' + esc(o.sub) + '</div>' : '') +
+    cover +
+    '<div class="progress seekable ap-progress" role="progressbar" aria-label="Playback progress"><div></div></div>' +
+    '<div class="ap-times"><span class="t-cur">0:00</span><span class="t-dur"></span></div>' +
+    '<div class="ap-controls">' +
+      '<button class="ap-skip" data-action="skip-back" aria-label="Back 10 seconds"><span class="ap-rs">↻</span><span>10s</span></button>' +
+      '<button class="play-btn ap-play" data-action="play-track" data-src="' + esc(o.src) + '" data-title="' + esc(o.title) + '" aria-label="Play ' + esc(o.title) + '">▶</button>' +
+      '<button class="ap-skip" data-action="skip-fwd" aria-label="Forward 10 seconds"><span>10s</span><span class="ap-rs">↺</span></button>' +
     '</div>' +
-    '<div class="progress seekable" role="progressbar" aria-label="Playback progress"><div></div></div>' +
-    '<div class="audio-times"><span class="t-cur">0:00</span><span class="t-dur"></span></div>' +
-    '<div class="audio-actions">' +
-      skipBtns +
-      (speeds ? '<div class="speed-row" role="group" aria-label="Playback speed">' + speeds + '</div>' : '') +
-      (o.download ? '<a class="btn btn-ghost btn-sm" href="' + esc(o.src) + '" download>⬇ Download</a>' : '') +
+    '<div class="ap-foot">' +
+      (o.download ? '<a class="btn btn-ghost btn-sm ap-chip" href="' + esc(o.src) + '" download>⬇ Download</a>' : '') +
       transcriptBtn +
+      (speeds ? '<div class="speed-row ap-speeds" role="group" aria-label="Playback speed">' + speeds + '</div>' : '') +
     '</div>' +
     '<div class="transcript-panel hidden"></div>' +
     '<div class="coming-soon hidden">🎵 Audio is coming soon — it will appear here automatically once published.</div>' +
@@ -2227,52 +2228,30 @@ async function checkLevel() {
 function todayCardHTML(m) {
   const p = getDayProgress(m.date);
   const done = dayDoneCount(m.date);
-  const pct = Math.round((done / STEPS.length) * 100);
   const ns = nextStep(m.date);
-  const isToday = m.date === todayStr();
 
-  const stepsHTML = STEPS.map(function (s, i) {
-    const isDone = !!p[s];
-    const isNext = !isDone && s === ns;
-    const cls = isDone ? 'done' : (isNext ? 'next' : 'todo');
-    const mark = isDone ? '✓' : String(i + 1);
-    return '<li class="' + cls + '">' +
-      '<button class="today-step-btn" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + s + '" aria-label="Go to ' + STEP_LABELS[s] + '">' +
-      '<span class="st-ck" aria-hidden="true">' + mark + '</span>' +
-      '<span class="st-name">' + STEP_LABELS[s] + '</span>' +
-      (isNext ? '<span class="st-pill">CONTINUE</span>' : '') +
-      '<span class="st-go" aria-hidden="true">›</span>' +
-      '</button></li>';
-  }).join('');
-
-  let cta, ctaSub;
+  let cta, tabFor;
   if (ns) {
-    const started = done > 0;
-    cta = started ? 'Continue with ' + STEP_LABELS[ns] : 'Start today’s lesson';
-    ctaSub = started ? 'Pick up where you left off.' : 'About 20 minutes, step by step.';
+    tabFor = ns;
+    cta = done > 0 ? 'Continue with ' + STEP_LABELS[ns] : 'Start today\u2019s lesson';
   } else {
-    cta = 'Lesson complete 🎉';
-    ctaSub = 'Nice work — come back tomorrow for a new lesson.';
+    tabFor = 'words';
+    cta = 'Lesson complete \uD83C\uDF89';
   }
-  const tabFor = ns || 'words';
+  const stepIco = ns === 'grammar' ? '\uD83D\uDCDA' : (ns === 'quiz' ? '\uD83C\uDFAF' :
+    (ns === 'podcast' ? '\uD83C\uDFA7' : (ns === 'shadowing' ? '\uD83C\uDFA4' : '\uD83D\uDCDA')));
 
   return '' +
-  '<section class="card today-card" aria-labelledby="today-h">' +
-    '<span class="hero-kicker" style="background:rgba(200,75,49,.1);color:var(--tomato-dark)">📅 Today’s lesson</span>' +
-    '<div class="today-top">' +
-      '<div>' +
-        '<div class="hero-date">' + esc(m.date) + (isToday ? ' · <b>Today</b>' : ' · Latest lesson') + '</div>' +
-        '<h2 class="today-theme" id="today-h">' + esc(m.theme || 'Daily lesson') + '</h2>' +
-        '<span class="badge-level">' + esc(levelLabel(normalizeLevel(m.level))) + '</span>' +
-      '</div>' +
+  '<section class="hero-card" aria-labelledby="today-h">' +
+    '<div class="hero-text">' +
+      '<span class="hero-kicker2">Continue Learning</span>' +
+      '<h2 class="hero-title2" id="today-h">' + esc(m.theme || 'Daily lesson') + '</h2>' +
+      '<div class="hero-meta">' + stepIco + ' ' + esc(levelLabel(normalizeLevel(m.level))) + ' \u00B7 ' + esc(fmtDateShort(m.date)) + '</div>' +
+      '<button class="hero-cta" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + tabFor + '">' +
+        '<span class="hero-play">\u25B6</span><span>' + esc(cta) + '</span><span class="hero-go">\u2192</span>' +
+      '</button>' +
     '</div>' +
-    '<ul class="today-steps" aria-label="Lesson steps">' + stepsHTML + '</ul>' +
-    '<div class="today-progress">' +
-      '<div class="tp-label"><span>Daily progress</span><span>' + done + ' of ' + STEPS.length + ' steps</span></div>' +
-      '<div class="progress" role="progressbar" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100" aria-label="Daily progress"><div style="width:' + pct + '%"></div></div>' +
-    '</div>' +
-    '<button class="btn btn-block" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + tabFor + '">' + esc(cta) + '</button>' +
-    '<p class="muted" style="margin:0.5rem 0 0;text-align:center">' + esc(ctaSub) + '</p>' +
+    '<img class="hero-art" src="/media/hero-mascot.webp" alt="Mascot studying" loading="lazy">' +
   '</section>';
 }
 
@@ -2305,7 +2284,9 @@ function prevLessonsHTML(lessons) {
           ? '<img src="' + esc(cover) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
           : '<div class="prev-ph" aria-hidden="true">📚</div>') +
         '<div class="pc-body"><div class="pc-date">' + esc(fmtDateShort(m.date)) + '</div>' +
-        '<div class="pc-theme">' + esc(m.theme || 'Lesson') + '</div></div></button>';
+        '<div class="pc-theme">' + esc(m.theme || 'Lesson') + '</div>' +
+        '<div class="pc-meta">' + (m.words ? m.words.length : 0) + ' words \u00B7 ' + esc(levelLabel(normalizeLevel(m.level))) + '</div>' +
+        '<span class="pc-go">\u203A</span></div></button>';
     }).join('') + '</div>';
   }
   return html + '</section>';
@@ -2360,26 +2341,16 @@ function paintHome(v, mistakes, attempts) {
 
   let html = '';
 
-  // 0 — Challenge promo banner (loud game style, links to the arena)
-  html += '<a class="ch-promo" href="#/challenge">' +
-    '<span class="chp-shine"></span>' +
-    '<span class="chp-live"><span class="chp-dot"></span>LIVE</span>' +
-    '<span class="chp-row">' +
-      '<span class="chp-trophy">' + ICO.trophy + '</span>' +
-      '<span class="chp-txt"><b>1,500</b><span>learners battling for the top</span></span>' +
-    '</span>' +
-    '<span class="chp-cta">Join the battle <span class="chp-go">›</span></span></a>';
-
-  // 0b — Streak card (flame mascot, week strip, freezes) — painted with local
-  // data first, then refreshed with cloud state by refreshHomeStreak().
-  html += '<div id="home-streak-wrap">' + streakCardHTML(getStreakLocal()) + '</div>';
-
-  // 1 — Today's lesson (the primary action)
+  // 1 — Today's lesson hero (the primary action)
   if (!today) {
     html += '<div class="empty">No lessons published yet — check back tomorrow.</div>';
   } else {
     html += todayCardHTML(today);
   }
+
+  // 2 — Battle + Daily Streak duo
+  html += '<div class="home-duo">' + battleCardHTML() +
+          '<div id="home-streak-wrap">' + streakCardHTML(getStreakLocal()) + '</div></div>';
 
   // 1b — Previous lessons (days before today) → archive page
   html += prevLessonsHTML(lessons);
@@ -2396,8 +2367,8 @@ function paintHome(v, mistakes, attempts) {
       '<div><b>to review</b><div class="stat-example">e.g. “' + esc(mistakes[0].question.slice(0, 90)) + '”</div></div>' +
       '</div>' +
       (todayMistakes.length
-        ? '<button class="btn btn-green btn-block" data-action="review-today" data-date="' + esc(today.date) + '">Review today’s mistakes</button>'
-        : '<button class="btn btn-green btn-block" data-action="practice-again">Practice mistakes</button>') +
+        ? '<button class="btn btn-orange btn-block" data-action="review-today" data-date="' + esc(today.date) + '">▶ Review today’s mistakes</button>'
+        : '<button class="btn btn-orange btn-block" data-action="practice-again">Practice mistakes</button>') +
       '</div>';
   }
 
@@ -2604,14 +2575,14 @@ function supportAsk(text) {
 /* ---------------- lesson view ---------------- */
 function lessonTabsHTML() {
   const tabs = [
-    ['words', 'Words'],
-    ['quiz', 'Quiz'],
-    ['podcast', 'Podcast'],
-    ['shadowing', 'Shadowing'],
-    ['grammar', 'Grammar']
+    ['words', 'Words', ICO.book],
+    ['quiz', 'Quiz', ICO.quiz],
+    ['podcast', 'Podcast', ICO.headphones],
+    ['shadowing', 'Shadowing', ICO.mic],
+    ['grammar', 'Grammar', ICO.grid]
   ];
   return '<div class="lesson-tabs" role="tablist" aria-label="Lesson sections">' + tabs.map(function (t) {
-    return '<button class="lesson-tab" role="tab" aria-selected="' + (state.lessonTab === t[0]) + '" data-action="lesson-tab" data-tab="' + t[0] + '">' + t[1] + '</button>';
+    return '<button class="lesson-tab" role="tab" aria-selected="' + (state.lessonTab === t[0]) + '" data-action="lesson-tab" data-tab="' + t[0] + '"><span class="lt-ico">' + t[2] + '</span><span>' + t[1] + '</span></button>';
   }).join('') + '</div>';
 }
 
@@ -2624,9 +2595,9 @@ function renderLesson(v, dateStr) {
   if (!m) { v.innerHTML = '<div class="empty">No lesson available.</div>'; return; }
   if (m.date) awardPoints('lesson_open', 5, m.date);
 
-  let html = '<div class="hero-date">' + esc(m.date) + (m.date === todayStr() ? ' · <b>Today</b>' : '') + '</div>' +
-    '<h1 style="text-transform:capitalize">' + esc(m.theme || 'Daily lesson') + '</h1>' +
-    '<p><span class="badge-level">' + esc(levelLabel(normalizeLevel(m.level))) + '</span></p>' +
+  let html = '<div class="lesson-head"><div class="hero-date">' + esc(m.date) + (m.date === todayStr() ? ' · <b>Today</b>' : '') + '</div>' +
+    '<h1 class="lesson-title">' + esc(m.theme || 'Daily lesson') + '</h1>' +
+    '<p><span class="badge-level">' + esc(levelLabel(normalizeLevel(m.level))) + '</span></p></div>' +
     lessonTabsHTML() + '<div id="lesson-body"></div>';
   v.innerHTML = html;
   renderLessonTab($('#lesson-body'));
@@ -2730,9 +2701,9 @@ function shadowingTabHTML(m) {
 function quizTabHTML(m) {
   const n = (m.quiz || []).length;
   if (!n) return '<div class="empty">No quiz for this lesson.</div>';
-  return '<div class="card"><h3>📝 Word quiz</h3>' +
-    '<p class="muted">' + n + ' questions on today\'s words. One at a time, instant feedback — wrong answers go straight to Review.</p>' +
-    '<button class="btn btn-block" data-action="quiz-start" data-kind="word">Start quiz</button></div>';
+  return '<div class="card quiz-intro"><div class="qi-head"><span class="qi-ico">🎯</span><h3>Word quiz</h3></div>' +
+    '<p class="muted">' + n + ' questions on today\'s words. One at a time, instant feedback.</p>' +
+    '<button class="btn btn-orange btn-block" data-action="quiz-start" data-kind="word">Start quiz</button></div>';
 }
 
 function grammarTabHTML(m) {
@@ -2762,7 +2733,7 @@ function grammarTabHTML(m) {
     ? audioCardHTML({ id: 'grammar-en-' + m.date, src: g.audio,
         title: '🎧 Grammar explained simply', sub: 'Slow and easy English', speeds: true, download: true })
     : '';
-  return '<div class="grammar-page"><div class="grammar-hero"><span class="hero-kicker">📖 Grammar of the day</span>' +
+  return '<div class="grammar-page"><div class="grammar-hero"><span class="hero-kicker">🗂 Grammar of the day</span>' +
     '<h2 class="hero-title">' + esc(g.title || 'Grammar') + '</h2>' +
     '<span class="hero-badge">' + esc(levelLabel(normalizeLevel(m.level))) + '</span></div>' +
     enAudio +
@@ -2809,29 +2780,31 @@ function renderQuizView() {
   const v = $('#view');
   const cur = q.questions[q.idx];
   const total = q.questions.length;
-  let html = '<div class="quiz-progress">Question ' + (q.idx + 1) + ' of ' + total +
-    (q.kind === 'mistakes' ? ' · reviewing' : '') + '</div>' +
-    '<div class="card"><div class="quiz-q">' + esc(cur.question) + '</div><div id="quiz-opts">' +
+  const letters = ['A', 'B', 'C', 'D'];
+  let dots = '';
+  for (let i = 0; i < total; i++) {
+    dots += '<i class="' + (i < q.idx ? 'done' : (i === q.idx ? 'cur' : '')) + '"></i>';
+  }
+  let html = '<div class="quiz-progress2"><div class="qp-dots">' + dots + '</div>' +
+    '<span class="qp-count">' + (q.idx + 1) + ' / ' + total + '</span></div>' +
+    '<div class="card quiz-qcard"><div class="quiz-q">' + esc(cur.question) + '</div><div class="quiz-opts">' +
     cur.options.map(function (opt, i) {
-      let cls = 'opt-btn';
+      let cls = 'opt2';
+      let tick = '';
       if (q.answered) {
-        if (i === cur.answer) cls += ' correct';
-        else if (i === q.picked) cls += ' wrong';
+        if (i === cur.answer) { cls += ' correct'; tick = '<span class="opt-tick">✓</span>'; }
+        else if (i === q.picked) { cls += ' wrong'; tick = '<span class="opt-tick">✗</span>'; }
         else cls += ' dim';
       }
       return '<button class="' + cls + '" data-action="quiz-opt" data-idx="' + i + '"' +
-        (q.answered ? ' disabled' : '') + '>' + esc(opt) + '</button>';
-    }).join('') + '</div>';
+        (q.answered ? ' disabled' : '') + '><span class="opt-key">' + letters[i] + '</span>' +
+        '<span class="opt-text">' + esc(opt) + '</span>' + tick + '</button>';
+    }).join('') + '</div></div>';
 
   if (q.answered) {
-    const good = q.picked === cur.answer;
-    html += '<div class="quiz-feedback ' + (good ? 'good' : 'bad') + '" role="status">' +
-      (good ? '✅ Correct!' : '❌ Not quite — the correct answer is: <b>' + esc(cur.options[cur.answer]) + '</b>') +
-      '</div>' +
-      '<button class="btn btn-block" data-action="quiz-next">' +
-      (q.idx + 1 < total ? 'Next question →' : 'See my score →') + '</button>';
+    html += '<button class="btn btn-orange btn-block quiz-next" data-action="quiz-next">' +
+      (q.idx + 1 < total ? 'Next question <span>→</span>' : 'See my score <span>→</span>') + '</button>';
   }
-  html += '</div>';
   v.innerHTML = html;
   window.scrollTo(0, 0);
 }
@@ -3039,37 +3012,42 @@ function prizeLabel(points) {
   if (points === 30) return '⭐ Weekly Star';
   return '🧊 Streak Freeze';
 }
-/* ---------------- home streak card ---------------- */
+/* ---------------- home battle + streak cards ---------------- */
+function battleCardHTML() {
+  return '<a class="battle-card" href="#/challenge">' +
+    '<div class="duo-top"><span class="duo-ico duo-ico-trophy">' + ICO.trophy + '</span><b>Battle</b><span class="duo-go">\u203A</span></div>' +
+    '<img class="bc-art" src="/media/battle-trophy.webp" alt="Golden trophy" loading="lazy">' +
+    '<div class="bc-num">1,500</div>' +
+    '<div class="bc-sub">learners battling for the top!</div>' +
+    '<span class="duo-btn">\u2694\uFE0F Join the battle <span>\u203A</span></span></a>';
+}
 function homeWeekStripHTML(dateSet) {
   const now = new Date();
-  const dow = now.getDay();
+  const dow = (now.getDay() + 6) % 7; /* Mon=0 */
   const start = new Date(now); start.setDate(now.getDate() - dow);
-  const names = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+  const names = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
   let out = '';
   for (let i = 0; i < 7; i++) {
     const d = new Date(start); d.setDate(start.getDate() + i);
     const done = !!(dateSet && dateSet[fmtDate(d)]);
-    out += '<span class="hw-day' + (i === dow ? ' today' : '') + '">' +
-           '<i class="hw-name">' + names[i] + '</i>' +
-           '<i class="hw-dot' + (done ? ' on' : '') + '"></i></span>';
+    out += '<span class="sw-day' + (i === dow ? ' today' : '') + '"><i class="sw-n">' + names[i] +
+           '</i><i class="sw-d' + (done ? ' on' : '') + '"></i></span>';
   }
-  return '<div class="hw-strip">' + out + '</div>';
+  return '<div class="sw-strip">' + out + '</div>';
 }
 function streakCardHTML(st, dates) {
   st = st || {};
   const n = st.current_streak || 0;
   const fr = (st.freezes != null ? st.freezes : st.streak_freezes) || 0;
-  const headline = n > 0
-    ? '<div class="streak-topline"><span class="streak-num">' + n + '</span>' +
-      '<span class="streak-unit">day streak!</span></div>'
-    : '<div class="streak-topline"><span class="streak-start">Start your streak today! 🔥</span></div>';
-  return '<section class="card streak-card" aria-label="Your streak">' +
-    '<img class="streak-flame" src="/media/celebration/flame.webp" alt="Streak flame">' +
-    '<div class="streak-main">' + headline +
-      homeWeekStripHTML(dates) +
-      '<div class="streak-freezes">🧊 ' + fr + ' freeze' + (fr === 1 ? '' : 's') + ' ready</div>' +
-    '</div></section>';
+  return '<section class="streak-card2" aria-label="Your streak">' +
+    '<div class="duo-top"><span class="duo-ico duo-ico-flame"><img src="/media/celebration/flame.webp" alt=""></span><b>Daily Streak</b><span class="duo-go">\u203A</span></div>' +
+    '<div class="sc-num"><b>' + n + '</b> day' + (n === 1 ? '' : 's') + ' in a row!</div>' +
+    homeWeekStripHTML(dates) +
+    '<div class="sc-freeze"><span class="sc-snow">\u2744\uFE0F</span><b>' + fr + '</b>&nbsp;freeze' + (fr === 1 ? '' : 's') +
+      ' ready<span class="duo-go">\u203A</span></div>' +
+  '</section>';
 }
+/* (home streak card functions live above, next to battleCardHTML) */
 async function refreshHomeStreak() {
   try {
     const res = await Promise.all([getStreakState(), getWordQuizDates()]);
