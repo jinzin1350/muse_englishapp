@@ -1203,6 +1203,83 @@ function seekWhenReady(card, fn) {
   return false;
 }
 
+/* ---------------- PWA install prompt (Android + iOS) ---------------- */
+let pwaDeferredPrompt = null;
+
+function pwaIsIos() {
+  return /iphone|ipad|ipod/i.test(navigator.userAgent || '') && !window.MSStream;
+}
+function pwaIsStandalone() {
+  return (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) ||
+    window.navigator.standalone === true;
+}
+function pwaSnoozed() {
+  try {
+    const v = JSON.parse(localStorage.getItem('pwa_prompt') || '{}');
+    return !!(v.dismissed && (Date.now() - v.dismissed < 7 * 24 * 3600 * 1000));
+  } catch (e) { return false; }
+}
+function pwaSnooze() {
+  try { localStorage.setItem('pwa_prompt', JSON.stringify({ dismissed: Date.now() })); } catch (e) {}
+}
+function pwaShowBanner() {
+  if (pwaIsStandalone() || pwaSnoozed()) return;
+  const el = $('#pwa-prompt');
+  if (el) el.classList.remove('hidden');
+}
+function pwaHideBanner() {
+  const el = $('#pwa-prompt');
+  if (el) el.classList.add('hidden');
+}
+function initPwaPrompt() {
+  window.addEventListener('beforeinstallprompt', function (e) {
+    e.preventDefault();
+    pwaDeferredPrompt = e;
+    // Nudge shortly after the app/landing is up.
+    setTimeout(pwaShowBanner, 2500);
+  });
+  const installBtn = $('#pwa-install');
+  if (installBtn) installBtn.addEventListener('click', function () {
+    if (pwaIsIos()) {
+      pwaHideBanner();
+      const sheet = $('#pwa-ios');
+      if (sheet) sheet.classList.remove('hidden');
+      return;
+    }
+    if (pwaDeferredPrompt) {
+      pwaDeferredPrompt.prompt();
+      pwaDeferredPrompt.userChoice.then(function () {
+        pwaDeferredPrompt = null;
+        pwaHideBanner();
+        pwaSnooze();
+      }).catch(function () {});
+    }
+  });
+  const dismissBtn = $('#pwa-dismiss');
+  if (dismissBtn) dismissBtn.addEventListener('click', function () {
+    pwaHideBanner();
+    pwaSnooze();
+  });
+  const iosDone = $('#pwa-ios-done');
+  if (iosDone) iosDone.addEventListener('click', function () {
+    const sheet = $('#pwa-ios');
+    if (sheet) sheet.classList.add('hidden');
+    pwaSnooze();
+  });
+  const sheet = $('#pwa-ios');
+  if (sheet) sheet.addEventListener('click', function (e) {
+    if (e.target === sheet) { sheet.classList.add('hidden'); pwaSnooze(); }
+  });
+  // iOS has no beforeinstallprompt: show the banner on its own.
+  if (pwaIsIos() && !pwaIsStandalone() && !pwaSnoozed()) {
+    setTimeout(pwaShowBanner, 2500);
+  }
+  window.addEventListener('appinstalled', function () {
+    pwaHideBanner();
+    pwaSnooze();
+  });
+}
+
 function initAudio() {
   // 'auto': the static host does not honor HTTP Range requests, so the browser
   // can only seek inside audio data it has already downloaded. Auto preload
@@ -1496,7 +1573,7 @@ function show(view, arg) {
 /* ---------------- chrome (headers / profile menu / nav) ---------------- */
 function setChrome() {
   const logged = !!state.user;
-  $('#landing-header').classList.toggle('hidden', logged);
+  $('#landing-header').classList.toggle('hidden', logged || state.view === 'landing');
   $('#app-header').classList.toggle('hidden', !logged);
   $('#tabbar').classList.toggle('hidden', !logged);
   if (logged) {
@@ -1522,8 +1599,8 @@ function setChrome() {
 /* ---------------- LANDING (public) ---------------- */
 function heroPreviewHTML(m) {
   if (!m) {
-    return '<div class="preview-card"><div class="preview-body">' +
-      '<p class="muted">Today’s lesson preview is loading…</p></div></div>';
+    return '<div class="lp-lesson-card"><div class="lp-lesson-body">' +
+      '<p class="lp-muted">Today’s lesson preview is loading…</p></div></div>';
   }
   const nWords = (m.words || []).length;
   const nQuiz = (m.quiz || []).length;
@@ -1534,18 +1611,18 @@ function heroPreviewHTML(m) {
     ['📈', 'Daily progress', 'Track scores and review mistakes']
   ];
   return '' +
-  '<div class="preview-card" aria-label="Preview of today’s lesson">' +
-    '<div class="preview-head"><span class="brand"><span class="brand-mark">📖</span><span class="brand-name">Muse English</span></span>' +
-    '<span class="badge-level" style="background:rgba(247,242,232,.2);color:#fff">' + esc(levelLabel(normalizeLevel(m.level))) + '</span></div>' +
-    '<div class="preview-body">' +
-      '<div class="preview-date">' + esc(m.date || '') + ' · Today’s lesson</div>' +
-      '<div class="preview-theme">' + esc(m.theme || 'Daily lesson') + '</div>' +
-      '<ul class="preview-checks">' + checks.map(function (c) {
-        return '<li><span class="ck" aria-hidden="true">' + c[0] + '</span><span><b>' + c[1] + '</b><br><span class="muted">' + c[2] + '</span></span></li>';
+  '<div class="lp-lesson-card" aria-label="Preview of today’s lesson">' +
+    '<div class="lp-lesson-head"><span class="lp-lesson-brand"><img src="icons/icon-192.png" alt=""><span>Muse English</span></span>' +
+    '<span class="lp-lesson-level">' + esc(levelLabel(normalizeLevel(m.level))) + '</span></div>' +
+    '<div class="lp-lesson-body">' +
+      '<div class="lp-lesson-date">' + esc(m.date || '') + ' · Today’s lesson</div>' +
+      '<div class="lp-lesson-theme">' + esc(m.theme || 'Daily lesson') + '</div>' +
+      '<ul class="lp-lesson-checks">' + checks.map(function (c) {
+        return '<li><span class="lp-ck" aria-hidden="true">' + c[0] + '</span><span><b>' + c[1] + '</b><br><span class="lp-muted">' + c[2] + '</span></span></li>';
       }).join('') + '</ul>' +
-      '<div class="preview-bar" role="img" aria-label="Daily progress example"><div></div></div>' +
-      '<div class="preview-progress-label">Your daily progress — tracked automatically</div>' +
-      '<a class="btn btn-block" href="#/signup">Start learning</a>' +
+      '<div class="lp-lesson-bar" role="img" aria-label="Daily progress example"><div></div></div>' +
+      '<div class="lp-muted">Your daily progress — tracked automatically</div>' +
+      '<a class="lp-cta lp-cta-block" href="#/signup">Start learning</a>' +
     '</div>' +
   '</div>';
 }
@@ -1554,91 +1631,124 @@ function renderLanding(v) {
   const returning = (function () {
     try { return !!localStorage.getItem('el_last_user'); } catch (e) { return false; }
   })();
+  const STEPS = [
+    ['1', 'Words', '10 new words with photos, pronunciation audio and Persian meanings.'],
+    ['2', 'Quiz', 'Lock them in with a quick quiz — and earn XP for every correct answer.'],
+    ['3', 'Podcast', 'Hear every word used in a real conversation, with full transcript.'],
+    ['4', 'Shadowing', 'Repeat each sentence out loud at your own speed until it feels natural.'],
+    ['5', 'Grammar', 'One clear grammar point a day, taught with today\u2019s words.']
+  ];
   v.innerHTML =
-  '<div class="landing">' +
-    /* Hero */
-    '<section class="hero">' +
-      '<div>' +
-        '<span class="hero-eyebrow">Daily English lessons · A1–C2</span>' +
-        '<h1>Build real English, one daily lesson at a time.</h1>' +
-        '<p class="hero-desc">Words, listening, shadowing, grammar and a quiz—combined into one clear learning path for your level.</p>' +
-        '<div class="hero-ctas">' +
-          '<a class="btn" href="#/signup">Start learning</a>' +
-          '<a class="btn btn-ghost" href="#/preview">Preview today’s lesson</a>' +
-        '</div>' +
-        '<ul class="hero-signals">' +
-          '<li>A1–C2 levels</li>' +
-          '<li>Audio + transcript</li>' +
-          '<li>Mistake review</li>' +
-        '</ul>' +
-        (returning ? '<p class="muted" style="margin-top:0.8rem">Welcome back — <a class="link" href="#/signin">sign in</a> to continue.</p>' : '') +
+  '<div class="lp">' +
+
+    /* Top bar */
+    '<header class="lp-nav lp-bleed">' +
+      '<a class="lp-brand" href="#/"><img src="icons/icon-192.png" alt=""><span>Muse English</span></a>' +
+      '<div class="lp-nav-actions">' +
+        '<a class="lp-signin" href="#/signin">Sign in</a>' +
+        '<a class="lp-cta lp-cta-sm" href="#/signup">Start free</a>' +
       '</div>' +
-      '<div class="hero-preview" id="hero-preview"><div class="preview-card"><div class="preview-body"><p class="muted">Loading today’s lesson…</p></div></div></div>' +
+    '</header>' +
+
+    /* Hero */
+    '<section class="lp-hero lp-bleed">' +
+      '<div class="lp-glow lp-glow-a" aria-hidden="true"></div>' +
+      '<div class="lp-glow lp-glow-b" aria-hidden="true"></div>' +
+      '<img class="lp-mascot" src="media/landing-hero.webp" alt="Muse English flame mascot">' +
+      '<div class="lp-eyebrow">Daily English lessons · A1–C2</div>' +
+      '<h1>Your English,<br>every single day.</h1>' +
+      '<p class="lp-lede">10 new words, a real podcast conversation, shadowing practice, grammar and a quiz — one 15-minute lesson matched to your level, every morning.</p>' +
+      '<div class="lp-ctas">' +
+        '<a class="lp-cta" href="#/signup">Start learning — it\u2019s free</a>' +
+        '<a class="lp-cta lp-cta-ghost" href="#/preview">See today\u2019s lesson</a>' +
+      '</div>' +
+      '<div class="lp-trust"><span>✓ Free to start</span><span>✓ No credit card</span><span>✓ 6 levels</span></div>' +
+      (returning ? '<p class="lp-returning">Welcome back — <a href="#/signin">sign in</a> to continue.</p>' : '') +
+      '<div class="lp-hero-preview" id="hero-preview"><div class="lp-lesson-card"><p class="lp-muted">Loading today\u2019s lesson…</p></div></div>' +
     '</section>' +
 
-    /* Interactive lesson preview */
-    '<section class="landing-section" aria-labelledby="lp-preview-h">' +
+    /* Stats */
+    '<section class="lp-stats lp-bleed" aria-label="Highlights">' +
+      '<div class="lp-stat"><b>6</b><span>CEFR levels</span></div>' +
+      '<div class="lp-stat"><b>10</b><span>words a day</span></div>' +
+      '<div class="lp-stat"><b>15</b><span>minutes a day</span></div>' +
+      '<div class="lp-stat"><b>5</b><span>steps per lesson</span></div>' +
+    '</section>' +
+
+    /* Social proof */
+    '<section class="lp-proof lp-bleed" aria-label="Loved by learners">' +
+      '<div class="lp-glow lp-glow-d" aria-hidden="true"></div>' +
+      '<div class="lp-proof-hero"><div class="lp-proof-big">20,000+</div>' +
+      '<div class="lp-proof-big-sub">learners have installed<br>Muse English</div></div>' +
+      '<div class="lp-proof-grid">' +
+        '<div class="lp-proof-card"><div class="lp-proof-ico" aria-hidden="true">👩‍🏫</div><div class="lp-proof-num">30</div><div class="lp-proof-lbl">English teachers use it<br>with their students</div></div>' +
+        '<div class="lp-proof-card"><div class="lp-proof-ico" aria-hidden="true">🖼️</div><div class="lp-proof-num">8,000+</div><div class="lp-proof-lbl">photos inside<br>the lessons</div></div>' +
+        '<div class="lp-proof-card"><div class="lp-proof-ico" aria-hidden="true">🎧</div><div class="lp-proof-num">3,000+</div><div class="lp-proof-lbl">hours of podcast<br>conversations</div></div>' +
+        '<div class="lp-proof-card"><div class="lp-proof-ico" aria-hidden="true">❓</div><div class="lp-proof-num">40,000+</div><div class="lp-proof-lbl">quiz questions<br>to practice</div></div>' +
+      '</div>' +
+    '</section>' +
+
+    /* Process */
+    '<section class="lp-section" id="how-it-works" aria-labelledby="lp-how-h">' +
+      '<h2 id="lp-how-h">Your daily lesson, step by step</h2>' +
+      '<p class="lp-sub">The same five steps every day — a habit you can actually keep.</p>' +
+      '<div class="lp-steps">' +
+        STEPS.map(function (s) {
+          return '<div class="lp-step"><div class="lp-step-num">' + s[0] + '</div>' +
+            '<div><h3>' + s[1] + '</h3><p>' + s[2] + '</p></div></div>';
+        }).join('') +
+      '</div>' +
+      '<div class="lp-center"><a class="lp-cta" href="#/signup">Start my first lesson</a></div>' +
+    '</section>' +
+
+    /* Interactive preview */
+    '<section class="lp-section" aria-labelledby="lp-preview-h">' +
       '<h2 id="lp-preview-h">See a real lesson</h2>' +
-      '<p class="section-sub">A peek inside today’s lesson — the same format you’ll get every day, matched to your level.</p>' +
+      '<p class="lp-sub">A peek inside today\u2019s lesson — the same format you\u2019ll get every day, matched to your level.</p>' +
       '<div class="preview-tabs" role="tablist" aria-label="Lesson preview">' +
         '<button class="preview-tab" role="tab" aria-selected="true" data-ptab="words" id="ptab-words">Words</button>' +
         '<button class="preview-tab" role="tab" aria-selected="false" data-ptab="listen" id="ptab-listen">Listen</button>' +
         '<button class="preview-tab" role="tab" aria-selected="false" data-ptab="quiz" id="ptab-quiz">Quiz</button>' +
       '</div>' +
-      '<div id="preview-tab-body" role="tabpanel" aria-labelledby="ptab-words"><p class="muted">Loading…</p></div>' +
-    '</section>' +
-
-    /* How one lesson works */
-    '<section class="landing-section" id="how-it-works" aria-labelledby="lp-how-h">' +
-      '<h2 id="lp-how-h">How one lesson works</h2>' +
-      '<p class="section-sub">The same four steps every day — a habit you can actually keep.</p>' +
-      '<div class="steps">' +
-        '<div class="step"><div class="step-num">1</div><h3>Learn</h3><p>Meet the day’s words with photos, pronunciation and Persian meanings.</p></div>' +
-        '<div class="step"><div class="step-num">2</div><h3>Listen</h3><p>Hear the words in a real podcast conversation, with a full transcript.</p></div>' +
-        '<div class="step"><div class="step-num">3</div><h3>Speak</h3><p>Shadow each sentence out loud — repetition that builds fluency.</p></div>' +
-        '<div class="step"><div class="step-num">4</div><h3>Review</h3><p>Take the quiz. Anything you miss comes back automatically for review.</p></div>' +
-      '</div>' +
+      '<div id="preview-tab-body" role="tabpanel" aria-labelledby="ptab-words"><p class="lp-muted">Loading…</p></div>' +
     '</section>' +
 
     /* Levels */
-    '<section class="landing-section" id="levels" aria-labelledby="lp-levels-h">' +
-      '<h2 id="lp-levels-h">Built for your level</h2>' +
-      '<p class="section-sub">Six CEFR levels, from your first English words to near-native precision. Your teacher assigns your level; every lesson matches it.</p>' +
-      '<div class="level-grid">' +
+    '<section class="lp-section" id="levels" aria-labelledby="lp-levels-h">' +
+      '<h2 id="lp-levels-h">One app, six levels</h2>' +
+      '<p class="lp-sub">From your first English words to near-native precision. Pick your level when you join — every lesson matches it.</p>' +
+      '<div class="lp-levels">' +
         LEVELS.map(function (lv) {
-          return '<div class="level-cell"><div class="lvl">' + lv.toUpperCase() + '</div>' +
-            '<div class="lbl">' + esc(LEVEL_LABELS[lv].split(' · ')[1]) + '</div>' +
-            '<div class="desc">' + esc(LEVEL_DESC[lv]) + '</div></div>';
+          return '<div class="lp-level"><div class="lp-lvl">' + lv.toUpperCase() + '</div>' +
+            '<div class="lp-lvl-name">' + esc(LEVEL_LABELS[lv].split(' · ')[1]) + '</div>' +
+            '<div class="lp-lvl-desc">' + esc(LEVEL_DESC[lv]) + '</div></div>';
         }).join('') +
       '</div>' +
+      '<div class="lp-center"><a class="lp-cta lp-cta-ghost" href="#/signup">Find my level — join free</a></div>' +
     '</section>' +
 
-    /* Mistakes become practice */
-    '<section class="landing-section" aria-labelledby="lp-mistakes-h">' +
-      '<div class="mistake-band">' +
-        '<div>' +
-          '<h2 id="lp-mistakes-h">Mistakes become practice</h2>' +
-          '<p>Every wrong answer is saved automatically. When you review, you practice exactly the words you missed — and each one leaves your review list the moment you get it right.</p>' +
-          '<a class="btn btn-green" href="#/signup" style="margin-top:0.6rem">Start learning</a>' +
-        '</div>' +
-        '<div class="mistake-demo" aria-hidden="true">' +
-          '<div class="md-q">“She ___ to work every day.”</div>' +
-          '<div class="md-wrong">✗ You chose: “go”</div>' +
-          '<div class="md-arrow">↓</div>' +
-          '<div class="md-review">✓ Saved to Review → practice again → “goes” → done.</div>' +
-        '</div>' +
+    /* Why it sticks */
+    '<section class="lp-section" aria-labelledby="lp-why-h">' +
+      '<h2 id="lp-why-h">Why it sticks</h2>' +
+      '<p class="lp-sub">Designed to keep you coming back — and to make every mistake count.</p>' +
+      '<div class="lp-why">' +
+        '<div class="lp-why-card"><div class="lp-why-emoji" aria-hidden="true">🔥</div><h3>Streaks &amp; XP</h3><p>Every lesson builds your streak. Miss a day and a freeze saves it — earn more freezes every 7 days.</p></div>' +
+        '<div class="lp-why-card"><div class="lp-why-emoji" aria-hidden="true">🎯</div><h3>Mistakes become practice</h3><p>Every wrong answer is saved automatically. Review practices exactly what you missed — each word leaves your list the moment you get it right.</p></div>' +
+        '<div class="lp-why-card"><div class="lp-why-emoji" aria-hidden="true">🎧</div><h3>A real podcast, daily</h3><p>Two hosts use every new word in a natural conversation — with transcript, shadowing audio and milestone rewards for listening.</p></div>' +
       '</div>' +
     '</section>' +
 
     /* Final CTA */
-    '<section class="final-cta" aria-labelledby="lp-final-h">' +
-      '<h2 id="lp-final-h">Start today’s lesson</h2>' +
-      '<p class="muted">One lesson a day. Words, listening, speaking and a quiz — for your level.</p>' +
-      '<a class="btn" href="#/signup">Create your free account</a><br>' +
-      '<span class="muted">Already have an account? <a class="link" href="#/signin">Sign in</a></span>' +
+    '<section class="lp-final lp-bleed" aria-labelledby="lp-final-h">' +
+      '<div class="lp-glow lp-glow-c" aria-hidden="true"></div>' +
+      '<img class="lp-final-mascot" src="media/podcast/mascot-96.webp" alt="">' +
+      '<h2 id="lp-final-h">Start today\u2019s lesson</h2>' +
+      '<p>One lesson a day. Words, quiz, podcast, shadowing and grammar — for your level.</p>' +
+      '<a class="lp-cta lp-cta-lg" href="#/signup">Create your free account</a>' +
+      '<div class="lp-signin-row">Already have an account? <a href="#/signin">Sign in</a></div>' +
     '</section>' +
 
-    '<footer class="landing-footer">Muse English · daily lessons for levels A1–C2</footer>' +
+    '<footer class="lp-footer">Muse English · daily lessons for levels A1–C2</footer>' +
   '</div>';
 
   // Fill the hero preview + interactive tabs with real lesson content.
@@ -3829,6 +3939,7 @@ function bindEvents() {
 async function init() {
   initAudio();
   bindEvents();
+  initPwaPrompt();
   initSupabase();
   initOneSignal();
   syncPushState();

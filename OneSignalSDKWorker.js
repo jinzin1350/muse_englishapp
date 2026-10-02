@@ -3,7 +3,7 @@
    custom-worker pattern): a single root-scope worker, so push keeps working. */
 importScripts('https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js');
 
-const CACHE = 'engapp-v2';
+const CACHE = 'engapp-v3';
 const CORE = [
   '/',
   '/index.html',
@@ -12,7 +12,14 @@ const CORE = [
   '/js/app.js',
   '/js/config.js',
   '/icons/icon-192.png',
-  '/icons/icon-512.png'
+  '/icons/icon-512.png',
+  '/icons/maskable-512.png',
+  '/icons/apple-touch-icon.png',
+  '/media/podcast/btn-pause.webp',
+  '/media/podcast/btn-play.webp',
+  '/media/podcast/btn-x.webp',
+  '/media/podcast/mascot-96.webp',
+  '/media/podcast/note-96.webp'
 ];
 
 self.addEventListener('install', function (e) {

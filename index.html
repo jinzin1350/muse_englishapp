@@ -68,7 +68,7 @@ setTimeout(function () {
   <header id="landing-header" class="landing-header hidden">
     <div class="landing-header-inner">
       <a class="brand" href="#/" aria-label="Muse English home">
-        <span class="brand-mark" aria-hidden="true">📖</span>
+        <img class="brand-icon" src="icons/icon-192.png" alt="" aria-hidden="true">
         <span class="brand-name">Muse English</span>
       </a>
       <nav class="landing-nav" aria-label="Product">
@@ -116,6 +116,29 @@ setTimeout(function () {
     </div>
     <button id="mp-toggle" class="mp-btn" aria-label="Play or pause"><img id="mp-toggle-img" src="media/podcast/btn-pause.webp" alt=""></button>
     <button id="mp-close" class="mp-x" aria-label="Close player"><img src="media/podcast/btn-x.webp" alt=""></button>
+  </div>
+
+  <!-- PWA install prompt (Android + iOS) -->
+  <div id="pwa-prompt" class="pwa-prompt hidden" role="dialog" aria-label="Install Muse English">
+    <img class="pwa-icon" src="icons/icon-192.png" alt="">
+    <div class="pwa-text">
+      <div class="pwa-title">Install Muse English</div>
+      <div class="pwa-sub">Your daily lesson, one tap away.</div>
+    </div>
+    <button id="pwa-install" class="pwa-btn">Install</button>
+    <button id="pwa-dismiss" class="pwa-x" aria-label="Not now">✕</button>
+  </div>
+  <div id="pwa-ios" class="pwa-sheet hidden" role="dialog" aria-label="How to install on iPhone">
+    <div class="pwa-sheet-card">
+      <img class="pwa-icon" src="icons/icon-192.png" alt="">
+      <div class="pwa-title">Install Muse English</div>
+      <ol class="pwa-steps">
+        <li>Tap <b>Share</b> in Safari's toolbar</li>
+        <li>Tap <b>Add to Home Screen</b></li>
+        <li>Tap <b>Add</b> — done!</li>
+      </ol>
+      <button id="pwa-ios-done" class="pwa-btn pwa-btn-block">Got it</button>
+    </div>
   </div>
 
   <!-- Learner navigation: bottom bar on mobile, sidebar on desktop -->
