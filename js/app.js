@@ -3163,197 +3163,90 @@ async function refreshHomeStreak() {
   } catch (e) {}
 }
 /* ---------------- celebration sequence ----------------
-   Four full-screen moments after the first word-quiz completion of the day:
-   1. Lesson Complete → 2. Mystery Box → 3. Streak → 4. Bonus nudge (+30 XP). */
+   Two full-screen moments after the first word-quiz completion of the day:
+   1. "Awesome! You finished today's lesson." (tap anywhere -> 2)
+   2. "Want more points?" (Go to podcast / Maybe later).
+   The day's streak is still recorded silently. */
 var celState = null;
+var QCEL_ART = {
+  a: '/media/celebration/quiz-awesome.webp',
+  b: '/media/celebration/quiz-more-points.webp'
+};
+/* tap zones as fractions of the 941x1672 art (baked-in buttons) */
+var QCEL_ZONES = {
+  b: [{ k: 'go', l: .09, t: .795, w: .82, h: .095 },
+      { k: 'later', l: .09, t: .892, w: .82, h: .075 }]
+};
 function launchCelebration(info) {
   closeCelebration();
+  try { recordStreakDay(); } catch (e) {}
+  celState = { info: info };
+  qcelShow('a');
+}
+function qcelShow(stage) {
+  qcelClear();
   const root = document.createElement('div');
   root.id = 'celebration';
+  root.setAttribute('data-stage', stage);
   root.innerHTML =
-  '<div class="cel-stage">' +
-    '<section id="cel-m1" class="cel-moment active">' +
-      '<canvas id="cel-confetti"></canvas>' +
-      '<img id="cel-girl" src="/media/celebration/girl.webp" alt="Celebrating">' +
-      '<div class="cel-m1-body"><h1>Lesson Complete!</h1>' +
-      '<div class="cel-xp">+' + info.xp + ' XP</div>' +
-      '<p class="cel-stats">' + info.total + ' words &nbsp;•&nbsp; Quiz ' + info.correct + '/' + info.total + '</p>' +
-      '<button class="cel-btn" id="cel-to-m2">CONTINUE</button></div>' +
-    '</section>' +
-    '<section id="cel-m2" class="cel-moment">' +
-      '<div class="cel-shake-wrap">' +
-        '<img id="cel-gift-closed" class="cel-bleed" src="/media/celebration/gift-closed.webp" alt="Mystery gift box">' +
-        '<img id="cel-gift-open" class="cel-bleed" src="/media/celebration/gift-open.webp" alt="Opened gift box">' +
-      '</div>' +
-      '<div id="cel-flash"></div>' +
-      '<div class="cel-m2-top"><h1>You earned a<br>Mystery Box!</h1><p>Tap anywhere to open</p></div>' +
-      '<div class="cel-m2-cta"><button id="cel-open">🎁 TAP TO OPEN!</button></div>' +
-      '<div id="cel-reward"><div class="cel-reward-card"><div class="rk">YOUR REWARD</div>' +
-      '<div id="cel-reward-name">+50 XP</div>' +
-      '<button class="cel-btn" id="cel-to-m3">CONTINUE</button></div></div>' +
-    '</section>' +
-    '<section id="cel-m3" class="cel-moment">' +
-      '<img id="cel-flame" src="/media/celebration/flame.webp" alt="Streak flame">' +
-      '<div id="cel-streak-num">0</div><div class="cel-streak-label">day streak!</div>' +
-      '<div id="cel-frozen-note" class="cel-frozen-note"></div>' +
-      '<div id="cel-week"></div>' +
-      '<button class="cel-btn-white" id="cel-share">SHARE MILESTONE</button>' +
-      '<button class="cel-btn-text" id="cel-to-m4">CONTINUE</button>' +
-      '<p class="cel-freezes" id="cel-freezes"></p>' +
-    '</section>' +
-    '<section id="cel-m4" class="cel-moment">' +
-      '<img id="cel-flame-sm" src="/media/celebration/flame.webp" alt="Flame mascot">' +
-      '<div class="cel-nudge-card"><h1>Today\u2019s lesson is done! \uD83C\uDF89</h1>' +
-      '<p>Listen to the <b>podcast</b> and finish <b>shadowing</b> for <b>+30 bonus XP</b> \u2014 and you\u2019ll remember these words far better.</p>' +
-      '<button class="cel-btn" id="cel-to-podcast">GO TO PODCAST</button>' +
-      '<button class="cel-btn-ghost" id="cel-done">MAYBE LATER</button></div>' +
-    '</section>' +
-  '</div>';
+    '<div class="podms-stage">' +
+      '<img class="podms-art" src="' + QCEL_ART[stage] + '" alt="">' +
+      '<div class="podms-zones"></div>' +
+    '</div>';
   document.body.appendChild(root);
-  celState = { info: info, opened: false };
-  celState.streakP = recordStreakDay();   /* kicked off early, awaited at moment 3 */
-  celState.datesP = getWordQuizDates();
-  wireCelebration();
-  startCelConfetti();
+  if (stage === 'a') {
+    root.querySelector('.podms-stage').addEventListener('click', function () { qcelShow('b'); });
+  } else {
+    const zones = root.querySelector('.podms-zones');
+    (QCEL_ZONES[stage] || []).forEach(function (z) {
+      const b = document.createElement('button');
+      b.className = 'podms-tap';
+      b.setAttribute('aria-label', z.k);
+      zones.appendChild(b);
+      b.addEventListener('click', function (e) { e.stopPropagation(); qcelTap(z.k); });
+    });
+  }
+  qcelLayout();
+  window.addEventListener('resize', qcelLayout);
 }
-function celShow(id) {
-  ['cel-m1', 'cel-m2', 'cel-m3', 'cel-m4'].forEach(function (m) {
-    document.getElementById(m).classList.remove('active');
-  });
-  document.getElementById(id).classList.add('active');
-  window.scrollTo(0, 0);
+function qcelLayout() {
+  try {
+    const root = document.getElementById('celebration');
+    if (!root) return;
+    const zs = QCEL_ZONES[root.getAttribute('data-stage')];
+    if (!zs) return;
+    const W = root.clientWidth, H = root.clientHeight;
+    const iw = 941, ih = 1672;
+    const sc = Math.max(W / iw, H / ih);
+    const dw = iw * sc, dh = ih * sc, ox = (W - dw) / 2, oy = (H - dh) / 2;
+    root.querySelectorAll('.podms-tap').forEach(function (b, i) {
+      const z = zs[i]; if (!z) return;
+      b.style.left = (ox + z.l * dw) + 'px';
+      b.style.top = (oy + z.t * dh) + 'px';
+      b.style.width = (z.w * dw) + 'px';
+      b.style.height = (z.h * dh) + 'px';
+    });
+  } catch (e) {}
 }
-function wireCelebration() {
-  document.getElementById('cel-to-m2').addEventListener('click', function () {
-    stopCelConfetti(); celShow('cel-m2');
-  });
-  document.getElementById('cel-m2').addEventListener('click', function () {
-    if (!celState || celState.opened) return;
-    celState.opened = true;
-    const m2 = document.getElementById('cel-m2');
-    m2.classList.add('shaking');
-    setTimeout(function () {
-      m2.classList.remove('shaking');
-      document.getElementById('cel-gift-closed').classList.add('fadeout');
-      document.getElementById('cel-gift-open').classList.add('show');
-      document.getElementById('cel-flash').classList.add('on');
-      setTimeout(function () { document.getElementById('cel-flash').classList.remove('on'); }, 450);
-      openMysteryBox();
-      document.querySelector('.cel-m2-cta').classList.add('hidden');
-      document.getElementById('cel-reward').classList.add('up');
-    }, 650);
-  });
-  document.getElementById('cel-to-m3').addEventListener('click', function (e) {
-    e.stopPropagation(); showStreakMoment();
-  });
-  document.getElementById('cel-to-m4').addEventListener('click', function (e) {
-    e.stopPropagation(); celShow('cel-m4');
-  });
-  document.getElementById('cel-share').addEventListener('click', function (e) {
-    e.stopPropagation(); shareMilestone();
-  });
-  document.getElementById('cel-to-podcast').addEventListener('click', function () {
-    const d = celState.info.date;
+function qcelTap(k) {
+  const info = celState && celState.info;
+  if (k === 'go') {
+    const d = (info && info.date) || todayStr();
     closeCelebration();
     state.lessonTab = 'podcast';
     go('lesson', d);
-  });
-  document.getElementById('cel-done').addEventListener('click', function () {
+  } else {
     closeCelebration();
     go('home');
-  });
-}
-function openMysteryBox() {
-  const date = celState.info.date;
-  const rewards = [
-    { label: '+50 XP', run: function () { awardPoints('mystery_box', 50, date); } },
-    { label: '+20 XP', run: function () { awardPoints('mystery_box', 20, date); } },
-    { label: '🧊 Streak Freeze', run: function () {
-        awardPoints('mystery_box', 0, date); /* ledger row for prize history; no popup for 0 pts */
-        grantFreeze().then(function (n) { updateFreezeLine(n); });
-      } },
-    { label: '⭐ Weekly Star', run: function () { awardPoints('mystery_box', 30, date); } }
-  ];
-  const r = rewards[Math.floor(Math.random() * rewards.length)];
-  document.getElementById('cel-reward-name').textContent = r.label;
-  try { r.run(); } catch (e) {}
-}
-async function showStreakMoment() {
-  celShow('cel-m3');
-  let st = { current_streak: 1, freezes: 0, frozen: false, milestone: false };
-  let dates = {};
-  try { st = await celState.streakP; } catch (e) {}
-  try { dates = await celState.datesP; } catch (e) {}
-  if (!celState) return;
-  celState.streak = st;
-  countUpCel(document.getElementById('cel-streak-num'), st.current_streak || 1);
-  document.getElementById('cel-week').innerHTML = weekStripHTML(dates);
-  updateFreezeLine(st.freezes || 0);
-  const fn = document.getElementById('cel-frozen-note');
-  fn.textContent = st.frozen ? '🧊 A freeze saved your streak!'
-    : (st.milestone ? '🎉 Milestone reached — +1 freeze earned!' : '');
-}
-function updateFreezeLine(n) {
-  const el = document.getElementById('cel-freezes');
-  if (el) el.textContent = '🧊 ' + n + ' freeze' + (n === 1 ? '' : 's') + ' ready';
-}
-function shareMilestone() {
-  const n = (celState && celState.streak && celState.streak.current_streak) || 1;
-  const text = '🔥 ' + n + '-day English streak on Muse English! Can you beat it?';
-  if (navigator.share) { navigator.share({ text: text }).catch(function () {}); }
-  else if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).catch(function () {});
-    const b = document.getElementById('cel-share');
-    if (b) { const t = b.textContent; b.textContent = 'COPIED!';
-      setTimeout(function () { if (b.isConnected) b.textContent = t; }, 1500); }
   }
 }
-function countUpCel(el, target) {
-  let t0 = null;
-  function step(ts) {
-    if (!t0) t0 = ts;
-    const k = Math.min(1, (ts - t0) / 1300);
-    const e = 1 - Math.pow(1 - k, 3);
-    el.textContent = Math.round(e * target);
-    if (k < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-var celRaf = null;
-function startCelConfetti() {
-  const cv = document.getElementById('cel-confetti'); if (!cv) return;
-  const ctx = cv.getContext('2d');
-  const box = document.getElementById('cel-m1').getBoundingClientRect();
-  cv.width = box.width || 390; cv.height = box.height || 700;
-  const cols = ['#C84B31', '#39745A', '#FFC800', '#FF9600', '#ffffff'];
-  const pieces = [];
-  for (let i = 0; i < 130; i++) pieces.push({
-    x: Math.random() * cv.width, y: -Math.random() * cv.height,
-    w: 6 + Math.random() * 7, h: 8 + Math.random() * 8, c: cols[i % cols.length],
-    vy: 2 + Math.random() * 3.5, vx: -1.5 + Math.random() * 3,
-    r: Math.random() * Math.PI, vr: -0.1 + Math.random() * 0.2
-  });
-  function tick() {
-    celRaf = requestAnimationFrame(tick);
-    ctx.clearRect(0, 0, cv.width, cv.height);
-    for (const p of pieces) {
-      p.x += p.vx; p.y += p.vy; p.r += p.vr;
-      if (p.y > cv.height + 20) { p.y = -20; p.x = Math.random() * cv.width; }
-      ctx.save(); ctx.translate(p.x, p.y); ctx.rotate(p.r);
-      ctx.fillStyle = p.c; ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h); ctx.restore();
-    }
-  }
-  if (!celRaf) tick();
-}
-function stopCelConfetti() {
-  if (celRaf) { cancelAnimationFrame(celRaf); celRaf = null; }
-  const cv = document.getElementById('cel-confetti');
-  if (cv) { try { cv.getContext('2d').clearRect(0, 0, cv.width, cv.height); } catch (e) {} }
-}
-function closeCelebration() {
-  stopCelConfetti();
+function qcelClear() {
+  window.removeEventListener('resize', qcelLayout);
   const el = document.getElementById('celebration');
   if (el && el.parentNode) el.parentNode.removeChild(el);
+}
+function closeCelebration() {
+  qcelClear();
   celState = null;
 }
 
@@ -3907,6 +3800,7 @@ window.MuseApp = {
   ensureCountrySaved: ensureCountrySaved,
   queuePointsPopup: queuePointsPopup, ensureNickname: ensureNickname,
   renderChallenge: renderChallenge, awardPoints: awardPoints, demoLogin: demoLogin,
+  launchCelebration: launchCelebration,
 };
 
 })();
