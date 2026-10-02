@@ -3450,8 +3450,9 @@ function paintMistakes(v, arr) {
   if (!arr.length) {
     html += '<div class="empty">Nothing to review — nice work! 🎉</div>';
   } else {
-    html += '<div class="card plain"><b>' + arr.length + ' to review</b>' +
-      '<button class="btn btn-green btn-block" data-action="practice-again">Practice mistakes</button></div>';
+    html += '<button class="review-banner" data-action="practice-again" aria-label="Practice your mistakes">' +
+      '<span class="review-banner-count">' + arr.length + ' to review</span>' +
+    '</button>';
     html += arr.map(function (m) {
       return '<div class="card plain">' +
         '<div class="mistake-q">' + esc(m.question) + '</div>' +
