@@ -2381,6 +2381,16 @@ function fmtDateShort(ds) {
 }
 function lessonWordCount(m) { return (m.words && m.words.length) || 0; }
 
+function prevIconFor(theme) {
+  const t = String(theme || '').toLowerCase();
+  if (/travel|transport|trip|journey|airport|flight|hotel/.test(t)) return '📍';
+  if (/money|shop|price|market|food|meal|grocer/.test(t)) return '🛒';
+  if (/school|education|study|learn|book|class/.test(t)) return '📖';
+  if (/health|doctor|body|sport|fitness/.test(t)) return '💪';
+  if (/work|job|office|business|meeting/.test(t)) return '💼';
+  return '📚';
+}
+
 function prevLessonsHTML(lessons) {
   const older = lessons.slice(1, 7);
   let html = '<section aria-labelledby="prev-h">' +
@@ -2391,12 +2401,23 @@ function prevLessonsHTML(lessons) {
   } else {
     html += '<div class="prev-strip">' + older.map(function (m) {
       const cover = lessonCover(m);
-      return '<button class="prev-card" data-action="open-lesson" data-date="' + esc(m.date) + '" aria-label="Open lesson ' + esc(m.theme || m.date) + '">' +
-        (cover
-          ? '<img src="' + esc(cover) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
-          : '<div class="prev-ph" aria-hidden="true">📚</div>') +
-        '<div class="pc-body"><div class="pc-date">' + esc(fmtDateShort(m.date)) + '</div>' +
-        '<div class="pc-theme">' + esc(m.theme || 'Lesson') + '</div></div></button>';
+      const done = dayDoneCount(m.date);
+      const pct = Math.round((done / STEPS.length) * 100);
+      return '<button class="prev-card v2" data-action="open-lesson" data-date="' + esc(m.date) + '" aria-label="Open lesson ' + esc(m.theme || m.date) + '">' +
+        '<span class="pcv-photo">' +
+          (cover
+            ? '<img src="' + esc(cover) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+            : '<span class="prev-ph" aria-hidden="true">📚</span>') +
+          '<span class="pcv-date">' + esc(fmtDateShort(m.date)) + '</span>' +
+        '</span>' +
+        '<span class="pcv-body">' +
+          '<span class="pcv-theme">' + esc(m.theme || 'Lesson') + '</span>' +
+          '<span class="pcv-row">' +
+            '<span class="pcv-bar" role="progressbar" aria-label="Lesson progress" aria-valuenow="' + done + '" aria-valuemin="0" aria-valuemax="' + STEPS.length + '"><span style="width:' + pct + '%"></span></span>' +
+            '<span class="pcv-ico" aria-hidden="true">' + prevIconFor(m.theme) + '</span>' +
+          '</span>' +
+        '</span>' +
+      '</button>';
     }).join('') + '</div>';
   }
   return html + '</section>';
@@ -2475,14 +2496,12 @@ function paintHome(v, mistakes, attempts) {
   if (!mistakes.length) {
     html += '<div class="card plain"><p class="muted" style="margin:0">Nothing to review yet — wrong answers will appear here so you can practice them again.</p></div>';
   } else {
-    html += '<div class="card"><div class="stat-row">' +
-      '<div class="stat-num">' + mistakes.length + '</div>' +
-      '<div><b>to review</b><div class="stat-example">e.g. “' + esc(mistakes[0].question.slice(0, 90)) + '”</div></div>' +
-      '</div>' +
-      (todayMistakes.length
-        ? '<button class="btn btn-green btn-block" data-action="review-today" data-date="' + esc(today.date) + '">Review today’s mistakes</button>'
-        : '<button class="btn btn-green btn-block" data-action="practice-again">Practice mistakes</button>') +
-      '</div>';
+    const reviewAction = todayMistakes.length
+      ? 'data-action="review-today" data-date="' + esc(today.date) + '"'
+      : 'data-action="practice-again"';
+    html += '<button class="hrv-banner" ' + reviewAction + ' aria-label="Review your mistakes">' +
+      '<span class="hrv-count"><b>' + mistakes.length + '</b><span>to review</span></span>' +
+    '</button>';
   }
 
   // 3 — Progress: most recent meaningful activity, compact empty state
@@ -2494,7 +2513,10 @@ function paintHome(v, mistakes, attempts) {
     const a = attempts[0];
     const pct = a.total ? Math.round((a.score / a.total) * 100) : 0;
     const kindLabel = a.kind === 'grammar' ? 'Grammar quiz' : (a.kind === 'mistakes' ? 'Review session' : 'Word quiz');
-    html += '<div class="card plain"><div class="attempt-card">' +
+    html += '<a class="hpv-banner" href="#/scores" aria-label="View your progress">' +
+        '<img src="/media/home/progress-v2.webp" alt="" loading="lazy">' +
+      '</a>' +
+      '<div class="card plain hpv-card"><div class="attempt-card">' +
       '<div class="attempt-info">' +
         '<div class="attempt-theme">' + esc(a.theme || 'Lesson') + '</div>' +
         '<div class="attempt-meta">Latest · ' + esc(kindLabel) + ' · ' + esc(a.date || '') + '</div>' +
