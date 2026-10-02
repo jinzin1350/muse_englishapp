@@ -1,0 +1,473 @@
+{
+  "date": "2026-09-23",
+  "theme": "work & career",
+  "level": "b2",
+  "cefr": "B2",
+  "cover": "media/b2/2026-09-23/podcast-cover.jpg",
+  "words": [
+    {
+      "word": "resume",
+      "pos": "noun",
+      "meaning": "a short written summary of your work history, used when applying for jobs",
+      "example": "She sent her resume to five companies this week.",
+      "pronunciation": "rez-oo-MAY",
+      "persian": "خلاصه سوابق کاری، رزومه",
+      "fa": "خلاصه سوابق کاری، رزومه",
+      "photo": "media/b2/2026-09-23/photos/resume.jpg",
+      "word_audio": "media/b2/2026-09-23/word-audio/resume.mp3",
+      "audio": "media/b2/2026-09-23/word-audio/resume.mp3"
+    },
+    {
+      "word": "interview",
+      "pos": "noun",
+      "meaning": "a formal meeting where an employer asks a job candidate questions",
+      "example": "He has a job interview on Friday morning.",
+      "pronunciation": "IN-ter-vyoo",
+      "persian": "مصاحبه شغلی",
+      "fa": "مصاحبه شغلی",
+      "photo": "media/b2/2026-09-23/photos/interview.jpg",
+      "word_audio": "media/b2/2026-09-23/word-audio/interview.mp3",
+      "audio": "media/b2/2026-09-23/word-audio/interview.mp3"
+    },
+    {
+      "word": "promotion",
+      "pos": "noun",
+      "meaning": "a move to a higher, better-paid job in the same company",
+      "example": "After three years she got a promotion to manager.",
+      "pronunciation": "pruh-MOH-shun",
+      "persian": "ارتقای شغلی، ترفیع",
+      "fa": "ارتقای شغلی، ترفیع",
+      "photo": "media/b2/2026-09-23/photos/promotion.jpg",
+      "word_audio": "media/b2/2026-09-23/word-audio/promotion.mp3",
+      "audio": "media/b2/2026-09-23/word-audio/promotion.mp3"
+    },
+    {
+      "word": "salary",
+      "pos": "noun",
+      "meaning": "the fixed amount of money you earn for your work, usually paid monthly",
+      "example": "His new salary is much higher than the old one.",
+      "pronunciation": "SAL-uh-ree",
+      "persian": "حقوق ماهانه",
+      "fa": "حقوق ماهانه",
+      "photo": "media/b2/2026-09-23/photos/salary.jpg",
+      "word_audio": "media/b2/2026-09-23/word-audio/salary.mp3",
+      "audio": "media/b2/2026-09-23/word-audio/salary.mp3"
+    },
+    {
+      "word": "colleague",
+      "pos": "noun",
+      "meaning": "a person you work with",
+      "example": "My colleague and I share an office.",
+      "pronunciation": "KOL-eeg",
+      "persian": "همکار",
+      "fa": "همکار",
+      "photo": "media/b2/2026-09-23/photos/colleague.jpg",
+      "word_audio": "media/b2/2026-09-23/word-audio/colleague.mp3",
+      "audio": "media/b2/2026-09-23/word-audio/colleague.mp3"
+    },
+    {
+      "word": "deadline",
+      "pos": "noun",
+      "meaning": "the latest time or date by which you must finish something",
+      "example": "The report deadline is Monday at noon.",
+      "pronunciation": "DED-lahyn",
+      "persian": "مهلت تحویل، ضرب‌الاجل",
+      "fa": "مهلت تحویل، ضرب‌الاجل",
+      "photo": "media/b2/2026-09-23/photos/deadline.jpg",
+      "word_audio": "media/b2/2026-09-23/word-audio/deadline.mp3",
+      "audio": "media/b2/2026-09-23/word-audio/deadline.mp3"
+    },
+    {
+      "word": "overtime",
+      "pos": "noun",
+      "meaning": "extra hours worked beyond the normal work schedule",
+      "example": "She works overtime every month to save money.",
+      "pronunciation": "OH-ver-tahym",
+      "persian": "اضافه‌کاری",
+      "fa": "اضافه‌کاری",
+      "photo": "media/b2/2026-09-23/photos/overtime.jpg",
+      "word_audio": "media/b2/2026-09-23/word-audio/overtime.mp3",
+      "audio": "media/b2/2026-09-23/word-audio/overtime.mp3"
+    },
+    {
+      "word": "negotiate",
+      "pos": "verb",
+      "meaning": "to discuss something with someone in order to reach an agreement, for example about pay",
+      "example": "He learned to negotiate a better contract.",
+      "pronunciation": "nih-GOH-shee-ayt",
+      "persian": "مذاکره کردن",
+      "fa": "مذاکره کردن",
+      "photo": "media/b2/2026-09-23/photos/negotiate.jpg",
+      "word_audio": "media/b2/2026-09-23/word-audio/negotiate.mp3",
+      "audio": "media/b2/2026-09-23/word-audio/negotiate.mp3"
+    },
+    {
+      "word": "retire",
+      "pos": "verb",
+      "meaning": "to stop working permanently, usually after a long career",
+      "example": "My father plans to retire at sixty.",
+      "pronunciation": "rih-TAHYR",
+      "persian": "بازنشسته شدن",
+      "fa": "بازنشسته شدن",
+      "photo": "media/b2/2026-09-23/photos/retire.jpg",
+      "word_audio": "media/b2/2026-09-23/word-audio/retire.mp3",
+      "audio": "media/b2/2026-09-23/word-audio/retire.mp3"
+    },
+    {
+      "word": "freelance",
+      "pos": "adjective",
+      "meaning": "working for yourself on separate projects for different clients",
+      "example": "She works freelance for several magazines.",
+      "pronunciation": "FREE-lanss",
+      "persian": "کار آزاد، فریلنسری",
+      "fa": "کار آزاد، فریلنسری",
+      "photo": "media/b2/2026-09-23/photos/freelance.jpg",
+      "word_audio": "media/b2/2026-09-23/word-audio/freelance.mp3",
+      "audio": "media/b2/2026-09-23/word-audio/freelance.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-09-23/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Work and Career",
+    "audio": "media/b2/2026-09-23/podcast.mp3",
+    "cover": "media/b2/2026-09-23/podcast-cover.jpg",
+    "transcript": "media/b2/2026-09-23/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Maria's Big Week",
+    "audio": "media/b2/2026-09-23/shadowing.mp3",
+    "transcript": "media/b2/2026-09-23/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'resume' mean?",
+      "options": [
+        "a short written summary of your work history, used when applying for jobs",
+        "a person you work with",
+        "extra hours worked beyond the normal work schedule",
+        "the fixed amount of money you earn for your work, usually paid monthly"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'interview' mean?",
+      "options": [
+        "a person you work with",
+        "a formal meeting where an employer asks a job candidate questions",
+        "a short written summary of your work history, used when applying for jobs",
+        "to stop working permanently, usually after a long career"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'promotion' mean?",
+      "options": [
+        "a person you work with",
+        "a short written summary of your work history, used when applying for jobs",
+        "a move to a higher, better-paid job in the same company",
+        "working for yourself on separate projects for different clients"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'salary' mean?",
+      "options": [
+        "the fixed amount of money you earn for your work, usually paid monthly",
+        "a person you work with",
+        "a short written summary of your work history, used when applying for jobs",
+        "to discuss something with someone in order to reach an agreement, for example about pay"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'colleague' mean?",
+      "options": [
+        "the fixed amount of money you earn for your work, usually paid monthly",
+        "to discuss something with someone in order to reach an agreement, for example about pay",
+        "a person you work with",
+        "the latest time or date by which you must finish something"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'deadline' mean?",
+      "options": [
+        "a move to a higher, better-paid job in the same company",
+        "a person you work with",
+        "the latest time or date by which you must finish something",
+        "a short written summary of your work history, used when applying for jobs"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'overtime' mean?",
+      "options": [
+        "a short written summary of your work history, used when applying for jobs",
+        "extra hours worked beyond the normal work schedule",
+        "a formal meeting where an employer asks a job candidate questions",
+        "a person you work with"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'negotiate' mean?",
+      "options": [
+        "a person you work with",
+        "to discuss something with someone in order to reach an agreement, for example about pay",
+        "to stop working permanently, usually after a long career",
+        "working for yourself on separate projects for different clients"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'retire' mean?",
+      "options": [
+        "the fixed amount of money you earn for your work, usually paid monthly",
+        "to stop working permanently, usually after a long career",
+        "the latest time or date by which you must finish something",
+        "a person you work with"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'freelance' mean?",
+      "options": [
+        "working for yourself on separate projects for different clients",
+        "a formal meeting where an employer asks a job candidate questions",
+        "to discuss something with someone in order to reach an agreement, for example about pay",
+        "a move to a higher, better-paid job in the same company"
+      ],
+      "answer": 0
+    }
+  ],
+  "wordQuiz": [
+    {
+      "question": "What does 'resume' mean?",
+      "options": [
+        "a short written summary of your work history, used when applying for jobs",
+        "a person you work with",
+        "extra hours worked beyond the normal work schedule",
+        "the fixed amount of money you earn for your work, usually paid monthly"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'interview' mean?",
+      "options": [
+        "a person you work with",
+        "a formal meeting where an employer asks a job candidate questions",
+        "a short written summary of your work history, used when applying for jobs",
+        "to stop working permanently, usually after a long career"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'promotion' mean?",
+      "options": [
+        "a person you work with",
+        "a short written summary of your work history, used when applying for jobs",
+        "a move to a higher, better-paid job in the same company",
+        "working for yourself on separate projects for different clients"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'salary' mean?",
+      "options": [
+        "the fixed amount of money you earn for your work, usually paid monthly",
+        "a person you work with",
+        "a short written summary of your work history, used when applying for jobs",
+        "to discuss something with someone in order to reach an agreement, for example about pay"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'colleague' mean?",
+      "options": [
+        "the fixed amount of money you earn for your work, usually paid monthly",
+        "to discuss something with someone in order to reach an agreement, for example about pay",
+        "a person you work with",
+        "the latest time or date by which you must finish something"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'deadline' mean?",
+      "options": [
+        "a move to a higher, better-paid job in the same company",
+        "a person you work with",
+        "the latest time or date by which you must finish something",
+        "a short written summary of your work history, used when applying for jobs"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'overtime' mean?",
+      "options": [
+        "a short written summary of your work history, used when applying for jobs",
+        "extra hours worked beyond the normal work schedule",
+        "a formal meeting where an employer asks a job candidate questions",
+        "a person you work with"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'negotiate' mean?",
+      "options": [
+        "a person you work with",
+        "to discuss something with someone in order to reach an agreement, for example about pay",
+        "to stop working permanently, usually after a long career",
+        "working for yourself on separate projects for different clients"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'retire' mean?",
+      "options": [
+        "the fixed amount of money you earn for your work, usually paid monthly",
+        "to stop working permanently, usually after a long career",
+        "the latest time or date by which you must finish something",
+        "a person you work with"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'freelance' mean?",
+      "options": [
+        "working for yourself on separate projects for different clients",
+        "a formal meeting where an employer asks a job candidate questions",
+        "to discuss something with someone in order to reach an agreement, for example about pay",
+        "a move to a higher, better-paid job in the same company"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "4A: Obligation and prohibition - have to, must, should",
+    "explanation": "We use **have to** and **must** + infinitive to talk about obligation — something that is necessary to do.\n\n**Have to** is for general or external rules. You **have to** send your resume before the deadline, and your colleague **has to** arrive before nine.\n\n**Must** is for personal decisions or specific occasions. I **must** prepare for my interview tonight — that is my own decision, not a rule.\n\nTo say something is prohibited, use **mustn't**. You **mustn't** be late for your interview — it is not allowed.\n\n**Don't have to** means there is no obligation. You **don't have to** work overtime if you finish before the deadline — it is your choice.\n\nUse **should** / **shouldn't** + infinitive for advice or opinion, weaker than **must**. You **should** negotiate your salary before you sign the contract. **Ought to** is a more formal alternative.",
+    "examples": [
+      "You *have to* send your resume before Friday. (company rule)",
+      "I *must* prepare for my interview tonight. (my own decision)",
+      "You *mustn't* use your phone during the interview. (prohibition)",
+      "We *don't have to* work overtime this week. (no obligation)",
+      "You *should* negotiate your salary before you accept the offer. (advice)",
+      "She *shouldn't* miss the deadline again. (advice)"
+    ],
+    "practice": [
+      {
+        "q": "Complete: A pilot ___ wear a uniform when he's at work. (rule, not a personal decision)",
+        "a": "has to — general/external rules take have to, not must."
+      },
+      {
+        "q": "Complete: You ___ send text messages while you are driving. (it is prohibited)",
+        "a": "mustn't — mustn't means something is prohibited, not allowed."
+      },
+      {
+        "q": "Complete: The museum is free, so we ___ pay. (no obligation)",
+        "a": "don't have to — don't have to means there is no obligation."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "You ___ use your phone in quiet zones.",
+        "options": [
+          "don't have to",
+          "mustn't",
+          "shouldn't",
+          "have to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ send text messages when you are driving.",
+        "options": [
+          "don't have to",
+          "mustn't",
+          "should",
+          "have to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "A pilot ___ wear a uniform when he's at work.",
+        "options": [
+          "must",
+          "has to",
+          "should",
+          "mustn't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ go to the Uffizi when you're in Florence.",
+        "options": [
+          "must",
+          "have to",
+          "should",
+          "mustn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "When I was at school we ___ wear a horrible uniform.",
+        "options": [
+          "must",
+          "had to",
+          "have to",
+          "should"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ walk on the grass. They've just planted flowers there.",
+        "options": [
+          "don't have to",
+          "shouldn't",
+          "mustn't",
+          "haven't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ do a lot of homework when you were at school?",
+        "options": [
+          "Did you have to",
+          "Must you",
+          "Should you",
+          "Do you have to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ take my tablet out of my bag at Security?",
+        "options": [
+          "Have I to",
+          "Must I",
+          "Should I to",
+          "Do I must"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I don't think ___ wear boots inside their house.",
+        "options": [
+          "we should",
+          "we mustn't to",
+          "we have",
+          "us should"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The exhibition was free, so I ___ pay.",
+        "options": [
+          "mustn't",
+          "didn't have to",
+          "shouldn't",
+          "hadn't to"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}
