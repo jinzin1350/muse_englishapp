@@ -2355,84 +2355,188 @@ function renderHome(v) {
   }
 }
 
-function paintHome(v, mistakes, attempts) {
-  const lessons = state.lessons;
-  const today = lessons[0] || null;
-
-  let html = '';
-
-  // 0 — Challenge promo banner (loud game style, links to the arena)
-  html += '<a class="ch-promo" href="#/challenge">' +
-    '<span class="chp-shine"></span>' +
-    '<span class="chp-live"><span class="chp-dot"></span>LIVE</span>' +
-    '<span class="chp-row">' +
-      '<span class="chp-trophy">' + ICO.trophy + '</span>' +
-      '<span class="chp-txt"><b>1,500</b><span>learners battling for the top</span></span>' +
-    '</span>' +
-    '<span class="chp-cta">Join the battle <span class="chp-go">›</span></span></a>';
-
-  // 0b — Streak card (flame mascot, week strip, freezes) — painted with local
-  // data first, then refreshed with cloud state by refreshHomeStreak().
-  html += '<div id="home-streak-wrap">' + streakCardHTML(getStreakLocal()) + '</div>';
-
-  // 1 — Today's lesson (the primary action)
-  if (!today) {
-    html += '<div class="empty">No lessons published yet — check back tomorrow.</div>';
-  } else {
-    html += todayCardHTML(today);
+/* ---------------- Tailwind home page (Alireza's design) ---------------- */
+const HOME_MASCOT_SVG = '<svg class="w-full h-full drop-shadow-lg overflow-visible" viewBox="0 0 200 200"> <defs> <linearGradient id="mascotFlame" x1="0%" x2="100%" y1="0%" y2="100%"> <stop offset="0%" stop-color="#FFE082"></stop><stop offset="25%" stop-color="#FFA000"></stop> <stop offset="60%" stop-color="#FF5722"></stop><stop offset="100%" stop-color="#D84315"></stop> </linearGradient> <linearGradient id="bookGrad" x1="0%" x2="100%" y1="0%" y2="50%"> <stop offset="0%" stop-color="#FFFFFF"></stop><stop offset="100%" stop-color="#ECEFF1"></stop> </linearGradient> </defs> <path d="M40 160 C70 145 95 155 100 165 C105 155 130 145 160 160 L165 175 C135 160 105 170 100 178 C95 170 65 160 35 175 Z" fill="#90A4AE" opacity="0.4"></path> <path d="M42 155 C70 142 95 151 100 160 C105 151 130 142 158 155 L154 170 C130 157 105 167 100 173 C95 167 70 157 46 170 Z" fill="url(#bookGrad)"></path> <path d="M100 160 L100 173" stroke="#B0BEC5" stroke-width="2"></path> <path d="M100 30 C125 15 155 45 150 75 C165 70 175 90 165 110 C155 125 150 140 140 145 C115 155 85 155 60 145 C50 140 45 125 35 110 C25 90 35 70 50 75 C45 45 75 15 100 30 Z" fill="url(#mascotFlame)"></path> <path d="M98 25 C108 40 120 45 110 65 C105 52 95 48 98 25 Z" fill="#FFE082"></path> <path d="M125 45 C135 60 140 75 128 85 C128 72 120 62 125 45 Z" fill="#FFCA28"></path> <ellipse cx="100" cy="105" fill="#FFE0B2" rx="46" ry="40"></ellipse> <ellipse cx="68" cy="115" fill="#FF7043" opacity="0.6" rx="10" ry="6"></ellipse> <ellipse cx="132" cy="115" fill="#FF7043" opacity="0.6" rx="10" ry="6"></ellipse> <ellipse cx="76" cy="100" fill="#3E2723" rx="9" ry="13"></ellipse> <ellipse cx="124" cy="100" fill="#3E2723" rx="9" ry="13"></ellipse> <circle cx="73" cy="94" fill="#FFFFFF" r="4"></circle><circle cx="78" cy="104" fill="#FFFFFF" r="1.8"></circle> <circle cx="121" cy="94" fill="#FFFFFF" r="4"></circle><circle cx="126" cy="104" fill="#FFFFFF" r="1.8"></circle> <path d="M90 116 Q100 128 110 116" fill="none" stroke="#3E2723" stroke-linecap="round" stroke-width="3.5"></path> <ellipse cx="60" cy="128" fill="#FFA726" rx="8" ry="7"></ellipse> <g transform="rotate(-25 55 125)"><rect fill="#E53935" height="30" rx="2" width="7" x="50" y="95"></rect> <polygon fill="#FFCCBC" points="50,95 57,95 53.5,86"></polygon><polygon fill="#212121" points="52,89 55,89 53.5,86"></polygon></g> <path d="M158 50 L160 55 L165 57 L160 59 L158 64 L156 59 L151 57 L156 55 Z" fill="#FFF176"></path> <path d="M42 60 L43 64 L47 65 L43 66 L42 70 L41 66 L37 65 L41 64 Z" fill="#FFF176"></path> </svg>';
+const HOME_TROPHY_SVG = '<svg class="w-24 h-24 drop-shadow-md" viewBox="0 0 120 110"> <defs><linearGradient id="goldGrad" x1="0%" x2="100%" y1="0%" y2="100%"> <stop offset="0%" stop-color="#FFE082"></stop><stop offset="40%" stop-color="#FFCA28"></stop> <stop offset="70%" stop-color="#FFA000"></stop><stop offset="100%" stop-color="#FF8F00"></stop> </linearGradient></defs> <path d="M22 25 L24 29 L28 30 L24 31 L22 35 L20 31 L16 30 L20 29 Z" fill="#FFA000"></path> <path d="M98 20 L99 23 L103 24 L99 25 L98 28 L97 25 L93 24 L97 23 Z" fill="#FFB300"></path> <path d="M102 65 L103 67 L106 68 L103 69 L102 72 L101 69 L98 68 L101 67 Z" fill="#FFC107"></path> <path d="M28 35 C15 35 15 65 35 70" fill="none" stroke="url(#goldGrad)" stroke-linecap="round" stroke-width="7"></path> <path d="M92 35 C105 35 105 65 85 70" fill="none" stroke="url(#goldGrad)" stroke-linecap="round" stroke-width="7"></path> <path d="M30 30 Q30 75 60 85 Q90 75 90 30 Z" fill="url(#goldGrad)"></path> <ellipse cx="60" cy="30" fill="#FFECB3" rx="30" ry="7"></ellipse> <path d="M52 52 L55 45 L60 49 L65 45 L68 52 Z" fill="#FFF8E1" opacity="0.9"></path> <rect fill="#FFA000" height="12" width="12" x="54" y="83"></rect> <path d="M42 95 L78 95 L84 105 L36 105 Z" fill="#8D6E63"></path> <rect fill="#5D4037" height="6" rx="2" width="48" x="36" y="99"></rect> </svg>';
+const HOME_PREV_ICONS = [
+  ['utensils', 'bg-orange-500'], ['monitor', 'bg-indigo-500'], ['activity', 'bg-emerald-500'],
+  ['book-open', 'bg-blue-500'], ['music', 'bg-purple-500'], ['camera', 'bg-rose-500']
+];
+function homeHeroHTML(m) {
+  const done = dayDoneCount(m.date);
+  const ns = nextStep(m.date);
+  let cta, tabFor;
+  if (ns) { tabFor = ns; cta = done > 0 ? 'Continue with ' + STEP_LABELS[ns] : 'Start today\u2019s lesson'; }
+  else { tabFor = 'words'; cta = 'Lesson complete \uD83C\uDF89'; }
+  const metaStep = ns ? STEP_LABELS[ns] : 'All done';
+  return '<section class="relative overflow-hidden rounded-[26px] bg-gradient-to-br from-[#FFF5EC] via-[#FFEADB] to-[#FEDBC0] p-5 shadow-card border border-orange-100/80">' +
+    '<div class="absolute -right-8 -top-8 w-44 h-44 bg-amber-300/20 rounded-full blur-2xl pointer-events-none"></div>' +
+    '<div class="relative z-10 flex flex-col justify-between">' +
+    '<div class="max-w-[62%]">' +
+    '<div class="flex items-center gap-1.5 mb-1.5">' +
+    '<span class="w-1 h-3.5 bg-[#FF5722] rounded-full inline-block"></span>' +
+    '<span class="text-xs font-semibold tracking-wide text-slate-600">Continue Learning</span></div>' +
+    '<h2 class="text-[25px] leading-[1.18] font-extrabold text-[#111827] font-serif-title tracking-tight mb-2.5 capitalize">' + esc(m.theme || 'Daily lesson') + '</h2>' +
+    '<div class="flex items-center text-xs text-slate-600 font-medium gap-2 mb-4">' +
+    '<i class="w-3.5 h-3.5 text-slate-700" data-lucide="book-marked"></i>' +
+    '<span>' + esc(metaStep) + '</span><span class="text-slate-300">|</span><span>' + esc(normalizeLevel(m.level).toUpperCase()) + '</span></div></div>' +
+    '<div aria-hidden="true" class="absolute right-1 top-2 w-[150px] h-[145px] pointer-events-none select-none flex items-center justify-center">' + HOME_MASCOT_SVG + '</div>' +
+    '<button class="w-full bg-gradient-to-r from-[#FF5722] via-[#F4511E] to-[#E64A19] text-white py-3 px-4 rounded-full flex items-center justify-between shadow-float active:scale-[0.98] transition-all duration-150" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + tabFor + '">' +
+    '<span class="flex items-center gap-3"><span class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-brand-orange shadow-inner">' +
+    '<i class="w-3.5 h-3.5 fill-current ml-0.5" data-lucide="play"></i></span>' +
+    '<span class="font-bold text-sm tracking-wide">' + esc(cta) + '</span></span>' +
+    '<i class="w-5 h-5 text-white/90" data-lucide="chevron-right"></i></button>' +
+    '</div></section>';
+}
+function homeBattleHTML() {
+  return '<div class="bg-gradient-to-b from-[#FFFBEA] to-[#FFF3D6] rounded-[24px] p-3.5 flex flex-col justify-between border border-amber-200/60 shadow-soft relative overflow-hidden">' +
+    '<div><div class="flex items-center justify-between mb-2">' +
+    '<div class="flex items-center gap-1.5"><span class="w-6 h-6 rounded-lg bg-amber-400/20 text-amber-600 flex items-center justify-center">' +
+    '<i class="w-4 h-4 text-amber-500 fill-amber-400" data-lucide="trophy"></i></span>' +
+    '<span class="font-bold text-sm text-slate-800">Battle</span></div>' +
+    '<a href="#/challenge" class="w-5 h-5 rounded-full bg-white/70 flex items-center justify-center text-slate-400" aria-label="Open challenge">' +
+    '<i class="w-3.5 h-3.5" data-lucide="chevron-right"></i></a></div>' +
+    '<div class="mt-1"><div class="text-[26px] font-black tracking-tight text-[#FF5722] leading-none">1,500</div>' +
+    '<p class="text-[11px] leading-tight text-slate-600 font-medium mt-1 pr-1">learners battling<br/>for the top!</p></div></div>' +
+    '<div class="my-2 py-1 flex items-center justify-center relative">' + HOME_TROPHY_SVG + '</div>' +
+    '<a href="#/challenge" class="w-full bg-gradient-to-r from-[#FF5722] to-[#F4511E] text-white py-2 px-3 rounded-full flex items-center justify-between text-[11px] font-bold shadow-sm active:scale-[0.98] whitespace-nowrap">' +
+    '<span class="flex items-center gap-1.5"><i class="w-4 h-4" data-lucide="swords"></i><span>Join the battle</span></span>' +
+    '<i class="w-3.5 h-3.5" data-lucide="chevron-right"></i></a></div>';
+}
+function homeStreakDotsHTML(dateSet) {
+  const now = new Date();
+  const dow = (now.getDay() + 6) % 7;
+  const start = new Date(now); start.setDate(now.getDate() - dow);
+  const names = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+  let labels = '', dots = '';
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(start); d.setDate(start.getDate() + i);
+    const done = !!(dateSet && dateSet[fmtDate(d)]);
+    const isToday = (i === dow);
+    labels += '<span class="w-4 text-center">' + names[i] + '</span>';
+    if (done && isToday) dots += '<span class="w-4 h-4 rounded-full bg-[#FF5722] ring-2 ring-orange-400/50 shadow-sm flex items-center justify-center"><span class="w-1.5 h-1.5 rounded-full bg-white"></span></span>';
+    else if (done) dots += '<span class="w-3.5 h-3.5 rounded-full bg-[#FFA000]"></span>';
+    else if (isToday) dots += '<span class="w-4 h-4 rounded-full bg-slate-200/80 ring-2 ring-orange-200/70"></span>';
+    else dots += '<span class="w-3.5 h-3.5 rounded-full bg-slate-200/80"></span>';
   }
-
-  // 1b — Previous lessons (days before today) → archive page
-  html += prevLessonsHTML(lessons);
-
-  // 2 — Review (mistakes), learner-facing label "Review"
-  const todayMistakes = today ? mistakes.filter(function (x) { return x.date === today.date; }) : [];
-  html += '<div class="section-title"><h2>Review</h2>' +
-    (mistakes.length ? '<a class="btn btn-ghost btn-sm" href="#/review">View all</a>' : '') + '</div>';
+  return '<div class="my-3.5"><div class="flex justify-between items-center px-0.5 mb-1.5 text-[10px] font-semibold text-slate-500">' + labels + '</div>' +
+    '<div class="flex justify-between items-center px-0.5">' + dots + '</div></div>';
+}
+function homeStreakHTML(st, dates) {
+  st = st || {};
+  const n = st.current_streak || 0;
+  const fr = (st.freezes != null ? st.freezes : st.streak_freezes) || 0;
+  return '<div class="bg-gradient-to-b from-[#FFF5F2] to-[#FFEBE5] rounded-[24px] p-3.5 flex flex-col justify-between border border-orange-100 shadow-soft relative overflow-hidden">' +
+    '<div class="absolute -right-4 -bottom-4 w-32 h-32 bg-orange-200/40 rounded-full blur-xl pointer-events-none"></div>' +
+    '<div><div class="flex items-center justify-between mb-2"><div class="flex items-center gap-1.5">' +
+    '<span class="w-6 h-6 rounded-lg bg-orange-500/10 text-brand-orange flex items-center justify-center">' +
+    '<i class="w-4 h-4 text-[#FF5722] fill-[#FF5722]" data-lucide="flame"></i></span>' +
+    '<span class="font-bold text-sm text-slate-800 whitespace-nowrap">Daily Streak</span></div>' +
+    '<span class="w-5 h-5 rounded-full bg-white/70 flex items-center justify-center text-slate-400">' +
+    '<i class="w-3.5 h-3.5" data-lucide="chevron-right"></i></span></div>' +
+    '<div class="mt-1 flex items-baseline gap-1.5"><span class="text-[28px] font-black tracking-tight text-[#FF5722] leading-none">' + n + '</span>' +
+    '<span class="text-xs font-bold text-slate-800">day' + (n === 1 ? '' : 's') + ' in a row!</span></div></div>' +
+    homeStreakDotsHTML(dates) +
+    '<div class="bg-[#EBF5FF] rounded-full py-2 px-3 flex items-center justify-between text-xs text-slate-700 font-semibold">' +
+    '<span class="flex items-center gap-1.5"><span class="w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center text-white">' +
+    '<i class="w-3 h-3 text-white" data-lucide="snowflake"></i></span>' +
+    '<span class="text-[11px] whitespace-nowrap"><strong class="text-slate-900 font-bold">' + fr + '</strong> freeze' + (fr === 1 ? '' : 's') + ' ready</span></span>' +
+    '<i class="w-3.5 h-3.5 text-slate-400" data-lucide="chevron-right"></i></div></div>';
+}
+function homePrevHTML(lessons) {
+  const older = lessons.slice(1, 7);
+  let html = '<section class="pt-1"><div class="flex items-center justify-between mb-2.5">' +
+    '<h3 class="text-lg font-bold font-serif-title text-slate-900 tracking-tight">Previous Lessons</h3>' +
+    (older.length ? '<a class="text-xs font-semibold text-slate-500 flex items-center gap-0.5" href="#/lessons">View all <i class="w-3.5 h-3.5" data-lucide="chevron-right"></i></a>' : '') + '</div>';
+  if (!older.length) {
+    html += '<div class="bg-white rounded-2xl p-4 text-sm text-slate-500">Yesterday\u2019s lesson will appear here.</div>';
+  } else {
+    html += '<div class="flex gap-3 overflow-x-auto no-scrollbar -mx-4 px-4 pb-1 snap-x">' + older.map(function (m, i) {
+      const cover = lessonCover(m);
+      const ic = HOME_PREV_ICONS[i % HOME_PREV_ICONS.length];
+      return '<button class="flex-none w-[142px] bg-white rounded-2xl p-2 shadow-soft border border-slate-100 flex flex-col justify-between snap-start text-left" data-action="open-lesson" data-date="' + esc(m.date) + '">' +
+        '<div class="relative w-full h-24 rounded-xl overflow-hidden bg-orange-50">' +
+        '<span class="absolute top-1.5 left-1.5 z-10 bg-white/90 backdrop-blur-md px-2 py-0.5 rounded-full text-[9px] font-bold text-slate-700 shadow-sm">' + esc(fmtDateShort(m.date)) + '</span>' +
+        (cover ? '<img alt="" loading="lazy" class="w-full h-full object-cover" src="' + esc(cover) + '" onerror="this.style.display=\'none\'"/>' : '') +
+        '</div><div class="pt-2"><div class="flex items-center justify-between">' +
+        '<span class="w-6 h-6 rounded-lg ' + ic[1] + ' text-white flex items-center justify-center shadow-xs">' +
+        '<i class="w-3.5 h-3.5" data-lucide="' + ic[0] + '"></i></span>' +
+        '<span class="w-5 h-5 rounded-full bg-slate-50 flex items-center justify-center text-slate-400">' +
+        '<i class="w-3 h-3" data-lucide="chevron-right"></i></span></div>' +
+        '<h4 class="font-bold text-[12px] text-slate-900 mt-1.5 truncate leading-tight capitalize">' + esc(m.theme || 'Lesson') + '</h4>' +
+        '<p class="text-[10px] text-slate-500 truncate mt-0.5">' + (m.words ? m.words.length : 0) + ' words</p>' +
+        '</div></button>';
+    }).join('') + '</div>';
+  }
+  return html + '</section>';
+}
+function homeReviewHTML(mistakes, today, todayMistakes) {
+  let html = '<section class="pt-1"><div class="flex items-center justify-between mb-2.5">' +
+    '<h3 class="text-lg font-bold font-serif-title text-slate-900 tracking-tight">Review</h3>' +
+    (mistakes.length ? '<a class="text-xs font-semibold text-slate-500 flex items-center gap-0.5" href="#/review">View all <i class="w-3.5 h-3.5" data-lucide="chevron-right"></i></a>' : '') + '</div>';
   if (!mistakes.length) {
-    html += '<div class="card plain"><p class="muted" style="margin:0">Nothing to review yet — wrong answers will appear here so you can practice them again.</p></div>';
+    html += '<div class="bg-white rounded-[22px] p-4 text-sm text-slate-500 shadow-soft border border-slate-100">Nothing to review yet.</div>';
   } else {
-    html += '<div class="card"><div class="stat-row">' +
-      '<div class="stat-num">' + mistakes.length + '</div>' +
-      '<div><b>to review</b><div class="stat-example">e.g. “' + esc(mistakes[0].question.slice(0, 90)) + '”</div></div>' +
-      '</div>' +
-      (todayMistakes.length
-        ? '<button class="btn btn-green btn-block" data-action="review-today" data-date="' + esc(today.date) + '">Review today’s mistakes</button>'
-        : '<button class="btn btn-green btn-block" data-action="practice-again">Practice mistakes</button>') +
-      '</div>';
+    const btnAction = todayMistakes.length ? 'data-action="review-today" data-date="' + esc(today.date) + '"' : 'data-action="practice-again"';
+    const btnLabel = todayMistakes.length ? 'Review today\u2019s mistakes' : 'Practice mistakes';
+    html += '<div class="bg-white rounded-[22px] p-3 shadow-soft border border-slate-100 flex items-center justify-between gap-3">' +
+      '<div class="flex items-center gap-2.5 min-w-0"><div class="w-10 h-10 rounded-xl bg-red-50 flex items-center justify-center text-red-500 flex-shrink-0">' +
+      '<i class="w-5 h-5 text-brand-orange" data-lucide="file-text"></i></div><div>' +
+      '<div class="flex items-baseline gap-1.5"><span class="text-2xl font-black text-brand-orange leading-none tracking-tight">' + mistakes.length + '</span>' +
+      '<span class="text-xs font-bold text-slate-900">to review</span></div>' +
+      '<p class="text-[9.5px] italic text-slate-400 truncate max-w-[140px] mt-0.5">e.g. \u201C' + esc(String(mistakes[0].question).slice(0, 60)) + '\u201D</p>' +
+      '</div></div>' +
+      '<button ' + btnAction + ' class="flex-shrink-0 bg-gradient-to-r from-[#FF5722] to-[#F4511E] text-white py-2 px-3 rounded-full flex items-center gap-2 shadow-sm text-xs font-bold active:scale-95 transition-transform">' +
+      '<span class="w-4 h-4 rounded-full bg-white flex items-center justify-center text-brand-orange">' +
+      '<i class="w-2.5 h-2.5 fill-current ml-0.5" data-lucide="play"></i></span>' +
+      '<span class="text-[11px] whitespace-nowrap">' + btnLabel + '</span>' +
+      '<i class="w-3.5 h-3.5 text-white/90" data-lucide="chevron-right"></i></button></div>';
   }
-
-  // 3 — Progress: most recent meaningful activity, compact empty state
-  html += '<div class="section-title"><h2>Progress</h2>' +
-    (attempts.length ? '<a class="btn btn-ghost btn-sm" href="#/scores">View all</a>' : '') + '</div>';
+  return html + '</section>';
+}
+function homeProgressHTML(attempts) {
+  let html = '<section class="pt-1"><h3 class="text-lg font-bold font-serif-title text-slate-900 tracking-tight mb-2.5">Progress</h3>';
   if (!attempts.length) {
-    html += '<div class="card plain"><p class="muted" style="margin:0">No activity yet — finish a quiz and your latest result will show up here.</p></div>';
+    html += '<div class="bg-white rounded-[22px] p-4 text-sm text-slate-500 shadow-soft border border-slate-100">No activity yet.</div>';
   } else {
     const a = attempts[0];
     const pct = a.total ? Math.round((a.score / a.total) * 100) : 0;
     const kindLabel = a.kind === 'grammar' ? 'Grammar quiz' : (a.kind === 'mistakes' ? 'Review session' : 'Word quiz');
-    html += '<div class="card plain"><div class="attempt-card">' +
-      '<div class="attempt-info">' +
-        '<div class="attempt-theme">' + esc(a.theme || 'Lesson') + '</div>' +
-        '<div class="attempt-meta">Latest · ' + esc(kindLabel) + ' · ' + esc(a.date || '') + '</div>' +
-      '</div>' +
-      '<div class="percent-wrap"><div class="percent-num">' + a.score + '/' + a.total + ' · ' + pct + '%</div>' +
-      '<div class="progress"><div style="width:' + pct + '%"></div></div></div>' +
-    '</div></div>';
+    html += '<div class="bg-white rounded-[22px] p-3.5 shadow-soft border border-slate-100">' +
+      '<div class="flex items-center justify-between gap-3"><div class="flex items-center gap-3">' +
+      '<div class="w-11 h-11 rounded-2xl bg-[#EEF4FF] flex items-center justify-center text-blue-600 shadow-xs flex-shrink-0">' +
+      '<i class="w-6 h-6 text-blue-500 fill-blue-500/20" data-lucide="graduation-cap"></i></div><div>' +
+      '<h4 class="font-bold text-sm text-slate-900 leading-tight">' + esc(a.theme || 'Lesson') + '</h4>' +
+      '<p class="text-[11px] text-slate-400 mt-0.5">Latest \u00B7 ' + esc(kindLabel) + ' \u00B7 ' + esc(a.date || '') + '</p>' +
+      '</div></div>' +
+      '<div class="flex items-center gap-1.5 flex-shrink-0"><span class="text-xs font-extrabold text-slate-900">' + a.score + '/' + a.total + ' \u00B7 ' + pct + '%</span>' +
+      '<i class="w-4 h-4 text-slate-400" data-lucide="chevron-right"></i></div></div>' +
+      '<div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden mt-3.5">' +
+      '<div class="bg-gradient-to-r from-[#FF5722] to-[#FF7043] h-full rounded-full transition-all duration-500" style="width:' + pct + '%"></div></div></div>';
   }
-
-  // 4 — Notifications: only after meaningful engagement (first quiz done), never automatic
+  return html + '</section>';
+}
+function paintHome(v, mistakes, attempts) {
+  const lessons = state.lessons;
+  const today = lessons[0] || null;
+  const todayMistakes = today ? mistakes.filter(function (x) { return x.date === today.date; }) : [];
+  let html = '<div class="tw-home px-4 space-y-4 pt-1">';
+  html += today ? homeHeroHTML(today) : '<div class="empty">No lessons published yet.</div>';
+  html += '<section class="grid grid-cols-2 gap-3">' + homeBattleHTML() +
+          '<div id="home-streak-wrap">' + homeStreakHTML(getStreakLocal()) + '</div></section>';
+  html += homePrevHTML(lessons);
+  html += homeReviewHTML(mistakes, today, todayMistakes);
+  html += homeProgressHTML(attempts);
   if (oneSignalReady() && !state.user.demo && !pushSubscribed() && hasAnyQuizDone()) {
-    html += '<div class="card plain"><b>🔔 Lesson notifications</b>' +
-      '<p class="muted">You’re on a roll — get a short notification when each new lesson is ready.</p>' +
-      '<p class="muted" id="push-status" role="status"></p>' +
+    html += '<div class="bg-white rounded-[22px] p-4 shadow-soft border border-slate-100"><b>\uD83D\uDD14 Lesson notifications</b>' +
+      '<p class="text-sm text-slate-500">You\u2019re on a roll \u2014 get a short notification when each new lesson is ready.</p>' +
+      '<p class="text-sm text-slate-500" id="push-status" role="status"></p>' +
       '<button class="btn btn-sm" data-action="enable-push">Enable notifications</button></div>';
   }
-
+  html += '</div>';
   v.innerHTML = html;
-}
-
-function attemptCardHTML(a) {
+  try { if (window.lucide) lucide.createIcons(); } catch (e) {}
+}function attemptCardHTML(a) {
   const pct = a.total ? Math.round((a.score / a.total) * 100) : 0;
   const kindLabel = a.kind === 'grammar' ? 'Grammar quiz' : (a.kind === 'mistakes' ? 'Review session' : 'Word quiz');
   return '' +
@@ -3078,7 +3182,7 @@ async function refreshHomeStreak() {
     const res = await Promise.all([getStreakState(), getWordQuizDates()]);
     const wrap = document.getElementById('home-streak-wrap');
     if (!wrap || state.view !== 'home') return;
-    wrap.innerHTML = streakCardHTML(res[0], res[1]);
+    wrap.innerHTML = homeStreakHTML(res[0], res[1]);
   } catch (e) {}
 }
 /* ---------------- celebration sequence ----------------
@@ -3577,6 +3681,7 @@ async function init() {
   playerUI();
   /* Splash fades once the app is up (min ~900ms so it reads as a splash). */
   setTimeout(hideSplash, 900);
+  try { if (window.lucide) lucide.createIcons(); } catch (e) {}
 
   if (sb) {
     try {
