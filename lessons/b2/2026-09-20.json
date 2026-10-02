@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-20",
+  "theme": "nature & environment",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "erosion",
+      "pos": "noun",
+      "meaning": "the gradual wearing away of soil or rock by wind or water",
+      "example": "Coastal erosion is threatening homes near the cliff.",
+      "pronunciation": "uh-ROH-zhun",
+      "persian": "فرسایش (خاک یا سنگ)",
+      "photo": "media/b2/2026-09-20/photos/erosion.jpg",
+      "word_audio": "media/b2/2026-09-20/word-audio/erosion.mp3"
+    },
+    {
+      "word": "drought",
+      "pos": "noun",
+      "meaning": "a long period of time with very little or no rain",
+      "example": "The drought lasted all summer, so the fields turned brown.",
+      "pronunciation": "DRAWT",
+      "persian": "خشکسالی",
+      "photo": "media/b2/2026-09-20/photos/drought.jpg",
+      "word_audio": "media/b2/2026-09-20/word-audio/drought.mp3"
+    },
+    {
+      "word": "biodiversity",
+      "pos": "noun",
+      "meaning": "the variety of plants and animals in an area",
+      "example": "The rainforest has amazing biodiversity, with thousands of species.",
+      "pronunciation": "bahy-oh-duh-VUR-suh-tee",
+      "persian": "تنوع زیستی",
+      "photo": "media/b2/2026-09-20/photos/biodiversity.jpg",
+      "word_audio": "media/b2/2026-09-20/word-audio/biodiversity.mp3"
+    },
+    {
+      "word": "conserve",
+      "pos": "verb",
+      "meaning": "to protect and save something from being wasted or lost",
+      "example": "We should conserve water during the dry season.",
+      "pronunciation": "kun-SURV",
+      "persian": "حفظ و صرفه‌جویی کردن",
+      "photo": "media/b2/2026-09-20/photos/conserve.jpg",
+      "word_audio": "media/b2/2026-09-20/word-audio/conserve.mp3"
+    },
+    {
+      "word": "habitat",
+      "pos": "noun",
+      "meaning": "the natural home where a plant or animal lives",
+      "example": "Polar bears are losing their Arctic habitat.",
+      "pronunciation": "HAB-uh-tat",
+      "persian": "زیستگاه",
+      "photo": "media/b2/2026-09-20/photos/habitat.jpg",
+      "word_audio": "media/b2/2026-09-20/word-audio/habitat.mp3"
+    },
+    {
+      "word": "renewable",
+      "pos": "adjective",
+      "meaning": "coming from a source that never runs out, like the sun or the wind",
+      "example": "Wind and solar are renewable sources of energy.",
+      "pronunciation": "rih-NOO-uh-bul",
+      "persian": "تجدیدپذیر",
+      "photo": "media/b2/2026-09-20/photos/renewable.jpg",
+      "word_audio": "media/b2/2026-09-20/word-audio/renewable.mp3"
+    },
+    {
+      "word": "deforestation",
+      "pos": "noun",
+      "meaning": "the cutting down of forests over a large area",
+      "example": "Deforestation is destroying the homes of many wild animals.",
+      "pronunciation": "dee-fawr-ih-STAY-shun",
+      "persian": "جنگل‌زدایی",
+      "photo": "media/b2/2026-09-20/photos/deforestation.jpg",
+      "word_audio": "media/b2/2026-09-20/word-audio/deforestation.mp3"
+    },
+    {
+      "word": "contaminate",
+      "pos": "verb",
+      "meaning": "to make something dirty or poisonous",
+      "example": "The factory contaminated the river with chemicals.",
+      "pronunciation": "kun-TAM-uh-nayt",
+      "persian": "آلوده کردن",
+      "photo": "media/b2/2026-09-20/photos/contaminate.jpg",
+      "word_audio": "media/b2/2026-09-20/word-audio/contaminate.mp3"
+    },
+    {
+      "word": "sustainable",
+      "pos": "adjective",
+      "meaning": "able to continue without harming the environment",
+      "example": "We need sustainable farming methods that protect the soil.",
+      "pronunciation": "suh-STAY-nuh-bul",
+      "persian": "پایدار (دوستدار محیط زیست)",
+      "photo": "media/b2/2026-09-20/photos/sustainable.jpg",
+      "word_audio": "media/b2/2026-09-20/word-audio/sustainable.mp3"
+    },
+    {
+      "word": "migrate",
+      "pos": "verb",
+      "meaning": "to move from one region to another with the seasons",
+      "example": "Many birds migrate south for the winter.",
+      "pronunciation": "MY-grayt",
+      "persian": "مهاجرت کردن",
+      "photo": "media/b2/2026-09-20/photos/migrate.jpg",
+      "word_audio": "media/b2/2026-09-20/word-audio/migrate.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-09-20/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Protecting Our Planet",
+    "audio": "media/b2/2026-09-20/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-09-20/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The River Comes Back",
+    "audio": "media/b2/2026-09-20/shadowing.mp3",
+    "transcript": "media/b2/2026-09-20/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'erosion' mean?",
+      "options": [
+        "a long period of time with very little or no rain",
+        "the gradual wearing away of soil or rock by wind or water",
+        "the natural home where a plant or animal lives",
+        "to move from one region to another with the seasons"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'drought' mean?",
+      "options": [
+        "the natural home where a plant or animal lives",
+        "coming from a source that never runs out, like the sun or the wind",
+        "a long period of time with very little or no rain",
+        "to protect and save something from being wasted or lost"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'biodiversity' mean?",
+      "options": [
+        "the variety of plants and animals in an area",
+        "to make something dirty or poisonous",
+        "able to continue without harming the environment",
+        "the gradual wearing away of soil or rock by wind or water"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'conserve' mean?",
+      "options": [
+        "the cutting down of forests over a large area",
+        "the natural home where a plant or animal lives",
+        "to move from one region to another with the seasons",
+        "to protect and save something from being wasted or lost"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'habitat' mean?",
+      "options": [
+        "coming from a source that never runs out, like the sun or the wind",
+        "able to continue without harming the environment",
+        "the natural home where a plant or animal lives",
+        "a long period of time with very little or no rain"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'renewable' mean?",
+      "options": [
+        "coming from a source that never runs out, like the sun or the wind",
+        "the variety of plants and animals in an area",
+        "to make something dirty or poisonous",
+        "the gradual wearing away of soil or rock by wind or water"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'deforestation' mean?",
+      "options": [
+        "to protect and save something from being wasted or lost",
+        "to move from one region to another with the seasons",
+        "the cutting down of forests over a large area",
+        "a long period of time with very little or no rain"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'contaminate' mean?",
+      "options": [
+        "the natural home where a plant or animal lives",
+        "able to continue without harming the environment",
+        "coming from a source that never runs out, like the sun or the wind",
+        "to make something dirty or poisonous"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'sustainable' mean?",
+      "options": [
+        "the cutting down of forests over a large area",
+        "able to continue without harming the environment",
+        "the variety of plants and animals in an area",
+        "to protect and save something from being wasted or lost"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'migrate' mean?",
+      "options": [
+        "the gradual wearing away of soil or rock by wind or water",
+        "the natural home where a plant or animal lives",
+        "to make something dirty or poisonous",
+        "to move from one region to another with the seasons"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "2B: Present perfect + for / since, present perfect continuous",
+    "explanation": "We use **present perfect + for / since** for things that started in the past and are still true now. Scientists **have studied** the river's biodiversity **for** twenty years.\n\nUse **for** + a period of time: two hours, three days, a long time. Use **since** + a point in time: April, 2010, or **since** 2019, when the factory last **contaminated** the river.\n\nThe town **has tried** to conserve water **since** the great drought of 2019, and it **has worked** **for** five years.\n\nAsk about unfinished time with **How long + present perfect**. **How long have** the birds **migrated** through this valley **since** the deforestation ended? (**for** about ten years)\n\nThe **present perfect continuous** is **have / has been + verb-ing**. We **have been protecting** this habitat **for** a decade.\n\nUse the continuous form for actions that started in the past and are still true now, or just finished with visible results. It **has been raining** all morning, so the fields are wet.\n\nDo NOT use the continuous form with non-action verbs like know or like. They **have known** each other **for** ten years — never **have been knowing**.\n\n**live** and **work** can use either form with the same meaning. We **have lived** / **have been living** in this sustainable town **since** the new renewable plant opened.\n\nOne more warning: never use the present continuous with **for / since**. Say farmers **have been fighting** erosion **for** years — NOT they **are fighting** erosion **for** years.",
+    "examples": [
+      "Scientists *have studied* the valley's *biodiversity* *for* twenty years. (for + a period of time)",
+      "The town *has conserved* water *since* the great *drought* of 2019. (since + a point in time)",
+      "*How long have* you *been living* in this *sustainable* village? (unfinished time)",
+      "They *have been fighting* *erosion* *since* spring. (an action that continues now)",
+      "The river looks clean because volunteers *have been cleaning* it all morning. (just finished, visible result)",
+      "We *have used* *renewable* energy *since* 2021. (still true now)",
+      "Birds *have migrated* through this *habitat* *for* thousands of years. (still true now)",
+      "The factory *has not contaminated* the river *since* the new law. (since + a point in time)",
+      "The hills *have suffered* from *deforestation* *for* decades. (for + a period of time)",
+      "She *has known* the forest ranger *for* ten years. (non-action verb — simple form only)"
+    ],
+    "practice": [
+      {
+        "q": "Complete with the correct form of live: I ___ in this town for ten years.",
+        "a": "I have lived in this town for ten years. (Live works in both forms, so I have been living in this town for ten years is also correct.)"
+      },
+      {
+        "q": "Complete with the correct form of rain: It ___ since morning, and the streets are wet.",
+        "a": "It has been raining since morning. (A just-finished action with a visible result — use the present perfect continuous.)"
+      },
+      {
+        "q": "Correct the mistake: They have been knowing each other for ten years.",
+        "a": "They have known each other for ten years. (Know is a non-action verb — never use the continuous form.)"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She ___ English for three years.",
+        "options": [
+          "is learning",
+          "has been learning",
+          "learns",
+          "has learn"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How long ___ in this town?",
+        "options": [
+          "have you lived",
+          "do you live",
+          "are you living",
+          "you have lived"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ each other since 2015.",
+        "options": [
+          "have been knowing",
+          "are knowing",
+          "know",
+          "have known"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "It ___ since morning, and the streets are wet.",
+        "options": [
+          "rains",
+          "is raining",
+          "has been raining",
+          "rained"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Scientists ___ the river's biodiversity for twenty years.",
+        "options": [
+          "study",
+          "are studying",
+          "have been studying",
+          "have study"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He ___ unemployed since last year.",
+        "options": [
+          "has been",
+          "is",
+          "was",
+          "is being"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I am exhausted! I ___ the kitchen for two hours.",
+        "options": [
+          "am cleaning",
+          "have been cleaning",
+          "clean",
+          "have cleaned"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How long ___ here?",
+        "options": [
+          "are you working",
+          "have you been working",
+          "do you work",
+          "you have been working"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ water since the drought began.",
+        "options": [
+          "is conserving",
+          "conserves",
+          "has been conserving",
+          "has conserve"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They ___ in this sustainable village since 2010.",
+        "options": [
+          "are living",
+          "live",
+          "have lived",
+          "have been live"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}
