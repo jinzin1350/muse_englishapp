@@ -489,7 +489,7 @@ async function awardPoints(action, points, ref) {
       done[key] = Date.now();
       ptsSet('done', done);
       refreshMyPoints();
-      queuePointsPopup(points, PTS_LABELS[action] || action);
+      if (points > 0) queuePointsPopup(points, PTS_LABELS[action] || action);
       if (action === 'lesson_open') checkStreakBonus();
     } else {
       const pend = ptsGet('pending');
@@ -2346,6 +2346,7 @@ function renderLessons(v) {
    Awaiting Supabase before the first paint made tab switches feel sluggish. */
 function renderHome(v) {
   paintHome(v, lsGet('mistakes'), lsGet('scores'));
+  refreshHomeStreak();
   if (cloudReady()) {
     Promise.all([getMistakes(), getAttempts()]).then(function (res) {
       if (state.view === 'home' && !state.quiz) paintHome(v, res[0], res[1]);
@@ -2368,6 +2369,10 @@ function paintHome(v, mistakes, attempts) {
       '<span class="chp-txt"><b>1,500</b><span>learners battling for the top</span></span>' +
     '</span>' +
     '<span class="chp-cta">Join the battle <span class="chp-go">›</span></span></a>';
+
+  // 0b — Streak card (flame mascot, week strip, freezes) — painted with local
+  // data first, then refreshed with cloud state by refreshHomeStreak().
+  html += '<div id="home-streak-wrap">' + streakCardHTML(getStreakLocal()) + '</div>';
 
   // 1 — Today's lesson (the primary action)
   if (!today) {
@@ -2982,6 +2987,90 @@ function weekStripHTML(dateSet) {
          '</div><div class="cel-wdots">' + dots + '</div></div>';
 }
 
+/* Read-only streak state (never records a day): Supabase profile when migrated,
+   localStorage fallback otherwise. */
+async function getStreakState() {
+  if (cloudReady()) {
+    try {
+      const r = await sb.from('profiles')
+        .select('current_streak,longest_streak,streak_freezes')
+        .eq('id', state.user.id).single();
+      if (!r.error && r.data) {
+        return { current_streak: r.data.current_streak || 0,
+                 longest_streak: r.data.longest_streak || 0,
+                 freezes: r.data.streak_freezes || 0, source: 'cloud' };
+      }
+    } catch (e) { /* pre-migration → local fallback */ }
+  }
+  const s = getStreakLocal();
+  return { current_streak: s.current_streak || 0, longest_streak: s.longest_streak || 0,
+           freezes: s.streak_freezes || 0, source: 'local' };
+}
+async function getMyPrizes() {
+  if (cloudReady()) {
+    try {
+      const r = await sb.from('scores').select('points,ref,created_at')
+        .eq('user_id', state.user.id).eq('action', 'mystery_box')
+        .order('created_at', { ascending: false }).limit(20);
+      if (!r.error && r.data) return r.data;
+    } catch (e) {}
+  }
+  return [];
+}
+async function getMyPoints() {
+  if (cloudReady()) {
+    try {
+      const r = await sb.rpc('my_points');
+      if (!r.error && typeof r.data === 'number') { state.myPoints = r.data; return r.data; }
+    } catch (e) {}
+  }
+  return state.myPoints || 0;
+}
+function prizeLabel(points) {
+  if (points === 50) return '+50 XP';
+  if (points === 20) return '+20 XP';
+  if (points === 30) return '⭐ Weekly Star';
+  return '🧊 Streak Freeze';
+}
+/* ---------------- home streak card ---------------- */
+function homeWeekStripHTML(dateSet) {
+  const now = new Date();
+  const dow = now.getDay();
+  const start = new Date(now); start.setDate(now.getDate() - dow);
+  const names = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+  let out = '';
+  for (let i = 0; i < 7; i++) {
+    const d = new Date(start); d.setDate(start.getDate() + i);
+    const done = !!(dateSet && dateSet[fmtDate(d)]);
+    out += '<span class="hw-day' + (i === dow ? ' today' : '') + '">' +
+           '<i class="hw-name">' + names[i] + '</i>' +
+           '<i class="hw-dot' + (done ? ' on' : '') + '"></i></span>';
+  }
+  return '<div class="hw-strip">' + out + '</div>';
+}
+function streakCardHTML(st, dates) {
+  st = st || {};
+  const n = st.current_streak || 0;
+  const fr = (st.freezes != null ? st.freezes : st.streak_freezes) || 0;
+  const headline = n > 0
+    ? '<div class="streak-topline"><span class="streak-num">' + n + '</span>' +
+      '<span class="streak-unit">day streak!</span></div>'
+    : '<div class="streak-topline"><span class="streak-start">Start your streak today! 🔥</span></div>';
+  return '<section class="card streak-card" aria-label="Your streak">' +
+    '<img class="streak-flame" src="/media/celebration/flame.webp" alt="Streak flame">' +
+    '<div class="streak-main">' + headline +
+      homeWeekStripHTML(dates) +
+      '<div class="streak-freezes">🧊 ' + fr + ' freeze' + (fr === 1 ? '' : 's') + ' ready</div>' +
+    '</div></section>';
+}
+async function refreshHomeStreak() {
+  try {
+    const res = await Promise.all([getStreakState(), getWordQuizDates()]);
+    const wrap = document.getElementById('home-streak-wrap');
+    if (!wrap || state.view !== 'home') return;
+    wrap.innerHTML = streakCardHTML(res[0], res[1]);
+  } catch (e) {}
+}
 /* ---------------- celebration sequence ----------------
    Four full-screen moments after the first word-quiz completion of the day:
    1. Lesson Complete → 2. Mystery Box → 3. Streak → 4. Bonus nudge (+30 XP). */
@@ -3089,6 +3178,7 @@ function openMysteryBox() {
     { label: '+50 XP', run: function () { awardPoints('mystery_box', 50, date); } },
     { label: '+20 XP', run: function () { awardPoints('mystery_box', 20, date); } },
     { label: '🧊 Streak Freeze', run: function () {
+        awardPoints('mystery_box', 0, date); /* ledger row for prize history; no popup for 0 pts */
         grantFreeze().then(function (n) { updateFreezeLine(n); });
       } },
     { label: '⭐ Weekly Star', run: function () { awardPoints('mystery_box', 30, date); } }
@@ -3176,6 +3266,57 @@ function closeCelebration() {
   celState = null;
 }
 
+/* ---------------- My Rewards (Progress tab) ---------------- */
+function rewardsPlaceholderHTML() {
+  return '<div class="card rewards-card"><div class="section-title" style="margin:0 0 0.4rem"><h2>🏆 My Rewards</h2></div>' +
+    '<div id="rewards-body"><p class="muted">Loading…</p></div></div>';
+}
+function badgeHTML(icon, name, earned) {
+  return '<div class="badge' + (earned ? ' earned' : ' locked') + '">' +
+    '<span class="badge-icon">' + icon + '</span>' +
+    '<span class="badge-name">' + name + '</span>' +
+    '<span class="badge-tick">' + (earned ? '✓' : '🔒') + '</span></div>';
+}
+function shortDate(iso) {
+  try { return new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric' }); }
+  catch (e) { return ''; }
+}
+async function refreshRewardsSection() {
+  const body = document.getElementById('rewards-body');
+  if (!body || state.view !== 'scores') return;
+  try {
+    const res = await Promise.all([getMyPoints(), getStreakState(), getMyPrizes()]);
+    if (!document.getElementById('rewards-body') || state.view !== 'scores') return;
+    const pts = res[0], st = res[1], prizes = res[2];
+    const longest = st.longest_streak || 0;
+    const hasStar = prizes.some(function (p) { return p.points === 30; });
+    const hasFreeze = prizes.some(function (p) { return p.points === 0; });
+    let html = '<div class="rewards-top">' +
+      '<div class="rewards-stat"><span class="rp-num">' + pts + '</span><span class="rp-label">total points</span></div>' +
+      '<div class="rewards-stat"><span class="rp-num">🔥 ' + (st.current_streak || 0) + '</span><span class="rp-label">day streak</span></div>' +
+      '<div class="rewards-stat"><span class="rp-num">🎁 ' + prizes.length + '</span><span class="rp-label">prizes won</span></div></div>';
+    html += '<div class="badge-row">' +
+      badgeHTML('🔥', '7-day streak', longest >= 7) +
+      badgeHTML('🔥', '30-day streak', longest >= 30) +
+      badgeHTML('🔥', '100-day streak', longest >= 100) +
+      badgeHTML('⭐', 'Weekly Star', hasStar) +
+      badgeHTML('🧊', 'Freeze Keeper', hasFreeze) + '</div>';
+    if (prizes.length) {
+      html += '<div class="prize-title">Mystery box prizes</div><div class="prize-list">' +
+        prizes.map(function (p) {
+          return '<div class="prize-row"><span class="prize-ico">🎁</span>' +
+            '<span class="prize-name">' + esc(prizeLabel(p.points)) + '</span>' +
+            '<span class="prize-date">' + esc(shortDate(p.created_at)) + '</span></div>';
+        }).join('') + '</div>';
+    } else {
+      html += '<p class="muted" style="margin:0.6rem 0 0">No mystery prizes yet — finish today\'s quiz to earn a Mystery Box! 🎁</p>';
+    }
+    body.innerHTML = html;
+  } catch (e) {
+    body.innerHTML = '<p class="muted">Could not load rewards.</p>';
+  }
+}
+
 /* ---------------- scores view (Progress) ---------------- */
 function avgOfAttempts(arr) {
   let c = 0, t = 0;
@@ -3195,6 +3336,7 @@ function renderScores(v) {
 function paintScores(v, arr) {
   const avg = avgOfAttempts(arr);
   let html = '<h1>Progress</h1>';
+  html += rewardsPlaceholderHTML();
   if (avg === null) {
     html += '<div class="empty">No quiz attempts yet.<br>Finish a quiz and your scores will appear here.</div>';
   } else {
@@ -3202,6 +3344,7 @@ function paintScores(v, arr) {
     html += arr.map(attemptCardHTML).join('');
   }
   v.innerHTML = html;
+  refreshRewardsSection();
 }
 
 /* ---------------- review view (mistakes) ---------------- */

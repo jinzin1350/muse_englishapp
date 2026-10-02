@@ -1245,3 +1245,39 @@ details.practice p { margin: 0.7rem 0 0; color: var(--herb-dark); font-weight: 5
 .cel-nudge-card p{font-family:"Avenir Next","Trebuchet MS",sans-serif;color:#4b5563;font-size:16px;line-height:1.55;margin:0 0 22px;}
 .cel-nudge-card p b{color:#C84B31;}
 .cel-btn-ghost{background:none;border:0;color:#6B7280;font-family:inherit;font-weight:700;font-size:16px;letter-spacing:1px;cursor:pointer;min-height:48px;width:100%;}
+
+/* ============ Home streak card ============ */
+.streak-card{display:flex;gap:14px;align-items:center;background:linear-gradient(135deg,#FF9600 0%,#F07B1A 100%);border:0;color:#fff;overflow:hidden;}
+.streak-flame{width:84px;height:84px;object-fit:cover;border-radius:22px;flex:none;box-shadow:0 4px 14px rgba(0,0,0,.18);}
+.streak-main{flex:1;min-width:0;}
+.streak-topline{display:flex;align-items:baseline;gap:8px;margin-bottom:6px;}
+.streak-num{font-family:"Fredoka","Avenir Next","Trebuchet MS",sans-serif;font-weight:700;font-size:36px;line-height:1;}
+.streak-unit{font-family:"Fredoka","Avenir Next","Trebuchet MS",sans-serif;font-weight:700;font-size:19px;}
+.streak-start{font-family:"Fredoka","Avenir Next","Trebuchet MS",sans-serif;font-weight:700;font-size:18px;line-height:1.35;}
+.hw-strip{display:flex;gap:2px;margin-bottom:6px;}
+.hw-day{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;}
+.hw-name{font-style:normal;font-size:10px;font-weight:700;color:rgba(255,255,255,.75);font-family:"Avenir Next","Trebuchet MS",sans-serif;}
+.hw-day.today .hw-name{color:#fff;}
+.hw-dot{width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,.28);display:block;}
+.hw-dot.on{background:#fff;box-shadow:0 0 0 2px rgba(255,255,255,.35);}
+.streak-freezes{font-size:13px;font-weight:600;color:rgba(255,255,255,.92);font-family:"Avenir Next","Trebuchet MS",sans-serif;}
+
+/* ============ My Rewards (Progress tab) ============ */
+.rewards-card{margin-bottom:1rem;}
+.rewards-top{display:flex;gap:10px;margin-bottom:12px;}
+.rewards-stat{flex:1;background:var(--cream,#F7F2E8);border-radius:14px;padding:10px 6px;text-align:center;display:flex;flex-direction:column;gap:2px;}
+.rp-num{font-family:"Fredoka","Avenir Next","Trebuchet MS",sans-serif;font-weight:700;font-size:24px;color:var(--ink,#17212B);}
+.rp-label{font-size:11px;color:var(--muted,#6B7280);font-weight:600;}
+.badge-row{display:flex;gap:8px;overflow-x:auto;padding:2px 0 4px;}
+.badge{flex:1 0 auto;min-width:86px;background:var(--cream,#F7F2E8);border-radius:14px;padding:10px 8px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px;}
+.badge-icon{font-size:24px;}
+.badge-name{font-size:11px;font-weight:700;color:var(--ink,#17212B);line-height:1.25;}
+.badge-tick{font-size:12px;}
+.badge.earned{background:#FFF3DC;box-shadow:inset 0 0 0 2px #FFC800;}
+.badge.locked{opacity:.55;}
+.prize-title{font-weight:700;font-size:14px;margin:10px 0 6px;color:var(--ink,#17212B);}
+.prize-list{display:flex;flex-direction:column;gap:6px;}
+.prize-row{display:flex;align-items:center;gap:10px;background:var(--cream,#F7F2E8);border-radius:12px;padding:8px 12px;}
+.prize-ico{font-size:18px;}
+.prize-name{font-weight:700;font-size:14px;flex:1;}
+.prize-date{font-size:12px;color:var(--muted,#6B7280);}
