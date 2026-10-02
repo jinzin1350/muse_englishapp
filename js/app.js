@@ -471,7 +471,7 @@ function ptsSet(kind, obj) {
 /* Award points for an action. Real logged-in users only; each action+ref
    awards once. On success the celebratory popup fires; on failure the award
    is queued and retried on the next login. */
-async function awardPoints(action, points, ref) {
+async function awardPoints(action, points, ref, noPopup) {
   try {
     if (!state.user || state.user.demo || !state.user.id) return;
     ref = ref || '';
@@ -492,7 +492,7 @@ async function awardPoints(action, points, ref) {
       done[key] = Date.now();
       ptsSet('done', done);
       refreshMyPoints();
-      if (points > 0) queuePointsPopup(points, PTS_LABELS[action] || action);
+      if (points > 0 && !noPopup) queuePointsPopup(points, PTS_LABELS[action] || action);
       if (action === 'lesson_open') checkStreakBonus();
     } else {
       const pend = ptsGet('pending');
@@ -1191,6 +1191,7 @@ function initAudio() {
   player.el.addEventListener('ended', function () { try { checkTrackCompletion(true); } catch (e) {} playerUI(); refreshTrackCards(); });
   player.el.addEventListener('timeupdate', function () { try { checkTrackCompletion(false); } catch (e) {} });
   player.el.addEventListener('timeupdate', function () { try { podMsTrack(); } catch (e) {} });
+  player.el.addEventListener('ended', function () { try { podMsOnEnded(); } catch (e) {} });
   player.el.addEventListener('error', function () {
     player.title = 'Could not load audio';
     playerUI();
@@ -3356,28 +3357,49 @@ function closeCelebration() {
   celState = null;
 }
 
-/* ---------------- podcast milestone celebrations (2026-10-02) ----------------
-   Genuine-listening milestones at 2:00 and 5:00 of the podcast.
-   Only real playback counts (seeks don't). Flow per milestone:
-   Mystery Box -> prize -> congrats ("Well done!") with teaser for the next
-   milestone -> CONTINUE PODCAST (resume) / NOT NOW (dismiss).
+/* ---------------- podcast milestone celebrations (2026-10-02, v2 art) ----------------
+   Genuine-listening milestones at 2:00 and 5:00 of the podcast, plus a +30 XP
+   bonus when the episode is genuinely listened to the end.
+   Only real playback counts (seeks don't).
+   m2: "Great!" art -> Open gift -> random prize -> 2s -> "Keep going!" art
+       (Continue now = resume podcast / Later = dismiss)
+   m5: "Amazing!" art -> Open gift -> +20 XP -> 2s -> "Next Challenge!" art
+       (Continue now / Later)
+   end: podcast played to the end -> +30 XP celebration.
    Once per day per milestone. */
-var podMs = { date: null, lastPos: 0, listened: 0, m2: false, m5: false, busy: false };
+var podMs = { date: null, lastPos: 0, listened: 0, m2: false, m5: false, end: false, busy: false };
 var podMsState = null;
 var podMsLastSave = 0;
+
+/* full-screen art per stage (941x1672 originals) */
+var PODMS_ART = {
+  m2a: '/media/celebration/pod-ms2-great.webp',
+  m2b: '/media/celebration/pod-ms2-keepgoing.webp',
+  m5a: '/media/celebration/pod-ms5-amazing.webp',
+  m5b: '/media/celebration/pod-ms5-next.webp'
+};
+/* tap zones as fractions of the art (baked-in buttons) */
+var PODMS_ZONES = {
+  m2a: [{ k: 'gift', l: .09, t: .862, w: .82, h: .09 }],
+  m5a: [{ k: 'gift', l: .09, t: .865, w: .82, h: .09 }],
+  m2b: [{ k: 'cont', l: .11, t: .75, w: .78, h: .10 },
+         { k: 'later', l: .15, t: .848, w: .70, h: .08 }],
+  m5b: [{ k: 'cont', l: .09, t: .792, w: .82, h: .10 },
+         { k: 'later', l: .15, t: .883, w: .70, h: .075 }]
+};
 
 function podMsLoad() {
   const d = todayStr();
   podMs.date = d; podMs.lastPos = 0;
   let s = null;
   try { s = JSON.parse(localStorage.getItem('podms_' + ((state.user && state.user.email) || 'anon') + '_' + d) || 'null'); } catch (e) {}
-  if (s) { podMs.listened = s.listened || 0; podMs.m2 = !!s.m2; podMs.m5 = !!s.m5; }
-  else { podMs.listened = 0; podMs.m2 = false; podMs.m5 = false; }
+  if (s) { podMs.listened = s.listened || 0; podMs.m2 = !!s.m2; podMs.m5 = !!s.m5; podMs.end = !!s.end; }
+  else { podMs.listened = 0; podMs.m2 = false; podMs.m5 = false; podMs.end = false; }
 }
 function podMsSave() {
   try {
     localStorage.setItem('podms_' + ((state.user && state.user.email) || 'anon') + '_' + todayStr(),
-      JSON.stringify({ listened: Math.floor(podMs.listened), m2: podMs.m2, m5: podMs.m5 }));
+      JSON.stringify({ listened: Math.floor(podMs.listened), m2: podMs.m2, m5: podMs.m5, end: podMs.end }));
   } catch (e) {}
 }
 function podMsTrack() {
@@ -3399,71 +3421,145 @@ function podMsTrack() {
     }
   } catch (e) {}
 }
+function podMsOnEnded() {
+  try {
+    if (podMs.date !== todayStr()) podMsLoad();
+    if (podMs.end || podMs.busy) return;
+    if (!player.src || player.src.indexOf('podcast.mp3') === -1) return;
+    const dur = player.el.duration || 0;
+    if (dur > 0 && podMs.listened >= dur * 0.8) {
+      podMs.end = true; podMsSave();
+      podMsShowEnd();
+    }
+  } catch (e) {}
+}
 function firePodMs(which) {
   if (podMs.busy || document.getElementById('celebration') || document.getElementById('podms')) return;
   podMs['m' + which] = true; podMsSave();
   podMs.busy = true;
   try { player.el.pause(); } catch (e) {}
   playerUI(); refreshTrackCards();
-  podMsState = { which: which, opened: false, prize: null };
+  podMsState = { which: which, prize: null, timer: null };
+  podMsShow('m' + which + 'a');
+}
+/* render one full-screen art stage with invisible tap zones over the baked buttons */
+function podMsShow(stage) {
+  podMsClear();
   const root = document.createElement('div');
   root.id = 'podms';
+  root.setAttribute('data-stage', stage);
   root.innerHTML =
-  '<div class="cel-stage">' +
-    '<section class="cel-moment active" id="podms-box">' +
-      '<div class="cel-shake-wrap">' +
-        '<img id="podms-gift-closed" class="cel-bleed" src="/media/celebration/gift-closed.webp" alt="Mystery gift box">' +
-        '<img id="podms-gift-open" class="cel-bleed" src="/media/celebration/gift-open.webp" alt="Opened gift box">' +
-      '</div>' +
-      '<div class="cel-m2-top"><h1>You earned a<br>Mystery Box!</h1><p>Tap anywhere to open</p></div>' +
-      '<div class="cel-m2-cta"><button id="podms-open">🎁 TAP TO OPEN!</button></div>' +
-      '<div id="podms-reward"><div class="cel-reward-card"><div class="rk">YOUR REWARD</div>' +
-      '<div id="podms-reward-name">+10 XP</div>' +
-      '<button class="cel-btn" id="podms-continue1">CONTINUE</button></div></div>' +
-    '</section>' +
-    '<section class="cel-moment" id="podms-done">' +
-      '<div class="cel-nudge-card"><h1>Well done! 🎉</h1>' +
-      '<p id="podms-congrats"></p>' +
-      '<button class="cel-btn" id="podms-resume">CONTINUE PODCAST</button>' +
-      '<button class="cel-btn-ghost" id="podms-dismiss">NOT NOW</button></div>' +
-    '</section>' +
-  '</div>';
+    '<div class="podms-stage">' +
+      '<img class="podms-art" src="' + PODMS_ART[stage] + '" alt="">' +
+      '<div class="podms-zones"></div>' +
+      '<div class="podms-reveal" id="podms-reveal"><div class="podms-reveal-card">' +
+        '<div class="pr-emoji" id="podms-reveal-emoji">\uD83C\uDF81</div>' +
+        '<div class="pr-label" id="podms-reveal-label">+10 XP</div>' +
+        '<div class="pr-sub">tap to continue</div>' +
+      '</div></div>' +
+    '</div>';
   document.body.appendChild(root);
-  wirePodMs();
+  const zones = root.querySelector('.podms-zones');
+  (PODMS_ZONES[stage] || []).forEach(function (z) {
+    const b = document.createElement('button');
+    b.className = 'podms-tap';
+    b.setAttribute('aria-label', z.k);
+    zones.appendChild(b);
+    b.addEventListener('click', function (e) { e.stopPropagation(); podMsTap(z.k); });
+  });
+  document.getElementById('podms-reveal').addEventListener('click', function () {
+    const st = podMsState;
+    if (st && st.timer) { clearTimeout(st.timer); st.timer = null; }
+    podMsNextArt();
+  });
+  podMsLayout();
+  window.addEventListener('resize', podMsLayout);
 }
-function podMsPrize(which) {
-  const date = todayStr();
-  if (which === 2) {
-    awardPoints('podcast_milestone', 10, date + '-m2');
-    return { label: '+10 XP', points: 10 };
-  }
-  const pool = [
-    { label: '+20 XP', points: 20 },
-    { label: '+30 XP', points: 30 },
-    { label: '🧊 Streak Freeze', points: 0, freeze: true }
-  ];
-  const r = pool[Math.floor(Math.random() * pool.length)];
-  awardPoints('podcast_milestone', r.points, date + '-m5');
-  if (r.freeze) { try { grantFreeze().then(function (n) { updateFreezeLine(n); }); } catch (e) {} }
-  return r;
+/* map art-fraction zones onto the cover-fit image */
+function podMsLayout() {
+  try {
+    const root = document.getElementById('podms');
+    if (!root) return;
+    const stage = root.getAttribute('data-stage');
+    const zs = PODMS_ZONES[stage];
+    if (!zs) return;
+    const W = root.clientWidth, H = root.clientHeight;
+    const iw = 941, ih = 1672;
+    const sc = Math.max(W / iw, H / ih);
+    const dw = iw * sc, dh = ih * sc, ox = (W - dw) / 2, oy = (H - dh) / 2;
+    const btns = root.querySelectorAll('.podms-tap');
+    btns.forEach(function (b, i) {
+      const z = zs[i]; if (!z) return;
+      b.style.left = (ox + z.l * dw) + 'px';
+      b.style.top = (oy + z.t * dh) + 'px';
+      b.style.width = (z.w * dw) + 'px';
+      b.style.height = (z.h * dh) + 'px';
+    });
+  } catch (e) {}
 }
-function podMsShowCongrats() {
+function podMsTap(k) {
+  if (!podMsState) return;
+  if (k === 'gift') podMsOpenGift();
+  else if (k === 'cont') podMsResume();
+  else if (k === 'later') closePodMs();
+}
+function podMsOpenGift() {
   const st = podMsState;
-  if (!st || !st.prize) return;
-  const total = st.which === 2 ? 10 : 10 + st.prize.points;
-  let msg = 'Mystery box opened: <b>' + st.prize.label + '</b><br>' +
-    'You\u2019ve earned <b>+' + total + ' XP</b> from today\u2019s podcast so far.';
-  if (st.which === 2) msg += '<br>Keep listening until <b>minute 5</b> for another mystery prize! 🎁';
-  document.getElementById('podms-congrats').innerHTML = msg;
-  document.getElementById('podms-box').classList.remove('active');
-  document.getElementById('podms-done').classList.add('active');
-  window.scrollTo(0, 0);
+  if (!st || st.prize) return;
+  const date = todayStr();
+  let prize;
+  if (st.which === 2) {
+    const pool = [
+      { label: '+10 XP', points: 10 },
+      { label: '+20 XP', points: 20 },
+      { label: '+30 XP', points: 30 },
+      { label: 'Streak Freeze', points: 0, freeze: true }
+    ];
+    prize = pool[Math.floor(Math.random() * pool.length)];
+    awardPoints('podcast_milestone', prize.points, date + '-m2', true);
+    if (prize.freeze) { try { grantFreeze().then(function (n) { updateFreezeLine(n); }); } catch (e) {} }
+  } else {
+    prize = { label: '+20 XP', points: 20 };
+    awardPoints('podcast_milestone', 20, date + '-m5', true);
+  }
+  st.prize = prize;
+  document.getElementById('podms-reveal-emoji').textContent = prize.freeze ? '\uD83E\uDDCA' : '\uD83C\uDF89';
+  document.getElementById('podms-reveal-label').textContent = prize.label;
+  document.getElementById('podms-reveal').classList.add('show');
+  st.timer = setTimeout(podMsNextArt, 2000);
 }
-function closePodMs() {
-  podMs.busy = false;
-  try { podMs.lastPos = player.el.currentTime || 0; } catch (e) {}
+function podMsNextArt() {
+  const st = podMsState;
+  if (!st || st.which === 'end') return;
+  podMsShow('m' + st.which + 'b');
+}
+function podMsShowEnd() {
+  if (podMs.busy || document.getElementById('celebration') || document.getElementById('podms')) return;
+  podMs.busy = true;
+  try { player.el.pause(); } catch (e) {}
+  awardPoints('podcast_milestone', 30, todayStr() + '-end', true);
+  podMsState = { which: 'end', prize: { label: '+30 XP', points: 30 }, timer: null };
+  const root = document.createElement('div');
+  root.id = 'podms';
+  root.setAttribute('data-stage', 'end');
+  root.innerHTML =
+    '<div class="podms-stage" id="podms-end-stage">' +
+      '<img class="podms-art" src="/media/celebration/pod-end-complete.webp" alt="Podcast complete! +30 points">' +
+    '</div>';
+  document.body.appendChild(root);
+  document.getElementById('podms-end-stage').addEventListener('click', closePodMs);
+}
+function podMsClear() {
+  window.removeEventListener('resize', podMsLayout);
   const el = document.getElementById('podms');
   if (el && el.parentNode) el.parentNode.removeChild(el);
+}
+function closePodMs() {
+  const st = podMsState;
+  if (st && st.timer) { try { clearTimeout(st.timer); } catch (e) {} }
+  podMs.busy = false;
+  try { podMs.lastPos = player.el.currentTime || 0; } catch (e) {}
+  podMsClear();
   podMsState = null;
 }
 function podMsResume() {
@@ -3479,31 +3575,6 @@ function podMsResume() {
     podMs.lastPos = player.el.currentTime || 0;
     playerUI(); refreshTrackCards();
   }, 350);
-}
-function wirePodMs() {
-  const box = document.getElementById('podms-box');
-  box.addEventListener('click', function () {
-    const st = podMsState;
-    if (!st || st.opened) return;
-    st.opened = true;
-    box.classList.add('shaking');
-    setTimeout(function () {
-      box.classList.remove('shaking');
-      document.getElementById('podms-gift-closed').classList.add('fadeout');
-      document.getElementById('podms-gift-open').classList.add('show');
-      const pr = podMsPrize(st.which);
-      st.prize = pr;
-      document.getElementById('podms-reward-name').textContent = pr.label;
-      document.getElementById('podms-reward').classList.add('up');
-      const cta = document.querySelector('#podms .cel-m2-cta');
-      if (cta) cta.classList.add('hidden');
-    }, 650);
-  });
-  document.getElementById('podms-continue1').addEventListener('click', function (e) {
-    e.stopPropagation(); podMsShowCongrats();
-  });
-  document.getElementById('podms-resume').addEventListener('click', podMsResume);
-  document.getElementById('podms-dismiss').addEventListener('click', closePodMs);
 }
 
 /* ---------------- My Rewards (Progress tab) ---------------- */
@@ -3830,7 +3901,7 @@ document.addEventListener('DOMContentLoaded', init);
 
 /* Test/debug hooks (harmless in production). */
 window.MuseApp = {
-  state: state, showModal: showModal, closeModal: closeModal,
+  state: state, player: player, showModal: showModal, closeModal: closeModal,
   detectCountry: detectCountry, maybeShowWelcome: maybeShowWelcome,
   renderSignin: renderSignin, renderProfile: renderProfile,
   ensureCountrySaved: ensureCountrySaved,
