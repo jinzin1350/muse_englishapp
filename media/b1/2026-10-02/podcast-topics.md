@@ -1,0 +1,6 @@
+- Theme: education & learning vocabulary for B1 learners
+- Ten words: exam, grade, assignment, lecture, scholarship, degree, memorize, concentrate, tutor, graduate
+- Maya and Lena share school memories: stressful exams, pizza rewards for good grades, long lectures
+- Tips: take exams one question at a time, start assignments early, Pomodoro technique to concentrate, memorize by repeating out loud
+- Story: Lena's cousin won a scholarship to study in Canada; Maya's degree in teaching; graduating and new beginnings
+- Review: hosts recite all ten words twice at the end
