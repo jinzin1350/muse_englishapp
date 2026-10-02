@@ -1,0 +1,355 @@
+{
+  "date": "2026-09-27",
+  "theme": "Sports and Fitness",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "coach",
+      "pos": "noun",
+      "meaning": "a sports trainer who plans practice",
+      "example": "Our coach plans every practice.",
+      "pronunciation": "KOHCH",
+      "persian": "مربی",
+      "photo": "media/a2/2026-09-27/photos/coach.jpg",
+      "word_audio": "media/a2/2026-09-27/word-audio/coach.mp3"
+    },
+    {
+      "word": "match",
+      "pos": "noun",
+      "meaning": "a game between two teams",
+      "example": "Our team won the match on Saturday.",
+      "pronunciation": "MACH",
+      "persian": "مسابقه",
+      "photo": "media/a2/2026-09-27/photos/match.jpg",
+      "word_audio": "media/a2/2026-09-27/word-audio/match.mp3"
+    },
+    {
+      "word": "team",
+      "pos": "noun",
+      "meaning": "a group of players together",
+      "example": "She plays on a volleyball team.",
+      "pronunciation": "TEEM",
+      "persian": "تیم",
+      "photo": "media/a2/2026-09-27/photos/team.jpg",
+      "word_audio": "media/a2/2026-09-27/word-audio/team.mp3"
+    },
+    {
+      "word": "goal",
+      "pos": "noun",
+      "meaning": "a point you score in a game",
+      "example": "He kicked the ball and scored a goal.",
+      "pronunciation": "GOHL",
+      "persian": "گل",
+      "photo": "media/a2/2026-09-27/photos/goal.jpg",
+      "word_audio": "media/a2/2026-09-27/word-audio/goal.mp3"
+    },
+    {
+      "word": "score",
+      "pos": "noun",
+      "meaning": "the number of points in a game",
+      "example": "The final score was two to one.",
+      "pronunciation": "SKOR",
+      "persian": "امتیاز",
+      "photo": "media/a2/2026-09-27/photos/score.jpg",
+      "word_audio": "media/a2/2026-09-27/word-audio/score.mp3"
+    },
+    {
+      "word": "practice",
+      "pos": "verb",
+      "meaning": "to train to get better",
+      "example": "We practice free throws every day.",
+      "pronunciation": "PRAK-tis",
+      "persian": "تمرین",
+      "photo": "media/a2/2026-09-27/photos/practice.jpg",
+      "word_audio": "media/a2/2026-09-27/word-audio/practice.mp3"
+    },
+    {
+      "word": "exercise",
+      "pos": "noun",
+      "meaning": "body movement to stay healthy",
+      "example": "Walking is good exercise.",
+      "pronunciation": "EK-ser-syz",
+      "persian": "ورزش",
+      "photo": "media/a2/2026-09-27/photos/exercise.jpg",
+      "word_audio": "media/a2/2026-09-27/word-audio/exercise.mp3"
+    },
+    {
+      "word": "muscle",
+      "pos": "noun",
+      "meaning": "the part of your body that moves",
+      "example": "He hurt a muscle in his leg.",
+      "pronunciation": "MUS-sul",
+      "persian": "عضله",
+      "photo": "media/a2/2026-09-27/photos/muscle.jpg",
+      "word_audio": "media/a2/2026-09-27/word-audio/muscle.mp3"
+    },
+    {
+      "word": "stretch",
+      "pos": "verb",
+      "meaning": "to make your muscles longer",
+      "example": "Stretch before you run.",
+      "pronunciation": "STRECH",
+      "persian": "کشش",
+      "photo": "media/a2/2026-09-27/photos/stretch.jpg",
+      "word_audio": "media/a2/2026-09-27/word-audio/stretch.mp3"
+    },
+    {
+      "word": "balance",
+      "pos": "noun",
+      "meaning": "the ability to stay steady",
+      "example": "Good balance helps in yoga.",
+      "pronunciation": "BA-lans",
+      "persian": "تعادل",
+      "photo": "media/a2/2026-09-27/photos/balance.jpg",
+      "word_audio": "media/a2/2026-09-27/word-audio/balance.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-09-27/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Sports and Fitness",
+    "audio": "media/a2/2026-09-27/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-09-27/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Sporty Saturday",
+    "audio": "media/a2/2026-09-27/shadowing.mp3",
+    "transcript": "media/a2/2026-09-27/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'coach' mean?",
+      "options": [
+        "a point you score in a game",
+        "a sports trainer who plans practice",
+        "the number of points in a game",
+        "the ability to stay steady"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'match' mean?",
+      "options": [
+        "to make your muscles longer",
+        "a game between two teams",
+        "a group of players together",
+        "body movement to stay healthy"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'team' mean?",
+      "options": [
+        "a group of players together",
+        "a sports trainer who plans practice",
+        "the part of your body that moves",
+        "to train to get better"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'goal' mean?",
+      "options": [
+        "the ability to stay steady",
+        "to make your muscles longer",
+        "a point you score in a game",
+        "a game between two teams"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'score' mean?",
+      "options": [
+        "a sports trainer who plans practice",
+        "body movement to stay healthy",
+        "a game between two teams",
+        "the number of points in a game"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'practice' mean?",
+      "options": [
+        "to train to get better",
+        "a group of players together",
+        "the part of your body that moves",
+        "a point you score in a game"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'exercise' mean?",
+      "options": [
+        "the ability to stay steady",
+        "a game between two teams",
+        "body movement to stay healthy",
+        "the number of points in a game"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'muscle' mean?",
+      "options": [
+        "a sports trainer who plans practice",
+        "to make your muscles longer",
+        "the part of your body that moves",
+        "a group of players together"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'stretch' mean?",
+      "options": [
+        "the number of points in a game",
+        "to make your muscles longer",
+        "a point you score in a game",
+        "to train to get better"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'balance' mean?",
+      "options": [
+        "body movement to stay healthy",
+        "a game between two teams",
+        "a group of players together",
+        "the ability to stay steady"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "3A: Choosing between comparatives and superlatives",
+    "explanation": "A **comparative adjective** compares two people or things, like two teams. Use it with the word **than**.\n\nMake a comparative by adding **-er** to short adjectives, like faster. Use **more** before long adjectives, like more difficult.\n\nWatch the spelling: big becomes **bigger**, and easy becomes **easier**. Two adjectives are irregular: **good → better** and **bad → worse**.\n\nWhen two things are equal, use **(not) as + adjective + as**. You can compare two scores, two matches, or two coaches this way.\n\nA **superlative adjective** compares one thing with a whole group, like one team in a match. Always use **the** before it.\n\nMake a superlative by adding **-est** to short adjectives, like fastest. Use **the most** before long adjectives, like the most difficult.\n\nAfter a superlative, use **in**, never of. Think of the best goal in the match, or the best stretch in your exercise.\n\nNow you know ten sports words for practice: team, match, coach, practice, goal, score, exercise, muscle, stretch, and balance.",
+    "examples": [
+      "Our team is *faster than* their team. (comparative + than)",
+      "Stretching is *more difficult than* running. (more + long adjective)",
+      "Our coach is *better than* their coach. (irregular: good → better)",
+      "My muscle is *bigger than* last month. (spelling: double the last letter)",
+      "My balance is *as good as* yours. (as + adjective + as)",
+      "This exercise is *the easiest* in my practice. (superlative + -est)",
+      "He is *the tallest* player on the team. (always use the)",
+      "She scored *the best* goal in the match. (superlative + in)",
+      "Our score is *higher than* last week's score. (comparative + -er)",
+      "Warm muscles work *better than* cold muscles. (irregular: good → better)"
+    ],
+    "practice": [
+      {
+        "q": "Complete: My team is ___ (fast) than yours.",
+        "a": "faster"
+      },
+      {
+        "q": "Complete: She is the ___ (good) player on the team.",
+        "a": "best"
+      },
+      {
+        "q": "Which is correct: 'the best goal in the match' or 'the best goal of the match'?",
+        "a": "'the best goal in the match' — use in, not of, after a superlative."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Running is ___ than walking for your heart.",
+        "options": [
+          "more healthy",
+          "healthier",
+          "healthiest",
+          "healthy"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My team is ___ than your team this year.",
+        "options": [
+          "strong",
+          "stronger",
+          "strongest",
+          "more strong"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She is the ___ player on the team.",
+        "options": [
+          "good",
+          "better",
+          "best",
+          "well"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Our score is ___ good as theirs.",
+        "options": [
+          "as",
+          "so",
+          "than",
+          "the"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "That was the ___ exercise of the day.",
+        "options": [
+          "difficult",
+          "more difficult",
+          "most difficult",
+          "difficulter"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "His balance is ___ than mine.",
+        "options": [
+          "gooder",
+          "better",
+          "best",
+          "more good"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "She is taller than me.",
+          "She is more taller than me.",
+          "She is the taller than me.",
+          "She is tall than me."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The coach is the ___ person on the team.",
+        "options": [
+          "important",
+          "more important",
+          "most important",
+          "importanter"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Yoga is ___ difficult than football.",
+        "options": [
+          "less",
+          "least",
+          "fewer",
+          "fewest"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "That was the best goal ___ the match.",
+        "options": [
+          "of",
+          "in",
+          "at",
+          "on"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-09-27/grammar-en.mp3"
+  }
+}

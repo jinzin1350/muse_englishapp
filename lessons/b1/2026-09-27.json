@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-27",
+  "theme": "Emotions & Character",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "generous",
+      "pos": "adjective",
+      "meaning": "willing to give and share freely",
+      "example": "My neighbor is very generous, she shares her garden vegetables with everyone.",
+      "pronunciation": "JEN-er-uss",
+      "persian": "سخاوتمند",
+      "photo": "media/b1/2026-09-27/photos/generous.jpg",
+      "word_audio": "media/b1/2026-09-27/word-audio/generous.mp3"
+    },
+    {
+      "word": "jealous",
+      "pos": "adjective",
+      "meaning": "unhappy because someone else has something you want",
+      "example": "Don't be jealous of her success; celebrate it instead.",
+      "pronunciation": "JEL-uss",
+      "persian": "حسود",
+      "photo": "media/b1/2026-09-27/photos/jealous.jpg",
+      "word_audio": "media/b1/2026-09-27/word-audio/jealous.mp3"
+    },
+    {
+      "word": "stubborn",
+      "pos": "adjective",
+      "meaning": "refusing to change your mind",
+      "example": "He's too stubborn to admit he was wrong.",
+      "pronunciation": "STUB-urn",
+      "persian": "لجباز",
+      "photo": "media/b1/2026-09-27/photos/stubborn.jpg",
+      "word_audio": "media/b1/2026-09-27/word-audio/stubborn.mp3"
+    },
+    {
+      "word": "moody",
+      "pos": "adjective",
+      "meaning": "changing feelings quickly, often from happy to sad",
+      "example": "Teenagers can be moody, but it usually passes.",
+      "pronunciation": "MOO-dee",
+      "persian": "دمدمی‌مزاج",
+      "photo": "media/b1/2026-09-27/photos/moody.jpg",
+      "word_audio": "media/b1/2026-09-27/word-audio/moody.mp3"
+    },
+    {
+      "word": "anxious",
+      "pos": "adjective",
+      "meaning": "worried or nervous about something that might happen",
+      "example": "I felt anxious before the job interview.",
+      "pronunciation": "ANK-shuss",
+      "persian": "مضطرب",
+      "photo": "media/b1/2026-09-27/photos/anxious.jpg",
+      "word_audio": "media/b1/2026-09-27/word-audio/anxious.mp3"
+    },
+    {
+      "word": "brave",
+      "pos": "adjective",
+      "meaning": "not afraid to face danger or difficulty",
+      "example": "It was brave of her to speak up in the meeting.",
+      "pronunciation": "BRAYV",
+      "persian": "شجاع",
+      "photo": "media/b1/2026-09-27/photos/brave.jpg",
+      "word_audio": "media/b1/2026-09-27/word-audio/brave.mp3"
+    },
+    {
+      "word": "curious",
+      "pos": "adjective",
+      "meaning": "wanting to learn or know more about things",
+      "example": "My cat is very curious about every new box in the house.",
+      "pronunciation": "KYOOR-ee-uss",
+      "persian": "کنجکاو",
+      "photo": "media/b1/2026-09-27/photos/curious.jpg",
+      "word_audio": "media/b1/2026-09-27/word-audio/curious.mp3"
+    },
+    {
+      "word": "honest",
+      "pos": "adjective",
+      "meaning": "always telling the truth",
+      "example": "Just be honest with me, I can handle the truth.",
+      "pronunciation": "ON-ist",
+      "persian": "صادق",
+      "photo": "media/b1/2026-09-27/photos/honest.jpg",
+      "word_audio": "media/b1/2026-09-27/word-audio/honest.mp3"
+    },
+    {
+      "word": "patient",
+      "pos": "adjective",
+      "meaning": "able to wait calmly without getting angry",
+      "example": "The teacher was patient while the students tried to solve the problem.",
+      "pronunciation": "PAY-shunt",
+      "persian": "صبور",
+      "photo": "media/b1/2026-09-27/photos/patient.jpg",
+      "word_audio": "media/b1/2026-09-27/word-audio/patient.mp3"
+    },
+    {
+      "word": "optimistic",
+      "pos": "adjective",
+      "meaning": "expecting good things to happen",
+      "example": "She stays optimistic even when things go wrong.",
+      "pronunciation": "op-tih-MIS-tik",
+      "persian": "خوش‌بین",
+      "photo": "media/b1/2026-09-27/photos/optimistic.jpg",
+      "word_audio": "media/b1/2026-09-27/word-audio/optimistic.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-09-27/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Emotions and Character",
+    "audio": "media/b1/2026-09-27/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-09-27/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Who Are You? A Shadowing Story About Character",
+    "audio": "media/b1/2026-09-27/shadowing.mp3",
+    "transcript": "media/b1/2026-09-27/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'generous' mean?",
+      "options": [
+        "able to wait calmly",
+        "changing feelings quickly",
+        "willing to give and share freely",
+        "worried or nervous"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'jealous' mean?",
+      "options": [
+        "changing feelings quickly",
+        "unhappy because someone else has something you want",
+        "telling the truth",
+        "able to wait calmly"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'stubborn' mean?",
+      "options": [
+        "able to wait calmly",
+        "refusing to change your mind",
+        "changing feelings quickly",
+        "expecting good things to happen"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'moody' mean?",
+      "options": [
+        "worried or nervous",
+        "changing feelings quickly",
+        "expecting good things to happen",
+        "wanting to learn or know more"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'anxious' mean?",
+      "options": [
+        "expecting good things to happen",
+        "worried or nervous",
+        "refusing to change your mind",
+        "unhappy because someone else has something you want"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'brave' mean?",
+      "options": [
+        "telling the truth",
+        "not afraid to face danger",
+        "willing to give and share freely",
+        "unhappy because someone else has something you want"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'curious' mean?",
+      "options": [
+        "telling the truth",
+        "willing to give and share freely",
+        "wanting to learn or know more",
+        "unhappy because someone else has something you want"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'honest' mean?",
+      "options": [
+        "telling the truth",
+        "willing to give and share freely",
+        "changing feelings quickly",
+        "refusing to change your mind"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'patient' mean?",
+      "options": [
+        "unhappy because someone else has something you want",
+        "telling the truth",
+        "able to wait calmly",
+        "refusing to change your mind"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'optimistic' mean?",
+      "options": [
+        "willing to give and share freely",
+        "unhappy because someone else has something you want",
+        "able to wait calmly",
+        "expecting good things to happen"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "3A: Choosing between comparatives and superlatives",
+    "explanation": "Use a **comparative adjective + than** to compare two people, places, or things.\n\nShort adjectives add **-er** (old → older, big → bigger); adjectives ending in y change to **-ier** (easy → easier).\n\nLonger adjectives use **more + adjective** (modern → more modern, difficult → more difficult).\n\nMemorize the irregular forms: **good → better**, **bad → worse**, **far → further/farther**.\n\nAdjectives of character follow the same rules: generous, jealous, stubborn, moody, anxious, brave, curious, honest, patient, and optimistic can all become comparatives.\n\nUse **(not) as + adjective + as** to say things are equal or not equal; use **the same as** for identical things.\n\nComparative adverbs compare actions the same way: fast → faster, slowly → more slowly, well → better, badly → worse.\n\nUse **the + superlative** to compare one person or thing with the whole group.\n\nSuperlatives take **-est** (biggest), **the most / the least** (most modern), and the irregulars **best** and **worst**.\n\nAfter a superlative use **in**, not of. Superlatives often pair with the present perfect and ever, as in the *most generous* person I've ever met.",
+    "examples": [
+      "My uncle is the *most generous* person in our family. (superlative of a long adjective)",
+      "Don't be *more jealous than* you need to be; her success doesn't hurt you.",
+      "My little brother is *more stubborn than* our dad.",
+      "The weather today is *moodier than* yesterday. (y → ier)",
+      "She felt *more anxious than* me before the interview.",
+      "He was *braver than* anyone else in the team.",
+      "My sister is *more curious than* I am about the world.",
+      "Just be *as honest as* you can in the interview. (as + adjective + as)",
+      "A *more patient* teacher gets better results *than* a strict one.",
+      "Staying optimistic is *better than* giving up. (irregular: good → better)"
+    ],
+    "practice": [
+      {
+        "q": "Which is correct: \"She is more brave than me\" or \"She is braver than me\"?",
+        "a": "\"She is braver than me\" — short adjectives take -er, not more."
+      },
+      {
+        "q": "Complete: \"This is the ___ (good) book I have ever read.\"",
+        "a": "\"the best\" — superlative with the present perfect + ever."
+      },
+      {
+        "q": "Complete: \"He drives ___ (fast) than his wife.\"",
+        "a": "\"faster\" — comparative adverb + than."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "My car is ___ than yours.",
+        "options": [
+          "older",
+          "oldest",
+          "more old",
+          "the older"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "London is ___ expensive than Edinburgh.",
+        "options": [
+          "most",
+          "more",
+          "er",
+          "very"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Olive oil is ___ for you than butter.",
+        "options": [
+          "more good",
+          "better",
+          "best",
+          "good"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The new sofa isn't ___ comfortable as the old one.",
+        "options": [
+          "so",
+          "as",
+          "than",
+          "like"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My father drives ___ than me.",
+        "options": [
+          "more fast",
+          "fastest",
+          "faster",
+          "the faster"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Kevin is ___ player in the team.",
+        "options": [
+          "tallest",
+          "the tallest",
+          "more tall",
+          "the most tall"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "It's the best beach ___ England.",
+        "options": [
+          "of",
+          "in",
+          "at",
+          "on"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "That's the ___ film I've ever seen.",
+        "options": [
+          "bad",
+          "worse",
+          "more bad",
+          "worst"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Max doesn't speak English ___ well as his wife.",
+        "options": [
+          "than",
+          "as",
+          "like",
+          "so"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What's the ___ way to get across London?",
+        "options": [
+          "faster",
+          "fastest",
+          "more fast",
+          "fast"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

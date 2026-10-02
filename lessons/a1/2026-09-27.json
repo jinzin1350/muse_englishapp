@@ -1,0 +1,353 @@
+{
+  "date": "2026-09-27",
+  "theme": "Nature Basics",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "tree",
+      "pos": "noun",
+      "meaning": "a big plant with a trunk and leaves",
+      "example": "The tree is very big.",
+      "pronunciation": "TREE",
+      "persian": "درخت",
+      "photo": "media/a1/2026-09-27/photos/tree.jpg",
+      "word_audio": "media/a1/2026-09-27/word-audio/tree.mp3"
+    },
+    {
+      "word": "river",
+      "pos": "noun",
+      "meaning": "water that moves through land to the sea",
+      "example": "The river is long.",
+      "pronunciation": "RIV-er",
+      "persian": "رودخانه",
+      "photo": "media/a1/2026-09-27/photos/river.jpg",
+      "word_audio": "media/a1/2026-09-27/word-audio/river.mp3"
+    },
+    {
+      "word": "sun",
+      "pos": "noun",
+      "meaning": "the big bright light in the sky",
+      "example": "The sun is hot today.",
+      "pronunciation": "SUN",
+      "persian": "خورشید",
+      "photo": "media/a1/2026-09-27/photos/sun.jpg",
+      "word_audio": "media/a1/2026-09-27/word-audio/sun.mp3"
+    },
+    {
+      "word": "flower",
+      "pos": "noun",
+      "meaning": "the colorful part of a plant",
+      "example": "The flower is red.",
+      "pronunciation": "FLOW-er",
+      "persian": "گل",
+      "photo": "media/a1/2026-09-27/photos/flower.jpg",
+      "word_audio": "media/a1/2026-09-27/word-audio/flower.mp3"
+    },
+    {
+      "word": "cloud",
+      "pos": "noun",
+      "meaning": "white or gray water in the sky",
+      "example": "The cloud is white.",
+      "pronunciation": "KLOUD",
+      "persian": "ابر",
+      "photo": "media/a1/2026-09-27/photos/cloud.jpg",
+      "word_audio": "media/a1/2026-09-27/word-audio/cloud.mp3"
+    },
+    {
+      "word": "mountain",
+      "pos": "noun",
+      "meaning": "a very high hill",
+      "example": "The mountain is very high.",
+      "pronunciation": "MOUN-tin",
+      "persian": "کوه",
+      "photo": "media/a1/2026-09-27/photos/mountain.jpg",
+      "word_audio": "media/a1/2026-09-27/word-audio/mountain.mp3"
+    },
+    {
+      "word": "sea",
+      "pos": "noun",
+      "meaning": "big blue water, smaller than the ocean",
+      "example": "The sea is blue.",
+      "pronunciation": "SEE",
+      "persian": "دریا",
+      "photo": "media/a1/2026-09-27/photos/sea.jpg",
+      "word_audio": "media/a1/2026-09-27/word-audio/sea.mp3"
+    },
+    {
+      "word": "bird",
+      "pos": "noun",
+      "meaning": "an animal with wings that flies",
+      "example": "The bird is in the tree.",
+      "pronunciation": "BERD",
+      "persian": "پرنده",
+      "photo": "media/a1/2026-09-27/photos/bird.jpg",
+      "word_audio": "media/a1/2026-09-27/word-audio/bird.mp3"
+    },
+    {
+      "word": "rain",
+      "pos": "noun",
+      "meaning": "water that falls from the sky",
+      "example": "I like the rain.",
+      "pronunciation": "RAYN",
+      "persian": "باران",
+      "photo": "media/a1/2026-09-27/photos/rain.jpg",
+      "word_audio": "media/a1/2026-09-27/word-audio/rain.mp3"
+    },
+    {
+      "word": "grass",
+      "pos": "noun",
+      "meaning": "the green plants on the ground",
+      "example": "The grass is green.",
+      "pronunciation": "GRASS",
+      "persian": "چمن",
+      "photo": "media/a1/2026-09-27/photos/grass.jpg",
+      "word_audio": "media/a1/2026-09-27/word-audio/grass.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-09-27/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: A Walk in Nature",
+    "audio": "media/a1/2026-09-27/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-09-27/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: A Walk in Nature",
+    "audio": "media/a1/2026-09-27/shadowing.mp3",
+    "transcript": "media/a1/2026-09-27/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'tree' mean?",
+      "options": [
+        "the big bright light in the sky",
+        "a big plant with a trunk and leaves",
+        "water that falls from the sky",
+        "the green plants on the ground"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'river' mean?",
+      "options": [
+        "an animal with wings that flies",
+        "white or gray water in the sky",
+        "water that moves through land to the sea",
+        "a very high hill"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'sun' mean?",
+      "options": [
+        "the big bright light in the sky",
+        "big blue water, smaller than the ocean",
+        "a big plant with a trunk and leaves",
+        "the colorful part of a plant"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'flower' mean?",
+      "options": [
+        "water that falls from the sky",
+        "the colorful part of a plant",
+        "the big bright light in the sky",
+        "water that moves through land to the sea"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cloud' mean?",
+      "options": [
+        "a very high hill",
+        "white or gray water in the sky",
+        "the green plants on the ground",
+        "an animal with wings that flies"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'mountain' mean?",
+      "options": [
+        "the green plants on the ground",
+        "the colorful part of a plant",
+        "a very high hill",
+        "big blue water, smaller than the ocean"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'sea' mean?",
+      "options": [
+        "big blue water, smaller than the ocean",
+        "a big plant with a trunk and leaves",
+        "white or gray water in the sky",
+        "water that falls from the sky"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bird' mean?",
+      "options": [
+        "the colorful part of a plant",
+        "water that moves through land to the sea",
+        "an animal with wings that flies",
+        "a very high hill"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'rain' mean?",
+      "options": [
+        "water that falls from the sky",
+        "the big bright light in the sky",
+        "a big plant with a trunk and leaves",
+        "an animal with wings that flies"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'grass' mean?",
+      "options": [
+        "a very high hill",
+        "water that moves through land to the sea",
+        "the green plants on the ground",
+        "white or gray water in the sky"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "3A: Choosing between comparatives and superlatives",
+    "explanation": "**Comparatives** compare two things, like a **tree** and a **flower**. Add **-er** to short adjectives: **taller than**, **bigger than**.\n\nFor long adjectives, use **more + adjective + than**. A **mountain** can be **more beautiful than** a **cloud**.\n\nSome words change. **Good** becomes **better**, and **bad** becomes **worse**. The **sun** is **better than** the **rain** for a picnic.\n\nTo say two things are the same, use **(not) as + adjective + as**. The **grass** is **as** green **as** the **tree**.\n\n**Superlatives** compare three or more things. Use **the** + **-est**: **the tallest**, **the biggest**.\n\nFor long adjectives, use **the most + adjective**. The **bird** is **the most beautiful** animal here. After a superlative, use **in**: **the best in the world**.\n\nThe **river** is long, but the **sea** is **longer**. Practice with the words you see in nature!",
+    "examples": [
+      "The tree is *taller than* the flower. (comparative: add -er, then than)",
+      "The mountain is *more beautiful than* the cloud. (long adjective: more + adjective + than)",
+      "The sun is *better than* the rain today. (irregular: good becomes better)",
+      "The grass is *as* green *as* the tree. ((not) as + adjective + as)",
+      "The river is *the longest* river in the country. (superlative: the + -est)",
+      "The bird is *the most beautiful* animal in the park. (long adjective: the most + adjective)",
+      "The sea is *the biggest* water here. (superlative with the)",
+      "She is *the best* in the class. (irregular: good becomes best; use in after a superlative)"
+    ],
+    "practice": [
+      {
+        "q": "Which is correct: 'A tree is tall than a flower' or 'A tree is taller than a flower'?",
+        "a": "'A tree is taller than a flower' is correct. Add -er to short adjectives and use than."
+      },
+      {
+        "q": "Complete the sentence: The mountain is ___ (big) than the tree.",
+        "a": "bigger — double the g: big becomes bigger."
+      },
+      {
+        "q": "Complete the sentence: The sun is ___ best star in the sky.",
+        "a": "the — always use the before a superlative."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "A tree is ___ than a flower.",
+        "options": [
+          "tall",
+          "taller",
+          "tallest",
+          "more tall"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The mountain is ___ beautiful than the cloud.",
+        "options": [
+          "most",
+          "more",
+          "much",
+          "very"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The comparative of 'good' is ___.",
+        "options": [
+          "gooder",
+          "more good",
+          "better",
+          "best"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The comparative of 'bad' is ___.",
+        "options": [
+          "badder",
+          "more bad",
+          "worse",
+          "worst"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The grass is ___ green as the tree.",
+        "options": [
+          "as",
+          "like",
+          "than",
+          "so"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The bird is ___ most beautiful animal in the park.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "-"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "After a superlative we use ___.",
+        "options": [
+          "of",
+          "in",
+          "at",
+          "on"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The comparative of 'easy' is ___.",
+        "options": [
+          "easyer",
+          "more easy",
+          "easier",
+          "most easy"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The sea is the ___ water here.",
+        "options": [
+          "big",
+          "bigger",
+          "biggest",
+          "more big"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The sun is ___ than the rain for a picnic.",
+        "options": [
+          "good",
+          "better",
+          "best",
+          "more good"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-09-27/grammar-en.mp3"
+  }
+}

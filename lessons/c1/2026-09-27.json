@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-27",
+  "theme": "Money & Shopping: The Art of Spending Smart",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "frugal",
+      "pos": "adjective",
+      "meaning": "careful not to waste money",
+      "example": "Despite her high salary, she is frugal and packs her own lunch.",
+      "pronunciation": "FROO-gul",
+      "persian": "صرفه‌جو، کم‌خرج",
+      "photo": "media/c1/2026-09-27/photos/frugal.jpg",
+      "word_audio": "media/c1/2026-09-27/word-audio/frugal.mp3"
+    },
+    {
+      "word": "affluent",
+      "pos": "adjective",
+      "meaning": "wealthy; having a lot of money",
+      "example": "The affluent district is full of designer shops and luxury cars.",
+      "pronunciation": "AF-loo-unt",
+      "persian": "ثروتمند، مرفه",
+      "photo": "media/c1/2026-09-27/photos/affluent.jpg",
+      "word_audio": "media/c1/2026-09-27/word-audio/affluent.mp3"
+    },
+    {
+      "word": "squander",
+      "pos": "verb",
+      "meaning": "to waste money carelessly",
+      "example": "He squandered his inheritance on luxury cars and exotic holidays.",
+      "pronunciation": "SKWON-dur",
+      "persian": "هدر دادن (پول)",
+      "photo": "media/c1/2026-09-27/photos/squander.jpg",
+      "word_audio": "media/c1/2026-09-27/word-audio/squander.mp3"
+    },
+    {
+      "word": "haggle",
+      "pos": "verb",
+      "meaning": "to argue about the price before buying",
+      "example": "In the bazaar, you are expected to haggle before paying.",
+      "pronunciation": "HAG-ul",
+      "persian": "چانه زدن",
+      "photo": "media/c1/2026-09-27/photos/haggle.jpg",
+      "word_audio": "media/c1/2026-09-27/word-audio/haggle.mp3"
+    },
+    {
+      "word": "windfall",
+      "pos": "noun",
+      "meaning": "an unexpected gift or amount of money",
+      "example": "The tax rebate was a welcome windfall for the young couple.",
+      "pronunciation": "WIND-fawl",
+      "persian": "پول بادآورده، درآمد ناگهانی",
+      "photo": "media/c1/2026-09-27/photos/windfall.jpg",
+      "word_audio": "media/c1/2026-09-27/word-audio/windfall.mp3"
+    },
+    {
+      "word": "lavish",
+      "pos": "adjective",
+      "meaning": "very generous and expensive; showing a lot of money spent",
+      "example": "They threw a lavish wedding that cost a small fortune.",
+      "pronunciation": "LAV-ish",
+      "persian": "مجلل، پرخرج",
+      "photo": "media/c1/2026-09-27/photos/lavish.jpg",
+      "word_audio": "media/c1/2026-09-27/word-audio/lavish.mp3"
+    },
+    {
+      "word": "markup",
+      "pos": "noun",
+      "meaning": "the extra amount added to the cost price when selling",
+      "example": "The boutique adds a hefty markup to imported handbags.",
+      "pronunciation": "MARK-up",
+      "persian": "اضافه‌بها، سود فروش",
+      "photo": "media/c1/2026-09-27/photos/markup.jpg",
+      "word_audio": "media/c1/2026-09-27/word-audio/markup.mp3"
+    },
+    {
+      "word": "exorbitant",
+      "pos": "adjective",
+      "meaning": "unreasonably high; much too expensive",
+      "example": "Tourists complained about the exorbitant taxi fares.",
+      "pronunciation": "ig-ZOR-bi-tunt",
+      "persian": "گزاف، سرسام‌آور",
+      "photo": "media/c1/2026-09-27/photos/exorbitant.jpg",
+      "word_audio": "media/c1/2026-09-27/word-audio/exorbitant.mp3"
+    },
+    {
+      "word": "recoup",
+      "pos": "verb",
+      "meaning": "to get back money you have spent or lost",
+      "example": "The company hopes to recoup its losses by raising prices.",
+      "pronunciation": "ri-KOOP",
+      "persian": "جبران کردن، بازپس گرفتن (پول)",
+      "photo": "media/c1/2026-09-27/photos/recoup.jpg",
+      "word_audio": "media/c1/2026-09-27/word-audio/recoup.mp3"
+    },
+    {
+      "word": "thrifty",
+      "pos": "adjective",
+      "meaning": "careful with money; not wasteful",
+      "example": "Being thrifty with small expenses adds up to real savings.",
+      "pronunciation": "THRIF-tee",
+      "persian": "مقتصد، صرفه‌جو",
+      "photo": "media/c1/2026-09-27/photos/thrifty.jpg",
+      "word_audio": "media/c1/2026-09-27/word-audio/thrifty.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-09-27/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Art of Spending Smart",
+    "audio": "media/c1/2026-09-27/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-09-27/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Smart Shopper",
+    "audio": "media/c1/2026-09-27/shadowing.mp3",
+    "transcript": "media/c1/2026-09-27/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'frugal' mean?",
+      "options": [
+        "careful not to waste money",
+        "wealthy; having a lot of money",
+        "to waste money carelessly",
+        "very generous and expensive"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'affluent' mean?",
+      "options": [
+        "to argue about the price before buying",
+        "wealthy; having a lot of money",
+        "an unexpected gift or amount of money",
+        "careful with money; not wasteful"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'squander' mean?",
+      "options": [
+        "the extra amount added to the cost price when selling",
+        "to get back money you have spent or lost",
+        "to waste money carelessly",
+        "unreasonably high; much too expensive"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'haggle' mean?",
+      "options": [
+        "very generous and expensive",
+        "careful not to waste money",
+        "wealthy; having a lot of money",
+        "to argue about the price before buying"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'windfall' mean?",
+      "options": [
+        "an unexpected gift or amount of money",
+        "to waste money carelessly",
+        "to get back money you have spent or lost",
+        "the extra amount added to the cost price when selling"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'lavish' mean?",
+      "options": [
+        "to argue about the price before buying",
+        "careful with money; not wasteful",
+        "very generous and expensive; showing a lot of money spent",
+        "an unexpected gift or amount of money"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'markup' mean?",
+      "options": [
+        "unreasonably high; much too expensive",
+        "the extra amount added to the cost price when selling",
+        "wealthy; having a lot of money",
+        "careful not to waste money"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'exorbitant' mean?",
+      "options": [
+        "to get back money you have spent or lost",
+        "very generous and expensive",
+        "to waste money carelessly",
+        "unreasonably high; much too expensive"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'recoup' mean?",
+      "options": [
+        "to get back money you have spent or lost",
+        "an unexpected gift or amount of money",
+        "to argue about the price before buying",
+        "careful with money; not wasteful"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'thrifty' mean?",
+      "options": [
+        "wealthy; having a lot of money",
+        "the extra amount added to the cost price when selling",
+        "careful with money; not wasteful",
+        "unreasonably high; much too expensive"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "3A: Choosing between comparatives and superlatives",
+    "explanation": "Use **comparative adjective + than** when you compare two people, places, or things. Think of comparing a frugal budget with a lavish one.\n\nSpelling follows simple rules: **-er for short adjectives**, **more for long ones**. Double the final consonant after a short vowel (big → bigger); change y to i (thrifty → thriftier).\n\nThree adjectives are irregular: **good → better, bad → worse, far → further / farther**. Use further for abstract distance and figurative ideas.\n\nUse **(not) as + adjective + as** to say things are equal, or not equal. It compares a thrifty choice with an exorbitant one without ranking them.\n\nComparative **adverbs** compare actions: **-er for short adverbs** (drive faster), **more for -ly adverbs** (spend more carefully). Haggle more patiently and you will pay less.\n\nUse **the + superlative** to pick one item out of a whole group. The most affluent customer is not always the smartest shopper.\n\nForm superlatives like comparatives: **-est for short adjectives**, **most / least for long ones**. That boutique charges the highest markup on the street.\n\nAfter a superlative, use **in, not of**, for places and groups. Say the cheapest hotel in the city, never of the city.\n\nSuperlatives often pair with the **present perfect + ever**. It frames a windfall as a once-in-a-lifetime event.\n\nUse **the same as** to say two things are identical. A buyer hoping to recoup a loss treats every price tag the same as the next.\n\nAt C1 level, sharpen comparatives with **much, far, a lot, slightly, or a little**. A windfall saved is far better than a windfall squandered.\n\nYou can also soften a comparison with **less + adjective**. A less lavish wedding can be more memorable than an exorbitant one.",
+    "examples": [
+      "A frugal lifestyle is *healthier* than a lavish one. (comparative + than)",
+      "A thrifty shopper often ends up *better* off than an affluent overspender. (irregular: good → better)",
+      "She learned to haggle *more patiently* than her brother. (comparative adverb)",
+      "That shop charges the *highest* markup in the whole district. (superlative + in, not of)",
+      "It was the most exorbitant meal we have *ever* tasted. (superlative + present perfect + ever)",
+      "His new budget is not *as lavish as* his old one. ((not) as + adjective + as)",
+      "A windfall saved is *far better* than a windfall squandered. (intensifier + comparative)",
+      "She is *as thrifty as* her grandmother was. (as + adjective + as)",
+      "They chose a *less lavish* wedding and saved a fortune. (less + adjective)",
+      "He treats every price tag *the same as* the next when he tries to recoup a loss. (the same as)"
+    ],
+    "practice": [
+      {
+        "q": "Which is correct: 'This phone is expensiver than mine' or 'This phone is more expensive than mine'?",
+        "a": "The second one. Long adjectives use more, not -er: more expensive than."
+      },
+      {
+        "q": "Complete the sentence: 'It was the ___ (bad) meal I've ever had.'",
+        "a": "'the worst' — the superlative of bad, often paired with the present perfect + ever."
+      },
+      {
+        "q": "Is 'the cheapest hotel of the city' correct?",
+        "a": "No. After a superlative use in, not of: the cheapest hotel in the city."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "A frugal lifestyle is ___ (healthy) than a lavish one.",
+        "options": [
+          "more healthy",
+          "healthier",
+          "most healthy",
+          "healthiest"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She learned to haggle ___ (patiently) than her brother.",
+        "options": [
+          "patientlier",
+          "more patient",
+          "more patiently",
+          "most patiently"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "That was the ___ (bad) investment he ever made.",
+        "options": [
+          "worser",
+          "baddest",
+          "worst",
+          "most bad"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The new budget is not ___ lavish ___ the old one.",
+        "options": [
+          "so / than",
+          "as / than",
+          "as / as",
+          "more / as"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "This is the cheapest hotel ___ the city.",
+        "options": [
+          "of",
+          "at",
+          "in",
+          "on"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "It was the most exorbitant bill we have ___ received.",
+        "options": [
+          "never",
+          "ever",
+          "already",
+          "yet"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "A windfall saved is ___ better than a windfall squandered.",
+        "options": [
+          "muchest",
+          "far",
+          "farrer",
+          "more far"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He treats every discount ___ same ___ the next.",
+        "options": [
+          "a / as",
+          "the / than",
+          "the / as",
+          "a / than"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Affluent shoppers often pay ___ (much) for the same goods.",
+        "options": [
+          "most",
+          "mucher",
+          "more",
+          "more much"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Of the three plans, the thrifty one was the ___ (good).",
+        "options": [
+          "better",
+          "goodest",
+          "most good",
+          "best"
+        ],
+        "answer": 3
+      }
+    ]
+  }
+}

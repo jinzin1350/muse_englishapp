@@ -1,0 +1,356 @@
+{
+  "date": "2026-09-27",
+  "theme": "The Strong, Healthy Body",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "invigorating",
+      "pos": "adjective",
+      "meaning": "making you feel healthy, fresh, and full of energy",
+      "example": "A cold morning swim is surprisingly invigorating.",
+      "pronunciation": "in-VIG-uh-ray-ting",
+      "persian": "نیروبخش",
+      "photo": "media/c2/2026-09-27/photos/invigorating.jpg",
+      "word_audio": "media/c2/2026-09-27/word-audio/invigorating.mp3"
+    },
+    {
+      "word": "debilitating",
+      "pos": "adjective",
+      "meaning": "making someone very weak and unable to function normally",
+      "example": "Chronic fatigue can be utterly debilitating.",
+      "pronunciation": "duh-BIL-uh-tay-ting",
+      "persian": "ناتوان‌کننده",
+      "photo": "media/c2/2026-09-27/photos/debilitating.jpg",
+      "word_audio": "media/c2/2026-09-27/word-audio/debilitating.mp3"
+    },
+    {
+      "word": "stamina",
+      "pos": "noun",
+      "meaning": "the physical or mental strength to keep going for a long time",
+      "example": "Building cardiovascular stamina takes months of consistent training.",
+      "pronunciation": "STAM-uh-nuh",
+      "persian": "استقامت",
+      "photo": "media/c2/2026-09-27/photos/stamina.jpg",
+      "word_audio": "media/c2/2026-09-27/word-audio/stamina.mp3"
+    },
+    {
+      "word": "sedentary",
+      "pos": "adjective",
+      "meaning": "involving little movement or physical activity; sitting a lot",
+      "example": "A sedentary lifestyle increases the risk of heart disease.",
+      "pronunciation": "SED-un-teh-ree",
+      "persian": "کم‌تحرک",
+      "photo": "media/c2/2026-09-27/photos/sedentary.jpg",
+      "word_audio": "media/c2/2026-09-27/word-audio/sedentary.mp3"
+    },
+    {
+      "word": "wholesome",
+      "pos": "adjective",
+      "meaning": "natural, pure, and good for your health",
+      "example": "She prefers wholesome, unprocessed foods over packaged snacks.",
+      "pronunciation": "HOLE-sum",
+      "persian": "سالم و مقوی",
+      "photo": "media/c2/2026-09-27/photos/wholesome.jpg",
+      "word_audio": "media/c2/2026-09-27/word-audio/wholesome.mp3"
+    },
+    {
+      "word": "ailment",
+      "pos": "noun",
+      "meaning": "a mild illness or health problem",
+      "example": "The clinic treats every minor ailment, from colds to sprains.",
+      "pronunciation": "AYL-munt",
+      "persian": "عارضه / بیماری خفیف",
+      "photo": "media/c2/2026-09-27/photos/ailment.jpg",
+      "word_audio": "media/c2/2026-09-27/word-audio/ailment.mp3"
+    },
+    {
+      "word": "remedy",
+      "pos": "noun",
+      "meaning": "a treatment or solution that cures a health problem",
+      "example": "Rest and hydration remain the simplest remedy for a common cold.",
+      "pronunciation": "REM-uh-dee",
+      "persian": "درمان / چاره",
+      "photo": "media/c2/2026-09-27/photos/remedy.jpg",
+      "word_audio": "media/c2/2026-09-27/word-audio/remedy.mp3"
+    },
+    {
+      "word": "longevity",
+      "pos": "noun",
+      "meaning": "living a long, healthy life",
+      "example": "Regular exercise is linked to greater longevity.",
+      "pronunciation": "lon-JEV-uh-tee",
+      "persian": "طول عمر",
+      "photo": "media/c2/2026-09-27/photos/longevity.jpg",
+      "word_audio": "media/c2/2026-09-27/word-audio/longevity.mp3"
+    },
+    {
+      "word": "immunity",
+      "pos": "noun",
+      "meaning": "the body's natural protection against disease",
+      "example": "Vaccination strengthens your immunity against the virus.",
+      "pronunciation": "ih-MYOO-nuh-tee",
+      "persian": "ایمنی بدن",
+      "photo": "media/c2/2026-09-27/photos/immunity.jpg",
+      "word_audio": "media/c2/2026-09-27/word-audio/immunity.mp3"
+    },
+    {
+      "word": "convalescence",
+      "pos": "noun",
+      "meaning": "the period of recovering from an illness or operation",
+      "example": "During his convalescence, he took long walks by the sea.",
+      "pronunciation": "kon-vuh-LESS-unts",
+      "persian": "دوره نقاهت",
+      "photo": "media/c2/2026-09-27/photos/convalescence.jpg",
+      "word_audio": "media/c2/2026-09-27/word-audio/convalescence.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-09-27/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Strong, Healthy Body",
+    "audio": "media/c2/2026-09-27/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-09-27/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Strong Body, Strong English",
+    "audio": "media/c2/2026-09-27/shadowing.mp3",
+    "transcript": "media/c2/2026-09-27/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'invigorating' mean?",
+      "options": [
+        "the body's natural protection against disease",
+        "involving little movement or physical activity; sitting a lot",
+        "making you feel healthy, fresh, and full of energy",
+        "natural, pure, and good for your health"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'debilitating' mean?",
+      "options": [
+        "involving little movement or physical activity; sitting a lot",
+        "making someone very weak and unable to function normally",
+        "living a long, healthy life",
+        "the body's natural protection against disease"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'stamina' mean?",
+      "options": [
+        "the body's natural protection against disease",
+        "the physical or mental strength to keep going for a long time",
+        "involving little movement or physical activity; sitting a lot",
+        "the period of recovering from an illness or operation"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'sedentary' mean?",
+      "options": [
+        "natural, pure, and good for your health",
+        "involving little movement or physical activity; sitting a lot",
+        "the period of recovering from an illness or operation",
+        "a treatment or solution that cures a health problem"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'wholesome' mean?",
+      "options": [
+        "the period of recovering from an illness or operation",
+        "natural, pure, and good for your health",
+        "the physical or mental strength to keep going for a long time",
+        "making someone very weak and unable to function normally"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'ailment' mean?",
+      "options": [
+        "living a long, healthy life",
+        "a mild illness or health problem",
+        "making you feel healthy, fresh, and full of energy",
+        "making someone very weak and unable to function normally"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'remedy' mean?",
+      "options": [
+        "living a long, healthy life",
+        "making you feel healthy, fresh, and full of energy",
+        "a treatment or solution that cures a health problem",
+        "making someone very weak and unable to function normally"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'longevity' mean?",
+      "options": [
+        "living a long, healthy life",
+        "making you feel healthy, fresh, and full of energy",
+        "involving little movement or physical activity; sitting a lot",
+        "the physical or mental strength to keep going for a long time"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'immunity' mean?",
+      "options": [
+        "making someone very weak and unable to function normally",
+        "living a long, healthy life",
+        "the body's natural protection against disease",
+        "the physical or mental strength to keep going for a long time"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'convalescence' mean?",
+      "options": [
+        "making you feel healthy, fresh, and full of energy",
+        "making someone very weak and unable to function normally",
+        "the body's natural protection against disease",
+        "the period of recovering from an illness or operation"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "3A: Choosing between comparatives and superlatives",
+    "explanation": "Use **comparative adjectives + than** to compare two people, places, or things. Short adjectives take **-er**; longer ones take **more**.\n\nSpelling matters: **big → bigger**, **easy → easier**, **hot → hotter**. One-syllable adjectives ending in **-ed** take **more**: **more tired**, **more stressed**.\n\nThree adjectives are irregular: **good → better**, **bad → worse**, **far → further** (use **farther** only for physical distance).\n\nTo show equality, use **(not) as + adjective + as**: her recovery was as swift as his. **The same as** marks identical things: his symptoms were the same as mine.\n\nComparative adverbs compare actions, not things: she walks **faster than** me; he breathes **more deeply than** before. Two are irregular: **well → better**, **badly → worse**.\n\nUse **the + superlative** to single out one member of a group: the **tallest** player, the **most expensive** clinic. **The least** marks the bottom of the scale.\n\nAfter a superlative, say **in** — never **of** — with places: the best hospital **in** the city. Superlatives love the **present perfect + ever**: the hardest convalescence I have **ever** faced.\n\nAt C2, the double comparative shows elegant cause and effect: **the more sedentary the lifestyle, the weaker the immunity**. Both halves use **the + comparative**.\n\nChoose comparatives for two items and superlatives for three or more. Comparing your stamina today with yesterday's needs a comparative; ranking every remedy you tried needs a superlative.\n\nNuance check: **further** also means additional, as in further treatment, while **farther** is strictly distance. And **elder/eldest** describe family seniority, not just age.\n\nSophisticated speakers intensify comparisons: a **far more debilitating** ailment, a **much more wholesome** diet, **by far the most invigorating** therapy. **Far**, **much**, and **by far** sharpen the contrast.\n\nFor the ultimate C2 touch, compare abstract qualities: no remedy promises **greater longevity** than consistent, wholesome habits. Abstract nouns take these structures beautifully.",
+    "examples": [
+      "The mountain air was *more invigorating* than any energy drink. (comparative + than)",
+      "Chronic fatigue is *more debilitating* than most people imagine.",
+      "Her *stamina* is *greater than* mine after only a month of training.",
+      "A desk job is *more sedentary than* nursing, which keeps you on your feet.",
+      "This soup is *as wholesome as* anything my grandmother made. ((not) as + adjective + as)",
+      "It was the *mildest ailment* I have *ever* had, barely worth a doctor's visit. (superlative + present perfect + ever)",
+      "Of every *remedy* we tried, rest proved *the most effective*.",
+      "Okinawans enjoy *greater longevity than* almost any other population.",
+      "His *immunity* recovered *faster than* the doctors had predicted. (comparative adverb)",
+      "It was *the longest convalescence* of her life, and also the most peaceful.",
+      "*The more invigorating* the morning routine, *the stronger* the immunity all winter. (double comparative)",
+      "She felt *far better* after switching to a *more wholesome* diet. (irregular + intensifier)"
+    ],
+    "practice": [
+      {
+        "q": "Complete: Regular exercise is ___ (beneficial) than any expensive supplement.",
+        "a": "more beneficial"
+      },
+      {
+        "q": "Which is correct: 'the best hospital of the city' or 'the best hospital in the city'? Why?",
+        "a": "'the best hospital in the city' — use in, not of, after superlatives with places."
+      },
+      {
+        "q": "Rewrite with a double comparative: A sedentary routine weakens immunity a lot.",
+        "a": "The more sedentary the routine, the weaker the immunity."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What's ___ way to build stamina? (fast)",
+        "options": [
+          "fastest",
+          "the most fast",
+          "faster",
+          "the fastest"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I think swimming is ___ than running for beginners. (easy)",
+        "options": [
+          "easiest",
+          "more easy",
+          "the easiest",
+          "easier"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "This flu is the ___ I've ever had. (bad)",
+        "options": [
+          "worse",
+          "baddest",
+          "the worse",
+          "worst"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "A motorbike is ___ than a scooter. (powerful)",
+        "options": [
+          "more powerful",
+          "most powerful",
+          "the powerful",
+          "powerfuller"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I drive ___ than my partner. (slowly)",
+        "options": [
+          "slowlier",
+          "more slowly",
+          "slowerly",
+          "most slowly"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "A coach isn't as comfortable ___ a train.",
+        "options": [
+          "like",
+          "as",
+          "to",
+          "than"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He gets home late, but his wife arrives even ___ than him.",
+        "options": [
+          "latest",
+          "more late",
+          "the later",
+          "later"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The ___ place I've ever visited is Kyoto. (interesting)",
+        "options": [
+          "most interesting",
+          "more interesting",
+          "interestingest",
+          "the more interesting"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She doesn't speak English as ___ as her sister. (well)",
+        "options": [
+          "better",
+          "good",
+          "well",
+          "best"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What's the longest river ___ the world?",
+        "options": [
+          "at",
+          "of",
+          "on",
+          "in"
+        ],
+        "answer": 3
+      }
+    ]
+  }
+}
