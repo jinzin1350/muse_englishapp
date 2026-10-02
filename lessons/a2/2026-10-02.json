@@ -1,0 +1,351 @@
+{
+  "date": "2026-10-02",
+  "theme": "family & relationships",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "aunt",
+      "pos": "noun",
+      "meaning": "the sister of your mother or father",
+      "example": "My aunt lives in a small town.",
+      "pronunciation": "ANT",
+      "persian": "خاله یا عمه",
+      "photo": "media/a2/2026-10-02/photos/aunt.jpg",
+      "word_audio": "media/a2/2026-10-02/word-audio/aunt.mp3"
+    },
+    {
+      "word": "uncle",
+      "pos": "noun",
+      "meaning": "the brother of your mother or father",
+      "example": "My uncle is a good cook.",
+      "pronunciation": "UNK-ul",
+      "persian": "عمو یا دایی",
+      "photo": "media/a2/2026-10-02/photos/uncle.jpg",
+      "word_audio": "media/a2/2026-10-02/word-audio/uncle.mp3"
+    },
+    {
+      "word": "cousin",
+      "pos": "noun",
+      "meaning": "the child of your aunt or uncle",
+      "example": "My cousin and I play football after school.",
+      "pronunciation": "KUZ-in",
+      "persian": "فرزند خاله، عمه، دایی یا عمو",
+      "photo": "media/a2/2026-10-02/photos/cousin.jpg",
+      "word_audio": "media/a2/2026-10-02/word-audio/cousin.mp3"
+    },
+    {
+      "word": "nephew",
+      "pos": "noun",
+      "meaning": "the son of your brother or sister",
+      "example": "My nephew is five years old.",
+      "pronunciation": "NEF-yoo",
+      "persian": "پسر برادر یا پسر خواهر",
+      "photo": "media/a2/2026-10-02/photos/nephew.jpg",
+      "word_audio": "media/a2/2026-10-02/word-audio/nephew.mp3"
+    },
+    {
+      "word": "niece",
+      "pos": "noun",
+      "meaning": "the daughter of your brother or sister",
+      "example": "My niece loves to draw pictures.",
+      "pronunciation": "NEES",
+      "persian": "دختر برادر یا دختر خواهر",
+      "photo": "media/a2/2026-10-02/photos/niece.jpg",
+      "word_audio": "media/a2/2026-10-02/word-audio/niece.mp3"
+    },
+    {
+      "word": "grandchild",
+      "pos": "noun",
+      "meaning": "the child of your son or daughter",
+      "example": "The woman plays with her grandchild every day.",
+      "pronunciation": "GRAND-chyld",
+      "persian": "نوه",
+      "photo": "media/a2/2026-10-02/photos/grandchild.jpg",
+      "word_audio": "media/a2/2026-10-02/word-audio/grandchild.mp3"
+    },
+    {
+      "word": "married",
+      "pos": "adjective",
+      "meaning": "having a husband or wife",
+      "example": "My brother is married.",
+      "pronunciation": "MAR-eed",
+      "persian": "متأهل",
+      "photo": "media/a2/2026-10-02/photos/married.jpg",
+      "word_audio": "media/a2/2026-10-02/word-audio/married.mp3"
+    },
+    {
+      "word": "single",
+      "pos": "adjective",
+      "meaning": "not married",
+      "example": "She is single and lives alone.",
+      "pronunciation": "SING-gul",
+      "persian": "مجرد",
+      "photo": "media/a2/2026-10-02/photos/single.jpg",
+      "word_audio": "media/a2/2026-10-02/word-audio/single.mp3"
+    },
+    {
+      "word": "baby",
+      "pos": "noun",
+      "meaning": "a very young child",
+      "example": "The baby is sleeping in the small bed.",
+      "pronunciation": "BAY-bee",
+      "persian": "نوزاد",
+      "photo": "media/a2/2026-10-02/photos/baby.jpg",
+      "word_audio": "media/a2/2026-10-02/word-audio/baby.mp3"
+    },
+    {
+      "word": "teenager",
+      "pos": "noun",
+      "meaning": "a person between thirteen and nineteen years old",
+      "example": "The teenager goes to school every day.",
+      "pronunciation": "TEEN-ay-jer",
+      "persian": "نوجوان",
+      "photo": "media/a2/2026-10-02/photos/teenager.jpg",
+      "word_audio": "media/a2/2026-10-02/word-audio/teenager.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-02/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Family and Relationships",
+    "audio": "media/a2/2026-10-02/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-02/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Big Family Day",
+    "audio": "media/a2/2026-10-02/shadowing.mp3",
+    "transcript": "media/a2/2026-10-02/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'aunt' mean?",
+      "options": [
+        "the sister of your mother or father",
+        "not married",
+        "the son of your brother or sister",
+        "a person between thirteen and nineteen years old"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'uncle' mean?",
+      "options": [
+        "the brother of your mother or father",
+        "the son of your brother or sister",
+        "the child of your aunt or uncle",
+        "a very young child"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cousin' mean?",
+      "options": [
+        "the child of your aunt or uncle",
+        "a very young child",
+        "having a husband or wife",
+        "the sister of your mother or father"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'nephew' mean?",
+      "options": [
+        "a person between thirteen and nineteen years old",
+        "the brother of your mother or father",
+        "the child of your son or daughter",
+        "the son of your brother or sister"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'niece' mean?",
+      "options": [
+        "the brother of your mother or father",
+        "a very young child",
+        "the child of your aunt or uncle",
+        "the daughter of your brother or sister"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'grandchild' mean?",
+      "options": [
+        "the child of your son or daughter",
+        "the son of your brother or sister",
+        "the child of your aunt or uncle",
+        "a very young child"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'married' mean?",
+      "options": [
+        "a very young child",
+        "having a husband or wife",
+        "the son of your brother or sister",
+        "not married"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'single' mean?",
+      "options": [
+        "not married",
+        "the son of your brother or sister",
+        "the sister of your mother or father",
+        "having a husband or wife"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'baby' mean?",
+      "options": [
+        "the daughter of your brother or sister",
+        "the sister of your mother or father",
+        "a very young child",
+        "the brother of your mother or father"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'teenager' mean?",
+      "options": [
+        "a person between thirteen and nineteen years old",
+        "the son of your brother or sister",
+        "the sister of your mother or father",
+        "a very young child"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "4B: Ability and possibility - can, could, be able to",
+    "explanation": "Use **can** for things that are possible now. My aunt **can** cook very well.\n\nUse **can't** when something is not possible now. A baby **can't** read a book.\n\nUse **could** for things that were possible in the past. My uncle **could** run fast when he was a teenager.\n\nUse **couldn't** when something was not possible in the past. Last year my niece **couldn't** swim.\n\nUse **will be able to** for things that will be possible in the future. Next year my nephew **will be able to** read.\n\nAfter **can** and **could**, use the verb alone. Say 'I **can** swim', never 'I **can to** swim'.",
+    "examples": [
+      "My aunt *can* cook very well. (ability now)",
+      "A baby *can't* walk yet. (not possible now)",
+      "My uncle *could* play football when he was a teenager. (past ability)",
+      "My niece *couldn't* swim last year. (not possible in the past)",
+      "My nephew *will be able to* read books next year. (future ability)",
+      "I want *to be able to* drive a car. (be able to after another verb)"
+    ],
+    "practice": [
+      {
+        "q": "How do you say you are NOT able to swim now?",
+        "a": "I can't swim."
+      },
+      {
+        "q": "Make a sentence about your uncle and a past ability.",
+        "a": "My uncle could play the guitar when he was a teenager."
+      },
+      {
+        "q": "Your friend asks: can you come to the party tomorrow? You are not free. What do you say?",
+        "a": "I can't come to the party tomorrow."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "My aunt ___ cook very well.",
+        "options": [
+          "can",
+          "will cook",
+          "cans",
+          "can to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The baby ___ walk yet.",
+        "options": [
+          "can't",
+          "cannot to",
+          "don't can",
+          "can't to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "My uncle ___ play football when he was a teenager.",
+        "options": [
+          "can",
+          "can to",
+          "could",
+          "will could"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Last year my niece ___ swim.",
+        "options": [
+          "can't",
+          "can to",
+          "doesn't can",
+          "couldn't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "My nephew ___ read books next year.",
+        "options": [
+          "can to",
+          "is can",
+          "could to",
+          "will be able to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "After 'can' we ___ use 'to'.",
+        "options": [
+          "will",
+          "does not",
+          "do not",
+          "do"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I want ___ drive a car.",
+        "options": [
+          "be able",
+          "can to",
+          "could to",
+          "to be able to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I cans swim.",
+          "I can swim.",
+          "I am can swim.",
+          "I can to swim."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "When you were five, you ___ read. Now you can.",
+        "options": [
+          "couldn't",
+          "won't",
+          "can't",
+          "don't can"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "My cousin ___ sing, but he can't dance.",
+        "options": [
+          "is can",
+          "cans",
+          "can",
+          "can to"
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a2/2026-10-02/grammar-en.mp3"
+  }
+}
