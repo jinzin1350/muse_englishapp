@@ -1573,7 +1573,7 @@ function show(view, arg) {
 /* ---------------- chrome (headers / profile menu / nav) ---------------- */
 function setChrome() {
   const logged = !!state.user;
-  $('#landing-header').classList.toggle('hidden', logged || state.view === 'landing');
+  $('#landing-header').classList.toggle('hidden', logged || state.view === 'landing' || state.view === 'signin' || state.view === 'signup');
   $('#app-header').classList.toggle('hidden', !logged);
   $('#tabbar').classList.toggle('hidden', !logged);
   if (logged) {
@@ -1836,7 +1836,14 @@ function renderPreview(v) {
 
 /* ---------------- auth: separate sign-in / create-account views ---------------- */
 function authShell(inner) {
-  return '<div class="landing"><div class="card" style="max-width:440px;margin:2rem auto">' + inner + '</div></div>';
+  return '<div class="auth">' +
+    '<div class="auth-glow" aria-hidden="true"></div>' +
+    '<a class="auth-back" href="#/"><img src="icons/icon-192.png" alt=""><span>Muse English</span></a>' +
+    '<div class="auth-card">' +
+      '<img class="auth-mascot" src="media/podcast/mascot-96.webp" alt="Muse English mascot">' +
+      inner +
+    '</div>' +
+  '</div>';
 }
 
 function renderSignin(v) {
