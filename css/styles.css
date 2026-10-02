@@ -1396,6 +1396,26 @@ body{background:#FFF9F3;}
   mask-image:linear-gradient(to bottom,transparent 0,#000 48px,#000 calc(100% - 72px),transparent 100%);}
 .quiz-banner:active{opacity:.96;}
 
+/* ============ Podcast milestone overlay (2026-10-02) ============ */
+#podms{position:fixed;inset:0;z-index:210;display:flex;justify-content:center;background:#17212B;}
+#podms-box{background:#3d0a06;cursor:pointer;}
+#podms .cel-m2-cta{bottom:96px;}
+#podms-gift-open{opacity:0;transition:opacity .6s ease;}
+#podms-gift-open.show{opacity:1;}
+#podms-gift-closed{transition:opacity .6s ease;}
+#podms-gift-closed.fadeout{opacity:0;}
+#podms-reward{position:absolute;left:0;right:0;bottom:0;padding:20px;z-index:7;transform:translateY(115%);transition:transform .55s cubic-bezier(.34,1.56,.64,1);}
+#podms-reward.up{transform:translateY(0);}
+#podms-reward-name{font-weight:700;font-size:32px;color:#17212B;margin-bottom:20px;}
+#podms-done{background:#F7F2E8;align-items:center;justify-content:center;}
+#podms-done .cel-nudge-card{margin:0 22px;}
+#podms-open{width:100%;border:0;cursor:pointer;font-family:inherit;font-weight:700;font-size:24px;letter-spacing:1px;color:#5b3400;
+  padding:20px 16px;border-radius:24px;
+  background:linear-gradient(180deg,#ffedb0 0%,#ffd25e 45%,#f7a91e 100%);
+  box-shadow:0 12px 32px rgba(255,170,30,.55),inset 0 2px 0 rgba(255,255,255,.75),inset 0 -3px 0 rgba(150,80,0,.25);
+  animation:celPulse 1.5s ease-in-out infinite;}
+#podms-open:active{transform:scale(.96);}
+
 /* ============ Review banner (2026-10-02) ============ */
 .review-banner{position:relative;display:block;width:100%;border:0;padding:0;cursor:pointer;
   border-radius:22px;background:#FEFBF6 url('/media/home/review-banner.webp') top center/cover no-repeat;
