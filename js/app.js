@@ -1042,8 +1042,12 @@ function playerUI() {
   const has = !!player.src;
   $('#mini-player').classList.toggle('hidden', !has);
   const playing = has && !player.el.paused;
-  $('#mp-toggle').textContent = playing ? '⏸' : '▶';
+  const timg = $('#mp-toggle-img');
+  if (timg) timg.src = playing ? 'media/podcast/btn-pause.webp' : 'media/podcast/btn-play.webp';
   $('#mp-title').textContent = player.title || '—';
+  const cover = $('#mp-cover');
+  if (cover) cover.src = (player.src && /podcast\.mp3/i.test(player.src))
+    ? 'media/podcast/mascot-96.webp' : 'media/podcast/note-96.webp';
 }
 
 function refreshTrackCards() {
@@ -1052,8 +1056,12 @@ function refreshTrackCards() {
   const pct = dur ? (cur / dur) * 100 : 0;
   const mpBar = $('#mp-bar');
   if (mpBar) mpBar.style.width = pct + '%';
+  const mpProg = $('#mp-progress');
+  if (mpProg) mpProg.setAttribute('aria-valuenow', Math.round(pct));
   const mpTime = $('#mp-time');
   if (mpTime) mpTime.textContent = fmtTime(cur);
+  const mpDur = $('#mp-dur');
+  if (mpDur) mpDur.textContent = fmtTime(dur);
   $$('[data-audio-card]').forEach(function (card) {
     const active = card.getAttribute('data-src') === player.src;
     const playing = active && !player.el.paused;
@@ -1091,6 +1099,27 @@ function toggleTranscript(btn) {
     panel.classList.add('hidden');
     btn.textContent = '📝 Transcript';
   }
+}
+
+function closePlayer() {
+  try { player.el.pause(); } catch (e) {}
+  player.src = null;
+  player.title = '';
+  playerUI();
+}
+
+/* Click / tap on the mini-player progress bar seeks (the lesson audio is
+   pre-downloaded as a blob, so seeking is instant). */
+function seekFromEvent(e) {
+  const bar = $('#mp-progress');
+  if (!bar || !player.src) return;
+  const dur = player.el.duration;
+  if (!dur || !isFinite(dur)) return;
+  const r = bar.getBoundingClientRect();
+  const x = (e.touches && e.touches[0] ? e.touches[0].clientX : e.clientX);
+  const ratio = Math.min(1, Math.max(0, (x - r.left) / r.width));
+  try { player.el.currentTime = ratio * dur; } catch (err) {}
+  refreshTrackCards();
 }
 
 function playTrack(src, title) {
@@ -3780,6 +3809,18 @@ function bindEvents() {
     if (player.el.paused) player.el.play().catch(function () {});
     else player.el.pause();
   });
+  $('#mp-close').addEventListener('click', function () { closePlayer(); });
+  const mpProg = $('#mp-progress');
+  if (mpProg) {
+    mpProg.addEventListener('click', seekFromEvent);
+    mpProg.addEventListener('keydown', function (e) {
+      const dur = player.el.duration;
+      if (!dur || !isFinite(dur)) return;
+      if (e.key === 'ArrowRight') { player.el.currentTime = Math.min(dur, player.el.currentTime + 10); e.preventDefault(); }
+      else if (e.key === 'ArrowLeft') { player.el.currentTime = Math.max(0, player.el.currentTime - 10); e.preventDefault(); }
+      refreshTrackCards();
+    });
+  }
 
   window.addEventListener('hashchange', onRoute);
 }
