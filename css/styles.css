@@ -1281,3 +1281,10 @@ details.practice p { margin: 0.7rem 0 0; color: var(--herb-dark); font-weight: 5
 .prize-ico{font-size:18px;}
 .prize-name{font-weight:700;font-size:14px;flex:1;}
 .prize-date{font-size:12px;color:var(--muted,#6B7280);}
+
+/* ============ Start-Quiz CTA (end of words list) ============ */
+.start-quiz-cta{display:block;width:100%;max-width:420px;margin:1.2rem auto 2.5rem;padding:0;background:none;border:0;cursor:pointer;
+  animation:sqFloat 3s ease-in-out infinite;filter:drop-shadow(0 10px 22px rgba(240,123,26,.35));}
+.start-quiz-cta img{display:block;width:100%;height:auto;border:0;}
+.start-quiz-cta:active{transform:scale(.96);}
+@keyframes sqFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}

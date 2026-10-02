@@ -2665,7 +2665,7 @@ function centerActiveLessonTab() {
 }
 
 function wordsTabHTML(m) {
-  return (m.words || []).map(function (w) {
+  const cards = (m.words || []).map(function (w) {
     return '' +
     '<div class="card plain word-card">' +
       (w.photo
@@ -2684,6 +2684,13 @@ function wordsTabHTML(m) {
       (w.persian ? '<div class="word-fa" dir="auto">' + esc(w.persian) + '</div>' : '') +
     '</div>';
   }).join('') || '<div class="empty">No words in this lesson.</div>';
+  /* Enticing Start-Quiz CTA at the end of the words list (flame mascot button).
+     Reuses the lesson-tab action so it behaves exactly like tapping the Quiz tab. */
+  const cta = (m.words && m.words.length)
+    ? '<button class="start-quiz-cta" data-action="lesson-tab" data-tab="quiz" aria-label="Start the word quiz">' +
+      '<img src="/media/celebration/start-quiz.webp" alt="Start Quiz"></button>'
+    : '';
+  return cards + cta;
 }
 
 function podcastTabHTML(m) {
