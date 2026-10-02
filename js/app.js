@@ -435,6 +435,7 @@ var ICO = {
   headphones: svgIcon('<path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>'),
   mic: svgIcon('<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>'),
   quiz: svgIcon('<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>'),
+  doc: svgIcon('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>'),
   book: svgIcon('<path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/>'),
   check: svgIcon('<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>'),
   refresh: svgIcon('<polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>'),
@@ -2277,6 +2278,92 @@ function todayCardHTML(m) {
   '</section>';
 }
 
+/* ---------------- HOME v5 (mockup rebuild, 2026-10-02) ---------------- */
+const HOME_STEP_ORDER = ['words', 'podcast', 'shadowing', 'grammar', 'quiz'];
+const HOME_STEP_STYLE = {
+  words:     { icon: 'book',       bg: '#22C55E' },
+  podcast:   { icon: 'mic',        bg: '#8B5CF6' },
+  shadowing: { icon: 'headphones', bg: '#F59E0B' },
+  grammar:   { icon: 'doc',        bg: '#EF4444' },
+  quiz:      { icon: 'trophy',     bg: '#3B82F6' },
+};
+
+function battleBannerHTML() {
+  return '<a class="h-battle" href="#/challenge" aria-label="Join the challenge battle">' +
+    '<span class="h-live"><span class="h-live-dot"></span>LIVE</span>' +
+    '<span class="h-battle-icon">' + ICO.trophy + '</span>' +
+    '<span class="h-battle-num">1,500</span>' +
+    '<span class="h-battle-sub">learners battling for the top</span>' +
+    '<span class="h-battle-cta">Join the battle <span aria-hidden="true">›</span></span>' +
+  '</a>';
+}
+
+function streakBannerHTML(st, dates) {
+  st = st || {};
+  const n = st.current_streak || 0;
+  const fr = (st.freezes != null ? st.freezes : st.streak_freezes) || 0;
+  const headline = n > 0
+    ? '<b>' + n + '</b>&nbsp;day streak! 🔥'
+    : 'Start your streak today! 🔥';
+  return '<section class="h-streak" aria-label="Your streak">' +
+    '<img class="h-streak-mascot" src="/media/home/streak-mascot.webp" alt="Streak mascot">' +
+    '<div class="h-streak-body">' +
+      '<div class="h-streak-head">' + headline + '</div>' +
+      homeWeekStripHTML(dates) +
+      '<div class="h-streak-freezes">🧊 ' + fr + ' freeze' + (fr === 1 ? '' : 's') + ' ready <span aria-hidden="true">›</span></div>' +
+    '</div>' +
+  '</section>';
+}
+
+function lessonBannerHTML(m) {
+  const p = getDayProgress(m.date);
+  const done = dayDoneCount(m.date);
+  const total = HOME_STEP_ORDER.length;
+  const pct = Math.round((done / total) * 100);
+  const ns = nextStep(m.date);
+
+  const rows = HOME_STEP_ORDER.map(function (s, i) {
+    const isDone = !!p[s];
+    const isNext = !isDone && s === ns;
+    const st = HOME_STEP_STYLE[s];
+    const right = isDone
+      ? '<span class="h-step-check" aria-hidden="true">✓</span>'
+      : (isNext ? '<span class="h-step-pill">CONTINUE <span aria-hidden="true">›</span></span>'
+                : '<span class="h-step-go" aria-hidden="true">›</span>');
+    return '<li class="h-step' + (isNext ? ' next' : '') + '">' +
+      '<button data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + s + '" aria-label="Go to ' + STEP_LABELS[s] + '">' +
+      '<span class="h-step-icon" style="background:' + st.bg + '">' + ICO[st.icon] + '</span>' +
+      (isNext ? '<span class="h-step-num">' + (i + 1) + '</span>' : '') +
+      '<span class="h-step-name">' + STEP_LABELS[s] + '</span>' +
+      right +
+      '</button></li>';
+  }).join('');
+
+  let cta, ctaSub, tabFor;
+  if (ns) {
+    cta = done > 0 ? 'Continue with ' + STEP_LABELS[ns] : 'Start today\u2019s lesson';
+    ctaSub = done > 0 ? 'Pick up where you left off.' : 'Words, podcast, shadowing, grammar and quiz.';
+    tabFor = ns;
+  } else {
+    cta = 'Lesson complete 🎉';
+    ctaSub = 'Nice work — come back tomorrow for a new lesson.';
+    tabFor = 'words';
+  }
+
+  return '' +
+  '<section class="h-lesson" aria-label="Today\u2019s lesson">' +
+    '<button class="h-lesson-hero" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="words" aria-label="Open today\u2019s lesson"></button>' +
+    '<ul class="h-steps">' + rows + '</ul>' +
+    '<div class="h-progress">' +
+      '<div class="h-progress-top"><span>Daily progress</span><span>' + done + ' of ' + total + ' steps</span></div>' +
+      '<div class="h-progress-bar" role="progressbar" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100" aria-label="Daily progress"><div style="width:' + pct + '%"></div></div>' +
+    '</div>' +
+    '<button class="h-cta" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + tabFor + '">' +
+      '<span class="h-cta-play" aria-hidden="true">▶</span>' + esc(cta) + ' <span aria-hidden="true">›</span></button>' +
+    '<p class="h-cta-sub">' + esc(ctaSub) + '</p>' +
+  '</section>';
+}
+
 /* ---------------- lessons archive (previous days) ---------------- */
 function lessonCover(m) {
   const w = (m.words && m.words[0]) || {};
@@ -2361,25 +2448,18 @@ function paintHome(v, mistakes, attempts) {
 
   let html = '';
 
-  // 0 — Challenge promo banner (loud game style, links to the arena)
-  html += '<a class="ch-promo" href="#/challenge">' +
-    '<span class="chp-shine"></span>' +
-    '<span class="chp-live"><span class="chp-dot"></span>LIVE</span>' +
-    '<span class="chp-row">' +
-      '<span class="chp-trophy">' + ICO.trophy + '</span>' +
-      '<span class="chp-txt"><b>1,500</b><span>learners battling for the top</span></span>' +
-    '</span>' +
-    '<span class="chp-cta">Join the battle <span class="chp-go">›</span></span></a>';
+  // 0 — Battle banner (mockup v5, 2026-10-02): full-bleed mascot artwork
+  html += battleBannerHTML();
 
-  // 0b — Streak card (flame mascot, week strip, freezes) — painted with local
+  // 0b — Streak banner (mockup v5): mascot artwork bg, painted with local
   // data first, then refreshed with cloud state by refreshHomeStreak().
-  html += '<div id="home-streak-wrap">' + streakCardHTML(getStreakLocal()) + '</div>';
+  html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
 
-  // 1 — Today's lesson (the primary action)
+  // 1 — Today's lesson (mockup v5 lesson card with illustrated hero)
   if (!today) {
     html += '<div class="empty">No lessons published yet — check back tomorrow.</div>';
   } else {
-    html += todayCardHTML(today);
+    html += lessonBannerHTML(today);
   }
 
   // 1b — Previous lessons (days before today) → archive page
@@ -3078,7 +3158,7 @@ async function refreshHomeStreak() {
     const res = await Promise.all([getStreakState(), getWordQuizDates()]);
     const wrap = document.getElementById('home-streak-wrap');
     if (!wrap || state.view !== 'home') return;
-    wrap.innerHTML = streakCardHTML(res[0], res[1]);
+    wrap.innerHTML = streakBannerHTML(res[0], res[1]);
   } catch (e) {}
 }
 /* ---------------- celebration sequence ----------------
