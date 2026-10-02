@@ -1,0 +1,357 @@
+{
+  "date": "2026-09-28",
+  "theme": "Technology",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "keyboard",
+      "pos": "noun",
+      "meaning": "the set of keys you press to type on a computer",
+      "example": "I type on a wireless keyboard every day at work.",
+      "pronunciation": "KEE-bord",
+      "persian": "صفحه‌کلید",
+      "photo": "media/b1/2026-09-28/photos/keyboard.jpg",
+      "word_audio": "media/b1/2026-09-28/word-audio/keyboard.mp3"
+    },
+    {
+      "word": "battery",
+      "pos": "noun",
+      "meaning": "the part of a device that stores power",
+      "example": "My phone battery dies quickly in cold weather.",
+      "pronunciation": "BAT-uh-ree",
+      "persian": "باتری",
+      "photo": "media/b1/2026-09-28/photos/battery.jpg",
+      "word_audio": "media/b1/2026-09-28/word-audio/battery.mp3"
+    },
+    {
+      "word": "charger",
+      "pos": "noun",
+      "meaning": "a small device that fills a phone or laptop with power",
+      "example": "I forgot my charger at the office.",
+      "pronunciation": "CHAR-jer",
+      "persian": "شارژر",
+      "photo": "media/b1/2026-09-28/photos/charger.jpg",
+      "word_audio": "media/b1/2026-09-28/word-audio/charger.mp3"
+    },
+    {
+      "word": "notification",
+      "pos": "noun",
+      "meaning": "a short message from an app that tells you something new",
+      "example": "She checks every notification on her phone.",
+      "pronunciation": "noh-tuh-fuh-KAY-shun",
+      "persian": "اعلان (پیام کوتاه برنامه‌ها)",
+      "photo": "media/b1/2026-09-28/photos/notification.jpg",
+      "word_audio": "media/b1/2026-09-28/word-audio/notification.mp3"
+    },
+    {
+      "word": "password",
+      "pos": "noun",
+      "meaning": "a secret word you type to log in to an account",
+      "example": "Never share your password with anyone.",
+      "pronunciation": "PASS-wurd",
+      "persian": "رمز عبور؛ گذرواژه",
+      "photo": "media/b1/2026-09-28/photos/password.jpg",
+      "word_audio": "media/b1/2026-09-28/word-audio/password.mp3"
+    },
+    {
+      "word": "update",
+      "pos": "verb",
+      "meaning": "to make an app or program newer by adding the latest changes",
+      "example": "You should update your apps every month.",
+      "pronunciation": "up-DAYT",
+      "persian": "به‌روزرسانی کردن",
+      "photo": "media/b1/2026-09-28/photos/update.jpg",
+      "word_audio": "media/b1/2026-09-28/word-audio/update.mp3"
+    },
+    {
+      "word": "download",
+      "pos": "verb",
+      "meaning": "to copy a file from the internet to your phone or computer",
+      "example": "I downloaded a free music app yesterday.",
+      "pronunciation": "DOWN-lohd",
+      "persian": "دانلود کردن",
+      "photo": "media/b1/2026-09-28/photos/download.jpg",
+      "word_audio": "media/b1/2026-09-28/word-audio/download.mp3"
+    },
+    {
+      "word": "backup",
+      "pos": "noun",
+      "meaning": "a saved copy of your files that keeps them safe if you lose them",
+      "example": "I keep a backup of my photos in the cloud.",
+      "pronunciation": "BAK-up",
+      "persian": "نسخهٔ پشتیبان",
+      "photo": "media/b1/2026-09-28/photos/backup.jpg",
+      "word_audio": "media/b1/2026-09-28/word-audio/backup.mp3"
+    },
+    {
+      "word": "device",
+      "pos": "noun",
+      "meaning": "a small machine such as a phone, tablet, or laptop",
+      "example": "He owns five different devices.",
+      "pronunciation": "duh-VYCE",
+      "persian": "دستگاه",
+      "photo": "media/b1/2026-09-28/photos/device.jpg",
+      "word_audio": "media/b1/2026-09-28/word-audio/device.mp3"
+    },
+    {
+      "word": "software",
+      "pos": "noun",
+      "meaning": "the programs and apps that run on a computer",
+      "example": "This photo software is free to download.",
+      "pronunciation": "SOFT-wair",
+      "persian": "نرم‌افزار",
+      "photo": "media/b1/2026-09-28/photos/software.jpg",
+      "word_audio": "media/b1/2026-09-28/word-audio/software.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-09-28/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Everyday Technology",
+    "audio": "media/b1/2026-09-28/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-09-28/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: My Digital Day",
+    "audio": "media/b1/2026-09-28/shadowing.mp3",
+    "transcript": "media/b1/2026-09-28/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'keyboard' mean?",
+      "options": [
+        "a small machine such as a phone, tablet, or laptop",
+        "the set of keys you press to type on a computer",
+        "a short message from an app that tells you something new",
+        "a secret word you type to log in to an account"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'battery' mean?",
+      "options": [
+        "the programs and apps that run on a computer",
+        "a saved copy of your files that keeps them safe if you lose them",
+        "the part of a device that stores power",
+        "to copy a file from the internet to your phone or computer"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'charger' mean?",
+      "options": [
+        "a small device that fills a phone or laptop with power",
+        "to make an app or program newer by adding the latest changes",
+        "the set of keys you press to type on a computer",
+        "the programs and apps that run on a computer"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'notification' mean?",
+      "options": [
+        "a saved copy of your files that keeps them safe if you lose them",
+        "a small device that fills a phone or laptop with power",
+        "a short message from an app that tells you something new",
+        "the part of a device that stores power"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'password' mean?",
+      "options": [
+        "a secret word you type to log in to an account",
+        "to copy a file from the internet to your phone or computer",
+        "a small machine such as a phone, tablet, or laptop",
+        "the set of keys you press to type on a computer"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'update' mean?",
+      "options": [
+        "a short message from an app that tells you something new",
+        "a saved copy of your files that keeps them safe if you lose them",
+        "to make an app or program newer by adding the latest changes",
+        "a secret word you type to log in to an account"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'download' mean?",
+      "options": [
+        "to copy a file from the internet to your phone or computer",
+        "the programs and apps that run on a computer",
+        "the part of a device that stores power",
+        "a small device that fills a phone or laptop with power"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'backup' mean?",
+      "options": [
+        "to make an app or program newer by adding the latest changes",
+        "a saved copy of your files that keeps them safe if you lose them",
+        "a small machine such as a phone, tablet, or laptop",
+        "a short message from an app that tells you something new"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'device' mean?",
+      "options": [
+        "the set of keys you press to type on a computer",
+        "a small machine such as a phone, tablet, or laptop",
+        "to copy a file from the internet to your phone or computer",
+        "the programs and apps that run on a computer"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'software' mean?",
+      "options": [
+        "a secret word you type to log in to an account",
+        "the part of a device that stores power",
+        "a small device that fills a phone or laptop with power",
+        "the programs and apps that run on a computer"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "3B: Articles - a / an, the, no article",
+    "explanation": "Use **a** or **an** with a singular countable noun when you say what something is. Say **an** before a vowel sound: **a charger**, **an old keyboard**.\n\nUse **a / an** the first time you mention something new, like **a notification** or **an update**. Later, when both people know which one you mean, use **the**: **the notification**, **the update**.\n\nUse **the** when there is only one of something, or when the meaning is clear. For example: **the battery** of your phone, **the software** on this device.\n\nUse **the** with superlatives and with places in town. For example: **the fastest download**, **the bank**.\n\nUse **a / an** in What...! exclamations and in expressions of frequency. For example: **What a useful device!**, **twice a week**.\n\nUse **no article** when you talk about things in general with plural or uncountable nouns. For example: **Passwords** are important, and **backups** keep your files safe.\n\nUse **no article** with **home**, **work**, **school** after **at / to / from**. For example: **at home**, **from work**.\n\nAlso use **no article** before meals, days, and months. For example: **for lunch**, **on Friday**.\n\nUse **no article** before **next / last** + day, week, or month. For example: **next week**, **last month**.",
+    "examples": [
+      "I bought *a charger* for my new phone.",
+      "She found *an old keyboard* in the garage.",
+      "I got *a notification* from my bank this morning.",
+      "I read *the notification* on the train.",
+      "*The battery* of this phone lasts all day.",
+      "*The software* on my device is very fast.",
+      "That was *the fastest download* I have ever seen.",
+      "What *a useful device*! I take it everywhere.",
+      "I go swimming twice *a week*.",
+      "*Passwords* must be long and difficult to guess.",
+      "She stayed *at home* and watched a film.",
+      "I always keep *a backup* of my photos.",
+      "Please install *the update* before lunch."
+    ],
+    "practice": [
+      {
+        "q": "Fill the gap: I bought ___ new charger yesterday.",
+        "a": "a"
+      },
+      {
+        "q": "Fill the gap: ___ battery of my phone is very old.",
+        "a": "The"
+      },
+      {
+        "q": "Fill the gap: They are going on holiday ___ next week.",
+        "a": "(no article)"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I bought ___ new keyboard yesterday.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (no article)"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She is ___ honest person.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (no article)"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I saw a dog in the park. ___ dog was very big.",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "— (no article)"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ moon is very bright tonight.",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "— (no article)"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He is ___ best player on the team.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (no article)"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What ___ amazing backup!",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (no article)"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ cats are independent animals. (speaking in general)",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "— (no article)"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She is ___ home now.",
+        "options": [
+          "at",
+          "at the",
+          "a",
+          "the"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They are going on holiday ___ next week.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "— (no article)"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He drinks coffee three times ___ day.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (no article)"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

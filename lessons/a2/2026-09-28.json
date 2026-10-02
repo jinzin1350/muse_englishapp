@@ -1,0 +1,357 @@
+{
+  "date": "2026-09-28",
+  "theme": "Work & Career",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "boss",
+      "pos": "noun",
+      "meaning": "the person in charge at work",
+      "example": "My boss is kind and fair.",
+      "pronunciation": "BAWS",
+      "persian": "رئیس",
+      "photo": "media/a2/2026-09-28/photos/boss.jpg",
+      "word_audio": "media/a2/2026-09-28/word-audio/boss.mp3"
+    },
+    {
+      "word": "colleague",
+      "pos": "noun",
+      "meaning": "a person you work with",
+      "example": "My colleagues are friendly.",
+      "pronunciation": "KAW-leeg",
+      "persian": "همکار",
+      "photo": "media/a2/2026-09-28/photos/colleague.jpg",
+      "word_audio": "media/a2/2026-09-28/word-audio/colleague.mp3"
+    },
+    {
+      "word": "salary",
+      "pos": "noun",
+      "meaning": "the money you get every month for your job",
+      "example": "She gets a good salary.",
+      "pronunciation": "SA-luh-ree",
+      "persian": "حقوق ماهیانه",
+      "photo": "media/a2/2026-09-28/photos/salary.jpg",
+      "word_audio": "media/a2/2026-09-28/word-audio/salary.mp3"
+    },
+    {
+      "word": "interview",
+      "pos": "noun",
+      "meaning": "a meeting where people ask you questions for a job",
+      "example": "I have a job interview tomorrow.",
+      "pronunciation": "IN-tuhr-vyoo",
+      "persian": "مصاحبه شغلی",
+      "photo": "media/a2/2026-09-28/photos/interview.jpg",
+      "word_audio": "media/a2/2026-09-28/word-audio/interview.mp3"
+    },
+    {
+      "word": "meeting",
+      "pos": "noun",
+      "meaning": "a time when people come together to talk about work",
+      "example": "The meeting starts at ten o'clock.",
+      "pronunciation": "MEE-ting",
+      "persian": "جلسه",
+      "photo": "media/a2/2026-09-28/photos/meeting.jpg",
+      "word_audio": "media/a2/2026-09-28/word-audio/meeting.mp3"
+    },
+    {
+      "word": "desk",
+      "pos": "noun",
+      "meaning": "a table where you work",
+      "example": "My desk is near the window.",
+      "pronunciation": "DESK",
+      "persian": "میز کار",
+      "photo": "media/a2/2026-09-28/photos/desk.jpg",
+      "word_audio": "media/a2/2026-09-28/word-audio/desk.mp3"
+    },
+    {
+      "word": "overtime",
+      "pos": "noun",
+      "meaning": "work you do after your normal hours",
+      "example": "I worked overtime last week.",
+      "pronunciation": "OH-vuhr-taim",
+      "persian": "اضافه‌کاری",
+      "photo": "media/a2/2026-09-28/photos/overtime.jpg",
+      "word_audio": "media/a2/2026-09-28/word-audio/overtime.mp3"
+    },
+    {
+      "word": "promotion",
+      "pos": "noun",
+      "meaning": "a better job with more pay",
+      "example": "He got a promotion this year.",
+      "pronunciation": "pruh-MOH-shuhn",
+      "persian": "ارتقا شغلی",
+      "photo": "media/a2/2026-09-28/photos/promotion.jpg",
+      "word_audio": "media/a2/2026-09-28/word-audio/promotion.mp3"
+    },
+    {
+      "word": "customer",
+      "pos": "noun",
+      "meaning": "a person who buys things or services",
+      "example": "The customer was happy.",
+      "pronunciation": "KUS-tuh-muhr",
+      "persian": "مشتری",
+      "photo": "media/a2/2026-09-28/photos/customer.jpg",
+      "word_audio": "media/a2/2026-09-28/word-audio/customer.mp3"
+    },
+    {
+      "word": "deadline",
+      "pos": "noun",
+      "meaning": "the last day or time to finish something",
+      "example": "The deadline is Friday.",
+      "pronunciation": "DED-lain",
+      "persian": "ضرب‌الاجل",
+      "photo": "media/a2/2026-09-28/photos/deadline.jpg",
+      "word_audio": "media/a2/2026-09-28/word-audio/deadline.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-09-28/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Work and Career",
+    "audio": "media/a2/2026-09-28/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-09-28/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: A Day at Work",
+    "audio": "media/a2/2026-09-28/shadowing.mp3",
+    "transcript": "media/a2/2026-09-28/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'boss' mean?",
+      "options": [
+        "a person you work with",
+        "the person in charge at work",
+        "the money you get every month for your job",
+        "work you do after your normal hours"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'colleague' mean?",
+      "options": [
+        "a person you work with",
+        "the money you get every month for your job",
+        "work you do after your normal hours",
+        "a meeting where people ask you questions for a job"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'salary' mean?",
+      "options": [
+        "the money you get every month for your job",
+        "a person who buys things or services",
+        "the person in charge at work",
+        "the last day or time to finish something"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'interview' mean?",
+      "options": [
+        "work you do after your normal hours",
+        "a time when people come together to talk about work",
+        "the last day or time to finish something",
+        "a meeting where people ask you questions for a job"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'meeting' mean?",
+      "options": [
+        "a table where you work",
+        "a time when people come together to talk about work",
+        "a better job with more pay",
+        "the person in charge at work"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'desk' mean?",
+      "options": [
+        "a person you work with",
+        "work you do after your normal hours",
+        "a table where you work",
+        "a time when people come together to talk about work"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'overtime' mean?",
+      "options": [
+        "a person you work with",
+        "work you do after your normal hours",
+        "a better job with more pay",
+        "the person in charge at work"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'promotion' mean?",
+      "options": [
+        "a time when people come together to talk about work",
+        "a better job with more pay",
+        "a person who buys things or services",
+        "the person in charge at work"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'customer' mean?",
+      "options": [
+        "a time when people come together to talk about work",
+        "the last day or time to finish something",
+        "a person who buys things or services",
+        "work you do after your normal hours"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'deadline' mean?",
+      "options": [
+        "a table where you work",
+        "a person you work with",
+        "the last day or time to finish something",
+        "the person in charge at work"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "3B: Articles - a / an, the, no article",
+    "explanation": "Use **a** or **an** when you talk about one thing for the first time. We say **a boss** or **an interview** when we say them for the first time.\n\nUse **an** before a vowel sound. Say **an interview**, not a interview.\n\nAlso use **a** or **an** to say what something is. For example: **a promotion** is a better job with more pay, and **a deadline** is the last day to finish work.\n\nUse **the** when you both know which one you mean. First you say **a desk**, then you say **the desk** because we know which desk.\n\nUse **the** with the only one, and with superlatives. For example: **the best salary** in the company.\n\nUse **no article** for things in general. Say **customers** are important and **colleagues** are kind when you mean all of them.\n\nUse **no article** after **at**, **to**, and **from** with work, home, and school. Say **I go to work**, and **overtime** is work after hours.\n\nUse **no article** with meals, days, and months. We have **lunch** at noon, and we have a meeting **on Monday**.",
+    "examples": [
+      "I met *a boss* from another office. (first mention)",
+      "She is talking to *a colleague*. (first mention)",
+      "*A salary* is paid every month. (saying what it is)",
+      "I have *an interview* tomorrow. (an before a vowel sound)",
+      "I bought a desk. *The desk* is big. (mentioned before)",
+      "He got *a promotion* this year. (first mention)",
+      "She has *the best salary* in the company. (superlative)",
+      "I do not like *overtime*. (general, no article)",
+      "*The customer* was happy with our work. (we know which customer)",
+      "*The deadline* is Friday. (we know which deadline)",
+      "I go *to work* at eight. (no article after to)",
+      "We have a meeting *on Monday*. (no article with days)"
+    ],
+    "practice": [
+      {
+        "q": "Which is correct: 'a interview' or 'an interview'?",
+        "a": "'An interview' — use 'an' before a vowel sound."
+      },
+      {
+        "q": "Which is correct: 'I go to the work' or 'I go to work'?",
+        "a": "'I go to work' — no article after 'to' with 'work'."
+      },
+      {
+        "q": "Fill the blank: I saw a customer. ___ customer was happy.",
+        "a": "The customer was happy — use 'the' when we know which one."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Jess is ___ nurse in a hospital.",
+        "options": [
+          "the",
+          "– (no article)",
+          "a",
+          "an"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My boyfriend is ___ chef.",
+        "options": [
+          "a",
+          "– (no article)",
+          "an",
+          "the"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "How often do you go to ___ gym?",
+        "options": [
+          "a",
+          "the",
+          "– (no article)",
+          "an"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What time does ___ train leave?",
+        "options": [
+          "a",
+          "– (no article)",
+          "the",
+          "an"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What is ___ most interesting place in your town?",
+        "options": [
+          "an",
+          "– (no article)",
+          "the",
+          "a"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What shall we do ___ next weekend?",
+        "options": [
+          "the",
+          "– (no article)",
+          "a",
+          "an"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Is your mum ___ housewife?",
+        "options": [
+          "the",
+          "a",
+          "an",
+          "– (no article)"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Have you ever had ___ problem at work?",
+        "options": [
+          "an",
+          "– (no article)",
+          "a",
+          "the"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "When is ___ meeting?",
+        "options": [
+          "– (no article)",
+          "the",
+          "an",
+          "a"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ happiness is more important than money.",
+        "options": [
+          "an",
+          "– (no article)",
+          "a",
+          "the"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-09-28/grammar-en.mp3"
+  }
+}

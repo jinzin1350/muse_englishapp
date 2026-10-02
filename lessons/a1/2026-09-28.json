@@ -1,0 +1,360 @@
+{
+  "date": "2026-09-28",
+  "theme": "Travel and Transport",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "car",
+      "pos": "noun",
+      "meaning": "a small road vehicle with four wheels",
+      "example": "I go to work by car.",
+      "pronunciation": "KAHR",
+      "persian": "ماشین",
+      "photo": "media/a1/2026-09-28/photos/car.jpg",
+      "word_audio": "media/a1/2026-09-28/word-audio/car.mp3"
+    },
+    {
+      "word": "bus",
+      "pos": "noun",
+      "meaning": "a big road vehicle that carries many people",
+      "example": "The bus is red.",
+      "pronunciation": "BUHS",
+      "persian": "اتوبوس",
+      "photo": "media/a1/2026-09-28/photos/bus.jpg",
+      "word_audio": "media/a1/2026-09-28/word-audio/bus.mp3"
+    },
+    {
+      "word": "train",
+      "pos": "noun",
+      "meaning": "a long vehicle on rails that carries people",
+      "example": "The train is fast.",
+      "pronunciation": "TRAYN",
+      "persian": "قطار",
+      "photo": "media/a1/2026-09-28/photos/train.jpg",
+      "word_audio": "media/a1/2026-09-28/word-audio/train.mp3"
+    },
+    {
+      "word": "taxi",
+      "pos": "noun",
+      "meaning": "a car you pay to take you somewhere",
+      "example": "We took a taxi to the airport.",
+      "pronunciation": "TAK-see",
+      "persian": "تاکسی",
+      "photo": "media/a1/2026-09-28/photos/taxi.jpg",
+      "word_audio": "media/a1/2026-09-28/word-audio/taxi.mp3"
+    },
+    {
+      "word": "plane",
+      "pos": "noun",
+      "meaning": "a vehicle that flies in the sky",
+      "example": "The plane is in the sky.",
+      "pronunciation": "PLAYN",
+      "persian": "هواپیما",
+      "photo": "media/a1/2026-09-28/photos/plane.jpg",
+      "word_audio": "media/a1/2026-09-28/word-audio/plane.mp3"
+    },
+    {
+      "word": "bike",
+      "pos": "noun",
+      "meaning": "a two-wheel vehicle you ride with your legs",
+      "example": "She rides her bike to school.",
+      "pronunciation": "BYK",
+      "persian": "دوچرخه",
+      "photo": "media/a1/2026-09-28/photos/bike.jpg",
+      "word_audio": "media/a1/2026-09-28/word-audio/bike.mp3"
+    },
+    {
+      "word": "ticket",
+      "pos": "noun",
+      "meaning": "a small paper that lets you travel",
+      "example": "I bought a train ticket.",
+      "pronunciation": "TIH-kit",
+      "persian": "بلیط",
+      "photo": "media/a1/2026-09-28/photos/ticket.jpg",
+      "word_audio": "media/a1/2026-09-28/word-audio/ticket.mp3"
+    },
+    {
+      "word": "road",
+      "pos": "noun",
+      "meaning": "a long hard path for cars and buses",
+      "example": "The road is long.",
+      "pronunciation": "ROHD",
+      "persian": "جاده",
+      "photo": "media/a1/2026-09-28/photos/road.jpg",
+      "word_audio": "media/a1/2026-09-28/word-audio/road.mp3"
+    },
+    {
+      "word": "station",
+      "pos": "noun",
+      "meaning": "the place where trains and buses stop",
+      "example": "We waited at the station.",
+      "pronunciation": "STAY-shuhn",
+      "persian": "ایستگاه",
+      "photo": "media/a1/2026-09-28/photos/station.jpg",
+      "word_audio": "media/a1/2026-09-28/word-audio/station.mp3"
+    },
+    {
+      "word": "airport",
+      "pos": "noun",
+      "meaning": "the big place where planes take off and land",
+      "example": "The airport is very big.",
+      "pronunciation": "AIR-pawrt",
+      "persian": "فرودگاه",
+      "photo": "media/a1/2026-09-28/photos/airport.jpg",
+      "word_audio": "media/a1/2026-09-28/word-audio/airport.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-09-28/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Travel and Transport",
+    "audio": "media/a1/2026-09-28/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-09-28/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: Travel and Transport",
+    "audio": "media/a1/2026-09-28/shadowing.mp3",
+    "transcript": "media/a1/2026-09-28/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'car' mean?",
+      "options": [
+        "a long vehicle on rails that carries people",
+        "a small paper that lets you travel",
+        "a small road vehicle with four wheels",
+        "a big road vehicle that carries many people"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bus' mean?",
+      "options": [
+        "a small paper that lets you travel",
+        "a car you pay to take you somewhere",
+        "a long vehicle on rails that carries people",
+        "a big road vehicle that carries many people"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'train' mean?",
+      "options": [
+        "the place where trains and buses stop",
+        "the big place where planes take off and land",
+        "a long vehicle on rails that carries people",
+        "a small road vehicle with four wheels"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'taxi' mean?",
+      "options": [
+        "a vehicle that flies in the sky",
+        "the big place where planes take off and land",
+        "a car you pay to take you somewhere",
+        "a small paper that lets you travel"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'plane' mean?",
+      "options": [
+        "a vehicle that flies in the sky",
+        "a long hard path for cars and buses",
+        "a small road vehicle with four wheels",
+        "a two-wheel vehicle you ride with your legs"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bike' mean?",
+      "options": [
+        "a vehicle that flies in the sky",
+        "a two-wheel vehicle you ride with your legs",
+        "a big road vehicle that carries many people",
+        "a small paper that lets you travel"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'ticket' mean?",
+      "options": [
+        "a small paper that lets you travel",
+        "a small road vehicle with four wheels",
+        "a big road vehicle that carries many people",
+        "a long hard path for cars and buses"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'road' mean?",
+      "options": [
+        "the place where trains and buses stop",
+        "a vehicle that flies in the sky",
+        "a small road vehicle with four wheels",
+        "a long hard path for cars and buses"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'station' mean?",
+      "options": [
+        "the big place where planes take off and land",
+        "the place where trains and buses stop",
+        "a small paper that lets you travel",
+        "a vehicle that flies in the sky"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'airport' mean?",
+      "options": [
+        "a small road vehicle with four wheels",
+        "the big place where planes take off and land",
+        "a two-wheel vehicle you ride with your legs",
+        "a big road vehicle that carries many people"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "3B: Articles - a / an, the, no article",
+    "explanation": "Use **a** when you say what something is for the first time. I see **a car**.\n\nUse **an** before a vowel sound: a, e, i, o, u. It is **an airport**.\n\nUse **the** when you talk about the same thing again. I see **a bus**. **The bus** is big.\n\nUse **the** when it is clear which one you mean. **The station** is near my house.\n\nUse **the** for the only one, like **the moon**. We say **the train** when we both know the train. I have **the ticket**.\n\nUse no article to talk about things in general. **Bikes** are cheap. **Roads** are long.\n\nUse no article with **home**, **work**, and **school** after at, to, or from. I go to **work** by **taxi**.\n\nUse no article with meals and days. I eat **breakfast** before my **plane**.",
+    "examples": [
+      "It is *a car*. (saying what something is)",
+      "She went to *an airport*. (an before a vowel sound)",
+      "I see *a bus*. (first mention)",
+      "*The bus* is red. (second mention)",
+      "We waited at *the station*. (clear which one)",
+      "*The moon* is in the sky. (the only one)",
+      "*The train* is very fast. (we know the train)",
+      "I bought *a ticket* for the train. (first mention)",
+      "*Trains* are fast. (general, no article)",
+      "I go to *work* by *bike*. (no article with work)",
+      "He is at *home* now. (no article with home)",
+      "We have *breakfast* at seven. (no article with meals)",
+      "We took *a taxi* to the airport. (first mention)",
+      "*The plane* left at eight. (we know the plane)",
+      "*Roads* are long. (general, no article)"
+    ],
+    "practice": [
+      {
+        "q": "Fill in: I see ___ car. ___ car is red.",
+        "a": "a / The"
+      },
+      {
+        "q": "Fill in: ___ airport is very big. (first mention)",
+        "a": "An"
+      },
+      {
+        "q": "Fill in: We have ___ breakfast at seven.",
+        "a": "no article (nothing)"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I see ___ apple.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (nothing)"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She has ___ car.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (nothing)"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I see a bus. ___ bus is big.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (nothing)"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ moon is round.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (nothing)"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ trains are fast. (in general)",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (nothing)"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He is at ___ home.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (nothing)"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We have ___ dinner at seven.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (nothing)"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "It is ___ airport. (first mention)",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (nothing)"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We waited at ___ station. (the station we know)",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (nothing)"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I bought ___ ticket.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "— (nothing)"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a1/2026-09-28/grammar-en.mp3"
+  }
+}

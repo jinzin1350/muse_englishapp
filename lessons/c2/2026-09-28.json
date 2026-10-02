@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-28",
+  "theme": "The Science of Training",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "hypertrophy",
+      "pos": "noun",
+      "meaning": "the growth of muscle tissue that makes muscles larger",
+      "example": "After months of heavy lifting, he noticed real hypertrophy in his shoulders.",
+      "pronunciation": "hy-PER-truh-fee",
+      "persian": "بزرگ شدن حجم عضله",
+      "photo": "media/c2/2026-09-28/photos/hypertrophy.jpg",
+      "word_audio": "media/c2/2026-09-28/word-audio/hypertrophy.mp3"
+    },
+    {
+      "word": "plyometrics",
+      "pos": "noun",
+      "meaning": "jump-based exercises that develop explosive power",
+      "example": "Her coach added plyometrics like box jumps to sharpen her sprint starts.",
+      "pronunciation": "plai-uh-MET-riks",
+      "persian": "تمرینات پرشی انفجاری",
+      "photo": "media/c2/2026-09-28/photos/plyometrics.jpg",
+      "word_audio": "media/c2/2026-09-28/word-audio/plyometrics.mp3"
+    },
+    {
+      "word": "proprioception",
+      "pos": "noun",
+      "meaning": "the body's sense of where it is in space",
+      "example": "Balance-board drills improve proprioception and help prevent ankle injuries.",
+      "pronunciation": "PROH-pree-uh-SEP-shun",
+      "persian": "حس وضعیت و موقعیت بدن",
+      "photo": "media/c2/2026-09-28/photos/proprioception.jpg",
+      "word_audio": "media/c2/2026-09-28/word-audio/proprioception.mp3"
+    },
+    {
+      "word": "ergogenic",
+      "pos": "adjective",
+      "meaning": "intended to improve physical performance",
+      "example": "Caffeine is one of the few supplements with proven ergogenic effects.",
+      "pronunciation": "ur-guh-JEN-ik",
+      "persian": "افزاینده عملکرد ورزشی",
+      "photo": "media/c2/2026-09-28/photos/ergogenic.jpg",
+      "word_audio": "media/c2/2026-09-28/word-audio/ergogenic.mp3"
+    },
+    {
+      "word": "taper",
+      "pos": "verb",
+      "meaning": "to gradually reduce training before a competition",
+      "example": "She will taper her mileage in the final two weeks before the marathon.",
+      "pronunciation": "TAY-pur",
+      "persian": "کاهش تدریجی حجم تمرین",
+      "photo": "media/c2/2026-09-28/photos/taper.jpg",
+      "word_audio": "media/c2/2026-09-28/word-audio/taper.mp3"
+    },
+    {
+      "word": "deload",
+      "pos": "verb",
+      "meaning": "to train lighter for a short period to allow recovery",
+      "example": "After three heavy weeks, he plans to deload with easy sessions.",
+      "pronunciation": "dee-LOHD",
+      "persian": "سبک کردن موقت تمرین برای ریکاوری",
+      "photo": "media/c2/2026-09-28/photos/deload.jpg",
+      "word_audio": "media/c2/2026-09-28/word-audio/deload.mp3"
+    },
+    {
+      "word": "calisthenics",
+      "pos": "noun",
+      "meaning": "exercises using only body weight, such as push-ups",
+      "example": "Calisthenics like pull-ups and dips built his upper-body strength.",
+      "pronunciation": "kal-iss-THEN-iks",
+      "persian": "تمرینات با وزن بدن",
+      "photo": "media/c2/2026-09-28/photos/calisthenics.jpg",
+      "word_audio": "media/c2/2026-09-28/word-audio/calisthenics.mp3"
+    },
+    {
+      "word": "macrocycle",
+      "pos": "noun",
+      "meaning": "a long-term training plan lasting several months",
+      "example": "His coach mapped the whole season as one twelve-week macrocycle.",
+      "pronunciation": "MAK-roh-SAI-kul",
+      "persian": "چرخه بلندمدت برنامه تمرینی",
+      "photo": "media/c2/2026-09-28/photos/macrocycle.jpg",
+      "word_audio": "media/c2/2026-09-28/word-audio/macrocycle.mp3"
+    },
+    {
+      "word": "neuromuscular",
+      "pos": "adjective",
+      "meaning": "relating to the connection between nerves and muscles",
+      "example": "Sprint training creates powerful neuromuscular adaptations.",
+      "pronunciation": "noo-roh-MUSS-kyoo-lur",
+      "persian": "مربوط به اعصاب و عضلات",
+      "photo": "media/c2/2026-09-28/photos/neuromuscular.jpg",
+      "word_audio": "media/c2/2026-09-28/word-audio/neuromuscular.mp3"
+    },
+    {
+      "word": "eustress",
+      "pos": "noun",
+      "meaning": "positive stress that motivates and improves performance",
+      "example": "The buzz before a race is eustress, not anxiety.",
+      "pronunciation": "YOO-stress",
+      "persian": "استرس مثبت و انگیزه‌بخش",
+      "photo": "media/c2/2026-09-28/photos/eustress.jpg",
+      "word_audio": "media/c2/2026-09-28/word-audio/eustress.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-09-28/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Science of Training",
+    "audio": "media/c2/2026-09-28/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-09-28/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Sprinter's Season",
+    "audio": "media/c2/2026-09-28/shadowing.mp3",
+    "transcript": "media/c2/2026-09-28/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'hypertrophy' mean?",
+      "options": [
+        "to train lighter for a short period to allow recovery",
+        "exercises using only body weight, such as push-ups",
+        "the growth of muscle tissue that makes muscles larger",
+        "positive stress that motivates and improves performance"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'plyometrics' mean?",
+      "options": [
+        "relating to the connection between nerves and muscles",
+        "jump-based exercises that develop explosive power",
+        "to train lighter for a short period to allow recovery",
+        "exercises using only body weight, such as push-ups"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'proprioception' mean?",
+      "options": [
+        "the body's sense of where it is in space",
+        "to gradually reduce training before a competition",
+        "the growth of muscle tissue that makes muscles larger",
+        "positive stress that motivates and improves performance"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'ergogenic' mean?",
+      "options": [
+        "the growth of muscle tissue that makes muscles larger",
+        "positive stress that motivates and improves performance",
+        "intended to improve physical performance",
+        "jump-based exercises that develop explosive power"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'taper' mean?",
+      "options": [
+        "to gradually reduce training before a competition",
+        "intended to improve physical performance",
+        "relating to the connection between nerves and muscles",
+        "exercises using only body weight, such as push-ups"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'deload' mean?",
+      "options": [
+        "the body's sense of where it is in space",
+        "jump-based exercises that develop explosive power",
+        "to train lighter for a short period to allow recovery",
+        "intended to improve physical performance"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'calisthenics' mean?",
+      "options": [
+        "intended to improve physical performance",
+        "to gradually reduce training before a competition",
+        "exercises using only body weight, such as push-ups",
+        "to train lighter for a short period to allow recovery"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'macrocycle' mean?",
+      "options": [
+        "jump-based exercises that develop explosive power",
+        "a long-term training plan lasting several months",
+        "positive stress that motivates and improves performance",
+        "the growth of muscle tissue that makes muscles larger"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'neuromuscular' mean?",
+      "options": [
+        "relating to the connection between nerves and muscles",
+        "the growth of muscle tissue that makes muscles larger",
+        "positive stress that motivates and improves performance",
+        "exercises using only body weight, such as push-ups"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'eustress' mean?",
+      "options": [
+        "positive stress that motivates and improves performance",
+        "relating to the connection between nerves and muscles",
+        "the growth of muscle tissue that makes muscles larger",
+        "the body's sense of where it is in space"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "3B: Articles - a / an, the, no article",
+    "explanation": "Use **a / an** the first time you mention a singular countable noun. It says what kind of thing it is, not which one. Her coach wrote **a** macrocycle for the season.\n\nThe same **a / an** appears in **What ...!** exclamations and frequency phrases. What **a** neuromuscular performance that was! She lifts four times **a** week.\n\nSwitch to **the** once the noun is already mentioned or clearly identified. She wrote **a** macrocycle. **The** macrocycle peaks in June.\n\n**The** also marks the only one, well-known places, and superlatives. **The** sun, **the** gym on Main Street, **the** best ergogenic aid in the trials.\n\nUse **no article** for plurals and uncountables when you speak in general. **Hypertrophy** takes months. **Plyometrics** demand fresh legs.\n\nAt C2, watch abstract nouns closely: general idea takes **no article**, a specific case takes **the**. **Proprioception** prevents injury. **The** proprioception of gymnasts is extraordinary.\n\nDrop the article after **at / to / from** with home, work, and school, before meals and days, and with **next / last** plus a time word. She trains **at** home before **breakfast**. The taper starts **next** Monday.\n\n**The** plus an adjective can name a whole group. **The** injured must deload before returning to full training.\n\nConfident C2 writing often drops articles for a generic, authoritative tone. **Calisthenics** build relative strength. **Eustress** fuels adaptation.",
+    "examples": [
+      "He is *a* sprinter with remarkable proprioception. (first mention, saying what he is)",
+      "What *a* eustress that Olympic final was! (What ...! exclamation)",
+      "She does plyometrics *twice a week* in the base phase. (expression of frequency)",
+      "I read *a* study on ergogenic aids. *The* study changed my nutrition plan. (first mention, then already mentioned)",
+      "*The* macrocycle she follows ends with a two-week taper. (clear which one)",
+      "She did her deload week at *the* gym on Main Street. (a place everyone knows)",
+      "Sprinting produces *the* fastest neuromuscular gains of any drill. (superlative)",
+      "*Calisthenics* require no equipment at all. (plural noun, general statement)",
+      "*Hypertrophy* is a slow biological process. (uncountable noun, general statement)",
+      "After *breakfast* she reviews her taper plan for next week. (meal; no article)"
+    ],
+    "practice": [
+      {
+        "q": "She bought ___ macrocycle plan, but ___ macrocycle proved too intense.",
+        "a": "a / the — first mention takes 'a', the repeat takes 'the'."
+      },
+      {
+        "q": "___ proprioception is vital for every gymnast. (a / the / no article)",
+        "a": "No article — a general statement about an abstract noun."
+      },
+      {
+        "q": "He goes to ___ gym ___ three times a week. (the / – ; a / the)",
+        "a": "the / a — 'the gym' is the known local gym; frequency takes 'a'."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She designed ___ macrocycle that peaks in June.",
+        "options": [
+          "a",
+          "the",
+          "an",
+          "–"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ hypertrophy she gained took two years of heavy lifting.",
+        "options": [
+          "The",
+          "A",
+          "An",
+          "–"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ plyometrics are risky on tired legs.",
+        "options": [
+          "–",
+          "The",
+          "A",
+          "An"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He is ___ ergogenic researcher at the university.",
+        "options": [
+          "an",
+          "a",
+          "the",
+          "–"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What ___ eustress that final was!",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "–"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They lift ___ four times a week.",
+        "options": [
+          "–",
+          "a",
+          "the",
+          "an"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ proprioception of gymnasts is extraordinary.",
+        "options": [
+          "The",
+          "A",
+          "An",
+          "–"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She eats ___ breakfast, then heads to the track.",
+        "options": [
+          "–",
+          "the",
+          "a",
+          "an"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The taper ends ___ next Monday.",
+        "options": [
+          "–",
+          "on the",
+          "at the",
+          "in the"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Caffeine is ___ best-known ergogenic aid.",
+        "options": [
+          "the",
+          "a",
+          "an",
+          "–"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}
