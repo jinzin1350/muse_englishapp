@@ -1,0 +1,356 @@
+{
+  "date": "2026-09-22",
+  "theme": "Money & Shopping",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "haggle",
+      "pos": "verb",
+      "meaning": "to argue with a seller about the price of something",
+      "example": "We haggled with the street seller for ten minutes and got the bag much cheaper.",
+      "pronunciation": "HA-gul",
+      "persian": "چانه زدن",
+      "photo": "media/b2/2026-09-22/photos/haggle.jpg",
+      "word_audio": "media/b2/2026-09-22/word-audio/haggle.mp3"
+    },
+    {
+      "word": "splurge",
+      "pos": "verb",
+      "meaning": "to spend a lot of money on something nice you don't really need",
+      "example": "On her birthday, she decided to splurge on a designer dress.",
+      "pronunciation": "SPLURJ",
+      "persian": "ولخرجی کردن",
+      "photo": "media/b2/2026-09-22/photos/splurge.jpg",
+      "word_audio": "media/b2/2026-09-22/word-audio/splurge.mp3"
+    },
+    {
+      "word": "frugal",
+      "pos": "adjective",
+      "meaning": "careful not to waste money",
+      "example": "He is frugal and cooks at home instead of eating out.",
+      "pronunciation": "FROO-gul",
+      "persian": "صرفه‌جو",
+      "photo": "media/b2/2026-09-22/photos/frugal.jpg",
+      "word_audio": "media/b2/2026-09-22/word-audio/frugal.mp3"
+    },
+    {
+      "word": "thrifty",
+      "pos": "adjective",
+      "meaning": "careful and wise with money; not wasteful",
+      "example": "My thrifty grandmother compares prices before she buys anything.",
+      "pronunciation": "THRIF-tee",
+      "persian": "مقتصد",
+      "photo": "media/b2/2026-09-22/photos/thrifty.jpg",
+      "word_audio": "media/b2/2026-09-22/word-audio/thrifty.mp3"
+    },
+    {
+      "word": "clearance",
+      "pos": "noun",
+      "meaning": "a sale to sell old stock at very low prices",
+      "example": "The electronics store is holding a big clearance sale this weekend.",
+      "pronunciation": "KLEER-uns",
+      "persian": "حراج (فروش فوق‌العاده)",
+      "photo": "media/b2/2026-09-22/photos/clearance.jpg",
+      "word_audio": "media/b2/2026-09-22/word-audio/clearance.mp3"
+    },
+    {
+      "word": "invoice",
+      "pos": "noun",
+      "meaning": "a written bill that shows what you must pay",
+      "example": "The supplier sent an invoice for the new office chairs.",
+      "pronunciation": "IN-voys",
+      "persian": "صورت‌حساب؛ فاکتور",
+      "photo": "media/b2/2026-09-22/photos/invoice.jpg",
+      "word_audio": "media/b2/2026-09-22/word-audio/invoice.mp3"
+    },
+    {
+      "word": "surcharge",
+      "pos": "noun",
+      "meaning": "an extra charge added to the normal price",
+      "example": "The airline added a fuel surcharge to every ticket.",
+      "pronunciation": "SUR-charj",
+      "persian": "هزینه اضافی",
+      "photo": "media/b2/2026-09-22/photos/surcharge.jpg",
+      "word_audio": "media/b2/2026-09-22/word-audio/surcharge.mp3"
+    },
+    {
+      "word": "outlet",
+      "pos": "noun",
+      "meaning": "a shop that sells famous brands at lower prices",
+      "example": "We bought cheap shoes at the outlet mall outside the city.",
+      "pronunciation": "OUT-let",
+      "persian": "فروشگاه تخفیف‌دار (اوت‌لت)",
+      "photo": "media/b2/2026-09-22/photos/outlet.jpg",
+      "word_audio": "media/b2/2026-09-22/word-audio/outlet.mp3"
+    },
+    {
+      "word": "retail",
+      "pos": "noun",
+      "meaning": "the sale of goods directly to customers in shops",
+      "example": "The retail price of the jacket is two hundred dollars.",
+      "pronunciation": "REE-tail",
+      "persian": "خرده‌فروشی",
+      "photo": "media/b2/2026-09-22/photos/retail.jpg",
+      "word_audio": "media/b2/2026-09-22/word-audio/retail.mp3"
+    },
+    {
+      "word": "cashier",
+      "pos": "noun",
+      "meaning": "the person who takes your money at a shop",
+      "example": "The friendly cashier packed our groceries into paper bags.",
+      "pronunciation": "ka-SHEER",
+      "persian": "صندوقدار",
+      "photo": "media/b2/2026-09-22/photos/cashier.jpg",
+      "word_audio": "media/b2/2026-09-22/word-audio/cashier.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-09-22/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Money & Shopping",
+    "audio": "media/b2/2026-09-22/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-09-22/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Smart Shopper",
+    "audio": "media/b2/2026-09-22/shadowing.mp3",
+    "transcript": "media/b2/2026-09-22/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'haggle' mean?",
+      "options": [
+        "careful not to waste money",
+        "to argue with a seller about the price",
+        "a written bill showing what you must pay",
+        "a shop that sells brands at lower prices"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'splurge' mean?",
+      "options": [
+        "to spend a lot of money on something nice you don't need",
+        "an extra charge added to the normal price",
+        "the person who takes your money at a shop",
+        "careful and wise with money"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'frugal' mean?",
+      "options": [
+        "a sale to sell old stock at very low prices",
+        "the sale of goods directly to customers in shops",
+        "careful not to waste money",
+        "to argue with a seller about the price"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'thrifty' mean?",
+      "options": [
+        "an extra charge added to the normal price",
+        "careful and wise with money",
+        "to spend a lot of money on something nice you don't need",
+        "a written bill showing what you must pay"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'clearance' mean?",
+      "options": [
+        "the person who takes your money at a shop",
+        "careful not to waste money",
+        "a sale to sell old stock at very low prices",
+        "an extra charge added to the normal price"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'invoice' mean?",
+      "options": [
+        "a written bill showing what you must pay",
+        "a shop that sells brands at lower prices",
+        "careful and wise with money",
+        "to argue with a seller about the price"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'surcharge' mean?",
+      "options": [
+        "to spend a lot of money on something nice you don't need",
+        "a sale to sell old stock at very low prices",
+        "the sale of goods directly to customers in shops",
+        "an extra charge added to the normal price"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'outlet' mean?",
+      "options": [
+        "a shop that sells brands at lower prices",
+        "careful not to waste money",
+        "to argue with a seller about the price",
+        "a written bill showing what you must pay"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'retail' mean?",
+      "options": [
+        "the person who takes your money at a shop",
+        "an extra charge added to the normal price",
+        "the sale of goods directly to customers in shops",
+        "a sale to sell old stock at very low prices"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'cashier' mean?",
+      "options": [
+        "careful and wise with money",
+        "a shop that sells brands at lower prices",
+        "to spend a lot of money on something nice you don't need",
+        "the person who takes your money at a shop"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "3B: Articles - a / an, the, no article",
+    "explanation": "Use **a** or **an** with singular countable nouns when you say what something is or what somebody does. She is **a** cashier in a big store.\n\nUse **a/an** for the first mention of a thing or person. I found **a** clearance sale; **the** sale ends on Sunday.\n\nUse **a/an** in exclamations with **What...!**. What **a** big surcharge on that invoice!\n\nUse **a/an** in expressions of frequency. We visit the outlet **twice a month**.\n\nUse **the** when you have already mentioned something, or when the meaning is clear. I saw **a** cashier, and **the** cashier helped me.\n\nUse **the** for the only one of something, like **the** moon, and with superlatives. This is **the** cheapest outlet in town.\n\nUse **the** with places in town, like **the** cinema or **the** theatre. We are meeting at **the** cinema near the outlet.\n\nUse **no article** with plurals and uncountables when you speak in general. **Frugal** people check invoices; **thrifty** shoppers compare prices.\n\nUse **no article** with **home**, **work**, **school** after **at**, **to**, **from**, and with meals, days, and months. She is at **work** now; we shop on **Fridays**.\n\nUse **no article** before **next** or **last** plus a time word. See you **next** week at the outlet.\n\nArticles work the same for every kind of shopper: people who **haggle** at markets, and people who **splurge** on **retail** brands.",
+    "examples": [
+      "She is *a cashier* at the new outlet mall. (a/an: saying what somebody does)",
+      "I found *a clearance sale* near my office. (a/an: first mention)",
+      "What *a big surcharge* they added to the bill! (a/an: What...! exclamation)",
+      "We visit the outlet *twice a month*. (a/an: expressions of frequency)",
+      "I saw *an invoice* on the table. *The invoice* was for two hundred dollars. (the: already mentioned)",
+      "Please pay *the surcharge* before Friday. (the: clear reference)",
+      "This is *the cheapest* outlet in the city. (the: superlative)",
+      "We are meeting at *the cinema* after shopping. (the: places in town)",
+      "*Thrifty* shoppers always compare *retail* prices first. (no article: general plural)",
+      "He is *frugal* and he stays at *work* until six. (no article: at work)",
+      "*Haggle* on Mondays, *splurge* on Saturdays. (no article: days, in general)",
+      "See you *next week* at the outlet. (no article: next + week)"
+    ],
+    "practice": [
+      {
+        "q": "Is it 'a honest cashier' or 'an honest cashier'?",
+        "a": "'An honest cashier' — use an before a vowel sound."
+      },
+      {
+        "q": "Fill the gaps: I bought ___ jacket. ___ jacket was on clearance.",
+        "a": "a, the — first mention takes a, the second mention takes the."
+      },
+      {
+        "q": "Which is right in 'I never have ___ breakfast': 'the breakfast' or 'breakfast'?",
+        "a": "'breakfast' — use no article before meals."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She is ___ honest cashier.",
+        "options": [
+          "a",
+          "the",
+          "an",
+          "—"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What ___ awful surcharge!",
+        "options": [
+          "an",
+          "the",
+          "a",
+          "—"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We visit the outlet ___ month.",
+        "options": [
+          "two times a",
+          "once the",
+          "twice a",
+          "three times the"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I saw ___ invoice on your desk. ___ invoice has a mistake.",
+        "options": [
+          "an / The",
+          "the / An",
+          "a / The",
+          "— / An"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ moon was bright last night.",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "—"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "This is ___ cheapest outlet in the city.",
+        "options": [
+          "a",
+          "the",
+          "most",
+          "—"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Let us meet at ___ cinema after work.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "—"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ thrifty shoppers compare prices.",
+        "options": [
+          "The",
+          "A",
+          "An",
+          "—"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She stayed at ___ home all day.",
+        "options": [
+          "the",
+          "a",
+          "an",
+          "—"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We will go shopping ___ next week.",
+        "options": [
+          "on",
+          "at",
+          "in",
+          "—"
+        ],
+        "answer": 3
+      }
+    ]
+  }
+}
