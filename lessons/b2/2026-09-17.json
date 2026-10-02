@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-17",
+  "theme": "Body Signals",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "fatigue",
+      "pos": "noun",
+      "meaning": "extreme tiredness, usually after work or illness",
+      "example": "The nurse felt deep fatigue after her twelve-hour shift.",
+      "pronunciation": "fuh-TEE-g",
+      "persian": "خستگی",
+      "photo": "media/b2/2026-09-17/photos/fatigue.jpg",
+      "word_audio": "media/b2/2026-09-17/word-audio/fatigue.mp3"
+    },
+    {
+      "word": "nausea",
+      "pos": "noun",
+      "meaning": "the feeling that you might vomit",
+      "example": "The rough boat ride gave him terrible nausea.",
+      "pronunciation": "NAW-zee-uh",
+      "persian": "حالت تهوع",
+      "photo": "media/b2/2026-09-17/photos/nausea.jpg",
+      "word_audio": "media/b2/2026-09-17/word-audio/nausea.mp3"
+    },
+    {
+      "word": "bruise",
+      "pos": "noun",
+      "meaning": "a dark mark on the skin caused by an injury",
+      "example": "He had a big bruise on his knee after the fall.",
+      "pronunciation": "BROOZ",
+      "persian": "کبودی",
+      "photo": "media/b2/2026-09-17/photos/bruise.jpg",
+      "word_audio": "media/b2/2026-09-17/word-audio/bruise.mp3"
+    },
+    {
+      "word": "cramp",
+      "pos": "noun",
+      "meaning": "a sudden painful tightening of a muscle",
+      "example": "She woke up in the night with a painful cramp in her leg.",
+      "pronunciation": "KRAMP",
+      "persian": "گرفتگی عضلانی",
+      "photo": "media/b2/2026-09-17/photos/cramp.jpg",
+      "word_audio": "media/b2/2026-09-17/word-audio/cramp.mp3"
+    },
+    {
+      "word": "joint",
+      "pos": "noun",
+      "meaning": "the place where two bones meet, like the knee or elbow",
+      "example": "Swimming is gentle exercise for stiff joints.",
+      "pronunciation": "JOYNT",
+      "persian": "مفصل",
+      "photo": "media/b2/2026-09-17/photos/joint.jpg",
+      "word_audio": "media/b2/2026-09-17/word-audio/joint.mp3"
+    },
+    {
+      "word": "fracture",
+      "pos": "noun",
+      "meaning": "a broken bone",
+      "example": "The X-ray showed a small fracture in his wrist.",
+      "pronunciation": "FRAK-chur",
+      "persian": "شکستگی",
+      "photo": "media/b2/2026-09-17/photos/fracture.jpg",
+      "word_audio": "media/b2/2026-09-17/word-audio/fracture.mp3"
+    },
+    {
+      "word": "swell",
+      "pos": "verb",
+      "meaning": "to become larger because of injury or infection",
+      "example": "Her ankle started to swell after she twisted it.",
+      "pronunciation": "SWEL",
+      "persian": "ورم کردن",
+      "photo": "media/b2/2026-09-17/photos/swell.jpg",
+      "word_audio": "media/b2/2026-09-17/word-audio/swell.mp3"
+    },
+    {
+      "word": "heal",
+      "pos": "verb",
+      "meaning": "to become healthy again after an injury or illness",
+      "example": "The cut will heal faster if you keep it clean.",
+      "pronunciation": "HEEL",
+      "persian": "بهبود یافتن",
+      "photo": "media/b2/2026-09-17/photos/heal.jpg",
+      "word_audio": "media/b2/2026-09-17/word-audio/heal.mp3"
+    },
+    {
+      "word": "migraine",
+      "pos": "noun",
+      "meaning": "a very strong headache, often with nausea",
+      "example": "She gets a migraine when she does not sleep enough.",
+      "pronunciation": "MY-grayn",
+      "persian": "میگرن",
+      "photo": "media/b2/2026-09-17/photos/migraine.jpg",
+      "word_audio": "media/b2/2026-09-17/word-audio/migraine.mp3"
+    },
+    {
+      "word": "insomnia",
+      "pos": "noun",
+      "meaning": "difficulty falling asleep or staying asleep",
+      "example": "Stress is a common cause of insomnia in adults.",
+      "pronunciation": "in-SOM-nee-uh",
+      "persian": "بی‌خوابی",
+      "photo": "media/b2/2026-09-17/photos/insomnia.jpg",
+      "word_audio": "media/b2/2026-09-17/word-audio/insomnia.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-09-17/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Body Signals",
+    "audio": "media/b2/2026-09-17/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-09-17/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Runner's Rough Week",
+    "audio": "media/b2/2026-09-17/shadowing.mp3",
+    "transcript": "media/b2/2026-09-17/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'fatigue' mean?",
+      "options": [
+        "a dark mark on the skin caused by an injury",
+        "extreme tiredness, usually after work or illness",
+        "difficulty falling asleep or staying asleep",
+        "a sudden painful tightening of a muscle"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'nausea' mean?",
+      "options": [
+        "the feeling that you might vomit",
+        "a broken bone",
+        "a very strong headache, often with nausea",
+        "the place where two bones meet, like the knee or elbow"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bruise' mean?",
+      "options": [
+        "to become larger because of injury or infection",
+        "a dark mark on the skin caused by an injury",
+        "extreme tiredness, usually after work or illness",
+        "to become healthy again after an injury or illness"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cramp' mean?",
+      "options": [
+        "difficulty falling asleep or staying asleep",
+        "the feeling that you might vomit",
+        "a sudden painful tightening of a muscle",
+        "a broken bone"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'joint' mean?",
+      "options": [
+        "the place where two bones meet, like the knee or elbow",
+        "a very strong headache, often with nausea",
+        "a dark mark on the skin caused by an injury",
+        "extreme tiredness, usually after work or illness"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'fracture' mean?",
+      "options": [
+        "to become healthy again after an injury or illness",
+        "a broken bone",
+        "the feeling that you might vomit",
+        "difficulty falling asleep or staying asleep"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'swell' mean?",
+      "options": [
+        "a sudden painful tightening of a muscle",
+        "the place where two bones meet, like the knee or elbow",
+        "to become larger because of injury or infection",
+        "a very strong headache, often with nausea"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'heal' mean?",
+      "options": [
+        "to become healthy again after an injury or illness",
+        "a dark mark on the skin caused by an injury",
+        "extreme tiredness, usually after work or illness",
+        "the feeling that you might vomit"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'migraine' mean?",
+      "options": [
+        "a broken bone",
+        "difficulty falling asleep or staying asleep",
+        "to become larger because of injury or infection",
+        "a very strong headache, often with nausea"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'insomnia' mean?",
+      "options": [
+        "the place where two bones meet, like the knee or elbow",
+        "a sudden painful tightening of a muscle",
+        "difficulty falling asleep or staying asleep",
+        "to become healthy again after an injury or illness"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "1A: Present simple and continuous, action and non-action verbs",
+    "explanation": "We use the **present simple** (I live, she works) for things that are always true or happen regularly. My neighbor gets a migraine every month when she works too hard.\n\nWith he, she and it, add -s or -es: **lives**, **studies**. Our joints need daily movement — that is always true.\n\nFor questions, use **ASI** (Auxiliary, Subject, Infinitive) or **QuASI** (Question word + ASI): Do you know David? What time does the film start?\n\nAdverbs of frequency like **usually** and **never** go before the main verb, but after **be**. She usually gets a bruise or two after soccer. He is never late for work.\n\nExpressions of frequency like **every day** or **twice a month** go at the end of the sentence. I get insomnia twice a month when work stress hits.\n\nWe use the **present continuous** (**be** + verb-**ing**) for actions in progress now. I am having lunch right now, so I cannot talk.\n\nIt also covers temporary situations and **future arrangements**. I am seeing the doctor tomorrow about my swollen ankle.\n\n**Non-action verbs** (need, love, know, believe, like, belong, seem) describe states, not actions. We do not use them in the continuous, even for 'now'.\n\nSo we say 'I **need** water for this cramp', not 'I am needing'. She **has** insomnia, not 'she is having insomnia'.\n\nSome verbs are both action and non-action. **I am having lunch** is an action; **I have a car** is possession, a state.\n\n**I think this music is great** is an opinion (non-action). **What are you thinking about?** is an action happening in your head right now.",
+    "examples": [
+      "She *works* in a hospital and *treats* patients with chronic fatigue. (3rd person -s)",
+      "My knee joint *aches* when it *rains*. (present simple, regular events)",
+      "I usually *get* a bruise or two after every soccer match. (adverb of frequency)",
+      "They *are icing* his ankle right now because it started to *swell*. (present continuous, action now)",
+      "He *is seeing* the doctor tomorrow about his fracture. (future arrangement)",
+      "I *need* water for this cramp. (non-action verb, never continuous)",
+      "She *has* insomnia, so she *takes* a warm bath every night. (non-action verb + habit)",
+      "What *are* you *looking* for in the medicine cabinet? (QuASI question, present continuous)",
+      "The cut *is healing* nicely this week. (temporary situation)",
+      "Nausea *often hits* me on long boat trips. (expression of frequency)"
+    ],
+    "practice": [
+      {
+        "q": "I ___ (have) lunch right now, can I call you back?",
+        "a": "am having — present continuous for an action in progress now."
+      },
+      {
+        "q": "She ___ (not believe) that rest alone will heal her ankle.",
+        "a": "doesn't believe — believe is a non-action verb, so present simple."
+      },
+      {
+        "q": "What time ___ the pharmacy ___ (open) on Sundays?",
+        "a": "does ... open — QuASI word order with present simple."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "I am needing a bandage for this bruise.",
+          "I need a bandage for this bruise.",
+          "I needs a bandage for this bruise.",
+          "I am need a bandage for this bruise."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Complete: She ___ a migraine twice a month.",
+        "options": [
+          "is getting",
+          "gets",
+          "get",
+          "is get"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence expresses a future arrangement?",
+        "options": [
+          "I meet the doctor tomorrow about my joint.",
+          "I am meeting the doctor tomorrow about my joint.",
+          "I meets the doctor tomorrow about my joint.",
+          "I will meets the doctor tomorrow about my joint."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Where does the adverb of frequency go? He ___ late for work.",
+        "options": [
+          "He never is late for work.",
+          "He is never late for work.",
+          "He is late never for work.",
+          "Never he is late for work."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Complete with the correct question form: ___ you ___ vitamins every day?",
+        "options": [
+          "Are / taking",
+          "Do / take",
+          "Does / takes",
+          "Is / take"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which verb CANNOT be used in the present continuous?",
+        "options": [
+          "run",
+          "heal",
+          "know",
+          "swell"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'I'm having lunch' vs 'I have a car' — what is the difference?",
+        "options": [
+          "Both are actions.",
+          "'having lunch' is an action; 'have a car' is possession (non-action).",
+          "Both are non-action verbs.",
+          "'have a car' is a future arrangement."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Complete: The ankle ___ right now. We should ice it.",
+        "options": [
+          "swells",
+          "is swelling",
+          "swell",
+          "are swelling"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence uses the present simple correctly for a regular habit?",
+        "options": [
+          "I am getting insomnia every night this week.",
+          "I get insomnia when I drink coffee late.",
+          "I gets insomnia when I drink coffee late.",
+          "I am get insomnia every night."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Complete: What ___ you ___ about? You look worried.",
+        "options": [
+          "do / think",
+          "are / thinking",
+          "does / thinks",
+          "is / think"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}
