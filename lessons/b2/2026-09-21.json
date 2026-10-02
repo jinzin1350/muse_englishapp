@@ -1,0 +1,356 @@
+{
+  "date": "2026-09-21",
+  "theme": "Education & Learning",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "tutor",
+      "pos": "noun/verb",
+      "meaning": "a private teacher who gives lessons to one student",
+      "example": "She hired a math tutor to help her pass the exam.",
+      "pronunciation": "TOO-tur",
+      "persian": "معلم خصوصی",
+      "photo": "media/b2/2026-09-21/photos/tutor.jpg",
+      "word_audio": "media/b2/2026-09-21/word-audio/tutor.mp3"
+    },
+    {
+      "word": "revise",
+      "pos": "verb",
+      "meaning": "to study something again before a test",
+      "example": "I need to revise all my notes before the history exam.",
+      "pronunciation": "ri-VIZE",
+      "persian": "مرور کردن (درس برای امتحان)",
+      "photo": "media/b2/2026-09-21/photos/revise.jpg",
+      "word_audio": "media/b2/2026-09-21/word-audio/revise.mp3"
+    },
+    {
+      "word": "comprehension",
+      "pos": "noun",
+      "meaning": "the ability to understand what you read or hear",
+      "example": "The teacher gave us a reading comprehension test.",
+      "pronunciation": "kom-pri-HEN-shun",
+      "persian": "درک مطلب",
+      "photo": "media/b2/2026-09-21/photos/comprehension.jpg",
+      "word_audio": "media/b2/2026-09-21/word-audio/comprehension.mp3"
+    },
+    {
+      "word": "annotate",
+      "pos": "verb",
+      "meaning": "to add short notes to a text while reading",
+      "example": "The students annotated the poem with their own comments.",
+      "pronunciation": "AN-uh-tayt",
+      "persian": "حاشیه‌نویسی کردن",
+      "photo": "media/b2/2026-09-21/photos/annotate.jpg",
+      "word_audio": "media/b2/2026-09-21/word-audio/annotate.mp3"
+    },
+    {
+      "word": "procrastinate",
+      "pos": "verb",
+      "meaning": "to keep delaying something you must do",
+      "example": "Don't procrastinate — start your essay today.",
+      "pronunciation": "proh-KRAS-tuh-nayt",
+      "persian": "به تعویق انداختن کارها",
+      "photo": "media/b2/2026-09-21/photos/procrastinate.jpg",
+      "word_audio": "media/b2/2026-09-21/word-audio/procrastinate.mp3"
+    },
+    {
+      "word": "retention",
+      "pos": "noun",
+      "meaning": "the ability to keep information in your memory",
+      "example": "Sleep improves the retention of new vocabulary.",
+      "pronunciation": "ri-TEN-shun",
+      "persian": "ماندگاری مطالب در حافظه",
+      "photo": "media/b2/2026-09-21/photos/retention.jpg",
+      "word_audio": "media/b2/2026-09-21/word-audio/retention.mp3"
+    },
+    {
+      "word": "brainstorm",
+      "pos": "verb",
+      "meaning": "to think of many ideas quickly, often in a group",
+      "example": "The class brainstormed ideas for the school project.",
+      "pronunciation": "BRAYN-storm",
+      "persian": "طوفان فکری",
+      "photo": "media/b2/2026-09-21/photos/brainstorm.jpg",
+      "word_audio": "media/b2/2026-09-21/word-audio/brainstorm.mp3"
+    },
+    {
+      "word": "summarize",
+      "pos": "verb",
+      "meaning": "to give the main points of something briefly",
+      "example": "Summarize the article in three sentences.",
+      "pronunciation": "SUH-muh-ryze",
+      "persian": "خلاصه کردن",
+      "photo": "media/b2/2026-09-21/photos/summarize.jpg",
+      "word_audio": "media/b2/2026-09-21/word-audio/summarize.mp3"
+    },
+    {
+      "word": "paraphrase",
+      "pos": "verb",
+      "meaning": "to say something again in your own words",
+      "example": "Paraphrase the paragraph instead of copying it.",
+      "pronunciation": "PA-ruh-frayz",
+      "persian": "بازنویسی با زبان خود",
+      "photo": "media/b2/2026-09-21/photos/paraphrase.jpg",
+      "word_audio": "media/b2/2026-09-21/word-audio/paraphrase.mp3"
+    },
+    {
+      "word": "assessment",
+      "pos": "noun",
+      "meaning": "a test that checks what someone knows or can do",
+      "example": "The final assessment covers everything we studied.",
+      "pronunciation": "uh-SES-munt",
+      "persian": "ارزیابی / ارزشیابی",
+      "photo": "media/b2/2026-09-21/photos/assessment.jpg",
+      "word_audio": "media/b2/2026-09-21/word-audio/assessment.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-09-21/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Learning Smarter",
+    "audio": "media/b2/2026-09-21/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-09-21/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Night Before the Exam",
+    "audio": "media/b2/2026-09-21/shadowing.mp3",
+    "transcript": "media/b2/2026-09-21/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'tutor' mean?",
+      "options": [
+        "the ability to understand what you read or hear",
+        "to think of many ideas quickly, often in a group",
+        "a private teacher who gives lessons to one student",
+        "to study something again before a test"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'revise' mean?",
+      "options": [
+        "to think of many ideas quickly, often in a group",
+        "to add short notes to a text while reading",
+        "the ability to understand what you read or hear",
+        "to study something again before a test"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'comprehension' mean?",
+      "options": [
+        "to say something again in your own words",
+        "a test that checks what someone knows or can do",
+        "the ability to understand what you read or hear",
+        "a private teacher who gives lessons to one student"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'annotate' mean?",
+      "options": [
+        "to keep delaying something you must do",
+        "a test that checks what someone knows or can do",
+        "to add short notes to a text while reading",
+        "to think of many ideas quickly, often in a group"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'procrastinate' mean?",
+      "options": [
+        "to keep delaying something you must do",
+        "to give the main points of something briefly",
+        "a private teacher who gives lessons to one student",
+        "the ability to keep information in your memory"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'retention' mean?",
+      "options": [
+        "to keep delaying something you must do",
+        "the ability to keep information in your memory",
+        "to study something again before a test",
+        "to think of many ideas quickly, often in a group"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'brainstorm' mean?",
+      "options": [
+        "to think of many ideas quickly, often in a group",
+        "a private teacher who gives lessons to one student",
+        "to study something again before a test",
+        "to give the main points of something briefly"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'summarize' mean?",
+      "options": [
+        "to say something again in your own words",
+        "to keep delaying something you must do",
+        "a private teacher who gives lessons to one student",
+        "to give the main points of something briefly"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'paraphrase' mean?",
+      "options": [
+        "a test that checks what someone knows or can do",
+        "to say something again in your own words",
+        "to think of many ideas quickly, often in a group",
+        "to keep delaying something you must do"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'assessment' mean?",
+      "options": [
+        "a private teacher who gives lessons to one student",
+        "a test that checks what someone knows or can do",
+        "the ability to keep information in your memory",
+        "to study something again before a test"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "3A: Choosing between comparatives and superlatives",
+    "explanation": "Use **comparative adjectives + than** to compare two people, places, or things. You can compare two tutors, or decide which textbook is better for you.\n\nShort adjectives take **-er**: tall → **taller**, big → **bigger**. Longer adjectives use **more**: modern → **more modern**, and one-syllable adjectives ending in -ed use **more** too: tired → **more tired**.\n\nThree adjectives are irregular: good → **better**, bad → **worse**, far → **further** (or **farther**). A good assessment score always feels better than a bad one.\n\nUse **(not) as + adjective + as** to say two things are equal. You can also say two things are **the same as** each other.\n\nComparative adverbs compare two actions: fast → **faster**, slowly → **more slowly**. Well → **better** and badly → **worse** are irregular.\n\nUse **the + superlative** to compare one thing with all of its group: **the tallest**, **the most expensive**, **the best**, **the worst**. Your best retention comes from the most active study methods.\n\nAfter a superlative, use **in** (not of): the best beach **in** the world. We often use a superlative with the present perfect + **ever**: the best book I have **ever** read.\n\nChoose the comparative for two things and the superlative for one thing in a whole group. Ask yourself: which habit helps your comprehension most?\n\nSuperlatives work for study tips too: the best way to revise, the most useful way to annotate, the fastest way to summarize.\n\nCompare your own habits honestly: do you brainstorm ideas before you write, or do you procrastinate? Can you paraphrase a chapter in your own words?",
+    "examples": [
+      "My new tutor is *more patient than* my old one. (comparative adjective + than)",
+      "Revising with flashcards is *easier than* rereading the chapter. (comparative adjective + than)",
+      "Her reading comprehension is *better than* mine. (irregular comparative)",
+      "I learn *more slowly than* my classmates, but I remember longer. (comparative adverb)",
+      "Don't annotate *as quickly as* you read — slow down. ((not) as + adverb + as)",
+      "He procrastinates *more than* anyone I know. (comparative adverb)",
+      "Testing yourself gives *better* retention *than* rereading. (irregular comparative + than)",
+      "Brainstorming alone is *less fun than* brainstorming with friends. (comparative)",
+      "She can summarize a chapter *faster than* the teacher can. (comparative adverb)",
+      "Try to paraphrase *as clearly as* the original author. ((not) as + adverb + as)",
+      "This was *the hardest* assessment *in* the whole course. (superlative + in, not of)",
+      "It is *the best* study method I have *ever* tried. (superlative + present perfect + ever)"
+    ],
+    "practice": [
+      {
+        "q": "Which is correct: 'This book is more interesting than that one' or 'This book is interestinger than that one'?",
+        "a": "The first one. Long adjectives use more, never -er."
+      },
+      {
+        "q": "Fill the gap: She is ___ student in the class. (good)",
+        "a": "the best — use the superlative with the for one person in a whole group."
+      },
+      {
+        "q": "Is 'the best beach of the world' correct?",
+        "a": "No — say 'the best beach in the world'. Use in, not of, after a superlative."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "My car is ___ than yours.",
+        "options": [
+          "oldest",
+          "the older",
+          "older",
+          "more old"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "This test is ___ difficult than the last one.",
+        "options": [
+          "more",
+          "much",
+          "difficulter",
+          "most"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Olive oil is ___ for you than butter.",
+        "options": [
+          "better",
+          "best",
+          "more good",
+          "gooder"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The new sofa isn't ___ comfortable as the old one.",
+        "options": [
+          "as",
+          "that",
+          "so",
+          "than"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "My father drives ___ than me.",
+        "options": [
+          "more fast",
+          "fastlier",
+          "fastest",
+          "faster"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He walks ___ slowly than I do.",
+        "options": [
+          "most",
+          "much",
+          "more",
+          "slowlier"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Kevin is ___ player in the team.",
+        "options": [
+          "more tall",
+          "the tallest",
+          "tallest",
+          "taller than all"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "It's the longest journey I've ___ been on.",
+        "options": [
+          "never",
+          "still",
+          "ever",
+          "yet"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What's the longest motorway ___ the UK?",
+        "options": [
+          "on",
+          "at",
+          "of",
+          "in"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Her dress is ___ as mine.",
+        "options": [
+          "same",
+          "as same",
+          "the same",
+          "the most same"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}
