@@ -2811,9 +2811,7 @@ function shadowingTabHTML(m) {
 function quizTabHTML(m) {
   const n = (m.quiz || []).length;
   if (!n) return '<div class="empty">No quiz for this lesson.</div>';
-  return '<div class="card quiz-intro"><div class="qi-head"><span class="qi-ico">🎯</span><h3>Word quiz</h3></div>' +
-    '<p class="muted">' + n + ' questions on today\'s words. One at a time, instant feedback.</p>' +
-    '<button class="btn btn-orange btn-block" data-action="quiz-start" data-kind="word">Start quiz</button></div>';
+  return '<button class="quiz-banner" data-action="quiz-start" data-kind="word" aria-label="Start the word quiz"></button>';
 }
 
 function grammarTabHTML(m) {

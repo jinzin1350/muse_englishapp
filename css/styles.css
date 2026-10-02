@@ -1388,3 +1388,10 @@ body{background:#FFF9F3;}
 .h-cta-play{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#fff;color:#F94F2B;
   align-items:center;justify-content:center;font-size:14px;padding-left:2px;}
 .h-cta-sub{text-align:center;color:#A79B83;font-size:13px;margin:10px 0 18px;}
+
+/* ============ Quiz start banner (2026-10-02) ============ */
+.quiz-banner{display:block;width:calc(100% + 2rem);margin:0 -1rem;border:0;padding:0;cursor:pointer;
+  background:#FFF7EA url('/media/home/quiz-banner.webp') center/cover no-repeat;aspect-ratio:3/2;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 48px,#000 calc(100% - 72px),transparent 100%);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 48px,#000 calc(100% - 72px),transparent 100%);}
+.quiz-banner:active{opacity:.96;}
