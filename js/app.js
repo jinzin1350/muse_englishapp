@@ -2228,30 +2228,52 @@ async function checkLevel() {
 function todayCardHTML(m) {
   const p = getDayProgress(m.date);
   const done = dayDoneCount(m.date);
+  const pct = Math.round((done / STEPS.length) * 100);
   const ns = nextStep(m.date);
+  const isToday = m.date === todayStr();
 
-  let cta, tabFor;
+  const stepsHTML = STEPS.map(function (s, i) {
+    const isDone = !!p[s];
+    const isNext = !isDone && s === ns;
+    const cls = isDone ? 'done' : (isNext ? 'next' : 'todo');
+    const mark = isDone ? '✓' : String(i + 1);
+    return '<li class="' + cls + '">' +
+      '<button class="today-step-btn" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + s + '" aria-label="Go to ' + STEP_LABELS[s] + '">' +
+      '<span class="st-ck" aria-hidden="true">' + mark + '</span>' +
+      '<span class="st-name">' + STEP_LABELS[s] + '</span>' +
+      (isNext ? '<span class="st-pill">CONTINUE</span>' : '') +
+      '<span class="st-go" aria-hidden="true">›</span>' +
+      '</button></li>';
+  }).join('');
+
+  let cta, ctaSub;
   if (ns) {
-    tabFor = ns;
-    cta = done > 0 ? 'Continue with ' + STEP_LABELS[ns] : 'Start today\u2019s lesson';
+    const started = done > 0;
+    cta = started ? 'Continue with ' + STEP_LABELS[ns] : 'Start today’s lesson';
+    ctaSub = started ? 'Pick up where you left off.' : 'About 20 minutes, step by step.';
   } else {
-    tabFor = 'words';
-    cta = 'Lesson complete \uD83C\uDF89';
+    cta = 'Lesson complete 🎉';
+    ctaSub = 'Nice work — come back tomorrow for a new lesson.';
   }
-  const stepIco = ns === 'grammar' ? '\uD83D\uDCDA' : (ns === 'quiz' ? '\uD83C\uDFAF' :
-    (ns === 'podcast' ? '\uD83C\uDFA7' : (ns === 'shadowing' ? '\uD83C\uDFA4' : '\uD83D\uDCDA')));
+  const tabFor = ns || 'words';
 
   return '' +
-  '<section class="hero-card" aria-labelledby="today-h">' +
-    '<div class="hero-text">' +
-      '<span class="hero-kicker2">Continue Learning</span>' +
-      '<h2 class="hero-title2" id="today-h">' + esc(m.theme || 'Daily lesson') + '</h2>' +
-      '<div class="hero-meta">' + stepIco + ' ' + esc(levelLabel(normalizeLevel(m.level))) + ' \u00B7 ' + esc(fmtDateShort(m.date)) + '</div>' +
-      '<button class="hero-cta" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + tabFor + '">' +
-        '<span class="hero-play">\u25B6</span><span>' + esc(cta) + '</span><span class="hero-go">\u2192</span>' +
-      '</button>' +
+  '<section class="card today-card" aria-labelledby="today-h">' +
+    '<span class="hero-kicker" style="background:rgba(200,75,49,.1);color:var(--tomato-dark)">📅 Today’s lesson</span>' +
+    '<div class="today-top">' +
+      '<div>' +
+        '<div class="hero-date">' + esc(m.date) + (isToday ? ' · <b>Today</b>' : ' · Latest lesson') + '</div>' +
+        '<h2 class="today-theme" id="today-h">' + esc(m.theme || 'Daily lesson') + '</h2>' +
+        '<span class="badge-level">' + esc(levelLabel(normalizeLevel(m.level))) + '</span>' +
+      '</div>' +
     '</div>' +
-    '<img class="hero-art" src="/media/hero-mascot.webp" alt="Mascot studying" loading="lazy">' +
+    '<ul class="today-steps" aria-label="Lesson steps">' + stepsHTML + '</ul>' +
+    '<div class="today-progress">' +
+      '<div class="tp-label"><span>Daily progress</span><span>' + done + ' of ' + STEPS.length + ' steps</span></div>' +
+      '<div class="progress" role="progressbar" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100" aria-label="Daily progress"><div style="width:' + pct + '%"></div></div>' +
+    '</div>' +
+    '<button class="btn btn-block" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + tabFor + '">' + esc(cta) + '</button>' +
+    '<p class="muted" style="margin:0.5rem 0 0;text-align:center">' + esc(ctaSub) + '</p>' +
   '</section>';
 }
 
@@ -2284,9 +2306,7 @@ function prevLessonsHTML(lessons) {
           ? '<img src="' + esc(cover) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
           : '<div class="prev-ph" aria-hidden="true">📚</div>') +
         '<div class="pc-body"><div class="pc-date">' + esc(fmtDateShort(m.date)) + '</div>' +
-        '<div class="pc-theme">' + esc(m.theme || 'Lesson') + '</div>' +
-        '<div class="pc-meta">' + (m.words ? m.words.length : 0) + ' words \u00B7 ' + esc(levelLabel(normalizeLevel(m.level))) + '</div>' +
-        '<span class="pc-go">\u203A</span></div></button>';
+        '<div class="pc-theme">' + esc(m.theme || 'Lesson') + '</div></div></button>';
     }).join('') + '</div>';
   }
   return html + '</section>';
@@ -2341,16 +2361,26 @@ function paintHome(v, mistakes, attempts) {
 
   let html = '';
 
-  // 1 — Today's lesson hero (the primary action)
+  // 0 — Challenge promo banner (loud game style, links to the arena)
+  html += '<a class="ch-promo" href="#/challenge">' +
+    '<span class="chp-shine"></span>' +
+    '<span class="chp-live"><span class="chp-dot"></span>LIVE</span>' +
+    '<span class="chp-row">' +
+      '<span class="chp-trophy">' + ICO.trophy + '</span>' +
+      '<span class="chp-txt"><b>1,500</b><span>learners battling for the top</span></span>' +
+    '</span>' +
+    '<span class="chp-cta">Join the battle <span class="chp-go">›</span></span></a>';
+
+  // 0b — Streak card (flame mascot, week strip, freezes) — painted with local
+  // data first, then refreshed with cloud state by refreshHomeStreak().
+  html += '<div id="home-streak-wrap">' + streakCardHTML(getStreakLocal()) + '</div>';
+
+  // 1 — Today's lesson (the primary action)
   if (!today) {
     html += '<div class="empty">No lessons published yet — check back tomorrow.</div>';
   } else {
     html += todayCardHTML(today);
   }
-
-  // 2 — Battle + Daily Streak duo
-  html += '<div class="home-duo">' + battleCardHTML() +
-          '<div id="home-streak-wrap">' + streakCardHTML(getStreakLocal()) + '</div></div>';
 
   // 1b — Previous lessons (days before today) → archive page
   html += prevLessonsHTML(lessons);
@@ -2367,8 +2397,8 @@ function paintHome(v, mistakes, attempts) {
       '<div><b>to review</b><div class="stat-example">e.g. “' + esc(mistakes[0].question.slice(0, 90)) + '”</div></div>' +
       '</div>' +
       (todayMistakes.length
-        ? '<button class="btn btn-orange btn-block" data-action="review-today" data-date="' + esc(today.date) + '">▶ Review today’s mistakes</button>'
-        : '<button class="btn btn-orange btn-block" data-action="practice-again">Practice mistakes</button>') +
+        ? '<button class="btn btn-green btn-block" data-action="review-today" data-date="' + esc(today.date) + '">Review today’s mistakes</button>'
+        : '<button class="btn btn-green btn-block" data-action="practice-again">Practice mistakes</button>') +
       '</div>';
   }
 
@@ -3012,42 +3042,37 @@ function prizeLabel(points) {
   if (points === 30) return '⭐ Weekly Star';
   return '🧊 Streak Freeze';
 }
-/* ---------------- home battle + streak cards ---------------- */
-function battleCardHTML() {
-  return '<a class="battle-card" href="#/challenge">' +
-    '<div class="duo-top"><span class="duo-ico duo-ico-trophy">' + ICO.trophy + '</span><b>Battle</b><span class="duo-go">\u203A</span></div>' +
-    '<img class="bc-art" src="/media/battle-trophy.webp" alt="Golden trophy" loading="lazy">' +
-    '<div class="bc-num">1,500</div>' +
-    '<div class="bc-sub">learners battling for the top!</div>' +
-    '<span class="duo-btn">\u2694\uFE0F Join the battle <span>\u203A</span></span></a>';
-}
+/* ---------------- home streak card ---------------- */
 function homeWeekStripHTML(dateSet) {
   const now = new Date();
-  const dow = (now.getDay() + 6) % 7; /* Mon=0 */
+  const dow = now.getDay();
   const start = new Date(now); start.setDate(now.getDate() - dow);
-  const names = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+  const names = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
   let out = '';
   for (let i = 0; i < 7; i++) {
     const d = new Date(start); d.setDate(start.getDate() + i);
     const done = !!(dateSet && dateSet[fmtDate(d)]);
-    out += '<span class="sw-day' + (i === dow ? ' today' : '') + '"><i class="sw-n">' + names[i] +
-           '</i><i class="sw-d' + (done ? ' on' : '') + '"></i></span>';
+    out += '<span class="hw-day' + (i === dow ? ' today' : '') + '">' +
+           '<i class="hw-name">' + names[i] + '</i>' +
+           '<i class="hw-dot' + (done ? ' on' : '') + '"></i></span>';
   }
-  return '<div class="sw-strip">' + out + '</div>';
+  return '<div class="hw-strip">' + out + '</div>';
 }
 function streakCardHTML(st, dates) {
   st = st || {};
   const n = st.current_streak || 0;
   const fr = (st.freezes != null ? st.freezes : st.streak_freezes) || 0;
-  return '<section class="streak-card2" aria-label="Your streak">' +
-    '<div class="duo-top"><span class="duo-ico duo-ico-flame"><img src="/media/celebration/flame.webp" alt=""></span><b>Daily Streak</b><span class="duo-go">\u203A</span></div>' +
-    '<div class="sc-num"><b>' + n + '</b> day' + (n === 1 ? '' : 's') + ' in a row!</div>' +
-    homeWeekStripHTML(dates) +
-    '<div class="sc-freeze"><span class="sc-snow">\u2744\uFE0F</span><b>' + fr + '</b>&nbsp;freeze' + (fr === 1 ? '' : 's') +
-      ' ready<span class="duo-go">\u203A</span></div>' +
-  '</section>';
+  const headline = n > 0
+    ? '<div class="streak-topline"><span class="streak-num">' + n + '</span>' +
+      '<span class="streak-unit">day streak!</span></div>'
+    : '<div class="streak-topline"><span class="streak-start">Start your streak today! \uD83D\uDD25</span></div>';
+  return '<section class="card streak-card" aria-label="Your streak">' +
+    '<img class="streak-flame" src="/media/celebration/flame.webp" alt="Streak flame">' +
+    '<div class="streak-main">' + headline +
+      homeWeekStripHTML(dates) +
+      '<div class="streak-freezes">\uD83E\uDDCA ' + fr + ' freeze' + (fr === 1 ? '' : 's') + ' ready</div>' +
+    '</div></section>';
 }
-/* (home streak card functions live above, next to battleCardHTML) */
 async function refreshHomeStreak() {
   try {
     const res = await Promise.all([getStreakState(), getWordQuizDates()]);
