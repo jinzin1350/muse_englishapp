@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-26",
+  "theme": "Work & Career",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "tenure",
+      "pos": "noun",
+      "meaning": "the length of time a person holds a particular job or position",
+      "example": "She has held tenure at the university for over fifteen years.",
+      "pronunciation": "TEN-yur",
+      "persian": "مدت تصدی شغل",
+      "photo": "media/c1/2026-09-26/photos/tenure.jpg",
+      "word_audio": "media/c1/2026-09-26/word-audio/tenure.mp3"
+    },
+    {
+      "word": "nepotism",
+      "pos": "noun",
+      "meaning": "favoring relatives and friends for jobs instead of the most qualified people",
+      "example": "The company introduced strict rules to root out nepotism in hiring.",
+      "pronunciation": "NEP-uh-tiz-um",
+      "persian": "خویشاوندگرایی در استخدام",
+      "photo": "media/c1/2026-09-26/photos/nepotism.jpg",
+      "word_audio": "media/c1/2026-09-26/word-audio/nepotism.mp3"
+    },
+    {
+      "word": "micromanage",
+      "pos": "verb",
+      "meaning": "to control every small detail of how employees do their work",
+      "example": "Great leaders trust their teams instead of trying to micromanage them.",
+      "pronunciation": "MY-kroh-MAN-ij",
+      "persian": "کنترل بیش‌ازحد و جزئی کار کارمندان",
+      "photo": "media/c1/2026-09-26/photos/micromanage.jpg",
+      "word_audio": "media/c1/2026-09-26/word-audio/micromanage.mp3"
+    },
+    {
+      "word": "meritocracy",
+      "pos": "noun",
+      "meaning": "a system where people advance based on ability and effort, not connections",
+      "example": "She thrived in a true meritocracy, where talent mattered more than connections.",
+      "pronunciation": "mer-ih-TOK-ruh-see",
+      "persian": "شایسته‌سالاری",
+      "photo": "media/c1/2026-09-26/photos/meritocracy.jpg",
+      "word_audio": "media/c1/2026-09-26/word-audio/meritocracy.mp3"
+    },
+    {
+      "word": "glass ceiling",
+      "pos": "noun phrase",
+      "meaning": "an invisible barrier that stops talented people, especially women, from reaching top positions",
+      "example": "Despite her achievements, she kept hitting the glass ceiling at her firm.",
+      "pronunciation": "GLASS SEEL-ing",
+      "persian": "سقف شیشه‌ای",
+      "photo": "media/c1/2026-09-26/photos/glass-ceiling.jpg",
+      "word_audio": "media/c1/2026-09-26/word-audio/glass-ceiling.mp3"
+    },
+    {
+      "word": "burnout",
+      "pos": "noun",
+      "meaning": "complete physical and mental exhaustion caused by overwork",
+      "example": "Three months of eighty-hour weeks left him with severe burnout.",
+      "pronunciation": "BURN-out",
+      "persian": "فرسودگی شغلی",
+      "photo": "media/c1/2026-09-26/photos/burnout.jpg",
+      "word_audio": "media/c1/2026-09-26/word-audio/burnout.mp3"
+    },
+    {
+      "word": "onboarding",
+      "pos": "noun",
+      "meaning": "the process of welcoming and training a new employee",
+      "example": "Their onboarding program helps new engineers feel at home in two weeks.",
+      "pronunciation": "ON-bor-ding",
+      "persian": "فرآیند جذب و آموزش نیروی جدید",
+      "photo": "media/c1/2026-09-26/photos/onboarding.jpg",
+      "word_audio": "media/c1/2026-09-26/word-audio/onboarding.mp3"
+    },
+    {
+      "word": "headhunt",
+      "pos": "verb",
+      "meaning": "to approach a skilled worker and recruit them for a job",
+      "example": "A rival startup tried to headhunt our lead designer last spring.",
+      "pronunciation": "HED-hunt",
+      "persian": "جذب مستقیم و فعال نیروی متخصص",
+      "photo": "media/c1/2026-09-26/photos/headhunt.jpg",
+      "word_audio": "media/c1/2026-09-26/word-audio/headhunt.mp3"
+    },
+    {
+      "word": "remuneration",
+      "pos": "noun",
+      "meaning": "a formal word for the pay and benefits received for work",
+      "example": "The contract offered a generous remuneration package.",
+      "pronunciation": "rih-myoo-nuh-RAY-shun",
+      "persian": "حقوق و دستمزد (رسمی)",
+      "photo": "media/c1/2026-09-26/photos/remuneration.jpg",
+      "word_audio": "media/c1/2026-09-26/word-audio/remuneration.mp3"
+    },
+    {
+      "word": "whistleblower",
+      "pos": "noun",
+      "meaning": "a person who reports illegal or unethical behavior inside an organization",
+      "example": "A brave whistleblower exposed the fraud before it grew worse.",
+      "pronunciation": "WIS-ul-bloh-er",
+      "persian": "افشاگر تخلفات سازمانی",
+      "photo": "media/c1/2026-09-26/photos/whistleblower.jpg",
+      "word_audio": "media/c1/2026-09-26/word-audio/whistleblower.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-09-26/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Work and Career",
+    "audio": "media/c1/2026-09-26/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-09-26/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: A Fresh Start at Work",
+    "audio": "media/c1/2026-09-26/shadowing.mp3",
+    "transcript": "media/c1/2026-09-26/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'tenure' mean?",
+      "options": [
+        "complete physical and mental exhaustion caused by overwork",
+        "favoring relatives and friends for jobs instead of the most qualified people",
+        "the process of welcoming and training a new employee",
+        "the length of time a person holds a particular job or position"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'nepotism' mean?",
+      "options": [
+        "to approach a skilled worker and recruit them for a job",
+        "to control every small detail of how employees do their work",
+        "favoring relatives and friends for jobs instead of the most qualified people",
+        "a system where people advance based on ability and effort, not connections"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'micromanage' mean?",
+      "options": [
+        "to approach a skilled worker and recruit them for a job",
+        "a formal word for the pay and benefits received for work",
+        "the process of welcoming and training a new employee",
+        "to control every small detail of how employees do their work"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'meritocracy' mean?",
+      "options": [
+        "favoring relatives and friends for jobs instead of the most qualified people",
+        "an invisible barrier that stops talented people, especially women, from reaching top positions",
+        "a system where people advance based on ability and effort, not connections",
+        "the length of time a person holds a particular job or position"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'glass ceiling' mean?",
+      "options": [
+        "complete physical and mental exhaustion caused by overwork",
+        "favoring relatives and friends for jobs instead of the most qualified people",
+        "a system where people advance based on ability and effort, not connections",
+        "an invisible barrier that stops talented people, especially women, from reaching top positions"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'burnout' mean?",
+      "options": [
+        "the length of time a person holds a particular job or position",
+        "a formal word for the pay and benefits received for work",
+        "the process of welcoming and training a new employee",
+        "complete physical and mental exhaustion caused by overwork"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'onboarding' mean?",
+      "options": [
+        "complete physical and mental exhaustion caused by overwork",
+        "to approach a skilled worker and recruit them for a job",
+        "the process of welcoming and training a new employee",
+        "to control every small detail of how employees do their work"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'headhunt' mean?",
+      "options": [
+        "to control every small detail of how employees do their work",
+        "a person who reports illegal or unethical behavior inside an organization",
+        "to approach a skilled worker and recruit them for a job",
+        "the process of welcoming and training a new employee"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'remuneration' mean?",
+      "options": [
+        "a formal word for the pay and benefits received for work",
+        "complete physical and mental exhaustion caused by overwork",
+        "the length of time a person holds a particular job or position",
+        "the process of welcoming and training a new employee"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'whistleblower' mean?",
+      "options": [
+        "favoring relatives and friends for jobs instead of the most qualified people",
+        "a system where people advance based on ability and effort, not connections",
+        "a person who reports illegal or unethical behavior inside an organization",
+        "to approach a skilled worker and recruit them for a job"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "2B: Present perfect + for / since, present perfect continuous",
+    "explanation": "We use **have/has + past participle** with **for** (a period of time) or **since** (a point in time) to talk about something that started in the past and is still true now. This is the classic way to describe job tenure or the remuneration you have earned over the years.\n\nWe ask about unfinished periods with **How long + have/has ...?**. Never use the present simple here — \"How long do you try\" is wrong when the effort to break the glass ceiling is still going on.\n\nWe use the **present perfect continuous** (**have/has been + verb-ing**) for actions that started in the past and are still happening, or that have just finished with visible results. A manager who has been onboarding new staff all week, or micromanaging every detail until burnout, fits this form perfectly.\n\nWith non-action verbs like know, believe, or have, use the present perfect simple — never the continuous. You can say you have known about nepotism for years, but not \"have been knowing.\"\n\n**Live** and **work** are flexible — both forms work with the same meaning. You can say you have worked in a meritocracy since 2015, or that you have been working there, just as naturally.\n\nThe simple form stresses the result or how many times something happened; the continuous stresses the ongoing activity. A whistleblower who has exposed fraud twice this year is a result; one who has been preparing a report all week is an activity. The same split applies to headhunt: five engineers headhunted this year, or months spent headhunting.",
+    "examples": [
+      "She *has held tenure* at the university since 2018. (for/since + still true now)",
+      "How long *have you been fighting* the glass ceiling in this industry? (How long + unfinished period)",
+      "They *have been onboarding* new engineers since March. (continuous for an ongoing action)",
+      "He *has been micromanaging* his team for months, and they are close to burnout. (continuous stresses the activity)",
+      "They *have known* about the nepotism for years. (non-action verb + present perfect simple)",
+      "She *has worked* in a true meritocracy since 2015. (work in either form)",
+      "She *has been working* in a true meritocracy since 2015. (same meaning)",
+      "The agency *has headhunted* five engineers this year. (simple stresses the result)",
+      "They *have been headhunting* for months without success. (continuous stresses the activity)",
+      "A whistleblower *has exposed* the fraud twice, and her remuneration was cut. (simple + result)"
+    ],
+    "practice": [
+      {
+        "q": "Why is 'They have known about the nepotism for years' correct, but 'They have been knowing about it for years' wrong?",
+        "a": "'Know' is a non-action verb, so it cannot take the continuous form. Non-action verbs always use the present perfect simple here."
+      },
+      {
+        "q": "Complete the sentence: 'She ___ (work) here since 2019 — she loves the fair remuneration.'",
+        "a": "'has worked' or 'has been working' — with live and work, both forms are correct with the same meaning."
+      },
+      {
+        "q": "Which sentence stresses the activity itself: 'She has written three reports' or 'She has been writing reports all morning'?",
+        "a": "'She has been writing reports all morning' — the continuous form stresses the ongoing activity, while the simple form stresses the result."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She ___ at this company since 2018, and her tenure is secure.",
+        "options": [
+          "works",
+          "is working",
+          "worked",
+          "has worked"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "How long ___ your manager before you resigned?",
+        "options": [
+          "you had worked for",
+          "do you work for",
+          "did you work for",
+          "had you been working for"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "They have known each other ___ ten years.",
+        "options": [
+          "during",
+          "since",
+          "for",
+          "from"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He ___ in finance since last April.",
+        "options": [
+          "works",
+          "work",
+          "is working",
+          "has been working"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Your eyes are red. ___?",
+        "options": [
+          "Have you been crying",
+          "Do you cry",
+          "Did you cried",
+          "Are you cry"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ in this city for five years.",
+        "options": [
+          "lived",
+          "have lived",
+          "live",
+          "am living"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ reports all morning — she must be exhausted.",
+        "options": [
+          "is writing",
+          "write",
+          "writes",
+          "has been writing"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We ___ the new manager since Monday, and we trust him.",
+        "options": [
+          "know",
+          "have been knowing",
+          "have known",
+          "are knowing"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ in London since 2020, in a true meritocracy.",
+        "options": [
+          "I lived",
+          "I am living",
+          "I live",
+          "I've been living"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The team ___ the whistleblower's documents since Tuesday.",
+        "options": [
+          "has been preparing",
+          "is preparing",
+          "prepares",
+          "prepare"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

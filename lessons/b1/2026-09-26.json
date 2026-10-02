@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-26",
+  "theme": "Health & Body",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "headache",
+      "pos": "noun",
+      "meaning": "a pain in the head",
+      "example": "I have a headache, so I am going to lie down.",
+      "pronunciation": "HED-ayk",
+      "persian": "سردرد",
+      "photo": "media/b1/2026-09-26/photos/headache.jpg",
+      "word_audio": "media/b1/2026-09-26/word-audio/headache.mp3"
+    },
+    {
+      "word": "fever",
+      "pos": "noun",
+      "meaning": "a high body temperature when you are ill",
+      "example": "The doctor said his fever was not serious.",
+      "pronunciation": "FEE-vur",
+      "persian": "تب",
+      "photo": "media/b1/2026-09-26/photos/fever.jpg",
+      "word_audio": "media/b1/2026-09-26/word-audio/fever.mp3"
+    },
+    {
+      "word": "sore throat",
+      "pos": "noun",
+      "meaning": "pain in the throat, especially when you swallow",
+      "example": "Warm tea helps my sore throat.",
+      "pronunciation": "SOR THROT",
+      "persian": "گلو درد",
+      "photo": "media/b1/2026-09-26/photos/sore-throat.jpg",
+      "word_audio": "media/b1/2026-09-26/word-audio/sore-throat.mp3"
+    },
+    {
+      "word": "medicine",
+      "pos": "noun",
+      "meaning": "a substance you take to get better when you are ill",
+      "example": "Take this medicine twice a day.",
+      "pronunciation": "MED-uh-sin",
+      "persian": "دارو",
+      "photo": "media/b1/2026-09-26/photos/medicine.jpg",
+      "word_audio": "media/b1/2026-09-26/word-audio/medicine.mp3"
+    },
+    {
+      "word": "pharmacy",
+      "pos": "noun",
+      "meaning": "a shop where you buy medicine",
+      "example": "There is a pharmacy next to the hospital.",
+      "pronunciation": "FAR-muh-see",
+      "persian": "داروخانه",
+      "photo": "media/b1/2026-09-26/photos/pharmacy.jpg",
+      "word_audio": "media/b1/2026-09-26/word-audio/pharmacy.mp3"
+    },
+    {
+      "word": "appointment",
+      "pos": "noun",
+      "meaning": "a fixed time to see a doctor",
+      "example": "I made an appointment with the doctor for Monday.",
+      "pronunciation": "uh-POYNT-munt",
+      "persian": "نوبت (پزشکی)",
+      "photo": "media/b1/2026-09-26/photos/appointment.jpg",
+      "word_audio": "media/b1/2026-09-26/word-audio/appointment.mp3"
+    },
+    {
+      "word": "injury",
+      "pos": "noun",
+      "meaning": "damage to a part of your body",
+      "example": "He got an injury while playing football.",
+      "pronunciation": "IN-juh-ree",
+      "persian": "آسیب‌دیدگی",
+      "photo": "media/b1/2026-09-26/photos/injury.jpg",
+      "word_audio": "media/b1/2026-09-26/word-audio/injury.mp3"
+    },
+    {
+      "word": "bandage",
+      "pos": "noun",
+      "meaning": "a strip of cloth you put on a wound",
+      "example": "She put a bandage on her finger.",
+      "pronunciation": "BAN-dij",
+      "persian": "باند (پانسمان)",
+      "photo": "media/b1/2026-09-26/photos/bandage.jpg",
+      "word_audio": "media/b1/2026-09-26/word-audio/bandage.mp3"
+    },
+    {
+      "word": "ache",
+      "pos": "noun",
+      "meaning": "a continuous, dull pain in part of your body",
+      "example": "I have an ache in my back.",
+      "pronunciation": "AYK",
+      "persian": "درد مداوم و خفیف",
+      "photo": "media/b1/2026-09-26/photos/ache.jpg",
+      "word_audio": "media/b1/2026-09-26/word-audio/ache.mp3"
+    },
+    {
+      "word": "diet",
+      "pos": "noun",
+      "meaning": "the food you eat every day",
+      "example": "A healthy diet includes a lot of vegetables.",
+      "pronunciation": "DY-ut",
+      "persian": "رژیم غذایی",
+      "photo": "media/b1/2026-09-26/photos/diet.jpg",
+      "word_audio": "media/b1/2026-09-26/word-audio/diet.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-09-26/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Health & Body",
+    "audio": "media/b1/2026-09-26/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-09-26/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: A Healthy Week",
+    "audio": "media/b1/2026-09-26/shadowing.mp3",
+    "transcript": "media/b1/2026-09-26/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'headache' mean?",
+      "options": [
+        "a continuous, dull pain in part of your body",
+        "a pain in the head",
+        "a high body temperature when you are ill",
+        "pain in the throat, especially when you swallow"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'fever' mean?",
+      "options": [
+        "a pain in the head",
+        "pain in the throat, especially when you swallow",
+        "a high body temperature when you are ill",
+        "a substance you take to get better when you are ill"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'sore throat' mean?",
+      "options": [
+        "damage to a part of your body",
+        "a substance you take to get better when you are ill",
+        "a strip of cloth you put on a wound",
+        "pain in the throat, especially when you swallow"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'medicine' mean?",
+      "options": [
+        "the food you eat every day",
+        "a substance you take to get better when you are ill",
+        "a shop where you buy medicine",
+        "a fixed time to see a doctor"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'pharmacy' mean?",
+      "options": [
+        "a shop where you buy medicine",
+        "a fixed time to see a doctor",
+        "a substance you take to get better when you are ill",
+        "a high body temperature when you are ill"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'appointment' mean?",
+      "options": [
+        "a fixed time to see a doctor",
+        "damage to a part of your body",
+        "a substance you take to get better when you are ill",
+        "a pain in the head"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'injury' mean?",
+      "options": [
+        "damage to a part of your body",
+        "a pain in the head",
+        "a high body temperature when you are ill",
+        "a continuous, dull pain in part of your body"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bandage' mean?",
+      "options": [
+        "pain in the throat, especially when you swallow",
+        "a fixed time to see a doctor",
+        "damage to a part of your body",
+        "a strip of cloth you put on a wound"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'ache' mean?",
+      "options": [
+        "a high body temperature when you are ill",
+        "a continuous, dull pain in part of your body",
+        "pain in the throat, especially when you swallow",
+        "damage to a part of your body"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'diet' mean?",
+      "options": [
+        "a high body temperature when you are ill",
+        "damage to a part of your body",
+        "a fixed time to see a doctor",
+        "the food you eat every day"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "2B: Present perfect + for / since, present perfect continuous",
+    "explanation": "We use the **present perfect + for / since** to talk about situations that started in the past and are **still true now** — like a long ache, a headache that will not go away, or a diet you started and still follow.\n\nUse **for** with a **period of time** (for two days, for a week, for a year). Use **since** with a **starting point** (since Monday, since January, since 2020).\n\nTo ask about an unfinished period, use **How long + present perfect**. It fits questions about a headache that started days ago, or work at the pharmacy that began years ago.\n\nFor **actions** that started in the past and are still happening, use the **present perfect continuous**: **have / has been + verb-ing**. It often describes something you have been doing recently, like taking medicine every day.\n\nWe also use the present perfect continuous for actions that **just finished with a visible result** — for example, feeling tired or looking worried after an injury or a long night.\n\nWith **non-action verbs** like know, like, or have, use the **present perfect simple**, NOT the continuous form. Non-action verbs never take verb-ing in this structure.\n\nNever use the **present continuous with for / since**. An appointment you booked this morning still needs the **present perfect continuous** when you mention it in the evening.",
+    "examples": [
+      "I *have had* a headache *for three days*. (started in the past, still true)",
+      "She *has had* a sore throat *since Monday*. (since + a starting point)",
+      "He *has been* on a healthy diet *for two months*. (for + a period of time)",
+      "They *have worked* at the pharmacy *since 2020*. (since + a year)",
+      "*How long have* you *had* this fever? (asking about an unfinished period)",
+      "I *have been taking* this medicine *for a week*. (continuous action, still happening)",
+      "She *has been waiting* for her appointment *since nine o'clock*. (continuous + since)",
+      "He is tired because he *has been worrying* about his injury all night. (just finished, visible result)",
+      "I *have known* my doctor *for ten years*. (non-action verb → simple form)",
+      "We *have had* this bandage on the injury *since yesterday*. (still true now)"
+    ],
+    "practice": [
+      {
+        "q": "Make a sentence with the present perfect + for about your diet.",
+        "a": "I have been on a healthy diet for two months."
+      },
+      {
+        "q": "Your friend has had a headache since morning. Ask about the unfinished period.",
+        "a": "How long have you had this headache?"
+      },
+      {
+        "q": "Correct the mistake: I am waiting for my appointment since nine.",
+        "a": "I have been waiting for my appointment since nine."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She ___ had a fever since Monday.",
+        "options": [
+          "is",
+          "have",
+          "has",
+          "did"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They have worked at the pharmacy ___ 2020.",
+        "options": [
+          "at",
+          "since",
+          "for",
+          "from"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I have been taking this medicine ___ a week.",
+        "options": [
+          "from",
+          "since",
+          "at",
+          "for"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "How long ___ you had this headache?",
+        "options": [
+          "has",
+          "are",
+          "do",
+          "have"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He ___ been waiting for his appointment since nine.",
+        "options": [
+          "is",
+          "was",
+          "has",
+          "have"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I have been knowing my doctor for ten years.",
+          "I know my doctor since ten years.",
+          "I have known my doctor for ten years.",
+          "I am knowing my doctor for ten years."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Her eyes are red because she ___ crying.",
+        "options": [
+          "is",
+          "was",
+          "have been",
+          "has been"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We have ___ on a healthy diet for two months.",
+        "options": [
+          "been",
+          "being",
+          "is",
+          "are"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ had this bandage on since yesterday.",
+        "options": [
+          "have",
+          "am",
+          "has",
+          "do"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I have worried about my injury for all night.",
+          "I have been worrying about my injury all night.",
+          "I am worrying about my injury since all night.",
+          "I worry about my injury since all night."
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

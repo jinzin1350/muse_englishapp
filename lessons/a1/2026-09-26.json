@@ -1,0 +1,353 @@
+{
+  "date": "2026-09-26",
+  "theme": "Sports & Fitness",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "run",
+      "pos": "verb",
+      "meaning": "to move fast on your feet",
+      "example": "I run in the park every morning.",
+      "pronunciation": "RUN",
+      "persian": "دویدن",
+      "photo": "media/a1/2026-09-26/photos/run.jpg",
+      "word_audio": "media/a1/2026-09-26/word-audio/run.mp3"
+    },
+    {
+      "word": "ball",
+      "pos": "noun",
+      "meaning": "a round toy you kick or throw in games",
+      "example": "The ball is round.",
+      "pronunciation": "BAL",
+      "persian": "توپ",
+      "photo": "media/a1/2026-09-26/photos/ball.jpg",
+      "word_audio": "media/a1/2026-09-26/word-audio/ball.mp3"
+    },
+    {
+      "word": "team",
+      "pos": "noun",
+      "meaning": "a group of people who play together",
+      "example": "Our team is very good.",
+      "pronunciation": "TEEM",
+      "persian": "تیم",
+      "photo": "media/a1/2026-09-26/photos/team.jpg",
+      "word_audio": "media/a1/2026-09-26/word-audio/team.mp3"
+    },
+    {
+      "word": "goal",
+      "pos": "noun",
+      "meaning": "the place where you put the ball to get points",
+      "example": "He kicks the ball into the goal.",
+      "pronunciation": "GOHL",
+      "persian": "دروازه",
+      "photo": "media/a1/2026-09-26/photos/goal.jpg",
+      "word_audio": "media/a1/2026-09-26/word-audio/goal.mp3"
+    },
+    {
+      "word": "swim",
+      "pos": "verb",
+      "meaning": "to move through water",
+      "example": "I swim in the pool.",
+      "pronunciation": "SWIM",
+      "persian": "شنا کردن",
+      "photo": "media/a1/2026-09-26/photos/swim.jpg",
+      "word_audio": "media/a1/2026-09-26/word-audio/swim.mp3"
+    },
+    {
+      "word": "jump",
+      "pos": "verb",
+      "meaning": "to push up into the air",
+      "example": "The boy can jump very high.",
+      "pronunciation": "JUHMP",
+      "persian": "پریدن",
+      "photo": "media/a1/2026-09-26/photos/jump.jpg",
+      "word_audio": "media/a1/2026-09-26/word-audio/jump.mp3"
+    },
+    {
+      "word": "play",
+      "pos": "verb",
+      "meaning": "to do a game for fun",
+      "example": "We play football after school.",
+      "pronunciation": "PLAY",
+      "persian": "بازی کردن",
+      "photo": "media/a1/2026-09-26/photos/play.jpg",
+      "word_audio": "media/a1/2026-09-26/word-audio/play.mp3"
+    },
+    {
+      "word": "win",
+      "pos": "verb",
+      "meaning": "to be the best in a game",
+      "example": "Our team wants to win today.",
+      "pronunciation": "WIN",
+      "persian": "برنده شدن",
+      "photo": "media/a1/2026-09-26/photos/win.jpg",
+      "word_audio": "media/a1/2026-09-26/word-audio/win.mp3"
+    },
+    {
+      "word": "coach",
+      "pos": "noun",
+      "meaning": "the person who trains a team",
+      "example": "The coach teaches us every day.",
+      "pronunciation": "KOHCH",
+      "persian": "مربی",
+      "photo": "media/a1/2026-09-26/photos/coach.jpg",
+      "word_audio": "media/a1/2026-09-26/word-audio/coach.mp3"
+    },
+    {
+      "word": "score",
+      "pos": "verb",
+      "meaning": "to get a point in a game",
+      "example": "She can score a goal.",
+      "pronunciation": "SKOR",
+      "persian": "امتیاز گرفتن",
+      "photo": "media/a1/2026-09-26/photos/score.jpg",
+      "word_audio": "media/a1/2026-09-26/word-audio/score.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-09-26/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Sports Day",
+    "audio": "media/a1/2026-09-26/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-09-26/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: Play, Run, Win!",
+    "audio": "media/a1/2026-09-26/shadowing.mp3",
+    "transcript": "media/a1/2026-09-26/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'run' mean?",
+      "options": [
+        "to move fast on your feet",
+        "a group of people who play together",
+        "the person who trains a team",
+        "a round toy you kick or throw in games"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'ball' mean?",
+      "options": [
+        "a group of people who play together",
+        "the place where you put the ball to get points",
+        "to move fast on your feet",
+        "a round toy you kick or throw in games"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'team' mean?",
+      "options": [
+        "a group of people who play together",
+        "to be the best in a game",
+        "to do a game for fun",
+        "the place where you put the ball to get points"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'goal' mean?",
+      "options": [
+        "to move through water",
+        "to get a point in a game",
+        "to push up into the air",
+        "the place where you put the ball to get points"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'swim' mean?",
+      "options": [
+        "the place where you put the ball to get points",
+        "to move through water",
+        "a round toy you kick or throw in games",
+        "to push up into the air"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'jump' mean?",
+      "options": [
+        "the place where you put the ball to get points",
+        "to move fast on your feet",
+        "to do a game for fun",
+        "to push up into the air"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'play' mean?",
+      "options": [
+        "to move fast on your feet",
+        "a round toy you kick or throw in games",
+        "the person who trains a team",
+        "to do a game for fun"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'win' mean?",
+      "options": [
+        "to do a game for fun",
+        "to be the best in a game",
+        "to push up into the air",
+        "a group of people who play together"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'coach' mean?",
+      "options": [
+        "the person who trains a team",
+        "to do a game for fun",
+        "a round toy you kick or throw in games",
+        "a group of people who play together"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'score' mean?",
+      "options": [
+        "to push up into the air",
+        "to get a point in a game",
+        "to do a game for fun",
+        "a round toy you kick or throw in games"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "2B: Present perfect + for / since, present perfect continuous",
+    "explanation": "Use the **present perfect** for things that started in the past and are still true now. **I have played** football for two years, and I still **play**.\n\nUse **for** with a **period of time**: for two years, for one hour. **She has run** every morning for one year.\n\nUse **since** with a **point in time**: since Monday, since January. Our **team** has **won** games since January.\n\nUse **have / has been + verb-ing** for actions that started in the past and are still happening now. **I have been swimming** for one hour.\n\nOur **coach** has been teaching us to **score** **goals** since last year. We still **jump** and kick the **ball** with him.",
+    "examples": [
+      "I have *played* football *for* two years. (for = a period of time)",
+      "She has *run* every morning *since* January. (since = a point in time)",
+      "Our *team* has *won* games *for* a long time.",
+      "He has *kicked* the *ball* *since* ten o'clock.",
+      "We have *scored* many *goals* *for* three years.",
+      "I have been *swimming* *for* one hour. (I am still in the pool now)",
+      "He has been *jumping* *since* this morning. (he is still jumping now)",
+      "Our *coach* has been *teaching* us *since* last year. (he still teaches us)"
+    ],
+    "practice": [
+      {
+        "q": "Which is correct: 'I have played for Monday' or 'I have played since Monday'?",
+        "a": "'I have played since Monday' — use **since** with a point in time like Monday."
+      },
+      {
+        "q": "Complete the sentence: She has been ___ (swim) for one hour.",
+        "a": "She has been **swimming** for one hour."
+      },
+      {
+        "q": "'How long have you played football?' — what does this question ask?",
+        "a": "It asks about an unfinished period of time, from the past until now."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I have played football ___ two years.",
+        "options": [
+          "for",
+          "since",
+          "in",
+          "at"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She has run every morning ___ January.",
+        "options": [
+          "for",
+          "since",
+          "from",
+          "on"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Our team has won games ___ a long time.",
+        "options": [
+          "since",
+          "for",
+          "at",
+          "in"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He has been swimming ___ ten o'clock.",
+        "options": [
+          "for",
+          "from",
+          "since",
+          "at"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "I have been playing football for two hours.",
+          "I am playing football for two hours.",
+          "I play football since two hours.",
+          "I have playing football for two hours."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We have scored goals ___ last year.",
+        "options": [
+          "for",
+          "from",
+          "since",
+          "on"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The coach has been teaching us ___ one year.",
+        "options": [
+          "since",
+          "at",
+          "for",
+          "from"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They have ___ since this morning.",
+        "options": [
+          "jump",
+          "jumped",
+          "been jumping",
+          "jumps"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How long ___ you played with the ball?",
+        "options": [
+          "have",
+          "did",
+          "are",
+          "do"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I have known our coach ___ 2020.",
+        "options": [
+          "for",
+          "from",
+          "on",
+          "since"
+        ],
+        "answer": 3
+      }
+    ],
+    "audio": "media/a1/2026-09-26/grammar-en.mp3"
+  }
+}

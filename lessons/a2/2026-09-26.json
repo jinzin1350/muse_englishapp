@@ -1,0 +1,353 @@
+{
+  "date": "2026-09-26",
+  "theme": "feelings and character",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "happy",
+      "pos": "adjective",
+      "meaning": "feeling good and smiling",
+      "example": "I am happy to see you.",
+      "pronunciation": "HA-pee",
+      "persian": "خوشحال",
+      "photo": "media/a2/2026-09-26/photos/happy.jpg",
+      "word_audio": "media/a2/2026-09-26/word-audio/happy.mp3"
+    },
+    {
+      "word": "sad",
+      "pos": "adjective",
+      "meaning": "feeling bad, like you want to cry",
+      "example": "The sad story made me cry.",
+      "pronunciation": "SAD",
+      "persian": "ناراحت",
+      "photo": "media/a2/2026-09-26/photos/sad.jpg",
+      "word_audio": "media/a2/2026-09-26/word-audio/sad.mp3"
+    },
+    {
+      "word": "kind",
+      "pos": "adjective",
+      "meaning": "good and helpful to other people",
+      "example": "She is kind to every animal.",
+      "pronunciation": "KYND",
+      "persian": "مهربان",
+      "photo": "media/a2/2026-09-26/photos/kind.jpg",
+      "word_audio": "media/a2/2026-09-26/word-audio/kind.mp3"
+    },
+    {
+      "word": "brave",
+      "pos": "adjective",
+      "meaning": "not afraid to do something hard",
+      "example": "The brave boy saved the dog.",
+      "pronunciation": "BRAYV",
+      "persian": "شجاع",
+      "photo": "media/a2/2026-09-26/photos/brave.jpg",
+      "word_audio": "media/a2/2026-09-26/word-audio/brave.mp3"
+    },
+    {
+      "word": "shy",
+      "pos": "adjective",
+      "meaning": "afraid to talk to new people",
+      "example": "He is too shy to sing on stage.",
+      "pronunciation": "SHY",
+      "persian": "خجالتی",
+      "photo": "media/a2/2026-09-26/photos/shy.jpg",
+      "word_audio": "media/a2/2026-09-26/word-audio/shy.mp3"
+    },
+    {
+      "word": "proud",
+      "pos": "adjective",
+      "meaning": "happy because someone did something good",
+      "example": "I am proud of my mother.",
+      "pronunciation": "PROUD",
+      "persian": "افتخارمند",
+      "photo": "media/a2/2026-09-26/photos/proud.jpg",
+      "word_audio": "media/a2/2026-09-26/word-audio/proud.mp3"
+    },
+    {
+      "word": "friendly",
+      "pos": "adjective",
+      "meaning": "nice to people, like a friend",
+      "example": "Our neighbors are very friendly.",
+      "pronunciation": "FREN-dly",
+      "persian": "صمیمی",
+      "photo": "media/a2/2026-09-26/photos/friendly.jpg",
+      "word_audio": "media/a2/2026-09-26/word-audio/friendly.mp3"
+    },
+    {
+      "word": "honest",
+      "pos": "adjective",
+      "meaning": "always telling the truth",
+      "example": "Be honest and tell the truth.",
+      "pronunciation": "AH-nist",
+      "persian": "راستگو",
+      "photo": "media/a2/2026-09-26/photos/honest.jpg",
+      "word_audio": "media/a2/2026-09-26/word-audio/honest.mp3"
+    },
+    {
+      "word": "patient",
+      "pos": "adjective",
+      "meaning": "waiting calmly without getting angry",
+      "example": "Be patient and wait for your turn.",
+      "pronunciation": "PAY-shunt",
+      "persian": "صبور",
+      "photo": "media/a2/2026-09-26/photos/patient.jpg",
+      "word_audio": "media/a2/2026-09-26/word-audio/patient.mp3"
+    },
+    {
+      "word": "mood",
+      "pos": "noun",
+      "meaning": "the way you feel inside",
+      "example": "Good music can change my mood.",
+      "pronunciation": "MOOD",
+      "persian": "حالت روحی",
+      "photo": "media/a2/2026-09-26/photos/mood.jpg",
+      "word_audio": "media/a2/2026-09-26/word-audio/mood.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-09-26/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Feelings and Character",
+    "audio": "media/a2/2026-09-26/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-09-26/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Day of Feelings",
+    "audio": "media/a2/2026-09-26/shadowing.mp3",
+    "transcript": "media/a2/2026-09-26/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'happy' mean?",
+      "options": [
+        "afraid to talk to new people",
+        "feeling good and smiling",
+        "waiting calmly without getting angry",
+        "the way you feel inside"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'sad' mean?",
+      "options": [
+        "not afraid to do something hard",
+        "good and helpful to other people",
+        "feeling bad, like you want to cry",
+        "always telling the truth"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'kind' mean?",
+      "options": [
+        "good and helpful to other people",
+        "happy because someone did something good",
+        "feeling bad, like you want to cry",
+        "nice to people, like a friend"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'brave' mean?",
+      "options": [
+        "afraid to talk to new people",
+        "waiting calmly without getting angry",
+        "feeling good and smiling",
+        "not afraid to do something hard"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'shy' mean?",
+      "options": [
+        "happy because someone did something good",
+        "afraid to talk to new people",
+        "not afraid to do something hard",
+        "good and helpful to other people"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'proud' mean?",
+      "options": [
+        "the way you feel inside",
+        "feeling good and smiling",
+        "always telling the truth",
+        "happy because someone did something good"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'friendly' mean?",
+      "options": [
+        "nice to people, like a friend",
+        "waiting calmly without getting angry",
+        "feeling bad, like you want to cry",
+        "not afraid to do something hard"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'honest' mean?",
+      "options": [
+        "feeling good and smiling",
+        "good and helpful to other people",
+        "always telling the truth",
+        "afraid to talk to new people"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'patient' mean?",
+      "options": [
+        "waiting calmly without getting angry",
+        "the way you feel inside",
+        "happy because someone did something good",
+        "nice to people, like a friend"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'mood' mean?",
+      "options": [
+        "afraid to talk to new people",
+        "always telling the truth",
+        "not afraid to do something hard",
+        "the way you feel inside"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "2B: Present perfect + for / since, present perfect continuous",
+    "explanation": "We use **have been, has been** (present perfect) with **for** and **since** for things that started in the past and are still true now. She has been a **kind** nurse since last year.\n\n**For** is a period of time: for two years, for three days. **Since** is a start point: since Monday, since twenty twenty.\n\nAsk **How long have you been proud of her?** to ask about an unfinished time.\n\nThe present perfect continuous is **have been + verb-ing**: I have been learning. We use it for actions that started in the past and are still true now. He has been **patient** since the morning.",
+    "examples": [
+      "I have been *happy* for three days. (for + a period)",
+      "My friend has been *sad* since Monday. (since + a start point)",
+      "She has known her *kind* teacher since last year. (still true now)",
+      "He has been helping his *shy* friend since the morning. (action still going)",
+      "They have been smiling because they feel *proud*. (clear result now)",
+      "A *brave* boy has been waiting for one hour. (for + a period)",
+      "An *honest* man has been telling his story since five o'clock. (continuous action)",
+      "Her *friendly* smile has been changing my *mood* since we met. (two words)"
+    ],
+    "practice": [
+      {
+        "q": "I ___ lived here since 2020. (have / has)",
+        "a": "have"
+      },
+      {
+        "q": "She ___ been waiting for two hours. (have / has)",
+        "a": "has"
+      },
+      {
+        "q": "Which word goes here — ___ Monday? (for / since)",
+        "a": "since"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ known him since 2019.",
+        "options": [
+          "have",
+          "has",
+          "am",
+          "had"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She has worked here ___ two years.",
+        "options": [
+          "since",
+          "for",
+          "from",
+          "at"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We have lived here ___ 2021.",
+        "options": [
+          "for",
+          "since",
+          "from",
+          "during"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How long ___ you been learning English?",
+        "options": [
+          "have",
+          "has",
+          "do",
+          "are"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He has ___ waiting since noon.",
+        "options": [
+          "be",
+          "been",
+          "being",
+          "is"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "They ___ been crying. Their eyes are red.",
+        "options": [
+          "have",
+          "has",
+          "are",
+          "do"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I have ___ happy for three days.",
+        "options": [
+          "be",
+          "been",
+          "being",
+          "am"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She has been kind ___ last year.",
+        "options": [
+          "for",
+          "since",
+          "from",
+          "at"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ you been working here for a long time?",
+        "options": [
+          "Has",
+          "Have",
+          "Do",
+          "Are"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My brave friend ___ been helping me since the morning.",
+        "options": [
+          "have",
+          "has",
+          "is",
+          "do"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-09-26/grammar-en.mp3"
+  }
+}
