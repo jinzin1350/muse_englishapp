@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-23",
+  "theme": "Money & Shopping",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "affluence",
+      "pos": "noun",
+      "meaning": "great wealth and prosperity",
+      "example": "The quiet affluence of the neighborhood was evident in its private gardens and understated cars.",
+      "pronunciation": "AF-loo-ents",
+      "persian": "ثروت فراوان، توانگری",
+      "photo": "media/c2/2026-09-23/photos/affluence.jpg",
+      "word_audio": "media/c2/2026-09-23/word-audio/affluence.mp3"
+    },
+    {
+      "word": "conspicuous",
+      "pos": "adjective",
+      "meaning": "deliberately showy; designed to be noticed",
+      "example": "Critics dismissed his sports-car collection as conspicuous consumption, designed to impress rather than to enjoy.",
+      "pronunciation": "con-SPIK-yoo-us",
+      "persian": "نمایشی و چشمگیر (به‌ویژه در نمایش ثروت)",
+      "photo": "media/c2/2026-09-23/photos/conspicuous.jpg",
+      "word_audio": "media/c2/2026-09-23/word-audio/conspicuous.mp3"
+    },
+    {
+      "word": "haggle",
+      "pos": "verb",
+      "meaning": "to bargain or negotiate over a price",
+      "example": "She refused to haggle with the street vendor, preferring to pay the asking price and walk away.",
+      "pronunciation": "HA-gul",
+      "persian": "چانه زدن",
+      "photo": "media/c2/2026-09-23/photos/haggle.jpg",
+      "word_audio": "media/c2/2026-09-23/word-audio/haggle.mp3"
+    },
+    {
+      "word": "extortionate",
+      "pos": "adjective",
+      "meaning": "far too expensive; like robbery",
+      "example": "The hotel charged extortionate rates for a bottle of water, knowing guests had no alternative.",
+      "pronunciation": "ek-STOR-shuh-nit",
+      "persian": "بسیار گران و سرسام‌آور",
+      "photo": "media/c2/2026-09-23/photos/extortionate.jpg",
+      "word_audio": "media/c2/2026-09-23/word-audio/extortionate.mp3"
+    },
+    {
+      "word": "austerity",
+      "pos": "noun",
+      "meaning": "strict limits on spending",
+      "example": "After the crash, the family embraced a period of austerity, cutting every non-essential expense.",
+      "pronunciation": "aw-STER-ih-tee",
+      "persian": "ریاضت اقتصادی، محدودیت شدید در خرج",
+      "photo": "media/c2/2026-09-23/photos/austerity.jpg",
+      "word_audio": "media/c2/2026-09-23/word-audio/austerity.mp3"
+    },
+    {
+      "word": "exorbitant",
+      "pos": "adjective",
+      "meaning": "unreasonably high in price",
+      "example": "The artist's early works now fetch exorbitant sums at auction.",
+      "pronunciation": "ek-ZOR-bih-tent",
+      "persian": "گزاف و نجومی (در مورد قیمت)",
+      "photo": "media/c2/2026-09-23/photos/exorbitant.jpg",
+      "word_audio": "media/c2/2026-09-23/word-audio/exorbitant.mp3"
+    },
+    {
+      "word": "frugality",
+      "pos": "noun",
+      "meaning": "careful, thrifty management of money",
+      "example": "His frugality bordered on the eccentric; he darned his own socks for decades.",
+      "pronunciation": "froo-GA-lih-tee",
+      "persian": "صرفه‌جویی و کم‌خرجی",
+      "photo": "media/c2/2026-09-23/photos/frugality.jpg",
+      "word_audio": "media/c2/2026-09-23/word-audio/frugality.mp3"
+    },
+    {
+      "word": "indebtedness",
+      "pos": "noun",
+      "meaning": "the state of owing money",
+      "example": "Easy credit had trapped the country in a cycle of rising indebtedness.",
+      "pronunciation": "in-DET-id-ness",
+      "persian": "بدهکاری",
+      "photo": "media/c2/2026-09-23/photos/indebtedness.jpg",
+      "word_audio": "media/c2/2026-09-23/word-audio/indebtedness.mp3"
+    },
+    {
+      "word": "opulence",
+      "pos": "noun",
+      "meaning": "luxurious display of great wealth",
+      "example": "The boutique hotel's lobby dripped with opulence, all marble floors and crystal chandeliers.",
+      "pronunciation": "OP-yoo-lents",
+      "persian": "تجمل و شکوه ثروت",
+      "photo": "media/c2/2026-09-23/photos/opulence.jpg",
+      "word_audio": "media/c2/2026-09-23/word-audio/opulence.mp3"
+    },
+    {
+      "word": "splurge",
+      "pos": "verb",
+      "meaning": "to spend a lot of money lavishly on one occasion",
+      "example": "After a decade of saving, they finally splurged on a month-long honeymoon in Japan.",
+      "pronunciation": "SPLURJ",
+      "persian": "ولخرجی کردن",
+      "photo": "media/c2/2026-09-23/photos/splurge.jpg",
+      "word_audio": "media/c2/2026-09-23/word-audio/splurge.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-09-23/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Price of Everything",
+    "audio": "media/c2/2026-09-23/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-09-23/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Market and the Mansion",
+    "audio": "media/c2/2026-09-23/shadowing.mp3",
+    "transcript": "media/c2/2026-09-23/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'affluence' mean?",
+      "options": [
+        "the state of owing money",
+        "great wealth and prosperity",
+        "strict limits on spending",
+        "to bargain or negotiate over a price"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'conspicuous' mean?",
+      "options": [
+        "deliberately showy, designed to be noticed",
+        "careful, thrifty use of money",
+        "unreasonably high in price",
+        "a lavish, one-time spending spree"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'haggle' mean?",
+      "options": [
+        "far too expensive; like robbery",
+        "luxurious display of great wealth",
+        "to bargain or negotiate over a price",
+        "great wealth and prosperity"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'extortionate' mean?",
+      "options": [
+        "strict limits on spending",
+        "the state of owing money",
+        "deliberately showy, designed to be noticed",
+        "far too expensive; like robbery"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'austerity' mean?",
+      "options": [
+        "strict limits on spending",
+        "unreasonably high in price",
+        "a lavish, one-time spending spree",
+        "careful, thrifty use of money"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'exorbitant' mean?",
+      "options": [
+        "to bargain or negotiate over a price",
+        "great wealth and prosperity",
+        "unreasonably high in price",
+        "luxurious display of great wealth"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'frugality' mean?",
+      "options": [
+        "a lavish, one-time spending spree",
+        "careful, thrifty use of money",
+        "far too expensive; like robbery",
+        "the state of owing money"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'indebtedness' mean?",
+      "options": [
+        "deliberately showy, designed to be noticed",
+        "strict limits on spending",
+        "great wealth and prosperity",
+        "the state of owing money"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'opulence' mean?",
+      "options": [
+        "luxurious display of great wealth",
+        "to bargain or negotiate over a price",
+        "unreasonably high in price",
+        "careful, thrifty use of money"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'splurge' mean?",
+      "options": [
+        "the state of owing money",
+        "far too expensive; like robbery",
+        "to spend a lot of money lavishly on one occasion",
+        "deliberately showy, designed to be noticed"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "1A: Present simple and continuous, action and non-action verbs",
+    "explanation": "Use the **present simple** for things that are always true or happen regularly. Quiet affluence **whispers**; conspicuous wealth **shouts**.\n\nMind the third-person singular spelling: she **haggles** at dawn markets, he **studies** auction catalogues. The rules give us **lives**, **studies**, **watches**.\n\nIn questions, follow **ASI** (Auxiliary, Subject, Infinitive), or **QuASI** when a question word leads. **Do** you **know** a dealer who **charges** extortionate fees?\n\nAdverbs of frequency go **before** the main verb but **after be**. She **always** resists a splurge; the prices **are usually** exorbitant.\n\nUse the **present continuous** (**be** + verb-**ing**) for actions in progress now, temporary situations, and future arrangements. This month she **is practising** strict austerity; next week they **are flying** to the Geneva auction.\n\n**Non-action verbs** — **be**, **need**, **love**, **know**, **believe**, **belong**, **like** — never take the continuous, even for 'now'. She **believes** frugality **beats** opulence every time; she does not '**is believing**' it.\n\nSome verbs live double lives: **have**, **think**, **taste**. I'**m having** lunch with my banker (action), but I **have** no debts (possession); this indebtedness **is** real, and I **think** the figures **are** alarming (opinion).",
+    "examples": [
+      "Quiet affluence *never boasts*. (present simple, always true)",
+      "She *haggles* brilliantly at the souk. (third-person -s)",
+      "*Do* you *know* why that boutique *charges* such extortionate prices? (ASI question order)",
+      "He *is always complaining* about conspicuous consumption. (adverb after be + continuous)",
+      "They *are practising* austerity until the debts *are* gone. (temporary situation)",
+      "She *believes* frugality *beats* inherited wealth. (non-action verb, no -ing)",
+      "I'*m meeting* my adviser tomorrow to discuss the wedding splurge. (future arrangement)",
+      "These rents *are* simply exorbitant. (present simple with be)",
+      "He *has* no savings, only growing indebtedness. (have = possession, non-action)",
+      "This penthouse *smells* of opulence, not of fresh paint. (non-action sense verb)"
+    ],
+    "practice": [
+      {
+        "q": "She ___ the salesman's promises about the 'discount'. (doesn't believe / isn't believing)",
+        "a": "doesn't believe — believe is a non-action verb, so it never takes the continuous form."
+      },
+      {
+        "q": "This quarter we ___ strict austerity. (practise / are practising)",
+        "a": "are practising — a temporary situation calls for the present continuous."
+      },
+      {
+        "q": "He ___ on gadgets he never uses. (always splurges / is always splurging)",
+        "a": "is always splurging — 'always' + continuous expresses irritation at a repeated habit."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She ___ in Mayfair and ___ the market daily.",
+        "options": [
+          "live … study",
+          "lives … studies",
+          "is living … is studying",
+          "lives … is studying"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ you ___ why the fees are so exorbitant?",
+        "options": [
+          "Do … know",
+          "Are … knowing",
+          "Does … knows",
+          "Do … knows"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Right now she ___ a period of strict austerity.",
+        "options": [
+          "practises",
+          "is practising",
+          "practise",
+          "is practise"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ frugality; it's practically a religion to him.",
+        "options": [
+          "is believing in",
+          "believes in",
+          "is believe in",
+          "believe in"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "They ___ the new boutique next Thursday.",
+        "options": [
+          "open",
+          "are opening",
+          "opens",
+          "are open"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ to haggle, even at fixed-price stores.",
+        "options": [
+          "is loving",
+          "loves",
+          "love",
+          "is loves"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "This perfume ___ of pure opulence.",
+        "options": [
+          "is smelling",
+          "smell",
+          "smells",
+          "is smell"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I ___ lunch with my banker; I can't talk now.",
+        "options": [
+          "'m having",
+          "have",
+          "haves",
+          "am have"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "She always is complaining about conspicuous spending.",
+          "She is always complaining about conspicuous spending.",
+          "She always complains about conspicuous spending yesterday.",
+          "She is complaining always about conspicuous spending."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ any indebtedness now; the loans are fully repaid.",
+        "options": [
+          "is having",
+          "has",
+          "haves",
+          "is have"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

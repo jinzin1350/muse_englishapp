@@ -1,0 +1,356 @@
+{
+  "date": "2026-09-23",
+  "theme": "Technology",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "paradigm",
+      "pos": "noun",
+      "meaning": "a typical pattern or model of how things are understood",
+      "example": "Cloud computing created a whole new paradigm for how companies store data.",
+      "pronunciation": "PEH-ruh-dime",
+      "persian": "الگوی فکری / چارچوب",
+      "photo": "media/c1/2026-09-23/photos/paradigm.jpg",
+      "word_audio": "media/c1/2026-09-23/word-audio/paradigm.mp3"
+    },
+    {
+      "word": "disruption",
+      "pos": "noun",
+      "meaning": "a sudden, radical change that shakes up an industry",
+      "example": "The disruption caused by streaming services forced cinemas to reinvent themselves.",
+      "pronunciation": "dis-RUP-shuhn",
+      "persian": "برهم‌زدگی / اختلال بنیادین",
+      "photo": "media/c1/2026-09-23/photos/disruption.jpg",
+      "word_audio": "media/c1/2026-09-23/word-audio/disruption.mp3"
+    },
+    {
+      "word": "obsolescence",
+      "pos": "noun",
+      "meaning": "the process of becoming outdated and no longer useful",
+      "example": "Planned obsolescence means your phone feels ancient after just three years.",
+      "pronunciation": "ob-suh-LEH-suhns",
+      "persian": "منسوخ شدن / از رده خارج شدن",
+      "photo": "media/c1/2026-09-23/photos/obsolescence.jpg",
+      "word_audio": "media/c1/2026-09-23/word-audio/obsolescence.mp3"
+    },
+    {
+      "word": "encryption",
+      "pos": "noun",
+      "meaning": "encoding information so only authorized people can read it",
+      "example": "End-to-end encryption protects your messages from being intercepted.",
+      "pronunciation": "en-KRIP-shuhn",
+      "persian": "رمزنگاری",
+      "photo": "media/c1/2026-09-23/photos/encryption.jpg",
+      "word_audio": "media/c1/2026-09-23/word-audio/encryption.mp3"
+    },
+    {
+      "word": "crowdsourcing",
+      "pos": "noun",
+      "meaning": "getting work or ideas from a large group of people online",
+      "example": "The app improved quickly thanks to crowdsourcing translations from its users.",
+      "pronunciation": "KROWD-sor-sing",
+      "persian": "جمع‌سپاری",
+      "photo": "media/c1/2026-09-23/photos/crowdsourcing.jpg",
+      "word_audio": "media/c1/2026-09-23/word-audio/crowdsourcing.mp3"
+    },
+    {
+      "word": "interoperability",
+      "pos": "noun",
+      "meaning": "the ability of different systems to work together",
+      "example": "Interoperability lets you message friends who use a completely different app.",
+      "pronunciation": "in-ter-op-ruh-buh-BIH-luh-tee",
+      "persian": "قابلیت همکاری متقابل سامانه‌ها",
+      "photo": "media/c1/2026-09-23/photos/interoperability.jpg",
+      "word_audio": "media/c1/2026-09-23/word-audio/interoperability.mp3"
+    },
+    {
+      "word": "scalability",
+      "pos": "noun",
+      "meaning": "the ability of a system to handle growing amounts of work",
+      "example": "Scalability is the main reason startups choose cloud servers over their own machines.",
+      "pronunciation": "skay-luh-BIH-luh-tee",
+      "persian": "مقیاس‌پذیری",
+      "photo": "media/c1/2026-09-23/photos/scalability.jpg",
+      "word_audio": "media/c1/2026-09-23/word-audio/scalability.mp3"
+    },
+    {
+      "word": "ransomware",
+      "pos": "noun",
+      "meaning": "malicious software that locks files until a payment is made",
+      "example": "The hospital's network was paralyzed by a ransomware attack last spring.",
+      "pronunciation": "RAN-suhm-wair",
+      "persian": "باج‌افزار",
+      "photo": "media/c1/2026-09-23/photos/ransomware.jpg",
+      "word_audio": "media/c1/2026-09-23/word-audio/ransomware.mp3"
+    },
+    {
+      "word": "telemetry",
+      "pos": "noun",
+      "meaning": "the automatic collection of data from remote devices",
+      "example": "Modern cars use telemetry to send engine data back to the manufacturer.",
+      "pronunciation": "tuh-LEH-muh-tree",
+      "persian": "تله‌متری / گردآوری داده از راه دور",
+      "photo": "media/c1/2026-09-23/photos/telemetry.jpg",
+      "word_audio": "media/c1/2026-09-23/word-audio/telemetry.mp3"
+    },
+    {
+      "word": "automation",
+      "pos": "noun",
+      "meaning": "using technology to do tasks without human involvement",
+      "example": "Automation has eliminated thousands of repetitive jobs in warehouses.",
+      "pronunciation": "aw-tuh-MAY-shuhn",
+      "persian": "خودکارسازی",
+      "photo": "media/c1/2026-09-23/photos/automation.jpg",
+      "word_audio": "media/c1/2026-09-23/word-audio/automation.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-09-23/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: How Technology Rewired Our Lives",
+    "audio": "media/c1/2026-09-23/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-09-23/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Startup That Changed Everything",
+    "audio": "media/c1/2026-09-23/shadowing.mp3",
+    "transcript": "media/c1/2026-09-23/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'paradigm' mean?",
+      "options": [
+        "a sudden radical change that shakes up an industry",
+        "a typical pattern or model of how things are understood",
+        "encoding information so only authorized people can read it",
+        "the automatic collection of data from remote devices"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'disruption' mean?",
+      "options": [
+        "getting work or ideas from a large group of people online",
+        "the ability of different systems to work together",
+        "a sudden, radical change that shakes up an industry",
+        "using technology to do tasks without human involvement"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'obsolescence' mean?",
+      "options": [
+        "the process of becoming outdated and no longer useful",
+        "malicious software that locks files until a payment is made",
+        "the ability of a system to handle growing amounts of work",
+        "a typical pattern or model of how things are understood"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'encryption' mean?",
+      "options": [
+        "the ability of different systems to work together",
+        "the automatic collection of data from remote devices",
+        "encoding information so only authorized people can read it",
+        "a sudden radical change that shakes up an industry"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'crowdsourcing' mean?",
+      "options": [
+        "getting work or ideas from a large group of people online",
+        "using technology to do tasks without human involvement",
+        "the process of becoming outdated and no longer useful",
+        "malicious software that locks files until a payment is made"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'interoperability' mean?",
+      "options": [
+        "encoding information so only authorized people can read it",
+        "the ability of different systems to work together",
+        "a typical pattern or model of how things are understood",
+        "getting work or ideas from a large group of people online"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'scalability' mean?",
+      "options": [
+        "the automatic collection of data from remote devices",
+        "the process of becoming outdated and no longer useful",
+        "the ability of a system to handle growing amounts of work",
+        "the ability of different systems to work together"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'ransomware' mean?",
+      "options": [
+        "using technology to do tasks without human involvement",
+        "malicious software that locks files until a payment is made",
+        "encoding information so only authorized people can read it",
+        "a typical pattern or model of how things are understood"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'telemetry' mean?",
+      "options": [
+        "the automatic collection of data from remote devices",
+        "a sudden radical change that shakes up an industry",
+        "the ability of a system to handle growing amounts of work",
+        "getting work or ideas from a large group of people online"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'automation' mean?",
+      "options": [
+        "the process of becoming outdated and no longer useful",
+        "the ability of different systems to work together",
+        "malicious software that locks files until a payment is made",
+        "using technology to do tasks without human involvement"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "1A: Present simple and continuous, action and non-action verbs",
+    "explanation": "Use the **present simple** for things that are always true or happen regularly. Automation reshapes whole industries, and disruption rarely arrives from the market leaders.\n\nWith **he / she / it**, remember the third-person spelling: he lives, she studies, it encrypts. The old paradigm shifts, and the whole company adapts.\n\nFor questions, use **ASI** order (Auxiliary, Subject, Infinitive): Do you trust encryption? With a question word, use **QuASI**: How does telemetry actually work?\n\nAdverbs of frequency go **before the main verb** and **after be**. Our engineers rarely trust a single backup. Scalability is always the first concern.\n\nExpressions of frequency go **at the end** of the sentence. The team reviews the ransomware reports once a week.\n\nUse the **present continuous** for actions in progress right now. We are witnessing a paradigm shift in real time.\n\nIt also describes **temporary situations** and **future arrangements**. The company is testing a new encryption protocol this month. We are meeting the security team tomorrow.\n\n**Non-action verbs** describe states, not actions: know, believe, need, love, belong, prefer. They are not used in the continuous, even for 'now': I believe encryption matters, never I am believing.\n\nSome verbs are **both action and non-action**, with different meanings. She is thinking about the new paradigm (considering) but I think disruption is inevitable (opinion). I am having lunch (action) but I have a car (possession).",
+    "examples": [
+      "Automation *reshapes* entire industries every decade. (present simple, always true)",
+      "She *studies* the telemetry reports each morning. (3rd person -ies)",
+      "*Do* you *trust* end-to-end encryption? (ASI question order)",
+      "*How does* crowdsourcing *improve* the product? (QuASI question order)",
+      "Our engineers *rarely rely* on a single backup. (adverb before the main verb)",
+      "Scalability *is always* the first concern for a startup. (adverb after be)",
+      "The team *reviews* the ransomware reports once a week. (expression of frequency at the end)",
+      "We *are witnessing* a paradigm shift in real time. (continuous, in progress now)",
+      "The company *is testing* a new encryption protocol this month. (continuous, temporary situation)",
+      "We *are meeting* the security team tomorrow at ten. (continuous, future arrangement)",
+      "I *believe* interoperability matters more than speed. (non-action verb, opinion)",
+      "She *is thinking about* leaving the old paradigm behind. (action: considering)"
+    ],
+    "practice": [
+      {
+        "q": "Which is correct: 'I am believing encryption is essential' or 'I believe encryption is essential'?",
+        "a": "'I believe encryption is essential' — believe is a non-action verb, so it is never used in the continuous."
+      },
+      {
+        "q": "Is this correct? 'The company tests a new automation system this month.'",
+        "a": "No — 'this month' makes it temporary, so use the continuous: 'The company is testing a new automation system this month.'"
+      },
+      {
+        "q": "Correct this question: 'How the telemetry works?'",
+        "a": "'How does the telemetry work?' — question words need QuASI order: question word + auxiliary + subject + infinitive."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "Automation are reshaping industries.",
+          "Automation reshapes industries.",
+          "Automation reshape industries.",
+          "Automation is reshapes industries."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which third-person spelling is correct?",
+        "options": [
+          "She studys the telemetry data.",
+          "She studies the telemetry data.",
+          "She studyes the telemetry data.",
+          "She studying the telemetry data."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which question is correct?",
+        "options": [
+          "Does encryption protect our messages?",
+          "Encryption does protect our messages?",
+          "Does protect encryption our messages?",
+          "Protects encryption our messages?"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct adverb position: 'Our engineers ___ trust a single backup.'",
+        "options": [
+          "trust rarely",
+          "rarely trust",
+          "are rarely trust",
+          "rarely are trust"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct sentence about scalability.",
+        "options": [
+          "Scalability is always the first concern.",
+          "Scalability always is the first concern.",
+          "Scalability is always being the first concern.",
+          "Scalability always the first concern."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Where does the expression of frequency go? 'The team reviews the data ___.'",
+        "options": [
+          "once a week",
+          "a week once",
+          "weekly once",
+          "one time a week"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Action in progress now: 'Look! The engineers ___ the new ransomware defense.'",
+        "options": [
+          "are testing",
+          "test",
+          "tests",
+          "are test"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Temporary situation: 'She ___ from home this month while the office moves.'",
+        "options": [
+          "works",
+          "is working",
+          "work",
+          "is work"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Future arrangement: 'We ___ the security team tomorrow.'",
+        "options": [
+          "meet",
+          "are meeting",
+          "meets",
+          "will meeting"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Non-action verb: 'I ___ that interoperability is the future.'",
+        "options": [
+          "am believing",
+          "believe",
+          "am believe",
+          "believes"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

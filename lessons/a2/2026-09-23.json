@@ -1,0 +1,355 @@
+{
+  "date": "2026-09-23",
+  "theme": "Travel and Transport",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "airport",
+      "pos": "noun",
+      "meaning": "a place where planes land and take off",
+      "example": "We arrived at the airport two hours early.",
+      "pronunciation": "AIR-port",
+      "persian": "فرودگاه",
+      "photo": "media/a2/2026-09-23/photos/airport.jpg",
+      "word_audio": "media/a2/2026-09-23/word-audio/airport.mp3"
+    },
+    {
+      "word": "flight",
+      "pos": "noun",
+      "meaning": "a trip in a plane",
+      "example": "Our flight to London was very comfortable.",
+      "pronunciation": "FLYT",
+      "persian": "پرواز",
+      "photo": "media/a2/2026-09-23/photos/flight.jpg",
+      "word_audio": "media/a2/2026-09-23/word-audio/flight.mp3"
+    },
+    {
+      "word": "passenger",
+      "pos": "noun",
+      "meaning": "a person who travels but does not drive",
+      "example": "The taxi driver helped the passenger with her bag.",
+      "pronunciation": "PA-sun-jer",
+      "persian": "مسافر",
+      "photo": "media/a2/2026-09-23/photos/passenger.jpg",
+      "word_audio": "media/a2/2026-09-23/word-audio/passenger.mp3"
+    },
+    {
+      "word": "subway",
+      "pos": "noun",
+      "meaning": "a train that runs under the ground in a city",
+      "example": "I take the subway to work every day.",
+      "pronunciation": "SUB-way",
+      "persian": "مترو",
+      "photo": "media/a2/2026-09-23/photos/subway.jpg",
+      "word_audio": "media/a2/2026-09-23/word-audio/subway.mp3"
+    },
+    {
+      "word": "ferry",
+      "pos": "noun",
+      "meaning": "a boat that carries people and cars across water",
+      "example": "We took a ferry to the small island.",
+      "pronunciation": "FE-ree",
+      "persian": "کشتی مسافری",
+      "photo": "media/a2/2026-09-23/photos/ferry.jpg",
+      "word_audio": "media/a2/2026-09-23/word-audio/ferry.mp3"
+    },
+    {
+      "word": "schedule",
+      "pos": "noun",
+      "meaning": "a plan that shows when things happen",
+      "example": "Check the schedule before you leave home.",
+      "pronunciation": "SKE-jool",
+      "persian": "برنامه زمانی",
+      "photo": "media/a2/2026-09-23/photos/schedule.jpg",
+      "word_audio": "media/a2/2026-09-23/word-audio/schedule.mp3"
+    },
+    {
+      "word": "delay",
+      "pos": "noun",
+      "meaning": "when something starts or arrives later than planned",
+      "example": "The train had a delay of one hour.",
+      "pronunciation": "de-LAY",
+      "persian": "تأخیر",
+      "photo": "media/a2/2026-09-23/photos/delay.jpg",
+      "word_audio": "media/a2/2026-09-23/word-audio/delay.mp3"
+    },
+    {
+      "word": "trip",
+      "pos": "noun",
+      "meaning": "a short journey to a place and back",
+      "example": "We planned a trip to the beach last summer.",
+      "pronunciation": "TRIP",
+      "persian": "سفر کوتاه",
+      "photo": "media/a2/2026-09-23/photos/trip.jpg",
+      "word_audio": "media/a2/2026-09-23/word-audio/trip.mp3"
+    },
+    {
+      "word": "driver",
+      "pos": "noun",
+      "meaning": "a person who drives a car, bus, or taxi",
+      "example": "The taxi driver knew the way very well.",
+      "pronunciation": "DRY-ver",
+      "persian": "راننده",
+      "photo": "media/a2/2026-09-23/photos/driver.jpg",
+      "word_audio": "media/a2/2026-09-23/word-audio/driver.mp3"
+    },
+    {
+      "word": "reserve",
+      "pos": "verb",
+      "meaning": "to book a seat, room, or table for later",
+      "example": "Please reserve a table for two people.",
+      "pronunciation": "re-ZURV",
+      "persian": "رزرو کردن",
+      "photo": "media/a2/2026-09-23/photos/reserve.jpg",
+      "word_audio": "media/a2/2026-09-23/word-audio/reserve.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-09-23/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Travel and Transport",
+    "audio": "media/a2/2026-09-23/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-09-23/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Daily Trip",
+    "audio": "media/a2/2026-09-23/shadowing.mp3",
+    "transcript": "media/a2/2026-09-23/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'airport' mean?",
+      "options": [
+        "a trip in a plane",
+        "a place where planes land and take off",
+        "a person who drives a car, bus, or taxi",
+        "when something starts or arrives later than planned"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'flight' mean?",
+      "options": [
+        "a train that runs under the ground in a city",
+        "to book a seat, room, or table for later",
+        "a trip in a plane",
+        "a boat that carries people and cars across water"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'passenger' mean?",
+      "options": [
+        "a person who travels but does not drive",
+        "a short journey to a place and back",
+        "a plan that shows when things happen",
+        "a place where planes land and take off"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'subway' mean?",
+      "options": [
+        "a boat that carries people and cars across water",
+        "when something starts or arrives later than planned",
+        "a trip in a plane",
+        "a train that runs under the ground in a city"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'ferry' mean?",
+      "options": [
+        "to book a seat, room, or table for later",
+        "a boat that carries people and cars across water",
+        "a person who drives a car, bus, or taxi",
+        "a train that runs under the ground in a city"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'schedule' mean?",
+      "options": [
+        "a short journey to a place and back",
+        "a person who travels but does not drive",
+        "a place where planes land and take off",
+        "a plan that shows when things happen"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'delay' mean?",
+      "options": [
+        "when something starts or arrives later than planned",
+        "a trip in a plane",
+        "a boat that carries people and cars across water",
+        "to book a seat, room, or table for later"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'trip' mean?",
+      "options": [
+        "a person who drives a car, bus, or taxi",
+        "a short journey to a place and back",
+        "a train that runs under the ground in a city",
+        "a plan that shows when things happen"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'driver' mean?",
+      "options": [
+        "when something starts or arrives later than planned",
+        "a place where planes land and take off",
+        "a person who drives a car, bus, or taxi",
+        "a person who travels but does not drive"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'reserve' mean?",
+      "options": [
+        "a boat that carries people and cars across water",
+        "a short journey to a place and back",
+        "to book a seat, room, or table for later",
+        "a trip in a plane"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "1A: Present simple and continuous, action and non-action verbs",
+    "explanation": "We use the **present simple** for things that are always true, or that happen again and again. The taxi driver takes passengers to the airport every day.\n\nWith he, she, and it, the verb changes its spelling: lives, studies, goes. A good schedule helps every driver.\n\nWords like **always**, **usually**, and **never** go before the main verb, but after the verb **be**. The ferry is usually fast.\n\nWe use the **present continuous** for actions happening right now, at this moment. I am waiting for my flight at the airport.\n\nWe also use the **present continuous** for temporary situations and for plans in the near future. She is reserving a seat on the ferry for tomorrow.\n\nSome verbs are **non-action verbs**, like be, need, love, know, and like. They describe a state, not an action. Every passenger needs a ticket.\n\n**Non-action verbs** are not used in the continuous. Say **I know the subway map**, not **I am knowing**.",
+    "examples": [
+      "She *takes* the subway to work every day. (present simple)",
+      "He *studies* the flight schedule every morning. (3rd person -es)",
+      "They *always* check the schedule before a trip. (frequency word before the verb)",
+      "The ferry *is* usually fast. (frequency word after be)",
+      "I am *waiting* for the ferry right now. (present continuous)",
+      "We are *taking* a trip to the city this week. (temporary situation)",
+      "She is *reserving* a flight for tomorrow. (future plan)",
+      "I *know* the driver very well. (non-action verb)",
+      "He *needs* a ticket for the airport bus. (non-action verb)",
+      "They *love* their summer trips. (non-action verb)"
+    ],
+    "practice": [
+      {
+        "q": "Why is 'I am knowing the driver' wrong?",
+        "a": "Know is a non-action verb. Say 'I know the driver'."
+      },
+      {
+        "q": "Where does 'always' go in 'She checks the schedule'?",
+        "a": "Before the main verb: 'She always checks the schedule'."
+      },
+      {
+        "q": "They ___ (reserve) a flight right now. Which form is correct?",
+        "a": "'They are reserving a flight right now' - the action is happening now."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She ___ the subway to work every day.",
+        "options": [
+          "takes",
+          "is taking",
+          "take",
+          "taking"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Right now, we ___ for the ferry.",
+        "options": [
+          "wait",
+          "waits",
+          "are waiting",
+          "waiting"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He ___ the taxi driver well.",
+        "options": [
+          "is knowing",
+          "knows",
+          "know",
+          "knowing"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "They ___ a trip to the city this week.",
+        "options": [
+          "are taking",
+          "takes",
+          "take",
+          "taking"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The bus driver ___ every morning at six.",
+        "options": [
+          "is starting",
+          "starts",
+          "start",
+          "starting"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Look! Our flight ___.",
+        "options": [
+          "is boarding",
+          "boards",
+          "board",
+          "boarding"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ her flight for tomorrow morning.",
+        "options": [
+          "is reserving",
+          "reserves",
+          "reserve",
+          "reserving"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ the schedule. It is very clear.",
+        "options": [
+          "am understanding",
+          "understand",
+          "understands",
+          "understanding"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My brother ___ at the airport.",
+        "options": [
+          "workes",
+          "works",
+          "is works",
+          "work"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The passengers ___ late for the subway.",
+        "options": [
+          "never are",
+          "are never",
+          "never be",
+          "be never"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-09-23/grammar-en.mp3"
+  }
+}

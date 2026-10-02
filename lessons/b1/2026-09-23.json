@@ -1,0 +1,357 @@
+{
+  "date": "2026-09-23",
+  "theme": "Work & Career",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "promotion",
+      "pos": "noun",
+      "meaning": "a move to a higher position at work",
+      "example": "She got a promotion after two years at the company.",
+      "pronunciation": "proh-MOH-shuhn",
+      "persian": "ترفیع / ارتقای شغلی",
+      "photo": "media/b1/2026-09-23/photos/promotion.jpg",
+      "word_audio": "media/b1/2026-09-23/word-audio/promotion.mp3"
+    },
+    {
+      "word": "colleague",
+      "pos": "noun",
+      "meaning": "a person you work with",
+      "example": "My colleagues are friendly and helpful.",
+      "pronunciation": "KAH-leeg",
+      "persian": "همکار",
+      "photo": "media/b1/2026-09-23/photos/colleague.jpg",
+      "word_audio": "media/b1/2026-09-23/word-audio/colleague.mp3"
+    },
+    {
+      "word": "interview",
+      "pos": "noun",
+      "meaning": "a formal meeting where you answer questions to get a job",
+      "example": "I have a job interview on Friday.",
+      "pronunciation": "IN-ter-vyoo",
+      "persian": "مصاحبه کاری",
+      "photo": "media/b1/2026-09-23/photos/interview.jpg",
+      "word_audio": "media/b1/2026-09-23/word-audio/interview.mp3"
+    },
+    {
+      "word": "salary",
+      "pos": "noun",
+      "meaning": "the money you earn from your job, usually paid monthly",
+      "example": "He earns a good salary as an engineer.",
+      "pronunciation": "SA-luh-ree",
+      "persian": "حقوق ماهانه",
+      "photo": "media/b1/2026-09-23/photos/salary.jpg",
+      "word_audio": "media/b1/2026-09-23/word-audio/salary.mp3"
+    },
+    {
+      "word": "shift",
+      "pos": "noun",
+      "meaning": "a period of work during the day, like the morning shift",
+      "example": "She works the night shift at the hospital.",
+      "pronunciation": "SHIFT",
+      "persian": "شیفت کاری",
+      "photo": "media/b1/2026-09-23/photos/shift.jpg",
+      "word_audio": "media/b1/2026-09-23/word-audio/shift.mp3"
+    },
+    {
+      "word": "overtime",
+      "pos": "noun",
+      "meaning": "extra work hours after your normal work time",
+      "example": "I worked five hours of overtime this week.",
+      "pronunciation": "OH-ver-taim",
+      "persian": "اضافه‌کاری",
+      "photo": "media/b1/2026-09-23/photos/overtime.jpg",
+      "word_audio": "media/b1/2026-09-23/word-audio/overtime.mp3"
+    },
+    {
+      "word": "deadline",
+      "pos": "noun",
+      "meaning": "the date or time by which work must be finished",
+      "example": "The deadline for the report is Monday.",
+      "pronunciation": "DED-line",
+      "persian": "مهلت پایانی",
+      "photo": "media/b1/2026-09-23/photos/deadline.jpg",
+      "word_audio": "media/b1/2026-09-23/word-audio/deadline.mp3"
+    },
+    {
+      "word": "resign",
+      "pos": "verb",
+      "meaning": "to officially leave your job",
+      "example": "He resigned because he found a better job.",
+      "pronunciation": "ree-ZINE",
+      "persian": "استعفا دادن",
+      "photo": "media/b1/2026-09-23/photos/resign.jpg",
+      "word_audio": "media/b1/2026-09-23/word-audio/resign.mp3"
+    },
+    {
+      "word": "bonus",
+      "pos": "noun",
+      "meaning": "extra money given as a reward for good work",
+      "example": "She got a bonus for her great work.",
+      "pronunciation": "BOH-nuss",
+      "persian": "پاداش",
+      "photo": "media/b1/2026-09-23/photos/bonus.jpg",
+      "word_audio": "media/b1/2026-09-23/word-audio/bonus.mp3"
+    },
+    {
+      "word": "commute",
+      "pos": "noun",
+      "meaning": "the daily trip to and from work",
+      "example": "My commute takes forty minutes by train.",
+      "pronunciation": "kuh-MYOOT",
+      "persian": "رفت‌وآمد روزانه به محل کار",
+      "photo": "media/b1/2026-09-23/photos/commute.jpg",
+      "word_audio": "media/b1/2026-09-23/word-audio/commute.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-09-23/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Work and Career",
+    "audio": "media/b1/2026-09-23/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-09-23/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Omar's New Job",
+    "audio": "media/b1/2026-09-23/shadowing.mp3",
+    "transcript": "media/b1/2026-09-23/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'promotion' mean?",
+      "options": [
+        "a person you work with",
+        "a move to a higher position at work",
+        "the money you earn from your job, usually paid monthly",
+        "a period of work during the day, like the morning shift"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'colleague' mean?",
+      "options": [
+        "a formal meeting where you answer questions to get a job",
+        "extra money given as a reward for good work",
+        "the daily trip to and from work",
+        "a person you work with"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'interview' mean?",
+      "options": [
+        "the date or time by which work must be finished",
+        "to officially leave your job",
+        "a formal meeting where you answer questions to get a job",
+        "extra work hours after your normal work time"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'salary' mean?",
+      "options": [
+        "extra money given as a reward for good work",
+        "a move to a higher position at work",
+        "a person you work with",
+        "the money you earn from your job, usually paid monthly"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'shift' mean?",
+      "options": [
+        "the daily trip to and from work",
+        "a formal meeting where you answer questions to get a job",
+        "a period of work during the day, like the morning shift",
+        "the date or time by which work must be finished"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'overtime' mean?",
+      "options": [
+        "the money you earn from your job, usually paid monthly",
+        "extra money given as a reward for good work",
+        "extra work hours after your normal work time",
+        "to officially leave your job"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'deadline' mean?",
+      "options": [
+        "a period of work during the day, like the morning shift",
+        "a move to a higher position at work",
+        "a formal meeting where you answer questions to get a job",
+        "the date or time by which work must be finished"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'resign' mean?",
+      "options": [
+        "the daily trip to and from work",
+        "to officially leave your job",
+        "extra work hours after your normal work time",
+        "the money you earn from your job, usually paid monthly"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bonus' mean?",
+      "options": [
+        "the date or time by which work must be finished",
+        "a person you work with",
+        "a period of work during the day, like the morning shift",
+        "extra money given as a reward for good work"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'commute' mean?",
+      "options": [
+        "extra money given as a reward for good work",
+        "to officially leave your job",
+        "the daily trip to and from work",
+        "a formal meeting where you answer questions to get a job"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "1A: Present simple and continuous, action and non-action verbs",
+    "explanation": "Use the **present simple** (I work, she works) for things that are always true. It also describes habits and regular routines, like your shift, your salary, or your daily commute.\n\nIn the third person (he, she, it), add -s or -es to the verb. Watch the spelling: **lives**, **studies**, **watches** — the same rule gives us resigns and commutes.\n\nFor questions and negatives, use **do** or **does** plus the base verb. ASI order (Auxiliary, Subject, Infinitive) keeps questions about salary or overtime clear.\n\nAdverbs of frequency (always, usually, never) go **before** the main verb but **after** be. Expressions of frequency (every day, twice a week) usually go at the end, often with phrases about the deadline or a shift.\n\nUse the **present continuous** (am, is, are + verb-ing) for actions happening right now. It also describes temporary situations, like covering a colleague's shift this week.\n\nThe present continuous also talks about future arrangements — things you have already planned. Think of an interview you have scheduled for next Friday.\n\n**Non-action verbs** describe states or feelings, not actions: know, need, love, believe. They are not used in the continuous, even when you mean right now. Your feelings about a bonus or a promotion stay in the simple.\n\nA few verbs have both an action meaning and a non-action meaning. The meaning decides the tense: states stay in the simple, actions in progress take the continuous.",
+    "examples": [
+      "My colleague *works* the night shift. (present simple: routine)",
+      "She *is working* the day shift this week. (present continuous: temporary situation)",
+      "Omar *commutes* by train every day. (present simple: habit)",
+      "He *is commuting* by bus this month because his car is broken. (present continuous: temporary)",
+      "They *have* a clear deadline for every project. (non-action: possession)",
+      "We *are having* a meeting about the deadline right now. (action: having = holding)",
+      "I *need* a higher salary. (non-action verb: need)",
+      "She *is preparing* for her interview at the moment. (present continuous: in progress)",
+      "He *does* overtime twice a month. (expression of frequency at the end)",
+      "I *believe* this promotion is fair. (non-action verb: believe)",
+      "They *are interviewing* candidates this week. (present continuous: in progress)",
+      "The company *pays* a bonus every December. (present simple: routine)",
+      "She *wants* to resign. (non-action verb: want)"
+    ],
+    "practice": [
+      {
+        "q": "Which is correct: 'I am knowing my colleague well' or 'I know my colleague well'?",
+        "a": "'I know my colleague well' is correct — know is a non-action verb, so it stays in the present simple."
+      },
+      {
+        "q": "Complete the sentence: 'She ___ (work) the night shift this week because her colleague is sick.'",
+        "a": "'is working' — a temporary situation takes the present continuous."
+      },
+      {
+        "q": "Which is correct: 'He meets always the deadline' or 'He always meets the deadline'?",
+        "a": "'He always meets the deadline' — adverbs of frequency go before the main verb."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "My colleague ___ the night shift every week.",
+        "options": [
+          "works",
+          "is working",
+          "work",
+          "are working"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Look! She ___ for her interview right now.",
+        "options": [
+          "prepares",
+          "is preparing",
+          "prepare",
+          "are preparing"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ a higher salary.",
+        "options": [
+          "am needing",
+          "need",
+          "needs",
+          "am need"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ overtime twice a month.",
+        "options": [
+          "does",
+          "is doing",
+          "do",
+          "doing"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ a meeting about the deadline at the moment.",
+        "options": [
+          "have",
+          "are having",
+          "has",
+          "having"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ to resign because the commute is too long.",
+        "options": [
+          "wants",
+          "is wanting",
+          "want",
+          "wanting"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ you usually ___ the bus to work?",
+        "options": [
+          "Do / commute",
+          "Does / commute",
+          "Do / commutes",
+          "Are / commuting"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The company ___ a bonus every December.",
+        "options": [
+          "pays",
+          "is paying",
+          "pay",
+          "are paying"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "This month he ___ the day shift because his colleague resigned.",
+        "options": [
+          "covers",
+          "is covering",
+          "cover",
+          "are covering"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ this promotion is fair.",
+        "options": [
+          "believe",
+          "am believing",
+          "believes",
+          "believing"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}
