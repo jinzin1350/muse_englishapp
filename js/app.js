@@ -3572,6 +3572,8 @@ async function init() {
   initOneSignal();
   syncPushState();
   playerUI();
+  /* Splash fades once the app is up (min ~900ms so it reads as a splash). */
+  setTimeout(hideSplash, 900);
 
   if (sb) {
     try {
@@ -3581,6 +3583,13 @@ async function init() {
   }
   // Logged out: respect the hash (deep links to #/signin etc.), default landing.
   onRoute();
+}
+
+function hideSplash() {
+  const s = document.getElementById('splash');
+  if (!s || s.classList.contains('hide')) return;
+  s.classList.add('hide');
+  setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 600);
 }
 
 document.addEventListener('DOMContentLoaded', init);

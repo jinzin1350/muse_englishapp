@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#C84B31">
+  <meta name="theme-color" content="#FF9600">
   <meta name="description" content="Muse English — build real English, one daily lesson at a time. Words, listening, shadowing, grammar and a quiz for your level, A1 to C2.">
   <title>Muse English — Build real English, one daily lesson at a time</title>
+  <style>
+  /* Splash screen: visible instantly on launch, before app.js runs. */
+  #splash{position:fixed;inset:0;z-index:1000;background:#FF9600;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease;}
+  #splash.hide{opacity:0;pointer-events:none;}
+  #splash img{width:100%;height:100%;object-fit:cover;display:block;}
+  </style>
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png">
@@ -45,6 +51,17 @@
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 </head>
 <body>
+<div id="splash"><img src="/media/splash.webp" alt="Muse English" fetchpriority="high"></div>
+<script>
+/* Splash fallback: if app.js fails to load, never trap the user behind the splash. */
+setTimeout(function () {
+  var s = document.getElementById('splash');
+  if (s && !s.classList.contains('hide')) {
+    s.classList.add('hide');
+    setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 700);
+  }
+}, 6000);
+</script>
   <a class="skip-link" href="#view">Skip to content</a>
 
   <!-- Public landing header (logged out) -->
