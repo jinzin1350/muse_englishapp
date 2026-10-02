@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-19",
+  "theme": "Everyday Technology",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "example": "The new algorithm recommends videos based on what you watch.",
+      "meaning": "a set of rules a computer follows to solve a problem",
+      "persian": "الگوریتم",
+      "photo": "media/b2/2026-09-19/photos/algorithm.jpg",
+      "pos": "noun",
+      "pronunciation": "AL-guh-ri-thum",
+      "word": "algorithm",
+      "word_audio": "media/b2/2026-09-19/word-audio/algorithm.mp3"
+    },
+    {
+      "example": "This app has a clean interface that is easy to navigate.",
+      "meaning": "the screen or control system you use to operate a device or app",
+      "persian": "رابط کاربری",
+      "photo": "media/b2/2026-09-19/photos/interface.jpg",
+      "pos": "noun",
+      "pronunciation": "IN-ter-face",
+      "word": "interface",
+      "word_audio": "media/b2/2026-09-19/word-audio/interface.mp3"
+    },
+    {
+      "example": "The bank uses strong encryption to protect your data.",
+      "meaning": "the process of coding information so only allowed people can read it",
+      "persian": "رمزنگاری",
+      "photo": "media/b2/2026-09-19/photos/encryption.jpg",
+      "pos": "noun",
+      "pronunciation": "en-KRIP-shun",
+      "word": "encryption",
+      "word_audio": "media/b2/2026-09-19/word-audio/encryption.mp3"
+    },
+    {
+      "example": "Video calls need a lot of bandwidth to run smoothly.",
+      "meaning": "the amount of data an internet connection can carry",
+      "persian": "پهنای باند",
+      "photo": "media/b2/2026-09-19/photos/bandwidth.jpg",
+      "pos": "noun",
+      "pronunciation": "BAND-width",
+      "word": "bandwidth",
+      "word_audio": "media/b2/2026-09-19/word-audio/bandwidth.mp3"
+    },
+    {
+      "example": "We had a virtual meeting with our team in London.",
+      "meaning": "not physically real but appearing real on a screen",
+      "persian": "مجازی",
+      "photo": "media/b2/2026-09-19/photos/virtual.jpg",
+      "pos": "adjective",
+      "pronunciation": "VUR-choo-uhl",
+      "word": "virtual",
+      "word_audio": "media/b2/2026-09-19/word-audio/virtual.mp3"
+    },
+    {
+      "example": "The sensor turns the lights on when you enter the room.",
+      "meaning": "a small device that detects changes like heat, light, or movement",
+      "persian": "حسگر",
+      "photo": "media/b2/2026-09-19/photos/sensor.jpg",
+      "pos": "noun",
+      "pronunciation": "SEN-sur",
+      "word": "sensor",
+      "word_audio": "media/b2/2026-09-19/word-audio/sensor.mp3"
+    },
+    {
+      "example": "Always keep a backup of your important files.",
+      "meaning": "a saved copy of data you can use if the original is lost",
+      "persian": "نسخه پشتیبان",
+      "photo": "media/b2/2026-09-19/photos/backup.jpg",
+      "pos": "noun",
+      "pronunciation": "BAK-up",
+      "word": "backup",
+      "word_audio": "media/b2/2026-09-19/word-audio/backup.mp3"
+    },
+    {
+      "example": "I want to upgrade my phone to a faster model.",
+      "meaning": "to make a device or system newer or better",
+      "persian": "ارتقا",
+      "photo": "media/b2/2026-09-19/photos/upgrade.jpg",
+      "pos": "verb",
+      "pronunciation": "up-GRADE",
+      "word": "upgrade",
+      "word_audio": "media/b2/2026-09-19/word-audio/upgrade.mp3"
+    },
+    {
+      "example": "You should check your privacy settings on social media.",
+      "meaning": "the right to keep your personal information safe",
+      "persian": "حریم خصوصی",
+      "photo": "media/b2/2026-09-19/photos/privacy.jpg",
+      "pos": "noun",
+      "pronunciation": "PRY-vuh-see",
+      "word": "privacy",
+      "word_audio": "media/b2/2026-09-19/word-audio/privacy.mp3"
+    },
+    {
+      "example": "A robot delivered the package to our office.",
+      "meaning": "a machine that can do tasks automatically",
+      "persian": "ربات",
+      "photo": "media/b2/2026-09-19/photos/robot.jpg",
+      "pos": "noun",
+      "pronunciation": "ROH-bot",
+      "word": "robot",
+      "word_audio": "media/b2/2026-09-19/word-audio/robot.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-09-19/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Technology in Your Pocket",
+    "audio": "media/b2/2026-09-19/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-09-19/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Robot That Cleans My Home",
+    "audio": "media/b2/2026-09-19/shadowing.mp3",
+    "transcript": "media/b2/2026-09-19/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "answer": 1,
+      "options": [
+        "the amount of data an internet connection can carry",
+        "a set of rules a computer follows to solve a problem",
+        "the right to keep your personal information safe",
+        "a small device that detects changes like heat, light, or movement"
+      ],
+      "question": "What does 'algorithm' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "to make a device or system newer or better",
+        "coding information so only allowed people can read it",
+        "the screen or control system you use to operate a device or app",
+        "a saved copy of data you can use if the original is lost"
+      ],
+      "question": "What does 'interface' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "coding information so only allowed people can read it",
+        "a machine that can do tasks automatically",
+        "not physically real but appearing real on a screen",
+        "a set of rules a computer follows to solve a problem"
+      ],
+      "question": "What does 'encryption' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "a saved copy of data you can use if the original is lost",
+        "the screen or control system you use to operate a device or app",
+        "a small device that detects changes like heat, light, or movement",
+        "the amount of data an internet connection can carry"
+      ],
+      "question": "What does 'bandwidth' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "the right to keep your personal information safe",
+        "a machine that can do tasks automatically",
+        "a set of rules a computer follows to solve a problem",
+        "not physically real but appearing real on a screen"
+      ],
+      "question": "What does 'virtual' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "a small device that detects changes like heat, light, or movement",
+        "to make a device or system newer or better",
+        "the amount of data an internet connection can carry",
+        "coding information so only allowed people can read it"
+      ],
+      "question": "What does 'sensor' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "the screen or control system you use to operate a device or app",
+        "a machine that can do tasks automatically",
+        "a saved copy of data you can use if the original is lost",
+        "not physically real but appearing real on a screen"
+      ],
+      "question": "What does 'backup' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "a small device that detects changes like heat, light, or movement",
+        "a saved copy of data you can use if the original is lost",
+        "the right to keep your personal information safe",
+        "to make a device or system newer or better"
+      ],
+      "question": "What does 'upgrade' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "the right to keep your personal information safe",
+        "a set of rules a computer follows to solve a problem",
+        "to make a device or system newer or better",
+        "the amount of data an internet connection can carry"
+      ],
+      "question": "What does 'privacy' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "coding information so only allowed people can read it",
+        "a machine that can do tasks automatically",
+        "a saved copy of data you can use if the original is lost",
+        "the screen or control system you use to operate a device or app"
+      ],
+      "question": "What does 'robot' mean?"
+    }
+  ],
+  "grammar": {
+    "examples": [
+      "I have never built an *algorithm* before. (present perfect + never for experience)",
+      "She has just learned the new *interface*. (present perfect + just for a recent action)",
+      "The bank has already updated its *encryption*. (present perfect + already)",
+      "Have you ever tested your *bandwidth* at home? (present perfect + ever for experience)",
+      "They have just launched a *virtual* museum tour. (present perfect + just)",
+      "I bought this *sensor* yesterday. (past simple + a finished time)",
+      "Have you made a *backup* yet? (present perfect + yet)",
+      "They *upgraded* their system last month. (past simple + a finished time)",
+      "I have never changed my *privacy* settings. (present perfect + never)",
+      "The *robot* arrived last Monday. (past simple + a finished time)"
+    ],
+    "explanation": "The **present perfect** is formed with **have/has + past participle**. Use it for past experiences when you do not say exactly when they happened. I have tested a cleaning robot at home, and I have never used an interface this simple before.\n\nUse the **present perfect** for recent actions that have a result now. It goes with **yet**, **already**, and **just**. She has just made a backup of her files. Have you upgraded your phone yet?\n\nUse the **past simple** for finished actions when you say or know when they happened. I installed a sensor in my hallway last week. The company released the big upgrade in June.\n\nNever use the **present perfect** with a past time expression like **yesterday** or **last year**. Say I checked my privacy settings yesterday, not I have checked my privacy settings yesterday.",
+    "practice": [
+      {
+        "a": "I have never tried a virtual class. (never + present perfect for experience)",
+        "q": "Choose the correct form: I ___ (never / try) a virtual class."
+      },
+      {
+        "a": "Wrong. Correct: I bought a new sensor yesterday. Never use the present perfect with 'yesterday'.",
+        "q": "Correct or wrong: I have bought a new sensor yesterday."
+      },
+      {
+        "a": "She has just made a backup of her data. (just + present perfect for a recent action)",
+        "q": "Complete the sentence: She ___ (just / make) a backup of her data."
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 0,
+        "options": [
+          "have written",
+          "wrote",
+          "have wrote",
+          "has written"
+        ],
+        "question": "I ___ an algorithm for a school project, but I've never finished one."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "has tried",
+          "have tried",
+          "tried",
+          "tries"
+        ],
+        "question": "She ___ the new interface last Monday."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "has updated",
+          "have updated",
+          "updated",
+          "updates"
+        ],
+        "question": "The bank ___ its encryption system in 2024."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "Have",
+          "Did",
+          "Has",
+          "Do"
+        ],
+        "question": "___ you ever tested your bandwidth at home?"
+      },
+      {
+        "answer": 1,
+        "options": [
+          "have had",
+          "had",
+          "has had",
+          "have"
+        ],
+        "question": "We ___ a virtual meeting yesterday afternoon."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "has stopped",
+          "stopped",
+          "have stopped",
+          "stop"
+        ],
+        "question": "The sensor ___ working an hour ago."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "made",
+          "have made",
+          "has made",
+          "make"
+        ],
+        "question": "I ___ a backup of my files, so I'm not worried now."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "have upgraded",
+          "has upgraded",
+          "upgraded",
+          "upgrade"
+        ],
+        "question": "They ___ their system last month."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "has",
+          "did",
+          "have",
+          "does"
+        ],
+        "question": "He ___ never shared his passwords with anyone."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "has arrived",
+          "arrived",
+          "have arrived",
+          "arrives"
+        ],
+        "question": "The robot ___ at nine o'clock this morning."
+      }
+    ],
+    "title": "2A: Present perfect and past simple"
+  }
+}
