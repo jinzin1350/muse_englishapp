@@ -1,0 +1,347 @@
+{
+  "date": "2026-10-02",
+  "theme": "money & shopping",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "money",
+      "pos": "noun",
+      "meaning": "paper and coins you use to buy things",
+      "example": "I use money to buy food.",
+      "pronunciation": "MUH-nee",
+      "persian": "پول",
+      "photo": "media/a1/2026-10-02/photos/money.jpg",
+      "word_audio": "media/a1/2026-10-02/word-audio/money.mp3"
+    },
+    {
+      "word": "coin",
+      "pos": "noun",
+      "meaning": "a small round metal piece of money",
+      "example": "This coin is small.",
+      "pronunciation": "KOYN",
+      "persian": "سکه",
+      "photo": "media/a1/2026-10-02/photos/coin.jpg",
+      "word_audio": "media/a1/2026-10-02/word-audio/coin.mp3"
+    },
+    {
+      "word": "wallet",
+      "pos": "noun",
+      "meaning": "a small case you keep your money in",
+      "example": "My money is in my wallet.",
+      "pronunciation": "WAH-lit",
+      "persian": "کیف پول",
+      "photo": "media/a1/2026-10-02/photos/wallet.jpg",
+      "word_audio": "media/a1/2026-10-02/word-audio/wallet.mp3"
+    },
+    {
+      "word": "price",
+      "pos": "noun",
+      "meaning": "how much money a thing costs",
+      "example": "The price is ten dollars.",
+      "pronunciation": "PRYS",
+      "persian": "قیمت",
+      "photo": "media/a1/2026-10-02/photos/price.jpg",
+      "word_audio": "media/a1/2026-10-02/word-audio/price.mp3"
+    },
+    {
+      "word": "cheap",
+      "pos": "adjective",
+      "meaning": "costs little money",
+      "example": "This shirt is cheap.",
+      "pronunciation": "CHEEP",
+      "persian": "ارزان",
+      "photo": "media/a1/2026-10-02/photos/cheap.jpg",
+      "word_audio": "media/a1/2026-10-02/word-audio/cheap.mp3"
+    },
+    {
+      "word": "expensive",
+      "pos": "adjective",
+      "meaning": "costs a lot of money",
+      "example": "This car is expensive.",
+      "pronunciation": "ik-SPEN-siv",
+      "persian": "گران",
+      "photo": "media/a1/2026-10-02/photos/expensive.jpg",
+      "word_audio": "media/a1/2026-10-02/word-audio/expensive.mp3"
+    },
+    {
+      "word": "pay",
+      "pos": "verb",
+      "meaning": "to give money for something",
+      "example": "I pay for my food.",
+      "pronunciation": "PAY",
+      "persian": "پرداخت کردن",
+      "photo": "media/a1/2026-10-02/photos/pay.jpg",
+      "word_audio": "media/a1/2026-10-02/word-audio/pay.mp3"
+    },
+    {
+      "word": "buy",
+      "pos": "verb",
+      "meaning": "to get something by giving money",
+      "example": "I buy bread every day.",
+      "pronunciation": "BY",
+      "persian": "خریدن",
+      "photo": "media/a1/2026-10-02/photos/buy.jpg",
+      "word_audio": "media/a1/2026-10-02/word-audio/buy.mp3"
+    },
+    {
+      "word": "sell",
+      "pos": "verb",
+      "meaning": "to give something and get money",
+      "example": "They sell bread in the shop.",
+      "pronunciation": "SEL",
+      "persian": "فروختن",
+      "photo": "media/a1/2026-10-02/photos/sell.jpg",
+      "word_audio": "media/a1/2026-10-02/word-audio/sell.mp3"
+    },
+    {
+      "word": "cash",
+      "pos": "noun",
+      "meaning": "money in paper and coins",
+      "example": "I pay with cash.",
+      "pronunciation": "KASH",
+      "persian": "پول نقد",
+      "photo": "media/a1/2026-10-02/photos/cash.jpg",
+      "word_audio": "media/a1/2026-10-02/word-audio/cash.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-02/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Money and Shopping",
+    "audio": "media/a1/2026-10-02/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-02/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: Money and Shopping",
+    "audio": "media/a1/2026-10-02/shadowing.mp3",
+    "transcript": "media/a1/2026-10-02/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'money' mean?",
+      "options": [
+        "paper and coins you use to buy things",
+        "a small round metal piece of money",
+        "costs a lot of money",
+        "to give money for something"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'coin' mean?",
+      "options": [
+        "costs little money",
+        "a small round metal piece of money",
+        "money in paper and coins",
+        "to get something by giving money"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'wallet' mean?",
+      "options": [
+        "how much money a thing costs",
+        "paper and coins you use to buy things",
+        "a small case you keep your money in",
+        "to give something and get money"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'price' mean?",
+      "options": [
+        "a small round metal piece of money",
+        "how much money a thing costs",
+        "costs a lot of money",
+        "to give money for something"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cheap' mean?",
+      "options": [
+        "money in paper and coins",
+        "to get something by giving money",
+        "costs little money",
+        "a small case you keep your money in"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'expensive' mean?",
+      "options": [
+        "costs a lot of money",
+        "paper and coins you use to buy things",
+        "how much money a thing costs",
+        "to give money for something"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'pay' mean?",
+      "options": [
+        "to get something by giving money",
+        "to give money for something",
+        "a small round metal piece of money",
+        "costs little money"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'buy' mean?",
+      "options": [
+        "money in paper and coins",
+        "how much money a thing costs",
+        "to give something and get money",
+        "to get something by giving money"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'sell' mean?",
+      "options": [
+        "to give something and get money",
+        "costs a lot of money",
+        "a small case you keep your money in",
+        "paper and coins you use to buy things"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cash' mean?",
+      "options": [
+        "costs little money",
+        "to give money for something",
+        "money in paper and coins",
+        "how much money a thing costs"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Can, can't, and could",
+    "explanation": "Use **can** to talk about what you are able to do now. I **can** pay with cash.\n\nUse **can't** when you are not able to do it. I **can't** buy an expensive car.\n\nUse **could** to talk about the past. Yesterday I **could** buy cheap bread for one coin.\n\n**Can**, **can't**, and **could** never change. We say I **can**, you **can**, she **can** — no -s!",
+    "examples": [
+      "I *can* pay with cash. (able now)",
+      "She *can* buy cheap bread. (able now)",
+      "I *can't* buy an expensive car. (not able)",
+      "He *can't* sell his old bike. (not able)",
+      "I *could* buy bread for one coin when I was little. (past)",
+      "We *could* pay with cash yesterday. (past)"
+    ],
+    "practice": [
+      {
+        "q": "Can you buy bread?",
+        "a": "Yes, I can. / No, I can't."
+      },
+      {
+        "q": "Could you pay with cash yesterday?",
+        "a": "Yes, I could. / No, I couldn't."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ pay with cash.",
+        "options": [
+          "can",
+          "cans",
+          "am can",
+          "can to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ buy that expensive car.",
+        "options": [
+          "can",
+          "can't",
+          "cans",
+          "don't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "When I was little, I ___ buy bread for one coin.",
+        "options": [
+          "could",
+          "can",
+          "cans",
+          "am"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Yesterday we ___ pay with cash.",
+        "options": [
+          "can",
+          "could",
+          "can'ts",
+          "are"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ you buy cheap bananas?",
+        "options": [
+          "Can",
+          "Does",
+          "Is",
+          "Are"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ sell fruit every day.",
+        "options": [
+          "can",
+          "cans",
+          "are can",
+          "can to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ buy the expensive apples. They cost too much.",
+        "options": [
+          "can",
+          "can't",
+          "could",
+          "do"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ pay with cash.",
+        "options": [
+          "can",
+          "cans",
+          "is can",
+          "canning"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You ___ buy cheap bread at that shop.",
+        "options": [
+          "cans",
+          "can",
+          "are",
+          "do"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ swim when she was five.",
+        "options": [
+          "could",
+          "can",
+          "cans",
+          "is"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a1/2026-10-02/grammar-en.mp3"
+  }
+}
