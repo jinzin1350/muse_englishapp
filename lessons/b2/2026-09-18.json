@@ -1,0 +1,350 @@
+{
+  "date": "2026-09-18",
+  "theme": "Sports & Fitness",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "workout",
+      "pos": "noun",
+      "meaning": "a planned session of physical exercise",
+      "example": "My morning workout includes running and push-ups.",
+      "pronunciation": "WURK-out",
+      "persian": "تمرین ورزشی",
+      "photo": "media/b2/2026-09-18/photos/workout.jpg",
+      "word_audio": "media/b2/2026-09-18/word-audio/workout.mp3"
+    },
+    {
+      "word": "cardio",
+      "pos": "noun",
+      "meaning": "exercise that raises your heart rate",
+      "example": "Swimming is great cardio for burning fat.",
+      "pronunciation": "KAR-dee-oh",
+      "persian": "ورزش هوازی",
+      "photo": "media/b2/2026-09-18/photos/cardio.jpg",
+      "word_audio": "media/b2/2026-09-18/word-audio/cardio.mp3"
+    },
+    {
+      "word": "sprint",
+      "pos": "verb",
+      "meaning": "to run very fast for a short distance",
+      "example": "She sprinted the last hundred meters of the race.",
+      "pronunciation": "SPRIHNT",
+      "persian": "دوی سرعت",
+      "photo": "media/b2/2026-09-18/photos/sprint.jpg",
+      "word_audio": "media/b2/2026-09-18/word-audio/sprint.mp3"
+    },
+    {
+      "word": "stretch",
+      "pos": "verb",
+      "meaning": "to extend your muscles to become more flexible",
+      "example": "Stretch your legs before you lift weights.",
+      "pronunciation": "STRETCH",
+      "persian": "کشش عضلات",
+      "photo": "media/b2/2026-09-18/photos/stretch.jpg",
+      "word_audio": "media/b2/2026-09-18/word-audio/stretch.mp3"
+    },
+    {
+      "word": "agility",
+      "pos": "noun",
+      "meaning": "the ability to move quickly and change direction easily",
+      "example": "Tennis players need agility as well as power.",
+      "pronunciation": "uh-JIH-luh-tee",
+      "persian": "چابکی",
+      "photo": "media/b2/2026-09-18/photos/agility.jpg",
+      "word_audio": "media/b2/2026-09-18/word-audio/agility.mp3"
+    },
+    {
+      "word": "strength",
+      "pos": "noun",
+      "meaning": "physical power and muscle force",
+      "example": "He built strength with heavy squats.",
+      "pronunciation": "STRENGTH",
+      "persian": "قدرت بدنی",
+      "photo": "media/b2/2026-09-18/photos/strength.jpg",
+      "word_audio": "media/b2/2026-09-18/word-audio/strength.mp3"
+    },
+    {
+      "word": "routine",
+      "pos": "noun",
+      "meaning": "a regular plan of exercises done in order",
+      "example": "She follows a strict gym routine.",
+      "pronunciation": "roo-TEEN",
+      "persian": "برنامه تمرینی",
+      "photo": "media/b2/2026-09-18/photos/routine.jpg",
+      "word_audio": "media/b2/2026-09-18/word-audio/routine.mp3"
+    },
+    {
+      "word": "technique",
+      "pos": "noun",
+      "meaning": "the correct way of performing a movement",
+      "example": "Good technique matters more than heavy weight.",
+      "pronunciation": "tek-NEEK",
+      "persian": "تکنیک",
+      "photo": "media/b2/2026-09-18/photos/technique.jpg",
+      "word_audio": "media/b2/2026-09-18/word-audio/technique.mp3"
+    },
+    {
+      "word": "compete",
+      "pos": "verb",
+      "meaning": "to try to win against others",
+      "example": "He will compete in the national championship.",
+      "pronunciation": "kum-PEET",
+      "persian": "رقابت کردن",
+      "photo": "media/b2/2026-09-18/photos/compete.jpg",
+      "word_audio": "media/b2/2026-09-18/word-audio/compete.mp3"
+    },
+    {
+      "word": "interval",
+      "pos": "noun",
+      "meaning": "a short burst of hard effort followed by rest",
+      "example": "Interval training burns calories fast.",
+      "pronunciation": "IHN-ter-vul",
+      "persian": "تمرین تناوبی",
+      "photo": "media/b2/2026-09-18/photos/interval.jpg",
+      "word_audio": "media/b2/2026-09-18/word-audio/interval.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-09-18/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Train Smart, Get Fit",
+    "audio": "media/b2/2026-09-18/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-09-18/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Fitness Journey",
+    "audio": "media/b2/2026-09-18/shadowing.mp3",
+    "transcript": "media/b2/2026-09-18/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'workout' mean?",
+      "options": [
+        "exercise that raises your heart rate",
+        "a planned session of physical exercise",
+        "the correct way of performing a movement",
+        "to run very fast for a short distance"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cardio' mean?",
+      "options": [
+        "physical power and muscle force",
+        "to extend your muscles to become more flexible",
+        "exercise that raises your heart rate",
+        "a regular plan of exercises done in order"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'sprint' mean?",
+      "options": [
+        "to run very fast for a short distance",
+        "the ability to move quickly and change direction easily",
+        "a short burst of hard effort followed by rest",
+        "to try to win against others"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'stretch' mean?",
+      "options": [
+        "a planned session of physical exercise",
+        "exercise that raises your heart rate",
+        "the correct way of performing a movement",
+        "to extend your muscles to become more flexible"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'agility' mean?",
+      "options": [
+        "physical power and muscle force",
+        "the ability to move quickly and change direction easily",
+        "to run very fast for a short distance",
+        "a regular plan of exercises done in order"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'strength' mean?",
+      "options": [
+        "exercise that raises your heart rate",
+        "a short burst of hard effort followed by rest",
+        "physical power and muscle force",
+        "to try to win against others"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'routine' mean?",
+      "options": [
+        "a regular plan of exercises done in order",
+        "to extend your muscles to become more flexible",
+        "a planned session of physical exercise",
+        "the ability to move quickly and change direction easily"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'technique' mean?",
+      "options": [
+        "to run very fast for a short distance",
+        "physical power and muscle force",
+        "exercise that raises your heart rate",
+        "the correct way of performing a movement"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'compete' mean?",
+      "options": [
+        "a planned session of physical exercise",
+        "the correct way of performing a movement",
+        "to try to win against others",
+        "a short burst of hard effort followed by rest"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'interval' mean?",
+      "options": [
+        "the ability to move quickly and change direction easily",
+        "a short burst of hard effort followed by rest",
+        "physical power and muscle force",
+        "to extend your muscles to become more flexible"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "1B: Future forms - present continuous, be going to, will / won't",
+    "explanation": "English has three main ways to talk about the future. Each one fits a different situation.\n\nUse **be going to + infinitive** for plans you have already decided. For example, you are going to add cardio to your workout routine next month.\n\nAlso use **be going to** for predictions with clear evidence. If your friend looks exhausted after one interval, he is going to rest soon.\n\nUse the **present continuous** for future arrangements you have already fixed. If you signed up for a race, say you are competing next Saturday.\n\nUse **will / won't** for instant decisions, promises, and offers. You will fix your sprint technique, I promise.\n\nUse **will** for predictions without strong evidence. Your strength will grow, and your agility will improve with practice.\n\nUse **will** for future facts too, like the time a race starts. **Shall** is only used with I and we in questions, as in shall we stretch before the workout?",
+    "examples": [
+      "I *am going to start* a new workout routine in October. (a plan already decided)",
+      "Look at those dark clouds. It *is going to rain* during the race. (prediction with evidence)",
+      "We *are competing* in the city tournament next month. (a fixed arrangement)",
+      "He *is meeting* his coach to practice sprint starts at ten tomorrow. (a future arrangement)",
+      "A: I can't finish this set. B: Don't worry, I *will help* you. (an offer)",
+      "I *won't forget* to stretch after my workout. (a promise)",
+      "I think your cardio *will feel* easier after a month of training. (a prediction)",
+      "The final *will start* at nine o'clock. (a future fact)",
+      "*Shall we try* an interval session on Friday? (a suggestion)",
+      "Her strength *will improve* if she trains regularly. (a prediction)"
+    ],
+    "practice": [
+      {
+        "q": "When do you use 'be going to' instead of 'will'?",
+        "a": "Use 'be going to' for plans you already decided and for predictions with clear evidence. Use 'will' for instant decisions, promises, and offers."
+      },
+      {
+        "q": "Choose the correct form: 'I (am seeing / will see) my coach tomorrow. We booked the session yesterday.'",
+        "a": "'I am seeing my coach tomorrow' — it is a fixed arrangement, so use the present continuous."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Look at those black clouds! It ___ during our workout.",
+        "options": [
+          "will rain",
+          "is going to rain",
+          "rains",
+          "would rain"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ in the city race next Saturday. I registered last week.",
+        "options": [
+          "will compete",
+          "am competing",
+          "compete",
+          "am going compete"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "A: I'm too tired to finish. B: Don't worry, I ___ you.",
+        "options": [
+          "am helping",
+          "help",
+          "will help",
+          "am going to help"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We ___ our new strength plan next month. We have already decided.",
+        "options": [
+          "start",
+          "will start",
+          "are going to start",
+          "starting"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ I show you the correct stretch technique?",
+        "options": [
+          "Shall",
+          "Will",
+          "Do",
+          "Am"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "A: We need more water. B: OK, I ___ some from the shop.",
+        "options": [
+          "am buying",
+          "buy",
+          "will buy",
+          "am going to buy"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I ___ to skip our training session. I promise.",
+        "options": [
+          "don't forget",
+          "won't forget",
+          "am not forgetting",
+          "am not going to forget"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ we eat out tonight? I'm too tired to cook.",
+        "options": [
+          "Will",
+          "Do",
+          "Are",
+          "Shall"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Jane ___ on Friday and coming back next Tuesday. She already bought her ticket.",
+        "options": [
+          "leave",
+          "will leave",
+          "is going leave",
+          "is leaving"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He ___ in the sprint final tomorrow. He qualified yesterday.",
+        "options": [
+          "competes",
+          "will compete",
+          "is going compete",
+          "is competing"
+        ],
+        "answer": 3
+      }
+    ]
+  }
+}
