@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-02",
+  "theme": "travel & transport",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "departure",
+      "pos": "noun",
+      "meaning": "the moment a plane, train, or bus leaves",
+      "example": "The departure of our train was announced over the speaker.",
+      "pronunciation": "deh-PAR-chur",
+      "persian": "حرکت؛ آغاز سفر",
+      "photo": "media/b2/2026-10-02/photos/departure.jpg",
+      "word_audio": "media/b2/2026-10-02/word-audio/departure.mp3"
+    },
+    {
+      "word": "boarding",
+      "pos": "noun",
+      "meaning": "getting on a plane, train, or ship",
+      "example": "Boarding starts forty-five minutes before takeoff.",
+      "pronunciation": "BOR-ding",
+      "persian": "سوار شدن (به هواپیما/قطار)",
+      "photo": "media/b2/2026-10-02/photos/boarding.jpg",
+      "word_audio": "media/b2/2026-10-02/word-audio/boarding.mp3"
+    },
+    {
+      "word": "turbulence",
+      "pos": "noun",
+      "meaning": "sudden rough movement of air that makes a plane shake",
+      "example": "Strong turbulence spilled coffee from the cups.",
+      "pronunciation": "TUR-byuh-lunts",
+      "persian": "تلاطم هوا",
+      "photo": "media/b2/2026-10-02/photos/turbulence.jpg",
+      "word_audio": "media/b2/2026-10-02/word-audio/turbulence.mp3"
+    },
+    {
+      "word": "transfer",
+      "pos": "noun",
+      "meaning": "changing to another plane, train, or bus during a journey",
+      "example": "Our transfer in Frankfurt took only forty minutes.",
+      "pronunciation": "TRANS-fur",
+      "persian": "تعویض وسیله نقلیه (در میانه سفر)",
+      "photo": "media/b2/2026-10-02/photos/transfer.jpg",
+      "word_audio": "media/b2/2026-10-02/word-audio/transfer.mp3"
+    },
+    {
+      "word": "round trip",
+      "pos": "noun",
+      "meaning": "a journey to a place and back again",
+      "example": "A round trip to London costs less than two one-way tickets.",
+      "pronunciation": "ROUND-trip",
+      "persian": "سفر رفت و برگشت",
+      "photo": "media/b2/2026-10-02/photos/round_trip.jpg",
+      "word_audio": "media/b2/2026-10-02/word-audio/round_trip.mp3"
+    },
+    {
+      "word": "stopover",
+      "pos": "noun",
+      "meaning": "a short planned stop in the middle of a long journey",
+      "example": "We enjoyed a two-day stopover in Dubai.",
+      "pronunciation": "STOP-oh-vur",
+      "persian": "توقف کوتاه در میانه سفر",
+      "photo": "media/b2/2026-10-02/photos/stopover.jpg",
+      "word_audio": "media/b2/2026-10-02/word-audio/stopover.mp3"
+    },
+    {
+      "word": "cruise",
+      "pos": "noun",
+      "meaning": "a holiday spent traveling on a large ship",
+      "example": "They celebrated their anniversary on a Mediterranean cruise.",
+      "pronunciation": "KROOZ",
+      "persian": "سفر دریایی تفریحی",
+      "photo": "media/b2/2026-10-02/photos/cruise.jpg",
+      "word_audio": "media/b2/2026-10-02/word-audio/cruise.mp3"
+    },
+    {
+      "word": "aisle",
+      "pos": "noun",
+      "meaning": "the narrow walkway between rows of seats",
+      "example": "I always choose an aisle seat so I can stretch my legs.",
+      "pronunciation": "AIL",
+      "persian": "راهروی میان صندلی‌ها",
+      "photo": "media/b2/2026-10-02/photos/aisle.jpg",
+      "word_audio": "media/b2/2026-10-02/word-audio/aisle.mp3"
+    },
+    {
+      "word": "overhead",
+      "pos": "adjective",
+      "meaning": "above your head",
+      "example": "Put small bags in the overhead locker before sitting down.",
+      "pronunciation": "OH-vur-hed",
+      "persian": "بالای سر",
+      "photo": "media/b2/2026-10-02/photos/overhead.jpg",
+      "word_audio": "media/b2/2026-10-02/word-audio/overhead.mp3"
+    },
+    {
+      "word": "excursion",
+      "pos": "noun",
+      "meaning": "a short trip taken for pleasure",
+      "example": "The hotel arranged a half-day excursion to the waterfalls.",
+      "pronunciation": "ek-SKUR-zhun",
+      "persian": "گردش کوتاه تفریحی",
+      "photo": "media/b2/2026-10-02/photos/excursion.jpg",
+      "word_audio": "media/b2/2026-10-02/word-audio/excursion.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-10-02/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Travel Smarter",
+    "audio": "media/b2/2026-10-02/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-02/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Trip That Taught Me Everything",
+    "audio": "media/b2/2026-10-02/shadowing.mp3",
+    "transcript": "media/b2/2026-10-02/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'departure' mean?",
+      "options": [
+        "a short trip taken for pleasure",
+        "the moment a plane, train, or bus leaves",
+        "changing to another vehicle during a journey",
+        "the walkway between rows of seats"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'boarding' mean?",
+      "options": [
+        "getting on a plane, train, or ship",
+        "a holiday spent traveling on a large ship",
+        "above your head",
+        "sudden rough air that shakes a plane"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'turbulence' mean?",
+      "options": [
+        "the walkway between rows of seats",
+        "a journey to a place and back again",
+        "sudden rough movement of air that makes a plane shake",
+        "a short planned stop in a long journey"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'transfer' mean?",
+      "options": [
+        "a short trip taken for pleasure",
+        "above your head",
+        "the moment of leaving",
+        "changing to another vehicle during a journey"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'round trip' mean?",
+      "options": [
+        "a journey to a place and back again",
+        "getting on a plane",
+        "a holiday spent on a large ship",
+        "sudden rough air movement"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'stopover' mean?",
+      "options": [
+        "changing vehicles mid-journey",
+        "the walkway between rows of seats",
+        "a short planned stop in the middle of a long journey",
+        "a holiday spent on a large ship"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'cruise' mean?",
+      "options": [
+        "a holiday spent traveling on a large ship",
+        "a short trip taken for pleasure",
+        "the moment a plane leaves",
+        "above your head"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'aisle' mean?",
+      "options": [
+        "the moment of leaving",
+        "sudden rough air movement",
+        "getting on a plane",
+        "the narrow walkway between rows of seats"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'overhead' mean?",
+      "options": [
+        "changing vehicles mid-journey",
+        "a journey to a place and back",
+        "above your head",
+        "a short planned stop"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'excursion' mean?",
+      "options": [
+        "a short trip taken for pleasure",
+        "the walkway between rows of seats",
+        "a holiday spent on a large ship",
+        "the moment of leaving"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "4B: Ability and possibility - can, could, be able to",
+    "explanation": "**can** is a modal verb for ability and possibility. It has only one form, but we also use it with future meaning.\n\nFor past ability and possibility, we use **could**. It is the past of **can** and also works in conditional sentences.\n\nFor every other tense or form — the perfect, the infinitive, the gerund — there is no form of **can**, so we use **be able to** + infinitive.\n\nWe sometimes use **be able to** in the present and past too, when we want to sound more formal.\n\nIn the negative past, both **couldn't** and **wasn't able to** are possible.",
+    "examples": [
+      "I *can* book a round trip online in five minutes. (present ability)",
+      "Our daughter *could* swim across the pool when she was six. (past ability)",
+      "She has *been able to* travel alone since her first excursion. (present perfect — no form of can exists)",
+      "I would love *to be able to* take a cruise next summer. (infinitive — after 'to')",
+      "He enjoys *being able to* choose an aisle seat every time. (gerund — after 'enjoy')",
+      "After the long transfer, we *weren't able to* find our stopover hotel. (past negative)"
+    ],
+    "practice": [
+      {
+        "q": "Can we use 'can' after 'to'? Fix this sentence: 'I want to can speak French.'",
+        "a": "No. Say: 'I want to be able to speak French.'"
+      },
+      {
+        "q": "Talk about last year (past ability): 'You ___ drive to the coast?'",
+        "a": "'Could you drive to the coast?' — or the more formal 'Were you able to drive to the coast?' Both are correct."
+      },
+      {
+        "q": "Which is correct: 'She will can join us' or 'She will be able to join us'?",
+        "a": "'She will be able to join us.' Can has no future form."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I've always wanted to ___ dance salsa.",
+        "options": [
+          "can",
+          "be able to",
+          "could",
+          "am able"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She's much better after her operation. She'll ___ walk again soon.",
+        "options": [
+          "can",
+          "be able to",
+          "could",
+          "able"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He hasn't ___ mend my bike yet. He'll do it tomorrow.",
+        "options": [
+          "could",
+          "been able to",
+          "be able to",
+          "can"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "It's the weekend at last! I love ___ go out with my friends.",
+        "options": [
+          "can",
+          "being able to",
+          "to can",
+          "be able"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "When we lived on the coast, we used to ___ go to the beach every day.",
+        "options": [
+          "can",
+          "be able to",
+          "could",
+          "able to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We won't ___ go on holiday this year because we need a new car.",
+        "options": [
+          "can",
+          "be able to",
+          "could",
+          "able"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Her mobile has been off all morning, so I ___ talk to her yet.",
+        "options": [
+          "haven't been able to",
+          "couldn't",
+          "can't",
+          "haven't could"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You need ___ swim before you can go in a canoe.",
+        "options": [
+          "can",
+          "to be able to",
+          "being able to",
+          "could"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Fortunately, firefighters ___ rescue everybody from the burning house.",
+        "options": [
+          "could",
+          "were able to",
+          "have been able to",
+          "will be able to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I'm sorry, but we ___ come to your wedding next month. We'll be on holiday.",
+        "options": [
+          "can't",
+          "won't be able to",
+          "couldn't",
+          "aren't able"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}
