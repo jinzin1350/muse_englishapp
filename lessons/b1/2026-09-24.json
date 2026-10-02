@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-24",
+  "theme": "Money & Shopping",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "checkout",
+      "pos": "noun",
+      "meaning": "the place in a store where you pay for your items",
+      "example": "There was a long line at the checkout.",
+      "pronunciation": "CHEK-out",
+      "persian": "صندوق پرداخت؛ مرحله پرداخت",
+      "photo": "media/b1/2026-09-24/photos/checkout.jpg",
+      "word_audio": "media/b1/2026-09-24/word-audio/checkout.mp3"
+    },
+    {
+      "word": "installment",
+      "pos": "noun",
+      "meaning": "one of several small payments you make over time",
+      "example": "I bought the phone in twelve monthly installments.",
+      "pronunciation": "in-STAHL-ment",
+      "persian": "قسط",
+      "photo": "media/b1/2026-09-24/photos/installment.jpg",
+      "word_audio": "media/b1/2026-09-24/word-audio/installment.mp3"
+    },
+    {
+      "word": "invoice",
+      "pos": "noun",
+      "meaning": "an official paper or email that asks you to pay",
+      "example": "The company sent me an invoice for the repair.",
+      "pronunciation": "IN-voys",
+      "persian": "فاکتور؛ صورتحساب رسمی",
+      "photo": "media/b1/2026-09-24/photos/invoice.jpg",
+      "word_audio": "media/b1/2026-09-24/word-audio/invoice.mp3"
+    },
+    {
+      "word": "deposit",
+      "pos": "noun",
+      "meaning": "money you pay in advance to keep a service or place",
+      "example": "We paid a deposit to rent the apartment.",
+      "pronunciation": "duh-PAH-zit",
+      "persian": "پیش‌پرداخت؛ ودیعه",
+      "photo": "media/b1/2026-09-24/photos/deposit.jpg",
+      "word_audio": "media/b1/2026-09-24/word-audio/deposit.mp3"
+    },
+    {
+      "word": "purchase",
+      "pos": "verb",
+      "meaning": "to buy something",
+      "example": "She purchased a new laptop yesterday.",
+      "pronunciation": "PUR-chiss",
+      "persian": "خریدن؛ خرید",
+      "photo": "media/b1/2026-09-24/photos/purchase.jpg",
+      "word_audio": "media/b1/2026-09-24/word-audio/purchase.mp3"
+    },
+    {
+      "word": "warranty",
+      "pos": "noun",
+      "meaning": "a promise to repair or replace a product if it breaks",
+      "example": "The TV comes with a two-year warranty.",
+      "pronunciation": "WAR-un-tee",
+      "persian": "ضمانت‌نامه؛ گارانتی",
+      "photo": "media/b1/2026-09-24/photos/warranty.jpg",
+      "word_audio": "media/b1/2026-09-24/word-audio/warranty.mp3"
+    },
+    {
+      "word": "loyalty",
+      "pos": "noun",
+      "meaning": "a store program that rewards regular customers",
+      "example": "Show your loyalty card to get extra points.",
+      "pronunciation": "LOY-ul-tee",
+      "persian": "وفاداری (برنامه وفاداری مشتری)",
+      "photo": "media/b1/2026-09-24/photos/loyalty.jpg",
+      "word_audio": "media/b1/2026-09-24/word-audio/loyalty.mp3"
+    },
+    {
+      "word": "tax",
+      "pos": "noun",
+      "meaning": "money you pay to the government on things you buy",
+      "example": "The price includes eight percent tax.",
+      "pronunciation": "taks",
+      "persian": "مالیات",
+      "photo": "media/b1/2026-09-24/photos/tax.jpg",
+      "word_audio": "media/b1/2026-09-24/word-audio/tax.mp3"
+    },
+    {
+      "word": "fee",
+      "pos": "noun",
+      "meaning": "money you pay for a service",
+      "example": "The bank charges a monthly fee for the account.",
+      "pronunciation": "fee",
+      "persian": "کارمزد؛ هزینه خدمات",
+      "photo": "media/b1/2026-09-24/photos/fee.jpg",
+      "word_audio": "media/b1/2026-09-24/word-audio/fee.mp3"
+    },
+    {
+      "word": "payment",
+      "pos": "noun",
+      "meaning": "the act of paying money for something",
+      "example": "You can make the payment by card or in cash.",
+      "pronunciation": "PAY-ment",
+      "persian": "پرداخت",
+      "photo": "media/b1/2026-09-24/photos/payment.jpg",
+      "word_audio": "media/b1/2026-09-24/word-audio/payment.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-09-24/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Money & Shopping",
+    "audio": "media/b1/2026-09-24/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-09-24/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shadowing: A Smart Shopping Day",
+    "audio": "media/b1/2026-09-24/shadowing.mp3",
+    "transcript": "media/b1/2026-09-24/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'checkout' mean?",
+      "options": [
+        "the place in a store where you pay for your items",
+        "money you pay for a service",
+        "one of several small payments you make over time",
+        "the act of paying money for something"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'installment' mean?",
+      "options": [
+        "money you pay to the government on things you buy",
+        "one of several small payments you make over time",
+        "an official paper or email that asks you to pay",
+        "a promise to repair or replace a product if it breaks"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'invoice' mean?",
+      "options": [
+        "to buy something",
+        "a store program that rewards regular customers",
+        "an official paper or email that asks you to pay",
+        "money you pay in advance to keep a service or place"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'deposit' mean?",
+      "options": [
+        "the act of paying money for something",
+        "the place in a store where you pay for your items",
+        "money you pay in advance to keep a service or place",
+        "money you pay for a service"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'purchase' mean?",
+      "options": [
+        "to buy something",
+        "a promise to repair or replace a product if it breaks",
+        "one of several small payments you make over time",
+        "money you pay to the government on things you buy"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'warranty' mean?",
+      "options": [
+        "an official paper or email that asks you to pay",
+        "a promise to repair or replace a product if it breaks",
+        "a store program that rewards regular customers",
+        "the place in a store where you pay for your items"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'loyalty' mean?",
+      "options": [
+        "money you pay in advance to keep a service or place",
+        "to buy something",
+        "a store program that rewards regular customers",
+        "the act of paying money for something"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'tax' mean?",
+      "options": [
+        "money you pay to the government on things you buy",
+        "money you pay for a service",
+        "one of several small payments you make over time",
+        "a promise to repair or replace a product if it breaks"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'fee' mean?",
+      "options": [
+        "an official paper or email that asks you to pay",
+        "the place in a store where you pay for your items",
+        "money you pay for a service",
+        "a store program that rewards regular customers"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'payment' mean?",
+      "options": [
+        "to buy something",
+        "money you pay in advance to keep a service or place",
+        "money you pay to the government on things you buy",
+        "the act of paying money for something"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "1B: Future forms - present continuous, be going to, will / won't",
+    "explanation": "Use **be going to + infinitive** for plans you have already decided. I have decided: I am **going to make** the final payment on Friday.\n\nUse **be going to** for predictions with evidence, when you can see it coming. Look at that total: this purchase is **going to be** expensive.\n\nUse the **present continuous** for future arrangements, plans with a fixed time and place. I am **paying** the deposit at the checkout tomorrow morning.\n\nUse **will / will not** for instant decisions, when you decide at the moment of speaking. The invoice is here? OK, I will **pay** it right now.\n\nUse **will** for promises and offers. I promise: I will **cover** the extra fee. Shall I **help** you with the installment plan?\n\nUse **will** for predictions, when it is just your opinion with no evidence. I think the new loyalty program **will** be popular.\n\nUse **will** for future facts. The tax **will** add about ten dollars, and the warranty **will** last two years.",
+    "examples": [
+      "I'm *going to pay* in six installments. (a decided plan)",
+      "Look at the total: this purchase is *going to be* expensive. (prediction with evidence)",
+      "We're *meeting* the bank manager on Monday to talk about the payment. (arrangement)",
+      "I'm *paying* the deposit at the checkout tomorrow. (arrangement)",
+      "The invoice is here: I'll *pay* it right now. (instant decision)",
+      "I'll *cover* the extra fee. I promise. (promise)",
+      "I'll *help* you fill in the warranty form. (offer)",
+      "I think the new loyalty card *will* save you money. (prediction, just an opinion)",
+      "The tax *will* add about ten dollars. (future fact)",
+      "I'm *going to make* the final payment on Friday. (a decided plan)"
+    ],
+    "practice": [
+      {
+        "q": "I've already decided: I'm paying in installments. Which form is it?",
+        "a": "**be going to** — a plan already decided: I'm *going to pay* in installments."
+      },
+      {
+        "q": "The phone rings: it's the bank. What do you say?",
+        "a": "An instant decision — **will**: I'll *answer* it."
+      },
+      {
+        "q": "We have a meeting at ten on Monday. Which form is it?",
+        "a": "**present continuous** — an arrangement: We're *meeting* at ten."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I've decided to buy the laptop. I ___ in monthly installments.",
+        "options": [
+          "am going to pay",
+          "will pay",
+          "pay",
+          "am paying"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Look at that price! This purchase ___ very expensive.",
+        "options": [
+          "will be",
+          "is going to be",
+          "is being",
+          "be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We have an appointment. We ___ the bank manager at ten on Monday.",
+        "options": [
+          "will meet",
+          "are going to meet",
+          "are meeting",
+          "meet"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The invoice is here. OK, I ___ it right now.",
+        "options": [
+          "am going to pay",
+          "pay",
+          "will pay",
+          "am paying"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I promise I ___ the extra fee for you.",
+        "options": [
+          "am going to cover",
+          "cover",
+          "will cover",
+          "am covering"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In my opinion, the new loyalty program ___ popular.",
+        "options": [
+          "is going to be",
+          "will be",
+          "is being",
+          "be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The tax ___ about ten dollars to the price. That's a fact.",
+        "options": [
+          "is going to add",
+          "will add",
+          "adds",
+          "is adding"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ the deposit at the checkout tomorrow morning. It's arranged.",
+        "options": [
+          "will pay",
+          "am going to pay",
+          "am paying",
+          "pay"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Don't worry about the warranty. It ___ for two years.",
+        "options": [
+          "is going to last",
+          "will last",
+          "lasts",
+          "is lasting"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I've made up my mind. I ___ the final payment on Friday.",
+        "options": [
+          "will make",
+          "make",
+          "am going to make",
+          "am making"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-24",
+  "theme": "Nature & Environment",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "biodiversity",
+      "pos": "noun",
+      "meaning": "the variety of plant and animal life in a particular habitat",
+      "example": "Coral reefs support extraordinary biodiversity.",
+      "pronunciation": "buy-oh-dih-VUR-sih-tee",
+      "persian": "تنوع زیستی",
+      "photo": "media/c1/2026-09-24/photos/biodiversity.jpg",
+      "word_audio": "media/c1/2026-09-24/word-audio/biodiversity.mp3"
+    },
+    {
+      "word": "deforestation",
+      "pos": "noun",
+      "meaning": "the clearing of forests, usually to make land available for other uses",
+      "example": "Deforestation in the Amazon has slowed, but it has not stopped.",
+      "pronunciation": "dee-FOR-uh-STAY-shun",
+      "persian": "جنگل‌زدایی",
+      "photo": "media/c1/2026-09-24/photos/deforestation.jpg",
+      "word_audio": "media/c1/2026-09-24/word-audio/deforestation.mp3"
+    },
+    {
+      "word": "rewilding",
+      "pos": "noun",
+      "meaning": "the restoration of land to a natural, wild state",
+      "example": "Rewilding projects are bringing wolves back to parts of Europe.",
+      "pronunciation": "ree-WYL-ding",
+      "persian": "احیای طبیعت وحشی",
+      "photo": "media/c1/2026-09-24/photos/rewilding.jpg",
+      "word_audio": "media/c1/2026-09-24/word-audio/rewilding.mp3"
+    },
+    {
+      "word": "replenish",
+      "pos": "verb",
+      "meaning": "to fill something up again; to restore to a former level",
+      "example": "Wetlands replenish the groundwater that cities depend on.",
+      "pronunciation": "rih-PLEN-ish",
+      "persian": "تجدید کردن",
+      "photo": "media/c1/2026-09-24/photos/replenish.jpg",
+      "word_audio": "media/c1/2026-09-24/word-audio/replenish.mp3"
+    },
+    {
+      "word": "deplete",
+      "pos": "verb",
+      "meaning": "to use up the supply of something",
+      "example": "Overfishing is depleting fish stocks at an alarming rate.",
+      "pronunciation": "dih-PLEET",
+      "persian": "تهی کردن",
+      "photo": "media/c1/2026-09-24/photos/deplete.jpg",
+      "word_audio": "media/c1/2026-09-24/word-audio/deplete.mp3"
+    },
+    {
+      "word": "contaminate",
+      "pos": "verb",
+      "meaning": "to make something impure or polluted",
+      "example": "The factory contaminated the river with heavy metals.",
+      "pronunciation": "kuhn-TAM-ih-nayt",
+      "persian": "آلوده کردن",
+      "photo": "media/c1/2026-09-24/photos/contaminate.jpg",
+      "word_audio": "media/c1/2026-09-24/word-audio/contaminate.mp3"
+    },
+    {
+      "word": "pristine",
+      "pos": "adjective",
+      "meaning": "in its original condition; untouched and unspoiled",
+      "example": "They camped beside a pristine alpine lake.",
+      "pronunciation": "PRISS-teen",
+      "persian": "بکر",
+      "photo": "media/c1/2026-09-24/photos/pristine.jpg",
+      "word_audio": "media/c1/2026-09-24/word-audio/pristine.mp3"
+    },
+    {
+      "word": "invasive",
+      "pos": "adjective",
+      "meaning": "(of a plant or animal) spreading aggressively and harming the local environment",
+      "example": "Invasive species threaten native wildlife across the islands.",
+      "pronunciation": "in-VAY-siv",
+      "persian": "مهاجم",
+      "photo": "media/c1/2026-09-24/photos/invasive.jpg",
+      "word_audio": "media/c1/2026-09-24/word-audio/invasive.mp3"
+    },
+    {
+      "word": "extinction",
+      "pos": "noun",
+      "meaning": "the dying out of a species",
+      "example": "Conservationists are racing to prevent the extinction of the vaquita.",
+      "pronunciation": "ik-STINK-shun",
+      "persian": "انقراض",
+      "photo": "media/c1/2026-09-24/photos/extinction.jpg",
+      "word_audio": "media/c1/2026-09-24/word-audio/extinction.mp3"
+    },
+    {
+      "word": "wetland",
+      "pos": "noun",
+      "meaning": "land covered or saturated with water, such as a marsh or swamp",
+      "example": "Wetlands act as natural filters for drinking water.",
+      "pronunciation": "WET-lund",
+      "persian": "تالاب",
+      "photo": "media/c1/2026-09-24/photos/wetland.jpg",
+      "word_audio": "media/c1/2026-09-24/word-audio/wetland.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-09-24/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Saving the Wild",
+    "audio": "media/c1/2026-09-24/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-09-24/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Comeback of Miller's Creek",
+    "audio": "media/c1/2026-09-24/shadowing.mp3",
+    "transcript": "media/c1/2026-09-24/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'biodiversity' mean?",
+      "options": [
+        "the clearing of forests to make land available for other uses",
+        "the variety of plant and animal life in a particular habitat",
+        "land covered or saturated with water",
+        "a species that spreads aggressively in a new place"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'deforestation' mean?",
+      "options": [
+        "to fill something up again",
+        "the dying out of a species",
+        "in its original, untouched condition",
+        "the clearing of forests, usually for farms, roads, or cities"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'rewilding' mean?",
+      "options": [
+        "the restoration of land to a natural, wild state",
+        "the variety of plant and animal life",
+        "to make something impure or polluted",
+        "to use up the supply of something"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'replenish' mean?",
+      "options": [
+        "to use up the supply of something",
+        "the clearing of forests",
+        "to fill something up again; to restore to a former level",
+        "land covered or saturated with water"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'deplete' mean?",
+      "options": [
+        "to make something impure",
+        "the dying out of a species",
+        "restoring land to a wild state",
+        "to use up the supply of something"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'contaminate' mean?",
+      "options": [
+        "to fill something up again",
+        "to make something impure or polluted",
+        "the variety of plant and animal life",
+        "a marsh or swamp"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'pristine' mean?",
+      "options": [
+        "spreading aggressively and harming the local environment",
+        "in its original condition; untouched and unspoiled",
+        "the clearing of forests",
+        "to use up the supply of something"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'invasive' mean?",
+      "options": [
+        "the dying out of a species",
+        "the variety of plant and animal life in a habitat",
+        "to fill something up again",
+        "a plant or animal that spreads aggressively and harms the local environment"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'extinction' mean?",
+      "options": [
+        "the clearing of forests",
+        "land covered or saturated with water",
+        "the dying out of a species",
+        "to make something impure"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'wetland' mean?",
+      "options": [
+        "in its original untouched condition",
+        "restoring land to a natural wild state",
+        "to use up the supply of something",
+        "land covered or saturated with water, such as a marsh or swamp"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "1B: Future forms - present continuous, be going to, will / won't",
+    "explanation": "Use **be going to + infinitive** for future plans and intentions that are already decided. It also makes predictions when there is clear present evidence.\n\nUse the **present continuous** for future arrangements that already have a time or place fixed. It sounds more definite than a general intention.\n\nUse **will / won't + infinitive** for instant decisions made while speaking. It also covers promises, offers, refusals, and spontaneous predictions.\n\n**Will** additionally states future facts and strong predictions without present evidence. Formal **shall** survives in offers and suggestions with I and we.\n\nAt C1 level, nuance matters more than rules. Choosing **be going to** over **will** signals that a conservation decision about deforestation or rewilding was made long before you spoke.\n\nSimilarly, the **present continuous** suits biodiversity summits and wetland cleanups with fixed schedules. It presents the future as already organized, not merely hoped for.\n\nAnd **will** fits warnings about extinction, or promises to replenish rivers that industry helped deplete and contaminate. It carries the speaker's commitment in the moment.\n\nA common C1 error is using **will** for pre-decided plans. If volunteers already agreed to remove an invasive plant, they **are going to** clear it.\n\nAnother error is the **present continuous** without a real arrangement. A pristine river is only being protected if someone actually scheduled the protection.",
+    "examples": [
+      "The council *is going to* launch a rewilding project across the northern hills. (already decided — be going to)",
+      "Look at those black clouds over the wetland — it *is going to* pour. (prediction with present evidence)",
+      "Dr. Evans *is giving* a talk on biodiversity at the museum this Friday. (fixed arrangement — present continuous)",
+      "We *are meeting* the forestry team on Monday to discuss deforestation permits. (arrangement with a set time)",
+      "The engineers say the spring rains *will* replenish the reservoir by June. (prediction — will)",
+      "Careful with that drum! *You'll* contaminate the whole stream. (spontaneous warning — will)",
+      "I promise I *won't* leave a single footprint on that pristine beach. (promise — won't)",
+      "*Shall* we pull up the invasive weeds before they spread further? (suggestion — shall)",
+      "If we do nothing, the vaquita *will* face extinction within a decade. (strong prediction — will)",
+      "*We're going to* boycott brands that deplete ancient forests. (prior decision — be going to)"
+    ],
+    "practice": [
+      {
+        "q": "Your friend decided last week to help clean the wetland and says: 'I will help you clean the wetland tomorrow.' What is the more natural form?",
+        "a": "'I am going to help you clean the wetland tomorrow' — the decision was already made, so be going to fits better than will."
+      },
+      {
+        "q": "Correct the error: 'We will visit the rewilding site on Saturday — we already booked the tour.'",
+        "a": "'We are visiting the rewilding site on Saturday' — a booked tour is a fixed arrangement, so use the present continuous."
+      },
+      {
+        "q": "You see oil leaking toward a pristine creek and decide on the spot to act. What do you shout: 'I am going to stop it' or 'I'll stop it'?",
+        "a": "'I'll stop it!' — an instant decision made while speaking takes will, not be going to."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "The council has already approved the plan. The new wetland centre ___ next spring.",
+        "options": [
+          "will open",
+          "is going to open",
+          "opens",
+          "would open"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Look at those black clouds over the hills! It ___.",
+        "options": [
+          "will rain",
+          "rains",
+          "is going to rain",
+          "would rain"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We ___ the volunteers at the gate at nine tomorrow morning — it's all arranged.",
+        "options": [
+          "will meet",
+          "are meeting",
+          "meet",
+          "would meet"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "— Can someone drive me to the rewilding site? — I ___ you.",
+        "options": [
+          "am driving",
+          "will drive",
+          "drive",
+          "am going to drive"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Next year's biodiversity summit ___ in Nairobi.",
+        "options": [
+          "will be",
+          "is going to be",
+          "is",
+          "would be"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ I help you carry those seedlings?",
+        "options": [
+          "Will",
+          "Shall",
+          "Am",
+          "Do"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ to the biodiversity conference next month; her flight is already booked.",
+        "options": [
+          "will fly",
+          "flies",
+          "is flying",
+          "would fly"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If the factory keeps dumping waste, it ___ the whole wetland.",
+        "options": [
+          "contaminates",
+          "will contaminate",
+          "is contaminating",
+          "would contaminate"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I promise I ___ a single plastic bottle on that pristine beach.",
+        "options": [
+          "won't leave",
+          "am not leaving",
+          "don't leave",
+          "am not going to leave"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "— The invasive weeds are back. — Don't worry, we ___ them this weekend; we already bought the tools.",
+        "options": [
+          "will remove",
+          "remove",
+          "are going to remove",
+          "would remove"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

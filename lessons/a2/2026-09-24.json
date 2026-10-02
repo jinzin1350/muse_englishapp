@@ -1,0 +1,355 @@
+{
+  "date": "2026-09-24",
+  "theme": "Food & Cooking",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "recipe",
+      "pos": "noun",
+      "meaning": "a set of steps for cooking a dish",
+      "example": "This recipe needs only five ingredients.",
+      "pronunciation": "RES-uh-pee",
+      "persian": "دستور پخت",
+      "photo": "media/a2/2026-09-24/photos/recipe.jpg",
+      "word_audio": "media/a2/2026-09-24/word-audio/recipe.mp3"
+    },
+    {
+      "word": "ingredient",
+      "pos": "noun",
+      "meaning": "something you use to make food when you cook",
+      "example": "Add all the ingredients to the bowl.",
+      "pronunciation": "in-GREE-dee-uhnt",
+      "persian": "مواد اولیه",
+      "photo": "media/a2/2026-09-24/photos/ingredient.jpg",
+      "word_audio": "media/a2/2026-09-24/word-audio/ingredient.mp3"
+    },
+    {
+      "word": "boil",
+      "pos": "verb",
+      "meaning": "to heat water until it makes bubbles",
+      "example": "Boil the water for the pasta.",
+      "pronunciation": "BOYL",
+      "persian": "جوشاندن",
+      "photo": "media/a2/2026-09-24/photos/boil.jpg",
+      "word_audio": "media/a2/2026-09-24/word-audio/boil.mp3"
+    },
+    {
+      "word": "fry",
+      "pos": "verb",
+      "meaning": "to cook food in hot oil",
+      "example": "Fry the eggs for three minutes.",
+      "pronunciation": "FRY",
+      "persian": "سرخ کردن",
+      "photo": "media/a2/2026-09-24/photos/fry.jpg",
+      "word_audio": "media/a2/2026-09-24/word-audio/fry.mp3"
+    },
+    {
+      "word": "chop",
+      "pos": "verb",
+      "meaning": "to cut food into small pieces with a knife",
+      "example": "Chop the onions into small pieces.",
+      "pronunciation": "CHOP",
+      "persian": "خرد کردن",
+      "photo": "media/a2/2026-09-24/photos/chop.jpg",
+      "word_audio": "media/a2/2026-09-24/word-audio/chop.mp3"
+    },
+    {
+      "word": "peel",
+      "pos": "verb",
+      "meaning": "to take the skin off fruit or vegetables",
+      "example": "Peel the potatoes before you cook them.",
+      "pronunciation": "PEEL",
+      "persian": "پوست کندن",
+      "photo": "media/a2/2026-09-24/photos/peel.jpg",
+      "word_audio": "media/a2/2026-09-24/word-audio/peel.mp3"
+    },
+    {
+      "word": "stir",
+      "pos": "verb",
+      "meaning": "to mix food in a pot with a spoon",
+      "example": "Stir the soup slowly.",
+      "pronunciation": "STER",
+      "persian": "هم زدن",
+      "photo": "media/a2/2026-09-24/photos/stir.jpg",
+      "word_audio": "media/a2/2026-09-24/word-audio/stir.mp3"
+    },
+    {
+      "word": "bake",
+      "pos": "verb",
+      "meaning": "to cook food in an oven",
+      "example": "I will bake a cake for your birthday.",
+      "pronunciation": "BAYK",
+      "persian": "پختن در فر",
+      "photo": "media/a2/2026-09-24/photos/bake.jpg",
+      "word_audio": "media/a2/2026-09-24/word-audio/bake.mp3"
+    },
+    {
+      "word": "taste",
+      "pos": "verb",
+      "meaning": "to try food to know its flavor",
+      "example": "Taste the soup and tell me if it is good.",
+      "pronunciation": "TAYST",
+      "persian": "چشیدن",
+      "photo": "media/a2/2026-09-24/photos/taste.jpg",
+      "word_audio": "media/a2/2026-09-24/word-audio/taste.mp3"
+    },
+    {
+      "word": "salty",
+      "pos": "adjective",
+      "meaning": "food with too much salt",
+      "example": "This soup is too salty.",
+      "pronunciation": "SOL-tee",
+      "persian": "شور",
+      "photo": "media/a2/2026-09-24/photos/salty.jpg",
+      "word_audio": "media/a2/2026-09-24/word-audio/salty.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-09-24/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Simple Cooking at Home",
+    "audio": "media/a2/2026-09-24/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-09-24/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Day in the Kitchen",
+    "audio": "media/a2/2026-09-24/shadowing.mp3",
+    "transcript": "media/a2/2026-09-24/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'recipe' mean?",
+      "options": [
+        "to cook food in hot oil",
+        "a set of steps for cooking a dish",
+        "to take the skin off fruit or vegetables",
+        "to mix food in a pot with a spoon"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'ingredient' mean?",
+      "options": [
+        "something you use to make food when you cook",
+        "food with too much salt",
+        "to heat water until it makes bubbles",
+        "to cut food into small pieces with a knife"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'boil' mean?",
+      "options": [
+        "to try food to know its flavor",
+        "to cook food in an oven",
+        "to heat water until it makes bubbles",
+        "a set of steps for cooking a dish"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'fry' mean?",
+      "options": [
+        "to take the skin off fruit or vegetables",
+        "to cook food in hot oil",
+        "to mix food in a pot with a spoon",
+        "something you use to make food when you cook"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'chop' mean?",
+      "options": [
+        "to heat water until it makes bubbles",
+        "food with too much salt",
+        "to cut food into small pieces with a knife",
+        "to cook food in an oven"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'peel' mean?",
+      "options": [
+        "to take the skin off fruit or vegetables",
+        "a set of steps for cooking a dish",
+        "to try food to know its flavor",
+        "to cook food in hot oil"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'stir' mean?",
+      "options": [
+        "to cut food into small pieces with a knife",
+        "to mix food in a pot with a spoon",
+        "to heat water until it makes bubbles",
+        "food with too much salt"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bake' mean?",
+      "options": [
+        "something you use to make food when you cook",
+        "to take the skin off fruit or vegetables",
+        "to try food to know its flavor",
+        "to cook food in an oven"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'taste' mean?",
+      "options": [
+        "to try food to know its flavor",
+        "to cook food in hot oil",
+        "to cut food into small pieces with a knife",
+        "a set of steps for cooking a dish"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'salty' mean?",
+      "options": [
+        "to mix food in a pot with a spoon",
+        "to heat water until it makes bubbles",
+        "food with too much salt",
+        "to cook food in an oven"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "1B: Future forms - present continuous, be going to, will / won't",
+    "explanation": "Use **be going to** + verb for a plan you already decided. I am going to bake the cake from my new recipe.\n\nUse **be going to** + verb for a prediction with evidence. The water is hot, so it is going to boil soon.\n\nUse **am / is / are** + verb-**ing** for a future arrangement. I am meeting Sara on Friday to buy ingredients.\n\nUse **will** + verb for a decision you make right now. The soup is too salty, so I will add water and stir it.\n\nUse **will** + verb for a promise or an offer. I will help you chop the onions, and I will peel the potatoes.\n\n**Won't** means will not. I won't fry the eggs, but I will taste the vegetables.",
+    "examples": [
+      "I *am going to bake* a cake tomorrow. (a plan - already decided)",
+      "Look! The water *is going to boil* soon. (a prediction with evidence)",
+      "She *is going to fry* the eggs for breakfast. (a plan - already decided)",
+      "We *are meeting* Sara on Friday to buy ingredients. (a future arrangement)",
+      "I *am peeling* potatoes with my mother tonight. (a future arrangement)",
+      "I *am chopping* onions with Ali tomorrow morning. (a future arrangement)",
+      "The soup is too salty. I *will add* some water. (an instant decision)",
+      "I *will help* you stir the soup. (an offer)",
+      "I *will taste* the cake from this recipe and tell you my opinion. (a promise)",
+      "I *won't fry* the fish; I *will boil* the vegetables. (negative + instant decision)"
+    ],
+    "practice": [
+      {
+        "q": "You decided yesterday to bake a cake on Saturday. Which is correct: 'I bake a cake' or 'I am going to bake a cake'?",
+        "a": "'I am going to bake a cake on Saturday.' - a plan you already decided."
+      },
+      {
+        "q": "The phone rings and you decide NOW to answer it. Which is correct: 'I answer it' or 'I will answer it'?",
+        "a": "'I will answer it.' - an instant decision."
+      },
+      {
+        "q": "You fixed a time with your friend to cook together on Sunday. Which is correct: 'We cook together' or 'We are cooking together'?",
+        "a": "'We are cooking together on Sunday.' - a future arrangement."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ bake a cake tomorrow. I already bought the ingredients.",
+        "options": [
+          "will",
+          "am going to",
+          "bake",
+          "baking"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Look at those black clouds! It ___ rain soon.",
+        "options": [
+          "will",
+          "is going to",
+          "rains",
+          "rain"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ potatoes with my mother tonight. We fixed the time.",
+        "options": [
+          "peel",
+          "am peeling",
+          "will peel",
+          "peels"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "A: The phone is ringing! B: I ___ answer it.",
+        "options": [
+          "will",
+          "am going to",
+          "am answering",
+          "answers"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I promise I ___ help you chop the onions.",
+        "options": [
+          "will",
+          "am going to",
+          "help",
+          "am helping"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ fry the eggs; she ___ boil them.",
+        "options": [
+          "won't / will",
+          "doesn't / will",
+          "isn't / is going to",
+          "not will / wills"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We ___ Sara on Friday to buy ingredients.",
+        "options": [
+          "meet",
+          "are meeting",
+          "will meet",
+          "meets"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ stir the soup in a minute. He just decided now.",
+        "options": [
+          "will",
+          "is going to",
+          "stirs",
+          "stirring"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ taste the cake later, I promise.",
+        "options": [
+          "will",
+          "am tasting",
+          "taste",
+          "am going taste"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ bake bread this weekend. They already have the recipe.",
+        "options": [
+          "will",
+          "bake",
+          "are going to",
+          "baking"
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a2/2026-09-24/grammar-en.mp3"
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "date": "2026-09-24",
+  "theme": "The Modern Workplace",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "intrapreneur",
+      "pos": "noun",
+      "meaning": "an employee who creates new ideas or products inside a company, acting like an entrepreneur",
+      "example": "She became an intrapreneur by launching an innovation lab inside the bank.",
+      "pronunciation": "IN-truh-pruh-NUR",
+      "persian": "کارآفرین درون‌سازمانی",
+      "photo": "media/c2/2026-09-24/photos/intrapreneur.jpg",
+      "word_audio": "media/c2/2026-09-24/word-audio/intrapreneur.mp3"
+    },
+    {
+      "word": "presenteeism",
+      "pos": "noun",
+      "meaning": "the habit of being present at work while sick or unproductive, which harms performance",
+      "example": "Presenteeism costs companies more than absenteeism, because exhausted people make expensive mistakes.",
+      "pronunciation": "PREZ-un-TEE-iz-um",
+      "persian": "حاضرگرایی؛ حضور در محل کار بدون بهره‌وری",
+      "photo": "media/c2/2026-09-24/photos/presenteeism.jpg",
+      "word_audio": "media/c2/2026-09-24/word-audio/presenteeism.mp3"
+    },
+    {
+      "word": "quiet quitting",
+      "pos": "noun phrase",
+      "meaning": "doing only the minimum your job requires, with no extra effort or enthusiasm",
+      "example": "After the denied promotion, he started quiet quitting and left exactly at five every day.",
+      "pronunciation": "KWY-ut KWIT-ing",
+      "persian": "ترک کار خاموش؛ انجام فقط حداقل وظایف",
+      "photo": "media/c2/2026-09-24/photos/quiet quitting.jpg",
+      "word_audio": "media/c2/2026-09-24/word-audio/quiet quitting.mp3"
+    },
+    {
+      "word": "golden handcuffs",
+      "pos": "noun phrase",
+      "meaning": "financial rewards that make it hard to leave a job you no longer enjoy",
+      "example": "Her stock options were golden handcuffs that kept her in a role she had outgrown.",
+      "pronunciation": "GOHL-dun HAND-kufs",
+      "persian": "دستبندهای طلایی؛ مزایایی که ترک شغل را دشوار می‌کند",
+      "photo": "media/c2/2026-09-24/photos/golden handcuffs.jpg",
+      "word_audio": "media/c2/2026-09-24/word-audio/golden handcuffs.mp3"
+    },
+    {
+      "word": "career pivot",
+      "pos": "noun phrase",
+      "meaning": "a deliberate change from one career path to a completely different one",
+      "example": "At forty, she made a career pivot from accounting to user-experience design.",
+      "pronunciation": "kuh-REER PIV-ut",
+      "persian": "چرخش شغلی",
+      "photo": "media/c2/2026-09-24/photos/career pivot.jpg",
+      "word_audio": "media/c2/2026-09-24/word-audio/career pivot.mp3"
+    },
+    {
+      "word": "impostor syndrome",
+      "pos": "noun phrase",
+      "meaning": "the feeling that you do not deserve your success and will be exposed as a fraud",
+      "example": "Even after the promotion, impostor syndrome made him doubt every decision he made.",
+      "pronunciation": "im-POS-tur SIN-drohm",
+      "persian": "سندرم خودفریبی؛ احساس شایسته نبودن موفقیت",
+      "photo": "media/c2/2026-09-24/photos/impostor syndrome.jpg",
+      "word_audio": "media/c2/2026-09-24/word-audio/impostor syndrome.mp3"
+    },
+    {
+      "word": "moonlighting",
+      "pos": "noun",
+      "meaning": "secretly holding a second job in addition to your main one",
+      "example": "He was moonlighting as a web designer while working full-time at the insurance firm.",
+      "pronunciation": "MOON-ly-ting",
+      "persian": "کار دوم پنهانی",
+      "photo": "media/c2/2026-09-24/photos/moonlighting.jpg",
+      "word_audio": "media/c2/2026-09-24/word-audio/moonlighting.mp3"
+    },
+    {
+      "word": "thought leadership",
+      "pos": "noun",
+      "meaning": "influencing others in your field through original ideas and visible expertise",
+      "example": "Her essays on remote work established her thought leadership in the industry.",
+      "pronunciation": "THAWT LEE-dur-ship",
+      "persian": "رهبری فکری",
+      "photo": "media/c2/2026-09-24/photos/thought leadership.jpg",
+      "word_audio": "media/c2/2026-09-24/word-audio/thought leadership.mp3"
+    },
+    {
+      "word": "portfolio career",
+      "pos": "noun phrase",
+      "meaning": "earning a living from several part-time roles or projects instead of a single job",
+      "example": "He built a portfolio career out of consulting, teaching, and freelance writing.",
+      "pronunciation": "port-FOH-lee-oh kuh-REER",
+      "persian": "شغل ترکیبی؛ چند شغل مستقل هم‌زمان",
+      "photo": "media/c2/2026-09-24/photos/portfolio career.jpg",
+      "word_audio": "media/c2/2026-09-24/word-audio/portfolio career.mp3"
+    },
+    {
+      "word": "low-hanging fruit",
+      "pos": "noun phrase",
+      "meaning": "easy tasks or quick gains that require little effort",
+      "example": "The team picked the low-hanging fruit first to show quick progress to the board.",
+      "pronunciation": "LOH HANG-ing FROOT",
+      "persian": "دستاوردهای آسان و سریع",
+      "photo": "media/c2/2026-09-24/photos/low-hanging fruit.jpg",
+      "word_audio": "media/c2/2026-09-24/word-audio/low-hanging fruit.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-09-24/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The New Rules of Work",
+    "audio": "media/c2/2026-09-24/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-09-24/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Career Crossroads",
+    "audio": "media/c2/2026-09-24/shadowing.mp3",
+    "transcript": "media/c2/2026-09-24/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'intrapreneur' mean?",
+      "options": [
+        "doing only the minimum your job requires, with no extra effort or enthusiasm",
+        "secretly holding a second job in addition to your main one",
+        "an employee who creates new ideas or products inside a company, acting like an entrepreneur",
+        "the habit of being present at work while sick or unproductive, which harms performance"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'presenteeism' mean?",
+      "options": [
+        "secretly holding a second job in addition to your main one",
+        "financial rewards that make it hard to leave a job you no longer enjoy",
+        "doing only the minimum your job requires, with no extra effort or enthusiasm",
+        "the habit of being present at work while sick or unproductive, which harms performance"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'quiet quitting' mean?",
+      "options": [
+        "earning a living from several part-time roles or projects instead of a single job",
+        "easy tasks or quick gains that require little effort",
+        "doing only the minimum your job requires, with no extra effort or enthusiasm",
+        "an employee who creates new ideas or products inside a company, acting like an entrepreneur"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'golden handcuffs' mean?",
+      "options": [
+        "a deliberate change from one career path to a completely different one",
+        "easy tasks or quick gains that require little effort",
+        "financial rewards that make it hard to leave a job you no longer enjoy",
+        "secretly holding a second job in addition to your main one"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'career pivot' mean?",
+      "options": [
+        "a deliberate change from one career path to a completely different one",
+        "influencing others in your field through original ideas and visible expertise",
+        "an employee who creates new ideas or products inside a company, acting like an entrepreneur",
+        "the feeling that you do not deserve your success and will be exposed as a fraud"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'impostor syndrome' mean?",
+      "options": [
+        "a deliberate change from one career path to a completely different one",
+        "the feeling that you do not deserve your success and will be exposed as a fraud",
+        "the habit of being present at work while sick or unproductive, which harms performance",
+        "secretly holding a second job in addition to your main one"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'moonlighting' mean?",
+      "options": [
+        "secretly holding a second job in addition to your main one",
+        "an employee who creates new ideas or products inside a company, acting like an entrepreneur",
+        "the habit of being present at work while sick or unproductive, which harms performance",
+        "influencing others in your field through original ideas and visible expertise"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'thought leadership' mean?",
+      "options": [
+        "earning a living from several part-time roles or projects instead of a single job",
+        "a deliberate change from one career path to a completely different one",
+        "an employee who creates new ideas or products inside a company, acting like an entrepreneur",
+        "influencing others in your field through original ideas and visible expertise"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'portfolio career' mean?",
+      "options": [
+        "easy tasks or quick gains that require little effort",
+        "earning a living from several part-time roles or projects instead of a single job",
+        "secretly holding a second job in addition to your main one",
+        "a deliberate change from one career path to a completely different one"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'low-hanging fruit' mean?",
+      "options": [
+        "an employee who creates new ideas or products inside a company, acting like an entrepreneur",
+        "easy tasks or quick gains that require little effort",
+        "the feeling that you do not deserve your success and will be exposed as a fraud",
+        "the habit of being present at work while sick or unproductive, which harms performance"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "examples": [
+      "She *is going to* make a career pivot next spring. (plan already decided)",
+      "That exhausted team *is going to* collapse into presenteeism. (prediction with evidence)",
+      "We *are meeting* the intrapreneur finalists on Thursday. (fixed arrangement)",
+      "I *will* take that project right now. (instant decision)",
+      "I *will* mentor you through your impostor syndrome. (promise)",
+      "*Shall* I introduce you to my portfolio career coach? (offer in a question)",
+      "Quiet quitting *will* spread if managers ignore burnout. (prediction)",
+      "Thought leadership *won't* build itself overnight. (future negative)",
+      "He *is going to* escape his golden handcuffs this year. (plan already decided)",
+      "They *are grabbing* the low-hanging fruit first. (present continuous arrangement)",
+      "She *will* keep moonlighting until her savings are safe. (promise about the future)"
+    ],
+    "explanation": "Use **be going to** for future plans you have already decided. She **is going to** make a career pivot in January.\n\nUse **be going to** for predictions with clear present evidence. Look at those numbers: presenteeism **is going to** cost them their best people, and quiet quitting **is going to** spread.\n\nUse the **present continuous** for future arrangements that are already fixed. We **are interviewing** an intrapreneur candidate on Monday.\n\nThe nuance is small but real: **be going to** highlights the decision, the **present continuous** highlights the arrangement. I **am going to** start moonlighting stresses my choice; I **am starting** my new role on Monday stresses the fixed plan.\n\nUse **will** for instant decisions, made at the moment of speaking. I **will** take the low-hanging fruit first.\n\nUse **will** for promises and offers. I **will** help you build your thought leadership this year.\n\nUse **will** for predictions and future facts without visible evidence. A strong portfolio career **will** matter more in the next decade.\n\nUse **shall** with I or we in questions to make offers and suggestions. **Shall** we talk through your golden handcuffs dilemma?\n\nNote the special present uses: **will** for habits, **won't** for refusals. He **will** answer every email instantly; she **won't** let impostor syndrome stop her.\n\nNever use **will** for a plan decided before you speak. Wrong: I **will** make a career pivot, decided months ago. Say: I **am going to** make a career pivot.",
+    "practice": [
+      {
+        "a": "I am going to change careers — the decision was made before you spoke, so be going to is correct.",
+        "q": "You decided last week to change careers. Which is correct: 'I will change careers' or 'I am going to change careers'?"
+      },
+      {
+        "a": "'I will help you' — use will for offers; 'Shall I help you?' also works as an offer in question form.",
+        "q": "You want to offer help with a friend's portfolio career plan. Which is natural: 'I will help you' or 'I shall help you'?"
+      },
+      {
+        "a": "They are going to lose their best people — be going to fits predictions with clear present evidence.",
+        "q": "You can see the team's morale collapsing. Make a prediction with evidence: 'They ___ lose their best people.'"
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 1,
+        "options": [
+          "will",
+          "am going to",
+          "shall",
+          "make"
+        ],
+        "question": "You decided last month to change careers. Complete the sentence: 'I ___ make a career pivot next year.'"
+      },
+      {
+        "answer": 0,
+        "options": [
+          "is going to",
+          "will",
+          "is",
+          "shall"
+        ],
+        "question": "Look at those numbers! Presenteeism ___ cost them millions. (prediction with evidence)"
+      },
+      {
+        "answer": 0,
+        "options": [
+          "are meeting",
+          "will meet",
+          "meet",
+          "shall meet"
+        ],
+        "question": "We ___ the intrapreneur candidates on Monday. (fixed arrangement)"
+      },
+      {
+        "answer": 0,
+        "options": [
+          "'ll",
+          "am going to",
+          "shall",
+          "going to"
+        ],
+        "question": "Instant decision at this very moment: 'I ___ take the low-hanging fruit first.'"
+      },
+      {
+        "answer": 0,
+        "options": [
+          "will",
+          "am going to",
+          "shall",
+          "would"
+        ],
+        "question": "Make a promise: 'I ___ help you beat impostor syndrome.'"
+      },
+      {
+        "answer": 0,
+        "options": [
+          "Shall",
+          "Will",
+          "Am",
+          "Do"
+        ],
+        "question": "Offer help in a question: '___ I review your portfolio career plan?'"
+      },
+      {
+        "answer": 0,
+        "options": [
+          "will",
+          "is going to",
+          "shall",
+          "does"
+        ],
+        "question": "Prediction without visible evidence: 'Thought leadership ___ matter more next year.'"
+      },
+      {
+        "answer": 0,
+        "options": [
+          "won't",
+          "isn't going to",
+          "doesn't",
+          "shall not"
+        ],
+        "question": "Express refusal: 'She ___ answer emails after six.'"
+      },
+      {
+        "answer": 0,
+        "options": [
+          "I am going to make a career pivot.",
+          "I will make a career pivot.",
+          "I shall make a career pivot.",
+          "I make a career pivot."
+        ],
+        "question": "You decided months ago to change careers. Which sentence is correct?"
+      },
+      {
+        "answer": 3,
+        "options": [
+          "are getting",
+          "are going to get",
+          "will get",
+          "both 'are getting' and 'are going to get' are possible"
+        ],
+        "question": "The decision is made and the church is booked: 'We ___ married next year.'"
+      }
+    ],
+    "title": "1B: Future forms - present continuous, be going to, will / won't"
+  }
+}

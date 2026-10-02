@@ -1,0 +1,355 @@
+{
+  "date": "2026-09-24",
+  "theme": "Family & Relationships",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "mother",
+      "pos": "noun",
+      "meaning": "a female parent",
+      "example": "My mother is kind.",
+      "pronunciation": "MUH-thur",
+      "persian": "مادر",
+      "photo": "media/a1/2026-09-24/photos/mother.jpg",
+      "word_audio": "media/a1/2026-09-24/word-audio/mother.mp3"
+    },
+    {
+      "word": "father",
+      "pos": "noun",
+      "meaning": "a male parent",
+      "example": "His father is tall.",
+      "pronunciation": "FAH-thur",
+      "persian": "پدر",
+      "photo": "media/a1/2026-09-24/photos/father.jpg",
+      "word_audio": "media/a1/2026-09-24/word-audio/father.mp3"
+    },
+    {
+      "word": "sister",
+      "pos": "noun",
+      "meaning": "a girl or woman with the same parents",
+      "example": "My sister is ten.",
+      "pronunciation": "SIS-tur",
+      "persian": "خواهر",
+      "photo": "media/a1/2026-09-24/photos/sister.jpg",
+      "word_audio": "media/a1/2026-09-24/word-audio/sister.mp3"
+    },
+    {
+      "word": "brother",
+      "pos": "noun",
+      "meaning": "a boy or man with the same parents",
+      "example": "Her brother is funny.",
+      "pronunciation": "BRUH-thur",
+      "persian": "برادر",
+      "photo": "media/a1/2026-09-24/photos/brother.jpg",
+      "word_audio": "media/a1/2026-09-24/word-audio/brother.mp3"
+    },
+    {
+      "word": "son",
+      "pos": "noun",
+      "meaning": "a male child of a parent",
+      "example": "Their son is five.",
+      "pronunciation": "SUN",
+      "persian": "پسر",
+      "photo": "media/a1/2026-09-24/photos/son.jpg",
+      "word_audio": "media/a1/2026-09-24/word-audio/son.mp3"
+    },
+    {
+      "word": "daughter",
+      "pos": "noun",
+      "meaning": "a female child of a parent",
+      "example": "Our daughter is happy.",
+      "pronunciation": "DAW-tur",
+      "persian": "دختر",
+      "photo": "media/a1/2026-09-24/photos/daughter.jpg",
+      "word_audio": "media/a1/2026-09-24/word-audio/daughter.mp3"
+    },
+    {
+      "word": "baby",
+      "pos": "noun",
+      "meaning": "a very young child",
+      "example": "The baby is sleeping.",
+      "pronunciation": "BAY-bee",
+      "persian": "نوزاد",
+      "photo": "media/a1/2026-09-24/photos/baby.jpg",
+      "word_audio": "media/a1/2026-09-24/word-audio/baby.mp3"
+    },
+    {
+      "word": "grandmother",
+      "pos": "noun",
+      "meaning": "the mother of your mother or father",
+      "example": "My grandmother is nice.",
+      "pronunciation": "GRAND-muh-thur",
+      "persian": "مادربزرگ",
+      "photo": "media/a1/2026-09-24/photos/grandmother.jpg",
+      "word_audio": "media/a1/2026-09-24/word-audio/grandmother.mp3"
+    },
+    {
+      "word": "grandfather",
+      "pos": "noun",
+      "meaning": "the father of your mother or father",
+      "example": "His grandfather is old.",
+      "pronunciation": "GRAND-fah-thur",
+      "persian": "پدربزرگ",
+      "photo": "media/a1/2026-09-24/photos/grandfather.jpg",
+      "word_audio": "media/a1/2026-09-24/word-audio/grandfather.mp3"
+    },
+    {
+      "word": "cousin",
+      "pos": "noun",
+      "meaning": "a child of your aunt or uncle",
+      "example": "My cousin is my friend.",
+      "pronunciation": "KUH-zin",
+      "persian": "پسرعمو / دخترعمو",
+      "photo": "media/a1/2026-09-24/photos/cousin.jpg",
+      "word_audio": "media/a1/2026-09-24/word-audio/cousin.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-09-24/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: My Family",
+    "audio": "media/a1/2026-09-24/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-09-24/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Big Family",
+    "audio": "media/a1/2026-09-24/shadowing.mp3",
+    "transcript": "media/a1/2026-09-24/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'mother' mean?",
+      "options": [
+        "a female parent",
+        "a male parent",
+        "a very young child",
+        "a male child of a parent"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'father' mean?",
+      "options": [
+        "a very young child",
+        "a male parent",
+        "a female child of a parent",
+        "a girl or woman with the same parents"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'sister' mean?",
+      "options": [
+        "a boy or man with the same parents",
+        "a male child of a parent",
+        "a girl or woman with the same parents",
+        "the father of your mother or father"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'brother' mean?",
+      "options": [
+        "the mother of your mother or father",
+        "a child of your aunt or uncle",
+        "a female parent",
+        "a boy or man with the same parents"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'son' mean?",
+      "options": [
+        "a male child of a parent",
+        "a very young child",
+        "a female parent",
+        "a male parent"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'daughter' mean?",
+      "options": [
+        "a child of your aunt or uncle",
+        "a female child of a parent",
+        "a boy or man with the same parents",
+        "a male child of a parent"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'baby' mean?",
+      "options": [
+        "a female child of a parent",
+        "a male parent",
+        "a very young child",
+        "the mother of your mother or father"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'grandmother' mean?",
+      "options": [
+        "a girl or woman with the same parents",
+        "a child of your aunt or uncle",
+        "a female parent",
+        "the mother of your mother or father"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'grandfather' mean?",
+      "options": [
+        "the father of your mother or father",
+        "a male child of a parent",
+        "a very young child",
+        "a boy or man with the same parents"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cousin' mean?",
+      "options": [
+        "a female parent",
+        "a child of your aunt or uncle",
+        "a male parent",
+        "a female child of a parent"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "1B: Future forms - present continuous, be going to, will / won't",
+    "explanation": "There are three ways to talk about the future: **be going to**, the **present continuous**, and **will / won't**.\n\nUse **be going to + verb** for a plan you already made. My mother is going to visit my grandmother tomorrow.\n\nUse the **present continuous (am / is / are + verb-ing)** for a future arrangement. My sister is coming for dinner on Sunday. My cousin is arriving on Friday.\n\nUse **will** for a quick decision, a promise, or an offer. I will help my brother with his bag.\n\nUse **won't** for a negative promise. I promise I won't be late for my father's party.\n\nFor a prediction with a clear reason, use **be going to**. Look at the baby! He is going to cry. My son is going to be a good footballer.\n\nFor a simple prediction or a future fact, use **will**. My daughter will love this gift. My grandfather will be ninety next year.",
+    "examples": [
+      "My mother *is going to visit* my grandmother tomorrow. (a plan she already made)",
+      "My sister *is coming* for dinner on Sunday. (a future arrangement)",
+      "My cousin *is arriving* on Friday. (a future arrangement)",
+      "I *will help* my brother with his bag. (an offer)",
+      "I promise I *won't* be late for my father's party. (a promise)",
+      "Look at the baby! He *is going to cry*. (a prediction with a reason)",
+      "My son *is going to be* a good footballer. (a prediction with a reason)",
+      "My daughter *will love* this gift. (a prediction)",
+      "My grandfather *will be* ninety next year. (a future fact)",
+      "I *will call* my mother tonight. (a quick decision)"
+    ],
+    "practice": [
+      {
+        "q": "\"I am going to visit my grandmother tomorrow.\" Is this a plan or a quick decision?",
+        "a": "A plan. She already decided, so we use be going to."
+      },
+      {
+        "q": "\"I will help you.\" Is this a plan or a quick offer?",
+        "a": "A quick offer. For instant decisions and offers, we use will."
+      },
+      {
+        "q": "Make a sentence with \"be going to\" and the word \"father\".",
+        "a": "Example: My father is going to cook dinner tonight."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence for a plan you already made.",
+        "options": [
+          "I will visit my grandmother tomorrow.",
+          "I am going to visit my grandmother tomorrow.",
+          "I visit my grandmother tomorrow.",
+          "I going to visit my grandmother tomorrow."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My sister ___ for dinner on Sunday. (future arrangement)",
+        "options": [
+          "will come",
+          "is going to comes",
+          "is coming",
+          "comes"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which sentence is a quick decision?",
+        "options": [
+          "I am going to help you.",
+          "I will help you.",
+          "I help you.",
+          "I helping you."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I promise I ___ forget.",
+        "options": [
+          "won't",
+          "am not going",
+          "don't",
+          "am not"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Look at the baby! He ___ cry. (prediction with a reason)",
+        "options": [
+          "will",
+          "is going to",
+          "cries",
+          "is crying"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My cousin ___ on Friday. (future arrangement)",
+        "options": [
+          "will arrive",
+          "is arriving",
+          "arrives",
+          "arrive"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "She wills help.",
+          "She will help.",
+          "She is will help.",
+          "She helps will."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My grandfather ___ ninety next year. (future fact)",
+        "options": [
+          "will be",
+          "is going to be",
+          "is",
+          "be"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We ___ my mother at the airport at six. (future arrangement)",
+        "options": [
+          "will meet",
+          "are meeting",
+          "meet",
+          "meets"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What is the negative of \"I will come\"?",
+        "options": [
+          "I willn't come.",
+          "I won't come.",
+          "I don't will come.",
+          "I not come."
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-09-24/grammar-en.mp3"
+  }
+}
