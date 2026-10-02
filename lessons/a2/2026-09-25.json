@@ -1,0 +1,355 @@
+{
+  "date": "2026-09-25",
+  "theme": "City Life",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "park",
+      "pos": "noun",
+      "meaning": "a green open area in a city where people walk and play",
+      "example": "Children play football in the park after school.",
+      "pronunciation": "PARK",
+      "persian": "پارک",
+      "photo": "media/a2/2026-09-25/photos/park.jpg",
+      "word_audio": "media/a2/2026-09-25/word-audio/park.mp3"
+    },
+    {
+      "word": "neighbor",
+      "pos": "noun",
+      "meaning": "a person who lives near you",
+      "example": "My neighbor waters our plants when we are away.",
+      "pronunciation": "NAY-bur",
+      "persian": "همسایه",
+      "photo": "media/a2/2026-09-25/photos/neighbor.jpg",
+      "word_audio": "media/a2/2026-09-25/word-audio/neighbor.mp3"
+    },
+    {
+      "word": "market",
+      "pos": "noun",
+      "meaning": "a place where people buy and sell food and other things",
+      "example": "We buy fresh fruit at the market every Sunday.",
+      "pronunciation": "MAR-kit",
+      "persian": "بازار",
+      "photo": "media/a2/2026-09-25/photos/market.jpg",
+      "word_audio": "media/a2/2026-09-25/word-audio/market.mp3"
+    },
+    {
+      "word": "street",
+      "pos": "noun",
+      "meaning": "a road in a city or town",
+      "example": "Our apartment is on a quiet street.",
+      "pronunciation": "STREET",
+      "persian": "خیابان",
+      "photo": "media/a2/2026-09-25/photos/street.jpg",
+      "word_audio": "media/a2/2026-09-25/word-audio/street.mp3"
+    },
+    {
+      "word": "hospital",
+      "pos": "noun",
+      "meaning": "a big building where doctors help sick people",
+      "example": "She went to the hospital because she had a fever.",
+      "pronunciation": "HOS-pi-tal",
+      "persian": "بیمارستان",
+      "photo": "media/a2/2026-09-25/photos/hospital.jpg",
+      "word_audio": "media/a2/2026-09-25/word-audio/hospital.mp3"
+    },
+    {
+      "word": "apartment",
+      "pos": "noun",
+      "meaning": "a set of rooms in a building where a person or family lives",
+      "example": "They rent a small apartment near the park.",
+      "pronunciation": "a-PART-ment",
+      "persian": "آپارتمان",
+      "photo": "media/a2/2026-09-25/photos/apartment.jpg",
+      "word_audio": "media/a2/2026-09-25/word-audio/apartment.mp3"
+    },
+    {
+      "word": "crowd",
+      "pos": "noun",
+      "meaning": "a large group of people together",
+      "example": "A big crowd waited for the bus at the station.",
+      "pronunciation": "KROWD",
+      "persian": "جمعیت",
+      "photo": "media/a2/2026-09-25/photos/crowd.jpg",
+      "word_audio": "media/a2/2026-09-25/word-audio/crowd.mp3"
+    },
+    {
+      "word": "cinema",
+      "pos": "noun",
+      "meaning": "a place where people watch movies",
+      "example": "We watched a funny movie at the cinema last night.",
+      "pronunciation": "SI-nuh-ma",
+      "persian": "سینما",
+      "photo": "media/a2/2026-09-25/photos/cinema.jpg",
+      "word_audio": "media/a2/2026-09-25/word-audio/cinema.mp3"
+    },
+    {
+      "word": "quiet",
+      "pos": "adjective",
+      "meaning": "not loud; calm and peaceful",
+      "example": "The library is a quiet place to study.",
+      "pronunciation": "KWAI-ut",
+      "persian": "آرام، ساکت",
+      "photo": "media/a2/2026-09-25/photos/quiet.jpg",
+      "word_audio": "media/a2/2026-09-25/word-audio/quiet.mp3"
+    },
+    {
+      "word": "visit",
+      "pos": "verb",
+      "meaning": "to go and see a person or a place",
+      "example": "We will visit my aunt this weekend.",
+      "pronunciation": "VI-zit",
+      "persian": "ملاقات کردن، دیدن",
+      "photo": "media/a2/2026-09-25/photos/visit.jpg",
+      "word_audio": "media/a2/2026-09-25/word-audio/visit.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-09-25/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: City Life",
+    "audio": "media/a2/2026-09-25/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-09-25/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Day in the City",
+    "audio": "media/a2/2026-09-25/shadowing.mp3",
+    "transcript": "media/a2/2026-09-25/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'park' mean?",
+      "options": [
+        "a road in a city or town",
+        "a place where people watch movies",
+        "a large group of people together",
+        "a green open area in a city where people walk and play"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'neighbor' mean?",
+      "options": [
+        "a green open area in a city where people walk and play",
+        "not loud; calm and peaceful",
+        "a person who lives near you",
+        "a place where people watch movies"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'market' mean?",
+      "options": [
+        "a large group of people together",
+        "a place where people buy and sell food and other things",
+        "a person who lives near you",
+        "a green open area in a city where people walk and play"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'street' mean?",
+      "options": [
+        "a road in a city or town",
+        "a person who lives near you",
+        "a set of rooms in a building where a person or family lives",
+        "a big building where doctors help sick people"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'hospital' mean?",
+      "options": [
+        "a big building where doctors help sick people",
+        "a person who lives near you",
+        "a road in a city or town",
+        "a large group of people together"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'apartment' mean?",
+      "options": [
+        "to go and see a person or a place",
+        "not loud; calm and peaceful",
+        "a green open area in a city where people walk and play",
+        "a set of rooms in a building where a person or family lives"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'crowd' mean?",
+      "options": [
+        "a large group of people together",
+        "to go and see a person or a place",
+        "a place where people buy and sell food and other things",
+        "not loud; calm and peaceful"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cinema' mean?",
+      "options": [
+        "a place where people watch movies",
+        "a large group of people together",
+        "a set of rooms in a building where a person or family lives",
+        "a person who lives near you"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'quiet' mean?",
+      "options": [
+        "to go and see a person or a place",
+        "a set of rooms in a building where a person or family lives",
+        "a road in a city or town",
+        "not loud; calm and peaceful"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'visit' mean?",
+      "options": [
+        "a large group of people together",
+        "a place where people buy and sell food and other things",
+        "a green open area in a city where people walk and play",
+        "to go and see a person or a place"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "2A: Present perfect and past simple",
+    "explanation": "Use the **present perfect** (**have/has** + past participle) for life experiences when you do not say when. Example idea: I have visited the market many times.\n\nUse the **present perfect** for recent past actions with a result now. I have just bought fruit at the market, and now I have the fruit at home.\n\nUse **never**, **ever**, **yet**, **already**, and **just** with the **present perfect**. Have you ever met my neighbor?\n\nUse the **past simple** for finished actions when we say, ask, or know when they happened. I visited the cinema last night.\n\nNever use the **present perfect** with a past time word like **yesterday**, **last week**, or **last night**.",
+    "examples": [
+      "I *have visited* the market many times. (present perfect - no time given)",
+      "She *has lived* in this apartment for two years. (present perfect - still true now)",
+      "They *have just left* the cinema. (present perfect - recent, result now)",
+      "Have you *ever* been to a quiet park? (present perfect - life experience)",
+      "I *haven't seen* my neighbor yet. (present perfect - not finished)",
+      "We *visited* the hospital yesterday. (past simple - we know when)",
+      "She *bought* fruit at the market last Sunday. (past simple - past time word)",
+      "I *went* to the cinema last night. (past simple - last night)",
+      "A big crowd *waited* outside the cinema. (past simple - finished action)",
+      "We *walked* down the street this morning. (past simple - finished time)"
+    ],
+    "practice": [
+      {
+        "q": "Complete the sentence: I ___ (visit) the park many times.",
+        "a": "I have visited the park many times."
+      },
+      {
+        "q": "Correct the mistake: I have visited the cinema yesterday.",
+        "a": "I visited the cinema yesterday. Use the past simple with 'yesterday'."
+      },
+      {
+        "q": "Which is correct: 'She has never met my neighbor' or 'She never has met my neighbor'?",
+        "a": "She has never met my neighbor. 'Never' goes before the main verb."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the present perfect sentence: \"___ the new cinema?\"",
+        "options": [
+          "Have you visited",
+          "Did you visited",
+          "You have visit",
+          "Do you visit"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ in this apartment since 2020.",
+        "options": [
+          "live",
+          "have lived",
+          "lived",
+          "am living"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ the hospital yesterday.",
+        "options": [
+          "has visited",
+          "visited",
+          "visits",
+          "visit"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Have you ___ been to the market on our street?",
+        "options": [
+          "ever",
+          "yesterday",
+          "last week",
+          "ago"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ just left the park.",
+        "options": [
+          "have",
+          "has",
+          "did",
+          "are"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "I have seen my neighbor yesterday.",
+          "I saw my neighbor yesterday.",
+          "I have saw my neighbor yesterday.",
+          "I seen my neighbor yesterday."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We ___ our neighbor yet.",
+        "options": [
+          "haven't visited",
+          "didn't visited",
+          "don't visit",
+          "not visited"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The street ___ very quiet last night.",
+        "options": [
+          "has been",
+          "is",
+          "was",
+          "were"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She has ___ bought fruit at the market.",
+        "options": [
+          "already",
+          "ever",
+          "yesterday",
+          "last week"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ a big crowd at the cinema last Friday.",
+        "options": [
+          "have seen",
+          "see",
+          "saw",
+          "seen"
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a2/2026-09-25/grammar-en.mp3"
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "date": "2026-09-25",
+  "theme": "The Art of Learning",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "pedagogy",
+      "pos": "noun",
+      "meaning": "the method and practice of teaching",
+      "example": "Her pedagogy emphasizes critical discussion over rote memorization.",
+      "pronunciation": "PED-uh-go-jee",
+      "persian": "روش تدریس",
+      "photo": "media/c2/2026-09-25/photos/pedagogy.jpg",
+      "word_audio": "media/c2/2026-09-25/word-audio/pedagogy.mp3"
+    },
+    {
+      "word": "erudite",
+      "pos": "adjective",
+      "meaning": "having or showing deep, wide learning",
+      "example": "The erudite professor quoted sources in four languages without notes.",
+      "pronunciation": "ER-uh-dyt",
+      "persian": "فرهیخته، بسیار دانشمند",
+      "photo": "media/c2/2026-09-25/photos/erudite.jpg",
+      "word_audio": "media/c2/2026-09-25/word-audio/erudite.mp3"
+    },
+    {
+      "word": "autodidact",
+      "pos": "noun",
+      "meaning": "a person who teaches themselves a subject",
+      "example": "As an autodidact, she taught herself calculus before starting college.",
+      "pronunciation": "aw-tuh-DY-dakt",
+      "persian": "خودآموخته",
+      "photo": "media/c2/2026-09-25/photos/autodidact.jpg",
+      "word_audio": "media/c2/2026-09-25/word-audio/autodidact.mp3"
+    },
+    {
+      "word": "matriculate",
+      "pos": "verb",
+      "meaning": "to enroll formally at a college or university",
+      "example": "He matriculated at Oxford at the age of eighteen.",
+      "pronunciation": "muh-TRIK-yuh-layt",
+      "persian": "ثبت‌نام کردن در دانشگاه",
+      "photo": "media/c2/2026-09-25/photos/matriculate.jpg",
+      "word_audio": "media/c2/2026-09-25/word-audio/matriculate.mp3"
+    },
+    {
+      "word": "inculcate",
+      "pos": "verb",
+      "meaning": "to instill an idea or attitude through persistent teaching",
+      "example": "Good teachers inculcate curiosity rather than just delivering facts.",
+      "pronunciation": "in-KUL-kayt",
+      "persian": "القا کردن، در ذهن نشاندن",
+      "photo": "media/c2/2026-09-25/photos/inculcate.jpg",
+      "word_audio": "media/c2/2026-09-25/word-audio/inculcate.mp3"
+    },
+    {
+      "word": "didactic",
+      "pos": "adjective",
+      "meaning": "intended to teach, often with a moralizing tone",
+      "example": "The lecture turned didactic when he started preaching about study habits.",
+      "pronunciation": "dy-DAK-tik",
+      "persian": "آموزنده، موعظه‌آمیز",
+      "photo": "media/c2/2026-09-25/photos/didactic.jpg",
+      "word_audio": "media/c2/2026-09-25/word-audio/didactic.mp3"
+    },
+    {
+      "word": "edification",
+      "pos": "noun",
+      "meaning": "intellectual or moral improvement through learning",
+      "example": "She read the essays for edification, not for an exam.",
+      "pronunciation": "ed-uh-fuh-KAY-shun",
+      "persian": "تربیت فکری، ارتقای ذهنی",
+      "photo": "media/c2/2026-09-25/photos/edification.jpg",
+      "word_audio": "media/c2/2026-09-25/word-audio/edification.mp3"
+    },
+    {
+      "word": "scholastic",
+      "pos": "adjective",
+      "meaning": "relating to schools and academic achievement",
+      "example": "His scholastic achievements earned him a full scholarship.",
+      "pronunciation": "skuh-LAS-tik",
+      "persian": "تحصیلی، مربوط به مدرسه",
+      "photo": "media/c2/2026-09-25/photos/scholastic.jpg",
+      "word_audio": "media/c2/2026-09-25/word-audio/scholastic.mp3"
+    },
+    {
+      "word": "mnemonic",
+      "pos": "noun",
+      "meaning": "a device that aids the memory",
+      "example": "She uses the mnemonic 'Never Eat Soggy Waffles' to recall the directions.",
+      "pronunciation": "nih-MON-ik",
+      "persian": "کمک‌حافظه",
+      "photo": "media/c2/2026-09-25/photos/mnemonic.jpg",
+      "word_audio": "media/c2/2026-09-25/word-audio/mnemonic.mp3"
+    },
+    {
+      "word": "cogitate",
+      "pos": "verb",
+      "meaning": "to think deeply and carefully",
+      "example": "He likes to cogitate on difficult problems during long walks.",
+      "pronunciation": "KOJ-uh-tayt",
+      "persian": "عمیقاً اندیشیدن",
+      "photo": "media/c2/2026-09-25/photos/cogitate.jpg",
+      "word_audio": "media/c2/2026-09-25/word-audio/cogitate.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-09-25/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Art of Learning",
+    "audio": "media/c2/2026-09-25/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-09-25/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Curious Student",
+    "audio": "media/c2/2026-09-25/shadowing.mp3",
+    "transcript": "media/c2/2026-09-25/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'pedagogy' mean?",
+      "options": [
+        "the method and practice of teaching",
+        "a device that aids the memory",
+        "to enroll formally at a university",
+        "intellectual improvement through learning"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'erudite' mean?",
+      "options": [
+        "intended to teach, often moralizing",
+        "having or showing deep, wide learning",
+        "relating to schools and academic achievement",
+        "a person who teaches themselves a subject"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'autodidact' mean?",
+      "options": [
+        "to instill an idea through persistent teaching",
+        "the method and practice of teaching",
+        "a person who teaches themselves a subject",
+        "to think deeply and carefully"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'matriculate' mean?",
+      "options": [
+        "a device that aids the memory",
+        "intellectual improvement through learning",
+        "intended to teach, often moralizing",
+        "to enroll formally at a university"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'inculcate' mean?",
+      "options": [
+        "to instill an idea through persistent teaching",
+        "having or showing deep, wide learning",
+        "the method and practice of teaching",
+        "relating to schools and academic achievement"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'didactic' mean?",
+      "options": [
+        "a person who teaches themselves a subject",
+        "intended to teach, often with a moralizing tone",
+        "to enroll formally at a university",
+        "to think deeply and carefully"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'edification' mean?",
+      "options": [
+        "a device that aids the memory",
+        "to instill an idea through persistent teaching",
+        "intellectual or moral improvement through learning",
+        "having or showing deep, wide learning"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'scholastic' mean?",
+      "options": [
+        "the method and practice of teaching",
+        "a person who teaches themselves a subject",
+        "intended to teach, often with a moralizing tone",
+        "relating to schools and academic achievement"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'mnemonic' mean?",
+      "options": [
+        "a device that aids the memory",
+        "intellectual or moral improvement through learning",
+        "to enroll formally at a university",
+        "to think deeply and carefully"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cogitate' mean?",
+      "options": [
+        "having or showing deep, wide learning",
+        "to think deeply and carefully",
+        "to instill an idea through persistent teaching",
+        "the method and practice of teaching"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "2A: Present perfect and past simple",
+    "explanation": "Use the **present perfect (have/has + past participle)** for past experiences when you do not say exactly when they happened. The *erudite* traveler and the humble *autodidact* both collect such dateless experiences.\n\nUse it for recent past actions whose result still matters now, often with **just**, **already**, or **yet**. Picture a new student about to *matriculate*, bags packed and heart racing.\n\n**Ever** and **never** belong with the present perfect when you ask about or deny life experiences. They come before the main verb, never after it.\n\nUse the **past simple** for finished actions when the time is said, asked, or already understood. A *didactic* lecture belongs to a finished timetable, so it takes the past simple.\n\nNever combine the present perfect with a finished-time phrase like **yesterday** or **last week**. Such time expressions close the door on the present perfect.\n\nAt C2 level, feel the nuance: the present perfect keeps the past connected to now, while the past simple seals it off. Compare an open result with a closed story, like a *scholastic* record filed away in an archive.\n\nWhen you *cogitate* on your own sentences, ask one question: does the time matter, or does the experience matter? Time points to the past simple, while experience points to the present perfect.\n\nBuild yourself a *mnemonic*: no time stated, present perfect; time stated, past simple. Repeat it until the choice feels automatic, and you will *inculcate* the habit for life while reading for pure *edification*.",
+    "examples": [
+      "She *has taught* herself three languages, a true *autodidact*. (no time given, so present perfect)",
+      "They *have just matriculated*, and the campus buzzes with excitement. (recent action, present result)",
+      "*Have* you *ever* met an *erudite* professor? (ever asks about life experience)",
+      "He *has never* used a *mnemonic*, yet his memory is excellent. (never denies experience)",
+      "The school *has already inculcated* strong study habits in its pupils. (already stresses completion)",
+      "*Have* you finished the *scholastic* essay *yet*? (yet in a question)",
+      "She *matriculated* in twenty twenty, full of hope. (time stated, so past simple)",
+      "The *didactic* film *bored* us last night. (last night is finished time)",
+      "He *cogitated* for an hour yesterday before deciding. (yesterday forces past simple)",
+      "They *have read* the book for pure *edification*, not for the exam. (experience, no time)"
+    ],
+    "practice": [
+      {
+        "q": "Correct the sentence: “I have seen that film yesterday.”",
+        "a": "“Yesterday” is a finished time, so use the past simple: “I saw that film yesterday.”"
+      },
+      {
+        "q": "Which is correct: “Have you ever matriculated at a foreign university?” or “Did you ever matriculate at a foreign university?”",
+        "a": "“Have you ever matriculated at a foreign university?” — ever asks about life experience, so it needs the present perfect."
+      },
+      {
+        "q": "Make a present perfect sentence about an autodidact using “already”.",
+        "a": "Example: “The young autodidact has already mastered two programming languages.”"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "She has matriculated last year.",
+          "She matriculated last year.",
+          "She has matriculate last year.",
+          "She matriculates last year."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "“Have you ___ met an erudite scholar?”",
+        "options": [
+          "ever",
+          "yesterday",
+          "last week",
+          "ago"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "“The professor ___ just published his new book on pedagogy.”",
+        "options": [
+          "has",
+          "did",
+          "is",
+          "will"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "“They ___ their scholastic prizes in June.”",
+        "options": [
+          "have received",
+          "received",
+          "receive",
+          "has received"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "“I have ___ used a mnemonic for exams.”",
+        "options": [
+          "yesterday",
+          "never",
+          "last night",
+          "in 2020"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "“She ___ already inculcated a love of reading in her children.”",
+        "options": [
+          "has",
+          "did",
+          "have",
+          "is"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "“He cogitated ___ the problem yesterday and found a solution.”",
+        "options": [
+          "has on",
+          "on",
+          "have on",
+          "upon has"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "“___ you finished your edification reading yet?”",
+        "options": [
+          "Did",
+          "Have",
+          "Has",
+          "Do"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "“The autodidact taught himself calculus in 2019.” Why is the past simple correct?",
+        "options": [
+          "Because 2019 is a finished time",
+          "Because the action continues today",
+          "Because ever is used",
+          "Because the result is unknown"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "“We have never ___ such a didactic lecture.”",
+        "options": [
+          "heard",
+          "hear",
+          "hearing",
+          "hears"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

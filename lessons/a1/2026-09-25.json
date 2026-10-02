@@ -1,0 +1,355 @@
+{
+  "date": "2026-09-25",
+  "theme": "My Body",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "head",
+      "pos": "noun",
+      "meaning": "the top part of your body",
+      "example": "My head hurts.",
+      "pronunciation": "HED",
+      "persian": "سر",
+      "photo": "media/a1/2026-09-25/photos/head.jpg",
+      "word_audio": "media/a1/2026-09-25/word-audio/head.mp3"
+    },
+    {
+      "word": "hand",
+      "pos": "noun",
+      "meaning": "the part at the end of your arm",
+      "example": "Wash your hands.",
+      "pronunciation": "HAND",
+      "persian": "دست",
+      "photo": "media/a1/2026-09-25/photos/hand.jpg",
+      "word_audio": "media/a1/2026-09-25/word-audio/hand.mp3"
+    },
+    {
+      "word": "foot",
+      "pos": "noun",
+      "meaning": "the part you stand on",
+      "example": "My foot is cold.",
+      "pronunciation": "FUT",
+      "persian": "پا",
+      "photo": "media/a1/2026-09-25/photos/foot.jpg",
+      "word_audio": "media/a1/2026-09-25/word-audio/foot.mp3"
+    },
+    {
+      "word": "eye",
+      "pos": "noun",
+      "meaning": "the part you see with",
+      "example": "Close your eyes.",
+      "pronunciation": "EYE",
+      "persian": "چشم",
+      "photo": "media/a1/2026-09-25/photos/eye.jpg",
+      "word_audio": "media/a1/2026-09-25/word-audio/eye.mp3"
+    },
+    {
+      "word": "nose",
+      "pos": "noun",
+      "meaning": "the part you smell with",
+      "example": "His nose is small.",
+      "pronunciation": "NOHZ",
+      "persian": "بینی",
+      "photo": "media/a1/2026-09-25/photos/nose.jpg",
+      "word_audio": "media/a1/2026-09-25/word-audio/nose.mp3"
+    },
+    {
+      "word": "mouth",
+      "pos": "noun",
+      "meaning": "the part you eat and speak with",
+      "example": "Open your mouth.",
+      "pronunciation": "MOWTH",
+      "persian": "دهان",
+      "photo": "media/a1/2026-09-25/photos/mouth.jpg",
+      "word_audio": "media/a1/2026-09-25/word-audio/mouth.mp3"
+    },
+    {
+      "word": "arm",
+      "pos": "noun",
+      "meaning": "the long part from your shoulder to your hand",
+      "example": "Raise your arm.",
+      "pronunciation": "ARM",
+      "persian": "بازو",
+      "photo": "media/a1/2026-09-25/photos/arm.jpg",
+      "word_audio": "media/a1/2026-09-25/word-audio/arm.mp3"
+    },
+    {
+      "word": "leg",
+      "pos": "noun",
+      "meaning": "the long part from your hip to your foot",
+      "example": "Her leg hurts.",
+      "pronunciation": "LEG",
+      "persian": "پا",
+      "photo": "media/a1/2026-09-25/photos/leg.jpg",
+      "word_audio": "media/a1/2026-09-25/word-audio/leg.mp3"
+    },
+    {
+      "word": "hair",
+      "pos": "noun",
+      "meaning": "the thin lines that grow on your head",
+      "example": "She has long hair.",
+      "pronunciation": "HAIR",
+      "persian": "مو",
+      "photo": "media/a1/2026-09-25/photos/hair.jpg",
+      "word_audio": "media/a1/2026-09-25/word-audio/hair.mp3"
+    },
+    {
+      "word": "back",
+      "pos": "noun",
+      "meaning": "the part behind your body",
+      "example": "My back is tired.",
+      "pronunciation": "BAK",
+      "persian": "پشت",
+      "photo": "media/a1/2026-09-25/photos/back.jpg",
+      "word_audio": "media/a1/2026-09-25/word-audio/back.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-09-25/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: My Body",
+    "audio": "media/a1/2026-09-25/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-09-25/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Touch Your Body",
+    "audio": "media/a1/2026-09-25/shadowing.mp3",
+    "transcript": "media/a1/2026-09-25/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'head' mean?",
+      "options": [
+        "the thin lines that grow on your head",
+        "the part you smell with",
+        "the long part from your hip to your foot",
+        "the top part of your body"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'hand' mean?",
+      "options": [
+        "the part you smell with",
+        "the part you eat and speak with",
+        "the part at the end of your arm",
+        "the part you see with"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'foot' mean?",
+      "options": [
+        "the thin lines that grow on your head",
+        "the part you stand on",
+        "the long part from your shoulder to your hand",
+        "the part behind your body"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'eye' mean?",
+      "options": [
+        "the part behind your body",
+        "the thin lines that grow on your head",
+        "the part you smell with",
+        "the part you see with"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'nose' mean?",
+      "options": [
+        "the part at the end of your arm",
+        "the top part of your body",
+        "the part you see with",
+        "the part you smell with"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'mouth' mean?",
+      "options": [
+        "the long part from your shoulder to your hand",
+        "the part behind your body",
+        "the part you eat and speak with",
+        "the part you stand on"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'arm' mean?",
+      "options": [
+        "the long part from your shoulder to your hand",
+        "the part you smell with",
+        "the long part from your hip to your foot",
+        "the thin lines that grow on your head"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'leg' mean?",
+      "options": [
+        "the thin lines that grow on your head",
+        "the long part from your hip to your foot",
+        "the long part from your shoulder to your hand",
+        "the part behind your body"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'hair' mean?",
+      "options": [
+        "the long part from your shoulder to your hand",
+        "the thin lines that grow on your head",
+        "the part you stand on",
+        "the top part of your body"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'back' mean?",
+      "options": [
+        "the part behind your body",
+        "the part at the end of your arm",
+        "the top part of your body",
+        "the part you stand on"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "2A: Present perfect and past simple",
+    "explanation": "We use **have / has + past participle** to talk about our body and our life. We do not say when it happened.\n\nWe also use **have / has + past participle** for a new action with a result now. Your hand is clean because you washed it.\n\nUse **just** for a very short time ago, **already** when it is done, and **yet** in questions and negative sentences.\n\nUse the past simple when we say **when** it happened. Words like **yesterday** and **last week** need the past simple.\n\nNever use **have / has** with **yesterday** or **last week**. That is wrong.",
+    "examples": [
+      "I *have washed* my hair. (we do not say when)",
+      "She *has hurt* her leg. (her leg hurts now)",
+      "We *have just closed* our eyes. (a very short time ago)",
+      "They *have already* brushed their hair. (it is done)",
+      "Have you *washed* your hands *yet*? (a question with yet)",
+      "I *have never broken* my arm. (never in my life)",
+      "He *hurt* his back last week. (we say when: last week)",
+      "She *washed* her foot yesterday. (we say when: yesterday)",
+      "I *touched* my nose this morning. (finished action with a time)",
+      "You *have hurt* your mouth. (no time, the result is now)"
+    ],
+    "practice": [
+      {
+        "q": "Make a present perfect sentence with 'wash' and 'hair'.",
+        "a": "I have washed my hair."
+      },
+      {
+        "q": "Fix the mistake: I have seen him yesterday.",
+        "a": "I saw him yesterday."
+      },
+      {
+        "q": "Make a question with 'yet' and 'hand'.",
+        "a": "Have you washed your hands yet?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I have hurt my leg.",
+          "I have hurt my leg yesterday.",
+          "I am hurt my leg yesterday.",
+          "I has hurt my leg."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "She has washed her hair yesterday.",
+          "She washed her hair yesterday.",
+          "She have washed her hair.",
+          "She has wash her hair."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Fill the gap: I ___ just ___ my hands.",
+        "options": [
+          "have / wash",
+          "has / washed",
+          "have / washed",
+          "am / washing"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which word can NOT go with the present perfect?",
+        "options": [
+          "just",
+          "already",
+          "yesterday",
+          "yet"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Fill the gap: ___ you ___ your eyes yet?",
+        "options": [
+          "Have / closed",
+          "Has / closed",
+          "Did / close",
+          "Are / closing"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Fill the gap: He ___ his back last week.",
+        "options": [
+          "has hurt",
+          "have hurt",
+          "hurt",
+          "hurts"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Fill the gap: I have ___ my foot. (wash)",
+        "options": [
+          "washed",
+          "wash",
+          "washing",
+          "washes"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Make it negative: I ___ washed my hair.",
+        "options": [
+          "have not",
+          "has not",
+          "did not have",
+          "am not"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which sentence talks about a life experience, with no time?",
+        "options": [
+          "I have never broken my arm.",
+          "I broke my arm yesterday.",
+          "I break my arm every day.",
+          "I am breaking my arm."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Fix the mistake: She has seen the doctor last Monday.",
+        "options": [
+          "She saw the doctor last Monday.",
+          "She has see the doctor last Monday.",
+          "She see the doctor last Monday.",
+          "She is seeing the doctor last Monday."
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a1/2026-09-25/grammar-en.mp3"
+  }
+}

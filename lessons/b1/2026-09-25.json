@@ -1,0 +1,350 @@
+{
+  "date": "2026-09-25",
+  "theme": "Travel & Transport",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "itinerary",
+      "pos": "noun",
+      "meaning": "a detailed plan of a trip, showing places and times",
+      "example": "Our itinerary includes three cities in Italy.",
+      "pronunciation": "ih-TIN-uh-rer-ee",
+      "persian": "برنامه سفر",
+      "photo": "media/b1/2026-09-25/photos/itinerary.jpg",
+      "word_audio": "media/b1/2026-09-25/word-audio/itinerary.mp3"
+    },
+    {
+      "word": "boarding",
+      "pos": "noun",
+      "meaning": "the act of getting on a plane, train or ship",
+      "example": "Boarding starts forty minutes before the flight.",
+      "pronunciation": "BOR-ding",
+      "persian": "سوار شدن (به هواپیما/قطار/کشتی)",
+      "photo": "media/b1/2026-09-25/photos/boarding.jpg",
+      "word_audio": "media/b1/2026-09-25/word-audio/boarding.mp3"
+    },
+    {
+      "word": "platform",
+      "pos": "noun",
+      "meaning": "the raised area beside the track where you get on a train",
+      "example": "Our train leaves from platform nine.",
+      "pronunciation": "PLAT-form",
+      "persian": "سکوی قطار",
+      "photo": "media/b1/2026-09-25/photos/platform.jpg",
+      "word_audio": "media/b1/2026-09-25/word-audio/platform.mp3"
+    },
+    {
+      "word": "transfer",
+      "pos": "verb",
+      "meaning": "to change from one vehicle to another during a trip",
+      "example": "We transferred from the bus to the metro downtown.",
+      "pronunciation": "trans-FUR",
+      "persian": "تعویض وسیله نقلیه در مسیر سفر",
+      "photo": "media/b1/2026-09-25/photos/transfer.jpg",
+      "word_audio": "media/b1/2026-09-25/word-audio/transfer.mp3"
+    },
+    {
+      "word": "aisle",
+      "pos": "noun",
+      "meaning": "the long passage between rows of seats on a plane or bus",
+      "example": "She prefers an aisle seat so she can stand up easily.",
+      "pronunciation": "ILE",
+      "persian": "راهرو (میان صندلی‌ها)",
+      "photo": "media/b1/2026-09-25/photos/aisle.jpg",
+      "word_audio": "media/b1/2026-09-25/word-audio/aisle.mp3"
+    },
+    {
+      "word": "customs",
+      "pos": "noun",
+      "meaning": "the place at an airport where officers check travelers' bags",
+      "example": "We waited in a long line at customs.",
+      "pronunciation": "KUS-tumz",
+      "persian": "گمرک",
+      "photo": "media/b1/2026-09-25/photos/customs.jpg",
+      "word_audio": "media/b1/2026-09-25/word-audio/customs.mp3"
+    },
+    {
+      "word": "layover",
+      "pos": "noun",
+      "meaning": "a short stop between two connecting flights",
+      "example": "We had a three-hour layover in Istanbul.",
+      "pronunciation": "LAY-oh-vur",
+      "persian": "توقف بین دو پرواز",
+      "photo": "media/b1/2026-09-25/photos/layover.jpg",
+      "word_audio": "media/b1/2026-09-25/word-audio/layover.mp3"
+    },
+    {
+      "word": "carry-on",
+      "pos": "noun",
+      "meaning": "a small bag you take with you onto the plane",
+      "example": "I only travel with a carry-on.",
+      "pronunciation": "KAR-ee-on",
+      "persian": "کیف دستی همراه مسافر",
+      "photo": "media/b1/2026-09-25/photos/carry-on.jpg",
+      "word_audio": "media/b1/2026-09-25/word-audio/carry-on.mp3"
+    },
+    {
+      "word": "shuttle",
+      "pos": "noun",
+      "meaning": "a bus or plane that travels regularly between two places",
+      "example": "The airport shuttle leaves every twenty minutes.",
+      "pronunciation": "SHUT-ul",
+      "persian": "شاتل (وسیله نقلیه منظم بین دو نقطه)",
+      "photo": "media/b1/2026-09-25/photos/shuttle.jpg",
+      "word_audio": "media/b1/2026-09-25/word-audio/shuttle.mp3"
+    },
+    {
+      "word": "connection",
+      "pos": "noun",
+      "meaning": "a flight or train that continues your journey",
+      "example": "We missed our connection in Frankfurt.",
+      "pronunciation": "kuh-NEK-shun",
+      "persian": "پرواز یا قطار وصل‌کننده",
+      "photo": "media/b1/2026-09-25/photos/connection.jpg",
+      "word_audio": "media/b1/2026-09-25/word-audio/connection.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-09-25/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Traveling Smart",
+    "audio": "media/b1/2026-09-25/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-09-25/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Smooth Trip to Rome",
+    "audio": "media/b1/2026-09-25/shadowing.mp3",
+    "transcript": "media/b1/2026-09-25/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'itinerary' mean?",
+      "options": [
+        "a small bag you take with you onto the plane",
+        "a detailed plan of a trip, showing places and times",
+        "to change from one vehicle to another during a trip",
+        "a short stop between two connecting flights"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'boarding' mean?",
+      "options": [
+        "the act of getting on a plane, train or ship",
+        "a small bag you take with you onto the plane",
+        "a bus or plane that travels regularly between two places",
+        "a detailed plan of a trip, showing places and times"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'platform' mean?",
+      "options": [
+        "the act of getting on a plane, train or ship",
+        "a detailed plan of a trip, showing places and times",
+        "the raised area beside the track where you get on a train",
+        "a short stop between two connecting flights"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'transfer' mean?",
+      "options": [
+        "the act of getting on a plane, train or ship",
+        "the long passage between rows of seats on a plane or bus",
+        "to change from one vehicle to another during a trip",
+        "the place at an airport where officers check travelers' bags"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'aisle' mean?",
+      "options": [
+        "a short stop between two connecting flights",
+        "the long passage between rows of seats on a plane or bus",
+        "the act of getting on a plane, train or ship",
+        "to change from one vehicle to another during a trip"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'customs' mean?",
+      "options": [
+        "a detailed plan of a trip, showing places and times",
+        "a flight or train that continues your journey",
+        "the place at an airport where officers check travelers' bags",
+        "a bus or plane that travels regularly between two places"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'layover' mean?",
+      "options": [
+        "a bus or plane that travels regularly between two places",
+        "a short stop between two connecting flights",
+        "a flight or train that continues your journey",
+        "the raised area beside the track where you get on a train"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'carry-on' mean?",
+      "options": [
+        "a short stop between two connecting flights",
+        "the place at an airport where officers check travelers' bags",
+        "the act of getting on a plane, train or ship",
+        "a small bag you take with you onto the plane"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'shuttle' mean?",
+      "options": [
+        "the place at an airport where officers check travelers' bags",
+        "to change from one vehicle to another during a trip",
+        "a bus or plane that travels regularly between two places",
+        "a flight or train that continues your journey"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'connection' mean?",
+      "options": [
+        "a flight or train that continues your journey",
+        "a detailed plan of a trip, showing places and times",
+        "a short stop between two connecting flights",
+        "the raised area beside the track where you get on a train"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "2A: Present perfect and past simple",
+    "explanation": "The **present perfect** is **have** or **has** + the **past participle**. Use it for past experiences when you don't say when, like a strange customs check or a long layover.\n\nAlso use it for recent actions with a present result, often with **just**, **already**, or **yet**. Our boarding has just started, so the aisle is still empty.\n\nThe **past simple** is for finished actions when we say, ask, or know when they happened. We missed our connection last Friday because the shuttle was late.\n\nUse **ever** and **never** with the present perfect to ask about life experiences: a crazy transfer, a wrong platform, a lost carry-on.\n\nNever use the present perfect with a past time expression like **yesterday** or **last week**. Don't say \"I have seen the itinerary yesterday\" — say \"I saw the itinerary yesterday.\"",
+    "examples": [
+      "*I have planned* my itinerary three times this week. (present perfect: experience, no time said)",
+      "*She has just finished* packing her carry-on. (just + present perfect = recent action)",
+      "*They have never taken* a night shuttle before. (never + present perfect = zero experience)",
+      "*Have you ever missed* a connection at a big airport? (ever + present perfect question)",
+      "*We have already passed* through customs. (already + present perfect = sooner than expected)",
+      "*Our boarding started* at six o'clock this morning. (past simple + past time expression)",
+      "*I waited* on the wrong platform yesterday. (past simple + yesterday)",
+      "*She transferred* from the bus to the metro last night. (past simple + last night)",
+      "*The layover felt* endless, so we drank three coffees. (past simple, finished action)",
+      "*Have you booked* the airport shuttle yet? (yet + present perfect question)"
+    ],
+    "practice": [
+      {
+        "q": "Why is \"I have seen the new platform yesterday\" wrong?",
+        "a": "Never use the present perfect with a past time word like \"yesterday\". Say \"I saw the new platform yesterday.\""
+      },
+      {
+        "q": "Present perfect or past simple: \"She ___ (lose) her carry-on\" — no time is given. Which, and why?",
+        "a": "Present perfect: \"She has lost her carry-on.\" We don't say when, so the experience matters, not the time."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ never missed a connection before.",
+        "options": [
+          "has",
+          "have",
+          "did",
+          "am"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ just finished her itinerary.",
+        "options": [
+          "have",
+          "has",
+          "is",
+          "does"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We ___ already passed through customs.",
+        "options": [
+          "has",
+          "have",
+          "are",
+          "did"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ you ever taken a night shuttle?",
+        "options": [
+          "Did",
+          "Have",
+          "Has",
+          "Do"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Our boarding ___ at six this morning.",
+        "options": [
+          "has started",
+          "started",
+          "starts",
+          "start"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ on the wrong platform yesterday.",
+        "options": [
+          "have waited",
+          "waited",
+          "wait",
+          "waits"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ from the bus to the metro last night.",
+        "options": [
+          "has transferred",
+          "transferred",
+          "transfer",
+          "transfers"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ his carry-on last week.",
+        "options": [
+          "has packed",
+          "packed",
+          "packs",
+          "pack"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Have you booked the airport shuttle ___?",
+        "options": [
+          "just",
+          "yet",
+          "ever",
+          "never"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ my itinerary yesterday morning.",
+        "options": [
+          "have planned",
+          "planned",
+          "plan",
+          "plans"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

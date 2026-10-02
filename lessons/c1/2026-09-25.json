@@ -1,0 +1,354 @@
+{
+ "date": "2026-09-25",
+ "theme": "Emotions & Character",
+ "level": "c1",
+ "cefr": "C1",
+ "words": [
+  {
+   "word": "capricious",
+   "pos": "adjective",
+   "meaning": "changing suddenly and unpredictably, especially in mood or plans",
+   "example": "The capricious weather ruined our picnic twice this week.",
+   "pronunciation": "kuh-PRIH-shus",
+   "persian": "دمدمی‌مزاج",
+   "photo": "media/c1/2026-09-25/photos/capricious.jpg",
+   "word_audio": "media/c1/2026-09-25/word-audio/capricious.mp3"
+  },
+  {
+   "word": "stoic",
+   "pos": "adjective",
+   "meaning": "calmly enduring pain or hardship without showing emotion",
+   "example": "She stayed stoic throughout the entire painful meeting.",
+   "pronunciation": "STOH-ik",
+   "persian": "خویشتن‌دار",
+   "photo": "media/c1/2026-09-25/photos/stoic.jpg",
+   "word_audio": "media/c1/2026-09-25/word-audio/stoic.mp3"
+  },
+  {
+   "word": "melancholy",
+   "pos": "noun",
+   "meaning": "a deep, thoughtful sadness, often without a clear cause",
+   "example": "An autumn melancholy settled over him as the leaves began to fall.",
+   "pronunciation": "MEL-uhn-koh-lee",
+   "persian": "غم عمیق و تأمل‌برانگیز",
+   "photo": "media/c1/2026-09-25/photos/melancholy.jpg",
+   "word_audio": "media/c1/2026-09-25/word-audio/melancholy.mp3"
+  },
+  {
+   "word": "petulant",
+   "pos": "adjective",
+   "meaning": "childishly bad-tempered or sulky, especially over small things",
+   "example": "His petulant tone made everyone uncomfortable at dinner.",
+   "pronunciation": "PET-yuh-luhnt",
+   "persian": "زودرنج و بداخلاق",
+   "photo": "media/c1/2026-09-25/photos/petulant.jpg",
+   "word_audio": "media/c1/2026-09-25/word-audio/petulant.mp3"
+  },
+  {
+   "word": "gregarious",
+   "pos": "adjective",
+   "meaning": "enjoying the company of others; sociable and outgoing",
+   "example": "Her gregarious personality made her popular at every party.",
+   "pronunciation": "gruh-GAIR-ee-us",
+   "persian": "اجتماعی و خوش‌مشرب",
+   "photo": "media/c1/2026-09-25/photos/gregarious.jpg",
+   "word_audio": "media/c1/2026-09-25/word-audio/gregarious.mp3"
+  },
+  {
+   "word": "reticent",
+   "pos": "adjective",
+   "meaning": "quiet and unwilling to talk much about feelings or opinions",
+   "example": "He was reticent about his reasons for leaving the company.",
+   "pronunciation": "RET-ih-suhnt",
+   "persian": "کم‌حرف و محتاط در سخن",
+   "photo": "media/c1/2026-09-25/photos/reticent.jpg",
+   "word_audio": "media/c1/2026-09-25/word-audio/reticent.mp3"
+  },
+  {
+   "word": "sanguine",
+   "pos": "adjective",
+   "meaning": "cheerfully optimistic about the future, even in difficult times",
+   "example": "She felt sanguine about the exam results despite the hard questions.",
+   "pronunciation": "SANG-gwin",
+   "persian": "خوش‌بین و امیدوار",
+   "photo": "media/c1/2026-09-25/photos/sanguine.jpg",
+   "word_audio": "media/c1/2026-09-25/word-audio/sanguine.mp3"
+  },
+  {
+   "word": "disdain",
+   "pos": "noun",
+   "meaning": "a strong feeling of contempt or lack of respect",
+   "example": "He looked at the cheap imitation with disdain.",
+   "pronunciation": "dis-DAYN",
+   "persian": "تحقیر",
+   "photo": "media/c1/2026-09-25/photos/disdain.jpg",
+   "word_audio": "media/c1/2026-09-25/word-audio/disdain.mp3"
+  },
+  {
+   "word": "resentful",
+   "pos": "adjective",
+   "meaning": "feeling angry and bitter because of unfair treatment",
+   "example": "She grew resentful after years of being overlooked for promotion.",
+   "pronunciation": "rih-ZENT-fuhl",
+   "persian": "کینه‌دار و دلخور",
+   "photo": "media/c1/2026-09-25/photos/resentful.jpg",
+   "word_audio": "media/c1/2026-09-25/word-audio/resentful.mp3"
+  },
+  {
+   "word": "nonchalant",
+   "pos": "adjective",
+   "meaning": "calm and relaxed in a way that can seem careless or unconcerned",
+   "example": "He gave a nonchalant shrug when asked about the delay.",
+   "pronunciation": "non-shuh-LAHNT",
+   "persian": "خونسرد و بی‌تفاوت",
+   "photo": "media/c1/2026-09-25/photos/nonchalant.jpg",
+   "word_audio": "media/c1/2026-09-25/word-audio/nonchalant.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c1/2026-09-25/pronunciation.mp3",
+ "podcast": {
+  "title": "Word Kitchen: Emotions and Character",
+  "audio": "media/c1/2026-09-25/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-09-25/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The New Manager",
+  "audio": "media/c1/2026-09-25/shadowing.mp3",
+  "transcript": "media/c1/2026-09-25/shadowing-transcript.txt"
+ },
+ "quiz": [
+  {
+   "question": "What does 'capricious' mean?",
+   "options": [
+    "a deep, thoughtful sadness, often without a clear cause",
+    "cheerfully optimistic about the future, even in hard times",
+    "changing suddenly and unpredictably, especially in mood or plans",
+    "calmly enduring pain or hardship without showing emotion"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'stoic' mean?",
+   "options": [
+    "cheerfully optimistic about the future, even in hard times",
+    "childishly bad-tempered or sulky over small things",
+    "a deep, thoughtful sadness, often without a clear cause",
+    "calmly enduring pain or hardship without showing emotion"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'melancholy' mean?",
+   "options": [
+    "feeling angry and bitter because of unfair treatment",
+    "calm and relaxed in a way that can seem careless",
+    "a deep, thoughtful sadness, often without a clear cause",
+    "changing suddenly and unpredictably, especially in mood or plans"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'petulant' mean?",
+   "options": [
+    "enjoying the company of others; sociable and outgoing",
+    "calm and relaxed in a way that can seem careless",
+    "childishly bad-tempered or sulky over small things",
+    "cheerfully optimistic about the future, even in hard times"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'gregarious' mean?",
+   "options": [
+    "enjoying the company of others; sociable and outgoing",
+    "a strong feeling of contempt or lack of respect",
+    "changing suddenly and unpredictably, especially in mood or plans",
+    "quiet and unwilling to talk much about feelings or opinions"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'reticent' mean?",
+   "options": [
+    "enjoying the company of others; sociable and outgoing",
+    "quiet and unwilling to talk much about feelings or opinions",
+    "calmly enduring pain or hardship without showing emotion",
+    "cheerfully optimistic about the future, even in hard times"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'sanguine' mean?",
+   "options": [
+    "cheerfully optimistic about the future, even in hard times",
+    "changing suddenly and unpredictably, especially in mood or plans",
+    "calmly enduring pain or hardship without showing emotion",
+    "a strong feeling of contempt or lack of respect"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'disdain' mean?",
+   "options": [
+    "feeling angry and bitter because of unfair treatment",
+    "enjoying the company of others; sociable and outgoing",
+    "changing suddenly and unpredictably, especially in mood or plans",
+    "a strong feeling of contempt or lack of respect"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'resentful' mean?",
+   "options": [
+    "calm and relaxed in a way that can seem careless",
+    "feeling angry and bitter because of unfair treatment",
+    "cheerfully optimistic about the future, even in hard times",
+    "enjoying the company of others; sociable and outgoing"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'nonchalant' mean?",
+   "options": [
+    "changing suddenly and unpredictably, especially in mood or plans",
+    "calm and relaxed in a way that can seem careless",
+    "quiet and unwilling to talk much about feelings or opinions",
+    "calmly enduring pain or hardship without showing emotion"
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "2A: Present perfect and past simple",
+  "explanation": "Use the **present perfect** — **have/has + past participle** — for past experiences when you do not say exactly when. \"Have you ever worked for a capricious manager?\" asks about your whole life, not a date.\n\nPair it with **ever** and **never** for experiences. \"She has never been petulant in a meeting\" describes a lifetime habit, and \"He has never lost his stoic calm\" does the same.\n\nUse the **present perfect** for recent actions with a present result. \"He has just sent a nonchalant reply\" explains why everyone is calm right now.\n\nUse **already** in positive sentences and **yet** in negatives and questions. \"They have already hired a gregarious new host\" — but \"Have they hired her yet?\"\n\nUse the **past simple** for finished actions when the time is said, asked, or known. \"She looked at the offer with disdain yesterday\" — yesterday forces the past simple.\n\n**Never** use the present perfect with a finished time expression like yesterday or last week. \"He was reticent last Friday\" is correct; \"He has been reticent last Friday\" is wrong.\n\nThe contrast changes meaning. \"I have felt melancholy this week\" (still relevant now) is not the same as \"I felt melancholy in March\" (finished and dated).\n\nAt C1, notice how the tenses color character judgments. \"She has grown resentful\" suggests a process still affecting her, while \"She seemed sanguine\" reports a finished impression.",
+  "examples": [
+   "*Have* you ever worked for a *capricious* manager? (experience, no time given)",
+   "She *has never been* *petulant* in a meeting, and he *has never lost* his *stoic* calm. (never + present perfect)",
+   "He *has just* apologized for his *petulant* email. (just + present result)",
+   "They *have already* hired a *gregarious* new presenter. (already in a positive sentence)",
+   "Have they answered *yet*? Their *nonchalant* silence worries me. (yet in a question)",
+   "He looked at the contract with *disdain* last Monday. (past simple + finished time)",
+   "She was *reticent* during yesterday's interview. (past simple + yesterday)",
+   "I *have felt* a strange *melancholy* all week. (present perfect, still relevant now)",
+   "He *seemed* remarkably *sanguine* about the results. (past simple, finished impression)",
+   "She *has grown* quietly *resentful* over the years. (present perfect, process with a present result)"
+  ],
+  "practice": [
+   {
+    "q": "Complete: I ___ (never / see) such a petulant email before.",
+    "a": "I have never seen such a petulant email before."
+   },
+   {
+    "q": "Correct or wrong: 'She has been reticent last Friday.' If wrong, fix it.",
+    "a": "Wrong. Use the past simple with a finished time: 'She was reticent last Friday.'"
+   },
+   {
+    "q": "Complete: They ___ already hired a gregarious new presenter. (have / has / did)",
+    "a": "They have already hired a gregarious new presenter."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "I have seen him yesterday.",
+     "I saw him yesterday.",
+     "I have saw him yesterday.",
+     "I did see him already yesterday."
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: 'Have you ever ___ abroad?'",
+    "options": [
+     "live",
+     "lived",
+     "living",
+     "lives"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Which sentence is correct?",
+    "options": [
+     "She has already finished.",
+     "She already has finished.",
+     "She has finished already yet.",
+     "She finished already has."
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Complete: 'They ___ just arrived.'",
+    "options": [
+     "have",
+     "has",
+     "are",
+     "did"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Complete: 'He ___ me last week.'",
+    "options": [
+     "has called",
+     "have called",
+     "called",
+     "calls"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Complete: 'I have never ___ such a gregarious colleague.'",
+    "options": [
+     "meet",
+     "met",
+     "meeting",
+     "meets"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: '___ you finished yet?'",
+    "options": [
+     "Did",
+     "Have",
+     "Has",
+     "Do"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Which sentence is WRONG?",
+    "options": [
+     "I bought it last Saturday.",
+     "I've bought a new computer.",
+     "I've bought it last Saturday.",
+     "I've never been to Madrid."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Complete: 'She ___ to Madrid in 1998 and 2002.'",
+    "options": [
+     "has gone",
+     "went",
+     "has been going",
+     "goes"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: 'My brother ___ a new job yet.'",
+    "options": [
+     "hasn't found",
+     "didn't found",
+     "hasn't find",
+     "not found"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}
