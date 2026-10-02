@@ -1,0 +1,343 @@
+{
+  "date": "2026-09-29",
+  "level": "b1",
+  "cover": "media/b1/2026-09-29/podcast-cover.jpg",
+  "words": [
+    {
+      "word": "workout",
+      "meaning": "a period of physical exercise to stay healthy",
+      "example": "I do a thirty-minute workout every morning.",
+      "pronunciation": "WURK-out",
+      "fa": "تمرین ورزشی (جلسه تمرین بدنی)",
+      "photo": "media/b1/2026-09-29/photos/workout.jpg",
+      "audio": "media/b1/2026-09-29/word-audio/workout.mp3"
+    },
+    {
+      "word": "warm-up",
+      "meaning": "gentle exercises you do before harder exercise",
+      "example": "A ten-minute warm-up gets your body ready for exercise.",
+      "pronunciation": "WORM-up",
+      "fa": "گرم کردن بدن (قبل از ورزش اصلی)",
+      "photo": "media/b1/2026-09-29/photos/warm-up.jpg",
+      "audio": "media/b1/2026-09-29/word-audio/warm-up.mp3"
+    },
+    {
+      "word": "stretching",
+      "meaning": "slow exercises that make your muscles longer and more relaxed",
+      "example": "Stretching after a run stops pain the next day.",
+      "pronunciation": "STRETCH-ing",
+      "fa": "حرکات کششی",
+      "photo": "media/b1/2026-09-29/photos/stretching.jpg",
+      "audio": "media/b1/2026-09-29/word-audio/stretching.mp3"
+    },
+    {
+      "word": "strength",
+      "meaning": "the power your muscles have",
+      "example": "Hill runs build strength in your legs.",
+      "pronunciation": "STRENGTH",
+      "fa": "قدرت بدنی",
+      "photo": "media/b1/2026-09-29/photos/strength.jpg",
+      "audio": "media/b1/2026-09-29/word-audio/strength.mp3"
+    },
+    {
+      "word": "balance",
+      "meaning": "the ability to stay steady and not fall",
+      "example": "Yoga improves your balance and posture.",
+      "pronunciation": "BAL-uhnss",
+      "fa": "تعادل",
+      "photo": "media/b1/2026-09-29/photos/balance.jpg",
+      "audio": "media/b1/2026-09-29/word-audio/balance.mp3"
+    },
+    {
+      "word": "coach",
+      "meaning": "a person who trains athletes or a sports team",
+      "example": "Our coach plans every workout for the team.",
+      "pronunciation": "KOHCH",
+      "fa": "مربی",
+      "photo": "media/b1/2026-09-29/photos/coach.jpg",
+      "audio": "media/b1/2026-09-29/word-audio/coach.mp3"
+    },
+    {
+      "word": "goal",
+      "meaning": "something you want to achieve",
+      "example": "My goal is to run ten kilometers without stopping.",
+      "pronunciation": "GOHL",
+      "fa": "هدف",
+      "photo": "media/b1/2026-09-29/photos/goal.jpg",
+      "audio": "media/b1/2026-09-29/word-audio/goal.mp3"
+    },
+    {
+      "word": "teamwork",
+      "meaning": "working together as a group to reach a shared goal",
+      "example": "Winning needs teamwork, not just one star player.",
+      "pronunciation": "TEEM-wurk",
+      "fa": "کار تیمی",
+      "photo": "media/b1/2026-09-29/photos/teamwork.jpg",
+      "audio": "media/b1/2026-09-29/word-audio/teamwork.mp3"
+    },
+    {
+      "word": "flexibility",
+      "meaning": "the ability to bend and move your body easily",
+      "example": "Daily stretching gives you more flexibility.",
+      "pronunciation": "flek-suh-BIL-uh-tee",
+      "fa": "انعطاف‌پذیری",
+      "photo": "media/b1/2026-09-29/photos/flexibility.jpg",
+      "audio": "media/b1/2026-09-29/word-audio/flexibility.mp3"
+    },
+    {
+      "word": "endurance",
+      "meaning": "the ability to keep doing something difficult for a long time",
+      "example": "Long slow runs build your endurance step by step.",
+      "pronunciation": "en-DYOOR-uhnss",
+      "fa": "استقامت",
+      "photo": "media/b1/2026-09-29/photos/endurance.jpg",
+      "audio": "media/b1/2026-09-29/word-audio/endurance.mp3"
+    }
+  ],
+  "podcast": {
+    "audio": "media/b1/2026-09-29/podcast.mp3",
+    "cover": "media/b1/2026-09-29/podcast-cover.jpg",
+    "transcript": "media/b1/2026-09-29/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "audio": "media/b1/2026-09-29/shadowing.mp3",
+    "transcript": "media/b1/2026-09-29/shadowing-transcript.txt"
+  },
+  "grammar": {
+    "title": "4A: Obligation and prohibition - have to, must, should",
+    "explanation": [
+      "We use **have to** and **must** to talk about obligation. Obligation means something you need to do.",
+      "Use **have to** for general rules that come from the outside. These are rules at work, at school, or in a gym.",
+      "Use **must** for a personal decision or a strong feeling inside you. It is your own choice, not a rule.",
+      "**mustn't** is a prohibition. It means something is NOT allowed. Be careful: it is very different from **don't have to**.",
+      "**don't have to** means something is NOT necessary. You can do it if you want, but nobody says you need to.",
+      "Use **should** and **shouldn't** for advice or an opinion. They are weaker than **must**. Your coach gives advice with **should**."
+    ],
+    "examples": [
+      "*You *have to* do a warm-up before every workout.* (a gym rule)",
+      "*I *must* build more strength in my legs.* (my own decision)",
+      "*You *mustn't* skip stretching after a run.* (it is not allowed)",
+      "*You *don't have to* run today; a walk is fine too.* (no obligation)",
+      "*You *should* drink water during your workout.* (advice)",
+      "*Our coach says we *shouldn't* train when we feel sick.* (advice)"
+    ],
+    "practice": [
+      {
+        "q": "You ___ wear a helmet on a bike. It is the law. (obligation / rule)",
+        "a": "You have to wear a helmet on a bike."
+      },
+      {
+        "q": "You ___ eat right before a hard workout. (advice)",
+        "a": "You shouldn't eat right before a hard workout."
+      },
+      {
+        "q": "You ___ park your car here. It is not allowed. (prohibition)",
+        "a": "You mustn't park your car here."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence for a general rule at work.",
+        "options": [
+          "I must wear a uniform at work.",
+          "I have to wear a uniform at work.",
+          "I should to wear a uniform at work.",
+          "I mustn't wear a uniform at work."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ buy a ticket. It is free today. (no obligation)",
+        "options": [
+          "don't have to",
+          "mustn't",
+          "should",
+          "have to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You ___ smoke in the gym. It is not allowed. (prohibition)",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "should",
+          "have to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You ___ take warm clothes. It will be cold. (advice)",
+        "options": [
+          "should",
+          "mustn't",
+          "don't have to",
+          "have"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ finish this training plan tonight. It is my own strong decision.",
+        "options": [
+          "must",
+          "mustn't",
+          "shouldn't",
+          "don't have to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "\"You don't have to pay\" means:",
+        "options": [
+          "You must not pay.",
+          "It is not necessary to pay.",
+          "You should not pay.",
+          "You have to pay."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "She must to rest today.",
+          "She must rest today.",
+          "She musts rest today.",
+          "She must resting today."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ do a warm-up before every workout. It is a gym rule.",
+        "options": [
+          "have to",
+          "mustn't",
+          "shouldn't",
+          "don't have to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "\"You mustn't be late\" is:",
+        "options": [
+          "advice",
+          "a prohibition",
+          "no obligation",
+          "a question"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the advice: You ___ see a coach if your back hurts.",
+        "options": [
+          "should",
+          "mustn't",
+          "don't have to",
+          "have to"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  "wordQuiz": [
+    {
+      "question": "What does 'workout' mean?",
+      "options": [
+        "a period of physical exercise to stay healthy",
+        "a person who trains athletes",
+        "the ability to stay steady",
+        "gentle exercises before harder exercise"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'warm-up' mean?",
+      "options": [
+        "the power your muscles have",
+        "gentle exercises you do before harder exercise",
+        "something you want to achieve",
+        "slow exercises that make muscles longer"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'stretching' mean?",
+      "options": [
+        "working together as a group",
+        "a period of physical exercise",
+        "slow exercises that make your muscles longer and more relaxed",
+        "the ability to keep going for a long time"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'strength' mean?",
+      "options": [
+        "a person who trains a sports team",
+        "gentle exercises before harder exercise",
+        "the power your muscles have",
+        "something you want to achieve"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'balance' mean?",
+      "options": [
+        "the ability to stay steady and not fall",
+        "working together as a group",
+        "slow exercises for the muscles",
+        "the ability to bend easily"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'coach' mean?",
+      "options": [
+        "a period of physical exercise",
+        "a person who trains athletes or a sports team",
+        "the power your muscles have",
+        "gentle exercises before harder exercise"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'goal' mean?",
+      "options": [
+        "the ability to stay steady",
+        "something you want to achieve",
+        "a person who trains athletes",
+        "the ability to keep going for a long time"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'teamwork' mean?",
+      "options": [
+        "working together as a group to reach a shared goal",
+        "slow exercises that make muscles longer",
+        "a period of physical exercise",
+        "the ability to bend easily"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'flexibility' mean?",
+      "options": [
+        "the power your muscles have",
+        "a person who trains athletes",
+        "the ability to bend and move your body easily",
+        "gentle exercises before harder exercise"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'endurance' mean?",
+      "options": [
+        "something you want to achieve",
+        "the ability to stay steady and not fall",
+        "working together as a group",
+        "the ability to keep doing something difficult for a long time"
+      ],
+      "answer": 3
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "date": "2026-09-29",
+  "level": "c1",
+  "cover": "media/c1/2026-09-29/podcast-cover.jpg",
+  "words": [
+    {
+      "word": "peregrination",
+      "meaning": "a long, wandering journey, often on foot",
+      "example": "His six-month peregrination through Central Asia changed how he thinks about home.",
+      "pronunciation": "pe-ruh-grih-NAY-shun",
+      "fa": "سفر طولانی و پرپیچ‌وخم",
+      "photo": "media/c1/2026-09-29/photos/peregrination.jpg",
+      "audio": "media/c1/2026-09-29/word-audio/peregrination.mp3"
+    },
+    {
+      "word": "sojourn",
+      "meaning": "a temporary stay in a place",
+      "example": "Her three-month sojourn in Lisbon taught her more than four years of university.",
+      "pronunciation": "SOH-jurn",
+      "fa": "اقامت موقت",
+      "photo": "media/c1/2026-09-29/photos/sojourn.jpg",
+      "audio": "media/c1/2026-09-29/word-audio/sojourn.mp3"
+    },
+    {
+      "word": "peripatetic",
+      "meaning": "travelling constantly from place to place",
+      "example": "After two peripatetic years, she had friends in twelve countries and furniture in none.",
+      "pronunciation": "pe-ruh-puh-TE-tik",
+      "fa": "سیار، خانه‌به‌دوش",
+      "photo": "media/c1/2026-09-29/photos/peripatetic.jpg",
+      "audio": "media/c1/2026-09-29/word-audio/peripatetic.mp3"
+    },
+    {
+      "word": "diaspora",
+      "meaning": "a community scattered far from its original homeland",
+      "example": "The Armenian diaspora keeps its traditions alive through food, music, and language.",
+      "pronunciation": "dy-AS-puh-ruh",
+      "fa": "پراکندگی قومی (دیاسپورا)",
+      "photo": "media/c1/2026-09-29/photos/diaspora.jpg",
+      "audio": "media/c1/2026-09-29/word-audio/diaspora.mp3"
+    },
+    {
+      "word": "émigré",
+      "meaning": "a person who has left their home country to live abroad",
+      "example": "The émigré writer said exile had given her two homes and no home at all.",
+      "pronunciation": "EH-mih-gray",
+      "fa": "مهاجر، تبعیدی",
+      "photo": "media/c1/2026-09-29/photos/emigre.jpg",
+      "audio": "media/c1/2026-09-29/word-audio/emigre.mp3"
+    },
+    {
+      "word": "circuitous",
+      "meaning": "indirect; longer and more winding than the direct way",
+      "example": "The bus took a circuitous route through mountain villages that were not on any map.",
+      "pronunciation": "sur-KYOO-ih-tus",
+      "fa": "پیچیده، غیرمستقیم",
+      "photo": "media/c1/2026-09-29/photos/circuitous.jpg",
+      "audio": "media/c1/2026-09-29/word-audio/circuitous.mp3"
+    },
+    {
+      "word": "odyssey",
+      "meaning": "a long adventurous journey full of experiences and trials",
+      "example": "Eleven days on a cargo ship was a genuine odyssey that rewired her sense of time.",
+      "pronunciation": "OD-ih-see",
+      "fa": "سفر ماجراجویانهٔ طولانی (اودیسه)",
+      "photo": "media/c1/2026-09-29/photos/odyssey.jpg",
+      "audio": "media/c1/2026-09-29/word-audio/odyssey.mp3"
+    },
+    {
+      "word": "waylay",
+      "meaning": "to stop or intercept someone on their way",
+      "example": "Pickpockets tried to waylay tourists near the station with friendly questions.",
+      "pronunciation": "WAY-lay",
+      "fa": "راه کسی را بستن، از مسیر منحرف کردن",
+      "photo": "media/c1/2026-09-29/photos/waylay.jpg",
+      "audio": "media/c1/2026-09-29/word-audio/waylay.mp3"
+    },
+    {
+      "word": "embarkation",
+      "meaning": "the act of boarding a ship or aircraft",
+      "example": "Embarkation was delayed six hours, but the excitement never faded.",
+      "pronunciation": "em-bahr-KAY-shun",
+      "fa": "سوار شدن (به کشتی/هواپیما)",
+      "photo": "media/c1/2026-09-29/photos/embarkation.jpg",
+      "audio": "media/c1/2026-09-29/word-audio/embarkation.mp3"
+    },
+    {
+      "word": "disembark",
+      "meaning": "to leave a ship, aircraft, or train",
+      "example": "After two months at sea, to disembark onto solid ground felt like a small miracle.",
+      "pronunciation": "dis-em-BAHRK",
+      "fa": "پیاده شدن (از کشتی/هواپیما/قطار)",
+      "photo": "media/c1/2026-09-29/photos/disembark.jpg",
+      "audio": "media/c1/2026-09-29/word-audio/disembark.mp3"
+    }
+  ],
+  "podcast": {
+    "audio": "media/c1/2026-09-29/podcast.mp3",
+    "cover": "media/c1/2026-09-29/podcast-cover.jpg",
+    "transcript": "media/c1/2026-09-29/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "audio": "media/c1/2026-09-29/shadowing.mp3",
+    "transcript": "media/c1/2026-09-29/shadowing-transcript.txt"
+  },
+  "grammar": {
+    "title": "4A: Obligation and prohibition - have to, must, should",
+    "explanation": [
+      "Both **have to** and **must** express obligation, but they point to different sources of pressure.",
+      "Use **have to** when the obligation comes from outside you — a law, a regulation, or plain circumstance. A traveller on a tight connection simply **has to** run for the gate.",
+      "Use **must** when the obligation feels personal — your own decision, your own standards, your own urgency. An émigré renewing a visa might feel she **must** keep every document in perfect order.",
+      "For prohibition — something forbidden — use **mustn't**. And watch the classic trap: **don't have to** means the opposite, no obligation at all, free choice.",
+      "**should** and **shouldn't** are softer: advice or opinion, never a rule. You **should** allow extra time on a circuitous route, but nobody fines you if you don't. **ought to** is simply a more formal twin of **should**.",
+      "Revision check: **mustn't** means forbidden. **don't have to** means free to choose. **should** means wise but optional. Mixing these three up is the classic exam mistake."
+    ],
+    "examples": [
+      "*Passengers *must* complete embarkation sixty minutes before departure.* (airline regulation)",
+      "*Travellers *have to* show a passport before they disembark.* (border control rule)",
+      "*You *mustn't* waylay other passengers by blocking the gangway.* (prohibition)",
+      "*You *don't have to* book the direct flight; the circuitous route is often cheaper.* (no obligation)",
+      "*An odyssey like that *should* be planned carefully, not rushed.* (advice)",
+      "*A peripatetic lifestyle *ought to* suit you before you sell your apartment.* (formal advice)"
+    ],
+    "practice": [
+      {
+        "q": "Your friend says: 'I don't have to carry my passport at the border.' Is she right?",
+        "a": "No — she has it backwards. At a border you have to carry it. Don't have to means no obligation, which is wrong here."
+      },
+      {
+        "q": "Which is stronger: 'You should rest before the long peregrination' or 'You must rest before it'?",
+        "a": "'You must rest' — must expresses strong obligation, while should is only advice."
+      },
+      {
+        "q": "A sign says: 'Passengers mustn't disembark here.' What happens if you do?",
+        "a": "You break a prohibition — mustn't means it is forbidden."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "You ___ wear a seatbelt on this bus. It's the law.",
+        "options": [
+          "mustn't",
+          "have to",
+          "don't have to",
+          "shouldn't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "This is a non-smoking flight. You ___ smoke anywhere on board.",
+        "options": [
+          "don't have to",
+          "mustn't",
+          "should",
+          "have to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The museum is free today, so we ___ pay.",
+        "options": [
+          "mustn't",
+          "must",
+          "don't have to",
+          "should"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I ___ renew my passport before the trip — it's my own decision, nobody is forcing me.",
+        "options": [
+          "must",
+          "have to",
+          "mustn't",
+          "should"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You ___ take warm clothes; the desert gets cold at night.",
+        "options": [
+          "mustn't",
+          "should",
+          "don't have to",
+          "have to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Travellers ___ leave bags unattended — security will remove them.",
+        "options": [
+          "don't have to",
+          "should",
+          "mustn't",
+          "must"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You ___ tip in this country, but the staff really appreciate it.",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "must",
+          "should"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Drivers ___ stop at red lights.",
+        "options": [
+          "should",
+          "have to",
+          "don't have to",
+          "mustn't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We ___ hurry; the flight is delayed by three hours.",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "must",
+          "have to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You ___ try the night train — it's a wonderful experience.",
+        "options": [
+          "ought to",
+          "mustn't",
+          "have to",
+          "don't have to"
+        ],
+        "answer": 0
+      }
+    ]
+  },
+  "wordQuiz": [
+    {
+      "question": "What does 'peregrination' mean?",
+      "options": [
+        "a long, wandering journey",
+        "a temporary stay in a place",
+        "travelling constantly from place to place",
+        "a community scattered far from its homeland"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'sojourn' mean?",
+      "options": [
+        "travelling constantly from place to place",
+        "a community scattered far from its homeland",
+        "a person who has left their country to live abroad",
+        "a temporary stay in a place"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'peripatetic' mean?",
+      "options": [
+        "a person who has left their country to live abroad",
+        "indirect; taking the long way round",
+        "travelling constantly from place to place",
+        "a community scattered far from its homeland"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'diaspora' mean?",
+      "options": [
+        "a long adventurous journey full of trials",
+        "a community scattered far from its homeland",
+        "a person who has left their country to live abroad",
+        "indirect; taking the long way round"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'émigré' mean?",
+      "options": [
+        "a person who has left their country to live abroad",
+        "indirect; taking the long way round",
+        "a long adventurous journey full of trials",
+        "to stop or intercept someone on their way"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'circuitous' mean?",
+      "options": [
+        "a long adventurous journey full of trials",
+        "to stop or intercept someone on their way",
+        "the act of boarding a ship or aircraft",
+        "indirect; taking the long way round"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'odyssey' mean?",
+      "options": [
+        "the act of boarding a ship or aircraft",
+        "to leave a ship, aircraft, or train",
+        "a long adventurous journey full of trials",
+        "to stop or intercept someone on their way"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'waylay' mean?",
+      "options": [
+        "a long, wandering journey",
+        "to stop or intercept someone on their way",
+        "the act of boarding a ship or aircraft",
+        "to leave a ship, aircraft, or train"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'embarkation' mean?",
+      "options": [
+        "the act of boarding a ship or aircraft",
+        "to leave a ship, aircraft, or train",
+        "a long, wandering journey",
+        "a temporary stay in a place"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'disembark' mean?",
+      "options": [
+        "a long, wandering journey",
+        "a temporary stay in a place",
+        "travelling constantly from place to place",
+        "to leave a ship, aircraft, or train"
+      ],
+      "answer": 3
+    }
+  ]
+}

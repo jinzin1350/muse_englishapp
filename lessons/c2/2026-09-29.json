@@ -1,0 +1,376 @@
+{
+  "date": "2026-09-29",
+  "level": "c2",
+  "theme": "emotions & character",
+  "cefr": "C2",
+  "cover": "media/c2/2026-09-29/podcast-cover.jpg",
+  "words": [
+    {
+      "word": "equanimity",
+      "pos": "noun",
+      "meaning": "calm, balanced composure, especially under pressure or in a crisis",
+      "example": "The surgeon faced the crisis with remarkable equanimity, calmly directing her team while the alarms blared.",
+      "pronunciation": "ee-kwuh-NIM-uh-tee",
+      "fa": "خونسردی و آرامش ذهنی در شرایط دشوار",
+      "photo": "media/c2/2026-09-29/photos/equanimity.jpg",
+      "audio": "media/c2/2026-09-29/word-audio/equanimity.mp3",
+      "word_audio": "media/c2/2026-09-29/word-audio/equanimity.mp3",
+      "persian": "خونسردی و آرامش ذهنی در شرایط دشوار"
+    },
+    {
+      "word": "magnanimous",
+      "pos": "adjective",
+      "meaning": "generous and forgiving, especially toward a rival or someone who has wronged you",
+      "example": "In a magnanimous gesture, the victorious candidate invited her defeated rival to join the new cabinet.",
+      "pronunciation": "mag-NAN-uh-mus",
+      "fa": "بزرگ‌منش و بخشنده، به‌ویژه نسبت به رقیب",
+      "photo": "media/c2/2026-09-29/photos/magnanimous.jpg",
+      "audio": "media/c2/2026-09-29/word-audio/magnanimous.mp3",
+      "word_audio": "media/c2/2026-09-29/word-audio/magnanimous.mp3",
+      "persian": "بزرگ‌منش و بخشنده، به‌ویژه نسبت به رقیب"
+    },
+    {
+      "word": "obstinate",
+      "pos": "adjective",
+      "meaning": "stubbornly refusing to change your opinion or course of action",
+      "example": "His obstinate refusal to accept the committee's findings stalled the reform for another year.",
+      "pronunciation": "OB-stuh-nut",
+      "fa": "لجباز و سرسخت در تغییر عقیده",
+      "photo": "media/c2/2026-09-29/photos/obstinate.jpg",
+      "audio": "media/c2/2026-09-29/word-audio/obstinate.mp3",
+      "word_audio": "media/c2/2026-09-29/word-audio/obstinate.mp3",
+      "persian": "لجباز و سرسخت در تغییر عقیده"
+    },
+    {
+      "word": "reticent",
+      "pos": "adjective",
+      "meaning": "reserved and reluctant to speak freely about your thoughts or feelings",
+      "example": "Usually reticent about her private life, the novelist surprised everyone by publishing a candid memoir.",
+      "pronunciation": "RET-uh-sunt",
+      "fa": "کم‌حرف و محتاط در بیان افکار و احساسات",
+      "photo": "media/c2/2026-09-29/photos/reticent.jpg",
+      "audio": "media/c2/2026-09-29/word-audio/reticent.mp3",
+      "word_audio": "media/c2/2026-09-29/word-audio/reticent.mp3",
+      "persian": "کم‌حرف و محتاط در بیان افکار و احساسات"
+    },
+    {
+      "word": "mercurial",
+      "pos": "adjective",
+      "meaning": "subject to sudden, unpredictable changes of mood or behavior",
+      "example": "The director's mercurial temperament made every rehearsal unpredictable — brilliant one day, furious the next.",
+      "pronunciation": "mur-KYOOR-ee-ul",
+      "fa": "دم‌دمی‌مزاج و غیرقابل‌پیش‌بینی",
+      "photo": "media/c2/2026-09-29/photos/mercurial.jpg",
+      "audio": "media/c2/2026-09-29/word-audio/mercurial.mp3",
+      "word_audio": "media/c2/2026-09-29/word-audio/mercurial.mp3",
+      "persian": "دم‌دمی‌مزاج و غیرقابل‌پیش‌بینی"
+    },
+    {
+      "word": "effusive",
+      "pos": "adjective",
+      "meaning": "expressing feelings with overwhelming enthusiasm and warmth",
+      "example": "The critics were effusive in their praise, calling the premiere the most electrifying of the decade.",
+      "pronunciation": "uh-FYOO-siv",
+      "fa": "پرشور و پرحرارت در ابراز احساسات",
+      "photo": "media/c2/2026-09-29/photos/effusive.jpg",
+      "audio": "media/c2/2026-09-29/word-audio/effusive.mp3",
+      "word_audio": "media/c2/2026-09-29/word-audio/effusive.mp3",
+      "persian": "پرشور و پرحرارت در ابراز احساسات"
+    },
+    {
+      "word": "stoic",
+      "pos": "adjective",
+      "meaning": "enduring hardship or pain without complaint; calmly accepting what cannot be changed",
+      "example": "She bore the months of painful treatment with stoic resolve, never once complaining to her family.",
+      "pronunciation": "STOH-ik",
+      "fa": "بردبار و خویشتن‌دار در برابر سختی، بدون شکایت",
+      "photo": "media/c2/2026-09-29/photos/stoic.jpg",
+      "audio": "media/c2/2026-09-29/word-audio/stoic.mp3",
+      "word_audio": "media/c2/2026-09-29/word-audio/stoic.mp3",
+      "persian": "بردبار و خویشتن‌دار در برابر سختی، بدون شکایت"
+    },
+    {
+      "word": "impetuous",
+      "pos": "adjective",
+      "meaning": "acting quickly without careful thought; impulsive and rash",
+      "example": "His impetuous decision to invest his savings in the untested startup nearly cost him everything.",
+      "pronunciation": "im-PECH-oo-us",
+      "fa": "عجول و بدون فکر عمل‌کننده",
+      "photo": "media/c2/2026-09-29/photos/impetuous.jpg",
+      "audio": "media/c2/2026-09-29/word-audio/impetuous.mp3",
+      "word_audio": "media/c2/2026-09-29/word-audio/impetuous.mp3",
+      "persian": "عجول و بدون فکر عمل‌کننده"
+    },
+    {
+      "word": "sanguine",
+      "pos": "adjective",
+      "meaning": "optimistic and confident, especially in a difficult situation",
+      "example": "Despite the gloomy forecasts, the analysts remain sanguine about the country's long-term growth.",
+      "pronunciation": "SANG-gwin",
+      "fa": "خوش‌بین و مطمئن، به‌ویژه در شرایط سخت",
+      "photo": "media/c2/2026-09-29/photos/sanguine.jpg",
+      "audio": "media/c2/2026-09-29/word-audio/sanguine.mp3",
+      "word_audio": "media/c2/2026-09-29/word-audio/sanguine.mp3",
+      "persian": "خوش‌بین و مطمئن، به‌ویژه در شرایط سخت"
+    },
+    {
+      "word": "truculent",
+      "pos": "adjective",
+      "meaning": "aggressively defiant and eager to argue; hostile in manner",
+      "example": "The debate turned truculent when one panelist began shouting over every rebuttal.",
+      "pronunciation": "TRUH-kyoo-lunt",
+      "fa": "ستیزه‌جو و پرخاشگر",
+      "photo": "media/c2/2026-09-29/photos/truculent.jpg",
+      "audio": "media/c2/2026-09-29/word-audio/truculent.mp3",
+      "word_audio": "media/c2/2026-09-29/word-audio/truculent.mp3",
+      "persian": "ستیزه‌جو و پرخاشگر"
+    }
+  ],
+  "podcast": {
+    "title": "Word Kitchen: Emotions and Character",
+    "audio": "media/c2/2026-09-29/podcast.mp3",
+    "cover": "media/c2/2026-09-29/podcast-cover.jpg",
+    "transcript": "media/c2/2026-09-29/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Lighthouse Keeper",
+    "audio": "media/c2/2026-09-29/shadowing.mp3",
+    "transcript": "media/c2/2026-09-29/shadowing-transcript.txt"
+  },
+  "grammar": {
+    "title": "4A: Obligation and prohibition - have to, must, should",
+    "explanation": [
+      "**have to** + infinitive expresses obligation that comes from an outside rule or a general situation, not from the speaker's own choice. An obstinate employee still **has to** follow the safety regulations.",
+      "**must** + infinitive also expresses obligation, but it comes from the speaker's personal decision or a specific situation. I **must** thank my magnanimous host before I leave — nobody ordered me to; I decided it.",
+      "**mustn't** + infinitive is prohibition: something is forbidden. You **mustn't** be truculent with the referee. Careful: **mustn't** does NOT mean the same as **don't have to**.",
+      "**don't have to** / **doesn't have to** + infinitive means there is no obligation — it is not necessary. You **don't have to** be effusive; a quiet thank-you is perfectly fine.",
+      "**should** / **shouldn't** + infinitive gives advice or an opinion, and it is weaker than **must**. You **should** stay sanguine about the results. **ought to** is a more formal alternative to **should**."
+    ],
+    "examples": [
+      "*Pilots *have to* keep their equanimity in an emergency.* (aviation rules demand it — external obligation)",
+      "*I *must* call my reticent uncle today.* (my own decision, not a rule)",
+      "*You *mustn't* send that impetuous email.* (prohibition — do not do it)",
+      "*Guests *don't have to* dress formally.* (no obligation — it is optional)",
+      "*She *should* be less mercurial with her team.* (advice, weaker than must)",
+      "*We *ought to* praise his stoic effort.* (formal advice)"
+    ],
+    "practice": [
+      {
+        "q": "What is the difference between 'You mustn't smoke here' and 'You don't have to smoke here'?",
+        "a": "'You mustn't smoke here' is prohibition — smoking is forbidden. 'You don't have to smoke here' means there is no obligation — you may smoke or not; it is your choice."
+      },
+      {
+        "q": "Which sentence is stronger: 'You should apologize' or 'You must apologize'? Why?",
+        "a": "'You must apologize' is stronger — it expresses obligation. 'You should apologize' is advice or opinion, weaker than must."
+      },
+      {
+        "q": "Make the sentence about an external rule: 'I ___ wear a uniform at work.' (have to / must)",
+        "a": "'I have to wear a uniform at work.' — have to is used for general, external rules."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence about an external rule.",
+        "options": [
+          "I must wear a uniform at work; it's the company rule.",
+          "I have to wear a uniform at work; it's the company rule.",
+          "I should wear a uniform at work; it's the company rule.",
+          "I ought wear a uniform at work; it's the company rule."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What does 'You mustn't park here' mean?",
+        "options": [
+          "Parking here is optional.",
+          "You don't need to park here.",
+          "Parking here is forbidden.",
+          "You should park somewhere else."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'You don't have to pay — it's free.' What does this express?",
+        "options": [
+          "Prohibition",
+          "No obligation",
+          "Strong advice",
+          "External rule"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence expresses the speaker's own decision?",
+        "options": [
+          "I have to attend the meeting at nine.",
+          "I must remember to call my mother tonight.",
+          "Visitors have to sign in at reception.",
+          "Students have to submit homework on Friday."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Complete: 'You ___ take warm clothes; it gets cold at night.' (advice)",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "should",
+          "have to"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which is the correct third-person form?",
+        "options": [
+          "She must to leave early.",
+          "She has to leave early.",
+          "She have to leave early.",
+          "She shoulds leave early."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "'Ought to' is best described as:",
+        "options": [
+          "a prohibition, like mustn't",
+          "a more formal alternative to should",
+          "the past form of must",
+          "stronger than must"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the sentence with the correct infinitive form after should.",
+        "options": [
+          "You should to apologize.",
+          "You should apologizing.",
+          "You should apologize.",
+          "You should apologized."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'We had to cancel the trip.' What does 'had to' express?",
+        "options": [
+          "Advice about the past",
+          "Prohibition in the past",
+          "Obligation in the past",
+          "No obligation in the past"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which pair is commonly confused but means different things?",
+        "options": [
+          "must / have to",
+          "mustn't / don't have to",
+          "should / ought to",
+          "has to / have to"
+        ],
+        "answer": 1
+      }
+    ]
+  },
+  "wordQuiz": [
+    {
+      "question": "What does 'equanimity' mean?",
+      "options": [
+        "calm, balanced composure, especially under pressure or in a crisis",
+        "stubbornly refusing to change your opinion or course of action",
+        "subject to sudden, unpredictable changes of mood or behavior",
+        "enduring hardship or pain without complaint; calmly accepting what cannot be changed"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'magnanimous' mean?",
+      "options": [
+        "reserved and reluctant to speak freely about your thoughts or feelings",
+        "generous and forgiving, especially toward a rival or someone who has wronged you",
+        "expressing feelings with overwhelming enthusiasm and warmth",
+        "acting quickly without careful thought; impulsive and rash"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'obstinate' mean?",
+      "options": [
+        "subject to sudden, unpredictable changes of mood or behavior",
+        "enduring hardship or pain without complaint; calmly accepting what cannot be changed",
+        "stubbornly refusing to change your opinion or course of action",
+        "optimistic and confident, especially in a difficult situation"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'reticent' mean?",
+      "options": [
+        "expressing feelings with overwhelming enthusiasm and warmth",
+        "acting quickly without careful thought; impulsive and rash",
+        "aggressively defiant and eager to argue; hostile in manner",
+        "reserved and reluctant to speak freely about your thoughts or feelings"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'mercurial' mean?",
+      "options": [
+        "enduring hardship or pain without complaint; calmly accepting what cannot be changed",
+        "optimistic and confident, especially in a difficult situation",
+        "subject to sudden, unpredictable changes of mood or behavior",
+        "calm, balanced composure, especially under pressure or in a crisis"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'effusive' mean?",
+      "options": [
+        "acting quickly without careful thought; impulsive and rash",
+        "aggressively defiant and eager to argue; hostile in manner",
+        "generous and forgiving, especially toward a rival or someone who has wronged you",
+        "expressing feelings with overwhelming enthusiasm and warmth"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'stoic' mean?",
+      "options": [
+        "optimistic and confident, especially in a difficult situation",
+        "enduring hardship or pain without complaint; calmly accepting what cannot be changed",
+        "calm, balanced composure, especially under pressure or in a crisis",
+        "stubbornly refusing to change your opinion or course of action"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'impetuous' mean?",
+      "options": [
+        "acting quickly without careful thought; impulsive and rash",
+        "aggressively defiant and eager to argue; hostile in manner",
+        "generous and forgiving, especially toward a rival or someone who has wronged you",
+        "reserved and reluctant to speak freely about your thoughts or feelings"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'sanguine' mean?",
+      "options": [
+        "calm, balanced composure, especially under pressure or in a crisis",
+        "stubbornly refusing to change your opinion or course of action",
+        "optimistic and confident, especially in a difficult situation",
+        "subject to sudden, unpredictable changes of mood or behavior"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'truculent' mean?",
+      "options": [
+        "generous and forgiving, especially toward a rival or someone who has wronged you",
+        "reserved and reluctant to speak freely about your thoughts or feelings",
+        "expressing feelings with overwhelming enthusiasm and warmth",
+        "aggressively defiant and eager to argue; hostile in manner"
+      ],
+      "answer": 3
+    }
+  ]
+}

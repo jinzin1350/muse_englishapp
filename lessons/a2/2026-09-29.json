@@ -1,0 +1,337 @@
+{
+  "date": "2026-09-29",
+  "level": "a2",
+  "cover": "media/a2/2026-09-29/podcast-cover.jpg",
+  "words": [
+    {
+      "word": "river",
+      "meaning": "a long line of water that moves to the sea",
+      "example": "My town has a river.",
+      "pronunciation": "RIV-ur",
+      "fa": "رودخانه",
+      "photo": "media/a2/2026-09-29/photos/river.jpg",
+      "audio": "media/a2/2026-09-29/word-audio/river.mp3"
+    },
+    {
+      "word": "forest",
+      "meaning": "a big place with many trees",
+      "example": "We walked in the forest.",
+      "pronunciation": "FOR-ist",
+      "fa": "جنگل",
+      "photo": "media/a2/2026-09-29/photos/forest.jpg",
+      "audio": "media/a2/2026-09-29/word-audio/forest.mp3"
+    },
+    {
+      "word": "mountain",
+      "meaning": "a very high hill of rock",
+      "example": "The mountain is white with snow.",
+      "pronunciation": "MOWN-tin",
+      "fa": "کوه",
+      "photo": "media/a2/2026-09-29/photos/mountain.jpg",
+      "audio": "media/a2/2026-09-29/word-audio/mountain.mp3"
+    },
+    {
+      "word": "ocean",
+      "meaning": "the big sea around the land",
+      "example": "The ocean is deep and blue.",
+      "pronunciation": "OH-shun",
+      "fa": "اقیانوس",
+      "photo": "media/a2/2026-09-29/photos/ocean.jpg",
+      "audio": "media/a2/2026-09-29/word-audio/ocean.mp3"
+    },
+    {
+      "word": "flower",
+      "meaning": "the colored part of a plant",
+      "example": "She gave me a red flower.",
+      "pronunciation": "FLOW-ur",
+      "fa": "گل",
+      "photo": "media/a2/2026-09-29/photos/flower.jpg",
+      "audio": "media/a2/2026-09-29/word-audio/flower.mp3"
+    },
+    {
+      "word": "leaf",
+      "meaning": "a flat green part of a plant or tree",
+      "example": "A yellow leaf fell down.",
+      "pronunciation": "LEEF",
+      "fa": "برگ",
+      "photo": "media/a2/2026-09-29/photos/leaf.jpg",
+      "audio": "media/a2/2026-09-29/word-audio/leaf.mp3"
+    },
+    {
+      "word": "rain",
+      "meaning": "water that falls from the sky",
+      "example": "We need rain for the garden.",
+      "pronunciation": "RAYN",
+      "fa": "باران",
+      "photo": "media/a2/2026-09-29/photos/rain.jpg",
+      "audio": "media/a2/2026-09-29/word-audio/rain.mp3"
+    },
+    {
+      "word": "wind",
+      "meaning": "air that moves",
+      "example": "The wind is strong today.",
+      "pronunciation": "WIND",
+      "fa": "باد",
+      "photo": "media/a2/2026-09-29/photos/wind.jpg",
+      "audio": "media/a2/2026-09-29/word-audio/wind.mp3"
+    },
+    {
+      "word": "sand",
+      "meaning": "very small pieces of rock on the beach",
+      "example": "The sand is warm.",
+      "pronunciation": "SAND",
+      "fa": "شن و ماسه",
+      "photo": "media/a2/2026-09-29/photos/sand.jpg",
+      "audio": "media/a2/2026-09-29/word-audio/sand.mp3"
+    },
+    {
+      "word": "cloud",
+      "meaning": "soft white water floating in the sky",
+      "example": "Look at that white cloud.",
+      "pronunciation": "KLOWD",
+      "fa": "ابر",
+      "photo": "media/a2/2026-09-29/photos/cloud.jpg",
+      "audio": "media/a2/2026-09-29/word-audio/cloud.mp3"
+    }
+  ],
+  "podcast": {
+    "audio": "media/a2/2026-09-29/podcast.mp3",
+    "cover": "media/a2/2026-09-29/podcast-cover.jpg",
+    "transcript": "media/a2/2026-09-29/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "audio": "media/a2/2026-09-29/shadowing.mp3",
+    "transcript": "media/a2/2026-09-29/shadowing-transcript.txt"
+  },
+  "grammar": {
+    "audio": "media/a2/2026-09-29/grammar-en.mp3",
+    "examples": [
+      "You *must* wear warm clothes in the rain. (a rule)",
+      "I *have to* clean the sand off my shoes before I go inside. (an outside rule)",
+      "You *mustn't* swim in the river here. It is too deep. (not allowed)",
+      "You *don't have to* run in the forest. You can walk. (okay, not a rule)",
+      "You *should* take a photo of that cloud. (friendly advice)",
+      "You *shouldn't* throw a leaf in the river. (advice against it)"
+    ],
+    "explanation": "Use **have to** for a general rule or an outside rule. For example, you **have to** wear a hat when the wind is very cold at work.\n\nUse **must** for a strong personal rule or a personal decision. For example, I **must** bring water when I walk in the forest.\n\nUse **mustn't** for a prohibition, something that is not allowed. You **mustn't** pick the flowers in the park.\n\nDo not say **don't have to** for a prohibition. **You don't have to** means something is okay, not a rule. You **don't have to** run in the forest. You can walk.\n\nUse **should** and **shouldn't** for advice or an opinion. They are weaker than **must**. You **should** take a photo of that cloud before the rain comes.",
+    "practice": [
+      {
+        "a": "You should wear a warm jacket. / You have to wear a warm jacket.",
+        "q": "Your friend wants to climb the mountain. The wind is very cold. What do you say?"
+      },
+      {
+        "a": "You mustn't swim in the river. It is not allowed.",
+        "q": "There is a sign: no swimming in the river. What does it mean?"
+      },
+      {
+        "a": "You don't have to run in the forest. You can walk slowly.",
+        "q": "A child asks: can I walk slowly in the forest, or must I run? What do you say?"
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 1,
+        "options": [
+          "has to",
+          "have to",
+          "shouldn't",
+          "mustn't to"
+        ],
+        "question": "You ___ wear a hat. The wind is very cold today."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "must",
+          "mustn't",
+          "shouldn't",
+          "don't has to"
+        ],
+        "question": "I ___ bring water when I walk in the forest."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "don't have to",
+          "have to",
+          "mustn't",
+          "should"
+        ],
+        "question": "You ___ pick the flowers in the park. It is not allowed."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "must",
+          "mustn't",
+          "don't have to",
+          "has to"
+        ],
+        "question": "You ___ pay for the water. It is free."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "mustn't",
+          "should",
+          "don't have to",
+          "has to"
+        ],
+        "question": "You ___ take a photo of that cloud before the rain comes."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "has to",
+          "mustn't",
+          "shouldn't",
+          "doesn't have to"
+        ],
+        "question": "She ___ finish the report today. Her boss asked for it."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "have to",
+          "should",
+          "don't have to",
+          "mustn't"
+        ],
+        "question": "You ___ swim in the river here. It is too deep and dangerous."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "must",
+          "don't have to",
+          "mustn't",
+          "has to"
+        ],
+        "question": "We ___ hurry. The forest is far, but we have time."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "should",
+          "mustn't",
+          "don't have to",
+          "hasn't to"
+        ],
+        "question": "My doctor says I ___ drink more water every day."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "mustn't",
+          "shouldn't",
+          "should",
+          "doesn't have to"
+        ],
+        "question": "The mountain is high. You ___ bring warm clothes and food."
+      }
+    ],
+    "title": "4A: Obligation and prohibition - have to, must, should"
+  },
+  "wordQuiz": [
+    {
+      "question": "What does 'river' mean?",
+      "options": [
+        "a long line of water that moves to the sea",
+        "a very high hill of rock",
+        "soft white water floating in the sky",
+        "the big sea around the land"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'forest' mean?",
+      "options": [
+        "a long line of water that moves to the sea",
+        "soft white water floating in the sky",
+        "a big place with many trees",
+        "air that moves"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'mountain' mean?",
+      "options": [
+        "the colored part of a plant",
+        "a long line of water that moves to the sea",
+        "water that falls from the sky",
+        "a very high hill of rock"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'ocean' mean?",
+      "options": [
+        "the colored part of a plant",
+        "a big place with many trees",
+        "the big sea around the land",
+        "very small pieces of rock on the beach"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'flower' mean?",
+      "options": [
+        "soft white water floating in the sky",
+        "a flat green part of a plant or tree",
+        "the big sea around the land",
+        "the colored part of a plant"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'leaf' mean?",
+      "options": [
+        "air that moves",
+        "soft white water floating in the sky",
+        "the big sea around the land",
+        "a flat green part of a plant or tree"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'rain' mean?",
+      "options": [
+        "very small pieces of rock on the beach",
+        "the colored part of a plant",
+        "soft white water floating in the sky",
+        "water that falls from the sky"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'wind' mean?",
+      "options": [
+        "a flat green part of a plant or tree",
+        "air that moves",
+        "very small pieces of rock on the beach",
+        "a very high hill of rock"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'sand' mean?",
+      "options": [
+        "a big place with many trees",
+        "water that falls from the sky",
+        "soft white water floating in the sky",
+        "very small pieces of rock on the beach"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'cloud' mean?",
+      "options": [
+        "very small pieces of rock on the beach",
+        "air that moves",
+        "soft white water floating in the sky",
+        "the colored part of a plant"
+      ],
+      "answer": 2
+    }
+  ]
+}
