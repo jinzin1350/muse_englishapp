@@ -2344,10 +2344,10 @@ function inboxListHTML(msgs) {
 async function renderInbox(v) {
   var cached = state.inboxMessages;
   v.innerHTML = '<div class="tch-wrap msg2-wrap">' +
-    '<div class="msg2-bg" aria-hidden="true"><span class="msg2-blob"></span><img src="media/inbox-mascot.webp" alt=""></div>' +
     '<h1 class="msg2-title"><span class="msg2-bubble">💬</span> Messages<i class="msg2-spark s1"></i><i class="msg2-spark s2"></i></h1>' +
     '<div id="inbox-list">' +
-    ((cached && cached.length) ? inboxListHTML(cached) : '<div class="empty">Loading…</div>') + '</div></div>';
+    ((cached && cached.length) ? inboxListHTML(cached) : '<div class="empty">Loading…</div>') + '</div>' +
+    '<div class="msg2-bg" aria-hidden="true"><span class="msg2-blob"></span><img src="media/inbox-mascot.webp" alt=""></div></div>';
   var host = document.getElementById('inbox-list');
   if (!sb) {
     if (host && !(cached && cached.length)) host.innerHTML = '<div class="empty">You appear to be offline. Connect to the internet to load messages.</div>';
