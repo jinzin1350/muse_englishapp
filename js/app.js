@@ -4274,7 +4274,9 @@ function buildTutorialSteps() {
     { id: 'progress', view: 'scores', selector: '.tut-anchor',
       kicker: '📊', text: T('اینجا امتیازها، XP و نمودار پیشرفتته', 'Your scores, XP and progress charts live here') },
     { id: 'challenge', view: 'challenge', selector: '.ch-wrap',
-      kicker: '🏆', text: T('چالش — با بقیه رقابت کن و امتیاز جمع کن', 'Challenge — compete with others and collect points') }
+      kicker: '🏆', text: T('چالش — با بقیه رقابت کن و امتیاز جمع کن', 'Challenge — compete with others and collect points') },
+    { id: 'inbox', view: 'inbox', selector: '.msg2-title',
+      kicker: '💬', text: T('صندوق پیام — پیام‌های معلمت اینجا میاد', 'Inbox — messages from your teacher arrive here') }
   ];
   return hasLesson ? steps : steps.filter(function (s) { return !s.tab && s.id !== 'lesson'; });
 }
@@ -4320,11 +4322,23 @@ function tutGo(view) {
   if (window.location.hash === h) { onRoute(); }
   else { window.location.hash = h; }
 }
-function tutClickTab(tab) {
-  try {
-    const btn = document.querySelector('.lesson-tab[data-tab="' + tab + '"]');
-    if (btn) btn.click();
-  } catch (e) {}
+/* Robust tab switch: wait for the tab strip, click the real tab (so the user
+   sees it activate), then verify lessonTab actually changed. */
+function tutEnsureTab(tab) {
+  return tutWaitForEl('.lesson-tab[data-tab="' + tab + '"]', 4000).then(function (btn) {
+    if (!tutState.active) return false;
+    if (!btn) return false;
+    try { btn.click(); } catch (e) { return false; }
+    return new Promise(function (resolve) {
+      const t0 = Date.now();
+      (function poll() {
+        if (!tutState.active) return resolve(false);
+        if (state.lessonTab === tab) return resolve(true);
+        if (Date.now() - t0 > 3000) return resolve(state.lessonTab === tab);
+        setTimeout(poll, 150);
+      })();
+    });
+  });
 }
 function tutWaitForEl(selector, ms) {
   return new Promise(function (resolve) {
@@ -4345,7 +4359,11 @@ async function tutorialStep() {
   if (!s) { showTutorialDone(); return; }
   tutFadeStep(true);
   if (s.view && state.view !== s.view) tutGo(s.view);
-  if (s.tab) tutClickTab(s.tab);
+  if (s.tab) {
+    const tabOk = await tutEnsureTab(s.tab);
+    if (!tutState.active || tutState.i !== myStep) return;
+    if (!tabOk) { tutorialNext(); return; }
+  }
   const el = s.selector ? await tutWaitForEl(s.selector, 4000) : null;
   if (!tutState.active || tutState.i !== myStep) return;
   if (s.selector && !el) { tutorialNext(); return; } // missing target -> skip gracefully
