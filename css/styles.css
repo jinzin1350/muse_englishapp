@@ -2276,20 +2276,25 @@ body.duo-playing{padding-bottom:0!important;}
 .pl-last{margin-left:auto;font-size:.8rem;color:#b3540f;background:#fff4e0;border-radius:999px;padding:.15rem .6rem}
 .pl-row{display:grid;grid-template-columns:1fr 92px 108px;gap:.5rem}
 .pl-sched{font-size:.8rem;margin-top:.35rem;min-height:1.1em;color:#b3540f}
-/* ---- guided first-run tutorial ---- */
+/* ---- guided first-run tutorial v2 (showcase) ----
+   One persistent dim for the whole tour: the spotlight hole glides between
+   targets, text is written directly on the dim (no popup cards). */
 #tut-ov{position:fixed;inset:0;z-index:9990;pointer-events:none}
-#tut-hole{position:fixed;border-radius:14px;box-shadow:0 0 0 9999px rgba(8,12,26,.72);pointer-events:none;border:2px solid #ff9f2e;transition:left .25s,top .25s,width .25s,height .25s}
-.tut-dim{position:absolute;inset:0;background:rgba(8,12,26,.72);pointer-events:auto}
-.tut-bubble{position:fixed;left:16px;right:16px;bottom:86px;background:#fff;border-radius:16px;padding:14px 16px 12px;box-shadow:0 8px 30px rgba(0,0,0,.35);pointer-events:auto;z-index:9992}
-.tut-card{position:fixed;left:24px;right:24px;top:50%;transform:translateY(-50%);background:#fff;border-radius:18px;padding:22px 20px 16px;pointer-events:auto;z-index:9992;box-shadow:0 12px 40px rgba(0,0,0,.4);text-align:center;max-width:420px;margin:0 auto}
-.tut-card h2{font-family:Georgia,serif;color:#1e2a4e;margin:.3rem 0 .5rem}
-.tut-ico{font-size:2.1rem;line-height:1}
-.tut-bubble p,.tut-card p{margin:.5rem 0;color:#3c4763;font-size:.95rem;line-height:1.55}
-.tut-dots{display:flex;gap:6px;justify-content:center;margin:.7rem 0 .3rem}
-.tut-dots i{width:8px;height:8px;border-radius:50%;background:#e2d9c8}
-.tut-dots i.on{background:#ff9f2e}
-.tut-btns{display:flex;gap:.6rem;justify-content:center;margin-top:.4rem}
-.tut-skip{background:none;border:none;color:#8a8fa3;font-size:.85rem;text-decoration:underline;cursor:pointer;padding:.4rem}
+#tut-dim{position:absolute;inset:0;background:rgba(9,13,28,.8);pointer-events:auto;cursor:pointer}
+#tut-hole{position:fixed;border-radius:16px;box-shadow:0 0 0 9999px rgba(9,13,28,.8),0 0 26px rgba(255,177,78,.5);border:2px solid #ffb14e;pointer-events:none;opacity:0;transition:left .38s cubic-bezier(.32,.72,.35,1),top .38s cubic-bezier(.32,.72,.35,1),width .38s cubic-bezier(.32,.72,.35,1),height .38s cubic-bezier(.32,.72,.35,1),opacity .25s;z-index:9991}
+#tut-text{position:fixed;z-index:9992;pointer-events:none;color:#fff;text-align:center;text-shadow:0 2px 14px rgba(0,0,0,.9);opacity:0;transition:opacity .28s,transform .28s}
+#tut-text .tut-kicker{color:#ffb14e;font-weight:800;font-size:1.3rem;margin-bottom:.35rem}
+#tut-text .tut-body{font-size:1.06rem;line-height:1.65}
+#tut-text .tut-done-title{font-family:Georgia,serif;font-size:1.7rem;font-weight:700;margin-bottom:.4rem}
+#tut-cta{pointer-events:auto;margin-top:1.1rem;background:linear-gradient(135deg,#ff9f2e,#ff7b2e);border:none;color:#fff;font-size:1.1rem;font-weight:800;padding:.85rem 2.6rem;border-radius:999px;cursor:pointer;box-shadow:0 6px 24px rgba(255,159,46,.45);min-height:52px}
+#tut-controls{position:fixed;left:0;right:0;bottom:24px;z-index:9993;display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none}
+#tut-controls .tut-dots{display:flex;gap:7px;justify-content:center}
+#tut-controls .tut-dots i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.28)}
+#tut-controls .tut-dots i.on{background:#ffb14e}
+#tut-next{pointer-events:auto;background:none;border:none;color:#ffb14e;font-size:1.2rem;font-weight:800;cursor:pointer;padding:12px 30px;min-height:52px;min-width:120px;text-shadow:0 2px 10px rgba(0,0,0,.8)}
+#tut-skip{pointer-events:auto;background:none;border:none;color:rgba(255,255,255,.6);font-size:.85rem;text-decoration:underline;cursor:pointer;padding:8px 16px}
+/* subtle text-button, also used in the welcome popup */
+.tut-skip{background:none;border:none;color:#8a8fa3;font-size:.85rem;text-decoration:underline;cursor:pointer;padding:.4rem;display:block;width:100%}
 .pl-done{text-align:center;padding:2rem 1.2rem}
 .pl-done-ico{font-size:3rem}
 .pl-done h2{font-family:Georgia,serif;color:#1e2a4e}
