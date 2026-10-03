@@ -4578,6 +4578,10 @@ async function loadAdminBot() {
     '<label class="bot-row"><span>Posting hours (Tehran)</span><span class="bot-hours"><input type="number" id="bot-start" min="0" max="23" value="' + cfg.start_hour + '"> – <input type="number" id="bot-end" min="1" max="24" value="' + cfg.end_hour + '"></span></label>' +
     '<label class="bot-row"><span>Post every N hours</span><input type="number" id="bot-interval" min="1" max="12" value="' + cfg.interval_hours + '"></label>' +
     '<div class="bot-row"><span>Content</span><span class="bot-checks">' + cb('bot-words', '📇 Word cards', cfg.send_words) + cb('bot-quiz', '❓ Quizzes', cfg.send_quiz) + cb('bot-podcast', '🎧 Podcast', cfg.send_podcast) + cb('bot-shadowing', '🗣️ Shadowing', cfg.send_shadowing) + '</span></div>' +
+    '<label class="bot-row"><span>Podcast every N posts</span><input type="number" id="bot-podevery" min="1" max="24" value="' + cfg.podcast_every + '"></label>' +
+    '<label class="bot-row"><span>Shadowing every N posts</span><input type="number" id="bot-shevery" min="1" max="24" value="' + cfg.shadowing_every + '"></label>' +
+    '<label class="bot-row"><span>📢 Promo banners</span><input type="checkbox" id="bot-promo" class="bot-switch"' + (cfg.send_promo ? ' checked' : '') + '></label>' +
+    '<label class="bot-row"><span>Promo every N hours</span><input type="number" id="bot-promoevery" min="1" max="12" value="' + cfg.promo_every_hours + '"></label>' +
     '<label class="bot-row"><span>Quiz every N posts</span><input type="number" id="bot-quizevery" min="2" max="12" value="' + cfg.quiz_every + '"></label>' +
     '<div class="bot-row"><span>Word levels</span><span class="bot-checks">' +
       ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'].map(function (l) { return cb('bot-lv-' + l, l.toUpperCase(), lv.indexOf(l) !== -1); }).join('') +
@@ -4585,7 +4589,7 @@ async function loadAdminBot() {
     '</div>' +
     '<div style="margin-top:0.7rem"><button class="btn btn-sm" data-action="bot-save">Save bot settings</button> ' +
     '<span class="muted" id="bot-status" style="font-size:0.85rem;margin-left:0.5rem"></span></div>' +
-    '<p class="muted" style="font-size:0.8rem;margin:0.6rem 0 0">Settings take effect on the next hourly bot run. Hours are Asia/Tehran.</p>';
+    '<p class="muted" style="font-size:0.8rem;margin:0.6rem 0 0">Settings take effect on the next hourly bot run. Hours are Asia/Tehran. Promo banners (jpg/png/webp) go in <code>media/promo/</code> — a promo replaces the regular post in its slot.</p>';
 }
 
 async function saveAdminBot(btn) {
@@ -4595,10 +4599,14 @@ async function saveAdminBot(btn) {
   const isOn = function (id) { const el = document.getElementById(id); return !!(el && el.checked); };
   const start = parseInt(val('bot-start'), 10), end = parseInt(val('bot-end'), 10);
   const interval = parseInt(val('bot-interval'), 10), qe = parseInt(val('bot-quizevery'), 10);
+  const pe = parseInt(val('bot-promoevery'), 10);
+  const pode = parseInt(val('bot-podevery'), 10), she = parseInt(val('bot-shevery'), 10);
   const levels = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'].filter(function (l) { return isOn('bot-lv-' + l); });
   if (!(start >= 0 && start < 24 && end > 0 && end <= 24 && start < end)) { say('Start hour must be before end hour.', false); return; }
   if (!(interval >= 1 && interval <= 12)) { say('Interval must be 1–12.', false); return; }
   if (!(qe >= 2 && qe <= 12)) { say('Quiz-every must be 2–12.', false); return; }
+  if (!(pe >= 1 && pe <= 12)) { say('Promo-every must be 1–12.', false); return; }
+  if (!(pode >= 1 && pode <= 24) || !(she >= 1 && she <= 24)) { say('Podcast/Shadowing-every must be 1–24.', false); return; }
   if (!isOn('bot-words') && !isOn('bot-quiz') && !isOn('bot-podcast') && !isOn('bot-shadowing')) { say('Enable at least one content type.', false); return; }
   if (!levels.length) { say('Pick at least one level.', false); return; }
   if (btn) btn.disabled = true;
@@ -4608,6 +4616,8 @@ async function saveAdminBot(btn) {
       id: 1, enabled: isOn('bot-enabled'), start_hour: start, end_hour: end,
       interval_hours: interval, send_words: isOn('bot-words'), send_quiz: isOn('bot-quiz'),
       send_podcast: isOn('bot-podcast'), send_shadowing: isOn('bot-shadowing'),
+      podcast_every: pode, shadowing_every: she,
+      send_promo: isOn('bot-promo'), promo_every_hours: pe,
       quiz_every: qe, levels: levels, updated_at: new Date().toISOString()
     });
     if (r.error) throw r.error;
