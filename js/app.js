@@ -2324,15 +2324,29 @@ function inboxListHTML(msgs) {
     /* Assignment notifications (sent by the teacher composer) get a direct
        link — otherwise the student reads the message but can't find the quiz. */
     const isAssignment = (m.body || '').indexOf('📝 Your teacher sent you ') === 0;
-    return '<div class="card msg-card' + (m.read_at ? '' : ' unread') + '">' +
+    let bodyHTML;
+    if (isAssignment) {
+      const mm = /^📝 Your teacher sent you (homework|an exam): 📝 (.*) — open Muse English to start\.$/.exec(m.body || '');
+      bodyHTML = mm
+        ? '<span class="msg2-line">📝 Your teacher sent you ' + esc(mm[1]) + ':</span>' +
+          '<span class="msg2-line">📝 ' + esc(mm[2]) + '</span>' +
+          '<span class="msg2-line msg2-dim">Open Muse English to start.</span>'
+        : esc(m.body);
+    } else {
+      bodyHTML = esc(m.body);
+    }
+    return '<div class="msg2-card' + (m.read_at ? '' : ' unread') + '">' +
       '<div class="msg-head"><b>' + esc(m.teacher_name) + '</b><span class="muted">' + esc(fmtMsgTime(m.created_at)) + '</span></div>' +
-      '<p>' + esc(m.body) + '</p>' +
-      (isAssignment ? '<a class="btn btn-block" href="#/homework" style="margin-top:0.6rem">📝 Open homework →</a>' : '') + '</div>';
+      '<p>' + bodyHTML + '</p>' +
+      (isAssignment ? '<a class="msg2-cta" href="#/homework"><span class="msg2-cta-ico">📝</span><span>Open homework →</span><span class="msg2-cta-go">›</span></a>' : '') + '</div>';
   }).join('');
 }
 async function renderInbox(v) {
   var cached = state.inboxMessages;
-  v.innerHTML = '<div class="tch-wrap"><h1>💬 Messages</h1><div id="inbox-list">' +
+  v.innerHTML = '<div class="tch-wrap msg2-wrap">' +
+    '<div class="msg2-bg" aria-hidden="true"><span class="msg2-blob"></span><img src="media/inbox-mascot.webp" alt=""></div>' +
+    '<h1 class="msg2-title"><span class="msg2-bubble">💬</span> Messages<i class="msg2-spark s1"></i><i class="msg2-spark s2"></i></h1>' +
+    '<div id="inbox-list">' +
     ((cached && cached.length) ? inboxListHTML(cached) : '<div class="empty">Loading…</div>') + '</div></div>';
   var host = document.getElementById('inbox-list');
   if (!sb) {

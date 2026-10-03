@@ -2208,3 +2208,27 @@ body.duo-playing{padding-bottom:0!important;}
 .hw2-cta:active{transform:scale(.99)}
 .hw2-go{position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);font-size:1.5rem;font-weight:400;opacity:.9}
 .hw2-done{position:relative;background:#e9f9ef;border:1px solid #bfe8cd;color:#1d7a3f;border-radius:14px;padding:.7rem 1rem;font-size:.95rem;text-align:center}
+
+/* ---- Messages view v2 (mockup 2026-10-03) ---- */
+.msg2-wrap{position:relative;overflow:hidden;min-height:70vh}
+.msg2-bg{position:absolute;inset:auto 0 0 0;height:280px;pointer-events:none;z-index:0}
+.msg2-blob{position:absolute;right:-70px;bottom:-90px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,#ffe3c2 0%,rgba(255,227,194,0) 70%)}
+.msg2-bg img{position:absolute;right:6px;bottom:0;width:150px;height:auto;opacity:.95}
+.msg2-title{position:relative;z-index:1;font-family:Georgia,serif;font-size:2rem;margin:1.2rem 0 1rem;display:flex;align-items:center;gap:.55rem}
+.msg2-bubble{font-size:1.7rem;filter:saturate(1.2)}
+.msg2-spark{position:relative;width:14px;height:14px;margin-left:-.35rem}
+.msg2-spark::before,.msg2-spark::after{content:"";position:absolute;background:#f59e0b;border-radius:2px}
+.msg2-spark::before{width:10px;height:3px;transform:rotate(35deg);left:2px;top:2px}
+.msg2-spark::after{width:10px;height:3px;transform:rotate(-25deg);left:2px;top:8px}
+.msg2-spark.s2{transform:scale(.7) translateY(4px)}
+#inbox-list{position:relative;z-index:1}
+.msg2-card{position:relative;overflow:hidden;background:#fffdf8;border:1px solid rgba(217,123,43,.14);border-radius:20px;padding:1rem 1.1rem;margin-bottom:.8rem;box-shadow:0 8px 24px rgba(180,110,40,.08)}
+.msg2-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:linear-gradient(180deg,#ff9a3c,#f26d0d)}
+.msg2-card.unread{border-color:rgba(242,109,13,.45)}
+.msg2-card .msg-head b{font-family:Georgia,serif;font-size:1.12rem;color:#1e2a4e}
+.msg2-card p{margin:.2rem 0 0;line-height:1.6;color:#3a4160}
+.msg2-line{display:block}
+.msg2-dim{color:#8a8fa3}
+.msg2-cta{position:relative;display:flex;align-items:center;gap:.6rem;margin-top:.8rem;background:#ffe9d2;border-radius:999px;padding:.65rem .6rem .65rem 1rem;text-decoration:none;color:#e2630a;font-weight:800;font-size:1.02rem}
+.msg2-cta-ico{font-size:1.35rem}
+.msg2-cta-go{margin-left:auto;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:#f59e0b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
