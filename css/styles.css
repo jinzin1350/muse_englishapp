@@ -1953,3 +1953,67 @@ body{background:#FFF9F3;}
 .adm-coh.hot { background: rgba(57,116,90,0.15); color: var(--herb-dark); }
 .adm-coh.warm { background: rgba(255,149,0,0.15); color: #b26a00; }
 .adm-coh.cold { background: rgba(200,60,40,0.1); color: #a03a2a; }
+
+/* ================= Inbox prompt banner (teacher message) ================= */
+.modal-card-inbox {
+  background: #FEFAF3; border-radius: 26px;
+  padding: 2.1rem 1.5rem 1.6rem; max-width: 420px;
+  position: relative; overflow: hidden;
+}
+.inbox-prompt { position: relative; }
+.inbox-prompt h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #1E2A4A; font-size: 1.5rem; font-weight: 700;
+  margin: 0 0 0.35rem; line-height: 1.25; white-space: nowrap;
+}
+.ip-sub { color: #8A8FA3; font-size: 0.9rem; margin: 0 0 1.35rem; white-space: nowrap; }
+.ip-bubble {
+  width: 86px; height: 74px; margin: 0.2rem auto 1.1rem; position: relative;
+  background: linear-gradient(135deg, #DED4FA 0%, #B7A5EE 100%);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  box-shadow: 0 10px 22px rgba(150,130,230,0.35),
+    inset 0 5px 10px rgba(255,255,255,0.55),
+    inset 0 -7px 12px rgba(120,100,200,0.25);
+}
+.ip-bubble::after {
+  content: ''; position: absolute; bottom: -7px; left: 24px;
+  width: 20px; height: 20px; background: #BFAFF0;
+  clip-path: polygon(0 0, 100% 0, 25% 100%);
+}
+.ip-bubble span {
+  width: 11px; height: 11px; border-radius: 50%; background: #7E6FD8;
+  box-shadow: inset 0 -2px 3px rgba(0,0,0,0.18);
+}
+.ip-spark { position: absolute; color: #B9A8EE; font-style: normal; line-height: 1; }
+.ip-spark.s1 { left: -26px; top: 6px; font-size: 1.1rem; transform: rotate(-18deg); }
+.ip-spark.s2 { left: -32px; top: 34px; font-size: 0.8rem; transform: rotate(12deg); }
+.ip-spark.s3 { right: -26px; top: 6px; font-size: 1.1rem; transform: rotate(18deg); }
+.ip-spark.s4 { right: -32px; top: 34px; font-size: 0.8rem; transform: rotate(-12deg); }
+.ip-primary {
+  display: block; width: 100%; margin: 0 0 0.7rem; border: none; cursor: pointer;
+  background: linear-gradient(135deg, #9A8CF8 0%, #7C6AF0 100%); color: #fff;
+  font-size: 1rem; font-weight: 700; padding: 1rem 0.6rem; border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(124,106,240,0.42);
+  font-family: inherit; white-space: nowrap;
+}
+.ip-primary:active { transform: scale(0.98); }
+.ip-secondary {
+  display: block; width: 100%; margin: 0; cursor: pointer;
+  background: transparent; color: #3A3A4A;
+  border: 1.5px solid #E5DCCB; font-size: 0.95rem; font-weight: 600;
+  padding: 0.9rem 0.6rem; border-radius: 999px; font-family: inherit; white-space: nowrap;
+}
+.ip-cta { display: flex; align-items: flex-end; gap: 10px; }
+.ip-btns { flex: 1 1 auto; min-width: 0; }
+.ip-mascot {
+  flex: 0 0 84px; width: 84px; height: auto;
+  pointer-events: none; margin-bottom: -4px;
+}
+.ip-deco { position: absolute; inset: 0; pointer-events: none; }
+.ip-deco::before, .ip-deco::after {
+  content: ''; position: absolute; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(185,168,238,0.35), transparent);
+}
+.ip-deco::before { width: 150px; height: 150px; left: -50px; bottom: -40px; }
+.ip-deco::after { width: 110px; height: 110px; right: -30px; top: -30px; }

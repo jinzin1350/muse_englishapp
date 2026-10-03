@@ -2274,12 +2274,22 @@ function maybeShowInboxPrompt() {
   if (!n || state.view !== 'home') return;
   state._inboxPrompted = true;
   showModal(
-    '<div class="modal-ico">💬</div>' +
+    '<div class="inbox-prompt">' +
+    '<div class="ip-deco" aria-hidden="true"></div>' +
+    '<div class="ip-bubble" aria-hidden="true"><span></span><span></span><span></span>' +
+    '<i class="ip-spark s1">✦</i><i class="ip-spark s2">✦</i><i class="ip-spark s3">✦</i><i class="ip-spark s4">✦</i></div>' +
     '<h2>You have ' + n + ' new message' + (n > 1 ? 's' : '') + '</h2>' +
-    '<p class="muted">From your teacher — tap below to read.</p>' +
-    '<button class="btn btn-block" data-action="inbox-open">Read messages</button>' +
-    '<button class="btn btn-ghost btn-block" data-action="modal-close">Later</button>'
+    '<p class="ip-sub">From your teacher — tap below to read.</p>' +
+    '<div class="ip-cta"><div class="ip-btns">' +
+    '<button class="ip-primary" data-action="inbox-open">Read messages</button>' +
+    '<button class="ip-secondary" data-action="modal-close">Later</button>' +
+    '</div>' +
+    '<img class="ip-mascot" src="media/inbox-mascot.webp" alt="" aria-hidden="true">' +
+    '</div>' +
+    '</div>'
   );
+  const ov = document.getElementById('app-modal');
+  if (ov && ov.firstChild) ov.firstChild.classList.add('modal-card-inbox');
 }
 function fmtMsgTime(ts) {
   try {
@@ -4784,6 +4794,7 @@ function bindEvents() {
     const ma = t.getAttribute('data-action');
     if (ma === 'modal-close') closeModal();
     else if (ma === 'teacher-message-send') teacherMessageSend(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (ma === 'inbox-open') { closeModal(); go('inbox'); }
   });
   $('#mp-toggle').addEventListener('click', function () {
     if (!player.src) return;
@@ -4846,7 +4857,7 @@ window.MuseApp = {
   ensureCountrySaved: ensureCountrySaved,
   queuePointsPopup: queuePointsPopup, ensureNickname: ensureNickname,
   renderChallenge: renderChallenge, awardPoints: awardPoints, demoLogin: demoLogin,
-  launchCelebration: launchCelebration,
+  launchCelebration: launchCelebration, maybeShowInboxPrompt: maybeShowInboxPrompt,
 };
 
 })();
