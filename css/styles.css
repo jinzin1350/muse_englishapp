@@ -2281,3 +2281,28 @@ body.duo-playing{padding-bottom:0!important;}
 .tch-actions{display:flex;gap:.5rem}
 .as-row.as-sched{border-style:dashed}
 @media (max-width:420px){ .pl-row{grid-template-columns:1fr 84px} .pl-time{grid-column:1/-1} }
+
+/* ---- Learning analytics (2026-10-03) ---- */
+.an-title{font-weight:800;font-size:.95rem;color:#1e2a4e;margin-bottom:.5rem}
+.an-chart{width:100%;height:auto;display:block;margin:.2rem 0}
+.an-cl{font-size:9px;fill:#9a937f}
+.an-cr{text-anchor:end}
+.an-bars{display:flex;flex-direction:column;gap:.45rem}
+.an-barrow{display:grid;grid-template-columns:1fr 110px 44px;gap:.5rem;align-items:center;font-size:.85rem}
+.an-btopic{color:#3a4160;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.an-bartrack{display:block;height:10px;background:#f3ecdc;border-radius:999px;overflow:hidden}
+.an-barfill{display:block;height:100%;border-radius:999px;background:#f59e0b}
+.an-barfill.g{background:#3faf5c}
+.an-barfill.y{background:#f59e0b}
+.an-barfill.r{background:#e05252}
+.an-bpct{text-align:right;font-weight:700;color:#1e2a4e}
+.an-assign{display:flex;flex-direction:column}
+.an-arow{display:grid;grid-template-columns:1fr auto auto;gap:.7rem;align-items:center;padding:.45rem 0;border-top:1px solid #f3ecdc;font-size:.88rem}
+.an-arow:first-child{border-top:0}
+.an-arow .ok{color:#1d7a3f}
+.an-arow .bad{color:#c04444}
+/* AI report modal */
+.rpt{text-align:left}
+.rpt-head{font-family:Georgia,serif;font-size:1.35rem;font-weight:700;color:#1e2a4e;margin-bottom:.7rem;text-align:center}
+.rpt-body{max-height:60vh;overflow-y:auto;font-size:.94rem;line-height:1.75;color:#3a4160}
+.rpt-body p{margin:.6rem 0}

@@ -1573,8 +1573,8 @@ async function loadPreviewLesson() {
 }
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
-const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'support'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner'];
+const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -1614,7 +1614,7 @@ function onRoute() {
   if (!state.user) {
     if (PUBLIC_VIEWS.indexOf(view) === -1) view = 'landing';
   } else {
-    // Logged-in: learner views win (support lives in both lists so it works before AND after login).
+    // Logged-in: learner views win.
     if (LEARNER_VIEWS.indexOf(view) === -1) {
       view = 'home';
       if (window.location.hash !== '#/home') { window.location.hash = '#/home'; return; }
@@ -1641,7 +1641,6 @@ function show(view, arg) {
   else if (view === 'scores') renderScores(v);
   else if (view === 'review') renderMistakes(v);
   else if (view === 'profile') renderProfile(v);
-  else if (view === 'support') renderSupport(v);
   else if (view === 'challenge') renderChallenge(v);
   else if (view === 'inbox') renderInbox(v);
   else if (view === 'homework') renderHomework(v);
@@ -2263,12 +2262,78 @@ async function openTeacherStudent(i) {
         '<div><b>' + sum('quizzes_completed') + '</b><span>quizzes</span></div>' +
         '<div><b>' + Math.round(sum('podcast_seconds') / 60) + '</b><span>podcast min</span></div>' +
       '</div>' +
+      '<div id="tch-an-' + i + '"><div class="empty">Loading analytics…</div></div>' +
       '<div style="display:flex;gap:0.5rem;margin-top:0.9rem;flex-wrap:wrap">' +
       '<button class="btn btn-sm" data-action="teacher-nudge" data-i="' + i + '">🔔 Nudge</button>' +
       '<button class="btn btn-sm" data-action="teacher-message" data-i="' + i + '">💬 Message</button>' +
+      '<button class="btn btn-sm" data-action="ai-report-tstudent" data-i="' + i + '">🤖 Report</button>' +
       '<button class="btn btn-ghost btn-sm" data-action="teacher-student-close">Close</button></div></div>';
+    loadTeacherStudentAnalytics(i, s);
   } catch (e) {
     host.innerHTML = '<div class="empty">Could not load activity.</div>';
+  }
+}
+async function loadTeacherStudentAnalytics(i, s) {
+  const host = document.getElementById('tch-an-' + i);
+  if (!host) return;
+  try {
+    const name = s.display_name || (s.email || '?').split('@')[0];
+    const pack = await buildStudentPack(s.user_id, true, name);
+    const h = document.getElementById('tch-an-' + i);
+    if (!h) return;
+    let html = '';
+    if ((pack.assignments || []).length) {
+      html += '<div class="an-title" style="margin-top:.8rem">📝 Homework scores</div><div class="an-assign">' +
+        pack.assignments.slice(0, 6).map(function (x) {
+          const pct = x.total ? Math.round((x.score / x.total) * 100) : 0;
+          return '<div class="an-arow"><span>' + esc(x.topic) + '</span>' +
+            '<span class="muted">' + esc(x.date) + '</span>' +
+            '<b class="' + (pct >= 70 ? 'ok' : 'bad') + '">' + x.score + '/' + x.total + '</b></div>';
+        }).join('') + '</div>';
+    }
+    if ((pack.topicAccuracy || []).length) {
+      html += '<div class="an-title" style="margin-top:.8rem">🎯 Accuracy by topic</div>' + topicBarsHTML(pack.topicAccuracy);
+    }
+    h.innerHTML = html || '<div class="empty">No homework data yet.</div>';
+  } catch (e) { /* keep the activity view */ }
+}
+async function aiReportTeacherStudent(i, btn) {
+  const s = (state.teacherStudents || [])[i];
+  if (!s) return;
+  const name = s.display_name || (s.email || '?').split('@')[0];
+  try {
+    const pack = await buildStudentPack(s.user_id, true, name);
+    requestAIReport('teacher-student', pack, btn);
+  } catch (e) {
+    requestAIReport('teacher-student', { name: name, note: 'no data' }, btn);
+  }
+}
+async function buildClassPack() {
+  const students = (state.teacherStudents || []).slice(0, 15);
+  const rows = [];
+  for (const s of students) {
+    const name = s.display_name || (s.email || '?').split('@')[0];
+    try {
+      const pack = await buildStudentPack(s.user_id, true, name);
+      const sc = pack.assignments.map(function (x) { return x.total ? x.score / x.total : 0; });
+      rows.push({
+        name: name,
+        assignments: pack.assignments.length,
+        avgPct: sc.length ? Math.round(sc.reduce(function (a, b) { return a + b; }, 0) / sc.length * 100) : null,
+        weak: pack.topicAccuracy.slice(0, 3).map(function (t) {
+          return { topic: t.topic, pct: Math.round((t.correct / t.total) * 100) };
+        })
+      });
+    } catch (e) { rows.push({ name: name, assignments: 0, avgPct: null, weak: [] }); }
+  }
+  return { classSize: (state.teacherStudents || []).length, students: rows };
+}
+async function aiReportClass(btn) {
+  try {
+    const pack = await buildClassPack();
+    requestAIReport('teacher-class', pack, btn);
+  } catch (e) {
+    requestAIReport('teacher-class', { note: 'no data' }, btn);
   }
 }
 
@@ -2867,6 +2932,135 @@ async function savePlanner(btn) {
   }
 }
 
+/* ---------------- learning analytics ----------------
+   One data pack per student, built only from tables the caller can already
+   read (RLS). It feeds BOTH the in-app charts and the /api/report LLM.
+   - student: assignments+results, quiz_attempts, mistakes, streak
+   - teacher viewing a student: the teacher's own assignments+results for
+     that student (quiz_attempts/mistakes are user-private by RLS) */
+async function buildStudentPack(studentId, forTeacher, name) {
+  const pack = { name: name || '', periodDays: 30, assignments: [], topicAccuracy: [] };
+  try {
+    let aq = sb.from('assignments')
+      .select('id,title,topic_label,level,created_at,questions')
+      .contains('student_ids', [studentId])
+      .order('created_at', { ascending: false }).limit(40);
+    if (forTeacher && state.user) aq = aq.eq('teacher_id', state.user.id);
+    const a = await aq;
+    if (a.error) throw a.error;
+    const assigns = (a.data || []).filter(function (x) { return x.status !== 'scheduled'; });
+    const byId = {};
+    assigns.forEach(function (x) { byId[x.id] = x; });
+    const ids = assigns.map(function (x) { return x.id; });
+    let results = [];
+    if (ids.length) {
+      let rq = sb.from('assignment_results')
+        .select('assignment_id,score,total,answers,completed_at')
+        .in('assignment_id', ids).order('completed_at', { ascending: false });
+      rq = rq.eq('student_id', studentId);
+      const r = await rq;
+      if (!r.error) results = r.data || [];
+    }
+    const tacc = {};
+    pack.assignments = results.slice(0, 20).map(function (r) {
+      const asg = byId[r.assignment_id] || {};
+      const qs = asg.questions || [];
+      const topic = asg.topic_label || asg.level || '';
+      (r.answers || []).forEach(function (an) {
+        const t = tacc[topic] || (tacc[topic] = { topic: topic, correct: 0, total: 0 });
+        t.total++;
+        if (an && an.picked === an.correct) t.correct++;
+      });
+      const wrong = [];
+      (r.answers || []).forEach(function (an, i) {
+        if (wrong.length >= 5 || !an || an.picked === an.correct || !qs[i]) return;
+        wrong.push({
+          q: String(qs[i].q || '').slice(0, 140),
+          picked: String((qs[i].options || [])[an.picked] || '').slice(0, 60),
+          correct: String((qs[i].options || [])[an.correct] || '').slice(0, 60)
+        });
+      });
+      return {
+        topic: topic, level: asg.level || '',
+        date: String(r.completed_at || '').slice(0, 10),
+        score: r.score, total: r.total, wrong: wrong
+      };
+    });
+    pack.topicAccuracy = Object.keys(tacc).map(function (k) { return tacc[k]; })
+      .sort(function (x, y) { return (x.correct / x.total) - (y.correct / y.total); })
+      .slice(0, 12);
+    if (!forTeacher) {
+      try {
+        const q = await sb.from('quiz_attempts').select('date,kind,score,total')
+          .eq('user_id', studentId).order('created_at', { ascending: false }).limit(40);
+        pack.quizTrend = (q.data || []).map(function (x) {
+          return { date: String(x.date || '').slice(0, 10), kind: x.kind || '', score: x.score, total: x.total };
+        });
+      } catch (e) {}
+      try {
+        const m = await sb.from('mistakes').select('question,kind')
+          .eq('user_id', studentId).order('created_at', { ascending: false }).limit(12);
+        pack.openMistakes = (m.data || []).map(function (x) {
+          return { q: String(x.question || '').slice(0, 120), kind: x.kind || '' };
+        });
+      } catch (e) {}
+    }
+  } catch (e) { pack.error = String((e && e.message) || e).slice(0, 120); }
+  return pack;
+}
+/* Simple SVG trend chart: points = [{label, pct}] oldest -> newest */
+function trendChartHTML(points) {
+  if (!points || points.length < 2) return '';
+  const W = 320, H = 90, P = 8;
+  const n = points.length;
+  const xs = function (i) { return P + (i * (W - 2 * P)) / Math.max(1, n - 1); };
+  const ys = function (p) { return H - P - (Math.max(0, Math.min(100, p)) / 100) * (H - 2 * P); };
+  const line = points.map(function (pt, i) { return xs(i).toFixed(1) + ',' + ys(pt.pct).toFixed(1); }).join(' ');
+  const dots = points.map(function (pt, i) {
+    return '<circle cx="' + xs(i).toFixed(1) + '" cy="' + ys(pt.pct).toFixed(1) + '" r="3.2" fill="#f59e0b"/>';
+  }).join('');
+  return '<svg class="an-chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Score trend">' +
+    '<polyline points="' + line + '" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>' + dots +
+    '<text x="' + P + '" y="' + (H - 1) + '" class="an-cl">' + esc(points[0].label) + '</text>' +
+    '<text x="' + (W - P) + '" y="' + (H - 1) + '" class="an-cl an-cr">' + esc(points[n - 1].label) + '</text></svg>';
+}
+function topicBarsHTML(tacc) {
+  if (!tacc || !tacc.length) return '';
+  return '<div class="an-bars">' + tacc.map(function (t) {
+    const pct = t.total ? Math.round((t.correct / t.total) * 100) : 0;
+    const cls = pct >= 80 ? 'g' : pct >= 55 ? 'y' : 'r';
+    return '<div class="an-barrow"><span class="an-btopic">' + esc(t.topic) + '</span>' +
+      '<span class="an-bartrack"><span class="an-barfill ' + cls + '" style="width:' + pct + '%"></span></span>' +
+      '<span class="an-bpct">' + pct + '%</span></div>';
+  }).join('') + '</div>';
+}
+function reportTextHTML(text) {
+  return esc(text).split(/\n{2,}/).map(function (para) {
+    return '<p>' + para.replace(/\n/g, '<br>') + '</p>';
+  }).join('');
+}
+async function requestAIReport(kind, pack, btn) {
+  const orig = btn ? btn.innerHTML : '';
+  if (btn) { btn.disabled = true; btn.innerHTML = '⏳ در حال تهیه‌ی گزارش…'; }
+  try {
+    const r = await fetch('/api/report', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ kind: kind, pack: pack })
+    });
+    const d = await r.json().catch(function () { return null; });
+    if (!r.ok || !d || !d.report) throw new Error((d && d.error) || 'failed');
+    showModal('<div class="rpt"><div class="rpt-head">🤖 گزارش پیشرفت</div>' +
+      '<div class="rpt-body">' + reportTextHTML(d.report) + '</div>' +
+      '<button class="btn btn-ghost btn-block" data-action="modal-close">بستن</button></div>');
+  } catch (e) {
+    showModal('<div class="rpt"><div class="rpt-head">🤖 گزارش پیشرفت</div>' +
+      '<div class="empty">نتونستم گزارش رو بسازم — ' + esc(e.message || 'دوباره تلاش کن.') + '</div>' +
+      '<button class="btn btn-ghost btn-block" data-action="modal-close">بستن</button></div>');
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerHTML = orig; }
+  }
+}
+
 /* ---- teacher: assignment list + results ---- */
 async function loadTeacherAssignments() {
   const host = document.getElementById('tch-assign');
@@ -2896,7 +3090,8 @@ async function loadTeacherAssignments() {
         (doneMap[x.assignment_id] = doneMap[x.assignment_id] || []).push(x.student_id);
       });
     } catch (e) {}
-    host.innerHTML = '<div class="section-title"><h2>📝 Assignments</h2></div>' +
+    host.innerHTML = '<div class="section-title"><h2>📝 Assignments</h2>' +
+      '<button class="btn btn-sm" data-action="ai-report-class">🤖 Class report</button></div>' +
       rows.map(function (x, i) {
         const done = (doneMap[x.id] || []).length;
         const total = (x.student_ids || []).length;
@@ -4280,13 +4475,8 @@ function renderProfile(v) {
     '<button class="btn btn-sm" data-action="save-country">Save country</button>' +
   '</div>' +
 
-  '<div class="section-title"><h2>Support</h2></div>' +
-  '<p class="muted" style="margin-top:0">Questions about lessons, quizzes, scores or audio? Ask right here.</p>' +
-  supportCardHTML() +
-
   '<div class="section-title"><h2>Account</h2></div>' +
   '<div class="card plain"><button class="btn btn-ghost btn-block" data-action="logout" style="margin-top:0">Log out</button></div>';
-  initSupportCard(v);
 }
 
 async function saveCountryManual() {
@@ -4300,102 +4490,6 @@ async function saveCountryManual() {
     await sb.rpc('set_country', { code: code, name: name, source: 'manual' });
   } catch (e) { /* RPC missing or offline -> kept locally, retried later */ }
   renderProfile(document.getElementById('view'));
-}
-
-/* ---------------- SUPPORT (AI chat + Telegram fallback) ---------------- */
-const SUPPORT_QUICK = [
-  'How do the daily lessons work?',
-  "I can't hear the podcast",
-  'How do I change my level?',
-  'How do I enable notifications?'
-];
-const SUPPORT_TELEGRAM = 'https://t.me/alirezaaaatehrani';
-let supportLog = [];
-let supportBusy = false;
-
-function supportCardHTML() {
-  return '<div class="card plain support-card">' +
-    '<div id="support-msgs" class="support-msgs" aria-live="polite"></div>' +
-    '<div class="support-chips">' + SUPPORT_QUICK.map(function (q) {
-      return '<button class="chip" data-support-q="' + esc(q) + '">' + esc(q) + '</button>';
-    }).join('') + '</div>' +
-    '<div class="support-input-row">' +
-      '<input id="support-input" class="support-input" type="text" placeholder="Type your question\u2026" autocomplete="off" maxlength="500" aria-label="Your question">' +
-      '<button id="support-send" class="btn" aria-label="Send message">\u27a4</button>' +
-    '</div>' +
-  '</div>' +
-  '<div class="card mist support-tg">' +
-    '<div><b>Still stuck?</b><div class="muted">Chat with us directly on Telegram \u2014 we usually reply fast.</div></div>' +
-    '<a class="btn" href="' + SUPPORT_TELEGRAM + '" target="_blank" rel="noopener">\uD83D\uDCAC Open Telegram</a>' +
-  '</div>';
-}
-
-function initSupportCard(root) {
-  supportLog = [];
-  supportBusy = false;
-  supportAddMsg('ai', "Hi! I'm Muse's assistant. Ask me anything about your lessons, quizzes, scores or the app itself. \uD83D\uDE42", false);
-  const sendBtn = document.getElementById('support-send');
-  if (sendBtn) sendBtn.addEventListener('click', supportSend);
-  const input = document.getElementById('support-input');
-  if (input) input.addEventListener('keydown', function (e) { if (e.key === 'Enter') supportSend(); });
-  Array.prototype.forEach.call((root || document).querySelectorAll('[data-support-q]'), function (b) {
-    b.addEventListener('click', function () { supportAsk(b.getAttribute('data-support-q')); });
-  });
-}
-
-function renderSupport(v) {
-  v.innerHTML =
-  '<h1>Support</h1>' +
-  '<p class="muted">Ask Muse\u2019s assistant anything about the app \u2014 lessons, quizzes, scores, audio and more.</p>' +
-  supportCardHTML();
-  initSupportCard(v);
-}
-
-function supportAddMsg(who, text, save) {
-  const box = $('#support-msgs');
-  if (!box) return null;
-  const div = document.createElement('div');
-  div.className = 'support-msg ' + (who === 'user' ? 'from-user' : 'from-ai');
-  div.textContent = text;
-  box.appendChild(div);
-  box.scrollTop = box.scrollHeight;
-  if (save !== false) supportLog.push({ role: who === 'user' ? 'user' : 'assistant', content: text.slice(0, 1000) });
-  return div;
-}
-
-function supportSend() {
-  const input = $('#support-input');
-  supportAsk(input ? input.value : '');
-}
-
-function supportAsk(text) {
-  if (supportBusy) return;
-  text = (text || '').trim();
-  if (!text) return;
-  supportAddMsg('user', text);
-  const input = $('#support-input');
-  if (input) input.value = '';
-  supportBusy = true;
-  const typing = supportAddMsg('ai', '\u2026', false);
-  if (typing) typing.classList.add('typing');
-  const payload = { messages: supportLog.slice(-12) };
-  if (state.user && state.user.level) payload.level = normalizeLevel(state.user.level);
-  fetch('/api/support-chat', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(payload)
-  }).then(function (r) {
-    return r.json().then(function (d) { return { ok: r.ok, d: d }; }, function () { return { ok: false, d: null }; });
-  }).then(function (res) {
-    if (typing) typing.remove();
-    supportBusy = false;
-    if (res.ok && res.d && res.d.reply) supportAddMsg('ai', res.d.reply);
-    else supportAddMsg('ai', "Hmm, I couldn't reach the assistant just now. Try again in a bit \u2014 or tap Open Telegram below and we'll help you directly. \uD83D\uDE42", false);
-  }).catch(function () {
-    if (typing) typing.remove();
-    supportBusy = false;
-    supportAddMsg('ai', "You're offline or the assistant is unreachable. Check your connection \u2014 or tap Open Telegram below and we'll help you directly. \uD83D\uDE42", false);
-  });
 }
 
 /* ---------------- lesson view ---------------- */
@@ -5658,10 +5752,43 @@ function paintScores(v, arr) {
     html += '<div class="empty">No quiz attempts yet.<br>Finish a quiz and your scores will appear here.</div>';
   } else {
     html += '<div class="card avg-card"><div class="avg-num">' + avg + '%</div><div class="muted">overall average · ' + arr.length + ' attempts</div></div>';
+    html += '<div class="section-title"><h2>📊 Analytics</h2>' +
+      '<button class="btn btn-sm" data-action="ai-report-student">🤖 AI report</button></div>' +
+      '<div id="score-analytics"><div class="empty">Loading analytics…</div></div>';
     html += arr.map(attemptCardHTML).join('');
   }
   v.innerHTML = html;
   refreshRewardsSection();
+  loadScoreAnalytics();
+}
+async function loadScoreAnalytics() {
+  const host = document.getElementById('score-analytics');
+  if (!host || !cloudReady() || !state.user) return;
+  try {
+    const pack = await buildStudentPack(state.user.id, false, '');
+    if (!document.getElementById('score-analytics')) return;
+    state._myPack = pack;
+    let html = '';
+    const pts = (pack.quizTrend || []).slice().reverse().map(function (x) {
+      return { label: String(x.date || '').slice(5), pct: x.total ? Math.round((x.score / x.total) * 100) : 0 };
+    });
+    if (pts.length >= 2) {
+      html += '<div class="card"><div class="an-title">📈 Score trend</div>' + trendChartHTML(pts.slice(-20)) + '</div>';
+    }
+    if ((pack.topicAccuracy || []).length) {
+      html += '<div class="card"><div class="an-title">🎯 Accuracy by topic</div>' + topicBarsHTML(pack.topicAccuracy) + '</div>';
+    }
+    host.innerHTML = html || '<div class="empty">Do a few quizzes and homework — your analytics will appear here.</div>';
+  } catch (e) { host.innerHTML = ''; }
+}
+async function aiReportStudent(btn) {
+  try {
+    const pack = state._myPack || await buildStudentPack(state.user.id, false, '');
+    state._myPack = pack;
+    requestAIReport('student', pack, btn);
+  } catch (e) {
+    requestAIReport('student', { note: 'no data' }, btn);
+  }
 }
 
 /* ---------------- review view (mistakes) ---------------- */
@@ -6064,6 +6191,9 @@ function bindEvents() {
     else if (a === 'assignment-compose') teacherAssignmentComposer();
     else if (a === 'assignment-create') createAssignment(t);
     else if (a === 'planner-save') savePlanner(t);
+    else if (a === 'ai-report-student') aiReportStudent(t);
+    else if (a === 'ai-report-tstudent') aiReportTeacherStudent(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (a === 'ai-report-class') aiReportClass(t);
     else if (a === 'assignment-open') openTeacherAssignment(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'assignment-cancel') cancelScheduledAssignment(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'assignment-start') startAssignment(parseInt(t.getAttribute('data-i'), 10));
