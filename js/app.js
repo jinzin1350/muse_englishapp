@@ -2305,6 +2305,21 @@ async function loadTeacherStudentAnalytics(i, s) {
     if ((pack.topicAccuracy || []).length) {
       html += '<div class="an-title" style="margin-top:.8rem">🎯 Accuracy by topic</div>' + topicBarsHTML(pack.topicAccuracy);
     }
+    if ((pack.quizTrend || []).length) {
+      html += '<div class="an-title" style="margin-top:.8rem">📝 Quiz history</div><div class="an-assign">' +
+        pack.quizTrend.slice(0, 8).map(function (x) {
+          const pct = x.total ? Math.round((x.score / x.total) * 100) : 0;
+          return '<div class="an-arow"><span>' + esc(quizKindLabel(x.kind)) + '</span>' +
+            '<span class="muted">' + esc(x.date) + '</span>' +
+            '<b class="' + (pct >= 70 ? 'ok' : 'bad') + '">' + x.score + '/' + x.total + '</b></div>';
+        }).join('') + '</div>';
+    }
+    if ((pack.openMistakes || []).length) {
+      html += '<div class="an-title" style="margin-top:.8rem">⚠️ Still struggling with</div>' +
+        pack.openMistakes.slice(0, 6).map(function (m) {
+          return '<div class="an-wq"><div class="an-wqq">❓ ' + esc(m.q) + '</div></div>';
+        }).join('');
+    }
     h.innerHTML = html || '<div class="empty">No homework data yet.</div>';
   } catch (e) { /* keep the activity view */ }
 }
@@ -3000,22 +3015,23 @@ async function buildStudentPack(studentId, forTeacher, name) {
     pack.topicAccuracy = Object.keys(tacc).map(function (k) { return tacc[k]; })
       .sort(function (x, y) { return (x.correct / x.total) - (y.correct / y.total); })
       .slice(0, 12);
-    if (!forTeacher) {
-      try {
-        const q = await sb.from('quiz_attempts').select('date,kind,score,total')
-          .eq('user_id', studentId).order('created_at', { ascending: false }).limit(40);
-        pack.quizTrend = (q.data || []).map(function (x) {
-          return { date: String(x.date || '').slice(0, 10), kind: x.kind || '', score: x.score, total: x.total };
-        });
-      } catch (e) {}
-      try {
-        const m = await sb.from('mistakes').select('question,kind')
-          .eq('user_id', studentId).order('created_at', { ascending: false }).limit(12);
-        pack.openMistakes = (m.data || []).map(function (x) {
-          return { q: String(x.question || '').slice(0, 120), kind: x.kind || '' };
-        });
-      } catch (e) {}
-    }
+    /* quiz attempts + open mistakes: the student's own pack always has them;
+       a teacher's pack has them once supabase-teacher-read-migration.sql is run
+       (RLS denies quietly before that — the catches keep the pack working). */
+    try {
+      const q = await sb.from('quiz_attempts').select('date,kind,score,total')
+        .eq('user_id', studentId).order('created_at', { ascending: false }).limit(40);
+      pack.quizTrend = (q.data || []).map(function (x) {
+        return { date: String(x.date || '').slice(0, 10), kind: x.kind || '', score: x.score, total: x.total };
+      });
+    } catch (e) {}
+    try {
+      const m = await sb.from('mistakes').select('question,kind')
+        .eq('user_id', studentId).order('created_at', { ascending: false }).limit(12);
+      pack.openMistakes = (m.data || []).map(function (x) {
+        return { q: String(x.question || '').slice(0, 120), kind: x.kind || '' };
+      });
+    } catch (e) {}
   } catch (e) { pack.error = String((e && e.message) || e).slice(0, 120); }
   return pack;
 }
@@ -3045,8 +3061,11 @@ function topicBarsHTML(tacc) {
       '<span class="an-bpct">' + pct + '%</span></div>';
   }).join('') + '</div>';
 }
-function reportTextHTML(text) {
-  return esc(text).split(/\n{2,}/).map(function (para) {
+function quizKindLabel(k) {
+  return k === 'word' ? 'Word quiz' : k === 'grammar' ? 'Grammar quiz'
+    : k === 'mistakes' ? 'Mistake review' : k === 'assignment' ? 'Homework' : (k || 'Quiz');
+}
+function reportTextHTML(text) {  return esc(text).split(/\n{2,}/).map(function (para) {
     return '<p>' + para.replace(/\n/g, '<br>') + '</p>';
   }).join('');
 }
