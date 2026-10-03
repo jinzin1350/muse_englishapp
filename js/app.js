@@ -2763,7 +2763,7 @@ async function refreshHomeworkCard() {
   } catch (e) { /* leave empty on failure */ }
 }
 async function renderHomework(v) {
-  v.innerHTML = '<div class="hw-wrap"><h1>📝 Homework</h1>' +
+  v.innerHTML = '<div class="hw2-wrap"><h1 class="hw2-title"><span aria-hidden="true">📝</span> Homework</h1>' +
     '<div id="hw-list"><div class="empty">Loading…</div></div></div>';
   window.scrollTo(0, 0);
   if (!cloudReady()) {
@@ -2783,14 +2783,25 @@ async function renderHomework(v) {
     if (!host) return;
     host.innerHTML = rows.length ? rows.map(function (x, i) {
       const res = done[x.id];
-      return '<div class="card hw-card">' +
-        '<div class="hw-title">' + esc(x.title) + '</div>' +
-        '<div class="muted hw-sub">From ' + esc(x.teacher_name || 'your teacher') +
+      const lvl = (x.level || '').toUpperCase();
+      const kindIco = x.kind === 'exam' ? '🎓' : '📝';
+      const name = x.topic_label || x.title;
+      return '<div class="hw2-card">' +
+        '<div class="hw2-deco" aria-hidden="true">' +
+        '<svg viewBox="0 0 220 150"><g fill="none" stroke="#d97b2b" stroke-width="5" stroke-linecap="round" opacity="0.10">' +
+        '<path d="M110 45 C 90 32, 60 32, 40 40 L40 115 C 60 107, 90 107, 110 120 C 130 107, 160 107, 180 115 L180 40 C 160 32, 130 32, 110 45 Z"/>' +
+        '<path d="M110 45 L110 120"/></g>' +
+        '<g stroke="#d97b2b" stroke-width="4" stroke-linecap="round" opacity="0.14">' +
+        '<path d="M170 22 l0 14 M163 29 l14 0"/><path d="M196 62 l0 10 M191 67 l10 0"/></g></svg></div>' +
+        '<div class="hw2-top"><span class="hw2-ico">' + kindIco + '</span>' +
+        '<div class="hw2-head"><div class="hw2-name">' + esc(name) + '</div>' +
+        (lvl ? '<span class="hw2-lvl">' + esc(lvl) + '</span>' : '') + '</div></div>' +
+        '<div class="hw2-meta">From ' + esc(x.teacher_name || 'your teacher') +
         (x.deadline ? ' · due ' + esc(x.deadline) : '') +
         (x.note ? '<br>💬 ' + esc(x.note) : '') + '</div>' +
-        (res ? '<div class="hw-done">✓ Done — <b>' + res.score + '/' + res.total + '</b></div>'
-             : '<button class="btn btn-block" data-action="assignment-start" data-i="' + i + '">Start · ' +
-               x.question_count + ' questions</button>') +
+        (res ? '<div class="hw2-done">✓ Done · <b>' + res.score + '/' + res.total + '</b></div>'
+             : '<button class="hw2-cta" data-action="assignment-start" data-i="' + i + '">Start · ' +
+               x.question_count + ' questions<span class="hw2-go">›</span></button>') +
       '</div>';
     }).join('') : '<div class="empty">No assignments yet — enjoy the calm. 🌱</div>';
   } catch (e) {

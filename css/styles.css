@@ -2191,3 +2191,20 @@ body.duo-playing{padding-bottom:0!important;}
 .hw-done{background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.35);color:#4ade80;border-radius:12px;padding:.6rem .8rem;font-size:.95rem}
 .quiz-explain{background:rgba(255,186,96,.1);border:1px solid rgba(255,186,96,.35);border-radius:12px;padding:.65rem .8rem;margin:.7rem 0 0;font-size:.88rem;line-height:1.5;color:#ffd9a8}
 .duo-explain{background:rgba(255,186,96,.12);border:1px solid rgba(255,186,96,.4);border-radius:12px;padding:.6rem .8rem;margin:.6rem 0;font-size:.88rem;line-height:1.5;color:#ffd9a8}
+
+/* ---- Homework view v2 (mockup 2026-10-03) ---- */
+.hw2-wrap{max-width:640px;margin:0 auto;padding-bottom:2rem}
+.hw2-title{font-family:Georgia,serif;font-size:2rem;margin:1.2rem 0 1rem;display:flex;align-items:center;gap:.6rem}
+.hw2-card{position:relative;overflow:hidden;background:#fffdf8;border:1px solid rgba(217,123,43,.14);border-radius:22px;padding:1.1rem 1.2rem 1.25rem;margin-bottom:.9rem;box-shadow:0 10px 30px rgba(180,110,40,.10)}
+.hw2-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:linear-gradient(180deg,#ff9a3c,#f26d0d)}
+.hw2-deco{position:absolute;right:-8px;top:50%;transform:translateY(-50%);width:150px;pointer-events:none}
+.hw2-deco svg{display:block;width:100%;height:auto}
+.hw2-top{position:relative;display:flex;gap:.8rem;align-items:flex-start}
+.hw2-ico{flex:0 0 auto;width:52px;height:52px;border-radius:14px;background:#ffedda;display:flex;align-items:center;justify-content:center;font-size:1.7rem}
+.hw2-name{font-family:Georgia,serif;font-weight:700;font-size:1.28rem;line-height:1.25;color:#1e2a4e}
+.hw2-lvl{display:inline-block;margin-top:.45rem;background:#ffe3c2;color:#b3540f;font-weight:800;font-size:.8rem;padding:.18rem .75rem;border-radius:999px;letter-spacing:.05em}
+.hw2-meta{position:relative;margin:.75rem 0 .95rem;color:#8a8fa3;font-size:.9rem;line-height:1.5}
+.hw2-cta{position:relative;display:block;width:100%;border:0;cursor:pointer;color:#fff;font-size:1.05rem;font-weight:700;padding:.9rem 3rem .9rem 1rem;border-radius:18px;background:linear-gradient(180deg,#ff9d45,#f0730a);box-shadow:0 8px 20px rgba(240,115,10,.35);text-align:center;font-family:inherit}
+.hw2-cta:active{transform:scale(.99)}
+.hw2-go{position:absolute;right:1.1rem;top:50%;transform:translateY(-50%);font-size:1.5rem;font-weight:400;opacity:.9}
+.hw2-done{position:relative;background:#e9f9ef;border:1px solid #bfe8cd;color:#1d7a3f;border-radius:14px;padding:.7rem 1rem;font-size:.95rem;text-align:center}
