@@ -4267,7 +4267,7 @@ function buildTutorialSteps() {
     { id: 'words', view: 'lesson', tab: 'words', selector: '.word-card',
       kicker: '📝', title: T('کلمات', 'Words'),
       text: T('کلمات امروز — بزن رو 🔊 تا تلفظ هر کلمه رو بشنوی', 'Today\u2019s words — tap 🔊 to hear each pronunciation') },
-    { id: 'quiz', tab: 'quiz', selector: '.quiz-banner,.quiz-opt',
+    { id: 'quiz', selector: '.lesson-tab[data-tab="quiz"]',
       kicker: '🎯', title: T('کوییز', 'Quiz'),
       text: T('اینجا دانشت رو محک می‌زنی — هر جواب درست XP میده ⚡', 'Test yourself here — every correct answer earns XP ⚡') },
     { id: 'podcast', tab: 'podcast', selector: '[data-audio-card]',
