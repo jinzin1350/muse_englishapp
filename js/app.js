@@ -3374,8 +3374,9 @@ async function doSignup() {
     }
     if (data.session) {
       // Email confirmation disabled -> already signed in: save level now.
-      try { await sb.from('profiles').upsert({ id: data.user.id, email: email, level: chosenLevel }, { onConflict: 'id' }); } catch (e) {}
-      try { const r = getRefCode(); if (r) await sb.from('profiles').update({ referred_by: r }).eq('id', data.user.id); } catch (e) {}
+      // Server-side writes: profiles has no user UPDATE/INSERT policy.
+      try { await sb.rpc('set_level', { p_level: chosenLevel }); } catch (e) {}
+      try { const r = getRefCode(); if (r) await sb.rpc('set_referred_by', { p_code: r }); } catch (e) {}
       state.justSignedUp = true;
       authNote('su', '✓ Account created — loading your lessons…');
       await enterApp();
@@ -3417,8 +3418,8 @@ async function enterApp() {
       if (raw) {
         const p = JSON.parse(raw);
         if (p && p.email === u.email && p.level) {
-          await sb.from('profiles').upsert({ id: u.id, email: u.email, level: p.level }, { onConflict: 'id' });
-          try { if (p.ref) await sb.from('profiles').update({ referred_by: p.ref }).eq('id', u.id); } catch (e2) {}
+          await sb.rpc('set_level', { p_level: p.level });
+          try { if (p.ref) await sb.rpc('set_referred_by', { p_code: p.ref }); } catch (e2) {}
           level = p.level;
           localStorage.removeItem('el_pending_level');
         }
@@ -3427,15 +3428,12 @@ async function enterApp() {
   }
   // First-touch teacher attribution for OAuth sign-ins (the email flow stashes
   // the ref code in el_pending_level instead; this covers Google SSO).
+  // Server-side write via RPC: profiles has no user UPDATE policy.
   // Best-effort: runs in the background, never blocks first paint.
   try {
     const rc = getRefCode();
     if (rc && (!prof || !prof.referred_by)) {
-      sb.from('profiles').update({ referred_by: rc }).eq('id', u.id).then(function () {}, function () {
-        // Update failed (row missing or RLS): fall back to a minimal upsert.
-        sb.from('profiles').upsert({ id: u.id, email: u.email, referred_by: rc }, { onConflict: 'id' })
-          .then(function () {}, function () {});
-      });
+      sb.rpc('set_referred_by', { p_code: rc }).then(function () {}, function () {});
     }
   } catch (e) {}
   const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
@@ -3520,7 +3518,7 @@ async function maybeShowWelcome() {
   const now = new Date().toISOString();
   u.welcomeSeenAt = now;
   try { localStorage.setItem('el_welcome_seen_' + u.id, '1'); } catch (e) {}
-  try { if (sb) await sb.from('profiles').update({ welcome_seen_at: now }).eq('id', u.id); } catch (e) {}
+  try { if (sb) await sb.rpc('set_welcome_seen'); } catch (e) {}
 }
 
 async function doLogout() {
@@ -3576,17 +3574,10 @@ async function saveWaitingLevel() {
   if (errEl) errEl.textContent = '';
   try {
     const { data: u } = await sb.auth.getUser();
-    /* Update-first: the profile row already exists (created by the signup
-       trigger), and a plain UPDATE only needs the UPDATE policy. Upsert would
-       also demand an INSERT policy, which profiles doesn't grant — that's what
-       made this fail for OAuth users. Fall back to upsert only when the row
-       is genuinely missing. */
-    let error = (await sb.from('profiles').update({ level: el.value }).eq('id', u.user.id)).error;
-    if (error) {
-      const r2 = await sb.from('profiles').upsert({ id: u.user.id, email: u.user.email, level: el.value }, { onConflict: 'id' });
-      error = r2.error;
-    }
-    if (error) throw error;
+    /* Server-side write via set_level RPC: profiles has no user
+       UPDATE/INSERT policy, so a direct upsert is denied by RLS. */
+    const r = await sb.rpc('set_level', { p_level: el.value });
+    if (r.error || r.data !== true) throw new Error('set_level failed');
     state.user.level = el.value;
     state.justSignedUp = false;
     try { localStorage.removeItem('el_pending_level'); } catch (e) {}
