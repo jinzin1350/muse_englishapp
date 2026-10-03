@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-03",
+  "theme": "food & cooking",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "cuisine",
+      "pos": "noun",
+      "meaning": "a style of cooking from a particular country or region",
+      "example": "I love trying different cuisines when I travel.",
+      "pronunciation": "kwiz-EEN",
+      "persian": "شیوه آشپزی یک کشور یا منطقه",
+      "photo": "media/b2/2026-10-03/photos/cuisine.jpg",
+      "word_audio": "media/b2/2026-10-03/word-audio/cuisine.mp3"
+    },
+    {
+      "word": "nutritious",
+      "pos": "adjective",
+      "meaning": "good for your health; full of healthy nutrients",
+      "example": "Lentils are cheap and very nutritious.",
+      "pronunciation": "noo-TRIH-shuss",
+      "persian": "مغذی",
+      "photo": "media/b2/2026-10-03/photos/nutritious.jpg",
+      "word_audio": "media/b2/2026-10-03/word-audio/nutritious.mp3"
+    },
+    {
+      "word": "feast",
+      "pos": "noun",
+      "meaning": "a large special meal for many people",
+      "example": "They prepared a huge feast for the wedding guests.",
+      "pronunciation": "FEEST",
+      "persian": "ضیافت؛ مهمانی بزرگ",
+      "photo": "media/b2/2026-10-03/photos/feast.jpg",
+      "word_audio": "media/b2/2026-10-03/word-audio/feast.mp3"
+    },
+    {
+      "word": "savor",
+      "pos": "verb",
+      "meaning": "to enjoy the taste of food slowly and completely",
+      "example": "He closed his eyes to savor the rich chocolate cake.",
+      "pronunciation": "SAY-vur",
+      "persian": "با لذت و آرامش چشیدن",
+      "photo": "media/b2/2026-10-03/photos/savor.jpg",
+      "word_audio": "media/b2/2026-10-03/word-audio/savor.mp3"
+    },
+    {
+      "word": "garnish",
+      "pos": "noun",
+      "meaning": "a small decoration added to a dish",
+      "example": "She added fresh parsley as a garnish.",
+      "pronunciation": "GAR-nish",
+      "persian": "تزئین خوراک",
+      "photo": "media/b2/2026-10-03/photos/garnish.jpg",
+      "word_audio": "media/b2/2026-10-03/word-audio/garnish.mp3"
+    },
+    {
+      "word": "crave",
+      "pos": "verb",
+      "meaning": "to strongly want a particular food",
+      "example": "I often crave salty snacks late at night.",
+      "pronunciation": "KRAYV",
+      "persian": "هوس کردن",
+      "photo": "media/b2/2026-10-03/photos/crave.jpg",
+      "word_audio": "media/b2/2026-10-03/word-audio/crave.mp3"
+    },
+    {
+      "word": "nibble",
+      "pos": "verb",
+      "meaning": "to eat with small, gentle bites",
+      "example": "The kids nibbled on crackers during the movie.",
+      "pronunciation": "NIH-bul",
+      "persian": "ریزه‌ریزه خوردن",
+      "photo": "media/b2/2026-10-03/photos/nibble.jpg",
+      "word_audio": "media/b2/2026-10-03/word-audio/nibble.mp3"
+    },
+    {
+      "word": "devour",
+      "pos": "verb",
+      "meaning": "to eat quickly and completely",
+      "example": "After the long hike, we devoured the whole pizza.",
+      "pronunciation": "dih-VOW-ur",
+      "persian": "با ولع و سریع خوردن",
+      "photo": "media/b2/2026-10-03/photos/devour.jpg",
+      "word_audio": "media/b2/2026-10-03/word-audio/devour.mp3"
+    },
+    {
+      "word": "homemade",
+      "pos": "adjective",
+      "meaning": "made at home, not bought in a shop",
+      "example": "Nothing beats my grandmother's homemade bread.",
+      "pronunciation": "HOHM-mayd",
+      "persian": "خانگی؛ دست‌ساز",
+      "photo": "media/b2/2026-10-03/photos/homemade.jpg",
+      "word_audio": "media/b2/2026-10-03/word-audio/homemade.mp3"
+    },
+    {
+      "word": "aroma",
+      "pos": "noun",
+      "meaning": "a strong pleasant smell, usually from food",
+      "example": "The aroma of fresh coffee filled the kitchen.",
+      "pronunciation": "uh-ROH-muh",
+      "persian": "رایحه؛ بوی خوش",
+      "photo": "media/b2/2026-10-03/photos/aroma.jpg",
+      "word_audio": "media/b2/2026-10-03/word-audio/aroma.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-10-03/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Flavors Worth Remembering",
+    "audio": "media/b2/2026-10-03/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-03/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Big Family Dinner",
+    "audio": "media/b2/2026-10-03/shadowing.mp3",
+    "transcript": "media/b2/2026-10-03/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'cuisine' mean?",
+      "options": [
+        "a large special meal for many people",
+        "a style of cooking from a particular country or region",
+        "to eat with small, gentle bites",
+        "a strong pleasant smell, usually from food"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'nutritious' mean?",
+      "options": [
+        "good for your health; full of healthy nutrients",
+        "made at home, not bought in a shop",
+        "to enjoy the taste of food slowly and completely",
+        "to strongly want a particular food"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'feast' mean?",
+      "options": [
+        "a small decoration added to a dish",
+        "to eat quickly and completely",
+        "a large special meal for many people",
+        "a style of cooking from a particular country or region"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'savor' mean?",
+      "options": [
+        "to enjoy the taste of food slowly and completely",
+        "a strong pleasant smell, usually from food",
+        "good for your health; full of healthy nutrients",
+        "to eat with small, gentle bites"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'garnish' mean?",
+      "options": [
+        "to strongly want a particular food",
+        "made at home, not bought in a shop",
+        "to eat quickly and completely",
+        "a small decoration added to a dish"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'crave' mean?",
+      "options": [
+        "a large special meal for many people",
+        "to strongly want a particular food",
+        "a style of cooking from a particular country or region",
+        "good for your health; full of healthy nutrients"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'nibble' mean?",
+      "options": [
+        "to enjoy the taste of food slowly and completely",
+        "to eat quickly and completely",
+        "to eat with small, gentle bites",
+        "a small decoration added to a dish"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'devour' mean?",
+      "options": [
+        "to eat quickly and completely",
+        "to strongly want a particular food",
+        "to eat with small, gentle bites",
+        "made at home, not bought in a shop"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'homemade' mean?",
+      "options": [
+        "a strong pleasant smell, usually from food",
+        "a style of cooking from a particular country or region",
+        "made at home, not bought in a shop",
+        "a large special meal for many people"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'aroma' mean?",
+      "options": [
+        "good for your health; full of healthy nutrients",
+        "to enjoy the taste of food slowly and completely",
+        "a small decoration added to a dish",
+        "a strong pleasant smell, usually from food"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "5A: Past tenses - simple, continuous, perfect",
+    "explanation": "**Past simple** (worked, went, devoured) is for finished actions in the past. We use it when we say, ask, or know when the action happened.\n\nWe also use **past simple** for repeated past actions, like the big family **feast** you enjoyed every winter.\n\n**Past continuous** (was/were + verb-ing) shows an action in progress at a specific past time. It often pairs with a short **past simple** action that interrupts it.\n\nWe also use **past continuous** with while for two actions happening together. Never use it with non-action verbs like want, need, or know.\n\n**Past perfect** (had + past participle) talks about the earlier of two past actions. It tells us which action finished first.\n\nIn stories, the three tenses work as a team. **Past continuous** sets the scene, **past simple** says what happened, and **past perfect** explains what had happened before.",
+    "examples": [
+      "We *were cooking* dinner when the guests arrived. (an action in progress, interrupted)",
+      "She *was savoring* her dessert while he *was devouring* his. (two actions at the same time)",
+      "They *had eaten* everything when we arrived with the cake. (the earlier of two past actions)",
+      "The aroma *was filling* the kitchen when the phone rang. (interrupted action)",
+      "I *craved* chocolate all week, so I finally baked a cake. (finished past action)",
+      "He *had never tasted* homemade bread before that day. (an experience before a past moment)"
+    ],
+    "practice": [
+      {
+        "q": "Which tense sets the scene at the start of a story, as in 'It was raining and we were waiting'?",
+        "a": "Past continuous — it paints the background, while the main events use the past simple."
+      },
+      {
+        "q": "The train left before I arrived at the station. Which tense describes 'the train left'?",
+        "a": "Past perfect — 'The train had left before I arrived.' It is the earlier of the two past actions."
+      },
+      {
+        "q": "Can you say 'I was craving chocolate when he called'?",
+        "a": "No — crave is a non-action verb. Say 'I craved chocolate when he called.'"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Mike had an accident while he ___ to work.",
+        "options": [
+          "cycled",
+          "was cycling",
+          "had cycled",
+          "has cycled"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I left work early because I ___ to watch the match.",
+        "options": [
+          "wanted",
+          "was wanting",
+          "had wanted",
+          "want"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "There was a lot of traffic, and when we arrived, the match ___ already ___.",
+        "options": [
+          "already started",
+          "had already started",
+          "has already started",
+          "was already starting"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My son got injured while he ___ basketball last Saturday.",
+        "options": [
+          "played",
+          "was playing",
+          "had played",
+          "plays"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "When the snowstorm started, we ___ skiing and went back to the hotel.",
+        "options": [
+          "had stopped",
+          "stopped",
+          "were stopping",
+          "stop"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The referee suspended the match because it ___ so hard.",
+        "options": [
+          "rained",
+          "was raining",
+          "had rained",
+          "rains"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The accident ___ when they ___ home.",
+        "options": [
+          "happened / were driving",
+          "was happening / drove",
+          "had happened / were driving",
+          "happens / drive"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ Jane at first because she ___ so much.",
+        "options": [
+          "didn't recognize / changed",
+          "didn't recognize / had changed",
+          "hadn't recognized / changed",
+          "don't recognize / has changed"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We ___ use the ski slope because it ___ enough.",
+        "options": [
+          "couldn't / hadn't snowed",
+          "can't / didn't snow",
+          "couldn't / didn't snow",
+          "can't / hasn't snowed"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The police ___ my sister on the motorway because she ___ a seat belt.",
+        "options": [
+          "stopped / wasn't wearing",
+          "were stopping / didn't wear",
+          "had stopped / wasn't wearing",
+          "stopped / didn't wear"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

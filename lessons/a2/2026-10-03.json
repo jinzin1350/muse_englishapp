@@ -1,0 +1,351 @@
+{
+  "date": "2026-10-03",
+  "theme": "food & cooking",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "delicious",
+      "pos": "adjective",
+      "meaning": "tastes very good",
+      "example": "This soup is delicious.",
+      "pronunciation": "duh-LIH-shus",
+      "persian": "خوشمزه",
+      "photo": "media/a2/2026-10-03/photos/delicious.jpg",
+      "word_audio": "media/a2/2026-10-03/word-audio/delicious.mp3"
+    },
+    {
+      "word": "spicy",
+      "pos": "adjective",
+      "meaning": "food with a hot, strong taste like pepper",
+      "example": "I like spicy food.",
+      "pronunciation": "SPY-see",
+      "persian": "تند",
+      "photo": "media/a2/2026-10-03/photos/spicy.jpg",
+      "word_audio": "media/a2/2026-10-03/word-audio/spicy.mp3"
+    },
+    {
+      "word": "oven",
+      "pos": "noun",
+      "meaning": "a hot box in the kitchen for cooking",
+      "example": "Bake the bread in the oven.",
+      "pronunciation": "UH-vun",
+      "persian": "فر",
+      "photo": "media/a2/2026-10-03/photos/oven.jpg",
+      "word_audio": "media/a2/2026-10-03/word-audio/oven.mp3"
+    },
+    {
+      "word": "snack",
+      "pos": "noun",
+      "meaning": "a small food you eat between meals",
+      "example": "I ate an apple as a snack.",
+      "pronunciation": "SNACK",
+      "persian": "میان‌وعده",
+      "photo": "media/a2/2026-10-03/photos/snack.jpg",
+      "word_audio": "media/a2/2026-10-03/word-audio/snack.mp3"
+    },
+    {
+      "word": "sweet",
+      "pos": "adjective",
+      "meaning": "tastes like sugar",
+      "example": "The cake is very sweet.",
+      "pronunciation": "SWEET",
+      "persian": "شیرین",
+      "photo": "media/a2/2026-10-03/photos/sweet.jpg",
+      "word_audio": "media/a2/2026-10-03/word-audio/sweet.mp3"
+    },
+    {
+      "word": "kitchen",
+      "pos": "noun",
+      "meaning": "the room where you cook food",
+      "example": "She cooks dinner in the kitchen.",
+      "pronunciation": "KIH-chin",
+      "persian": "آشپزخانه",
+      "photo": "media/a2/2026-10-03/photos/kitchen.jpg",
+      "word_audio": "media/a2/2026-10-03/word-audio/kitchen.mp3"
+    },
+    {
+      "word": "dessert",
+      "pos": "noun",
+      "meaning": "sweet food you eat after a meal",
+      "example": "Ice cream is my favorite dessert.",
+      "pronunciation": "duh-ZERT",
+      "persian": "دسر",
+      "photo": "media/a2/2026-10-03/photos/dessert.jpg",
+      "word_audio": "media/a2/2026-10-03/word-audio/dessert.mp3"
+    },
+    {
+      "word": "fresh",
+      "pos": "adjective",
+      "meaning": "food that is new, not old",
+      "example": "I buy fresh bread every morning.",
+      "pronunciation": "FRESH",
+      "persian": "تازه",
+      "photo": "media/a2/2026-10-03/photos/fresh.jpg",
+      "word_audio": "media/a2/2026-10-03/word-audio/fresh.mp3"
+    },
+    {
+      "word": "grill",
+      "pos": "verb",
+      "meaning": "cook food over a fire",
+      "example": "We grilled fish for dinner.",
+      "pronunciation": "GRIL",
+      "persian": "گریل کردن",
+      "photo": "media/a2/2026-10-03/photos/grill.jpg",
+      "word_audio": "media/a2/2026-10-03/word-audio/grill.mp3"
+    },
+    {
+      "word": "soup",
+      "pos": "noun",
+      "meaning": "hot food with vegetables in water",
+      "example": "I had hot soup for lunch.",
+      "pronunciation": "SOOP",
+      "persian": "سوپ",
+      "photo": "media/a2/2026-10-03/photos/soup.jpg",
+      "word_audio": "media/a2/2026-10-03/word-audio/soup.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-03/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Food and Cooking",
+    "audio": "media/a2/2026-10-03/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-03/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Delicious Day in the Kitchen",
+    "audio": "media/a2/2026-10-03/shadowing.mp3",
+    "transcript": "media/a2/2026-10-03/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'delicious' mean?",
+      "options": [
+        "tastes like sugar",
+        "tastes very good",
+        "a small food you eat between meals",
+        "food with a hot taste like pepper"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'spicy' mean?",
+      "options": [
+        "a room where you cook",
+        "food with a hot, strong taste like pepper",
+        "hot food with vegetables",
+        "sweet food after a meal"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'oven' mean?",
+      "options": [
+        "a hot box in the kitchen for cooking",
+        "sweet food after a meal",
+        "a small food between meals",
+        "food that is new, not old"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'snack' mean?",
+      "options": [
+        "tastes very good",
+        "a small food you eat between meals",
+        "cook food over a fire",
+        "the room where you cook"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'sweet' mean?",
+      "options": [
+        "hot food with vegetables",
+        "tastes like sugar",
+        "sweet food after a meal",
+        "a hot box for cooking"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'kitchen' mean?",
+      "options": [
+        "the room where you cook food",
+        "a hot box for cooking",
+        "a small food between meals",
+        "food with a hot taste"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'dessert' mean?",
+      "options": [
+        "food that is new, not old",
+        "tastes like sugar",
+        "sweet food you eat after a meal",
+        "hot food with vegetables"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'fresh' mean?",
+      "options": [
+        "tastes very good",
+        "food that is new, not old",
+        "cook food over a fire",
+        "a hot box for cooking"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'grill' mean?",
+      "options": [
+        "cook food over a fire",
+        "hot food with vegetables",
+        "a small food between meals",
+        "the room where you cook"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'soup' mean?",
+      "options": [
+        "hot food with vegetables in water",
+        "sweet food after a meal",
+        "food with a hot taste",
+        "tastes like sugar"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "5A: Past tenses - simple, continuous, perfect",
+    "explanation": "**Past simple** is for finished actions in the past. *I cooked a delicious soup yesterday.* The action finished yesterday.\n\n**Past continuous** is for an action in progress at a past time. *I was cooking soup at seven o'clock.* At that time, the action was still happening.\n\nWe often use them together. *I was cooking soup when my friend called.* The long action **was cooking** was interrupted by the short action **called**.\n\n**Past perfect** (**had** + past participle) is for the earlier of two past actions. *When I arrived, they had eaten the sweet dessert.* They ate it before I arrived.",
+    "examples": [
+      "*I *cooked* a delicious soup yesterday.* (finished action)",
+      "*She *was cooking* in the kitchen at six o'clock.* (action in progress)",
+      "*The bread *was* in the oven when I *got* home.* (long action + short action)",
+      "*They *had eaten* the sweet dessert before we arrived.* (earlier action)",
+      "*I *did not like* spicy food when I was a child.* (finished past)",
+      "*He *was grilling* fish while she *made* fresh bread.* (two actions at the same time)"
+    ],
+    "practice": [
+      {
+        "q": "What is the difference between 'I cooked' and 'I was cooking'?",
+        "a": "'I cooked' means the action finished. 'I was cooking' means it was in progress at that time."
+      },
+      {
+        "q": "When do we use the past perfect?",
+        "a": "For the earlier of two past actions: 'They had left when I arrived.'"
+      },
+      {
+        "q": "Why is 'I was wanting' wrong?",
+        "a": "'Want' is not an action verb. Use the past simple: 'I wanted to try spicy food.'"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "When the teacher collected the exam papers, he saw that Robbie ___ .",
+        "options": [
+          "cheated",
+          "had cheated",
+          "was cheating",
+          "cheats"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "When I got to the kitchen, the soup ___ ready.",
+        "options": [
+          "was",
+          "were",
+          "had",
+          "is"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I was cooking soup when my friend ___ .",
+        "options": [
+          "called",
+          "was calling",
+          "had called",
+          "calls"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ the sweet dessert before we arrived.",
+        "options": [
+          "ate",
+          "had eaten",
+          "were eating",
+          "eat"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ fish while he made fresh bread.",
+        "options": [
+          "grilled",
+          "was grilling",
+          "had grilled",
+          "grills"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ to try spicy food, so I tasted the soup.",
+        "options": [
+          "wanted",
+          "was wanting",
+          "had wanted",
+          "want"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "It ___ when we got home, so the kitchen was dark.",
+        "options": [
+          "was raining",
+          "rained",
+          "had rained",
+          "rains"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The marathon runner ___ when she crossed the finish line.",
+        "options": [
+          "was sweating",
+          "sweated",
+          "had sweated",
+          "sweats"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "My son got hurt while he ___ basketball last Saturday.",
+        "options": [
+          "played",
+          "was playing",
+          "had played",
+          "plays"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ Jane at first because she ___ so much.",
+        "options": [
+          "didn't recognize / had changed",
+          "hadn't recognized / changed",
+          "didn't recognize / changed",
+          "don't recognize / changed"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a2/2026-10-03/grammar-en.mp3"
+  }
+}

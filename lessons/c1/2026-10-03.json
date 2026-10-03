@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-03",
+  "theme": "sports & fitness",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "plateau",
+      "pos": "noun",
+      "meaning": "a period of little or no progress after steady improvement",
+      "example": "After months of steady gains, his marathon times hit a stubborn plateau.",
+      "pronunciation": "pla-TOH",
+      "persian": "سکون در پیشرفت",
+      "photo": "media/c1/2026-10-03/photos/plateau.jpg",
+      "word_audio": "media/c1/2026-10-03/word-audio/plateau.mp3"
+    },
+    {
+      "word": "endurance",
+      "pos": "noun",
+      "meaning": "the ability to keep going for a long time under strain",
+      "example": "Endurance athletes train their bodies to keep going when their minds want to quit.",
+      "pronunciation": "en-DUR-uhns",
+      "persian": "استقامت",
+      "photo": "media/c1/2026-10-03/photos/endurance.jpg",
+      "word_audio": "media/c1/2026-10-03/word-audio/endurance.mp3"
+    },
+    {
+      "word": "regimen",
+      "pos": "noun",
+      "meaning": "a strict daily training schedule",
+      "example": "Her dawn training regimen includes ninety minutes of swimming before breakfast.",
+      "pronunciation": "REJ-uh-muhn",
+      "persian": "برنامه تمرینی سخت",
+      "photo": "media/c1/2026-10-03/photos/regimen.jpg",
+      "word_audio": "media/c1/2026-10-03/word-audio/regimen.mp3"
+    },
+    {
+      "word": "fortitude",
+      "pos": "noun",
+      "meaning": "mental strength to endure pain and hardship",
+      "example": "Climbing that icy ridge demanded not only fitness but extraordinary fortitude.",
+      "pronunciation": "FOR-tuh-tood",
+      "persian": "استواری و بردباری",
+      "photo": "media/c1/2026-10-03/photos/fortitude.jpg",
+      "word_audio": "media/c1/2026-10-03/word-audio/fortitude.mp3"
+    },
+    {
+      "word": "agility",
+      "pos": "noun",
+      "meaning": "the ability to move quickly and gracefully",
+      "example": "A good tennis player relies as much on agility as on raw power.",
+      "pronunciation": "uh-JIL-uh-tee",
+      "persian": "چابکی",
+      "photo": "media/c1/2026-10-03/photos/agility.jpg",
+      "word_audio": "media/c1/2026-10-03/word-audio/agility.mp3"
+    },
+    {
+      "word": "exhilaration",
+      "pos": "noun",
+      "meaning": "intense joy and excitement",
+      "example": "She felt pure exhilaration as she crossed the finish line ahead of the pack.",
+      "pronunciation": "ig-zil-uh-RAY-shun",
+      "persian": "سرخوشی شدید",
+      "photo": "media/c1/2026-10-03/photos/exhilaration.jpg",
+      "word_audio": "media/c1/2026-10-03/word-audio/exhilaration.mp3"
+    },
+    {
+      "word": "recuperate",
+      "pos": "verb",
+      "meaning": "to recover after effort, injury, or illness",
+      "example": "His coach insisted he rest for two weeks so the torn muscle could fully recuperate.",
+      "pronunciation": "ree-KOO-puh-rayt",
+      "persian": "بهبود یافتن",
+      "photo": "media/c1/2026-10-03/photos/recuperate.jpg",
+      "word_audio": "media/c1/2026-10-03/word-audio/recuperate.mp3"
+    },
+    {
+      "word": "underdog",
+      "pos": "noun",
+      "meaning": "the competitor everyone expects to lose",
+      "example": "The national team entered the tournament as underdogs and left as champions.",
+      "pronunciation": "UN-der-dawg",
+      "persian": "کسی که باختش محتمل است",
+      "photo": "media/c1/2026-10-03/photos/underdog.jpg",
+      "word_audio": "media/c1/2026-10-03/word-audio/underdog.mp3"
+    },
+    {
+      "word": "grit",
+      "pos": "noun",
+      "meaning": "firm determination to keep going despite difficulty",
+      "example": "What separates champions from the rest is not talent alone but grit.",
+      "pronunciation": "GRIT",
+      "persian": "پشتکار و سرسختی",
+      "photo": "media/c1/2026-10-03/photos/grit.jpg",
+      "word_audio": "media/c1/2026-10-03/word-audio/grit.mp3"
+    },
+    {
+      "word": "pinnacle",
+      "pos": "noun",
+      "meaning": "the very highest point of achievement",
+      "example": "Winning Olympic gold was the pinnacle of a career built on fifteen years of sacrifice.",
+      "pronunciation": "PIN-uh-kul",
+      "persian": "اوج",
+      "photo": "media/c1/2026-10-03/photos/pinnacle.jpg",
+      "word_audio": "media/c1/2026-10-03/word-audio/pinnacle.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-03/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Breaking Barriers",
+    "audio": "media/c1/2026-10-03/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-03/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Road to the Pinnacle",
+    "audio": "media/c1/2026-10-03/shadowing.mp3",
+    "transcript": "media/c1/2026-10-03/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'plateau' mean?",
+      "options": [
+        "intense joy and excitement",
+        "the ability to move quickly and gracefully",
+        "a period of little or no progress after steady improvement",
+        "the competitor everyone expects to lose"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'endurance' mean?",
+      "options": [
+        "the ability to keep going for a long time under strain",
+        "a strict daily training schedule",
+        "mental strength to endure pain and hardship",
+        "the very highest point of achievement"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'regimen' mean?",
+      "options": [
+        "firm determination to keep going despite difficulty",
+        "a strict daily training schedule",
+        "to recover after effort, injury, or illness",
+        "a period of little or no progress after steady improvement"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'fortitude' mean?",
+      "options": [
+        "the ability to move quickly and gracefully",
+        "intense joy and excitement",
+        "the competitor everyone expects to lose",
+        "mental strength to endure pain and hardship"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'agility' mean?",
+      "options": [
+        "the ability to move quickly and gracefully",
+        "the very highest point of achievement",
+        "the ability to keep going for a long time under strain",
+        "firm determination to keep going despite difficulty"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'exhilaration' mean?",
+      "options": [
+        "a strict daily training schedule",
+        "intense joy and excitement",
+        "to recover after effort, injury, or illness",
+        "a period of little or no progress after steady improvement"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'recuperate' mean?",
+      "options": [
+        "to recover after effort, injury, or illness",
+        "mental strength to endure pain and hardship",
+        "the ability to move quickly and gracefully",
+        "the competitor everyone expects to lose"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'underdog' mean?",
+      "options": [
+        "the very highest point of achievement",
+        "the ability to keep going for a long time under strain",
+        "the competitor everyone expects to lose",
+        "a strict daily training schedule"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'grit' mean?",
+      "options": [
+        "intense joy and excitement",
+        "firm determination to keep going despite difficulty",
+        "a period of little or no progress after steady improvement",
+        "the ability to move quickly and gracefully"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'pinnacle' mean?",
+      "options": [
+        "mental strength to endure pain and hardship",
+        "to recover after effort, injury, or illness",
+        "the ability to keep going for a long time under strain",
+        "the very highest point of achievement"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "5A: Past tenses - simple, continuous, perfect",
+    "explanation": "Use the **past simple** for finished past actions — things that started and ended in the past. It also describes repeated past habits, like a strict regimen of dawn runs.\n\nUse the **past continuous** for an action in progress at a specific past moment. Never use it with non-action verbs such as want, need, or know.\n\nWhen two past actions meet, the **past continuous** gives the background and the **past simple** gives the interrupting event. They are usually linked by when or as.\n\nUse while with the **past continuous** for two actions happening at the same time. The **past continuous** also opens stories and anecdotes, painting the scene before the action starts.\n\nUse the **past perfect** when you must show which of two past events came earlier. It is the earlier past — the foundation the later story stands on.\n\nAt C1, master the **past perfect continuous**: it shows a long earlier action with a result still visible in the past. Think of months of patient training behind one frustrating plateau.\n\nIn narratives, the three tenses work as a team. The **past continuous** sets the scene, the **past simple** moves the story forward, and the **past perfect** reveals what happened before the story even began.",
+    "examples": [
+      "*She *was swimming* when the storm *hit*.* (background + interruption)",
+      "*They *had trained* for a year before the plateau finally *broke*.* (earlier past)",
+      "*He *had been following* a strict regimen for months, so his endurance *surprised* everyone.* (past perfect continuous)",
+      "*The underdog *scored* while the champions *were celebrating*.* (simultaneous actions)",
+      "*She *needed* to recuperate for two weeks after the marathon.* (non-action verb — no -ing)",
+      "*When the whistle *blew*, the crowd *was already cheering* with pure exhilaration.* (scene + event)"
+    ],
+    "practice": [
+      {
+        "q": "Which tense sets the scene at the start of a story?",
+        "a": "The past continuous — it paints the background while the past simple moves the action forward."
+      },
+      {
+        "q": "She ___ (train) for six months when the injury happened. Which form fits?",
+        "a": "had been training — the past perfect continuous shows a long earlier action with a result in the past."
+      },
+      {
+        "q": "Why is 'I was wanting to rest' wrong?",
+        "a": "Want is a non-action verb, so it never takes the continuous form: 'I wanted to rest'."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "When the teacher collected the exam papers, he saw that Robbie ___.",
+        "options": [
+          "was cheating",
+          "cheated",
+          "had cheated",
+          "has cheated"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They didn't play well in the match although they ___ every evening.",
+        "options": [
+          "had trained",
+          "were training",
+          "have trained",
+          "trained"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Mike had an accident while he ___ to work.",
+        "options": [
+          "was cycling",
+          "cycled",
+          "had cycled",
+          "has cycled"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I left work early because I ___ to watch the match.",
+        "options": [
+          "wanted",
+          "was wanting",
+          "had wanted",
+          "want"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "There was a lot of traffic, and when we arrived, the match ___.",
+        "options": [
+          "had already started",
+          "already started",
+          "was already starting",
+          "has already started"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The captain ___ any goals when the referee sent him off.",
+        "options": [
+          "didn't score",
+          "wasn't scoring",
+          "hadn't scored",
+          "hasn't scored"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My son got injured while he ___ basketball last Saturday.",
+        "options": [
+          "played",
+          "was playing",
+          "had played",
+          "has played"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "England ___ any of their previous games when they played in the quarter-finals.",
+        "options": [
+          "didn't lose",
+          "wasn't losing",
+          "hadn't lost",
+          "haven't lost"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The accident ___ when they were driving home.",
+        "options": [
+          "happened",
+          "was happening",
+          "had happened",
+          "happens"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ play tennis because they ___ a court.",
+        "options": [
+          "couldn't / didn't book",
+          "weren't able to / hadn't booked",
+          "weren't able to / didn't book",
+          "couldn't / hadn't booked"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

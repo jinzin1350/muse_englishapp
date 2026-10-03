@@ -1,0 +1,351 @@
+{
+  "date": "2026-10-03",
+  "theme": "colors & numbers",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "red",
+      "pos": "adjective",
+      "meaning": "a bright color like fire",
+      "example": "The apple is red.",
+      "pronunciation": "RED",
+      "persian": "قرمز",
+      "photo": "media/a1/2026-10-03/photos/red.jpg",
+      "word_audio": "media/a1/2026-10-03/word-audio/red.mp3"
+    },
+    {
+      "word": "blue",
+      "pos": "adjective",
+      "meaning": "a calm color like the sky",
+      "example": "The sky is blue.",
+      "pronunciation": "BLOO",
+      "persian": "آبی",
+      "photo": "media/a1/2026-10-03/photos/blue.jpg",
+      "word_audio": "media/a1/2026-10-03/word-audio/blue.mp3"
+    },
+    {
+      "word": "green",
+      "pos": "adjective",
+      "meaning": "the color of grass and leaves",
+      "example": "The grass is green.",
+      "pronunciation": "GREEN",
+      "persian": "سبز",
+      "photo": "media/a1/2026-10-03/photos/green.jpg",
+      "word_audio": "media/a1/2026-10-03/word-audio/green.mp3"
+    },
+    {
+      "word": "yellow",
+      "pos": "adjective",
+      "meaning": "the color of the sun",
+      "example": "The sun is yellow.",
+      "pronunciation": "YEL-oh",
+      "persian": "زرد",
+      "photo": "media/a1/2026-10-03/photos/yellow.jpg",
+      "word_audio": "media/a1/2026-10-03/word-audio/yellow.mp3"
+    },
+    {
+      "word": "black",
+      "pos": "adjective",
+      "meaning": "the darkest color, like night",
+      "example": "The night is black.",
+      "pronunciation": "BLAK",
+      "persian": "سیاه",
+      "photo": "media/a1/2026-10-03/photos/black.jpg",
+      "word_audio": "media/a1/2026-10-03/word-audio/black.mp3"
+    },
+    {
+      "word": "white",
+      "pos": "adjective",
+      "meaning": "the color of snow and milk",
+      "example": "The milk is white.",
+      "pronunciation": "WHYTE",
+      "persian": "سفید",
+      "photo": "media/a1/2026-10-03/photos/white.jpg",
+      "word_audio": "media/a1/2026-10-03/word-audio/white.mp3"
+    },
+    {
+      "word": "pink",
+      "pos": "adjective",
+      "meaning": "a soft light red color",
+      "example": "The flower is pink.",
+      "pronunciation": "PINK",
+      "persian": "صورتی",
+      "photo": "media/a1/2026-10-03/photos/pink.jpg",
+      "word_audio": "media/a1/2026-10-03/word-audio/pink.mp3"
+    },
+    {
+      "word": "brown",
+      "pos": "adjective",
+      "meaning": "the color of wood and earth",
+      "example": "The wood is brown.",
+      "pronunciation": "BROWN",
+      "persian": "قهوه‌ای",
+      "photo": "media/a1/2026-10-03/photos/brown.jpg",
+      "word_audio": "media/a1/2026-10-03/word-audio/brown.mp3"
+    },
+    {
+      "word": "four",
+      "pos": "number",
+      "meaning": "the number 4",
+      "example": "I see four birds.",
+      "pronunciation": "FOR",
+      "persian": "چهار",
+      "photo": "media/a1/2026-10-03/photos/four.jpg",
+      "word_audio": "media/a1/2026-10-03/word-audio/four.mp3"
+    },
+    {
+      "word": "ten",
+      "pos": "number",
+      "meaning": "the number 10",
+      "example": "I have ten fingers.",
+      "pronunciation": "TEN",
+      "persian": "ده",
+      "photo": "media/a1/2026-10-03/photos/ten.jpg",
+      "word_audio": "media/a1/2026-10-03/word-audio/ten.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-03/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Colors & Numbers",
+    "audio": "media/a1/2026-10-03/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-03/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Party",
+    "audio": "media/a1/2026-10-03/shadowing.mp3",
+    "transcript": "media/a1/2026-10-03/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'red' mean?",
+      "options": [
+        "a soft light red color",
+        "the number 4",
+        "the color of snow and milk",
+        "a bright color like fire"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'blue' mean?",
+      "options": [
+        "the color of snow and milk",
+        "a calm color like the sky",
+        "the color of the sun",
+        "the color of grass and leaves"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'green' mean?",
+      "options": [
+        "the darkest color, like night",
+        "the color of grass and leaves",
+        "a soft light red color",
+        "a bright color like fire"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'yellow' mean?",
+      "options": [
+        "a calm color like the sky",
+        "the color of snow and milk",
+        "the color of the sun",
+        "a soft light red color"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'black' mean?",
+      "options": [
+        "a bright color like fire",
+        "the color of the sun",
+        "the darkest color, like night",
+        "a soft light red color"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'white' mean?",
+      "options": [
+        "the color of grass and leaves",
+        "the color of wood and earth",
+        "the color of snow and milk",
+        "the number 4"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'pink' mean?",
+      "options": [
+        "a soft light red color",
+        "the number 10",
+        "the color of grass and leaves",
+        "the color of the sun"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'brown' mean?",
+      "options": [
+        "a calm color like the sky",
+        "the color of wood and earth",
+        "the color of snow and milk",
+        "a bright color like fire"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'four' mean?",
+      "options": [
+        "the number 10",
+        "the darkest color, like night",
+        "the color of grass and leaves",
+        "the number 4"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'ten' mean?",
+      "options": [
+        "the number 10",
+        "the color of snow and milk",
+        "the color of grass and leaves",
+        "the color of the sun"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "5A: Past tenses - simple, continuous, perfect",
+    "explanation": "**worked**, **went**, **ate** are past simple verbs. We use the past simple for finished actions in the past.\n\nFor example, *I *worked* yesterday.* The action is finished.\n\n**was working**, **were playing** are past continuous verbs. We use them for an action in progress at a past time.\n\nFor example, *At ten o'clock, I *was reading*.* The action was in progress.\n\nWe also use the past continuous with **when**. *I was reading when you came in.* The first action was in progress, the second action finished it.\n\n**had gone**, **had finished** are past perfect verbs. We use them for the earlier of two past actions.\n\nFor example, *When I arrived, the ten friends *had gone* home.* They went before I arrived.",
+    "examples": [
+      "*I *worked* yesterday.* (finished action)",
+      "*She *wore* a red dress.* (finished action)",
+      "*We *ate* four green apples.* (finished action)",
+      "*At ten o'clock, I *was reading*.* (action in progress)",
+      "*They *were sitting* on blue chairs.* (action in progress)",
+      "*I *was reading* when you came in.* (interrupted action)"
+    ],
+    "practice": [
+      {
+        "q": "Did you work yesterday?",
+        "a": "Yes, I worked yesterday."
+      },
+      {
+        "q": "What were you doing at ten o'clock?",
+        "a": "I was reading."
+      },
+      {
+        "q": "Did she wear a red dress?",
+        "a": "Yes, she wore a red dress."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct word: I ___ yesterday.",
+        "options": [
+          "work",
+          "worked",
+          "working",
+          "works"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct word: She ___ a red dress at the party.",
+        "options": [
+          "wears",
+          "wearing",
+          "wore",
+          "wear"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Choose the correct word: They ___ on blue chairs.",
+        "options": [
+          "sat",
+          "sits",
+          "sitting",
+          "sit"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct word: At ten o'clock, I ___ a book.",
+        "options": [
+          "was reading",
+          "readed",
+          "am reading",
+          "reads"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct word: The children ___ in the garden.",
+        "options": [
+          "were playing",
+          "was playing",
+          "plays",
+          "playing"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct word: I ___ when you came in.",
+        "options": [
+          "was cooking",
+          "am cooking",
+          "cook",
+          "cooked"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct word: When I arrived, my friends ___ home.",
+        "options": [
+          "had gone",
+          "go",
+          "are going",
+          "went"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct word: We ___ four green apples.",
+        "options": [
+          "ate",
+          "eat",
+          "eating",
+          "eats"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct word: The sky ___ black at night.",
+        "options": [
+          "is",
+          "was",
+          "are",
+          "were"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct word: She ___ ten white cups on the table.",
+        "options": [
+          "puts",
+          "put",
+          "putted",
+          "putting"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-10-03/grammar-en.mp3"
+  }
+}
