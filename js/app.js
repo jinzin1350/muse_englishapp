@@ -2568,9 +2568,7 @@ function assignSlug(topic) {
 function teacherAssignmentComposer() {
   const list = state.teacherStudents || [];
   if (!state.teacher) return;
-  state._asKind = 'homework';
-  if (!list.length) {
-    showModal('<div class="modal-ico">📝</div><h2>New assignment</h2>' +
+  if (!list.length) {    showModal('<div class="modal-ico">📝</div><h2>New assignment</h2>' +
       '<p class="muted">You have no students yet — share your invite link first. 🌱</p>' +
       '<button class="btn btn-ghost btn-block" data-action="modal-close">Close</button>');
     return;
@@ -2581,11 +2579,6 @@ function teacherAssignmentComposer() {
     '<i class="as2-spark s1"></i><i class="as2-spark s2"></i>' +
     '<button class="as2-close" data-action="modal-close" aria-label="Close">✕</button></div>' +
     '<h2>New assignment</h2>' +
-    '<div class="field"><label>Type</label>' +
-    '<div class="seg" id="as-seg">' +
-    '<button type="button" data-action="assignment-kind" data-kind="homework" class="seg-on">📄 Homework</button>' +
-    '<button type="button" data-action="assignment-kind" data-kind="exam">🎓 Exam</button>' +
-    '</div></div>' +
     '<div class="field"><label for="as-level">Level</label>' +
     '<select id="as-level" class="input">' +
     ASSIGN_LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (lv === 'a2' ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') +
@@ -2627,18 +2620,11 @@ function assignmentFillTopics() {
     return '<option value="' + esc(t) + '">' + esc(t) + '</option>';
   }).join('');
 }
-function assignmentKind(kind, btn) {
-  state._asKind = kind;
-  const seg = document.getElementById('as-seg');
-  if (seg) Array.prototype.forEach.call(seg.children, function (b) {
-    b.classList.toggle('seg-on', b.getAttribute('data-kind') === kind);
-  });
-}
 async function createAssignment(btn) {
   const errBox = document.getElementById('as-error');
   const err = function (m) { if (errBox) errBox.textContent = m; };
   err('');
-  const kind = state._asKind || 'homework';
+  const kind = 'homework';
   const level = document.getElementById('as-level').value;
   const topic = document.getElementById('as-topic').value;
   const count = parseInt(document.getElementById('as-count').value, 10) || 10;
@@ -2666,7 +2652,7 @@ async function createAssignment(btn) {
   const questions = picked.map(function (q) {
     return { q: q.q, options: q.options, answer: q.answer, explanation: q.explanation || '' };
   });
-  const title = (kind === 'exam' ? '🎓 ' : '📝 ') + topic + ' (' + level.toUpperCase() + ')';
+  const title = '📝 ' + topic + ' (' + level.toUpperCase() + ')';
   const noteEl = document.getElementById('as-note');
   const dlEl = document.getElementById('as-deadline');
   const note = noteEl ? noteEl.value.trim() : '';
@@ -2683,7 +2669,7 @@ async function createAssignment(btn) {
       note: note || null, deadline: deadline
     }).select('id').single();
     if (ins.error) throw ins.error;
-    const body = '📝 Your teacher sent you ' + (kind === 'exam' ? 'an exam' : 'homework') +
+    const body = '📝 Your teacher sent you homework' +
       ': ' + title + ' — open Muse English to start.';
     await Promise.all(targets.map(function (s) {
       return Promise.allSettled([
@@ -2724,7 +2710,7 @@ async function loadTeacherAssignments() {
         const done = (doneMap[x.id] || []).length;
         const total = (x.student_ids || []).length;
         return '<button class="as-row" data-action="assignment-open" data-i="' + i + '">' +
-          '<span class="as-ico">' + (x.kind === 'exam' ? '🎓' : '📝') + '</span>' +
+          '<span class="as-ico">📝</span>' +
           '<span class="as-main"><span class="as-title">' + esc(x.title) + '</span>' +
           '<span class="as-meta">' + esc(fmtDate(x.created_at)) + ' · ' + done + '/' + total + ' done</span></span>' +
           '<span class="as-go">→</span></button>';
@@ -2748,7 +2734,7 @@ async function openTeacherAssignment(i) {
   const byId = {};
   results.forEach(function (x) { byId[x.student_id] = x; });
   showModal(
-    '<div class="modal-ico">' + (r.kind === 'exam' ? '🎓' : '📝') + '</div>' +
+    '<div class="modal-ico">📝</div>' +
     '<h2>' + esc(r.title) + '</h2>' +
     '<p class="muted">' + (r.student_ids || []).length + ' students · ' + results.length + ' completed</p>' +
     '<div class="as-results">' +
@@ -2804,7 +2790,7 @@ async function renderHomework(v) {
     host.innerHTML = rows.length ? rows.map(function (x, i) {
       const res = done[x.id];
       const lvl = (x.level || '').toUpperCase();
-      const kindIco = x.kind === 'exam' ? '🎓' : '📝';
+      const kindIco = '📝';
       const name = x.topic_label || x.title;
       return '<div class="hw2-card">' +
         '<div class="hw2-deco" aria-hidden="true">' +
@@ -5848,7 +5834,6 @@ function bindEvents() {
     else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-message') teacherMessageComposer(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'assignment-compose') teacherAssignmentComposer();
-    else if (a === 'assignment-kind') assignmentKind(t.getAttribute('data-kind'), t);
     else if (a === 'assignment-create') createAssignment(t);
     else if (a === 'assignment-open') openTeacherAssignment(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'assignment-start') startAssignment(parseInt(t.getAttribute('data-i'), 10));
@@ -5897,7 +5882,6 @@ function bindEvents() {
     const ma = t.getAttribute('data-action');
     if (ma === 'modal-close') closeModal();
     else if (ma === 'teacher-message-send') teacherMessageSend(parseInt(t.getAttribute('data-i'), 10), t);
-    else if (ma === 'assignment-kind') assignmentKind(t.getAttribute('data-kind'), t);
     else if (ma === 'assignment-create') createAssignment(t);
     else if (ma === 'inbox-open') { closeModal(); go('inbox'); }
   });
