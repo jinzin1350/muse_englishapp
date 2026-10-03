@@ -2247,8 +2247,9 @@ async function openTeacherStudent(i) {
     const name = s.display_name || (s.email || '?').split('@')[0];
     const maxSec = Math.max.apply(null, [1].concat(rows.map(function (x) { return x.seconds_in_app || 0; })));
     const sum = function (k) { return rows.reduce(function (a, x) { return a + (x[k] || 0); }, 0); };
+    const streakTxt = (s.current_streak || 0) > 0 ? ' · 🔥 ' + s.current_streak + '-day streak' : '';
     host.innerHTML = '<div class="card"><h3 style="margin-top:0">' + esc(name) +
-      ' <span class="muted" style="font-weight:400">· last 14 days</span></h3>' +
+      ' <span class="muted" style="font-weight:400">· last 14 days' + streakTxt + '</span></h3>' +
       (rows.length ? '<div class="tch-bars">' + rows.map(function (x) {
         const h = Math.max(4, Math.round((x.seconds_in_app || 0) / maxSec * 90));
         const mins = Math.round((x.seconds_in_app || 0) / 60);
@@ -2281,14 +2282,24 @@ async function loadTeacherStudentAnalytics(i, s) {
     const pack = await buildStudentPack(s.user_id, true, name);
     const h = document.getElementById('tch-an-' + i);
     if (!h) return;
+    (state._tPacks = state._tPacks || {})[i] = pack;
     let html = '';
     if ((pack.assignments || []).length) {
       html += '<div class="an-title" style="margin-top:.8rem">📝 Homework scores</div><div class="an-assign">' +
-        pack.assignments.slice(0, 6).map(function (x) {
+        pack.assignments.slice(0, 6).map(function (x, k) {
           const pct = x.total ? Math.round((x.score / x.total) * 100) : 0;
-          return '<div class="an-arow"><span>' + esc(x.topic) + '</span>' +
+          const nw = (x.wrong || []).length;
+          return '<div class="an-arow' + (nw ? ' an-click' : '') + '"' +
+            (nw ? ' data-action="an-wrong" data-i="' + i + '" data-k="' + k + '" role="button" tabindex="0"' : '') + '>' +
+            '<span>' + esc(x.topic) + (nw ? ' <span class="an-warn">· ' + nw + ' wrong ▸</span>' : '') + '</span>' +
             '<span class="muted">' + esc(x.date) + '</span>' +
-            '<b class="' + (pct >= 70 ? 'ok' : 'bad') + '">' + x.score + '/' + x.total + '</b></div>';
+            '<b class="' + (pct >= 70 ? 'ok' : 'bad') + '">' + x.score + '/' + x.total + '</b></div>' +
+            (nw ? '<div class="an-wrong hidden" id="an-w-' + i + '-' + k + '">' +
+              x.wrong.map(function (w) {
+                return '<div class="an-wq"><div class="an-wqq">❓ ' + esc(w.q) + '</div>' +
+                  '<div class="an-wa"><span class="bad">✕ picked: ' + esc(w.picked || '—') + '</span>' +
+                  '<span class="ok">✓ correct: ' + esc(w.correct || '—') + '</span></div></div>';
+              }).join('') + '</div>' : '');
         }).join('') + '</div>';
     }
     if ((pack.topicAccuracy || []).length) {
@@ -6194,6 +6205,10 @@ function bindEvents() {
     else if (a === 'ai-report-student') aiReportStudent(t);
     else if (a === 'ai-report-tstudent') aiReportTeacherStudent(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'ai-report-class') aiReportClass(t);
+    else if (a === 'an-wrong') {
+      const w = document.getElementById('an-w-' + t.getAttribute('data-i') + '-' + t.getAttribute('data-k'));
+      if (w) w.classList.toggle('hidden');
+    }
     else if (a === 'assignment-open') openTeacherAssignment(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'assignment-cancel') cancelScheduledAssignment(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'assignment-start') startAssignment(parseInt(t.getAttribute('data-i'), 10));

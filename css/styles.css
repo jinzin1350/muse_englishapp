@@ -2306,3 +2306,13 @@ body.duo-playing{padding-bottom:0!important;}
 .rpt-head{font-family:Georgia,serif;font-size:1.35rem;font-weight:700;color:#1e2a4e;margin-bottom:.7rem;text-align:center}
 .rpt-body{max-height:60vh;overflow-y:auto;font-size:.94rem;line-height:1.75;color:#3a4160}
 .rpt-body p{margin:.6rem 0}
+
+/* ---- analytics: wrong-answer drill-down ---- */
+.an-arow.an-click{cursor:pointer}
+.an-warn{color:#c04444;font-size:.78rem;font-weight:700}
+.an-wrong{padding:.2rem 0 .6rem}
+.an-wq{background:#fff8ec;border:1px solid #f0e2c8;border-radius:12px;padding:.55rem .7rem;margin:.4rem 0;font-size:.85rem}
+.an-wqq{color:#1e2a4e;margin-bottom:.3rem;line-height:1.5}
+.an-wa{display:flex;gap:.8rem;flex-wrap:wrap}
+.an-wa .bad{color:#c04444}
+.an-wa .ok{color:#1d7a3f}
