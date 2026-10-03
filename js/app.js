@@ -2576,38 +2576,44 @@ function teacherAssignmentComposer() {
     return;
   }
   showModal(
-    '<div class="modal-ico">📝</div>' +
+    '<div class="as2">' +
+    '<div class="as2-head"><div class="as2-ico"><span>📝</span></div>' +
+    '<i class="as2-spark s1"></i><i class="as2-spark s2"></i>' +
+    '<button class="as2-close" data-action="modal-close" aria-label="Close">✕</button></div>' +
     '<h2>New assignment</h2>' +
-    '<div class="field" style="text-align:left"><label>Type</label>' +
+    '<div class="field"><label>Type</label>' +
     '<div class="seg" id="as-seg">' +
-    '<button type="button" data-action="assignment-kind" data-kind="homework" class="seg-on">📝 Homework</button>' +
+    '<button type="button" data-action="assignment-kind" data-kind="homework" class="seg-on">📄 Homework</button>' +
     '<button type="button" data-action="assignment-kind" data-kind="exam">🎓 Exam</button>' +
     '</div></div>' +
-    '<div class="field" style="text-align:left"><label for="as-level">Level</label>' +
+    '<div class="field"><label for="as-level">Level</label>' +
     '<select id="as-level" class="input">' +
     ASSIGN_LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (lv === 'a2' ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') +
     '</select></div>' +
-    '<div class="field" style="text-align:left"><label for="as-topic">Topic</label>' +
+    '<div class="field"><label for="as-topic">Topic</label>' +
     '<select id="as-topic" class="input"></select></div>' +
-    '<div class="field" style="text-align:left"><label for="as-count">Questions</label>' +
+    '<div class="field"><label for="as-count">Questions</label>' +
     '<select id="as-count" class="input">' +
     [5, 10, 15, 20].map(function (n) { return '<option value="' + n + '"' + (n === 10 ? ' selected' : '') + '>' + n + '</option>'; }).join('') +
     '</select></div>' +
-    '<div class="field" style="text-align:left"><label>Students</label>' +
+    '<div class="field"><label>Students</label><div class="as2-students">' +
     '<label class="chk"><input type="checkbox" id="as-all" checked> All students (' + list.length + ')</label>' +
     '<div id="as-students" class="as-pick hidden">' +
     list.map(function (s) {
       const nm = s.display_name || (s.email || '?').split('@')[0];
       return '<label class="chk"><input type="checkbox" class="as-st" value="' + esc(s.user_id) + '" checked> ' + esc(nm) + '</label>';
-    }).join('') + '</div></div>' +
-    '<div class="field" style="text-align:left"><label for="as-note">Note for students (optional)</label>' +
+    }).join('') + '</div></div></div>' +
+    '<div class="field"><label for="as-note">Note for students <span class="as2-opt">(optional)</span></label>' +
     '<input id="as-note" class="input" maxlength="200" placeholder="e.g. Focus on the verb forms!"></div>' +
-    '<div class="field" style="text-align:left"><label for="as-deadline">Deadline (optional)</label>' +
+    '<div class="field"><label for="as-deadline">Deadline <span class="as2-opt">(optional)</span></label>' +
     '<input id="as-deadline" class="input" type="date"></div>' +
     '<div class="form-error" id="as-error" role="alert"></div>' +
-    '<button class="btn btn-block" data-action="assignment-create">Send to students</button>' +
-    '<button class="btn btn-ghost btn-block" data-action="modal-close">Cancel</button>'
+    '<button class="as2-send" data-action="assignment-create">✈ Send to students</button>' +
+    '<button class="as2-cancel" data-action="modal-close">Cancel</button>' +
+    '</div>'
   );
+  const as2card = document.querySelector('#app-modal .modal-card');
+  if (as2card) as2card.classList.add('as2-card');
   assignmentFillTopics();
   document.getElementById('as-level').addEventListener('change', assignmentFillTopics);
   document.getElementById('as-all').addEventListener('change', function () {

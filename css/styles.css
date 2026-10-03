@@ -2232,3 +2232,35 @@ body.duo-playing{padding-bottom:0!important;}
 .msg2-cta{position:relative;display:flex;align-items:center;gap:.6rem;margin-top:.8rem;background:#ffe9d2;border-radius:999px;padding:.65rem .6rem .65rem 1rem;text-decoration:none;color:#e2630a;font-weight:800;font-size:1.02rem}
 .msg2-cta-ico{font-size:1.35rem}
 .msg2-cta-go{margin-left:auto;flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:#f59e0b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+
+/* ---- New-assignment modal v2 (mockup 2026-10-03) ---- */
+.modal-card.as2-card{background:#fffdf7;border:1px solid rgba(217,123,43,.12);border-radius:26px;max-width:430px;padding:1.5rem 1.35rem 1.35rem;box-shadow:0 24px 70px rgba(120,60,10,.28);text-align:left;max-height:92vh;overflow-y:auto}
+.as2-head{position:relative;text-align:center;margin-bottom:.2rem}
+.as2-ico{position:relative;display:inline-flex;align-items:center;justify-content:center;width:78px;height:78px}
+.as2-ico::before{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,#ffe9d2 0%,rgba(255,233,210,0) 72%)}
+.as2-ico span{position:relative;font-size:2.7rem}
+.as2-spark{position:absolute;width:14px;height:14px}
+.as2-spark::before,.as2-spark::after{content:"";position:absolute;background:#f59e0b;border-radius:2px}
+.as2-spark::before{width:11px;height:3px;transform:rotate(35deg);left:1px;top:2px}
+.as2-spark::after{width:11px;height:3px;transform:rotate(-25deg);left:1px;top:8px}
+.as2-spark.s1{left:calc(50% + 52px);top:14px}
+.as2-spark.s2{left:calc(50% - 66px);top:34px;transform:scale(.7)}
+.as2-close{position:absolute;top:-4px;right:-4px;width:34px;height:34px;border-radius:50%;background:#f4f1ea;border:0;font-size:.95rem;color:#8a8fa3;cursor:pointer;line-height:1}
+.as2 h2{font-family:Georgia,serif;font-size:1.7rem;text-align:center;margin:.3rem 0 1.15rem;color:#1e2a4e}
+.as2 .field{margin-bottom:.9rem}
+.as2 .field>label{display:block;font-weight:700;font-size:.92rem;color:#1e2a4e;margin-bottom:.4rem}
+.as2-opt{font-weight:400;color:#9a937f}
+.as2 .seg{display:flex;background:#f7f2e9;border-radius:999px;padding:.3rem;gap:.2rem}
+.as2 .seg button{flex:1;border:0;background:transparent;color:#9a937f;border-radius:999px;padding:.65rem .3rem;font-size:.95rem;font-weight:600;cursor:pointer;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:.45rem}
+.as2 .seg button.seg-on{background:linear-gradient(180deg,#ff9d45,#f0730a);color:#fff;font-weight:800;box-shadow:0 6px 14px rgba(240,115,10,.35)}
+.as2 .input{display:block;width:100%;box-sizing:border-box;border:1.5px solid #e9dfcc;background:#fff;border-radius:14px;padding:.75rem .9rem;font-size:.95rem;font-family:inherit;color:#1e2a4e;appearance:none;-webkit-appearance:none}
+.as2 select.input{background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%238a8fa3" stroke-width="3" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>');background-repeat:no-repeat;background-position:right .9rem center;padding-right:2.4rem}
+.as2 .input:focus{outline:none;border-color:#f59e0b}
+.as2 .input::placeholder{color:#b9b2a0}
+.as2-students{background:#fff8ec;border:1.5px solid #f0e2c8;border-radius:14px;padding:.55rem .9rem}
+.as2 .chk{display:flex;align-items:center;gap:.55rem;padding:.4rem 0;font-size:.93rem;cursor:pointer;color:#1e2a4e;font-weight:600}
+.as2 .chk input{width:1.25rem;height:1.25rem;accent-color:#f26d0d;flex:0 0 auto}
+.as2-send{display:block;width:100%;border:0;cursor:pointer;color:#fff;font-size:1.05rem;font-weight:800;padding:.95rem;border-radius:18px;background:linear-gradient(180deg,#ff9d45,#f0730a);box-shadow:0 10px 24px rgba(240,115,10,.35);font-family:inherit;margin-top:.5rem}
+.as2-send:disabled{opacity:.6;cursor:wait}
+.as2-cancel{display:block;width:100%;margin-top:.6rem;background:transparent;border:1.5px solid #e9dfcc;color:#1e2a4e;border-radius:18px;padding:.85rem;font-size:1rem;font-weight:600;cursor:pointer;font-family:inherit}
+.as2 .form-error{color:#d33;min-height:1.2em;font-size:.88rem;margin:.2rem 0}
