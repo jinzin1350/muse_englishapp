@@ -4270,10 +4270,10 @@ function buildTutorialSteps() {
     { id: 'quiz', selector: '.lesson-tab[data-tab="quiz"]',
       kicker: '🎯', title: T('کوییز', 'Quiz'),
       text: T('اینجا دانشت رو محک می‌زنی — هر جواب درست XP میده ⚡', 'Test yourself here — every correct answer earns XP ⚡') },
-    { id: 'podcast', tab: 'podcast', selector: '[data-audio-card]',
+    { id: 'podcast', tab: 'podcast', selector: '#view [data-audio-card]',
       kicker: '🎧', title: T('پادکست', 'Podcast'),
       text: T('همه‌ی کلمات امروز توی مکالمه استفاده شدن', 'Today\u2019s words all appear in the conversation') },
-    { id: 'shadowing', tab: 'shadowing', selector: '[data-audio-card]',
+    { id: 'shadowing', tab: 'shadowing', selector: '#view [data-audio-card]',
       kicker: '🎤', title: T('شدویینگ', 'Shadowing'),
       text: T('گوش بده و با صدای بلند تکرار کن', 'Listen and repeat out loud') },
     { id: 'grammar', tab: 'grammar', selector: '.rule-card',
@@ -4301,14 +4301,9 @@ function startTutorial() {
   const ov = document.createElement('div');
   ov.id = 'tut-ov';
   ov.innerHTML =
-    '<div id="tut-catcher"></div><div id="tut-hole"></div><div id="tut-text"></div>' +
-    '<div id="tut-controls">' +
-    '<button id="tut-next">' + (fa ? 'بعدی' : 'Next') + '</button>' +
-    '<button id="tut-skip">' + (fa ? 'رد شو' : 'Skip tour') + '</button></div>';
+    '<div id="tut-catcher"></div><div id="tut-hole"></div><div id="tut-text"></div>';
   document.body.appendChild(ov);
   document.getElementById('tut-catcher').addEventListener('click', function () { tutorialNext(); });
-  document.getElementById('tut-next').addEventListener('click', function (e) { e.stopPropagation(); tutorialNext(); });
-  document.getElementById('tut-skip').addEventListener('click', function (e) { e.stopPropagation(); endTutorial(); });
   window.addEventListener('resize', tutReposition);
   tutorialStep();
 }
@@ -4401,11 +4396,14 @@ function tutRenderStep(s, el, n) {
   hole.style.width = (r.width + pad * 2) + 'px';
   hole.style.height = (r.height + pad * 2) + 'px';
   hole.style.opacity = '1';
-  /* Text floats next to the spotlight (proximity): below it when there is
-     room, otherwise above. No popup cards — writing directly on the dim. */
+  /* One block: counter + title + body + Next + Skip, positioned in the
+     largest free area (above or below the hole) and clamped to the viewport.
+     The button can never cover the text, hide behind it, or fly off-screen. */
   text.innerHTML = '<div class="tut-counter">' + tutCounter(tutState.i, n, fa) + '</div>' +
     '<div class="tut-title">' + esc(s.kicker + ' ' + s.title) + '</div>' +
-    '<div class="tut-body">' + esc(s.text) + '</div>';
+    '<div class="tut-body">' + esc(s.text) + '</div>' +
+    '<button id="tut-next">' + (fa ? 'بعدی' : 'Next') + '</button>' +
+    '<button id="tut-skip">' + (fa ? 'رد شو' : 'Skip tour') + '</button>';
   text.setAttribute('dir', fa ? 'rtl' : 'ltr');
   text.setAttribute('lang', fa ? 'fa' : 'en');
   const w = Math.min(340, window.innerWidth - 40);
@@ -4413,38 +4411,21 @@ function tutRenderStep(s, el, n) {
   let left = r.left + r.width / 2 - w / 2;
   left = Math.max(20, Math.min(window.innerWidth - w - 20, left));
   text.style.left = left + 'px';
-  /* Robust placement: measure the rendered text, then put it in the largest
-     free area — below the hole when there is room, otherwise above it.
-     Never off-screen, never under the Next button. */
   text.style.visibility = 'hidden';
   text.style.opacity = '0';
   text.style.transform = 'translateY(8px)';
   const vh = window.innerHeight;
-  const h = text.offsetHeight || 150;
-  const controlsH = 118; /* Next pill + Skip link zone at the bottom */
-  const above = r.top, below = vh - r.bottom - controlsH;
-  let top;
-  if (below >= h + 16) top = r.bottom + 16;
-  else if (above >= h + 16) top = above - h - 16;
-  else top = Math.max(12, Math.min(above, vh - h - controlsH - 12));
-  top = Math.max(12, Math.min(vh - h - controlsH - 8, top));
+  const h = text.offsetHeight || 230;
+  const above = r.top, below = vh - r.bottom;
+  let top = above >= below ? Math.max(12, above - h - 20) : r.bottom + 20;
+  top = Math.max(12, Math.min(vh - h - 12, top));
   text.style.top = top + 'px';
   text.style.bottom = 'auto';
   text.style.visibility = '';
-  /* When the hole sits at the very bottom (tabbar steps) the fixed bottom
-     controls would cover it — lift them just above the hole. */
-  const controls = document.getElementById('tut-controls');
-  if (controls) {
-    if (r.bottom > vh - 150) {
-      controls.style.top = 'auto';
-      controls.style.bottom = (vh - r.top + 14) + 'px';
-    } else {
-      controls.style.top = 'auto';
-      controls.style.bottom = '30px';
-    }
-  }
-  const dots = document.getElementById('tut-dots');
-  if (dots) dots.parentNode.removeChild(dots);
+  const nx = document.getElementById('tut-next');
+  if (nx) nx.addEventListener('click', function (e) { e.stopPropagation(); tutorialNext(); });
+  const sk = document.getElementById('tut-skip');
+  if (sk) sk.addEventListener('click', function (e) { e.stopPropagation(); endTutorial(); });
   requestAnimationFrame(function () {
     if (!tutState.active) return;
     text.style.opacity = '1';
@@ -4467,21 +4448,14 @@ function tutReposition() {
   let el = null;
   try { el = document.querySelector(s.selector); } catch (e) {}
   if (!el) return;
-  const r = el.getBoundingClientRect();
-  const pad = 8;
-  hole.style.left = Math.max(6, r.left - pad) + 'px';
-  hole.style.top = Math.max(6, r.top - pad) + 'px';
-  hole.style.width = (r.width + pad * 2) + 'px';
-  hole.style.height = (r.height + pad * 2) + 'px';
+  tutRenderStep(s, el, steps.length); /* repositions hole + text block together */
 }
 /* Finale (Peak–End rule): centered message + one clear CTA. */
 function showTutorialDone() {
   const hole = document.getElementById('tut-hole');
   const text = document.getElementById('tut-text');
-  const controls = document.getElementById('tut-controls');
   const fa = tutLang() === 'fa';
   if (hole) hole.style.opacity = '0';
-  if (controls) controls.style.display = 'none';
   const catcher = document.getElementById('tut-catcher');
   if (catcher) catcher.style.background = 'rgba(7,10,24,.88)';
   if (!text) return;
