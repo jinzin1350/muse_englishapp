@@ -2280,14 +2280,14 @@ body.duo-playing{padding-bottom:0!important;}
    One persistent dim for the whole tour: the spotlight hole glides between
    targets, text is written directly on the dim (no popup cards). */
 #tut-ov{position:fixed;inset:0;z-index:9990;pointer-events:none}
-#tut-dim{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,rgba(13,19,38,.74) 0%,rgba(7,10,24,.9) 100%);pointer-events:auto;cursor:pointer}
-#tut-hole{position:fixed;border-radius:16px;border:2px solid #ffb14e;pointer-events:none;opacity:0;transition:left .38s cubic-bezier(.32,.72,.35,1),top .38s cubic-bezier(.32,.72,.35,1),width .38s cubic-bezier(.32,.72,.35,1),height .38s cubic-bezier(.32,.72,.35,1),opacity .25s;z-index:9991}
-#tut-hole::before{content:'';position:absolute;inset:-2px;border-radius:18px;box-shadow:0 0 0 9999px rgba(7,10,24,.82)}
+#tut-catcher{position:fixed;inset:0;background:transparent;z-index:9990;cursor:pointer}
+#tut-hole{position:fixed;border-radius:16px;border:2px solid #ffb14e;pointer-events:none;opacity:0;transition:left .38s cubic-bezier(.32,.72,.35,1),top .38s cubic-bezier(.32,.72,.35,1),width .38s cubic-bezier(.32,.72,.35,1),height .38s cubic-bezier(.32,.72,.35,1),border-radius .38s,opacity .25s;z-index:9991;background:transparent}
+#tut-hole::before{content:'';position:absolute;inset:-2px;border-radius:18px;box-shadow:0 0 0 9999px rgba(7,10,24,.84)}
 #tut-hole::after{content:'';position:absolute;inset:-2px;border-radius:18px;border:2px solid rgba(255,177,78,.9);animation:tutPulse 1.7s ease-in-out infinite}
 @keyframes tutPulse{0%,100%{transform:scale(1);opacity:.95}50%{transform:scale(1.045);opacity:.35}}
 #tut-text{position:fixed;z-index:9992;pointer-events:none;color:#fff;text-align:center;text-shadow:0 2px 16px rgba(0,0,0,.95),0 0 40px rgba(0,0,0,.5);opacity:0;transition:opacity .28s,transform .28s}
 /* soft readability aura behind the text — not a card, just lets type breathe on the dim */
-#tut-text::before{content:'';position:absolute;inset:-34px -28px;background:radial-gradient(ellipse at center,rgba(5,8,18,.6) 0%,rgba(5,8,18,0) 70%);z-index:-1;pointer-events:none}
+#tut-text::before{content:'';position:absolute;inset:-40px -34px;background:radial-gradient(ellipse at center,rgba(5,8,18,.78) 0%,rgba(5,8,18,0) 70%);z-index:-1;pointer-events:none}
 #tut-text .tut-counter{font-size:.78rem;font-weight:800;letter-spacing:.14em;color:#ffb14e;margin-bottom:.55rem;text-shadow:0 2px 8px rgba(0,0,0,.9)}
 #tut-text .tut-title{font-size:1.45rem;font-weight:800;margin-bottom:.5rem;color:#fff;filter:drop-shadow(0 3px 10px rgba(0,0,0,.85))}
 #tut-text .tut-body{font-size:1.02rem;line-height:1.75;font-weight:500;color:rgba(255,255,255,.95)}

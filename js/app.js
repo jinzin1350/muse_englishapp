@@ -4301,12 +4301,12 @@ function startTutorial() {
   const ov = document.createElement('div');
   ov.id = 'tut-ov';
   ov.innerHTML =
-    '<div id="tut-dim"></div><div id="tut-hole"></div><div id="tut-text"></div>' +
+    '<div id="tut-catcher"></div><div id="tut-hole"></div><div id="tut-text"></div>' +
     '<div id="tut-controls">' +
     '<button id="tut-next">' + (fa ? 'بعدی' : 'Next') + '</button>' +
     '<button id="tut-skip">' + (fa ? 'رد شو' : 'Skip tour') + '</button></div>';
   document.body.appendChild(ov);
-  document.getElementById('tut-dim').addEventListener('click', function () { tutorialNext(); });
+  document.getElementById('tut-catcher').addEventListener('click', function () { tutorialNext(); });
   document.getElementById('tut-next').addEventListener('click', function (e) { e.stopPropagation(); tutorialNext(); });
   document.getElementById('tut-skip').addEventListener('click', function (e) { e.stopPropagation(); endTutorial(); });
   window.addEventListener('resize', tutReposition);
@@ -4413,21 +4413,35 @@ function tutRenderStep(s, el, n) {
   let left = r.left + r.width / 2 - w / 2;
   left = Math.max(20, Math.min(window.innerWidth - w - 20, left));
   text.style.left = left + 'px';
-  const margin = 18;
-  if (r.top > window.innerHeight * 0.62) {
-    /* Bottom-anchored target (tabbar): float the text in the upper area so it
-       never collides with the tour controls at the bottom. */
-    text.style.top = '14%';
-    text.style.bottom = 'auto';
-    text.style.transform = 'translateY(10px)';
-  } else if (r.bottom + margin + 130 < window.innerHeight - 120) {
-    text.style.top = (r.bottom + margin) + 'px';
-    text.style.bottom = 'auto';
-    text.style.transform = 'translateY(10px)';
-  } else {
-    text.style.top = 'auto';
-    text.style.bottom = (window.innerHeight - r.top + margin) + 'px';
-    text.style.transform = 'translateY(-10px)';
+  /* Robust placement: measure the rendered text, then put it in the largest
+     free area — below the hole when there is room, otherwise above it.
+     Never off-screen, never under the Next button. */
+  text.style.visibility = 'hidden';
+  text.style.opacity = '0';
+  text.style.transform = 'translateY(8px)';
+  const vh = window.innerHeight;
+  const h = text.offsetHeight || 150;
+  const controlsH = 118; /* Next pill + Skip link zone at the bottom */
+  const above = r.top, below = vh - r.bottom - controlsH;
+  let top;
+  if (below >= h + 16) top = r.bottom + 16;
+  else if (above >= h + 16) top = above - h - 16;
+  else top = Math.max(12, Math.min(above, vh - h - controlsH - 12));
+  top = Math.max(12, Math.min(vh - h - controlsH - 8, top));
+  text.style.top = top + 'px';
+  text.style.bottom = 'auto';
+  text.style.visibility = '';
+  /* When the hole sits at the very bottom (tabbar steps) the fixed bottom
+     controls would cover it — lift them just above the hole. */
+  const controls = document.getElementById('tut-controls');
+  if (controls) {
+    if (r.bottom > vh - 150) {
+      controls.style.top = 'auto';
+      controls.style.bottom = (vh - r.top + 14) + 'px';
+    } else {
+      controls.style.top = 'auto';
+      controls.style.bottom = '30px';
+    }
   }
   const dots = document.getElementById('tut-dots');
   if (dots) dots.parentNode.removeChild(dots);
@@ -4468,6 +4482,8 @@ function showTutorialDone() {
   const fa = tutLang() === 'fa';
   if (hole) hole.style.opacity = '0';
   if (controls) controls.style.display = 'none';
+  const catcher = document.getElementById('tut-catcher');
+  if (catcher) catcher.style.background = 'rgba(7,10,24,.88)';
   if (!text) return;
   text.innerHTML = '<div class="tut-done-emoji">🎉</div>' +
     '<div class="tut-done-title">' + (fa ? 'تمومه!' : 'That\u2019s it!') + '</div>' +
