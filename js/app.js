@@ -4088,9 +4088,12 @@ function renderDuoQuizView() {
     html += duoAssistHTML(q, cur);
   } else {
     if (cur.qtype === 'listen') {
-      html += '<div class="duo-listen"><button class="duo-speaker" data-action="play-track" data-src="' +
-        esc(cur.audio) + '" data-title="' + esc(cur.word) + '" aria-label="Hear it again">🔊</button>' +
-        '<div class="duo-q">' + esc(cur.question) + '</div></div>';
+      html += '<div class="duo-listen"><div class="duo-q">' + esc(cur.question) + '</div>';
+      if (!q.answered) {
+        html += '<button class="duo-replay" data-action="play-track" data-src="' + esc(cur.audio) +
+          '" data-title="' + esc(cur.word) + '">↻ Listen again</button>';
+      }
+      html += '</div>';
     } else {
       html += '<div class="duo-q"' + (cur.rtl ? ' dir="rtl"' : '') + '>' + esc(cur.question) + '</div>';
     }
@@ -4126,6 +4129,8 @@ function duoAnswer(idx) {
   q.answered = true;
   q.picked = idx;
   q.wasCorrect = (idx === cur.answer);
+  /* listening: answering dismisses the mini-player bar */
+  if (cur.qtype === 'listen') closePlayer();
   if (q.wasCorrect) {
     q.correct++;
   } else {
