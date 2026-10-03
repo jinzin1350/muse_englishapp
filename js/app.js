@@ -3576,7 +3576,16 @@ async function saveWaitingLevel() {
   if (errEl) errEl.textContent = '';
   try {
     const { data: u } = await sb.auth.getUser();
-    const { error } = await sb.from('profiles').upsert({ id: u.user.id, email: u.user.email, level: el.value }, { onConflict: 'id' });
+    /* Update-first: the profile row already exists (created by the signup
+       trigger), and a plain UPDATE only needs the UPDATE policy. Upsert would
+       also demand an INSERT policy, which profiles doesn't grant — that's what
+       made this fail for OAuth users. Fall back to upsert only when the row
+       is genuinely missing. */
+    let error = (await sb.from('profiles').update({ level: el.value }).eq('id', u.user.id)).error;
+    if (error) {
+      const r2 = await sb.from('profiles').upsert({ id: u.user.id, email: u.user.email, level: el.value }, { onConflict: 'id' });
+      error = r2.error;
+    }
     if (error) throw error;
     state.user.level = el.value;
     state.justSignedUp = false;
