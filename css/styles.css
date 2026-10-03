@@ -2190,3 +2190,4 @@ body.duo-playing{padding-bottom:0!important;}
 .hw-sub{font-size:.85rem;line-height:1.5;margin-bottom:.7rem}
 .hw-done{background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.35);color:#4ade80;border-radius:12px;padding:.6rem .8rem;font-size:.95rem}
 .quiz-explain{background:rgba(255,186,96,.1);border:1px solid rgba(255,186,96,.35);border-radius:12px;padding:.65rem .8rem;margin:.7rem 0 0;font-size:.88rem;line-height:1.5;color:#ffd9a8}
+.duo-explain{background:rgba(255,186,96,.12);border:1px solid rgba(255,186,96,.4);border-radius:12px;padding:.6rem .8rem;margin:.6rem 0;font-size:.88rem;line-height:1.5;color:#ffd9a8}

@@ -2801,12 +2801,18 @@ async function renderHomework(v) {
 function startAssignment(i) {
   const a = (state.homeworkList || [])[i];
   if (!a || !a.questions || !a.questions.length) return;
+  /* Duolingo-style player: assignment questions map 1:1 onto 'select'
+     challenges (same shape the word quiz uses). Shared daily hearts. */
   state.quiz = {
     kind: 'assignment', assignmentId: a.id, log: [],
     questions: a.questions.map(function (q) {
-      return { question: q.q, options: q.options, answer: q.answer, kind: 'assignment', explanation: q.explanation || '' };
+      return {
+        qtype: 'select', question: q.q, options: q.options.slice(), answer: q.answer,
+        kind: 'assignment', explanation: q.explanation || ''
+      };
     }),
-    idx: 0, correct: 0, answered: false, picked: -1,
+    idx: 0, correct: 0, answered: false, picked: -1, wasCorrect: false,
+    hearts: getHearts(),
     date: todayStr(), level: a.level, theme: a.title
   };
   renderQuizView();
@@ -4297,7 +4303,7 @@ async function startQuiz(kind, dateStr) {
 
 function renderQuizView() {
   const q = state.quiz;
-  if (q.kind === 'word') { renderDuoQuizView(); return; }
+  if (q.kind === 'word' || q.kind === 'assignment') { renderDuoQuizView(); return; }
   const v = $('#view');
   const cur = q.questions[q.idx];
   const total = q.questions.length;
@@ -4543,6 +4549,7 @@ function duoFooter(q, cur) {
     '<span class="duo-tray-ico">' + ico + '</span>' +
     '<div><div class="duo-tray-title">' + title + '</div>' +
     '<div class="duo-tray-text">' + esc(duoTrayText(q, cur)) + '</div></div></div>' +
+    ((!ok && cur.explanation) ? '<div class="duo-explain">💡 ' + esc(cur.explanation) + '</div>' : '') +
     '<button class="duo-continue ' + (ok ? 'ok' : 'bad') + '" data-action="duo-next">' +
     (last ? 'See my score' : 'Continue') + ' <span>→</span></button>' +
     '</div></div>';
@@ -4604,6 +4611,7 @@ async function duoAnswer(idx) {
   q.answered = true;
   q.picked = idx;
   q.wasCorrect = (idx === cur.answer);
+  if (q.log) q.log.push({ picked: idx, correct: cur.answer });
   /* listening: answering dismisses the mini-player bar */
   if (cur.qtype === 'listen') closePlayer();
   if (q.wasCorrect) {
@@ -4619,7 +4627,7 @@ async function duoAnswer(idx) {
 }
 
 async function saveDuoMistake(q, cur, picked) {
-  const base = { date: q.date, level: q.level, kind: 'word', picked: picked };
+  const base = { date: q.date, level: q.level, kind: cur.kind || 'word', picked: picked };
   if (cur.qtype === 'select' || cur.qtype === 'reverse') {
     await saveMistake(Object.assign({}, base, {
       question: cur.question, options: cur.options, answer: cur.answer
