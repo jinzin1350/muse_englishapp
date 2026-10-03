@@ -1284,6 +1284,13 @@ function pwaSnooze() {
 }
 function pwaShowBanner() {
   if (pwaIsStandalone() || pwaSnoozed()) return;
+  // Never pop the install banner over the splash/loading screen — wait until
+  // the first content is actually on screen.
+  if (!window._appReady) {
+    window._pwaRetries = (window._pwaRetries || 0) + 1;
+    if (window._pwaRetries < 15) setTimeout(pwaShowBanner, 2000);
+    return;
+  }
   const el = $('#pwa-prompt');
   if (el) el.classList.remove('hidden');
 }
@@ -1529,18 +1536,24 @@ async function fetchLesson(level, dateStr) {
 }
 
 async function loadLessons(level) {
+  // All day-manifests fetch concurrently (one batch instead of ~11 sequential
+  // round trips); assembled newest-first with the original stop rule.
+  const days = [];
+  const d = new Date();
+  for (let i = 0; i < 45; i++) { days.push(fmtDate(d)); d.setDate(d.getDate() - 1); }
+  const settled = await Promise.all(days.map(function (ds) {
+    return fetchLesson(level, ds).then(
+      function (m) { return { ok: true, m: m }; },
+      function () { return { ok: false }; });
+  }));
   const found = [];
   let misses = 0;
-  const d = new Date();
-  for (let i = 0; i < 45; i++) {
-    const ds = fmtDate(d);
-    try {
-      const m = await fetchLesson(level, ds);
-      found.push(m);
-      misses = 0;
-    } catch (e) { misses++; }
-    if (found.length > 0 && misses >= 10) break;
-    d.setDate(d.getDate() - 1);
+  for (const r of settled) {
+    if (r.ok) { found.push(r.m); misses = 0; }
+    else {
+      misses++;
+      if (found.length > 0 && misses >= 10) break;
+    }
   }
   return found; // newest first
 }
@@ -2954,7 +2967,7 @@ async function doSignup() {
 async function enterApp() {
   const { data } = await sb.auth.getUser();
   const u = data.user;
-  if (!u) { go('landing'); return; }
+  if (!u) { go('landing'); hideSplashSoon(); return; }
   let level = null;
   let prof = null;
   try {
@@ -2986,10 +2999,11 @@ async function enterApp() {
   }
   // First-touch teacher attribution for OAuth sign-ins (the email flow stashes
   // the ref code in el_pending_level instead; this covers Google SSO).
+  // Best-effort: runs in the background, never blocks first paint.
   try {
     const rc = getRefCode();
     if (rc && (!prof || !prof.referred_by)) {
-      await sb.from('profiles').update({ referred_by: rc }).eq('id', u.id);
+      sb.from('profiles').update({ referred_by: rc }).eq('id', u.id).then(function () {}, function () {});
     }
   } catch (e) {}
   const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
@@ -3002,12 +3016,14 @@ async function enterApp() {
     welcomeSeenAt: (prof && prof.welcome_seen_at) || null,
   };
   try { localStorage.setItem('el_last_user', u.email); } catch (e) {}
-  identifyPushUser(u.id, u.email, normalizeLevel(level));
-  await ensureCountrySaved();
-  await migrateLocalToCloud();
-  await flushPointsQueue();
-  await refreshMyPoints();
-  await loadTeacherStatus();
+  /* First paint ASAP: the syncs below don't affect the first screen, so they
+     run in the background instead of blocking the boot sequence. */
+  try { identifyPushUser(u.id, u.email, normalizeLevel(level)); } catch (e) {}
+  ensureCountrySaved().catch(function () {});
+  migrateLocalToCloud().catch(function () {});
+  flushPointsQueue().then(function () { refreshMyPoints().catch(function () {}); },
+                          function () { refreshMyPoints().catch(function () {}); });
+  loadTeacherStatus().catch(function () {});
   // Existing users without a nickname pick one now (blocking) — the
   // Challenge leaderboard needs a display name. Google users get their
   // Google name suggested.
@@ -3018,16 +3034,12 @@ async function enterApp() {
 }
 
 async function afterLogin() {
-  if (!state.user.level && !state.user.isAdmin) { go('waiting'); return; }
+  if (!state.user.level && !state.user.isAdmin) { go('waiting'); hideSplashSoon(); return; }
   const level = normalizeLevel(state.user.level) || 'b2';
   state.lessons = await loadLessons(level);
   state.lesson = state.lessons[0] || null;
-  go('home');
-  maybeShowWelcome();
-  // Teacher inbox: badge in the header + a prompt if unread messages arrived.
-  refreshInboxBadge().then(function () { maybeShowInboxPrompt(); }, function () {});
-  // Push notification deep link -> newest lesson
   if (pendingDeepLink === 'latest') {
+    // Push notification deep link -> newest lesson
     pendingDeepLink = null;
     try {
       const u = new URL(window.location.href);
@@ -3035,7 +3047,18 @@ async function afterLogin() {
       window.history.replaceState(null, '', u.pathname + u.search + u.hash);
     } catch (e) {}
     if (state.lessons.length) go('lesson', state.lessons[0].date);
+    else go('home');
+  } else {
+    // Stay where a reload happened (e.g. pull-to-refresh on mobile);
+    // fresh logins land on home.
+    const r = parseHash();
+    if (r.name && LEARNER_VIEWS.indexOf(r.name) !== -1) onRoute();
+    else go('home');
   }
+  hideSplashSoon();
+  maybeShowWelcome();
+  // Teacher inbox: badge in the header + a prompt if unread messages arrived.
+  refreshInboxBadge().then(function () { maybeShowInboxPrompt(); }, function () {});
 }
 
 /* First-entry welcome popup: Persian for a1/a2 learners, English for b1+.
@@ -5323,8 +5346,10 @@ async function init() {
   initOneSignal();
   syncPushState();
   playerUI();
-  /* Splash fades once the app is up (min ~900ms so it reads as a splash). */
-  setTimeout(hideSplash, 900);
+  /* The splash stays until the first content is on screen (min ~900ms so it
+     still reads as a splash); the 6s inline fallback remains as a backstop. */
+  window._splashAt = Date.now();
+  window._appReady = false;
 
   if (sb) {
     try {
@@ -5334,6 +5359,14 @@ async function init() {
   }
   // Logged out: respect the hash (deep links to #/signin etc.), default landing.
   onRoute();
+  hideSplashSoon();
+}
+
+/* Hide the splash once the first paint happened. */
+function hideSplashSoon() {
+  window._appReady = true;
+  const elapsed = Date.now() - (window._splashAt || Date.now());
+  setTimeout(hideSplash, Math.max(0, 900 - elapsed));
 }
 
 function hideSplash() {
