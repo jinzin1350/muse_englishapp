@@ -2315,21 +2315,36 @@ async function renderInbox(v) {
     if (host && !(cached && cached.length)) host.innerHTML = '<div class="empty">You appear to be offline. Connect to the internet to load messages.</div>';
     return;
   }
+  var msgs = null, loadErr = null;
   try {
     const r = await sb.rpc('my_messages');
     if (r.error) throw r.error;
-    const msgs = r.data || [];
+    msgs = r.data || [];
     state.inboxMessages = msgs;
-    if (host) host.innerHTML = inboxListHTML(msgs);
-    await sb.rpc('mark_messages_read').catch(function () {});
-    refreshInboxBadge();
   } catch (e) {
-    if (host && !(cached && cached.length)) {
-      host.innerHTML = '<div class="empty">Could not load messages.' +
-        '<div class="muted" style="font-size:0.8rem;margin-top:0.4rem">' + esc((e && e.message) || String(e)) + '</div>' +
-        '<button class="btn btn-block" data-action="inbox-retry" style="max-width:220px;margin:1rem auto 0">Try again</button></div>';
-    }
+    loadErr = e;
+    if (cached && cached.length) msgs = cached;
   }
+  if (!msgs) {
+    if (host) host.innerHTML = '<div class="empty">Could not load messages.' +
+      '<div class="muted" style="font-size:0.8rem;margin-top:0.4rem">' + esc((loadErr && loadErr.message) || String(loadErr)) + '</div>' +
+      '<button class="btn btn-block" data-action="inbox-retry" style="max-width:220px;margin:1rem auto 0">Try again</button></div>';
+    return;
+  }
+  if (host) host.innerHTML = inboxListHTML(msgs);
+  // Mark as read no matter where the messages came from (fresh fetch or cache),
+  // otherwise the unread badge and the login prompt keep coming back.
+  try { await sb.rpc('mark_messages_read'); }
+  catch (e1) {
+    try { await new Promise(function (res) { setTimeout(res, 1200); }); await sb.rpc('mark_messages_read'); }
+    catch (e2) {}
+  }
+  // Optimistic clear: the server was asked to mark everything read, so drop the
+  // badge now instead of depending on the recount fetch below.
+  state.unreadMessages = 0;
+  var _badge = document.getElementById('inbox-badge');
+  if (_badge) _badge.classList.add('hidden');
+  refreshInboxBadge();
 }
 /* Teacher -> student composer (from the student detail card). */
 function teacherMessageComposer(i) {
