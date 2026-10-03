@@ -2275,6 +2275,7 @@ body.duo-playing{padding-bottom:0!important;}
 .pl-dayhead b{font-family:Georgia,serif;font-size:1.05rem;color:#1e2a4e}
 .pl-last{margin-left:auto;font-size:.8rem;color:#b3540f;background:#fff4e0;border-radius:999px;padding:.15rem .6rem}
 .pl-row{display:grid;grid-template-columns:1fr 92px 108px;gap:.5rem}
+.pl-sched{font-size:.8rem;margin-top:.35rem;min-height:1.1em;color:#b3540f}
 .pl-done{text-align:center;padding:2rem 1.2rem}
 .pl-done-ico{font-size:3rem}
 .pl-done h2{font-family:Georgia,serif;color:#1e2a4e}

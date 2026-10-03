@@ -2783,6 +2783,70 @@ async function createAssignment(btn) {
    topics are never auto-advanced); count/time/students default to the usual.
    Each filled row becomes one assignment with status='scheduled' + send_at.
    The assignment-sender cron delivers them on time. */
+/* ---- student-local scheduling ----
+   The planner time (e.g. 07:00) means 07:00 in EACH STUDENT's timezone.
+   wallTimeToUtc() converts a wall-clock time on a calendar date in a given
+   IANA timezone to a UTC Date (iterative offset resolution, DST-safe). */
+function wallTimeToUtc(dateStr, timeStr, tz) {
+  const dp = String(dateStr || '').split('-'), tp = String(timeStr || '08:00').split(':');
+  const Y = +dp[0] || 2000, M = +dp[1] || 1, D = +dp[2] || 1;
+  const h = +tp[0] || 0, mi = +tp[1] || 0;
+  const target = Date.UTC(Y, M - 1, D, h, mi);
+  let guess = target;
+  try {
+    const fmt = new Intl.DateTimeFormat('en-US', {
+      timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false
+    });
+    for (let i = 0; i < 4; i++) {
+      const parts = {};
+      fmt.formatToParts(new Date(guess)).forEach(function (p) { parts[p.type] = p.value; });
+      const asUtc = Date.UTC(+parts.year, +parts.month - 1, +parts.day,
+        (+parts.hour) % 24, +parts.minute, +parts.second);
+      const diff = target - asUtc;
+      if (!diff) break;
+      guess += diff;
+    }
+  } catch (e) { /* unknown tz -> fall back to treating the wall time as UTC */ }
+  return new Date(guess);
+}
+function tzShort(tz) {
+  return String(tz || '').split('/').pop().replace(/_/g, ' ') || '';
+}
+function teacherTz() {
+  try { return Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'; }
+  catch (e) { return 'UTC'; }
+}
+function dowInTz(iso, tz) {
+  try {
+    const s = new Intl.DateTimeFormat('en-US', { timeZone: tz, weekday: 'short' }).format(new Date(iso));
+    const m = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+    if (s in m) return m[s];
+  } catch (e) {}
+  return new Date(iso).getDay();
+}
+function timeInTz(iso, tz) {
+  try {
+    const p = {};
+    new Intl.DateTimeFormat('en-GB', {
+      timeZone: tz, hour: '2-digit', minute: '2-digit', hour12: false
+    }).formatToParts(new Date(iso)).forEach(function (x) { p[x.type] = x.value; });
+    return p.hour + ':' + p.minute;
+  } catch (e) { return '08:00'; }
+}
+/* 'Sends Mon 07:00 · Tehran' — the student-local send moment of a scheduled row. */
+function schedLabel(sendAt, sendTz) {
+  if (!sendTz) return '⏰ Sends ' + fmtDateTime(sendAt);
+  try {
+    const d = new Date(sendAt);
+    const parts = {};
+    new Intl.DateTimeFormat('en-GB', {
+      timeZone: sendTz, weekday: 'short',
+      hour: '2-digit', minute: '2-digit', hour12: false
+    }).formatToParts(d).forEach(function (p) { parts[p.type] = p.value; });
+    return '⏰ Sends ' + parts.weekday + ' ' + parts.hour + ':' + parts.minute + ' · ' + tzShort(sendTz);
+  } catch (e) { return '⏰ Sends ' + fmtDateTime(sendAt); }
+}
 const PLANNER_DAYS = [
   { dow: 6, label: 'شنبه · Sat' }, { dow: 0, label: 'یکشنبه · Sun' },
   { dow: 1, label: 'دوشنبه · Mon' }, { dow: 2, label: 'سه‌شنبه · Tue' },
@@ -2823,11 +2887,17 @@ async function renderPlanner(v) {
       return;
     }
     const lastMap = await plannerLastMap();
+    const schedMap = await plannerSchedMap();
+    /* If every scheduled day shares one level, start the week on that level. */
+    const schedLevels = {};
+    Object.keys(schedMap).forEach(function (d) { if (schedMap[d].level) schedLevels[schedMap[d].level] = 1; });
+    const schedLevelKeys = Object.keys(schedLevels);
+    const startLevel = schedLevelKeys.length === 1 ? schedLevelKeys[0] : 'a2';
     const host = document.getElementById('pl-body');
     host.innerHTML = '<div class="as2"><div class="card pl-card">' +
       '<div class="field"><label for="pl-level">Level <span class="as2-opt">(whole week)</span></label>' +
       '<select id="pl-level" class="input">' +
-      ASSIGN_LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (lv === 'a2' ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') +
+      ASSIGN_LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (lv === startLevel ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') +
       '</select></div>' +
       '<div class="field"><label>Students</label><div class="as2-students">' +
       '<label class="chk"><input type="checkbox" id="pl-all" checked> All students (' + list.length + ')</label>' +
@@ -2847,12 +2917,13 @@ async function renderPlanner(v) {
           [5, 10, 15, 20].map(function (n) { return '<option value="' + n + '"' + (n === 10 ? ' selected' : '') + '>' + n + ' Q</option>'; }).join('') +
           '</select>' +
           '<input type="time" class="input pl-time" data-dow="' + dy.dow + '" value="08:00" aria-label="Send time">' +
-          '</div></div>';
+          '</div><div class="pl-sched muted" data-dow="' + dy.dow + '"></div></div>';
       }).join('') + '</div>' +
       '<div class="form-error" id="pl-error" role="alert"></div>' +
       '<button class="as2-send" data-action="planner-save">⏰ Schedule week</button>' +
       '</div></div>';
     plannerFillTopics();
+    plannerPrefillSched(schedMap);
     document.getElementById('pl-level').addEventListener('change', plannerFillTopics);
     document.getElementById('pl-all').addEventListener('change', function () {
       document.getElementById('pl-students').classList.toggle('hidden', this.checked);
@@ -2868,6 +2939,33 @@ async function renderPlanner(v) {
     document.getElementById('pl-body').innerHTML =
       '<div class="empty">Could not load the planner: ' + esc(e.message || e) + '</div>';
   }
+}
+/* Pre-fill planner rows from already-scheduled days so leaving and coming
+   back never looks like a reset. */
+function plannerPrefillSched(schedMap) {
+  Object.keys(schedMap).forEach(function (dow) {
+    const g = schedMap[dow];
+    const dayEl = document.querySelector('.pl-day[data-dow="' + dow + '"]');
+    if (!dayEl) return;
+    const topicSel = dayEl.querySelector('.pl-topic');
+    if (topicSel && g.topic) {
+      const hasOpt = Array.prototype.some.call(topicSel.options, function (o) { return o.value === g.topic; });
+      if (hasOpt) topicSel.value = g.topic;
+    }
+    const countSel = dayEl.querySelector('.pl-count');
+    if (countSel && g.count) countSel.value = String(g.count);
+    const timeEl = dayEl.querySelector('.pl-time');
+    if (timeEl && g.time) {
+      timeEl.value = g.time;
+      const lbl = document.querySelector('.pl-date[data-dow="' + dow + '"]');
+      if (lbl) lbl.textContent = plannerDayLabel(parseInt(dow, 10), g.time);
+    }
+    const note = dayEl.querySelector('.pl-sched');
+    if (note && g.groups.length) {
+      note.textContent = '⏰ Scheduled: ' + g.time + ' · ' +
+        g.groups.map(function (x) { return tzShort(x.tz) + ' (' + x.n + ')'; }).join(', ');
+    }
+  });
 }
 function plannerFillTopics() {
   const lv = document.getElementById('pl-level').value;
@@ -2893,6 +2991,29 @@ async function plannerLastMap() {
   } catch (e) {}
   return map;
 }
+/* Already-scheduled (not yet sent) rows, keyed by weekday in their own
+   student-local timezone: { topic, count, level, time, groups: [{tz, n}] }. */
+async function plannerSchedMap() {
+  const map = {};
+  try {
+    const r = await sb.from('assignments')
+      .select('topic_label,question_count,level,send_at,send_tz,student_ids')
+      .eq('teacher_id', state.user.id).eq('status', 'scheduled')
+      .gt('send_at', new Date().toISOString())
+      .order('send_at', { ascending: true }).limit(60);
+    if (r.error) throw r.error;
+    (r.data || []).forEach(function (x) {
+      const tz = x.send_tz || teacherTz();
+      const dow = dowInTz(x.send_at, tz);
+      const g = (map[dow] = map[dow] || {
+        topic: x.topic_label, count: x.question_count || 10, level: x.level,
+        time: timeInTz(x.send_at, tz), groups: []
+      });
+      g.groups.push({ tz: tz, n: (x.student_ids || []).length });
+    });
+  } catch (e) {}
+  return map;
+}
 async function savePlanner(btn) {
   const errBox = document.getElementById('pl-error');
   const err = function (m) { if (errBox) errBox.textContent = m; };
@@ -2905,24 +3026,50 @@ async function savePlanner(btn) {
     return cb && cb.checked;
   });
   if (!targets.length) { err('Pick at least one student.'); return; }
+  /* Group students by timezone (unknown -> teacher's). The picked time means
+     that local time for each student, so each group gets its own send_at. */
+  const tTz = teacherTz();
+  const groups = {};
+  targets.forEach(function (s) {
+    const tz = s.timezone || tTz;
+    (groups[tz] = groups[tz] || []).push(s);
+  });
+  const tzList = Object.keys(groups);
   const rows = [];
   Array.prototype.forEach.call(document.querySelectorAll('.pl-day'), function (dayEl) {
     const topic = dayEl.querySelector('.pl-topic').value;
     if (!topic) return;
     const dow = parseInt(dayEl.getAttribute('data-dow'), 10);
+    const timeStr = dayEl.querySelector('.pl-time').value || '08:00';
+    const d = plannerNextDate(dow, timeStr);
+    const dateStr = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' +
+      String(d.getDate()).padStart(2, '0');
     rows.push({
-      dow: dow, topic: topic,
-      count: parseInt(dayEl.querySelector('.pl-count').value, 10) || 10,
-      sendAt: plannerNextDate(dow, dayEl.querySelector('.pl-time').value)
+      dow: dow, topic: topic, dateStr: dateStr, timeStr: timeStr,
+      count: parseInt(dayEl.querySelector('.pl-count').value, 10) || 10
     });
   });
   if (!rows.length) { err('Pick a topic for at least one day.'); return; }
   btn.disabled = true;
   const orig = btn.textContent;
   try {
+    /* Replace semantics: cancel this teacher's still-pending scheduled rows
+       first, so the planner always reflects the current plan (and re-saving
+       never duplicates). Rows already due stay for the sender. */
+    btn.textContent = 'Clearing old schedule…';
+    try {
+      const old = await sb.from('assignments').select('id')
+        .eq('teacher_id', state.user.id).eq('status', 'scheduled')
+        .gt('send_at', new Date().toISOString()).limit(100);
+      const ids = (old.data || []).map(function (x) { return x.id; });
+      if (ids.length) {
+        const del = await sb.from('assignments').delete().in('id', ids);
+        if (del.error) throw del.error;
+      }
+    } catch (e2) { /* pre-migration or RLS: continue, worst case duplicates */ }
     let n = 0;
+    const total = rows.length * tzList.length;
     for (const r of rows) {
-      btn.textContent = 'Scheduling ' + (++n) + '/' + rows.length + '…';
       const br = await fetch('quiz-bank/' + level + '/' + assignSlug(r.topic) + '.json');
       if (!br.ok) throw new Error('bank');
       const bank = await br.json();
@@ -2931,28 +3078,36 @@ async function savePlanner(btn) {
       const questions = picked.map(function (q) {
         return { q: q.q, options: q.options, answer: q.answer, explanation: q.explanation || '' };
       });
-      const ins = await sb.from('assignments').insert({
-        teacher_id: state.user.id,
-        teacher_name: (state.teacher && state.teacher.display_name) || '',
-        kind: 'homework', title: '📝 ' + r.topic + ' (' + level.toUpperCase() + ')',
-        level: level, topic: assignSlug(r.topic), topic_label: r.topic,
-        question_count: questions.length, questions: questions,
-        student_ids: targets.map(function (s) { return s.user_id; }),
-        note: null, deadline: null,
-        status: 'scheduled', send_at: r.sendAt.toISOString()
-      });
-      if (ins.error) throw ins.error;
+      for (const tz of tzList) {
+        btn.textContent = 'Scheduling ' + (++n) + '/' + total + '…';
+        const sendAt = wallTimeToUtc(r.dateStr, r.timeStr, tz);
+        const ins = await sb.from('assignments').insert({
+          teacher_id: state.user.id,
+          teacher_name: (state.teacher && state.teacher.display_name) || '',
+          kind: 'homework', title: '📝 ' + r.topic + ' (' + level.toUpperCase() + ')',
+          level: level, topic: assignSlug(r.topic), topic_label: r.topic,
+          question_count: questions.length, questions: questions,
+          student_ids: groups[tz].map(function (s) { return s.user_id; }),
+          note: null, deadline: null,
+          status: 'scheduled', send_at: sendAt.toISOString(), send_tz: tz
+        });
+        if (ins.error) throw ins.error;
+      }
     }
+    const gNote = tzList.length > 1
+      ? ' Each day goes out at ' + esc(rows[0].timeStr) + ' in every student\'s own timezone (' +
+        tzList.map(tzShort).map(esc).join(', ') + ').'
+      : ' Each day goes out at ' + esc(rows[0].timeStr) + ' ' + esc(tzShort(tzList[0])) + ' time.';
     document.getElementById('pl-body').innerHTML =
       '<div class="card pl-done"><div class="pl-done-ico">✅</div><h2>Week scheduled!</h2>' +
-      '<p class="muted">' + rows.length + ' assignment' + (rows.length > 1 ? 's' : '') +
-      ' will be sent automatically at the times you picked.</p>' +
+      '<p class="muted">' + rows.length + ' day' + (rows.length > 1 ? 's' : '') +
+      ' scheduled (' + total + ' send' + (total > 1 ? 's' : '') + ').' + gNote + '</p>' +
       '<a class="btn btn-block" href="#/teacher">← Back to dashboard</a></div>';
     window.scrollTo(0, 0);
   } catch (e) {
     const msg = (e && e.message) || '';
     err(/column|schema/i.test(msg)
-      ? 'The scheduling migration has not been run yet — run supabase-assignments-schedule-migration.sql first.'
+      ? 'The planner migration has not been run yet — run supabase-planner-tz-migration.sql first.'
       : 'Could not schedule: ' + (msg || 'check your connection.'));
     btn.disabled = false; btn.textContent = orig;
   }
@@ -3099,7 +3254,7 @@ async function loadTeacherAssignments() {
     let a;
     try {
       a = await sb.from('assignments')
-        .select('id,kind,title,created_at,deadline,student_ids,question_count,status,send_at')
+        .select('id,kind,title,created_at,deadline,student_ids,question_count,status,send_at,send_tz')
         .eq('teacher_id', state.user.id).order('created_at', { ascending: false }).limit(30);
       if (a.error) throw a.error;
     } catch (e2) {
@@ -3127,7 +3282,7 @@ async function loadTeacherAssignments() {
         const total = (x.student_ids || []).length;
         const sched = x.status === 'scheduled';
         const meta = sched && x.send_at
-          ? '⏰ Sends ' + esc(fmtDateTime(x.send_at))
+          ? schedLabel(x.send_at, x.send_tz)
           : esc(fmtDate(x.created_at)) + ' · ' + done + '/' + total + ' done';
         return '<button class="as-row' + (sched ? ' as-sched' : '') + '" data-action="assignment-open" data-i="' + i + '">' +
           '<span class="as-ico">' + (sched ? '⏰' : '📝') + '</span>' +
@@ -3157,7 +3312,7 @@ async function openTeacherAssignment(i) {
     '<div class="modal-ico">' + (r.status === 'scheduled' ? '⏰' : '📝') + '</div>' +
     '<h2>' + esc(r.title) + '</h2>' +
     (r.status === 'scheduled' && r.send_at
-      ? '<p class="muted">Scheduled for ' + esc(fmtDateTime(r.send_at)) + ' — not sent yet.</p>'
+      ? '<p class="muted">' + esc(schedLabel(r.send_at, r.send_tz)).replace(/^⏰ /, '') + ' — not sent yet.</p>'
       : '<p class="muted">' + (r.student_ids || []).length + ' students · ' + results.length + ' completed</p>') +
     '<div class="as-results">' +
     (r.student_ids || []).map(function (uid) {
@@ -3843,6 +3998,20 @@ async function ensureCountrySaved() {
   } catch (e) { /* RPC missing or offline -> retry next open */ }
 }
 
+/* Saves the device IANA timezone (e.g. 'Asia/Tehran') on the profile, updating
+   it whenever it changes (travel). Used for student-local scheduled delivery.
+   Same pattern as ensureCountrySaved: RPC-only write, never breaks the boot. */
+async function ensureTimezoneSaved() {
+  const u = state.user;
+  if (!sb || !u || u.demo) return;
+  let tz = null;
+  try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone; } catch (e) {}
+  if (!tz || u.timezone === tz) return;
+  u.timezone = tz;
+  try { await sb.rpc('set_timezone', { tz: tz }); }
+  catch (e) { /* RPC missing or offline -> retry next open */ }
+}
+
 async function doLogin() {
   const emailEl = document.getElementById('si-email');
   const passEl = document.getElementById('si-pass');
@@ -3977,6 +4146,7 @@ async function enterApp() {
     countryCode: (prof && prof.country_code) || null,
     country: (prof && prof.country) || null,
     countrySource: (prof && prof.country_source) || null,
+    timezone: (prof && prof.timezone) || null,
     welcomeSeenAt: (prof && prof.welcome_seen_at) || null,
   };
   try { localStorage.setItem('el_last_user', u.email); } catch (e) {}
@@ -3984,6 +4154,7 @@ async function enterApp() {
      run in the background instead of blocking the boot sequence. */
   try { identifyPushUser(u.id, u.email, normalizeLevel(level)); } catch (e) {}
   ensureCountrySaved().catch(function () {});
+  ensureTimezoneSaved().catch(function () {});
   migrateLocalToCloud().catch(function () {});
   flushPointsQueue().then(function () { refreshMyPoints().catch(function () {}); },
                           function () { refreshMyPoints().catch(function () {}); });
