@@ -2149,7 +2149,14 @@ body.duo-playing{padding-bottom:0!important;}
 .duo-out-card{background:#fff;border-radius:28px;padding:2.2rem 1.6rem;box-shadow:0 14px 40px rgba(190,130,70,.13);}
 .duo-out-emoji{font-size:3.6rem;margin-bottom:.5rem;}
 .duo-out h2{font-size:1.5rem;margin-bottom:.5rem;color:#1E2A4E;}
-.duo-out p{color:#8A93A8;margin-bottom:1.4rem;line-height:1.65;}
+.duo-out p{color:#8A93A8;margin-bottom:1.2rem;line-height:1.65;}
+.duo-out-btns{display:flex;flex-direction:column;gap:.6rem;}
+.duo-out-btns .btn{border-radius:18px;padding:.95rem;font-size:1rem;font-weight:800;width:100%;}
+.duo-btn-buy{background:linear-gradient(135deg,#FFD43D,#F5A623)!important;border:0!important;color:#5A3E00!important;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;box-shadow:0 8px 20px rgba(245,166,35,.35)!important;}
+.duo-btn-buy:disabled,.duo-btn-review:disabled{opacity:.5;}
+.duo-earn-note{display:none;background:#FFF7DE;border:1px solid #F5E6B8;color:#8A6D1B;border-radius:14px;
+  padding:.7rem .9rem;font-size:.88rem;font-weight:600;text-align:center;}
 /* exit modal */
 .duo-modal-wrap{position:fixed;inset:0;background:rgba(30,42,78,.45);z-index:100;display:flex;align-items:center;
   justify-content:center;padding:1.2rem;}

@@ -4000,6 +4000,7 @@ function buildDuoDeck(m) {
     if (opts.length < 2) return;
     deck.push({
       qtype: 'listen', question: 'Which word did you hear?', audio: w.word_audio,
+      persian: w.persian,
       options: opts, answer: opts.indexOf(w.word), kind: 'word', word: w.word
     });
   });
@@ -4122,7 +4123,11 @@ function duoLoseHeart(q) {
   return q.hearts;
 }
 
-function duoAnswer(idx) {
+/* Chain of pending mistake-saves: the hearts-out "review" button waits for it,
+   so a just-lost heart's mistake is always reviewable (no race). */
+var duoSavePending = Promise.resolve();
+
+async function duoAnswer(idx) {
   const q = state.quiz;
   if (!q || q.answered) return;
   const cur = q.questions[q.idx];
@@ -4134,16 +4139,42 @@ function duoAnswer(idx) {
   if (q.wasCorrect) {
     q.correct++;
   } else {
-    if ((cur.qtype === 'select' || cur.qtype === 'reverse')) {
-      saveMistake({
-        date: q.date, level: q.level, kind: 'word',
-        question: cur.question, options: cur.options,
-        answer: cur.answer, picked: idx
-      });
-    }
+    /* every wrong answer becomes reviewable; chained so the review button never races it */
+    duoSavePending = duoSavePending.catch(function () {}).then(function () {
+      return saveDuoMistake(q, cur, idx);
+    });
     if (duoLoseHeart(q) <= 0) { renderHeartsOut(); return; }
   }
   renderDuoQuizView();
+}
+
+async function saveDuoMistake(q, cur, picked) {
+  const base = { date: q.date, level: q.level, kind: 'word', picked: picked };
+  if (cur.qtype === 'select' || cur.qtype === 'reverse') {
+    await saveMistake(Object.assign({}, base, {
+      question: cur.question, options: cur.options, answer: cur.answer
+    }));
+  } else if (cur.qtype === 'listen' && cur.persian) {
+    await saveMistake(Object.assign({}, base, {
+      question: '\u00AB' + cur.persian + '\u00BB به انگلیسی چی میشه؟',
+      options: cur.options, answer: cur.answer
+    }));
+  } else if (cur.qtype === 'assist') {
+    const correct = cur.tokens.join(' ');
+    const seen = {}, distract = [];
+    seen[correct] = true;
+    let guard = 0;
+    while (distract.length < 3 && guard++ < 25) {
+      const s = shuffleArr(cur.tokens).join(' ');
+      if (!seen[s]) { seen[s] = true; distract.push(s); }
+    }
+    if (!distract.length) return;
+    const opts = shuffleArr([correct].concat(distract));
+    await saveMistake(Object.assign({}, base, {
+      question: 'Put the words in order:',
+      options: opts, answer: opts.indexOf(correct)
+    }));
+  }
 }
 
 function duoPick(bi) {
@@ -4195,10 +4226,14 @@ function renderHeartsOut() {
   $('#view').innerHTML =
     '<div class="duo-out"><div class="duo-out-card"><div class="duo-out-emoji">💔</div>' +
     '<h2>Out of hearts!</h2>' +
-    '<p>You got <strong>' + q.correct + ' / ' + done + '</strong> right.<br>' +
-    'Review your mistakes to earn a heart back ❤️</p>' +
-    '<div class="duo-rbtns"><button class="btn duo-btn-review" data-action="duo-earn-heart">🔁 Review · earn ❤️</button>' +
-    '<button class="btn duo-btn-home" data-action="duo-quit">🏠 Lesson</button></div></div></div>';
+    '<p>You got <strong>' + q.correct + ' / ' + done + '</strong> right.</p>' +
+    '<div class="duo-out-btns">' +
+    '<button class="btn duo-btn-buy" data-action="duo-buy-hearts">⚡ Refill hearts · ' + HEART_REFILL_COST + ' XP</button>' +
+    '<div id="duo-buy-note" class="duo-earn-note" style="display:none"></div>' +
+    '<button class="btn duo-btn-review" data-action="duo-earn-heart">🔁 Review · earn ❤️</button>' +
+    '<div id="duo-earn-note" class="duo-earn-note" style="display:none"></div>' +
+    '<button class="btn duo-btn-home" data-action="duo-quit">🏠 Lesson</button>' +
+    '</div></div></div>';
   window.scrollTo(0, 0);
 }
 
@@ -4228,6 +4263,38 @@ function duoQuit() {
 function duoKeep() {
   const m = document.getElementById('duo-exit-modal');
   if (m) m.remove();
+}
+
+/* Buy a full hearts refill with XP (30 XP). */
+var HEART_REFILL_COST = 30;
+async function buyHearts(btn) {
+  const note = document.getElementById('duo-buy-note');
+  const say = function (msg) {
+    if (note) { note.textContent = msg; note.style.display = 'block'; }
+  };
+  if (btn) btn.disabled = true;
+  try {
+    await refreshMyPoints();
+    const bal = state.myPoints;
+    if (typeof bal !== 'number') {
+      say('Couldn\'t check your XP — check your connection and try again.');
+      if (btn) btn.disabled = false;
+      return;
+    }
+    if (bal < HEART_REFILL_COST) {
+      say('Not enough XP — you have ' + bal + ', need ' + HEART_REFILL_COST + '. 💪');
+      if (btn) btn.disabled = false;
+      return;
+    }
+    await awardPoints('hearts_refill', -HEART_REFILL_COST, 'hr-' + Date.now(), true);
+    await refreshMyPoints();
+    setHearts(5);
+    say('❤️ Hearts refilled! Starting a new run…');
+    setTimeout(function () { startQuiz('word'); }, 900);
+  } catch (e) {
+    say('Something went wrong — please try again.');
+    if (btn) btn.disabled = false;
+  }
 }
 
 /* ---------------- streak engine (local-first, Supabase RPC when migrated) ----------------
@@ -5135,13 +5202,26 @@ function bindEvents() {
     else if (a === 'duo-quit') duoQuit();
     else if (a === 'duo-keep') duoKeep();
     else if (a === 'duo-earn-heart') {
-      state.quiz = null;
-      document.body.classList.remove('duo-playing');
-      getMistakes().then(function (arr) {
-        if (arr.length) startQuiz('mistakes');
-        else go('review');
+      /* wait for the just-saved mistake (max ~5s), then open the review quiz */
+      t.disabled = true;
+      var waitSave = duoSavePending.catch(function () {});
+      var timeout = new Promise(function (res) { setTimeout(res, 5000); });
+      Promise.race([waitSave, timeout]).then(function () { return getMistakes(); }).then(function (arr) {
+        if (arr.length) {
+          state.quiz = null;
+          document.body.classList.remove('duo-playing');
+          startQuiz('mistakes');
+        } else {
+          t.disabled = false;
+          var note = document.getElementById('duo-earn-note');
+          if (note) {
+            note.textContent = 'No mistakes to review yet — hearts refill tomorrow! 🌅';
+            note.style.display = 'block';
+          }
+        }
       });
     }
+    else if (a === 'duo-buy-hearts') { buyHearts(t); }
     else if (a === 'practice-again') {
       getMistakes().then(function (arr) {
         if (arr.length) startQuiz('mistakes');
