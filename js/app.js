@@ -3107,9 +3107,16 @@ async function signInWithGoogle(prefix, btn) {
   authError(prefix, '');
   if (btn) btn.disabled = true;
   try {
+    /* Carry the referral code through the OAuth round-trip. redirectTo used to
+       be the bare origin, so ?ref= was lost on return; and localStorage often
+       does NOT survive the mobile browser switch (in-app browser -> system
+       browser for the Google screen). With ?ref= in redirectTo, getRefCode()
+       picks it up from the URL again on return, in any browser. */
+    const ref = getRefCode();
+    const redirectTo = window.location.origin + '/' + (ref ? '?ref=' + encodeURIComponent(ref) : '');
     const { error } = await sb.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: window.location.origin + '/' }
+      options: { redirectTo: redirectTo }
     });
     if (error) throw error;
     // The browser leaves for Google now; on return init() picks up the session.
@@ -3424,7 +3431,11 @@ async function enterApp() {
   try {
     const rc = getRefCode();
     if (rc && (!prof || !prof.referred_by)) {
-      sb.from('profiles').update({ referred_by: rc }).eq('id', u.id).then(function () {}, function () {});
+      sb.from('profiles').update({ referred_by: rc }).eq('id', u.id).then(function () {}, function () {
+        // Update failed (row missing or RLS): fall back to a minimal upsert.
+        sb.from('profiles').upsert({ id: u.id, email: u.email, referred_by: rc }, { onConflict: 'id' })
+          .then(function () {}, function () {});
+      });
     }
   } catch (e) {}
   const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
