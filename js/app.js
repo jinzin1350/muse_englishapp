@@ -3928,17 +3928,23 @@ function finishQuiz() {
     if (heartEarned) setHearts(getHearts() + 1);
   }
   state.quiz = null;
+  const praise = pct >= 85 ? 'Excellent work! ✨' : pct >= 60 ? 'Good — keep practicing! 💪' : 'Keep going — you\'ve got this! 📚';
+  const xpGain = q.kind === 'word' ? 10 + q.correct : 10;
   $('#view').innerHTML =
-  '<div class="card"><div class="score-hero">' +
-    '<div class="score-big">' + q.correct + '/' + total + '</div>' +
-    '<div class="score-sub">' + pct + '% · ' +
-    (pct >= 85 ? 'Excellent work! 🌟' : pct >= 60 ? 'Good — keep practicing! 💪' : 'Keep going — review your mistakes below. 📚') +
-    (heartEarned ? '<br>❤️ +1 heart earned!' : '') +
-    '</div></div>' +
-    '<div class="btn-row">' +
-      '<a class="btn" href="#/home">Home</a>' +
-      '<a class="btn btn-ghost" href="#/review">Review</a>' +
-    '</div></div>';
+  '<div class="duo-results"><div class="duo-rcard">' +
+    '<div class="duo-hero"><img src="/media/quiz/trophy.png" alt="" loading="lazy"></div>' +
+    '<div class="duo-score-big">' + q.correct + '/' + total + '</div>' +
+    '<div class="duo-score-sub">' + pct + '% · ' + praise +
+    (heartEarned ? '<br>❤️ +1 heart earned!' : '') + '</div>' +
+    '<div class="duo-pills">' +
+      '<div class="duo-pill green"><span class="pi">✓</span><span class="pn">' + q.correct + '</span><span class="pl">correct</span></div>' +
+      '<div class="duo-pill red"><span class="pi">✕</span><span class="pn">' + (total - q.correct) + '</span><span class="pl">to review</span></div>' +
+      '<div class="duo-pill gold"><span class="pi">★</span><span class="pn">+' + xpGain + '</span><span class="pl">XP</span></div>' +
+    '</div>' +
+    '<div class="duo-rbtns">' +
+      '<a class="btn duo-btn-home" href="#/home">🏠 Home</a>' +
+      '<button class="btn duo-btn-review" data-action="practice-again">🔁 Review →</button>' +
+    '</div></div></div>';
   window.scrollTo(0, 0);
 }
 
@@ -4022,9 +4028,13 @@ function duoTopbar(q) {
     '<span class="duo-hearts">❤️ ' + q.hearts + '</span></div>';
 }
 
+function duoHero() {
+  return '<div class="duo-hero"><img src="/media/quiz/plane.png" alt="" loading="lazy"></div>';
+}
+
 function duoAssistHTML(q, cur) {
-  let html = '<div class="duo-q">' + esc(cur.question) + '</div>';
-  if (cur.hint) html += '<div class="duo-hint" dir="rtl">💡 ' + esc(cur.hint) + '</div>';
+  let html = duoHero() + '<div class="duo-q">' + esc(cur.question) + '</div>';
+  if (cur.hint) html += '<div class="duo-hint-wrap"><span class="duo-hint">💡 ' + esc(cur.hint) + '</span></div>';
   html += '<div class="duo-slots">' + (cur.placed.length
     ? cur.placed.map(function (bi) {
       return '<button class="duo-tok" data-action="duo-unpick" data-bi="' + bi + '"' +
@@ -4039,28 +4049,36 @@ function duoAssistHTML(q, cur) {
   }).join('') + '</div>';
   if (!q.answered) {
     const ready = cur.placed.length === cur.tokens.length;
-    html += '<button class="btn btn-orange btn-block duo-check" data-action="duo-check"' +
+    html += '<button class="btn btn-block duo-check" data-action="duo-check"' +
       (ready ? '' : ' disabled') + '>CHECK</button>';
   }
   return html;
 }
 
+function duoTrayText(q, cur) {
+  /* short explanation line shown under the tray title */
+  if (q.wasCorrect) {
+    if (cur.qtype === 'select') return 'Nice! "' + cur.options[cur.answer] + '" is right.';
+    if (cur.qtype === 'reverse' || cur.qtype === 'listen') return 'Well done! 🎉';
+    return 'Perfect sentence! 🎉';
+  }
+  if (cur.qtype === 'assist') return cur.tokens.join(' ');
+  return cur.options[cur.answer];
+}
+
 function duoFooter(q, cur) {
   const ok = q.wasCorrect;
-  let msg;
-  if (ok) {
-    msg = '<div class="duo-fb-title">🎉 Correct!</div>';
-  } else if (cur.qtype === 'assist') {
-    msg = '<div class="duo-fb-title">Correct answer:</div><div class="duo-fb-answer">' +
-      esc(cur.tokens.join(' ')) + '</div>';
-  } else {
-    msg = '<div class="duo-fb-title">Correct answer:</div><div class="duo-fb-answer">' +
-      esc(cur.options[cur.answer]) + '</div>';
-  }
+  const title = ok ? 'Correct answer!' : (cur.qtype === 'assist' ? 'Not quite!' : 'Correct answer:');
+  const ico = ok ? '✓' : '✕';
   const last = q.idx + 1 >= q.questions.length;
-  return '<div class="duo-footer ' + (ok ? 'ok' : 'bad') + '"><div class="duo-fb-inner">' + msg +
-    '<button class="btn btn-block duo-continue ' + (ok ? 'btn-green' : 'btn-red') + '" data-action="duo-next">' +
-    (last ? 'See my score →' : 'CONTINUE →') + '</button></div></div>';
+  return '<div class="duo-tray-wrap"><div class="duo-tray-inner">' +
+    '<div class="duo-tray ' + (ok ? 'ok' : 'bad') + '">' +
+    '<span class="duo-tray-ico">' + ico + '</span>' +
+    '<div><div class="duo-tray-title">' + title + '</div>' +
+    '<div class="duo-tray-text">' + esc(duoTrayText(q, cur)) + '</div></div></div>' +
+    '<button class="duo-continue ' + (ok ? 'ok' : 'bad') + '" data-action="duo-next">' +
+    (last ? 'See my score' : 'Continue') + ' <span>→</span></button>' +
+    '</div></div>';
 }
 
 function renderDuoQuizView() {
@@ -4073,6 +4091,7 @@ function renderDuoQuizView() {
   if (cur.qtype === 'assist') {
     html += duoAssistHTML(q, cur);
   } else {
+    html += duoHero();
     if (cur.qtype === 'listen') {
       html += '<div class="duo-listen"><button class="duo-speaker" data-action="play-track" data-src="' +
         esc(cur.audio) + '" data-title="' + esc(cur.word) + '" aria-label="Hear it again">🔊</button>' +
@@ -4081,15 +4100,15 @@ function renderDuoQuizView() {
       html += '<div class="duo-q"' + (cur.rtl ? ' dir="rtl"' : '') + '>' + esc(cur.question) + '</div>';
     }
     html += '<div class="duo-opts">' + cur.options.map(function (opt, i) {
-      let cls = 'duo-opt';
+      let cls = 'duo-opt', badge = '';
       if (q.answered) {
-        if (i === cur.answer) cls += ' ok';
-        else if (i === q.picked) cls += ' bad';
+        if (i === cur.answer) { cls += ' ok'; badge = '<span class="opt-badge">✓</span>'; }
+        else if (i === q.picked) { cls += ' bad'; badge = '<span class="opt-badge">✕</span>'; }
         else cls += ' dim';
       }
       return '<button class="' + cls + '" data-action="duo-opt" data-idx="' + i + '"' +
         (q.answered ? ' disabled' : '') + '><span class="opt-key">' + letters[i] + '</span>' +
-        '<span>' + esc(opt) + '</span></button>';
+        '<span class="opt-text">' + esc(opt) + '</span>' + badge + '</button>';
     }).join('') + '</div>';
   }
   html += '</div>';
@@ -4174,12 +4193,12 @@ function renderHeartsOut() {
   document.body.classList.add('duo-playing');
   const done = q.idx + 1;
   $('#view').innerHTML =
-    '<div class="duo-out"><div class="duo-out-emoji">💔</div>' +
+    '<div class="duo-out"><div class="duo-out-card"><div class="duo-out-emoji">💔</div>' +
     '<h2>Out of hearts!</h2>' +
     '<p>You got <strong>' + q.correct + ' / ' + done + '</strong> right.<br>' +
     'Review your mistakes to earn a heart back ❤️</p>' +
-    '<button class="btn btn-orange btn-block" data-action="duo-earn-heart">Review mistakes · earn ❤️</button>' +
-    '<button class="btn btn-ghost btn-block" data-action="duo-quit">Back to lesson</button></div>';
+    '<div class="duo-rbtns"><button class="btn duo-btn-review" data-action="duo-earn-heart">🔁 Review · earn ❤️</button>' +
+    '<button class="btn duo-btn-home" data-action="duo-quit">🏠 Lesson</button></div></div></div>';
   window.scrollTo(0, 0);
 }
 
@@ -4190,7 +4209,7 @@ function duoExit() {
   d.id = 'duo-exit-modal';
   d.innerHTML = '<div class="duo-modal"><h3>Quit this quiz?</h3>' +
     '<p>Your progress will be lost.</p>' +
-    '<button class="btn btn-red btn-block" data-action="duo-quit">Quit</button>' +
+    '<button class="duo-continue bad btn-block" data-action="duo-quit">Quit</button>' +
     '<button class="btn btn-ghost btn-block" data-action="duo-keep">Keep playing</button></div>';
   $('#view').appendChild(d);
 }
