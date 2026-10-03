@@ -2307,18 +2307,28 @@ function inboxListHTML(msgs) {
   }).join('');
 }
 async function renderInbox(v) {
-  v.innerHTML = '<div class="tch-wrap"><h1>💬 Messages</h1><div id="inbox-list"><div class="empty">Loading…</div></div></div>';
+  var cached = state.inboxMessages;
+  v.innerHTML = '<div class="tch-wrap"><h1>💬 Messages</h1><div id="inbox-list">' +
+    ((cached && cached.length) ? inboxListHTML(cached) : '<div class="empty">Loading…</div>') + '</div></div>';
+  var host = document.getElementById('inbox-list');
+  if (!sb) {
+    if (host && !(cached && cached.length)) host.innerHTML = '<div class="empty">You appear to be offline. Connect to the internet to load messages.</div>';
+    return;
+  }
   try {
     const r = await sb.rpc('my_messages');
-    const msgs = (!r.error && r.data) ? r.data : [];
+    if (r.error) throw r.error;
+    const msgs = r.data || [];
     state.inboxMessages = msgs;
-    const host = document.getElementById('inbox-list');
     if (host) host.innerHTML = inboxListHTML(msgs);
     await sb.rpc('mark_messages_read').catch(function () {});
     refreshInboxBadge();
   } catch (e) {
-    const host = document.getElementById('inbox-list');
-    if (host) host.innerHTML = '<div class="empty">Could not load messages.</div>';
+    if (host && !(cached && cached.length)) {
+      host.innerHTML = '<div class="empty">Could not load messages.' +
+        '<div class="muted" style="font-size:0.8rem;margin-top:0.4rem">' + esc((e && e.message) || String(e)) + '</div>' +
+        '<button class="btn btn-block" data-action="inbox-retry" style="max-width:220px;margin:1rem auto 0">Try again</button></div>';
+    }
   }
 }
 /* Teacher -> student composer (from the student detail card). */
@@ -4752,6 +4762,7 @@ function bindEvents() {
     else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-message') teacherMessageComposer(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'inbox-open') { closeModal(); go('inbox'); }
+    else if (a === 'inbox-retry') { renderInbox(document.getElementById('view')); }
     else if (a === 'google-signin') signInWithGoogle(t.getAttribute('data-prefix'), t);
     else if (a === 'approve-teacher') adminApproveTeacher(t.getAttribute('data-id'));
     else if (a === 'reject-teacher') adminRejectTeacher(t.getAttribute('data-id'));
@@ -4858,6 +4869,7 @@ window.MuseApp = {
   queuePointsPopup: queuePointsPopup, ensureNickname: ensureNickname,
   renderChallenge: renderChallenge, awardPoints: awardPoints, demoLogin: demoLogin,
   launchCelebration: launchCelebration, maybeShowInboxPrompt: maybeShowInboxPrompt,
+  renderInbox: renderInbox,
 };
 
 })();
