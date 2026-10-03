@@ -4205,18 +4205,25 @@ async function maybeShowWelcome() {
   try { if (localStorage.getItem('el_welcome_seen_' + u.id)) return; } catch (e) {}
   const lvl = normalizeLevel(u.level);
   const fa = (lvl === 'a1' || lvl === 'a2');
+  const offerTour = !tutorialSeen();
   showModal(
     fa
       ? '<div dir="rtl" lang="fa"><div class="modal-ico">🎉</div>' +
         '<h2>خوش اومدی!</h2>' +
         '<p>هر روز <b>ساعت ۷ صبح</b> به وقت خودت، درس جدیدت آماده‌ست.</p>' +
         '<p>فقط کافیه روزی حدود <b>۱۵ دقیقه</b> وقت بذاری — کلی کلمه، جمله و نکته جدید یاد می‌گیری.</p>' +
-        '<button class="btn btn-block" data-action="modal-close">شروع کن</button></div>'
+        (offerTour
+          ? '<button class="btn btn-block" data-action="welcome-tour">بزن بریم، یه دور بزنیم 🌱</button>' +
+            '<button class="tut-skip" data-action="modal-close" style="margin-top:.7rem">فعلاً نه</button>'
+          : '<button class="btn btn-block" data-action="modal-close">شروع کن</button>') + '</div>'
       : '<div class="modal-ico">🎉</div>' +
         '<h2>Welcome!</h2>' +
         '<p>Your new lesson is ready every day at <b>7:00 AM</b>, your time.</p>' +
         '<p>Just spend about <b>15 minutes</b> a day — you\u2019ll pick up loads of new words, sentences and tips.</p>' +
-        '<button class="btn btn-block" data-action="modal-close">Let\u2019s start</button>',
+        (offerTour
+          ? '<button class="btn btn-block" data-action="welcome-tour">Take the tour 🌱</button>' +
+            '<button class="tut-skip" data-action="modal-close" style="margin-top:.7rem">Not now</button>'
+          : '<button class="btn btn-block" data-action="modal-close">Let\u2019s start</button>'),
     true
   );
   // Mark as seen (DB first, localStorage as backup so it never double-shows).
@@ -4224,6 +4231,198 @@ async function maybeShowWelcome() {
   u.welcomeSeenAt = now;
   try { localStorage.setItem('el_welcome_seen_' + u.id, '1'); } catch (e) {}
   try { if (sb) await sb.rpc('set_welcome_seen'); } catch (e) {}
+}
+
+/* ---------------- guided first-run tutorial ----------------
+   New users get a hands-on tour instead of a lecture: words -> quiz ->
+   podcast -> challenge -> progress -> review. Action steps spotlight the
+   real control and advance when the user taps it; info steps are read-and-go.
+   Shown once per user (localStorage); replayable from Profile > Help. */
+const tutState = { active: false, i: 0 };
+function tutorialSeen() {
+  try { return !!localStorage.getItem('el_tutorial_seen_' + (state.user && state.user.id)); }
+  catch (e) { return false; }
+}
+function markTutorialSeen() {
+  try { localStorage.setItem('el_tutorial_seen_' + (state.user && state.user.id), '1'); } catch (e) {}
+}
+function tutLang() {
+  const lvl = normalizeLevel(state.user && state.user.level);
+  return (lvl === 'a1' || lvl === 'a2') ? 'fa' : 'en';
+}
+function buildTutorialSteps() {
+  const fa = tutLang() === 'fa';
+  const T = function (f, e) { return fa ? f : e; };
+  const hasLesson = !!(state.lesson && state.lesson.date);
+  const steps = [
+    { id: 'words', view: 'lesson', lesson: true, selector: '.speaker-btn', tapAdvance: '.speaker-btn',
+      title: '📝', text: T('کلمات امروز اینجان 👆 بزن رو 🔊 تا تلفظ هر کلمه رو بشنوی', 'Today\u2019s words live here 👆 Tap 🔊 to hear each word\u2019s pronunciation') },
+    { id: 'quiztab', view: 'lesson', lesson: true, selector: '.lesson-tab[data-tab="quiz"]',
+      doneWhen: function () { return state.lessonTab === 'quiz'; },
+      title: '🎯', text: T('حالا تب کوییز — بزن روش', 'Now the Quiz tab — tap it') },
+    { id: 'quizopt', lesson: true, selector: '.quiz-opt', tapAdvance: '.quiz-opt',
+      title: '⚡', text: T('یه جواب انتخاب کن! هر جواب درست بهت XP میده', 'Pick an answer! Every correct answer earns you XP') },
+    { id: 'podtab', view: 'lesson', lesson: true, selector: '.lesson-tab[data-tab="podcast"]',
+      doneWhen: function () { return state.lessonTab === 'podcast'; },
+      title: '🎧', text: T('تب پادکست — بزن روش', 'The Podcast tab — tap it') },
+    { id: 'podplay', lesson: true, selector: '[data-audio-card] .play-btn', tapAdvance: '[data-audio-card] .play-btn',
+      title: '▶️', text: T('بزن play — همه‌ی کلمات امروز توی این پادکست استفاده شدن', 'Hit play — every word from today is used in this podcast') },
+    { id: 'challenge', view: 'challenge', kind: 'info',
+      title: '🏆', text: T('چالش — اینجا با بقیه‌ی زبان‌آموزها رقابت می‌کنی و با هر کاری امتیاز جمع می‌کنی', 'Challenge — compete with other learners here and earn points for everything you do') },
+    { id: 'progress', view: 'scores', kind: 'info',
+      title: '📊', text: T('پیشرفت — نمودارها، دقتت توی هر موضوع و گزارش هوشمندت اینجاست', 'Progress — your charts, per-topic accuracy and AI report live here') },
+    { id: 'review', view: 'review', kind: 'info',
+      title: '🔁', text: T('مرور — کلماتی که غلط بزنی میان اینجا تا دوباره مرورشون کنی', 'Review — words you miss come here so you can review them') }
+  ];
+  return hasLesson ? steps : steps.filter(function (s) { return !s.lesson; });
+}
+function startTutorial() {
+  if (tutState.active || !state.user || state.user.demo) return;
+  tutState.active = true; tutState.i = 0;
+  document.addEventListener('click', tutClickHandler, true);
+  window.addEventListener('resize', tutReposition);
+  window.addEventListener('scroll', tutReposition, true);
+  tutorialStep();
+}
+function endTutorial() {
+  tutState.active = false;
+  document.removeEventListener('click', tutClickHandler, true);
+  window.removeEventListener('resize', tutReposition);
+  window.removeEventListener('scroll', tutReposition, true);
+  closeTutorialUI();
+  markTutorialSeen();
+}
+function tutorialNext() {
+  if (!tutState.active) return;
+  const steps = buildTutorialSteps();
+  tutState.i++;
+  if (tutState.i >= steps.length) { showTutorialDone(); return; }
+  tutorialStep();
+}
+function tutWaitFor(selector, ms) {
+  return new Promise(function (resolve) {
+    const t0 = Date.now();
+    (function poll() {
+      let el = null;
+      try { el = document.querySelector(selector); } catch (e) {}
+      if (el) return resolve(true);
+      if (Date.now() - t0 > (ms || 3500)) return resolve(false);
+      setTimeout(poll, 250);
+    })();
+  });
+}
+function tutGo(view) {
+  /* Tutorial navigation: intentionally leaves the half-answered demo quiz
+     behind (nothing is saved until a quiz finishes), so no confirm dialog. */
+  state.quiz = null;
+  const h = '#/' + view;
+  if (window.location.hash === h) { onRoute(); }
+  else { window.location.hash = h; }
+}
+async function tutorialStep() {
+  const steps = buildTutorialSteps();
+  if (tutState.i >= steps.length) { showTutorialDone(); return; }
+  const s = steps[tutState.i];
+  closeTutorialUI();
+  if (s.view && state.view !== s.view) tutGo(s.view);
+  if (s.selector) {
+    const ok = await tutWaitFor(s.selector, 3500);
+    if (!tutState.active) return;
+    if (!ok) { tutorialNext(); return; } // element missing -> skip gracefully
+  }
+  if (!tutState.active) return;
+  showTutorialUI(s, tutState.i, steps.length);
+}
+function tutDots(i, n) {
+  let h = '<div class="tut-dots" aria-hidden="true">';
+  for (let k = 0; k < n; k++) h += '<i class="' + (k === i ? 'on' : '') + '"></i>';
+  return h + '</div>';
+}
+function showTutorialUI(s, i, n) {
+  const fa = tutLang() === 'fa';
+  const dir = fa ? 'rtl' : 'ltr';
+  const nextLbl = fa ? 'بعدی' : 'Next';
+  const skipLbl = fa ? 'رد شو' : 'Skip tour';
+  const ov = document.createElement('div');
+  ov.id = 'tut-ov';
+  if (s.kind === 'info') {
+    ov.innerHTML = '<div class="tut-dim"></div>' +
+      '<div class="tut-card" dir="' + dir + '" lang="' + (fa ? 'fa' : 'en') + '">' +
+      '<div class="tut-ico">' + s.title + '</div><p>' + esc(s.text) + '</p>' + tutDots(i, n) +
+      '<div class="tut-btns"><button class="btn" data-action="tut-next">' + nextLbl + '</button></div>' +
+      '<button class="tut-skip" data-action="tut-skip">' + skipLbl + '</button></div>';
+  } else {
+    ov.innerHTML = '<div id="tut-hole"></div>' +
+      '<div class="tut-bubble" id="tut-bubble" dir="' + dir + '" lang="' + (fa ? 'fa' : 'en') + '">' +
+      '<div class="tut-ico">' + s.title + '</div><p>' + esc(s.text) + '</p>' + tutDots(i, n) +
+      '<div class="tut-btns"><button class="btn btn-sm" data-action="tut-next">' + nextLbl + '</button>' +
+      '<button class="tut-skip" data-action="tut-skip">' + skipLbl + '</button></div></div>';
+  }
+  document.body.appendChild(ov);
+  tutReposition();
+  /* Bring the spotlighted control into view for spotlight steps. */
+  if (s.kind !== 'info' && s.selector) {
+    try {
+      const el = document.querySelector(s.selector);
+      if (el) el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    } catch (e) {}
+    setTimeout(tutReposition, 450);
+  }
+}
+function showTutorialDone() {
+  closeTutorialUI();
+  const fa = tutLang() === 'fa';
+  const ov = document.createElement('div');
+  ov.id = 'tut-ov';
+  ov.innerHTML = '<div class="tut-dim"></div>' +
+    '<div class="tut-card" dir="' + (fa ? 'rtl' : 'ltr') + '" lang="' + (fa ? 'fa' : 'en') + '">' +
+    '<div class="tut-ico">🎉</div><h2>' + (fa ? 'تمومه!' : 'That\u2019s it!') + '</h2>' +
+    '<p>' + esc(fa ? 'از فردا هر روز یه درس جدید داری — فقط ۱۵ دقیقه کافیه. فردا منتظرتم 🌱'
+                   : 'A new lesson waits every day — just 15 minutes. See you tomorrow 🌱') + '</p>' +
+    '<button class="btn btn-block" data-action="tut-finish">' + (fa ? 'شروع 🚀' : 'Let\u2019s go 🚀') + '</button></div>';
+  document.body.appendChild(ov);
+}
+function closeTutorialUI() {
+  const ov = document.getElementById('tut-ov');
+  if (ov && ov.parentNode) ov.parentNode.removeChild(ov);
+}
+function tutReposition() {
+  if (!tutState.active) return;
+  const steps = buildTutorialSteps();
+  const s = steps[tutState.i];
+  const hole = document.getElementById('tut-hole');
+  if (!s || !hole || s.kind === 'info' || !s.selector) return;
+  let el = null;
+  try { el = document.querySelector(s.selector); } catch (e) {}
+  if (!el) return;
+  const r = el.getBoundingClientRect();
+  const pad = 7;
+  hole.style.left = Math.max(4, r.left - pad) + 'px';
+  hole.style.top = Math.max(4, r.top - pad) + 'px';
+  hole.style.width = (r.width + pad * 2) + 'px';
+  hole.style.height = (r.height + pad * 2) + 'px';
+}
+/* Capture-phase: lets the tap work normally AND advances action steps. */
+function tutClickHandler(e) {
+  if (!tutState.active) return;
+  const steps = buildTutorialSteps();
+  const s = steps[tutState.i];
+  if (!s) return;
+  const stepId = tutState.i;
+  if (s.tapAdvance && e.target && e.target.closest) {
+    let hit = false;
+    try { hit = !!e.target.closest(s.tapAdvance); } catch (err) {}
+    if (hit) {
+      setTimeout(function () { if (tutState.active && tutState.i === stepId) tutorialNext(); }, 900);
+      return;
+    }
+  }
+  if (s.doneWhen) {
+    setTimeout(function () {
+      if (!tutState.active || tutState.i !== stepId) return;
+      try { if (s.doneWhen()) tutorialNext(); } catch (err) {}
+    }, 700);
+  }
 }
 
 async function doLogout() {
@@ -4678,6 +4877,8 @@ function renderProfile(v) {
     '<button class="btn btn-sm" data-action="save-country">Save country</button>' +
   '</div>' +
 
+  '<div class="section-title"><h2>Help</h2></div>' +
+  '<div class="card plain"><button class="btn btn-ghost btn-block" data-action="tut-replay" style="margin-top:0">🎓 App tour — show me around</button></div>' +
   '<div class="section-title"><h2>Account</h2></div>' +
   '<div class="card plain"><button class="btn btn-ghost btn-block" data-action="logout" style="margin-top:0">Log out</button></div>';
 }
@@ -6295,6 +6496,7 @@ function bindEvents() {
     else if (a === 'save-level') saveWaitingLevel();
     else if (a === 'save-country') saveCountryManual();
     else if (a === 'logout') doLogout();
+    else if (a === 'tut-replay') startTutorial();
     else if (a === 'open-lesson') { state.lessonTab = 'words'; go('lesson', t.getAttribute('data-date')); }
     else if (a === 'today-cta') {
       const d = t.getAttribute('data-date');
@@ -6448,9 +6650,19 @@ function bindEvents() {
     if (!t) return;
     const ma = t.getAttribute('data-action');
     if (ma === 'modal-close') closeModal();
+    else if (ma === 'welcome-tour') { closeModal(); startTutorial(); }
     else if (ma === 'teacher-message-send') teacherMessageSend(parseInt(t.getAttribute('data-i'), 10), t);
     else if (ma === 'assignment-create') createAssignment(t);
     else if (ma === 'inbox-open') { closeModal(); go('inbox'); }
+  });
+  // Tutorial overlay buttons (also on document.body, outside #view).
+  document.addEventListener('click', function (e) {
+    const t = e.target.closest('#tut-ov [data-action]');
+    if (!t) return;
+    const ta = t.getAttribute('data-action');
+    if (ta === 'tut-next') tutorialNext();
+    else if (ta === 'tut-skip') endTutorial();
+    else if (ta === 'tut-finish') { endTutorial(); go('home'); }
   });
   $('#mp-toggle').addEventListener('click', function () {
     if (!player.src) return;

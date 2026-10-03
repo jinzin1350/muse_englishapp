@@ -2276,6 +2276,20 @@ body.duo-playing{padding-bottom:0!important;}
 .pl-last{margin-left:auto;font-size:.8rem;color:#b3540f;background:#fff4e0;border-radius:999px;padding:.15rem .6rem}
 .pl-row{display:grid;grid-template-columns:1fr 92px 108px;gap:.5rem}
 .pl-sched{font-size:.8rem;margin-top:.35rem;min-height:1.1em;color:#b3540f}
+/* ---- guided first-run tutorial ---- */
+#tut-ov{position:fixed;inset:0;z-index:9990;pointer-events:none}
+#tut-hole{position:fixed;border-radius:14px;box-shadow:0 0 0 9999px rgba(8,12,26,.72);pointer-events:none;border:2px solid #ff9f2e;transition:left .25s,top .25s,width .25s,height .25s}
+.tut-dim{position:absolute;inset:0;background:rgba(8,12,26,.72);pointer-events:auto}
+.tut-bubble{position:fixed;left:16px;right:16px;bottom:86px;background:#fff;border-radius:16px;padding:14px 16px 12px;box-shadow:0 8px 30px rgba(0,0,0,.35);pointer-events:auto;z-index:9992}
+.tut-card{position:fixed;left:24px;right:24px;top:50%;transform:translateY(-50%);background:#fff;border-radius:18px;padding:22px 20px 16px;pointer-events:auto;z-index:9992;box-shadow:0 12px 40px rgba(0,0,0,.4);text-align:center;max-width:420px;margin:0 auto}
+.tut-card h2{font-family:Georgia,serif;color:#1e2a4e;margin:.3rem 0 .5rem}
+.tut-ico{font-size:2.1rem;line-height:1}
+.tut-bubble p,.tut-card p{margin:.5rem 0;color:#3c4763;font-size:.95rem;line-height:1.55}
+.tut-dots{display:flex;gap:6px;justify-content:center;margin:.7rem 0 .3rem}
+.tut-dots i{width:8px;height:8px;border-radius:50%;background:#e2d9c8}
+.tut-dots i.on{background:#ff9f2e}
+.tut-btns{display:flex;gap:.6rem;justify-content:center;margin-top:.4rem}
+.tut-skip{background:none;border:none;color:#8a8fa3;font-size:.85rem;text-decoration:underline;cursor:pointer;padding:.4rem}
 .pl-done{text-align:center;padding:2rem 1.2rem}
 .pl-done-ico{font-size:3rem}
 .pl-done h2{font-family:Georgia,serif;color:#1e2a4e}
