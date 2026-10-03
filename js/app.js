@@ -4542,14 +4542,80 @@ function renderAdmin(v) {
     '<div id="admin-analytics"><div class="empty">Loading…</div></div></div>' +
     '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>🍎 Teachers</b> — requests, invite codes and manual add.</p>' +
     '<div id="admin-teachers"><div class="empty">Loading…</div></div></div>' +
+    '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>🤖 Telegram Bot</b> — @muse_eng_bot schedule & content.</p>' +
+    '<div id="admin-bot"><div class="empty">Loading…</div></div></div>' +
     '<div class="card plain"><p class="muted" style="margin:0">Set each user\'s level. New users appear as <b>pending</b> first.</p></div>' +
     '<div id="admin-list"><div class="empty">Loading…</div></div>';
   loadAdminAnalytics();
-  loadAdminUsers().then(function () { loadAdminTeachers(); });
+  loadAdminUsers().then(function () { loadAdminTeachers(); loadAdminBot(); });
 }
 
 function slugify(s) {
   return String(s || '').toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 32) || 'teacher';
+}
+
+/* ---------------- admin: telegram bot control (@muse_eng_bot) ---------------- */
+async function loadAdminBot() {
+  const host = document.getElementById('admin-bot');
+  if (!host) return;
+  let cfg = null;
+  try {
+    const r = await sb.from('bot_config').select('*').eq('id', 1).maybeSingle();
+    if (r.error) throw r.error;
+    cfg = r.data;
+  } catch (e) { cfg = null; }
+  if (!cfg) {
+    host.innerHTML = '<p class="muted">Bot config table not found. Run <code>supabase-bot-config-migration.sql</code> in the Supabase SQL Editor first.</p>';
+    return;
+  }
+  const lv = cfg.levels || [];
+  const cb = function (id, label, isOn) {
+    return '<label class="bot-check"><input type="checkbox" id="' + id + '"' + (isOn ? ' checked' : '') + '> ' + label + '</label>';
+  };
+  host.innerHTML =
+    '<div class="bot-grid">' +
+    '<label class="bot-row"><span>Bot enabled</span><input type="checkbox" id="bot-enabled" class="bot-switch"' + (cfg.enabled ? ' checked' : '') + '></label>' +
+    '<label class="bot-row"><span>Posting hours (Tehran)</span><span class="bot-hours"><input type="number" id="bot-start" min="0" max="23" value="' + cfg.start_hour + '"> – <input type="number" id="bot-end" min="1" max="24" value="' + cfg.end_hour + '"></span></label>' +
+    '<label class="bot-row"><span>Post every N hours</span><input type="number" id="bot-interval" min="1" max="12" value="' + cfg.interval_hours + '"></label>' +
+    '<div class="bot-row"><span>Content</span><span class="bot-checks">' + cb('bot-words', '📇 Word cards', cfg.send_words) + cb('bot-quiz', '❓ Quizzes', cfg.send_quiz) + cb('bot-podcast', '🎧 Podcast', cfg.send_podcast) + cb('bot-shadowing', '🗣️ Shadowing', cfg.send_shadowing) + '</span></div>' +
+    '<label class="bot-row"><span>Quiz every N posts</span><input type="number" id="bot-quizevery" min="2" max="12" value="' + cfg.quiz_every + '"></label>' +
+    '<div class="bot-row"><span>Word levels</span><span class="bot-checks">' +
+      ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'].map(function (l) { return cb('bot-lv-' + l, l.toUpperCase(), lv.indexOf(l) !== -1); }).join('') +
+    '</span></div>' +
+    '</div>' +
+    '<div style="margin-top:0.7rem"><button class="btn btn-sm" data-action="bot-save">Save bot settings</button> ' +
+    '<span class="muted" id="bot-status" style="font-size:0.85rem;margin-left:0.5rem"></span></div>' +
+    '<p class="muted" style="font-size:0.8rem;margin:0.6rem 0 0">Settings take effect on the next hourly bot run. Hours are Asia/Tehran.</p>';
+}
+
+async function saveAdminBot(btn) {
+  const status = document.getElementById('bot-status');
+  const say = function (t, ok) { if (status) { status.textContent = t; status.style.color = ok ? '#2e7d32' : '#c62828'; } };
+  const val = function (id) { const el = document.getElementById(id); return el ? el.value : ''; };
+  const isOn = function (id) { const el = document.getElementById(id); return !!(el && el.checked); };
+  const start = parseInt(val('bot-start'), 10), end = parseInt(val('bot-end'), 10);
+  const interval = parseInt(val('bot-interval'), 10), qe = parseInt(val('bot-quizevery'), 10);
+  const levels = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'].filter(function (l) { return isOn('bot-lv-' + l); });
+  if (!(start >= 0 && start < 24 && end > 0 && end <= 24 && start < end)) { say('Start hour must be before end hour.', false); return; }
+  if (!(interval >= 1 && interval <= 12)) { say('Interval must be 1–12.', false); return; }
+  if (!(qe >= 2 && qe <= 12)) { say('Quiz-every must be 2–12.', false); return; }
+  if (!isOn('bot-words') && !isOn('bot-quiz') && !isOn('bot-podcast') && !isOn('bot-shadowing')) { say('Enable at least one content type.', false); return; }
+  if (!levels.length) { say('Pick at least one level.', false); return; }
+  if (btn) btn.disabled = true;
+  say('Saving…', true);
+  try {
+    const r = await sb.from('bot_config').upsert({
+      id: 1, enabled: isOn('bot-enabled'), start_hour: start, end_hour: end,
+      interval_hours: interval, send_words: isOn('bot-words'), send_quiz: isOn('bot-quiz'),
+      send_podcast: isOn('bot-podcast'), send_shadowing: isOn('bot-shadowing'),
+      quiz_every: qe, levels: levels, updated_at: new Date().toISOString()
+    });
+    if (r.error) throw r.error;
+    say('Saved ✓ — takes effect on the next hourly run.', true);
+  } catch (e) {
+    say('Save failed: ' + (e.message || e), false);
+  }
+  if (btn) btn.disabled = false;
 }
 
 async function loadAdminTeachers() {
@@ -4778,6 +4844,7 @@ function bindEvents() {
     else if (a === 'teacher-message') teacherMessageComposer(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'inbox-open') { closeModal(); go('inbox'); }
     else if (a === 'inbox-retry') { renderInbox(document.getElementById('view')); }
+    else if (a === 'bot-save') { saveAdminBot(t); }
     else if (a === 'google-signin') signInWithGoogle(t.getAttribute('data-prefix'), t);
     else if (a === 'approve-teacher') adminApproveTeacher(t.getAttribute('data-id'));
     else if (a === 'reject-teacher') adminRejectTeacher(t.getAttribute('data-id'));
@@ -4884,7 +4951,7 @@ window.MuseApp = {
   queuePointsPopup: queuePointsPopup, ensureNickname: ensureNickname,
   renderChallenge: renderChallenge, awardPoints: awardPoints, demoLogin: demoLogin,
   launchCelebration: launchCelebration, maybeShowInboxPrompt: maybeShowInboxPrompt,
-  renderInbox: renderInbox,
+  renderInbox: renderInbox, loadAdminBot: loadAdminBot, saveAdminBot: saveAdminBot,
 };
 
 })();
