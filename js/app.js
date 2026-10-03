@@ -5761,6 +5761,8 @@ function bindEvents() {
     const ma = t.getAttribute('data-action');
     if (ma === 'modal-close') closeModal();
     else if (ma === 'teacher-message-send') teacherMessageSend(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (ma === 'assignment-kind') assignmentKind(t.getAttribute('data-kind'), t);
+    else if (ma === 'assignment-create') createAssignment(t);
     else if (ma === 'inbox-open') { closeModal(); go('inbox'); }
   });
   $('#mp-toggle').addEventListener('click', function () {
