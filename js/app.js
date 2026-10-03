@@ -1574,7 +1574,7 @@ async function loadPreviewLesson() {
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'support'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -1647,6 +1647,7 @@ function show(view, arg) {
   else if (view === 'homework') renderHomework(v);
   else if (view === 'admin') renderAdmin(v);
   else if (view === 'teacher') renderTeacher(v);
+  else if (view === 'planner') renderPlanner(v);
   else if (view === 'become-teacher') renderBecomeTeacher(v);
 }
 
@@ -2134,7 +2135,8 @@ function renderTeacher(v) {
       '<p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0">Share it with your students — everyone who signs up through it shows up below.</p>' +
     '</div>' +
     '<div class="section-title"><h2>My students <span id="tch-count" class="muted"></span></h2>' +
-    '<button class="btn btn-sm" data-action="assignment-compose">＋ New assignment</button></div>' +
+    '<span class="tch-actions"><a class="btn btn-sm" href="#/planner">📅 Weekly planner</a>' +
+    '<button class="btn btn-sm" data-action="assignment-compose">＋ New assignment</button></span></div>' +
     '<div id="tch-weekly"></div>' +
     '<div id="tch-coach"></div>' +
     '<div id="tch-assign"></div>' +
@@ -2685,14 +2687,203 @@ async function createAssignment(btn) {
   }
 }
 
+/* ---- teacher: weekly planner ----
+   One screen, seven day-rows. The teacher picks a topic per day (their call —
+   topics are never auto-advanced); count/time/students default to the usual.
+   Each filled row becomes one assignment with status='scheduled' + send_at.
+   The assignment-sender cron delivers them on time. */
+const PLANNER_DAYS = [
+  { dow: 6, label: 'شنبه · Sat' }, { dow: 0, label: 'یکشنبه · Sun' },
+  { dow: 1, label: 'دوشنبه · Mon' }, { dow: 2, label: 'سه‌شنبه · Tue' },
+  { dow: 3, label: 'چهارشنبه · Wed' }, { dow: 4, label: 'پنجشنبه · Thu' },
+  { dow: 5, label: 'جمعه · Fri' }
+];
+function plannerNextDate(dow, timeStr) {
+  const parts = String(timeStr || '08:00').split(':');
+  const hh = parseInt(parts[0], 10) || 8, mm = parseInt(parts[1], 10) || 0;
+  const now = new Date();
+  for (let add = 0; add < 8; add++) {
+    const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() + add, hh, mm, 0);
+    if (d.getDay() === dow && d.getTime() > now.getTime() + 3600000) return d;
+  }
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7, hh, mm, 0);
+}
+function plannerDayLabel(dow, timeStr) {
+  const d = plannerNextDate(dow, timeStr || '08:00');
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+async function renderPlanner(v) {
+  if (!state.teacher) { go('become-teacher'); return; }
+  v.innerHTML = '<div class="tch-wrap"><a class="pl-back" href="#/teacher">← Teacher dashboard</a>' +
+    '<h1 class="pl-title">📅 Weekly planner</h1>' +
+    '<p class="muted" style="margin-top:-0.4rem">Pick a topic for each day — the rest uses your usual settings. Empty days are skipped.</p>' +
+    '<div id="pl-body"><div class="empty">Loading…</div></div></div>';
+  window.scrollTo(0, 0);
+  try {
+    if (!state.teacherStudents) {
+      const r = await sb.rpc('get_my_students');
+      if (r.error) throw r.error;
+      state.teacherStudents = r.data || [];
+    }
+    const list = state.teacherStudents || [];
+    if (!list.length) {
+      document.getElementById('pl-body').innerHTML =
+        '<div class="empty">You have no students yet — share your invite link first. 🌱</div>';
+      return;
+    }
+    const lastMap = await plannerLastMap();
+    const host = document.getElementById('pl-body');
+    host.innerHTML = '<div class="as2"><div class="card pl-card">' +
+      '<div class="field"><label for="pl-level">Level <span class="as2-opt">(whole week)</span></label>' +
+      '<select id="pl-level" class="input">' +
+      ASSIGN_LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (lv === 'a2' ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') +
+      '</select></div>' +
+      '<div class="field"><label>Students</label><div class="as2-students">' +
+      '<label class="chk"><input type="checkbox" id="pl-all" checked> All students (' + list.length + ')</label>' +
+      '<div id="pl-students" class="hidden">' +
+      list.map(function (s) {
+        const nm = s.display_name || (s.email || '?').split('@')[0];
+        return '<label class="chk"><input type="checkbox" class="pl-st" value="' + esc(s.user_id) + '" checked> ' + esc(nm) + '</label>';
+      }).join('') + '</div></div></div>' +
+      '<div id="pl-days">' + PLANNER_DAYS.map(function (dy) {
+        return '<div class="pl-day" data-dow="' + dy.dow + '">' +
+          '<div class="pl-dayhead"><b>' + dy.label + '</b>' +
+          '<span class="muted pl-date" data-dow="' + dy.dow + '">' + plannerDayLabel(dy.dow, '08:00') + '</span>' +
+          (lastMap[dy.dow] ? '<span class="pl-last">Last: ' + esc(lastMap[dy.dow]) + '</span>' : '') + '</div>' +
+          '<div class="pl-row">' +
+          '<select class="input pl-topic" data-dow="' + dy.dow + '" aria-label="Topic"><option value="">— no homework —</option></select>' +
+          '<select class="input pl-count" data-dow="' + dy.dow + '" aria-label="Questions">' +
+          [5, 10, 15, 20].map(function (n) { return '<option value="' + n + '"' + (n === 10 ? ' selected' : '') + '>' + n + ' Q</option>'; }).join('') +
+          '</select>' +
+          '<input type="time" class="input pl-time" data-dow="' + dy.dow + '" value="08:00" aria-label="Send time">' +
+          '</div></div>';
+      }).join('') + '</div>' +
+      '<div class="form-error" id="pl-error" role="alert"></div>' +
+      '<button class="as2-send" data-action="planner-save">⏰ Schedule week</button>' +
+      '</div></div>';
+    plannerFillTopics();
+    document.getElementById('pl-level').addEventListener('change', plannerFillTopics);
+    document.getElementById('pl-all').addEventListener('change', function () {
+      document.getElementById('pl-students').classList.toggle('hidden', this.checked);
+    });
+    Array.prototype.forEach.call(document.querySelectorAll('.pl-time'), function (t) {
+      t.addEventListener('change', function () {
+        const dow = parseInt(t.getAttribute('data-dow'), 10);
+        const lbl = document.querySelector('.pl-date[data-dow="' + dow + '"]');
+        if (lbl) lbl.textContent = plannerDayLabel(dow, t.value);
+      });
+    });
+  } catch (e) {
+    document.getElementById('pl-body').innerHTML =
+      '<div class="empty">Could not load the planner: ' + esc(e.message || e) + '</div>';
+  }
+}
+function plannerFillTopics() {
+  const lv = document.getElementById('pl-level').value;
+  Array.prototype.forEach.call(document.querySelectorAll('.pl-topic'), function (sel) {
+    const cur = sel.value;
+    sel.innerHTML = '<option value="">— no homework —</option>' +
+      (ASSIGN_TOPICS[lv] || []).map(function (t) {
+        return '<option value="' + esc(t) + '">' + esc(t) + '</option>';
+      }).join('');
+    sel.value = cur;
+  });
+}
+async function plannerLastMap() {
+  const map = {};
+  try {
+    const r = await sb.from('assignments').select('topic_label,send_at,created_at')
+      .eq('teacher_id', state.user.id).order('created_at', { ascending: false }).limit(40);
+    if (r.error) throw r.error;
+    (r.data || []).forEach(function (x) {
+      const dow = new Date(x.send_at || x.created_at).getDay();
+      if (!(dow in map) && x.topic_label) map[dow] = x.topic_label;
+    });
+  } catch (e) {}
+  return map;
+}
+async function savePlanner(btn) {
+  const errBox = document.getElementById('pl-error');
+  const err = function (m) { if (errBox) errBox.textContent = m; };
+  err('');
+  const level = document.getElementById('pl-level').value;
+  const roster = state.teacherStudents || [];
+  const useAll = document.getElementById('pl-all').checked;
+  const targets = useAll ? roster.slice() : roster.filter(function (s) {
+    const cb = document.querySelector('.pl-st[value="' + s.user_id + '"]');
+    return cb && cb.checked;
+  });
+  if (!targets.length) { err('Pick at least one student.'); return; }
+  const rows = [];
+  Array.prototype.forEach.call(document.querySelectorAll('.pl-day'), function (dayEl) {
+    const topic = dayEl.querySelector('.pl-topic').value;
+    if (!topic) return;
+    const dow = parseInt(dayEl.getAttribute('data-dow'), 10);
+    rows.push({
+      dow: dow, topic: topic,
+      count: parseInt(dayEl.querySelector('.pl-count').value, 10) || 10,
+      sendAt: plannerNextDate(dow, dayEl.querySelector('.pl-time').value)
+    });
+  });
+  if (!rows.length) { err('Pick a topic for at least one day.'); return; }
+  btn.disabled = true;
+  const orig = btn.textContent;
+  try {
+    let n = 0;
+    for (const r of rows) {
+      btn.textContent = 'Scheduling ' + (++n) + '/' + rows.length + '…';
+      const br = await fetch('quiz-bank/' + level + '/' + assignSlug(r.topic) + '.json');
+      if (!br.ok) throw new Error('bank');
+      const bank = await br.json();
+      const picked = shuffleArr((bank.questions || []).slice()).slice(0, Math.min(r.count, (bank.questions || []).length));
+      if (!picked.length) throw new Error('empty');
+      const questions = picked.map(function (q) {
+        return { q: q.q, options: q.options, answer: q.answer, explanation: q.explanation || '' };
+      });
+      const ins = await sb.from('assignments').insert({
+        teacher_id: state.user.id,
+        teacher_name: (state.teacher && state.teacher.display_name) || '',
+        kind: 'homework', title: '📝 ' + r.topic + ' (' + level.toUpperCase() + ')',
+        level: level, topic: assignSlug(r.topic), topic_label: r.topic,
+        question_count: questions.length, questions: questions,
+        student_ids: targets.map(function (s) { return s.user_id; }),
+        note: null, deadline: null,
+        status: 'scheduled', send_at: r.sendAt.toISOString()
+      });
+      if (ins.error) throw ins.error;
+    }
+    document.getElementById('pl-body').innerHTML =
+      '<div class="card pl-done"><div class="pl-done-ico">✅</div><h2>Week scheduled!</h2>' +
+      '<p class="muted">' + rows.length + ' assignment' + (rows.length > 1 ? 's' : '') +
+      ' will be sent automatically at the times you picked.</p>' +
+      '<a class="btn btn-block" href="#/teacher">← Back to dashboard</a></div>';
+    window.scrollTo(0, 0);
+  } catch (e) {
+    const msg = (e && e.message) || '';
+    err(/column|schema/i.test(msg)
+      ? 'The scheduling migration has not been run yet — run supabase-assignments-schedule-migration.sql first.'
+      : 'Could not schedule: ' + (msg || 'check your connection.'));
+    btn.disabled = false; btn.textContent = orig;
+  }
+}
+
 /* ---- teacher: assignment list + results ---- */
 async function loadTeacherAssignments() {
   const host = document.getElementById('tch-assign');
   if (!host || !state.teacher) return;
   try {
-    const a = await sb.from('assignments')
-      .select('id,kind,title,created_at,deadline,student_ids,question_count')
-      .eq('teacher_id', state.user.id).order('created_at', { ascending: false }).limit(30);
+    let a;
+    try {
+      a = await sb.from('assignments')
+        .select('id,kind,title,created_at,deadline,student_ids,question_count,status,send_at')
+        .eq('teacher_id', state.user.id).order('created_at', { ascending: false }).limit(30);
+      if (a.error) throw a.error;
+    } catch (e2) {
+      /* pre-scheduling-migration fallback */
+      a = await sb.from('assignments')
+        .select('id,kind,title,created_at,deadline,student_ids,question_count')
+        .eq('teacher_id', state.user.id).order('created_at', { ascending: false }).limit(30);
+    }
     if (a.error) throw a.error;
     const rows = a.data || [];
     state.teacherAssignments = rows;
@@ -2709,10 +2900,14 @@ async function loadTeacherAssignments() {
       rows.map(function (x, i) {
         const done = (doneMap[x.id] || []).length;
         const total = (x.student_ids || []).length;
-        return '<button class="as-row" data-action="assignment-open" data-i="' + i + '">' +
-          '<span class="as-ico">📝</span>' +
+        const sched = x.status === 'scheduled';
+        const meta = sched && x.send_at
+          ? '⏰ Sends ' + esc(fmtDateTime(x.send_at))
+          : esc(fmtDate(x.created_at)) + ' · ' + done + '/' + total + ' done';
+        return '<button class="as-row' + (sched ? ' as-sched' : '') + '" data-action="assignment-open" data-i="' + i + '">' +
+          '<span class="as-ico">' + (sched ? '⏰' : '📝') + '</span>' +
           '<span class="as-main"><span class="as-title">' + esc(x.title) + '</span>' +
-          '<span class="as-meta">' + esc(fmtDate(x.created_at)) + ' · ' + done + '/' + total + ' done</span></span>' +
+          '<span class="as-meta">' + meta + '</span></span>' +
           '<span class="as-go">→</span></button>';
       }).join('');
   } catch (e) { host.innerHTML = ''; }
@@ -2734,9 +2929,11 @@ async function openTeacherAssignment(i) {
   const byId = {};
   results.forEach(function (x) { byId[x.student_id] = x; });
   showModal(
-    '<div class="modal-ico">📝</div>' +
+    '<div class="modal-ico">' + (r.status === 'scheduled' ? '⏰' : '📝') + '</div>' +
     '<h2>' + esc(r.title) + '</h2>' +
-    '<p class="muted">' + (r.student_ids || []).length + ' students · ' + results.length + ' completed</p>' +
+    (r.status === 'scheduled' && r.send_at
+      ? '<p class="muted">Scheduled for ' + esc(fmtDateTime(r.send_at)) + ' — not sent yet.</p>'
+      : '<p class="muted">' + (r.student_ids || []).length + ' students · ' + results.length + ' completed</p>') +
     '<div class="as-results">' +
     (r.student_ids || []).map(function (uid) {
       const res = byId[uid];
@@ -2744,8 +2941,27 @@ async function openTeacherAssignment(i) {
         (res ? '<b class="ok">✓ ' + res.score + '/' + res.total + '</b>'
              : '<span class="muted">⏳ pending</span>') + '</div>';
     }).join('') + '</div>' +
+    (r.status === 'scheduled'
+      ? '<button class="btn btn-ghost btn-block" data-action="assignment-cancel" data-i="' + i + '" style="color:#d33;border-color:#eec">✕ Cancel scheduled send</button>'
+      : '') +
     '<button class="btn btn-ghost btn-block" data-action="modal-close">Close</button>'
   );
+}
+
+async function cancelScheduledAssignment(i, btn) {
+  const r = (state.teacherAssignments || [])[i];
+  if (!r || r.status !== 'scheduled') return;
+  if (!confirm('Cancel this scheduled assignment? It will not be sent.')) return;
+  btn.disabled = true;
+  try {
+    const d = await sb.from('assignments').delete().eq('id', r.id);
+    if (d.error) throw d.error;
+    closeModal();
+    loadTeacherAssignments();
+  } catch (e) {
+    btn.disabled = false;
+    alert('Could not cancel: ' + (e.message || e));
+  }
 }
 
 /* ---- student: homework card, list, player ---- */
@@ -2753,9 +2969,18 @@ async function refreshHomeworkCard() {
   const host = document.getElementById('home-hw-wrap');
   if (!host || !cloudReady() || !state.user || state.user.demo) return;
   try {
-    const a = await sb.from('assignments').select('id')
-      .contains('student_ids', [state.user.id]).limit(50);
-    const ids = (a.data || []).map(function (x) { return x.id; });
+    let ids;
+    try {
+      const a = await sb.from('assignments').select('id,status')
+        .contains('student_ids', [state.user.id]).limit(50);
+      if (a.error) throw a.error;
+      ids = (a.data || []).filter(function (x) { return x.status !== 'scheduled'; }).map(function (x) { return x.id; });
+    } catch (e2) {
+      /* pre-scheduling-migration fallback */
+      const a = await sb.from('assignments').select('id')
+        .contains('student_ids', [state.user.id]).limit(50);
+      ids = (a.data || []).map(function (x) { return x.id; });
+    }
     if (!ids.length) { host.innerHTML = ''; return; }
     const r = await sb.from('assignment_results').select('assignment_id')
       .eq('student_id', state.user.id).in('assignment_id', ids);
@@ -2779,7 +3004,10 @@ async function renderHomework(v) {
   try {
     const a = await sb.from('assignments').select('*')
       .contains('student_ids', [state.user.id]).order('created_at', { ascending: false }).limit(30);
-    const rows = a.data || [];
+    let rows = a.data || [];
+    /* scheduled (not yet sent) assignments stay invisible until send time.
+       JS-side filter: safe before the scheduling migration is run. */
+    rows = rows.filter(function (x) { return x.status !== 'scheduled'; });
     const r = await sb.from('assignment_results')
       .select('assignment_id,score,total,completed_at').eq('student_id', state.user.id);
     const done = {};
@@ -5835,7 +6063,9 @@ function bindEvents() {
     else if (a === 'teacher-message') teacherMessageComposer(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'assignment-compose') teacherAssignmentComposer();
     else if (a === 'assignment-create') createAssignment(t);
+    else if (a === 'planner-save') savePlanner(t);
     else if (a === 'assignment-open') openTeacherAssignment(parseInt(t.getAttribute('data-i'), 10));
+    else if (a === 'assignment-cancel') cancelScheduledAssignment(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'assignment-start') startAssignment(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'inbox-open') { closeModal(); go('inbox'); }
     else if (a === 'inbox-retry') { renderInbox(document.getElementById('view')); }

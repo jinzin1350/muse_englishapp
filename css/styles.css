@@ -2264,3 +2264,20 @@ body.duo-playing{padding-bottom:0!important;}
 .as2-send:disabled{opacity:.6;cursor:wait}
 .as2-cancel{display:block;width:100%;margin-top:.6rem;background:transparent;border:1.5px solid #e9dfcc;color:#1e2a4e;border-radius:18px;padding:.85rem;font-size:1rem;font-weight:600;cursor:pointer;font-family:inherit}
 .as2 .form-error{color:#d33;min-height:1.2em;font-size:.88rem;margin:.2rem 0}
+
+/* ---- Weekly planner (2026-10-03) ---- */
+.pl-back{display:inline-block;margin:1rem 0 .2rem;color:#b3540f;font-weight:700;text-decoration:none;font-size:.92rem}
+.pl-title{font-family:Georgia,serif;font-size:1.9rem;margin:.2rem 0 .6rem;color:#1e2a4e}
+.pl-card{padding:1.2rem 1.1rem}
+.pl-day{border-top:1px solid #f0e6d2;padding:.8rem 0}
+.pl-day:first-child{border-top:0}
+.pl-dayhead{display:flex;align-items:baseline;gap:.6rem;margin-bottom:.5rem;flex-wrap:wrap}
+.pl-dayhead b{font-family:Georgia,serif;font-size:1.05rem;color:#1e2a4e}
+.pl-last{margin-left:auto;font-size:.8rem;color:#b3540f;background:#fff4e0;border-radius:999px;padding:.15rem .6rem}
+.pl-row{display:grid;grid-template-columns:1fr 92px 108px;gap:.5rem}
+.pl-done{text-align:center;padding:2rem 1.2rem}
+.pl-done-ico{font-size:3rem}
+.pl-done h2{font-family:Georgia,serif;color:#1e2a4e}
+.tch-actions{display:flex;gap:.5rem}
+.as-row.as-sched{border-style:dashed}
+@media (max-width:420px){ .pl-row{grid-template-columns:1fr 84px} .pl-time{grid-column:1/-1} }
