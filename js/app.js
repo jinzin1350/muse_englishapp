@@ -26,6 +26,7 @@ function fmtDate(d) {
   return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate());
 }
 function todayStr() { return fmtDate(new Date()); }
+function daysAgoStr(n) { const d = new Date(); d.setDate(d.getDate() - n); return fmtDate(d); }
 
 function fmtTime(sec) {
   if (!isFinite(sec) || sec < 0) sec = 0;
@@ -2172,6 +2173,232 @@ async function openTeacherStudent(i) {
   }
 }
 
+/* ---------------- Admin analytics (phase 2) ---------------- */
+const ADM_METRICS = [
+  { id: 'dau', label: 'Daily active' },
+  { id: 'new_users', label: 'New users' },
+  { id: 'xp', label: 'XP earned' },
+  { id: 'podcast_min', label: 'Podcast min' },
+  { id: 'lessons', label: 'Lessons' },
+];
+const ADM_EV_LABELS = {
+  lesson_open: 'Opened a lesson',
+  quiz_completed: 'Finished a quiz',
+  podcast_milestone: 'Podcast milestone',
+  teacher_requested: 'Requested teacher access'
+};
+function admEvLabel(e) {
+  const base = ADM_EV_LABELS[e.event] || e.event;
+  const m = e.meta || {};
+  if (e.event === 'quiz_completed' && m.score != null) return base + ' — ' + m.score + '/' + (m.total || '?') + ' (' + (m.kind || '') + ')';
+  if (e.event === 'podcast_milestone' && m.minutes != null) return base + ' — ' + m.minutes + ' min listened';
+  if (e.event === 'lesson_open' && m.date) return base + ' — ' + m.date;
+  return base;
+}
+async function loadAdminAnalytics() {
+  const host = document.getElementById('admin-analytics');
+  if (!host) return;
+  try {
+    const res = await Promise.all([
+      sb.rpc('admin_overview'),
+      sb.rpc('admin_daily_series', { p_days: 30 }),
+      sb.rpc('admin_user_stats'),
+      sb.rpc('admin_teacher_board')
+    ]);
+    const bad = res.find(function (r) { return r.error; });
+    if (bad) throw bad.error;
+    if (!state.adminFilter) state.adminFilter = { q: '', level: '', teacher: '', activity: 'all', sort: 'recent' };
+    if (!state.adminMetric) state.adminMetric = 'dau';
+    state.adminStats = {
+      overview: (res[0].data || [])[0] || {},
+      series: res[1].data || [],
+      users: res[2].data || [],
+      board: res[3].data || []
+    };
+    renderAdminAnalytics();
+  } catch (e) {
+    host.innerHTML = '<div class="empty">Analytics unavailable: ' + esc(e.message || e) + '</div>';
+  }
+}
+function admNum(n) {
+  n = Number(n || 0);
+  if (n >= 1000000) return (n / 1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n / 1000).toFixed(1) + 'k';
+  return String(n);
+}
+function renderAdminAnalytics() {
+  const host = document.getElementById('admin-analytics');
+  const st = state.adminStats;
+  if (!host || !st) return;
+  const o = st.overview;
+  const cards = [
+    ['Users', admNum(o.total_users)],
+    ['New (7d)', admNum(o.new_7d)],
+    ['DAU', admNum(o.dau)],
+    ['WAU', admNum(o.wau)],
+    ['Teachers', admNum(o.total_teachers)],
+    ['XP (30d)', admNum(o.xp_30d)]
+  ];
+  host.innerHTML =
+    '<div class="adm-cards">' + cards.map(function (c) {
+      return '<div class="adm-card"><b>' + c[1] + '</b><span>' + c[0] + '</span></div>';
+    }).join('') + '</div>' +
+    '<div class="adm-chart-wrap"><div class="adm-tabs">' + ADM_METRICS.map(function (m) {
+      return '<button class="adm-tab' + (state.adminMetric === m.id ? ' on' : '') + '" data-action="adm-metric" data-m="' + m.id + '">' + m.label + '</button>';
+    }).join('') + '</div><div class="tch-bars" id="adm-chart">' + admChartBars() + '</div></div>' +
+    '<div class="section-title" style="margin-top:1.2rem"><h2>👩‍🏫 Teacher leaderboard</h2></div>' +
+    '<div id="adm-board">' + admBoardHTML() + '</div>' +
+    '<div class="section-title" style="margin-top:1.2rem"><h2>👥 Users</h2></div>' +
+    '<div class="adm-filters">' +
+      '<input id="adm-q" type="search" placeholder="Search name or email…" value="' + esc(state.adminFilter.q) + '" aria-label="Search users">' +
+      '<select id="adm-f-level" aria-label="Filter by level"><option value="">All levels</option>' +
+        LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (state.adminFilter.level === lv ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') + '</select>' +
+      '<select id="adm-f-teacher" aria-label="Filter by teacher"><option value="">All teachers</option>' +
+        st.board.map(function (t) { return '<option value="' + esc(t.ref_code) + '"' + (state.adminFilter.teacher === t.ref_code ? ' selected' : '') + '>' + esc(t.display_name) + '</option>'; }).join('') + '</select>' +
+      '<select id="adm-f-activity" aria-label="Filter by activity">' +
+        [['all', 'All activity'], ['active7', 'Active (7d)'], ['inactive30', 'Inactive (30d)'], ['never', 'Never active']].map(function (x) {
+          return '<option value="' + x[0] + '"' + (state.adminFilter.activity === x[0] ? ' selected' : '') + '>' + x[1] + '</option>';
+        }).join('') + '</select>' +
+      '<select id="adm-f-sort" aria-label="Sort users">' +
+        [['recent', 'Newest'], ['xp_total', 'Total XP'], ['xp_7d', 'XP (7d)'], ['streak', 'Streak'], ['active', 'Last active']].map(function (x) {
+          return '<option value="' + x[0] + '"' + (state.adminFilter.sort === x[0] ? ' selected' : '') + '>' + x[1] + '</option>';
+        }).join('') + '</select>' +
+    '</div>' +
+    '<div id="adm-users">' + admUsersHTML() + '</div>' +
+    '<div id="adm-detail"></div>';
+  // wire filter inputs (input/change events, not data-action)
+  const q = document.getElementById('adm-q');
+  if (q) q.addEventListener('input', function () { state.adminFilter.q = q.value; renderAdmUsers(); });
+  ['adm-f-level', 'adm-f-teacher', 'adm-f-activity', 'adm-f-sort'].forEach(function (id, i) {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', function () {
+      const keys = ['level', 'teacher', 'activity', 'sort'];
+      state.adminFilter[keys[i]] = el.value;
+      renderAdmUsers();
+    });
+  });
+}
+function admChartBars() {
+  const st = state.adminStats, m = state.adminMetric;
+  const rows = st.series || [];
+  const maxV = Math.max.apply(null, [1].concat(rows.map(function (r) { return Number(r[m]) || 0; })));
+  const ml = ADM_METRICS.find(function (x) { return x.id === m; });
+  return rows.map(function (r) {
+    const v = Number(r[m]) || 0;
+    const h = Math.max(3, Math.round(v / maxV * 90));
+    return '<div class="tch-bar" title="' + esc(r.day) + ': ' + v + ' ' + (ml ? ml.label : '') + '">' +
+      '<div class="tch-bar-fill" style="height:' + h + 'px"></div>' +
+      '<div class="tch-bar-d">' + esc(String(r.day).slice(5)) + '</div></div>';
+  }).join('');
+}
+function admBoardHTML() {
+  const board = (state.adminStats || {}).board || [];
+  if (!board.length) return '<div class="empty">No approved teachers yet.</div>';
+  return '<div class="card tch-table-card"><div class="tch-table"><div class="tch-tr tch-th">' +
+    '<span>Teacher</span><span>Students</span><span>Active 7d</span><span>XP 7d</span><span>Code</span><span></span></div>' +
+    board.map(function (t) {
+      return '<div class="tch-tr"><span class="tch-name">' + esc(t.display_name) + '</span>' +
+        '<span>' + (t.students || 0) + '</span><span>' + (t.active_7d || 0) + '</span>' +
+        '<span>' + (t.xp_7d || 0) + '</span><span><code>' + esc(t.ref_code) + '</code></span><span></span></div>';
+    }).join('') + '</div></div>';
+}
+function admFilteredUsers() {
+  const st = state.adminStats, f = state.adminFilter;
+  let list = (st.users || []).slice();
+  const q = (f.q || '').toLowerCase().trim();
+  if (q) list = list.filter(function (u) {
+    return ((u.display_name || '') + ' ' + (u.email || '')).toLowerCase().indexOf(q) !== -1;
+  });
+  if (f.level) list = list.filter(function (u) { return normalizeLevel(u.level) === f.level; });
+  if (f.teacher) list = list.filter(function (u) { return u.referred_by === f.teacher; });
+  if (f.activity === 'active7') list = list.filter(function (u) { return u.last_active && u.last_active >= daysAgoStr(6); });
+  if (f.activity === 'inactive30') list = list.filter(function (u) { return !u.last_active || u.last_active < daysAgoStr(29); });
+  if (f.activity === 'never') list = list.filter(function (u) { return !u.last_active; });
+  const sorts = {
+    recent: function (a, b) { return new Date(b.created_at) - new Date(a.created_at); },
+    xp_total: function (a, b) { return (b.xp_total || 0) - (a.xp_total || 0); },
+    xp_7d: function (a, b) { return (b.xp_7d || 0) - (a.xp_7d || 0); },
+    streak: function (a, b) { return (b.current_streak || 0) - (a.current_streak || 0); },
+    active: function (a, b) { return String(b.last_active || '') > String(a.last_active || '') ? 1 : -1; }
+  };
+  list.sort(sorts[f.sort] || sorts.recent);
+  return list;
+}
+function admUsersHTML() {
+  const list = admFilteredUsers().slice(0, 200);
+  if (!list.length) return '<div class="empty">No users match.</div>';
+  return '<div class="card tch-table-card"><div class="tch-table adm-utable">' +
+    '<div class="tch-tr tch-th"><span>User</span><span>🔥</span><span>XP</span><span>XP 7d</span><span>🎧m 30d</span><span>Active</span></div>' +
+    list.map(function (u) {
+      const name = u.display_name || (u.email || '?').split('@')[0];
+      return '<div class="tch-tr" data-action="adm-user" data-id="' + esc(u.user_id) + '" role="button" tabindex="0">' +
+        '<span class="tch-name">' + esc(name) + '<small>' + esc(u.email || '') +
+        (u.referred_by ? ' · 📣' + esc(u.referred_by) : '') + '</small></span>' +
+        '<span>' + (u.current_streak || 0) + '</span>' +
+        '<span>' + admNum(u.xp_total) + '</span>' +
+        '<span>' + admNum(u.xp_7d) + '</span>' +
+        '<span>' + (u.podcast_min_30d || 0) + '</span>' +
+        '<span class="muted">' + esc(fmtLastActive(u.last_active)) + '</span></div>';
+    }).join('') + '</div></div>' +
+    '<p class="muted" style="font-size:0.8rem">Showing ' + list.length + ' · tap a user for full detail.</p>';
+}
+function renderAdmUsers() {
+  const host = document.getElementById('adm-users');
+  if (host) host.innerHTML = admUsersHTML();
+}
+async function openAdminUser(id) {
+  const host = document.getElementById('adm-detail');
+  if (!host) return;
+  const u = ((state.adminStats || {}).users || []).find(function (x) { return x.user_id === id; });
+  if (!u) return;
+  host.innerHTML = '<div class="empty">Loading…</div>';
+  host.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  try {
+    const res = await Promise.all([
+      sb.rpc('get_student_daily', { p_student: id }).then(function (r) { return { rows30: r.data || [] }; }, function () { return { rows30: [] }; }),
+      sb.from('daily_stats').select('*').eq('user_id', id).order('day', { ascending: false }).limit(30)
+        .then(function (r) { return { rows: r.data || [] }; }, function () { return { rows: [] }; }),
+      sb.from('app_events').select('event,meta,created_at').eq('user_id', id).order('created_at', { ascending: false }).limit(40)
+        .then(function (r) { return { evs: r.data || [] }; }, function () { return { evs: [] }; })
+    ]);
+    const rows = res[1].rows.length ? res[1].rows : res[0].rows30;
+    const evs = res[2].evs;
+    const name = u.display_name || (u.email || '?').split('@')[0];
+    const sum = function (k) { return rows.reduce(function (a, x) { return a + (Number(x[k]) || 0); }, 0); };
+    const maxSec = Math.max.apply(null, [1].concat(rows.map(function (x) { return x.seconds_in_app || 0; })));
+    const ordered = rows.slice().sort(function (a, b) { return String(a.day) > String(b.day) ? 1 : -1; }).slice(-30);
+    host.innerHTML = '<div class="card"><h3 style="margin-top:0">' + esc(name) +
+      ' <span class="muted" style="font-weight:400">· ' + esc(u.email || '') + '</span></h3>' +
+      '<p class="muted" style="font-size:0.85rem;margin-top:-0.4rem">' +
+        esc(u.level ? levelLabel(normalizeLevel(u.level)) : 'level pending') +
+        (u.referred_by ? ' · 📣 <code>' + esc(u.referred_by) + '</code>' : '') +
+        ' · joined ' + esc(String(u.created_at || '').slice(0, 10)) + '</p>' +
+      '<div class="tch-totals">' +
+        '<div><b>' + admNum(u.xp_total) + '</b><span>total XP</span></div>' +
+        '<div><b>' + (u.current_streak || 0) + '</b><span>day streak</span></div>' +
+        '<div><b>' + Math.round(sum('seconds_in_app') / 60) + '</b><span>min (30d)</span></div>' +
+        '<div><b>' + Math.round(sum('podcast_seconds') / 60) + '</b><span>podcast min</span></div>' +
+        '<div><b>' + sum('lessons_opened') + '</b><span>lessons</span></div>' +
+        '<div><b>' + sum('quizzes_completed') + '</b><span>quizzes</span></div>' +
+      '</div>' +
+      (ordered.length ? '<p class="muted" style="font-size:0.85rem;margin-bottom:0.3rem"><b>Daily time in app</b> (last 30 days)</p><div class="tch-bars">' +
+        ordered.map(function (x) {
+          const h = Math.max(4, Math.round((x.seconds_in_app || 0) / maxSec * 90));
+          return '<div class="tch-bar" title="' + esc(x.day) + ': ' + Math.round((x.seconds_in_app || 0) / 60) + ' min">' +
+            '<div class="tch-bar-fill" style="height:' + h + 'px"></div>' +
+            '<div class="tch-bar-d">' + esc(String(x.day).slice(5)) + '</div></div>';
+        }).join('') + '</div>' : '<div class="empty">No activity in the last 30 days.</div>') +
+      (evs.length ? '<p class="muted" style="font-size:0.85rem;margin:1rem 0 0.3rem"><b>Recent activity</b></p><div class="adm-events">' +
+        evs.map(function (e) {
+          return '<div class="adm-ev"><span>' + esc(admEvLabel(e)) + '</span><span class="muted">' +
+            esc(String(e.created_at || '').slice(0, 16).replace('T', ' ')) + '</span></div>';
+        }).join('') + '</div>' : '') +
+      '<button class="btn btn-ghost btn-sm" data-action="adm-user-close" style="margin-top:0.8rem">Close</button></div>';
+  } catch (e) {
+    host.innerHTML = '<div class="empty">Could not load user detail.</div>';
+  }
+}
+
 function togglePw(btn) {
   const wrap = btn.closest('.pw-wrap');
   const input = wrap ? wrap.querySelector('input') : null;
@@ -4004,10 +4231,13 @@ function paintMistakes(v, arr) {
 /* ---------------- admin view ---------------- */
 function renderAdmin(v) {
   v.innerHTML = '<h1>Admin</h1>' +
+    '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>📊 Analytics</b> — everyone, everything.</p>' +
+    '<div id="admin-analytics"><div class="empty">Loading…</div></div></div>' +
     '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>🍎 Teachers</b> — requests, invite codes and manual add.</p>' +
     '<div id="admin-teachers"><div class="empty">Loading…</div></div></div>' +
     '<div class="card plain"><p class="muted" style="margin:0">Set each user\'s level. New users appear as <b>pending</b> first.</p></div>' +
     '<div id="admin-list"><div class="empty">Loading…</div></div>';
+  loadAdminAnalytics();
   loadAdminUsers().then(function () { loadAdminTeachers(); });
 }
 
@@ -4239,6 +4469,9 @@ function bindEvents() {
     else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
     else if (a === 'approve-teacher') adminApproveTeacher(t.getAttribute('data-id'));
     else if (a === 'reject-teacher') adminRejectTeacher(t.getAttribute('data-id'));
+    else if (a === 'adm-metric') { state.adminMetric = t.getAttribute('data-m'); renderAdminAnalytics(); }
+    else if (a === 'adm-user') openAdminUser(t.getAttribute('data-id'));
+    else if (a === 'adm-user-close') { const d = document.getElementById('adm-detail'); if (d) d.innerHTML = ''; }
   });
 
   $('#view').addEventListener('change', function (e) {

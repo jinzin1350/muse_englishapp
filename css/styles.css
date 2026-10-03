@@ -1840,3 +1840,36 @@ body{background:#FFF9F3;}
   flex: 1; min-width: 140px; border: 1px solid var(--line); border-radius: 8px;
   padding: 0.5rem 0.7rem; font-size: 0.88rem; font-family: inherit;
 }
+
+/* ================= Admin analytics (phase 2) ================= */
+.adm-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; margin-bottom: 1rem; }
+.adm-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 0.8rem 0.6rem; text-align: center;
+}
+.adm-card b { display: block; font-size: 1.35rem; color: var(--tomato-dark); }
+.adm-card span { font-size: 0.72rem; color: var(--muted); }
+.adm-chart-wrap { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 0.8rem; }
+.adm-tabs { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.6rem; }
+.adm-tab {
+  border: 1px solid var(--line); background: var(--mist); color: var(--ink);
+  font-size: 0.78rem; font-weight: 700; padding: 0.4rem 0.8rem; border-radius: 999px; cursor: pointer;
+}
+.adm-tab.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+.adm-filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem; }
+.adm-filters input[type="search"] {
+  flex: 2; min-width: 160px; border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.55rem 0.8rem; font-size: 0.88rem; font-family: inherit;
+}
+.adm-filters select {
+  flex: 1; min-width: 110px; border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.55rem 0.6rem; font-size: 0.85rem; font-family: inherit; background: #fff;
+}
+.adm-utable .tch-tr { grid-template-columns: 1.8fr 0.5fr 0.7fr 0.7fr 0.8fr 0.9fr; }
+.adm-events { display: flex; flex-direction: column; }
+.adm-ev {
+  display: flex; justify-content: space-between; gap: 0.8rem;
+  padding: 0.5rem 0; border-bottom: 1px solid var(--line); font-size: 0.85rem;
+}
+.adm-ev:last-child { border-bottom: none; }
+@media (min-width: 720px) { .adm-cards { grid-template-columns: repeat(6, 1fr); } }
