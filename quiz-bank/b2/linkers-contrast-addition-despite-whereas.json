@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Linkers: contrast & addition (despite, whereas...)",
+  "slug": "linkers-contrast-addition-despite-whereas",
+  "questions": [
+    {
+      "q": "___ the rain, we had a great time.",
+      "options": [
+        "Although",
+        "Despite",
+        "Whereas",
+        "However"
+      ],
+      "answer": 1,
+      "explanation": "'Despite' is followed by a noun phrase, not a clause."
+    },
+    {
+      "q": "___ he was tired, he kept working.",
+      "options": [
+        "Despite",
+        "In spite",
+        "Whereas",
+        "Although"
+      ],
+      "answer": 3,
+      "explanation": "'Although' introduces a full clause."
+    },
+    {
+      "q": "She loves cats, ___ her brother prefers dogs.",
+      "options": [
+        "whereas",
+        "despite",
+        "although",
+        "however"
+      ],
+      "answer": 0,
+      "explanation": "'Whereas' contrasts two clauses."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "In spite of he was tired, he finished the race.",
+        "In spite being tired, he finished the race.",
+        "In spite of being tired, he finished the race.",
+        "Despite of being tired, he finished the race."
+      ],
+      "answer": 2,
+      "explanation": "'In spite of' takes a gerund; 'despite' never takes 'of'."
+    },
+    {
+      "q": "___ being rich, he's not happy.",
+      "options": [
+        "Although",
+        "Whereas",
+        "Despite",
+        "However"
+      ],
+      "answer": 2,
+      "explanation": "'Despite' takes a gerund, not a clause."
+    },
+    {
+      "q": "He studied hard; ___, he failed.",
+      "options": [
+        "however",
+        "despite",
+        "although",
+        "whereas"
+      ],
+      "answer": 0,
+      "explanation": "'However' as a linker stands alone between the clauses."
+    },
+    {
+      "q": "___ the fact that it was late, they continued.",
+      "options": [
+        "Although",
+        "Whereas",
+        "However",
+        "Despite"
+      ],
+      "answer": 3,
+      "explanation": "'Despite the fact that' introduces a clause."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Despite it was raining, we went for a walk.",
+        "Although it was raining, we went for a walk.",
+        "Although the rain, we went for a walk.",
+        "Despite of raining, we went for a walk."
+      ],
+      "answer": 1,
+      "explanation": "'Although' takes a clause; 'despite' takes a noun."
+    },
+    {
+      "q": "My sister is shy, ___ I'm quite outgoing.",
+      "options": [
+        "whereas",
+        "despite",
+        "although",
+        "however"
+      ],
+      "answer": 0,
+      "explanation": "'Whereas' directly contrasts two facts."
+    },
+    {
+      "q": "___ all his money, he lives simply.",
+      "options": [
+        "Although",
+        "Whereas",
+        "Despite",
+        "However"
+      ],
+      "answer": 2,
+      "explanation": "'Despite' is followed by a noun phrase."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Whereas I prefer tea, but she loves coffee.",
+        "Whereas I prefer tea, she loves coffee.",
+        "Whereas I prefer tea, despite she loves coffee.",
+        "Despite I prefer tea, whereas she loves coffee."
+      ],
+      "answer": 1,
+      "explanation": "'Whereas' alone contrasts the clauses; don't add 'but'."
+    },
+    {
+      "q": "He kept going ___ the pain.",
+      "options": [
+        "although",
+        "whereas",
+        "however",
+        "despite"
+      ],
+      "answer": 3,
+      "explanation": "'Despite' takes the noun 'pain'."
+    },
+    {
+      "q": "___ being tired, she's also excited.",
+      "options": [
+        "Despite",
+        "Although",
+        "Whereas",
+        "Besides"
+      ],
+      "answer": 3,
+      "explanation": "'Besides + gerund' adds information, it doesn't contrast."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Despite of the rain, the match continued.",
+        "Despite the rain, the match continued.",
+        "Although the rain, the match continued.",
+        "Despite it rained, the match continued."
+      ],
+      "answer": 1,
+      "explanation": "'Despite' takes a noun phrase and never 'of'."
+    },
+    {
+      "q": "___ being a doctor, she writes novels too.",
+      "options": [
+        "Despite",
+        "Although",
+        "Besides",
+        "Whereas"
+      ],
+      "answer": 2,
+      "explanation": "'Besides' adds a fact; 'despite' would contrast."
+    },
+    {
+      "q": "He failed ___ studying hard.",
+      "options": [
+        "despite",
+        "although",
+        "whereas",
+        "however"
+      ],
+      "answer": 0,
+      "explanation": "'Despite' takes the gerund 'studying'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "He's not only intelligent but kind also.",
+        "He's not intelligent only but also kind.",
+        "He's not only intelligent but also kind.",
+        "He's not only intelligent but too kind."
+      ],
+      "answer": 2,
+      "explanation": "'Not only ... but also' pairs the two qualities."
+    },
+    {
+      "q": "___ the noise, I managed to sleep.",
+      "options": [
+        "Although",
+        "Whereas",
+        "However",
+        "Despite"
+      ],
+      "answer": 3,
+      "explanation": "'Despite' is followed by the noun 'noise'."
+    },
+    {
+      "q": "In addition ___ English, she speaks French.",
+      "options": [
+        "to",
+        "of",
+        "for",
+        "with"
+      ],
+      "answer": 0,
+      "explanation": "The fixed phrase is 'in addition to'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "As well as teach, she writes textbooks.",
+        "As well as teaching, she writes textbooks.",
+        "As well to teach, she writes textbooks.",
+        "As well as teaching, but she writes textbooks."
+      ],
+      "answer": 1,
+      "explanation": "'As well as' takes a gerund to add information."
+    }
+  ]
+}

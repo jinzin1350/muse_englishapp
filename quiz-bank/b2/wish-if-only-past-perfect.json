@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "wish / if only + past perfect",
+  "slug": "wish-if-only-past-perfect",
+  "questions": [
+    {
+      "q": "I wish I ___ harder for the exam.",
+      "options": [
+        "studied",
+        "had studied",
+        "would study",
+        "have studied"
+      ],
+      "answer": 1,
+      "explanation": "For regrets about the past, 'wish' takes the past perfect."
+    },
+    {
+      "q": "If only she ___ me the truth.",
+      "options": [
+        "told",
+        "would tell",
+        "has told",
+        "had told"
+      ],
+      "answer": 3,
+      "explanation": "'If only' about a past event takes the past perfect."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I wish I hadn't said that to him.",
+        "I wish I didn't say that to him.",
+        "I wish I wouldn't have said that to him.",
+        "I wish I haven't said that to him."
+      ],
+      "answer": 0,
+      "explanation": "Regret about a past action needs 'wish + past perfect'."
+    },
+    {
+      "q": "He wishes he ___ the job offer.",
+      "options": [
+        "accepted",
+        "would accept",
+        "had accepted",
+        "has accepted"
+      ],
+      "answer": 2,
+      "explanation": "Use the past perfect after 'wish' for a past regret."
+    },
+    {
+      "q": "If only we ___ earlier — we missed the train.",
+      "options": [
+        "left",
+        "would leave",
+        "had left",
+        "have left"
+      ],
+      "answer": 2,
+      "explanation": "'If only' expresses a past regret with the past perfect."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "She wishes she had never met him.",
+        "She wishes she never met him.",
+        "She wishes she would have never met him.",
+        "She wishes she has never met him."
+      ],
+      "answer": 0,
+      "explanation": "A past regret after 'wish' needs the past perfect."
+    },
+    {
+      "q": "I wish it ___ yesterday — the match was cancelled.",
+      "options": [
+        "didn't rain",
+        "wouldn't rain",
+        "hasn't rained",
+        "hadn't rained"
+      ],
+      "answer": 3,
+      "explanation": "Use the negative past perfect for a past regret about the weather."
+    },
+    {
+      "q": "If only I ___ my keys.",
+      "options": [
+        "didn't lose",
+        "hadn't lost",
+        "wouldn't lose",
+        "haven't lost"
+      ],
+      "answer": 1,
+      "explanation": "'If only' with a past regret takes the negative past perfect."
+    },
+    {
+      "q": "They wish they ___ so much money.",
+      "options": [
+        "hadn't spent",
+        "didn't spend",
+        "wouldn't spend",
+        "haven't spent"
+      ],
+      "answer": 0,
+      "explanation": "Regret about past spending needs 'wish + past perfect'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "If only you told me sooner!",
+        "If only you would have told me sooner!",
+        "If only you'd told me sooner!",
+        "If only you have told me sooner!"
+      ],
+      "answer": 2,
+      "explanation": "'If only' about a missed past chance takes the past perfect."
+    },
+    {
+      "q": "She wishes she ___ to university.",
+      "options": [
+        "went",
+        "had gone",
+        "would go",
+        "has gone"
+      ],
+      "answer": 1,
+      "explanation": "A past life regret after 'wish' takes the past perfect."
+    },
+    {
+      "q": "I wish we ___ that restaurant — the food was terrible.",
+      "options": [
+        "didn't choose",
+        "wouldn't choose",
+        "haven't chosen",
+        "hadn't chosen"
+      ],
+      "answer": 3,
+      "explanation": "Regret about a past choice needs the past perfect."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "He wishes he listened to his doctor.",
+        "He wishes he would have listened to his doctor.",
+        "He wishes he has listened to his doctor.",
+        "He wishes he had listened to his doctor."
+      ],
+      "answer": 3,
+      "explanation": "'Wish' about not following advice in the past takes the past perfect."
+    },
+    {
+      "q": "If only the car ___ down on the motorway.",
+      "options": [
+        "didn't break",
+        "hadn't broken",
+        "wouldn't break",
+        "hasn't broken"
+      ],
+      "answer": 1,
+      "explanation": "Use the past perfect after 'if only' for a past breakdown."
+    },
+    {
+      "q": "We wish we ___ a bigger flat.",
+      "options": [
+        "bought",
+        "would buy",
+        "had bought",
+        "have bought"
+      ],
+      "answer": 2,
+      "explanation": "A past purchase regret takes 'wish + past perfect'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I wish I'd taken more photos on the trip.",
+        "I wish I took more photos on the trip.",
+        "I wish I'd take more photos on the trip.",
+        "I wish I've taken more photos on the trip."
+      ],
+      "answer": 0,
+      "explanation": "The contracted past perfect follows 'wish' for past regrets."
+    },
+    {
+      "q": "She wishes her parents ___ her study abroad.",
+      "options": [
+        "let",
+        "would let",
+        "had let",
+        "have let"
+      ],
+      "answer": 2,
+      "explanation": "Use the past perfect after 'wish' for a past permission regret."
+    },
+    {
+      "q": "If only he ___ so rude to the waiter.",
+      "options": [
+        "wasn't",
+        "wouldn't be",
+        "hasn't been",
+        "hadn't been"
+      ],
+      "answer": 3,
+      "explanation": "'If only' about past behaviour takes the past perfect."
+    },
+    {
+      "q": "I wish I ___ my temper yesterday.",
+      "options": [
+        "hadn't lost",
+        "didn't lose",
+        "wouldn't lose",
+        "haven't lost"
+      ],
+      "answer": 0,
+      "explanation": "Regret about yesterday's behaviour needs the past perfect."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "If only we didn't waste so much time!",
+        "If only we hadn't wasted so much time!",
+        "If only we wouldn't have wasted so much time!",
+        "If only we haven't wasted so much time!"
+      ],
+      "answer": 1,
+      "explanation": "A past regret about wasted time needs 'if only + past perfect'."
+    }
+  ]
+}

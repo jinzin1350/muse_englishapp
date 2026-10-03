@@ -2165,3 +2165,28 @@ body.duo-playing{padding-bottom:0!important;}
 .duo-modal h3{margin:0 0 .4rem;font-size:1.3rem;color:#1E2A4E;}
 .duo-modal p{color:#8A93A8;margin:0 0 1.2rem;}
 .duo-modal .btn{border-radius:16px;margin-top:.6rem;}
+
+/* ---- Teacher assignments (phase 5) ---- */
+.seg{display:flex;gap:.4rem;background:rgba(255,255,255,.07);border-radius:14px;padding:.3rem}
+.seg button{flex:1;border:0;background:transparent;color:rgba(245,243,255,.65);border-radius:10px;padding:.55rem .3rem;font-size:.92rem;cursor:pointer}
+.seg button.seg-on{background:linear-gradient(140deg,#ff8a1e,#f26d0d);color:#fff;font-weight:700}
+.chk{display:flex;align-items:center;gap:.5rem;padding:.35rem 0;font-size:.92rem;cursor:pointer}
+.chk input{width:1.1rem;height:1.1rem;accent-color:#f26d0d}
+.as-pick{max-height:11rem;overflow:auto;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:.3rem .7rem;margin-top:.4rem}
+.as-row{display:flex;align-items:center;gap:.7rem;width:100%;text-align:left;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:.7rem .8rem;margin-bottom:.5rem;cursor:pointer;color:inherit}
+.as-ico{font-size:1.3rem}
+.as-main{flex:1;min-width:0}
+.as-title{display:block;font-weight:700;font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.as-meta{display:block;font-size:.78rem;color:rgba(245,243,255,.55);margin-top:.15rem}
+.as-go{color:#ff8a1e;font-weight:700}
+.as-results{max-height:16rem;overflow:auto;margin:.6rem 0}
+.as-rrow{display:flex;justify-content:space-between;align-items:center;padding:.5rem .2rem;border-bottom:1px solid rgba(255,255,255,.08);font-size:.92rem}
+.as-rrow .ok{color:#4ade80}
+.hw-banner{display:flex;align-items:center;gap:.5rem;background:linear-gradient(140deg,#ff8a1e,#f26d0d);color:#fff;border-radius:16px;padding:.85rem 1rem;font-size:1rem;margin:.6rem 0;text-decoration:none;box-shadow:0 6px 18px rgba(242,109,13,.35)}
+.hw-banner b{font-size:1.15rem}
+.hw-banner span{margin-left:auto;font-weight:700}
+.hw-card{margin-bottom:.7rem}
+.hw-title{font-weight:800;font-size:1.05rem;margin-bottom:.25rem}
+.hw-sub{font-size:.85rem;line-height:1.5;margin-bottom:.7rem}
+.hw-done{background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.35);color:#4ade80;border-radius:12px;padding:.6rem .8rem;font-size:.95rem}
+.quiz-explain{background:rgba(255,186,96,.1);border:1px solid rgba(255,186,96,.35);border-radius:12px;padding:.65rem .8rem;margin:.7rem 0 0;font-size:.88rem;line-height:1.5;color:#ffd9a8}

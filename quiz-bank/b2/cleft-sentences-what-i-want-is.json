@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Cleft sentences (What I want is...)",
+  "slug": "cleft-sentences-what-i-want-is",
+  "questions": [
+    {
+      "q": "___ I want is a good night's sleep.",
+      "options": [
+        "That",
+        "Which",
+        "What",
+        "Who"
+      ],
+      "answer": 2,
+      "explanation": "A wh-cleft starts with 'what' + clause + 'is'."
+    },
+    {
+      "q": "It was John ___ broke the vase.",
+      "options": [
+        "who",
+        "whom",
+        "which",
+        "what"
+      ],
+      "answer": 0,
+      "explanation": "An it-cleft for a person uses 'who' (or 'that')."
+    },
+    {
+      "q": "___ she needs is more time.",
+      "options": [
+        "That",
+        "Which",
+        "Who",
+        "What"
+      ],
+      "answer": 3,
+      "explanation": "A wh-cleft emphasises the thing with 'what'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "It was in 1999 what they got married.",
+        "It was in 1999 that they got married.",
+        "It was in 1999 which they got married.",
+        "That was in 1999 that they got married."
+      ],
+      "answer": 1,
+      "explanation": "An it-cleft emphasises the time with 'it was ... that'."
+    },
+    {
+      "q": "It was the manager ___ approved the plan.",
+      "options": [
+        "whom",
+        "who",
+        "which",
+        "what"
+      ],
+      "answer": 1,
+      "explanation": "An it-cleft for a person takes 'who'."
+    },
+    {
+      "q": "___ I really enjoy is cooking.",
+      "options": [
+        "That",
+        "Which",
+        "Who",
+        "What"
+      ],
+      "answer": 3,
+      "explanation": "A wh-cleft names the activity with 'what'."
+    },
+    {
+      "q": "It was yesterday ___ I saw her.",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "who"
+      ],
+      "answer": 0,
+      "explanation": "An it-cleft for time uses 'that'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "That surprised me was his reaction.",
+        "Which surprised me was his reaction.",
+        "What surprised me was his reaction.",
+        "What surprised me it was his reaction."
+      ],
+      "answer": 2,
+      "explanation": "A wh-cleft puts 'what' before the verb phrase."
+    },
+    {
+      "q": "All ___ he wants is peace and quiet.",
+      "options": [
+        "what",
+        "which",
+        "who",
+        "that"
+      ],
+      "answer": 3,
+      "explanation": "'All (that)' starts an emphatic cleft sentence."
+    },
+    {
+      "q": "It was his attitude ___ annoyed me.",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "who"
+      ],
+      "answer": 1,
+      "explanation": "An it-cleft for a thing uses 'that'."
+    },
+    {
+      "q": "___ matters most is your health.",
+      "options": [
+        "That",
+        "Which",
+        "What",
+        "Who"
+      ],
+      "answer": 2,
+      "explanation": "A wh-cleft emphasises the subject with 'what'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "It was the children who made all the noise.",
+        "It was the children which made all the noise.",
+        "It were the children who made all the noise.",
+        "It was the children that they made all the noise."
+      ],
+      "answer": 0,
+      "explanation": "An it-cleft for people uses 'who'."
+    },
+    {
+      "q": "It was to Sarah ___ I spoke.",
+      "options": [
+        "that",
+        "what",
+        "which",
+        "who"
+      ],
+      "answer": 0,
+      "explanation": "An it-cleft can emphasise a prepositional phrase with 'that'."
+    },
+    {
+      "q": "___ I don't understand is why he left.",
+      "options": [
+        "That",
+        "Which",
+        "What",
+        "Who"
+      ],
+      "answer": 2,
+      "explanation": "A wh-cleft starts with 'what' for the unknown thing."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "That I need is a holiday.",
+        "What I need is a holiday.",
+        "Which I need is a holiday.",
+        "What I need it is a holiday."
+      ],
+      "answer": 1,
+      "explanation": "A wh-cleft follows the pattern 'what + clause + is'."
+    },
+    {
+      "q": "It was the exam ___ worried her most.",
+      "options": [
+        "what",
+        "which",
+        "who",
+        "that"
+      ],
+      "answer": 3,
+      "explanation": "An it-cleft for a thing takes 'that'."
+    },
+    {
+      "q": "All ___ she said was 'good luck'.",
+      "options": [
+        "what",
+        "that",
+        "which",
+        "who"
+      ],
+      "answer": 1,
+      "explanation": "'All that' introduces an emphatic cleft."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "It was only after the war that he returned home.",
+        "It was only after the war what he returned home.",
+        "It was only after the war which he returned home.",
+        "That was only after the war that he returned home."
+      ],
+      "answer": 0,
+      "explanation": "An it-cleft emphasises the time clause with 'it was ... that'."
+    },
+    {
+      "q": "___ he did was apologize.",
+      "options": [
+        "That",
+        "Which",
+        "Who",
+        "What"
+      ],
+      "answer": 3,
+      "explanation": "A wh-cleft with 'do' emphasises the action."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "It wasn't the money what mattered, it was the gesture.",
+        "It wasn't the money which mattered, it was the gesture.",
+        "It wasn't the money that mattered, it was the gesture.",
+        "That wasn't the money that mattered, it was the gesture."
+      ],
+      "answer": 2,
+      "explanation": "A negative it-cleft contrasts two elements with 'that'."
+    }
+  ]
+}

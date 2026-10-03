@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "would rather / had better / it's time",
+  "slug": "would-rather-had-better-it-s-time",
+  "questions": [
+    {
+      "q": "I'd rather you ___ smoking in the house.",
+      "options": [
+        "don't",
+        "doesn't",
+        "didn't",
+        "won't"
+      ],
+      "answer": 2,
+      "explanation": "'Would rather' about someone else takes the past simple."
+    },
+    {
+      "q": "You'd better ___ your passport before we leave.",
+      "options": [
+        "check",
+        "to check",
+        "checking",
+        "checked"
+      ],
+      "answer": 0,
+      "explanation": "'Had better' is followed by the bare infinitive."
+    },
+    {
+      "q": "It's time you ___ a decision.",
+      "options": [
+        "make",
+        "will make",
+        "have made",
+        "made"
+      ],
+      "answer": 3,
+      "explanation": "'It's time' with a subject takes the past simple for present meaning."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I'd rather to stay at home than go out tonight.",
+        "I'd rather stay at home than go out tonight.",
+        "I'd rather staying at home than go out tonight.",
+        "I'd rather stayed at home than go out tonight."
+      ],
+      "answer": 1,
+      "explanation": "'Would rather' takes the bare infinitive, not 'to' or '-ing'."
+    },
+    {
+      "q": "She'd rather her son ___ medicine than law.",
+      "options": [
+        "studies",
+        "studied",
+        "will study",
+        "study"
+      ],
+      "answer": 1,
+      "explanation": "'Would rather' with a different subject takes the past simple."
+    },
+    {
+      "q": "We'd better hurry, ___ we?",
+      "options": [
+        "don't",
+        "wouldn't",
+        "shouldn't",
+        "hadn't"
+      ],
+      "answer": 3,
+      "explanation": "The question tag after ''d better' uses 'hadn't'."
+    },
+    {
+      "q": "It's high time they ___ the problem seriously.",
+      "options": [
+        "took",
+        "take",
+        "will take",
+        "have taken"
+      ],
+      "answer": 0,
+      "explanation": "'It's high time' takes the past simple for something overdue."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "You'd better to not be late again.",
+        "You had better not to be late again.",
+        "You'd better not be late again.",
+        "You'd better don't be late again."
+      ],
+      "answer": 2,
+      "explanation": "'Had better' takes the bare infinitive, with 'not' before it."
+    },
+    {
+      "q": "I'd rather ___ by train than fly.",
+      "options": [
+        "to travel",
+        "travelling",
+        "travelled",
+        "travel"
+      ],
+      "answer": 3,
+      "explanation": "'Would rather' is followed by the bare infinitive."
+    },
+    {
+      "q": "It's about time he ___ his own flat.",
+      "options": [
+        "gets",
+        "got",
+        "will get",
+        "get"
+      ],
+      "answer": 1,
+      "explanation": "'It's about time' takes the past simple."
+    },
+    {
+      "q": "You had better ___ to the doctor about that cough.",
+      "options": [
+        "to go",
+        "going",
+        "go",
+        "gone"
+      ],
+      "answer": 2,
+      "explanation": "'Had better' is followed by the bare infinitive."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I'd rather you came with us tomorrow.",
+        "I'd rather you come with us tomorrow.",
+        "I'd rather you will come with us tomorrow.",
+        "I'd rather you would come with us tomorrow."
+      ],
+      "answer": 0,
+      "explanation": "'Would rather' about another person takes the past simple, even for the future."
+    },
+    {
+      "q": "I'd rather have ___ at home last night.",
+      "options": [
+        "stayed",
+        "stay",
+        "to stay",
+        "staying"
+      ],
+      "answer": 0,
+      "explanation": "'Would rather have' for a past preference takes the past participle."
+    },
+    {
+      "q": "It's time for bed — you'd better ___ up now.",
+      "options": [
+        "to get",
+        "getting",
+        "get",
+        "got"
+      ],
+      "answer": 2,
+      "explanation": "'Had better' takes the bare infinitive."
+    },
+    {
+      "q": "She'd rather not ___ about it.",
+      "options": [
+        "to talk",
+        "talk",
+        "talking",
+        "talked"
+      ],
+      "answer": 1,
+      "explanation": "Put 'not' before the bare infinitive after 'would rather'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "It's time we leave — the film starts in ten minutes.",
+        "It's time we will leave — the film starts in ten minutes.",
+        "It's time us to leave — the film starts in ten minutes.",
+        "It's time we left — the film starts in ten minutes."
+      ],
+      "answer": 3,
+      "explanation": "'It's time' with a subject takes the past simple."
+    },
+    {
+      "q": "We'd rather you ___ the news to her gently.",
+      "options": [
+        "break",
+        "broke",
+        "will break",
+        "have broken"
+      ],
+      "answer": 1,
+      "explanation": "'Would rather' with another subject takes the past simple."
+    },
+    {
+      "q": "You'd better ___ your seatbelt.",
+      "options": [
+        "fasten",
+        "to fasten",
+        "fastening",
+        "fastened"
+      ],
+      "answer": 0,
+      "explanation": "'Had better' is followed by the bare infinitive."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I'd rather to have a coffee than a tea.",
+        "I'd rather having a coffee than a tea.",
+        "I'd prefer rather have a coffee than a tea.",
+        "I'd rather have a coffee than a tea."
+      ],
+      "answer": 3,
+      "explanation": "'Would rather' takes the bare infinitive after it."
+    },
+    {
+      "q": "It's high time the government ___ action.",
+      "options": [
+        "takes",
+        "will take",
+        "took",
+        "take"
+      ],
+      "answer": 2,
+      "explanation": "'It's high time' takes the past simple for an overdue action."
+    }
+  ]
+}

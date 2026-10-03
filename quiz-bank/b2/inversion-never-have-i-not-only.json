@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Inversion (Never have I..., Not only...)",
+  "slug": "inversion-never-have-i-not-only",
+  "questions": [
+    {
+      "q": "Never ___ such a beautiful sunset.",
+      "options": [
+        "I have seen",
+        "have I seen",
+        "have seen I",
+        "I saw never"
+      ],
+      "answer": 1,
+      "explanation": "After a negative adverb at the start, invert the auxiliary and subject."
+    },
+    {
+      "q": "Not only ___ late, but he also forgot the documents.",
+      "options": [
+        "he was",
+        "he is",
+        "were he",
+        "was he"
+      ],
+      "answer": 3,
+      "explanation": "'Not only' at the start triggers inversion."
+    },
+    {
+      "q": "Rarely ___ such kindness.",
+      "options": [
+        "have I experienced",
+        "I have experienced",
+        "have experienced I",
+        "I experienced rarely"
+      ],
+      "answer": 0,
+      "explanation": "A fronted negative adverb needs subject-auxiliary inversion."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Never I have been so embarrassed.",
+        "Never had I be so embarrassed.",
+        "Never have I been so embarrassed.",
+        "Never have been I so embarrassed."
+      ],
+      "answer": 2,
+      "explanation": "After 'never', the auxiliary comes before the subject."
+    },
+    {
+      "q": "Hardly ___ the phone when it rang again.",
+      "options": [
+        "I had put down",
+        "did I put down",
+        "had I put down",
+        "I put down"
+      ],
+      "answer": 2,
+      "explanation": "'Hardly' with a past event uses inversion with 'had'."
+    },
+    {
+      "q": "No sooner ___ the door than the phone rang.",
+      "options": [
+        "had I closed",
+        "I had closed",
+        "did I close",
+        "I closed"
+      ],
+      "answer": 0,
+      "explanation": "'No sooner' pairs with 'than' and needs inversion."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Not only she won, but she broke the record too.",
+        "Not only did she won, but she broke the record too.",
+        "Not only won she, but she broke the record too.",
+        "Not only did she win, but she broke the record too."
+      ],
+      "answer": 3,
+      "explanation": "'Not only' at the start inverts 'did' and the subject."
+    },
+    {
+      "q": "Seldom ___ him laugh like that.",
+      "options": [
+        "I have heard",
+        "have I heard",
+        "did I hear",
+        "I heard"
+      ],
+      "answer": 1,
+      "explanation": "'Seldom' at the start triggers inversion."
+    },
+    {
+      "q": "Little ___ they would meet again.",
+      "options": [
+        "did they know",
+        "they knew",
+        "knew they",
+        "do they know"
+      ],
+      "answer": 0,
+      "explanation": "'Little' meaning 'not' at the start needs inversion."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Hardly we had started when it began to rain.",
+        "Hardly had we start when it began to rain.",
+        "Hardly had we started when it began to rain.",
+        "Hardly did we had started when it began to rain."
+      ],
+      "answer": 2,
+      "explanation": "'Hardly' pairs with 'when' and inverts 'had' and the subject."
+    },
+    {
+      "q": "Only then ___ the truth.",
+      "options": [
+        "I understood",
+        "did I understand",
+        "understood I",
+        "do I understand"
+      ],
+      "answer": 1,
+      "explanation": "'Only then' at the start triggers inversion."
+    },
+    {
+      "q": "Nowhere ___ a better view.",
+      "options": [
+        "you will find",
+        "find you will",
+        "you find",
+        "will you find"
+      ],
+      "answer": 3,
+      "explanation": "A fronted negative place adverb inverts the auxiliary and subject."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "No sooner he had arrived than he was asked to leave.",
+        "No sooner had he arrived when he was asked to leave.",
+        "No sooner did he arrived than he was asked to leave.",
+        "No sooner had he arrived than he was asked to leave."
+      ],
+      "answer": 3,
+      "explanation": "'No sooner' needs inversion and pairs with 'than'."
+    },
+    {
+      "q": "Never before ___ such a large crowd.",
+      "options": [
+        "I had seen",
+        "had I seen",
+        "have I seen",
+        "I saw"
+      ],
+      "answer": 1,
+      "explanation": "'Never before' at the start inverts 'had' and the subject."
+    },
+    {
+      "q": "Only by working hard ___ succeed.",
+      "options": [
+        "you will",
+        "you can",
+        "will you",
+        "shall you"
+      ],
+      "answer": 2,
+      "explanation": "'Only by...' at the start triggers inversion."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Seldom do we see such dedication.",
+        "Seldom we do see such dedication.",
+        "Seldom we see such dedication.",
+        "Seldom does we see such dedication."
+      ],
+      "answer": 0,
+      "explanation": "'Seldom' at the start inverts 'do' and the subject."
+    },
+    {
+      "q": "Under no circumstances ___ late again.",
+      "options": [
+        "you must be",
+        "you be must",
+        "must you be",
+        "be you must"
+      ],
+      "answer": 2,
+      "explanation": "'Under no circumstances' triggers inversion with the modal first."
+    },
+    {
+      "q": "Not until midnight ___ home.",
+      "options": [
+        "he got",
+        "got he",
+        "does he get",
+        "did he get"
+      ],
+      "answer": 3,
+      "explanation": "'Not until' at the start needs inversion."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Little did she know what was waiting for her.",
+        "Little she did know what was waiting for her.",
+        "Little knew she what was waiting for her.",
+        "Little did she knew what was waiting for her."
+      ],
+      "answer": 0,
+      "explanation": "'Little' at the start inverts 'did' and the subject."
+    },
+    {
+      "q": "So tired ___ that he fell asleep instantly.",
+      "options": [
+        "he was",
+        "was he",
+        "were he",
+        "he is"
+      ],
+      "answer": 1,
+      "explanation": "'So + adjective' at the start triggers inversion."
+    }
+  ]
+}

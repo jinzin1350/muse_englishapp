@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Participle clauses (-ing / -ed clauses)",
+  "slug": "participle-clauses-ing-ed-clauses",
+  "questions": [
+    {
+      "q": "___ tired, she went to bed early.",
+      "options": [
+        "Felt",
+        "Feel",
+        "Feeling",
+        "To feel"
+      ],
+      "answer": 2,
+      "explanation": "A present participle clause shows the reason: 'because she felt tired'."
+    },
+    {
+      "q": "The man ___ by the door is my uncle.",
+      "options": [
+        "standing",
+        "stood",
+        "stand",
+        "to stand"
+      ],
+      "answer": 0,
+      "explanation": "A reduced relative clause uses the present participle for an active meaning."
+    },
+    {
+      "q": "___ in 1900, the bridge is still in use.",
+      "options": [
+        "Building",
+        "Build",
+        "To build",
+        "Built"
+      ],
+      "answer": 3,
+      "explanation": "A past participle clause gives a passive meaning."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Not know what to do, I called my mother.",
+        "Not knowing what to do, I called my mother.",
+        "Not known what to do, I called my mother.",
+        "Not to know what to do, I called my mother."
+      ],
+      "answer": 1,
+      "explanation": "A negative participle clause starts with 'not + -ing'."
+    },
+    {
+      "q": "The girl ___ next to me is my cousin.",
+      "options": [
+        "sat",
+        "sitting",
+        "sit",
+        "to sit"
+      ],
+      "answer": 1,
+      "explanation": "Use the present participle to reduce 'who is sitting'."
+    },
+    {
+      "q": "___ the instructions, he assembled the furniture.",
+      "options": [
+        "Read",
+        "Reading",
+        "To read",
+        "Having read"
+      ],
+      "answer": 3,
+      "explanation": "'Having + past participle' shows one action finished before another."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Exhausted by the journey, they fell asleep immediately.",
+        "Exhausting by the journey, they fell asleep immediately.",
+        "Exhaust by the journey, they fell asleep immediately.",
+        "Being exhausted by the journey, they fell asleep immediately."
+      ],
+      "answer": 0,
+      "explanation": "A past participle clause describes a passive state."
+    },
+    {
+      "q": "The book ___ on the table is mine.",
+      "options": [
+        "laid",
+        "lie",
+        "lying",
+        "to lie"
+      ],
+      "answer": 2,
+      "explanation": "Use the present participle of 'lie' (rest), not 'lay'."
+    },
+    {
+      "q": "___ all the evidence, the jury reached a verdict.",
+      "options": [
+        "Considered",
+        "Considering",
+        "To consider",
+        "Having considered"
+      ],
+      "answer": 3,
+      "explanation": "'Having considered' shows the considering came first."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Shocking by the news, she couldn't speak.",
+        "Shocked by the news, she couldn't speak.",
+        "Shock by the news, she couldn't speak.",
+        "Being shocking by the news, she couldn't speak."
+      ],
+      "answer": 1,
+      "explanation": "A past participle clause expresses a passive reaction."
+    },
+    {
+      "q": "People ___ in this area often complain about noise.",
+      "options": [
+        "lived",
+        "live",
+        "living",
+        "to live"
+      ],
+      "answer": 2,
+      "explanation": "Reduce 'who live' to the present participle 'living'."
+    },
+    {
+      "q": "___ late, he missed the beginning.",
+      "options": [
+        "Arriving",
+        "Arrived",
+        "Arrive",
+        "To arrive"
+      ],
+      "answer": 0,
+      "explanation": "A present participle clause means 'because he arrived late'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Known for his honesty, he was trusted by everyone.",
+        "Knowing for his honesty, he was trusted by everyone.",
+        "Know for his honesty, he was trusted by everyone.",
+        "Being known for his honesty, he was trusted by everyone."
+      ],
+      "answer": 0,
+      "explanation": "A past participle clause gives the passive reason 'because he was known'."
+    },
+    {
+      "q": "The documents ___ yesterday have arrived.",
+      "options": [
+        "signing",
+        "sign",
+        "signed",
+        "to sign"
+      ],
+      "answer": 2,
+      "explanation": "Reduce 'which were signed' to the past participle."
+    },
+    {
+      "q": "___ his keys, he couldn't get in.",
+      "options": [
+        "Lost",
+        "Having lost",
+        "Losing",
+        "To lose"
+      ],
+      "answer": 1,
+      "explanation": "'Having lost' shows the losing happened before he arrived."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Walk home, I met an old friend.",
+        "Walked home, I met an old friend.",
+        "To walk home, I met an old friend.",
+        "Walking home, I met an old friend."
+      ],
+      "answer": 3,
+      "explanation": "A present participle clause means 'while I was walking home'."
+    },
+    {
+      "q": "Anyone ___ in the course should register now.",
+      "options": [
+        "interesting",
+        "interested",
+        "interest",
+        "to interest"
+      ],
+      "answer": 1,
+      "explanation": "Use the past participle 'interested' for the passive feeling."
+    },
+    {
+      "q": "___ by her parents, she felt more confident.",
+      "options": [
+        "Encouraged",
+        "Encouraging",
+        "Encourage",
+        "To encourage"
+      ],
+      "answer": 0,
+      "explanation": "A past participle clause gives the passive cause."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Have finished his work, he went for a walk.",
+        "Finished his work, he went for a walk.",
+        "Having finish his work, he went for a walk.",
+        "Having finished his work, he went for a walk."
+      ],
+      "answer": 3,
+      "explanation": "'Having finished' shows the work came before the walk."
+    },
+    {
+      "q": "The train ___ at platform 2 is delayed.",
+      "options": [
+        "waited",
+        "wait",
+        "waiting",
+        "to wait"
+      ],
+      "answer": 2,
+      "explanation": "Reduce 'which is waiting' to the present participle."
+    }
+  ]
+}

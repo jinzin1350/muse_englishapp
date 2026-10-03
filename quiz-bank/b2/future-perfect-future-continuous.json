@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Future perfect & future continuous",
+  "slug": "future-perfect-future-continuous",
+  "questions": [
+    {
+      "q": "By 10 pm, I ___ my homework.",
+      "options": [
+        "will finish",
+        "will have finished",
+        "will be finishing",
+        "have finished"
+      ],
+      "answer": 1,
+      "explanation": "Use the future perfect for an action completed before a future time."
+    },
+    {
+      "q": "This time tomorrow, we ___ on the beach.",
+      "options": [
+        "will lie",
+        "will have lain",
+        "lie",
+        "will be lying"
+      ],
+      "answer": 3,
+      "explanation": "Use the future continuous for an action in progress at a future moment."
+    },
+    {
+      "q": "At 8 o'clock tonight, she ___ dinner for her guests.",
+      "options": [
+        "will be cooking",
+        "will cook",
+        "will have cooked",
+        "cooks"
+      ],
+      "answer": 0,
+      "explanation": "Use the future continuous for something happening at a specific future time."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "By next year, they will live here for a decade.",
+        "By next year, they will be living here for a decade.",
+        "By next year, they will have lived here for a decade.",
+        "By next year, they have lived here for a decade."
+      ],
+      "answer": 2,
+      "explanation": "Duration completed by a future point needs the future perfect."
+    },
+    {
+      "q": "Don't call at noon — I ___ a meeting.",
+      "options": [
+        "will have",
+        "will have had",
+        "will be having",
+        "have"
+      ],
+      "answer": 2,
+      "explanation": "Use the future continuous for a planned activity at a future time."
+    },
+    {
+      "q": "By the time you arrive, the film ___.",
+      "options": [
+        "will have started",
+        "will start",
+        "will be starting",
+        "has started"
+      ],
+      "answer": 0,
+      "explanation": "Use the future perfect for something finished before you arrive."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "This time next week, I'll sit on a plane.",
+        "This time next week, I'll have sat on a plane.",
+        "This time next week, I sit on a plane.",
+        "This time next week, I'll be sitting on a plane."
+      ],
+      "answer": 3,
+      "explanation": "An action in progress at a future moment needs the future continuous."
+    },
+    {
+      "q": "She ___ her degree by June.",
+      "options": [
+        "will complete",
+        "will have completed",
+        "will be completing",
+        "completes"
+      ],
+      "answer": 1,
+      "explanation": "Use the future perfect with 'by June' for a finished action."
+    },
+    {
+      "q": "They ___ the house by Friday, so you can move in then.",
+      "options": [
+        "will have painted",
+        "will paint",
+        "will be painting",
+        "have painted"
+      ],
+      "answer": 0,
+      "explanation": "Use the future perfect for work finished before a future date."
+    },
+    {
+      "q": "At midnight, the baby ___.",
+      "options": [
+        "will sleep",
+        "will have slept",
+        "will be sleeping",
+        "sleeps"
+      ],
+      "answer": 2,
+      "explanation": "Use the future continuous for an ongoing state at a future time."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "In two years, I'll be working here for ten years.",
+        "In two years, I'll have been working here for ten years.",
+        "In two years, I'll have worked here for ten years.",
+        "In two years, I have been working here for ten years."
+      ],
+      "answer": 1,
+      "explanation": "Duration up to a future point needs the future perfect continuous."
+    },
+    {
+      "q": "He ___ 30 by the time his sister gets married.",
+      "options": [
+        "will turn",
+        "will be turning",
+        "turns",
+        "will have turned"
+      ],
+      "answer": 3,
+      "explanation": "Use the future perfect for an age reached before a future event."
+    },
+    {
+      "q": "We ___ the project before the deadline.",
+      "options": [
+        "will submit",
+        "will be submitting",
+        "submit",
+        "will have submitted"
+      ],
+      "answer": 3,
+      "explanation": "'Before the deadline' points to completion, so use the future perfect."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Will you have used the car tomorrow morning?",
+        "Will you be using the car tomorrow morning?",
+        "Will you used the car tomorrow morning?",
+        "You will be using the car tomorrow morning?"
+      ],
+      "answer": 1,
+      "explanation": "A polite question about future plans uses the future continuous."
+    },
+    {
+      "q": "By 2030, scientists ___ a cure.",
+      "options": [
+        "will find",
+        "will be finding",
+        "will have found",
+        "find"
+      ],
+      "answer": 2,
+      "explanation": "Use the future perfect for an achievement before a future year."
+    },
+    {
+      "q": "She ___ for the exam all evening, so don't disturb her.",
+      "options": [
+        "will be studying",
+        "will study",
+        "will have studied",
+        "studies"
+      ],
+      "answer": 0,
+      "explanation": "Use the future continuous for an activity filling a future period."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "By the end of the course, you will learn over 500 words.",
+        "By the end of the course, you will be learning over 500 words.",
+        "By the end of the course, you will have learned over 500 words.",
+        "By the end of the course, you have learned over 500 words."
+      ],
+      "answer": 2,
+      "explanation": "A total achieved by a future point needs the future perfect."
+    },
+    {
+      "q": "I ___ my grandparents this time next Sunday.",
+      "options": [
+        "will visit",
+        "will have visited",
+        "visit",
+        "will be visiting"
+      ],
+      "answer": 3,
+      "explanation": "Use the future continuous for an arrangement in progress at a future time."
+    },
+    {
+      "q": "They ___ the bridge by December.",
+      "options": [
+        "will have built",
+        "will build",
+        "will be building",
+        "build"
+      ],
+      "answer": 0,
+      "explanation": "Use the future perfect for construction finished before a future month."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "He'll have waited for you when you get off the train.",
+        "He'll be waiting for you when you get off the train.",
+        "He'll wait for you when you get off the train.",
+        "He waits for you when you get off the train."
+      ],
+      "answer": 1,
+      "explanation": "An action in progress at your arrival needs the future continuous."
+    }
+  ]
+}

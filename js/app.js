@@ -1574,7 +1574,7 @@ async function loadPreviewLesson() {
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'support'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support', 'challenge', 'teacher', 'become-teacher', 'inbox'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -1644,6 +1644,7 @@ function show(view, arg) {
   else if (view === 'support') renderSupport(v);
   else if (view === 'challenge') renderChallenge(v);
   else if (view === 'inbox') renderInbox(v);
+  else if (view === 'homework') renderHomework(v);
   else if (view === 'admin') renderAdmin(v);
   else if (view === 'teacher') renderTeacher(v);
   else if (view === 'become-teacher') renderBecomeTeacher(v);
@@ -2132,14 +2133,17 @@ function renderTeacher(v) {
       '<button class="btn btn-sm" data-action="copy-teacher-link">Copy</button></div>' +
       '<p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0">Share it with your students — everyone who signs up through it shows up below.</p>' +
     '</div>' +
-    '<div class="section-title"><h2>My students <span id="tch-count" class="muted"></span></h2></div>' +
+    '<div class="section-title"><h2>My students <span id="tch-count" class="muted"></span></h2>' +
+    '<button class="btn btn-sm" data-action="assignment-compose">＋ New assignment</button></div>' +
     '<div id="tch-weekly"></div>' +
     '<div id="tch-coach"></div>' +
+    '<div id="tch-assign"></div>' +
     '<div id="tch-roster"><div class="empty">Loading…</div></div>' +
     '<div id="tch-detail"></div>' +
   '</div>';
   loadTeacherRoster();
   loadTeacherCoach();
+  loadTeacherAssignments();
 }
 /* Weekly report card (phase 3): 7-day aggregates across the teacher's students. */
 function renderTeacherWeekly() {
@@ -2396,6 +2400,423 @@ async function teacherMessageSend(i, btn) {
     if (err) err.textContent = 'Could not send — check your connection.';
     btn.disabled = false; btn.textContent = 'Send';
   }
+}
+
+/* ---------------- Teacher assignments: homework & exams (phase 5) ----------------
+   Teacher picks topic + level + count -> questions sampled from the quiz-bank
+   JSONs -> snapshot stored in public.assignments -> student plays it in the
+   classic quiz renderer -> result lands in public.assignment_results. */
+const ASSIGN_LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
+const ASSIGN_TOPICS = {
+  a1: [
+    'Verb be: am/is/are',
+    'Possessive adjectives (my/your/his/her...)',
+    'a/an + plural nouns',
+    'this/that/these/those',
+    'Present simple: I/you/we/they',
+    'Present simple: he/she/it (3rd person -s)',
+    'Questions with be and do/does',
+    'Prepositions of place (in/on/under/behind...)',
+    "can/can't (ability, requests)",
+    "Possessive 's (my brother's car)",
+    'was/were (past of be)',
+    'Past simple: regular verbs',
+    'Past simple: irregular verbs',
+    'there is/there are (+ was/were)',
+    'some/any + countable/uncountable nouns',
+    'how much / how many',
+    'Comparatives (taller than)',
+    'Superlatives (the tallest)',
+    'be going to (plans)',
+    'Adverbs of frequency (always/usually/never)'
+  ],
+  a2: [
+    'Present continuous (right now)',
+    'Present simple vs present continuous',
+    'Past continuous',
+    'Past simple vs past continuous',
+    'going to vs will',
+    "will/won't (decisions, offers, promises)",
+    'Present continuous for future arrangements',
+    "have to / must / mustn't",
+    "should/shouldn't (advice)",
+    'Present perfect: ever/never/just/yet/already',
+    'Present perfect vs past simple',
+    'First conditional (if + will)',
+    'Second conditional (if + would)',
+    '(not) as...as, less, (not) enough',
+    'too much/too many, (a) little/(a) few',
+    'Articles: a/an/the/zero article',
+    'Relative clauses: who/which/that',
+    'so / such',
+    'Passive: present simple (is made)',
+    'Verb patterns: want to do / enjoy doing'
+  ],
+  b1: [
+    'Present perfect simple vs continuous',
+    'Past perfect',
+    'Narrative tenses (past simple/continuous/perfect)',
+    'Future forms (will / going to / present continuous)',
+    'Conditionals review (zero, first, second)',
+    'Third conditional',
+    'wish + past simple / would',
+    'Reported speech: statements',
+    'Reported speech: questions and orders',
+    'Passive: past & future, by-phrase',
+    'must / have to / should (obligation & advice)',
+    "Modals of deduction: must/might/can't (present)",
+    "used to / didn't use to",
+    'Gerund vs infinitive (basic patterns)',
+    'Defining vs non-defining relative clauses',
+    'Articles (advanced uses)',
+    'Quantifiers: both/neither/all/none',
+    'Question tags',
+    'Indirect questions (Do you know where...?)',
+    'so/such, too/enough (consolidation)'
+  ],
+  b2: [
+    'Past perfect continuous',
+    'Future perfect & future continuous',
+    'Mixed conditionals',
+    'wish / if only + past perfect',
+    "would rather / had better / it's time",
+    'Reported speech with reporting verbs',
+    'Passive advanced (be said to, have/get sth done)',
+    'Modals of deduction in the past (must have done...)',
+    "needn't have vs didn't need to",
+    'Gerund vs infinitive: meaning change (remember/stop/try...)',
+    'Participle clauses (-ing / -ed clauses)',
+    'Inversion (Never have I..., Not only...)',
+    'Cleft sentences (What I want is...)',
+    'Relative clauses: reduced & with prepositions',
+    'Articles & quantifiers (advanced)',
+    'Ellipsis & substitution (so/neither/do so)',
+    'Unreal past & hypothetical meaning',
+    'Linkers: contrast & addition (despite, whereas...)',
+    'Nominalization (decide → decision)',
+    'Emphasis with do/does/did'
+  ],
+  c1: [
+    'Conditionals: inversion (Had I known..., Were I to...)',
+    'Advanced mixed conditionals',
+    "Subjunctive (It's vital that he be...)",
+    'Future in the past (was going to / would)',
+    'Stative passive & passive with modals',
+    'Modals: criticism & regret (should have...)',
+    'Verb + object + infinitive (want him to go)',
+    'Advanced participle clauses',
+    'Advanced inversion (Scarcely..., No sooner...)',
+    'Cleft & pseudo-cleft (advanced focus)',
+    'Advanced ellipsis & substitution',
+    'Generic vs specific articles',
+    'each/every, either/neither (advanced)',
+    'Dependent prepositions (good at, famous for...)',
+    'make/do/have/take collocations',
+    'Hedging (tend to, apparently, seem)',
+    'Formal style & nominalization',
+    'suppose / what if + past (hypothetical)',
+    'Cohesive devices (advanced discourse)',
+    'Emphatic fronting'
+  ],
+  c2: [
+    'will/would: habits & willingness (nuance)',
+    'shall: formal offers & rules',
+    'Advanced inversion for rhetoric',
+    'It-clefts & extraposition (It is... that)',
+    'Absolute phrases & advanced participles',
+    'Subjunctive in formal registers',
+    'Conditionals: even if / only if / provided that',
+    'Unreal conditionals in formal style',
+    'Dense noun phrases (academic)',
+    'Hedging & stance (academic writing)',
+    'Idiomatic prepositions (advanced)',
+    'Articles with abstract nouns',
+    'Complex relatives (whereby, whereupon...)',
+    'Advanced reported structures',
+    'Emphasis: repetition & do-support',
+    'Concession linkers (much as, albeit, notwithstanding)',
+    'Rare verb complementation patterns',
+    'Register transformation (formal ↔ informal)',
+    'Fronting for focus (advanced)',
+    'Mixed advanced review (subtle distinctions)'
+  ]
+};
+
+function assignSlug(topic) {
+  return String(topic).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+/* ---- teacher composer ---- */
+function teacherAssignmentComposer() {
+  const list = state.teacherStudents || [];
+  if (!state.teacher) return;
+  state._asKind = 'homework';
+  if (!list.length) {
+    showModal('<div class="modal-ico">📝</div><h2>New assignment</h2>' +
+      '<p class="muted">You have no students yet — share your invite link first. 🌱</p>' +
+      '<button class="btn btn-ghost btn-block" data-action="modal-close">Close</button>');
+    return;
+  }
+  showModal(
+    '<div class="modal-ico">📝</div>' +
+    '<h2>New assignment</h2>' +
+    '<div class="field" style="text-align:left"><label>Type</label>' +
+    '<div class="seg" id="as-seg">' +
+    '<button type="button" data-action="assignment-kind" data-kind="homework" class="seg-on">📝 Homework</button>' +
+    '<button type="button" data-action="assignment-kind" data-kind="exam">🎓 Exam</button>' +
+    '</div></div>' +
+    '<div class="field" style="text-align:left"><label for="as-level">Level</label>' +
+    '<select id="as-level" class="input">' +
+    ASSIGN_LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (lv === 'a2' ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') +
+    '</select></div>' +
+    '<div class="field" style="text-align:left"><label for="as-topic">Topic</label>' +
+    '<select id="as-topic" class="input"></select></div>' +
+    '<div class="field" style="text-align:left"><label for="as-count">Questions</label>' +
+    '<select id="as-count" class="input">' +
+    [5, 10, 15, 20].map(function (n) { return '<option value="' + n + '"' + (n === 10 ? ' selected' : '') + '>' + n + '</option>'; }).join('') +
+    '</select></div>' +
+    '<div class="field" style="text-align:left"><label>Students</label>' +
+    '<label class="chk"><input type="checkbox" id="as-all" checked> All students (' + list.length + ')</label>' +
+    '<div id="as-students" class="as-pick hidden">' +
+    list.map(function (s) {
+      const nm = s.display_name || (s.email || '?').split('@')[0];
+      return '<label class="chk"><input type="checkbox" class="as-st" value="' + esc(s.user_id) + '" checked> ' + esc(nm) + '</label>';
+    }).join('') + '</div></div>' +
+    '<div class="field" style="text-align:left"><label for="as-note">Note for students (optional)</label>' +
+    '<input id="as-note" class="input" maxlength="200" placeholder="e.g. Focus on the verb forms!"></div>' +
+    '<div class="field" style="text-align:left"><label for="as-deadline">Deadline (optional)</label>' +
+    '<input id="as-deadline" class="input" type="date"></div>' +
+    '<div class="form-error" id="as-error" role="alert"></div>' +
+    '<button class="btn btn-block" data-action="assignment-create">Send to students</button>' +
+    '<button class="btn btn-ghost btn-block" data-action="modal-close">Cancel</button>'
+  );
+  assignmentFillTopics();
+  document.getElementById('as-level').addEventListener('change', assignmentFillTopics);
+  document.getElementById('as-all').addEventListener('change', function () {
+    document.getElementById('as-students').classList.toggle('hidden', this.checked);
+  });
+}
+function assignmentFillTopics() {
+  const lv = document.getElementById('as-level').value;
+  const sel = document.getElementById('as-topic');
+  sel.innerHTML = (ASSIGN_TOPICS[lv] || []).map(function (t) {
+    return '<option value="' + esc(t) + '">' + esc(t) + '</option>';
+  }).join('');
+}
+function assignmentKind(kind, btn) {
+  state._asKind = kind;
+  const seg = document.getElementById('as-seg');
+  if (seg) Array.prototype.forEach.call(seg.children, function (b) {
+    b.classList.toggle('seg-on', b.getAttribute('data-kind') === kind);
+  });
+}
+async function createAssignment(btn) {
+  const errBox = document.getElementById('as-error');
+  const err = function (m) { if (errBox) errBox.textContent = m; };
+  err('');
+  const kind = state._asKind || 'homework';
+  const level = document.getElementById('as-level').value;
+  const topic = document.getElementById('as-topic').value;
+  const count = parseInt(document.getElementById('as-count').value, 10) || 10;
+  const roster = state.teacherStudents || [];
+  const useAll = document.getElementById('as-all').checked;
+  const targets = useAll ? roster.slice() : roster.filter(function (s) {
+    const cb = document.querySelector('.as-st[value="' + s.user_id + '"]');
+    return cb && cb.checked;
+  });
+  if (!targets.length) { err('Pick at least one student.'); return; }
+  btn.disabled = true;
+  const orig = btn.textContent;
+  btn.textContent = 'Preparing…';
+  let bank;
+  try {
+    const r = await fetch('quiz-bank/' + level + '/' + assignSlug(topic) + '.json');
+    if (!r.ok) throw new Error('bank 404');
+    bank = await r.json();
+  } catch (e) {
+    err('Could not load the question bank — check your connection.');
+    btn.disabled = false; btn.textContent = orig; return;
+  }
+  const picked = shuffleArr((bank.questions || []).slice()).slice(0, Math.min(count, (bank.questions || []).length));
+  if (!picked.length) { err('This topic has no questions yet.'); btn.disabled = false; btn.textContent = orig; return; }
+  const questions = picked.map(function (q) {
+    return { q: q.q, options: q.options, answer: q.answer, explanation: q.explanation || '' };
+  });
+  const title = (kind === 'exam' ? '🎓 ' : '📝 ') + topic + ' (' + level.toUpperCase() + ')';
+  const noteEl = document.getElementById('as-note');
+  const dlEl = document.getElementById('as-deadline');
+  const note = noteEl ? noteEl.value.trim() : '';
+  const deadline = dlEl && dlEl.value ? dlEl.value : null;
+  btn.textContent = 'Sending…';
+  try {
+    const ins = await sb.from('assignments').insert({
+      teacher_id: state.user.id,
+      teacher_name: (state.teacher && state.teacher.display_name) || '',
+      kind: kind, title: title, level: level,
+      topic: assignSlug(topic), topic_label: topic,
+      question_count: questions.length, questions: questions,
+      student_ids: targets.map(function (s) { return s.user_id; }),
+      note: note || null, deadline: deadline
+    }).select('id').single();
+    if (ins.error) throw ins.error;
+    const body = '📝 Your teacher sent you ' + (kind === 'exam' ? 'an exam' : 'homework') +
+      ': ' + title + ' — open Muse English to start.';
+    await Promise.all(targets.map(function (s) {
+      return Promise.allSettled([
+        sb.rpc('send_teacher_message', { p_student: s.user_id, p_body: body }),
+        sb.rpc('send_nudge', { p_student: s.user_id })
+      ]);
+    }));
+    closeModal();
+    loadTeacherAssignments();
+  } catch (e) {
+    err('Could not send — check your connection.');
+    btn.disabled = false; btn.textContent = orig;
+  }
+}
+
+/* ---- teacher: assignment list + results ---- */
+async function loadTeacherAssignments() {
+  const host = document.getElementById('tch-assign');
+  if (!host || !state.teacher) return;
+  try {
+    const a = await sb.from('assignments')
+      .select('id,kind,title,created_at,deadline,student_ids,question_count')
+      .eq('teacher_id', state.user.id).order('created_at', { ascending: false }).limit(30);
+    if (a.error) throw a.error;
+    const rows = a.data || [];
+    state.teacherAssignments = rows;
+    if (!rows.length) { host.innerHTML = ''; return; }
+    let doneMap = {};
+    try {
+      const r = await sb.from('assignment_results').select('assignment_id,student_id')
+        .in('assignment_id', rows.map(function (x) { return x.id; }));
+      (r.data || []).forEach(function (x) {
+        (doneMap[x.assignment_id] = doneMap[x.assignment_id] || []).push(x.student_id);
+      });
+    } catch (e) {}
+    host.innerHTML = '<div class="section-title"><h2>📝 Assignments</h2></div>' +
+      rows.map(function (x, i) {
+        const done = (doneMap[x.id] || []).length;
+        const total = (x.student_ids || []).length;
+        return '<button class="as-row" data-action="assignment-open" data-i="' + i + '">' +
+          '<span class="as-ico">' + (x.kind === 'exam' ? '🎓' : '📝') + '</span>' +
+          '<span class="as-main"><span class="as-title">' + esc(x.title) + '</span>' +
+          '<span class="as-meta">' + esc(fmtDate(x.created_at)) + ' · ' + done + '/' + total + ' done</span></span>' +
+          '<span class="as-go">→</span></button>';
+      }).join('');
+  } catch (e) { host.innerHTML = ''; }
+}
+async function openTeacherAssignment(i) {
+  const r = (state.teacherAssignments || [])[i];
+  if (!r) return;
+  const roster = state.teacherStudents || [];
+  const nameOf = {};
+  roster.forEach(function (s) {
+    nameOf[s.user_id] = s.display_name || (s.email || '?').split('@')[0];
+  });
+  let results = [];
+  try {
+    const q = await sb.from('assignment_results')
+      .select('student_id,score,total,completed_at').eq('assignment_id', r.id);
+    results = q.data || [];
+  } catch (e) {}
+  const byId = {};
+  results.forEach(function (x) { byId[x.student_id] = x; });
+  showModal(
+    '<div class="modal-ico">' + (r.kind === 'exam' ? '🎓' : '📝') + '</div>' +
+    '<h2>' + esc(r.title) + '</h2>' +
+    '<p class="muted">' + (r.student_ids || []).length + ' students · ' + results.length + ' completed</p>' +
+    '<div class="as-results">' +
+    (r.student_ids || []).map(function (uid) {
+      const res = byId[uid];
+      return '<div class="as-rrow"><span>' + esc(nameOf[uid] || '—') + '</span>' +
+        (res ? '<b class="ok">✓ ' + res.score + '/' + res.total + '</b>'
+             : '<span class="muted">⏳ pending</span>') + '</div>';
+    }).join('') + '</div>' +
+    '<button class="btn btn-ghost btn-block" data-action="modal-close">Close</button>'
+  );
+}
+
+/* ---- student: homework card, list, player ---- */
+async function refreshHomeworkCard() {
+  const host = document.getElementById('home-hw-wrap');
+  if (!host || !cloudReady() || !state.user || state.user.demo) return;
+  try {
+    const a = await sb.from('assignments').select('id')
+      .contains('student_ids', [state.user.id]).limit(50);
+    const ids = (a.data || []).map(function (x) { return x.id; });
+    if (!ids.length) { host.innerHTML = ''; return; }
+    const r = await sb.from('assignment_results').select('assignment_id')
+      .eq('student_id', state.user.id).in('assignment_id', ids);
+    const done = {};
+    (r.data || []).forEach(function (x) { done[x.assignment_id] = true; });
+    const pending = ids.filter(function (id) { return !done[id]; }).length;
+    host.innerHTML = pending
+      ? '<a class="hw-banner" href="#/homework" aria-label="Open homework">📝 <b>' + pending + '</b> assignment' +
+        (pending > 1 ? 's' : '') + ' from your teacher <span>→</span></a>'
+      : '';
+  } catch (e) { /* leave empty on failure */ }
+}
+async function renderHomework(v) {
+  v.innerHTML = '<div class="hw-wrap"><h1>📝 Homework</h1>' +
+    '<div id="hw-list"><div class="empty">Loading…</div></div></div>';
+  window.scrollTo(0, 0);
+  if (!cloudReady()) {
+    document.getElementById('hw-list').innerHTML = '<div class="empty">Sign in to see your assignments.</div>';
+    return;
+  }
+  try {
+    const a = await sb.from('assignments').select('*')
+      .contains('student_ids', [state.user.id]).order('created_at', { ascending: false }).limit(30);
+    const rows = a.data || [];
+    const r = await sb.from('assignment_results')
+      .select('assignment_id,score,total,completed_at').eq('student_id', state.user.id);
+    const done = {};
+    (r.data || []).forEach(function (x) { done[x.assignment_id] = x; });
+    state.homeworkList = rows;
+    const host = document.getElementById('hw-list');
+    if (!host) return;
+    host.innerHTML = rows.length ? rows.map(function (x, i) {
+      const res = done[x.id];
+      return '<div class="card hw-card">' +
+        '<div class="hw-title">' + esc(x.title) + '</div>' +
+        '<div class="muted hw-sub">From ' + esc(x.teacher_name || 'your teacher') +
+        (x.deadline ? ' · due ' + esc(x.deadline) : '') +
+        (x.note ? '<br>💬 ' + esc(x.note) : '') + '</div>' +
+        (res ? '<div class="hw-done">✓ Done — <b>' + res.score + '/' + res.total + '</b></div>'
+             : '<button class="btn btn-block" data-action="assignment-start" data-i="' + i + '">Start · ' +
+               x.question_count + ' questions</button>') +
+      '</div>';
+    }).join('') : '<div class="empty">No assignments yet — enjoy the calm. 🌱</div>';
+  } catch (e) {
+    const host = document.getElementById('hw-list');
+    if (host) host.innerHTML = '<div class="empty">Could not load assignments.</div>';
+  }
+}
+function startAssignment(i) {
+  const a = (state.homeworkList || [])[i];
+  if (!a || !a.questions || !a.questions.length) return;
+  state.quiz = {
+    kind: 'assignment', assignmentId: a.id, log: [],
+    questions: a.questions.map(function (q) {
+      return { question: q.q, options: q.options, answer: q.answer, kind: 'assignment', explanation: q.explanation || '' };
+    }),
+    idx: 0, correct: 0, answered: false, picked: -1,
+    date: todayStr(), level: a.level, theme: a.title
+  };
+  renderQuizView();
+}
+async function saveAssignmentResult() {
+  const q = state.quiz;
+  if (!q || q.kind !== 'assignment' || !q.assignmentId || !cloudReady()) return;
+  try {
+    await sb.from('assignment_results').upsert({
+      assignment_id: q.assignmentId, student_id: state.user.id,
+      score: q.correct, total: q.questions.length,
+      answers: (q.log || []).map(function (l) { return { picked: l.picked, correct: l.correct }; })
+    }, { onConflict: 'assignment_id,student_id' });
+  } catch (e) {}
 }
 
 /* ---------------- Admin analytics (phase 2) ---------------- */
@@ -3400,6 +3821,7 @@ function renderLessons(v) {
 function renderHome(v) {
   paintHome(v, lsGet('mistakes'), lsGet('scores'));
   refreshHomeStreak();
+  refreshHomeworkCard();
   if (cloudReady()) {
     Promise.all([getMistakes(), getAttempts()]).then(function (res) {
       if (state.view === 'home' && !state.quiz) paintHome(v, res[0], res[1]);
@@ -3419,6 +3841,9 @@ function paintHome(v, mistakes, attempts) {
   // 0b — Streak banner (mockup v5): mascot artwork bg, painted with local
   // data first, then refreshed with cloud state by refreshHomeStreak().
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
+
+  // 0c — Homework from teacher (filled async; empty when none pending)
+  html += '<div id="home-hw-wrap"></div>';
 
   // 1 — Today's lesson (mockup v5 lesson card with illustrated hero)
   if (!today) {
@@ -3882,6 +4307,9 @@ function renderQuizView() {
         '<span class="opt-text">' + esc(opt) + '</span>' + tick + '</button>';
     }).join('') + '</div></div>';
 
+  if (q.answered && cur.explanation) {
+    html += '<div class="quiz-explain">💡 ' + esc(cur.explanation) + '</div>';
+  }
   if (q.answered) {
     html += '<button class="btn btn-orange btn-block quiz-next" data-action="quiz-next">' +
       (q.idx + 1 < total ? 'Next question <span>→</span>' : 'See my score <span>→</span>') + '</button>';
@@ -3906,6 +4334,7 @@ function answerQuiz(idx) {
       answer: cur.answer, picked: idx
     });
   }
+  if (q.log) q.log.push({ picked: idx, correct: cur.answer });
   renderQuizView();
 }
 
@@ -3949,6 +4378,9 @@ function finishQuiz() {
     /* Duolingo loop: reviewing mistakes earns a heart back (max 5/day). */
     heartEarned = getHearts() < 5;
     if (heartEarned) setHearts(getHearts() + 1);
+  } else if (q.kind === 'assignment') {
+    awardPoints('assignment_quiz', 10, q.date || todayStr());
+    saveAssignmentResult();
   }
   state.quiz = null;
   const praise = pct >= 85 ? 'Excellent work! ✨' : pct >= 60 ? 'Good — keep practicing! 💪' : 'Keep going — you\'ve got this! 📚';
@@ -5268,6 +5700,11 @@ function bindEvents() {
     else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
     else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-message') teacherMessageComposer(parseInt(t.getAttribute('data-i'), 10));
+    else if (a === 'assignment-compose') teacherAssignmentComposer();
+    else if (a === 'assignment-kind') assignmentKind(t.getAttribute('data-kind'), t);
+    else if (a === 'assignment-create') createAssignment(t);
+    else if (a === 'assignment-open') openTeacherAssignment(parseInt(t.getAttribute('data-i'), 10));
+    else if (a === 'assignment-start') startAssignment(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'inbox-open') { closeModal(); go('inbox'); }
     else if (a === 'inbox-retry') { renderInbox(document.getElementById('view')); }
     else if (a === 'bot-save') { saveAdminBot(t); }

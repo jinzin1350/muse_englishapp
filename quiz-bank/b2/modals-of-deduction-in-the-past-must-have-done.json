@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Modals of deduction in the past (must have done...)",
+  "slug": "modals-of-deduction-in-the-past-must-have-done",
+  "questions": [
+    {
+      "q": "He ___ — he's soaked!",
+      "options": [
+        "must forget his umbrella",
+        "must have forgotten his umbrella",
+        "must have forget his umbrella",
+        "had to forget his umbrella"
+      ],
+      "answer": 1,
+      "explanation": "'Must have + past participle' deduces a past cause from evidence."
+    },
+    {
+      "q": "She can't have ___ — she was with me.",
+      "options": [
+        "do it",
+        "did it",
+        "have done it",
+        "done it"
+      ],
+      "answer": 3,
+      "explanation": "'Can't have + past participle' rules out a past possibility."
+    },
+    {
+      "q": "They ___ — the lights are off.",
+      "options": [
+        "can't have arrived yet",
+        "can't arrive yet",
+        "mustn't have arrived yet",
+        "couldn't arrive yet"
+      ],
+      "answer": 0,
+      "explanation": "'Can't have' expresses impossibility about the past."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "You must be exhausted after the marathon.",
+        "You must have exhaust after the marathon.",
+        "You must have been exhausted after the marathon.",
+        "You had to be exhausted after the marathon."
+      ],
+      "answer": 2,
+      "explanation": "'Must have been' deduces a past state with certainty."
+    },
+    {
+      "q": "He ___ — they're on the table.",
+      "options": [
+        "mustn't have lost the keys",
+        "couldn't lose the keys",
+        "can't have lost the keys",
+        "shouldn't have lost the keys"
+      ],
+      "answer": 2,
+      "explanation": "Evidence against it needs 'can't have + past participle'."
+    },
+    {
+      "q": "She ___ — she looks terrified.",
+      "options": [
+        "must have seen something",
+        "must see something",
+        "must have see something",
+        "had to see something"
+      ],
+      "answer": 0,
+      "explanation": "'Must have + past participle' is a certain deduction about the past."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "They mustn't have finished already — they only started an hour ago.",
+        "They couldn't have finish already — they only started an hour ago.",
+        "They can't finished already — they only started an hour ago.",
+        "They can't have finished already — they only started an hour ago."
+      ],
+      "answer": 3,
+      "explanation": "'Can't have' expresses past impossibility, not 'mustn't have'."
+    },
+    {
+      "q": "He ___ — he's smiling.",
+      "options": [
+        "must pass",
+        "must have passed",
+        "must have pass",
+        "had to pass"
+      ],
+      "answer": 1,
+      "explanation": "Use 'must have + past participle' for a certain past deduction."
+    },
+    {
+      "q": "She ___ — she was at home all evening.",
+      "options": [
+        "can't have met him",
+        "can't meet him",
+        "mustn't have met him",
+        "couldn't meet him"
+      ],
+      "answer": 0,
+      "explanation": "An alibi makes it impossible: 'can't have + past participle'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "You should tell me — I could have helped.",
+        "You should have told me — I could help.",
+        "You should have told me — I could have helped.",
+        "You should had told me — I could have helped."
+      ],
+      "answer": 2,
+      "explanation": "'Should have' criticises a past omission; 'could have' offers a missed possibility."
+    },
+    {
+      "q": "They ___ — nobody answered.",
+      "options": [
+        "must leave",
+        "must have left",
+        "must have leave",
+        "had to leave"
+      ],
+      "answer": 1,
+      "explanation": "'Must have + past participle' deduces what surely happened."
+    },
+    {
+      "q": "He ___ — the door was locked from inside.",
+      "options": [
+        "can't escape",
+        "mustn't have escaped",
+        "couldn't escape",
+        "can't have escaped"
+      ],
+      "answer": 3,
+      "explanation": "Impossibility about the past needs 'can't have + past participle'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "She might miss the bus — that's why she's late.",
+        "She might have miss the bus — that's why she's late.",
+        "She may have missed the bus — that's why she'll be late.",
+        "She might have missed the bus — that's why she's late."
+      ],
+      "answer": 3,
+      "explanation": "'Might have + past participle' suggests a possible past cause."
+    },
+    {
+      "q": "You ___ — it's all wet.",
+      "options": [
+        "must leave the window open",
+        "must have left the window open",
+        "must have leave the window open",
+        "had to leave the window open"
+      ],
+      "answer": 1,
+      "explanation": "Evidence of a past mistake needs 'must have + past participle'."
+    },
+    {
+      "q": "He ___ — he looks guilty.",
+      "options": [
+        "must lie",
+        "must have lie",
+        "must have lied",
+        "had to lie"
+      ],
+      "answer": 2,
+      "explanation": "A certain past deduction uses 'must have + past participle'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "They may have gone to the beach — the car is gone.",
+        "They may go to the beach — the car is gone.",
+        "They may have go to the beach — the car is gone.",
+        "They must have gone to the beach — the car is gone."
+      ],
+      "answer": 0,
+      "explanation": "'May have' keeps the deduction uncertain, unlike 'must have'."
+    },
+    {
+      "q": "She ___ — her phone is off.",
+      "options": [
+        "might lose it",
+        "might have lose it",
+        "might have lost it",
+        "may loses it"
+      ],
+      "answer": 2,
+      "explanation": "'Might have + past participle' suggests a possible past event."
+    },
+    {
+      "q": "He ___ — he's still hungry.",
+      "options": [
+        "can't eat",
+        "mustn't have eaten",
+        "couldn't eat",
+        "can't have eaten"
+      ],
+      "answer": 3,
+      "explanation": "Evidence against a past action needs 'can't have + past participle'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "You could have hurt yourself!",
+        "You could hurt yourself!",
+        "You could have hurted yourself!",
+        "You can have hurt yourself!"
+      ],
+      "answer": 0,
+      "explanation": "'Could have' reproaches someone for a past risk."
+    },
+    {
+      "q": "They ___ — the food is untouched.",
+      "options": [
+        "can't be hungry",
+        "can't have been hungry",
+        "mustn't have been hungry",
+        "couldn't be hungry"
+      ],
+      "answer": 1,
+      "explanation": "'Can't have been' rules out a past state."
+    }
+  ]
+}

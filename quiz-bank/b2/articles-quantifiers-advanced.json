@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Articles & quantifiers (advanced)",
+  "slug": "articles-quantifiers-advanced",
+  "questions": [
+    {
+      "q": "She plays ___ piano beautifully.",
+      "options": [
+        "a",
+        "an",
+        "the",
+        "-"
+      ],
+      "answer": 2,
+      "explanation": "Instruments take 'the': play the piano."
+    },
+    {
+      "q": "___ people I met there were very friendly.",
+      "options": [
+        "The",
+        "A",
+        "An",
+        "-"
+      ],
+      "answer": 0,
+      "explanation": "A defining relative clause makes the noun specific, so use 'the'."
+    },
+    {
+      "q": "She's in ___ prison for robbery.",
+      "options": [
+        "the",
+        "a",
+        "an",
+        "-"
+      ],
+      "answer": 3,
+      "explanation": "No article with 'in prison' meaning as a prisoner."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Rich should help poor.",
+        "The rich should help the poor.",
+        "A rich should help a poor.",
+        "The rich should help a poor."
+      ],
+      "answer": 1,
+      "explanation": "Adjectives for groups of people take 'the'."
+    },
+    {
+      "q": "I have ___ friends in London.",
+      "options": [
+        "a few",
+        "few",
+        "little",
+        "a little"
+      ],
+      "answer": 1,
+      "explanation": "'Few' (not many) stresses the small number negatively."
+    },
+    {
+      "q": "She has ___ patience left.",
+      "options": [
+        "a little",
+        "few",
+        "a few",
+        "little"
+      ],
+      "answer": 3,
+      "explanation": "'Little' with uncountable nouns stresses almost none."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "The unemployed need more support from the government.",
+        "Unemployed need more support from the government.",
+        "An unemployed need more support from the government.",
+        "The unemployeds need more support from the government."
+      ],
+      "answer": 0,
+      "explanation": "Groups described by adjectives take 'the'."
+    },
+    {
+      "q": "___ Mount Everest is the highest mountain in the world.",
+      "options": [
+        "The",
+        "A",
+        "-",
+        "An"
+      ],
+      "answer": 2,
+      "explanation": "Mountain names take no article."
+    },
+    {
+      "q": "He gave me ___ advice.",
+      "options": [
+        "a",
+        "an",
+        "many",
+        "some"
+      ],
+      "answer": 3,
+      "explanation": "'Advice' is uncountable, so use 'some', not 'a'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "She has a little close friends she can trust.",
+        "She has a few close friends she can trust.",
+        "She has few close friends she can trust.",
+        "She has the few close friends she can trust."
+      ],
+      "answer": 1,
+      "explanation": "'A few' with countable nouns means a small but positive number."
+    },
+    {
+      "q": "___ water is essential for life.",
+      "options": [
+        "The",
+        "A",
+        "-",
+        "An"
+      ],
+      "answer": 2,
+      "explanation": "Uncountable nouns in general statements take no article."
+    },
+    {
+      "q": "There's ___ milk left — just enough for coffee.",
+      "options": [
+        "a little",
+        "little",
+        "few",
+        "a few"
+      ],
+      "answer": 0,
+      "explanation": "'A little' with uncountable nouns means a small but enough amount."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "They travelled by train across Europe.",
+        "They travelled by the train across Europe.",
+        "They travelled by a train across Europe.",
+        "They travelled with train across Europe."
+      ],
+      "answer": 0,
+      "explanation": "'By + transport' takes no article."
+    },
+    {
+      "q": "Only ___ students passed — the exam was very hard.",
+      "options": [
+        "few",
+        "little",
+        "a few",
+        "a little"
+      ],
+      "answer": 2,
+      "explanation": "'Only a few' stresses a surprisingly small number positively."
+    },
+    {
+      "q": "It was ___ interesting book that I read it twice.",
+      "options": [
+        "so an",
+        "such an",
+        "such a",
+        "so a"
+      ],
+      "answer": 1,
+      "explanation": "'Such + a/an + adjective + noun' expresses degree."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "The life is too short to waste time.",
+        "A life is too short to waste time.",
+        "Life is too short to waste the time.",
+        "Life is too short to waste time."
+      ],
+      "answer": 3,
+      "explanation": "Abstract nouns in general statements take no article."
+    },
+    {
+      "q": "___ news is depressing these days.",
+      "options": [
+        "A",
+        "The",
+        "An",
+        "-"
+      ],
+      "answer": 1,
+      "explanation": "'The news' refers to the news as a known concept."
+    },
+    {
+      "q": "She has ___ experience for this job.",
+      "options": [
+        "little",
+        "a little",
+        "few",
+        "a few"
+      ],
+      "answer": 0,
+      "explanation": "'Little experience' stresses not enough for the job."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "The half class was absent yesterday.",
+        "Half of class was absent yesterday.",
+        "A half the class was absent yesterday.",
+        "Half the class was absent yesterday."
+      ],
+      "answer": 3,
+      "explanation": "'Half the class' needs no 'of' before 'the'."
+    },
+    {
+      "q": "He earns ___ money, but he's happy.",
+      "options": [
+        "a little",
+        "few",
+        "little",
+        "a few"
+      ],
+      "answer": 2,
+      "explanation": "'Little money' stresses the small amount negatively."
+    }
+  ]
+}

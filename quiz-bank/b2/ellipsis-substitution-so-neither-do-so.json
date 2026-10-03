@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Ellipsis & substitution (so/neither/do so)",
+  "slug": "ellipsis-substitution-so-neither-do-so",
+  "questions": [
+    {
+      "q": "'I've finished.' '___ have I.'",
+      "options": [
+        "Neither",
+        "So",
+        "Too",
+        "Either"
+      ],
+      "answer": 1,
+      "explanation": "Positive agreement uses 'so + auxiliary + subject'."
+    },
+    {
+      "q": "'I don't like coffee.' '___ do I.'",
+      "options": [
+        "So",
+        "Too",
+        "Either",
+        "Neither"
+      ],
+      "answer": 3,
+      "explanation": "Negative agreement uses 'neither + auxiliary + subject'."
+    },
+    {
+      "q": "She said she'd help, and she ___.",
+      "options": [
+        "did so",
+        "did it",
+        "did",
+        "does so"
+      ],
+      "answer": 0,
+      "explanation": "'Do so' substitutes for a previously mentioned action."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "He's tired, and so I am.",
+        "He's tired, and too am I.",
+        "He's tired, and so am I.",
+        "He's tired, and so do I."
+      ],
+      "answer": 2,
+      "explanation": "Positive agreement with 'be' uses 'so + am/is/are'."
+    },
+    {
+      "q": "'I can't swim.' '___ can I.'",
+      "options": [
+        "So",
+        "Too",
+        "Neither",
+        "Either"
+      ],
+      "answer": 2,
+      "explanation": "Agreement with a negative uses 'neither'."
+    },
+    {
+      "q": "If you need help, please ___.",
+      "options": [
+        "do so",
+        "do it",
+        "do",
+        "does"
+      ],
+      "answer": 0,
+      "explanation": "'Do so' avoids repeating the verb phrase."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "She likes tea, and so her sister does.",
+        "She likes tea, and so does her sister too.",
+        "She likes tea, and her sister does so.",
+        "She likes tea, and so does her sister."
+      ],
+      "answer": 3,
+      "explanation": "Positive agreement uses 'so + auxiliary + subject'."
+    },
+    {
+      "q": "'He won't come.' '___ will they.'",
+      "options": [
+        "So",
+        "Neither",
+        "Too",
+        "Either"
+      ],
+      "answer": 1,
+      "explanation": "Negative agreement with 'will' uses 'neither will they'."
+    },
+    {
+      "q": "He promised to call, but he never ___.",
+      "options": [
+        "did",
+        "did so",
+        "does",
+        "done"
+      ],
+      "answer": 0,
+      "explanation": "Ellipsis after 'never' keeps just the auxiliary."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I don't eat meat, and neither my brother does.",
+        "I don't eat meat, and so doesn't my brother.",
+        "I don't eat meat, and neither does my brother.",
+        "I don't eat meat, and my brother doesn't neither."
+      ],
+      "answer": 2,
+      "explanation": "Negative agreement uses 'neither + auxiliary + subject'."
+    },
+    {
+      "q": "'She's leaving.' '___ am I.'",
+      "options": [
+        "Neither",
+        "So",
+        "Too",
+        "Either"
+      ],
+      "answer": 1,
+      "explanation": "Positive agreement with 'be' uses 'so am I'."
+    },
+    {
+      "q": "Take an umbrella if you think ___.",
+      "options": [
+        "it",
+        "that",
+        "such",
+        "so"
+      ],
+      "answer": 3,
+      "explanation": "'Think so' substitutes for a whole clause."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "They were exhausted, and so we were.",
+        "They were exhausted, and we were so.",
+        "They were exhausted, and so did we.",
+        "They were exhausted, and so were we."
+      ],
+      "answer": 3,
+      "explanation": "Agreement with past 'be' uses 'so + were'."
+    },
+    {
+      "q": "'I haven't seen it.' '___ have I.'",
+      "options": [
+        "So",
+        "Neither",
+        "Too",
+        "Either"
+      ],
+      "answer": 1,
+      "explanation": "Negative agreement with the present perfect uses 'neither have I'."
+    },
+    {
+      "q": "She asked him to leave, and he ___.",
+      "options": [
+        "did it",
+        "does so",
+        "did so",
+        "done so"
+      ],
+      "answer": 2,
+      "explanation": "'Do so' refers back to the requested action."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "He can speak French, and so can she.",
+        "He can speak French, and so she can.",
+        "He can speak French, and she can so.",
+        "He can speak French, and so does she."
+      ],
+      "answer": 0,
+      "explanation": "Agreement with a modal uses 'so + modal + subject'."
+    },
+    {
+      "q": "'You should rest.' 'I think ___.'",
+      "options": [
+        "it",
+        "that",
+        "so",
+        "such"
+      ],
+      "answer": 2,
+      "explanation": "'I think so' avoids repeating the clause."
+    },
+    {
+      "q": "They offered to help, but we didn't need them to ___.",
+      "options": [
+        "do it",
+        "do",
+        "does",
+        "do so"
+      ],
+      "answer": 3,
+      "explanation": "'Do so' substitutes for the infinitive phrase."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I'm not ready, and neither is he.",
+        "I'm not ready, and neither he is.",
+        "I'm not ready, and so isn't he.",
+        "I'm not ready, and he isn't neither."
+      ],
+      "answer": 0,
+      "explanation": "Negative agreement uses 'neither + be + subject'."
+    },
+    {
+      "q": "'Will it rain?' 'I hope ___.'",
+      "options": [
+        "no",
+        "not",
+        "so not",
+        "not so"
+      ],
+      "answer": 1,
+      "explanation": "'I hope not' substitutes for the negative clause."
+    }
+  ]
+}

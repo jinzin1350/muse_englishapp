@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Unreal past & hypothetical meaning",
+  "slug": "unreal-past-hypothetical-meaning",
+  "questions": [
+    {
+      "q": "I wish I ___ speak Japanese.",
+      "options": [
+        "can",
+        "will",
+        "could",
+        "would"
+      ],
+      "answer": 2,
+      "explanation": "'Wish' about present ability takes 'could'."
+    },
+    {
+      "q": "If only he ___ here now!",
+      "options": [
+        "were",
+        "is",
+        "was",
+        "will be"
+      ],
+      "answer": 0,
+      "explanation": "An unreal present wish uses 'were' for all persons."
+    },
+    {
+      "q": "Suppose we ___ the earlier train?",
+      "options": [
+        "take",
+        "will take",
+        "would take",
+        "took"
+      ],
+      "answer": 3,
+      "explanation": "'Suppose' for a hypothetical suggestion takes the past simple."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I'd rather you don't tell anyone.",
+        "I'd rather you didn't tell anyone.",
+        "I'd rather you wouldn't tell anyone.",
+        "I'd rather you not tell anyone."
+      ],
+      "answer": 1,
+      "explanation": "'Would rather' about others takes the past simple."
+    },
+    {
+      "q": "It's time you ___ up — it's 8 o'clock!",
+      "options": [
+        "get",
+        "got",
+        "will get",
+        "would get"
+      ],
+      "answer": 1,
+      "explanation": "'It's time' takes the past simple for present meaning."
+    },
+    {
+      "q": "She acts as if she ___ the boss.",
+      "options": [
+        "is",
+        "was",
+        "will be",
+        "were"
+      ],
+      "answer": 3,
+      "explanation": "'As if' for an unreal situation takes 'were'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "He talks as though he knew everything.",
+        "He talks as though he knows everything.",
+        "He talks as though he would know everything.",
+        "He talks as though he had known everything."
+      ],
+      "answer": 0,
+      "explanation": "'As though' for an unreal comparison takes the past simple."
+    },
+    {
+      "q": "I wish it ___ raining.",
+      "options": [
+        "will stop",
+        "stops",
+        "would stop",
+        "stopped"
+      ],
+      "answer": 2,
+      "explanation": "'Wish + would' complains about an annoying present situation."
+    },
+    {
+      "q": "If only I ___ more time!",
+      "options": [
+        "have",
+        "will have",
+        "would have",
+        "had"
+      ],
+      "answer": 3,
+      "explanation": "'If only' about the present takes the past simple."
+    },
+    {
+      "q": "Suppose she ___ — what would you do?",
+      "options": [
+        "refuses",
+        "refused",
+        "will refuse",
+        "would refuse"
+      ],
+      "answer": 1,
+      "explanation": "'Suppose' for a hypothetical scenario takes the past simple."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I wish you will listen to me.",
+        "I wish you listen to me.",
+        "I wish you would listen to me.",
+        "I wish you would listened to me."
+      ],
+      "answer": 2,
+      "explanation": "'Wish + would' expresses annoyance at someone's behaviour."
+    },
+    {
+      "q": "He wishes he ___ taller.",
+      "options": [
+        "were",
+        "is",
+        "was",
+        "will be"
+      ],
+      "answer": 0,
+      "explanation": "An unreal present wish takes 'were'."
+    },
+    {
+      "q": "What if we ___ a taxi?",
+      "options": [
+        "took",
+        "take",
+        "will take",
+        "would take"
+      ],
+      "answer": 0,
+      "explanation": "'What if' for a suggestion takes the past simple."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "She behaves as if nothing happened.",
+        "She behaves as if nothing has happened.",
+        "She behaves as if nothing had happened.",
+        "She behaves as if nothing would have happened."
+      ],
+      "answer": 2,
+      "explanation": "'As if' about an earlier past event takes the past perfect."
+    },
+    {
+      "q": "I'd rather you ___ now.",
+      "options": [
+        "leave",
+        "left",
+        "will leave",
+        "would leave"
+      ],
+      "answer": 1,
+      "explanation": "'Would rather' with a different subject takes the past simple."
+    },
+    {
+      "q": "It's high time we ___.",
+      "options": [
+        "go",
+        "will go",
+        "would go",
+        "went"
+      ],
+      "answer": 3,
+      "explanation": "'It's high time' takes the past simple."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Suppose he misses the flight — then what?",
+        "Suppose he missed the flight — then what?",
+        "Suppose he would miss the flight — then what?",
+        "Suppose he had missed the flight — then what?"
+      ],
+      "answer": 1,
+      "explanation": "'Suppose' for a hypothetical situation takes the past simple."
+    },
+    {
+      "q": "I wish she ___ smoke.",
+      "options": [
+        "wouldn't",
+        "won't",
+        "doesn't",
+        "didn't"
+      ],
+      "answer": 0,
+      "explanation": "'Wish + wouldn't' complains about a habit."
+    },
+    {
+      "q": "He looks as if he ___ a ghost.",
+      "options": [
+        "has seen",
+        "sees",
+        "would see",
+        "had seen"
+      ],
+      "answer": 3,
+      "explanation": "'As if' about an earlier past moment takes the past perfect."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "If only they will stop arguing!",
+        "If only they stop arguing!",
+        "If only they would stop arguing!",
+        "If only they would stopped arguing!"
+      ],
+      "answer": 2,
+      "explanation": "'If only + would' expresses annoyance at a present situation."
+    }
+  ]
+}

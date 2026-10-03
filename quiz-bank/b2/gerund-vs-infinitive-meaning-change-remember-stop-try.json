@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Gerund vs infinitive: meaning change (remember/stop/try...)",
+  "slug": "gerund-vs-infinitive-meaning-change-remember-stop-try",
+  "questions": [
+    {
+      "q": "I remember ___ the door. (I'm sure I did it.)",
+      "options": [
+        "to lock",
+        "locking",
+        "lock",
+        "locked"
+      ],
+      "answer": 1,
+      "explanation": "'Remember + gerund' recalls a past action."
+    },
+    {
+      "q": "Remember ___ your passport! (Don't forget to do it.)",
+      "options": [
+        "taking",
+        "take",
+        "taken",
+        "to take"
+      ],
+      "answer": 3,
+      "explanation": "'Remember + infinitive' is a reminder about a future action."
+    },
+    {
+      "q": "She stopped ___ to answer the phone.",
+      "options": [
+        "talking",
+        "to talk",
+        "talk",
+        "talked"
+      ],
+      "answer": 0,
+      "explanation": "'Stop + gerund' means quit the activity."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "He stopped to smoke last year.",
+        "He stopped smoke last year.",
+        "He stopped smoking last year.",
+        "He stopped smoked last year."
+      ],
+      "answer": 2,
+      "explanation": "'Stop + gerund' means he quit smoking."
+    },
+    {
+      "q": "I tried ___ the window, but it was stuck.",
+      "options": [
+        "opening",
+        "open",
+        "to open",
+        "opened"
+      ],
+      "answer": 2,
+      "explanation": "'Try + infinitive' means attempt something difficult."
+    },
+    {
+      "q": "Try ___ this cake — it's delicious.",
+      "options": [
+        "tasting",
+        "to taste",
+        "taste",
+        "tasted"
+      ],
+      "answer": 0,
+      "explanation": "'Try + gerund' means experiment to see what it's like."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I regret to tell him the secret.",
+        "I regret tell him the secret.",
+        "I regret told him the secret.",
+        "I regret telling him the secret."
+      ],
+      "answer": 3,
+      "explanation": "'Regret + gerund' is sorry about a past action."
+    },
+    {
+      "q": "I regret ___ you that I can't come.",
+      "options": [
+        "telling",
+        "to tell",
+        "tell",
+        "told"
+      ],
+      "answer": 1,
+      "explanation": "'Regret + infinitive' announces bad news you are sorry to give."
+    },
+    {
+      "q": "She went on ___ about her trip for an hour.",
+      "options": [
+        "talking",
+        "to talk",
+        "talk",
+        "talked"
+      ],
+      "answer": 0,
+      "explanation": "'Go on + gerund' means continue the same activity."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "After the introduction, she went on explaining the plan.",
+        "After the introduction, she went on explain the plan.",
+        "After the introduction, she went on to explain the plan.",
+        "After the introduction, she went to on explain the plan."
+      ],
+      "answer": 2,
+      "explanation": "'Go on + infinitive' means move to a new activity."
+    },
+    {
+      "q": "He forgot ___ the oven off.",
+      "options": [
+        "turning",
+        "to turn",
+        "turn",
+        "turned"
+      ],
+      "answer": 1,
+      "explanation": "'Forget + infinitive' means fail to do something."
+    },
+    {
+      "q": "I'll never forget ___ the Eiffel Tower.",
+      "options": [
+        "to see",
+        "see",
+        "seen",
+        "seeing"
+      ],
+      "answer": 3,
+      "explanation": "'Forget + gerund' recalls a memorable past event."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Did you remember locking the door?",
+        "Did you remember lock the door?",
+        "Did you remember locked the door?",
+        "Did you remember to lock the door?"
+      ],
+      "answer": 3,
+      "explanation": "'Remember + infinitive' asks about something you had to do."
+    },
+    {
+      "q": "We stopped ___ some petrol.",
+      "options": [
+        "getting",
+        "to get",
+        "get",
+        "got"
+      ],
+      "answer": 1,
+      "explanation": "'Stop + infinitive' means pause one action to do another."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "She tried to call him, but he didn't answer.",
+        "She tried call him, but he didn't answer.",
+        "She tried calling him, but he didn't answer.",
+        "She tried called him, but he didn't answer."
+      ],
+      "answer": 2,
+      "explanation": "'Try + gerund' means test a method to solve a problem."
+    },
+    {
+      "q": "I mean ___ the report by Friday. (I intend to.)",
+      "options": [
+        "to finish",
+        "finishing",
+        "finish",
+        "finished"
+      ],
+      "answer": 0,
+      "explanation": "'Mean + infinitive' expresses intention."
+    },
+    {
+      "q": "This decision means ___ fifty people. (It involves...)",
+      "options": [
+        "to fire",
+        "fire",
+        "firing",
+        "fired"
+      ],
+      "answer": 2,
+      "explanation": "'Mean + gerund' describes what something involves."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "I'm sorry to shout at you.",
+        "I'm sorry shout at you.",
+        "I'm sorry shouting at you.",
+        "I'm sorry for shouting at you."
+      ],
+      "answer": 3,
+      "explanation": "'Sorry for + gerund' apologises for a past action."
+    },
+    {
+      "q": "I'm sorry ___ that you didn't get the job.",
+      "options": [
+        "to hear",
+        "hearing",
+        "hear",
+        "heard"
+      ],
+      "answer": 0,
+      "explanation": "'Sorry + infinitive' expresses sympathy about news."
+    },
+    {
+      "q": "The car needs ___.",
+      "options": [
+        "to wash",
+        "washing",
+        "wash",
+        "washed"
+      ],
+      "answer": 1,
+      "explanation": "'Need + gerund' has a passive meaning: it needs to be washed."
+    }
+  ]
+}

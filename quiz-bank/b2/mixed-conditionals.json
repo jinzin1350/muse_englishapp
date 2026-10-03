@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Mixed conditionals",
+  "slug": "mixed-conditionals",
+  "questions": [
+    {
+      "q": "If I had studied harder, I ___ a better job now.",
+      "options": [
+        "would have had",
+        "will have",
+        "would have",
+        "had"
+      ],
+      "answer": 2,
+      "explanation": "Past condition with present result: past perfect + would + infinitive."
+    },
+    {
+      "q": "If she were more careful, she ___ the accident last week.",
+      "options": [
+        "wouldn't have had",
+        "wouldn't have",
+        "hadn't",
+        "wouldn't"
+      ],
+      "answer": 0,
+      "explanation": "Present condition with past result: past simple + would have + past participle."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "If he didn't miss the bus, he'd be here now.",
+        "If he hadn't missed the bus, he'd have been here now.",
+        "If he wouldn't have missed the bus, he'd be here now.",
+        "If he hadn't missed the bus, he'd be here now."
+      ],
+      "answer": 3,
+      "explanation": "A past condition affecting the present mixes past perfect with 'would be'."
+    },
+    {
+      "q": "If I spoke better French, I ___ the job last month.",
+      "options": [
+        "would get",
+        "would have got",
+        "had got",
+        "will get"
+      ],
+      "answer": 1,
+      "explanation": "Present ability with a past result needs 'would have + past participle'."
+    },
+    {
+      "q": "If they hadn't moved to London, they ___ each other.",
+      "options": [
+        "would never meet",
+        "would never have met",
+        "never met",
+        "will never meet"
+      ],
+      "answer": 1,
+      "explanation": "A past condition with a past result uses 'would have + past participle'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "If you hadn't been so tired, you could have come with us.",
+        "If you weren't so tired, you could come with us.",
+        "If you wouldn't be so tired, you could have come with us.",
+        "If you weren't so tired, you could have come with us."
+      ],
+      "answer": 3,
+      "explanation": "A present state with a missed past chance mixes past simple and 'could have'."
+    },
+    {
+      "q": "If I had more money, I ___ that car yesterday.",
+      "options": [
+        "would have bought",
+        "would buy",
+        "had bought",
+        "will buy"
+      ],
+      "answer": 0,
+      "explanation": "A present wish about a past event: past simple + would have bought."
+    },
+    {
+      "q": "She'd be a doctor now if she ___ medical school.",
+      "options": [
+        "finished",
+        "would finish",
+        "had finished",
+        "would have finished"
+      ],
+      "answer": 2,
+      "explanation": "The if-clause of a mixed conditional uses the past perfect for a past condition."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "If it didn't rain, we would be playing tennis now.",
+        "If it hadn't rained, we would have played tennis now.",
+        "If it wouldn't have rained, we would be playing tennis now.",
+        "If it hadn't rained, we would be playing tennis now."
+      ],
+      "answer": 3,
+      "explanation": "Past condition, present result: past perfect in the if-clause, 'would be' in the main clause."
+    },
+    {
+      "q": "If he were honest, he ___ about it last night.",
+      "options": [
+        "would tell us",
+        "would have told us",
+        "had told us",
+        "will tell us"
+      ],
+      "answer": 1,
+      "explanation": "A general present condition with a past result needs 'would have told'."
+    },
+    {
+      "q": "We'd be lost if you ___ the map.",
+      "options": [
+        "didn't bring",
+        "wouldn't bring",
+        "hadn't brought",
+        "hadn't have brought"
+      ],
+      "answer": 2,
+      "explanation": "The if-clause takes the past perfect for the earlier condition."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "If she had taken the job, she'd be living in Paris now.",
+        "If she took the job, she'd be living in Paris now.",
+        "If she had taken the job, she'd have lived in Paris now.",
+        "If she would have taken the job, she'd be living in Paris now."
+      ],
+      "answer": 0,
+      "explanation": "This mixes a past if-clause with a present continuous result."
+    },
+    {
+      "q": "If I ___ taller, I could have reached the shelf.",
+      "options": [
+        "were",
+        "had been",
+        "would be",
+        "am"
+      ],
+      "answer": 0,
+      "explanation": "A present unreal condition uses the past simple, 'were' for all persons."
+    },
+    {
+      "q": "They would have won if their captain ___ injured.",
+      "options": [
+        "wasn't",
+        "wouldn't be",
+        "hadn't been",
+        "hadn't"
+      ],
+      "answer": 2,
+      "explanation": "The past condition in the if-clause needs the past perfect."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "If you listened to me, you wouldn't be in trouble now.",
+        "If you had listened to me, you wouldn't be in trouble now.",
+        "If you had listened to me, you wouldn't have been in trouble now.",
+        "If you would have listened to me, you wouldn't be in trouble now."
+      ],
+      "answer": 1,
+      "explanation": "A past condition with a present result mixes past perfect and 'wouldn't be'."
+    },
+    {
+      "q": "If she spoke Chinese, she ___ the contract last year.",
+      "options": [
+        "would sign",
+        "had signed",
+        "will sign",
+        "would have signed"
+      ],
+      "answer": 3,
+      "explanation": "Present ability plus past result: past simple + would have signed."
+    },
+    {
+      "q": "He'd be healthier now if he ___ smoking.",
+      "options": [
+        "gave up",
+        "had given up",
+        "would give up",
+        "has given up"
+      ],
+      "answer": 1,
+      "explanation": "The if-clause needs the past perfect for the earlier past condition."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "If I hadn't overslept, I wouldn't be rushing now.",
+        "If I didn't oversleep, I wouldn't be rushing now.",
+        "If I hadn't overslept, I wouldn't have rushed now.",
+        "If I wouldn't have overslept, I wouldn't be rushing now."
+      ],
+      "answer": 0,
+      "explanation": "A past cause with a present effect mixes past perfect with 'wouldn't be'."
+    },
+    {
+      "q": "If they ___ earlier, they would be here by now.",
+      "options": [
+        "left",
+        "would leave",
+        "have left",
+        "had left"
+      ],
+      "answer": 3,
+      "explanation": "The earlier past condition takes the past perfect in the if-clause."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "If we booked sooner, we'd have better seats now.",
+        "If we had booked sooner, we'd have had better seats now.",
+        "If we had booked sooner, we'd have better seats now.",
+        "If we would have booked sooner, we'd have better seats now."
+      ],
+      "answer": 2,
+      "explanation": "This mixes a past perfect if-clause with a present result clause."
+    }
+  ]
+}

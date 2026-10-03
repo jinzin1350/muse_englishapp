@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Nominalization (decide → decision)",
+  "slug": "nominalization-decide-decision",
+  "questions": [
+    {
+      "q": "His ___ to help was unexpected.",
+      "options": [
+        "decide",
+        "decisive",
+        "decision",
+        "decided"
+      ],
+      "answer": 2,
+      "explanation": "The noun form of 'decide' is 'decision'."
+    },
+    {
+      "q": "The ___ of the new bridge took two years.",
+      "options": [
+        "construction",
+        "construct",
+        "constructive",
+        "constructed"
+      ],
+      "answer": 0,
+      "explanation": "The noun form of 'construct' is 'construction'."
+    },
+    {
+      "q": "Her ___ improved after the course.",
+      "options": [
+        "pronounce",
+        "pronounced",
+        "pronouncing",
+        "pronunciation"
+      ],
+      "answer": 3,
+      "explanation": "The noun form of 'pronounce' is 'pronunciation'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "The manager announced his resign yesterday.",
+        "The manager announced his resignation yesterday.",
+        "The manager announced his resigned yesterday.",
+        "The manager announced his resigning yesterday."
+      ],
+      "answer": 1,
+      "explanation": "The noun form of 'resign' is 'resignation'."
+    },
+    {
+      "q": "Their ___ was a surprise to everyone.",
+      "options": [
+        "arrive",
+        "arrival",
+        "arrived",
+        "arriving"
+      ],
+      "answer": 1,
+      "explanation": "The noun form of 'arrive' is 'arrival'."
+    },
+    {
+      "q": "The ___ of the plan took weeks.",
+      "options": [
+        "develop",
+        "developed",
+        "developing",
+        "development"
+      ],
+      "answer": 3,
+      "explanation": "The noun form of 'develop' is 'development'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "Her promotion was well deserved.",
+        "Her promote was well deserved.",
+        "Her promoting was well deserved.",
+        "Her promoted was well deserved."
+      ],
+      "answer": 0,
+      "explanation": "The noun form of 'promote' is 'promotion'."
+    },
+    {
+      "q": "His ___ of the situation was wrong.",
+      "options": [
+        "assess",
+        "assessed",
+        "assessment",
+        "assessing"
+      ],
+      "answer": 2,
+      "explanation": "The noun form of 'assess' is 'assessment'."
+    },
+    {
+      "q": "The ___ of the team was impressive.",
+      "options": [
+        "perform",
+        "performed",
+        "performing",
+        "performance"
+      ],
+      "answer": 3,
+      "explanation": "The noun form of 'perform' is 'performance'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "The discover of the tomb made headlines.",
+        "The discovery of the tomb made headlines.",
+        "The discovering of the tomb made headlines.",
+        "The discovered of the tomb made headlines."
+      ],
+      "answer": 1,
+      "explanation": "The noun form of 'discover' is 'discovery'."
+    },
+    {
+      "q": "We need your ___ by Friday.",
+      "options": [
+        "approve",
+        "approved",
+        "approval",
+        "approving"
+      ],
+      "answer": 2,
+      "explanation": "The noun form of 'approve' is 'approval'."
+    },
+    {
+      "q": "His ___ to the team was invaluable.",
+      "options": [
+        "contribution",
+        "contribute",
+        "contributed",
+        "contributing"
+      ],
+      "answer": 0,
+      "explanation": "The noun form of 'contribute' is 'contribution'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "The committee reached a decision after hours of debate.",
+        "The committee reached a decide after hours of debate.",
+        "The committee reached a deciding after hours of debate.",
+        "The committee reached a decided after hours of debate."
+      ],
+      "answer": 0,
+      "explanation": "'Reach a decision' uses the noun form of 'decide'."
+    },
+    {
+      "q": "The ___ of the factory created jobs.",
+      "options": [
+        "open",
+        "opened",
+        "opening",
+        "opens"
+      ],
+      "answer": 2,
+      "explanation": "The noun form of 'open' (an event) is 'opening'."
+    },
+    {
+      "q": "Her ___ for the delay was accepted.",
+      "options": [
+        "explain",
+        "explanation",
+        "explained",
+        "explaining"
+      ],
+      "answer": 1,
+      "explanation": "The noun form of 'explain' is 'explanation'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "His refuse to answer surprised the reporters.",
+        "His refusing to answer surprised the reporters.",
+        "His refused to answer surprised the reporters.",
+        "His refusal to answer surprised the reporters."
+      ],
+      "answer": 3,
+      "explanation": "The noun form of 'refuse' is 'refusal'."
+    },
+    {
+      "q": "The ___ of the law took months.",
+      "options": [
+        "implement",
+        "implementation",
+        "implemented",
+        "implementing"
+      ],
+      "answer": 1,
+      "explanation": "The noun form of 'implement' is 'implementation'."
+    },
+    {
+      "q": "Their ___ to the charity was generous.",
+      "options": [
+        "donation",
+        "donate",
+        "donated",
+        "donating"
+      ],
+      "answer": 0,
+      "explanation": "The noun form of 'donate' is 'donation'."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "The fail of the experiment disappointed the team.",
+        "The failing of the experiment disappointed the team.",
+        "The failed of the experiment disappointed the team.",
+        "The failure of the experiment disappointed the team."
+      ],
+      "answer": 3,
+      "explanation": "The noun form of 'fail' is 'failure'."
+    },
+    {
+      "q": "We await your ___.",
+      "options": [
+        "respond",
+        "responded",
+        "response",
+        "responding"
+      ],
+      "answer": 2,
+      "explanation": "The noun form of 'respond' is 'response'."
+    }
+  ]
+}

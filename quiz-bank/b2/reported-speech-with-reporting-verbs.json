@@ -1,0 +1,227 @@
+{
+  "level": "b2",
+  "topic": "Reported speech with reporting verbs",
+  "slug": "reported-speech-with-reporting-verbs",
+  "questions": [
+    {
+      "q": "She suggested ___ the door.",
+      "options": [
+        "to lock",
+        "locking",
+        "lock",
+        "locked"
+      ],
+      "answer": 1,
+      "explanation": "'Suggest' is followed by the gerund, not the infinitive."
+    },
+    {
+      "q": "He denied ___ the money.",
+      "options": [
+        "to take",
+        "take",
+        "taken",
+        "taking"
+      ],
+      "answer": 3,
+      "explanation": "'Deny' is followed by the gerund."
+    },
+    {
+      "q": "The doctor advised him ___ smoking.",
+      "options": [
+        "to give up",
+        "giving up",
+        "give up",
+        "gave up"
+      ],
+      "answer": 0,
+      "explanation": "'Advise + person' is followed by the infinitive."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "She accused him to steal her idea.",
+        "She accused him for stealing her idea.",
+        "She accused him of stealing her idea.",
+        "She accused him stealing her idea."
+      ],
+      "answer": 2,
+      "explanation": "'Accuse someone of' takes the gerund."
+    },
+    {
+      "q": "They promised ___ on time.",
+      "options": [
+        "being",
+        "be",
+        "to be",
+        "been"
+      ],
+      "answer": 2,
+      "explanation": "'Promise' is followed by the infinitive."
+    },
+    {
+      "q": "He refused ___ his password.",
+      "options": [
+        "to share",
+        "sharing",
+        "share",
+        "shared"
+      ],
+      "answer": 0,
+      "explanation": "'Refuse' is followed by the infinitive."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "The teacher warned us to not be late.",
+        "The teacher warned us don't be late.",
+        "The teacher warned us not be late.",
+        "The teacher warned us not to be late."
+      ],
+      "answer": 3,
+      "explanation": "'Warn' takes object + (not) to-infinitive."
+    },
+    {
+      "q": "She apologised ___ so rude.",
+      "options": [
+        "to be",
+        "for being",
+        "being",
+        "be"
+      ],
+      "answer": 1,
+      "explanation": "'Apologise for' is followed by the gerund."
+    },
+    {
+      "q": "He admitted ___ the window.",
+      "options": [
+        "breaking",
+        "to break",
+        "break",
+        "broken"
+      ],
+      "answer": 0,
+      "explanation": "'Admit' is followed by the gerund."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "He insisted to pay for dinner.",
+        "He insisted pay for dinner.",
+        "He insisted on paying for dinner.",
+        "He insisted on to pay for dinner."
+      ],
+      "answer": 2,
+      "explanation": "'Insist on' is followed by the gerund."
+    },
+    {
+      "q": "The manager offered ___ us a discount.",
+      "options": [
+        "giving",
+        "to give",
+        "give",
+        "given"
+      ],
+      "answer": 1,
+      "explanation": "'Offer' is followed by the infinitive."
+    },
+    {
+      "q": "She blamed him ___ the accident.",
+      "options": [
+        "to cause",
+        "causing",
+        "cause",
+        "for causing"
+      ],
+      "answer": 3,
+      "explanation": "'Blame someone for' takes the gerund."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "They congratulated her for winning the prize.",
+        "They congratulated her to win the prize.",
+        "They congratulated her on win the prize.",
+        "They congratulated her on winning the prize."
+      ],
+      "answer": 3,
+      "explanation": "'Congratulate someone on' takes the gerund."
+    },
+    {
+      "q": "He threatened ___ the police.",
+      "options": [
+        "calling",
+        "to call",
+        "call",
+        "called"
+      ],
+      "answer": 1,
+      "explanation": "'Threaten' is followed by the infinitive."
+    },
+    {
+      "q": "She reminded me ___ my keys.",
+      "options": [
+        "taking",
+        "take",
+        "to take",
+        "taken"
+      ],
+      "answer": 2,
+      "explanation": "'Remind someone' is followed by the to-infinitive."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "He persuaded me to join the club.",
+        "He persuaded me joining the club.",
+        "He persuaded me join the club.",
+        "He persuaded me for joining the club."
+      ],
+      "answer": 0,
+      "explanation": "'Persuade someone' is followed by the to-infinitive."
+    },
+    {
+      "q": "They agreed ___ the bill.",
+      "options": [
+        "splitting",
+        "split",
+        "to split",
+        "splitted"
+      ],
+      "answer": 2,
+      "explanation": "'Agree' is followed by the infinitive."
+    },
+    {
+      "q": "She suggested ___ a taxi.",
+      "options": [
+        "to take",
+        "take",
+        "taken",
+        "taking"
+      ],
+      "answer": 3,
+      "explanation": "'Suggest' takes the gerund, never the infinitive."
+    },
+    {
+      "q": "Choose the correct sentence.",
+      "options": [
+        "She begged him not to leave.",
+        "She begged him to not leave.",
+        "She begged him don't leave.",
+        "She begged him not leave."
+      ],
+      "answer": 0,
+      "explanation": "'Beg someone' takes object + (not) to-infinitive."
+    },
+    {
+      "q": "He apologised for ___ late.",
+      "options": [
+        "to be",
+        "being",
+        "be",
+        "been"
+      ],
+      "answer": 1,
+      "explanation": "'Apologise for' is followed by the gerund."
+    }
+  ]
+}
