@@ -4256,27 +4256,38 @@ function buildTutorialSteps() {
   const hasLesson = !!(state.lesson && state.lesson.date);
   const steps = [
     { id: 'home', view: 'home', selector: '#tabbar .tab[data-view="home"]',
-      kicker: '🏠', text: T('اینجا خونه‌ست — هر روز از اینجا شروع کن', 'This is home — start here every day') },
+      kicker: '🏠', title: T('خونه', 'Home'),
+      text: T('هر روز از اینجا شروع کن', 'Start here every day') },
     { id: 'lesson', view: 'lesson', selector: '.lesson-title',
-      kicker: '📖', text: T('این درس امروزه — هر روز ساعت ۷ صبح یه درس جدید میاد', 'This is today\u2019s lesson — a new one arrives every day at 7 AM') },
+      kicker: '📖', title: T('درس امروز', 'Today\u2019s lesson'),
+      text: T('هر روز ساعت ۷ صبح یه درس جدید میاد', 'A new lesson arrives every day at 7 AM') },
     { id: 'lessontab', view: 'home', selector: '#tabbar .tab[data-view="lesson"]',
-      kicker: '📖', text: T('با این دکمه همیشه به درس امروز برمی‌گردی', 'This button always takes you back to today\u2019s lesson') },
+      kicker: '📖', title: T('دکمه درس', 'Lesson button'),
+      text: T('با این دکمه همیشه به درس امروز برمی‌گردی', 'This button always takes you back to today\u2019s lesson') },
     { id: 'words', view: 'lesson', tab: 'words', selector: '.word-card',
-      kicker: '📝', text: T('کلمات امروز — بزن رو 🔊 تا تلفظ هر کلمه رو بشنوی', 'Today\u2019s words — tap 🔊 to hear each pronunciation') },
+      kicker: '📝', title: T('کلمات', 'Words'),
+      text: T('کلمات امروز — بزن رو 🔊 تا تلفظ هر کلمه رو بشنوی', 'Today\u2019s words — tap 🔊 to hear each pronunciation') },
     { id: 'quiz', tab: 'quiz', selector: '.quiz-banner,.quiz-opt',
-      kicker: '🎯', text: T('کوییز — اینجا دانشت رو محک می‌زنی، هر جواب درست XP میده ⚡', 'The quiz — test yourself here, every correct answer earns XP ⚡') },
+      kicker: '🎯', title: T('کوییز', 'Quiz'),
+      text: T('اینجا دانشت رو محک می‌زنی — هر جواب درست XP میده ⚡', 'Test yourself here — every correct answer earns XP ⚡') },
     { id: 'podcast', tab: 'podcast', selector: '[data-audio-card]',
-      kicker: '🎧', text: T('پادکست — همه‌ی کلمات امروز توی مکالمه استفاده شدن', 'The podcast — today\u2019s words all appear in the conversation') },
+      kicker: '🎧', title: T('پادکست', 'Podcast'),
+      text: T('همه‌ی کلمات امروز توی مکالمه استفاده شدن', 'Today\u2019s words all appear in the conversation') },
     { id: 'shadowing', tab: 'shadowing', selector: '[data-audio-card]',
-      kicker: '🎤', text: T('شدویینگ — گوش بده و با صدای بلند تکرار کن', 'Shadowing — listen and repeat out loud') },
+      kicker: '🎤', title: T('شدویینگ', 'Shadowing'),
+      text: T('گوش بده و با صدای بلند تکرار کن', 'Listen and repeat out loud') },
     { id: 'grammar', tab: 'grammar', selector: '.rule-card',
-      kicker: '📏', text: T('گرامر روز — کوتاه و با مثال‌های ساده', 'Today\u2019s grammar — short, with simple examples') },
+      kicker: '📏', title: T('گرامر', 'Grammar'),
+      text: T('گرامر روز — کوتاه و با مثال‌های ساده', 'Today\u2019s grammar — short, with simple examples') },
     { id: 'progress', view: 'scores', selector: '.tut-anchor',
-      kicker: '📊', text: T('اینجا امتیازها، XP و نمودار پیشرفتته', 'Your scores, XP and progress charts live here') },
+      kicker: '📊', title: T('پیشرفت', 'Progress'),
+      text: T('اینجا امتیازها، XP و نمودار پیشرفتته', 'Your scores, XP and progress charts live here') },
     { id: 'challenge', view: 'challenge', selector: '.ch-wrap',
-      kicker: '🏆', text: T('چالش — با بقیه رقابت کن و امتیاز جمع کن', 'Challenge — compete with others and collect points') },
+      kicker: '🏆', title: T('چالش', 'Challenge'),
+      text: T('با بقیه رقابت کن و امتیاز جمع کن', 'Compete with others and collect points') },
     { id: 'inbox', view: 'inbox', selector: '.msg2-title',
-      kicker: '💬', text: T('صندوق پیام — پیام‌های معلمت اینجا میاد', 'Inbox — messages from your teacher arrive here') }
+      kicker: '💬', title: T('صندوق پیام', 'Inbox'),
+      text: T('پیام‌های معلمت اینجا میاد', 'Messages from your teacher arrive here') }
   ];
   return hasLesson ? steps : steps.filter(function (s) { return !s.tab && s.id !== 'lesson'; });
 }
@@ -4291,8 +4302,8 @@ function startTutorial() {
   ov.id = 'tut-ov';
   ov.innerHTML =
     '<div id="tut-dim"></div><div id="tut-hole"></div><div id="tut-text"></div>' +
-    '<div id="tut-controls"><div class="tut-dots" id="tut-dots"></div>' +
-    '<button id="tut-next">' + (fa ? 'بعدی ←' : 'Next →') + '</button>' +
+    '<div id="tut-controls">' +
+    '<button id="tut-next">' + (fa ? 'بعدی' : 'Next') + '</button>' +
     '<button id="tut-skip">' + (fa ? 'رد شو' : 'Skip tour') + '</button></div>';
   document.body.appendChild(ov);
   document.getElementById('tut-dim').addEventListener('click', function () { tutorialNext(); });
@@ -4392,7 +4403,8 @@ function tutRenderStep(s, el, n) {
   hole.style.opacity = '1';
   /* Text floats next to the spotlight (proximity): below it when there is
      room, otherwise above. No popup cards — writing directly on the dim. */
-  text.innerHTML = '<div class="tut-kicker">' + s.kicker + '</div>' +
+  text.innerHTML = '<div class="tut-counter">' + tutCounter(tutState.i, n, fa) + '</div>' +
+    '<div class="tut-title">' + esc(s.kicker + ' ' + s.title) + '</div>' +
     '<div class="tut-body">' + esc(s.text) + '</div>';
   text.setAttribute('dir', fa ? 'rtl' : 'ltr');
   text.setAttribute('lang', fa ? 'fa' : 'en');
@@ -4418,16 +4430,19 @@ function tutRenderStep(s, el, n) {
     text.style.transform = 'translateY(-10px)';
   }
   const dots = document.getElementById('tut-dots');
-  if (dots) {
-    let h = '';
-    for (let k = 0; k < n; k++) h += '<i class="' + (k === tutState.i ? 'on' : '') + '"></i>';
-    dots.innerHTML = h;
-  }
+  if (dots) dots.parentNode.removeChild(dots);
   requestAnimationFrame(function () {
     if (!tutState.active) return;
     text.style.opacity = '1';
     text.style.transform = 'translateY(0)';
   });
+}
+function tutCounter(i, n, fa) {
+  if (fa) {
+    const f = function (x) { return String(x).replace(/\d/g, function (d) { return '۰۱۲۳۴۵۶۷۸۹'[+d]; }); };
+    return f(i + 1) + ' از ' + f(n);
+  }
+  return (i + 1) + ' of ' + n;
 }
 function tutReposition() {
   if (!tutState.active) return;
@@ -4454,7 +4469,7 @@ function showTutorialDone() {
   if (hole) hole.style.opacity = '0';
   if (controls) controls.style.display = 'none';
   if (!text) return;
-  text.innerHTML = '<div class="tut-kicker">🎉</div>' +
+  text.innerHTML = '<div class="tut-done-emoji">🎉</div>' +
     '<div class="tut-done-title">' + (fa ? 'تمومه!' : 'That\u2019s it!') + '</div>' +
     '<div class="tut-body">' + esc(fa ? 'فردا یه درس جدید منتظرته — فقط ۱۵ دقیقه 🌱'
                                       : 'A new lesson waits tomorrow — just 15 minutes 🌱') + '</div>' +
