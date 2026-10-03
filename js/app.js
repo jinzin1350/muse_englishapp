@@ -525,7 +525,7 @@ function ptsSet(kind, obj) {
 /* Award points for an action. Real logged-in users only; each action+ref
    awards once. On success the celebratory popup fires; on failure the award
    is queued and retried on the next login. */
-async function awardPoints(action, points, ref, noPopup) {
+async function awardPoints(action, points, ref, noPopup, extraMeta) {
   try {
     if (!state.user || state.user.demo || !state.user.id) return;
     ref = ref || '';
@@ -550,7 +550,7 @@ async function awardPoints(action, points, ref, noPopup) {
       if (action === 'lesson_open') {
         checkStreakBonus();
         bumpStat('lessons_opened', 1);
-        trackEvent('lesson_open', { date: ref });
+        trackEvent('lesson_open', Object.assign({ date: ref }, extraMeta || {}));
       }
       bumpStat('xp_earned', points);
     } else {
@@ -3368,9 +3368,11 @@ const ADM_EV_LABELS = {
 function admEvLabel(e) {
   const base = ADM_EV_LABELS[e.event] || e.event;
   const m = e.meta || {};
-  if (e.event === 'quiz_completed' && m.score != null) return base + ' — ' + m.score + '/' + (m.total || '?') + ' (' + (m.kind || '') + ')';
+  const theme = String(m.theme || '').replace(/^(\p{Emoji_Presentation}|\p{Extended_Pictographic}|\uFE0F)+\s*/u, '');
+  const tSuffix = theme ? ' · ' + theme : '';
+  if (e.event === 'quiz_completed' && m.score != null) return base + ' — ' + m.score + '/' + (m.total || '?') + ' (' + (m.kind || '') + ')' + tSuffix;
   if (e.event === 'podcast_milestone' && m.minutes != null) return base + ' — ' + m.minutes + ' min listened';
-  if (e.event === 'lesson_open' && m.date) return base + ' — ' + m.date;
+  if (e.event === 'lesson_open' && m.date) return base + ' — ' + m.date + tSuffix;
   return base;
 }
 async function loadAdminAnalytics() {
@@ -4543,7 +4545,7 @@ function renderLesson(v, dateStr) {
   }
   const m = state.lesson;
   if (!m) { v.innerHTML = '<div class="empty">No lesson available.</div>'; return; }
-  if (m.date) awardPoints('lesson_open', 5, m.date);
+  if (m.date) awardPoints('lesson_open', 5, m.date, false, { theme: m.theme || '' });
 
   let html = '<div class="lesson-head"><div class="hero-date">' + esc(m.date) + (m.date === todayStr() ? ' · <b>Today</b>' : '') + '</div>' +
     '<h1 class="lesson-title">' + esc(m.theme || 'Daily lesson') + '</h1>' +
@@ -4801,7 +4803,7 @@ function finishQuiz() {
     kind: q.kind, score: q.correct, total: total
   });
   bumpStat('quizzes_completed', 1);
-  trackEvent('quiz_completed', { kind: q.kind, score: q.correct, total: total, date: q.date, level: q.level });
+  trackEvent('quiz_completed', { kind: q.kind, score: q.correct, total: total, date: q.date, level: q.level, theme: q.theme || '' });
   if (q.kind === 'word' && q.date) {
     const firstTime = !((getDayProgress(q.date) || {}).quiz);
     markStep(q.date, 'quiz', { score: q.correct, total: total });
