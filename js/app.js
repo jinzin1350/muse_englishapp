@@ -674,7 +674,7 @@ function pumpPointsPopup() {
 /* One-time "battle name" prompt: blocking until the user picks a nickname.
    Used for existing users without display_name, and re-used from the
    Challenge locked state. */
-function ensureNickname() {
+function ensureNickname(suggestion) {
   return new Promise(function (resolve) {
     showModal(
       '<div class="nick-trophy">' + ICO.trophy + '</div>' +
@@ -718,6 +718,7 @@ function ensureNickname() {
     if (saveBtn) saveBtn.addEventListener('click', save);
     const inpEl = document.getElementById('nick-input');
     if (inpEl) {
+      if (suggestion) inpEl.value = suggestion;
       inpEl.addEventListener('keydown', function (e) { if (e.key === 'Enter') save(); });
       setTimeout(function () { try { inpEl.focus(); } catch (e) {} }, 120);
     }
@@ -1944,6 +1945,7 @@ function renderSignin(v) {
     '<h1>Welcome back 👋</h1>' +
     '<p class="muted">Sign in to continue your lessons.</p>' +
     (configured ?
+      googleButtonHTML('si') +
       '<form id="form-signin" novalidate>' +
         '<div class="field"><label for="si-email">Email</label>' +
         '<input id="si-email" name="signin-email" type="email" autocomplete="email" placeholder="you@example.com" required></div>' +
@@ -2007,6 +2009,7 @@ function renderSignup(v) {
     (configured ?
       // Distinct form/field names + autocomplete=new-password keep the browser
       // from dropping saved *login* credentials into the signup form.
+      googleButtonHTML('su') +
       '<form id="form-signup" novalidate autocomplete="off">' +
         '<div class="field"><label for="su-email">Email</label>' +
         '<input id="su-email" name="signup-email" type="email" autocomplete="email" placeholder="you@example.com" required></div>' +
@@ -2471,6 +2474,51 @@ async function openAdminUser(id) {
   }
 }
 
+/* ---------------- Google SSO ----------------
+   "Continue with Google" on signin/signup. Supabase handles the OAuth dance;
+   on return init() -> getSession() picks up the session from the URL and
+   enterApp() runs. New Google users get: nickname prompt (ensureNickname),
+   level picker (waiting view), and first-touch teacher attribution below. */
+function googleButtonHTML(prefix) {
+  return '<button class="btn btn-block btn-google" data-action="google-signin" data-prefix="' + prefix + '" type="button">' +
+    '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">' +
+    '<path fill="#EA4335" d="M12 5.04c1.7 0 3.2.58 4.38 1.73l3.25-3.25C17.7 1.7 15.06.5 12 .5 7.7.5 3.99 3.08 2.18 6.6l3.78 2.93C7.02 6.9 9.28 5.04 12 5.04z"/>' +
+    '<path fill="#4285F4" d="M23.5 12.27c0-.85-.08-1.66-.22-2.45H12v4.64h6.45c-.28 1.48-1.12 2.73-2.39 3.57v2.97h3.87c2.26-2.09 3.57-5.16 3.57-8.73z"/>' +
+    '<path fill="#FBBC05" d="M5.96 14.47c-.22-.66-.35-1.37-.35-2.1s.13-1.44.35-2.1V7.3H2.18C1.43 8.79 1 10.35 1 12s.43 3.21 1.18 4.7l3.78-2.23z"/>' +
+    '<path fill="#34A853" d="M12 23.5c3.04 0 5.6-1 7.46-2.72l-3.87-2.97c-1.08.72-2.45 1.15-3.59 1.15-2.72 0-4.98-1.86-6.04-4.49l-3.78 2.93C3.99 21.42 7.7 23.5 12 23.5z"/>' +
+    '</svg><span>Continue with Google</span></button>' +
+    '<div class="auth-or"><span>or</span></div>';
+}
+async function signInWithGoogle(prefix, btn) {
+  if (!sb) { authError(prefix, 'Sign-in service couldn\u2019t load. Check your connection and try again.'); return; }
+  authError(prefix, '');
+  if (btn) btn.disabled = true;
+  try {
+    const { error } = await sb.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: window.location.origin + '/' }
+    });
+    if (error) throw error;
+    // The browser leaves for Google now; on return init() picks up the session.
+  } catch (e) {
+    if (btn) btn.disabled = false;
+    authError(prefix, (e && e.message) || 'Google sign-in failed. Try again.');
+  }
+}
+/* Suggest a valid nickname from the OAuth profile (Google full name). */
+function suggestNickname(u) {
+  try {
+    const meta = (u && u.user_metadata) || {};
+    const raw = String(meta.full_name || meta.name || '').trim();
+    let s = raw.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 20);
+    if (s.length < 3) {
+      s = String((u && u.email) || 'learner').split('@')[0].toLowerCase()
+        .replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 20);
+    }
+    return s.length >= 3 ? s : '';
+  } catch (e) { return ''; }
+}
+
 function togglePw(btn) {
   const wrap = btn.closest('.pw-wrap');
   const input = wrap ? wrap.querySelector('input') : null;
@@ -2731,7 +2779,7 @@ async function enterApp() {
   let level = null;
   let prof = null;
   try {
-    const res = await sb.from('profiles').select('level,display_name,country_code,country,country_source,welcome_seen_at').eq('id', u.id).single();
+    const res = await sb.from('profiles').select('level,display_name,referred_by,country_code,country,country_source,welcome_seen_at').eq('id', u.id).single();
     if (res.error) throw res.error;
     prof = res.data || null;
   } catch (e) {
@@ -2757,6 +2805,14 @@ async function enterApp() {
       }
     } catch (e) {}
   }
+  // First-touch teacher attribution for OAuth sign-ins (the email flow stashes
+  // the ref code in el_pending_level instead; this covers Google SSO).
+  try {
+    const rc = getRefCode();
+    if (rc && (!prof || !prof.referred_by)) {
+      await sb.from('profiles').update({ referred_by: rc }).eq('id', u.id);
+    }
+  } catch (e) {}
   const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
   state.user = {
     id: u.id, email: u.email, level: level, isAdmin: isAdmin, demo: false,
@@ -2774,9 +2830,10 @@ async function enterApp() {
   await refreshMyPoints();
   await loadTeacherStatus();
   // Existing users without a nickname pick one now (blocking) — the
-  // Challenge leaderboard needs a display name.
+  // Challenge leaderboard needs a display name. Google users get their
+  // Google name suggested.
   if (!state.user.demo && !state.user.displayName) {
-    await ensureNickname();
+    await ensureNickname(suggestNickname(u));
   }
   await afterLogin();
 }
@@ -4540,6 +4597,7 @@ function bindEvents() {
     else if (a === 'teacher-student') openTeacherStudent(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
     else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (a === 'google-signin') signInWithGoogle(t.getAttribute('data-prefix'), t);
     else if (a === 'approve-teacher') adminApproveTeacher(t.getAttribute('data-id'));
     else if (a === 'reject-teacher') adminRejectTeacher(t.getAttribute('data-id'));
     else if (a === 'adm-metric') { state.adminMetric = t.getAttribute('data-m'); renderAdminAnalytics(); }

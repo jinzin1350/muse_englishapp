@@ -1907,3 +1907,17 @@ body{background:#FFF9F3;}
 .tch-board-row:last-child { border-bottom: none; }
 .tch-board-row.me { font-weight: 800; }
 .tch-board-row.me span { color: var(--tomato-dark); }
+
+/* ================= Google SSO button ================= */
+.auth-card .btn-google {
+  background: #fff; color: #1f1f1f; border: 1px solid #dadce0;
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+  font-weight: 600; box-shadow: none;
+}
+.auth-card .btn-google:hover:not(:disabled) { background: #f6fafe; }
+.auth-card .btn-google:disabled { opacity: 0.65; cursor: wait; }
+.auth-or {
+  display: flex; align-items: center; gap: 0.8rem;
+  margin: 1rem 0; color: var(--muted); font-size: 0.8rem;
+}
+.auth-or::before, .auth-or::after { content: ''; flex: 1; height: 1px; background: var(--line); }
