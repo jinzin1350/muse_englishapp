@@ -2043,3 +2043,54 @@ body{background:#FFF9F3;}
   border-radius: 50%; background: #fff; transition: left 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.25);
 }
 .bot-switch:checked::after { left: 24px; }
+
+/* ============ Duolingo-style game player ============ */
+.duo-top{display:flex;align-items:center;gap:.7rem;padding:.55rem .1rem .8rem;position:sticky;top:0;background:#FFF9F3;z-index:20;}
+.duo-x{border:0;background:none;font-size:1.15rem;color:var(--muted);cursor:pointer;padding:.35rem .5rem;line-height:1;}
+.duo-pbar{flex:1;height:14px;border-radius:99px;background:#E7DECB;overflow:hidden;}
+.duo-pfill{height:100%;border-radius:99px;background:linear-gradient(90deg,#7BD747,#58CC02);transition:width .35s ease;}
+.duo-hearts{font-weight:800;color:#FF4B4B;font-size:1rem;white-space:nowrap;min-width:52px;text-align:right;}
+.duo-body{max-width:var(--content-w);margin:0 auto;padding:.4rem .2rem 8rem;}
+.duo-q{font-size:1.35rem;font-weight:800;color:var(--ink);margin:.6rem 0 1.1rem;line-height:1.45;}
+.duo-q[dir="rtl"]{text-align:right;}
+.duo-hint{color:var(--muted);font-size:.95rem;margin:-.6rem 0 1rem;text-align:right;}
+.duo-opts{display:flex;flex-direction:column;gap:.7rem;}
+.duo-opt{display:flex;align-items:center;gap:.75rem;border:2px solid var(--line);border-bottom-width:4px;background:var(--card);border-radius:16px;padding:.9rem 1rem;font-size:1rem;color:var(--ink);cursor:pointer;text-align:left;width:100%;transition:transform .06s;}
+.duo-opt:active{transform:translateY(2px);border-bottom-width:2px;}
+.duo-opt:disabled{cursor:default;}
+.duo-opt.ok{border-color:#58CC02;background:#D7FFB8;color:#1a2e05;}
+.duo-opt.ok .opt-key{border-color:#58CC02;color:#58A700;background:#fff;}
+.duo-opt.bad{border-color:#FF4B4B;background:#FFDFE0;color:#7a1f1f;}
+.duo-opt.bad .opt-key{border-color:#FF4B4B;color:#FF4B4B;background:#fff;}
+.duo-opt.dim{opacity:.45;}
+.duo-listen{display:flex;align-items:center;gap:1rem;margin:.4rem 0 1.2rem;}
+.duo-speaker{width:88px;height:88px;border-radius:24px;border:2px solid var(--line);border-bottom-width:5px;background:linear-gradient(135deg,#4D9DE0,#1E88E5);font-size:2.4rem;cursor:pointer;flex:none;box-shadow:0 6px 16px rgba(30,136,229,.35);}
+.duo-speaker:active{transform:translateY(2px);border-bottom-width:2px;}
+.duo-slots{display:flex;flex-wrap:wrap;gap:.5rem;min-height:64px;border:2px dashed var(--line);border-radius:16px;padding:.7rem .8rem;margin-bottom:1rem;background:var(--card);align-items:center;}
+.duo-slots-empty{color:var(--muted);font-size:.9rem;}
+.duo-bank{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin-bottom:1.2rem;}
+.duo-tok{border:2px solid var(--line);border-bottom-width:4px;background:#fff;border-radius:14px;padding:.55rem .95rem;font-size:1rem;font-weight:600;color:var(--ink);cursor:pointer;}
+.duo-tok:active{transform:translateY(2px);border-bottom-width:2px;}
+.duo-tok.used{opacity:0;pointer-events:none;}
+.duo-tok:disabled{cursor:default;}
+.duo-slots .duo-tok{background:#E8F4FF;border-color:#4D9DE0;}
+.duo-check:disabled{opacity:.4;}
+.duo-footer{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:1rem 1rem calc(1rem + env(safe-area-inset-bottom));border-top:2px solid rgba(0,0,0,.06);}
+.duo-footer.ok{background:#D7FFB8;}
+.duo-footer.bad{background:#FFDFE0;}
+.duo-fb-inner{max-width:var(--content-w);margin:0 auto;}
+.duo-fb-title{font-size:1.3rem;font-weight:800;margin-bottom:.15rem;}
+.duo-footer.ok .duo-fb-title{color:#58A700;}
+.duo-footer.bad .duo-fb-title{color:#EA2B2B;}
+.duo-fb-answer{font-size:1.05rem;margin-bottom:.8rem;color:var(--ink);}
+.duo-continue{border:0;border-bottom-width:4px;font-weight:800;letter-spacing:.06em;margin-top:0;}
+.duo-continue.btn-green{background:#58CC02;color:#fff;}
+.duo-continue.btn-red{background:#FF4B4B;color:#fff;}
+.duo-out{max-width:420px;margin:3rem auto;text-align:center;padding:0 1.2rem;}
+.duo-out-emoji{font-size:4rem;margin-bottom:.6rem;}
+.duo-out h2{font-size:1.5rem;margin-bottom:.5rem;color:var(--ink);}
+.duo-out p{color:var(--muted);margin-bottom:1.4rem;line-height:1.6;}
+.duo-modal-wrap{position:fixed;inset:0;background:rgba(23,33,43,.5);z-index:100;display:flex;align-items:center;justify-content:center;padding:1.2rem;}
+.duo-modal{background:var(--card);border-radius:22px;padding:1.6rem;width:100%;max-width:360px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.25);}
+.duo-modal h3{margin:0 0 .4rem;font-size:1.25rem;}
+.duo-modal p{color:var(--muted);margin:0 0 1.1rem;}

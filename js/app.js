@@ -3807,9 +3807,7 @@ async function startQuiz(kind, dateStr) {
   }
   let questions = [];
   if (kind === 'word') {
-    questions = (m.quiz || []).map(function (q) {
-      return { question: q.question, options: q.options, answer: q.answer, kind: 'word' };
-    });
+    questions = buildDuoDeck(m);
   } else if (kind === 'grammar') {
     questions = ((m.grammar && m.grammar.quiz) || []).map(function (q) {
       return { question: q.question, options: q.options, answer: q.answer, kind: 'grammar' };
@@ -3824,7 +3822,8 @@ async function startQuiz(kind, dateStr) {
   if (!questions.length) return;
   state.quiz = {
     kind: kind, questions: questions, idx: 0, correct: 0,
-    answered: false, picked: -1,
+    answered: false, picked: -1, wasCorrect: false,
+    hearts: kind === 'word' ? getHearts() : 0,
     date: m.date, level: m.level, theme: m.theme
   };
   renderQuizView();
@@ -3832,6 +3831,7 @@ async function startQuiz(kind, dateStr) {
 
 function renderQuizView() {
   const q = state.quiz;
+  if (q.kind === 'word') { renderDuoQuizView(); return; }
   const v = $('#view');
   const cur = q.questions[q.idx];
   const total = q.questions.length;
@@ -3897,6 +3897,7 @@ function finishQuiz() {
   const q = state.quiz;
   const total = q.questions.length;
   const pct = Math.round((q.correct / total) * 100);
+  let heartEarned = false;
   saveAttempt({
     date: q.date, level: q.level, theme: q.theme,
     kind: q.kind, score: q.correct, total: total
@@ -3918,6 +3919,9 @@ function finishQuiz() {
     awardPoints('grammar_quiz', 10, q.date);
   } else if (q.kind === 'mistakes') {
     awardPoints('deck_review', 10, q.date || todayStr());
+    /* Duolingo loop: reviewing mistakes earns a heart back (max 5/day). */
+    heartEarned = getHearts() < 5;
+    if (heartEarned) setHearts(getHearts() + 1);
   }
   state.quiz = null;
   $('#view').innerHTML =
@@ -3925,12 +3929,279 @@ function finishQuiz() {
     '<div class="score-big">' + q.correct + '/' + total + '</div>' +
     '<div class="score-sub">' + pct + '% · ' +
     (pct >= 85 ? 'Excellent work! 🌟' : pct >= 60 ? 'Good — keep practicing! 💪' : 'Keep going — review your mistakes below. 📚') +
+    (heartEarned ? '<br>❤️ +1 heart earned!' : '') +
     '</div></div>' +
     '<div class="btn-row">' +
       '<a class="btn" href="#/home">Home</a>' +
       '<a class="btn btn-ghost" href="#/review">Review</a>' +
     '</div></div>';
   window.scrollTo(0, 0);
+}
+
+/* ---------------- Duolingo-style game player (word quiz) ----------------
+   Hearts + progress bar + instant feedback + mixed challenge types
+   (select / reverse / listen / assist). Grammar & mistakes quizzes keep
+   the classic renderer below. */
+function shuffleArr(a) {
+  a = a.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+function heartsKey() {
+  const email = state.user ? state.user.email : 'anon';
+  return 'ela_hearts_' + email + '_' + todayStr();
+}
+function getHearts() {
+  try {
+    const v = parseInt(localStorage.getItem(heartsKey()), 10);
+    return isNaN(v) ? 5 : Math.max(0, Math.min(5, v));
+  } catch (e) { return 5; }
+}
+function setHearts(n) {
+  try { localStorage.setItem(heartsKey(), String(Math.max(0, Math.min(5, n)))); } catch (e) {}
+}
+
+function buildDuoDeck(m) {
+  const deck = [];
+  (m.quiz || []).forEach(function (q) {
+    deck.push({ qtype: 'select', question: q.question, options: q.options.slice(), answer: q.answer, kind: 'word' });
+  });
+  const words = (m.words || []).filter(function (w) { return w && w.word; });
+  function distractors(word, n) {
+    return shuffleArr(words.filter(function (x) { return x.word !== word; }))
+      .slice(0, n).map(function (x) { return x.word; });
+  }
+  /* REVERSE: Persian meaning -> English word */
+  shuffleArr(words).slice(0, 3).forEach(function (w) {
+    if (!w.persian) return;
+    const opts = shuffleArr([w.word].concat(distractors(w.word, 3)));
+    if (opts.length < 2) return;
+    deck.push({
+      qtype: 'reverse', question: '\u00AB' + w.persian + '\u00BB به انگلیسی چی میشه؟', rtl: true,
+      options: opts, answer: opts.indexOf(w.word), kind: 'word', word: w.word
+    });
+  });
+  /* LISTEN: hear the pronunciation -> pick the word */
+  shuffleArr(words.filter(function (w) { return w.word_audio; })).slice(0, 2).forEach(function (w) {
+    const opts = shuffleArr([w.word].concat(distractors(w.word, 3)));
+    if (opts.length < 2) return;
+    deck.push({
+      qtype: 'listen', question: 'Which word did you hear?', audio: w.word_audio,
+      options: opts, answer: opts.indexOf(w.word), kind: 'word', word: w.word
+    });
+  });
+  /* ASSIST: tap the words in order to build the example sentence */
+  shuffleArr(words.filter(function (w) {
+    if (!w.example) return false;
+    const n = w.example.replace(/["\u201C\u201D']/g, '').trim().split(/\s+/).length;
+    return n >= 4 && n <= 12;
+  })).slice(0, 2).forEach(function (w) {
+    const tokens = w.example.replace(/["\u201C\u201D']/g, '').trim().split(/\s+/);
+    deck.push({
+      qtype: 'assist', question: 'Tap the words in order', hint: w.persian,
+      tokens: tokens,
+      bank: shuffleArr(tokens.map(function (t, i) { return { t: t, k: i }; })),
+      placed: [], kind: 'word', word: w.word
+    });
+  });
+  return shuffleArr(deck).slice(0, 14);
+}
+
+function duoTopbar(q) {
+  const pct = Math.round((q.idx / q.questions.length) * 100);
+  return '<div class="duo-top">' +
+    '<button class="duo-x" data-action="duo-exit" aria-label="Quit quiz">✕</button>' +
+    '<div class="duo-pbar"><div class="duo-pfill" style="width:' + pct + '%"></div></div>' +
+    '<span class="duo-hearts">❤️ ' + q.hearts + '</span></div>';
+}
+
+function duoAssistHTML(q, cur) {
+  let html = '<div class="duo-q">' + esc(cur.question) + '</div>';
+  if (cur.hint) html += '<div class="duo-hint" dir="rtl">💡 ' + esc(cur.hint) + '</div>';
+  html += '<div class="duo-slots">' + (cur.placed.length
+    ? cur.placed.map(function (bi) {
+      return '<button class="duo-tok" data-action="duo-unpick" data-bi="' + bi + '"' +
+        (q.answered ? ' disabled' : '') + '>' + esc(cur.bank[bi].t) + '</button>';
+    }).join('')
+    : '<span class="duo-slots-empty">Tap the words below…</span>') + '</div>';
+  const used = {};
+  cur.placed.forEach(function (bi) { used[bi] = true; });
+  html += '<div class="duo-bank">' + cur.bank.map(function (b, bi) {
+    return '<button class="duo-tok' + (used[bi] ? ' used' : '') + '" data-action="duo-pick" data-bi="' + bi + '"' +
+      (used[bi] || q.answered ? ' disabled' : '') + '>' + esc(b.t) + '</button>';
+  }).join('') + '</div>';
+  if (!q.answered) {
+    const ready = cur.placed.length === cur.tokens.length;
+    html += '<button class="btn btn-orange btn-block duo-check" data-action="duo-check"' +
+      (ready ? '' : ' disabled') + '>CHECK</button>';
+  }
+  return html;
+}
+
+function duoFooter(q, cur) {
+  const ok = q.wasCorrect;
+  let msg;
+  if (ok) {
+    msg = '<div class="duo-fb-title">🎉 Correct!</div>';
+  } else if (cur.qtype === 'assist') {
+    msg = '<div class="duo-fb-title">Correct answer:</div><div class="duo-fb-answer">' +
+      esc(cur.tokens.join(' ')) + '</div>';
+  } else {
+    msg = '<div class="duo-fb-title">Correct answer:</div><div class="duo-fb-answer">' +
+      esc(cur.options[cur.answer]) + '</div>';
+  }
+  const last = q.idx + 1 >= q.questions.length;
+  return '<div class="duo-footer ' + (ok ? 'ok' : 'bad') + '"><div class="duo-fb-inner">' + msg +
+    '<button class="btn btn-block duo-continue ' + (ok ? 'btn-green' : 'btn-red') + '" data-action="duo-next">' +
+    (last ? 'See my score →' : 'CONTINUE →') + '</button></div></div>';
+}
+
+function renderDuoQuizView() {
+  const q = state.quiz;
+  const v = $('#view');
+  const cur = q.questions[q.idx];
+  const letters = ['A', 'B', 'C', 'D'];
+  let html = duoTopbar(q) + '<div class="duo-body">';
+  if (cur.qtype === 'assist') {
+    html += duoAssistHTML(q, cur);
+  } else {
+    if (cur.qtype === 'listen') {
+      html += '<div class="duo-listen"><button class="duo-speaker" data-action="play-track" data-src="' +
+        esc(cur.audio) + '" data-title="' + esc(cur.word) + '" aria-label="Hear it again">🔊</button>' +
+        '<div class="duo-q">' + esc(cur.question) + '</div></div>';
+    } else {
+      html += '<div class="duo-q"' + (cur.rtl ? ' dir="rtl"' : '') + '>' + esc(cur.question) + '</div>';
+    }
+    html += '<div class="duo-opts">' + cur.options.map(function (opt, i) {
+      let cls = 'duo-opt';
+      if (q.answered) {
+        if (i === cur.answer) cls += ' ok';
+        else if (i === q.picked) cls += ' bad';
+        else cls += ' dim';
+      }
+      return '<button class="' + cls + '" data-action="duo-opt" data-idx="' + i + '"' +
+        (q.answered ? ' disabled' : '') + '><span class="opt-key">' + letters[i] + '</span>' +
+        '<span>' + esc(opt) + '</span></button>';
+    }).join('') + '</div>';
+  }
+  html += '</div>';
+  if (q.answered) html += duoFooter(q, cur);
+  v.innerHTML = html;
+  window.scrollTo(0, 0);
+  if (cur.qtype === 'listen' && !q.answered) playTrack(cur.audio, cur.word);
+}
+
+function duoLoseHeart(q) {
+  q.hearts = Math.max(0, q.hearts - 1);
+  setHearts(q.hearts);
+  return q.hearts;
+}
+
+function duoAnswer(idx) {
+  const q = state.quiz;
+  if (!q || q.answered) return;
+  const cur = q.questions[q.idx];
+  q.answered = true;
+  q.picked = idx;
+  q.wasCorrect = (idx === cur.answer);
+  if (q.wasCorrect) {
+    q.correct++;
+  } else {
+    if ((cur.qtype === 'select' || cur.qtype === 'reverse')) {
+      saveMistake({
+        date: q.date, level: q.level, kind: 'word',
+        question: cur.question, options: cur.options,
+        answer: cur.answer, picked: idx
+      });
+    }
+    if (duoLoseHeart(q) <= 0) { renderHeartsOut(); return; }
+  }
+  renderDuoQuizView();
+}
+
+function duoPick(bi) {
+  const q = state.quiz;
+  if (!q || q.answered) return;
+  const cur = q.questions[q.idx];
+  if (cur.placed.indexOf(bi) === -1 && cur.placed.length < cur.tokens.length) {
+    cur.placed.push(bi);
+    renderDuoQuizView();
+  }
+}
+
+function duoUnpick(bi) {
+  const q = state.quiz;
+  if (!q || q.answered) return;
+  const cur = q.questions[q.idx];
+  cur.placed = cur.placed.filter(function (x) { return x !== bi; });
+  renderDuoQuizView();
+}
+
+function duoCheck() {
+  const q = state.quiz;
+  if (!q || q.answered) return;
+  const cur = q.questions[q.idx];
+  if (cur.placed.length !== cur.tokens.length) return;
+  const built = cur.placed.map(function (bi) { return cur.bank[bi].t; }).join(' ');
+  q.answered = true;
+  q.wasCorrect = (built === cur.tokens.join(' '));
+  if (q.wasCorrect) q.correct++;
+  else if (duoLoseHeart(q) <= 0) { renderHeartsOut(); return; }
+  renderDuoQuizView();
+}
+
+function duoNext() {
+  const q = state.quiz;
+  if (!q) return;
+  if (q.idx + 1 < q.questions.length) {
+    q.idx++; q.answered = false; q.picked = -1; q.wasCorrect = false;
+    renderDuoQuizView();
+  } else {
+    finishQuiz();
+  }
+}
+
+function renderHeartsOut() {
+  const q = state.quiz;
+  const done = q.idx + 1;
+  $('#view').innerHTML =
+    '<div class="duo-out"><div class="duo-out-emoji">💔</div>' +
+    '<h2>Out of hearts!</h2>' +
+    '<p>You got <strong>' + q.correct + ' / ' + done + '</strong> right.<br>' +
+    'Review your mistakes to earn a heart back ❤️</p>' +
+    '<button class="btn btn-orange btn-block" data-action="duo-earn-heart">Review mistakes · earn ❤️</button>' +
+    '<button class="btn btn-ghost btn-block" data-action="duo-quit">Back to lesson</button></div>';
+  window.scrollTo(0, 0);
+}
+
+function duoExit() {
+  if (document.getElementById('duo-exit-modal')) return;
+  const d = document.createElement('div');
+  d.className = 'duo-modal-wrap';
+  d.id = 'duo-exit-modal';
+  d.innerHTML = '<div class="duo-modal"><h3>Quit this quiz?</h3>' +
+    '<p>Your progress will be lost.</p>' +
+    '<button class="btn btn-red btn-block" data-action="duo-quit">Quit</button>' +
+    '<button class="btn btn-ghost btn-block" data-action="duo-keep">Keep playing</button></div>';
+  $('#view').appendChild(d);
+}
+
+function duoQuit() {
+  const q = state.quiz;
+  const date = q && q.date;
+  state.quiz = null;
+  const m = document.getElementById('duo-exit-modal');
+  if (m) m.remove();
+  try { if (player.el && !player.el.paused) player.el.pause(); } catch (e) {}
+  go('lesson', date);
+}
+
+function duoKeep() {
+  const m = document.getElementById('duo-exit-modal');
+  if (m) m.remove();
 }
 
 /* ---------------- streak engine (local-first, Supabase RPC when migrated) ----------------
@@ -4829,6 +5100,21 @@ function bindEvents() {
     else if (a === 'quiz-start') startQuiz(t.getAttribute('data-kind'));
     else if (a === 'quiz-opt') answerQuiz(parseInt(t.getAttribute('data-idx'), 10));
     else if (a === 'quiz-next') nextQuiz();
+    else if (a === 'duo-opt') duoAnswer(parseInt(t.getAttribute('data-idx'), 10));
+    else if (a === 'duo-next') duoNext();
+    else if (a === 'duo-pick') duoPick(parseInt(t.getAttribute('data-bi'), 10));
+    else if (a === 'duo-unpick') duoUnpick(parseInt(t.getAttribute('data-bi'), 10));
+    else if (a === 'duo-check') duoCheck();
+    else if (a === 'duo-exit') duoExit();
+    else if (a === 'duo-quit') duoQuit();
+    else if (a === 'duo-keep') duoKeep();
+    else if (a === 'duo-earn-heart') {
+      state.quiz = null;
+      getMistakes().then(function (arr) {
+        if (arr.length) startQuiz('mistakes');
+        else go('review');
+      });
+    }
     else if (a === 'practice-again') {
       getMistakes().then(function (arr) {
         if (arr.length) startQuiz('mistakes');
