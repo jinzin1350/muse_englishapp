@@ -2321,9 +2321,13 @@ function fmtMsgTime(ts) {
 function inboxListHTML(msgs) {
   if (!msgs.length) return '<div class="empty">No messages yet. When your teacher writes to you, it shows up here. 💌</div>';
   return msgs.map(function (m) {
+    /* Assignment notifications (sent by the teacher composer) get a direct
+       link — otherwise the student reads the message but can't find the quiz. */
+    const isAssignment = (m.body || '').indexOf('📝 Your teacher sent you ') === 0;
     return '<div class="card msg-card' + (m.read_at ? '' : ' unread') + '">' +
       '<div class="msg-head"><b>' + esc(m.teacher_name) + '</b><span class="muted">' + esc(fmtMsgTime(m.created_at)) + '</span></div>' +
-      '<p>' + esc(m.body) + '</p></div>';
+      '<p>' + esc(m.body) + '</p>' +
+      (isAssignment ? '<a class="btn btn-block" href="#/homework" style="margin-top:0.6rem">📝 Open homework →</a>' : '') + '</div>';
   }).join('');
 }
 async function renderInbox(v) {
