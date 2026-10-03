@@ -1588,6 +1588,9 @@ function go(view, arg) {
 
 function onRoute() {
   const r = parseHash();
+  /* Self-heal: the game player hides the tabbar; if the quiz state is gone
+     (e.g. browser back), the tabbar must come back. */
+  if (!state.quiz) document.body.classList.remove('duo-playing');
   // In-page landing anchors (e.g. #how-it-works) scroll, they are not routes.
   if (INPAGE_ANCHORS.indexOf(r.name) !== -1 && !state.user) {
     const el = document.getElementById(r.name);
@@ -3895,6 +3898,7 @@ function nextQuiz() {
 
 function finishQuiz() {
   const q = state.quiz;
+  document.body.classList.remove('duo-playing');
   const total = q.questions.length;
   const pct = Math.round((q.correct / total) * 100);
   let heartEarned = false;
@@ -4062,6 +4066,7 @@ function duoFooter(q, cur) {
 function renderDuoQuizView() {
   const q = state.quiz;
   const v = $('#view');
+  document.body.classList.add('duo-playing');
   const cur = q.questions[q.idx];
   const letters = ['A', 'B', 'C', 'D'];
   let html = duoTopbar(q) + '<div class="duo-body">';
@@ -4166,6 +4171,7 @@ function duoNext() {
 
 function renderHeartsOut() {
   const q = state.quiz;
+  document.body.classList.add('duo-playing');
   const done = q.idx + 1;
   $('#view').innerHTML =
     '<div class="duo-out"><div class="duo-out-emoji">💔</div>' +
@@ -4193,6 +4199,7 @@ function duoQuit() {
   const q = state.quiz;
   const date = q && q.date;
   state.quiz = null;
+  document.body.classList.remove('duo-playing');
   const m = document.getElementById('duo-exit-modal');
   if (m) m.remove();
   try { if (player.el && !player.el.paused) player.el.pause(); } catch (e) {}
@@ -5110,6 +5117,7 @@ function bindEvents() {
     else if (a === 'duo-keep') duoKeep();
     else if (a === 'duo-earn-heart') {
       state.quiz = null;
+      document.body.classList.remove('duo-playing');
       getMistakes().then(function (arr) {
         if (arr.length) startQuiz('mistakes');
         else go('review');

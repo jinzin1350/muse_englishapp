@@ -2045,12 +2045,14 @@ body{background:#FFF9F3;}
 .bot-switch:checked::after { left: 24px; }
 
 /* ============ Duolingo-style game player ============ */
+body.duo-playing .tabbar{display:none;}
+body.duo-playing{padding-bottom:0!important;}
 .duo-top{display:flex;align-items:center;gap:.7rem;padding:.55rem .1rem .8rem;position:sticky;top:0;background:#FFF9F3;z-index:20;}
 .duo-x{border:0;background:none;font-size:1.15rem;color:var(--muted);cursor:pointer;padding:.35rem .5rem;line-height:1;}
 .duo-pbar{flex:1;height:14px;border-radius:99px;background:#E7DECB;overflow:hidden;}
 .duo-pfill{height:100%;border-radius:99px;background:linear-gradient(90deg,#7BD747,#58CC02);transition:width .35s ease;}
 .duo-hearts{font-weight:800;color:#FF4B4B;font-size:1rem;white-space:nowrap;min-width:52px;text-align:right;}
-.duo-body{max-width:var(--content-w);margin:0 auto;padding:.4rem .2rem 8rem;}
+.duo-body{max-width:var(--content-w);margin:0 auto;padding:.4rem .2rem 13rem;}
 .duo-q{font-size:1.35rem;font-weight:800;color:var(--ink);margin:.6rem 0 1.1rem;line-height:1.45;}
 .duo-q[dir="rtl"]{text-align:right;}
 .duo-hint{color:var(--muted);font-size:.95rem;margin:-.6rem 0 1rem;text-align:right;}
