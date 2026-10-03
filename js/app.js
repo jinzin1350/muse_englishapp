@@ -1826,14 +1826,29 @@ function renderLanding(v) {
     if (refCode && sb) {
       sb.from('teachers').select('display_name').eq('ref_code', refCode).eq('status', 'approved').maybeSingle()
         .then(function (r) {
-          const el = document.getElementById('lp-invite');
-          if (el && r && r.data && state.view === 'landing') {
-            el.innerHTML = '🔥 <b>' + esc(r.data.display_name) + '</b> invited you to Muse English';
-            el.classList.remove('hidden');
-          }
+          if (r && r.data && state.view === 'landing') renderInviteHero(r.data.display_name);
         }, function () {});
     }
   } catch (e) {}
+}
+
+/* Personalized invite hero (phase 3): a visitor arriving with a teacher's
+   ?ref=CODE sees the teacher's invitation as the hero, in Persian. */
+function renderInviteHero(name) {
+  const hero = document.querySelector('.lp-hero');
+  if (!hero || state.view !== 'landing' || document.getElementById('lp-invite-hero')) return;
+  const initial = (name || '?').trim().charAt(0);
+  const card = document.createElement('div');
+  card.id = 'lp-invite-hero';
+  card.className = 'lp-invite-hero';
+  card.innerHTML =
+    '<div class="lp-invite-ava">' + esc(initial) + '</div>' +
+    '<div class="lp-invite-txt"><b>' + esc(name) + '</b> invited you to <b>Muse English</b></div>' +
+    '<p>Sign up with their personal link — they\u2019ll follow your progress and guide you.</p>' +
+    '<a class="lp-cta" href="#/signup">Start with ' + esc(name) + '\u2019s invite</a>';
+  hero.insertBefore(card, hero.firstChild);
+  const old = document.getElementById('lp-invite');
+  if (old) old.classList.add('hidden');
 }
 
 function renderPreviewTab(which, m) {
@@ -2098,10 +2113,64 @@ function renderTeacher(v) {
       '<p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0">Share it with your students — everyone who signs up through it shows up below.</p>' +
     '</div>' +
     '<div class="section-title"><h2>My students <span id="tch-count" class="muted"></span></h2></div>' +
+    '<div id="tch-weekly"></div>' +
+    '<div id="tch-coach"></div>' +
     '<div id="tch-roster"><div class="empty">Loading…</div></div>' +
     '<div id="tch-detail"></div>' +
   '</div>';
   loadTeacherRoster();
+  loadTeacherCoach();
+}
+/* Weekly report card (phase 3): 7-day aggregates across the teacher's students. */
+function renderTeacherWeekly() {
+  const host = document.getElementById('tch-weekly');
+  if (!host) return;
+  const list = state.teacherStudents || [];
+  if (!list.length) { host.innerHTML = ''; return; }
+  const sum = function (k) { return list.reduce(function (a, s) { return a + (Number(s[k]) || 0); }, 0); };
+  const active = list.filter(function (s) { return s.last_active && s.last_active >= daysAgoStr(6); }).length;
+  host.innerHTML = '<div class="card"><div class="tch-weekly-title">📊 This week with your students</div>' +
+    '<div class="tch-totals">' +
+    '<div><b>' + list.length + '</b><span>students</span></div>' +
+    '<div><b>' + active + '</b><span>active</span></div>' +
+    '<div><b>' + sum('lessons_7d') + '</b><span>lessons</span></div>' +
+    '<div><b>' + sum('xp_7d') + '</b><span>XP earned</span></div>' +
+    '</div></div>';
+}
+/* Coach XP (phase 3): the teacher's own total + the coach leaderboard. */
+async function loadTeacherCoach() {
+  const host = document.getElementById('tch-coach');
+  if (!host) return;
+  try {
+    const xpR = await sb.rpc('my_coach_xp');
+    if (xpR.error) throw xpR.error;
+    const boardR = await sb.rpc('coach_board');
+    const board = boardR.error ? [] : (boardR.data || []).slice(0, 5);
+    const me = state.teacher ? state.teacher.display_name : '';
+    host.innerHTML = '<div class="card"><div class="tch-weekly-title">⭐ Your coach XP: <b>' + (xpR.data || 0) + '</b></div>' +
+      '<p class="muted" style="font-size:0.82rem;margin:0.25rem 0 0.6rem">+10 every time one of your students finishes a lesson.</p>' +
+      (board.length ? '<div class="tch-board">' + board.map(function (t, i) {
+        const isMe = t.display_name === me;
+        return '<div class="tch-board-row' + (isMe ? ' me' : '') + '"><span>#' + (i + 1) + ' ' +
+          esc(t.display_name) + (isMe ? ' (you)' : '') + '</span><b>' + t.coach_xp + ' XP</b></div>';
+      }).join('') + '</div>' : '') + '</div>';
+  } catch (e) { host.innerHTML = ''; /* migration 3 not run yet: stay hidden */ }
+}
+/* Nudge (phase 3): queue a push notification to the student, max 1 per 24h. */
+async function teacherNudge(i, btn) {
+  const s = (state.teacherStudents || [])[i];
+  if (!s || !btn) return;
+  btn.disabled = true;
+  const orig = btn.textContent;
+  btn.textContent = 'Sending…';
+  try {
+    const r = await sb.rpc('send_nudge', { p_student: s.user_id });
+    if (r.error) throw r.error;
+    btn.textContent = (r.data === true) ? 'Sent ✓' : 'Already sent today';
+  } catch (e) {
+    btn.textContent = orig;
+    btn.disabled = false;
+  }
 }
 async function loadTeacherRoster() {
   const host = document.getElementById('tch-roster');
@@ -2111,6 +2180,7 @@ async function loadTeacherRoster() {
     if (r.error) throw r.error;
     state.teacherStudents = r.data || [];
     renderTeacherRoster();
+    renderTeacherWeekly();
   } catch (e) {
     host.innerHTML = '<div class="empty">Could not load students: ' + esc(e.message || e) + '</div>';
   }
@@ -2167,7 +2237,9 @@ async function openTeacherStudent(i) {
         '<div><b>' + sum('quizzes_completed') + '</b><span>quizzes</span></div>' +
         '<div><b>' + Math.round(sum('podcast_seconds') / 60) + '</b><span>podcast min</span></div>' +
       '</div>' +
-      '<button class="btn btn-ghost btn-sm" data-action="teacher-student-close">Close</button></div>';
+      '<div style="display:flex;gap:0.5rem;margin-top:0.9rem">' +
+      '<button class="btn btn-sm" data-action="teacher-nudge" data-i="' + i + '">🔔 Nudge</button>' +
+      '<button class="btn btn-ghost btn-sm" data-action="teacher-student-close">Close</button></div></div>';
   } catch (e) {
     host.innerHTML = '<div class="empty">Could not load activity.</div>';
   }
@@ -4467,6 +4539,7 @@ function bindEvents() {
     else if (a === 'copy-teacher-link') copyTeacherLink(t);
     else if (a === 'teacher-student') openTeacherStudent(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
+    else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'approve-teacher') adminApproveTeacher(t.getAttribute('data-id'));
     else if (a === 'reject-teacher') adminRejectTeacher(t.getAttribute('data-id'));
     else if (a === 'adm-metric') { state.adminMetric = t.getAttribute('data-m'); renderAdminAnalytics(); }
