@@ -58,6 +58,9 @@ const state = {
   showConfirmPopup: null, // email shown in the "confirm your email" popup after signup
   challengePeriod: 'weekly', // leaderboard period: 'weekly' | 'alltime'
   myPoints: null,        // cached personal challenge-points total
+  teacher: null,         // approved teacher row {id,ref_code,display_name} or null
+  teacherRequest: null,  // pending/rejected teacher request or null
+  teacherStudents: null, // cached roster for the teacher dashboard
 };
 
 /* Six CEFR levels. Legacy 3-level values are mapped so existing assignments keep working. */
@@ -105,6 +108,56 @@ function getRefCode() {
   } catch (e) { return null; }
 }
 getRefCode();
+
+/* ---------------- Teacher referral + analytics (phase 1) ----------------
+   - Teachers get a ref_code; students who sign up via ?ref=CODE are linked
+     through profiles.referred_by (existing text-code mechanism).
+   - bumpStat() writes atomic per-day aggregates via the bump_stat() RPC.
+   - trackEvent() logs coarse analytics events (fire-and-forget).
+   - Heartbeat counts visible-app seconds for "daily time in app". */
+function bumpStat(field, value) {
+  try {
+    if (!sb || !state.user || state.user.demo) return;
+    sb.rpc('bump_stat', { p_field: field, p_value: value }).then(function () {}, function () {});
+  } catch (e) {}
+}
+function trackEvent(event, meta) {
+  try {
+    if (!sb || !state.user || state.user.demo) return;
+    sb.from('app_events').insert({
+      user_id: state.user.id, event: event, meta: meta || {}
+    }).then(function () {}, function () {});
+  } catch (e) {}
+}
+async function loadTeacherStatus() {
+  state.teacher = null;
+  state.teacherRequest = null;
+  if (!sb || !state.user || state.user.demo) return;
+  try {
+    const r = await sb.from('teachers')
+      .select('id,ref_code,display_name,status,requested_at')
+      .eq('user_id', state.user.id).maybeSingle();
+    if (r.data) {
+      if (r.data.status === 'approved') state.teacher = r.data;
+      else state.teacherRequest = r.data;
+    }
+  } catch (e) { /* pre-migration: table may not exist yet */ }
+}
+function teacherInviteLink(code) {
+  return window.location.origin + '/?ref=' + encodeURIComponent(code);
+}
+function initHeartbeat() {
+  setInterval(function () {
+    try {
+      if (!state.user || state.user.demo) return;
+      if (document.visibilityState !== 'visible') return;
+      bumpStat('seconds_in_app', 30);
+    } catch (e) {}
+  }, 30000);
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible') initHeartbeat._last = Date.now();
+  });
+}
 
 /* ---------------- config / integrations ---------------- */
 let sb = null; // supabase client
@@ -493,7 +546,12 @@ async function awardPoints(action, points, ref, noPopup) {
       ptsSet('done', done);
       refreshMyPoints();
       if (points > 0 && !noPopup) queuePointsPopup(points, PTS_LABELS[action] || action);
-      if (action === 'lesson_open') checkStreakBonus();
+      if (action === 'lesson_open') {
+        checkStreakBonus();
+        bumpStat('lessons_opened', 1);
+        trackEvent('lesson_open', { date: ref });
+      }
+      bumpStat('xp_earned', points);
     } else {
       const pend = ptsGet('pending');
       pend[key] = { action: action, points: points, ref: ref, ts: Date.now() };
@@ -1501,7 +1559,7 @@ async function loadPreviewLesson() {
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'support'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support', 'challenge'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support', 'challenge', 'teacher', 'become-teacher'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -1568,6 +1626,8 @@ function show(view, arg) {
   else if (view === 'support') renderSupport(v);
   else if (view === 'challenge') renderChallenge(v);
   else if (view === 'admin') renderAdmin(v);
+  else if (view === 'teacher') renderTeacher(v);
+  else if (view === 'become-teacher') renderBecomeTeacher(v);
 }
 
 /* ---------------- chrome (headers / profile menu / nav) ---------------- */
@@ -1655,6 +1715,7 @@ function renderLanding(v) {
       '<div class="lp-glow lp-glow-a" aria-hidden="true"></div>' +
       '<div class="lp-glow lp-glow-b" aria-hidden="true"></div>' +
       '<img class="lp-mascot" src="media/landing-hero.webp" alt="Muse English flame mascot">' +
+      '<div id="lp-invite" class="lp-invite hidden"></div>' +
       '<div class="lp-eyebrow">Daily English lessons · A1–C2</div>' +
       '<h1>Your English,<br>every single day.</h1>' +
       '<p class="lp-lede">10 new words, a real podcast conversation, shadowing practice, grammar and a quiz — one 15-minute lesson matched to your level, every morning.</p>' +
@@ -1757,6 +1818,21 @@ function renderLanding(v) {
     if (hp && state.view === 'landing') hp.innerHTML = heroPreviewHTML(m);
     renderPreviewTab('words', m);
   });
+
+  // Personalized invite: ?ref=TEACHER_CODE shows who invited you.
+  try {
+    const refCode = getRefCode();
+    if (refCode && sb) {
+      sb.from('teachers').select('display_name').eq('ref_code', refCode).eq('status', 'approved').maybeSingle()
+        .then(function (r) {
+          const el = document.getElementById('lp-invite');
+          if (el && r && r.data && state.view === 'landing') {
+            el.innerHTML = '🔥 <b>' + esc(r.data.display_name) + '</b> invited you to Muse English';
+            el.classList.remove('hidden');
+          }
+        }, function () {});
+    }
+  } catch (e) {}
 }
 
 function renderPreviewTab(which, m) {
@@ -1936,6 +2012,164 @@ function renderSignup(v) {
       '<button class="btn btn-block" data-action="demo-learner">Continue in demo mode (learner)</button>'
     )
   );
+}
+
+/* ---------------- Become a teacher ---------------- */
+function renderBecomeTeacher(v) {
+  const t = state.teacher, req = state.teacherRequest;
+  let body;
+  if (t) {
+    body = '<div class="tch-status ok">✓ You are an approved teacher.</div>' +
+      '<a class="btn btn-block" href="#/teacher">Open teacher dashboard</a>';
+  } else if (req && req.status === 'pending') {
+    body = '<div class="tch-status pending">⏳ Your request is under review. We’ll let you know once it’s approved.</div>' +
+      '<p class="muted">Requested as <b>' + esc(req.display_name) + '</b> · ' + esc(String(req.requested_at || '').slice(0, 10)) + '</p>';
+  } else {
+    body = (req && req.status === 'rejected')
+      ? '<div class="tch-status no">This request was not approved. You can try again below.</div>' : '';
+    body += '<form id="form-teacher-req">' +
+      '<div class="field"><label for="tq-name">Display name</label>' +
+      '<input id="tq-name" type="text" maxlength="40" placeholder="e.g. Sara Ahmadi" required>' +
+      '<p class="muted" style="font-size:0.8rem">Shown to the students you invite. Your personal invite link is created after approval.</p></div>' +
+      '<div class="form-error" id="tq-error" role="alert"></div>' +
+      '<button class="btn btn-block" type="submit">Request teacher access</button></form>';
+  }
+  v.innerHTML = '<div class="tch-wrap"><p><a class="link" href="#/profile">← Back to profile</a></p>' +
+    '<h1>🍎 Become a teacher</h1>' +
+    '<p class="muted">Invite your students with a personal link and follow their progress — daily activity, streaks, XP, lessons and podcast time.</p>' +
+    '<div class="card">' + body + '</div></div>';
+  const form = document.getElementById('form-teacher-req');
+  if (form) form.addEventListener('submit', submitTeacherRequest);
+}
+
+async function submitTeacherRequest(e) {
+  e.preventDefault();
+  const name = ((document.getElementById('tq-name') || {}).value || '').trim();
+  const errEl = document.getElementById('tq-error');
+  if (name.length < 2) { if (errEl) errEl.textContent = 'Please enter your name.'; return; }
+  if (errEl) errEl.textContent = '';
+  // Temporary code until the admin approves and sets the real one.
+  const tmpCode = 'pending-' + state.user.id.slice(0, 8);
+  try {
+    const r = await sb.from('teachers').upsert({
+      user_id: state.user.id, ref_code: tmpCode, display_name: name, status: 'pending'
+    }, { onConflict: 'user_id' });
+    if (r.error) throw r.error;
+    await loadTeacherStatus();
+    trackEvent('teacher_requested', {});
+    renderBecomeTeacher(document.getElementById('view'));
+  } catch (err) {
+    if (errEl) errEl.textContent = 'Could not send the request. ' + (err.message || '');
+  }
+}
+
+/* ---------------- Teacher dashboard ---------------- */
+function fmtLastActive(d) {
+  if (!d) return 'never';
+  if (d === todayStr()) return 'today';
+  const dt = new Date(d + 'T12:00:00').getTime(), now = Date.now();
+  if (now - dt < 2 * 86400000) return 'yesterday';
+  return d;
+}
+function copyTeacherLink() {
+  const link = teacherInviteLink(state.teacher.ref_code);
+  function done(btn) { if (btn) { const o = btn.textContent; btn.textContent = '✓ Copied'; setTimeout(function () { btn.textContent = o; }, 1500); } }
+  const btn = document.querySelector('[data-action="copy-teacher-link"]');
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(link).then(function () { done(btn); }, function () { fallback(); });
+  } else fallback();
+  function fallback() {
+    try {
+      const ta = document.createElement('textarea');
+      ta.value = link; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); ta.remove(); done(btn);
+    } catch (e) {}
+  }
+}
+function renderTeacher(v) {
+  if (!state.teacher) { go('become-teacher'); return; }
+  v.innerHTML = '<div class="tch-wrap">' +
+    '<h1>🍎 Teacher dashboard</h1>' +
+    '<div class="card tch-invite">' +
+      '<div class="muted" style="margin:0 0 0.4rem">Your personal invite link</div>' +
+      '<div class="tch-linkrow"><code>' + esc(teacherInviteLink(state.teacher.ref_code)) + '</code>' +
+      '<button class="btn btn-sm" data-action="copy-teacher-link">Copy</button></div>' +
+      '<p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0">Share it with your students — everyone who signs up through it shows up below.</p>' +
+    '</div>' +
+    '<div class="section-title"><h2>My students <span id="tch-count" class="muted"></span></h2></div>' +
+    '<div id="tch-roster"><div class="empty">Loading…</div></div>' +
+    '<div id="tch-detail"></div>' +
+  '</div>';
+  loadTeacherRoster();
+}
+async function loadTeacherRoster() {
+  const host = document.getElementById('tch-roster');
+  if (!host) return;
+  try {
+    const r = await sb.rpc('get_my_students');
+    if (r.error) throw r.error;
+    state.teacherStudents = r.data || [];
+    renderTeacherRoster();
+  } catch (e) {
+    host.innerHTML = '<div class="empty">Could not load students: ' + esc(e.message || e) + '</div>';
+  }
+}
+function renderTeacherRoster() {
+  const host = document.getElementById('tch-roster');
+  if (!host) return;
+  const list = state.teacherStudents || [];
+  const cc = document.getElementById('tch-count');
+  if (cc) cc.textContent = '(' + list.length + ')';
+  if (!list.length) {
+    host.innerHTML = '<div class="empty">No students yet — share your invite link above to get started. 🌱</div>';
+    return;
+  }
+  host.innerHTML = '<div class="card tch-table-card"><div class="tch-table">' +
+    '<div class="tch-tr tch-th"><span>Student</span><span>🔥</span><span>XP 7d</span><span>Lessons</span><span>🎧m</span><span>Active</span></div>' +
+    list.map(function (s, i) {
+      const name = s.display_name || (s.email || '?').split('@')[0];
+      return '<div class="tch-tr" data-action="teacher-student" data-i="' + i + '" role="button" tabindex="0">' +
+        '<span class="tch-name">' + esc(name) + '<small>' + esc(s.level ? levelLabel(normalizeLevel(s.level)) : '—') + '</small></span>' +
+        '<span>' + (s.current_streak || 0) + '</span>' +
+        '<span>' + (s.xp_7d || 0) + '</span>' +
+        '<span>' + (s.lessons_7d || 0) + '</span>' +
+        '<span>' + (s.podcast_min_7d || 0) + '</span>' +
+        '<span class="muted">' + esc(fmtLastActive(s.last_active)) + '</span></div>';
+    }).join('') + '</div></div>' +
+    '<p class="muted" style="font-size:0.82rem">Tap a student to see their 14-day activity.</p>';
+}
+async function openTeacherStudent(i) {
+  const s = (state.teacherStudents || [])[i];
+  const host = document.getElementById('tch-detail');
+  if (!s || !host) return;
+  host.innerHTML = '<div class="empty">Loading…</div>';
+  host.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  try {
+    const r = await sb.rpc('get_student_daily', { p_student: s.user_id });
+    if (r.error) throw r.error;
+    const rows = r.data || [];
+    const name = s.display_name || (s.email || '?').split('@')[0];
+    const maxSec = Math.max.apply(null, [1].concat(rows.map(function (x) { return x.seconds_in_app || 0; })));
+    const sum = function (k) { return rows.reduce(function (a, x) { return a + (x[k] || 0); }, 0); };
+    host.innerHTML = '<div class="card"><h3 style="margin-top:0">' + esc(name) +
+      ' <span class="muted" style="font-weight:400">· last 14 days</span></h3>' +
+      (rows.length ? '<div class="tch-bars">' + rows.map(function (x) {
+        const h = Math.max(4, Math.round((x.seconds_in_app || 0) / maxSec * 90));
+        const mins = Math.round((x.seconds_in_app || 0) / 60);
+        return '<div class="tch-bar" title="' + esc(x.day) + ': ' + mins + ' min">' +
+          '<div class="tch-bar-fill" style="height:' + h + 'px"></div>' +
+          '<div class="tch-bar-d">' + esc(String(x.day).slice(5)) + '</div></div>';
+      }).join('') + '</div>' : '<div class="empty">No activity in the last 14 days.</div>') +
+      '<div class="tch-totals">' +
+        '<div><b>' + sum('xp_earned') + '</b><span>XP</span></div>' +
+        '<div><b>' + sum('lessons_opened') + '</b><span>lessons</span></div>' +
+        '<div><b>' + sum('quizzes_completed') + '</b><span>quizzes</span></div>' +
+        '<div><b>' + Math.round(sum('podcast_seconds') / 60) + '</b><span>podcast min</span></div>' +
+      '</div>' +
+      '<button class="btn btn-ghost btn-sm" data-action="teacher-student-close">Close</button></div>';
+  } catch (e) {
+    host.innerHTML = '<div class="empty">Could not load activity.</div>';
+  }
 }
 
 function togglePw(btn) {
@@ -2239,6 +2473,7 @@ async function enterApp() {
   await migrateLocalToCloud();
   await flushPointsQueue();
   await refreshMyPoints();
+  await loadTeacherStatus();
   // Existing users without a nickname pick one now (blocking) — the
   // Challenge leaderboard needs a display name.
   if (!state.user.demo && !state.user.displayName) {
@@ -2722,6 +2957,13 @@ function renderProfile(v) {
   (u.isAdmin ? '<div class="section-title"><h2>Admin</h2></div>' +
     '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/admin" style="margin-top:0">🛠 Open admin panel</a></div>' : '') +
 
+  '<div class="section-title"><h2>Teaching</h2></div>' +
+  (state.teacher
+    ? '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/teacher" style="margin-top:0">🍎 Teacher dashboard</a></div>'
+    : (state.teacherRequest && state.teacherRequest.status === 'pending'
+      ? '<div class="card plain"><p class="muted" style="margin:0">⏳ Teacher request under review — <a class="link" href="#/become-teacher">view status</a></p></div>'
+      : '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/become-teacher" style="margin-top:0">🍎 Become a teacher</a></div>')) +
+
   '<div class="section-title"><h2>Region</h2></div>' +
   '<div class="card plain">' +
     '<p class="muted" style="margin-top:0">Your country: <b>' + esc(u.country || 'Not detected yet') + '</b>' +
@@ -3125,6 +3367,8 @@ function finishQuiz() {
     date: q.date, level: q.level, theme: q.theme,
     kind: q.kind, score: q.correct, total: total
   });
+  bumpStat('quizzes_completed', 1);
+  trackEvent('quiz_completed', { kind: q.kind, score: q.correct, total: total, date: q.date, level: q.level });
   if (q.kind === 'word' && q.date) {
     const firstTime = !((getDayProgress(q.date) || {}).quiz);
     markStep(q.date, 'quiz', { score: q.correct, total: total });
@@ -3456,6 +3700,7 @@ function podMsLoad() {
   try { s = JSON.parse(localStorage.getItem('podms_' + ((state.user && state.user.email) || 'anon') + '_' + d) || 'null'); } catch (e) {}
   if (s) { podMs.listened = s.listened || 0; podMs.m2 = !!s.m2; podMs.m5 = !!s.m5; podMs.end = !!s.end; }
   else { podMs.listened = 0; podMs.m2 = false; podMs.m5 = false; podMs.end = false; }
+  podMs.lastBump = podMs.listened;
 }
 function podMsSave() {
   try {
@@ -3476,6 +3721,11 @@ function podMsTrack() {
     const rate = player.el.playbackRate || 1;
     if (delta > 0 && delta < 2.5 * rate) {
       podMs.listened += delta;
+      if (podMs.listened - (podMs.lastBump || 0) >= 60) {
+        const add = Math.floor(podMs.listened - (podMs.lastBump || 0));
+        podMs.lastBump = podMs.listened;
+        bumpStat('podcast_seconds', add);
+      }
       if (Date.now() - podMsLastSave > 20000) { podMsLastSave = Date.now(); podMsSave(); }
       if (!podMs.m2 && podMs.listened >= 120) firePodMs(2);
       else if (!podMs.m5 && podMs.listened >= 300) firePodMs(5);
@@ -3497,6 +3747,7 @@ function podMsOnEnded() {
 function firePodMs(which) {
   if (podMs.busy || document.getElementById('celebration') || document.getElementById('podms')) return;
   podMs['m' + which] = true; podMsSave();
+  trackEvent('podcast_milestone', { minutes: which });
   podMs.busy = true;
   try { player.el.pause(); } catch (e) {}
   playerUI(); refreshTrackCards();
@@ -3752,8 +4003,104 @@ function paintMistakes(v, arr) {
 
 /* ---------------- admin view ---------------- */
 function renderAdmin(v) {
-  v.innerHTML = '<h1>Admin</h1><div class="card plain"><p class="muted" style="margin:0">Set each user\'s level. New users appear as <b>pending</b> first.</p></div><div id="admin-list"><div class="empty">Loading…</div></div>';
-  loadAdminUsers();
+  v.innerHTML = '<h1>Admin</h1>' +
+    '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>🍎 Teachers</b> — requests, invite codes and manual add.</p>' +
+    '<div id="admin-teachers"><div class="empty">Loading…</div></div></div>' +
+    '<div class="card plain"><p class="muted" style="margin:0">Set each user\'s level. New users appear as <b>pending</b> first.</p></div>' +
+    '<div id="admin-list"><div class="empty">Loading…</div></div>';
+  loadAdminUsers().then(function () { loadAdminTeachers(); });
+}
+
+function slugify(s) {
+  return String(s || '').toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 32) || 'teacher';
+}
+
+async function loadAdminTeachers() {
+  const host = document.getElementById('admin-teachers');
+  if (!host) return;
+  try {
+    const t = await sb.from('teachers').select('id,user_id,ref_code,display_name,status,requested_at').order('requested_at', { ascending: true });
+    if (t.error) throw t.error;
+    const teachers = t.data || [];
+    const ids = teachers.map(function (x) { return x.user_id; });
+    let emailById = {};
+    if (ids.length) {
+      const p = await sb.from('profiles').select('id,email').in('id', ids);
+      (p.data || []).forEach(function (x) { emailById[x.id] = x.email; });
+    }
+    // student counts from the already-loaded admin users
+    const counts = {};
+    (state.adminUsers || []).forEach(function (u) {
+      if (u.referred_by) counts[u.referred_by] = (counts[u.referred_by] || 0) + 1;
+    });
+    const pending = teachers.filter(function (x) { return x.status === 'pending'; });
+    const active = teachers.filter(function (x) { return x.status === 'approved'; });
+    const rejected = teachers.filter(function (x) { return x.status === 'rejected'; });
+    host.innerHTML =
+      (pending.length ? '<p class="muted" style="margin:0 0 0.5rem"><b>⏳ Pending requests (' + pending.length + ')</b></p>' +
+        pending.map(function (x) {
+          const sug = slugify(x.display_name);
+          return '<div class="tch-admin-row"><div><b>' + esc(x.display_name) + '</b><br>' +
+            '<span class="muted" style="font-size:0.8rem">' + esc(emailById[x.user_id] || '') + ' · ' + esc(String(x.requested_at || '').slice(0, 10)) + '</span></div>' +
+            '<div class="tch-admin-actions"><input class="tch-code-input" id="tcode-' + x.id + '" value="' + esc(sug) + '" maxlength="32" aria-label="Invite code">' +
+            '<button class="btn btn-sm" data-action="approve-teacher" data-id="' + x.id + '">Approve</button>' +
+            '<button class="btn btn-ghost btn-sm" data-action="reject-teacher" data-id="' + x.id + '">Reject</button></div></div>';
+        }).join('') : '<p class="muted">No pending requests.</p>') +
+      (active.length ? '<p class="muted" style="margin:1rem 0 0.5rem"><b>✓ Active teachers (' + active.length + ')</b></p>' +
+        active.map(function (x) {
+          return '<div class="tch-admin-row"><div><b>' + esc(x.display_name) + '</b><br>' +
+            '<span class="muted" style="font-size:0.8rem"><code>' + esc(x.ref_code) + '</code> · ' + (counts[x.ref_code] || 0) + ' students</span></div>' +
+            '<div class="tch-admin-actions"><button class="btn btn-ghost btn-sm" data-action="reject-teacher" data-id="' + x.id + '">Remove</button></div></div>';
+        }).join('') : '') +
+      (rejected.length ? '<p class="muted" style="margin:1rem 0 0.5rem">Rejected (' + rejected.length + ')</p>' : '') +
+      '<p class="muted" style="margin:1.2rem 0 0.5rem"><b>Add teacher manually</b> (they must already have an account)</p>' +
+      '<form id="form-teacher-add" class="tch-add-form">' +
+        '<input id="ta-email" type="email" placeholder="teacher@email.com" required aria-label="Email">' +
+        '<input id="ta-name" type="text" placeholder="Display name" maxlength="40" required aria-label="Display name">' +
+        '<input id="ta-code" type="text" placeholder="invite-code" maxlength="32" required aria-label="Invite code">' +
+        '<button class="btn btn-sm" type="submit">Add</button></form>' +
+      '<div class="form-error" id="ta-error" role="alert"></div>';
+  } catch (e) {
+    host.innerHTML = '<div class="empty">Could not load teachers: ' + esc(e.message || e) + '</div>';
+  }
+}
+
+async function adminApproveTeacher(id) {
+  const input = document.getElementById('tcode-' + id);
+  const code = slugify(input ? input.value : '');
+  try {
+    const r = await sb.rpc('admin_set_teacher_status', { p_teacher_id: id, p_status: 'approved', p_ref_code: code });
+    if (r.error) throw r.error;
+    loadAdminTeachers();
+  } catch (e) {
+    alert('Approve failed: ' + (e.message || e));
+  }
+}
+async function adminRejectTeacher(id) {
+  if (!window.confirm('Remove / reject this teacher? Their students keep their accounts.')) return;
+  try {
+    const r = await sb.rpc('admin_set_teacher_status', { p_teacher_id: id, p_status: 'rejected', p_ref_code: '' });
+    if (r.error) throw r.error;
+    loadAdminTeachers();
+  } catch (e) {
+    alert('Failed: ' + (e.message || e));
+  }
+}
+async function adminAddTeacher() {
+  const errEl = document.getElementById('ta-error');
+  const email = (document.getElementById('ta-email').value || '').trim();
+  const name = (document.getElementById('ta-name').value || '').trim();
+  const code = slugify((document.getElementById('ta-code').value || '').trim());
+  if (errEl) errEl.textContent = '';
+  if (!email || name.length < 2 || !code) { if (errEl) errEl.textContent = 'Fill all three fields.'; return; }
+  try {
+    const r = await sb.rpc('admin_create_teacher', { p_email: email, p_display_name: name, p_ref_code: code });
+    if (r.error) throw r.error;
+    document.getElementById('form-teacher-add').reset();
+    loadAdminTeachers();
+  } catch (e) {
+    if (errEl) errEl.textContent = 'Failed: ' + (e.message || e);
+  }
 }
 
 async function loadAdminUsers() {
@@ -3887,6 +4234,11 @@ function bindEvents() {
     else if (a === 'choose-nickname') {
       ensureNickname().then(function () { if (state.view === 'challenge') renderChallenge($('#view')); });
     }
+    else if (a === 'copy-teacher-link') copyTeacherLink(t);
+    else if (a === 'teacher-student') openTeacherStudent(parseInt(t.getAttribute('data-i'), 10));
+    else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
+    else if (a === 'approve-teacher') adminApproveTeacher(t.getAttribute('data-id'));
+    else if (a === 'reject-teacher') adminRejectTeacher(t.getAttribute('data-id'));
   });
 
   $('#view').addEventListener('change', function (e) {
@@ -3897,6 +4249,7 @@ function bindEvents() {
   $('#view').addEventListener('submit', function (e) {
     if (e.target.id === 'form-signin') { e.preventDefault(); doLogin(); }
     else if (e.target.id === 'form-signup') { e.preventDefault(); doSignup(); }
+    else if (e.target.id === 'form-teacher-add') { e.preventDefault(); adminAddTeacher(); }
   });
 
   // Tabbar: quiz guard before navigating away
@@ -3947,6 +4300,7 @@ async function init() {
   initAudio();
   bindEvents();
   initPwaPrompt();
+  initHeartbeat();
   initSupabase();
   initOneSignal();
   syncPushState();

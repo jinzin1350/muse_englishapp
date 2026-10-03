@@ -1787,3 +1787,56 @@ body{background:#FFF9F3;}
   box-shadow: 0 0 0 3px rgba(255,149,0,0.2);
 }
 .auth-card .level-opt input:focus-visible + .level-card { outline: 2px solid #ff9500; outline-offset: 2px; }
+
+/* ================= Teachers (phase 1) ================= */
+.lp-invite {
+  position: relative; z-index: 1;
+  display: inline-block; margin: 0.4rem auto 0;
+  background: rgba(255,149,0,0.14); border: 1px solid rgba(255,149,0,0.4);
+  color: #ffd9a0; font-size: 0.92rem; padding: 0.55rem 1.1rem; border-radius: 999px;
+}
+.lp-invite b { color: #ffb74d; }
+.tch-wrap { max-width: 720px; margin: 0 auto; }
+.tch-wrap h1 { margin-bottom: 0.4rem; }
+.tch-status { border-radius: 14px; padding: 0.9rem 1rem; font-weight: 600; margin-bottom: 0.8rem; }
+.tch-status.ok { background: rgba(57,116,90,0.12); border: 1px solid rgba(57,116,90,0.35); color: var(--herb-dark); }
+.tch-status.pending { background: rgba(255,149,0,0.1); border: 1px solid rgba(255,149,0,0.35); color: #9a6200; }
+.tch-status.no { background: rgba(200,75,49,0.08); border: 1px solid rgba(200,75,49,0.3); color: #a03d22; }
+.tch-invite code {
+  display: block; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  background: var(--mist); border-radius: 10px; padding: 0.6rem 0.8rem; font-size: 0.82rem;
+}
+.tch-linkrow { display: flex; gap: 0.6rem; align-items: center; }
+.tch-table-card { padding: 0.4rem; overflow-x: auto; }
+.tch-table { min-width: 560px; }
+.tch-tr {
+  display: grid; grid-template-columns: 1.6fr 0.6fr 0.7fr 0.8fr 0.7fr 0.9fr;
+  gap: 0.4rem; align-items: center; padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid var(--line); font-size: 0.9rem; cursor: pointer;
+}
+.tch-tr:last-child { border-bottom: none; }
+.tch-tr:not(.tch-th):hover { background: var(--mist); }
+.tch-th { font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; cursor: default; }
+.tch-name { font-weight: 700; }
+.tch-name small { display: block; font-weight: 400; color: var(--muted); font-size: 0.75rem; }
+.tch-bars { display: flex; align-items: flex-end; gap: 6px; height: 130px; margin: 1rem 0 0.4rem; }
+.tch-bar { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; min-width: 0; }
+.tch-bar-fill { width: 100%; max-width: 26px; border-radius: 6px 6px 2px 2px; background: linear-gradient(180deg, #ffa726, #ff8a00); }
+.tch-bar-d { font-size: 0.62rem; color: var(--muted); margin-top: 4px; white-space: nowrap; }
+.tch-totals { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin: 1rem 0; text-align: center; }
+.tch-totals b { display: block; font-size: 1.3rem; color: var(--tomato-dark); }
+.tch-totals span { font-size: 0.75rem; color: var(--muted); }
+.tch-admin-row {
+  display: flex; justify-content: space-between; align-items: center; gap: 0.8rem;
+  padding: 0.7rem 0; border-bottom: 1px solid var(--line); flex-wrap: wrap;
+}
+.tch-admin-actions { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.tch-code-input {
+  width: 130px; font-family: monospace; font-size: 0.82rem;
+  border: 1px solid var(--line); border-radius: 8px; padding: 0.45rem 0.6rem;
+}
+.tch-add-form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.tch-add-form input {
+  flex: 1; min-width: 140px; border: 1px solid var(--line); border-radius: 8px;
+  padding: 0.5rem 0.7rem; font-size: 0.88rem; font-family: inherit;
+}
