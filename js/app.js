@@ -1561,7 +1561,7 @@ async function loadPreviewLesson() {
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'support'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support', 'challenge', 'teacher', 'become-teacher'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'support', 'challenge', 'teacher', 'become-teacher', 'inbox'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -1627,6 +1627,7 @@ function show(view, arg) {
   else if (view === 'profile') renderProfile(v);
   else if (view === 'support') renderSupport(v);
   else if (view === 'challenge') renderChallenge(v);
+  else if (view === 'inbox') renderInbox(v);
   else if (view === 'admin') renderAdmin(v);
   else if (view === 'teacher') renderTeacher(v);
   else if (view === 'become-teacher') renderBecomeTeacher(v);
@@ -2240,11 +2241,109 @@ async function openTeacherStudent(i) {
         '<div><b>' + sum('quizzes_completed') + '</b><span>quizzes</span></div>' +
         '<div><b>' + Math.round(sum('podcast_seconds') / 60) + '</b><span>podcast min</span></div>' +
       '</div>' +
-      '<div style="display:flex;gap:0.5rem;margin-top:0.9rem">' +
+      '<div style="display:flex;gap:0.5rem;margin-top:0.9rem;flex-wrap:wrap">' +
       '<button class="btn btn-sm" data-action="teacher-nudge" data-i="' + i + '">🔔 Nudge</button>' +
+      '<button class="btn btn-sm" data-action="teacher-message" data-i="' + i + '">💬 Message</button>' +
       '<button class="btn btn-ghost btn-sm" data-action="teacher-student-close">Close</button></div></div>';
   } catch (e) {
     host.innerHTML = '<div class="empty">Could not load activity.</div>';
+  }
+}
+
+/* ---------------- Teacher inbox (phase 4): one-way teacher -> student messages ---------------- */
+async function refreshInboxBadge() {
+  const btn = document.getElementById('btn-inbox');
+  const badge = document.getElementById('inbox-badge');
+  if (!btn) return;
+  if (!cloudReady()) { btn.classList.add('hidden'); return; }
+  try {
+    const r = await sb.rpc('my_messages');
+    if (r.error) throw r.error;
+    const msgs = r.data || [];
+    const unread = msgs.filter(function (m) { return !m.read_at; }).length;
+    state.inboxMessages = msgs;
+    state.unreadMessages = unread;
+    btn.classList.toggle('hidden', !msgs.length);
+    badge.classList.toggle('hidden', !unread);
+    if (unread) badge.textContent = unread > 9 ? '9+' : String(unread);
+  } catch (e) { btn.classList.add('hidden'); }
+}
+function maybeShowInboxPrompt() {
+  if (state._inboxPrompted || document.getElementById('app-modal')) return;
+  const n = state.unreadMessages || 0;
+  if (!n || state.view !== 'home') return;
+  state._inboxPrompted = true;
+  showModal(
+    '<div class="modal-ico">💬</div>' +
+    '<h2>You have ' + n + ' new message' + (n > 1 ? 's' : '') + '</h2>' +
+    '<p class="muted">From your teacher — tap below to read.</p>' +
+    '<button class="btn btn-block" data-action="inbox-open">Read messages</button>' +
+    '<button class="btn btn-ghost btn-block" data-action="modal-close">Later</button>'
+  );
+}
+function fmtMsgTime(ts) {
+  try {
+    const d = new Date(ts);
+    const hm = pad2(d.getHours()) + ':' + pad2(d.getMinutes());
+    return d.toDateString() === new Date().toDateString() ? 'today ' + hm : fmtDate(d) + ' ' + hm;
+  } catch (e) { return ''; }
+}
+function inboxListHTML(msgs) {
+  if (!msgs.length) return '<div class="empty">No messages yet. When your teacher writes to you, it shows up here. 💌</div>';
+  return msgs.map(function (m) {
+    return '<div class="card msg-card' + (m.read_at ? '' : ' unread') + '">' +
+      '<div class="msg-head"><b>' + esc(m.teacher_name) + '</b><span class="muted">' + esc(fmtMsgTime(m.created_at)) + '</span></div>' +
+      '<p>' + esc(m.body) + '</p></div>';
+  }).join('');
+}
+async function renderInbox(v) {
+  v.innerHTML = '<div class="tch-wrap"><h1>💬 Messages</h1><div id="inbox-list"><div class="empty">Loading…</div></div></div>';
+  try {
+    const r = await sb.rpc('my_messages');
+    const msgs = (!r.error && r.data) ? r.data : [];
+    state.inboxMessages = msgs;
+    const host = document.getElementById('inbox-list');
+    if (host) host.innerHTML = inboxListHTML(msgs);
+    await sb.rpc('mark_messages_read').catch(function () {});
+    refreshInboxBadge();
+  } catch (e) {
+    const host = document.getElementById('inbox-list');
+    if (host) host.innerHTML = '<div class="empty">Could not load messages.</div>';
+  }
+}
+/* Teacher -> student composer (from the student detail card). */
+function teacherMessageComposer(i) {
+  const s = (state.teacherStudents || [])[i];
+  if (!s) return;
+  const name = s.display_name || (s.email || '?').split('@')[0];
+  showModal(
+    '<div class="modal-ico">💬</div>' +
+    '<h2>Message to ' + esc(name) + '</h2>' +
+    '<div class="field" style="text-align:left"><label for="msg-body">Message</label>' +
+    '<textarea id="msg-body" rows="4" maxlength="500" placeholder="Write something encouraging…"></textarea></div>' +
+    '<div class="form-error" id="msg-error" role="alert"></div>' +
+    '<button class="btn btn-block" data-action="teacher-message-send" data-i="' + i + '">Send</button>' +
+    '<button class="btn btn-ghost btn-block" data-action="modal-close">Cancel</button>'
+  );
+  setTimeout(function () { const t = document.getElementById('msg-body'); if (t) t.focus(); }, 120);
+}
+async function teacherMessageSend(i, btn) {
+  const s = (state.teacherStudents || [])[i];
+  const ta = document.getElementById('msg-body');
+  const err = document.getElementById('msg-error');
+  const body = ta ? ta.value.trim() : '';
+  if (!s) return;
+  if (!body) { if (err) err.textContent = 'Write something first.'; return; }
+  if (err) err.textContent = '';
+  btn.disabled = true; btn.textContent = 'Sending…';
+  try {
+    const r = await sb.rpc('send_teacher_message', { p_student: s.user_id, p_body: body });
+    if (r.error) throw r.error;
+    if (r.data === true) closeModal();
+    else { if (err) err.textContent = 'Could not send.'; btn.disabled = false; btn.textContent = 'Send'; }
+  } catch (e) {
+    if (err) err.textContent = 'Could not send — check your connection.';
+    btn.disabled = false; btn.textContent = 'Send';
   }
 }
 
@@ -2291,6 +2390,7 @@ async function loadAdminAnalytics() {
       board: res[3].data || []
     };
     renderAdminAnalytics();
+    loadAdminFunnel();
   } catch (e) {
     host.innerHTML = '<div class="empty">Analytics unavailable: ' + esc(e.message || e) + '</div>';
   }
@@ -2340,6 +2440,7 @@ function renderAdminAnalytics() {
         }).join('') + '</select>' +
     '</div>' +
     '<div id="adm-users">' + admUsersHTML() + '</div>' +
+    '<div id="adm-funnel"></div>' +
     '<div id="adm-detail"></div>';
   // wire filter inputs (input/change events, not data-action)
   const q = document.getElementById('adm-q');
@@ -2420,6 +2521,46 @@ function admUsersHTML() {
 function renderAdmUsers() {
   const host = document.getElementById('adm-users');
   if (host) host.innerHTML = admUsersHTML();
+}
+/* ---------------- Funnel + cohort retention (phase 4, admin) ---------------- */
+async function loadAdminFunnel() {
+  const host = document.getElementById('adm-funnel');
+  if (!host) return;
+  try {
+    const res = await Promise.all([
+      sb.rpc('admin_funnel').then(function (r) { return r.data || []; }, function () { return []; }),
+      sb.rpc('admin_cohorts').then(function (r) { return r.data || []; }, function () { return []; })
+    ]);
+    const steps = res[0], cohorts = res[1];
+    if (!steps.length && !cohorts.length) { host.innerHTML = ''; return; }
+    const base = Number((steps[0] || {}).users) || 1;
+    let html = '';
+    if (steps.length) {
+      html += '<div class="section-title" style="margin-top:1.2rem"><h2>📉 Signup funnel <span class="muted" style="font-weight:400;font-size:0.8rem">(last 30 days)</span></h2></div>' +
+        '<div class="card"><div class="adm-funnel">' + steps.map(function (s) {
+          const n = Number(s.users) || 0;
+          const pct = Math.round(n / base * 100);
+          return '<div class="adm-funnel-row"><span>' + esc(s.step) + '</span>' +
+            '<div class="adm-funnel-bar"><div style="width:' + pct + '%"></div></div>' +
+            '<b>' + n + '</b><span class="muted">' + pct + '%</span></div>';
+        }).join('') + '</div></div>';
+    }
+    if (cohorts.length) {
+      html += '<div class="section-title" style="margin-top:1.2rem"><h2>🔁 Cohort retention <span class="muted" style="font-weight:400;font-size:0.8rem">(% active in weeks 1–4 after signup)</span></h2></div>' +
+        '<div class="card tch-table-card"><div class="tch-table adm-cohort">' +
+        '<div class="tch-tr tch-th"><span>Cohort</span><span>Users</span><span>W1</span><span>W2</span><span>W3</span><span>W4</span></div>' +
+        cohorts.map(function (c) {
+          const cell = function (v) {
+            v = Number(v) || 0;
+            const cls = v >= 40 ? 'hot' : (v >= 20 ? 'warm' : 'cold');
+            return '<span class="adm-coh ' + cls + '">' + v + '%</span>';
+          };
+          return '<div class="tch-tr"><span class="muted">' + esc(c.cohort) + '</span><span>' + c.users + '</span>' +
+            cell(c.w1) + cell(c.w2) + cell(c.w3) + cell(c.w4) + '</div>';
+        }).join('') + '</div></div>';
+    }
+    host.innerHTML = html;
+  } catch (e) { host.innerHTML = ''; }
 }
 async function openAdminUser(id) {
   const host = document.getElementById('adm-detail');
@@ -2845,6 +2986,8 @@ async function afterLogin() {
   state.lesson = state.lessons[0] || null;
   go('home');
   maybeShowWelcome();
+  // Teacher inbox: badge in the header + a prompt if unread messages arrived.
+  refreshInboxBadge().then(function () { maybeShowInboxPrompt(); }, function () {});
   // Push notification deep link -> newest lesson
   if (pendingDeepLink === 'latest') {
     pendingDeepLink = null;
@@ -4597,6 +4740,8 @@ function bindEvents() {
     else if (a === 'teacher-student') openTeacherStudent(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
     else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (a === 'teacher-message') teacherMessageComposer(parseInt(t.getAttribute('data-i'), 10));
+    else if (a === 'inbox-open') { closeModal(); go('inbox'); }
     else if (a === 'google-signin') signInWithGoogle(t.getAttribute('data-prefix'), t);
     else if (a === 'approve-teacher') adminApproveTeacher(t.getAttribute('data-id'));
     else if (a === 'reject-teacher') adminRejectTeacher(t.getAttribute('data-id'));
@@ -4636,7 +4781,9 @@ function bindEvents() {
   document.addEventListener('click', function (e) {
     const t = e.target.closest('#app-modal [data-action]');
     if (!t) return;
-    if (t.getAttribute('data-action') === 'modal-close') closeModal();
+    const ma = t.getAttribute('data-action');
+    if (ma === 'modal-close') closeModal();
+    else if (ma === 'teacher-message-send') teacherMessageSend(parseInt(t.getAttribute('data-i'), 10), t);
   });
   $('#mp-toggle').addEventListener('click', function () {
     if (!player.src) return;

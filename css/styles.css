@@ -1921,3 +1921,35 @@ body{background:#FFF9F3;}
   margin: 1rem 0; color: var(--muted); font-size: 0.8rem;
 }
 .auth-or::before, .auth-or::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+
+/* ================= Teacher inbox (phase 4) ================= */
+.inbox-btn {
+  position: relative; display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border-radius: 50%; font-size: 1.25rem; text-decoration: none;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+}
+.inbox-badge {
+  position: absolute; top: -3px; right: -3px; min-width: 20px; height: 20px;
+  border-radius: 10px; background: #e04a1a; color: #fff;
+  font-size: 0.68rem; font-weight: 800; display: flex; align-items: center; justify-content: center;
+  padding: 0 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.msg-card.unread { border-left: 3px solid var(--tomato); }
+.msg-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.6rem; margin-bottom: 0.35rem; }
+.msg-head .muted { font-size: 0.78rem; white-space: nowrap; }
+.msg-card p { margin: 0; white-space: pre-wrap; line-height: 1.55; }
+#msg-body {
+  width: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.7rem; font-family: inherit; font-size: 0.95rem; resize: vertical; background: #fff;
+}
+
+/* ================= Funnel + cohort (phase 4, admin) ================= */
+.adm-funnel { display: flex; flex-direction: column; gap: 0.45rem; }
+.adm-funnel-row { display: grid; grid-template-columns: 1fr 2fr auto auto; gap: 0.6rem; align-items: center; font-size: 0.88rem; }
+.adm-funnel-bar { height: 10px; border-radius: 5px; background: var(--mist); overflow: hidden; }
+.adm-funnel-bar > div { height: 100%; border-radius: 5px; background: linear-gradient(90deg, var(--tomato), var(--tomato-dark)); }
+.adm-cohort .tch-tr { grid-template-columns: 1.2fr 0.7fr 0.6fr 0.6fr 0.6fr 0.6fr; }
+.adm-coh { font-weight: 700; border-radius: 8px; padding: 0.15rem 0.3rem; text-align: center; }
+.adm-coh.hot { background: rgba(57,116,90,0.15); color: var(--herb-dark); }
+.adm-coh.warm { background: rgba(255,149,0,0.15); color: #b26a00; }
+.adm-coh.cold { background: rgba(200,60,40,0.1); color: #a03a2a; }
