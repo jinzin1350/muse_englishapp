@@ -2670,7 +2670,7 @@ async function createAssignment(btn) {
     closeModal();
     loadTeacherAssignments();
   } catch (e) {
-    err('Could not send — check your connection.');
+    err('Could not send: ' + (e && e.message ? e.message : 'check your connection.'));
     btn.disabled = false; btn.textContent = orig;
   }
 }
