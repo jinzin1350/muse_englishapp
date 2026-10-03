@@ -2823,28 +2823,80 @@ async function renderHomework(v) {
     if (host) host.innerHTML = '<div class="empty">Could not load assignments.</div>';
   }
 }
+/* ---- Assignment progress persistence ----
+   A student who runs out of hearts, goes to review, and comes back must
+   resume the exam where they left off — never from question 1. */
+function assignProgKey(aid) {
+  const email = state.user ? state.user.email : 'anon';
+  return 'ela_assign_prog_' + email + '_' + aid;
+}
+function saveAssignProgress() {
+  const q = state.quiz;
+  if (!q || q.kind !== 'assignment' || !q.assignmentId) return;
+  try {
+    localStorage.setItem(assignProgKey(q.assignmentId), JSON.stringify({
+      idx: q.idx, correct: q.correct, log: q.log || [], savedAt: Date.now()
+    }));
+  } catch (e) {}
+}
+function loadAssignProgress(aid) {
+  try {
+    const v = JSON.parse(localStorage.getItem(assignProgKey(aid)) || 'null');
+    return (v && typeof v.idx === 'number' && v.idx > 0) ? v : null;
+  } catch (e) { return null; }
+}
+function clearAssignProgress(aid) {
+  try { localStorage.removeItem(assignProgKey(aid)); } catch (e) {}
+}
 function startAssignment(i) {
   const a = (state.homeworkList || [])[i];
   if (!a || !a.questions || !a.questions.length) return;
+  state.pausedQuiz = null;
+  const prog = loadAssignProgress(a.id);
+  if (prog && prog.idx < a.questions.length) { assignmentResumePrompt(a, prog); return; }
+  if (prog) clearAssignProgress(a.id);
+  beginAssignment(a, null);
+}
+function beginAssignment(a, prog) {
   /* Duolingo-style player: assignment questions map 1:1 onto 'select'
      challenges (same shape the word quiz uses). Shared daily hearts. */
   state.quiz = {
-    kind: 'assignment', assignmentId: a.id, log: [],
+    kind: 'assignment', assignmentId: a.id, log: (prog && prog.log) || [],
     questions: a.questions.map(function (q) {
       return {
         qtype: 'select', question: q.q, options: q.options.slice(), answer: q.answer,
         kind: 'assignment', explanation: q.explanation || ''
       };
     }),
-    idx: 0, correct: 0, answered: false, picked: -1, wasCorrect: false,
+    idx: (prog && prog.idx) || 0, correct: (prog && prog.correct) || 0,
+    answered: false, picked: -1, wasCorrect: false,
     hearts: getHearts(),
     date: todayStr(), level: a.level, theme: a.title
   };
+  saveAssignProgress();
   renderQuizView();
+}
+function assignmentResumePrompt(a, prog) {
+  if (document.getElementById('assign-resume-modal')) return;
+  const d = document.createElement('div');
+  d.className = 'duo-modal-wrap';
+  d.id = 'assign-resume-modal';
+  d.innerHTML = '<div class="duo-modal"><h3>Continue where you left off?</h3>' +
+    '<p>You reached question ' + (prog.idx + 1) + ' of ' + a.questions.length + '.</p>' +
+    '<button class="duo-continue btn-block" id="assign-resume-yes">▶ Continue</button>' +
+    '<button class="btn btn-ghost btn-block" id="assign-resume-no">↺ Start over</button></div>';
+  $('#view').appendChild(d);
+  document.getElementById('assign-resume-yes').onclick = function () {
+    d.remove(); beginAssignment(a, prog);
+  };
+  document.getElementById('assign-resume-no').onclick = function () {
+    d.remove(); clearAssignProgress(a.id); beginAssignment(a, null);
+  };
 }
 async function saveAssignmentResult() {
   const q = state.quiz;
   if (!q || q.kind !== 'assignment' || !q.assignmentId || !cloudReady()) return;
+  clearAssignProgress(q.assignmentId);
   try {
     await sb.from('assignment_results').upsert({
       assignment_id: q.assignmentId, student_id: state.user.id,
@@ -4431,6 +4483,8 @@ function finishQuiz() {
   state.quiz = null;
   const praise = pct >= 85 ? 'Excellent work! ✨' : pct >= 60 ? 'Good — keep practicing! 💪' : 'Keep going — you\'ve got this! 📚';
   const xpGain = q.kind === 'word' ? 10 + q.correct : 10;
+  /* resuming an assignment paused for a hearts review */
+  const resumeA = (q.kind === 'mistakes' && state.pausedQuiz && state.pausedQuiz.kind === 'assignment') ? state.pausedQuiz : null;
   $('#view').innerHTML =
   '<div class="duo-results"><div class="duo-rcard">' +
     '<div class="duo-hero"><img src="/media/quiz/trophy.png" alt="" loading="lazy"></div>' +
@@ -4443,6 +4497,7 @@ function finishQuiz() {
       '<div class="duo-pill gold"><span class="pi">★</span><span class="pn">+' + xpGain + '</span><span class="pl">XP</span></div>' +
     '</div>' +
     '<div class="duo-rbtns">' +
+      (resumeA ? '<button class="btn duo-btn-review" data-action="resume-paused">📝 Continue homework · Q' + (resumeA.idx + 1) + '/' + resumeA.questions.length + '</button>' : '') +
       '<a class="btn duo-btn-home" href="#/home">🏠 Home</a>' +
       '<button class="btn duo-btn-review" data-action="practice-again">🔁 Review →</button>' +
     '</div></div></div>';
@@ -4646,8 +4701,9 @@ async function duoAnswer(idx) {
     duoSavePending = duoSavePending.catch(function () {}).then(function () {
       return saveDuoMistake(q, cur, idx);
     });
-    if (duoLoseHeart(q) <= 0) { renderHeartsOut(); return; }
+    if (duoLoseHeart(q) <= 0) { saveAssignProgress(); renderHeartsOut(); return; }
   }
+  saveAssignProgress();
   renderDuoQuizView();
 }
 
@@ -4716,6 +4772,7 @@ function duoNext() {
   if (!q) return;
   if (q.idx + 1 < q.questions.length) {
     q.idx++; q.answered = false; q.picked = -1; q.wasCorrect = false;
+    saveAssignProgress();
     renderDuoQuizView();
   } else {
     finishQuiz();
@@ -4742,11 +4799,12 @@ function renderHeartsOut() {
 
 function duoExit() {
   if (document.getElementById('duo-exit-modal')) return;
+  const isA = state.quiz && state.quiz.kind === 'assignment';
   const d = document.createElement('div');
   d.className = 'duo-modal-wrap';
   d.id = 'duo-exit-modal';
   d.innerHTML = '<div class="duo-modal"><h3>Quit this quiz?</h3>' +
-    '<p>Your progress will be lost.</p>' +
+    '<p>' + (isA ? 'Your progress is saved — you can continue later.' : 'Your progress will be lost.') + '</p>' +
     '<button class="duo-continue bad btn-block" data-action="duo-quit">Quit</button>' +
     '<button class="btn btn-ghost btn-block" data-action="duo-keep">Keep playing</button></div>';
   $('#view').appendChild(d);
@@ -4755,6 +4813,7 @@ function duoExit() {
 function duoQuit() {
   const q = state.quiz;
   const date = q && q.date;
+  saveAssignProgress();
   state.quiz = null;
   document.body.classList.remove('duo-playing');
   const m = document.getElementById('duo-exit-modal');
@@ -4775,6 +4834,7 @@ async function buyHearts(btn) {
   const say = function (msg) {
     if (note) { note.textContent = msg; note.style.display = 'block'; }
   };
+  const wasAssignment = state.quiz && state.quiz.kind === 'assignment';
   if (btn) btn.disabled = true;
   try {
     await refreshMyPoints();
@@ -4793,7 +4853,20 @@ async function buyHearts(btn) {
     await refreshMyPoints();
     setHearts(5);
     say('❤️ Hearts refilled! Starting a new run…');
-    setTimeout(function () { startQuiz('word'); }, 900);
+    setTimeout(function () {
+      if (wasAssignment && state.quiz && state.quiz.kind === 'assignment') {
+        /* resume the exam where it stopped, retrying the heart-killing question */
+        const pq = state.quiz;
+        if (pq.log && pq.log.length > pq.idx) pq.log.pop();
+        pq.answered = false; pq.picked = -1; pq.wasCorrect = false;
+        pq.hearts = getHearts();
+        document.body.classList.add('duo-playing');
+        saveAssignProgress();
+        renderDuoQuizView();
+      } else {
+        startQuiz('word');
+      }
+    }, 900);
   } catch (e) {
     say('Something went wrong — please try again.');
     if (btn) btn.disabled = false;
@@ -5705,8 +5778,14 @@ function bindEvents() {
     else if (a === 'duo-quit') duoQuit();
     else if (a === 'duo-keep') duoKeep();
     else if (a === 'duo-earn-heart') {
-      /* wait for the just-saved mistake (max ~5s), then open the review quiz */
+      /* wait for the just-saved mistake (max ~5s), then open the review quiz.
+         An in-progress assignment is stashed so the student can resume it
+         exactly where they left off after the review. */
       t.disabled = true;
+      if (state.quiz && state.quiz.kind === 'assignment') {
+        state.pausedQuiz = state.quiz;
+        saveAssignProgress();
+      }
       var waitSave = duoSavePending.catch(function () {});
       var timeout = new Promise(function (res) { setTimeout(res, 5000); });
       Promise.race([waitSave, timeout]).then(function () { return getMistakes(); }).then(function (arr) {
@@ -5725,6 +5804,20 @@ function bindEvents() {
       });
     }
     else if (a === 'duo-buy-hearts') { buyHearts(t); }
+    else if (a === 'resume-paused') {
+      const pq = state.pausedQuiz;
+      state.pausedQuiz = null;
+      if (pq && pq.kind === 'assignment') {
+        /* the heart-killing question was answered wrong — let them retry it fresh */
+        if (pq.log && pq.log.length > pq.idx) pq.log.pop();
+        pq.answered = false; pq.picked = -1; pq.wasCorrect = false;
+        pq.hearts = getHearts();
+        state.quiz = pq;
+        document.body.classList.add('duo-playing');
+        saveAssignProgress();
+        renderDuoQuizView();
+      } else { go('home'); }
+    }
     else if (a === 'practice-again') {
       getMistakes().then(function (arr) {
         if (arr.length) startQuiz('mistakes');
