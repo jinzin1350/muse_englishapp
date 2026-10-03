@@ -4028,12 +4028,8 @@ function duoTopbar(q) {
     '<span class="duo-hearts">❤️ ' + q.hearts + '</span></div>';
 }
 
-function duoHero() {
-  return '<div class="duo-hero"><img src="/media/quiz/plane.png" alt="" loading="lazy"></div>';
-}
-
 function duoAssistHTML(q, cur) {
-  let html = duoHero() + '<div class="duo-q">' + esc(cur.question) + '</div>';
+  let html = '<div class="duo-q">' + esc(cur.question) + '</div>';
   if (cur.hint) html += '<div class="duo-hint-wrap"><span class="duo-hint">💡 ' + esc(cur.hint) + '</span></div>';
   html += '<div class="duo-slots">' + (cur.placed.length
     ? cur.placed.map(function (bi) {
@@ -4091,7 +4087,6 @@ function renderDuoQuizView() {
   if (cur.qtype === 'assist') {
     html += duoAssistHTML(q, cur);
   } else {
-    html += duoHero();
     if (cur.qtype === 'listen') {
       html += '<div class="duo-listen"><button class="duo-speaker" data-action="play-track" data-src="' +
         esc(cur.audio) + '" data-title="' + esc(cur.word) + '" aria-label="Hear it again">🔊</button>' +
