@@ -5084,8 +5084,8 @@ function grammarTabHTML(m) {
     return '<details class="practice"><summary>' + esc(p.q) + '</summary><p>' + esc(p.a) + '</p></details>';
   }).join('');
   const quizBtn = (g.quiz && g.quiz.length)
-    ? '<div class="quiz-cta"><p class="quiz-cta-text">Ready to test yourself?</p>' +
-      '<button class="btn btn-block" data-action="quiz-start" data-kind="grammar">Start grammar quiz · ' + g.quiz.length + ' questions</button></div>'
+    ? '<button class="grammar-quiz-banner" data-action="quiz-start" data-kind="grammar" aria-label="Start grammar quiz">' +
+      '<img src="media/grammar/quiz-banner.jpg" alt="Quick Practice — Ready to test yourself? Start grammar quiz" loading="lazy"></button>'
     : '';
   const enAudio = (normalizeLevel(m.level) === 'a1' || normalizeLevel(m.level) === 'a2') && g.audio
     ? audioCardHTML({ id: 'grammar-en-' + m.date, src: g.audio,
@@ -5126,7 +5126,7 @@ async function startQuiz(kind, dateStr) {
   state.quiz = {
     kind: kind, questions: questions, idx: 0, correct: 0,
     answered: false, picked: -1, wasCorrect: false,
-    hearts: kind === 'word' ? getHearts() : 0,
+    hearts: (kind === 'word' || kind === 'grammar') ? getHearts() : 0,
     date: m.date, level: m.level, theme: m.theme
   };
   renderQuizView();
@@ -5134,7 +5134,7 @@ async function startQuiz(kind, dateStr) {
 
 function renderQuizView() {
   const q = state.quiz;
-  if (q.kind === 'word' || q.kind === 'assignment') { renderDuoQuizView(); return; }
+  if (q.kind === 'word' || q.kind === 'assignment' || q.kind === 'grammar') { renderDuoQuizView(); return; }
   const v = $('#view');
   const cur = q.questions[q.idx];
   const total = q.questions.length;
@@ -5486,6 +5486,11 @@ async function saveDuoMistake(q, cur, picked) {
     await saveMistake(Object.assign({}, base, {
       question: 'Put the words in order:',
       options: opts, answer: opts.indexOf(correct)
+    }));
+  } else {
+    /* plain multiple-choice (e.g. grammar quiz) */
+    await saveMistake(Object.assign({}, base, {
+      question: cur.question, options: cur.options, answer: cur.answer
     }));
   }
 }

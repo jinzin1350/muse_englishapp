@@ -809,6 +809,10 @@ details.practice p { margin: 0.7rem 0 0; color: var(--herb-dark); font-weight: 5
   margin: 0 0 0.9rem;
   color: var(--ink);
 }
+/* Grammar quiz banner (bottom of the grammar tab): the artwork IS the button. */
+.grammar-quiz-banner{display:block;width:100%;max-width:560px;margin:1.6rem auto .5rem;padding:0;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.grammar-quiz-banner img{display:block;width:100%;height:auto;border-radius:22px;box-shadow:0 12px 32px rgba(190,130,70,.18)}
+.grammar-quiz-banner:active img{transform:scale(.985)}
 
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
