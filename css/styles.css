@@ -384,23 +384,62 @@ p { margin: 0 0 0.75em; }
 
 
 
-.archive-card .ac-photo {
-  width: 84px; height: 84px; border-radius: 10px; object-fit: cover; flex: 0 0 auto;
-  background: var(--mist); display: block;
+/* ---------- Past lessons archive — dark navy / flame identity ----------
+   Reuses the approved v2 lesson-card component (.prev-card.v2 markup:
+   pcv-photo + pcv-date badge + pcv-body + pcv-theme + pcv-row/bar/ico)
+   with a dark theme override scoped to .archive-page. */
+.archive-page{
+  margin:-1rem -1rem -7rem;
+  padding:1.4rem 1rem 9rem;
+  min-height:75vh;
+  background:radial-gradient(120% 60% at 50% 0%, #23234a 0%, #14142e 55%, #101024 100%);
+  color:#fff;
 }
-.archive-card .ac-ph {
-  display: flex; align-items: center; justify-content: center; font-size: 2rem;
+.archive-head{margin:0 0 1.1rem;}
+.archive-head h1{
+  font-family:Georgia,serif;font-size:1.7rem;color:#fff;
+  margin:0 0 .25rem;letter-spacing:-0.01em;
 }
-.archive-card .ac-body { flex: 1; min-width: 0; }
-.archive-card .ac-date { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
-.archive-card .ac-theme { font-family: Georgia, serif; font-size: 1.08rem; text-transform: capitalize; margin: 0.1rem 0; }
-.archive-card .ac-meta { font-size: 0.78rem; color: var(--muted); margin-bottom: 0.45rem; }
-.archive-card .progress { height: 6px; margin-bottom: 0.25rem; }
-.archive-card .ac-steps { font-size: 0.72rem; color: var(--muted); }
-.archive-card .ac-chev { color: var(--muted); font-size: 1.5rem; flex: 0 0 auto; padding-right: 0.2rem; }
-@media (min-width: 640px) {
-  .archive-card .ac-photo { width: 104px; height: 104px; }
+.archive-head p{margin:0;font-size:.85rem;font-weight:600;color:rgba(255,255,255,.6);}
+.archive-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:.85rem;
 }
+@media (min-width:640px){
+  .archive-grid{grid-template-columns:repeat(3,1fr);}
+}
+@media (min-width:1024px){
+  .archive-grid{grid-template-columns:repeat(4,1fr);}
+}
+/* v2 card in grid context: fluid width instead of strip sizing */
+.archive-grid .prev-card.v2{flex:none;width:100%;}
+/* dark theme overrides for the v2 card */
+.archive-page .prev-card.v2{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 16px 40px rgba(0,0,0,.4);
+}
+.archive-page .prev-card.v2:active{transform:scale(.98);}
+.archive-page .pcv-photo{background:#1a1a30;}
+.archive-page .pcv-photo .prev-ph{
+  display:flex;align-items:center;justify-content:center;
+  height:112px;font-size:2.2rem;
+}
+.archive-page .pcv-date{
+  background:linear-gradient(180deg,#ffa726,#ff8a00);
+  color:#3a2200;
+}
+.archive-page .pcv-theme{color:#fff;}
+.archive-page .arc-meta{
+  display:block;font-size:.72rem;font-weight:600;color:rgba(255,255,255,.55);
+  margin:-.3rem 0 .55rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.archive-page .pcv-bar{background:rgba(255,255,255,.14);}
+.archive-page .pcv-ico{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:none;
+}
+.empty-dark{color:rgba(255,255,255,.6);}
 
 /* Review / progress compact cards */
 

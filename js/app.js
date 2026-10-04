@@ -4842,31 +4842,35 @@ function archiveCardHTML(m) {
   const cover = lessonCover(m);
   const done = dayDoneCount(m.date);
   const pct = Math.round((done / STEPS.length) * 100);
-  return '<button class="archive-card" data-action="open-lesson" data-date="' + esc(m.date) + '" aria-label="Open lesson ' + esc(m.theme || m.date) + '">' +
-    (cover
-      ? '<img class="ac-photo" src="' + esc(cover) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
-      : '<div class="ac-photo ac-ph" aria-hidden="true">📚</div>') +
-    '<div class="ac-body">' +
-      '<div class="ac-date">' + esc(fmtDateShort(m.date)) + ' · ' + esc(m.date) + '</div>' +
-      '<div class="ac-theme">' + esc(m.theme || 'Lesson') + '</div>' +
-      '<div class="ac-meta">' + esc(levelLabel(normalizeLevel(m.level))) + ' · ' + lessonWordCount(m) + ' words</div>' +
-      '<div class="progress" role="progressbar" aria-label="Lesson progress" aria-valuenow="' + done + '" aria-valuemin="0" aria-valuemax="' + STEPS.length + '"><div style="width:' + pct + '%"></div></div>' +
-      '<div class="ac-steps">' + done + ' of ' + STEPS.length + ' steps</div>' +
-    '</div>' +
-    '<div class="ac-chev" aria-hidden="true">›</div>' +
+  return '<button class="prev-card v2" data-action="open-lesson" data-date="' + esc(m.date) + '" aria-label="Open lesson ' + esc(m.theme || m.date) + '">' +
+    '<span class="pcv-photo">' +
+      (cover
+        ? '<img src="' + esc(cover) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+        : '<span class="prev-ph" aria-hidden="true">📚</span>') +
+      '<span class="pcv-date">' + esc(fmtDateShort(m.date)) + '</span>' +
+    '</span>' +
+    '<span class="pcv-body">' +
+      '<span class="pcv-theme">' + esc(m.theme || 'Lesson') + '</span>' +
+      '<span class="arc-meta">' + esc((normalizeLevel(m.level) || 'b2').toUpperCase()) + ' · ' + lessonWordCount(m) + ' words</span>' +
+      '<span class="pcv-row">' +
+        '<span class="pcv-bar" role="progressbar" aria-label="Lesson progress" aria-valuenow="' + done + '" aria-valuemin="0" aria-valuemax="' + STEPS.length + '"><span style="width:' + pct + '%"></span></span>' +
+        '<span class="pcv-ico" aria-hidden="true">' + prevIconFor(m.theme) + '</span>' +
+      '</span>' +
+    '</span>' +
   '</button>';
 }
 
 function renderLessons(v) {
   const lessons = state.lessons;
-  let html = '<div class="archive-head"><h1>Past lessons</h1>' +
-    '<p class="muted" style="margin:.2rem 0 0">' + lessons.length + (lessons.length === 1 ? ' lesson' : ' lessons') + ' · ' + esc(levelLabel(normalizeLevel(state.user.level))) + '</p></div>';
+  let html = '<div class="archive-page">' +
+    '<div class="archive-head"><h1>Past lessons</h1>' +
+    '<p>' + lessons.length + (lessons.length === 1 ? ' lesson' : ' lessons') + ' · ' + esc(levelLabel(normalizeLevel(state.user.level))) + '</p></div>';
   if (!lessons.length) {
-    html += '<div class="empty">No lessons published yet — check back tomorrow.</div>';
+    html += '<div class="empty empty-dark">No lessons published yet — check back tomorrow.</div>';
   } else {
-    html += '<div class="archive-list">' + lessons.map(archiveCardHTML).join('') + '</div>';
+    html += '<div class="archive-grid">' + lessons.map(archiveCardHTML).join('') + '</div>';
   }
-  v.innerHTML = html;
+  v.innerHTML = html + '</div>';
 }
 
 /* Paint instantly from local data, then refresh from cloud in the background.
