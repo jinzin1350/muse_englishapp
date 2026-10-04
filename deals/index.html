@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تخفیف‌های شگفت‌انگیز | کانادا به فارسی</title>
+<meta name="description" content="بهترین تخفیف‌های امروز کانادا — کاستکو و آمازون">
+<style>
+@font-face{font-family:'Estedad';src:url('fonts/estedad-extrabold.woff2') format('woff2');font-weight:800;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('fonts/vazirmatn-regular.woff2') format('woff2');font-weight:400;font-display:swap}
+:root{--navy:#112634;--cream:#F5F1EB;--coral:#E44735;--teal:#146C66}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Vazirmatn',system-ui,sans-serif;background:var(--cream);color:var(--navy);-webkit-font-smoothing:antialiased}
+.wrap{max-width:520px;margin:0 auto;padding:0 16px 40px}
+header{background:var(--navy);color:var(--cream);padding:28px 16px 22px;text-align:center;border-radius:0 0 24px 24px;margin-bottom:20px}
+header .brand{font-size:13px;opacity:.75;margin-bottom:6px}
+header h1{font-family:'Estedad',sans-serif;font-weight:800;font-size:26px;line-height:1.5}
+header .updated{font-size:12px;opacity:.6;margin-top:8px}
+.card{background:#fff;border-radius:18px;overflow:hidden;margin-bottom:18px;box-shadow:0 2px 12px rgba(17,38,52,.08)}
+.card .imgbox{background:#fff;display:flex;align-items:center;justify-content:center;padding:18px;min-height:200px}
+.card img{max-width:100%;max-height:220px;object-fit:contain}
+.card .body{padding:16px 18px 20px}
+.badge{display:inline-block;background:var(--teal);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:3px 12px;margin-bottom:8px}
+.card h2{font-family:'Estedad',sans-serif;font-weight:800;font-size:18px;line-height:1.7;margin-bottom:8px}
+.price-row{display:flex;align-items:baseline;gap:10px;margin:6px 0}
+.price{font-family:'Estedad',sans-serif;font-weight:800;font-size:24px;color:var(--coral)}
+.regular{font-size:14px;color:#999;text-decoration:line-through}
+.blurb{font-size:14px;line-height:1.9;color:#3d4c57;margin:8px 0 14px}
+.itemno{font-size:12px;color:#888;margin-bottom:10px}
+.cta{display:block;text-align:center;background:var(--coral);color:#fff;font-family:'Estedad',sans-serif;font-weight:800;font-size:16px;border-radius:14px;padding:13px;text-decoration:none}
+.cta:active{transform:scale(.98)}
+.cta.costco{background:var(--teal);cursor:default}
+.src{font-size:11px;color:#aaa;text-align:center;margin-top:10px}
+footer{text-align:center;font-size:11px;color:#999;line-height:2;padding:10px 20px}
+.loading{text-align:center;padding:40px;color:#888}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">🍁 کانادا به فارسی</div>
+  <h1>🔥 تخفیف‌های شگفت‌انگیز</h1>
+  <div class="updated" id="updated"></div>
+</header>
+<div class="wrap">
+  <div id="list"><div class="loading">در حال بارگذاری تخفیف‌ها…</div></div>
+  <footer>قیمت‌ها مربوط به زمان انتشار است و ممکن است تغییر کرده باشد.<br>برخی لینک‌ها ممکن است شامل کد معرف باشند.</footer>
+</div>
+<script>
+fetch('products.json').then(r=>r.json()).then(d=>{
+  document.getElementById('updated').textContent='به‌روزرسانی: '+d.updated_fa;
+  const list=document.getElementById('list');list.innerHTML='';
+  d.products.forEach(p=>{
+    const fa=n=>Number(n).toLocaleString('fa-IR');
+    const badge=p.discount_pct?'<span class="badge">٪'+fa(p.discount_pct)+' تخفیف</span>':'';
+    const reg=p.regular_cad?'<span class="regular">'+fa(p.regular_cad)+' دلار</span>':'';
+    const itemno=p.item_no?'<div class="itemno">شماره کالا در کاستکو: '+fa(p.item_no)+'</div>':'';
+    const cta=p.source==='costco'
+      ?'<span class="cta costco">📍 در کاستکو</span>'
+      :'<a class="cta" href="'+p.url+'" target="_blank" rel="nofollow sponsored noopener">🛒 خرید از آمازون</a>';
+    const src=p.source==='costco'?'کاستکو':'آمازون';
+    const el=document.createElement('article');el.className='card';
+    el.innerHTML='<div class="imgbox"><img src="'+p.image+'" alt="'+p.name_fa+'" loading="lazy"></div>'
+      +'<div class="body">'+badge+'<h2>'+p.name_fa+'</h2>'
+      +'<div class="price-row"><span class="price">'+fa(p.price_cad)+' دلار</span>'+reg+'</div>'
+      +'<p class="blurb">'+p.blurb_fa+'</p>'+itemno+cta
+      +'<div class="src">منبع: '+src+'</div></div>';
+    list.appendChild(el);
+  });
+}).catch(()=>{document.getElementById('list').innerHTML='<div class="loading">خطا در بارگذاری. لطفاً بعداً تلاش کنید.</div>'});
+</script>
+</body>
+</html>
