@@ -6496,7 +6496,10 @@ async function loadAdminBot() {
     '</div>' +
     '<div style="margin-top:0.7rem"><button class="btn btn-sm" data-action="bot-save">Save bot settings</button> ' +
     '<span class="muted" id="bot-status" style="font-size:0.85rem;margin-left:0.5rem"></span></div>' +
-    '<p class="muted" style="font-size:0.8rem;margin:0.6rem 0 0">Settings take effect on the next hourly bot run. Hours are Asia/Tehran. Promo banners (jpg/png/webp) go in <code>media/promo/</code> — a promo replaces the regular post in its slot.</p>';
+    '<p class="muted" style="font-size:0.8rem;margin:0.6rem 0 0">Settings take effect on the next hourly bot run. Hours are Asia/Tehran. Promo banners (jpg/png/webp) go in <code>media/promo/</code> — a promo replaces the regular post in its slot.</p>' +
+    '<div class="bot-chat-sec"><p style="margin:0.9rem 0 0.4rem"><b>💬 Per-chat settings</b> <span class="muted" style="font-size:0.85rem">— custom footer & pause per group/channel. Chats you never configure keep the global default footer.</span></p>' +
+    '<div id="bot-chat-list"><div class="empty">Loading…</div></div></div>';
+  loadAdminBotChats();
 }
 
 async function saveAdminBot(btn) {
@@ -6533,6 +6536,83 @@ async function saveAdminBot(btn) {
     say('Save failed: ' + (e.message || e), false);
   }
   if (btn) btn.disabled = false;
+}
+
+/* ---------------- admin: telegram bot per-chat config ----------------
+   Footer semantics (mirrors post.py):
+   - no row / footer NULL  -> global default footer (legacy behavior)
+   - footer '' (empty)     -> NO footer on that chat's posts
+   - footer text set       -> custom footer for that chat            */
+async function loadAdminBotChats() {
+  const host = document.getElementById('bot-chat-list');
+  if (!host) return;
+  let rows;
+  try {
+    const r = await sb.from('bot_chat_config').select('chat_id,title,footer_text,paused').order('title');
+    if (r.error) throw r.error;
+    rows = r.data || [];
+  } catch (e) {
+    host.innerHTML = '<p class="muted">Per-chat table not found. Run <code>supabase-bot-chat-config-migration.sql</code> in the Supabase SQL Editor first.</p>';
+    return;
+  }
+  if (!rows.length) {
+    host.innerHTML = '<p class="muted">No chats tracked yet — they appear here automatically after the next bot run.</p>';
+    return;
+  }
+  host.innerHTML = rows.map(function (r) {
+    const cid = String(r.chat_id);
+    const ft = r.footer_text;
+    const mode = (ft === null || ft === undefined) ? 'global' : (ft === '' ? 'none' : 'custom');
+    return '<div class="bot-chat-row" data-chat="' + esc(cid) + '">' +
+      '<div class="bot-chat-head"><b>' + esc(r.title || '(untitled)') + '</b> <code>' + esc(cid) + '</code>' +
+      (r.paused ? ' <span style="background:#7C6AF0;color:#fff;border-radius:99px;padding:0.1rem 0.55rem;font-size:0.72rem">paused</span>' : '') + '</div>' +
+      '<label class="bot-row"><span>Footer</span><select id="botmode-' + esc(cid) + '" data-chat="' + esc(cid) + '">' +
+        '<option value="global"' + (mode === 'global' ? ' selected' : '') + '>Global default footer</option>' +
+        '<option value="custom"' + (mode === 'custom' ? ' selected' : '') + '>Custom footer</option>' +
+        '<option value="none"' + (mode === 'none' ? ' selected' : '') + '>No footer</option>' +
+      '</select></label>' +
+      '<textarea id="botft-' + esc(cid) + '" rows="2" style="' + (mode === 'custom' ? '' : 'display:none') + '" placeholder="Custom footer text for this chat…">' + esc(mode === 'custom' ? ft : '') + '</textarea>' +
+      '<div class="bot-chat-actions"><label class="bot-check"><input type="checkbox" id="botpaused-' + esc(cid) + '"' + (r.paused ? ' checked' : '') + '> Pause this chat</label> ' +
+      '<button class="btn btn-sm" data-action="bot-chat-save" data-chat="' + esc(cid) + '">Save this chat</button> ' +
+      '<span class="muted bot-chat-status" style="font-size:0.85rem;margin-left:0.5rem"></span></div>' +
+      '</div>';
+  }).join('');
+  host.querySelectorAll('select[id^="botmode-"]').forEach(function (sel) {
+    sel.addEventListener('change', function () {
+      const ta = document.getElementById('botft-' + sel.getAttribute('data-chat'));
+      if (ta) ta.style.display = sel.value === 'custom' ? '' : 'none';
+    });
+  });
+}
+
+async function saveAdminBotChat(btn) {
+  const cid = btn.getAttribute('data-chat');
+  const row = btn.closest('.bot-chat-row');
+  const status = row ? row.querySelector('.bot-chat-status') : null;
+  const say = function (t, ok) { if (status) { status.textContent = t; status.style.color = ok ? '#2e7d32' : '#c62828'; } };
+  const modeEl = document.getElementById('botmode-' + cid);
+  const ta = document.getElementById('botft-' + cid);
+  const pa = document.getElementById('botpaused-' + cid);
+  const mode = modeEl ? modeEl.value : 'global';
+  const paused = !!(pa && pa.checked);
+  let footer_text = null; // global default
+  if (mode === 'custom') {
+    footer_text = ta ? ta.value.trim() : '';
+    if (!footer_text) { say('Custom footer is empty — pick Global default or No footer instead.', false); return; }
+  } else if (mode === 'none') {
+    footer_text = ''; // explicit: no footer on this chat's posts
+  }
+  say('Saving…', true);
+  try {
+    const r = await sb.from('bot_chat_config').upsert(
+      { chat_id: cid, footer_text: footer_text, paused: paused, updated_at: new Date().toISOString() },
+      { onConflict: 'chat_id' });
+    if (r.error) throw r.error;
+    say('Saved ✓ — takes effect on the next hourly run.', true);
+    loadAdminBotChats();
+  } catch (e) {
+    say('Save failed: ' + (e.message || e), false);
+  }
 }
 
 async function loadAdminTeachers() {
@@ -6826,6 +6906,7 @@ function bindEvents() {
     else if (a === 'inbox-open') { closeModal(); go('inbox'); }
     else if (a === 'inbox-retry') { renderInbox(document.getElementById('view')); }
     else if (a === 'bot-save') { saveAdminBot(t); }
+    else if (a === 'bot-chat-save') { saveAdminBotChat(t); }
     else if (a === 'google-signin') signInWithGoogle(t.getAttribute('data-prefix'), t);
     else if (a === 'approve-teacher') adminApproveTeacher(t.getAttribute('data-id'));
     else if (a === 'reject-teacher') adminRejectTeacher(t.getAttribute('data-id'));

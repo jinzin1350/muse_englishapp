@@ -2086,6 +2086,23 @@ body{background:#FFF9F3;}
   border-radius: 50%; background: #fff; transition: left 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.25);
 }
 .bot-switch:checked::after { left: 24px; }
+.bot-chat-sec { margin-top: 0.4rem; }
+.bot-chat-row {
+  border: 1px solid #f0ebe0; border-radius: 12px; padding: 0.7rem 0.8rem;
+  margin-bottom: 0.6rem; background: #fffdf8;
+}
+.bot-chat-head { font-size: 0.95rem; margin-bottom: 0.45rem; }
+.bot-chat-head code { font-size: 0.78rem; color: #8a8172; }
+.bot-chat-row select {
+  padding: 0.4rem 0.5rem; border: 1.5px solid #e5dccb; border-radius: 10px;
+  font-size: 0.9rem; font-family: inherit; background: #fff;
+}
+.bot-chat-row textarea {
+  width: 100%; box-sizing: border-box; margin: 0.45rem 0; padding: 0.5rem 0.6rem;
+  border: 1.5px solid #e5dccb; border-radius: 10px; font-size: 0.9rem;
+  font-family: inherit; resize: vertical; background: #fff;
+}
+.bot-chat-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem 0.8rem; margin-top: 0.35rem; }
 
 /* ============ Quiz game player — warm storybook design (mockup v2) ============ */
 body.duo-playing .tabbar{display:none;}
