@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-04",
+  "theme": "technology",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "automate",
+      "pos": "verb",
+      "meaning": "to make a process run by machines or software without people doing it",
+      "example": "The company automated its billing system last year.",
+      "pronunciation": "AW-tuh-mayt",
+      "persian": "خودکارسازی کردن",
+      "photo": "media/b2/2026-10-04/photos/automate.jpg",
+      "word_audio": "media/b2/2026-10-04/word-audio/automate.mp3"
+    },
+    {
+      "word": "innovate",
+      "pos": "verb",
+      "meaning": "to introduce new ideas or methods",
+      "example": "Small startups often innovate faster than big corporations.",
+      "pronunciation": "IN-uh-vayt",
+      "persian": "نوآوری کردن",
+      "photo": "media/b2/2026-10-04/photos/innovate.jpg",
+      "word_audio": "media/b2/2026-10-04/word-audio/innovate.mp3"
+    },
+    {
+      "word": "obsolete",
+      "pos": "adjective",
+      "meaning": "no longer useful because something newer exists",
+      "example": "Fax machines are almost obsolete now.",
+      "pronunciation": "ob-suh-LEET",
+      "persian": "منسوخ",
+      "photo": "media/b2/2026-10-04/photos/obsolete.jpg",
+      "word_audio": "media/b2/2026-10-04/word-audio/obsolete.mp3"
+    },
+    {
+      "word": "seamless",
+      "pos": "adjective",
+      "meaning": "smooth and continuous, with no problems or breaks",
+      "example": "The app offers a seamless connection between your phone and laptop.",
+      "pronunciation": "SEEM-liss",
+      "persian": "روان و یکپارچه",
+      "photo": "media/b2/2026-10-04/photos/seamless.jpg",
+      "word_audio": "media/b2/2026-10-04/word-audio/seamless.mp3"
+    },
+    {
+      "word": "breakthrough",
+      "pos": "noun",
+      "meaning": "an important discovery or development",
+      "example": "The vaccine was a major breakthrough in medicine.",
+      "pronunciation": "BRAYK-throo",
+      "persian": "دستاورد بزرگ",
+      "photo": "media/b2/2026-10-04/photos/breakthrough.jpg",
+      "word_audio": "media/b2/2026-10-04/word-audio/breakthrough.mp3"
+    },
+    {
+      "word": "malfunction",
+      "pos": "verb",
+      "meaning": "to stop working correctly",
+      "example": "The printer malfunctioned during the meeting.",
+      "pronunciation": "mal-FUHNGK-shuhn",
+      "persian": "درست کار نکردن",
+      "photo": "media/b2/2026-10-04/photos/malfunction.jpg",
+      "word_audio": "media/b2/2026-10-04/word-audio/malfunction.mp3"
+    },
+    {
+      "word": "accessible",
+      "pos": "adjective",
+      "meaning": "easy for everyone to use or reach",
+      "example": "Good design makes technology accessible to everyone.",
+      "pronunciation": "ak-SESS-uh-buhl",
+      "persian": "قابل دسترس",
+      "photo": "media/b2/2026-10-04/photos/accessible.jpg",
+      "word_audio": "media/b2/2026-10-04/word-audio/accessible.mp3"
+    },
+    {
+      "word": "intuitive",
+      "pos": "adjective",
+      "meaning": "easy to understand without explanation",
+      "example": "The new interface is so intuitive that no manual is needed.",
+      "pronunciation": "in-TOO-uh-tiv",
+      "persian": "شهودی",
+      "photo": "media/b2/2026-10-04/photos/intuitive.jpg",
+      "word_audio": "media/b2/2026-10-04/word-audio/intuitive.mp3"
+    },
+    {
+      "word": "compatible",
+      "pos": "adjective",
+      "meaning": "able to work well together",
+      "example": "This charger is compatible with most phones.",
+      "pronunciation": "kuhm-PAT-uh-buhl",
+      "persian": "سازگار",
+      "photo": "media/b2/2026-10-04/photos/compatible.jpg",
+      "word_audio": "media/b2/2026-10-04/word-audio/compatible.mp3"
+    },
+    {
+      "word": "streamline",
+      "pos": "verb",
+      "meaning": "to make a process simpler and faster",
+      "example": "We streamlined the checkout process to save time.",
+      "pronunciation": "STREEM-lyne",
+      "persian": "ساده و کارآمد کردن",
+      "photo": "media/b2/2026-10-04/photos/streamline.jpg",
+      "word_audio": "media/b2/2026-10-04/word-audio/streamline.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-10-04/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Tech That Changed Everything",
+    "audio": "media/b2/2026-10-04/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-04/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Paperless Office",
+    "audio": "media/b2/2026-10-04/shadowing.mp3",
+    "transcript": "media/b2/2026-10-04/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'automate' mean?",
+      "options": [
+        "to make a process run by machines or software without people doing it",
+        "to introduce new ideas or methods",
+        "no longer useful because something newer exists",
+        "smooth and continuous, with no problems or breaks"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'innovate' mean?",
+      "options": [
+        "no longer useful because something newer exists",
+        "to introduce new ideas or methods",
+        "an important discovery or development",
+        "to stop working correctly"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'obsolete' mean?",
+      "options": [
+        "easy for everyone to use or reach",
+        "able to work well together",
+        "no longer useful because something newer exists",
+        "to make a process simpler and faster"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'seamless' mean?",
+      "options": [
+        "to stop working correctly",
+        "easy to understand without explanation",
+        "an important discovery or development",
+        "smooth and continuous, with no problems or breaks"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'breakthrough' mean?",
+      "options": [
+        "an important discovery or development",
+        "to make a process run by machines or software without people doing it",
+        "able to work well together",
+        "easy for everyone to use or reach"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'malfunction' mean?",
+      "options": [
+        "smooth and continuous, with no problems or breaks",
+        "to introduce new ideas or methods",
+        "to stop working correctly",
+        "no longer useful because something newer exists"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'accessible' mean?",
+      "options": [
+        "easy to understand without explanation",
+        "easy for everyone to use or reach",
+        "to make a process simpler and faster",
+        "an important discovery or development"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'intuitive' mean?",
+      "options": [
+        "to stop working correctly",
+        "no longer useful because something newer exists",
+        "able to work well together",
+        "easy to understand without explanation"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'compatible' mean?",
+      "options": [
+        "to introduce new ideas or methods",
+        "able to work well together",
+        "smooth and continuous, with no problems or breaks",
+        "to make a process run by machines or software without people doing it"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'streamline' mean?",
+      "options": [
+        "an important discovery or development",
+        "easy for everyone to use or reach",
+        "to make a process simpler and faster",
+        "easy to understand without explanation"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "examples": [
+      "*We *used to* *automate* only simple tasks, but now we automate everything.* (past habit, no longer true)",
+      "*She *didn't use to* trust new software, but the *seamless* update changed her mind.* (negative past habit)",
+      "*Did* your old laptop *use to* *malfunction* every day?* (past-state question)",
+      "*I *usually* check that the two apps are *compatible* before I update.* (present habit)",
+      "*He *is used to* *streamlining* reports with macros now.* (*be used to* = accustomed to)",
+      "*They *used to* keep paper files, but they don't any longer.* (past vs present contrast)"
+    ],
+    "explanation": "Use **used to** + infinitive for past habits and states that are no longer true. Most factories **used to** do everything by hand before they learned to **automate** production.\n\nIn negatives and questions, use **didn't use to** and **did you use to**. **Did** offices **use to** print everything before email made paper **obsolete**?\n\nThere is no present form of **used to** — never say \"I use to\". For present habits, use the present simple with an adverb of frequency like **usually** or **normally**.\n\nYou may also use the past simple for repeated past actions. But use only the past simple — never **used to** — for single events, exact dates, or numbers. The team announced the **breakthrough** in June.\n\nTo contrast the past with now, add **any more** or **any longer** to a present-simple negative. I **used to** lose my passwords, but I don't **any more**.\n\nDo not confuse **used to** with **be used to** or **get used to** + -ing, which mean \"be or become accustomed to\". I **am used to** the new app now, and its **intuitive** design makes everything feel **seamless**.",
+    "practice": [
+      {
+        "a": "used to has no present form — say \"I usually wake up at six\".",
+        "q": "Why is \"I use to wake up at six\" wrong?"
+      },
+      {
+        "a": "\"Did you use to work here?\" — after did, use the base form use.",
+        "q": "Which is right: \"Did you use to work here?\" or \"Did you used to work here?\""
+      },
+      {
+        "a": "Example: \"We used to streamline the schedule by hand.\"",
+        "q": "Make a sentence about a past habit with the word streamline."
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 0,
+        "options": [
+          "I used to have a flip phone.",
+          "I use to have a flip phone.",
+          "I am used to have a flip phone.",
+          "I used to having a flip phone."
+        ],
+        "question": "Choose the correct sentence."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "used",
+          "uses",
+          "is used",
+          "use"
+        ],
+        "question": "\"My grandfather ___ to repair radios.\" Fill the gap."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "use",
+          "used",
+          "using",
+          "uses"
+        ],
+        "question": "\"Did she ___ to work nights?\" Pick the right form."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "They used to live in Berlin.",
+          "They didn't use to like sushi.",
+          "They use to go jogging.",
+          "They never used to argue."
+        ],
+        "question": "Which sentence is WRONG?"
+      },
+      {
+        "answer": 1,
+        "options": [
+          "I use to drink coffee.",
+          "I usually drink coffee.",
+          "I used to drinking coffee.",
+          "I am use to drink coffee."
+        ],
+        "question": "For a present habit, which is correct?"
+      },
+      {
+        "answer": 0,
+        "options": [
+          "any more",
+          "used to",
+          "never",
+          "usually"
+        ],
+        "question": "\"I used to fear flying, but I don't ___.\" Choose the best ending."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "A single event with a known time needs the past simple.",
+          "Cinema is an uncountable noun.",
+          "used to always needs the word usually.",
+          "Saturday requires the future tense."
+        ],
+        "question": "\"We went to the cinema on Saturday.\" Why can't we say \"used to go\" here?"
+      },
+      {
+        "answer": 1,
+        "options": [
+          "get",
+          "getting",
+          "got",
+          "to get"
+        ],
+        "question": "\"I am used to ___ up early.\" Pick the right form."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "live",
+          "living",
+          "lived",
+          "to live"
+        ],
+        "question": "\"Lola can't get used to ___ in the UK.\" Choose the right form."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "I used to live in Leeds. / I lived in Leeds as a child.",
+          "I used to live in Leeds. / I live in Leeds now.",
+          "I am used to Leeds. / I used to live in Leeds.",
+          "I get used to Leeds. / I lived in Leeds once."
+        ],
+        "question": "Which pair has the SAME meaning?"
+      }
+    ],
+    "title": "5B: Past and present habits and states (used to)"
+  }
+}

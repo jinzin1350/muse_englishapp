@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-04",
+  "theme": "education & learning",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "book",
+      "pos": "noun",
+      "meaning": "pages you read",
+      "example": "I read a book every day.",
+      "pronunciation": "BOOK",
+      "persian": "کتاب",
+      "photo": "media/a1/2026-10-04/photos/book.jpg",
+      "word_audio": "media/a1/2026-10-04/word-audio/book.mp3"
+    },
+    {
+      "word": "pen",
+      "pos": "noun",
+      "meaning": "you write with it",
+      "example": "I write with a blue pen.",
+      "pronunciation": "PEN",
+      "persian": "خودکار",
+      "photo": "media/a1/2026-10-04/photos/pen.jpg",
+      "word_audio": "media/a1/2026-10-04/word-audio/pen.mp3"
+    },
+    {
+      "word": "pencil",
+      "pos": "noun",
+      "meaning": "you write or draw with it",
+      "example": "She draws with a pencil.",
+      "pronunciation": "PEN-suhl",
+      "persian": "مداد",
+      "photo": "media/a1/2026-10-04/photos/pencil.jpg",
+      "word_audio": "media/a1/2026-10-04/word-audio/pencil.mp3"
+    },
+    {
+      "word": "notebook",
+      "pos": "noun",
+      "meaning": "paper pages for writing",
+      "example": "He writes in his notebook.",
+      "pronunciation": "NOTE-book",
+      "persian": "دفتر",
+      "photo": "media/a1/2026-10-04/photos/notebook.jpg",
+      "word_audio": "media/a1/2026-10-04/word-audio/notebook.mp3"
+    },
+    {
+      "word": "bag",
+      "pos": "noun",
+      "meaning": "you carry things in it",
+      "example": "My bag is on the desk.",
+      "pronunciation": "BAG",
+      "persian": "کیف",
+      "photo": "media/a1/2026-10-04/photos/bag.jpg",
+      "word_audio": "media/a1/2026-10-04/word-audio/bag.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-04/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: School Things",
+    "audio": "media/a1/2026-10-04/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-04/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My School Bag",
+    "audio": "media/a1/2026-10-04/shadowing.mp3",
+    "transcript": "media/a1/2026-10-04/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'book' mean?",
+      "options": [
+        "pages you read",
+        "you write with it",
+        "paper pages for writing",
+        "you carry things in it"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'pen' mean?",
+      "options": [
+        "you write or draw with it",
+        "pages you read",
+        "you write with it",
+        "you carry things in it"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'pencil' mean?",
+      "options": [
+        "you write with it",
+        "paper pages for writing",
+        "you write or draw with it",
+        "pages you read"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'notebook' mean?",
+      "options": [
+        "paper pages for writing",
+        "you carry things in it",
+        "pages you read",
+        "you write or draw with it"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bag' mean?",
+      "options": [
+        "pages you read",
+        "paper pages for writing",
+        "you carry things in it",
+        "you write with it"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "5B: Past habits - used to",
+    "explanation": "We use **used to** for things we did a lot in the past.\nWe do not do them now.\n\nThe form is simple: I **used to** + verb.\nFor example: I **used to** play football.\n\nFor the negative, we say **didn't use to**.\nCareful: no 'd' in 'use' after 'didn't'.\n\nFor questions, we say **Did you use to** + verb?\nFor example: **Did you use to** read books?",
+    "examples": [
+      "*I *used to* draw with a pencil.* (as a child)",
+      "*She *used to* read a book every day.* (not now)",
+      "*We *used to* write in a notebook.* (at school)",
+      "*He *didn't use to* carry a bag.* (now he does)",
+      "*I *used to* have a small pen.* (not now)"
+    ],
+    "practice": [
+      {
+        "q": "Do you have a school bag now? Did you have one before?",
+        "a": "I have a school bag now. I used to carry my books in my hands."
+      },
+      {
+        "q": "Did you use to write with a pen at school?",
+        "a": "Yes, I did. I used to write with a blue pen."
+      },
+      {
+        "q": "What did you use to read?",
+        "a": "I used to read small books."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "I used to read books.",
+          "I use to read books.",
+          "I used reading books.",
+          "I am used read books."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ live in Tehran.",
+        "options": [
+          "uses to",
+          "used",
+          "used to",
+          "use to"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We ___ play football every day.",
+        "options": [
+          "used to",
+          "are used",
+          "didn't use",
+          "use to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct negative: He ___ write with a pen.",
+        "options": [
+          "not used to",
+          "don't used to",
+          "didn't used to",
+          "didn't use to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correct question: ___ you use to draw?",
+        "options": [
+          "Did",
+          "Do",
+          "Does",
+          "Are"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "'Used to' talks about...",
+        "options": [
+          "right now",
+          "next week",
+          "the past",
+          "tomorrow"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'I used to have a small bag, but now I have a big bag.' This means...",
+        "options": [
+          "I had a small bag before.",
+          "I will buy a bag.",
+          "I have a small bag now.",
+          "I never had a bag."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which sentence is WRONG?",
+        "options": [
+          "I used to read.",
+          "I didn't used to read.",
+          "Did you use to read?",
+          "I used to read a book."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "'They used to put a notebook in the bag.' This means...",
+        "options": [
+          "They will buy a notebook.",
+          "They never had a notebook.",
+          "They have a notebook now.",
+          "They put a notebook in the bag before."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I ___ draw with a pencil as a child.",
+        "options": [
+          "am used",
+          "use",
+          "used to",
+          "using"
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a1/2026-10-04/grammar-en.mp3"
+  }
+}

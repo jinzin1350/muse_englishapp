@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-04",
+  "theme": "health & body",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "palliate",
+      "pos": "verb",
+      "meaning": "to ease pain or symptoms without curing the illness",
+      "example": "Morphine was given to palliate her pain, though it could not cure the disease.",
+      "pronunciation": "PAL-ee-ayt",
+      "persian": "تسکین دادن (کاهش درد یا علائم بدون درمان بیماری)",
+      "photo": "media/c1/2026-10-04/photos/palliate.jpg",
+      "word_audio": "media/c1/2026-10-04/word-audio/palliate.mp3"
+    },
+    {
+      "word": "prognosis",
+      "pos": "noun",
+      "meaning": "a doctor's prediction about the likely course of an illness",
+      "example": "The prognosis for patients diagnosed early has improved dramatically.",
+      "pronunciation": "prog-NOH-sis",
+      "persian": "پیش‌بینی سیر بیماری",
+      "photo": "media/c1/2026-10-04/photos/prognosis.jpg",
+      "word_audio": "media/c1/2026-10-04/word-audio/prognosis.mp3"
+    },
+    {
+      "word": "debilitating",
+      "pos": "adjective",
+      "meaning": "causing serious weakness that makes normal life very hard",
+      "example": "His migraines were so debilitating that he often missed weeks of work.",
+      "pronunciation": "dih-BIL-ih-tay-ting",
+      "persian": "ناتوان‌کننده",
+      "photo": "media/c1/2026-10-04/photos/debilitating.jpg",
+      "word_audio": "media/c1/2026-10-04/word-audio/debilitating.mp3"
+    },
+    {
+      "word": "placebo",
+      "pos": "noun",
+      "meaning": "a harmless treatment that works because the patient believes in it",
+      "example": "In the trial, patients who received the placebo still reported less pain.",
+      "pronunciation": "pluh-SEE-boh",
+      "persian": "دارونما",
+      "photo": "media/c1/2026-10-04/photos/placebo.jpg",
+      "word_audio": "media/c1/2026-10-04/word-audio/placebo.mp3"
+    },
+    {
+      "word": "pathogenesis",
+      "pos": "noun",
+      "meaning": "the biological process by which a disease develops",
+      "example": "Scientists spent a decade unraveling the pathogenesis of the virus.",
+      "pronunciation": "path-oh-JEN-uh-sis",
+      "persian": "روند شکل‌گیری بیماری (بیماری‌زایی)",
+      "photo": "media/c1/2026-10-04/photos/pathogenesis.jpg",
+      "word_audio": "media/c1/2026-10-04/word-audio/pathogenesis.mp3"
+    },
+    {
+      "word": "sedentary",
+      "pos": "adjective",
+      "meaning": "involving sitting and very little physical activity",
+      "example": "A sedentary lifestyle is now considered a major risk factor for heart disease.",
+      "pronunciation": "SED-en-teh-ree",
+      "persian": "کم‌تحرک",
+      "photo": "media/c1/2026-10-04/photos/sedentary.jpg",
+      "word_audio": "media/c1/2026-10-04/word-audio/sedentary.mp3"
+    },
+    {
+      "word": "malnutrition",
+      "pos": "noun",
+      "meaning": "poor health caused by not getting enough nutritious food",
+      "example": "Malnutrition in early childhood can permanently impair brain development.",
+      "pronunciation": "mal-noo-TRISH-un",
+      "persian": "سوءتغذیه",
+      "photo": "media/c1/2026-10-04/photos/malnutrition.jpg",
+      "word_audio": "media/c1/2026-10-04/word-audio/malnutrition.mp3"
+    },
+    {
+      "word": "resuscitate",
+      "pos": "verb",
+      "meaning": "to bring someone back to life or consciousness",
+      "example": "The paramedics managed to resuscitate the patient after three minutes of CPR.",
+      "pronunciation": "ree-SUS-ih-tayt",
+      "persian": "احیا کردن",
+      "photo": "media/c1/2026-10-04/photos/resuscitate.jpg",
+      "word_audio": "media/c1/2026-10-04/word-audio/resuscitate.mp3"
+    },
+    {
+      "word": "homeostasis",
+      "pos": "noun",
+      "meaning": "the body's ability to keep its internal conditions stable",
+      "example": "Sweating is the body's way of restoring homeostasis during exercise.",
+      "pronunciation": "hoh-mee-oh-STAY-sis",
+      "persian": "حفظ تعادل درونی بدن (هومئوستازی)",
+      "photo": "media/c1/2026-10-04/photos/homeostasis.jpg",
+      "word_audio": "media/c1/2026-10-04/word-audio/homeostasis.mp3"
+    },
+    {
+      "word": "iatrogenic",
+      "pos": "adjective",
+      "meaning": "caused by medical treatment itself",
+      "example": "The infection turned out to be iatrogenic, traced to contaminated surgical tools.",
+      "pronunciation": "eye-at-roh-JEN-ik",
+      "persian": "ناشی از خود درمان پزشکی",
+      "photo": "media/c1/2026-10-04/photos/iatrogenic.jpg",
+      "word_audio": "media/c1/2026-10-04/word-audio/iatrogenic.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-04/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Body Under Pressure",
+    "audio": "media/c1/2026-10-04/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-04/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Clinic That Never Sleeps",
+    "audio": "media/c1/2026-10-04/shadowing.mp3",
+    "transcript": "media/c1/2026-10-04/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'palliate' mean?",
+      "options": [
+        "to ease pain or symptoms without curing the illness",
+        "to predict the course of a disease",
+        "to bring someone back to life",
+        "to keep the body's balance stable"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'prognosis' mean?",
+      "options": [
+        "a harmless treatment working through belief",
+        "the process by which a disease develops",
+        "a doctor's prediction about the likely course of an illness",
+        "poor health from lack of nutritious food"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'debilitating' mean?",
+      "options": [
+        "involving sitting and little physical activity",
+        "causing serious weakness that makes normal life very hard",
+        "caused by medical treatment itself",
+        "easing pain without curing"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'placebo' mean?",
+      "options": [
+        "the body's ability to keep internal conditions stable",
+        "a harmless treatment that works because the patient believes in it",
+        "the biological process by which a disease develops",
+        "a doctor's prediction about an illness"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'pathogenesis' mean?",
+      "options": [
+        "to bring someone back to life",
+        "the biological process by which a disease develops",
+        "poor health from lack of nutritious food",
+        "causing serious weakness"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'sedentary' mean?",
+      "options": [
+        "involving sitting and very little physical activity",
+        "causing serious weakness",
+        "easing pain without curing",
+        "a harmless treatment"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'malnutrition' mean?",
+      "options": [
+        "the body's stable internal balance",
+        "a doctor's prediction about an illness",
+        "poor health caused by not getting enough nutritious food",
+        "a treatment-caused problem"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'resuscitate' mean?",
+      "options": [
+        "to ease pain without curing",
+        "to bring someone back to life or consciousness",
+        "to predict a disease's course",
+        "to keep the body's balance"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'homeostasis' mean?",
+      "options": [
+        "a harmless treatment working through belief",
+        "caused by medical treatment itself",
+        "poor health from lack of food",
+        "the body's ability to keep its internal conditions stable"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'iatrogenic' mean?",
+      "options": [
+        "caused by medical treatment itself",
+        "involving sitting and little activity",
+        "easing pain without curing the illness",
+        "the process of disease development"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "5B: Past and present habits and states (used to)",
+    "explanation": "English draws a sharp line between habits that belong to the past and habits of the present. **used to + infinitive** marks a habit or state that held true for a period in the past but is no longer true.\n\nThe negative is **didn't use to** (or the more formal **never used to**). Beware the classic trap: **used to** has no present tense. There is no **use to** for present habits.\n\nFor present habits, pair the **present simple** with an adverb of frequency like *usually* or *normally*. **Used to** and the **past simple** often overlap for repeated actions, but only the **past simple** survives exact dates, numbers of times, or single events.\n\nContrast past with present through **any more** or **any longer** with the **present simple**. And never confuse **used to** with **be used to** or **get used to** — those take **+ -ing** and mean being accustomed to something.",
+    "examples": [
+      "*She *used to* live a sedentary life before her diagnosis changed everything.* (past state, no longer true)",
+      "*They *didn't use to* question the prognosis; now they demand second opinions.* (negative past habit)",
+      "*He *is used to* coping with debilitating migraines by now.* (accustomed — not a past habit)",
+      "*Researchers *used to* overlook the placebo effect, but they don't *any longer*.* (past vs present contrast)",
+      "*She *used to* study the pathogenesis of the virus every evening.* (repeated past action)",
+      "*We *never used to* discuss iatrogenic risks so openly.* (formal negative)"
+    ],
+    "practice": [
+      {
+        "q": "Why is \"I use to get up early\" wrong?",
+        "a": "**used to** exists only in the past tense — there is no present-tense **use to**. For a present habit say \"I usually get up early\"."
+      },
+      {
+        "q": "What is the difference between \"I used to smoke\" and \"I am used to smoking\"?",
+        "a": "\"**used to** smoke\" means I smoked in the past and stopped. \"**am used to** smoking\" means I am accustomed to it — a completely different structure."
+      },
+      {
+        "q": "Can you say \"I used to visit Paris in 2019\"?",
+        "a": "No. With a specific date, the **past simple** is required: \"I visited Paris in 2019.\" **Used to** never takes exact dates."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "I used to be afraid of hospitals.",
+          "I use to be afraid of hospitals.",
+          "I am use to be afraid of hospitals.",
+          "I used being afraid of hospitals."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ work night shifts, but she doesn't any more.",
+        "options": [
+          "used to",
+          "uses to",
+          "is used to",
+          "use to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ get on well, but now they argue constantly.",
+        "options": [
+          "are used to",
+          "used to",
+          "use to",
+          "get used to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence is WRONG?",
+        "options": [
+          "Did you use to smoke?",
+          "We never used to travel.",
+          "I didn't used to like coffee.",
+          "He used to live in Leeds."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Complete: I ___ go to the gym every day, but I don't go ___.",
+        "options": [
+          "used to / any more",
+          "use to / any longer",
+          "am used to / any more",
+          "used to going / no more"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She is ___ living alone after years abroad.",
+        "options": [
+          "use to",
+          "used to",
+          "used to be",
+          "use to be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which is correct for a single past event?",
+        "options": [
+          "We used to go to the clinic on Monday.",
+          "We went to the clinic on Monday.",
+          "We use to go to the clinic on Monday.",
+          "We are used to go to the clinic on Monday."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ out twice a week. (present habit)",
+        "options": [
+          "used to eat",
+          "usually eats",
+          "is used to eat",
+          "didn't use to eat"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The doctor said the prognosis ___ be worse, but it isn't ___.",
+        "options": [
+          "used to / any longer",
+          "use to / any more",
+          "is used to / no longer",
+          "used to / no more"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I can't ___ getting up at five.",
+        "options": [
+          "used to",
+          "get used to",
+          "use to",
+          "be used"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

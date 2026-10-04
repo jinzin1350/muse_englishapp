@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-04",
+  "theme": "Food & Cooking",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "recipe",
+      "pos": "noun",
+      "meaning": "a set of instructions for cooking a dish",
+      "example": "My grandmother's recipe for bread is very simple.",
+      "pronunciation": "RES-uh-pee",
+      "persian": "دستور پخت غذا",
+      "photo": "media/b1/2026-10-04/photos/recipe.jpg",
+      "word_audio": "media/b1/2026-10-04/word-audio/recipe.mp3"
+    },
+    {
+      "word": "ingredient",
+      "pos": "noun",
+      "meaning": "one of the things used to make food",
+      "example": "Flour is an important ingredient in cake.",
+      "pronunciation": "in-GREE-dee-unt",
+      "persian": "مواد لازم برای غذا",
+      "photo": "media/b1/2026-10-04/photos/ingredient.jpg",
+      "word_audio": "media/b1/2026-10-04/word-audio/ingredient.mp3"
+    },
+    {
+      "word": "flavor",
+      "pos": "noun",
+      "meaning": "the taste of food or drink",
+      "example": "This soup has a rich tomato flavor.",
+      "pronunciation": "FLAY-vur",
+      "persian": "طعم",
+      "photo": "media/b1/2026-10-04/photos/flavor.jpg",
+      "word_audio": "media/b1/2026-10-04/word-audio/flavor.mp3"
+    },
+    {
+      "word": "snack",
+      "pos": "noun",
+      "meaning": "a small amount of food eaten between meals",
+      "example": "I had an apple as an afternoon snack.",
+      "pronunciation": "snak",
+      "persian": "میان‌وعده",
+      "photo": "media/b1/2026-10-04/photos/snack.jpg",
+      "word_audio": "media/b1/2026-10-04/word-audio/snack.mp3"
+    },
+    {
+      "word": "spicy",
+      "pos": "adjective",
+      "meaning": "food with a hot taste, like chili",
+      "example": "Mexican food is often spicy.",
+      "pronunciation": "SPY-see",
+      "persian": "تند",
+      "photo": "media/b1/2026-10-04/photos/spicy.jpg",
+      "word_audio": "media/b1/2026-10-04/word-audio/spicy.mp3"
+    },
+    {
+      "word": "boil",
+      "pos": "verb",
+      "meaning": "to cook in very hot water with bubbles",
+      "example": "Boil the potatoes for twenty minutes.",
+      "pronunciation": "boyl",
+      "persian": "جوشاندن",
+      "photo": "media/b1/2026-10-04/photos/boil.jpg",
+      "word_audio": "media/b1/2026-10-04/word-audio/boil.mp3"
+    },
+    {
+      "word": "fry",
+      "pos": "verb",
+      "meaning": "to cook in hot oil",
+      "example": "She fried two eggs for breakfast.",
+      "pronunciation": "fry",
+      "persian": "سرخ کردن",
+      "photo": "media/b1/2026-10-04/photos/fry.jpg",
+      "word_audio": "media/b1/2026-10-04/word-audio/fry.mp3"
+    },
+    {
+      "word": "bake",
+      "pos": "verb",
+      "meaning": "to cook in the oven with dry heat",
+      "example": "We baked cookies on Sunday.",
+      "pronunciation": "bayk",
+      "persian": "پختن در فر",
+      "photo": "media/b1/2026-10-04/photos/bake.jpg",
+      "word_audio": "media/b1/2026-10-04/word-audio/bake.mp3"
+    },
+    {
+      "word": "leftover",
+      "pos": "noun",
+      "meaning": "food from a meal that was not eaten",
+      "example": "We ate the leftovers for lunch.",
+      "pronunciation": "LEFT-oh-vur",
+      "persian": "غذای باقی‌مانده",
+      "photo": "media/b1/2026-10-04/photos/leftover.jpg",
+      "word_audio": "media/b1/2026-10-04/word-audio/leftover.mp3"
+    },
+    {
+      "word": "grocery",
+      "pos": "noun",
+      "meaning": "food sold in a store; food you buy",
+      "example": "I bought groceries for the week.",
+      "pronunciation": "GROH-suh-ree",
+      "persian": "خواربار",
+      "photo": "media/b1/2026-10-04/photos/grocery.jpg",
+      "word_audio": "media/b1/2026-10-04/word-audio/grocery.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-10-04/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Home Cooking",
+    "audio": "media/b1/2026-10-04/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-10-04/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Anna's Kitchen Week",
+    "audio": "media/b1/2026-10-04/shadowing.mp3",
+    "transcript": "media/b1/2026-10-04/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'recipe' mean?",
+      "options": [
+        "one of the things used to make food",
+        "a set of instructions for cooking a dish",
+        "the taste of food or drink",
+        "to cook in hot oil"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'ingredient' mean?",
+      "options": [
+        "one of the things used to make food",
+        "the taste of food or drink",
+        "to cook in hot oil",
+        "a small amount of food eaten between meals"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'flavor' mean?",
+      "options": [
+        "the taste of food or drink",
+        "food from a meal that was not eaten",
+        "a set of instructions for cooking a dish",
+        "food sold in a store; food you buy"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'snack' mean?",
+      "options": [
+        "to cook in hot oil",
+        "food with a hot taste, like chili",
+        "food sold in a store; food you buy",
+        "a small amount of food eaten between meals"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'spicy' mean?",
+      "options": [
+        "to cook in very hot water with bubbles",
+        "food with a hot taste, like chili",
+        "to cook in the oven with dry heat",
+        "a set of instructions for cooking a dish"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'boil' mean?",
+      "options": [
+        "one of the things used to make food",
+        "to cook in hot oil",
+        "to cook in very hot water with bubbles",
+        "food with a hot taste, like chili"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'fry' mean?",
+      "options": [
+        "one of the things used to make food",
+        "to cook in hot oil",
+        "to cook in the oven with dry heat",
+        "a set of instructions for cooking a dish"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bake' mean?",
+      "options": [
+        "food with a hot taste, like chili",
+        "to cook in the oven with dry heat",
+        "food from a meal that was not eaten",
+        "a set of instructions for cooking a dish"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'leftover' mean?",
+      "options": [
+        "food with a hot taste, like chili",
+        "food sold in a store; food you buy",
+        "food from a meal that was not eaten",
+        "to cook in hot oil"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'grocery' mean?",
+      "options": [
+        "to cook in very hot water with bubbles",
+        "one of the things used to make food",
+        "food sold in a store; food you buy",
+        "a set of instructions for cooking a dish"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "5B: Past and Present Habits — used to",
+    "explanation": "We use **used to** + infinitive to talk about past habits and states that are NOT true now.\n\nI **used to** hate spicy food, but now I love it. The habit is finished.\n\nThe negative is **didn't use to**. Careful: use, not used!\n\nI **didn't use to** cook at home. Now I try a new recipe every week.\n\nThe question form is **Did you use to**...? Again, no -d on use.\n\n**Did you use to** bake cookies when you were a child?\n\nFor present habits, we use the present simple, often with **usually** or **normally**.\n\nI **usually** buy my groceries on Saturday morning.\n\nA common mistake: **used to** has no present form. Never say \"I use to get up early\".\n\nCareful: **be used to** + verb-ing is different. It means something is normal for you now.\n\nI **am used to** spicy food means spicy food is normal for me.",
+    "examples": [
+      "I *used to* hate spicy food, but now I love it. (past habit, not true now)",
+      "She *didn't use to* cook, but now she tries a new recipe every week. (negative past habit)",
+      "*Did you use to* bake cookies when you were a child? (question about the past)",
+      "We *used to* buy our groceries at the small market, but it closed. (past state)",
+      "I *usually* boil vegetables for dinner. (present habit)",
+      "I *used to* fry everything, but I don't fry *any more*. (past vs now)"
+    ],
+    "practice": [
+      {
+        "q": "Make a sentence: you / not / like / spicy food / as a child",
+        "a": "I didn't use to like spicy food as a child."
+      },
+      {
+        "q": "Ask about the past: your grandmother / bake / bread?",
+        "a": "Did your grandmother use to bake bread?"
+      },
+      {
+        "q": "Correct the mistake: \"I use to eat a snack at night.\"",
+        "a": "I used to eat a snack at night."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I use to boil eggs every morning.",
+          "I used to boil eggs every morning.",
+          "I used boil eggs every morning.",
+          "I use boiling eggs every morning."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ cook, but now she loves trying a new recipe every week.",
+        "options": [
+          "didn't used to",
+          "didn't use to",
+          "doesn't used to",
+          "not used to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ you ___ fry food when you were young?",
+        "options": [
+          "Did / used to",
+          "Do / use to",
+          "Did / use to",
+          "Have / used to"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which sentence is about the present?",
+        "options": [
+          "I used to buy groceries on Friday.",
+          "I usually buy groceries on Friday.",
+          "I use to buy groceries on Friday.",
+          "I am used buy groceries on Friday."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Correct the mistake: \"They use to bake bread every Sunday.\"",
+        "options": [
+          "They used to bake bread every Sunday.",
+          "They uses to bake bread every Sunday.",
+          "They used bake bread every Sunday.",
+          "They are used to bake bread every Sunday."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "\"I am used to spicy food.\" means:",
+        "options": [
+          "I ate spicy food in the past but not now.",
+          "Spicy food is normal for me now.",
+          "I will eat spicy food tomorrow.",
+          "I never eat spicy food."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We ___ live near the market, but we moved last year.",
+        "options": [
+          "use to",
+          "used to",
+          "are used to",
+          "didn't used to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which is correct for a past habit?",
+        "options": [
+          "I usually ate a snack at school.",
+          "I used to eat a snack at school.",
+          "I use to eat a snack at school.",
+          "I am used to eat a snack at school."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ like leftovers, but now he saves them for lunch.",
+        "options": [
+          "didn't used to",
+          "didn't use to",
+          "doesn't use to",
+          "not use to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "\"I used to hate the flavor of fish, but I don't ___ now.\"",
+        "options": [
+          "any more",
+          "used to",
+          "never",
+          "used"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}
