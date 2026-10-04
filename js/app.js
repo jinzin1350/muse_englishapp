@@ -1594,9 +1594,38 @@ function quizGuardOk() {
 
 function go(view, arg) {
   if (!quizGuardOk()) return;
+  /* Onboarding gate: no nickname or no level -> the only allowed destination
+     is the onboarding flow (nickname modal, then the waiting/level view). */
+  if (onboardingNeeded() && view !== 'waiting') view = 'waiting';
   const h = '#/' + view + (arg ? '/' + encodeURIComponent(arg) : '');
   if (window.location.hash === h) { onRoute(); }
   else { window.location.hash = h; }
+}
+
+/* ---- First-login onboarding gate (Fix 1) ----
+   A first-time user must not reach any app view without BOTH a nickname and
+   a level. enterApp() runs the nickname modal then the waiting view, but the
+   tab bar / hash navigation could bypass them. These guards close every path:
+   init() -> enterApp(), Google SSO return, page reload / PWA resume, deep
+   links, and manual hash edits all funnel through onRoute()/go(). */
+function onboardingNeeded() {
+  const u = state.user;
+  return !!(u && !u.demo && !u.isAdmin && (!u.displayName || !u.level));
+}
+function enforceOnboardingGate() {
+  if (!onboardingNeeded()) return false;
+  const u = state.user;
+  /* Nickname comes first: make sure the blocking modal is up. It has no
+     dismiss path (locked overlay, no close button), so the user can only
+     continue by saving a valid nickname. */
+  if (!u.displayName && !document.getElementById('app-modal')) {
+    ensureNickname('').then(function () { onRoute(); }, function () { onRoute(); });
+  }
+  /* Park on the waiting (level picker) view; setChrome() hides the tab bar
+     and header while the gate is active, so there is no other navigation. */
+  if (state.view !== 'waiting') show('waiting');
+  else setChrome();
+  return true;
 }
 
 function onRoute() {
@@ -1614,6 +1643,8 @@ function onRoute() {
   if (!state.user) {
     if (PUBLIC_VIEWS.indexOf(view) === -1) view = 'landing';
   } else {
+    // Logged-in: onboarding gate first — no nickname/level means no app views.
+    if (enforceOnboardingGate()) return;
     // Logged-in: learner views win.
     if (LEARNER_VIEWS.indexOf(view) === -1) {
       view = 'home';
@@ -1653,9 +1684,13 @@ function show(view, arg) {
 /* ---------------- chrome (headers / profile menu / nav) ---------------- */
 function setChrome() {
   const logged = !!state.user;
+  /* While the onboarding gate is active the user must see ONLY the onboarding
+     screens: hide the app header and tab bar so there is no way to navigate
+     into the app without a nickname and a level. */
+  const gating = onboardingNeeded();
   $('#landing-header').classList.toggle('hidden', logged || state.view === 'landing' || state.view === 'signin' || state.view === 'signup');
-  $('#app-header').classList.toggle('hidden', !logged);
-  $('#tabbar').classList.toggle('hidden', !logged);
+  $('#app-header').classList.toggle('hidden', !logged || gating);
+  $('#tabbar').classList.toggle('hidden', !logged || gating);
   if (logged) {
     const initial = (state.user.email || '?').trim().charAt(0).toUpperCase();
     $('#profile-initial').textContent = initial;
@@ -3448,6 +3483,72 @@ function loadAssignProgress(aid) {
 function clearAssignProgress(aid) {
   try { localStorage.removeItem(assignProgKey(aid)); } catch (e) {}
 }
+/* ---- Word/grammar quiz progress persistence (Fix 2) ----
+   Same idea as assignments: a student who runs out of hearts, exits to earn
+   more in review, and comes back must resume where they left off — never from
+   question 1. The full question set is saved because buildDuoDeck() shuffles,
+   so a rebuilt deck would not match. Saved on every question transition and
+   on exit/pause; cleared only on completion or explicit "start over". */
+function quizProgKey(kind, date) {
+  const email = state.user ? state.user.email : 'anon';
+  return 'ela_quizprog_' + email + '_' + kind + '_' + (date || todayStr());
+}
+function saveQuizProgress() {
+  const q = state.quiz;
+  if (!q || (q.kind !== 'word' && q.kind !== 'grammar')) return;
+  try {
+    localStorage.setItem(quizProgKey(q.kind, q.date), JSON.stringify({
+      questions: q.questions, idx: q.idx, correct: q.correct,
+      hearts: q.hearts, log: q.log || [], kind: q.kind, date: q.date,
+      level: q.level, theme: q.theme, savedAt: Date.now()
+    }));
+  } catch (e) {}
+}
+function loadQuizProgress(kind, date) {
+  try {
+    const v = JSON.parse(localStorage.getItem(quizProgKey(kind, date || todayStr())) || 'null');
+    /* Only resume if the student actually progressed (idx > 0); a fresh
+       session saved at question 1 must not trigger the resume prompt. */
+    if (v && v.questions && v.questions.length &&
+        typeof v.idx === 'number' && v.idx > 0 && v.idx < v.questions.length) return v;
+    return null;
+  } catch (e) { return null; }
+}
+function clearQuizProgress(kind, date) {
+  try { localStorage.removeItem(quizProgKey(kind, date || todayStr())); } catch (e) {}
+}
+/* Save whichever quiz progress applies (assignment and/or word/grammar). */
+function saveProgressAny() {
+  saveAssignProgress();
+  saveQuizProgress();
+}
+/* ---- Hearts policy by account age (Fix 3) ----
+   Every NEW quiz session grants hearts based on account age: 30 hearts for
+   accounts <= 30 days old, 10 hearts after that. Per-session grant, not daily.
+   Resumed sessions keep their progress (see beginQuizSession). */
+function accountAgeDays() {
+  try {
+    const u = state.user;
+    if (u && u.createdAt) {
+      const ms = Date.now() - new Date(u.createdAt).getTime();
+      if (!isNaN(ms) && ms >= 0) return ms / 86400000;
+    }
+    // Fallback: first-seen marker (generous default -> 30 hearts).
+    const k = 'el_first_seen_' + (u && u.id ? u.id : 'anon');
+    let fs = null;
+    try { fs = localStorage.getItem(k); } catch (e) {}
+    if (!fs) {
+      fs = new Date().toISOString();
+      try { localStorage.setItem(k, fs); } catch (e) {}
+      return 0;
+    }
+    const ms2 = Date.now() - new Date(fs).getTime();
+    return (isNaN(ms2) || ms2 < 0) ? 0 : ms2 / 86400000;
+  } catch (e) { return 0; }
+}
+function sessionHeartGrant() {
+  return accountAgeDays() <= 30 ? 30 : 10;
+}
 function startAssignment(i) {
   const a = (state.homeworkList || [])[i];
   if (!a || !a.questions || !a.questions.length) return;
@@ -4103,7 +4204,7 @@ async function enterApp() {
   let level = null;
   let prof = null;
   try {
-    const res = await sb.from('profiles').select('level,display_name,referred_by,country_code,country,country_source,welcome_seen_at').eq('id', u.id).single();
+    const res = await sb.from('profiles').select('level,display_name,referred_by,country_code,country,country_source,welcome_seen_at,created_at').eq('id', u.id).single();
     if (res.error) throw res.error;
     prof = res.data || null;
   } catch (e) {
@@ -4148,6 +4249,7 @@ async function enterApp() {
     countrySource: (prof && prof.country_source) || null,
     timezone: (prof && prof.timezone) || null,
     welcomeSeenAt: (prof && prof.welcome_seen_at) || null,
+    createdAt: (prof && prof.created_at) || null,
   };
   try { localStorage.setItem('el_last_user', u.email); } catch (e) {}
   /* First paint ASAP: the syncs below don't affect the first screen, so they
@@ -5123,18 +5225,69 @@ async function startQuiz(kind, dateStr) {
     });
   }
   if (!questions.length) return;
+  /* Fix 2: resume an in-progress word/grammar quiz instead of restarting it. */
+  if (kind === 'word' || kind === 'grammar') {
+    const prog = loadQuizProgress(kind, m.date);
+    if (prog) { showQuizResumePrompt(kind, m, questions, prog); return; }
+  }
+  beginQuizSession(kind, m, questions, null);
+}
+
+/* Start (or resume) a quiz session. prog = saved progress to resume, or null
+   for a brand-new session. Fix 3: new sessions grant hearts by account age
+   (30 for <=30 days, 10 after); resumed sessions keep the better of the saved
+   hearts and the current daily hearts, so hearts earned in review apply. */
+function beginQuizSession(kind, m, questions, prog) {
+  let qHearts;
+  if (prog) {
+    qHearts = Math.max(prog.hearts || 0, getHearts());
+  } else if (kind === 'word' || kind === 'grammar') {
+    qHearts = sessionHeartGrant();
+    setHearts(qHearts);
+  } else {
+    qHearts = 0;
+  }
   state.quiz = {
-    kind: kind, questions: questions, idx: 0, correct: 0,
+    kind: kind, questions: prog ? prog.questions : questions,
+    idx: prog ? prog.idx : 0, correct: prog ? prog.correct : 0,
+    log: (prog && prog.log) || [],
     answered: false, picked: -1, wasCorrect: false,
-    hearts: (kind === 'word' || kind === 'grammar') ? getHearts() : 0,
+    hearts: qHearts,
     date: m.date, level: m.level, theme: m.theme
   };
+  saveQuizProgress();
   renderQuizView();
+}
+
+/* "Continue where you left off?" — shown when re-entering a word/grammar quiz
+   with saved in-progress state. Never silently restarts. */
+function showQuizResumePrompt(kind, m, freshQuestions, prog) {
+  if (document.getElementById('quiz-resume-modal')) return;
+  const d = document.createElement('div');
+  d.className = 'duo-modal-wrap';
+  d.id = 'quiz-resume-modal';
+  d.innerHTML = '<div class="duo-modal"><h3>Continue where you left off?</h3>' +
+    '<p>You reached question ' + (prog.idx + 1) + ' of ' + prog.questions.length + '.</p>' +
+    '<button class="duo-continue btn-block" id="quiz-resume-yes">▶ Continue</button>' +
+    '<button class="btn btn-ghost btn-block" id="quiz-resume-no">↺ Start over</button></div>';
+  $('#view').appendChild(d);
+  document.getElementById('quiz-resume-yes').onclick = function () {
+    d.remove();
+    beginQuizSession(kind, m, null, prog);
+  };
+  document.getElementById('quiz-resume-no').onclick = function () {
+    d.remove();
+    clearQuizProgress(kind, m.date);
+    beginQuizSession(kind, m, freshQuestions, null);
+  };
 }
 
 function renderQuizView() {
   const q = state.quiz;
-  if (q.kind === 'word' || q.kind === 'assignment' || q.kind === 'grammar') { renderDuoQuizView(); return; }
+  /* Fix 4: the mistakes review uses the same full-screen Duolingo-style player
+     as the word/grammar quizzes (one question at a time, instant feedback,
+     hearts, progress bar, XP/result screen). */
+  if (q.kind === 'word' || q.kind === 'assignment' || q.kind === 'grammar' || q.kind === 'mistakes') { renderDuoQuizView(); return; }
   const v = $('#view');
   const cur = q.questions[q.idx];
   const total = q.questions.length;
@@ -5203,6 +5356,9 @@ function nextQuiz() {
 function finishQuiz() {
   const q = state.quiz;
   document.body.classList.remove('duo-playing');
+  /* Fix 2: completion clears the saved in-progress state. */
+  if (q && (q.kind === 'word' || q.kind === 'grammar')) clearQuizProgress(q.kind, q.date);
+  if (q && q.kind === 'assignment' && q.assignmentId) clearAssignProgress(q.assignmentId);
   const total = q.questions.length;
   const pct = Math.round((q.correct / total) * 100);
   let heartEarned = false;
@@ -5237,8 +5393,12 @@ function finishQuiz() {
   state.quiz = null;
   const praise = pct >= 85 ? 'Excellent work! ✨' : pct >= 60 ? 'Good — keep practicing! 💪' : 'Keep going — you\'ve got this! 📚';
   const xpGain = q.kind === 'word' ? 10 + q.correct : 10;
-  /* resuming an assignment paused for a hearts review */
-  const resumeA = (q.kind === 'mistakes' && state.pausedQuiz && state.pausedQuiz.kind === 'assignment') ? state.pausedQuiz : null;
+  /* resuming a quiz paused for a hearts review (Fix 2: word/grammar too) */
+  const resumeA = (q.kind === 'mistakes' && state.pausedQuiz && state.pausedQuiz.kind !== 'mistakes') ? state.pausedQuiz : null;
+  const resumeLabel = resumeA
+    ? (resumeA.kind === 'assignment' ? '📝 Continue homework · Q' : '▶ Continue quiz · Q') +
+      (resumeA.idx + 1) + '/' + resumeA.questions.length
+    : '';
   $('#view').innerHTML =
   '<div class="duo-results"><div class="duo-rcard">' +
     '<div class="duo-hero"><img src="/media/quiz/trophy.png" alt="" loading="lazy"></div>' +
@@ -5251,7 +5411,7 @@ function finishQuiz() {
       '<div class="duo-pill gold"><span class="pi">★</span><span class="pn">+' + xpGain + '</span><span class="pl">XP</span></div>' +
     '</div>' +
     '<div class="duo-rbtns">' +
-      (resumeA ? '<button class="btn duo-btn-review" data-action="resume-paused">📝 Continue homework · Q' + (resumeA.idx + 1) + '/' + resumeA.questions.length + '</button>' : '') +
+      (resumeA ? '<button class="btn duo-btn-review" data-action="resume-paused">' + resumeLabel + '</button>' : '') +
       '<a class="btn duo-btn-home" href="#/home">🏠 Home</a>' +
       '<button class="btn duo-btn-review" data-action="practice-again">🔁 Review →</button>' +
     '</div></div></div>';
@@ -5277,11 +5437,11 @@ function heartsKey() {
 function getHearts() {
   try {
     const v = parseInt(localStorage.getItem(heartsKey()), 10);
-    return isNaN(v) ? 5 : Math.max(0, Math.min(5, v));
+    return isNaN(v) ? 5 : Math.max(0, Math.min(99, v));
   } catch (e) { return 5; }
 }
 function setHearts(n) {
-  try { localStorage.setItem(heartsKey(), String(Math.max(0, Math.min(5, n)))); } catch (e) {}
+  try { localStorage.setItem(heartsKey(), String(Math.max(0, Math.min(99, n)))); } catch (e) {}
 }
 
 function buildDuoDeck(m) {
@@ -5333,10 +5493,12 @@ function buildDuoDeck(m) {
 
 function duoTopbar(q) {
   const pct = Math.round((q.idx / q.questions.length) * 100);
+  /* Mistakes review never costs hearts (it earns them) — hide the counter. */
+  const heartsHtml = (q.kind === 'mistakes') ? '' : '<span class="duo-hearts">❤️ ' + q.hearts + '</span>';
   return '<div class="duo-top">' +
     '<button class="duo-x" data-action="duo-exit" aria-label="Quit quiz">✕</button>' +
     '<div class="duo-pbar"><div class="duo-pfill" style="width:' + pct + '%"></div></div>' +
-    '<span class="duo-hearts">❤️ ' + q.hearts + '</span></div>';
+    heartsHtml + '</div>';
 }
 
 function duoAssistHTML(q, cur) {
@@ -5450,14 +5612,18 @@ async function duoAnswer(idx) {
   if (cur.qtype === 'listen') closePlayer();
   if (q.wasCorrect) {
     q.correct++;
-  } else {
-    /* every wrong answer becomes reviewable; chained so the review button never races it */
+    /* Fix 4: answering a review question correctly clears that mistake. */
+    if (q.kind === 'mistakes' && cur.mistakeId) removeMistake(cur.mistakeId);
+  } else if (q.kind !== 'mistakes') {
+    /* every wrong answer becomes reviewable; chained so the review button never races it.
+       (A mistakes-review question is already a mistake: never re-save it, and a
+       wrong review answer never costs a heart — Fix 4.) */
     duoSavePending = duoSavePending.catch(function () {}).then(function () {
       return saveDuoMistake(q, cur, idx);
     });
-    if (duoLoseHeart(q) <= 0) { saveAssignProgress(); renderHeartsOut(); return; }
+    if (duoLoseHeart(q) <= 0) { saveProgressAny(); renderHeartsOut(); return; }
   }
-  saveAssignProgress();
+  saveProgressAny();
   renderDuoQuizView();
 }
 
@@ -5522,7 +5688,8 @@ function duoCheck() {
   q.answered = true;
   q.wasCorrect = (built === cur.tokens.join(' '));
   if (q.wasCorrect) q.correct++;
-  else if (duoLoseHeart(q) <= 0) { renderHeartsOut(); return; }
+  else if (q.kind !== 'mistakes' && duoLoseHeart(q) <= 0) { saveProgressAny(); renderHeartsOut(); return; }
+  saveProgressAny();
   renderDuoQuizView();
 }
 
@@ -5531,7 +5698,7 @@ function duoNext() {
   if (!q) return;
   if (q.idx + 1 < q.questions.length) {
     q.idx++; q.answered = false; q.picked = -1; q.wasCorrect = false;
-    saveAssignProgress();
+    saveProgressAny();
     renderDuoQuizView();
   } else {
     finishQuiz();
@@ -5558,12 +5725,13 @@ function renderHeartsOut() {
 
 function duoExit() {
   if (document.getElementById('duo-exit-modal')) return;
-  const isA = state.quiz && state.quiz.kind === 'assignment';
+  const k = state.quiz && state.quiz.kind;
+  const saved = (k === 'assignment' || k === 'word' || k === 'grammar');
   const d = document.createElement('div');
   d.className = 'duo-modal-wrap';
   d.id = 'duo-exit-modal';
   d.innerHTML = '<div class="duo-modal"><h3>Quit this quiz?</h3>' +
-    '<p>' + (isA ? 'Your progress is saved — you can continue later.' : 'Your progress will be lost.') + '</p>' +
+    '<p>' + (saved ? 'Your progress is saved — you can continue later.' : 'Your progress will be lost.') + '</p>' +
     '<button class="duo-continue bad btn-block" data-action="duo-quit">Quit</button>' +
     '<button class="btn btn-ghost btn-block" data-action="duo-keep">Keep playing</button></div>';
   $('#view').appendChild(d);
@@ -5572,7 +5740,9 @@ function duoExit() {
 function duoQuit() {
   const q = state.quiz;
   const date = q && q.date;
-  saveAssignProgress();
+  /* Fix 2: quitting saves progress (resume on re-entry); only completion or
+     an explicit "start over" clears it. */
+  saveProgressAny();
   state.quiz = null;
   document.body.classList.remove('duo-playing');
   const m = document.getElementById('duo-exit-modal');
@@ -5610,7 +5780,8 @@ async function buyHearts(btn) {
     }
     await awardPoints('hearts_refill', -HEART_REFILL_COST, 'hr-' + Date.now(), true);
     await refreshMyPoints();
-    setHearts(5);
+    /* Refill to the session grant (30 for new accounts, 10 after 30 days). */
+    setHearts(sessionHeartGrant());
     say('❤️ Hearts refilled! Starting a new run…');
     setTimeout(function () {
       if (wasAssignment && state.quiz && state.quiz.kind === 'assignment') {
@@ -6572,12 +6743,12 @@ function bindEvents() {
     else if (a === 'duo-keep') duoKeep();
     else if (a === 'duo-earn-heart') {
       /* wait for the just-saved mistake (max ~5s), then open the review quiz.
-         An in-progress assignment is stashed so the student can resume it
-         exactly where they left off after the review. */
+         An in-progress quiz is stashed so the student can resume it exactly
+         where they left off after the review (Fix 2: word/grammar too). */
       t.disabled = true;
-      if (state.quiz && state.quiz.kind === 'assignment') {
+      if (state.quiz && (state.quiz.kind === 'assignment' || state.quiz.kind === 'word' || state.quiz.kind === 'grammar')) {
         state.pausedQuiz = state.quiz;
-        saveAssignProgress();
+        saveProgressAny();
       }
       var waitSave = duoSavePending.catch(function () {});
       var timeout = new Promise(function (res) { setTimeout(res, 5000); });
@@ -6600,14 +6771,15 @@ function bindEvents() {
     else if (a === 'resume-paused') {
       const pq = state.pausedQuiz;
       state.pausedQuiz = null;
-      if (pq && pq.kind === 'assignment') {
-        /* the heart-killing question was answered wrong — let them retry it fresh */
+      if (pq && (pq.kind === 'assignment' || pq.kind === 'word' || pq.kind === 'grammar')) {
+        /* the heart-killing question was answered wrong — let them retry it fresh.
+           Hearts earned in review apply: keep the better of saved/current (Fix 2). */
         if (pq.log && pq.log.length > pq.idx) pq.log.pop();
         pq.answered = false; pq.picked = -1; pq.wasCorrect = false;
-        pq.hearts = getHearts();
+        pq.hearts = Math.max(pq.hearts || 0, getHearts());
         state.quiz = pq;
         document.body.classList.add('duo-playing');
-        saveAssignProgress();
+        saveProgressAny();
         renderDuoQuizView();
       } else { go('home'); }
     }
