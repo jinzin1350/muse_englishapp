@@ -1,6 +1,32 @@
 {
   "products": [
     {
+      "id": "clarston-humidifier-2-5l-2026-10-04",
+      "name_fa": "دستگاه بخور سرد کلارستون ۲.۵ لیتری",
+      "name_en": "Clarston 2.5L Cool Mist Humidifier",
+      "price_cad": 23.99,
+      "regular_cad": 29.99,
+      "discount_pct": 20,
+      "image": "img/clarston-humidifier-2-5l-2026-10-04.jpg",
+      "url": "https://www.amazon.ca/dp/B0CWMS1GK5?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "بخور سرد بی‌صدا برای خواب زمستانی؛ مناسب اتاق‌خواب با مخزن ۲.۵ لیتری و ۲۵ ساعت کار مداوم"
+    },
+    {
+      "id": "logitech-g502-hero-2026-10-04",
+      "name_fa": "ماوس گیمینگ لاجیتک G502 HERO",
+      "name_en": "Logitech G502 HERO Wired Gaming Mouse",
+      "price_cad": 34.98,
+      "regular_cad": 74.99,
+      "discount_pct": 53,
+      "image": "img/logitech-g502-hero-2026-10-04.jpg",
+      "url": "https://www.amazon.ca/dp/B07GBZ4Q68?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "ماوس افسانه‌ای گیمینگ با سنسور HERO 25K؛ یکی از پرفروش‌ترین ماوس‌های جهان با بیش از نصف قیمت"
+    },
+    {
       "id": "neck-heating-pad-vibration",
       "name_fa": "شال گرم‌کن گردن با ویبره",
       "name_en": "Neck Heating Pad with Vibration (Purple)",
@@ -75,19 +101,6 @@
       "regular_cad": null,
       "source": "amazon",
       "url": "https://www.amazon.ca/dp/B0DW9BXCYW"
-    },
-    {
-      "blurb_fa": "بخاری روغنی کم‌مصرف برای زمستان کانادا؛ با شماره کالا در انبار کاستکو پیدا کنید",
-      "discount_pct": null,
-      "id": "delonghi-dragon-costco",
-      "image": "img/delonghi-dragon.jpg",
-      "item_no": "1115570",
-      "name_en": "DeLonghi Dragon Radiant Heater",
-      "name_fa": "بخاری روغنی دلونگی دراگون",
-      "price_cad": 119.99,
-      "regular_cad": null,
-      "source": "costco",
-      "url": "https://www.amazon.ca/dp/B07XTW7D9X"
     }
   ],
   "updated_fa": "یکشنبه ۱۲ مهر"
