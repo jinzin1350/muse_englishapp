@@ -4253,43 +4253,23 @@ function tutLang() {
 function buildTutorialSteps() {
   const fa = tutLang() === 'fa';
   const T = function (f, e) { return fa ? f : e; };
-  const hasLesson = !!(state.lesson && state.lesson.date);
-  const steps = [
-    { id: 'home', view: 'home', selector: '#tabbar .tab[data-view="home"]',
-      kicker: '🏠', title: T('خونه', 'Home'),
-      text: T('هر روز از اینجا شروع کن', 'Start here every day') },
-    { id: 'lesson', view: 'lesson', selector: '.lesson-title',
-      kicker: '📖', title: T('درس امروز', 'Today\u2019s lesson'),
-      text: T('هر روز ساعت ۷ صبح یه درس جدید میاد', 'A new lesson arrives every day at 7 AM') },
-    { id: 'lessontab', view: 'home', selector: '#tabbar .tab[data-view="lesson"]',
-      kicker: '📖', title: T('دکمه درس', 'Lesson button'),
-      text: T('با این دکمه همیشه به درس امروز برمی‌گردی', 'This button always takes you back to today\u2019s lesson') },
-    { id: 'words', view: 'lesson', tab: 'words', selector: '.word-card',
+  /* 4-step core-loop tour: words -> quiz -> streak -> podcast.
+     Each step highlights one stable UI target (tab buttons + streak banner),
+     one sentence each, skippable, ends at today's lesson. */
+  return [
+    { id: 'words', view: 'lesson', selector: '.lesson-tab[data-tab="words"]',
       kicker: '📝', title: T('کلمات', 'Words'),
-      text: T('کلمات امروز — بزن رو 🔊 تا تلفظ هر کلمه رو بشنوی', 'Today\u2019s words — tap 🔊 to hear each pronunciation') },
+      text: T('کلمات امروز رو اینجا یاد بگیر', 'Learn today\u2019s words here') },
     { id: 'quiz', selector: '.lesson-tab[data-tab="quiz"]',
       kicker: '🎯', title: T('کوییز', 'Quiz'),
-      text: T('اینجا دانشت رو محک می‌زنی — هر جواب درست XP میده ⚡', 'Test yourself here — every correct answer earns XP ⚡') },
-    { id: 'podcast', tab: 'podcast', selector: '#view [data-audio-card]',
+      text: T('کوییز بده و XP بگیر', 'Take the quiz and earn XP') },
+    { id: 'streak', view: 'home', selector: '.h-streak',
+      kicker: '🔥', title: T('استریک', 'Streak'),
+      text: T('هر روز بیا تا استریکت نپره', 'Come back every day to keep your streak') },
+    { id: 'podcast', view: 'lesson', selector: '.lesson-tab[data-tab="podcast"]',
       kicker: '🎧', title: T('پادکست', 'Podcast'),
-      text: T('همه‌ی کلمات امروز توی مکالمه استفاده شدن', 'Today\u2019s words all appear in the conversation') },
-    { id: 'shadowing', tab: 'shadowing', selector: '#view [data-audio-card]',
-      kicker: '🎤', title: T('شدویینگ', 'Shadowing'),
-      text: T('گوش بده و با صدای بلند تکرار کن', 'Listen and repeat out loud') },
-    { id: 'grammar', tab: 'grammar', selector: '.rule-card',
-      kicker: '📏', title: T('گرامر', 'Grammar'),
-      text: T('گرامر روز — کوتاه و با مثال‌های ساده', 'Today\u2019s grammar — short, with simple examples') },
-    { id: 'progress', view: 'scores', selector: '.tut-anchor',
-      kicker: '📊', title: T('پیشرفت', 'Progress'),
-      text: T('اینجا امتیازها، XP و نمودار پیشرفتته', 'Your scores, XP and progress charts live here') },
-    { id: 'challenge', view: 'challenge', selector: '.ch-wrap',
-      kicker: '🏆', title: T('چالش', 'Challenge'),
-      text: T('با بقیه رقابت کن و امتیاز جمع کن', 'Compete with others and collect points') },
-    { id: 'inbox', view: 'inbox', selector: '.msg2-title',
-      kicker: '💬', title: T('صندوق پیام', 'Inbox'),
-      text: T('پیام‌های معلمت اینجا میاد', 'Messages from your teacher arrive here') }
+      text: T('کلمات امروز رو توی مکالمه بشنو', 'Hear today\u2019s words in conversation') }
   ];
-  return hasLesson ? steps : steps.filter(function (s) { return !s.tab && s.id !== 'lesson'; });
 }
 /* One persistent overlay for the whole tour: the dim NEVER lifts between
    steps (fixes the unlocked-screen gap). The hole glides to each target,
@@ -4461,8 +4441,8 @@ function showTutorialDone() {
   if (!text) return;
   text.innerHTML = '<div class="tut-done-emoji">🎉</div>' +
     '<div class="tut-done-title">' + (fa ? 'تمومه!' : 'That\u2019s it!') + '</div>' +
-    '<div class="tut-body">' + esc(fa ? 'فردا یه درس جدید منتظرته — فقط ۱۵ دقیقه 🌱'
-                                      : 'A new lesson waits tomorrow — just 15 minutes 🌱') + '</div>' +
+    '<div class="tut-body">' + esc(fa ? 'بزن بریم سر درس امروز 🌱'
+                                      : 'Let\u2019s dive into today\u2019s lesson 🌱') + '</div>' +
     '<button id="tut-cta">' + (fa ? 'شروع 🚀' : 'Let\u2019s go 🚀') + '</button>';
   text.setAttribute('dir', fa ? 'rtl' : 'ltr');
   text.setAttribute('lang', fa ? 'fa' : 'en');
@@ -4474,7 +4454,7 @@ function showTutorialDone() {
   text.style.transform = 'translateY(0)';
   text.style.opacity = '1';
   const cta = document.getElementById('tut-cta');
-  if (cta) cta.addEventListener('click', function (e) { e.stopPropagation(); endTutorial(); go('home'); });
+  if (cta) cta.addEventListener('click', function (e) { e.stopPropagation(); endTutorial(); state.lessonTab = 'words'; go('lesson'); });
 }
 function closeTutorialUI() {
   const ov = document.getElementById('tut-ov');
