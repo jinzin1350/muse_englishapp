@@ -1293,7 +1293,7 @@ body{background:#FFF9F3;}
 .grammar-hero .hero-badge{background:linear-gradient(135deg,#FF9A3D,#F9610D);color:#fff;font-size:.74rem;font-weight:800;border-radius:999px;padding:.38rem .85rem;box-shadow:0 4px 12px rgba(249,97,13,.4);}
 .section-kicker{font-family:Georgia,serif;font-size:1.2rem;font-weight:700;color:#C2410C;margin:1.25rem 0 .75rem;}
 .rule-card{display:flex;gap:.85rem;background:#fff;border:1px solid #FBEFE0;border-radius:20px;padding:1.05rem;margin-bottom:.75rem;box-shadow:0 8px 20px rgba(190,130,70,.10);align-items:flex-start;}
-.rule-num{width:34px;height:34px;flex:none;border-radius:50%;background:linear-gradient(135deg,#FF9A3D,#F9610D);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(249,97,13,.35);}
+.rule-num{position:static;width:34px;height:34px;flex:none;border-radius:50%;background:linear-gradient(135deg,#FF9A3D,#F9610D);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(249,97,13,.35);}
 .rule-card p{margin:0;color:#3A4456;line-height:1.65;font-size:.96rem;}
 .rule-card .hl{color:#C2410C;font-weight:800;}
 .example-card{background:#fff;border:1px solid #FBEFE0;border-left:4px solid #F5A623;border-radius:16px;padding:.95rem 1.05rem;margin-bottom:.65rem;box-shadow:0 6px 14px rgba(190,130,70,.08);}
