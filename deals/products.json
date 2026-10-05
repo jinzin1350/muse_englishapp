@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "thermos-icon-16oz-food-jar-lavender",
+      "name_fa": "ظرف غذای حرارتی ترموس ICON (یاسی)",
+      "name_en": "THERMOS ICON Series 16 Ounce Stainless Steel Vacuum Food Jar, Lavender",
+      "price_cad": 24.0,
+      "regular_cad": 36.99,
+      "discount_pct": 35,
+      "added_fa": "دوشنبه، ۵ اکتبر ۲۰۲۶",
+      "image": "img/thermos-icon-16oz-food-jar-lavender.jpg",
+      "url": "https://www.amazon.ca/dp/B0D41VNFN3?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "غذا را تا ۱۰ ساعت گرم و ۲۴ ساعت سرد نگه می‌دارد؛ قاشق استیل همراه دارد"
+    },
+    {
+      "id": "botslab-810se-solar-doorbell-2k-hdr",
+      "name_fa": "زنگ تصویری خورشیدی BOTSLAB 810SE",
+      "name_en": "BOTSLAB 810SE Solar Wireless Doorbell Camera 2K HDR",
+      "price_cad": 55.99,
+      "regular_cad": 79.99,
+      "discount_pct": 30,
+      "added_fa": "دوشنبه، ۵ اکتبر ۲۰۲۶",
+      "image": "img/botslab-810se-solar-doorbell-2k-hdr.jpg",
+      "url": "https://www.amazon.ca/dp/B0GLXMMLGX?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "زنگ درب خورشیدی ۲K بدون اشتراک ماهانه؛ کد تخفیف 3ZXKAC59 را در تسویه‌حساب وارد کنید"
+    },
+    {
       "id": "cuisinart-purelyceramic-12pc-set",
       "name_fa": "ست ۱۲تکه قابلمه و تابه کوییزین‌آرت PURELYCERAMIC",
       "name_en": "Cuisinart Culinary Collection 12-Piece Pots and Pans Set, PURELYCERAMIC Nonstick",
@@ -11,7 +39,8 @@
       "url": "https://www.amazon.ca/dp/B0C7HFH8QB?tag=alirezaebra0d-20",
       "source": "amazon",
       "item_no": null,
-      "blurb_fa": "پوشش سرامیکی نچسب؛ ست ۱۲ تکه کامل برای کل آشپزخانه — از ماهیتابه تا قابلمه بزرگ."
+      "blurb_fa": "پوشش سرامیکی نچسب؛ ست ۱۲ تکه کامل برای کل آشپزخانه — از ماهیتابه تا قابلمه بزرگ.",
+      "added_fa": "دوشنبه، ۵ اکتبر ۲۰۲۶"
     },
     {
       "id": "ninja-12in1-double-oven-dct401c",
@@ -24,7 +53,8 @@
       "url": "https://www.amazon.ca/dp/B0CKD5B9JV?tag=alirezaebra0d-20",
       "source": "amazon",
       "item_no": null,
-      "blurb_fa": "دو فر مستقل با درب هوشمند FlexDoor؛ هم‌زمان دو غذا با دمای متفاوت — انتخاب آمازون با صدها خرید در ماه گذشته."
+      "blurb_fa": "دو فر مستقل با درب هوشمند FlexDoor؛ هم‌زمان دو غذا با دمای متفاوت — انتخاب آمازون با صدها خرید در ماه گذشته.",
+      "added_fa": "دوشنبه، ۵ اکتبر ۲۰۲۶"
     },
     {
       "id": "cuisinart-compactmax-air-fryer-210c",
@@ -37,7 +67,8 @@
       "url": "https://www.amazon.ca/dp/B0FNYBG8F7?tag=alirezaebra0d-20",
       "source": "amazon",
       "item_no": null,
-      "blurb_fa": "۴ کاره در یک دستگاه: سرخ‌کن، پخت، بریان و گرم نگه‌داشتن — ظرفیت ۸ کوارت برای غذای خانواده، با طراحی باریک که جای کمی می‌گیرد."
+      "blurb_fa": "۴ کاره در یک دستگاه: سرخ‌کن، پخت، بریان و گرم نگه‌داشتن — ظرفیت ۸ کوارت برای غذای خانواده، با طراحی باریک که جای کمی می‌گیرد.",
+      "added_fa": "دوشنبه، ۵ اکتبر ۲۰۲۶"
     },
     {
       "id": "clarston-humidifier-2-5l-2026-10-04",
@@ -50,7 +81,8 @@
       "url": "https://www.amazon.ca/dp/B0CWMS1GK5?tag=alirezaebra0d-20",
       "source": "amazon",
       "item_no": null,
-      "blurb_fa": "بخور سرد بی‌صدا برای خواب زمستانی؛ مناسب اتاق‌خواب با مخزن ۲.۵ لیتری و ۲۵ ساعت کار مداوم"
+      "blurb_fa": "بخور سرد بی‌صدا برای خواب زمستانی؛ مناسب اتاق‌خواب با مخزن ۲.۵ لیتری و ۲۵ ساعت کار مداوم",
+      "added_fa": "یکشنبه، ۴ اکتبر ۲۰۲۶"
     },
     {
       "id": "logitech-g502-hero-2026-10-04",
@@ -63,7 +95,8 @@
       "url": "https://www.amazon.ca/dp/B07GBZ4Q68?tag=alirezaebra0d-20",
       "source": "amazon",
       "item_no": null,
-      "blurb_fa": "ماوس افسانه‌ای گیمینگ با سنسور HERO 25K؛ یکی از پرفروش‌ترین ماوس‌های جهان با بیش از نصف قیمت"
+      "blurb_fa": "ماوس افسانه‌ای گیمینگ با سنسور HERO 25K؛ یکی از پرفروش‌ترین ماوس‌های جهان با بیش از نصف قیمت",
+      "added_fa": "یکشنبه، ۴ اکتبر ۲۰۲۶"
     },
     {
       "id": "neck-heating-pad-vibration",
@@ -76,33 +109,8 @@
       "url": "https://www.amazon.ca/dp/B0F842QTWG?tag=alirezaebra0d-20",
       "source": "amazon",
       "item_no": null,
-      "blurb_fa": "برای سرما و گردن‌درد پاییز تورنتو — شال گرم‌کننده با ماساژ و ویبره"
-    },
-    {
-      "id": "babylisspro-foilfx-shaver",
-      "name_fa": "ریش‌تراش بی‌بی‌لیس‌پرو FoilFX",
-      "name_en": "BaBylissPRO FoilFX Cordless Double Foil Shaver",
-      "price_cad": 108.74,
-      "regular_cad": null,
-      "discount_pct": 36,
-      "image": "img/babylisspro-foilfx-shaver.jpg",
-      "url": "https://www.amazon.ca/dp/B07SZG537S?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "انتخاب آرایشگرهای حرفه‌ای — اصلاح تمیز و نزدیک به پوست با فویل طلایی"
-    },
-    {
-      "id": "sony-srs-xb100-speaker",
-      "name_fa": "اسپیکر بلوتوثی سونی SRS-XB100",
-      "name_en": "Sony SRS-XB100 Wireless Bluetooth Speaker",
-      "price_cad": 48.0,
-      "regular_cad": null,
-      "discount_pct": 40,
-      "image": "img/sony-srs-xb100-speaker.jpg",
-      "url": "https://www.amazon.ca/dp/B0C29CMM4R?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "سونی اصل، ضدآب و ضدگردوغبار با ۱۶ ساعت باتری — برای مهمونی و کمپ عالیه"
+      "blurb_fa": "برای سرما و گردن‌درد پاییز تورنتو — شال گرم‌کننده با ماساژ و ویبره",
+      "added_fa": "یکشنبه، ۴ اکتبر ۲۰۲۶"
     }
   ],
   "updated_fa": "دوشنبه ۱۳ مهر"
