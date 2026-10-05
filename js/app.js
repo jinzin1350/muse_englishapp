@@ -3572,35 +3572,43 @@ async function loadAdminTeacherView(teacherId) {
     state.viewTeacher = { user_id: teacher.user_id, display_name: teacher.display_name, ref_code: teacher.ref_code };
     head.innerHTML = '<div class="card"><div class="tch-weekly-title">👁 ' + esc(teacher.display_name) + '’s panel</div>' +
       '<p class="muted" style="font-size:0.82rem;margin:0.25rem 0 0">Read-only admin view — actions are disabled.</p></div>';
-    /* roster: students linked via the teacher's invite code */
+    /* roster: students linked via the teacher's invite code.
+       last_active is NOT a profiles column — derive it from daily_stats. */
     const p = await sb.from('profiles')
-      .select('id,display_name,email,level,current_streak,last_active')
+      .select('id,display_name,email,level,current_streak')
       .eq('referred_by', teacher.ref_code)
-      .order('last_active', { ascending: false, nullsFirst: false });
+      .order('display_name', { ascending: true });
     if (p.error) throw p.error;
     const students = (p.data || []).map(function (u) {
       return {
         user_id: u.id, display_name: u.display_name, email: u.email, level: u.level,
-        current_streak: u.current_streak || 0, last_active: u.last_active,
+        current_streak: u.current_streak || 0, last_active: null,
         xp_7d: 0, lessons_7d: 0, podcast_min_7d: 0
       };
     });
-    /* 7-day stats from daily_stats */
+    /* 7-day stats + last active day from daily_stats (one query) */
     if (students.length) {
       const ids = students.map(function (s) { return s.user_id; });
+      const since = daysAgoStr(6);
       const d = await sb.from('daily_stats')
-        .select('user_id,xp_earned,lessons_opened,podcast_seconds')
-        .in('user_id', ids).gte('day', daysAgoStr(6));
-      const agg = {};
+        .select('user_id,day,xp_earned,lessons_opened,podcast_seconds')
+        .in('user_id', ids).order('day', { ascending: false }).limit(2000);
+      if (d.error) throw d.error;
+      const byId = {};
+      students.forEach(function (s) { byId[s.user_id] = s; s._podSec = 0; });
       ((d && d.data) || []).forEach(function (r) {
-        const a = agg[r.user_id] || (agg[r.user_id] = { xp: 0, lessons: 0, pod: 0 });
-        a.xp += Number(r.xp_earned) || 0;
-        a.lessons += Number(r.lessons_opened) || 0;
-        a.pod += Number(r.podcast_seconds) || 0;
+        const s = byId[r.user_id];
+        if (!s) return;
+        if (!s.last_active) s.last_active = r.day; /* rows are day-desc */
+        if (r.day >= since) {
+          s.xp_7d += Number(r.xp_earned) || 0;
+          s.lessons_7d += Number(r.lessons_opened) || 0;
+          s._podSec += Number(r.podcast_seconds) || 0;
+        }
       });
-      students.forEach(function (s) {
-        const a = agg[s.user_id];
-        if (a) { s.xp_7d = a.xp; s.lessons_7d = a.lessons; s.podcast_min_7d = Math.round(a.pod / 60); }
+      students.forEach(function (s) { s.podcast_min_7d = Math.round(s._podSec / 60); delete s._podSec; });
+      students.sort(function (a, b) {
+        return String(b.last_active || '').localeCompare(String(a.last_active || ''));
       });
     }
     state.teacherStudents = students;
