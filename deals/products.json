@@ -1,6 +1,45 @@
 {
   "products": [
     {
+      "id": "cuisinart-purelyceramic-12pc-set",
+      "name_fa": "ست ۱۲تکه قابلمه و تابه کوییزین‌آرت PURELYCERAMIC",
+      "name_en": "Cuisinart Culinary Collection 12-Piece Pots and Pans Set, PURELYCERAMIC Nonstick",
+      "price_cad": 140.9,
+      "regular_cad": null,
+      "discount_pct": 44,
+      "image": "img/cuisinart-purelyceramic-12pc-set.jpg",
+      "url": "https://www.amazon.ca/dp/B0C7HFH8QB?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پوشش سرامیکی نچسب؛ ست ۱۲ تکه کامل برای کل آشپزخانه — از ماهیتابه تا قابلمه بزرگ."
+    },
+    {
+      "id": "ninja-12in1-double-oven-dct401c",
+      "name_fa": "فر دوقلوی نینجا ۱۲کاره با درب FlexDoor",
+      "name_en": "Ninja 12-in-1 Double Oven with FlexDoor (DCT401C)",
+      "price_cad": 199.99,
+      "regular_cad": null,
+      "discount_pct": 33,
+      "image": "img/ninja-12in1-double-oven-dct401c.jpg",
+      "url": "https://www.amazon.ca/dp/B0CKD5B9JV?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "دو فر مستقل با درب هوشمند FlexDoor؛ هم‌زمان دو غذا با دمای متفاوت — انتخاب آمازون با صدها خرید در ماه گذشته."
+    },
+    {
+      "id": "cuisinart-compactmax-air-fryer-210c",
+      "name_fa": "سرخ‌کن هوای کوییزین‌آرت CompactMax (۸ کوارت)",
+      "name_en": "Cuisinart CompactMax 8-Qt Basket Air Fryer (AIR-210C)",
+      "price_cad": 104.99,
+      "regular_cad": null,
+      "discount_pct": 41,
+      "image": "img/cuisinart-compactmax-air-fryer-210c.jpg",
+      "url": "https://www.amazon.ca/dp/B0FNYBG8F7?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "۴ کاره در یک دستگاه: سرخ‌کن، پخت، بریان و گرم نگه‌داشتن — ظرفیت ۸ کوارت برای غذای خانواده، با طراحی باریک که جای کمی می‌گیرد."
+    },
+    {
       "id": "clarston-humidifier-2-5l-2026-10-04",
       "name_fa": "دستگاه بخور سرد کلارستون ۲.۵ لیتری",
       "name_en": "Clarston 2.5L Cool Mist Humidifier",
@@ -64,44 +103,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "سونی اصل، ضدآب و ضدگردوغبار با ۱۶ ساعت باتری — برای مهمونی و کمپ عالیه"
-    },
-    {
-      "id": "cuisinart-14cup-food-processor",
-      "name_fa": "غذاساز ۱۴ کاپ کویزینارت",
-      "name_en": "Cuisinart 14-Cup Food Processor (DFP-14BCNYC)",
-      "price_cad": 204.99,
-      "regular_cad": null,
-      "discount_pct": 40,
-      "image": "img/cuisinart-14cup-food-processor.jpg",
-      "url": "https://www.amazon.ca/dp/B07649SXQ8?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "۴.۵ ستاره از بیش از ۱۳ هزار نظر — کار آشپزی خونوادگی رو نصف می‌کنه"
-    },
-    {
-      "blurb_fa": "برای نظم دادن به خونه و آشپزخونه عالیه؛ با بلوتوث به گوشی وصل می‌شود. کد تخفیف: XTJO57C6",
-      "discount_pct": 57,
-      "id": "niimbot-d110",
-      "image": "img/niimbot-d110.jpg",
-      "name_en": "NIIMBOT D110 Mini Label Maker",
-      "name_fa": "لیبل‌زن مینی نایمبات D110",
-      "price_cad": 9.9,
-      "regular_cad": 22.99,
-      "source": "amazon",
-      "url": "https://www.amazon.ca/dp/B0CZ6WCHGF"
-    },
-    {
-      "blurb_fa": "هدفون ورزشی ضدآب با ۴۸ ساعت پخش موسیقی؛ برای دویدن و باشگاه عالی است",
-      "discount_pct": null,
-      "id": "jbl-endurance-race2",
-      "image": "img/jbl-race2.jpg",
-      "name_en": "JBL Endurance Race 2 Earbuds",
-      "name_fa": "هندزفری ورزشی JBL Endurance Race 2",
-      "price_cad": 39.98,
-      "regular_cad": null,
-      "source": "amazon",
-      "url": "https://www.amazon.ca/dp/B0DW9BXCYW"
     }
   ],
-  "updated_fa": "یکشنبه ۱۲ مهر"
+  "updated_fa": "دوشنبه ۱۳ مهر"
 }
