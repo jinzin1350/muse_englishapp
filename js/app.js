@@ -2353,7 +2353,7 @@ async function toggleTeacherSent(i, btn) {
           const res = resMap[x.id];
           const ico = x.kind === 'exam' ? '📋' : '📝';
           const sub = esc(x.topic_label || '') +
-            ' · ' + x.question_count + ' Q · sent ' + esc(fmtDate(x.created_at)) +
+            ' · ' + x.question_count + ' Q · sent ' + esc(fmtDate(new Date(x.created_at))) +
             (x.deadline ? ' · due ' + esc(x.deadline) : '') +
             (x.note ? '<br>💬 ' + esc(x.note) : '');
           return '<div class="an-arow"><span>' + ico + ' <b>' + esc(x.title) + '</b><br>' +
@@ -3523,7 +3523,7 @@ async function loadTeacherAssignments() {
         const sched = x.status === 'scheduled';
         const meta = sched && x.send_at
           ? schedLabel(x.send_at, x.send_tz)
-          : esc(fmtDate(x.created_at)) + ' · ' + done + '/' + total + ' done';
+          : esc(fmtDate(new Date(x.created_at))) + ' · ' + done + '/' + total + ' done';
         return '<button class="as-row' + (sched ? ' as-sched' : '') + '" data-action="assignment-open" data-i="' + i + '">' +
           '<span class="as-ico">' + (sched ? '⏰' : (x.kind === 'exam' ? '📋' : '📝')) + '</span>' +
           '<span class="as-main"><span class="as-title">' + esc(x.title) + '</span>' +
