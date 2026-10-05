@@ -2299,6 +2299,8 @@ async function openTeacherStudent(i) {
         '<div><b>' + Math.round(sum('podcast_seconds') / 60) + '</b><span>podcast min</span></div>' +
       '</div>' +
       '<div id="tch-an-' + i + '"><div class="empty">Loading analytics…</div></div>' +
+      '<div class="an-title" style="margin-top:.8rem">📤 Sent to this student</div>' +
+      '<div id="tch-sent-' + i + '"><button class="btn btn-sm btn-ghost" data-action="teacher-sent" data-i="' + i + '">Show sent items</button></div>' +
       '<div style="display:flex;gap:0.5rem;margin-top:0.9rem;flex-wrap:wrap">' +
       '<button class="btn btn-sm" data-action="teacher-nudge" data-i="' + i + '">🔔 Nudge</button>' +
       '<button class="btn btn-sm" data-action="teacher-message" data-i="' + i + '">💬 Message</button>' +
@@ -2307,6 +2309,65 @@ async function openTeacherStudent(i) {
     loadTeacherStudentAnalytics(i, s);
   } catch (e) {
     host.innerHTML = '<div class="empty">Could not load activity.</div>';
+  }
+}
+/* ---- teacher: per-student sent history (assignments + this student's status) ---- */
+async function toggleTeacherSent(i, btn) {
+  const s = (state.teacherStudents || [])[i];
+  const host = document.getElementById('tch-sent-' + i);
+  if (!s || !host) return;
+  const cache = (state._tSent = state._tSent || {})[i] || (state._tSent[i] = {});
+  if (cache.html) {
+    cache.open = !cache.open;
+    host.innerHTML = cache.open ? cache.html
+      : '<button class="btn btn-sm btn-ghost" data-action="teacher-sent" data-i="' + i + '">Show sent items</button>';
+    return;
+  }
+  host.innerHTML = '<div class="empty">Loading…</div>';
+  try {
+    let a;
+    try {
+      a = await sb.from('assignments')
+        .select('id,kind,title,topic_label,level,question_count,created_at,deadline,note,status')
+        .eq('teacher_id', state.user.id).contains('student_ids', [s.user_id])
+        .order('created_at', { ascending: false }).limit(20);
+      if (a.error) throw a.error;
+    } catch (e2) {
+      /* pre-scheduling-migration fallback (no status column) */
+      a = await sb.from('assignments')
+        .select('id,kind,title,topic_label,level,question_count,created_at,deadline,note')
+        .eq('teacher_id', state.user.id).contains('student_ids', [s.user_id])
+        .order('created_at', { ascending: false }).limit(20);
+      if (a.error) throw a.error;
+    }
+    const rows = (a.data || []).filter(function (x) { return x.status !== 'scheduled'; });
+    const ids = rows.map(function (x) { return x.id; });
+    const resMap = {};
+    if (ids.length) {
+      const r = await sb.from('assignment_results')
+        .select('assignment_id,score,total').eq('student_id', s.user_id).in('assignment_id', ids);
+      (r.data || []).forEach(function (x) { resMap[x.assignment_id] = x; });
+    }
+    cache.html = rows.length
+      ? '<div class="an-assign">' + rows.map(function (x) {
+          const res = resMap[x.id];
+          const ico = x.kind === 'exam' ? '📋' : '📝';
+          const sub = esc(x.topic_label || '') +
+            ' · ' + x.question_count + ' Q · sent ' + esc(fmtDate(x.created_at)) +
+            (x.deadline ? ' · due ' + esc(x.deadline) : '') +
+            (x.note ? '<br>💬 ' + esc(x.note) : '');
+          return '<div class="an-arow"><span>' + ico + ' <b>' + esc(x.title) + '</b><br>' +
+            '<small class="muted">' + sub + '</small></span>' +
+            '<span>' + (res ? '<b class="ok">✓ ' + res.score + '/' + res.total + '</b>'
+                            : '<span class="muted">⏳ pending</span>') + '</span></div>';
+        }).join('') + '</div>' +
+        '<button class="btn btn-sm btn-ghost" data-action="teacher-sent" data-i="' + i + '" style="margin-top:.4rem">Hide</button>'
+      : '<div class="empty">Nothing sent to this student yet.</div>';
+    cache.open = true;
+    host.innerHTML = cache.html;
+  } catch (e) {
+    host.innerHTML = '<div class="empty">Could not load sent items.</div>' +
+      '<button class="btn btn-sm btn-ghost" data-action="teacher-sent" data-i="' + i + '">Retry</button>';
   }
 }
 async function loadTeacherStudentAnalytics(i, s) {
@@ -2707,16 +2768,26 @@ function teacherAssignmentComposer() {
     '<i class="as2-spark s1"></i><i class="as2-spark s2"></i>' +
     '<button class="as2-close" data-action="modal-close" aria-label="Close">✕</button></div>' +
     '<h2>New assignment</h2>' +
+    '<div class="as2-modes" role="tablist">' +
+    '<button type="button" class="as2-mode on" data-amode="homework">📝 Homework</button>' +
+    '<button type="button" class="as2-mode" data-amode="exam">📋 Exam</button></div>' +
     '<div class="field"><label for="as-level">Level</label>' +
     '<select id="as-level" class="input">' +
     ASSIGN_LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (lv === 'a2' ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') +
     '</select></div>' +
+    '<div id="as-hw-fields">' +
     '<div class="field"><label for="as-topic">Topic</label>' +
     '<select id="as-topic" class="input"></select></div>' +
     '<div class="field"><label for="as-count">Questions</label>' +
     '<select id="as-count" class="input">' +
     [5, 10, 15, 20].map(function (n) { return '<option value="' + n + '"' + (n === 10 ? ' selected' : '') + '>' + n + '</option>'; }).join('') +
-    '</select></div>' +
+    '</select></div></div>' +
+    '<div id="as-exam-fields" class="hidden">' +
+    '<div class="field"><label>Topics mix <span class="as2-opt">— e.g. 5 from X, 5 from Y</span></label>' +
+    '<div id="as-mixrows"></div>' +
+    '<button type="button" class="btn btn-sm" id="as-addrow">＋ Add topic</button>' +
+    '<div class="muted" id="as-mixtotal" style="margin-top:.45rem;font-size:.85rem">Total: 0 questions</div>' +
+    '</div></div>' +
     '<div class="field"><label>Students</label><div class="as2-students">' +
     '<label class="chk"><input type="checkbox" id="as-all" checked> All students (' + list.length + ')</label>' +
     '<div id="as-students" class="as-pick hidden">' +
@@ -2735,11 +2806,63 @@ function teacherAssignmentComposer() {
   );
   const as2card = document.querySelector('#app-modal .modal-card');
   if (as2card) as2card.classList.add('as2-card');
+  assignMode = 'homework';
+  Array.prototype.forEach.call(document.querySelectorAll('#app-modal .as2-mode'), function (b) {
+    b.addEventListener('click', function () { setAssignMode(b.getAttribute('data-amode')); });
+  });
+  document.getElementById('as-addrow').addEventListener('click', function () { examAddRow(); });
+  document.getElementById('as-mixrows').addEventListener('change', examUpdateTotal);
+  document.getElementById('as-mixrows').addEventListener('click', function (e) {
+    const del = e.target.closest('.as-mix-del');
+    if (del && del.closest('.as2-mixrow')) { del.closest('.as2-mixrow').remove(); examUpdateTotal(); }
+  });
+  examAddRow();
   assignmentFillTopics();
   document.getElementById('as-level').addEventListener('change', assignmentFillTopics);
   document.getElementById('as-all').addEventListener('change', function () {
     document.getElementById('as-students').classList.toggle('hidden', this.checked);
   });
+}
+/* ---- assignment composer: homework | exam mode + mixed-topic rows ---- */
+var assignMode = 'homework';
+function setAssignMode(m) {
+  assignMode = (m === 'exam') ? 'exam' : 'homework';
+  Array.prototype.forEach.call(document.querySelectorAll('#app-modal .as2-mode'), function (b) {
+    b.classList.toggle('on', b.getAttribute('data-amode') === assignMode);
+  });
+  const hw = document.getElementById('as-hw-fields'), ex = document.getElementById('as-exam-fields');
+  if (hw) hw.classList.toggle('hidden', assignMode !== 'homework');
+  if (ex) ex.classList.toggle('hidden', assignMode !== 'exam');
+  const ico = document.querySelector('#app-modal .as2-ico span');
+  if (ico) ico.textContent = assignMode === 'exam' ? '📋' : '📝';
+}
+function examTopicOptions(selected) {
+  const lvEl = document.getElementById('as-level');
+  const lv = lvEl ? lvEl.value : 'a2';
+  return (ASSIGN_TOPICS[lv] || []).map(function (t) {
+    return '<option value="' + esc(t) + '"' + (t === selected ? ' selected' : '') + '>' + esc(t) + '</option>';
+  }).join('');
+}
+function examAddRow(topic, count) {
+  const host = document.getElementById('as-mixrows');
+  if (!host) return;
+  const d = document.createElement('div');
+  d.className = 'as2-mixrow';
+  d.innerHTML = '<select class="input as-mix-topic">' + examTopicOptions(topic) + '</select>' +
+    '<input type="number" class="input as-mix-count" min="1" max="30" value="' + (count || 5) + '" aria-label="Questions">' +
+    '<button type="button" class="btn btn-sm as-mix-del" aria-label="Remove topic">✕</button>';
+  host.appendChild(d);
+  examUpdateTotal();
+}
+function examUpdateTotal() {
+  const host = document.getElementById('as-mixtotal');
+  if (!host) return;
+  let total = 0, rows = 0;
+  Array.prototype.forEach.call(document.querySelectorAll('#as-mixrows .as2-mixrow'), function (r) {
+    const c = parseInt(r.querySelector('.as-mix-count').value, 10);
+    if (c > 0) { total += c; rows++; }
+  });
+  host.textContent = 'Total: ' + total + ' questions' + (rows ? ' across ' + rows + ' topic' + (rows > 1 ? 's' : '') : '');
 }
 function assignmentFillTopics() {
   const lv = document.getElementById('as-level').value;
@@ -2747,6 +2870,11 @@ function assignmentFillTopics() {
   sel.innerHTML = (ASSIGN_TOPICS[lv] || []).map(function (t) {
     return '<option value="' + esc(t) + '">' + esc(t) + '</option>';
   }).join('');
+  /* keep exam mix rows in sync with the level */
+  Array.prototype.forEach.call(document.querySelectorAll('#as-mixrows .as-mix-topic'), function (s) {
+    const cur = s.value;
+    s.innerHTML = examTopicOptions(cur);
+  });
 }
 async function createAssignment(btn) {
   const errBox = document.getElementById('as-error');
@@ -2763,6 +2891,8 @@ async function createAssignment(btn) {
     return cb && cb.checked;
   });
   if (!targets.length) { err('Pick at least one student.'); return; }
+  const mode = (typeof assignMode !== 'undefined' && assignMode === 'exam') ? 'exam' : 'homework';
+  if (mode === 'exam') { await createExamAssignment(btn, { err: err, level: level, targets: targets, orig: btn.textContent }); return; }
   btn.disabled = true;
   const orig = btn.textContent;
   btn.textContent = 'Preparing…';
@@ -2807,6 +2937,81 @@ async function createAssignment(btn) {
     }));
     closeModal();
     loadTeacherAssignments();
+  } catch (e) {
+    err('Could not send: ' + (e && e.message ? e.message : 'check your connection.'));
+    btn.disabled = false; btn.textContent = orig;
+  }
+}
+
+/* ---- teacher: mixed-topic exam ----
+   Rows of [topic × count] -> one bank fetch per topic (fail-soft: a 404 bank
+   is skipped and reported) -> N sampled per topic, each tagged with its
+   topic_label -> shuffled into a single exam snapshot stored in
+   public.assignments with kind='exam', topic='mixed'. No new columns. */
+async function createExamAssignment(btn, ctx) {
+  const err = ctx.err, level = ctx.level, targets = ctx.targets, orig = ctx.orig;
+  const rows = Array.prototype.slice.call(document.querySelectorAll('#as-mixrows .as2-mixrow'));
+  const mix = [];
+  rows.forEach(function (r) {
+    const t = r.querySelector('.as-mix-topic').value;
+    const c = parseInt(r.querySelector('.as-mix-count').value, 10) || 0;
+    if (t && c > 0) mix.push({ topic: t, count: c });
+  });
+  if (!mix.length) { err('Add at least one topic with at least 1 question.'); return; }
+  btn.disabled = true;
+  btn.textContent = 'Preparing…';
+  const settled = await Promise.all(mix.map(function (m) {
+    return fetch('quiz-bank/' + level + '/' + assignSlug(m.topic) + '.json')
+      .then(function (r) { if (!r.ok) throw new Error('bank 404'); return r.json(); })
+      .then(function (bank) { return { m: m, bank: bank }; })
+      .catch(function () { return { m: m, bank: null }; });
+  }));
+  const skipped = [];
+  let questions = [];
+  settled.forEach(function (s) {
+    const qs = (s.bank && s.bank.questions) || [];
+    if (!qs.length) { skipped.push(s.m.topic); return; }
+    shuffleArr(qs.slice()).slice(0, Math.min(s.m.count, qs.length)).forEach(function (q) {
+      questions.push({ q: q.q, options: q.options, answer: q.answer, explanation: q.explanation || '', topic_label: s.m.topic });
+    });
+  });
+  if (!questions.length) {
+    err('None of the selected topics has a question bank yet.');
+    btn.disabled = false; btn.textContent = orig; return;
+  }
+  questions = shuffleArr(questions);
+  const perTopic = {};
+  questions.forEach(function (q) { perTopic[q.topic_label] = (perTopic[q.topic_label] || 0) + 1; });
+  const compLabel = Object.keys(perTopic).map(function (t) { return t + ' ×' + perTopic[t]; }).join(' · ');
+  const title = '📋 Mixed exam (' + level.toUpperCase() + ' · ' + Object.keys(perTopic).length +
+    ' topic' + (Object.keys(perTopic).length > 1 ? 's' : '') + ' · ' + questions.length + ' Q)';
+  const noteEl = document.getElementById('as-note');
+  const dlEl = document.getElementById('as-deadline');
+  const note = noteEl ? noteEl.value.trim() : '';
+  const deadline = dlEl && dlEl.value ? dlEl.value : null;
+  btn.textContent = 'Sending…';
+  try {
+    const ins = await sb.from('assignments').insert({
+      teacher_id: state.user.id,
+      teacher_name: (state.teacher && state.teacher.display_name) || '',
+      kind: 'exam', title: title, level: level,
+      topic: 'mixed', topic_label: compLabel,
+      question_count: questions.length, questions: questions,
+      student_ids: targets.map(function (s) { return s.user_id; }),
+      note: note || null, deadline: deadline
+    }).select('id').single();
+    if (ins.error) throw ins.error;
+    /* inbox regex expects: 📝 Your teacher sent you an exam: 📝 <title> — open Muse English to start. */
+    const body = '📝 Your teacher sent you an exam: 📝 ' + title + ' — open Muse English to start.';
+    await Promise.all(targets.map(function (s) {
+      return Promise.allSettled([
+        sb.rpc('send_teacher_message', { p_student: s.user_id, p_body: body }),
+        sb.rpc('send_nudge', { p_student: s.user_id })
+      ]);
+    }));
+    closeModal();
+    loadTeacherAssignments();
+    if (skipped.length) alert('Exam sent, but these topics were skipped (no question bank yet):\n• ' + skipped.join('\n• '));
   } catch (e) {
     err('Could not send: ' + (e && e.message ? e.message : 'check your connection.'));
     btn.disabled = false; btn.textContent = orig;
@@ -3320,7 +3525,7 @@ async function loadTeacherAssignments() {
           ? schedLabel(x.send_at, x.send_tz)
           : esc(fmtDate(x.created_at)) + ' · ' + done + '/' + total + ' done';
         return '<button class="as-row' + (sched ? ' as-sched' : '') + '" data-action="assignment-open" data-i="' + i + '">' +
-          '<span class="as-ico">' + (sched ? '⏰' : '📝') + '</span>' +
+          '<span class="as-ico">' + (sched ? '⏰' : (x.kind === 'exam' ? '📋' : '📝')) + '</span>' +
           '<span class="as-main"><span class="as-title">' + esc(x.title) + '</span>' +
           '<span class="as-meta">' + meta + '</span></span>' +
           '<span class="as-go">→</span></button>';
@@ -3344,7 +3549,7 @@ async function openTeacherAssignment(i) {
   const byId = {};
   results.forEach(function (x) { byId[x.student_id] = x; });
   showModal(
-    '<div class="modal-ico">' + (r.status === 'scheduled' ? '⏰' : '📝') + '</div>' +
+    '<div class="modal-ico">' + (r.status === 'scheduled' ? '⏰' : (r.kind === 'exam' ? '📋' : '📝')) + '</div>' +
     '<h2>' + esc(r.title) + '</h2>' +
     (r.status === 'scheduled' && r.send_at
       ? '<p class="muted">' + esc(schedLabel(r.send_at, r.send_tz)).replace(/^⏰ /, '') + ' — not sent yet.</p>'
@@ -3433,7 +3638,8 @@ async function renderHomework(v) {
     host.innerHTML = rows.length ? rows.map(function (x, i) {
       const res = done[x.id];
       const lvl = (x.level || '').toUpperCase();
-      const kindIco = '📝';
+      const isExam = x.kind === 'exam';
+      const kindIco = isExam ? '📋' : '📝';
       const name = x.topic_label || x.title;
       return '<div class="hw2-card">' +
         '<div class="hw2-deco" aria-hidden="true">' +
@@ -3444,7 +3650,8 @@ async function renderHomework(v) {
         '<path d="M170 22 l0 14 M163 29 l14 0"/><path d="M196 62 l0 10 M191 67 l10 0"/></g></svg></div>' +
         '<div class="hw2-top"><span class="hw2-ico">' + kindIco + '</span>' +
         '<div class="hw2-head"><div class="hw2-name">' + esc(name) + '</div>' +
-        (lvl ? '<span class="hw2-lvl">' + esc(lvl) + '</span>' : '') + '</div></div>' +
+        (lvl ? '<span class="hw2-lvl">' + esc(lvl) + '</span>' : '') +
+        (isExam ? '<span class="hw2-lvl">EXAM</span>' : '') + '</div></div>' +
         '<div class="hw2-meta">From ' + esc(x.teacher_name || 'your teacher') +
         (x.deadline ? ' · due ' + esc(x.deadline) : '') +
         (x.note ? '<br>💬 ' + esc(x.note) : '') + '</div>' +
@@ -6904,6 +7111,7 @@ function bindEvents() {
     else if (a === 'teacher-student') openTeacherStudent(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
     else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (a === 'teacher-sent') toggleTeacherSent(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-message') teacherMessageComposer(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'assignment-compose') teacherAssignmentComposer();
     else if (a === 'assignment-create') createAssignment(t);

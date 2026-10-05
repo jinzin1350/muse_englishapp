@@ -2323,6 +2323,13 @@ body.duo-playing{padding-bottom:0!important;}
 .as2-send{display:block;width:100%;border:0;cursor:pointer;color:#fff;font-size:1.05rem;font-weight:800;padding:.95rem;border-radius:18px;background:linear-gradient(180deg,#ff9d45,#f0730a);box-shadow:0 10px 24px rgba(240,115,10,.35);font-family:inherit;margin-top:.5rem}
 .as2-send:disabled{opacity:.6;cursor:wait}
 .as2-cancel{display:block;width:100%;margin-top:.6rem;background:transparent;border:1.5px solid #e9dfcc;color:#1e2a4e;border-radius:18px;padding:.85rem;font-size:1rem;font-weight:600;cursor:pointer;font-family:inherit}
+.as2-modes{display:flex;gap:.5rem;margin:.1rem 0 .9rem}
+.as2-mode{flex:1;border:1.5px solid #e9dfcc;background:#fffdf7;border-radius:14px;padding:.6rem;font:inherit;font-weight:700;font-size:.95rem;color:#5b5344;cursor:pointer}
+.as2-mode.on{background:#1e2a4e;color:#fff;border-color:#1e2a4e}
+.as2-mixrow{display:flex;gap:.4rem;margin-bottom:.45rem;align-items:center}
+.as2-mixrow .as-mix-topic{flex:1;min-width:0}
+.as2-mixrow .as-mix-count{width:4.6rem;flex:0 0 auto}
+.as2-mixrow .as-mix-del{flex:0 0 auto}
 .as2 .form-error{color:#d33;min-height:1.2em;font-size:.88rem;margin:.2rem 0}
 
 /* ---- Weekly planner (2026-10-03) ---- */
