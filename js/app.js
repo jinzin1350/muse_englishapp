@@ -62,6 +62,7 @@ const state = {
   teacher: null,         // approved teacher row {id,ref_code,display_name} or null
   teacherRequest: null,  // pending/rejected teacher request or null
   teacherStudents: null, // cached roster for the teacher dashboard
+  viewTeacher: null,   // admin "view as teacher": {user_id, display_name, ref_code} or null (read-only)
 };
 
 /* Six CEFR levels. Legacy 3-level values are mapped so existing assignments keep working. */
@@ -1574,7 +1575,7 @@ async function loadPreviewLesson() {
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -1650,13 +1651,14 @@ function onRoute() {
       view = 'home';
       if (window.location.hash !== '#/home') { window.location.hash = '#/home'; return; }
     }
-    if (view === 'admin' && !state.user.isAdmin) view = 'home';
+    if ((view === 'admin' || view === 'admin-teacher') && !state.user.isAdmin) view = 'home';
   }
   show(view, r.arg);
 }
 
 function show(view, arg) {
   state.view = view;
+  if (view !== 'admin-teacher') state.viewTeacher = null; /* leaving view-as-teacher mode */
   if (view !== 'lesson') { state.quiz = null; }
   setChrome();
   const v = $('#view');
@@ -1676,6 +1678,7 @@ function show(view, arg) {
   else if (view === 'inbox') renderInbox(v);
   else if (view === 'homework') renderHomework(v);
   else if (view === 'admin') renderAdmin(v);
+  else if (view === 'admin-teacher') renderAdminTeacherView(v, arg);
   else if (view === 'teacher') renderTeacher(v);
   else if (view === 'planner') renderPlanner(v);
   else if (view === 'become-teacher') renderBecomeTeacher(v);
@@ -2159,6 +2162,7 @@ function copyTeacherLink() {
   }
 }
 function renderTeacher(v) {
+  state.viewTeacher = null; /* leaving any admin view-as-teacher mode */
   if (!state.teacher) { go('become-teacher'); return; }
   v.innerHTML = '<div class="tch-wrap">' +
     '<h1>🍎 Teacher dashboard</h1>' +
@@ -2269,6 +2273,11 @@ function renderTeacherRoster() {
     }).join('') + '</div></div>' +
     '<p class="muted" style="font-size:0.82rem">Tap a student to see their 14-day activity.</p>';
 }
+/* Teacher id for dashboard queries: the viewed teacher in admin view-as mode,
+   otherwise the logged-in user. */
+function tchViewId() {
+  return (state.viewTeacher && state.viewTeacher.user_id) || (state.user && state.user.id);
+}
 async function openTeacherStudent(i) {
   const s = (state.teacherStudents || [])[i];
   const host = document.getElementById('tch-detail');
@@ -2302,9 +2311,10 @@ async function openTeacherStudent(i) {
       '<div class="an-title" style="margin-top:.8rem">📤 Sent to this student</div>' +
       '<div id="tch-sent-' + i + '"><button class="btn btn-sm btn-ghost" data-action="teacher-sent" data-i="' + i + '">Show sent items</button></div>' +
       '<div style="display:flex;gap:0.5rem;margin-top:0.9rem;flex-wrap:wrap">' +
+      (state.viewTeacher ? '' :
       '<button class="btn btn-sm" data-action="teacher-nudge" data-i="' + i + '">🔔 Nudge</button>' +
       '<button class="btn btn-sm" data-action="teacher-message" data-i="' + i + '">💬 Message</button>' +
-      '<button class="btn btn-sm" data-action="ai-report-tstudent" data-i="' + i + '">🤖 Report</button>' +
+      '<button class="btn btn-sm" data-action="ai-report-tstudent" data-i="' + i + '">🤖 Report</button>') +
       '<button class="btn btn-ghost btn-sm" data-action="teacher-student-close">Close</button></div></div>';
     loadTeacherStudentAnalytics(i, s);
   } catch (e) {
@@ -2329,14 +2339,14 @@ async function toggleTeacherSent(i, btn) {
     try {
       a = await sb.from('assignments')
         .select('id,kind,title,topic_label,level,question_count,created_at,deadline,note,status')
-        .eq('teacher_id', state.user.id).contains('student_ids', [s.user_id])
+        .eq('teacher_id', tchViewId()).contains('student_ids', [s.user_id])
         .order('created_at', { ascending: false }).limit(20);
       if (a.error) throw a.error;
     } catch (e2) {
       /* pre-scheduling-migration fallback (no status column) */
       a = await sb.from('assignments')
         .select('id,kind,title,topic_label,level,question_count,created_at,deadline,note')
-        .eq('teacher_id', state.user.id).contains('student_ids', [s.user_id])
+        .eq('teacher_id', tchViewId()).contains('student_ids', [s.user_id])
         .order('created_at', { ascending: false }).limit(20);
       if (a.error) throw a.error;
     }
@@ -3366,7 +3376,7 @@ async function buildStudentPack(studentId, forTeacher, name) {
       .select('id,title,topic_label,level,created_at,questions')
       .contains('student_ids', [studentId])
       .order('created_at', { ascending: false }).limit(40);
-    if (forTeacher && state.user) aq = aq.eq('teacher_id', state.user.id);
+    if (forTeacher && state.user) aq = aq.eq('teacher_id', tchViewId());
     const a = await aq;
     if (a.error) throw a.error;
     const assigns = (a.data || []).filter(function (x) { return x.status !== 'scheduled'; });
@@ -3489,19 +3499,19 @@ async function requestAIReport(kind, pack, btn) {
 /* ---- teacher: assignment list + results ---- */
 async function loadTeacherAssignments() {
   const host = document.getElementById('tch-assign');
-  if (!host || !state.teacher) return;
+  if (!host || !(state.teacher || state.viewTeacher)) return;
   try {
     let a;
     try {
       a = await sb.from('assignments')
         .select('id,kind,title,created_at,deadline,student_ids,question_count,status,send_at,send_tz')
-        .eq('teacher_id', state.user.id).order('created_at', { ascending: false }).limit(30);
+        .eq('teacher_id', tchViewId()).order('created_at', { ascending: false }).limit(30);
       if (a.error) throw a.error;
     } catch (e2) {
       /* pre-scheduling-migration fallback */
       a = await sb.from('assignments')
         .select('id,kind,title,created_at,deadline,student_ids,question_count')
-        .eq('teacher_id', state.user.id).order('created_at', { ascending: false }).limit(30);
+        .eq('teacher_id', tchViewId()).order('created_at', { ascending: false }).limit(30);
     }
     if (a.error) throw a.error;
     const rows = a.data || [];
@@ -3531,6 +3541,76 @@ async function loadTeacherAssignments() {
           '<span class="as-go">→</span></button>';
       }).join('');
   } catch (e) { host.innerHTML = ''; }
+}
+
+/* ---- admin: view any teacher's panel (read-only) ---- */
+function renderAdminTeacherView(v, teacherId) {
+  state.viewTeacher = null;
+  state.teacherStudents = null;
+  state._tSent = {};
+  v.innerHTML = '<div class="tch-wrap">' +
+    '<a class="pl-back" href="#/admin">← Admin</a>' +
+    '<div id="vat-head"><div class="empty">Loading teacher…</div></div>' +
+    '<div id="tch-weekly"></div>' +
+    '<div id="tch-assign"></div>' +
+    '<div class="section-title"><h2>Students <span id="tch-count" class="muted"></span></h2></div>' +
+    '<div id="tch-roster"><div class="empty">Loading…</div></div>' +
+    '<div id="tch-detail"></div>' +
+  '</div>';
+  loadAdminTeacherView(teacherId);
+}
+async function loadAdminTeacherView(teacherId) {
+  const head = document.getElementById('vat-head');
+  const rosterHost = document.getElementById('tch-roster');
+  try {
+    if (!teacherId) throw new Error('no teacher selected');
+    const t = await sb.from('teachers').select('user_id,ref_code,display_name,status')
+      .eq('user_id', teacherId).maybeSingle();
+    if (t.error) throw t.error;
+    if (!t.data) throw new Error('teacher not found');
+    const teacher = t.data;
+    state.viewTeacher = { user_id: teacher.user_id, display_name: teacher.display_name, ref_code: teacher.ref_code };
+    head.innerHTML = '<div class="card"><div class="tch-weekly-title">👁 ' + esc(teacher.display_name) + '’s panel</div>' +
+      '<p class="muted" style="font-size:0.82rem;margin:0.25rem 0 0">Read-only admin view — actions are disabled.</p></div>';
+    /* roster: students linked via the teacher's invite code */
+    const p = await sb.from('profiles')
+      .select('id,display_name,email,level,current_streak,last_active')
+      .eq('referred_by', teacher.ref_code)
+      .order('last_active', { ascending: false, nullsFirst: false });
+    if (p.error) throw p.error;
+    const students = (p.data || []).map(function (u) {
+      return {
+        user_id: u.id, display_name: u.display_name, email: u.email, level: u.level,
+        current_streak: u.current_streak || 0, last_active: u.last_active,
+        xp_7d: 0, lessons_7d: 0, podcast_min_7d: 0
+      };
+    });
+    /* 7-day stats from daily_stats */
+    if (students.length) {
+      const ids = students.map(function (s) { return s.user_id; });
+      const d = await sb.from('daily_stats')
+        .select('user_id,xp_earned,lessons_opened,podcast_seconds')
+        .in('user_id', ids).gte('day', daysAgoStr(6));
+      const agg = {};
+      ((d && d.data) || []).forEach(function (r) {
+        const a = agg[r.user_id] || (agg[r.user_id] = { xp: 0, lessons: 0, pod: 0 });
+        a.xp += Number(r.xp_earned) || 0;
+        a.lessons += Number(r.lessons_opened) || 0;
+        a.pod += Number(r.podcast_seconds) || 0;
+      });
+      students.forEach(function (s) {
+        const a = agg[s.user_id];
+        if (a) { s.xp_7d = a.xp; s.lessons_7d = a.lessons; s.podcast_min_7d = Math.round(a.pod / 60); }
+      });
+    }
+    state.teacherStudents = students;
+    renderTeacherRoster();
+    renderTeacherWeekly();
+    loadTeacherAssignments();
+  } catch (e) {
+    if (head) head.innerHTML = '<div class="empty">Could not load teacher panel: ' + esc((e && e.message) || e) + '</div>';
+    if (rosterHost) rosterHost.innerHTML = '';
+  }
 }
 async function openTeacherAssignment(i) {
   const r = (state.teacherAssignments || [])[i];
@@ -3942,9 +4022,11 @@ function admBoardHTML() {
   return '<div class="card tch-table-card"><div class="tch-table"><div class="tch-tr tch-th">' +
     '<span>Teacher</span><span>Students</span><span>Active 7d</span><span>XP 7d</span><span>Code</span><span></span></div>' +
     board.map(function (t) {
-      return '<div class="tch-tr"><span class="tch-name">' + esc(t.display_name) + '</span>' +
+      return '<div class="tch-tr" data-action="adm-teacher-view" data-ref="' + esc(t.ref_code || '') + '" role="button" tabindex="0" title="View teacher panel">' +
+        '<span class="tch-name">' + esc(t.display_name) + '</span>' +
         '<span>' + (t.students || 0) + '</span><span>' + (t.active_7d || 0) + '</span>' +
-        '<span>' + (t.xp_7d || 0) + '</span><span><code>' + esc(t.ref_code) + '</code></span><span></span></div>';
+        '<span>' + (t.xp_7d || 0) + '</span><span><code>' + esc(t.ref_code) + '</code></span>' +
+        '<span class="muted">👁</span></div>';
     }).join('') + '</div></div>';
 }
 function admFilteredUsers() {
@@ -7135,6 +7217,12 @@ function bindEvents() {
     else if (a === 'reject-teacher') adminRejectTeacher(t.getAttribute('data-id'));
     else if (a === 'adm-metric') { state.adminMetric = t.getAttribute('data-m'); renderAdminAnalytics(); }
     else if (a === 'adm-user') openAdminUser(t.getAttribute('data-id'));
+    else if (a === 'adm-teacher-view') {
+      const ref = t.getAttribute('data-ref');
+      sb.from('teachers').select('user_id').eq('ref_code', ref).maybeSingle().then(function (r) {
+        if (r.data && r.data.user_id) go('admin-teacher', r.data.user_id);
+      });
+    }
     else if (a === 'adm-user-close') { const d = document.getElementById('adm-detail'); if (d) d.innerHTML = ''; }
   });
 
