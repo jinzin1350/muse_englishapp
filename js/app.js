@@ -2043,7 +2043,7 @@ function renderSignin(v) {
    No waiting for manual approval — the user enters the app immediately. */
 const SIGNUP_LEVELS = [
   { id: 'a1', name: 'Elementary', desc: "I'm starting out", icon: '🌱' },
-  { id: 'b1', name: 'Intermediate', desc: 'I can hold a conversation', icon: '📈' },
+  { id: 'b1', name: 'Intermediate', desc: 'I can hold a conversation', icon: '📊' },
   { id: 'c1', name: 'Advanced', desc: "I'm fluent, I want depth", icon: '🚀' },
 ];
 function levelPickerHTML(name) {
@@ -4300,6 +4300,39 @@ async function afterLogin() {
 
 /* First-entry welcome popup: Persian for a1/a2 learners, English for b1+.
    Shown once per user (tracked in profiles.welcome_seen_at + a local backup). */
+/* Onboarding v2 (2026-10-04, his design): cream card, flame-reading illustration,
+   squiggle title, orange gradient CTA. */
+function welcomeModalHTML(fa, offerTour) {
+  var img = '<img class="onb-img" src="media/mascot/flame-reading-book.webp" alt="">';
+  var x = '<button class="onb-x" data-action="modal-close" aria-label="Close">\u2715</button>';
+  if (fa) {
+    return '<div class="onb" dir="rtl" lang="fa">' +
+      '<div class="onb-top"><span class="onb-brand">\uD83D\uDCD6 Muse English</span>' + x + '</div>' +
+      '<div class="onb-body"><div class="onb-text">' +
+      '<h1 class="onb-title">خوش اومدی!<span class="onb-squiggle" aria-hidden="true"></span></h1>' +
+      '<p>درس جدیدت هر روز ساعت <b class="onb-hl">۸ صبح</b> به وقت خودت آماده‌ست.</p>' +
+      '<p>فقط کافیه روزی حدود <b>۱۰ دقیقه</b> وقت بذاری — کلی کلمه، جمله و نکته جدید یاد می‌گیری.</p>' +
+      '</div>' + img + '</div>' +
+      (offerTour
+        ? '<button class="onb-cta" data-action="welcome-tour">بزن بریم، یه دور بزنیم 🌱</button>' +
+          '<button class="onb-skip" data-action="modal-close">فعلاً نه</button>'
+        : '<button class="onb-cta" data-action="modal-close">شروع کن</button>') +
+      '</div>';
+  }
+  return '<div class="onb">' +
+    '<div class="onb-top"><span class="onb-brand">\uD83D\uDCD6 Muse English</span>' + x + '</div>' +
+    '<div class="onb-body"><div class="onb-text">' +
+    '<h1 class="onb-title">Welcome!<span class="onb-squiggle" aria-hidden="true"></span></h1>' +
+    '<p>Your new lesson is ready every day at <b class="onb-hl">8:00 AM</b>, your time.</p>' +
+    '<p>Just spend about <b>10 minutes</b> a day — you\u2019ll pick up loads of new words, sentences and tips.</p>' +
+    '</div>' + img + '</div>' +
+    (offerTour
+      ? '<button class="onb-cta" data-action="welcome-tour">Take the tour <span aria-hidden="true">\u2192</span></button>' +
+        '<button class="onb-skip" data-action="modal-close">Not now</button>'
+      : '<button class="onb-cta" data-action="modal-close">Let\u2019s start</button>') +
+    '</div>';
+}
+
 async function maybeShowWelcome() {
   const u = state.user;
   if (!u || u.demo || u.isAdmin || !u.level) return;
@@ -4308,26 +4341,7 @@ async function maybeShowWelcome() {
   const lvl = normalizeLevel(u.level);
   const fa = (lvl === 'a1' || lvl === 'a2');
   const offerTour = !tutorialSeen();
-  showModal(
-    fa
-      ? '<div dir="rtl" lang="fa"><div class="modal-ico">🎉</div>' +
-        '<h2>خوش اومدی!</h2>' +
-        '<p>هر روز <b>ساعت ۷ صبح</b> به وقت خودت، درس جدیدت آماده‌ست.</p>' +
-        '<p>فقط کافیه روزی حدود <b>۱۵ دقیقه</b> وقت بذاری — کلی کلمه، جمله و نکته جدید یاد می‌گیری.</p>' +
-        (offerTour
-          ? '<button class="btn btn-block" data-action="welcome-tour">بزن بریم، یه دور بزنیم 🌱</button>' +
-            '<button class="tut-skip" data-action="modal-close" style="margin-top:.7rem">فعلاً نه</button>'
-          : '<button class="btn btn-block" data-action="modal-close">شروع کن</button>') + '</div>'
-      : '<div class="modal-ico">🎉</div>' +
-        '<h2>Welcome!</h2>' +
-        '<p>Your new lesson is ready every day at <b>7:00 AM</b>, your time.</p>' +
-        '<p>Just spend about <b>15 minutes</b> a day — you\u2019ll pick up loads of new words, sentences and tips.</p>' +
-        (offerTour
-          ? '<button class="btn btn-block" data-action="welcome-tour">Take the tour 🌱</button>' +
-            '<button class="tut-skip" data-action="modal-close" style="margin-top:.7rem">Not now</button>'
-          : '<button class="btn btn-block" data-action="modal-close">Let\u2019s start</button>'),
-    true
-  );
+  showModal(welcomeModalHTML(fa, offerTour), true);
   // Mark as seen (DB first, localStorage as backup so it never double-shows).
   const now = new Date().toISOString();
   u.welcomeSeenAt = now;
@@ -4598,14 +4612,15 @@ async function demoLogin(asAdmin) {
 /* ---------------- waiting view (level pending) ---------------- */
 function renderWaiting(v) {
   v.innerHTML =
-  '<div class="card" style="max-width:520px;margin:2rem auto">' +
-    '<h1>One last step 🎯</h1>' +
-    (state.justSignedUp ? '<p class="form-note">✓ Your account is created.</p>' : '') +
-    '<p>What\'s your English level? Pick the closest — your lessons start right away.</p>' +
+  '<div class="onb onb-wait">' +
+    '<div class="onb-top"><span class="onb-brand">\uD83D\uDCD6 Muse English</span></div>' +
+    '<h1 class="onb-title">One last step \uD83C\uDFAF<span class="onb-squiggle" aria-hidden="true"></span></h1>' +
+    (state.justSignedUp ? '<p class="form-note">\u2713 Your account is created.</p>' : '') +
+    '<p class="onb-sub">What\u2019s your English level? Pick the closest — your lessons start right away.</p>' +
     levelPickerHTML('wait-level') +
     '<div class="form-error" id="wait-error" role="alert"></div>' +
-    '<button class="btn btn-block" data-action="save-level">Start learning</button>' +
-    '<p class="muted" style="margin-top:0.8rem">Signed in as ' + esc(state.user.email) + '</p>' +
+    '<button class="onb-cta" data-action="save-level">Start learning <span aria-hidden="true">\u2192</span></button>' +
+    '<p class="onb-signed">Signed in as ' + esc(state.user.email) + '</p>' +
   '</div>';
 }
 

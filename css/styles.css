@@ -2403,3 +2403,58 @@ body.duo-playing{padding-bottom:0!important;}
 .an-wa{display:flex;gap:.8rem;flex-wrap:wrap}
 .an-wa .bad{color:#c04444}
 .an-wa .ok{color:#1d7a3f}
+
+/* ---------- onboarding v2 (2026-10-04, his design) ---------- */
+.modal-card:has(.onb) { max-width: 600px; padding: 0; overflow: hidden; border-radius: 26px; }
+.onb { background: linear-gradient(180deg, #fffdf8 0%, #fff6ea 100%); color: #17212b;
+  border-radius: 26px; padding: 1.4rem 1.6rem 1.5rem; text-align: left; }
+.onb-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem; }
+.onb-brand { font-weight: 700; font-size: 1.05rem; color: #17212b; }
+.onb-x { background: none; border: 0; font-size: 1.3rem; color: #5a6b7d; cursor: pointer; padding: 0.2rem 0.4rem; }
+.onb-x:hover { color: #17212b; }
+.onb-body { display: flex; gap: 1rem; align-items: center; }
+.onb-text { flex: 1 1 55%; }
+.onb-title { position: relative; display: inline-block; font-size: 2rem; font-weight: 800;
+  color: #17212b; margin: 0.2rem 0 0.9rem; letter-spacing: -0.01em; }
+.onb-squiggle { display: block; height: 12px; margin-top: 2px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="140" height="12" viewBox="0 0 140 12"><path d="M3 8 Q 25 2, 48 7 T 93 7 T 137 6" fill="none" stroke="%23FF9600" stroke-width="5" stroke-linecap="round"/></svg>') no-repeat left center / 140px 12px; }
+.onb-text p { color: #3c4c5e; line-height: 1.6; margin: 0.55rem 0; font-size: 1rem; }
+.onb-hl { color: #ff9600; }
+.onb-img { flex: 0 0 42%; max-width: 230px; border-radius: 18px; }
+.onb-cta { display: block; width: 100%; margin-top: 1.1rem; padding: 0.95rem 1rem;
+  border: 0; border-radius: 999px; cursor: pointer;
+  background: linear-gradient(180deg, #ffa726, #ff8a00); color: #fff;
+  font-size: 1.05rem; font-weight: 700; box-shadow: 0 10px 24px rgba(255,138,0,0.35); }
+.onb-cta:hover { filter: brightness(1.04); }
+.onb-skip { display: block; margin: 0.7rem auto 0; background: none; border: 0;
+  color: #5a6b7d; text-decoration: underline; cursor: pointer; font-size: 0.95rem; }
+/* waiting view (level picker) */
+.onb-wait { max-width: 560px; margin: 2rem auto; text-align: center; box-shadow: 0 24px 70px rgba(120,60,10,0.18); }
+.onb-wait .onb-top { justify-content: flex-start; }
+.onb-wait .onb-title { font-size: 1.9rem; }
+.onb-wait .onb-squiggle { margin-left: auto; margin-right: auto; background-position: center; }
+.onb-sub { color: #3c4c5e; margin: 0.2rem 0 1rem; }
+.onb-wait .level-pick { gap: 0.7rem; margin: 0 0 0.4rem; }
+.onb-wait .level-opt { position: relative; }
+.onb-wait .level-card { background: #fff; border: 2px solid #eee3d0; border-radius: 16px;
+  padding: 1rem 0.5rem 0.9rem; gap: 0.3rem; transition: border-color 0.15s, box-shadow 0.15s; }
+.onb-wait .level-ico { font-size: 1.9rem; }
+.onb-wait .level-name { font-weight: 700; color: #17212b; font-size: 1rem; }
+.onb-wait .level-desc { color: #7a8a9c; font-size: 0.82rem; }
+.onb-wait .level-opt input:checked + .level-card { border-color: #ff9600;
+  box-shadow: 0 8px 22px rgba(255,150,0,0.25); }
+.onb-wait .level-opt input:checked + .level-card::after { content: "\2713";
+  position: absolute; left: 50%; bottom: -13px; transform: translateX(-50%);
+  width: 26px; height: 26px; border-radius: 50%; background: #ff9600; color: #fff;
+  font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.onb-wait .onb-cta { margin-top: 1.4rem; }
+.onb-signed { color: #7a8a9c; font-size: 0.85rem; margin-top: 0.8rem; }
+.onb[dir="rtl"] { text-align: right; }
+.onb[dir="rtl"] .onb-squiggle { background-position: right center; }
+.onb[dir="rtl"] .onb-body { flex-direction: row-reverse; }
+@media (max-width: 520px) {
+  .onb-body { flex-direction: column; }
+  .onb[dir="rtl"] .onb-body { flex-direction: column; }
+  .onb-img { max-width: 200px; }
+  .onb-title { font-size: 1.7rem; }
+}
