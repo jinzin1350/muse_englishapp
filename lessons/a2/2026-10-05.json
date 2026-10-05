@@ -1,0 +1,246 @@
+{
+  "date": "2026-10-05",
+  "theme": "health & body",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "cough",
+      "pos": "verb / noun",
+      "meaning": "a short strong sound when air comes out of your mouth fast",
+      "example": "He has a bad cough, so he covers his mouth.",
+      "pronunciation": "KOF",
+      "persian": "سرفه",
+      "photo": "media/a2/2026-10-05/photos/cough.jpg",
+      "word_audio": "media/a2/2026-10-05/word-audio/cough.mp3"
+    },
+    {
+      "word": "fever",
+      "pos": "noun",
+      "meaning": "a body temperature that is higher than normal; you feel hot and sick",
+      "example": "The nurse says the boy has a fever.",
+      "pronunciation": "FEE-vur",
+      "persian": "تب",
+      "photo": "media/a2/2026-10-05/photos/fever.jpg",
+      "word_audio": "media/a2/2026-10-05/word-audio/fever.mp3"
+    },
+    {
+      "word": "headache",
+      "pos": "noun",
+      "meaning": "pain in your head",
+      "example": "She took medicine for her headache.",
+      "pronunciation": "HED-ayk",
+      "persian": "سردرد",
+      "photo": "media/a2/2026-10-05/photos/headache.jpg",
+      "word_audio": "media/a2/2026-10-05/word-audio/headache.mp3"
+    },
+    {
+      "word": "sore",
+      "pos": "adjective",
+      "meaning": "painful, like when a part of your body hurts",
+      "example": "His throat is sore, so he drinks warm tea.",
+      "pronunciation": "SOR",
+      "persian": "دردناک",
+      "photo": "media/a2/2026-10-05/photos/sore.jpg",
+      "word_audio": "media/a2/2026-10-05/word-audio/sore.mp3"
+    },
+    {
+      "word": "rest",
+      "pos": "verb",
+      "meaning": "to stop work and relax so your body can get better",
+      "example": "The doctor says you must rest for two days.",
+      "pronunciation": "REST",
+      "persian": "استراحت",
+      "photo": "media/a2/2026-10-05/photos/rest.jpg",
+      "word_audio": "media/a2/2026-10-05/word-audio/rest.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-05/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: When You Feel Sick",
+    "audio": "media/a2/2026-10-05/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-05/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Doctor Says Rest",
+    "audio": "media/a2/2026-10-05/shadowing.mp3",
+    "transcript": "media/a2/2026-10-05/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'cough' mean?",
+      "options": [
+        "pain in your head",
+        "a short strong sound when air comes out of your mouth fast",
+        "to stop work and relax so your body can get better",
+        "a body temperature that is higher than normal"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'fever' mean?",
+      "options": [
+        "a short strong sound when air comes out of your mouth fast",
+        "painful, like when a part of your body hurts",
+        "a body temperature that is higher than normal; you feel hot and sick",
+        "pain in your head"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'headache' mean?",
+      "options": [
+        "to stop work and relax so your body can get better",
+        "a body temperature that is higher than normal",
+        "painful, like when a part of your body hurts",
+        "pain in your head"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'sore' mean?",
+      "options": [
+        "a body temperature that is higher than normal",
+        "painful, like when a part of your body hurts",
+        "a short strong sound when air comes out of your mouth fast",
+        "to stop work and relax so your body can get better"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'rest' mean?",
+      "options": [
+        "pain in your head",
+        "painful, like when a part of your body hurts",
+        "to stop work and relax so your body can get better",
+        "a short strong sound when air comes out of your mouth fast"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "6A: The Passive (is/are + past participle)",
+    "explanation": "The passive puts the action first, not the person. Use it when the person is not important or not known.\n\nWe make the passive with **is** or **are** + **the past participle**. The past participle often ends in -ed, like cleaned or washed.\n\nCompare the two forms. Active: The nurse checks the boy. Passive: The boy **is checked** by the nurse. The boy is now the subject of the sentence.\n\nUse **by** only when you want to say who did the action. We often leave it out: Warm tea **is made** for a sore throat.",
+    "examples": [
+      "Warm tea *is made* with honey for a sore throat. (for a cough)",
+      "The medicine *is taken* with water. (for a fever)",
+      "The room *is cleaned* every morning. (at the hospital)",
+      "Dinner *is cooked* at six o'clock. (then we rest)",
+      "The letters *are delivered* by the postman. (by + who did it)"
+    ],
+    "practice": [
+      {
+        "q": "Change to the passive: The doctor checks the boy.",
+        "a": "The boy is checked by the doctor."
+      },
+      {
+        "q": "Is this sentence passive: 'The tea is made with honey'?",
+        "a": "Yes — is + made (past participle)."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Tea ___ made with hot water.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The rooms ___ cleaned every day.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The medicine ___ taken with water.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the passive sentence.",
+        "options": [
+          "The nurse checks the boy.",
+          "The boy is checked by the nurse.",
+          "The boy checks the nurse.",
+          "The nurse is the boy."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Soup ___ served at noon.",
+        "options": [
+          "are",
+          "is",
+          "am",
+          "be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The tickets ___ sold at the office.",
+        "options": [
+          "is",
+          "am",
+          "am",
+          "are"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which sentence is NOT passive?",
+        "options": [
+          "The tea is made.",
+          "The cake is eaten.",
+          "She makes the tea.",
+          "The room is cleaned."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Rest ___ needed when you are sick.",
+        "options": [
+          "are",
+          "is",
+          "am",
+          "be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The car ___ washed by my brother.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "In the passive, we use 'by' to...",
+        "options": [
+          "ask a question",
+          "say who did the action",
+          "make a negative",
+          "talk about the future"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-10-05/grammar-en.mp3"
+  }
+}

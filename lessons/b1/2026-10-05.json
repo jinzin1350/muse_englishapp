@@ -1,0 +1,349 @@
+{
+  "date": "2026-10-05",
+  "theme": "travel & transport",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "transit",
+      "pos": "noun",
+      "meaning": "the system of buses, trains, and subways in a city",
+      "example": "The city's transit is fast and clean.",
+      "pronunciation": "TRAN-zit",
+      "persian": "حمل‌ونقل عمومی",
+      "photo": "media/b1/2026-10-05/photos/transit.jpg",
+      "word_audio": "media/b1/2026-10-05/word-audio/transit.mp3"
+    },
+    {
+      "word": "commuter",
+      "pos": "noun",
+      "meaning": "a person who travels to work or school every day",
+      "example": "The train was full of tired commuters.",
+      "pronunciation": "kuh-MYOO-tur",
+      "persian": "مسافر روزانه",
+      "photo": "media/b1/2026-10-05/photos/commuter.jpg",
+      "word_audio": "media/b1/2026-10-05/word-audio/commuter.mp3"
+    },
+    {
+      "word": "timetable",
+      "pos": "noun",
+      "meaning": "a list showing when buses or trains arrive and leave",
+      "example": "Check the timetable before you leave home.",
+      "pronunciation": "TYME-tay-bul",
+      "persian": "جدول زمانی حرکت",
+      "photo": "media/b1/2026-10-05/photos/timetable.jpg",
+      "word_audio": "media/b1/2026-10-05/word-audio/timetable.mp3"
+    },
+    {
+      "word": "fare",
+      "pos": "noun",
+      "meaning": "the money you pay to travel by bus, train, or taxi",
+      "example": "The taxi fare was higher than I expected.",
+      "pronunciation": "FEHR",
+      "persian": "کرایه",
+      "photo": "media/b1/2026-10-05/photos/fare.jpg",
+      "word_audio": "media/b1/2026-10-05/word-audio/fare.mp3"
+    },
+    {
+      "word": "conductor",
+      "pos": "noun",
+      "meaning": "a person who checks tickets on a train or bus",
+      "example": "The conductor asked to see our tickets.",
+      "pronunciation": "kun-DUK-tur",
+      "persian": "مأمور کنترل بلیت",
+      "photo": "media/b1/2026-10-05/photos/conductor.jpg",
+      "word_audio": "media/b1/2026-10-05/word-audio/conductor.mp3"
+    },
+    {
+      "word": "escalator",
+      "pos": "noun",
+      "meaning": "moving stairs that carry people up or down in a station or building",
+      "example": "We took the escalator to the second floor.",
+      "pronunciation": "ES-kuh-lay-tur",
+      "persian": "پله‌برقی",
+      "photo": "media/b1/2026-10-05/photos/escalator.jpg",
+      "word_audio": "media/b1/2026-10-05/word-audio/escalator.mp3"
+    },
+    {
+      "word": "detour",
+      "pos": "noun",
+      "meaning": "a longer road you take when the usual road is closed",
+      "example": "We had to take a detour because of the accident.",
+      "pronunciation": "DEE-toor",
+      "persian": "مسیر انحرافی",
+      "photo": "media/b1/2026-10-05/photos/detour.jpg",
+      "word_audio": "media/b1/2026-10-05/word-audio/detour.mp3"
+    },
+    {
+      "word": "intersection",
+      "pos": "noun",
+      "meaning": "a place where two or more roads meet",
+      "example": "Turn left at the next intersection.",
+      "pronunciation": "in-tur-SEK-shun",
+      "persian": "تقاطع",
+      "photo": "media/b1/2026-10-05/photos/intersection.jpg",
+      "word_audio": "media/b1/2026-10-05/word-audio/intersection.mp3"
+    },
+    {
+      "word": "highway",
+      "pos": "noun",
+      "meaning": "a wide, fast road between cities",
+      "example": "The highway was empty this morning.",
+      "pronunciation": "HY-way",
+      "persian": "بزرگراه",
+      "photo": "media/b1/2026-10-05/photos/highway.jpg",
+      "word_audio": "media/b1/2026-10-05/word-audio/highway.mp3"
+    },
+    {
+      "word": "passport",
+      "pos": "noun",
+      "meaning": "a small official book you need to travel to other countries",
+      "example": "Don't forget your passport at home.",
+      "pronunciation": "PASS-port",
+      "persian": "گذرنامه",
+      "photo": "media/b1/2026-10-05/photos/passport.jpg",
+      "word_audio": "media/b1/2026-10-05/word-audio/passport.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-10-05/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Getting Around",
+    "audio": "media/b1/2026-10-05/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-10-05/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Day of Travel",
+    "audio": "media/b1/2026-10-05/shadowing.mp3",
+    "transcript": "media/b1/2026-10-05/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'transit' mean?",
+      "options": [
+        "the money you pay for a bus or train ticket",
+        "the system of buses, trains, and subways in a city",
+        "a list showing when trains leave",
+        "moving stairs in a station"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'commuter' mean?",
+      "options": [
+        "a person who checks tickets",
+        "a wide road between cities",
+        "a person who travels to work or school every day",
+        "a small travel book"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'timetable' mean?",
+      "options": [
+        "a list showing when buses or trains arrive and leave",
+        "a place where roads meet",
+        "a longer road around a closed street",
+        "the money for a taxi ride"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'fare' mean?",
+      "options": [
+        "moving stairs that carry people up or down",
+        "a person who drives a train",
+        "a longer road you take when the usual road is closed",
+        "the money you pay to travel by bus, train, or taxi"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'conductor' mean?",
+      "options": [
+        "a person who checks tickets on a train or bus",
+        "a system of city buses and trains",
+        "a list of arrival times",
+        "an official travel book"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'escalator' mean?",
+      "options": [
+        "a wide, fast road between cities",
+        "a place where two roads meet",
+        "moving stairs that carry people up or down in a station or building",
+        "the money you pay for a bus ride"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'detour' mean?",
+      "options": [
+        "a longer road you take when the usual road is closed",
+        "a small official book for foreign travel",
+        "a person who travels to work daily",
+        "moving stairs in a station"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'intersection' mean?",
+      "options": [
+        "a list showing train times",
+        "a place where two or more roads meet",
+        "the money paid for travel",
+        "a person who checks tickets"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'highway' mean?",
+      "options": [
+        "moving stairs in a station",
+        "a longer road around a closed street",
+        "a wide, fast road between cities",
+        "the system of city buses and trains"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'passport' mean?",
+      "options": [
+        "a small official book you need to travel to other countries",
+        "a wide road between cities",
+        "a list of bus times",
+        "a place where roads meet"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "6A: The Passive (be + past participle)",
+    "explanation": "Use the **passive** when the action matters more than who does it.\n\nIn travel news we say the train **was delayed** — we do not say who delayed it.\n\nForm the passive with **be + past participle**: **is cleaned**, **was closed**, **has been checked**.\n\nThe object of the active sentence becomes the new subject: the conductor checks the tickets → the tickets **are checked**.\n\nAdd **by** only when the person is important: the bridge **was built** by a famous engineer.",
+    "examples": [
+      "*The tickets **are checked** by the conductor.* (on the train)",
+      "*The new timetable **was printed** yesterday.* (announcement)",
+      "*Our passports **have been stamped**.* (at the airport)",
+      "*The highway **will be closed** tonight.* (road sign)",
+      "*Fares **are paid** at the machine.* (station instructions)"
+    ],
+    "practice": [
+      {
+        "q": "Change to the passive: The conductor checks the tickets.",
+        "a": "The tickets are checked (by the conductor)."
+      },
+      {
+        "q": "Why is 'The road was closed' a passive sentence?",
+        "a": "Because it uses was + closed (be + past participle), and it does not say who closed the road."
+      },
+      {
+        "q": "Make one passive sentence about a detour.",
+        "a": "Example: A detour was opened because the road was closed."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the passive sentence.",
+        "options": [
+          "The conductor checks tickets.",
+          "The tickets are checked by the conductor.",
+          "The conductor is checking tickets.",
+          "Tickets check the conductor."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The new timetable ___ yesterday.",
+        "options": [
+          "was printed",
+          "printed",
+          "is print",
+          "has print"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "In 'The bridge was built by a famous engineer', why do we use 'by'?",
+        "options": [
+          "To show the time",
+          "To show who did the action",
+          "To make it negative",
+          "To ask a question"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Our passports ___ at the airport.",
+        "options": [
+          "have been stamped",
+          "have stamped",
+          "are stamp",
+          "stamped have"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "'They clean the train every night.' Change to the passive.",
+        "options": [
+          "The train cleans every night.",
+          "The train is cleaned every night.",
+          "The train cleaned every night.",
+          "Every night cleans the train."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The highway ___ tonight because of the snow.",
+        "options": [
+          "will close",
+          "will be closed",
+          "is close",
+          "closed will"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence does NOT tell us who did the action?",
+        "options": [
+          "The driver took a detour.",
+          "A detour was taken.",
+          "The conductor waved goodbye.",
+          "Ali paid the fare."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Fares ___ at the machine.",
+        "options": [
+          "pay",
+          "are paid",
+          "are pay",
+          "paid are"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Make it passive: 'They delayed the flight.'",
+        "options": [
+          "The flight delayed.",
+          "The flight is delay.",
+          "The flight was delayed.",
+          "Delayed the flight."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The passive is very common in:",
+        "options": [
+          "jokes and songs",
+          "news and official signs",
+          "greetings",
+          "shopping lists"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,250 @@
+{
+ "date": "2026-10-05",
+ "theme": "emotions & character",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "happy",
+   "pos": "adjective",
+   "meaning": "feeling good and smiling",
+   "example": "I am happy today.",
+   "pronunciation": "HAP-ee",
+   "persian": "خوشحال",
+   "photo": "media/a1/2026-10-05/photos/happy.jpg",
+   "word_audio": "media/a1/2026-10-05/word-audio/happy.mp3"
+  },
+  {
+   "word": "sad",
+   "pos": "adjective",
+   "meaning": "feeling bad and not happy",
+   "example": "She is sad now.",
+   "pronunciation": "sad",
+   "persian": "غمگین",
+   "photo": "media/a1/2026-10-05/photos/sad.jpg",
+   "word_audio": "media/a1/2026-10-05/word-audio/sad.mp3"
+  },
+  {
+   "word": "tired",
+   "pos": "adjective",
+   "meaning": "needing rest or sleep",
+   "example": "I am tired tonight.",
+   "pronunciation": "TY-urd",
+   "persian": "خسته",
+   "photo": "media/a1/2026-10-05/photos/tired.jpg",
+   "word_audio": "media/a1/2026-10-05/word-audio/tired.mp3"
+  },
+  {
+   "word": "hungry",
+   "pos": "adjective",
+   "meaning": "wanting or needing food",
+   "example": "The baby is hungry.",
+   "pronunciation": "HUNG-ree",
+   "persian": "گرسنه",
+   "photo": "media/a1/2026-10-05/photos/hungry.jpg",
+   "word_audio": "media/a1/2026-10-05/word-audio/hungry.mp3"
+  },
+  {
+   "word": "angry",
+   "pos": "adjective",
+   "meaning": "feeling mad",
+   "example": "He is angry with me.",
+   "pronunciation": "ANG-ree",
+   "persian": "عصبانی",
+   "photo": "media/a1/2026-10-05/photos/angry.jpg",
+   "word_audio": "media/a1/2026-10-05/word-audio/angry.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-10-05/pronunciation.mp3",
+ "podcast": {
+  "title": "Word Kitchen: How Are You Feeling?",
+  "audio": "media/a1/2026-10-05/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a1/2026-10-05/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Busy Day",
+  "audio": "media/a1/2026-10-05/shadowing.mp3",
+  "transcript": "media/a1/2026-10-05/shadowing-transcript.txt"
+ },
+ "quiz": [
+  {
+   "question": "What does 'happy' mean?",
+   "options": [
+    "feeling bad and not happy",
+    "feeling good and smiling",
+    "needing rest or sleep",
+    "wanting or needing food"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'sad' mean?",
+   "options": [
+    "feeling bad and not happy",
+    "feeling mad",
+    "needing rest or sleep",
+    "wanting or needing food"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'tired' mean?",
+   "options": [
+    "wanting or needing food",
+    "needing rest or sleep",
+    "feeling good and smiling",
+    "feeling mad"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'hungry' mean?",
+   "options": [
+    "feeling good and smiling",
+    "wanting or needing food",
+    "feeling bad and not happy",
+    "needing rest or sleep"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'angry' mean?",
+   "options": [
+    "needing rest or sleep",
+    "feeling bad and not happy",
+    "wanting or needing food",
+    "feeling mad"
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "6A: Passive — is / are (the simple way)",
+  "explanation": "Sometimes we do not say who does the action. We say **is** or **are** instead.\n\nUse **is** for one thing. Use **are** for many things.\n\nThe baby **is** happy. One baby, so we use **is**.\n\nThe boys **are** tired. Many boys, so we use **are**.\n\nThe form is very simple. It is **is** or **are** + the verb in past form, like opened, cooked, or closed.",
+  "examples": [
+   "*The baby *is* happy.* (one baby)",
+   "*The boys *are* tired.* (many boys)",
+   "*The food *is* hot, and the people *are* hungry.* (food and people)",
+   "*She *is* sad today.* (one person)",
+   "*The doors *are* closed.* (many doors)"
+  ],
+  "practice": [
+   {
+    "q": "One thing: ___ the door open? (Is or Are?)",
+    "a": "Is"
+   },
+   {
+    "q": "Many things: ___ the boys tired? (Is or Are?)",
+    "a": "Are"
+   },
+   {
+    "q": "Many things: ___ the girls happy? (Is or Are?)",
+    "a": "Are"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which is correct?",
+    "options": [
+     "The baby is happy.",
+     "The baby are happy.",
+     "Baby are happy.",
+     "Is the baby are happy."
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Which is correct?",
+    "options": [
+     "The boys is tired.",
+     "The boys are tired.",
+     "Boys are tired.",
+     "Is boys are tired."
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Choose the correct word: The food ___ hot.",
+    "options": [
+     "is",
+     "are",
+     "am",
+     "be"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Choose the correct word: The people ___ hungry.",
+    "options": [
+     "is",
+     "are",
+     "am",
+     "be"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Choose the correct word: She ___ sad today.",
+    "options": [
+     "is",
+     "are",
+     "am",
+     "be"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Which sentence is wrong?",
+    "options": [
+     "The doors are closed.",
+     "The baby is happy.",
+     "The boys is tired.",
+     "The girls are angry."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "In 'The windows are open', we use 'are' because...",
+    "options": [
+     "windows are many",
+     "windows are one",
+     "open is one",
+     "it is a question"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Choose the correct word: The cat ___ hungry.",
+    "options": [
+     "is",
+     "are",
+     "am",
+     "be"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Which is correct?",
+    "options": [
+     "The girls is happy.",
+     "The girls are happy.",
+     "Girls is happy.",
+     "Are the girls is happy."
+    ],
+    "answer": 1
+   },
+   {
+    "question": "'___ the dog sad?' What goes in the blank?",
+    "options": [
+     "Is",
+     "Are",
+     "Am",
+     "Be"
+    ],
+    "answer": 0
+   }
+  ],
+  "audio": "media/a1/2026-10-05/grammar-en.mp3"
+ }
+}

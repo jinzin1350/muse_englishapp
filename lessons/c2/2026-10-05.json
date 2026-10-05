@@ -1,0 +1,349 @@
+{
+  "date": "2026-10-05",
+  "theme": "Education & Learning",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "perspicacity",
+      "pos": "noun",
+      "meaning": "keen insight and the ability to understand things quickly and judge accurately",
+      "example": "The reporter's perspicacity helped her spot the flaw in the official story.",
+      "pronunciation": "pur-spi-KA-si-tee",
+      "persian": "تیزبینی و قضاوت دقیق",
+      "photo": "media/c2/2026-10-05/photos/perspicacity.jpg",
+      "word_audio": "media/c2/2026-10-05/word-audio/perspicacity.mp3"
+    },
+    {
+      "word": "discernment",
+      "pos": "noun",
+      "meaning": "the ability to notice subtle differences and make good, careful judgments",
+      "example": "Good leadership requires the discernment to separate facts from noise.",
+      "pronunciation": "di-SURN-muhnt",
+      "persian": "توانایی تشخیص و قضاوتِ درست",
+      "photo": "media/c2/2026-10-05/photos/discernment.jpg",
+      "word_audio": "media/c2/2026-10-05/word-audio/discernment.mp3"
+    },
+    {
+      "word": "philomath",
+      "pos": "noun",
+      "meaning": "a person who loves learning and studying",
+      "example": "As a true philomath, she reads three books a week on subjects she knows nothing about.",
+      "pronunciation": "FIL-uh-math",
+      "persian": "عاشقِ یادگیری و مطالعه",
+      "photo": "media/c2/2026-10-05/photos/philomath.jpg",
+      "word_audio": "media/c2/2026-10-05/word-audio/philomath.mp3"
+    },
+    {
+      "word": "assiduity",
+      "pos": "noun",
+      "meaning": "steady, careful, persistent hard work",
+      "example": "His assiduity in the laboratory eventually produced a breakthrough the whole team celebrated.",
+      "pronunciation": "as-i-DYOO-i-tee",
+      "persian": "پشتکار و جدیت در کار",
+      "photo": "media/c2/2026-10-05/photos/assiduity.jpg",
+      "word_audio": "media/c2/2026-10-05/word-audio/assiduity.mp3"
+    },
+    {
+      "word": "disquisition",
+      "pos": "noun",
+      "meaning": "a long, formal discussion or examination of one topic",
+      "example": "Her new book is a brilliant disquisition on how memory shapes identity.",
+      "pronunciation": "dis-kwih-ZIH-shuhn",
+      "persian": "بحث مفصل و رسمی دربارهٔ یک موضوع",
+      "photo": "media/c2/2026-10-05/photos/disquisition.jpg",
+      "word_audio": "media/c2/2026-10-05/word-audio/disquisition.mp3"
+    },
+    {
+      "word": "exegesis",
+      "pos": "noun",
+      "meaning": "close, critical interpretation of a written text",
+      "example": "The professor's exegesis of the poem revealed meanings we had all missed.",
+      "pronunciation": "ex-i-JEE-sis",
+      "persian": "تفسیر و تحلیل انتقادیِ متن",
+      "photo": "media/c2/2026-10-05/photos/exegesis.jpg",
+      "word_audio": "media/c2/2026-10-05/word-audio/exegesis.mp3"
+    },
+    {
+      "word": "recondite",
+      "pos": "adjective",
+      "meaning": "obscure and difficult for most people to understand",
+      "example": "His lecture was fascinating but so recondite that only specialists followed it.",
+      "pronunciation": "REK-uhn-dyte",
+      "persian": "کمتر شناخته‌شده و دشوار برای فهم",
+      "photo": "media/c2/2026-10-05/photos/recondite.jpg",
+      "word_audio": "media/c2/2026-10-05/word-audio/recondite.mp3"
+    },
+    {
+      "word": "conspectus",
+      "pos": "noun",
+      "meaning": "a broad, comprehensive overview of a whole subject",
+      "example": "The opening chapter offers a concise conspectus of two hundred years of scientific progress.",
+      "pronunciation": "kuhn-SPEK-tuhs",
+      "persian": "بررسی جامع و خلاصهٔ یک موضوع",
+      "photo": "media/c2/2026-10-05/photos/conspectus.jpg",
+      "word_audio": "media/c2/2026-10-05/word-audio/conspectus.mp3"
+    },
+    {
+      "word": "catechism",
+      "pos": "noun",
+      "meaning": "a structured series of questions and answers used for teaching",
+      "example": "The new recruits memorized the company's safety catechism before entering the factory.",
+      "pronunciation": "KAT-ih-kiz-uhm",
+      "persian": "مجموعه پرسش و پاسخ آموزشی",
+      "photo": "media/c2/2026-10-05/photos/catechism.jpg",
+      "word_audio": "media/c2/2026-10-05/word-audio/catechism.mp3"
+    },
+    {
+      "word": "sagacity",
+      "pos": "noun",
+      "meaning": "deep wisdom and good judgment that grows out of experience",
+      "example": "Her sagacity as a negotiator saved the company from a disastrous merger.",
+      "pronunciation": "suh-GA-si-tee",
+      "persian": "خردمندی و قضاوتِ خوب",
+      "photo": "media/c2/2026-10-05/photos/sagacity.jpg",
+      "word_audio": "media/c2/2026-10-05/word-audio/sagacity.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-05/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Art of Learning",
+    "audio": "media/c2/2026-10-05/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-05/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Night School Library",
+    "audio": "media/c2/2026-10-05/shadowing.mp3",
+    "transcript": "media/c2/2026-10-05/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'perspicacity' mean?",
+      "options": [
+        "keen insight and the ability to understand things quickly and judge accurately",
+        "a long, formal discussion or examination of one topic",
+        "close, critical interpretation of a written text",
+        "deep wisdom and good judgment that grows out of experience"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'discernment' mean?",
+      "options": [
+        "a person who loves learning and studying",
+        "deep wisdom and good judgment that grows out of experience",
+        "the ability to notice subtle differences and make good, careful judgments",
+        "obscure and difficult for most people to understand"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'philomath' mean?",
+      "options": [
+        "a broad, comprehensive overview of a whole subject",
+        "close, critical interpretation of a written text",
+        "a structured series of questions and answers used for teaching",
+        "a person who loves learning and studying"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'assiduity' mean?",
+      "options": [
+        "a person who loves learning and studying",
+        "steady, careful, persistent hard work",
+        "obscure and difficult for most people to understand",
+        "a long, formal discussion or examination of one topic"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'disquisition' mean?",
+      "options": [
+        "deep wisdom and good judgment that grows out of experience",
+        "the ability to notice subtle differences and make good, careful judgments",
+        "a long, formal discussion or examination of one topic",
+        "close, critical interpretation of a written text"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'exegesis' mean?",
+      "options": [
+        "deep wisdom and good judgment that grows out of experience",
+        "a structured series of questions and answers used for teaching",
+        "a long, formal discussion or examination of one topic",
+        "close, critical interpretation of a written text"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'recondite' mean?",
+      "options": [
+        "a person who loves learning and studying",
+        "a long, formal discussion or examination of one topic",
+        "obscure and difficult for most people to understand",
+        "a structured series of questions and answers used for teaching"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'conspectus' mean?",
+      "options": [
+        "steady, careful, persistent hard work",
+        "a broad, comprehensive overview of a whole subject",
+        "a person who loves learning and studying",
+        "close, critical interpretation of a written text"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'catechism' mean?",
+      "options": [
+        "a structured series of questions and answers used for teaching",
+        "obscure and difficult for most people to understand",
+        "deep wisdom and good judgment that grows out of experience",
+        "keen insight and the ability to understand things quickly and judge accurately"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'sagacity' mean?",
+      "options": [
+        "a person who loves learning and studying",
+        "the ability to notice subtle differences and make good, careful judgments",
+        "a long, formal discussion or examination of one topic",
+        "deep wisdom and good judgment that grows out of experience"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "6A: Passive (all tenses)",
+    "explanation": "Use the **passive voice** when the action matters more than the doer. A true philomath reads a disquisition for its ideas, not for the hand that wrote it.\n\nBuild it with **be** plus the **past participle**. *Is decoded*, *was published*, *has been revised* — the old object becomes the new subject.\n\nName the agent with **by** only when it adds real information. *The recondite manuscript was cracked by a philomath* keeps the hero; otherwise drop it, as in *Mistakes were made*.\n\nThe passive works in every tense: **is being analyzed**, **had been hidden**, **will be taught**. Formal and academic writing favors it because it sounds objective and precise.\n\nCommon mistake: never use **by** when the agent is obvious or unknown. A conspectus *is written*, not *is written by someone*.",
+    "examples": [
+      "*The recondite text was decoded* after months of assiduity. (focus on the result, not the reader)",
+      "*Her exegesis has been published* in three journals. (the agent is obvious from context)",
+      "*A conspectus of the whole field is being prepared* by the research team. (by names the agent on purpose)",
+      "*The questions in the catechism must be answered* with discernment. (modal + passive)",
+      "*If the code had not been broken*, the sealed room would have stayed hidden. (past perfect passive in conditionals)"
+    ],
+    "practice": [
+      {
+        "q": "Turn into the passive: The librarian admired her perspicacity.",
+        "a": "Her perspicacity was admired by the librarian."
+      },
+      {
+        "q": "Which is more formal: 'We translated the text' or 'The text was translated'?",
+        "a": "'The text was translated' — the passive sounds more objective and formal."
+      },
+      {
+        "q": "Fix the mistake: 'The conspectus has been wrote with great care.'",
+        "a": "'The conspectus has been written with great care.'"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Which sentence is in the passive voice?",
+        "options": [
+          "The committee is approving the plan now.",
+          "The committee approved the plan.",
+          "The plan was approved by the committee.",
+          "They approve plans every month."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The ancient manuscript ___ by a philomath last year.",
+        "options": [
+          "is discover",
+          "has discover",
+          "discovered",
+          "was discovered"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the passive form of: The critics praised her disquisition.",
+        "options": [
+          "The critics were praised by her.",
+          "Her disquisition is praise.",
+          "Her disquisition praised the critics.",
+          "Her disquisition was praised by the critics."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The recondite text ___ into plain language at the moment.",
+        "options": [
+          "has translate",
+          "translates",
+          "is being translated",
+          "is translate"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If the code ___ earlier, the sealed room would have been opened sooner.",
+        "options": [
+          "has been broke",
+          "had been broken",
+          "broke",
+          "was broke"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "A good conspectus ___ with care and discernment.",
+        "options": [
+          "must write",
+          "must be write",
+          "must writing",
+          "must be written"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which sentence names the agent with *by*?",
+        "options": [
+          "The map was decoded by Sara.",
+          "The books have been moved.",
+          "The door was closed.",
+          "Mistakes were made."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The catechism questions ___ before the students arrived.",
+        "options": [
+          "prepared",
+          "were prepare",
+          "had been prepared",
+          "have prepare"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Her sagacity ___ in the committee's final report.",
+        "options": [
+          "was recognized",
+          "is recognize",
+          "has recognize",
+          "recognized"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The passive voice is especially common in ___.",
+        "options": [
+          "informal chat messages",
+          "quick text messages",
+          "academic and formal writing",
+          "children's songs"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}
