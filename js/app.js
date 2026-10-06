@@ -5489,6 +5489,59 @@ function shadowingTabHTML(m) {
     '<div id="sp-sentences"></div></div>';
 }
 
+/* Speech-loop guard: on Android Chrome the Web Speech service sometimes
+   re-emits growing repeats of what it already sent ("when", "when Sarah",
+   "when Sarah became", …). Append a new final chunk, but when it is just a
+   re-emission of the accumulated transcript, keep the longer one instead of
+   concatenating (word-boundary aware, so a lone "a" is not swallowed by
+   "became"). */
+function spNormWords(s) {
+  return String(s || '').toLowerCase().replace(/[^a-z0-9'\s]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+function spContainsWords(hay, needle) {
+  if (!needle) return false;
+  return (' ' + hay + ' ').indexOf(' ' + needle + ' ') >= 0;
+}
+function spAppendFinal(prev, chunk) {
+  const c = String(chunk || '').trim();
+  if (!c) return prev || '';
+  const nPrev = spNormWords(prev), nChunk = spNormWords(c);
+  if (!nPrev) return c;
+  if (spContainsWords(nChunk, nPrev)) return c;        /* growing re-emission: keep the fuller one */
+  if (spContainsWords(nPrev, nChunk)) return prev || ''; /* re-sent tail: drop the repeat */
+  return ((prev || '') + ' ' + c).trim();
+}
+
+/* Collapse consecutive repeated word-runs ("no no" -> "no", "a b a b" -> "a b").
+   Safety net for staircase transcripts the append guard couldn't merge. */
+function spCollapseRepeats(text) {
+  const words = String(text || '').trim().split(/\s+/).filter(Boolean);
+  const low = words.map(function (w) { return w.toLowerCase(); });
+  if (words.length < 2) return words.join(' ');
+  let changed = true;
+  while (changed) {
+    changed = false;
+    let i = 0;
+    while (i < words.length) {
+      const maxN = Math.floor((words.length - i) / 2);
+      let n = maxN, hit = 0;
+      while (n >= 1 && !hit) {
+        let same = true;
+        for (let j = 0; j < n; j++) {
+          if (low[i + j] !== low[i + n + j]) { same = false; break; }
+        }
+        if (same) hit = n; else n--;
+      }
+      if (hit) {
+        words.splice(i, hit);
+        low.splice(i, hit);
+        changed = true; /* stay at i: a new repeat may now be adjacent */
+      } else i++;
+    }
+  }
+  return words.join(' ');
+}
+
 /* Word-level analysis: LCS between the story transcript and what the user
    said. Returns accuracy (of the words you said, how many matched the story
    in order), coverage (how much of the story you covered) and the set of
@@ -5633,7 +5686,7 @@ async function wireShadowingPractice(body, m) {
       let interim = '';
       for (let k = ev.resultIndex; k < ev.results.length; k++) {
         const tr = ev.results[k][0].transcript;
-        if (ev.results[k].isFinal) a.saidFinal += ' ' + tr;
+        if (ev.results[k].isFinal) a.saidFinal = spAppendFinal(a.saidFinal, tr);
         else interim += tr;
       }
       const t = (a.saidFinal + ' ' + interim).trim();
@@ -5690,7 +5743,8 @@ async function wireShadowingPractice(body, m) {
     /* Let the final onresult event land before reading the transcript. */
     await new Promise(function (resolve) { setTimeout(resolve, 700); });
     /* Analysis uses FINAL results only: interim hypotheses are noisy. */
-    await finishAttempt(a.i, a.saidFinal.trim(), a.resBox, a.lastError);
+    /* Collapse any staircase repeats the loop guard couldn't merge. */
+    await finishAttempt(a.i, spCollapseRepeats(a.saidFinal.trim()), a.resBox, a.lastError);
   }
 
   async function finishAttempt(i, said, resBox, lastError) {
