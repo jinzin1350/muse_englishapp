@@ -5501,7 +5501,8 @@ function analyzeSpeech(target, said) {
   };
   const T = norm(target), H = norm(said);
   const n = T.length, m = H.length;
-  if (!n || !m) return { accuracy: 0, coverage: 0, matched: new Set(), targetWords: T, saidWords: H };
+  const out = { accuracy: 0, coverage: 0, matched: new Set(), targetWords: T, saidWords: H };
+  if (!n || !m) return out;
   const dp = [];
   for (let i = 0; i <= n; i++) dp.push(new Uint16Array(m + 1));
   for (let i = n - 1; i >= 0; i--) {
@@ -5516,11 +5517,27 @@ function analyzeSpeech(target, said) {
     else if (dp[i + 1][j] >= dp[i][j + 1]) i++;
     else j++;
   }
-  return {
-    accuracy: Math.round(100 * matched.size / m),
-    coverage: Math.round(100 * matched.size / n),
-    matched: matched, targetWords: T, saidWords: H
+  /* A word only counts as "nailed it" when it is part of a run of 2+
+     consecutive story words: scattered single-word hits are usually
+     coincidental (common words guessed by a noisy transcript), not real
+     shadowing. */
+  const green = new Set();
+  let run = [];
+  const flushRun = function () {
+    if (run.length >= 2) run.forEach(function (k) { green.add(k); });
+    run = [];
   };
+  for (let k = 0; k < n; k++) {
+    if (matched.has(k)) {
+      if (run.length && k !== run[run.length - 1] + 1) flushRun();
+      run.push(k);
+    } else flushRun();
+  }
+  flushRun();
+  out.matched = green;
+  out.accuracy = Math.round(100 * green.size / n);
+  out.coverage = Math.round(100 * matched.size / n);
+  return out;
 }
 
 /* Speaking practice wiring: 30s recorder + live transcription + upload +
@@ -5616,9 +5633,11 @@ async function wireShadowingPractice(body, m) {
     if (timerId) { clearInterval(timerId); timerId = null; }
     try { if (recog) recog.stop(); } catch (e) {}
     /* Let the final onresult event land before reading the transcript. */
-    await new Promise(function (resolve) { setTimeout(resolve, 500); });
+    await new Promise(function (resolve) { setTimeout(resolve, 700); });
     setIdle();
-    const said = (saidFinal + ' ' + saidInterim).trim();
+    /* Analysis uses FINAL results only: interim hypotheses are noisy and
+       would pollute the transcript with guessed words. */
+    const said = saidFinal.trim();
     await finishAttempt(said);
   }
 
@@ -5703,7 +5722,7 @@ async function wireShadowingPractice(body, m) {
     } else {
       const cls = a.accuracy >= 80 ? 'great' : (a.accuracy >= 50 ? 'ok' : 'low');
       head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">' + a.accuracy + '%</div>' +
-        '<div class="sp-score-label">accuracy · you covered ' + a.coverage + '% of the story' +
+        '<div class="sp-score-label">of the story reproduced' +
         (pts ? ' · +' + pts + ' pts' : '') + '</div></div>';
     }
     const words = a.targetWords.map(function (w, idx) {
