@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "segway-ninebot-c2-lite",
+      "name_fa": "اسکوتر برقی سگوی ناین‌بات C2 Lite برای بچه‌ها",
+      "name_en": "Segway Ninebot C2 Lite Electric Kids Scooter",
+      "price_cad": 189.99,
+      "regular_cad": null,
+      "discount_pct": 37,
+      "added_fa": "سه‌شنبه، ۶ اکتبر ۲۰۲۶",
+      "image": "img/segway-ninebot-c2-lite.jpg",
+      "url": "https://www.amazon.ca/dp/B0DJRFL1LP?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "تا ۷۰ دقیقه بازی، چراغ‌های رنگی و ارتفاع قابل تنظیم — برای بچه‌های ۶ تا ۱۰ سال."
+    },
+    {
+      "id": "hot-wheels-city-ultimate-garage",
+      "name_fa": "گاراژ بزرگ هات‌ویلز سیتی",
+      "name_en": "Hot Wheels City Ultimate Garage Track Set",
+      "price_cad": 139.99,
+      "regular_cad": null,
+      "discount_pct": 30,
+      "added_fa": "سه‌شنبه، ۶ اکتبر ۲۰۲۶",
+      "image": "img/hot-wheels-city-ultimate-garage.jpg",
+      "url": "https://www.amazon.ca/dp/B0BN15NTGG?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "۴ طبقه مسابقه با اژدهای ماشین‌خور و جای ۵۰+ ماشین — ساعت‌ها سرگرمی."
+    },
+    {
+      "id": "lego-speed-champions-mclaren-w1",
+      "name_fa": "لگو اسپید چمپیونز مک‌لارن W1",
+      "name_en": "LEGO Speed Champions McLaren W1 77257",
+      "price_cad": 19.99,
+      "regular_cad": null,
+      "discount_pct": 44,
+      "added_fa": "سه‌شنبه، ۶ اکتبر ۲۰۲۶",
+      "image": "img/lego-speed-champions-mclaren-w1.jpg",
+      "url": "https://www.amazon.ca/dp/B0FMS87VKQ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "ست ماشین‌سواری لگو برای بچه‌ها و کلکسیونرها — هدیه‌ای که همیشه جواب می‌ده."
+    },
+    {
+      "id": "ninja-dualzone-dz302c",
+      "name_fa": "سرخ‌کن هوای نینجا دو محفظه (۱۰ لیتر)",
+      "name_en": "Ninja Foodi 10-qt 6-in-1 DualZone XL Air Fryer (DZ302C)",
+      "price_cad": 219.99,
+      "regular_cad": null,
+      "discount_pct": 31,
+      "added_fa": "سه‌شنبه، ۶ اکتبر ۲۰۲۶",
+      "image": "img/ninja-dualzone-dz302c.jpg",
+      "url": "https://www.amazon.ca/dp/B0FLQLG4TM?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "دو محفظه مستقل — هم‌زمان دو غذای مختلف درست کن، بدون معطل شدن."
+    },
+    {
       "id": "thermos-icon-16oz-food-jar-lavender",
       "name_fa": "ظرف غذای حرارتی ترموس ICON (یاسی)",
       "name_en": "THERMOS ICON Series 16 Ounce Stainless Steel Vacuum Food Jar, Lavender",
@@ -55,63 +111,7 @@
       "item_no": null,
       "blurb_fa": "دو فر مستقل با درب هوشمند FlexDoor؛ هم‌زمان دو غذا با دمای متفاوت — انتخاب آمازون با صدها خرید در ماه گذشته.",
       "added_fa": "دوشنبه، ۵ اکتبر ۲۰۲۶"
-    },
-    {
-      "id": "cuisinart-compactmax-air-fryer-210c",
-      "name_fa": "سرخ‌کن هوای کوییزین‌آرت CompactMax (۸ کوارت)",
-      "name_en": "Cuisinart CompactMax 8-Qt Basket Air Fryer (AIR-210C)",
-      "price_cad": 104.99,
-      "regular_cad": null,
-      "discount_pct": 41,
-      "image": "img/cuisinart-compactmax-air-fryer-210c.jpg",
-      "url": "https://www.amazon.ca/dp/B0FNYBG8F7?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "۴ کاره در یک دستگاه: سرخ‌کن، پخت، بریان و گرم نگه‌داشتن — ظرفیت ۸ کوارت برای غذای خانواده، با طراحی باریک که جای کمی می‌گیرد.",
-      "added_fa": "دوشنبه، ۵ اکتبر ۲۰۲۶"
-    },
-    {
-      "id": "clarston-humidifier-2-5l-2026-10-04",
-      "name_fa": "دستگاه بخور سرد کلارستون ۲.۵ لیتری",
-      "name_en": "Clarston 2.5L Cool Mist Humidifier",
-      "price_cad": 23.99,
-      "regular_cad": 29.99,
-      "discount_pct": 20,
-      "image": "img/clarston-humidifier-2-5l-2026-10-04.jpg",
-      "url": "https://www.amazon.ca/dp/B0CWMS1GK5?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "بخور سرد بی‌صدا برای خواب زمستانی؛ مناسب اتاق‌خواب با مخزن ۲.۵ لیتری و ۲۵ ساعت کار مداوم",
-      "added_fa": "یکشنبه، ۴ اکتبر ۲۰۲۶"
-    },
-    {
-      "id": "logitech-g502-hero-2026-10-04",
-      "name_fa": "ماوس گیمینگ لاجیتک G502 HERO",
-      "name_en": "Logitech G502 HERO Wired Gaming Mouse",
-      "price_cad": 34.98,
-      "regular_cad": 74.99,
-      "discount_pct": 53,
-      "image": "img/logitech-g502-hero-2026-10-04.jpg",
-      "url": "https://www.amazon.ca/dp/B07GBZ4Q68?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "ماوس افسانه‌ای گیمینگ با سنسور HERO 25K؛ یکی از پرفروش‌ترین ماوس‌های جهان با بیش از نصف قیمت",
-      "added_fa": "یکشنبه، ۴ اکتبر ۲۰۲۶"
-    },
-    {
-      "id": "neck-heating-pad-vibration",
-      "name_fa": "شال گرم‌کن گردن با ویبره",
-      "name_en": "Neck Heating Pad with Vibration (Purple)",
-      "price_cad": 29.99,
-      "regular_cad": null,
-      "discount_pct": 25,
-      "image": "img/neck-heating-pad-vibration.jpg",
-      "url": "https://www.amazon.ca/dp/B0F842QTWG?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "برای سرما و گردن‌درد پاییز تورنتو — شال گرم‌کننده با ماساژ و ویبره",
-      "added_fa": "یکشنبه، ۴ اکتبر ۲۰۲۶"
     }
   ],
-  "updated_fa": "دوشنبه ۱۳ مهر"
+  "updated_fa": "سه‌شنبه ۱۴ مهر"
 }
