@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-06",
+  "theme": "health & body",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "symptom",
+      "pos": "noun",
+      "meaning": "a sign that you are sick, like a fever or a cough",
+      "example": "A fever is a common symptom of the flu.",
+      "pronunciation": "SIMP-tum",
+      "persian": "علامت بیماری",
+      "photo": "media/b1/2026-10-06/photos/symptom.jpg",
+      "word_audio": "media/b1/2026-10-06/word-audio/symptom.mp3"
+    },
+    {
+      "word": "prescribe",
+      "pos": "verb",
+      "meaning": "when a doctor tells you which medicine to take",
+      "example": "The doctor prescribed some pills for my cold.",
+      "pronunciation": "pruh-SCRYBE",
+      "persian": "تجویز کردن",
+      "photo": "media/b1/2026-10-06/photos/prescribe.jpg",
+      "word_audio": "media/b1/2026-10-06/word-audio/prescribe.mp3"
+    },
+    {
+      "word": "diagnosis",
+      "pos": "noun",
+      "meaning": "when a doctor finds out what your illness is",
+      "example": "The diagnosis was just a simple cold.",
+      "pronunciation": "dy-uhg-NOH-sis",
+      "persian": "تشخیص بیماری",
+      "photo": "media/b1/2026-10-06/photos/diagnosis.jpg",
+      "word_audio": "media/b1/2026-10-06/word-audio/diagnosis.mp3"
+    },
+    {
+      "word": "recovery",
+      "pos": "noun",
+      "meaning": "getting healthy again after being sick",
+      "example": "His recovery took about two weeks.",
+      "pronunciation": "ree-KUH-vuh-ree",
+      "persian": "بهبودی",
+      "photo": "media/b1/2026-10-06/photos/recovery.jpg",
+      "word_audio": "media/b1/2026-10-06/word-audio/recovery.mp3"
+    },
+    {
+      "word": "allergy",
+      "pos": "noun",
+      "meaning": "when your body reacts badly to something like pollen",
+      "example": "She has an allergy to peanuts.",
+      "pronunciation": "AL-uhr-jee",
+      "persian": "آلرژی (حساسیت)",
+      "photo": "media/b1/2026-10-06/photos/allergy.jpg",
+      "word_audio": "media/b1/2026-10-06/word-audio/allergy.mp3"
+    },
+    {
+      "word": "vitamin",
+      "pos": "noun",
+      "meaning": "a pill or food that keeps your body healthy",
+      "example": "Oranges have a lot of vitamin C.",
+      "pronunciation": "VY-tuh-min",
+      "persian": "ویتامین",
+      "photo": "media/b1/2026-10-06/photos/vitamin.jpg",
+      "word_audio": "media/b1/2026-10-06/word-audio/vitamin.mp3"
+    },
+    {
+      "word": "infection",
+      "pos": "noun",
+      "meaning": "when germs get into your body and make you sick",
+      "example": "He had an infection in his throat.",
+      "pronunciation": "in-FEK-shun",
+      "persian": "عفونت",
+      "photo": "media/b1/2026-10-06/photos/infection.jpg",
+      "word_audio": "media/b1/2026-10-06/word-audio/infection.mp3"
+    },
+    {
+      "word": "immunity",
+      "pos": "noun",
+      "meaning": "your body's ability to fight sickness",
+      "example": "Good sleep helps build your immunity.",
+      "pronunciation": "i-MYOO-nuh-tee",
+      "persian": "ایمنی بدن",
+      "photo": "media/b1/2026-10-06/photos/immunity.jpg",
+      "word_audio": "media/b1/2026-10-06/word-audio/immunity.mp3"
+    },
+    {
+      "word": "nutritious",
+      "pos": "adjective",
+      "meaning": "food that is healthy and good for your body",
+      "example": "A nutritious breakfast gives you energy.",
+      "pronunciation": "noo-TRI-shus",
+      "persian": "مغذی",
+      "photo": "media/b1/2026-10-06/photos/nutritious.jpg",
+      "word_audio": "media/b1/2026-10-06/word-audio/nutritious.mp3"
+    },
+    {
+      "word": "remedy",
+      "pos": "noun",
+      "meaning": "something that makes you feel better when you are sick",
+      "example": "Hot tea is a simple remedy for a cold.",
+      "pronunciation": "REM-uh-dee",
+      "persian": "درمان، علاج",
+      "photo": "media/b1/2026-10-06/photos/remedy.jpg",
+      "word_audio": "media/b1/2026-10-06/word-audio/remedy.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-10-06/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Staying Healthy",
+    "audio": "media/b1/2026-10-06/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-10-06/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Week of Getting Well",
+    "audio": "media/b1/2026-10-06/shadowing.mp3",
+    "transcript": "media/b1/2026-10-06/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'symptom' mean?",
+      "options": [
+        "a sign that you are sick, like a fever or a cough",
+        "food that is healthy and good for your body",
+        "when a doctor finds out what your illness is",
+        "when germs get into your body and make you sick"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'prescribe' mean?",
+      "options": [
+        "when your body reacts badly to something like pollen",
+        "a pill or food that keeps your body healthy",
+        "when a doctor tells you which medicine to take",
+        "something that makes you feel better when you are sick"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'diagnosis' mean?",
+      "options": [
+        "when your body reacts badly to something like pollen",
+        "when a doctor finds out what your illness is",
+        "when a doctor tells you which medicine to take",
+        "a sign that you are sick, like a fever or a cough"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'recovery' mean?",
+      "options": [
+        "a sign that you are sick, like a fever or a cough",
+        "when your body reacts badly to something like pollen",
+        "getting healthy again after being sick",
+        "when germs get into your body and make you sick"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'allergy' mean?",
+      "options": [
+        "when a doctor finds out what your illness is",
+        "when your body reacts badly to something like pollen",
+        "when a doctor tells you which medicine to take",
+        "getting healthy again after being sick"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'vitamin' mean?",
+      "options": [
+        "a pill or food that keeps your body healthy",
+        "something that makes you feel better when you are sick",
+        "when germs get into your body and make you sick",
+        "a sign that you are sick, like a fever or a cough"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'infection' mean?",
+      "options": [
+        "when germs get into your body and make you sick",
+        "food that is healthy and good for your body",
+        "when a doctor finds out what your illness is",
+        "when a doctor tells you which medicine to take"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'immunity' mean?",
+      "options": [
+        "food that is healthy and good for your body",
+        "your body's ability to fight sickness",
+        "getting healthy again after being sick",
+        "when a doctor finds out what your illness is"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'nutritious' mean?",
+      "options": [
+        "food that is healthy and good for your body",
+        "a pill or food that keeps your body healthy",
+        "a sign that you are sick, like a fever or a cough",
+        "getting healthy again after being sick"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'remedy' mean?",
+      "options": [
+        "getting healthy again after being sick",
+        "something that makes you feel better when you are sick",
+        "a sign that you are sick, like a fever or a cough",
+        "when germs get into your body and make you sick"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "6B: Modals of deduction - might, can't, must",
+    "explanation": "Sometimes we guess about the present. **might** shows a guess that is possible.\n\nUse **might** when you are not sure. Your nutritious soup might be cold now.\n\nUse **must** when you are almost sure something is true. Your immunity must be strong — you never get sick.\n\nUse **can't** when you are sure something is NOT true. That can't be an allergy — you never sneeze.\n\nCareful: the opposite of **must** (sure) is **can't**, NOT **mustn't**. **mustn't** means \"don't do it\" — a rule, not a guess.\n\nWe often add **be + -ing** after these words. Your body must be fighting the infection.",
+    "examples": [
+      "*He *might* have an infection.* (the doctor is not sure)",
+      "*Your immunity *must* be strong. You never catch a cold.* (the speaker is almost sure)",
+      "*That *can't* be an allergy. You feel fine in spring.* (the speaker is sure it is not true)",
+      "*She *might* need a vitamin every day.* (a guess)",
+      "*Your recovery *must* be going well. You look great.* (almost sure)",
+      "*He *can't* be sick. He just ran five kilometers.* (sure it is not true)"
+    ],
+    "practice": [
+      {
+        "q": "Look! She is sneezing and her eyes are red. What can we say?",
+        "a": "She might have an allergy."
+      },
+      {
+        "q": "He eats well, sleeps well, and never gets sick. What can we say about his immunity?",
+        "a": "His immunity must be strong."
+      },
+      {
+        "q": "The doctor said your test is perfect. What can we say about an infection?",
+        "a": "There can't be an infection."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Look at those dark clouds. It ___ rain later.",
+        "options": [
+          "might",
+          "must",
+          "can't",
+          "mustn't"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She has a fever and a bad cough. She ___ have an infection.",
+        "options": [
+          "will",
+          "might",
+          "can't",
+          "mustn't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He never gets sick and eats nutritious food. His immunity ___ be very strong.",
+        "options": [
+          "can't",
+          "might",
+          "must",
+          "could be not"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She feels fine around cats, so that ___ be an allergy.",
+        "options": [
+          "must",
+          "might",
+          "can't",
+          "mustn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The opposite of **must** (when you are sure) is ___.",
+        "options": [
+          "mustn't",
+          "might not",
+          "can't",
+          "could"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They ___ be having a party — I can hear loud music.",
+        "options": [
+          "mightn't",
+          "must",
+          "can't",
+          "mustn't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ be sick. He just finished a ten-kilometer run!",
+        "options": [
+          "must",
+          "might",
+          "can't",
+          "will"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Your throat hurts. You ___ need a remedy like hot tea.",
+        "options": [
+          "willn't",
+          "can't",
+          "might",
+          "mustn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We ___ know the full diagnosis until the test results arrive.",
+        "options": [
+          "must",
+          "might",
+          "can't",
+          "mustn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She takes a vitamin every day and looks great. Her recovery ___ be going well.",
+        "options": [
+          "can't",
+          "might",
+          "will",
+          "must"
+        ],
+        "answer": 3
+      }
+    ]
+  }
+}

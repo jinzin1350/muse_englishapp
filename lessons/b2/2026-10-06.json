@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-06",
+  "theme": "work & career",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "burnout",
+      "pos": "noun",
+      "meaning": "extreme tiredness caused by working too hard for too long",
+      "example": "After six months of seventy-hour weeks, she hit total burnout and took a month off.",
+      "pronunciation": "BURN-out",
+      "persian": "فرسودگی شغلی",
+      "photo": "media/b2/2026-10-06/photos/burnout.jpg",
+      "word_audio": "media/b2/2026-10-06/word-audio/burnout.mp3"
+    },
+    {
+      "word": "dedication",
+      "pos": "noun",
+      "meaning": "the quality of working hard and giving your time and energy because you care",
+      "example": "His dedication to the project impressed the whole team.",
+      "pronunciation": "de-duh-KAY-shun",
+      "persian": "تعهد و تلاش جدی",
+      "photo": "media/b2/2026-10-06/photos/dedication.jpg",
+      "word_audio": "media/b2/2026-10-06/word-audio/dedication.mp3"
+    },
+    {
+      "word": "multitask",
+      "pos": "verb",
+      "meaning": "to do two or more things at the same time",
+      "example": "Most managers have to multitask between meetings, emails, and calls all day.",
+      "pronunciation": "MUL-tee-task",
+      "persian": "انجام چند کار همزمان",
+      "photo": "media/b2/2026-10-06/photos/multitask.jpg",
+      "word_audio": "media/b2/2026-10-06/word-audio/multitask.mp3"
+    },
+    {
+      "word": "workload",
+      "pos": "noun",
+      "meaning": "the amount of work a person has to do",
+      "example": "The new system helped us share the workload more fairly.",
+      "pronunciation": "WURK-lohd",
+      "persian": "حجم کاری",
+      "photo": "media/b2/2026-10-06/photos/workload.jpg",
+      "word_audio": "media/b2/2026-10-06/word-audio/workload.mp3"
+    },
+    {
+      "word": "perk",
+      "pos": "noun",
+      "meaning": "an extra benefit you get from your job, besides your pay (informal)",
+      "example": "One nice perk of the job is free lunch every Friday.",
+      "pronunciation": "PURK",
+      "persian": "مزیت شغلی",
+      "photo": "media/b2/2026-10-06/photos/perk.jpg",
+      "word_audio": "media/b2/2026-10-06/word-audio/perk.mp3"
+    },
+    {
+      "word": "network",
+      "pos": "verb",
+      "meaning": "to meet and connect with people who can help you in your career",
+      "example": "She networks at industry events to find new clients.",
+      "pronunciation": "NET-wurk",
+      "persian": "ارتباط‌سازی حرفه‌ای",
+      "photo": "media/b2/2026-10-06/photos/network.jpg",
+      "word_audio": "media/b2/2026-10-06/word-audio/network.mp3"
+    },
+    {
+      "word": "pivot",
+      "pos": "verb",
+      "meaning": "to make a big change in direction, especially in your career or business",
+      "example": "After ten years in banking, he pivoted to teaching.",
+      "pronunciation": "PIH-vut",
+      "persian": "تغییر مسیر شغلی",
+      "photo": "media/b2/2026-10-06/photos/pivot.jpg",
+      "word_audio": "media/b2/2026-10-06/word-audio/pivot.mp3"
+    },
+    {
+      "word": "thrive",
+      "pos": "verb",
+      "meaning": "to grow, develop, and become very successful",
+      "example": "She really thrives in a busy, creative office.",
+      "pronunciation": "THRYVE",
+      "persian": "شکوفا شدن و موفق شدن",
+      "photo": "media/b2/2026-10-06/photos/thrive.jpg",
+      "word_audio": "media/b2/2026-10-06/word-audio/thrive.mp3"
+    },
+    {
+      "word": "delegate",
+      "pos": "verb",
+      "meaning": "to give part of your work or responsibility to someone else",
+      "example": "A good manager knows how to delegate tasks to the right people.",
+      "pronunciation": "DEH-luh-gayt",
+      "persian": "واگذار کردن کارها به دیگران",
+      "photo": "media/b2/2026-10-06/photos/delegate.jpg",
+      "word_audio": "media/b2/2026-10-06/word-audio/delegate.mp3"
+    },
+    {
+      "word": "milestone",
+      "pos": "noun",
+      "meaning": "an important event or achievement in your work or life",
+      "example": "Launching the app was a huge milestone for our small team.",
+      "pronunciation": "MYLE-stohn",
+      "persian": "نقطه عطف",
+      "photo": "media/b2/2026-10-06/photos/milestone.jpg",
+      "word_audio": "media/b2/2026-10-06/word-audio/milestone.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-10-06/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The New Rules of Work",
+    "audio": "media/b2/2026-10-06/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-06/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's New Balance",
+    "audio": "media/b2/2026-10-06/shadowing.mp3",
+    "transcript": "media/b2/2026-10-06/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'burnout' mean?",
+      "options": [
+        "extreme tiredness caused by working too hard for too long",
+        "to give part of your work or responsibility to someone else",
+        "to do two or more things at the same time",
+        "to make a big change in direction, especially in your career or business"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'dedication' mean?",
+      "options": [
+        "to make a big change in direction, especially in your career or business",
+        "an extra benefit you get from your job, besides your pay (informal)",
+        "the quality of working hard and giving your time and energy because you care",
+        "extreme tiredness caused by working too hard for too long"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'multitask' mean?",
+      "options": [
+        "an extra benefit you get from your job, besides your pay (informal)",
+        "to do two or more things at the same time",
+        "to meet and connect with people who can help you in your career",
+        "extreme tiredness caused by working too hard for too long"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'workload' mean?",
+      "options": [
+        "to give part of your work or responsibility to someone else",
+        "the amount of work a person has to do",
+        "an extra benefit you get from your job, besides your pay (informal)",
+        "the quality of working hard and giving your time and energy because you care"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'perk' mean?",
+      "options": [
+        "an extra benefit you get from your job, besides your pay (informal)",
+        "the amount of work a person has to do",
+        "an important event or achievement in your work or life",
+        "to make a big change in direction, especially in your career or business"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'network' mean?",
+      "options": [
+        "to meet and connect with people who can help you in your career",
+        "to give part of your work or responsibility to someone else",
+        "to make a big change in direction, especially in your career or business",
+        "the amount of work a person has to do"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'pivot' mean?",
+      "options": [
+        "extreme tiredness caused by working too hard for too long",
+        "an important event or achievement in your work or life",
+        "to make a big change in direction, especially in your career or business",
+        "to grow, develop, and become very successful"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'thrive' mean?",
+      "options": [
+        "to grow, develop, and become very successful",
+        "to give part of your work or responsibility to someone else",
+        "the amount of work a person has to do",
+        "an extra benefit you get from your job, besides your pay (informal)"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'delegate' mean?",
+      "options": [
+        "an important event or achievement in your work or life",
+        "to meet and connect with people who can help you in your career",
+        "to give part of your work or responsibility to someone else",
+        "to do two or more things at the same time"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'milestone' mean?",
+      "options": [
+        "to give part of your work or responsibility to someone else",
+        "to grow, develop, and become very successful",
+        "the amount of work a person has to do",
+        "an important event or achievement in your work or life"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "6B: Modals of deduction - might, can't, must",
+    "explanation": "Use **might**, **can't**, and **must** to guess about the present. You base your guess on what you see or know.\n\nUse **might** when you think something is possibly true. Your new colleague **might** be tired; her workload looks very heavy.\n\nUse **can't** when you are sure something is impossible. He **can't** be on holiday; his dedication keeps him at his desk every day.\n\nUse **must** when you are sure something is true. They **must** be celebrating a milestone; everyone in the office is smiling.\n\nThe opposite of **must** is **can't**, NOT **mustn't**. Say 'She **can't** be the manager', not 'She **mustn't** be the manager'.\n\nWe often use **might**, **can't**, or **must** with be + -ing for actions happening now. 'They **must** be networking at the conference right now.'",
+    "examples": [
+      "*She *might* be in a meeting.* (her calendar is full)",
+      "*He *can't* be the new intern.* (he looks too experienced)",
+      "*They *must* be working late.* (the office lights are still on)",
+      "*You *must* be tired after that workload.* (a kind guess)",
+      "*They *must* be having a party.* (the music is very loud)",
+      "*He *might* be looking for a better perk.* (he asked about benefits)"
+    ],
+    "practice": [
+      {
+        "q": "Your colleague's desk is empty and her coat is gone. What do you say?",
+        "a": "She must be out. / She might be at lunch."
+      },
+      {
+        "q": "A man wearing a wedding ring walks past with his wife. What are you sure about?",
+        "a": "He must be married."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "He might be American. Which clue fits?",
+        "options": [
+          "He's wearing a baseball cap.",
+          "He's looking at a map.",
+          "He's carrying a sports bag.",
+          "He's wearing a wedding ring."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He can't be a university student. Which clue fits?",
+        "options": [
+          "He's carrying a camera.",
+          "He's wearing school uniform.",
+          "He isn't talking to anybody.",
+          "He's looking at job adverts."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He must be married. Which clue fits?",
+        "options": [
+          "He's wearing a wedding ring.",
+          "He's wearing a suit.",
+          "He's carrying a sports bag.",
+          "He's looking at a map."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I'm not sure, but she ____ have a new partner.",
+        "options": [
+          "might",
+          "must",
+          "can't",
+          "mustn't"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Poor Andy. He ____ be very happy about that.",
+        "options": [
+          "might",
+          "must",
+          "can't",
+          "could"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My sister works as an interpreter for the EU. She ____ speak a lot of languages to work there.",
+        "options": [
+          "can't",
+          "might",
+          "must",
+          "might not"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Why don't you buy this dress for your mum? — I'm not sure. She ____ like it. It's a bit short for her.",
+        "options": [
+          "must",
+          "might not",
+          "can't",
+          "must"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My daughter has failed all her exams. She ____ be working very hard.",
+        "options": [
+          "might",
+          "can't",
+          "must",
+          "mustn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He can't be enjoying the party. Which clue fits?",
+        "options": [
+          "He isn't talking to anybody.",
+          "He's carrying a sports bag.",
+          "He's wearing a baseball cap.",
+          "He's looking at a map."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Where does your boss live? — I don't know, but he ____ live near the office because he commutes every day by train.",
+        "options": [
+          "might",
+          "can't",
+          "might not",
+          "must"
+        ],
+        "answer": 3
+      }
+    ]
+  }
+}

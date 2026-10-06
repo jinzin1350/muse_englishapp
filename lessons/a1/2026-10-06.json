@@ -1,0 +1,246 @@
+{
+  "date": "2026-10-06",
+  "theme": "technology",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "phone",
+      "pos": "noun",
+      "meaning": "a thing you use to call and talk to people",
+      "example": "I call my mother on my phone.",
+      "pronunciation": "FOHN",
+      "persian": "تلفن",
+      "photo": "media/a1/2026-10-06/photos/phone.jpg",
+      "word_audio": "media/a1/2026-10-06/word-audio/phone.mp3"
+    },
+    {
+      "word": "computer",
+      "pos": "noun",
+      "meaning": "a big machine for work, games, and the internet",
+      "example": "My father works on his computer.",
+      "pronunciation": "kuhm-PYOO-tuhr",
+      "persian": "کامپیوتر",
+      "photo": "media/a1/2026-10-06/photos/computer.jpg",
+      "word_audio": "media/a1/2026-10-06/word-audio/computer.mp3"
+    },
+    {
+      "word": "screen",
+      "pos": "noun",
+      "meaning": "the front part of a phone or computer that shows pictures",
+      "example": "Look at the big screen!",
+      "pronunciation": "SKREEN",
+      "persian": "صفحه نمایش",
+      "photo": "media/a1/2026-10-06/photos/screen.jpg",
+      "word_audio": "media/a1/2026-10-06/word-audio/screen.mp3"
+    },
+    {
+      "word": "mouse",
+      "pos": "noun",
+      "meaning": "a small thing you move with your hand to control a computer",
+      "example": "Click with the mouse.",
+      "pronunciation": "MOWS",
+      "persian": "موس",
+      "photo": "media/a1/2026-10-06/photos/mouse.jpg",
+      "word_audio": "media/a1/2026-10-06/word-audio/mouse.mp3"
+    },
+    {
+      "word": "charger",
+      "pos": "noun",
+      "meaning": "a cable that puts power into your phone or computer",
+      "example": "Where is my phone charger?",
+      "pronunciation": "CHAHR-juhr",
+      "persian": "شارژر",
+      "photo": "media/a1/2026-10-06/photos/charger.jpg",
+      "word_audio": "media/a1/2026-10-06/word-audio/charger.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-06/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Technology at Home",
+    "audio": "media/a1/2026-10-06/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-06/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Computer and Phone",
+    "audio": "media/a1/2026-10-06/shadowing.mp3",
+    "transcript": "media/a1/2026-10-06/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'phone' mean?",
+      "options": [
+        "a thing you use to call and talk to people",
+        "a big machine for work, games, and the internet",
+        "the front part of a phone or computer that shows pictures",
+        "a small thing you move with your hand to control a computer"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'computer' mean?",
+      "options": [
+        "a thing you use to call and talk to people",
+        "a big machine for work, games, and the internet",
+        "a cable that puts power into your phone or computer",
+        "the front part of a phone or computer that shows pictures"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'screen' mean?",
+      "options": [
+        "a thing you use to call and talk to people",
+        "a small thing you move with your hand to control a computer",
+        "the front part of a phone or computer that shows pictures",
+        "a big machine for work, games, and the internet"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'mouse' mean?",
+      "options": [
+        "a cable that puts power into your phone or computer",
+        "the front part of a phone or computer that shows pictures",
+        "a thing you use to call and talk to people",
+        "a small thing you move with your hand to control a computer"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'charger' mean?",
+      "options": [
+        "a cable that puts power into your phone or computer",
+        "a thing you use to call and talk to people",
+        "a small thing you move with your hand to control a computer",
+        "the front part of a phone or computer that shows pictures"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "6B: Modals of deduction - might, can't, must",
+    "explanation": "**might** means maybe. We think something is possible.\n\n**must** means we are sure it is true. We see a clear sign.\n\n**can't** means we are sure it is NOT true. It is impossible.\n\nAfter **might**, **must**, and **can't**, use the verb with no -s. Say \"he might be\", not \"he mights be\".",
+    "examples": [
+      "*My phone *might* be on the table.* (maybe it is there)",
+      "*She *might* call me today.* (maybe she will)",
+      "*Your phone *must* be dead. The screen is black.* (I am sure)",
+      "*That *must* be my charger.* (I am sure it is mine)",
+      "*He *can't* work without a computer.* (I am sure it is impossible)"
+    ],
+    "practice": [
+      {
+        "q": "Your friend says: \"I see your phone on the chair.\" What do you say?",
+        "a": "It must be on the chair. (I am sure)"
+      },
+      {
+        "q": "You do not know where your charger is. What do you say?",
+        "a": "My charger might be at home. (maybe)"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Which word means 'maybe, it is possible'?",
+        "options": [
+          "might",
+          "must",
+          "can't",
+          "will"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Your phone ___ be dead. I am sure it is dead.",
+        "options": [
+          "must",
+          "might",
+          "can't",
+          "is"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He ___ be at home. Maybe.",
+        "options": [
+          "might",
+          "must",
+          "can't",
+          "will"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "That ___ be my charger. I am sure it is not mine.",
+        "options": [
+          "can't",
+          "must",
+          "might",
+          "is"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "After 'might' we use the verb...",
+        "options": [
+          "with no -s",
+          "with -s",
+          "with -ing",
+          "with -ed"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ work on her computer. The screen is on.",
+        "options": [
+          "must",
+          "might",
+          "can't",
+          "will"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "He might be sick.",
+          "He mights be sick.",
+          "He might is sick.",
+          "He maybe be sick."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The opposite of 'must' is ___.",
+        "options": [
+          "can't",
+          "might",
+          "will",
+          "can"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ have a party. The music is loud.",
+        "options": [
+          "must",
+          "might",
+          "can't",
+          "will"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ be late. Maybe.",
+        "options": [
+          "might",
+          "must",
+          "can't",
+          "is"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a1/2026-10-06/grammar-en.mp3"
+  }
+}

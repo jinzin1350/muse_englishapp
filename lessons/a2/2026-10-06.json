@@ -1,0 +1,251 @@
+{
+  "date": "2026-10-06",
+  "theme": "cities & daily life",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "library",
+      "pos": "noun",
+      "meaning": "a building where you can read and borrow books for free",
+      "example": "I borrow two books from the library every week.",
+      "pronunciation": "LY-bruh-ree",
+      "persian": "کتابخانه",
+      "photo": "media/a2/2026-10-06/photos/library.jpg",
+      "word_audio": "media/a2/2026-10-06/word-audio/library.mp3"
+    },
+    {
+      "word": "museum",
+      "pos": "noun",
+      "meaning": "a building where you can see old and special things",
+      "example": "We saw old cars at the museum yesterday.",
+      "pronunciation": "myoo-ZEE-uhm",
+      "persian": "موزه",
+      "photo": "media/a2/2026-10-06/photos/museum.jpg",
+      "word_audio": "media/a2/2026-10-06/word-audio/museum.mp3"
+    },
+    {
+      "word": "restaurant",
+      "pos": "noun",
+      "meaning": "a place where you buy and eat food",
+      "example": "We ate dinner at a nice restaurant.",
+      "pronunciation": "RES-tuh-ruhnt",
+      "persian": "رستوران",
+      "photo": "media/a2/2026-10-06/photos/restaurant.jpg",
+      "word_audio": "media/a2/2026-10-06/word-audio/restaurant.mp3"
+    },
+    {
+      "word": "cafe",
+      "pos": "noun",
+      "meaning": "a small place where you can buy coffee and cake",
+      "example": "I meet my friends at the cafe every Friday.",
+      "pronunciation": "ka-FAY",
+      "persian": "کافه",
+      "photo": "media/a2/2026-10-06/photos/cafe.jpg",
+      "word_audio": "media/a2/2026-10-06/word-audio/cafe.mp3"
+    },
+    {
+      "word": "pharmacy",
+      "pos": "noun",
+      "meaning": "a shop where you buy medicine",
+      "example": "The pharmacy near my house is open late.",
+      "pronunciation": "FAR-muh-see",
+      "persian": "داروخانه",
+      "photo": "media/a2/2026-10-06/photos/pharmacy.jpg",
+      "word_audio": "media/a2/2026-10-06/word-audio/pharmacy.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-06/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: A Day Around the City",
+    "audio": "media/a2/2026-10-06/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-06/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Saturday in the City",
+    "audio": "media/a2/2026-10-06/shadowing.mp3",
+    "transcript": "media/a2/2026-10-06/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'library' mean?",
+      "options": [
+        "a small place where you can buy coffee and cake",
+        "a building where you can read and borrow books for free",
+        "a shop where you buy medicine",
+        "a place where you buy and eat food"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'museum' mean?",
+      "options": [
+        "a building where you can see old and special things",
+        "a building where you can read and borrow books for free",
+        "a small place where you can buy coffee and cake",
+        "a shop where you buy medicine"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'restaurant' mean?",
+      "options": [
+        "a shop where you buy medicine",
+        "a building where you can see old and special things",
+        "a place where you buy and eat food",
+        "a small place where you can buy coffee and cake"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'cafe' mean?",
+      "options": [
+        "a building where you can read and borrow books for free",
+        "a shop where you buy medicine",
+        "a building where you can see old and special things",
+        "a small place where you can buy coffee and cake"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'pharmacy' mean?",
+      "options": [
+        "a place where you buy and eat food",
+        "a small place where you can buy coffee and cake",
+        "a shop where you buy medicine",
+        "a building where you can read and borrow books for free"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "6B: Modals of deduction - might, can't, must",
+    "explanation": "We use **might**, **can't**, and **must** to guess about now. They help us say what we think is true.\n\nUse **must** when you are almost sure. The library **must** be open. I see many people inside.\n\nUse **can't** when you are almost sure it is NOT true. She **can't** be at the museum. It is closed today.\n\nUse **might** when you are not sure. The restaurant **might** be full. It is Saturday night.\n\nAfter **might**, **can't**, and **must**, use the verb without to. He works at the pharmacy, so he **must be** tired.",
+    "examples": [
+      "*The library *must* be open.* (I see many people inside)",
+      "*She *can't* be at the museum.* (it is closed today)",
+      "*The restaurant *might* be full.* (it is Saturday night)",
+      "*He *must* be tired.* (he works at the pharmacy all day)",
+      "*The cafe *might* be closed.* (I do not see the lights)",
+      "*They *can't* be late.* (they live very near)"
+    ],
+    "practice": [
+      {
+        "q": "Complete with might, can't, or must: 'It ___ be ten o'clock. I see the pharmacy is open.'",
+        "a": "must (I am almost sure it is open)"
+      },
+      {
+        "q": "Which word means 'I am not sure'?",
+        "a": "might"
+      },
+      {
+        "q": "Is this sentence correct: 'She must to be at home'?",
+        "a": "No. After must we use the verb without 'to': 'She must be at home.'"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "It ___ be ten o'clock. The pharmacy is open.",
+        "options": [
+          "might",
+          "can't",
+          "must",
+          "will"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She ___ be at the museum. It is closed today.",
+        "options": [
+          "must",
+          "might",
+          "can't",
+          "will"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The restaurant ___ be full. It is Saturday night.",
+        "options": [
+          "might",
+          "must",
+          "can't",
+          "will"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He ___ be tired. He works all day at the pharmacy.",
+        "options": [
+          "might",
+          "can't",
+          "must",
+          "will be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They live very near the library. They ___ be late.",
+        "options": [
+          "can't",
+          "might",
+          "must",
+          "will be"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "After 'must', we use the verb...",
+        "options": [
+          "with 'to'",
+          "without 'to'",
+          "with 'ing'",
+          "with 's'"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The cafe ___ be closed. I do not see the lights.",
+        "options": [
+          "might",
+          "must",
+          "can't",
+          "will"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The museum is free today. It ___ be very full.",
+        "options": [
+          "must",
+          "can't",
+          "might",
+          "will"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ be sick. She looks very happy.",
+        "options": [
+          "can't",
+          "must",
+          "might",
+          "could be"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The library is dark. It ___ be closed.",
+        "options": [
+          "might",
+          "must",
+          "can't",
+          "will"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a2/2026-10-06/grammar-en.mp3"
+  }
+}

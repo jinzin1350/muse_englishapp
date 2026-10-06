@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-06",
+  "theme": "Emotions & Character: The Inner Weather",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "ennui",
+      "pos": "noun",
+      "meaning": "a feeling of tired boredom and lack of interest",
+      "example": "After months of routine meetings, a deep ennui settled over the team.",
+      "pronunciation": "on-WEE",
+      "persian": "بی‌حوصلگی و ملالت",
+      "photo": "media/c2/2026-10-06/photos/ennui.jpg",
+      "word_audio": "media/c2/2026-10-06/word-audio/ennui.mp3"
+    },
+    {
+      "word": "trepidation",
+      "pos": "noun",
+      "meaning": "a feeling of nervous fear about something that will happen",
+      "example": "She opened the letter with trepidation, afraid of bad news.",
+      "pronunciation": "trep-ih-DAY-shun",
+      "persian": "دلهره و نگرانی",
+      "photo": "media/c2/2026-10-06/photos/trepidation.jpg",
+      "word_audio": "media/c2/2026-10-06/word-audio/trepidation.mp3"
+    },
+    {
+      "word": "euphoria",
+      "pos": "noun",
+      "meaning": "a feeling of intense excitement and happiness",
+      "example": "Euphoria filled the stadium when the winning goal was scored.",
+      "pronunciation": "yoo-FOR-ee-uh",
+      "persian": "سرخوشی و نشاط شدید",
+      "photo": "media/c2/2026-10-06/photos/euphoria.jpg",
+      "word_audio": "media/c2/2026-10-06/word-audio/euphoria.mp3"
+    },
+    {
+      "word": "supercilious",
+      "pos": "adjective",
+      "meaning": "behaving as if you are better than other people",
+      "example": "He gave a supercilious smile when I asked the question.",
+      "pronunciation": "soo-pur-SIL-ee-us",
+      "persian": "متکبرانه و از بالا به پایین",
+      "photo": "media/c2/2026-10-06/photos/supercilious.jpg",
+      "word_audio": "media/c2/2026-10-06/word-audio/supercilious.mp3"
+    },
+    {
+      "word": "petulance",
+      "pos": "noun",
+      "meaning": "childish anger or bad temper",
+      "example": "His petulance after losing the game embarrassed everyone.",
+      "pronunciation": "PET-yoo-lunce",
+      "persian": "بدخلقی بچگانه",
+      "photo": "media/c2/2026-10-06/photos/petulance.jpg",
+      "word_audio": "media/c2/2026-10-06/word-audio/petulance.mp3"
+    },
+    {
+      "word": "insouciance",
+      "pos": "noun",
+      "meaning": "a relaxed, casual lack of concern",
+      "example": "She faced the cameras with admirable insouciance.",
+      "pronunciation": "in-SOO-see-unce",
+      "persian": "بی‌خیالی و بی‌اعتنایی",
+      "photo": "media/c2/2026-10-06/photos/insouciance.jpg",
+      "word_audio": "media/c2/2026-10-06/word-audio/insouciance.mp3"
+    },
+    {
+      "word": "irascible",
+      "pos": "adjective",
+      "meaning": "becoming angry very easily",
+      "example": "The irascible chef shouted at anyone who touched his pans.",
+      "pronunciation": "ih-RASS-ih-bul",
+      "persian": "زودخشم و تندخو",
+      "photo": "media/c2/2026-10-06/photos/irascible.jpg",
+      "word_audio": "media/c2/2026-10-06/word-audio/irascible.mp3"
+    },
+    {
+      "word": "querulous",
+      "pos": "adjective",
+      "meaning": "complaining in a whining, fretful way",
+      "example": "The querulous customer demanded to see the manager for the third time.",
+      "pronunciation": "KWEH-roo-luss",
+      "persian": "غرغرو و شکایت‌کن",
+      "photo": "media/c2/2026-10-06/photos/querulous.jpg",
+      "word_audio": "media/c2/2026-10-06/word-audio/querulous.mp3"
+    },
+    {
+      "word": "ebullient",
+      "pos": "adjective",
+      "meaning": "cheerful and full of energy",
+      "example": "The ebullient host greeted every guest like an old friend.",
+      "pronunciation": "ih-BULL-yunt",
+      "persian": "پرشور و سرزنده",
+      "photo": "media/c2/2026-10-06/photos/ebullient.jpg",
+      "word_audio": "media/c2/2026-10-06/word-audio/ebullient.mp3"
+    },
+    {
+      "word": "blithe",
+      "pos": "adjective",
+      "meaning": "happy and relaxed, showing no worry",
+      "example": "With blithe disregard for the deadline, he went on holiday.",
+      "pronunciation": "BLYTH",
+      "persian": "بی‌غم و آسوده‌خاطر",
+      "photo": "media/c2/2026-10-06/photos/blithe.jpg",
+      "word_audio": "media/c2/2026-10-06/word-audio/blithe.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-06/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Inner Weather",
+    "audio": "media/c2/2026-10-06/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-06/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Map of the Inner Weather",
+    "audio": "media/c2/2026-10-06/shadowing.mp3",
+    "transcript": "media/c2/2026-10-06/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'ennui' mean?",
+      "options": [
+        "becoming angry very easily",
+        "a feeling of tired boredom and lack of interest",
+        "cheerful and full of energy",
+        "a feeling of intense excitement and happiness"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'trepidation' mean?",
+      "options": [
+        "happy and relaxed, showing no worry",
+        "childish anger or bad temper",
+        "a relaxed, casual lack of concern",
+        "a feeling of nervous fear about something that will happen"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'euphoria' mean?",
+      "options": [
+        "a feeling of intense excitement and happiness",
+        "a feeling of tired boredom and lack of interest",
+        "childish anger or bad temper",
+        "a feeling of nervous fear about something that will happen"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'supercilious' mean?",
+      "options": [
+        "childish anger or bad temper",
+        "becoming angry very easily",
+        "a feeling of tired boredom and lack of interest",
+        "behaving as if you are better than other people"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'petulance' mean?",
+      "options": [
+        "childish anger or bad temper",
+        "a feeling of nervous fear about something that will happen",
+        "behaving as if you are better than other people",
+        "a feeling of intense excitement and happiness"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'insouciance' mean?",
+      "options": [
+        "becoming angry very easily",
+        "a feeling of tired boredom and lack of interest",
+        "happy and relaxed, showing no worry",
+        "a relaxed, casual lack of concern"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'irascible' mean?",
+      "options": [
+        "cheerful and full of energy",
+        "a feeling of intense excitement and happiness",
+        "a feeling of nervous fear about something that will happen",
+        "becoming angry very easily"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'querulous' mean?",
+      "options": [
+        "a feeling of intense excitement and happiness",
+        "cheerful and full of energy",
+        "complaining in a whining, fretful way",
+        "behaving as if you are better than other people"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'ebullient' mean?",
+      "options": [
+        "a relaxed, casual lack of concern",
+        "behaving as if you are better than other people",
+        "cheerful and full of energy",
+        "a feeling of tired boredom and lack of interest"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'blithe' mean?",
+      "options": [
+        "becoming angry very easily",
+        "behaving as if you are better than other people",
+        "happy and relaxed, showing no worry",
+        "a feeling of tired boredom and lack of interest"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "6B: Modals of deduction - might, can't, must",
+    "explanation": "Use **might** (or **may** / **could** in positive sentences) when you think something is possibly true. A supercilious smile **might** mask real trepidation.\n\nUse **can't** when you are sure something is impossible or not true. The opposite of **must** is **can't**, not **mustn't**. His euphoria **can't** be genuine; nobody is that ebullient at seven in the morning.\n\nUse **must** when you are sure something is true, based on evidence. Her petulance **must** come from ennui, not from any real grievance.\n\nWe often use **be + -ing** after **might**, **must**, and **can't** for something happening right now. They **must be celebrating**; the whole office sounds euphoric. She **can't be working**; she looks completely blithe about the deadline.\n\nFor past deductions, use **must have**, **can't have**, or **might have** + past participle. The irascible chef **must have misunderstood** the order. The querulous review **might have been** written in a moment of petulance.",
+    "examples": [
+      "*She *might* have missed the train.* (possible — she is not here yet)",
+      "*The neighbours *must* be out; there are no lights on.* (certain — the evidence)",
+      "*That woman *can't* be his manager; she looks about twenty.* (impossible)",
+      "*He *might* be having second thoughts about the blithe promise he made.* (present continuous deduction)",
+      "*The ebullient crowd *must have celebrated* all night.* (past deduction)",
+      "*Her insouciance *can't* be real; nobody stays that calm under pressure.* (impossible — logic)"
+    ],
+    "practice": [
+      {
+        "q": "Which modal expresses certainty that something is true?",
+        "a": "**must** — e.g. *They *must* be exhausted after that performance.*"
+      },
+      {
+        "q": "What is the opposite of must in deductions about truth?",
+        "a": "**can't** — e.g. *He *can't* be serious about quitting.*"
+      },
+      {
+        "q": "How do you express a possible past event?",
+        "a": "**might have** + past participle — e.g. *She *might have forgotten* the meeting in all the chaos.*"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She speaks six languages fluently. She ___ be unintelligent.",
+        "options": [
+          "must",
+          "can't",
+          "might",
+          "could"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The lights are on and I hear music. They ___ be having a party.",
+        "options": [
+          "must",
+          "might",
+          "can't",
+          "mustn't"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He isn't answering his phone. He ___ have forgotten the meeting.",
+        "options": [
+          "must",
+          "can't",
+          "might",
+          "mustn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "That ___ be the right address; the building is completely abandoned.",
+        "options": [
+          "must",
+          "might",
+          "could",
+          "can't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Her eyes are red and swollen. She ___ been crying.",
+        "options": [
+          "can't have",
+          "must have",
+          "might have",
+          "mustn't have"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He left the theatre after ten minutes, so he ___ seen the ending.",
+        "options": [
+          "must have",
+          "might have",
+          "can't have",
+          "should have"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I'm not sure where she is. She ___ be at the gym.",
+        "options": [
+          "might",
+          "must",
+          "can't",
+          "mustn't"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The ebullient crowd cheered for an hour. They ___ loved the show.",
+        "options": [
+          "can't have",
+          "might have",
+          "mustn't have",
+          "must have"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "You ___ be serious! Nobody signs a contract without reading it.",
+        "options": [
+          "must",
+          "might",
+          "could",
+          "can't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The defeat was humiliating, so he ___ been genuinely upset, not just petulant.",
+        "options": [
+          "can't have",
+          "must have",
+          "might have",
+          "mustn't have"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}
