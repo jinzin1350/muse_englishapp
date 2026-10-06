@@ -5526,6 +5526,11 @@ function analyzeSpeech(target, said) {
 /* Speaking practice wiring: 30s recorder + live transcription + upload +
    analysis. Transcription runs on-device via the Web Speech API (Chrome /
    Edge); audio is uploaded to Supabase Storage for the record. */
+/* Speaking practice wiring: 30s live transcription (Web Speech API) +
+   word-level analysis vs the story transcript.
+   NOTE: transcription runs ALONE on the mic — no simultaneous MediaRecorder.
+   On Android Chrome, two concurrent mic consumers fight and the recognizer
+   gets silence (observed: zero words transcribed). */
 async function wireShadowingPractice(body, m) {
   const btn = body.querySelector('#sp-rec-btn');
   if (!btn) return;
@@ -5542,16 +5547,16 @@ async function wireShadowingPractice(body, m) {
     catch (e) { /* analysis falls back to no-target mode */ }
   }
 
-  if (!SR || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !window.MediaRecorder) {
+  if (!SR) {
     btn.disabled = true;
     resultBox.innerHTML = '<div class="empty">🎤 Voice practice needs Chrome or Edge (Android or desktop).</div>';
     return;
   }
 
   const MAXS = 30;
-  let rec = null, recog = null, stream = null, chunks = [];
-  let timerId = null, left = MAXS, saidFinal = '', saidInterim = '';
-  let recActive = false; /* true while the user is recording */
+  let recog = null, timerId = null, left = MAXS;
+  let saidFinal = '', saidInterim = '', recActive = false;
+  let restarts = 0, lastError = '';
 
   function setTimer(s) {
     left = s;
@@ -5569,45 +5574,12 @@ async function wireShadowingPractice(body, m) {
     resultBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> ' + ico + ' ' + esc(msg) + '</div>';
   }
 
-  async function stopAll() {
-    recActive = false;
-    if (timerId) { clearInterval(timerId); timerId = null; }
-    try { if (recog) recog.stop(); } catch (e) {}
-    const blob = await new Promise(function (resolve) {
-      if (!rec || rec.state === 'inactive') return resolve(null);
-      rec.onstop = function () {
-        resolve(chunks.length ? new Blob(chunks, { type: rec.mimeType || 'audio/webm' }) : null);
-      };
-      try { rec.stop(); } catch (e) { resolve(null); }
-    });
-    if (stream) { stream.getTracks().forEach(function (t) { try { t.stop(); } catch (e) {} }); stream = null; }
-    setIdle();
-    const said = (saidFinal + ' ' + saidInterim).trim();
-    await finishAttempt(blob, said);
-  }
-
-  btn.addEventListener('click', async function () {
-    if (rec && rec.state === 'recording') { stopAll(); return; }
-    resultBox.innerHTML = '';
-    chunks = []; saidFinal = ''; saidInterim = '';
-    try {
-      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    } catch (e) {
-      resultBox.innerHTML = '<div class="empty">🎤 Microphone blocked — allow microphone access and try again.</div>';
-      return;
-    }
-    try {
-      rec = new MediaRecorder(stream);
-    } catch (e) {
-      resultBox.innerHTML = '<div class="empty">🎤 Recording is not supported in this browser.</div>';
-      return;
-    }
-    rec.ondataavailable = function (ev) { if (ev.data && ev.data.size) chunks.push(ev.data); };
-    recog = new SR();
-    recog.lang = 'en-US';
-    recog.interimResults = true;
-    recog.continuous = true;
-    recog.onresult = function (ev) {
+  function newRecognizer() {
+    const r = new SR();
+    r.lang = 'en-US';
+    r.interimResults = true;
+    r.continuous = true;
+    r.onresult = function (ev) {
       let interim = '';
       for (let k = ev.resultIndex; k < ev.results.length; k++) {
         const tr = ev.results[k][0].transcript;
@@ -5617,21 +5589,56 @@ async function wireShadowingPractice(body, m) {
       saidInterim = interim;
       liveText.textContent = (saidFinal + ' ' + saidInterim).trim() || 'Listening…';
     };
-    recog.onerror = function () { /* keep recording; analysis may fall back */ };
-    recog.onend = function () {
-      /* Chrome stops recognition on silence — resume while still recording. */
-      if (recActive) { try { recog.start(); } catch (e) {} }
+    r.onerror = function (ev) {
+      lastError = (ev && ev.error) || 'unknown';
+      if (lastError === 'not-allowed' || lastError === 'service-not-allowed') {
+        recActive = false;
+        try { r.abort(); } catch (e) {}
+        setIdle();
+        if (timerId) { clearInterval(timerId); timerId = null; }
+        resultBox.innerHTML = '<div class="empty">🎤 Microphone blocked (' + esc(lastError) +
+          ') — allow microphone access and try again.</div>';
+      }
     };
-    try { rec.start(); recog.start(); recActive = true; }
+    r.onend = function () {
+      /* Chrome may end recognition on a long pause — resume while recording,
+         with a cap so a hard failure can't loop forever. */
+      if (recActive && restarts < 3 && lastError !== 'not-allowed' && lastError !== 'service-not-allowed') {
+        restarts++;
+        try { r.start(); } catch (e) {}
+      }
+    };
+    return r;
+  }
+
+  async function stopAll() {
+    recActive = false;
+    if (timerId) { clearInterval(timerId); timerId = null; }
+    try { if (recog) recog.stop(); } catch (e) {}
+    /* Let the final onresult event land before reading the transcript. */
+    await new Promise(function (resolve) { setTimeout(resolve, 500); });
+    setIdle();
+    const said = (saidFinal + ' ' + saidInterim).trim();
+    await finishAttempt(said);
+  }
+
+  btn.addEventListener('click', async function () {
+    if (recActive) { stopAll(); return; }
+    resultBox.innerHTML = '';
+    saidFinal = ''; saidInterim = ''; restarts = 0; lastError = '';
+    recog = newRecognizer();
+    try { recog.start(); }
     catch (e) {
-      resultBox.innerHTML = '<div class="empty">🎤 Could not start recording. Try again.</div>';
+      resultBox.innerHTML = '<div class="empty">🎤 Could not start listening (' +
+        esc(String((e && e.message) || e)) + '). Try again.</div>';
       return;
     }
+    recActive = true;
     btn.classList.add('recording');
     btn.textContent = '⏹';
     btn.setAttribute('aria-label', 'Stop recording');
     live.classList.remove('hidden');
-    liveText.textContent = 'Listening…';
+    liveText.textContent = 'Listening… speak now!';
     setTimer(MAXS);
     timerId = setInterval(function () {
       setTimer(left - 1);
@@ -5639,42 +5646,27 @@ async function wireShadowingPractice(body, m) {
     }, 1000);
   });
 
-  async function finishAttempt(blob, said) {
+  async function finishAttempt(said) {
     try {
-      if (!said && !blob) {
-        resultBox.innerHTML = '<div class="empty">🎤 Nothing was recorded. Try again.</div>';
+      if (!said) {
+        resultBox.innerHTML = '<div class="empty">🎤 We didn\'t catch any words' +
+          (lastError ? ' (mic note: ' + esc(lastError) + ')' : '') +
+          '. Speak a bit louder, closer to the mic, and try again.</div>';
         return;
       }
-      /* Stage 1: recorded — tell the user what's happening. */
-      setStatus('✅', 'Recorded! Sending your voice…');
-      /* Stage 2: upload the voice. */
-      let audioPath = '', uploadNote = '';
-      if (blob && sb && state.user && state.user.id) {
-        audioPath = state.user.id + '/' + (m.date || 'lesson') + '/' + Date.now() + '.webm';
-        try {
-          const up = await sb.storage.from('shadowing-audio').upload(audioPath, blob, {
-            contentType: blob.type || 'audio/webm', upsert: false
-          });
-          if (up.error) { uploadNote = 'Voice upload failed: ' + (up.error.message || 'error'); audioPath = ''; }
-        } catch (e) { uploadNote = 'Voice upload failed: ' + String((e && e.message) || e); audioPath = ''; }
-      } else if (!blob) {
-        uploadNote = 'No audio was captured.';
-      }
-      /* Stage 3: transcribe + analyze. */
-      setStatus('🔍', 'Transcribing and analyzing your speech…');
-      /* Let the status paint before the (possibly heavy) analysis. */
-      await new Promise(function (r) { setTimeout(r, 60); });
+      setStatus('🔍', 'Analyzing your speech…');
+      /* Let the status paint before the analysis. */
+      await new Promise(function (resolve) { setTimeout(resolve, 60); });
       const a = analyzeSpeech(targetText, said);
       let pts = 0;
       if (a.accuracy >= 80) pts = 30;
       else if (a.accuracy >= 50) pts = 20;
       else if (a.accuracy > 0) pts = 10;
-      /* Stage 4: render. */
-      resultBox.innerHTML = spResultHTML(a, said, pts, uploadNote);
+      resultBox.innerHTML = spResultHTML(a, said, pts);
       const again = resultBox.querySelector('[data-action="sp-again"]');
       if (again) again.addEventListener('click', function () { resultBox.innerHTML = ''; });
-      /* Stage 5: persist — challenge points (max 3 scored attempts/day) + attempt row. */
-      if (state.user && state.user.id && (said || audioPath)) {
+      /* Persist: challenge points (max 3 scored attempts/day) + attempt row. */
+      if (state.user && state.user.id) {
         if (pts > 0) {
           const dayKey = 'sp_n_' + (m.date || 'lesson');
           let n = 0;
@@ -5690,7 +5682,7 @@ async function wireShadowingPractice(body, m) {
             await sb.from('shadowing_attempts').insert({
               user_id: state.user.id,
               lesson_date: m.date || null,
-              audio_path: audioPath,
+              audio_path: '',
               transcript: said.slice(0, 2000),
               score: a.accuracy
             });
@@ -5699,11 +5691,11 @@ async function wireShadowingPractice(body, m) {
       }
     } catch (e) {
       resultBox.innerHTML = '<div class="empty">⚠️ Something went wrong: ' +
-        esc(String((e && e.message) || e)) + '. Your recording was kept — try again.</div>';
+        esc(String((e && e.message) || e)) + '. Try again.</div>';
     }
   }
 
-  function spResultHTML(a, said, pts, uploadNote) {
+  function spResultHTML(a, said, pts) {
     let head;
     if (!a.saidWords.length) {
       head = '<div class="sp-score"><div class="sp-score-num">—</div>' +
@@ -5723,7 +5715,6 @@ async function wireShadowingPractice(body, m) {
         ? '<div class="sp-words"><b>Story check:</b> <span class="sp-legend"><i class="ok"></i>you nailed it <i class="miss"></i>missed</span></div>' +
           '<p class="sp-target" dir="auto">' + words + '</p>'
         : '') +
-      (uploadNote ? '<div class="sp-note">' + esc(uploadNote) + '</div>' : '') +
       '<button class="btn btn-ghost btn-sm" data-action="sp-again">🎤 Try again</button>';
   }
 }
