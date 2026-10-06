@@ -2466,3 +2466,39 @@ body.duo-playing{padding-bottom:0!important;}
   .onb-img { max-width: 200px; }
   .onb-title { font-size: 1.7rem; }
 }
+
+/* Speaking practice (shadowing tab) */
+.sp-card{margin-top:1rem}
+.sp-controls{display:flex;align-items:center;gap:1rem;margin:.9rem 0}
+.sp-rec{width:64px;height:64px;border-radius:50%;border:none;font-size:1.7rem;cursor:pointer;
+  background:linear-gradient(180deg,#ff9a3c,#f26d0d);box-shadow:0 6px 18px rgba(242,109,13,.35);
+  transition:transform .12s}
+.sp-rec:active{transform:scale(.94)}
+.sp-rec.recording{animation:sp-blink 1s infinite}
+.sp-rec:disabled{opacity:.45;cursor:default}
+@keyframes sp-blink{0%,100%{box-shadow:0 6px 18px rgba(242,109,13,.35)}50%{box-shadow:0 6px 26px rgba(220,40,40,.65)}}
+.sp-timer{position:relative;flex:1;height:34px;background:#f3ede0;border-radius:999px;overflow:hidden}
+.sp-timer-fill{position:absolute;left:0;top:0;bottom:0;width:0;background:linear-gradient(90deg,#ffb35c,#f26d0d);transition:width 1s linear}
+.sp-timer span{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#5a4a33;font-variant-numeric:tabular-nums}
+.sp-live{display:flex;align-items:center;gap:.6rem;margin:.6rem 0;padding:.7rem .9rem;
+  background:#fff8ec;border:1px dashed rgba(217,123,43,.4);border-radius:14px;color:#5a4a33}
+.sp-pulse{width:12px;height:12px;border-radius:50%;background:#e23c3c;animation:sp-blink 1s infinite;flex:none}
+.sp-analyzing{display:flex;align-items:center;gap:.6rem;margin:.8rem 0;color:#5a4a33}
+.sp-score{display:flex;align-items:center;gap:.9rem;margin:.9rem 0;padding:.8rem 1rem;border-radius:16px;background:#f7f2e7}
+.sp-score-num{font-size:2rem;font-weight:800;font-family:Georgia,serif}
+.sp-score.great .sp-score-num{color:#1d9e57}
+.sp-score.ok .sp-score-num{color:#d98a06}
+.sp-score.low .sp-score-num{color:#d05252}
+.sp-score-label{color:#5a4a33;font-size:.92rem}
+.sp-said{margin:.7rem 0;color:#3a4160;line-height:1.55}
+.sp-words{margin:.7rem 0 .3rem;color:#3a4160}
+.sp-legend{font-size:.8rem;color:#8a8fa3;margin-left:.5rem}
+.sp-legend i{display:inline-block;width:.7em;height:.7em;border-radius:3px;margin:0 .15em 0 .5em}
+.sp-legend i.ok{background:#1d9e57}
+.sp-legend i.miss{background:#d05252}
+.sp-target{line-height:1.9;color:#3a4160;background:#fffdf8;border:1px solid rgba(217,123,43,.14);
+  border-radius:14px;padding:.8rem 1rem}
+.sp-w{padding:.05em .15em;border-radius:4px}
+.sp-w.ok{background:rgba(29,158,87,.14)}
+.sp-w.miss{background:rgba(208,82,82,.13);text-decoration:line-through;text-decoration-color:rgba(208,82,82,.6)}

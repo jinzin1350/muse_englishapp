@@ -508,7 +508,8 @@ var PTS_LABELS = {
   deck_review: 'Review complete',
   streak_7: '7-day streak',
   mystery_box: 'Mystery box',
-  podcast_milestone: 'Podcast milestone'
+  podcast_milestone: 'Podcast milestone',
+  shadowing_speaking: 'Speaking practice'
 };
 
 function ptsKey(kind) {
@@ -5399,7 +5400,7 @@ function renderLessonTab(body) {
   }
   if (tab === 'words') { body.innerHTML = wordsTabHTML(m); observeWordsEnd(body, m); }
   else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); }
-  else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); }
+  else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); wireShadowingPractice(body, m); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
   else if (tab === 'grammar') { body.innerHTML = grammarTabHTML(m); wireAudioCards(body); }
   refreshTrackCards();
@@ -5480,7 +5481,225 @@ function shadowingTabHTML(m) {
       title: m.shadowing.title || 'Shadowing story',
       sub: 'Read twice · adjust speed below',
       speeds: true, download: true, transcript: m.shadowing.transcript || null
+    }) +
+    /* Speaking practice: 30-second recorder + transcription + analysis. */
+    '<div class="card plain sp-card"><h3 class="serif">🎤 Speaking practice</h3>' +
+    '<p class="muted">Tap record and read the story aloud — up to 30 seconds. Your voice is transcribed and checked against the story.</p>' +
+    '<div class="sp-controls"><button class="sp-rec" id="sp-rec-btn" aria-label="Start recording">🎤</button>' +
+    '<div class="sp-timer"><div class="sp-timer-fill" id="sp-timer-fill"></div><span id="sp-timer-text">0:30</span></div></div>' +
+    '<div class="sp-live hidden" id="sp-live"><span class="sp-pulse"></span><span id="sp-live-text" dir="auto">Listening…</span></div>' +
+    '<div id="sp-result"></div></div>';
+}
+
+/* Word-level analysis: LCS between the story transcript and what the user
+   said. Returns accuracy (of the words you said, how many matched the story
+   in order), coverage (how much of the story you covered) and the set of
+   matched target-word indexes for highlighting. */
+function analyzeSpeech(target, said) {
+  const norm = function (s) {
+    return String(s || '').toLowerCase().replace(/[^a-z0-9'\s]/g, ' ').split(/\s+/).filter(Boolean);
+  };
+  const T = norm(target), H = norm(said);
+  const n = T.length, m = H.length;
+  if (!n || !m) return { accuracy: 0, coverage: 0, matched: new Set(), targetWords: T, saidWords: H };
+  const dp = [];
+  for (let i = 0; i <= n; i++) dp.push(new Uint16Array(m + 1));
+  for (let i = n - 1; i >= 0; i--) {
+    for (let j = m - 1; j >= 0; j--) {
+      dp[i][j] = T[i] === H[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    }
+  }
+  const matched = new Set();
+  let i = 0, j = 0;
+  while (i < n && j < m) {
+    if (T[i] === H[j]) { matched.add(i); i++; j++; }
+    else if (dp[i + 1][j] >= dp[i][j + 1]) i++;
+    else j++;
+  }
+  return {
+    accuracy: Math.round(100 * matched.size / m),
+    coverage: Math.round(100 * matched.size / n),
+    matched: matched, targetWords: T, saidWords: H
+  };
+}
+
+/* Speaking practice wiring: 30s recorder + live transcription + upload +
+   analysis. Transcription runs on-device via the Web Speech API (Chrome /
+   Edge); audio is uploaded to Supabase Storage for the record. */
+async function wireShadowingPractice(body, m) {
+  const btn = body.querySelector('#sp-rec-btn');
+  if (!btn) return;
+  const fill = body.querySelector('#sp-timer-fill');
+  const ttext = body.querySelector('#sp-timer-text');
+  const live = body.querySelector('#sp-live');
+  const liveText = body.querySelector('#sp-live-text');
+  const resultBox = body.querySelector('#sp-result');
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+  let targetText = '';
+  if (m.shadowing && m.shadowing.transcript) {
+    try { targetText = await (await fetch(m.shadowing.transcript)).text(); }
+    catch (e) { /* analysis falls back to no-target mode */ }
+  }
+
+  if (!SR || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia || !window.MediaRecorder) {
+    btn.disabled = true;
+    resultBox.innerHTML = '<div class="empty">🎤 Voice practice needs Chrome or Edge (Android or desktop).</div>';
+    return;
+  }
+
+  const MAXS = 30;
+  let rec = null, recog = null, stream = null, chunks = [];
+  let timerId = null, left = MAXS, saidFinal = '', saidInterim = '';
+
+  function setTimer(s) {
+    left = s;
+    ttext.textContent = '0:' + String(s).padStart(2, '0');
+    fill.style.width = (100 * (MAXS - s) / MAXS) + '%';
+  }
+  function setIdle() {
+    btn.classList.remove('recording');
+    btn.textContent = '🎤';
+    btn.setAttribute('aria-label', 'Start recording');
+    live.classList.add('hidden');
+    setTimer(MAXS);
+  }
+
+  async function stopAll() {
+    if (timerId) { clearInterval(timerId); timerId = null; }
+    try { if (recog) recog.stop(); } catch (e) {}
+    const blob = await new Promise(function (resolve) {
+      if (!rec || rec.state === 'inactive') return resolve(null);
+      rec.onstop = function () {
+        resolve(chunks.length ? new Blob(chunks, { type: rec.mimeType || 'audio/webm' }) : null);
+      };
+      try { rec.stop(); } catch (e) { resolve(null); }
     });
+    if (stream) { stream.getTracks().forEach(function (t) { try { t.stop(); } catch (e) {} }); stream = null; }
+    setIdle();
+    const said = (saidFinal + ' ' + saidInterim).trim();
+    await finishAttempt(blob, said);
+  }
+
+  btn.addEventListener('click', async function () {
+    if (rec && rec.state === 'recording') { stopAll(); return; }
+    resultBox.innerHTML = '';
+    chunks = []; saidFinal = ''; saidInterim = '';
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch (e) {
+      resultBox.innerHTML = '<div class="empty">🎤 Microphone blocked — allow microphone access and try again.</div>';
+      return;
+    }
+    try {
+      rec = new MediaRecorder(stream);
+    } catch (e) {
+      resultBox.innerHTML = '<div class="empty">🎤 Recording is not supported in this browser.</div>';
+      return;
+    }
+    rec.ondataavailable = function (ev) { if (ev.data && ev.data.size) chunks.push(ev.data); };
+    recog = new SR();
+    recog.lang = 'en-US';
+    recog.interimResults = true;
+    recog.continuous = true;
+    recog.onresult = function (ev) {
+      let interim = '';
+      for (let k = ev.resultIndex; k < ev.results.length; k++) {
+        const tr = ev.results[k][0].transcript;
+        if (ev.results[k].isFinal) saidFinal += ' ' + tr;
+        else interim += tr;
+      }
+      saidInterim = interim;
+      liveText.textContent = (saidFinal + ' ' + saidInterim).trim() || 'Listening…';
+    };
+    recog.onerror = function () { /* keep recording; analysis may fall back */ };
+    try { rec.start(); recog.start(); }
+    catch (e) {
+      resultBox.innerHTML = '<div class="empty">🎤 Could not start recording. Try again.</div>';
+      return;
+    }
+    btn.classList.add('recording');
+    btn.textContent = '⏹';
+    btn.setAttribute('aria-label', 'Stop recording');
+    live.classList.remove('hidden');
+    liveText.textContent = 'Listening…';
+    setTimer(MAXS);
+    timerId = setInterval(function () {
+      setTimer(left - 1);
+      if (left <= 0) stopAll();
+    }, 1000);
+  });
+
+  async function finishAttempt(blob, said) {
+    if (!said && !blob) return;
+    resultBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> Analyzing your speech…</div>';
+    /* 1) upload the voice */
+    let audioPath = '';
+    if (blob && sb && state.user && state.user.id) {
+      audioPath = state.user.id + '/' + (m.date || 'lesson') + '/' + Date.now() + '.webm';
+      try {
+        const up = await sb.storage.from('shadowing-audio').upload(audioPath, blob, {
+          contentType: blob.type || 'audio/webm', upsert: false
+        });
+        if (up.error) audioPath = '';
+      } catch (e) { audioPath = ''; }
+    }
+    /* 2) analyze */
+    const a = analyzeSpeech(targetText, said);
+    let pts = 0;
+    if (a.accuracy >= 80) pts = 30;
+    else if (a.accuracy >= 50) pts = 20;
+    else if (a.accuracy > 0) pts = 10;
+    /* 3) render */
+    resultBox.innerHTML = spResultHTML(a, said, pts);
+    const again = resultBox.querySelector('[data-action="sp-again"]');
+    if (again) again.addEventListener('click', function () { resultBox.innerHTML = ''; });
+    /* 4) persist: challenge points (max 3 scored attempts/day) + attempt row */
+    if (pts > 0 && state.user && state.user.id) {
+      const dayKey = 'sp_n_' + (m.date || 'lesson');
+      let n = 0;
+      try { n = parseInt(localStorage.getItem(dayKey) || '0', 10) || 0; } catch (e) {}
+      if (n < 3) {
+        n++;
+        try { localStorage.setItem(dayKey, String(n)); } catch (e) {}
+        awardPoints('shadowing_speaking', pts, (m.date || 'lesson') + '#sp' + n);
+      }
+      if (sb) {
+        try {
+          await sb.from('shadowing_attempts').insert({
+            user_id: state.user.id,
+            lesson_date: m.date || null,
+            audio_path: audioPath,
+            transcript: said.slice(0, 2000),
+            score: a.accuracy
+          });
+        } catch (e) { /* table optional until the migration is run */ }
+      }
+    }
+  }
+
+  function spResultHTML(a, said, pts) {
+    let head;
+    if (!a.saidWords.length) {
+      head = '<div class="sp-score"><div class="sp-score-num">—</div>' +
+        '<div class="sp-score-label">We couldn\'t catch anything. Try again, a bit louder.</div></div>';
+    } else {
+      const cls = a.accuracy >= 80 ? 'great' : (a.accuracy >= 50 ? 'ok' : 'low');
+      head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">' + a.accuracy + '%</div>' +
+        '<div class="sp-score-label">accuracy · you covered ' + a.coverage + '% of the story' +
+        (pts ? ' · +' + pts + ' pts' : '') + '</div></div>';
+    }
+    const words = a.targetWords.map(function (w, idx) {
+      return '<span class="sp-w' + (a.matched.has(idx) ? ' ok' : ' miss') + '">' + esc(w) + '</span>';
+    }).join(' ');
+    return head +
+      (said ? '<div class="sp-said"><b>You said:</b> <span dir="auto">' + esc(said) + '</span></div>' : '') +
+      (a.targetWords.length
+        ? '<div class="sp-words"><b>Story check:</b> <span class="sp-legend"><i class="ok"></i>you nailed it <i class="miss"></i>missed</span></div>' +
+          '<p class="sp-target" dir="auto">' + words + '</p>'
+        : '') +
+      '<button class="btn btn-ghost btn-sm" data-action="sp-again">🎤 Try again</button>';
+  }
 }
 
 function quizTabHTML(m) {
