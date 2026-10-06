@@ -2532,7 +2532,14 @@ function inboxListHTML(msgs) {
           '<span class="msg2-line msg2-dim">Open Muse English to start.</span>'
         : esc(m.body);
     } else {
-      bodyHTML = esc(m.body);
+      /* Plain messages: keep the sender's line breaks, one block per line,
+         each with its own bidi base direction so mixed Persian/English
+         (e.g. the weekly recap) renders in the right order. */
+      bodyHTML = esc(m.body).split('\n').map(function (ln) {
+        return ln.trim()
+          ? '<span class="msg2-line" dir="auto">' + ln + '</span>'
+          : '<span class="msg2-gap"></span>';
+      }).join('');
     }
     return '<div class="msg2-card' + (m.read_at ? '' : ' unread') + '">' +
       '<div class="msg-head"><b>' + esc(m.teacher_name) + '</b><span class="muted">' + esc(fmtMsgTime(m.created_at)) + '</span></div>' +
