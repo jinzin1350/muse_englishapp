@@ -1,6 +1,20 @@
 {
   "products": [
     {
+      "id": "philips-sonicare-diamondclean-9500",
+      "name_fa": "مسواک برقی Philips Sonicare DiamondClean 9500",
+      "name_en": "Philips Sonicare DiamondClean Smart 9500 Electric Toothbrush",
+      "price_cad": 149.96,
+      "regular_cad": 279.99,
+      "discount_pct": 46,
+      "added_fa": "سه‌شنبه، ۶ اکتبر ۲۰۲۶",
+      "image": "img/philips-sonicare-diamondclean-9500.jpg",
+      "url": "https://www.amazon.ca/dp/B0CM44GT41?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "مدل پرچمدار فیلیپس با اپلیکیشن و سنسور فشار؛ طبق ردیاب قیمت، کمترین قیمت تاریخ آمازون"
+    },
+    {
       "id": "segway-ninebot-c2-lite",
       "name_fa": "اسکوتر برقی سگوی ناین‌بات C2 Lite برای بچه‌ها",
       "name_en": "Segway Ninebot C2 Lite Electric Kids Scooter",
@@ -96,20 +110,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "پوشش سرامیکی نچسب؛ ست ۱۲ تکه کامل برای کل آشپزخانه — از ماهیتابه تا قابلمه بزرگ.",
-      "added_fa": "دوشنبه، ۵ اکتبر ۲۰۲۶"
-    },
-    {
-      "id": "ninja-12in1-double-oven-dct401c",
-      "name_fa": "فر دوقلوی نینجا ۱۲کاره با درب FlexDoor",
-      "name_en": "Ninja 12-in-1 Double Oven with FlexDoor (DCT401C)",
-      "price_cad": 199.99,
-      "regular_cad": null,
-      "discount_pct": 33,
-      "image": "img/ninja-12in1-double-oven-dct401c.jpg",
-      "url": "https://www.amazon.ca/dp/B0CKD5B9JV?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "دو فر مستقل با درب هوشمند FlexDoor؛ هم‌زمان دو غذا با دمای متفاوت — انتخاب آمازون با صدها خرید در ماه گذشته.",
       "added_fa": "دوشنبه، ۵ اکتبر ۲۰۲۶"
     }
   ],
