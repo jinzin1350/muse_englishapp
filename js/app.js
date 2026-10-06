@@ -5482,13 +5482,11 @@ function shadowingTabHTML(m) {
       sub: 'Read twice · adjust speed below',
       speeds: true, download: true, transcript: m.shadowing.transcript || null
     }) +
-    /* Speaking practice: 30-second recorder + transcription + analysis. */
+    /* Speaking practice: per-sentence recorder + transcription + analysis. */
     '<div class="card plain sp-card"><h3 class="serif">🎤 Speaking practice</h3>' +
-    '<p class="muted">Tap record and read the story aloud — up to 30 seconds. Your voice is transcribed and checked against the story.</p>' +
-    '<div class="sp-controls"><button class="sp-rec" id="sp-rec-btn" aria-label="Start recording">🎤</button>' +
-    '<div class="sp-timer"><div class="sp-timer-fill" id="sp-timer-fill"></div><span id="sp-timer-text">0:30</span></div></div>' +
-    '<div class="sp-live hidden" id="sp-live"><span class="sp-pulse"></span><span id="sp-live-text" dir="auto">Listening…</span></div>' +
-    '<div id="sp-result"></div></div>';
+    '<p class="muted">Tap 🎤 on a sentence and read it aloud (up to 15 seconds). ' +
+    'You get a score for each sentence — tap 🔊 on a red word to hear it.</p>' +
+    '<div id="sp-sentences"></div></div>';
 }
 
 /* Word-level analysis: LCS between the story transcript and what the user
@@ -5540,202 +5538,240 @@ function analyzeSpeech(target, said) {
   return out;
 }
 
-/* Speaking practice wiring: 30s recorder + live transcription + upload +
-   analysis. Transcription runs on-device via the Web Speech API (Chrome /
-   Edge); audio is uploaded to Supabase Storage for the record. */
-/* Speaking practice wiring: 30s live transcription (Web Speech API) +
-   word-level analysis vs the story transcript.
+/* Split a story transcript into sentences. Handles numbered lines
+   ("1. Hello.") and plain lines; drops a leading title line. */
+function splitSentences(text) {
+  const lines = String(text || '').split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
+  const out = [];
+  lines.forEach(function (ln, idx) {
+    const numbered = ln.match(/^\d+\.\s*(.+)$/);
+    const s = (numbered ? numbered[1] : ln).trim();
+    if (idx === 0 && !numbered && !/[.!?…]$/.test(s)) return; /* title line */
+    const parts = s.match(/[^.!?]+[.!?]+["'”’]?/g) || [s];
+    parts.forEach(function (p) {
+      p = p.trim();
+      if (p.length > 1) out.push(p);
+    });
+  });
+  return out;
+}
+
+/* Per-sentence speaking practice: live transcription (Web Speech API) +
+   word-level analysis vs that sentence.
    NOTE: transcription runs ALONE on the mic — no simultaneous MediaRecorder.
    On Android Chrome, two concurrent mic consumers fight and the recognizer
    gets silence (observed: zero words transcribed). */
 async function wireShadowingPractice(body, m) {
-  const btn = body.querySelector('#sp-rec-btn');
-  if (!btn) return;
-  const fill = body.querySelector('#sp-timer-fill');
-  const ttext = body.querySelector('#sp-timer-text');
-  const live = body.querySelector('#sp-live');
-  const liveText = body.querySelector('#sp-live-text');
-  const resultBox = body.querySelector('#sp-result');
+  const list = body.querySelector('#sp-sentences');
+  if (!list) return;
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
 
   let targetText = '';
   if (m.shadowing && m.shadowing.transcript) {
     try { targetText = await (await fetch(m.shadowing.transcript)).text(); }
-    catch (e) { /* analysis falls back to no-target mode */ }
+    catch (e) { /* sentences fall back to empty */ }
   }
+  const sentences = splitSentences(targetText);
 
   if (!SR) {
-    btn.disabled = true;
-    resultBox.innerHTML = '<div class="empty">🎤 Voice practice needs Chrome or Edge (Android or desktop).</div>';
+    list.innerHTML = '<div class="empty">🎤 Voice practice needs Chrome or Edge (Android or desktop).</div>';
+    return;
+  }
+  if (!sentences.length) {
+    list.innerHTML = '<div class="empty">No transcript for this story yet.</div>';
     return;
   }
 
-  const MAXS = 30;
-  let recog = null, timerId = null, left = MAXS;
-  let saidFinal = '', saidInterim = '', recActive = false;
-  let restarts = 0, lastError = '';
+  const MAXS = 15; /* seconds per sentence */
+  list.innerHTML = sentences.map(function (s, i) {
+    return '<div class="sp-sent" data-i="' + i + '">' +
+      '<div class="sp-sent-top"><p class="sp-sent-text" dir="auto"><span class="sp-sent-num">' + (i + 1) + '</span>' + esc(s) + '</p>' +
+      '<button class="sp-mic" data-i="' + i + '" aria-label="Record sentence ' + (i + 1) + '">🎤</button></div>' +
+      '<div class="sp-sent-live hidden"><span class="sp-pulse"></span>' +
+      '<span class="sp-sent-live-text" dir="auto"></span><span class="sp-sent-count"></span></div>' +
+      '<div class="sp-sent-result"></div></div>';
+  }).join('');
 
-  function setTimer(s) {
-    left = s;
-    ttext.textContent = '0:' + String(s).padStart(2, '0');
-    fill.style.width = (100 * (MAXS - s) / MAXS) + '%';
-  }
-  function setIdle() {
-    btn.classList.remove('recording');
-    btn.textContent = '🎤';
-    btn.setAttribute('aria-label', 'Start recording');
-    live.classList.add('hidden');
-    setTimer(MAXS);
-  }
-  function setStatus(ico, msg) {
-    resultBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> ' + ico + ' ' + esc(msg) + '</div>';
+  let active = null; /* one recording at a time */
+
+  function setMicUI() {
+    list.querySelectorAll('.sp-mic').forEach(function (b) {
+      const isActive = active && +b.getAttribute('data-i') === active.i;
+      b.classList.toggle('recording', !!isActive);
+      b.textContent = isActive ? '⏹' : '🎤';
+      b.disabled = !!active && !isActive;
+      b.setAttribute('aria-label', isActive ? 'Stop recording' : ('Record sentence ' + (+b.getAttribute('data-i') + 1)));
+    });
   }
 
-  function newRecognizer() {
+  function speakWord(w) {
+    try {
+      if (!('speechSynthesis' in window)) return;
+      speechSynthesis.cancel();
+      const u = new SpeechSynthesisUtterance(w);
+      u.lang = 'en-US';
+      u.rate = 0.85;
+      speechSynthesis.speak(u);
+    } catch (e) {}
+  }
+
+  function startRecording(i) {
+    const row = list.querySelector('.sp-sent[data-i="' + i + '"]');
+    const resBox = row.querySelector('.sp-sent-result');
+    const live = row.querySelector('.sp-sent-live');
+    const liveText = row.querySelector('.sp-sent-live-text');
+    const count = row.querySelector('.sp-sent-count');
+    resBox.innerHTML = '';
+    const a = { i: i, row: row, resBox: resBox, live: live, saidFinal: '', restarts: 0, lastError: '', left: MAXS, timerId: null, recog: null };
+    active = a;
     const r = new SR();
     r.lang = 'en-US';
     r.interimResults = true;
     r.continuous = true;
     r.onresult = function (ev) {
+      if (!active || active.i !== i) return;
       let interim = '';
       for (let k = ev.resultIndex; k < ev.results.length; k++) {
         const tr = ev.results[k][0].transcript;
-        if (ev.results[k].isFinal) saidFinal += ' ' + tr;
+        if (ev.results[k].isFinal) a.saidFinal += ' ' + tr;
         else interim += tr;
       }
-      saidInterim = interim;
-      liveText.textContent = (saidFinal + ' ' + saidInterim).trim() || 'Listening…';
+      const t = (a.saidFinal + ' ' + interim).trim();
+      liveText.textContent = t || 'Listening…';
     };
     r.onerror = function (ev) {
-      lastError = (ev && ev.error) || 'unknown';
-      if (lastError === 'not-allowed' || lastError === 'service-not-allowed') {
-        recActive = false;
-        try { r.abort(); } catch (e) {}
-        setIdle();
-        if (timerId) { clearInterval(timerId); timerId = null; }
-        resultBox.innerHTML = '<div class="empty">🎤 Microphone blocked (' + esc(lastError) +
+      if (!active || active.i !== i) return;
+      a.lastError = (ev && ev.error) || 'unknown';
+      if (a.lastError === 'not-allowed' || a.lastError === 'service-not-allowed') {
+        const msg = a.lastError;
+        stopActive(true);
+        resBox.innerHTML = '<div class="empty">🎤 Microphone blocked (' + esc(msg) +
           ') — allow microphone access and try again.</div>';
       }
     };
     r.onend = function () {
       /* Chrome may end recognition on a long pause — resume while recording,
          with a cap so a hard failure can't loop forever. */
-      if (recActive && restarts < 3 && lastError !== 'not-allowed' && lastError !== 'service-not-allowed') {
-        restarts++;
+      if (active && active.i === i && a.restarts < 3 &&
+          a.lastError !== 'not-allowed' && a.lastError !== 'service-not-allowed') {
+        a.restarts++;
         try { r.start(); } catch (e) {}
       }
     };
-    return r;
-  }
-
-  async function stopAll() {
-    recActive = false;
-    if (timerId) { clearInterval(timerId); timerId = null; }
-    try { if (recog) recog.stop(); } catch (e) {}
-    /* Let the final onresult event land before reading the transcript. */
-    await new Promise(function (resolve) { setTimeout(resolve, 700); });
-    setIdle();
-    /* Analysis uses FINAL results only: interim hypotheses are noisy and
-       would pollute the transcript with guessed words. */
-    const said = saidFinal.trim();
-    await finishAttempt(said);
-  }
-
-  btn.addEventListener('click', async function () {
-    if (recActive) { stopAll(); return; }
-    resultBox.innerHTML = '';
-    saidFinal = ''; saidInterim = ''; restarts = 0; lastError = '';
-    recog = newRecognizer();
-    try { recog.start(); }
+    a.recog = r;
+    try { r.start(); }
     catch (e) {
-      resultBox.innerHTML = '<div class="empty">🎤 Could not start listening (' +
-        esc(String((e && e.message) || e)) + '). Try again.</div>';
+      active = null;
+      setMicUI();
+      resBox.innerHTML = '<div class="empty">🎤 Could not start listening. Try again.</div>';
       return;
     }
-    recActive = true;
-    btn.classList.add('recording');
-    btn.textContent = '⏹';
-    btn.setAttribute('aria-label', 'Stop recording');
     live.classList.remove('hidden');
     liveText.textContent = 'Listening… speak now!';
-    setTimer(MAXS);
-    timerId = setInterval(function () {
-      setTimer(left - 1);
-      if (left <= 0) stopAll();
+    count.textContent = '0:' + String(MAXS).padStart(2, '0');
+    setMicUI();
+    a.timerId = setInterval(function () {
+      if (!active || active.i !== i) return;
+      a.left--;
+      count.textContent = '0:' + String(Math.max(a.left, 0)).padStart(2, '0');
+      if (a.left <= 0) stopActive(false);
     }, 1000);
-  });
+  }
 
-  async function finishAttempt(said) {
+  async function stopActive(silent) {
+    const a = active;
+    active = null;
+    if (!a) return;
+    if (a.timerId) clearInterval(a.timerId);
+    try { if (a.recog) a.recog.stop(); } catch (e) {}
+    setMicUI();
+    a.live.classList.add('hidden');
+    if (silent) return;
+    /* Let the final onresult event land before reading the transcript. */
+    await new Promise(function (resolve) { setTimeout(resolve, 700); });
+    /* Analysis uses FINAL results only: interim hypotheses are noisy. */
+    await finishAttempt(a.i, a.saidFinal.trim(), a.resBox, a.lastError);
+  }
+
+  async function finishAttempt(i, said, resBox, lastError) {
     try {
       if (!said) {
-        resultBox.innerHTML = '<div class="empty">🎤 We didn\'t catch any words' +
-          (lastError ? ' (mic note: ' + esc(lastError) + ')' : '') +
-          '. Speak a bit louder, closer to the mic, and try again.</div>';
+        resBox.innerHTML = '<div class="empty">🎤 We didn\'t catch any words' +
+          (lastError ? ' (mic note: ' + esc(lastError) + ')' : '') + '. Try again.</div>';
         return;
       }
-      setStatus('🔍', 'Analyzing your speech…');
+      resBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> 🔍 Analyzing…</div>';
       /* Let the status paint before the analysis. */
       await new Promise(function (resolve) { setTimeout(resolve, 60); });
-      const a = analyzeSpeech(targetText, said);
-      let pts = 0;
-      if (a.accuracy >= 80) pts = 30;
-      else if (a.accuracy >= 50) pts = 20;
-      else if (a.accuracy > 0) pts = 10;
-      resultBox.innerHTML = spResultHTML(a, said, pts);
-      const again = resultBox.querySelector('[data-action="sp-again"]');
-      if (again) again.addEventListener('click', function () { resultBox.innerHTML = ''; });
-      /* Persist: challenge points (max 3 scored attempts/day) + attempt row. */
-      if (state.user && state.user.id) {
-        if (pts > 0) {
-          const dayKey = 'sp_n_' + (m.date || 'lesson');
-          let n = 0;
-          try { n = parseInt(localStorage.getItem(dayKey) || '0', 10) || 0; } catch (e) {}
-          if (n < 3) {
-            n++;
-            try { localStorage.setItem(dayKey, String(n)); } catch (e) {}
-            awardPoints('shadowing_speaking', pts, (m.date || 'lesson') + '#sp' + n);
-          }
-        }
-        if (sb) {
-          try {
-            await sb.from('shadowing_attempts').insert({
-              user_id: state.user.id,
-              lesson_date: m.date || null,
-              audio_path: '',
-              transcript: said.slice(0, 2000),
-              score: a.accuracy
-            });
-          } catch (e) { /* table optional until the migration is run */ }
+      const a = analyzeSpeech(sentences[i], said);
+      let pts = 0, awarded = false;
+      if (a.accuracy >= 80) pts = 5;
+      else if (a.accuracy >= 50) pts = 3;
+      else if (a.accuracy > 0) pts = 1;
+      if (state.user && state.user.id && pts > 0) {
+        const dayKey = 'sp_n_' + (m.date || 'lesson');
+        let n = 0;
+        try { n = parseInt(localStorage.getItem(dayKey) || '0', 10) || 0; } catch (e) {}
+        if (n < 6) {
+          n++;
+          try { localStorage.setItem(dayKey, String(n)); } catch (e) {}
+          awardPoints('shadowing_speaking', pts, (m.date || 'lesson') + '#s' + i + 'n' + n);
+          awarded = true;
         }
       }
+      resBox.innerHTML = spSentResultHTML(a, said, awarded ? pts : 0);
+      resBox.querySelectorAll('.sp-hear').forEach(function (b) {
+        b.addEventListener('click', function () { speakWord(b.getAttribute('data-w')); });
+      });
+      /* Persist the attempt for teacher review. */
+      if (state.user && state.user.id && sb) {
+        try {
+          await sb.from('shadowing_attempts').insert({
+            user_id: state.user.id,
+            lesson_date: m.date || null,
+            audio_path: '',
+            transcript: ('[s' + (i + 1) + '] ' + said).slice(0, 2000),
+            score: a.accuracy
+          });
+        } catch (e) { /* table optional until the migration is run */ }
+      }
     } catch (e) {
-      resultBox.innerHTML = '<div class="empty">⚠️ Something went wrong: ' +
+      resBox.innerHTML = '<div class="empty">⚠️ Something went wrong: ' +
         esc(String((e && e.message) || e)) + '. Try again.</div>';
     }
   }
 
-  function spResultHTML(a, said, pts) {
+  function spSentResultHTML(a, said, pts) {
+    const cls = a.accuracy >= 80 ? 'great' : (a.accuracy >= 50 ? 'ok' : 'low');
     let head;
     if (!a.saidWords.length) {
-      head = '<div class="sp-score"><div class="sp-score-num">—</div>' +
-        '<div class="sp-score-label">We couldn\'t catch any words. Speak a bit louder, closer to the mic, and try again.</div></div>';
+      head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">—</div>' +
+        '<div class="sp-score-label">We couldn\'t catch any words. Try again.</div></div>';
     } else {
-      const cls = a.accuracy >= 80 ? 'great' : (a.accuracy >= 50 ? 'ok' : 'low');
       head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">' + a.accuracy + '%</div>' +
-        '<div class="sp-score-label">of the story reproduced' +
-        (pts ? ' · +' + pts + ' pts' : '') + '</div></div>';
+        '<div class="sp-score-label">of this sentence' + (pts ? ' · +' + pts + ' pts' : '') + '</div></div>';
     }
     const words = a.targetWords.map(function (w, idx) {
-      return '<span class="sp-w' + (a.matched.has(idx) ? ' ok' : ' miss') + '">' + esc(w) + '</span>';
+      if (a.matched.has(idx)) return '<span class="sp-w ok">' + esc(w) + '</span>';
+      return '<button class="sp-hear" data-w="' + esc(w) + '" title="Hear this word">' + esc(w) + ' 🔊</button>';
     }).join(' ');
     return head +
       (said ? '<div class="sp-said"><b>You said:</b> <span dir="auto">' + esc(said) + '</span></div>' : '') +
-      (a.targetWords.length
-        ? '<div class="sp-words"><b>Story check:</b> <span class="sp-legend"><i class="ok"></i>you nailed it <i class="miss"></i>missed</span></div>' +
-          '<p class="sp-target" dir="auto">' + words + '</p>'
-        : '') +
-      '<button class="btn btn-ghost btn-sm" data-action="sp-again">🎤 Try again</button>';
+      (a.targetWords.length ? '<p class="sp-target" dir="auto">' + words + '</p>' : '');
   }
+
+  list.addEventListener('click', function (ev) {
+    const hear = ev.target.closest('.sp-hear');
+    if (hear) { speakWord(hear.getAttribute('data-w')); return; }
+    const mic = ev.target.closest('.sp-mic');
+    if (!mic || mic.disabled) return;
+    const i = +mic.getAttribute('data-i');
+    if (active) {
+      if (active.i === i) stopActive(false);
+      return;
+    }
+    startRecording(i);
+  });
 }
 
 function quizTabHTML(m) {
