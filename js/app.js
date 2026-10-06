@@ -5618,6 +5618,15 @@ async function wireShadowingPractice(body, m) {
   const list = body.querySelector('#sp-sentences');
   if (!list) return;
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  /* iOS routing: on iPhone/iPad every browser is WebKit, and its speech
+     recognizer is a dead stub (exists but never returns words). iOS goes the
+     record-and-transcribe route (MediaRecorder -> /api/transcribe -> Whisper);
+     Android/desktop keep the instant live-recognition path. */
+  const ua = navigator.userAgent || '';
+  const isIOS = /iPad|iPhone|iPod/.test(ua) ||
+    (navigator.platform === 'MacIntel' && (navigator.maxTouchPoints || 0) > 1); /* iPadOS desktop mode */
+  const useServerSTT = isIOS && typeof window.MediaRecorder !== 'undefined' &&
+    !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
 
   let targetText = '';
   if (m.shadowing && m.shadowing.transcript) {
@@ -5626,7 +5635,7 @@ async function wireShadowingPractice(body, m) {
   }
   const sentences = splitSentences(targetText);
 
-  if (!SR) {
+  if (!SR && !useServerSTT) {
     list.innerHTML = '<div class="empty">🎤 Voice practice needs Chrome or Edge (Android or desktop).</div>';
     return;
   }
@@ -5669,6 +5678,7 @@ async function wireShadowingPractice(body, m) {
   }
 
   function startRecording(i) {
+    if (useServerSTT) { startRecordingServer(i); return; }
     const row = list.querySelector('.sp-sent[data-i="' + i + '"]');
     const resBox = row.querySelector('.sp-sent-result');
     const live = row.querySelector('.sp-sent-live');
@@ -5731,6 +5741,90 @@ async function wireShadowingPractice(body, m) {
     }, 1000);
   }
 
+  /* iOS path: record with MediaRecorder (Web Speech is a dead stub on iOS),
+     upload the clip to /api/transcribe (Whisper), then run the same analysis,
+     scoring and persistence as the live path. */
+  function startRecordingServer(i) {
+    const row = list.querySelector('.sp-sent[data-i="' + i + '"]');
+    const resBox = row.querySelector('.sp-sent-result');
+    const live = row.querySelector('.sp-sent-live');
+    const liveText = row.querySelector('.sp-sent-live-text');
+    const count = row.querySelector('.sp-sent-count');
+    resBox.innerHTML = '';
+    const a = { i: i, row: row, resBox: resBox, live: live, left: MAXS, timerId: null,
+                stream: null, rec: null, chunks: [], uploaded: false };
+    active = a;
+    setMicUI();
+    const md = navigator.mediaDevices;
+    if (!md || !md.getUserMedia) {
+      active = null; setMicUI();
+      resBox.innerHTML = '<div class="empty">🎤 Microphone is not available on this device.</div>';
+      return;
+    }
+    md.getUserMedia({ audio: true }).then(function (stream) {
+      if (!active || active.i !== i) {
+        try { stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+        return;
+      }
+      a.stream = stream;
+      let rec;
+      try { rec = new MediaRecorder(stream); }
+      catch (e) {
+        active = null; setMicUI();
+        try { stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e2) {}
+        resBox.innerHTML = '<div class="empty">🎤 Could not start recording. Try again.</div>';
+        return;
+      }
+      a.rec = rec;
+      rec.ondataavailable = function (ev) { if (ev.data && ev.data.size) a.chunks.push(ev.data); };
+      rec.onstop = function () { uploadAndFinish(a); };
+      try { rec.start(250); } catch (e) { /* onstop may not fire; stopActive covers it */ }
+      live.classList.remove('hidden');
+      liveText.textContent = '🎤 Recording… speak now!';
+      count.textContent = '0:' + String(MAXS).padStart(2, '0');
+      setMicUI();
+      a.timerId = setInterval(function () {
+        if (!active || active.i !== i) return;
+        a.left--;
+        count.textContent = '0:' + String(Math.max(a.left, 0)).padStart(2, '0');
+        if (a.left <= 0) stopActive(false);
+      }, 1000);
+    }).catch(function () {
+      if (active && active.i === i) {
+        active = null; setMicUI();
+        resBox.innerHTML = '<div class="empty">🎤 Microphone blocked — allow microphone access and try again.</div>';
+      }
+    });
+  }
+
+  async function uploadAndFinish(a) {
+    if (a.uploaded) return;
+    a.uploaded = true;
+    if (a.timerId) clearInterval(a.timerId);
+    try { if (a.stream) a.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+    const blob = new Blob(a.chunks, { type: (a.rec && a.rec.mimeType) || 'audio/mp4' });
+    a.resBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> 🔍 Transcribing…</div>';
+    let text = '', err = '';
+    try {
+      const fd = new FormData();
+      fd.append('audio', blob, 'speech.mp4');
+      const r = await fetch('/api/transcribe', { method: 'POST', body: fd });
+      let j = null;
+      try { j = await r.json(); } catch (e) {}
+      if (r.ok && j && j.text) text = String(j.text);
+      else err = (j && j.error) || ('http ' + r.status);
+    } catch (e) { err = 'network'; }
+    if (!text.trim()) {
+      a.resBox.innerHTML = '<div class="empty">🎤 ' +
+        (err === 'No speech detected.' || err === 'No usable audio received.'
+          ? 'We didn\'t catch any words. Try again.'
+          : 'Transcription failed' + (err ? ' (' + esc(err) + ')' : '') + '. Try again.') + '</div>';
+      return;
+    }
+    /* Same pipeline as the live path: collapse repeats, analyze, score, persist. */
+    await finishAttempt(a.i, spCollapseRepeats(text.trim()), a.resBox, '');
+  }
+
   async function stopActive(silent) {
     const a = active;
     active = null;
@@ -5740,6 +5834,16 @@ async function wireShadowingPractice(body, m) {
     setMicUI();
     a.live.classList.add('hidden');
     if (silent) return;
+    /* iOS server path: stopping the recorder fires onstop -> uploadAndFinish. */
+    if (a.rec) {
+      let direct = false;
+      try {
+        if (a.rec.state === 'inactive') direct = true;
+        else a.rec.stop();
+      } catch (e) { direct = true; }
+      if (direct) uploadAndFinish(a);
+      return;
+    }
     /* Let the final onresult event land before reading the transcript. */
     await new Promise(function (resolve) { setTimeout(resolve, 700); });
     /* Analysis uses FINAL results only: interim hypotheses are noisy. */
