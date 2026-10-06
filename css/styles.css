@@ -2502,3 +2502,4 @@ body.duo-playing{padding-bottom:0!important;}
 .sp-w{padding:.05em .15em;border-radius:4px}
 .sp-w.ok{background:rgba(29,158,87,.14)}
 .sp-w.miss{background:rgba(208,82,82,.13);text-decoration:line-through;text-decoration-color:rgba(208,82,82,.6)}
+.sp-note{margin:.5rem 0;font-size:.85rem;color:#a3762a}
