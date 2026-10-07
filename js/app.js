@@ -5489,9 +5489,9 @@ function podcastTabHTML(m) {
 function shadowingTabHTML(m) {
   if (!m.shadowing || !m.shadowing.audio) return '<div class="empty">No shadowing story for this lesson.</div>';
   /* The old full-story audio player was removed: each sentence now has its own
-     play + record buttons below, which is the whole shadowing flow. */
-  return /* Speaking practice: per-sentence recorder + transcription + analysis. */
-    '<div class="card plain sp-card"><h3 class="serif">🎤 Speaking practice</h3>' +
+     play + record buttons below, which is the whole shadowing flow.
+     Speaking practice: per-sentence recorder + transcription + analysis. */
+  return '<div class="card plain sp-card"><h3 class="serif">🎤 Speaking practice</h3>' +
     '<p class="muted">Tap the play button to hear a sentence, then the mic button ' +
     'to record yourself reading it aloud (up to 15 seconds). ' +
     'You get a score for each sentence — tap 🔊 on a red word to hear it.</p>' +
