@@ -1285,6 +1285,7 @@ function pwaSnooze() {
   try { localStorage.setItem('pwa_prompt', JSON.stringify({ dismissed: Date.now() })); } catch (e) {}
 }
 function pwaShowBanner() {
+  if (pwaIsIos()) return; /* iOS never gets the banner — it gets the guide sheet directly. */
   if (pwaIsStandalone() || pwaSnoozed()) return;
   // Never pop the install banner over the splash/loading screen — wait until
   // the first content is actually on screen.
@@ -1299,6 +1300,18 @@ function pwaShowBanner() {
 function pwaHideBanner() {
   const el = $('#pwa-prompt');
   if (el) el.classList.add('hidden');
+}
+function pwaShowIosSheet() {
+  if (pwaIsStandalone() || pwaSnoozed()) return;
+  // Never pop the guide over the splash/loading screen — wait until
+  // the first content is actually on screen.
+  if (!window._appReady) {
+    window._pwaIosRetries = (window._pwaIosRetries || 0) + 1;
+    if (window._pwaIosRetries < 15) setTimeout(pwaShowIosSheet, 2000);
+    return;
+  }
+  const sheet = $('#pwa-ios');
+  if (sheet) sheet.classList.remove('hidden');
 }
 function initPwaPrompt() {
   window.addEventListener('beforeinstallprompt', function (e) {
@@ -1339,9 +1352,10 @@ function initPwaPrompt() {
   if (sheet) sheet.addEventListener('click', function (e) {
     if (e.target === sheet) { sheet.classList.add('hidden'); pwaSnooze(); }
   });
-  // iOS has no beforeinstallprompt: show the banner on its own.
-  if (pwaIsIos() && !pwaIsStandalone() && !pwaSnoozed()) {
-    setTimeout(pwaShowBanner, 2500);
+  // iOS has no beforeinstallprompt and no one-tap install: skip the banner
+  // entirely and show the manual install guide directly on first launch.
+  if (pwaIsIos()) {
+    setTimeout(pwaShowIosSheet, 2500);
   }
   window.addEventListener('appinstalled', function () {
     pwaHideBanner();
@@ -5484,7 +5498,8 @@ function shadowingTabHTML(m) {
     }) +
     /* Speaking practice: per-sentence recorder + transcription + analysis. */
     '<div class="card plain sp-card"><h3 class="serif">🎤 Speaking practice</h3>' +
-    '<p class="muted">Tap 🎤 on a sentence and read it aloud (up to 15 seconds). ' +
+    '<p class="muted">Tap the play button to hear a sentence, then the mic button ' +
+    'to record yourself reading it aloud (up to 15 seconds). ' +
     'You get a score for each sentence — tap 🔊 on a red word to hear it.</p>' +
     '<div id="sp-sentences"></div></div>';
 }
@@ -5648,7 +5663,10 @@ async function wireShadowingPractice(body, m) {
   list.innerHTML = sentences.map(function (s, i) {
     return '<div class="sp-sent" data-i="' + i + '">' +
       '<div class="sp-sent-top"><p class="sp-sent-text" dir="auto"><span class="sp-sent-num">' + (i + 1) + '</span>' + esc(s) + '</p>' +
-      '<button class="sp-mic" data-i="' + i + '" aria-label="Record sentence ' + (i + 1) + '">🎤</button></div>' +
+      '<div class="sp-btns">' +
+      '<button class="sp-play" data-i="' + i + '" aria-label="Play sentence ' + (i + 1) + '"><img src="icons/sp-play.png" alt=""></button>' +
+      '<button class="sp-mic" data-i="' + i + '" aria-label="Record sentence ' + (i + 1) + '"><img src="icons/sp-rec.png" alt=""></button>' +
+      '</div></div>' +
       '<div class="sp-sent-live hidden"><span class="sp-pulse"></span>' +
       '<span class="sp-sent-live-text" dir="auto"></span><span class="sp-sent-count"></span></div>' +
       '<div class="sp-sent-result"></div></div>';
@@ -5660,16 +5678,41 @@ async function wireShadowingPractice(body, m) {
     list.querySelectorAll('.sp-mic').forEach(function (b) {
       const isActive = active && +b.getAttribute('data-i') === active.i;
       b.classList.toggle('recording', !!isActive);
-      b.textContent = isActive ? '⏹' : '🎤';
       b.disabled = !!active && !isActive;
       b.setAttribute('aria-label', isActive ? 'Stop recording' : ('Record sentence ' + (+b.getAttribute('data-i') + 1)));
     });
+    /* No sentence playback while recording — the speaker would bleed into the mic. */
+    list.querySelectorAll('.sp-play').forEach(function (b) {
+      b.disabled = !!active;
+      if (active) b.classList.remove('speaking');
+    });
+  }
+
+  let speakingI = -1;
+  function stopSpeaking() {
+    try { speechSynthesis.cancel(); } catch (e) {}
+    speakingI = -1;
+    list.querySelectorAll('.sp-play.speaking').forEach(function (b) { b.classList.remove('speaking'); });
+  }
+  function playSentence(i) {
+    if (active || !('speechSynthesis' in window)) return;
+    if (speakingI === i) { stopSpeaking(); return; } /* toggle */
+    stopSpeaking();
+    const u = new SpeechSynthesisUtterance(sentences[i]);
+    u.lang = 'en-US';
+    u.rate = 0.9;
+    speakingI = i;
+    const btn = list.querySelector('.sp-play[data-i="' + i + '"]');
+    if (btn) btn.classList.add('speaking');
+    u.onend = u.onerror = function () { if (speakingI === i) stopSpeaking(); };
+    try { speechSynthesis.speak(u); }
+    catch (e) { stopSpeaking(); }
   }
 
   function speakWord(w) {
     try {
       if (!('speechSynthesis' in window)) return;
-      speechSynthesis.cancel();
+      stopSpeaking();
       const u = new SpeechSynthesisUtterance(w);
       u.lang = 'en-US';
       u.rate = 0.85;
@@ -5679,6 +5722,7 @@ async function wireShadowingPractice(body, m) {
 
   function startRecording(i) {
     if (useServerSTT) { startRecordingServer(i); return; }
+    stopSpeaking(); /* never play into the mic */
     const row = list.querySelector('.sp-sent[data-i="' + i + '"]');
     const resBox = row.querySelector('.sp-sent-result');
     const live = row.querySelector('.sp-sent-live');
@@ -5745,6 +5789,7 @@ async function wireShadowingPractice(body, m) {
      upload the clip to /api/transcribe (Whisper), then run the same analysis,
      scoring and persistence as the live path. */
   function startRecordingServer(i) {
+    stopSpeaking(); /* never play into the mic */
     const row = list.querySelector('.sp-sent[data-i="' + i + '"]');
     const resBox = row.querySelector('.sp-sent-result');
     const live = row.querySelector('.sp-sent-live');
@@ -5921,6 +5966,8 @@ async function wireShadowingPractice(body, m) {
   list.addEventListener('click', function (ev) {
     const hear = ev.target.closest('.sp-hear');
     if (hear) { speakWord(hear.getAttribute('data-w')); return; }
+    const play = ev.target.closest('.sp-play');
+    if (play && !play.disabled) { playSentence(+play.getAttribute('data-i')); return; }
     const mic = ev.target.closest('.sp-mic');
     if (!mic || mic.disabled) return;
     const i = +mic.getAttribute('data-i');
