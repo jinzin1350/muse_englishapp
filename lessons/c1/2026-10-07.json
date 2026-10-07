@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-07",
+  "theme": "technology",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "disrupt",
+      "pos": "verb",
+      "meaning": "to completely change an industry or market by introducing something new",
+      "example": "Streaming services have disrupted the traditional television industry.",
+      "pronunciation": "dis-RUPT",
+      "persian": "به‌طور بنیادین دگرگون کردن یک صنعت",
+      "photo": "media/c1/2026-10-07/photos/disrupt.jpg",
+      "word_audio": "media/c1/2026-10-07/word-audio/disrupt.mp3"
+    },
+    {
+      "word": "bandwidth",
+      "pos": "noun",
+      "meaning": "the mental or organizational capacity to handle tasks or problems",
+      "example": "I don't have the bandwidth to take on another project this week.",
+      "pronunciation": "BAND-width",
+      "persian": "ظرفیت ذهنی یا سازمانی برای رسیدگی به کارها",
+      "photo": "media/c1/2026-10-07/photos/bandwidth.jpg",
+      "word_audio": "media/c1/2026-10-07/word-audio/bandwidth.mp3"
+    },
+    {
+      "word": "gamification",
+      "pos": "noun",
+      "meaning": "using game-like elements such as points and badges in non-game activities",
+      "example": "The fitness app uses gamification to make daily workouts feel like a fun challenge.",
+      "pronunciation": "gay-muh-fuh-KAY-shun",
+      "persian": "بازی‌وارسازی؛ استفاده از عناصر بازی در فعالیت‌های غیربازی",
+      "photo": "media/c1/2026-10-07/photos/gamification.jpg",
+      "word_audio": "media/c1/2026-10-07/word-audio/gamification.mp3"
+    },
+    {
+      "word": "granularity",
+      "pos": "noun",
+      "meaning": "the level of detail in data or information",
+      "example": "We need more granularity in the sales report to see which products are underperforming.",
+      "pronunciation": "gran-yuh-LA-ruh-tee",
+      "persian": "میزان جزئیات و دانه‌بندی داده‌ها",
+      "photo": "media/c1/2026-10-07/photos/granularity.jpg",
+      "word_audio": "media/c1/2026-10-07/word-audio/granularity.mp3"
+    },
+    {
+      "word": "obfuscate",
+      "pos": "verb",
+      "meaning": "to deliberately make something unclear or difficult to understand",
+      "example": "The contract was written to obfuscate the real cost of the service.",
+      "pronunciation": "OB-fuh-skayt",
+      "persian": "عمداً مبهم و نامفهوم کردن",
+      "photo": "media/c1/2026-10-07/photos/obfuscate.jpg",
+      "word_audio": "media/c1/2026-10-07/word-audio/obfuscate.mp3"
+    },
+    {
+      "word": "synergy",
+      "pos": "noun",
+      "meaning": "the combined effect of working together, greater than the sum of the parts",
+      "example": "The synergy between the two teams produced their best product ever.",
+      "pronunciation": "SIN-er-jee",
+      "persian": "هم‌افزایی؛ اثر ترکیبی بیشتر از مجموع اجزا",
+      "photo": "media/c1/2026-10-07/photos/synergy.jpg",
+      "word_audio": "media/c1/2026-10-07/word-audio/synergy.mp3"
+    },
+    {
+      "word": "deprecate",
+      "pos": "verb",
+      "meaning": "(in technology) to officially discourage the use of an old tool or system while it still works",
+      "example": "The old login system is deprecated; everyone should switch to the new one.",
+      "pronunciation": "DEP-ruh-kayt",
+      "persian": "منسوخ اعلام کردن (در فناوری)",
+      "photo": "media/c1/2026-10-07/photos/deprecate.jpg",
+      "word_audio": "media/c1/2026-10-07/word-audio/deprecate.mp3"
+    },
+    {
+      "word": "latency",
+      "pos": "noun",
+      "meaning": "the delay before data or a response arrives in a system",
+      "example": "High latency makes video calls freeze and lag.",
+      "pronunciation": "LAY-tun-see",
+      "persian": "تأخیر در انتقال داده یا پاسخ سیستم",
+      "photo": "media/c1/2026-10-07/photos/latency.jpg",
+      "word_audio": "media/c1/2026-10-07/word-audio/latency.mp3"
+    },
+    {
+      "word": "bottleneck",
+      "pos": "noun",
+      "meaning": "a point where progress slows down because of limited capacity",
+      "example": "The approval process is the bottleneck in our release schedule.",
+      "pronunciation": "BOT-ul-nek",
+      "persian": "گلوگاه؛ نقطه‌ای که پیشرفت را کند می‌کند",
+      "photo": "media/c1/2026-10-07/photos/bottleneck.jpg",
+      "word_audio": "media/c1/2026-10-07/word-audio/bottleneck.mp3"
+    },
+    {
+      "word": "iterative",
+      "pos": "adjective",
+      "meaning": "done in repeated small steps, with improvement each time",
+      "example": "The team took an iterative approach, releasing a better version every month.",
+      "pronunciation": "IT-uh-ray-tiv",
+      "persian": "تکرارشونده و تدریجی؛ بهبود قدم‌به‌قدم",
+      "photo": "media/c1/2026-10-07/photos/iterative.jpg",
+      "word_audio": "media/c1/2026-10-07/word-audio/iterative.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-07/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Tech Talk at Work",
+    "audio": "media/c1/2026-10-07/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-07/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Disrupt the Routine",
+    "audio": "media/c1/2026-10-07/shadowing.mp3",
+    "transcript": "media/c1/2026-10-07/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "answer": 1,
+      "options": [
+        "a point where progress slows down because of limited capacity",
+        "to completely change an industry or market by introducing something new",
+        "the delay before data or a response arrives in a system",
+        "to deliberately make something unclear or difficult to understand"
+      ],
+      "question": "What does 'disrupt' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "the combined effect of working together, greater than the sum of the parts",
+        "using game-like elements such as points and badges in non-game activities",
+        "the mental or organizational capacity to handle tasks or problems",
+        "the level of detail in data or information"
+      ],
+      "question": "What does 'bandwidth' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "using game-like elements such as points and badges in non-game activities",
+        "done in repeated small steps, with improvement each time",
+        "(in technology) to officially discourage the use of an old tool or system while it still works",
+        "to completely change an industry or market by introducing something new"
+      ],
+      "question": "What does 'gamification' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "the delay before data or a response arrives in a system",
+        "the level of detail in data or information",
+        "the combined effect of working together, greater than the sum of the parts",
+        "a point where progress slows down because of limited capacity"
+      ],
+      "question": "What does 'granularity' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "(in technology) to officially discourage the use of an old tool or system while it still works",
+        "to completely change an industry or market by introducing something new",
+        "to deliberately make something unclear or difficult to understand",
+        "done in repeated small steps, with improvement each time"
+      ],
+      "question": "What does 'obfuscate' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "using game-like elements such as points and badges in non-game activities",
+        "the mental or organizational capacity to handle tasks or problems",
+        "the level of detail in data or information",
+        "the combined effect of working together, greater than the sum of the parts"
+      ],
+      "question": "What does 'synergy' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "to deliberately make something unclear or difficult to understand",
+        "(in technology) to officially discourage the use of an old tool or system while it still works",
+        "a point where progress slows down because of limited capacity",
+        "the delay before data or a response arrives in a system"
+      ],
+      "question": "What does 'deprecate' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "the mental or organizational capacity to handle tasks or problems",
+        "done in repeated small steps, with improvement each time",
+        "to completely change an industry or market by introducing something new",
+        "the delay before data or a response arrives in a system"
+      ],
+      "question": "What does 'latency' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "a point where progress slows down because of limited capacity",
+        "the combined effect of working together, greater than the sum of the parts",
+        "the level of detail in data or information",
+        "using game-like elements such as points and badges in non-game activities"
+      ],
+      "question": "What does 'bottleneck' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "(in technology) to officially discourage the use of an old tool or system while it still works",
+        "the mental or organizational capacity to handle tasks or problems",
+        "done in repeated small steps, with improvement each time",
+        "to deliberately make something unclear or difficult to understand"
+      ],
+      "question": "What does 'iterative' mean?"
+    }
+  ],
+  "grammar": {
+    "examples": [
+      "*If the app* disrupts the market, *we will* double our team. (a real future result)",
+      "We *will* start the migration *as soon as* the servers are ready. (time clause stays in the present simple)",
+      "The old system *will* stay online *until* every client switches. (until = the limit)",
+      "*When* you find the bottleneck, *we will* fix it together. (when + present, will in the main clause)",
+      "*Before* you deprecate the feature, *warn* the users. (warning before an action)",
+      "*After* the gamification update ships, engagement *will* rise. (sequence of events)"
+    ],
+    "explanation": "We use the **first conditional** to talk about real future possibilities. Its pattern is simple: **if + present simple, will + verb**.\n\n**If we disrupt** the market with this launch, we **will** attract serious investors. The condition is realistic, not imaginary.\n\nFuture time clauses follow the same logic. After **when**, **until**, **as soon as**, **before**, and **after**, use the **present simple** — never **will**.\n\nWe **will** release the update **as soon as** the latency tests pass. The time clause stays in the present, even though it points to the future.\n\n**Until** sets a limit. The team **won't** deprecate the old tool **until** every client migrates. Nothing happens before that moment.\n\nWatch out for one classic trap: never put **will** inside the **if**-clause or the time clause. Say **if you have** the bandwidth, not **if you will have** the bandwidth.",
+    "practice": [
+      {
+        "a": "Never use will inside the if-clause. Say: If it rains, we will cancel the launch.",
+        "q": "What's wrong with this sentence: 'If it will rain, we will cancel the launch?'"
+      },
+      {
+        "a": "'Call me when you arrive.' Time clauses use the present simple, never will.",
+        "q": "Which is correct: 'Call me when you will arrive' or 'Call me when you arrive'? Why?"
+      },
+      {
+        "a": "We won't ship until the tests pass. Until marks the limit.",
+        "q": "Complete the sentence: 'We won't ship ___ the tests pass.' (until / as soon as)"
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 1,
+        "options": [
+          "If we will disrupt the market, we succeed.",
+          "If we disrupt the market, we will succeed.",
+          "If we disrupt the market, we succeed.",
+          "If we will disrupt the market, we will succeed."
+        ],
+        "question": "Choose the correct first conditional sentence."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "as soon as",
+          "until",
+          "before",
+          "if"
+        ],
+        "question": "We will launch the update ___ the latency drops below fifty milliseconds."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "when",
+          "until",
+          "as soon as",
+          "before"
+        ],
+        "question": "The team won't deprecate the tool ___ every client migrates."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "When you arrive, call me.",
+          "If you have bandwidth, help me.",
+          "We will start when the meeting will end.",
+          "After the tests pass, we ship."
+        ],
+        "question": "Which sentence is WRONG?"
+      },
+      {
+        "answer": 0,
+        "options": [
+          "is",
+          "will be",
+          "would be",
+          "has been"
+        ],
+        "question": "If the synergy ___ real, the merger will succeed."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "Until",
+          "When",
+          "Unless",
+          "Before"
+        ],
+        "question": "___ you find the bottleneck, tell the team immediately."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "I will wait until you will finish.",
+          "I will wait until you finish.",
+          "I wait until you will finish.",
+          "I will wait until you finished."
+        ],
+        "question": "Choose the correct sentence."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "will take / needs",
+          "take / will need",
+          "will take / will need",
+          "take / needs"
+        ],
+        "question": "We ___ an iterative approach if the client ___ more flexibility."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "as soon as",
+          "until",
+          "when",
+          "after"
+        ],
+        "question": "The servers will stay online ___ the migration is complete."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "boosts / will use",
+          "will boost / use",
+          "boosts / use",
+          "will boost / will use"
+        ],
+        "question": "If gamification ___ engagement, we ___ it in the training app."
+      }
+    ],
+    "title": "First Conditional and Future Time Clauses (when, until, as soon as)"
+  }
+}

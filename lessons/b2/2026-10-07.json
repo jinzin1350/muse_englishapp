@@ -1,0 +1,349 @@
+{
+  "date": "2026-10-07",
+  "theme": "nature & environment",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "glacier",
+      "pos": "noun",
+      "meaning": "a huge slow-moving river of ice in the mountains",
+      "example": "If we don't cut emissions, many glaciers will disappear in the next fifty years.",
+      "pronunciation": "GLAY-shur",
+      "persian": "یخچال طبیعی",
+      "photo": "media/b2/2026-10-07/photos/glacier.jpg",
+      "word_audio": "media/b2/2026-10-07/word-audio/glacier.mp3"
+    },
+    {
+      "word": "extinct",
+      "pos": "adjective",
+      "meaning": "no longer existing anywhere on Earth; died out completely",
+      "example": "Unless we protect their forest, these frogs will become extinct.",
+      "pronunciation": "ik-STINGKT",
+      "persian": "منقرض‌شده",
+      "photo": "media/b2/2026-10-07/photos/extinct.jpg",
+      "word_audio": "media/b2/2026-10-07/word-audio/extinct.mp3"
+    },
+    {
+      "word": "monsoon",
+      "pos": "noun",
+      "meaning": "a season of very heavy rain in South and Southeast Asia",
+      "example": "Farmers wait for the monsoon before they plant rice.",
+      "pronunciation": "mon-SOON",
+      "persian": "باران‌های موسمی",
+      "photo": "media/b2/2026-10-07/photos/monsoon.jpg",
+      "word_audio": "media/b2/2026-10-07/word-audio/monsoon.mp3"
+    },
+    {
+      "word": "reef",
+      "pos": "noun",
+      "meaning": "a ridge of coral or rock just under the surface of the sea",
+      "example": "The coral reef is home to thousands of colorful fish.",
+      "pronunciation": "REEF",
+      "persian": "صخره مرجانی",
+      "photo": "media/b2/2026-10-07/photos/reef.jpg",
+      "word_audio": "media/b2/2026-10-07/word-audio/reef.mp3"
+    },
+    {
+      "word": "wildfire",
+      "pos": "noun",
+      "meaning": "a fire that spreads fast through forests or wild land",
+      "example": "As soon as the wind rises, the wildfire will spread even further.",
+      "pronunciation": "WYLD-fy-ur",
+      "persian": "آتش‌سوزی جنگل",
+      "photo": "media/b2/2026-10-07/photos/wildfire.jpg",
+      "word_audio": "media/b2/2026-10-07/word-audio/wildfire.mp3"
+    },
+    {
+      "word": "smog",
+      "pos": "noun",
+      "meaning": "thick dirty air made of smoke and fog over a city",
+      "example": "If traffic doesn't drop, the smog will only get worse this winter.",
+      "pronunciation": "SMOG",
+      "persian": "مه‌دود",
+      "photo": "media/b2/2026-10-07/photos/smog.jpg",
+      "word_audio": "media/b2/2026-10-07/word-audio/smog.mp3"
+    },
+    {
+      "word": "tide",
+      "pos": "noun",
+      "meaning": "the regular rise and fall of the sea, twice a day",
+      "example": "We can walk to the island when the tide is low.",
+      "pronunciation": "TIDE",
+      "persian": "جزر و مد",
+      "photo": "media/b2/2026-10-07/photos/tide.jpg",
+      "word_audio": "media/b2/2026-10-07/word-audio/tide.mp3"
+    },
+    {
+      "word": "oasis",
+      "pos": "noun",
+      "meaning": "a green place with water in the middle of a desert",
+      "example": "After three days in the desert, the oasis looked like a miracle.",
+      "pronunciation": "oh-AY-sis",
+      "persian": "واحه",
+      "photo": "media/b2/2026-10-07/photos/oasis.jpg",
+      "word_audio": "media/b2/2026-10-07/word-audio/oasis.mp3"
+    },
+    {
+      "word": "compost",
+      "pos": "noun",
+      "meaning": "old food and leaves turned into food for the soil",
+      "example": "She turns her kitchen waste into compost for her vegetable garden.",
+      "pronunciation": "KOM-post",
+      "persian": "کمپوست",
+      "photo": "media/b2/2026-10-07/photos/compost.jpg",
+      "word_audio": "media/b2/2026-10-07/word-audio/compost.mp3"
+    },
+    {
+      "word": "thaw",
+      "pos": "verb",
+      "meaning": "to melt and become liquid after being frozen",
+      "example": "The lake will thaw when the warm spring winds arrive.",
+      "pronunciation": "THAW",
+      "persian": "ذوب شدن",
+      "photo": "media/b2/2026-10-07/photos/thaw.jpg",
+      "word_audio": "media/b2/2026-10-07/word-audio/thaw.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-10-07/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: When Nature Makes the Rules",
+    "audio": "media/b2/2026-10-07/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-07/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Valley That Heals",
+    "audio": "media/b2/2026-10-07/shadowing.mp3",
+    "transcript": "media/b2/2026-10-07/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'glacier' mean?",
+      "options": [
+        "a huge slow-moving river of ice in the mountains",
+        "thick dirty air made of smoke and fog over a city",
+        "the regular rise and fall of the sea",
+        "old food and leaves turned into food for the soil"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'extinct' mean?",
+      "options": [
+        "a fire that spreads fast through wild land",
+        "no longer existing anywhere on Earth; died out completely",
+        "a green place with water in a desert",
+        "a season of very heavy rain"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'monsoon' mean?",
+      "options": [
+        "a ridge of coral under the sea",
+        "to melt after being frozen",
+        "a season of very heavy rain in South and Southeast Asia",
+        "thick dirty air over a city"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'reef' mean?",
+      "options": [
+        "a ridge of coral or rock just under the surface of the sea",
+        "a huge river of ice in the mountains",
+        "no longer existing anywhere",
+        "old food turned into food for soil"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'wildfire' mean?",
+      "options": [
+        "the rise and fall of the sea",
+        "a fire that spreads fast through forests or wild land",
+        "a green place with water in a desert",
+        "a season of heavy rain"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'smog' mean?",
+      "options": [
+        "thick dirty air made of smoke and fog over a city",
+        "a huge slow-moving river of ice",
+        "a ridge of coral under the sea",
+        "to melt after being frozen"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'tide' mean?",
+      "options": [
+        "a green place with water in a desert",
+        "old food turned into soil food",
+        "no longer existing anywhere on Earth",
+        "the regular rise and fall of the sea, twice a day"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'oasis' mean?",
+      "options": [
+        "a fire spreading through wild land",
+        "a green place with water in the middle of a desert",
+        "a ridge of coral under the sea",
+        "a huge river of ice"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'compost' mean?",
+      "options": [
+        "old food and leaves turned into food for the soil",
+        "thick dirty air over a city",
+        "the rise and fall of the sea",
+        "to melt after being frozen"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'thaw' mean?",
+      "options": [
+        "a season of very heavy rain",
+        "a green place with water in a desert",
+        "to melt and become liquid after being frozen",
+        "a fire spreading fast through wild land"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "7A: First conditional and future time clauses + when, until, etc.",
+    "explanation": "Use the **first conditional** for a possible future situation and its result. The pattern is **if + present simple** in one half, and **will / won't + infinitive** in the other half.\n\nAfter **if**, always use the present tense — never the future. This is the most common mistake with the **first conditional**, so check it every time.\n\n**Unless** means **if not**. A sentence with **unless** and a positive verb means the same as **if** with a negative verb.\n\nYou can replace the **will** clause with an imperative. This turns the sentence into advice or a warning instead of a prediction.\n\nAfter **when**, **as soon as**, **until**, **before**, and **after**, use the present tense to talk about the future. The future tense belongs only in the other half of the sentence, never after these time words.",
+    "examples": [
+      "*If the wildfire reaches* the valley, we *will evacuate* the town. (a real future possibility)",
+      "She *won't survive* in the desert *unless* she *finds* an oasis. (unless = if not)",
+      "*As soon as* the glacier *starts* to melt, the river *will rise*. (present tense after as soon as)",
+      "I *won't plant* anything *until* the ground *thaws*. (until + present for the future)",
+      "*When* the monsoon *ends*, farmers *will* check their fields. (when + present for the future)"
+    ],
+    "practice": [
+      {
+        "q": "Why is 'if it will rain' wrong?",
+        "a": "In the first conditional we use the present simple after if — say 'if it rains'."
+      },
+      {
+        "q": "Rewrite with unless: 'If you don't hurry, the tide will trap you on the island.'",
+        "a": "'Unless you hurry, the tide will trap you on the island.'"
+      },
+      {
+        "q": "Make a first conditional sentence using the word 'compost'.",
+        "a": "Example answer: 'If you make compost, your garden will grow stronger.'"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "If you give in your homework late, the teacher ___ it.",
+        "options": [
+          "will mark",
+          "won't mark",
+          "doesn't mark",
+          "is not marking"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "That girl ___ into trouble if she doesn't wear her uniform.",
+        "options": [
+          "will get",
+          "gets",
+          "would get",
+          "get"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Don't write anything unless you ___ sure of the answer.",
+        "options": [
+          "will be",
+          "are",
+          "would be",
+          "be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "They'll be late for school unless they ___.",
+        "options": [
+          "will hurry",
+          "hurry",
+          "hurried",
+          "are hurrying"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Johnny will be punished if he ___ at the teacher again.",
+        "options": [
+          "shouts",
+          "will shout",
+          "shouted",
+          "shout"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Ask me if you ___ what to do.",
+        "options": [
+          "won't know",
+          "don't know",
+          "didn't know",
+          "not know"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Call me if you ___ some help with your project.",
+        "options": [
+          "will need",
+          "need",
+          "would need",
+          "needs"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I won't go to university ___ I don't get good results.",
+        "options": [
+          "if",
+          "unless",
+          "when",
+          "before"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The schools will close ___ it stops snowing soon.",
+        "options": [
+          "unless",
+          "until",
+          "if",
+          "when"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We'll stay in the library ___ it closes. Then we'll go home.",
+        "options": [
+          "as soon as",
+          "until",
+          "if",
+          "before"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

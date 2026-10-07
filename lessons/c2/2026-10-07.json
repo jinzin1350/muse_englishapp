@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-07",
+  "theme": "food & cooking",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "mise en place",
+      "pos": "noun",
+      "meaning": "everything prepared and in place before cooking begins",
+      "example": "Before service begins, every chef completes their mise en place.",
+      "pronunciation": "meez ahn PLASS",
+      "persian": "آماده‌سازی کامل مواد پیش از شروع آشپزی",
+      "photo": "media/c2/2026-10-07/photos/mise-en-place.jpg",
+      "word_audio": "media/c2/2026-10-07/word-audio/mise-en-place.mp3"
+    },
+    {
+      "word": "amuse-bouche",
+      "pos": "noun",
+      "meaning": "a small free appetizer served by the chef before the meal",
+      "example": "The meal started with an amuse-bouche of chilled pumpkin soup.",
+      "pronunciation": "uh-MYOOZ-BOOSH",
+      "persian": "پیش‌غذای کوچک رایگان از طرف سرآشپز",
+      "photo": "media/c2/2026-10-07/photos/amuse-bouche.jpg",
+      "word_audio": "media/c2/2026-10-07/word-audio/amuse-bouche.mp3"
+    },
+    {
+      "word": "degustation",
+      "pos": "noun",
+      "meaning": "a tasting menu of many small courses",
+      "example": "We booked a seven-course degustation at the new riverside restaurant.",
+      "pronunciation": "deh-gus-tuh-SYON",
+      "persian": "منوی چشیدن با چند غذای کوچک",
+      "photo": "media/c2/2026-10-07/photos/degustation.jpg",
+      "word_audio": "media/c2/2026-10-07/word-audio/degustation.mp3"
+    },
+    {
+      "word": "terroir",
+      "pos": "noun",
+      "meaning": "the soil, climate, and landscape that give food or wine its character",
+      "example": "This wine tastes of its terroir, the rocky hills of the region.",
+      "pronunciation": "teh-RWAHR",
+      "persian": "ویژگی‌های خاک و آب‌وهوای زادگاه خوراک یا شراب",
+      "photo": "media/c2/2026-10-07/photos/terroir.jpg",
+      "word_audio": "media/c2/2026-10-07/word-audio/terroir.mp3"
+    },
+    {
+      "word": "sommelier",
+      "pos": "noun",
+      "meaning": "the wine expert in a restaurant who advises guests",
+      "example": "The sommelier suggested a light red to match the lamb.",
+      "pronunciation": "suh-muhl-YAY",
+      "persian": "کارشناس شراب در رستوران",
+      "photo": "media/c2/2026-10-07/photos/sommelier.jpg",
+      "word_audio": "media/c2/2026-10-07/word-audio/sommelier.mp3"
+    },
+    {
+      "word": "umami",
+      "pos": "noun",
+      "meaning": "the rich savory taste, sometimes called the fifth taste",
+      "example": "Parmesan and mushrooms both add a deep umami flavor.",
+      "pronunciation": "oo-MAH-mee",
+      "persian": "طعم پنجم؛ طعم شور و گوشتی مطبوع",
+      "photo": "media/c2/2026-10-07/photos/umami.jpg",
+      "word_audio": "media/c2/2026-10-07/word-audio/umami.mp3"
+    },
+    {
+      "word": "gustatory",
+      "pos": "adjective",
+      "meaning": "relating to the sense of taste",
+      "example": "The chef designed the evening as a gustatory journey.",
+      "pronunciation": "GUS-tuh-tor-ee",
+      "persian": "مربوط به حس چشایی",
+      "photo": "media/c2/2026-10-07/photos/gustatory.jpg",
+      "word_audio": "media/c2/2026-10-07/word-audio/gustatory.mp3"
+    },
+    {
+      "word": "concoction",
+      "pos": "noun",
+      "meaning": "a mixture of ingredients, often unusual or inventive",
+      "example": "Her strange concoction of mango and chili surprised everyone.",
+      "pronunciation": "kun-KOK-shun",
+      "persian": "آمیزه‌ای از مواد، اغلب غیرمعمول",
+      "photo": "media/c2/2026-10-07/photos/concoction.jpg",
+      "word_audio": "media/c2/2026-10-07/word-audio/concoction.mp3"
+    },
+    {
+      "word": "delectable",
+      "pos": "adjective",
+      "meaning": "extremely delicious",
+      "example": "The chocolate dessert was absolutely delectable.",
+      "pronunciation": "dih-LEK-tuh-bul",
+      "persian": "بسیار خوشمزه و لذیذ",
+      "photo": "media/c2/2026-10-07/photos/delectable.jpg",
+      "word_audio": "media/c2/2026-10-07/word-audio/delectable.mp3"
+    },
+    {
+      "word": "infusion",
+      "pos": "noun",
+      "meaning": "flavor drawn out by soaking ingredients in hot liquid",
+      "example": "She prepared a calming infusion of chamomile and honey.",
+      "pronunciation": "in-FYOO-zhun",
+      "persian": "عصاره‌گیری طعم با خیساندن مواد در مایع داغ",
+      "photo": "media/c2/2026-10-07/photos/infusion.jpg",
+      "word_audio": "media/c2/2026-10-07/word-audio/infusion.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-07/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Language of Fine Dining",
+    "audio": "media/c2/2026-10-07/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-07/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Chef's Table",
+    "audio": "media/c2/2026-10-07/shadowing.mp3",
+    "transcript": "media/c2/2026-10-07/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'mise en place' mean?",
+      "options": [
+        "everything prepared and in place before cooking begins",
+        "the soil, climate, and landscape that give food or wine its character",
+        "the rich savory taste, sometimes called the fifth taste",
+        "a mixture of ingredients, often unusual or inventive"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'amuse-bouche' mean?",
+      "options": [
+        "relating to the sense of taste",
+        "a small free appetizer served by the chef before the meal",
+        "extremely delicious",
+        "a tasting menu of many small courses"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'degustation' mean?",
+      "options": [
+        "flavor drawn out by soaking ingredients in hot liquid",
+        "everything prepared and in place before cooking begins",
+        "a tasting menu of many small courses",
+        "the wine expert in a restaurant who advises guests"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'terroir' mean?",
+      "options": [
+        "a mixture of ingredients, often unusual or inventive",
+        "the rich savory taste, sometimes called the fifth taste",
+        "relating to the sense of taste",
+        "the soil, climate, and landscape that give food or wine its character"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'sommelier' mean?",
+      "options": [
+        "the wine expert in a restaurant who advises guests",
+        "a small free appetizer served by the chef before the meal",
+        "extremely delicious",
+        "everything prepared and in place before cooking begins"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'umami' mean?",
+      "options": [
+        "a tasting menu of many small courses",
+        "flavor drawn out by soaking ingredients in hot liquid",
+        "the rich savory taste, sometimes called the fifth taste",
+        "the soil, climate, and landscape that give food or wine its character"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'gustatory' mean?",
+      "options": [
+        "extremely delicious",
+        "a mixture of ingredients, often unusual or inventive",
+        "a small free appetizer served by the chef before the meal",
+        "relating to the sense of taste"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'concoction' mean?",
+      "options": [
+        "the wine expert in a restaurant who advises guests",
+        "a mixture of ingredients, often unusual or inventive",
+        "everything prepared and in place before cooking begins",
+        "a tasting menu of many small courses"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'delectable' mean?",
+      "options": [
+        "relating to the sense of taste",
+        "the rich savory taste, sometimes called the fifth taste",
+        "extremely delicious",
+        "flavor drawn out by soaking ingredients in hot liquid"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'infusion' mean?",
+      "options": [
+        "a small free appetizer served by the chef before the meal",
+        "the soil, climate, and landscape that give food or wine its character",
+        "the wine expert in a restaurant who advises guests",
+        "flavor drawn out by soaking ingredients in hot liquid"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "First conditional and future time clauses",
+    "explanation": "We use the **first conditional** for real possibilities in the future. The structure is **if + present simple**, **will / won't + infinitive**.\n\nNever use **will** after **if**. Say \"If the sommelier recommends it\" — never \"If the sommelier will recommend it\".\n\n**Unless** means **if not**, and it takes the present simple. We won't serve the degustation unless every amuse-bouche is perfect.\n\nAfter **when**, **as soon as**, **until**, **before**, and **after**, use the present tense for future meaning. The future marker **will** lives only in the main clause.\n\nThe first conditional can also give an order or advice. \"If the concoction tastes strange, tell me\" is an imperative, not a prediction.",
+    "examples": [
+      "*If* the chef *finishes* her mise en place early, we *will* open on time. (a real future possibility)",
+      "We *won't* serve the degustation *unless* every amuse-bouche *is* perfect. (unless = if not)",
+      "*If* you *tell* the sommelier your budget, he *will* find a wine with beautiful terroir. (no will after if)",
+      "I *will* call you *as soon as* the infusion *is* ready. (present after as soon as)",
+      "*If* the concoction *tastes* too strange, *don't* serve it. (imperative, not will)",
+      "We *won't* leave *until* everyone *has* tasted the delectable dessert. (present after until)"
+    ],
+    "practice": [
+      {
+        "q": "Your friend says: 'If the sommelier will recommend a wine, I'll order it.' What's wrong, and how do you fix it?",
+        "a": "Never use will after if. Say: 'If the sommelier recommends a wine, I'll order it.'"
+      },
+      {
+        "q": "Complete with the right forms: 'We ___ (not leave) until the infusion ___ (be) ready.'",
+        "a": "'We won't leave until the infusion is ready.' Use will in the main clause and the present tense after until."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "If the sommelier will suggest a wine, I'll trust him.",
+          "If the sommelier suggests a wine, I'll trust him.",
+          "If the sommelier would suggest a wine, I'll trust him.",
+          "If the sommelier suggested a wine, I'll trust him."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We won't start the degustation ___ every guest is seated.",
+        "options": [
+          "until",
+          "unless",
+          "if",
+          "when"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ the amuse-bouche is absolutely perfect, the chef won't serve it.",
+        "options": [
+          "When",
+          "If",
+          "Unless",
+          "Until"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I'll text you as soon as the infusion ___ ready.",
+        "options": [
+          "will be",
+          "is",
+          "would be",
+          "was"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If Marco's concoction ___ too bitter, he'll add honey.",
+        "options": [
+          "will taste",
+          "tastes",
+          "would taste",
+          "tasted"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "Call me when you'll arrive at the restaurant.",
+          "Call me when you arrive at the restaurant.",
+          "Call me when you will have arrived.",
+          "Call me when you'd arrive."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The restaurant won't earn its reputation ___ the terroir shines through every dish.",
+        "options": [
+          "if",
+          "when",
+          "until",
+          "unless"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "If we ___ the delectable dessert, we'll have room for coffee.",
+        "options": [
+          "will skip",
+          "would skip",
+          "skip",
+          "skipped"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You can't appreciate the umami ___ you slow down and focus.",
+        "options": [
+          "if",
+          "when",
+          "until",
+          "unless"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "If it will rain tomorrow, we'll cancel the picnic.",
+          "If it rains tomorrow, we cancel it yesterday.",
+          "If it rains tomorrow, we'll cancel the picnic.",
+          "If it would rain tomorrow, we'll cancel."
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

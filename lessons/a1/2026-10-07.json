@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-07",
+  "theme": "work & career",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "teacher",
+      "pos": "noun",
+      "meaning": "a person who helps students learn",
+      "example": "The teacher is kind.",
+      "pronunciation": "TEE-cher",
+      "persian": "معلم",
+      "photo": "media/a1/2026-10-07/photos/teacher.jpg",
+      "word_audio": "media/a1/2026-10-07/word-audio/teacher.mp3"
+    },
+    {
+      "word": "doctor",
+      "pos": "noun",
+      "meaning": "a person who helps sick people feel better",
+      "example": "The doctor helps me.",
+      "pronunciation": "DOK-tur",
+      "persian": "پزشک",
+      "photo": "media/a1/2026-10-07/photos/doctor.jpg",
+      "word_audio": "media/a1/2026-10-07/word-audio/doctor.mp3"
+    },
+    {
+      "word": "office",
+      "pos": "noun",
+      "meaning": "a room where people work",
+      "example": "I work in an office.",
+      "pronunciation": "O-fis",
+      "persian": "اداره",
+      "photo": "media/a1/2026-10-07/photos/office.jpg",
+      "word_audio": "media/a1/2026-10-07/word-audio/office.mp3"
+    },
+    {
+      "word": "desk",
+      "pos": "noun",
+      "meaning": "a table you work at",
+      "example": "My book is on the desk.",
+      "pronunciation": "DESK",
+      "persian": "میز تحریر",
+      "photo": "media/a1/2026-10-07/photos/desk.jpg",
+      "word_audio": "media/a1/2026-10-07/word-audio/desk.mp3"
+    },
+    {
+      "word": "job",
+      "pos": "noun",
+      "meaning": "the work a person does",
+      "example": "She has a new job.",
+      "pronunciation": "JOB",
+      "persian": "شغل",
+      "photo": "media/a1/2026-10-07/photos/job.jpg",
+      "word_audio": "media/a1/2026-10-07/word-audio/job.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-07/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: A Day at Work",
+    "audio": "media/a1/2026-10-07/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-07/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Day at Work",
+    "audio": "media/a1/2026-10-07/shadowing.mp3",
+    "transcript": "media/a1/2026-10-07/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "answer": 0,
+      "options": [
+        "a person who helps students learn",
+        "a person who helps sick people feel better",
+        "a room where people work",
+        "a table you work at"
+      ],
+      "question": "What does 'teacher' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "a room where people work",
+        "a person who helps sick people feel better",
+        "the work a person does",
+        "a table you work at"
+      ],
+      "question": "What does 'doctor' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "the work a person does",
+        "a table you work at",
+        "a room where people work",
+        "a person who helps students learn"
+      ],
+      "question": "What does 'office' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "a person who helps students learn",
+        "the work a person does",
+        "a person who helps sick people feel better",
+        "a table you work at"
+      ],
+      "question": "What does 'desk' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "the work a person does",
+        "a room where people work",
+        "a person who helps students learn",
+        "a table you work at"
+      ],
+      "question": "What does 'job' mean?"
+    }
+  ],
+  "grammar": {
+    "title": "Talking about the future: if + will",
+    "explanation": "We use **if** to talk about the future. **If** means maybe it happens.\n\nAfter **if**, we use the present simple. We do NOT use **will** after **if**.\n\nIn the other part, we use **will**. **Will** shows what happens next.\n\nWe also use **when** and **until** for the future. After **when** and **until**, we use the present simple too.\n\nThe **teacher** says: **If** you study, you **will** learn. The **doctor** says: **If** you rest, you **will** feel better.",
+    "examples": [
+      "*If* I get a job, I *will* buy a new desk. (future plan)",
+      "*If* the doctor is busy, I *will* wait in the office. (maybe future)",
+      "*If* the teacher is kind, the children *will* learn. (a good rule)",
+      "I *will* work *when* the office opens. (at that time)",
+      "I *will* not go home *until* my job is done. (up to that time)"
+    ],
+    "practice": [
+      {
+        "q": "When do we use **will** after **if**?",
+        "a": "Never! After **if** we use the present simple. **Will** goes in the other part."
+      },
+      {
+        "q": "Is this right: **If** it **will** rain, we stay home?",
+        "a": "No. Say: **If** it rains, we **will** stay home."
+      },
+      {
+        "q": "What does **when** mean for the future?",
+        "a": "It means at that time. I **will** call you **when** I get home."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "What does 'if' talk about?",
+        "options": [
+          "a sure past",
+          "a maybe future",
+          "a sure present",
+          "a finished action"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the right sentence.",
+        "options": [
+          "If it will rain, we stay home.",
+          "If it rains, we will stay home.",
+          "If it rains, we stay home tomorrow will.",
+          "Will if it rains, we stay."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "After 'if', we use...",
+        "options": [
+          "the future with will",
+          "the past simple",
+          "the present simple",
+          "the present continuous"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Choose the right sentence.",
+        "options": [
+          "If I have a job, I will work in an office.",
+          "If I will have a job, I work in an office.",
+          "If I have a job, I work will in an office.",
+          "Will I have a job if work in an office."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "After 'when' about the future, we use...",
+        "options": [
+          "will",
+          "the past",
+          "the present simple",
+          "a question"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Choose the right sentence.",
+        "options": [
+          "I will call you when I will get home.",
+          "I call you will when I get home.",
+          "I will call you when I get home.",
+          "When I get home I will you call."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What does 'until' mean?",
+        "options": [
+          "up to that time, then stop",
+          "a long time ago",
+          "right now",
+          "never"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the right sentence.",
+        "options": [
+          "I will not go home until my job is done.",
+          "I will not go home until my job will be done.",
+          "Until my job will be done, I go not home.",
+          "I go not home will until my job is done."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "What is wrong: 'If the doctor will come, I am happy'?",
+        "options": [
+          "nothing is wrong",
+          "we do not use will after if",
+          "doctor is a wrong word",
+          "happy is a wrong word"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Complete: 'If the teacher ___ kind, the children will learn.'",
+        "options": [
+          "will be",
+          "is",
+          "be",
+          "are will"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-10-07/grammar-en.mp3"
+  }
+}

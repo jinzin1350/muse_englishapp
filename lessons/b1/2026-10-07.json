@@ -1,0 +1,346 @@
+{
+ "date": "2026-10-07",
+ "theme": "nature & environment",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "wildlife",
+   "pos": "noun",
+   "meaning": "animals and birds that live in nature",
+   "example": "We saw lots of wildlife on our trip to the national park.",
+   "pronunciation": "WILD-lyfe",
+   "persian": "حیات‌وحش",
+   "photo": "media/b1/2026-10-07/photos/wildlife.jpg",
+   "word_audio": "media/b1/2026-10-07/word-audio/wildlife.mp3"
+  },
+  {
+   "word": "landscape",
+   "pos": "noun",
+   "meaning": "everything you can see in a natural place — hills, fields, rivers",
+   "example": "The desert landscape is beautiful at sunset.",
+   "pronunciation": "LAND-skeyp",
+   "persian": "چشم‌انداز طبیعی",
+   "photo": "media/b1/2026-10-07/photos/landscape.jpg",
+   "word_audio": "media/b1/2026-10-07/word-audio/landscape.mp3"
+  },
+  {
+   "word": "climate",
+   "pos": "noun",
+   "meaning": "the usual weather of a place over a long time",
+   "example": "The climate in Canada is cold in winter.",
+   "pronunciation": "KLY-mut",
+   "persian": "اقلیم (آب‌وهوای معمول یک منطقه)",
+   "photo": "media/b1/2026-10-07/photos/climate.jpg",
+   "word_audio": "media/b1/2026-10-07/word-audio/climate.mp3"
+  },
+  {
+   "word": "pollution",
+   "pos": "noun",
+   "meaning": "dirty air, water, or land that is bad for people and animals",
+   "example": "Cars cause a lot of air pollution in big cities.",
+   "pronunciation": "puh-LOO-shun",
+   "persian": "آلودگی",
+   "photo": "media/b1/2026-10-07/photos/pollution.jpg",
+   "word_audio": "media/b1/2026-10-07/word-audio/pollution.mp3"
+  },
+  {
+   "word": "recycle",
+   "pos": "verb",
+   "meaning": "to use old paper, plastic, or glass again to make new things",
+   "example": "We recycle all our plastic bottles and newspapers.",
+   "pronunciation": "ree-SY-kul",
+   "persian": "بازیافت کردن",
+   "photo": "media/b1/2026-10-07/photos/recycle.jpg",
+   "word_audio": "media/b1/2026-10-07/word-audio/recycle.mp3"
+  },
+  {
+   "word": "endangered",
+   "pos": "adjective",
+   "meaning": "an animal or plant that may disappear forever",
+   "example": "The panda is an endangered animal.",
+   "pronunciation": "in-DAYN-jurd",
+   "persian": "در خطر انقراض",
+   "photo": "media/b1/2026-10-07/photos/endangered.jpg",
+   "word_audio": "media/b1/2026-10-07/word-audio/endangered.mp3"
+  },
+  {
+   "word": "drought",
+   "pos": "noun",
+   "meaning": "a long time with no rain, so plants cannot grow",
+   "example": "The drought killed many farms this year.",
+   "pronunciation": "drowt",
+   "persian": "خشکسالی",
+   "photo": "media/b1/2026-10-07/photos/drought.jpg",
+   "word_audio": "media/b1/2026-10-07/word-audio/drought.mp3"
+  },
+  {
+   "word": "flood",
+   "pos": "noun",
+   "meaning": "water covering land that is usually dry",
+   "example": "The flood damaged many homes near the river.",
+   "pronunciation": "flud",
+   "persian": "سیل",
+   "photo": "media/b1/2026-10-07/photos/flood.jpg",
+   "word_audio": "media/b1/2026-10-07/word-audio/flood.mp3"
+  },
+  {
+   "word": "harvest",
+   "pos": "noun",
+   "meaning": "collecting crops from the fields when they are ready",
+   "example": "Farmers collect the harvest in autumn.",
+   "pronunciation": "HAR-vust",
+   "persian": "برداشت محصول",
+   "photo": "media/b1/2026-10-07/photos/harvest.jpg",
+   "word_audio": "media/b1/2026-10-07/word-audio/harvest.mp3"
+  },
+  {
+   "word": "solar",
+   "pos": "adjective",
+   "meaning": "from the sun, or using energy from the sun",
+   "example": "They put solar panels on the roof of their house.",
+   "pronunciation": "SOH-lur",
+   "persian": "خورشیدی",
+   "photo": "media/b1/2026-10-07/photos/solar.jpg",
+   "word_audio": "media/b1/2026-10-07/word-audio/solar.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-07/pronunciation.mp3",
+ "podcast": {
+  "title": "Word Kitchen: Our Green Planet",
+  "audio": "media/b1/2026-10-07/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-07/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Green Valley",
+  "audio": "media/b1/2026-10-07/shadowing.mp3",
+  "transcript": "media/b1/2026-10-07/shadowing-transcript.txt"
+ },
+ "quiz": [
+  {
+   "question": "What does 'wildlife' mean?",
+   "options": [
+    "everything you can see in a natural place — hills, fields, rivers",
+    "animals and birds that live in nature",
+    "the usual weather of a place over a long time",
+    "a long time with no rain, so plants cannot grow"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'landscape' mean?",
+   "options": [
+    "everything you can see in a natural place — hills, fields, rivers",
+    "the usual weather of a place over a long time",
+    "a long time with no rain, so plants cannot grow",
+    "dirty air, water, or land that is bad for people and animals"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'climate' mean?",
+   "options": [
+    "the usual weather of a place over a long time",
+    "collecting crops from the fields when they are ready",
+    "animals and birds that live in nature",
+    "from the sun, or using energy from the sun"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'pollution' mean?",
+   "options": [
+    "a long time with no rain, so plants cannot grow",
+    "to use old paper, plastic, or glass again to make new things",
+    "from the sun, or using energy from the sun",
+    "dirty air, water, or land that is bad for people and animals"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'recycle' mean?",
+   "options": [
+    "an animal or plant that may disappear forever",
+    "to use old paper, plastic, or glass again to make new things",
+    "water covering land that is usually dry",
+    "animals and birds that live in nature"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'endangered' mean?",
+   "options": [
+    "everything you can see in a natural place — hills, fields, rivers",
+    "a long time with no rain, so plants cannot grow",
+    "an animal or plant that may disappear forever",
+    "to use old paper, plastic, or glass again to make new things"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'drought' mean?",
+   "options": [
+    "everything you can see in a natural place — hills, fields, rivers",
+    "a long time with no rain, so plants cannot grow",
+    "water covering land that is usually dry",
+    "animals and birds that live in nature"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'flood' mean?",
+   "options": [
+    "to use old paper, plastic, or glass again to make new things",
+    "water covering land that is usually dry",
+    "collecting crops from the fields when they are ready",
+    "animals and birds that live in nature"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'harvest' mean?",
+   "options": [
+    "to use old paper, plastic, or glass again to make new things",
+    "from the sun, or using energy from the sun",
+    "collecting crops from the fields when they are ready",
+    "a long time with no rain, so plants cannot grow"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'solar' mean?",
+   "options": [
+    "an animal or plant that may disappear forever",
+    "everything you can see in a natural place — hills, fields, rivers",
+    "from the sun, or using energy from the sun",
+    "animals and birds that live in nature"
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "First conditional and future time clauses",
+  "explanation": "We use the **first conditional** for real future possibilities.\n\nThe rule is: **if** + present simple, **will** / **won't** + verb. If we recycle more, we will have less pollution.\n\nNever use **will** after **if**. We say: If the drought ends, we will be happy. Not: if the drought will end.\n\n**Unless** means **if not**. The wildlife will disappear unless we protect it.\n\nWe also use the present tense, not the future, after **when**, **as soon as**, **until**, **before**, and **after**. We say: I will call you when I arrive. Not: when I will arrive.",
+  "examples": [
+   "*If we recycle* more, *we will have* less pollution in our city. (first conditional)",
+   "*If the drought ends*, farmers *will get* a good harvest. (first conditional)",
+   "The panda *will disappear* *unless* people protect it. (unless = if not)",
+   "*Unless* we use solar energy, pollution *will grow*. (unless)",
+   "I *will visit* the national park *when* I *have* time. (present tense after when)",
+   "We *will stay* inside *until* the flood *goes* down. (present tense after until)"
+  ],
+  "practice": [
+   {
+    "q": "Make a first conditional sentence about recycling and pollution.",
+    "a": "If we recycle more, we will have less pollution."
+   },
+   {
+    "q": "Correct the mistake: I will visit you when I will come to Toronto.",
+    "a": "I will visit you when I come to Toronto — no 'will' after 'when'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "If it rains, we stay home.",
+     "If it will rain, we will stay home.",
+     "If it rains, we will stay home.",
+     "If it will rain, we stay home."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Complete: If you recycle more, you ___ less pollution.",
+    "options": [
+     "make",
+     "made",
+     "will make",
+     "would make"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "'Unless' means:",
+    "options": [
+     "because",
+     "when",
+     "until",
+     "if not"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "I will call you when I will arrive.",
+     "I would call you when I arrive.",
+     "I will call you when I arrive.",
+     "I call you when I arrive."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Complete: We won't go outside ___ the flood goes down.",
+    "options": [
+     "when",
+     "if",
+     "until",
+     "unless"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "If the climate changes, wildlife suffers.",
+     "If the climate will change, wildlife will suffer.",
+     "If the climate changes, wildlife will suffer.",
+     "If the climate will change, wildlife suffers."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Complete: They will build solar panels ___ they get the money.",
+    "options": [
+     "if not",
+     "as soon as",
+     "unless",
+     "would"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: The harvest will be rich ___ it rains in spring.",
+    "options": [
+     "if",
+     "before not",
+     "unless",
+     "until"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "She would be happy when she saw the landscape.",
+     "She will be happy when she sees the landscape.",
+     "She is happy when she sees the landscape.",
+     "She will be happy when she will see the landscape."
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: If we don't protect endangered animals, they ___.",
+    "options": [
+     "will disappear",
+     "disappeared",
+     "disappear",
+     "would disappear"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}
