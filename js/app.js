@@ -5729,7 +5729,7 @@ async function wireShadowingPractice(body, m) {
     const liveText = row.querySelector('.sp-sent-live-text');
     const count = row.querySelector('.sp-sent-count');
     resBox.innerHTML = '';
-    const a = { i: i, row: row, resBox: resBox, live: live, saidFinal: '', restarts: 0, lastError: '', left: MAXS, timerId: null, recog: null };
+    const a = { i: i, row: row, resBox: resBox, live: live, saidFinal: '', lastInterim: '', waitEnd: null, restarts: 0, lastError: '', left: MAXS, timerId: null, recog: null };
     active = a;
     const r = new SR();
     r.lang = 'en-US';
@@ -5744,6 +5744,7 @@ async function wireShadowingPractice(body, m) {
         else interim += tr;
       }
       const t = (a.saidFinal + ' ' + interim).trim();
+      a.lastInterim = interim; /* keep the latest hypotheses: on early stop they may never finalize */
       liveText.textContent = t || 'Listening…';
     };
     r.onerror = function (ev) {
@@ -5763,7 +5764,10 @@ async function wireShadowingPractice(body, m) {
           a.lastError !== 'not-allowed' && a.lastError !== 'service-not-allowed') {
         a.restarts++;
         try { r.start(); } catch (e) {}
+        return;
       }
+      /* Stopped (manually or by timer): let stopActive's waiter proceed. */
+      if (a.waitEnd) { const w = a.waitEnd; a.waitEnd = null; try { w(); } catch (e) {} }
     };
     a.recog = r;
     try { r.start(); }
@@ -5889,11 +5893,22 @@ async function wireShadowingPractice(body, m) {
       if (direct) uploadAndFinish(a);
       return;
     }
-    /* Let the final onresult event land before reading the transcript. */
-    await new Promise(function (resolve) { setTimeout(resolve, 700); });
-    /* Analysis uses FINAL results only: interim hypotheses are noisy. */
+    /* Wait for the recognizer to flush its final results (onend), with a cap.
+       Stopping early often leaves the last words as interim-only hypotheses —
+       harvest them too so nothing the user said gets wiped. */
+    await new Promise(function (resolve) {
+      let done = false;
+      const to = setTimeout(function () { if (!done) { done = true; resolve(); } }, 2500);
+      a.waitEnd = function () { if (!done) { done = true; clearTimeout(to); resolve(); } };
+    });
+    a.waitEnd = null;
+    let said = a.saidFinal.trim();
+    const li = (a.lastInterim || '').trim();
+    if (li && !spContainsWords(spNormWords(said), spNormWords(li))) {
+      said = (said + ' ' + li).trim();
+    }
     /* Collapse any staircase repeats the loop guard couldn't merge. */
-    await finishAttempt(a.i, spCollapseRepeats(a.saidFinal.trim()), a.resBox, a.lastError);
+    await finishAttempt(a.i, spCollapseRepeats(said), a.resBox, a.lastError);
   }
 
   async function finishAttempt(i, said, resBox, lastError) {
