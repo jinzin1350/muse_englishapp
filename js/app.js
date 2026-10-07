@@ -5488,15 +5488,9 @@ function podcastTabHTML(m) {
 
 function shadowingTabHTML(m) {
   if (!m.shadowing || !m.shadowing.audio) return '<div class="empty">No shadowing story for this lesson.</div>';
-  return '<div class="card plain"><h3 class="serif">' + esc(m.shadowing.title || 'Shadowing story') + '</h3>' +
-    '<p class="muted">Listen first, then speak along. Each sentence is read twice.</p></div>' +
-    audioCardHTML({
-      id: 'card-shadow', src: m.shadowing.audio,
-      title: m.shadowing.title || 'Shadowing story',
-      sub: 'Read twice · adjust speed below',
-      speeds: true, download: true, transcript: m.shadowing.transcript || null
-    }) +
-    /* Speaking practice: per-sentence recorder + transcription + analysis. */
+  /* The old full-story audio player was removed: each sentence now has its own
+     play + record buttons below, which is the whole shadowing flow. */
+  return /* Speaking practice: per-sentence recorder + transcription + analysis. */
     '<div class="card plain sp-card"><h3 class="serif">🎤 Speaking practice</h3>' +
     '<p class="muted">Tap the play button to hear a sentence, then the mic button ' +
     'to record yourself reading it aloud (up to 15 seconds). ' +
