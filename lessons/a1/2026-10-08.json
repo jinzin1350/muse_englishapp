@@ -1,0 +1,245 @@
+{
+  "date": "2026-10-08",
+  "theme": "health & body",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "nurse",
+      "pos": "noun",
+      "meaning": "a person who helps sick people",
+      "example": "The nurse is very kind.",
+      "pronunciation": "NURS",
+      "persian": "پرستار",
+      "photo": "media/a1/2026-10-08/photos/nurse.jpg",
+      "word_audio": "media/a1/2026-10-08/word-audio/nurse.mp3"
+    },
+    {
+      "word": "hospital",
+      "pos": "noun",
+      "meaning": "a big building where sick people get help",
+      "example": "I go to the hospital when I am sick.",
+      "pronunciation": "HAH-spih-tul",
+      "persian": "بیمارستان",
+      "photo": "media/a1/2026-10-08/photos/hospital.jpg",
+      "word_audio": "media/a1/2026-10-08/word-audio/hospital.mp3"
+    },
+    {
+      "word": "medicine",
+      "pos": "noun",
+      "meaning": "something you take when you are sick to feel better",
+      "example": "Take your medicine with water.",
+      "pronunciation": "MED-uh-sun",
+      "persian": "دارو",
+      "photo": "media/a1/2026-10-08/photos/medicine.jpg",
+      "word_audio": "media/a1/2026-10-08/word-audio/medicine.mp3"
+    },
+    {
+      "word": "pill",
+      "pos": "noun",
+      "meaning": "a small round medicine you take with water",
+      "example": "He takes one pill every day.",
+      "pronunciation": "PIL",
+      "persian": "قرص",
+      "photo": "media/a1/2026-10-08/photos/pill.jpg",
+      "word_audio": "media/a1/2026-10-08/word-audio/pill.mp3"
+    },
+    {
+      "word": "fever",
+      "pos": "noun",
+      "meaning": "when your body is very hot because you are sick",
+      "example": "She has a fever and stays in bed.",
+      "pronunciation": "FEE-vur",
+      "persian": "تب",
+      "photo": "media/a1/2026-10-08/photos/fever.jpg",
+      "word_audio": "media/a1/2026-10-08/word-audio/fever.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-08/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: At the Hospital",
+    "audio": "media/a1/2026-10-08/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-08/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Kind Nurse",
+    "audio": "media/a1/2026-10-08/shadowing.mp3",
+    "transcript": "media/a1/2026-10-08/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'nurse' mean?",
+      "options": [
+        "a person who helps sick people",
+        "something you take when you are sick to feel better",
+        "when your body is very hot because you are sick",
+        "a small round medicine you take with water"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'hospital' mean?",
+      "options": [
+        "when your body is very hot because you are sick",
+        "a big building where sick people get help",
+        "something you take when you are sick to feel better",
+        "a person who helps sick people"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'medicine' mean?",
+      "options": [
+        "a small round medicine you take with water",
+        "a big building where sick people get help",
+        "something you take when you are sick to feel better",
+        "a person who helps sick people"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'pill' mean?",
+      "options": [
+        "a person who helps sick people",
+        "when your body is very hot because you are sick",
+        "a small round medicine you take with water",
+        "a big building where sick people get help"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'fever' mean?",
+      "options": [
+        "a small round medicine you take with water",
+        "a person who helps sick people",
+        "something you take when you are sick to feel better",
+        "when your body is very hot because you are sick"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Second Conditional: If + Past, Would",
+    "explanation": "We use the second conditional for dreams and wishes. It is not real now.\n\n**If I were a nurse, I would help many sick people.** This is a dream, not real.\n\nWe use **if** + past simple in the first part. **Were** and **had** are past verbs.\n\nWe use **would** + verb in the second part. **Would go** is not real now, it is a wish.",
+    "examples": [
+      "*If I were a nurse*, I would help many people. (a dream job)",
+      "*If I had a fever*, I would go to the hospital. (not sick now)",
+      "*If she took the pill*, she would feel better. (a wish)",
+      "*If we had medicine*, the nurse would be happy. (not real now)"
+    ],
+    "practice": [
+      {
+        "q": "Would you go to the hospital if you had a fever?",
+        "a": "Yes, I would stay in bed and drink water."
+      },
+      {
+        "q": "Finish the sentence: If I were a nurse, ...",
+        "a": "If I were a nurse, I would help sick people."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "If I ___ a nurse, I would help many people.",
+        "options": [
+          "were",
+          "am",
+          "be",
+          "is"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "If he had a fever, he ___ go to the hospital.",
+        "options": [
+          "will",
+          "goes",
+          "would",
+          "go"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If I had medicine, I ___ feel better.",
+        "options": [
+          "will",
+          "would",
+          "am",
+          "have"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "If I would have a pill",
+          "If I had a pill, I would take it",
+          "If I have a pill, I would take it",
+          "If I am sick, I would take it"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If she were a nurse, she ___ work at the hospital.",
+        "options": [
+          "will",
+          "works",
+          "would",
+          "is"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The second conditional is for:",
+        "options": [
+          "real plans today",
+          "dreams and wishes",
+          "past stories",
+          "orders"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If we ___ at the hospital, a nurse would help us.",
+        "options": [
+          "are",
+          "were",
+          "be",
+          "is"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ I took the pill, I would feel better.",
+        "options": [
+          "When",
+          "That",
+          "If",
+          "Do"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which word goes with \"would\"?",
+        "options": [
+          "would goes",
+          "would go",
+          "would going",
+          "would to go"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If you had a fever, what would you do?",
+        "options": [
+          "I will sleep.",
+          "I would stay in bed.",
+          "I stay in bed.",
+          "I sleeping."
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-10-08/grammar-en.mp3"
+  }
+}

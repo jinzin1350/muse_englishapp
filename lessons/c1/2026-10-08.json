@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-08",
+  "theme": "family & relationships",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "estranged",
+      "pos": "adjective",
+      "meaning": "cut off from family or friends; no longer in contact after a disagreement",
+      "example": "They became estranged after a bitter argument over the inheritance.",
+      "pronunciation": "es-TRAYNJD",
+      "persian": "از خانواده بریده و قطع ارتباط شده",
+      "photo": "media/c1/2026-10-08/photos/estranged.jpg",
+      "word_audio": "media/c1/2026-10-08/word-audio/estranged.mp3"
+    },
+    {
+      "word": "reconcile",
+      "pos": "verb",
+      "meaning": "restore a friendly relationship after a disagreement",
+      "example": "It took them years to reconcile after the falling-out.",
+      "pronunciation": "REK-un-sile",
+      "persian": "آشتی کردن؛ دوباره رابطه برقرار کردن",
+      "photo": "media/c1/2026-10-08/photos/reconcile.jpg",
+      "word_audio": "media/c1/2026-10-08/word-audio/reconcile.mp3"
+    },
+    {
+      "word": "kinship",
+      "pos": "noun",
+      "meaning": "a feeling of deep closeness or connection with someone",
+      "example": "She felt an instant kinship with her host family.",
+      "pronunciation": "KIN-ship",
+      "persian": "خویشاوندی؛ احساس نزدیکی و پیوند",
+      "photo": "media/c1/2026-10-08/photos/kinship.jpg",
+      "word_audio": "media/c1/2026-10-08/word-audio/kinship.mp3"
+    },
+    {
+      "word": "feud",
+      "pos": "noun",
+      "meaning": "a long, bitter quarrel between families or groups",
+      "example": "The two families have been locked in a feud for decades.",
+      "pronunciation": "FYOOD",
+      "persian": "دشمنی دیرینه؛ نزاع طولانی",
+      "photo": "media/c1/2026-10-08/photos/feud.jpg",
+      "word_audio": "media/c1/2026-10-08/word-audio/feud.mp3"
+    },
+    {
+      "word": "upbringing",
+      "pos": "noun",
+      "meaning": "the way a child is raised and educated",
+      "example": "His strict upbringing shaped his strong work ethic.",
+      "pronunciation": "UP-bring-ing",
+      "persian": "تربیت؛ نحوه بزرگ شدن در خانواده",
+      "photo": "media/c1/2026-10-08/photos/upbringing.jpg",
+      "word_audio": "media/c1/2026-10-08/word-audio/upbringing.mp3"
+    },
+    {
+      "word": "nurture",
+      "pos": "verb",
+      "meaning": "care for and help someone or something grow",
+      "example": "Good parents nurture their children's curiosity.",
+      "pronunciation": "NUR-chur",
+      "persian": "پروراندن؛ پرورش دادن",
+      "photo": "media/c1/2026-10-08/photos/nurture.jpg",
+      "word_audio": "media/c1/2026-10-08/word-audio/nurture.mp3"
+    },
+    {
+      "word": "empathy",
+      "pos": "noun",
+      "meaning": "the ability to understand and share another person's feelings",
+      "example": "A good listener shows real empathy, not just advice.",
+      "pronunciation": "EM-puh-thee",
+      "persian": "همدلی",
+      "photo": "media/c1/2026-10-08/photos/empathy.jpg",
+      "word_audio": "media/c1/2026-10-08/word-audio/empathy.mp3"
+    },
+    {
+      "word": "patriarch",
+      "pos": "noun",
+      "meaning": "the male head of a family or group",
+      "example": "As the patriarch of the family, he made all the important decisions.",
+      "pronunciation": "PAY-tree-ark",
+      "persian": "سرپرست مرد خانواده؛ بزرگ‌خاندان",
+      "photo": "media/c1/2026-10-08/photos/patriarch.jpg",
+      "word_audio": "media/c1/2026-10-08/word-audio/patriarch.mp3"
+    },
+    {
+      "word": "alienate",
+      "pos": "verb",
+      "meaning": "make someone feel isolated or cut off from others",
+      "example": "His harsh criticism alienated even his closest friends.",
+      "pronunciation": "AY-lee-uh-nate",
+      "persian": "دور کردن؛ بیگانه ساختن",
+      "photo": "media/c1/2026-10-08/photos/alienate.jpg",
+      "word_audio": "media/c1/2026-10-08/word-audio/alienate.mp3"
+    },
+    {
+      "word": "fallout",
+      "pos": "noun",
+      "meaning": "the bad effects and bad feeling that follow a conflict",
+      "example": "The family is still dealing with the fallout from the divorce.",
+      "pronunciation": "FAWL-owt",
+      "persian": "پیامدهای منفی؛ آثار مخرب بعدی",
+      "photo": "media/c1/2026-10-08/photos/fallout.jpg",
+      "word_audio": "media/c1/2026-10-08/word-audio/fallout.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-08/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Family Ties",
+    "audio": "media/c1/2026-10-08/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-08/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Bridge Back Home",
+    "audio": "media/c1/2026-10-08/shadowing.mp3",
+    "transcript": "media/c1/2026-10-08/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'estranged' mean?",
+      "options": [
+        "the male head of a family or group",
+        "cut off from family or friends; no longer in contact",
+        "the way a child is raised and educated",
+        "the ability to understand and share another's feelings"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'reconcile' mean?",
+      "options": [
+        "a long, bitter quarrel between families",
+        "a feeling of deep closeness or connection",
+        "restore a friendly relationship after a disagreement",
+        "the bad effects that follow a conflict"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'kinship' mean?",
+      "options": [
+        "a feeling of deep closeness or connection with someone",
+        "make someone feel isolated or cut off",
+        "care for and help someone grow",
+        "cut off from family; no longer in contact"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'feud' mean?",
+      "options": [
+        "restore a friendly relationship after a disagreement",
+        "the way a child is raised and educated",
+        "the bad effects that follow a conflict",
+        "a long, bitter quarrel between families or groups"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'upbringing' mean?",
+      "options": [
+        "the ability to understand and share another's feelings",
+        "the way a child is raised and educated",
+        "a long, bitter quarrel between families",
+        "the male head of a family or group"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'nurture' mean?",
+      "options": [
+        "care for and help someone or something grow",
+        "make someone feel isolated or cut off",
+        "a feeling of deep closeness or connection",
+        "restore a friendly relationship after a disagreement"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'empathy' mean?",
+      "options": [
+        "the bad effects that follow a conflict",
+        "cut off from family; no longer in contact",
+        "the ability to understand and share another person's feelings",
+        "the way a child is raised and educated"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'patriarch' mean?",
+      "options": [
+        "care for and help someone grow",
+        "the male head of a family or group",
+        "a long, bitter quarrel between families",
+        "restore a friendly relationship after a disagreement"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'alienate' mean?",
+      "options": [
+        "a feeling of deep closeness or connection",
+        "the bad effects that follow a conflict",
+        "the ability to understand and share another's feelings",
+        "make someone feel isolated or cut off from others"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'fallout' mean?",
+      "options": [
+        "the bad effects and bad feeling that follow a conflict",
+        "the way a child is raised and educated",
+        "make someone feel isolated or cut off",
+        "a feeling of deep closeness or connection"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "7B: Second conditional — choosing between conditionals",
+    "explanation": "The **second conditional** talks about imaginary situations. The shape is **if + past simple** in the condition, and **would/wouldn't + infinitive** in the result.\n\nIt describes the present or the future, never the past. *If I had more empathy, I would reconcile with my estranged brother* is a dream about now, not a memory.\n\nIn formal English, use **were** (not **was**) with I, he, she, and it. *If the proud patriarch were here, he would end the old feud* sounds more correct and more elegant.\n\n**If I were you** is the classic way to give advice. *If I were you, I wouldn't alienate the people who love you* is softer than a direct order.\n\nYou can replace **would** with **could** when you mean possibility, not certainty. *If she tried, she could nurture the relationship back to life* suggests it is possible, not guaranteed.\n\nChoosing between them is about reality. The **first conditional** is real and probable: *If I have time, I'll call my mother.* The **second conditional** is hypothetical: *If I had time, I'd call my mother.* One believes; the other dreams.\n\nAt C1 level, watch for **mixed conditionals**: a past condition with a present result. *If they hadn't become estranged, they would be close now* mixes **if + past perfect** with **would + infinitive**.\n\nYou can even drop **if** entirely. **Would + infinitive** alone can paint an imaginary scene: *A quiet family dinner without the old fallout would be wonderful.*",
+    "examples": [
+      "*If I were* the patriarch of this family, *I would end* the feud today. (imaginary present)",
+      "*If she had shown* more empathy, *they would have reconciled* years ago. (past regret)",
+      "*If we nurtured* our kinship instead of our pride, *we wouldn't feel* so alienated. (imaginary present)",
+      "*If I were you*, *I'd call* your estranged brother this week. (advice)",
+      "*If their upbringing had been* gentler, *the fallout wouldn't be* so bitter now. (mixed: past condition, present result)",
+      "A peaceful reconciliation *would heal* more than any argument ever could. (imaginary wish, no if)"
+    ],
+    "practice": [
+      {
+        "q": "Which conditional is this: 'If I had more time, I would visit my family'?",
+        "a": "Second conditional — a hypothetical present: if + past simple, would + infinitive."
+      },
+      {
+        "q": "Make this real situation hypothetical: 'I don't have empathy for him, so we argue.'",
+        "a": "'If I had more empathy for him, we wouldn't argue.'"
+      },
+      {
+        "q": "What is mixed about 'If they hadn't fought, they would be close now'?",
+        "a": "Mixed conditional — a past condition (if + past perfect) with a present result (would + infinitive)."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Complete: 'If I ___ more empathy, I ___ with my brother.'",
+        "options": [
+          "had / would reconcile",
+          "have / will reconcile",
+          "would have / had reconciled",
+          "had had / reconcile"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Complete the advice: 'If I were you, ___ your estranged sister this week.'",
+        "options": [
+          "I'll call",
+          "I'd call",
+          "I call",
+          "I would have called"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "'If she apologizes, they will reconcile.' This sentence is...",
+        "options": [
+          "a second conditional — imaginary",
+          "a mixed conditional",
+          "a first conditional — real and probable",
+          "the subjunctive mood"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which sentence is a mixed conditional (past condition, present result)?",
+        "options": [
+          "If I had time, I'd help you.",
+          "If it rains tomorrow, we'll stay home.",
+          "If they hadn't been estranged, they would be close now.",
+          "If I were rich, I would travel the world."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'If he were here, he would end the feud.' Why 'were' and not 'was'?",
+        "options": [
+          "it is a first conditional",
+          "formal second conditionals prefer 'were' with I/he/she/it",
+          "'was' is always wrong in English",
+          "the sentence is in the past tense"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Complete: 'If we ___ our kinship instead of our pride, we ___ so alienated.'",
+        "options": [
+          "nurture / won't feel",
+          "had nurtured / wouldn't have felt",
+          "nurtured / wouldn't feel",
+          "nurtures / don't feel"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which sentence expresses an imaginary wish WITHOUT 'if'?",
+        "options": [
+          "If we meet, we'll talk.",
+          "A peaceful family reunion would be wonderful.",
+          "Had we met, we'd have talked.",
+          "When we meet, we talk."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "'If their upbringing had been gentler, the fallout wouldn't be so bitter now.' The result refers to...",
+        "options": [
+          "the past",
+          "a general truth",
+          "the future only",
+          "the present"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correct advice sentence:",
+        "options": [
+          "If I were you, I wouldn't alienate your family.",
+          "If I was you, I wouldn't alienate your family.",
+          "If I am you, I don't alienate your family.",
+          "If I had been you, I wouldn't have alienate your family."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "'If she tried harder, she could nurture the relationship.' Here 'could' expresses...",
+        "options": [
+          "a past ability",
+          "permission",
+          "a command",
+          "possibility instead of certainty"
+        ],
+        "answer": 3
+      }
+    ]
+  }
+}

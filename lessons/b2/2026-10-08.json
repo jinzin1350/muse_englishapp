@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-08",
+  "theme": "sports & fitness",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "stamina",
+      "pos": "noun",
+      "meaning": "the ability to keep doing something tiring for a long time",
+      "example": "She has amazing stamina. She ran the whole game without getting tired.",
+      "pronunciation": "STAM-uh-nuh",
+      "persian": "توان و استقامت بدنی",
+      "photo": "media/b2/2026-10-08/photos/stamina.jpg",
+      "word_audio": "media/b2/2026-10-08/word-audio/stamina.mp3"
+    },
+    {
+      "word": "tournament",
+      "pos": "noun",
+      "meaning": "a sports competition with many matches, ending with one winner",
+      "example": "Our school team reached the final of the national tournament.",
+      "pronunciation": "TOOR-nuh-ment",
+      "persian": "مسابقات قهرمانی (تورنمنت)",
+      "photo": "media/b2/2026-10-08/photos/tournament.jpg",
+      "word_audio": "media/b2/2026-10-08/word-audio/tournament.mp3"
+    },
+    {
+      "word": "spectator",
+      "pos": "noun",
+      "meaning": "a person who watches a game or event but doesn't play",
+      "example": "Over forty thousand spectators filled the stadium last night.",
+      "pronunciation": "spek-TAY-ter",
+      "persian": "تماشاگر",
+      "photo": "media/b2/2026-10-08/photos/spectator.jpg",
+      "word_audio": "media/b2/2026-10-08/word-audio/spectator.mp3"
+    },
+    {
+      "word": "comeback",
+      "pos": "noun",
+      "meaning": "a return to success after a bad period or defeat",
+      "example": "After two injuries, his comeback was the story of the season.",
+      "pronunciation": "KUM-bak",
+      "persian": "بازگشت به اوج",
+      "photo": "media/b2/2026-10-08/photos/comeback.jpg",
+      "word_audio": "media/b2/2026-10-08/word-audio/comeback.mp3"
+    },
+    {
+      "word": "rivalry",
+      "pos": "noun",
+      "meaning": "a strong competition between two people or teams",
+      "example": "The rivalry between the two clubs goes back thirty years.",
+      "pronunciation": "RY-vul-ree",
+      "persian": "رقابت سرسختانه",
+      "photo": "media/b2/2026-10-08/photos/rivalry.jpg",
+      "word_audio": "media/b2/2026-10-08/word-audio/rivalry.mp3"
+    },
+    {
+      "word": "foul",
+      "pos": "noun",
+      "meaning": "an action against the rules in a game",
+      "example": "The referee gave a foul when he pushed the other player.",
+      "pronunciation": "FOWL",
+      "persian": "خطا در بازی",
+      "photo": "media/b2/2026-10-08/photos/foul.jpg",
+      "word_audio": "media/b2/2026-10-08/word-audio/foul.mp3"
+    },
+    {
+      "word": "disqualify",
+      "pos": "verb",
+      "meaning": "to stop someone from a competition for breaking the rules",
+      "example": "They disqualified him from the race for a false start.",
+      "pronunciation": "dis-KWOL-uh-fy",
+      "persian": "محروم کردن (رد صلاحیت کردن)",
+      "photo": "media/b2/2026-10-08/photos/disqualify.jpg",
+      "word_audio": "media/b2/2026-10-08/word-audio/disqualify.mp3"
+    },
+    {
+      "word": "marathon",
+      "pos": "noun",
+      "meaning": "a very long running race, about forty-two kilometers",
+      "example": "She trained for six months before her first marathon.",
+      "pronunciation": "MAR-uh-thon",
+      "persian": "ماراتون",
+      "photo": "media/b2/2026-10-08/photos/marathon.jpg",
+      "word_audio": "media/b2/2026-10-08/word-audio/marathon.mp3"
+    },
+    {
+      "word": "penalty",
+      "pos": "noun",
+      "meaning": "a punishment in a game for breaking a rule",
+      "example": "He scored the winning goal from a penalty in the last minute.",
+      "pronunciation": "PEN-ul-tee",
+      "persian": "پنالتی (جریمه در بازی)",
+      "photo": "media/b2/2026-10-08/photos/penalty.jpg",
+      "word_audio": "media/b2/2026-10-08/word-audio/penalty.mp3"
+    },
+    {
+      "word": "hydration",
+      "pos": "noun",
+      "meaning": "keeping enough water in your body",
+      "example": "Good hydration is essential for runners on hot days.",
+      "pronunciation": "hy-DRAY-shun",
+      "persian": "آبرسانی به بدن",
+      "photo": "media/b2/2026-10-08/photos/hydration.jpg",
+      "word_audio": "media/b2/2026-10-08/word-audio/hydration.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-10-08/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Sports & Fitness",
+    "audio": "media/b2/2026-10-08/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-08/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Final Whistle",
+    "audio": "media/b2/2026-10-08/shadowing.mp3",
+    "transcript": "media/b2/2026-10-08/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'stamina' mean?",
+      "options": [
+        "the ability to keep doing something tiring for a long time",
+        "a sports competition with many matches",
+        "a punishment in a game",
+        "a return to success after defeat"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'tournament' mean?",
+      "options": [
+        "a person who watches a game",
+        "keeping enough water in your body",
+        "a sports competition with many matches, ending with one winner",
+        "an action against the rules"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'spectator' mean?",
+      "options": [
+        "a strong competition between two teams",
+        "a person who watches a game or event but doesn't play",
+        "the ability to keep going when tired",
+        "a very long running race"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'comeback' mean?",
+      "options": [
+        "to stop someone from a competition",
+        "a return to success after a bad period or defeat",
+        "a free shot at the goal",
+        "keeping enough water in the body"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'rivalry' mean?",
+      "options": [
+        "a strong competition between two people or teams",
+        "a punishment in a game",
+        "a person who watches but doesn't play",
+        "a sports competition"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'foul' mean?",
+      "options": [
+        "a very long race",
+        "to remove someone from a competition",
+        "an action against the rules in a game",
+        "the ability to keep going"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'disqualify' mean?",
+      "options": [
+        "to stop someone from a competition for breaking the rules",
+        "to score a goal",
+        "to watch a game",
+        "to drink enough water"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'marathon' mean?",
+      "options": [
+        "a free shot at the goal",
+        "a very long running race, about forty-two kilometers",
+        "a return to success",
+        "a strong competition"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'penalty' mean?",
+      "options": [
+        "a person who watches a game",
+        "a sports competition",
+        "a punishment in a game for breaking a rule",
+        "the ability to keep going"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'hydration' mean?",
+      "options": [
+        "keeping enough water in your body",
+        "a strong competition",
+        "an action against the rules",
+        "a return to success"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "7B: Second conditional, choosing between conditionals",
+    "explanation": "We use the **second conditional** to talk about imaginary or hypothetical situations. It describes a different reality, like a dream season with endless stamina.\n\nThe form is **if + past simple**, **would / wouldn't + infinitive**. The past simple here does not mean past time.\n\nAfter **if**, we can use **was** or **were** with I, he, she, and it. Many speakers prefer **were**, especially when giving advice.\n\nWe say **If I were you** to give advice. It is a fixed phrase, so we don't normally say *If I was you*.\n\nWe can also use **could** instead of **would**. It adds the idea of possibility, like a spectator who could join the team.\n\nTo choose between the two conditionals, ask: real or imaginary? For a real, probable situation, use the **first conditional**: **if + present simple**, **will + infinitive**.\n\nFor an imaginary situation, use the **second conditional**. The meaning decides the form, not the words around it.\n\nWe can also use **would / wouldn't + infinitive** without **if**. This still describes an imaginary situation, like an ideal tournament final.",
+    "examples": [
+      "*If I had* more stamina, *I would run* a marathon. (imaginary ability)",
+      "*If I were you*, *I'd drink* more water before the tournament. (advice)",
+      "*If our team won* the final, the comeback *would be* legendary. (imaginary future)",
+      "My ideal holiday *would be* a week watching a tennis tournament. (a dream, no 'if')",
+      "*If she committed* a foul, the referee *would give* a penalty. (imaginary situation)",
+      "*If he cheated*, the officials *would disqualify* him at once. (imaginary consequence)"
+    ],
+    "practice": [
+      {
+        "q": "Complete with the right forms: If I ___ (have) more stamina, I ___ (run) a marathon.",
+        "a": "If I had more stamina, I would run a marathon."
+      },
+      {
+        "q": "First or second conditional? 'If it rains tomorrow, we will cancel the match.'",
+        "a": "First conditional — it describes a real, probable situation."
+      },
+      {
+        "q": "Give advice to a friend who never drinks water in training. Start with 'If I were you'.",
+        "a": "If I were you, I'd pay more attention to hydration."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I'll stay with my sister if I ___ to go to London for my job interview.",
+        "options": [
+          "have",
+          "had",
+          "will have",
+          "would have"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I'd buy my own flat if I ___ enough money.",
+        "options": [
+          "will have",
+          "have",
+          "had",
+          "would have"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My kids would get up earlier if they ___ to bed so late.",
+        "options": [
+          "don't go",
+          "didn't go",
+          "won't go",
+          "wouldn't go"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Where will you live if you ___ to university?",
+        "options": [
+          "went",
+          "would go",
+          "will go",
+          "go"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "If you don't pass your exams, what ___ you do?",
+        "options": [
+          "would",
+          "will",
+          "did",
+          "do"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I'd buy a bigger house if I ___ sure we could afford it.",
+        "options": [
+          "will be",
+          "am",
+          "were",
+          "would be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We couldn't have a dog if we ___ a garden.",
+        "options": [
+          "didn't have",
+          "don't have",
+          "won't have",
+          "wouldn't have"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "How will you get to work if you ___ your car?",
+        "options": [
+          "sold",
+          "would sell",
+          "will sell",
+          "sell"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "If you could change one thing in your life, what ___ it ___?",
+        "options": [
+          "will ... be",
+          "is ...",
+          "would ... be",
+          "was ..."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If she made less noise, her neighbours ___ so often.",
+        "options": [
+          "don't complain",
+          "wouldn't complain",
+          "won't complain",
+          "didn't complain"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

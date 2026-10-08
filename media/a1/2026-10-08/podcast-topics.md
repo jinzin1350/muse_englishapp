@@ -1,0 +1,4 @@
+- Word Kitchen episode: health & body vocabulary for A1 learners
+- Five target words: nurse, hospital, medicine, pill, fever
+- Mini-stories: a man and a woman visit the hospital with a fever; a kind nurse gives medicine/pills
+- Recap drill at the end: listeners repeat all five words

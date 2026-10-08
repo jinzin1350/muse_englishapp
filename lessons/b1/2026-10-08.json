@@ -1,0 +1,350 @@
+{
+ "date": "2026-10-08",
+ "theme": "Cities & Daily Life",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "neighborhood",
+   "pos": "noun",
+   "meaning": "a part of a city where people live",
+   "example": "I love our neighborhood; everyone is friendly.",
+   "pronunciation": "NAY-bur-hood",
+   "persian": "محله",
+   "photo": "media/b1/2026-10-08/photos/neighborhood.jpg",
+   "word_audio": "media/b1/2026-10-08/word-audio/neighborhood.mp3"
+  },
+  {
+   "word": "resident",
+   "pos": "noun",
+   "meaning": "a person who lives in a particular place",
+   "example": "The residents of this building held a meeting yesterday.",
+   "pronunciation": "REZ-ih-dunt",
+   "persian": "ساکن",
+   "photo": "media/b1/2026-10-08/photos/resident.jpg",
+   "word_audio": "media/b1/2026-10-08/word-audio/resident.mp3"
+  },
+  {
+   "word": "skyscraper",
+   "pos": "noun",
+   "meaning": "a very tall building in a city",
+   "example": "You can see the whole city from the top of the skyscraper.",
+   "pronunciation": "SKY-skray-pur",
+   "persian": "آسمان‌خراش",
+   "photo": "media/b1/2026-10-08/photos/skyscraper.jpg",
+   "word_audio": "media/b1/2026-10-08/word-audio/skyscraper.mp3"
+  },
+  {
+   "word": "sidewalk",
+   "pos": "noun",
+   "meaning": "the paved path beside a street where people walk",
+   "example": "Please do not ride your bike on the sidewalk.",
+   "pronunciation": "SYD-wawk",
+   "persian": "پیاده‌رو",
+   "photo": "media/b1/2026-10-08/photos/sidewalk.jpg",
+   "word_audio": "media/b1/2026-10-08/word-audio/sidewalk.mp3"
+  },
+  {
+   "word": "suburb",
+   "pos": "noun",
+   "meaning": "a quiet area of houses near a city",
+   "example": "They moved to a suburb to have a bigger garden.",
+   "pronunciation": "SUH-burb",
+   "persian": "حومه شهر",
+   "photo": "media/b1/2026-10-08/photos/suburb.jpg",
+   "word_audio": "media/b1/2026-10-08/word-audio/suburb.mp3"
+  },
+  {
+   "word": "fountain",
+   "pos": "noun",
+   "meaning": "a structure that sends water up into the air",
+   "example": "Children like to play near the fountain in the square.",
+   "pronunciation": "FOWN-tin",
+   "persian": "فواره",
+   "photo": "media/b1/2026-10-08/photos/fountain.jpg",
+   "word_audio": "media/b1/2026-10-08/word-audio/fountain.mp3"
+  },
+  {
+   "word": "bridge",
+   "pos": "noun",
+   "meaning": "a structure built over a river or road",
+   "example": "We walked across the old bridge in the evening.",
+   "pronunciation": "brij",
+   "persian": "پل",
+   "photo": "media/b1/2026-10-08/photos/bridge.jpg",
+   "word_audio": "media/b1/2026-10-08/word-audio/bridge.mp3"
+  },
+  {
+   "word": "crosswalk",
+   "pos": "noun",
+   "meaning": "a marked place where people cross the street",
+   "example": "Always use the crosswalk when you cross a busy street.",
+   "pronunciation": "KRAWS-wawk",
+   "persian": "خط عابر پیاده",
+   "photo": "media/b1/2026-10-08/photos/crosswalk.jpg",
+   "word_audio": "media/b1/2026-10-08/word-audio/crosswalk.mp3"
+  },
+  {
+   "word": "rooftop",
+   "pos": "noun",
+   "meaning": "the top surface of a building",
+   "example": "We had dinner on the rooftop and watched the sunset.",
+   "pronunciation": "ROOF-tawp",
+   "persian": "پشت‌بام",
+   "photo": "media/b1/2026-10-08/photos/rooftop.jpg",
+   "word_audio": "media/b1/2026-10-08/word-audio/rooftop.mp3"
+  },
+  {
+   "word": "traffic jam",
+   "pos": "noun",
+   "meaning": "a long line of cars that cannot move",
+   "example": "We were late because of a big traffic jam.",
+   "pronunciation": "TRA-fik jam",
+   "persian": "ترافیک سنگین",
+   "photo": "media/b1/2026-10-08/photos/traffic jam.jpg",
+   "word_audio": "media/b1/2026-10-08/word-audio/traffic jam.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-08/pronunciation.mp3",
+ "podcast": {
+  "title": "Word Kitchen: City Life",
+  "audio": "media/b1/2026-10-08/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-08/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The City I Love",
+  "audio": "media/b1/2026-10-08/shadowing.mp3",
+  "transcript": "media/b1/2026-10-08/shadowing-transcript.txt"
+ },
+ "quiz": [
+  {
+   "answer": 2,
+   "options": [
+    "a very tall building in a city",
+    "a person who lives in a place",
+    "a part of a city where people live",
+    "a structure built over a river"
+   ],
+   "question": "What does 'neighborhood' mean?"
+  },
+  {
+   "answer": 0,
+   "options": [
+    "a person who lives in a particular place",
+    "the top surface of a building",
+    "a quiet area of houses near a city",
+    "a long line of cars that cannot move"
+   ],
+   "question": "What does 'resident' mean?"
+  },
+  {
+   "answer": 3,
+   "options": [
+    "a paved path beside a street",
+    "a structure that sends water into the air",
+    "a marked place to cross the street",
+    "a very tall building in a city"
+   ],
+   "question": "What does 'skyscraper' mean?"
+  },
+  {
+   "answer": 1,
+   "options": [
+    "a long line of cars that cannot move",
+    "the paved path beside a street where people walk",
+    "a part of a city where people live",
+    "a person who lives in a place"
+   ],
+   "question": "What does 'sidewalk' mean?"
+  },
+  {
+   "answer": 0,
+   "options": [
+    "a quiet area of houses near a city",
+    "a structure built over a river or road",
+    "the top surface of a building",
+    "a marked place to cross the street"
+   ],
+   "question": "What does 'suburb' mean?"
+  },
+  {
+   "answer": 2,
+   "options": [
+    "a very tall building in a city",
+    "a part of a city where people live",
+    "a structure that sends water up into the air",
+    "a person who lives in a place"
+   ],
+   "question": "What does 'fountain' mean?"
+  },
+  {
+   "answer": 1,
+   "options": [
+    "the top surface of a building",
+    "a structure built over a river or road",
+    "a quiet area of houses near a city",
+    "a long line of cars that cannot move"
+   ],
+   "question": "What does 'bridge' mean?"
+  },
+  {
+   "answer": 3,
+   "options": [
+    "a paved path beside a street",
+    "a structure that sends water into the air",
+    "a very tall building in a city",
+    "a marked place where people cross the street"
+   ],
+   "question": "What does 'crosswalk' mean?"
+  },
+  {
+   "answer": 0,
+   "options": [
+    "the top surface of a building",
+    "a quiet area of houses near a city",
+    "a long line of cars that cannot move",
+    "a structure built over a river or road"
+   ],
+   "question": "What does 'rooftop' mean?"
+  },
+  {
+   "answer": 2,
+   "options": [
+    "a marked place where people cross the street",
+    "the paved path beside a street where people walk",
+    "a long line of cars that cannot move",
+    "a part of a city where people live"
+   ],
+   "question": "What does 'traffic jam' mean?"
+  }
+ ],
+ "grammar": {
+  "examples": [
+   "*If I lived* near the park, *I would walk* on the sidewalk every morning. (an imaginary present situation)",
+   "*If our neighborhood had* a fountain, *it would be* more beautiful. (imagining something different now)",
+   "*If I were* a resident of that suburb, *I would buy* a bike. (advice-style: if I were you)",
+   "*If there were* no traffic jam, *we could get* to the rooftop party on time. (could instead of would)",
+   "*If I had* more money, *I'd travel* across the old bridge every weekend. (I'd = I would)",
+   "*If it rained*, *I wouldn't cross* the crosswalk so fast. (negative form)"
+  ],
+  "explanation": "We use the **second conditional** to talk about imaginary or unreal situations in the present or future.\n\nThe form is simple: **if + past simple, would / wouldn't + infinitive**. For example: If I lived in that suburb, I would walk to work.\n\nWith I, he, she, or it, we can use **was or were**: If the skyscraper were taller, we could see the sea. **Were** sounds more formal and correct.\n\nWe often say **If I were you** to give advice: If I were you, I'd take the bridge, not the tunnel.\n\nChoosing: the **first conditional** is for real, probable plans (If it rains, I'll take a taxi). The **second conditional** is for dreams and imagination (If it rained, I'd stay home).",
+  "practice": [
+   {
+    "a": "If I lived in a big city, I would visit the museums every week. / If I were a resident of Paris, I'd learn French.",
+    "q": "Make two second-conditional sentences about an imaginary life. Start with 'If I lived...' and 'If I were...'"
+   },
+   {
+    "a": "First conditional: If I have time, I'll help you. (real plan) / Second conditional: If I had time, I'd help you. (imaginary)",
+    "q": "Your friend asks: 'Will you come to the rooftop party?' Answer once with a first conditional and once with a second conditional."
+   },
+   {
+    "a": "If our neighborhood had a fountain, children would play there all day.",
+    "q": "Imagine your neighborhood were different. Write one second-conditional sentence about your street."
+   }
+  ],
+  "quiz": [
+   {
+    "answer": 1,
+    "options": [
+     "If I will live in that suburb, I would buy a car.",
+     "If I lived in that suburb, I would buy a car.",
+     "If I live in that suburb, I would buy a car.",
+     "If I would live in that suburb, I buy a car."
+    ],
+    "question": "Choose the correct second conditional sentence."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "was rich",
+     "am rich",
+     "were rich",
+     "be rich"
+    ],
+    "question": "If I ___ rich, I'd travel to every city in the world."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "I would wait",
+     "I will wait",
+     "I wait",
+     "I waited"
+    ],
+    "question": "If there was a traffic jam, ___ for the bus."
+   },
+   {
+    "answer": 3,
+    "options": [
+     "If I were you, I will take the bridge.",
+     "If I was you, I would take the bridge.",
+     "If I am you, I would take the bridge.",
+     "If I were you, I'd take the bridge."
+    ],
+    "question": "Choose the correct sentence for giving advice."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "First conditional = imaginary, second conditional = real",
+     "First conditional = real plan, second conditional = imaginary",
+     "Both are the same",
+     "Second conditional is for the past"
+    ],
+    "question": "Which statement is correct?"
+   },
+   {
+    "answer": 2,
+    "options": [
+     "If the fountain is broken, it would be sad.",
+     "If the fountain was broken, it will be sad.",
+     "If the fountain were broken, it would be sad.",
+     "If the fountain were broken, it will be sad."
+    ],
+    "question": "Choose the correct sentence about an imaginary present situation."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "I'd stay",
+     "I'll stay",
+     "I stay",
+     "I stayed"
+    ],
+    "question": "If it rained all day, ___ at home."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "If the skyscraper will be taller, we can see more.",
+     "If the skyscraper were taller, we could see more.",
+     "If the skyscraper is taller, we could see more.",
+     "If the skyscraper would be taller, we see more."
+    ],
+    "question": "Choose the correct imaginary sentence."
+   },
+   {
+    "answer": 3,
+    "options": [
+     "I wouldn't to cross",
+     "I don't cross",
+     "I won't to cross",
+     "I wouldn't cross"
+    ],
+    "question": "If the crosswalk was dangerous, ___ there."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "If I would have a rooftop, I invite friends.",
+     "If I have a rooftop, I'd invite friends.",
+     "If I had a rooftop, I'd invite friends.",
+     "If I had a rooftop, I'll invite friends."
+    ],
+    "question": "Choose the correct sentence."
+   }
+  ],
+  "title": "7B: Second conditional, choosing between conditionals"
+ }
+}

@@ -25,6 +25,7 @@ header .updated{font-size:12px;opacity:.6;margin-top:8px}
 .price-row{display:flex;align-items:baseline;gap:10px;margin:6px 0}
 .price{font-family:'Estedad',sans-serif;font-weight:800;font-size:24px;color:var(--coral)}
 .regular{font-size:14px;color:#999;text-decoration:line-through}
+.dateline{font-size:12px;color:#8a9aa5;margin:2px 0 6px;line-height:1.8}
 .blurb{font-size:14px;line-height:1.9;color:#3d4c57;margin:8px 0 14px}
 .itemno{font-size:12px;color:#888;margin-bottom:10px}
 .cta{display:block;text-align:center;background:var(--coral);color:#fff;font-family:'Estedad',sans-serif;font-weight:800;font-size:16px;border-radius:14px;padding:13px;text-decoration:none}
@@ -53,6 +54,7 @@ fetch('products.json').then(r=>r.json()).then(d=>{
     const fa=n=>Number(n).toLocaleString('fa-IR');
     const badge=p.discount_pct?'<span class="badge">٪'+fa(p.discount_pct)+' تخفیف</span>':'';
     const reg=p.regular_cad?'<span class="regular">'+fa(p.regular_cad)+' دلار</span>':'';
+    const dateline=p.added_fa?'<div class="dateline">📅 این قیمت در تاریخ '+p.added_fa+' ثبت شده و ممکن است تغییر کرده باشد</div>':'';
     const itemno=p.item_no?'<div class="itemno">شماره کالا در کاستکو: '+fa(p.item_no)+'</div>':'';
     const cta=p.source==='costco'
       ?'<span class="cta costco">📍 در کاستکو</span>'
@@ -61,7 +63,7 @@ fetch('products.json').then(r=>r.json()).then(d=>{
     const el=document.createElement('article');el.className='card';
     el.innerHTML='<div class="imgbox"><img src="'+p.image+'" alt="'+p.name_fa+'" loading="lazy"></div>'
       +'<div class="body">'+badge+'<h2>'+p.name_fa+'</h2>'
-      +'<div class="price-row"><span class="price">'+fa(p.price_cad)+' دلار</span>'+reg+'</div>'
+      +'<div class="price-row"><span class="price">'+fa(p.price_cad)+' دلار</span>'+reg+'</div>'+dateline
       +'<p class="blurb">'+p.blurb_fa+'</p>'+itemno+cta
       +'<div class="src">منبع: '+src+'</div></div>';
     list.appendChild(el);
