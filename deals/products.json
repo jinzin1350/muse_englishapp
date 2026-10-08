@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "jbl-live-780nc",
+      "name_fa": "هدفون جی‌بی‌ال لایو ۷۸۰ ان‌سی",
+      "name_en": "JBL Live 780NC Wireless Over-Ear Noise Cancelling Headphones",
+      "price_cad": 169.98,
+      "regular_cad": 299.98,
+      "discount_pct": 43,
+      "added_fa": "پنجشنبه، ۸ اکتبر ۲۰۲۶",
+      "image": "img/jbl-live-780nc.jpg",
+      "url": "https://www.amazon.ca/dp/B0GLLTQZKK?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "هدفون جدید جی‌بی‌ال با نویزکنسلینگ تطبیقی و تا ۸۰ ساعت شارژدهی"
+    },
+    {
+      "id": "sennheiser-momentum-true-wireless-4",
+      "name_fa": "ایربادز سنهایزر مومنتوم ۴",
+      "name_en": "Sennheiser Momentum True Wireless 4 Smart Earbuds with ANC",
+      "price_cad": 259.95,
+      "regular_cad": 429.95,
+      "discount_pct": 40,
+      "added_fa": "پنجشنبه، ۸ اکتبر ۲۰۲۶",
+      "image": "img/sennheiser-momentum-true-wireless-4.jpg",
+      "url": "https://www.amazon.ca/dp/B0CTQ5YZYP?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پرچم‌دار سنهایزر با نویزکنسلینگ تطبیقی و ۳۰ ساعت شارژدهی"
+    },
+    {
       "id": "waterpik-aquarius-flosser",
       "name_fa": "واتر فلاسر Waterpik مدل Aquarius",
       "name_en": "Waterpik Aquarius Water Flosser WP-660",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "۶۲٪ تخفیف — پوست پاییزیتو نجات میده، بوی نارگیل هم عالیه"
-    },
-    {
-      "id": "philips-sonicare-diamondclean-9500",
-      "name_fa": "مسواک برقی Philips Sonicare DiamondClean 9500",
-      "name_en": "Philips Sonicare DiamondClean Smart 9500 Electric Toothbrush",
-      "price_cad": 149.96,
-      "regular_cad": 279.99,
-      "discount_pct": 46,
-      "added_fa": "سه‌شنبه، ۶ اکتبر ۲۰۲۶",
-      "image": "img/philips-sonicare-diamondclean-9500.jpg",
-      "url": "https://www.amazon.ca/dp/B0CM44GT41?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "مدل پرچمدار فیلیپس با اپلیکیشن و سنسور فشار؛ طبق ردیاب قیمت، کمترین قیمت تاریخ آمازون"
-    },
-    {
-      "id": "segway-ninebot-c2-lite",
-      "name_fa": "اسکوتر برقی سگوی ناین‌بات C2 Lite برای بچه‌ها",
-      "name_en": "Segway Ninebot C2 Lite Electric Kids Scooter",
-      "price_cad": 189.99,
-      "regular_cad": null,
-      "discount_pct": 37,
-      "added_fa": "سه‌شنبه، ۶ اکتبر ۲۰۲۶",
-      "image": "img/segway-ninebot-c2-lite.jpg",
-      "url": "https://www.amazon.ca/dp/B0DJRFL1LP?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "تا ۷۰ دقیقه بازی، چراغ‌های رنگی و ارتفاع قابل تنظیم — برای بچه‌های ۶ تا ۱۰ سال."
     }
   ],
-  "updated_fa": "چهارشنبه ۱۵ مهر"
+  "updated_fa": "پنجشنبه ۱۶ مهر"
 }
