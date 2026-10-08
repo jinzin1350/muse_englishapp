@@ -2275,7 +2275,7 @@ function renderTeacherRoster() {
     return;
   }
   host.innerHTML = '<div class="card tch-table-card"><div class="tch-table">' +
-    '<div class="tch-tr tch-th"><span>Student</span><span>🔥</span><span>XP 7d</span><span>Lessons</span><span>🎧m</span><span>Active</span></div>' +
+    '<div class="tch-tr tch-th"><span>Student</span><span>🔥</span><span>XP 7d</span><span>Lessons</span><span>🎧m</span><span>🎤</span><span>Active</span></div>' +
     list.map(function (s, i) {
       const name = s.display_name || (s.email || '?').split('@')[0];
       return '<div class="tch-tr" data-action="teacher-student" data-i="' + i + '" role="button" tabindex="0">' +
@@ -2284,6 +2284,7 @@ function renderTeacherRoster() {
         '<span>' + (s.xp_7d || 0) + '</span>' +
         '<span>' + (s.lessons_7d || 0) + '</span>' +
         '<span>' + (s.podcast_min_7d || 0) + '</span>' +
+        '<span title="Shadowing speaking tries (7d)">' + (s.shadowing_7d || 0) + '</span>' +
         '<span class="muted">' + esc(fmtLastActive(s.last_active)) + '</span></div>';
     }).join('') + '</div></div>' +
     '<p class="muted" style="font-size:0.82rem">Tap a student to see their 14-day activity.</p>';
@@ -2323,6 +2324,7 @@ async function openTeacherStudent(i) {
         '<div><b>' + Math.round(sum('podcast_seconds') / 60) + '</b><span>podcast min</span></div>' +
       '</div>' +
       '<div id="tch-an-' + i + '"><div class="empty">Loading analytics…</div></div>' +
+      '<div id="tch-sh-' + i + '"><div class="empty">Loading shadowing…</div></div>' +
       '<div class="an-title" style="margin-top:.8rem">📤 Sent to this student</div>' +
       '<div id="tch-sent-' + i + '"><button class="btn btn-sm btn-ghost" data-action="teacher-sent" data-i="' + i + '">Show sent items</button></div>' +
       '<div style="display:flex;gap:0.5rem;margin-top:0.9rem;flex-wrap:wrap">' +
@@ -2332,9 +2334,47 @@ async function openTeacherStudent(i) {
       '<button class="btn btn-sm" data-action="ai-report-tstudent" data-i="' + i + '">🤖 Report</button>') +
       '<button class="btn btn-ghost btn-sm" data-action="teacher-student-close">Close</button></div></div>';
     loadTeacherStudentAnalytics(i, s);
+    loadTeacherStudentShadowing(i, s);
   } catch (e) {
     host.innerHTML = '<div class="empty">Could not load activity.</div>';
   }
+}
+/* ---- teacher: per-student shadowing practice (attempts + listens, 30d) ---- */
+async function loadTeacherStudentShadowing(i, s) {
+  const host = document.getElementById('tch-sh-' + i);
+  if (!host) return;
+  try {
+    const since30 = new Date(Date.now() - 29 * 864e5).toISOString();
+    const attP = sb.from('shadowing_attempts')
+      .select('lesson_date,transcript,score,created_at').eq('user_id', s.user_id)
+      .gte('created_at', since30).order('created_at', { ascending: false }).limit(30)
+      .then(function (r) { return r.error ? [] : (r.data || []); }, function () { return []; });
+    const evP = sb.from('app_events').select('created_at').eq('user_id', s.user_id)
+      .eq('event', 'shadowing_listen').gte('created_at', since30).limit(2000)
+      .then(function (r) { return r.error ? [] : (r.data || []); }, function () { return []; });
+    const att = await attP, evs = await evP;
+    const n = att.length;
+    const avg = n ? Math.round(att.reduce(function (a, x) { return a + (Number(x.score) || 0); }, 0) / n) : 0;
+    let html = '<div class="an-title" style="margin-top:.8rem">🎤 Shadowing practice <span class="muted" style="font-weight:400">· last 30 days</span></div>' +
+      '<div class="tch-totals">' +
+      '<div><b>' + n + '</b><span>speaking tries</span></div>' +
+      '<div><b>' + avg + '%</b><span>avg score</span></div>' +
+      '<div><b>' + evs.length + '</b><span>sentences listened</span></div></div>';
+    if (n) {
+      html += '<div class="an-assign">' + att.slice(0, 8).map(function (x) {
+        const mm = String(x.transcript || '').match(/^\[s(\d+)\]/);
+        const said = String(x.transcript || '').replace(/^\[s\d+\]\s*/, '').slice(0, 60);
+        const sc = Number(x.score) || 0;
+        return '<div class="an-arow"><span>🔤 sentence ' + esc(mm ? mm[1] : '?') +
+          ' <span class="muted">· ' + esc(said) + (said.length >= 60 ? '…' : '') + '</span></span>' +
+          '<span class="muted">' + esc(String(x.lesson_date || '').slice(5)) + '</span>' +
+          '<b class="' + (sc >= 70 ? 'ok' : 'bad') + '">' + sc + '%</b></div>';
+      }).join('') + '</div>';
+    } else {
+      html += '<div class="empty">No shadowing practice yet.</div>';
+    }
+    host.innerHTML = html;
+  } catch (e) { host.innerHTML = ''; }
 }
 /* ---- teacher: per-student sent history (assignments + this student's status) ---- */
 async function toggleTeacherSent(i, btn) {
@@ -3605,7 +3645,7 @@ async function loadAdminTeacherView(teacherId) {
       return {
         user_id: u.id, display_name: u.display_name, email: u.email, level: u.level,
         current_streak: u.current_streak || 0, last_active: null,
-        xp_7d: 0, lessons_7d: 0, podcast_min_7d: 0
+        xp_7d: 0, lessons_7d: 0, podcast_min_7d: 0, shadowing_7d: 0
       };
     });
     /* 7-day stats + last active day from daily_stats (one query) */
@@ -3629,6 +3669,18 @@ async function loadAdminTeacherView(teacherId) {
         }
       });
       students.forEach(function (s) { s.podcast_min_7d = Math.round(s._podSec / 60); delete s._podSec; });
+      /* shadowing speaking attempts in the last 7 days (needs the teacher-read
+         SQL migration; silently stays 0 until it is run) */
+      try {
+        const sinceTs = new Date(Date.now() - 6 * 864e5).toISOString();
+        const att = await sb.from('shadowing_attempts').select('user_id').in('user_id', ids)
+          .gte('created_at', sinceTs).limit(3000);
+        if (!att.error) {
+          const cnt = {};
+          (att.data || []).forEach(function (r) { cnt[r.user_id] = (cnt[r.user_id] || 0) + 1; });
+          students.forEach(function (s) { s.shadowing_7d = cnt[s.user_id] || 0; });
+        }
+      } catch (e) {}
       students.sort(function (a, b) {
         return String(b.last_active || '').localeCompare(String(a.last_active || ''));
       });
@@ -3936,7 +3988,9 @@ const ADM_EV_LABELS = {
   lesson_open: 'Opened a lesson',
   quiz_completed: 'Finished a quiz',
   podcast_milestone: 'Podcast milestone',
-  teacher_requested: 'Requested teacher access'
+  teacher_requested: 'Requested teacher access',
+  shadowing_listen: 'Listened to a shadowing sentence',
+  shadowing_attempt: 'Shadowing speaking attempt'
 };
 function admEvLabel(e) {
   const base = ADM_EV_LABELS[e.event] || e.event;
@@ -3946,6 +4000,8 @@ function admEvLabel(e) {
   if (e.event === 'quiz_completed' && m.score != null) return base + ' — ' + m.score + '/' + (m.total || '?') + ' (' + (m.kind || '') + ')' + tSuffix;
   if (e.event === 'podcast_milestone' && m.minutes != null) return base + ' — ' + m.minutes + ' min listened';
   if (e.event === 'lesson_open' && m.date) return base + ' — ' + m.date + tSuffix;
+  if (e.event === 'shadowing_listen' && m.sentence) return base + ' — sentence ' + m.sentence;
+  if (e.event === 'shadowing_attempt' && m.score != null) return base + ' — ' + m.score + '% (sentence ' + (m.sentence || '?') + ')';
   return base;
 }
 async function loadAdminAnalytics() {
@@ -4156,10 +4212,15 @@ async function openAdminUser(id) {
       sb.from('daily_stats').select('*').eq('user_id', id).order('day', { ascending: false }).limit(30)
         .then(function (r) { return { rows: r.data || [] }; }, function () { return { rows: [] }; }),
       sb.from('app_events').select('event,meta,created_at').eq('user_id', id).order('created_at', { ascending: false }).limit(40)
-        .then(function (r) { return { evs: r.data || [] }; }, function () { return { evs: [] }; })
+        .then(function (r) { return { evs: r.data || [] }; }, function () { return { evs: [] }; }),
+      sb.from('shadowing_attempts').select('lesson_date,transcript,score,created_at').eq('user_id', id).order('created_at', { ascending: false }).limit(20)
+        .then(function (r) { return { att: r.error ? [] : (r.data || [] ) }; }, function () { return { att: [] }; })
     ]);
     const rows = res[1].rows.length ? res[1].rows : res[0].rows30;
     const evs = res[2].evs;
+    const att = res[3].att;
+    const listens = evs.filter(function (e) { return e.event === 'shadowing_listen'; }).length;
+    const shAvg = att.length ? Math.round(att.reduce(function (a, x) { return a + (Number(x.score) || 0); }, 0) / att.length) : 0;
     const name = u.display_name || (u.email || '?').split('@')[0];
     const sum = function (k) { return rows.reduce(function (a, x) { return a + (Number(x[k]) || 0); }, 0); };
     const maxSec = Math.max.apply(null, [1].concat(rows.map(function (x) { return x.seconds_in_app || 0; })));
@@ -4177,6 +4238,9 @@ async function openAdminUser(id) {
         '<div><b>' + Math.round(sum('podcast_seconds') / 60) + '</b><span>podcast min</span></div>' +
         '<div><b>' + sum('lessons_opened') + '</b><span>lessons</span></div>' +
         '<div><b>' + sum('quizzes_completed') + '</b><span>quizzes</span></div>' +
+        '<div><b>' + att.length + '</b><span>shadowing tries</span></div>' +
+        '<div><b>' + shAvg + '%</b><span>shadowing avg</span></div>' +
+        '<div><b>' + listens + '</b><span>shadowing listens</span></div>' +
       '</div>' +
       (ordered.length ? '<p class="muted" style="font-size:0.85rem;margin-bottom:0.3rem"><b>Daily time in app</b> (last 30 days)</p><div class="tch-bars">' +
         ordered.map(function (x) {
@@ -4189,6 +4253,16 @@ async function openAdminUser(id) {
         evs.map(function (e) {
           return '<div class="adm-ev"><span>' + esc(admEvLabel(e)) + '</span><span class="muted">' +
             esc(String(e.created_at || '').slice(0, 16).replace('T', ' ')) + '</span></div>';
+        }).join('') + '</div>' : '') +
+      (att.length ? '<p class="muted" style="font-size:0.85rem;margin:1rem 0 0.3rem"><b>🎤 Recent shadowing tries</b></p><div class="an-assign">' +
+        att.slice(0, 8).map(function (x) {
+          const mm = String(x.transcript || '').match(/^\[s(\d+)\]/);
+          const said = String(x.transcript || '').replace(/^\[s\d+\]\s*/, '').slice(0, 60);
+          const sc = Number(x.score) || 0;
+          return '<div class="an-arow"><span>🔤 sentence ' + esc(mm ? mm[1] : '?') +
+            ' <span class="muted">· ' + esc(said) + (said.length >= 60 ? '…' : '') + '</span></span>' +
+            '<span class="muted">' + esc(String(x.created_at || '').slice(0, 16).replace('T', ' ')) + '</span>' +
+            '<b class="' + (sc >= 70 ? 'ok' : 'bad') + '">' + sc + '%</b></div>';
         }).join('') + '</div>' : '') +
       '<button class="btn btn-ghost btn-sm" data-action="adm-user-close" style="margin-top:0.8rem">Close</button></div>';
   } catch (e) {
@@ -5692,6 +5766,7 @@ async function wireShadowingPractice(body, m) {
     if (active || !('speechSynthesis' in window)) return;
     if (speakingI === i) { stopSpeaking(); return; } /* toggle */
     stopSpeaking();
+    trackEvent('shadowing_listen', { sentence: i + 1, date: m.date || null });
     const u = new SpeechSynthesisUtterance(sentences[i]);
     u.lang = 'en-US';
     u.rate = 0.9;
@@ -5916,6 +5991,7 @@ async function wireShadowingPractice(body, m) {
       /* Let the status paint before the analysis. */
       await new Promise(function (resolve) { setTimeout(resolve, 60); });
       const a = analyzeSpeech(sentences[i], said);
+      trackEvent('shadowing_attempt', { sentence: i + 1, score: a.accuracy, date: m.date || null });
       let pts = 0, awarded = false;
       if (a.accuracy >= 80) pts = 5;
       else if (a.accuracy >= 50) pts = 3;
