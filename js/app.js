@@ -2191,6 +2191,7 @@ function renderTeacher(v) {
     '<span class="tch-actions"><a class="btn btn-sm" href="#/planner">📅 Weekly planner</a>' +
     '<button class="btn btn-sm" data-action="assignment-compose">＋ New assignment</button></span></div>' +
     '<div id="tch-weekly"></div>' +
+    '<div id="tch-daily"></div>' +
     '<div id="tch-coach"></div>' +
     '<div id="tch-assign"></div>' +
     '<div id="tch-roster"><div class="empty">Loading…</div></div>' +
@@ -2260,6 +2261,7 @@ async function loadTeacherRoster() {
     state.teacherStudents = r.data || [];
     renderTeacherRoster();
     renderTeacherWeekly();
+    loadTeacherDaily();
   } catch (e) {
     host.innerHTML = '<div class="empty">Could not load students: ' + esc(e.message || e) + '</div>';
   }
@@ -3614,6 +3616,7 @@ function renderAdminTeacherView(v, teacherId) {
     '<a class="pl-back" href="#/admin">← Admin</a>' +
     '<div id="vat-head"><div class="empty">Loading teacher…</div></div>' +
     '<div id="tch-weekly"></div>' +
+    '<div id="tch-daily"></div>' +
     '<div id="tch-assign"></div>' +
     '<div class="section-title"><h2>Students <span id="tch-count" class="muted"></span></h2></div>' +
     '<div id="tch-roster"><div class="empty">Loading…</div></div>' +
@@ -3688,6 +3691,7 @@ async function loadAdminTeacherView(teacherId) {
     state.teacherStudents = students;
     renderTeacherRoster();
     renderTeacherWeekly();
+    loadTeacherDaily();
     loadTeacherAssignments();
   } catch (e) {
     if (head) head.innerHTML = '<div class="empty">Could not load teacher panel: ' + esc((e && e.message) || e) + '</div>';
@@ -7343,17 +7347,145 @@ function paintMistakes(v, arr) {
 }
 
 /* ---------------- admin view ---------------- */
+/* ---------------- Daily study report (admin + teacher) ----------------
+   Per-day, per-user: minutes in app, lessons opened, quizzes, XP, podcast
+   minutes, shadowing speaking tries and shadowing sentence listens.
+   `day` is a UTC calendar date (matches daily_stats.day on the DB). */
+function utcTodayStr() { return new Date().toISOString().slice(0, 10); }
+function dayAfterStr(day) {
+  const d = new Date(day + 'T12:00:00Z');
+  d.setUTCDate(d.getUTCDate() + 1);
+  return d.toISOString().slice(0, 10);
+}
+async function fetchDailyStudy(day, userIds) {
+  const start = day + 'T00:00:00Z', end = dayAfterStr(day) + 'T00:00:00Z';
+  const statsById = {}, triesById = {}, listensById = {};
+  const scoped = function (q) { return (userIds && userIds.length) ? q.in('user_id', userIds) : q; };
+  const res = await Promise.all([
+    scoped(sb.from('daily_stats').select('user_id,seconds_in_app,lessons_opened,quizzes_completed,xp_earned,podcast_seconds').eq('day', day).limit(2000)),
+    scoped(sb.from('shadowing_attempts').select('user_id').gte('created_at', start).lt('created_at', end).limit(5000)),
+    scoped(sb.from('app_events').select('user_id').eq('event', 'shadowing_listen').gte('created_at', start).lt('created_at', end).limit(5000))
+  ]);
+  (res[0].data || []).forEach(function (r) { statsById[r.user_id] = r; });
+  (res[1].data || []).forEach(function (r) { triesById[r.user_id] = (triesById[r.user_id] || 0) + 1; });
+  (res[2].data || []).forEach(function (r) { listensById[r.user_id] = (listensById[r.user_id] || 0) + 1; });
+  return { statsById: statsById, triesById: triesById, listensById: listensById };
+}
+function dailyStudyShell(prefix, day, title) {
+  return '<div class="card"><div class="tch-weekly-title">' + title + '</div>' +
+    '<div class="adm-filters" style="margin:0.6rem 0 0.2rem;align-items:center">' +
+    '<label class="muted" style="font-size:0.85rem">Day (UTC) <input type="date" id="' + prefix + '-daily-day" value="' + esc(day) + '" max="' + utcTodayStr() + '"></label>' +
+    '<span class="muted" id="' + prefix + '-daily-sum" style="font-size:0.85rem"></span></div>' +
+    '<div id="' + prefix + '-daily-body"><div class="empty">Loading…</div></div></div>';
+}
+function dailyStudyTableHTML(rows) {
+  if (!rows.length) return '<div class="empty">No study activity on this day.</div>';
+  return '<div class="card tch-table-card" style="margin-top:0.5rem"><div class="tch-table daily-table">' +
+    '<div class="tch-tr tch-th"><span>#</span><span>Student</span><span>⏱ min</span><span>📖</span>' +
+    '<span>❓</span><span>⚡ XP</span><span>🎧 min</span><span>🎤</span><span>👂</span></div>' +
+    rows.map(function (r, i) {
+      return '<div class="tch-tr"><span class="muted">' + (i + 1) + '</span>' +
+        '<span class="tch-name">' + esc(r.name) + (r.level ? '<small>' + esc(String(r.level).toUpperCase()) + '</small>' : '') + '</span>' +
+        '<span><b>' + r.min + '</b></span><span>' + r.lessons + '</span><span>' + r.quizzes + '</span>' +
+        '<span>' + r.xp + '</span><span>' + r.podMin + '</span><span>' + r.tries + '</span><span>' + r.listens + '</span></div>';
+    }).join('') + '</div></div>';
+}
+function dailyStudyRow(id, f, name, level) {
+  const s = f.statsById[id] || {};
+  return {
+    name: name, level: level,
+    min: Math.round((Number(s.seconds_in_app) || 0) / 60),
+    lessons: Number(s.lessons_opened) || 0,
+    quizzes: Number(s.quizzes_completed) || 0,
+    xp: Number(s.xp_earned) || 0,
+    podMin: Math.round((Number(s.podcast_seconds) || 0) / 60),
+    tries: f.triesById[id] || 0,
+    listens: f.listensById[id] || 0
+  };
+}
+function dailyStudyActive(r) { return r.min > 0 || r.lessons > 0 || r.tries > 0 || r.listens > 0; }
+async function loadAdminDaily() {
+  const host = document.getElementById('admin-daily');
+  if (!host) return;
+  const day = state.adminDailyDay || utcTodayStr();
+  state.adminDailyDay = day;
+  host.innerHTML = dailyStudyShell('adm', day, '📊 Daily study — who studied how much');
+  const dayInput = document.getElementById('adm-daily-day');
+  if (dayInput) dayInput.addEventListener('change', function () {
+    if (dayInput.value) { state.adminDailyDay = dayInput.value; loadAdminDaily(); }
+  });
+  const body = document.getElementById('adm-daily-body');
+  const sum = document.getElementById('adm-daily-sum');
+  try {
+    const f = await fetchDailyStudy(day, null);
+    const nameOf = {};
+    ((state.adminStats || {}).users || []).forEach(function (u) {
+      nameOf[u.user_id] = { name: u.display_name || (u.email || '?').split('@')[0], level: u.level };
+    });
+    const idSet = {};
+    [f.statsById, f.triesById, f.listensById].forEach(function (m) {
+      Object.keys(m).forEach(function (id) { idSet[id] = 1; });
+    });
+    const ids = Object.keys(idSet);
+    const missing = ids.filter(function (id) { return !nameOf[id]; }).slice(0, 500);
+    if (missing.length) {
+      const pr = await sb.from('profiles').select('id,display_name,level').in('id', missing);
+      (pr.data || []).forEach(function (p) { nameOf[p.id] = { name: p.display_name || '?', level: p.level }; });
+    }
+    const rows = ids.map(function (id) {
+      const nm = nameOf[id] || { name: 'User ' + String(id).slice(0, 6), level: '' };
+      return dailyStudyRow(id, f, nm.name, nm.level);
+    }).filter(dailyStudyActive);
+    rows.sort(function (a, b) { return b.min - a.min; });
+    const totalMin = rows.reduce(function (a, r) { return a + r.min; }, 0);
+    if (sum) sum.textContent = rows.length + ' active · ' + totalMin + ' total min';
+    if (body) body.innerHTML = dailyStudyTableHTML(rows);
+  } catch (e) {
+    if (body) body.innerHTML = '<div class="empty">Could not load daily study: ' + esc((e && e.message) || e) + '</div>';
+  }
+}
+async function loadTeacherDaily() {
+  const host = document.getElementById('tch-daily');
+  if (!host) return;
+  const roster = state.teacherStudents || [];
+  const day = state.teacherDailyDay || utcTodayStr();
+  state.teacherDailyDay = day;
+  host.innerHTML = dailyStudyShell('tch', day, '📅 Daily study — your students');
+  const dayInput = document.getElementById('tch-daily-day');
+  if (dayInput) dayInput.addEventListener('change', function () {
+    if (dayInput.value) { state.teacherDailyDay = dayInput.value; loadTeacherDaily(); }
+  });
+  const body = document.getElementById('tch-daily-body');
+  const sum = document.getElementById('tch-daily-sum');
+  if (!roster.length) { if (body) body.innerHTML = '<div class="empty">No students yet.</div>'; return; }
+  try {
+    const f = await fetchDailyStudy(day, roster.map(function (s) { return s.user_id; }));
+    const rows = roster.map(function (s) {
+      return dailyStudyRow(s.user_id, f, s.display_name || '?', s.level);
+    });
+    rows.sort(function (a, b) { return b.min - a.min; });
+    const active = rows.filter(dailyStudyActive).length;
+    const totalMin = rows.reduce(function (a, r) { return a + r.min; }, 0);
+    if (sum) sum.textContent = active + ' / ' + rows.length + ' studied · ' + totalMin + ' total min';
+    if (body) body.innerHTML = dailyStudyTableHTML(rows);
+  } catch (e) {
+    if (body) body.innerHTML = '<div class="empty">Could not load daily study: ' + esc((e && e.message) || e) + '</div>';
+  }
+}
+
 function renderAdmin(v) {
   v.innerHTML = '<h1>Admin</h1>' +
     '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>📊 Analytics</b> — everyone, everything.</p>' +
     '<div id="admin-analytics"><div class="empty">Loading…</div></div></div>' +
+    '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>📊 Daily study</b> — who studied how much, per day.</p>' +
+    '<div id="admin-daily"><div class="empty">Loading…</div></div></div>' +
     '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>🍎 Teachers</b> — requests, invite codes and manual add.</p>' +
     '<div id="admin-teachers"><div class="empty">Loading…</div></div></div>' +
     '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>🤖 Telegram Bot</b> — @muse_eng_bot schedule & content.</p>' +
     '<div id="admin-bot"><div class="empty">Loading…</div></div></div>' +
     '<div class="card plain"><p class="muted" style="margin:0">Set each user\'s level. New users appear as <b>pending</b> first.</p></div>' +
     '<div id="admin-list"><div class="empty">Loading…</div></div>';
-  loadAdminAnalytics();
+  loadAdminAnalytics().then(function () { loadAdminDaily(); });
   loadAdminUsers().then(function () { loadAdminTeachers(); loadAdminBot(); });
 }
 

@@ -1910,6 +1910,13 @@ body{background:#FFF9F3;}
   padding: 0.55rem 0.6rem; font-size: 0.85rem; font-family: inherit; background: #fff;
 }
 .adm-utable .tch-tr { grid-template-columns: 1.8fr 0.5fr 0.7fr 0.7fr 0.8fr 0.9fr; }
+/* Daily study report (admin + teacher): per-day, per-user study table */
+.daily-table { min-width: 640px; }
+.daily-table .tch-tr { grid-template-columns: 0.35fr 1.7fr 0.65fr 0.55fr 0.55fr 0.7fr 0.7fr 0.55fr 0.55fr; cursor: default; }
+.adm-filters input[type="date"] {
+  border: 1px solid var(--line); border-radius: 10px;
+  padding: 0.5rem 0.6rem; font-size: 0.85rem; font-family: inherit; background: #fff;
+}
 .adm-events { display: flex; flex-direction: column; }
 .adm-ev {
   display: flex; justify-content: space-between; gap: 0.8rem;
