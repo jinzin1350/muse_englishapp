@@ -2528,12 +2528,16 @@ body.duo-playing{padding-bottom:0!important;}
 .sp-report-top{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;margin-bottom:.45rem}
 .sp-pbar{height:8px;border-radius:99px;background:rgba(0,0,0,.08);overflow:hidden}
 .sp-pfill{height:100%;border-radius:99px;background:linear-gradient(90deg,#66bb6a,#2e7d32);transition:width .4s}
-/* Per-sentence best-score pill (shadowing) */
-.sp-score{display:inline-block;min-width:2.7em;text-align:center;font-size:.72rem;font-weight:800;
+/* Per-sentence best-score pill (shadowing) — tappable, shows last attempt detail */
+.sp-score-pill{display:inline-block;min-width:2.7em;text-align:center;font-size:.72rem;font-weight:800;
+  border:none;cursor:pointer;font-family:inherit;
   border-radius:99px;padding:.18em .55em;margin:0 .35rem 0 .05rem;vertical-align:.12em}
-.sp-score.great{background:#e6f4ea;color:#1b7a2e}
-.sp-score.ok{background:#fdf3e0;color:#9a6b1a}
-.sp-score.low{background:#fdecea;color:#b3261e}
+.sp-score-pill.great{background:#e6f4ea;color:#1b7a2e}
+.sp-score-pill.ok{background:#fdf3e0;color:#9a6b1a}
+.sp-score-pill.low{background:#fdecea;color:#b3261e}
+/* Restored last-attempt detail under a shadowing sentence */
+.sp-sent-detail{margin:.55rem 0;padding:.7rem .8rem;background:#faf7ef;border:1px dashed rgba(217,123,43,.4);border-radius:12px}
+.sp-detail-title{font-size:.75rem;font-weight:800;color:#8a6d3b;margin-bottom:.35rem;text-transform:uppercase;letter-spacing:.04em}
 /* Bookmarked words */
 .save-word-btn{background:none;border:none;font-size:1.05rem;cursor:pointer;opacity:.32;padding:.25rem;line-height:1}
 .save-word-btn.saved{opacity:1}

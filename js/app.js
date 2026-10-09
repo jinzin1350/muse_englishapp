@@ -5765,6 +5765,26 @@ function analyzeSpeech(target, said) {
   return out;
 }
 
+/* Word-by-word attempt result (shared by live results and restored history). */
+function spSentResultHTML(a, said, pts) {
+  const cls = a.accuracy >= 80 ? 'great' : (a.accuracy >= 50 ? 'ok' : 'low');
+  let head;
+  if (!a.saidWords.length) {
+    head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">—</div>' +
+      '<div class="sp-score-label">We couldn\'t catch any words. Try again.</div></div>';
+  } else {
+    head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">' + a.accuracy + '%</div>' +
+      '<div class="sp-score-label">of this sentence' + (pts ? ' · +' + pts + ' pts' : '') + '</div></div>';
+  }
+  const words = a.targetWords.map(function (w, idx) {
+    if (a.matched.has(idx)) return '<span class="sp-w ok">' + esc(w) + '</span>';
+    return '<button class="sp-hear" data-w="' + esc(w) + '" title="Hear this word">' + esc(w) + ' 🔊</button>';
+  }).join(' ');
+  return head +
+    (said ? '<div class="sp-said"><b>You said:</b> <span dir="auto">' + esc(said) + '</span></div>' : '') +
+    (a.targetWords.length ? '<p class="sp-target" dir="auto">' + words + '</p>' : '');
+}
+
 /* Split a story transcript into sentences. Handles numbered lines
    ("1. Hello.") and plain lines; drops a leading title line. */
 function splitSentences(text) {
@@ -6118,7 +6138,7 @@ async function wireShadowingPractice(body, m) {
       /* Feed the progress report instantly (works for demo users too). */
       const spList = document.getElementById('sp-sentences');
       if (spList && typeof paintSpReport === 'function') {
-        (spList._spRows = spList._spRows || []).push({ transcript: '[s' + (i + 1) + '] ', score: a.accuracy });
+        (spList._spRows = spList._spRows || []).unshift({ transcript: '[s' + (i + 1) + '] ' + said, score: a.accuracy });
         paintSpReport(spList);
       }
     } catch (e) {
@@ -6127,26 +6147,10 @@ async function wireShadowingPractice(body, m) {
     }
   }
 
-  function spSentResultHTML(a, said, pts) {
-    const cls = a.accuracy >= 80 ? 'great' : (a.accuracy >= 50 ? 'ok' : 'low');
-    let head;
-    if (!a.saidWords.length) {
-      head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">—</div>' +
-        '<div class="sp-score-label">We couldn\'t catch any words. Try again.</div></div>';
-    } else {
-      head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">' + a.accuracy + '%</div>' +
-        '<div class="sp-score-label">of this sentence' + (pts ? ' · +' + pts + ' pts' : '') + '</div></div>';
-    }
-    const words = a.targetWords.map(function (w, idx) {
-      if (a.matched.has(idx)) return '<span class="sp-w ok">' + esc(w) + '</span>';
-      return '<button class="sp-hear" data-w="' + esc(w) + '" title="Hear this word">' + esc(w) + ' 🔊</button>';
-    }).join(' ');
-    return head +
-      (said ? '<div class="sp-said"><b>You said:</b> <span dir="auto">' + esc(said) + '</span></div>' : '') +
-      (a.targetWords.length ? '<p class="sp-target" dir="auto">' + words + '</p>' : '');
-  }
 
   list.addEventListener('click', function (ev) {
+    const pill = ev.target.closest('.sp-score-pill');
+    if (pill) { toggleSpAttemptDetail(pill); return; }
     const hear = ev.target.closest('.sp-hear');
     if (hear) { speakWord(hear.getAttribute('data-w')); return; }
     const play = ev.target.closest('.sp-play');
@@ -6162,20 +6166,22 @@ async function wireShadowingPractice(body, m) {
   });
   /* Restore this lesson's progress: sentences already attempted stay marked
      as done, with a banner to continue from the first unfinished one. */
-  restoreSpProgress(list, m);
+  restoreSpProgress(list, m, sentences);
 }
 
 /* Shadowing progress persistence: attempts are already stored per lesson in
    `shadowing_attempts` (transcript "[sN] ..."), so progress is derived from
    them — no new table, works across devices. */
-async function restoreSpProgress(list, m) {
+async function restoreSpProgress(list, m, sentences) {
   if (!list) return;
   list._spRows = list._spRows || [];
+  list._spSentences = sentences || [];
   paintSpReport(list);
   if (!cloudReady() || !m || !m.date || !sb) return;
   try {
     const res = await sb.from('shadowing_attempts').select('transcript,score')
-      .eq('user_id', state.user.id).eq('lesson_date', m.date).limit(300);
+      .eq('user_id', state.user.id).eq('lesson_date', m.date)
+      .order('created_at', { ascending: false }).limit(300);
     if (res.error) return;
     list._spRows = res.data || [];
   } catch (e) { return; }
@@ -6204,15 +6210,17 @@ async function restoreSpProgress(list, m) {
    average best score. Recomputed from list._spRows, so attempts made in this
    session update it instantly (works for demo users too). */
 function paintSpReport(list) {
-  const done = {}, best = {};
+  const done = {}, best = {}, said = {};
   (list._spRows || []).forEach(function (r) {
-    const mm = String(r.transcript || '').match(/^\[s(\d+)\]/);
+    const mm = String(r.transcript || '').match(/^\[s(\d+)\]\s?(.*)$/);
     if (!mm) return;
     const n = parseInt(mm[1], 10);
     done[n] = 1;
     const sc = Number(r.score) || 0;
     if (!(n in best) || sc > best[n]) best[n] = sc;
+    if (!(n in said)) said[n] = mm[2] || ''; /* rows are newest-first: first wins */
   });
+  list._spSaid = said;
   const total = list.querySelectorAll('.sp-sent').length;
   const count = Object.keys(done).length;
   const scores = Object.keys(best).map(function (k) { return best[k]; });
@@ -6228,23 +6236,47 @@ function paintSpReport(list) {
   host.innerHTML = '<div class="sp-report-top"><span>📊 <b>' + count + '/' + total + '</b> practiced</span>' +
     (count ? '<span>avg score <b>' + avg + '%</b></span>' : '<span class="muted">not started yet</span>') + '</div>' +
     '<div class="sp-pbar"><div class="sp-pfill" style="width:' + pct + '%"></div></div>';
-  /* Per-sentence score pill next to the sentence number (best score kept). */
+  /* Per-sentence score pill (button) next to the sentence number: tap it to
+     see the last attempt's mistakes. Best score is kept. */
   list.querySelectorAll('.sp-sent').forEach(function (el) {
     const n = parseInt(el.getAttribute('data-i'), 10) + 1;
-    let pill = el.querySelector('.sp-score');
+    let pill = el.querySelector('.sp-score-pill');
     if (n in best) {
       const sc = best[n];
       if (!pill) {
-        pill = document.createElement('span');
+        pill = document.createElement('button');
+        pill.type = 'button';
+        pill.className = 'sp-score-pill';
+        pill.title = 'See what you got wrong';
         const num = el.querySelector('.sp-sent-num');
         if (num && num.parentNode) num.parentNode.insertBefore(pill, num.nextSibling);
         else el.insertBefore(pill, el.firstChild);
       }
       pill.textContent = sc + '%';
-      pill.className = 'sp-score ' + (sc >= 80 ? 'great' : (sc >= 50 ? 'ok' : 'low'));
+      pill.className = 'sp-score-pill ' + (sc >= 80 ? 'great' : (sc >= 50 ? 'ok' : 'low'));
     } else if (pill) pill.remove();
   });
   return { done: done, count: count, total: total };
+}
+/* Toggle the restored last-attempt detail under a sentence: "You said …"
+   plus the target with missed words highlighted (tappable 🔊).
+   Recomputed from the stored transcript — no extra columns needed. */
+function toggleSpAttemptDetail(pill) {
+  const sentEl = pill.closest('.sp-sent');
+  const list = document.getElementById('sp-sentences');
+  if (!sentEl || !list) return;
+  const old = sentEl.querySelector('.sp-sent-detail');
+  if (old) { old.remove(); return; }
+  const i = parseInt(sentEl.getAttribute('data-i'), 10);
+  const said = (list._spSaid || {})[i + 1];
+  const target = (list._spSentences || [])[i];
+  if (!said || !target || typeof analyzeSpeech !== 'function') return;
+  const a = analyzeSpeech(target, said);
+  const d = document.createElement('div');
+  d.className = 'sp-sent-detail';
+  d.innerHTML = '<div class="sp-detail-title">Last attempt — what to fix</div>' + spSentResultHTML(a, said, 0);
+  const live = sentEl.querySelector('.sp-sent-live');
+  sentEl.insertBefore(d, live);
 }
 function markSpSentenceDone(i) {
   const el = document.querySelector('#sp-sentences .sp-sent[data-i="' + i + '"]');
