@@ -2616,7 +2616,7 @@ body.duo-playing{padding-bottom:0!important;}
     gap: .8rem; padding: .8rem 1rem; flex-wrap: wrap; }
   .ap-brand { margin: 0; font-size: 1rem; }
   .ap-who { display: none; }
-  .ap-nav { flex-direction: row; }
+  .ap-nav { flex-direction: row; flex-wrap: wrap; }
   .ap-foot { margin: 0 0 0 auto; flex-direction: row; align-items: center; }
   .ap-note { display: none; }
   .ap-main { padding: 1rem 1rem 3rem; }

@@ -8457,7 +8457,7 @@ function apArmIdle() {
   reset();
 }
 function apShell(active, bodyHTML) {
-  const items = [['dashboard', '📊 Dashboard'], ['users', '👥 Users']];
+  const items = [['dashboard', '📊 Dashboard'], ['users', '👥 Users'], ['daily', '📊 Daily study'], ['teachers', '🍎 Teachers'], ['telegram', '🤖 Telegram']];
   const nav = items.map(function (it) {
     const href = '/manage' + (it[0] === 'dashboard' ? '' : '/' + it[0]);
     return '<a href="' + href + '" data-apnav="' + it[0] + '"' +
@@ -8468,7 +8468,7 @@ function apShell(active, bodyHTML) {
     (apVerified ? '<div class="ap-who">' + esc(apVerified.email) + '</div>' : '') +
     '<nav class="ap-nav">' + nav + '</nav>' +
     '<div class="ap-foot"><button class="ap-logout" id="ap-logout" type="button">Sign out</button>' +
-    '<div class="ap-note">Phase 1 · audited access</div></div>' +
+    '<div class="ap-note">audited access</div></div>' +
     '</aside><main class="ap-main">' + bodyHTML + '</main></div>';
 }
 function apWireChrome(v) {
@@ -8550,6 +8550,64 @@ function apKpi(label, value, sub) {
     '<div class="ap-kpi-l">' + label + '</div>' +
     (sub ? '<div class="ap-kpi-s">' + sub + '</div>' : '') + '</div>';
 }
+/* ---------------- admin panel: dashboard ---------------- */
+let apMetric = 'dau';
+const AP_METRIC_COLORS = { dau: '#4f8ef7', new_users: '#22b07d', xp: '#7c5cd6', podcast_min: '#e09112', lessons: '#c84b31' };
+function apChartHTML(series) {
+  const m = ADM_METRICS.find(function (x) { return x.id === apMetric; });
+  const label = m ? m.label : apMetric;
+  const color = AP_METRIC_COLORS[apMetric] || '#4f8ef7';
+  const tabs = ADM_METRICS.map(function (x) {
+    return '<button type="button" class="adm-tab' + (x.id === apMetric ? ' on' : '') + '" data-apmetric="' + x.id + '">' + x.label + '</button>';
+  }).join('');
+  return '<div class="adm-tabs" style="margin-bottom:.6rem">' + tabs + '</div>' +
+    apBarsSVG(series, function (r) { return Number(r[apMetric]) || 0; }, color, label);
+}
+function apWireMetricTabs(v, series) {
+  v.querySelectorAll('[data-apmetric]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      apMetric = b.getAttribute('data-apmetric');
+      const host = v.querySelector('#ap-chart');
+      if (host) { host.innerHTML = apChartHTML(series); apWireMetricTabs(v, series); }
+    });
+  });
+}
+function apBoardHTML(board) {
+  if (!board.length) return '<div class="empty">No approved teachers yet.</div>';
+  return '<div class="ap-tablewrap"><table class="ap-table"><thead><tr><th>Teacher</th><th>Students</th><th>Active 7d</th><th>XP 7d</th><th>Code</th></tr></thead><tbody>' +
+    board.map(function (t) {
+      return '<tr><td><b>' + esc(t.display_name || '?') + '</b></td><td>' + (t.students || 0) + '</td><td>' +
+        (t.active_7d || 0) + '</td><td>' + (t.xp_7d || 0) + '</td><td><code>' + esc(t.ref_code || '') + '</code></td></tr>';
+    }).join('') + '</tbody></table></div>';
+}
+function apFunnelHTML(steps, cohorts) {
+  let html = '';
+  if (steps.length) {
+    const base = Number((steps[0] || {}).users) || 1;
+    html += '<div class="card"><h3>📉 Signup funnel <span class="muted" style="font-weight:400;font-size:0.8rem">(last 30 days)</span></h3>' +
+      '<div class="adm-funnel">' + steps.map(function (s) {
+        const n = Number(s.users) || 0;
+        const pct = Math.round(n / base * 100);
+        return '<div class="adm-funnel-row"><span>' + esc(s.step) + '</span>' +
+          '<div class="adm-funnel-bar"><div style="width:' + pct + '%"></div></div>' +
+          '<b>' + n + '</b><span class="muted">' + pct + '%</span></div>';
+      }).join('') + '</div></div>';
+  }
+  if (cohorts.length) {
+    html += '<div class="card"><h3>🔁 Cohort retention <span class="muted" style="font-weight:400;font-size:0.8rem">(% active in weeks 1–4 after signup)</span></h3>' +
+      '<div class="ap-tablewrap"><table class="ap-table"><thead><tr><th>Cohort</th><th>Users</th><th>W1</th><th>W2</th><th>W3</th><th>W4</th></tr></thead><tbody>' +
+      cohorts.map(function (c) {
+        const cell = function (val) {
+          val = Number(val) || 0;
+          const cls = val >= 40 ? 'hot' : (val >= 20 ? 'warm' : 'cold');
+          return '<td><span class="adm-coh ' + cls + '">' + val + '%</span></td>';
+        };
+        return '<tr><td class="muted">' + esc(c.cohort) + '</td><td>' + c.users + '</td>' +
+          cell(c.w1) + cell(c.w2) + cell(c.w3) + cell(c.w4) + '</tr>';
+      }).join('') + '</tbody></table></div></div>';
+  }
+  return html;
+}
 async function apRenderDashboard(v) {
   v.innerHTML = apShell('dashboard',
     '<div class="ap-head"><h1>Dashboard</h1><p class="muted">Whole-product overview.</p></div>' +
@@ -8560,13 +8618,18 @@ async function apRenderDashboard(v) {
       sb.rpc('admin_overview'),
       sb.rpc('admin_daily_series', { p_days: 30 }),
       sb.rpc('admin_user_stats'),
+      sb.rpc('admin_teacher_board'),
+      sb.rpc('admin_funnel').then(function (r) { return r.data || []; }, function () { return []; }),
+      sb.rpc('admin_cohorts').then(function (r) { return r.data || []; }, function () { return []; }),
     ]);
     if (rs[0].error) throw rs[0].error;
     if (rs[1].error) throw rs[1].error;
     if (rs[2].error) throw rs[2].error;
+    if (rs[3].error) throw rs[3].error;
     const ov = (rs[0].data && rs[0].data[0]) || {};
     const series = rs[1].data || [];
     const users = rs[2].data || [];
+    const board = rs[3].data || [];
     const today = todayStr();
     const atRisk = users
       .filter(function (u) { return u.last_active && apDaysBetween(today, String(u.last_active).slice(0, 10)) >= 7; })
@@ -8582,12 +8645,9 @@ async function apRenderDashboard(v) {
       apKpi('Podcast hrs · 30d', ov.podcast_hours_30d || 0, '') +
       apKpi('Teachers', (ov.total_teachers || 0) + ' approved', (ov.pending_teachers || 0) + ' pending') +
       '</div>' +
-      '<div class="ap-cards">' +
-      '<div class="card"><h3>Daily active users · 30 days</h3>' +
-      apBarsSVG(series, function (r) { return Number(r.dau) || 0; }, '#4f8ef7', 'DAU') + '</div>' +
-      '<div class="card"><h3>XP earned · 30 days</h3>' +
-      apBarsSVG(series, function (r) { return Number(r.xp) || 0; }, '#7c5cd6', 'XP') + '</div>' +
-      '</div>' +
+      '<div class="card"><h3>Product activity · 30 days</h3><div id="ap-chart">' + apChartHTML(series) + '</div></div>' +
+      '<div class="card"><h3>👩‍🏫 Teacher leaderboard</h3>' + apBoardHTML(board) + '</div>' +
+      apFunnelHTML(rs[4], rs[5]) +
       '<div class="card"><h3>⚠️ At risk — inactive 7+ days (' + atRisk.length + ')</h3>' +
       (atRisk.length ? '<div class="ap-tablewrap"><table class="ap-table"><thead><tr><th>User</th><th>Level</th><th>Last active</th><th>Days idle</th><th>XP total</th></tr></thead><tbody>' +
       atRisk.map(function (u) {
@@ -8600,6 +8660,7 @@ async function apRenderDashboard(v) {
       }).join('') + '</tbody></table></div>' : '<div class="empty">Nobody idle. 🎉</div>') +
       '</div>');
     apWireChrome(v);
+    apWireMetricTabs(v, series);
     apWireUserRows(v);
   } catch (e) {
     v.innerHTML = apShell('dashboard',
@@ -8614,10 +8675,72 @@ function apWireUserRows(v) {
     tr.addEventListener('click', function () { apGo('users', tr.getAttribute('data-apuser')); });
   });
 }
+/* ---------------- admin panel: users ---------------- */
+let apUserFilter = { q: '', level: '', teacher: '', activity: 'all', sort: 'recent' };
+function apFilteredUsers(users) {
+  const f = apUserFilter;
+  let list = users.slice();
+  const q = (f.q || '').toLowerCase().trim();
+  if (q) list = list.filter(function (u) {
+    return ((u.display_name || '') + ' ' + (u.email || '')).toLowerCase().indexOf(q) !== -1;
+  });
+  if (f.level) list = list.filter(function (u) { return normalizeLevel(u.level) === f.level; });
+  if (f.teacher) list = list.filter(function (u) { return u.referred_by === f.teacher; });
+  if (f.activity === 'active7') list = list.filter(function (u) { return u.last_active && u.last_active >= daysAgoStr(6); });
+  if (f.activity === 'inactive30') list = list.filter(function (u) { return !u.last_active || u.last_active < daysAgoStr(29); });
+  if (f.activity === 'never') list = list.filter(function (u) { return !u.last_active; });
+  const sorts = {
+    recent: function (a, b) { return new Date(b.created_at) - new Date(a.created_at); },
+    xp_total: function (a, b) { return (b.xp_total || 0) - (a.xp_total || 0); },
+    xp_7d: function (a, b) { return (b.xp_7d || 0) - (a.xp_7d || 0); },
+    streak: function (a, b) { return (b.current_streak || 0) - (a.current_streak || 0); },
+    active: function (a, b) { return String(b.last_active || '') > String(a.last_active || '') ? 1 : -1; }
+  };
+  list.sort(sorts[f.sort] || sorts.recent);
+  return list;
+}
+function apUsersTableHTML(users) {
+  const refCounts = {};
+  users.forEach(function (u) { if (u.referred_by) refCounts[u.referred_by] = (refCounts[u.referred_by] || 0) + 1; });
+  const refKeys = Object.keys(refCounts);
+  const refSummary = refKeys.length
+    ? '<p class="muted" style="margin:.2rem 0 .6rem">📣 Referrals: ' +
+      refKeys.map(function (k) { return '📣 ' + esc(k) + ': <b>' + refCounts[k] + '</b>'; }).join(' &nbsp;·&nbsp; ') + '</p>' : '';
+  const rows = apFilteredUsers(users).slice(0, 300);
+  if (!rows.length) return refSummary + '<div class="empty">No users match.</div>';
+  return refSummary +
+    '<div class="muted" style="margin:.4rem 0">' + rows.length + ' users · tap a row for full detail</div>' +
+    '<div class="ap-tablewrap"><table class="ap-table"><thead><tr>' +
+    '<th>User</th><th>Level</th><th>🔥</th><th>XP</th><th>XP 7d</th><th>Min 30d</th><th>Last active</th><th>Joined</th>' +
+    '</tr></thead><tbody>' +
+    rows.map(function (u) {
+      return '<tr data-apuser="' + esc(u.user_id) + '"><td><b>' + esc(u.display_name || (u.email || '?').split('@')[0]) +
+        '</b><br><small class="muted">' + esc(u.email || '') + (u.referred_by ? ' · 📣' + esc(u.referred_by) : '') + '</small></td>' +
+        '<td>' + esc(String(u.level || '—').toUpperCase()) + '</td>' +
+        '<td>' + (u.current_streak || 0) + '</td>' +
+        '<td><b>' + (u.xp_total || 0) + '</b></td><td>' + (u.xp_7d || 0) + '</td>' +
+        '<td>' + Math.round((Number(u.seconds_30d) || 0) / 60) + '</td>' +
+        '<td>' + esc(u.last_active ? String(u.last_active).slice(0, 10) : '—') + '</td>' +
+        '<td>' + esc(String(u.created_at || '').slice(0, 10)) + '</td></tr>';
+    }).join('') + '</tbody></table></div>';
+}
 async function apRenderUsers(v) {
   v.innerHTML = apShell('users',
     '<div class="ap-head"><h1>Users</h1><p class="muted">Everyone on the product. Click a row for the full profile.</p></div>' +
-    '<div class="ap-search"><input type="search" id="ap-q" placeholder="Search name or email…"></div>' +
+    '<div class="adm-filters">' +
+    '<input type="search" id="ap-q" placeholder="Search name or email…" value="' + esc(apUserFilter.q) + '" aria-label="Search users">' +
+    '<select id="ap-f-level" aria-label="Filter by level"><option value="">All levels</option>' +
+    LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (apUserFilter.level === lv ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') + '</select>' +
+    '<select id="ap-f-teacher" aria-label="Filter by teacher"><option value="">All teachers</option></select>' +
+    '<select id="ap-f-activity" aria-label="Filter by activity">' +
+    [['all', 'All activity'], ['active7', 'Active (7d)'], ['inactive30', 'Inactive (30d)'], ['never', 'Never active']].map(function (x) {
+      return '<option value="' + x[0] + '"' + (apUserFilter.activity === x[0] ? ' selected' : '') + '>' + x[1] + '</option>';
+    }).join('') + '</select>' +
+    '<select id="ap-f-sort" aria-label="Sort users">' +
+    [['recent', 'Newest'], ['xp_total', 'Total XP'], ['xp_7d', 'XP (7d)'], ['streak', 'Streak'], ['active', 'Last active']].map(function (x) {
+      return '<option value="' + x[0] + '"' + (apUserFilter.sort === x[0] ? ' selected' : '') + '>' + x[1] + '</option>';
+    }).join('') + '</select>' +
+    '</div>' +
     '<div id="ap-users-body"><div class="empty">Loading…</div></div>');
   apWireChrome(v);
   const body = v.querySelector('#ap-users-body');
@@ -8630,31 +8753,22 @@ async function apRenderUsers(v) {
     body.innerHTML = '<div class="empty">Could not load users: ' + esc((e && e.message) || e) + '</div>';
     return;
   }
-  const paint = function (q) {
-    q = (q || '').toLowerCase();
-    const rows = users.filter(function (u) {
-      if (!q) return true;
-      return String(u.display_name || '').toLowerCase().indexOf(q) !== -1 ||
-        String(u.email || '').toLowerCase().indexOf(q) !== -1;
-    }).sort(function (a, b) { return (Number(b.xp_total) || 0) - (Number(a.xp_total) || 0); });
-    body.innerHTML = '<div class="muted" style="margin:.4rem 0">' + rows.length + ' users</div>' +
-      '<div class="ap-tablewrap"><table class="ap-table"><thead><tr>' +
-      '<th>User</th><th>Level</th><th>🔥</th><th>XP</th><th>XP 7d</th><th>Min 30d</th><th>Last active</th><th>Joined</th>' +
-      '</tr></thead><tbody>' +
-      rows.map(function (u) {
-        return '<tr data-apuser="' + esc(u.user_id) + '"><td><b>' + esc(u.display_name || (u.email || '?').split('@')[0]) +
-          '</b><br><small class="muted">' + esc(u.email || '') + '</small></td>' +
-          '<td>' + esc(String(u.level || '—').toUpperCase()) + '</td>' +
-          '<td>' + (u.current_streak || 0) + '</td>' +
-          '<td><b>' + (u.xp_total || 0) + '</b></td><td>' + (u.xp_7d || 0) + '</td>' +
-          '<td>' + Math.round((Number(u.seconds_30d) || 0) / 60) + '</td>' +
-          '<td>' + esc(u.last_active ? String(u.last_active).slice(0, 10) : '—') + '</td>' +
-          '<td>' + esc(String(u.created_at || '').slice(0, 10)) + '</td></tr>';
-      }).join('') + '</tbody></table></div>';
-    apWireUserRows(v);
-  };
-  v.querySelector('#ap-q').addEventListener('input', function (ev) { paint(ev.target.value); });
-  paint('');
+  const tsel = v.querySelector('#ap-f-teacher');
+  const codes = {};
+  users.forEach(function (u) { if (u.referred_by) codes[u.referred_by] = 1; });
+  Object.keys(codes).sort().forEach(function (c) {
+    const o = document.createElement('option');
+    o.value = c; o.textContent = '📣 ' + c;
+    if (apUserFilter.teacher === c) o.selected = true;
+    tsel.appendChild(o);
+  });
+  const paint = function () { body.innerHTML = apUsersTableHTML(users); apWireUserRows(v); };
+  v.querySelector('#ap-q').addEventListener('input', function (ev) { apUserFilter.q = ev.target.value; paint(); });
+  [['#ap-f-level', 'level'], ['#ap-f-teacher', 'teacher'], ['#ap-f-activity', 'activity'], ['#ap-f-sort', 'sort']].forEach(function (pair) {
+    const el = v.querySelector(pair[0]);
+    if (el) el.addEventListener('change', function () { apUserFilter[pair[1]] = el.value; paint(); });
+  });
+  paint();
 }
 async function apRenderUserDetail(v, id) {
   v.innerHTML = apShell('users',
@@ -8724,6 +8838,299 @@ async function apRenderUserDetail(v, id) {
     apWireChrome(v);
   }
 }
+/* ---------------- admin panel: daily study ---------------- */
+let apDaily = { day: todayStr(), range: 'day' };
+async function apRenderDaily(v) {
+  v.innerHTML = apShell('daily',
+    '<div class="ap-head"><h1>📊 Daily study</h1><p class="muted">Who studied how much, per day or range.</p></div>' +
+    '<div id="ap-daily-host"><div class="empty">Loading…</div></div>');
+  apWireChrome(v);
+  const host = v.querySelector('#ap-daily-host');
+  const nameOf = {};
+  try {
+    const u = await sb.rpc('admin_user_stats');
+    (u.data || []).forEach(function (x) {
+      nameOf[x.user_id] = { name: x.display_name || (x.email || '?').split('@')[0], level: x.level };
+    });
+  } catch (e) {}
+  const paint = async function () {
+    host.innerHTML = dailyStudyShell('apd', apDaily.day, apDaily.range, '📊 Daily study — who studied how much');
+    const rangeSel = host.querySelector('#apd-daily-range');
+    if (rangeSel) rangeSel.addEventListener('change', function () { apDaily.range = rangeSel.value; paint(); });
+    const dayInput = host.querySelector('#apd-daily-day');
+    if (dayInput) dayInput.addEventListener('change', function () { if (dayInput.value) { apDaily.day = dayInput.value; paint(); } });
+    const body = host.querySelector('#apd-daily-body');
+    const sum = host.querySelector('#apd-daily-sum');
+    try {
+      const f = await fetchStudyRange(apDaily.range, apDaily.day, null);
+      const idSet = {};
+      [f.statsById, f.triesById, f.listensById].forEach(function (m) {
+        Object.keys(m).forEach(function (id) { idSet[id] = 1; });
+      });
+      const ids = Object.keys(idSet);
+      const missing = ids.filter(function (id) { return !nameOf[id]; }).slice(0, 500);
+      if (missing.length) {
+        const pr = await sb.from('profiles').select('id,display_name,level').in('id', missing);
+        (pr.data || []).forEach(function (p) { nameOf[p.id] = { name: p.display_name || '?', level: p.level }; });
+      }
+      const rows = ids.map(function (id) {
+        const nm = nameOf[id] || { name: 'User ' + String(id).slice(0, 6), level: '' };
+        return dailyStudyRow(id, f, nm.name, nm.level);
+      }).filter(dailyStudyActive);
+      rows.sort(function (a, b) { return b.min - a.min; });
+      const totalMin = rows.reduce(function (a, r) { return a + r.min; }, 0);
+      if (sum) sum.textContent = rows.length + ' active · ' + totalMin + ' total min · ' + rangeLabel(apDaily.range);
+      if (body) body.innerHTML = dailyStudyTableHTML(rows, 'No study activity in ' + rangeLabel(apDaily.range) + '.');
+    } catch (e) {
+      if (body) body.innerHTML = '<div class="empty">Could not load daily study: ' + esc((e && e.message) || e) + '</div>';
+    }
+  };
+  await paint();
+}
+/* ---------------- admin panel: teachers ---------------- */
+async function apRenderTeachers(v) {
+  v.innerHTML = apShell('teachers',
+    '<div class="ap-head"><h1>🍎 Teachers</h1><p class="muted">Requests, invite codes and manual add.</p></div>' +
+    '<div id="ap-teachers-host"><div class="empty">Loading…</div></div>');
+  apWireChrome(v);
+  const host = v.querySelector('#ap-teachers-host');
+  try {
+    const t = await sb.from('teachers').select('id,user_id,ref_code,display_name,status,requested_at').order('requested_at', { ascending: true });
+    if (t.error) throw t.error;
+    const teachers = t.data || [];
+    const ids = teachers.map(function (x) { return x.user_id; });
+    const emailById = {};
+    if (ids.length) {
+      const p = await sb.from('profiles').select('id,email').in('id', ids);
+      (p.data || []).forEach(function (x) { emailById[x.id] = x.email; });
+    }
+    const ur = await sb.rpc('admin_user_stats');
+    const counts = {};
+    (ur.data || []).forEach(function (u) { if (u.referred_by) counts[u.referred_by] = (counts[u.referred_by] || 0) + 1; });
+    const pending = teachers.filter(function (x) { return x.status === 'pending'; });
+    const active = teachers.filter(function (x) { return x.status === 'approved'; });
+    const rejected = teachers.filter(function (x) { return x.status === 'rejected'; });
+    host.innerHTML =
+      '<div class="card"><h3>⏳ Pending requests (' + pending.length + ')</h3>' +
+      (pending.length ? pending.map(function (x) {
+        const sug = slugify(x.display_name);
+        return '<div class="tch-admin-row"><div><b>' + esc(x.display_name) + '</b><br>' +
+          '<span class="muted" style="font-size:0.8rem">' + esc(emailById[x.user_id] || '') + ' · ' + esc(String(x.requested_at || '').slice(0, 10)) + '</span></div>' +
+          '<div class="tch-admin-actions"><input class="tch-code-input" id="aptcode-' + x.id + '" value="' + esc(sug) + '" maxlength="32" aria-label="Invite code">' +
+          '<button class="btn btn-sm" data-apt-approve="' + x.id + '">Approve</button> ' +
+          '<button class="btn btn-ghost btn-sm" data-apt-reject="' + x.id + '">Reject</button></div></div>';
+      }).join('') : '<p class="muted">No pending requests.</p>') + '</div>' +
+      (active.length ? '<div class="card"><h3>✓ Active teachers (' + active.length + ')</h3>' +
+        active.map(function (x) {
+          return '<div class="tch-admin-row"><div><b>' + esc(x.display_name) + '</b><br>' +
+            '<span class="muted" style="font-size:0.8rem"><code>' + esc(x.ref_code) + '</code> · ' + (counts[x.ref_code] || 0) + ' students</span></div>' +
+            '<div class="tch-admin-actions"><button class="btn btn-ghost btn-sm" data-apt-reject="' + x.id + '">Remove</button></div></div>';
+        }).join('') + '</div>' : '') +
+      (rejected.length ? '<p class="muted">Rejected (' + rejected.length + ')</p>' : '') +
+      '<div class="card"><h3>Add teacher manually</h3><p class="muted" style="font-size:0.85rem">They must already have an account.</p>' +
+      '<form id="apt-add-form" class="tch-add-form">' +
+      '<input id="apt-email" type="email" placeholder="teacher@email.com" required aria-label="Email">' +
+      '<input id="apt-name" type="text" placeholder="Display name" maxlength="40" required aria-label="Display name">' +
+      '<input id="apt-code" type="text" placeholder="invite-code" maxlength="32" required aria-label="Invite code">' +
+      '<button class="btn btn-sm" type="submit">Add</button></form>' +
+      '<div class="form-error" id="apt-error" role="alert"></div></div>';
+    host.querySelectorAll('[data-apt-approve]').forEach(function (b) {
+      b.addEventListener('click', async function () {
+        const id = b.getAttribute('data-apt-approve');
+        const input = host.querySelector('#aptcode-' + CSS.escape(id));
+        const code = slugify(input ? input.value : '');
+        b.disabled = true;
+        try {
+          const r = await sb.rpc('admin_set_teacher_status', { p_teacher_id: id, p_status: 'approved', p_ref_code: code });
+          if (r.error) throw r.error;
+          apRenderTeachers(v);
+        } catch (e) { alert('Approve failed: ' + (e.message || e)); b.disabled = false; }
+      });
+    });
+    host.querySelectorAll('[data-apt-reject]').forEach(function (b) {
+      b.addEventListener('click', async function () {
+        if (!window.confirm('Remove / reject this teacher? Their students keep their accounts.')) return;
+        const id = b.getAttribute('data-apt-reject');
+        try {
+          const r = await sb.rpc('admin_set_teacher_status', { p_teacher_id: id, p_status: 'rejected', p_ref_code: '' });
+          if (r.error) throw r.error;
+          apRenderTeachers(v);
+        } catch (e) { alert('Failed: ' + (e.message || e)); }
+      });
+    });
+    const form = host.querySelector('#apt-add-form');
+    if (form) form.addEventListener('submit', async function (ev) {
+      ev.preventDefault();
+      const errEl = host.querySelector('#apt-error');
+      const email = (host.querySelector('#apt-email').value || '').trim();
+      const name = (host.querySelector('#apt-name').value || '').trim();
+      const code = slugify((host.querySelector('#apt-code').value || '').trim());
+      if (errEl) errEl.textContent = '';
+      if (!email || name.length < 2 || !code) { if (errEl) errEl.textContent = 'Fill all three fields.'; return; }
+      try {
+        const r = await sb.rpc('admin_create_teacher', { p_email: email, p_display_name: name, p_ref_code: code });
+        if (r.error) throw r.error;
+        apRenderTeachers(v);
+      } catch (e) { if (errEl) errEl.textContent = 'Failed: ' + (e.message || e); }
+    });
+  } catch (e) {
+    host.innerHTML = '<div class="empty">Could not load teachers: ' + esc((e && e.message) || e) + '</div>';
+  }
+}
+/* ---------------- admin panel: telegram bot ---------------- */
+async function apRenderTelegram(v) {
+  v.innerHTML = apShell('telegram',
+    '<div class="ap-head"><h1>🤖 Telegram Bot</h1><p class="muted">@muse_eng_bot schedule &amp; content.</p></div>' +
+    '<div id="ap-bot-host"><div class="empty">Loading…</div></div>');
+  apWireChrome(v);
+  const host = v.querySelector('#ap-bot-host');
+  let cfg = null;
+  try {
+    const r = await sb.from('bot_config').select('*').eq('id', 1).maybeSingle();
+    if (r.error) throw r.error;
+    cfg = r.data;
+  } catch (e) { cfg = null; }
+  if (!cfg) {
+    host.innerHTML = '<div class="empty">Bot config table not found. Run <code>supabase-bot-config-migration.sql</code> in the Supabase SQL Editor first.</div>';
+    return;
+  }
+  const lv = cfg.levels || [];
+  const cb = function (id, label, isOn) {
+    return '<label class="bot-check"><input type="checkbox" id="' + id + '"' + (isOn ? ' checked' : '') + '> ' + label + '</label>';
+  };
+  host.innerHTML =
+    '<div class="card"><h3>Schedule &amp; content</h3><div class="bot-grid">' +
+    '<label class="bot-row"><span>Bot enabled</span><input type="checkbox" id="apb-enabled" class="bot-switch"' + (cfg.enabled ? ' checked' : '') + '></label>' +
+    '<label class="bot-row"><span>Posting hours (Tehran)</span><span class="bot-hours"><input type="number" id="apb-start" min="0" max="23" value="' + cfg.start_hour + '"> – <input type="number" id="apb-end" min="1" max="24" value="' + cfg.end_hour + '"></span></label>' +
+    '<label class="bot-row"><span>Post every N hours</span><input type="number" id="apb-interval" min="1" max="12" value="' + cfg.interval_hours + '"></label>' +
+    '<div class="bot-row"><span>Content</span><span class="bot-checks">' + cb('apb-words', '📇 Word cards', cfg.send_words) + cb('apb-quiz', '❓ Quizzes', cfg.send_quiz) + cb('apb-podcast', '🎧 Podcast', cfg.send_podcast) + cb('apb-shadowing', '🗣️ Shadowing', cfg.send_shadowing) + '</span></div>' +
+    '<label class="bot-row"><span>Podcast every N posts</span><input type="number" id="apb-podevery" min="1" max="24" value="' + cfg.podcast_every + '"></label>' +
+    '<label class="bot-row"><span>Shadowing every N posts</span><input type="number" id="apb-shevery" min="1" max="24" value="' + cfg.shadowing_every + '"></label>' +
+    '<label class="bot-row"><span>📢 Promo banners</span><input type="checkbox" id="apb-promo" class="bot-switch"' + (cfg.send_promo ? ' checked' : '') + '></label>' +
+    '<label class="bot-row"><span>Promo every N hours</span><input type="number" id="apb-promoevery" min="1" max="12" value="' + cfg.promo_every_hours + '"></label>' +
+    '<label class="bot-row"><span>Quiz every N posts</span><input type="number" id="apb-quizevery" min="2" max="12" value="' + cfg.quiz_every + '"></label>' +
+    '<div class="bot-row"><span>Word levels</span><span class="bot-checks">' +
+    ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'].map(function (l) { return cb('apb-lv-' + l, l.toUpperCase(), lv.indexOf(l) !== -1); }).join('') +
+    '</span></div>' +
+    '</div>' +
+    '<div style="margin-top:0.7rem"><button class="btn btn-sm" id="apb-save">Save bot settings</button> ' +
+    '<span class="muted" id="apb-status" style="font-size:0.85rem;margin-left:0.5rem"></span></div>' +
+    '<p class="muted" style="font-size:0.8rem;margin:0.6rem 0 0">Settings take effect on the next hourly bot run. Hours are Asia/Tehran. Promo banners (jpg/png/webp) go in <code>media/promo/</code> — a promo replaces the regular post in its slot.</p></div>' +
+    '<div class="card"><h3>💬 Per-chat settings</h3><p class="muted" style="font-size:0.85rem">Custom footer &amp; pause per group/channel. Chats you never configure keep the global default footer.</p>' +
+    '<div id="apb-chat-list"><div class="empty">Loading…</div></div></div>';
+  const saveBtn = host.querySelector('#apb-save');
+  if (saveBtn) saveBtn.addEventListener('click', function () { apSaveBot(host, saveBtn); });
+  apLoadBotChats(host);
+}
+async function apSaveBot(host, btn) {
+  const status = host.querySelector('#apb-status');
+  const say = function (t, ok) { if (status) { status.textContent = t; status.style.color = ok ? '#2e7d32' : '#c62828'; } };
+  const val = function (id) { const el = host.querySelector('#' + id); return el ? el.value : ''; };
+  const isOn = function (id) { const el = host.querySelector('#' + id); return !!(el && el.checked); };
+  const start = parseInt(val('apb-start'), 10), end = parseInt(val('apb-end'), 10);
+  const interval = parseInt(val('apb-interval'), 10), qe = parseInt(val('apb-quizevery'), 10);
+  const pe = parseInt(val('apb-promoevery'), 10);
+  const pode = parseInt(val('apb-podevery'), 10), she = parseInt(val('apb-shevery'), 10);
+  const levels = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'].filter(function (l) { return isOn('apb-lv-' + l); });
+  if (!(start >= 0 && start < 24 && end > 0 && end <= 24 && start < end)) { say('Start hour must be before end hour.', false); return; }
+  if (!(interval >= 1 && interval <= 12)) { say('Interval must be 1–12.', false); return; }
+  if (!(qe >= 2 && qe <= 12)) { say('Quiz-every must be 2–12.', false); return; }
+  if (!(pe >= 1 && pe <= 12)) { say('Promo-every must be 1–12.', false); return; }
+  if (!(pode >= 1 && pode <= 24) || !(she >= 1 && she <= 24)) { say('Podcast/Shadowing-every must be 1–24.', false); return; }
+  if (!isOn('apb-words') && !isOn('apb-quiz') && !isOn('apb-podcast') && !isOn('apb-shadowing')) { say('Enable at least one content type.', false); return; }
+  if (!levels.length) { say('Pick at least one level.', false); return; }
+  if (btn) btn.disabled = true;
+  say('Saving…', true);
+  try {
+    const r = await sb.from('bot_config').upsert({
+      id: 1, enabled: isOn('apb-enabled'), start_hour: start, end_hour: end,
+      interval_hours: interval, send_words: isOn('apb-words'), send_quiz: isOn('apb-quiz'),
+      send_podcast: isOn('apb-podcast'), send_shadowing: isOn('apb-shadowing'),
+      podcast_every: pode, shadowing_every: she,
+      send_promo: isOn('apb-promo'), promo_every_hours: pe,
+      quiz_every: qe, levels: levels, updated_at: new Date().toISOString()
+    });
+    if (r.error) throw r.error;
+    say('Saved ✓ — takes effect on the next hourly run.', true);
+  } catch (e) {
+    say('Save failed: ' + (e.message || e), false);
+  }
+  if (btn) btn.disabled = false;
+}
+async function apLoadBotChats(host) {
+  const list = host.querySelector('#apb-chat-list');
+  if (!list) return;
+  let rows;
+  try {
+    const r = await sb.from('bot_chat_config').select('chat_id,title,footer_text,paused').order('title');
+    if (r.error) throw r.error;
+    rows = r.data || [];
+  } catch (e) {
+    list.innerHTML = '<p class="muted">Per-chat table not found. Run <code>supabase-bot-chat-config-migration.sql</code> in the Supabase SQL Editor first.</p>';
+    return;
+  }
+  if (!rows.length) {
+    list.innerHTML = '<p class="muted">No chats tracked yet — they appear here automatically after the next bot run.</p>';
+    return;
+  }
+  list.innerHTML = rows.map(function (r) {
+    const cid = String(r.chat_id);
+    const ft = r.footer_text;
+    const mode = (ft === null || ft === undefined) ? 'global' : (ft === '' ? 'none' : 'custom');
+    return '<div class="bot-chat-row" data-chat="' + esc(cid) + '">' +
+      '<div class="bot-chat-head"><b>' + esc(r.title || '(untitled)') + '</b> <code>' + esc(cid) + '</code>' +
+      (r.paused ? ' <span style="background:#7C6AF0;color:#fff;border-radius:99px;padding:0.1rem 0.55rem;font-size:0.72rem">paused</span>' : '') + '</div>' +
+      '<label class="bot-row"><span>Footer</span><select data-apbmode="' + esc(cid) + '">' +
+      '<option value="global"' + (mode === 'global' ? ' selected' : '') + '>Global default footer</option>' +
+      '<option value="custom"' + (mode === 'custom' ? ' selected' : '') + '>Custom footer</option>' +
+      '<option value="none"' + (mode === 'none' ? ' selected' : '') + '>No footer</option>' +
+      '</select></label>' +
+      '<textarea data-apbft="' + esc(cid) + '" rows="2" style="' + (mode === 'custom' ? '' : 'display:none') + '" placeholder="Custom footer text for this chat…">' + esc(mode === 'custom' ? ft : '') + '</textarea>' +
+      '<div class="bot-chat-actions"><label class="bot-check"><input type="checkbox" data-apbpaused="' + esc(cid) + '"' + (r.paused ? ' checked' : '') + '> Pause this chat</label> ' +
+      '<button class="btn btn-sm" data-apbchatsave="' + esc(cid) + '">Save this chat</button> ' +
+      '<span class="muted bot-chat-status" style="font-size:0.85rem;margin-left:0.5rem"></span></div>' +
+      '</div>';
+  }).join('');
+  list.querySelectorAll('[data-apbmode]').forEach(function (sel) {
+    sel.addEventListener('change', function () {
+      const ta = list.querySelector('[data-apbft="' + sel.getAttribute('data-apbmode') + '"]');
+      if (ta) ta.style.display = sel.value === 'custom' ? '' : 'none';
+    });
+  });
+  list.querySelectorAll('[data-apbchatsave]').forEach(function (btn) {
+    btn.addEventListener('click', function () { apSaveBotChat(host, btn); });
+  });
+}
+async function apSaveBotChat(host, btn) {
+  const cid = btn.getAttribute('data-apbchatsave');
+  const row = btn.closest('.bot-chat-row');
+  const status = row ? row.querySelector('.bot-chat-status') : null;
+  const say = function (t, ok) { if (status) { status.textContent = t; status.style.color = ok ? '#2e7d32' : '#c62828'; } };
+  const q = function (attr) { return host.querySelector('[' + attr + '="' + cid + '"]'); };
+  const modeEl = q('data-apbmode');
+  const ta = q('data-apbft');
+  const pa = q('data-apbpaused');
+  const mode = modeEl ? modeEl.value : 'global';
+  const paused = !!(pa && pa.checked);
+  let footer_text = null;
+  if (mode === 'custom') {
+    footer_text = ta ? ta.value.trim() : '';
+    if (!footer_text) { say('Custom footer is empty — pick Global default or No footer instead.', false); return; }
+  } else if (mode === 'none') {
+    footer_text = '';
+  }
+  say('Saving…', true);
+  try {
+    const r = await sb.from('bot_chat_config').upsert(
+      { chat_id: cid, footer_text: footer_text, paused: paused, updated_at: new Date().toISOString() },
+      { onConflict: 'chat_id' });
+    if (r.error) throw r.error;
+    say('Saved ✓ — takes effect on the next hourly run.', true);
+    apLoadBotChats(host);
+  } catch (e) {
+    say('Save failed: ' + (e.message || e), false);
+  }
+}
 async function renderAdminPanel() {
   document.body.classList.add('ap-mode');
   if (!apPopBound) {
@@ -8749,6 +9156,9 @@ async function renderAdminPanel() {
   const sp = apSubpath();
   if (sp.section === 'users' && sp.arg) apRenderUserDetail(v, sp.arg);
   else if (sp.section === 'users') apRenderUsers(v);
+  else if (sp.section === 'daily') apRenderDaily(v);
+  else if (sp.section === 'teachers') apRenderTeachers(v);
+  else if (sp.section === 'telegram') apRenderTelegram(v);
   else apRenderDashboard(v);
   hideSplashSoon();
 }
