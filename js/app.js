@@ -1834,7 +1834,7 @@ function heroPreviewHTML(m) {
   ];
   return '' +
   '<div class="lp-lesson-card" aria-label="Preview of today’s lesson">' +
-    '<div class="lp-lesson-head"><span class="lp-lesson-brand"><img src="icons/icon-192.png" alt=""><span>Muse English</span></span>' +
+    '<div class="lp-lesson-head"><span class="lp-lesson-brand"><img src="/icons/icon-192.png" alt=""><span>Muse English</span></span>' +
     '<span class="lp-lesson-level">' + esc(levelLabel(normalizeLevel(m.level))) + '</span></div>' +
     '<div class="lp-lesson-body">' +
       '<div class="lp-lesson-date">' + esc(m.date || '') + ' · Today’s lesson</div>' +
@@ -1865,7 +1865,7 @@ function renderLanding(v) {
 
     /* Top bar */
     '<header class="lp-nav lp-bleed">' +
-      '<a class="lp-brand" href="#/"><img src="icons/icon-192.png" alt=""><span>Muse English</span></a>' +
+      '<a class="lp-brand" href="#/"><img src="/icons/icon-192.png" alt=""><span>Muse English</span></a>' +
       '<div class="lp-nav-actions">' +
         '<a class="lp-signin" href="#/signin">Sign in</a>' +
         '<a class="lp-cta lp-cta-sm" href="#/signup">Start free</a>' +
@@ -1876,7 +1876,7 @@ function renderLanding(v) {
     '<section class="lp-hero lp-bleed">' +
       '<div class="lp-glow lp-glow-a" aria-hidden="true"></div>' +
       '<div class="lp-glow lp-glow-b" aria-hidden="true"></div>' +
-      '<img class="lp-mascot" src="media/landing-hero.webp" alt="Muse English flame mascot">' +
+      '<img class="lp-mascot" src="/media/landing-hero.webp" alt="Muse English flame mascot">' +
       '<div id="lp-invite" class="lp-invite hidden"></div>' +
       '<div class="lp-eyebrow">Daily English lessons · A1–C2</div>' +
       '<h1>Your English,<br>every single day.</h1>' +
@@ -1964,7 +1964,7 @@ function renderLanding(v) {
     /* Final CTA */
     '<section class="lp-final lp-bleed" aria-labelledby="lp-final-h">' +
       '<div class="lp-glow lp-glow-c" aria-hidden="true"></div>' +
-      '<img class="lp-final-mascot" src="media/podcast/mascot-96.webp" alt="">' +
+      '<img class="lp-final-mascot" src="/media/podcast/mascot-96.webp" alt="">' +
       '<h2 id="lp-final-h">Start today\u2019s lesson</h2>' +
       '<p>One lesson a day. Words, quiz, podcast, shadowing and grammar — for your level.</p>' +
       '<a class="lp-cta lp-cta-lg" href="#/signup">Create your free account</a>' +
@@ -2091,9 +2091,9 @@ function renderPreview(v) {
 function authShell(inner) {
   return '<div class="auth">' +
     '<div class="auth-glow" aria-hidden="true"></div>' +
-    '<a class="auth-back" href="#/"><img src="icons/icon-192.png" alt=""><span>Muse English</span></a>' +
+    '<a class="auth-back" href="#/"><img src="/icons/icon-192.png" alt=""><span>Muse English</span></a>' +
     '<div class="auth-card">' +
-      '<img class="auth-mascot" src="media/podcast/mascot-96.webp" alt="Muse English mascot">' +
+      '<img class="auth-mascot" src="/media/podcast/mascot-96.webp" alt="Muse English mascot">' +
       inner +
     '</div>' +
   '</div>';
@@ -2744,7 +2744,7 @@ function maybeShowInboxPrompt() {
     '<button class="ip-primary" data-action="inbox-open">Read messages</button>' +
     '<button class="ip-secondary" data-action="modal-close">Later</button>' +
     '</div>' +
-    '<img class="ip-mascot" src="media/inbox-mascot.webp" alt="" aria-hidden="true">' +
+    '<img class="ip-mascot" src="/media/inbox-mascot.webp" alt="" aria-hidden="true">' +
     '</div>' +
     '</div>'
   );
@@ -2794,7 +2794,7 @@ async function renderInbox(v) {
     '<h1 class="msg2-title"><span class="msg2-bubble">💬</span> Messages<i class="msg2-spark s1"></i><i class="msg2-spark s2"></i></h1>' +
     '<div id="inbox-list">' +
     ((cached && cached.length) ? inboxListHTML(cached) : '<div class="empty">Loading…</div>') + '</div>' +
-    '<div class="msg2-bg" aria-hidden="true"><span class="msg2-blob"></span><img src="media/inbox-mascot.webp" alt=""></div></div>';
+    '<div class="msg2-bg" aria-hidden="true"><span class="msg2-blob"></span><img src="/media/inbox-mascot.webp" alt=""></div></div>';
   var host = document.getElementById('inbox-list');
   if (!sb) {
     if (host && !(cached && cached.length)) host.innerHTML = '<div class="empty">You appear to be offline. Connect to the internet to load messages.</div>';
@@ -4889,7 +4889,7 @@ async function afterLogin() {
 /* Onboarding v2 (2026-10-04, his design): cream card, flame-reading illustration,
    squiggle title, orange gradient CTA. */
 function welcomeModalHTML(fa, offerTour) {
-  var img = '<img class="onb-img" src="media/mascot/flame-reading-book.webp" alt="">';
+  var img = '<img class="onb-img" src="/media/mascot/flame-reading-book.webp" alt="">';
   var x = '<button class="onb-x" data-action="modal-close" aria-label="Close">\u2715</button>';
   if (fa) {
     return '<div class="onb" dir="rtl" lang="fa">' +
@@ -5791,7 +5791,7 @@ function wordsTabHTML(m) {
         (w.word_audio
           ? '<button class="speaker-btn" data-action="play-track" data-src="' + esc(w.word_audio) + '" data-title="' + esc(w.word) + '" aria-label="Hear pronunciation of ' + esc(w.word) + '">🔊</button>'
           : '') +
-        '<button class="save-word-btn" data-action="toggle-save-word" data-word="' + esc(w.word) + '" data-date="' + esc(m.date || '') + '" aria-label="Bookmark this word" title="Save for later practice"><img src="icons/bookmark.png" alt=""></button>' +
+        '<button class="save-word-btn" data-action="toggle-save-word" data-word="' + esc(w.word) + '" data-date="' + esc(m.date || '') + '" aria-label="Bookmark this word" title="Save for later practice"><img src="/icons/bookmark.png" alt=""></button>' +
       '</div>' +
       (w.pos ? '<div class="word-pos">' + esc(w.pos) + '</div>' : '') +
       (w.pronunciation ? '<div class="word-pron">/' + esc(w.pronunciation) + '/</div>' : '') +
@@ -6025,8 +6025,8 @@ async function wireShadowingPractice(body, m) {
     return '<div class="sp-sent" data-i="' + i + '">' +
       '<div class="sp-sent-top"><p class="sp-sent-text" dir="auto"><span class="sp-sent-num">' + (i + 1) + '</span>' + esc(s) + '</p>' +
       '<div class="sp-btns">' +
-      '<button class="sp-play" data-i="' + i + '" aria-label="Play sentence ' + (i + 1) + '"><img src="icons/sp-play.png" alt=""></button>' +
-      '<button class="sp-mic" data-i="' + i + '" aria-label="Record sentence ' + (i + 1) + '"><img src="icons/sp-rec.png" alt=""></button>' +
+      '<button class="sp-play" data-i="' + i + '" aria-label="Play sentence ' + (i + 1) + '"><img src="/icons/sp-play.png" alt=""></button>' +
+      '<button class="sp-mic" data-i="' + i + '" aria-label="Record sentence ' + (i + 1) + '"><img src="/icons/sp-rec.png" alt=""></button>' +
       '</div></div>' +
       '<div class="sp-sent-live hidden"><span class="sp-pulse"></span>' +
       '<span class="sp-sent-live-text" dir="auto"></span><span class="sp-sent-count"></span></div>' +
@@ -6474,7 +6474,7 @@ function grammarTabHTML(m) {
   }).join('');
   const quizBtn = (g.quiz && g.quiz.length)
     ? '<button class="grammar-quiz-banner" data-action="quiz-start" data-kind="grammar" aria-label="Start grammar quiz">' +
-      '<img src="media/grammar/quiz-banner.jpg" alt="Quick Practice — Ready to test yourself? Start grammar quiz" loading="lazy"></button>'
+      '<img src="/media/grammar/quiz-banner.jpg" alt="Quick Practice — Ready to test yourself? Start grammar quiz" loading="lazy"></button>'
     : '';
   const enAudio = (normalizeLevel(m.level) === 'a1' || normalizeLevel(m.level) === 'a2') && g.audio
     ? audioCardHTML({ id: 'grammar-en-' + m.date, src: g.audio,
@@ -7740,7 +7740,7 @@ async function loadSavedWordsSection() {
 function savedWordsHTML(arr) {
   if (!arr.length) return '';
   const practicable = arr.length >= 2;
-  return '<div class="card"><div class="tch-weekly-title"><img src="icons/bookmark.png" alt="" class="bm-ico"> Saved words <span class="muted">(' + arr.length + ')</span></div>' +
+  return '<div class="card"><div class="tch-weekly-title"><img src="/icons/bookmark.png" alt="" class="bm-ico"> Saved words <span class="muted">(' + arr.length + ')</span></div>' +
     '<p class="muted" style="font-size:0.82rem;margin:0.25rem 0 0.6rem">Hard words you bookmarked — review them here, or run a practice quiz.</p>' +
     (practicable
       ? '<div style="margin:0 0 0.6rem"><button class="btn btn-sm" data-action="practice-saved">▶ Practice ' + arr.length + ' words</button></div>'
@@ -7754,7 +7754,7 @@ function savedWordsHTML(arr) {
         '<div class="muted" style="font-size:0.75rem">' + esc(x.lesson_date || '') + (x.level ? ' · ' + esc(String(x.level).toUpperCase()) : '') + '</div></div>' +
         '<div class="saved-actions">' +
         (x.word_audio ? '<button class="speaker-btn" data-action="play-track" data-src="' + esc(x.word_audio) + '" data-title="' + esc(x.word) + '" aria-label="Hear ' + esc(x.word) + '">🔊</button>' : '') +
-        '<button class="save-word-btn saved" data-action="unsave-word" data-id="' + esc(x.id || '') + '" data-word="' + esc(x.word) + '" data-date="' + esc(x.lesson_date || '') + '" aria-label="Remove bookmark" title="Remove bookmark"><img src="icons/bookmark.png" alt=""></button>' +
+        '<button class="save-word-btn saved" data-action="unsave-word" data-id="' + esc(x.id || '') + '" data-word="' + esc(x.word) + '" data-date="' + esc(x.lesson_date || '') + '" aria-label="Remove bookmark" title="Remove bookmark"><img src="/icons/bookmark.png" alt=""></button>' +
         '</div></div>';
     }).join('') + '</div>';
 }

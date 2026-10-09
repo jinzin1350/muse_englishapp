@@ -21,7 +21,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Muse English">
-  <link rel="stylesheet" href="css/styles.css?v=20261003q">
+  <link rel="stylesheet" href="/css/styles.css?v=20261003q">
   <!-- Supabase JS client (auth + database) -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <!-- Capture OneSignal SDK console output for diagnostics (runs before the SDK) -->
@@ -79,7 +79,7 @@ setTimeout(function () {
   <header id="landing-header" class="landing-header hidden">
     <div class="landing-header-inner">
       <a class="brand" href="#/" aria-label="Muse English home">
-        <img class="brand-icon" src="icons/icon-192.png" alt="" aria-hidden="true">
+        <img class="brand-icon" src="/icons/icon-192.png" alt="" aria-hidden="true">
         <span class="brand-name">Muse English</span>
       </a>
       <nav class="landing-nav" aria-label="Product">
@@ -113,7 +113,7 @@ setTimeout(function () {
 
   <!-- Persistent audio mini-player (stays visible across views) -->
   <div id="mini-player" class="mini-player hidden" aria-label="Audio player">
-    <img id="mp-cover" class="mp-cover" src="media/podcast/mascot-96.webp" alt="">
+    <img id="mp-cover" class="mp-cover" src="/media/podcast/mascot-96.webp" alt="">
     <div class="mp-info">
       <div id="mp-title" class="mp-title">—</div>
       <div class="mp-row">
@@ -125,13 +125,13 @@ setTimeout(function () {
         <div id="mp-dur" class="mp-time">0:00</div>
       </div>
     </div>
-    <button id="mp-toggle" class="mp-btn" aria-label="Play or pause"><img id="mp-toggle-img" src="media/podcast/btn-pause.webp" alt=""></button>
-    <button id="mp-close" class="mp-x" aria-label="Close player"><img src="media/podcast/btn-x.webp" alt=""></button>
+    <button id="mp-toggle" class="mp-btn" aria-label="Play or pause"><img id="mp-toggle-img" src="/media/podcast/btn-pause.webp" alt=""></button>
+    <button id="mp-close" class="mp-x" aria-label="Close player"><img src="/media/podcast/btn-x.webp" alt=""></button>
   </div>
 
   <!-- PWA install prompt (Android + iOS) -->
   <div id="pwa-prompt" class="pwa-prompt hidden" role="dialog" aria-label="Install Muse English">
-    <img class="pwa-icon" src="icons/icon-192.png" alt="">
+    <img class="pwa-icon" src="/icons/icon-192.png" alt="">
     <div class="pwa-text">
       <div class="pwa-title">Install Muse English</div>
       <div class="pwa-sub">Your daily lesson, one tap away.</div>
@@ -141,7 +141,7 @@ setTimeout(function () {
   </div>
   <div id="pwa-ios" class="pwa-sheet hidden" role="dialog" aria-label="How to install on iPhone">
     <div class="pwa-sheet-card">
-      <img class="pwa-icon" src="icons/icon-192.png" alt="">
+      <img class="pwa-icon" src="/icons/icon-192.png" alt="">
       <div class="pwa-title">Install Muse English</div>
       <ol class="pwa-steps">
         <li>Tap <b>Share</b> in Safari's toolbar</li>
@@ -162,7 +162,7 @@ setTimeout(function () {
     <button class="tab" data-view="challenge"><span class="tab-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H5a2 2 0 0 0 0 4h2"/><path d="M17 6h2a2 2 0 0 1 0 4h-2"/></svg></span><span class="tab-label">Challenge</span></button>
   </nav>
 
-  <script src="js/config.js"></script>
-  <script src="js/app.js?v=20261003r"></script>
+  <script src="/js/config.js"></script>
+  <script src="/js/app.js?v=20261003r"></script>
 </body>
 </html>
