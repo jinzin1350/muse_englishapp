@@ -5611,7 +5611,7 @@ function wordsTabHTML(m) {
         (w.word_audio
           ? '<button class="speaker-btn" data-action="play-track" data-src="' + esc(w.word_audio) + '" data-title="' + esc(w.word) + '" aria-label="Hear pronunciation of ' + esc(w.word) + '">🔊</button>'
           : '') +
-        '<button class="save-word-btn" data-action="toggle-save-word" data-word="' + esc(w.word) + '" data-date="' + esc(m.date || '') + '" aria-label="Bookmark this word" title="Save for later practice">🔖</button>' +
+        '<button class="save-word-btn" data-action="toggle-save-word" data-word="' + esc(w.word) + '" data-date="' + esc(m.date || '') + '" aria-label="Bookmark this word" title="Save for later practice"><img src="icons/bookmark.png" alt=""></button>' +
       '</div>' +
       (w.pos ? '<div class="word-pos">' + esc(w.pos) + '</div>' : '') +
       (w.pronunciation ? '<div class="word-pron">/' + esc(w.pronunciation) + '/</div>' : '') +
@@ -6284,7 +6284,7 @@ function beginQuizSession(kind, m, questions, prog) {
   let qHearts;
   if (prog) {
     qHearts = Math.max(prog.hearts || 0, getHearts());
-  } else if (kind === 'word' || kind === 'grammar') {
+  } else if (kind === 'word' || kind === 'grammar' || kind === 'saved') {
     qHearts = sessionHeartGrant();
     setHearts(qHearts);
   } else {
@@ -6330,7 +6330,7 @@ function renderQuizView() {
   /* Fix 4: the mistakes review uses the same full-screen Duolingo-style player
      as the word/grammar quizzes (one question at a time, instant feedback,
      hearts, progress bar, XP/result screen). */
-  if (q.kind === 'word' || q.kind === 'assignment' || q.kind === 'grammar' || q.kind === 'mistakes') { renderDuoQuizView(); return; }
+  if (q.kind === 'word' || q.kind === 'assignment' || q.kind === 'grammar' || q.kind === 'mistakes' || q.kind === 'saved') { renderDuoQuizView(); return; }
   const v = $('#view');
   const cur = q.questions[q.idx];
   const total = q.questions.length;
@@ -7493,7 +7493,7 @@ async function loadSavedWordsSection() {
 function savedWordsHTML(arr) {
   if (!arr.length) return '';
   const practicable = arr.length >= 2;
-  return '<div class="card"><div class="tch-weekly-title">🔖 Saved words <span class="muted">(' + arr.length + ')</span></div>' +
+  return '<div class="card"><div class="tch-weekly-title"><img src="icons/bookmark.png" alt="" class="bm-ico"> Saved words <span class="muted">(' + arr.length + ')</span></div>' +
     '<p class="muted" style="font-size:0.82rem;margin:0.25rem 0 0.6rem">Hard words you bookmarked — review them here, or run a practice quiz.</p>' +
     (practicable
       ? '<div style="margin:0 0 0.6rem"><button class="btn btn-sm" data-action="practice-saved">▶ Practice ' + arr.length + ' words</button></div>'
@@ -7507,7 +7507,7 @@ function savedWordsHTML(arr) {
         '<div class="muted" style="font-size:0.75rem">' + esc(x.lesson_date || '') + (x.level ? ' · ' + esc(String(x.level).toUpperCase()) : '') + '</div></div>' +
         '<div class="saved-actions">' +
         (x.word_audio ? '<button class="speaker-btn" data-action="play-track" data-src="' + esc(x.word_audio) + '" data-title="' + esc(x.word) + '" aria-label="Hear ' + esc(x.word) + '">🔊</button>' : '') +
-        '<button class="save-word-btn saved" data-action="unsave-word" data-id="' + esc(x.id || '') + '" data-word="' + esc(x.word) + '" data-date="' + esc(x.lesson_date || '') + '" aria-label="Remove bookmark" title="Remove">❌</button>' +
+        '<button class="save-word-btn saved" data-action="unsave-word" data-id="' + esc(x.id || '') + '" data-word="' + esc(x.word) + '" data-date="' + esc(x.lesson_date || '') + '" aria-label="Remove bookmark" title="Remove bookmark"><img src="icons/bookmark.png" alt=""></button>' +
         '</div></div>';
     }).join('') + '</div>';
 }
@@ -8089,7 +8089,7 @@ function bindEvents() {
     else if (a === 'resume-paused') {
       const pq = state.pausedQuiz;
       state.pausedQuiz = null;
-      if (pq && (pq.kind === 'assignment' || pq.kind === 'word' || pq.kind === 'grammar')) {
+      if (pq && (pq.kind === 'assignment' || pq.kind === 'word' || pq.kind === 'grammar' || pq.kind === 'saved')) {
         /* the heart-killing question was answered wrong — let them retry it fresh.
            Hearts earned in review apply: keep the better of saved/current (Fix 2). */
         if (pq.log && pq.log.length > pq.idx) pq.log.pop();

@@ -2527,6 +2527,8 @@ body.duo-playing{padding-bottom:0!important;}
 .save-word-btn{background:none;border:none;font-size:1.05rem;cursor:pointer;opacity:.32;padding:.25rem;line-height:1}
 .save-word-btn.saved{opacity:1}
 .save-word-btn:disabled{cursor:default}
+.save-word-btn img{width:1.2em;height:1.2em;display:block}
+.bm-ico{width:1.05em;height:1.05em;vertical-align:-.12em}
 .saved-row{display:flex;justify-content:space-between;align-items:center;gap:.6rem;
   padding:.55rem 0;border-bottom:1px solid var(--line)}
 .saved-row:last-child{border-bottom:none}
