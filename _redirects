@@ -1,6 +1,6 @@
 # Serve the SPA shell for the dedicated admin panel path (the app's router
 # takes over from there and enforces the server-side admin gate).
-/adminpanel /index.html 200
-/adminpanel/* /index.html 200
-# Canary: proves _redirects is processed (expect 200 + index.html body).
-/aptest-canary /index.html 200
+# NOTE: /adminpanel is unusable — a dashboard-level 308 redirect hijacks that
+# prefix (outside this repo). The panel lives at /manage instead.
+/manage /index.html 200
+/manage/* /index.html 200

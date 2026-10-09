@@ -8395,8 +8395,8 @@ function hideSplash() {
   setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 600);
 }
 
-/* ==================== Admin panel (/adminpanel) — Phase 1 ====================
-   Dedicated admin surface at the /adminpanel path (served via _redirects).
+/* ==================== Admin panel (/manage) — Phase 1 ====================
+   Dedicated admin surface at the /manage path (served via _redirects).
    SECURITY MODEL (defense in depth):
    1. Nothing renders until /api/admin/verify confirms is_admin() server-side
       using the visitor's own Supabase JWT (the client-side email list is UI
@@ -8411,13 +8411,13 @@ let apPopBound = false;
 let apIdleArmed = false;
 let apIdleTimer = null;
 
-function isPanelPath() { return window.location.pathname.indexOf('/adminpanel') === 0; }
+function isPanelPath() { return window.location.pathname.indexOf('/manage') === 0; }
 function apSubpath() {
-  const parts = window.location.pathname.replace(/^\/adminpanel\/?/, '').split('/').filter(Boolean);
+  const parts = window.location.pathname.replace(/^\/manage\/?/, '').split('/').filter(Boolean);
   return { section: parts[0] || 'dashboard', arg: parts[1] ? decodeURIComponent(parts[1]) : '' };
 }
 function apGo(section, arg) {
-  let url = '/adminpanel';
+  let url = '/manage';
   if (section && section !== 'dashboard') url += '/' + section;
   if (arg) url += '/' + encodeURIComponent(arg);
   if (window.location.pathname !== url) window.history.pushState({}, '', url);
@@ -8448,7 +8448,7 @@ function apArmIdle() {
     if (apIdleTimer) clearTimeout(apIdleTimer);
     apIdleTimer = setTimeout(function () {
       try { sb.auth.signOut(); } catch (e) {}
-      window.location.href = '/adminpanel';
+      window.location.href = '/manage';
     }, 30 * 60 * 1000);
   };
   ['click', 'keydown', 'touchstart'].forEach(function (ev) {
@@ -8459,7 +8459,7 @@ function apArmIdle() {
 function apShell(active, bodyHTML) {
   const items = [['dashboard', '📊 Dashboard'], ['users', '👥 Users']];
   const nav = items.map(function (it) {
-    const href = '/adminpanel' + (it[0] === 'dashboard' ? '' : '/' + it[0]);
+    const href = '/manage' + (it[0] === 'dashboard' ? '' : '/' + it[0]);
     return '<a href="' + href + '" data-apnav="' + it[0] + '"' +
       (active === it[0] ? ' class="on"' : '') + '>' + it[1] + '</a>';
   }).join('');
@@ -8479,7 +8479,7 @@ function apWireChrome(v) {
   if (out) out.addEventListener('click', function () {
     try { sb.auth.signOut(); } catch (e) {}
     apVerified = null;
-    window.location.href = '/adminpanel';
+    window.location.href = '/manage';
   });
 }
 function apLoginHTML() {
@@ -8504,7 +8504,7 @@ function apWireLogin(v) {
   if (denied) denied.addEventListener('click', function () {
     try { sb.auth.signOut(); } catch (e) {}
     apVerified = null;
-    window.location.href = '/adminpanel';
+    window.location.href = '/manage';
   });
   if (!btn || !sb) return;
   const go = async function () {
@@ -8659,7 +8659,7 @@ async function apRenderUsers(v) {
 }
 async function apRenderUserDetail(v, id) {
   v.innerHTML = apShell('users',
-    '<div class="ap-head"><a href="/adminpanel/users" data-apnav="users" class="ap-back">← All users</a><h1>User</h1></div>' +
+    '<div class="ap-head"><a href="/manage/users" data-apnav="users" class="ap-back">← All users</a><h1>User</h1></div>' +
     '<div class="empty">Loading…</div>');
   apWireChrome(v);
   const main = v.querySelector('.ap-main');
@@ -8674,7 +8674,7 @@ async function apRenderUserDetail(v, id) {
         '<td class="muted">' + esc(String(a.created_at || '').slice(0, 16).replace('T', ' ')) + '</td></tr>';
     }).join('');
     main.innerHTML = apShell('users',
-      '<div class="ap-head"><a href="/adminpanel/users" data-apnav="users" class="ap-back">← All users</a>' +
+      '<div class="ap-head"><a href="/manage/users" data-apnav="users" class="ap-back">← All users</a>' +
       '<h1>' + esc(p.display_name || (p.email || '?').split('@')[0]) + '</h1>' +
       '<p class="muted">' + esc(p.email || '') + ' · joined ' + esc(String(p.created_at || '').slice(0, 10)) +
       (p.referred_by ? ' · 📣 ' + esc(p.referred_by) : '') + '</p></div>' +
@@ -8721,7 +8721,7 @@ async function apRenderUserDetail(v, id) {
     });
   } catch (e) {
     main.innerHTML = apShell('users',
-      '<div class="ap-head"><a href="/adminpanel/users" data-apnav="users" class="ap-back">← All users</a><h1>User</h1></div>' +
+      '<div class="ap-head"><a href="/manage/users" data-apnav="users" class="ap-back">← All users</a><h1>User</h1></div>' +
       '<div class="empty">Could not load user: ' + esc((e && e.message) || e) + '</div>');
     apWireChrome(v);
   }
