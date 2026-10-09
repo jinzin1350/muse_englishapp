@@ -8555,7 +8555,6 @@ async function apRenderDashboard(v) {
     '<div class="ap-head"><h1>Dashboard</h1><p class="muted">Whole-product overview.</p></div>' +
     '<div class="empty">Loading…</div>');
   apWireChrome(v);
-  const main = v.querySelector('.ap-main');
   try {
     const rs = await Promise.all([
       sb.rpc('admin_overview'),
@@ -8573,7 +8572,7 @@ async function apRenderDashboard(v) {
       .filter(function (u) { return u.last_active && apDaysBetween(today, String(u.last_active).slice(0, 10)) >= 7; })
       .sort(function (a, b) { return String(a.last_active).localeCompare(String(b.last_active)); })
       .slice(0, 12);
-    main.innerHTML = apShell('dashboard',
+    v.innerHTML = apShell('dashboard',
       '<div class="ap-head"><h1>Dashboard</h1><p class="muted">Whole-product overview.</p></div>' +
       '<div class="ap-kpis">' +
       apKpi('Total users', ov.total_users || 0, (ov.new_7d || 0) + ' new in 7d') +
@@ -8603,7 +8602,7 @@ async function apRenderDashboard(v) {
     apWireChrome(v);
     apWireUserRows(v);
   } catch (e) {
-    main.innerHTML = apShell('dashboard',
+    v.innerHTML = apShell('dashboard',
       '<div class="ap-head"><h1>Dashboard</h1></div>' +
       '<div class="empty">Could not load dashboard: ' + esc((e && e.message) || e) + '</div>');
     apWireChrome(v);
@@ -8662,7 +8661,6 @@ async function apRenderUserDetail(v, id) {
     '<div class="ap-head"><a href="/manage/users" data-apnav="users" class="ap-back">← All users</a><h1>User</h1></div>' +
     '<div class="empty">Loading…</div>');
   apWireChrome(v);
-  const main = v.querySelector('.ap-main');
   try {
     const r = await sb.rpc('admin_panel_user_detail', { p_user_id: id });
     if (r.error) throw r.error;
@@ -8673,7 +8671,7 @@ async function apRenderUserDetail(v, id) {
       return '<tr><td>' + esc(String(a.lesson_date || '').slice(0, 10)) + '</td><td>' + (a.score || 0) + '%</td>' +
         '<td class="muted">' + esc(String(a.created_at || '').slice(0, 16).replace('T', ' ')) + '</td></tr>';
     }).join('');
-    main.innerHTML = apShell('users',
+    v.innerHTML = apShell('users',
       '<div class="ap-head"><a href="/manage/users" data-apnav="users" class="ap-back">← All users</a>' +
       '<h1>' + esc(p.display_name || (p.email || '?').split('@')[0]) + '</h1>' +
       '<p class="muted">' + esc(p.email || '') + ' · joined ' + esc(String(p.created_at || '').slice(0, 10)) +
@@ -8720,7 +8718,7 @@ async function apRenderUserDetail(v, id) {
       }
     });
   } catch (e) {
-    main.innerHTML = apShell('users',
+    v.innerHTML = apShell('users',
       '<div class="ap-head"><a href="/manage/users" data-apnav="users" class="ap-back">← All users</a><h1>User</h1></div>' +
       '<div class="empty">Could not load user: ' + esc((e && e.message) || e) + '</div>');
     apWireChrome(v);
