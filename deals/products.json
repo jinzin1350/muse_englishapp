@@ -1,6 +1,48 @@
 {
   "products": [
     {
+      "id": "chosen-foods-avocado-oil",
+      "name_fa": "روغن آووکادوی چوزن فودز ۷۵۰ میلی‌لیتر",
+      "name_en": "Chosen Foods 100% Pure Avocado Oil 25.3 oz (750ml)",
+      "price_cad": 13.97,
+      "regular_cad": 18.27,
+      "discount_pct": 24,
+      "added_fa": "جمعه، ۹ اکتبر ۲۰۲۶",
+      "image": "img/chosen-foods-avocado-oil.jpg",
+      "url": "https://www.amazon.ca/dp/B01FB3Q1TE?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "نقطه دود بالا، عالی برای سرخ‌کردن و پخت؛ پرفروش‌ترین روغن آووکادوی آمازون."
+    },
+    {
+      "id": "cuisinart-flavorboost-ceg1302",
+      "name_fa": "گریل برقی ۸کاره کویزینارت",
+      "name_en": "Cuisinart FlavorBoost 8-in-1 Outdoor Electric Grill (CEG-1302)",
+      "price_cad": 396.03,
+      "regular_cad": 499.99,
+      "discount_pct": 21,
+      "added_fa": "جمعه، ۹ اکتبر ۲۰۲۶",
+      "image": "img/cuisinart-flavorboost-ceg1302.jpg",
+      "url": "https://www.amazon.ca/dp/B00I82E0IA?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "گریل، دودی، سرخ‌کن بادی و فر در یک دستگاه؛ بدون گاز و ذغال، مناسب بالکن و پاسیو."
+    },
+    {
+      "id": "sony-wh-ch720n",
+      "name_fa": "هدفون نویزکنسلینگ سونی WH-CH720N",
+      "name_en": "Sony WH-CH720N Noise Cancelling Wireless Headphones",
+      "price_cad": 118.0,
+      "regular_cad": 249.99,
+      "discount_pct": 52,
+      "added_fa": "جمعه، ۹ اکتبر ۲۰۲۶",
+      "image": "img/sony-wh-ch720n.jpg",
+      "url": "https://www.amazon.ca/dp/B0BS1QCFHX?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "نویزکنسلینگ تطبیقی و ۳۵ ساعت باتری؛ عالی برای رفت‌وآمد و کار از خانه."
+    },
+    {
       "id": "jbl-live-780nc",
       "name_fa": "هدفون جی‌بی‌ال لایو ۷۸۰ ان‌سی",
       "name_en": "JBL Live 780NC Wireless Over-Ear Noise Cancelling Headphones",
@@ -69,49 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "توپ رسمی مسابقات جهانی والیبال — چنین قیمتی تابحال دیده نشده"
-    },
-    {
-      "id": "lego-technic-koenigsegg-jesko",
-      "name_fa": "لگو تکنیک کنیگزگ جسکو",
-      "name_en": "LEGO Technic Koenigsegg Jesko Absolut Grey Hypercar (42173)",
-      "price_cad": 39.45,
-      "regular_cad": 64.99,
-      "discount_pct": 39,
-      "added_fa": "چهارشنبه، ۷ اکتبر ۲۰۲۶",
-      "image": "img/lego-technic-koenigsegg-jesko.jpg",
-      "url": "https://www.amazon.ca/dp/B0CV2FLSXB?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پایین‌ترین قیمت ثبت‌شده — هدیه عالی برای بچه‌ها و کلکسیونرها"
-    },
-    {
-      "id": "pixel-9a-128gb-iris",
-      "name_fa": "گوگل پیکسل 9a (رنگ آیریس)",
-      "name_en": "Google Pixel 9a - 128 GB - Unlocked Android Smartphone - Iris",
-      "price_cad": 459.98,
-      "regular_cad": null,
-      "discount_pct": 32,
-      "added_fa": "چهارشنبه، ۷ اکتبر ۲۰۲۶",
-      "image": "img/pixel-9a-128gb-iris.jpg",
-      "url": "https://www.amazon.ca/dp/B0DVHV7N4X?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "۳۲٪ تخفیف — دوربین هوش مصنوعی و ۷ سال آپدیت، بهترین گوشی میان‌رده"
-    },
-    {
-      "id": "body-shop-coconut-body-butter",
-      "name_fa": "کرم بدن نارگیل بادی شاپ",
-      "name_en": "The Body Shop Nourishing Coconut Oil Body Butter, 200ml",
-      "price_cad": 10.0,
-      "regular_cad": null,
-      "discount_pct": 62,
-      "added_fa": "چهارشنبه، ۷ اکتبر ۲۰۲۶",
-      "image": "img/body-shop-coconut-body-butter.jpg",
-      "url": "https://www.amazon.ca/dp/B01FEMAIBE?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "۶۲٪ تخفیف — پوست پاییزیتو نجات میده، بوی نارگیل هم عالیه"
     }
   ],
-  "updated_fa": "پنجشنبه ۱۶ مهر"
+  "updated_fa": "جمعه ۱۷ مهر"
 }
