@@ -5279,7 +5279,7 @@ function ct2PeopleSVG() {
 function ct2CardHTML(t) {
   var sub = t.specialty ? esc(t.specialty) : (t.bio ? esc(t.bio) : '');
   var meta = '<span class="ct2-meta-bit">' + ct2PeopleSVG() + '<span>' + esc(String(t.student_count == null ? '' : t.student_count)) + ' \u0632\u0628\u0627\u0646\u200c\u0622\u0645\u0648\u0632</span></span>';
-  if (t.experience_years) meta += '<span class="ct2-meta-bit"><span aria-hidden="true">\U0001F393</span><span>' + esc(String(t.experience_years)) + ' \u0633\u0627\u0644 \u0633\u0627\u0628\u0642\u0647</span></span>';
+  if (t.experience_years) meta += '<span class="ct2-meta-bit"><span aria-hidden="true">👥</span><span>' + esc(String(t.experience_years)) + ' \u0633\u0627\u0644 \u0633\u0627\u0628\u0642\u0647</span></span>';
   var sel = ct2Selected === t.ref_code ? ' sel' : '';
   return '<button class="ct2-card' + sel + '" data-ct2-open="' + esc(t.ref_code || '') + '">' +
     ct2PhotoHTML(t, 'ct2-ava') +
@@ -5291,7 +5291,7 @@ function ct2CardHTML(t) {
 function ct2FeatRows() {
   var feats = [
     { i: '\u2B50', t: '\u06A9\u0627\u0645\u0644\u0627\u064B \u0631\u0627\u06CC\u06AF\u0627\u0646\u0647', s: '\u0647\u06CC\u0686 \u0647\u0632\u06CC\u0646\u0647\u200C\u0627\u06CC \u0646\u062F\u0627\u0631\u0647.' },
-    { i: '\U0001F3AF', t: '\u067E\u06CC\u0634\u0631\u0641\u062A\u062A \u0632\u06CC\u0631 \u0646\u0638\u0631 \u0627\u0633\u062A\u0627\u062F\u0647', s: '\u0627\u0633\u062A\u0627\u062F \u0645\u0633\u06CC\u0631 \u06CC\u0627\u062F\u06AF\u06CC\u0631\u06CC\u062A \u0631\u0648 \u062F\u0646\u0628\u0627\u0644 \u0645\u06CC\u200C\u06A9\u0646\u0647.' },
+    { i: '🎯', t: '\u067E\u06CC\u0634\u0631\u0641\u062A\u062A \u0632\u06CC\u0631 \u0646\u0638\u0631 \u0627\u0633\u062A\u0627\u062F\u0647', s: '\u0627\u0633\u062A\u0627\u062F \u0645\u0633\u06CC\u0631 \u06CC\u0627\u062F\u06AF\u06CC\u0631\u06CC\u062A \u0631\u0648 \u062F\u0646\u0628\u0627\u0644 \u0645\u06CC\u200C\u06A9\u0646\u0647.' },
     { i: '\u26A1', t: '\u0633\u0631\u06CC\u0639\u200C\u062A\u0631 \u0628\u0647\u062A\u0631 \u0634\u0648', s: '\u0628\u0627 \u06A9\u0645\u06A9 \u0627\u0633\u062A\u0627\u062F\u060C \u0632\u0628\u0627\u0646\u062A \u062E\u06CC\u0644\u06CC \u0632\u0648\u062F\u062A\u0631 \u0642\u0648\u06CC \u0645\u06CC\u200C\u0634\u0647.' }
   ];
   return feats.map(function (f) {
@@ -5348,7 +5348,7 @@ function renderCt2Detail(v, t) {
     '<div class="ct2-topbar"><button class="ct2-back" id="ct2-back" aria-label="\u0628\u0627\u0632\u06AF\u0634\u062A">' +
     '<svg viewBox="0 0 24 24" fill="none"><path d="M14.5 5.5 8 12l6.5 6.5" stroke="#1E2A4E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>' +
     '<div class="ct2-hero"><div class="ct2-blob" aria-hidden="true"></div>' +
-    '<div class="ct2-hi" aria-hidden="true">Hi!\U0001F44B</div>' +
+    '<div class="ct2-hi" aria-hidden="true">Hi! 👋</div>' +
     ct2PhotoHTML(t, 'ct2-photo') + '</div>' +
     '<h1 class="ct2-dname">' + esc(t.display_name || '?') + '</h1>' +
     dstudents +
