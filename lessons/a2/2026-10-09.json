@@ -1,0 +1,247 @@
+{
+  "date": "2026-10-09",
+  "theme": "education & learning",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "teacher",
+      "pos": "noun",
+      "meaning": "a person who helps you learn at school",
+      "example": "My teacher is kind and patient.",
+      "pronunciation": "TEE-cher",
+      "persian": "معلم",
+      "photo": "media/a2/2026-10-09/photos/teacher.jpg",
+      "word_audio": "media/a2/2026-10-09/word-audio/teacher.mp3"
+    },
+    {
+      "word": "student",
+      "pos": "noun",
+      "meaning": "a person who learns at school or in a class",
+      "example": "She is a student at the city school.",
+      "pronunciation": "STOO-duhnt",
+      "persian": "دانش‌آموز",
+      "photo": "media/a2/2026-10-09/photos/student.jpg",
+      "word_audio": "media/a2/2026-10-09/word-audio/student.mp3"
+    },
+    {
+      "word": "lesson",
+      "pos": "noun",
+      "meaning": "one short class, one time of learning",
+      "example": "We have a new English lesson every morning.",
+      "pronunciation": "LESS-uhn",
+      "persian": "درس",
+      "photo": "media/a2/2026-10-09/photos/lesson.jpg",
+      "word_audio": "media/a2/2026-10-09/word-audio/lesson.mp3"
+    },
+    {
+      "word": "homework",
+      "pos": "noun",
+      "meaning": "school work you do at home",
+      "example": "I finish my homework after dinner.",
+      "pronunciation": "HOHM-wurk",
+      "persian": "مشق",
+      "photo": "media/a2/2026-10-09/photos/homework.jpg",
+      "word_audio": "media/a2/2026-10-09/word-audio/homework.mp3"
+    },
+    {
+      "word": "exam",
+      "pos": "noun",
+      "meaning": "a test at school",
+      "example": "We have a big exam on Friday.",
+      "pronunciation": "ig-ZAM",
+      "persian": "امتحان",
+      "photo": "media/a2/2026-10-09/photos/exam.jpg",
+      "word_audio": "media/a2/2026-10-09/word-audio/exam.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-09/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: A Day at School",
+    "audio": "media/a2/2026-10-09/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-09/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Busy School Day",
+    "audio": "media/a2/2026-10-09/shadowing.mp3",
+    "transcript": "media/a2/2026-10-09/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'teacher' mean?",
+      "options": [
+        "a person who helps you learn at school",
+        "a person who learns at school",
+        "school work you do at home",
+        "a test at school"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'student' mean?",
+      "options": [
+        "one short class, a time of learning",
+        "a person who learns at school or in a class",
+        "a test at school",
+        "a person who helps you learn at school"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'lesson' mean?",
+      "options": [
+        "school work you do at home",
+        "a person who learns at school",
+        "one short class, a time of learning",
+        "a test at school"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'homework' mean?",
+      "options": [
+        "a test at school",
+        "one short class, a time of learning",
+        "school work you do at home",
+        "a person who helps you learn at school"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'exam' mean?",
+      "options": [
+        "a person who learns at school",
+        "a test at school",
+        "school work you do at home",
+        "one short class, a time of learning"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Choosing between gerunds and infinitives",
+    "explanation": "A gerund is **verb + ing**. It looks like a verb, but it works like a noun in the sentence.\n\nUse the gerund **after some verbs**. The most important ones are enjoy, like, love, hate, finish, stop, keep, and mind. When the teacher gives homework, the student must finish doing it before the next lesson.\n\nAlso use the gerund **after prepositions** like at, of, about, for, and in. Many students are good at reading, and their teacher is happy.\n\nAn infinitive is **to + verb**. Use it **after adjectives** like easy, hard, good, and nice. Every lesson feels easy when the student listens well.\n\nUse the infinitive **after some verbs** too, like want, need, learn, decide, hope, and try. Every student wants to pass the exam on Friday.\n\nSome verbs take **both forms** with the same meaning: start, begin, and continue. But be careful: try to do means make an effort, and try doing means see if you like it.",
+    "examples": [
+      "The student *enjoys reading* English stories. (gerund after enjoy)",
+      "Our teacher is good *at explaining* every lesson. (gerund after the preposition at)",
+      "I *finished doing* my homework at six o'clock. (gerund after finish)",
+      "This lesson is easy *to understand*. (infinitive after the adjective easy)",
+      "She *wants to pass* the exam. (infinitive after want)",
+      "He *decided to study* with his teacher. (infinitive after decide)"
+    ],
+    "practice": [
+      {
+        "q": "Which is correct: 'I enjoy to read' or 'I enjoy reading'?",
+        "a": "'I enjoy reading'. Use the gerund after enjoy."
+      },
+      {
+        "q": "Which is correct: 'I want pass the exam' or 'I want to pass the exam'?",
+        "a": "'I want to pass the exam'. Use to + verb after want."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I enjoy ___ English lessons.",
+        "options": [
+          "reading",
+          "to read",
+          "reads",
+          "read"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She wants ___ her homework now.",
+        "options": [
+          "doing",
+          "does",
+          "to do",
+          "do"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Our teacher is good at ___ stories.",
+        "options": [
+          "tell",
+          "tells",
+          "to tell",
+          "telling"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He decided ___ for the exam tonight.",
+        "options": [
+          "study",
+          "studies",
+          "studying",
+          "to study"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "They finished ___ at six o'clock.",
+        "options": [
+          "eating",
+          "to eat",
+          "eat",
+          "eats"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "This exam is easy ___.",
+        "options": [
+          "pass",
+          "passes",
+          "to pass",
+          "passing"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Do you mind ___ the window?",
+        "options": [
+          "open",
+          "opens",
+          "to open",
+          "opening"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The student hopes ___ the exam.",
+        "options": [
+          "pass",
+          "to pass",
+          "passing",
+          "passes"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We stopped ___ because the lesson started.",
+        "options": [
+          "talk",
+          "talking",
+          "to talk",
+          "talks"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I am learning ___ English well.",
+        "options": [
+          "speak",
+          "speaks",
+          "speaking",
+          "to speak"
+        ],
+        "answer": 3
+      }
+    ],
+    "audio": "media/a2/2026-10-09/grammar-en.mp3"
+  }
+}

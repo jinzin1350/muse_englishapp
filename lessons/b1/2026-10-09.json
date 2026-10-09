@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-09",
+  "theme": "emotions & character",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "cheerful",
+      "pos": "adjective",
+      "meaning": "happy and smiling",
+      "example": "She has a cheerful smile.",
+      "pronunciation": "CHEER-ful",
+      "persian": "خوشحال و بشاش",
+      "photo": "media/b1/2026-10-09/photos/cheerful.jpg",
+      "word_audio": "media/b1/2026-10-09/word-audio/cheerful.mp3"
+    },
+    {
+      "word": "confident",
+      "pos": "adjective",
+      "meaning": "sure of yourself",
+      "example": "He feels confident before the exam.",
+      "pronunciation": "KON-fih-dent",
+      "persian": "مطمئن و دارای اعتمادبه‌نفس",
+      "photo": "media/b1/2026-10-09/photos/confident.jpg",
+      "word_audio": "media/b1/2026-10-09/word-audio/confident.mp3"
+    },
+    {
+      "word": "shy",
+      "pos": "adjective",
+      "meaning": "nervous about talking to new people",
+      "example": "The shy boy hid behind his mother.",
+      "pronunciation": "SHY",
+      "persian": "خجالتی",
+      "photo": "media/b1/2026-10-09/photos/shy.jpg",
+      "word_audio": "media/b1/2026-10-09/word-audio/shy.mp3"
+    },
+    {
+      "word": "lonely",
+      "pos": "adjective",
+      "meaning": "sad because you are alone",
+      "example": "She felt lonely in the new city.",
+      "pronunciation": "LOHN-lee",
+      "persian": "تنها و احساس تنهایی",
+      "photo": "media/b1/2026-10-09/photos/lonely.jpg",
+      "word_audio": "media/b1/2026-10-09/word-audio/lonely.mp3"
+    },
+    {
+      "word": "proud",
+      "pos": "adjective",
+      "meaning": "happy about something good you did",
+      "example": "They were proud of their son.",
+      "pronunciation": "PROWD",
+      "persian": "مفتخر",
+      "photo": "media/b1/2026-10-09/photos/proud.jpg",
+      "word_audio": "media/b1/2026-10-09/word-audio/proud.mp3"
+    },
+    {
+      "word": "embarrassed",
+      "pos": "adjective",
+      "meaning": "uncomfortable after a mistake",
+      "example": "He felt embarrassed when he forgot her name.",
+      "pronunciation": "em-BAIR-uhst",
+      "persian": "خجالت‌زده",
+      "photo": "media/b1/2026-10-09/photos/embarrassed.jpg",
+      "word_audio": "media/b1/2026-10-09/word-audio/embarrassed.mp3"
+    },
+    {
+      "word": "grateful",
+      "pos": "adjective",
+      "meaning": "thankful",
+      "example": "I am grateful for your help.",
+      "pronunciation": "GREYT-ful",
+      "persian": "قدردان و سپاسگزار",
+      "photo": "media/b1/2026-10-09/photos/grateful.jpg",
+      "word_audio": "media/b1/2026-10-09/word-audio/grateful.mp3"
+    },
+    {
+      "word": "impatient",
+      "pos": "adjective",
+      "meaning": "not wanting to wait",
+      "example": "Drivers get impatient in traffic.",
+      "pronunciation": "im-PAY-shunt",
+      "persian": "بی‌صبر",
+      "photo": "media/b1/2026-10-09/photos/impatient.jpg",
+      "word_audio": "media/b1/2026-10-09/word-audio/impatient.mp3"
+    },
+    {
+      "word": "sensitive",
+      "pos": "adjective",
+      "meaning": "easily hurt by words",
+      "example": "Do not tease him, he is sensitive.",
+      "pronunciation": "SEN-sih-tiv",
+      "persian": "حساس",
+      "photo": "media/b1/2026-10-09/photos/sensitive.jpg",
+      "word_audio": "media/b1/2026-10-09/word-audio/sensitive.mp3"
+    },
+    {
+      "word": "calm",
+      "pos": "adjective",
+      "meaning": "quiet and not worried",
+      "example": "Stay calm and breathe slowly.",
+      "pronunciation": "KAHM",
+      "persian": "آرام",
+      "photo": "media/b1/2026-10-09/photos/calm.jpg",
+      "word_audio": "media/b1/2026-10-09/word-audio/calm.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-10-09/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Feelings and Character",
+    "audio": "media/b1/2026-10-09/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-10-09/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Day of Feelings",
+    "audio": "media/b1/2026-10-09/shadowing.mp3",
+    "transcript": "media/b1/2026-10-09/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'cheerful' mean?",
+      "options": [
+        "happy about something good you did",
+        "nervous about talking to new people",
+        "happy and smiling",
+        "easily hurt by words"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'confident' mean?",
+      "options": [
+        "easily hurt by words",
+        "not wanting to wait",
+        "sure of yourself",
+        "quiet and not worried"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'shy' mean?",
+      "options": [
+        "nervous about talking to new people",
+        "uncomfortable after a mistake",
+        "sad because you are alone",
+        "quiet and not worried"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'lonely' mean?",
+      "options": [
+        "quiet and not worried",
+        "not wanting to wait",
+        "easily hurt by words",
+        "sad because you are alone"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'proud' mean?",
+      "options": [
+        "sad because you are alone",
+        "not wanting to wait",
+        "happy about something good you did",
+        "easily hurt by words"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'embarrassed' mean?",
+      "options": [
+        "nervous about talking to new people",
+        "thankful",
+        "uncomfortable after a mistake",
+        "easily hurt by words"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'grateful' mean?",
+      "options": [
+        "thankful",
+        "sure of yourself",
+        "uncomfortable after a mistake",
+        "not wanting to wait"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'impatient' mean?",
+      "options": [
+        "quiet and not worried",
+        "uncomfortable after a mistake",
+        "thankful",
+        "not wanting to wait"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'sensitive' mean?",
+      "options": [
+        "happy about something good you did",
+        "thankful",
+        "sure of yourself",
+        "easily hurt by words"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'calm' mean?",
+      "options": [
+        "quiet and not worried",
+        "easily hurt by words",
+        "happy and smiling",
+        "sad because you are alone"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Choosing between gerunds and infinitives",
+    "explanation": "A **gerund** is verb + **-ing**. We use it **after a preposition**, like **of**, **about**, or **at**. A proud mother is never shy **about asking** questions.\n\nWe also use a gerund **after some verbs**: enjoy, finish, mind, avoid, keep, miss. A cheerful friend enjoys **sharing** good news.\n\nAn **infinitive** is **to + verb**. We use it **after an adjective** — after easy, hard, good, or difficult. It is hard **to stay confident** in a new place.\n\nWe use the infinitive **to show purpose**, the reason we do something. A lonely student joins a club **to find** new friends.\n\nWe use the infinitive **after some verbs**: want, need, decide, hope, learn. A grateful person decides **to thank** everyone.\n\nAfter **make** and **let** we use the infinitive **without to**. A calm teacher makes her class **laugh**.\n\nSome verbs change meaning. **Try to be** on time means make an effort. **Try being** patient means see if you like it. Stay calm, do not be impatient with yourself, and never feel embarrassed about asking questions. A sensitive friend will always understand.",
+    "examples": [
+      "She is proud *of helping* her shy brother. (gerund after a preposition)",
+      "I enjoy *reading* cheerful stories before bed. (gerund after enjoy)",
+      "It is easy *to stay calm* in this quiet room. (infinitive after an adjective)",
+      "He studies every day *to become* more confident. (infinitive to show purpose)",
+      "I decided *to be* more grateful this year. (infinitive after decide)",
+      "They let me *go* home early yesterday. (let + infinitive without to)"
+    ],
+    "practice": [
+      {
+        "q": "Fill in: She finished ___ (read) the book.",
+        "a": "reading — finish takes a gerund (verb + -ing)."
+      },
+      {
+        "q": "Fill in: I hope ___ (see) you soon.",
+        "a": "to see — hope takes the infinitive (to + verb)."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She is good ___ in front of people.",
+        "options": [
+          "at speak",
+          "at speaking",
+          "to speak",
+          "for speak"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I want ___ more patient with myself.",
+        "options": [
+          "being",
+          "be",
+          "to be",
+          "to being"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He decided ___ sorry to his sensitive friend.",
+        "options": [
+          "saying",
+          "to say",
+          "say",
+          "to saying"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We enjoyed ___ at the cheerful party.",
+        "options": [
+          "dance",
+          "to dance",
+          "dancing",
+          "to dancing"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They let me ___ home early.",
+        "options": [
+          "to go",
+          "go",
+          "going",
+          "goes"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "It is easy ___ calm when you breathe slowly.",
+        "options": [
+          "stay",
+          "staying",
+          "to stay",
+          "to staying"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She avoids ___ about her lonely days.",
+        "options": [
+          "to talk",
+          "talk",
+          "talking",
+          "talked"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Remember ___ your keys before you leave.",
+        "options": [
+          "take",
+          "taking",
+          "to take",
+          "took"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My proud father made me ___ again after I fell.",
+        "options": [
+          "to try",
+          "trying",
+          "try",
+          "tried"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She is learning ___ her embarrassed moments with humor.",
+        "options": [
+          "handle",
+          "to handle",
+          "handling",
+          "handled"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

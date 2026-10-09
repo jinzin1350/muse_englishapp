@@ -1,0 +1,4 @@
+- A2 Word Kitchen episode on school life vocabulary
+- Five words: teacher, student, lesson, homework, exam
+- Hosts Maya and Lena discuss their own school memories using the words
+- Repetition of each word in different conversational contexts

@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-09",
+  "theme": "family & relationships",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "kinship",
+      "pos": "noun",
+      "meaning": "a deep feeling of connection, like being family",
+      "example": "There was an instant kinship between the two immigrants from the same country.",
+      "pronunciation": "KIN-ship",
+      "persian": "خویشاوندی؛ احساس نزدیکی و پیوند",
+      "photo": "media/b2/2026-10-09/photos/kinship.jpg",
+      "word_audio": "media/b2/2026-10-09/word-audio/kinship.mp3"
+    },
+    {
+      "word": "estranged",
+      "pos": "adjective",
+      "meaning": "no longer in contact with someone, especially family",
+      "example": "She became estranged from her brother after the argument over their parents' house.",
+      "pronunciation": "es-TRAYNJD",
+      "persian": "بیگانه‌شده؛ کسی که رابطه‌اش با خانواده قطع شده",
+      "photo": "media/b2/2026-10-09/photos/estranged.jpg",
+      "word_audio": "media/b2/2026-10-09/word-audio/estranged.mp3"
+    },
+    {
+      "word": "reconcile",
+      "pos": "verb",
+      "meaning": "to become friends again after a fight",
+      "example": "It took them two years to reconcile after the family feud.",
+      "pronunciation": "REK-un-sile",
+      "persian": "آشتی کردن؛ دوباره دوست شدن پس از دعوا",
+      "photo": "media/b2/2026-10-09/photos/reconcile.jpg",
+      "word_audio": "media/b2/2026-10-09/word-audio/reconcile.mp3"
+    },
+    {
+      "word": "upbringing",
+      "pos": "noun",
+      "meaning": "the way a child is raised by their parents",
+      "example": "His strict upbringing made him very disciplined as an adult.",
+      "pronunciation": "UP-bring-ing",
+      "persian": "تربیت خانوادگی",
+      "photo": "media/b2/2026-10-09/photos/upbringing.jpg",
+      "word_audio": "media/b2/2026-10-09/word-audio/upbringing.mp3"
+    },
+    {
+      "word": "nurturing",
+      "pos": "adjective",
+      "meaning": "caring and supportive, helping someone grow",
+      "example": "Grandmothers often create a nurturing home where children feel safe.",
+      "pronunciation": "NUR-chur-ing",
+      "persian": "پرورش‌دهنده؛ مراقبت‌کننده و حمایت‌گر",
+      "photo": "media/b2/2026-10-09/photos/nurturing.jpg",
+      "word_audio": "media/b2/2026-10-09/word-audio/nurturing.mp3"
+    },
+    {
+      "word": "bond",
+      "pos": "noun",
+      "meaning": "a strong feeling of love or friendship between people",
+      "example": "The shared camping trips created a strong bond between father and son.",
+      "pronunciation": "bond",
+      "persian": "پیوند عاطفی",
+      "photo": "media/b2/2026-10-09/photos/bond.jpg",
+      "word_audio": "media/b2/2026-10-09/word-audio/bond.mp3"
+    },
+    {
+      "word": "feud",
+      "pos": "noun",
+      "meaning": "a long, angry argument between people or families",
+      "example": "The feud between the two cousins lasted more than ten years.",
+      "pronunciation": "fyood",
+      "persian": "دشمنی و کینه‌ی طولانی",
+      "photo": "media/b2/2026-10-09/photos/feud.jpg",
+      "word_audio": "media/b2/2026-10-09/word-audio/feud.mp3"
+    },
+    {
+      "word": "devoted",
+      "pos": "adjective",
+      "meaning": "showing deep love and loyalty",
+      "example": "He is a devoted father who never misses his daughter's school plays.",
+      "pronunciation": "di-VOH-tid",
+      "persian": "فداکار و وفادار",
+      "photo": "media/b2/2026-10-09/photos/devoted.jpg",
+      "word_audio": "media/b2/2026-10-09/word-audio/devoted.mp3"
+    },
+    {
+      "word": "cherish",
+      "pos": "verb",
+      "meaning": "to love something deeply and take care of it",
+      "example": "She cherishes every letter her grandfather wrote to her.",
+      "pronunciation": "CHER-ish",
+      "persian": "گرامی داشتن",
+      "photo": "media/b2/2026-10-09/photos/cherish.jpg",
+      "word_audio": "media/b2/2026-10-09/word-audio/cherish.mp3"
+    },
+    {
+      "word": "custody",
+      "pos": "noun",
+      "meaning": "the legal right to care for a child after parents separate",
+      "example": "After the divorce, both parents shared custody of their son.",
+      "pronunciation": "KUS-tuh-dee",
+      "persian": "حضانت",
+      "photo": "media/b2/2026-10-09/photos/custody.jpg",
+      "word_audio": "media/b2/2026-10-09/word-audio/custody.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-10-09/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Family Ties",
+    "audio": "media/b2/2026-10-09/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-09/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Sunday Table",
+    "audio": "media/b2/2026-10-09/shadowing.mp3",
+    "transcript": "media/b2/2026-10-09/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'kinship' mean?",
+      "options": [
+        "a deep feeling of connection, like being family",
+        "a strong feeling of love or friendship between people",
+        "the way a child is raised by their parents",
+        "a long, angry argument between people or families"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'estranged' mean?",
+      "options": [
+        "showing deep love and loyalty",
+        "the legal right to care for a child after parents separate",
+        "no longer in contact with someone, especially family",
+        "caring and supportive, helping someone grow"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'reconcile' mean?",
+      "options": [
+        "to love something deeply and take care of it",
+        "a long, angry argument between people or families",
+        "a deep feeling of connection, like being family",
+        "to become friends again after a fight"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'upbringing' mean?",
+      "options": [
+        "the way a child is raised by their parents",
+        "no longer in contact with someone, especially family",
+        "a strong feeling of love or friendship between people",
+        "the legal right to care for a child after parents separate"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'nurturing' mean?",
+      "options": [
+        "showing deep love and loyalty",
+        "caring and supportive, helping someone grow",
+        "to become friends again after a fight",
+        "a deep feeling of connection, like being family"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bond' mean?",
+      "options": [
+        "the way a child is raised by their parents",
+        "to love something deeply and take care of it",
+        "a strong feeling of love or friendship between people",
+        "no longer in contact with someone, especially family"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'feud' mean?",
+      "options": [
+        "a long, angry argument between people or families",
+        "the legal right to care for a child after parents separate",
+        "showing deep love and loyalty",
+        "caring and supportive, helping someone grow"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'devoted' mean?",
+      "options": [
+        "to become friends again after a fight",
+        "a strong feeling of love or friendship between people",
+        "showing deep love and loyalty",
+        "a deep feeling of connection, like being family"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'cherish' mean?",
+      "options": [
+        "the way a child is raised by their parents",
+        "no longer in contact with someone, especially family",
+        "to love something deeply and take care of it",
+        "a long, angry argument between people or families"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'custody' mean?",
+      "options": [
+        "caring and supportive, helping someone grow",
+        "the legal right to care for a child after parents separate",
+        "to love something deeply and take care of it",
+        "showing deep love and loyalty"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "8A: Choosing between gerunds and infinitives",
+    "explanation": "A gerund is a verb with -ing that works like a noun. We use **verb + -ing** after prepositions and phrasal verbs, such as *good at*, *give up*, or *feel like*.\n\nWe also use **verb + -ing** as the subject of a sentence, and after verbs like **enjoy**, **don't mind**, **miss**, and **keep**.\n\nWe use **to + verb** after adjectives, and to show reason or purpose, the reason why we do something.\n\nWe also use **to + verb** after verbs like **want**, **need**, **learn**, **decide**, **agree**, and **hope**.\n\nSome verbs take **verb + person + to + verb**: **ask**, **tell**, **want**, and **would like** someone to do something.\n\nA few verbs change meaning with each form. **try to do** means make an effort, while **try doing** means test something to see if you like it. **remember to do** means do not forget, while **remember doing** means it is a memory.\n\nWe use the infinitive **without to** after most modal verbs and after **make** and **let**.",
+    "examples": [
+      "She is good at *keeping* the family bond strong during hard times. (gerund after a preposition)",
+      "*Reconciling* after a feud takes time and patience. (gerund as subject)",
+      "It is hard *to forgive* an estranged brother, but it is worth it. (infinitive after an adjective)",
+      "He decided *to cherish* every moment with his devoted grandmother. (infinitive after a verb)",
+      "Their grandmother made them *reconcile* before dinner. (make + object + base verb)",
+      "Remember *to call* your grandmother on Sunday. (remember to do = do not forget)"
+    ],
+    "practice": [
+      {
+        "q": "Why do we say 'good at keeping' and not 'good at keep'?",
+        "a": "Because after a preposition we always use the gerund, verb plus ing."
+      },
+      {
+        "q": "What is the difference between 'try to reconcile' and 'try reconciling'?",
+        "a": "'Try to reconcile' means make an effort to become friends again. 'Try reconciling' means test it and see if it works."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I'm in charge of ___ new family traditions.",
+        "options": [
+          "starting",
+          "to start",
+          "start",
+          "to starting"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ after a long feud takes real courage.",
+        "options": [
+          "Reconcile",
+          "To reconcile",
+          "Reconciling",
+          "Reconciles"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My cousin wants ___ custody of her children.",
+        "options": [
+          "sharing",
+          "to share",
+          "share",
+          "to sharing"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Be careful not ___ your estranged brother about the argument.",
+        "options": [
+          "asking",
+          "to ask",
+          "ask",
+          "to asking"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She is very good at ___ a strong family bond.",
+        "options": [
+          "to keep",
+          "keep",
+          "keeping",
+          "kept"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We went on ___ about the old days until midnight.",
+        "options": [
+          "talking",
+          "to talk",
+          "talk",
+          "talked"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Her grandmother made everyone ___ before dinner.",
+        "options": [
+          "to reconcile",
+          "reconcile",
+          "reconciling",
+          "reconciled"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I went on a course ___ about child custody law.",
+        "options": [
+          "to learn",
+          "learning",
+          "learn",
+          "to learning"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She gave up ___ about the feud years ago.",
+        "options": [
+          "to worry",
+          "worry",
+          "worrying",
+          "worried"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My devoted grandmother lets us ___ late on Sundays.",
+        "options": [
+          "to stay",
+          "stay",
+          "staying",
+          "stayed"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

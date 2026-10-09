@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-09",
+  "theme": "travel & transport",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "itinerary",
+      "pos": "noun",
+      "meaning": "a detailed plan of a journey",
+      "example": "Their ambitious itinerary covered four countries in just one week.",
+      "pronunciation": "ih-TIN-uh-reh-ree",
+      "persian": "برنامهٔ سفر",
+      "photo": "media/c1/2026-10-09/photos/itinerary.jpg",
+      "word_audio": "media/c1/2026-10-09/word-audio/itinerary.mp3"
+    },
+    {
+      "word": "sojourn",
+      "pos": "noun",
+      "meaning": "a temporary stay in a place",
+      "example": "His brief sojourn in Lisbon inspired a whole collection of poems.",
+      "pronunciation": "SOH-jurn",
+      "persian": "اقامت موقت",
+      "photo": "media/c1/2026-10-09/photos/sojourn.jpg",
+      "word_audio": "media/c1/2026-10-09/word-audio/sojourn.mp3"
+    },
+    {
+      "word": "detour",
+      "pos": "noun",
+      "meaning": "a longer way around to avoid something",
+      "example": "A road closure forced us to take a lengthy detour through the countryside.",
+      "pronunciation": "DEE-toor",
+      "persian": "مسیر فرعی",
+      "photo": "media/c1/2026-10-09/photos/detour.jpg",
+      "word_audio": "media/c1/2026-10-09/word-audio/detour.mp3"
+    },
+    {
+      "word": "expedition",
+      "pos": "noun",
+      "meaning": "an organized journey with a purpose",
+      "example": "The expedition set out to document wildlife in the remote rainforest.",
+      "pronunciation": "eks-puh-DIH-shun",
+      "persian": "سفر اکتشافی",
+      "photo": "media/c1/2026-10-09/photos/expedition.jpg",
+      "word_audio": "media/c1/2026-10-09/word-audio/expedition.mp3"
+    },
+    {
+      "word": "caravan",
+      "pos": "noun",
+      "meaning": "a group of travelers journeying together",
+      "example": "Centuries ago, a caravan of merchants carried silk across the desert.",
+      "pronunciation": "KA-ruh-van",
+      "persian": "کاروان",
+      "photo": "media/c1/2026-10-09/photos/caravan.jpg",
+      "word_audio": "media/c1/2026-10-09/word-audio/caravan.mp3"
+    },
+    {
+      "word": "wayfarer",
+      "pos": "noun",
+      "meaning": "a traveler, usually on foot",
+      "example": "The weary wayfarer finally reached the mountain shelter at dusk.",
+      "pronunciation": "WAY-feh-ruh",
+      "persian": "مسافر",
+      "photo": "media/c1/2026-10-09/photos/wayfarer.jpg",
+      "word_audio": "media/c1/2026-10-09/word-audio/wayfarer.mp3"
+    },
+    {
+      "word": "odyssey",
+      "pos": "noun",
+      "meaning": "a long adventurous journey",
+      "example": "Her odyssey from a small village to the capital became a famous memoir.",
+      "pronunciation": "AH-duh-see",
+      "persian": "سفر طولانی و پرماجرا",
+      "photo": "media/c1/2026-10-09/photos/odyssey.jpg",
+      "word_audio": "media/c1/2026-10-09/word-audio/odyssey.mp3"
+    },
+    {
+      "word": "excursion",
+      "pos": "noun",
+      "meaning": "a short trip for pleasure",
+      "example": "The school arranged an excursion to the ancient coastal ruins.",
+      "pronunciation": "eks-KUR-zhun",
+      "persian": "گشت کوتاه تفریحی",
+      "photo": "media/c1/2026-10-09/photos/excursion.jpg",
+      "word_audio": "media/c1/2026-10-09/word-audio/excursion.mp3"
+    },
+    {
+      "word": "traverse",
+      "pos": "verb",
+      "meaning": "to travel across or through",
+      "example": "They traversed the entire glacier in less than six hours.",
+      "pronunciation": "truh-VERS",
+      "persian": "پیمودن، طی کردن",
+      "photo": "media/c1/2026-10-09/photos/traverse.jpg",
+      "word_audio": "media/c1/2026-10-09/word-audio/traverse.mp3"
+    },
+    {
+      "word": "disembark",
+      "pos": "verb",
+      "meaning": "to leave a ship, plane, or train",
+      "example": "Passengers began to disembark as soon as the ferry reached the dock.",
+      "pronunciation": "dis-em-BARK",
+      "persian": "پیاده شدن (از کشتی، قطار یا هواپیما)",
+      "photo": "media/c1/2026-10-09/photos/disembark.jpg",
+      "word_audio": "media/c1/2026-10-09/word-audio/disembark.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-09/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Great Journey",
+    "audio": "media/c1/2026-10-09/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-09/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Wayfarer's Map",
+    "audio": "media/c1/2026-10-09/shadowing.mp3",
+    "transcript": "media/c1/2026-10-09/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'itinerary' mean?",
+      "options": [
+        "a temporary stay in a place",
+        "a detailed plan of a journey",
+        "a longer way around to avoid something",
+        "a long adventurous journey"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'sojourn' mean?",
+      "options": [
+        "a temporary stay in a place",
+        "a longer way around to avoid something",
+        "a long adventurous journey",
+        "an organized journey with a purpose"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'detour' mean?",
+      "options": [
+        "a longer way around to avoid something",
+        "to travel across or through",
+        "a detailed plan of a journey",
+        "to leave a ship, plane, or train"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'expedition' mean?",
+      "options": [
+        "a long adventurous journey",
+        "a group of travelers journeying together",
+        "to leave a ship, plane, or train",
+        "an organized journey with a purpose"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'caravan' mean?",
+      "options": [
+        "a traveler, usually on foot",
+        "a group of travelers journeying together",
+        "a short trip for pleasure",
+        "a detailed plan of a journey"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'wayfarer' mean?",
+      "options": [
+        "a temporary stay in a place",
+        "a long adventurous journey",
+        "a traveler, usually on foot",
+        "a group of travelers journeying together"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'odyssey' mean?",
+      "options": [
+        "a temporary stay in a place",
+        "a long adventurous journey",
+        "a short trip for pleasure",
+        "a detailed plan of a journey"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'excursion' mean?",
+      "options": [
+        "a group of travelers journeying together",
+        "a short trip for pleasure",
+        "to travel across or through",
+        "a detailed plan of a journey"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'traverse' mean?",
+      "options": [
+        "a group of travelers journeying together",
+        "to leave a ship, plane, or train",
+        "to travel across or through",
+        "a long adventurous journey"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'disembark' mean?",
+      "options": [
+        "a traveler, usually on foot",
+        "a temporary stay in a place",
+        "to leave a ship, plane, or train",
+        "a detailed plan of a journey"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "8A: Choosing between gerunds and infinitives",
+    "explanation": "A gerund is a verb ending in **-ing** that acts like a noun. An infinitive is **to** plus the base verb, as in **to disembark** or **to traverse**.\n\nUse the **gerund after prepositions** and after verbs like **enjoy, avoid, suggest, finish**. She suggested **extending** her sojourn; they finished **planning** the expedition.\n\nUse the **infinitive after adjectives** and to express **purpose**. It is also required after verbs like **want, decide, hope, learn**. He decided **to traverse** the valley on foot.\n\nSome verbs change meaning with each form. **Remember to disembark** means do not forget; **remember disembarking** means you have a memory of it. **Try to traverse** means make an effort; **try traversing** means test an idea.\n\nDrop **to** after modals and after **make** and **let**. The captain **let us disembark** early; the guide **made the caravan** rest before the climb.",
+    "examples": [
+      "*Planning* the itinerary took longer than the trip itself. (gerund as subject)",
+      "The wayfarer is skilled at *reading* old maps. (gerund after a preposition)",
+      "They stopped *to photograph* the caravan crossing the dunes. (infinitive of purpose)",
+      "She decided *to extend* her sojourn by two more weeks. (infinitive after decide)",
+      "Remember *to disembark* before the last stop, or you will miss the excursion. (remember + infinitive = do not forget)",
+      "I still remember *disembarking* in the rain and laughing about it. (remember + gerund = a memory)"
+    ],
+    "practice": [
+      {
+        "q": "Should you say 'I enjoy to travel' or 'I enjoy traveling'?",
+        "a": "'I enjoy traveling' — enjoy always takes the gerund."
+      },
+      {
+        "q": "Should you say 'She wants going' or 'She wants to go'?",
+        "a": "'She wants to go' — want always takes the infinitive with to."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I'm in charge of ___ the excursion for the whole group.",
+        "options": [
+          "organizing",
+          "to organize"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "It's important for me ___ time with local people during a sojourn.",
+        "options": [
+          "spending",
+          "to spend"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ across a desert can change how you see the world.",
+        "options": [
+          "Traversing",
+          "To traverse"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I want ___ my itinerary looser next time.",
+        "options": [
+          "making",
+          "to make"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Be careful ___ the wrong train when you disembark.",
+        "options": [
+          "not taking",
+          "not to take"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We went on ___ until the storm passed.",
+        "options": [
+          "waiting",
+          "to wait"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The guide is very good at ___ hidden detours.",
+        "options": [
+          "finding",
+          "to find"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The best thing about a long odyssey is ___ new friends.",
+        "options": [
+          "meeting",
+          "to meet"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They gave up ___ the mountain after the avalanche warning.",
+        "options": [
+          "climbing",
+          "to climb"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She took a course ___ about desert caravans.",
+        "options": [
+          "learning",
+          "to learn"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

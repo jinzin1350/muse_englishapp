@@ -1,0 +1,4 @@
+- Theme: family and relationships vocabulary, ten upper-intermediate words woven into natural dialogue
+- Words taught: upbringing, kinship, bond, feud, estranged, reconcile, devoted, cherish, nurturing, custody
+- Segments: childhood upbringing shaping adults; kinship and the bonds that connect people; a family feud leading to estrangement and the choice to reconcile; devoted family members, nurturing homes, and the things we cherish; custody decisions when parents separate
+- Recap of all ten words with quick definitions; closing encouragement to use the words during the week

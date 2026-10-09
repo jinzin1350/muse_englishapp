@@ -1,0 +1,345 @@
+{
+  "date": "2026-10-09",
+  "theme": "Money & Shopping: The Language of Wealth and Risk",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "arbitrage",
+      "pos": "noun",
+      "meaning": "buying cheap in one market and selling higher in another for an instant profit",
+      "example": "His arbitrage profits vanished the moment the two markets synced their prices.",
+      "pronunciation": "AR-bih-trahzh",
+      "persian": "آربیتراژ",
+      "photo": "media/c2/2026-10-09/photos/arbitrage.jpg",
+      "word_audio": "media/c2/2026-10-09/word-audio/arbitrage.mp3"
+    },
+    {
+      "word": "liquidity",
+      "pos": "noun",
+      "meaning": "how easily an asset can be turned into cash",
+      "example": "Real estate has poor liquidity because a house takes months to sell.",
+      "pronunciation": "lih-KWID-ih-tee",
+      "persian": "نقدشوندگی",
+      "photo": "media/c2/2026-10-09/photos/liquidity.jpg",
+      "word_audio": "media/c2/2026-10-09/word-audio/liquidity.mp3"
+    },
+    {
+      "word": "hedge",
+      "pos": "verb",
+      "meaning": "to protect an investment against possible loss",
+      "example": "Savvy investors hedge their portfolios against inflation by holding gold.",
+      "pronunciation": "HEJ",
+      "persian": "پوشش ریسک",
+      "photo": "media/c2/2026-10-09/photos/hedge.jpg",
+      "word_audio": "media/c2/2026-10-09/word-audio/hedge.mp3"
+    },
+    {
+      "word": "windfall",
+      "pos": "noun",
+      "meaning": "a sudden, unexpected gain of money",
+      "example": "The tax refund was a welcome windfall after a difficult year.",
+      "pronunciation": "WIND-fawl",
+      "persian": "سود بادآورده",
+      "photo": "media/c2/2026-10-09/photos/windfall.jpg",
+      "word_audio": "media/c2/2026-10-09/word-audio/windfall.mp3"
+    },
+    {
+      "word": "solvency",
+      "pos": "noun",
+      "meaning": "a company's ability to pay its debts and stay financially healthy",
+      "example": "The auditors questioned the airline's solvency after three losing quarters.",
+      "pronunciation": "SOL-vun-see",
+      "persian": "استطاعت مالی (توان پرداخت بدهی‌ها)",
+      "photo": "media/c2/2026-10-09/photos/solvency.jpg",
+      "word_audio": "media/c2/2026-10-09/word-audio/solvency.mp3"
+    },
+    {
+      "word": "pecuniary",
+      "pos": "adjective",
+      "meaning": "relating to money",
+      "example": "The scandal was purely pecuniary; no one was physically harmed.",
+      "pronunciation": "pih-KYOO-nee-eh-ree",
+      "persian": "مالی (مرتبط با پول)",
+      "photo": "media/c2/2026-10-09/photos/pecuniary.jpg",
+      "word_audio": "media/c2/2026-10-09/word-audio/pecuniary.mp3"
+    },
+    {
+      "word": "usurious",
+      "pos": "adjective",
+      "meaning": "charging unfairly high interest on a loan",
+      "example": "The payday lender's usurious rates trapped borrowers in endless debt.",
+      "pronunciation": "yoo-ZHOOR-ee-us",
+      "persian": "رباخوارانه",
+      "photo": "media/c2/2026-10-09/photos/usurious.jpg",
+      "word_audio": "media/c2/2026-10-09/word-audio/usurious.mp3"
+    },
+    {
+      "word": "parsimonious",
+      "pos": "adjective",
+      "meaning": "extremely careful and unwilling to spend money",
+      "example": "His parsimonious habits meant he retired with a fortune at fifty.",
+      "pronunciation": "par-sih-MOH-nee-us",
+      "persian": "خسیس",
+      "photo": "media/c2/2026-10-09/photos/parsimonious.jpg",
+      "word_audio": "media/c2/2026-10-09/word-audio/parsimonious.mp3"
+    },
+    {
+      "word": "speculation",
+      "pos": "noun",
+      "meaning": "risky buying and selling hoping prices will rise for quick profit",
+      "example": "Wild speculation in the housing market pushed prices beyond reason.",
+      "pronunciation": "speh-kyoo-LAY-shun",
+      "persian": "سفته‌بازی",
+      "photo": "media/c2/2026-10-09/photos/speculation.jpg",
+      "word_audio": "media/c2/2026-10-09/word-audio/speculation.mp3"
+    },
+    {
+      "word": "bailout",
+      "pos": "noun",
+      "meaning": "money given to rescue a failing company or economy",
+      "example": "The government bailout saved the bank but angered taxpayers.",
+      "pronunciation": "BAYL-out",
+      "persian": "نجات مالی اضطراری",
+      "photo": "media/c2/2026-10-09/photos/bailout.jpg",
+      "word_audio": "media/c2/2026-10-09/word-audio/bailout.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-09/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Money Game",
+    "audio": "media/c2/2026-10-09/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-09/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Merchant of Two Markets",
+    "audio": "media/c2/2026-10-09/shadowing.mp3",
+    "transcript": "media/c2/2026-10-09/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'arbitrage' mean?",
+      "options": [
+        "how easily an asset can be turned into cash",
+        "protecting an investment against possible loss",
+        "buying cheap in one market and selling higher in another for an instant profit",
+        "money given to rescue a failing company or economy"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'liquidity' mean?",
+      "options": [
+        "buying cheap in one market and selling higher in another for an instant profit",
+        "a sudden, unexpected gain of money",
+        "how easily an asset can be turned into cash",
+        "relating to money"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'hedge' mean?",
+      "options": [
+        "risky buying and selling hoping prices will rise for quick profit",
+        "protecting an investment against possible loss",
+        "extremely careful and unwilling to spend money",
+        "a sudden, unexpected gain of money"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'windfall' mean?",
+      "options": [
+        "a sudden, unexpected gain of money",
+        "charging unfairly high interest on a loan",
+        "how easily an asset can be turned into cash",
+        "relating to money"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'solvency' mean?",
+      "options": [
+        "money given to rescue a failing company or economy",
+        "relating to money",
+        "a company's ability to pay its debts and stay financially healthy",
+        "buying cheap in one market and selling higher in another for an instant profit"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'pecuniary' mean?",
+      "options": [
+        "extremely careful and unwilling to spend money",
+        "charging unfairly high interest on a loan",
+        "risky buying and selling hoping prices will rise for quick profit",
+        "relating to money"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'usurious' mean?",
+      "options": [
+        "charging unfairly high interest on a loan",
+        "how easily an asset can be turned into cash",
+        "protecting an investment against possible loss",
+        "a sudden, unexpected gain of money"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'parsimonious' mean?",
+      "options": [
+        "a company's ability to pay its debts and stay financially healthy",
+        "extremely careful and unwilling to spend money",
+        "money given to rescue a failing company or economy",
+        "buying cheap in one market and selling higher in another for an instant profit"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'speculation' mean?",
+      "options": [
+        "protecting an investment against possible loss",
+        "risky buying and selling hoping prices will rise for quick profit",
+        "a sudden, unexpected gain of money",
+        "relating to money"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bailout' mean?",
+      "options": [
+        "money given to rescue a failing company or economy",
+        "extremely careful and unwilling to spend money",
+        "how easily an asset can be turned into cash",
+        "charging unfairly high interest on a loan"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "8A: Choosing between gerunds and infinitives",
+    "explanation": "Some verbs are always followed by the **gerund** (verb plus ing), especially after prepositions. Think of **admit**, **avoid**, **deny**, **enjoy**, **finish**, **keep**, **mind**, **miss**, **practise**, **recommend**, and **suggest**. A parsimonious treasurer, for instance, would admit missing every arbitrage signal the market sent.\n\nOther verbs take only the **infinitive with to**: **want**, **need**, **learn**, **afford**, **agree**, **decide**, **expect**, and **hope**. When the board voted, it agreed to fund the bailout rather than watch the bank collapse.\n\nA tricky middle group changes meaning with the form. **Try to do** means make an effort, while **try doing** means experiment to see what happens. **Remember to** means do not forget, while **remember doing** means recall a memory.\n\nThree verbs, **start**, **begin**, and **continue**, accept both forms with no real difference in meaning. Speculation continued to rise all spring, or speculation continued rising all spring; either version sounds natural.",
+    "examples": [
+      "*She admitted missing* the arbitrage window when the prices synced. (gerund after admit)",
+      "*The partners agreed to inject* fresh liquidity into the failing fund. (infinitive after agree)",
+      "*Try hedging* with commodities before you abandon the portfolio. (try doing = experiment)",
+      "*Remember to check* the solvency ratios before you invest a single dollar. (remember to = do not forget)",
+      "*They stopped speculating* in meme coins after the crash wiped them out. (stop + gerund = quit the activity)"
+    ],
+    "practice": [
+      {
+        "q": "Why is 'She suggested to buy gold' wrong?",
+        "a": "Because 'suggest' is always followed by the gerund: 'She suggested buying gold.'"
+      },
+      {
+        "q": "What is the difference between 'He stopped to check his phone' and 'He stopped checking his phone'?",
+        "a": "'Stopped to check' means he paused an activity in order to check; 'stopped checking' means he quit the habit of checking."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "The fund manager denied ___ in the usurious lending scheme.",
+        "options": [
+          "to participate",
+          "participating",
+          "participate",
+          "to have participate"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She agreed ___ the parsimonious budget plan.",
+        "options": [
+          "to sign",
+          "signing",
+          "sign",
+          "to signing"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Try ___ the arbitrage bot on a small account first.",
+        "options": [
+          "to use",
+          "using",
+          "use",
+          "to using"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Remember ___ the solvency ratios before you invest.",
+        "options": [
+          "to check",
+          "checking",
+          "check",
+          "to checking"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He stopped ___ in meme coins after the crash.",
+        "options": [
+          "to speculate",
+          "speculate",
+          "speculating",
+          "to speculating"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The regulator forced the bank ___ its toxic assets.",
+        "options": [
+          "selling",
+          "to sell",
+          "sell",
+          "to selling"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We cannot afford ___ another bailout this decade.",
+        "options": [
+          "funding",
+          "to fund",
+          "fund",
+          "to funding"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She suggested ___ our hedge into commodities.",
+        "options": [
+          "to diversify",
+          "diversifying",
+          "diversify",
+          "to diversifying"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I attended the seminar ___ about liquidity traps.",
+        "options": [
+          "learning",
+          "to learn",
+          "learn",
+          "to learning"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He kept ___ the windfall into safe bonds.",
+        "options": [
+          "to move",
+          "move",
+          "moving",
+          "to moving"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

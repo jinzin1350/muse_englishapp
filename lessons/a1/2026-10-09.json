@@ -1,0 +1,246 @@
+{
+  "date": "2026-10-09",
+  "theme": "cities & daily life",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "city",
+      "pos": "noun",
+      "meaning": "a big town where many people live",
+      "example": "I live in a big city.",
+      "pronunciation": "SIT-ee",
+      "persian": "شهر",
+      "photo": "media/a1/2026-10-09/photos/city.jpg",
+      "word_audio": "media/a1/2026-10-09/word-audio/city.mp3"
+    },
+    {
+      "word": "village",
+      "pos": "noun",
+      "meaning": "a very small town with few people",
+      "example": "My family lives in a small village.",
+      "pronunciation": "VIL-ij",
+      "persian": "روستا",
+      "photo": "media/a1/2026-10-09/photos/village.jpg",
+      "word_audio": "media/a1/2026-10-09/word-audio/village.mp3"
+    },
+    {
+      "word": "library",
+      "pos": "noun",
+      "meaning": "a place where you read or borrow books",
+      "example": "I read books at the library.",
+      "pronunciation": "LIE-brer-ee",
+      "persian": "کتابخانه",
+      "photo": "media/a1/2026-10-09/photos/library.jpg",
+      "word_audio": "media/a1/2026-10-09/word-audio/library.mp3"
+    },
+    {
+      "word": "school",
+      "pos": "noun",
+      "meaning": "a place where children learn",
+      "example": "The children go to school.",
+      "pronunciation": "SKOOL",
+      "persian": "مدرسه",
+      "photo": "media/a1/2026-10-09/photos/school.jpg",
+      "word_audio": "media/a1/2026-10-09/word-audio/school.mp3"
+    },
+    {
+      "word": "hotel",
+      "pos": "noun",
+      "meaning": "a place where you stay and sleep when you travel",
+      "example": "We sleep in a hotel on trips.",
+      "pronunciation": "ho-TEL",
+      "persian": "هتل",
+      "photo": "media/a1/2026-10-09/photos/hotel.jpg",
+      "word_audio": "media/a1/2026-10-09/word-audio/hotel.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-09/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The City and the Village",
+    "audio": "media/a1/2026-10-09/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-09/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Trip to the City",
+    "audio": "media/a1/2026-10-09/shadowing.mp3",
+    "transcript": "media/a1/2026-10-09/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'city' mean?",
+      "options": [
+        "a place where children learn",
+        "a big town where many people live",
+        "a place where you read or borrow books",
+        "a very small town with few people"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'village' mean?",
+      "options": [
+        "a place where you stay and sleep when you travel",
+        "a very small town with few people",
+        "a big town where many people live",
+        "a place where you read or borrow books"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'library' mean?",
+      "options": [
+        "a place where you read or borrow books",
+        "a place where children learn",
+        "a place where you stay and sleep when you travel",
+        "a very small town with few people"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'school' mean?",
+      "options": [
+        "a big town where many people live",
+        "a place where you stay and sleep when you travel",
+        "a place where children learn",
+        "a place where you read or borrow books"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'hotel' mean?",
+      "options": [
+        "a very small town with few people",
+        "a place where children learn",
+        "a place where you stay and sleep when you travel",
+        "a big town where many people live"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Like doing or want to do",
+    "explanation": "Some verbs love -ing. After **like** and **enjoy**, we use verb + -ing. No **to** in the middle.\n\nSome verbs love **to**. After **want** and **need**, we use **to** + verb.\n\nA common mistake: do not say **like to reading**. Say **like reading**.",
+    "examples": [
+      "Sara *likes reading* books at the library. (like + -ing)",
+      "The children *enjoy learning* at the school. (enjoy + -ing)",
+      "I *want to sleep* in a hotel in the city. (want + to)",
+      "We *need to go* back to the village. (need + to)",
+      "He *likes walking* in the village. (like + -ing)"
+    ],
+    "practice": [
+      {
+        "q": "Complete: I like ___ in the city. (walk / to walk)",
+        "a": "walk — like + -ing: I like walking in the city."
+      },
+      {
+        "q": "Complete: She wants ___ at a hotel. (sleep / to sleep)",
+        "a": "to sleep — want + to: She wants to sleep at a hotel."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I like ___ books at the library.",
+        "options": [
+          "reading",
+          "to read",
+          "read",
+          "reads"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He wants ___ in a hotel.",
+        "options": [
+          "sleep",
+          "to sleep",
+          "sleeping",
+          "sleeps"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "They enjoy ___ in the village.",
+        "options": [
+          "live",
+          "to live",
+          "living",
+          "lives"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We need ___ to the city.",
+        "options": [
+          "to go",
+          "go",
+          "going",
+          "goes"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Sara likes ___ at the school.",
+        "options": [
+          "to learn",
+          "learn",
+          "learning",
+          "learns"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I want ___ a new hotel.",
+        "options": [
+          "see",
+          "seeing",
+          "sees",
+          "to see"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The children enjoy ___ in the park.",
+        "options": [
+          "play",
+          "playing",
+          "to play",
+          "plays"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He needs ___ a taxi in the city.",
+        "options": [
+          "to take",
+          "take",
+          "taking",
+          "takes"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Do you like ___ in the library?",
+        "options": [
+          "read",
+          "to read",
+          "reading",
+          "reads"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She wants ___ a book from the library.",
+        "options": [
+          "borrow",
+          "to borrow",
+          "borrowing",
+          "borrows"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-10-09/grammar-en.mp3"
+  }
+}
