@@ -7350,15 +7350,23 @@ function paintMistakes(v, arr) {
 /* ---------------- Daily study report (admin + teacher) ----------------
    Per-day, per-user: minutes in app, lessons opened, quizzes, XP, podcast
    minutes, shadowing speaking tries and shadowing sentence listens.
-   `day` is a UTC calendar date (matches daily_stats.day on the DB). */
+   `day` is the viewer's LOCAL calendar date. daily_stats rows are keyed by
+   DB (UTC) date, so the stats columns match exactly except 20:00-24:00 local
+   (that slice lands in the next UTC row); the shadowing tries/listens
+   columns use exact local-day boundaries. */
 function utcTodayStr() { return new Date().toISOString().slice(0, 10); }
 function dayAfterStr(day) {
   const d = new Date(day + 'T12:00:00Z');
   d.setUTCDate(d.getUTCDate() + 1);
   return d.toISOString().slice(0, 10);
 }
+function localDayRangeUTC(day) {
+  const start = new Date(day + 'T00:00:00');
+  return { start: start.toISOString(), end: new Date(start.getTime() + 86400000).toISOString() };
+}
 async function fetchDailyStudy(day, userIds) {
-  const start = day + 'T00:00:00Z', end = dayAfterStr(day) + 'T00:00:00Z';
+  const range = localDayRangeUTC(day);
+  const start = range.start, end = range.end;
   const statsById = {}, triesById = {}, listensById = {};
   const scoped = function (q) { return (userIds && userIds.length) ? q.in('user_id', userIds) : q; };
   const res = await Promise.all([
@@ -7374,7 +7382,7 @@ async function fetchDailyStudy(day, userIds) {
 function dailyStudyShell(prefix, day, title) {
   return '<div class="card"><div class="tch-weekly-title">' + title + '</div>' +
     '<div class="adm-filters" style="margin:0.6rem 0 0.2rem;align-items:center">' +
-    '<label class="muted" style="font-size:0.85rem">Day (UTC) <input type="date" id="' + prefix + '-daily-day" value="' + esc(day) + '" max="' + utcTodayStr() + '"></label>' +
+    '<label class="muted" style="font-size:0.85rem">Day <input type="date" id="' + prefix + '-daily-day" value="' + esc(day) + '" max="' + todayStr() + '"></label>' +
     '<span class="muted" id="' + prefix + '-daily-sum" style="font-size:0.85rem"></span></div>' +
     '<div id="' + prefix + '-daily-body"><div class="empty">Loading…</div></div></div>';
 }
@@ -7407,7 +7415,7 @@ function dailyStudyActive(r) { return r.min > 0 || r.lessons > 0 || r.tries > 0 
 async function loadAdminDaily() {
   const host = document.getElementById('admin-daily');
   if (!host) return;
-  const day = state.adminDailyDay || utcTodayStr();
+  const day = state.adminDailyDay || todayStr();
   state.adminDailyDay = day;
   host.innerHTML = dailyStudyShell('adm', day, '📊 Daily study — who studied how much');
   const dayInput = document.getElementById('adm-daily-day');
@@ -7448,7 +7456,7 @@ async function loadTeacherDaily() {
   const host = document.getElementById('tch-daily');
   if (!host) return;
   const roster = state.teacherStudents || [];
-  const day = state.teacherDailyDay || utcTodayStr();
+  const day = state.teacherDailyDay || todayStr();
   state.teacherDailyDay = day;
   host.innerHTML = dailyStudyShell('tch', day, '📅 Daily study — your students');
   const dayInput = document.getElementById('tch-daily-day');
