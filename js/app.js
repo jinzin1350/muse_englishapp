@@ -5266,38 +5266,100 @@ function tchOfferCardHTML(t) {
     exp + students + bio +
     '<button class="onb-cta tch-offer-pick" data-tch-pick="' + esc(t.ref_code || '') + '">انتخاب</button></div>';
 }
-async function renderChooseTeacher(v) {
-  v.innerHTML =
-    '<div class="onb" dir="rtl" lang="fa"><div class="tch-offer">' +
-    '<div class="onb-top"><span class="onb-brand">📖 Muse English</span></div>' +
-    '<h1 class="onb-title">یه استاد رایگان انتخاب کن 🎓</h1>' +
-    '<div class="tch-offer-points">' +
-    '<div class="tch-offer-point">✅ <b>کاملاً رایگانه</b> — هیچ هزینه‌ای نداره</div>' +
-    '<div class="tch-offer-point">✅ <b>پیشرفتت زیر نظر استاده</b> — استاد مسیر یادگیریت رو دنبال می‌کنه</div>' +
-    '<div class="tch-offer-point">✅ <b>سریع‌تر بهتر شو</b> — با کمک استاد، زبانت خیلی زودتر قوی می‌شه</div>' +
-    '</div>' +
-    '<div id="tch-offer-list"><div class="empty">در حال بارگذاری استادها…</div></div>' +
-    '<div style="text-align:center;margin-top:1rem"><button class="onb-skip" id="tch-offer-skip">فعلاً استاد نمی‌خوام</button></div>' +
-    '</div></div>';
-  const list = v.querySelector('#tch-offer-list');
-  v.querySelector('#tch-offer-skip').addEventListener('click', function () { resolveTeacherOffer(null); });
-  try {
-    const r = await sb.rpc('approved_teachers_for_offer');
-    if (r.error) throw r.error;
-    const teachers = r.data || [];
-    if (!teachers.length) { resolveTeacherOffer(null); return; }
-    list.innerHTML = '<div class="tch-offer-grid">' + teachers.map(tchOfferCardHTML).join('') + '</div>';
-    list.querySelectorAll('[data-tch-pick]').forEach(function (b) {
-      b.addEventListener('click', function () {
-        b.disabled = true;
-        resolveTeacherOffer(b.getAttribute('data-tch-pick'));
-      });
+/* ---------------- choose your teacher v2 — mobile design (one-time offer) ---------------- */
+var ct2Teachers = [];
+var ct2Selected = null;
+function ct2PhotoHTML(t, cls) {
+  if (t.photo_url) return '<img class="' + cls + '" src="' + esc(t.photo_url) + '" alt="' + esc(t.display_name || '') + '" loading="lazy">';
+  return '<div class="' + cls + ' ct2-initial">' + esc((t.display_name || '?').trim().charAt(0).toUpperCase()) + '</div>';
+}
+function ct2PeopleSVG() {
+  return '<svg class="ct2-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3.4" fill="#7C6AF0"/><path d="M2.8 19.2c.7-3.2 3.3-5 6.2-5s5.5 1.8 6.2 5" stroke="#7C6AF0" stroke-width="2.2" stroke-linecap="round"/><circle cx="16.8" cy="9.2" r="2.7" fill="#9A8CF8"/><path d="M15.4 14.4c2.9.3 5 2 5.6 4.8" stroke="#9A8CF8" stroke-width="2.2" stroke-linecap="round"/></svg>';
+}
+function ct2CardHTML(t) {
+  var sub = t.specialty ? esc(t.specialty) : (t.bio ? esc(t.bio) : '');
+  var meta = '<span class="ct2-meta-bit">' + ct2PeopleSVG() + '<span>' + esc(String(t.student_count == null ? '' : t.student_count)) + ' \u0632\u0628\u0627\u0646\u200c\u0622\u0645\u0648\u0632</span></span>';
+  if (t.experience_years) meta += '<span class="ct2-meta-bit"><span aria-hidden="true">\U0001F393</span><span>' + esc(String(t.experience_years)) + ' \u0633\u0627\u0644 \u0633\u0627\u0628\u0642\u0647</span></span>';
+  var sel = ct2Selected === t.ref_code ? ' sel' : '';
+  return '<button class="ct2-card' + sel + '" data-ct2-open="' + esc(t.ref_code || '') + '">' +
+    ct2PhotoHTML(t, 'ct2-ava') +
+    '<span class="ct2-info"><b class="ct2-name">' + esc(t.display_name || '?') + '</b>' +
+    (sub ? '<span class="ct2-sub">' + sub + '</span>' : '') +
+    '<span class="ct2-meta">' + meta + '</span></span>' +
+    '<span class="ct2-check' + sel + '" aria-hidden="true">' + (sel ? '\u2713' : '') + '</span></button>';
+}
+function ct2FeatRows() {
+  var feats = [
+    { i: '\u2B50', t: '\u06A9\u0627\u0645\u0644\u0627\u064B \u0631\u0627\u06CC\u06AF\u0627\u0646\u0647', s: '\u0647\u06CC\u0686 \u0647\u0632\u06CC\u0646\u0647\u200C\u0627\u06CC \u0646\u062F\u0627\u0631\u0647.' },
+    { i: '\U0001F3AF', t: '\u067E\u06CC\u0634\u0631\u0641\u062A\u062A \u0632\u06CC\u0631 \u0646\u0638\u0631 \u0627\u0633\u062A\u0627\u062F\u0647', s: '\u0627\u0633\u062A\u0627\u062F \u0645\u0633\u06CC\u0631 \u06CC\u0627\u062F\u06AF\u06CC\u0631\u06CC\u062A \u0631\u0648 \u062F\u0646\u0628\u0627\u0644 \u0645\u06CC\u200C\u06A9\u0646\u0647.' },
+    { i: '\u26A1', t: '\u0633\u0631\u06CC\u0639\u200C\u062A\u0631 \u0628\u0647\u062A\u0631 \u0634\u0648', s: '\u0628\u0627 \u06A9\u0645\u06A9 \u0627\u0633\u062A\u0627\u062F\u060C \u0632\u0628\u0627\u0646\u062A \u062E\u06CC\u0644\u06CC \u0632\u0648\u062F\u062A\u0631 \u0642\u0648\u06CC \u0645\u06CC\u200C\u0634\u0647.' }
+  ];
+  return feats.map(function (f) {
+    return '<div class="ct2-feat"><span class="ct2-feat-ico">' + f.i + '</span>' +
+      '<span class="ct2-feat-txt"><b>' + f.t + '</b><span>' + f.s + '</span></span>' +
+      '<span class="ct2-feat-ok">\u2713</span></div>';
+  }).join('');
+}
+function ct2Find(code) {
+  for (var i = 0; i < ct2Teachers.length; i++) if (ct2Teachers[i].ref_code === code) return ct2Teachers[i];
+  return null;
+}
+function paintCt2List(v) {
+  var list = v.querySelector('#ct2-list');
+  if (!list) return;
+  list.innerHTML = ct2Teachers.map(ct2CardHTML).join('');
+  list.querySelectorAll('[data-ct2-open]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = ct2Find(b.getAttribute('data-ct2-open'));
+      if (t) { ct2Selected = t.ref_code; renderCt2Detail(v, t); }
     });
+  });
+}
+async function renderChooseTeacher(v) {
+  ct2Selected = null;
+  v.innerHTML =
+    '<div class="ct2-wrap" dir="rtl" lang="fa">' +
+    '<div class="ct2-banner"><div class="ct2-banner-txt"><h1>\u06CC\u06A9 \u0627\u0633\u062A\u0627\u062F \u0631\u0627 \u0627\u0646\u062A\u062E\u0627\u0628 \u06A9\u0646</h1>' +
+    '<p>\u0627\u0633\u0627\u062A\u06CC\u062F \u0645\u0633\u06CC\u0631 \u06CC\u0627\u062F\u06AF\u06CC\u0631\u06CC\u062A \u0631\u0648 \u062F\u0646\u0628\u0627\u0644 \u0645\u06CC\u200C\u06A9\u0646\u0646\u060C \u062A\u0645\u0631\u06CC\u0646 \u0645\u06CC\u200C\u062F\u0646 \u0648 \u0631\u0627\u0647\u0646\u0645\u0627\u06CC\u06CC\u062A \u0645\u06CC\u200C\u06A9\u0646\u0646.</p></div>' +
+    '<img class="ct2-mascot" src="/media/teachers/mascot-graduate.png" alt=""></div>' +
+    '<div id="ct2-list"><div class="empty">\u062F\u0631 \u062D\u0627\u0644 \u0628\u0627\u0631\u06AF\u0630\u0627\u0631\u06CC \u0627\u0633\u062A\u0627\u062F\u0647\u0627\u2026</div></div>' +
+    '<div class="ct2-skipwrap"><button class="onb-skip" id="ct2-skip">\u0641\u0639\u0644\u0627\u064B \u0627\u0633\u062A\u0627\u062F \u0646\u0645\u06CC\u200C\u062E\u0648\u0627\u0645</button></div>' +
+    '</div>';
+  v.querySelector('#ct2-skip').addEventListener('click', function () { resolveTeacherOffer(null); });
+  try {
+    var r = await sb.rpc('approved_teachers_for_offer');
+    if (r.error) throw r.error;
+    ct2Teachers = r.data || [];
+    if (!ct2Teachers.length) { resolveTeacherOffer(null); return; }
+    paintCt2List(v);
   } catch (e) {
-    list.innerHTML = '<div class="empty">خطا در بارگذاری — <button class="btn btn-sm" id="tch-offer-retry">تلاش دوباره</button></div>';
-    const rb = list.querySelector('#tch-offer-retry');
+    var list = v.querySelector('#ct2-list');
+    list.innerHTML = '<div class="empty">\u062E\u0637\u0627 \u062F\u0631 \u0628\u0627\u0631\u06AF\u0630\u0627\u0631\u06CC — <button class="btn btn-sm" id="ct2-retry">\u062A\u0644\u0627\u0634 \u062F\u0648\u0628\u0627\u0631\u0647</button></div>';
+    var rb = list.querySelector('#ct2-retry');
     if (rb) rb.addEventListener('click', function () { renderChooseTeacher(v); });
   }
+}
+function renderCt2Detail(v, t) {
+  var dstudents = '<div class="ct2-dstudents">' + ct2PeopleSVG() + '<span>' + esc(String(t.student_count == null ? '' : t.student_count)) + ' \u0632\u0628\u0627\u0646\u200C\u0622\u0645\u0648\u0632</span>';
+  if (t.experience_years) dstudents += '<span class="ct2-dot">·</span><span>' + esc(String(t.experience_years)) + ' \u0633\u0627\u0644 \u0633\u0627\u0628\u0642\u0647</span>';
+  dstudents += '</div>';
+  v.innerHTML =
+    '<div class="ct2-wrap" dir="rtl" lang="fa">' +
+    '<div class="ct2-topbar"><button class="ct2-back" id="ct2-back" aria-label="\u0628\u0627\u0632\u06AF\u0634\u062A">' +
+    '<svg viewBox="0 0 24 24" fill="none"><path d="M14.5 5.5 8 12l6.5 6.5" stroke="#1E2A4E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>' +
+    '<div class="ct2-hero"><div class="ct2-blob" aria-hidden="true"></div>' +
+    '<div class="ct2-hi" aria-hidden="true">Hi!\U0001F44B</div>' +
+    ct2PhotoHTML(t, 'ct2-photo') + '</div>' +
+    '<h1 class="ct2-dname">' + esc(t.display_name || '?') + '</h1>' +
+    dstudents +
+    (t.bio ? '<p class="ct2-bio">' + esc(t.bio) + '</p>' : '') +
+    '<div class="ct2-feats">' + ct2FeatRows() + '</div>' +
+    '<button class="ct2-select" id="ct2-select"><span>\u0627\u0646\u062A\u062E\u0627\u0628</span>' +
+    '<svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5m6-6-6 6 6 6" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>' +
+    '</div>';
+  v.querySelector('#ct2-back').addEventListener('click', function () { renderChooseTeacher(v); });
+  var btn = v.querySelector('#ct2-select');
+  btn.addEventListener('click', function () { btn.disabled = true; resolveTeacherOffer(t.ref_code); });
 }
 async function resolveTeacherOffer(refCode) {
   try {

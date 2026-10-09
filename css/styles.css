@@ -2646,3 +2646,103 @@ body.duo-playing{padding-bottom:0!important;}
 .tch-prof-fields { flex: 1; min-width: 220px; display: grid; gap: .6rem; align-content: start; }
 .tch-prof-fields label { display: grid; gap: .25rem; font-size: .85rem; font-weight: 600; }
 .tch-prof-fields input, .tch-prof-fields textarea { padding: .5rem .6rem; border: 1px solid #ddd; border-radius: 8px; font: inherit; resize: vertical; }
+
+/* ================= choose-teacher v2 — mobile design (2026-10-09) ================= */
+.ct2-wrap { max-width: 480px; margin: 0 auto; padding: 0.9rem 1rem 2.5rem; }
+.ct2-banner {
+  display: flex; align-items: center; gap: 0.8rem;
+  background: linear-gradient(135deg, #FFF3E2 0%, #FFE8CF 100%);
+  border-radius: 24px; padding: 1.1rem 1.2rem; margin-bottom: 1rem;
+  box-shadow: 0 8px 22px rgba(190,130,70,.12); overflow: hidden; position: relative;
+}
+.ct2-banner-txt { flex: 1; min-width: 0; }
+.ct2-banner-txt h1 { font-size: 1.45rem; color: #1E2A4E; margin: 0 0 0.35rem; font-weight: 800; }
+.ct2-banner-txt p { font-size: 0.85rem; color: #6B7280; margin: 0; line-height: 1.6; }
+.ct2-mascot { width: 108px; height: 108px; object-fit: contain; flex: none; }
+.ct2-card {
+  display: flex; align-items: center; gap: 0.85rem; width: 100%;
+  background: #fff; border: 2px solid transparent; border-radius: 20px;
+  padding: 0.8rem 0.9rem; margin-bottom: 0.7rem; cursor: pointer; text-align: right;
+  box-shadow: 0 6px 18px rgba(190,130,70,.10); font-family: inherit; color: inherit;
+}
+.ct2-card:active { transform: scale(0.99); }
+.ct2-card.sel { border-color: #F9610D; background: #FFF8F0; }
+.ct2-ava { width: 64px; height: 64px; border-radius: 18px; object-fit: cover; flex: none; background: #F3EAD9; }
+.ct2-initial {
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #FF9A3D, #F9610D); color: #fff;
+  font-size: 1.7rem; font-weight: 800;
+}
+.ct2-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.15rem; }
+.ct2-name { font-size: 1.05rem; color: #1E2A4E; font-weight: 800; }
+.ct2-sub { font-size: 0.82rem; color: #6B7280; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ct2-meta { display: flex; align-items: center; gap: 0.5rem; font-size: 0.78rem; color: #6B7280; flex-wrap: wrap; }
+.ct2-meta-bit { display: inline-flex; align-items: center; gap: 0.3rem; }
+.ct2-ico { width: 18px; height: 18px; flex: none; }
+.ct2-check {
+  flex: none; width: 28px; height: 28px; border-radius: 9px;
+  border: 2px solid #D8DCE6; background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-weight: 800; font-size: 1rem;
+}
+.ct2-check.sel { background: #F9610D; border-color: #F9610D; }
+.ct2-skipwrap { text-align: center; margin-top: 0.6rem; }
+/* detail screen */
+.ct2-topbar { margin-bottom: 0.2rem; }
+.ct2-back {
+  width: 44px; height: 44px; border-radius: 50%; border: none; cursor: pointer;
+  background: #fff; box-shadow: 0 4px 14px rgba(190,130,70,.16);
+  display: flex; align-items: center; justify-content: center; padding: 0;
+}
+.ct2-back svg { width: 22px; height: 22px; }
+.ct2-hero { position: relative; display: flex; justify-content: center; padding: 1.2rem 0 0.6rem; }
+.ct2-blob {
+  position: absolute; top: 0; width: 280px; height: 280px; border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255,200,130,.5), transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(255,170,100,.45), transparent 55%),
+    radial-gradient(circle at 50% 50%, #FFE3C2 0%, rgba(255,227,194,0) 70%);
+  pointer-events: none;
+}
+.ct2-photo { width: 168px; height: 168px; border-radius: 50%; object-fit: cover; position: relative; box-shadow: 0 12px 32px rgba(190,130,70,.25); background: #F3EAD9; }
+.ct2-photo.ct2-initial { font-size: 4rem; }
+.ct2-hi {
+  position: absolute; top: 2.4rem; inset-inline-end: calc(50% - 128px);
+  background: #fff; border-radius: 16px 16px 16px 4px; padding: 0.35rem 0.7rem;
+  font-weight: 800; font-size: 0.9rem; color: #1E2A4E;
+  box-shadow: 0 6px 16px rgba(190,130,70,.20); z-index: 2;
+}
+.ct2-dname { text-align: center; font-size: 1.7rem; color: #1E2A4E; margin: 0.4rem 0 0.2rem; font-weight: 800; }
+.ct2-dstudents { display: flex; align-items: center; justify-content: center; gap: 0.4rem; color: #6B7280; font-size: 0.92rem; }
+.ct2-dstudents .ct2-ico { width: 20px; height: 20px; }
+.ct2-dot { color: #C9CFDA; }
+.ct2-bio { text-align: center; color: #6B7280; font-size: 0.9rem; max-width: 30rem; margin: 0.5rem auto 0; line-height: 1.7; }
+.ct2-feats { display: flex; flex-direction: column; gap: 0.7rem; margin: 1.2rem 0 1.4rem; }
+.ct2-feat {
+  display: flex; align-items: center; gap: 0.8rem;
+  background: #fff; border-radius: 18px; padding: 0.85rem 1rem;
+  box-shadow: 0 6px 18px rgba(190,130,70,.10);
+}
+.ct2-feat-ico {
+  flex: none; width: 52px; height: 52px; border-radius: 16px;
+  background: linear-gradient(135deg, #FFE9D2, #FFD9AE);
+  display: flex; align-items: center; justify-content: center; font-size: 1.6rem;
+}
+.ct2-feat-txt { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.1rem; }
+.ct2-feat-txt b { color: #1E2A4E; font-size: 0.98rem; }
+.ct2-feat-txt span { color: #6B7280; font-size: 0.82rem; }
+.ct2-feat-ok {
+  flex: none; width: 30px; height: 30px; border-radius: 50%;
+  background: #22C55E; color: #fff; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; font-size: 0.95rem;
+}
+.ct2-select {
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+  width: 100%; border: none; cursor: pointer; font-family: inherit;
+  background: linear-gradient(135deg, #FF9A3D 0%, #F9610D 100%); color: #fff;
+  font-size: 1.15rem; font-weight: 800; padding: 1rem; border-radius: 999px;
+  box-shadow: 0 10px 26px rgba(249,97,13,.40);
+}
+.ct2-select:active { transform: scale(0.98); }
+.ct2-select:disabled { opacity: 0.6; }
+.ct2-select svg { width: 22px; height: 22px; }
