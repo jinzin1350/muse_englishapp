@@ -1730,6 +1730,9 @@ function enforceOnboardingGate() {
 }
 
 function onRoute() {
+  /* Dedicated admin panel: own path, own auth gate, own chrome. */
+  if (isPanelPath()) { renderAdminPanel(); return; }
+  document.body.classList.remove('ap-mode');
   const r = parseHash();
   /* Self-heal: the game player hides the tabbar; if the quiz state is gone
      (e.g. browser back), the tabbar must come back. */
@@ -8364,9 +8367,15 @@ async function init() {
   if (sb) {
     try {
       const { data } = await sb.auth.getSession();
-      if (data.session && data.session.user) { await enterApp(); return; }
+      if (data.session && data.session.user) {
+        /* Panel path skips the heavy learner boot — it has its own gate. */
+        if (isPanelPath()) { renderAdminPanel(); hideSplashSoon(); return; }
+        await enterApp(); return;
+      }
     } catch (e) {}
   }
+  /* Panel path without a session: the panel renders its own login screen. */
+  if (isPanelPath()) { renderAdminPanel(); hideSplashSoon(); return; }
   // Logged out: respect the hash (deep links to #/signin etc.), default landing.
   onRoute();
   hideSplashSoon();
@@ -8384,6 +8393,366 @@ function hideSplash() {
   if (!s || s.classList.contains('hide')) return;
   s.classList.add('hide');
   setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 600);
+}
+
+/* ==================== Admin panel (/adminpanel) — Phase 1 ====================
+   Dedicated admin surface at the /adminpanel path (served via _redirects).
+   SECURITY MODEL (defense in depth):
+   1. Nothing renders until /api/admin/verify confirms is_admin() server-side
+      using the visitor's own Supabase JWT (the client-side email list is UI
+      sugar only and is never trusted here).
+   2. Every data call goes through SECURITY DEFINER admin_* RPCs that re-check
+      is_admin() inside the database — copied HTML/JS alone yields zero data.
+   3. Successful verifications are written to admin_audit_log (who / when / IP).
+   4. Idle 30 minutes -> forced sign-out. */
+
+let apVerified = null;   /* { email } once /api/admin/verify passes this load */
+let apPopBound = false;
+let apIdleArmed = false;
+let apIdleTimer = null;
+
+function isPanelPath() { return window.location.pathname.indexOf('/adminpanel') === 0; }
+function apSubpath() {
+  const parts = window.location.pathname.replace(/^\/adminpanel\/?/, '').split('/').filter(Boolean);
+  return { section: parts[0] || 'dashboard', arg: parts[1] ? decodeURIComponent(parts[1]) : '' };
+}
+function apGo(section, arg) {
+  let url = '/adminpanel';
+  if (section && section !== 'dashboard') url += '/' + section;
+  if (arg) url += '/' + encodeURIComponent(arg);
+  if (window.location.pathname !== url) window.history.pushState({}, '', url);
+  renderAdminPanel();
+}
+/* Lightweight boot: session -> server verify. Never trusts client state. */
+async function apBoot() {
+  if (!sb) return { ok: false, reason: 'nodb' };
+  let sess = null;
+  try { const r = await sb.auth.getSession(); sess = r.data.session; } catch (e) {}
+  if (!sess || !sess.access_token) return { ok: false, reason: 'login' };
+  try {
+    const res = await fetch('/api/admin/verify', {
+      method: 'POST',
+      headers: { 'Authorization': 'Bearer ' + sess.access_token },
+    });
+    if (res.ok) {
+      const j = await res.json();
+      if (j && j.ok) return { ok: true, email: j.email || '' };
+    }
+  } catch (e) {}
+  return { ok: false, reason: 'denied' };
+}
+function apArmIdle() {
+  if (apIdleArmed) return;
+  apIdleArmed = true;
+  const reset = function () {
+    if (apIdleTimer) clearTimeout(apIdleTimer);
+    apIdleTimer = setTimeout(function () {
+      try { sb.auth.signOut(); } catch (e) {}
+      window.location.href = '/adminpanel';
+    }, 30 * 60 * 1000);
+  };
+  ['click', 'keydown', 'touchstart'].forEach(function (ev) {
+    document.addEventListener(ev, reset, { passive: true });
+  });
+  reset();
+}
+function apShell(active, bodyHTML) {
+  const items = [['dashboard', '📊 Dashboard'], ['users', '👥 Users']];
+  const nav = items.map(function (it) {
+    const href = '/adminpanel' + (it[0] === 'dashboard' ? '' : '/' + it[0]);
+    return '<a href="' + href + '" data-apnav="' + it[0] + '"' +
+      (active === it[0] ? ' class="on"' : '') + '>' + it[1] + '</a>';
+  }).join('');
+  return '<div class="ap-wrap"><aside class="ap-side">' +
+    '<div class="ap-brand">🛠 Admin panel</div>' +
+    (apVerified ? '<div class="ap-who">' + esc(apVerified.email) + '</div>' : '') +
+    '<nav class="ap-nav">' + nav + '</nav>' +
+    '<div class="ap-foot"><button class="ap-logout" id="ap-logout" type="button">Sign out</button>' +
+    '<div class="ap-note">Phase 1 · audited access</div></div>' +
+    '</aside><main class="ap-main">' + bodyHTML + '</main></div>';
+}
+function apWireChrome(v) {
+  v.querySelectorAll('[data-apnav]').forEach(function (a) {
+    a.addEventListener('click', function (ev) { ev.preventDefault(); apGo(a.getAttribute('data-apnav')); });
+  });
+  const out = v.querySelector('#ap-logout');
+  if (out) out.addEventListener('click', function () {
+    try { sb.auth.signOut(); } catch (e) {}
+    apVerified = null;
+    window.location.href = '/adminpanel';
+  });
+}
+function apLoginHTML() {
+  return '<div class="ap-center"><div class="ap-login card">' +
+    '<h1>🛠 Admin panel</h1><p class="muted">Restricted area. Sign in with an administrator account.</p>' +
+    '<label>Email<input type="email" id="ap-email" autocomplete="username"></label>' +
+    '<label>Password<input type="password" id="ap-pass" autocomplete="current-password"></label>' +
+    '<div class="ap-err" id="ap-err"></div>' +
+    '<button class="btn-primary" id="ap-login-btn" type="button">Sign in</button>' +
+    '</div></div>';
+}
+function apDeniedHTML() {
+  return '<div class="ap-center"><div class="ap-login card">' +
+    '<h1>⛔ Access denied</h1>' +
+    '<p class="muted">This area is restricted to administrators. If you believe this is a mistake, sign in with a different account.</p>' +
+    '<button class="btn-primary" id="ap-denied-out" type="button">Sign out &amp; switch account</button>' +
+    '</div></div>';
+}
+function apWireLogin(v) {
+  const btn = v.querySelector('#ap-login-btn');
+  const denied = v.querySelector('#ap-denied-out');
+  if (denied) denied.addEventListener('click', function () {
+    try { sb.auth.signOut(); } catch (e) {}
+    apVerified = null;
+    window.location.href = '/adminpanel';
+  });
+  if (!btn || !sb) return;
+  const go = async function () {
+    const err = v.querySelector('#ap-err');
+    const email = (v.querySelector('#ap-email').value || '').trim();
+    const pass = v.querySelector('#ap-pass').value || '';
+    if (err) err.textContent = '';
+    btn.disabled = true;
+    try {
+      const r = await sb.auth.signInWithPassword({ email: email, password: pass });
+      if (r.error) throw r.error;
+      apVerified = null;
+      renderAdminPanel();
+    } catch (e) {
+      if (err) err.textContent = 'Sign-in failed: ' + ((e && e.message) || e);
+      btn.disabled = false;
+    }
+  };
+  btn.addEventListener('click', go);
+  v.querySelector('#ap-pass').addEventListener('keydown', function (ev) { if (ev.key === 'Enter') go(); });
+}
+function apDaysBetween(a, b) {
+  return Math.round((new Date(a + 'T12:00:00') - new Date(b + 'T12:00:00')) / 86400000);
+}
+function apBarsSVG(rows, getVal, color, label) {
+  const W = 620, H = 150, padL = 8, padB = 20, padT = 18;
+  const vals = rows.map(getVal);
+  const max = Math.max.apply(null, vals.concat([1]));
+  const bw = (W - padL * 2) / Math.max(1, rows.length);
+  let s = '<svg viewBox="0 0 ' + W + ' ' + H + '" class="ap-chart" role="img" aria-label="' + esc(label) + '">';
+  rows.forEach(function (r, i) {
+    const h = Math.max(1, (H - padB - padT) * (vals[i] / max));
+    const x = padL + i * bw + 1;
+    const y = H - padB - h;
+    s += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + Math.max(1, bw - 2).toFixed(1) +
+      '" height="' + h.toFixed(1) + '" rx="2" fill="' + color + '"><title>' + esc(String(r.day)) + ': ' + vals[i] + '</title></rect>';
+  });
+  s += '<text x="' + padL + '" y="13" class="ap-chart-cap">' + esc(label) + ' · max ' + max + '</text></svg>';
+  return s;
+}
+function apKpi(label, value, sub) {
+  return '<div class="ap-kpi"><div class="ap-kpi-v">' + value + '</div>' +
+    '<div class="ap-kpi-l">' + label + '</div>' +
+    (sub ? '<div class="ap-kpi-s">' + sub + '</div>' : '') + '</div>';
+}
+async function apRenderDashboard(v) {
+  v.innerHTML = apShell('dashboard',
+    '<div class="ap-head"><h1>Dashboard</h1><p class="muted">Whole-product overview.</p></div>' +
+    '<div class="empty">Loading…</div>');
+  apWireChrome(v);
+  const main = v.querySelector('.ap-main');
+  try {
+    const rs = await Promise.all([
+      sb.rpc('admin_overview'),
+      sb.rpc('admin_daily_series', { p_days: 30 }),
+      sb.rpc('admin_user_stats'),
+    ]);
+    if (rs[0].error) throw rs[0].error;
+    if (rs[1].error) throw rs[1].error;
+    if (rs[2].error) throw rs[2].error;
+    const ov = (rs[0].data && rs[0].data[0]) || {};
+    const series = rs[1].data || [];
+    const users = rs[2].data || [];
+    const today = todayStr();
+    const atRisk = users
+      .filter(function (u) { return u.last_active && apDaysBetween(today, String(u.last_active).slice(0, 10)) >= 7; })
+      .sort(function (a, b) { return String(a.last_active).localeCompare(String(b.last_active)); })
+      .slice(0, 12);
+    main.innerHTML = apShell('dashboard',
+      '<div class="ap-head"><h1>Dashboard</h1><p class="muted">Whole-product overview.</p></div>' +
+      '<div class="ap-kpis">' +
+      apKpi('Total users', ov.total_users || 0, (ov.new_7d || 0) + ' new in 7d') +
+      apKpi('Active today', ov.dau || 0, (ov.wau || 0) + ' in 7d') +
+      apKpi('XP · 30d', ov.xp_30d || 0, '') +
+      apKpi('Lessons · 30d', ov.lessons_30d || 0, '') +
+      apKpi('Podcast hrs · 30d', ov.podcast_hours_30d || 0, '') +
+      apKpi('Teachers', (ov.total_teachers || 0) + ' approved', (ov.pending_teachers || 0) + ' pending') +
+      '</div>' +
+      '<div class="ap-cards">' +
+      '<div class="card"><h3>Daily active users · 30 days</h3>' +
+      apBarsSVG(series, function (r) { return Number(r.dau) || 0; }, '#4f8ef7', 'DAU') + '</div>' +
+      '<div class="card"><h3>XP earned · 30 days</h3>' +
+      apBarsSVG(series, function (r) { return Number(r.xp) || 0; }, '#7c5cd6', 'XP') + '</div>' +
+      '</div>' +
+      '<div class="card"><h3>⚠️ At risk — inactive 7+ days (' + atRisk.length + ')</h3>' +
+      (atRisk.length ? '<div class="ap-tablewrap"><table class="ap-table"><thead><tr><th>User</th><th>Level</th><th>Last active</th><th>Days idle</th><th>XP total</th></tr></thead><tbody>' +
+      atRisk.map(function (u) {
+        const idle = apDaysBetween(today, String(u.last_active).slice(0, 10));
+        return '<tr data-apuser="' + esc(u.user_id) + '"><td><b>' + esc(u.display_name || (u.email || '?').split('@')[0]) +
+          '</b><br><small class="muted">' + esc(u.email || '') + '</small></td>' +
+          '<td>' + esc(String(u.level || '—').toUpperCase()) + '</td>' +
+          '<td>' + esc(String(u.last_active).slice(0, 10)) + '</td>' +
+          '<td><b>' + idle + '</b></td><td>' + (u.xp_total || 0) + '</td></tr>';
+      }).join('') + '</tbody></table></div>' : '<div class="empty">Nobody idle. 🎉</div>') +
+      '</div>');
+    apWireChrome(v);
+    apWireUserRows(v);
+  } catch (e) {
+    main.innerHTML = apShell('dashboard',
+      '<div class="ap-head"><h1>Dashboard</h1></div>' +
+      '<div class="empty">Could not load dashboard: ' + esc((e && e.message) || e) + '</div>');
+    apWireChrome(v);
+  }
+}
+function apWireUserRows(v) {
+  v.querySelectorAll('[data-apuser]').forEach(function (tr) {
+    tr.style.cursor = 'pointer';
+    tr.addEventListener('click', function () { apGo('users', tr.getAttribute('data-apuser')); });
+  });
+}
+async function apRenderUsers(v) {
+  v.innerHTML = apShell('users',
+    '<div class="ap-head"><h1>Users</h1><p class="muted">Everyone on the product. Click a row for the full profile.</p></div>' +
+    '<div class="ap-search"><input type="search" id="ap-q" placeholder="Search name or email…"></div>' +
+    '<div id="ap-users-body"><div class="empty">Loading…</div></div>');
+  apWireChrome(v);
+  const body = v.querySelector('#ap-users-body');
+  let users = [];
+  try {
+    const r = await sb.rpc('admin_user_stats');
+    if (r.error) throw r.error;
+    users = r.data || [];
+  } catch (e) {
+    body.innerHTML = '<div class="empty">Could not load users: ' + esc((e && e.message) || e) + '</div>';
+    return;
+  }
+  const paint = function (q) {
+    q = (q || '').toLowerCase();
+    const rows = users.filter(function (u) {
+      if (!q) return true;
+      return String(u.display_name || '').toLowerCase().indexOf(q) !== -1 ||
+        String(u.email || '').toLowerCase().indexOf(q) !== -1;
+    }).sort(function (a, b) { return (Number(b.xp_total) || 0) - (Number(a.xp_total) || 0); });
+    body.innerHTML = '<div class="muted" style="margin:.4rem 0">' + rows.length + ' users</div>' +
+      '<div class="ap-tablewrap"><table class="ap-table"><thead><tr>' +
+      '<th>User</th><th>Level</th><th>🔥</th><th>XP</th><th>XP 7d</th><th>Min 30d</th><th>Last active</th><th>Joined</th>' +
+      '</tr></thead><tbody>' +
+      rows.map(function (u) {
+        return '<tr data-apuser="' + esc(u.user_id) + '"><td><b>' + esc(u.display_name || (u.email || '?').split('@')[0]) +
+          '</b><br><small class="muted">' + esc(u.email || '') + '</small></td>' +
+          '<td>' + esc(String(u.level || '—').toUpperCase()) + '</td>' +
+          '<td>' + (u.current_streak || 0) + '</td>' +
+          '<td><b>' + (u.xp_total || 0) + '</b></td><td>' + (u.xp_7d || 0) + '</td>' +
+          '<td>' + Math.round((Number(u.seconds_30d) || 0) / 60) + '</td>' +
+          '<td>' + esc(u.last_active ? String(u.last_active).slice(0, 10) : '—') + '</td>' +
+          '<td>' + esc(String(u.created_at || '').slice(0, 10)) + '</td></tr>';
+      }).join('') + '</tbody></table></div>';
+    apWireUserRows(v);
+  };
+  v.querySelector('#ap-q').addEventListener('input', function (ev) { paint(ev.target.value); });
+  paint('');
+}
+async function apRenderUserDetail(v, id) {
+  v.innerHTML = apShell('users',
+    '<div class="ap-head"><a href="/adminpanel/users" data-apnav="users" class="ap-back">← All users</a><h1>User</h1></div>' +
+    '<div class="empty">Loading…</div>');
+  apWireChrome(v);
+  const main = v.querySelector('.ap-main');
+  try {
+    const r = await sb.rpc('admin_panel_user_detail', { p_user_id: id });
+    if (r.error) throw r.error;
+    const d = r.data;
+    if (!d || !d.profile) throw new Error('No access or user not found.');
+    const p = d.profile, t = d.totals || {}, sh = d.shadowing || {}, w = d.words || {};
+    const recent = (sh.recent || []).map(function (a) {
+      return '<tr><td>' + esc(String(a.lesson_date || '').slice(0, 10)) + '</td><td>' + (a.score || 0) + '%</td>' +
+        '<td class="muted">' + esc(String(a.created_at || '').slice(0, 16).replace('T', ' ')) + '</td></tr>';
+    }).join('');
+    main.innerHTML = apShell('users',
+      '<div class="ap-head"><a href="/adminpanel/users" data-apnav="users" class="ap-back">← All users</a>' +
+      '<h1>' + esc(p.display_name || (p.email || '?').split('@')[0]) + '</h1>' +
+      '<p class="muted">' + esc(p.email || '') + ' · joined ' + esc(String(p.created_at || '').slice(0, 10)) +
+      (p.referred_by ? ' · 📣 ' + esc(p.referred_by) : '') + '</p></div>' +
+      '<div class="ap-cards">' +
+      '<div class="card"><h3>Profile</h3>' +
+      '<div class="ap-kv"><span>Level</span><b>' + esc(String(p.level || '—').toUpperCase()) + '</b></div>' +
+      '<div class="ap-kv"><span>Streak</span><b>🔥 ' + (p.current_streak || 0) + '</b></div>' +
+      '<div class="ap-kv"><span>Active days</span><b>' + (t.active_days || 0) + '</b></div>' +
+      '<div class="ap-kv"><span>First / last active</span><b>' + esc(String(t.first_active || '—').slice(0, 10)) + ' → ' + esc(String(t.last_active || '—').slice(0, 10)) + '</b></div>' +
+      '<label class="ap-levelset">Set level <select id="ap-setlevel">' +
+      '<option value="">—</option>' + LEVELS.map(function (lv) {
+        return '<option value="' + lv + '"' + (String(p.level) === lv ? ' selected' : '') + '>' + levelLabel(lv) + '</option>';
+      }).join('') + '</select></label></div>' +
+      '<div class="card"><h3>Totals</h3>' +
+      '<div class="ap-kv"><span>XP total</span><b>' + (t.xp_total || 0) + '</b></div>' +
+      '<div class="ap-kv"><span>Minutes in app</span><b>' + (t.minutes_total || 0) + '</b></div>' +
+      '<div class="ap-kv"><span>Lessons opened</span><b>' + (t.lessons_total || 0) + '</b></div>' +
+      '<div class="ap-kv"><span>Quizzes completed</span><b>' + (t.quizzes_total || 0) + '</b></div>' +
+      '<div class="ap-kv"><span>Podcast minutes</span><b>' + (t.podcast_min_total || 0) + '</b></div></div>' +
+      '<div class="card"><h3>🎤 Shadowing</h3>' +
+      '<div class="ap-kv"><span>Attempts</span><b>' + (sh.attempts || 0) + '</b></div>' +
+      '<div class="ap-kv"><span>Avg score</span><b>' + (sh.avg_score || 0) + '%</b></div>' +
+      '<div class="ap-kv"><span>Listens</span><b>' + (sh.listens || 0) + '</b></div>' +
+      '<div class="ap-kv"><span>Saved words</span><b>' + (w.saved || 0) + '</b></div>' +
+      '<div class="ap-kv"><span>Mistakes</span><b>' + (w.mistakes || 0) + '</b></div>' +
+      '<div class="ap-kv"><span>Quiz attempts</span><b>' + (w.quiz_attempts || 0) + '</b></div></div>' +
+      '</div>' +
+      '<div class="card"><h3>Recent shadowing attempts</h3>' +
+      (recent ? '<div class="ap-tablewrap"><table class="ap-table"><thead><tr><th>Lesson</th><th>Score</th><th>When</th></tr></thead><tbody>' + recent + '</tbody></table></div>'
+        : '<div class="empty">No attempts yet.</div>') + '</div>');
+    apWireChrome(v);
+    const sel = v.querySelector('#ap-setlevel');
+    if (sel) sel.addEventListener('change', async function () {
+      if (!sel.value) return;
+      sel.disabled = true;
+      try {
+        const rr = await sb.rpc('admin_set_user_level', { p_user_id: id, p_level: sel.value });
+        if (rr.error) throw rr.error;
+        apRenderUserDetail(v, id);
+      } catch (e) {
+        alert('Could not set level: ' + ((e && e.message) || e));
+        sel.disabled = false;
+      }
+    });
+  } catch (e) {
+    main.innerHTML = apShell('users',
+      '<div class="ap-head"><a href="/adminpanel/users" data-apnav="users" class="ap-back">← All users</a><h1>User</h1></div>' +
+      '<div class="empty">Could not load user: ' + esc((e && e.message) || e) + '</div>');
+    apWireChrome(v);
+  }
+}
+async function renderAdminPanel() {
+  document.body.classList.add('ap-mode');
+  if (!apPopBound) {
+    apPopBound = true;
+    window.addEventListener('popstate', function () { if (isPanelPath()) renderAdminPanel(); });
+  }
+  apArmIdle();
+  const v = document.getElementById('view');
+  window.scrollTo(0, 0);
+  if (!apVerified) {
+    v.innerHTML = apShell('dashboard', '<div class="empty" style="margin-top:3rem">🔐 Verifying admin access…</div>');
+    apWireChrome(v);
+    const chk = await apBoot();
+    if (!chk.ok) {
+      v.innerHTML = apShell('dashboard', chk.reason === 'login' ? apLoginHTML() : apDeniedHTML());
+      apWireChrome(v);
+      apWireLogin(v);
+      hideSplashSoon();
+      return;
+    }
+    apVerified = { email: chk.email };
+  }
+  const sp = apSubpath();
+  if (sp.section === 'users' && sp.arg) apRenderUserDetail(v, sp.arg);
+  else if (sp.section === 'users') apRenderUsers(v);
+  else apRenderDashboard(v);
+  hideSplashSoon();
 }
 
 document.addEventListener('DOMContentLoaded', init);

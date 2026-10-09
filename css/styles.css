@@ -2558,3 +2558,66 @@ body.duo-playing{padding-bottom:0!important;}
 .sp-hear{border:none;background:rgba(208,82,82,.13);border-radius:4px;padding:.05em .3em;margin:.05em;
   font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-decoration-style:dotted}
 .sp-hear:active{transform:scale(.95)}
+
+/* ==================== Admin panel (/adminpanel) — Phase 1 ==================== */
+.ap-mode #app-header, .ap-mode #tabbar, .ap-mode #landing-header { display: none !important; }
+.ap-wrap { display: flex; min-height: 100vh; background: #f4f1ea; }
+.ap-side { width: 232px; flex: none; background: #1e2732; color: #e8e4d8; display: flex; flex-direction: column;
+  padding: 1.3rem 1rem; position: sticky; top: 0; height: 100vh; }
+.ap-brand { font-size: 1.15rem; font-weight: 800; margin-bottom: .3rem; }
+.ap-who { font-size: .75rem; color: #9aa3b2; word-break: break-all; margin-bottom: 1.2rem; }
+.ap-nav { display: flex; flex-direction: column; gap: .3rem; }
+.ap-nav a { color: #c9cfda; text-decoration: none; padding: .6rem .8rem; border-radius: 10px; font-weight: 600; font-size: .92rem; }
+.ap-nav a:hover { background: rgba(255,255,255,.07); color: #fff; }
+.ap-nav a.on { background: #d97b2b; color: #fff; }
+.ap-foot { margin-top: auto; display: flex; flex-direction: column; gap: .6rem; }
+.ap-logout { background: rgba(255,255,255,.08); color: #e8e4d8; border: none; border-radius: 10px;
+  padding: .55rem; cursor: pointer; font-weight: 600; }
+.ap-logout:hover { background: rgba(255,255,255,.16); }
+.ap-note { font-size: .7rem; color: #6b7484; text-align: center; }
+.ap-main { flex: 1; min-width: 0; padding: 1.6rem 1.8rem 3rem; }
+.ap-head h1 { margin: 0 0 .2rem; font-size: 1.5rem; }
+.ap-head .muted { margin: 0 0 1.1rem; }
+.ap-back { display: inline-block; margin-bottom: .5rem; color: #4f8ef7; text-decoration: none; font-weight: 600; }
+.ap-center { display: flex; justify-content: center; padding-top: 12vh; }
+.ap-login { max-width: 380px; width: 100%; padding: 1.6rem; }
+.ap-login h1 { margin-top: 0; font-size: 1.3rem; }
+.ap-login label { display: block; margin: .8rem 0; font-size: .85rem; font-weight: 600; }
+.ap-login input { display: block; width: 100%; margin-top: .3rem; padding: .6rem .7rem;
+  border: 1px solid #ddd; border-radius: 10px; font-size: 1rem; }
+.ap-err { color: #b3261e; font-size: .85rem; min-height: 1.2em; margin: .3rem 0; }
+.ap-kpis { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .7rem; margin-bottom: 1rem; }
+.ap-kpi { background: #fff; border-radius: 14px; padding: .9rem 1rem; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+.ap-kpi-v { font-size: 1.6rem; font-weight: 800; }
+.ap-kpi-l { font-size: .8rem; color: #6b6252; font-weight: 600; }
+.ap-kpi-s { font-size: .75rem; color: #9a917f; }
+.ap-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: .9rem; margin-bottom: .9rem; }
+.ap-cards .card h3, .ap-main > .card h3 { margin: 0 0 .6rem; font-size: 1rem; }
+.ap-chart { width: 100%; height: auto; display: block; }
+.ap-chart-cap { font-size: 11px; fill: #8a8272; font-weight: 700; }
+.ap-tablewrap { overflow-x: auto; }
+.ap-table { width: 100%; border-collapse: collapse; font-size: .86rem; }
+.ap-table th { text-align: left; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em;
+  color: #8a8272; padding: .5rem .6rem; border-bottom: 2px solid #eee7d8; white-space: nowrap; }
+.ap-table td { padding: .55rem .6rem; border-bottom: 1px solid #f0ead9; vertical-align: top; }
+.ap-table tbody tr:hover { background: #faf7ef; }
+.ap-table small.muted { font-size: .75rem; }
+.ap-search { margin-bottom: .6rem; }
+.ap-search input { width: 100%; max-width: 420px; padding: .6rem .8rem; border: 1px solid #ddd;
+  border-radius: 10px; font-size: .95rem; }
+.ap-kv { display: flex; justify-content: space-between; gap: 1rem; padding: .4rem 0;
+  border-bottom: 1px dashed #eee7d8; font-size: .9rem; }
+.ap-kv span { color: #6b6252; }
+.ap-levelset { display: block; margin-top: .8rem; font-size: .85rem; font-weight: 600; }
+.ap-levelset select { margin-left: .5rem; padding: .45rem .6rem; border-radius: 8px; border: 1px solid #ddd; }
+@media (max-width: 720px) {
+  .ap-wrap { flex-direction: column; }
+  .ap-side { width: 100%; height: auto; position: static; flex-direction: row; align-items: center;
+    gap: .8rem; padding: .8rem 1rem; flex-wrap: wrap; }
+  .ap-brand { margin: 0; font-size: 1rem; }
+  .ap-who { display: none; }
+  .ap-nav { flex-direction: row; }
+  .ap-foot { margin: 0 0 0 auto; flex-direction: row; align-items: center; }
+  .ap-note { display: none; }
+  .ap-main { padding: 1rem 1rem 3rem; }
+}

@@ -1,0 +1,3 @@
+# Serve the SPA shell for the dedicated admin panel path (the app's router
+# takes over from there and enforces the server-side admin gate).
+/adminpanel* /index.html 200
