@@ -1675,7 +1675,7 @@ async function loadPreviewLesson() {
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -1785,6 +1785,7 @@ function show(view, arg) {
   else if (view === 'teacher') renderTeacher(v);
   else if (view === 'planner') renderPlanner(v);
   else if (view === 'become-teacher') renderBecomeTeacher(v);
+  else if (view === 'choose-teacher') renderChooseTeacher(v);
 }
 
 /* ---------------- chrome (headers / profile menu / nav) ---------------- */
@@ -1793,7 +1794,7 @@ function setChrome() {
   /* While the onboarding gate is active the user must see ONLY the onboarding
      screens: hide the app header and tab bar so there is no way to navigate
      into the app without a nickname and a level. */
-  const gating = onboardingNeeded();
+  const gating = onboardingNeeded() || state.view === 'choose-teacher';
   $('#landing-header').classList.toggle('hidden', logged || state.view === 'landing' || state.view === 'signin' || state.view === 'signup');
   $('#app-header').classList.toggle('hidden', !logged || gating);
   $('#tabbar').classList.toggle('hidden', !logged || gating);
@@ -2275,6 +2276,9 @@ function renderTeacher(v) {
       '<button class="btn btn-sm" data-action="copy-teacher-link">Copy</button></div>' +
       '<p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0">Share it with your students — everyone who signs up through it shows up below.</p>' +
     '</div>' +
+    '<div class="card"><h3 style="margin-top:0">🌟 My public profile</h3>' +
+    '<p class="muted" style="font-size:0.85rem;margin-top:-0.3rem">Students see this when choosing a teacher. Add your photo, experience and a short bio.</p>' +
+    '<div id="tch-profile-body"><div class="empty">Loading…</div></div></div>' +
     '<div class="section-title"><h2>My students <span id="tch-count" class="muted"></span></h2>' +
     '<span class="tch-actions"><a class="btn btn-sm" href="#/planner">📅 Weekly planner</a>' +
     '<button class="btn btn-sm" data-action="assignment-compose">＋ New assignment</button></span></div>' +
@@ -2288,6 +2292,98 @@ function renderTeacher(v) {
   loadTeacherRoster();
   loadTeacherCoach();
   loadTeacherAssignments();
+  loadTeacherProfile();
+}
+/* Teacher public profile (photo / experience / bio) — shown to students on
+   the choose-teacher page. Needs supabase-teacher-choose-migration.sql. */
+async function loadTeacherProfile() {
+  const host = document.getElementById('tch-profile-body');
+  if (!host || !state.teacher || !state.user) return;
+  let p = null;
+  try {
+    const r = await sb.from('teachers')
+      .select('display_name,photo_url,experience_years,bio')
+      .eq('user_id', state.user.id).maybeSingle();
+    if (r.error) throw r.error;
+    p = r.data || {};
+  } catch (e) {
+    host.innerHTML = '<p class="muted">Profile editing needs the latest database update.</p>';
+    return;
+  }
+  let previewURL = null, pendingFile = null;
+  const photoHTML = function (url, name) {
+    return url
+      ? '<img id="tch-photo-prev" class="tch-prof-photo" src="' + esc(url) + '" alt="">'
+      : '<div id="tch-photo-prev" class="tch-prof-photo tch-offer-initial">' + esc((name || '?').charAt(0)) + '</div>';
+  };
+  host.innerHTML =
+    '<div class="tch-prof-grid">' +
+    '<div class="tch-prof-photowrap">' + photoHTML(p.photo_url, p.display_name) +
+    '<label class="btn btn-sm" style="cursor:pointer;margin-top:.5rem">Upload photo<input type="file" id="tch-photo-file" accept="image/*" hidden></label></div>' +
+    '<div class="tch-prof-fields">' +
+    '<label>Display name<input id="tch-f-name" maxlength="40" value="' + esc(p.display_name || '') + '"></label>' +
+    '<label>Years of teaching experience<input id="tch-f-exp" type="number" min="0" max="60" placeholder="e.g. 5" value="' + (p.experience_years !== null && p.experience_years !== undefined ? p.experience_years : '') + '"></label>' +
+    '<label>Short bio (one line, max 200)<textarea id="tch-f-bio" rows="2" maxlength="200" placeholder="e.g. IELTS coach — I help adults speak with confidence">' + esc(p.bio || '') + '</textarea></label>' +
+    '<div><button class="btn btn-sm" id="tch-prof-save">Save profile</button> <span class="muted" id="tch-prof-status" style="font-size:0.85rem;margin-left:0.5rem"></span></div>' +
+    '</div></div>' +
+    '<div style="margin-top:.8rem"><div class="muted" style="font-size:0.82rem;margin-bottom:.4rem">Preview — what students see:</div>' +
+    '<div dir="rtl" lang="fa"><div class="tch-offer-grid" id="tch-prof-preview"></div></div></div>';
+  const paintPreview = function () {
+    host.querySelector('#tch-prof-preview').innerHTML = tchOfferCardHTML({
+      display_name: host.querySelector('#tch-f-name').value.trim() || 'Your name',
+      photo_url: previewURL || p.photo_url,
+      experience_years: host.querySelector('#tch-f-exp').value.trim(),
+      bio: host.querySelector('#tch-f-bio').value.trim(),
+      student_count: null, ref_code: ''
+    });
+  };
+  host.querySelector('#tch-photo-file').addEventListener('change', function (ev) {
+    const f = ev.target.files && ev.target.files[0];
+    if (!f) return;
+    pendingFile = f;
+    if (previewURL) { try { URL.revokeObjectURL(previewURL); } catch (e2) {} }
+    previewURL = URL.createObjectURL(f);
+    const prev = host.querySelector('#tch-photo-prev');
+    const img = document.createElement('img');
+    img.id = 'tch-photo-prev'; img.className = 'tch-prof-photo'; img.src = previewURL; img.alt = '';
+    prev.replaceWith(img);
+    paintPreview();
+  });
+  ['tch-f-name', 'tch-f-exp', 'tch-f-bio'].forEach(function (id) {
+    host.querySelector('#' + id).addEventListener('input', paintPreview);
+  });
+  host.querySelector('#tch-prof-save').addEventListener('click', async function () {
+    const status = host.querySelector('#tch-prof-status');
+    const say = function (t, ok) { status.textContent = t; status.style.color = ok ? '#2e7d32' : '#c62828'; };
+    const name = host.querySelector('#tch-f-name').value.trim();
+    const expRaw = host.querySelector('#tch-f-exp').value.trim();
+    const bio = host.querySelector('#tch-f-bio').value.trim();
+    if (name.length < 2) { say('Display name is too short.', false); return; }
+    const exp = expRaw === '' ? null : parseInt(expRaw, 10);
+    if (expRaw !== '' && !(exp >= 0 && exp <= 60)) { say('Experience must be 0–60 years.', false); return; }
+    if (bio.length > 200) { say('Bio is too long (max 200).', false); return; }
+    say('Saving…', true);
+    try {
+      let photoURL = p.photo_url || null;
+      if (pendingFile) {
+        const ext = ((pendingFile.name.split('.').pop() || 'jpg').toLowerCase().replace(/[^a-z0-9]/g, '')) || 'jpg';
+        const path = state.user.id + '/photo.' + ext;
+        const up = await sb.storage.from('teacher-photos')
+          .upload(path, pendingFile, { upsert: true, contentType: pendingFile.type || 'image/jpeg' });
+        if (up.error) throw up.error;
+        photoURL = sb.storage.from('teacher-photos').getPublicUrl(path).data.publicUrl;
+      }
+      const r = await sb.rpc('update_teacher_profile', {
+        p_display_name: name, p_experience_years: exp, p_bio: bio, p_photo_url: photoURL || ''
+      });
+      if (r.error || r.data !== true) throw new Error('save failed');
+      p = { display_name: name, photo_url: photoURL, experience_years: exp, bio: bio };
+      pendingFile = null;
+      say('Saved ✓', true);
+      paintPreview();
+    } catch (e) { say('Save failed: ' + (e.message || e), false); }
+  });
+  paintPreview();
 }
 /* Weekly report card (phase 3): 7-day aggregates across the teacher's students. */
 function renderTeacherWeekly() {
@@ -4758,6 +4854,10 @@ async function enterApp() {
 
 async function afterLogin() {
   if (!state.user.level && !state.user.isAdmin) { go('waiting'); hideSplashSoon(); return; }
+  /* One-time teacher offer for existing users who never chose/skipped. */
+  if (!state.user.isAdmin && state.view !== 'choose-teacher') {
+    try { if (await teacherOfferNeeded()) { go('choose-teacher'); hideSplashSoon(); return; } } catch (e) {}
+  }
   const level = normalizeLevel(state.user.level) || 'b2';
   state.lessons = await loadLessons(level);
   state.lesson = state.lessons[0] || null;
@@ -5125,10 +5225,87 @@ async function saveWaitingLevel() {
     state.justSignedUp = false;
     try { localStorage.removeItem('el_pending_level'); } catch (e) {}
     identifyPushUser(u.user.id, u.user.email, normalizeLevel(el.value));
-    await afterLogin();
+    await maybeOfferTeacher();
   } catch (e) { if (errEl) errEl.textContent = 'Couldn\'t save — check your connection and try again.'; }
 }
 
+/* Teacher offer: after the level is picked (new users) and once for existing
+   users without a teacher (checked in afterLogin). One-time: choosing or
+   skipping marks profiles.teacher_offer_seen so it never shows again. */
+async function teacherOfferNeeded() {
+  if (!sb || !state.user || state.user.demo || state.user.isAdmin || state.teacher) return false;
+  try {
+    const { data: u } = await sb.auth.getUser();
+    if (!u || !u.user) return false;
+    const { data: prof } = await sb.from('profiles')
+      .select('referred_by,teacher_offer_seen').eq('id', u.user.id).maybeSingle();
+    if (!prof || prof.referred_by || prof.teacher_offer_seen) return false;
+    const t = await sb.rpc('approved_teachers_for_offer');
+    return !t.error && (t.data || []).length > 0;
+  } catch (e) { return false; }
+}
+async function maybeOfferTeacher() {
+  try {
+    if (await teacherOfferNeeded()) { go('choose-teacher'); hideSplashSoon(); return; }
+  } catch (e) {}
+  await afterLogin();
+}
+
+/* ---------------- choose your teacher (Persian, one-time offer) ---------------- */
+function tchOfferCardHTML(t) {
+  const photo = t.photo_url
+    ? '<img class="tch-offer-photo" src="' + esc(t.photo_url) + '" alt="' + esc(t.display_name || '') + '">'
+    : '<div class="tch-offer-photo tch-offer-initial">' + esc((t.display_name || '?').trim().charAt(0)) + '</div>';
+  const exp = (t.experience_years !== null && t.experience_years !== undefined && t.experience_years !== '')
+    ? '<div class="muted">🎓 ' + t.experience_years + ' سال سابقه تدریس</div>' : '';
+  const students = t.student_count
+    ? '<div class="muted">👥 ' + t.student_count + ' زبان‌آموز</div>' : '';
+  const bio = t.bio ? '<p class="tch-offer-bio">' + esc(t.bio) + '</p>' : '';
+  return '<div class="tch-offer-card">' + photo +
+    '<b class="tch-offer-name">' + esc(t.display_name || '?') + '</b>' +
+    exp + students + bio +
+    '<button class="onb-cta tch-offer-pick" data-tch-pick="' + esc(t.ref_code || '') + '">انتخاب</button></div>';
+}
+async function renderChooseTeacher(v) {
+  v.innerHTML =
+    '<div class="onb" dir="rtl" lang="fa"><div class="tch-offer">' +
+    '<div class="onb-top"><span class="onb-brand">📖 Muse English</span></div>' +
+    '<h1 class="onb-title">یه استاد رایگان انتخاب کن 🎓</h1>' +
+    '<div class="tch-offer-points">' +
+    '<div class="tch-offer-point">✅ <b>کاملاً رایگانه</b> — هیچ هزینه‌ای نداره</div>' +
+    '<div class="tch-offer-point">✅ <b>پیشرفتت زیر نظر استاده</b> — استاد مسیر یادگیریت رو دنبال می‌کنه</div>' +
+    '<div class="tch-offer-point">✅ <b>سریع‌تر بهتر شو</b> — با کمک استاد، زبانت خیلی زودتر قوی می‌شه</div>' +
+    '</div>' +
+    '<div id="tch-offer-list"><div class="empty">در حال بارگذاری استادها…</div></div>' +
+    '<div style="text-align:center;margin-top:1rem"><button class="onb-skip" id="tch-offer-skip">فعلاً استاد نمی‌خوام</button></div>' +
+    '</div></div>';
+  const list = v.querySelector('#tch-offer-list');
+  v.querySelector('#tch-offer-skip').addEventListener('click', function () { resolveTeacherOffer(null); });
+  try {
+    const r = await sb.rpc('approved_teachers_for_offer');
+    if (r.error) throw r.error;
+    const teachers = r.data || [];
+    if (!teachers.length) { resolveTeacherOffer(null); return; }
+    list.innerHTML = '<div class="tch-offer-grid">' + teachers.map(tchOfferCardHTML).join('') + '</div>';
+    list.querySelectorAll('[data-tch-pick]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        b.disabled = true;
+        resolveTeacherOffer(b.getAttribute('data-tch-pick'));
+      });
+    });
+  } catch (e) {
+    list.innerHTML = '<div class="empty">خطا در بارگذاری — <button class="btn btn-sm" id="tch-offer-retry">تلاش دوباره</button></div>';
+    const rb = list.querySelector('#tch-offer-retry');
+    if (rb) rb.addEventListener('click', function () { renderChooseTeacher(v); });
+  }
+}
+async function resolveTeacherOffer(refCode) {
+  try {
+    const r = await sb.rpc('resolve_teacher_offer', { p_ref_code: refCode || '' });
+    if (r.error) throw r.error;
+  } catch (e) { /* offline: offer will show again next login; still let them in */ }
+  await afterLogin();
+}
 async function checkLevel() {
   if (state.user.demo) { await afterLogin(); return; }
   try {
