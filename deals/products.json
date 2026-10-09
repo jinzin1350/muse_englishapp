@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "body-shop-coconut-hair-oil",
+      "name_fa": "روغن موی نارگیل بادی‌شاپ (۲۰۰ میلی‌لیتر)",
+      "name_en": "The Body Shop Coconut Oil Brilliantly Nourishing Pre-Shampoo Hair Oil 200ml",
+      "price_cad": 12.0,
+      "regular_cad": 29.5,
+      "discount_pct": 59,
+      "added_fa": "جمعه، ۹ اکتبر ۲۰۲۶",
+      "image": "img/body-shop-coconut-hair-oil.jpg",
+      "url": "https://www.amazon.ca/dp/B074HB2LVB?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "روغن نارگیل وگان برای موهای خشک و آسیب‌دیده؛ Amazon's Choice با تخفیف عالی."
+    },
+    {
+      "id": "delonghi-la-specialista-touch",
+      "name_fa": "اسپرسوساز دلونگی لا اسپشالیستا تاچ",
+      "name_en": "De'Longhi La Specialista Touch Espresso Machine with Grinder",
+      "price_cad": 799.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "جمعه، ۹ اکتبر ۲۰۲۶",
+      "image": "img/delonghi-la-specialista-touch.jpg",
+      "url": "https://www.amazon.ca/dp/B0F6DY1DGR?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "آسیاب مخروطی ایتالیایی، ۱۰ دستور نوشیدنی و صفحه لمسی؛ اسپرسوی حرفه‌ای در خانه."
+    },
+    {
       "id": "chosen-foods-avocado-oil",
       "name_fa": "روغن آووکادوی چوزن فودز ۷۵۰ میلی‌لیتر",
       "name_en": "Chosen Foods 100% Pure Avocado Oil 25.3 oz (750ml)",
@@ -83,34 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "برند شماره‌یک واتر فلاسر با تأیید انجمن دندانپزشکی کانادا؛ تمیزکننده‌ی عمیق لثه و بین دندان‌ها."
-    },
-    {
-      "id": "sunpow-85ft-hose-reel",
-      "name_fa": "قرقره شیلنگ خودجمع‌شونده‌ی ۸۵ فوتی SUNPOW",
-      "name_en": "SUNPOW 85ft Retractable Garden Hose Reel",
-      "price_cad": 111.99,
-      "regular_cad": 159.99,
-      "discount_pct": 30,
-      "added_fa": "چهارشنبه، ۷ اکتبر ۲۰۲۶",
-      "image": "img/sunpow-85ft-hose-reel.jpg",
-      "url": "https://www.amazon.ca/dp/B0CRQZL8D4?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "شیلنگ باغ را بدون گره و دردسر جمع می‌کند؛ اتصالات برنجی و دسته‌ی اسپری ۱۰ حالته."
-    },
-    {
-      "id": "mikasa-v200w-volleyball",
-      "name_fa": "توپ والیبال میکاسا V200W",
-      "name_en": "MIKASA V200W Indoor Volleyball - Official FIVB Game Ball",
-      "price_cad": 79.99,
-      "regular_cad": 120.0,
-      "discount_pct": 33,
-      "added_fa": "چهارشنبه، ۷ اکتبر ۲۰۲۶",
-      "image": "img/mikasa-v200w-volleyball.jpg",
-      "url": "https://www.amazon.ca/dp/B07S5PH3H9?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "توپ رسمی مسابقات جهانی والیبال — چنین قیمتی تابحال دیده نشده"
     }
   ],
   "updated_fa": "جمعه ۱۷ مهر"
