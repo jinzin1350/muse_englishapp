@@ -6115,6 +6115,12 @@ async function wireShadowingPractice(body, m) {
         } catch (e) { /* table optional until the migration is run */ }
       }
       markSpSentenceDone(i);
+      /* Feed the progress report instantly (works for demo users too). */
+      const spList = document.getElementById('sp-sentences');
+      if (spList && typeof paintSpReport === 'function') {
+        (spList._spRows = spList._spRows || []).push({ transcript: '[s' + (i + 1) + '] ', score: a.accuracy });
+        paintSpReport(spList);
+      }
     } catch (e) {
       resBox.innerHTML = '<div class="empty">⚠️ Something went wrong: ' +
         esc(String((e && e.message) || e)) + '. Try again.</div>';
@@ -6163,19 +6169,18 @@ async function wireShadowingPractice(body, m) {
    `shadowing_attempts` (transcript "[sN] ..."), so progress is derived from
    them — no new table, works across devices. */
 async function restoreSpProgress(list, m) {
-  if (!cloudReady() || !m || !m.date || !sb || !list) return;
-  let rows = null;
+  if (!list) return;
+  list._spRows = list._spRows || [];
+  paintSpReport(list);
+  if (!cloudReady() || !m || !m.date || !sb) return;
   try {
-    const res = await sb.from('shadowing_attempts').select('transcript')
+    const res = await sb.from('shadowing_attempts').select('transcript,score')
       .eq('user_id', state.user.id).eq('lesson_date', m.date).limit(300);
-    if (!res.error) rows = res.data || [];
-  } catch (e) {}
-  if (!rows) return;
-  const done = {};
-  rows.forEach(function (r) {
-    const mm = String(r.transcript || '').match(/^\[s(\d+)\]/);
-    if (mm) done[parseInt(mm[1], 10)] = 1;
-  });
+    if (res.error) return;
+    list._spRows = res.data || [];
+  } catch (e) { return; }
+  const info = paintSpReport(list);
+  const done = info.done;
   const sents = list.querySelectorAll('.sp-sent');
   if (!sents.length) return;
   sents.forEach(function (el) {
@@ -6194,6 +6199,36 @@ async function restoreSpProgress(list, m) {
     });
     list.parentNode.insertBefore(b, list);
   }
+}
+/* Progress report strip above the sentences: practiced count, progress bar,
+   average best score. Recomputed from list._spRows, so attempts made in this
+   session update it instantly (works for demo users too). */
+function paintSpReport(list) {
+  const done = {}, best = {};
+  (list._spRows || []).forEach(function (r) {
+    const mm = String(r.transcript || '').match(/^\[s(\d+)\]/);
+    if (!mm) return;
+    const n = parseInt(mm[1], 10);
+    done[n] = 1;
+    const sc = Number(r.score) || 0;
+    if (!(n in best) || sc > best[n]) best[n] = sc;
+  });
+  const total = list.querySelectorAll('.sp-sent').length;
+  const count = Object.keys(done).length;
+  const scores = Object.keys(best).map(function (k) { return best[k]; });
+  const avg = scores.length ? Math.round(scores.reduce(function (x, y) { return x + y; }, 0) / scores.length) : 0;
+  const pct = total ? Math.round(count / total * 100) : 0;
+  let host = list.parentNode.querySelector('#sp-report');
+  if (!host) {
+    host = document.createElement('div');
+    host.id = 'sp-report';
+    host.className = 'sp-report';
+    list.parentNode.insertBefore(host, list);
+  }
+  host.innerHTML = '<div class="sp-report-top"><span>📊 <b>' + count + '/' + total + '</b> practiced</span>' +
+    (count ? '<span>avg score <b>' + avg + '%</b></span>' : '<span class="muted">not started yet</span>') + '</div>' +
+    '<div class="sp-pbar"><div class="sp-pfill" style="width:' + pct + '%"></div></div>';
+  return { done: done, count: count, total: total };
 }
 function markSpSentenceDone(i) {
   const el = document.querySelector('#sp-sentences .sp-sent[data-i="' + i + '"]');

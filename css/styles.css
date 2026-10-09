@@ -2523,6 +2523,11 @@ body.duo-playing{padding-bottom:0!important;}
   border:1px solid rgba(46,125,50,.35);background:#eef6ee;color:#1b5e20;
   font-weight:800;font-size:.92rem;cursor:pointer;font-family:inherit}
 .sp-continue:hover{background:#e2f0e2}
+/* Shadowing progress report strip */
+.sp-report{margin:.7rem 0;padding:.7rem .9rem;background:var(--mist);border-radius:12px}
+.sp-report-top{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;margin-bottom:.45rem}
+.sp-pbar{height:8px;border-radius:99px;background:rgba(0,0,0,.08);overflow:hidden}
+.sp-pfill{height:100%;border-radius:99px;background:linear-gradient(90deg,#66bb6a,#2e7d32);transition:width .4s}
 /* Bookmarked words */
 .save-word-btn{background:none;border:none;font-size:1.05rem;cursor:pointer;opacity:.32;padding:.25rem;line-height:1}
 .save-word-btn.saved{opacity:1}
