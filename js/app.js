@@ -5766,15 +5766,17 @@ function analyzeSpeech(target, said) {
 }
 
 /* Word-by-word attempt result (shared by live results and restored history). */
-function spSentResultHTML(a, said, pts) {
+function spSentResultHTML(a, said, pts, slim) {
   const cls = a.accuracy >= 80 ? 'great' : (a.accuracy >= 50 ? 'ok' : 'low');
-  let head;
-  if (!a.saidWords.length) {
-    head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">—</div>' +
-      '<div class="sp-score-label">We couldn\'t catch any words. Try again.</div></div>';
-  } else {
-    head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">' + a.accuracy + '%</div>' +
-      '<div class="sp-score-label">of this sentence' + (pts ? ' · +' + pts + ' pts' : '') + '</div></div>';
+  let head = '';
+  if (!slim) {
+    if (!a.saidWords.length) {
+      head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">—</div>' +
+        '<div class="sp-score-label">We couldn\'t catch any words. Try again.</div></div>';
+    } else {
+      head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">' + a.accuracy + '%</div>' +
+        '<div class="sp-score-label">of this sentence' + (pts ? ' · +' + pts + ' pts' : '') + '</div></div>';
+    }
   }
   const words = a.targetWords.map(function (w, idx) {
     if (a.matched.has(idx)) return '<span class="sp-w ok">' + esc(w) + '</span>';
@@ -6149,8 +6151,6 @@ async function wireShadowingPractice(body, m) {
 
 
   list.addEventListener('click', function (ev) {
-    const pill = ev.target.closest('.sp-score-pill');
-    if (pill) { toggleSpAttemptDetail(pill); return; }
     const hear = ev.target.closest('.sp-hear');
     if (hear) { speakWord(hear.getAttribute('data-w')); return; }
     const play = ev.target.closest('.sp-play');
@@ -6236,47 +6236,31 @@ function paintSpReport(list) {
   host.innerHTML = '<div class="sp-report-top"><span>📊 <b>' + count + '/' + total + '</b> practiced</span>' +
     (count ? '<span>avg score <b>' + avg + '%</b></span>' : '<span class="muted">not started yet</span>') + '</div>' +
     '<div class="sp-pbar"><div class="sp-pfill" style="width:' + pct + '%"></div></div>';
-  /* Per-sentence score pill (button) next to the sentence number: tap it to
-     see the last attempt's mistakes. Best score is kept. */
+  /* Always-open last-attempt detail under each practiced sentence: "You said"
+     plus the target with missed words highlighted (tappable 🔊). No score
+     numbers — just what to fix. Skipped while the live result box is showing
+     (same info), so nothing is duplicated. */
   list.querySelectorAll('.sp-sent').forEach(function (el) {
     const n = parseInt(el.getAttribute('data-i'), 10) + 1;
-    let pill = el.querySelector('.sp-score-pill');
-    if (n in best) {
-      const sc = best[n];
-      if (!pill) {
-        pill = document.createElement('button');
-        pill.type = 'button';
-        pill.className = 'sp-score-pill';
-        pill.title = 'See what you got wrong';
-        const num = el.querySelector('.sp-sent-num');
-        if (num && num.parentNode) num.parentNode.insertBefore(pill, num.nextSibling);
-        else el.insertBefore(pill, el.firstChild);
+    let det = el.querySelector('.sp-sent-detail');
+    const said = (list._spSaid || {})[n];
+    const target = (list._spSentences || [])[n - 1];
+    const liveBox = el.querySelector('.sp-sent-result');
+    const liveVisible = liveBox && liveBox.innerHTML.trim().length > 0;
+    if (said && target && !liveVisible && typeof analyzeSpeech === 'function') {
+      if (!det) {
+        det = document.createElement('div');
+        det.className = 'sp-sent-detail';
+        const top = el.querySelector('.sp-sent-top');
+        if (top && top.parentNode) top.parentNode.insertBefore(det, top.nextSibling);
+        else el.insertBefore(det, el.querySelector('.sp-sent-live'));
       }
-      pill.textContent = sc + '%';
-      pill.className = 'sp-score-pill ' + (sc >= 80 ? 'great' : (sc >= 50 ? 'ok' : 'low'));
-    } else if (pill) pill.remove();
+      const a = analyzeSpeech(target, said);
+      det.innerHTML = '<div class="sp-detail-title">Last attempt — what to fix</div>' +
+        spSentResultHTML(a, said, 0, true);
+    } else if (det) det.remove();
   });
   return { done: done, count: count, total: total };
-}
-/* Toggle the restored last-attempt detail under a sentence: "You said …"
-   plus the target with missed words highlighted (tappable 🔊).
-   Recomputed from the stored transcript — no extra columns needed. */
-function toggleSpAttemptDetail(pill) {
-  const sentEl = pill.closest('.sp-sent');
-  const list = document.getElementById('sp-sentences');
-  if (!sentEl || !list) return;
-  const old = sentEl.querySelector('.sp-sent-detail');
-  if (old) { old.remove(); return; }
-  const i = parseInt(sentEl.getAttribute('data-i'), 10);
-  const said = (list._spSaid || {})[i + 1];
-  const target = (list._spSentences || [])[i];
-  if (!said || !target || typeof analyzeSpeech !== 'function') return;
-  const a = analyzeSpeech(target, said);
-  const d = document.createElement('div');
-  d.className = 'sp-sent-detail';
-  d.innerHTML = '<div class="sp-detail-title">Last attempt — what to fix</div>' + spSentResultHTML(a, said, 0);
-  const live = sentEl.querySelector('.sp-sent-live');
-  sentEl.insertBefore(d, live);
 }
 function markSpSentenceDone(i) {
   const el = document.querySelector('#sp-sentences .sp-sent[data-i="' + i + '"]');
