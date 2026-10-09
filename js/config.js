@@ -13,5 +13,5 @@ const APP_CONFIG = {
   ONESIGNAL_APP_ID: "d35b23db-850b-4451-ba3b-3f7d631d022d",
 
   // The admin's email address — only this user sees the Admin panel
-  ADMIN_EMAIL: "engi.alireza@gmail.com"
+  ADMIN_EMAILS: ["engi.alireza@gmail.com", "farahani.mehradd@gmail.com"]
 };

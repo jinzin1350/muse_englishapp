@@ -4637,7 +4637,8 @@ async function enterApp() {
       sb.rpc('set_referred_by', { p_code: rc }).then(function () {}, function () {});
     }
   } catch (e) {}
-  const isAdmin = (u.email || '').toLowerCase() === String(APP_CONFIG.ADMIN_EMAIL).toLowerCase();
+  const adminEmails = APP_CONFIG.ADMIN_EMAILS || [];
+  const isAdmin = adminEmails.indexOf((u.email || '').toLowerCase()) !== -1;
   state.user = {
     id: u.id, email: u.email, level: level, isAdmin: isAdmin, demo: false,
     displayName: (prof && prof.display_name) || null,
@@ -4994,7 +4995,7 @@ const DEMO_USERS = [
 async function demoLogin(asAdmin) {
   state.user = {
     id: 'demo-learner',
-    email: asAdmin ? String(APP_CONFIG.ADMIN_EMAIL) : 'demo-learner@example.com',
+    email: asAdmin ? String((APP_CONFIG.ADMIN_EMAILS || [])[0] || 'admin@example.com') : 'demo-learner@example.com',
     level: 'b2',
     displayName: 'Demo',
     isAdmin: !!asAdmin,
