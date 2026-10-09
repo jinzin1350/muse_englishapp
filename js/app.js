@@ -7625,30 +7625,67 @@ function localDayRangeUTC(day) {
   const start = new Date(day + 'T00:00:00');
   return { start: start.toISOString(), end: new Date(start.getTime() + 86400000).toISOString() };
 }
-async function fetchDailyStudy(day, userIds) {
-  const range = localDayRangeUTC(day);
-  const start = range.start, end = range.end;
-  const statsById = {}, triesById = {}, listensById = {};
+function addDaysStr(day, delta) {
+  const d = new Date(day + 'T12:00:00');
+  d.setDate(d.getDate() + delta);
+  const p = function (x) { return String(x).padStart(2, '0'); };
+  return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
+}
+function rangeLabel(range) {
+  return range === '7' ? 'last 7 days' : range === '30' ? 'last 30 days' : range === 'all' ? 'all time' : 'this day';
+}
+/* Range-aware study fetch. range: 'day' | '7' | '30' | 'all'.
+   'day' keeps the exact single-day behavior (local-day shadowing window,
+   UTC-keyed daily_stats row). '7'/'30' aggregate from (n-1) days ago through
+   today; 'all' has no lower bound (rows only exist since registration). */
+async function fetchStudyRange(range, day, userIds) {
   const scoped = function (q) { return (userIds && userIds.length) ? q.in('user_id', userIds) : q; };
-  const res = await Promise.all([
-    scoped(sb.from('daily_stats').select('user_id,seconds_in_app,lessons_opened,quizzes_completed,xp_earned,podcast_seconds').eq('day', day).limit(2000)),
-    scoped(sb.from('shadowing_attempts').select('user_id').gte('created_at', start).lt('created_at', end).limit(5000)),
-    scoped(sb.from('app_events').select('user_id').eq('event', 'shadowing_listen').gte('created_at', start).lt('created_at', end).limit(5000))
-  ]);
-  (res[0].data || []).forEach(function (r) { statsById[r.user_id] = r; });
+  const statsById = {}, triesById = {}, listensById = {};
+  let statsQ = scoped(sb.from('daily_stats').select('user_id,seconds_in_app,lessons_opened,quizzes_completed,xp_earned,podcast_seconds'));
+  let triesQ = scoped(sb.from('shadowing_attempts').select('user_id'));
+  let listensQ = scoped(sb.from('app_events').select('user_id').eq('event', 'shadowing_listen'));
+  if (range === 'day') {
+    const rg = localDayRangeUTC(day);
+    statsQ = statsQ.eq('day', day).limit(2000);
+    triesQ = triesQ.gte('created_at', rg.start).lt('created_at', rg.end).limit(5000);
+    listensQ = listensQ.gte('created_at', rg.start).lt('created_at', rg.end).limit(5000);
+  } else {
+    if (range === '7' || range === '30') {
+      const startDay = addDaysStr(day, -(parseInt(range, 10) - 1));
+      statsQ = statsQ.gte('day', startDay);
+      const startISO = localDayRangeUTC(startDay).start;
+      triesQ = triesQ.gte('created_at', startISO);
+      listensQ = listensQ.gte('created_at', startISO);
+    }
+    statsQ = statsQ.limit(10000);
+    triesQ = triesQ.limit(10000);
+    listensQ = listensQ.limit(10000);
+  }
+  const res = await Promise.all([statsQ, triesQ, listensQ]);
+  (res[0].data || []).forEach(function (r) {
+    const o = statsById[r.user_id] || (statsById[r.user_id] = { seconds_in_app: 0, lessons_opened: 0, quizzes_completed: 0, xp_earned: 0, podcast_seconds: 0 });
+    o.seconds_in_app += Number(r.seconds_in_app) || 0;
+    o.lessons_opened += Number(r.lessons_opened) || 0;
+    o.quizzes_completed += Number(r.quizzes_completed) || 0;
+    o.xp_earned += Number(r.xp_earned) || 0;
+    o.podcast_seconds += Number(r.podcast_seconds) || 0;
+  });
   (res[1].data || []).forEach(function (r) { triesById[r.user_id] = (triesById[r.user_id] || 0) + 1; });
   (res[2].data || []).forEach(function (r) { listensById[r.user_id] = (listensById[r.user_id] || 0) + 1; });
   return { statsById: statsById, triesById: triesById, listensById: listensById };
 }
-function dailyStudyShell(prefix, day, title) {
+function dailyStudyShell(prefix, day, range, title) {
+  const opts = [['day', 'Day'], ['7', 'Last 7 days'], ['30', 'Last 30 days'], ['all', 'All time']]
+    .map(function (o) { return '<option value="' + o[0] + '"' + (range === o[0] ? ' selected' : '') + '>' + o[1] + '</option>'; }).join('');
   return '<div class="card"><div class="tch-weekly-title">' + title + '</div>' +
     '<div class="adm-filters" style="margin:0.6rem 0 0.2rem;align-items:center">' +
-    '<label class="muted" style="font-size:0.85rem">Day <input type="date" id="' + prefix + '-daily-day" value="' + esc(day) + '" max="' + todayStr() + '"></label>' +
+    '<label class="muted" style="font-size:0.85rem">Range <select id="' + prefix + '-daily-range">' + opts + '</select></label>' +
+    '<label class="muted" id="' + prefix + '-daily-daywrap" style="font-size:0.85rem' + (range !== 'day' ? ';display:none' : '') + '">Day <input type="date" id="' + prefix + '-daily-day" value="' + esc(day) + '" max="' + todayStr() + '"></label>' +
     '<span class="muted" id="' + prefix + '-daily-sum" style="font-size:0.85rem"></span></div>' +
     '<div id="' + prefix + '-daily-body"><div class="empty">Loading…</div></div></div>';
 }
-function dailyStudyTableHTML(rows) {
-  if (!rows.length) return '<div class="empty">No study activity on this day.</div>';
+function dailyStudyTableHTML(rows, emptyText) {
+  if (!rows.length) return '<div class="empty">' + esc(emptyText || 'No study activity.') + '</div>';
   return '<div class="card tch-table-card" style="margin-top:0.5rem"><div class="tch-table daily-table">' +
     '<div class="tch-tr tch-th"><span>#</span><span>Student</span><span>⏱ min</span><span>📖</span>' +
     '<span>❓</span><span>⚡ XP</span><span>🎧 min</span><span>🎤</span><span>👂</span></div>' +
@@ -7677,8 +7714,14 @@ async function loadAdminDaily() {
   const host = document.getElementById('admin-daily');
   if (!host) return;
   const day = state.adminDailyDay || todayStr();
+  const range = state.adminDailyRange || 'day';
   state.adminDailyDay = day;
-  host.innerHTML = dailyStudyShell('adm', day, '📊 Daily study — who studied how much');
+  state.adminDailyRange = range;
+  host.innerHTML = dailyStudyShell('adm', day, range, '📊 Daily study — who studied how much');
+  const rangeSel = document.getElementById('adm-daily-range');
+  if (rangeSel) rangeSel.addEventListener('change', function () {
+    state.adminDailyRange = rangeSel.value; loadAdminDaily();
+  });
   const dayInput = document.getElementById('adm-daily-day');
   if (dayInput) dayInput.addEventListener('change', function () {
     if (dayInput.value) { state.adminDailyDay = dayInput.value; loadAdminDaily(); }
@@ -7686,7 +7729,7 @@ async function loadAdminDaily() {
   const body = document.getElementById('adm-daily-body');
   const sum = document.getElementById('adm-daily-sum');
   try {
-    const f = await fetchDailyStudy(day, null);
+    const f = await fetchStudyRange(range, day, null);
     const nameOf = {};
     ((state.adminStats || {}).users || []).forEach(function (u) {
       nameOf[u.user_id] = { name: u.display_name || (u.email || '?').split('@')[0], level: u.level };
@@ -7707,8 +7750,8 @@ async function loadAdminDaily() {
     }).filter(dailyStudyActive);
     rows.sort(function (a, b) { return b.min - a.min; });
     const totalMin = rows.reduce(function (a, r) { return a + r.min; }, 0);
-    if (sum) sum.textContent = rows.length + ' active · ' + totalMin + ' total min';
-    if (body) body.innerHTML = dailyStudyTableHTML(rows);
+    if (sum) sum.textContent = rows.length + ' active · ' + totalMin + ' total min · ' + rangeLabel(range);
+    if (body) body.innerHTML = dailyStudyTableHTML(rows, 'No study activity in ' + rangeLabel(range) + '.');
   } catch (e) {
     if (body) body.innerHTML = '<div class="empty">Could not load daily study: ' + esc((e && e.message) || e) + '</div>';
   }
@@ -7718,8 +7761,14 @@ async function loadTeacherDaily() {
   if (!host) return;
   const roster = state.teacherStudents || [];
   const day = state.teacherDailyDay || todayStr();
+  const range = state.teacherDailyRange || 'day';
   state.teacherDailyDay = day;
-  host.innerHTML = dailyStudyShell('tch', day, '📅 Daily study — your students');
+  state.teacherDailyRange = range;
+  host.innerHTML = dailyStudyShell('tch', day, range, '📅 Daily study — your students');
+  const rangeSel = document.getElementById('tch-daily-range');
+  if (rangeSel) rangeSel.addEventListener('change', function () {
+    state.teacherDailyRange = rangeSel.value; loadTeacherDaily();
+  });
   const dayInput = document.getElementById('tch-daily-day');
   if (dayInput) dayInput.addEventListener('change', function () {
     if (dayInput.value) { state.teacherDailyDay = dayInput.value; loadTeacherDaily(); }
@@ -7728,15 +7777,15 @@ async function loadTeacherDaily() {
   const sum = document.getElementById('tch-daily-sum');
   if (!roster.length) { if (body) body.innerHTML = '<div class="empty">No students yet.</div>'; return; }
   try {
-    const f = await fetchDailyStudy(day, roster.map(function (s) { return s.user_id; }));
+    const f = await fetchStudyRange(range, day, roster.map(function (s) { return s.user_id; }));
     const rows = roster.map(function (s) {
       return dailyStudyRow(s.user_id, f, s.display_name || '?', s.level);
     });
     rows.sort(function (a, b) { return b.min - a.min; });
     const active = rows.filter(dailyStudyActive).length;
     const totalMin = rows.reduce(function (a, r) { return a + r.min; }, 0);
-    if (sum) sum.textContent = active + ' / ' + rows.length + ' studied · ' + totalMin + ' total min';
-    if (body) body.innerHTML = dailyStudyTableHTML(rows);
+    if (sum) sum.textContent = active + ' / ' + rows.length + ' studied · ' + totalMin + ' total min · ' + rangeLabel(range);
+    if (body) body.innerHTML = dailyStudyTableHTML(rows, 'No study activity in ' + rangeLabel(range) + '.');
   } catch (e) {
     if (body) body.innerHTML = '<div class="empty">Could not load daily study: ' + esc((e && e.message) || e) + '</div>';
   }
@@ -7746,7 +7795,7 @@ function renderAdmin(v) {
   v.innerHTML = '<h1>Admin</h1>' +
     '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>📊 Analytics</b> — everyone, everything.</p>' +
     '<div id="admin-analytics"><div class="empty">Loading…</div></div></div>' +
-    '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>📊 Daily study</b> — who studied how much, per day.</p>' +
+    '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>📊 Daily study</b> — who studied how much, per day or range.</p>' +
     '<div id="admin-daily"><div class="empty">Loading…</div></div></div>' +
     '<div class="card plain"><p class="muted" style="margin:0 0 0.6rem"><b>🍎 Teachers</b> — requests, invite codes and manual add.</p>' +
     '<div id="admin-teachers"><div class="empty">Loading…</div></div></div>' +
