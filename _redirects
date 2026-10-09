@@ -2,5 +2,7 @@
 # takes over from there and enforces the server-side admin gate).
 # NOTE: /adminpanel is unusable — a dashboard-level 308 redirect hijacks that
 # prefix (outside this repo). The panel lives at /manage instead.
-/manage /index.html 200
+# NOTE 2: only the splat rule — an exact-match 200 rewrite for the bare path
+# inexplicably 308s on Pages; the bare path falls through to the SPA fallback
+# (200 + index.html), which the router handles identically.
 /manage/* /index.html 200
