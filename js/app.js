@@ -1755,6 +1755,12 @@ function onRoute() {
       if (window.location.hash !== '#/home') { window.location.hash = '#/home'; return; }
     }
     if ((view === 'admin' || view === 'admin-teacher') && !state.user.isAdmin) view = 'home';
+    /* Offer already resolved (e.g. browser Back after choosing) -> don't trap them here. */
+    if (view === 'choose-teacher' && !state.user.isAdmin) {
+      teacherOfferNeeded().then(function (needed) {
+        if (!needed && parseHash().name === 'choose-teacher') go('home');
+      }, function () {});
+    }
   }
   show(view, r.arg);
 }
@@ -5366,6 +5372,10 @@ async function resolveTeacherOffer(refCode) {
     const r = await sb.rpc('resolve_teacher_offer', { p_ref_code: refCode || '' });
     if (r.error) throw r.error;
   } catch (e) { /* offline: offer will show again next login; still let them in */ }
+  /* FIX 2026-10-09: navigate into the app. Before this, afterLogin() re-rendered
+     #/choose-teacher (hash never changed), so choosing a teacher looped back
+     to the same page forever. */
+  go('home');
   await afterLogin();
 }
 async function checkLevel() {
