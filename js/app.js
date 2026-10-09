@@ -437,6 +437,91 @@ async function removeMistake(id) {
   }
   lsSet('mistakes', lsGet('mistakes').filter(function (x) { return x.id !== id; }));
 }
+/* ---------------- saved / bookmarked words ----------------
+   Hard words the user bookmarks from lesson word cards, to review and
+   practice later in the Review tab. Cloud table `saved_words` when signed
+   in (falls back to localStorage, same pattern as mistakes). */
+function savedWordKey(word, date) { return String(word || '').toLowerCase() + '|' + (date || ''); }
+async function getSavedWords() {
+  if (cloudReady()) {
+    try {
+      const res = await sb.from('saved_words').select('*')
+        .eq('user_id', state.user.id).order('created_at', { ascending: false }).limit(500);
+      if (!res.error && res.data) { state.savedWords = res.data; return res.data; }
+    } catch (e) {}
+  }
+  const arr = lsGet('savedWords');
+  state.savedWords = arr;
+  return arr;
+}
+function isWordSaved(word, date) {
+  const k = savedWordKey(word, date);
+  return (state.savedWords || lsGet('savedWords')).some(function (x) {
+    return savedWordKey(x.word, x.lesson_date) === k;
+  });
+}
+async function toggleSaveWord(word, date) {
+  const m = state.lesson;
+  const w = ((m && m.words) || []).find(function (x) { return x.word === word; }) || { word: word };
+  const k = savedWordKey(word, date);
+  const wasSaved = isWordSaved(word, date);
+  if (cloudReady()) {
+    try {
+      if (wasSaved) {
+        await sb.from('saved_words').delete().eq('user_id', state.user.id)
+          .eq('word', word).eq('lesson_date', date || null);
+      } else {
+        await sb.from('saved_words').insert({
+          user_id: state.user.id, word: word, level: (m && m.level) || null, lesson_date: date || null,
+          meaning: w.meaning || '', pronunciation: w.pronunciation || '', example: w.example || '',
+          persian: w.persian || '', pos: w.pos || '', word_audio: w.word_audio || '', photo: w.photo || ''
+        });
+      }
+      await getSavedWords();
+      return !wasSaved;
+    } catch (e) {}
+  }
+  const arr = lsGet('savedWords');
+  if (wasSaved) lsSet('savedWords', arr.filter(function (x) { return savedWordKey(x.word, x.lesson_date) !== k; }));
+  else {
+    arr.unshift({ id: uid(), word: word, level: (m && m.level) || '', lesson_date: date || '',
+      meaning: w.meaning || '', pronunciation: w.pronunciation || '', example: w.example || '',
+      persian: w.persian || '', pos: w.pos || '', word_audio: w.word_audio || '', photo: w.photo || '' });
+    lsSet('savedWords', arr.slice(0, 500));
+  }
+  state.savedWords = lsGet('savedWords');
+  return !wasSaved;
+}
+async function removeSavedWord(id, word, date) {
+  if (cloudReady() && id) {
+    try {
+      const res = await sb.from('saved_words').delete().eq('id', id).eq('user_id', state.user.id);
+      if (!res.error) { await getSavedWords(); return; }
+    } catch (e) {}
+  }
+  const k = savedWordKey(word, date);
+  lsSet('savedWords', lsGet('savedWords').filter(function (x) {
+    return String(x.id) !== String(id) && savedWordKey(x.word, x.lesson_date) !== k;
+  }));
+  state.savedWords = lsGet('savedWords');
+}
+/* Paint the saved state onto already-rendered word-card bookmark buttons
+   (no full tab re-render, so nothing flickers). */
+async function refreshSavedWordButtons(body) {
+  const arr = await getSavedWords();
+  const set = {};
+  arr.forEach(function (x) { set[savedWordKey(x.word, x.lesson_date)] = 1; });
+  body.querySelectorAll('.save-word-btn[data-action="toggle-save-word"]').forEach(function (b) {
+    b.classList.toggle('saved', !!set[savedWordKey(b.getAttribute('data-word'), b.getAttribute('data-date'))]);
+  });
+}
+async function toggleSaveWordBtn(btn) {
+  btn.disabled = true;
+  try {
+    const nowSaved = await toggleSaveWord(btn.getAttribute('data-word'), btn.getAttribute('data-date'));
+    btn.classList.toggle('saved', nowSaved);
+  } finally { btn.disabled = false; }
+}
 async function getOverallAverage() {
   return avgOfAttempts(await getAttempts());
 }
@@ -5491,7 +5576,7 @@ function renderLessonTab(body) {
     else if (tab === 'shadowing') markStep(m.date, 'shadowing');
     else if (tab === 'grammar') markStep(m.date, 'grammar');
   }
-  if (tab === 'words') { body.innerHTML = wordsTabHTML(m); observeWordsEnd(body, m); }
+  if (tab === 'words') { body.innerHTML = wordsTabHTML(m); observeWordsEnd(body, m); refreshSavedWordButtons(body); }
   else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); }
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); wireShadowingPractice(body, m); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
@@ -5526,6 +5611,7 @@ function wordsTabHTML(m) {
         (w.word_audio
           ? '<button class="speaker-btn" data-action="play-track" data-src="' + esc(w.word_audio) + '" data-title="' + esc(w.word) + '" aria-label="Hear pronunciation of ' + esc(w.word) + '">🔊</button>'
           : '') +
+        '<button class="save-word-btn" data-action="toggle-save-word" data-word="' + esc(w.word) + '" data-date="' + esc(m.date || '') + '" aria-label="Bookmark this word" title="Save for later practice">🔖</button>' +
       '</div>' +
       (w.pos ? '<div class="word-pos">' + esc(w.pos) + '</div>' : '') +
       (w.pronunciation ? '<div class="word-pron">/' + esc(w.pronunciation) + '/</div>' : '') +
@@ -6028,6 +6114,7 @@ async function wireShadowingPractice(body, m) {
           });
         } catch (e) { /* table optional until the migration is run */ }
       }
+      markSpSentenceDone(i);
     } catch (e) {
       resBox.innerHTML = '<div class="empty">⚠️ Something went wrong: ' +
         esc(String((e && e.message) || e)) + '. Try again.</div>';
@@ -6067,6 +6154,50 @@ async function wireShadowingPractice(body, m) {
     }
     startRecording(i);
   });
+  /* Restore this lesson's progress: sentences already attempted stay marked
+     as done, with a banner to continue from the first unfinished one. */
+  restoreSpProgress(list, m);
+}
+
+/* Shadowing progress persistence: attempts are already stored per lesson in
+   `shadowing_attempts` (transcript "[sN] ..."), so progress is derived from
+   them — no new table, works across devices. */
+async function restoreSpProgress(list, m) {
+  if (!cloudReady() || !m || !m.date || !sb || !list) return;
+  let rows = null;
+  try {
+    const res = await sb.from('shadowing_attempts').select('transcript')
+      .eq('user_id', state.user.id).eq('lesson_date', m.date).limit(300);
+    if (!res.error) rows = res.data || [];
+  } catch (e) {}
+  if (!rows) return;
+  const done = {};
+  rows.forEach(function (r) {
+    const mm = String(r.transcript || '').match(/^\[s(\d+)\]/);
+    if (mm) done[parseInt(mm[1], 10)] = 1;
+  });
+  const sents = list.querySelectorAll('.sp-sent');
+  if (!sents.length) return;
+  sents.forEach(function (el) {
+    const n = parseInt(el.getAttribute('data-i'), 10) + 1;
+    if (done[n]) el.classList.add('sp-done');
+  });
+  let firstOpen = 1;
+  while (firstOpen <= sents.length && done[firstOpen]) firstOpen++;
+  if (firstOpen > 1 && firstOpen <= sents.length && !list.parentNode.querySelector('.sp-continue')) {
+    const b = document.createElement('button');
+    b.className = 'sp-continue';
+    b.innerHTML = '▶ Continue from sentence ' + firstOpen + ' of ' + sents.length;
+    b.addEventListener('click', function () {
+      const el = list.querySelector('.sp-sent[data-i="' + (firstOpen - 1) + '"]');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    list.parentNode.insertBefore(b, list);
+  }
+}
+function markSpSentenceDone(i) {
+  const el = document.querySelector('#sp-sentences .sp-sent[data-i="' + i + '"]');
+  if (el) el.classList.add('sp-done');
 }
 
 function quizTabHTML(m) {
@@ -6132,6 +6263,9 @@ async function startQuiz(kind, dateStr) {
     questions = arr.map(function (mk) {
       return { question: mk.question, options: mk.options, answer: mk.answer, kind: mk.kind || 'word', mistakeId: mk.id };
     });
+  } else if (kind === 'saved') {
+    if (!m) m = { date: todayStr(), level: (state.user && state.user.level) || '', theme: '' };
+    questions = buildSavedDeck(await getSavedWords());
   }
   if (!questions.length) return;
   /* Fix 2: resume an in-progress word/grammar quiz instead of restarting it. */
@@ -7327,7 +7461,8 @@ function renderMistakes(v) {
 }
 
 function paintMistakes(v, arr) {
-  let html = '<h1>Review</h1><p class="muted">Words you missed, ready to practice again. Get one right and it leaves the list.</p>';
+  let html = '<h1>Review</h1><div id="saved-words-sec"><div class="empty">Loading saved words…</div></div>' +
+    '<p class="muted">Words you missed, ready to practice again. Get one right and it leaves the list.</p>';
   if (!arr.length) {
     html += '<div class="empty">Nothing to review — nice work! 🎉</div>';
   } else {
@@ -7345,6 +7480,64 @@ function paintMistakes(v, arr) {
     }).join('');
   }
   v.innerHTML = html;
+  loadSavedWordsSection();
+}
+
+/* Bookmarked words block at the top of Review: list + practice quiz. */
+async function loadSavedWordsSection() {
+  const host = document.getElementById('saved-words-sec');
+  if (!host) return;
+  const arr = await getSavedWords();
+  host.innerHTML = savedWordsHTML(arr);
+}
+function savedWordsHTML(arr) {
+  if (!arr.length) return '';
+  const practicable = arr.length >= 2;
+  return '<div class="card"><div class="tch-weekly-title">🔖 Saved words <span class="muted">(' + arr.length + ')</span></div>' +
+    '<p class="muted" style="font-size:0.82rem;margin:0.25rem 0 0.6rem">Hard words you bookmarked — review them here, or run a practice quiz.</p>' +
+    (practicable
+      ? '<div style="margin:0 0 0.6rem"><button class="btn btn-sm" data-action="practice-saved">▶ Practice ' + arr.length + ' words</button></div>'
+      : '<p class="muted" style="font-size:0.8rem">Bookmark at least 2 words to unlock the practice quiz.</p>') +
+    arr.map(function (x) {
+      return '<div class="saved-row">' +
+        '<div class="saved-word"><b>' + esc(x.word) + '</b>' +
+        (x.pronunciation ? '<span class="muted"> /' + esc(x.pronunciation) + '/</span>' : '') +
+        (x.persian ? '<div dir="auto" style="font-size:0.85rem">' + esc(x.persian) + '</div>' : '') +
+        (x.meaning ? '<div class="muted" style="font-size:0.82rem">' + esc(x.meaning) + '</div>' : '') +
+        '<div class="muted" style="font-size:0.75rem">' + esc(x.lesson_date || '') + (x.level ? ' · ' + esc(String(x.level).toUpperCase()) : '') + '</div></div>' +
+        '<div class="saved-actions">' +
+        (x.word_audio ? '<button class="speaker-btn" data-action="play-track" data-src="' + esc(x.word_audio) + '" data-title="' + esc(x.word) + '" aria-label="Hear ' + esc(x.word) + '">🔊</button>' : '') +
+        '<button class="save-word-btn saved" data-action="unsave-word" data-id="' + esc(x.id || '') + '" data-word="' + esc(x.word) + '" data-date="' + esc(x.lesson_date || '') + '" aria-label="Remove bookmark" title="Remove">❌</button>' +
+        '</div></div>';
+    }).join('') + '</div>';
+}
+/* Practice quiz built from bookmarked words: Persian->English + listening,
+   distractors drawn from the user's own saved pool. */
+function buildSavedDeck(arr) {
+  const deck = [];
+  const words = arr.filter(function (x) { return x && x.word; });
+  const distractors = function (word, n) {
+    return shuffleArr(words.filter(function (x) { return x.word !== word; }))
+      .slice(0, n).map(function (x) { return x.word; });
+  };
+  shuffleArr(words.slice()).forEach(function (x) {
+    if (!x.persian) return;
+    const opts = shuffleArr([x.word].concat(distractors(x.word, 3)));
+    if (opts.length < 2) return;
+    deck.push({
+      qtype: 'reverse', question: '«' + x.persian + '» به انگلیسی چی میشه؟', rtl: true,
+      options: opts, answer: opts.indexOf(x.word), kind: 'saved', word: x.word
+    });
+  });
+  shuffleArr(words.filter(function (x) { return x.word_audio; })).slice(0, 3).forEach(function (x) {
+    const opts = shuffleArr([x.word].concat(distractors(x.word, 3)));
+    if (opts.length < 2) return;
+    deck.push({
+      qtype: 'listen', question: 'Which word did you hear?', audio: x.word_audio,
+      persian: x.persian, options: opts, answer: opts.indexOf(x.word), kind: 'saved', word: x.word
+    });
+  });
+  return shuffleArr(deck).slice(0, 14);
 }
 
 /* ---------------- admin view ---------------- */
@@ -7912,6 +8105,19 @@ function bindEvents() {
       getMistakes().then(function (arr) {
         if (arr.length) startQuiz('mistakes');
         else go('review');
+      });
+    }
+    else if (a === 'practice-saved') {
+      getSavedWords().then(function (arr) {
+        if (arr.length >= 2) startQuiz('saved');
+        else go('review');
+      });
+    }
+    else if (a === 'toggle-save-word') { toggleSaveWordBtn(t); }
+    else if (a === 'unsave-word') {
+      removeSavedWord(t.getAttribute('data-id'), t.getAttribute('data-word'), t.getAttribute('data-date')).then(function () {
+        if (state.view === 'review') renderMistakes($('#view'));
+        else if (state.view === 'lesson' && state.lessonTab === 'words') renderLessonTab($('#lesson-body'));
       });
     }
     else if (a === 'review-today') {
