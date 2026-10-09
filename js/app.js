@@ -9072,7 +9072,7 @@ async function apRenderTeachers(v) {
   apWireChrome(v);
   const host = v.querySelector('#ap-teachers-host');
   try {
-    const t = await sb.from('teachers').select('id,user_id,ref_code,display_name,status,requested_at').order('requested_at', { ascending: true });
+    const t = await sb.from('teachers').select('id,user_id,ref_code,display_name,status,requested_at,photo_url,experience_years,bio').order('requested_at', { ascending: true });
     if (t.error) throw t.error;
     const teachers = t.data || [];
     const ids = teachers.map(function (x) { return x.user_id; });
@@ -9099,8 +9099,18 @@ async function apRenderTeachers(v) {
       }).join('') : '<p class="muted">No pending requests.</p>') + '</div>' +
       (active.length ? '<div class="card"><h3>✓ Active teachers (' + active.length + ')</h3>' +
         active.map(function (x) {
-          return '<div class="tch-admin-row"><div><b>' + esc(x.display_name) + '</b><br>' +
-            '<span class="muted" style="font-size:0.8rem"><code>' + esc(x.ref_code) + '</code> · ' + (counts[x.ref_code] || 0) + ' students</span></div>' +
+          var hasProf = x.photo_url || x.experience_years || x.bio;
+          var profHtml = hasProf
+            ? '<div class="apt-prof">' +
+              (x.photo_url ? '<img class="apt-prof-photo" src="' + esc(x.photo_url) + '" alt="">' : '') +
+              '<div class="apt-prof-txt">' +
+              (x.experience_years ? '<div>🎓 <b>' + esc(String(x.experience_years)) + '</b> years teaching experience</div>' : '<div class="muted">Experience not set</div>') +
+              (x.bio ? '<div class="muted">' + esc(x.bio) + '</div>' : '<div class="muted">No bio yet</div>') +
+              '</div></div>'
+            : '<div class="muted" style="font-size:0.8rem">⚠️ No public profile yet — students see a default card.</div>';
+          return '<div class="tch-admin-row"><div style="flex:1;min-width:0"><b>' + esc(x.display_name) + '</b><br>' +
+            '<span class="muted" style="font-size:0.8rem"><code>' + esc(x.ref_code) + '</code> · ' + (counts[x.ref_code] || 0) + ' students</span>' +
+            '<div style="margin-top:0.45rem">' + profHtml + '</div></div>' +
             '<div class="tch-admin-actions"><button class="btn btn-ghost btn-sm" data-apt-reject="' + x.id + '">Remove</button></div></div>';
         }).join('') + '</div>' : '') +
       (rejected.length ? '<p class="muted">Rejected (' + rejected.length + ')</p>' : '') +
