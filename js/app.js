@@ -6228,6 +6228,22 @@ function paintSpReport(list) {
   host.innerHTML = '<div class="sp-report-top"><span>📊 <b>' + count + '/' + total + '</b> practiced</span>' +
     (count ? '<span>avg score <b>' + avg + '%</b></span>' : '<span class="muted">not started yet</span>') + '</div>' +
     '<div class="sp-pbar"><div class="sp-pfill" style="width:' + pct + '%"></div></div>';
+  /* Per-sentence score pill next to the sentence number (best score kept). */
+  list.querySelectorAll('.sp-sent').forEach(function (el) {
+    const n = parseInt(el.getAttribute('data-i'), 10) + 1;
+    let pill = el.querySelector('.sp-score');
+    if (n in best) {
+      const sc = best[n];
+      if (!pill) {
+        pill = document.createElement('span');
+        const num = el.querySelector('.sp-sent-num');
+        if (num && num.parentNode) num.parentNode.insertBefore(pill, num.nextSibling);
+        else el.insertBefore(pill, el.firstChild);
+      }
+      pill.textContent = sc + '%';
+      pill.className = 'sp-score ' + (sc >= 80 ? 'great' : (sc >= 50 ? 'ok' : 'low'));
+    } else if (pill) pill.remove();
+  });
   return { done: done, count: count, total: total };
 }
 function markSpSentenceDone(i) {
