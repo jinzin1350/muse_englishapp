@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "tplink-re405be-2026-10-10",
+      "name_fa": "تقویت‌کننده وای‌فای ۷ تی‌پی‌لینک",
+      "name_en": "TP-Link RE405BE BE6500 Wi-Fi 7 Range Extender",
+      "price_cad": 161.49,
+      "regular_cad": 229.99,
+      "discount_pct": 30,
+      "added_fa": "شنبه، ۱۰ اکتبر ۲۰۲۶",
+      "image": "img/tplink-re405be-2026-10-10.jpg",
+      "url": "https://www.amazon.ca/dp/B0H4HNRT7W?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "وای‌فای ۷ دو بانده با سرعت ۶۵۰۰ مگابیت و پورت ۲٫۵ گیگ — مخصوص اعضای پرایم"
+    },
+    {
+      "id": "hotwheels-ultimate-garage-2026-10-10",
+      "name_fa": "ست گاراژ نهایی هات‌ویلز سیتی",
+      "name_en": "Hot Wheels City Ultimate Garage Track Set",
+      "price_cad": 139.99,
+      "regular_cad": 199.99,
+      "discount_pct": 30,
+      "added_fa": "شنبه، ۱۰ اکتبر ۲۰۲۶",
+      "image": "img/hotwheels-ultimate-garage-2026-10-10.jpg",
+      "url": "https://www.amazon.ca/dp/B0BN15NTGG?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پیست چهارطبقه با دو ماشین، اژدهای غول‌پیکر و جای پارک برای بیش از ۵۰ ماشین"
+    },
+    {
+      "id": "lego-mclaren-w1-2026-10-10",
+      "name_fa": "لگوی اسپید چمپیونز مک‌لارن دبلیو۱",
+      "name_en": "LEGO Speed Champions McLaren W1 77257",
+      "price_cad": 19.99,
+      "regular_cad": 34.99,
+      "discount_pct": 43,
+      "added_fa": "شنبه، ۱۰ اکتبر ۲۰۲۶",
+      "image": "img/lego-mclaren-w1-2026-10-10.jpg",
+      "url": "https://www.amazon.ca/dp/B0FMS87VKQ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "ست ۲۸۷ قطعه‌ای سوپرکار مک‌لارن با مینی‌فیگور راننده؛ هدیه‌ای عالی برای بچه‌ها"
+    },
+    {
+      "id": "niimbot-b1-2026-10-10",
+      "name_fa": "چاپگر برچسب حرارتی نایمبات بی۱",
+      "name_en": "NIIMBOT B1 Label Maker Machine with Tape",
+      "price_cad": 37.98,
+      "regular_cad": 59.99,
+      "discount_pct": 37,
+      "added_fa": "شنبه، ۱۰ اکتبر ۲۰۲۶",
+      "image": "img/niimbot-b1-2026-10-10.jpg",
+      "url": "https://www.amazon.ca/dp/B0BCW4YMR8?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "چاپگر بلوتوثی قابل‌حمل برای برچسب‌های خانه، مدرسه و کسب‌وکار — بدون جوهر"
+    },
+    {
       "id": "body-shop-coconut-hair-oil",
       "name_fa": "روغن موی نارگیل بادی‌شاپ (۲۰۰ میلی‌لیتر)",
       "name_en": "The Body Shop Coconut Oil Brilliantly Nourishing Pre-Shampoo Hair Oil 200ml",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "گریل، دودی، سرخ‌کن بادی و فر در یک دستگاه؛ بدون گاز و ذغال، مناسب بالکن و پاسیو."
-    },
-    {
-      "id": "sony-wh-ch720n",
-      "name_fa": "هدفون نویزکنسلینگ سونی WH-CH720N",
-      "name_en": "Sony WH-CH720N Noise Cancelling Wireless Headphones",
-      "price_cad": 118.0,
-      "regular_cad": 249.99,
-      "discount_pct": 52,
-      "added_fa": "جمعه، ۹ اکتبر ۲۰۲۶",
-      "image": "img/sony-wh-ch720n.jpg",
-      "url": "https://www.amazon.ca/dp/B0BS1QCFHX?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "نویزکنسلینگ تطبیقی و ۳۵ ساعت باتری؛ عالی برای رفت‌وآمد و کار از خانه."
-    },
-    {
-      "id": "jbl-live-780nc",
-      "name_fa": "هدفون جی‌بی‌ال لایو ۷۸۰ ان‌سی",
-      "name_en": "JBL Live 780NC Wireless Over-Ear Noise Cancelling Headphones",
-      "price_cad": 169.98,
-      "regular_cad": 299.98,
-      "discount_pct": 43,
-      "added_fa": "پنجشنبه، ۸ اکتبر ۲۰۲۶",
-      "image": "img/jbl-live-780nc.jpg",
-      "url": "https://www.amazon.ca/dp/B0GLLTQZKK?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "هدفون جدید جی‌بی‌ال با نویزکنسلینگ تطبیقی و تا ۸۰ ساعت شارژدهی"
-    },
-    {
-      "id": "sennheiser-momentum-true-wireless-4",
-      "name_fa": "ایربادز سنهایزر مومنتوم ۴",
-      "name_en": "Sennheiser Momentum True Wireless 4 Smart Earbuds with ANC",
-      "price_cad": 259.95,
-      "regular_cad": 429.95,
-      "discount_pct": 40,
-      "added_fa": "پنجشنبه، ۸ اکتبر ۲۰۲۶",
-      "image": "img/sennheiser-momentum-true-wireless-4.jpg",
-      "url": "https://www.amazon.ca/dp/B0CTQ5YZYP?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پرچم‌دار سنهایزر با نویزکنسلینگ تطبیقی و ۳۰ ساعت شارژدهی"
-    },
-    {
-      "id": "waterpik-aquarius-flosser",
-      "name_fa": "واتر فلاسر Waterpik مدل Aquarius",
-      "name_en": "Waterpik Aquarius Water Flosser WP-660",
-      "price_cad": 69.99,
-      "regular_cad": 124.99,
-      "discount_pct": 44,
-      "added_fa": "چهارشنبه، ۷ اکتبر ۲۰۲۶",
-      "image": "img/waterpik-aquarius-flosser.jpg",
-      "url": "https://www.amazon.ca/dp/B00HFQQ0VU?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "برند شماره‌یک واتر فلاسر با تأیید انجمن دندانپزشکی کانادا؛ تمیزکننده‌ی عمیق لثه و بین دندان‌ها."
     }
   ],
-  "updated_fa": "جمعه ۱۷ مهر"
+  "updated_fa": "شنبه ۱۸ مهر"
 }
