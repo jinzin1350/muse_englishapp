@@ -594,7 +594,8 @@ var PTS_LABELS = {
   streak_7: '7-day streak',
   mystery_box: 'Mystery box',
   podcast_milestone: 'Podcast milestone',
-  shadowing_speaking: 'Speaking practice'
+  shadowing_speaking: 'Speaking practice',
+  quest_daily: 'کوئست روزانه'
 };
 
 function ptsKey(kind) {
@@ -640,6 +641,8 @@ async function awardPoints(action, points, ref, noPopup, extraMeta) {
         trackEvent('lesson_open', Object.assign({ date: ref }, extraMeta || {}));
       }
       bumpStat('xp_earned', points);
+      if (points > 0) bumpLocalXPDay(points);
+      refreshQuests();
     } else {
       const pend = ptsGet('pending');
       pend[key] = { action: action, points: points, ref: ref, ts: Date.now() };
@@ -707,6 +710,106 @@ async function refreshMyPoints() {
 }
 
 /* ---------- celebratory points popup (prize-like, queued, auto-dismiss) ---------- */
+/* ---------- Daily quests (2026-10-09): 3 quests/day on home, bonus XP on claim.
+   Progress is derived from existing local signals (day progress, awarded-points
+   log, local XP-day counter); the reward goes through awardPoints() so the
+   scores upsert keeps claims idempotent across devices. ---------- */
+function xpDayKey() {
+  try { return 'ela_xpday_' + (state.user && state.user.email ? state.user.email : 'anon') + '_' + todayStr(); }
+  catch (e) { return null; }
+}
+function bumpLocalXPDay(points) {
+  try {
+    const k = xpDayKey();
+    if (!k) return;
+    const cur = parseInt(localStorage.getItem(k) || '0', 10) || 0;
+    localStorage.setItem(k, String(cur + points));
+  } catch (e) {}
+}
+function localXPDay() {
+  try {
+    const k = xpDayKey();
+    if (!k) return 0;
+    return parseInt(localStorage.getItem(k) || '0', 10) || 0;
+  } catch (e) { return 0; }
+}
+function questDefs() {
+  return [
+    { key: 'lesson', icon: '📝', xp: 30, target: 5, title: 'درس امروز رو کامل کن',
+      progress: function () { try { return dayDoneCount(todayStr()); } catch (e) { return 0; } },
+      unit: 'قدم' },
+    { key: 'xp100', icon: '⚡', xp: 20, target: 100, title: '۱۰۰ XP کسب کن',
+      progress: function () { return localXPDay(); },
+      unit: 'XP' },
+    { key: 'quiz', icon: '🎯', xp: 20, target: 1, title: 'کوییز کلمات رو کامل کن',
+      progress: function () {
+        try { return ptsGet('done')['word_quiz|' + todayStr()] ? 1 : 0; }
+        catch (e) { return 0; }
+      },
+      unit: '' }
+  ];
+}
+function questClaimKey(key) {
+  try { return 'ela_quest_' + (state.user && state.user.email ? state.user.email : 'anon') + '_' + todayStr() + '_' + key; }
+  catch (e) { return null; }
+}
+function questClaimed(key) {
+  try { const k = questClaimKey(key); return k ? !!localStorage.getItem(k) : false; }
+  catch (e) { return false; }
+}
+function claimQuest(key) {
+  try {
+    const qs = questDefs();
+    let q = null;
+    for (let i = 0; i < qs.length; i++) if (qs[i].key === key) q = qs[i];
+    if (!q || questClaimed(key)) return;
+    if (q.progress() < q.target) return;
+    const k = questClaimKey(key);
+    if (k) localStorage.setItem(k, '1');
+    awardPoints('quest_daily', q.xp, key + '|' + todayStr());
+    paintQuests();
+  } catch (e) {}
+}
+function questCardHTML(q) {
+  const p = Math.min(q.progress(), q.target);
+  const done = p >= q.target;
+  const claimed = questClaimed(q.key);
+  const pct = q.target ? Math.round((p / q.target) * 100) : 0;
+  const progTxt = q.unit ? p + ' / ' + q.target + ' ' + q.unit : (done ? 'انجام شد' : 'انجام نشده');
+  let action;
+  if (claimed) {
+    action = '<span class="hq-done">✅ دریافت شد</span>';
+  } else if (done) {
+    action = '<button class="hq-claim" data-quest-claim="' + q.key + '">دریافت +' + q.xp + ' XP</button>';
+  } else {
+    action = '<span class="hq-bonus">+' + q.xp + ' XP</span>';
+  }
+  return '<div class="hq-row' + (done ? ' is-done' : '') + '">' +
+    '<span class="hq-ico" aria-hidden="true">' + q.icon + '</span>' +
+    '<span class="hq-main"><span class="hq-title">' + q.title + '</span>' +
+    '<span class="hq-bar"><span style="width:' + pct + '%"></span></span>' +
+    '<span class="hq-prog">' + progTxt + '</span></span>' +
+    action + '</div>';
+}
+function paintQuests() {
+  try {
+    const host = document.getElementById('home-quests-wrap');
+    if (!host || state.view !== 'home') return;
+    if (!state.user || state.user.demo) { host.innerHTML = ''; return; }
+    const qs = questDefs();
+    host.innerHTML = '<section class="hq-card" dir="rtl" lang="fa" aria-label="کوئست‌های امروز">' +
+      '<div class="hq-head"><span class="hq-htitle">🎯 کوئست‌های امروز</span>' +
+      '<span class="hq-hsub">کامل کن، XP بگیر</span></div>' +
+      qs.map(questCardHTML).join('') + '</section>';
+    const btns = host.querySelectorAll('[data-quest-claim]');
+    for (let i = 0; i < btns.length; i++) {
+      (function (b) {
+        b.addEventListener('click', function () { claimQuest(b.getAttribute('data-quest-claim')); });
+      })(btns[i]);
+    }
+  } catch (e) {}
+}
+function refreshQuests() { paintQuests(); }
 var ptsPopQueue = [];
 var ptsPopShowing = false;
 
@@ -1160,6 +1263,7 @@ function markStep(dateStr, step, extra) {
     day.updatedAt = Date.now();
     all[dateStr] = day;
     localStorage.setItem(progressKey(), JSON.stringify(all));
+    refreshQuests();
   } catch (e) {}
 }
 function dayDoneCount(dateStr) {
@@ -1675,7 +1779,7 @@ async function loadPreviewLesson() {
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -1781,6 +1885,7 @@ function show(view, arg) {
   else if (view === 'lesson') renderLesson(v, arg);
   else if (view === 'lessons') renderLessons(v);
   else if (view === 'scores') renderScores(v);
+  else if (view === 'progress') renderProgress(v);
   else if (view === 'review') renderMistakes(v);
   else if (view === 'profile') renderProfile(v);
   else if (view === 'challenge') renderChallenge(v);
@@ -5629,9 +5734,10 @@ function renderHome(v) {
   paintHome(v, lsGet('mistakes'), lsGet('scores'));
   refreshHomeStreak();
   refreshHomeworkCard();
+  paintQuests();
   if (cloudReady()) {
     Promise.all([getMistakes(), getAttempts()]).then(function (res) {
-      if (state.view === 'home' && !state.quiz) paintHome(v, res[0], res[1]);
+      if (state.view === 'home' && !state.quiz) { paintHome(v, res[0], res[1]); paintQuests(); }
     }).catch(function () { /* keep the local paint */ });
   }
 }
@@ -5651,6 +5757,9 @@ function paintHome(v, mistakes, attempts) {
 
   // 0c — Homework from teacher (filled async; empty when none pending)
   html += '<div id="home-hw-wrap"></div>';
+
+  // 0d — Daily quests (painted with local progress)
+  html += '<div id="home-quests-wrap"></div>';
 
   // 1 — Today's lesson (mockup v5 lesson card with illustrated hero)
   if (!today) {
@@ -5680,6 +5789,10 @@ function paintHome(v, mistakes, attempts) {
   // 3 — Progress: most recent meaningful activity, compact empty state
   html += '<div class="section-title"><h2>Progress</h2>' +
     (attempts.length ? '<a class="btn btn-ghost btn-sm" href="#/scores">View all</a>' : '') + '</div>';
+  html += '<a class="pg-link" href="#/progress" dir="rtl" lang="fa" aria-label="مشاهده پیشرفت من">' +
+    '<span class="pg-link-ico" aria-hidden="true">📈</span>' +
+    '<span class="pg-link-txt"><b>پیشرفت من</b><span>آمار کامل تمرینت: XP، استریک، روزهای فعال</span></span>' +
+    '<span class="pg-link-go" aria-hidden="true">‹</span></a>';
   if (!attempts.length) {
     html += '<div class="card plain"><p class="muted" style="margin:0">No activity yet — finish a quiz and your latest result will show up here.</p></div>';
   } else {
@@ -7738,6 +7851,68 @@ function paintScores(v, arr) {
   v.innerHTML = html;
   refreshRewardsSection();
   loadScoreAnalytics();
+}
+
+/* ---------------- My Progress dashboard (2026-10-09): engagement view.
+   One my_progress() RPC -> stat cards + 7-day XP chart. Persian, RTL. -------- */
+var PG_WDAYS = ['یکشنبه', 'دوشنبه', 'سه‌شنبه', 'چهارشنبه', 'پنجشنبه', 'جمعه', 'شنبه'];
+function pgWeekdayLabel(dayStr) {
+  try {
+    const d = new Date(dayStr + 'T12:00:00');
+    return PG_WDAYS[d.getDay()] || '';
+  } catch (e) { return ''; }
+}
+function pgStatCard(ico, num, label) {
+  return '<div class="pg-stat"><span class="pg-ico" aria-hidden="true">' + ico + '</span>' +
+    '<b class="pg-num">' + num + '</b><span class="pg-lbl">' + label + '</span></div>';
+}
+function paintProgress(v, d) {
+  let html = '<div class="pg-wrap" dir="rtl" lang="fa"><h1 class="tut-anchor">📈 پیشرفت من</h1>';
+  if (!d || !d.ok) {
+    html += '<div class="empty">هنوز آماری ثبت نشده — یه درس رو کامل کن تا اینجا پر بشه! 🚀</div></div>';
+    v.innerHTML = html;
+    return;
+  }
+  const totalXP = Number(d.total_xp) || 0;
+  html += '<div class="pg-grid">' +
+    pgStatCard('⚡', totalXP, 'مجموع XP') +
+    pgStatCard('🔥', Number(d.current_streak) || 0, 'استریک فعلی') +
+    pgStatCard('🏆', Number(d.longest_streak) || 0, 'بهترین استریک') +
+    pgStatCard('📅', Number(d.active_days) || 0, 'روزهای فعال') +
+    pgStatCard('⏱', Number(d.total_minutes) || 0, 'دقیقه تمرین') +
+    pgStatCard('📚', Number(d.saved_words) || 0, 'کلمه ذخیره‌شده') +
+    '</div>';
+  const week = Array.isArray(d.week) ? d.week : [];
+  const maxXP = Math.max.apply(null, week.map(function (w) { return Number(w.xp) || 0; }).concat([1]));
+  html += '<div class="section-title"><h2>فعالیت ۷ روز اخیر</h2></div>';
+  if (!week.length || maxXP <= 1) {
+    html += '<div class="card plain"><p class="muted" style="margin:0">این هفته هنوز فعالیتی ثبت نشده — امروز شروع کن! 💪</p></div>';
+  } else {
+    html += '<div class="card plain"><div class="pg-chart">' + week.map(function (w) {
+      const xp = Number(w.xp) || 0;
+      const h = Math.max(4, Math.round((xp / maxXP) * 90));
+      return '<div class="pg-bar" title="' + esc(String(w.day)) + ': ' + xp + ' XP">' +
+        '<div class="pg-fill" style="height:' + h + 'px"></div>' +
+        '<div class="pg-xp">' + (xp > 0 ? xp : '') + '</div>' +
+        '<div class="pg-d">' + pgWeekdayLabel(String(w.day)) + '</div></div>';
+    }).join('') + '</div></div>';
+  }
+  if (totalXP > 0 && Number(d.active_days) > 0) {
+    html += '<div class="card plain pg-note">میانگین <b>' + Math.round(totalXP / Number(d.active_days)) + ' XP</b> در هر روز فعال — همین‌طور ادامه بده! 🔥</div>';
+  }
+  html += '</div>';
+  v.innerHTML = html;
+}
+function renderProgress(v) {
+  v.innerHTML = '<div class="pg-wrap" dir="rtl" lang="fa"><h1 class="tut-anchor">📈 پیشرفت من</h1><div class="empty">در حال بارگذاری…</div></div>';
+  if (!cloudReady()) { paintProgress(v, null); return; }
+  sb.rpc('my_progress').then(function (r) {
+    if (state.view !== 'progress') return;
+    if (r.error || !r.data) paintProgress(v, null);
+    else paintProgress(v, r.data);
+  }, function () {
+    if (state.view === 'progress') paintProgress(v, null);
+  });
 }
 async function loadScoreAnalytics() {
   const host = document.getElementById('score-analytics');
