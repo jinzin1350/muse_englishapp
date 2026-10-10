@@ -1,6 +1,48 @@
 {
   "products": [
     {
+      "id": "dreo-hm311-4l-humidifier",
+      "name_fa": "دستگاه بخور سرد درئو ۴ لیتری",
+      "name_en": "DREO HM311 4L Top-Fill Cool Mist Humidifier",
+      "price_cad": 46.54,
+      "regular_cad": 58.69,
+      "discount_pct": 21,
+      "added_fa": "شنبه، ۱۰ اکتبر ۲۰۲۶",
+      "image": "img/dreo-hm311-4l-humidifier.jpg",
+      "url": "https://www.amazon.ca/dp/B0CCY6VG8Z?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "هوای خشک زمستانی خونه رو مرطوب نگه می‌داره؛ پرکردن از بالا، بی‌صدا و مناسب اتاق خواب"
+    },
+    {
+      "id": "starfrit-rock-terra-10pc-ceramic-set",
+      "name_fa": "ست قابلمه ۱۰ تکه استارفریت دِ راک ترا",
+      "name_en": "Starfrit The Rock Terra 10-Piece Ceramic Cookware Set, PFAS-Free",
+      "price_cad": 99.97,
+      "regular_cad": 159.97,
+      "discount_pct": 38,
+      "added_fa": "شنبه، ۱۰ اکتبر ۲۰۲۶",
+      "image": "img/starfrit-rock-terra-10pc-ceramic-set.jpg",
+      "url": "https://www.amazon.ca/dp/B0FX381R3M?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "سطح سرامیکی بدون PFAS با تکنولوژی Rock.Tec؛ پخت سالم‌تر، نچسب و تمیزکاری راحت"
+    },
+    {
+      "id": "nutribullet-znbf30400zc-blender-1200w",
+      "name_fa": "مخلوط‌کن نوتریبولت ۱۲۰۰ وات",
+      "name_en": "NutriBullet ZNBF30400ZC Blender 1200W, Dark Gray",
+      "price_cad": 79.99,
+      "regular_cad": 139.99,
+      "discount_pct": 43,
+      "added_fa": "شنبه، ۱۰ اکتبر ۲۰۲۶",
+      "image": "img/nutribullet-znbf30400zc-blender-1200w.jpg",
+      "url": "https://www.amazon.ca/dp/B07YLVKBJ9?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "قدرت ۱۲۰۰ وات برای اسموتی، سوپ و سس؛ پارچ بزرگ برای کل خانواده و تیغه‌ی استخراج مواد مغذی"
+    },
+    {
       "id": "tplink-re405be-2026-10-10",
       "name_fa": "تقویت‌کننده وای‌فای ۷ تی‌پی‌لینک",
       "name_en": "TP-Link RE405BE BE6500 Wi-Fi 7 Range Extender",
@@ -69,48 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "روغن نارگیل وگان برای موهای خشک و آسیب‌دیده؛ انتخاب آمازون با تخفیف عالی."
-    },
-    {
-      "id": "delonghi-la-specialista-touch",
-      "name_fa": "اسپرسوساز دلونگی لا اسپشالیستا تاچ",
-      "name_en": "De'Longhi La Specialista Touch Espresso Machine with Grinder",
-      "price_cad": 799.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "جمعه، ۹ اکتبر ۲۰۲۶",
-      "image": "img/delonghi-la-specialista-touch.jpg",
-      "url": "https://www.amazon.ca/dp/B0F6DY1DGR?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "آسیاب مخروطی ایتالیایی، ۱۰ دستور نوشیدنی و صفحه لمسی؛ اسپرسوی حرفه‌ای در خانه."
-    },
-    {
-      "id": "chosen-foods-avocado-oil",
-      "name_fa": "روغن آووکادوی چوزن فودز ۷۵۰ میلی‌لیتر",
-      "name_en": "Chosen Foods 100% Pure Avocado Oil 25.3 oz (750ml)",
-      "price_cad": 13.97,
-      "regular_cad": 18.27,
-      "discount_pct": 24,
-      "added_fa": "جمعه، ۹ اکتبر ۲۰۲۶",
-      "image": "img/chosen-foods-avocado-oil.jpg",
-      "url": "https://www.amazon.ca/dp/B01FB3Q1TE?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "نقطه دود بالا، عالی برای سرخ‌کردن و پخت؛ پرفروش‌ترین روغن آووکادوی آمازون."
-    },
-    {
-      "id": "cuisinart-flavorboost-ceg1302",
-      "name_fa": "گریل برقی ۸کاره کویزینارت",
-      "name_en": "Cuisinart FlavorBoost 8-in-1 Outdoor Electric Grill (CEG-1302)",
-      "price_cad": 396.03,
-      "regular_cad": 499.99,
-      "discount_pct": 21,
-      "added_fa": "جمعه، ۹ اکتبر ۲۰۲۶",
-      "image": "img/cuisinart-flavorboost-ceg1302.jpg",
-      "url": "https://www.amazon.ca/dp/B00I82E0IA?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "گریل، دودی، سرخ‌کن بادی و فر در یک دستگاه؛ بدون گاز و ذغال، مناسب بالکن و پاسیو."
     }
   ],
   "updated_fa": "شنبه ۱۸ مهر"
