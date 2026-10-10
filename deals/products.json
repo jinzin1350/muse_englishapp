@@ -1,6 +1,20 @@
 {
   "products": [
     {
+      "id": "oralb-io2-2026-10-10",
+      "name_fa": "مسواک برقی اورال-بی آی‌او سری ۲",
+      "name_en": "Oral-B iO Series 2 Electric Toothbrush Starter Kit",
+      "price_cad": 59.99,
+      "regular_cad": 119.99,
+      "discount_pct": 50,
+      "added_fa": "شنبه، ۱۰ اکتبر ۲۰۲۶",
+      "image": "img/oralb-io2-2026-10-10.jpg",
+      "url": "https://www.amazon.ca/dp/B0DFDPQKY6?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "سنسور فشار هوشمند و ۲ سری یدک — پلاک دندان را دو برابر بهتر از مسواک دستی پاک می‌کند"
+    },
+    {
       "id": "dreo-hm311-4l-humidifier",
       "name_fa": "دستگاه بخور سرد درئو ۴ لیتری",
       "name_en": "DREO HM311 4L Top-Fill Cool Mist Humidifier",
@@ -97,20 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "چاپگر بلوتوثی قابل‌حمل برای برچسب‌های خانه، مدرسه و کسب‌وکار — بدون جوهر"
-    },
-    {
-      "id": "body-shop-coconut-hair-oil",
-      "name_fa": "روغن موی نارگیل بادی‌شاپ (۲۰۰ میلی‌لیتر)",
-      "name_en": "The Body Shop Coconut Oil Brilliantly Nourishing Pre-Shampoo Hair Oil 200ml",
-      "price_cad": 12.0,
-      "regular_cad": 29.5,
-      "discount_pct": 59,
-      "added_fa": "جمعه، ۹ اکتبر ۲۰۲۶",
-      "image": "img/body-shop-coconut-hair-oil.jpg",
-      "url": "https://www.amazon.ca/dp/B074HB2LVB?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "روغن نارگیل وگان برای موهای خشک و آسیب‌دیده؛ انتخاب آمازون با تخفیف عالی."
     }
   ],
   "updated_fa": "شنبه ۱۸ مهر"
