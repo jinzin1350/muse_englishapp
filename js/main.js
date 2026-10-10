@@ -6878,11 +6878,16 @@ function finishQuiz() {
          then animate the climb. Falls back to the classic celebration when
          the board is unreachable. The classic celebration runs after. */
       state.quiz = null;
-      launchRankClimb({ correct: q.correct, total: total, date: q.date, xp: 10 + q.correct });
+      launchRankClimb({ correct: q.correct, total: total, date: q.date, xp: 10 + q.correct, action: 'word_quiz' });
       return;
     }
     awardPoints('word_quiz', 10 + q.correct, q.date);
   } else if (q.kind === 'grammar' && q.date) {
+    if (!rkcDone('grammar', q.date)) {
+      state.quiz = null;
+      launchRankClimb({ correct: q.correct, total: total, date: q.date, xp: 10, action: 'grammar_quiz' });
+      return;
+    }
     awardPoints('grammar_quiz', 10, q.date);
   } else if (q.kind === 'mistakes') {
     awardPoints('deck_review', 10, q.date || todayStr());
@@ -6890,6 +6895,14 @@ function finishQuiz() {
     heartEarned = getHearts() < 5;
     if (heartEarned) setHearts(getHearts() + 1);
   } else if (q.kind === 'assignment') {
+    const aId = q.assignmentId || ('noid-' + (q.date || todayStr()));
+    if (!rkcDone('assign', aId)) {
+      /* saveAssignmentResult reads state.quiz, so save before nulling it */
+      saveAssignmentResult();
+      state.quiz = null;
+      launchRankClimb({ correct: q.correct, total: total, date: q.date || todayStr(), xp: 10, action: 'assignment_quiz' });
+      return;
+    }
     awardPoints('assignment_quiz', 10, q.date || todayStr());
     saveAssignmentResult();
   }
@@ -7596,9 +7609,19 @@ async function getRankSnapshot() {
   } catch (e) { return null; }
 }
 
+/* Once-per-key guard for the rank-climb celebration (grammar: per day, assignment: per id). */
+function rkcDone(type, key) {
+  try {
+    const k = 'rkc_done_' + type + '_' + key;
+    if (localStorage.getItem(k)) return true;
+    localStorage.setItem(k, '1');
+    return false;
+  } catch (e) { return false; }
+}
+
 async function launchRankClimb(info) {
   const before = await getRankSnapshot();
-  await awardPoints('word_quiz', info.xp, info.date);
+  await awardPoints(info.action || 'word_quiz', info.xp, info.date);
   try { await refreshMyPoints(); } catch (e) {}
   /* small delay: let the points RPC settle so the after-snapshot sees them */
   await new Promise(function (res) { setTimeout(res, 1200); });
@@ -9076,7 +9099,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610101801';
+var APP_VERSION = '202610101810';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
