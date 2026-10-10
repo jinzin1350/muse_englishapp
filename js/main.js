@@ -6306,14 +6306,34 @@ async function wireShadowingPractice(body, m) {
   }
 
   let speakingI = -1;
+  let sentAudioEl = null;
   function stopSpeaking() {
     try { speechSynthesis.cancel(); } catch (e) {}
+    try { if (sentAudioEl) { sentAudioEl.pause(); sentAudioEl.src = ''; sentAudioEl = null; } } catch (e) {}
     speakingI = -1;
     list.querySelectorAll('.sp-play.speaking').forEach(function (b) { b.classList.remove('speaking'); });
   }
+  function playSentenceAudio(i, url) {
+    stopSpeaking();
+    trackEvent('shadowing_listen', { sentence: i + 1, date: m.date || null });
+    speakingI = i;
+    const btn = list.querySelector('.sp-play[data-i="' + i + '"]');
+    if (btn) btn.classList.add('speaking');
+    try {
+      sentAudioEl = new Audio(url);
+      sentAudioEl.onended = sentAudioEl.onerror = function () { if (speakingI === i) stopSpeaking(); };
+      const p = sentAudioEl.play();
+      if (p && p.catch) p.catch(function () { stopSpeaking(); });
+    } catch (e) { stopSpeaking(); }
+  }
   function playSentence(i) {
-    if (active || !('speechSynthesis' in window)) return;
+    if (active) return;
     if (speakingI === i) { stopSpeaking(); return; } /* toggle */
+    /* Prefer the pre-generated studio audio; fall back to phone TTS for
+       lessons built before per-sentence audio existed (2026-10-10). */
+    const sentAudio = m.shadowing && m.shadowing.sentence_audio && m.shadowing.sentence_audio[i];
+    if (sentAudio) { playSentenceAudio(i, sentAudio); return; }
+    if (!('speechSynthesis' in window)) return;
     stopSpeaking();
     trackEvent('shadowing_listen', { sentence: i + 1, date: m.date || null });
     const u = new SpeechSynthesisUtterance(sentences[i]);
@@ -9143,7 +9163,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610101829';
+var APP_VERSION = '202610102021';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
