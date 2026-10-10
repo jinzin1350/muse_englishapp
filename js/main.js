@@ -1139,20 +1139,48 @@ function mulberry32(a) {
   };
 }
 
+/* Fake arena: simulated weekly activity (2026-10-10).
+   Each fake has a personality tier with a daily earn rate, accumulated in
+   deterministic 4-hour blocks so the board moves 6x/day for everyone alike:
+     top 10: grinders   ~100 pts/day (~16.7 per 4h block)
+     next 35: regulars   ~70 pts/day (~11.7 per 4h block)
+     rest:    casuals     ~40 pts/day (~6.7 per 4h block)
+   Weekly board resets every Monday (fresh race); all-time accumulates from a
+   fixed epoch. A small deterministic jitter per block keeps it from looking
+   robotic. Real users must stay active to hold the top — idling 2-3 days
+   lets the grinders pass them. */
 function fakeBoard(weekly) {
-  const bucket = Math.floor(Date.now() / (5 * 3600 * 1000)); // new shuffle every 5h
-  const top = 190, bottom = 20;
+  const now = Date.now();
+  const BLOCK = 4 * 3600 * 1000;
+  let elapsed;
+  if (weekly) {
+    const d = new Date();
+    const dow = (d.getDay() + 6) % 7;
+    d.setDate(d.getDate() - dow);
+    d.setHours(0, 0, 0, 0);
+    elapsed = Math.max(0, Math.floor((now - d.getTime()) / BLOCK));
+  } else {
+    elapsed = Math.max(0, Math.floor((now - Date.UTC(2026, 0, 1)) / BLOCK));
+  }
+  const curBlock = Math.floor(now / BLOCK);
   const rows = [];
   for (let i = 0; i < FAKE_NAMES.length; i++) {
-    const rnd = mulberry32(i * 7919 + bucket * 131 + (weekly ? 17 : 913));
+    const tier = i < 10 ? 0 : i < 45 ? 1 : 2;
+    const perDay = tier === 0 ? 100 : tier === 1 ? 70 : 40;
+    const perBlock = perDay / 6;
+    /* per-user rate personality: 0.9x–1.1x, fixed for life */
+    const rateVar = 0.9 + mulberry32(i * 104729 + 7)() * 0.2;
+    /* base: higher index = lower start (keeps the pyramid shape) */
     const decay = Math.pow(1 - i / FAKE_NAMES.length, 1.4);
-    const base = bottom + (top - bottom) * decay;
-    const move = (rnd() - 0.5) * 0.10 + Math.sin(bucket * 0.9 + i * 1.7) * 0.04;
-    const pts = Math.round(base * (1 + move));
+    const base = weekly ? 20 + 120 * decay : 500 + 3000 * decay;
+    /* jitter: ±15% of one block, re-rolled every 4h, same for all viewers */
+    const jrnd = mulberry32(i * 7919 + curBlock * 131 + (weekly ? 17 : 913));
+    const jitter = (jrnd() - 0.5) * 0.3 * perBlock;
+    const pts = base + perBlock * rateVar * elapsed + jitter;
     rows.push({
       user_id: 'fake-' + i,
       display_name: FAKE_NAMES[i],
-      points: Math.min(top, Math.max(bottom, pts))
+      points: Math.max(0, Math.round(pts))
     });
   }
   return rows;
@@ -9099,7 +9127,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610101810';
+var APP_VERSION = '202610101823';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
