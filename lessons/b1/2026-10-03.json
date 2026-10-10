@@ -1,350 +1,380 @@
 {
- "date": "2026-10-03",
- "theme": "Work & Career",
- "level": "b1",
- "cefr": "B1",
- "words": [
-  {
-   "word": "meeting",
-   "pos": "noun",
-   "meaning": "a planned event where people talk together",
-   "example": "We have a meeting at ten o'clock.",
-   "pronunciation": "MEET-ing",
-   "persian": "جلسه",
-   "photo": "media/b1/2026-10-03/photos/meeting.jpg",
-   "word_audio": "media/b1/2026-10-03/word-audio/meeting.mp3"
-  },
-  {
-   "word": "presentation",
-   "pos": "noun",
-   "meaning": "a talk that shows information to an audience",
-   "example": "She gave a presentation about the new project.",
-   "pronunciation": "prez-uhn-TAY-shuhn",
-   "persian": "ارائه",
-   "photo": "media/b1/2026-10-03/photos/presentation.jpg",
-   "word_audio": "media/b1/2026-10-03/word-audio/presentation.mp3"
-  },
-  {
-   "word": "manager",
-   "pos": "noun",
-   "meaning": "a person who leads a team",
-   "example": "My manager helped me with the report.",
-   "pronunciation": "MAN-uh-jer",
-   "persian": "مدیر",
-   "photo": "media/b1/2026-10-03/photos/manager.jpg",
-   "word_audio": "media/b1/2026-10-03/word-audio/manager.mp3"
-  },
-  {
-   "word": "project",
-   "pos": "noun",
-   "meaning": "a planned piece of work with a clear goal",
-   "example": "Our team finished the project on time.",
-   "pronunciation": "PROJ-ekt",
-   "persian": "پروژه",
-   "photo": "media/b1/2026-10-03/photos/project.jpg",
-   "word_audio": "media/b1/2026-10-03/word-audio/project.mp3"
-  },
-  {
-   "word": "contract",
-   "pos": "noun",
-   "meaning": "a written agreement that people sign",
-   "example": "He signed a one-year contract.",
-   "pronunciation": "KON-trakt",
-   "persian": "قرارداد",
-   "photo": "media/b1/2026-10-03/photos/contract.jpg",
-   "word_audio": "media/b1/2026-10-03/word-audio/contract.mp3"
-  },
-  {
-   "word": "workshop",
-   "pos": "noun",
-   "meaning": "a hands-on learning session where people practice a skill",
-   "example": "We joined a cooking workshop last Saturday.",
-   "pronunciation": "WURK-shop",
-   "persian": "کارگاه آموزشی",
-   "photo": "media/b1/2026-10-03/photos/workshop.jpg",
-   "word_audio": "media/b1/2026-10-03/word-audio/workshop.mp3"
-  },
-  {
-   "word": "feedback",
-   "pos": "noun",
-   "meaning": "opinions and comments about someone's work",
-   "example": "The teacher gave me useful feedback.",
-   "pronunciation": "FEED-bak",
-   "persian": "بازخورد",
-   "photo": "media/b1/2026-10-03/photos/feedback.jpg",
-   "word_audio": "media/b1/2026-10-03/word-audio/feedback.mp3"
-  },
-  {
-   "word": "hire",
-   "pos": "verb",
-   "meaning": "to give someone a job",
-   "example": "The company hired ten new people.",
-   "pronunciation": "HIRE",
-   "persian": "استخدام کردن",
-   "photo": "media/b1/2026-10-03/photos/hire.jpg",
-   "word_audio": "media/b1/2026-10-03/word-audio/hire.mp3"
-  },
-  {
-   "word": "recruit",
-   "pos": "verb",
-   "meaning": "to find and invite people to join",
-   "example": "They recruit new staff every spring.",
-   "pronunciation": "reh-KROOT",
-   "persian": "جذب کردن",
-   "photo": "media/b1/2026-10-03/photos/recruit.jpg",
-   "word_audio": "media/b1/2026-10-03/word-audio/recruit.mp3"
-  },
-  {
-   "word": "resume",
-   "pos": "noun",
-   "meaning": "a short document that shows your work history and skills",
-   "example": "Send your resume with the application.",
-   "pronunciation": "reh-ZOO-may",
-   "persian": "رزومه",
-   "photo": "media/b1/2026-10-03/photos/resume.jpg",
-   "word_audio": "media/b1/2026-10-03/word-audio/resume.mp3"
-  }
- ],
- "pronunciation_audio": "media/b1/2026-10-03/pronunciation.mp3",
- "podcast": {
-  "title": "Word Kitchen: Work & Career Words",
-  "audio": "media/b1/2026-10-03/podcast.mp3",
-  "cover": null,
-  "transcript": "media/b1/2026-10-03/podcast-transcript.txt"
- },
- "shadowing": {
-  "title": "Sarah's New Job",
-  "audio": "media/b1/2026-10-03/shadowing.mp3",
-  "transcript": "media/b1/2026-10-03/shadowing-transcript.txt"
- },
- "quiz": [
-  {
-   "question": "What does 'meeting' mean?",
-   "options": [
-    "a person who leads a team",
-    "a planned event where people talk together",
-    "a short document that shows your work history and skills",
-    "opinions and comments about someone's work"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'presentation' mean?",
-   "options": [
-    "a talk that shows information to an audience",
-    "a planned event where people talk together",
-    "to give someone a job",
-    "a hands-on learning session where people practice a skill"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'manager' mean?",
-   "options": [
-    "a planned piece of work with a clear goal",
-    "a talk that shows information to an audience",
-    "a person who leads a team",
-    "to find and invite people to join"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'project' mean?",
-   "options": [
-    "a written agreement that people sign",
-    "opinions and comments about someone's work",
-    "a planned piece of work with a clear goal",
-    "a person who leads a team"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'contract' mean?",
-   "options": [
-    "a written agreement that people sign",
-    "a short document that shows your work history and skills",
-    "a planned event where people talk together",
-    "a hands-on learning session where people practice a skill"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'workshop' mean?",
-   "options": [
-    "to give someone a job",
-    "a hands-on learning session where people practice a skill",
-    "a talk that shows information to an audience",
-    "a planned piece of work with a clear goal"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'feedback' mean?",
-   "options": [
-    "a person who leads a team",
-    "a written agreement that people sign",
-    "opinions and comments about someone's work",
-    "to find and invite people to join"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'hire' mean?",
-   "options": [
-    "to find and invite people to join",
-    "a planned event where people talk together",
-    "to give someone a job",
-    "a short document that shows your work history and skills"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'recruit' mean?",
-   "options": [
-    "to find and invite people to join",
-    "opinions and comments about someone's work",
-    "a person who leads a team",
-    "a talk that shows information to an audience"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'resume' mean?",
-   "options": [
-    "a hands-on learning session where people practice a skill",
-    "to give someone a job",
-    "a planned piece of work with a clear goal",
-    "a short document that shows your work history and skills"
-   ],
-   "answer": 3
-  }
- ],
- "grammar": {
-  "title": "5A: Past tenses - simple, continuous, perfect",
-  "explanation": "We use the **past simple** for finished actions in the past. We also use it for repeated past actions. Example ideas: I signed the contract last week. She hired ten people in March.\n\nWe use the **past continuous** (was/were + verb-ing) for an action in progress at a specific past time. Example ideas: I was reading my resume at eight o'clock. They were having a meeting at noon.\n\nThe past continuous is often interrupted by a **past simple** action. We usually join the two actions with *when*. Example ideas: I was giving a presentation when the phone rang.\n\nUse **while** for two actions happening at the same time. Example ideas: I was taking notes while my manager was talking.\n\nWe use the **past perfect** (had + past participle) for the earlier of two past actions. Example ideas: When I arrived at the office, the meeting had already started.\n\nIn stories, the **past continuous** sets the scene, the **past simple** tells what happened, and the **past perfect** tells what happened before. Never use the past continuous with non-action verbs like want or know.",
-  "examples": [
-   "The team *was discussing* the new project when the manager arrived. (action in progress, then interrupted)",
-   "She *had finished* her presentation before the meeting started. (earlier past action)",
-   "While I *was waiting* for my interview, I read my resume again. (two actions at the same time)",
-   "They *signed* the contract yesterday morning. (finished past action)",
-   "I *had never given* feedback in English before that workshop. (past perfect with never)",
-   "He *was recruiting* new workers when the phone rang. (interrupted by a past simple action)"
+  "date": "2026-10-03",
+  "theme": "Work & Career",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "meeting",
+      "pos": "noun",
+      "meaning": "a planned event where people talk together",
+      "example": "We have a meeting at ten o'clock.",
+      "pronunciation": "MEET-ing",
+      "persian": "جلسه",
+      "photo": "media/b1/2026-10-03/photos/meeting.jpg",
+      "word_audio": "media/b1/2026-10-03/word-audio/meeting.mp3"
+    },
+    {
+      "word": "presentation",
+      "pos": "noun",
+      "meaning": "a talk that shows information to an audience",
+      "example": "She gave a presentation about the new project.",
+      "pronunciation": "prez-uhn-TAY-shuhn",
+      "persian": "ارائه",
+      "photo": "media/b1/2026-10-03/photos/presentation.jpg",
+      "word_audio": "media/b1/2026-10-03/word-audio/presentation.mp3"
+    },
+    {
+      "word": "manager",
+      "pos": "noun",
+      "meaning": "a person who leads a team",
+      "example": "My manager helped me with the report.",
+      "pronunciation": "MAN-uh-jer",
+      "persian": "مدیر",
+      "photo": "media/b1/2026-10-03/photos/manager.jpg",
+      "word_audio": "media/b1/2026-10-03/word-audio/manager.mp3"
+    },
+    {
+      "word": "project",
+      "pos": "noun",
+      "meaning": "a planned piece of work with a clear goal",
+      "example": "Our team finished the project on time.",
+      "pronunciation": "PROJ-ekt",
+      "persian": "پروژه",
+      "photo": "media/b1/2026-10-03/photos/project.jpg",
+      "word_audio": "media/b1/2026-10-03/word-audio/project.mp3"
+    },
+    {
+      "word": "contract",
+      "pos": "noun",
+      "meaning": "a written agreement that people sign",
+      "example": "He signed a one-year contract.",
+      "pronunciation": "KON-trakt",
+      "persian": "قرارداد",
+      "photo": "media/b1/2026-10-03/photos/contract.jpg",
+      "word_audio": "media/b1/2026-10-03/word-audio/contract.mp3"
+    },
+    {
+      "word": "workshop",
+      "pos": "noun",
+      "meaning": "a hands-on learning session where people practice a skill",
+      "example": "We joined a cooking workshop last Saturday.",
+      "pronunciation": "WURK-shop",
+      "persian": "کارگاه آموزشی",
+      "photo": "media/b1/2026-10-03/photos/workshop.jpg",
+      "word_audio": "media/b1/2026-10-03/word-audio/workshop.mp3"
+    },
+    {
+      "word": "feedback",
+      "pos": "noun",
+      "meaning": "opinions and comments about someone's work",
+      "example": "The teacher gave me useful feedback.",
+      "pronunciation": "FEED-bak",
+      "persian": "بازخورد",
+      "photo": "media/b1/2026-10-03/photos/feedback.jpg",
+      "word_audio": "media/b1/2026-10-03/word-audio/feedback.mp3"
+    },
+    {
+      "word": "hire",
+      "pos": "verb",
+      "meaning": "to give someone a job",
+      "example": "The company hired ten new people.",
+      "pronunciation": "HIRE",
+      "persian": "استخدام کردن",
+      "photo": "media/b1/2026-10-03/photos/hire.jpg",
+      "word_audio": "media/b1/2026-10-03/word-audio/hire.mp3"
+    },
+    {
+      "word": "recruit",
+      "pos": "verb",
+      "meaning": "to find and invite people to join",
+      "example": "They recruit new staff every spring.",
+      "pronunciation": "reh-KROOT",
+      "persian": "جذب کردن",
+      "photo": "media/b1/2026-10-03/photos/recruit.jpg",
+      "word_audio": "media/b1/2026-10-03/word-audio/recruit.mp3"
+    },
+    {
+      "word": "resume",
+      "pos": "noun",
+      "meaning": "a short document that shows your work history and skills",
+      "example": "Send your resume with the application.",
+      "pronunciation": "reh-ZOO-may",
+      "persian": "رزومه",
+      "photo": "media/b1/2026-10-03/photos/resume.jpg",
+      "word_audio": "media/b1/2026-10-03/word-audio/resume.mp3"
+    }
   ],
-  "practice": [
-   {
-    "q": "What is the difference between 'I worked' and 'I was working'?",
-    "a": "'I worked' is a finished action. 'I was working' means the action was in progress at that time."
-   },
-   {
-    "q": "When do we use the past perfect?",
-    "a": "For the earlier of two past actions. Example: 'The meeting had started before I arrived.'"
-   },
-   {
-    "q": "Can we say 'I was wanting a new job'?",
-    "a": "No. 'Want' is a non-action verb, so use the past simple: 'I wanted a new job.'"
-   }
-  ],
+  "pronunciation_audio": "media/b1/2026-10-03/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Work & Career Words",
+    "audio": "media/b1/2026-10-03/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-10-03/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sarah's New Job",
+    "audio": "media/b1/2026-10-03/shadowing.mp3",
+    "transcript": "media/b1/2026-10-03/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b1/2026-10-03/shadowing-sentences/001.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/002.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/003.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/004.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/005.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/006.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/007.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/008.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/009.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/010.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/011.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/012.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/013.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/014.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/015.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/016.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/017.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/018.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/019.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/020.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/021.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/022.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/023.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/024.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/025.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/026.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/027.mp3",
+      "media/b1/2026-10-03/shadowing-sentences/028.mp3"
+    ]
+  },
   "quiz": [
-   {
-    "question": "They didn't play well in the match although they ___ every evening.",
-    "options": [
-     "had trained",
-     "were training",
-     "have trained",
-     "trained"
+    {
+      "question": "What does 'meeting' mean?",
+      "options": [
+        "a person who leads a team",
+        "a planned event where people talk together",
+        "a short document that shows your work history and skills",
+        "opinions and comments about someone's work"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'presentation' mean?",
+      "options": [
+        "a talk that shows information to an audience",
+        "a planned event where people talk together",
+        "to give someone a job",
+        "a hands-on learning session where people practice a skill"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'manager' mean?",
+      "options": [
+        "a planned piece of work with a clear goal",
+        "a talk that shows information to an audience",
+        "a person who leads a team",
+        "to find and invite people to join"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'project' mean?",
+      "options": [
+        "a written agreement that people sign",
+        "opinions and comments about someone's work",
+        "a planned piece of work with a clear goal",
+        "a person who leads a team"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'contract' mean?",
+      "options": [
+        "a written agreement that people sign",
+        "a short document that shows your work history and skills",
+        "a planned event where people talk together",
+        "a hands-on learning session where people practice a skill"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'workshop' mean?",
+      "options": [
+        "to give someone a job",
+        "a hands-on learning session where people practice a skill",
+        "a talk that shows information to an audience",
+        "a planned piece of work with a clear goal"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'feedback' mean?",
+      "options": [
+        "a person who leads a team",
+        "a written agreement that people sign",
+        "opinions and comments about someone's work",
+        "to find and invite people to join"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'hire' mean?",
+      "options": [
+        "to find and invite people to join",
+        "a planned event where people talk together",
+        "to give someone a job",
+        "a short document that shows your work history and skills"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'recruit' mean?",
+      "options": [
+        "to find and invite people to join",
+        "opinions and comments about someone's work",
+        "a person who leads a team",
+        "a talk that shows information to an audience"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'resume' mean?",
+      "options": [
+        "a hands-on learning session where people practice a skill",
+        "to give someone a job",
+        "a planned piece of work with a clear goal",
+        "a short document that shows your work history and skills"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "5A: Past tenses - simple, continuous, perfect",
+    "explanation": "We use the **past simple** for finished actions in the past. We also use it for repeated past actions. Example ideas: I signed the contract last week. She hired ten people in March.\n\nWe use the **past continuous** (was/were + verb-ing) for an action in progress at a specific past time. Example ideas: I was reading my resume at eight o'clock. They were having a meeting at noon.\n\nThe past continuous is often interrupted by a **past simple** action. We usually join the two actions with *when*. Example ideas: I was giving a presentation when the phone rang.\n\nUse **while** for two actions happening at the same time. Example ideas: I was taking notes while my manager was talking.\n\nWe use the **past perfect** (had + past participle) for the earlier of two past actions. Example ideas: When I arrived at the office, the meeting had already started.\n\nIn stories, the **past continuous** sets the scene, the **past simple** tells what happened, and the **past perfect** tells what happened before. Never use the past continuous with non-action verbs like want or know.",
+    "examples": [
+      "The team *was discussing* the new project when the manager arrived. (action in progress, then interrupted)",
+      "She *had finished* her presentation before the meeting started. (earlier past action)",
+      "While I *was waiting* for my interview, I read my resume again. (two actions at the same time)",
+      "They *signed* the contract yesterday morning. (finished past action)",
+      "I *had never given* feedback in English before that workshop. (past perfect with never)",
+      "He *was recruiting* new workers when the phone rang. (interrupted by a past simple action)"
     ],
-    "answer": 0
-   },
-   {
-    "question": "Mike had an accident while he ___ to work.",
-    "options": [
-     "was cycling",
-     "had cycled",
-     "has cycled",
-     "cycled"
+    "practice": [
+      {
+        "q": "What is the difference between 'I worked' and 'I was working'?",
+        "a": "'I worked' is a finished action. 'I was working' means the action was in progress at that time."
+      },
+      {
+        "q": "When do we use the past perfect?",
+        "a": "For the earlier of two past actions. Example: 'The meeting had started before I arrived.'"
+      },
+      {
+        "q": "Can we say 'I was wanting a new job'?",
+        "a": "No. 'Want' is a non-action verb, so use the past simple: 'I wanted a new job.'"
+      }
     ],
-    "answer": 0
-   },
-   {
-    "question": "I left work early because I ___ to watch the match.",
-    "options": [
-     "wanted",
-     "was wanting",
-     "had wanted",
-     "want"
-    ],
-    "answer": 0
-   },
-   {
-    "question": "The captain ___ any goals when the referee sent him off.",
-    "options": [
-     "didn't score",
-     "hadn't scored",
-     "hasn't scored",
-     "wasn't scoring"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "My son got injured while he ___ basketball last Saturday.",
-    "options": [
-     "played",
-     "had played",
-     "was playing",
-     "has played"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "When the snowstorm started, we ___ skiing and went back to the hotel.",
-    "options": [
-     "stopped",
-     "had stopped",
-     "were stopping",
-     "have stopped"
-    ],
-    "answer": 0
-   },
-   {
-    "question": "England ___ any of their previous games when they played in the quarter-finals.",
-    "options": [
-     "didn't lose",
-     "hadn't lost",
-     "haven't lost",
-     "weren't losing"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "The referee suspended the match because it ___ so hard.",
-    "options": [
-     "rained",
-     "was raining",
-     "had rained",
-     "rains"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "The crowd ___ when the referee ___ the final whistle.",
-    "options": [
-     "was cheering / blew",
-     "cheered / was blowing",
-     "had cheered / blew",
-     "cheered / blew"
-    ],
-    "answer": 0
-   },
-   {
-    "question": "The police ___ my sister on the motorway because she ___ a seat belt.",
-    "options": [
-     "stopped / didn't wear",
-     "were stopping / wasn't wearing",
-     "stopped / wasn't wearing",
-     "had stopped / hadn't worn"
-    ],
-    "answer": 2
-   }
-  ]
- }
+    "quiz": [
+      {
+        "question": "They didn't play well in the match although they ___ every evening.",
+        "options": [
+          "had trained",
+          "were training",
+          "have trained",
+          "trained"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Mike had an accident while he ___ to work.",
+        "options": [
+          "was cycling",
+          "had cycled",
+          "has cycled",
+          "cycled"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I left work early because I ___ to watch the match.",
+        "options": [
+          "wanted",
+          "was wanting",
+          "had wanted",
+          "want"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The captain ___ any goals when the referee sent him off.",
+        "options": [
+          "didn't score",
+          "hadn't scored",
+          "hasn't scored",
+          "wasn't scoring"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My son got injured while he ___ basketball last Saturday.",
+        "options": [
+          "played",
+          "had played",
+          "was playing",
+          "has played"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "When the snowstorm started, we ___ skiing and went back to the hotel.",
+        "options": [
+          "stopped",
+          "had stopped",
+          "were stopping",
+          "have stopped"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "England ___ any of their previous games when they played in the quarter-finals.",
+        "options": [
+          "didn't lose",
+          "hadn't lost",
+          "haven't lost",
+          "weren't losing"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The referee suspended the match because it ___ so hard.",
+        "options": [
+          "rained",
+          "was raining",
+          "had rained",
+          "rains"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The crowd ___ when the referee ___ the final whistle.",
+        "options": [
+          "was cheering / blew",
+          "cheered / was blowing",
+          "had cheered / blew",
+          "cheered / blew"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The police ___ my sister on the motorway because she ___ a seat belt.",
+        "options": [
+          "stopped / didn't wear",
+          "were stopping / wasn't wearing",
+          "stopped / wasn't wearing",
+          "had stopped / hadn't worn"
+        ],
+        "answer": 2
+      }
+    ]
+  }
 }
