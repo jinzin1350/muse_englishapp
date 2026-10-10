@@ -3,13 +3,13 @@
    custom-worker pattern): a single root-scope worker, so push keeps working. */
 importScripts('https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js');
 
-const CACHE = 'engapp-v3';
+const CACHE = 'engapp-v4';
 const CORE = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/css/styles.css',
-  '/js/app.js',
+  '/css/main.css',
+  '/js/main.js',
   '/js/config.js',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
