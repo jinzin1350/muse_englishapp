@@ -805,25 +805,20 @@ function questDefs() {
   const b = (dayNum + 3) % rest.length;
   return [anchor, rest[a], rest[b]];
 }
-function questClaimKey(key) {
-  try { return 'ela_quest_' + (state.user && state.user.email ? state.user.email : 'anon') + '_' + todayStr() + '_' + key; }
-  catch (e) { return null; }
-}
-function questClaimed(key) {
-  try { const k = questClaimKey(key); return k ? !!localStorage.getItem(k) : false; }
-  catch (e) { return false; }
-}
-function claimQuest(key) {
+/* Quests auto-reward (2026-10-09, Alireza's call): no claim button — the moment a
+   quest's progress hits its target, the XP is granted automatically. awardPoints
+   is idempotent per (action, ref), so this is safe to run on every refresh: no
+   double XP, and the "+XP" popup fires exactly once. */
+function autoRewardQuests() {
   try {
+    if (!state.user || state.user.demo || !state.user.id) return;
     const qs = questDefs();
-    let q = null;
-    for (let i = 0; i < qs.length; i++) if (qs[i].key === key) q = qs[i];
-    if (!q || questClaimed(key)) return;
-    if (q.progress() < q.target) return;
-    const k = questClaimKey(key);
-    if (k) localStorage.setItem(k, '1');
-    awardPoints('quest_daily', q.xp, key + '|' + todayStr());
-    paintQuests();
+    for (let i = 0; i < qs.length; i++) {
+      const q = qs[i];
+      if (q.progress() >= q.target) {
+        awardPoints('quest_daily', q.xp, q.key + '|' + todayStr());
+      }
+    }
   } catch (e) {}
 }
 function faDigits(x) {
@@ -832,21 +827,15 @@ function faDigits(x) {
 function questCardHTML(q) {
   const p = Math.min(q.progress(), q.target);
   const done = p >= q.target;
-  const claimed = questClaimed(q.key);
   const pct = q.target ? Math.round((p / q.target) * 100) : 0;
   const progTxt = q.unit === 'steps'
     ? p + ' / ' + q.target + ' steps'
     : (q.unit === 'XP'
       ? p + ' / ' + q.target + ' XP'
       : (done ? 'Done' : 'Not done'));
-  let side;
-  if (claimed) {
-    side = '<span class="hq-xp is-claimed" aria-label="Claimed">✅</span>';
-  } else if (done) {
-    side = '<button class="hq-xp is-claim" data-quest-claim="' + q.key + '">Claim</button>';
-  } else {
-    side = '<span class="hq-xp">XP +' + q.xp + '</span>';
-  }
+  const side = done
+    ? '<span class="hq-xp is-claimed" aria-label="Rewarded">✅</span>'
+    : '<span class="hq-xp">XP +' + q.xp + '</span>';
   return '<div class="hq-row' + (done ? ' is-done' : '') + '">' +
     '<a class="hq-body" href="' + (q.link || '#/home') + '">' +
     '<span class="hq-ico" aria-hidden="true">' + q.icon + '</span>' +
@@ -868,15 +857,9 @@ function paintQuests() {
       '<div class="hq-sub">Complete quests, earn XP, level up!</div></div>' +
       '<span class="hq-mega" aria-hidden="true">🎯</span></div>' +
       '<div class="hq-rows">' + qs.map(questCardHTML).join('') + '</div></section>';
-    const btns = host.querySelectorAll('[data-quest-claim]');
-    for (let i = 0; i < btns.length; i++) {
-      (function (b) {
-        b.addEventListener('click', function () { claimQuest(b.getAttribute('data-quest-claim')); });
-      })(btns[i]);
-    }
   } catch (e) {}
 }
-function refreshQuests() { paintQuests(); }
+function refreshQuests() { autoRewardQuests(); paintQuests(); }
 var ptsPopQueue = [];
 var ptsPopShowing = false;
 
@@ -5633,16 +5616,6 @@ const HOME_STEP_STYLE = {
   quiz:      { icon: 'trophy',     bg: '#3B82F6' },
 };
 
-function battleBannerHTML() {
-  return '<a class="h-battle" href="#/challenge" aria-label="Join the challenge battle">' +
-    '<span class="h-live"><span class="h-live-dot"></span>LIVE</span>' +
-    '<span class="h-battle-icon">' + ICO.trophy + '</span>' +
-    '<span class="h-battle-num">1,500</span>' +
-    '<span class="h-battle-sub">learners battling for the top</span>' +
-    '<span class="h-battle-cta">Join the battle <span aria-hidden="true">›</span></span>' +
-  '</a>';
-}
-
 /* Streak banner v2 (2026-10-09): cream illustrated card after Alireza's mockup.
    The day count is dynamic HTML from the streak state (DB-synced), never baked in. */
 function streakBannerHTML(st, dates) {
@@ -5808,10 +5781,10 @@ function renderHome(v) {
   paintHome(v, lsGet('mistakes'), lsGet('scores'));
   refreshHomeStreak();
   refreshHomeworkCard();
-  paintQuests();
+  refreshQuests();
   if (cloudReady()) {
     Promise.all([getMistakes(), getAttempts()]).then(function (res) {
-      if (state.view === 'home' && !state.quiz) { paintHome(v, res[0], res[1]); paintQuests(); }
+      if (state.view === 'home' && !state.quiz) { paintHome(v, res[0], res[1]); refreshQuests(); }
     }).catch(function () { /* keep the local paint */ });
   }
 }
@@ -5821,9 +5794,6 @@ function paintHome(v, mistakes, attempts) {
   const today = lessons[0] || null;
 
   let html = '';
-
-  // 0 — Battle banner (mockup v5, 2026-10-02): full-bleed mascot artwork
-  html += battleBannerHTML();
 
   // 0b — Streak banner (mockup v5): mascot artwork bg, painted with local
   // data first, then refreshed with cloud state by refreshHomeStreak().

@@ -1358,23 +1358,7 @@ body{background:#FFF9F3;}
 .tab-label{font-size:.7rem;}
 
 /* ============ HOME v5 — mockup rebuild (2026-10-02) ============ */
-.h-battle{position:relative;display:block;overflow:hidden;border-radius:22px;text-decoration:none;color:#fff;
-  background:#1b1440 url('/media/home/battle-bg.webp') center/cover no-repeat;
-  padding:20px 18px 18px;min-height:190px;margin-bottom:14px;}
-.h-live{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.96);color:#E11D48;
-  font-size:11px;font-weight:800;letter-spacing:.08em;padding:5px 11px;border-radius:999px;
-  display:inline-flex;align-items:center;gap:6px;}
-.h-live-dot{width:8px;height:8px;border-radius:50%;background:#E11D48;animation:hpulse 1.6s infinite;}
-@keyframes hpulse{0%,100%{opacity:1}50%{opacity:.35}}
-.h-battle-icon{display:inline-flex;width:52px;height:52px;border-radius:15px;
-  background:linear-gradient(135deg,#FF9F2E,#FF7A1A);align-items:center;justify-content:center;
-  box-shadow:0 4px 12px rgba(0,0,0,.25);}
-.h-battle-icon svg{width:28px;height:28px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-.h-battle-num{display:block;font-size:36px;font-weight:800;color:#FFD66B;margin-top:10px;line-height:1;}
-.h-battle-sub{display:block;font-size:14px;color:rgba(255,255,255,.92);margin-top:3px;}
-.h-battle-cta{display:inline-block;margin-top:14px;background:linear-gradient(180deg,#FFD23F,#FFB800);color:#4a2c00;
-  font-weight:800;padding:12px 28px;border-radius:999px;font-size:15px;
-  box-shadow:0 4px 10px rgba(0,0,0,.25);}
+/* (battle banner removed 2026-10-09 per Alireza) */
 
 /* Streak banner v2 (2026-10-09): cream illustrated card per Alireza's mockup.
    Dynamic day count rendered as HTML text over the illustration. */
