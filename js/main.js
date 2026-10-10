@@ -1914,6 +1914,7 @@ function show(view, arg) {
   setChrome();
   const v = $('#view');
   window.scrollTo(0, 0);
+  document.body.classList.toggle('challenge-page', view === 'challenge');
   if (view === 'landing') renderLanding(v);
   else if (view === 'signin') renderSignin(v);
   else if (view === 'signup') renderSignup(v);
@@ -8805,7 +8806,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610100555';
+var APP_VERSION = '202610100605';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
