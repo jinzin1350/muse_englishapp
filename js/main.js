@@ -6873,14 +6873,15 @@ function finishQuiz() {
   if (q.kind === 'word' && q.date) {
     const firstTime = !((getDayProgress(q.date) || {}).quiz);
     markStep(q.date, 'quiz', { score: q.correct, total: total });
-    awardPoints('word_quiz', 10 + q.correct, q.date);
     if (firstTime) {
-      /* Core loop payoff: first word-quiz completion of the day launches the
-         celebration sequence (Lesson Complete → Mystery Box → Streak → bonus nudge). */
+      /* Rank-climb celebration: snapshot rank before the XP lands, award it,
+         then animate the climb. Falls back to the classic celebration when
+         the board is unreachable. The classic celebration runs after. */
       state.quiz = null;
-      launchCelebration({ correct: q.correct, total: total, date: q.date, xp: 10 + q.correct });
+      launchRankClimb({ correct: q.correct, total: total, date: q.date, xp: 10 + q.correct });
       return;
     }
+    awardPoints('word_quiz', 10 + q.correct, q.date);
   } else if (q.kind === 'grammar' && q.date) {
     awardPoints('grammar_quiz', 10, q.date);
   } else if (q.kind === 'mistakes') {
@@ -7573,6 +7574,276 @@ function qcelClear() {
 function closeCelebration() {
   qcelClear();
   celState = null;
+}
+
+/* ---------------- rank-climb celebration (2026-10-10) ----------------
+   After the first word-quiz of the day: snapshot the weekly rank BEFORE the
+   XP lands, award the points, snapshot AFTER, then animate the user climbing
+   the board. Top-3 finishes reveal the podium (same cards as #/challenge).
+   The board is live, so a #1 finish is framed as "right now — race is LIVE",
+   never as a permanent championship. */
+async function getRankSnapshot() {
+  try {
+    if (!state.user || state.user.demo || !sb || !cloudReady()) return null;
+    const r = await sb.rpc('get_leaderboard', { period_start: weekStartISO() });
+    const rows = (!r.error && Array.isArray(r.data)) ? r.data : [];
+    const board = mergeBoard(rows, true);
+    const meId = state.user.id;
+    for (let i = 0; i < board.length; i++) {
+      if (board[i].user_id === meId) return { rank: i + 1, points: board[i].points, board: board };
+    }
+    return null;
+  } catch (e) { return null; }
+}
+
+async function launchRankClimb(info) {
+  const before = await getRankSnapshot();
+  await awardPoints('word_quiz', info.xp, info.date);
+  try { await refreshMyPoints(); } catch (e) {}
+  /* small delay: let the points RPC settle so the after-snapshot sees them */
+  await new Promise(function (res) { setTimeout(res, 1200); });
+  const after = await getRankSnapshot();
+  if (before && after) {
+    showRankClimb(before, after, info, function () { launchCelebration(info); });
+  } else {
+    launchCelebration(info);
+  }
+}
+
+function rkcRowHTML(u, rank, isMe) {
+  return '<div class="r-num">' + rank + '</div>' +
+    '<div class="r-ava" style="' + avatarStyle(u.display_name) + '">' + esc(nickInitial(u.display_name)) + '</div>' +
+    '<div class="r-name">' + esc(u.display_name) + '</div>' +
+    '<div class="r-pts">◆ <span>' + Number(u.points).toLocaleString('en-US') + '</span></div>';
+}
+
+function rkcPodiumCard(u, place, isMe) {
+  const medal = place === 1 ? 'm1' : place === 2 ? 'm2' : 'm3';
+  return '<div class="rkc-pd p' + place + (isMe ? ' me' : '') + '">' +
+    (place === 1 ? '<div class="rkc-crown">👑</div>' : '') +
+    '<div class="rkc-pdava" style="' + avatarStyle(u.display_name) + '">' + esc(nickInitial(u.display_name)) + '</div>' +
+    '<div class="rkc-medal ' + medal + '">' + place + '</div>' +
+    '<div class="rkc-pdname">' + esc(u.display_name) + '</div>' +
+    (isMe ? '<span class="rkc-you">YOU</span>' : '') +
+    '<div class="rkc-pdpts">◆ ' + Number(u.points).toLocaleString('en-US') + '</div>' +
+  '</div>';
+}
+
+function showRankClimb(before, after, info, onDone) {
+  const meId = state.user.id;
+  const oldRank = before.rank, newRank = after.rank;
+  const climbed = oldRank - newRank;
+  const board = after.board;
+
+  const ov = document.createElement('div');
+  ov.id = 'rankclimb';
+  ov.innerHTML =
+    '<div class="rkc-stars"></div>' +
+    '<div class="rkc-sheet">' +
+      '<h2>Weekly Challenge</h2>' +
+      '<p class="rkc-sub">Watch yourself climb! 🧗</p>' +
+      '<div class="rkc-earn"><div class="rkc-bigpts">+<span id="rkc-xp">0</span></div><div class="rkc-lbl">points earned — lesson complete!</div></div>' +
+      '<div class="rkc-champ" id="rkc-champ" style="display:none">' +
+        '<span class="rkc-bolt">⚡</span><h3>You\'re #1!</h3><p>Right now — but the race is <b>LIVE</b></p>' +
+      '</div>' +
+      '<div class="rkc-podium" id="rkc-podium"></div>' +
+      '<div class="rkc-board" id="rkc-board"></div>' +
+      '<div class="rkc-result" id="rkc-result"></div>' +
+      '<button class="rkc-cta" id="rkc-cta">View Full Leaderboard</button>' +
+      '<button class="rkc-skip" id="rkc-skip">Continue</button>' +
+    '</div>';
+  document.body.appendChild(ov);
+
+  const done = function () {
+    if (ov.parentNode) ov.parentNode.removeChild(ov);
+    try { onDone(); } catch (e) {}
+  };
+  ov.querySelector('#rkc-skip').addEventListener('click', done);
+  ov.querySelector('#rkc-cta').addEventListener('click', function () {
+    if (ov.parentNode) ov.parentNode.removeChild(ov);
+    go('challenge');
+  });
+
+  const boardEl = ov.querySelector('#rkc-board');
+  const podiumEl = ov.querySelector('#rkc-podium');
+  const resultEl = ov.querySelector('#rkc-result');
+
+  /* window: 2 above the new rank .. 2 below the old rank, capped at 12 rows */
+  const winTop = Math.max(1, newRank - 2);
+  let winBottom = Math.min(board.length, oldRank + 2);
+  if (winBottom - winTop > 11) winBottom = winTop + 11;
+  const winUsers = board.slice(winTop - 1, winBottom);
+
+  function renderRows(order, ranks) {
+    boardEl.innerHTML = '';
+    order.forEach(function (u, i) {
+      const d = document.createElement('div');
+      const isMe = u.user_id === meId;
+      d.className = 'rkc-row' + (isMe ? ' me' : '');
+      d.setAttribute('data-uid', u.user_id);
+      d.innerHTML = rkcRowHTML(u, ranks[i], isMe);
+      boardEl.appendChild(d);
+    });
+  }
+
+  /* initial order: AFTER-board window, but user inserted at old-rank slot */
+  const startOrder = winUsers.slice();
+  const meAfter = board[newRank - 1];
+  const meIdxWin = startOrder.findIndex(function (u) { return u.user_id === meId; });
+  if (meIdxWin >= 0) startOrder.splice(meIdxWin, 1);
+  let insertAt = oldRank - winTop;
+  if (insertAt < 0) insertAt = 0;
+  if (insertAt > startOrder.length) insertAt = startOrder.length;
+  const meBefore = Object.assign({}, meAfter, { points: before.points });
+  startOrder.splice(insertAt, 0, meBefore);
+  /* ranks: walk the window; me shows oldRank, others their window rank */
+  const startRanks = [];
+  let rk = winTop;
+  startOrder.forEach(function (u) {
+    if (u.user_id === meId) startRanks.push(oldRank);
+    else { startRanks.push(rk); rk++; }
+  });
+  renderRows(startOrder, startRanks);
+
+  function flipSwap(elA, elB, cb) {
+    const rows = Array.prototype.slice.call(boardEl.children);
+    const first = {};
+    rows.forEach(function (r) { first[r.getAttribute('data-uid')] = r.getBoundingClientRect().top; });
+    boardEl.insertBefore(elA, elB);
+    rows.forEach(function (r) {
+      const dy = first[r.getAttribute('data-uid')] - r.getBoundingClientRect().top;
+      r.style.transition = 'none';
+      r.style.transform = 'translateY(' + dy + 'px)';
+    });
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        rows.forEach(function (r) {
+          r.style.transition = 'transform .38s cubic-bezier(.25,.9,.25,1)';
+          r.style.transform = '';
+        });
+        setTimeout(cb, 400);
+      });
+    });
+  }
+
+  /* XP count-up, then climb */
+  const xpEl = ov.querySelector('#rkc-xp');
+  let n = 0;
+  const xpTimer = setInterval(function () {
+    n += Math.max(1, Math.round(info.xp / 20));
+    if (n >= info.xp) { n = info.xp; clearInterval(xpTimer); }
+    xpEl.textContent = n;
+  }, 45);
+  ov.querySelector('.rkc-earn').classList.add('show');
+
+  setTimeout(function () {
+    if (climbed <= 0) { finishNoClimb(); return; }
+    const meRow = function () { return boardEl.querySelector('.rkc-row.me'); };
+    const mePtsEl = function () { const r = meRow(); return r ? r.querySelector('.r-pts span') : null; };
+    meRow().classList.add('climbing');
+    let curRank = oldRank, s = 0;
+    const steps = Math.min(climbed, 12);
+    const ptsFrom = before.points, ptsTo = after.points;
+    (function step() {
+      if (s >= steps) { finishClimb(curRank); return; }
+      const rows = boardEl.children;
+      let idx = -1;
+      for (let i = 0; i < rows.length; i++) if (rows[i].classList.contains('me')) idx = i;
+      if (idx <= 0) { finishClimb(curRank); return; }
+      const above = rows[idx - 1];
+      above.classList.add('passed');
+      flipSwap(rows[idx], above, function () {
+        curRank--; s++;
+        const pe = mePtsEl();
+        if (pe) pe.textContent = Math.round(ptsFrom + (ptsTo - ptsFrom) * (s / steps)).toLocaleString('en-US');
+        renumberBoard(curRank);
+        step();
+      });
+    })();
+
+    function renumberBoard(meRank) {
+      /* rows above me: winTop..meRank-1 ; me: meRank ; below: meRank+1.. */
+      let k = winTop;
+      Array.prototype.forEach.call(boardEl.children, function (r) {
+        if (r.classList.contains('me')) { r.querySelector('.r-num').textContent = meRank; k = meRank + 1; }
+        else { r.querySelector('.r-num').textContent = k; k++; }
+      });
+    }
+
+    function finishClimb(finalRank) {
+      const mr = meRow();
+      if (mr) mr.classList.remove('climbing');
+      if (finalRank !== newRank) {
+        /* huge climb: re-render the window centered on the true new rank */
+        const wTop = Math.max(1, newRank - 2);
+        const wBot = Math.min(board.length, newRank + 5);
+        boardEl.innerHTML = '';
+        board.slice(wTop - 1, wBot).forEach(function (u, i) {
+          const d = document.createElement('div');
+          d.className = 'rkc-row' + (u.user_id === meId ? ' me' : '');
+          d.setAttribute('data-uid', u.user_id);
+          d.innerHTML = rkcRowHTML(u, wTop + i, u.user_id === meId);
+          boardEl.appendChild(d);
+        });
+      }
+      if (newRank <= 3) {
+        /* podium reveal: top-3 of the AFTER board */
+        const top3 = board.slice(0, 3);
+        podiumEl.innerHTML =
+          rkcPodiumCard(top3[1], 2, top3[1].user_id === meId) +
+          rkcPodiumCard(top3[0], 1, top3[0].user_id === meId) +
+          rkcPodiumCard(top3[2], 3, top3[2].user_id === meId);
+        podiumEl.classList.add('show');
+        boardEl.innerHTML = '';
+        const rest = board.slice(3, winBottom);
+        rest.forEach(function (u, i) {
+          const d = document.createElement('div');
+          d.className = 'rkc-row' + (u.user_id === meId ? ' me' : '');
+          d.setAttribute('data-uid', u.user_id);
+          d.innerHTML = rkcRowHTML(u, i + 4, u.user_id === meId);
+          boardEl.appendChild(d);
+        });
+      }
+      showResult();
+    }
+
+    function finishNoClimb() {
+      renumberNoClimb();
+      showResult();
+    }
+    function renumberNoClimb() {
+      Array.prototype.forEach.call(boardEl.children, function (r) {
+        if (r.classList.contains('me')) r.querySelector('.r-num').textContent = newRank;
+      });
+    }
+
+    function showResult() {
+      let html;
+      if (newRank === 1) {
+        ov.querySelector('#rkc-champ').style.display = 'block';
+        requestAnimationFrame(function () { ov.querySelector('#rkc-champ').classList.add('show'); });
+        const chaser = board[1];
+        const gap = Math.max(0, Math.round(after.points - chaser.points));
+        html = '<div class="big">⚡ You\'re #1 — right now!</div>' +
+          '<div class="small">👀 <b>' + esc(chaser.display_name) + '</b> is only <b>' + gap + ' points</b> behind — anyone can pass you any minute!</div>';
+      } else if (climbed > 0) {
+        html = '<div class="big">🚀 You climbed ' + climbed + ' position' + (climbed > 1 ? 's' : '') + '!</div>';
+        if (newRank <= 3) html += '<div class="small">You\'re on the <b>podium</b>! 🏆</div>';
+        else {
+          const above = board[newRank - 2];
+          const gap = Math.max(0, Math.round(above.points - after.points));
+          html += '<div class="small">Only <b>' + gap + ' points</b> to overtake <b>' + esc(above.display_name) + '</b>! 💪</div>';
+        }
+      } else {
+        html = '<div class="big">You held #' + newRank + '! 💪</div>' +
+          '<div class="small">Keep earning to climb higher.</div>';
+      }
+      resultEl.innerHTML = html;
+      resultEl.classList.add('show');
+      ov.querySelector('#rkc-cta').classList.add('show');
+      ov.querySelector('#rkc-skip').classList.add('show');
+    }
+  }, 1300);
 }
 
 /* ---------------- podcast milestone celebrations (2026-10-02, v2 art) ----------------
@@ -8805,7 +9076,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610100633';
+var APP_VERSION = '202610101801';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
