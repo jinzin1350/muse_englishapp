@@ -1,6 +1,20 @@
 {
   "products": [
     {
+      "id": "ninja-professional-blender-20-2026-10-10",
+      "name_fa": "مخلوط‌کن نینجا پروفشنال ۲٫۰",
+      "name_en": "Ninja Professional Blender 2.0, 1400W, Auto-iQ, 72oz/2.1L (CCO750BSL)",
+      "price_cad": 92.99,
+      "regular_cad": 149.99,
+      "discount_pct": 38,
+      "added_fa": "شنبه، ۱۰ اکتبر ۲۰۲۶",
+      "image": "img/ninja-professional-blender-20-2026-10-10.jpg",
+      "url": "https://www.amazon.ca/dp/B0H2WPRPT1?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "موتور ۱۴۰۰ واتی با تکنولوژی Auto-iQ و پارچ ۷۲ اونسی — یخ و میوه‌های یخ‌زده را مثل آب خوردن خرد می‌کند"
+    },
+    {
       "id": "oralb-io2-2026-10-10",
       "name_fa": "مسواک برقی اورال-بی آی‌او سری ۲",
       "name_en": "Oral-B iO Series 2 Electric Toothbrush Starter Kit",
@@ -97,20 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "ست ۲۸۷ قطعه‌ای سوپرکار مک‌لارن با مینی‌فیگور راننده؛ هدیه‌ای عالی برای بچه‌ها"
-    },
-    {
-      "id": "niimbot-b1-2026-10-10",
-      "name_fa": "چاپگر برچسب حرارتی نایمبات بی۱",
-      "name_en": "NIIMBOT B1 Label Maker Machine with Tape",
-      "price_cad": 37.98,
-      "regular_cad": 59.99,
-      "discount_pct": 37,
-      "added_fa": "شنبه، ۱۰ اکتبر ۲۰۲۶",
-      "image": "img/niimbot-b1-2026-10-10.jpg",
-      "url": "https://www.amazon.ca/dp/B0BCW4YMR8?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "چاپگر بلوتوثی قابل‌حمل برای برچسب‌های خانه، مدرسه و کسب‌وکار — بدون جوهر"
     }
   ],
   "updated_fa": "شنبه ۱۸ مهر"
