@@ -1,480 +1,503 @@
 {
- "date": "2026-09-29",
- "theme": "cities & daily life",
- "level": "a1",
- "cefr": "A1",
- "cover": "media/a1/2026-09-29/podcast-cover.jpg",
- "words": [
-  {
-   "word": "shop",
-   "pos": "noun",
-   "meaning": "a small store where you buy things",
-   "example": "I buy bread at the shop near my house.",
-   "pronunciation": "SHOP",
-   "fa": "مغازه",
-   "persian": "مغازه",
-   "photo": "media/a1/2026-09-29/photos/shop.jpg",
-   "audio": "media/a1/2026-09-29/word-audio/shop.mp3",
-   "word_audio": "media/a1/2026-09-29/word-audio/shop.mp3"
-  },
-  {
-   "word": "street",
-   "pos": "noun",
-   "meaning": "a road in a city with houses or shops",
-   "example": "Our house is on a quiet street.",
-   "pronunciation": "STREET",
-   "fa": "خیابان",
-   "persian": "خیابان",
-   "photo": "media/a1/2026-09-29/photos/street.jpg",
-   "audio": "media/a1/2026-09-29/word-audio/street.mp3",
-   "word_audio": "media/a1/2026-09-29/word-audio/street.mp3"
-  },
-  {
-   "word": "market",
-   "pos": "noun",
-   "meaning": "a place where people sell food and other things",
-   "example": "We buy fresh fruit at the market.",
-   "pronunciation": "MAR-kit",
-   "fa": "بازار",
-   "persian": "بازار",
-   "photo": "media/a1/2026-09-29/photos/market.jpg",
-   "audio": "media/a1/2026-09-29/word-audio/market.mp3",
-   "word_audio": "media/a1/2026-09-29/word-audio/market.mp3"
-  },
-  {
-   "word": "park",
-   "pos": "noun",
-   "meaning": "a green place in a city with trees and grass",
-   "example": "The children play in the park every day.",
-   "pronunciation": "PARK",
-   "fa": "پارک",
-   "persian": "پارک",
-   "photo": "media/a1/2026-09-29/photos/park.jpg",
-   "audio": "media/a1/2026-09-29/word-audio/park.mp3",
-   "word_audio": "media/a1/2026-09-29/word-audio/park.mp3"
-  },
-  {
-   "word": "bridge",
-   "pos": "noun",
-   "meaning": "a road that goes over water or a river",
-   "example": "We walk over the bridge to school.",
-   "pronunciation": "BRIJ",
-   "fa": "پل",
-   "persian": "پل",
-   "photo": "media/a1/2026-09-29/photos/bridge.jpg",
-   "audio": "media/a1/2026-09-29/word-audio/bridge.mp3",
-   "word_audio": "media/a1/2026-09-29/word-audio/bridge.mp3"
-  },
-  {
-   "word": "square",
-   "pos": "noun",
-   "meaning": "a wide open place in the middle of a city",
-   "example": "People meet their friends at the square.",
-   "pronunciation": "SKWAIR",
-   "fa": "میدان",
-   "persian": "میدان",
-   "photo": "media/a1/2026-09-29/photos/square.jpg",
-   "audio": "media/a1/2026-09-29/word-audio/square.mp3",
-   "word_audio": "media/a1/2026-09-29/word-audio/square.mp3"
-  },
-  {
-   "word": "bakery",
-   "pos": "noun",
-   "meaning": "a shop that sells bread and cakes",
-   "example": "The bakery near us has warm bread.",
-   "pronunciation": "BAY-kuh-ree",
-   "fa": "نانوایی",
-   "persian": "نانوایی",
-   "photo": "media/a1/2026-09-29/photos/bakery.jpg",
-   "audio": "media/a1/2026-09-29/word-audio/bakery.mp3",
-   "word_audio": "media/a1/2026-09-29/word-audio/bakery.mp3"
-  },
-  {
-   "word": "cinema",
-   "pos": "noun",
-   "meaning": "a place where you watch films",
-   "example": "We go to the cinema on Friday evening.",
-   "pronunciation": "SIN-uh-muh",
-   "fa": "سینما",
-   "persian": "سینما",
-   "photo": "media/a1/2026-09-29/photos/cinema.jpg",
-   "audio": "media/a1/2026-09-29/word-audio/cinema.mp3",
-   "word_audio": "media/a1/2026-09-29/word-audio/cinema.mp3"
-  },
-  {
-   "word": "traffic",
-   "pos": "noun",
-   "meaning": "many cars on the road; a busy road",
-   "example": "There is a lot of traffic in the morning.",
-   "pronunciation": "TRA-fik",
-   "fa": "ترافیک",
-   "persian": "ترافیک",
-   "photo": "media/a1/2026-09-29/photos/traffic.jpg",
-   "audio": "media/a1/2026-09-29/word-audio/traffic.mp3",
-   "word_audio": "media/a1/2026-09-29/word-audio/traffic.mp3"
-  },
-  {
-   "word": "bench",
-   "pos": "noun",
-   "meaning": "a long seat for two or three people, often in a park",
-   "example": "We sit on a bench and rest.",
-   "pronunciation": "BENCH",
-   "fa": "نیمکت",
-   "persian": "نیمکت",
-   "photo": "media/a1/2026-09-29/photos/bench.jpg",
-   "audio": "media/a1/2026-09-29/word-audio/bench.mp3",
-   "word_audio": "media/a1/2026-09-29/word-audio/bench.mp3"
-  }
- ],
- "pronunciation_audio": "media/a1/2026-09-29/pronunciation.mp3",
- "podcast": {
-  "title": "Word Kitchen: My City Life",
-  "audio": "media/a1/2026-09-29/podcast.mp3",
+  "date": "2026-09-29",
+  "theme": "cities & daily life",
+  "level": "a1",
+  "cefr": "A1",
   "cover": "media/a1/2026-09-29/podcast-cover.jpg",
-  "transcript": "media/a1/2026-09-29/podcast-transcript.txt"
- },
- "shadowing": {
-  "title": "My Day in the City",
-  "audio": "media/a1/2026-09-29/shadowing.mp3",
-  "transcript": "media/a1/2026-09-29/shadowing-transcript.txt"
- },
- "quiz": [
-  {
-   "question": "What does 'shop' mean?",
-   "options": [
-    "a green place in a city with trees and grass",
-    "a road in a city with houses or shops",
-    "a shop that sells bread and cakes",
-    "a small store where you buy things"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'street' mean?",
-   "options": [
-    "a place where people sell food and other things",
-    "many cars on the road; a busy road",
-    "a long seat for two or three people, often in a park",
-    "a road in a city with houses or shops"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'market' mean?",
-   "options": [
-    "a place where people sell food and other things",
-    "many cars on the road; a busy road",
-    "a shop that sells bread and cakes",
-    "a place where you watch films"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'park' mean?",
-   "options": [
-    "a road that goes over water or a river",
-    "a wide open place in the middle of a city",
-    "a green place in a city with trees and grass",
-    "a long seat for two or three people, often in a park"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'bridge' mean?",
-   "options": [
-    "a small store where you buy things",
-    "a wide open place in the middle of a city",
-    "a road that goes over water or a river",
-    "many cars on the road; a busy road"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'square' mean?",
-   "options": [
-    "a place where people sell food and other things",
-    "many cars on the road; a busy road",
-    "a road that goes over water or a river",
-    "a wide open place in the middle of a city"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'bakery' mean?",
-   "options": [
-    "a place where people sell food and other things",
-    "a shop that sells bread and cakes",
-    "a small store where you buy things",
-    "a road in a city with houses or shops"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'cinema' mean?",
-   "options": [
-    "a shop that sells bread and cakes",
-    "a place where you watch films",
-    "a road in a city with houses or shops",
-    "a small store where you buy things"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'traffic' mean?",
-   "options": [
-    "a road in a city with houses or shops",
-    "a small store where you buy things",
-    "many cars on the road; a busy road",
-    "a wide open place in the middle of a city"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'bench' mean?",
-   "options": [
-    "a long seat for two or three people, often in a park",
-    "a shop that sells bread and cakes",
-    "a road that goes over water or a river",
-    "a wide open place in the middle of a city"
-   ],
-   "answer": 0
-  }
- ],
- "wordQuiz": [
-  {
-   "question": "What does 'shop' mean?",
-   "options": [
-    "a green place in a city with trees and grass",
-    "a road in a city with houses or shops",
-    "a shop that sells bread and cakes",
-    "a small store where you buy things"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'street' mean?",
-   "options": [
-    "a place where people sell food and other things",
-    "many cars on the road; a busy road",
-    "a long seat for two or three people, often in a park",
-    "a road in a city with houses or shops"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'market' mean?",
-   "options": [
-    "a place where people sell food and other things",
-    "many cars on the road; a busy road",
-    "a shop that sells bread and cakes",
-    "a place where you watch films"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'park' mean?",
-   "options": [
-    "a road that goes over water or a river",
-    "a wide open place in the middle of a city",
-    "a green place in a city with trees and grass",
-    "a long seat for two or three people, often in a park"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'bridge' mean?",
-   "options": [
-    "a small store where you buy things",
-    "a wide open place in the middle of a city",
-    "a road that goes over water or a river",
-    "many cars on the road; a busy road"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'square' mean?",
-   "options": [
-    "a place where people sell food and other things",
-    "many cars on the road; a busy road",
-    "a road that goes over water or a river",
-    "a wide open place in the middle of a city"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'bakery' mean?",
-   "options": [
-    "a place where people sell food and other things",
-    "a shop that sells bread and cakes",
-    "a small store where you buy things",
-    "a road in a city with houses or shops"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'cinema' mean?",
-   "options": [
-    "a shop that sells bread and cakes",
-    "a place where you watch films",
-    "a road in a city with houses or shops",
-    "a small store where you buy things"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'traffic' mean?",
-   "options": [
-    "a road in a city with houses or shops",
-    "a small store where you buy things",
-    "many cars on the road; a busy road",
-    "a wide open place in the middle of a city"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'bench' mean?",
-   "options": [
-    "a long seat for two or three people, often in a park",
-    "a shop that sells bread and cakes",
-    "a road that goes over water or a river",
-    "a wide open place in the middle of a city"
-   ],
-   "answer": 0
-  }
- ],
- "grammar": {
-  "title": "4A: Obligation and prohibition - have to, must, should",
-  "explanation": [
-   "We use **have to** for rules and obligations. It means something is necessary.\n\n*Example idea:* I **have to** wear a uniform at my shop. It is the rule at work.",
-   "We use **must** for a strong personal decision. It means \"this is very important to me\".\n\n*Example idea:* I **must** buy fresh bread at the bakery today.",
-   "We use **mustn't** for prohibition. It means \"do NOT do this — it is not allowed\".\n\n*Example idea:* You **mustn't** walk on the grass in the park.",
-   "Careful: **don't have to** is different from **mustn't**. **Don't have to** means there is no obligation — it is OK.\n\n*Example idea:* We **don't have to** hurry to the cinema. We have a lot of time.",
-   "We use **should** and **shouldn't** for advice or an opinion. **Should** is weaker than **must**.\n\n*Example idea:* You **should** sit on a bench and rest in the park."
+  "words": [
+    {
+      "word": "shop",
+      "pos": "noun",
+      "meaning": "a small store where you buy things",
+      "example": "I buy bread at the shop near my house.",
+      "pronunciation": "SHOP",
+      "fa": "مغازه",
+      "persian": "مغازه",
+      "photo": "media/a1/2026-09-29/photos/shop.jpg",
+      "audio": "media/a1/2026-09-29/word-audio/shop.mp3",
+      "word_audio": "media/a1/2026-09-29/word-audio/shop.mp3"
+    },
+    {
+      "word": "street",
+      "pos": "noun",
+      "meaning": "a road in a city with houses or shops",
+      "example": "Our house is on a quiet street.",
+      "pronunciation": "STREET",
+      "fa": "خیابان",
+      "persian": "خیابان",
+      "photo": "media/a1/2026-09-29/photos/street.jpg",
+      "audio": "media/a1/2026-09-29/word-audio/street.mp3",
+      "word_audio": "media/a1/2026-09-29/word-audio/street.mp3"
+    },
+    {
+      "word": "market",
+      "pos": "noun",
+      "meaning": "a place where people sell food and other things",
+      "example": "We buy fresh fruit at the market.",
+      "pronunciation": "MAR-kit",
+      "fa": "بازار",
+      "persian": "بازار",
+      "photo": "media/a1/2026-09-29/photos/market.jpg",
+      "audio": "media/a1/2026-09-29/word-audio/market.mp3",
+      "word_audio": "media/a1/2026-09-29/word-audio/market.mp3"
+    },
+    {
+      "word": "park",
+      "pos": "noun",
+      "meaning": "a green place in a city with trees and grass",
+      "example": "The children play in the park every day.",
+      "pronunciation": "PARK",
+      "fa": "پارک",
+      "persian": "پارک",
+      "photo": "media/a1/2026-09-29/photos/park.jpg",
+      "audio": "media/a1/2026-09-29/word-audio/park.mp3",
+      "word_audio": "media/a1/2026-09-29/word-audio/park.mp3"
+    },
+    {
+      "word": "bridge",
+      "pos": "noun",
+      "meaning": "a road that goes over water or a river",
+      "example": "We walk over the bridge to school.",
+      "pronunciation": "BRIJ",
+      "fa": "پل",
+      "persian": "پل",
+      "photo": "media/a1/2026-09-29/photos/bridge.jpg",
+      "audio": "media/a1/2026-09-29/word-audio/bridge.mp3",
+      "word_audio": "media/a1/2026-09-29/word-audio/bridge.mp3"
+    },
+    {
+      "word": "square",
+      "pos": "noun",
+      "meaning": "a wide open place in the middle of a city",
+      "example": "People meet their friends at the square.",
+      "pronunciation": "SKWAIR",
+      "fa": "میدان",
+      "persian": "میدان",
+      "photo": "media/a1/2026-09-29/photos/square.jpg",
+      "audio": "media/a1/2026-09-29/word-audio/square.mp3",
+      "word_audio": "media/a1/2026-09-29/word-audio/square.mp3"
+    },
+    {
+      "word": "bakery",
+      "pos": "noun",
+      "meaning": "a shop that sells bread and cakes",
+      "example": "The bakery near us has warm bread.",
+      "pronunciation": "BAY-kuh-ree",
+      "fa": "نانوایی",
+      "persian": "نانوایی",
+      "photo": "media/a1/2026-09-29/photos/bakery.jpg",
+      "audio": "media/a1/2026-09-29/word-audio/bakery.mp3",
+      "word_audio": "media/a1/2026-09-29/word-audio/bakery.mp3"
+    },
+    {
+      "word": "cinema",
+      "pos": "noun",
+      "meaning": "a place where you watch films",
+      "example": "We go to the cinema on Friday evening.",
+      "pronunciation": "SIN-uh-muh",
+      "fa": "سینما",
+      "persian": "سینما",
+      "photo": "media/a1/2026-09-29/photos/cinema.jpg",
+      "audio": "media/a1/2026-09-29/word-audio/cinema.mp3",
+      "word_audio": "media/a1/2026-09-29/word-audio/cinema.mp3"
+    },
+    {
+      "word": "traffic",
+      "pos": "noun",
+      "meaning": "many cars on the road; a busy road",
+      "example": "There is a lot of traffic in the morning.",
+      "pronunciation": "TRA-fik",
+      "fa": "ترافیک",
+      "persian": "ترافیک",
+      "photo": "media/a1/2026-09-29/photos/traffic.jpg",
+      "audio": "media/a1/2026-09-29/word-audio/traffic.mp3",
+      "word_audio": "media/a1/2026-09-29/word-audio/traffic.mp3"
+    },
+    {
+      "word": "bench",
+      "pos": "noun",
+      "meaning": "a long seat for two or three people, often in a park",
+      "example": "We sit on a bench and rest.",
+      "pronunciation": "BENCH",
+      "fa": "نیمکت",
+      "persian": "نیمکت",
+      "photo": "media/a1/2026-09-29/photos/bench.jpg",
+      "audio": "media/a1/2026-09-29/word-audio/bench.mp3",
+      "word_audio": "media/a1/2026-09-29/word-audio/bench.mp3"
+    }
   ],
-  "examples": [
-   "*I *have to* wear a uniform at my shop.* (a work rule)",
-   "*I *must* see the new film at the cinema!* (a strong personal decision)",
-   "*You *mustn't* park here. The street is too narrow.* (prohibition — it is not allowed)",
-   "*You *don't have to* pay. The museum is free.* (no obligation)",
-   "*You *should* take warm clothes to the market.* (advice)",
-   "*You *shouldn't* drive in heavy traffic. It is not safe.* (advice)"
-  ],
-  "practice": [
-   {
-    "q": "Is it a rule? Which word do you use?",
-    "a": "Use **have to**. For example: I have to be at school at eight."
-   },
-   {
-    "q": "Is it good advice? Which word do you use?",
-    "a": "Use **should**. For example: You should drink water in the park."
-   },
-   {
-    "q": "Is it NOT allowed? Which word do you use?",
-    "a": "Use **mustn't**. For example: You mustn't walk on the grass."
-   }
-  ],
+  "pronunciation_audio": "media/a1/2026-09-29/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: My City Life",
+    "audio": "media/a1/2026-09-29/podcast.mp3",
+    "cover": "media/a1/2026-09-29/podcast-cover.jpg",
+    "transcript": "media/a1/2026-09-29/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Day in the City",
+    "audio": "media/a1/2026-09-29/shadowing.mp3",
+    "transcript": "media/a1/2026-09-29/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-09-29/shadowing-sentences/001.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/002.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/003.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/004.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/005.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/006.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/007.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/008.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/009.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/010.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/011.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/012.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/013.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/014.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/015.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/016.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/017.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/018.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/019.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/020.mp3",
+      "media/a1/2026-09-29/shadowing-sentences/021.mp3"
+    ]
+  },
   "quiz": [
-   {
-    "question": "You ___ send text messages when you drive. It is the law.",
-    "options": [
-     "mustn't",
-     "don't have to",
-     "should",
-     "have to"
-    ],
-    "answer": 0
-   },
-   {
-    "question": "We ___ hurry. We have a lot of time.",
-    "options": [
-     "mustn't",
-     "have to",
-     "don't have to",
-     "should"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "A pilot ___ wear a uniform at work. It is the rule.",
-    "options": [
-     "have to",
-     "has to",
-     "mustn't",
-     "should"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "The museum is free. You ___ pay.",
-    "options": [
-     "mustn't",
-     "have to",
-     "don't have to",
-     "must"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "It is cold. You ___ take warm clothes to the market.",
-    "options": [
-     "mustn't",
-     "don't have to",
-     "should",
-     "have to"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "You ___ park here. It is not allowed.",
-    "options": [
-     "don't have to",
-     "should",
-     "have to",
-     "mustn't"
-    ],
-    "answer": 3
-   },
-   {
-    "question": "___ I take my tablet out of my bag at Security?",
-    "options": [
-     "Do",
-     "Must",
-     "Have",
-     "Should"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "My sister is a nurse. Some weeks she ___ work at night.",
-    "options": [
-     "have to",
-     "mustn't",
-     "should",
-     "has to"
-    ],
-    "answer": 3
-   },
-   {
-    "question": "When I was a child, I ___ wear a uniform at school.",
-    "options": [
-     "must",
-     "have to",
-     "had to",
-     "mustn't"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "It is a nice day. I think we ___ walk to the park.",
-    "options": [
-     "mustn't",
-     "don't have to",
-     "should",
-     "has to"
-    ],
-    "answer": 2
-   }
+    {
+      "question": "What does 'shop' mean?",
+      "options": [
+        "a green place in a city with trees and grass",
+        "a road in a city with houses or shops",
+        "a shop that sells bread and cakes",
+        "a small store where you buy things"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'street' mean?",
+      "options": [
+        "a place where people sell food and other things",
+        "many cars on the road; a busy road",
+        "a long seat for two or three people, often in a park",
+        "a road in a city with houses or shops"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'market' mean?",
+      "options": [
+        "a place where people sell food and other things",
+        "many cars on the road; a busy road",
+        "a shop that sells bread and cakes",
+        "a place where you watch films"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'park' mean?",
+      "options": [
+        "a road that goes over water or a river",
+        "a wide open place in the middle of a city",
+        "a green place in a city with trees and grass",
+        "a long seat for two or three people, often in a park"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bridge' mean?",
+      "options": [
+        "a small store where you buy things",
+        "a wide open place in the middle of a city",
+        "a road that goes over water or a river",
+        "many cars on the road; a busy road"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'square' mean?",
+      "options": [
+        "a place where people sell food and other things",
+        "many cars on the road; a busy road",
+        "a road that goes over water or a river",
+        "a wide open place in the middle of a city"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'bakery' mean?",
+      "options": [
+        "a place where people sell food and other things",
+        "a shop that sells bread and cakes",
+        "a small store where you buy things",
+        "a road in a city with houses or shops"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cinema' mean?",
+      "options": [
+        "a shop that sells bread and cakes",
+        "a place where you watch films",
+        "a road in a city with houses or shops",
+        "a small store where you buy things"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'traffic' mean?",
+      "options": [
+        "a road in a city with houses or shops",
+        "a small store where you buy things",
+        "many cars on the road; a busy road",
+        "a wide open place in the middle of a city"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bench' mean?",
+      "options": [
+        "a long seat for two or three people, often in a park",
+        "a shop that sells bread and cakes",
+        "a road that goes over water or a river",
+        "a wide open place in the middle of a city"
+      ],
+      "answer": 0
+    }
   ],
-  "audio": "media/a1/2026-09-29/grammar-en.mp3"
- }
+  "wordQuiz": [
+    {
+      "question": "What does 'shop' mean?",
+      "options": [
+        "a green place in a city with trees and grass",
+        "a road in a city with houses or shops",
+        "a shop that sells bread and cakes",
+        "a small store where you buy things"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'street' mean?",
+      "options": [
+        "a place where people sell food and other things",
+        "many cars on the road; a busy road",
+        "a long seat for two or three people, often in a park",
+        "a road in a city with houses or shops"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'market' mean?",
+      "options": [
+        "a place where people sell food and other things",
+        "many cars on the road; a busy road",
+        "a shop that sells bread and cakes",
+        "a place where you watch films"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'park' mean?",
+      "options": [
+        "a road that goes over water or a river",
+        "a wide open place in the middle of a city",
+        "a green place in a city with trees and grass",
+        "a long seat for two or three people, often in a park"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bridge' mean?",
+      "options": [
+        "a small store where you buy things",
+        "a wide open place in the middle of a city",
+        "a road that goes over water or a river",
+        "many cars on the road; a busy road"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'square' mean?",
+      "options": [
+        "a place where people sell food and other things",
+        "many cars on the road; a busy road",
+        "a road that goes over water or a river",
+        "a wide open place in the middle of a city"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'bakery' mean?",
+      "options": [
+        "a place where people sell food and other things",
+        "a shop that sells bread and cakes",
+        "a small store where you buy things",
+        "a road in a city with houses or shops"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cinema' mean?",
+      "options": [
+        "a shop that sells bread and cakes",
+        "a place where you watch films",
+        "a road in a city with houses or shops",
+        "a small store where you buy things"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'traffic' mean?",
+      "options": [
+        "a road in a city with houses or shops",
+        "a small store where you buy things",
+        "many cars on the road; a busy road",
+        "a wide open place in the middle of a city"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bench' mean?",
+      "options": [
+        "a long seat for two or three people, often in a park",
+        "a shop that sells bread and cakes",
+        "a road that goes over water or a river",
+        "a wide open place in the middle of a city"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "4A: Obligation and prohibition - have to, must, should",
+    "explanation": [
+      "We use **have to** for rules and obligations. It means something is necessary.\n\n*Example idea:* I **have to** wear a uniform at my shop. It is the rule at work.",
+      "We use **must** for a strong personal decision. It means \"this is very important to me\".\n\n*Example idea:* I **must** buy fresh bread at the bakery today.",
+      "We use **mustn't** for prohibition. It means \"do NOT do this — it is not allowed\".\n\n*Example idea:* You **mustn't** walk on the grass in the park.",
+      "Careful: **don't have to** is different from **mustn't**. **Don't have to** means there is no obligation — it is OK.\n\n*Example idea:* We **don't have to** hurry to the cinema. We have a lot of time.",
+      "We use **should** and **shouldn't** for advice or an opinion. **Should** is weaker than **must**.\n\n*Example idea:* You **should** sit on a bench and rest in the park."
+    ],
+    "examples": [
+      "*I *have to* wear a uniform at my shop.* (a work rule)",
+      "*I *must* see the new film at the cinema!* (a strong personal decision)",
+      "*You *mustn't* park here. The street is too narrow.* (prohibition — it is not allowed)",
+      "*You *don't have to* pay. The museum is free.* (no obligation)",
+      "*You *should* take warm clothes to the market.* (advice)",
+      "*You *shouldn't* drive in heavy traffic. It is not safe.* (advice)"
+    ],
+    "practice": [
+      {
+        "q": "Is it a rule? Which word do you use?",
+        "a": "Use **have to**. For example: I have to be at school at eight."
+      },
+      {
+        "q": "Is it good advice? Which word do you use?",
+        "a": "Use **should**. For example: You should drink water in the park."
+      },
+      {
+        "q": "Is it NOT allowed? Which word do you use?",
+        "a": "Use **mustn't**. For example: You mustn't walk on the grass."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "You ___ send text messages when you drive. It is the law.",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "should",
+          "have to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We ___ hurry. We have a lot of time.",
+        "options": [
+          "mustn't",
+          "have to",
+          "don't have to",
+          "should"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "A pilot ___ wear a uniform at work. It is the rule.",
+        "options": [
+          "have to",
+          "has to",
+          "mustn't",
+          "should"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The museum is free. You ___ pay.",
+        "options": [
+          "mustn't",
+          "have to",
+          "don't have to",
+          "must"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "It is cold. You ___ take warm clothes to the market.",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "should",
+          "have to"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You ___ park here. It is not allowed.",
+        "options": [
+          "don't have to",
+          "should",
+          "have to",
+          "mustn't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ I take my tablet out of my bag at Security?",
+        "options": [
+          "Do",
+          "Must",
+          "Have",
+          "Should"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My sister is a nurse. Some weeks she ___ work at night.",
+        "options": [
+          "have to",
+          "mustn't",
+          "should",
+          "has to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "When I was a child, I ___ wear a uniform at school.",
+        "options": [
+          "must",
+          "have to",
+          "had to",
+          "mustn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "It is a nice day. I think we ___ walk to the park.",
+        "options": [
+          "mustn't",
+          "don't have to",
+          "should",
+          "has to"
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a1/2026-09-29/grammar-en.mp3"
+  }
 }
