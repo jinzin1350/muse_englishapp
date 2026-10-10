@@ -770,31 +770,31 @@ function questDefs() {
   const d = todayStr();
   const done = function (action) { return ptsDoneToday(action) ? 1 : 0; };
   const pool = [
-    { key: 'lesson', icon: '📝', xp: 30, target: 5, title: 'درس امروز رو کامل کن',
+    { key: 'lesson', icon: '📝', xp: 30, target: 5, title: 'Complete today\'s lesson',
       progress: function () { try { return dayDoneCount(d); } catch (e) { return 0; } },
-      unit: 'قدم', link: lessonLink() },
-    { key: 'xp100', icon: '⚡', xp: 20, target: 100, title: '۱۰۰ XP کسب کن',
+      unit: 'steps', link: lessonLink() },
+    { key: 'xp100', icon: '⚡', xp: 20, target: 100, title: 'Earn 100 XP',
       progress: function () { return localXPDay(); },
       unit: 'XP', link: lessonLink() },
-    { key: 'quiz', icon: '🎯', xp: 20, target: 1, title: 'کوییز کلمات رو کامل کن',
+    { key: 'quiz', icon: '🎯', xp: 20, target: 1, title: 'Finish the word quiz',
       progress: function () { return done('word_quiz'); },
       unit: '', link: lessonLink('quiz') },
-    { key: 'podcast', icon: '🎧', xp: 20, target: 1, title: 'پادکست رو کامل گوش کن',
+    { key: 'podcast', icon: '🎧', xp: 20, target: 1, title: 'Listen to the full podcast',
       progress: function () { return done('podcast_complete'); },
       unit: '', link: lessonLink('podcast') },
-    { key: 'shadowing', icon: '🎤', xp: 20, target: 1, title: 'شدویینگ رو کامل کن',
+    { key: 'shadowing', icon: '🎤', xp: 20, target: 1, title: 'Complete shadowing',
       progress: function () { return done('shadowing_complete'); },
       unit: '', link: lessonLink('shadowing') },
-    { key: 'grammar', icon: '📖', xp: 20, target: 1, title: '۱ کوییز گرامر بده',
+    { key: 'grammar', icon: '📖', xp: 20, target: 1, title: 'Take a grammar quiz',
       progress: function () { return done('grammar_quiz'); },
       unit: '', link: lessonLink('grammar') },
-    { key: 'review', icon: '🔁', xp: 15, target: 1, title: 'برو به سوالای review جواب بده',
+    { key: 'review', icon: '🔁', xp: 15, target: 1, title: 'Answer your review questions',
       progress: function () { return done('deck_review'); },
       unit: '', link: '#/review' },
-    { key: 'challenge', icon: '🏆', xp: 15, target: 1, title: 'سری به چالش بزن',
+    { key: 'challenge', icon: '🏆', xp: 15, target: 1, title: 'Check out the challenge',
       progress: function () { return challengeVisited() ? 1 : 0; },
       unit: '', link: '#/challenge' },
-    { key: 'pastlesson', icon: '📚', xp: 20, target: 1, title: '۱ درس قدیمی رو دوره کن',
+    { key: 'pastlesson', icon: '📚', xp: 20, target: 1, title: 'Review a past lesson',
       progress: function () { return pastLessonDone() ? 1 : 0; },
       unit: '', link: '#/lessons' }
   ];
@@ -834,16 +834,16 @@ function questCardHTML(q) {
   const done = p >= q.target;
   const claimed = questClaimed(q.key);
   const pct = q.target ? Math.round((p / q.target) * 100) : 0;
-  const progTxt = q.unit === 'قدم'
-    ? faDigits(p) + ' / ' + faDigits(q.target) + ' قدم'
+  const progTxt = q.unit === 'steps'
+    ? p + ' / ' + q.target + ' steps'
     : (q.unit === 'XP'
-      ? faDigits(p) + ' / ' + faDigits(q.target) + ' XP'
-      : (done ? 'انجام شد' : 'انجام نشده'));
+      ? p + ' / ' + q.target + ' XP'
+      : (done ? 'Done' : 'Not done'));
   let side;
   if (claimed) {
-    side = '<span class="hq-xp is-claimed" aria-label="دریافت شد">✅</span>';
+    side = '<span class="hq-xp is-claimed" aria-label="Claimed">✅</span>';
   } else if (done) {
-    side = '<button class="hq-xp is-claim" data-quest-claim="' + q.key + '">دریافت</button>';
+    side = '<button class="hq-xp is-claim" data-quest-claim="' + q.key + '">Claim</button>';
   } else {
     side = '<span class="hq-xp">XP +' + q.xp + '</span>';
   }
@@ -853,7 +853,7 @@ function questCardHTML(q) {
     '<span class="hq-main"><span class="hq-title">' + q.title + '</span>' +
     '<span class="hq-bar"><span style="width:' + pct + '%"></span></span>' +
     '<span class="hq-prog">' + progTxt + '</span></span>' +
-    '<span class="hq-go" aria-hidden="true">‹</span></a>' +
+    '<span class="hq-go" aria-hidden="true">›</span></a>' +
     side + '</div>';
 }
 function paintQuests() {
@@ -862,10 +862,10 @@ function paintQuests() {
     if (!host || state.view !== 'home') return;
     if (!state.user || state.user.demo) { host.innerHTML = ''; return; }
     const qs = questDefs();
-    host.innerHTML = '<section class="hq-card" dir="rtl" lang="fa" aria-label="کوئست‌های امروز">' +
+    host.innerHTML = '<section class="hq-card" dir="ltr" lang="en" aria-label="Today\'s quests">' +
       '<div class="hq-hero"><div class="hq-titles">' +
-      '<div class="hq-title">کوئست‌های امروز</div>' +
-      '<div class="hq-sub">کامل کن، XP بگیر و پیشرفت کن!</div></div>' +
+      '<div class="hq-title">Daily Quests</div>' +
+      '<div class="hq-sub">Complete quests, earn XP, level up!</div></div>' +
       '<span class="hq-mega" aria-hidden="true">🎯</span></div>' +
       '<div class="hq-rows">' + qs.map(questCardHTML).join('') + '</div></section>';
     const btns = host.querySelectorAll('[data-quest-claim]');
