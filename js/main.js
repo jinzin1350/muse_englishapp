@@ -1071,7 +1071,8 @@ function howToEarnHTML() {
 function renderChallenge(v) {
   markChallengeVisit();
   const me = state.user;
-  let html = '<div class="ch-wrap"><div class="lb-title"><h1>Leaderboard</h1>' +
+  let html = '<div class="ch-wrap"><div class="lb-title"><div class="lb-crown">' + ICO.crown + '</div>' +
+    '<div class="lb-head"><span class="lb-laurel">' + laurelBranch() + '</span><h1>Leaderboard</h1><span class="lb-laurel flip">' + laurelBranch() + '</span></div>' +
     '<p>Earn points for everything you do. Climb the board.</p></div>' +
     '<div class="ch-count">' + ICO.flame + '<span><b>1,500</b>&nbsp;learners in the challenge</span></div>';
   if (!me.displayName && !me.demo) {
@@ -1194,40 +1195,16 @@ async function loadLeaderboard() {
   host.innerHTML = state.user.demo ? boardHTML(rows, weekly) : boardHTML(mergeBoard(rows, weekly), weekly);
 }
 
-/* Laurel-wreath rank badge: two curved branches of leaves with the rank in the middle. */
-function laurelBadge(rank) {
-  const r = Number(rank) || 0;
-  const suf = r === 1 ? 'st' : r === 2 ? 'nd' : r === 3 ? 'rd' : 'th';
-  const cls = r === 1 ? 'gold' : r === 2 ? 'silver' : r === 3 ? 'bronze' : 'gold';
-  let inner = '';
-  for (let s = -1; s <= 1; s += 2) {
-    let d = '';
-    const pts = [];
-    for (let i = 0; i <= 11; i++) {
-      const t = i / 11;
-      const x = 32 + s * 21.5 * Math.sin(t * 1.9);
-      const y = 55.5 - t * 38;
-      pts.push([x, y, t]);
-      d += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ' ' + y.toFixed(1);
-    }
-    inner += '<path d="' + d + '" fill="none" stroke="currentColor" stroke-width="1.6"/>';
-    pts.forEach(function (p) {
-      const t = p[2];
-      const dx = s * 21.5 * 1.9 * Math.cos(t * 1.9);
-      const dy = -38;
-      const ang = Math.atan2(dy, dx) * 180 / Math.PI;
-      const rx = 3.4 + 2.6 * Math.sin(Math.PI * Math.min(1, t * 1.05));
-      const nl = Math.sqrt(dy * dy + dx * dx);
-      const ox = (-dy / nl) * s * 2.6, oy = (dx / nl) * s * 2.6;
-      const cx = (p[0] + ox).toFixed(1), cy = (p[1] + oy).toFixed(1);
-      inner += '<ellipse cx="' + cx + '" cy="' + cy + '" rx="' + rx.toFixed(1) +
-        '" ry="2.3" transform="rotate(' + ang.toFixed(1) + ' ' + cx + ' ' + cy +
-        ')" fill="currentColor" opacity="0.92"/>';
-    });
-  }
-  inner += '<text x="32" y="34" text-anchor="middle" dominant-baseline="central" font-size="14" ' +
-    'font-weight="800" fill="currentColor">' + r + '<tspan font-size="8">' + suf + '</tspan></text>';
-  return '<span class="laurel ' + cls + '"><svg viewBox="0 0 64 64" aria-hidden="true">' + inner + '</svg></span>';
+/* Decorative golden laurel branch for the leaderboard title (no rank number). */
+function laurelBranch() {
+  let inner = '<path d="M32 62 Q 22 40 30 8" fill="none" stroke="currentColor" stroke-width="2"/>';
+  const leaves = [[29, 52], [26, 42], [27, 32], [30, 22]];
+  leaves.forEach(function (p, i) {
+    const s = i % 2 ? -1 : 1;
+    inner += '<ellipse cx="' + (p[0] + s * 5) + '" cy="' + p[1] + '" rx="5.5" ry="2.6" ' +
+      'transform="rotate(' + (s * 38) + ' ' + (p[0] + s * 5) + ' ' + p[1] + ')" fill="currentColor" opacity="0.95"/>';
+  });
+  return '<svg viewBox="0 0 40 70" aria-hidden="true">' + inner + '</svg>';
 }
 
 function boardHTML(rows, weekly) {
@@ -1244,7 +1221,7 @@ function boardHTML(rows, weekly) {
   html += '<div class="podium">' + ordered.map(function (r) {
     return podiumCardHTML(r, r.rnk, r.user_id === meId);
   }).join('') + '</div>';
-  html += '<div class="rank-div"><span class="rd-gem">' + ICO.gem + '</span>Top Ranking</div>';
+  html += '<div class="rank-div"><span class="rd-trophy">' + ICO.trophy + '</span>Top Ranking</div>';
   const rest = show.slice(3);
   if (rest.length) {
     html += '<div class="ch-rows">' + rest.map(function (r) {
@@ -1261,31 +1238,36 @@ function boardHTML(rows, weekly) {
 
 function meRowHTML(pts, rnk) {
   const me = state.user;
+  const rk = Number(rnk) || 0;
+  const rkCls = rk === 1 ? 'rk1' : rk === 2 ? 'rk2' : rk === 3 ? 'rk3' : '';
   return '<div class="ch-row me">' +
+    '<span class="ch-rank ' + rkCls + '">' + (rk || '–') + '</span>' +
     '<span class="ch-avatar sm" style="' + avatarStyle(me.displayName || '?') + '">' + esc(nickInitial(me.displayName)) + '</span>' +
     '<span class="ch-meta"><span class="ch-name">' + esc(me.displayName || 'You') + ' <span class="you-tag">YOU</span></span>' +
     '<span class="ch-pts">' + ICO.gem + esc(String(pts)) + '</span></span>' +
-    '<span class="ch-laurel" style="display:flex;align-items:center;justify-content:center">' +
-      (rnk ? laurelBadge(rnk) : '<span style="color:rgba(245,243,255,0.4);font-weight:800">–</span>') +
-    '</span>' +
+    '<span class="ch-crown ' + rkCls + '">' + ICO.crown + '</span>' +
   '</div>';
 }
 
 function podiumCardHTML(r, place, isMe) {
   return '<div class="pd-card p' + place + (isMe ? ' me' : '') + '">' +
+    '<div class="pd-crown rk' + place + '">' + ICO.crown + '</div>' +
     '<div class="pd-avatar" style="' + avatarStyle(r.display_name) + '">' + esc(nickInitial(r.display_name)) + '</div>' +
-    '<div class="pd-laurel">' + laurelBadge(place) + '</div>' +
+    '<div class="pd-rank rk' + place + '"><span>' + place + '</span></div>' +
     '<div class="pd-name">' + esc(r.display_name) + (isMe ? ' <span class="you-tag">YOU</span>' : '') + '</div>' +
     '<div class="pd-pts">' + ICO.gem + '<b>' + esc(Number(r.points).toLocaleString('en-US')) + '</b></div>' +
   '</div>';
 }
 
 function rowHTML(r, isMe) {
+  const rk = Number(r.rnk) || 0;
+  const rkCls = rk === 1 ? 'rk1' : rk === 2 ? 'rk2' : rk === 3 ? 'rk3' : '';
   return '<div class="ch-row' + (isMe ? ' me' : '') + '">' +
+    '<span class="ch-rank ' + rkCls + '">' + rk + '</span>' +
     '<span class="ch-avatar sm" style="' + avatarStyle(r.display_name) + '">' + esc(nickInitial(r.display_name)) + '</span>' +
     '<span class="ch-meta"><span class="ch-name">' + esc(r.display_name) + (isMe ? ' <span class="you-tag">YOU</span>' : '') + '</span>' +
     '<span class="ch-pts">' + ICO.gem + esc(Number(r.points).toLocaleString('en-US')) + '</span></span>' +
-    '<span class="ch-laurel">' + laurelBadge(r.rnk) + '</span>' +
+    '<span class="ch-crown ' + rkCls + '">' + ICO.crown + '</span>' +
   '</div>';
 }
 
@@ -8822,7 +8804,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610100358';
+var APP_VERSION = '202610100443';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
