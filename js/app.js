@@ -595,7 +595,7 @@ var PTS_LABELS = {
   mystery_box: 'Mystery box',
   podcast_milestone: 'Podcast milestone',
   shadowing_speaking: 'Speaking practice',
-  quest_daily: 'کوئست روزانه'
+  quest_daily: 'Daily quest'
 };
 
 function ptsKey(kind) {
