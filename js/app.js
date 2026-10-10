@@ -8819,9 +8819,34 @@ function bindEvents() {
 }
 
 /* ---------------- init ---------------- */
+/* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
+   at push time. If the server's version.json is newer, reload once so the user
+   never keeps running a stale cached bundle. Skipped mid-quiz. */
+var APP_VERSION = '202610100325';
+function checkAppVersion() {
+  try {
+    if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
+    if (state.quiz) return;
+    fetch('/version.json', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (j) {
+      if (j && j.v && j.v !== APP_VERSION) {
+        let seen = null;
+        try { seen = sessionStorage.getItem('appv_seen'); } catch (e) {}
+        if (seen !== j.v) {
+          try { sessionStorage.setItem('appv_seen', j.v); } catch (e) {}
+          window.location.reload();
+        }
+      }
+    }).catch(function () {});
+  } catch (e) {}
+}
+
 async function init() {
   initAudio();
   bindEvents();
+  checkAppVersion();
+  document.addEventListener('visibilitychange', function () {
+    if (!document.hidden) checkAppVersion();
+  });
   initPwaPrompt();
   initHeartbeat();
   initSupabase();
