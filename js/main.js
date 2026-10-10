@@ -566,6 +566,7 @@ function svgIcon(paths) {
 }
 var ICO = {
   trophy: svgIcon('<path d="M8 21h8"/><path d="M12 17v4"/><path d="M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M7 6H5a2 2 0 0 0 0 4h2"/><path d="M17 6h2a2 2 0 0 1 0 4h-2"/>'),
+  users: svgIcon('<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>'),
   medal: svgIcon('<circle cx="12" cy="14" r="5"/><path d="M8.6 9.7 6 3h4l2 3.6L14 3h4l-2.6 6.7"/>'),
   gem: svgIcon('<path d="M6 3h12l4 6-10 12L2 9l4-6z"/><path d="M2 9h20"/>'),
   crown: svgIcon('<path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.735H5.81a1 1 0 0 1-.957-.735L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/>'),
@@ -1074,7 +1075,7 @@ function renderChallenge(v) {
   let html = '<div class="ch-wrap"><div class="lb-title"><div class="lb-crown">' + ICO.crown + '</div>' +
     '<div class="lb-head"><span class="lb-laurel">' + laurelBranch() + '</span><h1>Leaderboard</h1><span class="lb-laurel flip">' + laurelBranch() + '</span></div>' +
     '<p>Earn points for everything you do. Climb the board.</p></div>' +
-    '<div class="ch-count">' + ICO.flame + '<span><b>1,500</b>&nbsp;learners in the challenge</span></div>';
+    '<div class="ch-count"><span class="cc-people">' + ICO.users + '</span><span><b>1,500</b>&nbsp;learners in the challenge</span><span class="cc-trophy">' + ICO.trophy + '</span></div>';
   if (!me.displayName && !me.demo) {
     html += '<div class="card plain ch-locked"><div class="earn-ico">' + ICO.lock + '</div>' +
       '<h2>Pick your battle name first</h2>' +
@@ -1251,9 +1252,9 @@ function meRowHTML(pts, rnk) {
 
 function podiumCardHTML(r, place, isMe) {
   return '<div class="pd-card p' + place + (isMe ? ' me' : '') + '">' +
-    '<div class="pd-crown rk' + place + '">' + ICO.crown + '</div>' +
+    (place === 1 ? '<div class="pd-crown big rk1">' + ICO.crown + '</div>' : '') +
     '<div class="pd-avatar" style="' + avatarStyle(r.display_name) + '">' + esc(nickInitial(r.display_name)) + '</div>' +
-    '<div class="pd-rank rk' + place + '"><span>' + place + '</span></div>' +
+    '<div class="pd-medal rk' + place + '"><span>' + place + '</span></div>' +
     '<div class="pd-name">' + esc(r.display_name) + (isMe ? ' <span class="you-tag">YOU</span>' : '') + '</div>' +
     '<div class="pd-pts">' + ICO.gem + '<b>' + esc(Number(r.points).toLocaleString('en-US')) + '</b></div>' +
   '</div>';
@@ -8804,7 +8805,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610100443';
+var APP_VERSION = '202610100555';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

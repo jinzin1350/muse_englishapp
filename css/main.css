@@ -969,11 +969,19 @@ details.practice p { margin: 0.7rem 0 0; color: var(--herb-dark); font-weight: 5
 
 /* segmented control: Team/Local/Global style */
 /* participants count pill */
-.ch-count { display: flex; align-items: center; justify-content: center; gap: 0.45rem;
-  margin: 0 auto 1rem; padding: 0.5rem 1.1rem; width: fit-content;
-  background: rgba(255, 214, 64, 0.10); border: 1px solid rgba(255, 214, 64, 0.35);
-  border-radius: 999px; color: #ffd640; font-size: 0.9rem; }
-.ch-count svg { width: 18px; height: 18px; }
+.ch-count { display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+  margin: 0 auto 1rem; padding: 0.6rem 1.2rem; width: fit-content; max-width: 100%;
+  background: linear-gradient(180deg, rgba(20, 28, 58, 0.95), rgba(12, 17, 38, 0.95));
+  border: 1.5px solid transparent; border-radius: 999px;
+  background-clip: padding-box; position: relative; color: #fff; font-size: 0.95rem; }
+.ch-count::before { content: ""; position: absolute; inset: -1.5px; border-radius: 999px;
+  padding: 1.5px; background: linear-gradient(90deg, #7c3aed, #f5b301, #ec4899, #7c3aed);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none; }
+.ch-count .cc-people svg { width: 22px; height: 22px; color: #f5b301;
+  filter: drop-shadow(0 2px 6px rgba(245,179,1,.5)); }
+.ch-count .cc-trophy svg { width: 22px; height: 22px; color: #f5b301;
+  filter: drop-shadow(0 2px 6px rgba(245,179,1,.5)); }
 .ch-count b { font-weight: 800; }
 
 /* challenge promo banner on home — loud game style, dark card on light page */
@@ -1065,14 +1073,18 @@ details.practice p { margin: 0.7rem 0 0; color: var(--herb-dark); font-weight: 5
   border: 2.5px solid rgba(255, 255, 255, 0.25); }
 .pd-card.p1 .pd-avatar { width: 70px; height: 70px; font-size: 1.75rem;
   border-color: rgba(245, 179, 1, 0.85); box-shadow: 0 0 24px rgba(245, 179, 1, 0.5); }
-/* hexagon rank badge overlapping the avatar */
-.pd-rank { width: 30px; height: 34px; margin: -0.7rem auto 0; position: relative; z-index: 2;
-  display: flex; align-items: center; justify-content: center;
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); }
-.pd-rank span { font-weight: 900; font-size: 0.95rem; color: #1a1206; }
-.pd-rank.rk1 { background: linear-gradient(180deg, #ffd75e, #e89b00); box-shadow: 0 2px 10px rgba(245,179,1,.5); }
-.pd-rank.rk2 { background: linear-gradient(180deg, #e8edf5, #aab4c8); }
-.pd-rank.rk3 { background: linear-gradient(180deg, #f0b878, #c07a35); }
+.pd-crown.big { width: 52px; height: 52px; margin: -0.4rem auto 0.1rem;
+  color: #ffd75e; filter: drop-shadow(0 4px 14px rgba(255, 180, 0, 0.75)); }
+/* circular medal badge overlapping the avatar */
+.pd-medal { width: 38px; height: 38px; margin: -0.85rem auto 0; position: relative; z-index: 2;
+  display: flex; align-items: center; justify-content: center; border-radius: 50%;
+  border: 2.5px solid rgba(255,255,255,0.35);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.5), inset 0 2px 4px rgba(255,255,255,0.35), inset 0 -3px 6px rgba(0,0,0,0.25); }
+.pd-medal span { font-weight: 900; font-size: 1.1rem; color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+.pd-medal.rk1 { background: radial-gradient(circle at 35% 30%, #ffe9a8, #f5b301 60%, #c07f00); }
+.pd-medal.rk2 { background: radial-gradient(circle at 35% 30%, #ffffff, #c3cad6 60%, #8a94a8); }
+.pd-medal.rk3 { background: radial-gradient(circle at 35% 30%, #ffc890, #e09a52 60%, #a05a20); }
 .pd-name { font-weight: 700; font-size: 0.82rem; color: #fff; margin-top: 0.4rem;
   word-break: break-word; padding: 0 0.2rem; }
 .pd-pts { display: flex; align-items: center; justify-content: center; gap: 0.3rem;
