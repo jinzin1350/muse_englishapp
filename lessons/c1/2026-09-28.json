@@ -1,1 +1,393 @@
-{"cefr":"C1","date":"2026-09-28","grammar":{"examples":["She is *an autodidact* who taught herself three languages. (a/an: saying what somebody is)","He is writing *a thesis* on climate education. (a/an: first mention)","The professor posted *the syllabus* online yesterday. (the: known to both speakers)","*The curriculum* was redesigned after the new law passed. (the: the only one)","Dr. Lane is *the most erudite* scholar in the department. (the + superlative)","*Plagiarism* is treated as a serious offense here. (no article: general)","*The plagiarism* in his paper was discovered by software. (the: specific)","*Pedagogy* keeps evolving with new technology. (no article: abstract, general)","*The pedagogy* of that school favors group projects. (the: specific)","She invented *a mnemonic* to remember every date. (a/an: first mention)","He passed thanks to *a* desperate *cram* the night before. (a/an: singular countable)","She bounced back quickly after *the flunk* in chemistry. (the: specific known event)"],"explanation":"Use **a / an** with a singular countable noun when you say what something is or mention it for the first time. Words like *autodidact*, *thesis*, or *mnemonic* follow this pattern: first *a thesis*, then *the thesis*.\n\nSwitch to **the** once the thing is known to both speakers, usually because you already mentioned it. So *a syllabus* on first mention becomes *the syllabus* afterwards.\n\n**The** also marks the only one of its kind and goes before superlatives. Think of *the curriculum* of one school system, or *the most erudite* professor on the staff.\n\nUse **no article** for general ideas with plural or uncountable nouns. *Plagiarism is dishonest* is general, but *the plagiarism in her thesis* points to one specific case.\n\nAt C1 level, watch abstract nouns carefully: *pedagogy* in general takes no article, yet *the pedagogy of this college* is specific and needs **the**. Generic versus specific is the real test.\n\nGeneral habits and repeated actions also take no article, even with verbs like *cram* or *flunk*. Compare *students cram before exams* in general with *the students who flunked yesterday* as one known group.\n\nSome fixed expressions never take an article: *at home*, *to work*, *at school*, meals like *lunch*, days and months, and *next / last* plus a time word. And **the** appears with familiar town places, such as *the library* or *the cinema*.","practice":[{"a":"an — 'She is an erudite professor.' Use a/an to say what somebody is.","q":"Which article fits: 'She is ___ erudite professor'?"},{"a":"Because it is a general statement about an uncountable noun; 'the plagiarism in his essay' would be specific.","q":"Why is there no article in 'Plagiarism is wrong'?"},{"a":"The — 'The syllabus was long.' Use the after the first mention.","q":"First mention or known: 'I read a syllabus. ___ syllabus was long.'?"}],"quiz":[{"answer":1,"options":["a","an","the","– (no article)"],"question":"She is ___ autodidact."},{"answer":0,"options":["a","an","the","– (no article)"],"question":"He wrote ___ thesis on education."},{"answer":2,"options":["A","An","The","– (no article)"],"question":"The teacher handed it out yesterday. ___ syllabus lists every reading."},{"answer":2,"options":["A","An","The","– (no article)"],"question":"___ curriculum at our school needs an update."},{"answer":2,"options":["a","an","the","– (no article)"],"question":"She is ___ most erudite student in the class."},{"answer":2,"options":["A","The","– (no article)","An"],"question":"___ plagiarism is a serious academic offense. (in general)"},{"answer":2,"options":["A","An","The","– (no article)"],"question":"___ pedagogy of this college favors group work."},{"answer":2,"options":["a","the","– (no article)","an"],"question":"They met for ___ lunch to discuss the new curriculum."},{"answer":2,"options":["a","the","– (no article)","an"],"question":"He walks to ___ school every morning."},{"answer":1,"options":["a","an","the","– (no article)"],"question":"What ___ amazing mnemonic for the dates!"}],"title":"3B: Articles - a / an, the, no article"},"level":"c1","podcast":{"audio":"media/c1/2026-09-28/podcast.mp3","cover":null,"title":"Word Kitchen: The Art of Learning","transcript":"media/c1/2026-09-28/podcast-transcript.txt"},"pronunciation_audio":"media/c1/2026-09-28/pronunciation.mp3","quiz":[{"answer":0,"options":["the method and practice of teaching","an outline of the topics in a course","copying someone else's work as your own","a long research paper written for a degree"],"question":"What does 'pedagogy' mean?"},{"answer":1,"options":["a trick that helps you remember something","the subjects that make up a course of study","showing great knowledge","to study a huge amount in a short time"],"question":"What does 'curriculum' mean?"},{"answer":2,"options":["to fail an exam or course","a person who teaches themselves","an outline of the topics in a course","the method and practice of teaching"],"question":"What does 'syllabus' mean?"},{"answer":0,"options":["showing great knowledge","a long research paper written for a degree","the subjects that make up a course of study","a trick that helps you remember something"],"question":"What does 'erudite' mean?"},{"answer":2,"options":["copying someone else's work as your own","to study a huge amount in a short time","a person who teaches themselves","an outline of the topics in a course"],"question":"What does 'autodidact' mean?"},{"answer":3,"options":["the method and practice of teaching","to fail an exam or course","showing great knowledge","a trick that helps you remember something"],"question":"What does 'mnemonic' mean?"},{"answer":1,"options":["a person who teaches themselves","to study a huge amount in a short time","a long research paper written for a degree","the subjects that make up a course of study"],"question":"What does 'cram' mean?"},{"answer":0,"options":["to fail an exam or course","the method and practice of teaching","an outline of the topics in a course","copying someone else's work as your own"],"question":"What does 'flunk' mean?"},{"answer":2,"options":["a trick that helps you remember something","showing great knowledge","copying someone else's work as your own","a person who teaches themselves"],"question":"What does 'plagiarism' mean?"},{"answer":1,"options":["to study a huge amount in a short time","a long research paper written for a degree","to fail an exam or course","the method and practice of teaching"],"question":"What does 'thesis' mean?"}],"shadowing":{"audio":"media/c1/2026-09-28/shadowing.mp3","title":"Shadowing Story: Sara's Road to Graduation","transcript":"media/c1/2026-09-28/shadowing-transcript.txt"},"theme":"The Art of Learning","words":[{"example":"Her pedagogy mixes short lectures with hands-on projects.","meaning":"the method and practice of teaching","persian":"روش تدریس","photo":"media/c1/2026-09-28/photos/pedagogy.jpg","pos":"noun","pronunciation":"peh-duh-GOH-jee","word":"pedagogy","word_audio":"media/c1/2026-09-28/word-audio/pedagogy.mp3"},{"example":"The new curriculum adds coding classes in every grade.","meaning":"the subjects that make up a course of study","persian":"برنامه درسی","photo":"media/c1/2026-09-28/photos/curriculum.jpg","pos":"noun","pronunciation":"kuh-RIK-yuh-lum","word":"curriculum","word_audio":"media/c1/2026-09-28/word-audio/curriculum.mp3"},{"example":"The syllabus lists every reading for the semester.","meaning":"an outline of the topics in a course","persian":"سرفصل درسی","photo":"media/c1/2026-09-28/photos/syllabus.jpg","pos":"noun","pronunciation":"SIH-luh-bus","word":"syllabus","word_audio":"media/c1/2026-09-28/word-audio/syllabus.mp3"},{"example":"The erudite professor could quote ancient texts from memory.","meaning":"showing great knowledge","persian":"فاضل و دانشمند","photo":"media/c1/2026-09-28/photos/erudite.jpg","pos":"adjective","pronunciation":"EH-ruh-dyte","word":"erudite","word_audio":"media/c1/2026-09-28/word-audio/erudite.mp3"},{"example":"As an autodidact, she learned three languages online.","meaning":"a person who teaches themselves","persian":"خودآموخته","photo":"media/c1/2026-09-28/photos/autodidact.jpg","pos":"noun","pronunciation":"aw-toh-dih-DAKT","word":"autodidact","word_audio":"media/c1/2026-09-28/word-audio/autodidact.mp3"},{"example":"A simple mnemonic helped him remember the planets in order.","meaning":"a trick that helps you remember something","persian":"تکنیک حفظی","photo":"media/c1/2026-09-28/photos/mnemonic.jpg","pos":"noun","pronunciation":"nih-MAH-nik","word":"mnemonic","word_audio":"media/c1/2026-09-28/word-audio/mnemonic.mp3"},{"example":"He crammed all night before the final exam.","meaning":"to study a huge amount in a short time","persian":"فشرده خواندن (در شب امتحان)","photo":"media/c1/2026-09-28/photos/cram.jpg","pos":"verb","pronunciation":"KRAM","word":"cram","word_audio":"media/c1/2026-09-28/word-audio/cram.mp3"},{"example":"She flunked chemistry and had to retake it.","meaning":"to fail an exam or course","persian":"مردود شدن در امتحان","photo":"media/c1/2026-09-28/photos/flunk.jpg","pos":"verb","pronunciation":"FLUNK","word":"flunk","word_audio":"media/c1/2026-09-28/word-audio/flunk.mp3"},{"example":"Plagiarism can get you expelled from university.","meaning":"copying someone else's work as your own","persian":"سرقت ادبی","photo":"media/c1/2026-09-28/photos/plagiarism.jpg","pos":"noun","pronunciation":"PLAY-juh-ri-zum","word":"plagiarism","word_audio":"media/c1/2026-09-28/word-audio/plagiarism.mp3"},{"example":"His thesis on public health won a national prize.","meaning":"a long research paper written for a degree","persian":"پایان‌نامه","photo":"media/c1/2026-09-28/photos/thesis.jpg","pos":"noun","pronunciation":"THEE-sis","word":"thesis","word_audio":"media/c1/2026-09-28/word-audio/thesis.mp3"}]}
+{
+  "cefr": "C1",
+  "date": "2026-09-28",
+  "grammar": {
+    "examples": [
+      "She is *an autodidact* who taught herself three languages. (a/an: saying what somebody is)",
+      "He is writing *a thesis* on climate education. (a/an: first mention)",
+      "The professor posted *the syllabus* online yesterday. (the: known to both speakers)",
+      "*The curriculum* was redesigned after the new law passed. (the: the only one)",
+      "Dr. Lane is *the most erudite* scholar in the department. (the + superlative)",
+      "*Plagiarism* is treated as a serious offense here. (no article: general)",
+      "*The plagiarism* in his paper was discovered by software. (the: specific)",
+      "*Pedagogy* keeps evolving with new technology. (no article: abstract, general)",
+      "*The pedagogy* of that school favors group projects. (the: specific)",
+      "She invented *a mnemonic* to remember every date. (a/an: first mention)",
+      "He passed thanks to *a* desperate *cram* the night before. (a/an: singular countable)",
+      "She bounced back quickly after *the flunk* in chemistry. (the: specific known event)"
+    ],
+    "explanation": "Use **a / an** with a singular countable noun when you say what something is or mention it for the first time. Words like *autodidact*, *thesis*, or *mnemonic* follow this pattern: first *a thesis*, then *the thesis*.\n\nSwitch to **the** once the thing is known to both speakers, usually because you already mentioned it. So *a syllabus* on first mention becomes *the syllabus* afterwards.\n\n**The** also marks the only one of its kind and goes before superlatives. Think of *the curriculum* of one school system, or *the most erudite* professor on the staff.\n\nUse **no article** for general ideas with plural or uncountable nouns. *Plagiarism is dishonest* is general, but *the plagiarism in her thesis* points to one specific case.\n\nAt C1 level, watch abstract nouns carefully: *pedagogy* in general takes no article, yet *the pedagogy of this college* is specific and needs **the**. Generic versus specific is the real test.\n\nGeneral habits and repeated actions also take no article, even with verbs like *cram* or *flunk*. Compare *students cram before exams* in general with *the students who flunked yesterday* as one known group.\n\nSome fixed expressions never take an article: *at home*, *to work*, *at school*, meals like *lunch*, days and months, and *next / last* plus a time word. And **the** appears with familiar town places, such as *the library* or *the cinema*.",
+    "practice": [
+      {
+        "a": "an — 'She is an erudite professor.' Use a/an to say what somebody is.",
+        "q": "Which article fits: 'She is ___ erudite professor'?"
+      },
+      {
+        "a": "Because it is a general statement about an uncountable noun; 'the plagiarism in his essay' would be specific.",
+        "q": "Why is there no article in 'Plagiarism is wrong'?"
+      },
+      {
+        "a": "The — 'The syllabus was long.' Use the after the first mention.",
+        "q": "First mention or known: 'I read a syllabus. ___ syllabus was long.'?"
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 1,
+        "options": [
+          "a",
+          "an",
+          "the",
+          "– (no article)"
+        ],
+        "question": "She is ___ autodidact."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "a",
+          "an",
+          "the",
+          "– (no article)"
+        ],
+        "question": "He wrote ___ thesis on education."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "A",
+          "An",
+          "The",
+          "– (no article)"
+        ],
+        "question": "The teacher handed it out yesterday. ___ syllabus lists every reading."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "A",
+          "An",
+          "The",
+          "– (no article)"
+        ],
+        "question": "___ curriculum at our school needs an update."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "a",
+          "an",
+          "the",
+          "– (no article)"
+        ],
+        "question": "She is ___ most erudite student in the class."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "A",
+          "The",
+          "– (no article)",
+          "An"
+        ],
+        "question": "___ plagiarism is a serious academic offense. (in general)"
+      },
+      {
+        "answer": 2,
+        "options": [
+          "A",
+          "An",
+          "The",
+          "– (no article)"
+        ],
+        "question": "___ pedagogy of this college favors group work."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "a",
+          "the",
+          "– (no article)",
+          "an"
+        ],
+        "question": "They met for ___ lunch to discuss the new curriculum."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "a",
+          "the",
+          "– (no article)",
+          "an"
+        ],
+        "question": "He walks to ___ school every morning."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "a",
+          "an",
+          "the",
+          "– (no article)"
+        ],
+        "question": "What ___ amazing mnemonic for the dates!"
+      }
+    ],
+    "title": "3B: Articles - a / an, the, no article"
+  },
+  "level": "c1",
+  "podcast": {
+    "audio": "media/c1/2026-09-28/podcast.mp3",
+    "cover": null,
+    "title": "Word Kitchen: The Art of Learning",
+    "transcript": "media/c1/2026-09-28/podcast-transcript.txt"
+  },
+  "pronunciation_audio": "media/c1/2026-09-28/pronunciation.mp3",
+  "quiz": [
+    {
+      "answer": 0,
+      "options": [
+        "the method and practice of teaching",
+        "an outline of the topics in a course",
+        "copying someone else's work as your own",
+        "a long research paper written for a degree"
+      ],
+      "question": "What does 'pedagogy' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "a trick that helps you remember something",
+        "the subjects that make up a course of study",
+        "showing great knowledge",
+        "to study a huge amount in a short time"
+      ],
+      "question": "What does 'curriculum' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "to fail an exam or course",
+        "a person who teaches themselves",
+        "an outline of the topics in a course",
+        "the method and practice of teaching"
+      ],
+      "question": "What does 'syllabus' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "showing great knowledge",
+        "a long research paper written for a degree",
+        "the subjects that make up a course of study",
+        "a trick that helps you remember something"
+      ],
+      "question": "What does 'erudite' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "copying someone else's work as your own",
+        "to study a huge amount in a short time",
+        "a person who teaches themselves",
+        "an outline of the topics in a course"
+      ],
+      "question": "What does 'autodidact' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "the method and practice of teaching",
+        "to fail an exam or course",
+        "showing great knowledge",
+        "a trick that helps you remember something"
+      ],
+      "question": "What does 'mnemonic' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "a person who teaches themselves",
+        "to study a huge amount in a short time",
+        "a long research paper written for a degree",
+        "the subjects that make up a course of study"
+      ],
+      "question": "What does 'cram' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "to fail an exam or course",
+        "the method and practice of teaching",
+        "an outline of the topics in a course",
+        "copying someone else's work as your own"
+      ],
+      "question": "What does 'flunk' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "a trick that helps you remember something",
+        "showing great knowledge",
+        "copying someone else's work as your own",
+        "a person who teaches themselves"
+      ],
+      "question": "What does 'plagiarism' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "to study a huge amount in a short time",
+        "a long research paper written for a degree",
+        "to fail an exam or course",
+        "the method and practice of teaching"
+      ],
+      "question": "What does 'thesis' mean?"
+    }
+  ],
+  "shadowing": {
+    "audio": "media/c1/2026-09-28/shadowing.mp3",
+    "title": "Shadowing Story: Sara's Road to Graduation",
+    "transcript": "media/c1/2026-09-28/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-09-28/shadowing-sentences/001.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/002.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/003.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/004.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/005.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/006.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/007.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/008.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/009.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/010.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/011.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/012.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/013.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/014.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/015.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/016.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/017.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/018.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/019.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/020.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/021.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/022.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/023.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/024.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/025.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/026.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/027.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/028.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/029.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/030.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/031.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/032.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/033.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/034.mp3",
+      "media/c1/2026-09-28/shadowing-sentences/035.mp3"
+    ]
+  },
+  "theme": "The Art of Learning",
+  "words": [
+    {
+      "example": "Her pedagogy mixes short lectures with hands-on projects.",
+      "meaning": "the method and practice of teaching",
+      "persian": "روش تدریس",
+      "photo": "media/c1/2026-09-28/photos/pedagogy.jpg",
+      "pos": "noun",
+      "pronunciation": "peh-duh-GOH-jee",
+      "word": "pedagogy",
+      "word_audio": "media/c1/2026-09-28/word-audio/pedagogy.mp3"
+    },
+    {
+      "example": "The new curriculum adds coding classes in every grade.",
+      "meaning": "the subjects that make up a course of study",
+      "persian": "برنامه درسی",
+      "photo": "media/c1/2026-09-28/photos/curriculum.jpg",
+      "pos": "noun",
+      "pronunciation": "kuh-RIK-yuh-lum",
+      "word": "curriculum",
+      "word_audio": "media/c1/2026-09-28/word-audio/curriculum.mp3"
+    },
+    {
+      "example": "The syllabus lists every reading for the semester.",
+      "meaning": "an outline of the topics in a course",
+      "persian": "سرفصل درسی",
+      "photo": "media/c1/2026-09-28/photos/syllabus.jpg",
+      "pos": "noun",
+      "pronunciation": "SIH-luh-bus",
+      "word": "syllabus",
+      "word_audio": "media/c1/2026-09-28/word-audio/syllabus.mp3"
+    },
+    {
+      "example": "The erudite professor could quote ancient texts from memory.",
+      "meaning": "showing great knowledge",
+      "persian": "فاضل و دانشمند",
+      "photo": "media/c1/2026-09-28/photos/erudite.jpg",
+      "pos": "adjective",
+      "pronunciation": "EH-ruh-dyte",
+      "word": "erudite",
+      "word_audio": "media/c1/2026-09-28/word-audio/erudite.mp3"
+    },
+    {
+      "example": "As an autodidact, she learned three languages online.",
+      "meaning": "a person who teaches themselves",
+      "persian": "خودآموخته",
+      "photo": "media/c1/2026-09-28/photos/autodidact.jpg",
+      "pos": "noun",
+      "pronunciation": "aw-toh-dih-DAKT",
+      "word": "autodidact",
+      "word_audio": "media/c1/2026-09-28/word-audio/autodidact.mp3"
+    },
+    {
+      "example": "A simple mnemonic helped him remember the planets in order.",
+      "meaning": "a trick that helps you remember something",
+      "persian": "تکنیک حفظی",
+      "photo": "media/c1/2026-09-28/photos/mnemonic.jpg",
+      "pos": "noun",
+      "pronunciation": "nih-MAH-nik",
+      "word": "mnemonic",
+      "word_audio": "media/c1/2026-09-28/word-audio/mnemonic.mp3"
+    },
+    {
+      "example": "He crammed all night before the final exam.",
+      "meaning": "to study a huge amount in a short time",
+      "persian": "فشرده خواندن (در شب امتحان)",
+      "photo": "media/c1/2026-09-28/photos/cram.jpg",
+      "pos": "verb",
+      "pronunciation": "KRAM",
+      "word": "cram",
+      "word_audio": "media/c1/2026-09-28/word-audio/cram.mp3"
+    },
+    {
+      "example": "She flunked chemistry and had to retake it.",
+      "meaning": "to fail an exam or course",
+      "persian": "مردود شدن در امتحان",
+      "photo": "media/c1/2026-09-28/photos/flunk.jpg",
+      "pos": "verb",
+      "pronunciation": "FLUNK",
+      "word": "flunk",
+      "word_audio": "media/c1/2026-09-28/word-audio/flunk.mp3"
+    },
+    {
+      "example": "Plagiarism can get you expelled from university.",
+      "meaning": "copying someone else's work as your own",
+      "persian": "سرقت ادبی",
+      "photo": "media/c1/2026-09-28/photos/plagiarism.jpg",
+      "pos": "noun",
+      "pronunciation": "PLAY-juh-ri-zum",
+      "word": "plagiarism",
+      "word_audio": "media/c1/2026-09-28/word-audio/plagiarism.mp3"
+    },
+    {
+      "example": "His thesis on public health won a national prize.",
+      "meaning": "a long research paper written for a degree",
+      "persian": "پایان‌نامه",
+      "photo": "media/c1/2026-09-28/photos/thesis.jpg",
+      "pos": "noun",
+      "pronunciation": "THEE-sis",
+      "word": "thesis",
+      "word_audio": "media/c1/2026-09-28/word-audio/thesis.mp3"
+    }
+  ]
+}

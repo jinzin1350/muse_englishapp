@@ -1,345 +1,389 @@
 {
- "date": "2026-10-05",
- "theme": "money & shopping",
- "level": "c1",
- "cefr": "C1",
- "words": [
-  {
-   "word": "splurge",
-   "pos": "verb",
-   "meaning": "to spend a lot of money at once, usually on something enjoyable",
-   "example": "After months of scrimping, she decided to splurge on a designer handbag.",
-   "pronunciation": "SPLURJ",
-   "persian": "ریخت‌وپاش کردن، خرج زیاد و بی‌پروا کردن",
-   "photo": "media/c1/2026-10-05/photos/splurge.jpg",
-   "word_audio": "media/c1/2026-10-05/word-audio/splurge.mp3"
-  },
-  {
-   "word": "scrimp",
-   "pos": "verb",
-   "meaning": "to spend as little money as possible, saving by cutting costs tightly",
-   "example": "They had to scrimp for a year to afford the down payment on the house.",
-   "pronunciation": "SKRIMP",
-   "persian": "قناعت کردن، در خرج کردن خساست به خرج دادن",
-   "photo": "media/c1/2026-10-05/photos/scrimp.jpg",
-   "word_audio": "media/c1/2026-10-05/word-audio/scrimp.mp3"
-  },
-  {
-   "word": "profligate",
-   "pos": "adjective",
-   "meaning": "spending money recklessly and wastefully",
-   "example": "His profligate spending left the company insolvent within two years.",
-   "pronunciation": "PROF-li-gut",
-   "persian": "اسرافکار، ولخرج",
-   "photo": "media/c1/2026-10-05/photos/profligate.jpg",
-   "word_audio": "media/c1/2026-10-05/word-audio/profligate.mp3"
-  },
-  {
-   "word": "parsimonious",
-   "pos": "adjective",
-   "meaning": "extremely unwilling to spend money",
-   "example": "The parsimonious millionaire still darned his own socks.",
-   "pronunciation": "par-si-MOH-nee-uss",
-   "persian": "بخیل، بسیار خسیس",
-   "photo": "media/c1/2026-10-05/photos/parsimonious.jpg",
-   "word_audio": "media/c1/2026-10-05/word-audio/parsimonious.mp3"
-  },
-  {
-   "word": "opulent",
-   "pos": "adjective",
-   "meaning": "displaying great wealth; luxurious and expensive-looking",
-   "example": "The opulent hotel lobby was decorated with marble and gold.",
-   "pronunciation": "OP-yoo-lent",
-   "persian": "مجلل و شاهانه",
-   "photo": "media/c1/2026-10-05/photos/opulent.jpg",
-   "word_audio": "media/c1/2026-10-05/word-audio/opulent.mp3"
-  },
-  {
-   "word": "peddle",
-   "pos": "verb",
-   "meaning": "to sell goods persistently, often going from place to place",
-   "example": "He used to peddle cheap watches on the street before opening his own shop.",
-   "pronunciation": "PED-ul",
-   "persian": "دست‌فروشی کردن، جنس فروختن",
-   "photo": "media/c1/2026-10-05/photos/peddle.jpg",
-   "word_audio": "media/c1/2026-10-05/word-audio/peddle.mp3"
-  },
-  {
-   "word": "monetize",
-   "pos": "verb",
-   "meaning": "to turn something into a source of income",
-   "example": "She monetized her cooking blog through ads and sponsorships.",
-   "pronunciation": "MON-uh-tyze",
-   "persian": "درآمدزایی کردن، پول‌سازی کردن از چیزی",
-   "photo": "media/c1/2026-10-05/photos/monetize.jpg",
-   "word_audio": "media/c1/2026-10-05/word-audio/monetize.mp3"
-  },
-  {
-   "word": "upsell",
-   "pos": "verb",
-   "meaning": "to persuade a customer to buy something more expensive or additional",
-   "example": "The salesman tried to upsell us to the premium package.",
-   "pronunciation": "UP-sel",
-   "persian": "تشویق مشتری به خرید گران‌تر یا بیشتر",
-   "photo": "media/c1/2026-10-05/photos/upsell.jpg",
-   "word_audio": "media/c1/2026-10-05/word-audio/upsell.mp3"
-  },
-  {
-   "word": "pecuniary",
-   "pos": "adjective",
-   "meaning": "relating to money",
-   "example": "The scandal had serious pecuniary consequences for the bank.",
-   "pronunciation": "pi-KYOO-nee-uh-ree",
-   "persian": "مالی، مربوط به پول",
-   "photo": "media/c1/2026-10-05/photos/pecuniary.jpg",
-   "word_audio": "media/c1/2026-10-05/word-audio/pecuniary.mp3"
-  },
-  {
-   "word": "insolvent",
-   "pos": "adjective",
-   "meaning": "unable to pay one's debts",
-   "example": "After the lawsuit, the once-thriving retailer became insolvent.",
-   "pronunciation": "in-SOL-vent",
-   "persian": "ورشکسته، ناتوان از پرداخت بدهی",
-   "photo": "media/c1/2026-10-05/photos/insolvent.jpg",
-   "word_audio": "media/c1/2026-10-05/word-audio/insolvent.mp3"
-  }
- ],
- "pronunciation_audio": "media/c1/2026-10-05/pronunciation.mp3",
- "podcast": {
-  "title": "Word Kitchen: Money and Shopping",
-  "audio": "media/c1/2026-10-05/podcast.mp3",
-  "cover": null,
-  "transcript": "media/c1/2026-10-05/podcast-transcript.txt"
- },
- "shadowing": {
-  "title": "The Market Lesson",
-  "audio": "media/c1/2026-10-05/shadowing.mp3",
-  "transcript": "media/c1/2026-10-05/shadowing-transcript.txt"
- },
- "quiz": [
-  {
-   "question": "What does 'splurge' mean?",
-   "options": [
-    "spending money recklessly and wastefully",
-    "to turn something into a source of income",
-    "to spend a lot of money at once, usually on something enjoyable",
-    "to spend as little money as possible, saving by cutting costs tightly"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'scrimp' mean?",
-   "options": [
-    "to turn something into a source of income",
-    "extremely unwilling to spend money",
-    "spending money recklessly and wastefully",
-    "to spend as little money as possible, saving by cutting costs tightly"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'profligate' mean?",
-   "options": [
-    "relating to money",
-    "unable to pay one's debts",
-    "spending money recklessly and wastefully",
-    "to spend a lot of money at once, usually on something enjoyable"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'parsimonious' mean?",
-   "options": [
-    "displaying great wealth; luxurious and expensive-looking",
-    "unable to pay one's debts",
-    "extremely unwilling to spend money",
-    "to turn something into a source of income"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'opulent' mean?",
-   "options": [
-    "displaying great wealth; luxurious and expensive-looking",
-    "to persuade a customer to buy something more expensive or additional",
-    "to spend a lot of money at once, usually on something enjoyable",
-    "to sell goods persistently, often going from place to place"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'peddle' mean?",
-   "options": [
-    "displaying great wealth; luxurious and expensive-looking",
-    "to sell goods persistently, often going from place to place",
-    "to spend as little money as possible, saving by cutting costs tightly",
-    "to turn something into a source of income"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'monetize' mean?",
-   "options": [
-    "to turn something into a source of income",
-    "to spend a lot of money at once, usually on something enjoyable",
-    "to spend as little money as possible, saving by cutting costs tightly",
-    "to persuade a customer to buy something more expensive or additional"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'upsell' mean?",
-   "options": [
-    "relating to money",
-    "displaying great wealth; luxurious and expensive-looking",
-    "to spend a lot of money at once, usually on something enjoyable",
-    "to persuade a customer to buy something more expensive or additional"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'pecuniary' mean?",
-   "options": [
-    "unable to pay one's debts",
-    "relating to money",
-    "to turn something into a source of income",
-    "displaying great wealth; luxurious and expensive-looking"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'insolvent' mean?",
-   "options": [
-    "to spend a lot of money at once, usually on something enjoyable",
-    "unable to pay one's debts",
-    "to sell goods persistently, often going from place to place",
-    "to spend as little money as possible, saving by cutting costs tightly"
-   ],
-   "answer": 1
-  }
- ],
- "grammar": {
-  "title": "6A: The Passive (all tenses)",
-  "explanation": "We form the passive with **be + past participle**: *was closed*, *are counted*, *has been damaged*. The tense always lives in the verb **be**.\n\nUse the passive when the doer is unknown, obvious, or simply unimportant. The object of the active verb becomes the new subject: *A fortune was splurged on the launch* (we don't care who spent it).\n\nAdd **by + agent** only when the doer is important or surprising: *The recipe was monetized by a clever baker.* Without **by**, the focus stays on the action itself.\n\nNegatives and questions follow the normal rules for **be**: *The tickets haven't been collected.* *Has the film been released yet?*\n\nThe passive loves processes and formal language. News and academic writing use it constantly: *The insolvent company will be sold.* *Goods are peddled on every corner.*",
-  "examples": [
-   "*The boutique was closed* after two years of profligate spending. (past simple passive)",
-   "*Customers are upsold* at every counter in the store. (present simple passive, general truth)",
-   "*The recipe has been monetized* through a small online shop. (present perfect passive, recent result)",
-   "*The coins are counted* twice before the shop opens each morning. (passive for a process)",
-   "*The insolvent company will be sold* by the court next month. (future passive with by-agent)"
+  "date": "2026-10-05",
+  "theme": "money & shopping",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "splurge",
+      "pos": "verb",
+      "meaning": "to spend a lot of money at once, usually on something enjoyable",
+      "example": "After months of scrimping, she decided to splurge on a designer handbag.",
+      "pronunciation": "SPLURJ",
+      "persian": "ریخت‌وپاش کردن، خرج زیاد و بی‌پروا کردن",
+      "photo": "media/c1/2026-10-05/photos/splurge.jpg",
+      "word_audio": "media/c1/2026-10-05/word-audio/splurge.mp3"
+    },
+    {
+      "word": "scrimp",
+      "pos": "verb",
+      "meaning": "to spend as little money as possible, saving by cutting costs tightly",
+      "example": "They had to scrimp for a year to afford the down payment on the house.",
+      "pronunciation": "SKRIMP",
+      "persian": "قناعت کردن، در خرج کردن خساست به خرج دادن",
+      "photo": "media/c1/2026-10-05/photos/scrimp.jpg",
+      "word_audio": "media/c1/2026-10-05/word-audio/scrimp.mp3"
+    },
+    {
+      "word": "profligate",
+      "pos": "adjective",
+      "meaning": "spending money recklessly and wastefully",
+      "example": "His profligate spending left the company insolvent within two years.",
+      "pronunciation": "PROF-li-gut",
+      "persian": "اسرافکار، ولخرج",
+      "photo": "media/c1/2026-10-05/photos/profligate.jpg",
+      "word_audio": "media/c1/2026-10-05/word-audio/profligate.mp3"
+    },
+    {
+      "word": "parsimonious",
+      "pos": "adjective",
+      "meaning": "extremely unwilling to spend money",
+      "example": "The parsimonious millionaire still darned his own socks.",
+      "pronunciation": "par-si-MOH-nee-uss",
+      "persian": "بخیل، بسیار خسیس",
+      "photo": "media/c1/2026-10-05/photos/parsimonious.jpg",
+      "word_audio": "media/c1/2026-10-05/word-audio/parsimonious.mp3"
+    },
+    {
+      "word": "opulent",
+      "pos": "adjective",
+      "meaning": "displaying great wealth; luxurious and expensive-looking",
+      "example": "The opulent hotel lobby was decorated with marble and gold.",
+      "pronunciation": "OP-yoo-lent",
+      "persian": "مجلل و شاهانه",
+      "photo": "media/c1/2026-10-05/photos/opulent.jpg",
+      "word_audio": "media/c1/2026-10-05/word-audio/opulent.mp3"
+    },
+    {
+      "word": "peddle",
+      "pos": "verb",
+      "meaning": "to sell goods persistently, often going from place to place",
+      "example": "He used to peddle cheap watches on the street before opening his own shop.",
+      "pronunciation": "PED-ul",
+      "persian": "دست‌فروشی کردن، جنس فروختن",
+      "photo": "media/c1/2026-10-05/photos/peddle.jpg",
+      "word_audio": "media/c1/2026-10-05/word-audio/peddle.mp3"
+    },
+    {
+      "word": "monetize",
+      "pos": "verb",
+      "meaning": "to turn something into a source of income",
+      "example": "She monetized her cooking blog through ads and sponsorships.",
+      "pronunciation": "MON-uh-tyze",
+      "persian": "درآمدزایی کردن، پول‌سازی کردن از چیزی",
+      "photo": "media/c1/2026-10-05/photos/monetize.jpg",
+      "word_audio": "media/c1/2026-10-05/word-audio/monetize.mp3"
+    },
+    {
+      "word": "upsell",
+      "pos": "verb",
+      "meaning": "to persuade a customer to buy something more expensive or additional",
+      "example": "The salesman tried to upsell us to the premium package.",
+      "pronunciation": "UP-sel",
+      "persian": "تشویق مشتری به خرید گران‌تر یا بیشتر",
+      "photo": "media/c1/2026-10-05/photos/upsell.jpg",
+      "word_audio": "media/c1/2026-10-05/word-audio/upsell.mp3"
+    },
+    {
+      "word": "pecuniary",
+      "pos": "adjective",
+      "meaning": "relating to money",
+      "example": "The scandal had serious pecuniary consequences for the bank.",
+      "pronunciation": "pi-KYOO-nee-uh-ree",
+      "persian": "مالی، مربوط به پول",
+      "photo": "media/c1/2026-10-05/photos/pecuniary.jpg",
+      "word_audio": "media/c1/2026-10-05/word-audio/pecuniary.mp3"
+    },
+    {
+      "word": "insolvent",
+      "pos": "adjective",
+      "meaning": "unable to pay one's debts",
+      "example": "After the lawsuit, the once-thriving retailer became insolvent.",
+      "pronunciation": "in-SOL-vent",
+      "persian": "ورشکسته، ناتوان از پرداخت بدهی",
+      "photo": "media/c1/2026-10-05/photos/insolvent.jpg",
+      "word_audio": "media/c1/2026-10-05/word-audio/insolvent.mp3"
+    }
   ],
-  "practice": [
-   {
-    "q": "Your friend says: 'They stole my bike.' Rewrite the sentence in the passive.",
-    "a": "My bike was stolen."
-   },
-   {
-    "q": "When should you include 'by + agent' in a passive sentence?",
-    "a": "Only when the doer is important or surprising — for example, 'The cake was monetized by a clever baker.'"
-   }
-  ],
+  "pronunciation_audio": "media/c1/2026-10-05/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Money and Shopping",
+    "audio": "media/c1/2026-10-05/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-05/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Market Lesson",
+    "audio": "media/c1/2026-10-05/shadowing.mp3",
+    "transcript": "media/c1/2026-10-05/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-10-05/shadowing-sentences/001.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/002.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/003.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/004.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/005.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/006.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/007.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/008.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/009.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/010.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/011.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/012.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/013.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/014.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/015.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/016.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/017.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/018.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/019.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/020.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/021.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/022.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/023.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/024.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/025.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/026.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/027.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/028.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/029.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/030.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/031.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/032.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/033.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/034.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/035.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/036.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/037.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/038.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/039.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/040.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/041.mp3",
+      "media/c1/2026-10-05/shadowing-sentences/042.mp3"
+    ]
+  },
   "quiz": [
-   {
-    "question": "Choose the correct form: 'The opulent boutique ___ in 2019.'",
-    "options": [
-     "opened",
-     "was opened",
-     "has opened",
-     "is opening"
+    {
+      "question": "What does 'splurge' mean?",
+      "options": [
+        "spending money recklessly and wastefully",
+        "to turn something into a source of income",
+        "to spend a lot of money at once, usually on something enjoyable",
+        "to spend as little money as possible, saving by cutting costs tightly"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'scrimp' mean?",
+      "options": [
+        "to turn something into a source of income",
+        "extremely unwilling to spend money",
+        "spending money recklessly and wastefully",
+        "to spend as little money as possible, saving by cutting costs tightly"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'profligate' mean?",
+      "options": [
+        "relating to money",
+        "unable to pay one's debts",
+        "spending money recklessly and wastefully",
+        "to spend a lot of money at once, usually on something enjoyable"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'parsimonious' mean?",
+      "options": [
+        "displaying great wealth; luxurious and expensive-looking",
+        "unable to pay one's debts",
+        "extremely unwilling to spend money",
+        "to turn something into a source of income"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'opulent' mean?",
+      "options": [
+        "displaying great wealth; luxurious and expensive-looking",
+        "to persuade a customer to buy something more expensive or additional",
+        "to spend a lot of money at once, usually on something enjoyable",
+        "to sell goods persistently, often going from place to place"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'peddle' mean?",
+      "options": [
+        "displaying great wealth; luxurious and expensive-looking",
+        "to sell goods persistently, often going from place to place",
+        "to spend as little money as possible, saving by cutting costs tightly",
+        "to turn something into a source of income"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'monetize' mean?",
+      "options": [
+        "to turn something into a source of income",
+        "to spend a lot of money at once, usually on something enjoyable",
+        "to spend as little money as possible, saving by cutting costs tightly",
+        "to persuade a customer to buy something more expensive or additional"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'upsell' mean?",
+      "options": [
+        "relating to money",
+        "displaying great wealth; luxurious and expensive-looking",
+        "to spend a lot of money at once, usually on something enjoyable",
+        "to persuade a customer to buy something more expensive or additional"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'pecuniary' mean?",
+      "options": [
+        "unable to pay one's debts",
+        "relating to money",
+        "to turn something into a source of income",
+        "displaying great wealth; luxurious and expensive-looking"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'insolvent' mean?",
+      "options": [
+        "to spend a lot of money at once, usually on something enjoyable",
+        "unable to pay one's debts",
+        "to sell goods persistently, often going from place to place",
+        "to spend as little money as possible, saving by cutting costs tightly"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "6A: The Passive (all tenses)",
+    "explanation": "We form the passive with **be + past participle**: *was closed*, *are counted*, *has been damaged*. The tense always lives in the verb **be**.\n\nUse the passive when the doer is unknown, obvious, or simply unimportant. The object of the active verb becomes the new subject: *A fortune was splurged on the launch* (we don't care who spent it).\n\nAdd **by + agent** only when the doer is important or surprising: *The recipe was monetized by a clever baker.* Without **by**, the focus stays on the action itself.\n\nNegatives and questions follow the normal rules for **be**: *The tickets haven't been collected.* *Has the film been released yet?*\n\nThe passive loves processes and formal language. News and academic writing use it constantly: *The insolvent company will be sold.* *Goods are peddled on every corner.*",
+    "examples": [
+      "*The boutique was closed* after two years of profligate spending. (past simple passive)",
+      "*Customers are upsold* at every counter in the store. (present simple passive, general truth)",
+      "*The recipe has been monetized* through a small online shop. (present perfect passive, recent result)",
+      "*The coins are counted* twice before the shop opens each morning. (passive for a process)",
+      "*The insolvent company will be sold* by the court next month. (future passive with by-agent)"
     ],
-    "answer": 1
-   },
-   {
-    "question": "Choose the correct form: 'The costumes for the show ___ by hand.'",
-    "options": [
-     "are made",
-     "made",
-     "are making",
-     "make"
+    "practice": [
+      {
+        "q": "Your friend says: 'They stole my bike.' Rewrite the sentence in the passive.",
+        "a": "My bike was stolen."
+      },
+      {
+        "q": "When should you include 'by + agent' in a passive sentence?",
+        "a": "Only when the doer is important or surprising — for example, 'The cake was monetized by a clever baker.'"
+      }
     ],
-    "answer": 0
-   },
-   {
-    "question": "Choose the correct form: 'The story ___ him to make a film.'",
-    "options": [
-     "inspired",
-     "was inspired",
-     "has been inspired",
-     "is inspired"
-    ],
-    "answer": 0
-   },
-   {
-    "question": "Choose the correct form: 'This castle ___ for nearly a century.'",
-    "options": [
-     "hasn't been inhabited",
-     "hasn't inhabited",
-     "isn't inhabited",
-     "wasn't inhabiting"
-    ],
-    "answer": 0
-   },
-   {
-    "question": "Choose the correct form: 'His latest film ___ in France in the 1960s.'",
-    "options": [
-     "is set",
-     "sets",
-     "has set",
-     "is setting"
-    ],
-    "answer": 0
-   },
-   {
-    "question": "Choose the correct form: 'The actors ___ the dialogue until next week.'",
-    "options": [
-     "aren't recording",
-     "aren't being recorded",
-     "don't record",
-     "haven't recorded"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "Choose the correct form: 'The house ___ by the owners during the winter.'",
-    "options": [
-     "wasn't using",
-     "wasn't being used",
-     "didn't use",
-     "hasn't used"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "Rewrite in the passive: 'They subtitle a lot of foreign films.' → 'A lot of foreign films ___.'",
-    "options": [
-     "are subtitled",
-     "subtitle",
-     "are subtitling",
-     "have subtitled"
-    ],
-    "answer": 0
-   },
-   {
-    "question": "Rewrite in the passive: 'Garcia Marquez wrote that novel in 1985.' → 'That novel ___ in 1985.'",
-    "options": [
-     "was written",
-     "wrote",
-     "has written",
-     "is written"
-    ],
-    "answer": 0
-   },
-   {
-    "question": "Rewrite in the passive: 'Someone is repairing my laptop.' → 'My laptop ___ at the moment.'",
-    "options": [
-     "is repairing",
-     "is being repaired",
-     "repairs",
-     "has repaired"
-    ],
-    "answer": 1
-   }
-  ]
- }
+    "quiz": [
+      {
+        "question": "Choose the correct form: 'The opulent boutique ___ in 2019.'",
+        "options": [
+          "opened",
+          "was opened",
+          "has opened",
+          "is opening"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct form: 'The costumes for the show ___ by hand.'",
+        "options": [
+          "are made",
+          "made",
+          "are making",
+          "make"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct form: 'The story ___ him to make a film.'",
+        "options": [
+          "inspired",
+          "was inspired",
+          "has been inspired",
+          "is inspired"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct form: 'This castle ___ for nearly a century.'",
+        "options": [
+          "hasn't been inhabited",
+          "hasn't inhabited",
+          "isn't inhabited",
+          "wasn't inhabiting"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct form: 'His latest film ___ in France in the 1960s.'",
+        "options": [
+          "is set",
+          "sets",
+          "has set",
+          "is setting"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct form: 'The actors ___ the dialogue until next week.'",
+        "options": [
+          "aren't recording",
+          "aren't being recorded",
+          "don't record",
+          "haven't recorded"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct form: 'The house ___ by the owners during the winter.'",
+        "options": [
+          "wasn't using",
+          "wasn't being used",
+          "didn't use",
+          "hasn't used"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Rewrite in the passive: 'They subtitle a lot of foreign films.' → 'A lot of foreign films ___.'",
+        "options": [
+          "are subtitled",
+          "subtitle",
+          "are subtitling",
+          "have subtitled"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Rewrite in the passive: 'Garcia Marquez wrote that novel in 1985.' → 'That novel ___ in 1985.'",
+        "options": [
+          "was written",
+          "wrote",
+          "has written",
+          "is written"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Rewrite in the passive: 'Someone is repairing my laptop.' → 'My laptop ___ at the moment.'",
+        "options": [
+          "is repairing",
+          "is being repaired",
+          "repairs",
+          "has repaired"
+        ],
+        "answer": 1
+      }
+    ]
+  }
 }
