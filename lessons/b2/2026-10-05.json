@@ -1,350 +1,387 @@
 {
- "date": "2026-10-05",
- "theme": "emotions & character",
- "level": "b2",
- "cefr": "B2",
- "words": [
-  {
-   "word": "resilience",
-   "pos": "noun",
-   "meaning": "the ability to recover quickly from problems or setbacks",
-   "example": "After losing her job, her resilience helped her start a successful business.",
-   "pronunciation": "reh-ZIL-yuhns",
-   "persian": "تاب‌آوری؛ توانایی بازگشت سریع پس از مشکلات",
-   "photo": "media/b2/2026-10-05/photos/resilience.jpg",
-   "word_audio": "media/b2/2026-10-05/word-audio/resilience.mp3"
-  },
-  {
-   "word": "grudge",
-   "pos": "noun",
-   "meaning": "a feeling of anger toward someone because of a past hurt",
-   "example": "He held a grudge against his colleague for years after that argument.",
-   "pronunciation": "GRUJ",
-   "persian": "کینه",
-   "photo": "media/b2/2026-10-05/photos/grudge.jpg",
-   "word_audio": "media/b2/2026-10-05/word-audio/grudge.mp3"
-  },
-  {
-   "word": "compassion",
-   "pos": "noun",
-   "meaning": "a strong feeling of sympathy and care for other people's suffering",
-   "example": "The nurse treated every patient with real compassion.",
-   "pronunciation": "kum-PASH-un",
-   "persian": "شفقت و همدردی",
-   "photo": "media/b2/2026-10-05/photos/compassion.jpg",
-   "word_audio": "media/b2/2026-10-05/word-audio/compassion.mp3"
-  },
-  {
-   "word": "remorse",
-   "pos": "noun",
-   "meaning": "deep regret for something wrong you did",
-   "example": "He felt great remorse after lying to his best friend.",
-   "pronunciation": "rih-MORS",
-   "persian": "پشیمانی عمیق؛ ندامت",
-   "photo": "media/b2/2026-10-05/photos/remorse.jpg",
-   "word_audio": "media/b2/2026-10-05/word-audio/remorse.mp3"
-  },
-  {
-   "word": "nostalgia",
-   "pos": "noun",
-   "meaning": "a happy and sad feeling when you remember the past",
-   "example": "Looking at old family photos filled her with nostalgia.",
-   "pronunciation": "nos-TAL-juh",
-   "persian": "دلتنگی برای گذشته؛ نوستالژی",
-   "photo": "media/b2/2026-10-05/photos/nostalgia.jpg",
-   "word_audio": "media/b2/2026-10-05/word-audio/nostalgia.mp3"
-  },
-  {
-   "word": "frustration",
-   "pos": "noun",
-   "meaning": "the upset feeling you get when you cannot do or change something",
-   "example": "After three failed attempts, his frustration was clear.",
-   "pronunciation": "frus-TRAY-shun",
-   "persian": "کلافگی و ناکامی",
-   "photo": "media/b2/2026-10-05/photos/frustration.jpg",
-   "word_audio": "media/b2/2026-10-05/word-audio/frustration.mp3"
-  },
-  {
-   "word": "serenity",
-   "pos": "noun",
-   "meaning": "the state of being completely calm and peaceful",
-   "example": "The quiet lake gave her a feeling of complete serenity.",
-   "pronunciation": "suh-REN-uh-tee",
-   "persian": "آرامش کامل",
-   "photo": "media/b2/2026-10-05/photos/serenity.jpg",
-   "word_audio": "media/b2/2026-10-05/word-audio/serenity.mp3"
-  },
-  {
-   "word": "empathy",
-   "pos": "noun",
-   "meaning": "the ability to understand and share another person's feelings",
-   "example": "A good manager needs empathy to lead a team well.",
-   "pronunciation": "EM-puh-thee",
-   "persian": "همدلی",
-   "photo": "media/b2/2026-10-05/photos/empathy.jpg",
-   "word_audio": "media/b2/2026-10-05/word-audio/empathy.mp3"
-  },
-  {
-   "word": "ambition",
-   "pos": "noun",
-   "meaning": "a strong desire to succeed or achieve something important",
-   "example": "Her ambition drove her to study medicine at the top university.",
-   "pronunciation": "am-BISH-un",
-   "persian": "جاه‌طلبی؛ بلندپروازی",
-   "photo": "media/b2/2026-10-05/photos/ambition.jpg",
-   "word_audio": "media/b2/2026-10-05/word-audio/ambition.mp3"
-  },
-  {
-   "word": "humility",
-   "pos": "noun",
-   "meaning": "the quality of not thinking you are better or more important than others",
-   "example": "Despite his fame, the actor was known for his humility.",
-   "pronunciation": "hyoo-MIL-uh-tee",
-   "persian": "فروتنی و تواضع",
-   "photo": "media/b2/2026-10-05/photos/humility.jpg",
-   "word_audio": "media/b2/2026-10-05/word-audio/humility.mp3"
-  }
- ],
- "pronunciation_audio": "media/b2/2026-10-05/pronunciation.mp3",
- "podcast": {
-  "title": "Word Kitchen: The Heart of Who We Are",
-  "audio": "media/b2/2026-10-05/podcast.mp3",
-  "cover": null,
-  "transcript": "media/b2/2026-10-05/podcast-transcript.txt"
- },
- "shadowing": {
-  "title": "The Letter She Never Sent",
-  "audio": "media/b2/2026-10-05/shadowing.mp3",
-  "transcript": "media/b2/2026-10-05/shadowing-transcript.txt"
- },
- "quiz": [
-  {
-   "question": "What does 'resilience' mean?",
-   "options": [
-    "the ability to recover quickly from problems or setbacks",
-    "a happy and sad feeling when you remember the past",
-    "the upset feeling you get when you cannot do or change something",
-    "the quality of not thinking you are better or more important than others"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'grudge' mean?",
-   "options": [
-    "a strong feeling of sympathy and care for other people's suffering",
-    "the quality of not thinking you are better or more important than others",
-    "a feeling of anger toward someone because of a past hurt",
-    "the state of being completely calm and peaceful"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'compassion' mean?",
-   "options": [
-    "the ability to understand and share another person's feelings",
-    "the upset feeling you get when you cannot do or change something",
-    "a strong desire to succeed or achieve something important",
-    "a strong feeling of sympathy and care for other people's suffering"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'remorse' mean?",
-   "options": [
-    "a strong feeling of sympathy and care for other people's suffering",
-    "deep regret for something wrong you did",
-    "the state of being completely calm and peaceful",
-    "a happy and sad feeling when you remember the past"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'nostalgia' mean?",
-   "options": [
-    "the quality of not thinking you are better or more important than others",
-    "a feeling of anger toward someone because of a past hurt",
-    "a happy and sad feeling when you remember the past",
-    "the upset feeling you get when you cannot do or change something"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'frustration' mean?",
-   "options": [
-    "the quality of not thinking you are better or more important than others",
-    "a strong desire to succeed or achieve something important",
-    "a happy and sad feeling when you remember the past",
-    "the upset feeling you get when you cannot do or change something"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'serenity' mean?",
-   "options": [
-    "a strong feeling of sympathy and care for other people's suffering",
-    "a happy and sad feeling when you remember the past",
-    "the state of being completely calm and peaceful",
-    "a strong desire to succeed or achieve something important"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'empathy' mean?",
-   "options": [
-    "deep regret for something wrong you did",
-    "the ability to understand and share another person's feelings",
-    "a strong feeling of sympathy and care for other people's suffering",
-    "the upset feeling you get when you cannot do or change something"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'ambition' mean?",
-   "options": [
-    "a strong desire to succeed or achieve something important",
-    "the state of being completely calm and peaceful",
-    "the quality of not thinking you are better or more important than others",
-    "the ability to recover quickly from problems or setbacks"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'humility' mean?",
-   "options": [
-    "a strong feeling of sympathy and care for other people's suffering",
-    "a feeling of anger toward someone because of a past hurt",
-    "a happy and sad feeling when you remember the past",
-    "the quality of not thinking you are better or more important than others"
-   ],
-   "answer": 3
-  }
- ],
- "grammar": {
-  "title": "6A: Passive (all tenses)",
-  "explanation": "We use the passive (**be** + past participle) when we do not say, know, or need to say who does the action.\n\nIf your wallet disappears, you say 'My wallet **has been stolen**' — the thief is unknown, and that is the point.\n\nThe object of the active verb becomes the new subject. 'They built the bridge' becomes 'The bridge **was built**.'\n\nUse **by** + agent only when the doer matters. 'Gladiator **was directed** by Ridley Scott' — here we want to name the director.\n\nAmbition **is admired** everywhere, but humility **is remembered** longer — both are present simple passive.\n\nThe passive works in every tense. 'Films **are shot** on location' (present), 'the film **was being made** when he died' (past continuous), 'the hall **will be opened** by the Queen' (future).\n\nIt is common in news and formal language. 'Many buildings **have been damaged** by the earthquake' — the result matters more than who caused it.",
-  "examples": [
-   "*The bridge *was built* in 1990.* (we don't know or need to say who built it)",
-   "*Andy's bike *has been stolen*.* (the thief is unknown)",
-   "*Gladiator *was directed* by Ridley Scott.* (we want to name the director)",
-   "*The tickets *have to be collected* from the box office.* (a rule, not a person)",
-   "*Her resilience *was admired* by the whole team.* (the focus is on her quality)",
-   "*The letter *will be sent* tomorrow.* (future passive)"
+  "date": "2026-10-05",
+  "theme": "emotions & character",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "resilience",
+      "pos": "noun",
+      "meaning": "the ability to recover quickly from problems or setbacks",
+      "example": "After losing her job, her resilience helped her start a successful business.",
+      "pronunciation": "reh-ZIL-yuhns",
+      "persian": "تاب‌آوری؛ توانایی بازگشت سریع پس از مشکلات",
+      "photo": "media/b2/2026-10-05/photos/resilience.jpg",
+      "word_audio": "media/b2/2026-10-05/word-audio/resilience.mp3"
+    },
+    {
+      "word": "grudge",
+      "pos": "noun",
+      "meaning": "a feeling of anger toward someone because of a past hurt",
+      "example": "He held a grudge against his colleague for years after that argument.",
+      "pronunciation": "GRUJ",
+      "persian": "کینه",
+      "photo": "media/b2/2026-10-05/photos/grudge.jpg",
+      "word_audio": "media/b2/2026-10-05/word-audio/grudge.mp3"
+    },
+    {
+      "word": "compassion",
+      "pos": "noun",
+      "meaning": "a strong feeling of sympathy and care for other people's suffering",
+      "example": "The nurse treated every patient with real compassion.",
+      "pronunciation": "kum-PASH-un",
+      "persian": "شفقت و همدردی",
+      "photo": "media/b2/2026-10-05/photos/compassion.jpg",
+      "word_audio": "media/b2/2026-10-05/word-audio/compassion.mp3"
+    },
+    {
+      "word": "remorse",
+      "pos": "noun",
+      "meaning": "deep regret for something wrong you did",
+      "example": "He felt great remorse after lying to his best friend.",
+      "pronunciation": "rih-MORS",
+      "persian": "پشیمانی عمیق؛ ندامت",
+      "photo": "media/b2/2026-10-05/photos/remorse.jpg",
+      "word_audio": "media/b2/2026-10-05/word-audio/remorse.mp3"
+    },
+    {
+      "word": "nostalgia",
+      "pos": "noun",
+      "meaning": "a happy and sad feeling when you remember the past",
+      "example": "Looking at old family photos filled her with nostalgia.",
+      "pronunciation": "nos-TAL-juh",
+      "persian": "دلتنگی برای گذشته؛ نوستالژی",
+      "photo": "media/b2/2026-10-05/photos/nostalgia.jpg",
+      "word_audio": "media/b2/2026-10-05/word-audio/nostalgia.mp3"
+    },
+    {
+      "word": "frustration",
+      "pos": "noun",
+      "meaning": "the upset feeling you get when you cannot do or change something",
+      "example": "After three failed attempts, his frustration was clear.",
+      "pronunciation": "frus-TRAY-shun",
+      "persian": "کلافگی و ناکامی",
+      "photo": "media/b2/2026-10-05/photos/frustration.jpg",
+      "word_audio": "media/b2/2026-10-05/word-audio/frustration.mp3"
+    },
+    {
+      "word": "serenity",
+      "pos": "noun",
+      "meaning": "the state of being completely calm and peaceful",
+      "example": "The quiet lake gave her a feeling of complete serenity.",
+      "pronunciation": "suh-REN-uh-tee",
+      "persian": "آرامش کامل",
+      "photo": "media/b2/2026-10-05/photos/serenity.jpg",
+      "word_audio": "media/b2/2026-10-05/word-audio/serenity.mp3"
+    },
+    {
+      "word": "empathy",
+      "pos": "noun",
+      "meaning": "the ability to understand and share another person's feelings",
+      "example": "A good manager needs empathy to lead a team well.",
+      "pronunciation": "EM-puh-thee",
+      "persian": "همدلی",
+      "photo": "media/b2/2026-10-05/photos/empathy.jpg",
+      "word_audio": "media/b2/2026-10-05/word-audio/empathy.mp3"
+    },
+    {
+      "word": "ambition",
+      "pos": "noun",
+      "meaning": "a strong desire to succeed or achieve something important",
+      "example": "Her ambition drove her to study medicine at the top university.",
+      "pronunciation": "am-BISH-un",
+      "persian": "جاه‌طلبی؛ بلندپروازی",
+      "photo": "media/b2/2026-10-05/photos/ambition.jpg",
+      "word_audio": "media/b2/2026-10-05/word-audio/ambition.mp3"
+    },
+    {
+      "word": "humility",
+      "pos": "noun",
+      "meaning": "the quality of not thinking you are better or more important than others",
+      "example": "Despite his fame, the actor was known for his humility.",
+      "pronunciation": "hyoo-MIL-uh-tee",
+      "persian": "فروتنی و تواضع",
+      "photo": "media/b2/2026-10-05/photos/humility.jpg",
+      "word_audio": "media/b2/2026-10-05/word-audio/humility.mp3"
+    }
   ],
-  "practice": [
-   {
-    "q": "Rewrite in the passive: 'They built this bridge in 1990.'",
-    "a": "This bridge was built in 1990."
-   },
-   {
-    "q": "When do we use 'by' in a passive sentence?",
-    "a": "Only when we want to say who did the action, like 'was directed by Ridley Scott'."
-   },
-   {
-    "q": "Change to passive: 'Someone has stolen my wallet.'",
-    "a": "My wallet has been stolen."
-   }
-  ],
+  "pronunciation_audio": "media/b2/2026-10-05/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Heart of Who We Are",
+    "audio": "media/b2/2026-10-05/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-05/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Letter She Never Sent",
+    "audio": "media/b2/2026-10-05/shadowing.mp3",
+    "transcript": "media/b2/2026-10-05/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-10-05/shadowing-sentences/001.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/002.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/003.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/004.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/005.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/006.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/007.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/008.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/009.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/010.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/011.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/012.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/013.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/014.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/015.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/016.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/017.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/018.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/019.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/020.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/021.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/022.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/023.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/024.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/025.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/026.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/027.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/028.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/029.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/030.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/031.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/032.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/033.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/034.mp3",
+      "media/b2/2026-10-05/shadowing-sentences/035.mp3"
+    ]
+  },
   "quiz": [
-   {
-    "question": "The college ___ in the sixteenth century.",
-    "options": [
-     "built",
-     "was built",
-     "has built",
-     "is building"
+    {
+      "question": "What does 'resilience' mean?",
+      "options": [
+        "the ability to recover quickly from problems or setbacks",
+        "a happy and sad feeling when you remember the past",
+        "the upset feeling you get when you cannot do or change something",
+        "the quality of not thinking you are better or more important than others"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'grudge' mean?",
+      "options": [
+        "a strong feeling of sympathy and care for other people's suffering",
+        "the quality of not thinking you are better or more important than others",
+        "a feeling of anger toward someone because of a past hurt",
+        "the state of being completely calm and peaceful"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'compassion' mean?",
+      "options": [
+        "the ability to understand and share another person's feelings",
+        "the upset feeling you get when you cannot do or change something",
+        "a strong desire to succeed or achieve something important",
+        "a strong feeling of sympathy and care for other people's suffering"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'remorse' mean?",
+      "options": [
+        "a strong feeling of sympathy and care for other people's suffering",
+        "deep regret for something wrong you did",
+        "the state of being completely calm and peaceful",
+        "a happy and sad feeling when you remember the past"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'nostalgia' mean?",
+      "options": [
+        "the quality of not thinking you are better or more important than others",
+        "a feeling of anger toward someone because of a past hurt",
+        "a happy and sad feeling when you remember the past",
+        "the upset feeling you get when you cannot do or change something"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'frustration' mean?",
+      "options": [
+        "the quality of not thinking you are better or more important than others",
+        "a strong desire to succeed or achieve something important",
+        "a happy and sad feeling when you remember the past",
+        "the upset feeling you get when you cannot do or change something"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'serenity' mean?",
+      "options": [
+        "a strong feeling of sympathy and care for other people's suffering",
+        "a happy and sad feeling when you remember the past",
+        "the state of being completely calm and peaceful",
+        "a strong desire to succeed or achieve something important"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'empathy' mean?",
+      "options": [
+        "deep regret for something wrong you did",
+        "the ability to understand and share another person's feelings",
+        "a strong feeling of sympathy and care for other people's suffering",
+        "the upset feeling you get when you cannot do or change something"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'ambition' mean?",
+      "options": [
+        "a strong desire to succeed or achieve something important",
+        "the state of being completely calm and peaceful",
+        "the quality of not thinking you are better or more important than others",
+        "the ability to recover quickly from problems or setbacks"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'humility' mean?",
+      "options": [
+        "a strong feeling of sympathy and care for other people's suffering",
+        "a feeling of anger toward someone because of a past hurt",
+        "a happy and sad feeling when you remember the past",
+        "the quality of not thinking you are better or more important than others"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "6A: Passive (all tenses)",
+    "explanation": "We use the passive (**be** + past participle) when we do not say, know, or need to say who does the action.\n\nIf your wallet disappears, you say 'My wallet **has been stolen**' — the thief is unknown, and that is the point.\n\nThe object of the active verb becomes the new subject. 'They built the bridge' becomes 'The bridge **was built**.'\n\nUse **by** + agent only when the doer matters. 'Gladiator **was directed** by Ridley Scott' — here we want to name the director.\n\nAmbition **is admired** everywhere, but humility **is remembered** longer — both are present simple passive.\n\nThe passive works in every tense. 'Films **are shot** on location' (present), 'the film **was being made** when he died' (past continuous), 'the hall **will be opened** by the Queen' (future).\n\nIt is common in news and formal language. 'Many buildings **have been damaged** by the earthquake' — the result matters more than who caused it.",
+    "examples": [
+      "*The bridge *was built* in 1990.* (we don't know or need to say who built it)",
+      "*Andy's bike *has been stolen*.* (the thief is unknown)",
+      "*Gladiator *was directed* by Ridley Scott.* (we want to name the director)",
+      "*The tickets *have to be collected* from the box office.* (a rule, not a person)",
+      "*Her resilience *was admired* by the whole team.* (the focus is on her quality)",
+      "*The letter *will be sent* tomorrow.* (future passive)"
     ],
-    "answer": 1
-   },
-   {
-    "question": "A lot of films ___ on location.",
-    "options": [
-     "shoot",
-     "are shooting",
-     "are shot",
-     "have shot"
+    "practice": [
+      {
+        "q": "Rewrite in the passive: 'They built this bridge in 1990.'",
+        "a": "This bridge was built in 1990."
+      },
+      {
+        "q": "When do we use 'by' in a passive sentence?",
+        "a": "Only when we want to say who did the action, like 'was directed by Ridley Scott'."
+      },
+      {
+        "q": "Change to passive: 'Someone has stolen my wallet.'",
+        "a": "My wallet has been stolen."
+      }
     ],
-    "answer": 2
-   },
-   {
-    "question": "Andy's bike ___.",
-    "options": [
-     "has stolen",
-     "is steal",
-     "was steal",
-     "has been stolen"
-    ],
-    "answer": 3
-   },
-   {
-    "question": "The film ___ when the director died.",
-    "options": [
-     "made",
-     "is being made",
-     "has made",
-     "was being made"
-    ],
-    "answer": 3
-   },
-   {
-    "question": "This bill ___ tomorrow.",
-    "options": [
-     "must pay",
-     "must paid",
-     "must been paid",
-     "must be paid"
-    ],
-    "answer": 3
-   },
-   {
-    "question": "The new concert hall ___ by the Queen next year.",
-    "options": [
-     "will open",
-     "will opened",
-     "will be opened",
-     "is open"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "Many buildings ___ by the earthquake.",
-    "options": [
-     "have damaged",
-     "are damage",
-     "damaged",
-     "have been damaged"
-    ],
-    "answer": 3
-   },
-   {
-    "question": "The water ___ to one hundred degrees.",
-    "options": [
-     "heats",
-     "is heating",
-     "heated",
-     "is heated"
-    ],
-    "answer": 3
-   },
-   {
-    "question": "The tickets ___ from the box office.",
-    "options": [
-     "have to collect",
-     "have to collected",
-     "must to collect",
-     "have to be collected"
-    ],
-    "answer": 3
-   },
-   {
-    "question": "The photo ___ by my husband on our balcony.",
-    "options": [
-     "took",
-     "has took",
-     "is took",
-     "was taken"
-    ],
-    "answer": 3
-   }
-  ]
- }
+    "quiz": [
+      {
+        "question": "The college ___ in the sixteenth century.",
+        "options": [
+          "built",
+          "was built",
+          "has built",
+          "is building"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "A lot of films ___ on location.",
+        "options": [
+          "shoot",
+          "are shooting",
+          "are shot",
+          "have shot"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Andy's bike ___.",
+        "options": [
+          "has stolen",
+          "is steal",
+          "was steal",
+          "has been stolen"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The film ___ when the director died.",
+        "options": [
+          "made",
+          "is being made",
+          "has made",
+          "was being made"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "This bill ___ tomorrow.",
+        "options": [
+          "must pay",
+          "must paid",
+          "must been paid",
+          "must be paid"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The new concert hall ___ by the Queen next year.",
+        "options": [
+          "will open",
+          "will opened",
+          "will be opened",
+          "is open"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Many buildings ___ by the earthquake.",
+        "options": [
+          "have damaged",
+          "are damage",
+          "damaged",
+          "have been damaged"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The water ___ to one hundred degrees.",
+        "options": [
+          "heats",
+          "is heating",
+          "heated",
+          "is heated"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The tickets ___ from the box office.",
+        "options": [
+          "have to collect",
+          "have to collected",
+          "must to collect",
+          "have to be collected"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The photo ___ by my husband on our balcony.",
+        "options": [
+          "took",
+          "has took",
+          "is took",
+          "was taken"
+        ],
+        "answer": 3
+      }
+    ]
+  }
 }

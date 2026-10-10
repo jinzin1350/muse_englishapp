@@ -1,1 +1,572 @@
-{"level": "b2", "cefr": "B2", "date": "2026-09-25", "theme": "travel & transport", "words": [{"word": "destination", "pos": "noun", "meaning": "the place you are traveling to", "example": "Paris is a popular destination for tourists.", "pronunciation": "dest-uh-NAY-shun", "persian": "مقصد", "photo": "media/b2/2026-09-25/photos/destination.jpg", "word_audio": "media/b2/2026-09-25/word-audio/destination.mp3"}, {"word": "itinerary", "pos": "noun", "meaning": "a plan of a trip with places and times", "example": "Our itinerary includes three cities and five museums.", "pronunciation": "eye-TIN-uh-rer-ee", "persian": "برنامه سفر", "photo": "media/b2/2026-09-25/photos/itinerary.jpg", "word_audio": "media/b2/2026-09-25/word-audio/itinerary.mp3"}, {"word": "accommodation", "pos": "noun", "meaning": "a place to stay, like a hotel", "example": "We booked accommodation near the beach.", "pronunciation": "uh-kom-uh-DAY-shun", "persian": "اقامتگاه، محل اقامت", "photo": "media/b2/2026-09-25/photos/accommodation.jpg", "word_audio": "media/b2/2026-09-25/word-audio/accommodation.mp3"}, {"word": "fare", "pos": "noun", "meaning": "the money you pay to travel by bus, train, or plane", "example": "The bus fare is only two dollars.", "pronunciation": "FAIR", "persian": "کرایه (حمل‌ونقل)", "photo": "media/b2/2026-09-25/photos/fare.jpg", "word_audio": "media/b2/2026-09-25/word-audio/fare.mp3"}, {"word": "delay", "pos": "noun", "meaning": "when something happens later than planned", "example": "Our flight had a two-hour delay.", "pronunciation": "dih-LAY", "persian": "تأخیر", "photo": "media/b2/2026-09-25/photos/delay.jpg", "word_audio": "media/b2/2026-09-25/word-audio/delay.mp3"}, {"word": "commute", "pos": "verb", "meaning": "to travel between home and work every day", "example": "She commutes to work by train.", "pronunciation": "kuh-MYOOT", "persian": "رفت‌وآمد روزانه (خانه تا محل کار)", "photo": "media/b2/2026-09-25/photos/commute.jpg", "word_audio": "media/b2/2026-09-25/word-audio/commute.mp3"}, {"word": "landmark", "pos": "noun", "meaning": "a famous building or place that people visit", "example": "The Eiffel Tower is a famous landmark.", "pronunciation": "LAND-mark", "persian": "بنای معروف و شاخص", "photo": "media/b2/2026-09-25/photos/landmark.jpg", "word_audio": "media/b2/2026-09-25/word-audio/landmark.mp3"}, {"word": "baggage", "pos": "noun", "meaning": "the bags you take with you when you travel", "example": "Please check your baggage at the counter.", "pronunciation": "BAG-ij", "persian": "چمدان، بار سفر", "photo": "media/b2/2026-09-25/photos/baggage.jpg", "word_audio": "media/b2/2026-09-25/word-audio/baggage.mp3"}, {"word": "voyage", "pos": "noun", "meaning": "a long trip by ship or in space", "example": "The voyage across the ocean took ten days.", "pronunciation": "VOY-ij", "persian": "سفر دریایی طولانی", "photo": "media/b2/2026-09-25/photos/voyage.jpg", "word_audio": "media/b2/2026-09-25/word-audio/voyage.mp3"}, {"word": "customs", "pos": "noun", "meaning": "the office at a border that checks your bags", "example": "We went through customs at the airport.", "pronunciation": "KUS-tumz", "persian": "گمرک", "photo": "media/b2/2026-09-25/photos/customs.jpg", "word_audio": "media/b2/2026-09-25/word-audio/customs.mp3"}, {"word": "platform", "pos": "noun", "meaning": "the raised place where you wait for a train", "example": "The train leaves from platform three.", "pronunciation": "PLAT-form", "persian": "سکو (قطار)", "photo": "media/b2/2026-09-25/photos/platform.jpg", "word_audio": "media/b2/2026-09-25/word-audio/platform.mp3"}, {"word": "layover", "pos": "noun", "meaning": "a short stop between two flights", "example": "We have a three-hour layover in Istanbul.", "pronunciation": "LAY-oh-ver", "persian": "توقف بین دو پرواز", "photo": "media/b2/2026-09-25/photos/layover.jpg", "word_audio": "media/b2/2026-09-25/word-audio/layover.mp3"}, {"word": "embark", "pos": "verb", "meaning": "to get on a ship or plane to start a trip", "example": "We embark on our journey tomorrow morning.", "pronunciation": "em-BARK", "persian": "سوار شدن (برای شروع سفر)", "photo": "media/b2/2026-09-25/photos/embark.jpg", "word_audio": "media/b2/2026-09-25/word-audio/embark.mp3"}, {"word": "postpone", "pos": "verb", "meaning": "to move something to a later time", "example": "They postponed the flight because of the storm.", "pronunciation": "post-POHN", "persian": "به تعویق انداختن", "photo": "media/b2/2026-09-25/photos/postpone.jpg", "word_audio": "media/b2/2026-09-25/word-audio/postpone.mp3"}, {"word": "navigate", "pos": "verb", "meaning": "to find your way to a place", "example": "We used a map to navigate the old city.", "pronunciation": "NAV-uh-gayt", "persian": "مسیریابی کردن، راه را پیدا کردن", "photo": "media/b2/2026-09-25/photos/navigate.jpg", "word_audio": "media/b2/2026-09-25/word-audio/navigate.mp3"}, {"word": "congested", "pos": "adjective", "meaning": "full of traffic or people, hard to move through", "example": "The road was congested during rush hour.", "pronunciation": "kun-JEST-ed", "persian": "پرترافیک، شلوغ", "photo": "media/b2/2026-09-25/photos/congested.jpg", "word_audio": "media/b2/2026-09-25/word-audio/congested.mp3"}, {"word": "spacious", "pos": "adjective", "meaning": "big, with lots of space inside", "example": "The hotel room was spacious and bright.", "pronunciation": "SPAY-shus", "persian": "جادار", "photo": "media/b2/2026-09-25/photos/spacious.jpg", "word_audio": "media/b2/2026-09-25/word-audio/spacious.mp3"}, {"word": "breathtaking", "pos": "adjective", "meaning": "very beautiful and amazing", "example": "The view from the mountain was breathtaking.", "pronunciation": "BRETH-tay-king", "persian": "حیرت‌انگیز، نفس‌گیر", "photo": "media/b2/2026-09-25/photos/breathtaking.jpg", "word_audio": "media/b2/2026-09-25/word-audio/breathtaking.mp3"}, {"word": "punctual", "pos": "adjective", "meaning": "arriving exactly on time", "example": "He is always punctual for his classes.", "pronunciation": "PUNK-choo-ul", "persian": "وقت‌شناس، سر وقت", "photo": "media/b2/2026-09-25/photos/punctual.jpg", "word_audio": "media/b2/2026-09-25/word-audio/punctual.mp3"}, {"word": "scenic", "pos": "adjective", "meaning": "with beautiful natural views", "example": "We drove along a scenic road by the sea.", "pronunciation": "SEE-nik", "persian": "خوش‌منظره", "photo": "media/b2/2026-09-25/photos/scenic.jpg", "word_audio": "media/b2/2026-09-25/word-audio/scenic.mp3"}], "quiz": [{"question": "What does 'destination' mean?", "options": ["very beautiful and amazing", "the place you are traveling to", "to travel between home and work every day", "a short stop between two flights"], "answer": 1}, {"question": "What does 'itinerary' mean?", "options": ["a plan of a trip with places and times", "big, with lots of space inside", "to move something to a later time", "with beautiful natural views"], "answer": 0}, {"question": "What does 'accommodation' mean?", "options": ["the raised place where you wait for a train", "a place to stay, like a hotel", "the place you are traveling to", "with beautiful natural views"], "answer": 1}, {"question": "What does 'fare' mean?", "options": ["full of traffic or people, hard to move through", "the money you pay to travel by bus, train, or plane", "when something happens later than planned", "the place you are traveling to"], "answer": 1}, {"question": "What does 'delay' mean?", "options": ["when something happens later than planned", "a short stop between two flights", "with beautiful natural views", "to find your way to a place"], "answer": 0}, {"question": "What does 'commute' mean?", "options": ["big, with lots of space inside", "full of traffic or people, hard to move through", "to travel between home and work every day", "to find your way to a place"], "answer": 2}, {"question": "What does 'landmark' mean?", "options": ["a famous building or place that people visit", "full of traffic or people, hard to move through", "the raised place where you wait for a train", "when something happens later than planned"], "answer": 0}, {"question": "What does 'baggage' mean?", "options": ["to find your way to a place", "to get on a ship or plane to start a trip", "when something happens later than planned", "the bags you take with you when you travel"], "answer": 3}, {"question": "What does 'voyage' mean?", "options": ["to get on a ship or plane to start a trip", "big, with lots of space inside", "a long trip by ship or in space", "arriving exactly on time"], "answer": 2}, {"question": "What does 'customs' mean?", "options": ["the office at a border that checks your bags", "to travel between home and work every day", "a plan of a trip with places and times", "with beautiful natural views"], "answer": 0}, {"question": "What does 'platform' mean?", "options": ["a famous building or place that people visit", "the office at a border that checks your bags", "the raised place where you wait for a train", "full of traffic or people, hard to move through"], "answer": 2}, {"question": "What does 'layover' mean?", "options": ["full of traffic or people, hard to move through", "the office at a border that checks your bags", "a short stop between two flights", "a place to stay, like a hotel"], "answer": 2}, {"question": "What does 'embark' mean?", "options": ["to move something to a later time", "big, with lots of space inside", "the raised place where you wait for a train", "to get on a ship or plane to start a trip"], "answer": 3}, {"question": "What does 'postpone' mean?", "options": ["a famous building or place that people visit", "to move something to a later time", "very beautiful and amazing", "the office at a border that checks your bags"], "answer": 1}, {"question": "What does 'navigate' mean?", "options": ["a plan of a trip with places and times", "to move something to a later time", "to find your way to a place", "a short stop between two flights"], "answer": 2}, {"question": "What does 'congested' mean?", "options": ["very beautiful and amazing", "the bags you take with you when you travel", "full of traffic or people, hard to move through", "a famous building or place that people visit"], "answer": 2}, {"question": "What does 'spacious' mean?", "options": ["big, with lots of space inside", "to move something to a later time", "a famous building or place that people visit", "the money you pay to travel by bus, train, or plane"], "answer": 0}, {"question": "What does 'breathtaking' mean?", "options": ["to move something to a later time", "very beautiful and amazing", "the money you pay to travel by bus, train, or plane", "when something happens later than planned"], "answer": 1}, {"question": "What does 'punctual' mean?", "options": ["the bags you take with you when you travel", "a famous building or place that people visit", "very beautiful and amazing", "arriving exactly on time"], "answer": 3}, {"question": "What does 'scenic' mean?", "options": ["to travel between home and work every day", "with beautiful natural views", "arriving exactly on time", "the bags you take with you when you travel"], "answer": 1}], "grammar": {"title": "1B: Future forms - present continuous, be going to, will / won't", "explanation": "We use 'be going to' for future plans we have already decided: 'I'm going to take a Spanish course.' We also use it for predictions when we can see what is about to happen: 'Look at the sky! It's going to rain.' We use the present continuous for future arrangements, often with verbs of movement or meeting people: 'I'm meeting Tom at 8.00.' We use 'will' for instant decisions made while speaking: 'I'll get the phone.' We also use 'will' for promises ('I won't tell anybody'), offers ('I'll carry your bag'), and predictions. For suggestions and offers as questions, use 'shall': 'Shall I help you?'", "examples": ["I've decided to lose weight. I'm going to eat less sugar.", "Watch out! You're going to drop your phone!", "We're visiting my parents this weekend.", "A: I need to post these letters. B: I'll go to the post office.", "I promise I won't be late.", "Shall we eat out tonight?"], "practice": [], "quiz": [{"question": "'Look at those clouds! It ___.'", "options": ["will rain", "'s going to rain", "rains", "raining"], "answer": 1}, {"question": "'A: Is that the phone? B: ___ it.'", "options": ["I get", "I'm going to get", "I'll get", "I'm getting"], "answer": 2}, {"question": "'I promise I ___ anybody.'", "options": ["won't tell", "'m not going to tell", "don't tell", "not tell"], "answer": 0}, {"question": "'A: What are your plans for the summer? B: ___ a Spanish course.'", "options": ["I'll take", "I take", "I'm going to take", "I'm taking"], "answer": 2}, {"question": "'A: Are you doing anything Saturday night? B: ___ to the theatre.'", "options": ["I'll go", "I go", "I'm going", "I'm go"], "answer": 2}, {"question": "'It's very cold. ___ the window.'", "options": ["I close", "I'm going to close", "I'll close", "I'm closing"], "answer": 2}, {"question": "'A: Can you help me with my luggage? B: Of course. ___ it for you.'", "options": ["I carry", "I'm going to carry", "I'm carrying", "I'll carry"], "answer": 3}, {"question": "'A: What time ___? B: At 8.30.'", "options": ["is the film starting", "does the film start", "the film starts", "will the film start"], "answer": 1}, {"question": "'___ you a lift. I'm going that way.'", "options": ["I give", "I'll give", "I'm going to give", "I'm giving"], "answer": 1}, {"question": "'___ eat out tonight?' (a suggestion)", "options": ["Will we", "Do we", "Shall we", "Are we"], "answer": 2}]}, "pronunciation_audio": "media/b2/2026-09-25/pronunciation.mp3", "podcast": {"title": "Word Kitchen: 20 Travel & Transport Words", "audio": "media/b2/2026-09-25/podcast.mp3", "cover": null, "transcript": null}, "shadowing": {"title": "Shadowing practice", "audio": "media/b2/2026-09-25/shadowing.mp3", "transcript": null}}
+{
+  "level": "b2",
+  "cefr": "B2",
+  "date": "2026-09-25",
+  "theme": "travel & transport",
+  "words": [
+    {
+      "word": "destination",
+      "pos": "noun",
+      "meaning": "the place you are traveling to",
+      "example": "Paris is a popular destination for tourists.",
+      "pronunciation": "dest-uh-NAY-shun",
+      "persian": "مقصد",
+      "photo": "media/b2/2026-09-25/photos/destination.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/destination.mp3"
+    },
+    {
+      "word": "itinerary",
+      "pos": "noun",
+      "meaning": "a plan of a trip with places and times",
+      "example": "Our itinerary includes three cities and five museums.",
+      "pronunciation": "eye-TIN-uh-rer-ee",
+      "persian": "برنامه سفر",
+      "photo": "media/b2/2026-09-25/photos/itinerary.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/itinerary.mp3"
+    },
+    {
+      "word": "accommodation",
+      "pos": "noun",
+      "meaning": "a place to stay, like a hotel",
+      "example": "We booked accommodation near the beach.",
+      "pronunciation": "uh-kom-uh-DAY-shun",
+      "persian": "اقامتگاه، محل اقامت",
+      "photo": "media/b2/2026-09-25/photos/accommodation.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/accommodation.mp3"
+    },
+    {
+      "word": "fare",
+      "pos": "noun",
+      "meaning": "the money you pay to travel by bus, train, or plane",
+      "example": "The bus fare is only two dollars.",
+      "pronunciation": "FAIR",
+      "persian": "کرایه (حمل‌ونقل)",
+      "photo": "media/b2/2026-09-25/photos/fare.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/fare.mp3"
+    },
+    {
+      "word": "delay",
+      "pos": "noun",
+      "meaning": "when something happens later than planned",
+      "example": "Our flight had a two-hour delay.",
+      "pronunciation": "dih-LAY",
+      "persian": "تأخیر",
+      "photo": "media/b2/2026-09-25/photos/delay.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/delay.mp3"
+    },
+    {
+      "word": "commute",
+      "pos": "verb",
+      "meaning": "to travel between home and work every day",
+      "example": "She commutes to work by train.",
+      "pronunciation": "kuh-MYOOT",
+      "persian": "رفت‌وآمد روزانه (خانه تا محل کار)",
+      "photo": "media/b2/2026-09-25/photos/commute.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/commute.mp3"
+    },
+    {
+      "word": "landmark",
+      "pos": "noun",
+      "meaning": "a famous building or place that people visit",
+      "example": "The Eiffel Tower is a famous landmark.",
+      "pronunciation": "LAND-mark",
+      "persian": "بنای معروف و شاخص",
+      "photo": "media/b2/2026-09-25/photos/landmark.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/landmark.mp3"
+    },
+    {
+      "word": "baggage",
+      "pos": "noun",
+      "meaning": "the bags you take with you when you travel",
+      "example": "Please check your baggage at the counter.",
+      "pronunciation": "BAG-ij",
+      "persian": "چمدان، بار سفر",
+      "photo": "media/b2/2026-09-25/photos/baggage.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/baggage.mp3"
+    },
+    {
+      "word": "voyage",
+      "pos": "noun",
+      "meaning": "a long trip by ship or in space",
+      "example": "The voyage across the ocean took ten days.",
+      "pronunciation": "VOY-ij",
+      "persian": "سفر دریایی طولانی",
+      "photo": "media/b2/2026-09-25/photos/voyage.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/voyage.mp3"
+    },
+    {
+      "word": "customs",
+      "pos": "noun",
+      "meaning": "the office at a border that checks your bags",
+      "example": "We went through customs at the airport.",
+      "pronunciation": "KUS-tumz",
+      "persian": "گمرک",
+      "photo": "media/b2/2026-09-25/photos/customs.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/customs.mp3"
+    },
+    {
+      "word": "platform",
+      "pos": "noun",
+      "meaning": "the raised place where you wait for a train",
+      "example": "The train leaves from platform three.",
+      "pronunciation": "PLAT-form",
+      "persian": "سکو (قطار)",
+      "photo": "media/b2/2026-09-25/photos/platform.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/platform.mp3"
+    },
+    {
+      "word": "layover",
+      "pos": "noun",
+      "meaning": "a short stop between two flights",
+      "example": "We have a three-hour layover in Istanbul.",
+      "pronunciation": "LAY-oh-ver",
+      "persian": "توقف بین دو پرواز",
+      "photo": "media/b2/2026-09-25/photos/layover.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/layover.mp3"
+    },
+    {
+      "word": "embark",
+      "pos": "verb",
+      "meaning": "to get on a ship or plane to start a trip",
+      "example": "We embark on our journey tomorrow morning.",
+      "pronunciation": "em-BARK",
+      "persian": "سوار شدن (برای شروع سفر)",
+      "photo": "media/b2/2026-09-25/photos/embark.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/embark.mp3"
+    },
+    {
+      "word": "postpone",
+      "pos": "verb",
+      "meaning": "to move something to a later time",
+      "example": "They postponed the flight because of the storm.",
+      "pronunciation": "post-POHN",
+      "persian": "به تعویق انداختن",
+      "photo": "media/b2/2026-09-25/photos/postpone.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/postpone.mp3"
+    },
+    {
+      "word": "navigate",
+      "pos": "verb",
+      "meaning": "to find your way to a place",
+      "example": "We used a map to navigate the old city.",
+      "pronunciation": "NAV-uh-gayt",
+      "persian": "مسیریابی کردن، راه را پیدا کردن",
+      "photo": "media/b2/2026-09-25/photos/navigate.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/navigate.mp3"
+    },
+    {
+      "word": "congested",
+      "pos": "adjective",
+      "meaning": "full of traffic or people, hard to move through",
+      "example": "The road was congested during rush hour.",
+      "pronunciation": "kun-JEST-ed",
+      "persian": "پرترافیک، شلوغ",
+      "photo": "media/b2/2026-09-25/photos/congested.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/congested.mp3"
+    },
+    {
+      "word": "spacious",
+      "pos": "adjective",
+      "meaning": "big, with lots of space inside",
+      "example": "The hotel room was spacious and bright.",
+      "pronunciation": "SPAY-shus",
+      "persian": "جادار",
+      "photo": "media/b2/2026-09-25/photos/spacious.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/spacious.mp3"
+    },
+    {
+      "word": "breathtaking",
+      "pos": "adjective",
+      "meaning": "very beautiful and amazing",
+      "example": "The view from the mountain was breathtaking.",
+      "pronunciation": "BRETH-tay-king",
+      "persian": "حیرت‌انگیز، نفس‌گیر",
+      "photo": "media/b2/2026-09-25/photos/breathtaking.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/breathtaking.mp3"
+    },
+    {
+      "word": "punctual",
+      "pos": "adjective",
+      "meaning": "arriving exactly on time",
+      "example": "He is always punctual for his classes.",
+      "pronunciation": "PUNK-choo-ul",
+      "persian": "وقت‌شناس، سر وقت",
+      "photo": "media/b2/2026-09-25/photos/punctual.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/punctual.mp3"
+    },
+    {
+      "word": "scenic",
+      "pos": "adjective",
+      "meaning": "with beautiful natural views",
+      "example": "We drove along a scenic road by the sea.",
+      "pronunciation": "SEE-nik",
+      "persian": "خوش‌منظره",
+      "photo": "media/b2/2026-09-25/photos/scenic.jpg",
+      "word_audio": "media/b2/2026-09-25/word-audio/scenic.mp3"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What does 'destination' mean?",
+      "options": [
+        "very beautiful and amazing",
+        "the place you are traveling to",
+        "to travel between home and work every day",
+        "a short stop between two flights"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'itinerary' mean?",
+      "options": [
+        "a plan of a trip with places and times",
+        "big, with lots of space inside",
+        "to move something to a later time",
+        "with beautiful natural views"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'accommodation' mean?",
+      "options": [
+        "the raised place where you wait for a train",
+        "a place to stay, like a hotel",
+        "the place you are traveling to",
+        "with beautiful natural views"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'fare' mean?",
+      "options": [
+        "full of traffic or people, hard to move through",
+        "the money you pay to travel by bus, train, or plane",
+        "when something happens later than planned",
+        "the place you are traveling to"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'delay' mean?",
+      "options": [
+        "when something happens later than planned",
+        "a short stop between two flights",
+        "with beautiful natural views",
+        "to find your way to a place"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'commute' mean?",
+      "options": [
+        "big, with lots of space inside",
+        "full of traffic or people, hard to move through",
+        "to travel between home and work every day",
+        "to find your way to a place"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'landmark' mean?",
+      "options": [
+        "a famous building or place that people visit",
+        "full of traffic or people, hard to move through",
+        "the raised place where you wait for a train",
+        "when something happens later than planned"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'baggage' mean?",
+      "options": [
+        "to find your way to a place",
+        "to get on a ship or plane to start a trip",
+        "when something happens later than planned",
+        "the bags you take with you when you travel"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'voyage' mean?",
+      "options": [
+        "to get on a ship or plane to start a trip",
+        "big, with lots of space inside",
+        "a long trip by ship or in space",
+        "arriving exactly on time"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'customs' mean?",
+      "options": [
+        "the office at a border that checks your bags",
+        "to travel between home and work every day",
+        "a plan of a trip with places and times",
+        "with beautiful natural views"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'platform' mean?",
+      "options": [
+        "a famous building or place that people visit",
+        "the office at a border that checks your bags",
+        "the raised place where you wait for a train",
+        "full of traffic or people, hard to move through"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'layover' mean?",
+      "options": [
+        "full of traffic or people, hard to move through",
+        "the office at a border that checks your bags",
+        "a short stop between two flights",
+        "a place to stay, like a hotel"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'embark' mean?",
+      "options": [
+        "to move something to a later time",
+        "big, with lots of space inside",
+        "the raised place where you wait for a train",
+        "to get on a ship or plane to start a trip"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'postpone' mean?",
+      "options": [
+        "a famous building or place that people visit",
+        "to move something to a later time",
+        "very beautiful and amazing",
+        "the office at a border that checks your bags"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'navigate' mean?",
+      "options": [
+        "a plan of a trip with places and times",
+        "to move something to a later time",
+        "to find your way to a place",
+        "a short stop between two flights"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'congested' mean?",
+      "options": [
+        "very beautiful and amazing",
+        "the bags you take with you when you travel",
+        "full of traffic or people, hard to move through",
+        "a famous building or place that people visit"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'spacious' mean?",
+      "options": [
+        "big, with lots of space inside",
+        "to move something to a later time",
+        "a famous building or place that people visit",
+        "the money you pay to travel by bus, train, or plane"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'breathtaking' mean?",
+      "options": [
+        "to move something to a later time",
+        "very beautiful and amazing",
+        "the money you pay to travel by bus, train, or plane",
+        "when something happens later than planned"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'punctual' mean?",
+      "options": [
+        "the bags you take with you when you travel",
+        "a famous building or place that people visit",
+        "very beautiful and amazing",
+        "arriving exactly on time"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'scenic' mean?",
+      "options": [
+        "to travel between home and work every day",
+        "with beautiful natural views",
+        "arriving exactly on time",
+        "the bags you take with you when you travel"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "1B: Future forms - present continuous, be going to, will / won't",
+    "explanation": "We use 'be going to' for future plans we have already decided: 'I'm going to take a Spanish course.' We also use it for predictions when we can see what is about to happen: 'Look at the sky! It's going to rain.' We use the present continuous for future arrangements, often with verbs of movement or meeting people: 'I'm meeting Tom at 8.00.' We use 'will' for instant decisions made while speaking: 'I'll get the phone.' We also use 'will' for promises ('I won't tell anybody'), offers ('I'll carry your bag'), and predictions. For suggestions and offers as questions, use 'shall': 'Shall I help you?'",
+    "examples": [
+      "I've decided to lose weight. I'm going to eat less sugar.",
+      "Watch out! You're going to drop your phone!",
+      "We're visiting my parents this weekend.",
+      "A: I need to post these letters. B: I'll go to the post office.",
+      "I promise I won't be late.",
+      "Shall we eat out tonight?"
+    ],
+    "practice": [],
+    "quiz": [
+      {
+        "question": "'Look at those clouds! It ___.'",
+        "options": [
+          "will rain",
+          "'s going to rain",
+          "rains",
+          "raining"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "'A: Is that the phone? B: ___ it.'",
+        "options": [
+          "I get",
+          "I'm going to get",
+          "I'll get",
+          "I'm getting"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'I promise I ___ anybody.'",
+        "options": [
+          "won't tell",
+          "'m not going to tell",
+          "don't tell",
+          "not tell"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "'A: What are your plans for the summer? B: ___ a Spanish course.'",
+        "options": [
+          "I'll take",
+          "I take",
+          "I'm going to take",
+          "I'm taking"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'A: Are you doing anything Saturday night? B: ___ to the theatre.'",
+        "options": [
+          "I'll go",
+          "I go",
+          "I'm going",
+          "I'm go"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'It's very cold. ___ the window.'",
+        "options": [
+          "I close",
+          "I'm going to close",
+          "I'll close",
+          "I'm closing"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'A: Can you help me with my luggage? B: Of course. ___ it for you.'",
+        "options": [
+          "I carry",
+          "I'm going to carry",
+          "I'm carrying",
+          "I'll carry"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "'A: What time ___? B: At 8.30.'",
+        "options": [
+          "is the film starting",
+          "does the film start",
+          "the film starts",
+          "will the film start"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "'___ you a lift. I'm going that way.'",
+        "options": [
+          "I give",
+          "I'll give",
+          "I'm going to give",
+          "I'm giving"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "'___ eat out tonight?' (a suggestion)",
+        "options": [
+          "Will we",
+          "Do we",
+          "Shall we",
+          "Are we"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  "pronunciation_audio": "media/b2/2026-09-25/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: 20 Travel & Transport Words",
+    "audio": "media/b2/2026-09-25/podcast.mp3",
+    "cover": null,
+    "transcript": null
+  },
+  "shadowing": {
+    "title": "Shadowing practice",
+    "audio": "media/b2/2026-09-25/shadowing.mp3",
+    "transcript": "media/b2/2026-09-25/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-09-25/shadowing-sentences/001.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/002.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/003.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/004.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/005.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/006.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/007.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/008.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/009.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/010.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/011.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/012.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/013.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/014.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/015.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/016.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/017.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/018.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/019.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/020.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/021.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/022.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/023.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/024.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/025.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/026.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/027.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/028.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/029.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/030.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/031.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/032.mp3",
+      "media/b2/2026-09-25/shadowing-sentences/033.mp3"
+    ]
+  }
+}

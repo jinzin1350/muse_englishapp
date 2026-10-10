@@ -1,1 +1,574 @@
-{"level": "b2", "cefr": "B2", "date": "2026-09-27", "theme": "health & body", "words": [{"word": "symptom", "pos": "noun", "meaning": "a sign that you are sick, like a cough or a fever", "example": "A fever is a common symptom of the flu.", "pronunciation": "SIMP-tum", "persian": "علامت بیماری", "photo": "media/b2/2026-09-27/photos/symptom.jpg", "word_audio": "media/b2/2026-09-27/word-audio/symptom.mp3"}, {"word": "prescription", "pos": "noun", "meaning": "a doctor's written order for medicine", "example": "You need a prescription to buy this medicine.", "pronunciation": "pruh-SKRIP-shun", "persian": "نسخه (پزشک)", "photo": "media/b2/2026-09-27/photos/prescription.jpg", "word_audio": "media/b2/2026-09-27/word-audio/prescription.mp3"}, {"word": "dosage", "pos": "noun", "meaning": "the amount of medicine you should take at one time", "example": "The correct dosage is written on the bottle.", "pronunciation": "DOH-sij", "persian": "دوز، مقدار مصرف دارو", "photo": "media/b2/2026-09-27/photos/dosage.jpg", "word_audio": "media/b2/2026-09-27/word-audio/dosage.mp3"}, {"word": "strain", "pos": "verb", "meaning": "to hurt a muscle by using it too much", "example": "She strained her back lifting a heavy box.", "pronunciation": "STRAYN", "persian": "کشیدگی عضله", "photo": "media/b2/2026-09-27/photos/strain.jpg", "word_audio": "media/b2/2026-09-27/word-audio/strain.mp3"}, {"word": "sprain", "pos": "verb", "meaning": "to twist a joint painfully", "example": "He sprained his ankle playing soccer.", "pronunciation": "SPRAYN", "persian": "پیچ‌خوردگی مفصل", "photo": "media/b2/2026-09-27/photos/sprain.jpg", "word_audio": "media/b2/2026-09-27/word-audio/sprain.mp3"}, {"word": "chronic", "pos": "adjective", "meaning": "continuing for a long time, usually about a sickness", "example": "He suffers from chronic back pain.", "pronunciation": "KRON-ik", "persian": "مزمن", "photo": "media/b2/2026-09-27/photos/chronic.jpg", "word_audio": "media/b2/2026-09-27/word-audio/chronic.mp3"}, {"word": "hygiene", "pos": "noun", "meaning": "keeping yourself and your things clean", "example": "Good hygiene stops the spread of germs.", "pronunciation": "HY-jeen", "persian": "بهداشت", "photo": "media/b2/2026-09-27/photos/hygiene.jpg", "word_audio": "media/b2/2026-09-27/word-audio/hygiene.mp3"}, {"word": "nutrient", "pos": "noun", "meaning": "a healthy part of food that your body needs", "example": "Fruit has nutrients like vitamins.", "pronunciation": "NOO-tree-unt", "persian": "ماده مغذی", "photo": "media/b2/2026-09-27/photos/nutrient.jpg", "word_audio": "media/b2/2026-09-27/word-audio/nutrient.mp3"}, {"word": "posture", "pos": "noun", "meaning": "the way you sit or stand", "example": "Good posture helps your back stay healthy.", "pronunciation": "POS-chur", "persian": "طرز نشستن و ایستادن، وضعیت بدن", "photo": "media/b2/2026-09-27/photos/posture.jpg", "word_audio": "media/b2/2026-09-27/word-audio/posture.mp3"}, {"word": "immunity", "pos": "noun", "meaning": "when your body can fight off a sickness", "example": "Enough sleep gives your immunity a boost.", "pronunciation": "ih-MYOO-nuh-tee", "persian": "ایمنی بدن", "photo": "media/b2/2026-09-27/photos/immunity.jpg", "word_audio": "media/b2/2026-09-27/word-audio/immunity.mp3"}, {"word": "allergic", "pos": "adjective", "meaning": "when your body reacts badly to something", "example": "She is allergic to peanuts.", "pronunciation": "uh-LUR-jik", "persian": "حساسیت داشتن (آلرژیک)", "photo": "media/b2/2026-09-27/photos/allergic.jpg", "word_audio": "media/b2/2026-09-27/word-audio/allergic.mp3"}, {"word": "inflammation", "pos": "noun", "meaning": "red, warm swelling in the body", "example": "Ice can reduce inflammation in a sore knee.", "pronunciation": "in-fluh-MAY-shun", "persian": "التهاب", "photo": "media/b2/2026-09-27/photos/inflammation.jpg", "word_audio": "media/b2/2026-09-27/word-audio/inflammation.mp3"}, {"word": "endurance", "pos": "noun", "meaning": "the ability to keep going for a long time", "example": "Running builds endurance.", "pronunciation": "en-DOOR-uhns", "persian": "استقامت", "photo": "media/b2/2026-09-27/photos/endurance.jpg", "word_audio": "media/b2/2026-09-27/word-audio/endurance.mp3"}, {"word": "flex", "pos": "verb", "meaning": "to tighten a muscle", "example": "He flexed his arm to show the muscle.", "pronunciation": "FLEX", "persian": "منقبض کردن عضله", "photo": "media/b2/2026-09-27/photos/flex.jpg", "word_audio": "media/b2/2026-09-27/word-audio/flex.mp3"}, {"word": "sore", "pos": "adjective", "meaning": "painful, often in a muscle", "example": "My legs are sore after the gym.", "pronunciation": "SOR", "persian": "دردناک (عضله)", "photo": "media/b2/2026-09-27/photos/sore.jpg", "word_audio": "media/b2/2026-09-27/word-audio/sore.mp3"}, {"word": "dehydrated", "pos": "adjective", "meaning": "when your body does not have enough water", "example": "Drink water so you don't get dehydrated.", "pronunciation": "dee-HY-dray-tud", "persian": "کم‌آب (بدن)", "photo": "media/b2/2026-09-27/photos/dehydrated.jpg", "word_audio": "media/b2/2026-09-27/word-audio/dehydrated.mp3"}, {"word": "recover", "pos": "verb", "meaning": "to get healthy again after being sick", "example": "It took a week to recover from the cold.", "pronunciation": "rih-KUV-ur", "persian": "بهبود یافتن", "photo": "media/b2/2026-09-27/photos/recover.jpg", "word_audio": "media/b2/2026-09-27/word-audio/recover.mp3"}, {"word": "diagnose", "pos": "verb", "meaning": "when a doctor finds out what sickness you have", "example": "The doctor diagnosed him with the flu.", "pronunciation": "DY-ug-nohs", "persian": "تشخیص دادن (بیماری)", "photo": "media/b2/2026-09-27/photos/diagnose.jpg", "word_audio": "media/b2/2026-09-27/word-audio/diagnose.mp3"}, {"word": "vaccine", "pos": "noun", "meaning": "a shot that protects you from a sickness", "example": "Children get a vaccine against measles.", "pronunciation": "vak-SEEN", "persian": "واکسن", "photo": "media/b2/2026-09-27/photos/vaccine.jpg", "word_audio": "media/b2/2026-09-27/word-audio/vaccine.mp3"}, {"word": "metabolism", "pos": "noun", "meaning": "how your body turns food into energy", "example": "Exercise can speed up your metabolism.", "pronunciation": "muh-TAB-uh-liz-um", "persian": "متابولیسم، سوخت‌وساز بدن", "photo": "media/b2/2026-09-27/photos/metabolism.jpg", "word_audio": "media/b2/2026-09-27/word-audio/metabolism.mp3"}], "quiz": [{"question": "What does 'symptom' mean?", "options": ["to get healthy again after being sick", "red, warm swelling in the body", "a sign that you are sick, like a cough or a fever", "the way you sit or stand"], "answer": 2}, {"question": "What does 'prescription' mean?", "options": ["the ability to keep going for a long time", "a doctor's written order for medicine", "to tighten a muscle", "to get healthy again after being sick"], "answer": 1}, {"question": "What does 'dosage' mean?", "options": ["when your body does not have enough water", "the amount of medicine you should take at one time", "keeping yourself and your things clean", "when your body reacts badly to something"], "answer": 1}, {"question": "What does 'strain' mean?", "options": ["a shot that protects you from a sickness", "to hurt a muscle by using it too much", "a healthy part of food that your body needs", "the ability to keep going for a long time"], "answer": 1}, {"question": "What does 'sprain' mean?", "options": ["when a doctor finds out what sickness you have", "to twist a joint painfully", "when your body reacts badly to something", "the amount of medicine you should take at one time"], "answer": 1}, {"question": "What does 'chronic' mean?", "options": ["painful, often in a muscle", "continuing for a long time, usually about a sickness", "how your body turns food into energy", "to hurt a muscle by using it too much"], "answer": 1}, {"question": "What does 'hygiene' mean?", "options": ["to tighten a muscle", "a doctor's written order for medicine", "keeping yourself and your things clean", "to twist a joint painfully"], "answer": 2}, {"question": "What does 'nutrient' mean?", "options": ["a healthy part of food that your body needs", "a sign that you are sick, like a cough or a fever", "to get healthy again after being sick", "continuing for a long time, usually about a sickness"], "answer": 0}, {"question": "What does 'posture' mean?", "options": ["to hurt a muscle by using it too much", "keeping yourself and your things clean", "the way you sit or stand", "to twist a joint painfully"], "answer": 2}, {"question": "What does 'immunity' mean?", "options": ["a doctor's written order for medicine", "the amount of medicine you should take at one time", "when a doctor finds out what sickness you have", "when your body can fight off a sickness"], "answer": 3}, {"question": "What does 'allergic' mean?", "options": ["the amount of medicine you should take at one time", "a doctor's written order for medicine", "when your body reacts badly to something", "when your body can fight off a sickness"], "answer": 2}, {"question": "What does 'inflammation' mean?", "options": ["a sign that you are sick, like a cough or a fever", "keeping yourself and your things clean", "red, warm swelling in the body", "when a doctor finds out what sickness you have"], "answer": 2}, {"question": "What does 'endurance' mean?", "options": ["keeping yourself and your things clean", "the way you sit or stand", "the ability to keep going for a long time", "continuing for a long time, usually about a sickness"], "answer": 2}, {"question": "What does 'flex' mean?", "options": ["the amount of medicine you should take at one time", "when your body reacts badly to something", "to hurt a muscle by using it too much", "to tighten a muscle"], "answer": 3}, {"question": "What does 'sore' mean?", "options": ["to get healthy again after being sick", "the amount of medicine you should take at one time", "painful, often in a muscle", "when your body does not have enough water"], "answer": 2}, {"question": "What does 'dehydrated' mean?", "options": ["when your body reacts badly to something", "to get healthy again after being sick", "to tighten a muscle", "when your body does not have enough water"], "answer": 3}, {"question": "What does 'recover' mean?", "options": ["to get healthy again after being sick", "continuing for a long time, usually about a sickness", "a shot that protects you from a sickness", "to tighten a muscle"], "answer": 0}, {"question": "What does 'diagnose' mean?", "options": ["to twist a joint painfully", "painful, often in a muscle", "when a doctor finds out what sickness you have", "the amount of medicine you should take at one time"], "answer": 2}, {"question": "What does 'vaccine' mean?", "options": ["when your body can fight off a sickness", "the ability to keep going for a long time", "a doctor's written order for medicine", "a shot that protects you from a sickness"], "answer": 3}, {"question": "What does 'metabolism' mean?", "options": ["how your body turns food into energy", "painful, often in a muscle", "a shot that protects you from a sickness", "red, warm swelling in the body"], "answer": 0}], "grammar": {"title": "2B: Present perfect + for / since, present perfect continuous", "explanation": "Use the present perfect with 'for' and 'since' for things that started in the past and are still true now. Use 'for' with a period of time: 'for ten years.' Use 'since' with a starting point: 'since 2009.' Use the present perfect continuous (have / has been + verb-ing) for actions that started in the past and continue now: 'How long have you been learning English?' We also use it for continuous actions that just finished when we can see the result: 'Your eyes are red - have you been crying?' Do not use the continuous with state verbs like 'know': say 'I've known him for years.'", "examples": ["We've lived here since 2009.", "I've been a teacher for ten years.", "She's had that car since last April.", "How long have you been waiting?", "He's been working all morning, so he's tired.", "I've known him since we were children."], "practice": [], "quiz": [{"question": "'We've lived here ___ 2009.'", "options": ["for", "from", "since", "at"], "answer": 2}, {"question": "'I've been a teacher ___ ten years.'", "options": ["since", "from", "for", "during"], "answer": 2}, {"question": "'She's had that car ___ last April.'", "options": ["for", "from", "since", "at"], "answer": 2}, {"question": "'It's rained every day ___ a week.'", "options": ["since", "from", "for", "during"], "answer": 2}, {"question": "'How long ___ English?'", "options": ["do you learn", "are you learning", "have you been learning", "have you learned"], "answer": 2}, {"question": "'Your eyes are red. ___?'", "options": ["Did you cry", "Have you been crying", "Do you cry", "Are you crying"], "answer": 1}, {"question": "'He's tired because ___ all morning.'", "options": ["he worked", "he's been working", "he works", "he's working"], "answer": 1}, {"question": "'Why is the bath full of water? Because ___ the dog.'", "options": ["I washed", "I've been washing", "I wash", "I'm washing"], "answer": 1}, {"question": "'How long ___ each other?'", "options": ["have you been knowing", "do you know", "have you known", "did you know"], "answer": 2}, {"question": "'___ your homework yet? No, I've been doing it for an hour!'", "options": ["Did you finish", "Do you finish", "Have you finished", "Have you finish"], "answer": 2}]}, "pronunciation_audio": "media/b2/2026-09-27/pronunciation.mp3", "podcast": {"title": "Word Kitchen: 20 Health & Body Words", "audio": "media/b2/2026-09-27/podcast.mp3", "cover": null, "transcript": null}, "shadowing": {"title": "Shadowing practice", "audio": "media/b2/2026-09-27/shadowing.mp3", "transcript": null}}
+{
+  "level": "b2",
+  "cefr": "B2",
+  "date": "2026-09-27",
+  "theme": "health & body",
+  "words": [
+    {
+      "word": "symptom",
+      "pos": "noun",
+      "meaning": "a sign that you are sick, like a cough or a fever",
+      "example": "A fever is a common symptom of the flu.",
+      "pronunciation": "SIMP-tum",
+      "persian": "علامت بیماری",
+      "photo": "media/b2/2026-09-27/photos/symptom.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/symptom.mp3"
+    },
+    {
+      "word": "prescription",
+      "pos": "noun",
+      "meaning": "a doctor's written order for medicine",
+      "example": "You need a prescription to buy this medicine.",
+      "pronunciation": "pruh-SKRIP-shun",
+      "persian": "نسخه (پزشک)",
+      "photo": "media/b2/2026-09-27/photos/prescription.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/prescription.mp3"
+    },
+    {
+      "word": "dosage",
+      "pos": "noun",
+      "meaning": "the amount of medicine you should take at one time",
+      "example": "The correct dosage is written on the bottle.",
+      "pronunciation": "DOH-sij",
+      "persian": "دوز، مقدار مصرف دارو",
+      "photo": "media/b2/2026-09-27/photos/dosage.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/dosage.mp3"
+    },
+    {
+      "word": "strain",
+      "pos": "verb",
+      "meaning": "to hurt a muscle by using it too much",
+      "example": "She strained her back lifting a heavy box.",
+      "pronunciation": "STRAYN",
+      "persian": "کشیدگی عضله",
+      "photo": "media/b2/2026-09-27/photos/strain.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/strain.mp3"
+    },
+    {
+      "word": "sprain",
+      "pos": "verb",
+      "meaning": "to twist a joint painfully",
+      "example": "He sprained his ankle playing soccer.",
+      "pronunciation": "SPRAYN",
+      "persian": "پیچ‌خوردگی مفصل",
+      "photo": "media/b2/2026-09-27/photos/sprain.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/sprain.mp3"
+    },
+    {
+      "word": "chronic",
+      "pos": "adjective",
+      "meaning": "continuing for a long time, usually about a sickness",
+      "example": "He suffers from chronic back pain.",
+      "pronunciation": "KRON-ik",
+      "persian": "مزمن",
+      "photo": "media/b2/2026-09-27/photos/chronic.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/chronic.mp3"
+    },
+    {
+      "word": "hygiene",
+      "pos": "noun",
+      "meaning": "keeping yourself and your things clean",
+      "example": "Good hygiene stops the spread of germs.",
+      "pronunciation": "HY-jeen",
+      "persian": "بهداشت",
+      "photo": "media/b2/2026-09-27/photos/hygiene.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/hygiene.mp3"
+    },
+    {
+      "word": "nutrient",
+      "pos": "noun",
+      "meaning": "a healthy part of food that your body needs",
+      "example": "Fruit has nutrients like vitamins.",
+      "pronunciation": "NOO-tree-unt",
+      "persian": "ماده مغذی",
+      "photo": "media/b2/2026-09-27/photos/nutrient.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/nutrient.mp3"
+    },
+    {
+      "word": "posture",
+      "pos": "noun",
+      "meaning": "the way you sit or stand",
+      "example": "Good posture helps your back stay healthy.",
+      "pronunciation": "POS-chur",
+      "persian": "طرز نشستن و ایستادن، وضعیت بدن",
+      "photo": "media/b2/2026-09-27/photos/posture.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/posture.mp3"
+    },
+    {
+      "word": "immunity",
+      "pos": "noun",
+      "meaning": "when your body can fight off a sickness",
+      "example": "Enough sleep gives your immunity a boost.",
+      "pronunciation": "ih-MYOO-nuh-tee",
+      "persian": "ایمنی بدن",
+      "photo": "media/b2/2026-09-27/photos/immunity.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/immunity.mp3"
+    },
+    {
+      "word": "allergic",
+      "pos": "adjective",
+      "meaning": "when your body reacts badly to something",
+      "example": "She is allergic to peanuts.",
+      "pronunciation": "uh-LUR-jik",
+      "persian": "حساسیت داشتن (آلرژیک)",
+      "photo": "media/b2/2026-09-27/photos/allergic.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/allergic.mp3"
+    },
+    {
+      "word": "inflammation",
+      "pos": "noun",
+      "meaning": "red, warm swelling in the body",
+      "example": "Ice can reduce inflammation in a sore knee.",
+      "pronunciation": "in-fluh-MAY-shun",
+      "persian": "التهاب",
+      "photo": "media/b2/2026-09-27/photos/inflammation.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/inflammation.mp3"
+    },
+    {
+      "word": "endurance",
+      "pos": "noun",
+      "meaning": "the ability to keep going for a long time",
+      "example": "Running builds endurance.",
+      "pronunciation": "en-DOOR-uhns",
+      "persian": "استقامت",
+      "photo": "media/b2/2026-09-27/photos/endurance.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/endurance.mp3"
+    },
+    {
+      "word": "flex",
+      "pos": "verb",
+      "meaning": "to tighten a muscle",
+      "example": "He flexed his arm to show the muscle.",
+      "pronunciation": "FLEX",
+      "persian": "منقبض کردن عضله",
+      "photo": "media/b2/2026-09-27/photos/flex.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/flex.mp3"
+    },
+    {
+      "word": "sore",
+      "pos": "adjective",
+      "meaning": "painful, often in a muscle",
+      "example": "My legs are sore after the gym.",
+      "pronunciation": "SOR",
+      "persian": "دردناک (عضله)",
+      "photo": "media/b2/2026-09-27/photos/sore.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/sore.mp3"
+    },
+    {
+      "word": "dehydrated",
+      "pos": "adjective",
+      "meaning": "when your body does not have enough water",
+      "example": "Drink water so you don't get dehydrated.",
+      "pronunciation": "dee-HY-dray-tud",
+      "persian": "کم‌آب (بدن)",
+      "photo": "media/b2/2026-09-27/photos/dehydrated.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/dehydrated.mp3"
+    },
+    {
+      "word": "recover",
+      "pos": "verb",
+      "meaning": "to get healthy again after being sick",
+      "example": "It took a week to recover from the cold.",
+      "pronunciation": "rih-KUV-ur",
+      "persian": "بهبود یافتن",
+      "photo": "media/b2/2026-09-27/photos/recover.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/recover.mp3"
+    },
+    {
+      "word": "diagnose",
+      "pos": "verb",
+      "meaning": "when a doctor finds out what sickness you have",
+      "example": "The doctor diagnosed him with the flu.",
+      "pronunciation": "DY-ug-nohs",
+      "persian": "تشخیص دادن (بیماری)",
+      "photo": "media/b2/2026-09-27/photos/diagnose.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/diagnose.mp3"
+    },
+    {
+      "word": "vaccine",
+      "pos": "noun",
+      "meaning": "a shot that protects you from a sickness",
+      "example": "Children get a vaccine against measles.",
+      "pronunciation": "vak-SEEN",
+      "persian": "واکسن",
+      "photo": "media/b2/2026-09-27/photos/vaccine.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/vaccine.mp3"
+    },
+    {
+      "word": "metabolism",
+      "pos": "noun",
+      "meaning": "how your body turns food into energy",
+      "example": "Exercise can speed up your metabolism.",
+      "pronunciation": "muh-TAB-uh-liz-um",
+      "persian": "متابولیسم، سوخت‌وساز بدن",
+      "photo": "media/b2/2026-09-27/photos/metabolism.jpg",
+      "word_audio": "media/b2/2026-09-27/word-audio/metabolism.mp3"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "What does 'symptom' mean?",
+      "options": [
+        "to get healthy again after being sick",
+        "red, warm swelling in the body",
+        "a sign that you are sick, like a cough or a fever",
+        "the way you sit or stand"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'prescription' mean?",
+      "options": [
+        "the ability to keep going for a long time",
+        "a doctor's written order for medicine",
+        "to tighten a muscle",
+        "to get healthy again after being sick"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'dosage' mean?",
+      "options": [
+        "when your body does not have enough water",
+        "the amount of medicine you should take at one time",
+        "keeping yourself and your things clean",
+        "when your body reacts badly to something"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'strain' mean?",
+      "options": [
+        "a shot that protects you from a sickness",
+        "to hurt a muscle by using it too much",
+        "a healthy part of food that your body needs",
+        "the ability to keep going for a long time"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'sprain' mean?",
+      "options": [
+        "when a doctor finds out what sickness you have",
+        "to twist a joint painfully",
+        "when your body reacts badly to something",
+        "the amount of medicine you should take at one time"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'chronic' mean?",
+      "options": [
+        "painful, often in a muscle",
+        "continuing for a long time, usually about a sickness",
+        "how your body turns food into energy",
+        "to hurt a muscle by using it too much"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'hygiene' mean?",
+      "options": [
+        "to tighten a muscle",
+        "a doctor's written order for medicine",
+        "keeping yourself and your things clean",
+        "to twist a joint painfully"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'nutrient' mean?",
+      "options": [
+        "a healthy part of food that your body needs",
+        "a sign that you are sick, like a cough or a fever",
+        "to get healthy again after being sick",
+        "continuing for a long time, usually about a sickness"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'posture' mean?",
+      "options": [
+        "to hurt a muscle by using it too much",
+        "keeping yourself and your things clean",
+        "the way you sit or stand",
+        "to twist a joint painfully"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'immunity' mean?",
+      "options": [
+        "a doctor's written order for medicine",
+        "the amount of medicine you should take at one time",
+        "when a doctor finds out what sickness you have",
+        "when your body can fight off a sickness"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'allergic' mean?",
+      "options": [
+        "the amount of medicine you should take at one time",
+        "a doctor's written order for medicine",
+        "when your body reacts badly to something",
+        "when your body can fight off a sickness"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'inflammation' mean?",
+      "options": [
+        "a sign that you are sick, like a cough or a fever",
+        "keeping yourself and your things clean",
+        "red, warm swelling in the body",
+        "when a doctor finds out what sickness you have"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'endurance' mean?",
+      "options": [
+        "keeping yourself and your things clean",
+        "the way you sit or stand",
+        "the ability to keep going for a long time",
+        "continuing for a long time, usually about a sickness"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'flex' mean?",
+      "options": [
+        "the amount of medicine you should take at one time",
+        "when your body reacts badly to something",
+        "to hurt a muscle by using it too much",
+        "to tighten a muscle"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'sore' mean?",
+      "options": [
+        "to get healthy again after being sick",
+        "the amount of medicine you should take at one time",
+        "painful, often in a muscle",
+        "when your body does not have enough water"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'dehydrated' mean?",
+      "options": [
+        "when your body reacts badly to something",
+        "to get healthy again after being sick",
+        "to tighten a muscle",
+        "when your body does not have enough water"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'recover' mean?",
+      "options": [
+        "to get healthy again after being sick",
+        "continuing for a long time, usually about a sickness",
+        "a shot that protects you from a sickness",
+        "to tighten a muscle"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'diagnose' mean?",
+      "options": [
+        "to twist a joint painfully",
+        "painful, often in a muscle",
+        "when a doctor finds out what sickness you have",
+        "the amount of medicine you should take at one time"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'vaccine' mean?",
+      "options": [
+        "when your body can fight off a sickness",
+        "the ability to keep going for a long time",
+        "a doctor's written order for medicine",
+        "a shot that protects you from a sickness"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'metabolism' mean?",
+      "options": [
+        "how your body turns food into energy",
+        "painful, often in a muscle",
+        "a shot that protects you from a sickness",
+        "red, warm swelling in the body"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "2B: Present perfect + for / since, present perfect continuous",
+    "explanation": "Use the present perfect with 'for' and 'since' for things that started in the past and are still true now. Use 'for' with a period of time: 'for ten years.' Use 'since' with a starting point: 'since 2009.' Use the present perfect continuous (have / has been + verb-ing) for actions that started in the past and continue now: 'How long have you been learning English?' We also use it for continuous actions that just finished when we can see the result: 'Your eyes are red - have you been crying?' Do not use the continuous with state verbs like 'know': say 'I've known him for years.'",
+    "examples": [
+      "We've lived here since 2009.",
+      "I've been a teacher for ten years.",
+      "She's had that car since last April.",
+      "How long have you been waiting?",
+      "He's been working all morning, so he's tired.",
+      "I've known him since we were children."
+    ],
+    "practice": [],
+    "quiz": [
+      {
+        "question": "'We've lived here ___ 2009.'",
+        "options": [
+          "for",
+          "from",
+          "since",
+          "at"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'I've been a teacher ___ ten years.'",
+        "options": [
+          "since",
+          "from",
+          "for",
+          "during"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'She's had that car ___ last April.'",
+        "options": [
+          "for",
+          "from",
+          "since",
+          "at"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'It's rained every day ___ a week.'",
+        "options": [
+          "since",
+          "from",
+          "for",
+          "during"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'How long ___ English?'",
+        "options": [
+          "do you learn",
+          "are you learning",
+          "have you been learning",
+          "have you learned"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'Your eyes are red. ___?'",
+        "options": [
+          "Did you cry",
+          "Have you been crying",
+          "Do you cry",
+          "Are you crying"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "'He's tired because ___ all morning.'",
+        "options": [
+          "he worked",
+          "he's been working",
+          "he works",
+          "he's working"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "'Why is the bath full of water? Because ___ the dog.'",
+        "options": [
+          "I washed",
+          "I've been washing",
+          "I wash",
+          "I'm washing"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "'How long ___ each other?'",
+        "options": [
+          "have you been knowing",
+          "do you know",
+          "have you known",
+          "did you know"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'___ your homework yet? No, I've been doing it for an hour!'",
+        "options": [
+          "Did you finish",
+          "Do you finish",
+          "Have you finished",
+          "Have you finish"
+        ],
+        "answer": 2
+      }
+    ]
+  },
+  "pronunciation_audio": "media/b2/2026-09-27/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: 20 Health & Body Words",
+    "audio": "media/b2/2026-09-27/podcast.mp3",
+    "cover": null,
+    "transcript": null
+  },
+  "shadowing": {
+    "title": "Shadowing practice",
+    "audio": "media/b2/2026-09-27/shadowing.mp3",
+    "transcript": "media/b2/2026-09-27/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-09-27/shadowing-sentences/001.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/002.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/003.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/004.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/005.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/006.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/007.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/008.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/009.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/010.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/011.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/012.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/013.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/014.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/015.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/016.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/017.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/018.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/019.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/020.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/021.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/022.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/023.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/024.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/025.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/026.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/027.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/028.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/029.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/030.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/031.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/032.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/033.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/034.mp3",
+      "media/b2/2026-09-27/shadowing-sentences/035.mp3"
+    ]
+  }
+}
