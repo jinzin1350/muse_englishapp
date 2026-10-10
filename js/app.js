@@ -770,26 +770,33 @@ function claimQuest(key) {
     paintQuests();
   } catch (e) {}
 }
+function faDigits(x) {
+  return String(x).replace(/\d/g, function (d) { return '۰۱۲۳۴۵۶۷۸۹'[+d]; });
+}
 function questCardHTML(q) {
   const p = Math.min(q.progress(), q.target);
   const done = p >= q.target;
   const claimed = questClaimed(q.key);
   const pct = q.target ? Math.round((p / q.target) * 100) : 0;
-  const progTxt = q.unit ? p + ' / ' + q.target + ' ' + q.unit : (done ? 'انجام شد' : 'انجام نشده');
-  let action;
+  const progTxt = q.unit === 'قدم'
+    ? faDigits(p) + ' / ' + faDigits(q.target) + ' قدم'
+    : (q.unit === 'XP'
+      ? faDigits(p) + ' / ' + faDigits(q.target) + ' XP'
+      : (done ? 'انجام شد' : 'انجام نشده'));
+  let side;
   if (claimed) {
-    action = '<span class="hq-done">✅ دریافت شد</span>';
+    side = '<span class="hq-xp is-claimed" aria-label="دریافت شد">✅</span>';
   } else if (done) {
-    action = '<button class="hq-claim" data-quest-claim="' + q.key + '">دریافت +' + q.xp + ' XP</button>';
+    side = '<button class="hq-xp is-claim" data-quest-claim="' + q.key + '">دریافت</button>';
   } else {
-    action = '<span class="hq-bonus">+' + q.xp + ' XP</span>';
+    side = '<span class="hq-xp">XP +' + q.xp + '</span>';
   }
   return '<div class="hq-row' + (done ? ' is-done' : '') + '">' +
     '<span class="hq-ico" aria-hidden="true">' + q.icon + '</span>' +
     '<span class="hq-main"><span class="hq-title">' + q.title + '</span>' +
     '<span class="hq-bar"><span style="width:' + pct + '%"></span></span>' +
     '<span class="hq-prog">' + progTxt + '</span></span>' +
-    action + '</div>';
+    side + '</div>';
 }
 function paintQuests() {
   try {
@@ -798,9 +805,11 @@ function paintQuests() {
     if (!state.user || state.user.demo) { host.innerHTML = ''; return; }
     const qs = questDefs();
     host.innerHTML = '<section class="hq-card" dir="rtl" lang="fa" aria-label="کوئست‌های امروز">' +
-      '<div class="hq-head"><span class="hq-htitle">🎯 کوئست‌های امروز</span>' +
-      '<span class="hq-hsub">کامل کن، XP بگیر</span></div>' +
-      qs.map(questCardHTML).join('') + '</section>';
+      '<div class="hq-hero"><div class="hq-titles">' +
+      '<div class="hq-title">کوئست‌های امروز</div>' +
+      '<div class="hq-sub">کامل کن، XP بگیر و پیشرفت کن!</div></div>' +
+      '<span class="hq-mega" aria-hidden="true">🎯</span></div>' +
+      '<div class="hq-rows">' + qs.map(questCardHTML).join('') + '</div></section>';
     const btns = host.querySelectorAll('[data-quest-claim]');
     for (let i = 0; i < btns.length; i++) {
       (function (b) {
