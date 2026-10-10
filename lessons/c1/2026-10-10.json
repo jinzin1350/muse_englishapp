@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-10",
+  "theme": "food & cooking",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "umami",
+      "pos": "noun",
+      "meaning": "the savory 'fifth taste' found in mushrooms, aged cheese, and soy sauce",
+      "example": "The aged parmesan added a deep umami flavor to the soup.",
+      "pronunciation": "oo-MAH-mee",
+      "persian": "طعم پنجم؛ طعم خوش‌خوراک و گوشتی غذا",
+      "photo": "media/c1/2026-10-10/photos/umami.jpg",
+      "word_audio": "media/c1/2026-10-10/word-audio/umami.mp3"
+    },
+    {
+      "word": "deglaze",
+      "pos": "verb",
+      "meaning": "to pour liquid into a hot pan to loosen the browned bits stuck to it",
+      "example": "She deglazed the pan with red wine to make a rich sauce.",
+      "pronunciation": "dee-GLAYZ",
+      "persian": "حل کردن مواد چسبیده به تابه با ریختن مایعات",
+      "photo": "media/c1/2026-10-10/photos/deglaze.jpg",
+      "word_audio": "media/c1/2026-10-10/word-audio/deglaze.mp3"
+    },
+    {
+      "word": "succulent",
+      "pos": "adjective",
+      "meaning": "juicy, tender, and full of flavor",
+      "example": "The chef served succulent lamb that melted in our mouths.",
+      "pronunciation": "SUH-kyoo-lunt",
+      "persian": "آبدار و لذیذ",
+      "photo": "media/c1/2026-10-10/photos/succulent.jpg",
+      "word_audio": "media/c1/2026-10-10/word-audio/succulent.mp3"
+    },
+    {
+      "word": "piquant",
+      "pos": "adjective",
+      "meaning": "pleasantly sharp or spicy in taste; lively and stimulating",
+      "example": "The piquant mustard gave the sandwich a pleasant kick.",
+      "pronunciation": "pee-KAHNT",
+      "persian": "تند و دلنشین",
+      "photo": "media/c1/2026-10-10/photos/piquant.jpg",
+      "word_audio": "media/c1/2026-10-10/word-audio/piquant.mp3"
+    },
+    {
+      "word": "insipid",
+      "pos": "adjective",
+      "meaning": "lacking flavor or interest; dull and bland",
+      "example": "The hospital cafeteria served insipid soup with no seasoning.",
+      "pronunciation": "in-SIP-id",
+      "persian": "بی‌مزه و بی‌روح",
+      "photo": "media/c1/2026-10-10/photos/insipid.jpg",
+      "word_audio": "media/c1/2026-10-10/word-audio/insipid.mp3"
+    },
+    {
+      "word": "cloying",
+      "pos": "adjective",
+      "meaning": "excessively sweet or rich, to the point of being sickening",
+      "example": "The dessert was so cloying that I could only eat two bites.",
+      "pronunciation": "KLOY-ing",
+      "persian": "زیادی شیرین و دل‌زده‌کننده",
+      "photo": "media/c1/2026-10-10/photos/cloying.jpg",
+      "word_audio": "media/c1/2026-10-10/word-audio/cloying.mp3"
+    },
+    {
+      "word": "braise",
+      "pos": "verb",
+      "meaning": "to cook food slowly in a small amount of liquid with the lid on",
+      "example": "He braised the beef in red wine for three hours until it was tender.",
+      "pronunciation": "BRAYZ",
+      "persian": "آرام‌پختن در مایعات با درپوش",
+      "photo": "media/c1/2026-10-10/photos/braise.jpg",
+      "word_audio": "media/c1/2026-10-10/word-audio/braise.mp3"
+    },
+    {
+      "word": "emulsify",
+      "pos": "verb",
+      "meaning": "to blend oil and water-based liquids into a smooth, stable mixture",
+      "example": "Whisk the oil in slowly to emulsify the dressing.",
+      "pronunciation": "ee-MUHL-sih-fy",
+      "persian": "ترکیب پایدار روغن و آب (امولسیون کردن)",
+      "photo": "media/c1/2026-10-10/photos/emulsify.jpg",
+      "word_audio": "media/c1/2026-10-10/word-audio/emulsify.mp3"
+    },
+    {
+      "word": "connoisseur",
+      "pos": "noun",
+      "meaning": "an expert judge of taste, especially in food and drink",
+      "example": "As a connoisseur of fine chocolate, she could name the origin of each sample.",
+      "pronunciation": "kon-uh-SUR",
+      "persian": "خبره و صاحب‌ذوق در خوردن و آشامیدن",
+      "photo": "media/c1/2026-10-10/photos/connoisseur.jpg",
+      "word_audio": "media/c1/2026-10-10/word-audio/connoisseur.mp3"
+    },
+    {
+      "word": "mouthfeel",
+      "pos": "noun",
+      "meaning": "the texture and physical sensation of food in the mouth",
+      "example": "The creamy mouthfeel of the avocado made the salad luxurious.",
+      "pronunciation": "MOWTH-feel",
+      "persian": "حس و بافت غذا در دهان",
+      "photo": "media/c1/2026-10-10/photos/mouthfeel.jpg",
+      "word_audio": "media/c1/2026-10-10/word-audio/mouthfeel.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-10/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Art of Flavor",
+    "audio": "media/c1/2026-10-10/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-10/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Chef's Grand Opening",
+    "audio": "media/c1/2026-10-10/shadowing.mp3",
+    "transcript": "media/c1/2026-10-10/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'umami' mean?",
+      "options": [
+        "the savory 'fifth taste' found in mushrooms, aged cheese, and soy sauce",
+        "to blend oil and water-based liquids into a smooth, stable mixture",
+        "an expert judge of taste, especially in food and drink",
+        "juicy, tender, and full of flavor"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'deglaze' mean?",
+      "options": [
+        "juicy, tender, and full of flavor",
+        "to pour liquid into a hot pan to loosen the browned bits stuck to it",
+        "excessively sweet or rich, to the point of being sickening",
+        "to cook food slowly in a small amount of liquid with the lid on"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'succulent' mean?",
+      "options": [
+        "to pour liquid into a hot pan to loosen the browned bits stuck to it",
+        "lacking flavor or interest; dull and bland",
+        "pleasantly sharp or spicy in taste; lively and stimulating",
+        "juicy, tender, and full of flavor"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'piquant' mean?",
+      "options": [
+        "pleasantly sharp or spicy in taste; lively and stimulating",
+        "excessively sweet or rich, to the point of being sickening",
+        "juicy, tender, and full of flavor",
+        "the texture and physical sensation of food in the mouth"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'insipid' mean?",
+      "options": [
+        "an expert judge of taste, especially in food and drink",
+        "the texture and physical sensation of food in the mouth",
+        "the savory 'fifth taste' found in mushrooms, aged cheese, and soy sauce",
+        "lacking flavor or interest; dull and bland"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'cloying' mean?",
+      "options": [
+        "an expert judge of taste, especially in food and drink",
+        "excessively sweet or rich, to the point of being sickening",
+        "the texture and physical sensation of food in the mouth",
+        "to pour liquid into a hot pan to loosen the browned bits stuck to it"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'braise' mean?",
+      "options": [
+        "to pour liquid into a hot pan to loosen the browned bits stuck to it",
+        "an expert judge of taste, especially in food and drink",
+        "to cook food slowly in a small amount of liquid with the lid on",
+        "the savory 'fifth taste' found in mushrooms, aged cheese, and soy sauce"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'emulsify' mean?",
+      "options": [
+        "to cook food slowly in a small amount of liquid with the lid on",
+        "to blend oil and water-based liquids into a smooth, stable mixture",
+        "to pour liquid into a hot pan to loosen the browned bits stuck to it",
+        "an expert judge of taste, especially in food and drink"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'connoisseur' mean?",
+      "options": [
+        "juicy, tender, and full of flavor",
+        "an expert judge of taste, especially in food and drink",
+        "excessively sweet or rich, to the point of being sickening",
+        "pleasantly sharp or spicy in taste; lively and stimulating"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'mouthfeel' mean?",
+      "options": [
+        "excessively sweet or rich, to the point of being sickening",
+        "to blend oil and water-based liquids into a smooth, stable mixture",
+        "pleasantly sharp or spicy in taste; lively and stimulating",
+        "the texture and physical sensation of food in the mouth"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Reported Speech: Sentences and Questions",
+    "explanation": "Reported speech reports what someone said. **He said** and **She told me** are the classic reporting verbs, but advanced speakers use a much wider set.\n\nWhen the reporting verb is in the past, the tense usually **shifts back**. Present simple becomes past simple (I like → **she liked**), present continuous becomes past continuous, **will → would**, and **can → could**. The soup has umami → she said the soup **had** umami.\n\nTime and place words change too: tomorrow → **the next day**, here → **there**, now → **then**. The connoisseur said he was **returning the next day**.\n\n**No backshift** is possible when the report is immediate or the fact is still true. She said the sauce **is** piquant, and we agree right now.\n\nFor statements, use **say** with no person (**She said she was tired**) or **tell** with a person (**She told me she was tired**). **That** is optional after said and told.\n\nRicher reporting verbs carry attitude: **claimed**, **admitted**, **insisted**, **denied**. She **admitted** the dessert was too cloying.\n\nReported yes/no questions add **if** or **whether** and drop question order. She asked him **if he was** married. Word order becomes subject + verb, with no do or did.\n\nReported wh-questions keep the question word but use statement order. She asked me **where I lived**. Notice we never say \"where did I live\".",
+    "examples": [
+      "*She said she had deglazed the pan* with red wine. (statement with backshift)",
+      "*He told me the lamb was succulent* and the sauce piquant. (tell + person)",
+      "*She asked him if the dessert was too cloying.* (yes/no question)",
+      "*He asked me where I had learned to braise* beef. (wh-question, past perfect)",
+      "*They claimed the mouthfeel of the soup was* unforgettable. (reporting verb with attitude)",
+      "*She admitted she could not emulsify* the dressing. (admitted + negative)"
+    ],
+    "practice": [
+      {
+        "q": "Your friend says: \"I am learning to braise beef.\" Report it.",
+        "a": "She said she was learning to braise beef."
+      },
+      {
+        "q": "The chef asks: \"Is the sauce too piquant?\" Report the question.",
+        "a": "The chef asked if the sauce was too piquant."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She said: \"I like this soup.\" -> She said she ___ this soup.",
+        "options": [
+          "liked",
+          "likes",
+          "like",
+          "had liked"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He said: \"I am leaving tomorrow.\" -> He said he ___ the next day.",
+        "options": [
+          "was leaving",
+          "is leaving",
+          "leaves",
+          "will leave"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She said: \"I will call you.\" -> She said she ___ call me.",
+        "options": [
+          "will",
+          "would",
+          "can",
+          "shall"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He said: \"I can cook.\" -> He said he ___ cook.",
+        "options": [
+          "can",
+          "could",
+          "will",
+          "must"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ me she was tired. (choose the verb that needs a person)",
+        "options": [
+          "told",
+          "said",
+          "asked",
+          "denied"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She asked him: \"Are you married?\" -> She asked him ___ married.",
+        "options": [
+          "if was he",
+          "if he was",
+          "that he is",
+          "whether is he"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She asked me: \"Where do you live?\" -> She asked me where ___.",
+        "options": [
+          "did I live",
+          "I lived",
+          "do I live",
+          "I live"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He said: \"I have finished.\" -> He said he ___ finished.",
+        "options": [
+          "has",
+          "had",
+          "have",
+          "did"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which reporting verb suggests the speaker doubts the claim?",
+        "options": [
+          "said",
+          "told",
+          "asked",
+          "claimed"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The chef said: \"You must rest the meat.\" -> The chef said we ___ rest the meat.",
+        "options": [
+          "must",
+          "have to",
+          "had to",
+          "will"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

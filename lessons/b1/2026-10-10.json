@@ -1,0 +1,350 @@
+{
+  "date": "2026-10-10",
+  "theme": "family & relationships",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "wedding",
+      "pos": "noun",
+      "meaning": "a marriage ceremony",
+      "example": "They had a small wedding with only close family and friends.",
+      "pronunciation": "WED-ing",
+      "persian": "مراسم عروسی",
+      "photo": "media/b1/2026-10-10/photos/wedding.jpg",
+      "word_audio": "media/b1/2026-10-10/word-audio/wedding.mp3"
+    },
+    {
+      "word": "engaged",
+      "pos": "adjective",
+      "meaning": "promised to marry someone",
+      "example": "My sister got engaged last month, so we are planning her wedding.",
+      "pronunciation": "in-GAYJD",
+      "persian": "نامزد",
+      "photo": "media/b1/2026-10-10/photos/engaged.jpg",
+      "word_audio": "media/b1/2026-10-10/word-audio/engaged.mp3"
+    },
+    {
+      "word": "relative",
+      "pos": "noun",
+      "meaning": "a family member, like an uncle or cousin",
+      "example": "Every summer we visit our relatives in another city.",
+      "pronunciation": "REL-uh-tiv",
+      "persian": "خویشاوند",
+      "photo": "media/b1/2026-10-10/photos/relative.jpg",
+      "word_audio": "media/b1/2026-10-10/word-audio/relative.mp3"
+    },
+    {
+      "word": "childhood",
+      "pos": "noun",
+      "meaning": "the time in your life when you are a child",
+      "example": "He spent his childhood in a small village near the sea.",
+      "pronunciation": "CHYLD-hood",
+      "persian": "دوران کودکی",
+      "photo": "media/b1/2026-10-10/photos/childhood.jpg",
+      "word_audio": "media/b1/2026-10-10/word-audio/childhood.mp3"
+    },
+    {
+      "word": "raise",
+      "pos": "verb",
+      "meaning": "to care for a child until they grow up",
+      "example": "It is not easy to raise three children while working full-time.",
+      "pronunciation": "RAYZ",
+      "persian": "بزرگ کردن (بچه)",
+      "photo": "media/b1/2026-10-10/photos/raise.jpg",
+      "word_audio": "media/b1/2026-10-10/word-audio/raise.mp3"
+    },
+    {
+      "word": "argue",
+      "pos": "verb",
+      "meaning": "to disagree angrily with someone",
+      "example": "They often argue about money, but they always forgive each other.",
+      "pronunciation": "AR-gyoo",
+      "persian": "جر و بحث کردن",
+      "photo": "media/b1/2026-10-10/photos/argue.jpg",
+      "word_audio": "media/b1/2026-10-10/word-audio/argue.mp3"
+    },
+    {
+      "word": "forgive",
+      "pos": "verb",
+      "meaning": "to stop being angry with someone who hurt you",
+      "example": "I forgave my brother after he said he was sorry.",
+      "pronunciation": "for-GIV",
+      "persian": "بخشیدن",
+      "photo": "media/b1/2026-10-10/photos/forgive.jpg",
+      "word_audio": "media/b1/2026-10-10/word-audio/forgive.mp3"
+    },
+    {
+      "word": "divorce",
+      "pos": "noun",
+      "meaning": "the legal end of a marriage",
+      "example": "After their divorce, they stayed friendly for the children.",
+      "pronunciation": "duh-VORS",
+      "persian": "طلاق",
+      "photo": "media/b1/2026-10-10/photos/divorce.jpg",
+      "word_audio": "media/b1/2026-10-10/word-audio/divorce.mp3"
+    },
+    {
+      "word": "household",
+      "pos": "noun",
+      "meaning": "all the people living together in one home",
+      "example": "In our household, everyone helps with cooking and cleaning.",
+      "pronunciation": "HOWS-hohld",
+      "persian": "اهل خانه",
+      "photo": "media/b1/2026-10-10/photos/household.jpg",
+      "word_audio": "media/b1/2026-10-10/word-audio/household.mp3"
+    },
+    {
+      "word": "babysit",
+      "pos": "verb",
+      "meaning": "to take care of a child while the parents are away",
+      "example": "Can you babysit my daughter on Friday evening?",
+      "pronunciation": "BAY-bee-sit",
+      "persian": "نگهداری از بچه",
+      "photo": "media/b1/2026-10-10/photos/babysit.jpg",
+      "word_audio": "media/b1/2026-10-10/word-audio/babysit.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-10-10/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Family and Home",
+    "audio": "media/b1/2026-10-10/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-10-10/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Big Family Weekend",
+    "audio": "media/b1/2026-10-10/shadowing.mp3",
+    "transcript": "media/b1/2026-10-10/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'wedding' mean?",
+      "options": [
+        "a family member, like an uncle or cousin",
+        "a marriage ceremony",
+        "to disagree angrily with someone",
+        "the time in your life when you are a child"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'engaged' mean?",
+      "options": [
+        "the legal end of a marriage",
+        "to take care of a child while the parents are away",
+        "all the people living together in one home",
+        "promised to marry someone"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'relative' mean?",
+      "options": [
+        "a family member, like an uncle or cousin",
+        "a marriage ceremony",
+        "to stop being angry with someone who hurt you",
+        "to care for a child until they grow up"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'childhood' mean?",
+      "options": [
+        "promised to marry someone",
+        "to disagree angrily with someone",
+        "the time in your life when you are a child",
+        "the legal end of a marriage"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'raise' mean?",
+      "options": [
+        "a marriage ceremony",
+        "to take care of a child while the parents are away",
+        "all the people living together in one home",
+        "to care for a child until they grow up"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'argue' mean?",
+      "options": [
+        "to disagree angrily with someone",
+        "a family member, like an uncle or cousin",
+        "the time in your life when you are a child",
+        "to stop being angry with someone who hurt you"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'forgive' mean?",
+      "options": [
+        "to care for a child until they grow up",
+        "the legal end of a marriage",
+        "to stop being angry with someone who hurt you",
+        "promised to marry someone"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'divorce' mean?",
+      "options": [
+        "to disagree angrily with someone",
+        "the legal end of a marriage",
+        "a marriage ceremony",
+        "all the people living together in one home"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'household' mean?",
+      "options": [
+        "to take care of a child while the parents are away",
+        "a family member, like an uncle or cousin",
+        "the time in your life when you are a child",
+        "all the people living together in one home"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'babysit' mean?",
+      "options": [
+        "to take care of a child while the parents are away",
+        "promised to marry someone",
+        "to care for a child until they grow up",
+        "a marriage ceremony"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "8B: Reported speech - sentences and questions",
+    "explanation": "We use **reported speech** when we tell a **relative** what someone said. We report the idea, not the exact words.\n\nWhen the verb is past, like **said** or **told**, the tense moves back one step. \"I am **engaged**\" becomes **he said he was engaged**.\n\n**will** becomes **would** and **can** becomes **could**. \"I will **babysit**\" becomes **she said she would babysit**.\n\nUse **say** with no person and **tell** with a person. \"I love the **wedding** photos\" becomes: she **said** she loved the wedding photos. She **told me** she loved the wedding photos. The word **that** is optional.\n\nTime and place words change too. \"Tomorrow\" becomes **the next day** and \"here\" becomes **there**. \"We **argue** here\" becomes **they said they argued there**.\n\nFor reported questions, use **asked** and normal word order. Do not use **do** or **did**. \"Where did you **raise** your kids?\" becomes **she asked me where I raised** my kids.\n\nFor yes/no questions, add **if** or **whether**. \"Will you **forgive** me?\" becomes **she asked if I would forgive** her.",
+    "examples": [
+      "*Anna *said* she was engaged.* (say + no person)",
+      "*Tom *told me* he would plan the wedding.* (tell + person)",
+      "*He *said* he *would* babysit on Friday.* (will becomes would)",
+      "*She *asked* me *if* I was married.* (yes/no question)",
+      "*They *asked* where we *lived*.* (question word order, no do/did)",
+      "*My relative *said* they *had* visited us the *day before*.* (time shift)"
+    ],
+    "practice": [
+      {
+        "q": "Your friend says: 'I am tired.' Report what she said.",
+        "a": "She said she was tired."
+      },
+      {
+        "q": "Your brother asks: 'Where do you live?' Report his question.",
+        "a": "He asked me where I lived."
+      },
+      {
+        "q": "Your mom says: 'I will call you tomorrow.' Report what she said.",
+        "a": "She said she would call me the next day."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "\"I like coffee,\" she said. Choose the reported form.",
+        "options": [
+          "She said she like coffee.",
+          "She said she likes coffee.",
+          "She said she liked coffee.",
+          "She said she liking coffee."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "\"I will help you,\" he said. Choose the reported form.",
+        "options": [
+          "He said he helps me.",
+          "He said he would help me.",
+          "He said he will help me.",
+          "He said he can help me."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "She said me she was tired.",
+          "She told she was tired.",
+          "She said she was tired.",
+          "She said to me she was tired."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "\"I can swim,\" he said. Choose the reported form.",
+        "options": [
+          "He said he swims.",
+          "He said he could swim.",
+          "He said he can swim.",
+          "He said he will swim."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "\"Where do you live?\" she asked me. Choose the reported form.",
+        "options": [
+          "She asked me where do I live.",
+          "She asked me where I lived.",
+          "She asked me where I live.",
+          "She asked me where did I live."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "\"Are you married?\" he asked me. Choose the reported form.",
+        "options": [
+          "He asked me that I was married.",
+          "He asked me if I was married.",
+          "He asked me what I was married.",
+          "He asked me to I was married."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "\"I saw him yesterday,\" she said. Choose the reported form.",
+        "options": [
+          "She said she saw him yesterday.",
+          "She said she had seen him yesterday.",
+          "She said she had seen him the day before.",
+          "She said she has seen him the day before."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "\"We are leaving tomorrow,\" they said. Choose the reported form.",
+        "options": [
+          "They said they are leaving tomorrow.",
+          "They said they were leaving the next day.",
+          "They said they were leaving tomorrow.",
+          "They said they leave the next day."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "\"I must go now,\" he said. Choose the reported form.",
+        "options": [
+          "He said he must go then.",
+          "He said he has to go then.",
+          "He said he had to go then.",
+          "He said he have to go then."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "\"Do you like tea?\" she asked me. Choose the reported form.",
+        "options": [
+          "She asked me that I liked tea.",
+          "She asked me if I liked tea.",
+          "She asked me where I liked tea.",
+          "She asked me what I liked tea."
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+1. Sara founded her startup to fight enshittification before it ever touched her users.
+2. She had watched beloved platforms decay into enshittification, and she refused to repeat the pattern.
+3. Resisting enshittification was the whole business model, her investor deck said on page one.
+4. She promised the team that growth would never justify enshittification in their product, and she backed that promise with sandboxing discipline from day one.
+5. Two years on, users still praised the company for escaping the enshittification that ruined its rivals.
+6. Their first product was an agentic assistant that could plan an entire trip by itself.
+7. It had to be genuinely agentic, so the team wrapped it in strict sandboxing from day one.
+8. Every agentic experiment ran inside sandboxing first, far away from customer data.
+9. The sandboxing lab reset itself nightly, no matter what the agentic model had attempted.
+10. Customers soon trusted the agentic helper with bookings, emails, and weekly reports, after it survived another year of sandboxing without incident.
+11. What delighted users most was how multimodal the assistant felt in daily use.
+12. Its multimodal brain could read receipts, listen to voicemails, and even answer zero-shot questions about photos.
+13. The zero-shot skill surprised the founders most, since they had never trained the model for half these tasks, and each zero-shot success still made them grin.
+14. When a zero-shot answer looked shaky, the multimodal checker simply asked for more context.
+15. Competitors looked dated once zero-shot and multimodal became the standard everyone expected.
+16. Behind the scenes, tokenization quietly prepared every message for the model.
+17. They tuned tokenization for three languages, so nothing ever arrived garbled.
+18. A tiny bug in tokenization once split a surname in two, which made the team laugh and then fix it fast.
+19. Without careful tokenization, the model would have stumbled over every rare name it met.
+20. The lead engineer called good tokenization invisible plumbing, and doubled the tests around it.
+21. To reach cheap phones, they applied quantization to their flagship model.
+22. The quantization cut the model's size in half while keeping its answers sharp.
+23. A farmer in Kenya ran the app offline, which was only possible because of quantization.
+24. Through clever quantization, the same agentic assistant that needed a data center now fit in a pocket.
+25. The engineers celebrated when their quantization passed every benchmark they had set.
+26. Sara loved vibe coding, and she sketched new features by describing them aloud at midnight.
+27. One Friday, she went full vibe coding and shipped a working prototype before dinner.
+28. The purists warned that vibe coding produced messy code, so she hired an engineer to review every line.
+29. Used wisely, vibe coding let the smallest team outbuild companies ten times their size, and the designer sketched the multimodal interface by describing it aloud too.
+30. For trust, the team added watermarking to every generated image, and a journalist soon used that watermarking to expose a viral fake.
+31. Their watermarking stayed invisible to the eye but clear to any checker, which is why Sara called honest watermarking a future selling point.
+32. The founders also knew that training on machine-made text invites model collapse.
+33. They had measured early model collapse in a lab run, where the outputs grew blurrier with each round, a textbook preview of full model collapse.
+34. To prevent model collapse, they filtered every dataset, keeping only fresh human writing, and they used watermarking to prove their own outputs stayed traceable.
+35. So the startup thrived: no enshittification, a disciplined agentic helper, Sara still vibe coding new features at midnight, and zero fear of model collapse, because humans stayed at the center.

@@ -1,0 +1,346 @@
+{
+  "date": "2026-10-10",
+  "theme": "technology",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "enshittification",
+      "pos": "noun",
+      "meaning": "the gradual decline of an online platform as it starts prioritizing profit over its users' experience",
+      "example": "Once the network effects kicked in, the platform shifted from delighting users to extracting value, a textbook case of enshittification.",
+      "pronunciation": "en-shit-ih-fih-KAY-shun",
+      "persian": "فرایند تباهی تدریجی یک پلتفرم آنلاین وقتی سود را بر تجربهٔ کاربران ترجیح می‌دهد",
+      "photo": "media/c2/2026-10-10/photos/enshittification.jpg",
+      "word_audio": "media/c2/2026-10-10/word-audio/enshittification.mp3"
+    },
+    {
+      "word": "agentic",
+      "pos": "adjective",
+      "meaning": "(of an AI system) able to act independently, pursuing goals and completing tasks on its own",
+      "example": "The assistant's agentic capabilities allow it to book flights, file expenses, and chase invoices without being told each step.",
+      "pronunciation": "ay-JEN-tik",
+      "persian": "(دربارهٔ سیستم هوش مصنوعی) دارای عاملیت؛ توانایی عمل مستقل و انجام کارها بدون دستور گام‌به‌گام",
+      "photo": "media/c2/2026-10-10/photos/agentic.jpg",
+      "word_audio": "media/c2/2026-10-10/word-audio/agentic.mp3"
+    },
+    {
+      "word": "multimodal",
+      "pos": "adjective",
+      "meaning": "able to understand and produce several kinds of input at once, such as text, images, and audio",
+      "example": "Multimodal models can read a chart, listen to a lecture, and draft a summary in a single pass.",
+      "pronunciation": "mul-tee-MOH-dul",
+      "persian": "چندوجهی؛ توانایی درک و تولید هم‌زمان چند نوع ورودی مثل متن، تصویر و صدا",
+      "photo": "media/c2/2026-10-10/photos/multimodal.jpg",
+      "word_audio": "media/c2/2026-10-10/word-audio/multimodal.mp3"
+    },
+    {
+      "word": "tokenization",
+      "pos": "noun",
+      "meaning": "the process of splitting text into small pieces (tokens) that a language model can process",
+      "example": "Subword tokenization lets models handle rare words gracefully by breaking them into familiar pieces.",
+      "pronunciation": "toh-kuh-nai-ZAY-shun",
+      "persian": "توکن‌سازی؛ فرایند خردکردن متن به واحدهای کوچکی که مدل زبانی می‌تواند پردازش کند",
+      "photo": "media/c2/2026-10-10/photos/tokenization.jpg",
+      "word_audio": "media/c2/2026-10-10/word-audio/tokenization.mp3"
+    },
+    {
+      "word": "watermarking",
+      "pos": "noun",
+      "meaning": "embedding hidden signals in AI-generated content so it can later be identified as machine-made",
+      "example": "Watermarking generated text offers regulators a fragile but useful tool for spotting synthetic content.",
+      "pronunciation": "WAW-tur-mahr-king",
+      "persian": "واترمارک‌گذاری؛ قراردادن نشانه‌های پنهان در محتوای تولیدشده با هوش مصنوعی تا بعداً قابل شناسایی باشد",
+      "photo": "media/c2/2026-10-10/photos/watermarking.jpg",
+      "word_audio": "media/c2/2026-10-10/word-audio/watermarking.mp3"
+    },
+    {
+      "word": "sandboxing",
+      "pos": "noun",
+      "meaning": "running software in an isolated, controlled environment to test it without risk",
+      "example": "The team tests every suspicious attachment by sandboxing it on an isolated virtual machine.",
+      "pronunciation": "SAND-box-ing",
+      "persian": "سندباکسینگ؛ اجرای نرم‌افزار در محیطی ایزوله و کنترل‌شده برای آزمایش بدون ریسک",
+      "photo": "media/c2/2026-10-10/photos/sandboxing.jpg",
+      "word_audio": "media/c2/2026-10-10/word-audio/sandboxing.mp3"
+    },
+    {
+      "word": "quantization",
+      "pos": "noun",
+      "meaning": "compressing an AI model by using simpler numbers, trading a little accuracy for much smaller size and faster speed",
+      "example": "Through quantization, the lab squeezed a flagship model onto a laptop with barely any loss in quality.",
+      "pronunciation": "kwon-tih-ZAY-shun",
+      "persian": "کوانتیزه‌سازی؛ فشرده‌سازی مدل هوش مصنوعی با اعداد ساده‌تر در ازای کمی افت دقت",
+      "photo": "media/c2/2026-10-10/photos/quantization.jpg",
+      "word_audio": "media/c2/2026-10-10/word-audio/quantization.mp3"
+    },
+    {
+      "word": "zero-shot",
+      "pos": "adjective",
+      "meaning": "(of a model) able to handle a task it was never explicitly trained to do",
+      "example": "Remarkably, the model answered zero-shot, solving tasks it had never seen during training.",
+      "pronunciation": "ZEE-roh-shot",
+      "persian": "(دربارهٔ مدل) صفرشات؛ توانایی انجام کاری که مدل هرگز صراحتاً برای آن آموزش ندیده است",
+      "photo": "media/c2/2026-10-10/photos/zero-shot.jpg",
+      "word_audio": "media/c2/2026-10-10/word-audio/zero-shot.mp3"
+    },
+    {
+      "word": "vibe coding",
+      "pos": "noun",
+      "meaning": "writing software by describing what you want in plain language and letting AI generate the code",
+      "example": "Vibe coding has lowered the barrier to software, though purists still insist on understanding every line.",
+      "pronunciation": "VYBE KOH-ding",
+      "persian": "وایب‌کدینگ؛ نوشتن نرم‌افزار با توصیف خواسته به زبان ساده و سپردن تولید کد به هوش مصنوعی",
+      "photo": "media/c2/2026-10-10/photos/vibe-coding.jpg",
+      "word_audio": "media/c2/2026-10-10/word-audio/vibe-coding.mp3"
+    },
+    {
+      "word": "model collapse",
+      "pos": "noun",
+      "meaning": "the degradation of an AI model that is trained mostly on AI-generated data",
+      "example": "If the web fills with synthetic text, future models risk model collapse as they train on their own output.",
+      "pronunciation": "MOD-ul kuh-LAPS",
+      "persian": "فروپاشی مدل؛ افت کیفیت مدل هوش مصنوعی وقتی عمدتاً با دادهٔ تولیدشده توسط هوش مصنوعی آموزش ببیند",
+      "photo": "media/c2/2026-10-10/photos/model-collapse.jpg",
+      "word_audio": "media/c2/2026-10-10/word-audio/model-collapse.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-10/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Age of AI",
+    "audio": "media/c2/2026-10-10/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-10/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Startup That Stayed Human",
+    "audio": "media/c2/2026-10-10/shadowing.mp3",
+    "transcript": "media/c2/2026-10-10/shadowing-transcript.txt"
+  },
+  "quiz": [
+    {
+      "question": "What does 'enshittification' mean?",
+      "options": [
+        "able to understand and produce several kinds of input at once, such as text, images, and audio",
+        "(of an AI system) able to act independently, pursuing goals and completing tasks on its own",
+        "embedding hidden signals in AI-generated content so it can later be identified as machine-made",
+        "the gradual decline of an online platform as it starts prioritizing profit over its users' experience"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'agentic' mean?",
+      "options": [
+        "(of a model) able to handle a task it was never explicitly trained to do",
+        "running software in an isolated, controlled environment to test it without risk",
+        "(of an AI system) able to act independently, pursuing goals and completing tasks on its own",
+        "the process of splitting text into small pieces (tokens) that a language model can process"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'multimodal' mean?",
+      "options": [
+        "compressing an AI model by using simpler numbers, trading a little accuracy for much smaller size and faster speed",
+        "the degradation of an AI model that is trained mostly on AI-generated data",
+        "writing software by describing what you want in plain language and letting AI generate the code",
+        "able to understand and produce several kinds of input at once, such as text, images, and audio"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'tokenization' mean?",
+      "options": [
+        "the gradual decline of an online platform as it starts prioritizing profit over its users' experience",
+        "compressing an AI model by using simpler numbers, trading a little accuracy for much smaller size and faster speed",
+        "the process of splitting text into small pieces (tokens) that a language model can process",
+        "writing software by describing what you want in plain language and letting AI generate the code"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'watermarking' mean?",
+      "options": [
+        "(of an AI system) able to act independently, pursuing goals and completing tasks on its own",
+        "the degradation of an AI model that is trained mostly on AI-generated data",
+        "(of a model) able to handle a task it was never explicitly trained to do",
+        "embedding hidden signals in AI-generated content so it can later be identified as machine-made"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'sandboxing' mean?",
+      "options": [
+        "able to understand and produce several kinds of input at once, such as text, images, and audio",
+        "the gradual decline of an online platform as it starts prioritizing profit over its users' experience",
+        "compressing an AI model by using simpler numbers, trading a little accuracy for much smaller size and faster speed",
+        "running software in an isolated, controlled environment to test it without risk"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'quantization' mean?",
+      "options": [
+        "(of an AI system) able to act independently, pursuing goals and completing tasks on its own",
+        "the process of splitting text into small pieces (tokens) that a language model can process",
+        "compressing an AI model by using simpler numbers, trading a little accuracy for much smaller size and faster speed",
+        "the degradation of an AI model that is trained mostly on AI-generated data"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'zero-shot' mean?",
+      "options": [
+        "embedding hidden signals in AI-generated content so it can later be identified as machine-made",
+        "writing software by describing what you want in plain language and letting AI generate the code",
+        "(of a model) able to handle a task it was never explicitly trained to do",
+        "running software in an isolated, controlled environment to test it without risk"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'vibe coding' mean?",
+      "options": [
+        "writing software by describing what you want in plain language and letting AI generate the code",
+        "the process of splitting text into small pieces (tokens) that a language model can process",
+        "able to understand and produce several kinds of input at once, such as text, images, and audio",
+        "the gradual decline of an online platform as it starts prioritizing profit over its users' experience"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'model collapse' mean?",
+      "options": [
+        "running software in an isolated, controlled environment to test it without risk",
+        "compressing an AI model by using simpler numbers, trading a little accuracy for much smaller size and faster speed",
+        "the degradation of an AI model that is trained mostly on AI-generated data",
+        "(of an AI system) able to act independently, pursuing goals and completing tasks on its own"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "8B: Reported speech — statements and questions",
+    "explanation": "Reported speech tells us what someone said, without quoting their exact words. When the reporting verb (**said**, **told**, **asked**) is in the past, tenses usually shift back — this is **backshift**.\n\nThe shifts are systematic: present → past, present perfect → past perfect, **will** → **would**, **can** → **could**, **may** → **might**, **must** → **had to**.\n\nYou do NOT always backshift. Keep the original tense for general truths or facts still true now, and when you report something immediately after hearing it.\n\n**Say** takes no person: she **said** she was tired. **Tell** takes a person: she **told me** she was tired. Mixing them up is the classic error.\n\nThe word **that** is optional: she said (that) she would call. Time and place words change too: tomorrow → **the next day**, here → **there**, this → **that**.\n\nReported questions keep the same tense shifts. Yes/no questions add **if** or **whether**: she asked him **if** he was married.\n\nQuestion word order drops the inversion: subject + verb, with no **do/did**. She asked me **where I lived** — never where did I live.\n\nReported commands and requests use **told/asked + (not) to**. She **told** them **to** sandbox every build. He **asked** me **not to** share the data.\n\nFormal reporting verbs carry nuance: **alleged** (claimed without proof), **conceded** (admitted reluctantly), **purported** (claimed, often doubted). Choose them for precision, not decoration.\n\nIn formal writing, report announcements precisely: the lab **conceded** that **quantization** had cost some accuracy, while **denying** any risk of **model collapse**.",
+    "examples": [
+      "*The CEO *told* investors that growth would never justify enshittification.* (tell + person + that)",
+      "*Sara *said* she *was* still *vibe coding* new features at midnight.* (present → past)",
+      "*He *asked* her *if* she *had tested* the build in the sandbox.* (yes/no question + if)",
+      "*She *asked* me *where* I *had stored* the training data.* (question word, no inversion)",
+      "*The manager *told* the team *to sandbox* every release before shipping.* (reported command)",
+      "*The article *alleged* that the watermarking system *had been* bypassed.* (formal verb + past perfect)"
+    ],
+    "practice": [
+      {
+        "q": "She said, \"I will test the model tomorrow.\" What did she say?",
+        "a": "She said she would test the model the next day."
+      },
+      {
+        "q": "He asked, \"Where did you train the model?\" Report his question.",
+        "a": "He asked where I had trained the model."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "In \"She said she was tired\", which tense shift happened?",
+        "options": [
+          "present perfect → past perfect",
+          "past → present",
+          "present → past",
+          "no shift was needed"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "She told me she was tired.",
+          "She said me she was tired.",
+          "She asked she was tired.",
+          "She told she was tired."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Report: \"I can finish it today.\" — She said she ___ finish it that day.",
+        "options": [
+          "could",
+          "can",
+          "must",
+          "will"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which reported question is correct?",
+        "options": [
+          "She asked where did I lived.",
+          "She asked me where I live.",
+          "She asked me where did I live.",
+          "She asked me where I lived."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Report the yes/no question \"Are you married?\" — She asked him ___.",
+        "options": [
+          "was he married",
+          "is he married",
+          "if he was married",
+          "that he was married"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "When should you NOT backshift?",
+        "options": [
+          "when reporting questions",
+          "never — always backshift",
+          "when reporting a general truth",
+          "when the verb is \"said\""
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Report the command \"Don't share the data.\" — She asked me ___.",
+        "options": [
+          "not to share the data",
+          "that not share the data",
+          "don't share the data",
+          "to not share the data"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "\"Must\" in reported speech usually becomes:",
+        "options": [
+          "will have to",
+          "must",
+          "have to",
+          "had to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which formal reporting verb means \"claimed without proof\"?",
+        "options": [
+          "conceded",
+          "admitted",
+          "alleged",
+          "promised"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In reported speech, \"tomorrow\" usually becomes:",
+        "options": [
+          "the next day",
+          "today",
+          "yesterday",
+          "tomorrow"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}
