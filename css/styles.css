@@ -2805,6 +2805,9 @@ button.hq-xp.is-claim {
 }
 button.hq-xp.is-claim:active { transform: scale(.96); }
 .hq-xp.is-claimed { background: #E9F9EF; border-color: #BDE8C9; box-shadow: none; padding: 10px 14px; }
+.hq-body { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+.hq-go { flex: 0 0 auto; font-size: 22px; font-weight: 800; color: #102A52; opacity: .5; }
+.hq-body:active .hq-go { opacity: 1; }
 
 /* ============ My Progress view (2026-10-09) ============ */
 .pg-wrap { max-width: 640px; margin: 0 auto; padding: 4px 0 24px; }
@@ -2829,16 +2832,25 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .pg-note { text-align: center; font-size: 14px; margin-top: 12px; }
 .pg-note b { color: #F9610D; }
 
-/* Home entry banner -> #/progress */
+/* Home entry banner -> #/progress (v2 illustrated, 2026-10-09) */
 .pg-link {
-  display: flex; align-items: center; gap: 12px;
-  background: linear-gradient(135deg, #FFF8EC, #FFF1DC);
-  border: 1px solid #F5E3C2; border-radius: 16px;
-  padding: 12px 14px; margin: 10px 0 4px; text-decoration: none;
-  box-shadow: 0 2px 10px rgba(249,97,13,.08);
+  position: relative; display: block; overflow: hidden;
+  border: 1px solid #F2E5D2; border-radius: 24px;
+  margin: 10px 0 4px; text-decoration: none;
+  box-shadow: 0 8px 24px rgba(178,132,52,.10);
+  background: #FFF9F1; min-height: 128px;
 }
-.pg-link-ico { font-size: 26px; }
-.pg-link-txt { flex: 1 1 auto; display: flex; flex-direction: column; gap: 2px; }
-.pg-link-txt b { font-size: 15px; color: #17212B; }
-.pg-link-txt span { font-size: 12.5px; color: #8A7B63; }
-.pg-link-go { font-size: 22px; color: #C47B12; font-weight: 800; }
+.pg-link-bg {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: left center;
+}
+.pg-link-scrim {
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to right, rgba(255,249,241,0) 38%, rgba(255,249,241,.88) 66%, #FFF9F1 88%);
+}
+.pg-link-txt {
+  position: absolute; top: 50%; right: 18px; transform: translateY(-50%);
+  display: flex; flex-direction: column; gap: 4px; max-width: 44%;
+}
+.pg-link-txt b { font-size: clamp(20px, 5.6vw, 26px); font-weight: 800; color: #102A52; }
+.pg-link-txt span { font-size: clamp(11px, 3.2vw, 13px); color: #8D7B6E; line-height: 1.8; }

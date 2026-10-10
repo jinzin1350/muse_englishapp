@@ -733,21 +733,77 @@ function localXPDay() {
     return parseInt(localStorage.getItem(k) || '0', 10) || 0;
   } catch (e) { return 0; }
 }
+function ptsDoneToday(action) {
+  try { return !!ptsGet('done')[action + '|' + todayStr()]; }
+  catch (e) { return false; }
+}
+function lessonLink(tab) {
+  let d = todayStr();
+  try { if (state.lessons && state.lessons[0] && state.lessons[0].date) d = state.lessons[0].date; } catch (e) {}
+  return '#/lesson/' + d + (tab ? '/' + tab : '');
+}
+function markChallengeVisit() {
+  try {
+    if (!state.user || state.user.demo || !state.user.email) return;
+    localStorage.setItem('ela_ch_' + state.user.email + '_' + todayStr(), '1');
+  } catch (e) {}
+}
+function challengeVisited() {
+  try {
+    if (!state.user || !state.user.email) return false;
+    return !!localStorage.getItem('ela_ch_' + state.user.email + '_' + todayStr());
+  } catch (e) { return false; }
+}
+function pastLessonDone() {
+  try {
+    const done = ptsGet('done'), t = todayStr(), pre = 'lesson_open|';
+    for (const k in done) {
+      if (k.indexOf(pre) === 0 && k.slice(pre.length) !== t) return true;
+    }
+    return false;
+  } catch (e) { return false; }
+}
+/* Quest pool (2026-10-09): every quest is clickable -> deep-links to the exact
+   activity. 3 shown/day: the lesson quest is the fixed anchor, the other two
+   rotate deterministically by date (same 3 for everyone each day). */
 function questDefs() {
-  return [
+  const d = todayStr();
+  const done = function (action) { return ptsDoneToday(action) ? 1 : 0; };
+  const pool = [
     { key: 'lesson', icon: '📝', xp: 30, target: 5, title: 'درس امروز رو کامل کن',
-      progress: function () { try { return dayDoneCount(todayStr()); } catch (e) { return 0; } },
-      unit: 'قدم' },
+      progress: function () { try { return dayDoneCount(d); } catch (e) { return 0; } },
+      unit: 'قدم', link: lessonLink() },
     { key: 'xp100', icon: '⚡', xp: 20, target: 100, title: '۱۰۰ XP کسب کن',
       progress: function () { return localXPDay(); },
-      unit: 'XP' },
+      unit: 'XP', link: lessonLink() },
     { key: 'quiz', icon: '🎯', xp: 20, target: 1, title: 'کوییز کلمات رو کامل کن',
-      progress: function () {
-        try { return ptsGet('done')['word_quiz|' + todayStr()] ? 1 : 0; }
-        catch (e) { return 0; }
-      },
-      unit: '' }
+      progress: function () { return done('word_quiz'); },
+      unit: '', link: lessonLink('quiz') },
+    { key: 'podcast', icon: '🎧', xp: 20, target: 1, title: 'پادکست رو کامل گوش کن',
+      progress: function () { return done('podcast_complete'); },
+      unit: '', link: lessonLink('podcast') },
+    { key: 'shadowing', icon: '🎤', xp: 20, target: 1, title: 'شدویینگ رو کامل کن',
+      progress: function () { return done('shadowing_complete'); },
+      unit: '', link: lessonLink('shadowing') },
+    { key: 'grammar', icon: '📖', xp: 20, target: 1, title: '۱ کوییز گرامر بده',
+      progress: function () { return done('grammar_quiz'); },
+      unit: '', link: lessonLink('grammar') },
+    { key: 'review', icon: '🔁', xp: 15, target: 1, title: 'برو به سوالای review جواب بده',
+      progress: function () { return done('deck_review'); },
+      unit: '', link: '#/review' },
+    { key: 'challenge', icon: '🏆', xp: 15, target: 1, title: 'سری به چالش بزن',
+      progress: function () { return challengeVisited() ? 1 : 0; },
+      unit: '', link: '#/challenge' },
+    { key: 'pastlesson', icon: '📚', xp: 20, target: 1, title: '۱ درس قدیمی رو دوره کن',
+      progress: function () { return pastLessonDone() ? 1 : 0; },
+      unit: '', link: '#/lessons' }
   ];
+  const anchor = pool[0];
+  const rest = pool.slice(1);
+  const dayNum = Math.floor(Date.parse(d + 'T12:00:00') / 86400000);
+  const a = dayNum % rest.length;
+  const b = (dayNum + 3) % rest.length;
+  return [anchor, rest[a], rest[b]];
 }
 function questClaimKey(key) {
   try { return 'ela_quest_' + (state.user && state.user.email ? state.user.email : 'anon') + '_' + todayStr() + '_' + key; }
@@ -792,10 +848,12 @@ function questCardHTML(q) {
     side = '<span class="hq-xp">XP +' + q.xp + '</span>';
   }
   return '<div class="hq-row' + (done ? ' is-done' : '') + '">' +
+    '<a class="hq-body" href="' + (q.link || '#/home') + '">' +
     '<span class="hq-ico" aria-hidden="true">' + q.icon + '</span>' +
     '<span class="hq-main"><span class="hq-title">' + q.title + '</span>' +
     '<span class="hq-bar"><span style="width:' + pct + '%"></span></span>' +
     '<span class="hq-prog">' + progTxt + '</span></span>' +
+    '<span class="hq-go" aria-hidden="true">‹</span></a>' +
     side + '</div>';
 }
 function paintQuests() {
@@ -1028,6 +1086,7 @@ function howToEarnHTML() {
 }
 
 function renderChallenge(v) {
+  markChallengeVisit();
   const me = state.user;
   let html = '<div class="ch-wrap"><div class="lb-title"><h1>Leaderboard</h1>' +
     '<p>Earn points for everything you do. Climb the board.</p></div>' +
@@ -1795,7 +1854,7 @@ function parseHash() {
   const h = window.location.hash || '#/';
   const raw = h.replace(/^#/, '');
   const parts = raw.replace(/^\//, '').split('/');
-  return { name: parts[0] || '', arg: decodeURIComponent(parts[1] || ''), raw: raw };
+  return { name: parts[0] || '', arg: decodeURIComponent(parts[1] || ''), arg2: decodeURIComponent(parts[2] || ''), raw: raw };
 }
 
 /* Guard: never discard an in-progress quiz silently. */
@@ -1873,6 +1932,10 @@ function onRoute() {
       teacherOfferNeeded().then(function (needed) {
         if (!needed && parseHash().name === 'choose-teacher') go('home');
       }, function () {});
+    }
+    /* Deep link into a lesson tab, e.g. #/lesson/2026-10-09/quiz (quest links). */
+    if (view === 'lesson' && r.arg2 && ['words', 'quiz', 'podcast', 'shadowing', 'grammar'].indexOf(r.arg2) !== -1) {
+      state.lessonTab = r.arg2;
     }
   }
   show(view, r.arg);
@@ -5799,9 +5862,9 @@ function paintHome(v, mistakes, attempts) {
   html += '<div class="section-title"><h2>Progress</h2>' +
     (attempts.length ? '<a class="btn btn-ghost btn-sm" href="#/scores">View all</a>' : '') + '</div>';
   html += '<a class="pg-link" href="#/progress" dir="rtl" lang="fa" aria-label="مشاهده پیشرفت من">' +
-    '<span class="pg-link-ico" aria-hidden="true">📈</span>' +
-    '<span class="pg-link-txt"><b>پیشرفت من</b><span>آمار کامل تمرینت: XP، استریک، روزهای فعال</span></span>' +
-    '<span class="pg-link-go" aria-hidden="true">‹</span></a>';
+    '<img class="pg-link-bg" src="/media/home/progress-banner-art.webp" alt="" loading="lazy">' +
+    '<span class="pg-link-scrim" aria-hidden="true"></span>' +
+    '<span class="pg-link-txt"><b>پیشرفت من</b><span>آمار کامل تمرین، XP، استریک، و روندهای فعال</span></span></a>';
   if (!attempts.length) {
     html += '<div class="card plain"><p class="muted" style="margin:0">No activity yet — finish a quiz and your latest result will show up here.</p></div>';
   } else {
