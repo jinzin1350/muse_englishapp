@@ -1145,24 +1145,20 @@ function mulberry32(a) {
      top 10: grinders   ~100 pts/day (~16.7 per 4h block)
      next 35: regulars   ~70 pts/day (~11.7 per 4h block)
      rest:    casuals     ~40 pts/day (~6.7 per 4h block)
-   Weekly board resets every Monday (fresh race); all-time accumulates from a
-   fixed epoch. A small deterministic jitter per block keeps it from looking
+   Weekly board resets every Monday (fresh race). All-time keeps the previous
+   stable shuffle. A small deterministic jitter per block keeps it from looking
    robotic. Real users must stay active to hold the top — idling 2-3 days
    lets the grinders pass them. */
 function fakeBoard(weekly) {
+  if (!weekly) return fakeBoardLegacy();
   const now = Date.now();
   const BLOCK = 4 * 3600 * 1000;
-  let elapsed;
-  if (weekly) {
-    const d = new Date();
-    const dow = (d.getDay() + 6) % 7;
-    d.setDate(d.getDate() - dow);
-    d.setHours(0, 0, 0, 0);
-    elapsed = Math.max(0, Math.floor((now - d.getTime()) / BLOCK));
-  } else {
-    elapsed = Math.max(0, Math.floor((now - Date.UTC(2026, 0, 1)) / BLOCK));
-  }
   const curBlock = Math.floor(now / BLOCK);
+  const d = new Date();
+  const dow = (d.getDay() + 6) % 7;
+  d.setDate(d.getDate() - dow);
+  d.setHours(0, 0, 0, 0);
+  const elapsed = Math.max(0, Math.floor((now - d.getTime()) / BLOCK));
   const rows = [];
   for (let i = 0; i < FAKE_NAMES.length; i++) {
     const tier = i < 10 ? 0 : i < 45 ? 1 : 2;
@@ -1172,15 +1168,35 @@ function fakeBoard(weekly) {
     const rateVar = 0.9 + mulberry32(i * 104729 + 7)() * 0.2;
     /* base: higher index = lower start (keeps the pyramid shape) */
     const decay = Math.pow(1 - i / FAKE_NAMES.length, 1.4);
-    const base = weekly ? 20 + 120 * decay : 500 + 3000 * decay;
+    const base = 20 + 120 * decay;
     /* jitter: ±15% of one block, re-rolled every 4h, same for all viewers */
-    const jrnd = mulberry32(i * 7919 + curBlock * 131 + (weekly ? 17 : 913));
+    const jrnd = mulberry32(i * 7919 + curBlock * 131 + 17);
     const jitter = (jrnd() - 0.5) * 0.3 * perBlock;
     const pts = base + perBlock * rateVar * elapsed + jitter;
     rows.push({
       user_id: 'fake-' + i,
       display_name: FAKE_NAMES[i],
       points: Math.max(0, Math.round(pts))
+    });
+  }
+  return rows;
+}
+
+/* All-time fake board: previous stable behavior (5h shuffle, 20–190 range). */
+function fakeBoardLegacy() {
+  const bucket = Math.floor(Date.now() / (5 * 3600 * 1000)); // new shuffle every 5h
+  const top = 190, bottom = 20;
+  const rows = [];
+  for (let i = 0; i < FAKE_NAMES.length; i++) {
+    const rnd = mulberry32(i * 7919 + bucket * 131 + 913);
+    const decay = Math.pow(1 - i / FAKE_NAMES.length, 1.4);
+    const base = bottom + (top - bottom) * decay;
+    const move = (rnd() - 0.5) * 0.10 + Math.sin(bucket * 0.9 + i * 1.7) * 0.04;
+    const pts = Math.round(base * (1 + move));
+    rows.push({
+      user_id: 'fake-' + i,
+      display_name: FAKE_NAMES[i],
+      points: Math.min(top, Math.max(bottom, pts))
     });
   }
   return rows;
@@ -9127,7 +9143,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610101823';
+var APP_VERSION = '202610101829';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
