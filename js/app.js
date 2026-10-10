@@ -1940,7 +1940,7 @@ function show(view, arg) {
   else if (view === 'lesson') renderLesson(v, arg);
   else if (view === 'lessons') renderLessons(v);
   else if (view === 'scores') renderScores(v);
-  else if (view === 'progress') renderProgress(v);
+  else if (view === 'progress') renderScores(v); /* merged into Scores 2026-10-09 */
   else if (view === 'review') renderMistakes(v);
   else if (view === 'profile') renderProfile(v);
   else if (view === 'challenge') renderChallenge(v);
@@ -5623,7 +5623,7 @@ function streakBannerHTML(st, dates) {
   const n = st.current_streak || 0;
   const numline = '<b>' + n + '</b>&nbsp;' + (n === 1 ? 'day!' : 'days!');
   const sub = n > 0 ? 'Keep going! Learn a little every day 🧡' : 'Finish a lesson to ignite it 🔥';
-  return '<a class="stk-link" href="#/progress" dir="ltr" lang="en" aria-label="View your progress">' +
+  return '<a class="stk-link" href="#/scores" dir="ltr" lang="en" aria-label="View your progress">' +
     '<img class="stk-bg" src="/media/home/streak-banner-art.webp" alt="">' +
     '<span class="stk-scrim" aria-hidden="true"></span>' +
     '<span class="stk-txt">' +
@@ -5833,7 +5833,7 @@ function paintHome(v, mistakes, attempts) {
   // 3 — Progress: most recent meaningful activity, compact empty state
   html += '<div class="section-title"><h2>Progress</h2>' +
     (attempts.length ? '<a class="btn btn-ghost btn-sm" href="#/scores">View all</a>' : '') + '</div>';
-  html += '<a class="pg-link" href="#/progress" dir="rtl" lang="fa" aria-label="مشاهده پیشرفت من">' +
+  html += '<a class="pg-link" href="#/scores" dir="rtl" lang="fa" aria-label="مشاهده پیشرفت من">' +
     '<img class="pg-link-bg" src="/media/home/progress-banner-art.webp" alt="" loading="lazy">' +
     '<span class="pg-link-scrim" aria-hidden="true"></span>' +
     '<span class="pg-link-txt"><b>پیشرفت من</b><span>آمار کامل تمرین، XP، استریک، و روندهای فعال</span></span></a>';
@@ -7878,17 +7878,27 @@ function avgOfAttempts(arr) {
 }
 
 function renderScores(v) {
-  paintScores(v, lsGet('scores'));
+  paintScores(v, lsGet('scores'), null);
   if (cloudReady()) {
-    getAttempts().then(function (arr) {
-      if (state.view === 'scores' && !state.quiz) paintScores(v, arr);
+    const progP = sb.rpc('my_progress').then(function (r) {
+      return (r.error || !r.data) ? null : r.data;
+    }, function () { return null; });
+    const frP = sb.from('profiles').select('streak_freezes').eq('user_id', state.user.id).maybeSingle().then(function (fr) {
+      return (!fr.error && fr.data && fr.data.streak_freezes != null) ? fr.data.streak_freezes : null;
+    }, function () { return null; });
+    Promise.all([getAttempts(), progP, frP]).then(function (res) {
+      if ((state.view !== 'scores' && state.view !== 'progress') || state.quiz) return;
+      const prog = res[1];
+      if (prog && res[2] != null) prog.streak_freezes = res[2];
+      paintScores(v, res[0], prog);
     }).catch(function () { /* keep the local paint */ });
   }
 }
 
-function paintScores(v, arr) {
+function paintScores(v, arr, prog) {
   const avg = avgOfAttempts(arr);
   let html = '<h1 class="tut-anchor">Progress</h1>';
+  html += progStatsHTML(prog);
   html += rewardsPlaceholderHTML();
   if (avg === null) {
     html += '<div class="empty">No quiz attempts yet.<br>Finish a quiz and your scores will appear here.</div>';
@@ -7904,41 +7914,36 @@ function paintScores(v, arr) {
   loadScoreAnalytics();
 }
 
-/* ---------------- My Progress dashboard (2026-10-09): engagement view.
-   One my_progress() RPC -> stat cards + 7-day XP chart. Persian, RTL. -------- */
-var PG_WDAYS = ['یکشنبه', 'دوشنبه', 'سه‌شنبه', 'چهارشنبه', 'پنجشنبه', 'جمعه', 'شنبه'];
+/* ---------------- Progress stats (merged 2026-10-09): the old #/progress
+   dashboard's stat cards + 7-day XP chart, now in English on the Scores page. - */
+var PG_WDAYS_EN = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 function pgWeekdayLabel(dayStr) {
   try {
     const d = new Date(dayStr + 'T12:00:00');
-    return PG_WDAYS[d.getDay()] || '';
+    return PG_WDAYS_EN[d.getDay()] || '';
   } catch (e) { return ''; }
 }
 function pgStatCard(ico, num, label) {
   return '<div class="pg-stat"><span class="pg-ico" aria-hidden="true">' + ico + '</span>' +
     '<b class="pg-num">' + num + '</b><span class="pg-lbl">' + label + '</span></div>';
 }
-function paintProgress(v, d) {
-  let html = '<div class="pg-wrap" dir="rtl" lang="fa"><h1 class="tut-anchor">📈 پیشرفت من</h1>';
-  if (!d || !d.ok) {
-    html += '<div class="empty">هنوز آماری ثبت نشده — یه درس رو کامل کن تا اینجا پر بشه! 🚀</div></div>';
-    v.innerHTML = html;
-    return;
-  }
+function progStatsHTML(d) {
+  if (!d || !d.ok) return '';
   const totalXP = Number(d.total_xp) || 0;
-  html += '<div class="pg-grid">' +
-    pgStatCard('⚡', totalXP, 'مجموع XP') +
-    pgStatCard('🔥', Number(d.current_streak) || 0, 'استریک فعلی') +
-    pgStatCard('🏆', Number(d.longest_streak) || 0, 'بهترین استریک') +
-    pgStatCard('📅', Number(d.active_days) || 0, 'روزهای فعال') +
-    pgStatCard('⏱', Number(d.total_minutes) || 0, 'دقیقه تمرین') +
-    pgStatCard('📚', Number(d.saved_words) || 0, 'کلمه ذخیره‌شده') +
-    (d.streak_freezes != null ? pgStatCard('🧊', Number(d.streak_freezes) || 0, 'فریز استریک') : '') +
+  let html = '<div class="pg-grid">' +
+    pgStatCard('⚡', totalXP, 'Total XP') +
+    pgStatCard('🔥', Number(d.current_streak) || 0, 'Current streak') +
+    pgStatCard('🏆', Number(d.longest_streak) || 0, 'Best streak') +
+    pgStatCard('📅', Number(d.active_days) || 0, 'Active days') +
+    pgStatCard('⏱️', Number(d.total_minutes) || 0, 'Training minutes') +
+    pgStatCard('📚', Number(d.saved_words) || 0, 'Saved words') +
+    (d.streak_freezes != null ? pgStatCard('🧊', Number(d.streak_freezes) || 0, 'Streak freezes') : '') +
     '</div>';
   const week = Array.isArray(d.week) ? d.week : [];
   const maxXP = Math.max.apply(null, week.map(function (w) { return Number(w.xp) || 0; }).concat([1]));
-  html += '<div class="section-title"><h2>فعالیت ۷ روز اخیر</h2></div>';
+  html += '<div class="section-title"><h2>📊 Last 7 days</h2></div>';
   if (!week.length || maxXP <= 1) {
-    html += '<div class="card plain"><p class="muted" style="margin:0">این هفته هنوز فعالیتی ثبت نشده — امروز شروع کن! 💪</p></div>';
+    html += '<div class="card plain"><p class="muted" style="margin:0">No activity this week yet — start today! 💪</p></div>';
   } else {
     html += '<div class="card plain"><div class="pg-chart">' + week.map(function (w) {
       const xp = Number(w.xp) || 0;
@@ -7950,32 +7955,9 @@ function paintProgress(v, d) {
     }).join('') + '</div></div>';
   }
   if (totalXP > 0 && Number(d.active_days) > 0) {
-    html += '<div class="card plain pg-note">میانگین <b>' + Math.round(totalXP / Number(d.active_days)) + ' XP</b> در هر روز فعال — همین‌طور ادامه بده! 🔥</div>';
+    html += '<div class="card plain pg-note">Average <b>' + Math.round(totalXP / Number(d.active_days)) + ' XP</b> per active day — keep it up! 🔥</div>';
   }
-  html += '</div>';
-  v.innerHTML = html;
-}
-function renderProgress(v) {
-  v.innerHTML = '<div class="pg-wrap" dir="rtl" lang="fa"><h1 class="tut-anchor">📈 پیشرفت من</h1><div class="empty">در حال بارگذاری…</div></div>';
-  if (!cloudReady()) { paintProgress(v, null); return; }
-  sb.rpc('my_progress').then(function (r) {
-    if (state.view !== 'progress') return;
-    if (r.error || !r.data) paintProgress(v, null);
-    else paintProgressWithFreezes(v, r.data);
-  }, function () {
-    if (state.view === 'progress') paintProgress(v, null);
-  });
-}
-/* Attach the user's streak-freeze balance (own profile row is RLS-readable)
-   so it stays visible after the home streak banner was redesigned. */
-function paintProgressWithFreezes(v, d) {
-  try {
-    sb.from('profiles').select('streak_freezes').eq('user_id', state.user.id).maybeSingle().then(function (fr) {
-      if (state.view !== 'progress') return;
-      if (!fr.error && fr.data && fr.data.streak_freezes != null) d.streak_freezes = fr.data.streak_freezes;
-      paintProgress(v, d);
-    }, function () { if (state.view === 'progress') paintProgress(v, d); });
-  } catch (e) { paintProgress(v, d); }
+  return html;
 }
 async function loadScoreAnalytics() {
   const host = document.getElementById('score-analytics');
