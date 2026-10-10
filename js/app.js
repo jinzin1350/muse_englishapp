@@ -5648,14 +5648,13 @@ function battleBannerHTML() {
 function streakBannerHTML(st, dates) {
   st = st || {};
   const n = st.current_streak || 0;
-  const kicker = n > 0 ? 'Your streak is' : 'Start your streak';
-  const numline = n > 0 ? '<b>' + n + '</b>&nbsp;' + (n === 1 ? 'day!' : 'days!') : 'today!';
+  const numline = '<b>' + n + '</b>&nbsp;' + (n === 1 ? 'day!' : 'days!');
   const sub = n > 0 ? 'Keep going! Learn a little every day 🧡' : 'Finish a lesson to ignite it 🔥';
   return '<a class="stk-link" href="#/progress" dir="ltr" lang="en" aria-label="View your progress">' +
     '<img class="stk-bg" src="/media/home/streak-banner-art.webp" alt="">' +
     '<span class="stk-scrim" aria-hidden="true"></span>' +
     '<span class="stk-txt">' +
-      '<span class="stk-kicker">' + kicker + '</span>' +
+      '<span class="stk-kicker">Your streak is</span>' +
       '<span class="stk-num">' + numline + '</span>' +
       '<span class="stk-sub">' + sub + '</span>' +
     '</span>' +
@@ -7453,9 +7452,16 @@ async function getStreakState() {
         .select('current_streak,longest_streak,streak_freezes')
         .eq('id', state.user.id).single();
       if (!r.error && r.data) {
-        return { current_streak: r.data.current_streak || 0,
-                 longest_streak: r.data.longest_streak || 0,
-                 freezes: r.data.streak_freezes || 0, source: 'cloud' };
+        const cs = { current_streak: r.data.current_streak || 0,
+                     longest_streak: r.data.longest_streak || 0,
+                     freezes: r.data.streak_freezes || 0, source: 'cloud' };
+        /* Persist the cloud truth locally so the next first paint isn't stale. */
+        try {
+          const prev = getStreakLocal();
+          setStreakLocal({ current_streak: cs.current_streak, longest_streak: cs.longest_streak,
+                           streak_freezes: cs.freezes, last_streak_date: prev.last_streak_date || null });
+        } catch (e) {}
+        return cs;
       }
     } catch (e) { /* pre-migration → local fallback */ }
   }
