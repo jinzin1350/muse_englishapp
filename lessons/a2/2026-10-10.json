@@ -1,1 +1,277 @@
-{"cefr":"A2","date":"2026-10-10","grammar":{"audio":"media/a2/2026-10-10/grammar-en.mp3","examples":["*She *said* her hand hurt.* (direct: \"My hand hurts.\")","*He *told me* his foot hurt.* (told + a person)","*She *said* her eyes were tired.* (direct: \"My eyes are tired.\")","*He *said that* his nose was cold.* (that is optional)","*She *asked* me if my mouth hurt.* (yes/no question)","*He *asked* her where she lived.* (no do or did)"],"explanation":"When we tell other people what someone said, we use reported speech.\n\nUse **told + a person**: \"She **told me** her hand hurt.\" Use **said + no person**: \"She **said** her hand hurt.\"\n\nThe tense usually goes one step back: present → past. \"I am tired\" → \"She **said she was** tired.\"\n\nThe word **that** is optional. \"He said **that his foot** hurt\" = \"He said his foot hurt.\"\n\nFor yes or no questions, add **if**. \"Are you tired?\" → \"He asked me **if I was** tired.\"\n\nFor other questions, keep subject + verb order, with no do or did. \"Where do you live?\" → \"She asked me **where I lived**.\"","practice":[{"a":"She said she was tired.","q":"Change to reported speech: She said, \"I am tired.\""},{"a":"told — use told + a person.","q":"Say or tell? \"He ___ me he was sick.\""},{"a":"He asked me where I lived.","q":"Change to a reported question: \"Where do you live?\""}],"quiz":[{"answer":0,"options":["was","is","are","were"],"question":"\"I am hungry,\" she said. → She said she ___ hungry."},{"answer":1,"options":["hurts","hurt","hurted","hurting"],"question":"\"My foot hurts,\" he said. → He said his foot ___."},{"answer":1,"options":["said","told","say","tells"],"question":"She ___ me she was tired."},{"answer":1,"options":["told","said","tell","says"],"question":"He ___ he was late."},{"answer":0,"options":["if","that","where","when"],"question":"\"Are you tired?\" → She asked me ___ I was tired."},{"answer":0,"options":["lived","live","do live","did live"],"question":"\"Where do you live?\" → He asked me where I ___."},{"answer":1,"options":["can","could","will","may"],"question":"\"I can help,\" she said. → She said she ___ help."},{"answer":1,"options":["is","was","are","were"],"question":"\"My nose is cold.\" → He said his nose ___ cold."},{"answer":1,"options":["will","would","can","shall"],"question":"\"I will call,\" he said. → He said he ___ call."},{"answer":1,"options":["hurts","hurt","hurted","hurting"],"question":"\"My mouth hurts,\" she said. → She told me her mouth ___."}],"title":"8B: Reported speech — telling what people said"},"level":"a2","podcast":{"audio":"media/a2/2026-10-10/podcast.mp3","cover":null,"title":"Word Kitchen: My Body","transcript":"media/a2/2026-10-10/podcast-transcript.txt"},"pronunciation_audio":"media/a2/2026-10-10/pronunciation.mp3","quiz":[{"answer":0,"options":["the part at the end of your arm, with fingers","the part of your body you stand on","the part of your body you see with","the part of your face you smell with"],"question":"What does 'hand' mean?"},{"answer":1,"options":["the part of your body you see with","the part of your body you stand on, at the end of your leg","the part of your face you eat and speak with","the part at the end of your arm, with fingers"],"question":"What does 'foot' mean?"},{"answer":2,"options":["the part of your face you smell with","the part of your face you eat and speak with","the part of your body you see with","the part of your body you stand on"],"question":"What does 'eye' mean?"},{"answer":0,"options":["the part of your face you smell with","the part at the end of your arm, with fingers","the part of your body you see with","the part of your face you eat and speak with"],"question":"What does 'nose' mean?"},{"answer":3,"options":["the part of your body you stand on","the part of your face you smell with","the part of your body you see with","the part of your face you eat and speak with"],"question":"What does 'mouth' mean?"}],"shadowing":{"audio":"media/a2/2026-10-10/shadowing.mp3","title":"A Busy Day for My Body","transcript":"media/a2/2026-10-10/shadowing-transcript.txt"},"theme":"health & body","words":[{"example":"She washed her hands before dinner.","meaning":"the part at the end of your arm, with fingers","persian":"دست","photo":"media/a2/2026-10-10/photos/hand.jpg","pos":"noun","pronunciation":"HAND","word":"hand","word_audio":"media/a2/2026-10-10/word-audio/hand.mp3"},{"example":"His feet hurt after the long walk.","meaning":"the part of your body you stand on, at the end of your leg","persian":"پا","photo":"media/a2/2026-10-10/photos/foot.jpg","pos":"noun","pronunciation":"FOOT","word":"foot","word_audio":"media/a2/2026-10-10/word-audio/foot.mp3"},{"example":"She has blue eyes.","meaning":"the part of your body you see with","persian":"چشم","photo":"media/a2/2026-10-10/photos/eye.jpg","pos":"noun","pronunciation":"EYE","word":"eye","word_audio":"media/a2/2026-10-10/word-audio/eye.mp3"},{"example":"The dog has a cold nose.","meaning":"the part of your face you smell with","persian":"بینی","photo":"media/a2/2026-10-10/photos/nose.jpg","pos":"noun","pronunciation":"NOHZ","word":"nose","word_audio":"media/a2/2026-10-10/word-audio/nose.mp3"},{"example":"He opened his mouth to speak.","meaning":"the part of your face you eat and speak with","persian":"دهان","photo":"media/a2/2026-10-10/photos/mouth.jpg","pos":"noun","pronunciation":"MOWTH","word":"mouth","word_audio":"media/a2/2026-10-10/word-audio/mouth.mp3"}]}
+{
+  "cefr": "A2",
+  "date": "2026-10-10",
+  "grammar": {
+    "audio": "media/a2/2026-10-10/grammar-en.mp3",
+    "examples": [
+      "*She *said* her hand hurt.* (direct: \"My hand hurts.\")",
+      "*He *told me* his foot hurt.* (told + a person)",
+      "*She *said* her eyes were tired.* (direct: \"My eyes are tired.\")",
+      "*He *said that* his nose was cold.* (that is optional)",
+      "*She *asked* me if my mouth hurt.* (yes/no question)",
+      "*He *asked* her where she lived.* (no do or did)"
+    ],
+    "explanation": "When we tell other people what someone said, we use reported speech.\n\nUse **told + a person**: \"She **told me** her hand hurt.\" Use **said + no person**: \"She **said** her hand hurt.\"\n\nThe tense usually goes one step back: present → past. \"I am tired\" → \"She **said she was** tired.\"\n\nThe word **that** is optional. \"He said **that his foot** hurt\" = \"He said his foot hurt.\"\n\nFor yes or no questions, add **if**. \"Are you tired?\" → \"He asked me **if I was** tired.\"\n\nFor other questions, keep subject + verb order, with no do or did. \"Where do you live?\" → \"She asked me **where I lived**.\"",
+    "practice": [
+      {
+        "a": "She said she was tired.",
+        "q": "Change to reported speech: She said, \"I am tired.\""
+      },
+      {
+        "a": "told — use told + a person.",
+        "q": "Say or tell? \"He ___ me he was sick.\""
+      },
+      {
+        "a": "He asked me where I lived.",
+        "q": "Change to a reported question: \"Where do you live?\""
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 0,
+        "options": [
+          "was",
+          "is",
+          "are",
+          "were"
+        ],
+        "question": "\"I am hungry,\" she said. → She said she ___ hungry."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "hurts",
+          "hurt",
+          "hurted",
+          "hurting"
+        ],
+        "question": "\"My foot hurts,\" he said. → He said his foot ___."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "said",
+          "told",
+          "say",
+          "tells"
+        ],
+        "question": "She ___ me she was tired."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "told",
+          "said",
+          "tell",
+          "says"
+        ],
+        "question": "He ___ he was late."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "if",
+          "that",
+          "where",
+          "when"
+        ],
+        "question": "\"Are you tired?\" → She asked me ___ I was tired."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "lived",
+          "live",
+          "do live",
+          "did live"
+        ],
+        "question": "\"Where do you live?\" → He asked me where I ___."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "can",
+          "could",
+          "will",
+          "may"
+        ],
+        "question": "\"I can help,\" she said. → She said she ___ help."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "is",
+          "was",
+          "are",
+          "were"
+        ],
+        "question": "\"My nose is cold.\" → He said his nose ___ cold."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "will",
+          "would",
+          "can",
+          "shall"
+        ],
+        "question": "\"I will call,\" he said. → He said he ___ call."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "hurts",
+          "hurt",
+          "hurted",
+          "hurting"
+        ],
+        "question": "\"My mouth hurts,\" she said. → She told me her mouth ___."
+      }
+    ],
+    "title": "8B: Reported speech — telling what people said"
+  },
+  "level": "a2",
+  "podcast": {
+    "audio": "media/a2/2026-10-10/podcast.mp3",
+    "cover": null,
+    "title": "Word Kitchen: My Body",
+    "transcript": "media/a2/2026-10-10/podcast-transcript.txt"
+  },
+  "pronunciation_audio": "media/a2/2026-10-10/pronunciation.mp3",
+  "quiz": [
+    {
+      "answer": 0,
+      "options": [
+        "the part at the end of your arm, with fingers",
+        "the part of your body you stand on",
+        "the part of your body you see with",
+        "the part of your face you smell with"
+      ],
+      "question": "What does 'hand' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "the part of your body you see with",
+        "the part of your body you stand on, at the end of your leg",
+        "the part of your face you eat and speak with",
+        "the part at the end of your arm, with fingers"
+      ],
+      "question": "What does 'foot' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "the part of your face you smell with",
+        "the part of your face you eat and speak with",
+        "the part of your body you see with",
+        "the part of your body you stand on"
+      ],
+      "question": "What does 'eye' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "the part of your face you smell with",
+        "the part at the end of your arm, with fingers",
+        "the part of your body you see with",
+        "the part of your face you eat and speak with"
+      ],
+      "question": "What does 'nose' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "the part of your body you stand on",
+        "the part of your face you smell with",
+        "the part of your body you see with",
+        "the part of your face you eat and speak with"
+      ],
+      "question": "What does 'mouth' mean?"
+    }
+  ],
+  "shadowing": {
+    "audio": "media/a2/2026-10-10/shadowing.mp3",
+    "title": "A Busy Day for My Body",
+    "transcript": "media/a2/2026-10-10/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-10-10/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/022.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/023.mp3",
+      "media/a2/2026-10-10/shadowing-sentences/024.mp3"
+    ]
+  },
+  "theme": "health & body",
+  "words": [
+    {
+      "example": "She washed her hands before dinner.",
+      "meaning": "the part at the end of your arm, with fingers",
+      "persian": "دست",
+      "photo": "media/a2/2026-10-10/photos/hand.jpg",
+      "pos": "noun",
+      "pronunciation": "HAND",
+      "word": "hand",
+      "word_audio": "media/a2/2026-10-10/word-audio/hand.mp3"
+    },
+    {
+      "example": "His feet hurt after the long walk.",
+      "meaning": "the part of your body you stand on, at the end of your leg",
+      "persian": "پا",
+      "photo": "media/a2/2026-10-10/photos/foot.jpg",
+      "pos": "noun",
+      "pronunciation": "FOOT",
+      "word": "foot",
+      "word_audio": "media/a2/2026-10-10/word-audio/foot.mp3"
+    },
+    {
+      "example": "She has blue eyes.",
+      "meaning": "the part of your body you see with",
+      "persian": "چشم",
+      "photo": "media/a2/2026-10-10/photos/eye.jpg",
+      "pos": "noun",
+      "pronunciation": "EYE",
+      "word": "eye",
+      "word_audio": "media/a2/2026-10-10/word-audio/eye.mp3"
+    },
+    {
+      "example": "The dog has a cold nose.",
+      "meaning": "the part of your face you smell with",
+      "persian": "بینی",
+      "photo": "media/a2/2026-10-10/photos/nose.jpg",
+      "pos": "noun",
+      "pronunciation": "NOHZ",
+      "word": "nose",
+      "word_audio": "media/a2/2026-10-10/word-audio/nose.mp3"
+    },
+    {
+      "example": "He opened his mouth to speak.",
+      "meaning": "the part of your face you eat and speak with",
+      "persian": "دهان",
+      "photo": "media/a2/2026-10-10/photos/mouth.jpg",
+      "pos": "noun",
+      "pronunciation": "MOWTH",
+      "word": "mouth",
+      "word_audio": "media/a2/2026-10-10/word-audio/mouth.mp3"
+    }
+  ]
+}

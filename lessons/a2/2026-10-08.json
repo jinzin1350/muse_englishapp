@@ -1,245 +1,270 @@
 {
- "date": "2026-10-08",
- "theme": "sports & fitness",
- "level": "a2",
- "cefr": "A2",
- "words": [
-  {
-   "word": "run",
-   "pos": "verb",
-   "meaning": "to move fast on foot",
-   "example": "I run in the park every morning.",
-   "pronunciation": "RUN",
-   "persian": "دویدن",
-   "photo": "media/a2/2026-10-08/photos/run.jpg",
-   "word_audio": "media/a2/2026-10-08/word-audio/run.mp3"
-  },
-  {
-   "word": "ball",
-   "pos": "noun",
-   "meaning": "a round toy we play with",
-   "example": "The boy kicks the ball to me.",
-   "pronunciation": "BAWL",
-   "persian": "توپ",
-   "photo": "media/a2/2026-10-08/photos/ball.jpg",
-   "word_audio": "media/a2/2026-10-08/word-audio/ball.mp3"
-  },
-  {
-   "word": "game",
-   "pos": "noun",
-   "meaning": "something we play for fun",
-   "example": "The game starts at six o'clock.",
-   "pronunciation": "GAYM",
-   "persian": "بازی",
-   "photo": "media/a2/2026-10-08/photos/game.jpg",
-   "word_audio": "media/a2/2026-10-08/word-audio/game.mp3"
-  },
-  {
-   "word": "win",
-   "pos": "verb",
-   "meaning": "to be the best in a game",
-   "example": "Our team wants to win the game today.",
-   "pronunciation": "WIN",
-   "persian": "برنده شدن",
-   "photo": "media/a2/2026-10-08/photos/win.jpg",
-   "word_audio": "media/a2/2026-10-08/word-audio/win.mp3"
-  },
-  {
-   "word": "play",
-   "pos": "verb",
-   "meaning": "to do something fun, like a sport",
-   "example": "The children play football after school.",
-   "pronunciation": "PLAY",
-   "persian": "بازی کردن",
-   "photo": "media/a2/2026-10-08/photos/play.jpg",
-   "word_audio": "media/a2/2026-10-08/word-audio/play.mp3"
-  }
- ],
- "pronunciation_audio": "media/a2/2026-10-08/pronunciation.mp3",
- "podcast": {
-  "title": "Word Kitchen: Sports Time",
-  "audio": "media/a2/2026-10-08/podcast.mp3",
-  "cover": null,
-  "transcript": "media/a2/2026-10-08/podcast-transcript.txt"
- },
- "shadowing": {
-  "title": "A Day of Sports",
-  "audio": "media/a2/2026-10-08/shadowing.mp3",
-  "transcript": "media/a2/2026-10-08/shadowing-transcript.txt"
- },
- "quiz": [
-  {
-   "question": "What does 'run' mean?",
-   "options": [
-    "a round toy we play with",
-    "to move fast on foot",
-    "to be the best in a game",
-    "something we play for fun"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'ball' mean?",
-   "options": [
-    "something we play for fun",
-    "to do something fun, like a sport",
-    "a round toy we play with",
-    "to move fast on foot"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'game' mean?",
-   "options": [
-    "to be the best in a game",
-    "something we play for fun",
-    "a round toy we play with",
-    "to do something fun, like a sport"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'win' mean?",
-   "options": [
-    "to move fast on foot",
-    "to do something fun, like a sport",
-    "to be the best in a game",
-    "a round toy we play with"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'play' mean?",
-   "options": [
-    "something we play for fun",
-    "to be the best in a game",
-    "to move fast on foot",
-    "to do something fun, like a sport"
-   ],
-   "answer": 3
-  }
- ],
- "grammar": {
-  "title": "7B: Second conditional — talking about dreams",
-  "explanation": "We use the second conditional for dreams and wishes. They are not real now.\n\nForm: **If** + past simple, **would** + verb. I run every day. If I ran in the morning, I would feel great.\n\nAfter **If I**, we often use **were**: If I were rich, I would buy a big ball.\n\nFirst conditional is for real plans: **If I play well, I will win**. Second is for dreams: **If I played in a big game, I would win**.",
-  "examples": [
-   "*If I had a new ball*, I *would play* with my friends. (a dream)",
-   "*If I were* the winner, I *would* be very happy. (not real now)",
-   "*If we played* every day, we *would win* more games. (a wish)",
-   "*If I could run* faster, I *would win* the race. (impossible now)"
+  "date": "2026-10-08",
+  "theme": "sports & fitness",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "run",
+      "pos": "verb",
+      "meaning": "to move fast on foot",
+      "example": "I run in the park every morning.",
+      "pronunciation": "RUN",
+      "persian": "دویدن",
+      "photo": "media/a2/2026-10-08/photos/run.jpg",
+      "word_audio": "media/a2/2026-10-08/word-audio/run.mp3"
+    },
+    {
+      "word": "ball",
+      "pos": "noun",
+      "meaning": "a round toy we play with",
+      "example": "The boy kicks the ball to me.",
+      "pronunciation": "BAWL",
+      "persian": "توپ",
+      "photo": "media/a2/2026-10-08/photos/ball.jpg",
+      "word_audio": "media/a2/2026-10-08/word-audio/ball.mp3"
+    },
+    {
+      "word": "game",
+      "pos": "noun",
+      "meaning": "something we play for fun",
+      "example": "The game starts at six o'clock.",
+      "pronunciation": "GAYM",
+      "persian": "بازی",
+      "photo": "media/a2/2026-10-08/photos/game.jpg",
+      "word_audio": "media/a2/2026-10-08/word-audio/game.mp3"
+    },
+    {
+      "word": "win",
+      "pos": "verb",
+      "meaning": "to be the best in a game",
+      "example": "Our team wants to win the game today.",
+      "pronunciation": "WIN",
+      "persian": "برنده شدن",
+      "photo": "media/a2/2026-10-08/photos/win.jpg",
+      "word_audio": "media/a2/2026-10-08/word-audio/win.mp3"
+    },
+    {
+      "word": "play",
+      "pos": "verb",
+      "meaning": "to do something fun, like a sport",
+      "example": "The children play football after school.",
+      "pronunciation": "PLAY",
+      "persian": "بازی کردن",
+      "photo": "media/a2/2026-10-08/photos/play.jpg",
+      "word_audio": "media/a2/2026-10-08/word-audio/play.mp3"
+    }
   ],
-  "practice": [
-   {
-    "q": "Fill in: If I ___ (have) more time, I would play football every day.",
-    "a": "had"
-   },
-   {
-    "q": "Which sentence is a dream? A) If I play, I will win. B) If I played, I would win.",
-    "a": "B. It is not real now."
-   }
-  ],
+  "pronunciation_audio": "media/a2/2026-10-08/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Sports Time",
+    "audio": "media/a2/2026-10-08/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-08/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Day of Sports",
+    "audio": "media/a2/2026-10-08/shadowing.mp3",
+    "transcript": "media/a2/2026-10-08/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-10-08/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/022.mp3",
+      "media/a2/2026-10-08/shadowing-sentences/023.mp3"
+    ]
+  },
   "quiz": [
-   {
-    "question": "Choose the dream sentence:",
-    "options": [
-     "If I have a ball, I will play.",
-     "If I had a ball, I would play.",
-     "If I have a ball, I play.",
-     "I have a ball and I play."
-    ],
-    "answer": 1
-   },
-   {
-    "question": "If I ___ rich, I would buy a new car.",
-    "options": [
-     "am",
-     "were",
-     "is",
-     "are"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "If she ___ here, she would help us.",
-    "options": [
-     "is",
-     "are",
-     "were",
-     "be"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "If we ___ more, we would win.",
-    "options": [
-     "play",
-     "played",
-     "plays",
-     "will play"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "I ___ travel the world if I had money.",
-    "options": [
-     "will",
-     "would",
-     "can",
-     "must"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "Choose the correct sentence:",
-    "options": [
-     "If I would have a dog, I would play with it.",
-     "If I had a dog, I would play with it.",
-     "If I have a dog, I would play with it.",
-     "If I had a dog, I will play with it."
-    ],
-    "answer": 1
-   },
-   {
-    "question": "If I ___ you, I would run every morning.",
-    "options": [
-     "am",
-     "was",
-     "were",
-     "be"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "In \"I would buy it\", the word \"would\" shows:",
-    "options": [
-     "a real plan",
-     "a dream",
-     "a past event",
-     "an order"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "He ___ win if he played well.",
-    "options": [
-     "will",
-     "would",
-     "wins",
-     "winning"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "___ it rained, we would stay home.",
-    "options": [
-     "When",
-     "If",
-     "While",
-     "So"
-    ],
-    "answer": 1
-   }
+    {
+      "question": "What does 'run' mean?",
+      "options": [
+        "a round toy we play with",
+        "to move fast on foot",
+        "to be the best in a game",
+        "something we play for fun"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'ball' mean?",
+      "options": [
+        "something we play for fun",
+        "to do something fun, like a sport",
+        "a round toy we play with",
+        "to move fast on foot"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'game' mean?",
+      "options": [
+        "to be the best in a game",
+        "something we play for fun",
+        "a round toy we play with",
+        "to do something fun, like a sport"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'win' mean?",
+      "options": [
+        "to move fast on foot",
+        "to do something fun, like a sport",
+        "to be the best in a game",
+        "a round toy we play with"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'play' mean?",
+      "options": [
+        "something we play for fun",
+        "to be the best in a game",
+        "to move fast on foot",
+        "to do something fun, like a sport"
+      ],
+      "answer": 3
+    }
   ],
-  "audio": "media/a2/2026-10-08/grammar-en.mp3"
- }
+  "grammar": {
+    "title": "7B: Second conditional — talking about dreams",
+    "explanation": "We use the second conditional for dreams and wishes. They are not real now.\n\nForm: **If** + past simple, **would** + verb. I run every day. If I ran in the morning, I would feel great.\n\nAfter **If I**, we often use **were**: If I were rich, I would buy a big ball.\n\nFirst conditional is for real plans: **If I play well, I will win**. Second is for dreams: **If I played in a big game, I would win**.",
+    "examples": [
+      "*If I had a new ball*, I *would play* with my friends. (a dream)",
+      "*If I were* the winner, I *would* be very happy. (not real now)",
+      "*If we played* every day, we *would win* more games. (a wish)",
+      "*If I could run* faster, I *would win* the race. (impossible now)"
+    ],
+    "practice": [
+      {
+        "q": "Fill in: If I ___ (have) more time, I would play football every day.",
+        "a": "had"
+      },
+      {
+        "q": "Which sentence is a dream? A) If I play, I will win. B) If I played, I would win.",
+        "a": "B. It is not real now."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the dream sentence:",
+        "options": [
+          "If I have a ball, I will play.",
+          "If I had a ball, I would play.",
+          "If I have a ball, I play.",
+          "I have a ball and I play."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If I ___ rich, I would buy a new car.",
+        "options": [
+          "am",
+          "were",
+          "is",
+          "are"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If she ___ here, she would help us.",
+        "options": [
+          "is",
+          "are",
+          "were",
+          "be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If we ___ more, we would win.",
+        "options": [
+          "play",
+          "played",
+          "plays",
+          "will play"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ travel the world if I had money.",
+        "options": [
+          "will",
+          "would",
+          "can",
+          "must"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct sentence:",
+        "options": [
+          "If I would have a dog, I would play with it.",
+          "If I had a dog, I would play with it.",
+          "If I have a dog, I would play with it.",
+          "If I had a dog, I will play with it."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If I ___ you, I would run every morning.",
+        "options": [
+          "am",
+          "was",
+          "were",
+          "be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In \"I would buy it\", the word \"would\" shows:",
+        "options": [
+          "a real plan",
+          "a dream",
+          "a past event",
+          "an order"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ win if he played well.",
+        "options": [
+          "will",
+          "would",
+          "wins",
+          "winning"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ it rained, we would stay home.",
+        "options": [
+          "When",
+          "If",
+          "While",
+          "So"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-10-08/grammar-en.mp3"
+  }
 }
