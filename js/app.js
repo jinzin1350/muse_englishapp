@@ -5148,7 +5148,7 @@ function buildTutorialSteps() {
     { id: 'quiz', selector: '.lesson-tab[data-tab="quiz"]',
       kicker: '🎯', title: T('کوییز', 'Quiz'),
       text: T('کوییز بده و XP بگیر', 'Take the quiz and earn XP') },
-    { id: 'streak', view: 'home', selector: '.h-streak',
+    { id: 'streak', view: 'home', selector: '.stk-link',
       kicker: '🔥', title: T('استریک', 'Streak'),
       text: T('هر روز بیا تا استریکت نپره', 'Come back every day to keep your streak') },
     { id: 'podcast', view: 'lesson', selector: '.lesson-tab[data-tab="podcast"]',
@@ -5643,21 +5643,24 @@ function battleBannerHTML() {
   '</a>';
 }
 
+/* Streak banner v2 (2026-10-09): cream illustrated card after Alireza's mockup.
+   The day count is dynamic HTML from the streak state (DB-synced), never baked in. */
 function streakBannerHTML(st, dates) {
   st = st || {};
   const n = st.current_streak || 0;
-  const fr = (st.freezes != null ? st.freezes : st.streak_freezes) || 0;
-  const headline = n > 0
-    ? '<b>' + n + '</b>&nbsp;day streak! 🔥'
-    : 'Start your streak today! 🔥';
-  return '<section class="h-streak" aria-label="Your streak">' +
-    '<img class="h-streak-mascot" src="/media/home/streak-mascot.webp" alt="Streak mascot">' +
-    '<div class="h-streak-body">' +
-      '<div class="h-streak-head">' + headline + '</div>' +
-      homeWeekStripHTML(dates) +
-      '<div class="h-streak-freezes">🧊 ' + fr + ' freeze' + (fr === 1 ? '' : 's') + ' ready <span aria-hidden="true">›</span></div>' +
-    '</div>' +
-  '</section>';
+  const kicker = n > 0 ? 'Your streak is' : 'Start your streak';
+  const numline = n > 0 ? '<b>' + n + '</b>&nbsp;' + (n === 1 ? 'day!' : 'days!') : 'today!';
+  const sub = n > 0 ? 'Keep going! Learn a little every day 🧡' : 'Finish a lesson to ignite it 🔥';
+  return '<a class="stk-link" href="#/progress" dir="ltr" lang="en" aria-label="View your progress">' +
+    '<img class="stk-bg" src="/media/home/streak-banner-art.webp" alt="">' +
+    '<span class="stk-scrim" aria-hidden="true"></span>' +
+    '<span class="stk-txt">' +
+      '<span class="stk-kicker">' + kicker + '</span>' +
+      '<span class="stk-num">' + numline + '</span>' +
+      '<span class="stk-sub">' + sub + '</span>' +
+    '</span>' +
+    '<span class="stk-go" aria-hidden="true">›</span>' +
+  '</a>';
 }
 
 function lessonBannerHTML(m) {
@@ -7953,6 +7956,7 @@ function paintProgress(v, d) {
     pgStatCard('📅', Number(d.active_days) || 0, 'روزهای فعال') +
     pgStatCard('⏱', Number(d.total_minutes) || 0, 'دقیقه تمرین') +
     pgStatCard('📚', Number(d.saved_words) || 0, 'کلمه ذخیره‌شده') +
+    (d.streak_freezes != null ? pgStatCard('🧊', Number(d.streak_freezes) || 0, 'فریز استریک') : '') +
     '</div>';
   const week = Array.isArray(d.week) ? d.week : [];
   const maxXP = Math.max.apply(null, week.map(function (w) { return Number(w.xp) || 0; }).concat([1]));
@@ -7981,10 +7985,21 @@ function renderProgress(v) {
   sb.rpc('my_progress').then(function (r) {
     if (state.view !== 'progress') return;
     if (r.error || !r.data) paintProgress(v, null);
-    else paintProgress(v, r.data);
+    else paintProgressWithFreezes(v, r.data);
   }, function () {
     if (state.view === 'progress') paintProgress(v, null);
   });
+}
+/* Attach the user's streak-freeze balance (own profile row is RLS-readable)
+   so it stays visible after the home streak banner was redesigned. */
+function paintProgressWithFreezes(v, d) {
+  try {
+    sb.from('profiles').select('streak_freezes').eq('user_id', state.user.id).maybeSingle().then(function (fr) {
+      if (state.view !== 'progress') return;
+      if (!fr.error && fr.data && fr.data.streak_freezes != null) d.streak_freezes = fr.data.streak_freezes;
+      paintProgress(v, d);
+    }, function () { if (state.view === 'progress') paintProgress(v, d); });
+  } catch (e) { paintProgress(v, d); }
 }
 async function loadScoreAnalytics() {
   const host = document.getElementById('score-analytics');

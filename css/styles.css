@@ -1376,19 +1376,25 @@ body{background:#FFF9F3;}
   font-weight:800;padding:12px 28px;border-radius:999px;font-size:15px;
   box-shadow:0 4px 10px rgba(0,0,0,.25);}
 
-.h-streak{position:relative;border-radius:22px;margin-bottom:14px;background:#FFFBF2;
-  border:1px solid #F5EBD7;display:flex;align-items:center;gap:15px;padding:15px 16px;}
-.h-streak-mascot{width:92px;height:92px;border-radius:22px;flex:none;object-fit:cover;
-  box-shadow:0 4px 10px rgba(230,140,30,.25);}
-.h-streak-body{flex:1;min-width:0;}
-.h-streak-head{font-size:16px;font-weight:800;color:#1F2937;line-height:1.35;margin-bottom:6px;}
-.h-streak .hw-strip{margin:0 0 10px;}
-.h-streak .hw-name{color:#B0894A;}
-.h-streak .hw-day.today .hw-name{color:#E07B1A;}
-.h-streak .hw-dot{background:#EADFCB;}
-.h-streak .hw-day.today .hw-dot{background:#fff;box-shadow:0 0 0 2px #F59E0B;}
-.h-streak .hw-dot.on{background:#F59E0B;box-shadow:0 0 0 2px rgba(245,158,11,.3);}
-.h-streak-freezes{font-size:13px;font-weight:600;color:#8A7A5F;}
+/* Streak banner v2 (2026-10-09): cream illustrated card per Alireza's mockup.
+   Dynamic day count rendered as HTML text over the illustration. */
+.stk-link{position:relative;display:block;overflow:hidden;border-radius:24px;margin-bottom:14px;
+  background:#FFF9F1;border:1px solid #F2E5D2;min-height:128px;text-decoration:none;
+  box-shadow:0 8px 24px rgba(178,132,52,.10);}
+.stk-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center;}
+.stk-scrim{position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(to right, rgba(255,249,241,0) 28%, rgba(255,249,241,.85) 55%, #FFF9F1 78%);}
+.stk-txt{position:absolute;top:50%;left:35%;transform:translateY(-50%);display:flex;flex-direction:column;
+  gap:2px;max-width:52%;}
+.stk-kicker{font-size:15px;font-weight:700;color:#102A52;}
+.stk-num{font-size:34px;font-weight:800;line-height:1.1;
+  background:linear-gradient(90deg,#FF9D2E,#FF6A18);-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;}
+.stk-sub{font-size:12.5px;color:#6B7A90;}
+.stk-go{position:absolute;right:14px;top:50%;transform:translateY(-50%);width:44px;height:44px;
+  border-radius:50%;background:#F7ECD9;color:#102A52;display:flex;align-items:center;justify-content:center;
+  font-size:24px;font-weight:800;flex:none;}
+.stk-link:active .stk-go{background:#F1DFC2;}
 
 .h-lesson{border-radius:22px;overflow:hidden;background:#FFFDF8;margin-bottom:14px;
   box-shadow:0 2px 12px rgba(120,80,20,.08);}
