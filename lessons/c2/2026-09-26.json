@@ -1,354 +1,391 @@
 {
- "date": "2026-09-26",
- "theme": "Travel & Transport",
- "level": "c2",
- "cefr": "C2",
- "words": [
-  {
-   "word": "sojourn",
-   "pos": "noun",
-   "meaning": "a temporary stay in one place",
-   "example": "During his sojourn in Kyoto, he learned to write haiku.",
-   "pronunciation": "SOH-jern",
-   "persian": "اقامت موقت",
-   "photo": "media/c2/2026-09-26/photos/sojourn.jpg",
-   "word_audio": "media/c2/2026-09-26/word-audio/sojourn.mp3"
-  },
-  {
-   "word": "peregrination",
-   "pos": "noun",
-   "meaning": "a long, wandering journey",
-   "example": "Her peregrination across South America took nearly two years.",
-   "pronunciation": "per-uh-gruh-NAY-shun",
-   "persian": "سفر طولانی",
-   "photo": "media/c2/2026-09-26/photos/peregrination.jpg",
-   "word_audio": "media/c2/2026-09-26/word-audio/peregrination.mp3"
-  },
-  {
-   "word": "peripatetic",
-   "pos": "adjective",
-   "meaning": "traveling from place to place",
-   "example": "The peripatetic photographer rarely sleeps in the same city twice.",
-   "pronunciation": "per-uh-puh-TET-ik",
-   "persian": "دوره‌گرد، سیار",
-   "photo": "media/c2/2026-09-26/photos/peripatetic.jpg",
-   "word_audio": "media/c2/2026-09-26/word-audio/peripatetic.mp3"
-  },
-  {
-   "word": "odyssey",
-   "pos": "noun",
-   "meaning": "a long, eventful journey full of adventures",
-   "example": "Getting the visa was a bureaucratic odyssey that took months.",
-   "pronunciation": "OD-ih-see",
-   "persian": "سفر پرماجرا",
-   "photo": "media/c2/2026-09-26/photos/odyssey.jpg",
-   "word_audio": "media/c2/2026-09-26/word-audio/odyssey.mp3"
-  },
-  {
-   "word": "jaunt",
-   "pos": "noun",
-   "meaning": "a short, enjoyable trip",
-   "example": "They took a weekend jaunt to the coast.",
-   "pronunciation": "JAWNT",
-   "persian": "گردش کوتاه",
-   "photo": "media/c2/2026-09-26/photos/jaunt.jpg",
-   "word_audio": "media/c2/2026-09-26/word-audio/jaunt.mp3"
-  },
-  {
-   "word": "itinerary",
-   "pos": "noun",
-   "meaning": "a detailed plan of a journey",
-   "example": "Our itinerary includes three cities in five days.",
-   "pronunciation": "eye-TIN-uh-reh-ree",
-   "persian": "برنامه سفر",
-   "photo": "media/c2/2026-09-26/photos/itinerary.jpg",
-   "word_audio": "media/c2/2026-09-26/word-audio/itinerary.mp3"
-  },
-  {
-   "word": "traverse",
-   "pos": "verb",
-   "meaning": "to travel across or through a place",
-   "example": "The caravan traversed the desert in four days.",
-   "pronunciation": "truh-VERS",
-   "persian": "پیمودن",
-   "photo": "media/c2/2026-09-26/photos/traverse.jpg",
-   "word_audio": "media/c2/2026-09-26/word-audio/traverse.mp3"
-  },
-  {
-   "word": "wayfarer",
-   "pos": "noun",
-   "meaning": "a traveler, especially on foot",
-   "example": "The old inn welcomed tired wayfarers every evening.",
-   "pronunciation": "WAY-fair-er",
-   "persian": "مسافر پیاده",
-   "photo": "media/c2/2026-09-26/photos/wayfarer.jpg",
-   "word_audio": "media/c2/2026-09-26/word-audio/wayfarer.mp3"
-  },
-  {
-   "word": "globetrotter",
-   "pos": "noun",
-   "meaning": "someone who travels widely around the world",
-   "example": "As a seasoned globetrotter, she has visited sixty countries.",
-   "pronunciation": "GLOHB-trot-ter",
-   "persian": "جهانگرد",
-   "photo": "media/c2/2026-09-26/photos/globetrotter.jpg",
-   "word_audio": "media/c2/2026-09-26/word-audio/globetrotter.mp3"
-  },
-  {
-   "word": "layover",
-   "pos": "noun",
-   "meaning": "a stop between flights during a journey",
-   "example": "We have a six-hour layover in Istanbul before the next flight.",
-   "pronunciation": "LAY-oh-ver",
-   "persian": "توقف بین پروازها",
-   "photo": "media/c2/2026-09-26/photos/layover.jpg",
-   "word_audio": "media/c2/2026-09-26/word-audio/layover.mp3"
-  }
- ],
- "pronunciation_audio": "media/c2/2026-09-26/pronunciation.mp3",
- "podcast": {
-  "title": "Word Kitchen: The Traveler's Vocabulary",
-  "audio": "media/c2/2026-09-26/podcast.mp3",
-  "cover": null,
-  "transcript": "media/c2/2026-09-26/podcast-transcript.txt"
- },
- "shadowing": {
-  "title": "The Long Road Home",
-  "audio": "media/c2/2026-09-26/shadowing.mp3",
-  "transcript": "media/c2/2026-09-26/shadowing-transcript.txt"
- },
- "quiz": [
-  {
-   "question": "What does 'sojourn' mean?",
-   "options": [
-    "a long, wandering journey",
-    "a temporary stay in one place",
-    "traveling from place to place",
-    "to travel across or through a place"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'peregrination' mean?",
-   "options": [
-    "a long, wandering journey",
-    "traveling from place to place",
-    "to travel across or through a place",
-    "a long, eventful journey full of adventures"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'peripatetic' mean?",
-   "options": [
-    "traveling from place to place",
-    "someone who travels widely around the world",
-    "a temporary stay in one place",
-    "a stop between flights during a journey"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'odyssey' mean?",
-   "options": [
-    "to travel across or through a place",
-    "a short, enjoyable trip",
-    "a stop between flights during a journey",
-    "a long, eventful journey full of adventures"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'jaunt' mean?",
-   "options": [
-    "a detailed plan of a journey",
-    "a short, enjoyable trip",
-    "a traveler, especially on foot",
-    "a temporary stay in one place"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'itinerary' mean?",
-   "options": [
-    "a long, wandering journey",
-    "to travel across or through a place",
-    "a detailed plan of a journey",
-    "a short, enjoyable trip"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'traverse' mean?",
-   "options": [
-    "a long, wandering journey",
-    "to travel across or through a place",
-    "a traveler, especially on foot",
-    "a temporary stay in one place"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'wayfarer' mean?",
-   "options": [
-    "a short, enjoyable trip",
-    "a traveler, especially on foot",
-    "someone who travels widely around the world",
-    "a temporary stay in one place"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'globetrotter' mean?",
-   "options": [
-    "a short, enjoyable trip",
-    "a stop between flights during a journey",
-    "someone who travels widely around the world",
-    "to travel across or through a place"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'layover' mean?",
-   "options": [
-    "a detailed plan of a journey",
-    "a long, wandering journey",
-    "a stop between flights during a journey",
-    "a temporary stay in one place"
-   ],
-   "answer": 2
-  }
- ],
- "grammar": {
-  "title": "2B: Present perfect + for / since, present perfect continuous",
-  "explanation": "Use the **present perfect + for / since** for things that started in the past and are still true now. Think of an unfinished state, like a *sojourn* that has not ended.\n\nUse **for** with a period of time and **since** with a starting point. A flexible *itinerary* still needs **for** or **since** to anchor it in time.\n\nAsk about unfinished periods with **How long + present perfect**. The answer often describes a *peregrination* still in progress.\n\nUse the **present perfect continuous (have / has been + verb-ing)** for actions that began in the past and are still happening now. The *peripatetic* traveler **has been moving** **since** spring.\n\nAlso use the continuous for actions that just finished but left visible results. After a six-hour *layover*, your fellow passengers **have been waiting** just as long as you.\n\nNever use the continuous with non-action verbs like know, own, or believe. You cannot say that you **have been knowing** a *wayfarer* **for** years.\n\nSome verbs, especially **live** and **work**, work in both forms with the same meaning. A seasoned *globetrotter* **has lived** and **has been living** on the road **since** 2010.\n\nAt C2 level, choose the continuous to stress duration or effort. Saying you **have been traversing** deserts sounds harder than simply having **traversed** them.\n\nThe simple form stresses the completed fact or result itself. A short *jaunt* **has given** you stories, while a great *odyssey* **has been shaping** you for months.",
-  "examples": [
-   "She *has known* the old *wayfarer* *since* 2019. (know is a non-action verb, so the simple form is required)",
-   "They *have been traversing* the Andes *for* six weeks. (the action is still happening now)",
-   "How long *have* you *been* on this *peregrination*? (How long asks about an unfinished period)",
-   "Her *odyssey* *has lasted* *for* three months now. (it started in the past and is still true)",
-   "We *have been waiting* through this *layover* *since* noon. (just finished or ongoing, with a visible result)",
-   "The *peripatetic* chef *has been cooking* abroad *since* 2015. (still happening now)",
-   "The *globetrotter* *has visited* sixty countries *since* 2010. (repeated actions up to now)",
-   "Check the *itinerary*: we *have been following* it *for* five days. (action in progress)",
-   "That weekend *jaunt* *has become* our favorite tradition. (present perfect for a result that matters now)",
-   "You look exhausted - *have* you *been traversing* the whole desert? (just finished, with a visible result)"
+  "date": "2026-09-26",
+  "theme": "Travel & Transport",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "sojourn",
+      "pos": "noun",
+      "meaning": "a temporary stay in one place",
+      "example": "During his sojourn in Kyoto, he learned to write haiku.",
+      "pronunciation": "SOH-jern",
+      "persian": "اقامت موقت",
+      "photo": "media/c2/2026-09-26/photos/sojourn.jpg",
+      "word_audio": "media/c2/2026-09-26/word-audio/sojourn.mp3"
+    },
+    {
+      "word": "peregrination",
+      "pos": "noun",
+      "meaning": "a long, wandering journey",
+      "example": "Her peregrination across South America took nearly two years.",
+      "pronunciation": "per-uh-gruh-NAY-shun",
+      "persian": "سفر طولانی",
+      "photo": "media/c2/2026-09-26/photos/peregrination.jpg",
+      "word_audio": "media/c2/2026-09-26/word-audio/peregrination.mp3"
+    },
+    {
+      "word": "peripatetic",
+      "pos": "adjective",
+      "meaning": "traveling from place to place",
+      "example": "The peripatetic photographer rarely sleeps in the same city twice.",
+      "pronunciation": "per-uh-puh-TET-ik",
+      "persian": "دوره‌گرد، سیار",
+      "photo": "media/c2/2026-09-26/photos/peripatetic.jpg",
+      "word_audio": "media/c2/2026-09-26/word-audio/peripatetic.mp3"
+    },
+    {
+      "word": "odyssey",
+      "pos": "noun",
+      "meaning": "a long, eventful journey full of adventures",
+      "example": "Getting the visa was a bureaucratic odyssey that took months.",
+      "pronunciation": "OD-ih-see",
+      "persian": "سفر پرماجرا",
+      "photo": "media/c2/2026-09-26/photos/odyssey.jpg",
+      "word_audio": "media/c2/2026-09-26/word-audio/odyssey.mp3"
+    },
+    {
+      "word": "jaunt",
+      "pos": "noun",
+      "meaning": "a short, enjoyable trip",
+      "example": "They took a weekend jaunt to the coast.",
+      "pronunciation": "JAWNT",
+      "persian": "گردش کوتاه",
+      "photo": "media/c2/2026-09-26/photos/jaunt.jpg",
+      "word_audio": "media/c2/2026-09-26/word-audio/jaunt.mp3"
+    },
+    {
+      "word": "itinerary",
+      "pos": "noun",
+      "meaning": "a detailed plan of a journey",
+      "example": "Our itinerary includes three cities in five days.",
+      "pronunciation": "eye-TIN-uh-reh-ree",
+      "persian": "برنامه سفر",
+      "photo": "media/c2/2026-09-26/photos/itinerary.jpg",
+      "word_audio": "media/c2/2026-09-26/word-audio/itinerary.mp3"
+    },
+    {
+      "word": "traverse",
+      "pos": "verb",
+      "meaning": "to travel across or through a place",
+      "example": "The caravan traversed the desert in four days.",
+      "pronunciation": "truh-VERS",
+      "persian": "پیمودن",
+      "photo": "media/c2/2026-09-26/photos/traverse.jpg",
+      "word_audio": "media/c2/2026-09-26/word-audio/traverse.mp3"
+    },
+    {
+      "word": "wayfarer",
+      "pos": "noun",
+      "meaning": "a traveler, especially on foot",
+      "example": "The old inn welcomed tired wayfarers every evening.",
+      "pronunciation": "WAY-fair-er",
+      "persian": "مسافر پیاده",
+      "photo": "media/c2/2026-09-26/photos/wayfarer.jpg",
+      "word_audio": "media/c2/2026-09-26/word-audio/wayfarer.mp3"
+    },
+    {
+      "word": "globetrotter",
+      "pos": "noun",
+      "meaning": "someone who travels widely around the world",
+      "example": "As a seasoned globetrotter, she has visited sixty countries.",
+      "pronunciation": "GLOHB-trot-ter",
+      "persian": "جهانگرد",
+      "photo": "media/c2/2026-09-26/photos/globetrotter.jpg",
+      "word_audio": "media/c2/2026-09-26/word-audio/globetrotter.mp3"
+    },
+    {
+      "word": "layover",
+      "pos": "noun",
+      "meaning": "a stop between flights during a journey",
+      "example": "We have a six-hour layover in Istanbul before the next flight.",
+      "pronunciation": "LAY-oh-ver",
+      "persian": "توقف بین پروازها",
+      "photo": "media/c2/2026-09-26/photos/layover.jpg",
+      "word_audio": "media/c2/2026-09-26/word-audio/layover.mp3"
+    }
   ],
-  "practice": [
-   {
-    "q": "Which is correct: \"I have known him since five years\" or \"I have known him for five years\"?",
-    "a": "\"For five years.\" Use for with a period of time, and since with a point in time."
-   },
-   {
-    "q": "Can you say \"I have been knowing her for ages\"?",
-    "a": "No. Know is a non-action verb, so only the simple form works: \"I have known her for ages.\""
-   },
-   {
-    "q": "Rewrite with the present perfect continuous: \"She started her sojourn in Kyoto in April, and she is still there.\"",
-    "a": "\"She has been on her sojourn in Kyoto since April.\" (or: \"She has been staying in Kyoto since April.\")"
-   }
-  ],
+  "pronunciation_audio": "media/c2/2026-09-26/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: The Traveler's Vocabulary",
+    "audio": "media/c2/2026-09-26/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-09-26/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Long Road Home",
+    "audio": "media/c2/2026-09-26/shadowing.mp3",
+    "transcript": "media/c2/2026-09-26/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c2/2026-09-26/shadowing-sentences/001.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/002.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/003.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/004.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/005.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/006.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/007.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/008.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/009.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/010.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/011.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/012.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/013.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/014.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/015.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/016.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/017.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/018.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/019.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/020.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/021.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/022.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/023.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/024.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/025.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/026.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/027.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/028.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/029.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/030.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/031.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/032.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/033.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/034.mp3",
+      "media/c2/2026-09-26/shadowing-sentences/035.mp3"
+    ]
+  },
   "quiz": [
-   {
-    "question": "How long ___ you been waiting?",
-    "options": [
-     "have",
-     "has",
-     "are",
-     "did"
+    {
+      "question": "What does 'sojourn' mean?",
+      "options": [
+        "a long, wandering journey",
+        "a temporary stay in one place",
+        "traveling from place to place",
+        "to travel across or through a place"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'peregrination' mean?",
+      "options": [
+        "a long, wandering journey",
+        "traveling from place to place",
+        "to travel across or through a place",
+        "a long, eventful journey full of adventures"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'peripatetic' mean?",
+      "options": [
+        "traveling from place to place",
+        "someone who travels widely around the world",
+        "a temporary stay in one place",
+        "a stop between flights during a journey"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'odyssey' mean?",
+      "options": [
+        "to travel across or through a place",
+        "a short, enjoyable trip",
+        "a stop between flights during a journey",
+        "a long, eventful journey full of adventures"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'jaunt' mean?",
+      "options": [
+        "a detailed plan of a journey",
+        "a short, enjoyable trip",
+        "a traveler, especially on foot",
+        "a temporary stay in one place"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'itinerary' mean?",
+      "options": [
+        "a long, wandering journey",
+        "to travel across or through a place",
+        "a detailed plan of a journey",
+        "a short, enjoyable trip"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'traverse' mean?",
+      "options": [
+        "a long, wandering journey",
+        "to travel across or through a place",
+        "a traveler, especially on foot",
+        "a temporary stay in one place"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'wayfarer' mean?",
+      "options": [
+        "a short, enjoyable trip",
+        "a traveler, especially on foot",
+        "someone who travels widely around the world",
+        "a temporary stay in one place"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'globetrotter' mean?",
+      "options": [
+        "a short, enjoyable trip",
+        "a stop between flights during a journey",
+        "someone who travels widely around the world",
+        "to travel across or through a place"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'layover' mean?",
+      "options": [
+        "a detailed plan of a journey",
+        "a long, wandering journey",
+        "a stop between flights during a journey",
+        "a temporary stay in one place"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "2B: Present perfect + for / since, present perfect continuous",
+    "explanation": "Use the **present perfect + for / since** for things that started in the past and are still true now. Think of an unfinished state, like a *sojourn* that has not ended.\n\nUse **for** with a period of time and **since** with a starting point. A flexible *itinerary* still needs **for** or **since** to anchor it in time.\n\nAsk about unfinished periods with **How long + present perfect**. The answer often describes a *peregrination* still in progress.\n\nUse the **present perfect continuous (have / has been + verb-ing)** for actions that began in the past and are still happening now. The *peripatetic* traveler **has been moving** **since** spring.\n\nAlso use the continuous for actions that just finished but left visible results. After a six-hour *layover*, your fellow passengers **have been waiting** just as long as you.\n\nNever use the continuous with non-action verbs like know, own, or believe. You cannot say that you **have been knowing** a *wayfarer* **for** years.\n\nSome verbs, especially **live** and **work**, work in both forms with the same meaning. A seasoned *globetrotter* **has lived** and **has been living** on the road **since** 2010.\n\nAt C2 level, choose the continuous to stress duration or effort. Saying you **have been traversing** deserts sounds harder than simply having **traversed** them.\n\nThe simple form stresses the completed fact or result itself. A short *jaunt* **has given** you stories, while a great *odyssey* **has been shaping** you for months.",
+    "examples": [
+      "She *has known* the old *wayfarer* *since* 2019. (know is a non-action verb, so the simple form is required)",
+      "They *have been traversing* the Andes *for* six weeks. (the action is still happening now)",
+      "How long *have* you *been* on this *peregrination*? (How long asks about an unfinished period)",
+      "Her *odyssey* *has lasted* *for* three months now. (it started in the past and is still true)",
+      "We *have been waiting* through this *layover* *since* noon. (just finished or ongoing, with a visible result)",
+      "The *peripatetic* chef *has been cooking* abroad *since* 2015. (still happening now)",
+      "The *globetrotter* *has visited* sixty countries *since* 2010. (repeated actions up to now)",
+      "Check the *itinerary*: we *have been following* it *for* five days. (action in progress)",
+      "That weekend *jaunt* *has become* our favorite tradition. (present perfect for a result that matters now)",
+      "You look exhausted - *have* you *been traversing* the whole desert? (just finished, with a visible result)"
     ],
-    "answer": 0
-   },
-   {
-    "question": "She has worked here ___ 2019.",
-    "options": [
-     "for",
-     "since",
-     "from",
-     "during"
+    "practice": [
+      {
+        "q": "Which is correct: \"I have known him since five years\" or \"I have known him for five years\"?",
+        "a": "\"For five years.\" Use for with a period of time, and since with a point in time."
+      },
+      {
+        "q": "Can you say \"I have been knowing her for ages\"?",
+        "a": "No. Know is a non-action verb, so only the simple form works: \"I have known her for ages.\""
+      },
+      {
+        "q": "Rewrite with the present perfect continuous: \"She started her sojourn in Kyoto in April, and she is still there.\"",
+        "a": "\"She has been on her sojourn in Kyoto since April.\" (or: \"She has been staying in Kyoto since April.\")"
+      }
     ],
-    "answer": 1
-   },
-   {
-    "question": "They ___ each other for ten years.",
-    "options": [
-     "have been knowing",
-     "have known",
-     "are knowing",
-     "knowed"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "Your eyes are red. ___ crying?",
-    "options": [
-     "Did you",
-     "Have you been",
-     "Are you",
-     "Were you"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "I ___ in Lisbon since 2020, and I still live there.",
-    "options": [
-     "lived",
-     "have lived",
-     "am living",
-     "live"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "He has been ___ the desert for a week.",
-    "options": [
-     "traversed",
-     "traversing",
-     "traverse",
-     "to traverse"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "We ___ for the bus since six o'clock.",
-    "options": [
-     "are waiting",
-     "have been waiting",
-     "waited",
-     "wait"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "___ a teacher for three years.",
-    "options": [
-     "She is",
-     "She has been",
-     "She was",
-     "She does"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "I am exhausted. I ___ the kitchen for two hours.",
-    "options": [
-     "clean",
-     "cleaned",
-     "have been cleaning",
-     "am clean"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "My internet ___ yesterday, so I missed the call.",
-    "options": [
-     "has not worked",
-     "did not work",
-     "has not been working",
-     "does not work"
-    ],
-    "answer": 1
-   }
-  ]
- }
+    "quiz": [
+      {
+        "question": "How long ___ you been waiting?",
+        "options": [
+          "have",
+          "has",
+          "are",
+          "did"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She has worked here ___ 2019.",
+        "options": [
+          "for",
+          "since",
+          "from",
+          "during"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "They ___ each other for ten years.",
+        "options": [
+          "have been knowing",
+          "have known",
+          "are knowing",
+          "knowed"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Your eyes are red. ___ crying?",
+        "options": [
+          "Did you",
+          "Have you been",
+          "Are you",
+          "Were you"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ in Lisbon since 2020, and I still live there.",
+        "options": [
+          "lived",
+          "have lived",
+          "am living",
+          "live"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He has been ___ the desert for a week.",
+        "options": [
+          "traversed",
+          "traversing",
+          "traverse",
+          "to traverse"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We ___ for the bus since six o'clock.",
+        "options": [
+          "are waiting",
+          "have been waiting",
+          "waited",
+          "wait"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ a teacher for three years.",
+        "options": [
+          "She is",
+          "She has been",
+          "She was",
+          "She does"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I am exhausted. I ___ the kitchen for two hours.",
+        "options": [
+          "clean",
+          "cleaned",
+          "have been cleaning",
+          "am clean"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My internet ___ yesterday, so I missed the call.",
+        "options": [
+          "has not worked",
+          "did not work",
+          "has not been working",
+          "does not work"
+        ],
+        "answer": 1
+      }
+    ]
+  }
 }

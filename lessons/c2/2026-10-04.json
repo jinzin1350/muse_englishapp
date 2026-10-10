@@ -1,350 +1,387 @@
 {
- "date": "2026-10-04",
- "theme": "Travel & Transport: Wayfarers and Waystations",
- "level": "c2",
- "cefr": "C2",
- "words": [
-  {
-   "word": "peregrine",
-   "pos": "adjective",
-   "meaning": "traveling or wandering far from home",
-   "example": "After university, she spent a peregrine year drifting through South America with only a backpack.",
-   "pronunciation": "PEH-ruh-grin",
-   "persian": "سرگردان و آواره؛ دور از خانه در سفر",
-   "photo": "media/c2/2026-10-04/photos/peregrine.jpg",
-   "word_audio": "media/c2/2026-10-04/word-audio/peregrine.mp3"
-  },
-  {
-   "word": "itinerant",
-   "pos": "adjective",
-   "meaning": "traveling from place to place for work",
-   "example": "The itinerant photographer sold prints in every town along the coast.",
-   "pronunciation": "ih-TIN-uh-ruhnt",
-   "persian": "دوره‌گرد؛ سیار برای کار",
-   "photo": "media/c2/2026-10-04/photos/itinerant.jpg",
-   "word_audio": "media/c2/2026-10-04/word-audio/itinerant.mp3"
-  },
-  {
-   "word": "meander",
-   "pos": "verb",
-   "meaning": "to wander slowly without a fixed direction",
-   "example": "We meandered through the old quarter, stopping whenever a doorway caught our eye.",
-   "pronunciation": "mee-AN-der",
-   "persian": "پرسه زدن؛ بی‌هدف و آرام گشتن",
-   "photo": "media/c2/2026-10-04/photos/meander.jpg",
-   "word_audio": "media/c2/2026-10-04/word-audio/meander.mp3"
-  },
-  {
-   "word": "saunter",
-   "pos": "verb",
-   "meaning": "to walk slowly and confidently, in no hurry",
-   "example": "He sauntered down to the harbour as if he had all the time in the world.",
-   "pronunciation": "SAWN-ter",
-   "persian": "با آرامش و اعتمادبه‌نفس قدم زدن",
-   "photo": "media/c2/2026-10-04/photos/saunter.jpg",
-   "word_audio": "media/c2/2026-10-04/word-audio/saunter.mp3"
-  },
-  {
-   "word": "circumnavigate",
-   "pos": "verb",
-   "meaning": "to travel all the way around the earth",
-   "example": "It took her eleven months to circumnavigate the globe by sail alone.",
-   "pronunciation": "sir-kum-NAV-ih-gayt",
-   "persian": "دور زدن کامل زمین با سفر",
-   "photo": "media/c2/2026-10-04/photos/circumnavigate.jpg",
-   "word_audio": "media/c2/2026-10-04/word-audio/circumnavigate.mp3"
-  },
-  {
-   "word": "waystation",
-   "pos": "noun",
-   "meaning": "a stopping place on a long journey",
-   "example": "The tiny desert town had been a waystation for traders crossing the dunes for centuries.",
-   "pronunciation": "WAY-stay-shun",
-   "persian": "ایستگاه میانی؛ توقفگاه در سفر طولانی",
-   "photo": "media/c2/2026-10-04/photos/waystation.jpg",
-   "word_audio": "media/c2/2026-10-04/word-audio/waystation.mp3"
-  },
-  {
-   "word": "terminus",
-   "pos": "noun",
-   "meaning": "the final station at the end of a railway line",
-   "example": "We finally reached the terminus at midnight, exhausted but exhilarated.",
-   "pronunciation": "TUR-mih-nus",
-   "persian": "ایستگاه پایانی؛ آخر خط",
-   "photo": "media/c2/2026-10-04/photos/terminus.jpg",
-   "word_audio": "media/c2/2026-10-04/word-audio/terminus.mp3"
-  },
-  {
-   "word": "embarkation",
-   "pos": "noun",
-   "meaning": "the act of boarding a ship or aircraft",
-   "example": "Embarkation begins two hours before departure, so allow plenty of time.",
-   "pronunciation": "em-bar-KAY-shun",
-   "persian": "سوار شدن به کشتی یا هواپیما",
-   "photo": "media/c2/2026-10-04/photos/embarkation.jpg",
-   "word_audio": "media/c2/2026-10-04/word-audio/embarkation.mp3"
-  },
-  {
-   "word": "far-flung",
-   "pos": "adjective",
-   "meaning": "extremely remote and distant",
-   "example": "He collects stamps from far-flung islands most people could not find on a map.",
-   "pronunciation": "far-FLUNG",
-   "persian": "بسیار دورافتاده و دور",
-   "photo": "media/c2/2026-10-04/photos/far-flung.jpg",
-   "word_audio": "media/c2/2026-10-04/word-audio/far-flung.mp3"
-  },
-  {
-   "word": "cartography",
-   "pos": "noun",
-   "meaning": "the art and science of making maps",
-   "example": "Early cartography was as much art as science, filling blank oceans with sea monsters.",
-   "pronunciation": "kar-TOG-ruh-fee",
-   "persian": "نقشه‌نگاری؛ هنر و علم نقشه‌کشی",
-   "photo": "media/c2/2026-10-04/photos/cartography.jpg",
-   "word_audio": "media/c2/2026-10-04/word-audio/cartography.mp3"
-  }
- ],
- "pronunciation_audio": "media/c2/2026-10-04/pronunciation.mp3",
- "podcast": {
-  "title": "Word Kitchen: Wayfarers and Waystations",
-  "audio": "media/c2/2026-10-04/podcast.mp3",
-  "cover": null,
-  "transcript": "media/c2/2026-10-04/podcast-transcript.txt"
- },
- "shadowing": {
-  "title": "The Cartographer's Last Voyage",
-  "audio": "media/c2/2026-10-04/shadowing.mp3",
-  "transcript": "media/c2/2026-10-04/shadowing-transcript.txt"
- },
- "quiz": [
-  {
-   "question": "What does 'peregrine' mean?",
-   "options": [
-    "traveling or wandering far from home",
-    "traveling from place to place for work",
-    "to wander slowly without a fixed direction",
-    "to walk slowly and confidently, in no hurry"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'itinerant' mean?",
-   "options": [
-    "to wander slowly without a fixed direction",
-    "traveling from place to place for work",
-    "to walk slowly and confidently, in no hurry",
-    "to travel all the way around the earth"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'meander' mean?",
-   "options": [
-    "to walk slowly and confidently, in no hurry",
-    "to travel all the way around the earth",
-    "to wander slowly without a fixed direction",
-    "a stopping place on a long journey"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'saunter' mean?",
-   "options": [
-    "to travel all the way around the earth",
-    "a stopping place on a long journey",
-    "the final station at the end of a railway line",
-    "to walk slowly and confidently, in no hurry"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'circumnavigate' mean?",
-   "options": [
-    "to travel all the way around the earth",
-    "a stopping place on a long journey",
-    "the final station at the end of a railway line",
-    "the act of boarding a ship or aircraft"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'waystation' mean?",
-   "options": [
-    "the final station at the end of a railway line",
-    "a stopping place on a long journey",
-    "the act of boarding a ship or aircraft",
-    "extremely remote and distant"
-   ],
-   "answer": 1
-  },
-  {
-   "question": "What does 'terminus' mean?",
-   "options": [
-    "the act of boarding a ship or aircraft",
-    "extremely remote and distant",
-    "the final station at the end of a railway line",
-    "the art and science of making maps"
-   ],
-   "answer": 2
-  },
-  {
-   "question": "What does 'embarkation' mean?",
-   "options": [
-    "extremely remote and distant",
-    "the art and science of making maps",
-    "traveling or wandering far from home",
-    "the act of boarding a ship or aircraft"
-   ],
-   "answer": 3
-  },
-  {
-   "question": "What does 'far-flung' mean?",
-   "options": [
-    "extremely remote and distant",
-    "the art and science of making maps",
-    "traveling or wandering far from home",
-    "traveling from place to place for work"
-   ],
-   "answer": 0
-  },
-  {
-   "question": "What does 'cartography' mean?",
-   "options": [
-    "traveling or wandering far from home",
-    "the art and science of making maps",
-    "traveling from place to place for work",
-    "to wander slowly without a fixed direction"
-   ],
-   "answer": 1
-  }
- ],
- "grammar": {
-  "title": "5B: Past and present habits and states — used to, would, and the past simple",
-  "explanation": "**used to** + infinitive describes a past habit or state that is finished: I used to teach English. It has no present form — never say *I use to*.\n\nThe negative and question drop the d: **didn't use to**, **did you use to**. In conversation, **never used to** often replaces **didn't use to**.\n\nFor repeated past actions, **would** + infinitive adds a nostalgic, storytelling tone: every summer we would sail to the islands. But **would** can never describe a past state — only **used to** or the past simple can do that.\n\n**used to** and the **past simple** overlap for repeated actions: I used to live in Leeds means the same as I lived in Leeds. But with exact dates, numbers of times, or single events, only the **past simple** is possible.\n\nPresent habits take the **present simple**, often with an adverb of frequency: I usually meet my friends. Contrast a finished habit with **any more** or **any longer**: I used to go to the gym, but I don't go any more.\n\nDo not confuse **used to** (a finished past habit) with **be used to** or **get used to** + -ing (being accustomed to something): I am used to getting up early.",
-  "examples": [
-   "She *used to* lead peregrine tours through far-flung villages before she settled down. (finished past state)",
-   "The old cartographer *would* meander through antique map shops every Sunday. (nostalgic repeated action)",
-   "He *didn't use to* saunter; in his youth he sprinted everywhere. (negative past habit)",
-   "They *used to* run a tiny waystation for itinerant traders, but it closed years ago. (finished past state)",
-   "We *are used to* the chaos of embarkation now; it barely registers any more. (accustomed to + present contrast)",
-   "In eighteen ninety-eight the crew reached the terminus of their voyage; they never sailed again. (single event — past simple only)"
+  "date": "2026-10-04",
+  "theme": "Travel & Transport: Wayfarers and Waystations",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "peregrine",
+      "pos": "adjective",
+      "meaning": "traveling or wandering far from home",
+      "example": "After university, she spent a peregrine year drifting through South America with only a backpack.",
+      "pronunciation": "PEH-ruh-grin",
+      "persian": "سرگردان و آواره؛ دور از خانه در سفر",
+      "photo": "media/c2/2026-10-04/photos/peregrine.jpg",
+      "word_audio": "media/c2/2026-10-04/word-audio/peregrine.mp3"
+    },
+    {
+      "word": "itinerant",
+      "pos": "adjective",
+      "meaning": "traveling from place to place for work",
+      "example": "The itinerant photographer sold prints in every town along the coast.",
+      "pronunciation": "ih-TIN-uh-ruhnt",
+      "persian": "دوره‌گرد؛ سیار برای کار",
+      "photo": "media/c2/2026-10-04/photos/itinerant.jpg",
+      "word_audio": "media/c2/2026-10-04/word-audio/itinerant.mp3"
+    },
+    {
+      "word": "meander",
+      "pos": "verb",
+      "meaning": "to wander slowly without a fixed direction",
+      "example": "We meandered through the old quarter, stopping whenever a doorway caught our eye.",
+      "pronunciation": "mee-AN-der",
+      "persian": "پرسه زدن؛ بی‌هدف و آرام گشتن",
+      "photo": "media/c2/2026-10-04/photos/meander.jpg",
+      "word_audio": "media/c2/2026-10-04/word-audio/meander.mp3"
+    },
+    {
+      "word": "saunter",
+      "pos": "verb",
+      "meaning": "to walk slowly and confidently, in no hurry",
+      "example": "He sauntered down to the harbour as if he had all the time in the world.",
+      "pronunciation": "SAWN-ter",
+      "persian": "با آرامش و اعتمادبه‌نفس قدم زدن",
+      "photo": "media/c2/2026-10-04/photos/saunter.jpg",
+      "word_audio": "media/c2/2026-10-04/word-audio/saunter.mp3"
+    },
+    {
+      "word": "circumnavigate",
+      "pos": "verb",
+      "meaning": "to travel all the way around the earth",
+      "example": "It took her eleven months to circumnavigate the globe by sail alone.",
+      "pronunciation": "sir-kum-NAV-ih-gayt",
+      "persian": "دور زدن کامل زمین با سفر",
+      "photo": "media/c2/2026-10-04/photos/circumnavigate.jpg",
+      "word_audio": "media/c2/2026-10-04/word-audio/circumnavigate.mp3"
+    },
+    {
+      "word": "waystation",
+      "pos": "noun",
+      "meaning": "a stopping place on a long journey",
+      "example": "The tiny desert town had been a waystation for traders crossing the dunes for centuries.",
+      "pronunciation": "WAY-stay-shun",
+      "persian": "ایستگاه میانی؛ توقفگاه در سفر طولانی",
+      "photo": "media/c2/2026-10-04/photos/waystation.jpg",
+      "word_audio": "media/c2/2026-10-04/word-audio/waystation.mp3"
+    },
+    {
+      "word": "terminus",
+      "pos": "noun",
+      "meaning": "the final station at the end of a railway line",
+      "example": "We finally reached the terminus at midnight, exhausted but exhilarated.",
+      "pronunciation": "TUR-mih-nus",
+      "persian": "ایستگاه پایانی؛ آخر خط",
+      "photo": "media/c2/2026-10-04/photos/terminus.jpg",
+      "word_audio": "media/c2/2026-10-04/word-audio/terminus.mp3"
+    },
+    {
+      "word": "embarkation",
+      "pos": "noun",
+      "meaning": "the act of boarding a ship or aircraft",
+      "example": "Embarkation begins two hours before departure, so allow plenty of time.",
+      "pronunciation": "em-bar-KAY-shun",
+      "persian": "سوار شدن به کشتی یا هواپیما",
+      "photo": "media/c2/2026-10-04/photos/embarkation.jpg",
+      "word_audio": "media/c2/2026-10-04/word-audio/embarkation.mp3"
+    },
+    {
+      "word": "far-flung",
+      "pos": "adjective",
+      "meaning": "extremely remote and distant",
+      "example": "He collects stamps from far-flung islands most people could not find on a map.",
+      "pronunciation": "far-FLUNG",
+      "persian": "بسیار دورافتاده و دور",
+      "photo": "media/c2/2026-10-04/photos/far-flung.jpg",
+      "word_audio": "media/c2/2026-10-04/word-audio/far-flung.mp3"
+    },
+    {
+      "word": "cartography",
+      "pos": "noun",
+      "meaning": "the art and science of making maps",
+      "example": "Early cartography was as much art as science, filling blank oceans with sea monsters.",
+      "pronunciation": "kar-TOG-ruh-fee",
+      "persian": "نقشه‌نگاری؛ هنر و علم نقشه‌کشی",
+      "photo": "media/c2/2026-10-04/photos/cartography.jpg",
+      "word_audio": "media/c2/2026-10-04/word-audio/cartography.mp3"
+    }
   ],
-  "practice": [
-   {
-    "q": "Can I say 'I would know him well' to describe a past state?",
-    "a": "No — **would** never describes past states. Use **used to**: 'I used to know him well.'"
-   },
-   {
-    "q": "What is the difference between 'I used to travel' and 'I am used to traveling'?",
-    "a": "The first means you traveled in the past but no longer do; the second means traveling feels normal and easy for you now."
-   },
-   {
-    "q": "When must I choose the past simple instead of used to?",
-    "a": "With exact dates, numbers of times, or single finished events — 'We visited Rome in twenty nineteen,' never 'used to visit' for one trip."
-   }
-  ],
+  "pronunciation_audio": "media/c2/2026-10-04/pronunciation.mp3",
+  "podcast": {
+    "title": "Word Kitchen: Wayfarers and Waystations",
+    "audio": "media/c2/2026-10-04/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-04/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Cartographer's Last Voyage",
+    "audio": "media/c2/2026-10-04/shadowing.mp3",
+    "transcript": "media/c2/2026-10-04/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c2/2026-10-04/shadowing-sentences/001.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/002.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/003.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/004.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/005.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/006.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/007.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/008.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/009.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/010.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/011.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/012.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/013.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/014.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/015.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/016.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/017.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/018.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/019.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/020.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/021.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/022.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/023.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/024.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/025.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/026.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/027.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/028.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/029.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/030.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/031.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/032.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/033.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/034.mp3",
+      "media/c2/2026-10-04/shadowing-sentences/035.mp3"
+    ]
+  },
   "quiz": [
-   {
-    "question": "Choose the correct sentence.",
-    "options": [
-     "I use to get up at six.",
-     "I used to get up at six.",
-     "I am use to getting up at six.",
-     "I used to getting up at six."
+    {
+      "question": "What does 'peregrine' mean?",
+      "options": [
+        "traveling or wandering far from home",
+        "traveling from place to place for work",
+        "to wander slowly without a fixed direction",
+        "to walk slowly and confidently, in no hurry"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'itinerant' mean?",
+      "options": [
+        "to wander slowly without a fixed direction",
+        "traveling from place to place for work",
+        "to walk slowly and confidently, in no hurry",
+        "to travel all the way around the earth"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'meander' mean?",
+      "options": [
+        "to walk slowly and confidently, in no hurry",
+        "to travel all the way around the earth",
+        "to wander slowly without a fixed direction",
+        "a stopping place on a long journey"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'saunter' mean?",
+      "options": [
+        "to travel all the way around the earth",
+        "a stopping place on a long journey",
+        "the final station at the end of a railway line",
+        "to walk slowly and confidently, in no hurry"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'circumnavigate' mean?",
+      "options": [
+        "to travel all the way around the earth",
+        "a stopping place on a long journey",
+        "the final station at the end of a railway line",
+        "the act of boarding a ship or aircraft"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'waystation' mean?",
+      "options": [
+        "the final station at the end of a railway line",
+        "a stopping place on a long journey",
+        "the act of boarding a ship or aircraft",
+        "extremely remote and distant"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'terminus' mean?",
+      "options": [
+        "the act of boarding a ship or aircraft",
+        "extremely remote and distant",
+        "the final station at the end of a railway line",
+        "the art and science of making maps"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'embarkation' mean?",
+      "options": [
+        "extremely remote and distant",
+        "the art and science of making maps",
+        "traveling or wandering far from home",
+        "the act of boarding a ship or aircraft"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'far-flung' mean?",
+      "options": [
+        "extremely remote and distant",
+        "the art and science of making maps",
+        "traveling or wandering far from home",
+        "traveling from place to place for work"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cartography' mean?",
+      "options": [
+        "traveling or wandering far from home",
+        "the art and science of making maps",
+        "traveling from place to place for work",
+        "to wander slowly without a fixed direction"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "5B: Past and present habits and states — used to, would, and the past simple",
+    "explanation": "**used to** + infinitive describes a past habit or state that is finished: I used to teach English. It has no present form — never say *I use to*.\n\nThe negative and question drop the d: **didn't use to**, **did you use to**. In conversation, **never used to** often replaces **didn't use to**.\n\nFor repeated past actions, **would** + infinitive adds a nostalgic, storytelling tone: every summer we would sail to the islands. But **would** can never describe a past state — only **used to** or the past simple can do that.\n\n**used to** and the **past simple** overlap for repeated actions: I used to live in Leeds means the same as I lived in Leeds. But with exact dates, numbers of times, or single events, only the **past simple** is possible.\n\nPresent habits take the **present simple**, often with an adverb of frequency: I usually meet my friends. Contrast a finished habit with **any more** or **any longer**: I used to go to the gym, but I don't go any more.\n\nDo not confuse **used to** (a finished past habit) with **be used to** or **get used to** + -ing (being accustomed to something): I am used to getting up early.",
+    "examples": [
+      "She *used to* lead peregrine tours through far-flung villages before she settled down. (finished past state)",
+      "The old cartographer *would* meander through antique map shops every Sunday. (nostalgic repeated action)",
+      "He *didn't use to* saunter; in his youth he sprinted everywhere. (negative past habit)",
+      "They *used to* run a tiny waystation for itinerant traders, but it closed years ago. (finished past state)",
+      "We *are used to* the chaos of embarkation now; it barely registers any more. (accustomed to + present contrast)",
+      "In eighteen ninety-eight the crew reached the terminus of their voyage; they never sailed again. (single event — past simple only)"
     ],
-    "answer": 1
-   },
-   {
-    "question": "She ___ be afraid of flying, but now she loves it.",
-    "options": [
-     "would",
-     "used to",
-     "is used to",
-     "gets used to"
+    "practice": [
+      {
+        "q": "Can I say 'I would know him well' to describe a past state?",
+        "a": "No — **would** never describes past states. Use **used to**: 'I used to know him well.'"
+      },
+      {
+        "q": "What is the difference between 'I used to travel' and 'I am used to traveling'?",
+        "a": "The first means you traveled in the past but no longer do; the second means traveling feels normal and easy for you now."
+      },
+      {
+        "q": "When must I choose the past simple instead of used to?",
+        "a": "With exact dates, numbers of times, or single finished events — 'We visited Rome in twenty nineteen,' never 'used to visit' for one trip."
+      }
     ],
-    "answer": 1
-   },
-   {
-    "question": "Which sentence is WRONG?",
-    "options": [
-     "We would visit our grandparents every summer.",
-     "We would live in a small village.",
-     "We used to live in a small village.",
-     "Every summer we would sail to the islands."
-    ],
-    "answer": 1
-   },
-   {
-    "question": "He ___ smoke, but he quit years ago.",
-    "options": [
-     "doesn't use to",
-     "didn't use to",
-     "not used to",
-     "didn't used to"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "In two thousand ten they ___ the Atlantic once, a voyage never repeated.",
-    "options": [
-     "used to cross",
-     "would cross",
-     "crossed",
-     "use to cross"
-    ],
-    "answer": 2
-   },
-   {
-    "question": "I ___ the noise of the terminus now; after a month here it feels normal.",
-    "options": [
-     "used to",
-     "am used to",
-     "would",
-     "didn't use to"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "Which question is correct?",
-    "options": [
-     "Did you used to travel alone?",
-     "Did you use to travel alone?",
-     "Used you to travel alone?",
-     "Do you used to travel alone?"
-    ],
-    "answer": 1
-   },
-   {
-    "question": "My grandmother ___ tell us stories of far-flung islands every evening.",
-    "options": [
-     "would",
-     "is used to",
-     "uses to",
-     "will"
-    ],
-    "answer": 0
-   },
-   {
-    "question": "They ___ go to the theatre, but they don't go ___.",
-    "options": [
-     "used to / any more",
-     "use to / any longer",
-     "would to / any more",
-     "are used to / any longer"
-    ],
-    "answer": 0
-   },
-   {
-    "question": "She ___ getting up at five; years of early embarkations trained her.",
-    "options": [
-     "used to",
-     "is used to",
-     "would",
-     "didn't use to"
-    ],
-    "answer": 1
-   }
-  ]
- }
+    "quiz": [
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I use to get up at six.",
+          "I used to get up at six.",
+          "I am use to getting up at six.",
+          "I used to getting up at six."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ be afraid of flying, but now she loves it.",
+        "options": [
+          "would",
+          "used to",
+          "is used to",
+          "gets used to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence is WRONG?",
+        "options": [
+          "We would visit our grandparents every summer.",
+          "We would live in a small village.",
+          "We used to live in a small village.",
+          "Every summer we would sail to the islands."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ smoke, but he quit years ago.",
+        "options": [
+          "doesn't use to",
+          "didn't use to",
+          "not used to",
+          "didn't used to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "In two thousand ten they ___ the Atlantic once, a voyage never repeated.",
+        "options": [
+          "used to cross",
+          "would cross",
+          "crossed",
+          "use to cross"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I ___ the noise of the terminus now; after a month here it feels normal.",
+        "options": [
+          "used to",
+          "am used to",
+          "would",
+          "didn't use to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which question is correct?",
+        "options": [
+          "Did you used to travel alone?",
+          "Did you use to travel alone?",
+          "Used you to travel alone?",
+          "Do you used to travel alone?"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My grandmother ___ tell us stories of far-flung islands every evening.",
+        "options": [
+          "would",
+          "is used to",
+          "uses to",
+          "will"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ go to the theatre, but they don't go ___.",
+        "options": [
+          "used to / any more",
+          "use to / any longer",
+          "would to / any more",
+          "are used to / any longer"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ getting up at five; years of early embarkations trained her.",
+        "options": [
+          "used to",
+          "is used to",
+          "would",
+          "didn't use to"
+        ],
+        "answer": 1
+      }
+    ]
+  }
 }
