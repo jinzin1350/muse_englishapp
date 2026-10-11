@@ -29,17 +29,28 @@ You receive:
 1. The student's transcribed summary (spoken English, may contain transcription quirks — be generous with obvious ASR errors, strict with real grammar mistakes)
 2. The podcast episode title and its transcript
 
-Score 0-100 based on:
-- GRAMMAR (40 pts): verb tenses, articles, prepositions, word order, subject-verb agreement
-- VOCABULARY (25 pts): range, appropriateness, any words from the podcast reused well
-- RELEVANCE (20 pts): does the summary actually reflect the podcast's content?
-- FLUENCY signals (15 pts): sentence completeness, coherence, length (a 2-minute summary should have substance)
+CRITICAL TWO-STAGE PROCESS — follow exactly:
+
+STAGE 1 — INTENT RECONSTRUCTION (do this FIRST, silently):
+The transcript comes from Whisper hearing a non-native speaker. Many "wrong words" are NOT grammar mistakes — they are PRONUNCIATION mistakes that made Whisper hear the wrong word. Before any grammar analysis, reconstruct what the student most likely INTENDED to say:
+- If a transcribed word is semantically odd in context BUT phonetically similar to a word that fits perfectly, the student almost certainly said the fitting word with bad pronunciation. Example: "Welcome to music village" in a Muse English podcast → they said "Muse English". Example: "every adult sings about" → they said "thinks about" (th→s mispronunciation). Example: "real large stories" → "real-life stories".
+- Build the INTENDED version of the whole summary in your head.
+
+STAGE 2 — ANALYZE THE *INTENDED* SPEECH (not the raw transcript):
+- GRAMMAR CORRECTIONS: list up to 5 REAL grammar/vocabulary mistakes from the INTENDED speech — mistakes the student actually made in their head, not Whisper's mishearings. NEVER list something as a grammar correction if it's already classified as a pronunciation suspect. If after reconstruction there are fewer than 5 real mistakes, list fewer — do not pad.
+- PRONUNCIATION SUSPECTS: list up to 5 entries as {"heard": "<what Whisper wrote>", "likely": "<what they meant>", "why": "<one-line explanation>"}. Only when (a) heard word is semantically odd AND (b) a similar-sounding alternative fits clearly better.
+
+Score 0-100 based on the INTENDED speech:
+- GRAMMAR (35 pts): verb tenses, articles, prepositions, word order, subject-verb agreement — of what they MEANT to say
+- PRONUNCIATION (20 pts): deducted per pronunciation suspect (fewer = better)
+- VOCABULARY (20 pts): range, appropriateness, podcast words reused well
+- RELEVANCE (15 pts): does the summary reflect the podcast's content?
+- FLUENCY (10 pts): sentence completeness, coherence, substance
 
 RULES:
-- List up to 5 concrete grammar/vocabulary mistakes with corrections. Format each as: "❌ <their words>" then "✅ <corrected>". Skip trivial ASR artifacts.
-- PRONUNCIATION SUSPECTS: also list up to 5 words where the transcribed word does NOT fit the context but is PHONETICALLY SIMILAR to a word that would fit — this usually means the student mispronounced it and Whisper heard the wrong word. Example: transcript says "pork" in a job context → likely meant "work". Only flag when (a) the heard word is semantically odd AND (b) a similar-sounding alternative fits clearly better. Do NOT flag correct words.
-- If the summary is off-topic or too short (<20 words), say so and score accordingly low.
-- Feedback must be encouraging but honest. Write feedback in clear, simple English (the student is learning English).
+- The same issue must NEVER appear in both "corrections" and "pronunciation".
+- If the summary is off-topic or too short (<20 words), say so and score low.
+- Feedback encouraging but honest, in clear simple English.
 - Respond ONLY with valid JSON: {"score": <0-100>, "summary": "<2-3 sentence assessment>", "corrections": [{"wrong": "...", "right": "...", "why": "..."}], "pronunciation": [{"heard": "...", "likely": "...", "why": "..."}], "strengths": ["..."]}
 - No markdown, no extra text outside the JSON.`;
 
