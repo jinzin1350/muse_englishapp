@@ -1,6 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daily English Lessons (A1–C2) | Muse English Blog</title><meta name="description" content="Free daily English lessons for every level, from A1 beginner to C2 proficient. Vocabulary, podcast conversations and grammar.">
+<title>Daily English Lessons (A1–C2) | Muse English Blog</title>
+<meta name="description" content="Free daily English lessons for every level, from A1 beginner to C2 proficient. Vocabulary, podcast conversations and grammar.">
 <style>*{margin:0;padding:0;box-sizing:border-box}
 :root{--bg:#0a0e14;--card:#11161f;--accent:#ff9600;--text:#e8ecf1;--muted:#8b94a3;--line:#1e2632}
 body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.7}
@@ -47,20 +48,79 @@ audio{width:100%;margin-top:10px}
 .grammar{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;margin:18px 0}
 footer{text-align:center;padding:36px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:40px}
 @media(max-width:600px){.word img{width:100%;height:170px}}
-</style></head><body><nav><div class="wrap"><a class="logo" href="/">alireza<span>.</span></a></div></nav><div class="wrap"><div class="crumbs"><a href="/">Home</a> / Blog</div>
-<h1>Daily English Lessons</h1>
-<p class="meta">New lessons every day — pick your level and start learning.</p>
-<div class="level-grid"><a class="level-card" href="/blog/a1/">
-<div class="lvl">A1</div><div class="name">A1 Beginner</div>
-<div class="desc">Start from zero: basic words and simple sentences.</div></a><a class="level-card" href="/blog/a2/">
-<div class="lvl">A2</div><div class="name">A2 Elementary</div>
-<div class="desc">Elementary: everyday conversations and essential grammar.</div></a><a class="level-card" href="/blog/b1/">
-<div class="lvl">B1</div><div class="name">B1 Intermediate</div>
-<div class="desc">Intermediate: real topics, longer conversations.</div></a><a class="level-card" href="/blog/b2/">
-<div class="lvl">B2</div><div class="name">B2 Upper-Intermediate</div>
-<div class="desc">Upper-intermediate: work, culture and opinions.</div></a><a class="level-card" href="/blog/c1/">
-<div class="lvl">C1</div><div class="name">C1 Advanced</div>
-<div class="desc">Advanced: nuance, idioms and complex ideas.</div></a><a class="level-card" href="/blog/c2/">
-<div class="lvl">C2</div><div class="name">C2 Proficient</div>
-<div class="desc">Proficient: near-native fluency and precision.</div></a></div><div class="defbox"><h3>📖 What is Muse English?</h3>
-<p><strong>Muse English</strong> is a free English learning app with daily lessons across all 6 CEFR levels (A1 Beginner to C2 Proficient). Every day brings new vocabulary, a real podcast conversation, shadowing practice, grammar and quizzes — all at <a href="https://museenglishapp.com">museenglishapp.com</a>.</p></div></div><footer>© 2026 Alireza · <a href="https://museenglishapp.com">Muse English</a> · Built, not bought.</footer></body></html>
+/* ===== blog index light theme (2026-10-11) ===== */
+.bloglight{background:#FFFBF3;color:#1B1B33}
+.bloglight .wrap{max-width:1080px}
+.bnav{position:sticky;top:0;background:rgba(255,251,243,.94);backdrop-filter:blur(12px);border-bottom:1px solid #F0E6D2;z-index:10}
+.bnav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.bnav .links{display:flex;gap:26px;align-items:center}
+.bnav .links a{color:#1B1B33;font-size:14.5px;font-weight:500}
+.bnav .links a.on{color:#FF6B00;background:#FFF1E0;padding:6px 14px;border-radius:99px;font-weight:600}
+.blogo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:19px;color:#1B1B33}
+.blogo img{width:30px;height:30px}
+.bstart{background:linear-gradient(135deg,#FF9600,#FF6B00);color:#fff;font-weight:700;font-size:14.5px;padding:10px 22px;border-radius:99px}
+.bhero{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:36px 0 8px;flex-wrap:wrap}
+.bhero h1{font-size:clamp(34px,5vw,52px);font-weight:800;color:#101828;margin:10px 0 8px;letter-spacing:-.5px}
+.bhero .meta{color:#5A5A72;font-size:17px;margin:0}
+.bhero img{width:300px;max-width:45vw;height:auto}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:26px 0 50px}
+@media(max-width:800px){.bgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.bgrid{grid-template-columns:1fr}}
+.bcard{background:#fff;border:1px solid #F0E6D2;border-radius:20px;overflow:hidden;display:block;color:#1B1B33;box-shadow:0 4px 18px rgba(120,90,40,.06);transition:transform .18s,box-shadow .18s}
+.bcard:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(120,90,40,.12)}
+.bcard .bimg{position:relative;aspect-ratio:4/3;overflow:hidden}
+.bcard .bimg img{width:100%;height:100%;object-fit:cover;display:block}
+.bcard .bbadge{position:absolute;top:14px;left:14px;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);font-weight:800;font-size:19px;padding:8px 20px;border-radius:16px}
+.bcard .bbody{padding:20px 22px 22px}
+.bcard .bname{font-size:23px;font-weight:800;color:#101828;margin-bottom:4px}
+.bcard .bdesc{color:#5A5A72;font-size:14.5px;margin-bottom:14px}
+.bcard .bexp{display:inline-flex;align-items:center;gap:8px;color:#FF6B00;font-weight:700;font-size:15px;background:#FFF4E6;padding:9px 20px;border-radius:99px}
+.bwhat{background:#fff;border:1px solid #F0E6D2;border-radius:24px;padding:40px;margin:0 0 50px;position:relative;overflow:hidden}
+.bwhat h2{font-size:30px;color:#101828;margin:0 0 12px}
+.bwhat p{color:#5A5A72;font-size:15.5px;max-width:560px}
+.bfeats{display:flex;gap:8px;margin-top:26px;flex-wrap:wrap}
+.bfeat{flex:1;min-width:130px;text-align:center;padding:10px 6px}
+.bfeat .bic{width:56px;height:56px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 10px}
+.bfeat .bn{font-weight:700;font-size:14.5px;color:#101828}
+.bfeat .bd{font-size:12.5px;color:#8a8a9e;margin-top:2px}
+.bfoot{background:#FFFBF3;border-top:1px solid #F0E6D2;padding:28px 0;color:#8a8a9e;font-size:13.5px}
+.bfoot .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style></head>
+<body class="bloglight">
+<nav class="bnav"><div class="wrap"><a class="blogo" href="/"><img src="/media/landing/icon-flame.webp" alt="">Muse English</a>
+<div class="links"><a href="/">Home</a><a href="/blog/">Lessons</a><a href="/blog/" class="on">Blog</a><a href="/">App</a><a href="/">About</a>
+<a class="bstart" href="/#/signup">Start Learning &rarr;</a></div></div></nav>
+<div class="wrap"><div class="bhero"><div><div class="crumbs" style="padding:0"><a href="/">Home</a> / <span style="color:#FF6B00">Blog</span></div>
+<h1>Daily English Lessons</h1><p class="meta">New lessons every day — pick your level and start learning.</p></div>
+<img src="/media/landing/mascot-cta.webp" alt="Muse English mascot" loading="lazy"></div>
+<div class="bgrid"><a class="bcard" href="/blog/a1/">
+<div class="bimg"><img src="/blog/img/level-a1.webp" alt="Beginner English lessons" loading="lazy">
+<span class="bbadge" style="color:#1B1B33">A1</span></div>
+<div class="bbody"><div class="bname">Beginner</div><div class="bdesc">Start from zero: basic words and simple sentences.</div>
+<span class="bexp">Explore &rarr;</span></div></a><a class="bcard" href="/blog/a2/">
+<div class="bimg"><img src="/blog/img/level-a2.webp" alt="Elementary English lessons" loading="lazy">
+<span class="bbadge" style="color:#B45309">A2</span></div>
+<div class="bbody"><div class="bname">Elementary</div><div class="bdesc">Elementary: everyday conversations and essential grammar.</div>
+<span class="bexp">Explore &rarr;</span></div></a><a class="bcard" href="/blog/b1/">
+<div class="bimg"><img src="/blog/img/level-b1.webp" alt="Intermediate English lessons" loading="lazy">
+<span class="bbadge" style="color:#1B1B33">B1</span></div>
+<div class="bbody"><div class="bname">Intermediate</div><div class="bdesc">Intermediate: real topics, longer conversations.</div>
+<span class="bexp">Explore &rarr;</span></div></a><a class="bcard" href="/blog/b2/">
+<div class="bimg"><img src="/blog/img/level-b2.webp" alt="Upper-Intermediate English lessons" loading="lazy">
+<span class="bbadge" style="color:#4C1D95">B2</span></div>
+<div class="bbody"><div class="bname">Upper-Intermediate</div><div class="bdesc">Upper-intermediate: work, culture and opinions.</div>
+<span class="bexp">Explore &rarr;</span></div></a><a class="bcard" href="/blog/c1/">
+<div class="bimg"><img src="/blog/img/level-c1.webp" alt="Advanced English lessons" loading="lazy">
+<span class="bbadge" style="color:#C2410C">C1</span></div>
+<div class="bbody"><div class="bname">Advanced</div><div class="bdesc">Advanced: nuance, idioms and complex ideas.</div>
+<span class="bexp">Explore &rarr;</span></div></a><a class="bcard" href="/blog/c2/">
+<div class="bimg"><img src="/blog/img/level-c2.webp" alt="Proficient English lessons" loading="lazy">
+<span class="bbadge" style="color:#6D28D9">C2</span></div>
+<div class="bbody"><div class="bname">Proficient</div><div class="bdesc">Proficient: near-native fluency and precision.</div>
+<span class="bexp">Explore &rarr;</span></div></a></div>
+<div class="bwhat"><h2>What is Muse English?</h2>
+<p>Muse English is a free English learning app with daily lessons across all 6 CEFR levels. You can learn vocabulary, listen to our podcast, practice shadowing, study grammar, and take quizzes — all in one place, at your own pace.</p>
+<div class="bfeats"><div class="bfeat"><div class="bic" style="background:#FFF4E6">📖</div><div class="bn">Vocabulary</div><div class="bd">Learn useful words in context.</div></div><div class="bfeat"><div class="bic" style="background:#E8F4FF">🎙</div><div class="bn">Podcast</div><div class="bd">Listen to real English.</div></div><div class="bfeat"><div class="bic" style="background:#FFE8E8">🔊</div><div class="bn">Shadowing</div><div class="bd">Speak and sound more natural.</div></div><div class="bfeat"><div class="bic" style="background:#E8F0FF">📝</div><div class="bn">Grammar</div><div class="bd">Clear explanations and examples.</div></div><div class="bfeat"><div class="bic" style="background:#FFE8F0">🎯</div><div class="bn">Quizzes</div><div class="bd">Check your progress.</div></div></div></div></div>
+<footer class="bfoot"><div class="wrap"><a class="blogo" href="/"><img src="/media/landing/icon-flame.webp" alt="">Muse English</a>
+<span>© 2026 Alireza · Muse English · Built, not bought.</span></div></div>
+</body></html>
