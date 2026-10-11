@@ -3152,3 +3152,19 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
   .lp2-final h2{font-size:32px;}
   .lp2-final .lp2-cta-lg{width:100%;max-width:340px;box-sizing:border-box;}
 }
+
+/* ===== lp2 final CTA v2: cinematic spec (2026-10-11) ===== */
+.lp2-final{position:relative;overflow:hidden;background:#0B1020 url('/media/landing/bg-sunset.webp?v=3') center/cover no-repeat;padding:56px 20px;text-align:center;}
+.lp2-final-ol{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,16,32,.55) 0%,rgba(11,16,32,.25) 40%,rgba(11,16,32,.65) 100%);pointer-events:none;}
+.lp2-final>*:not(.lp2-final-ol){position:relative;}
+.cta-mascot-wrap{width:100%;display:flex;justify-content:center;overflow:visible;margin-bottom:24px;}
+.cta-mascot{width:clamp(130px,34vw,170px);height:auto;object-fit:contain;display:block;margin:0 auto;filter:drop-shadow(0 12px 32px rgba(255,150,0,.35));}
+.cta-title{color:#fff!important;font-size:clamp(28px,7vw,44px);font-weight:800;margin:0 0 14px;line-height:1.15;}
+.cta-title .accent{color:#ff8a22;}
+.cta-subtitle{color:rgba(255,255,255,.88);font-size:16px;line-height:1.6;margin:0 auto 24px;max-width:520px;}
+.cta-btn{display:inline-flex;align-items:center;justify-content:center;width:84%;max-width:340px;height:54px;font-size:17px;margin-bottom:16px;box-shadow:0 8px 32px rgba(255,138,34,.45);}
+.lp2-final .lp2-signin-row{color:rgba(255,255,255,.75);}
+@media(max-width:390px){
+  .cta-mascot{width:130px;}
+  .cta-title{font-size:28px;}
+}
