@@ -78,13 +78,27 @@ export async function onRequestPost(context) {
         { role: 'user', content: userMsg },
       ],
       max_tokens: 1200,
+      temperature: 0.3,
     });
     const text = (out && out.response ? String(out.response) : '').trim();
+    if (!text) return json({ error: 'AI_ANALYSIS_FAILED' }, 502);
+    let parsed = null;
+    /* try: full JSON object */
     const m = text.match(/\{[\s\S]*\}/);
-    if (!m) return json({ error: 'AI_ANALYSIS_FAILED' }, 502);
-    let parsed;
-    try { parsed = JSON.parse(m[0]); }
-    catch (e) { return json({ error: 'AI_ANALYSIS_FAILED' }, 502); }
+    if (m) { try { parsed = JSON.parse(m[0]); } catch (e) {} }
+    /* fallback: score regex + raw text */
+    if (!parsed || typeof parsed.score === 'undefined') {
+      const sm = text.match(/["']?score["']?\s*[:=]\s*(\d{1,3})/i);
+      if (sm) {
+        parsed = {
+          score: parseInt(sm[1], 10),
+          summary: text.slice(0, 500),
+          corrections: [],
+          strengths: [],
+        };
+      }
+    }
+    if (!parsed) return json({ error: 'AI_ANALYSIS_FAILED' }, 502);
     const score = Math.max(0, Math.min(100, parseInt(parsed.score, 10) || 0));
     return json({
       score: score,
