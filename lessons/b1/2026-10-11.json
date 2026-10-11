@@ -1,0 +1,384 @@
+{
+ "date": "2026-10-11",
+ "theme": "technology",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "screen",
+   "pos": "noun",
+   "meaning": "the flat front part of a phone or computer where you see pictures and words",
+   "example": "I read the news on my phone screen every morning.",
+   "pronunciation": "SKREEN",
+   "persian": "صفحه‌نمایش — قسمت صافی که روی گوشی یا کامپیوتر تصویر می‌بینی",
+   "photo": "media/b1/2026-10-11/photos/screen.jpg",
+   "word_audio": "media/b1/2026-10-11/word-audio/screen.mp3"
+  },
+  {
+   "word": "click",
+   "pos": "verb",
+   "meaning": "to press a button on a mouse or a phone to choose something",
+   "example": "Click the green button to start the video.",
+   "pronunciation": "KLIK",
+   "persian": "کلیک کردن — با ماوس یا گوشی دکمه‌ای را فشار دادن",
+   "photo": "media/b1/2026-10-11/photos/click.jpg",
+   "word_audio": "media/b1/2026-10-11/word-audio/click.mp3"
+  },
+  {
+   "word": "upload",
+   "pos": "verb",
+   "meaning": "to send a file from your device to the internet",
+   "example": "She uploads her photos to the internet every evening.",
+   "pronunciation": "UP-lohd",
+   "persian": "بارگذاری کردن — فرستادن فایل از دستگاه به اینترنت",
+   "photo": "media/b1/2026-10-11/photos/upload.jpg",
+   "word_audio": "media/b1/2026-10-11/word-audio/upload.mp3"
+  },
+  {
+   "word": "file",
+   "pos": "noun",
+   "meaning": "a document, photo, or video saved on a computer",
+   "example": "I saved the report as a file on my laptop.",
+   "pronunciation": "FYLE",
+   "persian": "فایل — سندی که روی کامپیوتر ذخیره شده",
+   "photo": "media/b1/2026-10-11/photos/file.jpg",
+   "word_audio": "media/b1/2026-10-11/word-audio/file.mp3"
+  },
+  {
+   "word": "app",
+   "pos": "noun",
+   "meaning": "a small program on a phone, like a map or a game",
+   "example": "This app helps me learn new English words every day.",
+   "pronunciation": "AP",
+   "persian": "اپلیکیشن — برنامه کوچکی روی گوشی",
+   "photo": "media/b1/2026-10-11/photos/app.jpg",
+   "word_audio": "media/b1/2026-10-11/word-audio/app.mp3"
+  },
+  {
+   "word": "data",
+   "pos": "noun",
+   "meaning": "information that computers store and use",
+   "example": "Our data shows that most people learn faster with pictures.",
+   "pronunciation": "DAY-tuh",
+   "persian": "داده — اطلاعاتی که کامپیوتر ذخیره و استفاده می‌کند",
+   "photo": "media/b1/2026-10-11/photos/data.jpg",
+   "word_audio": "media/b1/2026-10-11/word-audio/data.mp3"
+  },
+  {
+   "word": "gadget",
+   "pos": "noun",
+   "meaning": "a small clever machine or tool",
+   "example": "He bought a new gadget that opens the door with his voice.",
+   "pronunciation": "GA-jit",
+   "persian": "گجت — ابزار کوچک و هوشمند",
+   "photo": "media/b1/2026-10-11/photos/gadget.jpg",
+   "word_audio": "media/b1/2026-10-11/word-audio/gadget.mp3"
+  },
+  {
+   "word": "smart",
+   "pos": "adjective",
+   "meaning": "for machines: able to work alone and connect to the internet",
+   "example": "My smart speaker plays music when I say a word.",
+   "pronunciation": "SMAHRT",
+   "persian": "هوشمند — دستگاهی که به اینترنت وصل است و خودش کار می‌کند",
+   "photo": "media/b1/2026-10-11/photos/smart.jpg",
+   "word_audio": "media/b1/2026-10-11/word-audio/smart.mp3"
+  },
+  {
+   "word": "camera",
+   "pos": "noun",
+   "meaning": "a tool for taking photos and videos",
+   "example": "The camera on this phone takes very clear photos.",
+   "pronunciation": "KAM-ruh",
+   "persian": "دوربین — ابزاری برای گرفتن عکس و فیلم",
+   "photo": "media/b1/2026-10-11/photos/camera.jpg",
+   "word_audio": "media/b1/2026-10-11/word-audio/camera.mp3"
+  },
+  {
+   "word": "speaker",
+   "pos": "noun",
+   "meaning": "a device that plays sound loudly",
+   "example": "We connected a speaker and danced in the living room.",
+   "pronunciation": "SPEE-kur",
+   "persian": "بلندگو — دستگاهی که صدا را بلند پخش می‌کند",
+   "photo": "media/b1/2026-10-11/photos/speaker.jpg",
+   "word_audio": "media/b1/2026-10-11/word-audio/speaker.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-11/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Tech Words We Use Every Day",
+  "audio": "media/b1/2026-10-11/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-11/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Smart Home",
+  "audio": "media/b1/2026-10-11/shadowing.mp3",
+  "transcript": "media/b1/2026-10-11/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-11/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/028.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/029.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/030.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/031.mp3",
+   "media/b1/2026-10-11/shadowing-sentences/032.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'screen' mean?",
+   "options": [
+    "to press a button on a mouse or a phone to choose something",
+    "to send a file from your device to the internet",
+    "the flat front part of a phone or computer where you see pictures and words",
+    "a device that plays sound loudly"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'click' mean?",
+   "options": [
+    "to press a button on a mouse or a phone to choose something",
+    "a small program on a phone, like a map or a game",
+    "a document, photo, or video saved on a computer",
+    "information that computers store and use"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'upload' mean?",
+   "options": [
+    "a tool for taking photos and videos",
+    "to send a file from your device to the internet",
+    "for machines: able to work alone and connect to the internet",
+    "a small clever machine or tool"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'file' mean?",
+   "options": [
+    "the flat front part of a phone or computer where you see pictures and words",
+    "to press a button on a mouse or a phone to choose something",
+    "a small program on a phone, like a map or a game",
+    "a document, photo, or video saved on a computer"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'app' mean?",
+   "options": [
+    "a small program on a phone, like a map or a game",
+    "a device that plays sound loudly",
+    "information that computers store and use",
+    "to send a file from your device to the internet"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'data' mean?",
+   "options": [
+    "a small clever machine or tool",
+    "a document, photo, or video saved on a computer",
+    "information that computers store and use",
+    "a tool for taking photos and videos"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'gadget' mean?",
+   "options": [
+    "for machines: able to work alone and connect to the internet",
+    "a small clever machine or tool",
+    "the flat front part of a phone or computer where you see pictures and words",
+    "to send a file from your device to the internet"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'smart' mean?",
+   "options": [
+    "to press a button on a mouse or a phone to choose something",
+    "a small program on a phone, like a map or a game",
+    "a document, photo, or video saved on a computer",
+    "for machines: able to work alone and connect to the internet"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'camera' mean?",
+   "options": [
+    "a tool for taking photos and videos",
+    "information that computers store and use",
+    "a device that plays sound loudly",
+    "the flat front part of a phone or computer where you see pictures and words"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'speaker' mean?",
+   "options": [
+    "a small clever machine or tool",
+    "to press a button on a mouse or a phone to choose something",
+    "a device that plays sound loudly",
+    "to send a file from your device to the internet"
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "9A: Third conditional",
+  "explanation": "We use the third conditional to talk about the past. We imagine how the past could have been different.\n\nWe build it with **if + past perfect** in one half, and **would have + past participle** in the other half.\n\nExample: *If I had charged my phone, I would have taken more photos.* I did not charge it, so I took no photos.\n\nWe never say ~~if I would have~~. The word **would** goes in the second half only.\n\nWe can use **might have** or **could have** instead of **would have** when the result is less sure. *If she had clicked send, he might have seen the file.*\n\nThe short form 'd means two things. In the if-half it means **had**: *If I'd known*. In the other half it means **would**: *I'd have helped you*.",
+  "examples": [
+   "*If I had uploaded the file, you would have seen my photos.* (I did not upload it, so you saw nothing.)",
+   "*If she had clicked the right button, the app would have opened.* (She clicked the wrong button.)",
+   "*If he had looked at the screen, he would have read my message.* (He never looked at the screen.)",
+   "*If we had bought a smart TV, we would have watched the match together.* (We stayed home.)",
+   "*If I'd saved my data, I wouldn't have lost my work.* (I lost all my data.)",
+   "*If they had brought a camera, they could have filmed the wedding.* (They brought no camera.)"
+  ],
+  "practice": [
+   {
+    "q": "Make a third conditional: I did not charge my phone. I missed the call.",
+    "a": "If I had charged my phone, I would not have missed the call."
+   },
+   {
+    "q": "Is this correct: 'If I would have known, I would have come'? Fix it if not.",
+    "a": "Not correct. Say: 'If I had known, I would have come.'"
+   },
+   {
+    "q": "What does this mean: 'If I'd studied harder, I might have passed'?",
+    "a": "I did not study hard, and maybe I failed. The result is less certain, so we use 'might have'."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "If I would have known, I would have come.",
+     "If I had known, I would have come.",
+     "If I know, I would have come.",
+     "If I had known, I would come."
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: 'If Tom ___ to university, he ___ a job with that company.' (not go / not get)",
+    "options": [
+     "didn't go / wouldn't get",
+     "hadn't gone / wouldn't have got",
+     "wouldn't go / hadn't got",
+     "hadn't gone / wouldn't have gotten"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Complete: 'If you ___ me to the station, I ___ my train.' (not take / miss)",
+    "options": [
+     "hadn't taken / would have missed",
+     "didn't take / would miss",
+     "hadn't taken / would miss",
+     "wouldn't take / had missed"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "What does 'If I'd charged my phone, I'd have called you' mean?",
+    "options": [
+     "I charged my phone and I called you.",
+     "I didn't charge my phone, so I didn't call you.",
+     "I will charge my phone tomorrow.",
+     "I always charge my phone."
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: 'If she ___ the file, she ___ the photos.' (upload / see)",
+    "options": [
+     "uploaded / would see",
+     "had uploaded / would have seen",
+     "would have uploaded / had seen",
+     "has uploaded / will see"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "In 'If I'd known', the short form 'd means:",
+    "options": [
+     "would",
+     "had",
+     "did",
+     "could"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "If he had clicked send, he would have sent the file.",
+     "If he would have clicked send, he had sent the file.",
+     "If he clicked send, he would have sent the file.",
+     "If he had clicked send, he would send the file."
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Complete: 'We ___ the match if the referee ___ us a penalty.' (not win / not give)",
+    "options": [
+     "wouldn't have won / hadn't given",
+     "didn't win / wouldn't give",
+     "wouldn't win / hadn't given",
+     "hadn't won / wouldn't have given"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Complete: 'If she'd studied harder, she ___ the exam.'",
+    "options": [
+     "might pass",
+     "might have passed",
+     "might had passed",
+     "might has passed"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Which sentence talks about an imaginary past?",
+    "options": [
+     "If it rains, we will stay home.",
+     "If I had bought a smart TV, we would have watched the match together.",
+     "If you click here, the app opens.",
+     "If I see him, I say hello."
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

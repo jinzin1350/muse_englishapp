@@ -1,0 +1,383 @@
+{
+ "date": "2026-10-11",
+ "theme": "emotions & character",
+ "level": "c1",
+ "cefr": "C1",
+ "words": [
+  {
+   "word": "nostalgia",
+   "pos": "noun",
+   "meaning": "a deep longing for the past, often for a time or place that feels happier than now",
+   "example": "Walking through my childhood street filled me with an overwhelming nostalgia for the summers I thought would never end.",
+   "pronunciation": "nos-TAL-juh",
+   "persian": "نوستالژی؛ دلتنگی برای گذشته",
+   "photo": "media/c1/2026-10-11/photos/nostalgia.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/nostalgia.mp3"
+  },
+  {
+   "word": "catharsis",
+   "pos": "noun",
+   "meaning": "an emotional release that leaves you feeling cleansed or relieved",
+   "example": "Writing the letter I never sent became an unexpected catharsis, and I finally felt free of the old anger.",
+   "pronunciation": "kuh-THAR-sis",
+   "persian": "رهایی و تسکین احساسی",
+   "photo": "media/c1/2026-10-11/photos/catharsis.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/catharsis.mp3"
+  },
+  {
+   "word": "resilience",
+   "pos": "noun",
+   "meaning": "the ability to recover quickly and grow after difficulty or setbacks",
+   "example": "Her resilience after the company collapsed was remarkable; within a year she had rebuilt her career from scratch.",
+   "pronunciation": "ri-ZIL-yuns",
+   "persian": "تاب‌آوری",
+   "photo": "media/c1/2026-10-11/photos/resilience.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/resilience.mp3"
+  },
+  {
+   "word": "wistful",
+   "pos": "adjective",
+   "meaning": "sad but thoughtful, quietly wishing for something you cannot quite have",
+   "example": "He gave a wistful smile as the train pulled away, already missing a city he had only just left.",
+   "pronunciation": "WIST-ful",
+   "persian": "حسرت‌بار و کمی غمگین",
+   "photo": "media/c1/2026-10-11/photos/wistful.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/wistful.mp3"
+  },
+  {
+   "word": "disillusionment",
+   "pos": "noun",
+   "meaning": "the disappointment of realizing something is not as good as you once believed",
+   "example": "After a decade of idealism, her disillusionment with the political system was complete and irreversible.",
+   "pronunciation": "dis-i-LOO-zhun-munt",
+   "persian": "سرخوردگی؛ از توهم درآمدن",
+   "photo": "media/c1/2026-10-11/photos/disillusionment.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/disillusionment.mp3"
+  },
+  {
+   "word": "equanimity",
+   "pos": "noun",
+   "meaning": "calm and balance of mind, even in difficult situations",
+   "example": "Despite the chaos in the markets, the veteran diplomat answered every hostile question with perfect equanimity.",
+   "pronunciation": "ee-kwuh-NIM-i-tee",
+   "persian": "آرامش درونی و خونسردی",
+   "photo": "media/c1/2026-10-11/photos/equanimity.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/equanimity.mp3"
+  },
+  {
+   "word": "imperious",
+   "pos": "adjective",
+   "meaning": "commanding and arrogant, acting as if you have authority over everyone",
+   "example": "The manager's imperious tone alienated the entire team, who resented being spoken to like schoolchildren.",
+   "pronunciation": "im-PEER-ee-us",
+   "persian": "متکبرانه و دستوردهنده",
+   "photo": "media/c1/2026-10-11/photos/imperious.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/imperious.mp3"
+  },
+  {
+   "word": "recalcitrant",
+   "pos": "adjective",
+   "meaning": "stubbornly refusing to obey rules or follow guidance",
+   "example": "The recalcitrant student ignored every warning, and by spring he had been suspended twice.",
+   "pronunciation": "ri-KAL-si-trunt",
+   "persian": "سرکش و نافرمان",
+   "photo": "media/c1/2026-10-11/photos/recalcitrant.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/recalcitrant.mp3"
+  },
+  {
+   "word": "introspection",
+   "pos": "noun",
+   "meaning": "the act of looking inward and examining your own thoughts and feelings",
+   "example": "A month of quiet introspection convinced her that the career change was not a whim but a necessity.",
+   "pronunciation": "in-truh-SPEK-shun",
+   "persian": "درون‌نگری و خودکاوی",
+   "photo": "media/c1/2026-10-11/photos/introspection.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/introspection.mp3"
+  },
+  {
+   "word": "trepidation",
+   "pos": "noun",
+   "meaning": "a nervous fear or anxiety about something that is about to happen",
+   "example": "She approached the stage with trepidation, yet delivered the keynote without a single mistake.",
+   "pronunciation": "trep-i-DAY-shun",
+   "persian": "هراس و نگرانی",
+   "photo": "media/c1/2026-10-11/photos/trepidation.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/trepidation.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c1/2026-10-11/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: The Landscape of Emotion",
+  "audio": "media/c1/2026-10-11/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-10-11/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Long Way Back",
+  "audio": "media/c1/2026-10-11/shadowing.mp3",
+  "transcript": "media/c1/2026-10-11/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c1/2026-10-11/shadowing-sentences/001.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/002.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/003.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/004.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/005.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/006.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/007.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/008.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/009.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/010.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/011.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/012.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/013.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/014.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/015.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/016.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/017.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/018.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/019.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/020.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/021.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/022.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/023.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/024.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/025.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/026.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/027.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/028.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/029.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/030.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/031.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/032.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/033.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/034.mp3",
+   "media/c1/2026-10-11/shadowing-sentences/035.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'nostalgia' mean?",
+   "options": [
+    "the act of looking inward and examining your own thoughts and feelings",
+    "the disappointment of realizing something is not as good as you once believed",
+    "stubbornly refusing to obey rules or follow guidance",
+    "a deep longing for the past, often for a time or place that feels happier than now"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'catharsis' mean?",
+   "options": [
+    "the disappointment of realizing something is not as good as you once believed",
+    "calm and balance of mind, even in difficult situations",
+    "an emotional release that leaves you feeling cleansed or relieved",
+    "sad but thoughtful, quietly wishing for something you cannot quite have"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'resilience' mean?",
+   "options": [
+    "the act of looking inward and examining your own thoughts and feelings",
+    "the ability to recover quickly and grow after difficulty or setbacks",
+    "commanding and arrogant, acting as if you have authority over everyone",
+    "a nervous fear or anxiety about something that is about to happen"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'wistful' mean?",
+   "options": [
+    "a nervous fear or anxiety about something that is about to happen",
+    "the act of looking inward and examining your own thoughts and feelings",
+    "the disappointment of realizing something is not as good as you once believed",
+    "sad but thoughtful, quietly wishing for something you cannot quite have"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'disillusionment' mean?",
+   "options": [
+    "an emotional release that leaves you feeling cleansed or relieved",
+    "a deep longing for the past, often for a time or place that feels happier than now",
+    "sad but thoughtful, quietly wishing for something you cannot quite have",
+    "the disappointment of realizing something is not as good as you once believed"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'equanimity' mean?",
+   "options": [
+    "commanding and arrogant, acting as if you have authority over everyone",
+    "a nervous fear or anxiety about something that is about to happen",
+    "calm and balance of mind, even in difficult situations",
+    "the ability to recover quickly and grow after difficulty or setbacks"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'imperious' mean?",
+   "options": [
+    "commanding and arrogant, acting as if you have authority over everyone",
+    "the disappointment of realizing something is not as good as you once believed",
+    "stubbornly refusing to obey rules or follow guidance",
+    "the act of looking inward and examining your own thoughts and feelings"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'recalcitrant' mean?",
+   "options": [
+    "the act of looking inward and examining your own thoughts and feelings",
+    "stubbornly refusing to obey rules or follow guidance",
+    "commanding and arrogant, acting as if you have authority over everyone",
+    "a nervous fear or anxiety about something that is about to happen"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'introspection' mean?",
+   "options": [
+    "commanding and arrogant, acting as if you have authority over everyone",
+    "the act of looking inward and examining your own thoughts and feelings",
+    "the ability to recover quickly and grow after difficulty or setbacks",
+    "a deep longing for the past, often for a time or place that feels happier than now"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'trepidation' mean?",
+   "options": [
+    "a nervous fear or anxiety about something that is about to happen",
+    "an emotional release that leaves you feeling cleansed or relieved",
+    "a deep longing for the past, often for a time or place that feels happier than now",
+    "the ability to recover quickly and grow after difficulty or setbacks"
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "title": "Third Conditional — and Mixed Conditionals",
+  "explanation": "The third conditional is the grammar of regret and relief. It replays the past with a wistful \"what if.\"\n\nThe shape is fixed: **if + past perfect**, then **would have + past participle**. If I had known about the delay, I would have taken another route.\n\nWatch the contraction **'d**: in the **if**-clause it means **had**, in the result clause it means **would**. It is perfect for admitting past trepidation: if I hadn't frozen, I would have introduced myself.\n\nFor less certain results, use **might have** or **could have** instead of **would have**. If the manager hadn't been so imperious, the team might have stayed.\n\nC1 speakers often invert the **if**-clause for emphasis: **had I known**, **had they listened**. This formal flip is common in essays and speeches, never in casual chat.\n\nMixed conditionals connect a past condition to a present result: **if + past perfect**, **would + infinitive**. If I hadn't missed that flight, I would be in Kyoto now. This is how you express a lasting disillusionment with a past choice.\n\nA moment of honest introspection often uses this form: if I had faced my fears sooner, I would feel calmer today. The past stays past, but its echo — a nostalgia for the road not taken — lives in the present.\n\nCommon mistake: never use **would have** in the **if**-clause. If I would have known is wrong; say if I had known. A recalcitrant learner keeps making this error; a resilient one fixes it and moves on.\n\nQuick recap: past regret = **if + past perfect**, **would / might / could have + participle**. Past cause with a present result = mixed conditional. Naming a past mistake out loud can be its own small catharsis — and this grammar makes it precise, even elegant, delivered with equanimity.",
+  "examples": [
+   "*If I hadn't frozen* with trepidation, *I would have introduced* myself. (a regret about a missed moment)",
+   "He *would have apologized*, but by then his tone *had turned* imperious. (result clause first, then the if-clause)",
+   "*Had I done* the introspection sooner, *I might have avoided* the whole mess. (inverted if-clause, uncertain result)",
+   "*If I hadn't missed* that flight, *I would be living* in Kyoto now. (mixed conditional: past cause, present result)",
+   "Writing it down *would have given* her the catharsis she needed, *if she had dared* to be honest. (result first, emotional payoff)",
+   "They *could have won* the contract *if their proposal hadn't arrived* a day late. (could have for a possible result)"
+  ],
+  "practice": [
+   {
+    "q": "Make a third conditional: You didn't study. You failed the exam.",
+    "a": "If I had studied, I wouldn't have failed the exam. (Or with uncertainty: If I'd studied harder, I might have passed.)"
+   },
+   {
+    "q": "Correct the mistake: If I would have known, I would have helped.",
+    "a": "If I had known, I would have helped. (Never put 'would have' in the if-clause.)"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence is a correct third conditional?",
+    "options": [
+     "If I would have known, I would have come.",
+     "If I have known, I would have come.",
+     "If I knew, I would have come.",
+     "If I had known, I would have come."
+    ],
+    "answer": 3
+   },
+   {
+    "question": "In \"If I'd seen it, I'd have bought it\", the two 'd contractions mean…",
+    "options": [
+     "had / had",
+     "had / would",
+     "would / would",
+     "would / had"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "\"If she'd trained harder, she might have won.\" The speaker is…",
+    "options": [
+     "certain that she won",
+     "unsure about the past result",
+     "talking about the future",
+     "giving an order"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Choose the correct inversion: \"… I known, I would have acted.\"",
+    "options": [
+     "Had",
+     "Have",
+     "Would",
+     "Did"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Which is a mixed conditional (past condition, present result)?",
+    "options": [
+     "If I miss the flight, I will be angry.",
+     "If I hadn't missed the flight, I would be in Kyoto now.",
+     "If I missed the flight, I would be angry.",
+     "If I had missed the flight, I would have been angry."
+    ],
+    "answer": 1
+   },
+   {
+    "question": "What's wrong with \"If I would have had time, I would have called\"?",
+    "options": [
+     "it should use present simple",
+     "nothing — it's correct",
+     "it needs 'will' instead",
+     "'would have' can't go in the if-clause"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "\"If it hadn't been for your help, I could have lost everything.\" 'Could have' expresses…",
+    "options": [
+     "a polite request",
+     "a certain future plan",
+     "a possible but uncertain past result",
+     "a present habit"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Complete the sentence: \"If they … harder, they … succeeded.\"",
+    "options": [
+     "have tried / would have",
+     "would have tried / had",
+     "had tried / might have",
+     "tried / will have"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Inverted and formal: \"… you listened, you would have understood.\"",
+    "options": [
+     "Should had",
+     "If had",
+     "Would",
+     "Had"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "\"If I'd faced my fears sooner, I would feel calmer today.\" This shows…",
+    "options": [
+     "a past routine",
+     "a past condition with a present result",
+     "a present habit",
+     "a future plan"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

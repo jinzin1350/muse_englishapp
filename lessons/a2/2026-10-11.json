@@ -1,0 +1,296 @@
+{
+ "date": "2026-10-11",
+ "theme": "money & shopping",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "coin",
+   "pos": "noun",
+   "meaning": "a small round piece of metal money",
+   "example": "I put a coin in the machine.",
+   "pronunciation": "KOYN",
+   "persian": "سکه",
+   "photo": "media/a2/2026-10-11/photos/coin.jpg",
+   "word_audio": "media/a2/2026-10-11/word-audio/coin.mp3"
+  },
+  {
+   "word": "pay",
+   "pos": "verb",
+   "meaning": "to give money for something you buy",
+   "example": "I pay for my lunch at the cafe.",
+   "pronunciation": "PAY",
+   "persian": "پول دادن",
+   "photo": "media/a2/2026-10-11/photos/pay.jpg",
+   "word_audio": "media/a2/2026-10-11/word-audio/pay.mp3"
+  },
+  {
+   "word": "bill",
+   "pos": "noun",
+   "meaning": "the paper that shows how much money you must pay",
+   "example": "The waiter brings the bill to our table.",
+   "pronunciation": "BIL",
+   "persian": "صورتحساب",
+   "photo": "media/a2/2026-10-11/photos/bill.jpg",
+   "word_audio": "media/a2/2026-10-11/word-audio/bill.mp3"
+  },
+  {
+   "word": "card",
+   "pos": "noun",
+   "meaning": "a small plastic thing you use to pay instead of cash",
+   "example": "She pays with her card, not cash.",
+   "pronunciation": "KARD",
+   "persian": "کارت بانکی",
+   "photo": "media/a2/2026-10-11/photos/card.jpg",
+   "word_audio": "media/a2/2026-10-11/word-audio/card.mp3"
+  },
+  {
+   "word": "expensive",
+   "pos": "adjective",
+   "meaning": "costs a lot of money",
+   "example": "This watch is too expensive for me.",
+   "pronunciation": "ik-SPEN-siv",
+   "persian": "گران",
+   "photo": "media/a2/2026-10-11/photos/expensive.jpg",
+   "word_audio": "media/a2/2026-10-11/word-audio/expensive.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-10-11/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Money and Shopping",
+  "audio": "media/a2/2026-10-11/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-10-11/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "My Saturday Shopping",
+  "audio": "media/a2/2026-10-11/shadowing.mp3",
+  "transcript": "media/a2/2026-10-11/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-10-11/shadowing-sentences/001.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/002.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/003.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/004.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/005.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/006.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/007.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/008.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/009.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/010.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/011.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/012.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/013.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/014.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/015.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/016.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/017.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/018.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/019.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/020.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/021.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/022.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/023.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/024.mp3",
+   "media/a2/2026-10-11/shadowing-sentences/025.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'coin' mean?",
+   "options": [
+    "a paper that shows how much you must pay",
+    "something that costs a lot of money",
+    "a small round piece of metal money",
+    "to give money for something you buy"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'pay' mean?",
+   "options": [
+    "to give money for something you buy",
+    "a small plastic thing you use to pay",
+    "a small round piece of metal money",
+    "costs a lot of money"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'bill' mean?",
+   "options": [
+    "a small round piece of metal money",
+    "to give money for something you buy",
+    "a small plastic thing you use to pay",
+    "the paper that shows how much money you must pay"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'card' mean?",
+   "options": [
+    "costs a lot of money",
+    "a small plastic thing you use to pay instead of cash",
+    "the paper that shows how much money you must pay",
+    "to give money for something you buy"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'expensive' mean?",
+   "options": [
+    "to give money for something you buy",
+    "a small round piece of metal money",
+    "costs a lot of money",
+    "a small plastic thing you use to pay"
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "9A: Third conditional (imagining a different past)",
+  "explanation": "We use the third conditional to imagine a different past. The past is real, but we dream about another result.\n\nThe form is simple: **If + past, would have + past participle**. The if-part shows the imaginary past. The **would have** part shows the imaginary result.\n\nImagine yesterday: I saw an expensive watch, but I did not buy it. We say: **If it was cheap, I would have bought it**.\n\nThe result did NOT really happen. I did not buy the watch. The sentence only imagines it.\n\nYou can also use **could have** or **might have** for a less sure result. Example: **If she had the card, she might have paid with it**.",
+  "examples": [
+   {
+    "sentence": "*If I found* a coin on the street, I *would have bought* an apple.",
+    "hint": "imagining a different past"
+   },
+   {
+    "sentence": "*If she had* her card, she *would have paid* with it.",
+    "hint": "but she paid with cash"
+   },
+   {
+    "sentence": "*If the watch was* not expensive, I *would have bought* it.",
+    "hint": "but it was expensive"
+   },
+   {
+    "sentence": "*If we read* the bill, we *would have seen* the mistake.",
+    "hint": "but we did not read it"
+   },
+   {
+    "sentence": "*If you called* me, I *would have helped* you.",
+    "hint": "but you did not call"
+   },
+   {
+    "sentence": "*If I saved* my money, I *might have bought* a new bike.",
+    "hint": "a less sure result"
+   }
+  ],
+  "practice": [
+   {
+    "q": "Is the result in these sentences real or imaginary?",
+    "a": "Imaginary - it did not really happen."
+   },
+   {
+    "q": "What is the form of the third conditional?",
+    "a": "**If + past, would have + past participle.**"
+   },
+   {
+    "q": "Make a third conditional sentence: you did not bring your card yesterday.",
+    "a": "If I brought my card, I would have paid with it."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If I ___ a coin, I would have bought an apple.",
+    "options": [
+     "find",
+     "found",
+     "finds",
+     "have found"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "She would have paid with her card if she ___ it.",
+    "options": [
+     "has",
+     "had",
+     "have",
+     "having"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "If the watch ___ not expensive, I would have bought it.",
+    "options": [
+     "is",
+     "are",
+     "was",
+     "be"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "We would have seen the mistake if we ___ the bill.",
+    "options": [
+     "reads",
+     "to read",
+     "read",
+     "reading"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "If you ___ me, I would have helped you.",
+    "options": [
+     "call",
+     "calls",
+     "calling",
+     "called"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "He ___ have bought the car if he had the money.",
+    "options": [
+     "will",
+     "would",
+     "can",
+     "must"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "If she studied harder, she ___ have passed the exam.",
+    "options": [
+     "will",
+     "passes",
+     "might",
+     "must"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "They would have come if we ___ them.",
+    "options": [
+     "invite",
+     "invited",
+     "invites",
+     "inviting"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "I would not have paid that much if the bag ___ expensive.",
+    "options": [
+     "was",
+     "is",
+     "be",
+     "am"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "If I saved my money, I ___ have bought a new bike.",
+    "options": [
+     "will",
+     "can",
+     "must",
+     "might"
+    ],
+    "answer": 3
+   }
+  ],
+  "audio": "media/a2/2026-10-11/grammar-en.mp3"
+ }
+}

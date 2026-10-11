@@ -1,0 +1,268 @@
+{
+ "date": "2026-10-11",
+ "theme": "nature & environment",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "moon",
+   "pos": "noun",
+   "meaning": "the round bright light in the sky at night",
+   "example": "The moon is big and bright tonight.",
+   "pronunciation": "MOON",
+   "persian": "ماه",
+   "photo": "media/a1/2026-10-11/photos/moon.jpg",
+   "word_audio": "media/a1/2026-10-11/word-audio/moon.mp3"
+  },
+  {
+   "word": "star",
+   "pos": "noun",
+   "meaning": "a small bright light in the night sky",
+   "example": "I see a star in the sky.",
+   "pronunciation": "STAR",
+   "persian": "ستاره",
+   "photo": "media/a1/2026-10-11/photos/star.jpg",
+   "word_audio": "media/a1/2026-10-11/word-audio/star.mp3"
+  },
+  {
+   "word": "sky",
+   "pos": "noun",
+   "meaning": "the open space above us, where the clouds are",
+   "example": "The sky is blue today.",
+   "pronunciation": "SKY",
+   "persian": "آسمان",
+   "photo": "media/a1/2026-10-11/photos/sky.jpg",
+   "word_audio": "media/a1/2026-10-11/word-audio/sky.mp3"
+  },
+  {
+   "word": "leaf",
+   "pos": "noun",
+   "meaning": "the flat green part of a tree",
+   "example": "A green leaf falls from the tree.",
+   "pronunciation": "LEEF",
+   "persian": "برگ",
+   "photo": "media/a1/2026-10-11/photos/leaf.jpg",
+   "word_audio": "media/a1/2026-10-11/word-audio/leaf.mp3"
+  },
+  {
+   "word": "stone",
+   "pos": "noun",
+   "meaning": "a small hard rock",
+   "example": "The boy holds a smooth stone.",
+   "pronunciation": "STOHN",
+   "persian": "سنگ",
+   "photo": "media/a1/2026-10-11/photos/stone.jpg",
+   "word_audio": "media/a1/2026-10-11/word-audio/stone.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-10-11/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Nature at Night",
+  "audio": "media/a1/2026-10-11/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a1/2026-10-11/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Walk in Nature",
+  "audio": "media/a1/2026-10-11/shadowing.mp3",
+  "transcript": "media/a1/2026-10-11/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a1/2026-10-11/shadowing-sentences/001.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/002.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/003.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/004.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/005.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/006.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/007.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/008.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/009.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/010.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/011.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/012.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/013.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/014.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/015.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/016.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/017.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/018.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/019.mp3",
+   "media/a1/2026-10-11/shadowing-sentences/020.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'moon' mean?",
+   "options": [
+    "the open space above us, where the clouds are",
+    "a small bright light in the night sky",
+    "the flat green part of a tree",
+    "the round bright light in the sky at night"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'star' mean?",
+   "options": [
+    "the flat green part of a tree",
+    "the open space above us, where the clouds are",
+    "a small bright light in the night sky",
+    "the round bright light in the sky at night"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'sky' mean?",
+   "options": [
+    "the round bright light in the sky at night",
+    "the flat green part of a tree",
+    "a small bright light in the night sky",
+    "the open space above us, where the clouds are"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'leaf' mean?",
+   "options": [
+    "the round bright light in the sky at night",
+    "a small bright light in the night sky",
+    "the flat green part of a tree",
+    "the open space above us, where the clouds are"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'stone' mean?",
+   "options": [
+    "the round bright light in the sky at night",
+    "a small bright light in the night sky",
+    "the open space above us, where the clouds are",
+    "a small hard rock"
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Review: talking about the past (Simple Past)",
+  "explanation": "Today we review, not learn. The **third conditional** is a B2 topic.\n\nWe need **simple past** first. The **simple past** talks about yesterday.\n\nUse **was** and **were** for the past. I **was** happy. They **were** big.\n\nUse **saw** for see in the past. Use **found** for find in the past.\n\nNow use the day's words in the past. I **saw** the moon. The sky **was** blue.",
+  "examples": [
+   "*I *saw* the moon.* (last night)",
+   "*The sky *was* blue.* (yesterday)",
+   "*I *found* a stone.* (on the road)",
+   "*The leaf *was* green.* (in spring)",
+   "*We *looked* at the star.* (at night)"
+  ],
+  "practice": [
+   {
+    "q": "Say 'I see the moon' in the past.",
+    "a": "I saw the moon."
+   },
+   {
+    "q": "Say 'The sky is blue' in the past.",
+    "a": "The sky was blue."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "What is the past of 'see'?",
+    "options": [
+     "seed",
+     "saw",
+     "seen",
+     "seeing"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "I ___ the moon last night.",
+    "options": [
+     "see",
+     "saw",
+     "sees",
+     "seeing"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "The sky ___ blue yesterday.",
+    "options": [
+     "is",
+     "are",
+     "was",
+     "be"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I ___ a stone on the road.",
+    "options": [
+     "find",
+     "finds",
+     "found",
+     "finding"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "The leaf ___ green in spring.",
+    "options": [
+     "was",
+     "is",
+     "are",
+     "were"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "We ___ at the star at night.",
+    "options": [
+     "look",
+     "looked",
+     "looks",
+     "looking"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "What is the past of 'find'?",
+    "options": [
+     "found",
+     "finded",
+     "finds",
+     "founds"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The stones ___ big.",
+    "options": [
+     "was",
+     "were",
+     "is",
+     "are"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "She ___ the moon last night.",
+    "options": [
+     "see",
+     "saw",
+     "sees",
+     "seed"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "The stars ___ bright last night.",
+    "options": [
+     "is",
+     "are",
+     "was",
+     "were"
+    ],
+    "answer": 3
+   }
+  ],
+  "audio": "media/a1/2026-10-11/grammar-en.mp3"
+ }
+}
