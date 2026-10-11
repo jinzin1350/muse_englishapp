@@ -3127,3 +3127,15 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .lp2-player span{color:#fff;font-size:13px;}
 .lp2-player-btns{display:flex;gap:8px;}
 .lp2-player-btns span{flex:1;background:rgba(255,255,255,.85);border-radius:12px;padding:10px 4px;font-size:12.5px;text-align:center;color:#333;box-shadow:0 3px 10px rgba(0,0,0,.05);}
+
+/* ===== lp2 levels v2: white cards (2026-10-11) ===== */
+.lp2-levels-sec{text-align:center;}
+.lp2-levels{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;}
+.lp2-level{background:#fff;border-radius:22px;padding:24px 16px 20px;text-decoration:none;color:inherit;box-shadow:0 6px 24px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.03);display:flex;flex-direction:column;align-items:center;transition:transform .15s,box-shadow .15s;}
+.lp2-level:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1);}
+.lp2-lvl-top{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:14px;min-height:76px;}
+.lp2-lvl-badge{width:64px;height:64px;border-radius:18px;object-fit:cover;}
+.lp2-lvl-ill{width:64px;height:64px;object-fit:contain;}
+.lp2-lvl-name{font-weight:800;font-size:19px;color:#1a1a2e;margin-bottom:6px;font-family:Georgia,serif;}
+.lp2-lvl-desc{font-size:13.5px;color:#666;line-height:1.5;margin-bottom:16px;flex:1;}
+.lp2-lvl-go{width:44px;height:44px;border-radius:50%;background:color-mix(in srgb,var(--lv) 12%,white);color:var(--lv);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;}

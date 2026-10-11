@@ -2062,12 +2062,12 @@ function renderLanding(v) {
     ['icon-quiz', '40,000+', 'quiz questions to practice']
   ];
   const LVLS = [
-    ['badge-a1', 'A1', 'Beginner', 'First words and everyday phrases.'],
-    ['badge-a2', 'A2', 'Elementary', 'Simple sentences about daily life.'],
-    ['badge-b1', 'B1', 'Intermediate', 'Independent conversations and stories.'],
-    ['badge-b2', 'B2', 'Upper-Intermediate', 'Fluent discussion of real topics.'],
-    ['badge-c1', 'C1', 'Advanced', 'Nuanced, advanced expression.'],
-    ['badge-c2', 'C2', 'Proficiency', 'Near-native mastery and precision.']
+    ['badge-a1', 'lvl-a1-bubble', 'A1', 'Beginner', 'First words and everyday phrases.', '#2B7FFF'],
+    ['badge-a2', 'lvl-a2-sprout', 'A2', 'Elementary', 'Simple sentences about daily life.', '#22B573'],
+    ['badge-b1', 'lvl-b1-book', 'B1', 'Intermediate', 'Independent conversations and stories.', '#FF6B00'],
+    ['badge-b2', 'lvl-b2-chats', 'B2', 'Upper-Intermediate', 'Fluent discussion of real topics.', '#8B5CF6'],
+    ['badge-c1', 'icon-target', 'C1', 'Advanced', 'Nuanced, advanced expression.', '#EC4899'],
+    ['badge-c2', 'lvl-c2-mountain', 'C2', 'Proficiency', 'Near-native mastery and precision.', '#F59E0B']
   ];
   v.innerHTML =
   '<div class="lp2">' +
@@ -2136,13 +2136,17 @@ function renderLanding(v) {
     '</section>' +
 
     /* Levels */
-    '<section class="lp2-section" id="levels">' +
+    '<section class="lp2-section lp2-levels-sec" id="levels">' +
+      '<div class="lp2-kicker">ONE APP, SIX LEVELS</div>' +
       '<h2>One app, six levels</h2>' +
       '<p class="lp2-sub">From your first English words to near-native precision. Pick your level when you join \u2014 every lesson matches it.</p>' +
       '<div class="lp2-levels">' +
         LVLS.map(function (lv) {
-          return '<div class="lp2-level"><img src="' + L + lv[0] + '.webp?v=3" alt="' + lv[1] + ' level badge" loading="lazy">' +
-            '<div class="lp2-lvl-name">' + lv[2] + '</div><div class="lp2-lvl-desc">' + lv[3] + '</div></div>';
+          return '<a class="lp2-level" href="#/signup" style="--lv:' + lv[5] + '">' +
+            '<div class="lp2-lvl-top"><img class="lp2-lvl-badge" src="' + L + lv[0] + '.webp?v=3" alt="' + lv[2] + ' level badge" loading="lazy">' +
+            '<img class="lp2-lvl-ill" src="' + L + lv[1] + '.webp?v=3" alt="" loading="lazy"></div>' +
+            '<div class="lp2-lvl-name">' + lv[3] + '</div><div class="lp2-lvl-desc">' + lv[4] + '</div>' +
+            '<span class="lp2-lvl-go">\u276F</span></a>';
         }).join('') +
       '</div>' +
       '<div class="lp2-center"><a class="lp2-cta lp2-cta-ghost" href="#/signup">Find my level \u2014 join free</a></div>' +
@@ -9306,7 +9310,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610111754';
+var APP_VERSION = '202610111909';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
