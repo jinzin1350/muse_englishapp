@@ -6220,14 +6220,16 @@ function spCollapseRepeats(text) {
            1 = every matched word counts (lenient), 2 = strict (old behavior).
    greatAt/okAt: score thresholds for the "great"/"ok" bands and XP. */
 const SHADOW_SCORING = { fuzzy: true, minRun: 1, greatAt: 70, okAt: 40 };
+/* First attempt of a sentence is graded strictly; retries are lenient. */
+const SHADOW_SCORING_FIRST = { fuzzy: true, minRun: 2, greatAt: 80, okAt: 50 };
 
 /* Word-level analysis: LCS between the story transcript and what the user
    said. Returns accuracy (of the words you said, how many matched the story
    in order), coverage (how much of the story you covered) and the set of
    matched target-word indexes for highlighting. */
-function shadowWordMatch(a, b) {
+function shadowWordMatch(a, b, scoring) {
   if (a === b) return true;
-  if (!SHADOW_SCORING.fuzzy) return false;
+  if (!(scoring || SHADOW_SCORING).fuzzy) return false;
   /* Contractions: speech recognition often drops the apostrophe. */
   const c = function (w) { return w.replace(/'/g, ''); };
   if (c(a) === c(b)) return true;
@@ -6243,25 +6245,26 @@ function shadowWordMatch(a, b) {
   };
   return stem(c(a)) === stem(c(b));
 }
-function analyzeSpeech(target, said) {
+function analyzeSpeech(target, said, scoring) {
+  scoring = scoring || SHADOW_SCORING;
   const norm = function (s) {
     return String(s || '').toLowerCase().replace(/[^a-z0-9'\s]/g, ' ').split(/\s+/).filter(Boolean);
   };
   const T = norm(target), H = norm(said);
   const n = T.length, m = H.length;
-  const out = { accuracy: 0, coverage: 0, matched: new Set(), targetWords: T, saidWords: H };
+  const out = { accuracy: 0, coverage: 0, matched: new Set(), targetWords: T, saidWords: H, scoring: scoring };
   if (!n || !m) return out;
   const dp = [];
   for (let i = 0; i <= n; i++) dp.push(new Uint16Array(m + 1));
   for (let i = n - 1; i >= 0; i--) {
     for (let j = m - 1; j >= 0; j--) {
-      dp[i][j] = shadowWordMatch(T[i], H[j]) ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+      dp[i][j] = shadowWordMatch(T[i], H[j], scoring) ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
     }
   }
   const matched = new Set();
   let i = 0, j = 0;
   while (i < n && j < m) {
-    if (shadowWordMatch(T[i], H[j])) { matched.add(i); i++; j++; }
+    if (shadowWordMatch(T[i], H[j], scoring)) { matched.add(i); i++; j++; }
     else if (dp[i + 1][j] >= dp[i][j + 1]) i++;
     else j++;
   }
@@ -6271,7 +6274,7 @@ function analyzeSpeech(target, said) {
   const green = new Set();
   let run = [];
   const flushRun = function () {
-    if (run.length >= SHADOW_SCORING.minRun) run.forEach(function (k) { green.add(k); });
+    if (run.length >= scoring.minRun) run.forEach(function (k) { green.add(k); });
     run = [];
   };
   for (let k = 0; k < n; k++) {
@@ -6289,7 +6292,8 @@ function analyzeSpeech(target, said) {
 
 /* Word-by-word attempt result (shared by live results and restored history). */
 function spSentResultHTML(a, said, pts, slim) {
-  const cls = a.accuracy >= SHADOW_SCORING.greatAt ? 'great' : (a.accuracy >= SHADOW_SCORING.okAt ? 'ok' : 'low');
+  const sc = a.scoring || SHADOW_SCORING;
+  const cls = a.accuracy >= sc.greatAt ? 'great' : (a.accuracy >= sc.okAt ? 'ok' : 'low');
   let head = '';
   if (!slim) {
     if (!a.saidWords.length) {
@@ -6297,7 +6301,10 @@ function spSentResultHTML(a, said, pts, slim) {
         '<div class="sp-score-label">We couldn\'t catch any words. Try again.</div></div>';
     } else {
       head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">' + a.accuracy + '%</div>' +
-        '<div class="sp-score-label">of this sentence' + (pts ? ' · +' + pts + ' pts' : '') + '</div></div>';
+        '<div class="sp-score-label">of this sentence' + (pts ? ' · +' + pts + ' pts' : '') + '</div>' +
+        (sc === SHADOW_SCORING_FIRST
+          ? '<div class="sp-score-mode">🎯 First try — strict grading. Try again for lenient scoring.</div>'
+          : '<div class="sp-score-mode">🌱 Practice round — lenient scoring.</div>') + '</div>';
     }
   }
   const words = a.targetWords.map(function (w, idx) {
@@ -6645,11 +6652,21 @@ async function wireShadowingPractice(body, m) {
       resBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> 🔍 Analyzing…</div>';
       /* Let the status paint before the analysis. */
       await new Promise(function (resolve) { setTimeout(resolve, 60); });
-      const a = analyzeSpeech(sentences[i], said);
-      trackEvent('shadowing_attempt', { sentence: i + 1, score: a.accuracy, date: m.date || null });
+      /* First attempt of a sentence is graded strictly; retries are lenient. */
+      const sentN = i + 1;
+      let prior = 0;
+      try {
+        (list._spRows || []).forEach(function (r) {
+          const mm = String(r.transcript || '').match(/^\[s(\d+)\]/);
+          if (mm && parseInt(mm[1], 10) === sentN) prior++;
+        });
+      } catch (e) {}
+      const scoring = prior === 0 ? SHADOW_SCORING_FIRST : SHADOW_SCORING;
+      const a = analyzeSpeech(sentences[i], said, scoring);
+      trackEvent('shadowing_attempt', { sentence: sentN, score: a.accuracy, date: m.date || null, attempt: prior + 1 });
       let pts = 0, awarded = false;
-      if (a.accuracy >= SHADOW_SCORING.greatAt) pts = 5;
-      else if (a.accuracy >= SHADOW_SCORING.okAt) pts = 3;
+      if (a.accuracy >= scoring.greatAt) pts = 5;
+      else if (a.accuracy >= scoring.okAt) pts = 3;
       else if (a.accuracy > 0) pts = 1;
       if (state.user && state.user.id && pts > 0) {
         const dayKey = 'sp_n_' + (m.date || 'lesson');
@@ -6682,7 +6699,7 @@ async function wireShadowingPractice(body, m) {
       /* Feed the progress report instantly (works for demo users too). */
       const spList = document.getElementById('sp-sentences');
       if (spList && typeof paintSpReport === 'function') {
-        (spList._spRows = spList._spRows || []).unshift({ transcript: '[s' + (i + 1) + '] ' + said, score: a.accuracy });
+        (spList._spRows = spList._spRows || []).unshift({ transcript: '[s' + (i + 1) + '] ' + said, score: a.accuracy, strict: prior === 0 });
         paintSpReport(spList);
       }
     } catch (e) {
@@ -6752,7 +6769,7 @@ async function restoreSpProgress(list, m, sentences) {
    average best score. Recomputed from list._spRows, so attempts made in this
    session update it instantly (works for demo users too). */
 function paintSpReport(list) {
-  const done = {}, best = {}, said = {};
+  const done = {}, best = {}, said = {}, wasStrict = {};
   (list._spRows || []).forEach(function (r) {
     const mm = String(r.transcript || '').match(/^\[s(\d+)\]\s?(.*)$/);
     if (!mm) return;
@@ -6760,7 +6777,7 @@ function paintSpReport(list) {
     done[n] = 1;
     const sc = Number(r.score) || 0;
     if (!(n in best) || sc > best[n]) best[n] = sc;
-    if (!(n in said)) said[n] = mm[2] || ''; /* rows are newest-first: first wins */
+    if (!(n in said)) { said[n] = mm[2] || ''; wasStrict[n] = !!r.strict; } /* rows are newest-first: first wins */
   });
   list._spSaid = said;
   const total = list.querySelectorAll('.sp-sent').length;
@@ -6797,7 +6814,7 @@ function paintSpReport(list) {
         if (top && top.parentNode) top.parentNode.insertBefore(det, top.nextSibling);
         else el.insertBefore(det, el.querySelector('.sp-sent-live'));
       }
-      const a = analyzeSpeech(target, said);
+      const a = analyzeSpeech(target, said, wasStrict[n] ? SHADOW_SCORING_FIRST : SHADOW_SCORING);
       det.innerHTML = '<div class="sp-detail-title">Last attempt — what to fix</div>' +
         spSentResultHTML(a, said, 0, true);
     } else if (det) det.remove();
@@ -9252,7 +9269,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610110501';
+var APP_VERSION = '202610110506';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
