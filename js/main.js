@@ -5047,6 +5047,18 @@ async function enterApp() {
 
 async function afterLogin() {
   if (!state.user.level && !state.user.isAdmin) { go('waiting'); hideSplashSoon(); return; }
+  /* Teacher invite auto-link (Alireza 2026-10-10): a visitor arriving with
+     ?ref=TEACHER_CODE is linked to that teacher immediately via
+     resolve_teacher_offer (sets referred_by + teacher_offer_seen), so the
+     choose-teacher page is NEVER shown to them. Non-teacher ref codes
+     (e.g. blogger links) raise 'unknown teacher' and are ignored here —
+     the normal offer flow below still applies to those users. */
+  if (!state.user.isAdmin && !state.user.demo) {
+    try {
+      const ref = getRefCode();
+      if (ref) await sb.rpc('resolve_teacher_offer', { p_ref_code: ref });
+    } catch (e) { /* not a teacher code: fall through to the offer check */ }
+  }
   /* One-time teacher offer for existing users who never chose/skipped. */
   if (!state.user.isAdmin && state.view !== 'choose-teacher') {
     try { if (await teacherOfferNeeded()) { go('choose-teacher'); hideSplashSoon(); return; } } catch (e) {}
@@ -5438,6 +5450,14 @@ async function teacherOfferNeeded() {
   } catch (e) { return false; }
 }
 async function maybeOfferTeacher() {
+  /* Teacher invite auto-link (Alireza 2026-10-10): same as in afterLogin —
+     ?ref=TEACHER_CODE links immediately, choose-teacher never shown. */
+  if (!state.user.isAdmin && !state.user.demo) {
+    try {
+      const ref = getRefCode();
+      if (ref) await sb.rpc('resolve_teacher_offer', { p_ref_code: ref });
+    } catch (e) { /* not a teacher code: fall through */ }
+  }
   try {
     if (await teacherOfferNeeded()) { go('choose-teacher'); hideSplashSoon(); return; }
   } catch (e) {}
@@ -9163,7 +9183,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610102021';
+var APP_VERSION = '202610110140';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
