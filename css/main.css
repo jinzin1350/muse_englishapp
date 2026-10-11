@@ -3134,8 +3134,19 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .lp2-level{background:#fff;border-radius:22px;padding:24px 16px 20px;text-decoration:none;color:inherit;box-shadow:0 6px 24px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.03);display:flex;flex-direction:column;align-items:center;transition:transform .15s,box-shadow .15s;}
 .lp2-level:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.1);}
 .lp2-lvl-top{display:flex;align-items:center;justify-content:center;gap:6px;margin-bottom:14px;min-height:76px;}
-.lp2-lvl-badge{width:64px;height:64px;border-radius:18px;object-fit:cover;}
+.lp2-lvl-badge{width:76px;height:54px;border-radius:14px;object-fit:contain;background:transparent;}
 .lp2-lvl-ill{width:64px;height:64px;object-fit:contain;}
 .lp2-lvl-name{font-weight:800;font-size:19px;color:#1a1a2e;margin-bottom:6px;font-family:Georgia,serif;}
 .lp2-lvl-desc{font-size:13.5px;color:#666;line-height:1.5;margin-bottom:16px;flex:1;}
 .lp2-lvl-go{width:44px;height:44px;border-radius:50%;background:color-mix(in srgb,var(--lv) 12%,white);color:var(--lv);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;}
+
+/* ===== lp2 final CTA mobile fix (2026-10-11) ===== */
+.lp2-final h2{color:#fff!important;}
+.lp2-final h2 span{color:#FF9600;}
+.lp2-final-mascot{width:150px;border-radius:22px;box-shadow:0 16px 48px rgba(255,150,0,.3);}
+@media (max-width:640px){
+  .lp2-final{padding:56px 20px;}
+  .lp2-final-mascot{width:130px;margin-bottom:20px;}
+  .lp2-final h2{font-size:32px;}
+  .lp2-final .lp2-cta-lg{width:100%;max-width:340px;box-sizing:border-box;}
+}

@@ -2198,8 +2198,8 @@ function renderLanding(v) {
     /* Final CTA */
     '<section class="lp2-final">' +
       '<img class="lp2-final-bg" src="' + L + 'bg-sunset.webp?v=3\" alt="" aria-hidden="true">' +
-      '<img class="lp2-final-mascot" src="' + L + 'mascot-point.webp?v=3\" alt="" aria-hidden="true">' +
-      '<h2>Start today\u2019s lesson</h2>' +
+      '<img class="lp2-final-mascot" src="' + L + 'mascot-back.webp?v=3\" alt="Muse English mascot watching the sunrise" aria-hidden="true">' +
+      '<h2>Start <span>today\u2019s</span> lesson</h2>' +
       '<p>One lesson a day. Words, quiz, podcast, shadowing and grammar \u2014 for your level.</p>' +
       '<a class="lp2-cta lp2-cta-lg" href="#/signup">Create your free account</a>' +
       '<div class="lp2-signin-row">Already have an account? <a href="#/signin">Sign in</a></div>' +
@@ -9310,7 +9310,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610111909';
+var APP_VERSION = '202610111914';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
