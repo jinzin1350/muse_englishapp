@@ -6212,10 +6212,37 @@ function spCollapseRepeats(text) {
   return words.join(' ');
 }
 
+/* Shadowing scoring strictness — tune these to make grading harsher/softer.
+   fuzzy: match plurals/conjugations ("cats"~"cat", "running"~"run") and
+          contractions ("dont"~"don't") so speech-recognition wobbles don't
+          tank the score.
+   minRun: words only count when part of a run of N+ consecutive story words.
+           1 = every matched word counts (lenient), 2 = strict (old behavior).
+   greatAt/okAt: score thresholds for the "great"/"ok" bands and XP. */
+const SHADOW_SCORING = { fuzzy: true, minRun: 1, greatAt: 70, okAt: 40 };
+
 /* Word-level analysis: LCS between the story transcript and what the user
    said. Returns accuracy (of the words you said, how many matched the story
    in order), coverage (how much of the story you covered) and the set of
    matched target-word indexes for highlighting. */
+function shadowWordMatch(a, b) {
+  if (a === b) return true;
+  if (!SHADOW_SCORING.fuzzy) return false;
+  /* Contractions: speech recognition often drops the apostrophe. */
+  const c = function (w) { return w.replace(/'/g, ''); };
+  if (c(a) === c(b)) return true;
+  /* Light stemming: plurals and common conjugations. Conservative on short
+     words to avoid false friends ("is"~"i", "as"~"a"). */
+  const stem = function (w) {
+    if (w.length <= 3) return w;
+    if (w.length > 4 && w.slice(-3) === 'ing') return w.slice(0, -3);
+    if (w.length > 3 && w.slice(-2) === 'ed') return w.slice(0, -2);
+    if (w.length > 3 && w.slice(-2) === 'es') return w.slice(0, -2);
+    if (w.length > 3 && w.slice(-1) === 's') return w.slice(0, -1);
+    return w;
+  };
+  return stem(c(a)) === stem(c(b));
+}
 function analyzeSpeech(target, said) {
   const norm = function (s) {
     return String(s || '').toLowerCase().replace(/[^a-z0-9'\s]/g, ' ').split(/\s+/).filter(Boolean);
@@ -6228,24 +6255,23 @@ function analyzeSpeech(target, said) {
   for (let i = 0; i <= n; i++) dp.push(new Uint16Array(m + 1));
   for (let i = n - 1; i >= 0; i--) {
     for (let j = m - 1; j >= 0; j--) {
-      dp[i][j] = T[i] === H[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+      dp[i][j] = shadowWordMatch(T[i], H[j]) ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
     }
   }
   const matched = new Set();
   let i = 0, j = 0;
   while (i < n && j < m) {
-    if (T[i] === H[j]) { matched.add(i); i++; j++; }
+    if (shadowWordMatch(T[i], H[j])) { matched.add(i); i++; j++; }
     else if (dp[i + 1][j] >= dp[i][j + 1]) i++;
     else j++;
   }
-  /* A word only counts as "nailed it" when it is part of a run of 2+
-     consecutive story words: scattered single-word hits are usually
-     coincidental (common words guessed by a noisy transcript), not real
-     shadowing. */
+  /* A word counts when it is part of a run of minRun+ consecutive story
+     words. minRun 2+ discards scattered single-word hits (usually coincidental
+     common words from a noisy transcript); minRun 1 counts every match. */
   const green = new Set();
   let run = [];
   const flushRun = function () {
-    if (run.length >= 2) run.forEach(function (k) { green.add(k); });
+    if (run.length >= SHADOW_SCORING.minRun) run.forEach(function (k) { green.add(k); });
     run = [];
   };
   for (let k = 0; k < n; k++) {
@@ -6263,7 +6289,7 @@ function analyzeSpeech(target, said) {
 
 /* Word-by-word attempt result (shared by live results and restored history). */
 function spSentResultHTML(a, said, pts, slim) {
-  const cls = a.accuracy >= 80 ? 'great' : (a.accuracy >= 50 ? 'ok' : 'low');
+  const cls = a.accuracy >= SHADOW_SCORING.greatAt ? 'great' : (a.accuracy >= SHADOW_SCORING.okAt ? 'ok' : 'low');
   let head = '';
   if (!slim) {
     if (!a.saidWords.length) {
@@ -6622,8 +6648,8 @@ async function wireShadowingPractice(body, m) {
       const a = analyzeSpeech(sentences[i], said);
       trackEvent('shadowing_attempt', { sentence: i + 1, score: a.accuracy, date: m.date || null });
       let pts = 0, awarded = false;
-      if (a.accuracy >= 80) pts = 5;
-      else if (a.accuracy >= 50) pts = 3;
+      if (a.accuracy >= SHADOW_SCORING.greatAt) pts = 5;
+      else if (a.accuracy >= SHADOW_SCORING.okAt) pts = 3;
       else if (a.accuracy > 0) pts = 1;
       if (state.user && state.user.id && pts > 0) {
         const dayKey = 'sp_n_' + (m.date || 'lesson');
@@ -9226,7 +9252,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610110412';
+var APP_VERSION = '202610110501';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
