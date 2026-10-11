@@ -4106,9 +4106,40 @@ async function openTeacherAssignment(i) {
     }).join('') + '</div>' +
     (r.status === 'scheduled'
       ? '<button class="btn btn-ghost btn-block" data-action="assignment-cancel" data-i="' + i + '" style="color:#d33;border-color:#eec">✕ Cancel scheduled send</button>'
-      : '') +
+      : '<button class="btn btn-ghost btn-block" data-action="assignment-delete" data-i="' + i + '" style="color:#d33;border-color:#eec">🗑 Delete assignment</button>') +
     '<button class="btn btn-ghost btn-block" data-action="modal-close">Close</button>'
   );
+}
+
+async function deleteTeacherAssignment(i, btn) {
+  const r = (state.teacherAssignments || [])[i];
+  if (!r || r.status === 'scheduled') return;
+  const n = (r.student_ids || []).length;
+  if (!confirm('Delete "' + r.title + '"? It will be removed for all ' + n + ' students, including their inbox messages. This cannot be undone.')) return;
+  btn.disabled = true;
+  btn.textContent = 'Deleting…';
+  try {
+    /* Results first (exact link via assignment_id). */
+    try { await sb.from('assignment_results').delete().eq('assignment_id', r.id); } catch (e) {}
+    /* Inbox messages: body embeds the assignment title
+       ('📝 Your teacher sent you homework: <title> — …'). */
+    try {
+      const like = '%' + String(r.title).replace(/[%_\\]/g, '\\$&') + '%';
+      await sb.from('messages').delete()
+        .eq('teacher_id', tchViewId())
+        .in('student_id', (r.student_ids || []).length ? r.student_ids : ['00000000-0000-0000-0000-000000000000'])
+        .like('body', like);
+    } catch (e) {}
+    /* The assignment itself (RLS: own assignments — same as cancelScheduledAssignment). */
+    const d = await sb.from('assignments').delete().eq('id', r.id).eq('teacher_id', tchViewId());
+    if (d.error) throw d.error;
+    closeModal();
+    loadTeacherAssignments();
+  } catch (e) {
+    btn.disabled = false;
+    btn.textContent = '🗑 Delete assignment';
+    alert('Could not delete: ' + (e.message || e));
+  }
 }
 
 async function cancelScheduledAssignment(i, btn) {
@@ -9099,6 +9130,7 @@ function bindEvents() {
     }
     else if (a === 'assignment-open') openTeacherAssignment(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'assignment-cancel') cancelScheduledAssignment(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (a === 'assignment-delete') deleteTeacherAssignment(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'assignment-start') startAssignment(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'inbox-open') { closeModal(); go('inbox'); }
     else if (a === 'inbox-retry') { renderInbox(document.getElementById('view')); }
@@ -9183,7 +9215,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610110140';
+var APP_VERSION = '202610110301';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
