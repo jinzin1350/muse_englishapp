@@ -80,8 +80,11 @@ export async function onRequestPost(context) {
       max_tokens: 1200,
       temperature: 0.3,
     });
-    const text = (out && out.response ? String(out.response) : '').trim();
-    if (!text) return json({ error: 'AI_ANALYSIS_FAILED', debug: 'empty_response', out_keys: out ? Object.keys(out) : null }, 502);
+    let rawResp = out && out.response ? out.response : '';
+    /* model sometimes returns an object instead of a string */
+    const text = (typeof rawResp === 'string' ? rawResp : JSON.stringify(rawResp)).trim();
+    if (!text || text === '[object Object]' || text === '{}')
+      return json({ error: 'AI_ANALYSIS_FAILED', debug: 'empty_response' }, 502);
     let parsed = null;
     /* try: full JSON object */
     const m = text.match(/\{[\s\S]*\}/);
@@ -98,7 +101,7 @@ export async function onRequestPost(context) {
         };
       }
     }
-    if (!parsed) return json({ error: 'AI_ANALYSIS_FAILED', debug: 'parse_failed', text_head: text.slice(0, 300) }, 502);
+    if (!parsed) return json({ error: 'AI_ANALYSIS_FAILED' }, 502);
     const score = Math.max(0, Math.min(100, parseInt(parsed.score, 10) || 0));
     return json({
       score: score,
