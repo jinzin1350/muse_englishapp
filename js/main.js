@@ -3740,13 +3740,14 @@ async function savePlanner(btn) {
       count: parseInt(dayEl.querySelector('.pl-count').value, 10) || 10
     });
   });
-  if (!rows.length) { err('Pick a topic for at least one day.'); return; }
   btn.disabled = true;
   const orig = btn.textContent;
   try {
     /* Replace semantics: cancel this teacher's still-pending scheduled rows
        first, so the planner always reflects the current plan (and re-saving
-       never duplicates). Rows already due stay for the sender. */
+       never duplicates). Rows already due stay for the sender.
+       NOTE: this runs even when every day is "no homework", so clearing the
+       whole week actually clears the schedule. */
     btn.textContent = 'Clearing old schedule…';
     try {
       const old = await sb.from('assignments').select('id')
@@ -3758,6 +3759,14 @@ async function savePlanner(btn) {
         if (del.error) throw del.error;
       }
     } catch (e2) { /* pre-migration or RLS: continue, worst case duplicates */ }
+    if (!rows.length) {
+      document.getElementById('pl-body').innerHTML =
+        '<div class="card pl-done"><div class="pl-done-ico">✅</div><h2>Schedule cleared!</h2>' +
+        '<p class="muted">All pending scheduled assignments were removed.</p>' +
+        '<a class="btn btn-block" href="#/teacher">← Back to dashboard</a></div>';
+      window.scrollTo(0, 0);
+      return;
+    }
     let n = 0;
     const total = rows.length * tzList.length;
     for (const r of rows) {
@@ -9186,6 +9195,8 @@ function bindEvents() {
     else if (ma === 'welcome-tour') { closeModal(); startTutorial(); }
     else if (ma === 'teacher-message-send') teacherMessageSend(parseInt(t.getAttribute('data-i'), 10), t);
     else if (ma === 'assignment-create') createAssignment(t);
+    else if (ma === 'assignment-cancel') cancelScheduledAssignment(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (ma === 'assignment-delete') deleteTeacherAssignment(parseInt(t.getAttribute('data-i'), 10), t);
     else if (ma === 'inbox-open') { closeModal(); go('inbox'); }
   });
   // Tutorial overlay buttons live on document.body too, but they wire their
@@ -9215,7 +9226,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610110301';
+var APP_VERSION = '202610110412';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
