@@ -119,6 +119,67 @@ footer{text-align:center;padding:36px 0;color:var(--muted);font-size:14px;border
 .lcard .lgo{width:42px;height:42px;border-radius:50%;background:#1a2340;display:flex;align-items:center;justify-content:center;color:#B8C0D4;font-size:18px;flex-shrink:0}
 .lcard:hover .lgo{background:#3b82f6;color:#fff}
 .lfoot{text-align:center;padding:32px 0;color:#5a6480;font-size:13.5px;border-top:1px solid #1a2340}
+/* ===== lesson page (2026-10-11) ===== */
+.leshero{position:relative;border-radius:20px;overflow:hidden;margin:26px 0 8px;min-height:280px;display:flex;align-items:flex-end}
+.leshero .bg{position:absolute;inset:0}
+.leshero .bg img{width:100%;height:100%;object-fit:cover}
+.leshero .bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,13,31,.55),rgba(6,13,31,.88))}
+.leshero .in{position:relative;padding:36px 32px;width:100%}
+.lvlpill{display:inline-block;background:#1a2340;color:#7DD3FC;font-weight:700;font-size:13px;padding:6px 16px;border-radius:99px;margin-bottom:12px}
+.leshero h1{font-size:clamp(30px,4.5vw,46px);color:#fff;margin:0 0 10px;line-height:1.15}
+.leshero h1 .org{color:#FF9600}
+.lesmeta{display:flex;gap:18px;flex-wrap:wrap;color:#B8C0D4;font-size:13.5px}
+.lesmeta span{display:flex;align-items:center;gap:6px}
+.leschef{position:absolute;right:24px;bottom:0;width:150px;z-index:2}
+.lesbox{background:rgba(255,150,0,.06);border:1px solid rgba(255,150,0,.35);border-radius:18px;padding:28px;margin:26px 0}
+.lesbox h3{color:#FF9600;font-size:18px;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.lesbox p{color:#B8C0D4;font-size:15px}
+.vocabhead{display:flex;align-items:center;justify-content:space-between;margin:36px 0 18px;flex-wrap:wrap;gap:10px}
+.vocabhead h2{font-size:26px;color:#fff;margin:0}
+.vocabhead .cnt{background:rgba(255,150,0,.14);color:#FF9600;font-size:13px;font-weight:700;padding:5px 16px;border-radius:99px}
+.vocabhead .hint{color:#5a6480;font-size:13px;width:100%}
+.wcard{background:#0D1730;border:1px solid #1e2a52;border-radius:16px;padding:18px;display:flex;gap:18px;margin-bottom:14px;align-items:center;flex-wrap:wrap}
+.wcard img{width:120px;height:96px;object-fit:cover;border-radius:12px;flex-shrink:0}
+.wcard .wi{flex:1;min-width:200px}
+.wcard .ww{font-size:20px;font-weight:800;color:#fff}
+.wcard .ww small{color:#8b94a3;font-weight:400;font-size:14px}
+.wcard .wpos{display:inline-block;background:rgba(255,150,0,.14);color:#FF9600;font-size:11.5px;font-weight:700;padding:3px 12px;border-radius:99px;margin:6px 0}
+.wcard .wm{font-size:15px;color:#D0D6E4;margin:2px 0}
+.wcard .we{color:#8b94a3;font-style:italic;font-size:14px}
+.wcard audio{width:220px;min-width:180px}
+.podbox{background:#0D1730;border:1px solid rgba(255,150,0,.3);border-radius:18px;padding:26px;margin:26px 0;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.podbox .pic{width:56px;height:56px;border-radius:16px;background:rgba(255,150,0,.14);display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0}
+.podbox h3{color:#FF9600;font-size:19px;margin-bottom:4px}
+.podbox p{color:#8b94a3;font-size:14px}
+.podbox audio{flex:1;min-width:220px}
+.spkbox{background:linear-gradient(135deg,#141b35,#0d1730);border:1px solid #2a3560;border-radius:18px;padding:30px;margin:26px 0;display:flex;gap:20px;align-items:center;flex-wrap:wrap;position:relative;overflow:hidden}
+.spkbox .pic{width:64px;height:64px;border-radius:18px;background:rgba(255,150,0,.14);display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0}
+.spkbox h3{color:#FFB020;font-size:20px;margin-bottom:6px}
+.spkbox p{color:#B8C0D4;font-size:14.5px;max-width:420px}
+.obtn{display:inline-block;background:linear-gradient(135deg,#FF9600,#FF6B00);color:#fff;font-weight:700;padding:13px 30px;border-radius:12px;font-size:15.5px;margin-left:auto;white-space:nowrap}
+.grambox{background:#0D1730;border:1px solid #1e2a52;border-radius:18px;padding:28px;margin:26px 0}
+.grambox h3{font-size:20px;color:#fff;margin-bottom:12px;display:flex;gap:12px;align-items:center}
+.grambox h3 .pic{width:48px;height:48px;border-radius:14px;background:#1a2a5a;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.grambox p{color:#B8C0D4;font-size:15px;line-height:1.7}
+.gramcta{background:rgba(255,150,0,.08);border:1px solid rgba(255,150,0,.3);border-radius:14px;padding:20px 24px;margin-top:18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.gramcta h4{color:#FFB020;font-size:16px;margin-bottom:4px}
+.gramcta p{font-size:13.5px;color:#8b94a3}
+.faqgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 26px}
+@media(max-width:640px){.faqgrid{grid-template-columns:1fr}}
+.faqgrid details{background:#0D1730;border:1px solid #1e2a52;border-radius:12px;padding:16px 18px}
+.faqgrid summary{font-weight:600;cursor:pointer;font-size:14.5px;color:#D0D6E4;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faqgrid summary::after{content:'BE';color:#8b94a3}
+.faqgrid p{color:#8b94a3;margin-top:8px;font-size:14px}
+.keepbox{position:relative;border-radius:18px;overflow:hidden;margin:26px 0;padding:36px 32px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;background:linear-gradient(135deg,#1a2340,#0d1730)}
+.keepbox h3{font-size:22px;color:#fff;margin-bottom:6px}
+.keepbox p{color:#B8C0D4;font-size:14.5px}
+@media(max-width:768px){
+  .leshero{min-height:0}
+  .leshero .in{padding:26px 20px}
+  .leschef{width:110px;right:12px}
+  .wcard audio{width:100%}
+  .obtn{margin-left:0;width:100%;text-align:center}
+}
 .mobbtn{display:none;background:none;border:0;font-size:26px;color:#1B1B33;cursor:pointer;padding:6px}
 .mobmenu{display:none;position:fixed;top:0;right:0;bottom:0;width:min(78vw,320px);background:#FFFBF3;z-index:50;padding:22px;box-shadow:-8px 0 32px rgba(0,0,0,.12);flex-direction:column;gap:6px}
 .mobmenu.open{display:flex}
@@ -170,53 +231,53 @@ footer{text-align:center;padding:36px 0;color:var(--muted);font-size:14px;border
 <div class="lgrid"><a class="lcard" href="/blog/b2/2026-10-11-work-career.html">
 <div class="limg"><img src="https://i.ytimg.com/vi/cI29awWsdzU/maxresdefault.jpg" alt="work &amp; career" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-10-11</div>
 <div class="ltheme">Work &amp; Career</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-10-10-technology.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-10-10</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="technology" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-10-10</div>
 <div class="ltheme">Technology</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-10-09-family-relationships.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-10-09</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="family &amp; relationships" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-10-09</div>
 <div class="ltheme">Family &amp; Relationships</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-10-08-sports-fitness.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-10-08</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="sports &amp; fitness" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-10-08</div>
 <div class="ltheme">Sports &amp; Fitness</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-10-07-nature-environment.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-10-07</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="nature &amp; environment" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-10-07</div>
 <div class="ltheme">Nature &amp; Environment</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-10-06-work-career.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-10-06</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="work &amp; career" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-10-06</div>
 <div class="ltheme">Work &amp; Career</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-10-05-emotions-character.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-10-05</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="emotions &amp; character" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-10-05</div>
 <div class="ltheme">Emotions &amp; Character</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-10-04-technology.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-10-04</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="technology" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-10-04</div>
 <div class="ltheme">Technology</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-10-03-food-cooking.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-10-03</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="food &amp; cooking" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-10-03</div>
 <div class="ltheme">Food &amp; Cooking</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-10-02-travel-transport.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-10-02</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="travel &amp; transport" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-10-02</div>
 <div class="ltheme">Travel &amp; Transport</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-10-01-education-school-life.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-10-01</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="education &amp; school life" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-10-01</div>
 <div class="ltheme">Education &amp; School Life</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-30-money-shopping.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-30</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="money &amp; shopping" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-30</div>
 <div class="ltheme">Money &amp; Shopping</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-29-technology.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-29</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="technology" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-29</div>
 <div class="ltheme">Technology</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-28-food-cooking.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-28</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="food &amp; cooking" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-28</div>
 <div class="ltheme">Food &amp; Cooking</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-27-health-body.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-27</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="health &amp; body" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-27</div>
 <div class="ltheme">Health &amp; Body</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-26-emotions-character.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-26</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="emotions &amp; character" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-26</div>
 <div class="ltheme">Emotions &amp; Character</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-25-travel-transport.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-25</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="travel &amp; transport" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-25</div>
 <div class="ltheme">Travel &amp; Transport</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-24-success-daily-life.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-24</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="success &amp; daily life" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-24</div>
 <div class="ltheme">Success &amp; Daily Life</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-23-work-career.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-23</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="work &amp; career" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-23</div>
 <div class="ltheme">Work &amp; Career</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-22-money-shopping.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-22</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="Money &amp; Shopping" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-22</div>
 <div class="ltheme">Money &amp; Shopping</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-21-education-learning.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-21</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="Education &amp; Learning" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-21</div>
 <div class="ltheme">Education &amp; Learning</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-20-nature-environment.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-20</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="nature &amp; environment" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-20</div>
 <div class="ltheme">Nature &amp; Environment</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-19-everyday-technology.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-19</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="Everyday Technology" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-19</div>
 <div class="ltheme">Everyday Technology</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-18-sports-fitness.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-18</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="Sports &amp; Fitness" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-18</div>
 <div class="ltheme">Sports &amp; Fitness</div></div><span class="lgo">&rarr;</span></div></a><a class="lcard" href="/blog/b2/2026-09-17-body-signals.html">
-<div class="limg"></div><div class="lbody"><div><div class="ldate">📅 2026-09-17</div>
+<div class="limg"><img src="/blog/img/level-b2.webp" alt="Body Signals" loading="lazy"></div><div class="lbody"><div><div class="ldate">📅 2026-09-17</div>
 <div class="ltheme">Body Signals</div></div><span class="lgo">&rarr;</span></div></a></div></div>
 <footer class="lfoot">© 2026 Alireza · Muse English · Built, not bought.</footer>
 </body></html>
