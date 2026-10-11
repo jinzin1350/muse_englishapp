@@ -85,14 +85,55 @@ footer{text-align:center;padding:36px 0;color:var(--muted);font-size:14px;border
 .bfeat .bd{font-size:12.5px;color:#8a8a9e;margin-top:2px}
 .bfoot{background:#FFFBF3;border-top:1px solid #F0E6D2;padding:28px 0;color:#8a8a9e;font-size:13.5px}
 .bfoot .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.mobbtn{display:none;background:none;border:0;font-size:26px;color:#1B1B33;cursor:pointer;padding:6px}
+.mobmenu{display:none;position:fixed;top:0;right:0;bottom:0;width:min(78vw,320px);background:#FFFBF3;z-index:50;padding:22px;box-shadow:-8px 0 32px rgba(0,0,0,.12);flex-direction:column;gap:6px}
+.mobmenu.open{display:flex}
+.mobmenu a{padding:12px 8px;font-size:17px;font-weight:600;color:#1B1B33;border-bottom:1px solid #F0E6D2}
+.mobmenu .bstart{margin-top:14px;text-align:center;color:#fff}
+.mobclose{align-self:flex-end;font-size:24px;background:none;border:0;cursor:pointer;color:#1B1B33}
+.mobov{display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:40}
+.mobov.open{display:block}
+/* ===== blog mobile (2026-10-11) ===== */
+@media (max-width:768px){
+  .bloglight .wrap{padding:0 16px;overflow-x:hidden}
+  .bnav .links{display:none}
+  .mobbtn{display:block}
+  .bhero{flex-direction:column;align-items:flex-start;gap:18px;padding:24px 0 6px}
+  .bhero h1{font-size:34px}
+  .bhero .meta{font-size:15.5px}
+  .bhero .bherom{width:160px;max-width:45vw;height:auto;object-fit:contain;align-self:center}
+  .bgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:20px 0 40px}
+  .bcard{min-width:0;width:100%}
+  .bcard .bimg{aspect-ratio:4/3}
+  .bcard .bimg img{width:100%;height:100%;object-fit:cover;max-width:100%}
+  .bcard .bbadge{font-size:15px;padding:6px 14px;top:10px;left:10px;border-radius:12px}
+  .bcard .bbody{padding:14px 14px 16px}
+  .bcard .bname{font-size:18px}
+  .bcard .bdesc{font-size:13px}
+  .bcard .bexp{font-size:13.5px;padding:8px 16px}
+  .bwhat{padding:28px 22px}
+  .bwhat h2{font-size:24px}
+  .bwhat p{font-size:14.5px}
+  .bfeat{min-width:calc(50% - 8px)}
+}
+@media (max-width:340px){
+  .bgrid{grid-template-columns:1fr}
+  .bhero .bherom{width:140px}
+  .bhero h1{font-size:30px}
+}
 </style></head>
 <body class="bloglight">
 <nav class="bnav"><div class="wrap"><a class="blogo" href="/"><img src="/media/landing/icon-flame.webp" alt="">Muse English</a>
 <div class="links"><a href="/">Home</a><a href="/blog/">Lessons</a><a href="/blog/" class="on">Blog</a><a href="/">App</a><a href="/">About</a>
-<a class="bstart" href="/#/signup">Start Learning &rarr;</a></div></div></nav>
+<a class="bstart" href="/#/signup">Start Learning &rarr;</a></div>
+<button class="mobbtn" aria-label="Menu" onclick="document.getElementById('mobm').classList.add('open');document.getElementById('mobo').classList.add('open')">&#9776;</button></div></nav>
+<div class="mobov" id="mobo" onclick="document.getElementById('mobm').classList.remove('open');this.classList.remove('open')"></div>
+<div class="mobmenu" id="mobm"><button class="mobclose" aria-label="Close" onclick="document.getElementById('mobm').classList.remove('open');document.getElementById('mobo').classList.remove('open')">&times;</button>
+<a href="/">Home</a><a href="/blog/">Lessons</a><a href="/blog/">Blog</a><a href="/">App</a><a href="/">About</a>
+<a class="bstart" href="/#/signup">Start Learning &rarr;</a></div>
 <div class="wrap"><div class="bhero"><div><div class="crumbs" style="padding:0"><a href="/">Home</a> / <span style="color:#FF6B00">Blog</span></div>
 <h1>Daily English Lessons</h1><p class="meta">New lessons every day — pick your level and start learning.</p></div>
-<img src="/media/landing/mascot-cta.webp" alt="Muse English mascot" loading="lazy"></div>
+<img class="bherom" src="/media/landing/mascot-cta.webp" alt="Muse English mascot" loading="lazy"></div>
 <div class="bgrid"><a class="bcard" href="/blog/a1/">
 <div class="bimg"><img src="/blog/img/level-a1.webp" alt="Beginner English lessons" loading="lazy">
 <span class="bbadge" style="color:#1B1B33">A1</span></div>
