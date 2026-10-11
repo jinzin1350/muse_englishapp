@@ -17,7 +17,7 @@
 const RATE_MAX = 30;                   // transcriptions per window per IP
 const RATE_WIN = 10 * 60 * 1000;
 const rateMap = new Map();             // ip -> { count, reset } (per-isolate, best-effort)
-const MAX_AUDIO = 2 * 1024 * 1024;     // 2 MB — a 15s phone clip is a few hundred KB
+const MAX_AUDIO = 6 * 1024 * 1024;     // 6 MB — up to ~2 min for podcast summaries (a 15s clip is a few hundred KB)
 
 function json(obj, status) {
   return new Response(JSON.stringify(obj), {

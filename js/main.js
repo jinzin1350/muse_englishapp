@@ -6168,7 +6168,7 @@ function renderLessonTab(body) {
     else if (tab === 'grammar') markStep(m.date, 'grammar');
   }
   if (tab === 'words') { body.innerHTML = wordsTabHTML(m); observeWordsEnd(body, m); refreshSavedWordButtons(body); }
-  else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); }
+  else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); wireSummaryChallenge(body, m); }
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); wireShadowingPractice(body, m); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
   else if (tab === 'grammar') { body.innerHTML = grammarTabHTML(m); wireAudioCards(body); }
@@ -6239,7 +6239,165 @@ function podcastTabHTML(m) {
     });
   }
   if (!html) html = '<div class="empty">No audio in this lesson yet.</div>';
+  /* Podcast summary challenge: record a spoken summary (up to 2 min), get AI transcription + grammar scoring. */
+  html += '<div class="card plain sum-card"><h3 class="serif">🎤 Summarize the podcast</h3>' +
+    '<p class="muted">Listen to the episode, then record yourself summarizing it in English (up to 2 minutes). ' +
+    'You\'ll get a transcript, grammar corrections and a score.</p>' +
+    '<div class="sum-controls"><button class="btn" id="sum-rec-btn" data-action="sum-record">🎤 Start recording</button>' +
+    '<span class="sum-timer hidden" id="sum-timer">2:00</span></div>' +
+    '<div class="sum-live hidden" id="sum-live"><span class="sp-pulse"></span> <span id="sum-live-text">🎤 Recording… summarize the podcast!</span></div>' +
+    '<div id="sum-result"></div></div>';
   return html;
+}
+
+/* ---- podcast summary challenge: 2-min recording -> Whisper -> AI grammar scoring ---- */
+var sumState = { rec: null, stream: null, chunks: [], timerId: null, left: 120, recording: false, manifest: null };
+
+function wireSummaryChallenge(body, m) {
+  sumState.manifest = m || null;
+  const btn = body.querySelector('#sum-rec-btn');
+  if (btn) btn.disabled = false;
+}
+
+function sumFmt(s) {
+  s = Math.max(0, s);
+  return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+}
+
+function toggleSummaryRecording() {
+  if (sumState.recording) { stopSummaryRecording(); return; }
+  startSummaryRecording();
+}
+
+function startSummaryRecording() {
+  const btn = document.getElementById('sum-rec-btn');
+  const live = document.getElementById('sum-live');
+  const timer = document.getElementById('sum-timer');
+  const resBox = document.getElementById('sum-result');
+  if (!btn) return;
+  const md = navigator.mediaDevices;
+  if (!md || !md.getUserMedia) {
+    if (resBox) resBox.innerHTML = '<div class="empty">🎤 Microphone is not available on this device.</div>';
+    return;
+  }
+  if (resBox) resBox.innerHTML = '';
+  try { speechSynthesis.cancel(); } catch (e) {}
+  document.querySelectorAll('audio').forEach(function (a) { try { a.pause(); } catch (e) {} });
+  md.getUserMedia({ audio: true }).then(function (stream) {
+    let rec;
+    try { rec = new MediaRecorder(stream); }
+    catch (e) {
+      try { stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e2) {}
+      if (resBox) resBox.innerHTML = '<div class="empty">🎤 Could not start recording. Try again.</div>';
+      return;
+    }
+    sumState.stream = stream;
+    sumState.rec = rec;
+    sumState.chunks = [];
+    sumState.left = 120;
+    sumState.recording = true;
+    rec.ondataavailable = function (ev) { if (ev.data && ev.data.size) sumState.chunks.push(ev.data); };
+    rec.onstop = function () { finishSummaryRecording(); };
+    try { rec.start(500); } catch (e) {}
+    btn.innerHTML = '⏹ Stop recording';
+    if (live) live.classList.remove('hidden');
+    if (timer) { timer.classList.remove('hidden'); timer.textContent = sumFmt(120); }
+    sumState.timerId = setInterval(function () {
+      sumState.left--;
+      if (timer) timer.textContent = sumFmt(sumState.left);
+      if (sumState.left <= 0) stopSummaryRecording();
+    }, 1000);
+  }).catch(function () {
+    if (resBox) resBox.innerHTML = '<div class="empty">🎤 Microphone blocked — allow microphone access and try again.</div>';
+  });
+}
+
+function stopSummaryRecording() {
+  if (!sumState.recording) return;
+  sumState.recording = false;
+  if (sumState.timerId) { clearInterval(sumState.timerId); sumState.timerId = null; }
+  try { if (sumState.rec && sumState.rec.state !== 'inactive') sumState.rec.stop(); }
+  catch (e) { finishSummaryRecording(); }
+  const btn = document.getElementById('sum-rec-btn');
+  if (btn) { btn.disabled = true; btn.innerHTML = '⏳ Processing…'; }
+}
+
+async function finishSummaryRecording() {
+  const btn = document.getElementById('sum-rec-btn');
+  const live = document.getElementById('sum-live');
+  const timer = document.getElementById('sum-timer');
+  const resBox = document.getElementById('sum-result');
+  try { if (sumState.stream) sumState.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+  if (live) live.classList.add('hidden');
+  if (timer) timer.classList.add('hidden');
+  const blob = new Blob(sumState.chunks, { type: (sumState.rec && sumState.rec.mimeType) || 'audio/mp4' });
+  sumState.rec = null; sumState.stream = null; sumState.chunks = [];
+  if (!resBox) return;
+  if (!blob.size || blob.size < 2000) {
+    resBox.innerHTML = '<div class="empty">🎤 No audio captured. Try again.</div>';
+    if (btn) { btn.disabled = false; btn.innerHTML = '🎤 Start recording'; }
+    return;
+  }
+  resBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> 🔍 Transcribing your summary…</div>';
+  let text = '', err = '';
+  try {
+    const fd = new FormData();
+    fd.append('audio', blob, 'summary.mp4');
+    const r = await fetch('/api/transcribe', { method: 'POST', body: fd });
+    let j = null;
+    try { j = await r.json(); } catch (e) {}
+    if (r.ok && j && j.text) text = String(j.text).trim();
+    else err = (j && j.error) || ('http ' + r.status);
+  } catch (e) { err = 'network'; }
+  if (!text) {
+    resBox.innerHTML = '<div class="empty">🎤 ' +
+      (err === 'No speech detected.' ? 'We didn\'t catch any words. Try again.'
+        : 'Transcription failed' + (err ? ' (' + esc(err) + ')' : '') + '. Try again.') + '</div>';
+    if (btn) { btn.disabled = false; btn.innerHTML = '🎤 Start recording'; }
+    return;
+  }
+  resBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> 📝 Analyzing grammar & scoring…</div>';
+  const m = sumState.manifest || {};
+  let score = null;
+  try {
+    const r2 = await fetch('/api/summary-score', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        transcript: text,
+        podcastTitle: (m.podcast && m.podcast.title) || '',
+        podcastTranscript: (m.podcast && m.podcast.transcript) || '',
+        level: m.level || ''
+      })
+    });
+    let j2 = null;
+    try { j2 = await r2.json(); } catch (e) {}
+    if (r2.ok && j2 && typeof j2.score === 'number') score = j2;
+    else err = (j2 && j2.error) || ('http ' + r2.status);
+  } catch (e) { err = 'network'; }
+  if (btn) { btn.disabled = false; btn.innerHTML = '🎤 Record again'; }
+  if (!score) {
+    resBox.innerHTML = '<div class="empty">📝 Scoring failed' + (err ? ' (' + esc(err) + ')' : '') +
+      '. Your transcript:<br><br><i>' + esc(text) + '</i></div>';
+    return;
+  }
+  const corr = (score.corrections || []).map(function (c) {
+    return '<div class="sum-corr"><div class="sum-wrong">❌ ' + esc(c.wrong || '') + '</div>' +
+      '<div class="sum-right">✅ ' + esc(c.right || '') + '</div>' +
+      (c.why ? '<div class="muted sum-why">' + esc(c.why) + '</div>' : '') + '</div>';
+  }).join('');
+  const strengths = (score.strengths || []).map(function (s) {
+    return '<li>💪 ' + esc(s) + '</li>';
+  }).join('');
+  const ring = score.score >= 80 ? '#4caf50' : (score.score >= 60 ? '#ff9800' : '#f44336');
+  resBox.innerHTML =
+    '<div class="sum-score-card"><div class="sum-ring" style="--p:' + score.score + ';--c:' + ring + '">' +
+    '<span>' + score.score + '</span></div>' +
+    '<div class="sum-score-info"><h4>Your summary score</h4><p>' + esc(score.summary || '') + '</p></div></div>' +
+    '<details class="sum-details" open><summary>📝 Your transcript</summary><p><i>' + esc(text) + '</i></p></details>' +
+    (corr ? '<h4 class="sum-h">🔧 Corrections</h4>' + corr : '') +
+    (strengths ? '<h4 class="sum-h">✨ Strengths</h4><ul class="sum-strengths">' + strengths + '</ul>' : '');
+  try { markStep((sumState.manifest || {}).date, 'podcast'); } catch (e) {}
 }
 
 function shadowingTabHTML(m) {
@@ -9276,6 +9434,7 @@ function bindEvents() {
       if (w) w.classList.toggle('hidden');
     }
     else if (a === 'assignment-open') openTeacherAssignment(parseInt(t.getAttribute('data-i'), 10));
+    else if (a === 'sum-record') toggleSummaryRecording();
     else if (a === 'as-toggle') {
       const uid = t.getAttribute('data-uid');
       state._asCollapsed = state._asCollapsed || {};
@@ -9370,7 +9529,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610112018';
+var APP_VERSION = '202610112332';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

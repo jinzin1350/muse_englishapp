@@ -3182,3 +3182,25 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
   .cta-mascot{width:130px;}
   .cta-title{font-size:28px;}
 }
+
+/* ---- podcast summary challenge (2026-10-11) ---- */
+.sum-card{margin-top:1rem}
+.sum-controls{display:flex;align-items:center;gap:.8rem;margin:.6rem 0}
+.sum-timer{font-weight:800;font-size:1.1rem;color:#ff8a1e;font-variant-numeric:tabular-nums}
+.sum-live{display:flex;align-items:center;gap:.5rem;margin:.5rem 0;color:#ff8a1e;font-weight:600}
+.sum-score-card{display:flex;gap:1rem;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1rem;margin:.8rem 0}
+.sum-ring{--p:0;--c:#ff9800;width:4.2rem;height:4.2rem;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.25rem;background:conic-gradient(var(--c) calc(var(--p)*1%),rgba(255,255,255,.12) 0);position:relative}
+.sum-ring::before{content:'';position:absolute;inset:6px;border-radius:50%;background:#1a1a2e}
+.sum-ring span{position:relative;z-index:1}
+.sum-score-info h4{margin:0 0 .3rem;font-size:1rem}
+.sum-score-info p{margin:0;font-size:.88rem;color:rgba(245,243,255,.75)}
+.sum-details{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:.7rem .9rem;margin:.6rem 0}
+.sum-details summary{cursor:pointer;font-weight:700;font-size:.9rem}
+.sum-details p{margin:.5rem 0 0;font-size:.88rem}
+.sum-h{font-size:.95rem;margin:1rem 0 .5rem}
+.sum-corr{background:rgba(255,255,255,.04);border-radius:12px;padding:.7rem .9rem;margin-bottom:.5rem;font-size:.88rem}
+.sum-wrong{margin-bottom:.25rem}
+.sum-right{font-weight:600}
+.sum-why{font-size:.8rem;margin-top:.25rem}
+.sum-strengths{list-style:none;padding:0;margin:.3rem 0}
+.sum-strengths li{margin-bottom:.3rem;font-size:.88rem}
