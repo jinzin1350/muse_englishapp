@@ -37,9 +37,10 @@ Score 0-100 based on:
 
 RULES:
 - List up to 5 concrete grammar/vocabulary mistakes with corrections. Format each as: "❌ <their words>" then "✅ <corrected>". Skip trivial ASR artifacts.
+- PRONUNCIATION SUSPECTS: also list up to 5 words where the transcribed word does NOT fit the context but is PHONETICALLY SIMILAR to a word that would fit — this usually means the student mispronounced it and Whisper heard the wrong word. Example: transcript says "pork" in a job context → likely meant "work". Only flag when (a) the heard word is semantically odd AND (b) a similar-sounding alternative fits clearly better. Do NOT flag correct words.
 - If the summary is off-topic or too short (<20 words), say so and score accordingly low.
 - Feedback must be encouraging but honest. Write feedback in clear, simple English (the student is learning English).
-- Respond ONLY with valid JSON: {"score": <0-100>, "summary": "<2-3 sentence assessment>", "corrections": [{"wrong": "...", "right": "...", "why": "..."}], "strengths": ["..."]}
+- Respond ONLY with valid JSON: {"score": <0-100>, "summary": "<2-3 sentence assessment>", "corrections": [{"wrong": "...", "right": "...", "why": "..."}], "pronunciation": [{"heard": "...", "likely": "...", "why": "..."}], "strengths": ["..."]}
 - No markdown, no extra text outside the JSON.`;
 
 export async function onRequestPost(context) {
@@ -107,6 +108,7 @@ export async function onRequestPost(context) {
       score: score,
       summary: String(parsed.summary || ''),
       corrections: Array.isArray(parsed.corrections) ? parsed.corrections.slice(0, 5) : [],
+      pronunciation: Array.isArray(parsed.pronunciation) ? parsed.pronunciation.slice(0, 5) : [],
       strengths: Array.isArray(parsed.strengths) ? parsed.strengths.slice(0, 3) : [],
     });
   } catch (e) {

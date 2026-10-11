@@ -6250,6 +6250,18 @@ function podcastTabHTML(m) {
   return html;
 }
 
+/* Global English TTS for tap-to-hear (used by summary pronunciation section). */
+function speakEnglish(w) {
+  try {
+    if (!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(w);
+    u.lang = 'en-US';
+    u.rate = 0.85;
+    speechSynthesis.speak(u);
+  } catch (e) {}
+}
+
 /* ---- podcast summary challenge: 2-min recording -> Whisper -> AI grammar scoring ---- */
 var sumState = { rec: null, stream: null, chunks: [], timerId: null, left: 120, recording: false, manifest: null };
 
@@ -6389,14 +6401,24 @@ async function finishSummaryRecording() {
   const strengths = (score.strengths || []).map(function (s) {
     return '<li>💪 ' + esc(s) + '</li>';
   }).join('');
+  const pron = (score.pronunciation || []).map(function (x) {
+    return '<div class="sum-corr"><div class="sum-wrong">🗣️ Heard: "' + esc(x.heard || '') +
+      '" → likely you meant: <b>' + esc(x.likely || '') + '</b> ' +
+      '<button class="sp-hear" data-action="sum-hear" data-w="' + esc(x.likely || '') + '" aria-label="Hear correct pronunciation">🔊</button></div>' +
+      (x.why ? '<div class="muted sum-why">' + esc(x.why) + '</div>' : '') + '</div>';
+  }).join('');
   const ring = score.score >= 80 ? '#4caf50' : (score.score >= 60 ? '#ff9800' : '#f44336');
   resBox.innerHTML =
     '<div class="sum-score-card"><div class="sum-ring" style="--p:' + score.score + ';--c:' + ring + '">' +
     '<span>' + score.score + '</span></div>' +
     '<div class="sum-score-info"><h4>Your summary score</h4><p>' + esc(score.summary || '') + '</p></div></div>' +
     '<details class="sum-details" open><summary>📝 Your transcript</summary><p><i>' + esc(text) + '</i></p></details>' +
-    (corr ? '<h4 class="sum-h">🔧 Corrections</h4>' + corr : '') +
+    (pron ? '<h4 class="sum-h">🗣️ Pronunciation — tap 🔊 to hear</h4>' + pron : '') +
+    (corr ? '<h4 class="sum-h">🔧 Grammar corrections</h4>' + corr : '') +
     (strengths ? '<h4 class="sum-h">✨ Strengths</h4><ul class="sum-strengths">' + strengths + '</ul>' : '');
+  resBox.querySelectorAll('[data-action="sum-hear"]').forEach(function (b) {
+    b.addEventListener('click', function (ev) { ev.stopPropagation(); speakEnglish(b.getAttribute('data-w')); });
+  });
   try { markStep((sumState.manifest || {}).date, 'podcast'); } catch (e) {}
 }
 
@@ -9529,7 +9551,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610112332';
+var APP_VERSION = '202610112350';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
