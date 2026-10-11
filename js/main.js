@@ -2143,7 +2143,7 @@ function renderLanding(v) {
       '<div class="lp2-levels">' +
         LVLS.map(function (lv) {
           return '<a class="lp2-level" href="#/signup" style="--lv:' + lv[4] + '">' +
-            '<div class="lp2-lvl-top"><span class="lp2-lvl-badge" style="background:' + lv[5] + ';color:' + lv[4] + '">' + lv[0] + '</span>' +
+            '<div class="lp2-lvl-art"><span class="lp2-lvl-badge" style="background:' + lv[5] + ';color:' + lv[4] + '">' + lv[0] + '</span>' +
             '<img class="lp2-lvl-ill" src="' + L + lv[1] + '.webp?v=3" alt="" loading="lazy"></div>' +
             '<div class="lp2-lvl-name">' + lv[2] + '</div><div class="lp2-lvl-desc">' + lv[3] + '</div>' +
             '<span class="lp2-lvl-go">\u276F</span></a>';
@@ -9310,7 +9310,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610111921';
+var APP_VERSION = '202610111922';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
