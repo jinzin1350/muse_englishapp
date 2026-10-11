@@ -2083,7 +2083,7 @@ function renderLanding(v) {
 
     /* Hero */
     '<section class="lp2-hero">' +
-      '<img class="lp2-hero-bg" src="' + L + 'bg-hero.png" alt="" aria-hidden="true">' +
+      '<img class="lp2-hero-bg" src="' + L + 'bg-hero.png?v=2\" alt="" aria-hidden="true">' +
       '<div id="lp-invite" class="lp-invite hidden"></div>' +
       '<div class="lp2-hero-inner">' +
         '<div class="lp2-hero-copy">' +
@@ -2097,7 +2097,7 @@ function renderLanding(v) {
           '<div class="lp2-trust"><span>\u2713 Free to start</span><span>\u2713 No credit card</span><span>\u2713 6 levels</span></div>' +
           (returning ? '<p class="lp2-returning">Welcome back \u2014 <a href="#/signin">sign in</a> to continue.</p>' : '') +
         '</div>' +
-        '<img class="lp2-mascot" src="' + L + 'mascot-hero.png" alt="Muse English flame mascot with headphones reading a book">' +
+        '<img class="lp2-mascot" src="' + L + 'mascot-hero.png?v=2\" alt="Muse English flame mascot with headphones reading a book">' +
       '</div>' +
       '<div class="lp2-hero-preview" id="hero-preview"><div class="lp-lesson-card"><p class="lp-muted">Loading today\u2019s lesson\u2026</p></div></div>' +
     '</section>' +
@@ -2105,7 +2105,7 @@ function renderLanding(v) {
     /* Stats */
     '<section class="lp2-stats" aria-label="Highlights">' +
       STATS.map(function (s) {
-        return '<div class="lp2-stat"><img src="' + L + s[0] + '.png" alt="" loading="lazy"><b>' + s[1] + '</b><span>' + s[2] + '</span></div>';
+        return '<div class="lp2-stat"><img src="' + L + s[0] + '.png?v=2" alt="" loading="lazy"><b>' + s[1] + '</b><span>' + s[2] + '</span></div>';
       }).join('') +
     '</section>' +
 
@@ -2115,7 +2115,7 @@ function renderLanding(v) {
       '<p class="lp2-sub">The same five steps every day \u2014 a habit you can actually keep.</p>' +
       '<div class="lp2-steps">' +
         STEPS.map(function (s, i) {
-          return '<div class="lp2-step"><img src="' + L + s[0] + '.png" alt="" loading="lazy">' +
+          return '<div class="lp2-step"><img src="' + L + s[0] + '.png?v=2" alt="" loading="lazy">' +
             '<div class="lp2-step-num">' + (i + 1) + '</div>' +
             '<h3>' + s[1] + '</h3><p>' + s[2] + '</p></div>';
         }).join('') +
@@ -2141,7 +2141,7 @@ function renderLanding(v) {
       '<p class="lp2-sub">From your first English words to near-native precision. Pick your level when you join \u2014 every lesson matches it.</p>' +
       '<div class="lp2-levels">' +
         LVLS.map(function (lv) {
-          return '<div class="lp2-level"><img src="' + L + lv[0] + '.png" alt="' + lv[1] + ' level badge" loading="lazy">' +
+          return '<div class="lp2-level"><img src="' + L + lv[0] + '.png?v=2" alt="' + lv[1] + ' level badge" loading="lazy">' +
             '<div class="lp2-lvl-name">' + lv[2] + '</div><div class="lp2-lvl-desc">' + lv[3] + '</div></div>';
         }).join('') +
       '</div>' +
@@ -2153,9 +2153,9 @@ function renderLanding(v) {
       '<h2>Why it sticks</h2>' +
       '<p class="lp2-sub">Designed to keep you coming back \u2014 and to make every mistake count.</p>' +
       '<div class="lp2-why">' +
-        '<div class="lp2-why-card"><img src="' + L + 'icon-streak.png" alt="" loading="lazy"><h3>Streaks &amp; XP</h3><p>Every lesson builds your streak. Miss a day and a freeze saves it \u2014 earn more freezes every 7 days.</p><img class="lp2-why-extra" src="' + L + 'icon-12day.png" alt="12 day streak achievement" loading="lazy"></div>' +
-        '<div class="lp2-why-card"><img src="' + L + 'icon-target.png" alt="" loading="lazy"><h3>Mistakes become practice</h3><p>Every wrong answer is saved automatically. Review practices exactly what you missed.</p><img class="lp2-why-extra" src="' + L + 'mistake-chips.png" alt="Example mistake review chips" loading="lazy"></div>' +
-        '<div class="lp2-why-card"><img src="' + L + 'podcast-cover.png" alt="Muse English podcast cover" loading="lazy"><h3>A real podcast, daily</h3><p>Two hosts use every new word in a natural conversation \u2014 with transcript and shadowing audio.</p></div>' +
+        '<div class="lp2-why-card"><img src="' + L + 'icon-streak.png?v=2\" alt="" loading="lazy"><h3>Streaks &amp; XP</h3><p>Every lesson builds your streak. Miss a day and a freeze saves it \u2014 earn more freezes every 7 days.</p><img class="lp2-why-extra" src="' + L + 'icon-12day.png?v=2\" alt="12 day streak achievement" loading="lazy"></div>' +
+        '<div class="lp2-why-card"><img src="' + L + 'icon-target.png?v=2\" alt="" loading="lazy"><h3>Mistakes become practice</h3><p>Every wrong answer is saved automatically. Review practices exactly what you missed.</p><img class="lp2-why-extra" src="' + L + 'mistake-chips.png?v=2\" alt="Example mistake review chips" loading="lazy"></div>' +
+        '<div class="lp2-why-card"><img src="' + L + 'podcast-cover.png?v=2\" alt="Muse English podcast cover" loading="lazy"><h3>A real podcast, daily</h3><p>Two hosts use every new word in a natural conversation \u2014 with transcript and shadowing audio.</p></div>' +
       '</div>' +
     '</section>' +
 
@@ -2164,16 +2164,16 @@ function renderLanding(v) {
       '<h2>Real people. Real progress.</h2>' +
       '<p class="lp2-sub">Learners from around the world are building real habits with Muse English.</p>' +
       '<div class="lp2-testis">' +
-        '<div class="lp2-testi"><img class="lp2-avatar" src="' + L + 'avatar-female.png" alt="Sara from Canada" loading="lazy"><p>\u201CI finally look forward to my English practice every day. The podcast is amazing!\u201D</p><b>Sara, Canada</b><img class="lp2-stars" src="' + L + 'stars.png" alt="5 star rating" loading="lazy"></div>' +
-        '<div class="lp2-testi"><img class="lp2-avatar" src="' + L + 'avatar-male.png" alt="Reza from Germany" loading="lazy"><p>\u201CThe best app I\u2019ve found for actually speaking English. Short, fun and effective.\u201D</p><b>Reza, Germany</b><img class="lp2-stars" src="' + L + 'stars.png" alt="5 star rating" loading="lazy"></div>' +
-        '<div class="lp2-testi"><img class="lp2-avatar" src="' + L + 'avatar-asian.png" alt="Mina from Japan" loading="lazy"><p>\u201CI love the daily lessons and the review system. It really helps me remember words.\u201D</p><b>Mina, Japan</b><img class="lp2-stars" src="' + L + 'stars.png" alt="5 star rating" loading="lazy"></div>' +
+        '<div class="lp2-testi"><img class="lp2-avatar" src="' + L + 'avatar-female.png?v=2\" alt="Sara from Canada" loading="lazy"><p>\u201CI finally look forward to my English practice every day. The podcast is amazing!\u201D</p><b>Sara, Canada</b><img class="lp2-stars" src="' + L + 'stars.png?v=2\" alt="5 star rating" loading="lazy"></div>' +
+        '<div class="lp2-testi"><img class="lp2-avatar" src="' + L + 'avatar-male.png?v=2\" alt="Reza from Germany" loading="lazy"><p>\u201CThe best app I\u2019ve found for actually speaking English. Short, fun and effective.\u201D</p><b>Reza, Germany</b><img class="lp2-stars" src="' + L + 'stars.png?v=2\" alt="5 star rating" loading="lazy"></div>' +
+        '<div class="lp2-testi"><img class="lp2-avatar" src="' + L + 'avatar-asian.png?v=2\" alt="Mina from Japan" loading="lazy"><p>\u201CI love the daily lessons and the review system. It really helps me remember words.\u201D</p><b>Mina, Japan</b><img class="lp2-stars" src="' + L + 'stars.png?v=2\" alt="5 star rating" loading="lazy"></div>' +
       '</div>' +
     '</section>' +
 
     /* Final CTA */
     '<section class="lp2-final">' +
-      '<img class="lp2-final-bg" src="' + L + 'bg-sunset.png" alt="" aria-hidden="true">' +
-      '<img class="lp2-final-mascot" src="' + L + 'mascot-point.png" alt="" aria-hidden="true">' +
+      '<img class="lp2-final-bg" src="' + L + 'bg-sunset.png?v=2\" alt="" aria-hidden="true">' +
+      '<img class="lp2-final-mascot" src="' + L + 'mascot-point.png?v=2\" alt="" aria-hidden="true">' +
       '<h2>Start today\u2019s lesson</h2>' +
       '<p>One lesson a day. Words, quiz, podcast, shadowing and grammar \u2014 for your level.</p>' +
       '<a class="lp2-cta lp2-cta-lg" href="#/signup">Create your free account</a>' +
@@ -9285,7 +9285,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610111729';
+var APP_VERSION = '202610111747';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
