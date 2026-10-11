@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "downy-ultra-soft-plus-fresh-calm-275l",
+      "name_fa": "نرم‌کننده لباس داونی اولترا سافت + فرش، رایحه لاوندر و وانیل، ۲.۷۵ لیتر",
+      "name_en": "Downy Ultra Soft Plus Fresh Fabric Softener, Calm Lavender & Vanilla Bean, 2.75 L",
+      "price_cad": 13.25,
+      "regular_cad": 17.99,
+      "discount_pct": null,
+      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
+      "image": "img/downy-ultra-soft-plus-fresh-calm-275l.jpg",
+      "url": "https://www.amazon.ca/dp/B0DBN69SK5?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "یک بطری برای ۱۳۸ بار شستشو؛ لباس‌ها نرم و خوشبو می‌مانند و برای همه پارچه‌ها و ماشین‌ها بی‌خطر است."
+    },
+    {
+      "id": "stanley-iceflow-2-flip-straw-tumbler-dark-blossom-30oz",
+      "name_fa": "لیوان سفری استنلی آیس‌فلو ۲.۰، ۳۰ اونسی، رنگ دارک بلاسم",
+      "name_en": "Stanley IceFlow 2.0 Flip Straw Tumbler, 30 oz, Dark Blossom",
+      "price_cad": 26.6,
+      "regular_cad": 46.0,
+      "discount_pct": 40,
+      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
+      "image": "img/stanley-iceflow-2-flip-straw-tumbler-dark-blossom-30oz.jpg",
+      "url": "https://www.amazon.ca/dp/B0FB7396CF?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "یکی از پرفروش‌ترین لیوان‌های سفر دنیا با بیش از ۲۵ هزار نظر ۴.۵ ستاره‌ای؛ نوشیدنی را ساعت‌ها سرد نگه می‌دارد، درب ضدچکه و دسته چرخان دارد."
+    },
+    {
       "id": "worx-cube-vac-wx030l9",
       "name_fa": "جاروشارژی مکعبی ورکس (فقط بدنه، بدون باتری)",
       "name_en": "WORX WX030L.9 20V Power Share Cordless Cube Vac (Bare Tool)",
@@ -83,34 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "لکه‌بر پرتابل فرش و مبل؛ نجات‌دهنده مبل‌ها از لکه‌های روزمره"
-    },
-    {
-      "id": "ninja-creami-nc301-ice-cream-maker",
-      "name_fa": "بستنی‌ساز نینجا کرمی NC301",
-      "name_en": "Ninja CREAMi Ice Cream Maker (NC301)",
-      "price_cad": 169.99,
-      "regular_cad": 219.99,
-      "discount_pct": 23,
-      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
-      "image": "img/ninja-creami-nc301-ice-cream-maker.jpg",
-      "url": "https://www.amazon.ca/dp/B08QXB9BH5?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "بستنی، ژلاتو و میلک‌شیک خونگی با ۷ برنامه؛ بدون مواد نگهدارنده"
-    },
-    {
-      "id": "levoit-lvac200-cordless-vacuum",
-      "name_fa": "جاروبرقی شارژی لیویت LVAC-200",
-      "name_en": "LEVOIT LVAC-200 Cordless Vacuum Cleaner",
-      "price_cad": 149.0,
-      "regular_cad": 199.99,
-      "discount_pct": 25,
-      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
-      "image": "img/levoit-lvac200-cordless-vacuum.jpg",
-      "url": "https://www.amazon.ca/dp/B0FY6N9YTL?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "جاروبرقی سبک بدون سیم با فیلتر هپا؛ مناسب خونه‌های دارای حیوان خانگی"
     }
   ],
   "updated_fa": "یکشنبه ۱۹ مهر"
