@@ -3991,6 +3991,13 @@ async function requestAIReport(kind, pack, btn) {
 async function loadTeacherAssignments() {
   const host = document.getElementById('tch-assign');
   if (!host || !(state.teacher || state.viewTeacher)) return;
+  /* roster may not have loaded yet (parallel init) — fetch for name mapping */
+  if (!state.teacherStudents && state.teacher && !state.viewTeacher) {
+    try {
+      const rr = await sb.rpc('get_my_students');
+      if (!rr.error) state.teacherStudents = rr.data || [];
+    } catch (e) {}
+  }
   try {
     let a;
     try {
@@ -4016,20 +4023,67 @@ async function loadTeacherAssignments() {
         (doneMap[x.assignment_id] = doneMap[x.assignment_id] || []).push(x.student_id);
       });
     } catch (e) {}
+    /* ---- grouped by student (2026-10-11) ---- */
+    const roster = state.teacherStudents || [];
+    const nameOf = {};
+    roster.forEach(function (s) { nameOf[s.user_id] = s.display_name || (s.email || '?').split('@')[0]; });
+    const now = Date.now();
+    const groups = {}; /* uid -> {name, items:[{i,x,overdue,doneFor}]} */
+    rows.forEach(function (x, i) {
+      const doneIds = doneMap[x.id] || [];
+      (x.student_ids || []).forEach(function (uid) {
+        const g = groups[uid] || (groups[uid] = { name: nameOf[uid] || '—', items: [] });
+        const doneFor = doneIds.indexOf(uid) !== -1;
+        const overdue = !doneFor && x.status !== 'scheduled' && x.deadline && new Date(x.deadline).getTime() < now;
+        g.items.push({ i: i, x: x, overdue: !!overdue, doneFor: doneFor });
+      });
+    });
+    const gids = Object.keys(groups);
+    /* sort: overdue first, then most pending, then name */
+    gids.sort(function (a, b) {
+      const ga = groups[a], gb = groups[b];
+      const oa = ga.items.filter(function (t) { return t.overdue; }).length;
+      const ob = gb.items.filter(function (t) { return t.overdue; }).length;
+      if (ob !== oa) return ob - oa;
+      const pa = ga.items.filter(function (t) { return !t.doneFor; }).length;
+      const pb = gb.items.filter(function (t) { return !t.doneFor; }).length;
+      if (pb !== pa) return pb - pa;
+      return String(ga.name).localeCompare(String(gb.name));
+    });
+    const collapsed = state._asCollapsed || (state._asCollapsed = {});
     host.innerHTML = '<div class="section-title"><h2>📝 Assignments</h2>' +
       '<button class="btn btn-sm" data-action="ai-report-class">🤖 Class report</button></div>' +
-      rows.map(function (x, i) {
-        const done = (doneMap[x.id] || []).length;
-        const total = (x.student_ids || []).length;
-        const sched = x.status === 'scheduled';
-        const meta = sched && x.send_at
-          ? schedLabel(x.send_at, x.send_tz)
-          : esc(fmtDate(new Date(x.created_at))) + ' · ' + done + '/' + total + ' done';
-        return '<button class="as-row' + (sched ? ' as-sched' : '') + '" data-action="assignment-open" data-i="' + i + '">' +
-          '<span class="as-ico">' + (sched ? '⏰' : (x.kind === 'exam' ? '📋' : '📝')) + '</span>' +
-          '<span class="as-main"><span class="as-title">' + esc(x.title) + '</span>' +
-          '<span class="as-meta">' + meta + '</span></span>' +
-          '<span class="as-go">→</span></button>';
+      gids.map(function (uid) {
+        const g = groups[uid];
+        const pend = g.items.filter(function (t) { return !t.doneFor && t.x.status !== 'scheduled'; }).length;
+        const over = g.items.filter(function (t) { return t.overdue; }).length;
+        const schedN = g.items.filter(function (t) { return t.x.status === 'scheduled'; }).length;
+        const isCol = !!collapsed[uid];
+        const initial = (g.name || '?').charAt(0).toUpperCase();
+        const badges = (over ? '<span class="as-badge as-bad-over">' + over + ' overdue</span>' : '') +
+          (pend ? '<span class="as-badge">' + pend + ' pending</span>' : '') +
+          (schedN ? '<span class="as-badge as-bad-sched">' + schedN + ' scheduled</span>' : '') +
+          (!pend && !over && !schedN ? '<span class="as-badge as-bad-done">all done ✓</span>' : '');
+        const bodyRows = g.items.map(function (t) {
+          const x = t.x, sched = x.status === 'scheduled';
+          const meta = sched && x.send_at
+            ? schedLabel(x.send_at, x.send_tz)
+            : esc(fmtDate(new Date(x.created_at))) +
+              (t.doneFor ? ' · <b class="ok">done ✓</b>' : (t.overdue ? ' · <b class="as-over-txt">overdue ⏰</b>' : ''));
+          return '<button class="as-row' + (sched ? ' as-sched' : '') + (t.overdue ? ' as-overdue' : '') +
+            '" data-action="assignment-open" data-i="' + t.i + '">' +
+            '<span class="as-ico">' + (sched ? '⏰' : (x.kind === 'exam' ? '📋' : '📝')) + '</span>' +
+            '<span class="as-main"><span class="as-title">' + esc(x.title) + '</span>' +
+            '<span class="as-meta">' + meta + '</span></span>' +
+            '<span class="as-go">→</span></button>';
+        }).join('');
+        return '<div class="as-student' + (isCol ? ' as-collapsed' : '') + '">' +
+          '<button class="as-student-head" data-action="as-toggle" data-uid="' + esc(uid) + '">' +
+          '<span class="as-avatar">' + esc(initial) + '</span>' +
+          '<span class="as-sname">' + esc(g.name) + '</span>' +
+          '<span class="as-badges">' + badges + '</span>' +
+          '<span class="as-caret">' + (isCol ? '▸' : '▾') + '</span></button>' +
+          '<div class="as-student-body">' + bodyRows + '</div></div>';
       }).join('');
   } catch (e) { host.innerHTML = ''; }
 }
@@ -9222,6 +9276,12 @@ function bindEvents() {
       if (w) w.classList.toggle('hidden');
     }
     else if (a === 'assignment-open') openTeacherAssignment(parseInt(t.getAttribute('data-i'), 10));
+    else if (a === 'as-toggle') {
+      const uid = t.getAttribute('data-uid');
+      state._asCollapsed = state._asCollapsed || {};
+      state._asCollapsed[uid] = !state._asCollapsed[uid];
+      loadTeacherAssignments();
+    }
     else if (a === 'assignment-cancel') cancelScheduledAssignment(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'assignment-delete') deleteTeacherAssignment(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'assignment-start') startAssignment(parseInt(t.getAttribute('data-i'), 10));
@@ -9310,7 +9370,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610111928';
+var APP_VERSION = '202610112018';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

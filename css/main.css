@@ -2425,6 +2425,20 @@ body.duo-playing{padding-bottom:0!important;}
 .pl-done h2{font-family:Georgia,serif;color:#1e2a4e}
 .tch-actions{display:flex;gap:.5rem}
 .as-row.as-sched{border-style:dashed}
+.as-student{margin-bottom:.7rem;border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.03)}
+.as-student-head{display:flex;align-items:center;gap:.6rem;width:100%;padding:.65rem .8rem;background:rgba(255,255,255,.04);border:0;cursor:pointer;color:inherit;text-align:left}
+.as-avatar{width:2rem;height:2rem;border-radius:50%;background:linear-gradient(135deg,#ff8a1e,#ff5e3a);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.95rem;color:#fff;flex-shrink:0}
+.as-sname{font-weight:700;font-size:.95rem}
+.as-badges{display:flex;gap:.35rem;margin-left:auto;flex-wrap:wrap}
+.as-badge{font-size:.7rem;font-weight:700;padding:.15rem .55rem;border-radius:99px;background:rgba(255,255,255,.1);color:rgba(245,243,255,.8)}
+.as-bad-over{background:rgba(255,70,70,.18);color:#ff8a8a}
+.as-bad-sched{background:rgba(255,200,80,.15);color:#ffd48a}
+.as-bad-done{background:rgba(80,200,120,.15);color:#8ae6a8}
+.as-caret{color:#ff8a1e;font-weight:700;margin-left:.3rem}
+.as-student-body{padding:.5rem .6rem .6rem}
+.as-student.as-collapsed .as-student-body{display:none}
+.as-row.as-overdue{border-color:rgba(255,70,70,.4)}
+.as-over-txt{color:#ff8a8a}
 @media (max-width:420px){ .pl-row{grid-template-columns:1fr 84px} .pl-time{grid-column:1/-1} }
 
 /* ---- Learning analytics (2026-10-03) ---- */
