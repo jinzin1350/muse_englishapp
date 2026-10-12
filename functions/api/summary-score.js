@@ -37,14 +37,17 @@ OUTPUT RULES (critical):
 - The "summary" field must be 2-3 sentences of plain assessment text — NEVER your internal reasoning.
 - Build the pronunciation list first in your head; any phrase in it is FORBIDDEN from appearing in corrections. The same issue must never be in both lists.
 
-GRAMMAR HUNT (be a STRICT teacher — scan every sentence of the INTENDED speech for ALL of these, list up to 6):
-- verb tense errors ("I go yesterday" → "I went yesterday")
-- subject-verb agreement ("he go" → "he goes"; "two interviewer wanted" → "two interviewers wanted")
-- articles, missing or wrong ("related about job" → "related to the job")
-- prepositions ("related about" → "related to")
-- plural/singular ("one of the board will be" → "one of the boards will be")
-- word order, wrong word choice
-Quote the EXACT wrong phrase and give the correction. Do not skip obvious mistakes. Fewer than 6 real mistakes → list fewer, never pad.
+GRAMMAR CHECK — read each sentence of the INTENDED speech word by word. For EVERY mistake you find, add one corrections entry. Check:
+1. Is every verb in the right tense and form?
+2. Does every subject agree with its verb? Is every countable noun correctly singular/plural?
+3. Are articles (a/an/the) correct or missing?
+4. Are prepositions correct?
+Example: intended speech "Its related about job and careers. Two interviewer wanted to speak." →
+corrections: [
+ {"wrong":"Its related about job","right":"It's related to the job","why":"'Its' should be 'It's' (= it is); 'related about' should be 'related to'; 'job' needs 'the'"},
+ {"wrong":"Two interviewer wanted","right":"Two interviewers wanted","why":"'two' needs plural: interviewers"}
+]
+Be this thorough. List up to 6. Never pad with fake mistakes.
 
 Score 0-100 based on the INTENDED speech:
 - GRAMMAR (35 pts): verb tenses, articles, prepositions, word order, subject-verb agreement — of what they MEANT to say
