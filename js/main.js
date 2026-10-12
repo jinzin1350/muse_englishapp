@@ -6242,6 +6242,7 @@ function podcastTabHTML(m) {
   /* Podcast summary challenge: record a spoken summary (up to 2 min), get AI transcription + grammar scoring. */
   html += '<div class="card plain sum-card"><h3 class="serif">🎤 Summarize the podcast</h3>' +
     '<p class="muted">Listen to the episode, then record yourself summarizing it in English (up to 2 minutes). ' +
+    'Speak for at least 20 seconds — the longer you speak, the better your score analysis. ' +
     'You\'ll get a transcript, grammar corrections and a score.</p>' +
     '<div class="sum-controls"><button class="btn" id="sum-rec-btn" data-action="sum-record">🎤 Start recording</button>' +
     '<span class="sum-timer hidden" id="sum-timer">2:00</span></div>' +
@@ -6391,8 +6392,12 @@ async function finishSummaryRecording() {
   } catch (e) { err = 'network'; }
   if (btn) { btn.disabled = false; btn.innerHTML = '🎤 Record again'; }
   if (!score) {
-    resBox.innerHTML = '<div class="empty">📝 Scoring failed' + (err ? ' (' + esc(err) + ')' : '') +
-      '. Your transcript:<br><br><i>' + esc(text) + '</i></div>';
+    const wordCount = text.trim().split(/\s+/).filter(Boolean).length;
+    const shortMsg = err === 'Transcript too short.'
+      ? 'We only heard ' + wordCount + ' word' + (wordCount === 1 ? '' : 's') + ' (' + esc(text) + '). ' +
+        'Please speak longer (at least 20 seconds), louder and closer to the microphone, then try again.'
+      : 'Scoring failed' + (err ? ' (' + esc(err) + ')' : '') + '. Your transcript:<br><br><i>' + esc(text) + '</i>';
+    resBox.innerHTML = '<div class="empty">📝 ' + shortMsg + '</div>';
     return;
   }
   const corr = (score.corrections || []).map(function (c) {
@@ -9568,7 +9573,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610120024';
+var APP_VERSION = '202610120035';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
