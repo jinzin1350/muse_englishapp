@@ -6217,7 +6217,16 @@ function wordsTabHTML(m) {
     ? '<button class="start-quiz-cta" data-action="lesson-tab" data-tab="quiz" aria-label="Start the word quiz">' +
       '<img src="/media/celebration/start-quiz.webp" alt="Start Quiz"></button>'
     : '';
-  return cards + cta;
+  /* All-words pronunciation audio after the last word card (moved from podcast tab 2026-10-11). */
+  const pronCard = m.pronunciation_audio
+    ? audioCardHTML({
+        id: 'card-pron', src: m.pronunciation_audio,
+        title: 'Pronunciation — all words',
+        sub: 'Listen to all ' + (m.words || []).length + ' words read aloud',
+        speeds: false, download: true
+      })
+    : '';
+  return cards + pronCard + cta;
 }
 
 function podcastTabHTML(m) {
@@ -6228,14 +6237,6 @@ function podcastTabHTML(m) {
       title: m.podcast.title || 'Word Kitchen',
       sub: 'Podcast episode', cover: m.podcast.cover,
       speeds: false, download: true, transcript: m.podcast.transcript || null
-    });
-  }
-  if (m.pronunciation_audio) {
-    html += audioCardHTML({
-      id: 'card-pron', src: m.pronunciation_audio,
-      title: 'Pronunciation — words with examples',
-      sub: 'All ' + (m.words || []).length + ' words read aloud',
-      speeds: false, download: true
     });
   }
   if (!html) html = '<div class="empty">No audio in this lesson yet.</div>';
@@ -9573,7 +9574,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610120035';
+var APP_VERSION = '202610120037';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
