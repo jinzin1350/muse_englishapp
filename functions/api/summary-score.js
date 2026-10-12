@@ -37,7 +37,8 @@ The transcript comes from Whisper hearing a non-native speaker. Many "wrong word
 - Build the INTENDED version of the whole summary in your head.
 
 STAGE 2 — ANALYZE THE *INTENDED* SPEECH (not the raw transcript):
-- GRAMMAR CORRECTIONS: list up to 5 REAL grammar/vocabulary mistakes from the INTENDED speech — mistakes the student actually made in their head, not Whisper's mishearings. NEVER list something as a grammar correction if it's already classified as a pronunciation suspect. If after reconstruction there are fewer than 5 real mistakes, list fewer — do not pad.
+- FIRST write the full pronunciation list. THEN, before writing any grammar correction, check every candidate against that list: if the words overlap AT ALL (same phrase, same region of the sentence), it goes in pronunciation ONLY and is FORBIDDEN in corrections. Example of FORBIDDEN duplication: pronunciation has "sings about → thinks about" and corrections also has "sings about → thinks about" — this must never happen.
+- GRAMMAR CORRECTIONS: list up to 5 REAL grammar/vocabulary mistakes from the INTENDED speech — mistakes the student actually made in their head, not Whisper's mishearings. If after reconstruction there are fewer than 5 real mistakes, list fewer — do not pad, do not invent.
 - PRONUNCIATION SUSPECTS: list up to 5 entries as {"heard": "<what Whisper wrote>", "likely": "<what they meant>", "why": "<one-line explanation>"}. Only when (a) heard word is semantically odd AND (b) a similar-sounding alternative fits clearly better.
 
 Score 0-100 based on the INTENDED speech:
