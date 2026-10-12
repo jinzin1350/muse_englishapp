@@ -131,9 +131,20 @@ export async function onRequestPost(context) {
       }
       return true;
     });
+    let summaryTxt = String(parsed.summary || '');
+    /* Safety net: if the model leaked chain-of-thought into summary, strip it */
+    if (/step\s*1|intent\s*reconstruction|##\s*step/i.test(summaryTxt)) {
+      const jm = summaryTxt.match(/\{[\s\S]*\}/);
+      summaryTxt = jm ? summaryTxt : 'Summary analyzed. See corrections and pronunciation notes below.';
+      /* try to salvage: take text after the last ## header */
+      const parts = String(parsed.summary || '').split(/##+\s*/);
+      const last = parts[parts.length - 1] || '';
+      if (last.length > 20 && last.length < 500 && !/step\s*1/i.test(last)) summaryTxt = last.trim();
+      else summaryTxt = 'Your summary was analyzed. Check the pronunciation and grammar sections below.';
+    }
     return json({
       score: score,
-      summary: String(parsed.summary || ''),
+      summary: summaryTxt,
       corrections: corr,
       pronunciation: pron,
       strengths: Array.isArray(parsed.strengths) ? parsed.strengths.slice(0, 3) : [],
