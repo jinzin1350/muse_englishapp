@@ -6344,6 +6344,8 @@ async function finishSummaryRecording() {
   if (timer) timer.classList.add('hidden');
   const blob = new Blob(sumState.chunks, { type: (sumState.rec && sumState.rec.mimeType) || 'audio/mp4' });
   sumState.rec = null; sumState.stream = null; sumState.chunks = [];
+  let audioUrl = '';
+  try { audioUrl = URL.createObjectURL(blob); } catch (e) {}
   if (!resBox) return;
   if (!blob.size || blob.size < 2000) {
     resBox.innerHTML = '<div class="empty">🎤 No audio captured. Try again.</div>';
@@ -6408,15 +6410,30 @@ async function finishSummaryRecording() {
       (x.why ? '<div class="muted sum-why">' + esc(x.why) + '</div>' : '') + '</div>';
   }).join('');
   const ring = score.score >= 80 ? '#4caf50' : (score.score >= 60 ? '#ff9800' : '#f44336');
+  /* inline highlight: wrap mispronounced words in the transcript like shadowing does */
+  let hiText = esc(text);
+  (score.pronunciation || []).forEach(function (x) {
+    const heard = esc(x.heard || '');
+    if (!heard || heard.length < 2) return;
+    const idx = hiText.toLowerCase().indexOf(heard.toLowerCase());
+    if (idx !== -1) {
+      hiText = hiText.slice(0, idx) +
+        '<span class="sum-mispron">' + hiText.slice(idx, idx + heard.length) +
+        ' <button class="sp-hear" data-w="' + esc(x.likely || '') + '" aria-label="Hear: ' + esc(x.likely || '') + '">🔊</button></span>' +
+        hiText.slice(idx + heard.length);
+    }
+  });
   resBox.innerHTML =
     '<div class="sum-score-card"><div class="sum-ring" style="--p:' + score.score + ';--c:' + ring + '">' +
     '<span>' + score.score + '</span></div>' +
     '<div class="sum-score-info"><h4>Your summary score</h4><p>' + esc(score.summary || '') + '</p></div></div>' +
-    '<details class="sum-details" open><summary>📝 Your transcript</summary><p><i>' + esc(text) + '</i></p></details>' +
+    (audioUrl ? '<div class="sum-audio"><span class="muted">🎧 Your recording:</span><audio controls src="' + audioUrl + '" style="width:100%;margin-top:.3rem"></audio></div>' : '') +
+    '<details class="sum-details" open><summary>📝 Your transcript</summary><p><i>' + hiText + '</i></p>' +
+    '<p class="muted sum-legend"><span class="sum-mispron">red</span> = mispronounced — tap 🔊 to hear the correct word</p></details>' +
     (pron ? '<h4 class="sum-h">🗣️ Pronunciation — tap 🔊 to hear</h4>' + pron : '') +
     (corr ? '<h4 class="sum-h">🔧 Grammar corrections</h4>' + corr : '') +
     (strengths ? '<h4 class="sum-h">✨ Strengths</h4><ul class="sum-strengths">' + strengths + '</ul>' : '');
-  resBox.querySelectorAll('[data-action="sum-hear"]').forEach(function (b) {
+  resBox.querySelectorAll('.sp-hear').forEach(function (b) {
     b.addEventListener('click', function (ev) { ev.stopPropagation(); speakEnglish(b.getAttribute('data-w')); });
   });
   try { markStep((sumState.manifest || {}).date, 'podcast'); } catch (e) {}
@@ -9551,7 +9568,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610112350';
+var APP_VERSION = '202610120024';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

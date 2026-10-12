@@ -3204,3 +3204,8 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .sum-why{font-size:.8rem;margin-top:.25rem}
 .sum-strengths{list-style:none;padding:0;margin:.3rem 0}
 .sum-strengths li{margin-bottom:.3rem;font-size:.88rem}
+
+.sum-mispron{background:rgba(244,67,54,.18);color:#ff9a92;border-radius:6px;padding:.1rem .35rem;font-weight:700;font-style:normal}
+.sum-mispron .sp-hear{background:none;border:0;cursor:pointer;font-size:.85rem;padding:0 .15rem}
+.sum-audio{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:.7rem .9rem;margin:.6rem 0}
+.sum-legend{font-size:.78rem;margin-top:.5rem}
