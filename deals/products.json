@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "newbalance-nergize-2026-10-12",
+      "name_fa": "کفش ورزشی نیوبالانس نرجایز اسپورت",
+      "name_en": "New Balance Women's DynaSoft Nergize Sport V2",
+      "price_cad": 37.35,
+      "regular_cad": 109.99,
+      "discount_pct": 66,
+      "added_fa": "دوشنبه، ۱۲ اکتبر ۲۰۲۶",
+      "image": "img/newbalance-nergize-2026-10-12.jpg",
+      "url": "https://www.amazon.ca/dp/B0BHKVQFLG?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "فناوری دایناسافت، راحت برای تمام روز — رنگ‌ها و سایزهای منتخب"
+    },
+    {
+      "id": "graco-olivia-crib-2026-10-12",
+      "name_fa": "تخت‌خواب کودک گراکو اولیویا ۳در۱",
+      "name_en": "Graco Olivia 3-in-1 Convertible Crib",
+      "price_cad": 227.0,
+      "regular_cad": 329.98,
+      "discount_pct": 31,
+      "added_fa": "دوشنبه، ۱۲ اکتبر ۲۰۲۶",
+      "image": "img/graco-olivia-crib-2026-10-12.jpg",
+      "url": "https://www.amazon.ca/dp/B0DCHBD26X?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "تبدیل به تخت نوجوان و کاناپه — گواهی گرین‌گارد گلد"
+    },
+    {
+      "id": "carhartt-quarterzip-2026-10-12",
+      "name_fa": "سویشرت نیم‌زیپ کارهارت",
+      "name_en": "Carhartt Men's Loose Fit Midweight Quarter-Zip Mock-Neck Sweatshirt",
+      "price_cad": 50.97,
+      "regular_cad": 84.99,
+      "discount_pct": 40,
+      "added_fa": "دوشنبه، ۱۲ اکتبر ۲۰۲۶",
+      "image": "img/carhartt-quarterzip-2026-10-12.jpg",
+      "url": "https://www.amazon.ca/dp/B0BDFLCF7W?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پارچه نیمه‌سنگین و بادوام، مناسب پاییز کانادا — رنگ‌ها و سایزهای منتخب"
+    },
+    {
+      "id": "samsung-buds3-fe-2026-10-12",
+      "name_fa": "هندزفری سامسونگ گلکسی بادز ۳ اف‌ای",
+      "name_en": "Samsung Galaxy Buds3 FE, Black (2025, CAD Version)",
+      "price_cad": 129.99,
+      "regular_cad": 179.99,
+      "discount_pct": 28,
+      "added_fa": "دوشنبه، ۱۲ اکتبر ۲۰۲۶",
+      "image": "img/samsung-buds3-fe-2026-10-12.jpg",
+      "url": "https://www.amazon.ca/dp/B0FLQFQGDX?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "حذف نویز فعال و ترجمه زنده با هوش مصنوعی — نسخه کانادا با گارانتی رسمی"
+    },
+    {
       "id": "downy-ultra-soft-plus-fresh-calm-275l",
       "name_fa": "نرم‌کننده لباس داونی اولترا سافت + فرش، رایحه لاوندر و وانیل، ۲.۷۵ لیتر",
       "name_en": "Downy Ultra Soft Plus Fresh Fabric Softener, Calm Lavender & Vanilla Bean, 2.75 L",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "ست ۲۵۱ قطعه‌ای ماشین فرمول یک ردبول با مینی‌فیگور؛ هدیه‌ای عالی برای بچه‌ها"
-    },
-    {
-      "id": "razer-kishi-v3-pro",
-      "name_fa": "دسته بازی موبایل ریزر کیشی وی۳ پرو",
-      "name_en": "Razer Kishi V3 Pro Gaming Controller",
-      "price_cad": 109.96,
-      "regular_cad": 219.99,
-      "discount_pct": 50,
-      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
-      "image": "img/razer-kishi-v3-pro.jpg",
-      "url": "https://www.amazon.ca/dp/B0F231T7BG?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "گوشی رو به کنسول بازی تبدیل می‌کنه؛ مناسب آیفون و اندروید با اتصال USB-C"
-    },
-    {
-      "id": "roomba-115x-combo",
-      "name_fa": "جاروبرقی رباتیک رومبا ۱۱۵ ایکس کمبو (جارو + تی‌کش)",
-      "name_en": "iRobot Roomba 115X Combo Robot Vacuum & Mop",
-      "price_cad": 139.99,
-      "regular_cad": 319.99,
-      "discount_pct": 56,
-      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
-      "image": "img/roomba-115x-combo.jpg",
-      "url": "https://www.amazon.ca/dp/B0H34PBVQB?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "جارو و تی‌کشی همزمان با مکش ۱۵۰۰۰ پاسکال و ناوبری لیزری؛ تمیزکاری خونه بدون دخالت شما"
-    },
-    {
-      "id": "lodge-6qt-enameled-dutch-oven",
-      "name_fa": "قابلمه چدنی لژ ۶ کوارت",
-      "name_en": "Lodge 6 Quart Enameled Cast Iron Dutch Oven",
-      "price_cad": 119.99,
-      "regular_cad": 159.99,
-      "discount_pct": 25,
-      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
-      "image": "img/lodge-6qt-enameled-dutch-oven.jpg",
-      "url": "https://www.amazon.ca/dp/B096L1M2X4?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "قابلمه چدنی لعابی چندکاره؛ از خورشت تا نان خونگی، یک عمر کار می‌کنه"
-    },
-    {
-      "id": "bissell-little-green-1400",
-      "name_fa": "لکه‌بر فرش و مبل بیسل لیتل گرین",
-      "name_en": "BISSELL Little Green Portable Carpet Cleaner (1400B)",
-      "price_cad": 99.99,
-      "regular_cad": 179.99,
-      "discount_pct": 44,
-      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
-      "image": "img/bissell-little-green-1400.jpg",
-      "url": "https://www.amazon.ca/dp/B0016HF5GK?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "لکه‌بر پرتابل فرش و مبل؛ نجات‌دهنده مبل‌ها از لکه‌های روزمره"
     }
   ],
-  "updated_fa": "یکشنبه ۱۹ مهر"
+  "updated_fa": "دوشنبه ۲۰ مهر"
 }
