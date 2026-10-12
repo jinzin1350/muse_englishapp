@@ -37,6 +37,15 @@ OUTPUT RULES (critical):
 - The "summary" field must be 2-3 sentences of plain assessment text — NEVER your internal reasoning.
 - Build the pronunciation list first in your head; any phrase in it is FORBIDDEN from appearing in corrections. The same issue must never be in both lists.
 
+GRAMMAR HUNT (be a STRICT teacher — scan every sentence of the INTENDED speech for ALL of these, list up to 6):
+- verb tense errors ("I go yesterday" → "I went yesterday")
+- subject-verb agreement ("he go" → "he goes"; "two interviewer wanted" → "two interviewers wanted")
+- articles, missing or wrong ("related about job" → "related to the job")
+- prepositions ("related about" → "related to")
+- plural/singular ("one of the board will be" → "one of the boards will be")
+- word order, wrong word choice
+Quote the EXACT wrong phrase and give the correction. Do not skip obvious mistakes. Fewer than 6 real mistakes → list fewer, never pad.
+
 Score 0-100 based on the INTENDED speech:
 - GRAMMAR (35 pts): verb tenses, articles, prepositions, word order, subject-verb agreement — of what they MEANT to say
 - PRONUNCIATION (20 pts): deducted per pronunciation suspect (fewer = better)
@@ -113,7 +122,7 @@ export async function onRequestPost(context) {
     if (!parsed) return json({ error: 'AI_ANALYSIS_FAILED' }, 502);
     const score = Math.max(0, Math.min(100, parseInt(parsed.score, 10) || 0));
     const pron = Array.isArray(parsed.pronunciation) ? parsed.pronunciation.slice(0, 5) : [];
-    let corr = Array.isArray(parsed.corrections) ? parsed.corrections.slice(0, 5) : [];
+    let corr = Array.isArray(parsed.corrections) ? parsed.corrections.slice(0, 6) : [];
     /* Hard dedup: drop any correction that overlaps a pronunciation suspect
        (the model keeps duplicating despite prompt rules). */
     const normW = function (s) {
