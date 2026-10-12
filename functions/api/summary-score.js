@@ -29,17 +29,13 @@ You receive:
 1. The student's transcribed summary (spoken English, may contain transcription quirks — be generous with obvious ASR errors, strict with real grammar mistakes)
 2. The podcast episode title and its transcript
 
-CRITICAL TWO-STAGE PROCESS — follow exactly:
+THINKING PROCESS (internal only — NEVER write this out):
+The transcript comes from Whisper hearing a non-native speaker. Many "wrong words" are NOT grammar mistakes — they are PRONUNCIATION mistakes that made Whisper hear the wrong word. In your head, first reconstruct what the student most likely INTENDED to say: if a transcribed word is semantically odd in context BUT phonetically similar to a word that fits perfectly, the student almost certainly said the fitting word with bad pronunciation. Example: "Welcome to music village" in a Muse English podcast → they said "Muse English". Then analyze the INTENDED speech for real grammar mistakes.
 
-STAGE 1 — INTENT RECONSTRUCTION (do this FIRST, silently):
-The transcript comes from Whisper hearing a non-native speaker. Many "wrong words" are NOT grammar mistakes — they are PRONUNCIATION mistakes that made Whisper hear the wrong word. Before any grammar analysis, reconstruct what the student most likely INTENDED to say:
-- If a transcribed word is semantically odd in context BUT phonetically similar to a word that fits perfectly, the student almost certainly said the fitting word with bad pronunciation. Example: "Welcome to music village" in a Muse English podcast → they said "Muse English". Example: "every adult sings about" → they said "thinks about" (th→s mispronunciation). Example: "real large stories" → "real-life stories".
-- Build the INTENDED version of the whole summary in your head.
-
-STAGE 2 — ANALYZE THE *INTENDED* SPEECH (not the raw transcript):
-- FIRST write the full pronunciation list. THEN, before writing any grammar correction, check every candidate against that list: if the words overlap AT ALL (same phrase, same region of the sentence), it goes in pronunciation ONLY and is FORBIDDEN in corrections. Example of FORBIDDEN duplication: pronunciation has "sings about → thinks about" and corrections also has "sings about → thinks about" — this must never happen.
-- GRAMMAR CORRECTIONS: list up to 5 REAL grammar/vocabulary mistakes from the INTENDED speech — mistakes the student actually made in their head, not Whisper's mishearings. If after reconstruction there are fewer than 5 real mistakes, list fewer — do not pad, do not invent.
-- PRONUNCIATION SUSPECTS: list up to 5 entries as {"heard": "<what Whisper wrote>", "likely": "<what they meant>", "why": "<one-line explanation>"}. Only when (a) heard word is semantically odd AND (b) a similar-sounding alternative fits clearly better.
+OUTPUT RULES (critical):
+- Output ONLY the JSON object. No introductions, no explanations, no markdown headers, no "Step 1/Step 2" labels, no reasoning text anywhere in the output.
+- The "summary" field must be 2-3 sentences of plain assessment text — NEVER your internal reasoning.
+- Build the pronunciation list first in your head; any phrase in it is FORBIDDEN from appearing in corrections. The same issue must never be in both lists.
 
 Score 0-100 based on the INTENDED speech:
 - GRAMMAR (35 pts): verb tenses, articles, prepositions, word order, subject-verb agreement — of what they MEANT to say
