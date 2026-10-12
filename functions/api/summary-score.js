@@ -116,11 +116,30 @@ export async function onRequestPost(context) {
     }
     if (!parsed) return json({ error: 'AI_ANALYSIS_FAILED' }, 502);
     const score = Math.max(0, Math.min(100, parseInt(parsed.score, 10) || 0));
+    const pron = Array.isArray(parsed.pronunciation) ? parsed.pronunciation.slice(0, 5) : [];
+    let corr = Array.isArray(parsed.corrections) ? parsed.corrections.slice(0, 5) : [];
+    /* Hard dedup: drop any correction that overlaps a pronunciation suspect
+       (the model keeps duplicating despite prompt rules). */
+    const normW = function (s) {
+      return String(s || '').toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter(function (w) { return w.length > 2; });
+    };
+    corr = corr.filter(function (c) {
+      const cw = normW((c.wrong || '') + ' ' + (c.right || ''));
+      const cs = ((c.wrong || '') + ' ' + (c.right || '')).toLowerCase();
+      for (const q of pron) {
+        const qw = normW((q.heard || '') + ' ' + (q.likely || ''));
+        const qs = ((q.heard || '') + ' ' + (q.likely || '')).toLowerCase();
+        const shared = cw.filter(function (w) { return qw.indexOf(w) !== -1; });
+        if (shared.length >= 2) return false;
+        if (cs.indexOf(qs) !== -1 || qs.indexOf(cs) !== -1) return false;
+      }
+      return true;
+    });
     return json({
       score: score,
       summary: String(parsed.summary || ''),
-      corrections: Array.isArray(parsed.corrections) ? parsed.corrections.slice(0, 5) : [],
-      pronunciation: Array.isArray(parsed.pronunciation) ? parsed.pronunciation.slice(0, 5) : [],
+      corrections: corr,
+      pronunciation: pron,
       strengths: Array.isArray(parsed.strengths) ? parsed.strengths.slice(0, 3) : [],
     });
   } catch (e) {
