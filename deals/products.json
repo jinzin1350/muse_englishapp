@@ -1,6 +1,20 @@
 {
   "products": [
     {
+      "id": "adidas-vibes-chill-zone-edp-50ml",
+      "name_fa": "ادکلن آدیداس وایبز چیل زون ۵۰ میل",
+      "name_en": "adidas Vibes Chill Zone Eau de Parfum 50ml",
+      "price_cad": 14.7,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "دوشنبه، ۱۲ اکتبر ۲۰۲۶",
+      "image": "img/adidas-vibes-chill-zone-edp-50ml.jpg",
+      "url": "https://www.amazon.ca/dp/B0D67TVMS1?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "عطر یونیسکس آدیداس با رایحهٔ اسطوخودوس و وانیل؛ خوش‌قیمت برای هدیه یا مصرف روزانه."
+    },
+    {
       "id": "newbalance-nergize-2026-10-12",
       "name_fa": "کفش ورزشی نیوبالانس نرجایز اسپورت",
       "name_en": "New Balance Women's DynaSoft Nergize Sport V2",
@@ -97,20 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "جاروشارژی جمع‌وجور با شیلنگ ۴ فوتی برای ماشین و گوشه‌های خونه؛ مناسب دارندگان باتری ۲۰ ولتی ورکس"
-    },
-    {
-      "id": "lego-redbull-rb20",
-      "name_fa": "لگوی اسپید چمپیونز ردبول آر‌بی۲۰",
-      "name_en": "LEGO Speed Champions Oracle Red Bull Racing RB20 F1",
-      "price_cad": 18.99,
-      "regular_cad": 34.99,
-      "discount_pct": 45,
-      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
-      "image": "img/lego-redbull-rb20.jpg",
-      "url": "https://www.amazon.ca/dp/B0DHLFGNMM?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "ست ۲۵۱ قطعه‌ای ماشین فرمول یک ردبول با مینی‌فیگور؛ هدیه‌ای عالی برای بچه‌ها"
     }
   ],
   "updated_fa": "دوشنبه ۲۰ مهر"
