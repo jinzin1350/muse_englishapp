@@ -38,7 +38,18 @@
       var signedIn = false;
       try {
         var raw = localStorage.getItem('sb-hxkxowjbnbfyqiifuydn-auth-token');
-        if (raw) { var tok = JSON.parse(raw); signedIn = !!(tok && tok.access_token); }
+        if (raw) {
+          var tok = JSON.parse(raw);
+          if (tok && tok.access_token) {
+            /* An expired token must NOT hide the landing: main.js will find
+               no session and the visitor would see a blank page. Check the
+               JWT exp claim (seconds since epoch). */
+            try {
+              var payload = JSON.parse(atob(tok.access_token.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')));
+              signedIn = !payload.exp || payload.exp * 1000 > Date.now();
+            } catch (e2) { signedIn = true; }
+          }
+        }
       } catch (e) {}
       document.documentElement.classList.toggle('app-mode', isAppRoute || signedIn);
     } catch (e) {}

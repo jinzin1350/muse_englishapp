@@ -2048,7 +2048,11 @@ function heroPreviewHTML(m) {
 function renderLanding(v) {
   /* Phase 2.8: the static landing in index.html IS the landing page.
      When the router lands on 'landing', just clear #view — the static
-     landing (shown/hidden by the app-mode class) handles the rest. */
+     landing (shown/hidden by the app-mode class) handles the rest.
+     Safety net: if the inline script added app-mode for a stale/expired
+     token, the session check already failed — drop app-mode so the
+     landing is visible instead of a blank page. */
+  document.documentElement.classList.remove('app-mode');
   v.innerHTML = '';
 }
 
