@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "ninja-foodi-dualzone-10qt",
+      "name_fa": "سرخ‌کن بدون روغن نینجا فودی دوزونه (۱۰ کوارت)",
+      "name_en": "Ninja Foodi 10 QT 6-in-1 DualZone Smart XL Air Fryer",
+      "price_cad": 200.0,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "سه‌شنبه، ۱۳ اکتبر ۲۰۲۶",
+      "image": "img/ninja-foodi-dualzone-10qt.jpg",
+      "url": "https://www.amazon.ca/dp/B0B15Q3HCQ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "دو سبد مستقل با سیستم اسمارت‌فینیش؛ ۶ برنامه پخت"
+    },
+    {
+      "id": "smallrig-magic-arm-22",
+      "name_fa": "بازوی جادویی ۲۲ اینچی اسمال‌ریگ با گیره",
+      "name_en": "SmallRig 22\" Magic Arm Clamp",
+      "price_cad": 39.67,
+      "regular_cad": 52.9,
+      "discount_pct": 25,
+      "added_fa": "سه‌شنبه، ۱۳ اکتبر ۲۰۲۶",
+      "image": "img/smallrig-magic-arm-22.jpg",
+      "url": "https://www.amazon.ca/dp/B0D5YJ42CX?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پرفروش‌ترین نگه‌دارنده دوربین و نور آمازون کانادا"
+    },
+    {
+      "id": "nutribullet-pro-plus",
+      "name_fa": "مخلوط‌کن نوتری‌بولت پرو پلاس ۱۲۰۰ وات",
+      "name_en": "nutribullet Pro+ 1200W Personal Blender (Matte Black)",
+      "price_cad": 79.99,
+      "regular_cad": 134.99,
+      "discount_pct": 41,
+      "added_fa": "سه‌شنبه، ۱۳ اکتبر ۲۰۲۶",
+      "image": "img/nutribullet-pro-plus.jpg",
+      "url": "https://www.amazon.ca/dp/B0BS76NRG3?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "موتور ۱۲۰۰ وات با دکمه پالس؛ دو لیوان سفری و درب مسافرتی"
+    },
+    {
+      "id": "stanley-iceflow-2-0",
+      "name_fa": "لیوان استنلی آیس‌فلو ۲.۰ (۳۰ اونس)",
+      "name_en": "STANLEY IceFlow 2.0 Flip Straw Tumbler 30 oz",
+      "price_cad": 27.12,
+      "regular_cad": 46.0,
+      "discount_pct": 41,
+      "added_fa": "سه‌شنبه، ۱۳ اکتبر ۲۰۲۶",
+      "image": "img/stanley-iceflow-2-0.jpg",
+      "url": "https://www.amazon.ca/dp/B0FB7PR5PS?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "لیوان ۳۰ اونسی با درب نی‌دار ضد نشتی؛ سرد نگه می‌دارد تا ۱۲ ساعت"
+    },
+    {
       "id": "adidas-vibes-chill-zone-edp-50ml",
       "name_fa": "ادکلن آدیداس وایبز چیل زون ۵۰ میل",
       "name_en": "adidas Vibes Chill Zone Eau de Parfum 50ml",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "پارچه نیمه‌سنگین و بادوام، مناسب پاییز کانادا — رنگ‌ها و سایزهای منتخب"
-    },
-    {
-      "id": "samsung-buds3-fe-2026-10-12",
-      "name_fa": "هندزفری سامسونگ گلکسی بادز ۳ اف‌ای",
-      "name_en": "Samsung Galaxy Buds3 FE, Black (2025, CAD Version)",
-      "price_cad": 129.99,
-      "regular_cad": 179.99,
-      "discount_pct": 28,
-      "added_fa": "دوشنبه، ۱۲ اکتبر ۲۰۲۶",
-      "image": "img/samsung-buds3-fe-2026-10-12.jpg",
-      "url": "https://www.amazon.ca/dp/B0FLQFQGDX?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "حذف نویز فعال و ترجمه زنده با هوش مصنوعی — نسخه کانادا با گارانتی رسمی"
-    },
-    {
-      "id": "downy-ultra-soft-plus-fresh-calm-275l",
-      "name_fa": "نرم‌کننده لباس داونی اولترا سافت + فرش، رایحه لاوندر و وانیل، ۲.۷۵ لیتر",
-      "name_en": "Downy Ultra Soft Plus Fresh Fabric Softener, Calm Lavender & Vanilla Bean, 2.75 L",
-      "price_cad": 13.25,
-      "regular_cad": 17.99,
-      "discount_pct": null,
-      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
-      "image": "img/downy-ultra-soft-plus-fresh-calm-275l.jpg",
-      "url": "https://www.amazon.ca/dp/B0DBN69SK5?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "یک بطری برای ۱۳۸ بار شستشو؛ لباس‌ها نرم و خوشبو می‌مانند و برای همه پارچه‌ها و ماشین‌ها بی‌خطر است."
-    },
-    {
-      "id": "stanley-iceflow-2-flip-straw-tumbler-dark-blossom-30oz",
-      "name_fa": "لیوان سفری استنلی آیس‌فلو ۲.۰، ۳۰ اونسی، رنگ دارک بلاسم",
-      "name_en": "Stanley IceFlow 2.0 Flip Straw Tumbler, 30 oz, Dark Blossom",
-      "price_cad": 26.6,
-      "regular_cad": 46.0,
-      "discount_pct": 40,
-      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
-      "image": "img/stanley-iceflow-2-flip-straw-tumbler-dark-blossom-30oz.jpg",
-      "url": "https://www.amazon.ca/dp/B0FB7396CF?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "یکی از پرفروش‌ترین لیوان‌های سفر دنیا با بیش از ۲۵ هزار نظر ۴.۵ ستاره‌ای؛ نوشیدنی را ساعت‌ها سرد نگه می‌دارد، درب ضدچکه و دسته چرخان دارد."
-    },
-    {
-      "id": "worx-cube-vac-wx030l9",
-      "name_fa": "جاروشارژی مکعبی ورکس (فقط بدنه، بدون باتری)",
-      "name_en": "WORX WX030L.9 20V Power Share Cordless Cube Vac (Bare Tool)",
-      "price_cad": 60.0,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "یکشنبه، ۱۱ اکتبر ۲۰۲۶",
-      "image": "img/worx-cube-vac-wx030l9.jpg",
-      "url": "https://www.amazon.ca/dp/B088SSPLP5?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "جاروشارژی جمع‌وجور با شیلنگ ۴ فوتی برای ماشین و گوشه‌های خونه؛ مناسب دارندگان باتری ۲۰ ولتی ورکس"
     }
   ],
-  "updated_fa": "دوشنبه ۲۰ مهر"
+  "updated_fa": "سه‌شنبه ۲۱ مهر"
 }
