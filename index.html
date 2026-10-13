@@ -126,7 +126,7 @@ html:not(.app-mode) #splash{display:none!important}
   <meta name="apple-mobile-web-app-title" content="Muse English">
   <link rel="stylesheet" href="/css/main.css?v=ebb6fe0d">
   <!-- Supabase JS client (auth + database) -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <!-- Capture OneSignal SDK console output for diagnostics (runs before the SDK) -->
   <script>
   window.__osLogs = [];
@@ -165,7 +165,17 @@ html:not(.app-mode) #splash{display:none!important}
   </script>
 </head>
 <body>
-<div id="splash"><img src="/media/splash.webp" alt="Muse English" fetchpriority="high"></div>
+<div id="splash"><img id="splash-img" data-src="/media/splash.webp" alt="Muse English" fetchpriority="high"></div>
+<script>
+/* Phase 2.8: the splash image (124KB) only loads for app visitors.
+   Landing visitors never see the splash (CSS hides it), so skip the download. */
+try {
+  if (document.documentElement.classList.contains('app-mode')) {
+    var si = document.getElementById('splash-img');
+    if (si) si.src = si.getAttribute('data-src');
+  }
+} catch (e) {}
+</script>
 <script>
 /* Splash fallback: if app.js fails to load, never trap the user behind the splash. */
 setTimeout(function () {
