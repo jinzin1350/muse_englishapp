@@ -1,0 +1,277 @@
+{
+  "date": "2026-10-13",
+  "theme": "clothes and accessories",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "shirt",
+      "pos": "noun",
+      "meaning": "a top you wear on your body",
+      "example": "My shirt is blue.",
+      "pronunciation": "SHURT",
+      "persian": "پیراهن",
+      "photo": "media/a1/2026-10-13/photos/shirt.jpg",
+      "word_audio": "media/a1/2026-10-13/word-audio/shirt.mp3"
+    },
+    {
+      "word": "pants",
+      "pos": "noun",
+      "meaning": "clothes you wear on your legs",
+      "example": "My pants are black.",
+      "pronunciation": "PANTS",
+      "persian": "شلوار",
+      "photo": "media/a1/2026-10-13/photos/pants.jpg",
+      "word_audio": "media/a1/2026-10-13/word-audio/pants.mp3"
+    },
+    {
+      "word": "dress",
+      "pos": "noun",
+      "meaning": "one piece of clothes for a woman or girl",
+      "example": "Her dress is red.",
+      "pronunciation": "DRES",
+      "persian": "پیراهن زنانه",
+      "photo": "media/a1/2026-10-13/photos/dress.jpg",
+      "word_audio": "media/a1/2026-10-13/word-audio/dress.mp3"
+    },
+    {
+      "word": "shoes",
+      "pos": "noun",
+      "meaning": "things you wear on your feet",
+      "example": "My shoes are new.",
+      "pronunciation": "SHOOZ",
+      "persian": "کفش‌ها",
+      "photo": "media/a1/2026-10-13/photos/shoes.jpg",
+      "word_audio": "media/a1/2026-10-13/word-audio/shoes.mp3"
+    },
+    {
+      "word": "hat",
+      "pos": "noun",
+      "meaning": "something you wear on your head",
+      "example": "His hat is big.",
+      "pronunciation": "HAT",
+      "persian": "کلاه",
+      "photo": "media/a1/2026-10-13/photos/hat.jpg",
+      "word_audio": "media/a1/2026-10-13/word-audio/hat.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-13/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Clothes and Accessories",
+    "audio": "media/a1/2026-10-13/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-13/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Clothes",
+    "audio": "media/a1/2026-10-13/shadowing.mp3",
+    "transcript": "media/a1/2026-10-13/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-13/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/016.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/017.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/018.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/019.mp3",
+      "media/a1/2026-10-13/shadowing-sentences/020.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'shirt' mean?",
+      "options": [
+        "clothes you wear on your legs",
+        "a top you wear on your body",
+        "things you wear on your feet",
+        "something you wear on your head"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'pants' mean?",
+      "options": [
+        "one piece of clothes for a woman or girl",
+        "things you wear on your feet",
+        "clothes you wear on your legs",
+        "a top you wear on your body"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'dress' mean?",
+      "options": [
+        "one piece of clothes for a woman or girl",
+        "something you wear on your head",
+        "a top you wear on your body",
+        "clothes you wear on your legs"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'shoes' mean?",
+      "options": [
+        "something you wear on your head",
+        "a top you wear on your body",
+        "things you wear on your feet",
+        "one piece of clothes for a woman or girl"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'hat' mean?",
+      "options": [
+        "things you wear on your feet",
+        "something you wear on your head",
+        "clothes you wear on your legs",
+        "a top you wear on your body"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "The Verb To Be (am, is, are)",
+    "explanation": "We use **am**, **is**, and **are** to talk about people and things.\n\nUse **am** with I. Use **is** with one person or one thing. Use **are** with you or many things.\n\nWe use **am**, **is**, and **are** to say what something is like. We put an adjective after the verb.\n\nWe also use **am**, **is**, and **are** to say where something is. We put a place word after the verb.",
+    "examples": [
+      "*I *am* happy.* (I + am)",
+      "*My shirt *is* blue.* (one thing + is)",
+      "*My pants *are* black.* (many things + are)",
+      "*Her dress *is* red.* (one thing + is)",
+      "*His shoes *are* new.* (many things + are)",
+      "*The hat *is* on the table.* (place)"
+    ],
+    "practice": [
+      {
+        "q": "I ___ happy. (am / is)",
+        "a": "I am happy."
+      },
+      {
+        "q": "My shirt ___ blue. (is / are)",
+        "a": "My shirt is blue."
+      },
+      {
+        "q": "My pants ___ black. (is / are)",
+        "a": "My pants are black."
+      },
+      {
+        "q": "The hat ___ on the table. (is / are)",
+        "a": "The hat is on the table."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ happy.",
+        "options": [
+          "am",
+          "is",
+          "are",
+          "be"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "My shirt ___ blue.",
+        "options": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My pants ___ black.",
+        "options": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Her dress ___ red.",
+        "options": [
+          "are",
+          "is",
+          "am",
+          "be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "His shoes ___ new.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The hat ___ on the table.",
+        "options": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She ___ my sister.",
+        "options": [
+          "are",
+          "am",
+          "is",
+          "be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You ___ my friend.",
+        "options": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They ___ happy.",
+        "options": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We ___ in school.",
+        "options": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a1/2026-10-13/grammar-en.mp3"
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "date": "2026-10-13",
+  "theme": "clothes and accessories",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "scarf",
+      "pos": "noun",
+      "meaning": "a long piece of cloth you wear around your neck",
+      "example": "Yesterday I wore a warm scarf because it was cold.",
+      "pronunciation": "SKARF",
+      "persian": "شال گردن",
+      "photo": "media/a2/2026-10-13/photos/scarf.jpg",
+      "word_audio": "media/a2/2026-10-13/word-audio/scarf.mp3"
+    },
+    {
+      "word": "gloves",
+      "pos": "noun",
+      "meaning": "soft covers you wear on your hands",
+      "example": "Last winter I lost one of my gloves on the bus.",
+      "pronunciation": "GLUVZ",
+      "persian": "دستکش",
+      "photo": "media/a2/2026-10-13/photos/gloves.jpg",
+      "word_audio": "media/a2/2026-10-13/word-audio/gloves.mp3"
+    },
+    {
+      "word": "belt",
+      "pos": "noun",
+      "meaning": "a long band you wear around your waist",
+      "example": "He bought a new belt for his jeans.",
+      "pronunciation": "BELT",
+      "persian": "کمربند",
+      "photo": "media/a2/2026-10-13/photos/belt.jpg",
+      "word_audio": "media/a2/2026-10-13/word-audio/belt.mp3"
+    },
+    {
+      "word": "pocket",
+      "pos": "noun",
+      "meaning": "a small bag in your clothes for small things",
+      "example": "I put my keys in my coat pocket.",
+      "pronunciation": "POK-it",
+      "persian": "جیب",
+      "photo": "media/a2/2026-10-13/photos/pocket.jpg",
+      "word_audio": "media/a2/2026-10-13/word-audio/pocket.mp3"
+    },
+    {
+      "word": "sleeve",
+      "pos": "noun",
+      "meaning": "the part of a shirt or coat that covers your arm",
+      "example": "She rolled up her sleeves before she washed the dishes.",
+      "pronunciation": "SLEEV",
+      "persian": "آستین",
+      "photo": "media/a2/2026-10-13/photos/sleeve.jpg",
+      "word_audio": "media/a2/2026-10-13/word-audio/sleeve.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-13/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Clothes and Accessories",
+    "audio": "media/a2/2026-10-13/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-13/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Cold Morning",
+    "audio": "media/a2/2026-10-13/shadowing.mp3",
+    "transcript": "media/a2/2026-10-13/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-10-13/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-13/shadowing-sentences/022.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'scarf' mean?",
+      "options": [
+        "a long piece of cloth you wear around your neck",
+        "a long band you wear around your waist",
+        "soft covers you wear on your hands",
+        "the part of a shirt that covers your arm"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'gloves' mean?",
+      "options": [
+        "a small bag in your clothes for small things",
+        "the part of a shirt that covers your arm",
+        "soft covers you wear on your hands",
+        "a long piece of cloth you wear around your neck"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'belt' mean?",
+      "options": [
+        "a small bag in your clothes for small things",
+        "soft covers you wear on your hands",
+        "a long piece of cloth you wear around your neck",
+        "a long band you wear around your waist"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'pocket' mean?",
+      "options": [
+        "a long band you wear around your waist",
+        "a small bag in your clothes for small things",
+        "soft covers you wear on your hands",
+        "a long piece of cloth you wear around your neck"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'sleeve' mean?",
+      "options": [
+        "a long band you wear around your waist",
+        "a small bag in your clothes for small things",
+        "a long piece of cloth you wear around your neck",
+        "the part of a shirt that covers your arm"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Past Simple and Irregular Verbs",
+    "explanation": "We use the **past simple** to talk about finished actions in the past. The time is finished, and the action is finished too.\n\nRegular verbs add **-ed**. For example, **walk** becomes **walked**.\n\nIrregular verbs change in a different way. For example, **buy** becomes **bought**, and **wear** becomes **wore**.\n\nIn negative sentences, we use **didn't** + the base verb. We say **I didn't buy a belt**, not **I didn't bought a belt**.\n\nIn questions, we use **Did** + subject + base verb. For example, **Did you wear a scarf yesterday?**\n\nMany everyday verbs are irregular: **go → went**, **find → found**, **lose → lost**, **put → put**. Learn them with real sentences.",
+    "examples": [
+      "Yesterday I *wore* a warm scarf. (wear → wore)",
+      "Last week I *bought* a new belt. (buy → bought)",
+      "I *put* my keys in my pocket this morning. (put → put, no change)",
+      "Last winter I *lost* one of my gloves on the bus. (lose → lost)",
+      "She *found* money in the pocket of her old coat. (find → found)",
+      "He *didn't wear* gloves yesterday. (didn't + base verb)"
+    ],
+    "practice": [
+      {
+        "q": "Change to past simple: I buy a new belt every year. (last year)",
+        "a": "Last year I bought a new belt."
+      },
+      {
+        "q": "Change to past simple: She wears a scarf in winter. (yesterday)",
+        "a": "Yesterday she wore a scarf."
+      },
+      {
+        "q": "Make it negative: He found money in his pocket.",
+        "a": "He didn't find money in his pocket."
+      },
+      {
+        "q": "Make a question: You put your phone in your pocket.",
+        "a": "Did you put your phone in your pocket?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Yesterday I ___ a warm scarf.",
+        "options": [
+          "wear",
+          "wore",
+          "worn",
+          "wearing"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Last week she ___ a new belt.",
+        "options": [
+          "buyed",
+          "buys",
+          "bought",
+          "buy"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He ___ his gloves on the bus last winter.",
+        "options": [
+          "lose",
+          "losing",
+          "losed",
+          "lost"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I ___ money in my coat pocket yesterday.",
+        "options": [
+          "finding",
+          "found",
+          "finded",
+          "find"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ her keys in her pocket this morning.",
+        "options": [
+          "putted",
+          "puts",
+          "put",
+          "puting"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They ___ to the shop yesterday.",
+        "options": [
+          "goed",
+          "going",
+          "went",
+          "go"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He ___ a belt yesterday.",
+        "options": [
+          "didn't buys",
+          "didn't buy",
+          "didn't bought",
+          "didn't buying"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ you wear a scarf yesterday?",
+        "options": [
+          "Was",
+          "Do",
+          "Did",
+          "Does"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "I didn't wore gloves.",
+          "I didn't wear gloves.",
+          "I didn't worn gloves.",
+          "I didn't wearing gloves."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which verb is irregular?",
+        "options": [
+          "walk → walked",
+          "look → looked",
+          "wear → wore",
+          "clean → cleaned"
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a2/2026-10-13/grammar-en.mp3"
+  }
+}
