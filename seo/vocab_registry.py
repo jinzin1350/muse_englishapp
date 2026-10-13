@@ -12,6 +12,7 @@ Standard library only. Commands:
   python3 vocab_registry.py validate-taxonomy --taxonomy vocab-taxonomy.json
   python3 vocab_registry.py prompt --taxonomy T --registry R --lesson L.json --template classify-words-prompt.md
   python3 vocab_registry.py apply  --taxonomy T --registry R --lesson L.json --classification C.json
+  python3 vocab_registry.py recheck --taxonomy T --registry R [--write]
   python3 vocab_registry.py stats  --taxonomy T --registry R [--json]
   python3 vocab_registry.py gaps   --taxonomy T --registry R --level B1 [--today 2026-10-12]
 
@@ -161,6 +162,11 @@ def check_classification(c, tax):
         return "review", [f"confidence {conf} below threshold"]
     if primary is None:
         return "unplaced", []
+    academic_min = tax.th.get("academic_topic_min_confidence")
+    if academic_min is not None and "academic-words" in collections and conf < academic_min:
+        # Abstract words are the most often forced into topics; keep them in the
+        # collection only. 'primary' is kept on the entry as the model's suggestion.
+        return "unplaced", [f"academic word, confidence {conf} below {academic_min} for a topic page"]
     return "accepted", []
 
 
@@ -269,6 +275,31 @@ def fill_prompt(template, values):
     for k, v in values.items():
         template = template.replace("{" + k + "}", v)
     return template
+
+
+def recheck(registry, tax):
+    """Re-apply the current thresholds to stored model classifications.
+
+    This does not call the model or change any classification field; it only
+    recomputes each entry's status from what is already stored, so a threshold
+    change in the taxonomy reaches old entries too. Human entries are skipped.
+    Returns the list of changes; the caller decides whether to save.
+    """
+    changes = []
+    for e in registry.get("words", {}).values():
+        if e.get("source") == "human" or e["status"] not in ("accepted", "review", "unplaced"):
+            continue
+        c = {"word": e["word"], "lemma": e["lemma"], "pos": e["pos"], "sense_key": e["sense_key"],
+             "primary": e.get("primary"), "secondary": e.get("secondary", []),
+             "collections": e.get("collections", []), "confidence": e.get("confidence")}
+        status, reasons = check_classification(c, tax)
+        if status != e["status"] and status != "invalid":
+            before = pages_for(e, tax)
+            old = e["status"]
+            e["status"] = status
+            changes.append({"key": e["key"], "from": old, "to": status, "reasons": reasons,
+                            "pages_changed": sorted(before ^ pages_for(e, tax))})
+    return changes
 
 
 # ---------- stats ----------
@@ -420,7 +451,7 @@ def plan_gaps(registry, tax, level, today, cooldown_days=10, limit=8):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("validate-taxonomy", "prompt", "apply", "stats", "gaps"):
+    for name in ("validate-taxonomy", "prompt", "apply", "recheck", "stats", "gaps"):
         p = sub.add_parser(name)
         p.add_argument("--taxonomy", required=True)
         if name != "validate-taxonomy":
@@ -431,6 +462,8 @@ def main(argv=None):
             p.add_argument("--template", required=True, help="classify-words-prompt.md")
         if name == "apply":
             p.add_argument("--classification", required=True)
+        if name == "recheck":
+            p.add_argument("--write", action="store_true", help="save; default is a dry run")
         if name == "stats":
             p.add_argument("--json", action="store_true")
         if name == "gaps":
@@ -458,6 +491,15 @@ def main(argv=None):
         summary = apply_lesson(registry, tax, load_json(a.lesson), load_json(a.classification))
         save_json(a.registry, registry)
         print(json.dumps(summary, ensure_ascii=False, indent=1))
+    elif a.cmd == "recheck":
+        before = {p["page"]: p["words"] for p in compute_stats(registry, tax)["pages"]}
+        changes = recheck(registry, tax)
+        after = {p["page"]: p["words"] for p in compute_stats(registry, tax)["pages"]}
+        diff = {k: f"{before[k]} -> {after[k]}" for k in before if before[k] != after[k]}
+        print(json.dumps({"dry_run": not a.write, "changed_entries": len(changes),
+                          "page_counts": diff, "changes": changes}, ensure_ascii=False, indent=1))
+        if a.write:
+            save_json(a.registry, registry)
     elif a.cmd == "stats":
         s = compute_stats(registry, tax)
         if a.json:

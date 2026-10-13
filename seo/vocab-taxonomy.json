@@ -1,5 +1,5 @@
 {
-  "taxonomy_version": "1.1",
+  "taxonomy_version": "1.2",
   "updated": "2026-10-12",
   "notes": [
     "Single source of truth for vocabulary categories. Never hard-code categories anywhere else.",
@@ -8,6 +8,7 @@
     "'keyword' is the proposed target query for the page. Each keyword belongs to exactly one page. Search demand is unverified: confirm with Search Console data before investing extra content.",
     "Each page's <title> is built from its keyword (e.g., 'Fruit Vocabulary with Pictures (60+ Words) | Muse English'); the visible H1 uses 'name'.",
     "'own_page': false means the subtopic is the core of its hub and never gets its own URL. It is always a section on the hub page, so the two can't compete for the same query.",
+    "Words in the academic-words collection need confidence of at least academic_topic_min_confidence to appear on a topic page; below that they stay in the collection only (status unplaced). The Phase 0 review found abstract academic words were the ones most often forced into topics.",
     "'min_level' is the lowest CEFR level for planning lessons on this subtopic. A lower-level word can still be classified here (e.g., the A1 word 'food' in Diet & Nutrition).",
     "Slugs are permanent once a page is indexed. Renames need a 301 redirect and a taxonomy_version bump."
   ],
@@ -21,6 +22,7 @@
     "page_indexable_min_unique_words": 40,
     "hub_preview_cards_when_subtopic_has_page": 12,
     "classification_min_confidence": 0.8,
+    "academic_topic_min_confidence": 0.9,
     "max_secondary_topics": 2,
     "propose_new_subtopic_when_queue_cluster_reaches": 15
   },

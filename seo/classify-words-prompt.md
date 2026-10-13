@@ -41,6 +41,7 @@ For each word, decide the following. The sense to classify is the one given by i
 3. primary: the one subtopic where a learner would most expect to find this word on a "Subtopic Vocabulary with Pictures" page. Ask: if a learner opened that page, would this word clearly belong there?
    - Classify by the word's own meaning, not by the lesson theme. In a work lesson, "commute" goes to travel-transport/traffic-commuting.
    - If no subtopic clearly fits, use null. Do not force abstract or general words ("significant", "approach", "however") into a topic. null is correct and expected for many B2–C2 words.
+   - A general-purpose word stays null even when its meaning or example happens to mention one topic: "develop", "accessible", "iterative", "conspicuous" and "edification" are used across many subjects. Give a topic only when the word itself names a thing, action, person or quality typical of that topic ("whisk", "customs", "diaspora").
    - A word's level does not limit its subtopic: the A1 word "fruit" can go to food-drink/diet-nutrition if that is where it belongs.
 4. secondary: up to 2 other subtopics where the word also clearly belongs. Use [] if none.
 5. collections: each collection the item belongs to, usually []:
@@ -57,11 +58,14 @@ Boundary rules:
 - Lasting personality traits (generous, stubborn) → feelings-personality/personality. Momentary feelings (angry, relieved) → feelings-personality/emotions.
 - Professions (nurse, engineer) → work-jobs/jobs, not the field they work in.
 - Weather words → weather-environment/weather, even when the lesson is about travel or sports.
+- Religious terms (catechism, baptism) → society-culture/beliefs-superstitions, not education.
+- Business and pay negotiation (negotiate, salary, contract) → work-jobs, not feelings-personality/communication.
 
 Examples:
 - {"word": "breakfast", "meaning": "the food we eat in the morning"} → primary "food-drink/meals-snacks", secondary ["city-daily-life/daily-routine"], confidence 0.9
 - {"word": "commute", "meaning": "to travel to work"} → primary "travel-transport/traffic-commuting", secondary ["city-daily-life/daily-routine"], confidence 0.9
 - {"word": "nevertheless", "meaning": "despite that"} → primary null, collections ["linking-words"], confidence 0.95
+- {"word": "accessible", "meaning": "easy for everyone to use or reach"} → primary null, collections ["academic-words"], confidence 0.9
 - {"word": "burnout", "meaning": "exhaustion from working too much"} → primary "body-health/mental-health", secondary ["work-jobs/careers-success"], confidence 0.8
 
 Reply with JSON only: an array with one object per input word, in input order. Copy "word" and "pos" exactly from the input.
