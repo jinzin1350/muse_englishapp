@@ -1988,7 +1988,10 @@ function setChrome() {
      screens: hide the app header and tab bar so there is no way to navigate
      into the app without a nickname and a level. */
   const gating = onboardingNeeded() || state.view === 'choose-teacher';
-  $('#landing-header').classList.toggle('hidden', logged || state.view === 'landing' || state.view === 'signin' || state.view === 'signup');
+  /* Phase 2.8: the static landing in index.html replaces #landing-header.
+     The landing is shown/hidden by the app-mode class on <html>. */
+  var lh = $('#landing-header');
+  if (lh) lh.classList.toggle('hidden', logged || state.view === 'landing' || state.view === 'signin' || state.view === 'signup');
   $('#app-header').classList.toggle('hidden', !logged || gating);
   $('#tabbar').classList.toggle('hidden', !logged || gating);
   if (logged) {
@@ -2043,192 +2046,12 @@ function heroPreviewHTML(m) {
 }
 
 function renderLanding(v) {
-  const returning = (function () {
-    try { return !!localStorage.getItem('el_last_user'); } catch (e) { return false; }
-  })();
-  const L = '/media/landing/';
-  const STEPS = [
-    ['icon-words', 'Words', '10 new words with photos, pronunciation audio and Persian meanings.'],
-    ['icon-quiz2', 'Quiz', 'Lock them in with a quick quiz \u2014 and earn XP for every correct answer.'],
-    ['icon-podcast2', 'Podcast', 'A real conversation using today\u2019s words, with full transcript.'],
-    ['icon-shadow', 'Shadowing', 'Repeat each sentence out loud at your own speed until it feels natural.'],
-    ['icon-grammar', 'Grammar', 'One clear grammar point a day, taught with today\u2019s words.']
-  ];
-  const STATS = [
-    ['icon-learners', '20,000+', 'learners have installed Muse English'],
-    ['icon-teacher', '30', 'English teachers use it with their students'],
-    ['icon-photos', '8,000+', 'photos inside the lessons'],
-    ['icon-podcast', '3,000+', 'hours of podcast conversations'],
-    ['icon-quiz', '40,000+', 'quiz questions to practice']
-  ];
-  const LVLS = [
-    ['A1', 'lvl-a1-bubble', 'Beginner', 'First words and everyday phrases.', '#2B7FFF', '#DBEAFE'],
-    ['A2', 'lvl-a2-sprout', 'Elementary', 'Simple sentences about daily life.', '#0E9F6E', '#D1FAE5'],
-    ['B1', 'lvl-b1-book', 'Intermediate', 'Independent conversations and stories.', '#FF6B00', '#FFEDD5'],
-    ['B2', 'lvl-b2-chats', 'Upper-Intermediate', 'Fluent discussion of real topics.', '#8B5CF6', '#EDE9FE'],
-    ['C1', 'icon-target', 'Advanced', 'Nuanced, advanced expression.', '#EC4899', '#FCE7F3'],
-    ['C2', 'lvl-c2-mountain', 'Proficiency', 'Near-native mastery and precision.', '#D97706', '#FEF3C7']
-  ];
-  v.innerHTML =
-  '<div class="lp2">' +
-
-    /* Nav */
-    '<header class="lp2-nav">' +
-      '<a class="lp2-brand" href="#/"><img src="/icons/icon-192.png" alt=""><span>Muse English</span></a>' +
-      '<div class="lp2-nav-actions">' +
-        '<a class="lp2-signin" href="#/signin">Sign in</a>' +
-        '<a class="lp2-cta lp2-cta-sm" href="#/signup">Start free</a>' +
-      '</div>' +
-    '</header>' +
-
-    /* Hero */
-    '<section class="lp2-hero">' +
-      '<img class="lp2-hero-bg" src="' + L + 'bg-hero.webp?v=3\" alt="" aria-hidden="true">' +
-      '<div id="lp-invite" class="lp-invite hidden"></div>' +
-      '<div class="lp2-hero-inner">' +
-        '<div class="lp2-hero-copy">' +
-          '<div class="lp2-eyebrow">Daily English lessons \u00B7 A1\u2013C2</div>' +
-          '<h1>Your English,<br><span>every single day.</span></h1>' +
-          '<p class="lp2-lede">10 new words, a real podcast conversation, shadowing practice, grammar and a quiz \u2014 one 15-minute lesson matched to your level, every morning.</p>' +
-          '<div class="lp2-ctas">' +
-            '<a class="lp2-cta" href="#/signup">Start learning \u2014 it\u2019s free</a>' +
-            '<a class="lp2-cta lp2-cta-ghost" href="#/preview">See today\u2019s lesson</a>' +
-          '</div>' +
-          '<div class="lp2-trust"><span>\u2713 Free to start</span><span>\u2713 No credit card</span><span>\u2713 6 levels</span></div>' +
-          (returning ? '<p class="lp2-returning">Welcome back \u2014 <a href="#/signin">sign in</a> to continue.</p>' : '') +
-        '</div>' +
-        '<img class="lp2-mascot" src="' + L + 'mascot-hero.webp?v=3\" alt="Muse English flame mascot with headphones reading a book">' +
-      '</div>' +
-      '<div class="lp2-hero-preview" id="hero-preview"><div class="lp-lesson-card"><p class="lp-muted">Loading today\u2019s lesson\u2026</p></div></div>' +
-    '</section>' +
-
-    /* Stats */
-    '<section class="lp2-stats" aria-label="Highlights">' +
-      STATS.map(function (s) {
-        return '<div class="lp2-stat"><img src="' + L + s[0] + '.webp?v=3" alt="" loading="lazy"><b>' + s[1] + '</b><span>' + s[2] + '</span></div>';
-      }).join('') +
-    '</section>' +
-
-    /* Steps */
-    '<section class="lp2-section" id="how-it-works">' +
-      '<h2>Your daily lesson, step by step</h2>' +
-      '<p class="lp2-sub">The same five steps every day \u2014 a habit you can actually keep.</p>' +
-      '<div class="lp2-steps">' +
-        STEPS.map(function (s, i) {
-          return '<div class="lp2-step"><img src="' + L + s[0] + '.webp?v=3" alt="" loading="lazy">' +
-            '<div class="lp2-step-num">' + (i + 1) + '</div>' +
-            '<h3>' + s[1] + '</h3><p>' + s[2] + '</p></div>';
-        }).join('') +
-      '</div>' +
-      '<div class="lp2-center"><a class="lp2-cta" href="#/signup">Start my first lesson</a></div>' +
-    '</section>' +
-
-    /* Interactive preview (kept) */
-    '<section class="lp2-section lp2-preview-sec" aria-labelledby="lp-preview-h">' +
-      '<h2 id="lp-preview-h">See a real lesson</h2>' +
-      '<p class="lp2-sub">A peek inside today\u2019s lesson \u2014 the same format you\u2019ll get every day, matched to your level.</p>' +
-      '<div class="preview-tabs" role="tablist" aria-label="Lesson preview">' +
-        '<button class="preview-tab" role="tab" aria-selected="true" data-ptab="words" id="ptab-words">Words</button>' +
-        '<button class="preview-tab" role="tab" aria-selected="false" data-ptab="listen" id="ptab-listen">Listen</button>' +
-        '<button class="preview-tab" role="tab" aria-selected="false" data-ptab="quiz" id="ptab-quiz">Quiz</button>' +
-      '</div>' +
-      '<div id="preview-tab-body" role="tabpanel" aria-labelledby="ptab-words"><p class="lp-muted">Loading\u2026</p></div>' +
-    '</section>' +
-
-    /* Levels */
-    '<section class="lp2-section lp2-levels-sec" id="levels">' +
-      '<div class="lp2-kicker">ONE APP, SIX LEVELS</div>' +
-      '<h2>One app, six levels</h2>' +
-      '<p class="lp2-sub">From your first English words to near-native precision. Pick your level when you join \u2014 every lesson matches it.</p>' +
-      '<div class="lp2-levels">' +
-        LVLS.map(function (lv) {
-          return '<a class="lp2-level" href="#/signup" style="--lv:' + lv[4] + '">' +
-            '<div class="lp2-lvl-art"><span class="lp2-lvl-badge" style="background:' + lv[5] + ';color:' + lv[4] + '">' + lv[0] + '</span>' +
-            '<img class="lp2-lvl-ill" src="' + L + lv[1] + '.webp?v=3" alt="" loading="lazy"></div>' +
-            '<div class="lp2-lvl-name">' + lv[2] + '</div><div class="lp2-lvl-desc">' + lv[3] + '</div>' +
-            '<span class="lp2-lvl-go">\u276F</span></a>';
-        }).join('') +
-      '</div>' +
-      '<div class="lp2-center"><a class="lp2-cta lp2-cta-ghost" href="#/signup">Find my level \u2014 join free</a></div>' +
-    '</section>' +
-
-    /* Why it sticks */
-    '<section class="lp2-section lp2-why-sec">' +
-      '<div class="lp2-kicker">WHY IT STICKS</div>' +
-      '<h2>Why it sticks</h2>' +
-      '<p class="lp2-sub">Designed to keep you coming back \u2014 and to make every mistake count.</p>' +
-      '<div class="lp2-why">' +
-        '<div class="lp2-why-card lp2-why-warm">' +
-          '<div class="lp2-why-ico">🔥</div><h3>Streaks &amp; XP</h3>' +
-          '<p>Every lesson builds your streak. Miss a day and a freeze saves it \u2014 earn more freezes every 7 days.</p>' +
-          '<div class="lp2-why-visual"><img src="' + L + 'why-streak.webp?v=3" alt="Flame mascot celebrating a 12 day streak" loading="lazy">' +
-          '<div class="lp2-streak-badge"><b>12</b><span>DAY STREAK</span></div></div>' +
-        '</div>' +
-        '<div class="lp2-why-card lp2-why-cool">' +
-          '<div class="lp2-why-ico">🎯</div><h3>Mistakes become practice</h3>' +
-          '<p>Every wrong answer is saved automatically. Review practices exactly what you missed.</p>' +
-          '<div class="lp2-chips">' +
-            '<div class="lp2-chip"><div><b>acquire</b><span>to get or obtain</span></div><i>✕</i></div>' +
-            '<div class="lp2-chip"><div><b>perspective</b><span>a way of seeing things</span></div><i>✕</i></div>' +
-            '<div class="lp2-chip"><div><b>define</b><span>to explain the meaning</span></div><i>✕</i></div>' +
-          '</div>' +
-          '<div class="lp2-practice-cta"><span>📖</span><div><b>Your Practice Set</b><span>Review 12 saved words</span></div><i>❯</i></div>' +
-        '</div>' +
-        '<div class="lp2-why-card lp2-why-cream">' +
-          '<div class="lp2-why-ico">🎙</div><h3>A real podcast, daily</h3>' +
-          '<p>Two hosts use every new word in a natural conversation \u2014 with transcript and shadowing audio.</p>' +
-          '<div class="lp2-why-visual"><img src="' + L + 'why-podcast.webp?v=3" alt="Flame mascot recording the daily English podcast" loading="lazy"></div>' +
-          '<div class="lp2-player"><i>▶</i><div class="lp2-track"><b></b></div><span>12:08</span></div>' +
-          '<div class="lp2-player-btns"><span>📄 Transcript</span><span>≋ Shadowing</span><span>⬇ Download</span></div>' +
-        '</div>' +
-      '</div>' +
-    '</section>' +
-
-    /* Testimonials */
-    '<section class="lp2-section">' +
-      '<h2>Real people. Real progress.</h2>' +
-      '<p class="lp2-sub">Learners from around the world are building real habits with Muse English.</p>' +
-      '<div class="lp2-testis">' +
-        '<div class="lp2-testi"><img class="lp2-avatar" src="' + L + 'avatar-female.webp?v=3\" alt="Sara from Canada" loading="lazy"><p>\u201CI finally look forward to my English practice every day. The podcast is amazing!\u201D</p><b>Sara, Canada</b><img class="lp2-stars" src="' + L + 'stars.webp?v=3\" alt="5 star rating" loading="lazy"></div>' +
-        '<div class="lp2-testi"><img class="lp2-avatar" src="' + L + 'avatar-male.webp?v=3\" alt="Reza from Germany" loading="lazy"><p>\u201CThe best app I\u2019ve found for actually speaking English. Short, fun and effective.\u201D</p><b>Reza, Germany</b><img class="lp2-stars" src="' + L + 'stars.webp?v=3\" alt="5 star rating" loading="lazy"></div>' +
-        '<div class="lp2-testi"><img class="lp2-avatar" src="' + L + 'avatar-asian.webp?v=3\" alt="Mina from Japan" loading="lazy"><p>\u201CI love the daily lessons and the review system. It really helps me remember words.\u201D</p><b>Mina, Japan</b><img class="lp2-stars" src="' + L + 'stars.webp?v=3\" alt="5 star rating" loading="lazy"></div>' +
-      '</div>' +
-    '</section>' +
-
-    /* Final CTA */
-    '<section class="lp2-final">' +
-      '<div class="lp2-final-ol" aria-hidden="true"></div>' +
-      '<div class="cta-mascot-wrap"><img class="cta-mascot" src="' + L + 'mascot-cta.webp?v=3\" alt="Muse English mascot pointing upward" loading="lazy"></div>' +
-      '<h2 class="cta-title">Start <span class="accent">today\u2019s lesson</span></h2>' +
-      '<p class="cta-subtitle">One lesson a day. Words, quiz, podcast, shadowing and grammar \u2014 for your level.</p>' +
-      '<a class="lp2-cta cta-btn" href="#/signup">Create your free account \u2192</a>' +
-      '<div class="lp2-signin-row">Already have an account? <a href="#/signin">Sign in</a></div>' +
-    '</section>' +
-
-    '<footer class="lp2-footer">Muse English \u00B7 daily lessons for levels A1\u2013C2</footer>' +
-  '</div>';
-
-  // Fill the hero preview + interactive tabs with real lesson content.
-  loadPreviewLesson().then(function (m) {
-    const hp = document.getElementById('hero-preview');
-    if (hp && state.view === 'landing') hp.innerHTML = heroPreviewHTML(m);
-    renderPreviewTab('words', m);
-  });
-
-  // Personalized invite: ?ref=TEACHER_CODE shows who invited you.
-  try {
-    const refCode = getRefCode();
-    if (refCode && sb) {
-      sb.from('teachers').select('display_name').eq('ref_code', refCode).eq('status', 'approved').maybeSingle()
-        .then(function (r) {
-          if (r && r.data && state.view === 'landing') renderInviteHero(r.data.display_name);
-        }, function () {});
-    }
-  } catch (e) {}
+  /* Phase 2.8: the static landing in index.html IS the landing page.
+     When the router lands on 'landing', just clear #view — the static
+     landing (shown/hidden by the app-mode class) handles the rest. */
+  v.innerHTML = '';
 }
 
-/* Personalized invite hero (phase 3): a visitor arriving with a teacher's
-   ?ref=CODE sees the teacher's invitation as the hero, in Persian. */
 function renderInviteHero(name) {
   const hero = document.querySelector('.lp-hero');
   if (!hero || state.view !== 'landing' || document.getElementById('lp-invite-hero')) return;

@@ -4,14 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#FF9600">
-  <meta name="description" content="Muse English — build real English, one daily lesson at a time. Words, listening, shadowing, grammar and a quiz for your level, A1 to C2.">
-  <title>Muse English — Build real English, one daily lesson at a time</title>
+  <title>Muse English: Free Daily English Lessons (A1–C2)</title>
+  <meta name="description" content="Learn English with a free daily lesson for your level, A1 to C2: new words with photos and audio, a podcast with transcript, shadowing, grammar and a quiz.">
+  <link rel="canonical" href="https://museenglishapp.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muse English: Free Daily English Lessons (A1–C2)">
+  <meta property="og:description" content="Learn English with a free daily lesson for your level, A1 to C2: new words with photos and audio, a podcast with transcript, shadowing, grammar and a quiz.">
+  <meta property="og:url" content="https://museenglishapp.com/">
+  <meta property="og:image" content="https://museenglishapp.com/media/landing/mascot-cta.webp">
+  <meta property="og:site_name" content="Muse English">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Muse English: Free Daily English Lessons (A1–C2)">
+  <meta name="twitter:description" content="Learn English with a free daily lesson for your level, A1 to C2: new words with photos and audio, a podcast with transcript, shadowing, grammar and a quiz.">
+  <meta name="twitter:image" content="https://museenglishapp.com/media/landing/mascot-cta.webp">
+  
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"Muse English","url":"https://museenglishapp.com/","logo":"https://museenglishapp.com/icons/icon-512.png","email":"info@museenglishapp.com"},
+{"@type":"WebSite","name":"Muse English","url":"https://museenglishapp.com/"}
+]}
+</script>
+
+  
+<script>
+/* Phase 2.8: before first paint, hide the static landing when the visitor
+   is signed in or on an app route (#/...). In-page anchors (#how-it-works,
+   #levels) are NOT app routes, so the landing stays visible for them. */
+(function () {
+  function updateAppMode() {
+    try {
+      var hash = window.location.hash || '';
+      var isAppRoute = hash.indexOf('#/') === 0;
+      var signedIn = false;
+      try {
+        var raw = localStorage.getItem('sb-hxkxowjbnbfyqiifuydn-auth-token');
+        if (raw) { var tok = JSON.parse(raw); signedIn = !!(tok && tok.access_token); }
+      } catch (e) {}
+      document.documentElement.classList.toggle('app-mode', isAppRoute || signedIn);
+    } catch (e) {}
+  }
+  updateAppMode();
+  window.addEventListener('hashchange', updateAppMode);
+})();
+</script>
+
   <style>
-  /* Splash screen: visible instantly on launch, before app.js runs. */
-  #splash{position:fixed;inset:0;z-index:1000;background:#FF9600;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease;}
-  #splash.hide{opacity:0;pointer-events:none;}
-  #splash img{width:100%;height:100%;object-fit:cover;display:block;}
-  </style>
+/* ---- Phase 2.8 landing (static, crawler-visible) ---- */
+#landing{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#101828;background:#fff;line-height:1.6}
+#landing a{color:#E8590C}
+#landing .lwrap{max-width:1080px;margin:0 auto;padding:0 20px}
+html.app-mode #landing{display:none!important}
+html:not(.app-mode) #splash{display:none!important}
+.lnav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid #eee}
+.lnav-in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:20px}
+.lbrand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:19px;color:#101828;text-decoration:none}
+.lbrand img{width:32px;height:32px;border-radius:8px}
+.lnav-links{display:flex;gap:18px;margin-left:auto}
+.lnav-links a{color:#444;text-decoration:none;font-size:15px}
+.lnav-links a:hover{color:#E8590C}
+.lnav-cta{background:#FF9600;color:#fff!important;padding:8px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-size:15px;white-space:nowrap}
+.lhero{padding:56px 0 48px;background:linear-gradient(180deg,#FFF7ED 0%,#fff 100%)}
+.lhero h1{font-size:clamp(32px,5vw,52px);line-height:1.15;font-weight:800;margin:0 0 16px;letter-spacing:-.5px}
+.lhero .lsub{font-size:clamp(17px,2vw,20px);color:#444;max-width:640px;margin:0 0 28px}
+.lctas{display:flex;gap:12px;flex-wrap:wrap}
+.lcta-primary{background:#FF9600;color:#fff!important;padding:14px 26px;border-radius:10px;font-weight:700;text-decoration:none;font-size:17px;display:inline-block}
+.lcta-secondary{background:#fff;color:#101828!important;border:2px solid #101828;padding:12px 24px;border-radius:10px;font-weight:700;text-decoration:none;font-size:17px;display:inline-block}
+.lsec{padding:44px 0}
+.lsec h2{font-size:clamp(24px,3vw,32px);font-weight:800;margin:0 0 8px}
+.lsec .lsec-sub{color:#555;margin:0 0 24px;font-size:17px}
+.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.lcard{border:1px solid #e5e7eb;border-radius:12px;padding:18px;text-decoration:none!important;color:#101828!important;display:block;background:#fff}
+.lcard:hover{border-color:#FF9600;box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.lcard .lvl{font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.5px}
+.lcard .lvl-a1{color:#2B7FFF}.lvl-a2{color:#0E9F6E}.lvl-b1{color:#FF6B00}.lvl-b2{color:#8B5CF6}.lvl-c1{color:#EC4899}.lvl-c2{color:#D97706}
+.lcard .theme{font-weight:700;font-size:17px;margin:6px 0 4px}
+.lcard .words{color:#555;font-size:15px}
+.lsteps{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;counter-reset:step}
+.lstep{border:1px solid #e5e7eb;border-radius:12px;padding:18px;background:#fff}
+.lstep-num{width:32px;height:32px;border-radius:50%;background:#FF9600;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.lstep h3{margin:0 0 6px;font-size:17px}
+.lstep p{margin:0;color:#555;font-size:15px}
+.lhub{display:flex;justify-content:space-between;align-items:center;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;text-decoration:none!important;color:#101828!important;background:#fff}
+.lhub:hover{border-color:#FF9600}
+.lhub .hname{font-weight:700;font-size:16px}
+.lhub .hcount{color:#666;font-size:14px;white-space:nowrap}
+.lqa{border-bottom:1px solid #eee;padding:18px 0}
+.lqa h3{margin:0 0 6px;font-size:18px}
+.lqa p{margin:0;color:#444}
+.lfoot{background:#101828;color:#cbd5e1;padding:36px 0;margin-top:20px}
+.lfoot a{color:#cbd5e1;text-decoration:none}
+.lfoot a:hover{color:#fff}
+.lfoot-grid{display:flex;gap:40px;flex-wrap:wrap;max-width:1080px;margin:0 auto;padding:0 20px}
+.lfoot-col h4{color:#fff;margin:0 0 10px;font-size:15px}
+.lfoot-col ul{list-style:none;padding:0;margin:0}
+.lfoot-col li{margin:6px 0;font-size:14px}
+.linstall{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:24px;text-align:center}
+.linstall h3{margin:0 0 8px;font-size:20px}
+.linstall p{margin:0 0 16px;color:#555}
+@media(max-width:640px){.lnav-links{display:none}.lhero{padding:36px 0 32px}}
+</style>
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16.png">
@@ -73,25 +164,71 @@ setTimeout(function () {
   }
 }, 6000);
 </script>
+<!-- LANDING:START -->
+<div id="landing">
+<header class="lnav"><div class="lnav-in">
+<a class="lbrand" href="/"><img src="/icons/icon-192.png" alt="">Muse English</a>
+<nav class="lnav-links" aria-label="Main"><a href="/">Home</a><a href="/blog/">Lessons</a><a href="/blog/vocabulary/">Vocabulary</a><a href="/blog/grammar/">Grammar</a><a href="/about/">About</a></nav>
+<a class="lnav-cta" data-cta="hero_signup" href="#/signup">Start free</a>
+</div></header>
+
+<section class="lhero"><div class="lwrap">
+<h1>Free daily English lessons for every level</h1>
+<p class="lsub">Build real English, one daily lesson at a time: new words with photos and audio, a real conversation, speaking practice, one grammar point and a quick quiz. From A1 to C2.</p>
+<div class="lctas">
+<a class="lcta-primary" data-cta="hero_primary" href="#today">Start today&rsquo;s free lesson</a>
+<a class="lcta-secondary" data-cta="hero_signup" href="#/signup">Create a free account</a>
+</div>
+</div></section>
+
+<section class="lsec" id="today"><div class="lwrap"><h2>Today&rsquo;s lessons</h2><p class="lsec-sub">A fresh lesson for every level, every day. Pick yours and start.</p><div class="lgrid"><a class="lcard" data-cta="today_lesson" href="/blog/a1/2026-10-13-clothes-and-accessories"><div class="lvl lvl-a1">A1</div><div class="theme">Clothes And  words: shirt, pants, dress</div><div class="words">Today&rsquo;s lesson &rarr;</div></a><a class="lcard" data-cta="today_lesson" href="/blog/a2/2026-10-13-clothes-and-accessories"><div class="lvl lvl-a2">A2</div><div class="theme">Clothes And  words: scarf, gloves, belt</div><div class="words">Today&rsquo;s lesson &rarr;</div></a><a class="lcard" data-cta="today_lesson" href="/blog/b1/2026-10-13-fashion-and-style"><div class="lvl lvl-b1">B1</div><div class="theme">Fashion And  words: outfit, stylish, fit</div><div class="words">Today&rsquo;s lesson &rarr;</div></a><a class="lcard" data-cta="today_lesson" href="/blog/b2/2026-10-13-fashion-and-style"><div class="lvl lvl-b2">B2</div><div class="theme">Fashion And  words: wardrobe, tailor, vintage</div><div class="words">Today&rsquo;s lesson &rarr;</div></a><a class="lcard" data-cta="today_lesson" href="/blog/c1/2026-10-13-fashion-and-style"><div class="lvl lvl-c1">C1</div><div class="theme">Fashion And  words: sartorial, bespoke, couture</div><div class="words">Today&rsquo;s lesson &rarr;</div></a><a class="lcard" data-cta="today_lesson" href="/blog/c2/2026-10-13-fashion-and-style"><div class="lvl lvl-c2">C2</div><div class="theme">Fashion And  words: sartorial, bespoke, couture</div><div class="words">Today&rsquo;s lesson &rarr;</div></a></div></div></section>
+
+<section class="lsec" id="how-it-works"><div class="lwrap">
+<h2>How it works</h2>
+<p class="lsec-sub">The same five steps every day &mdash; a habit you can actually keep.</p>
+<div class="lsteps">
+<div class="lstep"><div class="lstep-num">1</div><h3>Words</h3><p>New words with photos, meanings, examples and pronunciation audio.</p></div>
+<div class="lstep"><div class="lstep-num">2</div><h3>Conversation</h3><p>A real conversation between our hosts Maya and Lena, with a full transcript.</p></div>
+<div class="lstep"><div class="lstep-num">3</div><h3>Shadowing</h3><p>Repeat each sentence out loud at your own speed until it feels natural.</p></div>
+<div class="lstep"><div class="lstep-num">4</div><h3>Grammar</h3><p>One clear grammar point a day, with explanations and examples.</p></div>
+<div class="lstep"><div class="lstep-num">5</div><h3>Quiz</h3><p>A quick quiz to check what you learned &mdash; and track your progress.</p></div>
+</div>
+</div></section>
+
+<section class="lsec" id="levels"><div class="lwrap"><h2>Choose your level</h2><p class="lsec-sub">Six CEFR levels, from first words to near-native fluency.</p><div class="lgrid"><a class="lcard" data-cta="level_card" href="/blog/a1/"><div class="lvl lvl-a1">A1 &middot; Beginner</div><div class="words">First words and simple sentences.</div></a><a class="lcard" data-cta="level_card" href="/blog/a2/"><div class="lvl lvl-a2">A2 &middot; Elementary</div><div class="words">Everyday conversations and essential grammar.</div></a><a class="lcard" data-cta="level_card" href="/blog/b1/"><div class="lvl lvl-b1">B1 &middot; Intermediate</div><div class="words">Real topics, longer conversations.</div></a><a class="lcard" data-cta="level_card" href="/blog/b2/"><div class="lvl lvl-b2">B2 &middot; Upper-Intermediate</div><div class="words">Work, culture and opinions.</div></a><a class="lcard" data-cta="level_card" href="/blog/c1/"><div class="lvl lvl-c1">C1 &middot; Advanced</div><div class="words">Nuance, idioms and complex ideas.</div></a><a class="lcard" data-cta="level_card" href="/blog/c2/"><div class="lvl lvl-c2">C2 &middot; Proficient</div><div class="words">Near-native fluency and precision.</div></a></div></div></section>
+<section class="lsec" id="vocabulary"><div class="lwrap"><h2>Vocabulary by topic</h2><p class="lsec-sub">Words with photos, audio and examples, grouped by topic.</p><div class="lgrid"><a class="lhub" data-cta="hub" href="/blog/vocabulary/body-health/"><span class="hname">Body &amp; Health Vocabulary</span><span class="hcount">87 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/education/"><span class="hname">Education Vocabulary</span><span class="hcount">49 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/family-relationships/"><span class="hname">Family &amp; Relationships Vocabulary</span><span class="hcount">48 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/feelings-personality/"><span class="hname">Feelings &amp; Personality Vocabulary</span><span class="hcount">102 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/food-drink/"><span class="hname">Food &amp; Drink Vocabulary</span><span class="hcount">110 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/shopping-money/"><span class="hname">Shopping &amp; Money Vocabulary</span><span class="hcount">104 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/sports-hobbies/"><span class="hname">Sports &amp; Hobbies Vocabulary</span><span class="hcount">51 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/technology/"><span class="hname">Technology Vocabulary</span><span class="hcount">90 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/travel-transport/"><span class="hname">Travel &amp; Transport Vocabulary</span><span class="hcount">96 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/work-jobs/"><span class="hname">Work &amp; Jobs Vocabulary</span><span class="hcount">83 words &rarr;</span></a></div><p style="margin-top:16px"><a data-cta="hub" href="/blog/vocabulary/">See all vocabulary topics &rarr;</a></p></div></section>
+<section class="lsec" id="grammar"><div class="lwrap"><h2>Grammar guides</h2><p class="lsec-sub">Clear rules, real examples, common mistakes and interactive exercises.</p><div class="lgrid"><a class="lcard" data-cta="grammar" href="/blog/grammar/much-many-a-few-a-little/"><div class="lvl">A2</div><div class="theme">Much, Many, A Lot Of, A Few, A Little</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/must-have-to-should/"><div class="lvl">A2</div><div class="theme">Must, Have To and Should</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/present-perfect-vs-past-simple/"><div class="lvl">B1</div><div class="theme">Present Perfect vs Past Simple</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/second-conditional/"><div class="lvl">B1</div><div class="theme">Second Conditional</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/zero-and-first-conditional/"><div class="lvl">A2</div><div class="theme">Zero and First Conditional</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a></div><p style="margin-top:16px"><a data-cta="grammar" href="/blog/grammar/">See all grammar guides &rarr;</a></p></div></section>
+
+<section class="lsec" id="about"><div class="lwrap">
+<h2>Who we are</h2>
+<p class="lsec-sub">Made by a team of English teachers and developers.</p>
+<p><a href="/about/">More about Muse English &rarr;</a></p>
+</div></section>
+
+<section class="lsec" id="questions"><div class="lwrap">
+<h2>Questions</h2>
+<div class="lqa"><h3>Is Muse English free?</h3><p>Yes: lessons, podcast, vocabulary and quizzes are free.</p></div>
+<div class="lqa"><h3>Do I need an account?</h3><p>No, to read lessons on the site. A free account lets you use the app for pronunciation scoring and progress tracking.</p></div>
+<div class="lqa"><h3>Which level should I choose?</h3><p>A1: first words and simple sentences. A2: everyday conversations and essential grammar. B1: real topics, longer conversations. B2: work, culture and opinions. C1: nuance, idioms and complex ideas. C2: near-native fluency and precision. If you&rsquo;re not sure, start with A2 and move up or down.</p></div>
+</div></section>
+
+<section class="lsec"><div class="lwrap"><div class="linstall">
+<h3>Install the app</h3>
+<p>Your daily lesson, one tap away. Use your browser&rsquo;s install option, or on iPhone: Share &rarr; Add to Home Screen.</p>
+</div></div></section>
+
+<footer class="lfoot"><div class="lfoot-grid">
+<div class="lfoot-col"><h4>Muse English</h4><ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li><li><a href="mailto:info@museenglishapp.com">info@museenglishapp.com</a></li></ul></div>
+<div class="lfoot-col"><h4>Learn</h4><ul><li><a href="/blog/">Lessons</a></li><li><a href="/blog/vocabulary/">Vocabulary</a></li><li><a href="/blog/grammar/">Grammar</a></li></ul></div>
+<div class="lfoot-col"><h4>Levels</h4><ul><li><a href="/blog/a1/">A1 Beginner</a></li><li><a href="/blog/a2/">A2 Elementary</a></li><li><a href="/blog/b1/">B1 Intermediate</a></li><li><a href="/blog/b2/">B2 Upper-Intermediate</a></li><li><a href="/blog/c1/">C1 Advanced</a></li><li><a href="/blog/c2/">C2 Proficient</a></li></ul></div>
+</div>
+<div class="lwrap" style="margin-top:24px;font-size:13px;color:#94a3b8">&copy; 2026 Alireza &middot; Muse English &middot; Built, not bought.</div>
+</footer>
+</div>
+<!-- LANDING:END -->
+
   <a class="skip-link" href="#view">Skip to content</a>
 
-  <!-- Public landing header (logged out) -->
-  <header id="landing-header" class="landing-header hidden">
-    <div class="landing-header-inner">
-      <a class="brand" href="#/" aria-label="Muse English home">
-        <img class="brand-icon" src="/icons/icon-192.png" alt="" aria-hidden="true">
-        <span class="brand-name">Muse English</span>
-      </a>
-      <nav class="landing-nav" aria-label="Product">
-        <a href="#how-it-works">How it works</a>
-        <a href="#levels">Levels</a>
-      </nav>
-      <div class="landing-actions">
-        <a class="btn btn-ghost btn-sm" href="#/signin">Sign in</a>
-        <a class="btn btn-sm" href="#/signup">Create account</a>
-      </div>
-    </div>
-  </header>
 
   <!-- Logged-in app header: brand + compact profile menu -->
   <header id="app-header" class="hidden">
@@ -163,6 +300,14 @@ setTimeout(function () {
   </nav>
 
   <script src="/js/config.js"></script>
-  <script src="/js/main.js?v=08291228"></script>
+  <script defer src="/js/main.js?v=08291228"></script>
+
+<script>
+document.addEventListener('click', function(e) {
+  var el = e.target.closest && e.target.closest('[data-cta]');
+  if (!el) return;
+  try { if (typeof gtag === 'function') gtag('event', 'cta_click', {cta_location: el.getAttribute('data-cta')}); } catch (err) {}
+});
+</script>
 </body>
 </html>
