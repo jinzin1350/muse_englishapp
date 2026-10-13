@@ -1,0 +1,416 @@
+{
+  "taxonomy_version": "1.1",
+  "updated": "2026-10-12",
+  "notes": [
+    "Single source of truth for vocabulary categories. Never hard-code categories anywhere else.",
+    "Two axes: 'hubs' (topic, with subtopics) and 'collections' (word type). A word has at most one primary subtopic, up to 2 secondary subtopics, and any number of collections.",
+    "A word gets a full card only on the page of its primary subtopic (and that subtopic's hub). Secondary subtopics show it only as a small link, so pages don't duplicate each other.",
+    "'keyword' is the proposed target query for the page. Each keyword belongs to exactly one page. Search demand is unverified: confirm with Search Console data before investing extra content.",
+    "Each page's <title> is built from its keyword (e.g., 'Fruit Vocabulary with Pictures (60+ Words) | Muse English'); the visible H1 uses 'name'.",
+    "'own_page': false means the subtopic is the core of its hub and never gets its own URL. It is always a section on the hub page, so the two can't compete for the same query.",
+    "'min_level' is the lowest CEFR level for planning lessons on this subtopic. A lower-level word can still be classified here (e.g., the A1 word 'food' in Diet & Nutrition).",
+    "Slugs are permanent once a page is indexed. Renames need a 301 redirect and a taxonomy_version bump."
+  ],
+  "url_patterns": {
+    "index": "/blog/vocabulary/",
+    "hub": "/blog/vocabulary/{hub}/",
+    "subtopic": "/blog/vocabulary/{hub}/{subtopic}/",
+    "collection": "/blog/vocabulary/{collection}/"
+  },
+  "thresholds": {
+    "page_indexable_min_unique_words": 40,
+    "hub_preview_cards_when_subtopic_has_page": 12,
+    "classification_min_confidence": 0.8,
+    "max_secondary_topics": 2,
+    "propose_new_subtopic_when_queue_cluster_reaches": 15
+  },
+  "hubs": [
+    {
+      "slug": "basics",
+      "name": "Basic English Vocabulary",
+      "keyword": "basic english vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "numbers", "name": "Numbers", "keyword": "numbers in english", "min_level": "A1" },
+        { "slug": "colors", "name": "Colors", "keyword": "colors in english", "min_level": "A1" },
+        { "slug": "days-months-dates", "name": "Days, Months & Dates", "keyword": "days and months in english", "min_level": "A1" },
+        { "slug": "time", "name": "Telling the Time", "keyword": "telling the time in english", "min_level": "A1" },
+        { "slug": "greetings-introductions", "name": "Greetings & Introductions", "keyword": "greetings in english", "min_level": "A1" }
+      ]
+    },
+    {
+      "slug": "food-drink",
+      "name": "Food & Drink Vocabulary",
+      "keyword": "food vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "fruit", "name": "Fruit", "keyword": "fruit vocabulary", "min_level": "A1" },
+        { "slug": "vegetables", "name": "Vegetables", "keyword": "vegetables vocabulary", "min_level": "A1" },
+        { "slug": "meals-snacks", "name": "Meals, Snacks & Desserts", "keyword": "meals vocabulary", "min_level": "A1" },
+        { "slug": "drinks", "name": "Drinks", "keyword": "drinks vocabulary", "min_level": "A1" },
+        { "slug": "groceries", "name": "Groceries & Ingredients", "keyword": "grocery vocabulary", "min_level": "A2" },
+        { "slug": "cooking", "name": "Cooking", "keyword": "cooking vocabulary", "min_level": "A2" },
+        { "slug": "kitchen", "name": "Kitchen", "keyword": "kitchen vocabulary", "min_level": "A2" },
+        { "slug": "restaurant", "name": "At the Restaurant", "keyword": "restaurant vocabulary", "min_level": "A2" },
+        { "slug": "taste-texture", "name": "Taste & Texture", "keyword": "food adjectives", "min_level": "B1" },
+        { "slug": "diet-nutrition", "name": "Diet & Nutrition", "keyword": "nutrition vocabulary", "min_level": "B1" },
+        { "slug": "food-production", "name": "Food Production & Farming", "keyword": "agriculture vocabulary", "min_level": "B2" }
+      ]
+    },
+    {
+      "slug": "family-relationships",
+      "name": "Family & Relationships Vocabulary",
+      "keyword": "family vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "family-members", "name": "Family Members", "keyword": "family members vocabulary", "min_level": "A1" },
+        { "slug": "friendship", "name": "Friendship", "keyword": "friendship vocabulary", "min_level": "A2" },
+        { "slug": "celebrations", "name": "Celebrations & Special Days", "keyword": "celebrations vocabulary", "min_level": "A2" },
+        { "slug": "family-life", "name": "Family Life & Parenting", "keyword": "family life vocabulary", "min_level": "B1" },
+        { "slug": "love-marriage", "name": "Love & Marriage", "keyword": "relationships vocabulary", "min_level": "B1" }
+      ]
+    },
+    {
+      "slug": "home-housing",
+      "name": "Home & Housing Vocabulary",
+      "keyword": "house vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "rooms", "name": "Rooms of the House", "keyword": "rooms of the house", "min_level": "A1" },
+        { "slug": "furniture", "name": "Furniture", "keyword": "furniture vocabulary", "min_level": "A1" },
+        { "slug": "household-items", "name": "Household Items & Appliances", "keyword": "household items vocabulary", "min_level": "A2" },
+        { "slug": "chores", "name": "Household Chores", "keyword": "household chores vocabulary", "min_level": "A2" },
+        { "slug": "housing-renting", "name": "Housing & Renting", "keyword": "housing vocabulary", "min_level": "B1" }
+      ]
+    },
+    {
+      "slug": "body-health",
+      "name": "Body & Health Vocabulary",
+      "keyword": "health vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "body-parts", "name": "Body Parts", "keyword": "body parts vocabulary", "min_level": "A1" },
+        { "slug": "illnesses-symptoms", "name": "Illnesses & Symptoms", "keyword": "illness vocabulary", "min_level": "A2" },
+        { "slug": "doctor-hospital", "name": "At the Doctor & Hospital", "keyword": "at the doctor vocabulary", "min_level": "A2" },
+        { "slug": "healthy-lifestyle", "name": "Healthy Lifestyle & Habits", "keyword": "healthy lifestyle vocabulary", "min_level": "B1" },
+        { "slug": "mental-health", "name": "Mental Health & Wellbeing", "keyword": "mental health vocabulary", "min_level": "B1" },
+        { "slug": "medicine-public-health", "name": "Medicine & Public Health", "keyword": "medical vocabulary", "min_level": "B2" }
+      ]
+    },
+    {
+      "slug": "feelings-personality",
+      "name": "Feelings & Personality Vocabulary",
+      "keyword": "feelings vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "emotions", "name": "Emotions & Feelings", "keyword": "emotions vocabulary", "min_level": "A1" },
+        { "slug": "appearance", "name": "Describing Appearance", "keyword": "describing appearance vocabulary", "min_level": "A1" },
+        { "slug": "personality", "name": "Personality Adjectives", "keyword": "personality adjectives", "min_level": "A2" },
+        { "slug": "mind-thinking", "name": "Mind, Memory & Thinking", "keyword": "thinking verbs", "min_level": "B1" },
+        { "slug": "communication", "name": "Communication & Opinions", "keyword": "communication vocabulary", "min_level": "B1" }
+      ]
+    },
+    {
+      "slug": "clothes-fashion",
+      "name": "Clothes & Fashion Vocabulary",
+      "keyword": "clothes vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "clothes", "name": "Clothes", "keyword": "clothes vocabulary", "min_level": "A1", "own_page": false },
+        { "slug": "accessories-shoes", "name": "Accessories & Shoes", "keyword": "accessories vocabulary", "min_level": "A1" },
+        { "slug": "patterns-materials", "name": "Patterns & Materials", "keyword": "fabric vocabulary", "min_level": "A2" },
+        { "slug": "fashion-style", "name": "Fashion & Style", "keyword": "fashion vocabulary", "min_level": "B1" }
+      ]
+    },
+    {
+      "slug": "shopping-money",
+      "name": "Shopping & Money Vocabulary",
+      "keyword": "shopping vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "shops-stores", "name": "Shops & Stores", "keyword": "shops vocabulary", "min_level": "A1" },
+        { "slug": "shopping", "name": "Shopping", "keyword": "shopping vocabulary", "min_level": "A2", "own_page": false },
+        { "slug": "online-shopping", "name": "Online Shopping", "keyword": "online shopping vocabulary", "min_level": "A2" },
+        { "slug": "money-banking", "name": "Money & Banking", "keyword": "money vocabulary", "min_level": "A2" },
+        { "slug": "personal-finance", "name": "Personal Finance", "keyword": "finance vocabulary", "min_level": "B1" },
+        { "slug": "advertising-marketing", "name": "Advertising & Marketing", "keyword": "advertising vocabulary", "min_level": "B2" },
+        { "slug": "economy", "name": "Economy & Globalisation", "keyword": "economy vocabulary", "min_level": "B2" }
+      ]
+    },
+    {
+      "slug": "travel-transport",
+      "name": "Travel & Transport Vocabulary",
+      "keyword": "travel vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "transport", "name": "Transport & Vehicles", "keyword": "transport vocabulary", "min_level": "A1" },
+        { "slug": "directions", "name": "Asking for Directions", "keyword": "directions vocabulary", "min_level": "A1" },
+        { "slug": "airport", "name": "At the Airport", "keyword": "airport vocabulary", "min_level": "A2" },
+        { "slug": "hotel", "name": "At the Hotel", "keyword": "hotel vocabulary", "min_level": "A2" },
+        { "slug": "holidays-tourism", "name": "Holidays & Tourism", "keyword": "holiday vocabulary", "min_level": "A2" },
+        { "slug": "traffic-commuting", "name": "Traffic & Commuting", "keyword": "traffic vocabulary", "min_level": "B1" }
+      ]
+    },
+    {
+      "slug": "work-jobs",
+      "name": "Work & Jobs Vocabulary",
+      "keyword": "work vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "jobs", "name": "Jobs & Occupations", "keyword": "jobs vocabulary", "min_level": "A1" },
+        { "slug": "workplace-office", "name": "At the Office", "keyword": "office vocabulary", "min_level": "A2" },
+        { "slug": "job-search-interviews", "name": "Job Search & Interviews", "keyword": "job interview vocabulary", "min_level": "B1" },
+        { "slug": "careers-success", "name": "Careers & Success", "keyword": "career vocabulary", "min_level": "B1" },
+        { "slug": "remote-work", "name": "Remote & Hybrid Work", "keyword": "remote work vocabulary", "min_level": "B1" },
+        { "slug": "business", "name": "Business English", "keyword": "business english vocabulary", "min_level": "B2" },
+        { "slug": "employment-issues", "name": "Employment & Labour", "keyword": "employment vocabulary", "min_level": "B2" }
+      ]
+    },
+    {
+      "slug": "education",
+      "name": "Education Vocabulary",
+      "keyword": "education vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "school-classroom", "name": "School & Classroom", "keyword": "classroom vocabulary", "min_level": "A1" },
+        { "slug": "school-subjects", "name": "School Subjects", "keyword": "school subjects in english", "min_level": "A1" },
+        { "slug": "studying-exams", "name": "Studying & Exams", "keyword": "exam vocabulary", "min_level": "A2" },
+        { "slug": "language-learning", "name": "Learning Languages", "keyword": "language learning vocabulary", "min_level": "A2" },
+        { "slug": "university", "name": "University & College", "keyword": "university vocabulary", "min_level": "B1" },
+        { "slug": "education-issues", "name": "Education Systems & Debates", "keyword": "ielts education vocabulary", "min_level": "B2" }
+      ]
+    },
+    {
+      "slug": "nature-animals",
+      "name": "Nature & Animals Vocabulary",
+      "keyword": "nature vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "animals", "name": "Animals", "keyword": "animals vocabulary", "min_level": "A1" },
+        { "slug": "pets", "name": "Pets", "keyword": "pets vocabulary", "min_level": "A1" },
+        { "slug": "plants-garden", "name": "Plants & Garden", "keyword": "plants vocabulary", "min_level": "A2" },
+        { "slug": "landscapes-geography", "name": "Landscapes & Geography", "keyword": "landscape vocabulary", "min_level": "A2" },
+        { "slug": "animal-welfare", "name": "Animal Welfare & Rights", "keyword": "animal rights vocabulary", "min_level": "B2" }
+      ]
+    },
+    {
+      "slug": "weather-environment",
+      "name": "Weather & Environment Vocabulary",
+      "keyword": "weather vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "weather", "name": "Weather", "keyword": "weather vocabulary", "min_level": "A1", "own_page": false },
+        { "slug": "seasons", "name": "Seasons", "keyword": "seasons vocabulary", "min_level": "A1" },
+        { "slug": "natural-disasters", "name": "Natural Disasters", "keyword": "natural disasters vocabulary", "min_level": "B1" },
+        { "slug": "pollution-recycling", "name": "Pollution & Recycling", "keyword": "environment vocabulary", "min_level": "B1" },
+        { "slug": "climate-energy", "name": "Climate Change & Energy", "keyword": "climate change vocabulary", "min_level": "B2" }
+      ]
+    },
+    {
+      "slug": "technology",
+      "name": "Technology Vocabulary",
+      "keyword": "technology vocabulary",
+      "min_level": "A2",
+      "subtopics": [
+        { "slug": "devices-computers", "name": "Devices & Computers", "keyword": "computer vocabulary", "min_level": "A2" },
+        { "slug": "smartphones-apps", "name": "Smartphones & Apps", "keyword": "smartphone vocabulary", "min_level": "A2" },
+        { "slug": "internet-social-media", "name": "Internet & Social Media", "keyword": "social media vocabulary", "min_level": "A2" },
+        { "slug": "science-space", "name": "Science & Space", "keyword": "space vocabulary", "min_level": "B1" },
+        { "slug": "ai-automation", "name": "AI & Automation", "keyword": "artificial intelligence vocabulary", "min_level": "B2" },
+        { "slug": "privacy-security", "name": "Online Privacy & Security", "keyword": "cyber security vocabulary", "min_level": "B2" }
+      ]
+    },
+    {
+      "slug": "sports-hobbies",
+      "name": "Sports & Hobbies Vocabulary",
+      "keyword": "sports vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "sports", "name": "Sports", "keyword": "sports vocabulary", "min_level": "A1", "own_page": false },
+        { "slug": "hobbies", "name": "Hobbies & Free Time", "keyword": "hobbies vocabulary", "min_level": "A1" },
+        { "slug": "fitness-gym", "name": "Fitness & Gym", "keyword": "gym vocabulary", "min_level": "A2" },
+        { "slug": "games", "name": "Games & Video Games", "keyword": "video games vocabulary", "min_level": "A2" },
+        { "slug": "competitions-events", "name": "Competitions & Sporting Events", "keyword": "sports events vocabulary", "min_level": "B1" }
+      ]
+    },
+    {
+      "slug": "city-daily-life",
+      "name": "City & Daily Life Vocabulary",
+      "keyword": "daily life vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "daily-routine", "name": "Daily Routine", "keyword": "daily routine vocabulary", "min_level": "A1" },
+        { "slug": "places-in-town", "name": "Places in Town", "keyword": "places in town vocabulary", "min_level": "A1" },
+        { "slug": "urban-rural-life", "name": "City Life vs Country Life", "keyword": "city life vocabulary", "min_level": "B1" },
+        { "slug": "modern-life", "name": "Modern Life", "keyword": "modern life vocabulary", "min_level": "B2" }
+      ]
+    },
+    {
+      "slug": "media-arts",
+      "name": "Media, Entertainment & Arts Vocabulary",
+      "keyword": "entertainment vocabulary",
+      "min_level": "A1",
+      "subtopics": [
+        { "slug": "music", "name": "Music", "keyword": "music vocabulary", "min_level": "A1" },
+        { "slug": "movies-tv", "name": "Movies, TV & Streaming", "keyword": "movie vocabulary", "min_level": "A2" },
+        { "slug": "books-reading", "name": "Books & Reading", "keyword": "books vocabulary", "min_level": "A2" },
+        { "slug": "news-media", "name": "News, Media & Fame", "keyword": "news vocabulary", "min_level": "B1" },
+        { "slug": "art", "name": "Art", "keyword": "art vocabulary", "min_level": "B1" }
+      ]
+    },
+    {
+      "slug": "society-culture",
+      "name": "Society & Culture Vocabulary",
+      "keyword": "society vocabulary",
+      "min_level": "B1",
+      "subtopics": [
+        { "slug": "culture-traditions", "name": "Culture, Traditions & History", "keyword": "culture vocabulary", "min_level": "B1" },
+        { "slug": "migration", "name": "Migration & Living Abroad", "keyword": "immigration vocabulary", "min_level": "B1" },
+        { "slug": "crime-law", "name": "Crime & Law", "keyword": "crime vocabulary", "min_level": "B1" },
+        { "slug": "beliefs-superstitions", "name": "Beliefs & Superstitions", "keyword": "superstitions vocabulary", "min_level": "B1" },
+        { "slug": "social-issues", "name": "Social Issues", "keyword": "social issues vocabulary", "min_level": "B2" },
+        { "slug": "government-politics", "name": "Government & Politics", "keyword": "politics vocabulary", "min_level": "B2", "note": "Neutral civic vocabulary only. No partisan positions in examples or podcasts." }
+      ]
+    }
+  ],
+  "collections": [
+    { "slug": "phrasal-verbs", "name": "Phrasal Verbs", "keyword": "phrasal verbs", "min_level": "A2" },
+    { "slug": "idioms", "name": "English Idioms", "keyword": "english idioms", "min_level": "B1" },
+    { "slug": "collocations", "name": "Collocations", "keyword": "english collocations", "min_level": "B1" },
+    { "slug": "linking-words", "name": "Linking Words", "keyword": "linking words", "min_level": "B1" },
+    { "slug": "academic-words", "name": "Academic Vocabulary", "keyword": "academic vocabulary", "min_level": "B2" }
+  ],
+  "discussion_topics": {
+    "notes": [
+      "The 100 IELTS-style discussion topics, mapped to subtopics. Use them as podcast and discussion themes for B2–C2 lessons (B1 for the simpler ones), paired with a language function: for & against, pros & cons, cause & effect.",
+      "A discussion topic is not a page. Words from these lessons are classified by meaning like any other word."
+    ],
+    "map": {
+      "Accidents": "travel-transport/traffic-commuting",
+      "Acid rain": "weather-environment/pollution-recycling",
+      "Addiction": "body-health/healthy-lifestyle",
+      "Adoption": "family-relationships/family-life",
+      "Advertising": "shopping-money/advertising-marketing",
+      "Aging": "body-health/medicine-public-health",
+      "Agriculture": "food-drink/food-production",
+      "Aids": "body-health/medicine-public-health",
+      "Air pollution": "weather-environment/pollution-recycling",
+      "Animal testing": "nature-animals/animal-welfare",
+      "Art": "media-arts/art",
+      "Astrology": "society-culture/beliefs-superstitions",
+      "Automation": "technology/ai-automation",
+      "Brain drain": "society-culture/migration",
+      "Bribery": "society-culture/crime-law",
+      "Charity": "society-culture/social-issues",
+      "Child care": "family-relationships/family-life",
+      "Child labour": "society-culture/social-issues",
+      "Childhood": "family-relationships/family-life",
+      "Children's education": "education/education-issues",
+      "City life": "city-daily-life/urban-rural-life",
+      "Climate": "weather-environment/climate-energy",
+      "Computer games": "sports-hobbies/games",
+      "Computerisation": "technology/ai-automation",
+      "Country life": "city-daily-life/urban-rural-life",
+      "Crime": "society-culture/crime-law",
+      "Cultural heritage": "society-culture/culture-traditions",
+      "Culture": "society-culture/culture-traditions",
+      "Culture shock": "society-culture/migration",
+      "Diet": "food-drink/diet-nutrition",
+      "Disability": "body-health/medicine-public-health",
+      "Distance learning": "education/education-issues",
+      "Divorce": "family-relationships/love-marriage",
+      "Doping": "sports-hobbies/competitions-events",
+      "Education": "education/education-issues",
+      "Energy": "weather-environment/climate-energy",
+      "Environment": "weather-environment/pollution-recycling",
+      "Fame": "media-arts/news-media",
+      "Family": "family-relationships/family-members",
+      "Family ties": "family-relationships/family-life",
+      "Famine": "society-culture/social-issues",
+      "Fashion, clothing": "clothes-fashion/fashion-style",
+      "Fear": "feelings-personality/emotions",
+      "Festivals": "society-culture/culture-traditions",
+      "Field trips": "education/education-issues",
+      "Film": "media-arts/movies-tv",
+      "Friendship": "family-relationships/friendship",
+      "Generation gap": "family-relationships/family-life",
+      "Global warming": "weather-environment/climate-energy",
+      "Globalisation": "shopping-money/economy",
+      "GM food": "food-drink/food-production",
+      "Happiness": "feelings-personality/emotions",
+      "High rise buildings": "city-daily-life/urban-rural-life",
+      "History": "society-culture/culture-traditions",
+      "Hobbies": "sports-hobbies/hobbies",
+      "Holiday": "travel-transport/holidays-tourism",
+      "Home schooling": "education/education-issues",
+      "Homelessness": "society-culture/social-issues",
+      "Housing": "home-housing/housing-renting",
+      "Illiteracy": "education/education-issues",
+      "Industrial relations": "work-jobs/employment-issues",
+      "(The) internet": "technology/internet-social-media",
+      "Jobs": "work-jobs/jobs",
+      "Juvenile delinquency": "society-culture/crime-law",
+      "Language": "education/language-learning",
+      "Law": "society-culture/crime-law",
+      "Life expectancy": "body-health/medicine-public-health",
+      "Marriage": "family-relationships/love-marriage",
+      "Mass media": "media-arts/news-media",
+      "Memory": "feelings-personality/mind-thinking",
+      "Migration": "society-culture/migration",
+      "Modern life": "city-daily-life/modern-life",
+      "Music": "media-arts/music",
+      "Natural disasters": "weather-environment/natural-disasters",
+      "Noise pollution": "weather-environment/pollution-recycling",
+      "Obesity": "food-drink/diet-nutrition",
+      "Over population": "city-daily-life/urban-rural-life",
+      "Parenting": "family-relationships/family-life",
+      "Personality": "feelings-personality/personality",
+      "Pets": "nature-animals/pets",
+      "Poverty": "society-culture/social-issues",
+      "Public transport": "travel-transport/traffic-commuting",
+      "Recycling": "weather-environment/pollution-recycling",
+      "Satellites": "technology/science-space",
+      "School discipline": "education/education-issues",
+      "Smoking": "body-health/healthy-lifestyle",
+      "Space exploration": "technology/science-space",
+      "Sport": "sports-hobbies/sports",
+      "Sporting events": "sports-hobbies/competitions-events",
+      "Sportsmanship": "sports-hobbies/competitions-events",
+      "Stress": "body-health/mental-health",
+      "Success": "work-jobs/careers-success",
+      "Tourism": "travel-transport/holidays-tourism",
+      "Traffic": "travel-transport/traffic-commuting",
+      "TV": "media-arts/movies-tv",
+      "Unemployment": "work-jobs/employment-issues",
+      "Urban sprawl": "city-daily-life/urban-rural-life",
+      "Violence": "society-culture/crime-law",
+      "Water pollution": "weather-environment/pollution-recycling",
+      "Zoos": "nature-animals/animal-welfare"
+    },
+    "renames": {
+      "Aids": "Public health & epidemics",
+      "Computerisation": "AI & automation",
+      "Distance learning": "Online learning",
+      "TV": "TV & streaming",
+      "Satellites": "Space technology"
+    },
+    "modern_additions": {
+      "Social media": "technology/internet-social-media",
+      "Smartphone addiction & screen time": "technology/smartphones-apps",
+      "Artificial intelligence": "technology/ai-automation",
+      "Online privacy": "technology/privacy-security",
+      "Remote work": "work-jobs/remote-work",
+      "Gig economy": "work-jobs/employment-issues",
+      "Online shopping": "shopping-money/online-shopping",
+      "Mental health": "body-health/mental-health",
+      "Fake news & misinformation": "media-arts/news-media",
+      "Influencers": "media-arts/news-media",
+      "Cost of living": "shopping-money/personal-finance",
+      "Electric cars": "travel-transport/transport"
+    },
+    "sensitive": {
+      "rule": "C1–C2 only, neutral and respectful language, and human review before publishing.",
+      "topics": ["Addiction", "Aids", "Child labour", "Disability", "Divorce", "Juvenile delinquency", "Violence"]
+    }
+  }
+}
