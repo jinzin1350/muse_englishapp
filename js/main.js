@@ -2046,31 +2046,14 @@ function heroPreviewHTML(m) {
 }
 
 function renderLanding(v) {
-  /* Phase 2.8: the static landing in index.html IS the landing page.
-     When the router lands on 'landing', just clear #view — the static
-     landing (shown/hidden by the app-mode class) handles the rest.
-     Safety net: if the inline script added app-mode for a stale/expired
-     token, the session check already failed — drop app-mode so the
-     landing is visible instead of a blank page. */
+  /* The static landing in index.html IS the landing page — there is no JS
+     landing view anymore. If we got here WITH a hash (old '#/landing' link,
+     bookmark, or stale navigation), drop the hash: the static landing at '/'
+     is the one homepage. Without a hash (plain '/'), just clear #view and
+     drop app-mode so the static landing shows. */
+  if (window.location.hash) { window.location.replace('/'); return; }
   document.documentElement.classList.remove('app-mode');
   v.innerHTML = '';
-}
-
-function renderInviteHero(name) {
-  const hero = document.querySelector('.lp-hero');
-  if (!hero || state.view !== 'landing' || document.getElementById('lp-invite-hero')) return;
-  const initial = (name || '?').trim().charAt(0);
-  const card = document.createElement('div');
-  card.id = 'lp-invite-hero';
-  card.className = 'lp-invite-hero';
-  card.innerHTML =
-    '<div class="lp-invite-ava">' + esc(initial) + '</div>' +
-    '<div class="lp-invite-txt"><b>' + esc(name) + '</b> invited you to <b>Muse English</b></div>' +
-    '<p>Sign up with their personal link — they\u2019ll follow your progress and guide you.</p>' +
-    '<a class="lp-cta" href="#/signup">Start with ' + esc(name) + '\u2019s invite</a>';
-  hero.insertBefore(card, hero.firstChild);
-  const old = document.getElementById('lp-invite');
-  if (old) old.classList.add('hidden');
 }
 
 function renderPreviewTab(which, m) {
@@ -4936,7 +4919,7 @@ async function doSignup() {
 async function enterApp() {
   const { data } = await sb.auth.getUser();
   const u = data.user;
-  if (!u) { go('landing'); hideSplashSoon(); return; }
+  if (!u) { window.location.replace('/'); return; }  // session gone -> static landing
   let level = null;
   let prof = null;
   try {
@@ -5337,7 +5320,9 @@ async function doLogout() {
   state.user = null; state.lessons = []; state.lesson = null;
   state.adminUsers = []; state.quiz = null; state.justSignedUp = false;
   try { localStorage.removeItem('el_last_user'); } catch (e) {}
-  go('landing');
+  // Logout -> static landing at '/', no hash. The old '#/landing' route is retired;
+  // the static landing in index.html IS the homepage.
+  window.location.replace('/');
 }
 
 /* Demo mode (no Supabase configured) */
