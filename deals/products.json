@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "dell-gaming-backpack-17",
+      "name_fa": "کوله‌پشتی گیمینگ دل ۱۷ اینچ",
+      "name_en": "Dell Gaming Backpack 17\" - GMBP1720M",
+      "price_cad": 55.68,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "چهارشنبه، ۱۴ اکتبر ۲۰۲۶",
+      "image": "img/dell-gaming-backpack-17.jpg",
+      "url": "https://www.amazon.ca/dp/B08CS1ZW7R?tag=alirezaebra0d-20",
+      "source": "smartcanucks+camelcamelcamel",
+      "item_no": null,
+      "blurb_fa": "ضد آب با کاور باران؛ جای لپ‌تاپ تا ۱۷ اینچ"
+    },
+    {
+      "id": "clif-bar-crunchy-peanut-butter-10pk",
+      "name_fa": "بار انرژی کلیف، کره بادام‌زمینی ترد (بسته ۱۰ تایی)",
+      "name_en": "CLIF BAR Energy Bars, Crunchy Peanut Butter, 680 g (Pack of 10)",
+      "price_cad": 9.99,
+      "regular_cad": 14.99,
+      "discount_pct": 33,
+      "added_fa": "چهارشنبه، ۱۴ اکتبر ۲۰۲۶",
+      "image": "img/clif-bar-crunchy-peanut-butter-10pk.jpg",
+      "url": "https://www.amazon.ca/dp/B0DNLGR5G7?tag=alirezaebra0d-20",
+      "source": "redflagdeals+dp-regular-price",
+      "item_no": null,
+      "blurb_fa": "بسته ۱۰ تایی ۶۸۰ گرمی؛ پروتئین بالا و ۷۰ درصد مواد ارگانیک"
+    },
+    {
+      "id": "star-wars-outlaws-gold-switch2",
+      "name_fa": "بازی جنگ ستارگان: قانون‌شکنان — نسخه طلایی (نینتندو سوییچ ۲)",
+      "name_en": "Star Wars Outlaws Gold Edition - Nintendo Switch 2",
+      "price_cad": 39.99,
+      "regular_cad": 79.99,
+      "discount_pct": 50,
+      "added_fa": "چهارشنبه، ۱۴ اکتبر ۲۰۲۶",
+      "image": "img/star-wars-outlaws-gold-switch2.jpg",
+      "url": "https://www.amazon.ca/dp/B0F79Z9V31?tag=alirezaebra0d-20",
+      "source": "smartcanucks+dp-list-price",
+      "item_no": null,
+      "blurb_fa": "نسخه طلایی: بازی کامل + سیزن‌پس با دو بسته داستانی"
+    },
+    {
+      "id": "dell-34-plus-monitor-s3425dw",
+      "name_fa": "مانیتور خمیده دل پلاس ۳۴ اینچ (S3425DW)",
+      "name_en": "Dell 34 Plus USB-C Curved Monitor S3425DW, 34-inch WQHD 120Hz",
+      "price_cad": 429.99,
+      "regular_cad": 589.99,
+      "discount_pct": 27,
+      "added_fa": "چهارشنبه، ۱۴ اکتبر ۲۰۲۶",
+      "image": "img/dell-34-plus-monitor-s3425dw.jpg",
+      "url": "https://www.amazon.ca/dp/B0F1H325FN?tag=alirezaebra0d-20",
+      "source": "smartcanucks+retailer-corroboration",
+      "item_no": null,
+      "blurb_fa": "صفحه ۳۴ اینچ خمیده اولتراواید ۳۴۴۰ در ۱۴۴۰، ۱۲۰ هرتز، یواس‌بی‌سی با شارژ ۶۵ وات"
+    },
+    {
       "id": "hoto-pixeldrive",
       "name_fa": "پیچ‌گوشتی برقی هوتو پیکسل‌درایو",
       "name_en": "HOTO PixelDrive Electric Screwdriver Set",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "پرفروش‌ترین نگه‌دارنده دوربین و نور آمازون کانادا"
-    },
-    {
-      "id": "nutribullet-pro-plus",
-      "name_fa": "مخلوط‌کن نوتری‌بولت پرو پلاس ۱۲۰۰ وات",
-      "name_en": "nutribullet Pro+ 1200W Personal Blender (Matte Black)",
-      "price_cad": 79.99,
-      "regular_cad": 134.99,
-      "discount_pct": 41,
-      "added_fa": "سه‌شنبه، ۱۳ اکتبر ۲۰۲۶",
-      "image": "img/nutribullet-pro-plus.jpg",
-      "url": "https://www.amazon.ca/dp/B0BS76NRG3?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "موتور ۱۲۰۰ وات با دکمه پالس؛ دو لیوان سفری و درب مسافرتی"
-    },
-    {
-      "id": "stanley-iceflow-2-0",
-      "name_fa": "لیوان استنلی آیس‌فلو ۲.۰ (۳۰ اونس)",
-      "name_en": "STANLEY IceFlow 2.0 Flip Straw Tumbler 30 oz",
-      "price_cad": 27.12,
-      "regular_cad": 46.0,
-      "discount_pct": 41,
-      "added_fa": "سه‌شنبه، ۱۳ اکتبر ۲۰۲۶",
-      "image": "img/stanley-iceflow-2-0.jpg",
-      "url": "https://www.amazon.ca/dp/B0FB7PR5PS?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "لیوان ۳۰ اونسی با درب نی‌دار ضد نشتی؛ سرد نگه می‌دارد تا ۱۲ ساعت"
-    },
-    {
-      "id": "adidas-vibes-chill-zone-edp-50ml",
-      "name_fa": "ادکلن آدیداس وایبز چیل زون ۵۰ میل",
-      "name_en": "adidas Vibes Chill Zone Eau de Parfum 50ml",
-      "price_cad": 14.7,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "دوشنبه، ۱۲ اکتبر ۲۰۲۶",
-      "image": "img/adidas-vibes-chill-zone-edp-50ml.jpg",
-      "url": "https://www.amazon.ca/dp/B0D67TVMS1?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "عطر یونیسکس آدیداس با رایحهٔ اسطوخودوس و وانیل؛ خوش‌قیمت برای هدیه یا مصرف روزانه."
-    },
-    {
-      "id": "newbalance-nergize-2026-10-12",
-      "name_fa": "کفش ورزشی نیوبالانس نرجایز اسپورت",
-      "name_en": "New Balance Women's DynaSoft Nergize Sport V2",
-      "price_cad": 37.35,
-      "regular_cad": 109.99,
-      "discount_pct": 66,
-      "added_fa": "دوشنبه، ۱۲ اکتبر ۲۰۲۶",
-      "image": "img/newbalance-nergize-2026-10-12.jpg",
-      "url": "https://www.amazon.ca/dp/B0BHKVQFLG?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "فناوری دایناسافت، راحت برای تمام روز — رنگ‌ها و سایزهای منتخب"
     }
   ],
-  "updated_fa": "سه‌شنبه ۲۱ مهر"
+  "updated_fa": "چهارشنبه ۲۲ مهر"
 }
