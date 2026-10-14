@@ -32,6 +32,9 @@
    - a valid (unexpired) session;
    - the hash starts with '#/' (an app route; in-page anchors like
      #how-it-works / #levels are NOT app routes);
+     (EXCEPTION 2026-10-14: an exact '#/' with no session, no standalone
+     PWA and no app query-param is the visitor's home = the LANDING, so
+     the preview/auth back-links (href="#/") work instead of looping);
    - running as an installed app (standalone display mode);
    - the URL has a query param the app handles (?lesson=latest for push
      deep links, ?ref=<code> for referral links);
@@ -82,8 +85,15 @@
         }
         usedBefore = localStorage.getItem('muse_app_used') === '1';
       } catch (e) {}
+      /* 2026-10-14: an exact '#/' is the anonymous visitor's "home" — the
+         landing, NOT the app — so the preview/auth "back" links
+         (href="#/") return to the landing instead of looping into the
+         preview. Signed-in, installed-PWA and push/referral visits still
+         enter the app. (Mirrors shouldEnterAppMode() in js/main.js —
+         keep them in sync.) */
+      var anonHome = hash === '#/' && !signedIn && !standalone && !appQuery;
       document.documentElement.classList.toggle('app-mode',
-        isAppRoute || signedIn || standalone || appQuery || usedBefore);
+        (isAppRoute && !anonHome) || signedIn || standalone || appQuery || usedBefore);
     } catch (e) {}
   }
   updateAppMode();

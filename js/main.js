@@ -1864,15 +1864,27 @@ async function loadPreviewLesson() {
 function shouldEnterAppMode() {
   try {
     if (state.user) return true;
-    if ((window.location.hash || '').indexOf('#/') === 0) return true;
+    var hash = window.location.hash || '';
+    var standalone = false;
     try {
-      if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) return true;
-      if (window.navigator && window.navigator.standalone) return true;
+      if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) standalone = true;
+      if (window.navigator && window.navigator.standalone) standalone = true;
     } catch (e) {}
+    var appQuery = false;
     try {
       var q = new URLSearchParams(window.location.search);
-      if (q.get('lesson') === 'latest' || q.get('ref')) return true;
+      appQuery = q.get('lesson') === 'latest' || !!q.get('ref');
     } catch (e) {}
+    /* 2026-10-14: an exact '#/' is the anonymous visitor's "home" — the
+       marketing landing, NOT the app. Without this, the preview/auth
+       "back" links (href="#/") loop back into #/preview forever and the
+       visitor can never return to the landing. Signed-in visitors never
+       reach here with '#/' (onRoute moves them to #/home); installed-PWA
+       and push/referral visits still enter the app. */
+    if (hash === '#/' && !standalone && !appQuery) return false;
+    if (hash.indexOf('#/') === 0) return true;
+    if (standalone) return true;
+    if (appQuery) return true;
     try {
       if (localStorage.getItem('muse_app_used') === '1') return true;
     } catch (e) {}
@@ -2086,6 +2098,12 @@ function renderLanding(v) {
        one-shot session flag so the '/' redirect shows the landing even
        for a returning app user, whose muse_app_used flag would
        otherwise send '/' straight back to the app preview.
+     - WITH an exact '#/' hash from an anonymous visitor (no session,
+       not installed-PWA, no push/referral param): '#/' IS the landing —
+       show it in place with no redirect. Redirecting to '/' would loop
+       straight back into #/preview via the muse_app_used flag: that was
+       the 2026-10-14 preview trap (the preview/auth "back" links could
+       never reach the landing).
      - WITHOUT a hash (plain '/') but an app signal is true (standalone
        PWA, ?lesson=latest / ?ref=, muse_app_used flag): this is an
        anonymous app user, not a first-time visitor — open the app's
@@ -2094,10 +2112,23 @@ function renderLanding(v) {
        landing this once, then consume the flag.
      - Otherwise: clear #view and drop app-mode so the static landing
        shows (first-time visitors and crawlers). */
-  if (window.location.hash) {
-    try {
-      if (window.location.hash === '#/landing') sessionStorage.setItem('muse_force_landing', '1');
-    } catch (e) {}
+  var _h = window.location.hash || '';
+  if (_h === '#/landing') {
+    try { sessionStorage.setItem('muse_force_landing', '1'); } catch (e) {}
+    window.location.replace('/'); return;
+  }
+  /* 2026-10-14: an anonymous '#/' IS the landing (see shouldEnterAppMode).
+     Show it in place with no redirect — redirecting to '/' would send a
+     returning visitor straight back into #/preview (the muse_app_used
+     flag), which is exactly the trap the preview/auth "back" links fell
+     into. Signed-in visitors never reach here with '#/' (onRoute moves
+     them to #/home). */
+  if (_h === '#/' && !shouldEnterAppMode()) {
+    document.documentElement.classList.remove('app-mode');
+    v.innerHTML = '';
+    return;
+  }
+  if (_h) {
     window.location.replace('/'); return;
   }
   try {
@@ -2151,7 +2182,7 @@ function renderPreviewTab(which, m) {
 
 /* Public read-only lesson preview (no login required). */
 function renderPreview(v) {
-  v.innerHTML = '<div class="landing"><p class="muted"><a class="link" href="#/">← Back</a></p>' +
+  v.innerHTML = '<div class="landing"><p class="muted"><a class="link" href="#/" title="Back to the Muse English website">← Back to website</a></p>' +
     '<div id="preview-full"><p class="muted">Loading today’s lesson…</p></div></div>';
   loadPreviewLesson().then(function (m) {
     const host = document.getElementById('preview-full');
