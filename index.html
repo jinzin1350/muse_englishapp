@@ -28,14 +28,35 @@
   
 <script>
 /* Phase 2.8: before first paint, hide the static landing when the visitor
-   is signed in or on an app route (#/...). In-page anchors (#how-it-works,
-   #levels) are NOT app routes, so the landing stays visible for them. */
+   is in the app. App-mode is ON if ANY of these is true:
+   - a valid (unexpired) session;
+   - the hash starts with '#/' (an app route; in-page anchors like
+     #how-it-works / #levels are NOT app routes);
+   - running as an installed app (standalone display mode);
+   - the URL has a query param the app handles (?lesson=latest for push
+     deep links, ?ref=<code> for referral links);
+   - the muse_app_used flag in localStorage (set by main.js the first
+     time a visitor enters any app route; cleared on logout).
+   Crawlers and first-time visitors have none of these, so they still
+   get the landing. localStorage access is wrapped in try/catch.
+   main.js has the same rule in shouldEnterAppMode() — keep them in sync. */
 (function () {
   function updateAppMode() {
     try {
       var hash = window.location.hash || '';
       var isAppRoute = hash.indexOf('#/') === 0;
       var signedIn = false;
+      var standalone = false;
+      var appQuery = false;
+      var usedBefore = false;
+      try {
+        if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) standalone = true;
+        if (window.navigator && window.navigator.standalone) standalone = true;
+      } catch (e) {}
+      try {
+        var q = new URLSearchParams(window.location.search);
+        appQuery = q.get('lesson') === 'latest' || !!q.get('ref');
+      } catch (e) {}
       try {
         var raw = localStorage.getItem('sb-hxkxowjbnbfyqiifuydn-auth-token');
         if (raw) {
@@ -50,8 +71,10 @@
             } catch (e2) { signedIn = true; }
           }
         }
+        usedBefore = localStorage.getItem('muse_app_used') === '1';
       } catch (e) {}
-      document.documentElement.classList.toggle('app-mode', isAppRoute || signedIn);
+      document.documentElement.classList.toggle('app-mode',
+        isAppRoute || signedIn || standalone || appQuery || usedBefore);
     } catch (e) {}
   }
   updateAppMode();

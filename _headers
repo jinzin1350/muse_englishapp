@@ -1,0 +1,7 @@
+# SEO: keep the production pages.dev host out of search indexes while the
+# app keeps working there. The host-specific rule applies ONLY to
+# muse-englishapp.pages.dev — museenglishapp.com gets NO x-robots-tag.
+# (Branch preview deployments already get X-Robots-Tag: noindex
+# automatically from Cloudflare Pages.)
+https://muse-englishapp.pages.dev/*
+  X-Robots-Tag: noindex

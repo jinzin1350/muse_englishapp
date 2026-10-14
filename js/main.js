@@ -1856,6 +1856,30 @@ async function loadPreviewLesson() {
 }
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
+/* Phase 2.8 (item 1): the app-mode rule, shared by renderLanding's safety
+   net. Must match the head script in index.html — keep them in sync.
+   App-mode is ON if ANY is true: a session, an app hash route (#/...),
+   standalone (installed PWA), an app query param (?lesson=latest,
+   ?ref=), or the muse_app_used flag. */
+function shouldEnterAppMode() {
+  try {
+    if (state.user) return true;
+    if ((window.location.hash || '').indexOf('#/') === 0) return true;
+    try {
+      if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) return true;
+      if (window.navigator && window.navigator.standalone) return true;
+    } catch (e) {}
+    try {
+      var q = new URLSearchParams(window.location.search);
+      if (q.get('lesson') === 'latest' || q.get('ref')) return true;
+    } catch (e) {}
+    try {
+      if (localStorage.getItem('muse_app_used') === '1') return true;
+    } catch (e) {}
+  } catch (e) {}
+  return false;
+}
+
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview'];
 const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
@@ -1947,6 +1971,12 @@ function onRoute() {
     if (view === 'lesson' && r.arg2 && ['words', 'quiz', 'podcast', 'shadowing', 'grammar'].indexOf(r.arg2) !== -1) {
       state.lessonTab = r.arg2;
     }
+  }
+  /* Phase 2.8 (item 1): remember that this browser has entered an app
+     route, so a later plain '/' visit opens the app instead of the
+     landing. Cleared by doLogout() — after logout the landing returns. */
+  if (view !== 'landing') {
+    try { localStorage.setItem('muse_app_used', '1'); } catch (e) {}
   }
   show(view, r.arg);
 }
@@ -2047,11 +2077,19 @@ function heroPreviewHTML(m) {
 
 function renderLanding(v) {
   /* The static landing in index.html IS the landing page — there is no JS
-     landing view anymore. If we got here WITH a hash (old '#/landing' link,
-     bookmark, or stale navigation), drop the hash: the static landing at '/'
-     is the one homepage. Without a hash (plain '/'), just clear #view and
-     drop app-mode so the static landing shows. */
+     landing view anymore. The safety net uses the SAME app-mode rule as
+     the head script and may drop app-mode ONLY when none of its signals
+     is true:
+     - WITH a hash (old '#/landing' link, bookmark, stale navigation):
+       drop the hash — the static landing at '/' is the one homepage.
+     - WITHOUT a hash (plain '/') but an app signal is true (standalone
+       PWA, ?lesson=latest / ?ref=, muse_app_used flag): this is an
+       anonymous app user, not a first-time visitor — open the app's
+       public lesson preview (#/preview) instead of the landing.
+     - Otherwise: clear #view and drop app-mode so the static landing
+       shows (first-time visitors and crawlers). */
   if (window.location.hash) { window.location.replace('/'); return; }
+  if (shouldEnterAppMode()) { go('preview'); return; }
   document.documentElement.classList.remove('app-mode');
   v.innerHTML = '';
 }
@@ -5320,6 +5358,10 @@ async function doLogout() {
   state.user = null; state.lessons = []; state.lesson = null;
   state.adminUsers = []; state.quiz = null; state.justSignedUp = false;
   try { localStorage.removeItem('el_last_user'); } catch (e) {}
+  /* Logout clears the muse_app_used flag too: after logout the landing
+     returns, even for a browser that used the app before. The flag is
+     set again the next time the visitor enters any app route. */
+  try { localStorage.removeItem('muse_app_used'); } catch (e) {}
   // Logout -> static landing at '/', no hash. The old '#/landing' route is retired;
   // the static landing in index.html IS the homepage.
   window.location.replace('/');
