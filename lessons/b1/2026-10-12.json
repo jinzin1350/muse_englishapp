@@ -1,0 +1,383 @@
+{
+ "date": "2026-10-12",
+ "theme": "travel & transport",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "embark",
+   "pos": "verb",
+   "meaning": "to get on a ship or airplane to start a journey",
+   "example": "We will embark on the cruise ship at noon tomorrow.",
+   "pronunciation": "em-BARK",
+   "persian": "سوار شدن (بر کشتی یا هواپیما برای آغاز سفر)",
+   "photo": "media/b1/2026-10-12/photos/embark.jpg",
+   "word_audio": "media/b1/2026-10-12/word-audio/embark.mp3"
+  },
+  {
+   "word": "disembark",
+   "pos": "verb",
+   "meaning": "to get off a ship or airplane at the end of a journey",
+   "example": "Passengers must disembark from the plane row by row.",
+   "pronunciation": "dis-em-BARK",
+   "persian": "پیاده شدن (از کشتی یا هواپیما)",
+   "photo": "media/b1/2026-10-12/photos/disembark.jpg",
+   "word_audio": "media/b1/2026-10-12/word-audio/disembark.mp3"
+  },
+  {
+   "word": "jet lag",
+   "pos": "noun",
+   "meaning": "extreme tiredness you feel after a long flight across different time zones",
+   "example": "After my flight to Tokyo, I had terrible jet lag for three days.",
+   "pronunciation": "JET LAG",
+   "persian": "خستگی ناشی از اختلاف ساعت پس از پرواز طولانی",
+   "photo": "media/b1/2026-10-12/photos/jet lag.jpg",
+   "word_audio": "media/b1/2026-10-12/word-audio/jet lag.mp3"
+  },
+  {
+   "word": "turbulence",
+   "pos": "noun",
+   "meaning": "sudden rough shaking of an airplane in the air",
+   "example": "There was some turbulence during the flight, but we landed safely.",
+   "pronunciation": "TUR-byuh-luhns",
+   "persian": "تلاطم و لرزش ناگهانی هواپیما در هوا",
+   "photo": "media/b1/2026-10-12/photos/turbulence.jpg",
+   "word_audio": "media/b1/2026-10-12/word-audio/turbulence.mp3"
+  },
+  {
+   "word": "excursion",
+   "pos": "noun",
+   "meaning": "a short enjoyable trip, often organized for a group of people",
+   "example": "Our hotel offers a day excursion to the old castle.",
+   "pronunciation": "ex-KUR-zhuhn",
+   "persian": "گردش یا سفر کوتاه تفریحی",
+   "photo": "media/b1/2026-10-12/photos/excursion.jpg",
+   "word_audio": "media/b1/2026-10-12/word-audio/excursion.mp3"
+  },
+  {
+   "word": "porter",
+   "pos": "noun",
+   "meaning": "a person whose job is to carry people's bags at a hotel, station, or airport",
+   "example": "The porter carried our heavy suitcases to the fourth floor.",
+   "pronunciation": "POR-ter",
+   "persian": "باربر (کسی که چمدان‌ها را حمل می‌کند)",
+   "photo": "media/b1/2026-10-12/photos/porter.jpg",
+   "word_audio": "media/b1/2026-10-12/word-audio/porter.mp3"
+  },
+  {
+   "word": "stopover",
+   "pos": "noun",
+   "meaning": "a short break or stay in one place during a longer journey",
+   "example": "We had a four-hour stopover in Dubai before flying to London.",
+   "pronunciation": "STOP-oh-ver",
+   "persian": "توقف کوتاه در مسیر سفر طولانی",
+   "photo": "media/b1/2026-10-12/photos/stopover.jpg",
+   "word_audio": "media/b1/2026-10-12/word-audio/stopover.mp3"
+  },
+  {
+   "word": "round-trip",
+   "pos": "adjective",
+   "meaning": "a ticket or journey that takes you somewhere and then brings you back",
+   "example": "A round-trip ticket is usually cheaper than two one-way tickets.",
+   "pronunciation": "ROWND-TRIP",
+   "persian": "رفت‌وبرگشت (بلیط)",
+   "photo": "media/b1/2026-10-12/photos/round-trip.jpg",
+   "word_audio": "media/b1/2026-10-12/word-audio/round-trip.mp3"
+  },
+  {
+   "word": "campsite",
+   "pos": "noun",
+   "meaning": "a place where people stay overnight in tents",
+   "example": "We cooked dinner over a fire at our campsite in the mountains.",
+   "pronunciation": "KAMP-syt",
+   "persian": "محل کمپینگ (چادر زدن)",
+   "photo": "media/b1/2026-10-12/photos/campsite.jpg",
+   "word_audio": "media/b1/2026-10-12/word-audio/campsite.mp3"
+  },
+  {
+   "word": "road trip",
+   "pos": "noun",
+   "meaning": "a long journey you take by car, often for fun",
+   "example": "Last summer we went on a road trip across Canada.",
+   "pronunciation": "ROHD TRIP",
+   "persian": "سفر جاده‌ای با ماشین",
+   "photo": "media/b1/2026-10-12/photos/road trip.jpg",
+   "word_audio": "media/b1/2026-10-12/word-audio/road trip.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-12/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Travel and Transport",
+  "audio": "media/b1/2026-10-12/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-12/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Big Trip to the Mountains and the Sea",
+  "audio": "media/b1/2026-10-12/shadowing.mp3",
+  "transcript": "media/b1/2026-10-12/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-12/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/028.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/029.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/030.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/031.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/032.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/033.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/034.mp3",
+   "media/b1/2026-10-12/shadowing-sentences/035.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'embark' mean?",
+   "options": [
+    "to get on a ship or airplane to start a journey",
+    "to get off a ship or airplane at the end of a journey",
+    "extreme tiredness you feel after a long flight across different time zones",
+    "sudden rough shaking of an airplane in the air"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'disembark' mean?",
+   "options": [
+    "a short enjoyable trip, often organized for a group of people",
+    "a person whose job is to carry people's bags at a hotel, station, or airport",
+    "a short break or stay in one place during a longer journey",
+    "to get off a ship or airplane at the end of a journey"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'jet lag' mean?",
+   "options": [
+    "a place where people stay overnight in tents",
+    "a long journey you take by car, often for fun",
+    "extreme tiredness you feel after a long flight across different time zones",
+    "a ticket or journey that takes you somewhere and then brings you back"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'turbulence' mean?",
+   "options": [
+    "extreme tiredness you feel after a long flight across different time zones",
+    "sudden rough shaking of an airplane in the air",
+    "to get on a ship or airplane to start a journey",
+    "to get off a ship or airplane at the end of a journey"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'excursion' mean?",
+   "options": [
+    "a short enjoyable trip, often organized for a group of people",
+    "sudden rough shaking of an airplane in the air",
+    "a person whose job is to carry people's bags at a hotel, station, or airport",
+    "a short break or stay in one place during a longer journey"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'porter' mean?",
+   "options": [
+    "a ticket or journey that takes you somewhere and then brings you back",
+    "a place where people stay overnight in tents",
+    "a long journey you take by car, often for fun",
+    "a person whose job is to carry people's bags at a hotel, station, or airport"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'stopover' mean?",
+   "options": [
+    "to get off a ship or airplane at the end of a journey",
+    "extreme tiredness you feel after a long flight across different time zones",
+    "a short break or stay in one place during a longer journey",
+    "to get on a ship or airplane to start a journey"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'round-trip' mean?",
+   "options": [
+    "a person whose job is to carry people's bags at a hotel, station, or airport",
+    "a ticket or journey that takes you somewhere and then brings you back",
+    "sudden rough shaking of an airplane in the air",
+    "a short enjoyable trip, often organized for a group of people"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'campsite' mean?",
+   "options": [
+    "a place where people stay overnight in tents",
+    "a short break or stay in one place during a longer journey",
+    "a ticket or journey that takes you somewhere and then brings you back",
+    "a long journey you take by car, often for fun"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'road trip' mean?",
+   "options": [
+    "to get on a ship or airplane to start a journey",
+    "to get off a ship or airplane at the end of a journey",
+    "extreme tiredness you feel after a long flight across different time zones",
+    "a long journey you take by car, often for fun"
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "9B: Quantifiers",
+  "explanation": "We use **a lot of** and **lots of** for large quantities. We can use them with countable and uncountable nouns. **Lots of** is a little more informal than **a lot of**.\n\nWe use **many** with plural countable nouns, and **much** with uncountable nouns. These two are common in negative sentences and questions.\n\n**Plenty of** means \"more than enough\". For example, there was **plenty of** food at our campsite.\n\nFor small quantities, we use **a little** with uncountable nouns. We use **a few** with plural countable nouns. Both mean \"some, but not a lot\".\n\n**Very little** and **very few** are more negative. **Very little** means \"not much\", and **very few** means \"not many\".\n\n**Less** is the comparative of **little**. **Fewer** is the comparative of **few**. We had **less** turbulence on the morning flight, and **fewer** passengers on the plane.\n\nWhen something is more than needed, we use **too**. We put **too** before an adjective or adverb. The road trip was **too** long for one day.\n\nWe use **too much** with uncountable nouns. We use **too many** with plural countable nouns. There were **too many** people at the excursion meeting point.\n\nWe use **enough** before a noun. We use **enough** after an adjective or adverb. We had **enough** water for the road trip. The campsite was big **enough** for our tents.\n\nFor zero quantity, we use **any** in negative sentences and questions. We do not have **any** jet lag today. We use **no** with a noun in a positive sentence. We have **no** time for another excursion.",
+  "examples": [
+   "*We saw *a lot of* interesting places on our road trip.* (large quantity)",
+   "*The porter did not have *much* time to rest between the flights.* (uncountable, negative)",
+   "*There are *a few* good restaurants near the campsite.* (small quantity, plural countable)",
+   "*We had *fewer* problems on the way back than on the way there.* (comparative)",
+   "*There were *too many* people at the excursion meeting point.* (more than needed)",
+   "*The hotel room was big *enough* for all our luggage.* (enough after an adjective)"
+  ],
+  "practice": [
+   {
+    "q": "Say it with the new grammar: there is more than enough food at the campsite.",
+    "a": "There is plenty of food at the campsite."
+   },
+   {
+    "q": "Correct the mistake: 'There were too much people on the excursion.'",
+    "a": "'There were too many people on the excursion.' — use too many with plural countable nouns."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Complete: \"We had ___ fun on the excursion yesterday.\"",
+    "options": [
+     "a lot of",
+     "much",
+     "many",
+     "very few"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Complete: \"There aren't ___ clouds in the sky today.\"",
+    "options": [
+     "much",
+     "many",
+     "a little",
+     "plenty of"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: \"We have ___ time before the flight. Let's get coffee.\"",
+    "options": [
+     "too many",
+     "plenty of",
+     "very few",
+     "fewer"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: \"I need ___ water for the road trip.\"",
+    "options": [
+     "a few",
+     "a little",
+     "many",
+     "too many"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: \"Only ___ passengers were on the plane.\"",
+    "options": [
+     "a little",
+     "much",
+     "a few",
+     "plenty of"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Complete: \"This year we had ___ turbulence than last year.\"",
+    "options": [
+     "fewer",
+     "less",
+     "little",
+     "a few"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: \"There were ___ people at the campsite. It was full.\"",
+    "options": [
+     "too much",
+     "enough",
+     "too many",
+     "a little"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Complete: \"The room is not big ___ for four people.\"",
+    "options": [
+     "too",
+     "enough",
+     "many",
+     "much"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: \"We don't have ___ jet lag today.\"",
+    "options": [
+     "no",
+     "any",
+     "some",
+     "much"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Complete: \"We have ___ time for another stopover.\"",
+    "options": [
+     "any",
+     "no",
+     "none",
+     "not"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

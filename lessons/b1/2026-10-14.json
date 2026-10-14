@@ -1,0 +1,379 @@
+{
+ "date": "2026-10-14",
+ "theme": "food & cooking",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "simmer",
+   "pos": "verb",
+   "meaning": "cook gently over low heat, barely bubbling",
+   "example": "Simmer the soup for ten minutes.",
+   "pronunciation": "SIH-muhr",
+   "persian": "پختن با حرارت کم",
+   "photo": "media/b1/2026-10-14/photos/simmer.jpg",
+   "word_audio": "media/b1/2026-10-14/word-audio/simmer.mp3"
+  },
+  {
+   "word": "roast",
+   "pos": "verb",
+   "meaning": "cook in the oven with dry heat",
+   "example": "She roasted chicken for dinner.",
+   "pronunciation": "ROHST",
+   "persian": "در فر کباب کردن",
+   "photo": "media/b1/2026-10-14/photos/roast.jpg",
+   "word_audio": "media/b1/2026-10-14/word-audio/roast.mp3"
+  },
+  {
+   "word": "chop",
+   "pos": "verb",
+   "meaning": "cut food into small pieces",
+   "example": "Chop the onions before cooking.",
+   "pronunciation": "CHOP",
+   "persian": "خرد کردن",
+   "photo": "media/b1/2026-10-14/photos/chop.jpg",
+   "word_audio": "media/b1/2026-10-14/word-audio/chop.mp3"
+  },
+  {
+   "word": "stir",
+   "pos": "verb",
+   "meaning": "mix food with a spoon",
+   "example": "Stir the sauce every five minutes.",
+   "pronunciation": "STUHR",
+   "persian": "هم زدن",
+   "photo": "media/b1/2026-10-14/photos/stir.jpg",
+   "word_audio": "media/b1/2026-10-14/word-audio/stir.mp3"
+  },
+  {
+   "word": "crispy",
+   "pos": "adjective",
+   "meaning": "hard, crunchy, and browned",
+   "example": "The fries are hot and crispy.",
+   "pronunciation": "KRIS-pee",
+   "persian": "ترد و برشته",
+   "photo": "media/b1/2026-10-14/photos/crispy.jpg",
+   "word_audio": "media/b1/2026-10-14/word-audio/crispy.mp3"
+  },
+  {
+   "word": "aroma",
+   "pos": "noun",
+   "meaning": "a pleasant food smell",
+   "example": "The aroma of fresh bread filled the kitchen.",
+   "pronunciation": "uh-ROH-muh",
+   "persian": "عطر غذا",
+   "photo": "media/b1/2026-10-14/photos/aroma.jpg",
+   "word_audio": "media/b1/2026-10-14/word-audio/aroma.mp3"
+  },
+  {
+   "word": "appetizer",
+   "pos": "noun",
+   "meaning": "a small dish served before the main meal",
+   "example": "We ordered soup as an appetizer.",
+   "pronunciation": "AP-uh-ty-zuhr",
+   "persian": "پیش‌غذا",
+   "photo": "media/b1/2026-10-14/photos/appetizer.jpg",
+   "word_audio": "media/b1/2026-10-14/word-audio/appetizer.mp3"
+  },
+  {
+   "word": "tender",
+   "pos": "adjective",
+   "meaning": "soft and easy to chew",
+   "example": "The meat is tender and juicy.",
+   "pronunciation": "TEN-duhr",
+   "persian": "نرم و لطیف",
+   "photo": "media/b1/2026-10-14/photos/tender.jpg",
+   "word_audio": "media/b1/2026-10-14/word-audio/tender.mp3"
+  },
+  {
+   "word": "bitter",
+   "pos": "adjective",
+   "meaning": "a sharp, not-sweet taste",
+   "example": "Dark chocolate tastes bitter.",
+   "pronunciation": "BIH-tuhr",
+   "persian": "تلخ",
+   "photo": "media/b1/2026-10-14/photos/bitter.jpg",
+   "word_audio": "media/b1/2026-10-14/word-audio/bitter.mp3"
+  },
+  {
+   "word": "marinate",
+   "pos": "verb",
+   "meaning": "soak food in sauce before cooking",
+   "example": "Marinate the chicken for one hour.",
+   "pronunciation": "MAIR-uh-nayt",
+   "persian": "در سس خواباندن",
+   "photo": "media/b1/2026-10-14/photos/marinate.jpg",
+   "word_audio": "media/b1/2026-10-14/word-audio/marinate.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-14/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: A Kitchen Full of Flavor",
+  "audio": "media/b1/2026-10-14/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-14/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Special Dinner",
+  "audio": "media/b1/2026-10-14/shadowing.mp3",
+  "transcript": "media/b1/2026-10-14/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-14/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/028.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/029.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/030.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/031.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/032.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/033.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/034.mp3",
+   "media/b1/2026-10-14/shadowing-sentences/035.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'simmer' mean?",
+   "options": [
+    "cook gently over low heat, barely bubbling",
+    "cook in the oven with dry heat",
+    "a pleasant food smell",
+    "hard, crunchy, and browned"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'roast' mean?",
+   "options": [
+    "a small dish served before the main meal",
+    "cut food into small pieces",
+    "cook in the oven with dry heat",
+    "soak food in sauce before cooking"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'chop' mean?",
+   "options": [
+    "soft and easy to chew",
+    "cut food into small pieces",
+    "a sharp, not-sweet taste",
+    "mix food with a spoon"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'stir' mean?",
+   "options": [
+    "mix food with a spoon",
+    "a pleasant food smell",
+    "cook gently over low heat, barely bubbling",
+    "hard, crunchy, and browned"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'crispy' mean?",
+   "options": [
+    "soak food in sauce before cooking",
+    "cook in the oven with dry heat",
+    "hard, crunchy, and browned",
+    "a small dish served before the main meal"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'aroma' mean?",
+   "options": [
+    "a pleasant food smell",
+    "cut food into small pieces",
+    "soft and easy to chew",
+    "a sharp, not-sweet taste"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'appetizer' mean?",
+   "options": [
+    "mix food with a spoon",
+    "soak food in sauce before cooking",
+    "cook gently over low heat, barely bubbling",
+    "a small dish served before the main meal"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'tender' mean?",
+   "options": [
+    "soft and easy to chew",
+    "hard, crunchy, and browned",
+    "a pleasant food smell",
+    "cook in the oven with dry heat"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'bitter' mean?",
+   "options": [
+    "cut food into small pieces",
+    "mix food with a spoon",
+    "a sharp, not-sweet taste",
+    "soft and easy to chew"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'marinate' mean?",
+   "options": [
+    "a small dish served before the main meal",
+    "cook gently over low heat, barely bubbling",
+    "soak food in sauce before cooking",
+    "a pleasant food smell"
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "Present Perfect with For, Since, Just, Yet, Already",
+  "explanation": "The **present perfect** connects the past to the present. We form it with **have** or **has** plus the past participle.\n\nUse **for** with a length of time. It answers the question how long — ten minutes, one hour, or three days.\n\nUse **since** with the starting point of time. It answers the question when it started — morning, Monday, or 2010.\n\n**Just** means the action finished very recently. It stands between **have** and the participle.\n\n**Already** shows something happened before now, often sooner than expected. It stands in the same middle position.\n\n**Yet** is for questions and negative sentences. It always goes at the very end.\n\nDo not mix **for** and **since**. **For** needs a length, and **since** needs a starting point.",
+  "examples": [
+   "I *have simmered* the soup for ten minutes. (a length of time)",
+   "She *has roasted* chicken since 2010. (a starting point)",
+   "I *have just chopped* the onions. (very recently)",
+   "He *has already marinated* the chicken. (sooner than expected)",
+   "Have you *stirred* the sauce *yet*? (a question)",
+   "The meat is not tender *yet*. We *have not cooked* it long enough. (a negative sentence)"
+  ],
+  "practice": [
+   {
+    "q": "I have simmered the soup ___ ten minutes. (for / since)",
+    "a": "for"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I have simmered the soup ___ ten minutes.",
+    "options": [
+     "for",
+     "since",
+     "yet",
+     "just"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "She has roasted chicken ___ 2010.",
+    "options": [
+     "for",
+     "since",
+     "already",
+     "just"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "I have ___ chopped the onions.",
+    "options": [
+     "yet",
+     "for",
+     "just",
+     "since"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "He has ___ marinated the chicken.",
+    "options": [
+     "yet",
+     "already",
+     "since",
+     "for"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Have you stirred the sauce ___?",
+    "options": [
+     "already",
+     "just",
+     "yet",
+     "for"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "We have lived here ___ three years.",
+    "options": [
+     "since",
+     "for",
+     "yet",
+     "already"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "They have not arrived ___.",
+    "options": [
+     "just",
+     "yet",
+     "already",
+     "since"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Which sentence is correct?",
+    "options": [
+     "I have yet chopped the onions.",
+     "I yet have chopped the onions.",
+     "I have just chopped the onions.",
+     "I have chopped just the onions."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "She has worked here since ___.",
+    "options": [
+     "one hour",
+     "Monday",
+     "three days",
+     "a long time"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "The fries are not crispy ___.",
+    "options": [
+     "already",
+     "just",
+     "yet",
+     "since"
+    ],
+    "answer": 2
+   }
+  ]
+ }
+}

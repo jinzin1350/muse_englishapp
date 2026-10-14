@@ -13,6 +13,7 @@ Standard library only. Commands:
   python3 vocab_registry.py prompt --taxonomy T --registry R --lesson L.json --template classify-words-prompt.md
   python3 vocab_registry.py apply  --taxonomy T --registry R --lesson L.json --classification C.json
   python3 vocab_registry.py recheck --taxonomy T --registry R [--write]
+  python3 vocab_registry.py duplicates --taxonomy T --registry R
   python3 vocab_registry.py stats  --taxonomy T --registry R [--json]
   python3 vocab_registry.py gaps   --taxonomy T --registry R --level B1 [--today 2026-10-12]
 
@@ -302,6 +303,36 @@ def recheck(registry, tax):
     return changes
 
 
+def norm_lemma(s):
+    return re.sub(r"\s+", " ", (s or "").lower().replace("-", " ")).strip()
+
+
+def find_duplicates(registry):
+    """Entries that would show as the same word twice on a page.
+
+    Groups visible entries (accepted or unplaced) whose lemmas match after
+    lowercasing and treating hyphens as spaces ('round-trip' = 'round trip'),
+    or differ only by a final 's' ('leftover' / 'leftovers'). Pages should show
+    one card per group; groups with genuinely different meanings get one card
+    listing each meaning. Reports only; merging entries is a human decision.
+    """
+    groups = defaultdict(list)
+    for e in registry.get("words", {}).values():
+        if e["status"] in ("accepted", "unplaced"):
+            groups[norm_lemma(e["lemma"])].append(e)
+    for n in list(groups):
+        if n.endswith("s") and n[:-1] in groups:
+            groups[n[:-1]].extend(groups.pop(n))
+    out = []
+    for n, es in sorted(groups.items()):
+        if len(es) > 1:
+            out.append({"lemma": n, "entries": [
+                {"key": e["key"], "level": e["level"], "primary": e.get("primary"),
+                 "status": e["status"], "meaning": e.get("card", {}).get("meaning", "")}
+                for e in sorted(es, key=lambda e: lvl(e["level"]))]})
+    return out
+
+
 # ---------- stats ----------
 
 def round_down_10(n):
@@ -451,7 +482,7 @@ def plan_gaps(registry, tax, level, today, cooldown_days=10, limit=8):
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("validate-taxonomy", "prompt", "apply", "recheck", "stats", "gaps"):
+    for name in ("validate-taxonomy", "prompt", "apply", "recheck", "duplicates", "stats", "gaps"):
         p = sub.add_parser(name)
         p.add_argument("--taxonomy", required=True)
         if name != "validate-taxonomy":
@@ -500,6 +531,8 @@ def main(argv=None):
                           "page_counts": diff, "changes": changes}, ensure_ascii=False, indent=1))
         if a.write:
             save_json(a.registry, registry)
+    elif a.cmd == "duplicates":
+        print(json.dumps(find_duplicates(registry), ensure_ascii=False, indent=1))
     elif a.cmd == "stats":
         s = compute_stats(registry, tax)
         if a.json:

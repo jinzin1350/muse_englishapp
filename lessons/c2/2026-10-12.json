@@ -1,0 +1,379 @@
+{
+  "date": "2026-10-12",
+  "theme": "health & body",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "vitality",
+      "pos": "noun",
+      "meaning": "energy, strength and good health; being full of life",
+      "example": "Regular swimming has given her remarkable vitality well into her seventies.",
+      "pronunciation": "vy-TAL-uh-tee",
+      "persian": "سرزندگی و تندرستی",
+      "photo": "media/c2/2026-10-12/photos/vitality.jpg",
+      "word_audio": "media/c2/2026-10-12/word-audio/vitality.mp3"
+    },
+    {
+      "word": "rejuvenate",
+      "pos": "verb",
+      "meaning": "to make someone or something feel young, fresh, and healthy again",
+      "example": "A week in the mountains will rejuvenate both your body and mind.",
+      "pronunciation": "ri-JOO-vuh-nayt",
+      "persian": "تجدید قوا و سرحال شدن",
+      "photo": "media/c2/2026-10-12/photos/rejuvenate.jpg",
+      "word_audio": "media/c2/2026-10-12/word-audio/rejuvenate.mp3"
+    },
+    {
+      "word": "robust",
+      "pos": "adjective",
+      "meaning": "strong, healthy, and hard to damage or make ill",
+      "example": "He has a robust constitution and rarely catches a cold.",
+      "pronunciation": "roh-BUST",
+      "persian": "قوی و سرحال",
+      "photo": "media/c2/2026-10-12/photos/robust.jpg",
+      "word_audio": "media/c2/2026-10-12/word-audio/robust.mp3"
+    },
+    {
+      "word": "homeostasis",
+      "pos": "noun",
+      "meaning": "the body's way of keeping its internal conditions balanced and steady",
+      "example": "Sweating helps the body maintain homeostasis in extreme heat.",
+      "pronunciation": "hoh-mee-oh-STAY-sis",
+      "persian": "تعادل درونی بدن",
+      "photo": "media/c2/2026-10-12/photos/homeostasis.jpg",
+      "word_audio": "media/c2/2026-10-12/word-audio/homeostasis.mp3"
+    },
+    {
+      "word": "detoxification",
+      "pos": "noun",
+      "meaning": "the process of removing harmful substances from the body",
+      "example": "The liver is the body's main organ of detoxification.",
+      "pronunciation": "dee-tok-suh-fuh-KAY-shun",
+      "persian": "سم‌زدایی بدن",
+      "photo": "media/c2/2026-10-12/photos/detoxification.jpg",
+      "word_audio": "media/c2/2026-10-12/word-audio/detoxification.mp3"
+    },
+    {
+      "word": "malaise",
+      "pos": "noun",
+      "meaning": "a general, vague feeling of being unwell or uneasy",
+      "example": "She felt a vague malaise for several days before the fever appeared.",
+      "pronunciation": "muh-LAYZ",
+      "persian": "احساس ناخوشی و بی‌حالی",
+      "photo": "media/c2/2026-10-12/photos/malaise.jpg",
+      "word_audio": "media/c2/2026-10-12/word-audio/malaise.mp3"
+    },
+    {
+      "word": "atrophy",
+      "pos": "verb",
+      "meaning": "to waste away or grow weaker from lack of use",
+      "example": "Without regular exercise, the leg muscles begin to atrophy within weeks.",
+      "pronunciation": "AT-ruh-fee",
+      "persian": "تحلیل رفتن عضلات",
+      "photo": "media/c2/2026-10-12/photos/atrophy.jpg",
+      "word_audio": "media/c2/2026-10-12/word-audio/atrophy.mp3"
+    },
+    {
+      "word": "prophylaxis",
+      "pos": "noun",
+      "meaning": "medical treatment that prevents disease before it starts",
+      "example": "Malaria prophylaxis is essential before travelling to tropical regions.",
+      "pronunciation": "prof-uh-LAK-sis",
+      "persian": "درمان پیشگیرانه",
+      "photo": "media/c2/2026-10-12/photos/prophylaxis.jpg",
+      "word_audio": "media/c2/2026-10-12/word-audio/prophylaxis.mp3"
+    },
+    {
+      "word": "inoculation",
+      "pos": "noun",
+      "meaning": "giving a vaccine to protect against a disease",
+      "example": "Mass inoculation helped eradicate smallpox in the twentieth century.",
+      "pronunciation": "in-ok-yuh-LAY-shun",
+      "persian": "واکسیناسیون",
+      "photo": "media/c2/2026-10-12/photos/inoculation.jpg",
+      "word_audio": "media/c2/2026-10-12/word-audio/inoculation.mp3"
+    },
+    {
+      "word": "salubrious",
+      "pos": "adjective",
+      "meaning": "good for your health; health-promoting",
+      "example": "The island's salubrious climate attracts retirees from colder countries.",
+      "pronunciation": "suh-LOO-bree-us",
+      "persian": "مفید برای سلامتی",
+      "photo": "media/c2/2026-10-12/photos/salubrious.jpg",
+      "word_audio": "media/c2/2026-10-12/word-audio/salubrious.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-12/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Health and the Body",
+    "audio": "media/c2/2026-10-12/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-12/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Body's Quiet Wisdom",
+    "audio": "media/c2/2026-10-12/shadowing.mp3",
+    "transcript": "media/c2/2026-10-12/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c2/2026-10-12/shadowing-sentences/001.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/002.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/003.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/004.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/005.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/006.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/007.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/008.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/009.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/010.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/011.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/012.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/013.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/014.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/015.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/016.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/017.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/018.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/019.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/020.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/021.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/022.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/023.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/024.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/025.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/026.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/027.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/028.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/029.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/030.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/031.mp3",
+      "media/c2/2026-10-12/shadowing-sentences/032.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'vitality' mean?",
+      "options": [
+        "to make something feel young again",
+        "being full of life energy and good health",
+        "a vague feeling of being unwell",
+        "the body's internal balance"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'rejuvenate' mean?",
+      "options": [
+        "to make someone feel young, fresh, and healthy again",
+        "to waste away from lack of use",
+        "medical treatment that prevents disease",
+        "strong and hard to make ill"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'robust' mean?",
+      "options": [
+        "giving a vaccine against disease",
+        "the process of removing harmful substances",
+        "health-promoting; good for your health",
+        "strong, healthy, and hard to damage"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'homeostasis' mean?",
+      "options": [
+        "the body's way of keeping its internal conditions balanced and steady",
+        "to waste away from lack of use",
+        "being full of life energy",
+        "a general feeling of being unwell"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'detoxification' mean?",
+      "options": [
+        "medical prevention of disease",
+        "the process of removing harmful substances from the body",
+        "to make someone feel young again",
+        "strong and healthy"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'malaise' mean?",
+      "options": [
+        "giving a vaccine to protect against disease",
+        "health-promoting and good for your health",
+        "a vague general feeling of being unwell or uneasy",
+        "the process of removing harmful substances"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'atrophy' mean?",
+      "options": [
+        "to waste away or grow weaker from lack of use",
+        "being full of life energy",
+        "the body's internal balance",
+        "medical prevention of disease"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'prophylaxis' mean?",
+      "options": [
+        "a vague feeling of being unwell",
+        "to make someone feel young again",
+        "medical treatment that prevents disease before it starts",
+        "strong and healthy"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'inoculation' mean?",
+      "options": [
+        "to waste away from lack of use",
+        "giving a vaccine to protect against a disease",
+        "strong and healthy",
+        "the body's internal balance"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'salubrious' mean?",
+      "options": [
+        "a vague feeling of being unwell",
+        "medical prevention of disease",
+        "to make someone feel young again",
+        "good for your health; health-promoting"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "9B: Quantifiers",
+    "explanation": "Large quantities come in two flavors: neutral and emphatic. Use **a lot of** or **lots of** in affirmative sentences with any noun, and **loads of** when you want the informal cousin.\n\n**Many** and **much** sound stiff in affirmatives but are perfectly natural in negatives and questions. Pair **many** with countable nouns and **much** with uncountable ones — while **a lot of** works everywhere, including negatives and questions.\n\n**Plenty of** means more than enough, with a comfortable, satisfied tone. After months of neglect, his vitality returned, and now he has **plenty of** energy for long hikes.\n\nFor small quantities, the article changes everything. **A little** rest restores homeostasis, but **little** rest destroys it — **a little** means some, **little** means almost none.\n\nThe same contrast applies to **a few** and **few** with plural countable nouns. **A few** daily walks build a robust routine, while **few** people keep it up past February.\n\nComparatives follow the same logic: **less** is the comparative of **little**, **fewer** the comparative of **few**. She now eats **fewer** processed snacks and drinks **less** sugary soda.\n\n**Too** signals excess, and the noun decides the form. Use **too** + adjective or adverb, **too much** + uncountable noun, **too many** + plural countable noun — **too much** sitting lets the leg muscles atrophy.\n\n**Enough** sits before a noun but after an adjective or adverb. She did not get **enough** sleep, yet the air was salubrious **enough** to rejuvenate her within a week.\n\nZero quantity has three tools. Use **any** in negatives and questions, **no** + noun with an affirmative verb, and **none** alone in short answers — there was **no** malaise the next morning, and she felt **none** of the usual heaviness.",
+    "examples": [
+      "*Loads of* people now track their sleep, but *few* of them act on the data. (informal large + negative small)",
+      "She has *plenty of* vitality, yet *little* patience for health fads. (more than enough vs almost none)",
+      "They serve *fewer* fried dishes and *less* sugar than they used to. (comparatives)",
+      "He drank *too much* coffee and got *too little* sleep before his inoculation. (too much / too little)",
+      "The climate was salubrious *enough* to rejuvenate her within a week. (enough after adjective)"
+    ],
+    "practice": [
+      {
+        "q": "Correct the mistake: 'I have much vitality today.'",
+        "a": "'I have a lot of vitality today.' — much sounds unnatural in affirmative sentences; use a lot of."
+      },
+      {
+        "q": "What is the difference between 'a little rest' and 'little rest'?",
+        "a": "'A little rest' means some rest (positive); 'little rest' means almost no rest (negative)."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She has ___ vitality for someone her age.",
+        "options": [
+          "many",
+          "much",
+          "a lot of",
+          "a few"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "There is ___ evidence that sleep restores homeostasis.",
+        "options": [
+          "few",
+          "plenty of",
+          "a few",
+          "many"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ people keep a truly robust routine for more than a year — most quit by spring.",
+        "options": [
+          "Few",
+          "A few",
+          "Little",
+          "Much"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Give it ___ time; the malaise will pass.",
+        "options": [
+          "a few",
+          "few",
+          "many",
+          "a little"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She has ___ energy today — she barely left the sofa.",
+        "options": [
+          "plenty of",
+          "a lot of",
+          "little",
+          "a little"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "There were ___ salubrious options on the menu, so we left.",
+        "options": [
+          "a few",
+          "few",
+          "a little",
+          "plenty of"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He spends ___ hours sitting; no wonder his muscles atrophy.",
+        "options": [
+          "too many",
+          "too much",
+          "enough",
+          "a little"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She did not drink ___ water during the detox.",
+        "options": [
+          "too many",
+          "many",
+          "enough",
+          "a few"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We need ___ sugar and ___ fresh air in our lives.",
+        "options": [
+          "fewer / many",
+          "less / more",
+          "few / much",
+          "less / fewer"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "— How many rest days did you take? — ___.",
+        "options": [
+          "No",
+          "None",
+          "Any",
+          "Not any"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

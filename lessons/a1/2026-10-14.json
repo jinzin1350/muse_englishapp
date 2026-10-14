@@ -1,0 +1,256 @@
+{
+  "date": "2026-10-14",
+  "theme": "basics (numbers)",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "one",
+      "pos": "number",
+      "meaning": "the number 1",
+      "example": "I have one cat.",
+      "pronunciation": "WUN",
+      "persian": "یک",
+      "photo": "media/a1/2026-10-14/photos/one.jpg",
+      "word_audio": "media/a1/2026-10-14/word-audio/one.mp3"
+    },
+    {
+      "word": "two",
+      "pos": "number",
+      "meaning": "the number 2",
+      "example": "She has two books.",
+      "pronunciation": "TOO",
+      "persian": "دو",
+      "photo": "media/a1/2026-10-14/photos/two.jpg",
+      "word_audio": "media/a1/2026-10-14/word-audio/two.mp3"
+    },
+    {
+      "word": "three",
+      "pos": "number",
+      "meaning": "the number 3",
+      "example": "He has three pens.",
+      "pronunciation": "THREE",
+      "persian": "سه",
+      "photo": "media/a1/2026-10-14/photos/three.jpg",
+      "word_audio": "media/a1/2026-10-14/word-audio/three.mp3"
+    },
+    {
+      "word": "five",
+      "pos": "number",
+      "meaning": "the number 5",
+      "example": "I see five dogs.",
+      "pronunciation": "FYVE",
+      "persian": "پنج",
+      "photo": "media/a1/2026-10-14/photos/five.jpg",
+      "word_audio": "media/a1/2026-10-14/word-audio/five.mp3"
+    },
+    {
+      "word": "six",
+      "pos": "number",
+      "meaning": "the number 6",
+      "example": "My brother is six years old.",
+      "pronunciation": "SIKS",
+      "persian": "شش",
+      "photo": "media/a1/2026-10-14/photos/six.jpg",
+      "word_audio": "media/a1/2026-10-14/word-audio/six.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-14/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Numbers in Daily Life",
+    "audio": "media/a1/2026-10-14/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-14/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Family Counts",
+    "audio": "media/a1/2026-10-14/shadowing.mp3",
+    "transcript": "media/a1/2026-10-14/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-14/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-14/shadowing-sentences/016.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'one' mean?",
+      "options": [
+        "the number 1",
+        "the number 3",
+        "the number 5",
+        "the number 2"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'two' mean?",
+      "options": [
+        "the number 6",
+        "the number 2",
+        "the number 1",
+        "the number 3"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'three' mean?",
+      "options": [
+        "the number 5",
+        "the number 1",
+        "the number 3",
+        "the number 6"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'five' mean?",
+      "options": [
+        "the number 2",
+        "the number 5",
+        "the number 6",
+        "the number 3"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'six' mean?",
+      "options": [
+        "the number 6",
+        "the number 1",
+        "the number 2",
+        "the number 5"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Subject Pronouns and Possessive Adjectives",
+    "explanation": "We use **subject pronouns** instead of names. **I, you, he, she, we, they** are subject pronouns.\n\n**I** means me. **You** means the person I talk to.\n\n**He** is one boy. **She** is one girl.\n\n**We** means you and me together. **They** means two or more other people.\n\nWe use **possessive adjectives** to show something is mine. **My, your, his, her, our, their** are possessive adjectives.\n\nThe possessive adjective stands **before the noun**. I say **my cat**, not cat my.\n\n**My** is for me. **Your** is for you. **His** is for one boy and **her** is for one girl.\n\n**Our** is for we. **Their** is for they.\n\nA common mistake: say **I am happy**, not me am happy. Say **This is my book**, not this is me book.",
+    "examples": [
+      "*I* have one cat.",
+      "*She* has two dogs.",
+      "*He* has three pens. *They* are blue.",
+      "*I* see five birds. *They* are in the sky.",
+      "This is *my* book.",
+      "*We* love *our* teacher."
+    ],
+    "practice": [],
+    "quiz": [
+      {
+        "question": "___ am a student.",
+        "options": [
+          "I",
+          "Me",
+          "My",
+          "Mine"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "This is ___ cat.",
+        "options": [
+          "me",
+          "my",
+          "I",
+          "mine"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She is my sister. ___ is a doctor.",
+        "options": [
+          "Her",
+          "Hers",
+          "Me",
+          "She"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ have two dogs.",
+        "options": [
+          "Them",
+          "Their",
+          "They",
+          "Theirs"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "That is ___ pen.",
+        "options": [
+          "he",
+          "him",
+          "his",
+          "himself"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You and I are friends. ___ like music.",
+        "options": [
+          "Us",
+          "We",
+          "Our",
+          "Ours"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He is a boy. ___ name is Ali.",
+        "options": [
+          "His",
+          "He",
+          "Him",
+          "Mine"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The cat drinks ___ milk.",
+        "options": [
+          "it",
+          "their",
+          "its",
+          "it's"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They have six eggs. ___ are fresh.",
+        "options": [
+          "They",
+          "Them",
+          "Their",
+          "Theirs"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We love ___ teacher.",
+        "options": [
+          "us",
+          "we",
+          "our",
+          "ours"
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a1/2026-10-14/grammar-en.mp3"
+  }
+}

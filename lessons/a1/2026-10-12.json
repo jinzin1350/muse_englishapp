@@ -1,0 +1,269 @@
+{
+  "date": "2026-10-12",
+  "theme": "sports & fitness",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "match",
+      "pos": "noun",
+      "meaning": "a game between two teams or players",
+      "example": "We watched a football match.",
+      "pronunciation": "MATCH",
+      "persian": "مسابقه",
+      "photo": "media/a1/2026-10-12/photos/match.jpg",
+      "word_audio": "media/a1/2026-10-12/word-audio/match.mp3"
+    },
+    {
+      "word": "player",
+      "pos": "noun",
+      "meaning": "a person who plays a sport or game",
+      "example": "The player is very fast.",
+      "pronunciation": "PLAY-ur",
+      "persian": "بازیکن",
+      "photo": "media/a1/2026-10-12/photos/player.jpg",
+      "word_audio": "media/a1/2026-10-12/word-audio/player.mp3"
+    },
+    {
+      "word": "sport",
+      "pos": "noun",
+      "meaning": "a game or exercise like football or tennis",
+      "example": "Football is my favorite sport.",
+      "pronunciation": "SPORT",
+      "persian": "ورزش",
+      "photo": "media/a1/2026-10-12/photos/sport.jpg",
+      "word_audio": "media/a1/2026-10-12/word-audio/sport.mp3"
+    },
+    {
+      "word": "exercise",
+      "pos": "noun",
+      "meaning": "physical activity to make the body strong",
+      "example": "I do exercise every morning.",
+      "pronunciation": "EK-sur-size",
+      "persian": "تمرین بدنی",
+      "photo": "media/a1/2026-10-12/photos/exercise.jpg",
+      "word_audio": "media/a1/2026-10-12/word-audio/exercise.mp3"
+    },
+    {
+      "word": "trophy",
+      "pos": "noun",
+      "meaning": "a special cup or prize for the winner",
+      "example": "The team won a gold trophy.",
+      "pronunciation": "TROH-fee",
+      "persian": "جام",
+      "photo": "media/a1/2026-10-12/photos/trophy.jpg",
+      "word_audio": "media/a1/2026-10-12/word-audio/trophy.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-12/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Sports and Fitness",
+    "audio": "media/a1/2026-10-12/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-12/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Big Match Day",
+    "audio": "media/a1/2026-10-12/shadowing.mp3",
+    "transcript": "media/a1/2026-10-12/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-12/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/016.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/017.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/018.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/019.mp3",
+      "media/a1/2026-10-12/shadowing-sentences/020.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'match' mean?",
+      "options": [
+        "a game between two teams or players",
+        "a person who plays a sport or game",
+        "physical activity to make the body strong",
+        "a special cup or prize for the winner"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'player' mean?",
+      "options": [
+        "a game or exercise like football or tennis",
+        "physical activity to make the body strong",
+        "a person who plays a sport or game",
+        "a special cup or prize for the winner"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'sport' mean?",
+      "options": [
+        "a special cup or prize for the winner",
+        "a game between two teams or players",
+        "a game or exercise like football or tennis",
+        "a person who plays a sport or game"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'exercise' mean?",
+      "options": [
+        "a game or exercise like football or tennis",
+        "physical activity to make the body strong",
+        "a person who plays a sport or game",
+        "a game between two teams or players"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'trophy' mean?",
+      "options": [
+        "a person who plays a sport or game",
+        "a game between two teams or players",
+        "a special cup or prize for the winner",
+        "a game or exercise like football or tennis"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "9B: Quantifiers",
+    "explanation": "**A lot of** means many things. Use it in positive sentences: I have a lot of balls.\n\n**Many** is for things we can count. Use it in questions and negatives: Are there many players? I do not have many trophies.\n\n**Much** is for things we cannot count. Use it in questions and negatives: Do you drink much water? I do not have much time.\n\n**A few** means some, but not many. It is for countable things: I have a few friends at the match.\n\n**A little** means some, but not much. It is for things we cannot count: I drink a little water every day.\n\n**Too** means more than we want. Use it before adjectives: The bag is too heavy. The music is too loud.\n\n**Enough** means we have what we need. Use it before a noun: I have enough money. Use it after an adjective: The bag is big enough.\n\n**No** and **any** mean zero. We have no eggs. We do not have any eggs.",
+    "examples": [
+      "*I have *a lot of* balls.* (many things)",
+      "*Are there *many* players on your team?* (countable question)",
+      "*I drink *a little* water every day.* (uncountable, small amount)",
+      "*She has *a few* friends at the match.* (countable, small number)",
+      "*This bag is *too* heavy for me.* (more than I want)",
+      "*I have *enough* money for the trophy.* (what I need)"
+    ],
+    "practice": [
+      {
+        "q": "Is 'much players' right or wrong?",
+        "a": "Wrong. Say 'many players' — players are countable."
+      },
+      {
+        "q": "Complete: I have ___ water. (a little / a few)",
+        "a": "a little — water is uncountable."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I have ___ balls.",
+        "options": [
+          "a little",
+          "a lot of",
+          "a few",
+          "none"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She has ___ friends at the match.",
+        "options": [
+          "much",
+          "a few",
+          "a lot of",
+          "none"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I drink ___ water every day.",
+        "options": [
+          "a few",
+          "many",
+          "a little",
+          "plenty of"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Do you watch ___ TV?",
+        "options": [
+          "much",
+          "many",
+          "plenty of",
+          "a few"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Are there ___ players on your team?",
+        "options": [
+          "much",
+          "a little",
+          "many",
+          "a few"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "'We have no eggs.' means ___",
+        "options": [
+          "we have a few eggs",
+          "we have zero eggs",
+          "we have enough eggs",
+          "we have a lot of eggs"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "This bag is ___ heavy for me.",
+        "options": [
+          "too",
+          "enough",
+          "very",
+          "plenty"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I have ___ money for the ticket.",
+        "options": [
+          "too",
+          "much",
+          "many",
+          "enough"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "There are too ___ people here.",
+        "options": [
+          "much",
+          "little",
+          "many",
+          "few"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How ___ water do you drink?",
+        "options": [
+          "many",
+          "much",
+          "a few",
+          "plenty of"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-10-12/grammar-en.mp3"
+  }
+}

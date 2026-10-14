@@ -1,0 +1,6 @@
+- Muse English A2 technology episode: charger, keyboard, wifi, email, laptop in daily-life situations
+- Morning routine angle: dead phone battery, charging habits, second charger for the bag
+- Work angle: office keyboard comfort, keyboard shortcuts, laptop for email and movies
+- Travel angle: airport without free wifi, cafe with free wifi, slow wifi restart
+- Closing story: forgotten charger, dead phone, sending email from a laptop instead
+- Two Muse English app promo segments (fresh copy, one by Lena, one by Maya)

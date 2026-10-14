@@ -1,0 +1,415 @@
+{
+  "date": "2026-10-14",
+  "theme": "technology",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "influencer",
+      "pos": "noun",
+      "meaning": "a person with a large online audience who can change what people buy or think",
+      "example": "The influencer recommended a new skincare brand to her two million followers.",
+      "pronunciation": "IN-floo-uhn-ser",
+      "persian": "اینفلوئنسر؛ فرد تأثیرگذار در شبکه‌های اجتماعی",
+      "photo": "media/b2/2026-10-14/photos/influencer.jpg",
+      "word_audio": "media/b2/2026-10-14/word-audio/influencer.mp3"
+    },
+    {
+      "word": "viral",
+      "pos": "adjective",
+      "meaning": "spreading very quickly online to huge numbers of people",
+      "example": "Her cooking video went viral and got ten million views in two days.",
+      "pronunciation": "VY-ruhl",
+      "persian": "وایرال؛ به‌سرعت پخش‌شونده در اینترنت",
+      "photo": "media/b2/2026-10-14/photos/viral.jpg",
+      "word_audio": "media/b2/2026-10-14/word-audio/viral.mp3"
+    },
+    {
+      "word": "screenshot",
+      "pos": "noun",
+      "meaning": "a picture of exactly what is on your phone or computer screen",
+      "example": "He sent me a screenshot of the error message so I could help him fix it.",
+      "pronunciation": "SKREEN-shot",
+      "persian": "اسکرین‌شات؛ عکس از صفحه نمایش",
+      "photo": "media/b2/2026-10-14/photos/screenshot.jpg",
+      "word_audio": "media/b2/2026-10-14/word-audio/screenshot.mp3"
+    },
+    {
+      "word": "webinar",
+      "pos": "noun",
+      "meaning": "an online class or meeting that people join over the internet",
+      "example": "Our company holds a monthly webinar to train new employees.",
+      "pronunciation": "WEB-uh-nar",
+      "persian": "وبینار؛ کلاس یا جلسه آنلاین",
+      "photo": "media/b2/2026-10-14/photos/webinar.jpg",
+      "word_audio": "media/b2/2026-10-14/word-audio/webinar.mp3"
+    },
+    {
+      "word": "podcast",
+      "pos": "noun",
+      "meaning": "a series of spoken audio episodes you can listen to online",
+      "example": "I listen to a daily English podcast on my way to work.",
+      "pronunciation": "POD-kast",
+      "persian": "پادکست؛ مجموعه قسمت‌های صوتی",
+      "photo": "media/b2/2026-10-14/photos/podcast.jpg",
+      "word_audio": "media/b2/2026-10-14/word-audio/podcast.mp3"
+    },
+    {
+      "word": "mute",
+      "pos": "verb",
+      "meaning": "to silence a microphone, speaker, or chat notifications",
+      "example": "Please mute your microphone when you are not speaking in the meeting.",
+      "pronunciation": "MYOOT",
+      "persian": "بی‌صدا کردن؛ میوت کردن",
+      "photo": "media/b2/2026-10-14/photos/mute.jpg",
+      "word_audio": "media/b2/2026-10-14/word-audio/mute.mp3"
+    },
+    {
+      "word": "spam",
+      "pos": "noun",
+      "meaning": "unwanted messages or emails sent to many people at once",
+      "example": "I get so much spam in my inbox that I miss important emails.",
+      "pronunciation": "SPAM",
+      "persian": "اسپم؛ پیام‌های ناخواسته",
+      "photo": "media/b2/2026-10-14/photos/spam.jpg",
+      "word_audio": "media/b2/2026-10-14/word-audio/spam.mp3"
+    },
+    {
+      "word": "firewall",
+      "pos": "noun",
+      "meaning": "software that protects a computer network from hackers and attacks",
+      "example": "The office firewall blocks dangerous websites automatically.",
+      "pronunciation": "FYR-wal",
+      "persian": "فایروال؛ دیوار آتش امنیتی",
+      "photo": "media/b2/2026-10-14/photos/firewall.jpg",
+      "word_audio": "media/b2/2026-10-14/word-audio/firewall.mp3"
+    },
+    {
+      "word": "reboot",
+      "pos": "verb",
+      "meaning": "to restart a computer or phone completely",
+      "example": "If the app freezes, just reboot your phone and try again.",
+      "pronunciation": "ree-BOOT",
+      "persian": "راه‌اندازی مجدد؛ ری‌استارت کردن",
+      "photo": "media/b2/2026-10-14/photos/reboot.jpg",
+      "word_audio": "media/b2/2026-10-14/word-audio/reboot.mp3"
+    },
+    {
+      "word": "hashtag",
+      "pos": "noun",
+      "meaning": "the hash symbol used to group social media posts by topic",
+      "example": "When you post the photo, use the hashtag Toronto Eats to reach more food lovers.",
+      "pronunciation": "HASH-tag",
+      "persian": "هشتگ؛ علامت دسته‌بندی پست‌ها در شبکه‌های اجتماعی",
+      "photo": "media/b2/2026-10-14/photos/hashtag.jpg",
+      "word_audio": "media/b2/2026-10-14/word-audio/hashtag.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-10-14/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Digital Life",
+    "audio": "media/b2/2026-10-14/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-14/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Day the Video Went Viral",
+    "audio": "media/b2/2026-10-14/shadowing.mp3",
+    "transcript": "media/b2/2026-10-14/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-10-14/shadowing-sentences/001.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/002.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/003.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/004.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/005.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/006.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/007.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/008.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/009.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/010.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/011.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/012.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/013.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/014.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/015.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/016.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/017.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/018.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/019.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/020.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/021.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/022.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/023.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/024.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/025.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/026.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/027.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/028.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/029.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/030.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/031.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/032.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/033.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/034.mp3",
+      "media/b2/2026-10-14/shadowing-sentences/035.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'influencer' mean?",
+      "options": [
+        "spreading very quickly online to huge numbers of people",
+        "to silence a microphone, speaker, or chat notifications",
+        "a person with a large online audience who can change what people buy or think",
+        "unwanted messages or emails sent to many people at once"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'viral' mean?",
+      "options": [
+        "a picture of exactly what is on your phone or computer screen",
+        "spreading very quickly online to huge numbers of people",
+        "a person with a large online audience who can change what people buy or think",
+        "software that protects a computer network from hackers and attacks"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'screenshot' mean?",
+      "options": [
+        "a picture of exactly what is on your phone or computer screen",
+        "an online class or meeting that people join over the internet",
+        "the hash symbol used to group social media posts by topic",
+        "a series of spoken audio episodes you can listen to online"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'webinar' mean?",
+      "options": [
+        "to silence a microphone, speaker, or chat notifications",
+        "to restart a computer or phone completely",
+        "a person with a large online audience who can change what people buy or think",
+        "an online class or meeting that people join over the internet"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'podcast' mean?",
+      "options": [
+        "the hash symbol used to group social media posts by topic",
+        "unwanted messages or emails sent to many people at once",
+        "a series of spoken audio episodes you can listen to online",
+        "spreading very quickly online to huge numbers of people"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'mute' mean?",
+      "options": [
+        "a series of spoken audio episodes you can listen to online",
+        "to silence a microphone, speaker, or chat notifications",
+        "a picture of exactly what is on your phone or computer screen",
+        "to restart a computer or phone completely"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'spam' mean?",
+      "options": [
+        "software that protects a computer network from hackers and attacks",
+        "to silence a microphone, speaker, or chat notifications",
+        "an online class or meeting that people join over the internet",
+        "unwanted messages or emails sent to many people at once"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'firewall' mean?",
+      "options": [
+        "software that protects a computer network from hackers and attacks",
+        "unwanted messages or emails sent to many people at once",
+        "a series of spoken audio episodes you can listen to online",
+        "the hash symbol used to group social media posts by topic"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'reboot' mean?",
+      "options": [
+        "a person with a large online audience who can change what people buy or think",
+        "to restart a computer or phone completely",
+        "software that protects a computer network from hackers and attacks",
+        "a picture of exactly what is on your phone or computer screen"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'hashtag' mean?",
+      "options": [
+        "to restart a computer or phone completely",
+        "spreading very quickly online to huge numbers of people",
+        "the hash symbol used to group social media posts by topic",
+        "an online class or meeting that people join over the internet"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Causative: Have/Get Something Done",
+    "explanation": "Sometimes another person does the work for you. You arrange it and you pay for it, but you do not do it yourself.\n\nEnglish has a special causative structure for exactly this situation, from phone repairs to podcast editing. The core pattern is **have + object + past participle**.\n\nThis pattern tells the listener that someone else performed the action as a service for you. The focus is on the result you received.\n\nYou can also use **get + object + past participle**. This version is more informal, and it is very common in everyday conversation.\n\nWord order matters. The object always comes before the **past participle**, and the participle itself never changes form.\n\nThis structure is different from the present perfect. **Have something done** focuses on the service you received, not on an action you performed yourself, like fixing your own firewall.",
+    "examples": [
+      "I *had my laptop repaired* yesterday. (a technician fixed it for me)",
+      "She *got her hair cut* before the webinar. (informal; at a salon)",
+      "We *had our firewall installed* by an expert. (a security service)",
+      "He *got his podcast edited* by a professional. (someone else did the editing)",
+      "They *had all the computers rebooted* after the attack. (the IT team did it)",
+      "The influencer *had her video filmed* by a small team. (she did not film it herself)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with the causative: A technician repaired my phone.",
+        "a": "I had my phone repaired."
+      },
+      {
+        "q": "Rewrite with the causative: Someone cleans our office every evening.",
+        "a": "We have our office cleaned every evening."
+      },
+      {
+        "q": "Rewrite with get (informal): An expert checked my firewall.",
+        "a": "I got my firewall checked."
+      },
+      {
+        "q": "Rewrite with the causative: A designer will build our website.",
+        "a": "We will have our website built by a designer."
+      },
+      {
+        "q": "Rewrite with the causative: The mechanic is servicing her car now.",
+        "a": "She is having her car serviced."
+      },
+      {
+        "q": "Rewrite with get: They delivered our new microphone yesterday.",
+        "a": "We got our new microphone delivered yesterday."
+      },
+      {
+        "q": "True or false: 'I have cut my hair' and 'I have had my hair cut' mean the same thing.",
+        "a": "False. In the first, you cut it yourself; in the second, someone else cut it."
+      },
+      {
+        "q": "Fix the word order: 'I had repaired my laptop by a technician.'",
+        "a": "I had my laptop repaired by a technician."
+      },
+      {
+        "q": "Rewrite with the causative: Someone took a screenshot of the error for me.",
+        "a": "I had a screenshot taken of the error message."
+      },
+      {
+        "q": "Make a causative sentence: you / your spam filter / update (last week).",
+        "a": "I had my spam filter updated last week."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct causative sentence.",
+        "options": [
+          "I had repaired my laptop yesterday.",
+          "I had my laptop repaired yesterday.",
+          "I have my laptop repair yesterday.",
+          "I had my laptop repair yesterday."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She got her car ___.",
+        "options": [
+          "wash",
+          "washed",
+          "washing",
+          "to wash"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence means someone ELSE did the work?",
+        "options": [
+          "I have cleaned the house.",
+          "I clean the house every day.",
+          "I had the house cleaned.",
+          "I will clean the house."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We are having our website ___ at the moment.",
+        "options": [
+          "redesigned",
+          "redesign",
+          "to redesign",
+          "redesigning"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which version is more informal?",
+        "options": [
+          "have something done",
+          "get something done",
+          "do something yourself",
+          "make something done"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He had his firewall ___ by an expert.",
+        "options": [
+          "check",
+          "checked",
+          "checking",
+          "to check"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the sentence with correct word order.",
+        "options": [
+          "They had installed the software by a technician.",
+          "They had the software installed by a technician.",
+          "They had the software install by a technician.",
+          "They had install the software by a technician."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ my podcast edited by a professional twice a month.",
+        "options": [
+          "I have",
+          "I do",
+          "I make",
+          "I let"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "In 'She got her phone fixed', the past participle is:",
+        "options": [
+          "got",
+          "her",
+          "phone",
+          "fixed"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Which sentence is NOT a correct causative?",
+        "options": [
+          "I had my laptop repaired.",
+          "She got her hair cut.",
+          "He had repair his phone yesterday.",
+          "We will have the office painted."
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

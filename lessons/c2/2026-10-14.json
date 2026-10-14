@@ -1,0 +1,412 @@
+{
+  "date": "2026-10-14",
+  "theme": "cities & daily life",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "urbanism",
+      "pos": "noun",
+      "meaning": "the study and design of how cities function and grow",
+      "example": "Modern urbanism tries to balance economic growth with residents' quality of life.",
+      "pronunciation": "UR-buh-niz-um",
+      "persian": "شهرسازی؛ مطالعه و طراحی نحوه عملکرد و رشد شهرها",
+      "photo": "media/c2/2026-10-14/photos/urbanism.jpg",
+      "word_audio": "media/c2/2026-10-14/word-audio/urbanism.mp3"
+    },
+    {
+      "word": "placemaking",
+      "pos": "noun",
+      "meaning": "the practice of designing public spaces so people enjoy gathering there",
+      "example": "The new riverside plaza is a triumph of placemaking, drawing crowds every weekend.",
+      "pronunciation": "PLAYSS-may-king",
+      "persian": "مکان‌سازی؛ طراحی فضاهای عمومی برای گردهمایی و لذت مردم",
+      "photo": "media/c2/2026-10-14/photos/placemaking.jpg",
+      "word_audio": "media/c2/2026-10-14/word-audio/placemaking.mp3"
+    },
+    {
+      "word": "wayfinding",
+      "pos": "noun",
+      "meaning": "signs and design that help people find their way around a place",
+      "example": "Clear wayfinding in the metro system helps newcomers navigate the city with confidence.",
+      "pronunciation": "WAY-find-ing",
+      "persian": "مسیریابی؛ علائم و طراحی برای یافتن مسیر در یک مکان",
+      "photo": "media/c2/2026-10-14/photos/wayfinding.jpg",
+      "word_audio": "media/c2/2026-10-14/word-audio/wayfinding.mp3"
+    },
+    {
+      "word": "third place",
+      "pos": "noun",
+      "meaning": "a social spot between home and work where people gather, like a café",
+      "example": "For many freelancers, the corner café serves as a beloved third place.",
+      "pronunciation": "THURD playss",
+      "persian": "مکان سوم؛ فضای اجتماعی بین خانه و محل کار، مثل کافه",
+      "photo": "media/c2/2026-10-14/photos/third-place.jpg",
+      "word_audio": "media/c2/2026-10-14/word-audio/third-place.mp3"
+    },
+    {
+      "word": "15-minute city",
+      "pos": "noun",
+      "meaning": "a city model where daily needs are within a fifteen-minute walk or bike ride",
+      "example": "Advocates of the 15-minute city argue that shorter commutes make neighborhoods happier and healthier.",
+      "pronunciation": "FIF-teen MIN-it SIT-ee",
+      "persian": "شهر پانزده‌دقیقه‌ای؛ مدلی که نیازهای روزمره در پانزده دقیقه پیاده‌روی تأمین می‌شود",
+      "photo": "media/c2/2026-10-14/photos/15-minute-city.jpg",
+      "word_audio": "media/c2/2026-10-14/word-audio/15-minute-city.mp3"
+    },
+    {
+      "word": "congestion pricing",
+      "pos": "noun",
+      "meaning": "a fee drivers pay to enter busy city areas at busy times",
+      "example": "Congestion pricing in the downtown core has cut rush-hour traffic by nearly a third.",
+      "pronunciation": "kun-JES-chun PRY-sing",
+      "persian": "عوارض تراکم؛ هزینه‌ای که رانندگان برای ورود به مناطق شلوغ شهر می‌پردازند",
+      "photo": "media/c2/2026-10-14/photos/congestion-pricing.jpg",
+      "word_audio": "media/c2/2026-10-14/word-audio/congestion-pricing.mp3"
+    },
+    {
+      "word": "food desert",
+      "pos": "noun",
+      "meaning": "an area with little access to affordable fresh food",
+      "example": "Without a supermarket for miles, the district became a food desert where fresh produce was scarce.",
+      "pronunciation": "FOOD DEZ-urt",
+      "persian": "بیابان غذایی؛ منطقه‌ای با دسترسی کم به غذای تازه و ارزان",
+      "photo": "media/c2/2026-10-14/photos/food-desert.jpg",
+      "word_audio": "media/c2/2026-10-14/word-audio/food-desert.mp3"
+    },
+    {
+      "word": "tactical urbanism",
+      "pos": "noun",
+      "meaning": "quick, low-cost, small-scale improvements to city spaces",
+      "example": "Residents used tactical urbanism to turn a vacant lot into a pop-up playground overnight.",
+      "pronunciation": "TAK-tih-kul UR-buh-niz-um",
+      "persian": "شهرسازی تاکتیکی؛ بهبودهای سریع، کم‌هزینه و کوچک‌مقیاس فضاهای شهری",
+      "photo": "media/c2/2026-10-14/photos/tactical-urbanism.jpg",
+      "word_audio": "media/c2/2026-10-14/word-audio/tactical-urbanism.mp3"
+    },
+    {
+      "word": "hyperlocal",
+      "pos": "adjective",
+      "meaning": "focused on a very small, specific local community",
+      "example": "The hyperlocal news app reports on events happening within a few blocks of your home.",
+      "pronunciation": "hy-pur-LOH-kul",
+      "persian": "بسیار محلی؛ متمرکز بر یک جامعه کوچک و مشخص",
+      "photo": "media/c2/2026-10-14/photos/hyperlocal.jpg",
+      "word_audio": "media/c2/2026-10-14/word-audio/hyperlocal.mp3"
+    },
+    {
+      "word": "pedestrianization",
+      "pos": "noun",
+      "meaning": "turning streets into car-free areas for walkers",
+      "example": "The pedestrianization of the old market street brought back shoppers and street performers.",
+      "pronunciation": "puh-des-tree-uh-nih-ZAY-shun",
+      "persian": "پیاده‌راه‌سازی؛ تبدیل خیابان‌ها به مناطق بدون خودرو برای عابران",
+      "photo": "media/c2/2026-10-14/photos/pedestrianization.jpg",
+      "word_audio": "media/c2/2026-10-14/word-audio/pedestrianization.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-14/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Building Better Cities",
+    "audio": "media/c2/2026-10-14/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-14/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The City We Share",
+    "audio": "media/c2/2026-10-14/shadowing.mp3",
+    "transcript": "media/c2/2026-10-14/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c2/2026-10-14/shadowing-sentences/001.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/002.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/003.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/004.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/005.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/006.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/007.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/008.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/009.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/010.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/011.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/012.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/013.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/014.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/015.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/016.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/017.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/018.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/019.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/020.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/021.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/022.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/023.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/024.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/025.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/026.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/027.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/028.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/029.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/030.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/031.mp3",
+      "media/c2/2026-10-14/shadowing-sentences/032.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'urbanism' mean?",
+      "options": [
+        "the study and design of how cities function and grow",
+        "the practice of designing public spaces so people enjoy gathering there",
+        "a fee drivers pay to enter busy city areas at busy times",
+        "quick, low-cost, small-scale improvements to city spaces"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'placemaking' mean?",
+      "options": [
+        "signs and design that help people find their way around a place",
+        "an area with little access to affordable fresh food",
+        "the study and design of how cities function and grow",
+        "the practice of designing public spaces so people enjoy gathering there"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'wayfinding' mean?",
+      "options": [
+        "a fee drivers pay to enter busy city areas at busy times",
+        "the study and design of how cities function and grow",
+        "signs and design that help people find their way around a place",
+        "turning streets into car-free areas for walkers"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'third place' mean?",
+      "options": [
+        "turning streets into car-free areas for walkers",
+        "a city model where daily needs are within a fifteen-minute walk or bike ride",
+        "a fee drivers pay to enter busy city areas at busy times",
+        "a social spot between home and work where people gather, like a café"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does '15-minute city' mean?",
+      "options": [
+        "the study and design of how cities function and grow",
+        "quick, low-cost, small-scale improvements to city spaces",
+        "a city model where daily needs are within a fifteen-minute walk or bike ride",
+        "a social spot between home and work where people gather, like a café"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'congestion pricing' mean?",
+      "options": [
+        "a fee drivers pay to enter busy city areas at busy times",
+        "signs and design that help people find their way around a place",
+        "the practice of designing public spaces so people enjoy gathering there",
+        "a social spot between home and work where people gather, like a café"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'food desert' mean?",
+      "options": [
+        "a social spot between home and work where people gather, like a café",
+        "turning streets into car-free areas for walkers",
+        "focused on a very small, specific local community",
+        "an area with little access to affordable fresh food"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'tactical urbanism' mean?",
+      "options": [
+        "an area with little access to affordable fresh food",
+        "the study and design of how cities function and grow",
+        "quick, low-cost, small-scale improvements to city spaces",
+        "focused on a very small, specific local community"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'hyperlocal' mean?",
+      "options": [
+        "quick, low-cost, small-scale improvements to city spaces",
+        "focused on a very small, specific local community",
+        "a city model where daily needs are within a fifteen-minute walk or bike ride",
+        "an area with little access to affordable fresh food"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'pedestrianization' mean?",
+      "options": [
+        "the practice of designing public spaces so people enjoy gathering there",
+        "focused on a very small, specific local community",
+        "an area with little access to affordable fresh food",
+        "turning streets into car-free areas for walkers"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Inversion After Negative Adverbials",
+    "explanation": "When a negative or restrictive adverbial opens a clause, English flips the subject and the auxiliary verb. **\"Never have I seen\"** replaces the flat \"I have never seen,\" and the sentence gains instant emphasis.\n\nThis **inversion** belongs to formal registers: speeches, essays, and serious journalism. It turns a plain denial into a rhetorical event, which is why politicians and editorial writers love it.\n\nThe pattern works after **\"never,\" \"rarely,\" \"seldom,\" \"hardly,\" \"scarcely,\" \"barely,\" \"not only,\" \"no sooner,\"** and **\"only\"** phrases such as **\"only then\"** or **\"only by.\"** Choose the auxiliary that fits the tense: **do/does/did, have/has/had, will/would, can/could.**\n\nMind the pairings that follow the inversion. **\"No sooner\"** pairs with **\"than,\"** while **\"hardly\"** and **\"scarcely\"** pair with **\"when.\"** Mixing them up, for example **\"no sooner ... when,\"** is the classic C2-level slip.",
+    "examples": [
+      "*Never before have* residents embraced **tactical urbanism** so quickly. (formal emphasis with present perfect)",
+      "*Not only did* the council approve **pedestrianization**, it funded new parks as well. (not only + did)",
+      "*Hardly had* the market opened *when* the old **food desert** was forgotten. (hardly pairs with when)",
+      "*Seldom has* **placemaking** transformed a neighborhood so completely. (seldom + has)",
+      "*Only by* listening to locals *can* true **urbanism** succeed. (only by + can)",
+      "*Rarely do* visitors notice the clever **wayfinding** at first glance. (rarely + do)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with inversion: \"I have never seen such clever wayfinding.\"",
+        "a": "Never have I seen such clever wayfinding."
+      },
+      {
+        "q": "Rewrite with inversion: \"The council not only approved pedestrianization; it funded new parks.\"",
+        "a": "Not only did the council approve pedestrianization; it funded new parks."
+      },
+      {
+        "q": "Rewrite with inversion: \"The market had hardly opened when the crowds arrived.\"",
+        "a": "Hardly had the market opened when the crowds arrived."
+      },
+      {
+        "q": "Rewrite with inversion: \"Residents seldom embrace tactical urbanism so quickly.\"",
+        "a": "Seldom do residents embrace tactical urbanism so quickly."
+      },
+      {
+        "q": "Rewrite with inversion: \"True urbanism can succeed only by listening to locals.\"",
+        "a": "Only by listening to locals can true urbanism succeed."
+      },
+      {
+        "q": "Rewrite with inversion: \"The fees had no sooner started than traffic fell.\"",
+        "a": "No sooner had the fees started than traffic fell."
+      },
+      {
+        "q": "Rewrite with inversion: \"I rarely read hyperlocal news, but this story caught my eye.\"",
+        "a": "Rarely do I read hyperlocal news, but this story caught my eye."
+      },
+      {
+        "q": "Rewrite with inversion: \"She had barely finished the placemaking plan when the mayor called.\"",
+        "a": "Barely had she finished the placemaking plan when the mayor called."
+      },
+      {
+        "q": "Rewrite with inversion: \"A third place has seldom mattered so much to a neighborhood.\"",
+        "a": "Seldom has a third place mattered so much to a neighborhood."
+      },
+      {
+        "q": "Rewrite with inversion: \"You will understand the fifteen-minute city only then.\"",
+        "a": "Only then will you understand the fifteen-minute city."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "Never I have seen such clever placemaking.",
+          "Never have I seen such clever placemaking.",
+          "Never I saw such clever placemaking.",
+          "I never have seen such clever placemaking."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ the new market opened when the crowds arrived.",
+        "options": [
+          "Hardly had",
+          "Hardly has",
+          "Hardly did",
+          "Hardly have"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "No sooner ___ the congestion pricing fees started than traffic fell.",
+        "options": [
+          "have",
+          "has",
+          "did",
+          "do"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Not only ___ pedestrianization cut traffic, it brought shoppers back.",
+        "options": [
+          "does",
+          "did",
+          "has",
+          "is"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which pairing is correct?",
+        "options": [
+          "hardly ... than",
+          "no sooner ... when",
+          "hardly ... when",
+          "scarcely ... than"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Seldom ___ a third place mattered so much to a neighborhood.",
+        "options": [
+          "have",
+          "has",
+          "did",
+          "does"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Only by walking ___ you truly understand a fifteen-minute city.",
+        "options": [
+          "you can",
+          "can you",
+          "you will",
+          "do you can"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Find the error: \"Scarcely the tactical urbanism project began when critics complained.\"",
+        "options": [
+          "\"scarcely\" should be \"rarely\"",
+          "\"began\" should be \"begun\"",
+          "missing auxiliary: \"Scarcely did the ... project begin\"",
+          "\"when\" should be \"than\""
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Rarely ___ hyperlocal news been so influential.",
+        "options": [
+          "have",
+          "has",
+          "did",
+          "does"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "No sooner the vote passed than the project began.",
+          "No sooner had the vote passed when the project began.",
+          "No sooner had the vote passed than the project began.",
+          "No sooner did the vote passed than the project began."
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

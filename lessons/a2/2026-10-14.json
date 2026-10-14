@@ -1,0 +1,269 @@
+{
+ "date": "2026-10-14",
+ "theme": "basics (numbers)",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "seven",
+   "pos": "noun",
+   "meaning": "the number 7",
+   "example": "There are seven days in a week.",
+   "pronunciation": "SEV-uhn",
+   "persian": "هفت",
+   "photo": "media/a2/2026-10-14/photos/seven.jpg",
+   "word_audio": "media/a2/2026-10-14/word-audio/seven.mp3"
+  },
+  {
+   "word": "eight",
+   "pos": "noun",
+   "meaning": "the number 8",
+   "example": "I sleep eight hours every night.",
+   "pronunciation": "AYT",
+   "persian": "هشت",
+   "photo": "media/a2/2026-10-14/photos/eight.jpg",
+   "word_audio": "media/a2/2026-10-14/word-audio/eight.mp3"
+  },
+  {
+   "word": "nine",
+   "pos": "noun",
+   "meaning": "the number 9",
+   "example": "She starts work at nine o'clock.",
+   "pronunciation": "NYN",
+   "persian": "نه",
+   "photo": "media/a2/2026-10-14/photos/nine.jpg",
+   "word_audio": "media/a2/2026-10-14/word-audio/nine.mp3"
+  },
+  {
+   "word": "eleven",
+   "pos": "noun",
+   "meaning": "the number 11",
+   "example": "There are eleven players in a football team.",
+   "pronunciation": "ee-LEV-uhn",
+   "persian": "یازده",
+   "photo": "media/a2/2026-10-14/photos/eleven.jpg",
+   "word_audio": "media/a2/2026-10-14/word-audio/eleven.mp3"
+  },
+  {
+   "word": "twelve",
+   "pos": "noun",
+   "meaning": "the number 12",
+   "example": "There are twelve months in a year.",
+   "pronunciation": "TWELV",
+   "persian": "دوازده",
+   "photo": "media/a2/2026-10-14/photos/twelve.jpg",
+   "word_audio": "media/a2/2026-10-14/word-audio/twelve.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-10-14/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Numbers in Daily Life",
+  "audio": "media/a2/2026-10-14/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-10-14/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Day of Numbers",
+  "audio": "media/a2/2026-10-14/shadowing.mp3",
+  "transcript": "media/a2/2026-10-14/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-10-14/shadowing-sentences/001.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/002.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/003.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/004.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/005.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/006.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/007.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/008.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/009.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/010.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/011.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/012.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/013.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/014.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/015.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/016.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/017.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/018.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/019.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/020.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/021.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/022.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/023.mp3",
+   "media/a2/2026-10-14/shadowing-sentences/024.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'seven' mean?",
+   "options": [
+    "the number 7",
+    "the number 9",
+    "the number 11",
+    "the number 8"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'eight' mean?",
+   "options": [
+    "the number 8",
+    "the number 12",
+    "the number 9",
+    "the number 11"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'nine' mean?",
+   "options": [
+    "the number 11",
+    "the number 12",
+    "the number 9",
+    "the number 8"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'eleven' mean?",
+   "options": [
+    "the number 11",
+    "the number 9",
+    "the number 12",
+    "the number 8"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'twelve' mean?",
+   "options": [
+    "the number 7",
+    "the number 11",
+    "the number 9",
+    "the number 12"
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Past Continuous and Past Simple",
+  "explanation": "Use the **past simple** for a short finished action in the past. Use the **past continuous** for a longer action that was in progress.\n\nThe past continuous form is **was** or **were** plus a verb with **-ing**. I was, you were, he was, she was, they were.\n\nWe often use them together in one sentence. The long action goes in the **past continuous**, and the short action goes in the **past simple**.\n\nLook for time words. Words like **while**, **when**, and **at nine o'clock** tell you which form to use.",
+  "examples": [
+   "I *was sleeping* at nine o'clock. (an action in progress at a past time)",
+   "She *was cooking* dinner when I arrived. (a long action plus a short action)",
+   "The eleven players *were running* on the field at seven. (they were in the middle of running)",
+   "I *broke* my pen while I *was writing*. (short finished action plus long action)",
+   "They *were watching* TV when the phone *rang*. (long action stopped by a short action)",
+   "We *were talking* about the twelve months of the year. (an action in progress in the past)"
+  ],
+  "practice": [
+   {
+    "q": "I ___ dinner when you called. (cook)",
+    "a": "was cooking"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Which sentence is correct?",
+    "options": [
+     "I was sleep at eight o'clock.",
+     "I was sleeping at eight o'clock.",
+     "I am sleeping at eight o'clock yesterday.",
+     "I sleeps at eight o'clock."
+    ],
+    "answer": 1
+   },
+   {
+    "question": "While I ___ dinner, the phone rang.",
+    "options": [
+     "was cooking",
+     "cook",
+     "cooks",
+     "cooking"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The eleven players ___ on the field at seven.",
+    "options": [
+     "was running",
+     "were running",
+     "were run",
+     "was run"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "She ___ a book when I called.",
+    "options": [
+     "read",
+     "was reading",
+     "is reading",
+     "reads"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "What does 'was / were + verb-ing' make?",
+    "options": [
+     "past simple",
+     "past continuous",
+     "present simple",
+     "future"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "They ___ TV when I arrived.",
+    "options": [
+     "were watching",
+     "was watching",
+     "watch",
+     "watches"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I ___ my keys while I was walking to the bus.",
+    "options": [
+     "lose",
+     "lost",
+     "was losing",
+     "losing"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "He was sleeping ___ nine o'clock.",
+    "options": [
+     "at",
+     "on",
+     "in",
+     "to"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "We were talking about the twelve months of the year when the teacher ___.",
+    "options": [
+     "came",
+     "was coming",
+     "comes",
+     "come"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Which words show a long action in progress in the past?",
+    "options": [
+     "at seven",
+     "was sleeping",
+     "nine o'clock",
+     "twelve months"
+    ],
+    "answer": 1
+   }
+  ],
+  "audio": "media/a2/2026-10-14/grammar-en.mp3"
+ }
+}

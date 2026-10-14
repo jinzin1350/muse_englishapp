@@ -1,0 +1,387 @@
+{
+  "date": "2026-10-12",
+  "theme": "food & cooking",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "marinate",
+      "pos": "verb",
+      "meaning": "to leave meat or fish in a sauce before cooking so it tastes better",
+      "example": "Marinate the chicken for two hours before you grill it.",
+      "pronunciation": "MAIR-uh-nayt",
+      "persian": "در سس خواباندن پیش از پخت",
+      "photo": "media/b2/2026-10-12/photos/marinate.jpg",
+      "word_audio": "media/b2/2026-10-12/word-audio/marinate.mp3"
+    },
+    {
+      "word": "braise",
+      "pos": "verb",
+      "meaning": "to cook food slowly in a little liquid",
+      "example": "She braised the beef in red wine for three hours.",
+      "pronunciation": "brayz",
+      "persian": "آرام در مایع کم پختن",
+      "photo": "media/b2/2026-10-12/photos/braise.jpg",
+      "word_audio": "media/b2/2026-10-12/word-audio/braise.mp3"
+    },
+    {
+      "word": "caramelize",
+      "pos": "verb",
+      "meaning": "to cook sugar or vegetables until they turn sweet and brown",
+      "example": "Caramelize the onions slowly until they turn golden brown.",
+      "pronunciation": "KAIR-uh-muh-lyze",
+      "persian": "کاراملی کردن",
+      "photo": "media/b2/2026-10-12/photos/caramelize.jpg",
+      "word_audio": "media/b2/2026-10-12/word-audio/caramelize.mp3"
+    },
+    {
+      "word": "whisk",
+      "pos": "verb",
+      "meaning": "to beat eggs or cream very quickly with a whisk or fork",
+      "example": "Whisk the eggs and sugar together until smooth.",
+      "pronunciation": "wisk",
+      "persian": "با همزن تند هم زدن",
+      "photo": "media/b2/2026-10-12/photos/whisk.jpg",
+      "word_audio": "media/b2/2026-10-12/word-audio/whisk.mp3"
+    },
+    {
+      "word": "drizzle",
+      "pos": "verb",
+      "meaning": "to pour a thin stream of liquid over food",
+      "example": "Drizzle some olive oil over the salad before serving.",
+      "pronunciation": "DRIZ-uhl",
+      "persian": "نازک و آرام ریختن",
+      "photo": "media/b2/2026-10-12/photos/drizzle.jpg",
+      "word_audio": "media/b2/2026-10-12/word-audio/drizzle.mp3"
+    },
+    {
+      "word": "poach",
+      "pos": "verb",
+      "meaning": "to cook food gently in hot water",
+      "example": "Poach the eggs in simmering water for three minutes.",
+      "pronunciation": "pohch",
+      "persian": "در آب داغ ملایم پختن",
+      "photo": "media/b2/2026-10-12/photos/poach.jpg",
+      "word_audio": "media/b2/2026-10-12/word-audio/poach.mp3"
+    },
+    {
+      "word": "julienne",
+      "pos": "verb",
+      "meaning": "to cut vegetables into very thin strips",
+      "example": "Julienne the carrots into thin strips for the stir-fry.",
+      "pronunciation": "zhoo-lee-EN",
+      "persian": "نازک و رشته‌ای بریدن",
+      "photo": "media/b2/2026-10-12/photos/julienne.jpg",
+      "word_audio": "media/b2/2026-10-12/word-audio/julienne.mp3"
+    },
+    {
+      "word": "leftovers",
+      "pos": "noun (plural)",
+      "meaning": "food that is left after a meal",
+      "example": "We had pasta leftovers for lunch the next day.",
+      "pronunciation": "LEFT-oh-vurz",
+      "persian": "غذای باقی‌مانده از وعدهٔ قبل",
+      "photo": "media/b2/2026-10-12/photos/leftovers.jpg",
+      "word_audio": "media/b2/2026-10-12/word-audio/leftovers.mp3"
+    },
+    {
+      "word": "glaze",
+      "pos": "noun",
+      "meaning": "a shiny sweet coating on food",
+      "example": "The chef brushed a honey glaze over the ham.",
+      "pronunciation": "glayz",
+      "persian": "لعاب براق و شیرین",
+      "photo": "media/b2/2026-10-12/photos/glaze.jpg",
+      "word_audio": "media/b2/2026-10-12/word-audio/glaze.mp3"
+    },
+    {
+      "word": "chewy",
+      "pos": "adjective",
+      "meaning": "food that needs a lot of chewing",
+      "example": "These cookies are soft in the middle and slightly chewy.",
+      "pronunciation": "CHOO-ee",
+      "persian": "سفت و جویدنی",
+      "photo": "media/b2/2026-10-12/photos/chewy.jpg",
+      "word_audio": "media/b2/2026-10-12/word-audio/chewy.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-10-12/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Food and Cooking",
+    "audio": "media/b2/2026-10-12/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-12/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Dinner Party",
+    "audio": "media/b2/2026-10-12/shadowing.mp3",
+    "transcript": "media/b2/2026-10-12/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-10-12/shadowing-sentences/001.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/002.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/003.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/004.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/005.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/006.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/007.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/008.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/009.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/010.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/011.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/012.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/013.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/014.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/015.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/016.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/017.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/018.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/019.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/020.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/021.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/022.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/023.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/024.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/025.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/026.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/027.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/028.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/029.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/030.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/031.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/032.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/033.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/034.mp3",
+      "media/b2/2026-10-12/shadowing-sentences/035.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'marinate' mean?",
+      "options": [
+        "to cook food slowly in a little liquid",
+        "food that needs a lot of chewing",
+        "to leave meat or fish in a sauce before cooking so it tastes better",
+        "food that is left after a meal"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'braise' mean?",
+      "options": [
+        "to cook sugar or vegetables until they turn sweet and brown",
+        "a shiny sweet coating on food",
+        "food that needs a lot of chewing",
+        "to cook food slowly in a little liquid"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'caramelize' mean?",
+      "options": [
+        "to cook sugar or vegetables until they turn sweet and brown",
+        "to pour a thin stream of liquid over food",
+        "food that needs a lot of chewing",
+        "to leave meat or fish in a sauce before cooking so it tastes better"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'whisk' mean?",
+      "options": [
+        "food that needs a lot of chewing",
+        "to beat eggs or cream very quickly with a whisk or fork",
+        "to cook sugar or vegetables until they turn sweet and brown",
+        "to leave meat or fish in a sauce before cooking so it tastes better"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'drizzle' mean?",
+      "options": [
+        "to cut vegetables into very thin strips",
+        "to cook food gently in hot water",
+        "to pour a thin stream of liquid over food",
+        "to cook food slowly in a little liquid"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'poach' mean?",
+      "options": [
+        "to cut vegetables into very thin strips",
+        "a shiny sweet coating on food",
+        "to cook food gently in hot water",
+        "to leave meat or fish in a sauce before cooking so it tastes better"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'julienne' mean?",
+      "options": [
+        "to leave meat or fish in a sauce before cooking so it tastes better",
+        "to cook food gently in hot water",
+        "to cut vegetables into very thin strips",
+        "to pour a thin stream of liquid over food"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'leftovers' mean?",
+      "options": [
+        "to cook sugar or vegetables until they turn sweet and brown",
+        "food that needs a lot of chewing",
+        "to beat eggs or cream very quickly with a whisk or fork",
+        "food that is left after a meal"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'glaze' mean?",
+      "options": [
+        "to leave meat or fish in a sauce before cooking so it tastes better",
+        "to pour a thin stream of liquid over food",
+        "a shiny sweet coating on food",
+        "to beat eggs or cream very quickly with a whisk or fork"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'chewy' mean?",
+      "options": [
+        "to cook food slowly in a little liquid",
+        "to cook food gently in hot water",
+        "food that needs a lot of chewing",
+        "to beat eggs or cream very quickly with a whisk or fork"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "9B: Quantifiers",
+    "explanation": "We use **a lot of**, **lots of**, and **plenty of** for large quantities. You can use them in positive, negative, and question sentences with both countable and uncountable nouns — for example, a lot of chicken to marinate, or plenty of vegetables to julienne.\n\nIn more formal English, use **many** with countable nouns and **much** with uncountable nouns in negative sentences and questions. **A lot of** works fine in negatives and questions too, and it is much more common in speaking.\n\nFor small quantities, use **a little** with uncountable nouns and **a few** with plural countable nouns. Both mean 'some, but not a lot' — a little oil to drizzle, a few chewy cookies.\n\n**Very little** and **very few** are negative in meaning. They mean 'almost nothing' — very few leftovers after the party.\n\n**Less** is the comparative of **little** (uncountable nouns), and **fewer** is the comparative of **few** (countable nouns). Use **less** sugar in the glaze if it tastes too sweet, but say 'fewer people', never 'less people'.\n\n**Too much** and **too many** mean 'more than we need': **too much** + uncountable noun, **too many** + plural countable noun. **Too** + adjective works the same way, as in too salty or too chewy.\n\n**(Not) enough** goes BEFORE a noun and AFTER an adjective or adverb. Think: enough time to braise beef slowly; the dish is not salty enough.\n\nFor zero quantity, use **any** in negatives and questions, **no** + noun in positive sentences, and **none** alone in short answers — we have no eggs to poach, none at all.",
+    "examples": [
+      "*We bought *a lot of* vegetables to julienne for the stir-fry.* (large quantity, countable)",
+      "*I don't have *much* time to braise the beef today.* (much + uncountable, negative)",
+      "*Add *a little* honey, then drizzle it over the warm bread.* (small quantity, uncountable)",
+      "*There are *too many* dishes and *too much* food for one fridge.* (more than needed)",
+      "*The soup is not hot *enough*; it needs five more minutes.* (enough after an adjective)",
+      "*How many eggs are left? *None*.* (zero quantity, short answer)"
+    ],
+    "practice": [
+      {
+        "q": "Complete: We need ___ sugar for the glaze. (a little / a few)",
+        "a": "a little — sugar is uncountable."
+      },
+      {
+        "q": "Which is correct: 'less people' or 'fewer people'?",
+        "a": "fewer people — people is countable."
+      },
+      {
+        "q": "Complete: This soup has ___ salt. I can't eat it. (too much / enough)",
+        "a": "too much — it means more than we need."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "We need ___ eggs to whisk for this cake.",
+        "options": [
+          "much",
+          "a few",
+          "a little",
+          "less"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I don't have ___ patience to caramelize onions for an hour.",
+        "options": [
+          "many",
+          "much",
+          "a few",
+          "fewer"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "There is ___ oil left to drizzle over the salad.",
+        "options": [
+          "a few",
+          "very few",
+          "very little",
+          "fewer"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She added ___ sugar to the glaze.",
+        "options": [
+          "too much",
+          "too many",
+          "many",
+          "a few"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We bought chicken for ten guests, but we still don't have ___.",
+        "options": [
+          "a few",
+          "fewer",
+          "much",
+          "plenty"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Are there ___ leftovers for lunch tomorrow?",
+        "options": [
+          "any",
+          "no",
+          "none",
+          "plenty"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The cookies are not sweet ___.",
+        "options": [
+          "too",
+          "too much",
+          "enough",
+          "plenty"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "There are ___ cars in the parking lot than yesterday.",
+        "options": [
+          "less",
+          "fewer",
+          "little",
+          "much"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He put ___ honey on his bread.",
+        "options": [
+          "a few",
+          "fewer",
+          "many",
+          "a little"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We have ___ flour, so we can't bake.",
+        "options": [
+          "a little",
+          "a few",
+          "very little",
+          "plenty of"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

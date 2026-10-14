@@ -1,0 +1,271 @@
+{
+  "date": "2026-10-12",
+  "theme": "technology",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "charger",
+      "pos": "noun",
+      "meaning": "a small device that gives power to a phone battery",
+      "example": "I forgot my phone charger at home.",
+      "pronunciation": "CHAR-jer",
+      "persian": "شارژر",
+      "photo": "media/a2/2026-10-12/photos/charger.jpg",
+      "word_audio": "media/a2/2026-10-12/word-audio/charger.mp3"
+    },
+    {
+      "word": "keyboard",
+      "pos": "noun",
+      "meaning": "the set of keys you press to write on a computer",
+      "example": "The keys on my keyboard are big and easy to press.",
+      "pronunciation": "KEY-board",
+      "persian": "صفحه‌کلید",
+      "photo": "media/a2/2026-10-12/photos/keyboard.jpg",
+      "word_audio": "media/a2/2026-10-12/word-audio/keyboard.mp3"
+    },
+    {
+      "word": "wifi",
+      "pos": "noun",
+      "meaning": "a way to connect to the internet without a cable",
+      "example": "Is there free wifi in this cafe?",
+      "pronunciation": "WY-fy",
+      "persian": "وای‌فای",
+      "photo": "media/a2/2026-10-12/photos/wifi.jpg",
+      "word_audio": "media/a2/2026-10-12/word-audio/wifi.mp3"
+    },
+    {
+      "word": "email",
+      "pos": "noun",
+      "meaning": "a message you send or receive on the internet",
+      "example": "She sent me an email yesterday.",
+      "pronunciation": "EE-mayl",
+      "persian": "ایمیل",
+      "photo": "media/a2/2026-10-12/photos/email.jpg",
+      "word_audio": "media/a2/2026-10-12/word-audio/email.mp3"
+    },
+    {
+      "word": "laptop",
+      "pos": "noun",
+      "meaning": "a small computer you can carry with you",
+      "example": "He opens his laptop every morning.",
+      "pronunciation": "LAP-top",
+      "persian": "لپ‌تاپ",
+      "photo": "media/a2/2026-10-12/photos/laptop.jpg",
+      "word_audio": "media/a2/2026-10-12/word-audio/laptop.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-12/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Technology in Daily Life",
+    "audio": "media/a2/2026-10-12/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-12/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Tech Day",
+    "audio": "media/a2/2026-10-12/shadowing.mp3",
+    "transcript": "media/a2/2026-10-12/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-10-12/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-12/shadowing-sentences/022.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'charger' mean?",
+      "options": [
+        "a bag for a phone",
+        "a small device that gives power to a phone battery",
+        "a kind of screen",
+        "a loud bell"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'keyboard' mean?",
+      "options": [
+        "a game for kids",
+        "a kind of food",
+        "the set of keys you press to write on a computer",
+        "a small bag"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'wifi' mean?",
+      "options": [
+        "a way to connect to the internet without a cable",
+        "a kind of phone",
+        "a TV show",
+        "a loud bell"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'email' mean?",
+      "options": [
+        "a paper letter",
+        "a phone call",
+        "a photo",
+        "a message you send or receive on the internet"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'laptop' mean?",
+      "options": [
+        "a big TV",
+        "a small computer you can carry with you",
+        "a kind of table",
+        "a phone charger"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "9B: Quantifiers",
+    "explanation": "**a lot of** means many or much. We use it in positive sentences with countable and uncountable nouns.\n\nUse **many** with countable nouns in negative sentences and questions. Emails and chargers are countable.\n\nUse **much** with uncountable nouns in negative sentences and questions. Time and money are uncountable.\n\n**a few** is for small countable numbers, and **a little** is for small uncountable amounts. Both mean some, but not a lot.\n\n**too many** with countable nouns and **too much** with uncountable nouns mean more than you need.\n\n**enough** goes before a noun, like enough battery, and after an adjective, like fast enough.\n\nUse **any** with uncountable or plural nouns in negative sentences. Use **no** plus a noun with a positive verb for zero quantity.",
+    "examples": [
+      "I have *a lot of* photos on my laptop. (many photos)",
+      "She does not have *many* chargers. (few chargers)",
+      "He wrote *a few* emails this morning. (some, not many)",
+      "We have *a little* time to fix the wifi. (some, not much)",
+      "You have *too many* apps on your phone. (more than you need)",
+      "My wifi is fast *enough* for video calls. (good speed)"
+    ],
+    "practice": [
+      {
+        "q": "How many emails do you write every day?",
+        "a": "I write a few emails every day."
+      },
+      {
+        "q": "Do you have enough time to study English?",
+        "a": "Yes, I have enough time."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I have ___ photos on my laptop.",
+        "options": [
+          "a lot of",
+          "much",
+          "a little",
+          "few"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Do you have ___ chargers at home?",
+        "options": [
+          "much",
+          "many",
+          "a little",
+          "little"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We don't have ___ time today.",
+        "options": [
+          "many",
+          "much",
+          "a few",
+          "few"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She wrote ___ emails this morning.",
+        "options": [
+          "a little",
+          "a few",
+          "much",
+          "many"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I need ___ water, please.",
+        "options": [
+          "a few",
+          "many",
+          "a little",
+          "few"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You have ___ apps on your phone. That's more than you need!",
+        "options": [
+          "too much",
+          "enough",
+          "too many",
+          "a little"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He drinks ___ coffee. He should drink less.",
+        "options": [
+          "too many",
+          "a few",
+          "too much",
+          "enough"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My wifi is fast ___ for video calls.",
+        "options": [
+          "much",
+          "enough",
+          "many",
+          "a little"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "There aren't ___ eggs in the fridge.",
+        "options": [
+          "some",
+          "any",
+          "no",
+          "much"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We have ___ battery left. Let's charge the phone.",
+        "options": [
+          "not",
+          "no",
+          "any",
+          "much"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-10-12/grammar-en.mp3"
+  }
+}

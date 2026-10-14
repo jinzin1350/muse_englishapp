@@ -1,0 +1,395 @@
+{
+  "date": "2026-10-14",
+  "theme": "money & shopping",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "commission",
+      "pos": "noun",
+      "meaning": "a fee paid to someone for making a sale, usually a percentage of the price",
+      "example": "The real estate agent earns a six percent commission on every house she sells.",
+      "pronunciation": "kuh-MISH-un",
+      "persian": "کمیسیون (کارمزد)",
+      "photo": "media/c1/2026-10-14/photos/commission.jpg",
+      "word_audio": "media/c1/2026-10-14/word-audio/commission.mp3"
+    },
+    {
+      "word": "underwrite",
+      "pos": "verb",
+      "meaning": "to accept financial risk for a deal, as a bank or insurer backing an agreement",
+      "example": "The bank agreed to underwrite the company's new share issue.",
+      "pronunciation": "UN-duhr-ryt",
+      "persian": "پذیرش تعهد مالی (تحت پوشش قرار دادن)",
+      "photo": "media/c1/2026-10-14/photos/underwrite.jpg",
+      "word_audio": "media/c1/2026-10-14/word-audio/underwrite.mp3"
+    },
+    {
+      "word": "monopoly",
+      "pos": "noun",
+      "meaning": "complete control of a market by one company, with no real competition",
+      "example": "The government broke up the telecom monopoly to encourage competition.",
+      "pronunciation": "muh-NOP-uh-lee",
+      "persian": "انحصار",
+      "photo": "media/c1/2026-10-14/photos/monopoly.jpg",
+      "word_audio": "media/c1/2026-10-14/word-audio/monopoly.mp3"
+    },
+    {
+      "word": "oligopoly",
+      "pos": "noun",
+      "meaning": "a market controlled by a small number of large companies",
+      "example": "The airline industry is an oligopoly dominated by three carriers.",
+      "pronunciation": "ol-ih-GOP-uh-lee",
+      "persian": "الیگوپلی (انحصار چندگانه)",
+      "photo": "media/c1/2026-10-14/photos/oligopoly.jpg",
+      "word_audio": "media/c1/2026-10-14/word-audio/oligopoly.mp3"
+    },
+    {
+      "word": "procurement",
+      "pos": "noun",
+      "meaning": "the process of buying goods or services for a company or government",
+      "example": "She manages procurement for a hospital, ordering everything from bandages to beds.",
+      "pronunciation": "pruh-KYOOR-munt",
+      "persian": "تدارکات (خرید سازمانی)",
+      "photo": "media/c1/2026-10-14/photos/procurement.jpg",
+      "word_audio": "media/c1/2026-10-14/word-audio/procurement.mp3"
+    },
+    {
+      "word": "liquidation",
+      "pos": "noun",
+      "meaning": "selling off a company's assets to pay its debts, usually when it closes down",
+      "example": "After the liquidation, the shop's remaining stock was auctioned off.",
+      "pronunciation": "lik-wih-DAY-shun",
+      "persian": "تصفیه (فروش دارایی‌ها)",
+      "photo": "media/c1/2026-10-14/photos/liquidation.jpg",
+      "word_audio": "media/c1/2026-10-14/word-audio/liquidation.mp3"
+    },
+    {
+      "word": "remittance",
+      "pos": "noun",
+      "meaning": "money sent by a worker abroad back to family in their home country",
+      "example": "Her father's remittances paid for the family's house in Manila.",
+      "pronunciation": "rih-MIT-uhns",
+      "persian": "وجوه ارسالی (حواله)",
+      "photo": "media/c1/2026-10-14/photos/remittance.jpg",
+      "word_audio": "media/c1/2026-10-14/word-audio/remittance.mp3"
+    },
+    {
+      "word": "deflation",
+      "pos": "noun",
+      "meaning": "a general fall in prices over time, often caused by weak demand",
+      "example": "Economists worry that deflation will make consumers postpone spending.",
+      "pronunciation": "dih-FLAY-shun",
+      "persian": "تورم منفی (کاهش عمومی قیمت‌ها)",
+      "photo": "media/c1/2026-10-14/photos/deflation.jpg",
+      "word_audio": "media/c1/2026-10-14/word-audio/deflation.mp3"
+    },
+    {
+      "word": "escrow",
+      "pos": "noun",
+      "meaning": "money held by a neutral third party until the conditions of a deal are met",
+      "example": "The buyers placed their deposit in escrow until the inspection was complete.",
+      "pronunciation": "ES-kroh",
+      "persian": "سپرده موقت (اسکرو)",
+      "photo": "media/c1/2026-10-14/photos/escrow.jpg",
+      "word_audio": "media/c1/2026-10-14/word-audio/escrow.mp3"
+    },
+    {
+      "word": "fiduciary",
+      "pos": "adjective",
+      "meaning": "relating to a legal duty to act in someone else's financial interest",
+      "example": "Financial advisers have a fiduciary duty to put their clients first.",
+      "pronunciation": "fih-DOO-shuh-ree",
+      "persian": "مربوط به امین مالی (وظیفه امانتی)",
+      "photo": "media/c1/2026-10-14/photos/fiduciary.jpg",
+      "word_audio": "media/c1/2026-10-14/word-audio/fiduciary.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-14/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: The Money Machine",
+    "audio": "media/c1/2026-10-14/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-14/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Price of Power",
+    "audio": "media/c1/2026-10-14/shadowing.mp3",
+    "transcript": "media/c1/2026-10-14/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-10-14/shadowing-sentences/001.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/002.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/003.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/004.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/005.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/006.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/007.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/008.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/009.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/010.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/011.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/012.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/013.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/014.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/015.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/016.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/017.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/018.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/019.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/020.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/021.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/022.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/023.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/024.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/025.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/026.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/027.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/028.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/029.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/030.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/031.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/032.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/033.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/034.mp3",
+      "media/c1/2026-10-14/shadowing-sentences/035.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'commission' mean?",
+      "options": [
+        "complete control of a market by one company, with no real competition",
+        "money sent by a worker abroad back to family in their home country",
+        "a fee paid to someone for making a sale, usually a percentage of the price",
+        "money held by a neutral third party until the conditions of a deal are met"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'underwrite' mean?",
+      "options": [
+        "to accept financial risk for a deal, as a bank or insurer backing an agreement",
+        "selling off a company's assets to pay its debts, usually when it closes down",
+        "relating to a legal duty to act in someone else's financial interest",
+        "the process of buying goods or services for a company or government"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'monopoly' mean?",
+      "options": [
+        "a market controlled by a small number of large companies",
+        "complete control of a market by one company, with no real competition",
+        "a general fall in prices over time, often caused by weak demand",
+        "a fee paid to someone for making a sale, usually a percentage of the price"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'oligopoly' mean?",
+      "options": [
+        "the process of buying goods or services for a company or government",
+        "money held by a neutral third party until the conditions of a deal are met",
+        "relating to a legal duty to act in someone else's financial interest",
+        "a market controlled by a small number of large companies"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'procurement' mean?",
+      "options": [
+        "the process of buying goods or services for a company or government",
+        "selling off a company's assets to pay its debts, usually when it closes down",
+        "to accept financial risk for a deal, as a bank or insurer backing an agreement",
+        "money sent by a worker abroad back to family in their home country"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'liquidation' mean?",
+      "options": [
+        "a general fall in prices over time, often caused by weak demand",
+        "selling off a company's assets to pay its debts, usually when it closes down",
+        "money held by a neutral third party until the conditions of a deal are met",
+        "complete control of a market by one company, with no real competition"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'remittance' mean?",
+      "options": [
+        "money sent by a worker abroad back to family in their home country",
+        "a fee paid to someone for making a sale, usually a percentage of the price",
+        "relating to a legal duty to act in someone else's financial interest",
+        "a market controlled by a small number of large companies"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'deflation' mean?",
+      "options": [
+        "to accept financial risk for a deal, as a bank or insurer backing an agreement",
+        "the process of buying goods or services for a company or government",
+        "a general fall in prices over time, often caused by weak demand",
+        "selling off a company's assets to pay its debts, usually when it closes down"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'escrow' mean?",
+      "options": [
+        "money held by a neutral third party until the conditions of a deal are met",
+        "complete control of a market by one company, with no real competition",
+        "money sent by a worker abroad back to family in their home country",
+        "to accept financial risk for a deal, as a bank or insurer backing an agreement"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'fiduciary' mean?",
+      "options": [
+        "selling off a company's assets to pay its debts, usually when it closes down",
+        "money held by a neutral third party until the conditions of a deal are met",
+        "relating to a legal duty to act in someone else's financial interest",
+        "the process of buying goods or services for a company or government"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Cleft Sentences and Emphatic Do",
+    "explanation": "In a normal English sentence, the subject comes first and the message flows evenly. A cleft sentence splits one idea in two to shine a spotlight on a single part.\n\nUse **It is / was ... that / who ...** to emphasize the subject, the object, or even an adverbial. The spotlighted part sits between is/was and that.\n\nUse **What ... is / was ...** (a pseudo-cleft) to emphasize an action or a whole idea. The what-clause builds suspense before the reveal.\n\nUse **The reason ... is that ...** or **The person / thing ... is ...** for formal emphasis. These clefts sound natural in reports, essays, and speeches.\n\nTo stress a verb instead of a noun, use **emphatic do / does / did** before the base verb. In speech, stress the do: She *did* underwrite the loan.\n\nEmphatic do never combines with be in this role, and it never appears in a negative sentence. It adds conviction, not extra grammar.",
+    "examples": [
+      "*It was the commission* that made the salesman push the expensive plan. (it-cleft on the subject)",
+      "*What the oligopoly fears* is a truly open market. (what-cleft on an idea)",
+      "*The reason prices fell* was simple deflation, not a sale. (reason-cleft)",
+      "She *did underwrite* the loan, despite what the rumors claimed. (emphatic did)",
+      "*It was in escrow* that the buyers kept their deposit. (it-cleft on an adverbial)",
+      "The agent *does have* a fiduciary duty to her clients. (emphatic does)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite as an it-cleft emphasizing the subject: The remittance paid for the medicine.",
+        "a": "It was the remittance that paid for the medicine."
+      },
+      {
+        "q": "Rewrite as a what-cleft: Procurement saves the hospital money.",
+        "a": "What saves the hospital money is procurement."
+      },
+      {
+        "q": "Add emphatic do to stress the verb: The bank underwrote the rescue loan.",
+        "a": "The bank did underwrite the rescue loan."
+      },
+      {
+        "q": "Rewrite as an it-cleft emphasizing the object: The council broke up the monopoly.",
+        "a": "It was the monopoly that the council broke up."
+      },
+      {
+        "q": "Rewrite as a reason-cleft: The liquidation happened because of falling demand.",
+        "a": "The reason the liquidation happened was falling demand."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Which sentence is a correct it-cleft?",
+        "options": [
+          "It was the commission who motivated the salesman.",
+          "It was the commission that motivated the salesman.",
+          "It is the commission motivated the salesman.",
+          "Was it the commission that it motivated the salesman."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct pseudo-cleft.",
+        "options": [
+          "What the company needs is better procurement.",
+          "That the company needs is better procurement.",
+          "What does the company need is better procurement.",
+          "The what the company needs is better procurement."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which sentence uses emphatic do correctly?",
+        "options": [
+          "She does has a fiduciary duty.",
+          "She has does a fiduciary duty.",
+          "She does have a fiduciary duty.",
+          "She has a fiduciary does duty."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which sentence is a cleft emphasizing the object?",
+        "options": [
+          "It was the oligopoly that fixed the prices.",
+          "It was the prices that the oligopoly fixed.",
+          "The oligopoly fixed the prices.",
+          "What fixed the prices was the oligopoly."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct reason-cleft.",
+        "options": [
+          "The reason for the deflation is that demand collapsed.",
+          "The reason of the deflation is that demand collapsed.",
+          "The reason the deflation that demand collapsed.",
+          "Because the reason deflation is demand collapsed."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which sentence is NOT a cleft sentence?",
+        "options": [
+          "It was in escrow that the money waited.",
+          "What surprised me was the liquidation.",
+          "The bank underwrote the loan quietly.",
+          "The person I trust is my fiduciary adviser."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Choose the correct emphatic do in the past.",
+        "options": [
+          "He did signed the escrow papers.",
+          "He signed did the escrow papers.",
+          "He did sign the escrow papers.",
+          "He does signed the escrow papers."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Choose the correct it-cleft emphasizing an adverbial.",
+        "options": [
+          "It was last spring that the deflation began.",
+          "It was last spring when the deflation began that.",
+          "Last spring it was that the deflation began.",
+          "It is last spring when began the deflation."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Reply with emphatic do to contradict: \"You never pay commission.\"",
+        "options": [
+          "I do pay commission on every sale.",
+          "I pay do commission on every sale.",
+          "I am do pay commission.",
+          "Do I pay commission on every sale."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the best it-cleft to stress who did the action.",
+        "options": [
+          "It was Maya who reformed procurement.",
+          "It was Maya reformed procurement.",
+          "What was Maya reformed procurement.",
+          "It is Maya who reform procurement."
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}
