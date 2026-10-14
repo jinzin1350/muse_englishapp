@@ -2082,13 +2082,32 @@ function renderLanding(v) {
      is true:
      - WITH a hash (old '#/landing' link, bookmark, stale navigation):
        drop the hash — the static landing at '/' is the one homepage.
+       An EXPLICIT '#/landing' means "show me the landing": set a
+       one-shot session flag so the '/' redirect shows the landing even
+       for a returning app user, whose muse_app_used flag would
+       otherwise send '/' straight back to the app preview.
      - WITHOUT a hash (plain '/') but an app signal is true (standalone
        PWA, ?lesson=latest / ?ref=, muse_app_used flag): this is an
        anonymous app user, not a first-time visitor — open the app's
        public lesson preview (#/preview) instead of the landing.
+       EXCEPT when the one-shot force-landing flag is set: show the
+       landing this once, then consume the flag.
      - Otherwise: clear #view and drop app-mode so the static landing
        shows (first-time visitors and crawlers). */
-  if (window.location.hash) { window.location.replace('/'); return; }
+  if (window.location.hash) {
+    try {
+      if (window.location.hash === '#/landing') sessionStorage.setItem('muse_force_landing', '1');
+    } catch (e) {}
+    window.location.replace('/'); return;
+  }
+  try {
+    if (sessionStorage.getItem('muse_force_landing') === '1') {
+      sessionStorage.removeItem('muse_force_landing');
+      document.documentElement.classList.remove('app-mode');
+      v.innerHTML = '';
+      return;
+    }
+  } catch (e) {}
   if (shouldEnterAppMode()) { go('preview'); return; }
   document.documentElement.classList.remove('app-mode');
   v.innerHTML = '';
@@ -9428,7 +9447,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610140258';
+var APP_VERSION = '202610140313';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

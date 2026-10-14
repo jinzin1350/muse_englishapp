@@ -43,6 +43,15 @@
 (function () {
   function updateAppMode() {
     try {
+      /* One-shot force-landing: an explicit '#/landing' navigation set
+         muse_force_landing — the landing wins for this load even for a
+         returning app user. main.js renderLanding() consumes the flag. */
+      try {
+        if (sessionStorage.getItem('muse_force_landing') === '1') {
+          document.documentElement.classList.remove('app-mode');
+          return;
+        }
+      } catch (e) {}
       var hash = window.location.hash || '';
       var isAppRoute = hash.indexOf('#/') === 0;
       var signedIn = false;
@@ -345,7 +354,7 @@ setTimeout(function () {
   </nav>
 
   <script src="/js/config.js"></script>
-  <script defer src="/js/main.js?v=3f6ee031"></script>
+  <script defer src="/js/main.js?v=c16f8a8a"></script>
 
 <script>
 document.addEventListener('click', function(e) {
