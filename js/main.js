@@ -1879,9 +1879,14 @@ function shouldEnterAppMode() {
        marketing landing, NOT the app. Without this, the preview/auth
        "back" links (href="#/") loop back into #/preview forever and the
        visitor can never return to the landing. Signed-in visitors never
-       reach here with '#/' (onRoute moves them to #/home); installed-PWA
-       and push/referral visits still enter the app. */
-    if (hash === '#/' && !standalone && !appQuery) return false;
+       reach here with '#/' (onRoute moves them to #/home); push/referral
+       visits still enter the app.
+       2026-10-14 fix-2: this holds EVEN in the installed PWA. Its cold
+       start has no hash (manifest start_url "/"), so an exact '#/' in
+       standalone can only come from the in-app "back to website" links —
+       keeping the !standalone carve-out trapped PWA users in a
+       preview → '#/' → '/' → preview loop with no way back. */
+    if (hash === '#/' && !appQuery) return false;
     if (hash.indexOf('#/') === 0) return true;
     if (standalone) return true;
     if (appQuery) return true;
@@ -2099,7 +2104,8 @@ function renderLanding(v) {
        for a returning app user, whose muse_app_used flag would
        otherwise send '/' straight back to the app preview.
      - WITH an exact '#/' hash from an anonymous visitor (no session,
-       not installed-PWA, no push/referral param): '#/' IS the landing —
+       no push/referral param — installed-PWA included, whose cold start
+       never carries '#/'): '#/' IS the landing —
        show it in place with no redirect. Redirecting to '/' would loop
        straight back into #/preview via the muse_app_used flag: that was
        the 2026-10-14 preview trap (the preview/auth "back" links could
@@ -9478,7 +9484,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610140536';
+var APP_VERSION = '202610142219';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
