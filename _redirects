@@ -2,10 +2,13 @@
 # takes over from there and enforces the server-side admin gate).
 # NOTE: /adminpanel is unusable — a dashboard-level 308 redirect hijacks that
 # prefix (outside this repo). The panel lives at /manage instead.
-# NOTE 2: only the splat rule — an exact-match 200 rewrite for the bare path
-# inexplicably 308s on Pages; the bare path falls through to the SPA fallback
-# (200 + index.html), which the router handles identically.
-/manage/* /index.html 200
+# NOTE 2 (2026-10-15): the rewrite target MUST be `/`, never `/index.html`.
+# A dashboard-level 308 (`/index.html -> /`, added for SEO extensionless URLs)
+# breaks any 200-rewrite whose target is /index.html — the /manage/* rule
+# silently stopped serving the app shell and returned the 404 page instead.
+# This also explains the old "bare exact 200-rewrite inexplicably 308s" note.
+/manage / 200
+/manage/* / 200
 
 # SEO Phase 1.4 (2026-10-13): 3 lessons with empty themes got proper slugs.
 # Both the sitemap-listed path (-lesson) and the built file path (-english-lesson)
