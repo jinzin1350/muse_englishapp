@@ -8643,6 +8643,8 @@ function paintScores(v, arr, prog) {
   html += rewardsPlaceholderHTML();
   html += '<div class="section-title"><h2>🎙️ Podcast summaries</h2></div>' +
     '<div id="sum-history"><div class="empty">Loading summaries…</div></div>';
+  html += '<div class="section-title"><h2>🎤 Shadowing</h2></div>' +
+    '<div id="sp-history"><div class="empty">Loading shadowing…</div></div>';
   if (avg === null) {
     html += '<div class="empty">No quiz attempts yet.<br>Finish a quiz and your scores will appear here.</div>';
   } else {
@@ -8656,6 +8658,7 @@ function paintScores(v, arr, prog) {
   refreshRewardsSection();
   loadScoreAnalytics();
   loadSummaryHistory();
+  loadShadowingStats();
 }
 
 /* ---------------- Progress stats (merged 2026-10-09): the old #/progress
@@ -8773,6 +8776,40 @@ async function loadSummaryHistory() {
       '</span></summary><div class="sum-hist-det">' + det + '</div></details>';
   }).join('') + '</div>';
   host.innerHTML = html;
+}
+/* Shadowing stats (Alireza, 2026-10-15): attempts, distinct lessons, distinct
+   sentences practiced and average score, from the shadowing_attempts ledger. */
+async function loadShadowingStats() {
+  const host = document.getElementById('sp-history');
+  if (!host) return;
+  if (!cloudReady() || !state.user || !state.user.id || !sb) { host.innerHTML = ''; return; }
+  let rows = [];
+  try {
+    const r = await sb.from('shadowing_attempts')
+      .select('lesson_date,transcript,score,created_at')
+      .eq('user_id', state.user.id).order('created_at', { ascending: false }).limit(500);
+    if (!r.error) rows = r.data || [];
+  } catch (e) { rows = []; }
+  if (!document.getElementById('sp-history')) return;
+  if (!rows.length) {
+    host.innerHTML = '<div class="card plain"><p class="muted" style="margin:0">No shadowing yet — practice from the shadowing tab! 🎤</p></div>';
+    return;
+  }
+  const lessons = {}, sents = {};
+  let sum = 0;
+  rows.forEach(function (x) {
+    if (x.lesson_date) lessons[x.lesson_date] = 1;
+    const mm = String(x.transcript || '').match(/^\[s(\d+)\]/);
+    if (mm) sents[String(x.lesson_date || '') + '#s' + mm[1]] = 1;
+    sum += Number(x.score) || 0;
+  });
+  const avg = Math.round(sum / rows.length);
+  host.innerHTML = '<div class="pg-grid">' +
+    pgStatCard('🎤', rows.length, 'Attempts') +
+    pgStatCard('📚', Object.keys(lessons).length, 'Lessons') +
+    pgStatCard('🔤', Object.keys(sents).length, 'Sentences') +
+    pgStatCard('📊', avg + '%', 'Avg score') +
+    '</div>';
 }
 async function aiReportStudent(btn) {
   try {
@@ -9627,7 +9664,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610150500';
+var APP_VERSION = '202610150516';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
