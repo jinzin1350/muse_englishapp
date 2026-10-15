@@ -6813,31 +6813,13 @@ async function wireShadowingPractice(body, m) {
       resBox.innerHTML = '<div class="empty">🎤 Could not start listening. Try again.</div>';
       return;
     }
-    /* Parallel voice capture for hear-yourself playback (Alireza, 2026-10-14).
-       Best effort: the speech recognition works fine without it. */
-    a.capChunks = [];
-    try {
-      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-        navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
-          if (!active || active.i !== i) {
-            try { stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
-            return;
-          }
-          a.capStream = stream;
-          let rec = null;
-          try { rec = new MediaRecorder(stream, { audioBitsPerSecond: 24000 }); }
-          catch (e) { try { rec = new MediaRecorder(stream); } catch (e2) { rec = null; } }
-          if (!rec) {
-            try { stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
-            a.capStream = null;
-            return;
-          }
-          a.capRec = rec;
-          rec.ondataavailable = function (ev) { if (ev.data && ev.data.size) a.capChunks.push(ev.data); };
-          try { rec.start(250); } catch (e) {}
-        }).catch(function () { /* no capture — recognition continues */ });
-      }
-    } catch (e) {}
+    /* NOTE (2026-10-14 hotfix): a parallel getUserMedia+MediaRecorder capture
+       was tried here for hear-yourself playback, but on Android the system
+       speech recognizer and a second mic stream fight over the microphone —
+       the recognizer then hears nothing ("We didn't catch any words").
+       Transcription must never break, so there is NO parallel capture on the
+       live path. Hear-yourself on Android needs the server-STT path instead
+       (Alireza's call — see memory). */
     live.classList.remove('hidden');
     liveText.textContent = 'Listening… speak now!';
     count.textContent = '0:' + String(MAXS).padStart(2, '0');
@@ -6943,28 +6925,6 @@ async function wireShadowingPractice(body, m) {
     if (!a) return;
     if (a.timerId) clearInterval(a.timerId);
     try { if (a.recog) a.recog.stop(); } catch (e) {}
-    /* Stop the parallel voice capture (live path only); save it unless this
-       stop is silent. The server path has no capRec — its blob is saved in
-       uploadAndFinish. */
-    if (!a.rec) {
-      try {
-        const cr = a.capRec; a.capRec = null;
-        const finishCap = function () {
-          try { if (a.capStream) a.capStream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
-          a.capStream = null;
-          if (silent) return;
-          try {
-            const blob = new Blob(a.capChunks || [], { type: (cr && cr.mimeType) || 'audio/webm' });
-            saveSpRecording(m.date, a.i, blob);
-          } catch (e) {}
-        };
-        if (cr) {
-          cr.onstop = finishCap;
-          try { if (cr.state !== 'inactive') cr.stop(); else finishCap(); }
-          catch (e) { finishCap(); }
-        } else finishCap();
-      } catch (e) {}
-    }
     setMicUI();
     a.live.classList.add('hidden');
     if (silent) return;
@@ -9679,7 +9639,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610150235';
+var APP_VERSION = '202610150246';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
