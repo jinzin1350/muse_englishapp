@@ -984,15 +984,18 @@ var _wordsObs = null;
 function observeWordsEnd(body, m) {
   try {
     if (_wordsObs) { try { _wordsObs.disconnect(); } catch (e) {} _wordsObs = null; }
-    if (!m || !m.date || typeof IntersectionObserver === 'undefined') return;
+    if (!m || !m.date) return;
     const cards = body.querySelectorAll('.word-card');
-    if (!cards.length) return;
+    /* No observer support or no cards: fall back to tab-open marking. */
+    if (typeof IntersectionObserver === 'undefined' || !cards.length) { markStep(m.date, 'words'); return; }
     const last = cards[cards.length - 1];
     _wordsObs = new IntersectionObserver(function (entries) {
       for (let i = 0; i < entries.length; i++) {
         if (entries[i].isIntersecting) {
           try { _wordsObs.disconnect(); } catch (e) {}
           _wordsObs = null;
+          /* Words step = the learner scrolled through to the last word. */
+          markStep(m.date, 'words');
           awardPoints('words_viewed', 10, m.date);
           break;
         }
@@ -1022,6 +1025,9 @@ function checkTrackCompletion(forceDone) {
   const key = kind + '|' + state.lesson.date;
   if (_trackPtsFired[key]) return;
   _trackPtsFired[key] = 1;
+  /* Podcast step = fully listened (90%+ or ended). Shadowing step needs all
+     sentence exercises done (see markSpSentenceDone), not just listening. */
+  if (kind === 'podcast_complete') markStep(state.lesson.date, 'podcast');
   awardPoints(kind, 15, state.lesson.date);
 }
 
@@ -1342,6 +1348,14 @@ function markStep(dateStr, step, extra) {
     all[dateStr] = day;
     localStorage.setItem(progressKey(), JSON.stringify(all));
     refreshQuests();
+    /* Streak rule (Alireza, 2026-10-14): a streak day counts when the words
+       were genuinely read AND the quiz is done — words + quiz only, not
+       all 5 steps — and only for today's lesson. */
+    if (dateStr === todayStr() && !day.streakRecorded && day.words && day.quiz) {
+      day.streakRecorded = true;
+      localStorage.setItem(progressKey(), JSON.stringify(all));
+      try { recordStreakDay(); } catch (e) {}
+    }
   } catch (e) {}
 }
 function dayDoneCount(dateStr) {
@@ -5686,6 +5700,7 @@ function todayCardHTML(m) {
         '<div class="hero-date">' + esc(m.date) + (isToday ? ' · <b>Today</b>' : ' · Latest lesson') + '</div>' +
         '<h2 class="today-theme" id="today-h">' + esc(m.theme || 'Daily lesson') + '</h2>' +
         '<span class="badge-level">' + esc(levelLabel(normalizeLevel(m.level))) + '</span>' +
+        (m.review ? ' <span class="badge-level" style="background:rgba(46,134,193,.14);color:#2E86C1">🔁 Review day</span>' : '') +
       '</div>' +
     '</div>' +
     '<ul class="today-steps" aria-label="Lesson steps">' + stepsHTML + '</ul>' +
@@ -5820,7 +5835,7 @@ function prevLessonsHTML(lessons) {
           '<span class="pcv-date">' + esc(fmtDateShort(m.date)) + '</span>' +
         '</span>' +
         '<span class="pcv-body">' +
-          '<span class="pcv-theme">' + esc(m.theme || 'Lesson') + '</span>' +
+          '<span class="pcv-theme">' + esc(m.theme || 'Lesson') + (m.review ? ' 🔁' : '') + '</span>' +
           '<span class="pcv-row">' +
             '<span class="pcv-bar" role="progressbar" aria-label="Lesson progress" aria-valuenow="' + done + '" aria-valuemin="0" aria-valuemax="' + STEPS.length + '"><span style="width:' + pct + '%"></span></span>' +
             '<span class="pcv-ico" aria-hidden="true">' + prevIconFor(m.theme) + '</span>' +
@@ -6071,12 +6086,11 @@ function renderLesson(v, dateStr) {
 function renderLessonTab(body) {
   const m = state.lesson;
   const tab = state.lessonTab;
-  if (m && m.date) {
-    if (tab === 'words') markStep(m.date, 'words');
-    else if (tab === 'podcast') markStep(m.date, 'podcast');
-    else if (tab === 'shadowing') markStep(m.date, 'shadowing');
-    else if (tab === 'grammar') markStep(m.date, 'grammar');
-  }
+  /* Steps are marked only on genuine completion (2026-10-14 rule):
+     words = scrolled to the last word (observeWordsEnd), quiz = finished,
+     podcast = fully listened (checkTrackCompletion) or summary done,
+     shadowing = all sentences practiced, grammar = grammar quiz finished.
+     Opening a tab no longer marks anything. */
   if (tab === 'words') { body.innerHTML = wordsTabHTML(m); observeWordsEnd(body, m); refreshSavedWordButtons(body); }
   else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); wireSummaryChallenge(body, m); }
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); wireShadowingPractice(body, m); }
@@ -6960,6 +6974,9 @@ async function restoreSpProgress(list, m, sentences) {
     const n = parseInt(el.getAttribute('data-i'), 10) + 1;
     if (done[n]) el.classList.add('sp-done');
   });
+  /* Restored progress may already cover every sentence (done on another
+     device) — the shadowing step completes without re-practicing. */
+  try { if (m && m.date) checkShadowingStepDone(m.date); } catch (e) {}
   let firstOpen = 1;
   while (firstOpen <= sents.length && done[firstOpen]) firstOpen++;
   if (firstOpen > 1 && firstOpen <= sents.length && !list.parentNode.querySelector('.sp-continue')) {
@@ -7032,6 +7049,22 @@ function paintSpReport(list) {
 function markSpSentenceDone(i) {
   const el = document.querySelector('#sp-sentences .sp-sent[data-i="' + i + '"]');
   if (el) el.classList.add('sp-done');
+  try {
+    if (state.lesson && state.lesson.date) checkShadowingStepDone(state.lesson.date);
+  } catch (e) {}
+}
+/* Shadowing step = every sentence exercise practiced (all .sp-sent done). */
+function checkShadowingStepDone(dateStr) {
+  try {
+    const list = document.getElementById('sp-sentences');
+    if (!list || !dateStr) return;
+    const sents = list.querySelectorAll('.sp-sent');
+    if (!sents.length) return;
+    for (let k = 0; k < sents.length; k++) {
+      if (!sents[k].classList.contains('sp-done')) return;
+    }
+    markStep(dateStr, 'shadowing');
+  } catch (e) {}
 }
 
 function quizTabHTML(m) {
@@ -7258,6 +7291,8 @@ function finishQuiz() {
     }
     awardPoints('word_quiz', 10 + q.correct, q.date);
   } else if (q.kind === 'grammar' && q.date) {
+    /* Grammar step = the grammar quiz is finished (2026-10-14 rule). */
+    markStep(q.date, 'grammar');
     if (!rkcDone('grammar', q.date)) {
       state.quiz = null;
       launchRankClimb({ correct: q.correct, total: total, date: q.date, xp: 10, action: 'grammar_quiz' });
@@ -7759,7 +7794,20 @@ async function grantFreeze() {
   s.streak_freezes = nf; setStreakLocal(s);
   return nf;
 }
-/* Dates (YYYY-MM-DD) with a completed word quiz — for the streak week strip. */
+/* Dates (YYYY-MM-DD) with words read + quiz done — the streak-qualifying
+   days (2026-10-14 rule). Used for the streak week strip, which lives on
+   the streak card. */
+function getStreakDayDates() {
+  try {
+    const all = getAllProgress();
+    const set = {};
+    Object.keys(all).forEach(function (d) {
+      if (all[d] && all[d].words && all[d].quiz) set[d] = 1;
+    });
+    return set;
+  } catch (e) { return {}; }
+}
+/* Dates (YYYY-MM-DD) with a completed word quiz — kept for other uses. */
 async function getWordQuizDates() {
   try {
     const attempts = await getAttempts();
@@ -7870,7 +7918,7 @@ function streakCardHTML(st, dates) {
 }
 async function refreshHomeStreak() {
   try {
-    const res = await Promise.all([getStreakState(), getWordQuizDates()]);
+    const res = await Promise.all([getStreakState(), Promise.resolve(getStreakDayDates())]);
     const wrap = document.getElementById('home-streak-wrap');
     if (!wrap || state.view !== 'home') return;
     wrap.innerHTML = streakBannerHTML(res[0], res[1]);
@@ -7880,7 +7928,9 @@ async function refreshHomeStreak() {
    Two full-screen moments after the first word-quiz completion of the day:
    1. "Awesome! You finished today's lesson." (tap anywhere -> 2)
    2. "Want more points?" (Go to podcast / Maybe later).
-   The day's streak is still recorded silently. */
+   NOTE (2026-10-14 rule): the streak is NOT recorded here anymore — it is
+   recorded by markStep() once the words are genuinely read and the quiz
+   is done (words + quiz, today's lesson only). */
 var celState = null;
 var QCEL_ART = {
   a: '/media/celebration/quiz-awesome.webp',
@@ -7893,7 +7943,6 @@ var QCEL_ZONES = {
 };
 function launchCelebration(info) {
   closeCelebration();
-  try { recordStreakDay(); } catch (e) {}
   celState = { info: info };
   qcelShow('a');
 }
@@ -9484,7 +9533,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610142219';
+var APP_VERSION = '202610150027';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
