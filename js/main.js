@@ -6891,15 +6891,15 @@ async function wireShadowingPractice(body, m) {
       else if (a.accuracy >= scoring.okAt) pts = 3;
       else if (a.accuracy > 0) pts = 1;
       if (state.user && state.user.id && pts > 0) {
+        /* Alireza, 2026-10-14: no daily cap — EVERY pronounced sentence
+           earns 1/3/5 by accuracy. */
         const dayKey = 'sp_n_' + (m.date || 'lesson');
         let n = 0;
         try { n = parseInt(localStorage.getItem(dayKey) || '0', 10) || 0; } catch (e) {}
-        if (n < 6) {
-          n++;
-          try { localStorage.setItem(dayKey, String(n)); } catch (e) {}
-          awardPoints('shadowing_speaking', pts, (m.date || 'lesson') + '#s' + i + 'n' + n);
-          awarded = true;
-        }
+        n++;
+        try { localStorage.setItem(dayKey, String(n)); } catch (e) {}
+        awardPoints('shadowing_speaking', pts, (m.date || 'lesson') + '#s' + i + 'n' + n);
+        awarded = true;
       }
       resBox.innerHTML = spSentResultHTML(a, said, awarded ? pts : 0);
       resBox.querySelectorAll('.sp-hear').forEach(function (b) {
@@ -9533,7 +9533,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610150027';
+var APP_VERSION = '202610150219';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
