@@ -1,0 +1,395 @@
+{
+ "date": "2026-10-15",
+ "theme": "review day",
+ "level": "c1",
+ "cefr": "C1",
+ "review": true,
+ "review_of": [
+  "2026-10-11",
+  "2026-10-12",
+  "2026-10-13",
+  "2026-10-14"
+ ],
+ "review_window_words": 40,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "wistful",
+   "pos": "adjective",
+   "meaning": "sad but thoughtful, quietly wishing for something you cannot quite have",
+   "example": "He gave a wistful smile as the train pulled away, already missing a city he had only just left.",
+   "pronunciation": "WIST-ful",
+   "persian": "حسرت‌بار و کمی غمگین",
+   "photo": "media/c1/2026-10-11/photos/wistful.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/wistful.mp3"
+  },
+  {
+   "word": "recalcitrant",
+   "pos": "adjective",
+   "meaning": "stubbornly refusing to obey rules or follow guidance",
+   "example": "The recalcitrant student ignored every warning, and by spring he had been suspended twice.",
+   "pronunciation": "ri-KAL-si-trunt",
+   "persian": "سرکش و نافرمان",
+   "photo": "media/c1/2026-10-11/photos/recalcitrant.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/recalcitrant.mp3"
+  },
+  {
+   "word": "escrow",
+   "pos": "noun",
+   "meaning": "money held by a neutral third party until the conditions of a deal are met",
+   "example": "The buyers placed their deposit in escrow until the inspection was complete.",
+   "pronunciation": "ES-kroh",
+   "persian": "سپرده موقت (اسکرو)",
+   "photo": "media/c1/2026-10-14/photos/escrow.jpg",
+   "word_audio": "media/c1/2026-10-14/word-audio/escrow.mp3"
+  },
+  {
+   "word": "monopoly",
+   "pos": "noun",
+   "meaning": "complete control of a market by one company, with no real competition",
+   "example": "The government broke up the telecom monopoly to encourage competition.",
+   "pronunciation": "muh-NOP-uh-lee",
+   "persian": "انحصار",
+   "photo": "media/c1/2026-10-14/photos/monopoly.jpg",
+   "word_audio": "media/c1/2026-10-14/word-audio/monopoly.mp3"
+  },
+  {
+   "word": "imperious",
+   "pos": "adjective",
+   "meaning": "commanding and arrogant, acting as if you have authority over everyone",
+   "example": "The manager's imperious tone alienated the entire team, who resented being spoken to like schoolchildren.",
+   "pronunciation": "im-PEER-ee-us",
+   "persian": "متکبرانه و دستوردهنده",
+   "photo": "media/c1/2026-10-11/photos/imperious.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/imperious.mp3"
+  },
+  {
+   "word": "conservation",
+   "pos": "noun",
+   "meaning": "protecting nature, animals, and natural resources",
+   "example": "Conservation programs have brought wolves back to the valley.",
+   "pronunciation": "kon-sur-VAY-shuhn",
+   "persian": "حفاظت از طبیعت",
+   "photo": "media/c1/2026-10-12/photos/conservation.jpg",
+   "word_audio": "media/c1/2026-10-12/word-audio/conservation.mp3"
+  },
+  {
+   "word": "nostalgia",
+   "pos": "noun",
+   "meaning": "a deep longing for the past, often for a time or place that feels happier than now",
+   "example": "Walking through my childhood street filled me with an overwhelming nostalgia for the summers I thought would never end.",
+   "pronunciation": "nos-TAL-juh",
+   "persian": "نوستالژی؛ دلتنگی برای گذشته",
+   "photo": "media/c1/2026-10-11/photos/nostalgia.jpg",
+   "word_audio": "media/c1/2026-10-11/word-audio/nostalgia.mp3"
+  },
+  {
+   "word": "sartorial",
+   "pos": "adjective",
+   "meaning": "relating to tailored clothing and refined style",
+   "example": "His sartorial choices always look sharp and carefully planned.",
+   "pronunciation": "sar-TOR-ee-uhl",
+   "persian": "مربوط به خیاطی و سبک شیک لباس",
+   "photo": "media/c1/2026-10-13/photos/sartorial.jpg",
+   "word_audio": "media/c1/2026-10-13/word-audio/sartorial.mp3"
+  },
+  {
+   "word": "silhouette",
+   "pos": "noun",
+   "meaning": "the outline or shape of a garment",
+   "example": "The dress has a slim silhouette that suits formal events.",
+   "pronunciation": "sil-oo-ET",
+   "persian": "فرم و خط کلی لباس",
+   "photo": "media/c1/2026-10-13/photos/silhouette.jpg",
+   "word_audio": "media/c1/2026-10-13/word-audio/silhouette.mp3"
+  },
+  {
+   "word": "oligopoly",
+   "pos": "noun",
+   "meaning": "a market controlled by a small number of large companies",
+   "example": "The airline industry is an oligopoly dominated by three carriers.",
+   "pronunciation": "ol-ih-GOP-uh-lee",
+   "persian": "الیگوپلی (انحصار چندگانه)",
+   "photo": "media/c1/2026-10-14/photos/oligopoly.jpg",
+   "word_audio": "media/c1/2026-10-14/word-audio/oligopoly.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c1/2026-10-15/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day",
+  "audio": "media/c1/2026-10-15/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-10-15/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Four Days, Ten Words",
+  "audio": "media/c1/2026-10-15/shadowing.mp3",
+  "transcript": "media/c1/2026-10-15/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c1/2026-10-15/shadowing-sentences/001.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/002.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/003.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/004.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/005.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/006.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/007.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/008.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/009.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/010.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/011.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/012.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/013.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/014.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/015.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/016.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/017.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/018.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/019.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/020.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/021.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/022.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/023.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/024.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/025.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/026.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/027.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/028.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/029.mp3",
+   "media/c1/2026-10-15/shadowing-sentences/030.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'wistful' mean?",
+   "options": [
+    "a market controlled by a small number of large companies",
+    "the outline or shape of a garment",
+    "sad but thoughtful, quietly wishing for something you cannot quite have",
+    "commanding and arrogant, acting as if you have authority over everyone"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'recalcitrant' mean?",
+   "options": [
+    "stubbornly refusing to obey rules or follow guidance",
+    "commanding and arrogant, acting as if you have authority over everyone",
+    "money held by a neutral third party until the conditions of a deal are met",
+    "relating to tailored clothing and refined style"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'escrow' mean?",
+   "options": [
+    "the outline or shape of a garment",
+    "money held by a neutral third party until the conditions of a deal are met",
+    "commanding and arrogant, acting as if you have authority over everyone",
+    "sad but thoughtful, quietly wishing for something you cannot quite have"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'monopoly' mean?",
+   "options": [
+    "stubbornly refusing to obey rules or follow guidance",
+    "complete control of a market by one company, with no real competition",
+    "commanding and arrogant, acting as if you have authority over everyone",
+    "sad but thoughtful, quietly wishing for something you cannot quite have"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'imperious' mean?",
+   "options": [
+    "relating to tailored clothing and refined style",
+    "commanding and arrogant, acting as if you have authority over everyone",
+    "a market controlled by a small number of large companies",
+    "the outline or shape of a garment"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'conservation' mean?",
+   "options": [
+    "stubbornly refusing to obey rules or follow guidance",
+    "the outline or shape of a garment",
+    "complete control of a market by one company, with no real competition",
+    "protecting nature, animals, and natural resources"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'nostalgia' mean?",
+   "options": [
+    "money held by a neutral third party until the conditions of a deal are met",
+    "complete control of a market by one company, with no real competition",
+    "a deep longing for the past, often for a time or place that feels happier than now",
+    "sad but thoughtful, quietly wishing for something you cannot quite have"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'sartorial' mean?",
+   "options": [
+    "relating to tailored clothing and refined style",
+    "money held by a neutral third party until the conditions of a deal are met",
+    "stubbornly refusing to obey rules or follow guidance",
+    "the outline or shape of a garment"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'silhouette' mean?",
+   "options": [
+    "the outline or shape of a garment",
+    "stubbornly refusing to obey rules or follow guidance",
+    "commanding and arrogant, acting as if you have authority over everyone",
+    "relating to tailored clothing and refined style"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'oligopoly' mean?",
+   "options": [
+    "the outline or shape of a garment",
+    "a market controlled by a small number of large companies",
+    "protecting nature, animals, and natural resources",
+    "money held by a neutral third party until the conditions of a deal are met"
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "The Passive: All Tenses and Passive Infinitive",
+  "explanation": "The passive **moves the receiver of the action to the front of the sentence**. Form it with **be + past participle**: *The deposit was placed in escrow.*\n\nUse the passive **when the doer is unknown, obvious, or unimportant**. *Ticket prices are kept high by the oligopoly* puts the focus on the prices, not on who keeps them high.\n\nThe passive **works in every tense**. *The old network was controlled by a monopoly* is past simple, and *the valley has been restored* is present perfect.\n\n*That wistful smile will never be forgotten* is the future passive. **Only the verb be changes**; the past participle stays the same.\n\n**Reporting verbs** pair the passive with an infinitive. *The imperious manager is said to have alienated the team* means that people say he did.\n\nA common mistake is **dropping the past participle ending**. Say *was placed* and *are kept*, never *was place* or *are keep*.",
+  "examples": [
+   "\"The deposit *was placed in **escrow*** before the inspection began.\" (past simple passive: the deposit received the action)",
+   "\"The old network *was controlled by a **monopoly*** for thirty years.\" (past simple passive with the agent named)",
+   "\"Ticket prices *are kept* artificially high by the ***oligopoly***.\" (present simple passive for a general truth)",
+   "\"The wetlands *have been restored* through careful **conservation**.\" (present perfect passive: a finished action with a present result)",
+   "\"The *imperious* manager *is said to have alienated* the whole team.\" (passive reporting verb + perfect infinitive)",
+   "\"That *wistful* smile *will never be forgotten*.\" (future passive)"
+  ],
+  "practice": [
+   {
+    "q": "Complete: The deposit ___ in escrow before the inspection. (was placed / placed)",
+    "a": "was placed. Say: The deposit was placed in escrow."
+   },
+   {
+    "q": "Complete: Ticket prices ___ high by the oligopoly. (are kept / keep)",
+    "a": "are kept. Say: Ticket prices are kept high by the oligopoly."
+   },
+   {
+    "q": "Fix the mistake: *The valley has restored by conservation.*",
+    "a": "The valley has been restored by conservation. The valley receives the action, so the passive is required."
+   },
+   {
+    "q": "Complete: The imperious manager ___ to have alienated the team. (is said / says)",
+    "a": "is said. Say: The imperious manager is said to have alienated the team."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The deposit ___ in escrow before the inspection.",
+    "options": [
+     "was placed",
+     "placed",
+     "has place",
+     "is place"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Ticket prices ___ high by the oligopoly.",
+    "options": [
+     "are kept",
+     "keep",
+     "are keep",
+     "kept are"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The wetlands ___ through careful conservation.",
+    "options": [
+     "have been restored",
+     "have restored",
+     "has been restore",
+     "are restore"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The imperious manager ___ to have alienated the team.",
+    "options": [
+     "is said",
+     "says",
+     "is say",
+     "said is"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "That wistful smile will never ___.",
+    "options": [
+     "be forgotten",
+     "forget",
+     "been forgot",
+     "forgetting"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The old network was ___ by a monopoly for thirty years.",
+    "options": [
+     "controlled",
+     "control",
+     "controlling",
+     "controls"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Which sentence is correct?",
+    "options": [
+     "The recalcitrant pupil was suspended twice.",
+     "The recalcitrant pupil suspended was twice.",
+     "The recalcitrant pupil was suspend twice.",
+     "Suspended the recalcitrant pupil was."
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Which sentence uses the passive?",
+    "options": [
+     "The valley has been restored by conservation.",
+     "Conservation has restored the valley.",
+     "Conservation restored the valley.",
+     "The valley restored conservation."
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The gown's slim silhouette ___ by everyone.",
+    "options": [
+     "is admired",
+     "admires",
+     "is admire",
+     "admire is"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "His sartorial choices ___ carefully planned.",
+    "options": [
+     "are",
+     "is",
+     "be",
+     "being"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}

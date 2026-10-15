@@ -3242,3 +3242,6 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .sum-mispron .sp-hear{background:none;border:0;cursor:pointer;font-size:.85rem;padding:0 .15rem}
 .sum-audio{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:.7rem .9rem;margin:.6rem 0}
 .sum-legend{font-size:.78rem;margin-top:.5rem}
+/* Shadowing sentence bookmark (2026-10-15): same bookmark look as words. */
+.sp-btns .sp-save{line-height:0;flex:0 0 auto}
+.sp-btns .sp-save img{width:22px;height:22px;display:block}

@@ -1,0 +1,389 @@
+{
+ "date": "2026-10-15",
+ "theme": "review day",
+ "level": "a2",
+ "cefr": "A2",
+ "review": true,
+ "review_of": [
+  "2026-10-11",
+  "2026-10-12",
+  "2026-10-13",
+  "2026-10-14"
+ ],
+ "review_window_words": 20,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "twelve",
+   "pos": "noun",
+   "meaning": "the number 12",
+   "example": "There are twelve months in a year.",
+   "pronunciation": "TWELV",
+   "persian": "دوازده",
+   "photo": "media/a2/2026-10-14/photos/twelve.jpg",
+   "word_audio": "media/a2/2026-10-14/word-audio/twelve.mp3"
+  },
+  {
+   "word": "seven",
+   "pos": "noun",
+   "meaning": "the number 7",
+   "example": "There are seven days in a week.",
+   "pronunciation": "SEV-uhn",
+   "persian": "هفت",
+   "photo": "media/a2/2026-10-14/photos/seven.jpg",
+   "word_audio": "media/a2/2026-10-14/word-audio/seven.mp3"
+  },
+  {
+   "word": "scarf",
+   "pos": "noun",
+   "meaning": "a long piece of cloth you wear around your neck",
+   "example": "Yesterday I wore a warm scarf because it was cold.",
+   "pronunciation": "SKARF",
+   "persian": "شال گردن",
+   "photo": "media/a2/2026-10-13/photos/scarf.jpg",
+   "word_audio": "media/a2/2026-10-13/word-audio/scarf.mp3"
+  },
+  {
+   "word": "bill",
+   "pos": "noun",
+   "meaning": "the paper that shows how much money you must pay",
+   "example": "The waiter brings the bill to our table.",
+   "pronunciation": "BIL",
+   "persian": "صورتحساب",
+   "photo": "media/a2/2026-10-11/photos/bill.jpg",
+   "word_audio": "media/a2/2026-10-11/word-audio/bill.mp3"
+  },
+  {
+   "word": "belt",
+   "pos": "noun",
+   "meaning": "a long band you wear around your waist",
+   "example": "He bought a new belt for his jeans.",
+   "pronunciation": "BELT",
+   "persian": "کمربند",
+   "photo": "media/a2/2026-10-13/photos/belt.jpg",
+   "word_audio": "media/a2/2026-10-13/word-audio/belt.mp3"
+  },
+  {
+   "word": "pay",
+   "pos": "verb",
+   "meaning": "to give money for something you buy",
+   "example": "I pay for my lunch at the cafe.",
+   "pronunciation": "PAY",
+   "persian": "پول دادن",
+   "photo": "media/a2/2026-10-11/photos/pay.jpg",
+   "word_audio": "media/a2/2026-10-11/word-audio/pay.mp3"
+  },
+  {
+   "word": "gloves",
+   "pos": "noun",
+   "meaning": "soft covers you wear on your hands",
+   "example": "Last winter I lost one of my gloves on the bus.",
+   "pronunciation": "GLUVZ",
+   "persian": "دستکش",
+   "photo": "media/a2/2026-10-13/photos/gloves.jpg",
+   "word_audio": "media/a2/2026-10-13/word-audio/gloves.mp3"
+  },
+  {
+   "word": "coin",
+   "pos": "noun",
+   "meaning": "a small round piece of metal money",
+   "example": "I put a coin in the machine.",
+   "pronunciation": "KOYN",
+   "persian": "سکه",
+   "photo": "media/a2/2026-10-11/photos/coin.jpg",
+   "word_audio": "media/a2/2026-10-11/word-audio/coin.mp3"
+  },
+  {
+   "word": "email",
+   "pos": "noun",
+   "meaning": "a message you send or receive on the internet",
+   "example": "She sent me an email yesterday.",
+   "pronunciation": "EE-mayl",
+   "persian": "ایمیل",
+   "photo": "media/a2/2026-10-12/photos/email.jpg",
+   "word_audio": "media/a2/2026-10-12/word-audio/email.mp3"
+  },
+  {
+   "word": "keyboard",
+   "pos": "noun",
+   "meaning": "the set of keys you press to write on a computer",
+   "example": "The keys on my keyboard are big and easy to press.",
+   "pronunciation": "KEY-board",
+   "persian": "صفحه‌کلید",
+   "photo": "media/a2/2026-10-12/photos/keyboard.jpg",
+   "word_audio": "media/a2/2026-10-12/word-audio/keyboard.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-10-15/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day",
+  "audio": "media/a2/2026-10-15/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-10-15/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Day of Shopping",
+  "audio": "media/a2/2026-10-15/shadowing.mp3",
+  "transcript": "media/a2/2026-10-15/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-10-15/shadowing-sentences/001.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/002.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/003.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/004.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/005.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/006.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/007.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/008.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/009.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/010.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/011.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/012.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/013.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/014.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/015.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/016.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/017.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/018.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/019.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/020.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/021.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/022.mp3",
+   "media/a2/2026-10-15/shadowing-sentences/023.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'twelve' mean?",
+   "options": [
+    "the number 12",
+    "the number 7",
+    "a long band you wear around your waist",
+    "to give money for something you buy"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'seven' mean?",
+   "options": [
+    "to give money for something you buy",
+    "a message you send or receive on the internet",
+    "the number 7",
+    "a long piece of cloth you wear around your neck"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'scarf' mean?",
+   "options": [
+    "the number 7",
+    "a small round piece of metal money",
+    "soft covers you wear on your hands",
+    "a long piece of cloth you wear around your neck"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'bill' mean?",
+   "options": [
+    "the paper that shows how much money you must pay",
+    "the number 7",
+    "soft covers you wear on your hands",
+    "a long piece of cloth you wear around your neck"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'belt' mean?",
+   "options": [
+    "the set of keys you press to write on a computer",
+    "the number 7",
+    "a long band you wear around your waist",
+    "a message you send or receive on the internet"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'pay' mean?",
+   "options": [
+    "to give money for something you buy",
+    "a long band you wear around your waist",
+    "a small round piece of metal money",
+    "a message you send or receive on the internet"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'gloves' mean?",
+   "options": [
+    "a message you send or receive on the internet",
+    "to give money for something you buy",
+    "soft covers you wear on your hands",
+    "the paper that shows how much money you must pay"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'coin' mean?",
+   "options": [
+    "the set of keys you press to write on a computer",
+    "a small round piece of metal money",
+    "the number 7",
+    "the paper that shows how much money you must pay"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'email' mean?",
+   "options": [
+    "the number 7",
+    "a message you send or receive on the internet",
+    "the number 12",
+    "to give money for something you buy"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'keyboard' mean?",
+   "options": [
+    "the paper that shows how much money you must pay",
+    "to give money for something you buy",
+    "the set of keys you press to write on a computer",
+    "the number 12"
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "Comparatives and Superlatives",
+  "explanation": "We use **comparatives** to compare two things. The scarf is warmer than the coat.\n\nFor short words, add **-er** to the word. Warm becomes **warmer**. Big becomes **bigger**.\n\nFor long words, use **more** or **less**. This keyboard is **more expensive** than my old one.\n\nWe use **superlatives** to say something is number one. She is **the fastest** typist in the office.\n\nFor short words use **the** + **-est**. The belt is **the cheapest** in the shop. For long words use **the most**. The laptop is **the most expensive**.\n\nA common mistake: say **bigger than**, not *more bigger*. Say **the best**, not *the most best*.",
+  "examples": [
+   "The scarf is *warmer* than the coat. (warm → warmer)",
+   "This belt is *cheaper* than that belt. (cheap → cheaper)",
+   "An email is *quicker* than a letter. (quick → quicker)",
+   "My keyboard is *more expensive* than my mouse. (long words use more)",
+   "She is the *tallest* girl in the class. (tall → the tallest)",
+   "The laptop is the *most expensive* in the shop. (long words: the most)"
+  ],
+  "practice": [
+   {
+    "q": "Complete: The scarf is ___ than the coat. (warm / warmer)",
+    "a": "Warmer. Say: The scarf is warmer than the coat."
+   },
+   {
+    "q": "Complete: This keyboard is ___ expensive than my old one. (more / most)",
+    "a": "More. Say: This keyboard is more expensive than my old one."
+   },
+   {
+    "q": "Complete: He is the ___ boy in the class. (taller / tallest)",
+    "a": "Tallest. Say: He is the tallest boy in the class."
+   },
+   {
+    "q": "Complete: An email is ___ than a letter. (quick / quicker)",
+    "a": "Quicker. Say: An email is quicker than a letter."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "This scarf is ___ than that one.",
+    "options": [
+     "warm",
+     "warmer",
+     "more warm",
+     "warming"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "A belt is ___ than a car.",
+    "options": [
+     "cheapest",
+     "more cheap",
+     "cheaper",
+     "cheap"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "He types ___ on the new keyboard.",
+    "options": [
+     "fastly",
+     "faster",
+     "more faster",
+     "most fast"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "The laptop is ___ in the shop.",
+    "options": [
+     "more most expensive",
+     "the most expensiver",
+     "the most expensive",
+     "expensive"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "She is the ___ student in the class.",
+    "options": [
+     "taller",
+     "tall",
+     "tallest",
+     "more tall"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "An email is ___ a letter.",
+    "options": [
+     "quick than",
+     "quicker than",
+     "more quicker than",
+     "quickest than"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "My belt is ___ your belt.",
+    "options": [
+     "longest than",
+     "longer than",
+     "more long than",
+     "long than"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "The gloves are the ___ pair in the shop.",
+    "options": [
+     "warm",
+     "most warm",
+     "warmest",
+     "warmer"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I pay ___ at this shop than at that shop.",
+    "options": [
+     "least",
+     "less",
+     "little",
+     "lesser"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Seven is ___ than twelve.",
+    "options": [
+     "smaller",
+     "small",
+     "more smaller",
+     "most small"
+    ],
+    "answer": 0
+   }
+  ],
+  "audio": "media/a2/2026-10-15/grammar-en.mp3"
+ }
+}

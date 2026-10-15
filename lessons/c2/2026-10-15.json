@@ -1,0 +1,391 @@
+{
+ "date": "2026-10-15",
+ "theme": "review day",
+ "level": "c2",
+ "cefr": "C2",
+ "review": true,
+ "review_of": [
+  "2026-10-11",
+  "2026-10-12",
+  "2026-10-13",
+  "2026-10-14"
+ ],
+ "review_window_words": 40,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "pedestrianization",
+   "pos": "noun",
+   "meaning": "turning streets into car-free areas for walkers",
+   "example": "The pedestrianization of the old market street brought back shoppers and street performers.",
+   "pronunciation": "puh-des-tree-uh-nih-ZAY-shun",
+   "persian": "پیاده‌راه‌سازی؛ تبدیل خیابان‌ها به مناطق بدون خودرو برای عابران",
+   "photo": "media/c2/2026-10-14/photos/pedestrianization.jpg",
+   "word_audio": "media/c2/2026-10-14/word-audio/pedestrianization.mp3"
+  },
+  {
+   "word": "sartorial",
+   "pos": "adjective",
+   "meaning": "relating to tailoring and elegant clothing style",
+   "example": "His sartorial choices always make him look sharp at formal events.",
+   "pronunciation": "sar-TOR-ee-uhl",
+   "persian": "مربوط به خیاطی و سبک شیک لباس",
+   "photo": "media/c2/2026-10-13/photos/sartorial.jpg",
+   "word_audio": "media/c2/2026-10-13/word-audio/sartorial.mp3"
+  },
+  {
+   "word": "silhouette",
+   "pos": "noun",
+   "meaning": "the overall outline or shape of a garment",
+   "example": "The dress has a sleek silhouette that flatters every figure.",
+   "pronunciation": "sil-oo-ET",
+   "persian": "فرم کلی و خطوط بیرونی لباس",
+   "photo": "media/c2/2026-10-13/photos/silhouette.jpg",
+   "word_audio": "media/c2/2026-10-13/word-audio/silhouette.mp3"
+  },
+  {
+   "word": "food desert",
+   "pos": "noun",
+   "meaning": "an area with little access to affordable fresh food",
+   "example": "Without a supermarket for miles, the district became a food desert where fresh produce was scarce.",
+   "pronunciation": "FOOD DEZ-urt",
+   "persian": "بیابان غذایی؛ منطقه‌ای با دسترسی کم به غذای تازه و ارزان",
+   "photo": "media/c2/2026-10-14/photos/food-desert.jpg",
+   "word_audio": "media/c2/2026-10-14/word-audio/food-desert.mp3"
+  },
+  {
+   "word": "sprawl",
+   "pos": "noun",
+   "meaning": "the uncontrolled spread of a city outward into the surrounding countryside",
+   "example": "Endless urban sprawl has swallowed the farmland that once surrounded the city.",
+   "pronunciation": "SPRAWL",
+   "persian": "گسترش بی‌رویه و مهارنشدهٔ شهر",
+   "photo": "media/c2/2026-10-11/photos/sprawl.jpg",
+   "word_audio": "media/c2/2026-10-11/word-audio/sprawl.mp3"
+  },
+  {
+   "word": "gentrification",
+   "pos": "noun",
+   "meaning": "the process in which a run-down area is renovated and becomes expensive, often forcing out its original residents",
+   "example": "Gentrification transformed the old docklands, but the artists who once lived there could no longer afford the rents.",
+   "pronunciation": "jen-truh-fuh-KAY-shun",
+   "persian": "اعیان‌سازی و گران‌شدن محله‌های قدیمی",
+   "photo": "media/c2/2026-10-11/photos/gentrification.jpg",
+   "word_audio": "media/c2/2026-10-11/word-audio/gentrification.mp3"
+  },
+  {
+   "word": "couture",
+   "pos": "noun",
+   "meaning": "very expensive high-fashion clothing made by hand",
+   "example": "The Paris atelier is famous for its couture gowns.",
+   "pronunciation": "koo-TOOR",
+   "persian": "خیاطی لوکس و مد سطح بالا",
+   "photo": "media/c2/2026-10-13/photos/couture.jpg",
+   "word_audio": "media/c2/2026-10-13/word-audio/couture.mp3"
+  },
+  {
+   "word": "tactical urbanism",
+   "pos": "noun",
+   "meaning": "quick, low-cost, small-scale improvements to city spaces",
+   "example": "Residents used tactical urbanism to turn a vacant lot into a pop-up playground overnight.",
+   "pronunciation": "TAK-tih-kul UR-buh-niz-um",
+   "persian": "شهرسازی تاکتیکی؛ بهبودهای سریع، کم‌هزینه و کوچک‌مقیاس فضاهای شهری",
+   "photo": "media/c2/2026-10-14/photos/tactical-urbanism.jpg",
+   "word_audio": "media/c2/2026-10-14/word-audio/tactical-urbanism.mp3"
+  },
+  {
+   "word": "megalopolis",
+   "pos": "noun",
+   "meaning": "an enormous urban region formed by several big cities merging into one continuous area",
+   "example": "The Bos-Wash megalopolis stretches from Boston to Washington in one continuous band of cities.",
+   "pronunciation": "meg-uh-LOP-uh-lis",
+   "persian": "ابرمجموعه‌ای از کلان‌شهرهای پیوسته",
+   "photo": "media/c2/2026-10-11/photos/megalopolis.jpg",
+   "word_audio": "media/c2/2026-10-11/word-audio/megalopolis.mp3"
+  },
+  {
+   "word": "conurbation",
+   "pos": "noun",
+   "meaning": "a vast urban area formed when several towns grow and merge into one continuous city",
+   "example": "The Tokyo-Yokohama conurbation is home to nearly forty million people.",
+   "pronunciation": "kon-ur-BAY-shun",
+   "persian": "مجموعه‌ای از شهرهای به‌هم‌پیوسته",
+   "photo": "media/c2/2026-10-11/photos/conurbation.jpg",
+   "word_audio": "media/c2/2026-10-11/word-audio/conurbation.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c2/2026-10-15/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day",
+  "audio": "media/c2/2026-10-15/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c2/2026-10-15/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The City We Keep Remaking",
+  "audio": "media/c2/2026-10-15/shadowing.mp3",
+  "transcript": "media/c2/2026-10-15/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c2/2026-10-15/shadowing-sentences/001.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/002.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/003.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/004.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/005.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/006.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/007.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/008.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/009.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/010.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/011.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/012.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/013.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/014.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/015.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/016.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/017.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/018.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/019.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/020.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/021.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/022.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/023.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/024.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/025.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/026.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/027.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/028.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/029.mp3",
+   "media/c2/2026-10-15/shadowing-sentences/030.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'pedestrianization' mean?",
+   "options": [
+    "an area with little access to affordable fresh food",
+    "turning streets into car-free areas for walkers",
+    "quick, low-cost, small-scale improvements to city spaces",
+    "relating to tailoring and elegant clothing style"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'sartorial' mean?",
+   "options": [
+    "an enormous urban region formed by several big cities merging into one continuous area",
+    "the overall outline or shape of a garment",
+    "relating to tailoring and elegant clothing style",
+    "very expensive high-fashion clothing made by hand"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'silhouette' mean?",
+   "options": [
+    "the overall outline or shape of a garment",
+    "a vast urban area formed when several towns grow and merge into one continuous city",
+    "an enormous urban region formed by several big cities merging into one continuous area",
+    "quick, low-cost, small-scale improvements to city spaces"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'food desert' mean?",
+   "options": [
+    "very expensive high-fashion clothing made by hand",
+    "an area with little access to affordable fresh food",
+    "the uncontrolled spread of a city outward into the surrounding countryside",
+    "turning streets into car-free areas for walkers"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'sprawl' mean?",
+   "options": [
+    "the overall outline or shape of a garment",
+    "very expensive high-fashion clothing made by hand",
+    "a vast urban area formed when several towns grow and merge into one continuous city",
+    "the uncontrolled spread of a city outward into the surrounding countryside"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'gentrification' mean?",
+   "options": [
+    "quick, low-cost, small-scale improvements to city spaces",
+    "the process in which a run-down area is renovated and becomes expensive, often forcing out its original residents",
+    "the uncontrolled spread of a city outward into the surrounding countryside",
+    "a vast urban area formed when several towns grow and merge into one continuous city"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'couture' mean?",
+   "options": [
+    "an enormous urban region formed by several big cities merging into one continuous area",
+    "the uncontrolled spread of a city outward into the surrounding countryside",
+    "quick, low-cost, small-scale improvements to city spaces",
+    "very expensive high-fashion clothing made by hand"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'tactical urbanism' mean?",
+   "options": [
+    "relating to tailoring and elegant clothing style",
+    "the uncontrolled spread of a city outward into the surrounding countryside",
+    "an enormous urban region formed by several big cities merging into one continuous area",
+    "quick, low-cost, small-scale improvements to city spaces"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'megalopolis' mean?",
+   "options": [
+    "an enormous urban region formed by several big cities merging into one continuous area",
+    "quick, low-cost, small-scale improvements to city spaces",
+    "relating to tailoring and elegant clothing style",
+    "the process in which a run-down area is renovated and becomes expensive, often forcing out its original residents"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'conurbation' mean?",
+   "options": [
+    "a vast urban area formed when several towns grow and merge into one continuous city",
+    "an enormous urban region formed by several big cities merging into one continuous area",
+    "relating to tailoring and elegant clothing style",
+    "an area with little access to affordable fresh food"
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "examples": [
+   "*The gentrification of* the old market district pushed rents beyond reach. (nominalisation with of-phrase)",
+   "*The pedestrianization of* central streets has changed how residents gather. (nominalisation as subject)",
+   "Critics blame *the uncontrolled sprawl of* suburbs for the death of the high street. (nominalisation with adjective stack)",
+   "*The sartorial elegance of* the delegates contrasted with the hall's brutalist concrete. (nominalisation of an adjective)",
+   "Urbanists praised *the tactical reinvention of* parking lots as pop-up parks. (verbal noun naming an event)",
+   "Analysts warned that *the fragmentation of* the megalopolis made coordinated planning nearly impossible. (nominalisation after that)"
+  ],
+  "explanation": "Nominalisation turns verbs and adjectives into nouns. **The destruction of the brownfield site** sounds more formal than saying that someone destroyed the site.\n\nAcademic English loves nominalisation because it packs ideas tightly. **The pedestrianization of the high street** replaces a whole clause about turning streets over to walkers.\n\nNominalisation often pairs with an **of**-phrase and heavy pre-modification. **The rapid gentrification of former industrial districts** carries more weight than saying that districts became expensive quickly.\n\nBut nominalisation can hide who did what. **The disappearance of fresh food** in a food desert names no culprit, which is exactly why politicians love the device.\n\nUse nominalisation in essays and reports, and prefer verbs in stories and speech. **The tactical reinvention of a parking lot** belongs in a paper, while chatting with a friend calls for verbs like reinvent and rebuild.",
+  "practice": [
+   {
+    "a": "\"The rapid pedestrianization of the old quarter...\" — the verb becomes a noun, with quick as the adjective rapid.",
+    "q": "Rewrite with nominalisation: \"The city pedestrianized the old quarter quickly.\""
+   },
+   {
+    "a": "It hides the agent. Displacement and renewal name events, never who displaced or renewed — unlike \"The council displaced the tenants.\"",
+    "q": "What does the nominalisation hide in: \"The displacement of long-term tenants followed the renewal\"?"
+   },
+   {
+    "a": "\"Rents fell, which shows progress.\" — prefer verbs (fell, shows) over stacked nouns (implementation, reduction, indication).",
+    "q": "De-nominalise this bloated sentence: \"The implementation of the reduction of rents is an indication of progress.\""
+   }
+  ],
+  "quiz": [
+   {
+    "answer": 0,
+    "options": [
+     "The gentrification of the district pushed rents beyond reach.",
+     "The district got gentrified and rents went up a lot.",
+     "Gentrification happened and that made rents really expensive.",
+     "Rents got expensive when the district became gentrified."
+    ],
+    "question": "Choose the most formal, academic sentence."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "pedestrianization",
+     "pedestrianize",
+     "pedestrianized",
+     "pedestrian"
+    ],
+    "question": "Complete: \"The council approved the ___ of the riverside warehouses.\""
+   },
+   {
+    "answer": 0,
+    "options": [
+     "The production",
+     "The producing",
+     "The produce",
+     "Producingly"
+    ],
+    "question": "Complete: \"___ of couture gowns requires exceptional hand skill.\""
+   },
+   {
+    "answer": 0,
+    "options": [
+     "The displacement of long-term tenants followed the renewal.",
+     "The council displaced long-term tenants after the renewal.",
+     "Long-term tenants left because the council renewed the area.",
+     "After renewing the area, the council displaced the tenants."
+    ],
+    "question": "Which sentence hides the agent most completely, the classic danger of nominalisation?"
+   },
+   {
+    "answer": 0,
+    "options": [
+     "sartorial elegance",
+     "delegates",
+     "contrasted",
+     "concrete hall"
+    ],
+    "question": "Identify the nominalisation: \"The sartorial elegance of the delegates contrasted with the concrete hall.\""
+   },
+   {
+    "answer": 0,
+    "options": [
+     "tactical",
+     "tacticize",
+     "tacticality",
+     "tactically"
+    ],
+    "question": "Complete: \"Analysts praised the ___ reinvention of parking lots as parks.\""
+   },
+   {
+    "answer": 0,
+    "options": [
+     "the pedestrianization of the street",
+     "the street was pedestrianized",
+     "to pedestrianize the street",
+     "pedestrianize the street"
+    ],
+    "question": "Which pair shows the same nominalisation pattern as \"the destruction of the site\"?"
+   },
+   {
+    "answer": 0,
+    "options": [
+     "fragmentation",
+     "fragmentize",
+     "fragmented",
+     "fragmenting"
+    ],
+    "question": "Complete: \"Critics warned that the ___ of the megalopolis made coordinated planning nearly impossible.\""
+   },
+   {
+    "answer": 0,
+    "options": [
+     "We will assess how tactical urbanism changes the street.",
+     "The implementation of the assessment of the changes of tactical urbanism to the street will be conducted.",
+     "The conduction of an assessment of tactical urbanism street changes will occur.",
+     "The performance of an evaluation of the transformation of the street by tactical urbanism is planned."
+    ],
+    "question": "Choose the least over-nominalised, most direct version."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "gentrification",
+     "gentrify",
+     "gentrified",
+     "gentrifyingly"
+    ],
+    "question": "Complete: \"The ___ of the district was rapid and ruthless.\""
+   }
+  ],
+  "title": "Nominalisation in Formal English"
+ }
+}

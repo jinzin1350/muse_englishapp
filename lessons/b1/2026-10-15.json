@@ -1,0 +1,396 @@
+{
+  "date": "2026-10-15",
+  "theme": "review day",
+  "level": "b1",
+  "cefr": "B1",
+  "review": true,
+  "review_of": [
+    "2026-10-11",
+    "2026-10-12",
+    "2026-10-13",
+    "2026-10-14"
+  ],
+  "review_window_words": 40,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "tender",
+      "pos": "adjective",
+      "meaning": "soft and easy to chew",
+      "example": "The meat is tender and juicy.",
+      "pronunciation": "TEN-duhr",
+      "persian": "نرم و لطیف",
+      "photo": "media/b1/2026-10-14/photos/tender.jpg",
+      "word_audio": "media/b1/2026-10-14/word-audio/tender.mp3"
+    },
+    {
+      "word": "vintage",
+      "pos": "adjective",
+      "meaning": "old but valuable and fashionable, from a past time",
+      "example": "She found a beautiful vintage dress at the market.",
+      "pronunciation": "VIN-tij",
+      "persian": "قدیمی و شیک (وینتیج)",
+      "photo": "media/b1/2026-10-13/photos/vintage.jpg",
+      "word_audio": "media/b1/2026-10-13/word-audio/vintage.mp3"
+    },
+    {
+      "word": "trendy",
+      "pos": "adjective",
+      "meaning": "popular and fashionable at the moment",
+      "example": "Oversized jackets are trendy this year.",
+      "pronunciation": "TREN-dee",
+      "persian": "مد روز، ترند",
+      "photo": "media/b1/2026-10-13/photos/trendy.jpg",
+      "word_audio": "media/b1/2026-10-13/word-audio/trendy.mp3"
+    },
+    {
+      "word": "data",
+      "pos": "noun",
+      "meaning": "information that computers store and use",
+      "example": "Our data shows that most people learn faster with pictures.",
+      "pronunciation": "DAY-tuh",
+      "persian": "داده — اطلاعاتی که کامپیوتر ذخیره و استفاده می‌کند",
+      "photo": "media/b1/2026-10-11/photos/data.jpg",
+      "word_audio": "media/b1/2026-10-11/word-audio/data.mp3"
+    },
+    {
+      "word": "outfit",
+      "pos": "noun",
+      "meaning": "a set of clothes worn together",
+      "example": "She wore a smart outfit to the job interview.",
+      "pronunciation": "OUT-fit",
+      "persian": "ست لباس",
+      "photo": "media/b1/2026-10-13/photos/outfit.jpg",
+      "word_audio": "media/b1/2026-10-13/word-audio/outfit.mp3"
+    },
+    {
+      "word": "stopover",
+      "pos": "noun",
+      "meaning": "a short break or stay in one place during a longer journey",
+      "example": "We had a four-hour stopover in Dubai before flying to London.",
+      "pronunciation": "STOP-oh-ver",
+      "persian": "توقف کوتاه در مسیر سفر طولانی",
+      "photo": "media/b1/2026-10-12/photos/stopover.jpg",
+      "word_audio": "media/b1/2026-10-12/word-audio/stopover.mp3"
+    },
+    {
+      "word": "speaker",
+      "pos": "noun",
+      "meaning": "a device that plays sound loudly",
+      "example": "We connected a speaker and danced in the living room.",
+      "pronunciation": "SPEE-kur",
+      "persian": "بلندگو — دستگاهی که صدا را بلند پخش می‌کند",
+      "photo": "media/b1/2026-10-11/photos/speaker.jpg",
+      "word_audio": "media/b1/2026-10-11/word-audio/speaker.mp3"
+    },
+    {
+      "word": "tailor",
+      "pos": "noun",
+      "meaning": "a person who makes or changes clothes to fit you",
+      "example": "A tailor shortened my trousers in two days.",
+      "pronunciation": "TAY-lor",
+      "persian": "خیاط",
+      "photo": "media/b1/2026-10-13/photos/tailor.jpg",
+      "word_audio": "media/b1/2026-10-13/word-audio/tailor.mp3"
+    },
+    {
+      "word": "accessory",
+      "pos": "noun",
+      "meaning": "a small extra item, like a belt or scarf, that completes an outfit",
+      "example": "A silk scarf is a lovely accessory.",
+      "pronunciation": "ak-SES-uh-ree",
+      "persian": "اکسسوری، لوازم جانبی",
+      "photo": "media/b1/2026-10-13/photos/accessory.jpg",
+      "word_audio": "media/b1/2026-10-13/word-audio/accessory.mp3"
+    },
+    {
+      "word": "screen",
+      "pos": "noun",
+      "meaning": "the flat front part of a phone or computer where you see pictures and words",
+      "example": "I read the news on my phone screen every morning.",
+      "pronunciation": "SKREEN",
+      "persian": "صفحه‌نمایش — قسمت صافی که روی گوشی یا کامپیوتر تصویر می‌بینی",
+      "photo": "media/b1/2026-10-11/photos/screen.jpg",
+      "word_audio": "media/b1/2026-10-11/word-audio/screen.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-10-15/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day Recap",
+    "audio": "media/b1/2026-10-15/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-10-15/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Day in the City",
+    "audio": "media/b1/2026-10-15/shadowing.mp3",
+    "transcript": "media/b1/2026-10-15/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b1/2026-10-15/shadowing-sentences/001.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/002.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/003.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/004.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/005.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/006.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/007.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/008.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/009.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/010.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/011.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/012.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/013.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/014.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/015.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/016.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/017.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/018.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/019.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/020.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/021.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/022.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/023.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/024.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/025.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/026.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/027.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/028.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/029.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/030.mp3",
+      "media/b1/2026-10-15/shadowing-sentences/031.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'tender' mean?",
+      "options": [
+        "a small extra item, like a belt or scarf, that completes an outfit",
+        "information that computers store and use",
+        "soft and easy to chew",
+        "a device that plays sound loudly"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'vintage' mean?",
+      "options": [
+        "a small extra item, like a belt or scarf, that completes an outfit",
+        "a device that plays sound loudly",
+        "information that computers store and use",
+        "old but valuable and fashionable, from a past time"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'trendy' mean?",
+      "options": [
+        "information that computers store and use",
+        "popular and fashionable at the moment",
+        "the flat front part of a phone or computer where you see pictures and words",
+        "a short break or stay in one place during a longer journey"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'data' mean?",
+      "options": [
+        "the flat front part of a phone or computer where you see pictures and words",
+        "popular and fashionable at the moment",
+        "a set of clothes worn together",
+        "information that computers store and use"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'outfit' mean?",
+      "options": [
+        "a set of clothes worn together",
+        "popular and fashionable at the moment",
+        "information that computers store and use",
+        "the flat front part of a phone or computer where you see pictures and words"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'stopover' mean?",
+      "options": [
+        "a person who makes or changes clothes to fit you",
+        "a set of clothes worn together",
+        "the flat front part of a phone or computer where you see pictures and words",
+        "a short break or stay in one place during a longer journey"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'speaker' mean?",
+      "options": [
+        "a device that plays sound loudly",
+        "a person who makes or changes clothes to fit you",
+        "a short break or stay in one place during a longer journey",
+        "information that computers store and use"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'tailor' mean?",
+      "options": [
+        "a person who makes or changes clothes to fit you",
+        "information that computers store and use",
+        "popular and fashionable at the moment",
+        "a small extra item, like a belt or scarf, that completes an outfit"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'accessory' mean?",
+      "options": [
+        "information that computers store and use",
+        "a set of clothes worn together",
+        "a small extra item, like a belt or scarf, that completes an outfit",
+        "a person who makes or changes clothes to fit you"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'screen' mean?",
+      "options": [
+        "a set of clothes worn together",
+        "a person who makes or changes clothes to fit you",
+        "the flat front part of a phone or computer where you see pictures and words",
+        "popular and fashionable at the moment"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Present Perfect Continuous",
+    "explanation": "We use the **present perfect continuous** for actions that started in the past and are still happening now. The form is **have/has been + verb-ing**. I **have been cooking** since noon — the meat is finally tender.\n\nUse **since** for a start point and **for** for a length of time. She **has been sewing** **since** eight this morning. The **tailor** **has been working** on my **outfit** **for** two hours.\n\nIt also explains a present result. He **has been staring** at that **screen** **for** three hours — his eyes hurt. The action is finished, but we can see the result now.\n\nThey **have been selling** **vintage** clothes **since** 2019. Their **trendy** jackets are the best sellers, and a silk **accessory** is their newest product.\n\nCommon mistake: do NOT use the continuous form with state verbs like **know**, **like**, or **belong**. Say I **have known** him for years — never I **have been knowing** him. Also check the **data** in your sentence: subject + **have/has** must agree.",
+    "examples": [
+      "*I have been cooking* since noon — the chicken is finally tender. (the action is still happening)",
+      "*She has been working* as a tailor for ten years. (for + a long time span)",
+      "*They have been waiting* for their stopover flight since six. (still waiting now)",
+      "*He has been checking* the data all morning. (recent action with a result now)",
+      "*We have been listening* to the new speaker for an hour. (a continuous activity)",
+      "*You have been wearing* that vintage outfit since Monday! (still true now)"
+    ],
+    "practice": [
+      {
+        "q": "Complete: I ___ (cook) since noon — the meat is tender now.",
+        "a": "have been cooking. Say: I have been cooking since noon."
+      },
+      {
+        "q": "Complete: She ___ (work) as a tailor for ten years.",
+        "a": "has been working. Say: She has been working as a tailor for ten years."
+      },
+      {
+        "q": "Choose: They ___ (wait / have been waiting) for their stopover since six.",
+        "a": "have been waiting. Say: They have been waiting for their stopover since six."
+      },
+      {
+        "q": "Fix the mistake: I have been knowing him for years.",
+        "a": "I have known him for years. State verbs like know never take the continuous form."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She ___ as a tailor for ten years.",
+        "options": [
+          "has been working",
+          "have been working",
+          "is work",
+          "works"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ dinner since noon.",
+        "options": [
+          "have been cooking",
+          "has been cooking",
+          "am cook",
+          "have cook"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ for their stopover since six.",
+        "options": [
+          "have been waiting",
+          "has been waiting",
+          "are wait",
+          "wait"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He ___ the data all morning.",
+        "options": [
+          "has been checking",
+          "have been checking",
+          "is check",
+          "check"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We ___ to the new speaker for an hour.",
+        "options": [
+          "have been listening",
+          "has been listening",
+          "are listen",
+          "listen"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You look tired. What ___?",
+        "options": [
+          "have you been doing",
+          "are you do",
+          "you have done",
+          "do you have done"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ that vintage outfit since Monday.",
+        "options": [
+          "has been wearing",
+          "have been wearing",
+          "is wear",
+          "wears"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ him for years.",
+        "options": [
+          "have known",
+          "have been knowing",
+          "am knowing",
+          "know"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "How long ___ at that screen?",
+        "options": [
+          "have you been looking",
+          "are you look",
+          "do you look",
+          "you have looked"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "My eyes hurt. I ___ onions all morning.",
+        "options": [
+          "have been chopping",
+          "has been chopping",
+          "have chop",
+          "chop"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

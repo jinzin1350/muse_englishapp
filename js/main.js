@@ -6654,11 +6654,13 @@ async function wireShadowingPractice(body, m) {
       '<div class="sp-btns">' +
       '<button class="sp-play" data-i="' + i + '" aria-label="Play sentence ' + (i + 1) + '"><img src="/icons/sp-play.png" alt=""></button>' +
       '<button class="sp-mic" data-i="' + i + '" aria-label="Record sentence ' + (i + 1) + '"><img src="/icons/sp-rec.png" alt=""></button>' +
+      '<button class="save-word-btn sp-save" data-i="' + i + '" aria-label="Save sentence ' + (i + 1) + ' for review" title="Save for later practice"><img src="/icons/bookmark.png" alt=""></button>' +
       '</div></div>' +
       '<div class="sp-sent-live hidden"><span class="sp-pulse"></span>' +
       '<span class="sp-sent-live-text" dir="auto"></span><span class="sp-sent-count"></span></div>' +
       '<div class="sp-sent-result"></div></div>';
   }).join('');
+  refreshSpSaveButtons(m.date);
 
   let active = null; /* one recording at a time */
 
@@ -6992,6 +6994,8 @@ async function wireShadowingPractice(body, m) {
   list.addEventListener('click', function (ev) {
     const hear = ev.target.closest('.sp-hear');
     if (hear) { speakWord(hear.getAttribute('data-w')); return; }
+    const spSave = ev.target.closest('.sp-save');
+    if (spSave) { toggleSaveSpSentence(m, sentences, +spSave.getAttribute('data-i')); return; }
     const play = ev.target.closest('.sp-play');
     if (play && !play.disabled) { playSentence(+play.getAttribute('data-i')); return; }
     const mic = ev.target.closest('.sp-mic');
@@ -8850,7 +8854,7 @@ function renderMistakes(v) {
 }
 
 function paintMistakes(v, arr) {
-  let html = '<h1>Review</h1><div id="saved-words-sec"><div class="empty">Loading saved words…</div></div>' +
+  let html = '<h1>Review</h1><div id="saved-words-sec"><div class="empty">Loading saved words…</div></div><div id="saved-sp-sec"></div>' +
     '<p class="muted">Words you missed, ready to practice again. Get one right and it leaves the list.</p>';
   if (!arr.length) {
     html += '<div class="empty">Nothing to review — nice work! 🎉</div>';
@@ -8870,6 +8874,7 @@ function paintMistakes(v, arr) {
   }
   v.innerHTML = html;
   loadSavedWordsSection();
+  loadSavedSpSection();
 }
 
 /* Bookmarked words block at the top of Review: list + practice quiz. */
@@ -8897,6 +8902,73 @@ function savedWordsHTML(arr) {
         '<div class="saved-actions">' +
         (x.word_audio ? '<button class="speaker-btn" data-action="play-track" data-src="' + esc(x.word_audio) + '" data-title="' + esc(x.word) + '" aria-label="Hear ' + esc(x.word) + '">🔊</button>' : '') +
         '<button class="save-word-btn saved" data-action="unsave-word" data-id="' + esc(x.id || '') + '" data-word="' + esc(x.word) + '" data-date="' + esc(x.lesson_date || '') + '" aria-label="Remove bookmark" title="Remove bookmark"><img src="/icons/bookmark.png" alt=""></button>' +
+        '</div></div>';
+    }).join('') + '</div>';
+}
+/* Bookmarked shadowing sentences (Alireza, 2026-10-15): sentences he wants
+   to practice more, saved from the shadowing tab via the bookmark button.
+   localStorage-only, mirrored on the word-bookmark pattern. Entry:
+   { d: lesson date, i: sentence index, t: text, a: audio url }. */
+var SP_SAVED_KEY = 'muse_sp_saved_v1';
+function getSavedSpSentences() {
+  try {
+    const arr = JSON.parse(localStorage.getItem(SP_SAVED_KEY) || '[]');
+    return Array.isArray(arr) ? arr : [];
+  } catch (e) { return []; }
+}
+function setSavedSpSentences(arr) {
+  try { localStorage.setItem(SP_SAVED_KEY, JSON.stringify(arr || [])); } catch (e) {}
+}
+function toggleSaveSpSentence(m, sentences, i) {
+  const d = (m && m.date) || '';
+  const arr = getSavedSpSentences();
+  const k = arr.findIndex(function (x) { return x.d === d && x.i === i; });
+  if (k !== -1) { arr.splice(k, 1); }
+  else {
+    const audio = (m.shadowing && m.shadowing.sentence_audio && m.shadowing.sentence_audio[i]) || '';
+    arr.unshift({ d: d, i: i, t: (sentences && sentences[i]) || '', a: audio });
+  }
+  setSavedSpSentences(arr);
+  refreshSpSaveButtons(d);
+}
+function removeSavedSp(date, i) {
+  setSavedSpSentences(getSavedSpSentences().filter(function (x) {
+    return !(x.d === date && String(x.i) === String(i));
+  }));
+}
+/* Paint the saved state on the shadowing sentence cards (called after the
+   list renders; mirrors refreshSavedWordButtons). */
+function refreshSpSaveButtons(date) {
+  try {
+    const list = document.getElementById('sp-sentences');
+    if (!list) return;
+    const d = date || (state.lesson && state.lesson.date) || '';
+    const saved = getSavedSpSentences();
+    list.querySelectorAll('.sp-save').forEach(function (b) {
+      const i = +b.getAttribute('data-i');
+      b.classList.toggle('saved', saved.some(function (x) { return x.d === d && x.i === i; }));
+    });
+  } catch (e) {}
+}
+/* Saved-sentences block in Review: list with listen + remove. */
+function loadSavedSpSection() {
+  const host = document.getElementById('saved-sp-sec');
+  if (!host) return;
+  host.innerHTML = savedSpHTML(getSavedSpSentences());
+}
+function savedSpHTML(arr) {
+  if (!arr.length) return '';
+  return '<div class="card"><div class="tch-weekly-title"><img src="/icons/bookmark.png" alt="" class="bm-ico"> Saved shadowing sentences <span class="muted">(' + arr.length + ')</span></div>' +
+    '<p class="muted" style="font-size:0.82rem;margin:0.25rem 0 0.6rem">Sentences you saved for extra practice — tap 🔊 to hear, then say it aloud.</p>' +
+    arr.map(function (x) {
+      return '<div class="saved-row">' +
+        '<div class="saved-word"><div dir="auto">' + esc(x.t) + '</div>' +
+        '<div class="muted" style="font-size:0.75rem">' + esc(x.d || '') + ' · sentence ' + (Number(x.i) + 1) + '</div></div>' +
+        '<div class="saved-actions">' +
+        (x.a
+          ? '<button class="speaker-btn" data-action="play-track" data-src="' + esc(x.a) + '" data-title="Saved sentence" aria-label="Hear sentence">🔊</button>'
+          : '<button class="speaker-btn" data-action="sp-say-saved" data-text="' + esc(x.t) + '" aria-label="Hear sentence">🔊</button>') +
+        '<button class="save-word-btn saved" data-action="unsave-sp" data-date="' + esc(x.d || '') + '" data-i="' + x.i + '" aria-label="Remove bookmark" title="Remove bookmark"><img src="/icons/bookmark.png" alt=""></button>' +
         '</div></div>';
     }).join('') + '</div>';
 }
@@ -9557,6 +9629,20 @@ function bindEvents() {
         if (state.view === 'review') renderMistakes($('#view'));
         else if (state.view === 'lesson' && state.lessonTab === 'words') renderLessonTab($('#lesson-body'));
       });
+    }
+    else if (a === 'unsave-sp') {
+      removeSavedSp(t.getAttribute('data-date'), t.getAttribute('data-i'));
+      if (state.view === 'review') renderMistakes($('#view'));
+    }
+    else if (a === 'sp-say-saved') {
+      /* TTS fallback for saved sentences from lessons without per-sentence
+         audio (same fallback the shadowing tab itself uses). */
+      try {
+        speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(t.getAttribute('data-text') || '');
+        u.lang = 'en-US'; u.rate = 0.9;
+        speechSynthesis.speak(u);
+      } catch (e) {}
     }
     else if (a === 'review-today') {
       const d = t.getAttribute('data-date');

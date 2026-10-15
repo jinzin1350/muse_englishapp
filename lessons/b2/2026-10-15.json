@@ -1,0 +1,395 @@
+{
+ "date": "2026-10-15",
+ "theme": "review day",
+ "level": "b2",
+ "cefr": "B2",
+ "review": true,
+ "review_of": [
+  "2026-10-11",
+  "2026-10-12",
+  "2026-10-13",
+  "2026-10-14"
+ ],
+ "review_window_words": 40,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "bonus",
+   "pos": "noun",
+   "meaning": "extra money paid to workers in addition to their salary",
+   "example": "The company gave every worker a Christmas bonus.",
+   "pronunciation": "BOH-nuhs",
+   "persian": "پاداش",
+   "photo": "media/b2/2026-10-11/photos/bonus.jpg",
+   "word_audio": "media/b2/2026-10-11/word-audio/bonus.mp3"
+  },
+  {
+   "word": "networking",
+   "pos": "noun",
+   "meaning": "meeting people who can help your career",
+   "example": "Networking at conferences helped her find a new job.",
+   "pronunciation": "NET-wurk-ing",
+   "persian": "شبکه‌سازی حرفه‌ای",
+   "photo": "media/b2/2026-10-11/photos/networking.jpg",
+   "word_audio": "media/b2/2026-10-11/word-audio/networking.mp3"
+  },
+  {
+   "word": "mute",
+   "pos": "verb",
+   "meaning": "to silence a microphone, speaker, or chat notifications",
+   "example": "Please mute your microphone when you are not speaking in the meeting.",
+   "pronunciation": "MYOOT",
+   "persian": "بی‌صدا کردن؛ میوت کردن",
+   "photo": "media/b2/2026-10-14/photos/mute.jpg",
+   "word_audio": "media/b2/2026-10-14/word-audio/mute.mp3"
+  },
+  {
+   "word": "probation",
+   "pos": "noun",
+   "meaning": "a trial period at the start of a new job",
+   "example": "During the six-month probation, the manager checks your work closely.",
+   "pronunciation": "proh-BAY-shun",
+   "persian": "دوره آزمایشی",
+   "photo": "media/b2/2026-10-11/photos/probation.jpg",
+   "word_audio": "media/b2/2026-10-11/word-audio/probation.mp3"
+  },
+  {
+   "word": "resign",
+   "pos": "verb",
+   "meaning": "to officially leave your job",
+   "example": "He decided to resign after ten years at the bank.",
+   "pronunciation": "ree-ZINE",
+   "persian": "استعفا دادن",
+   "photo": "media/b2/2026-10-11/photos/resign.jpg",
+   "word_audio": "media/b2/2026-10-11/word-audio/resign.mp3"
+  },
+  {
+   "word": "internship",
+   "pos": "noun",
+   "meaning": "a short period of work experience to learn a job",
+   "example": "My sister got a summer internship at a design company.",
+   "pronunciation": "IN-tuhn-ship",
+   "persian": "دوره کارآموزی",
+   "photo": "media/b2/2026-10-11/photos/internship.jpg",
+   "word_audio": "media/b2/2026-10-11/word-audio/internship.mp3"
+  },
+  {
+   "word": "spam",
+   "pos": "noun",
+   "meaning": "unwanted messages or emails sent to many people at once",
+   "example": "I get so much spam in my inbox that I miss important emails.",
+   "pronunciation": "SPAM",
+   "persian": "اسپم؛ پیام‌های ناخواسته",
+   "photo": "media/b2/2026-10-14/photos/spam.jpg",
+   "word_audio": "media/b2/2026-10-14/word-audio/spam.mp3"
+  },
+  {
+   "word": "influencer",
+   "pos": "noun",
+   "meaning": "a person with a large online audience who can change what people buy or think",
+   "example": "The influencer recommended a new skincare brand to her two million followers.",
+   "pronunciation": "IN-floo-uhn-ser",
+   "persian": "اینفلوئنسر؛ فرد تأثیرگذار در شبکه‌های اجتماعی",
+   "photo": "media/b2/2026-10-14/photos/influencer.jpg",
+   "word_audio": "media/b2/2026-10-14/word-audio/influencer.mp3"
+  },
+  {
+   "word": "accessory",
+   "pos": "noun",
+   "meaning": "a small item, like a scarf or a necklace, that completes an outfit",
+   "example": "A simple necklace is the perfect accessory for that dress.",
+   "pronunciation": "ak-SES-uh-ree",
+   "persian": "اکسسوری؛ وسیله تکمیلی لباس",
+   "photo": "media/b2/2026-10-13/photos/accessory.jpg",
+   "word_audio": "media/b2/2026-10-13/word-audio/accessory.mp3"
+  },
+  {
+   "word": "chewy",
+   "pos": "adjective",
+   "meaning": "food that needs a lot of chewing",
+   "example": "These cookies are soft in the middle and slightly chewy.",
+   "pronunciation": "CHOO-ee",
+   "persian": "سفت و جویدنی",
+   "photo": "media/b2/2026-10-12/photos/chewy.jpg",
+   "word_audio": "media/b2/2026-10-12/word-audio/chewy.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b2/2026-10-15/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day",
+  "audio": "media/b2/2026-10-15/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b2/2026-10-15/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Busy Intern",
+  "audio": "media/b2/2026-10-15/shadowing.mp3",
+  "transcript": "media/b2/2026-10-15/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b2/2026-10-15/shadowing-sentences/001.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/002.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/003.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/004.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/005.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/006.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/007.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/008.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/009.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/010.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/011.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/012.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/013.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/014.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/015.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/016.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/017.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/018.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/019.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/020.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/021.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/022.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/023.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/024.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/025.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/026.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/027.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/028.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/029.mp3",
+   "media/b2/2026-10-15/shadowing-sentences/030.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'bonus' mean?",
+   "options": [
+    "a person with a large online audience who can change what people buy or think",
+    "a trial period at the start of a new job",
+    "extra money paid to workers in addition to their salary",
+    "to officially leave your job"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'networking' mean?",
+   "options": [
+    "meeting people who can help your career",
+    "a trial period at the start of a new job",
+    "to silence a microphone, speaker, or chat notifications",
+    "extra money paid to workers in addition to their salary"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'mute' mean?",
+   "options": [
+    "to silence a microphone, speaker, or chat notifications",
+    "extra money paid to workers in addition to their salary",
+    "a short period of work experience to learn a job",
+    "a small item, like a scarf or a necklace, that completes an outfit"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'probation' mean?",
+   "options": [
+    "a person with a large online audience who can change what people buy or think",
+    "meeting people who can help your career",
+    "a short period of work experience to learn a job",
+    "a trial period at the start of a new job"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'resign' mean?",
+   "options": [
+    "food that needs a lot of chewing",
+    "extra money paid to workers in addition to their salary",
+    "to officially leave your job",
+    "a short period of work experience to learn a job"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'internship' mean?",
+   "options": [
+    "a person with a large online audience who can change what people buy or think",
+    "to officially leave your job",
+    "a small item, like a scarf or a necklace, that completes an outfit",
+    "a short period of work experience to learn a job"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'spam' mean?",
+   "options": [
+    "unwanted messages or emails sent to many people at once",
+    "a trial period at the start of a new job",
+    "a small item, like a scarf or a necklace, that completes an outfit",
+    "meeting people who can help your career"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'influencer' mean?",
+   "options": [
+    "food that needs a lot of chewing",
+    "a person with a large online audience who can change what people buy or think",
+    "to silence a microphone, speaker, or chat notifications",
+    "unwanted messages or emails sent to many people at once"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'accessory' mean?",
+   "options": [
+    "a person with a large online audience who can change what people buy or think",
+    "meeting people who can help your career",
+    "to officially leave your job",
+    "a small item, like a scarf or a necklace, that completes an outfit"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'chewy' mean?",
+   "options": [
+    "a trial period at the start of a new job",
+    "food that needs a lot of chewing",
+    "unwanted messages or emails sent to many people at once",
+    "a small item, like a scarf or a necklace, that completes an outfit"
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "Non-Defining Relative Clauses",
+  "explanation": "We use **non-defining relative clauses** to add extra information about a noun. The sentence still makes sense without the extra part.\n\nMy sister, who lives in Toronto, works as a tailor. Remove **who lives in Toronto**, and the sentence is still complete.\n\nUse **who** for people, **which** for things, and **whose** for possession. An influencer, who has two million followers, visited our office.\n\nAlways put **commas** around a non-defining clause. Without commas, the clause is necessary information, not extra.\n\nNever use **that** in a non-defining clause. Say *the bonus, which was generous* — not *the bonus, that was generous*.",
+  "examples": [
+   "*The intern, *who* passed her probation, got a full-time offer.* (who + commas = extra info about a person)",
+   "*My networking contacts, *who* work in finance, sent me job tips.* (who for people)",
+   "*Her bonus, *which* arrived in December, paid for a holiday.* (which + commas = extra info about a thing)",
+   "*The spam email, *which* looked real, was actually a scam.* (which for things)",
+   "*The influencer, *whose* followers trust her, recommended the accessory.* (whose = possession)",
+   "*His decision to resign, *which* surprised everyone, was the right move.* (which can refer to a whole idea)"
+  ],
+  "practice": [
+   {
+    "q": "Complete: My sister, ___ lives in Paris, is a tailor. (who / that)",
+    "a": "Who. Say: My sister, who lives in Paris, is a tailor."
+   },
+   {
+    "q": "Complete: The cookies, ___ were slightly chewy, disappeared fast. (which / that)",
+    "a": "Which. Say: The cookies, which were slightly chewy, disappeared fast."
+   },
+   {
+    "q": "Complete: The manager, ___ team passed probation, paid a bonus. (whose / who)",
+    "a": "Whose. Say: The manager, whose team passed probation, paid a bonus."
+   },
+   {
+    "q": "Complete: His internship, ___ started in June, taught him a lot. (which / who)",
+    "a": "Which. Say: His internship, which started in June, taught him a lot."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "My boss, ___ team passed probation, gave us a bonus.",
+    "options": [
+     "whose",
+     "who",
+     "which",
+     "that"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The cookies, ___ were slightly chewy, sold out.",
+    "options": [
+     "which",
+     "who",
+     "whose",
+     "that"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "An influencer, ___ has two million followers, visited us.",
+    "options": [
+     "who",
+     "which",
+     "whose",
+     "where"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The bonus, ___ arrived in December, was generous.",
+    "options": [
+     "which",
+     "who",
+     "whose",
+     "whom"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "His internship, ___ started in June, taught him a lot.",
+    "options": [
+     "which",
+     "who",
+     "whose",
+     "what"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The spam email, ___ looked real, was a scam.",
+    "options": [
+     "which",
+     "who",
+     "whose",
+     "why"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "My sister, ___ lives in Toronto, works as a tailor.",
+    "options": [
+     "who",
+     "which",
+     "whose",
+     "that"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The accessory, ___ cost very little, completed the outfit.",
+    "options": [
+     "which",
+     "who",
+     "whose",
+     "where"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The company, ___ profits doubled, paid every worker a bonus.",
+    "options": [
+     "whose",
+     "who",
+     "which",
+     "whom"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "To resign, ___ surprised everyone, was his final choice.",
+    "options": [
+     "which",
+     "who",
+     "whose",
+     "that"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}
