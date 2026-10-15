@@ -98,7 +98,7 @@ export async function onRequestPost(context) {
         { role: 'system', content: SYSTEM },
         { role: 'user', content: userMsg },
       ],
-      max_tokens: 1200,
+      max_tokens: 2500,
       temperature: 0.3,
     });
     let rawResp = out && out.response ? out.response : '';
@@ -106,18 +106,23 @@ export async function onRequestPost(context) {
     const text = (typeof rawResp === 'string' ? rawResp : JSON.stringify(rawResp)).trim();
     if (!text || text === '[object Object]' || text === '{}')
       return json({ error: 'AI_ANALYSIS_FAILED', debug: 'empty_response' }, 502);
+    /* strip ```json fences the model sometimes adds despite the prompt */
+    let clean = text;
+    const fence = clean.match(/```(?:json)?\s*([\s\S]*?)\s*```/i);
+    if (fence) clean = fence[1];
     let parsed = null;
     /* try: full JSON object */
-    const m = text.match(/\{[\s\S]*\}/);
+    const m = clean.match(/\{[\s\S]*\}/);
     if (m) { try { parsed = JSON.parse(m[0]); } catch (e) {} }
-    /* fallback: score regex + raw text */
+    /* fallback: score regex + friendly message (never raw model text to the user) */
     if (!parsed || typeof parsed.score === 'undefined') {
-      const sm = text.match(/["']?score["']?\s*[:=]\s*(\d{1,3})/i);
+      const sm = clean.match(/["']?score["']?\s*[:=]\s*(\d{1,3})/i);
       if (sm) {
         parsed = {
           score: parseInt(sm[1], 10),
-          summary: text.slice(0, 500),
+          summary: 'Your summary was scored ' + sm[1] + ' out of 100. The detailed AI feedback got cut off this time — record again for full grammar and pronunciation notes.',
           corrections: [],
+          pronunciation: [],
           strengths: [],
         };
       }

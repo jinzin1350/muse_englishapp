@@ -6353,6 +6353,11 @@ async function finishSummaryRecording() {
     resBox.innerHTML = '<div class="empty">📝 ' + shortMsg + '</div>';
     return;
   }
+  /* never show (or store) raw model JSON/fences — server fallback safety net */
+  let summaryText = String(score.summary || '');
+  if (/^\s*```/.test(summaryText) || /^\s*\{/.test(summaryText)) {
+    summaryText = 'Your summary was scored ' + score.score + ' out of 100. Detailed feedback didn\'t come through — try recording again.';
+  }
   const corr = (score.corrections || []).map(function (c) {
     return '<div class="sum-corr"><div class="sum-wrong">❌ ' + esc(c.wrong || '') + '</div>' +
       '<div class="sum-right">✅ ' + esc(c.right || '') + '</div>' +
@@ -6384,7 +6389,7 @@ async function finishSummaryRecording() {
   resBox.innerHTML =
     '<div class="sum-score-card"><div class="sum-ring" style="--p:' + score.score + ';--c:' + ring + '">' +
     '<span>' + score.score + '</span></div>' +
-    '<div class="sum-score-info"><h4>Your summary score</h4><p>' + esc(score.summary || '') + '</p></div></div>' +
+    '<div class="sum-score-info"><h4>Your summary score</h4><p>' + esc(summaryText) + '</p></div></div>' +
     (audioUrl ? '<div class="sum-audio"><span class="muted">🎧 Your recording:</span><audio controls src="' + audioUrl + '" style="width:100%;margin-top:.3rem"></audio></div>' : '') +
     '<details class="sum-details" open><summary>📝 Your transcript</summary><p><i>' + hiText + '</i></p>' +
     '<p class="muted sum-legend"><span class="sum-mispron">red</span> = mispronounced — tap 🔊 to hear the correct word</p></details>' +
@@ -6404,7 +6409,7 @@ async function finishSummaryRecording() {
         lesson_date: (sumState.manifest || {}).date || null,
         transcript: text.slice(0, 2000),
         score: score.score,
-        summary: String(score.summary || '').slice(0, 2000),
+        summary: summaryText.slice(0, 2000),
         corrections: score.corrections || [],
         pronunciation: score.pronunciation || [],
         strengths: score.strengths || [],
@@ -9677,7 +9682,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610150534';
+var APP_VERSION = '202610150546';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
