@@ -3186,7 +3186,7 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 /* ---- podcast summary challenge (2026-10-11) ---- */
 /* Designed podcast-summary card (Alireza's asset set, 2026-10-15) */
 .sum-card{position:relative;margin-top:1rem;border-radius:24px;overflow:hidden;background:#f6efe2;border:1px solid #efe4cf}
-.sum-photo{position:absolute;inset:0;background:url('media/summary/sum-photo.jpg') center right/cover no-repeat}
+.sum-photo{position:absolute;inset:0;background:url('/media/summary/sum-photo.jpg') center right/cover no-repeat}
 .sum-wave{position:absolute;top:7%;right:5%;width:24%;max-width:220px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}
 .sum-panel{position:relative;background:#fffdf9;border-radius:20px;margin:26px;padding:26px;max-width:392px;box-shadow:0 14px 34px rgba(70,45,10,.20)}
 .sum-head{display:flex;align-items:center;gap:14px;position:relative;margin-bottom:12px}
