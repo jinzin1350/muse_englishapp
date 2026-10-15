@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "volisun-20in-ceiling-fan",
+      "name_fa": "پنکه سقفی ولایسان ۲۰ اینچ",
+      "name_en": "VOLISUN 20\" Low Profile Ceiling Fan with Dimmable LED Light & Remote",
+      "price_cad": 62.99,
+      "regular_cad": 104.99,
+      "discount_pct": 40,
+      "added_fa": "پنجشنبه، ۱۵ اکتبر ۲۰۲۶",
+      "image": "img/volisun-20in-ceiling-fan.jpg",
+      "url": "https://www.amazon.ca/dp/B0G5NZJB67?tag=alirezaebra0d-20",
+      "source": "redflagdeals+coupon",
+      "item_no": null,
+      "blurb_fa": "چراغ ال‌ای‌دی قابل تنظیم؛ ۶ سرعت با کنترل از راه دور؛ کد کوپن OX14VU7Z"
+    },
+    {
+      "id": "greenworks-48v-14in-mower",
+      "name_fa": "چمن‌زن شارژی گرین‌ورکس ۴۸ ولت",
+      "name_en": "Greenworks 48V (2 x 24V) 14\" Brushless Cordless Lawn Mower",
+      "price_cad": 298.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "پنجشنبه، ۱۵ اکتبر ۲۰۲۶",
+      "image": "img/greenworks-48v-14in-mower.jpg",
+      "url": "https://www.amazon.ca/dp/B08X1WHDRJ?tag=alirezaebra0d-20",
+      "source": "hotcanadadeals+smartcanucks",
+      "item_no": null,
+      "blurb_fa": "بدون بنزین و دود؛ ۲ باتری ۴ آمپرساعتی و شارژر سریع در جعبه"
+    },
+    {
+      "id": "dreo-338s-smart-air-purifier",
+      "name_fa": "تصفیه‌کننده هوای هوشمند دریو ۳۳۸اس",
+      "name_en": "Dreo 338S Smart Air Purifier",
+      "price_cad": 99.99,
+      "regular_cad": 139.99,
+      "discount_pct": 29,
+      "added_fa": "پنجشنبه، ۱۵ اکتبر ۲۰۲۶",
+      "image": "img/dreo-338s-smart-air-purifier.jpg",
+      "url": "https://www.amazon.ca/dp/B0H699TJC3?tag=alirezaebra0d-20",
+      "source": "smartcanucks+dp-page",
+      "item_no": null,
+      "blurb_fa": "فیلتر هپای سه‌مرحله‌ای، حالت خواب بی‌صدا، کنترل با اپلیکیشن"
+    },
+    {
+      "id": "nutribullet-baby-turbo-food-steamer",
+      "name_fa": "بخارپز غذای کودک نوتری‌بولت بیبی توربو",
+      "name_en": "nutribullet Baby Turbo Food Steamer",
+      "price_cad": 29.99,
+      "regular_cad": 39.99,
+      "discount_pct": 25,
+      "added_fa": "پنجشنبه، ۱۵ اکتبر ۲۰۲۶",
+      "image": "img/nutribullet-baby-turbo-food-steamer.jpg",
+      "url": "https://www.amazon.ca/dp/B098BHGNYH?tag=alirezaebra0d-20",
+      "source": "dp-list-price+dealsfinders",
+      "item_no": null,
+      "blurb_fa": "بخارپز، یخ‌زدا و استریل‌کننده در یک دستگاه؛ ۵ حالت بخار با تایمر"
+    },
+    {
       "id": "valsole-heavy-duty-orthotics",
       "name_fa": "کفی طبی والسول (پشتیبانی قوس پا)",
       "name_en": "VALSOLE Heavy Duty Support Pain Relief Orthotics - 220+ lbs Plantar Fasciitis High Arch Support Insoles",
@@ -55,63 +111,7 @@
       "source": "redflagdeals+dp-regular-price",
       "item_no": null,
       "blurb_fa": "بسته ۱۰ تایی ۶۸۰ گرمی؛ پروتئین بالا و ۷۰ درصد مواد ارگانیک"
-    },
-    {
-      "id": "star-wars-outlaws-gold-switch2",
-      "name_fa": "بازی جنگ ستارگان: قانون‌شکنان — نسخه طلایی (نینتندو سوییچ ۲)",
-      "name_en": "Star Wars Outlaws Gold Edition - Nintendo Switch 2",
-      "price_cad": 39.99,
-      "regular_cad": 79.99,
-      "discount_pct": 50,
-      "added_fa": "چهارشنبه، ۱۴ اکتبر ۲۰۲۶",
-      "image": "img/star-wars-outlaws-gold-switch2.jpg",
-      "url": "https://www.amazon.ca/dp/B0F79Z9V31?tag=alirezaebra0d-20",
-      "source": "smartcanucks+dp-list-price",
-      "item_no": null,
-      "blurb_fa": "نسخه طلایی: بازی کامل + سیزن‌پس با دو بسته داستانی"
-    },
-    {
-      "id": "dell-34-plus-monitor-s3425dw",
-      "name_fa": "مانیتور خمیده دل پلاس ۳۴ اینچ (S3425DW)",
-      "name_en": "Dell 34 Plus USB-C Curved Monitor S3425DW, 34-inch WQHD 120Hz",
-      "price_cad": 429.99,
-      "regular_cad": 589.99,
-      "discount_pct": 27,
-      "added_fa": "چهارشنبه، ۱۴ اکتبر ۲۰۲۶",
-      "image": "img/dell-34-plus-monitor-s3425dw.jpg",
-      "url": "https://www.amazon.ca/dp/B0F1H325FN?tag=alirezaebra0d-20",
-      "source": "smartcanucks+retailer-corroboration",
-      "item_no": null,
-      "blurb_fa": "صفحه ۳۴ اینچ خمیده اولتراواید ۳۴۴۰ در ۱۴۴۰، ۱۲۰ هرتز، یواس‌بی‌سی با شارژ ۶۵ وات"
-    },
-    {
-      "id": "hoto-pixeldrive",
-      "name_fa": "پیچ‌گوشتی برقی هوتو پیکسل‌درایو",
-      "name_en": "HOTO PixelDrive Electric Screwdriver Set",
-      "price_cad": 69.98,
-      "regular_cad": 99.99,
-      "discount_pct": 30,
-      "added_fa": "سه‌شنبه، ۱۳ اکتبر ۲۰۲۶",
-      "image": "img/hoto-pixeldrive.jpg",
-      "url": "https://www.amazon.ca/dp/B0FKBJL68H?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "نمایشگر هوشمند گشتاور و ۳۰ سری؛ برای تعمیرات خانه و گجت"
-    },
-    {
-      "id": "sony-linkbuds-clip",
-      "name_fa": "هدفون سونی لینک‌بادز کلیپ",
-      "name_en": "Sony LinkBuds Clip Open-Ear Wireless Earbuds",
-      "price_cad": 197.98,
-      "regular_cad": 299.99,
-      "discount_pct": 34,
-      "added_fa": "سه‌شنبه، ۱۳ اکتبر ۲۰۲۶",
-      "image": "img/sony-linkbuds-clip.jpg",
-      "url": "https://www.amazon.ca/dp/B0G4SFQGVF?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "هدفون گیره‌ای روگوشی سونی؛ صدای محیط را هم می‌شنوی، تا ۳۷ ساعت شارژ با کیس"
     }
   ],
-  "updated_fa": "چهارشنبه ۲۲ مهر"
+  "updated_fa": "پنجشنبه ۲۳ مهر"
 }
