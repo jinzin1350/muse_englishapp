@@ -8968,9 +8968,225 @@ function savedSpHTML(arr) {
         (x.a
           ? '<button class="speaker-btn" data-action="play-track" data-src="' + esc(x.a) + '" data-title="Saved sentence" aria-label="Hear sentence">🔊</button>'
           : '<button class="speaker-btn" data-action="sp-say-saved" data-text="' + esc(x.t) + '" aria-label="Hear sentence">🔊</button>') +
+        '<button class="sp-rec-btn" data-action="sp-practice-saved" data-d="' + esc(x.d || '') + '" data-i="' + x.i + '" data-t="' + esc(x.t) + '" aria-label="Record and practice this sentence" title="Practice aloud"><img src="/icons/sp-rec.png" alt=""></button>' +
         '<button class="save-word-btn saved" data-action="unsave-sp" data-date="' + esc(x.d || '') + '" data-i="' + x.i + '" aria-label="Remove bookmark" title="Remove bookmark"><img src="/icons/bookmark.png" alt=""></button>' +
         '</div></div>';
     }).join('') + '</div>';
+}
+/* Inline recording practice for a saved shadowing sentence (Review tab,
+   Alireza 2026-10-15): record right here, get the score and word-level
+   feedback. Mirrors the shadowing tab's flow — live speech recognition on
+   Android/desktop, MediaRecorder -> Whisper on iOS; same scoring bands and
+   the same first-attempt-only points rule (shared sp_p_<date> key). */
+let savedSpActive = null;
+function practiceSavedSentence(btn) {
+  if (savedSpActive) {
+    const wasBtn = savedSpActive.btn;
+    stopSavedSpRec();
+    if (wasBtn === btn) return;
+  }
+  const row = btn.closest('.saved-row');
+  if (!row) return;
+  const target = btn.getAttribute('data-t') || '';
+  const date = btn.getAttribute('data-d') || '';
+  const i = parseInt(btn.getAttribute('data-i'), 10) || 0;
+  if (!target) return;
+  let resBox = row.querySelector('.sp-saved-result');
+  if (!resBox) {
+    resBox = document.createElement('div');
+    resBox.className = 'sp-saved-result';
+    row.appendChild(resBox);
+  }
+  resBox.innerHTML = '';
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const ua = navigator.userAgent || '';
+  const isIOS = /iPad|iPhone|iPod/.test(ua) ||
+    (navigator.platform === 'MacIntel' && (navigator.maxTouchPoints || 0) > 1);
+  const useServerSTT = isIOS && typeof window.MediaRecorder !== 'undefined' &&
+    !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+  if (!SR && !useServerSTT) {
+    resBox.innerHTML = '<div class="empty">🎤 Voice practice needs Chrome or Edge (Android or desktop).</div>';
+    return;
+  }
+  const a = { btn: btn, resBox: resBox, target: target, date: date, i: i,
+    saidFinal: '', lastInterim: '', timerId: null, recog: null, rec: null,
+    stream: null, chunks: [], uploaded: false, done: false, left: 15 };
+  savedSpActive = a;
+  btn.classList.add('recording');
+  resBox.innerHTML = '<div class="sp-sent-live"><span class="sp-pulse"></span>' +
+    '<span class="sp-sent-live-text">🎤 Recording… speak now! (tap 🎤 to stop)</span></div>';
+  if (useServerSTT) startSavedSpServer(a); else startSavedSpLive(a);
+}
+function stopSavedSpRec() {
+  const a = savedSpActive;
+  if (!a) return;
+  savedSpActive = null;
+  if (a.timerId) clearInterval(a.timerId);
+  a.btn.classList.remove('recording');
+  if (a.rec) {
+    /* Server path: stopping the recorder fires onstop -> savedSpUpload. */
+    try {
+      if (a.rec.state !== 'inactive') a.rec.stop();
+      else savedSpUpload(a);
+    } catch (e) { savedSpUpload(a); }
+    try { if (a.stream) a.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+    return;
+  }
+  try { if (a.recog) a.recog.stop(); } catch (e) {}
+  finishSavedSp(a, spCollapseRepeats(((a.saidFinal || '') + ' ' + (a.lastInterim || '')).trim()));
+}
+function startSavedSpLive(a) {
+  const r = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+  a.recog = r;
+  r.lang = 'en-US';
+  r.interimResults = true;
+  r.continuous = true;
+  const liveText = a.resBox.querySelector('.sp-sent-live-text');
+  r.onresult = function (ev) {
+    if (savedSpActive !== a) return;
+    let interim = '';
+    for (let k = ev.resultIndex; k < ev.results.length; k++) {
+      const tr = ev.results[k][0].transcript;
+      if (ev.results[k].isFinal) a.saidFinal = spAppendFinal(a.saidFinal, tr);
+      else interim += tr;
+    }
+    a.lastInterim = interim;
+    const t = (a.saidFinal + ' ' + interim).trim();
+    if (liveText) liveText.textContent = '🎤 ' + (t || 'Listening…');
+  };
+  r.onerror = function (ev) {
+    if (savedSpActive !== a) return;
+    const err = (ev && ev.error) || 'unknown';
+    if (err === 'not-allowed' || err === 'service-not-allowed') {
+      savedSpActive = null;
+      a.btn.classList.remove('recording');
+      a.resBox.innerHTML = '<div class="empty">🎤 Microphone blocked — allow microphone access and try again.</div>';
+    }
+  };
+  r.onend = function () { if (savedSpActive === a) stopSavedSpRec(); };
+  try { r.start(); }
+  catch (e) {
+    savedSpActive = null;
+    a.btn.classList.remove('recording');
+    a.resBox.innerHTML = '<div class="empty">🎤 Could not start recording. Try again.</div>';
+    return;
+  }
+  a.timerId = setInterval(function () {
+    if (savedSpActive !== a) return;
+    a.left--;
+    if (a.left <= 0) stopSavedSpRec();
+  }, 1000);
+}
+function startSavedSpServer(a) {
+  navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+    if (savedSpActive !== a) {
+      try { stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+      return;
+    }
+    a.stream = stream;
+    let rec;
+    try { rec = new MediaRecorder(stream); }
+    catch (e) {
+      savedSpActive = null;
+      a.btn.classList.remove('recording');
+      a.resBox.innerHTML = '<div class="empty">🎤 Could not start recording. Try again.</div>';
+      return;
+    }
+    a.rec = rec;
+    rec.ondataavailable = function (ev) { if (ev.data && ev.data.size) a.chunks.push(ev.data); };
+    rec.onstop = function () { savedSpUpload(a); };
+    try { rec.start(250); } catch (e) {}
+    a.timerId = setInterval(function () {
+      if (savedSpActive !== a) return;
+      a.left--;
+      if (a.left <= 0) stopSavedSpRec();
+    }, 1000);
+  }).catch(function () {
+    if (savedSpActive === a) {
+      savedSpActive = null;
+      a.btn.classList.remove('recording');
+      a.resBox.innerHTML = '<div class="empty">🎤 Microphone blocked — allow microphone access and try again.</div>';
+    }
+  });
+}
+async function savedSpUpload(a) {
+  if (a.uploaded) return;
+  a.uploaded = true;
+  if (a.timerId) clearInterval(a.timerId);
+  try { if (a.stream) a.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+  savedSpActive = null;
+  a.btn.classList.remove('recording');
+  const blob = new Blob(a.chunks, { type: (a.rec && a.rec.mimeType) || 'audio/mp4' });
+  a.resBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> 🔍 Transcribing…</div>';
+  let text = '';
+  try {
+    const fd = new FormData();
+    fd.append('audio', blob, 'speech.mp4');
+    const r = await fetch('/api/transcribe', { method: 'POST', body: fd });
+    let j = null;
+    try { j = await r.json(); } catch (e) {}
+    if (r.ok && j && j.text) text = String(j.text);
+  } catch (e) {}
+  if (!text.trim()) {
+    a.resBox.innerHTML = '<div class="empty">🎤 We didn\'t catch any words. Try again.</div>';
+    return;
+  }
+  finishSavedSp(a, spCollapseRepeats(text.trim()));
+}
+/* Score a saved-sentence attempt: same bands/points/ledger as the lesson tab. */
+async function finishSavedSp(a, said) {
+  if (a.done) return;
+  a.done = true;
+  const resBox = a.resBox;
+  try {
+    said = String(said || '').trim();
+    if (!said) {
+      resBox.innerHTML = '<div class="empty">🎤 We didn\'t catch any words. Try again.</div>';
+      return;
+    }
+    resBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> 🔍 Analyzing…</div>';
+    const pKey = 'sp_p_' + (a.date || 'lesson');
+    let scored = [];
+    try { scored = JSON.parse(localStorage.getItem(pKey) || '[]'); } catch (e) { scored = []; }
+    const prior = scored.indexOf(a.i) !== -1 ? 1 : 0;
+    const scoring = prior === 0 ? SHADOW_SCORING_FIRST : SHADOW_SCORING;
+    const an = analyzeSpeech(a.target, said, scoring);
+    try { trackEvent('shadowing_attempt', { sentence: a.i + 1, score: an.accuracy, date: a.date || null, attempt: prior + 1, from: 'review' }); } catch (e) {}
+    let pts = 0, awarded = false;
+    if (an.accuracy >= scoring.greatAt) pts = 5;
+    else if (an.accuracy >= scoring.okAt) pts = 3;
+    else if (an.accuracy > 0) pts = 1;
+    if (state.user && state.user.id && pts > 0 && prior === 0) {
+      scored.push(a.i);
+      try { localStorage.setItem(pKey, JSON.stringify(scored)); } catch (e) {}
+      awardPoints('shadowing_speaking', pts, (a.date || 'lesson') + '#s' + a.i);
+      awarded = true;
+    }
+    resBox.innerHTML = spSentResultHTML(an, said, awarded ? pts : 0);
+    resBox.querySelectorAll('.sp-hear').forEach(function (b) {
+      b.addEventListener('click', function () {
+        try {
+          speechSynthesis.cancel();
+          const u = new SpeechSynthesisUtterance(b.getAttribute('data-w'));
+          u.lang = 'en-US'; u.rate = 0.85;
+          speechSynthesis.speak(u);
+        } catch (e) {}
+      });
+    });
+    if (state.user && state.user.id && sb) {
+      try {
+        await sb.from('shadowing_attempts').insert({
+          user_id: state.user.id,
+          lesson_date: a.date || null,
+          audio_path: '',
+          transcript: ('[s' + (a.i + 1) + '] ' + said).slice(0, 2000),
+          score: an.accuracy
+        });
+      } catch (e) { /* table optional */ }
+    }
+  } catch (e) {
+    resBox.innerHTML = '<div class="empty">⚠️ Something went wrong. Try again.</div>';
+  }
 }
 /* Practice quiz built from bookmarked words: Persian->English + listening,
    distractors drawn from the user's own saved pool. */
@@ -9644,6 +9860,7 @@ function bindEvents() {
         speechSynthesis.speak(u);
       } catch (e) {}
     }
+    else if (a === 'sp-practice-saved') { practiceSavedSentence(t); }
     else if (a === 'review-today') {
       const d = t.getAttribute('data-date');
       getMistakes().then(function (arr) {
@@ -9768,7 +9985,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610151851';
+var APP_VERSION = '202610152012';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

@@ -3245,3 +3245,8 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 /* Shadowing sentence bookmark (2026-10-15): same bookmark look as words. */
 .sp-btns .sp-save{line-height:0;flex:0 0 auto}
 .sp-btns .sp-save img{width:22px;height:22px;display:block}
+/* Saved-sentence practice button (Review tab, 2026-10-15). */
+.sp-rec-btn{background:none;border:0;cursor:pointer;line-height:0;padding:6px;border-radius:50%}
+.sp-rec-btn img{width:22px;height:22px;display:block}
+.sp-rec-btn.recording{background:#fde8e8;box-shadow:0 0 0 4px rgba(200,75,49,.18)}
+.sp-saved-result{margin-top:.4rem}
