@@ -596,6 +596,7 @@ var PTS_LABELS = {
   mystery_box: 'Mystery box',
   podcast_milestone: 'Podcast milestone',
   shadowing_speaking: 'Speaking practice',
+  summary_complete: 'Podcast summary',
   quest_daily: 'Daily quest'
 };
 
@@ -1063,6 +1064,7 @@ var EARN_ROWS = [
   ['eye', 'Read all the words', '10 pts'],
   ['headphones', 'Finish the podcast', '20 pts'],
   ['mic', 'Finish shadowing', '15 pts'],
+  ['mic', 'Podcast summary', 'up to 10 pts'],
   ['quiz', 'Word quiz', '10 + 1 per correct'],
   ['book', 'Grammar quiz', '10 pts'],
   ['refresh', 'Daily review', '10 pts'],
@@ -4648,11 +4650,14 @@ async function openAdminUser(id) {
       sb.from('app_events').select('event,meta,created_at').eq('user_id', id).order('created_at', { ascending: false }).limit(40)
         .then(function (r) { return { evs: r.data || [] }; }, function () { return { evs: [] }; }),
       sb.from('shadowing_attempts').select('lesson_date,transcript,score,created_at').eq('user_id', id).order('created_at', { ascending: false }).limit(20)
-        .then(function (r) { return { att: r.error ? [] : (r.data || [] ) }; }, function () { return { att: [] }; })
+        .then(function (r) { return { att: r.error ? [] : (r.data || [] ) }; }, function () { return { att: [] }; }),
+      sb.from('summary_attempts').select('lesson_date,score,duration_sec,created_at').eq('user_id', id).order('created_at', { ascending: false }).limit(20)
+        .then(function (r) { return { sums: r.error ? [] : (r.data || [] ) }; }, function () { return { sums: [] }; })
     ]);
     const rows = res[1].rows.length ? res[1].rows : res[0].rows30;
     const evs = res[2].evs;
     const att = res[3].att;
+    const sums = res[4].sums;
     const listens = evs.filter(function (e) { return e.event === 'shadowing_listen'; }).length;
     const shAvg = att.length ? Math.round(att.reduce(function (a, x) { return a + (Number(x.score) || 0); }, 0) / att.length) : 0;
     const name = u.display_name || (u.email || '?').split('@')[0];
@@ -4697,6 +4702,14 @@ async function openAdminUser(id) {
             ' <span class="muted">· ' + esc(said) + (said.length >= 60 ? '…' : '') + '</span></span>' +
             '<span class="muted">' + esc(String(x.created_at || '').slice(0, 16).replace('T', ' ')) + '</span>' +
             '<b class="' + (sc >= 70 ? 'ok' : 'bad') + '">' + sc + '%</b></div>';
+        }).join('') + '</div>' : '') +
+      (sums.length ? '<p class="muted" style="font-size:0.85rem;margin:1rem 0 0.3rem"><b>🎙️ Recent podcast summaries</b></p><div class="an-assign">' +
+        sums.slice(0, 8).map(function (x) {
+          const sc = Number(x.score) || 0;
+          return '<div class="an-arow"><span>🎙️ <span class="muted">' + esc(String(x.lesson_date || '').slice(0, 10)) +
+            ' · ' + (Number(x.duration_sec) || 0) + 's</span></span>' +
+            '<span class="muted">' + esc(String(x.created_at || '').slice(0, 16).replace('T', ' ')) + '</span>' +
+            '<b class="' + (sc >= 70 ? 'ok' : 'bad') + '">' + sc + '</b></div>';
         }).join('') + '</div>' : '') +
       '<button class="btn btn-ghost btn-sm" data-action="adm-user-close" style="margin-top:0.8rem">Close</button></div>';
   } catch (e) {
@@ -6265,6 +6278,8 @@ async function finishSummaryRecording() {
   const live = document.getElementById('sum-live');
   const timer = document.getElementById('sum-timer');
   const resBox = document.getElementById('sum-result');
+  /* How long they actually spoke (timer counts down from 120). */
+  const durSec = Math.max(0, 120 - (sumState.left || 0));
   try { if (sumState.stream) sumState.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
   if (live) live.classList.add('hidden');
   if (timer) timer.classList.add('hidden');
@@ -6367,6 +6382,29 @@ async function finishSummaryRecording() {
     b.addEventListener('click', function (ev) { ev.stopPropagation(); speakEnglish(b.getAttribute('data-w')); });
   });
   try { markStep((sumState.manifest || {}).date, 'podcast'); } catch (e) {}
+  /* Persist the attempt for Progress + teacher review (Alireza, 2026-10-15).
+     The table is optional until the migration is run — failures are silent. */
+  if (state.user && state.user.id && sb) {
+    try {
+      await sb.from('summary_attempts').insert({
+        user_id: state.user.id,
+        lesson_date: (sumState.manifest || {}).date || null,
+        transcript: text.slice(0, 2000),
+        score: score.score,
+        summary: String(score.summary || '').slice(0, 2000),
+        corrections: score.corrections || [],
+        pronunciation: score.pronunciation || [],
+        strengths: score.strengths || [],
+        duration_sec: durSec
+      });
+    } catch (e) {}
+  }
+  /* XP scales with quality: score/10, once per lesson per day (first summary
+     of the day counts — retries improve the record, not the XP). */
+  try {
+    const sxp = Math.round(score.score / 10);
+    if (sxp > 0) awardPoints('summary_complete', sxp, ((sumState.manifest || {}).date || 'lesson') + '#summary');
+  } catch (e) {}
 }
 
 function shadowingTabHTML(m) {
@@ -8603,6 +8641,8 @@ function paintScores(v, arr, prog) {
   let html = '<h1 class="tut-anchor">Progress</h1>';
   html += progStatsHTML(prog);
   html += rewardsPlaceholderHTML();
+  html += '<div class="section-title"><h2>🎙️ Podcast summaries</h2></div>' +
+    '<div id="sum-history"><div class="empty">Loading summaries…</div></div>';
   if (avg === null) {
     html += '<div class="empty">No quiz attempts yet.<br>Finish a quiz and your scores will appear here.</div>';
   } else {
@@ -8615,6 +8655,7 @@ function paintScores(v, arr, prog) {
   v.innerHTML = html;
   refreshRewardsSection();
   loadScoreAnalytics();
+  loadSummaryHistory();
 }
 
 /* ---------------- Progress stats (merged 2026-10-09): the old #/progress
@@ -8681,6 +8722,57 @@ async function loadScoreAnalytics() {
     }
     host.innerHTML = html || '<div class="empty">Do a few quizzes and homework — your analytics will appear here.</div>';
   } catch (e) { host.innerHTML = ''; }
+}
+/* Podcast summary history (Alireza, 2026-10-15): stat cards (count, spoken
+   time, avg + best score) plus an expandable per-attempt mistake review,
+   all from the summary_attempts ledger. */
+async function loadSummaryHistory() {
+  const host = document.getElementById('sum-history');
+  if (!host) return;
+  if (!cloudReady() || !state.user || !state.user.id || !sb) { host.innerHTML = ''; return; }
+  let rows = [];
+  try {
+    const r = await sb.from('summary_attempts')
+      .select('lesson_date,score,duration_sec,transcript,summary,corrections,pronunciation,strengths,created_at')
+      .eq('user_id', state.user.id).order('created_at', { ascending: false }).limit(50);
+    if (!r.error) rows = r.data || [];
+  } catch (e) { rows = []; }
+  if (!document.getElementById('sum-history')) return;
+  if (!rows.length) {
+    host.innerHTML = '<div class="card plain"><p class="muted" style="margin:0">No summaries yet — record one from the podcast tab! 🎙️</p></div>';
+    return;
+  }
+  const scores = rows.map(function (x) { return Number(x.score) || 0; });
+  const totalSec = rows.reduce(function (s, x) { return s + (Number(x.duration_sec) || 0); }, 0);
+  const avg = Math.round(scores.reduce(function (a, b) { return a + b; }, 0) / scores.length);
+  const best = Math.max.apply(null, scores);
+  const mmss = Math.floor(totalSec / 60) + ':' + String(totalSec % 60).padStart(2, '0');
+  let html = '<div class="pg-grid">' +
+    pgStatCard('🎙️', rows.length, 'Summaries') +
+    pgStatCard('⏱️', mmss, 'Spoken') +
+    pgStatCard('📊', avg, 'Avg score') +
+    pgStatCard('🏆', best, 'Best score') +
+    '</div>';
+  html += '<div class="sum-hist">' + rows.slice(0, 20).map(function (x) {
+    const d = String(x.lesson_date || String(x.created_at || '').slice(0, 10) || '');
+    const cor = Array.isArray(x.corrections) ? x.corrections : [];
+    const pro = Array.isArray(x.pronunciation) ? x.pronunciation : [];
+    let det = '';
+    if (x.transcript) det += '<p class="muted" style="font-size:.85rem"><i dir="auto">“' + esc(String(x.transcript).slice(0, 300)) + '”</i></p>';
+    if (cor.length) det += '<h4 class="sum-h">🔧 Grammar (' + cor.length + ')</h4>' + cor.slice(0, 5).map(function (c) {
+      return '<div class="sum-corr"><div class="sum-wrong">❌ ' + esc(c.wrong || '') + '</div>' +
+        '<div class="sum-right">✅ ' + esc(c.right || '') + '</div></div>';
+    }).join('');
+    if (pro.length) det += '<h4 class="sum-h">🗣️ Pronunciation (' + pro.length + ')</h4>' + pro.slice(0, 5).map(function (p) {
+      return '<div class="sum-corr"><div class="sum-wrong">🗣️ “' + esc(p.heard || '') + '” → <b>' + esc(p.likely || '') + '</b></div></div>';
+    }).join('');
+    if (!det) det = '<p class="muted" style="font-size:.85rem">No mistakes recorded — nice! ✨</p>';
+    return '<details class="card sum-hist-item"><summary class="sum-hist-sum"><b>' + (Number(x.score) || 0) + '</b>' +
+      '<span class="muted"> · ' + esc(d) + ' · ' + (Number(x.duration_sec) || 0) + 's' +
+      (cor.length || pro.length ? ' · ' + (cor.length + pro.length) + ' mistakes' : ' · clean ✨') +
+      '</span></summary><div class="sum-hist-det">' + det + '</div></details>';
+  }).join('') + '</div>';
+  host.innerHTML = html;
 }
 async function aiReportStudent(btn) {
   try {
@@ -9535,7 +9627,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610150440';
+var APP_VERSION = '202610150500';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -9992,6 +10084,18 @@ async function apRenderUserDetail(v, id) {
       return '<tr><td>' + esc(String(a.lesson_date || '').slice(0, 10)) + '</td><td>' + (a.score || 0) + '%</td>' +
         '<td class="muted">' + esc(String(a.created_at || '').slice(0, 16).replace('T', ' ')) + '</td></tr>';
     }).join('');
+    /* Podcast summaries (Alireza, 2026-10-15): direct query — the RPC predates the table. */
+    let sumRows = [];
+    try {
+      const sr = await sb.from('summary_attempts').select('lesson_date,score,duration_sec,created_at')
+        .eq('user_id', id).order('created_at', { ascending: false }).limit(20);
+      if (!sr.error) sumRows = sr.data || [];
+    } catch (e) {}
+    const sumRecent = sumRows.map(function (a) {
+      return '<tr><td>' + esc(String(a.lesson_date || '').slice(0, 10)) + '</td><td>' + (a.score || 0) + '</td>' +
+        '<td>' + (a.duration_sec || 0) + 's</td>' +
+        '<td class="muted">' + esc(String(a.created_at || '').slice(0, 16).replace('T', ' ')) + '</td></tr>';
+    }).join('');
     v.innerHTML = apShell('users',
       '<div class="ap-head"><a href="/manage/users" data-apnav="users" class="ap-back">← All users</a>' +
       '<h1>' + esc(p.display_name || (p.email || '?').split('@')[0]) + '</h1>' +
@@ -10023,7 +10127,10 @@ async function apRenderUserDetail(v, id) {
       '</div>' +
       '<div class="card"><h3>Recent shadowing attempts</h3>' +
       (recent ? '<div class="ap-tablewrap"><table class="ap-table"><thead><tr><th>Lesson</th><th>Score</th><th>When</th></tr></thead><tbody>' + recent + '</tbody></table></div>'
-        : '<div class="empty">No attempts yet.</div>') + '</div>');
+        : '<div class="empty">No attempts yet.</div>') + '</div>' +
+      '<div class="card"><h3>🎙️ Recent summary attempts</h3>' +
+      (sumRecent ? '<div class="ap-tablewrap"><table class="ap-table"><thead><tr><th>Lesson</th><th>Score</th><th>Duration</th><th>When</th></tr></thead><tbody>' + sumRecent + '</tbody></table></div>'
+        : '<div class="empty">No summaries yet.</div>') + '</div>');
     apWireChrome(v);
     const sel = v.querySelector('#ap-setlevel');
     if (sel) sel.addEventListener('change', async function () {

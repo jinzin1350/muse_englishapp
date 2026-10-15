@@ -3202,6 +3202,13 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .sum-wrong{margin-bottom:.25rem}
 .sum-right{font-weight:600}
 .sum-why{font-size:.8rem;margin-top:.25rem}
+/* Podcast summary history (Progress tab, 2026-10-15). */
+.sum-hist{display:grid;gap:.6rem;margin-top:.8rem}
+.sum-hist-item{padding:.7rem .95rem}
+.sum-hist-sum{cursor:pointer;display:flex;gap:.5rem;align-items:baseline;font-size:.9rem;list-style:none}
+.sum-hist-sum::-webkit-details-marker{display:none}
+.sum-hist-sum b{font-size:1.2rem}
+.sum-hist-det{margin-top:.6rem;border-top:1px dashed var(--line);padding-top:.6rem}
 .sum-strengths{list-style:none;padding:0;margin:.3rem 0}
 .sum-strengths li{margin-bottom:.3rem;font-size:.88rem}
 
