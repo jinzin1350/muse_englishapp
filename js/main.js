@@ -6166,6 +6166,10 @@ function wordsTabHTML(m) {
   return cards + pronCard + cta;
 }
 
+/* Inner HTML of the designed "Start recording" button (Alireza's asset, 2026-10-15).
+   Used for the initial render and every reset after recording/processing. */
+var SUM_BTN_HTML = '<svg class="sum-btn-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3z"/><path d="M17 11a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg><span>Start recording</span><span class="sum-btn-chev">›</span>';
+
 function podcastTabHTML(m) {
   let html = '';
   if (m.podcast && m.podcast.audio) {
@@ -6178,14 +6182,23 @@ function podcastTabHTML(m) {
   }
   if (!html) html = '<div class="empty">No audio in this lesson yet.</div>';
   /* Podcast summary challenge: record a spoken summary (up to 2 min), get AI transcription + grammar scoring. */
-  html += '<div class="card plain sum-card"><h3 class="serif">🎤 Summarize the podcast</h3>' +
-    '<p class="muted">Listen to the episode, then record yourself summarizing it in English (up to 2 minutes). ' +
-    'Speak for at least 20 seconds — the longer you speak, the better your score analysis. ' +
-    'You\'ll get a transcript, grammar corrections and a score.</p>' +
-    '<div class="sum-controls"><button class="btn" id="sum-rec-btn" data-action="sum-record">🎤 Start recording</button>' +
-    '<span class="sum-timer hidden" id="sum-timer">2:00</span></div>' +
-    '<div class="sum-live hidden" id="sum-live"><span class="sp-pulse"></span> <span id="sum-live-text">🎤 Recording… summarize the podcast!</span></div>' +
-    '<div id="sum-result"></div></div>';
+  /* Podcast summary challenge: designed card (Alireza's asset set, 2026-10-15). */
+  html += '<div class="sum-card">' +
+    '<div class="sum-photo"><img class="sum-wave" src="media/summary/sum-wave.png" alt=""></div>' +
+    '<div class="sum-panel">' +
+      '<div class="sum-head">' +
+        '<img class="sum-mic" src="media/summary/sum-mic.png" alt="">' +
+        '<h3 class="sum-title">Summarize<br><span>the podcast</span></h3>' +
+        '<img class="sum-spark" src="media/summary/sum-spark.png" alt="">' +
+      '</div>' +
+      '<p>Listen to the episode, then record yourself summarizing it in English (up to 2 minutes).</p>' +
+      '<p>Speak for at least 20 seconds — the longer you speak, the better your score analysis.</p>' +
+      '<p>You\'ll get a transcript, grammar corrections and a score.</p>' +
+      '<div class="sum-controls"><button class="sum-btn" id="sum-rec-btn" data-action="sum-record">' + SUM_BTN_HTML + '</button>' +
+      '<span class="sum-timer hidden" id="sum-timer">2:00</span></div>' +
+      '<div class="sum-live hidden" id="sum-live"><span class="sp-pulse"></span> <span id="sum-live-text">🎤 Recording… summarize the podcast!</span></div>' +
+      '<div id="sum-result"></div>' +
+    '</div></div>';
   return html;
 }
 
@@ -6290,7 +6303,7 @@ async function finishSummaryRecording() {
   if (!resBox) return;
   if (!blob.size || blob.size < 2000) {
     resBox.innerHTML = '<div class="empty">🎤 No audio captured. Try again.</div>';
-    if (btn) { btn.disabled = false; btn.innerHTML = '🎤 Start recording'; }
+    if (btn) { btn.disabled = false; btn.innerHTML = SUM_BTN_HTML; }
     return;
   }
   resBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> 🔍 Transcribing your summary…</div>';
@@ -6308,7 +6321,7 @@ async function finishSummaryRecording() {
     resBox.innerHTML = '<div class="empty">🎤 ' +
       (err === 'No speech detected.' ? 'We didn\'t catch any words. Try again.'
         : 'Transcription failed' + (err ? ' (' + esc(err) + ')' : '') + '. Try again.') + '</div>';
-    if (btn) { btn.disabled = false; btn.innerHTML = '🎤 Start recording'; }
+    if (btn) { btn.disabled = false; btn.innerHTML = SUM_BTN_HTML; }
     return;
   }
   resBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> 📝 Analyzing grammar & scoring…</div>';
@@ -9664,7 +9677,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610150516';
+var APP_VERSION = '202610150534';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

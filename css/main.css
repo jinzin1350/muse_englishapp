@@ -3184,10 +3184,36 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 }
 
 /* ---- podcast summary challenge (2026-10-11) ---- */
-.sum-card{margin-top:1rem}
+/* Designed podcast-summary card (Alireza's asset set, 2026-10-15) */
+.sum-card{position:relative;margin-top:1rem;border-radius:24px;overflow:hidden;background:#f6efe2;border:1px solid #efe4cf}
+.sum-photo{position:absolute;inset:0;background:url('media/summary/sum-photo.jpg') center right/cover no-repeat}
+.sum-wave{position:absolute;top:7%;right:5%;width:24%;max-width:220px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.25))}
+.sum-panel{position:relative;background:#fffdf9;border-radius:20px;margin:26px;padding:26px;max-width:392px;box-shadow:0 14px 34px rgba(70,45,10,.20)}
+.sum-head{display:flex;align-items:center;gap:14px;position:relative;margin-bottom:12px}
+.sum-mic{width:62px;height:62px;border-radius:16px;flex:none}
+.sum-title{margin:0;font-size:1.85rem;line-height:1.04;font-weight:800;color:#1f2a44;letter-spacing:-.01em}
+.sum-title span{color:#f5820b}
+.sum-spark{position:absolute;top:-16px;right:6px;width:54px}
+.sum-panel p{color:#3a4456;font-size:.96rem;margin:0 0 .65em}
+.sum-panel p:last-of-type{margin-bottom:1em}
 .sum-controls{display:flex;align-items:center;gap:.8rem;margin:.6rem 0}
+.sum-btn{flex:1;display:flex;align-items:center;gap:.7rem;border:0;cursor:pointer;color:#fff;font-family:inherit;
+  font-size:1.12rem;font-weight:700;padding:.8rem .9rem .8rem 1.1rem;border-radius:18px;
+  background:linear-gradient(180deg,#ffa41b,#f57e0a);box-shadow:0 10px 22px rgba(245,130,11,.38)}
+.sum-btn:disabled{opacity:.75;cursor:default}
+.sum-btn-ic{width:26px;height:26px;fill:#fff;flex:none}
+.sum-btn-chev{margin-left:auto;flex:none;width:38px;height:38px;border-radius:50%;background:rgba(120,50,0,.28);
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;line-height:1;font-weight:700}
 .sum-timer{font-weight:800;font-size:1.1rem;color:#ff8a1e;font-variant-numeric:tabular-nums}
 .sum-live{display:flex;align-items:center;gap:.5rem;margin:.5rem 0;color:#ff8a1e;font-weight:600}
+@media (max-width:640px){
+  .sum-photo{position:relative;height:200px;background-position:center 30%}
+  .sum-wave{width:46%;max-width:none;top:14px;right:12px}
+  .sum-panel{margin:-72px 14px 14px;max-width:none;padding:22px}
+  .sum-title{font-size:1.6rem}
+  .sum-mic{width:54px;height:54px}
+  .sum-spark{width:42px;top:-12px}
+}
 .sum-score-card{display:flex;gap:1rem;align-items:center;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:1rem;margin:.8rem 0}
 .sum-ring{--p:0;--c:#ff9800;width:4.2rem;height:4.2rem;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.25rem;background:conic-gradient(var(--c) calc(var(--p)*1%),rgba(255,255,255,.12) 0);position:relative}
 .sum-ring::before{content:'';position:absolute;inset:6px;border-radius:50%;background:#1a1a2e}
