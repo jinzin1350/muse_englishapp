@@ -2614,11 +2614,6 @@ body.duo-playing{padding-bottom:0!important;}
 .sp-hear{border:none;background:rgba(208,82,82,.13);border-radius:4px;padding:.05em .3em;margin:.05em;
   font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-decoration-style:dotted}
 .sp-hear:active{transform:scale(.95)}
-/* Hear-yourself: play back the learner's own recording of a sentence. */
-.sp-hearself{border:1px solid rgba(124,106,240,.45);background:rgba(124,106,240,.1);color:#5a4fc4;
-  border-radius:99px;padding:.3rem .8rem;margin-top:.5rem;font:inherit;font-size:.85rem;font-weight:700;cursor:pointer}
-.sp-hearself:active{transform:scale(.95)}
-.sp-hearself.playing{background:#7c6af0;color:#fff;border-color:#7c6af0}
 
 /* ==================== Admin panel (/adminpanel) — Phase 1 ==================== */
 .ap-mode #app-header, .ap-mode #tabbar, .ap-mode #landing-header { display: none !important; }

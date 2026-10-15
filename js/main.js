@@ -6627,89 +6627,6 @@ async function wireShadowingPractice(body, m) {
     try { if (sentAudioEl) { sentAudioEl.pause(); sentAudioEl.src = ''; sentAudioEl = null; } } catch (e) {}
     speakingI = -1;
     list.querySelectorAll('.sp-play.speaking').forEach(function (b) { b.classList.remove('speaking'); });
-    spStopSelf();
-  }
-  /* ---- hear-yourself recordings (Alireza, 2026-10-14) ----
-     Every recorded sentence is saved to localStorage as a data URL so the
-     learner can play back what THEY said and compare it with the target.
-     Global LRU cap of 40 recordings (oldest evicted first); quota errors
-     evict more aggressively. Never breaks the recording flow. */
-  var SP_AU_IDX_KEY = 'spau_idx';
-  var SP_AU_MAX = 40;
-  var selfAudioEl = null, selfPlayingI = -1;
-  function spAuKey(dateStr, idx) { return 'spau_' + (dateStr || 'lesson') + '_' + idx; }
-  function spAuReadIdx() {
-    try { const v = JSON.parse(localStorage.getItem(SP_AU_IDX_KEY) || '[]'); return Array.isArray(v) ? v : []; }
-    catch (e) { return []; }
-  }
-  function saveSpRecording(dateStr, idx, blob) {
-    try {
-      if (!blob || !blob.size) return;
-      const fr = new FileReader();
-      fr.onload = function () {
-        try {
-          const url = String(fr.result || '');
-          if (!url || url.length < 100) return;
-          const key = spAuKey(dateStr, idx);
-          let order = spAuReadIdx().filter(function (k) { return k !== key; });
-          order.push(key);
-          while (order.length > SP_AU_MAX) {
-            const old = order.shift();
-            try { localStorage.removeItem(old); } catch (e) {}
-          }
-          let saved = false, guard = 0;
-          while (!saved && guard++ < 80) {
-            try { localStorage.setItem(key, url); saved = true; }
-            catch (e) {
-              const old = order.shift();
-              if (!old) break;
-              try { localStorage.removeItem(old); } catch (e2) {}
-            }
-          }
-          if (!saved) return;
-          try { localStorage.setItem(SP_AU_IDX_KEY, JSON.stringify(order)); } catch (e) {}
-          paintSpHearSelf(idx);
-        } catch (e) {}
-      };
-      try { fr.readAsDataURL(blob); } catch (e) {}
-    } catch (e) {}
-  }
-  function spHasRecording(dateStr, idx) {
-    try { return !!localStorage.getItem(spAuKey(dateStr, idx)); } catch (e) { return false; }
-  }
-  function spHearSelfHTML(dateStr, idx) {
-    if (!spHasRecording(dateStr, idx)) return '';
-    return '<button class="sp-hearself" data-i="' + idx + '" title="Hear your recording">🎧 Hear yourself</button>';
-  }
-  function paintSpHearSelf(idx) {
-    try {
-      const row = list.querySelector('.sp-sent[data-i="' + idx + '"]');
-      if (!row || row.querySelector('.sp-hearself')) return;
-      const box = row.querySelector('.sp-sent-result') || row.querySelector('.sp-sent-detail');
-      const hb = spHearSelfHTML(m.date, idx);
-      if (box && hb) box.insertAdjacentHTML('beforeend', hb);
-    } catch (e) {}
-  }
-  function spStopSelf() {
-    try { if (selfAudioEl) selfAudioEl.pause(); } catch (e) {}
-    selfAudioEl = null; selfPlayingI = -1;
-    try { list.querySelectorAll('.sp-hearself.playing').forEach(function (b) { b.classList.remove('playing'); }); } catch (e) {}
-  }
-  function spToggleSelf(idx) {
-    try {
-      if (selfPlayingI === idx && selfAudioEl) { spStopSelf(); return; }
-      spStopSelf();
-      stopSpeaking();
-      const url = localStorage.getItem(spAuKey(m.date, idx));
-      if (!url) return;
-      const el = new Audio(url);
-      selfAudioEl = el; selfPlayingI = idx;
-      const btn = list.querySelector('.sp-hearself[data-i="' + idx + '"]');
-      if (btn) btn.classList.add('playing');
-      el.onended = el.onerror = function () { spStopSelf(); };
-      const p = el.play();
-      if (p && p.catch) p.catch(function () { spStopSelf(); });
-    } catch (e) { spStopSelf(); }
   }
   function playSentenceAudio(i, url) {
     stopSpeaking();
@@ -6813,13 +6730,6 @@ async function wireShadowingPractice(body, m) {
       resBox.innerHTML = '<div class="empty">🎤 Could not start listening. Try again.</div>';
       return;
     }
-    /* NOTE (2026-10-14 hotfix): a parallel getUserMedia+MediaRecorder capture
-       was tried here for hear-yourself playback, but on Android the system
-       speech recognizer and a second mic stream fight over the microphone —
-       the recognizer then hears nothing ("We didn't catch any words").
-       Transcription must never break, so there is NO parallel capture on the
-       live path. Hear-yourself on Android needs the server-STT path instead
-       (Alireza's call — see memory). */
     live.classList.remove('hidden');
     liveText.textContent = 'Listening… speak now!';
     count.textContent = '0:' + String(MAXS).padStart(2, '0');
@@ -6895,8 +6805,6 @@ async function wireShadowingPractice(body, m) {
     if (a.timerId) clearInterval(a.timerId);
     try { if (a.stream) a.stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
     const blob = new Blob(a.chunks, { type: (a.rec && a.rec.mimeType) || 'audio/mp4' });
-    /* Hear-yourself: keep a copy of what the learner said (Alireza, 2026-10-14). */
-    saveSpRecording(m.date, a.i, blob);
     a.resBox.innerHTML = '<div class="sp-analyzing"><span class="sp-pulse"></span> 🔍 Transcribing…</div>';
     let text = '', err = '';
     try {
@@ -6997,12 +6905,6 @@ async function wireShadowingPractice(body, m) {
       resBox.querySelectorAll('.sp-hear').forEach(function (b) {
         b.addEventListener('click', function () { speakWord(b.getAttribute('data-w')); });
       });
-      /* Hear-yourself button — the recording may arrive a moment later; the
-         saver repaints it when ready. */
-      try {
-        const hb = spHearSelfHTML(m.date, i);
-        if (hb && !resBox.querySelector('.sp-hearself')) resBox.insertAdjacentHTML('beforeend', hb);
-      } catch (e) {}
       /* Persist the attempt for teacher review. */
       if (state.user && state.user.id && sb) {
         try {
@@ -7032,8 +6934,6 @@ async function wireShadowingPractice(body, m) {
   list.addEventListener('click', function (ev) {
     const hear = ev.target.closest('.sp-hear');
     if (hear) { speakWord(hear.getAttribute('data-w')); return; }
-    const hself = ev.target.closest('.sp-hearself');
-    if (hself) { spToggleSelf(+hself.getAttribute('data-i')); return; }
     const play = ev.target.closest('.sp-play');
     if (play && !play.disabled) { playSentence(+play.getAttribute('data-i')); return; }
     const mic = ev.target.closest('.sp-mic');
@@ -7057,7 +6957,6 @@ async function restoreSpProgress(list, m, sentences) {
   if (!list) return;
   list._spRows = list._spRows || [];
   list._spSentences = sentences || [];
-  list._spDate = m && m.date;
   paintSpReport(list);
   if (!cloudReady() || !m || !m.date || !sb) return;
   try {
@@ -7143,11 +7042,6 @@ function paintSpReport(list) {
       const a = analyzeSpeech(target, said, wasStrict[n] ? SHADOW_SCORING_FIRST : SHADOW_SCORING);
       det.innerHTML = '<div class="sp-detail-title">Last attempt — what to fix</div>' +
         spSentResultHTML(a, said, 0, true);
-      /* Hear-yourself: play back the saved recording of this sentence. */
-      try {
-        const hb = spHearSelfHTML(list._spDate, n - 1);
-        if (hb) det.insertAdjacentHTML('beforeend', hb);
-      } catch (e) {}
     } else if (det) det.remove();
   });
   return { done: done, count: count, total: total };
@@ -9639,7 +9533,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610150246';
+var APP_VERSION = '202610150315';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
