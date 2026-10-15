@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "jbl-go-4-portable-speaker",
+      "name_fa": "اسپیکر بلوتوثی جی‌بی‌ال گو ۴",
+      "name_en": "JBL Go 4 - Portable Waterproof Bluetooth Speaker",
+      "price_cad": 39.98,
+      "regular_cad": 69.98,
+      "discount_pct": 43,
+      "added_fa": "پنجشنبه، ۱۵ اکتبر ۲۰۲۶",
+      "image": "img/jbl-go-4-portable-speaker.jpg",
+      "url": "https://www.amazon.ca/dp/B0D1JG8CRC?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "صدای بزرگ و پرانرژی در یک اسپیکر جیبی؛ ضدآب و ضدگردوغبار با ۷ ساعت پخش."
+    },
+    {
+      "id": "atuvos-air-tracker-tag-4pack",
+      "name_fa": "ردیاب هوشمند اتووس (پک ۴تایی)",
+      "name_en": "ATUVOS Air Tracker Tag 4 Pack, Smart Key Finder Compatible with Apple Find My",
+      "price_cad": 29.99,
+      "regular_cad": 49.99,
+      "discount_pct": 40,
+      "added_fa": "پنجشنبه، ۱۵ اکتبر ۲۰۲۶",
+      "image": "img/atuvos-air-tracker-tag-4pack.jpg",
+      "url": "https://www.amazon.ca/dp/B0C3LDQLR7?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "کلید و کیف‌ت را دیگر گم نمی‌کنی؛ با Find My اپل کار می‌کند و بدون اشتراک ماهانه است."
+    },
+    {
       "id": "volisun-20in-ceiling-fan",
       "name_fa": "پنکه سقفی ولایسان ۲۰ اینچ",
       "name_en": "VOLISUN 20\" Low Profile Ceiling Fan with Dimmable LED Light & Remote",
@@ -83,34 +111,6 @@
       "source": "redflagdeals+pricepunchers",
       "item_no": null,
       "blurb_fa": "برند کانادایی با فرم خالص بیس‌گلیسینات؛ برای آرامش عضلات، کاهش خستگی و خواب بهتر"
-    },
-    {
-      "id": "dell-gaming-backpack-17",
-      "name_fa": "کوله‌پشتی گیمینگ دل ۱۷ اینچ",
-      "name_en": "Dell Gaming Backpack 17\" - GMBP1720M",
-      "price_cad": 55.68,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "چهارشنبه، ۱۴ اکتبر ۲۰۲۶",
-      "image": "img/dell-gaming-backpack-17.jpg",
-      "url": "https://www.amazon.ca/dp/B08CS1ZW7R?tag=alirezaebra0d-20",
-      "source": "smartcanucks+camelcamelcamel",
-      "item_no": null,
-      "blurb_fa": "ضد آب با کاور باران؛ جای لپ‌تاپ تا ۱۷ اینچ"
-    },
-    {
-      "id": "clif-bar-crunchy-peanut-butter-10pk",
-      "name_fa": "بار انرژی کلیف، کره بادام‌زمینی ترد (بسته ۱۰ تایی)",
-      "name_en": "CLIF BAR Energy Bars, Crunchy Peanut Butter, 680 g (Pack of 10)",
-      "price_cad": 9.99,
-      "regular_cad": 14.99,
-      "discount_pct": 33,
-      "added_fa": "چهارشنبه، ۱۴ اکتبر ۲۰۲۶",
-      "image": "img/clif-bar-crunchy-peanut-butter-10pk.jpg",
-      "url": "https://www.amazon.ca/dp/B0DNLGR5G7?tag=alirezaebra0d-20",
-      "source": "redflagdeals+dp-regular-price",
-      "item_no": null,
-      "blurb_fa": "بسته ۱۰ تایی ۶۸۰ گرمی؛ پروتئین بالا و ۷۰ درصد مواد ارگانیک"
     }
   ],
   "updated_fa": "پنجشنبه ۲۳ مهر"
