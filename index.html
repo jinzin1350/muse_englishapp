@@ -112,6 +112,12 @@
 #landing .lwrap{max-width:1080px;margin:0 auto;padding:0 20px}
 html.app-mode #landing{display:none!important}
 html:not(.app-mode) #splash{display:none!important}
+/* Splash: fill the viewport, show the WHOLE artwork (no crop). The image is
+   941x1672 but phone CSS viewports are ~360-430px wide — without this the
+   img rendered at intrinsic size and only its top-left was visible. */
+#splash{position:fixed;inset:0;z-index:10000;background:#F67B0A;display:flex;align-items:center;justify-content:center}
+#splash img{width:100%;height:100%;object-fit:contain}
+#splash.hide{opacity:0;pointer-events:none;transition:opacity .5s}
 .lnav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid #eee}
 .lnav-in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:20px}
 .lbrand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:19px;color:#101828;text-decoration:none}
