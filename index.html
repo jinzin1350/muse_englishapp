@@ -106,66 +106,168 @@
 </script>
 
   <style>
-/* ---- Phase 2.8 landing (static, crawler-visible) ---- */
-#landing{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#101828;background:#fff;line-height:1.6}
+/* ---- Muse English landing (redesign 2026-10-16) ---- */
+#landing{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#1c2430;background:#fff;line-height:1.6}
 #landing a{color:#E8590C}
-#landing .lwrap{max-width:1080px;margin:0 auto;padding:0 20px}
+#landing .lwrap{max-width:1140px;margin:0 auto;padding:0 22px}
+#landing h1,#landing h2,#landing h3{font-family:"Fredoka",system-ui,sans-serif;letter-spacing:-.3px}
 html.app-mode #landing{display:none!important}
 html:not(.app-mode) #splash{display:none!important}
-/* Splash: fill the viewport, show the WHOLE artwork (no crop). The image is
-   941x1672 but phone CSS viewports are ~360-430px wide — without this the
-   img rendered at intrinsic size and only its top-left was visible. */
-#splash{position:fixed;inset:0;z-index:10000;background:#F67B0A;display:flex;align-items:center;justify-content:center}
-#splash img{width:100%;height:100%;object-fit:contain}
-#splash.hide{opacity:0;pointer-events:none;transition:opacity .5s}
-.lnav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid #eee}
-.lnav-in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:20px}
-.lbrand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:19px;color:#101828;text-decoration:none}
-.lbrand img{width:32px;height:32px;border-radius:8px}
-.lnav-links{display:flex;gap:18px;margin-left:auto}
-.lnav-links a{color:#444;text-decoration:none;font-size:15px}
+
+/* header */
+.lnav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid #f3e9d8}
+.lnav-in{max-width:1140px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;gap:22px}
+.lbrand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:20px;color:#1c2430;text-decoration:none;font-family:"Fredoka",system-ui,sans-serif}
+.lbrand img{width:34px;height:34px;border-radius:9px}
+.lnav-links{display:flex;gap:20px;margin-left:auto}
+.lnav-links a{color:#4a5568;text-decoration:none;font-size:15.5px;font-weight:500}
 .lnav-links a:hover{color:#E8590C}
-.lnav-cta{background:#FF9600;color:#fff!important;padding:8px 16px;border-radius:8px;font-weight:700;text-decoration:none;font-size:15px;white-space:nowrap}
-.lhero{padding:56px 0 48px;background:linear-gradient(180deg,#FFF7ED 0%,#fff 100%)}
-.lhero h1{font-size:clamp(32px,5vw,52px);line-height:1.15;font-weight:800;margin:0 0 16px;letter-spacing:-.5px}
-.lhero .lsub{font-size:clamp(17px,2vw,20px);color:#444;max-width:640px;margin:0 0 28px}
-.lctas{display:flex;gap:12px;flex-wrap:wrap}
-.lcta-primary{background:#FF9600;color:#fff!important;padding:14px 26px;border-radius:10px;font-weight:700;text-decoration:none;font-size:17px;display:inline-block}
-.lcta-secondary{background:#fff;color:#101828!important;border:2px solid #101828;padding:12px 24px;border-radius:10px;font-weight:700;text-decoration:none;font-size:17px;display:inline-block}
-.lsec{padding:44px 0;scroll-margin-top:64px}
-#landing section[id]{scroll-margin-top:64px}
-.lsec h2{font-size:clamp(24px,3vw,32px);font-weight:800;margin:0 0 8px}
-.lsec .lsec-sub{color:#555;margin:0 0 24px;font-size:17px}
-.lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.lcard{border:1px solid #e5e7eb;border-radius:12px;padding:18px;text-decoration:none!important;color:#101828!important;display:block;background:#fff}
-.lcard:hover{border-color:#FF9600;box-shadow:0 4px 16px rgba(0,0,0,.06)}
-.lcard .lvl{font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.5px}
-.lcard .lvl-a1{color:#2B7FFF}.lvl-a2{color:#0E9F6E}.lvl-b1{color:#FF6B00}.lvl-b2{color:#8B5CF6}.lvl-c1{color:#EC4899}.lvl-c2{color:#D97706}
-.lcard .theme{font-weight:700;font-size:17px;margin:6px 0 4px}
-.lcard .words{color:#555;font-size:15px}
-.lsteps{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;counter-reset:step}
-.lstep{border:1px solid #e5e7eb;border-radius:12px;padding:18px;background:#fff}
-.lstep-num{width:32px;height:32px;border-radius:50%;background:#FF9600;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
-.lstep h3{margin:0 0 6px;font-size:17px}
-.lstep p{margin:0;color:#555;font-size:15px}
-.lhub{display:flex;justify-content:space-between;align-items:center;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;text-decoration:none!important;color:#101828!important;background:#fff}
-.lhub:hover{border-color:#FF9600}
-.lhub .hname{font-weight:700;font-size:16px}
-.lhub .hcount{color:#666;font-size:14px;white-space:nowrap}
-.lqa{border-bottom:1px solid #eee;padding:18px 0}
-.lqa h3{margin:0 0 6px;font-size:18px}
-.lqa p{margin:0;color:#444}
-.lfoot{background:#101828;color:#cbd5e1;padding:36px 0;margin-top:20px}
-.lfoot a{color:#cbd5e1;text-decoration:none}
-.lfoot a:hover{color:#fff}
-.lfoot-grid{display:flex;gap:40px;flex-wrap:wrap;max-width:1080px;margin:0 auto;padding:0 20px}
+.lnav-cta{background:#FF9600;color:#fff!important;padding:9px 20px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;white-space:nowrap;box-shadow:0 4px 14px rgba(255,150,0,.35)}
+.lnav-cta:hover{background:#f58a00}
+
+/* hero */
+.lhero{position:relative;overflow:hidden;background:linear-gradient(180deg,#FFF3E2 0%,#FFF9F1 55%,#fff 100%)}
+.lhero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 320px at 12% 18%,rgba(255,180,80,.28),transparent 70%),radial-gradient(700px 380px at 88% 8%,rgba(255,150,60,.20),transparent 70%);pointer-events:none}
+.lhero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:36px;align-items:center;padding:64px 0 72px}
+.lbadge{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid #f5e3c2;color:#b96a00;font-weight:700;font-size:12.5px;letter-spacing:1.4px;padding:7px 14px;border-radius:999px;margin-bottom:18px;box-shadow:0 2px 8px rgba(185,106,0,.08)}
+.lhero h1{font-size:clamp(36px,5.2vw,60px);line-height:1.08;font-weight:700;margin:0 0 16px;color:#1c2430}
+.lhero h1 .org{color:#FF8A00}
+.lhero .lsub{font-size:clamp(16px,1.8vw,19px);color:#5b6472;max-width:520px;margin:0 0 28px}
+.lctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.lcta-primary{background:#FF9600;color:#fff!important;padding:15px 28px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16.5px;display:inline-flex;align-items:center;gap:8px;box-shadow:0 8px 22px rgba(255,150,0,.38)}
+.lcta-primary:hover{background:#f58a00}
+.lcta-secondary{background:#fff;color:#1c2430!important;border:1.5px solid #e8ddc9;padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:16px;display:inline-flex;align-items:center;gap:9px}
+.lcta-secondary:hover{border-color:#FF9600}
+.lstats{display:grid;grid-template-columns:repeat(4,auto);gap:8px 26px;justify-content:start}
+.lstat{display:flex;align-items:center;gap:10px}
+.lstat img{width:34px;height:34px;border-radius:10px;object-fit:cover;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.lstat b{display:block;font-size:14.5px;line-height:1.25}
+.lstat span{display:block;font-size:12.5px;color:#7a8494;line-height:1.3}
+
+/* hero phone + mascot */
+.lhero-visual{position:relative;display:flex;justify-content:center;min-height:480px}
+.lphone{width:min(290px,70vw);background:#101019;border-radius:48px;padding:13px;position:relative;z-index:2;box-shadow:0 34px 70px rgba(255,140,0,.28),0 6px 18px rgba(0,0,0,.22)}
+.lphone-screen{background:#FFF9F1;border-radius:37px;overflow:hidden;position:relative}
+.lphone-notch{position:absolute;top:13px;left:50%;transform:translateX(-50%);width:110px;height:26px;background:#101019;border-radius:0 0 16px 16px;z-index:5}
+.lps-head{padding:40px 16px 10px;font-family:"Fredoka",system-ui,sans-serif;font-weight:700;font-size:19px}
+.lps-sub{padding:0 16px 10px;font-size:12px;color:#8a93a3}
+.lps-card{margin:2px 12px 12px;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.lps-card img{width:100%;height:118px;object-fit:cover;display:block}
+.lps-card-body{padding:11px 13px 13px}
+.lps-kicker{font-size:10.5px;letter-spacing:1px;color:#b96a00;font-weight:700}
+.lps-theme{font-weight:800;font-size:15.5px;margin:2px 0}
+.lps-meta{font-size:11.5px;color:#8a93a3;margin-bottom:9px}
+.lps-btn{display:block;text-align:center;background:#FF9600;color:#fff!important;font-weight:700;font-size:13.5px;padding:9px;border-radius:999px;text-decoration:none}
+.lps-tabs{display:flex;justify-content:space-around;padding:4px 8px 16px}
+.lps-tab{text-align:center;font-size:10px;color:#8a93a3}
+.lps-tab img{width:30px;height:30px;border-radius:9px;display:block;margin:0 auto 3px;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.06)}
+.lmascot{position:absolute;z-index:3;right:2%;bottom:-8px;width:min(200px,44vw);filter:drop-shadow(0 14px 22px rgba(255,140,0,.30))}
+.lhand{position:absolute;z-index:4;top:6%;right:6%;font-family:"Segoe Script","Comic Sans MS",cursive;font-size:19px;color:#4a3b2a;transform:rotate(-8deg);line-height:1.35;text-align:center}
+
+/* sections */
+.lsec{padding:56px 0;scroll-margin-top:70px}
+#landing section[id]{scroll-margin-top:70px}
+.lsec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:6px}
+.lsec h2{font-size:clamp(25px,3vw,34px);font-weight:700;margin:0}
+.lsec .lsec-sub{color:#6b7484;margin:6px 0 28px;font-size:16.5px}
+.lsee{font-size:15px;font-weight:600;white-space:nowrap;text-decoration:none}
+.lsee:hover{text-decoration:underline}
+
+/* today cards */
+.ltoday-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.ltoday-card{background:#fff;border:1px solid #f3e9d8;border-radius:20px;overflow:hidden;text-decoration:none!important;color:#1c2430!important;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(0,0,0,.04);transition:transform .15s,box-shadow .15s}
+.ltoday-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(255,150,0,.16)}
+.ltoday-photo{position:relative;height:128px;overflow:hidden;background:#f7f1e6}
+.ltoday-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.llvl{position:absolute;top:10px;left:10px;min-width:38px;text-align:center;font-weight:800;font-size:14px;color:#fff;padding:5px 10px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.llvl-a1{background:#FFC53D;color:#5b4300}.llvl-a2{background:#FF9F1C}.llvl-b1{background:#2B7FFF}.llvl-b2{background:#F97316}.llvl-c1{background:#38BDF8}.llvl-c2{background:#8B5CF6}
+.ltoday-body{padding:14px 14px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ltoday-theme{font-weight:800;font-size:15.5px;line-height:1.3}
+.ltoday-words{font-size:12.5px;color:#8a93a3;flex:1}
+.ltoday-go{display:inline-block;background:#FF9600;color:#fff!important;font-weight:700;font-size:13.5px;padding:8px 14px;border-radius:999px;text-decoration:none;text-align:center;margin-top:4px}
+
+/* how it works */
+.lsteps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.lstep{background:#FFF9F1;border:1px solid #f7ecd9;border-radius:20px;padding:22px 16px;text-align:center}
+.lstep img{width:56px;height:56px;object-fit:contain;margin-bottom:12px}
+.lstep h3{margin:0 0 8px;font-size:16.5px}
+.lstep p{margin:0;color:#6b7484;font-size:13.5px;line-height:1.55}
+
+/* level cards */
+.llevel-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.llevel-card{display:block;border-radius:18px;padding:20px 16px;text-decoration:none!important;color:#1c2430!important;transition:transform .15s}
+.llevel-card:hover{transform:translateY(-3px)}
+.llevel-card .llvl{position:static;display:inline-block;margin-bottom:10px}
+.llevel-card h3{margin:0 0 4px;font-size:16.5px}
+.llevel-card p{margin:0;font-size:13px;color:#5b6472}
+.llevel-a1{background:#FFF6DE}.llevel-a2{background:#FFEFD6}.llevel-b1{background:#E3F0FF}.llevel-b2{background:#FFE8D9}.llevel-c1{background:#E0F4FE}.llevel-c2{background:#EDE9FE}
+
+/* topic cards */
+.ltopic-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.ltopic-card{display:flex;align-items:center;gap:13px;background:#fff;border:1px solid #f3e9d8;border-radius:16px;padding:14px 15px;text-decoration:none!important;color:#1c2430!important;transition:transform .15s,box-shadow .15s}
+.ltopic-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(255,150,0,.12)}
+.ltopic-card img{width:52px;height:52px;border-radius:14px;object-fit:cover;flex:none;background:#FFF6E8}
+.ltopic-card b{display:block;font-size:14.5px;line-height:1.3}
+.ltopic-card span{display:block;font-size:12.5px;color:#8a93a3}
+
+/* grammar cards */
+.lgram-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.lgram-card{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #f3e9d8;border-radius:16px;padding:16px 18px;text-decoration:none!important;color:#1c2430!important}
+.lgram-card:hover{border-color:#FF9600}
+.lgram-card .llvl{position:static;flex:none}
+.lgram-card b{display:block;font-size:15.5px}
+.lgram-card span{display:block;font-size:12.5px;color:#8a93a3}
+
+/* CTA */
+.lcta-sec{margin:56px 0 0;position:relative;overflow:hidden;background:radial-gradient(900px 420px at 70% 110%,rgba(255,140,0,.35),transparent 65%),linear-gradient(180deg,#0e1930 0%,#16233d 100%);border-radius:28px}
+.lcta-in{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;padding:56px 48px}
+.lcta-mascot{width:min(300px,60vw);justify-self:center;filter:drop-shadow(0 18px 34px rgba(255,140,0,.35))}
+.lcta-sec h2{color:#fff;font-size:clamp(26px,3vw,36px);margin:0 0 12px}
+.lcta-sec p{color:#c3cede;margin:0 0 26px;font-size:16px;max-width:440px}
+.lstore-row{display:flex;gap:12px;flex-wrap:wrap}
+.lstore{display:inline-flex;align-items:center;gap:10px;background:#000;border:1px solid #3a4a63;color:#fff;border-radius:12px;padding:9px 18px;font-size:14px}
+.lstore small{display:block;font-size:10px;color:#9fb0c9;line-height:1.2}
+.lstore b{display:block;font-size:16px;line-height:1.25}
+
+/* footer */
+.lfoot{background:#101828;color:#cbd5e1;padding:44px 0 30px;margin-top:64px}
+.lfoot-grid{display:flex;gap:48px;flex-wrap:wrap;max-width:1140px;margin:0 auto;padding:0 22px}
+.lfoot-brand{display:flex;align-items:center;gap:9px;font-family:"Fredoka",system-ui,sans-serif;font-weight:700;font-size:19px;color:#fff;margin-bottom:12px}
+.lfoot-brand img{width:32px;height:32px;border-radius:8px}
 .lfoot-col h4{color:#fff;margin:0 0 10px;font-size:15px}
 .lfoot-col ul{list-style:none;padding:0;margin:0}
-.lfoot-col li{margin:6px 0;font-size:14px}
-.linstall{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:24px;text-align:center}
-.linstall h3{margin:0 0 8px;font-size:20px}
-.linstall p{margin:0 0 16px;color:#555}
-@media(max-width:640px){.lnav-links{display:none}.lhero{padding:36px 0 32px}}
+.lfoot-col li{margin:7px 0;font-size:14px}
+.lfoot a{color:#cbd5e1;text-decoration:none}
+.lfoot a:hover{color:#fff}
+.lfoot-base{max-width:1140px;margin:28px auto 0;padding:18px 22px 0;border-top:1px solid #243049;font-size:13px;color:#94a3b8}
+
+/* responsive */
+@media(max-width:1020px){
+  .ltoday-grid{grid-template-columns:repeat(3,1fr)}
+  .lsteps{grid-template-columns:repeat(3,1fr)}
+  .llevel-grid{grid-template-columns:repeat(3,1fr)}
+  .ltopic-grid{grid-template-columns:repeat(3,1fr)}
+  .lgram-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+  .lnav-links{display:none}
+  .lhero-grid{grid-template-columns:1fr;padding:44px 0 56px;text-align:center}
+  .lctas{justify-content:center}
+  .lstats{grid-template-columns:repeat(2,auto);justify-content:center;gap:16px 34px}
+  .lhero .lsub{margin-left:auto;margin-right:auto}
+  .lhero-visual{min-height:0;margin-top:8px}
+  .lmascot{width:128px;right:7%;bottom:-4px}
+  .lhand{display:none}
+  .lcta-in{grid-template-columns:1fr;padding:40px 26px;text-align:center}
+  .lcta-sec p{margin-left:auto;margin-right:auto}
+  .lstore-row{justify-content:center}
+  .ltoday-grid{grid-template-columns:repeat(2,1fr)}
+  .lsteps{grid-template-columns:repeat(2,1fr)}
+  .llevel-grid{grid-template-columns:repeat(2,1fr)}
+  .ltopic-grid{grid-template-columns:repeat(2,1fr)}
+  .lgram-grid{grid-template-columns:1fr}
+  .lsec-head{flex-direction:column;align-items:flex-start;gap:4px}
+}
 </style>
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32.png">
@@ -246,57 +348,54 @@ setTimeout(function () {
 <a class="lnav-cta" data-cta="hero_signup" href="#/signup">Start free</a>
 </div></header>
 
-<section class="lhero"><div class="lwrap">
-<h1>Free daily English lessons for every level</h1>
-<p class="lsub">Build real English, one daily lesson at a time: new words with photos and audio, a real conversation, speaking practice, one grammar point and a quick quiz. From A1 to C2.</p>
+<section class="lhero"><div class="lwrap"><div class="lhero-grid">
+<div class="lhero-copy">
+<span class="lbadge">&#9728;&#65039; DAILY ENGLISH LESSONS</span>
+<h1>Your English,<br><span class="org">every single day.</span></h1>
+<p class="lsub">Real conversations, useful words and clear grammar &mdash; just 15 minutes a day.</p>
 <div class="lctas">
-<a class="lcta-primary" data-cta="hero_primary" href="#today">Start today&rsquo;s free lesson</a>
-<a class="lcta-secondary" data-cta="hero_signup" href="#/signup">Create a free account</a>
+<a class="lcta-primary" data-cta="hero_primary" href="#today">Start today&rsquo;s free lesson &rarr;</a>
+<a class="lcta-secondary" data-cta="hero_how" href="#how-it-works">&#9654; See how it works</a>
 </div>
-</div></section>
-
-<section class="lsec" id="today"><div class="lwrap"><h2>Today&rsquo;s lessons</h2><p class="lsec-sub">A fresh lesson for every level, every day. Pick yours and start.</p><div class="lgrid"><a class="lcard" data-cta="today_lesson" href="/blog/a1/2026-10-16-health-body"><div class="lvl lvl-a1">A1</div><div class="theme">Health Words: ear, tooth, finger</div><div class="words">Today&rsquo;s lesson &rarr;</div></a><a class="lcard" data-cta="today_lesson" href="/blog/a2/2026-10-16-emotions-character"><div class="lvl lvl-a2">A2</div><div class="theme">Emotions Words: nervous, surprised, worried</div><div class="words">Today&rsquo;s lesson &rarr;</div></a><a class="lcard" data-cta="today_lesson" href="/blog/b1/2026-10-16-nature-environment-pets"><div class="lvl lvl-b1">B1</div><div class="theme">Nature Words: leash, kennel, purr</div><div class="words">Today&rsquo;s lesson &rarr;</div></a><a class="lcard" data-cta="today_lesson" href="/blog/b2/2026-10-16-money-shopping"><div class="lvl lvl-b2">B2</div><div class="theme">Money Words: overdraft, cashback, markup</div><div class="words">Today&rsquo;s lesson &rarr;</div></a><a class="lcard" data-cta="today_lesson" href="/blog/c1/2026-10-16-work-career"><div class="lvl lvl-c1">C1</div><div class="theme">Work Words: stakeholder, mentorship, autonomy</div><div class="words">Today&rsquo;s lesson &rarr;</div></a><a class="lcard" data-cta="today_lesson" href="/blog/c2/2026-10-16-education-learning"><div class="lvl lvl-c2">C2</div><div class="theme">Education Words: scaffolding, metacognition, heuristic</div><div class="words">Today&rsquo;s lesson &rarr;</div></a></div></div></section>
-
-<section class="lsec" id="how-it-works"><div class="lwrap">
-<h2>How it works</h2>
-<p class="lsec-sub">The same five steps every day &mdash; a habit you can actually keep.</p>
-<div class="lsteps">
-<div class="lstep"><div class="lstep-num">1</div><h3>Words</h3><p>New words with photos, meanings, examples and pronunciation audio.</p></div>
-<div class="lstep"><div class="lstep-num">2</div><h3>Conversation</h3><p>A real conversation between our hosts Maya and Lena, with a full transcript.</p></div>
-<div class="lstep"><div class="lstep-num">3</div><h3>Shadowing</h3><p>Repeat each sentence out loud at your own speed until it feels natural.</p></div>
-<div class="lstep"><div class="lstep-num">4</div><h3>Grammar</h3><p>One clear grammar point a day, with explanations and examples.</p></div>
-<div class="lstep"><div class="lstep-num">5</div><h3>Quiz</h3><p>A quick quiz to check what you learned &mdash; and track your progress.</p></div>
+<div class="lstats">
+<div class="lstat"><img src="/media/landing/icon-words.webp" alt=""><span><b>A1&ndash;C2</b><span>All levels</span></span></div>
+<div class="lstat"><img src="/media/landing/icon-target.webp" alt=""><span><b>15 min</b><span>A day</span></span></div>
+<div class="lstat"><img src="/media/landing/icon-podcast.webp" alt=""><span><b>Real podcasts</b><span>With native speakers</span></span></div>
+<div class="lstat"><img src="/media/landing/badge-xp.webp" alt=""><span><b>100% Free</b><span>Start now</span></span></div>
 </div>
-</div></section>
+</div>
+<div class="lhero-visual">
+<div class="lphone"><div class="lphone-screen"><div class="lphone-notch"></div><div class="lps-head">Good morning!</div><div class="lps-sub">Your daily lesson is ready</div><div class="lps-card"><img src="/media/a1/2026-10-16/photos/ear.jpg" alt="" loading="eager"><div class="lps-card-body"><div class="lps-kicker">DAILY LESSON</div><div class="lps-theme">Health Words: ear, tooth, finger</div><div class="lps-meta">A1 &middot; 15 minutes</div><a class="lps-btn" href="/blog/a1/2026-10-16-health-body">Start lesson</a></div></div><div class="lps-tabs"><div class="lps-tab"><img src="/media/landing/icon-words.webp" alt="">Words</div><div class="lps-tab"><img src="/media/landing/icon-podcast.webp" alt="">Podcast</div><div class="lps-tab"><img src="/media/landing/icon-shadow.webp" alt="">Shadowing</div><div class="lps-tab"><img src="/media/landing/icon-quiz.webp" alt="">Quiz</div></div></div></div>
+<img class="lmascot" src="/media/landing/mascot-hero.webp" alt="Atish, the Muse English mascot">
+<div class="lhand">Learn<br>Practice<br>Improve</div>
+</div>
+</div></div></section>
 
-<section class="lsec" id="levels"><div class="lwrap"><h2>Choose your level</h2><p class="lsec-sub">Six CEFR levels, from first words to near-native fluency.</p><div class="lgrid"><a class="lcard" data-cta="level_card" href="/blog/a1/"><div class="lvl lvl-a1">A1 &middot; Beginner</div><div class="words">First words and simple sentences.</div></a><a class="lcard" data-cta="level_card" href="/blog/a2/"><div class="lvl lvl-a2">A2 &middot; Elementary</div><div class="words">Everyday conversations and essential grammar.</div></a><a class="lcard" data-cta="level_card" href="/blog/b1/"><div class="lvl lvl-b1">B1 &middot; Intermediate</div><div class="words">Real topics, longer conversations.</div></a><a class="lcard" data-cta="level_card" href="/blog/b2/"><div class="lvl lvl-b2">B2 &middot; Upper-Intermediate</div><div class="words">Work, culture and opinions.</div></a><a class="lcard" data-cta="level_card" href="/blog/c1/"><div class="lvl lvl-c1">C1 &middot; Advanced</div><div class="words">Nuance, idioms and complex ideas.</div></a><a class="lcard" data-cta="level_card" href="/blog/c2/"><div class="lvl lvl-c2">C2 &middot; Proficient</div><div class="words">Near-native fluency and precision.</div></a></div></div></section>
-<section class="lsec" id="vocabulary"><div class="lwrap"><h2>Vocabulary by topic</h2><p class="lsec-sub">Words with photos, audio and examples, grouped by topic.</p><div class="lgrid"><a class="lhub" data-cta="hub" href="/blog/vocabulary/body-health/"><span class="hname">Body &amp; Health Vocabulary</span><span class="hcount">92 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/education/"><span class="hname">Education Vocabulary</span><span class="hcount">51 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/family-relationships/"><span class="hname">Family &amp; Relationships Vocabulary</span><span class="hcount">48 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/feelings-personality/"><span class="hname">Feelings &amp; Personality Vocabulary</span><span class="hcount">105 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/food-drink/"><span class="hname">Food &amp; Drink Vocabulary</span><span class="hcount">112 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/shopping-money/"><span class="hname">Shopping &amp; Money Vocabulary</span><span class="hcount">110 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/sports-hobbies/"><span class="hname">Sports &amp; Hobbies Vocabulary</span><span class="hcount">49 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/technology/"><span class="hname">Technology Vocabulary</span><span class="hcount">99 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/travel-transport/"><span class="hname">Travel &amp; Transport Vocabulary</span><span class="hcount">95 words &rarr;</span></a><a class="lhub" data-cta="hub" href="/blog/vocabulary/work-jobs/"><span class="hname">Work &amp; Jobs Vocabulary</span><span class="hcount">93 words &rarr;</span></a></div><p style="margin-top:16px"><a data-cta="hub" href="/blog/vocabulary/">See all vocabulary topics &rarr;</a></p></div></section>
-<section class="lsec" id="grammar"><div class="lwrap"><h2>Grammar guides</h2><p class="lsec-sub">Clear rules, real examples, common mistakes and interactive exercises.</p><div class="lgrid"><a class="lcard" data-cta="grammar" href="/blog/grammar/comparatives-superlatives/"><div class="lvl">A2</div><div class="theme">Comparatives and Superlatives</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/much-many-a-few-a-little/"><div class="lvl">A2</div><div class="theme">Much, Many, A Lot Of, A Few, A Little</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/must-have-to-should/"><div class="lvl">A2</div><div class="theme">Must, Have To and Should</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/passive-present-past/"><div class="lvl">B1</div><div class="theme">The Passive: Present and Past Simple</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/past-simple/"><div class="lvl">A2</div><div class="theme">Past Simple and Irregular Verbs</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/prepositions-of-time-in-on-at/"><div class="lvl">A1</div><div class="theme">Prepositions of Time: In, On, At</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/present-perfect-vs-past-simple/"><div class="lvl">B1</div><div class="theme">Present Perfect vs Past Simple</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/second-conditional/"><div class="lvl">B1</div><div class="theme">Second Conditional</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/third-conditional/"><div class="lvl">B1</div><div class="theme">Third Conditional</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a><a class="lcard" data-cta="grammar" href="/blog/grammar/zero-and-first-conditional/"><div class="lvl">A2</div><div class="theme">Zero and First Conditional</div><div class="words">Rules, examples &amp; exercises &rarr;</div></a></div><p style="margin-top:16px"><a data-cta="grammar" href="/blog/grammar/">See all grammar guides &rarr;</a></p></div></section>
+<section class="lsec" id="today"><div class="lwrap"><div class="lsec-head"><div><h2>Today&rsquo;s lessons</h2><p class="lsec-sub">Fresh lessons every day for all levels.</p></div><a class="lsee" href="/blog/">See all lessons &rarr;</a></div><div class="ltoday-grid"><a class="ltoday-card" data-cta="today_lesson" href="/blog/a1/2026-10-16-health-body"><div class="ltoday-photo"><img src="/media/a1/2026-10-16/photos/ear.jpg" alt="" loading="lazy"><span class="llvl llvl-a1">A1</span></div><div class="ltoday-body"><div class="ltoday-theme">Health Words: ear, tooth, finger</div><div class="ltoday-words">ear, tooth, finger</div><span class="ltoday-go">Start lesson &rarr;</span></div></a><a class="ltoday-card" data-cta="today_lesson" href="/blog/a2/2026-10-16-emotions-character"><div class="ltoday-photo"><img src="/media/a2/2026-10-16/photos/nervous.jpg" alt="" loading="lazy"><span class="llvl llvl-a2">A2</span></div><div class="ltoday-body"><div class="ltoday-theme">Emotions Words: nervous, surprised, worried</div><div class="ltoday-words">nervous, surprised, worried</div><span class="ltoday-go">Start lesson &rarr;</span></div></a><a class="ltoday-card" data-cta="today_lesson" href="/blog/b1/2026-10-16-nature-environment-pets"><div class="ltoday-photo"><img src="/media/b1/2026-10-16/photos/leash.jpg" alt="" loading="lazy"><span class="llvl llvl-b1">B1</span></div><div class="ltoday-body"><div class="ltoday-theme">Nature Words: leash, kennel, purr</div><div class="ltoday-words">leash, kennel, purr</div><span class="ltoday-go">Start lesson &rarr;</span></div></a><a class="ltoday-card" data-cta="today_lesson" href="/blog/b2/2026-10-16-money-shopping"><div class="ltoday-photo"><img src="/media/b2/2026-10-16/photos/overdraft.jpg" alt="" loading="lazy"><span class="llvl llvl-b2">B2</span></div><div class="ltoday-body"><div class="ltoday-theme">Money Words: overdraft, cashback, markup</div><div class="ltoday-words">overdraft, cashback, markup</div><span class="ltoday-go">Start lesson &rarr;</span></div></a><a class="ltoday-card" data-cta="today_lesson" href="/blog/c1/2026-10-16-work-career"><div class="ltoday-photo"><img src="/media/c1/2026-10-16/photos/stakeholder.jpg" alt="" loading="lazy"><span class="llvl llvl-c1">C1</span></div><div class="ltoday-body"><div class="ltoday-theme">Work Words: stakeholder, mentorship, autonomy</div><div class="ltoday-words">stakeholder, mentorship, autonomy</div><span class="ltoday-go">Start lesson &rarr;</span></div></a><a class="ltoday-card" data-cta="today_lesson" href="/blog/c2/2026-10-16-education-learning"><div class="ltoday-photo"><img src="/media/c2/2026-10-16/photos/scaffolding.jpg" alt="" loading="lazy"><span class="llvl llvl-c2">C2</span></div><div class="ltoday-body"><div class="ltoday-theme">Education Words: scaffolding, metacognition, heuristic</div><div class="ltoday-words">scaffolding, metacognition, heuristic</div><span class="ltoday-go">Start lesson &rarr;</span></div></a></div></div></section>
+<section class="lsec" id="how-it-works"><div class="lwrap"><h2>How it works</h2><p class="lsec-sub">A simple 5-step lesson, designed for real progress.</p><div class="lsteps"><div class="lstep"><img src="/media/landing/icon-words.webp" alt="" loading="lazy"><h3>Vocabulary</h3><p>Learn new words in context</p></div><div class="lstep"><img src="/media/landing/icon-podcast.webp" alt="" loading="lazy"><h3>Real conversation</h3><p>Listen to a natural podcast episode</p></div><div class="lstep"><img src="/media/landing/icon-shadow.webp" alt="" loading="lazy"><h3>Shadowing practice</h3><p>Speak and improve your pronunciation</p></div><div class="lstep"><img src="/media/landing/icon-grammar.webp" alt="" loading="lazy"><h3>Grammar tips</h3><p>Simple explanations with real examples</p></div><div class="lstep"><img src="/media/landing/icon-quiz.webp" alt="" loading="lazy"><h3>Quiz</h3><p>Check what you learned and earn points</p></div></div></div></section>
+<section class="lsec" id="levels"><div class="lwrap"><h2>Choose your level</h2><p class="lsec-sub">From beginner to advanced &mdash; always the right lesson for you.</p><div class="llevel-grid"><a class="llevel-card llevel-a1" data-cta="level_card" href="/blog/a1/"><span class="llvl llvl-a1">A1</span><h3>Beginner</h3><p>Start with the basics</p></a><a class="llevel-card llevel-a2" data-cta="level_card" href="/blog/a2/"><span class="llvl llvl-a2">A2</span><h3>Elementary</h3><p>Build confidence</p></a><a class="llevel-card llevel-b1" data-cta="level_card" href="/blog/b1/"><span class="llvl llvl-b1">B1</span><h3>Intermediate</h3><p>Use English in daily life</p></a><a class="llevel-card llevel-b2" data-cta="level_card" href="/blog/b2/"><span class="llvl llvl-b2">B2</span><h3>Upper Intermediate</h3><p>Handle real situations</p></a><a class="llevel-card llevel-c1" data-cta="level_card" href="/blog/c1/"><span class="llvl llvl-c1">C1</span><h3>Advanced</h3><p>Express yourself well</p></a><a class="llevel-card llevel-c2" data-cta="level_card" href="/blog/c2/"><span class="llvl llvl-c2">C2</span><h3>Proficient</h3><p>Think and speak freely</p></a></div></div></section>
+<section class="lsec" id="vocabulary"><div class="lwrap"><div class="lsec-head"><div><h2>Vocabulary by topic</h2><p class="lsec-sub">Explore words you need in real life.</p></div><a class="lsee" href="/blog/vocabulary/">See all topics &rarr;</a></div><div class="ltopic-grid"><a class="ltopic-card" data-cta="hub" href="/blog/vocabulary/body-health/"><img src="/media/landing/topics/topic-body-health.webp" alt="" onerror="this.onerror=null;this.src='/media/landing/icon-words.webp'"><span><b>Body &amp; Health</b><span>92 words</span></span></a><a class="ltopic-card" data-cta="hub" href="/blog/vocabulary/education/"><img src="/media/landing/topics/topic-education.webp" alt="" onerror="this.onerror=null;this.src='/media/landing/icon-words.webp'"><span><b>Education</b><span>51 words</span></span></a><a class="ltopic-card" data-cta="hub" href="/blog/vocabulary/family-relationships/"><img src="/media/landing/topics/topic-family-relationships.webp" alt="" onerror="this.onerror=null;this.src='/media/landing/icon-words.webp'"><span><b>Family &amp; Relationships</b><span>48 words</span></span></a><a class="ltopic-card" data-cta="hub" href="/blog/vocabulary/feelings-personality/"><img src="/media/landing/topics/topic-feelings-personality.webp" alt="" onerror="this.onerror=null;this.src='/media/landing/icon-words.webp'"><span><b>Feelings &amp; Personality</b><span>105 words</span></span></a><a class="ltopic-card" data-cta="hub" href="/blog/vocabulary/food-drink/"><img src="/media/landing/topics/topic-food-drink.webp" alt="" onerror="this.onerror=null;this.src='/media/landing/icon-words.webp'"><span><b>Food &amp; Drink</b><span>112 words</span></span></a><a class="ltopic-card" data-cta="hub" href="/blog/vocabulary/nature-animals/"><img src="/media/landing/topics/topic-nature-animals.webp" alt="" onerror="this.onerror=null;this.src='/media/landing/icon-words.webp'"><span><b>Nature &amp; Animals</b><span>44 words</span></span></a><a class="ltopic-card" data-cta="hub" href="/blog/vocabulary/shopping-money/"><img src="/media/landing/topics/topic-shopping-money.webp" alt="" onerror="this.onerror=null;this.src='/media/landing/icon-words.webp'"><span><b>Shopping &amp; Money</b><span>110 words</span></span></a><a class="ltopic-card" data-cta="hub" href="/blog/vocabulary/sports-hobbies/"><img src="/media/landing/topics/topic-sports-hobbies.webp" alt="" onerror="this.onerror=null;this.src='/media/landing/icon-words.webp'"><span><b>Sports &amp; Hobbies</b><span>49 words</span></span></a><a class="ltopic-card" data-cta="hub" href="/blog/vocabulary/technology/"><img src="/media/landing/topics/topic-technology.webp" alt="" onerror="this.onerror=null;this.src='/media/landing/icon-words.webp'"><span><b>Technology</b><span>99 words</span></span></a><a class="ltopic-card" data-cta="hub" href="/blog/vocabulary/travel-transport/"><img src="/media/landing/topics/topic-travel-transport.webp" alt="" onerror="this.onerror=null;this.src='/media/landing/icon-words.webp'"><span><b>Travel &amp; Transport</b><span>95 words</span></span></a><a class="ltopic-card" data-cta="hub" href="/blog/vocabulary/work-jobs/"><img src="/media/landing/topics/topic-work-jobs.webp" alt="" onerror="this.onerror=null;this.src='/media/landing/icon-words.webp'"><span><b>Work &amp; Jobs</b><span>93 words</span></span></a></div></div></section>
+<section class="lsec" id="grammar"><div class="lwrap"><div class="lsec-head"><div><h2>Grammar guides</h2><p class="lsec-sub">Clear explanations for every level.</p></div><a class="lsee" href="/blog/grammar/">See all guides &rarr;</a></div><div class="lgram-grid"><a class="lgram-card" data-cta="grammar" href="/blog/grammar/comparatives-superlatives/"><span class="llvl llvl-a2">A2</span><span><b>Comparatives and Superlatives</b><span>Rules, examples &amp; exercises</span></span></a><a class="lgram-card" data-cta="grammar" href="/blog/grammar/much-many-a-few-a-little/"><span class="llvl llvl-a2">A2</span><span><b>Much, Many, A Lot Of, A Few, A Little</b><span>Rules, examples &amp; exercises</span></span></a><a class="lgram-card" data-cta="grammar" href="/blog/grammar/must-have-to-should/"><span class="llvl llvl-a2">A2</span><span><b>Must, Have To and Should</b><span>Rules, examples &amp; exercises</span></span></a><a class="lgram-card" data-cta="grammar" href="/blog/grammar/passive-present-past/"><span class="llvl llvl-b1">B1</span><span><b>The Passive: Present and Past Simple</b><span>Rules, examples &amp; exercises</span></span></a><a class="lgram-card" data-cta="grammar" href="/blog/grammar/past-simple/"><span class="llvl llvl-a2">A2</span><span><b>Past Simple and Irregular Verbs</b><span>Rules, examples &amp; exercises</span></span></a><a class="lgram-card" data-cta="grammar" href="/blog/grammar/prepositions-of-time-in-on-at/"><span class="llvl llvl-a1">A1</span><span><b>Prepositions of Time: In, On, At</b><span>Rules, examples &amp; exercises</span></span></a><a class="lgram-card" data-cta="grammar" href="/blog/grammar/present-perfect-vs-past-simple/"><span class="llvl llvl-b1">B1</span><span><b>Present Perfect vs Past Simple</b><span>Rules, examples &amp; exercises</span></span></a><a class="lgram-card" data-cta="grammar" href="/blog/grammar/second-conditional/"><span class="llvl llvl-b1">B1</span><span><b>Second Conditional</b><span>Rules, examples &amp; exercises</span></span></a><a class="lgram-card" data-cta="grammar" href="/blog/grammar/third-conditional/"><span class="llvl llvl-b1">B1</span><span><b>Third Conditional</b><span>Rules, examples &amp; exercises</span></span></a><a class="lgram-card" data-cta="grammar" href="/blog/grammar/zero-and-first-conditional/"><span class="llvl llvl-a2">A2</span><span><b>Zero and First Conditional</b><span>Rules, examples &amp; exercises</span></span></a></div></div></section>
 
-<section class="lsec" id="about"><div class="lwrap">
-<h2>Who we are</h2>
-<p class="lsec-sub">Made by a team of English teachers and developers.</p>
-<p><a href="/about/">More about Muse English &rarr;</a></p>
-</div></section>
-
-<section class="lsec" id="questions"><div class="lwrap">
-<h2>Questions</h2>
-<div class="lqa"><h3>Is Muse English free?</h3><p>Yes: lessons, podcast, vocabulary, shadowing practice and quizzes are free.</p></div>
-<div class="lqa"><h3>Do I need an account?</h3><p>Not to read lessons: every lesson on this site is free to read without an account. A free account saves your progress and points in the app.</p></div>
-<div class="lqa"><h3>Which level should I choose?</h3><p>A1: first words and simple sentences. A2: everyday conversations and essential grammar. B1: real topics, longer conversations. B2: work, culture and opinions. C1: nuance, idioms and complex ideas. C2: near-native fluency and precision. Not sure? Open <a href="/blog/a2/2026-10-16-emotions-character">today&rsquo;s A2 lesson</a>. If most of the words are new, try <a href="/blog/a1/2026-10-16-health-body">A1</a>; if they feel easy, try <a href="/blog/b1/2026-10-16-nature-environment-pets">B1</a>.</p></div>
-</div></section>
-
-<section class="lsec"><div class="lwrap"><div class="linstall">
-<h3>Install the app</h3>
-<p>Your daily lesson, one tap away. Use your browser&rsquo;s install option, or on iPhone: Share &rarr; Add to Home Screen.</p>
+<section class="lsec"><div class="lwrap"><div class="lcta-sec"><div class="lcta-in">
+<img class="lcta-mascot" src="/media/landing/mascot-cta.webp" alt="Atish inviting you to get the app">
+<div>
+<h2>Get the Muse English App</h2>
+<p>Take your lessons anywhere. Learn offline, track your progress, and stay consistent with daily reminders.</p>
+<div class="lstore-row">
+<span class="lstore" title="Coming soon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.9-.7 1.57.2 2.75 1.04 3.54 2.65-3.2 1.9-2.63 6.15.44 7.7-.55 1.55-1.5 2.94-2.96 3.52zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg><span><small>Download on the</small><b>App Store</b></span></span>
+<span class="lstore" title="Coming soon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L3.7 2.2l-.1.1zM16.6 15.9l-3.6-3.6 3.6-3.6 3.9 2.2c1.1.6 1.1 1.6 0 2.2l-3.9 2.8zM5.1 2.9l8.4 8.4-8.4 8.4c-.4-.3-.7-.9-.7-1.6V4.5c0-.7.3-1.3.7-1.6z"/></svg><span><small>Get it on</small><b>Google Play</b></span></span>
+</div>
+</div>
 </div></div></section>
 
 <footer class="lfoot"><div class="lfoot-grid">
-<div class="lfoot-col"><h4>Muse English</h4><ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li></ul></div>
+<div class="lfoot-col"><div class="lfoot-brand"><img src="/icons/icon-192.png" alt="">Muse English</div></div>
 <div class="lfoot-col"><h4>Learn</h4><ul><li><a href="/blog/">Lessons</a></li><li><a href="/blog/vocabulary/">Vocabulary</a></li><li><a href="/blog/grammar/">Grammar</a></li></ul></div>
 <div class="lfoot-col"><h4>Levels</h4><ul><li><a href="/blog/a1/">A1 Beginner</a></li><li><a href="/blog/a2/">A2 Elementary</a></li><li><a href="/blog/b1/">B1 Intermediate</a></li><li><a href="/blog/b2/">B2 Upper-Intermediate</a></li><li><a href="/blog/c1/">C1 Advanced</a></li><li><a href="/blog/c2/">C2 Proficient</a></li></ul></div>
+<div class="lfoot-col"><h4>Muse English</h4><ul><li><a href="/">Home</a></li><li><a href="/about/">About</a></li></ul></div>
 </div>
-<div class="lwrap" style="margin-top:24px;font-size:13px;color:#94a3b8">&copy; 2026 Alireza &middot; Muse English &middot; Built, not bought.</div>
+<div class="lfoot-base">&copy; 2026 Alireza &middot; Muse English &middot; Built, not bought.</div>
 </footer>
 </div>
 <!-- LANDING:END -->
