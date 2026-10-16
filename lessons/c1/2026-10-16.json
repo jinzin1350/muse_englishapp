@@ -1,0 +1,323 @@
+{
+  "date": "2026-10-16",
+  "theme": "work & career",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "stakeholder",
+      "pos": "noun",
+      "meaning": "a person or group with a direct interest in a business or project",
+      "example": "The new office plan pleased most stakeholders, but some investors were concerned.",
+      "pronunciation": "STAYK-hol-der",
+      "persian": "ذی‌نفع",
+      "photo": "media/c1/2026-10-16/photos/stakeholder.jpg",
+      "word_audio": "media/c1/2026-10-16/word-audio/stakeholder.mp3"
+    },
+    {
+      "word": "mentorship",
+      "pos": "noun",
+      "meaning": "guidance and support from an experienced person",
+      "example": "Under her mentor's mentorship, she moved from junior analyst to team lead in two years.",
+      "pronunciation": "MEN-tor-ship",
+      "persian": "راهنمایی حرفه‌ای",
+      "photo": "media/c1/2026-10-16/photos/mentorship.jpg",
+      "word_audio": "media/c1/2026-10-16/word-audio/mentorship.mp3"
+    },
+    {
+      "word": "autonomy",
+      "pos": "noun",
+      "meaning": "the freedom to make your own decisions, especially at work",
+      "example": "Remote workers value the autonomy to plan their own day.",
+      "pronunciation": "aw-TAH-nuh-mee",
+      "persian": "استقلال عمل",
+      "photo": "media/c1/2026-10-16/photos/autonomy.jpg",
+      "word_audio": "media/c1/2026-10-16/word-audio/autonomy.mp3"
+    },
+    {
+      "word": "upskill",
+      "pos": "verb",
+      "meaning": "to learn new skills for your current job or a future one",
+      "example": "She took an evening course to upskill before the promotion interview.",
+      "pronunciation": "up-SKIL",
+      "persian": "ارتقای مهارت",
+      "photo": "media/c1/2026-10-16/photos/upskill.jpg",
+      "word_audio": "media/c1/2026-10-16/word-audio/upskill.mp3"
+    },
+    {
+      "word": "delegation",
+      "pos": "noun",
+      "meaning": "the act of assigning tasks or responsibilities to other people",
+      "example": "Good managers know that delegation is a skill, not a sign of weakness.",
+      "pronunciation": "deh-lih-GAY-shun",
+      "persian": "تفویض اختیار",
+      "photo": "media/c1/2026-10-16/photos/delegation.jpg",
+      "word_audio": "media/c1/2026-10-16/word-audio/delegation.mp3"
+    },
+    {
+      "word": "sabbatical",
+      "pos": "noun",
+      "meaning": "an extended break from work to rest, travel, or study",
+      "example": "After ten years, he took a three-month sabbatical to hike across Spain.",
+      "pronunciation": "suh-BAH-tih-kul",
+      "persian": "مرخصی طولانی برای استراحت یا مطالعه",
+      "photo": "media/c1/2026-10-16/photos/sabbatical.jpg",
+      "word_audio": "media/c1/2026-10-16/word-audio/sabbatical.mp3"
+    },
+    {
+      "word": "networking",
+      "pos": "noun",
+      "meaning": "meeting people and building professional relationships",
+      "example": "She found her new job through networking at an industry conference.",
+      "pronunciation": "NET-wur-king",
+      "persian": "شبکه‌سازی حرفه‌ای",
+      "photo": "media/c1/2026-10-16/photos/networking.jpg",
+      "word_audio": "media/c1/2026-10-16/word-audio/networking.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-16/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Thriving at Work",
+    "audio": "media/c1/2026-10-16/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-16/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Mentor's Map",
+    "audio": "media/c1/2026-10-16/shadowing.mp3",
+    "transcript": "media/c1/2026-10-16/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-10-16/shadowing-sentences/001.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/002.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/003.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/004.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/005.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/006.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/007.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/008.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/009.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/010.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/011.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/012.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/013.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/014.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/015.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/016.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/017.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/018.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/019.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/020.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/021.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/022.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/023.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/024.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/025.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/026.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/027.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/028.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/029.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/030.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/031.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/032.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/033.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/034.mp3",
+      "media/c1/2026-10-16/shadowing-sentences/035.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'stakeholder' mean?",
+      "options": [
+        "an extended break from work to rest, travel, or study",
+        "a person or group with a direct interest in a business or project",
+        "meeting people and building professional relationships",
+        "guidance and support from an experienced person"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'mentorship' mean?",
+      "options": [
+        "the freedom to make your own decisions at work",
+        "assigning tasks or responsibilities to other people",
+        "guidance and support from an experienced person",
+        "to learn new skills for your current job or a future one"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'autonomy' mean?",
+      "options": [
+        "meeting people and building professional relationships",
+        "an extended break from work to rest, travel, or study",
+        "a person or group with a direct interest in a business or project",
+        "the freedom to make your own decisions at work"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'upskill' mean?",
+      "options": [
+        "to learn new skills for your current job or a future one",
+        "assigning tasks or responsibilities to other people",
+        "guidance and support from an experienced person",
+        "an extended break from work to rest, travel, or study"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'delegation' mean?",
+      "options": [
+        "an extended break from work to rest, travel, or study",
+        "meeting people and building professional relationships",
+        "the freedom to make your own decisions at work",
+        "assigning tasks or responsibilities to other people"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'sabbatical' mean?",
+      "options": [
+        "guidance and support from an experienced person",
+        "an extended break from work to rest, travel, or study",
+        "to learn new skills for your current job or a future one",
+        "a person or group with a direct interest in a business or project"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'networking' mean?",
+      "options": [
+        "assigning tasks or responsibilities to other people",
+        "the freedom to make your own decisions at work",
+        "meeting people and building professional relationships",
+        "to learn new skills for your current job or a future one"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Ellipsis and Substitution",
+    "explanation": "Sometimes English leaves words out on purpose. This is called **ellipsis**.\n\n**Ellipsis** happens when the missing words are clear from the context. You will see it after auxiliary verbs like **do**, **have**, and **will**.\n\nLook at this. She took a sabbatical in spring, and he did too. The missing words are clear after **did**, so we still understand the sentence.\n\nEllipsis is common at work. A manager says the stakeholders need an update, and another answers that so do we.\n\n**Substitution** works differently. It replaces a whole clause with a short word like **so**, **not**, **one**, or **do so**.\n\nFor example, we say I hope so instead of repeating the whole clause. With nouns, **one** and **ones** stop us repeating the same noun.\n\nBoth ellipsis and substitution build your networking confidence. Short, smooth replies sound natural in fast conversation.\n\nWatch out, though. Ellipsis only works when the meaning is truly clear. If the listener cannot recover the missing words, the sentence sounds broken.\n\nOne last point. Autonomy in speaking comes from control. Master ellipsis and substitution, and your English sounds sharper.",
+    "examples": [
+      "*She took a sabbatical in spring, and he did too.* (did too = took a sabbatical in spring)",
+      "*Good managers use delegation; great ones do so wisely.* (do so = use delegation)",
+      "*He asked if the stakeholders approved the plan, and she said she hoped so.* (so = the stakeholders approved the plan)",
+      "*She got real mentorship; her colleagues did not.* (did not = get real mentorship)",
+      "*She wanted an experienced mentor, not a junior one.* (one = mentor)",
+      "*She decided to upskill, and her brother did too.* (did too = decided to upskill)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite using ellipsis: She wanted more autonomy, and her colleague wanted more autonomy too.",
+        "a": "She wanted more autonomy, and her colleague did too."
+      },
+      {
+        "q": "Replace the repeated clause with 'so': He asked if the plan would work, and she said she thought the plan would work.",
+        "a": "He asked if the plan would work, and she said she thought so."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She finished the report early, and her colleague ___.",
+        "options": [
+          "finished too",
+          "did too",
+          "does too",
+          "finishing too"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "\"Will the stakeholders accept the plan?\" \"I hope ___.\"",
+        "options": [
+          "not",
+          "no",
+          "so",
+          "it"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He wanted the red car, but she wanted the ___.",
+        "options": [
+          "one blue",
+          "blue one",
+          "blue ones",
+          "ones blue"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She can upskill quickly, and her brother ___.",
+        "options": [
+          "can too",
+          "does too",
+          "can either",
+          "too can"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "\"Do you enjoy networking?\" \"___\"",
+        "options": [
+          "So do I",
+          "So I do",
+          "I do so",
+          "Do so I"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They asked for more autonomy, but the manager said ___.",
+        "options": [
+          "she thought no",
+          "she thought not",
+          "she not thought",
+          "she think not"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Good leaders delegate daily; wise leaders ___.",
+        "options": [
+          "do so calmly",
+          "so do calmly",
+          "do calmly so",
+          "calmly so do"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She took a sabbatical last year. He ___ this year.",
+        "options": [
+          "took one",
+          "did so",
+          "did one",
+          "took so"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "\"I've never tried mentorship.\" \"___.\"",
+        "options": [
+          "So have I",
+          "Neither have I",
+          "So I have",
+          "I neither have"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He bought a new laptop, and she bought ___.",
+        "options": [
+          "so too",
+          "one too",
+          "a new one too",
+          "ones too"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

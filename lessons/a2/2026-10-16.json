@@ -1,0 +1,282 @@
+{
+  "date": "2026-10-16",
+  "theme": "emotions & character",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "nervous",
+      "pos": "adjective",
+      "meaning": "worried or afraid that something bad will happen",
+      "example": "I was nervous before my first day at work.",
+      "pronunciation": "NUR-vuhs",
+      "persian": "مضطرب",
+      "photo": "media/a2/2026-10-16/photos/nervous.jpg",
+      "word_audio": "media/a2/2026-10-16/word-audio/nervous.mp3"
+    },
+    {
+      "word": "surprised",
+      "pos": "adjective",
+      "meaning": "feeling shocked because something unexpected happened",
+      "example": "She was surprised by the birthday party.",
+      "pronunciation": "sur-PRYZD",
+      "persian": "شگفت‌زده",
+      "photo": "media/a2/2026-10-16/photos/surprised.jpg",
+      "word_audio": "media/a2/2026-10-16/word-audio/surprised.mp3"
+    },
+    {
+      "word": "worried",
+      "pos": "adjective",
+      "meaning": "thinking that something bad might happen",
+      "example": "He is worried about his exam.",
+      "pronunciation": "WUR-eed",
+      "persian": "نگران",
+      "photo": "media/a2/2026-10-16/photos/worried.jpg",
+      "word_audio": "media/a2/2026-10-16/word-audio/worried.mp3"
+    },
+    {
+      "word": "lonely",
+      "pos": "adjective",
+      "meaning": "sad because you are alone",
+      "example": "She felt lonely in the new city.",
+      "pronunciation": "LOHN-lee",
+      "persian": "تنها",
+      "photo": "media/a2/2026-10-16/photos/lonely.jpg",
+      "word_audio": "media/a2/2026-10-16/word-audio/lonely.mp3"
+    },
+    {
+      "word": "grateful",
+      "pos": "adjective",
+      "meaning": "feeling thankful for something good",
+      "example": "I am grateful for my friends' help.",
+      "pronunciation": "GRAYT-fuhl",
+      "persian": "سپاسگزار",
+      "photo": "media/a2/2026-10-16/photos/grateful.jpg",
+      "word_audio": "media/a2/2026-10-16/word-audio/grateful.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-16/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Feelings We All Know",
+    "audio": "media/a2/2026-10-16/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-16/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Day of Feelings",
+    "audio": "media/a2/2026-10-16/shadowing.mp3",
+    "transcript": "media/a2/2026-10-16/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-10-16/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/022.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/023.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/024.mp3",
+      "media/a2/2026-10-16/shadowing-sentences/025.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'nervous' mean?",
+      "options": [
+        "sad because you are alone",
+        "worried or afraid that something bad will happen",
+        "feeling thankful for something good",
+        "thinking that something bad might happen"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'surprised' mean?",
+      "options": [
+        "feeling shocked because something unexpected happened",
+        "sad because you are alone",
+        "worried or afraid that something bad will happen",
+        "feeling thankful for something good"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'worried' mean?",
+      "options": [
+        "feeling thankful for something good",
+        "feeling shocked because something unexpected happened",
+        "thinking that something bad might happen",
+        "sad because you are alone"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'lonely' mean?",
+      "options": [
+        "thinking that something bad might happen",
+        "sad because you are alone",
+        "worried or afraid that something bad will happen",
+        "feeling thankful for something good"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'grateful' mean?",
+      "options": [
+        "feeling shocked because something unexpected happened",
+        "feeling thankful for something good",
+        "sad because you are alone",
+        "thinking that something bad might happen"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Future Forms: Going To, Will and Present Continuous",
+    "explanation": "We use **going to** for plans we already made. She **is going to** take an exam tomorrow, so she feels a little worried.\n\nWe use **will** for quick decisions we make now. The phone rings, and I **will** answer it.\n\nWe also use **will** for promises. Do not be lonely. I **will** call you tonight, I promise.\n\nWe use the **present continuous** (am/is/are + verb-ing) for fixed plans with a time. We **are meeting** our friends at six o'clock.\n\nBe careful: **going to** is for plans, **will** is for quick decisions and promises. Do not say I **will to** call you. Say I **will** call you.",
+    "examples": [
+      "I *am going to* cook dinner for my family tonight. (plan)",
+      "She *is going to* study hard because she feels nervous about the test. (plan)",
+      "The phone is ringing. I *will* answer it. (quick decision)",
+      "You will not be lonely. I *will* visit you on Sunday, I promise. (promise)",
+      "We *are meeting* our friends at six o'clock. (fixed plan)",
+      "He *is starting* his new job on Monday. He is grateful for the chance. (fixed plan)"
+    ],
+    "practice": [
+      {
+        "q": "Make a plan: I ___ (visit) my friend tomorrow.",
+        "a": "am going to visit"
+      },
+      {
+        "q": "Quick decision: The phone is ringing. I ___ (answer) it.",
+        "a": "will answer"
+      },
+      {
+        "q": "Fixed plan with a time: We ___ (meet) at six o'clock.",
+        "a": "are meeting"
+      },
+      {
+        "q": "Make a promise: I ___ (call) you tonight.",
+        "a": "will call"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Which sentence talks about a plan you already made?",
+        "options": [
+          "I am going to visit my friend tomorrow.",
+          "The phone rings. I will answer it.",
+          "I will call you tonight, I promise.",
+          "We are meeting at six."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which sentence is a quick decision?",
+        "options": [
+          "I am going to cook tonight.",
+          "The phone is ringing. I will answer it.",
+          "She is going to study hard.",
+          "We are meeting at six o'clock."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Which sentence is a promise?",
+        "options": [
+          "I am going to visit my mother.",
+          "We are meeting at six.",
+          "I will call you tonight, I promise.",
+          "He is starting work on Monday."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which sentence uses the present continuous for a fixed future plan?",
+        "options": [
+          "I will answer the phone.",
+          "I am going to cook dinner.",
+          "We are meeting our friends at six o'clock.",
+          "I will to call you."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Fill the blank: I ___ visit my grandmother tomorrow. We planned it last week.",
+        "options": [
+          "will",
+          "am going to",
+          "am go to",
+          "will to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Fill the blank: Watch out! You ___ drop your bag!",
+        "options": [
+          "will",
+          "are going",
+          "will to",
+          "going to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Fill the blank: She ___ start her new job on Monday. The plan is fixed.",
+        "options": [
+          "will",
+          "is going to",
+          "is starting",
+          "starts will"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which sentence is WRONG?",
+        "options": [
+          "I will call you tonight.",
+          "I am going to visit my friend.",
+          "I will to help you.",
+          "We are meeting at six."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "A: I feel lonely. B: Do not be sad. I ___ visit you tonight, I promise.",
+        "options": [
+          "will",
+          "am going to",
+          "am visiting",
+          "will to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "They going to travel next week.",
+          "They are going to travel next week.",
+          "They will going to travel next week.",
+          "They are go to travel next week."
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-10-16/grammar-en.mp3"
+  }
+}
