@@ -8961,7 +8961,7 @@ function savedSpHTML(arr) {
   return '<div class="card"><div class="tch-weekly-title"><img src="/icons/bookmark.png" alt="" class="bm-ico"> Saved shadowing sentences <span class="muted">(' + arr.length + ')</span></div>' +
     '<p class="muted" style="font-size:0.82rem;margin:0.25rem 0 0.6rem">Sentences you saved for extra practice — tap 🔊 to hear, then say it aloud.</p>' +
     arr.map(function (x) {
-      return '<div class="saved-row">' +
+      return '<div class="saved-sp-item"><div class="saved-sp-row">' +
         '<div class="saved-word"><div dir="auto">' + esc(x.t) + '</div>' +
         '<div class="muted" style="font-size:0.75rem">' + esc(x.d || '') + ' · sentence ' + (Number(x.i) + 1) + '</div></div>' +
         '<div class="saved-actions">' +
@@ -8970,7 +8970,7 @@ function savedSpHTML(arr) {
           : '<button class="speaker-btn" data-action="sp-say-saved" data-text="' + esc(x.t) + '" aria-label="Hear sentence">🔊</button>') +
         '<button class="sp-rec-btn" data-action="sp-practice-saved" data-d="' + esc(x.d || '') + '" data-i="' + x.i + '" data-t="' + esc(x.t) + '" aria-label="Record and practice this sentence" title="Practice aloud"><img src="/icons/sp-rec.png" alt=""></button>' +
         '<button class="save-word-btn saved" data-action="unsave-sp" data-date="' + esc(x.d || '') + '" data-i="' + x.i + '" aria-label="Remove bookmark" title="Remove bookmark"><img src="/icons/bookmark.png" alt=""></button>' +
-        '</div></div>';
+        '</div></div><div class="sp-saved-result"></div></div>';
     }).join('') + '</div>';
 }
 /* Inline recording practice for a saved shadowing sentence (Review tab,
@@ -8985,18 +8985,14 @@ function practiceSavedSentence(btn) {
     stopSavedSpRec();
     if (wasBtn === btn) return;
   }
-  const row = btn.closest('.saved-row');
-  if (!row) return;
+  const item = btn.closest('.saved-sp-item');
+  if (!item) return;
   const target = btn.getAttribute('data-t') || '';
   const date = btn.getAttribute('data-d') || '';
   const i = parseInt(btn.getAttribute('data-i'), 10) || 0;
   if (!target) return;
-  let resBox = row.querySelector('.sp-saved-result');
-  if (!resBox) {
-    resBox = document.createElement('div');
-    resBox.className = 'sp-saved-result';
-    row.appendChild(resBox);
-  }
+  const resBox = item.querySelector('.sp-saved-result');
+  if (!resBox) return;
   resBox.innerHTML = '';
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   const ua = navigator.userAgent || '';
@@ -9985,7 +9981,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610152012';
+var APP_VERSION = '202610161539';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
