@@ -2147,7 +2147,18 @@ function renderLanding(v) {
       return;
     }
   } catch (e) {}
-  if (shouldEnterAppMode()) { go('preview'); return; }
+  /* 2026-10-16 (Alireza): teacher referral links (?ref=CODE) land on the app's
+     home — never the preview page, which confuses new students. Signed-in
+     visitors reach #/home; anonymous visitors reach the public home (landing)
+     through onRoute's auth gate, then sign up and get auto-linked to the
+     teacher via resolve_teacher_offer. Other app-mode entries (push deep
+     links, returning visitors, PWA cold start) keep the preview. */
+  if (shouldEnterAppMode()) {
+    try {
+      if (new URLSearchParams(window.location.search).get('ref')) { go('home'); return; }
+    } catch (e) {}
+    go('preview'); return;
+  }
   document.documentElement.classList.remove('app-mode');
   v.innerHTML = '';
 }
@@ -9967,7 +9978,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610161557';
+var APP_VERSION = '202610161737';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
