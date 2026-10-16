@@ -638,7 +638,6 @@ async function awardPoints(action, points, ref, noPopup, extraMeta) {
       refreshMyPoints();
       if (points > 0 && !noPopup) queuePointsPopup(points, PTS_LABELS[action] || action);
       if (action === 'lesson_open') {
-        checkStreakBonus();
         bumpStat('lessons_opened', 1);
         trackEvent('lesson_open', Object.assign({ date: ref }, extraMeta || {}));
       }
@@ -675,31 +674,6 @@ async function flushPointsQueue() {
     ptsSet('done', done);
     ptsSet('pending', pend);
     refreshMyPoints();
-  } catch (e) {}
-}
-
-/* 7-day streak bonus: consecutive lesson_open days (ending today/yesterday).
-   The ref is the start of the current 7-day window, so the 50 pts award once
-   per window even as the streak keeps growing. */
-async function checkStreakBonus() {
-  try {
-    if (!cloudReady()) return;
-    const r = await sb.from('scores').select('ref')
-      .eq('user_id', state.user.id).eq('action', 'lesson_open')
-      .order('ref', { ascending: false }).limit(14);
-    if (r.error || !r.data) return;
-    const days = {};
-    r.data.forEach(function (row) { if (row.ref) days[row.ref] = 1; });
-    const d = new Date();
-    if (!days[fmtDate(d)]) { d.setDate(d.getDate() - 1); if (!days[fmtDate(d)]) return; }
-    let streak = 0;
-    const c = new Date(d);
-    while (days[fmtDate(c)]) { streak++; c.setDate(c.getDate() - 1); }
-    if (streak >= 7) {
-      const start = new Date(d);
-      start.setDate(start.getDate() - 6);
-      awardPoints('streak_7', 50, fmtDate(start));
-    }
   } catch (e) {}
 }
 
@@ -1356,7 +1330,19 @@ function markStep(dateStr, step, extra) {
     if (dateStr === todayStr() && !day.streakRecorded && day.words && day.quiz) {
       day.streakRecorded = true;
       localStorage.setItem(progressKey(), JSON.stringify(all));
-      try { recordStreakDay(); } catch (e) {}
+      /* 7-day streak bonus (2026-10-16 fix): awarded ONCE when a genuine 7-day
+         streak completes — the milestone coming back from recordStreakDay —
+         never per app open. Ref pins streak start + length, so each 7/14/21…
+         milestone awards exactly once per unbroken streak. */
+      try {
+        recordStreakDay().then(function (r) {
+          if (r && r.ok && r.milestone && r.current_streak) {
+            const start = new Date();
+            start.setDate(start.getDate() - (r.current_streak - 1));
+            awardPoints('streak_7', 50, 'streak-' + fmtDate(start) + '-' + r.current_streak);
+          }
+        }).catch(function () {});
+      } catch (e) {}
     }
   } catch (e) {}
 }
@@ -9981,7 +9967,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610161539';
+var APP_VERSION = '202610161557';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
