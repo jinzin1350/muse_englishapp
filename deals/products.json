@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "weiser-halo-smart-lock",
+      "name_fa": "قفل هوشمند وای‌فای وایزر Halo",
+      "name_en": "Weiser Halo Matte Black WiFi Smart Lock",
+      "price_cad": 130.0,
+      "regular_cad": 249.0,
+      "discount_pct": 48,
+      "added_fa": "جمعه، ۱۶ اکتبر ۲۰۲۶",
+      "image": "img/weiser-halo-smart-lock.jpg",
+      "url": "https://www.amazon.ca/dp/B085SPZD7L?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "ورود بدون کلید، کنترل از راه دور با اپ و ۲۵۰ کد عبور"
+    },
+    {
+      "id": "oralb-io2-forest-green",
+      "name_fa": "مسواک برقی اورال‌بی iO سری ۲",
+      "name_en": "Oral-B iO Series 2 Electric Toothbrush, Forest Green",
+      "price_cad": 74.99,
+      "regular_cad": 99.99,
+      "discount_pct": 25,
+      "added_fa": "جمعه، ۱۶ اکتبر ۲۰۲۶",
+      "image": "img/oralb-io2-forest-green.jpg",
+      "url": "https://www.amazon.ca/dp/B0D1DB1LXJ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "حسگر فشار لثه، ۳ حالت تمیزکاری و تایمر ۲ دقیقه‌ای"
+    },
+    {
+      "id": "finish-quantum-70",
+      "name_fa": "قرص ماشین ظرفشویی فینیش کوانتوم ۷۰ عددی",
+      "name_en": "Finish Quantum Infinity Shine Dishwasher Detergent, 70 Tabs",
+      "price_cad": 16.99,
+      "regular_cad": 21.99,
+      "discount_pct": 23,
+      "added_fa": "جمعه، ۱۶ اکتبر ۲۰۲۶",
+      "image": "img/finish-quantum-70.jpg",
+      "url": "https://www.amazon.ca/dp/B082V9BTWQ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "با کوپن قابل برش در صفحه آمازون؛ قیمت روی صفحه ۲۱٫۹۹ دلار"
+    },
+    {
+      "id": "volisun-ceiling-fan-20",
+      "name_fa": "پنکه سقفی هوشمند وُلیسون ۲۰ اینچ با چراغ LED",
+      "name_en": "VOLISUN 20\" Low Profile Ceiling Fan with LED Light & Remote (White)",
+      "price_cad": 62.99,
+      "regular_cad": 104.99,
+      "discount_pct": 40,
+      "added_fa": "جمعه، ۱۶ اکتبر ۲۰۲۶",
+      "image": "img/volisun-ceiling-fan-20.jpg",
+      "url": "https://www.amazon.ca/dp/B0FM4K2D6Z?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "با کد تخفیف OX14VU7Z؛ ۶ سرعت، نور قابل تنظیم و کنترل با اپ موبایل"
+    },
+    {
       "id": "jbl-go-4-portable-speaker",
       "name_fa": "اسپیکر بلوتوثی جی‌بی‌ال گو ۴",
       "name_en": "JBL Go 4 - Portable Waterproof Bluetooth Speaker",
@@ -55,63 +111,7 @@
       "source": "hotcanadadeals+smartcanucks",
       "item_no": null,
       "blurb_fa": "بدون بنزین و دود؛ ۲ باتری ۴ آمپرساعتی و شارژر سریع در جعبه"
-    },
-    {
-      "id": "dreo-338s-smart-air-purifier",
-      "name_fa": "تصفیه‌کننده هوای هوشمند دریو ۳۳۸اس",
-      "name_en": "Dreo 338S Smart Air Purifier",
-      "price_cad": 99.99,
-      "regular_cad": 139.99,
-      "discount_pct": 29,
-      "added_fa": "پنجشنبه، ۱۵ اکتبر ۲۰۲۶",
-      "image": "img/dreo-338s-smart-air-purifier.jpg",
-      "url": "https://www.amazon.ca/dp/B0H699TJC3?tag=alirezaebra0d-20",
-      "source": "smartcanucks+dp-page",
-      "item_no": null,
-      "blurb_fa": "فیلتر هپای سه‌مرحله‌ای، حالت خواب بی‌صدا، کنترل با اپلیکیشن"
-    },
-    {
-      "id": "nutribullet-baby-turbo-food-steamer",
-      "name_fa": "بخارپز غذای کودک نوتری‌بولت بیبی توربو",
-      "name_en": "nutribullet Baby Turbo Food Steamer",
-      "price_cad": 29.99,
-      "regular_cad": 39.99,
-      "discount_pct": 25,
-      "added_fa": "پنجشنبه، ۱۵ اکتبر ۲۰۲۶",
-      "image": "img/nutribullet-baby-turbo-food-steamer.jpg",
-      "url": "https://www.amazon.ca/dp/B098BHGNYH?tag=alirezaebra0d-20",
-      "source": "dp-list-price+dealsfinders",
-      "item_no": null,
-      "blurb_fa": "بخارپز، یخ‌زدا و استریل‌کننده در یک دستگاه؛ ۵ حالت بخار با تایمر"
-    },
-    {
-      "id": "valsole-heavy-duty-orthotics",
-      "name_fa": "کفی طبی والسول (پشتیبانی قوس پا)",
-      "name_en": "VALSOLE Heavy Duty Support Pain Relief Orthotics - 220+ lbs Plantar Fasciitis High Arch Support Insoles",
-      "price_cad": 23.95,
-      "regular_cad": 49.99,
-      "discount_pct": 52,
-      "added_fa": "چهارشنبه، ۱۴ اکتبر ۲۰۲۶",
-      "image": "img/valsole-heavy-duty-orthotics.jpg",
-      "url": "https://www.amazon.ca/dp/B0BM63Y76W?tag=alirezaebra0d-20",
-      "source": "redflagdeals+yahoo-style",
-      "item_no": null,
-      "blurb_fa": "بیش از ۳۱ هزار نظر مثبت؛ تسکین درد کف پا و قوس پا، عالی برای ایستادن طولانی"
-    },
-    {
-      "id": "jamieson-magnesium-bisglycinate-130",
-      "name_fa": "منیزیم بیس‌گلیسینات جمیسون (۱۳۰ کپسول)",
-      "name_en": "Jamieson 100% Pure Magnesium Bisglycinate 100 mg Capsules, 130 Count",
-      "price_cad": 11.5,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "چهارشنبه، ۱۴ اکتبر ۲۰۲۶",
-      "image": "img/jamieson-magnesium-bisglycinate-130.jpg",
-      "url": "https://www.amazon.ca/dp/B0FDH29P3P?tag=alirezaebra0d-20",
-      "source": "redflagdeals+pricepunchers",
-      "item_no": null,
-      "blurb_fa": "برند کانادایی با فرم خالص بیس‌گلیسینات؛ برای آرامش عضلات، کاهش خستگی و خواب بهتر"
     }
   ],
-  "updated_fa": "پنجشنبه ۲۳ مهر"
+  "updated_fa": "جمعه ۲۴ مهر"
 }
