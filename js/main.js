@@ -591,6 +591,8 @@ var PTS_LABELS = {
   shadowing_complete: 'Shadowing complete',
   word_quiz: 'Word quiz complete',
   grammar_quiz: 'Grammar quiz complete',
+  grammar_exercise: 'Grammar exercise',
+  grammar_topic_done: 'Grammar guide complete',
   deck_review: 'Review complete',
   streak_7: '7-day streak',
   mystery_box: 'Mystery box',
@@ -1901,7 +1903,7 @@ function shouldEnterAppMode() {
 }
 
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -1913,7 +1915,7 @@ function parseHash() {
 
 /* Guard: never discard an in-progress quiz silently. */
 function quizGuardOk() {
-  if (state.quiz) {
+  if (state.quiz || state.gquiz) {
     return window.confirm('You have a quiz in progress. Leave now and lose your quiz progress?');
   }
   return true;
@@ -2005,6 +2007,7 @@ function show(view, arg) {
   state.view = view;
   if (view !== 'admin-teacher') state.viewTeacher = null; /* leaving view-as-teacher mode */
   if (view !== 'lesson') { state.quiz = null; }
+  if (view !== 'grammar') { state.gquiz = null; }
   /* Desktop home uses the mockup v6 dashboard layout. */
   document.body.classList.toggle('view-home', view === 'home');
   setChrome();
@@ -2035,6 +2038,7 @@ function show(view, arg) {
   else if (view === 'planner') renderPlanner(v);
   else if (view === 'become-teacher') renderBecomeTeacher(v);
   else if (view === 'choose-teacher') renderChooseTeacher(v);
+  else if (view === 'grammar') renderGrammar(v, arg);
 }
 
 /* ---------------- chrome (headers / profile menu / nav) ---------------- */
@@ -2056,7 +2060,8 @@ function setChrome() {
     $$('#tabbar .tab').forEach(function (t) {
       const tv = t.getAttribute('data-view');
       // The lessons archive is a sub-page of Home: keep Home highlighted there.
-      const active = tv === state.view || (state.view === 'lessons' && tv === 'home');
+      // Same for the grammar section (entered from the home banner).
+      const active = tv === state.view || ((state.view === 'lessons' || state.view === 'grammar') && tv === 'home');
       t.classList.toggle('active', active);
       if (active) t.setAttribute('aria-current', 'page');
       else t.removeAttribute('aria-current');
@@ -5899,6 +5904,351 @@ function renderLessons(v) {
   v.innerHTML = html + '</div>';
 }
 
+/* ================= Grammar section (2026-10-17) =================
+   Entry: home banner (#home-grammar-wrap) → #/grammar (hub) → #/grammar/<slug> (topic).
+   Content: /data/grammar/<level>.json — built by bin/build-grammar-app.py from
+   ~/workspace/user/files/grammar-all-pages.json (89 vetted pages, muse-grammar-page/1).
+   Progress: localStorage 'muse_grammar_v1' →
+     {slug: {h1, best, total, done, claimed, attempts, lastTs}, _last: slug}.
+   Points (Alireza 2026-10-17): 5 XP per correct exercise on the FIRST attempt of a
+   topic (ref gex-<slug>-<itemId>, idempotent via action|ref), +20 on first topic
+   completion (ref gtd-<slug>). Retries are practice mode: 0 XP.
+   Mistakes: wrong answers → saveMistake() → Review Your Mistakes.
+   Cloud record: saveAttempt({kind:'grammar_topic', theme:slug, ...}). */
+
+var GRAMMAR_LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
+var GRAMMAR_TOTAL = 89;
+state.grammarCache = state.grammarCache || {};
+state.gquiz = null;
+state.gFilter = null;
+
+function grammarProgress() {
+  var p = lsGet('muse_grammar_v1');
+  return (p && typeof p === 'object' && !Array.isArray(p)) ? p : {};
+}
+function setGrammarProgress(p) { lsSet('muse_grammar_v1', p); }
+
+function loadGrammarLevel(lv) {
+  if (state.grammarCache[lv]) return Promise.resolve(state.grammarCache[lv]);
+  return fetch('/data/grammar/' + lv + '.json').then(function (res) {
+    if (!res.ok) throw new Error('grammar bundle ' + lv + ' missing');
+    return res.json();
+  }).then(function (data) {
+    state.grammarCache[lv] = data.topics;
+    return data.topics;
+  });
+}
+function loadAllGrammar() {
+  return Promise.all(GRAMMAR_LEVELS.map(loadGrammarLevel)).then(function (lists) {
+    return lists.reduce(function (a, b) { return a.concat(b); }, []);
+  });
+}
+function findGrammarTopic(slug) {
+  for (var i = 0; i < GRAMMAR_LEVELS.length; i++) {
+    var topics = state.grammarCache[GRAMMAR_LEVELS[i]] || [];
+    for (var j = 0; j < topics.length; j++) if (topics[j].slug === slug) return topics[j];
+  }
+  return null;
+}
+
+/* Inline markdown used by the grammar pages: **bold**, *italic*, [text](url).
+   Internal /blog/grammar/<slug>/ links become in-app #/grammar/<slug> links. */
+function gMd(s) {
+  var h = esc(String(s == null ? '' : s));
+  h = h.replace(/\[([^\]]+)\]\(([^)]+)\)/g, function (m, t, u) {
+    if (u.indexOf('/blog/grammar/') === 0) {
+      var parts = u.split('/').filter(Boolean);
+      return '<a href="#/grammar/' + esc(parts[parts.length - 1]) + '">' + t + '</a>';
+    }
+    return '<a href="' + esc(u) + '" target="_blank" rel="noopener">' + t + '</a>';
+  });
+  h = h.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  h = h.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  return h;
+}
+
+function grammarBlocksHTML(blocks) {
+  return (blocks || []).map(function (b) {
+    var t = b.type;
+    if (t === 'p') return '<p>' + gMd(b.md) + '</p>';
+    if (t === 'tip') return '<div class="g-tip">' + gMd(b.md) + '</div>';
+    if (t === 'list') return '<ul class="g-list">' + (b.items || []).map(function (it) {
+      return '<li>' + gMd(it) + '</li>';
+    }).join('') + '</ul>';
+    if (t === 'examples') return '<ol class="g-examples">' + (b.items || []).map(function (it) {
+      return '<li><div class="g-ex-text">' + gMd(it.text) + '</div>' +
+        (it.note ? '<div class="g-ex-note">' + gMd(it.note) + '</div>' : '') + '</li>';
+    }).join('') + '</ol>';
+    if (t === 'table') {
+      var heads = (b.headers || []).map(function (hh) { return '<th>' + gMd(hh) + '</th>'; }).join('');
+      var rows = (b.rows || []).map(function (r) {
+        return '<tr>' + r.map(function (c) { return '<td>' + gMd(c) + '</td>'; }).join('') + '</tr>';
+      }).join('');
+      return '<div class="gwrap"><table class="g-table"><thead><tr>' + heads + '</tr></thead><tbody>' + rows + '</tbody></table></div>';
+    }
+    return '';
+  }).join('');
+}
+
+/* ---------------- grammar hub (#/grammar) ---------------- */
+
+function renderGrammar(v, slug) {
+  if (slug) { renderGrammarTopic(v, slug); return; }
+  if (!state.gFilter) state.gFilter = { level: normalizeLevel(state.user && state.user.level) || 'a1', q: '' };
+  var f = state.gFilter;
+  v.innerHTML = '<div class="g-hub">' +
+    '<div class="g-head"><h1>\uD83D\uDCD6 Grammar Guides</h1>' +
+    '<p>' + GRAMMAR_TOTAL + ' topics · A1–C2 · read, practise, earn points</p></div>' +
+    '<div class="g-filters" role="tablist">' +
+    ['all'].concat(GRAMMAR_LEVELS).map(function (lv) {
+      var label = lv === 'all' ? 'All' : lv.toUpperCase();
+      return '<button class="g-pill' + (f.level === lv ? ' on' : '') + '" data-glevel="' + lv + '">' + label + '</button>';
+    }).join('') + '</div>' +
+    '<div class="g-search"><input id="g-search" type="search" placeholder="Search topics…" value="' + esc(f.q) + '" aria-label="Search grammar topics"></div>' +
+    '<div id="g-list"><div class="empty">Loading…</div></div></div>';
+  paintGrammarList();
+  Array.prototype.forEach.call(v.querySelectorAll('[data-glevel]'), function (btn) {
+    btn.addEventListener('click', function () {
+      state.gFilter.level = btn.getAttribute('data-glevel');
+      Array.prototype.forEach.call(v.querySelectorAll('[data-glevel]'), function (bb) {
+        bb.classList.toggle('on', bb === btn);
+      });
+      paintGrammarList();
+    });
+  });
+  var input = v.querySelector('#g-search'), deb = null;
+  input.addEventListener('input', function () {
+    clearTimeout(deb);
+    deb = setTimeout(function () { state.gFilter.q = input.value.trim(); paintGrammarList(); }, 250);
+  });
+}
+
+function paintGrammarList() {
+  var wrap = document.getElementById('g-list');
+  if (!wrap) return;
+  var f = state.gFilter || { level: 'all', q: '' };
+  var needAll = f.level === 'all' || !!f.q;
+  (needAll ? loadAllGrammar() : loadGrammarLevel(f.level)).then(function (topics) {
+    var prog = grammarProgress();
+    var q = (f.q || '').toLowerCase();
+    var list = topics.filter(function (t) {
+      if (f.level !== 'all' && t.level !== f.level) return false;
+      if (q && (t.h1 || '').toLowerCase().indexOf(q) === -1) return false;
+      return true;
+    });
+    if (!list.length) { wrap.innerHTML = '<div class="empty">No topics match.</div>'; return; }
+    wrap.innerHTML = '<div class="g-cards">' + list.map(function (t) {
+      return grammarCardHTML(t, prog[t.slug]);
+    }).join('') + '</div>';
+  }).catch(function () {
+    wrap.innerHTML = '<div class="empty">Could not load grammar guides. Check your connection and try again.</div>';
+  });
+}
+
+function grammarCardHTML(t, p) {
+  var status;
+  if (p && p.done) status = '<span class="g-status done">✓ ' + p.best + '/' + (p.total || 16) + '</span>';
+  else if (p && p.attempts) status = '<span class="g-status prog">Best ' + p.best + '/' + (p.total || 16) + '</span>';
+  else status = '<span class="g-status new">16 exercises</span>';
+  return '<a class="g-card" href="#/grammar/' + esc(t.slug) + '">' +
+    '<span class="g-lv g-lv-' + t.level + '">' + t.level.toUpperCase() + '</span>' +
+    '<span class="g-card-main"><b>' + esc(t.h1) + '</b>' + status + '</span>' +
+    '<span class="g-chev" aria-hidden="true">›</span></a>';
+}
+
+/* ---------------- grammar topic (#/grammar/<slug>) ---------------- */
+
+function renderGrammarTopic(v, slug) {
+  v.innerHTML = '<div class="g-topic"><div class="empty">Loading…</div></div>';
+  var cached = findGrammarTopic(slug);
+  var ready = cached ? Promise.resolve(cached)
+    : loadAllGrammar().then(function () { return findGrammarTopic(slug); });
+  ready.then(function (t) {
+    if (!t) {
+      v.innerHTML = '<div class="g-topic"><div class="empty">Guide not found. <a href="#/grammar">Back to all guides</a></div></div>';
+      return;
+    }
+    var prog = grammarProgress()[t.slug];
+    var sections = (t.sections || []).map(function (s) {
+      return '<section class="g-section"><h2>' + esc(s.h2) + '</h2>' + grammarBlocksHTML(s.blocks) + '</section>';
+    }).join('');
+    var mistakes = (t.mistakes || []).map(function (m) {
+      return '<div class="g-mistake"><div class="g-mline bad">❌ ' + gMd(m.wrong) + '</div>' +
+        '<div class="g-mline good">✅ ' + gMd(m.right) + '</div>' +
+        (m.why ? '<div class="g-mwhy">' + gMd(m.why) + '</div>' : '') + '</div>';
+    }).join('');
+    var intro = (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('');
+    var best = prog && prog.done
+      ? '<span class="g-best">✓ Completed · best ' + prog.best + '/' + (prog.total || 16) + '</span>' : '';
+    var related = (t.related_grammar || []).map(function (rs) {
+      var rt = findGrammarTopic(rs);
+      return '<a class="g-rel" href="#/grammar/' + esc(rs) + '">' + esc(rt ? rt.h1 : rs) + '</a>';
+    }).join('');
+    v.innerHTML = '<div class="g-topic">' +
+      '<a class="g-back" href="#/grammar">‹ All guides</a>' +
+      '<div class="g-hero"><span class="g-lv g-lv-' + t.level + '">' + t.level.toUpperCase() + '</span>' +
+      '<h1>' + esc(t.h1) + '</h1>' + best + '</div>' +
+      '<div class="g-intro">' + intro + '</div>' + sections +
+      (mistakes ? '<section class="g-section"><h2>Common mistakes</h2>' + mistakes + '</section>' : '') +
+      '<button class="btn btn-primary g-start" id="g-start-btn">' +
+      (prog && prog.done ? 'Practise again ↻' : 'Start exercises →') + '</button>' +
+      '<p class="g-xp-note">16 exercises · 5 points per correct answer' +
+      (prog && prog.claimed ? ' · practice mode (no points)' : ' · +20 completion bonus') + '</p>' +
+      (related ? '<section class="g-section"><h2>Related guides</h2><div class="g-rels">' + related + '</div></section>' : '') +
+      '</div>';
+    document.getElementById('g-start-btn').addEventListener('click', function () { startGrammarQuiz(t); });
+    window.scrollTo(0, 0);
+  }).catch(function () {
+    v.innerHTML = '<div class="g-topic"><div class="empty">Could not load this guide.</div></div>';
+  });
+}
+
+/* ---------------- grammar quiz ---------------- */
+
+function shuffleArr(a) {
+  a = a.slice();
+  for (var i = a.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+  }
+  return a;
+}
+
+function startGrammarQuiz(topic) {
+  var prog = grammarProgress();
+  var rec = prog[topic.slug] || {};
+  rec.attempts = (rec.attempts || 0) + 1;
+  rec.h1 = topic.h1; rec.lastTs = Date.now();
+  prog._last = topic.slug; prog[topic.slug] = rec;
+  setGrammarProgress(prog);
+  state.gquiz = {
+    topic: topic, idx: 0, correct: 0, answered: false, picked: -1,
+    firstRun: !rec.claimed,
+    items: shuffleArr(topic.exercises.items)
+  };
+  window.scrollTo(0, 0);
+  renderGrammarQuiz();
+}
+
+function renderGrammarQuiz() {
+  var q = state.gquiz; if (!q) return;
+  var v = document.getElementById('view');
+  var it = q.items[q.idx];
+  var n = q.items.length;
+  var opts = it.options.map(function (op, i) {
+    var cls = 'opt-btn';
+    if (q.answered) {
+      if (i === it.answer) cls += ' correct';
+      else if (i === q.picked) cls += ' wrong';
+      else cls += ' dim';
+    }
+    return '<button class="' + cls + '" data-gopt="' + i + '"' + (q.answered ? ' disabled' : '') + '>' + esc(op) + '</button>';
+  }).join('');
+  var fb = '';
+  if (q.answered) {
+    var ok = q.picked === it.answer;
+    fb = '<div class="quiz-feedback ' + (ok ? 'good' : 'bad') + '">' + (ok ? '✓ Correct!' : '✗ Not quite.') + '</div>' +
+      (it.explanation ? '<div class="g-explain">' + gMd(it.explanation) + '</div>' : '') +
+      '<button class="btn btn-primary" id="g-next-btn">' + (q.idx + 1 >= n ? 'See results →' : 'Next →') + '</button>';
+  }
+  v.innerHTML = '<div class="g-quiz">' +
+    '<a class="g-back" href="#/grammar/' + esc(q.topic.slug) + '">‹ ' + esc(q.topic.h1) + '</a>' +
+    '<div class="quiz-progress">Question ' + (q.idx + 1) + ' of ' + n + (q.firstRun ? '' : ' · practice mode') + '</div>' +
+    '<div class="g-bar"><span style="width:' + Math.round(q.idx / n * 100) + '%"></span></div>' +
+    '<div class="quiz-q">' + esc(it.prompt).replace(/___/g, '…') + '</div>' +
+    '<div>' + opts + '</div>' + fb + '</div>';
+  Array.prototype.forEach.call(v.querySelectorAll('[data-gopt]'), function (btn) {
+    btn.addEventListener('click', function () { answerGrammarQuiz(parseInt(btn.getAttribute('data-gopt'), 10)); });
+  });
+  var next = document.getElementById('g-next-btn');
+  if (next) next.addEventListener('click', nextGrammarQuiz);
+}
+
+function answerGrammarQuiz(i) {
+  var q = state.gquiz;
+  if (!q || q.answered) return;
+  q.answered = true; q.picked = i;
+  var it = q.items[q.idx];
+  if (i === it.answer) {
+    q.correct++;
+    if (q.firstRun) awardPoints('grammar_exercise', 5, 'gex-' + q.topic.slug + '-' + it.id);
+  } else {
+    saveMistake({ date: todayStr(), level: q.topic.level, kind: 'grammar', topic: q.topic.slug,
+      question: it.prompt, options: it.options, answer: it.answer, picked: i });
+  }
+  renderGrammarQuiz();
+  window.scrollTo(0, 0);
+}
+
+function nextGrammarQuiz() {
+  var q = state.gquiz; if (!q) return;
+  if (q.idx + 1 >= q.items.length) { finishGrammarQuiz(); return; }
+  q.idx++; q.answered = false; q.picked = -1;
+  renderGrammarQuiz();
+  window.scrollTo(0, 0);
+}
+
+function finishGrammarQuiz() {
+  var q = state.gquiz; if (!q) return;
+  var topic = q.topic;
+  var slug = topic.slug, total = q.items.length, correct = q.correct;
+  var prog = grammarProgress();
+  var rec = prog[slug] || {};
+  rec.done = true;
+  rec.best = Math.max(rec.best || 0, correct);
+  rec.total = total; rec.h1 = topic.h1; rec.lastTs = Date.now();
+  var bonus = q.firstRun && !rec.claimed;
+  if (bonus) { rec.claimed = true; awardPoints('grammar_topic_done', 20, 'gtd-' + slug); }
+  prog[slug] = rec; setGrammarProgress(prog);
+  saveAttempt({ kind: 'grammar_topic', theme: slug, level: topic.level, score: correct, total: total, date: todayStr() });
+  state.gquiz = null;
+  var v = document.getElementById('view');
+  var msg = correct === total ? 'Perfect! 🎉'
+    : correct >= total * 0.7 ? 'Great job! 👏'
+    : correct >= total * 0.4 ? 'Good effort — keep practising.'
+    : 'Keep practising — you will get there!';
+  v.innerHTML = '<div class="g-quiz"><div class="score-hero">' +
+    '<div class="score-big">' + correct + '/' + total + '</div>' +
+    '<div class="score-sub">' + esc(topic.h1) + '</div>' +
+    '<p><b>' + msg + '</b></p>' +
+    (bonus ? '<p class="g-xp-note">+20 completion bonus earned!</p>' : '') +
+    '<div class="g-end-btns"><button class="btn" id="g-retry-btn">Try again ↻</button> ' +
+    '<a class="btn btn-primary" href="#/grammar">All guides</a></div>' +
+    '</div></div>';
+  document.getElementById('g-retry-btn').addEventListener('click', function () { startGrammarQuiz(topic); });
+  window.scrollTo(0, 0);
+}
+
+/* ---------------- grammar home banner ---------------- */
+
+function paintGrammarBanner() {
+  var wrap = document.getElementById('home-grammar-wrap');
+  if (!wrap) return;
+  var prog = grammarProgress();
+  var doneCount = 0;
+  Object.keys(prog).forEach(function (k) {
+    if (k.charAt(0) === '_') return;
+    if (prog[k] && prog[k].done) doneCount++;
+  });
+  var lastSlug = prog._last;
+  var lastRec = (lastSlug && prog[lastSlug] && !prog[lastSlug].done) ? prog[lastSlug] : null;
+  var inner;
+  if (doneCount >= GRAMMAR_TOTAL) {
+    inner = '<span class="g-b-icon">🎉</span><span class="g-b-main"><b>All ' + GRAMMAR_TOTAL + ' grammar guides completed!</b>' +
+      '<span>Review any topic any time.</span></span><span class="g-b-cta">Review →</span>';
+    wrap.innerHTML = '<a class="g-banner" href="#/grammar">' + inner + '</a>';
+  } else if (lastRec) {
+    var pct = Math.round(((lastRec.best || 0) / (lastRec.total || 16)) * 100);
+    inner = '<span class="g-b-icon">📖</span><span class="g-b-main"><b>Continue: ' + esc(lastRec.h1 || lastSlug) + '</b>' +
+      '<span class="g-b-bar"><span style="width:' + pct + '%"></span></span></span><span class="g-b-cta">Continue →</span>';
+    wrap.innerHTML = '<a class="g-banner" href="#/grammar/' + esc(lastSlug) + '">' + inner + '</a>';
+  } else {
+    inner = '<span class="g-b-icon">📖</span><span class="g-b-main"><b>Grammar Guides</b>' +
+      '<span>' + GRAMMAR_TOTAL + ' topics · A1–C2 · read, practise, earn points</span></span><span class="g-b-cta">Explore →</span>';
+    wrap.innerHTML = '<a class="g-banner" href="#/grammar">' + inner + '</a>';
+  }
+}
+
 /* Paint instantly from local data, then refresh from cloud in the background.
    Awaiting Supabase before the first paint made tab switches feel sluggish. */
 function renderHome(v) {
@@ -5923,6 +6273,9 @@ function paintHome(v, mistakes, attempts) {
   // 0b — Streak banner (mockup v5): mascot artwork bg, painted with local
   // data first, then refreshed with cloud state by refreshHomeStreak().
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
+
+  // 0b2 — Grammar guides banner (smart: explore / continue / completed)
+  html += '<div id="home-grammar-wrap"></div>';
 
   // 0c — Homework from teacher (filled async; empty when none pending)
   html += '<div id="home-hw-wrap"></div>';
@@ -5990,6 +6343,7 @@ function paintHome(v, mistakes, attempts) {
   }
 
   v.innerHTML = html;
+  paintGrammarBanner();
 }
 
 function attemptCardHTML(a) {
@@ -6237,6 +6591,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   const today = lessons[0] || null;
   let html = '<div class="dhome">';
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
+  html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-hw-wrap"></div>';
   html += '<div class="dh-grid">' + dhQuestsHTML() +
     '<div class="dh-col">' + dhLessonHTML(today) + dhMistakesHTML(mistakes) + '</div></div>';
@@ -6255,6 +6610,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   v.innerHTML = html;
   wireDhPlayer();
   refreshDhProgress();
+  paintGrammarBanner();
 }
 
 /* ---------------- PROFILE ---------------- */
@@ -10237,7 +10593,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610170559';
+var APP_VERSION = '202610172056';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
