@@ -161,11 +161,35 @@ a{color:#E8590C}
 .transcript{display:none;background:#fff;border-radius:14px;padding:16px 18px;margin-top:12px;font-size:14.5px;line-height:1.8;width:100%}
 .transcript b{color:#E8590C}
 .qsec .quiz{background:none;border:0;padding:0;margin:0}
-.qsec .quiz>h2,.qsec .quiz>p:first-of-type{display:none}
-.qsec .qblock{background:#FFFBF3;border:1px solid #f3e9d8;border-radius:14px;padding:14px 16px}
-.qsec .qimg{width:200px;height:130px;object-fit:cover;border-radius:10px}
-.qsec .qcheck{background:#FF9600;color:#fff;border:0;font-weight:800;font-size:16px;padding:14px 34px;border-radius:14px;cursor:pointer;margin-top:14px;box-shadow:0 6px 18px rgba(255,150,0,.35)}
-.qsec .qcheck:hover{background:#E8590C}
+.quizapp{background:#FFFBF3;border:1px solid #f3e9d8;border-radius:18px;padding:30px 26px;margin-top:14px}
+.qstart-screen{text-align:center}
+.qstart-screen .qicons{display:flex;gap:10px;justify-content:center;margin:6px 0 16px}
+.qstart-screen .qicons span{width:54px;height:54px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.qstart-screen h3{font-size:20px;margin:0 0 4px}
+.qstart-screen p{color:#8a93a6;font-size:14px;margin:0 0 6px}
+.qq-screen{text-align:left}
+.qprog{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.qprog .bar{flex:1;height:8px;background:#f0e6d2;border-radius:99px;overflow:hidden}
+.qprog .bar i{display:block;height:100%;background:linear-gradient(90deg,#FF9600,#E8590C);border-radius:99px;transition:width .3s}
+.qprog span{font-size:13px;font-weight:700;color:#8a93a6;white-space:nowrap}
+.qq-q{font-size:18px;font-weight:800;margin:6px 0 14px;line-height:1.5}
+.qq-img{width:100%;max-width:360px;height:210px;object-fit:cover;border-radius:14px;margin-bottom:14px;display:block}
+.qq-opts{display:grid;gap:10px}
+.qq-opt{background:#fff;border:2px solid #f0e6d2;border-radius:14px;padding:14px 18px;font-size:15.5px;font-weight:600;text-align:left;cursor:pointer;color:#1c2430;font-family:inherit;transition:border-color .15s,transform .15s}
+.qq-opt:hover:not(:disabled){border-color:#FF9600;transform:translateY(-1px)}
+.qq-opt:disabled{cursor:default;opacity:.95}
+.qq-opt.correct{background:#E8F5E9;border-color:#2e7d32;color:#1b5e20}
+.qq-opt.wrong{background:#FFEBEE;border-color:#c62828;color:#b71c1c}
+.qq-next{margin-top:16px;background:#1c2430;color:#fff;border:0;font-weight:700;font-size:15px;padding:13px 30px;border-radius:12px;cursor:pointer;display:none;font-family:inherit}
+.qend-screen{text-align:center}
+.qend-screen .qicons{font-size:44px}
+.qend-screen .score{font-size:54px;font-weight:800;color:#E8590C;margin:8px 0 2px}
+.qend-screen p{color:#5a6480;margin:0 0 8px}
+@media(max-width:700px){
+.quizapp{padding:22px 16px}
+.qq-q{font-size:16.5px}
+.qq-opt{font-size:15px;padding:13px 14px}
+}
 .qstart{background:#FF9600;color:#fff;border:0;font-weight:800;font-size:16px;padding:14px 34px;border-radius:14px;cursor:pointer;margin-top:14px;box-shadow:0 6px 18px rgba(255,150,0,.35)}
 @media(max-width:1000px){
 .hmain{grid-template-columns:1fr}
@@ -445,78 +469,70 @@ a{color:#E8590C}
 <div class="transcript" id="transcript"><div><b>Maya:</b> Excuse me, where is the nearest subway station?</div><div><b>Lena:</b> It&#x27;s just around the corner. Are you going downtown?</div><div><b>Maya:</b> Yes! How long does it take from here?</div><div><b>Lena:</b> About twenty minutes. A ticket costs three dollars.</div><div><b>Maya:</b> Great. What time does the next train leave?</div><div><b>Lena:</b> In five minutes. Hurry, or you&#x27;ll miss it!</div><div><b>Maya:</b> Thank you so much for your help!</div><div><b>Lena:</b> You&#x27;re welcome! Have a great trip!</div></div></div></section>
 <section class="hsec qsec" data-sec="quiz">
 <div class="hsec-head"><span class="hico" style="background:#E8F5E9">&#9989;</span><div><h2>Quick Quiz</h2>
-<p>Test your vocabulary knowledge.</p></div></div><div class="quiz"><h2>Quiz: Test Yourself</h2>
+<p>Test your vocabulary knowledge.</p></div></div>
+<div class="quizapp" id="quizapp">
+<div class="qstart-screen"><div class="qicons"><span>&#128218;</span><span>&#129518;</span><span>&#127919;</span></div>
+<h3>Ready to test yourself?</h3><p>10 questions &middot; pick the correct answer</p>
+<button class="qstart">Start Quiz &rarr;</button></div>
+<div class="qq-screen" style="display:none"></div>
+<div class="qend-screen" style="display:none"></div>
+</div>
+<div class="qdata" style="display:none"><div class="quiz"><h2>Quiz: Test Yourself</h2>
 <p>Choose the correct answer for each question, then check your score.</p>
-<div class="qblock" data-answer="intersection">
-<div class="qq">Q1. Which word means 'a place where two or more roads meet'?</div>
+<div class="qblock" data-answer="shuttle">
+<div class="qq">Q1. Which word means 'a bus or plane that travels regularly between two places'?</div>
 
-<label><input type="radio" name="q0" value="customs"> customs</label><label><input type="radio" name="q0" value="intersection"> intersection</label><label><input type="radio" name="q0" value="transfer"> transfer</label><label><input type="radio" name="q0" value="layover"> layover</label>
+<label><input type="radio" name="q0" value="itinerary"> itinerary</label><label><input type="radio" name="q0" value="journey"> journey</label><label><input type="radio" name="q0" value="shuttle"> shuttle</label><label><input type="radio" name="q0" value="guidebook"> guidebook</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="meander">
-<div class="qq">Q2. Which word means 'to wander slowly without a fixed direction'?</div>
+</div><div class="qblock" data-answer="subway">
+<div class="qq">Q2. Which word means 'a train that runs under the ground in a city'?</div>
 
-<label><input type="radio" name="q1" value="congestion"> congestion</label><label><input type="radio" name="q1" value="meander"> meander</label><label><input type="radio" name="q1" value="wayfinding"> wayfinding</label><label><input type="radio" name="q1" value="sojourn"> sojourn</label>
+<label><input type="radio" name="q1" value="transit"> transit</label><label><input type="radio" name="q1" value="car"> car</label><label><input type="radio" name="q1" value="subway"> subway</label><label><input type="radio" name="q1" value="train"> train</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="aisle">
-<div class="qq">Q3. Which word means 'the long passage between rows of seats on a plane or bus'?</div>
+</div><div class="qblock" data-answer="highway">
+<div class="qq">Q3. Which word means 'a wide, fast road between cities'?</div>
 
-<label><input type="radio" name="q2" value="souvenir"> souvenir</label><label><input type="radio" name="q2" value="aisle"> aisle</label><label><input type="radio" name="q2" value="disembark"> disembark</label><label><input type="radio" name="q2" value="road trip"> road trip</label>
+<label><input type="radio" name="q2" value="landmark"> landmark</label><label><input type="radio" name="q2" value="terminal"> terminal</label><label><input type="radio" name="q2" value="highway"> highway</label><label><input type="radio" name="q2" value="ferry"> ferry</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="fare">
-<div class="qq">Q4. Which word means 'the money you pay to travel by bus, train, or taxi'?</div>
+</div><div class="qblock" data-answer="circumnavigate">
+<div class="qq">Q4. Which word means 'to travel all the way around the earth'?</div>
 
-<label><input type="radio" name="q3" value="terminal"> terminal</label><label><input type="radio" name="q3" value="accommodation"> accommodation</label><label><input type="radio" name="q3" value="adventure"> adventure</label><label><input type="radio" name="q3" value="fare"> fare</label>
+<label><input type="radio" name="q3" value="terminus"> terminus</label><label><input type="radio" name="q3" value="circumnavigate"> circumnavigate</label><label><input type="radio" name="q3" value="caravan"> caravan</label><label><input type="radio" name="q3" value="traverse"> traverse</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="luggage">
-<div class="qq">Q5. Which word means 'the bags you carry when you travel'?</div>
+</div><div class="qblock" data-answer="station">
+<div class="qq">Q5. Which word means 'the place where trains and buses stop'?</div>
 
-<label><input type="radio" name="q4" value="luggage"> luggage</label><label><input type="radio" name="q4" value="boarding"> boarding</label><label><input type="radio" name="q4" value="journey"> journey</label><label><input type="radio" name="q4" value="airport"> airport</label>
+<label><input type="radio" name="q4" value="station"> station</label><label><input type="radio" name="q4" value="road"> road</label><label><input type="radio" name="q4" value="trip"> trip</label><label><input type="radio" name="q4" value="delay"> delay</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="bus">
+</div><div class="qblock" data-answer="driver">
 <div class="qq">Q6. What is this?</div>
-<img class="qimg" src="/media/a1/2026-09-28/photos/bus.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q5" value="road"> road</label><label><input type="radio" name="q5" value="bus"> bus</label><label><input type="radio" name="q5" value="passport"> passport</label><label><input type="radio" name="q5" value="taxi"> taxi</label>
+<img class="qimg" src="/media/a2/2026-09-23/photos/driver.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q5" value="carry-on"> carry-on</label><label><input type="radio" name="q5" value="schedule"> schedule</label><label><input type="radio" name="q5" value="suitcase"> suitcase</label><label><input type="radio" name="q5" value="driver"> driver</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="platform">
+</div><div class="qblock" data-answer="passport">
 <div class="qq">Q7. What is this?</div>
-<img class="qimg" src="/media/a2/2026-10-01/photos/platform.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q6" value="carry-on"> carry-on</label><label><input type="radio" name="q6" value="landmark"> landmark</label><label><input type="radio" name="q6" value="shuttle"> shuttle</label><label><input type="radio" name="q6" value="platform"> platform</label>
+<img class="qimg" src="/media/a2/2026-10-01/photos/passport.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q6" value="stopover"> stopover</label><label><input type="radio" name="q6" value="commute"> commute</label><label><input type="radio" name="q6" value="souvenir"> souvenir</label><label><input type="radio" name="q6" value="passport"> passport</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="schedule">
+</div><div class="qblock" data-answer="taxi">
 <div class="qq">Q8. What is this?</div>
-<img class="qimg" src="/media/a2/2026-09-23/photos/schedule.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q7" value="schedule"> schedule</label><label><input type="radio" name="q7" value="arrival"> arrival</label><label><input type="radio" name="q7" value="sightseeing"> sightseeing</label><label><input type="radio" name="q7" value="map"> map</label>
+<img class="qimg" src="/media/a1/2026-09-28/photos/taxi.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q7" value="bus"> bus</label><label><input type="radio" name="q7" value="luggage"> luggage</label><label><input type="radio" name="q7" value="arrival"> arrival</label><label><input type="radio" name="q7" value="taxi"> taxi</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="flight">
+</div><div class="qblock" data-answer="map">
 <div class="qq">Q9. What is this?</div>
-<img class="qimg" src="/media/a2/2026-09-23/photos/flight.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q8" value="flight"> flight</label><label><input type="radio" name="q8" value="departure"> departure</label><label><input type="radio" name="q8" value="detour"> detour</label><label><input type="radio" name="q8" value="backpack"> backpack</label>
+<img class="qimg" src="/media/a2/2026-10-01/photos/map.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q8" value="fare"> fare</label><label><input type="radio" name="q8" value="hotel"> hotel</label><label><input type="radio" name="q8" value="map"> map</label><label><input type="radio" name="q8" value="flight"> flight</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="traffic">
+</div><div class="qblock" data-answer="airport">
 <div class="qq">Q10. What is this?</div>
-<img class="qimg" src="/media/a1/2026-09-29/photos/traffic.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q9" value="traffic"> traffic</label><label><input type="radio" name="q9" value="ferry"> ferry</label><label><input type="radio" name="q9" value="subway"> subway</label><label><input type="radio" name="q9" value="hotel"> hotel</label>
+<img class="qimg" src="/media/a1/2026-09-28/photos/airport.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q9" value="traffic"> traffic</label><label><input type="radio" name="q9" value="ticket"> ticket</label><label><input type="radio" name="q9" value="airport"> airport</label><label><input type="radio" name="q9" value="guest"> guest</label>
 <div class="qresult"></div>
 </div>
 <button class="qcheck">Check answers</button>
 <div class="qscore" style="display:none;font-weight:700;margin-top:14px;font-size:18px"></div>
-</div><script>
-document.querySelector('.qcheck').addEventListener('click', function() {
-  var correct = 0, total = 0;
-  document.querySelectorAll('.qblock').forEach(function(b) {
-    total++;
-    var ans = b.getAttribute('data-answer');
-    var sel = b.querySelector('input:checked');
-    var res = b.querySelector('.qresult');
-    res.style.display = 'block';
-    if (sel && sel.value === ans) { correct++; res.textContent = '✓ Correct!'; res.style.color = '#2e7d32'; }
-    else { res.textContent = '✗ The answer is: ' + ans; res.style.color = '#c62828'; }
-  });
-  var score = document.querySelector('.qscore');
-  score.style.display = 'block';
-  score.textContent = 'You got ' + correct + ' out of ' + total + ' correct!';
-});
-</script></section>
+</div></div></section>
 </div>
 </div>
 </div>
@@ -566,5 +582,68 @@ document.querySelectorAll('.tbtn').forEach(function(b){
   b.textContent=open?'View transcript':'Hide transcript';
  });
 });
+/* Interactive Quick Quiz: one question at a time */
+(function(){
+ var app=document.getElementById('quizapp'); if(!app) return;
+ var data=app.parentElement.querySelector('.qdata'); if(!data) return;
+ var qs=[];
+ data.querySelectorAll('.qblock').forEach(function(b){
+  var qq=b.querySelector('.qq'); if(!qq) return;
+  var qtxt=qq.textContent.replace(/^Q\d+\.\s*/,'').trim();
+  var img=b.querySelector('.qimg');
+  var opts=[];
+  b.querySelectorAll('input[type="radio"]').forEach(function(r){opts.push(r.value);});
+  if(opts.length) qs.push({q:qtxt,img:img?img.src:null,opts:opts,ans:b.getAttribute('data-answer')});
+ });
+ if(!qs.length) return;
+ var startS=app.querySelector('.qstart-screen'),
+     qS=app.querySelector('.qq-screen'),
+     endS=app.querySelector('.qend-screen');
+ var idx=0,score=0;
+ function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+ function renderQ(){
+  var q=qs[idx],pct=Math.round(idx/qs.length*100);
+  var h='<div class="qprog"><div class="bar"><i style="width:'+pct+'%"></i></div><span>Question '+(idx+1)+' of '+qs.length+'</span></div>';
+  h+='<div class="qq-q">'+esc(q.q)+'</div>';
+  if(q.img) h+='<img class="qq-img" src="'+q.img+'" alt="What is this?">';
+  h+='<div class="qq-opts">';
+  q.opts.forEach(function(o){h+='<button class="qq-opt" data-v="'+esc(o)+'">'+esc(o)+'</button>';});
+  h+='</div><button class="qq-next">Next &rarr;</button>';
+  qS.innerHTML=h;
+  var locked=false;
+  qS.querySelectorAll('.qq-opt').forEach(function(btn){
+   btn.addEventListener('click',function(){
+    if(locked) return; locked=true;
+    var ok=btn.getAttribute('data-v')===q.ans;
+    if(ok){score++;btn.classList.add('correct');}
+    else{btn.classList.add('wrong');}
+    qS.querySelectorAll('.qq-opt').forEach(function(x){
+     x.disabled=true;
+     if(x.getAttribute('data-v')===q.ans) x.classList.add('correct');
+    });
+    var nx=qS.querySelector('.qq-next');
+    nx.style.display='inline-block';
+    nx.textContent=(idx===qs.length-1)?'See results →':'Next →';
+   });
+  });
+  qS.querySelector('.qq-next').addEventListener('click',function(){
+   idx++;
+   if(idx<qs.length){renderQ();qS.scrollIntoView({behavior:'smooth',block:'center'});}
+   else{showEnd();}
+  });
+ }
+ function showEnd(){
+  qS.style.display='none';endS.style.display='block';
+  var msg=score===qs.length?'Perfect! Amazing work!':(score>=7?'Great job! Keep it up!':(score>=4?'Good effort! Keep practicing!':'Keep practicing and try again!'));
+  endS.innerHTML='<div class="qicons">\u{1F3AF}</div><div class="score">'+score+'/'+qs.length+'</div><p>'+msg+'</p><button class="qstart">Try again \u2192</button>';
+  endS.querySelector('.qstart').addEventListener('click',function(){
+   idx=0;score=0;endS.style.display='none';qS.style.display='block';renderQ();
+  });
+  endS.scrollIntoView({behavior:'smooth',block:'center'});
+ }
+ app.querySelector('.qstart').addEventListener('click',function(){
+  startS.style.display='none';qS.style.display='block';renderQ();
+ });
+})();
 </script>
 </body></html>

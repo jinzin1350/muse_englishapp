@@ -161,11 +161,35 @@ a{color:#E8590C}
 .transcript{display:none;background:#fff;border-radius:14px;padding:16px 18px;margin-top:12px;font-size:14.5px;line-height:1.8;width:100%}
 .transcript b{color:#E8590C}
 .qsec .quiz{background:none;border:0;padding:0;margin:0}
-.qsec .quiz>h2,.qsec .quiz>p:first-of-type{display:none}
-.qsec .qblock{background:#FFFBF3;border:1px solid #f3e9d8;border-radius:14px;padding:14px 16px}
-.qsec .qimg{width:200px;height:130px;object-fit:cover;border-radius:10px}
-.qsec .qcheck{background:#FF9600;color:#fff;border:0;font-weight:800;font-size:16px;padding:14px 34px;border-radius:14px;cursor:pointer;margin-top:14px;box-shadow:0 6px 18px rgba(255,150,0,.35)}
-.qsec .qcheck:hover{background:#E8590C}
+.quizapp{background:#FFFBF3;border:1px solid #f3e9d8;border-radius:18px;padding:30px 26px;margin-top:14px}
+.qstart-screen{text-align:center}
+.qstart-screen .qicons{display:flex;gap:10px;justify-content:center;margin:6px 0 16px}
+.qstart-screen .qicons span{width:54px;height:54px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.qstart-screen h3{font-size:20px;margin:0 0 4px}
+.qstart-screen p{color:#8a93a6;font-size:14px;margin:0 0 6px}
+.qq-screen{text-align:left}
+.qprog{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.qprog .bar{flex:1;height:8px;background:#f0e6d2;border-radius:99px;overflow:hidden}
+.qprog .bar i{display:block;height:100%;background:linear-gradient(90deg,#FF9600,#E8590C);border-radius:99px;transition:width .3s}
+.qprog span{font-size:13px;font-weight:700;color:#8a93a6;white-space:nowrap}
+.qq-q{font-size:18px;font-weight:800;margin:6px 0 14px;line-height:1.5}
+.qq-img{width:100%;max-width:360px;height:210px;object-fit:cover;border-radius:14px;margin-bottom:14px;display:block}
+.qq-opts{display:grid;gap:10px}
+.qq-opt{background:#fff;border:2px solid #f0e6d2;border-radius:14px;padding:14px 18px;font-size:15.5px;font-weight:600;text-align:left;cursor:pointer;color:#1c2430;font-family:inherit;transition:border-color .15s,transform .15s}
+.qq-opt:hover:not(:disabled){border-color:#FF9600;transform:translateY(-1px)}
+.qq-opt:disabled{cursor:default;opacity:.95}
+.qq-opt.correct{background:#E8F5E9;border-color:#2e7d32;color:#1b5e20}
+.qq-opt.wrong{background:#FFEBEE;border-color:#c62828;color:#b71c1c}
+.qq-next{margin-top:16px;background:#1c2430;color:#fff;border:0;font-weight:700;font-size:15px;padding:13px 30px;border-radius:12px;cursor:pointer;display:none;font-family:inherit}
+.qend-screen{text-align:center}
+.qend-screen .qicons{font-size:44px}
+.qend-screen .score{font-size:54px;font-weight:800;color:#E8590C;margin:8px 0 2px}
+.qend-screen p{color:#5a6480;margin:0 0 8px}
+@media(max-width:700px){
+.quizapp{padding:22px 16px}
+.qq-q{font-size:16.5px}
+.qq-opt{font-size:15px;padding:13px 14px}
+}
 .qstart{background:#FF9600;color:#fff;border:0;font-weight:800;font-size:16px;padding:14px 34px;border-radius:14px;cursor:pointer;margin-top:14px;box-shadow:0 6px 18px rgba(255,150,0,.35)}
 @media(max-width:1000px){
 .hmain{grid-template-columns:1fr}
@@ -333,78 +357,70 @@ a{color:#E8590C}
 <div class="transcript" id="transcript"><div><b>Maya:</b> It&#x27;s such a beautiful day! Let&#x27;s go for a walk in the park.</div><div><b>Lena:</b> Great idea! Look at those flowers, they&#x27;re blooming!</div><div><b>Maya:</b> And look at that bird! It&#x27;s building a nest.</div><div><b>Lena:</b> I love spring. Everything feels alive.</div><div><b>Maya:</b> Me too. But be careful, the path is slippery after the rain.</div><div><b>Lena:</b> Thanks! Do you come here often?</div><div><b>Maya:</b> Every weekend. It&#x27;s my favorite place to relax.</div><div><b>Lena:</b> I can see why!</div></div></div></section>
 <section class="hsec qsec" data-sec="quiz">
 <div class="hsec-head"><span class="hico" style="background:#E8F5E9">&#9989;</span><div><h2>Quick Quiz</h2>
-<p>Test your vocabulary knowledge.</p></div></div><div class="quiz"><h2>Quiz: Test Yourself</h2>
+<p>Test your vocabulary knowledge.</p></div></div>
+<div class="quizapp" id="quizapp">
+<div class="qstart-screen"><div class="qicons"><span>&#128218;</span><span>&#129518;</span><span>&#127919;</span></div>
+<h3>Ready to test yourself?</h3><p>10 questions &middot; pick the correct answer</p>
+<button class="qstart">Start Quiz &rarr;</button></div>
+<div class="qq-screen" style="display:none"></div>
+<div class="qend-screen" style="display:none"></div>
+</div>
+<div class="qdata" style="display:none"><div class="quiz"><h2>Quiz: Test Yourself</h2>
 <p>Choose the correct answer for each question, then check your score.</p>
-<div class="qblock" data-answer="desertification">
-<div class="qq">Q1. Which word means 'rich farmland slowly turning into desert'?</div>
+<div class="qblock" data-answer="leaf">
+<div class="qq">Q1. Which word means 'the flat green part of a tree'?</div>
 
-<label><input type="radio" name="q0" value="extinction"> extinction</label><label><input type="radio" name="q0" value="tide"> tide</label><label><input type="radio" name="q0" value="desertification"> desertification</label><label><input type="radio" name="q0" value="migrate"> migrate</label>
-<div class="qresult"></div>
-</div><div class="qblock" data-answer="star">
-<div class="qq">Q2. Which word means 'a small bright light in the night sky'?</div>
-
-<label><input type="radio" name="q1" value="ocean"> ocean</label><label><input type="radio" name="q1" value="star"> star</label><label><input type="radio" name="q1" value="leaf"> leaf</label><label><input type="radio" name="q1" value="bird"> bird</label>
-<div class="qresult"></div>
-</div><div class="qblock" data-answer="purr">
-<div class="qq">Q3. Which word means 'the soft sound a cat makes when it is happy'?</div>
-
-<label><input type="radio" name="q2" value="scratching post"> scratching post</label><label><input type="radio" name="q2" value="purr"> purr</label><label><input type="radio" name="q2" value="stray"> stray</label><label><input type="radio" name="q2" value="groom"> groom</label>
+<label><input type="radio" name="q0" value="forest"> forest</label><label><input type="radio" name="q0" value="tree"> tree</label><label><input type="radio" name="q0" value="leaf"> leaf</label><label><input type="radio" name="q0" value="star"> star</label>
 <div class="qresult"></div>
 </div><div class="qblock" data-answer="invasive">
-<div class="qq">Q4. Which word means '(of a plant or animal) spreading aggressively and harming the local environment'?</div>
+<div class="qq">Q2. Which word means '(of a plant or animal) spreading aggressively and harming the local environment'?</div>
 
-<label><input type="radio" name="q3" value="trophic cascade"> trophic cascade</label><label><input type="radio" name="q3" value="invasive"> invasive</label><label><input type="radio" name="q3" value="permafrost"> permafrost</label><label><input type="radio" name="q3" value="wetland"> wetland</label>
+<label><input type="radio" name="q1" value="wetland"> wetland</label><label><input type="radio" name="q1" value="extinct"> extinct</label><label><input type="radio" name="q1" value="invasive"> invasive</label><label><input type="radio" name="q1" value="trophic cascade"> trophic cascade</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="flower">
-<div class="qq">Q5. Which word means 'the colorful part of a plant'?</div>
+</div><div class="qblock" data-answer="habitat">
+<div class="qq">Q3. Which word means 'the natural home where a plant or animal lives'?</div>
 
-<label><input type="radio" name="q4" value="river"> river</label><label><input type="radio" name="q4" value="tree"> tree</label><label><input type="radio" name="q4" value="stone"> stone</label><label><input type="radio" name="q4" value="flower"> flower</label>
+<label><input type="radio" name="q2" value="groom"> groom</label><label><input type="radio" name="q2" value="wildlife"> wildlife</label><label><input type="radio" name="q2" value="scenic"> scenic</label><label><input type="radio" name="q2" value="habitat"> habitat</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="grass">
-<div class="qq">Q6. What is this?</div>
-<img class="qimg" src="/media/a1/2026-09-27/photos/grass.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q5" value="landscape"> landscape</label><label><input type="radio" name="q5" value="grass"> grass</label><label><input type="radio" name="q5" value="forest"> forest</label><label><input type="radio" name="q5" value="erosion"> erosion</label>
+</div><div class="qblock" data-answer="desertification">
+<div class="qq">Q4. Which word means 'rich farmland slowly turning into desert'?</div>
+
+<label><input type="radio" name="q3" value="desertification"> desertification</label><label><input type="radio" name="q3" value="reef"> reef</label><label><input type="radio" name="q3" value="permafrost"> permafrost</label><label><input type="radio" name="q3" value="ecosystem"> ecosystem</label>
 <div class="qresult"></div>
 </div><div class="qblock" data-answer="moon">
+<div class="qq">Q5. Which word means 'the round bright light in the sky at night'?</div>
+
+<label><input type="radio" name="q4" value="sand"> sand</label><label><input type="radio" name="q4" value="moon"> moon</label><label><input type="radio" name="q4" value="ocean"> ocean</label><label><input type="radio" name="q4" value="stone"> stone</label>
+<div class="qresult"></div>
+</div><div class="qblock" data-answer="river">
+<div class="qq">Q6. What is this?</div>
+<img class="qimg" src="/media/a1/2026-09-27/photos/river.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q5" value="kennel"> kennel</label><label><input type="radio" name="q5" value="river"> river</label><label><input type="radio" name="q5" value="glacier"> glacier</label><label><input type="radio" name="q5" value="grass"> grass</label>
+<div class="qresult"></div>
+</div><div class="qblock" data-answer="bird">
 <div class="qq">Q7. What is this?</div>
-<img class="qimg" src="/media/a1/2026-10-11/photos/moon.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q6" value="moon"> moon</label><label><input type="radio" name="q6" value="scenic"> scenic</label><label><input type="radio" name="q6" value="ecotone"> ecotone</label><label><input type="radio" name="q6" value="habitat"> habitat</label>
+<img class="qimg" src="/media/a1/2026-09-27/photos/bird.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q6" value="endangered"> endangered</label><label><input type="radio" name="q6" value="bird"> bird</label><label><input type="radio" name="q6" value="landscape"> landscape</label><label><input type="radio" name="q6" value="scratching post"> scratching post</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="sand">
+</div><div class="qblock" data-answer="flower">
 <div class="qq">Q8. What is this?</div>
-<img class="qimg" src="/media/a2/2026-09-29/photos/sand.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q7" value="wildlife"> wildlife</label><label><input type="radio" name="q7" value="sand"> sand</label><label><input type="radio" name="q7" value="kennel"> kennel</label><label><input type="radio" name="q7" value="endangered"> endangered</label>
-<div class="qresult"></div>
-</div><div class="qblock" data-answer="sea">
-<div class="qq">Q9. What is this?</div>
-<img class="qimg" src="/media/a1/2026-09-27/photos/sea.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q8" value="ecosystem"> ecosystem</label><label><input type="radio" name="q8" value="sea"> sea</label><label><input type="radio" name="q8" value="glacier"> glacier</label><label><input type="radio" name="q8" value="far-flung"> far-flung</label>
+<img class="qimg" src="/media/a1/2026-09-27/photos/flower.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q7" value="fetch"> fetch</label><label><input type="radio" name="q7" value="ecotone"> ecotone</label><label><input type="radio" name="q7" value="flower"> flower</label><label><input type="radio" name="q7" value="stray"> stray</label>
 <div class="qresult"></div>
 </div><div class="qblock" data-answer="mountain">
-<div class="qq">Q10. What is this?</div>
+<div class="qq">Q9. What is this?</div>
 <img class="qimg" src="/media/a1/2026-09-27/photos/mountain.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q9" value="desiccation"> desiccation</label><label><input type="radio" name="q9" value="reef"> reef</label><label><input type="radio" name="q9" value="oasis"> oasis</label><label><input type="radio" name="q9" value="mountain"> mountain</label>
+<label><input type="radio" name="q8" value="rewilding"> rewilding</label><label><input type="radio" name="q8" value="oasis"> oasis</label><label><input type="radio" name="q8" value="tide"> tide</label><label><input type="radio" name="q8" value="mountain"> mountain</label>
+<div class="qresult"></div>
+</div><div class="qblock" data-answer="sea">
+<div class="qq">Q10. What is this?</div>
+<img class="qimg" src="/media/a1/2026-09-27/photos/sea.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q9" value="extinction"> extinction</label><label><input type="radio" name="q9" value="sea"> sea</label><label><input type="radio" name="q9" value="purr"> purr</label><label><input type="radio" name="q9" value="leash"> leash</label>
 <div class="qresult"></div>
 </div>
 <button class="qcheck">Check answers</button>
 <div class="qscore" style="display:none;font-weight:700;margin-top:14px;font-size:18px"></div>
-</div><script>
-document.querySelector('.qcheck').addEventListener('click', function() {
-  var correct = 0, total = 0;
-  document.querySelectorAll('.qblock').forEach(function(b) {
-    total++;
-    var ans = b.getAttribute('data-answer');
-    var sel = b.querySelector('input:checked');
-    var res = b.querySelector('.qresult');
-    res.style.display = 'block';
-    if (sel && sel.value === ans) { correct++; res.textContent = '✓ Correct!'; res.style.color = '#2e7d32'; }
-    else { res.textContent = '✗ The answer is: ' + ans; res.style.color = '#c62828'; }
-  });
-  var score = document.querySelector('.qscore');
-  score.style.display = 'block';
-  score.textContent = 'You got ' + correct + ' out of ' + total + ' correct!';
-});
-</script></section>
+</div></div></section>
 </div>
 </div>
 </div>
@@ -454,5 +470,68 @@ document.querySelectorAll('.tbtn').forEach(function(b){
   b.textContent=open?'View transcript':'Hide transcript';
  });
 });
+/* Interactive Quick Quiz: one question at a time */
+(function(){
+ var app=document.getElementById('quizapp'); if(!app) return;
+ var data=app.parentElement.querySelector('.qdata'); if(!data) return;
+ var qs=[];
+ data.querySelectorAll('.qblock').forEach(function(b){
+  var qq=b.querySelector('.qq'); if(!qq) return;
+  var qtxt=qq.textContent.replace(/^Q\d+\.\s*/,'').trim();
+  var img=b.querySelector('.qimg');
+  var opts=[];
+  b.querySelectorAll('input[type="radio"]').forEach(function(r){opts.push(r.value);});
+  if(opts.length) qs.push({q:qtxt,img:img?img.src:null,opts:opts,ans:b.getAttribute('data-answer')});
+ });
+ if(!qs.length) return;
+ var startS=app.querySelector('.qstart-screen'),
+     qS=app.querySelector('.qq-screen'),
+     endS=app.querySelector('.qend-screen');
+ var idx=0,score=0;
+ function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+ function renderQ(){
+  var q=qs[idx],pct=Math.round(idx/qs.length*100);
+  var h='<div class="qprog"><div class="bar"><i style="width:'+pct+'%"></i></div><span>Question '+(idx+1)+' of '+qs.length+'</span></div>';
+  h+='<div class="qq-q">'+esc(q.q)+'</div>';
+  if(q.img) h+='<img class="qq-img" src="'+q.img+'" alt="What is this?">';
+  h+='<div class="qq-opts">';
+  q.opts.forEach(function(o){h+='<button class="qq-opt" data-v="'+esc(o)+'">'+esc(o)+'</button>';});
+  h+='</div><button class="qq-next">Next &rarr;</button>';
+  qS.innerHTML=h;
+  var locked=false;
+  qS.querySelectorAll('.qq-opt').forEach(function(btn){
+   btn.addEventListener('click',function(){
+    if(locked) return; locked=true;
+    var ok=btn.getAttribute('data-v')===q.ans;
+    if(ok){score++;btn.classList.add('correct');}
+    else{btn.classList.add('wrong');}
+    qS.querySelectorAll('.qq-opt').forEach(function(x){
+     x.disabled=true;
+     if(x.getAttribute('data-v')===q.ans) x.classList.add('correct');
+    });
+    var nx=qS.querySelector('.qq-next');
+    nx.style.display='inline-block';
+    nx.textContent=(idx===qs.length-1)?'See results →':'Next →';
+   });
+  });
+  qS.querySelector('.qq-next').addEventListener('click',function(){
+   idx++;
+   if(idx<qs.length){renderQ();qS.scrollIntoView({behavior:'smooth',block:'center'});}
+   else{showEnd();}
+  });
+ }
+ function showEnd(){
+  qS.style.display='none';endS.style.display='block';
+  var msg=score===qs.length?'Perfect! Amazing work!':(score>=7?'Great job! Keep it up!':(score>=4?'Good effort! Keep practicing!':'Keep practicing and try again!'));
+  endS.innerHTML='<div class="qicons">\u{1F3AF}</div><div class="score">'+score+'/'+qs.length+'</div><p>'+msg+'</p><button class="qstart">Try again \u2192</button>';
+  endS.querySelector('.qstart').addEventListener('click',function(){
+   idx=0;score=0;endS.style.display='none';qS.style.display='block';renderQ();
+  });
+  endS.scrollIntoView({behavior:'smooth',block:'center'});
+ }
+ app.querySelector('.qstart').addEventListener('click',function(){
+  startS.style.display='none';qS.style.display='block';renderQ();
+ });
+})();
 </script>
 </body></html>

@@ -161,11 +161,35 @@ a{color:#E8590C}
 .transcript{display:none;background:#fff;border-radius:14px;padding:16px 18px;margin-top:12px;font-size:14.5px;line-height:1.8;width:100%}
 .transcript b{color:#E8590C}
 .qsec .quiz{background:none;border:0;padding:0;margin:0}
-.qsec .quiz>h2,.qsec .quiz>p:first-of-type{display:none}
-.qsec .qblock{background:#FFFBF3;border:1px solid #f3e9d8;border-radius:14px;padding:14px 16px}
-.qsec .qimg{width:200px;height:130px;object-fit:cover;border-radius:10px}
-.qsec .qcheck{background:#FF9600;color:#fff;border:0;font-weight:800;font-size:16px;padding:14px 34px;border-radius:14px;cursor:pointer;margin-top:14px;box-shadow:0 6px 18px rgba(255,150,0,.35)}
-.qsec .qcheck:hover{background:#E8590C}
+.quizapp{background:#FFFBF3;border:1px solid #f3e9d8;border-radius:18px;padding:30px 26px;margin-top:14px}
+.qstart-screen{text-align:center}
+.qstart-screen .qicons{display:flex;gap:10px;justify-content:center;margin:6px 0 16px}
+.qstart-screen .qicons span{width:54px;height:54px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.qstart-screen h3{font-size:20px;margin:0 0 4px}
+.qstart-screen p{color:#8a93a6;font-size:14px;margin:0 0 6px}
+.qq-screen{text-align:left}
+.qprog{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.qprog .bar{flex:1;height:8px;background:#f0e6d2;border-radius:99px;overflow:hidden}
+.qprog .bar i{display:block;height:100%;background:linear-gradient(90deg,#FF9600,#E8590C);border-radius:99px;transition:width .3s}
+.qprog span{font-size:13px;font-weight:700;color:#8a93a6;white-space:nowrap}
+.qq-q{font-size:18px;font-weight:800;margin:6px 0 14px;line-height:1.5}
+.qq-img{width:100%;max-width:360px;height:210px;object-fit:cover;border-radius:14px;margin-bottom:14px;display:block}
+.qq-opts{display:grid;gap:10px}
+.qq-opt{background:#fff;border:2px solid #f0e6d2;border-radius:14px;padding:14px 18px;font-size:15.5px;font-weight:600;text-align:left;cursor:pointer;color:#1c2430;font-family:inherit;transition:border-color .15s,transform .15s}
+.qq-opt:hover:not(:disabled){border-color:#FF9600;transform:translateY(-1px)}
+.qq-opt:disabled{cursor:default;opacity:.95}
+.qq-opt.correct{background:#E8F5E9;border-color:#2e7d32;color:#1b5e20}
+.qq-opt.wrong{background:#FFEBEE;border-color:#c62828;color:#b71c1c}
+.qq-next{margin-top:16px;background:#1c2430;color:#fff;border:0;font-weight:700;font-size:15px;padding:13px 30px;border-radius:12px;cursor:pointer;display:none;font-family:inherit}
+.qend-screen{text-align:center}
+.qend-screen .qicons{font-size:44px}
+.qend-screen .score{font-size:54px;font-weight:800;color:#E8590C;margin:8px 0 2px}
+.qend-screen p{color:#5a6480;margin:0 0 8px}
+@media(max-width:700px){
+.quizapp{padding:22px 16px}
+.qq-q{font-size:16.5px}
+.qq-opt{font-size:15px;padding:13px 14px}
+}
 .qstart{background:#FF9600;color:#fff;border:0;font-weight:800;font-size:16px;padding:14px 34px;border-radius:14px;cursor:pointer;margin-top:14px;box-shadow:0 6px 18px rgba(255,150,0,.35)}
 @media(max-width:1000px){
 .hmain{grid-template-columns:1fr}
@@ -351,78 +375,70 @@ a{color:#E8590C}
 <div class="transcript" id="transcript"><div><b>Lena:</b> How was your English exam yesterday?</div><div><b>Maya:</b> It was hard, but I think I passed!</div><div><b>Lena:</b> That&#x27;s great! What was the most difficult part?</div><div><b>Maya:</b> The listening section. The speaker was too fast.</div><div><b>Lena:</b> I know! Can you explain the last question to me?</div><div><b>Maya:</b> Sure! It was about the main idea of the story.</div><div><b>Lena:</b> Thanks! Can I borrow your notes to study?</div><div><b>Maya:</b> Of course! Let&#x27;s study together tomorrow.</div></div></div></section>
 <section class="hsec qsec" data-sec="quiz">
 <div class="hsec-head"><span class="hico" style="background:#E8F5E9">&#9989;</span><div><h2>Quick Quiz</h2>
-<p>Test your vocabulary knowledge.</p></div></div><div class="quiz"><h2>Quiz: Test Yourself</h2>
+<p>Test your vocabulary knowledge.</p></div></div>
+<div class="quizapp" id="quizapp">
+<div class="qstart-screen"><div class="qicons"><span>&#128218;</span><span>&#129518;</span><span>&#127919;</span></div>
+<h3>Ready to test yourself?</h3><p>10 questions &middot; pick the correct answer</p>
+<button class="qstart">Start Quiz &rarr;</button></div>
+<div class="qq-screen" style="display:none"></div>
+<div class="qend-screen" style="display:none"></div>
+</div>
+<div class="qdata" style="display:none"><div class="quiz"><h2>Quiz: Test Yourself</h2>
 <p>Choose the correct answer for each question, then check your score.</p>
-<div class="qblock" data-answer="comprehension">
-<div class="qq">Q1. Which word means 'the ability to understand what you read or hear'?</div>
+<div class="qblock" data-answer="enroll">
+<div class="qq">Q1. Which word means 'to officially join a course or a school'?</div>
 
-<label><input type="radio" name="q0" value="summarize"> summarize</label><label><input type="radio" name="q0" value="literacy"> literacy</label><label><input type="radio" name="q0" value="comprehension"> comprehension</label><label><input type="radio" name="q0" value="tuition"> tuition</label>
+<label><input type="radio" name="q0" value="flunk"> flunk</label><label><input type="radio" name="q0" value="scholarship"> scholarship</label><label><input type="radio" name="q0" value="enroll"> enroll</label><label><input type="radio" name="q0" value="feedback"> feedback</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="scholarship">
-<div class="qq">Q2. Which word means 'money a school gives you to study for free'?</div>
+</div><div class="qblock" data-answer="matriculate">
+<div class="qq">Q2. Which word means 'to enroll formally at a college or university'?</div>
 
-<label><input type="radio" name="q1" value="scholarship"> scholarship</label><label><input type="radio" name="q1" value="assignment"> assignment</label><label><input type="radio" name="q1" value="major"> major</label><label><input type="radio" name="q1" value="degree"> degree</label>
+<label><input type="radio" name="q1" value="scholastic"> scholastic</label><label><input type="radio" name="q1" value="andragogy"> andragogy</label><label><input type="radio" name="q1" value="plagiarism"> plagiarism</label><label><input type="radio" name="q1" value="matriculate"> matriculate</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="annotate">
-<div class="qq">Q3. Which word means 'to add short notes to a text while reading'?</div>
+</div><div class="qblock" data-answer="tuition">
+<div class="qq">Q3. Which word means 'the money you pay to study at a school or university'?</div>
 
-<label><input type="radio" name="q2" value="seminar"> seminar</label><label><input type="radio" name="q2" value="campus"> campus</label><label><input type="radio" name="q2" value="syllabus"> syllabus</label><label><input type="radio" name="q2" value="annotate"> annotate</label>
-<div class="qresult"></div>
-</div><div class="qblock" data-answer="lucubration">
-<div class="qq">Q4. Which word means 'studious work or meditation, especially late at night; laborious study'?</div>
-
-<label><input type="radio" name="q3" value="lucubration"> lucubration</label><label><input type="radio" name="q3" value="inculcate"> inculcate</label><label><input type="radio" name="q3" value="pedagogy"> pedagogy</label><label><input type="radio" name="q3" value="conspectus"> conspectus</label>
-<div class="qresult"></div>
-</div><div class="qblock" data-answer="workshop">
-<div class="qq">Q5. Which word means 'a hands-on learning session where people practice a skill'?</div>
-
-<label><input type="radio" name="q4" value="revise"> revise</label><label><input type="radio" name="q4" value="detention"> detention</label><label><input type="radio" name="q4" value="dropout"> dropout</label><label><input type="radio" name="q4" value="workshop"> workshop</label>
-<div class="qresult"></div>
-</div><div class="qblock" data-answer="notebook">
-<div class="qq">Q6. What is this?</div>
-<img class="qimg" src="/media/a1/2026-10-04/photos/notebook.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q5" value="school"> school</label><label><input type="radio" name="q5" value="book"> book</label><label><input type="radio" name="q5" value="notebook"> notebook</label><label><input type="radio" name="q5" value="pen"> pen</label>
-<div class="qresult"></div>
-</div><div class="qblock" data-answer="homework">
-<div class="qq">Q7. What is this?</div>
-<img class="qimg" src="/media/a2/2026-10-09/photos/homework.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q6" value="tutor"> tutor</label><label><input type="radio" name="q6" value="feedback"> feedback</label><label><input type="radio" name="q6" value="homework"> homework</label><label><input type="radio" name="q6" value="lecture"> lecture</label>
-<div class="qresult"></div>
-</div><div class="qblock" data-answer="pencil">
-<div class="qq">Q8. What is this?</div>
-<img class="qimg" src="/media/a1/2026-10-04/photos/pencil.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q7" value="cram"> cram</label><label><input type="radio" name="q7" value="semester"> semester</label><label><input type="radio" name="q7" value="pencil"> pencil</label><label><input type="radio" name="q7" value="student"> student</label>
-<div class="qresult"></div>
-</div><div class="qblock" data-answer="exam">
-<div class="qq">Q9. What is this?</div>
-<img class="qimg" src="/media/a2/2026-10-09/photos/exam.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q8" value="grade"> grade</label><label><input type="radio" name="q8" value="graduate"> graduate</label><label><input type="radio" name="q8" value="memorize"> memorize</label><label><input type="radio" name="q8" value="exam"> exam</label>
+<label><input type="radio" name="q2" value="professor"> professor</label><label><input type="radio" name="q2" value="diploma"> diploma</label><label><input type="radio" name="q2" value="tuition"> tuition</label><label><input type="radio" name="q2" value="grade"> grade</label>
 <div class="qresult"></div>
 </div><div class="qblock" data-answer="lesson">
+<div class="qq">Q4. Which word means 'one short class, one time of learning'?</div>
+
+<label><input type="radio" name="q3" value="assignment"> assignment</label><label><input type="radio" name="q3" value="degree"> degree</label><label><input type="radio" name="q3" value="lesson"> lesson</label><label><input type="radio" name="q3" value="tutor"> tutor</label>
+<div class="qresult"></div>
+</div><div class="qblock" data-answer="syllabus">
+<div class="qq">Q5. Which word means 'a plan that shows what you will study in a course and when'?</div>
+
+<label><input type="radio" name="q4" value="syllabus"> syllabus</label><label><input type="radio" name="q4" value="semester"> semester</label><label><input type="radio" name="q4" value="assessment"> assessment</label><label><input type="radio" name="q4" value="major"> major</label>
+<div class="qresult"></div>
+</div><div class="qblock" data-answer="homework">
+<div class="qq">Q6. What is this?</div>
+<img class="qimg" src="/media/a2/2026-10-09/photos/homework.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q5" value="pen"> pen</label><label><input type="radio" name="q5" value="homework"> homework</label><label><input type="radio" name="q5" value="school"> school</label><label><input type="radio" name="q5" value="lecture"> lecture</label>
+<div class="qresult"></div>
+</div><div class="qblock" data-answer="pencil">
+<div class="qq">Q7. What is this?</div>
+<img class="qimg" src="/media/a1/2026-10-04/photos/pencil.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q6" value="paraphrase"> paraphrase</label><label><input type="radio" name="q6" value="student"> student</label><label><input type="radio" name="q6" value="pencil"> pencil</label><label><input type="radio" name="q6" value="literacy"> literacy</label>
+<div class="qresult"></div>
+</div><div class="qblock" data-answer="notebook">
+<div class="qq">Q8. What is this?</div>
+<img class="qimg" src="/media/a1/2026-10-04/photos/notebook.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q7" value="pedagogy"> pedagogy</label><label><input type="radio" name="q7" value="notebook"> notebook</label><label><input type="radio" name="q7" value="exegesis"> exegesis</label><label><input type="radio" name="q7" value="seminar"> seminar</label>
+<div class="qresult"></div>
+</div><div class="qblock" data-answer="book">
+<div class="qq">Q9. What is this?</div>
+<img class="qimg" src="/media/a1/2026-10-04/photos/book.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q8" value="detention"> detention</label><label><input type="radio" name="q8" value="scaffolding"> scaffolding</label><label><input type="radio" name="q8" value="book"> book</label><label><input type="radio" name="q8" value="dropout"> dropout</label>
+<div class="qresult"></div>
+</div><div class="qblock" data-answer="exam">
 <div class="qq">Q10. What is this?</div>
-<img class="qimg" src="/media/a2/2026-10-09/photos/lesson.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q9" value="paraphrase"> paraphrase</label><label><input type="radio" name="q9" value="lesson"> lesson</label><label><input type="radio" name="q9" value="professor"> professor</label><label><input type="radio" name="q9" value="scholastic"> scholastic</label>
+<img class="qimg" src="/media/a2/2026-10-09/photos/exam.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q9" value="memorize"> memorize</label><label><input type="radio" name="q9" value="graduate"> graduate</label><label><input type="radio" name="q9" value="exam"> exam</label><label><input type="radio" name="q9" value="workshop"> workshop</label>
 <div class="qresult"></div>
 </div>
 <button class="qcheck">Check answers</button>
 <div class="qscore" style="display:none;font-weight:700;margin-top:14px;font-size:18px"></div>
-</div><script>
-document.querySelector('.qcheck').addEventListener('click', function() {
-  var correct = 0, total = 0;
-  document.querySelectorAll('.qblock').forEach(function(b) {
-    total++;
-    var ans = b.getAttribute('data-answer');
-    var sel = b.querySelector('input:checked');
-    var res = b.querySelector('.qresult');
-    res.style.display = 'block';
-    if (sel && sel.value === ans) { correct++; res.textContent = '✓ Correct!'; res.style.color = '#2e7d32'; }
-    else { res.textContent = '✗ The answer is: ' + ans; res.style.color = '#c62828'; }
-  });
-  var score = document.querySelector('.qscore');
-  score.style.display = 'block';
-  score.textContent = 'You got ' + correct + ' out of ' + total + ' correct!';
-});
-</script></section>
+</div></div></section>
 </div>
 </div>
 </div>
@@ -472,5 +488,68 @@ document.querySelectorAll('.tbtn').forEach(function(b){
   b.textContent=open?'View transcript':'Hide transcript';
  });
 });
+/* Interactive Quick Quiz: one question at a time */
+(function(){
+ var app=document.getElementById('quizapp'); if(!app) return;
+ var data=app.parentElement.querySelector('.qdata'); if(!data) return;
+ var qs=[];
+ data.querySelectorAll('.qblock').forEach(function(b){
+  var qq=b.querySelector('.qq'); if(!qq) return;
+  var qtxt=qq.textContent.replace(/^Q\d+\.\s*/,'').trim();
+  var img=b.querySelector('.qimg');
+  var opts=[];
+  b.querySelectorAll('input[type="radio"]').forEach(function(r){opts.push(r.value);});
+  if(opts.length) qs.push({q:qtxt,img:img?img.src:null,opts:opts,ans:b.getAttribute('data-answer')});
+ });
+ if(!qs.length) return;
+ var startS=app.querySelector('.qstart-screen'),
+     qS=app.querySelector('.qq-screen'),
+     endS=app.querySelector('.qend-screen');
+ var idx=0,score=0;
+ function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+ function renderQ(){
+  var q=qs[idx],pct=Math.round(idx/qs.length*100);
+  var h='<div class="qprog"><div class="bar"><i style="width:'+pct+'%"></i></div><span>Question '+(idx+1)+' of '+qs.length+'</span></div>';
+  h+='<div class="qq-q">'+esc(q.q)+'</div>';
+  if(q.img) h+='<img class="qq-img" src="'+q.img+'" alt="What is this?">';
+  h+='<div class="qq-opts">';
+  q.opts.forEach(function(o){h+='<button class="qq-opt" data-v="'+esc(o)+'">'+esc(o)+'</button>';});
+  h+='</div><button class="qq-next">Next &rarr;</button>';
+  qS.innerHTML=h;
+  var locked=false;
+  qS.querySelectorAll('.qq-opt').forEach(function(btn){
+   btn.addEventListener('click',function(){
+    if(locked) return; locked=true;
+    var ok=btn.getAttribute('data-v')===q.ans;
+    if(ok){score++;btn.classList.add('correct');}
+    else{btn.classList.add('wrong');}
+    qS.querySelectorAll('.qq-opt').forEach(function(x){
+     x.disabled=true;
+     if(x.getAttribute('data-v')===q.ans) x.classList.add('correct');
+    });
+    var nx=qS.querySelector('.qq-next');
+    nx.style.display='inline-block';
+    nx.textContent=(idx===qs.length-1)?'See results →':'Next →';
+   });
+  });
+  qS.querySelector('.qq-next').addEventListener('click',function(){
+   idx++;
+   if(idx<qs.length){renderQ();qS.scrollIntoView({behavior:'smooth',block:'center'});}
+   else{showEnd();}
+  });
+ }
+ function showEnd(){
+  qS.style.display='none';endS.style.display='block';
+  var msg=score===qs.length?'Perfect! Amazing work!':(score>=7?'Great job! Keep it up!':(score>=4?'Good effort! Keep practicing!':'Keep practicing and try again!'));
+  endS.innerHTML='<div class="qicons">\u{1F3AF}</div><div class="score">'+score+'/'+qs.length+'</div><p>'+msg+'</p><button class="qstart">Try again \u2192</button>';
+  endS.querySelector('.qstart').addEventListener('click',function(){
+   idx=0;score=0;endS.style.display='none';qS.style.display='block';renderQ();
+  });
+  endS.scrollIntoView({behavior:'smooth',block:'center'});
+ }
+ app.querySelector('.qstart').addEventListener('click',function(){
+  startS.style.display='none';qS.style.display='block';renderQ();
+ });
+})();
 </script>
 </body></html>

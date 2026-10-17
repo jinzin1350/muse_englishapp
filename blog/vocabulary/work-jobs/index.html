@@ -161,11 +161,35 @@ a{color:#E8590C}
 .transcript{display:none;background:#fff;border-radius:14px;padding:16px 18px;margin-top:12px;font-size:14.5px;line-height:1.8;width:100%}
 .transcript b{color:#E8590C}
 .qsec .quiz{background:none;border:0;padding:0;margin:0}
-.qsec .quiz>h2,.qsec .quiz>p:first-of-type{display:none}
-.qsec .qblock{background:#FFFBF3;border:1px solid #f3e9d8;border-radius:14px;padding:14px 16px}
-.qsec .qimg{width:200px;height:130px;object-fit:cover;border-radius:10px}
-.qsec .qcheck{background:#FF9600;color:#fff;border:0;font-weight:800;font-size:16px;padding:14px 34px;border-radius:14px;cursor:pointer;margin-top:14px;box-shadow:0 6px 18px rgba(255,150,0,.35)}
-.qsec .qcheck:hover{background:#E8590C}
+.quizapp{background:#FFFBF3;border:1px solid #f3e9d8;border-radius:18px;padding:30px 26px;margin-top:14px}
+.qstart-screen{text-align:center}
+.qstart-screen .qicons{display:flex;gap:10px;justify-content:center;margin:6px 0 16px}
+.qstart-screen .qicons span{width:54px;height:54px;border-radius:16px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.qstart-screen h3{font-size:20px;margin:0 0 4px}
+.qstart-screen p{color:#8a93a6;font-size:14px;margin:0 0 6px}
+.qq-screen{text-align:left}
+.qprog{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.qprog .bar{flex:1;height:8px;background:#f0e6d2;border-radius:99px;overflow:hidden}
+.qprog .bar i{display:block;height:100%;background:linear-gradient(90deg,#FF9600,#E8590C);border-radius:99px;transition:width .3s}
+.qprog span{font-size:13px;font-weight:700;color:#8a93a6;white-space:nowrap}
+.qq-q{font-size:18px;font-weight:800;margin:6px 0 14px;line-height:1.5}
+.qq-img{width:100%;max-width:360px;height:210px;object-fit:cover;border-radius:14px;margin-bottom:14px;display:block}
+.qq-opts{display:grid;gap:10px}
+.qq-opt{background:#fff;border:2px solid #f0e6d2;border-radius:14px;padding:14px 18px;font-size:15.5px;font-weight:600;text-align:left;cursor:pointer;color:#1c2430;font-family:inherit;transition:border-color .15s,transform .15s}
+.qq-opt:hover:not(:disabled){border-color:#FF9600;transform:translateY(-1px)}
+.qq-opt:disabled{cursor:default;opacity:.95}
+.qq-opt.correct{background:#E8F5E9;border-color:#2e7d32;color:#1b5e20}
+.qq-opt.wrong{background:#FFEBEE;border-color:#c62828;color:#b71c1c}
+.qq-next{margin-top:16px;background:#1c2430;color:#fff;border:0;font-weight:700;font-size:15px;padding:13px 30px;border-radius:12px;cursor:pointer;display:none;font-family:inherit}
+.qend-screen{text-align:center}
+.qend-screen .qicons{font-size:44px}
+.qend-screen .score{font-size:54px;font-weight:800;color:#E8590C;margin:8px 0 2px}
+.qend-screen p{color:#5a6480;margin:0 0 8px}
+@media(max-width:700px){
+.quizapp{padding:22px 16px}
+.qq-q{font-size:16.5px}
+.qq-opt{font-size:15px;padding:13px 14px}
+}
 .qstart{background:#FF9600;color:#fff;border:0;font-weight:800;font-size:16px;padding:14px 34px;border-radius:14px;cursor:pointer;margin-top:14px;box-shadow:0 6px 18px rgba(255,150,0,.35)}
 @media(max-width:1000px){
 .hmain{grid-template-columns:1fr}
@@ -441,78 +465,70 @@ a{color:#E8590C}
 <div class="transcript" id="transcript"><div><b>Lena:</b> Good morning! Did you finish the report?</div><div><b>Maya:</b> Almost! I need one more hour. What&#x27;s the deadline?</div><div><b>Lena:</b> The meeting is at two o&#x27;clock, so please send it before noon.</div><div><b>Maya:</b> No problem. Can you send me last month&#x27;s numbers first?</div><div><b>Lena:</b> Sure, I&#x27;ll email them right now.</div><div><b>Maya:</b> Thanks! By the way, I need next Friday off.</div><div><b>Lena:</b> That&#x27;s fine. Just finish the report first!</div><div><b>Maya:</b> Deal!</div></div></div></section>
 <section class="hsec qsec" data-sec="quiz">
 <div class="hsec-head"><span class="hico" style="background:#E8F5E9">&#9989;</span><div><h2>Quick Quiz</h2>
-<p>Test your vocabulary knowledge.</p></div></div><div class="quiz"><h2>Quiz: Test Yourself</h2>
+<p>Test your vocabulary knowledge.</p></div></div>
+<div class="quizapp" id="quizapp">
+<div class="qstart-screen"><div class="qicons"><span>&#128218;</span><span>&#129518;</span><span>&#127919;</span></div>
+<h3>Ready to test yourself?</h3><p>10 questions &middot; pick the correct answer</p>
+<button class="qstart">Start Quiz &rarr;</button></div>
+<div class="qq-screen" style="display:none"></div>
+<div class="qend-screen" style="display:none"></div>
+</div>
+<div class="qdata" style="display:none"><div class="quiz"><h2>Quiz: Test Yourself</h2>
 <p>Choose the correct answer for each question, then check your score.</p>
-<div class="qblock" data-answer="manager">
-<div class="qq">Q1. Which word means 'a person who leads a team'?</div>
+<div class="qblock" data-answer="interview">
+<div class="qq">Q1. Which word means 'a meeting where people ask you questions for a job'?</div>
 
-<label><input type="radio" name="q0" value="recruit"> recruit</label><label><input type="radio" name="q0" value="manager"> manager</label><label><input type="radio" name="q0" value="reimburse"> reimburse</label><label><input type="radio" name="q0" value="succeed"> succeed</label>
+<label><input type="radio" name="q0" value="teacher"> teacher</label><label><input type="radio" name="q0" value="recruit"> recruit</label><label><input type="radio" name="q0" value="job"> job</label><label><input type="radio" name="q0" value="interview"> interview</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="efficient">
-<div class="qq">Q2. Which word means 'working well without wasting time'?</div>
+</div><div class="qblock" data-answer="headhunt">
+<div class="qq">Q2. Which word means 'to approach a skilled worker and recruit them for a job'?</div>
 
-<label><input type="radio" name="q1" value="efficient"> efficient</label><label><input type="radio" name="q1" value="perk"> perk</label><label><input type="radio" name="q1" value="experience"> experience</label><label><input type="radio" name="q1" value="porter"> porter</label>
+<label><input type="radio" name="q1" value="drudgery"> drudgery</label><label><input type="radio" name="q1" value="headhunt"> headhunt</label><label><input type="radio" name="q1" value="golden handcuffs"> golden handcuffs</label><label><input type="radio" name="q1" value="portfolio career"> portfolio career</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="achieve">
-<div class="qq">Q3. Which word means 'to successfully reach a goal'?</div>
+</div><div class="qblock" data-answer="monetize">
+<div class="qq">Q3. Which word means 'to turn something into a source of income'?</div>
 
-<label><input type="radio" name="q2" value="career"> career</label><label><input type="radio" name="q2" value="dedication"> dedication</label><label><input type="radio" name="q2" value="achieve"> achieve</label><label><input type="radio" name="q2" value="hire"> hire</label>
-<div class="qresult"></div>
-</div><div class="qblock" data-answer="multitask">
-<div class="qq">Q4. Which word means 'to do two or more things at the same time'?</div>
-
-<label><input type="radio" name="q3" value="streamline"> streamline</label><label><input type="radio" name="q3" value="sabbatical"> sabbatical</label><label><input type="radio" name="q3" value="freelance"> freelance</label><label><input type="radio" name="q3" value="multitask"> multitask</label>
+<label><input type="radio" name="q2" value="perk"> perk</label><label><input type="radio" name="q2" value="delegate"> delegate</label><label><input type="radio" name="q2" value="bootstrapping"> bootstrapping</label><label><input type="radio" name="q2" value="monetize"> monetize</label>
 <div class="qresult"></div>
 </div><div class="qblock" data-answer="network">
-<div class="qq">Q5. Which word means 'to meet and connect with people who can help you in your career'?</div>
+<div class="qq">Q4. Which word means 'to meet and connect with people who can help you in your career'?</div>
 
-<label><input type="radio" name="q4" value="upskill"> upskill</label><label><input type="radio" name="q4" value="resign"> resign</label><label><input type="radio" name="q4" value="network"> network</label><label><input type="radio" name="q4" value="profit"> profit</label>
+<label><input type="radio" name="q3" value="succeed"> succeed</label><label><input type="radio" name="q3" value="resign"> resign</label><label><input type="radio" name="q3" value="network"> network</label><label><input type="radio" name="q3" value="mentorship"> mentorship</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="nurse">
+</div><div class="qblock" data-answer="efficient">
+<div class="qq">Q5. Which word means 'working well without wasting time'?</div>
+
+<label><input type="radio" name="q4" value="experience"> experience</label><label><input type="radio" name="q4" value="ambition"> ambition</label><label><input type="radio" name="q4" value="contract"> contract</label><label><input type="radio" name="q4" value="efficient"> efficient</label>
+<div class="qresult"></div>
+</div><div class="qblock" data-answer="doctor">
 <div class="qq">Q6. What is this?</div>
-<img class="qimg" src="/media/a1/2026-10-08/photos/nurse.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q5" value="office"> office</label><label><input type="radio" name="q5" value="nurse"> nurse</label><label><input type="radio" name="q5" value="job"> job</label><label><input type="radio" name="q5" value="boss"> boss</label>
+<img class="qimg" src="/media/a1/2026-10-07/photos/doctor.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q5" value="deadline"> deadline</label><label><input type="radio" name="q5" value="doctor"> doctor</label><label><input type="radio" name="q5" value="meeting"> meeting</label><label><input type="radio" name="q5" value="promotion"> promotion</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="colleague">
+</div><div class="qblock" data-answer="office">
 <div class="qq">Q7. What is this?</div>
-<img class="qimg" src="/media/a2/2026-09-28/photos/colleague.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q6" value="interview"> interview</label><label><input type="radio" name="q6" value="conductor"> conductor</label><label><input type="radio" name="q6" value="resume"> resume</label><label><input type="radio" name="q6" value="colleague"> colleague</label>
+<img class="qimg" src="/media/a1/2026-10-07/photos/office.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q6" value="bonus"> bonus</label><label><input type="radio" name="q6" value="office"> office</label><label><input type="radio" name="q6" value="colleague"> colleague</label><label><input type="radio" name="q6" value="nurse"> nurse</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="promotion">
+</div><div class="qblock" data-answer="salary">
 <div class="qq">Q8. What is this?</div>
-<img class="qimg" src="/media/a2/2026-09-28/photos/promotion.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q7" value="doctor"> doctor</label><label><input type="radio" name="q7" value="contract"> contract</label><label><input type="radio" name="q7" value="shift"> shift</label><label><input type="radio" name="q7" value="promotion"> promotion</label>
+<img class="qimg" src="/media/a2/2026-09-28/photos/salary.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q7" value="salary"> salary</label><label><input type="radio" name="q7" value="presentation"> presentation</label><label><input type="radio" name="q7" value="conductor"> conductor</label><label><input type="radio" name="q7" value="porter"> porter</label>
 <div class="qresult"></div>
 </div><div class="qblock" data-answer="overtime">
 <div class="qq">Q9. What is this?</div>
 <img class="qimg" src="/media/a2/2026-09-28/photos/overtime.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q8" value="presentation"> presentation</label><label><input type="radio" name="q8" value="salary"> salary</label><label><input type="radio" name="q8" value="deadline"> deadline</label><label><input type="radio" name="q8" value="overtime"> overtime</label>
+<label><input type="radio" name="q8" value="overtime"> overtime</label><label><input type="radio" name="q8" value="hire"> hire</label><label><input type="radio" name="q8" value="manager"> manager</label><label><input type="radio" name="q8" value="shift"> shift</label>
 <div class="qresult"></div>
-</div><div class="qblock" data-answer="meeting">
+</div><div class="qblock" data-answer="boss">
 <div class="qq">Q10. What is this?</div>
-<img class="qimg" src="/media/a2/2026-09-28/photos/meeting.jpg" alt="What is this?" loading="lazy">
-<label><input type="radio" name="q9" value="meeting"> meeting</label><label><input type="radio" name="q9" value="tailor"> tailor</label><label><input type="radio" name="q9" value="teacher"> teacher</label><label><input type="radio" name="q9" value="bonus"> bonus</label>
+<img class="qimg" src="/media/a2/2026-09-28/photos/boss.jpg" alt="What is this?" loading="lazy">
+<label><input type="radio" name="q9" value="boss"> boss</label><label><input type="radio" name="q9" value="tailor"> tailor</label><label><input type="radio" name="q9" value="resume"> resume</label><label><input type="radio" name="q9" value="project"> project</label>
 <div class="qresult"></div>
 </div>
 <button class="qcheck">Check answers</button>
 <div class="qscore" style="display:none;font-weight:700;margin-top:14px;font-size:18px"></div>
-</div><script>
-document.querySelector('.qcheck').addEventListener('click', function() {
-  var correct = 0, total = 0;
-  document.querySelectorAll('.qblock').forEach(function(b) {
-    total++;
-    var ans = b.getAttribute('data-answer');
-    var sel = b.querySelector('input:checked');
-    var res = b.querySelector('.qresult');
-    res.style.display = 'block';
-    if (sel && sel.value === ans) { correct++; res.textContent = '✓ Correct!'; res.style.color = '#2e7d32'; }
-    else { res.textContent = '✗ The answer is: ' + ans; res.style.color = '#c62828'; }
-  });
-  var score = document.querySelector('.qscore');
-  score.style.display = 'block';
-  score.textContent = 'You got ' + correct + ' out of ' + total + ' correct!';
-});
-</script></section>
+</div></div></section>
 </div>
 </div>
 </div>
@@ -562,5 +578,68 @@ document.querySelectorAll('.tbtn').forEach(function(b){
   b.textContent=open?'View transcript':'Hide transcript';
  });
 });
+/* Interactive Quick Quiz: one question at a time */
+(function(){
+ var app=document.getElementById('quizapp'); if(!app) return;
+ var data=app.parentElement.querySelector('.qdata'); if(!data) return;
+ var qs=[];
+ data.querySelectorAll('.qblock').forEach(function(b){
+  var qq=b.querySelector('.qq'); if(!qq) return;
+  var qtxt=qq.textContent.replace(/^Q\d+\.\s*/,'').trim();
+  var img=b.querySelector('.qimg');
+  var opts=[];
+  b.querySelectorAll('input[type="radio"]').forEach(function(r){opts.push(r.value);});
+  if(opts.length) qs.push({q:qtxt,img:img?img.src:null,opts:opts,ans:b.getAttribute('data-answer')});
+ });
+ if(!qs.length) return;
+ var startS=app.querySelector('.qstart-screen'),
+     qS=app.querySelector('.qq-screen'),
+     endS=app.querySelector('.qend-screen');
+ var idx=0,score=0;
+ function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+ function renderQ(){
+  var q=qs[idx],pct=Math.round(idx/qs.length*100);
+  var h='<div class="qprog"><div class="bar"><i style="width:'+pct+'%"></i></div><span>Question '+(idx+1)+' of '+qs.length+'</span></div>';
+  h+='<div class="qq-q">'+esc(q.q)+'</div>';
+  if(q.img) h+='<img class="qq-img" src="'+q.img+'" alt="What is this?">';
+  h+='<div class="qq-opts">';
+  q.opts.forEach(function(o){h+='<button class="qq-opt" data-v="'+esc(o)+'">'+esc(o)+'</button>';});
+  h+='</div><button class="qq-next">Next &rarr;</button>';
+  qS.innerHTML=h;
+  var locked=false;
+  qS.querySelectorAll('.qq-opt').forEach(function(btn){
+   btn.addEventListener('click',function(){
+    if(locked) return; locked=true;
+    var ok=btn.getAttribute('data-v')===q.ans;
+    if(ok){score++;btn.classList.add('correct');}
+    else{btn.classList.add('wrong');}
+    qS.querySelectorAll('.qq-opt').forEach(function(x){
+     x.disabled=true;
+     if(x.getAttribute('data-v')===q.ans) x.classList.add('correct');
+    });
+    var nx=qS.querySelector('.qq-next');
+    nx.style.display='inline-block';
+    nx.textContent=(idx===qs.length-1)?'See results →':'Next →';
+   });
+  });
+  qS.querySelector('.qq-next').addEventListener('click',function(){
+   idx++;
+   if(idx<qs.length){renderQ();qS.scrollIntoView({behavior:'smooth',block:'center'});}
+   else{showEnd();}
+  });
+ }
+ function showEnd(){
+  qS.style.display='none';endS.style.display='block';
+  var msg=score===qs.length?'Perfect! Amazing work!':(score>=7?'Great job! Keep it up!':(score>=4?'Good effort! Keep practicing!':'Keep practicing and try again!'));
+  endS.innerHTML='<div class="qicons">\u{1F3AF}</div><div class="score">'+score+'/'+qs.length+'</div><p>'+msg+'</p><button class="qstart">Try again \u2192</button>';
+  endS.querySelector('.qstart').addEventListener('click',function(){
+   idx=0;score=0;endS.style.display='none';qS.style.display='block';renderQ();
+  });
+  endS.scrollIntoView({behavior:'smooth',block:'center'});
+ }
+ app.querySelector('.qstart').addEventListener('click',function(){
+  startS.style.display='none';qS.style.display='block';renderQ();
+ });
+})();
 </script>
 </body></html>
