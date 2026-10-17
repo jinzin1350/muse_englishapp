@@ -3640,3 +3640,15 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 @media (min-width: 1024px) {
   .gt-wrap { padding-top: 28px; }
 }
+
+/* topic quiz shares the Duolingo kit */
+.gt-qcount {
+  font-weight: 800; color: #AFAFAF; font-size: 14px; min-width: 46px;
+  text-align: right; font-variant-numeric: tabular-nums; flex: 0 0 auto;
+}
+.gt-mode {
+  text-align: center; font-size: 13px; font-weight: 700; color: #AFAFAF;
+  margin: -14px 0 16px;
+}
+.gt-sheet-explain { font-size: 15px; color: #4B4B4B; margin-bottom: 14px; line-height: 1.55; }
+.gt-sheet-explain strong { color: #3C3C3C; }

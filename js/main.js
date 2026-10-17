@@ -2007,7 +2007,7 @@ function show(view, arg) {
   state.view = view;
   if (view !== 'admin-teacher') state.viewTeacher = null; /* leaving view-as-teacher mode */
   if (view !== 'lesson') { state.quiz = null; }
-  if (view !== 'grammar') { state.gquiz = null; }
+  if (view !== 'grammar') { state.gquiz = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'grammar-test') { gtestStopTimer(); state.gtest = null; document.body.classList.remove('duo-playing'); }
   /* Desktop home uses the mockup v6 dashboard layout. */
   document.body.classList.toggle('view-home', view === 'home');
@@ -6130,6 +6130,7 @@ function startGrammarQuiz(topic) {
     firstRun: !rec.claimed,
     items: shuffleArr(topic.exercises.items)
   };
+  document.body.classList.add('duo-playing');
   window.scrollTo(0, 0);
   renderGrammarQuiz();
 }
@@ -6139,33 +6140,51 @@ function renderGrammarQuiz() {
   var v = document.getElementById('view');
   var it = q.items[q.idx];
   var n = q.items.length;
+  var letters = ['A', 'B', 'C', 'D'];
   var opts = it.options.map(function (op, i) {
-    var cls = 'opt-btn';
+    var cls = 'gt-opt';
     if (q.answered) {
-      if (i === it.answer) cls += ' correct';
-      else if (i === q.picked) cls += ' wrong';
+      if (i === it.answer) cls += ' ok';
+      else if (i === q.picked) cls += ' no';
       else cls += ' dim';
     }
-    return '<button class="' + cls + '" data-gopt="' + i + '"' + (q.answered ? ' disabled' : '') + '>' + esc(op) + '</button>';
+    return '<button class="' + cls + '"' + (q.answered ? ' disabled' : '') + ' data-gopt="' + i + '">' +
+      '<span class="gt-opt-letter">' + letters[i] + '</span>' +
+      '<span class="gt-opt-text">' + esc(op) + '</span></button>';
   }).join('');
-  var fb = '';
+  var sheet = '';
   if (q.answered) {
-    var ok = q.picked === it.answer;
-    fb = '<div class="quiz-feedback ' + (ok ? 'good' : 'bad') + '">' + (ok ? '✓ Correct!' : '✗ Not quite.') + '</div>' +
-      (it.explanation ? '<div class="g-explain">' + gMd(it.explanation) + '</div>' : '') +
-      '<button class="btn btn-primary" id="g-next-btn">' + (q.idx + 1 >= n ? 'See results →' : 'Next →') + '</button>';
+    var good = q.picked === it.answer;
+    sheet = '<div class="gt-sheet ' + (good ? 'good' : 'bad') + '"><div class="gt-sheet-inner">' +
+      '<div class="gt-sheet-msg">' + (good ? '🎉 Correct!' : '💡 Correct answer: <b>' + esc(it.options[it.answer]) + '</b>') + '</div>' +
+      (it.explanation ? '<div class="gt-sheet-explain">' + gMd(it.explanation) + '</div>' : '') +
+      '<button class="gt-btn ' + (good ? 'gt-btn-green' : 'gt-btn-red') + ' gt-btn-block" id="g-next-btn">' +
+      (q.idx + 1 >= n ? 'SEE RESULTS' : 'CONTINUE') + '</button>' +
+      '</div></div>';
   }
-  v.innerHTML = '<div class="g-quiz">' +
-    '<a class="g-back" href="#/grammar/' + esc(q.topic.slug) + '">‹ ' + esc(q.topic.h1) + '</a>' +
-    '<div class="quiz-progress">Question ' + (q.idx + 1) + ' of ' + n + (q.firstRun ? '' : ' · practice mode') + '</div>' +
-    '<div class="g-bar"><span style="width:' + Math.round(q.idx / n * 100) + '%"></span></div>' +
-    '<div class="quiz-q">' + esc(it.prompt).replace(/___/g, '…') + '</div>' +
-    '<div>' + opts + '</div>' + fb + '</div>';
+  var barPct = Math.round((q.idx + (q.answered ? 1 : 0)) / n * 100);
+  v.innerHTML = '<div class="g-quiz gt-wrap">' +
+    '<div class="gt-top"><button class="gt-x" id="g-quiz-quit" aria-label="Back to guide">✕</button>' +
+    '<div class="gt-progress"><span style="width:' + barPct + '%"></span></div>' +
+    '<div class="gt-qcount">' + (q.idx + 1) + '/' + n + '</div></div>' +
+    (q.firstRun ? '' : '<div class="gt-mode">Practice mode — no points</div>') +
+    '<div class="gt-q">' + esc(it.prompt).replace(/___/g, '…') + '</div>' +
+    '<div class="gt-opts">' + opts + '</div>' + sheet + '</div>';
   Array.prototype.forEach.call(v.querySelectorAll('[data-gopt]'), function (btn) {
     btn.addEventListener('click', function () { answerGrammarQuiz(parseInt(btn.getAttribute('data-gopt'), 10)); });
   });
   var next = document.getElementById('g-next-btn');
   if (next) next.addEventListener('click', nextGrammarQuiz);
+  (function () {
+    var slug = q.topic.slug;
+    document.getElementById('g-quiz-quit').addEventListener('click', function () {
+      if (!quizGuardOk()) return;
+      state.gquiz = null;
+      document.body.classList.remove('duo-playing');
+      go('grammar', slug);
+    });
+  })();
+  window.scrollTo(0, 0);
 }
 
 function answerGrammarQuiz(i) {
@@ -6206,18 +6225,21 @@ function finishGrammarQuiz() {
   prog[slug] = rec; setGrammarProgress(prog);
   saveAttempt({ kind: 'grammar_topic', theme: slug, level: topic.level, score: correct, total: total, date: todayStr() });
   state.gquiz = null;
+  document.body.classList.remove('duo-playing');
   var v = document.getElementById('view');
-  var msg = correct === total ? 'Perfect! 🎉'
-    : correct >= total * 0.7 ? 'Great job! 👏'
-    : correct >= total * 0.4 ? 'Good effort — keep practising.'
-    : 'Keep practising — you will get there!';
-  v.innerHTML = '<div class="g-quiz"><div class="score-hero">' +
-    '<div class="score-big">' + correct + '/' + total + '</div>' +
-    '<div class="score-sub">' + esc(topic.h1) + '</div>' +
-    '<p><b>' + msg + '</b></p>' +
+  var msg = correct === total ? 'Perfect!'
+    : correct >= total * 0.7 ? 'Great job!'
+    : correct >= total * 0.4 ? 'Good effort!'
+    : 'Keep practising!';
+  var mascot = correct === total ? '🏆' : correct >= total * 0.7 ? '🎉' : '📝';
+  v.innerHTML = '<div class="g-quiz gt-wrap"><div class="gt-report">' +
+    '<div class="gt-mascot">' + mascot + '</div>' +
+    '<h1>' + msg + '</h1>' +
+    '<div class="gt-score"><b>' + correct + '</b><span>/' + total + '</span></div>' +
+    '<p class="gt-sub">' + esc(topic.h1) + '</p>' +
     (bonus ? '<p class="g-xp-note">+20 completion bonus earned!</p>' : '') +
-    '<div class="g-end-btns"><button class="btn" id="g-retry-btn">Try again ↻</button> ' +
-    '<a class="btn btn-primary" href="#/grammar">All guides</a></div>' +
+    '<div class="gt-end-btns"><button class="gt-btn gt-btn-green gt-btn-big" id="g-retry-btn">TRY AGAIN</button>' +
+    '<a class="gt-btn gt-btn-ghost" href="#/grammar">All guides</a></div>' +
     '</div></div>';
   document.getElementById('g-retry-btn').addEventListener('click', function () { startGrammarQuiz(topic); });
   window.scrollTo(0, 0);
@@ -10868,7 +10890,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610172118';
+var APP_VERSION = '202610172128';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
