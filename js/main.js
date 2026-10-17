@@ -1903,7 +1903,7 @@ function shouldEnterAppMode() {
 }
 
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -1915,7 +1915,7 @@ function parseHash() {
 
 /* Guard: never discard an in-progress quiz silently. */
 function quizGuardOk() {
-  if (state.quiz || state.gquiz) {
+  if (state.quiz || state.gquiz || state.gtest) {
     return window.confirm('You have a quiz in progress. Leave now and lose your quiz progress?');
   }
   return true;
@@ -2008,6 +2008,7 @@ function show(view, arg) {
   if (view !== 'admin-teacher') state.viewTeacher = null; /* leaving view-as-teacher mode */
   if (view !== 'lesson') { state.quiz = null; }
   if (view !== 'grammar') { state.gquiz = null; }
+  if (view !== 'grammar-test') { gtestStopTimer(); state.gtest = null; document.body.classList.remove('duo-playing'); }
   /* Desktop home uses the mockup v6 dashboard layout. */
   document.body.classList.toggle('view-home', view === 'home');
   setChrome();
@@ -2039,6 +2040,7 @@ function show(view, arg) {
   else if (view === 'become-teacher') renderBecomeTeacher(v);
   else if (view === 'choose-teacher') renderChooseTeacher(v);
   else if (view === 'grammar') renderGrammar(v, arg);
+  else if (view === 'grammar-test') renderGrammarTest(v, arg);
 }
 
 /* ---------------- chrome (headers / profile menu / nav) ---------------- */
@@ -2060,8 +2062,8 @@ function setChrome() {
     $$('#tabbar .tab').forEach(function (t) {
       const tv = t.getAttribute('data-view');
       // The lessons archive is a sub-page of Home: keep Home highlighted there.
-      // Same for the grammar section (entered from the home banner).
-      const active = tv === state.view || ((state.view === 'lessons' || state.view === 'grammar') && tv === 'home');
+      // Same for the grammar section and the grammar placement test (entered from the home banner).
+      const active = tv === state.view || ((state.view === 'lessons' || state.view === 'grammar' || state.view === 'grammar-test') && tv === 'home');
       t.classList.toggle('active', active);
       if (active) t.setAttribute('aria-current', 'page');
       else t.removeAttribute('aria-current');
@@ -5997,6 +5999,7 @@ function renderGrammar(v, slug) {
   if (!state.gFilter) state.gFilter = { level: normalizeLevel(state.user && state.user.level) || 'a1', q: '' };
   var f = state.gFilter;
   v.innerHTML = '<div class="g-hub">' +
+    '<div id="gtest-banner-wrap"></div>' +
     '<div class="g-head"><h1>\uD83D\uDCD6 Grammar Guides</h1>' +
     '<p>' + GRAMMAR_TOTAL + ' topics · A1–C2 · read, practise, earn points</p></div>' +
     '<div class="g-filters" role="tablist">' +
@@ -6007,6 +6010,7 @@ function renderGrammar(v, slug) {
     '<div class="g-search"><input id="g-search" type="search" placeholder="Search topics…" value="' + esc(f.q) + '" aria-label="Search grammar topics"></div>' +
     '<div id="g-list"><div class="empty">Loading…</div></div></div>';
   paintGrammarList();
+  paintGTestBanner();
   Array.prototype.forEach.call(v.querySelectorAll('[data-glevel]'), function (btn) {
     btn.addEventListener('click', function () {
       state.gFilter.level = btn.getAttribute('data-glevel');
@@ -6246,6 +6250,277 @@ function paintGrammarBanner() {
     inner = '<span class="g-b-icon">📖</span><span class="g-b-main"><b>Grammar Guides</b>' +
       '<span>' + GRAMMAR_TOTAL + ' topics · A1–C2 · read, practise, earn points</span></span><span class="g-b-cta">Explore →</span>';
     wrap.innerHTML = '<a class="g-banner" href="#/grammar">' + inner + '</a>';
+  }
+}
+
+/* ---------------- grammar placement test (#/grammar-test) ----------------
+   Duolingo-style: 30 questions (6 per level, A1 -> C1, easy to hard),
+   20-minute timer, instant feedback with a CONTINUE sheet.
+   The result is a weak-spot REPORT only — no level label is ever shown. */
+
+var GTEST_LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1'];
+var GTEST_PER_LEVEL = 6;
+var GTEST_SECONDS = 20 * 60;
+
+function getGTestStore() {
+  var s = lsGet('muse_grammar_test_v1');
+  return (s && typeof s === 'object' && !Array.isArray(s)) ? s : {};
+}
+function setGTestStore(s) { lsSet('muse_grammar_test_v1', s); }
+
+function gtestStopTimer() {
+  if (state.gtest && state.gtest.timerId) { clearInterval(state.gtest.timerId); state.gtest.timerId = null; }
+}
+function gtestFmt(s) {
+  s = Math.max(0, s);
+  var m = Math.floor(s / 60), r = s % 60;
+  return (m < 10 ? '0' + m : '' + m) + ':' + (r < 10 ? '0' + r : '' + r);
+}
+
+/* Round-robin across topics so the 6 questions per level come from 6 different topics. */
+function sampleGTestQuestions(bundles) {
+  var out = [];
+  GTEST_LEVELS.forEach(function (lv) {
+    var perTopic = shuffleArr((bundles[lv] || []).slice()).map(function (t) {
+      return { topic: t, items: shuffleArr(((t.exercises || {}).items || []).slice()) };
+    }).filter(function (pt) { return pt.items.length; });
+    var picked = [], round = 0;
+    while (picked.length < GTEST_PER_LEVEL && round < 60) {
+      var moved = false;
+      for (var k = 0; k < perTopic.length && picked.length < GTEST_PER_LEVEL; k++) {
+        var pt = perTopic[(round + k) % perTopic.length];
+        if (pt.items.length) {
+          picked.push({ lv: lv, topic: pt.topic, item: pt.items.pop() });
+          moved = true;
+        }
+      }
+      round++;
+      if (!moved) break;
+    }
+    out = out.concat(picked);
+  });
+  return out;
+}
+
+function renderGrammarTest(v, arg) {
+  if (arg === 'report') { renderGTestReport(v, null); return; }
+  /* Fresh entry (or re-entry after leaving): show the intro screen. */
+  if (!state.gtest || state.gtest.done) { gtestIntro(v); return; }
+  renderGTestQ();
+}
+
+function gtestIntro(v) {
+  var last = getGTestStore().last;
+  v.innerHTML = '<div class="gt-wrap"><div class="gt-intro">' +
+    '<div class="gt-mascot">🎯</div>' +
+    '<h1>Check your grammar!</h1>' +
+    '<p class="gt-sub">30 questions · A1 to C1 · about 20 minutes</p>' +
+    '<p>Take your time — when you finish you get a personal report showing exactly which grammar topics to work on.</p>' +
+    (last ? '<p class="gt-last">Your last report: <b>' + last.correct + '/' + last.total + '</b> correct · ' +
+      last.weak.length + ' weak spot' + (last.weak.length === 1 ? '' : 's') +
+      ' · <a href="#/grammar-test/report">view</a></p>' : '') +
+    '<div id="gt-intro-err"></div>' +
+    '<button class="gt-btn gt-btn-green gt-btn-big" id="gt-start">START</button>' +
+    '<div><a class="gt-quit-link" href="#/grammar">‹ Back to grammar guides</a></div>' +
+    '</div></div>';
+  document.getElementById('gt-start').addEventListener('click', startGTest);
+  window.scrollTo(0, 0);
+}
+
+function startGTest() {
+  var btn = document.getElementById('gt-start');
+  if (btn) { btn.disabled = true; btn.textContent = 'LOADING…'; }
+  var loads = {};
+  Promise.all(GTEST_LEVELS.map(function (lv) {
+    return loadGrammarLevel(lv).then(function (topics) { loads[lv] = topics; });
+  })).then(function () {
+    var items = sampleGTestQuestions(loads);
+    if (items.length < GTEST_LEVELS.length * GTEST_PER_LEVEL) throw new Error('not enough questions');
+    state.gtest = {
+      items: items, idx: 0, answered: false, picked: -1,
+      results: [], timerId: null, secsLeft: GTEST_SECONDS, done: false
+    };
+    renderGTestQ();
+    document.body.classList.add('duo-playing');
+    state.gtest.timerId = setInterval(gtestTick, 1000);
+  }).catch(function () {
+    var err = document.getElementById('gt-intro-err');
+    if (err) err.innerHTML = '<div class="gt-err">Could not load the questions. Check your connection and try again.</div>';
+    if (btn) { btn.disabled = false; btn.textContent = 'START'; }
+  });
+}
+
+function gtestTick() {
+  var q = state.gtest;
+  if (!q || q.done) { gtestStopTimer(); return; }
+  q.secsLeft--;
+  var el = document.getElementById('gt-timer');
+  if (el) el.textContent = gtestFmt(q.secsLeft);
+  if (q.secsLeft <= 0) finishGTest(true);
+}
+
+function renderGTestQ() {
+  var q = state.gtest; if (!q || q.done) return;
+  var v = document.getElementById('view');
+  var cur = q.items[q.idx], it = cur.item;
+  var n = q.items.length;
+  var letters = ['A', 'B', 'C', 'D'];
+  var opts = it.options.map(function (op, i) {
+    var cls = 'gt-opt';
+    if (q.answered) {
+      if (i === it.answer) cls += ' ok';
+      else if (i === q.picked) cls += ' no';
+      else cls += ' dim';
+    }
+    return '<button class="' + cls + '"' + (q.answered ? ' disabled' : '') + ' data-gopt="' + i + '">' +
+      '<span class="gt-opt-letter">' + letters[i] + '</span>' +
+      '<span class="gt-opt-text">' + esc(op) + '</span></button>';
+  }).join('');
+  var sheet = '';
+  if (q.answered) {
+    var good = q.picked === it.answer;
+    sheet = '<div class="gt-sheet ' + (good ? 'good' : 'bad') + '"><div class="gt-sheet-inner">' +
+      '<div class="gt-sheet-msg">' + (good ? '🎉 Correct!' : '💡 Correct answer: <b>' + esc(it.options[it.answer]) + '</b>') + '</div>' +
+      '<button class="gt-btn ' + (good ? 'gt-btn-green' : 'gt-btn-red') + ' gt-btn-block" id="gt-continue">CONTINUE</button>' +
+      '</div></div>';
+  }
+  var barPct = Math.round((q.idx + (q.answered ? 1 : 0)) / n * 100);
+  v.innerHTML = '<div class="gt-wrap">' +
+    '<div class="gt-top"><button class="gt-x" id="gt-quit" aria-label="Quit test">✕</button>' +
+    '<div class="gt-progress"><span style="width:' + barPct + '%"></span></div>' +
+    '<div class="gt-timer" id="gt-timer" title="Time left">' + gtestFmt(q.secsLeft) + '</div></div>' +
+    '<div class="gt-q">' + esc(it.prompt).replace(/___/g, '…') + '</div>' +
+    '<div class="gt-opts">' + opts + '</div>' + sheet + '</div>';
+  Array.prototype.forEach.call(v.querySelectorAll('[data-gopt]'), function (btn) {
+    btn.addEventListener('click', function () { answerGTest(parseInt(btn.getAttribute('data-gopt'), 10)); });
+  });
+  var cont = document.getElementById('gt-continue');
+  if (cont) cont.addEventListener('click', nextGTest);
+  document.getElementById('gt-quit').addEventListener('click', function () { go('grammar'); });
+  window.scrollTo(0, 0);
+}
+
+function answerGTest(i) {
+  var q = state.gtest;
+  if (!q || q.done || q.answered) return;
+  q.answered = true; q.picked = i;
+  var cur = q.items[q.idx], it = cur.item;
+  var ok = (i === it.answer);
+  q.results[q.idx] = { picked: i, ok: ok };
+  if (ok) {
+    /* Same idempotent ref as the topic quiz: no double-farming across retakes. */
+    awardPoints('grammar_exercise', 5, 'gex-' + cur.topic.slug + '-' + it.id);
+  } else {
+    saveMistake({ date: todayStr(), level: cur.lv, kind: 'grammar', topic: cur.topic.slug,
+      question: it.prompt, options: it.options, answer: it.answer, picked: i });
+  }
+  renderGTestQ();
+}
+
+function nextGTest() {
+  var q = state.gtest; if (!q || q.done) return;
+  if (q.idx + 1 >= q.items.length) { finishGTest(false); return; }
+  q.idx++; q.answered = false; q.picked = -1;
+  renderGTestQ();
+}
+
+function finishGTest(timeUp) {
+  var q = state.gtest; if (!q || q.done) return;
+  q.done = true;
+  gtestStopTimer();
+  document.body.classList.remove('duo-playing');
+  /* Unanswered questions (time ran out) count as missed. */
+  for (var i = 0; i < q.items.length; i++) {
+    if (!q.results[i]) q.results[i] = { picked: -1, ok: false, skipped: true };
+  }
+  var correct = q.results.filter(function (r) { return r.ok; }).length;
+  var total = q.items.length;
+  /* Per-level performance + weak spots grouped by topic. No level verdict. */
+  var perLevel = {}, byTopic = {}, order = [];
+  q.items.forEach(function (cur, idx) {
+    var r = q.results[idx];
+    var pl = perLevel[cur.lv] = perLevel[cur.lv] || { c: 0, t: 0 };
+    pl.t++; if (r.ok) pl.c++;
+    var k = cur.topic.slug;
+    if (!byTopic[k]) { byTopic[k] = { slug: k, h1: cur.topic.h1, lv: cur.lv, wrong: 0, total: 0 }; order.push(k); }
+    byTopic[k].total++;
+    if (!r.ok) byTopic[k].wrong++;
+  });
+  var weak = order.map(function (k) { return byTopic[k]; })
+    .filter(function (t) { return t.wrong > 0; })
+    .sort(function (a, b) { return (b.wrong - a.wrong) || (GTEST_LEVELS.indexOf(a.lv) - GTEST_LEVELS.indexOf(b.lv)); });
+  var report = {
+    ts: Date.now(), correct: correct, total: total, timeUp: !!timeUp,
+    perLevel: GTEST_LEVELS.map(function (lv) {
+      return { lv: lv, c: (perLevel[lv] || {}).c || 0, t: (perLevel[lv] || {}).t || 0 };
+    }),
+    weak: weak
+  };
+  var store = getGTestStore();
+  store.last = report;
+  store.count = (store.count || 0) + 1;
+  setGTestStore(store);
+  saveAttempt({ kind: 'grammar_test', theme: 'placement', score: correct, total: total, date: todayStr() });
+  state.gtest = null;
+  renderGTestReport(document.getElementById('view'), report);
+}
+
+function renderGTestReport(v, report) {
+  if (!report) {
+    var last = getGTestStore().last;
+    if (!last) { go('grammar-test'); return; }
+    report = last;
+  }
+  var weakHTML;
+  if (!report.weak.length) {
+    weakHTML = '<div class="gt-flawless">🎉 <b>Flawless!</b><br>You got every question right — nothing to fix here.</div>';
+  } else {
+    weakHTML = '<div class="gt-weak-head">🎯 <b>Focus on these topics:</b></div>' +
+      '<div class="gt-weak-list">' + report.weak.map(function (w) {
+        return '<div class="gt-weak-row"><span class="g-lv g-lv-' + w.lv + '">' + w.lv.toUpperCase() + '</span>' +
+          '<span class="gt-weak-main"><b>' + esc(w.h1) + '</b>' +
+          '<span>' + w.wrong + ' missed</span></span>' +
+          '<a class="gt-btn gt-btn-blue gt-btn-sm" href="#/grammar/' + esc(w.slug) + '">REVIEW</a></div>';
+      }).join('') + '</div>';
+  }
+  var bars = '<div class="gt-levels"><div class="gt-weak-head">📊 <b>By level:</b></div>' +
+    report.perLevel.map(function (p) {
+      var pct = p.t ? Math.round(p.c / p.t * 100) : 0;
+      return '<div class="gt-level-row"><span class="g-lv g-lv-' + p.lv + '">' + p.lv.toUpperCase() + '</span>' +
+        '<div class="gt-level-bar"><span style="width:' + pct + '%"></span></div>' +
+        '<span class="gt-level-num">' + p.c + '/' + p.t + '</span></div>';
+    }).join('') + '</div>';
+  v.innerHTML = '<div class="gt-wrap"><div class="gt-report">' +
+    '<div class="gt-mascot">📊</div>' +
+    '<h1>Your grammar report</h1>' +
+    (report.timeUp ? '<p class="gt-sub">Time ran out — unanswered questions count as missed.</p>' : '') +
+    '<div class="gt-score"><b>' + report.correct + '</b><span>/' + report.total + ' correct</span></div>' +
+    weakHTML + bars +
+    '<div class="gt-end-btns"><button class="gt-btn gt-btn-green gt-btn-big" id="gt-retake">RETAKE TEST</button>' +
+    '<a class="gt-btn gt-btn-ghost" href="#/grammar">Back to grammar guides</a></div>' +
+    '</div></div>';
+  document.getElementById('gt-retake').addEventListener('click', function () { go('grammar-test'); });
+  window.scrollTo(0, 0);
+}
+
+/* Hub banner: "Check your grammar!" first time, last-report summary after. */
+function paintGTestBanner() {
+  var wrap = document.getElementById('gtest-banner-wrap');
+  if (!wrap) return;
+  var last = getGTestStore().last;
+  var inner;
+  if (last) {
+    inner = '<span class="g-b-icon">🎯</span><span class="g-b-main"><b>Grammar check-up</b>' +
+      '<span>Last report: <b>' + last.correct + '/' + last.total + '</b> · ' +
+      last.weak.length + ' weak spot' + (last.weak.length === 1 ? '' : 's') + '</span></span>' +
+      '<span class="g-b-ctas"><a class="g-b-link" href="#/grammar-test/report">View report</a>' +
+      '<a class="g-b-cta" href="#/grammar-test">Retake →</a></span>';
+    wrap.innerHTML = '<div class="g-banner">' + inner + '</div>';
+  } else {
+    inner = '<span class="g-b-icon">🎯</span><span class="g-b-main"><b>Check your grammar!</b>' +
+      '<span>30 questions · A1–C1 · get your personal weak-spot report</span></span>' +
+      '<span class="g-b-cta">Start →</span>';
+    wrap.innerHTML = '<a class="g-banner" href="#/grammar-test">' + inner + '</a>';
   }
 }
 
@@ -10593,7 +10868,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610172056';
+var APP_VERSION = '202610172118';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

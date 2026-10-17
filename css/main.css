@@ -3532,3 +3532,111 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
   #home-grammar-wrap { margin: 0 0 1.1rem; }
   .dhome .g-banner { padding: 1rem 1.25rem; }
 }
+
+/* ---------------- grammar placement test (Duolingo style) ---------------- */
+.gt-wrap {
+  max-width: 640px; margin: 0 auto; padding: 16px 16px 140px;
+  font-family: ui-rounded, 'SF Pro Rounded', 'Segoe UI Rounded', 'Nunito', system-ui, sans-serif;
+  color: #4B4B4B;
+}
+/* 3D buttons */
+.gt-btn {
+  display: inline-block; border: none; cursor: pointer; font: inherit;
+  font-weight: 800; letter-spacing: 1px; font-size: 15px; text-transform: uppercase;
+  color: #fff; background: #CECECE; border-radius: 14px; padding: 14px 30px;
+  text-decoration: none; text-align: center; box-shadow: 0 4px 0 #AFAFAF;
+}
+.gt-btn:active { transform: translateY(4px); box-shadow: none; }
+.gt-btn:disabled { opacity: 0.7; cursor: default; transform: none; }
+.gt-btn-green { background: #58CC02; box-shadow: 0 4px 0 #58A700; }
+.gt-btn-red { background: #FF4B4B; box-shadow: 0 4px 0 #D33131; }
+.gt-btn-blue { background: #1CB0F6; box-shadow: 0 4px 0 #1899D6; }
+.gt-btn-ghost {
+  background: #fff; color: #1CB0F6; box-shadow: none; border: 2px solid #E5E5E5;
+}
+.gt-btn-big { font-size: 17px; padding: 16px 48px; margin-top: 8px; }
+.gt-btn-block { display: block; width: 100%; }
+.gt-btn-sm { font-size: 12px; padding: 10px 16px; flex: 0 0 auto; }
+/* intro + report */
+.gt-intro, .gt-report { text-align: center; padding-top: 32px; }
+.gt-mascot { font-size: 72px; line-height: 1; margin-bottom: 12px; }
+.gt-intro h1, .gt-report h1 { font-size: 28px; font-weight: 800; color: #3C3C3C; margin: 0 0 8px; }
+.gt-sub { color: #777; font-weight: 700; margin: 0 0 12px; }
+.gt-intro p { color: #777; line-height: 1.55; max-width: 420px; margin: 0 auto 12px; }
+.gt-last { font-size: 14px; }
+.gt-last a { color: #1CB0F6; font-weight: 800; }
+.gt-err {
+  background: #FFDFE0; color: #D33131; font-weight: 700; border-radius: 12px;
+  padding: 12px; margin: 0 0 12px;
+}
+.gt-quit-link { display: inline-block; margin-top: 18px; color: #AFAFAF; font-weight: 700; text-decoration: none; }
+.gt-score { margin: 8px 0 20px; }
+.gt-score b { font-size: 64px; font-weight: 800; color: #58CC02; }
+.gt-score span { font-size: 20px; color: #AFAFAF; font-weight: 700; }
+.gt-flawless {
+  background: #D7FFB8; border: 2px solid #58CC02; border-radius: 16px;
+  padding: 18px; margin: 0 0 20px; font-size: 17px; color: #3C3C3C; line-height: 1.5;
+}
+.gt-weak-head { text-align: left; font-size: 17px; color: #3C3C3C; margin: 0 0 10px; }
+.gt-weak-list { margin-bottom: 22px; }
+.gt-weak-row {
+  display: flex; align-items: center; gap: 10px; background: #fff;
+  border: 2px solid #E5E5E5; border-bottom-width: 4px; border-radius: 14px;
+  padding: 12px; margin-bottom: 10px; text-align: left;
+}
+.gt-weak-main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.gt-weak-main b { font-size: 15px; color: #3C3C3C; }
+.gt-weak-main span { font-size: 13px; color: #AFAFAF; font-weight: 700; }
+.gt-levels { text-align: left; margin-bottom: 24px; }
+.gt-level-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.gt-level-bar { flex: 1 1 auto; height: 12px; background: #E5E5E5; border-radius: 8px; overflow: hidden; }
+.gt-level-bar span { display: block; height: 100%; background: #1CB0F6; border-radius: 8px; }
+.gt-level-num { font-weight: 800; color: #777; font-size: 14px; min-width: 44px; text-align: right; font-variant-numeric: tabular-nums; }
+.gt-end-btns { display: flex; flex-direction: column; gap: 12px; align-items: stretch; }
+/* quiz */
+.gt-top { display: flex; align-items: center; gap: 12px; margin-bottom: 26px; }
+.gt-x { background: none; border: none; font-size: 20px; color: #AFAFAF; cursor: pointer; padding: 4px 8px; font-weight: 800; }
+.gt-progress { flex: 1 1 auto; height: 14px; background: #E5E5E5; border-radius: 8px; overflow: hidden; }
+.gt-progress span { display: block; height: 100%; background: #58CC02; border-radius: 8px; transition: width 0.3s; }
+.gt-timer {
+  font-weight: 800; color: #777; background: #F7F7F7; border: 2px solid #E5E5E5;
+  padding: 6px 12px; border-radius: 12px; font-variant-numeric: tabular-nums; font-size: 14px;
+}
+.gt-q { font-size: 22px; font-weight: 700; color: #3C3C3C; margin-bottom: 24px; line-height: 1.45; }
+.gt-opts { display: flex; flex-direction: column; }
+.gt-opt {
+  display: flex; align-items: center; gap: 14px; width: 100%; text-align: left;
+  background: #fff; border: 2px solid #E5E5E5; border-bottom-width: 4px; border-radius: 14px;
+  padding: 14px 16px; margin-bottom: 10px; font: inherit; font-size: 17px; font-weight: 600;
+  color: #4B4B4B; cursor: pointer;
+}
+.gt-opt-letter {
+  flex: 0 0 auto; width: 34px; height: 34px; border: 2px solid #E5E5E5; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 14px; color: #AFAFAF;
+}
+.gt-opt.ok { border-color: #58CC02; background: #D7FFB8; color: #58A700; }
+.gt-opt.ok .gt-opt-letter { border-color: #58CC02; color: #58A700; }
+.gt-opt.no { border-color: #FF4B4B; background: #FFDFE0; color: #D33131; }
+.gt-opt.no .gt-opt-letter { border-color: #FF4B4B; color: #D33131; }
+.gt-opt.dim { opacity: 0.45; }
+.gt-opt:disabled { cursor: default; }
+/* feedback sheet */
+.gt-sheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; animation: gt-up 0.25s ease-out; }
+.gt-sheet.good { background: #D7FFB8; border-top: 2px solid #B8F28B; }
+.gt-sheet.bad { background: #FFDFE0; border-top: 2px solid #FFAFAF; }
+.gt-sheet-inner { max-width: 640px; margin: 0 auto; padding: 18px 16px 22px; }
+.gt-sheet-msg { font-size: 20px; font-weight: 800; margin-bottom: 14px; }
+.gt-sheet.good .gt-sheet-msg { color: #58A700; }
+.gt-sheet.bad .gt-sheet-msg { color: #D33131; }
+@keyframes gt-up { from { transform: translateY(40px); opacity: 0; } to { transform: none; opacity: 1; } }
+/* hub banner: two-link variant */
+.g-b-ctas { flex: 0 0 auto; display: flex; flex-direction: column; gap: 6px; align-items: stretch; }
+.g-b-link {
+  font-weight: 700; color: var(--tomato-dark); font-size: 0.85rem; text-decoration: none;
+  background: rgba(200, 75, 49, 0.1); padding: 0.4rem 0.8rem; border-radius: 999px;
+  text-align: center; white-space: nowrap;
+}
+@media (min-width: 1024px) {
+  .gt-wrap { padding-top: 28px; }
+}
