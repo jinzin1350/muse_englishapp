@@ -1,0 +1,274 @@
+{
+ "date": "2026-10-17",
+ "theme": "food & cooking",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "fish",
+   "pos": "noun",
+   "meaning": "an animal that lives in water",
+   "example": "I like to eat fish on Fridays.",
+   "pronunciation": "FISH",
+   "persian": "ماهی",
+   "photo": "media/a1/2026-10-17/photos/fish.jpg",
+   "word_audio": "media/a1/2026-10-17/word-audio/fish.mp3"
+  },
+  {
+   "word": "chicken",
+   "pos": "noun",
+   "meaning": "meat from a chicken",
+   "example": "We have chicken for dinner.",
+   "pronunciation": "CHI-kuhn",
+   "persian": "گوشت مرغ",
+   "photo": "media/a1/2026-10-17/photos/chicken.jpg",
+   "word_audio": "media/a1/2026-10-17/word-audio/chicken.mp3"
+  },
+  {
+   "word": "tea",
+   "pos": "noun",
+   "meaning": "a hot drink made from tea leaves",
+   "example": "My mom drinks tea every morning.",
+   "pronunciation": "TEE",
+   "persian": "چای",
+   "photo": "media/a1/2026-10-17/photos/tea.jpg",
+   "word_audio": "media/a1/2026-10-17/word-audio/tea.mp3"
+  },
+  {
+   "word": "lemon",
+   "pos": "noun",
+   "meaning": "a small yellow fruit with a sour taste",
+   "example": "I put lemon in my tea.",
+   "pronunciation": "LEH-muhn",
+   "persian": "لیمو",
+   "photo": "media/a1/2026-10-17/photos/lemon.jpg",
+   "word_audio": "media/a1/2026-10-17/word-audio/lemon.mp3"
+  },
+  {
+   "word": "soup",
+   "pos": "noun",
+   "meaning": "a hot food made with water, vegetables or meat",
+   "example": "Hot soup is good in winter.",
+   "pronunciation": "SOOP",
+   "persian": "سوپ",
+   "photo": "media/a1/2026-10-17/photos/soup.jpg",
+   "word_audio": "media/a1/2026-10-17/word-audio/soup.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-10-17/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Food and Cooking",
+  "audio": "media/a1/2026-10-17/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a1/2026-10-17/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Warm Kitchen",
+  "audio": "media/a1/2026-10-17/shadowing.mp3",
+  "transcript": "media/a1/2026-10-17/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a1/2026-10-17/shadowing-sentences/001.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/002.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/003.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/004.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/005.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/006.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/007.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/008.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/009.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/010.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/011.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/012.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/013.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/014.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/015.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/016.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/017.mp3",
+   "media/a1/2026-10-17/shadowing-sentences/018.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'fish' mean?",
+   "options": [
+    "a hot drink made from tea leaves",
+    "an animal that lives in water",
+    "a small yellow fruit with a sour taste",
+    "meat from a chicken"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'chicken' mean?",
+   "options": [
+    "a small yellow fruit with a sour taste",
+    "a hot food made with water, vegetables or meat",
+    "meat from a chicken",
+    "an animal that lives in water"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'tea' mean?",
+   "options": [
+    "meat from a chicken",
+    "an animal that lives in water",
+    "a hot food made with water, vegetables or meat",
+    "a hot drink made from tea leaves"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'lemon' mean?",
+   "options": [
+    "a small yellow fruit with a sour taste",
+    "a hot drink made from tea leaves",
+    "meat from a chicken",
+    "an animal that lives in water"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'soup' mean?",
+   "options": [
+    "an animal that lives in water",
+    "meat from a chicken",
+    "a hot food made with water, vegetables or meat",
+    "a hot drink made from tea leaves"
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "This, That, These, Those",
+  "explanation": "Use **this** and **these** for things **near** you. Use **that** and **those** for things **far** from you. Look: **this fish** is on my plate.\n\n**This** and **that** are for one thing. **These** and **those** are for more than one thing. One **lemon**, many **lemons**.\n\nYou can use them alone: **that** is my **tea**. Or before a noun: **these soups** are hot.",
+  "examples": [
+   "***This** coffee is too hot.* (near, one thing)",
+   "*Who is **that** man over there?* (far, one thing)",
+   "***These** shoes are very comfortable.* (near, many things)",
+   "*Can you see **those** birds in the sky?* (far, many things)",
+   "*I'm very busy **this** week.* (time: now)"
+  ],
+  "practice": [
+   {
+    "q": "The soup is hot. It is near me. Rewrite starting with the right word.",
+    "a": "This soup is hot."
+   },
+   {
+    "q": "The lemon is yellow. It is far from me. Rewrite starting with the right word.",
+    "a": "That lemon is yellow."
+   },
+   {
+    "q": "The teas are sweet. They are near me. Rewrite starting with the right word.",
+    "a": "These teas are sweet."
+   },
+   {
+    "q": "The chickens are big. They are far from me. Rewrite starting with the right word.",
+    "a": "Those chickens are big."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ book in my hand is very interesting.",
+    "options": [
+     "These",
+     "This",
+     "Those",
+     "That"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Who is ___ woman over there?",
+    "options": [
+     "that",
+     "this",
+     "these",
+     "those"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Look at ___ mountains over there!",
+    "options": [
+     "this",
+     "that",
+     "those",
+     "these"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Come and meet my kids! ___ are my children, Ben and Lily.",
+    "options": [
+     "This",
+     "That",
+     "It",
+     "These"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Hello, ___ is Anna. Can I speak to Tom, please?",
+    "options": [
+     "these",
+     "those",
+     "this",
+     "here"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I love ___ shoes I'm wearing. They're so comfortable.",
+    "options": [
+     "this",
+     "these",
+     "that",
+     "them"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "___ is my phone.",
+    "options": [
+     "This",
+     "These",
+     "Those",
+     "Them"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I'm very busy ___ week.",
+    "options": [
+     "these",
+     "those",
+     "it",
+     "this"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "I failed my driving test. – Oh, ___ a shame.",
+    "options": [
+     "these are",
+     "those are",
+     "that's",
+     "this are"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "These book is mine.",
+     "These books are mine.",
+     "This books are mine.",
+     "This book are mine."
+    ],
+    "answer": 1
+   }
+  ],
+  "audio": "media/a1/2026-10-17/grammar-en.mp3"
+ }
+}

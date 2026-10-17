@@ -1,0 +1,4 @@
+- Character vocabulary: resilient, vulnerable, charisma, perseverance, composure, restless, integrity
+- Real-life scenes: recovering from a cancelled project, marathon training, a job interview, opening up in friendship, steady leadership in a crisis, a restless career change
+- Listener question: which word best describes a good teammate
+- Two app promo segments (Maya mid-show, Lena late-show)

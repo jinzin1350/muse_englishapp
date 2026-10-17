@@ -1,0 +1,11 @@
+# Muse English 2026-10-17 (B1): Work & Career
+- Intro: "Welcome to Muse English!"; topic = work & career vocabulary.
+- freelance (work for yourself, multiple clients) — freedom vs. irregular income.
+- benefit (job perks: free lunch, insurance, days off) — choosing a job by benefits.
+- paycheck (money received for work) — first paycheck pride, saving part of it.
+- training (learning job skills) — onboarding story, asking questions.
+- employee (person working for a company) — happy employees, fair pay.
+- report (written work document) — clear and short reports.
+- career (series of jobs in a life) — building over time, first steps.
+- Two app promos: (1) Maya ~1:43 — daily words w/ photos+pronunciation, podcast w/ transcript, shadowing, quizzes, grammar, leaderboard; (2) Lena ~6:02 — same features, download free.
+- Recap of all 7 words + send-off.

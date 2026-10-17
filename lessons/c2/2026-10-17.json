@@ -1,0 +1,330 @@
+{
+ "date": "2026-10-17",
+ "theme": "technology",
+ "level": "c2",
+ "cefr": "C2",
+ "words": [
+  {
+   "word": "technocratic",
+   "pos": "adjective",
+   "meaning": "decided or controlled by technical experts rather than by politicians or ordinary people",
+   "example": "The technocratic committee imposed the new data policy without consulting the public.",
+   "pronunciation": "tek-nuh-KRAT-ik",
+   "persian": "مبنی بر حکومت متخصصان فنی؛ تصمیم‌گیری توسط کارشناسان فنی",
+   "photo": "media/c2/2026-10-17/photos/technocratic.jpg",
+   "word_audio": "media/c2/2026-10-17/word-audio/technocratic.mp3"
+  },
+  {
+   "word": "cybernetics",
+   "pos": "noun",
+   "meaning": "the science of communication and automatic control in machines and living things",
+   "example": "Modern cybernetics treats the brain and the computer as variations on the same information-processing system.",
+   "pronunciation": "sy-bur-NET-iks",
+   "persian": "علم کنترل و ارتباط در ماشین‌ها و موجودات زنده",
+   "photo": "media/c2/2026-10-17/photos/cybernetics.jpg",
+   "word_audio": "media/c2/2026-10-17/word-audio/cybernetics.mp3"
+  },
+  {
+   "word": "techlash",
+   "pos": "noun",
+   "meaning": "strong public anger and backlash against powerful technology companies",
+   "example": "The techlash of the last decade forced governments to confront the power of the platform giants.",
+   "pronunciation": "TEK-lash",
+   "persian": "واکنش منفی و خشم گستردهٔ عمومی علیه شرکت‌های بزرگ فناوری",
+   "photo": "media/c2/2026-10-17/photos/techlash.jpg",
+   "word_audio": "media/c2/2026-10-17/word-audio/techlash.mp3"
+  },
+  {
+   "word": "luddism",
+   "pos": "noun",
+   "meaning": "opposition to new technology, named after the nineteenth-century workers who destroyed new machines",
+   "example": "His refusal to own a smartphone is less luddism than a deliberate choice to protect his attention.",
+   "pronunciation": "LUD-iz-um",
+   "persian": "مخالفت با فناوری‌های نوین",
+   "photo": "media/c2/2026-10-17/photos/luddism.jpg",
+   "word_audio": "media/c2/2026-10-17/word-audio/luddism.mp3"
+  },
+  {
+   "word": "technosolutionism",
+   "pos": "noun",
+   "meaning": "the belief that every social or political problem has a technological solution",
+   "example": "Technosolutionism tempts politicians to fund apps instead of fixing the underlying problem.",
+   "pronunciation": "tek-noh-suh-LOO-shuh-niz-um",
+   "persian": "باور به اینکه هر مشکلی راه‌حل فناورانه دارد",
+   "photo": "media/c2/2026-10-17/photos/technosolutionism.jpg",
+   "word_audio": "media/c2/2026-10-17/word-audio/technosolutionism.mp3"
+  },
+  {
+   "word": "dark pattern",
+   "pos": "noun",
+   "meaning": "a deceptive design trick in an app or website that manipulates users",
+   "example": "The checkout page used a classic dark pattern, hiding the cancel button in pale grey text.",
+   "pronunciation": "DARK PAT-urn",
+   "persian": "ترفند فریبندهٔ طراحی برای دستکاری کاربر",
+   "photo": "media/c2/2026-10-17/photos/dark-pattern.jpg",
+   "word_audio": "media/c2/2026-10-17/word-audio/dark-pattern.mp3"
+  },
+  {
+   "word": "accelerationism",
+   "pos": "noun",
+   "meaning": "the idea that technological and economic change should be accelerated rather than slowed down",
+   "example": "Silicon Valley accelerationism treats every regulation as an obstacle to inevitable progress.",
+   "pronunciation": "ak-sel-uh-RAY-shun-iz-um",
+   "persian": "باور به شتاب دادن به تغییرات فناورانه و اقتصادی",
+   "photo": "media/c2/2026-10-17/photos/accelerationism.jpg",
+   "word_audio": "media/c2/2026-10-17/word-audio/accelerationism.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c2/2026-10-17/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Technology and Power",
+  "audio": "media/c2/2026-10-17/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c2/2026-10-17/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Speed of Tomorrow",
+  "audio": "media/c2/2026-10-17/shadowing.mp3",
+  "transcript": "media/c2/2026-10-17/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c2/2026-10-17/shadowing-sentences/001.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/002.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/003.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/004.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/005.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/006.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/007.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/008.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/009.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/010.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/011.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/012.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/013.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/014.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/015.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/016.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/017.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/018.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/019.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/020.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/021.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/022.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/023.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/024.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/025.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/026.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/027.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/028.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/029.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/030.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/031.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/032.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/033.mp3",
+   "media/c2/2026-10-17/shadowing-sentences/034.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'technocratic' mean?",
+   "options": [
+    "a type of traditional dance",
+    "a fear of tall buildings",
+    "decided or controlled by technical experts",
+    "a slow way of cooking"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'cybernetics' mean?",
+   "options": [
+    "the science of communication and control in machines and living things",
+    "the study of internet criminals",
+    "a style of painting",
+    "a kind of weather system"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'techlash' mean?",
+   "options": [
+    "a new kind of smartphone",
+    "strong public anger against big technology companies",
+    "a fast internet connection",
+    "a software update"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'luddism' mean?",
+   "options": [
+    "the love of old movies",
+    "a type of flower",
+    "a cooking technique",
+    "opposition to new technology"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'technosolutionism' mean?",
+   "options": [
+    "the belief that every problem has a technological solution",
+    "the repair of broken machines",
+    "a school of architecture",
+    "a method for saving water"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'dark pattern' mean?",
+   "options": [
+    "a color in fashion design",
+    "a deceptive design trick that manipulates users",
+    "a type of shadow in photography",
+    "a pattern on dark clothing"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'accelerationism' mean?",
+   "options": [
+    "the idea that change should be accelerated, not slowed",
+    "a car racing technique",
+    "a type of physical exercise",
+    "the study of the stars"
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "title": "Fronting and Word Order for Emphasis",
+  "explanation": "**Fronting** means moving part of a sentence to the **beginning** for emphasis or dramatic effect. Instead of \"A castle stood on the hill,\" a novelist writes \"**On the hill stood** a castle,\" and the image lands much harder.\n\nAfter a fronted place or direction, a short verb like **be**, **stand**, **lie**, **come**, or **go** can come **before a noun subject**: \"**Into the room walked** a technocratic committee.\" With a pronoun subject, keep normal order: \"Here **it comes**,\" never \"Here comes it.\"\n\nAdjectives, participles, **so**, and **such** can also be fronted, with inversion of the verb and subject: \"**Gone are** the days of unchecked accelerationism.\" \"**So strong was** the techlash **that** the giants changed course.\" \"**Such was** his fury **that** he could not speak.\"\n\nYou can also front an **object** for contrast, with no inversion at all: \"**This dark pattern** I cannot accept.\" The rest of the sentence keeps its normal order, which makes the fronted word strike even harder.",
+  "examples": [
+   "*On the top of the hill **stood** an old castle.* (place + verb + subject)",
+   "*Into the room **walked** a man in a black coat.* (direction + verb + subject)",
+   "***Gone are** the days of cheap flights.* (participle fronting)",
+   "***So difficult was** the exam **that** only two students passed.* (so... that)",
+   "***Lucky are** those who love their jobs.* (adjective fronting)",
+   "***Some things** you just can't explain.* (object fronting, no inversion)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with fronting: A technocratic committee sat around the long glass table.",
+    "a": "Around the long glass table sat a technocratic committee."
+   },
+   {
+    "q": "Rewrite with so-fronting: The techlash was so strong that the companies changed their policies.",
+    "a": "So strong was the techlash that the companies changed their policies."
+   },
+   {
+    "q": "Rewrite by fronting the object: I cannot accept this dark pattern.",
+    "a": "This dark pattern I cannot accept."
+   },
+   {
+    "q": "Rewrite with fronting: Mr. Hale practiced his gentle luddism on the quiet farm.",
+    "a": "On the quiet farm Mr. Hale practiced his gentle luddism."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Look! Here ___!",
+    "options": [
+     "the bus comes",
+     "does the bus come",
+     "comes it",
+     "comes the bus"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Look, there's Tom. Here ___ now.",
+    "options": [
+     "comes he",
+     "he comes",
+     "does he come",
+     "he does come"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "On the top of the hill ___ an old castle.",
+    "options": [
+     "stood",
+     "did stand",
+     "was standing it",
+     "stood it"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "So loud ___ that we couldn't hear each other.",
+    "options": [
+     "the music was",
+     "the music was being",
+     "was the music",
+     "did the music be"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "___ the days when we could leave our doors unlocked.",
+    "options": [
+     "Gone are",
+     "Gone is",
+     "Are gone",
+     "Gone were being"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Such ___ his anger that he couldn't speak.",
+    "options": [
+     "did",
+     "has",
+     "is being",
+     "was"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Into the room ___ a tall man in a black coat.",
+    "options": [
+     "did walk",
+     "walked he",
+     "walked",
+     "was walk"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Coffee I love; tea ___.",
+    "options": [
+     "can't I stand",
+     "I can't stand",
+     "can I not stand",
+     "I stand can't"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "Here are they.",
+     "Here they come are.",
+     "Here they are.",
+     "Here are come they."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Lucky ___ those who have good friends.",
+    "options": [
+     "is",
+     "are",
+     "do",
+     "have"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

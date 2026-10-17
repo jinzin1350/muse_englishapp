@@ -1,0 +1,280 @@
+{
+ "date": "2026-10-17",
+ "theme": "travel & transport",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "gate",
+   "pos": "noun",
+   "meaning": "the place in an airport where you get on a plane",
+   "example": "We went to gate seven for our flight.",
+   "pronunciation": "GAYT",
+   "persian": "گیت فرودگاه (محل سوار شدن به هواپیما)",
+   "photo": "media/a2/2026-10-17/photos/gate.jpg",
+   "word_audio": "media/a2/2026-10-17/word-audio/gate.mp3"
+  },
+  {
+   "word": "depart",
+   "pos": "verb",
+   "meaning": "to leave a place to start a trip",
+   "example": "The train departs at seven thirty.",
+   "pronunciation": "dee-PART",
+   "persian": "حرکت کردن، ترک کردن",
+   "photo": "media/a2/2026-10-17/photos/depart.jpg",
+   "word_audio": "media/a2/2026-10-17/word-audio/depart.mp3"
+  },
+  {
+   "word": "arrive",
+   "pos": "verb",
+   "meaning": "to get to a place at the end of a trip",
+   "example": "We arrived at the hotel at night.",
+   "pronunciation": "uh-RIVE",
+   "persian": "رسیدن",
+   "photo": "media/a2/2026-10-17/photos/arrive.jpg",
+   "word_audio": "media/a2/2026-10-17/word-audio/arrive.mp3"
+  },
+  {
+   "word": "carry",
+   "pos": "verb",
+   "meaning": "to hold or take something with you",
+   "example": "I carry my lunch in a small bag.",
+   "pronunciation": "KAY-ree",
+   "persian": "حمل کردن، با خود بردن",
+   "photo": "media/a2/2026-10-17/photos/carry.jpg",
+   "word_audio": "media/a2/2026-10-17/word-audio/carry.mp3"
+  },
+  {
+   "word": "corner",
+   "pos": "noun",
+   "meaning": "the place where two streets meet",
+   "example": "Turn left at the corner.",
+   "pronunciation": "KOR-ner",
+   "persian": "نبش، گوشه (محل تقاطع دو خیابان)",
+   "photo": "media/a2/2026-10-17/photos/corner.jpg",
+   "word_audio": "media/a2/2026-10-17/word-audio/corner.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-10-17/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Let's Travel",
+  "audio": "media/a2/2026-10-17/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-10-17/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Trip to the City",
+  "audio": "media/a2/2026-10-17/shadowing.mp3",
+  "transcript": "media/a2/2026-10-17/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-10-17/shadowing-sentences/001.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/002.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/003.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/004.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/005.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/006.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/007.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/008.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/009.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/010.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/011.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/012.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/013.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/014.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/015.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/016.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/017.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/018.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/019.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/020.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/021.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/022.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/023.mp3",
+   "media/a2/2026-10-17/shadowing-sentences/024.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'gate' mean?",
+   "options": [
+    "to get to a place at the end of a trip",
+    "the place in an airport where you get on a plane",
+    "to leave a place to start a trip",
+    "to hold or take something with you"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'depart' mean?",
+   "options": [
+    "to leave a place to start a trip",
+    "to hold or take something with you",
+    "to get to a place at the end of a trip",
+    "the place where two streets meet"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'arrive' mean?",
+   "options": [
+    "to get to a place at the end of a trip",
+    "the place where two streets meet",
+    "to hold or take something with you",
+    "the place in an airport where you get on a plane"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'carry' mean?",
+   "options": [
+    "to get to a place at the end of a trip",
+    "the place in an airport where you get on a plane",
+    "the place where two streets meet",
+    "to hold or take something with you"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'corner' mean?",
+   "options": [
+    "the place where two streets meet",
+    "to hold or take something with you",
+    "the place in an airport where you get on a plane",
+    "to get to a place at the end of a trip"
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "title": "Present Perfect for Experience (ever, never)",
+  "explanation": "We use the **present perfect** to talk about experiences in our life, when we don't say exactly when it happened. Form: **have** / **has** + past participle.\n\nUse **ever** in questions about your whole life: ***Have** you **ever** waited at the **gate**?*\n\nUse **never** with a positive verb to say it did not happen in your life: *I**'ve never** missed a train.*\n\nWhen you say **when** it happened, use the past simple: *I **went** there in 2022.* A common mistake is *Have you ever went?* — always use the past participle: **been**, **seen**, **eaten**.",
+  "examples": [
+   "*I**'ve been** to Canada twice. (experience + how many times)",
+   "***Have** you **ever eaten** octopus? (ever in a question)",
+   "*She**'s never driven** a car. (never + past participle)",
+   "*We **haven't met** your new boyfriend. (negative)",
+   "*They**'ve never been** on a plane. (never)"
+  ],
+  "practice": [
+   {
+    "q": "Ask about life experience: you / ever / wait at the gate",
+    "a": "Have you ever waited at the gate?"
+   },
+   {
+    "q": "Make it negative with never: I / carry / a heavy bag",
+    "a": "I have never carried a heavy bag. / I've never carried a heavy bag."
+   },
+   {
+    "q": "Make a question with ever: she / arrive / late at the airport",
+    "a": "Has she ever arrived late at the airport?"
+   },
+   {
+    "q": "Fix the mistake: Have you ever went to the corner?",
+    "a": "Have you ever been to the corner?"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Have you ever ___ to Australia?",
+    "options": [
+     "went",
+     "go",
+     "been",
+     "being"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I've never ___ sushi.",
+    "options": [
+     "eaten",
+     "eat",
+     "ate",
+     "eating"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "___ she ever met a famous person?",
+    "options": [
+     "Have",
+     "Has",
+     "Did",
+     "Is"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "We ___ been to that restaurant. Is it good?",
+    "options": [
+     "haven't never",
+     "are never",
+     "has never",
+     "have never"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "My brother ___ in a band.",
+    "options": [
+     "has never play",
+     "has never played",
+     "have never played",
+     "never has play"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Have you ever seen a ghost? – No, I ___.",
+    "options": [
+     "didn't",
+     "don't",
+     "haven't",
+     "hasn't"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I've seen this film ___ times.",
+    "options": [
+     "three",
+     "ever",
+     "never",
+     "since"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "It's the best pizza I've ___ eaten.",
+    "options": [
+     "never",
+     "yet",
+     "already",
+     "ever"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Have you ever been to Rome? – Yes, I went there ___.",
+    "options": [
+     "since 2019",
+     "for 2019",
+     "in 2019",
+     "ever"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "I went to Paris last year.",
+     "I've been to Paris last year.",
+     "I've went to Paris last year.",
+     "I go to Paris last year."
+    ],
+    "answer": 0
+   }
+  ],
+  "audio": "media/a2/2026-10-17/grammar-en.mp3"
+ }
+}
