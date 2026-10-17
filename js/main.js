@@ -1902,8 +1902,8 @@ function shouldEnterAppMode() {
   return false;
 }
 
-const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test'];
+const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ptest'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -2009,6 +2009,7 @@ function show(view, arg) {
   if (view !== 'lesson') { state.quiz = null; }
   if (view !== 'grammar') { state.gquiz = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'grammar-test') { gtestStopTimer(); state.gtest = null; document.body.classList.remove('duo-playing'); }
+  if (view !== 'ptest') { if (state.ptest) { document.body.classList.remove('duo-playing'); } state.ptest = null; }
   /* Desktop home uses the mockup v6 dashboard layout. */
   document.body.classList.toggle('view-home', view === 'home');
   setChrome();
@@ -2041,6 +2042,7 @@ function show(view, arg) {
   else if (view === 'choose-teacher') renderChooseTeacher(v);
   else if (view === 'grammar') renderGrammar(v, arg);
   else if (view === 'grammar-test') renderGrammarTest(v, arg);
+  else if (view === 'ptest') renderPTest(v, arg);
 }
 
 /* ---------------- chrome (headers / profile menu / nav) ---------------- */
@@ -2441,6 +2443,12 @@ function renderTeacher(v) {
       '<button class="btn btn-sm" data-action="copy-teacher-link">Copy</button></div>' +
       '<p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0">Share it with your students — everyone who signs up through it shows up below.</p>' +
     '</div>' +
+    '<div class="card tch-invite">' +
+      '<div class="muted" style="margin:0 0 0.4rem">📝 Placement test link for new students</div>' +
+      '<div class="tch-linkrow"><code>' + esc(teacherPlacementLink(state.teacher.ref_code)) + '</code>' +
+      '<button class="btn btn-sm" data-action="copy-ptest-link">Copy</button></div>' +
+      '<p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0">Send it to a new student — they take a 5-part test (vocabulary, listening, grammar, writing, speaking) and the results land in your dashboard below.</p>' +
+    '</div>' +
     '<div class="card"><h3 style="margin-top:0">🌟 My public profile</h3>' +
     '<p class="muted" style="font-size:0.85rem;margin-top:-0.3rem">Students see this when choosing a teacher. Add your photo, experience and a short bio.</p>' +
     '<div id="tch-profile-body"><div class="empty">Loading…</div></div></div>' +
@@ -2453,8 +2461,11 @@ function renderTeacher(v) {
     '<div id="tch-assign"></div>' +
     '<div id="tch-roster"><div class="empty">Loading…</div></div>' +
     '<div id="tch-detail"></div>' +
+    '<div class="section-title"><h2>Placement test results</h2></div>' +
+    '<div id="tch-ptest"><div class="empty">Loading…</div></div>' +
   '</div>';
   loadTeacherRoster();
+  loadPlacementResults();
   loadTeacherCoach();
   loadTeacherAssignments();
   loadTeacherProfile();
@@ -5160,6 +5171,16 @@ async function afterLogin() {
     if (r.name && LEARNER_VIEWS.indexOf(r.name) !== -1) onRoute();
     else go('home');
   }
+  /* Placement test return: a student who signed up/logged in from a teacher's
+     #/ptest/<ref> link lands back on the test after auth (incl. after the
+     level picker in the waiting view). */
+  try {
+    var ptestBack = sessionStorage.getItem('ptest_return');
+    if (ptestBack && /^#\/ptest\/[A-Za-z0-9_-]{1,32}$/.test(ptestBack)) {
+      sessionStorage.removeItem('ptest_return');
+      if (window.location.hash !== ptestBack) { window.location.hash = ptestBack; return; }
+    }
+  } catch (e) {}
   hideSplashSoon();
   maybeShowWelcome();
   // Teacher inbox: badge in the header + a prompt if unread messages arrived.
@@ -6544,6 +6565,682 @@ function paintGTestBanner() {
       '<span class="g-b-cta">Start →</span>';
     wrap.innerHTML = '<a class="g-banner" href="#/grammar-test">' + inner + '</a>';
   }
+}
+
+/* ============ Teacher placement test (#/ptest/<ref>) ============
+   A teacher sends their link to a new student. The student signs up
+   (attributed to the teacher via the existing el_ref flow), fills in
+   name + mobile, then takes 5 sections: vocabulary (15), listening (10),
+   grammar (20), writing (1), speaking/shadowing (10). Each finished
+   section is saved immediately so the test can be resumed later.
+   The student NEVER sees scores or a level. The teacher sees everything
+   in their dashboard, including a suggested level (teacher-only). */
+
+var PTEST_VERSION = 'v1';
+var PTEST_BUNDLE_URL = '/data/placement/v1.json';
+/* Suggested-level bands over the 55 auto-scored points. Teacher sees only. */
+var PTEST_BANDS = [[13, 'A1'], [26, 'A2'], [38, 'B1'], [48, 'B2'], [55, 'C1']];
+var PTEST_SECTIONS = [
+  { id: 'vocab', title: 'Vocabulary', sub: '15 questions · look at the picture and definition, pick the word' },
+  { id: 'listening', title: 'Listening', sub: '10 questions · a short podcast and everyday dialogues' },
+  { id: 'grammar', title: 'Grammar', sub: '20 questions' },
+  { id: 'writing', title: 'Writing', sub: 'describe the picture in 5–8 sentences' },
+  { id: 'shadowing', title: 'Speaking', sub: '10 sentences · listen and repeat aloud' },
+];
+
+function teacherPlacementLink(code) {
+  return window.location.origin + '/#/ptest/' + encodeURIComponent(code);
+}
+function ptestSuggestedLevel(total) {
+  for (var i = 0; i < PTEST_BANDS.length; i++) {
+    if (total <= PTEST_BANDS[i][0]) return PTEST_BANDS[i][1];
+  }
+  return 'C1';
+}
+function ptestLoadBundle() {
+  if (state.ptestBundle) return Promise.resolve(state.ptestBundle);
+  return fetch(PTEST_BUNDLE_URL).then(function (r) {
+    if (!r.ok) throw new Error('bundle missing');
+    return r.json();
+  }).then(function (b) { state.ptestBundle = b; return b; });
+}
+function ptestIsDemo() { return !sb || !state.user || state.user.demo; }
+
+/* ---- entry ---- */
+function renderPTest(v, ref) {
+  ref = (ref || '').trim();
+  if (!/^[A-Za-z0-9_-]{1,32}$/.test(ref)) {
+    v.innerHTML = '<div class="gt-wrap"><div class="gt-intro"><div class="gt-mascot">🔗</div>' +
+      '<h1>Invalid test link</h1><p>Ask your teacher for a fresh link.</p></div></div>';
+    return;
+  }
+  /* First-touch referral attribution: the student is linked to the teacher. */
+  try { if (!localStorage.getItem('el_ref')) localStorage.setItem('el_ref', ref); } catch (e) {}
+  state.ptestRef = ref;
+  if (!state.user) { ptestIntroAnon(v, ref); return; }
+  ptestBoot(v, ref);
+}
+
+function ptestPartsHTML() {
+  return '<div class="ptest-parts">' + PTEST_SECTIONS.map(function (s, i) {
+    var n = { vocab: 15, listening: 10, grammar: 20, writing: 1, shadowing: 10 }[s.id];
+    return '<div class="ptest-part"><span class="ptest-part-n">' + (i + 1) + '</span>' +
+      '<span class="ptest-part-t"><b>' + s.title + '</b><span>' + n + (n === 1 ? ' task' : ' questions') + '</span></span></div>';
+  }).join('') + '</div>';
+}
+
+function ptestIntroAnon(v, ref) {
+  v.innerHTML = '<div class="gt-wrap"><div class="gt-intro">' +
+    '<div class="gt-mascot">🎓</div>' +
+    '<h1>English placement test</h1>' +
+    '<p class="gt-sub">Your teacher invited you to take this test.</p>' +
+    '<p>It has 5 parts and takes about 45–60 minutes. You can pause between parts — each finished part is saved.</p>' +
+    ptestPartsHTML() +
+    '<button class="gt-btn gt-btn-green gt-btn-big" id="ptest-signup">Sign up free</button>' +
+    '<div><a class="gt-quit-link" href="javascript:void(0)" id="ptest-login">I already have an account — log in</a></div>' +
+    '</div></div>';
+  var goAuth = function (where) {
+    try { sessionStorage.setItem('ptest_return', '#/ptest/' + ref); } catch (e) {}
+    go(where);
+  };
+  document.getElementById('ptest-signup').addEventListener('click', function () { goAuth('signup'); });
+  document.getElementById('ptest-login').addEventListener('click', function () { goAuth('signin'); });
+  window.scrollTo(0, 0);
+}
+
+/* ---- logged-in boot: resume, identity, or already-done ---- */
+async function ptestBoot(v, ref) {
+  v.innerHTML = '<div class="gt-wrap"><div class="gt-intro"><div class="empty">Loading your test…</div></div></div>';
+  var bundle;
+  try { bundle = await ptestLoadBundle(); }
+  catch (e) {
+    v.innerHTML = '<div class="gt-wrap"><div class="gt-intro"><div class="gt-err">Could not load the test. Check your connection and try again.</div></div></div>';
+    return;
+  }
+  var row = await ptestLoadRow();
+  if (row && row.status === 'completed') { ptestAlreadyDone(v, row); return; }
+  if (row && row.status === 'in_progress') { ptestResume(v, ref, bundle, row); return; }
+  ptestIdentity(v, ref, bundle, row);
+}
+
+async function ptestLoadRow() {
+  if (ptestIsDemo()) {
+    try {
+      var raw = localStorage.getItem('ptest_row_' + PTEST_VERSION);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+  try {
+    var r = await sb.from('placement_results')
+      .select('*').eq('student_id', state.user.id).eq('test_version', PTEST_VERSION)
+      .maybeSingle();
+    if (r.error) throw r.error;
+    return r.data || null;
+  } catch (e) { return null; }
+}
+
+async function ptestSaveRow(patch) {
+  var row = state.ptestRow = Object.assign({}, state.ptestRow || {}, patch, { updated_at: new Date().toISOString() });
+  if (ptestIsDemo()) {
+    try { localStorage.setItem('ptest_row_' + PTEST_VERSION, JSON.stringify(row)); } catch (e) {}
+    return row;
+  }
+  try {
+    var payload = Object.assign({}, row);
+    delete payload.id;
+    var r = await sb.from('placement_results').upsert(
+      Object.assign({ student_id: state.user.id, test_version: PTEST_VERSION }, payload),
+      { onConflict: 'student_id,test_version' }
+    ).select().maybeSingle();
+    if (r.error) throw r.error;
+    if (r.data) state.ptestRow = r.data;
+  } catch (e) { /* offline: local copy kept; next section save retries */ }
+  return state.ptestRow;
+}
+
+function ptestAlreadyDone(v, row) {
+  v.innerHTML = '<div class="gt-wrap"><div class="gt-intro"><div class="gt-mascot">✅</div>' +
+    '<h1>Test already completed</h1>' +
+    '<p>You finished this placement test' + (row.completed_at ? ' on ' + esc(row.completed_at.slice(0, 10)) : '') + '. Your teacher has your results.</p>' +
+    '<a class="gt-btn gt-btn-green" href="#/home">Back to home</a></div></div>';
+  window.scrollTo(0, 0);
+}
+
+function ptestResume(v, ref, bundle, row) {
+  var doneIds = Object.keys(row.sections || {});
+  var nextIdx = 0;
+  for (var i = 0; i < PTEST_SECTIONS.length; i++) {
+    if (doneIds.indexOf(PTEST_SECTIONS[i].id) === -1) break;
+    nextIdx = i + 1;
+  }
+  state.ptestRow = row;
+  var list = PTEST_SECTIONS.map(function (s, i) {
+    var done = doneIds.indexOf(s.id) !== -1;
+    return '<div class="ptest-part' + (done ? ' done' : '') + '"><span class="ptest-part-n">' +
+      (done ? '✓' : (i + 1)) + '</span>' +
+      '<span class="ptest-part-t"><b>' + s.title + '</b><span>' +
+      (done ? 'completed' : (i === nextIdx ? 'up next' : 'pending')) + '</span></span></div>';
+  }).join('');
+  v.innerHTML = '<div class="gt-wrap"><div class="gt-intro">' +
+    '<div class="gt-mascot">👋</div>' +
+    '<h1>Welcome back' + (row.student_name ? ', ' + esc(row.student_name.split(' ')[0]) : '') + '!</h1>' +
+    '<p>You can continue your placement test where you left off.</p>' +
+    '<div class="ptest-parts">' + list + '</div>' +
+    '<button class="gt-btn gt-btn-green gt-btn-big" id="ptest-continue">Continue</button>' +
+    '</div></div>';
+  document.getElementById('ptest-continue').addEventListener('click', function () {
+    ptestSectionIntro(document.getElementById('view'), ref, bundle, nextIdx);
+  });
+  window.scrollTo(0, 0);
+}
+
+/* ---- identity: name + mobile (teacher needs to find the student) ---- */
+function ptestIdentity(v, ref, bundle, row) {
+  var nm = (row && row.student_name) || '';
+  var mo = (row && row.student_mobile) || '';
+  v.innerHTML = '<div class="gt-wrap"><div class="gt-intro">' +
+    '<div class="gt-mascot">👋</div>' +
+    '<h1>Before we start…</h1>' +
+    '<p>Tell us who you are so your teacher can find your results.</p>' +
+    '<div class="ptest-form">' +
+    '<label>Your full name<input id="ptest-name" type="text" maxlength="60" value="' + esc(nm) + '" placeholder="e.g. Sara Ahmadi" autocomplete="name"></label>' +
+    '<label>Mobile number<input id="ptest-mobile" type="tel" maxlength="20" value="' + esc(mo) + '" placeholder="e.g. +1 416 555 0132" autocomplete="tel"></label>' +
+    '<div class="ptest-privacy">🔒 Only your teacher sees this, so they can contact you about your results.</div>' +
+    '<div class="gt-err hidden" id="ptest-id-err"></div>' +
+    '<button class="gt-btn gt-btn-green gt-btn-big" id="ptest-id-go">Start the test</button>' +
+    '</div></div></div>';
+  document.getElementById('ptest-id-go').addEventListener('click', async function () {
+    var name = document.getElementById('ptest-name').value.trim();
+    var mobile = document.getElementById('ptest-mobile').value.trim();
+    var err = document.getElementById('ptest-id-err');
+    var digits = mobile.replace(/\D/g, '');
+    if (name.length < 2) { err.textContent = 'Please enter your name.'; err.classList.remove('hidden'); return; }
+    if (digits.length < 7) { err.textContent = 'Please enter a valid mobile number.'; err.classList.remove('hidden'); return; }
+    err.classList.add('hidden');
+    var btn = document.getElementById('ptest-id-go');
+    btn.disabled = true; btn.textContent = 'Saving…';
+    await ptestSaveRow({
+      teacher_ref: ref, status: 'in_progress',
+      student_name: name, student_mobile: mobile,
+      sections: (state.ptestRow && state.ptestRow.sections) || {},
+      started_at: (state.ptestRow && state.ptestRow.started_at) || new Date().toISOString(),
+    });
+    ptestSectionIntro(document.getElementById('view'), ref, bundle, 0);
+  });
+  window.scrollTo(0, 0);
+}
+
+/* ---- section intros = natural pause points ---- */
+function ptestSectionIntro(v, ref, bundle, idx) {
+  var s = PTEST_SECTIONS[idx];
+  v.innerHTML = '<div class="gt-wrap"><div class="gt-intro">' +
+    '<div class="gt-mascot">' + ['📚', '🎧', '📝', '✍️', '🎤'][idx] + '</div>' +
+    '<p class="gt-sub">Part ' + (idx + 1) + ' of ' + PTEST_SECTIONS.length + '</p>' +
+    '<h1>' + s.title + '</h1>' +
+    '<p>' + s.sub + '.</p>' +
+    (idx > 0 ? '<p class="gt-sub">You can stop after this part — your progress is saved.</p>' : '') +
+    '<button class="gt-btn gt-btn-green gt-btn-big" id="ptest-sec-go">Start</button>' +
+    '<div><a class="gt-quit-link" href="#/home">‹ Leave the test for now</a></div>' +
+    '</div></div>';
+  document.getElementById('ptest-sec-go').addEventListener('click', function () {
+    ptestStartSection(ref, bundle, idx);
+  });
+  window.scrollTo(0, 0);
+}
+
+function ptestStartSection(ref, bundle, idx) {
+  state.ptest = { ref: ref, bundle: bundle, secIdx: idx, qIdx: 0, answers: [], t0: Date.now() };
+  document.body.classList.add('duo-playing');
+  var id = PTEST_SECTIONS[idx].id;
+  if (id === 'vocab') ptestVocabQ();
+  else if (id === 'listening') ptestListeningQ();
+  else if (id === 'grammar') ptestGrammarQ();
+  else if (id === 'writing') ptestWriting();
+  else if (id === 'shadowing') ptestShadowing();
+}
+function ptestQuitSection() {
+  document.body.classList.remove('duo-playing');
+  state.ptest = null;
+}
+
+/* shared Duolingo chrome for one-question-at-a-time sections */
+function ptestTopHTML(answeredCount, total) {
+  var pct = Math.round(answeredCount / total * 100);
+  return '<div class="gt-top"><button class="gt-x" id="ptest-quit" aria-label="Leave test">✕</button>' +
+    '<div class="gt-progress"><span style="width:' + pct + '%"></span></div>' +
+    '<div class="gt-qcount">' + answeredCount + '/' + total + '</div></div>';
+}
+function ptestWireQuit() {
+  document.getElementById('ptest-quit').addEventListener('click', function () {
+    if (window.confirm('Leave the test? Your finished parts are saved.')) {
+      ptestQuitSection();
+      go('home');
+    }
+  });
+}
+function ptestOptsHTML(options, answered, picked, correctIdx) {
+  var letters = ['A', 'B', 'C', 'D'];
+  return options.map(function (op, i) {
+    var cls = 'gt-opt';
+    if (answered) {
+      if (i === correctIdx) cls += ' ok';
+      else if (i === picked) cls += ' no';
+      else cls += ' dim';
+    }
+    return '<button class="' + cls + '"' + (answered ? ' disabled' : '') + ' data-popt="' + i + '">' +
+      '<span class="gt-opt-letter">' + letters[i] + '</span>' +
+      '<span class="gt-opt-text">' + esc(op) + '</span></button>';
+  }).join('');
+}
+function ptestSheetHTML(good, correctText, btnLabel) {
+  return '<div class="gt-sheet ' + (good ? 'good' : 'bad') + '"><div class="gt-sheet-inner">' +
+    '<div class="gt-sheet-msg">' + (good ? '🎉 Correct!' : '💡 Correct answer: <b>' + esc(correctText) + '</b>') + '</div>' +
+    '<button class="gt-btn ' + (good ? 'gt-btn-green' : 'gt-btn-red') + ' gt-btn-block" id="ptest-next">' +
+    (btnLabel || 'CONTINUE') + '</button></div></div>';
+}
+
+/* ---- Part 1: vocabulary — photo + definition shown, pick the word ---- */
+function ptestVocabQ() {
+  var st = state.ptest, items = st.bundle.vocab.items, it = items[st.qIdx], n = items.length;
+  var v = document.getElementById('view');
+  var answered = st.answered;
+  var opts = ptestOptsHTML(it.options, answered, st.picked, it.answer);
+  var sheet = answered ? ptestSheetHTML(st.picked === it.answer, it.word,
+    st.qIdx + 1 >= n ? 'FINISH PART' : 'CONTINUE') : '';
+  v.innerHTML = '<div class="gt-wrap">' + ptestTopHTML(st.qIdx + (answered ? 1 : 0), n) +
+    '<div class="ptest-vocab-photo"><img src="/' + esc(it.photo) + '" alt=""></div>' +
+    '<div class="gt-q ptest-def">&ldquo;' + esc(it.meaning) + '&rdquo;</div>' +
+    '<div class="gt-opts">' + opts + '</div>' + sheet + '</div>';
+  ptestWireQuit();
+  Array.prototype.forEach.call(v.querySelectorAll('[data-popt]'), function (btn) {
+    btn.addEventListener('click', function () {
+      if (st.answered) return;
+      var pick = parseInt(btn.getAttribute('data-popt'), 10);
+      st.answered = true; st.picked = pick;
+      st.answers.push({ ok: pick === it.answer, word: it.word, level: it.level });
+      ptestVocabQ();
+    });
+  });
+  var nx = document.getElementById('ptest-next');
+  if (nx) nx.addEventListener('click', function () {
+    st.answered = false; st.picked = -1;
+    if (st.qIdx + 1 >= n) ptestFinishSection('vocab');
+    else { st.qIdx++; ptestVocabQ(); }
+  });
+  window.scrollTo(0, 0);
+}
+
+/* ---- Part 2: listening — podcast (5) + dialogues (5), flattened to 10 ---- */
+function ptestListeningItems(bundle) {
+  var out = [];
+  var pc = bundle.listening.podcast;
+  pc.questions.forEach(function (q) {
+    out.push({ audio: pc.audio, title: pc.title, q: q.q, options: q.options, answer: q.answer, kind: 'podcast' });
+  });
+  bundle.listening.dialogues.forEach(function (d) {
+    out.push({ audio: d.audio, title: d.title, q: d.question.q, options: d.question.options, answer: d.question.answer, kind: 'dialogue' });
+  });
+  return out;
+}
+function ptestListeningQ() {
+  var st = state.ptest;
+  if (!st.litems) st.litems = ptestListeningItems(st.bundle);
+  var items = st.litems, cur = items[st.qIdx], n = items.length;
+  var v = document.getElementById('view');
+  var answered = st.answered;
+  var opts = ptestOptsHTML(cur.options, answered, st.picked, cur.answer);
+  var sheet = answered ? ptestSheetHTML(st.picked === cur.answer, cur.options[cur.answer],
+    st.qIdx + 1 >= n ? 'FINISH PART' : 'CONTINUE') : '';
+  v.innerHTML = '<div class="gt-wrap">' + ptestTopHTML(st.qIdx + (answered ? 1 : 0), n) +
+    '<div class="ptest-audio-card"><div class="ptest-audio-title">🔊 ' + esc(cur.title) + '</div>' +
+    '<audio controls preload="auto" src="/' + esc(cur.audio) + '" class="ptest-audio"></audio>' +
+    '<div class="ptest-audio-hint">Listen carefully — you can replay it.</div></div>' +
+    '<div class="gt-q">' + esc(cur.q) + '</div>' +
+    '<div class="gt-opts">' + opts + '</div>' + sheet + '</div>';
+  ptestWireQuit();
+  Array.prototype.forEach.call(v.querySelectorAll('[data-popt]'), function (btn) {
+    btn.addEventListener('click', function () {
+      if (st.answered) return;
+      var pick = parseInt(btn.getAttribute('data-popt'), 10);
+      st.answered = true; st.picked = pick;
+      st.answers.push({ ok: pick === cur.answer, title: cur.title, kind: cur.kind });
+      ptestListeningQ();
+    });
+  });
+  var nx = document.getElementById('ptest-next');
+  if (nx) nx.addEventListener('click', function () {
+    st.answered = false; st.picked = -1;
+    if (st.qIdx + 1 >= n) ptestFinishSection('listening');
+    else { st.qIdx++; ptestListeningQ(); }
+  });
+  window.scrollTo(0, 0);
+}
+
+/* ---- Part 3: grammar — 20 questions from the vetted bank ---- */
+function ptestGrammarQ() {
+  var st = state.ptest, items = st.bundle.grammar.items, it = items[st.qIdx], n = items.length;
+  var v = document.getElementById('view');
+  var answered = st.answered;
+  var opts = ptestOptsHTML(it.options, answered, st.picked, it.answer);
+  var sheet = answered ? ptestSheetHTML(st.picked === it.answer, it.options[it.answer],
+    st.qIdx + 1 >= n ? 'FINISH PART' : 'CONTINUE') : '';
+  v.innerHTML = '<div class="gt-wrap">' + ptestTopHTML(st.qIdx + (answered ? 1 : 0), n) +
+    '<div class="gt-q">' + esc(it.prompt).replace(/___/g, '…') + '</div>' +
+    '<div class="gt-opts">' + opts + '</div>' + sheet + '</div>';
+  ptestWireQuit();
+  Array.prototype.forEach.call(v.querySelectorAll('[data-popt]'), function (btn) {
+    btn.addEventListener('click', function () {
+      if (st.answered) return;
+      var pick = parseInt(btn.getAttribute('data-popt'), 10);
+      st.answered = true; st.picked = pick;
+      st.answers.push({ ok: pick === it.answer, topic: it.topic, h1: it.h1, level: it.level });
+      ptestGrammarQ();
+    });
+  });
+  var nx = document.getElementById('ptest-next');
+  if (nx) nx.addEventListener('click', function () {
+    st.answered = false; st.picked = -1;
+    if (st.qIdx + 1 >= n) ptestFinishSection('grammar');
+    else { st.qIdx++; ptestGrammarQ(); }
+  });
+  window.scrollTo(0, 0);
+}
+
+/* ---- Part 4: writing — describe the picture ---- */
+function ptestWordCount(t) { return (String(t || '').trim().match(/\S+/g) || []).length; }
+function ptestWriting() {
+  var st = state.ptest, w = st.bundle.writing;
+  var v = document.getElementById('view');
+  var draft = '';
+  try { draft = localStorage.getItem('ptest_draft_' + (state.user.id || 'anon')) || ''; } catch (e) {}
+  v.innerHTML = '<div class="gt-wrap">' + ptestTopHTML(4, 5) +
+    '<div class="ptest-vocab-photo"><img src="/' + esc(w.photo) + '" alt="Describe this picture"></div>' +
+    '<div class="gt-q">' + esc(w.prompt) + '</div>' +
+    (w.hint ? '<p class="ptest-hint">' + esc(w.hint) + '</p>' : '') +
+    '<textarea id="ptest-writing" class="ptest-textarea" rows="8" placeholder="Write here…"></textarea>' +
+    '<div class="ptest-wcount"><span id="ptest-wc">0</span> / ' + w.min_words + ' words minimum</div>' +
+    '<button class="gt-btn gt-btn-green gt-btn-block" id="ptest-wsubmit" disabled>Submit writing</button>' +
+    '</div>';
+  ptestWireQuit();
+  var ta = document.getElementById('ptest-writing');
+  ta.value = draft;
+  var upd = function () {
+    var c = ptestWordCount(ta.value);
+    document.getElementById('ptest-wc').textContent = c;
+    document.getElementById('ptest-wsubmit').disabled = c < w.min_words;
+    try { localStorage.setItem('ptest_draft_' + (state.user.id || 'anon'), ta.value); } catch (e) {}
+  };
+  ta.addEventListener('input', upd);
+  upd();
+  document.getElementById('ptest-wsubmit').addEventListener('click', function () {
+    var text = ta.value.trim();
+    var sentences = text.split(/[.!?]+/).filter(function (s) { return s.trim().length > 0; }).length;
+    var words = ptestWordCount(text);
+    st.writingResult = {
+      text: text,
+      stats: {
+        words: words, sentences: sentences,
+        avg_len: sentences ? Math.round(words / sentences * 10) / 10 : 0,
+        seconds: Math.round((Date.now() - st.t0) / 1000),
+      },
+    };
+    try { localStorage.removeItem('ptest_draft_' + (state.user.id || 'anon')); } catch (e) {}
+    ptestFinishSection('writing');
+  });
+  window.scrollTo(0, 0);
+}
+
+/* ---- Part 5: speaking — listen & repeat, scored via transcription ---- */
+function ptestShadowing() {
+  var st = state.ptest, items = st.bundle.shadowing.items, cur = items[st.qIdx], n = items.length;
+  var v = document.getElementById('view');
+  var phase = st.phase || 'listen'; // listen | recording | scoring | scored
+  var html = '<div class="gt-wrap">' + ptestTopHTML(st.qIdx + (st.scored ? 1 : 0), n) +
+    '<div class="ptest-audio-card"><div class="ptest-audio-title">🔊 Listen and repeat:</div>' +
+    '<div class="ptest-sentence">“' + esc(cur.text) + '”</div>' +
+    '<audio controls preload="auto" src="/' + esc(cur.audio) + '" class="ptest-audio"></audio></div>';
+  if (phase === 'listen') {
+    html += '<button class="gt-btn gt-btn-red gt-btn-block" id="ptest-rec">🎤 Repeat aloud</button>' +
+      '<div class="ptest-audio-hint">Tap, say the sentence, then tap stop.</div>';
+  } else if (phase === 'recording') {
+    html += '<button class="gt-btn gt-btn-red gt-btn-block" id="ptest-stop">⏹ Stop recording</button>' +
+      '<div class="ptest-rec-live"><span class="sp-pulse"></span> Recording…</div>';
+  } else if (phase === 'scoring') {
+    html += '<div class="ptest-rec-live"><span class="sp-pulse"></span> 🔍 Checking your pronunciation…</div>';
+  } else if (phase === 'scored') {
+    var r = st.lastResult;
+    html += '<div class="ptest-score-chip ' + (r.accuracy >= 70 ? 'great' : r.accuracy >= 40 ? 'ok' : 'low') + '">' +
+      r.accuracy + '% pronunciation match</div>' +
+      '<button class="gt-btn gt-btn-green gt-btn-block" id="ptest-next">' +
+      (st.qIdx + 1 >= n ? 'FINISH PART' : 'CONTINUE') + '</button>';
+  }
+  html += '</div>';
+  v.innerHTML = html;
+  ptestWireQuit();
+  if (phase === 'listen') document.getElementById('ptest-rec').addEventListener('click', function () { ptestRecStart(); });
+  if (phase === 'recording') document.getElementById('ptest-stop').addEventListener('click', function () { ptestRecStop(); });
+  var nx = document.getElementById('ptest-next');
+  if (nx) nx.addEventListener('click', function () {
+    st.phase = 'listen'; st.scored = false;
+    if (st.qIdx + 1 >= n) ptestFinishSection('shadowing');
+    else { st.qIdx++; ptestShadowing(); }
+  });
+  window.scrollTo(0, 0);
+}
+
+function ptestRecStart() {
+  var st = state.ptest;
+  var md = navigator.mediaDevices;
+  if (!md || !md.getUserMedia) { ptestRecSkip('no-mic'); return; }
+  md.getUserMedia({ audio: true }).then(function (stream) {
+    var rec;
+    try { rec = new MediaRecorder(stream); } catch (e) { ptestRecSkip('no-mic'); return; }
+    st.recStream = stream; st.recChunks = [];
+    rec.ondataavailable = function (ev) { if (ev.data && ev.data.size) st.recChunks.push(ev.data); };
+    rec.onstop = function () { ptestRecTranscribe(); };
+    st.rec = rec;
+    try { rec.start(500); } catch (e) {}
+    st.phase = 'recording';
+    ptestShadowing();
+  }).catch(function () { ptestRecSkip('blocked'); });
+}
+function ptestRecStop() {
+  var st = state.ptest;
+  try { if (st.rec && st.rec.state !== 'inactive') st.rec.stop(); } catch (e) { ptestRecSkip('error'); }
+}
+function ptestRecSkip(reason) {
+  var st = state.ptest;
+  try { if (st.recStream) st.recStream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+  st.rec = null; st.recStream = null;
+  st.answers.push({ accuracy: null, skipped: reason, text: st.bundle.shadowing.items[st.qIdx].text });
+  st.phase = 'scored'; st.scored = true;
+  st.lastResult = { accuracy: 0, skipped: true };
+  ptestShadowing();
+}
+async function ptestRecTranscribe() {
+  var st = state.ptest;
+  try { if (st.recStream) st.recStream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+  var blob = new Blob(st.recChunks || [], { type: (st.rec && st.rec.mimeType) || 'audio/mp4' });
+  st.rec = null; st.recStream = null; st.recChunks = [];
+  st.phase = 'scoring';
+  ptestShadowing();
+  var target = st.bundle.shadowing.items[st.qIdx].text;
+  var said = '', accuracy = 0;
+  if (blob.size > 2000) {
+    try {
+      var fd = new FormData();
+      fd.append('audio', blob, 'ptest.mp4');
+      var r = await fetch('/api/transcribe', { method: 'POST', body: fd });
+      var j = null;
+      try { j = await r.json(); } catch (e) {}
+      if (r.ok && j && j.text) said = String(j.text).trim();
+    } catch (e) {}
+    if (said) {
+      try { accuracy = analyzeSpeech(target, said, SHADOW_SCORING).accuracy || 0; } catch (e) {}
+    }
+  }
+  if (!state.ptest || state.ptest !== st) return; // user left meanwhile
+  st.answers.push({ accuracy: accuracy, transcript: said, text: target });
+  st.phase = 'scored'; st.scored = true;
+  st.lastResult = { accuracy: accuracy };
+  ptestShadowing();
+}
+
+/* ---- section completion: saved immediately (resume-safe) ---- */
+async function ptestFinishSection(id) {
+  var st = state.ptest;
+  ptestQuitSection();
+  var v = document.getElementById('view');
+  v.innerHTML = '<div class="gt-wrap"><div class="gt-intro"><div class="empty">Saving…</div></div></div>';
+  var sections = Object.assign({}, (state.ptestRow && state.ptestRow.sections) || {});
+  if (id === 'vocab') {
+    sections.vocab = { score: st.answers.filter(function (a) { return a.ok; }).length, answers: st.answers };
+  } else if (id === 'listening') {
+    sections.listening = { score: st.answers.filter(function (a) { return a.ok; }).length, answers: st.answers };
+  } else if (id === 'grammar') {
+    sections.grammar = { score: st.answers.filter(function (a) { return a.ok; }).length, answers: st.answers };
+  } else if (id === 'writing') {
+    sections.writing = st.writingResult;
+  } else if (id === 'shadowing') {
+    sections.shadowing = {
+      score: st.answers.filter(function (a) { return (a.accuracy || 0) >= 50; }).length,
+      items: st.answers,
+      avg_accuracy: st.answers.length ? Math.round(st.answers.reduce(function (s, a) { return s + (a.accuracy || 0); }, 0) / st.answers.length) : 0,
+    };
+  }
+  await ptestSaveRow({ sections: sections });
+  var nextIdx = st.secIdx + 1;
+  if (nextIdx >= PTEST_SECTIONS.length) { ptestFinishAll(); return; }
+  ptestSectionIntro(v, st.ref, st.bundle, nextIdx);
+}
+
+async function ptestFinishAll() {
+  var row = state.ptestRow || {};
+  var s = row.sections || {};
+  var scores = {
+    vocab: (s.vocab && s.vocab.score) || 0,
+    listening: (s.listening && s.listening.score) || 0,
+    grammar: (s.grammar && s.grammar.score) || 0,
+    shadowing: (s.shadowing && s.shadowing.score) || 0,
+  };
+  scores.total = scores.vocab + scores.listening + scores.grammar + scores.shadowing;
+  var level = ptestSuggestedLevel(scores.total);
+  await ptestSaveRow({ status: 'completed', scores: scores, suggested_level: level, completed_at: new Date().toISOString() });
+  /* resolve the teacher id for convenience (best effort) */
+  try {
+    if (sb && !ptestIsDemo() && row.teacher_ref) {
+      var t = await sb.from('teachers').select('user_id').eq('ref_code', row.teacher_ref).maybeSingle();
+      if (t.data && t.data.user_id) await ptestSaveRow({ teacher_id: t.data.user_id });
+    }
+  } catch (e) {}
+  var v = document.getElementById('view');
+  v.innerHTML = '<div class="gt-wrap"><div class="gt-intro"><div class="gt-mascot">🎉</div>' +
+    '<h1>You did it!</h1>' +
+    '<p>You finished all 5 parts of the placement test. Your teacher will review your results and be in touch.</p>' +
+    '<a class="gt-btn gt-btn-green" href="#/home">Back to home</a></div></div>';
+  window.scrollTo(0, 0);
+}
+
+/* ---- teacher side: placement link card + results ---- */
+function copyPlacementLink() {
+  var link = teacherPlacementLink(state.teacher.ref_code);
+  function done(btn) { if (btn) { var o = btn.textContent; btn.textContent = '✓ Copied'; setTimeout(function () { btn.textContent = o; }, 1500); } }
+  var btn = document.querySelector('[data-action="copy-ptest-link"]');
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(link).then(function () { done(btn); }, function () { fallback(); });
+  } else fallback();
+  function fallback() {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = link; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); ta.remove(); done(btn);
+    } catch (e) {}
+  }
+}
+
+function ptestScoreBadge(scores) {
+  if (!scores) return '<span class="ptest-badge muted">in progress</span>';
+  return '<span class="ptest-badge">✓ ' + scores.total + '/55</span>';
+}
+
+async function loadPlacementResults() {
+  var host = document.getElementById('tch-ptest');
+  if (!host || !state.teacher) return;
+  var rows = [];
+  try {
+    var r = await sb.from('placement_results')
+      .select('id,student_name,student_mobile,status,scores,suggested_level,sections,started_at,completed_at,updated_at')
+      .eq('teacher_ref', state.teacher.ref_code)
+      .order('updated_at', { ascending: false }).limit(100);
+    if (r.error) throw r.error;
+    rows = r.data || [];
+  } catch (e) {
+    host.innerHTML = '<div class="empty">Placement results need the latest database update (placement_results table).</div>';
+    return;
+  }
+  state.ptestRows = rows;
+  if (!rows.length) {
+    host.innerHTML = '<div class="empty">No placement tests yet — share your test link with a new student.</div>';
+    return;
+  }
+  host.innerHTML = '<div class="ptest-rows">' + rows.map(function (w, i) {
+    var sc = w.scores;
+    var when = (w.completed_at || w.updated_at || '').slice(0, 10);
+    return '<div class="ptest-row" data-action="ptest-detail" data-i="' + i + '" role="button" tabindex="0">' +
+      '<span class="ptest-row-main"><b>' + esc(w.student_name || '—') + '</b>' +
+      '<span class="muted">' + esc(w.student_mobile || '') + (when ? ' · ' + when : '') + '</span></span>' +
+      (w.status === 'completed'
+        ? '<span class="ptest-row-scores">V ' + sc.vocab + '/15 · L ' + sc.listening + '/10 · G ' + sc.grammar + '/20 · S ' + sc.shadowing + '/10</span>' +
+          '<span class="ptest-lv">~' + esc(w.suggested_level || '') + '</span>'
+        : '<span class="ptest-badge muted">in progress</span>') +
+      '</div>';
+  }).join('') + '</div><div id="tch-ptest-detail"></div>';
+}
+
+function openPlacementDetail(i) {
+  var w = (state.ptestRows || [])[i];
+  var host = document.getElementById('tch-ptest-detail');
+  if (!w || !host) return;
+  var s = w.sections || {};
+  var parts = [];
+  if (s.vocab) parts.push('<div class="ptest-dsec"><b>📚 Vocabulary: ' + s.vocab.score + '/15</b>' +
+    '<div class="ptest-dlist">' + (s.vocab.answers || []).map(function (a) {
+      return '<span class="ptest-chip ' + (a.ok ? 'ok' : 'no') + '">' + esc(a.word) + ' (' + (a.level || '').toUpperCase() + ')</span>';
+    }).join('') + '</div></div>');
+  if (s.listening) parts.push('<div class="ptest-dsec"><b>🎧 Listening: ' + s.listening.score + '/10</b>' +
+    '<div class="ptest-dlist">' + (s.listening.answers || []).map(function (a) {
+      return '<span class="ptest-chip ' + (a.ok ? 'ok' : 'no') + '">' + esc(a.title || a.kind || '') + '</span>';
+    }).join('') + '</div></div>');
+  if (s.grammar) {
+    var weak = {};
+    (s.grammar.answers || []).forEach(function (a) {
+      if (!a.ok) weak[a.topic] = weak[a.topic] || { h1: a.h1, lv: a.level, n: 0 }, weak[a.topic].n++;
+    });
+    var weakList = Object.keys(weak).map(function (k) {
+      return '<span class="ptest-chip no">' + esc(weak[k].h1) + ' ×' + weak[k].n + '</span>';
+    }).join('') || '<span class="muted">no weak topics — all correct or unanswered</span>';
+    parts.push('<div class="ptest-dsec"><b>📝 Grammar: ' + s.grammar.score + '/20</b>' +
+      '<div class="muted" style="margin:.3rem 0">Weak topics:</div><div class="ptest-dlist">' + weakList + '</div></div>');
+  }
+  if (s.writing) parts.push('<div class="ptest-dsec"><b>✍️ Writing</b> <span class="muted">' +
+    s.writing.stats.words + ' words · ' + s.writing.stats.sentences + ' sentences</span>' +
+    '<div class="ptest-writing">' + esc(s.writing.text).replace(/\n/g, '<br>') + '</div></div>');
+  if (s.shadowing) parts.push('<div class="ptest-dsec"><b>🎤 Speaking: ' + s.shadowing.score + '/10</b> <span class="muted">avg ' +
+    (s.shadowing.avg_accuracy || 0) + '% match</span>' +
+    '<div class="ptest-dlist">' + (s.shadowing.items || []).map(function (a) {
+      var t = a.skipped ? 'skipped' : (a.accuracy || 0) + '%';
+      return '<span class="ptest-chip ' + (a.skipped ? '' : (a.accuracy >= 70 ? 'ok' : a.accuracy >= 40 ? '' : 'no')) + '" title="' + esc(a.text || '') + '">' + t + '</span>';
+    }).join('') + '</div></div>');
+  host.innerHTML = '<div class="card ptest-detail"><div class="ptest-dhead"><div>' +
+    '<b style="font-size:1.1rem">' + esc(w.student_name || '—') + '</b>' +
+    '<div class="muted">' + esc(w.student_mobile || '') + '</div></div>' +
+    (w.status === 'completed'
+      ? '<div class="ptest-dtotal"><span class="ptest-badge big">✓ ' + w.scores.total + '/55</span>' +
+        '<span class="ptest-lv big">suggested: ' + esc(w.suggested_level || '') + '</span></div>'
+      : '<span class="ptest-badge muted">in progress</span>') +
+    '<button class="btn btn-sm" data-action="ptest-detail-close">✕</button></div>' +
+    parts.join('') + '</div>';
+  host.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
 /* Paint instantly from local data, then refresh from cloud in the background.
@@ -10779,6 +11476,9 @@ function bindEvents() {
       ensureNickname().then(function () { if (state.view === 'challenge') renderChallenge($('#view')); });
     }
     else if (a === 'copy-teacher-link') copyTeacherLink(t);
+    else if (a === 'copy-ptest-link') copyPlacementLink();
+    else if (a === 'ptest-detail') openPlacementDetail(parseInt(t.getAttribute('data-i'), 10));
+    else if (a === 'ptest-detail-close') { const pd = document.getElementById('tch-ptest-detail'); if (pd) pd.innerHTML = ''; }
     else if (a === 'teacher-student') openTeacherStudent(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
     else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
@@ -10890,7 +11590,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610172128';
+var APP_VERSION = '202610172206';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

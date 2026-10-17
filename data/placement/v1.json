@@ -1,0 +1,671 @@
+{
+ "version": "v1",
+ "vocab": {
+  "items": [
+   {
+    "word": "match",
+    "pos": "noun",
+    "meaning": "a game between two teams or players",
+    "photo": "media/a1/2026-10-12/photos/match.jpg",
+    "options": [
+     "match",
+     "shirt",
+     "library",
+     "stone"
+    ],
+    "answer": 0,
+    "level": "a1"
+   },
+   {
+    "word": "medicine",
+    "pos": "noun",
+    "meaning": "something you take when you are sick to feel better",
+    "photo": "media/a1/2026-10-08/photos/medicine.jpg",
+    "options": [
+     "medicine",
+     "shirt",
+     "finger",
+     "exercise"
+    ],
+    "answer": 0,
+    "level": "a1"
+   },
+   {
+    "word": "nurse",
+    "pos": "noun",
+    "meaning": "a person who helps sick people",
+    "photo": "media/a1/2026-10-08/photos/nurse.jpg",
+    "options": [
+     "nurse",
+     "fever",
+     "tea",
+     "shoes"
+    ],
+    "answer": 0,
+    "level": "a1"
+   },
+   {
+    "word": "teacher",
+    "pos": "noun",
+    "meaning": "a person who helps you learn at school",
+    "photo": "media/a2/2026-10-09/photos/teacher.jpg",
+    "options": [
+     "grateful",
+     "teacher",
+     "twelve",
+     "charger"
+    ],
+    "answer": 1,
+    "level": "a2"
+   },
+   {
+    "word": "coin",
+    "pos": "noun",
+    "meaning": "a small round piece of metal money",
+    "photo": "media/a2/2026-10-11/photos/coin.jpg",
+    "options": [
+     "carry",
+     "ball",
+     "coin",
+     "surprised"
+    ],
+    "answer": 2,
+    "level": "a2"
+   },
+   {
+    "word": "bill",
+    "pos": "noun",
+    "meaning": "the paper that shows how much money you must pay",
+    "photo": "media/a2/2026-10-11/photos/bill.jpg",
+    "options": [
+     "surprised",
+     "twelve",
+     "eight",
+     "bill"
+    ],
+    "answer": 3,
+    "level": "a2"
+   },
+   {
+    "word": "argue",
+    "pos": "verb",
+    "meaning": "to disagree angrily with someone",
+    "photo": "media/b1/2026-10-10/photos/argue.jpg",
+    "options": [
+     "report",
+     "embark",
+     "argue",
+     "babysit"
+    ],
+    "answer": 2,
+    "level": "b1"
+   },
+   {
+    "word": "round-trip",
+    "pos": "adjective",
+    "meaning": "a ticket or journey that takes you somewhere and then brings you back",
+    "photo": "media/b1/2026-10-12/photos/round-trip.jpg",
+    "options": [
+     "round-trip",
+     "aroma",
+     "lonely",
+     "scratching post"
+    ],
+    "answer": 0,
+    "level": "b1"
+   },
+   {
+    "word": "confident",
+    "pos": "adjective",
+    "meaning": "sure of yourself",
+    "photo": "media/b1/2026-10-09/photos/confident.jpg",
+    "options": [
+     "confident",
+     "rooftop",
+     "turbulence",
+     "traffic jam"
+    ],
+    "answer": 0,
+    "level": "b1"
+   },
+   {
+    "word": "layoff",
+    "pos": "noun",
+    "meaning": "when a company ends workers' jobs to save money",
+    "photo": "media/b2/2026-10-11/photos/layoff.jpg",
+    "options": [
+     "wearable",
+     "layoff",
+     "markup",
+     "resign"
+    ],
+    "answer": 1,
+    "level": "b2"
+   },
+   {
+    "word": "autonomous",
+    "pos": "adjective",
+    "meaning": "able to work without human control",
+    "photo": "media/b2/2026-10-10/photos/autonomous.jpg",
+    "options": [
+     "penalty",
+     "autonomous",
+     "career",
+     "foul"
+    ],
+    "answer": 1,
+    "level": "b2"
+   },
+   {
+    "word": "braise",
+    "pos": "verb",
+    "meaning": "to cook food slowly in a little liquid",
+    "photo": "media/b2/2026-10-12/photos/braise.jpg",
+    "options": [
+     "boutique",
+     "feud",
+     "julienne",
+     "braise"
+    ],
+    "answer": 3,
+    "level": "b2"
+   },
+   {
+    "word": "fallout",
+    "pos": "noun",
+    "meaning": "the bad effects and bad feeling that follow a conflict",
+    "photo": "media/c1/2026-10-08/photos/fallout.jpg",
+    "options": [
+     "understated",
+     "fallout",
+     "embellish",
+     "escrow"
+    ],
+    "answer": 1,
+    "level": "c1"
+   },
+   {
+    "word": "empathy",
+    "pos": "noun",
+    "meaning": "the ability to understand and share another person's feelings",
+    "photo": "media/c1/2026-10-08/photos/empathy.jpg",
+    "options": [
+     "liquidation",
+     "empathy",
+     "patriarch",
+     "detour"
+    ],
+    "answer": 1,
+    "level": "c1"
+   },
+   {
+    "word": "procurement",
+    "pos": "noun",
+    "meaning": "the process of buying goods or services for a company or government",
+    "photo": "media/c1/2026-10-14/photos/procurement.jpg",
+    "options": [
+     "procurement",
+     "liquidation",
+     "traverse",
+     "odyssey"
+    ],
+    "answer": 0,
+    "level": "c1"
+   }
+  ]
+ },
+ "listening": {
+  "dialogues": [
+   {
+    "audio": "media/placement/dialogue-1.mp3",
+    "question": {
+     "answer": 2,
+     "options": [
+      "$5.50",
+      "$6.00",
+      "$6.50",
+      "$7.00"
+     ],
+     "q": "How much does Maya have to pay?"
+    },
+    "title": "At the Café"
+   },
+   {
+    "audio": "media/placement/dialogue-2.mp3",
+    "question": {
+     "answer": 1,
+     "options": [
+      "Five minutes",
+      "Ten minutes",
+      "Fifteen minutes",
+      "Twenty minutes"
+     ],
+     "q": "How long does it take to walk to the library?"
+    },
+    "title": "Asking for Directions"
+   },
+   {
+    "audio": "media/placement/dialogue-3.mp3",
+    "question": {
+     "answer": 0,
+     "options": [
+      "It's too small",
+      "It's the wrong color",
+      "It's damaged",
+      "It's too expensive"
+     ],
+     "q": "Why does Maya want to return the shirt?"
+    },
+    "title": "Returning a Shirt"
+   },
+   {
+    "audio": "media/placement/dialogue-4.mp3",
+    "question": {
+     "answer": 1,
+     "options": [
+      "Wednesday at 2:30 p.m.",
+      "Thursday at 2:30 p.m.",
+      "Thursday at 3:30 p.m.",
+      "Friday at 2:30 p.m."
+     ],
+     "q": "When is Maya's dentist appointment?"
+    },
+    "title": "Dentist Appointment"
+   },
+   {
+    "audio": "media/placement/dialogue-5.mp3",
+    "question": {
+     "answer": 1,
+     "options": [
+      "Ten dollars",
+      "Twelve dollars",
+      "Fifteen dollars",
+      "Twenty dollars"
+     ],
+     "q": "How much was each movie ticket?"
+    },
+    "title": "Movie Night"
+   }
+  ],
+  "podcast": {
+   "audio": "media/placement/listening-podcast.mp3",
+   "questions": [
+    {
+     "answer": 1,
+     "options": [
+      "7 a.m.",
+      "8 a.m.",
+      "9 a.m.",
+      "10 a.m."
+     ],
+     "q": "What time are Maya and Lena leaving on Saturday morning?"
+    },
+    {
+     "answer": 2,
+     "options": [
+      "$25",
+      "$30",
+      "$35",
+      "$40"
+     ],
+     "q": "How much does the campsite cost per night?"
+    },
+    {
+     "answer": 0,
+     "options": [
+      "Sunny with a high of 24 degrees",
+      "Rainy all day",
+      "Cloudy with a high of 18 degrees",
+      "Sunny with a high of 30 degrees"
+     ],
+     "q": "What will the weather be like on Saturday?"
+    },
+    {
+     "answer": 3,
+     "options": [
+      "Pizza",
+      "Pasta",
+      "Tacos",
+      "Burgers"
+     ],
+     "q": "What are they planning to eat for dinner on Saturday night?"
+    },
+    {
+     "answer": 2,
+     "options": [
+      "9 a.m.",
+      "10 a.m.",
+      "11 a.m.",
+      "12 p.m."
+     ],
+     "q": "What time is checkout on Sunday morning?"
+    }
+   ],
+   "title": "Weekend Camping Trip"
+  }
+ },
+ "grammar": {
+  "items": [
+   {
+    "prompt": "I ___ a teacher.",
+    "options": [
+     "is",
+     "am",
+     "are",
+     "be"
+    ],
+    "answer": 1,
+    "topic": "verb-to-be",
+    "h1": "The Verb To Be (am, is, are)",
+    "level": "a1"
+   },
+   {
+    "prompt": "My parents sold ___ house last year.",
+    "options": [
+     "they're",
+     "their",
+     "there",
+     "them"
+    ],
+    "answer": 1,
+    "topic": "subject-pronouns-possessive-adjectives",
+    "h1": "Subject Pronouns and Possessive Adjectives",
+    "level": "a1"
+   },
+   {
+    "prompt": "Are you talking to ___? – Yes, I'm talking to you.",
+    "options": [
+     "I",
+     "my",
+     "myself",
+     "me"
+    ],
+    "answer": 3,
+    "topic": "object-pronouns",
+    "h1": "Object Pronouns (me, him, us...)",
+    "level": "a1"
+   },
+   {
+    "prompt": "There are three ___ on the table.",
+    "options": [
+     "box",
+     "boxs",
+     "boxes",
+     "boxies"
+    ],
+    "answer": 2,
+    "topic": "plural-nouns",
+    "h1": "Plural Nouns: Regular and Irregular",
+    "level": "a1"
+   },
+   {
+    "prompt": "The bus ___ suddenly, and everyone fell forward.",
+    "options": [
+     "stoped",
+     "stopt",
+     "stopped",
+     "stoppd"
+    ],
+    "answer": 2,
+    "topic": "past-simple",
+    "h1": "Past Simple and Irregular Verbs",
+    "level": "a2"
+   },
+   {
+    "prompt": "When I arrived at the party, my friends ___. (They started before I arrived.)",
+    "options": [
+     "danced",
+     "were dancing",
+     "was dancing",
+     "dance"
+    ],
+    "answer": 1,
+    "topic": "past-continuous",
+    "h1": "Past Continuous and Past Simple",
+    "level": "a2"
+   },
+   {
+    "prompt": "Choose the correct sentence.",
+    "options": [
+     "She's the intelligentest student in the class.",
+     "She's the most intelligent student in the class.",
+     "She's more intelligent student in the class.",
+     "She's most intelligent than the class."
+    ],
+    "answer": 1,
+    "topic": "comparatives-superlatives",
+    "h1": "Comparatives and Superlatives",
+    "level": "a2"
+   },
+   {
+    "prompt": "We ___ dinner with Tom and Anna at 7 tonight. We booked the table last week.",
+    "options": [
+     "having",
+     "are have",
+     "are having",
+     "have having"
+    ],
+    "answer": 2,
+    "topic": "future-forms",
+    "h1": "Future Forms: Going To, Will and Present Continuous",
+    "level": "a2"
+   },
+   {
+    "prompt": "We ___ each other for five years. We're best friends.",
+    "options": [
+     "have known",
+     "knew",
+     "know",
+     "are knowing"
+    ],
+    "answer": 0,
+    "topic": "present-perfect-vs-past-simple",
+    "h1": "Present Perfect vs Past Simple",
+    "level": "b1"
+   },
+   {
+    "prompt": "I haven't seen my cousins ___ ages.",
+    "options": [
+     "for",
+     "since",
+     "from",
+     "ago"
+    ],
+    "answer": 0,
+    "topic": "present-perfect-for-since-just-yet-already",
+    "h1": "Present Perfect with For, Since, Just, Yet, Already",
+    "level": "b1"
+   },
+   {
+    "prompt": "She ___ in this company since 2018.",
+    "options": [
+     "has been working",
+     "have been working",
+     "has been work",
+     "is working"
+    ],
+    "answer": 0,
+    "topic": "present-perfect-continuous",
+    "h1": "Present Perfect Continuous",
+    "level": "b1"
+   },
+   {
+    "prompt": "Which tense do we use for the background of a story?",
+    "options": [
+     "past continuous",
+     "past perfect",
+     "present perfect",
+     "present simple"
+    ],
+    "answer": 0,
+    "topic": "past-perfect-narrative-tenses",
+    "h1": "Past Perfect and Narrative Tenses",
+    "level": "b1"
+   },
+   {
+    "prompt": "The letter should ___ yesterday.",
+    "options": [
+     "have sent",
+     "been sent",
+     "be sent",
+     "have been sent"
+    ],
+    "answer": 3,
+    "topic": "passive-all-tenses",
+    "h1": "The Passive: All Tenses and Passive Infinitive",
+    "level": "b2"
+   },
+   {
+    "prompt": "We're going to ___ new windows installed.",
+    "options": [
+     "make",
+     "do",
+     "have",
+     "let"
+    ],
+    "answer": 2,
+    "topic": "causative-have-get",
+    "h1": "Causative: Have/Get Something Done",
+    "level": "b2"
+   },
+   {
+    "prompt": "My sister, ___ lives in Dublin, is a nurse.",
+    "options": [
+     "that",
+     "who",
+     "which",
+     "whose"
+    ],
+    "answer": 1,
+    "topic": "non-defining-relative-clauses",
+    "h1": "Non-Defining Relative Clauses",
+    "level": "b2"
+   },
+   {
+    "prompt": "If he had trained harder, he ___ a professional player now.",
+    "options": [
+     "might have been",
+     "might being",
+     "will be",
+     "might be"
+    ],
+    "answer": 3,
+    "topic": "mixed-conditionals",
+    "h1": "Mixed Conditionals",
+    "level": "b2"
+   },
+   {
+    "prompt": "Not only ___ late, but he also forgot the tickets.",
+    "options": [
+     "he was",
+     "was he",
+     "he is being",
+     "did he be"
+    ],
+    "answer": 1,
+    "topic": "inversion-negative-adverbials",
+    "h1": "Inversion After Negative Adverbials",
+    "level": "c1"
+   },
+   {
+    "prompt": "'Tom broke the window.' Which sentence emphasises Tom?",
+    "options": [
+     "It was the window that Tom broke.",
+     "It was Tom who broke the window.",
+     "What Tom broke was the window.",
+     "It was Tom which broke the window."
+    ],
+    "answer": 1,
+    "topic": "cleft-sentences",
+    "h1": "Cleft Sentences (It was... that, What I need is...)",
+    "level": "c1"
+   },
+   {
+    "prompt": "Most of the people ___ to the party were old friends.",
+    "options": [
+     "inviting",
+     "having invited",
+     "invited",
+     "invite"
+    ],
+    "answer": 2,
+    "topic": "participle-clauses",
+    "h1": "Participle Clauses (-ing, -ed, having done)",
+    "level": "c1"
+   },
+   {
+    "prompt": "Will you be at the meeting? – I don't think ___.",
+    "options": [
+     "it",
+     "so",
+     "that",
+     "not"
+    ],
+    "answer": 1,
+    "topic": "ellipsis-substitution",
+    "h1": "Ellipsis and Substitution",
+    "level": "c1"
+   }
+  ]
+ },
+ "writing": {
+  "photo": "media/placement/writing-market-scene.jpg",
+  "prompt": "Look at the picture and describe what you see. Write 5–8 sentences.",
+  "min_words": 30,
+  "hint": "Talk about the people, what they are doing, and the things in the market."
+ },
+ "shadowing": {
+  "items": [
+   {
+    "audio": "media/placement/shadowing-01.mp3",
+    "level": "a1",
+    "text": "I love hot soup with lemon in winter."
+   },
+   {
+    "audio": "media/placement/shadowing-02.mp3",
+    "level": "a1",
+    "text": "Fish soup with lemon is warm and tasty."
+   },
+   {
+    "audio": "media/placement/shadowing-03.mp3",
+    "level": "a2",
+    "text": "It is always fun to arrive in a new city."
+   },
+   {
+    "audio": "media/placement/shadowing-04.mp3",
+    "level": "a2",
+    "text": "On the corner, a man sold fresh fruit."
+   },
+   {
+    "audio": "media/placement/shadowing-05.mp3",
+    "level": "b1",
+    "text": "A paycheck feels like a reward for hard work."
+   },
+   {
+    "audio": "media/placement/shadowing-06.mp3",
+    "level": "b1",
+    "text": "A good benefit can be better than more money."
+   },
+   {
+    "audio": "media/placement/shadowing-07.mp3",
+    "level": "b2",
+    "text": "Her journey proved that perseverance, composure, and integrity open doors that talent alone cannot."
+   },
+   {
+    "audio": "media/placement/shadowing-08.mp3",
+    "level": "b2",
+    "text": "A resilient heart, she thought, never truly gives up."
+   },
+   {
+    "audio": "media/placement/shadowing-09.mp3",
+    "level": "c1",
+    "text": "To be unflappable in chaos is a rare skill."
+   },
+   {
+    "audio": "media/placement/shadowing-10.mp3",
+    "level": "c1",
+    "text": "Talented people languish when nobody believes in them."
+   }
+  ]
+ }
+}
