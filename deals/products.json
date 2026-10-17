@@ -1,6 +1,20 @@
 {
   "products": [
     {
+      "id": "yeti-rambler-16oz-travel-bottle",
+      "name_fa": "بطری مسافرتی یتی رامبلر ۱۶ اونسی",
+      "name_en": "YETI Rambler 16 oz Travel Bottle",
+      "price_cad": 31.5,
+      "regular_cad": 42.0,
+      "discount_pct": null,
+      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
+      "image": "img/yeti-rambler-16oz-travel-bottle.jpg",
+      "url": "https://www.amazon.ca/dp/B0H7CYLRF4?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "بطری استیل وکیوم برند یتی با درِ ضدچکه؛ انتخاب مطمئن برای رفت‌وآمد روزانه"
+    },
+    {
       "id": "fiesta-tablecloth-2pk-2026-10-17",
       "name_fa": "رومیزی مهمانی مکزیکی ۲ عددی",
       "name_en": "Mexican Fiesta Tablecloth, 2-Pack",
@@ -97,20 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "تی میکروفایبر با آبگیر چرخشی؛ بدون خم شدن و خیس شدن دست‌ها"
-    },
-    {
-      "id": "volisun-20in-ceiling-fan-2026-10-17",
-      "name_fa": "پنکه سقفی کم‌حجم ۲۰ اینچی با چراغ LED و ریموت",
-      "name_en": "VOLISUN 20\" Low Profile Ceiling Fan with LED Light & Remote",
-      "price_cad": 65.0,
-      "regular_cad": 109.99,
-      "discount_pct": 41,
-      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
-      "image": "img/volisun-20in-ceiling-fan-2026-10-17.jpg",
-      "url": "https://www.amazon.ca/dp/B0FM4F74NN?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پنکه کم‌حجم با چراغ LED قابل تنظیم و ریموت؛ جریان هوای برگشت‌پذیر برای تابستان و زمستان"
     }
   ],
   "updated_fa": "شنبه ۲۵ مهر"
