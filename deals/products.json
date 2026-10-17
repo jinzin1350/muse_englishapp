@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "morento-hy4866-air-purifier",
+      "name_fa": "تصفیه‌هوای هوشمند MORENTO HY4866",
+      "name_en": "MORENTO HY4866 Smart Air Purifier for Large Rooms, White",
+      "price_cad": 115.98,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
+      "image": "img/morento-hy4866-air-purifier.jpg",
+      "url": "https://www.amazon.ca/dp/B0C1MPDTG7?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "فیلتر HEPA، نمایشگر PM2.5 و حالت خواب ۲۴ دسی‌بلی"
+    },
+    {
+      "id": "jbl-charge-6-sand",
+      "name_fa": "اسپیکر بلوتوثی JBL Charge 6 (رنگ Sand)",
+      "name_en": "JBL Charge 6 Portable Bluetooth Speaker, Sand",
+      "price_cad": 199.98,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
+      "image": "img/jbl-charge-6-sand.jpg",
+      "url": "https://www.amazon.ca/dp/B0DPKVP99C?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "ضد آب و ضد ضربه با پاوربانک داخلی؛ پیشنهاد ویژه تا ۲۰ اکتبر"
+    },
+    {
+      "id": "blavor-20000mah-solar-bank",
+      "name_fa": "پاوربانک خورشیدی BLAVOR ۲۰۰۰۰",
+      "name_en": "BLAVOR 20000mAh Solar Power Bank with Wireless Charging",
+      "price_cad": 39.88,
+      "regular_cad": 68.99,
+      "discount_pct": 42,
+      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
+      "image": "img/blavor-20000mah-solar-bank.jpg",
+      "url": "https://www.amazon.ca/dp/B0DB1ZJ4SQ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "با کد تخفیف 4TIUF08B هنگام تسویه؛ قیمت روی صفحه ۵۸٫۶۴ دلار"
+    },
+    {
+      "id": "anker-eufy-e22-outdoor-lights",
+      "name_fa": "چراغ‌های دائمی فضای باز eufy E22",
+      "name_en": "Anker eufy Permanent Outdoor Lights E22, 100ft with 60 Triple-LED Lights",
+      "price_cad": 199.98,
+      "regular_cad": 479.99,
+      "discount_pct": 58,
+      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
+      "image": "img/anker-eufy-e22-outdoor-lights.jpg",
+      "url": "https://www.amazon.ca/dp/B0FD3PBJQ5?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "۱۰۰ فوت، ۶۰ چراغ LED سه‌گانه؛ ضد آب IP65 و تم‌های هوشمند"
+    },
+    {
       "id": "garmin-dash-cam-x110",
       "name_fa": "دش‌کم گارمین ایکس ۱۱۰",
       "name_en": "Garmin Dash Cam X110",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "ورود بدون کلید، کنترل از راه دور با اپ و ۲۵۰ کد عبور"
-    },
-    {
-      "id": "oralb-io2-forest-green",
-      "name_fa": "مسواک برقی اورال‌بی iO سری ۲",
-      "name_en": "Oral-B iO Series 2 Electric Toothbrush, Forest Green",
-      "price_cad": 74.99,
-      "regular_cad": 99.99,
-      "discount_pct": 25,
-      "added_fa": "جمعه، ۱۶ اکتبر ۲۰۲۶",
-      "image": "img/oralb-io2-forest-green.jpg",
-      "url": "https://www.amazon.ca/dp/B0D1DB1LXJ?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "حسگر فشار لثه، ۳ حالت تمیزکاری و تایمر ۲ دقیقه‌ای"
-    },
-    {
-      "id": "finish-quantum-70",
-      "name_fa": "قرص ماشین ظرفشویی فینیش کوانتوم ۷۰ عددی",
-      "name_en": "Finish Quantum Infinity Shine Dishwasher Detergent, 70 Tabs",
-      "price_cad": 16.99,
-      "regular_cad": 21.99,
-      "discount_pct": 23,
-      "added_fa": "جمعه، ۱۶ اکتبر ۲۰۲۶",
-      "image": "img/finish-quantum-70.jpg",
-      "url": "https://www.amazon.ca/dp/B082V9BTWQ?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "با کوپن قابل برش در صفحه آمازون؛ قیمت روی صفحه ۲۱٫۹۹ دلار"
-    },
-    {
-      "id": "jbl-go-4-portable-speaker",
-      "name_fa": "اسپیکر بلوتوثی جی‌بی‌ال گو ۴",
-      "name_en": "JBL Go 4 - Portable Waterproof Bluetooth Speaker",
-      "price_cad": 39.98,
-      "regular_cad": 69.98,
-      "discount_pct": 43,
-      "added_fa": "پنجشنبه، ۱۵ اکتبر ۲۰۲۶",
-      "image": "img/jbl-go-4-portable-speaker.jpg",
-      "url": "https://www.amazon.ca/dp/B0D1JG8CRC?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "صدای بزرگ و پرانرژی در یک اسپیکر جیبی؛ ضدآب و ضدگردوغبار با ۷ ساعت پخش."
-    },
-    {
-      "id": "atuvos-air-tracker-tag-4pack",
-      "name_fa": "ردیاب هوشمند اتووس (پک ۴تایی)",
-      "name_en": "ATUVOS Air Tracker Tag 4 Pack, Smart Key Finder Compatible with Apple Find My",
-      "price_cad": 29.99,
-      "regular_cad": 49.99,
-      "discount_pct": 40,
-      "added_fa": "پنجشنبه، ۱۵ اکتبر ۲۰۲۶",
-      "image": "img/atuvos-air-tracker-tag-4pack.jpg",
-      "url": "https://www.amazon.ca/dp/B0C3LDQLR7?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "کلید و کیف‌ت را دیگر گم نمی‌کنی؛ با Find My اپل کار می‌کند و بدون اشتراک ماهانه است."
     }
   ],
-  "updated_fa": "جمعه ۲۴ مهر"
+  "updated_fa": "شنبه ۲۵ مهر"
 }
