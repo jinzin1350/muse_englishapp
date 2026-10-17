@@ -825,6 +825,7 @@ function paintQuests() {
   try {
     const host = document.getElementById('home-quests-wrap');
     if (!host || state.view !== 'home') return;
+    if (isDesktop()) return; /* desktop home paints its own quests card */
     if (!state.user || state.user.demo) { host.innerHTML = ''; return; }
     const qs = questDefs();
     host.innerHTML = '<section class="hq-card" dir="ltr" lang="en" aria-label="Today\'s quests">' +
@@ -2004,7 +2005,13 @@ function show(view, arg) {
   state.view = view;
   if (view !== 'admin-teacher') state.viewTeacher = null; /* leaving view-as-teacher mode */
   if (view !== 'lesson') { state.quiz = null; }
+  /* Desktop home uses the mockup v6 dashboard layout. */
+  document.body.classList.toggle('view-home', view === 'home');
   setChrome();
+  paintWelcomeHeader();
+  _wasDesktop = isDesktop();
+  /* Stop any desktop-home podcast preview when leaving the view. */
+  try { document.querySelectorAll('.dh-pl-audio').forEach(function (a) { a.pause(); }); } catch (e) {}
   const v = $('#view');
   window.scrollTo(0, 0);
   if (view === 'landing') renderLanding(v);
@@ -5907,6 +5914,7 @@ function renderHome(v) {
 }
 
 function paintHome(v, mistakes, attempts) {
+  if (isDesktop()) { paintHomeDesktop(v, mistakes, attempts); return; }
   const lessons = state.lessons;
   const today = lessons[0] || null;
 
@@ -5996,6 +6004,257 @@ function attemptCardHTML(a) {
     '<div class="percent-wrap"><div class="percent-num">' + a.score + '/' + a.total + '</div>' +
     '<div class="progress"><div style="width:' + pct + '%"></div></div></div>' +
   '</div></div>';
+}
+
+/* ---------------- desktop home (mockup v6, >=1024px) ---------------- */
+function isDesktop() {
+  try { return window.matchMedia('(min-width:1024px)').matches; } catch (e) { return false; }
+}
+function dhTitleCase(s) {
+  return String(s || '').replace(/\w\S*/g, function (w) { return w.charAt(0).toUpperCase() + w.slice(1); });
+}
+/* "Welcome back!" replaces the brand mark in the app header on desktop home. */
+function paintWelcomeHeader() {
+  try {
+    const hdr = document.querySelector('#app-header .header-inner');
+    if (!hdr) return;
+    let w = hdr.querySelector('.welcome-block');
+    const showIt = state.view === 'home' && !!state.user && isDesktop();
+    if (showIt) {
+      if (!w) {
+        w = document.createElement('div');
+        w.className = 'welcome-block';
+        w.innerHTML = '<h1>Welcome back!</h1><p>Keep going! A little English every day makes a big difference. 🧡</p>';
+        hdr.insertBefore(w, hdr.firstChild);
+      }
+    } else if (w) { w.remove(); }
+  } catch (e) {}
+}
+/* Re-render home when the viewport crosses the desktop breakpoint. */
+var _rsT = null, _wasDesktop = null;
+window.addEventListener('resize', function () {
+  clearTimeout(_rsT);
+  _rsT = setTimeout(function () {
+    const d = isDesktop();
+    if (_wasDesktop === null) { _wasDesktop = d; return; }
+    if (d !== _wasDesktop) {
+      _wasDesktop = d;
+      if (state.view === 'home' && !state.quiz) {
+        paintWelcomeHeader();
+        renderHome(document.getElementById('view'));
+      }
+    }
+  }, 300);
+});
+
+function dhQuestRowHTML(q) {
+  const p = Math.min(q.progress(), q.target);
+  const done = p >= q.target;
+  const pct = q.target ? Math.round((p / q.target) * 100) : 0;
+  const progTxt = q.unit === 'steps'
+    ? p + ' / ' + q.target + ' steps'
+    : (q.unit === 'XP' ? p + ' / ' + q.target + ' XP' : (done ? 'Done! Great job!' : 'Not done'));
+  return '<div class="dh-qrow' + (done ? ' is-done' : '') + '">' +
+    '<a class="dh-qmain" href="' + (q.link || '#/home') + '">' +
+    '<span class="dh-qico" aria-hidden="true">' + q.icon + '</span>' +
+    '<span class="dh-qbody"><span class="dh-qtitle">' + q.title + '</span>' +
+    '<span class="dh-qbar" role="progressbar" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100"><span style="width:' + pct + '%"></span></span>' +
+    '<span class="dh-qprog">' + progTxt + '</span></span>' +
+    (done ? '<span class="dh-qgo is-check" aria-hidden="true">✓</span>' : '<span class="dh-qgo" aria-hidden="true">›</span>') +
+    '</a><span class="dh-xp">XP +' + q.xp + '</span></div>';
+}
+function dhQuestsHTML() {
+  const qs = questDefs();
+  return '<section class="dh-card dh-quests" dir="ltr" lang="en" aria-label="Daily quests">' +
+    '<div class="dh-card-head"><span class="dh-hico" aria-hidden="true">🎯</span>' +
+    '<div class="dh-htitles"><h2>Daily Quests</h2><p>Complete quests, earn XP, level up!</p></div>' +
+    '<a class="dh-link" href="#/scores">View all <span aria-hidden="true">›</span></a></div>' +
+    '<div class="dh-qrows">' + qs.map(dhQuestRowHTML).join('') + '</div></section>';
+}
+function dhLessonHTML(m) {
+  if (!m) return '<section class="dh-card"><div class="empty">No lessons published yet — check back tomorrow.</div></section>';
+  const cover = lessonCover(m);
+  const wc = lessonWordCount(m);
+  const lvl = (normalizeLevel(m.level) || 'b2').toUpperCase();
+  const theme = dhTitleCase(m.theme || 'Lesson');
+  const done = dayDoneCount(m.date);
+  const tab = nextStep(m.date) || 'words';
+  const cta = done >= HOME_STEP_ORDER.length ? 'Review Lesson' : (done > 0 ? 'Continue Lesson' : 'Start Lesson');
+  return '<section class="dh-card dh-lesson" aria-label="Today\u2019s lesson">' +
+    '<div class="dh-card-head"><span class="dh-hico" aria-hidden="true">📖</span>' +
+    '<div class="dh-htitles"><h2>Today\u2019s Lesson</h2></div>' +
+    '<button class="dh-link" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + tab + '">Continue <span aria-hidden="true">›</span></button></div>' +
+    '<div class="dh-lesson-body">' +
+    (cover ? '<img class="dh-lesson-photo" src="' + esc(cover) + '" alt="" loading="lazy">' : '') +
+    '<div class="dh-lesson-info"><div class="dh-lesson-meta">' + esc(lvl) + ' · ' + wc + ' words</div>' +
+    '<div class="dh-lesson-theme">' + esc(theme) + '</div>' +
+    '<p class="dh-lesson-desc">Learn ' + wc + ' new words with pronunciation, podcast, shadowing and grammar.</p></div></div>' +
+    '<div class="dh-lesson-foot">' +
+    '<button class="dh-start" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + tab + '"><span aria-hidden="true">▶</span> ' + cta + '</button>' +
+    '<span class="dh-min">🕐 5 min</span></div></section>';
+}
+function dhMistakesHTML(mistakes) {
+  const n = mistakes.length;
+  const body = n
+    ? '<div class="dh-mist-body"><span class="dh-mist-ico" aria-hidden="true">📄<b>✕</b></span>' +
+      '<div class="dh-mist-txt"><b>' + n + ' mistake' + (n === 1 ? '' : 's') + ' to review</b><span>Practice these to get stronger!</span></div>' +
+      '<a class="dh-review-btn" href="#/review">Review Now <span aria-hidden="true">›</span></a></div>'
+    : '<p class="muted" style="margin:0.5rem 0 0">Nothing to review yet — wrong answers will appear here so you can practice them again.</p>';
+  return '<section class="dh-card dh-mistakes" aria-label="Review your mistakes">' +
+    '<div class="dh-card-head"><span class="dh-hico" aria-hidden="true">🔄</span>' +
+    '<div class="dh-htitles"><h2>Review Your Mistakes</h2></div>' +
+    (n ? '<a class="dh-link" href="#/review">See all <span aria-hidden="true">›</span></a>' : '') + '</div>' + body + '</section>';
+}
+function dhProgressHTML(d) {
+  d = d || {};
+  const pts = Number(d.pts) || 0;
+  const lvl = Math.floor(pts / 1000) + 1;
+  const intoLvl = pts % 1000;
+  const pct = Math.round((intoLvl / 1000) * 100);
+  const streak = d.streak != null ? d.streak : ((getStreakLocal() || {}).current_streak || 0);
+  const C = 2 * Math.PI * 34;
+  return '<div class="dh-card-head"><span class="dh-hico" aria-hidden="true">📊</span>' +
+    '<div class="dh-htitles"><h2>Your Progress</h2></div>' +
+    '<a class="dh-link" href="#/scores">See details <span aria-hidden="true">›</span></a></div>' +
+    '<div class="dh-prog-body">' +
+    '<div class="dh-ring" role="img" aria-label="Level ' + lvl + ', ' + pts + ' XP">' +
+    '<svg viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="34" class="dh-ring-bg"/>' +
+    '<circle cx="42" cy="42" r="34" class="dh-ring-fg" stroke-dasharray="' + (pct / 100 * C).toFixed(1) + ' ' + C.toFixed(1) + '"/></svg>' +
+    '<span class="dh-ring-txt"><small>Level</small><b>' + lvl + '</b></span></div>' +
+    '<div class="dh-prog-main"><div class="dh-xpline"><b>' + (1000 - intoLvl) + ' XP</b><span>to Level ' + (lvl + 1) + '</span></div>' +
+    '<div class="dh-bar"><span style="width:' + pct + '%"></span></div>' +
+    '<div class="dh-xpsub">' + pts.toLocaleString('en-US') + ' / 1,000 XP</div>' +
+    '<div class="dh-stats">' +
+    '<span class="dh-stat"><span class="dh-stat-ico" aria-hidden="true">🔥</span><b>' + streak + '</b><small>Day Streak</small></span>' +
+    '<span class="dh-stat"><span class="dh-stat-ico" aria-hidden="true">🎯</span><b>' + (d.lessonsDone || 0) + '</b><small>Lessons Done</small></span>' +
+    '<span class="dh-stat"><span class="dh-stat-ico" aria-hidden="true">⭐</span><b>' + (d.badges || 0) + '</b><small>Badges</small></span>' +
+    '</div></div></div>';
+}
+async function refreshDhProgress() {
+  try {
+    if (state.view !== 'home' || !isDesktop()) return;
+    let host = document.getElementById('dh-progress');
+    if (!host) return;
+    const dates = {};
+    (lsGet('attempts') || []).forEach(function (a) { if (a && a.date) dates[a.date] = 1; });
+    const lessonsDone = Object.keys(dates).length;
+    let pts = state.myPoints || 0, badges = 0, streak = null;
+    if (cloudReady()) {
+      const res = await Promise.all([
+        getMyPoints().catch(function () { return 0; }),
+        getStreakState().catch(function () { return null; }),
+        getMyPrizes().catch(function () { return []; })
+      ]);
+      pts = Number(res[0]) || 0;
+      const st = res[1] || {};
+      streak = st.current_streak || 0;
+      const longest = st.longest_streak || 0;
+      const prizes = res[2] || [];
+      badges = (longest >= 7 ? 1 : 0) + (longest >= 30 ? 1 : 0) + (longest >= 100 ? 1 : 0) +
+        (prizes.some(function (p) { return p.points === 30; }) ? 1 : 0) +
+        (prizes.some(function (p) { return p.points === 0; }) ? 1 : 0);
+    }
+    host = document.getElementById('dh-progress');
+    if (!host || state.view !== 'home' || !isDesktop()) return;
+    host.innerHTML = dhProgressHTML({ pts: pts, streak: streak, lessonsDone: lessonsDone, badges: badges });
+  } catch (e) {}
+}
+function dhPodcastHTML(m) {
+  const p = m && m.podcast;
+  const ep = state.lessons.length;
+  const body = (p && p.audio)
+    ? '<div class="dh-pod-body">' +
+      '<span class="dh-pod-cover"><img src="/media/home/podcast-cover.webp" alt="" loading="lazy">' +
+      '<button class="dh-pod-play" data-dh-toggle aria-label="Play podcast">▶</button></span>' +
+      '<div class="dh-pod-info"><b>' + esc(p.title || 'English Conversations') + '</b>' +
+      '<span class="dh-pod-meta">Episode ' + ep + '</span>' +
+      '<p>Real-life conversations to boost your listening skills.</p></div></div>' +
+      '<div class="dh-player"><button class="dh-pl-toggle" data-dh-toggle aria-label="Play or pause">▶</button>' +
+      '<span class="dh-pl-cur">0:00</span>' +
+      '<input class="dh-pl-seek" type="range" min="0" max="100" value="0" aria-label="Seek">' +
+      '<span class="dh-pl-dur">–:––</span>' +
+      '<audio class="dh-pl-audio" preload="metadata" src="' + esc(p.audio) + '"></audio></div>'
+    : '<p class="muted" style="margin:0.5rem 0 0">No podcast episode yet.</p>';
+  const seeAll = (p && p.audio) ? '<a class="dh-link" href="#/lesson/' + esc(m.date) + '/podcast">See all <span aria-hidden="true">›</span></a>' : '';
+  return '<section class="dh-card dh-podcast" aria-label="Latest podcast">' +
+    '<div class="dh-card-head"><span class="dh-hico" aria-hidden="true">🎧</span>' +
+    '<div class="dh-htitles"><h2>Latest Podcast</h2></div>' + seeAll + '</div>' + body + '</section>';
+}
+function wireDhPlayer() {
+  try {
+    const card = document.querySelector('.dh-podcast');
+    if (!card) return;
+    const audio = card.querySelector('.dh-pl-audio');
+    if (!audio || audio._dhWired) return;
+    audio._dhWired = true;
+    const toggles = card.querySelectorAll('[data-dh-toggle]');
+    const cur = card.querySelector('.dh-pl-cur'), dur = card.querySelector('.dh-pl-dur'), seek = card.querySelector('.dh-pl-seek');
+    const fmt = function (s) { s = Math.max(0, Math.floor(s || 0)); return Math.floor(s / 60) + ':' + ('0' + (s % 60)).slice(-2); };
+    const setPlay = function (playing) {
+      toggles.forEach(function (b) { b.innerHTML = playing ? '❚❚' : '▶'; b.classList.toggle('playing', playing); });
+    };
+    audio.addEventListener('loadedmetadata', function () { dur.textContent = fmt(audio.duration); });
+    audio.addEventListener('timeupdate', function () {
+      cur.textContent = fmt(audio.currentTime);
+      if (audio.duration) seek.value = Math.round((audio.currentTime / audio.duration) * 100);
+    });
+    audio.addEventListener('ended', function () { setPlay(false); });
+    audio.addEventListener('pause', function () { setPlay(false); });
+    if (seek) seek.addEventListener('input', function () { if (audio.duration) audio.currentTime = (seek.value / 100) * audio.duration; });
+    toggles.forEach(function (b) {
+      b.addEventListener('click', function () {
+        if (audio.paused) { audio.play().then(function () { setPlay(true); }).catch(function () {}); }
+        else { audio.pause(); }
+      });
+    });
+  } catch (e) {}
+}
+function dhChallengeHTML() {
+  const now = new Date();
+  const dow = (now.getDay() + 6) % 7; /* Mon=0 */
+  const doneDates = {};
+  try {
+    for (let i = 0; i <= dow; i++) {
+      const d = new Date(now.getFullYear(), now.getMonth(), now.getDate() - i);
+      const ds = fmtDate(d);
+      if (dayDoneCount(ds) > 0) doneDates[ds] = 1;
+    }
+  } catch (e) {}
+  const n = Object.keys(doneDates).length;
+  const target = 5;
+  const pct = Math.min(100, Math.round((n / target) * 100));
+  return '<div class="dh-card-head"><span class="dh-hico" aria-hidden="true">🏆</span>' +
+    '<div class="dh-htitles"><h2>Challenge</h2></div>' +
+    '<a class="dh-link" href="#/challenge">View all <span aria-hidden="true">›</span></a></div>' +
+    '<div class="dh-ch-body"><span class="dh-ch-trophy" aria-hidden="true">🏆</span>' +
+    '<div class="dh-ch-txt"><b>Weekly Challenge</b><span>Complete ' + target + ' lessons this week</span></div></div>' +
+    '<div class="dh-bar"><span style="width:' + pct + '%"></span></div>' +
+    '<div class="dh-ch-count"><b>' + n + ' / ' + target + '</b></div>' +
+    '<div class="dh-ch-badge">🎁 Finish to earn a special badge!</div>';
+}
+function paintHomeDesktop(v, mistakes, attempts) {
+  const lessons = state.lessons;
+  const today = lessons[0] || null;
+  let html = '<div class="dhome">';
+  html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
+  html += '<div id="home-hw-wrap"></div>';
+  html += '<div class="dh-grid">' + dhQuestsHTML() +
+    '<div class="dh-col">' + dhLessonHTML(today) + dhMistakesHTML(mistakes) + '</div></div>';
+  html += '<div class="dh-grid3">' +
+    '<section class="dh-card" id="dh-progress">' + dhProgressHTML({}) + '</section>' +
+    dhPodcastHTML(today) +
+    '<section class="dh-card dh-challenge">' + dhChallengeHTML() + '</section></div>';
+  html += prevLessonsHTML(lessons);
+  if (oneSignalReady() && !state.user.demo && !pushSubscribed() && hasAnyQuizDone()) {
+    html += '<div class="card plain"><b>🔔 Lesson notifications</b>' +
+      '<p class="muted">You\u2019re on a roll — get a short notification when each new lesson is ready.</p>' +
+      '<p class="muted" id="push-status" role="status"></p>' +
+      '<button class="btn btn-sm" data-action="enable-push">Enable notifications</button></div>';
+  }
+  html += '</div>';
+  v.innerHTML = html;
+  wireDhPlayer();
+  refreshDhProgress();
 }
 
 /* ---------------- PROFILE ---------------- */
@@ -9978,7 +10237,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610161737';
+var APP_VERSION = '202610170559';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
