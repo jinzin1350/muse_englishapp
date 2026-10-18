@@ -11682,7 +11682,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610181302';
+var APP_VERSION = '202610181437';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -13651,13 +13651,15 @@ function renderVocabCat(v, slug) {
       var best = prog && prog.done ? '<span class="vc-best">\u2713 Practised</span>' : '';
       var rows = words.map(function (w) {
         return '<div class="vc-word">' +
+          (w.photo ? '<img class="vc-word-img" src="/' + w.photo + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '') +
+          '<div class="vc-word-body">' +
           '<div class="vc-word-top"><b>' + esc(w.word) + '</b>' +
           (w.phonetic ? '<span class="vc-phon">/' + esc(w.phonetic) + '/</span>' : '') +
           (w.pos ? '<span class="vc-pos">' + esc(w.pos) + '</span>' : '') +
           vcLevelBadges(w.levels) + '</div>' +
           (w.meaning_fa ? '<div class="vc-meaning">' + esc(w.meaning_fa) + '</div>' : '') +
           (w.example_en ? '<div class="vc-example">' + esc(w.example_en) + '</div>' : '') +
-          '</div>';
+          '</div></div>';
       }).join('');
       v.innerHTML = '<div class="vc-topic">' +
         '<a class="vc-back" href="#/vocab">\u2039 All topics</a>' +
@@ -13682,15 +13684,27 @@ function renderVocabCat(v, slug) {
 /* ---------------- vocabulary quiz ---------------- */
 
 function startVocabQuiz(cat, words) {
-  var pool = words.filter(function (w) { return w.meaning_fa; });
+  var LV_RANK = { a1: 1, a2: 2, b1: 3, b2: 4 };
+  function maxLv(w) {
+    var m = 0;
+    (w.levels || []).forEach(function (l) { m = Math.max(m, LV_RANK[l] || 0); });
+    return m;
+  }
+  function qLang(w) { return maxLv(w) <= 2 ? 'fa' : 'en'; }
+  function hasMeaning(w, lang) { return lang === 'fa' ? w.meaning_fa : w.meaning_en; }
+  var pool = words.filter(function (w) { return w.meaning_fa && w.meaning_en; });
   if (pool.length < 4) {
     alert('Not enough words with meanings in this topic yet.');
     return;
   }
   var items = shuffleArr(pool).slice(0, 10).map(function (w) {
-    var distract = shuffleArr(pool.filter(function (x) { return x.word !== w.word; })).slice(0, 3);
-    var options = shuffleArr([w.meaning_fa].concat(distract.map(function (x) { return x.meaning_fa; })));
-    return { word: w.word, example: w.example_en, options: options, answer: options.indexOf(w.meaning_fa) };
+    var lang = qLang(w);
+    var sameLang = pool.filter(function (x) { return x.word !== w.word && qLang(x) === lang && hasMeaning(x, lang); });
+    var distractPool = sameLang.length >= 3 ? sameLang : pool.filter(function (x) { return x.word !== w.word && hasMeaning(x, lang); });
+    var distract = shuffleArr(distractPool).slice(0, 3);
+    var correct = lang === 'fa' ? w.meaning_fa : w.meaning_en;
+    var options = shuffleArr([correct].concat(distract.map(function (x) { return lang === 'fa' ? x.meaning_fa : x.meaning_en; })));
+    return { word: w.word, example: w.example_en, options: options, answer: options.indexOf(correct) };
   });
   state.vquiz = { slug: cat.slug, title: cat.title, items: items, idx: 0, picked: -1, answered: false, correct: 0 };
   document.body.classList.add('duo-playing');
