@@ -3330,7 +3330,7 @@ function setAssignMode(m) {
 function asComposeDone() {
   closeModal();
   var twc = document.getElementById('tw-content');
-  if (twc && (state.twSection === 'compose' || state.twSection === 'assignments')) {
+  if (twc && (state.twSection === 'compose' || state.twSection === 'assignments' || state.twSection === 'assignment-detail')) {
     state.twAssignments = null; /* invalidate portal cache */
     twShowSection('assignments');
   } else {
@@ -12417,7 +12417,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610181922';
+var APP_VERSION = '202610181925';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -12840,8 +12840,10 @@ function twPaintViewBanner() {
 
 function twShowSection(name) {
   state.twSection = name;
+  /* Detail pages keep the parent nav highlighted. */
+  var navName = (name === 'assignment-detail') ? 'assignments' : name;
   Array.prototype.forEach.call(document.querySelectorAll('[data-twsec]'), function (b) {
-    b.classList.toggle('on', b.getAttribute('data-twsec') === name);
+    b.classList.toggle('on', b.getAttribute('data-twsec') === navName);
   });
   var c = document.getElementById('tw-content');
   if (!c) return;
@@ -12850,6 +12852,7 @@ function twShowSection(name) {
   if (name === 'overview') twPageOverview(c);
   else if (name === 'students') twPageStudents(c);
   else if (name === 'assignments') twPageAssignments(c);
+  else if (name === 'assignment-detail') twPageAssignmentDetail(c);
   else if (name === 'compose') twPageCompose(c);
   else if (name === 'placement') twPagePlacement(c);
   else if (name === 'links') twPageLinks(c);
@@ -13186,7 +13189,10 @@ async function twPageAssignments(c) {
         twPill(st[0], st[1]) + '<span class="tw-asg-arrow">→</span></div>';
     }).join('');
     Array.prototype.forEach.call(host.querySelectorAll('.tw-asg'), function (el) {
-      el.addEventListener('click', function () { openTeacherAssignment(parseInt(el.getAttribute('data-i'), 10)); });
+      el.addEventListener('click', function () {
+        state.twAssignmentIdx = parseInt(el.getAttribute('data-i'), 10);
+        twShowSection('assignment-detail');
+      });
     });
   };
   paint();
@@ -13210,6 +13216,67 @@ async function twPageAssignments(c) {
   });
   var newBtn = document.getElementById('tw-new-assignment');
   if (newBtn) newBtn.addEventListener('click', function () { twShowSection('compose'); });
+}
+/* ---------------- page: assignment detail (full-page, replaces the modal) ---------------- */
+async function twPageAssignmentDetail(c) {
+  var idx = state.twAssignmentIdx;
+  var assigns = await twGetAssignments();
+  var r = assigns[idx];
+  if (r == null) { twShowSection('assignments'); return; }
+  var roster = state.twStudents || state.teacherStudents || [];
+  var nameOf = {};
+  roster.forEach(function (s) {
+    nameOf[s.user_id] = s.display_name || (s.email || '?').split('@')[0];
+  });
+  var results = [];
+  try {
+    var q = await sb.from('assignment_results')
+      .select('student_id,score,total,completed_at').eq('assignment_id', r.id);
+    results = q.data || [];
+  } catch (e) {}
+  var byId = {};
+  results.forEach(function (x) { byId[x.student_id] = x; });
+  var targets = (r.student_ids || []).length;
+  var done = results.length;
+  var kindIcon = r.kind === 'exam' ? '📋' : '📝';
+  var sub = r.status === 'scheduled' && r.send_at
+    ? esc(schedLabel(r.send_at, r.send_tz)).replace(/^⏰ /, '') + ' — not sent yet.'
+    : targets + ' student' + (targets === 1 ? '' : 's') + ' · ' + done + ' completed';
+  var statusBox;
+  if (r.status === 'scheduled') {
+    statusBox = '<div class="tw-m-status"><span class="tw-m-status-ico">⏰</span>' +
+      '<div><b class="tw-m-status-t">Scheduled</b>' +
+      '<p>Sends automatically at the planned time.<br>You can cancel it below.</p></div></div>';
+  } else if (!done) {
+    statusBox = '<div class="tw-m-status"><span class="tw-m-status-ico">⏳</span>' +
+      '<div><b class="tw-m-status-t">Pending</b>' +
+      '<p>No student activity yet.<br>Once students start, their progress will appear here.</p></div></div>';
+  } else {
+    statusBox = '<div class="tw-m-rows">' + (r.student_ids || []).map(function (uid) {
+      var res = byId[uid];
+      var nm = nameOf[uid] || '—';
+      return '<div class="tw-m-row">' + twAvatar(nm) + '<b>' + esc(nm) + '</b>' +
+        (res ? '<span class="tw-pill tw-pill-green">✓ ' + res.score + '/' + res.total + '</span>'
+             : '<span class="tw-pill tw-pill-gray">⏳ pending</span>') + '</div>';
+    }).join('') + '</div>';
+  }
+  var actionBtn = '';
+  if (twReadOnly()) {
+    actionBtn = '<p class="muted" style="font-size:0.85rem">👁 Read-only admin view.</p>';
+  } else if (r.status === 'scheduled') {
+    actionBtn = '<button class="tw-m-del" id="tw-ad-cancel">✕ Cancel scheduled send</button>';
+  } else {
+    actionBtn = '<button class="tw-m-del" id="tw-ad-delete">🗑 Delete assignment</button>';
+  }
+  c.innerHTML = twPageHead('ASSIGNMENTS', kindIcon + ' ' + esc(r.title || 'Assignment'), sub) +
+    '<div class="tw-backrow"><button class="tw-btn tw-btn-white" id="tw-back-assign">← Back to assignments</button></div>' +
+    '<div class="tw-card tw-adetail">' + statusBox + actionBtn + '</div>';
+  document.getElementById('tw-back-assign').addEventListener('click', function () { twShowSection('assignments'); });
+  var del = document.getElementById('tw-ad-delete');
+  if (del) del.addEventListener('click', function () { deleteTeacherAssignment(idx, del); });
+  var can = document.getElementById('tw-ad-cancel');
+  if (can) can.addEventListener('click', function () { cancelScheduledAssignment(idx, can); });
+  window.scrollTo(0, 0);
 }
 /* ---------------- page: new assignment (full-page composer) ---------------- */
 /* Full-page version of the assignment composer for the /teachers portal.
