@@ -1,0 +1,277 @@
+{
+  "date": "2026-10-18",
+  "theme": "colors",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "dark",
+      "pos": "adjective",
+      "meaning": "With little or no light.",
+      "example": "It gets dark early in winter.",
+      "pronunciation": "DARK",
+      "persian": "تاریک",
+      "photo": "media/a1/2026-10-18/photos/dark.jpg",
+      "word_audio": "media/a1/2026-10-18/word-audio/dark.mp3"
+    },
+    {
+      "word": "delicious",
+      "pos": "adjective",
+      "meaning": "Having a very pleasant taste.",
+      "example": "This cake is delicious!",
+      "pronunciation": "duh-LISH-uss",
+      "persian": "خوشمزه",
+      "photo": "media/a1/2026-10-18/photos/delicious.jpg",
+      "word_audio": "media/a1/2026-10-18/word-audio/delicious.mp3"
+    },
+    {
+      "word": "feel",
+      "pos": "verb",
+      "meaning": "To experience a physical sensation.",
+      "example": "I feel cold today.",
+      "pronunciation": "FEEL",
+      "persian": "حس کردن، احساس کردن",
+      "photo": "media/a1/2026-10-18/photos/feel.jpg",
+      "word_audio": "media/a1/2026-10-18/word-audio/feel.mp3"
+    },
+    {
+      "word": "ring",
+      "pos": "noun",
+      "meaning": "A piece of jewellery worn on a finger.",
+      "example": "She wears a beautiful gold ring.",
+      "pronunciation": "RING",
+      "persian": "انگشتر",
+      "photo": "media/a1/2026-10-18/photos/ring.jpg",
+      "word_audio": "media/a1/2026-10-18/word-audio/ring.mp3"
+    },
+    {
+      "word": "rubber",
+      "pos": "noun",
+      "meaning": "A small piece of material used to erase pencil marks.",
+      "example": "I use a rubber to correct my drawings.",
+      "pronunciation": "RUB-uh",
+      "persian": "پاک‌کن",
+      "photo": "media/a1/2026-10-18/photos/rubber.jpg",
+      "word_audio": "media/a1/2026-10-18/word-audio/rubber.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-18/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Colors Around Us",
+    "audio": "media/a1/2026-10-18/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-18/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Colors Make Me Happy",
+    "audio": "media/a1/2026-10-18/shadowing.mp3",
+    "transcript": "media/a1/2026-10-18/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-18/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/016.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/017.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/018.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/019.mp3",
+      "media/a1/2026-10-18/shadowing-sentences/020.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'dark' mean?",
+      "options": [
+        "With little or no light.",
+        "Having a very pleasant taste.",
+        "To experience a physical sensation.",
+        "A piece of jewellery worn on a finger."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'delicious' mean?",
+      "options": [
+        "A small piece of material used to erase pencil marks.",
+        "Having a very pleasant taste.",
+        "To experience a physical sensation.",
+        "With little or no light."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'feel' mean?",
+      "options": [
+        "A piece of jewellery worn on a finger.",
+        "With little or no light.",
+        "To experience a physical sensation.",
+        "Having a very pleasant taste."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'ring' mean?",
+      "options": [
+        "Having a very pleasant taste.",
+        "To experience a physical sensation.",
+        "A small piece of material used to erase pencil marks.",
+        "A piece of jewellery worn on a finger."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'rubber' mean?",
+      "options": [
+        "To experience a physical sensation.",
+        "With little or no light.",
+        "A piece of jewellery worn on a finger.",
+        "A small piece of material used to erase pencil marks."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Articles: A, An and The",
+    "explanation": "Use **a** or **an** when you talk about one thing for the first time. It is not a special thing.\n\nUse **an** before a vowel sound. It is the sound, not the letter.\n\nUse **the** when the listener knows which thing you mean. You both know it.\n\nUse **the** when we talk about the same thing again. First **a**, then **the**.\n\nUse **the** when there is only one. **The** sun. **The** moon.\n\nUse no article with plural nouns and uncountable nouns in general.\n\nJobs need **a** or **an**. She is **a** doctor.",
+    "examples": [
+      "*I have **a** brother and **a** sister.* (first mention)",
+      "*She's **an** English teacher.* (a job; vowel sound)",
+      "*Can you open **the** window, please?* (we know which window)",
+      "*We bought **a** car. **The** car is red.* (first mention, then second mention)",
+      "*It takes **an** hour to get there.* (the h is silent)",
+      "*He goes to **work** by bus.* (no article)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with **a**: She is ___ doctor.",
+        "a": "She is a doctor."
+      },
+      {
+        "q": "Rewrite with **an**: I eat ___ apple every day.",
+        "a": "I eat an apple every day."
+      },
+      {
+        "q": "Rewrite with **the**: I see a ring. ___ ring is gold.",
+        "a": "The ring is gold."
+      },
+      {
+        "q": "Fix the mistake: I need an advice.",
+        "a": "I need some advice."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "My uncle is a engineer.",
+          "My uncle is engineer.",
+          "My uncle is an engineer.",
+          "My uncle is an engineers."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "It takes ___ hour to drive to the airport.",
+        "options": [
+          "a",
+          "the",
+          "(no article)",
+          "an"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Look at ___ moon! It's so bright tonight.",
+        "options": [
+          "a",
+          "the",
+          "an",
+          "(no article)"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I bought a shirt and a jacket. ___ jacket was expensive.",
+        "options": [
+          "A",
+          "An",
+          "(no article)",
+          "The"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I'm tired. I'm going to ___ bed.",
+        "options": [
+          "(no article)",
+          "a",
+          "the",
+          "an"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She speaks ___ English and French.",
+        "options": [
+          "the",
+          "(no article)",
+          "a",
+          "an"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Can you close ___ door, please? It's cold in here.",
+        "options": [
+          "a",
+          "an",
+          "(no article)",
+          "the"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I eat ___ every day.",
+        "options": [
+          "a apple",
+          "an apple",
+          "an apples",
+          "a apples"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "This is ___ best day of my life!",
+        "options": [
+          "the",
+          "a",
+          "an",
+          "(no article)"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "There's ___ cat in our garden. I don't know whose it is.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "(no article)"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a1/2026-10-18/grammar-en.mp3"
+  }
+}

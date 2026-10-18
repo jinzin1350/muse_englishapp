@@ -1,0 +1,327 @@
+{
+  "date": "2026-10-18",
+  "theme": "travel & transport",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "accident",
+      "pos": "noun",
+      "meaning": "something bad that happens by chance",
+      "example": "He had a car accident yesterday.",
+      "pronunciation": "AK-sih-dunt",
+      "persian": "تصادف، حادثه",
+      "photo": "media/b2/2026-10-18/photos/accident.jpg",
+      "word_audio": "media/b2/2026-10-18/word-audio/accident.mp3"
+    },
+    {
+      "word": "adventurous",
+      "pos": "adjective",
+      "meaning": "willing to take risks and try new things",
+      "example": "She is an adventurous traveler.",
+      "pronunciation": "ad-VEN-chuh-russ",
+      "persian": "ماجراجو، جسور",
+      "photo": "media/b2/2026-10-18/photos/adventurous.jpg",
+      "word_audio": "media/b2/2026-10-18/word-audio/adventurous.mp3"
+    },
+    {
+      "word": "airsick",
+      "pos": "adjective",
+      "meaning": "feeling sick because of flying",
+      "example": "She felt airsick during the long flight.",
+      "pronunciation": "AIR-sik",
+      "persian": "دچار تهوع هوایی",
+      "photo": "media/b2/2026-10-18/photos/airsick.jpg",
+      "word_audio": "media/b2/2026-10-18/word-audio/airsick.mp3"
+    },
+    {
+      "word": "airsickness",
+      "pos": "noun",
+      "meaning": "the feeling of being sick from flying",
+      "example": "He took medicine for airsickness.",
+      "pronunciation": "AIR-sik-ness",
+      "persian": "تهوع هوایی",
+      "photo": "media/b2/2026-10-18/photos/airsickness.jpg",
+      "word_audio": "media/b2/2026-10-18/word-audio/airsickness.mp3"
+    },
+    {
+      "word": "apartment",
+      "pos": "noun",
+      "meaning": "a set of rooms for living in",
+      "example": "We live in a small apartment.",
+      "pronunciation": "uh-PART-munt",
+      "persian": "آپارتمان",
+      "photo": "media/b2/2026-10-18/photos/apartment.jpg",
+      "word_audio": "media/b2/2026-10-18/word-audio/apartment.mp3"
+    },
+    {
+      "word": "approach",
+      "pos": "verb",
+      "meaning": "to come closer to something or someone",
+      "example": "The train is starting to approach the station.",
+      "pronunciation": "uh-PROHCH",
+      "persian": "نزدیک شدن",
+      "photo": "media/b2/2026-10-18/photos/approach.jpg",
+      "word_audio": "media/b2/2026-10-18/word-audio/approach.mp3"
+    },
+    {
+      "word": "B&B",
+      "pos": "abbreviation, noun",
+      "meaning": "bed and breakfast; a place to sleep and eat breakfast",
+      "example": "We stayed in a nice B&B.",
+      "pronunciation": "BEE-und-BEE",
+      "persian": "اقامتگاه با صبحانه",
+      "photo": "media/b2/2026-10-18/photos/b_b.jpg",
+      "word_audio": "media/b2/2026-10-18/word-audio/b_b.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-10-18/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Travel and Transport",
+    "audio": "media/b2/2026-10-18/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-18/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Adventurous Road Trip",
+    "audio": "media/b2/2026-10-18/shadowing.mp3",
+    "transcript": "media/b2/2026-10-18/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-10-18/shadowing-sentences/001.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/002.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/003.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/004.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/005.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/006.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/007.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/008.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/009.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/010.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/011.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/012.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/013.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/014.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/015.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/016.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/017.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/018.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/019.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/020.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/021.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/022.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/023.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/024.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/025.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/026.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/027.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/028.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/029.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/030.mp3",
+      "media/b2/2026-10-18/shadowing-sentences/031.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'accident' mean?",
+      "options": [
+        "a place to sleep and eat breakfast",
+        "something bad that happens by chance",
+        "feeling sick because of flying",
+        "to come closer to something or someone"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'adventurous' mean?",
+      "options": [
+        "a set of rooms for living in",
+        "willing to take risks and try new things",
+        "the feeling of being sick from flying",
+        "something bad that happens by chance"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'airsick' mean?",
+      "options": [
+        "feeling sick because of flying",
+        "a set of rooms for living in",
+        "the feeling of being sick from flying",
+        "to come closer to something or someone"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'airsickness' mean?",
+      "options": [
+        "bed and breakfast; a place to sleep and eat breakfast",
+        "willing to take risks and try new things",
+        "the feeling of being sick from flying",
+        "feeling sick because of flying"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'apartment' mean?",
+      "options": [
+        "to come closer to something or someone",
+        "something bad that happens by chance",
+        "feeling sick because of flying",
+        "a set of rooms for living in"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'approach' mean?",
+      "options": [
+        "the feeling of being sick from flying",
+        "to come closer to something or someone",
+        "a set of rooms for living in",
+        "willing to take risks and try new things"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'B&B' mean?",
+      "options": [
+        "bed and breakfast; a place to sleep and eat breakfast",
+        "something bad that happens by chance",
+        "feeling sick because of flying",
+        "a set of rooms for living in"
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Unless, Provided, As Long As",
+    "explanation": "Besides **if**, English has other words for conditions. **Unless** means *if … not*. I won't go **unless** you come too.\n\n**Provided (that)** and **as long as** mean *only if*. You can borrow my car **as long as** you drive carefully.\n\nUse **unless** with a positive verb, not a negative one. Say **unless** you come. Never say **unless** you don't come.\n\nAfter **unless**, **provided**, and **as long as**, use the present simple. We say **unless** it rains, not **unless** it will rain.\n\n**In case** is for precautions — things you do now because something might happen later. Take a coat **in case** it gets cold.\n\nThese words fit travel plans well. **Unless** we book the apartment early, there will be no rooms left. We'll stop at a B&B **as long as** we arrive before dark.",
+    "examples": [
+      "*I won't go **unless** you come too.*",
+      "*You can borrow my car **as long as** you drive carefully.*",
+      "*I'll go to the party **unless** you come.*",
+      "*Take a coat **in case** it gets cold later.*",
+      "*You can come **as long as** you're quiet.*",
+      "*I'll lend it to you **on condition that** you return it.*"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with unless: If you don't book the apartment early, you won't get a room.",
+        "a": "Unless you book the apartment early, you won't get a room."
+      },
+      {
+        "q": "Rewrite with as long as: You can stay at the B&B, but only if you arrive before dark.",
+        "a": "You can stay at the B&B as long as you arrive before dark."
+      },
+      {
+        "q": "Rewrite with in case: Take medicine for airsickness, because you might feel airsick.",
+        "a": "Take medicine for airsickness in case you feel airsick."
+      },
+      {
+        "q": "Rewrite with provided: We'll drive to the coast, but only if the weather is good.",
+        "a": "We'll drive to the coast provided the weather is good."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I don't want to go alone. I won't go to the party ___ you come with me.",
+        "options": [
+          "if",
+          "unless",
+          "in case",
+          "as long"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Take an umbrella ___ it rains later.",
+        "options": [
+          "in case",
+          "unless",
+          "as long as",
+          "provided"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You can borrow my bike ___ you bring it back by six.",
+        "options": [
+          "unless",
+          "in case",
+          "even if",
+          "as long as"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ you hurry, you'll miss the train.",
+        "options": [
+          "If",
+          "In case",
+          "Unless",
+          "Provided"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We'll have the barbecue outside provided the weather ___ good.",
+        "options": [
+          "will be",
+          "is",
+          "would be",
+          "was"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She agreed to help ___ that we paid for her travel.",
+        "options": [
+          "on condition",
+          "in case",
+          "unless",
+          "even"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Unless you ___, you won't pass.",
+        "options": [
+          "don't study",
+          "won't study",
+          "study",
+          "studied"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You can watch TV as long as you ___ your homework first.",
+        "options": [
+          "will finish",
+          "finished",
+          "would finish",
+          "finish"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Providing you ___ the rules, you can join the club.",
+        "options": [
+          "follow",
+          "will follow",
+          "followed",
+          "would follow"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which sentence is correct?",
+        "options": [
+          "Unless it will rain, we'll go out.",
+          "Unless it rains, we'll go out.",
+          "Unless it doesn't rain, we'll go out.",
+          "Unless it rained, we'll go out."
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

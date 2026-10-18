@@ -1,0 +1,212 @@
+[
+ {
+  "word": "match",
+  "pos": "noun",
+  "meaning": "a game between two teams or players",
+  "photo": "media/a1/2026-10-12/photos/match.jpg",
+  "options": [
+   "match",
+   "shirt",
+   "library",
+   "stone"
+  ],
+  "answer": 0,
+  "level": "a1"
+ },
+ {
+  "word": "medicine",
+  "pos": "noun",
+  "meaning": "something you take when you are sick to feel better",
+  "photo": "media/a1/2026-10-08/photos/medicine.jpg",
+  "options": [
+   "medicine",
+   "shirt",
+   "finger",
+   "exercise"
+  ],
+  "answer": 0,
+  "level": "a1"
+ },
+ {
+  "word": "nurse",
+  "pos": "noun",
+  "meaning": "a person who helps sick people",
+  "photo": "media/a1/2026-10-08/photos/nurse.jpg",
+  "options": [
+   "nurse",
+   "fever",
+   "tea",
+   "shoes"
+  ],
+  "answer": 0,
+  "level": "a1"
+ },
+ {
+  "word": "teacher",
+  "pos": "noun",
+  "meaning": "a person who helps you learn at school",
+  "photo": "media/a2/2026-10-09/photos/teacher.jpg",
+  "options": [
+   "grateful",
+   "teacher",
+   "twelve",
+   "charger"
+  ],
+  "answer": 1,
+  "level": "a2"
+ },
+ {
+  "word": "coin",
+  "pos": "noun",
+  "meaning": "a small round piece of metal money",
+  "photo": "media/a2/2026-10-11/photos/coin.jpg",
+  "options": [
+   "carry",
+   "ball",
+   "coin",
+   "surprised"
+  ],
+  "answer": 2,
+  "level": "a2"
+ },
+ {
+  "word": "bill",
+  "pos": "noun",
+  "meaning": "the paper that shows how much money you must pay",
+  "photo": "media/a2/2026-10-11/photos/bill.jpg",
+  "options": [
+   "surprised",
+   "twelve",
+   "eight",
+   "bill"
+  ],
+  "answer": 3,
+  "level": "a2"
+ },
+ {
+  "word": "argue",
+  "pos": "verb",
+  "meaning": "to disagree angrily with someone",
+  "photo": "media/b1/2026-10-10/photos/argue.jpg",
+  "options": [
+   "report",
+   "embark",
+   "argue",
+   "babysit"
+  ],
+  "answer": 2,
+  "level": "b1"
+ },
+ {
+  "word": "round-trip",
+  "pos": "adjective",
+  "meaning": "a ticket or journey that takes you somewhere and then brings you back",
+  "photo": "media/b1/2026-10-12/photos/round-trip.jpg",
+  "options": [
+   "round-trip",
+   "aroma",
+   "lonely",
+   "scratching post"
+  ],
+  "answer": 0,
+  "level": "b1"
+ },
+ {
+  "word": "confident",
+  "pos": "adjective",
+  "meaning": "sure of yourself",
+  "photo": "media/b1/2026-10-09/photos/confident.jpg",
+  "options": [
+   "confident",
+   "rooftop",
+   "turbulence",
+   "traffic jam"
+  ],
+  "answer": 0,
+  "level": "b1"
+ },
+ {
+  "word": "layoff",
+  "pos": "noun",
+  "meaning": "when a company ends workers' jobs to save money",
+  "photo": "media/b2/2026-10-11/photos/layoff.jpg",
+  "options": [
+   "wearable",
+   "layoff",
+   "markup",
+   "resign"
+  ],
+  "answer": 1,
+  "level": "b2"
+ },
+ {
+  "word": "autonomous",
+  "pos": "adjective",
+  "meaning": "able to work without human control",
+  "photo": "media/b2/2026-10-10/photos/autonomous.jpg",
+  "options": [
+   "penalty",
+   "autonomous",
+   "career",
+   "foul"
+  ],
+  "answer": 1,
+  "level": "b2"
+ },
+ {
+  "word": "braise",
+  "pos": "verb",
+  "meaning": "to cook food slowly in a little liquid",
+  "photo": "media/b2/2026-10-12/photos/braise.jpg",
+  "options": [
+   "boutique",
+   "feud",
+   "julienne",
+   "braise"
+  ],
+  "answer": 3,
+  "level": "b2"
+ },
+ {
+  "word": "fallout",
+  "pos": "noun",
+  "meaning": "the bad effects and bad feeling that follow a conflict",
+  "photo": "media/c1/2026-10-08/photos/fallout.jpg",
+  "options": [
+   "understated",
+   "fallout",
+   "embellish",
+   "escrow"
+  ],
+  "answer": 1,
+  "level": "c1"
+ },
+ {
+  "word": "empathy",
+  "pos": "noun",
+  "meaning": "the ability to understand and share another person's feelings",
+  "photo": "media/c1/2026-10-08/photos/empathy.jpg",
+  "options": [
+   "liquidation",
+   "empathy",
+   "patriarch",
+   "detour"
+  ],
+  "answer": 1,
+  "level": "c1"
+ },
+ {
+  "word": "procurement",
+  "pos": "noun",
+  "meaning": "the process of buying goods or services for a company or government",
+  "photo": "media/c1/2026-10-14/photos/procurement.jpg",
+  "options": [
+   "procurement",
+   "liquidation",
+   "traverse",
+   "odyssey"
+  ],
+  "answer": 0,
+  "level": "c1"
+ }
+]

@@ -3555,6 +3555,75 @@ body.view-grammar #view { background: #FDF8F1; }
   .dhome .g-banner { padding: 1rem 1.25rem; }
 }
 
+
+/* ---------------- vocabulary section (#/vocab) ---------------- */
+body.view-vocab #view { background: #FDF8F1; }
+.vc-crumb { display: flex; align-items: center; gap: 0.32rem; color: #9AA1B5; font-size: 0.85rem; margin-bottom: 0.55rem; }
+.vc-crumb b { color: #232B4D; font-weight: 700; }
+.vc-crumb-sep { color: #C6CCDD; }
+.vc-hero { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.85rem; }
+.vc-hero-t { flex: 1 1 auto; min-width: 0; }
+.vc-hero-t h1 { font-family: "Fredoka", "Avenir Next", "Trebuchet MS", sans-serif; font-weight: 700; font-size: 2rem; line-height: 1.12; letter-spacing: -0.01em; color: #232B4D; margin: 0 0 0.45rem; }
+.vc-hero-t h1 em { font-style: normal; color: #F26522; }
+.vc-hero-t p { color: #5B6478; font-size: 0.92rem; line-height: 1.55; margin: 0; }
+.vc-mascot { flex: 0 0 auto; width: 96px; height: 96px; border-radius: 28px; background: #FBEFE3; display: flex; align-items: center; justify-content: center; font-size: 3rem; box-shadow: 0 4px 14px rgba(120, 90, 40, 0.10); }
+.vc-feats { display: flex; gap: 0.55rem; margin-bottom: 0.9rem; }
+.vc-feat { flex: 1 1 0; min-width: 0; display: flex; align-items: center; gap: 0.5rem; background: #fff; border: 1px solid #F3EAD9; border-radius: 14px; padding: 0.55rem 0.6rem; box-shadow: 0 2px 8px rgba(120, 90, 40, 0.06); }
+.vc-feat i { font-style: normal; font-size: 1.25rem; flex: 0 0 auto; }
+.vc-feat b { font-size: 0.72rem; line-height: 1.35; color: #232B4D; font-weight: 700; }
+.vc-filters { display: flex; gap: 0.5rem; overflow-x: auto; padding-bottom: 0.35rem; margin-bottom: 0.75rem; -webkit-overflow-scrolling: touch; }
+.vc-pill { flex: 0 0 auto; border: 1px solid transparent; border-radius: 999px; padding: 0.5rem 1.05rem; font-size: 0.88rem; font-weight: 700; color: #232B4D; cursor: pointer; font-family: inherit; }
+.vc-pill-lv-all { background: #FFFFFF; border-color: #EFE7D6; }
+.vc-pill-lv-a1 { background: #FDF3D2; } .vc-pill-lv-a2 { background: #FDEBD6; }
+.vc-pill-lv-b1 { background: #DFF3E6; } .vc-pill-lv-b2 { background: #FFE3CF; }
+.vc-pill.on { background: #F26522; border-color: #F26522; color: #fff; box-shadow: 0 4px 12px rgba(242, 101, 34, 0.35); }
+.vc-search { position: relative; margin-bottom: 1rem; }
+.vc-search-ico { position: absolute; left: 0.95rem; top: 50%; transform: translateY(-50%); font-size: 1.05rem; }
+.vc-search input { width: 100%; border: 1px solid #F0E6D2; border-radius: 16px; padding: 0.8rem 1rem 0.8rem 2.7rem; font-size: 0.95rem; font-family: inherit; background: #fff; color: #232B4D; box-shadow: 0 2px 8px rgba(120, 90, 40, 0.05); }
+.vc-search input::placeholder { color: #A7AEC2; }
+.vc-sec { display: flex; align-items: flex-start; gap: 0.7rem; margin: 0.1rem 0 0.8rem; }
+.vc-lv { flex: 0 0 auto; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.03em; color: #fff; border-radius: 9px; padding: 0.32rem 0.55rem; min-width: 40px; text-align: center; }
+.vc-sec-t { flex: 1 1 auto; min-width: 0; }
+.vc-sec-t h2 { font-family: "Fredoka", "Avenir Next", "Trebuchet MS", sans-serif; font-weight: 700; font-size: 1.15rem; color: #232B4D; margin: 0 0 0.15rem; }
+.vc-sec-t p { color: #8A93A6; font-size: 0.82rem; margin: 0; line-height: 1.45; }
+.vc-count { flex: 0 0 auto; color: #8A93A6; font-size: 0.82rem; padding-top: 0.25rem; white-space: nowrap; }
+.vc-cards { display: flex; flex-direction: column; gap: 0.65rem; }
+.vc-card { display: flex; align-items: center; gap: 0.75rem; background: #fff; border: 1px solid #F5EDDC; border-radius: 18px; padding: 0.7rem 0.8rem; text-decoration: none; color: #232B4D; box-shadow: 0 3px 12px rgba(120, 90, 40, 0.07); }
+.vc-card:active { transform: scale(0.99); }
+.vc-ico { flex: 0 0 auto; width: 60px; height: 60px; border-radius: 16px; background: #FBEFE3; display: flex; align-items: center; justify-content: center; font-size: 1.9rem; }
+.vc-card-main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 0.18rem; }
+.vc-titlerow { display: flex; align-items: center; gap: 0.5rem; min-width: 0; flex-wrap: wrap; }
+.vc-titlerow b { font-size: 0.95rem; line-height: 1.3; color: #232B4D; }
+.vc-status { font-size: 0.78rem; color: #9AA1B5; }
+.vc-status.done { color: #2F9E44; font-weight: 700; }
+.vc-chev { flex: 0 0 auto; color: #C6CCDD; font-size: 1.4rem; font-weight: 300; }
+/* Topic */
+.vc-topic { max-width: var(--content-w); margin: 0 auto; padding: 0 0 2rem; }
+.vc-back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 0.9rem; margin-bottom: 0.6rem; }
+.vc-back:hover { color: var(--ink); }
+.vc-hero-topic { margin-bottom: 1rem; }
+.vc-hero-ico { width: 72px; height: 72px; border-radius: 20px; background: #FBEFE3; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; margin-bottom: 0.7rem; box-shadow: 0 4px 14px rgba(120, 90, 40, 0.10); }
+.vc-hero-topic h1 { font-size: 1.6rem; }
+.vc-best { font-size: 0.82rem; color: var(--herb-dark); font-weight: 700; background: #E3F0E8; padding: 0.3rem 0.7rem; border-radius: 999px; }
+.vc-start { width: 100%; padding: 0.85rem; margin: 0.2rem 0 0.4rem; }
+.vc-xp-note { text-align: center; color: #9AA1B5; font-size: 0.82rem; margin: 0 0 1.1rem; }
+.vc-words { display: flex; flex-direction: column; gap: 0.6rem; }
+.vc-word { background: #fff; border: 1px solid #F5EDDC; border-radius: 16px; padding: 0.75rem 0.9rem; box-shadow: 0 2px 8px rgba(120, 90, 40, 0.05); }
+.vc-word-top { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem; }
+.vc-word-top b { font-size: 1.05rem; color: #232B4D; }
+.vc-phon { color: #9AA1B5; font-size: 0.85rem; }
+.vc-pos { font-size: 0.7rem; font-weight: 700; color: #7C5CBF; background: #EFE9FB; border-radius: 7px; padding: 0.15rem 0.45rem; }
+.vc-word-top .vc-lv { font-size: 0.65rem; padding: 0.22rem 0.45rem; min-width: 0; }
+.vc-meaning { font-size: 0.95rem; color: #232B4D; font-weight: 600; margin-bottom: 0.15rem; }
+.vc-example { font-size: 0.88rem; color: #5B6478; font-style: italic; line-height: 1.5; }
+@media (min-width: 1024px) {
+  .vc-hub, .vc-topic, .vc-quiz { max-width: 860px; }
+  .vc-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+  .vc-mascot { width: 132px; height: 132px; font-size: 4rem; }
+  .vc-hero-t h1 { font-size: 2.4rem; }
+  #home-vocab-wrap { margin: 0 0 1.1rem; }
+}
+
 /* ---------------- grammar placement test (Duolingo style) ---------------- */
 .gt-wrap {
   max-width: 640px; margin: 0 auto; padding: 16px 16px 140px;

@@ -1,0 +1,328 @@
+{
+  "date": "2026-10-18",
+  "theme": "education & learning",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "matriculate",
+      "pos": "verb",
+      "meaning": "to enroll at a college or university",
+      "example": "She will matriculate at Oxford this autumn.",
+      "pronunciation": "muh-TRIK-yoo-layt",
+      "persian": "در دانشگاه ثبت‌نام کردن",
+      "photo": "media/c1/2026-10-18/photos/matriculate.jpg",
+      "word_audio": "media/c1/2026-10-18/word-audio/matriculate.mp3"
+    },
+    {
+      "word": "philomath",
+      "pos": "noun",
+      "meaning": "a person who loves learning",
+      "example": "He is a true philomath who reads two books a week.",
+      "pronunciation": "FIL-uh-math",
+      "persian": "عاشق یادگیری و دانش",
+      "photo": "media/c1/2026-10-18/photos/philomath.jpg",
+      "word_audio": "media/c1/2026-10-18/word-audio/philomath.mp3"
+    },
+    {
+      "word": "didactic",
+      "pos": "adjective",
+      "meaning": "intended to teach a moral lesson",
+      "example": "His novels are too didactic for my taste.",
+      "pronunciation": "dy-DAK-tik",
+      "persian": "آموزشی و درس‌دهنده",
+      "photo": "media/c1/2026-10-18/photos/didactic.jpg",
+      "word_audio": "media/c1/2026-10-18/word-audio/didactic.mp3"
+    },
+    {
+      "word": "inculcate",
+      "pos": "verb",
+      "meaning": "to fix ideas in the mind by repeated instruction",
+      "example": "Parents try to inculcate good manners in their children.",
+      "pronunciation": "IN-kul-kayt",
+      "persian": "تلقین کردن",
+      "photo": "media/c1/2026-10-18/photos/inculcate.jpg",
+      "word_audio": "media/c1/2026-10-18/word-audio/inculcate.mp3"
+    },
+    {
+      "word": "pedantic",
+      "pos": "adjective",
+      "meaning": "overly concerned with small details and rules",
+      "example": "He was pedantic about the exact spelling of every word.",
+      "pronunciation": "puh-DAN-tik",
+      "persian": "جزئی‌نگر و خشک در قواعد",
+      "photo": "media/c1/2026-10-18/photos/pedantic.jpg",
+      "word_audio": "media/c1/2026-10-18/word-audio/pedantic.mp3"
+    },
+    {
+      "word": "exegesis",
+      "pos": "noun",
+      "meaning": "a careful, critical interpretation of a text",
+      "example": "The professor gave an exegesis of the poem's final stanza.",
+      "pronunciation": "ek-suh-JEE-sis",
+      "persian": "تفسیر و شرح متن",
+      "photo": "media/c1/2026-10-18/photos/exegesis.jpg",
+      "word_audio": "media/c1/2026-10-18/word-audio/exegesis.mp3"
+    },
+    {
+      "word": "scholastic",
+      "pos": "adjective",
+      "meaning": "relating to schools or studies",
+      "example": "She won a scholarship for scholastic achievement.",
+      "pronunciation": "skuh-LAS-tik",
+      "persian": "مربوط به تحصیل و مطالعه",
+      "photo": "media/c1/2026-10-18/photos/scholastic.jpg",
+      "word_audio": "media/c1/2026-10-18/word-audio/scholastic.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-18/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: The Love of Learning",
+    "audio": "media/c1/2026-10-18/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-18/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Never Too Late to Learn",
+    "audio": "media/c1/2026-10-18/shadowing.mp3",
+    "transcript": "media/c1/2026-10-18/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-10-18/shadowing-sentences/001.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/002.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/003.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/004.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/005.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/006.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/007.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/008.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/009.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/010.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/011.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/012.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/013.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/014.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/015.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/016.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/017.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/018.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/019.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/020.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/021.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/022.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/023.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/024.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/025.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/026.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/027.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/028.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/029.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/030.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/031.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/032.mp3",
+      "media/c1/2026-10-18/shadowing-sentences/033.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'matriculate' mean?",
+      "options": [
+        "to enroll at a college or university",
+        "to fix ideas in the mind by repeated instruction",
+        "a person who loves learning",
+        "intended to teach a moral lesson"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'philomath' mean?",
+      "options": [
+        "intended to teach a moral lesson",
+        "to enroll at a college or university",
+        "to fix ideas in the mind by repeated instruction",
+        "a person who loves learning"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'didactic' mean?",
+      "options": [
+        "overly concerned with small details and rules",
+        "intended to teach a moral lesson",
+        "to fix ideas in the mind by repeated instruction",
+        "a careful, critical interpretation of a text"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'inculcate' mean?",
+      "options": [
+        "to fix ideas in the mind by repeated instruction",
+        "to enroll at a college or university",
+        "intended to teach a moral lesson",
+        "relating to schools or studies"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'pedantic' mean?",
+      "options": [
+        "overly concerned with small details and rules",
+        "intended to teach a moral lesson",
+        "to fix ideas in the mind by repeated instruction",
+        "to enroll at a college or university"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'exegesis' mean?",
+      "options": [
+        "a careful, critical interpretation of a text",
+        "intended to teach a moral lesson",
+        "a person who loves learning",
+        "relating to schools or studies"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'scholastic' mean?",
+      "options": [
+        "overly concerned with small details and rules",
+        "relating to schools or studies",
+        "to enroll at a college or university",
+        "to fix ideas in the mind by repeated instruction"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Inverted Conditionals (Had I known, Should you need...)",
+    "explanation": "In formal English, we can drop *if* and swap the subject and the auxiliary: *If I had known* → **Had I known**.\n\nThis trick works with only three words: **should**, **were** and **had**. A true philomath of grammar learns all three patterns.\n\nUse **Had I ...** for an unreal past: *Had I known, I would have helped.* (I did not know, so I did not help.)\n\nUse **Should you ...** for a possible future, in formal style: **Should you need** help, call me. It means the same as *if you need help*.\n\nUse **Were I ...** for an unreal present: **Were I** you, I'd accept the offer. Always **were**, never *was* — even for *I*.\n\nWatch the classic mistakes: no contractions — **Had I not** known, never *Hadn't I known*. And never keep *if* — never *If had I known*. Many learners inculcate these errors by copying informal speech, so review the correct forms carefully.",
+    "examples": [
+      "*If I **had known** about the traffic, I would have left earlier* → **Had I known** about the traffic, I would have left earlier.",
+      "*If you **need** help* → **Should you need** help, call me.",
+      "**Had I not** seen it, I wouldn't have believed it. (Never *Hadn't I ...*)",
+      "**Were it not for** your help, we would have failed. (Never *of*)",
+      "**Were I** in your position, I would accept the offer. (Always **were**, even for *I*)"
+    ],
+    "practice": [
+      {
+        "q": "If the philomath had read more, he would have known the answer.",
+        "a": "Had the philomath read more, he would have known the answer."
+      },
+      {
+        "q": "If you need any study notes, ask the teacher.",
+        "a": "Should you need any study notes, ask the teacher."
+      },
+      {
+        "q": "If I were you, I would matriculate this autumn.",
+        "a": "Were I you, I would matriculate this autumn."
+      },
+      {
+        "q": "If it had not been for her exegesis, we would not have understood the poem.",
+        "a": "Had it not been for her exegesis, we would not have understood the poem."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "___ I known about the traffic, I would have left earlier.",
+        "options": [
+          "Had",
+          "If",
+          "Did",
+          "Have"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ you need any help, please call me.",
+        "options": [
+          "Do",
+          "Would",
+          "Will",
+          "Should"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ I in your position, I would accept the offer.",
+        "options": [
+          "Was",
+          "Were",
+          "If",
+          "Am"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Should you ___ to cancel, please let us know 24 hours in advance.",
+        "options": [
+          "wished",
+          "wishing",
+          "wish",
+          "to wish"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ we left earlier, we wouldn't have missed the train.",
+        "options": [
+          "Have",
+          "Did",
+          "Should",
+          "Had"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "Had I not seen it, I wouldn't have believed it.",
+          "Hadn't I seen it, I wouldn't have believed it.",
+          "Had not I seen it, I wouldn't have believed it.",
+          "Had I not saw it, I wouldn't have believed it."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ you have any questions, don't hesitate to ask.",
+        "options": [
+          "Had",
+          "Should",
+          "Were",
+          "Would"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If I had been more careful, I wouldn't have broken it. = ___ more careful, I wouldn't have broken it.",
+        "options": [
+          "Had I been",
+          "Were I been",
+          "Should I have been",
+          "Have I been"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "If you should see Tom, tell him to call me. = ___ Tom, tell him to call me.",
+        "options": [
+          "Had you seen",
+          "Were you see",
+          "Should you see",
+          "Would you see"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If it weren't for my parents, I couldn't afford university. = ___ for my parents, I couldn't afford university.",
+        "options": [
+          "Had it not",
+          "Should it not",
+          "Were it not",
+          "Was not it"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

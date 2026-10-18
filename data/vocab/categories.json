@@ -1,0 +1,1854 @@
+[
+ {
+  "slug": "family-friends",
+  "title": "Family and friends",
+  "icon": "👪",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 85,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 1
+   },
+   {
+    "book": "pre",
+    "unit": 13
+   },
+   {
+    "book": "upper",
+    "unit": 10
+   }
+  ]
+ },
+ {
+  "slug": "life-stages",
+  "title": "Life stages",
+  "icon": "🌱",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "word_count": 78,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 2
+   },
+   {
+    "book": "pre",
+    "unit": 14
+   },
+   {
+    "book": "pre",
+    "unit": 15
+   }
+  ]
+ },
+ {
+  "slug": "body",
+  "title": "The body",
+  "icon": "🧍",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 84,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 3
+   },
+   {
+    "book": "pre",
+    "unit": 9
+   },
+   {
+    "book": "upper",
+    "unit": 47
+   }
+  ]
+ },
+ {
+  "slug": "clothes-fashion",
+  "title": "Clothes and fashion",
+  "icon": "👗",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 136,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 4
+   },
+   {
+    "book": "pre",
+    "unit": 21
+   },
+   {
+    "book": "pre",
+    "unit": 22
+   },
+   {
+    "book": "upper",
+    "unit": 27
+   }
+  ]
+ },
+ {
+  "slug": "describing-people",
+  "title": "Describing people",
+  "icon": "🪞",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 258,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 5
+   },
+   {
+    "book": "pre",
+    "unit": 10
+   },
+   {
+    "book": "pre",
+    "unit": 11
+   },
+   {
+    "book": "upper",
+    "unit": 7
+   },
+   {
+    "book": "upper",
+    "unit": 8
+   },
+   {
+    "book": "upper",
+    "unit": 9
+   }
+  ]
+ },
+ {
+  "slug": "health",
+  "title": "Health",
+  "icon": "🏥",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 188,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 6
+   },
+   {
+    "book": "pre",
+    "unit": 20
+   },
+   {
+    "book": "upper",
+    "unit": 28
+   },
+   {
+    "book": "upper",
+    "unit": 29
+   },
+   {
+    "book": "upper",
+    "unit": 30
+   }
+  ]
+ },
+ {
+  "slug": "feelings-emotions",
+  "title": "Feelings and emotions",
+  "icon": "💛",
+  "levels": [
+   "a1",
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 145,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 7
+   },
+   {
+    "book": "pre",
+    "unit": 12
+   },
+   {
+    "book": "pre",
+    "unit": 68
+   },
+   {
+    "book": "upper",
+    "unit": 43
+   },
+   {
+    "book": "upper",
+    "unit": 44
+   },
+   {
+    "book": "upper",
+    "unit": 49
+   }
+  ]
+ },
+ {
+  "slug": "conversations-speaking",
+  "title": "Conversations and speaking",
+  "icon": "💬",
+  "levels": [
+   "a1",
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 180,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 8
+   },
+   {
+    "book": "elem",
+    "unit": 9
+   },
+   {
+    "book": "elem",
+    "unit": 48
+   },
+   {
+    "book": "pre",
+    "unit": 69
+   },
+   {
+    "book": "upper",
+    "unit": 45
+   },
+   {
+    "book": "upper",
+    "unit": 50
+   },
+   {
+    "book": "upper",
+    "unit": 69
+   }
+  ]
+ },
+ {
+  "slug": "food-drink",
+  "title": "Food and drink",
+  "icon": "🍽",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 148,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 10
+   },
+   {
+    "book": "pre",
+    "unit": 24
+   },
+   {
+    "book": "pre",
+    "unit": 25
+   },
+   {
+    "book": "upper",
+    "unit": 22
+   }
+  ]
+ },
+ {
+  "slug": "at-home",
+  "title": "At home",
+  "icon": "🏠",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 197,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 11
+   },
+   {
+    "book": "elem",
+    "unit": 12
+   },
+   {
+    "book": "elem",
+    "unit": 13
+   },
+   {
+    "book": "pre",
+    "unit": 17
+   },
+   {
+    "book": "pre",
+    "unit": 18
+   },
+   {
+    "book": "upper",
+    "unit": 11
+   }
+  ]
+ },
+ {
+  "slug": "daily-routines",
+  "title": "Daily routines",
+  "icon": "⏰",
+  "levels": [
+   "a2"
+  ],
+  "word_count": 75,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 47
+   },
+   {
+    "book": "pre",
+    "unit": 16
+   }
+  ]
+ },
+ {
+  "slug": "shopping-money",
+  "title": "Shopping and money",
+  "icon": "🛒",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 162,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 19
+   },
+   {
+    "book": "elem",
+    "unit": 20
+   },
+   {
+    "book": "pre",
+    "unit": 19
+   },
+   {
+    "book": "pre",
+    "unit": 23
+   },
+   {
+    "book": "upper",
+    "unit": 40
+   }
+  ]
+ },
+ {
+  "slug": "education",
+  "title": "Education",
+  "icon": "🎓",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 249,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 15
+   },
+   {
+    "book": "pre",
+    "unit": 31
+   },
+   {
+    "book": "pre",
+    "unit": 32
+   },
+   {
+    "book": "pre",
+    "unit": 33
+   },
+   {
+    "book": "pre",
+    "unit": 34
+   },
+   {
+    "book": "upper",
+    "unit": 14
+   },
+   {
+    "book": "upper",
+    "unit": 15
+   }
+  ]
+ },
+ {
+  "slug": "work-business",
+  "title": "Work and business",
+  "icon": "💼",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 290,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 14
+   },
+   {
+    "book": "pre",
+    "unit": 35
+   },
+   {
+    "book": "pre",
+    "unit": 36
+   },
+   {
+    "book": "pre",
+    "unit": 37
+   },
+   {
+    "book": "pre",
+    "unit": 38
+   },
+   {
+    "book": "pre",
+    "unit": 39
+   },
+   {
+    "book": "pre",
+    "unit": 40
+   },
+   {
+    "book": "upper",
+    "unit": 16
+   },
+   {
+    "book": "upper",
+    "unit": 17
+   }
+  ]
+ },
+ {
+  "slug": "communication-tech",
+  "title": "Communication and technology",
+  "icon": "📱",
+  "levels": [
+   "a1",
+   "b1",
+   "b2"
+  ],
+  "word_count": 298,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 16
+   },
+   {
+    "book": "elem",
+    "unit": 17
+   },
+   {
+    "book": "pre",
+    "unit": 53
+   },
+   {
+    "book": "pre",
+    "unit": 54
+   },
+   {
+    "book": "pre",
+    "unit": 55
+   },
+   {
+    "book": "upper",
+    "unit": 33
+   },
+   {
+    "book": "upper",
+    "unit": 34
+   },
+   {
+    "book": "upper",
+    "unit": 35
+   },
+   {
+    "book": "upper",
+    "unit": 36
+   }
+  ]
+ },
+ {
+  "slug": "travel-holidays",
+  "title": "Travel and holidays",
+  "icon": "✈️",
+  "levels": [
+   "a1",
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 249,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 18
+   },
+   {
+    "book": "elem",
+    "unit": 32
+   },
+   {
+    "book": "pre",
+    "unit": 46
+   },
+   {
+    "book": "pre",
+    "unit": 47
+   },
+   {
+    "book": "pre",
+    "unit": 50
+   },
+   {
+    "book": "pre",
+    "unit": 51
+   },
+   {
+    "book": "upper",
+    "unit": 31
+   },
+   {
+    "book": "upper",
+    "unit": 32
+   }
+  ]
+ },
+ {
+  "slug": "eating-out",
+  "title": "Eating out",
+  "icon": "🍜",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "word_count": 135,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 21
+   },
+   {
+    "book": "elem",
+    "unit": 22
+   },
+   {
+    "book": "pre",
+    "unit": 48
+   },
+   {
+    "book": "pre",
+    "unit": 49
+   }
+  ]
+ },
+ {
+  "slug": "sport",
+  "title": "Sport",
+  "icon": "⚽",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 148,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 23
+   },
+   {
+    "book": "pre",
+    "unit": 41
+   },
+   {
+    "book": "pre",
+    "unit": 42
+   },
+   {
+    "book": "upper",
+    "unit": 18
+   }
+  ]
+ },
+ {
+  "slug": "cinema-books",
+  "title": "Cinema, theatre and books",
+  "icon": "🎬",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 78,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 24
+   },
+   {
+    "book": "pre",
+    "unit": 43
+   },
+   {
+    "book": "upper",
+    "unit": 20
+   }
+  ]
+ },
+ {
+  "slug": "music",
+  "title": "Music",
+  "icon": "🎵",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 94,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 26
+   },
+   {
+    "book": "pre",
+    "unit": 44
+   },
+   {
+    "book": "upper",
+    "unit": 21
+   }
+  ]
+ },
+ {
+  "slug": "art-literature",
+  "title": "Art and literature",
+  "icon": "🎨",
+  "levels": [
+   "b2"
+  ],
+  "word_count": 43,
+  "unit_refs": [
+   {
+    "book": "upper",
+    "unit": 19
+   }
+  ]
+ },
+ {
+  "slug": "leisure",
+  "title": "Leisure",
+  "icon": "🎯",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "word_count": 67,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 25
+   },
+   {
+    "book": "pre",
+    "unit": 45
+   }
+  ]
+ },
+ {
+  "slug": "countries",
+  "title": "Countries and nationalities",
+  "icon": "🌍",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 142,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 27
+   },
+   {
+    "book": "pre",
+    "unit": 5
+   },
+   {
+    "book": "upper",
+    "unit": 5
+   }
+  ]
+ },
+ {
+  "slug": "weather",
+  "title": "Weather",
+  "icon": "🌦",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 83,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 28
+   },
+   {
+    "book": "pre",
+    "unit": 7
+   },
+   {
+    "book": "upper",
+    "unit": 6
+   }
+  ]
+ },
+ {
+  "slug": "towns-cities",
+  "title": "Towns and cities",
+  "icon": "🏙",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "word_count": 136,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 29
+   },
+   {
+    "book": "pre",
+    "unit": 26
+   },
+   {
+    "book": "upper",
+    "unit": 25
+   }
+  ]
+ },
+ {
+  "slug": "countryside",
+  "title": "The countryside",
+  "icon": "🌾",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "word_count": 56,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 30
+   },
+   {
+    "book": "pre",
+    "unit": 27
+   }
+  ]
+ },
+ {
+  "slug": "animals-nature",
+  "title": "Animals and nature",
+  "icon": "🦁",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "word_count": 113,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 31
+   },
+   {
+    "book": "pre",
+    "unit": 8
+   },
+   {
+    "book": "upper",
+    "unit": 26
+   }
+  ]
+ },
+ {
+  "slug": "physical-world",
+  "title": "The physical world",
+  "icon": "🗻",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "word_count": 65,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 6
+   },
+   {
+    "book": "upper",
+    "unit": 23
+   }
+  ]
+ },
+ {
+  "slug": "global-problems",
+  "title": "Global and environmental problems",
+  "icon": "🌎",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 146,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 37
+   },
+   {
+    "book": "pre",
+    "unit": 58
+   },
+   {
+    "book": "pre",
+    "unit": 59
+   },
+   {
+    "book": "upper",
+    "unit": 13
+   },
+   {
+    "book": "upper",
+    "unit": 24
+   }
+  ]
+ },
+ {
+  "slug": "transport",
+  "title": "Transport",
+  "icon": "🚌",
+  "levels": [
+   "a2"
+  ],
+  "word_count": 65,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 28
+   },
+   {
+    "book": "pre",
+    "unit": 29
+   }
+  ]
+ },
+ {
+  "slug": "uk-culture",
+  "title": "UK culture",
+  "icon": "🇬\u0001F1E7",
+  "levels": [
+   "a2"
+  ],
+  "word_count": 31,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 33
+   }
+  ]
+ },
+ {
+  "slug": "crime",
+  "title": "Crime",
+  "icon": "🚔",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 106,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 34
+   },
+   {
+    "book": "pre",
+    "unit": 56
+   },
+   {
+    "book": "upper",
+    "unit": 39
+   }
+  ]
+ },
+ {
+  "slug": "media",
+  "title": "The media",
+  "icon": "📰",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 109,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 35
+   },
+   {
+    "book": "pre",
+    "unit": 52
+   },
+   {
+    "book": "upper",
+    "unit": 37
+   }
+  ]
+ },
+ {
+  "slug": "everyday-problems",
+  "title": "Everyday problems",
+  "icon": "🔧",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "word_count": 60,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 36
+   },
+   {
+    "book": "upper",
+    "unit": 12
+   }
+  ]
+ },
+ {
+  "slug": "politics",
+  "title": "Politics",
+  "icon": "🏛",
+  "levels": [
+   "b1",
+   "b2"
+  ],
+  "word_count": 74,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 57
+   },
+   {
+    "book": "upper",
+    "unit": 38
+   }
+  ]
+ },
+ {
+  "slug": "common-verbs",
+  "title": "Common verbs and expressions",
+  "icon": "🔤",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 350,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 38
+   },
+   {
+    "book": "elem",
+    "unit": 39
+   },
+   {
+    "book": "elem",
+    "unit": 40
+   },
+   {
+    "book": "elem",
+    "unit": 41
+   },
+   {
+    "book": "elem",
+    "unit": 42
+   },
+   {
+    "book": "elem",
+    "unit": 43
+   },
+   {
+    "book": "elem",
+    "unit": 44
+   },
+   {
+    "book": "elem",
+    "unit": 45
+   },
+   {
+    "book": "pre",
+    "unit": 81
+   },
+   {
+    "book": "pre",
+    "unit": 82
+   },
+   {
+    "book": "pre",
+    "unit": 83
+   },
+   {
+    "book": "pre",
+    "unit": 84
+   },
+   {
+    "book": "upper",
+    "unit": 57
+   },
+   {
+    "book": "upper",
+    "unit": 89
+   },
+   {
+    "book": "upper",
+    "unit": 90
+   },
+   {
+    "book": "upper",
+    "unit": 91
+   },
+   {
+    "book": "upper",
+    "unit": 92
+   },
+   {
+    "book": "upper",
+    "unit": 93
+   },
+   {
+    "book": "upper",
+    "unit": 94
+   }
+  ]
+ },
+ {
+  "slug": "phrasal-verbs",
+  "title": "Phrasal verbs",
+  "icon": "🧩",
+  "levels": [
+   "a2",
+   "b1"
+  ],
+  "word_count": 62,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 46
+   },
+   {
+    "book": "pre",
+    "unit": 79
+   },
+   {
+    "book": "pre",
+    "unit": 80
+   }
+  ]
+ },
+ {
+  "slug": "movement",
+  "title": "Movement",
+  "icon": "🏃",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "word_count": 39,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 49
+   },
+   {
+    "book": "upper",
+    "unit": 58
+   }
+  ]
+ },
+ {
+  "slug": "linking-words",
+  "title": "Connecting and linking words",
+  "icon": "🔗",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 202,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 50
+   },
+   {
+    "book": "pre",
+    "unit": 92
+   },
+   {
+    "book": "pre",
+    "unit": 93
+   },
+   {
+    "book": "pre",
+    "unit": 94
+   },
+   {
+    "book": "upper",
+    "unit": 61
+   },
+   {
+    "book": "upper",
+    "unit": 62
+   },
+   {
+    "book": "upper",
+    "unit": 63
+   },
+   {
+    "book": "upper",
+    "unit": 64
+   },
+   {
+    "book": "upper",
+    "unit": 65
+   },
+   {
+    "book": "upper",
+    "unit": 66
+   },
+   {
+    "book": "upper",
+    "unit": 67
+   },
+   {
+    "book": "upper",
+    "unit": 68
+   }
+  ]
+ },
+ {
+  "slug": "time",
+  "title": "Time",
+  "icon": "⏳",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 118,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 51
+   },
+   {
+    "book": "elem",
+    "unit": 52
+   },
+   {
+    "book": "pre",
+    "unit": 60
+   },
+   {
+    "book": "upper",
+    "unit": 53
+   }
+  ]
+ },
+ {
+  "slug": "numbers-quantity",
+  "title": "Numbers and quantity",
+  "icon": "🔢",
+  "levels": [
+   "b1",
+   "b2"
+  ],
+  "word_count": 91,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 61
+   },
+   {
+    "book": "upper",
+    "unit": 51
+   },
+   {
+    "book": "upper",
+    "unit": 52
+   }
+  ]
+ },
+ {
+  "slug": "place-distance",
+  "title": "Place and distance",
+  "icon": "📍",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 104,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 53
+   },
+   {
+    "book": "pre",
+    "unit": 62
+   },
+   {
+    "book": "pre",
+    "unit": 90
+   },
+   {
+    "book": "upper",
+    "unit": 54
+   }
+  ]
+ },
+ {
+  "slug": "manner-adverbs",
+  "title": "Manner and adverbs",
+  "icon": "💨",
+  "levels": [
+   "a2",
+   "b1"
+  ],
+  "word_count": 42,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 54
+   },
+   {
+    "book": "pre",
+    "unit": 91
+   }
+  ]
+ },
+ {
+  "slug": "nouns-countable",
+  "title": "Nouns: countable and uncountable",
+  "icon": "⚖️",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 225,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 55
+   },
+   {
+    "book": "pre",
+    "unit": 64
+   },
+   {
+    "book": "pre",
+    "unit": 86
+   },
+   {
+    "book": "upper",
+    "unit": 83
+   },
+   {
+    "book": "upper",
+    "unit": 84
+   },
+   {
+    "book": "upper",
+    "unit": 85
+   },
+   {
+    "book": "upper",
+    "unit": 86
+   },
+   {
+    "book": "upper",
+    "unit": 87
+   },
+   {
+    "book": "upper",
+    "unit": 88
+   }
+  ]
+ },
+ {
+  "slug": "adjectives-describing",
+  "title": "Adjectives and describing things",
+  "icon": "🎭",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 224,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 56
+   },
+   {
+    "book": "pre",
+    "unit": 63
+   },
+   {
+    "book": "pre",
+    "unit": 89
+   },
+   {
+    "book": "upper",
+    "unit": 41
+   },
+   {
+    "book": "upper",
+    "unit": 56
+   },
+   {
+    "book": "upper",
+    "unit": 59
+   },
+   {
+    "book": "upper",
+    "unit": 74
+   }
+  ]
+ },
+ {
+  "slug": "words-prepositions",
+  "title": "Words and prepositions",
+  "icon": "📎",
+  "levels": [
+   "a2",
+   "b1"
+  ],
+  "word_count": 67,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 57
+   },
+   {
+    "book": "pre",
+    "unit": 77
+   },
+   {
+    "book": "pre",
+    "unit": 78
+   }
+  ]
+ },
+ {
+  "slug": "prefixes",
+  "title": "Prefixes",
+  "icon": "➕",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 124,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 58
+   },
+   {
+    "book": "pre",
+    "unit": 70
+   },
+   {
+    "book": "upper",
+    "unit": 71
+   }
+  ]
+ },
+ {
+  "slug": "suffixes",
+  "title": "Suffixes",
+  "icon": "➖",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "word_count": 161,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 59
+   },
+   {
+    "book": "pre",
+    "unit": 71
+   },
+   {
+    "book": "pre",
+    "unit": 72
+   },
+   {
+    "book": "upper",
+    "unit": 70
+   }
+  ]
+ },
+ {
+  "slug": "confusing-words",
+  "title": "Confusing words",
+  "icon": "😕",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "word_count": 213,
+  "unit_refs": [
+   {
+    "book": "elem",
+    "unit": 60
+   },
+   {
+    "book": "upper",
+    "unit": 80
+   },
+   {
+    "book": "upper",
+    "unit": 82
+   }
+  ]
+ },
+ {
+  "slug": "word-formation",
+  "title": "Word formation and phrases",
+  "icon": "🛠",
+  "levels": [
+   "b1",
+   "b2"
+  ],
+  "word_count": 341,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 73
+   },
+   {
+    "book": "pre",
+    "unit": 74
+   },
+   {
+    "book": "pre",
+    "unit": 75
+   },
+   {
+    "book": "pre",
+    "unit": 76
+   },
+   {
+    "book": "upper",
+    "unit": 72
+   },
+   {
+    "book": "upper",
+    "unit": 73
+   },
+   {
+    "book": "upper",
+    "unit": 75
+   },
+   {
+    "book": "upper",
+    "unit": 76
+   },
+   {
+    "book": "upper",
+    "unit": 77
+   },
+   {
+    "book": "upper",
+    "unit": 79
+   }
+  ]
+ },
+ {
+  "slug": "abbreviations",
+  "title": "Abbreviations",
+  "icon": "🔠",
+  "levels": [
+   "b1",
+   "b2"
+  ],
+  "word_count": 74,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 100
+   },
+   {
+    "book": "upper",
+    "unit": 78
+   }
+  ]
+ },
+ {
+  "slug": "verb-patterns",
+  "title": "Verb patterns",
+  "icon": "📐",
+  "levels": [
+   "b1"
+  ],
+  "word_count": 36,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 87
+   },
+   {
+    "book": "pre",
+    "unit": 88
+   }
+  ]
+ },
+ {
+  "slug": "obligation-possibility",
+  "title": "Obligation and possibility",
+  "icon": "🤝",
+  "levels": [
+   "b2"
+  ],
+  "word_count": 24,
+  "unit_refs": [
+   {
+    "book": "upper",
+    "unit": 55
+   }
+  ]
+ },
+ {
+  "slug": "success-failure",
+  "title": "Success and failure",
+  "icon": "🏆",
+  "levels": [
+   "b2"
+  ],
+  "word_count": 41,
+  "unit_refs": [
+   {
+    "book": "upper",
+    "unit": 60
+   }
+  ]
+ },
+ {
+  "slug": "senses",
+  "title": "The senses",
+  "icon": "👁",
+  "levels": [
+   "b1",
+   "b2"
+  ],
+  "word_count": 70,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 85
+   },
+   {
+    "book": "upper",
+    "unit": 46
+   }
+  ]
+ },
+ {
+  "slug": "opinions",
+  "title": "Opinions",
+  "icon": "🗣",
+  "levels": [
+   "b1",
+   "b2"
+  ],
+  "word_count": 58,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 67
+   },
+   {
+    "book": "upper",
+    "unit": 42
+   }
+  ]
+ },
+ {
+  "slug": "praising-criticising",
+  "title": "Praising and criticising",
+  "icon": "👏",
+  "levels": [
+   "b2"
+  ],
+  "word_count": 33,
+  "unit_refs": [
+   {
+    "book": "upper",
+    "unit": 48
+   }
+  ]
+ },
+ {
+  "slug": "apologies-thanks",
+  "title": "Apologies and thanks",
+  "icon": "🙏",
+  "levels": [
+   "b1"
+  ],
+  "word_count": 26,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 65
+   }
+  ]
+ },
+ {
+  "slug": "requests-suggestions",
+  "title": "Requests and suggestions",
+  "icon": "❓",
+  "levels": [
+   "b1"
+  ],
+  "word_count": 22,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 66
+   }
+  ]
+ },
+ {
+  "slug": "formal-informal",
+  "title": "Formal and informal English",
+  "icon": "🎩",
+  "levels": [
+   "b1",
+   "b2"
+  ],
+  "word_count": 187,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 95
+   },
+   {
+    "book": "pre",
+    "unit": 96
+   },
+   {
+    "book": "pre",
+    "unit": 97
+   },
+   {
+    "book": "pre",
+    "unit": 98
+   },
+   {
+    "book": "pre",
+    "unit": 99
+   },
+   {
+    "book": "upper",
+    "unit": 95
+   },
+   {
+    "book": "upper",
+    "unit": 96
+   }
+  ]
+ },
+ {
+  "slug": "similes-proverbs",
+  "title": "Similes and proverbs",
+  "icon": "💭",
+  "levels": [
+   "b2"
+  ],
+  "word_count": 6,
+  "unit_refs": [
+   {
+    "book": "upper",
+    "unit": 97
+   },
+   {
+    "book": "upper",
+    "unit": 98
+   }
+  ]
+ },
+ {
+  "slug": "signs-notices",
+  "title": "Signs and notices",
+  "icon": "⚠️",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "word_count": 44,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 30
+   },
+   {
+    "book": "upper",
+    "unit": 99
+   }
+  ]
+ },
+ {
+  "slug": "headline-english",
+  "title": "Headline English",
+  "icon": "📰",
+  "levels": [
+   "b2"
+  ],
+  "word_count": 33,
+  "unit_refs": [
+   {
+    "book": "upper",
+    "unit": 100
+   }
+  ]
+ },
+ {
+  "slug": "us-english",
+  "title": "US English",
+  "icon": "🗽",
+  "levels": [
+   "b2"
+  ],
+  "word_count": 80,
+  "unit_refs": [
+   {
+    "book": "upper",
+    "unit": 101
+   }
+  ]
+ },
+ {
+  "slug": "onomatopoeia",
+  "title": "Onomatopoeic words",
+  "icon": "🔊",
+  "levels": [
+   "b2"
+  ],
+  "word_count": 27,
+  "unit_refs": [
+   {
+    "book": "upper",
+    "unit": 81
+   }
+  ]
+ },
+ {
+  "slug": "learning-vocab",
+  "title": "Learning vocabulary",
+  "icon": "📚",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "word_count": 164,
+  "unit_refs": [
+   {
+    "book": "pre",
+    "unit": 1
+   },
+   {
+    "book": "pre",
+    "unit": 2
+   },
+   {
+    "book": "pre",
+    "unit": 3
+   },
+   {
+    "book": "pre",
+    "unit": 4
+   },
+   {
+    "book": "upper",
+    "unit": 1
+   },
+   {
+    "book": "upper",
+    "unit": 2
+   },
+   {
+    "book": "upper",
+    "unit": 3
+   }
+  ]
+ }
+]

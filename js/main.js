@@ -1903,7 +1903,7 @@ function shouldEnterAppMode() {
 }
 
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ptest'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'vocab', 'ptest'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -2012,10 +2012,12 @@ function show(view, arg) {
   if (view !== 'lesson') { state.quiz = null; }
   if (view !== 'grammar') { state.gquiz = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'grammar-test') { gtestStopTimer(); state.gtest = null; document.body.classList.remove('duo-playing'); }
+  if (view !== 'vocab') { state.vquiz = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'ptest') { if (state.ptest) { document.body.classList.remove('duo-playing'); } state.ptest = null; }
   /* Desktop home uses the mockup v6 dashboard layout. */
   document.body.classList.toggle('view-home', view === 'home');
   document.body.classList.toggle('view-grammar', view === 'grammar');
+  document.body.classList.toggle('view-vocab', view === 'vocab');
   setChrome();
   paintWelcomeHeader();
   _wasDesktop = isDesktop();
@@ -2046,6 +2048,7 @@ function show(view, arg) {
   else if (view === 'choose-teacher') renderChooseTeacher(v);
   else if (view === 'grammar') renderGrammar(v, arg);
   else if (view === 'grammar-test') renderGrammarTest(v, arg);
+  else if (view === 'vocab') renderVocab(v, arg);
   else if (view === 'ptest') renderPTest(v, arg);
 }
 
@@ -2069,7 +2072,7 @@ function setChrome() {
       const tv = t.getAttribute('data-view');
       // The lessons archive is a sub-page of Home: keep Home highlighted there.
       // Same for the grammar section and the grammar placement test (entered from the home banner).
-      const active = tv === state.view || ((state.view === 'lessons' || state.view === 'grammar' || state.view === 'grammar-test') && tv === 'home');
+      const active = tv === state.view || ((state.view === 'lessons' || state.view === 'grammar' || state.view === 'grammar-test' || state.view === 'vocab') && tv === 'home');
       t.classList.toggle('active', active);
       if (active) t.setAttribute('aria-current', 'page');
       else t.removeAttribute('aria-current');
@@ -7354,6 +7357,7 @@ function paintHome(v, mistakes, attempts) {
 
   // 0b2 — Grammar guides banner (smart: explore / continue / completed)
   html += '<div id="home-grammar-wrap"></div>';
+  html += '<div id="home-vocab-wrap"></div>';
 
   // 0c — Homework from teacher (filled async; empty when none pending)
   html += '<div id="home-hw-wrap"></div>';
@@ -7422,6 +7426,7 @@ function paintHome(v, mistakes, attempts) {
 
   v.innerHTML = html;
   paintGrammarBanner();
+  paintVocabBanner();
 }
 
 function attemptCardHTML(a) {
@@ -7670,6 +7675,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   let html = '<div class="dhome">';
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
   html += '<div id="home-grammar-wrap"></div>';
+  html += '<div id="home-vocab-wrap"></div>';
   html += '<div id="home-hw-wrap"></div>';
   html += '<div class="dh-grid">' + dhQuestsHTML() +
     '<div class="dh-col">' + dhLessonHTML(today) + dhMistakesHTML(mistakes) + '</div></div>';
@@ -7689,6 +7695,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   wireDhPlayer();
   refreshDhProgress();
   paintGrammarBanner();
+  paintVocabBanner();
 }
 
 /* ---------------- PROFILE ---------------- */
@@ -13483,5 +13490,318 @@ window.MuseApp = {
   launchCelebration: launchCelebration, maybeShowInboxPrompt: maybeShowInboxPrompt,
   renderInbox: renderInbox, loadAdminBot: loadAdminBot, saveAdminBot: saveAdminBot,
 };
+
+/* ---------------- vocabulary (#/vocab) ----------------
+   66 deduped categories from English Vocabulary in Use
+   (Elementary A1-A2, Pre-intermediate & Intermediate A2-B1, Upper-intermediate B2).
+   Entry: home banner (#home-vocab-wrap) -> #/vocab (hub) -> #/vocab/<slug>.
+   Practice quiz: up to 10 questions, word -> Persian meaning, practice mode (no XP). */
+
+var VC_LEVELS = [
+  { id: 'all', label: 'All' }, { id: 'a1', label: 'A1' }, { id: 'a2', label: 'A2' },
+  { id: 'b1', label: 'B1' }, { id: 'b2', label: 'B2' }
+];
+var VC_LV_COLORS = { a1: '#D9A21B', a2: '#E8833A', b1: '#3FA46A', b2: '#F26522' };
+var VC_LV_SUB = {
+  all: 'Every vocabulary topic from A1 to B2 \u2014 words with meanings and examples.',
+  a1: 'Essential everyday words with meanings and examples.',
+  a2: 'Everyday words with meanings and examples.',
+  b1: 'Intermediate words with meanings and examples.',
+  b2: 'Upper-intermediate words with meanings and examples.'
+};
+
+function vocabProgress() {
+  var p = lsGet('muse_vocab_v1');
+  return (p && typeof p === 'object' && !Array.isArray(p)) ? p : {};
+}
+function setVocabProgress(p) { lsSet('muse_vocab_v1', p); }
+
+function loadVocabCats() {
+  if (state.vocabCats) return Promise.resolve(state.vocabCats);
+  return fetch('/data/vocab/categories.json').then(function (res) {
+    if (!res.ok) throw new Error('vocab categories missing');
+    return res.json();
+  }).then(function (data) {
+    state.vocabCats = data;
+    return data;
+  });
+}
+function loadVocabWords(slug) {
+  state.vocabWords = state.vocabWords || {};
+  if (state.vocabWords[slug]) return Promise.resolve(state.vocabWords[slug]);
+  return fetch('/data/vocab/by-category/' + slug + '.json').then(function (res) {
+    if (!res.ok) throw new Error('vocab category missing');
+    return res.json();
+  }).then(function (data) {
+    state.vocabWords[slug] = data;
+    return data;
+  });
+}
+function vcLvBadge(lv) {
+  var label = lv === 'all' ? 'A1\u2013B2' : lv.toUpperCase();
+  var color = lv === 'all' ? '#8A93A6' : (VC_LV_COLORS[lv] || '#8A93A6');
+  return '<span class="vc-lv" style="background:' + color + '">' + label + '</span>';
+}
+function vcLevelBadges(levels) {
+  return (levels || []).map(vcLvBadge).join('');
+}
+
+function renderVocab(v, slug) {
+  if (slug) { renderVocabCat(v, slug); return; }
+  if (!state.vcFilter) state.vcFilter = { level: normalizeLevel(state.user && state.user.level) || 'a1', q: '' };
+  if (state.vcFilter.level === 'c1' || state.vcFilter.level === 'c2') state.vcFilter.level = 'b2';
+  var f = state.vcFilter;
+  var totalWords = (state.vocabCats || []).reduce(function (a, c) { return a + (c.word_count || 0); }, 0);
+  v.innerHTML = '<div class="vc-hub">' +
+    '<div class="vc-crumb"><span>\uD83D\uDCDA</span> Vocabulary <span class="vc-crumb-sep">\u203A</span> <b id="vc-crumb-lv"></b></div>' +
+    '<div class="vc-hero"><div class="vc-hero-t">' +
+      '<h1>Vocabulary <em>Builder</em></h1>' +
+      '<p>6,298 words from the Vocabulary in Use books, grouped into 66 topics \u2014 with meanings and examples.</p>' +
+    '</div><div class="vc-mascot" aria-hidden="true">\uD83D\uDCDA</div></div>' +
+    '<div class="vc-feats">' +
+      '<span class="vc-feat"><i>\uD83D\uDCD6</i><b>Real<br>meanings</b></span>' +
+      '<span class="vc-feat"><i>\uD83D\uDCAC</i><b>Example<br>sentences</b></span>' +
+      '<span class="vc-feat"><i>\uD83C\uDFAF</i><b>Quick<br>practice</b></span>' +
+    '</div>' +
+    '<div class="vc-filters" role="tablist">' +
+    VC_LEVELS.map(function (lv) {
+      return '<button class="vc-pill vc-pill-lv-' + lv.id + (f.level === lv.id ? ' on' : '') + '" data-vlevel="' + lv.id + '">' + lv.label + '</button>';
+    }).join('') + '</div>' +
+    '<div class="vc-search"><span class="vc-search-ico">\uD83D\uDD0D</span>' +
+      '<input id="vc-search" type="search" placeholder="Search vocabulary topics..." value="' + esc(f.q) + '" aria-label="Search vocabulary topics"></div>' +
+    '<div class="vc-sec"><span id="vc-sec-lv"></span>' +
+      '<div class="vc-sec-t"><h2>Vocabulary Topics</h2><p id="vc-sec-sub"></p></div>' +
+      '<span class="vc-count" id="vc-count"></span></div>' +
+    '<div id="vc-list"><div class="empty">Loading\u2026</div></div></div>';
+  paintVcHeader();
+  paintVocabList();
+  Array.prototype.forEach.call(v.querySelectorAll('[data-vlevel]'), function (btn) {
+    btn.addEventListener('click', function () {
+      state.vcFilter.level = btn.getAttribute('data-vlevel');
+      Array.prototype.forEach.call(v.querySelectorAll('[data-vlevel]'), function (bb) {
+        bb.classList.toggle('on', bb === btn);
+      });
+      paintVcHeader();
+      paintVocabList();
+    });
+  });
+  var input = v.querySelector('#vc-search'), deb = null;
+  input.addEventListener('input', function () {
+    clearTimeout(deb);
+    deb = setTimeout(function () { state.vcFilter.q = input.value.trim(); paintVocabList(); }, 250);
+  });
+}
+
+function paintVcHeader() {
+  var f = state.vcFilter || { level: 'all', q: '' };
+  var crumb = document.getElementById('vc-crumb-lv');
+  if (crumb) crumb.textContent = f.level === 'all' ? 'All levels' : f.level.toUpperCase();
+  var secLv = document.getElementById('vc-sec-lv');
+  if (secLv) secLv.innerHTML = vcLvBadge(f.level);
+  var sub = document.getElementById('vc-sec-sub');
+  if (sub) sub.textContent = VC_LV_SUB[f.level] || VC_LV_SUB.all;
+}
+
+function paintVocabList() {
+  var wrap = document.getElementById('vc-list');
+  if (!wrap) return;
+  var f = state.vcFilter || { level: 'all', q: '' };
+  loadVocabCats().then(function (cats) {
+    var prog = vocabProgress();
+    var q = (f.q || '').toLowerCase();
+    var list = cats.filter(function (c) {
+      if (f.level !== 'all' && c.levels.indexOf(f.level) === -1) return false;
+      if (q && c.title.toLowerCase().indexOf(q) === -1) return false;
+      return true;
+    });
+    if (!list.length) { wrap.innerHTML = '<div class="empty">No topics match.</div>'; return; }
+    var count = document.getElementById('vc-count');
+    if (count) count.textContent = list.length + ' topic' + (list.length === 1 ? '' : 's');
+    wrap.innerHTML = '<div class="vc-cards">' + list.map(function (c) {
+      return vocabCardHTML(c, prog[c.slug]);
+    }).join('') + '</div>';
+  }).catch(function () {
+    wrap.innerHTML = '<div class="empty">Could not load vocabulary topics. Check your connection and try again.</div>';
+  });
+}
+
+function vocabCardHTML(c, p) {
+  var status;
+  if (p && p.done) status = '<span class="vc-status done">\u2713 practised</span>';
+  else status = '<span class="vc-status">' + c.word_count + ' words</span>';
+  return '<a class="vc-card" href="#/vocab/' + esc(c.slug) + '">' +
+    '<span class="vc-ico">' + esc(c.icon || '\uD83D\uDCD6') + '</span>' +
+    '<span class="vc-card-main"><span class="vc-titlerow">' + vcLevelBadges(c.levels) + '<b>' + esc(c.title) + '</b></span>' + status + '</span>' +
+    '<span class="vc-chev" aria-hidden="true">\u203A</span></a>';
+}
+
+/* ---------------- vocabulary category (#/vocab/<slug>) ---------------- */
+
+function renderVocabCat(v, slug) {
+  v.innerHTML = '<div class="vc-topic"><div class="empty">Loading\u2026</div></div>';
+  loadVocabCats().then(function (cats) {
+    var cat = null;
+    for (var i = 0; i < cats.length; i++) if (cats[i].slug === slug) cat = cats[i];
+    if (!cat) {
+      v.innerHTML = '<div class="vc-topic"><div class="empty">Topic not found. <a href="#/vocab">Back to all topics</a></div></div>';
+      return;
+    }
+    return loadVocabWords(slug).then(function (words) {
+      var prog = vocabProgress()[slug];
+      var best = prog && prog.done ? '<span class="vc-best">\u2713 Practised</span>' : '';
+      var rows = words.map(function (w) {
+        return '<div class="vc-word">' +
+          '<div class="vc-word-top"><b>' + esc(w.word) + '</b>' +
+          (w.phonetic ? '<span class="vc-phon">/' + esc(w.phonetic) + '/</span>' : '') +
+          (w.pos ? '<span class="vc-pos">' + esc(w.pos) + '</span>' : '') +
+          vcLevelBadges(w.levels) + '</div>' +
+          (w.meaning_fa ? '<div class="vc-meaning">' + esc(w.meaning_fa) + '</div>' : '') +
+          (w.example_en ? '<div class="vc-example">' + esc(w.example_en) + '</div>' : '') +
+          '</div>';
+      }).join('');
+      v.innerHTML = '<div class="vc-topic">' +
+        '<a class="vc-back" href="#/vocab">\u2039 All topics</a>' +
+        '<div class="vc-hero vc-hero-topic"><div class="vc-hero-t">' +
+        '<div class="vc-hero-ico">' + esc(cat.icon || '\uD83D\uDCD6') + '</div>' +
+        '<h1>' + esc(cat.title) + '</h1>' +
+        '<p>' + cat.word_count + ' words \u00B7 ' + vcLevelBadges(cat.levels) + ' ' + best + '</p>' +
+        '</div></div>' +
+        '<button class="btn btn-primary vc-start" id="vc-start-btn">Practice these words \u2192</button>' +
+        '<p class="vc-xp-note">Quick quiz \u00B7 word \u2192 meaning \u00B7 practice mode (no points)</p>' +
+        '<div class="vc-words">' + rows + '</div></div>';
+      document.getElementById('vc-start-btn').addEventListener('click', function () {
+        startVocabQuiz(cat, words);
+      });
+      window.scrollTo(0, 0);
+    });
+  }).catch(function () {
+    v.innerHTML = '<div class="vc-topic"><div class="empty">Could not load this topic.</div></div>';
+  });
+}
+
+/* ---------------- vocabulary quiz ---------------- */
+
+function startVocabQuiz(cat, words) {
+  var pool = words.filter(function (w) { return w.meaning_fa; });
+  if (pool.length < 4) {
+    alert('Not enough words with meanings in this topic yet.');
+    return;
+  }
+  var items = shuffleArr(pool).slice(0, 10).map(function (w) {
+    var distract = shuffleArr(pool.filter(function (x) { return x.word !== w.word; })).slice(0, 3);
+    var options = shuffleArr([w.meaning_fa].concat(distract.map(function (x) { return x.meaning_fa; })));
+    return { word: w.word, example: w.example_en, options: options, answer: options.indexOf(w.meaning_fa) };
+  });
+  state.vquiz = { slug: cat.slug, title: cat.title, items: items, idx: 0, picked: -1, answered: false, correct: 0 };
+  document.body.classList.add('duo-playing');
+  renderVocabQuiz();
+}
+
+function renderVocabQuiz() {
+  var q = state.vquiz; if (!q) return;
+  var v = document.getElementById('view');
+  var it = q.items[q.idx];
+  var n = q.items.length;
+  var letters = ['A', 'B', 'C', 'D'];
+  var opts = it.options.map(function (op, i) {
+    var cls = 'gt-opt';
+    if (q.answered) {
+      if (i === it.answer) cls += ' ok';
+      else if (i === q.picked) cls += ' no';
+      else cls += ' dim';
+    }
+    return '<button class="' + cls + '"' + (q.answered ? ' disabled' : '') + ' data-vopt="' + i + '">' +
+      '<span class="gt-opt-letter">' + letters[i] + '</span>' +
+      '<span class="gt-opt-text">' + esc(op) + '</span></button>';
+  }).join('');
+  var sheet = '';
+  if (q.answered) {
+    var good = q.picked === it.answer;
+    sheet = '<div class="gt-sheet ' + (good ? 'good' : 'bad') + '"><div class="gt-sheet-inner">' +
+      '<div class="gt-sheet-msg">' + (good ? '\uD83C\uDF89 Correct!' : '\uD83D\uDCA1 Correct answer: <b>' + esc(it.options[it.answer]) + '</b>') + '</div>' +
+      (it.example ? '<div class="gt-sheet-explain"><em>' + esc(it.example) + '</em></div>' : '') +
+      '<button class="gt-btn ' + (good ? 'gt-btn-green' : 'gt-btn-red') + ' gt-btn-block" id="vc-next-btn">' +
+      (q.idx + 1 >= n ? 'SEE RESULTS' : 'CONTINUE') + '</button>' +
+      '</div></div>';
+  }
+  var barPct = Math.round((q.idx + (q.answered ? 1 : 0)) / n * 100);
+  v.innerHTML = '<div class="vc-quiz gt-wrap">' +
+    '<div class="gt-top"><button class="gt-x" id="vc-quiz-quit" aria-label="Back to topic">\u2715</button>' +
+    '<div class="gt-progress"><span style="width:' + barPct + '%"></span></div>' +
+    '<div class="gt-qcount">' + (q.idx + 1) + '/' + n + '</div></div>' +
+    '<div class="gt-mode">Practice mode \u2014 no points</div>' +
+    '<div class="gt-q">What does <b>\u201C' + esc(it.word) + '\u201D</b> mean?</div>' +
+    '<div class="gt-opts">' + opts + '</div>' + sheet + '</div>';
+  Array.prototype.forEach.call(v.querySelectorAll('[data-vopt]'), function (btn) {
+    btn.addEventListener('click', function () { answerVocabQuiz(parseInt(btn.getAttribute('data-vopt'), 10)); });
+  });
+  var next = document.getElementById('vc-next-btn');
+  if (next) next.addEventListener('click', nextVocabQuiz);
+  document.getElementById('vc-quiz-quit').addEventListener('click', function () {
+    state.vquiz = null;
+    document.body.classList.remove('duo-playing');
+    go('vocab', q.slug);
+  });
+  window.scrollTo(0, 0);
+}
+
+function answerVocabQuiz(i) {
+  var q = state.vquiz; if (!q || q.answered) return;
+  q.picked = i; q.answered = true;
+  if (i === q.items[q.idx].answer) q.correct++;
+  renderVocabQuiz();
+}
+
+function nextVocabQuiz() {
+  var q = state.vquiz; if (!q) return;
+  q.idx++; q.picked = -1; q.answered = false;
+  if (q.idx >= q.items.length) { finishVocabQuiz(); return; }
+  renderVocabQuiz();
+}
+
+function finishVocabQuiz() {
+  var q = state.vquiz; if (!q) return;
+  var v = document.getElementById('view');
+  var n = q.items.length, score = q.correct;
+  var prog = vocabProgress();
+  var rec = prog[q.slug] || {};
+  rec.attempts = (rec.attempts || 0) + 1;
+  rec.done = true;
+  rec.best = Math.max(rec.best || 0, score);
+  rec.total = n;
+  prog[q.slug] = rec;
+  setVocabProgress(prog);
+  state.vquiz = null;
+  document.body.classList.remove('duo-playing');
+  var pct = Math.round(score / n * 100);
+  var msg = pct === 100 ? '\uD83C\uDF89 Perfect!' : (pct >= 70 ? '\uD83D\uDC4D Great job!' : (pct >= 40 ? '\uD83D\uDCAA Keep practising!' : '\uD83D\uDCD6 Review the words and try again!'));
+  v.innerHTML = '<div class="gt-wrap gt-done">' +
+    '<div class="gt-done-ico">' + (pct >= 70 ? '\uD83C\uDF89' : '\uD83D\uDCD6') + '</div>' +
+    '<h2>' + msg + '</h2>' +
+    '<p class="gt-done-sub">' + score + ' / ' + n + ' correct \u00B7 ' + esc(q.title) + '</p>' +
+    '<div class="gt-done-btns">' +
+    '<button class="gt-btn gt-btn-green gt-btn-block" id="vc-again-btn">Practice again \u21BB</button>' +
+    '<a class="gt-btn gt-btn-ghost gt-btn-block" href="#/vocab/' + esc(q.slug) + '">Back to topic</a>' +
+    '<a class="gt-btn gt-btn-ghost gt-btn-block" href="#/vocab">All topics</a>' +
+    '</div></div>';
+  document.getElementById('vc-again-btn').addEventListener('click', function () {
+    loadVocabWords(q.slug).then(function (words) { startVocabQuiz({ slug: q.slug, title: q.title }, words); });
+  });
+  window.scrollTo(0, 0);
+}
+
+/* ---------------- vocabulary home banner ---------------- */
+
+function paintVocabBanner() {
+  var wrap = document.getElementById('home-vocab-wrap');
+  if (!wrap) return;
+  var prog = vocabProgress();
+  var doneCount = 0;
+  Object.keys(prog).forEach(function (k) { if (prog[k] && prog[k].done) doneCount++; });
+  var inner = '<span class="g-b-icon">\uD83D\uDCDA</span><span class="g-b-main"><b>Vocabulary Builder</b>' +
+    '<span>6,298 words \u00B7 66 topics \u00B7 A1\u2013B2' +
+    (doneCount ? ' \u00B7 ' + doneCount + ' practised' : '') + '</span></span><span class="g-b-cta">Explore \u2192</span>';
+  wrap.innerHTML = '<a class="g-banner" href="#/vocab">' + inner + '</a>';
+}
 
 })();
