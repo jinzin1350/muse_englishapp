@@ -4128,7 +4128,7 @@ async function loadAdminTeacherView(teacherId) {
 async function openTeacherAssignment(i) {
   const r = (state.teacherAssignments || [])[i];
   if (!r) return;
-  const roster = state.teacherStudents || [];
+  const roster = state.teacherStudents || state.twStudents || [];
   const nameOf = {};
   roster.forEach(function (s) {
     nameOf[s.user_id] = s.display_name || (s.email || '?').split('@')[0];
@@ -4141,23 +4141,41 @@ async function openTeacherAssignment(i) {
   } catch (e) {}
   const byId = {};
   results.forEach(function (x) { byId[x.student_id] = x; });
-  showModal(
-    '<div class="modal-ico">' + (r.status === 'scheduled' ? '⏰' : (r.kind === 'exam' ? '📋' : '📝')) + '</div>' +
-    '<h2>' + esc(r.title) + '</h2>' +
-    (r.status === 'scheduled' && r.send_at
-      ? '<p class="muted">' + esc(schedLabel(r.send_at, r.send_tz)).replace(/^⏰ /, '') + ' — not sent yet.</p>'
-      : '<p class="muted">' + (r.student_ids || []).length + ' students · ' + results.length + ' completed</p>') +
-    '<div class="as-results">' +
-    (r.student_ids || []).map(function (uid) {
+  const targets = (r.student_ids || []).length;
+  const done = results.length;
+  const sub = r.status === 'scheduled' && r.send_at
+    ? esc(schedLabel(r.send_at, r.send_tz)).replace(/^⏰ /, '') + ' — not sent yet.'
+    : targets + ' student' + (targets === 1 ? '' : 's') + ' · ' + done + ' completed';
+  let statusBox;
+  if (r.status === 'scheduled') {
+    statusBox = '<div class="tw-m-status"><span class="tw-m-status-ico">⏰</span>' +
+      '<div><b class="tw-m-status-t">Scheduled</b>' +
+      '<p>Sends automatically at the planned time.<br>You can cancel it below.</p></div></div>';
+  } else if (!done) {
+    statusBox = '<div class="tw-m-status"><span class="tw-m-status-ico">⏳</span>' +
+      '<div><b class="tw-m-status-t">Pending</b>' +
+      '<p>No student activity yet.<br>Once students start, their progress will appear here.</p></div></div>';
+  } else {
+    statusBox = '<div class="tw-m-rows">' + (r.student_ids || []).map(function (uid) {
       const res = byId[uid];
-      return '<div class="as-rrow"><span>' + esc(nameOf[uid] || '—') + '</span>' +
-        (res ? '<b class="ok">✓ ' + res.score + '/' + res.total + '</b>'
-             : '<span class="muted">⏳ pending</span>') + '</div>';
-    }).join('') + '</div>' +
+      const nm = nameOf[uid] || '—';
+      return '<div class="tw-m-row">' + twAvatar(nm) + '<b>' + esc(nm) + '</b>' +
+        (res ? '<span class="tw-pill tw-pill-green">✓ ' + res.score + '/' + res.total + '</span>'
+             : '<span class="tw-pill tw-pill-gray">⏳ pending</span>') + '</div>';
+    }).join('') + '</div>';
+  }
+  showModal(
+    '<div class="tw-modal">' +
+    '<button class="tw-m-x" data-action="modal-close" aria-label="Close">✕</button>' +
+    '<div class="tw-m-ill"><span class="tw-m-clip">📋</span><span class="tw-m-sp1">✨</span><span class="tw-m-sp2">✨</span></div>' +
+    '<h2 class="tw-m-title">' + esc(r.title) + '</h2>' +
+    '<p class="tw-m-sub">' + sub + '</p>' +
+    statusBox +
     (r.status === 'scheduled'
-      ? '<button class="btn btn-ghost btn-block" data-action="assignment-cancel" data-i="' + i + '" style="color:#d33;border-color:#eec">✕ Cancel scheduled send</button>'
-      : '<button class="btn btn-ghost btn-block" data-action="assignment-delete" data-i="' + i + '" style="color:#d33;border-color:#eec">🗑 Delete assignment</button>') +
-    '<button class="btn btn-ghost btn-block" data-action="modal-close">Close</button>'
+      ? '<button class="tw-m-del" data-action="assignment-cancel" data-i="' + i + '">✕ Cancel scheduled send</button>'
+      : '<button class="tw-m-del" data-action="assignment-delete" data-i="' + i + '">🗑 Delete assignment</button>') +
+    '<button class="tw-m-closebtn" data-action="modal-close">Close</button>' +
+    '</div>'
   );
 }
 
@@ -11595,7 +11613,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610180155';
+var APP_VERSION = '202610180226';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

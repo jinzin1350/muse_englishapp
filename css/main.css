@@ -3989,3 +3989,26 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
   .tw-toplinks a:not(.tw-btn) { display: none; }
   .tw-asg { flex-wrap: wrap; }
 }
+/* ---------- teacher assignment detail modal (v2) ---------- */
+.modal-card:has(.tw-modal) { padding: 2rem 1.8rem 1.6rem; border-radius: 24px; max-width: 560px; }
+.tw-modal { position: relative; text-align: center; }
+.tw-m-x { position: absolute; top: -1.2rem; right: -1rem; border: 0; background: none; font-size: 1.25rem; color: #9AA1B5; cursor: pointer; padding: 0.4rem; border-radius: 8px; }
+.tw-m-x:hover { background: #F3EDE0; color: #5B6478; }
+.tw-m-ill { position: relative; display: inline-block; margin-bottom: 0.9rem; }
+.tw-m-clip { font-size: 3.4rem; display: inline-block; background: #FDEBD8; border-radius: 50%; width: 96px; height: 96px; line-height: 96px; }
+.tw-m-sp1, .tw-m-sp2 { position: absolute; font-size: 1.1rem; }
+.tw-m-sp1 { top: 6px; right: -6px; }
+.tw-m-sp2 { bottom: 10px; left: -10px; font-size: 0.9rem; }
+.tw-m-title { font-family: "Lora", Georgia, serif; font-weight: 600; color: var(--tw-ink, #232B4D); font-size: 1.65rem; margin: 0 0 0.45rem; letter-spacing: -0.01em; }
+.tw-m-sub { color: #8A8FA0; font-size: 1.02rem; margin: 0 0 1.3rem; }
+.tw-m-status { display: flex; gap: 1rem; align-items: flex-start; text-align: left; background: #FDF8EE; border: 1px solid #F3E8D2; border-radius: 16px; padding: 1.15rem 1.25rem; margin-bottom: 1.1rem; }
+.tw-m-status-ico { width: 52px; height: 52px; border-radius: 50%; background: #FFE8D6; display: inline-flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0; }
+.tw-m-status-t { font-family: "Lora", Georgia, serif; font-size: 1.25rem; color: var(--tw-ink, #232B4D); display: block; margin-bottom: 0.3rem; }
+.tw-m-status p { margin: 0; color: #8A8FA0; font-size: 0.95rem; line-height: 1.55; }
+.tw-m-rows { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.1rem; max-height: 300px; overflow-y: auto; }
+.tw-m-row { display: flex; align-items: center; gap: 0.7rem; background: #FFFDF8; border: 1px solid #F3EDE0; border-radius: 12px; padding: 0.6rem 0.85rem; }
+.tw-m-row b { flex: 1; text-align: left; color: var(--tw-ink, #232B4D); font-size: 0.93rem; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tw-m-del { display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; border: 1.5px solid #F0B4B4; background: #FFF5F5; color: #D33A3A; border-radius: 14px; padding: 0.8rem; font-weight: 700; font-size: 0.98rem; cursor: pointer; margin-bottom: 0.7rem; font-family: inherit; }
+.tw-m-del:hover { background: #FDECEC; }
+.tw-m-closebtn { width: 100%; border: 0; background: #232B4D; color: #fff; border-radius: 14px; padding: 0.85rem; font-weight: 700; font-size: 1rem; cursor: pointer; font-family: inherit; }
+.tw-m-closebtn:hover { background: #2E3A63; }
