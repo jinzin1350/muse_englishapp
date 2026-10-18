@@ -3191,6 +3191,20 @@ const ASSIGN_TOPICS = {
   ]
 };
 
+/* ---- Grammar v2 pilot metadata (family -> topics, linked points) ---- */
+var V2_FAMILIES = {"present-tenses": {"title": "Present Tenses in English: Simple and Continuous", "topics": ["present-simple", "present-continuous", "present-simple-vs-present-continuous", "stative-verbs"]}, "past-tenses": {"title": "Past Tenses", "topics": ["past-perfect"]}};
+var V2_TOPICS = {"past-perfect": {"h1": "Past Perfect (had done)", "family": "past-tenses", "summary": "One step further back in the past: When I arrived, the film had started.", "linked_points": [], "levels": ["b1", "b2", "c1"], "points": [{"id": "ppf-form-use", "level": "b1", "title": "Form and main use: something earlier in the past", "summary": "had + past participle for an action before another past moment."}, {"id": "ppf-vs-past-simple", "level": "b1", "title": "Past simple or past perfect? The order of events", "summary": "Past simple for events in order; past perfect for an event that happened earlier than the one you're talking about."}, {"id": "ppf-time-words", "level": "b1", "title": "By the time, already, just, never … before", "summary": "by the time + past simple, then past perfect; already, just, never … before with the past perfect."}, {"id": "ppf-vs-present-perfect", "level": "b1", "title": "Present perfect or past perfect?", "summary": "have done = before now; had done = before a moment in the past."}, {"id": "ppf-first-time", "level": "b2", "title": "It was the first time I'd…; states up to a past moment", "summary": "It was the first time / the best … I'd ever + past perfect; state verbs up to a past moment use the past perfect simple."}, {"id": "ppf-optional", "level": "c1", "title": "When the past perfect is optional", "summary": "If the order is already clear (after, as soon as, before) the past simple is also fine; once the earlier time is set, you can continue in the past simple."}, {"id": "ppf-reporting", "level": "c1", "title": "Past perfect in reported speech and thoughts", "summary": "A present perfect becomes past perfect when reported in the past; a past simple can become past perfect or stay the same."}, {"id": "ppf-unfulfilled", "level": "c1", "title": "Plans that didn't happen: I had hoped to…", "summary": "had hoped / meant / intended / planned / wanted to = a plan or wish that didn't happen."}]}, "present-continuous": {"h1": "Present Continuous", "family": "present-tenses", "summary": "Now, around now, plans and changes: I'm working, are you coming?", "linked_points": [], "levels": ["a1", "a2", "b1", "c1"], "points": [{"id": "pc-form-now", "level": "a1", "title": "Form and use: I'm working (now)", "summary": "am / is / are + verb-ing for something happening at the moment of speaking."}, {"id": "pc-around-now", "level": "a2", "title": "Around now and temporary situations", "summary": "Use the present continuous for things happening around now (this week, at the moment) and temporary situations."}, {"id": "pc-future", "level": "a2", "title": "Future arrangements: I'm meeting Sam tonight", "summary": "Use the present continuous for future plans that are already arranged, usually with a time."}, {"id": "pc-changing", "level": "b1", "title": "Changing situations: It's getting colder", "summary": "Use the present continuous for situations that are changing now: get, become, increase, improve."}, {"id": "pc-always", "level": "b1", "title": "always + continuous: He's always complaining", "summary": "always / constantly / forever + continuous for something that happens too often, often annoying."}, {"id": "pc-regular-time", "level": "c1", "title": "In progress at a regular time; always for typical behaviour", "summary": "At 8 I'm usually driving = in the middle of it at that time; always + continuous can also describe typical (even positive) behaviour."}, {"id": "pc-future-limits", "level": "c1", "title": "When not to use it for the future", "summary": "Use the present continuous for arranged or decided plans, not for predictions or permanent future situations."}]}, "present-simple-vs-present-continuous": {"h1": "Present Simple vs Present Continuous", "family": "present-tenses", "summary": "How to choose: I work (in general) or I'm working (now)?", "linked_points": ["sv-basic", "sv-two-meanings", "pc-always"], "levels": ["a2", "b1", "c1"], "points": [{"id": "psc-now-general", "level": "a2", "title": "Now or in general?", "summary": "Present continuous for now; present simple for habits, facts and things in general."}, {"id": "psc-temporary-permanent", "level": "b1", "title": "Temporary or permanent?", "summary": "Present continuous for temporary situations; present simple for permanent ones."}, {"id": "psc-stories-commentary", "level": "c1", "title": "Stories, jokes and live commentary", "summary": "In informal stories and live commentary, the present continuous gives the background and the present simple gives the main events."}]}, "present-simple": {"h1": "Present Simple", "family": "present-tenses", "summary": "Habits, facts, timetables and more: I work, she works, do you work?", "linked_points": [], "levels": ["a1", "a2", "b1", "c1"], "points": [{"id": "ps-form", "level": "a1", "title": "Form: I work, she works", "summary": "Use the base verb with I, you, we, they; add -s or -es with he, she, it."}, {"id": "ps-negative-questions", "level": "a1", "title": "Negatives and questions: don't, doesn't, do, does", "summary": "Negatives: don't / doesn't + base verb. Questions: do / does + subject + base verb."}, {"id": "ps-uses", "level": "a1", "title": "Uses: habits, facts and permanent situations", "summary": "Use the present simple for habits, routines, facts, permanent situations and likes."}, {"id": "ps-timetables", "level": "a2", "title": "Timetables and schedules: The train leaves at 8", "summary": "Use the present simple for future events on a timetable or schedule."}, {"id": "ps-performatives", "level": "b1", "title": "I promise, I agree, I apologise: saying is doing", "summary": "Verbs like promise, agree and apologise do the action when you say them: use the present simple."}, {"id": "ps-headlines-reporting", "level": "c1", "title": "Headlines, summaries, instructions and I hear", "summary": "The present simple is also used in headlines, plot summaries, instructions and to pass on news (I hear, I gather)."}]}, "stative-verbs": {"h1": "Stative Verbs", "family": "present-tenses", "summary": "Verbs for states, not actions: I know (not I'm knowing), and when the continuous is possible.", "linked_points": [], "levels": ["a2", "b1", "b2", "c1"], "points": [{"id": "sv-basic", "level": "a2", "title": "Verbs we don't use in the continuous", "summary": "know, want, like, need, understand, believe, belong… use the simple form, even for now."}, {"id": "sv-two-meanings", "level": "b1", "title": "Verbs with two meanings: think, have, see, taste", "summary": "Some verbs are states with one meaning and actions with another; only the action meaning can be continuous."}, {"id": "sv-being", "level": "b2", "title": "He's being rude: be in the continuous, and states in perfect tenses", "summary": "is being + adjective = behaviour right now; state verbs stay simple in perfect tenses (I've known, not I've been knowing)."}, {"id": "sv-advanced", "level": "c1", "title": "State verbs in the continuous for emphasis or change", "summary": "Informally, some state verbs take the continuous to stress a temporary feeling or a gradual change: We're loving it, I'm regretting it."}]}};
+
+/* Legacy topics hidden when v2 covers them (spec mapping table) */
+var V2_HIDDEN_LEGACY = [
+  'Present simple: I/you/we/they',
+  'Present simple: he/she/it (3rd person -s)',
+  'Present continuous (right now)',
+  'Present simple vs present continuous',
+  'Present continuous for future arrangements',
+  'Past perfect'
+];
+
 function assignSlug(topic) {
   return String(topic).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
@@ -3221,6 +3235,22 @@ function teacherAssignmentComposer() {
     '<div id="as-hw-fields">' +
     '<div class="field"><label for="as-topic">Topic</label>' +
     '<select id="as-topic" class="input"></select></div>' +
+    '<div id="as-v2-panel" class="hidden">' +
+    '<div class="field"><label>Points <span class="as2-opt">— select teaching points</span></label>' +
+    '<div id="as-v2-points"></div></div>' +
+    '<div class="field"><label>Levels</label><div id="as-v2-levels"></div></div>' +
+    '<div class="field"><label>Question types</label><div id="as-v2-types">' +
+    '<label class="chk"><input type="checkbox" class="as-v2-type" value="mcq" checked> Multiple choice</label>' +
+    '<label class="chk"><input type="checkbox" class="as-v2-type" value="gap" checked> Typing</label>' +
+    '<label class="chk"><input type="checkbox" class="as-v2-type" value="error" checked> Find the mistake</label>' +
+    '</div></div>' +
+    '<div class="field"><label>Difficulty</label><div id="as-v2-diff">' +
+    '<label class="chk"><input type="radio" name="as-v2-diff" value="easy"> Easy</label>' +
+    '<label class="chk"><input type="radio" name="as-v2-diff" value="mixed" checked> Mixed</label>' +
+    '<label class="chk"><input type="radio" name="as-v2-diff" value="hard"> Hard</label>' +
+    '</div></div>' +
+    '<div class="muted" id="as-v2-pool" style="font-size:.85rem"></div>' +
+    '</div>' +
     '<div class="field"><label for="as-count">Questions</label>' +
     '<select id="as-count" class="input">' +
     [5, 10, 15, 20].map(function (n) { return '<option value="' + n + '"' + (n === 10 ? ' selected' : '') + '>' + n + '</option>'; }).join('') +
@@ -3262,6 +3292,8 @@ function teacherAssignmentComposer() {
   examAddRow();
   assignmentFillTopics();
   document.getElementById('as-level').addEventListener('change', assignmentFillTopics);
+  document.getElementById('as-topic').addEventListener('change', asV2PanelUpdate);
+  document.getElementById('as-count').addEventListener('change', asV2PoolUpdate);
   document.getElementById('as-all').addEventListener('change', function () {
     document.getElementById('as-students').classList.toggle('hidden', this.checked);
   });
@@ -3278,13 +3310,34 @@ function setAssignMode(m) {
   if (ex) ex.classList.toggle('hidden', assignMode !== 'exam');
   const ico = document.querySelector('#app-modal .as2-ico span');
   if (ico) ico.textContent = assignMode === 'exam' ? '📋' : '📝';
+  if (typeof asV2PanelUpdate === 'function') asV2PanelUpdate();
 }
 function examTopicOptions(selected) {
   const lvEl = document.getElementById('as-level');
   const lv = lvEl ? lvEl.value : 'a2';
-  return (ASSIGN_TOPICS[lv] || []).map(function (t) {
-    return '<option value="' + esc(t) + '"' + (t === selected ? ' selected' : '') + '>' + esc(t) + '</option>';
-  }).join('');
+  let html = '';
+  Object.keys(V2_FAMILIES).forEach(function (famSlug) {
+    const fam = V2_FAMILIES[famSlug];
+    html += '<optgroup label="' + esc(fam.title) + ' (v2)">';
+    fam.topics.forEach(function (tslug) {
+      const t = V2_TOPICS[tslug];
+      const val = 'v2:' + tslug;
+      if (t) html += '<option value="' + esc(val) + '"' + (val === selected ? ' selected' : '') + '>' + esc(t.h1) + '</option>';
+    });
+    html += '</optgroup>';
+  });
+  const legacy = (ASSIGN_TOPICS[lv] || []).filter(function (t) {
+    return V2_HIDDEN_LEGACY.indexOf(t) === -1;
+  });
+  if (legacy.length) {
+    html += '<optgroup label="Classic">';
+    html += legacy.map(function (t) {
+      const val = 'legacy:' + t;
+      return '<option value="' + esc(val) + '"' + (val === selected ? ' selected' : '') + '>' + esc(t) + '</option>';
+    }).join('');
+    html += '</optgroup>';
+  }
+  return html;
 }
 function examAddRow(topic, count) {
   const host = document.getElementById('as-mixrows');
@@ -3310,14 +3363,197 @@ function examUpdateTotal() {
 function assignmentFillTopics() {
   const lv = document.getElementById('as-level').value;
   const sel = document.getElementById('as-topic');
-  sel.innerHTML = (ASSIGN_TOPICS[lv] || []).map(function (t) {
-    return '<option value="' + esc(t) + '">' + esc(t) + '</option>';
-  }).join('');
+  let html = '';
+  /* v2 topics grouped by family */
+  Object.keys(V2_FAMILIES).forEach(function (famSlug) {
+    const fam = V2_FAMILIES[famSlug];
+    html += '<optgroup label="' + esc(fam.title) + ' (v2)">';
+    html += '<option value="v2family:' + esc(famSlug) + '">Whole family: ' + esc(fam.title) + '</option>';
+    fam.topics.forEach(function (tslug) {
+      const t = V2_TOPICS[tslug];
+      if (t) html += '<option value="v2:' + esc(tslug) + '">' + esc(t.h1) + '</option>';
+    });
+    html += '</optgroup>';
+  });
+  /* legacy topics (minus hidden) */
+  const legacy = (ASSIGN_TOPICS[lv] || []).filter(function (t) {
+    return V2_HIDDEN_LEGACY.indexOf(t) === -1;
+  });
+  if (legacy.length) {
+    html += '<optgroup label="Classic">';
+    html += legacy.map(function (t) {
+      return '<option value="legacy:' + esc(t) + '">' + esc(t) + '</option>';
+    }).join('');
+    html += '</optgroup>';
+  }
+  sel.innerHTML = html;
+  /* show/hide v2 panel */
+  asV2PanelUpdate();
   /* keep exam mix rows in sync with the level */
   Array.prototype.forEach.call(document.querySelectorAll('#as-mixrows .as-mix-topic'), function (s) {
     const cur = s.value;
     s.innerHTML = examTopicOptions(cur);
   });
+}
+/* v2 topic value helpers */
+function asTopicVal() {
+  const sel = document.getElementById('as-topic');
+  return sel ? sel.value : '';
+}
+function asIsV2() {
+  const v = asTopicVal();
+  return v.indexOf('v2:') === 0 || v.indexOf('v2family:') === 0;
+}
+function asV2Slugs() {
+  const v = asTopicVal();
+  if (v.indexOf('v2family:') === 0) {
+    const fam = V2_FAMILIES[v.slice(9)];
+    return fam ? fam.topics.slice() : [];
+  }
+  if (v.indexOf('v2:') === 0) return [v.slice(3)];
+  return [];
+}
+/* v2 panel: points checkboxes, level chips, pool count */
+function asV2PanelUpdate() {
+  const panel = document.getElementById('as-v2-panel');
+  const isV2 = asIsV2();
+  const mode = (typeof assignMode !== 'undefined' && assignMode === 'exam') ? 'exam' : 'homework';
+  /* v2 panel only in homework mode; level dropdown hidden for v2 homework */
+  if (panel) panel.classList.toggle('hidden', !isV2 || mode !== 'homework');
+  const lvField = document.getElementById('as-level');
+  if (lvField) {
+    const lvWrap = lvField.closest('.field');
+    if (lvWrap) lvWrap.style.display = (isV2 && mode === 'homework') ? 'none' : '';
+  }
+  if (!isV2 || mode !== 'homework') return;
+  const slugs = asV2Slugs();
+  /* collect points */
+  const pointsHost = document.getElementById('as-v2-points');
+  const levelsHost = document.getElementById('as-v2-levels');
+  if (!pointsHost || !levelsHost) return;
+  let ptsHtml = '';
+  const allLevels = {};
+  slugs.forEach(function (slug) {
+    const t = V2_TOPICS[slug];
+    if (!t) return;
+    ptsHtml += '<div class="as-v2-topic-head">' + esc(t.h1) + '</div>';
+    (t.points || []).forEach(function (p) {
+      allLevels[p.level] = true;
+      ptsHtml += '<label class="chk as-v2-point"><input type="checkbox" class="as-v2-pt" value="' + esc(p.id) +
+        '" data-level="' + esc(p.level) + '" checked> ' +
+        '<span class="gh-lv">' + esc(p.level.toUpperCase()) + '</span> ' +
+        '<b>' + esc(p.title) + '</b><br><span class="muted">' + esc(p.summary) + '</span></label>';
+    });
+    /* linked points as optional extras */
+    (t.linked_points || []).forEach(function (pid) {
+      /* find the point in any v2 topic */
+      let found = null;
+      Object.keys(V2_TOPICS).forEach(function (s2) {
+        (V2_TOPICS[s2].points || []).forEach(function (p2) {
+          if (p2.id === pid) found = { p: p2, topic: V2_TOPICS[s2].h1 };
+        });
+      });
+      if (found) {
+        allLevels[found.p.level] = true;
+        ptsHtml += '<label class="chk as-v2-point as-v2-linked"><input type="checkbox" class="as-v2-pt" value="' + esc(found.p.id) +
+          '" data-level="' + esc(found.p.level) + '"> ' +
+          '<span class="gh-lv">' + esc(found.p.level.toUpperCase()) + '</span> ' +
+          '<b>' + esc(found.p.title) + '</b> <span class="as2-opt">(from ' + esc(found.topic) + ')</span><br>' +
+          '<span class="muted">' + esc(found.p.summary) + '</span></label>';
+      }
+    });
+  });
+  pointsHost.innerHTML = ptsHtml;
+  /* level chips */
+  const lvls = Object.keys(allLevels).sort();
+  levelsHost.innerHTML = lvls.map(function (lv) {
+    return '<label class="chk as-v2-lvchip"><input type="checkbox" class="as-v2-lv" value="' + esc(lv) + '" checked> ' +
+      lv.toUpperCase() + '</label>';
+  }).join('');
+  /* wire up changes */
+  Array.prototype.forEach.call(pointsHost.querySelectorAll('.as-v2-pt'), function (cb) {
+    cb.addEventListener('change', asV2PoolUpdate);
+  });
+  Array.prototype.forEach.call(levelsHost.querySelectorAll('.as-v2-lv'), function (cb) {
+    cb.addEventListener('change', asV2PoolUpdate);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.as-v2-type'), function (cb) {
+    cb.addEventListener('change', asV2PoolUpdate);
+  });
+  asV2PoolUpdate();
+}
+/* update pool count display */
+function asV2PoolUpdate() {
+  const poolEl = document.getElementById('as-v2-pool');
+  if (!poolEl) return;
+  const pool = asV2GetPool();
+  const count = parseInt((document.getElementById('as-count') || {}).value, 10) || 10;
+  if (pool.length < count) {
+    poolEl.innerHTML = '<span style="color:#c62828">Only ' + pool.length + ' questions available for this selection.</span>';
+  } else {
+    poolEl.textContent = pool.length + ' questions available.';
+  }
+}
+/* get filtered exercise pool for v2 selection */
+function asV2GetPool() {
+  const slugs = asV2Slugs();
+  const selPts = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.as-v2-pt:checked'), function (cb) {
+    selPts[cb.value] = true;
+  });
+  const selLvls = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.as-v2-lv:checked'), function (cb) {
+    selLvls[cb.value] = true;
+  });
+  const selTypes = {};
+  Array.prototype.forEach.call(document.querySelectorAll('.as-v2-type:checked'), function (cb) {
+    selTypes[cb.value] = true;
+  });
+  const diffEl = document.querySelector('input[name="as-v2-diff"]:checked');
+  const diff = diffEl ? diffEl.value : 'mixed';
+  /* collect site exercises from app data (state.grammarCache) */
+  const pool = [];
+  slugs.forEach(function (slug) {
+    /* find in grammar cache */
+    let topic = null;
+    if (typeof findGrammarTopic === 'function') topic = findGrammarTopic(slug);
+    if (!topic || !topic.v2) return;
+    const items = (topic.exercises && topic.exercises.items) || [];
+    items.forEach(function (ex) {
+      const exLv = (ex.level || '').toLowerCase();
+      const exType = ex.type || 'mcq';
+      if (!selLvls[exLv]) return;
+      if (!selTypes[exType]) return;
+      /* point filter */
+      const exPts = ex.points || [];
+      const matchPt = exPts.some(function (pid) { return selPts[pid]; });
+      if (!matchPt) return;
+      /* difficulty filter */
+      if (diff === 'easy' && ex.difficulty !== 1) return;
+      if (diff === 'hard' && ex.difficulty !== 3) return;
+      pool.push(ex);
+    });
+  });
+  return pool;
+}
+/* fetch bank exercises from Supabase (graceful if table missing) */
+async function asV2FetchBank(pointIds) {
+  try {
+    if (typeof sb === 'undefined') return [];
+    const res = await sb.from('grammar_bank').select('id,data').in('id', pointIds.map(function (pid) {
+      /* bank ids are like pc-always-b03; match by point prefix */
+      return pid;
+    }));
+    /* Actually query by data->points overlap - simpler: fetch all and filter */
+    const all = await sb.from('grammar_bank').select('id,data').eq('status', 'active').limit(500);
+    if (all.error) return [];
+    return (all.data || []).filter(function (row) {
+      const pts = (row.data && row.data.points) || [];
+      return pts.some(function (pid) { return pointIds.indexOf(pid) !== -1; });
+    }).map(function (row) { return row.data; });
+  } catch (e) {
+    return [];
+  }
 }
 async function createAssignment(btn) {
   const errBox = document.getElementById('as-error');
@@ -3325,7 +3561,9 @@ async function createAssignment(btn) {
   err('');
   const kind = 'homework';
   const level = document.getElementById('as-level').value;
-  const topic = document.getElementById('as-topic').value;
+  let topic = document.getElementById('as-topic').value;
+  /* strip v2:/legacy: prefix for legacy flow */
+  if (topic.indexOf('legacy:') === 0) topic = topic.slice(7);
   const count = parseInt(document.getElementById('as-count').value, 10) || 10;
   const roster = state.teacherStudents || [];
   const useAll = document.getElementById('as-all').checked;
@@ -3336,6 +3574,8 @@ async function createAssignment(btn) {
   if (!targets.length) { err('Pick at least one student.'); return; }
   const mode = (typeof assignMode !== 'undefined' && assignMode === 'exam') ? 'exam' : 'homework';
   if (mode === 'exam') { await createExamAssignment(btn, { err: err, level: level, targets: targets, orig: btn.textContent }); return; }
+  /* v2 homework flow */
+  if (asIsV2()) { await createV2Assignment(btn, { err: err, targets: targets, orig: btn.textContent }); return; }
   btn.disabled = true;
   const orig = btn.textContent;
   btn.textContent = 'Preparing…';
@@ -3386,6 +3626,144 @@ async function createAssignment(btn) {
   }
 }
 
+
+/* ---- v2 assignment creation ---- */
+function asV2SnapshotQ(ex, topicSlug) {
+  /* Build v2 snapshot question with full fields + legacy q alias */
+  const t = V2_TOPICS[topicSlug];
+  const label = t ? t.h1 : topicSlug;
+  const snap = {
+    id: ex.id,
+    points: ex.points || [],
+    level: (ex.level || '').toLowerCase(),
+    type: ex.type || 'mcq',
+    difficulty: ex.difficulty || 1,
+    prompt: ex.prompt || ex.q || '',
+    explanation: ex.explanation || '',
+    topic_label: label,
+    /* legacy aliases for old player compatibility */
+    q: ex.prompt || ex.q || '',
+    options: ex.options || [],
+    answer: ex.answer
+  };
+  if (ex.type === 'gap') snap.accept = ex.accept || [];
+  if (ex.type === 'error') {
+    snap.segments = ex.segments || [];
+    snap.correction = ex.correction || '';
+  }
+  return snap;
+}
+async function createV2Assignment(btn, ctx) {
+  const err = ctx.err, targets = ctx.targets, orig = ctx.orig;
+  const slugs = asV2Slugs();
+  if (!slugs.length) { err('Select a topic.'); return; }
+  const count = parseInt(document.getElementById('as-count').value, 10) || 10;
+  /* get pool */
+  let pool = asV2GetPool();
+  /* try bank for additional questions */
+  const selPts = [];
+  Array.prototype.forEach.call(document.querySelectorAll('.as-v2-pt:checked'), function (cb) {
+    selPts.push(cb.value);
+  });
+  try {
+    const bankQs = await asV2FetchBank(selPts);
+    /* filter bank by selected levels/types/difficulty */
+    const selLvls = {};
+    Array.prototype.forEach.call(document.querySelectorAll('.as-v2-lv:checked'), function (cb) { selLvls[cb.value] = true; });
+    const selTypes = {};
+    Array.prototype.forEach.call(document.querySelectorAll('.as-v2-type:checked'), function (cb) { selTypes[cb.value] = true; });
+    const diffEl = document.querySelector('input[name="as-v2-diff"]:checked');
+    const diff = diffEl ? diffEl.value : 'mixed';
+    bankQs.forEach(function (ex) {
+      const exLv = String(ex.level || '').toLowerCase();
+      if (!selLvls[exLv]) return;
+      if (!selTypes[ex.type || 'mcq']) return;
+      if (diff === 'easy' && ex.difficulty !== 1) return;
+      if (diff === 'hard' && ex.difficulty !== 3) return;
+      /* avoid duplicates */
+      const exists = pool.some(function (p) { return p.id === ex.id; });
+      if (!exists) pool.push(ex);
+    });
+  } catch (e) {}
+  if (!pool.length) { err('No questions available for this selection.'); return; }
+  btn.disabled = true;
+  btn.textContent = 'Preparing…';
+  /* spread evenly across points */
+  const byPoint = {};
+  pool.forEach(function (ex) {
+    (ex.points || ['_none']).forEach(function (pid) {
+      (byPoint[pid] = byPoint[pid] || []).push(ex);
+    });
+  });
+  const ptIds = Object.keys(byPoint);
+  const picked = [];
+  const seen = {};
+  let round = 0;
+  while (picked.length < count && round < 10) {
+    let added = false;
+    /* shuffle point order each round */
+    shuffleArr(ptIds.slice()).forEach(function (pid) {
+      if (picked.length >= count) return;
+      const avail = shuffleArr(byPoint[pid].filter(function (ex) { return !seen[ex.id]; }));
+      if (avail.length) {
+        seen[avail[0].id] = true;
+        picked.push(avail[0]);
+        added = true;
+      }
+    });
+    if (!added) break;
+    round++;
+  }
+  if (picked.length < count) {
+    /* pool too small - warn but continue */
+    err('Only ' + picked.length + ' questions available for this selection.');
+  }
+  /* build snapshots */
+  const isFamily = asTopicVal().indexOf('v2family:') === 0;
+  const topicSlug = isFamily ? 'mixed' : slugs[0];
+  const t = V2_TOPICS[slugs[0]];
+  const topicLabel = isFamily ? 'Mixed (' + slugs.length + ' topics)' : (t ? t.h1 : slugs[0]);
+  /* levels from selection */
+  const lvls = [];
+  Array.prototype.forEach.call(document.querySelectorAll('.as-v2-lv:checked'), function (cb) {
+    lvls.push(cb.value);
+  });
+  const questions = shuffleArr(picked).map(function (ex) {
+    return asV2SnapshotQ(ex, slugs[0]);
+  });
+  const title = '📝 ' + topicLabel + ' (' + lvls.map(function (l) { return l.toUpperCase(); }).join(',') + ')';
+  const noteEl = document.getElementById('as-note');
+  const dlEl = document.getElementById('as-deadline');
+  const note = noteEl ? noteEl.value.trim() : '';
+  const deadline = dlEl && dlEl.value ? dlEl.value : null;
+  btn.textContent = 'Sending…';
+  try {
+    const ins = await sb.from('assignments').insert({
+      teacher_id: state.user.id,
+      teacher_name: (state.teacher && state.teacher.display_name) || '',
+      kind: 'homework', title: title,
+      level: lvls.join(','),
+      topic: topicSlug, topic_label: topicLabel,
+      question_count: questions.length, questions: questions,
+      student_ids: targets.map(function (s) { return s.user_id; }),
+      note: note || null, deadline: deadline
+    }).select('id').single();
+    if (ins.error) throw ins.error;
+    const body = '📝 Your teacher sent you homework: ' + title + ' — open Muse English to start.';
+    await Promise.all(targets.map(function (s) {
+      return Promise.allSettled([
+        sb.rpc('send_teacher_message', { p_student: s.user_id, p_body: body }),
+        sb.rpc('send_nudge', { p_student: s.user_id })
+      ]);
+    }));
+    closeModal();
+    loadTeacherAssignments();
+  } catch (e) {
+    err('Could not send: ' + (e && e.message ? e.message : 'check your connection.'));
+    btn.disabled = false; btn.textContent = orig;
+  }
+}
+
 /* ---- teacher: mixed-topic exam ----
    Rows of [topic × count] -> one bank fetch per topic (fail-soft: a 404 bank
    is skipped and reported) -> N sampled per topic, each tagged with its
@@ -3396,14 +3774,30 @@ async function createExamAssignment(btn, ctx) {
   const rows = Array.prototype.slice.call(document.querySelectorAll('#as-mixrows .as2-mixrow'));
   const mix = [];
   rows.forEach(function (r) {
-    const t = r.querySelector('.as-mix-topic').value;
+    let t = r.querySelector('.as-mix-topic').value;
     const c = parseInt(r.querySelector('.as-mix-count').value, 10) || 0;
-    if (t && c > 0) mix.push({ topic: t, count: c });
+    if (t && c > 0) {
+      /* normalize v2:/legacy: prefixes */
+      let isV2 = false, slug = t;
+      if (t.indexOf('v2:') === 0) { isV2 = true; slug = t.slice(3); }
+      else if (t.indexOf('legacy:') === 0) { slug = t.slice(7); }
+      mix.push({ topic: slug, count: c, isV2: isV2, raw: t });
+    }
   });
   if (!mix.length) { err('Add at least one topic with at least 1 question.'); return; }
   btn.disabled = true;
   btn.textContent = 'Preparing…';
   const settled = await Promise.all(mix.map(function (m) {
+    if (m.isV2) {
+      /* v2: get exercises from app data */
+      const topic = (typeof findGrammarTopic === 'function') ? findGrammarTopic(m.topic) : null;
+      const items = (topic && topic.v2 && topic.exercises && topic.exercises.items) || [];
+      /* filter by level */
+      const lvItems = items.filter(function (ex) {
+        return (ex.level || '').toLowerCase() === level;
+      });
+      return { m: m, bank: { questions: lvItems }, isV2: true };
+    }
     return fetch('quiz-bank/' + level + '/' + assignSlug(m.topic) + '.json')
       .then(function (r) { if (!r.ok) throw new Error('bank 404'); return r.json(); })
       .then(function (bank) { return { m: m, bank: bank }; })
@@ -3415,7 +3809,12 @@ async function createExamAssignment(btn, ctx) {
     const qs = (s.bank && s.bank.questions) || [];
     if (!qs.length) { skipped.push(s.m.topic); return; }
     shuffleArr(qs.slice()).slice(0, Math.min(s.m.count, qs.length)).forEach(function (q) {
-      questions.push({ q: q.q, options: q.options, answer: q.answer, explanation: q.explanation || '', topic_label: s.m.topic });
+      if (s.isV2) {
+        /* v2 snapshot format */
+        questions.push(asV2SnapshotQ(q, s.m.topic));
+      } else {
+        questions.push({ q: q.q, options: q.options, answer: q.answer, explanation: q.explanation || '', topic_label: s.m.topic });
+      }
     });
   });
   if (!questions.length) {
@@ -4422,14 +4821,34 @@ function startAssignment(i) {
   beginAssignment(a, null);
 }
 function beginAssignment(a, prog) {
-  /* Duolingo-style player: assignment questions map 1:1 onto 'select'
+  /* Duolingo-style player: assignment questions map onto 'select'/'typein'
      challenges (same shape the word quiz uses). Shared daily hearts. */
   state.quiz = {
     kind: 'assignment', assignmentId: a.id, log: (prog && prog.log) || [],
     questions: a.questions.map(function (q) {
+      const qtype = q.type || 'mcq';
+      if (qtype === 'gap') {
+        return {
+          qtype: 'typein', question: q.prompt || q.q, accept: q.accept || [],
+          kind: 'assignment', explanation: q.explanation || '',
+          v2: { qid: q.id, points: q.points || [], type: 'gap' }
+        };
+      }
+      if (qtype === 'error') {
+        /* error: segments become selectable options */
+        const segs = q.segments || [];
+        return {
+          qtype: 'select', question: (q.prompt || q.q || 'Find the mistake — tap the wrong part.'),
+          options: segs.slice(), answer: q.answer,
+          kind: 'assignment', explanation: (q.correction ? 'Correct: ' + q.correction + '. ' : '') + (q.explanation || ''),
+          v2: { qid: q.id, points: q.points || [], type: 'error' }
+        };
+      }
+      /* mcq (default) */
       return {
-        qtype: 'select', question: q.q, options: q.options.slice(), answer: q.answer,
-        kind: 'assignment', explanation: q.explanation || ''
+        qtype: 'select', question: q.q, options: (q.options || []).slice(), answer: q.answer,
+        kind: 'assignment', explanation: q.explanation || '',
+        v2: q.id ? { qid: q.id, points: q.points || [], type: 'mcq' } : undefined
       };
     }),
     idx: (prog && prog.idx) || 0, correct: (prog && prog.correct) || 0,
@@ -4465,7 +4884,16 @@ async function saveAssignmentResult() {
     await sb.from('assignment_results').upsert({
       assignment_id: q.assignmentId, student_id: state.user.id,
       score: q.correct, total: q.questions.length,
-      answers: (q.log || []).map(function (l) { return { picked: l.picked, correct: l.correct }; })
+      answers: (q.log || []).map(function (l) {
+        /* v2: include qid/points/type/response/isCorrect alongside legacy picked/correct */
+        const a = { picked: l.picked, correct: l.correct };
+        if (l.qid) a.qid = l.qid;
+        if (l.points) a.points = l.points;
+        if (l.type) a.type = l.type;
+        if (l.response !== undefined) a.response = l.response;
+        if (l.isCorrect !== undefined) a.isCorrect = l.isCorrect;
+        return a;
+      })
     }, { onConflict: 'assignment_id,student_id' });
   } catch (e) {}
 }
@@ -9429,9 +9857,11 @@ function duoTrayText(q, cur) {
   if (q.wasCorrect) {
     if (cur.qtype === 'select') return 'Nice! "' + cur.options[cur.answer] + '" is right.';
     if (cur.qtype === 'reverse' || cur.qtype === 'listen') return 'Well done! 🎉';
+    if (cur.qtype === 'typein') return 'Perfect! 🎉';
     return 'Perfect sentence! 🎉';
   }
   if (cur.qtype === 'assist') return cur.tokens.join(' ');
+  if (cur.qtype === 'typein') return (cur.accept || []).join(' / ');
   return cur.options[cur.answer];
 }
 
@@ -9451,6 +9881,23 @@ function duoFooter(q, cur) {
     '</div></div>';
 }
 
+/* typein: typed-answer question (v2 gap) */
+function duoTypeinHTML(q, cur) {
+  const val = q.typed || '';
+  let html = '<div class="duo-q">' + esc(cur.question).replace(/___/g, '…') + '</div>';
+  html += '<div class="duo-typein-wrap"><input type="text" id="duo-typein-input" class="duo-typein-input" ' +
+    'placeholder="Type your answer…" value="' + esc(val) + '"' + (q.answered ? ' disabled' : '') + ' autocomplete="off"></div>';
+  if (!q.answered) {
+    html += '<button class="btn btn-block duo-check" data-action="duo-typein-check">CHECK</button>';
+  }
+  return html;
+}
+function duoNormalize(s) {
+  return String(s || '').trim().toLowerCase()
+    .replace(/\s+/g, ' ')
+    .replace(/[\u2018\u2019\u201B]/g, "'")
+    .replace(/\.$/, '');
+}
 function renderDuoQuizView() {
   const q = state.quiz;
   const v = $('#view');
@@ -9460,6 +9907,8 @@ function renderDuoQuizView() {
   let html = duoTopbar(q) + '<div class="duo-body">';
   if (cur.qtype === 'assist') {
     html += duoAssistHTML(q, cur);
+  } else if (cur.qtype === 'typein') {
+    html += duoTypeinHTML(q, cur);
   } else {
     if (cur.qtype === 'listen') {
       html += '<div class="duo-listen"><div class="duo-q">' + esc(cur.question) + '</div>';
@@ -9500,6 +9949,41 @@ function duoLoseHeart(q) {
    so a just-lost heart's mistake is always reviewable (no race). */
 var duoSavePending = Promise.resolve();
 
+function duoTypeinCheck() {
+  const q = state.quiz;
+  if (!q || q.answered) return;
+  const cur = q.questions[q.idx];
+  if (cur.qtype !== 'typein') return;
+  const input = document.getElementById('duo-typein-input');
+  const val = input ? input.value : '';
+  q.typed = val;
+  q.answered = true;
+  const norm = duoNormalize(val);
+  const correct = (cur.accept || []).some(function (a) { return duoNormalize(a) === norm; });
+  q.wasCorrect = correct;
+  q.picked = val; /* store typed text */
+  if (q.log) {
+    const entry = { picked: val, correct: correct };
+    if (cur.v2) {
+      entry.qid = cur.v2.qid;
+      entry.points = cur.v2.points;
+      entry.type = cur.v2.type;
+      entry.response = val;
+      entry.isCorrect = correct;
+    }
+    q.log.push(entry);
+  }
+  if (correct) {
+    q.correct++;
+  } else {
+    duoSavePending = duoSavePending.catch(function () {}).then(function () {
+      return saveDuoMistake(q, cur, val);
+    });
+    if (duoLoseHeart(q) <= 0) { saveProgressAny(); renderHeartsOut(); return; }
+  }
+  saveProgressAny();
+  renderDuoQuizView();
+}
 async function duoAnswer(idx) {
   const q = state.quiz;
   if (!q || q.answered) return;
@@ -9507,7 +9991,17 @@ async function duoAnswer(idx) {
   q.answered = true;
   q.picked = idx;
   q.wasCorrect = (idx === cur.answer);
-  if (q.log) q.log.push({ picked: idx, correct: cur.answer });
+  if (q.log) {
+    const entry = { picked: idx, correct: cur.answer };
+    if (cur.v2) {
+      entry.qid = cur.v2.qid;
+      entry.points = cur.v2.points;
+      entry.type = cur.v2.type;
+      entry.response = idx;
+      entry.isCorrect = q.wasCorrect;
+    }
+    q.log.push(entry);
+  }
   /* listening: answering dismisses the mini-player bar */
   if (cur.qtype === 'listen') closePlayer();
   if (q.wasCorrect) {
@@ -9537,6 +10031,11 @@ async function saveDuoMistake(q, cur, picked) {
     await saveMistake(Object.assign({}, base, {
       question: '\u00AB' + cur.persian + '\u00BB به انگلیسی چی میشه؟',
       options: cur.options, answer: cur.answer
+    }));
+  } else if (cur.qtype === 'typein') {
+    await saveMistake(Object.assign({}, base, {
+      question: cur.question, options: [], answer: 0,
+      typed: picked, accept: cur.accept || []
     }));
   } else if (cur.qtype === 'assist') {
     const correct = cur.tokens.join(' ');
@@ -11690,6 +12189,7 @@ function bindEvents() {
     else if (a === 'duo-pick') duoPick(parseInt(t.getAttribute('data-bi'), 10));
     else if (a === 'duo-unpick') duoUnpick(parseInt(t.getAttribute('data-bi'), 10));
     else if (a === 'duo-check') duoCheck();
+    else if (a === 'duo-typein-check') duoTypeinCheck();
     else if (a === 'duo-exit') duoExit();
     else if (a === 'duo-quit') duoQuit();
     else if (a === 'duo-keep') duoKeep();
@@ -11897,7 +12397,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610181845';
+var APP_VERSION = '202610181849';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
