@@ -4133,3 +4133,49 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
   #as-v2-points{display:grid;grid-template-columns:1fr 1fr;gap:.2rem 1.4rem;align-items:start}
   #as-v2-points .as-v2-topic-head{grid-column:1/-1}
 }
+
+/* ---- /teachers composer: minimal redesign (2026-10-18, supplied design) ----
+   No cards, no tinted section boxes — plain rows on the cream background.
+   Scoped to .tw-compose so the legacy #/teacher modal keeps its own look. */
+.tw-compose{background:transparent;border:0;box-shadow:none;padding:0 0 2.5rem;max-width:820px}
+@media(min-width:900px){.tw-compose{padding:0 0 3rem}}
+/* mode pills: centered, fully rounded */
+.tw-compose .as2-modes{max-width:520px;margin:.4rem auto 1.6rem}
+.tw-compose .as2-mode{border-radius:999px;padding:.75rem 1rem}
+/* fields */
+.tw-compose .as2 .field{margin-bottom:1.4rem}
+.tw-compose .as2 .field>label{font-size:1rem;margin-bottom:.55rem}
+.tw-compose .as2 .input{border-radius:16px;padding:.85rem 1rem;border-color:#e5dcc8}
+/* points: plain topic heading, card-less rows */
+.tw-compose .as-v2-topic-head{font-size:1.04rem;font-weight:800;color:#1e2a4e;margin:1.25rem 0 .25rem}
+.tw-compose .as-v2-topic-head:first-child{margin-top:.5rem}
+.tw-compose .as-v2-point{display:grid;grid-template-columns:auto auto minmax(110px,.85fr) 1.35fr;gap:.15rem .65rem;align-items:start;padding:.6rem 0;cursor:pointer}
+.tw-compose .as-v2-point br{display:none}
+.tw-compose .as-v2-point input{grid-column:1;grid-row:1;width:1.3rem;height:1.3rem;accent-color:#f26d0d;margin-top:.1rem}
+.tw-compose .as-v2-point .gh-lv{grid-column:2;grid-row:1;margin-top:.05rem;background:#f6f1e7;color:#a86a1c;min-width:36px}
+.tw-compose .as-v2-point b{grid-column:3;grid-row:1;color:#1e2a4e;font-size:.93rem;line-height:1.45}
+.tw-compose .as-v2-point .as2-opt{grid-column:3;grid-row:2;font-size:.8rem}
+.tw-compose .as-v2-point .muted{grid-column:4;grid-row:1;font-size:.87rem;font-weight:400;color:#8a8fa3;line-height:1.5}
+/* levels / types / difficulty: plain vertical checkbox lists */
+.tw-compose #as-v2-levels{display:flex;flex-direction:column}
+.tw-compose .as-v2-lvchip{display:flex;align-items:center;gap:.6rem;padding:.45rem 0;font-size:.93rem;font-weight:600;color:#1e2a4e;cursor:pointer}
+.tw-compose .as-v2-lvchip input{width:1.25rem;height:1.25rem;accent-color:#f26d0d}
+.tw-compose #as-v2-types{display:flex;flex-direction:column}
+.tw-compose #as-v2-types .chk{padding:.5rem 0;font-size:.95rem}
+.tw-compose #as-v2-diff{display:flex;flex-direction:column}
+.tw-compose #as-v2-diff .chk{padding:.5rem 0;font-size:.95rem}
+.tw-compose #as-v2-diff .chk input{width:1.25rem;height:1.25rem;accent-color:#f26d0d}
+/* pool warning */
+.tw-compose #as-v2-pool{margin:.2rem 0 .4rem}
+/* students box: keep the light box */
+.tw-compose .as2-students{background:#fffaf0;border:1.5px solid #f0e2c8;border-radius:16px;padding:.6rem 1rem}
+.tw-compose .as2-students .chk{font-size:.95rem}
+/* send button: bigger glow, matching the supplied design */
+.tw-compose .as2-send{border-radius:20px;padding:1.05rem;font-size:1.08rem;box-shadow:0 14px 30px rgba(240,115,10,.38);margin-top:.8rem}
+/* mobile: point title/desc stack under checkbox+badge */
+@media(max-width:899px){
+  .tw-compose .as-v2-point{grid-template-columns:auto auto 1fr}
+  .tw-compose .as-v2-point b{grid-column:3;grid-row:1}
+  .tw-compose .as-v2-point .as2-opt{grid-column:3;grid-row:2}
+  .tw-compose .as-v2-point .muted{grid-column:3;grid-row:3}
+}

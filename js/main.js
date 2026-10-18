@@ -12417,7 +12417,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610181925';
+var APP_VERSION = '202610182103';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -13295,7 +13295,7 @@ async function twPageCompose(c) {
     return;
   }
   c.innerHTML = head +
-    '<div class="tw-card tw-compose as2">' + assignmentComposerBodyHTML(list) + '</div>';
+    '<div class="tw-compose as2">' + assignmentComposerBodyHTML(list) + '</div>';
   document.getElementById('tw-back-assign').addEventListener('click', function () { twShowSection('assignments'); });
   assignmentComposerWire();
   window.scrollTo(0, 0);
