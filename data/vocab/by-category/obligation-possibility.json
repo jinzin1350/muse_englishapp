@@ -1,1 +1,485 @@
-[{"word": "absolute", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "complete, total, or without doubt", "meaning_fa": "مطلق، کامل", "example_en": "It's an absolute pleasure to meet you.", "photo": "media/vocab/absolute.jpg"}, {"word": "alternative", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Another choice or option.", "meaning_fa": "جایگزین، گزینه دیگر", "example_en": "Is there an alternative route to avoid traffic?", "photo": "media/vocab/alternative.jpg"}, {"word": "certainty", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The state of being completely sure about something.", "meaning_fa": "قطعیت، اطمینان", "example_en": "There is no certainty about the future.", "photo": "media/vocab/certainty.jpg"}, {"word": "chance", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The possibility of something happening.", "meaning_fa": "شانس، احتمال", "example_en": "There's a good chance it will rain later.", "photo": "media/vocab/chance.jpg"}, {"word": "choice", "phonetic": "tʃɔɪs", "levels": ["b2"], "pos": "noun", "meaning_en": "The act of choosing between things.", "meaning_fa": "انتخاب", "example_en": "You have a choice of three colours.", "photo": "media/vocab/choice.jpg"}, {"word": "compulsory", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Required by a rule or law; mandatory.", "meaning_fa": "اجباری", "example_en": "School attendance is compulsory for children.", "photo": "media/vocab/compulsory.jpg"}, {"word": "do without", "phonetic": null, "levels": ["b2"], "pos": "phrasal verb", "meaning_en": "To manage without something you usually have.", "meaning_fa": "بدون چیزی سر کردن", "example_en": "We can do without a car for a week.", "photo": "media/vocab/do-without.jpg"}, {"word": "doubtful", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Unlikely to happen or be true.", "meaning_fa": "مشکوک، بعید", "example_en": "It's doubtful that the weather will improve.", "photo": "media/vocab/doubtful.jpg"}, {"word": "exempt", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Not required to do something others must do.", "meaning_fa": "معاف", "example_en": "Students are exempt from paying the fee.", "photo": "media/vocab/exempt.jpg"}, {"word": "force into", "phonetic": null, "levels": ["b2"], "pos": "phrasal verb", "meaning_en": "make someone do something they don't want.", "meaning_fa": "مجبور کردن به", "example_en": "They tried to force him into signing the contract.", "photo": "media/vocab/force-into.jpg"}, {"word": "inevitable", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Certain to happen and impossible to avoid.", "meaning_fa": "اجتناب‌ناپذیر، حتمی", "example_en": "Change is an inevitable part of life.", "photo": "media/vocab/inevitable.jpg"}, {"word": "lack", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To not have enough of something.", "meaning_fa": "کمبود داشتن، فاقد بودن", "example_en": "The project failed due to a lack of funding.", "photo": "media/vocab/lack.jpg"}, {"word": "liable", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Responsible by law for something.", "meaning_fa": "مسئول، متعهد", "example_en": "The company is liable for any damage.", "photo": "media/vocab/liable.jpg"}, {"word": "mandatory", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Required by law or rules; compulsory.", "meaning_fa": "اجباری، الزامی", "example_en": "Wearing a helmet is mandatory for cyclists.", "photo": "media/vocab/mandatory.jpg"}, {"word": "necessity", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Something that is needed or required.", "meaning_fa": "ضرورت، نیاز", "example_en": "Food and water are basic necessities.", "photo": "media/vocab/necessity.jpg"}, {"word": "need (for)", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A requirement or strong desire for something.", "meaning_fa": "نیاز (به)", "example_en": "There is a great need for more doctors.", "photo": "media/vocab/need-for.jpg"}, {"word": "obligation", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Something you must do; a duty.", "meaning_fa": "تعهد، وظیفه", "example_en": "It's my obligation to help them.", "photo": "media/vocab/obligation.jpg"}, {"word": "obligatory", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Required by law or rule; compulsory.", "meaning_fa": "اجباری، الزامی", "example_en": "Wearing a helmet is obligatory.", "photo": "media/vocab/obligatory.jpg"}, {"word": "oblige", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To force someone to do something.", "meaning_fa": "مجبور کردن، وادار کردن", "example_en": "The law will oblige them to pay.", "photo": "media/vocab/oblige.jpg"}, {"word": "optional", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "You can choose to do it or not.", "meaning_fa": "اختیاری", "example_en": "The extra course is optional, not compulsory.", "photo": "media/vocab/optional.jpg"}, {"word": "possibility", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Something that might happen or be true.", "meaning_fa": "امکان، احتمال", "example_en": "There's a possibility of rain today.", "photo": "media/vocab/possibility.jpg"}, {"word": "probable", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Likely to happen or be true.", "meaning_fa": "محتمل، احتمالی", "example_en": "It is probable that it will rain.", "photo": "media/vocab/probable.jpg"}, {"word": "requirement", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Something you need or must do.", "meaning_fa": "نیاز، الزام", "example_en": "Meeting all the project requirements is essential for success.", "photo": "media/vocab/requirement.jpg"}, {"word": "shortage", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A situation where there is not enough of something.", "meaning_fa": "کمبود، کسری", "example_en": "There is a shortage of water in the city.", "photo": "media/vocab/shortage.jpg"}]
+[
+ {
+  "word": "absolute",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "complete, total, or without doubt",
+  "meaning_fa": "مطلق، کامل",
+  "example_en": "It's an absolute pleasure to meet you.",
+  "photo": "media/vocab/absolute.jpg"
+ },
+ {
+  "word": "alternative",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Another choice or option.",
+  "meaning_fa": "جایگزین، گزینه دیگر",
+  "example_en": "Is there an alternative route to avoid traffic?",
+  "photo": "media/vocab/alternative.jpg"
+ },
+ {
+  "word": "certainty",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of being completely sure about something.",
+  "meaning_fa": "قطعیت، اطمینان",
+  "example_en": "There is no certainty about the future.",
+  "photo": "media/vocab/certainty.jpg"
+ },
+ {
+  "word": "chance",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The possibility of something happening.",
+  "meaning_fa": "شانس، احتمال",
+  "example_en": "There's a good chance it will rain later.",
+  "photo": "media/vocab/chance.jpg"
+ },
+ {
+  "word": "choice",
+  "phonetic": "tʃɔɪs",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The act of choosing between things.",
+  "meaning_fa": "انتخاب",
+  "example_en": "You have a choice of three colours.",
+  "photo": "media/vocab/choice.jpg"
+ },
+ {
+  "word": "compulsory",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Required by a rule or law; mandatory.",
+  "meaning_fa": "اجباری",
+  "example_en": "School attendance is compulsory for children.",
+  "photo": "media/vocab/compulsory.jpg"
+ },
+ {
+  "word": "do without",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To manage without something you usually have.",
+  "meaning_fa": "بدون چیزی سر کردن",
+  "example_en": "We can do without a car for a week.",
+  "photo": "media/vocab/do-without.jpg"
+ },
+ {
+  "word": "doubtful",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Unlikely to happen or be true.",
+  "meaning_fa": "مشکوک، بعید",
+  "example_en": "It's doubtful that the weather will improve.",
+  "photo": "media/vocab/doubtful.jpg"
+ },
+ {
+  "word": "exempt",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not required to do something others must do.",
+  "meaning_fa": "معاف",
+  "example_en": "Students are exempt from paying the fee.",
+  "photo": "media/vocab/exempt.jpg"
+ },
+ {
+  "word": "force into",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "make someone do something they don't want.",
+  "meaning_fa": "مجبور کردن به",
+  "example_en": "They tried to force him into signing the contract.",
+  "photo": "media/vocab/force-into.jpg"
+ },
+ {
+  "word": "inevitable",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Certain to happen and impossible to avoid.",
+  "meaning_fa": "اجتناب‌ناپذیر، حتمی",
+  "example_en": "Change is an inevitable part of life.",
+  "photo": "media/vocab/inevitable.jpg"
+ },
+ {
+  "word": "lack",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To not have enough of something.",
+  "meaning_fa": "کمبود داشتن، فاقد بودن",
+  "example_en": "The project failed due to a lack of funding.",
+  "photo": "media/vocab/lack.jpg"
+ },
+ {
+  "word": "liable",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Responsible by law for something.",
+  "meaning_fa": "مسئول، متعهد",
+  "example_en": "The company is liable for any damage.",
+  "photo": "media/vocab/liable.jpg"
+ },
+ {
+  "word": "mandatory",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Required by law or rules; compulsory.",
+  "meaning_fa": "اجباری، الزامی",
+  "example_en": "Wearing a helmet is mandatory for cyclists.",
+  "photo": "media/vocab/mandatory.jpg"
+ },
+ {
+  "word": "necessity",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Something that is needed or required.",
+  "meaning_fa": "ضرورت، نیاز",
+  "example_en": "Food and water are basic necessities.",
+  "photo": "media/vocab/necessity.jpg"
+ },
+ {
+  "word": "need (for)",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A requirement or strong desire for something.",
+  "meaning_fa": "نیاز (به)",
+  "example_en": "There is a great need for more doctors.",
+  "photo": "media/vocab/need-for.jpg"
+ },
+ {
+  "word": "obligation",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Something you must do; a duty.",
+  "meaning_fa": "تعهد، وظیفه",
+  "example_en": "It's my obligation to help them.",
+  "photo": "media/vocab/obligation.jpg"
+ },
+ {
+  "word": "obligatory",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Required by law or rule; compulsory.",
+  "meaning_fa": "اجباری، الزامی",
+  "example_en": "Wearing a helmet is obligatory.",
+  "photo": "media/vocab/obligatory.jpg"
+ },
+ {
+  "word": "oblige",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To force someone to do something.",
+  "meaning_fa": "مجبور کردن، وادار کردن",
+  "example_en": "The law will oblige them to pay.",
+  "photo": "media/vocab/oblige.jpg"
+ },
+ {
+  "word": "optional",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "You can choose to do it or not.",
+  "meaning_fa": "اختیاری",
+  "example_en": "The extra course is optional, not compulsory.",
+  "photo": "media/vocab/optional.jpg"
+ },
+ {
+  "word": "possibility",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Something that might happen or be true.",
+  "meaning_fa": "امکان، احتمال",
+  "example_en": "There's a possibility of rain today.",
+  "photo": "media/vocab/possibility.jpg"
+ },
+ {
+  "word": "probable",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Likely to happen or be true.",
+  "meaning_fa": "محتمل، احتمالی",
+  "example_en": "It is probable that it will rain.",
+  "photo": "media/vocab/probable.jpg"
+ },
+ {
+  "word": "requirement",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Something you need or must do.",
+  "meaning_fa": "نیاز، الزام",
+  "example_en": "Meeting all the project requirements is essential for success.",
+  "photo": "media/vocab/requirement.jpg"
+ },
+ {
+  "word": "shortage",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A situation where there is not enough of something.",
+  "meaning_fa": "کمبود، کسری",
+  "example_en": "There is a shortage of water in the city.",
+  "photo": "media/vocab/shortage.jpg"
+ },
+ {
+  "word": "accede",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To agree to a demand or request.",
+  "meaning_fa": "موافقت کردن، تن دادن",
+  "example_en": "The government finally acceded to the public's demands.",
+  "photo": "media/vocab/accede.jpg"
+ },
+ {
+  "word": "acquiesce",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To accept something reluctantly without protest.",
+  "meaning_fa": "رضایت دادن، تن دادن",
+  "example_en": "She acquiesced to her parents' wishes.",
+  "photo": "media/vocab/acquiesce.jpg"
+ },
+ {
+  "word": "assent",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "Official agreement or approval.",
+  "meaning_fa": "موافقت، رضایت",
+  "example_en": "The committee gave its assent to the new proposal.",
+  "photo": "media/vocab/assent.jpg"
+ },
+ {
+  "word": "authorise",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To give official permission for something.",
+  "meaning_fa": "اجازه دادن، اختیار دادن",
+  "example_en": "The manager authorised the purchase of new equipment.",
+  "photo": "media/vocab/authorise.jpg"
+ },
+ {
+  "word": "carte blanche",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Complete freedom to act as one wishes.",
+  "meaning_fa": "اختیار تام",
+  "example_en": "The designer was given carte blanche for the new project.",
+  "photo": "media/vocab/carte-blanche.jpg"
+ },
+ {
+  "word": "clamp down",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To take strong action to stop something illegal or unwanted.",
+  "meaning_fa": "سخت‌گیری کردن، سرکوب کردن",
+  "example_en": "Authorities decided to clamp down on illegal street racing.",
+  "photo": "media/vocab/clamp-down.jpg"
+ },
+ {
+  "word": "condone",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To accept or allow behavior that is morally wrong.",
+  "meaning_fa": "چشم‌پوشی کردن، نادیده گرفتن",
+  "example_en": "The school does not condone any form of bullying.",
+  "photo": "media/vocab/condone.jpg"
+ },
+ {
+  "word": "countenance",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To admit as acceptable or possible.",
+  "meaning_fa": "تحمل کردن، اجازه دادن",
+  "example_en": "The school will not countenance cheating in exams.",
+  "photo": "media/vocab/countenance.jpg"
+ },
+ {
+  "word": "endorse",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To publicly support or approve of something.",
+  "meaning_fa": "تایید کردن، حمایت کردن",
+  "example_en": "The celebrity agreed to endorse the new product.",
+  "photo": "media/vocab/endorse.jpg"
+ },
+ {
+  "word": "give carte blanche",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Give someone complete freedom to act as they wish.",
+  "meaning_fa": "اختیار تام دادن",
+  "example_en": "The director gave the artist carte blanche for the new design.",
+  "photo": "media/vocab/give-carte-blanche.jpg"
+ },
+ {
+  "word": "give the go-ahead for",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Give permission for something to happen.",
+  "meaning_fa": "اجازه دادن، چراغ سبز نشان دادن",
+  "example_en": "The council gave the go-ahead for the new building project.",
+  "photo": "media/vocab/give-the-go-ahead-for.jpg"
+ },
+ {
+  "word": "give the green light to",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Give permission for something to proceed.",
+  "meaning_fa": "چراغ سبز نشان دادن",
+  "example_en": "The board gave the green light to the merger.",
+  "photo": "media/vocab/give-the-green-light-to.jpg"
+ },
+ {
+  "word": "outlaw",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make something illegal or forbidden.",
+  "meaning_fa": "غیرقانونی کردن، ممنوع کردن",
+  "example_en": "The government plans to outlaw smoking in public parks.",
+  "photo": "media/vocab/outlaw.jpg"
+ },
+ {
+  "word": "regardless",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "Without paying attention to the present circumstances.",
+  "meaning_fa": "صرف نظر از، بدون توجه به",
+  "example_en": "We will proceed with the plan, regardless of the weather.",
+  "photo": "media/vocab/regardless.jpg"
+ },
+ {
+  "word": "veto",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To reject a decision or proposal.",
+  "meaning_fa": "وتو کردن، رد کردن",
+  "example_en": "The President can veto any bill passed by Congress.",
+  "photo": "media/vocab/veto.jpg"
+ }
+]

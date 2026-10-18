@@ -1,1 +1,3430 @@
-[{"word": "ache", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "to feel a continuous, dull pain", "meaning_fa": "درد کردن", "example_en": "My back aches after working all day.", "photo": "media/vocab/ache.jpg"}, {"word": "ache n, v", "phonetic": "eɪk", "levels": ["a2"], "pos": "noun, verb", "meaning_en": "a continuous, dull pain", "meaning_fa": "درد (اسم و فعل)", "example_en": "I have a headache. My head aches.", "photo": "media/vocab/ache-n-v.jpg"}, {"word": "advance", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make progress or move forward.", "meaning_fa": "پیشرفت کردن، جلو رفتن", "example_en": "Medical science continues to advance rapidly.", "photo": "media/vocab/advance.jpg"}, {"word": "ageing", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "becoming older", "meaning_fa": "پیر شدن، سالخورده", "example_en": "Ageing skin needs special care.", "photo": "media/vocab/ageing.jpg"}, {"word": "ankle", "phonetic": "ˈæŋkəl", "levels": ["b2"], "pos": "noun", "meaning_en": "The joint connecting your foot and leg.", "meaning_fa": "مچ پا", "example_en": "I hurt my ankle playing football.", "photo": "media/vocab/ankle.jpg"}, {"word": "artificial hip", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A man-made replacement for a damaged hip joint.", "meaning_fa": "مفصل ران مصنوعی", "example_en": "She had an operation for an artificial hip.", "photo": "media/vocab/artificial-hip.jpg"}, {"word": "aspirin", "phonetic": "ˈæsprɪn", "levels": ["a1"], "pos": "noun", "meaning_en": "A common medicine for pain or fever.", "meaning_fa": "آسپرین", "example_en": "I took an aspirin for my headache.", "photo": "media/vocab/aspirin.jpg"}, {"word": "asthma", "phonetic": "ˈæsmə", "levels": ["a1"], "pos": "noun", "meaning_en": "A health problem making it hard to breathe.", "meaning_fa": "آسم، تنگی نفس", "example_en": "My friend has asthma and uses an inhaler.", "photo": "media/vocab/asthma.jpg"}, {"word": "automatically", "phonetic": null, "levels": ["b2"], "pos": "adverb", "meaning_en": "Without human control or thought.", "meaning_fa": "به طور خودکار", "example_en": "The door opens automatically when you get close.", "photo": "media/vocab/automatically.jpg"}, {"word": "backache", "phonetic": "ˈbækeɪk", "levels": ["a2", "b2"], "pos": "noun", "meaning_en": "A pain in your back.", "meaning_fa": "کمردرد", "example_en": "I have a bad backache from sitting all day.", "photo": "media/vocab/backache.jpg"}, {"word": "bandage", "phonetic": "ˈbændɪʤ", "levels": ["a2", "b2"], "pos": "noun", "meaning_en": "A strip of cloth to cover an injury.", "meaning_fa": "باند، نوار زخم‌بندی", "example_en": "She put a bandage on her cut finger.", "photo": "media/vocab/bandage.jpg"}, {"word": "black eye", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A dark mark around your eye from a hit.", "meaning_fa": "کبودی دور چشم", "example_en": "He got a black eye playing football.", "photo": "media/vocab/black-eye.jpg"}, {"word": "bleed", "phonetic": "bliːd", "levels": ["a2"], "pos": "verb", "meaning_en": "To lose blood from your body.", "meaning_fa": "خونریزی کردن", "example_en": "My finger is bleeding after I cut it.", "photo": "media/vocab/bleed.jpg"}, {"word": "blood pressure", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The force of blood moving through your body.", "meaning_fa": "فشار خون", "example_en": "The doctor checked my blood pressure.", "photo": "media/vocab/blood-pressure.jpg"}, {"word": "boost", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "Help something to increase or improve.", "meaning_fa": "تقویت کردن، افزایش دادن", "example_en": "Exercise can boost your energy levels.", "photo": "media/vocab/boost.jpg"}, {"word": "break", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To injure a bone in your body.", "meaning_fa": "شکستن (استخوان)", "example_en": "He fell and broke his arm during the game.", "photo": "media/vocab/break.jpg"}, {"word": "breathless", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Unable to breathe easily, often after exercise.", "meaning_fa": "نفس‌نفس‌زنان، بی‌نفس", "example_en": "I felt breathless after running up the stairs.", "photo": "media/vocab/breathless.jpg"}, {"word": "bruise", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a dark mark on skin from a hit", "meaning_fa": "کبودی، کوفتگی", "example_en": "I got a bruise on my leg.", "photo": "media/vocab/bruise.jpg"}, {"word": "bug", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a minor illness or infection", "meaning_fa": "بیماری خفیف، ویروس", "example_en": "I caught a stomach bug last week.", "photo": "media/vocab/bug.jpg"}, {"word": "cancer", "phonetic": "ˈkænsə", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "A very serious illness.", "meaning_fa": "سرطان", "example_en": "Doctors are looking for a cure for cancer.", "photo": "media/vocab/cancer.jpg"}, {"word": "check [examine]", "phonetic": "tʃek", "levels": ["a2"], "pos": "verb", "meaning_en": "To look at something carefully to see if it is correct.", "meaning_fa": "بررسی کردن، چک کردن", "example_en": "Please check your answers before you finish.", "photo": "media/vocab/check-examine.jpg"}, {"word": "chest pains", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A feeling of discomfort or pain in the chest.", "meaning_fa": "درد قفسه سینه", "example_en": "He went to the doctor because of chest pains.", "photo": "media/vocab/chest-pains.jpg"}, {"word": "cholera", "phonetic": "ˈkɒlərə", "levels": ["a1"], "pos": "noun", "meaning_en": "A serious disease causing severe diarrhoea.", "meaning_fa": "وبا", "example_en": "Cholera can spread quickly in poor areas.", "photo": "media/vocab/cholera.jpg"}, {"word": "cholesterol", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A fatty substance in your blood.", "meaning_fa": "کلسترول", "example_en": "Eating healthy food can lower cholesterol.", "photo": "media/vocab/cholesterol.jpg"}, {"word": "cold", "phonetic": "kəʊld", "levels": ["a1"], "pos": "noun", "meaning_en": "A common illness that makes you sneeze and cough.", "meaning_fa": "سرماخوردگی", "example_en": "I have a cold and feel tired.", "photo": "media/vocab/cold.jpg"}, {"word": "consider", "phonetic": "kənˈsɪdə", "levels": ["b2"], "pos": "verb", "meaning_en": "To think carefully about something.", "meaning_fa": "در نظر گرفتن، فکر کردن", "example_en": "I will consider your offer carefully.", "photo": "media/vocab/consider.jpg"}, {"word": "consume", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To eat, drink, or use something.", "meaning_fa": "مصرف کردن", "example_en": "Humans consume a lot of water daily.", "photo": "media/vocab/consume.jpg"}, {"word": "contact lens", "phonetic": null, "levels": ["b2"], "pos": "noun phrase", "meaning_en": "A small lens worn on the eye for vision.", "meaning_fa": "لنز تماسی", "example_en": "She wears contact lenses instead of glasses.", "photo": "media/vocab/contact-lens.jpg"}, {"word": "content n", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The amount of a substance inside something.", "meaning_fa": "محتوا، مقدار", "example_en": "Check the fat content of this food.", "photo": "media/vocab/content-n.jpg"}, {"word": "contract v", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To get a disease or illness.", "meaning_fa": "مبتلا شدن (به بیماری)", "example_en": "He contracted a serious illness abroad.", "photo": "media/vocab/contract-v.jpg"}, {"word": "cough", "phonetic": "kɒf", "levels": ["a2"], "pos": "verb", "meaning_en": "To push air from your lungs with a loud sound.", "meaning_fa": "سرفه کردن", "example_en": "He started to cough because of the smoke.", "photo": "media/vocab/cough.jpg"}, {"word": "crutches", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Sticks placed under arms to help walk with injured leg.", "meaning_fa": "عصای زیر بغل", "example_en": "She walked on crutches after her accident.", "photo": "media/vocab/crutches.jpg"}, {"word": "cut [injure]", "phonetic": "v kʌt", "levels": ["a2"], "pos": "verb", "meaning_en": "To make an opening in skin with something sharp.", "meaning_fa": "بریدن، زخمی کردن", "example_en": "Be careful not to cut your finger.", "photo": "media/vocab/cut-injure.jpg"}, {"word": "database", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "An organized collection of information stored on a computer.", "meaning_fa": "پایگاه داده", "example_en": "We keep all customer details in a database.", "photo": "media/vocab/database.jpg"}, {"word": "decade", "phonetic": "ˈdekeɪd", "levels": ["b2"], "pos": "noun", "meaning_en": "A period of ten years.", "meaning_fa": "دهه", "example_en": "The company has grown a lot in the last decade.", "photo": "media/vocab/decade.jpg"}, {"word": "dentist", "phonetic": "ˈdentɪst", "levels": ["a1"], "pos": "noun", "meaning_en": "A doctor who takes care of teeth.", "meaning_fa": "دندانپزشک", "example_en": "I have an appointment with the dentist.", "photo": "media/vocab/dentist.jpg"}, {"word": "depressed", "phonetic": "dɪˈprest", "levels": ["b2"], "pos": "adjective", "meaning_en": "Feeling very sad and without hope.", "meaning_fa": "افسرده", "example_en": "She felt depressed after losing her job.", "photo": "media/vocab/depressed.jpg"}, {"word": "depression", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A serious medical condition of feeling very sad.", "meaning_fa": "افسردگی", "example_en": "He sought help for his depression.", "photo": "media/vocab/depression.jpg"}, {"word": "development", "phonetic": "dɪˈveləpmənt", "levels": ["b2"], "pos": "noun", "meaning_en": "The process of growing or changing.", "meaning_fa": "توسعه، پیشرفت", "example_en": "The new housing development will create many jobs.", "photo": "media/vocab/development.jpg"}, {"word": "device", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A tool or machine for a specific purpose.", "meaning_fa": "دستگاه، ابزار", "example_en": "This new device helps monitor heart rate.", "photo": "media/vocab/device.jpg"}, {"word": "diagnose", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To identify an illness or problem.", "meaning_fa": "تشخیص دادن (بیماری)", "example_en": "The doctor diagnosed her with a common cold.", "photo": "media/vocab/diagnose.jpg"}, {"word": "diarrhoea", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "An illness causing frequent liquid bowel movements.", "meaning_fa": "اسهال", "example_en": "He had diarrhoea after eating bad food.", "photo": "media/vocab/diarrhoea.jpg"}, {"word": "die", "phonetic": "daɪ", "levels": ["b2"], "pos": "verb", "meaning_en": "To stop living.", "meaning_fa": "مردن", "example_en": "My old dog died last year.", "photo": "media/vocab/die.jpg"}, {"word": "diet", "phonetic": "daɪət", "levels": ["a1"], "pos": "noun", "meaning_en": "The food and drink a person usually eats.", "meaning_fa": "رژیم غذایی", "example_en": "Eating a healthy diet is important.", "photo": "media/vocab/diet.jpg"}, {"word": "disease", "phonetic": "dɪˈziːz", "levels": ["a2", "b2"], "pos": "noun", "meaning_en": "An illness that affects people, animals, or plants.", "meaning_fa": "بیماری", "example_en": "Many diseases can be prevented by vaccination.", "photo": "media/vocab/disease.jpg"}, {"word": "dislocate", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To force a bone out of its normal position.", "meaning_fa": "دررفتن (مفصل)، درآوردن", "example_en": "He dislocated his shoulder playing rugby.", "photo": "media/vocab/dislocate.jpg"}, {"word": "dizzy", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Feeling like everything is spinning, losing balance.", "meaning_fa": "سرگیجه", "example_en": "I felt dizzy after riding the roller coaster.", "photo": "media/vocab/dizzy.jpg"}, {"word": "diiculty", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A problem or something that is not easy.", "meaning_fa": "دشواری، مشکل", "example_en": "He had difficulty sleeping last night.", "photo": "media/vocab/di-iculty.jpg"}, {"word": "doctor", "phonetic": "ˈdɒktə", "levels": ["a1"], "pos": "noun", "meaning_en": "A person who helps sick people.", "meaning_fa": "دکتر، پزشک", "example_en": "I need to see a doctor today.", "photo": "media/vocab/doctor.jpg"}, {"word": "earache", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Pain inside your ear.", "meaning_fa": "گوش درد", "example_en": "I have a terrible earache.", "photo": "media/vocab/earache.jpg"}, {"word": "early stage", "phonetic": null, "levels": ["b2"], "pos": "noun phrase", "meaning_en": "The beginning period of a disease or process.", "meaning_fa": "مرحله اولیه", "example_en": "The illness was caught at an early stage.", "photo": "media/vocab/early-stage.jpg"}, {"word": "exercise", "phonetic": "ˈeksəsaɪz", "levels": ["a1"], "pos": "noun", "meaning_en": "Physical activity to stay healthy.", "meaning_fa": "ورزش", "example_en": "I do exercise every day.", "photo": "media/vocab/exercise.jpg"}, {"word": "exercise n, v", "phonetic": null, "levels": ["b2"], "pos": "noun, verb", "meaning_en": "Physical activity to improve health, or to do it.", "meaning_fa": "ورزش (اسم)، ورزش کردن (فعل)", "example_en": "Regular exercise is good for you.", "photo": "media/vocab/exercise-n-v.jpg"}, {"word": "exhausted", "phonetic": "ɪgˈzɔːstɪd", "levels": ["b2"], "pos": "adjective", "meaning_en": "Very tired.", "meaning_fa": "خسته، از پا افتاده", "example_en": "I was exhausted after the long trip.", "photo": "media/vocab/exhausted.jpg"}, {"word": "fat", "phonetic": "fæt", "levels": ["b2"], "pos": "adjective", "meaning_en": "Having a lot of flesh on your body.", "meaning_fa": "چاق", "example_en": "The cat is quite fat.", "photo": "media/vocab/fat.jpg"}, {"word": "feel", "phonetic": "fiːl", "levels": ["a1", "b2"], "pos": "verb", "meaning_en": "To experience a physical sensation.", "meaning_fa": "حس کردن، احساس کردن", "example_en": "I feel cold today.", "photo": "media/vocab/feel.jpg"}, {"word": "feel sick", "phonetic": "fiːl sɪk", "levels": ["a2"], "pos": "phrase", "meaning_en": "To feel unwell, like you might vomit.", "meaning_fa": "حالت تهوع داشتن", "example_en": "I ate too much and now I feel sick.", "photo": "media/vocab/feel-sick.jpg"}, {"word": "fine", "phonetic": "faɪn", "levels": ["a1"], "pos": "adjective", "meaning_en": "Good or acceptable.", "meaning_fa": "خوب، عالی", "example_en": "I feel fine today, thank you.", "photo": "media/vocab/fine.jpg"}, {"word": "fit", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The way clothes are the right size.", "meaning_fa": "اندازه، برازش", "example_en": "The dress has a perfect fit.", "photo": "media/vocab/fit.jpg"}, {"word": "fitness", "phonetic": "ˈfɪtnəs", "levels": ["b2"], "pos": "noun", "meaning_en": "The state of being healthy and strong.", "meaning_fa": "تناسب اندام، سلامتی", "example_en": "Regular exercise improves your fitness.", "photo": "media/vocab/fitness.jpg"}, {"word": "fizzy", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having bubbles of gas, like soda.", "meaning_fa": "گازدار، حباب‌دار", "example_en": "I prefer still water to fizzy drinks.", "photo": "media/vocab/fizzy.jpg"}, {"word": "flu", "phonetic": "fluː", "levels": ["a2"], "pos": "noun", "meaning_en": "A common illness like a bad cold.", "meaning_fa": "آنفولانزا، سرماخوردگی شدید", "example_en": "I have the flu and feel very tired.", "photo": "media/vocab/flu.jpg"}, {"word": "general anaesthetic", "phonetic": null, "levels": ["b2"], "pos": "noun phrase", "meaning_en": "a drug that makes you unconscious during an operation.", "meaning_fa": "بیهوشی عمومی", "example_en": "The patient received a general anaesthetic for surgery.", "photo": "media/vocab/general-anaesthetic.jpg"}, {"word": "get over", "phonetic": null, "levels": ["b2"], "pos": "phrasal verb", "meaning_en": "Recover from an illness or difficult experience.", "meaning_fa": "بهبود یافتن، کنار آمدن", "example_en": "It took her a long time to get over the flu.", "photo": "media/vocab/get-over.jpg"}, {"word": "good for", "phonetic": null, "levels": ["b2"], "pos": "phrase", "meaning_en": "beneficial for your health or well-being.", "meaning_fa": "مفید برای", "example_en": "Eating vegetables is good for your health.", "photo": "media/vocab/good-for.jpg"}, {"word": "good for you", "phonetic": "gʊd fə juː", "levels": ["a1"], "pos": "phrase", "meaning_en": "used to say something is healthy or positive for you.", "meaning_fa": "برای تو خوب است", "example_en": "Eating fruit is good for you.", "photo": "media/vocab/good-for-you.jpg"}, {"word": "harm", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Physical or mental damage or injury.", "meaning_fa": "آسیب، ضرر", "example_en": "Smoking can cause serious harm to your health.", "photo": "media/vocab/harm.jpg"}, {"word": "harmful", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Causing damage or injury.", "meaning_fa": "مضر، زیان‌آور", "example_en": "Too much sun can be harmful.", "photo": "media/vocab/harmful.jpg"}, {"word": "have a cold", "phonetic": "hæv ə kəʊld", "levels": ["a1"], "pos": "verb phrase", "meaning_en": "To be sick with a common illness.", "meaning_fa": "سرما خوردن", "example_en": "I have a cold and a cough.", "photo": "media/vocab/have-a-cold.jpg"}, {"word": "have a headache", "phonetic": "hæv ə ˈhedeɪk", "levels": ["a1"], "pos": "phrase", "meaning_en": "Feel pain in your head.", "meaning_fa": "سردرد داشتن", "example_en": "I have a headache, so I need to rest.", "photo": "media/vocab/have-a-headache.jpg"}, {"word": "have a healthy diet", "phonetic": "hæv ə ˈhelθi daɪət", "levels": ["a1"], "pos": "phrase", "meaning_en": "Eat good food for your body.", "meaning_fa": "رژیم غذایی سالم داشتن", "example_en": "To stay strong, you should have a healthy diet.", "photo": "media/vocab/have-a-healthy-diet.jpg"}, {"word": "have a heart attack", "phonetic": "hæv ə hɑːt əˈtæk", "levels": ["a1"], "pos": "phrase", "meaning_en": "A sudden serious medical problem with your heart.", "meaning_fa": "سکته قلبی کردن", "example_en": "The doctor said he had a heart attack.", "photo": "media/vocab/have-a-heart-attack.jpg"}, {"word": "have toothache", "phonetic": "hæv tuːθeɪk", "levels": ["a1"], "pos": "phrase", "meaning_en": "Feel pain in your tooth.", "meaning_fa": "دندان‌درد داشتن", "example_en": "I have toothache, so I need a dentist.", "photo": "media/vocab/have-toothache.jpg"}, {"word": "hay fever", "phonetic": "heɪ ˈfiːvə", "levels": ["a1"], "pos": "noun", "meaning_en": "Allergy to pollen, causing sneezing and itchy eyes.", "meaning_fa": "تب یونجه", "example_en": "I get hay fever every spring.", "photo": "media/vocab/hay-fever.jpg"}, {"word": "headache", "phonetic": "ˈhedeɪk", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "A pain inside your head.", "meaning_fa": "سردرد", "example_en": "I have a bad headache today.", "photo": "media/vocab/headache.jpg"}, {"word": "health", "phonetic": "helθ", "levels": ["a1"], "pos": "noun", "meaning_en": "The state of your body and mind.", "meaning_fa": "سلامتی", "example_en": "Good food is important for your health.", "photo": "media/vocab/health.jpg"}, {"word": "hearing aid", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A small device to help people hear better.", "meaning_fa": "سمعک", "example_en": "My grandfather uses a hearing aid.", "photo": "media/vocab/hearing-aid.jpg"}, {"word": "heart [in the body]", "phonetic": "hɑːt", "levels": ["a2"], "pos": "noun", "meaning_en": "The organ that pumps blood in your body.", "meaning_fa": "قلب (در بدن)", "example_en": "The doctor listened to my heart.", "photo": "media/vocab/heart-in-the-body.jpg"}, {"word": "heart attack", "phonetic": "hɑːt əˈtæk", "levels": ["a1", "a2", "b2"], "pos": "noun", "meaning_en": "A sudden serious medical problem with your heart.", "meaning_fa": "حمله قلبی، سکته قلبی", "example_en": "He had a heart attack last year.", "photo": "media/vocab/heart-attack.jpg"}, {"word": "highly", "phonetic": null, "levels": ["b2"], "pos": "adverb", "meaning_en": "Very much; to a great degree.", "meaning_fa": "بسیار، به شدت", "example_en": "She is a highly respected doctor.", "photo": "media/vocab/highly.jpg"}, {"word": "hospital", "phonetic": "ˈhɒspɪtəl", "levels": ["a1"], "pos": "noun", "meaning_en": "A place where sick or injured people get help.", "meaning_fa": "بیمارستان", "example_en": "My friend is in the hospital.", "photo": "media/vocab/hospital.jpg"}, {"word": "How are you?", "phonetic": "haʊ ə juː", "levels": ["a1"], "pos": "phrase", "meaning_en": "A common greeting asking about someone's health or state.", "meaning_fa": "حال شما چطور است؟", "example_en": "Hello, how are you today?", "photo": "media/vocab/how-are-you.jpg"}, {"word": "How heavy are you?", "phonetic": "haʊ hevi ɑː juː", "levels": ["a1"], "pos": "phrase", "meaning_en": "Used to ask about someone's weight.", "meaning_fa": "وزنت چقدر است؟", "example_en": "The doctor asked, \"How heavy are you?\"", "photo": "media/vocab/how-heavy-are-you.jpg"}, {"word": "How much do you weigh?", "phonetic": "haʊ mʌtʃ duː juː weɪ", "levels": ["a1"], "pos": "phrase", "meaning_en": "Used to ask about someone's weight.", "meaning_fa": "وزنت چقدر است؟", "example_en": "The nurse asked, \"How much do you weigh?\"", "photo": "media/vocab/how-much-do-you-weigh.jpg"}, {"word": "How old is he?", "phonetic": "haʊ əʊld ɪz hi", "levels": ["a1"], "pos": "phrase", "meaning_en": "Used to ask about someone's age.", "meaning_fa": "او چند سال دارد؟", "example_en": "How old is he? He is ten.", "photo": "media/vocab/how-old-is-he.jpg"}, {"word": "How tall is...?", "phonetic": "haʊ tɔːl ɪz", "levels": ["a1"], "pos": "phrase", "meaning_en": "Used to ask about someone's height.", "meaning_fa": "قدش چقدر است؟", "example_en": "How tall is your brother?", "photo": "media/vocab/how-tall-is.jpg"}, {"word": "hurt", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To cause pain or injury to someone or yourself.", "meaning_fa": "آسیب زدن، درد کردن", "example_en": "Did you hurt your knee playing football?", "photo": "media/vocab/hurt.jpg"}, {"word": "hurt v", "phonetic": "hɜːt", "levels": ["a2"], "pos": "verb", "meaning_en": "To feel pain or cause pain to someone.", "meaning_fa": "درد کردن، آسیب زدن", "example_en": "My arm hurts a lot.", "photo": "media/vocab/hurt-v.jpg"}, {"word": "identify", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To recognize someone or something.", "meaning_fa": "شناسایی کردن", "example_en": "Can you identify the person in this photo?", "photo": "media/vocab/identify.jpg"}, {"word": "ill", "phonetic": "ɪl", "levels": ["a1"], "pos": "adjective", "meaning_en": "Not feeling well, sick.", "meaning_fa": "بیمار، ناخوش", "example_en": "She felt ill and went home from school.", "photo": "media/vocab/ill.jpg"}, {"word": "illness", "phonetic": "ˈɪlnəs", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "A disease or period of being sick.", "meaning_fa": "بیماری", "example_en": "He missed work due to a sudden illness.", "photo": "media/vocab/illness.jpg"}, {"word": "immune system", "phonetic": null, "levels": ["b2"], "pos": "noun phrase", "meaning_en": "The body's system that protects against illness.", "meaning_fa": "سیستم ایمنی", "example_en": "Eating healthy food strengthens your immune system.", "photo": "media/vocab/immune-system.jpg"}, {"word": "indigestion", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Pain or discomfort in your stomach after eating.", "meaning_fa": "سوء هاضمه", "example_en": "Eating too fast can cause indigestion.", "photo": "media/vocab/indigestion.jpg"}, {"word": "injection", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A shot of medicine given with a needle.", "meaning_fa": "تزریق، آمپول", "example_en": "The doctor gave me an injection for the pain.", "photo": "media/vocab/injection.jpg"}, {"word": "itch", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To have an uncomfortable feeling on your skin.", "meaning_fa": "خارش داشتن", "example_en": "My mosquito bite started to itch badly.", "photo": "media/vocab/itch.jpg"}, {"word": "keyhole surgery", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A medical operation using small cuts and a camera.", "meaning_fa": "جراحی لاپاراسکوپی", "example_en": "She had keyhole surgery on her knee.", "photo": "media/vocab/keyhole-surgery.jpg"}, {"word": "large quantities", "phonetic": null, "levels": ["b2"], "pos": "phrase", "meaning_en": "Big amounts of something.", "meaning_fa": "مقادیر زیاد", "example_en": "Eating sugar in large quantities is unhealthy.", "photo": "media/vocab/large-quantities.jpg"}, {"word": "laser surgery", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Medical operation using a strong light beam.", "meaning_fa": "جراحی لیزر", "example_en": "She had laser surgery to improve her eyesight.", "photo": "media/vocab/laser-surgery.jpg"}, {"word": "level", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The amount of something.", "meaning_fa": "سطح، میزان", "example_en": "Her blood sugar level is normal.", "photo": "media/vocab/level.jpg"}, {"word": "list", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A series of names or items.", "meaning_fa": "فهرست، لیست", "example_en": "The doctor gave me a list of foods.", "photo": "media/vocab/list.jpg"}, {"word": "liver", "phonetic": "ˈlɪvə", "levels": ["a2"], "pos": "noun", "meaning_en": "A large organ in your body.", "meaning_fa": "کبد، جگر", "example_en": "The liver helps clean your blood.", "photo": "media/vocab/liver.jpg"}, {"word": "long-term", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "continuing for a long period of time into the future.", "meaning_fa": "بلندمدت", "example_en": "This medicine has no long-term side effects.", "photo": "media/vocab/long-term.jpg"}, {"word": "lose appetite", "phonetic": null, "levels": ["b2"], "pos": "phrase", "meaning_en": "stop feeling hungry.", "meaning_fa": "اشتهای خود را از دست دادن", "example_en": "I lost my appetite after hearing the bad news.", "photo": "media/vocab/lose-appetite.jpg"}, {"word": "lose voice", "phonetic": null, "levels": ["b2"], "pos": "phrase", "meaning_en": "become unable to speak clearly, often due to illness.", "meaning_fa": "صدای خود را از دست دادن", "example_en": "She lost her voice from shouting at the concert.", "photo": "media/vocab/lose-voice.jpg"}, {"word": "lower", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "make something less in amount or degree.", "meaning_fa": "کاهش دادن، پایین آوردن", "example_en": "You should lower your blood pressure.", "photo": "media/vocab/lower.jpg"}, {"word": "lump", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a small, solid mass, often without a clear shape.", "meaning_fa": "توده، برآمدگی", "example_en": "I found a small lump on my arm.", "photo": "media/vocab/lump.jpg"}, {"word": "lung cancer", "phonetic": "lʌŋ ˈkænsə", "levels": ["a2"], "pos": "noun", "meaning_en": "a serious disease affecting the lungs.", "meaning_fa": "سرطان ریه", "example_en": "Smoking is a major cause of lung cancer.", "photo": "media/vocab/lung-cancer.jpg"}, {"word": "lungs", "phonetic": "lʌŋz", "levels": ["a2"], "pos": "noun (plural)", "meaning_en": "the two organs in your chest used for breathing.", "meaning_fa": "ریه‌ها", "example_en": "Healthy lungs are important for good health.", "photo": "media/vocab/lungs.jpg"}, {"word": "maintain", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "keep something in good condition.", "meaning_fa": "نگهداری کردن، حفظ کردن", "example_en": "It's important to maintain a healthy diet.", "photo": "media/vocab/maintain.jpg"}, {"word": "major", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "very important or serious.", "meaning_fa": "اصلی، عمده، مهم", "example_en": "This is a major problem for the company.", "photo": "media/vocab/major.jpg"}, {"word": "malaria", "phonetic": "məˈleəriə", "levels": ["a1"], "pos": "noun", "meaning_en": "A serious disease from mosquito bites.", "meaning_fa": "مالاریا", "example_en": "Malaria is common in hot countries.", "photo": "media/vocab/malaria.jpg"}, {"word": "manufacture", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "Make goods in large quantities, usually in a factory.", "meaning_fa": "تولید کردن، ساختن", "example_en": "This company manufactures cars and trucks.", "photo": "media/vocab/manufacture.jpg"}, {"word": "medical", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Related to medicine and treating illness.", "meaning_fa": "پزشکی، طبی", "example_en": "She needs urgent medical attention.", "photo": "media/vocab/medical.jpg"}, {"word": "medicine [to treat an illness]", "phonetic": "ˈmedsən", "levels": ["a2"], "pos": "noun", "meaning_en": "A drug or treatment for illness.", "meaning_fa": "دارو", "example_en": "Take your medicine twice a day.", "photo": "media/vocab/medicine-to-treat-an-illness.jpg"}, {"word": "mental", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Relating to the mind or thinking.", "meaning_fa": "ذهنی، روانی", "example_en": "Good mental health is very important.", "photo": "media/vocab/mental.jpg"}, {"word": "mosquito", "phonetic": "mɒsˈkiːtəʊ", "levels": ["a1"], "pos": "noun", "meaning_en": "a small flying insect that bites", "meaning_fa": "پشه", "example_en": "A mosquito bit me on the arm.", "photo": "media/vocab/mosquito.jpg"}, {"word": "nuts", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Small dry fruits with a hard shell.", "meaning_fa": "آجیل، مغزها", "example_en": "I like to eat nuts as a snack.", "photo": "media/vocab/nuts.jpg"}, {"word": "obese", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Very fat, in an unhealthy way.", "meaning_fa": "چاق مفرط", "example_en": "The doctor said he was obese.", "photo": "media/vocab/obese.jpg"}, {"word": "obesity", "phonetic": "əˈbiːsəti", "levels": ["b2"], "pos": "noun", "meaning_en": "The state of being very fat and unhealthy.", "meaning_fa": "چاقی مفرط", "example_en": "Obesity is a serious health problem.", "photo": "media/vocab/obesity.jpg"}, {"word": "operate on", "phonetic": null, "levels": ["b2"], "pos": "phrasal verb", "meaning_en": "To perform surgery on someone.", "meaning_fa": "جراحی کردن", "example_en": "Doctors will operate on his knee tomorrow.", "photo": "media/vocab/operate-on.jpg"}, {"word": "operation", "phonetic": "ˌɒpəˈreɪʃən", "levels": ["a2", "b2"], "pos": "noun", "meaning_en": "A medical procedure to fix a body part.", "meaning_fa": "عمل جراحی", "example_en": "He had an operation on his arm.", "photo": "media/vocab/operation.jpg"}, {"word": "pacemaker", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A small device that helps the heart beat regularly.", "meaning_fa": "ضربان‌ساز قلب", "example_en": "My grandfather has a pacemaker to control his heart rate.", "photo": "media/vocab/pacemaker.jpg"}, {"word": "pain", "phonetic": "peɪn", "levels": ["a2", "b2"], "pos": "noun", "meaning_en": "A bad feeling in your body when you are hurt.", "meaning_fa": "درد", "example_en": "I have a lot of pain in my leg.", "photo": "media/vocab/pain.jpg"}, {"word": "painful", "phonetic": "ˈpeɪnfəl", "levels": ["a2"], "pos": "adjective", "meaning_en": "Causing physical or emotional pain.", "meaning_fa": "دردناک", "example_en": "My knee is very painful after the fall.", "photo": "media/vocab/painful.jpg"}, {"word": "patient n", "phonetic": "ˈpeɪʃənt", "levels": ["a2"], "pos": "noun", "meaning_en": "A person receiving medical treatment.", "meaning_fa": "بیمار", "example_en": "The doctor checked on her patient.", "photo": "media/vocab/patient-n.jpg"}, {"word": "physical", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "relating to the body, not the mind.", "meaning_fa": "جسمی، فیزیکی", "example_en": "Regular physical activity is good for your health.", "photo": "media/vocab/physical.jpg"}, {"word": "pick up", "phonetic": null, "levels": ["b2"], "pos": "phrasal verb", "meaning_en": "to get better or stronger after being ill.", "meaning_fa": "بهبود یافتن، بهتر شدن", "example_en": "He's starting to pick up after his illness.", "photo": "media/vocab/pick-up.jpg"}, {"word": "pill", "phonetic": "pɪl", "levels": ["a2"], "pos": "noun", "meaning_en": "a small piece of medicine you swallow.", "meaning_fa": "قرص", "example_en": "Take this pill twice a day.", "photo": "media/vocab/pill.jpg"}, {"word": "plaster", "phonetic": "ˈplɑːstə", "levels": ["b2"], "pos": "noun", "meaning_en": "a sticky strip to cover small cuts.", "meaning_fa": "چسب زخم", "example_en": "I put a plaster on my cut finger.", "photo": "media/vocab/plaster.jpg"}, {"word": "pollen", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Fine yellow powder from flowers, causing allergies.", "meaning_fa": "گرده گل", "example_en": "High pollen counts make me sneeze.", "photo": "media/vocab/pollen.jpg"}, {"word": "process", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A series of actions to achieve a result.", "meaning_fa": "فرآیند، روند", "example_en": "Learning a language is a long process.", "photo": "media/vocab/process.jpg"}, {"word": "processed", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Food changed from its natural state.", "meaning_fa": "فرآوری شده", "example_en": "Avoid eating too much processed food.", "photo": "media/vocab/processed.jpg"}, {"word": "prosthetic", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "An artificial body part.", "meaning_fa": "مصنوعی، پروتزی", "example_en": "He uses a prosthetic leg.", "photo": "media/vocab/prosthetic.jpg"}, {"word": "quantity", "phonetic": "ˈkwɒntɪti", "levels": ["b2"], "pos": "noun", "meaning_en": "An amount or number of something.", "meaning_fa": "مقدار، کمیت", "example_en": "We need a large quantity of food for the party.", "photo": "media/vocab/quantity.jpg"}, {"word": "rapid", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "happening very quickly", "meaning_fa": "سریع، تند", "example_en": "The patient showed rapid improvement.", "photo": "media/vocab/rapid.jpg"}, {"word": "rash", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "an area of red spots on the skin", "meaning_fa": "بثورات پوستی، جوش", "example_en": "The baby had a rash on her arm.", "photo": "media/vocab/rash.jpg"}, {"word": "reduce", "phonetic": "rɪˈdjuːs", "levels": ["b2"], "pos": "verb", "meaning_en": "To make something smaller or less.", "meaning_fa": "کاهش دادن", "example_en": "We need to reduce our waste.", "photo": "media/vocab/reduce.jpg"}, {"word": "relax", "phonetic": "rɪˈlæks", "levels": ["a1"], "pos": "verb", "meaning_en": "To rest and feel calm.", "meaning_fa": "استراحت کردن، آرام شدن", "example_en": "I like to relax after work.", "photo": "media/vocab/relax.jpg"}, {"word": "rise", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To increase in amount, level, or strength.", "meaning_fa": "افزایش یافتن، بالا رفتن", "example_en": "The cost of living continues to rise.", "photo": "media/vocab/rise.jpg"}, {"word": "risk", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The possibility of something bad happening.", "meaning_fa": "خطر، ریسک", "example_en": "Smoking increases the risk of heart disease.", "photo": "media/vocab/risk.jpg"}, {"word": "robotic", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Moving or acting like a robot.", "meaning_fa": "رباتیک، ماشینی", "example_en": "His movements were stiff and robotic.", "photo": "media/vocab/robotic.jpg"}, {"word": "scanner", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A machine that creates a digital image of something.", "meaning_fa": "اسکنر", "example_en": "The doctor used a scanner to check his leg.", "photo": "media/vocab/scanner.jpg"}, {"word": "serious [bad]", "phonetic": "ˈsɪərɪəs", "levels": ["a2"], "pos": "adjective", "meaning_en": "bad or dangerous; needing attention", "meaning_fa": "جدی، وخیم", "example_en": "He has a serious illness.", "photo": "media/vocab/serious-bad.jpg"}, {"word": "sharp", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "intelligent and quick to understand", "meaning_fa": "باهوش، زیرک", "example_en": "She has a very sharp mind.", "photo": "media/vocab/sharp.jpg"}, {"word": "shiver", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "to shake slightly because of cold or fear", "meaning_fa": "لرزیدن", "example_en": "I shivered in the cold wind.", "photo": "media/vocab/shiver.jpg"}, {"word": "short-term", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Lasting for a short period of time.", "meaning_fa": "کوتاه‌مدت", "example_en": "He only has a short-term memory problem.", "photo": "media/vocab/short-term.jpg"}, {"word": "shoulder", "phonetic": "ˈʃəʊldə", "levels": ["b2"], "pos": "noun", "meaning_en": "The part of your body between your neck and arm.", "meaning_fa": "شانه", "example_en": "He carried the bag on his shoulder.", "photo": "media/vocab/shoulder.jpg"}, {"word": "sick", "phonetic": "sɪk", "levels": ["a1"], "pos": "adjective", "meaning_en": "Feeling ill or unwell.", "meaning_fa": "بیمار، ناخوش", "example_en": "I feel sick, I think I have a cold.", "photo": "media/vocab/sick.jpg"}, {"word": "sickness", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The state of being ill.", "meaning_fa": "بیماری، ناخوشی", "example_en": "He suffered from a long sickness.", "photo": "media/vocab/sickness.jpg"}, {"word": "slow", "phonetic": "sləʊ", "levels": ["b2"], "pos": "adjective", "meaning_en": "Not fast.", "meaning_fa": "آهسته، کند", "example_en": "The internet is very slow.", "photo": "media/vocab/slow.jpg"}, {"word": "sneeze", "phonetic": "sniːz", "levels": ["a1"], "pos": "verb", "meaning_en": "To suddenly push air from your nose and mouth.", "meaning_fa": "عطسه کردن", "example_en": "I sneeze when I have a cold.", "photo": "media/vocab/sneeze.jpg"}, {"word": "sophisticated", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Complex and advanced, often elegant.", "meaning_fa": "پیچیده، پیشرفته، متین", "example_en": "The new phone has sophisticated features.", "photo": "media/vocab/sophisticated.jpg"}, {"word": "sore throat", "phonetic": "sɔː θrəʊt", "levels": ["a2", "b2"], "pos": "noun phrase", "meaning_en": "Pain in your throat.", "meaning_fa": "گلودرد", "example_en": "I have a sore throat and a cough.", "photo": "media/vocab/sore-throat.jpg"}, {"word": "source", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The place something comes from.", "meaning_fa": "منبع", "example_en": "What is the source of this information?", "photo": "media/vocab/source.jpg"}, {"word": "spectacles", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Glasses worn to help you see better.", "meaning_fa": "عینک", "example_en": "He wears spectacles for reading.", "photo": "media/vocab/spectacles.jpg"}, {"word": "spot", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A small red mark on the skin.", "meaning_fa": "جوش، لکه", "example_en": "She had a few spots on her face.", "photo": "media/vocab/spot.jpg"}, {"word": "sprain", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "Injure a joint by twisting it.", "meaning_fa": "رگ به رگ شدن، پیچ خوردن", "example_en": "I sprained my ankle playing football.", "photo": "media/vocab/sprain.jpg"}, {"word": "stomach ache", "phonetic": "ˈstʌmək eɪk", "levels": ["a2"], "pos": "noun", "meaning_en": "Pain in your stomach.", "meaning_fa": "دل‌درد، معده‌درد", "example_en": "I have a bad stomach ache.", "photo": "media/vocab/stomach-ache.jpg"}, {"word": "stress", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A feeling of worry caused by difficult situations.", "meaning_fa": "استرس، فشار روانی", "example_en": "Too much work causes a lot of stress.", "photo": "media/vocab/stress.jpg"}, {"word": "stressed", "phonetic": "strest", "levels": ["a1", "b2"], "pos": "adjective", "meaning_en": "Feeling worried and unable to relax.", "meaning_fa": "پراسترس، نگران", "example_en": "I feel very stressed today.", "photo": "media/vocab/stressed.jpg"}, {"word": "stressful", "phonetic": "ˈstresfʊl", "levels": ["b2"], "pos": "adjective", "meaning_en": "Causing a lot of worry.", "meaning_fa": "پراسترس، تنش‌زا", "example_en": "Moving house can be very stressful.", "photo": "media/vocab/stressful.jpg"}, {"word": "stroke", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A sudden serious illness affecting the brain.", "meaning_fa": "سکته مغزی", "example_en": "He had a stroke and lost his speech.", "photo": "media/vocab/stroke.jpg"}, {"word": "suffer from sth", "phonetic": "ˈsʌfə frɒm ˈsʌmθɪŋ", "levels": ["a2"], "pos": "phrasal verb", "meaning_en": "To have a disease or bad condition.", "meaning_fa": "از چیزی رنج بردن", "example_en": "He suffers from a bad cold every winter.", "photo": "media/vocab/suffer-from-sth.jpg"}, {"word": "sunburn", "phonetic": "ˈsʌnbɜːn", "levels": ["b2"], "pos": "noun", "meaning_en": "Red, painful skin caused by too much sun.", "meaning_fa": "آفتاب سوختگی", "example_en": "I got a bad sunburn on my shoulders.", "photo": "media/vocab/sunburn.jpg"}, {"word": "superfood", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A food considered very good for health.", "meaning_fa": "غذای فوق‌العاده سالم", "example_en": "Blueberries are often called a superfood.", "photo": "media/vocab/superfood.jpg"}, {"word": "surgeon", "phonetic": "ˈsɜːʤən", "levels": ["a2"], "pos": "noun", "meaning_en": "A doctor who performs operations.", "meaning_fa": "جراح", "example_en": "The surgeon explained the operation to me.", "photo": "media/vocab/surgeon.jpg"}, {"word": "surgery [an operation]", "phonetic": "ˈsɜːʤəri", "levels": ["a2"], "pos": "noun", "meaning_en": "A medical operation to repair or remove part of the body.", "meaning_fa": "عمل جراحی", "example_en": "She needed surgery on her knee.", "photo": "media/vocab/surgery-an-operation.jpg"}, {"word": "suer", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To experience physical or mental pain or illness.", "meaning_fa": "رنج بردن، درد کشیدن", "example_en": "Many people suffer from chronic pain.", "photo": "media/vocab/su-er.jpg"}, {"word": "tablet", "phonetic": "ˈtæblət", "levels": ["a2", "b2"], "pos": "noun", "meaning_en": "A small, solid piece of medicine.", "meaning_fa": "قرص", "example_en": "Take one tablet with water.", "photo": "media/vocab/tablet.jpg"}, {"word": "teaspoonful", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The amount that a teaspoon can hold.", "meaning_fa": "یک قاشق چایخوری", "example_en": "Add one teaspoonful of sugar.", "photo": "media/vocab/teaspoonful.jpg"}, {"word": "temperature", "phonetic": "ˈtemprətʃə", "levels": ["a2", "b2"], "pos": "noun", "meaning_en": "How hot or cold something is.", "meaning_fa": "دما، درجه حرارت", "example_en": "The temperature is very high today.", "photo": "media/vocab/temperature.jpg"}, {"word": "terminal", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "A disease that will cause death.", "meaning_fa": "کشنده، لاعلاج", "example_en": "Doctors told him his illness was terminal.", "photo": "media/vocab/terminal.jpg"}, {"word": "thermometer", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a tool for measuring temperature, especially body heat.", "meaning_fa": "دماسنج", "example_en": "The nurse used a thermometer to check my temperature.", "photo": "media/vocab/thermometer.jpg"}, {"word": "tool", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "An object used for a specific job or purpose.", "meaning_fa": "ابزار، وسیله", "example_en": "A hammer is a useful tool for building things.", "photo": "media/vocab/tool.jpg"}, {"word": "toothache", "phonetic": "ˈtuːθeɪk", "levels": ["a1"], "pos": "noun", "meaning_en": "Pain in a tooth.", "meaning_fa": "دندان درد", "example_en": "I have a bad toothache.", "photo": "media/vocab/toothache.jpg"}, {"word": "treat", "phonetic": "triːt", "levels": ["b2"], "pos": "verb", "meaning_en": "To behave towards someone in a certain way.", "meaning_fa": "رفتار کردن", "example_en": "Please treat others with kindness.", "photo": "media/vocab/treat.jpg"}, {"word": "tremble", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To shake slightly, often from fear or cold.", "meaning_fa": "لرزیدن، تکان خوردن", "example_en": "Her hands began to tremble as she opened the letter.", "photo": "media/vocab/tremble.jpg"}, {"word": "tropical", "phonetic": "ˈtrɒpɪkəl", "levels": ["a1"], "pos": "adjective", "meaning_en": "From very hot parts of the world.", "meaning_fa": "گرمسیری", "example_en": "We saw many tropical fish.", "photo": "media/vocab/tropical.jpg"}, {"word": "vast", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "extremely large in area, size, or amount", "meaning_fa": "وسیع، پهناور", "example_en": "The desert is a vast, empty space.", "photo": "media/vocab/vast.jpg"}, {"word": "virus", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a tiny thing that causes illness", "meaning_fa": "ویروس", "example_en": "The flu is caused by a virus.", "photo": "media/vocab/virus.jpg"}, {"word": "vision", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "the ability to see; eyesight", "meaning_fa": "بینایی، دید", "example_en": "Her vision is excellent.", "photo": "media/vocab/vision.jpg"}, {"word": "vitamin", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a natural substance needed for health", "meaning_fa": "ویتامین", "example_en": "Oranges are full of vitamin C.", "photo": "media/vocab/vitamin.jpg"}, {"word": "well", "phonetic": "wel", "levels": ["a1"], "pos": "adjective", "meaning_en": "Healthy; not sick.", "meaning_fa": "خوب، سالم", "example_en": "I feel very well today.", "photo": "media/vocab/well.jpg"}, {"word": "wheelchair", "phonetic": "ˈwiːltʃeə", "levels": ["b2"], "pos": "noun", "meaning_en": "chair with wheels for disabled people", "meaning_fa": "ویلچر", "example_en": "He uses a wheelchair to move around.", "photo": "media/vocab/wheelchair.jpg"}, {"word": "wholemeal", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "made from whole grains of wheat", "meaning_fa": "سبوس‌دار", "example_en": "I prefer wholemeal bread to white bread.", "photo": "media/vocab/wholemeal.jpg"}, {"word": "wrist", "phonetic": "rɪst", "levels": ["b2"], "pos": "noun", "meaning_en": "The joint connecting hand and arm.", "meaning_fa": "مچ دست", "example_en": "I wear a watch on my wrist.", "photo": "media/vocab/wrist.jpg"}, {"word": "X-ray", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A photograph of the inside of the body.", "meaning_fa": "عکس رادیولوژی", "example_en": "The doctor took an X-ray of my broken arm.", "photo": "media/vocab/x-ray.jpg"}, {"word": "yacht", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A large boat used for pleasure or racing.", "meaning_fa": "قایق تفریحی، یات", "example_en": "They sailed their yacht across the sea.", "photo": "media/vocab/yacht.jpg"}]
+[
+ {
+  "word": "ache",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "to feel a continuous, dull pain",
+  "meaning_fa": "درد کردن",
+  "example_en": "My back aches after working all day.",
+  "photo": "media/vocab/ache.jpg"
+ },
+ {
+  "word": "ache n, v",
+  "phonetic": "eɪk",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "a continuous, dull pain",
+  "meaning_fa": "درد (اسم و فعل)",
+  "example_en": "I have a headache. My head aches.",
+  "photo": "media/vocab/ache-n-v.jpg"
+ },
+ {
+  "word": "advance",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make progress or move forward.",
+  "meaning_fa": "پیشرفت کردن، جلو رفتن",
+  "example_en": "Medical science continues to advance rapidly.",
+  "photo": "media/vocab/advance.jpg"
+ },
+ {
+  "word": "ageing",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "becoming older",
+  "meaning_fa": "پیر شدن، سالخورده",
+  "example_en": "Ageing skin needs special care.",
+  "photo": "media/vocab/ageing.jpg"
+ },
+ {
+  "word": "ankle",
+  "phonetic": "ˈæŋkəl",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The joint connecting your foot and leg.",
+  "meaning_fa": "مچ پا",
+  "example_en": "I hurt my ankle playing football.",
+  "photo": "media/vocab/ankle.jpg"
+ },
+ {
+  "word": "artificial hip",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A man-made replacement for a damaged hip joint.",
+  "meaning_fa": "مفصل ران مصنوعی",
+  "example_en": "She had an operation for an artificial hip.",
+  "photo": "media/vocab/artificial-hip.jpg"
+ },
+ {
+  "word": "aspirin",
+  "phonetic": "ˈæsprɪn",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A common medicine for pain or fever.",
+  "meaning_fa": "آسپرین",
+  "example_en": "I took an aspirin for my headache.",
+  "photo": "media/vocab/aspirin.jpg"
+ },
+ {
+  "word": "asthma",
+  "phonetic": "ˈæsmə",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A health problem making it hard to breathe.",
+  "meaning_fa": "آسم، تنگی نفس",
+  "example_en": "My friend has asthma and uses an inhaler.",
+  "photo": "media/vocab/asthma.jpg"
+ },
+ {
+  "word": "automatically",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "Without human control or thought.",
+  "meaning_fa": "به طور خودکار",
+  "example_en": "The door opens automatically when you get close.",
+  "photo": "media/vocab/automatically.jpg"
+ },
+ {
+  "word": "backache",
+  "phonetic": "ˈbækeɪk",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A pain in your back.",
+  "meaning_fa": "کمردرد",
+  "example_en": "I have a bad backache from sitting all day.",
+  "photo": "media/vocab/backache.jpg"
+ },
+ {
+  "word": "bandage",
+  "phonetic": "ˈbændɪʤ",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A strip of cloth to cover an injury.",
+  "meaning_fa": "باند، نوار زخم‌بندی",
+  "example_en": "She put a bandage on her cut finger.",
+  "photo": "media/vocab/bandage.jpg"
+ },
+ {
+  "word": "black eye",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A dark mark around your eye from a hit.",
+  "meaning_fa": "کبودی دور چشم",
+  "example_en": "He got a black eye playing football.",
+  "photo": "media/vocab/black-eye.jpg"
+ },
+ {
+  "word": "bleed",
+  "phonetic": "bliːd",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To lose blood from your body.",
+  "meaning_fa": "خونریزی کردن",
+  "example_en": "My finger is bleeding after I cut it.",
+  "photo": "media/vocab/bleed.jpg"
+ },
+ {
+  "word": "blood pressure",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The force of blood moving through your body.",
+  "meaning_fa": "فشار خون",
+  "example_en": "The doctor checked my blood pressure.",
+  "photo": "media/vocab/blood-pressure.jpg"
+ },
+ {
+  "word": "boost",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "Help something to increase or improve.",
+  "meaning_fa": "تقویت کردن، افزایش دادن",
+  "example_en": "Exercise can boost your energy levels.",
+  "photo": "media/vocab/boost.jpg"
+ },
+ {
+  "word": "break",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To injure a bone in your body.",
+  "meaning_fa": "شکستن (استخوان)",
+  "example_en": "He fell and broke his arm during the game.",
+  "photo": "media/vocab/break.jpg"
+ },
+ {
+  "word": "breathless",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Unable to breathe easily, often after exercise.",
+  "meaning_fa": "نفس‌نفس‌زنان، بی‌نفس",
+  "example_en": "I felt breathless after running up the stairs.",
+  "photo": "media/vocab/breathless.jpg"
+ },
+ {
+  "word": "bruise",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a dark mark on skin from a hit",
+  "meaning_fa": "کبودی، کوفتگی",
+  "example_en": "I got a bruise on my leg.",
+  "photo": "media/vocab/bruise.jpg"
+ },
+ {
+  "word": "bug",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a minor illness or infection",
+  "meaning_fa": "بیماری خفیف، ویروس",
+  "example_en": "I caught a stomach bug last week.",
+  "photo": "media/vocab/bug.jpg"
+ },
+ {
+  "word": "cancer",
+  "phonetic": "ˈkænsə",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A very serious illness.",
+  "meaning_fa": "سرطان",
+  "example_en": "Doctors are looking for a cure for cancer.",
+  "photo": "media/vocab/cancer.jpg"
+ },
+ {
+  "word": "check [examine]",
+  "phonetic": "tʃek",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To look at something carefully to see if it is correct.",
+  "meaning_fa": "بررسی کردن، چک کردن",
+  "example_en": "Please check your answers before you finish.",
+  "photo": "media/vocab/check-examine.jpg"
+ },
+ {
+  "word": "chest pains",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A feeling of discomfort or pain in the chest.",
+  "meaning_fa": "درد قفسه سینه",
+  "example_en": "He went to the doctor because of chest pains.",
+  "photo": "media/vocab/chest-pains.jpg"
+ },
+ {
+  "word": "cholera",
+  "phonetic": "ˈkɒlərə",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A serious disease causing severe diarrhoea.",
+  "meaning_fa": "وبا",
+  "example_en": "Cholera can spread quickly in poor areas.",
+  "photo": "media/vocab/cholera.jpg"
+ },
+ {
+  "word": "cholesterol",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A fatty substance in your blood.",
+  "meaning_fa": "کلسترول",
+  "example_en": "Eating healthy food can lower cholesterol.",
+  "photo": "media/vocab/cholesterol.jpg"
+ },
+ {
+  "word": "cold",
+  "phonetic": "kəʊld",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A common illness that makes you sneeze and cough.",
+  "meaning_fa": "سرماخوردگی",
+  "example_en": "I have a cold and feel tired.",
+  "photo": "media/vocab/cold.jpg"
+ },
+ {
+  "word": "consider",
+  "phonetic": "kənˈsɪdə",
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To think carefully about something.",
+  "meaning_fa": "در نظر گرفتن، فکر کردن",
+  "example_en": "I will consider your offer carefully.",
+  "photo": "media/vocab/consider.jpg"
+ },
+ {
+  "word": "consume",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To eat, drink, or use something.",
+  "meaning_fa": "مصرف کردن",
+  "example_en": "Humans consume a lot of water daily.",
+  "photo": "media/vocab/consume.jpg"
+ },
+ {
+  "word": "contact lens",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A small lens worn on the eye for vision.",
+  "meaning_fa": "لنز تماسی",
+  "example_en": "She wears contact lenses instead of glasses.",
+  "photo": "media/vocab/contact-lens.jpg"
+ },
+ {
+  "word": "content n",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The amount of a substance inside something.",
+  "meaning_fa": "محتوا، مقدار",
+  "example_en": "Check the fat content of this food.",
+  "photo": "media/vocab/content-n.jpg"
+ },
+ {
+  "word": "contract v",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To get a disease or illness.",
+  "meaning_fa": "مبتلا شدن (به بیماری)",
+  "example_en": "He contracted a serious illness abroad.",
+  "photo": "media/vocab/contract-v.jpg"
+ },
+ {
+  "word": "cough",
+  "phonetic": "kɒf",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To push air from your lungs with a loud sound.",
+  "meaning_fa": "سرفه کردن",
+  "example_en": "He started to cough because of the smoke.",
+  "photo": "media/vocab/cough.jpg"
+ },
+ {
+  "word": "crutches",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Sticks placed under arms to help walk with injured leg.",
+  "meaning_fa": "عصای زیر بغل",
+  "example_en": "She walked on crutches after her accident.",
+  "photo": "media/vocab/crutches.jpg"
+ },
+ {
+  "word": "cut [injure]",
+  "phonetic": "v kʌt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make an opening in skin with something sharp.",
+  "meaning_fa": "بریدن، زخمی کردن",
+  "example_en": "Be careful not to cut your finger.",
+  "photo": "media/vocab/cut-injure.jpg"
+ },
+ {
+  "word": "database",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An organized collection of information stored on a computer.",
+  "meaning_fa": "پایگاه داده",
+  "example_en": "We keep all customer details in a database.",
+  "photo": "media/vocab/database.jpg"
+ },
+ {
+  "word": "decade",
+  "phonetic": "ˈdekeɪd",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A period of ten years.",
+  "meaning_fa": "دهه",
+  "example_en": "The company has grown a lot in the last decade.",
+  "photo": "media/vocab/decade.jpg"
+ },
+ {
+  "word": "dentist",
+  "phonetic": "ˈdentɪst",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A doctor who takes care of teeth.",
+  "meaning_fa": "دندانپزشک",
+  "example_en": "I have an appointment with the dentist.",
+  "photo": "media/vocab/dentist.jpg"
+ },
+ {
+  "word": "depressed",
+  "phonetic": "dɪˈprest",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling very sad and without hope.",
+  "meaning_fa": "افسرده",
+  "example_en": "She felt depressed after losing her job.",
+  "photo": "media/vocab/depressed.jpg"
+ },
+ {
+  "word": "depression",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A serious medical condition of feeling very sad.",
+  "meaning_fa": "افسردگی",
+  "example_en": "He sought help for his depression.",
+  "photo": "media/vocab/depression.jpg"
+ },
+ {
+  "word": "development",
+  "phonetic": "dɪˈveləpmənt",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The process of growing or changing.",
+  "meaning_fa": "توسعه، پیشرفت",
+  "example_en": "The new housing development will create many jobs.",
+  "photo": "media/vocab/development.jpg"
+ },
+ {
+  "word": "device",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A tool or machine for a specific purpose.",
+  "meaning_fa": "دستگاه، ابزار",
+  "example_en": "This new device helps monitor heart rate.",
+  "photo": "media/vocab/device.jpg"
+ },
+ {
+  "word": "diagnose",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To identify an illness or problem.",
+  "meaning_fa": "تشخیص دادن (بیماری)",
+  "example_en": "The doctor diagnosed her with a common cold.",
+  "photo": "media/vocab/diagnose.jpg"
+ },
+ {
+  "word": "diarrhoea",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An illness causing frequent liquid bowel movements.",
+  "meaning_fa": "اسهال",
+  "example_en": "He had diarrhoea after eating bad food.",
+  "photo": "media/vocab/diarrhoea.jpg"
+ },
+ {
+  "word": "die",
+  "phonetic": "daɪ",
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To stop living.",
+  "meaning_fa": "مردن",
+  "example_en": "My old dog died last year.",
+  "photo": "media/vocab/die.jpg"
+ },
+ {
+  "word": "diet",
+  "phonetic": "daɪət",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The food and drink a person usually eats.",
+  "meaning_fa": "رژیم غذایی",
+  "example_en": "Eating a healthy diet is important.",
+  "photo": "media/vocab/diet.jpg"
+ },
+ {
+  "word": "disease",
+  "phonetic": "dɪˈziːz",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An illness that affects people, animals, or plants.",
+  "meaning_fa": "بیماری",
+  "example_en": "Many diseases can be prevented by vaccination.",
+  "photo": "media/vocab/disease.jpg"
+ },
+ {
+  "word": "dislocate",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To force a bone out of its normal position.",
+  "meaning_fa": "دررفتن (مفصل)، درآوردن",
+  "example_en": "He dislocated his shoulder playing rugby.",
+  "photo": "media/vocab/dislocate.jpg"
+ },
+ {
+  "word": "dizzy",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling like everything is spinning, losing balance.",
+  "meaning_fa": "سرگیجه",
+  "example_en": "I felt dizzy after riding the roller coaster.",
+  "photo": "media/vocab/dizzy.jpg"
+ },
+ {
+  "word": "diiculty",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A problem or something that is not easy.",
+  "meaning_fa": "دشواری، مشکل",
+  "example_en": "He had difficulty sleeping last night.",
+  "photo": "media/vocab/di-iculty.jpg"
+ },
+ {
+  "word": "doctor",
+  "phonetic": "ˈdɒktə",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who helps sick people.",
+  "meaning_fa": "دکتر، پزشک",
+  "example_en": "I need to see a doctor today.",
+  "photo": "media/vocab/doctor.jpg"
+ },
+ {
+  "word": "earache",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Pain inside your ear.",
+  "meaning_fa": "گوش درد",
+  "example_en": "I have a terrible earache.",
+  "photo": "media/vocab/earache.jpg"
+ },
+ {
+  "word": "early stage",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "The beginning period of a disease or process.",
+  "meaning_fa": "مرحله اولیه",
+  "example_en": "The illness was caught at an early stage.",
+  "photo": "media/vocab/early-stage.jpg"
+ },
+ {
+  "word": "exercise",
+  "phonetic": "ˈeksəsaɪz",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "Physical activity to stay healthy.",
+  "meaning_fa": "ورزش",
+  "example_en": "I do exercise every day.",
+  "photo": "media/vocab/exercise.jpg"
+ },
+ {
+  "word": "exercise n, v",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "Physical activity to improve health, or to do it.",
+  "meaning_fa": "ورزش (اسم)، ورزش کردن (فعل)",
+  "example_en": "Regular exercise is good for you.",
+  "photo": "media/vocab/exercise-n-v.jpg"
+ },
+ {
+  "word": "exhausted",
+  "phonetic": "ɪgˈzɔːstɪd",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very tired.",
+  "meaning_fa": "خسته، از پا افتاده",
+  "example_en": "I was exhausted after the long trip.",
+  "photo": "media/vocab/exhausted.jpg"
+ },
+ {
+  "word": "fat",
+  "phonetic": "fæt",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having a lot of flesh on your body.",
+  "meaning_fa": "چاق",
+  "example_en": "The cat is quite fat.",
+  "photo": "media/vocab/fat.jpg"
+ },
+ {
+  "word": "feel",
+  "phonetic": "fiːl",
+  "levels": [
+   "a1",
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To experience a physical sensation.",
+  "meaning_fa": "حس کردن، احساس کردن",
+  "example_en": "I feel cold today.",
+  "photo": "media/vocab/feel.jpg"
+ },
+ {
+  "word": "feel sick",
+  "phonetic": "fiːl sɪk",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "To feel unwell, like you might vomit.",
+  "meaning_fa": "حالت تهوع داشتن",
+  "example_en": "I ate too much and now I feel sick.",
+  "photo": "media/vocab/feel-sick.jpg"
+ },
+ {
+  "word": "fine",
+  "phonetic": "faɪn",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Good or acceptable.",
+  "meaning_fa": "خوب، عالی",
+  "example_en": "I feel fine today, thank you.",
+  "photo": "media/vocab/fine.jpg"
+ },
+ {
+  "word": "fit",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The way clothes are the right size.",
+  "meaning_fa": "اندازه، برازش",
+  "example_en": "The dress has a perfect fit.",
+  "photo": "media/vocab/fit.jpg"
+ },
+ {
+  "word": "fitness",
+  "phonetic": "ˈfɪtnəs",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of being healthy and strong.",
+  "meaning_fa": "تناسب اندام، سلامتی",
+  "example_en": "Regular exercise improves your fitness.",
+  "photo": "media/vocab/fitness.jpg"
+ },
+ {
+  "word": "fizzy",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having bubbles of gas, like soda.",
+  "meaning_fa": "گازدار، حباب‌دار",
+  "example_en": "I prefer still water to fizzy drinks.",
+  "photo": "media/vocab/fizzy.jpg"
+ },
+ {
+  "word": "flu",
+  "phonetic": "fluː",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A common illness like a bad cold.",
+  "meaning_fa": "آنفولانزا، سرماخوردگی شدید",
+  "example_en": "I have the flu and feel very tired.",
+  "photo": "media/vocab/flu.jpg"
+ },
+ {
+  "word": "general anaesthetic",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "a drug that makes you unconscious during an operation.",
+  "meaning_fa": "بیهوشی عمومی",
+  "example_en": "The patient received a general anaesthetic for surgery.",
+  "photo": "media/vocab/general-anaesthetic.jpg"
+ },
+ {
+  "word": "get over",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "Recover from an illness or difficult experience.",
+  "meaning_fa": "بهبود یافتن، کنار آمدن",
+  "example_en": "It took her a long time to get over the flu.",
+  "photo": "media/vocab/get-over.jpg"
+ },
+ {
+  "word": "good for",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "beneficial for your health or well-being.",
+  "meaning_fa": "مفید برای",
+  "example_en": "Eating vegetables is good for your health.",
+  "photo": "media/vocab/good-for.jpg"
+ },
+ {
+  "word": "good for you",
+  "phonetic": "gʊd fə juː",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "used to say something is healthy or positive for you.",
+  "meaning_fa": "برای تو خوب است",
+  "example_en": "Eating fruit is good for you.",
+  "photo": "media/vocab/good-for-you.jpg"
+ },
+ {
+  "word": "harm",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Physical or mental damage or injury.",
+  "meaning_fa": "آسیب، ضرر",
+  "example_en": "Smoking can cause serious harm to your health.",
+  "photo": "media/vocab/harm.jpg"
+ },
+ {
+  "word": "harmful",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Causing damage or injury.",
+  "meaning_fa": "مضر، زیان‌آور",
+  "example_en": "Too much sun can be harmful.",
+  "photo": "media/vocab/harmful.jpg"
+ },
+ {
+  "word": "have a cold",
+  "phonetic": "hæv ə kəʊld",
+  "levels": [
+   "a1"
+  ],
+  "pos": "verb phrase",
+  "meaning_en": "To be sick with a common illness.",
+  "meaning_fa": "سرما خوردن",
+  "example_en": "I have a cold and a cough.",
+  "photo": "media/vocab/have-a-cold.jpg"
+ },
+ {
+  "word": "have a headache",
+  "phonetic": "hæv ə ˈhedeɪk",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Feel pain in your head.",
+  "meaning_fa": "سردرد داشتن",
+  "example_en": "I have a headache, so I need to rest.",
+  "photo": "media/vocab/have-a-headache.jpg"
+ },
+ {
+  "word": "have a healthy diet",
+  "phonetic": "hæv ə ˈhelθi daɪət",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Eat good food for your body.",
+  "meaning_fa": "رژیم غذایی سالم داشتن",
+  "example_en": "To stay strong, you should have a healthy diet.",
+  "photo": "media/vocab/have-a-healthy-diet.jpg"
+ },
+ {
+  "word": "have a heart attack",
+  "phonetic": "hæv ə hɑːt əˈtæk",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "A sudden serious medical problem with your heart.",
+  "meaning_fa": "سکته قلبی کردن",
+  "example_en": "The doctor said he had a heart attack.",
+  "photo": "media/vocab/have-a-heart-attack.jpg"
+ },
+ {
+  "word": "have toothache",
+  "phonetic": "hæv tuːθeɪk",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Feel pain in your tooth.",
+  "meaning_fa": "دندان‌درد داشتن",
+  "example_en": "I have toothache, so I need a dentist.",
+  "photo": "media/vocab/have-toothache.jpg"
+ },
+ {
+  "word": "hay fever",
+  "phonetic": "heɪ ˈfiːvə",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "Allergy to pollen, causing sneezing and itchy eyes.",
+  "meaning_fa": "تب یونجه",
+  "example_en": "I get hay fever every spring.",
+  "photo": "media/vocab/hay-fever.jpg"
+ },
+ {
+  "word": "headache",
+  "phonetic": "ˈhedeɪk",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A pain inside your head.",
+  "meaning_fa": "سردرد",
+  "example_en": "I have a bad headache today.",
+  "photo": "media/vocab/headache.jpg"
+ },
+ {
+  "word": "health",
+  "phonetic": "helθ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of your body and mind.",
+  "meaning_fa": "سلامتی",
+  "example_en": "Good food is important for your health.",
+  "photo": "media/vocab/health.jpg"
+ },
+ {
+  "word": "hearing aid",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A small device to help people hear better.",
+  "meaning_fa": "سمعک",
+  "example_en": "My grandfather uses a hearing aid.",
+  "photo": "media/vocab/hearing-aid.jpg"
+ },
+ {
+  "word": "heart [in the body]",
+  "phonetic": "hɑːt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The organ that pumps blood in your body.",
+  "meaning_fa": "قلب (در بدن)",
+  "example_en": "The doctor listened to my heart.",
+  "photo": "media/vocab/heart-in-the-body.jpg"
+ },
+ {
+  "word": "heart attack",
+  "phonetic": "hɑːt əˈtæk",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A sudden serious medical problem with your heart.",
+  "meaning_fa": "حمله قلبی، سکته قلبی",
+  "example_en": "He had a heart attack last year.",
+  "photo": "media/vocab/heart-attack.jpg"
+ },
+ {
+  "word": "highly",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "Very much; to a great degree.",
+  "meaning_fa": "بسیار، به شدت",
+  "example_en": "She is a highly respected doctor.",
+  "photo": "media/vocab/highly.jpg"
+ },
+ {
+  "word": "hospital",
+  "phonetic": "ˈhɒspɪtəl",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A place where sick or injured people get help.",
+  "meaning_fa": "بیمارستان",
+  "example_en": "My friend is in the hospital.",
+  "photo": "media/vocab/hospital.jpg"
+ },
+ {
+  "word": "How are you?",
+  "phonetic": "haʊ ə juː",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "A common greeting asking about someone's health or state.",
+  "meaning_fa": "حال شما چطور است؟",
+  "example_en": "Hello, how are you today?",
+  "photo": "media/vocab/how-are-you.jpg"
+ },
+ {
+  "word": "How heavy are you?",
+  "phonetic": "haʊ hevi ɑː juː",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Used to ask about someone's weight.",
+  "meaning_fa": "وزنت چقدر است؟",
+  "example_en": "The doctor asked, \"How heavy are you?\"",
+  "photo": "media/vocab/how-heavy-are-you.jpg"
+ },
+ {
+  "word": "How much do you weigh?",
+  "phonetic": "haʊ mʌtʃ duː juː weɪ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Used to ask about someone's weight.",
+  "meaning_fa": "وزنت چقدر است؟",
+  "example_en": "The nurse asked, \"How much do you weigh?\"",
+  "photo": "media/vocab/how-much-do-you-weigh.jpg"
+ },
+ {
+  "word": "How old is he?",
+  "phonetic": "haʊ əʊld ɪz hi",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Used to ask about someone's age.",
+  "meaning_fa": "او چند سال دارد؟",
+  "example_en": "How old is he? He is ten.",
+  "photo": "media/vocab/how-old-is-he.jpg"
+ },
+ {
+  "word": "How tall is...?",
+  "phonetic": "haʊ tɔːl ɪz",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Used to ask about someone's height.",
+  "meaning_fa": "قدش چقدر است؟",
+  "example_en": "How tall is your brother?",
+  "photo": "media/vocab/how-tall-is.jpg"
+ },
+ {
+  "word": "hurt",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To cause pain or injury to someone or yourself.",
+  "meaning_fa": "آسیب زدن، درد کردن",
+  "example_en": "Did you hurt your knee playing football?",
+  "photo": "media/vocab/hurt.jpg"
+ },
+ {
+  "word": "hurt v",
+  "phonetic": "hɜːt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To feel pain or cause pain to someone.",
+  "meaning_fa": "درد کردن، آسیب زدن",
+  "example_en": "My arm hurts a lot.",
+  "photo": "media/vocab/hurt-v.jpg"
+ },
+ {
+  "word": "identify",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To recognize someone or something.",
+  "meaning_fa": "شناسایی کردن",
+  "example_en": "Can you identify the person in this photo?",
+  "photo": "media/vocab/identify.jpg"
+ },
+ {
+  "word": "ill",
+  "phonetic": "ɪl",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not feeling well, sick.",
+  "meaning_fa": "بیمار، ناخوش",
+  "example_en": "She felt ill and went home from school.",
+  "photo": "media/vocab/ill.jpg"
+ },
+ {
+  "word": "illness",
+  "phonetic": "ˈɪlnəs",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A disease or period of being sick.",
+  "meaning_fa": "بیماری",
+  "example_en": "He missed work due to a sudden illness.",
+  "photo": "media/vocab/illness.jpg"
+ },
+ {
+  "word": "immune system",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "The body's system that protects against illness.",
+  "meaning_fa": "سیستم ایمنی",
+  "example_en": "Eating healthy food strengthens your immune system.",
+  "photo": "media/vocab/immune-system.jpg"
+ },
+ {
+  "word": "indigestion",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Pain or discomfort in your stomach after eating.",
+  "meaning_fa": "سوء هاضمه",
+  "example_en": "Eating too fast can cause indigestion.",
+  "photo": "media/vocab/indigestion.jpg"
+ },
+ {
+  "word": "injection",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A shot of medicine given with a needle.",
+  "meaning_fa": "تزریق، آمپول",
+  "example_en": "The doctor gave me an injection for the pain.",
+  "photo": "media/vocab/injection.jpg"
+ },
+ {
+  "word": "itch",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To have an uncomfortable feeling on your skin.",
+  "meaning_fa": "خارش داشتن",
+  "example_en": "My mosquito bite started to itch badly.",
+  "photo": "media/vocab/itch.jpg"
+ },
+ {
+  "word": "keyhole surgery",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A medical operation using small cuts and a camera.",
+  "meaning_fa": "جراحی لاپاراسکوپی",
+  "example_en": "She had keyhole surgery on her knee.",
+  "photo": "media/vocab/keyhole-surgery.jpg"
+ },
+ {
+  "word": "large quantities",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Big amounts of something.",
+  "meaning_fa": "مقادیر زیاد",
+  "example_en": "Eating sugar in large quantities is unhealthy.",
+  "photo": "media/vocab/large-quantities.jpg"
+ },
+ {
+  "word": "laser surgery",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Medical operation using a strong light beam.",
+  "meaning_fa": "جراحی لیزر",
+  "example_en": "She had laser surgery to improve her eyesight.",
+  "photo": "media/vocab/laser-surgery.jpg"
+ },
+ {
+  "word": "level",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The amount of something.",
+  "meaning_fa": "سطح، میزان",
+  "example_en": "Her blood sugar level is normal.",
+  "photo": "media/vocab/level.jpg"
+ },
+ {
+  "word": "list",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A series of names or items.",
+  "meaning_fa": "فهرست، لیست",
+  "example_en": "The doctor gave me a list of foods.",
+  "photo": "media/vocab/list.jpg"
+ },
+ {
+  "word": "liver",
+  "phonetic": "ˈlɪvə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A large organ in your body.",
+  "meaning_fa": "کبد، جگر",
+  "example_en": "The liver helps clean your blood.",
+  "photo": "media/vocab/liver.jpg"
+ },
+ {
+  "word": "long-term",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "continuing for a long period of time into the future.",
+  "meaning_fa": "بلندمدت",
+  "example_en": "This medicine has no long-term side effects.",
+  "photo": "media/vocab/long-term.jpg"
+ },
+ {
+  "word": "lose appetite",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "stop feeling hungry.",
+  "meaning_fa": "اشتهای خود را از دست دادن",
+  "example_en": "I lost my appetite after hearing the bad news.",
+  "photo": "media/vocab/lose-appetite.jpg"
+ },
+ {
+  "word": "lose voice",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "become unable to speak clearly, often due to illness.",
+  "meaning_fa": "صدای خود را از دست دادن",
+  "example_en": "She lost her voice from shouting at the concert.",
+  "photo": "media/vocab/lose-voice.jpg"
+ },
+ {
+  "word": "lower",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "make something less in amount or degree.",
+  "meaning_fa": "کاهش دادن، پایین آوردن",
+  "example_en": "You should lower your blood pressure.",
+  "photo": "media/vocab/lower.jpg"
+ },
+ {
+  "word": "lump",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a small, solid mass, often without a clear shape.",
+  "meaning_fa": "توده، برآمدگی",
+  "example_en": "I found a small lump on my arm.",
+  "photo": "media/vocab/lump.jpg"
+ },
+ {
+  "word": "lung cancer",
+  "phonetic": "lʌŋ ˈkænsə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a serious disease affecting the lungs.",
+  "meaning_fa": "سرطان ریه",
+  "example_en": "Smoking is a major cause of lung cancer.",
+  "photo": "media/vocab/lung-cancer.jpg"
+ },
+ {
+  "word": "lungs",
+  "phonetic": "lʌŋz",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun (plural)",
+  "meaning_en": "the two organs in your chest used for breathing.",
+  "meaning_fa": "ریه‌ها",
+  "example_en": "Healthy lungs are important for good health.",
+  "photo": "media/vocab/lungs.jpg"
+ },
+ {
+  "word": "maintain",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "keep something in good condition.",
+  "meaning_fa": "نگهداری کردن، حفظ کردن",
+  "example_en": "It's important to maintain a healthy diet.",
+  "photo": "media/vocab/maintain.jpg"
+ },
+ {
+  "word": "major",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "very important or serious.",
+  "meaning_fa": "اصلی، عمده، مهم",
+  "example_en": "This is a major problem for the company.",
+  "photo": "media/vocab/major.jpg"
+ },
+ {
+  "word": "malaria",
+  "phonetic": "məˈleəriə",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A serious disease from mosquito bites.",
+  "meaning_fa": "مالاریا",
+  "example_en": "Malaria is common in hot countries.",
+  "photo": "media/vocab/malaria.jpg"
+ },
+ {
+  "word": "manufacture",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "Make goods in large quantities, usually in a factory.",
+  "meaning_fa": "تولید کردن، ساختن",
+  "example_en": "This company manufactures cars and trucks.",
+  "photo": "media/vocab/manufacture.jpg"
+ },
+ {
+  "word": "medical",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Related to medicine and treating illness.",
+  "meaning_fa": "پزشکی، طبی",
+  "example_en": "She needs urgent medical attention.",
+  "photo": "media/vocab/medical.jpg"
+ },
+ {
+  "word": "medicine [to treat an illness]",
+  "phonetic": "ˈmedsən",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A drug or treatment for illness.",
+  "meaning_fa": "دارو",
+  "example_en": "Take your medicine twice a day.",
+  "photo": "media/vocab/medicine-to-treat-an-illness.jpg"
+ },
+ {
+  "word": "mental",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relating to the mind or thinking.",
+  "meaning_fa": "ذهنی، روانی",
+  "example_en": "Good mental health is very important.",
+  "photo": "media/vocab/mental.jpg"
+ },
+ {
+  "word": "mosquito",
+  "phonetic": "mɒsˈkiːtəʊ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "a small flying insect that bites",
+  "meaning_fa": "پشه",
+  "example_en": "A mosquito bit me on the arm.",
+  "photo": "media/vocab/mosquito.jpg"
+ },
+ {
+  "word": "nuts",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Small dry fruits with a hard shell.",
+  "meaning_fa": "آجیل، مغزها",
+  "example_en": "I like to eat nuts as a snack.",
+  "photo": "media/vocab/nuts.jpg"
+ },
+ {
+  "word": "obese",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very fat, in an unhealthy way.",
+  "meaning_fa": "چاق مفرط",
+  "example_en": "The doctor said he was obese.",
+  "photo": "media/vocab/obese.jpg"
+ },
+ {
+  "word": "obesity",
+  "phonetic": "əˈbiːsəti",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of being very fat and unhealthy.",
+  "meaning_fa": "چاقی مفرط",
+  "example_en": "Obesity is a serious health problem.",
+  "photo": "media/vocab/obesity.jpg"
+ },
+ {
+  "word": "operate on",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To perform surgery on someone.",
+  "meaning_fa": "جراحی کردن",
+  "example_en": "Doctors will operate on his knee tomorrow.",
+  "photo": "media/vocab/operate-on.jpg"
+ },
+ {
+  "word": "operation",
+  "phonetic": "ˌɒpəˈreɪʃən",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A medical procedure to fix a body part.",
+  "meaning_fa": "عمل جراحی",
+  "example_en": "He had an operation on his arm.",
+  "photo": "media/vocab/operation.jpg"
+ },
+ {
+  "word": "pacemaker",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A small device that helps the heart beat regularly.",
+  "meaning_fa": "ضربان‌ساز قلب",
+  "example_en": "My grandfather has a pacemaker to control his heart rate.",
+  "photo": "media/vocab/pacemaker.jpg"
+ },
+ {
+  "word": "pain",
+  "phonetic": "peɪn",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A bad feeling in your body when you are hurt.",
+  "meaning_fa": "درد",
+  "example_en": "I have a lot of pain in my leg.",
+  "photo": "media/vocab/pain.jpg"
+ },
+ {
+  "word": "painful",
+  "phonetic": "ˈpeɪnfəl",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Causing physical or emotional pain.",
+  "meaning_fa": "دردناک",
+  "example_en": "My knee is very painful after the fall.",
+  "photo": "media/vocab/painful.jpg"
+ },
+ {
+  "word": "patient n",
+  "phonetic": "ˈpeɪʃənt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person receiving medical treatment.",
+  "meaning_fa": "بیمار",
+  "example_en": "The doctor checked on her patient.",
+  "photo": "media/vocab/patient-n.jpg"
+ },
+ {
+  "word": "physical",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "relating to the body, not the mind.",
+  "meaning_fa": "جسمی، فیزیکی",
+  "example_en": "Regular physical activity is good for your health.",
+  "photo": "media/vocab/physical.jpg"
+ },
+ {
+  "word": "pick up",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "to get better or stronger after being ill.",
+  "meaning_fa": "بهبود یافتن، بهتر شدن",
+  "example_en": "He's starting to pick up after his illness.",
+  "photo": "media/vocab/pick-up.jpg"
+ },
+ {
+  "word": "pill",
+  "phonetic": "pɪl",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a small piece of medicine you swallow.",
+  "meaning_fa": "قرص",
+  "example_en": "Take this pill twice a day.",
+  "photo": "media/vocab/pill.jpg"
+ },
+ {
+  "word": "plaster",
+  "phonetic": "ˈplɑːstə",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a sticky strip to cover small cuts.",
+  "meaning_fa": "چسب زخم",
+  "example_en": "I put a plaster on my cut finger.",
+  "photo": "media/vocab/plaster.jpg"
+ },
+ {
+  "word": "pollen",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Fine yellow powder from flowers, causing allergies.",
+  "meaning_fa": "گرده گل",
+  "example_en": "High pollen counts make me sneeze.",
+  "photo": "media/vocab/pollen.jpg"
+ },
+ {
+  "word": "process",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A series of actions to achieve a result.",
+  "meaning_fa": "فرآیند، روند",
+  "example_en": "Learning a language is a long process.",
+  "photo": "media/vocab/process.jpg"
+ },
+ {
+  "word": "processed",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Food changed from its natural state.",
+  "meaning_fa": "فرآوری شده",
+  "example_en": "Avoid eating too much processed food.",
+  "photo": "media/vocab/processed.jpg"
+ },
+ {
+  "word": "prosthetic",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "An artificial body part.",
+  "meaning_fa": "مصنوعی، پروتزی",
+  "example_en": "He uses a prosthetic leg.",
+  "photo": "media/vocab/prosthetic.jpg"
+ },
+ {
+  "word": "quantity",
+  "phonetic": "ˈkwɒntɪti",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An amount or number of something.",
+  "meaning_fa": "مقدار، کمیت",
+  "example_en": "We need a large quantity of food for the party.",
+  "photo": "media/vocab/quantity.jpg"
+ },
+ {
+  "word": "rapid",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "happening very quickly",
+  "meaning_fa": "سریع، تند",
+  "example_en": "The patient showed rapid improvement.",
+  "photo": "media/vocab/rapid.jpg"
+ },
+ {
+  "word": "rash",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "an area of red spots on the skin",
+  "meaning_fa": "بثورات پوستی، جوش",
+  "example_en": "The baby had a rash on her arm.",
+  "photo": "media/vocab/rash.jpg"
+ },
+ {
+  "word": "reduce",
+  "phonetic": "rɪˈdjuːs",
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make something smaller or less.",
+  "meaning_fa": "کاهش دادن",
+  "example_en": "We need to reduce our waste.",
+  "photo": "media/vocab/reduce.jpg"
+ },
+ {
+  "word": "relax",
+  "phonetic": "rɪˈlæks",
+  "levels": [
+   "a1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To rest and feel calm.",
+  "meaning_fa": "استراحت کردن، آرام شدن",
+  "example_en": "I like to relax after work.",
+  "photo": "media/vocab/relax.jpg"
+ },
+ {
+  "word": "rise",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To increase in amount, level, or strength.",
+  "meaning_fa": "افزایش یافتن، بالا رفتن",
+  "example_en": "The cost of living continues to rise.",
+  "photo": "media/vocab/rise.jpg"
+ },
+ {
+  "word": "risk",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The possibility of something bad happening.",
+  "meaning_fa": "خطر، ریسک",
+  "example_en": "Smoking increases the risk of heart disease.",
+  "photo": "media/vocab/risk.jpg"
+ },
+ {
+  "word": "robotic",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Moving or acting like a robot.",
+  "meaning_fa": "رباتیک، ماشینی",
+  "example_en": "His movements were stiff and robotic.",
+  "photo": "media/vocab/robotic.jpg"
+ },
+ {
+  "word": "scanner",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A machine that creates a digital image of something.",
+  "meaning_fa": "اسکنر",
+  "example_en": "The doctor used a scanner to check his leg.",
+  "photo": "media/vocab/scanner.jpg"
+ },
+ {
+  "word": "serious [bad]",
+  "phonetic": "ˈsɪərɪəs",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "bad or dangerous; needing attention",
+  "meaning_fa": "جدی، وخیم",
+  "example_en": "He has a serious illness.",
+  "photo": "media/vocab/serious-bad.jpg"
+ },
+ {
+  "word": "sharp",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "intelligent and quick to understand",
+  "meaning_fa": "باهوش، زیرک",
+  "example_en": "She has a very sharp mind.",
+  "photo": "media/vocab/sharp.jpg"
+ },
+ {
+  "word": "shiver",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "to shake slightly because of cold or fear",
+  "meaning_fa": "لرزیدن",
+  "example_en": "I shivered in the cold wind.",
+  "photo": "media/vocab/shiver.jpg"
+ },
+ {
+  "word": "short-term",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Lasting for a short period of time.",
+  "meaning_fa": "کوتاه‌مدت",
+  "example_en": "He only has a short-term memory problem.",
+  "photo": "media/vocab/short-term.jpg"
+ },
+ {
+  "word": "shoulder",
+  "phonetic": "ˈʃəʊldə",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The part of your body between your neck and arm.",
+  "meaning_fa": "شانه",
+  "example_en": "He carried the bag on his shoulder.",
+  "photo": "media/vocab/shoulder.jpg"
+ },
+ {
+  "word": "sick",
+  "phonetic": "sɪk",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling ill or unwell.",
+  "meaning_fa": "بیمار، ناخوش",
+  "example_en": "I feel sick, I think I have a cold.",
+  "photo": "media/vocab/sick.jpg"
+ },
+ {
+  "word": "sickness",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of being ill.",
+  "meaning_fa": "بیماری، ناخوشی",
+  "example_en": "He suffered from a long sickness.",
+  "photo": "media/vocab/sickness.jpg"
+ },
+ {
+  "word": "slow",
+  "phonetic": "sləʊ",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not fast.",
+  "meaning_fa": "آهسته، کند",
+  "example_en": "The internet is very slow.",
+  "photo": "media/vocab/slow.jpg"
+ },
+ {
+  "word": "sneeze",
+  "phonetic": "sniːz",
+  "levels": [
+   "a1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To suddenly push air from your nose and mouth.",
+  "meaning_fa": "عطسه کردن",
+  "example_en": "I sneeze when I have a cold.",
+  "photo": "media/vocab/sneeze.jpg"
+ },
+ {
+  "word": "sophisticated",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Complex and advanced, often elegant.",
+  "meaning_fa": "پیچیده، پیشرفته، متین",
+  "example_en": "The new phone has sophisticated features.",
+  "photo": "media/vocab/sophisticated.jpg"
+ },
+ {
+  "word": "sore throat",
+  "phonetic": "sɔː θrəʊt",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Pain in your throat.",
+  "meaning_fa": "گلودرد",
+  "example_en": "I have a sore throat and a cough.",
+  "photo": "media/vocab/sore-throat.jpg"
+ },
+ {
+  "word": "source",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The place something comes from.",
+  "meaning_fa": "منبع",
+  "example_en": "What is the source of this information?",
+  "photo": "media/vocab/source.jpg"
+ },
+ {
+  "word": "spectacles",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Glasses worn to help you see better.",
+  "meaning_fa": "عینک",
+  "example_en": "He wears spectacles for reading.",
+  "photo": "media/vocab/spectacles.jpg"
+ },
+ {
+  "word": "spot",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A small red mark on the skin.",
+  "meaning_fa": "جوش، لکه",
+  "example_en": "She had a few spots on her face.",
+  "photo": "media/vocab/spot.jpg"
+ },
+ {
+  "word": "sprain",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "Injure a joint by twisting it.",
+  "meaning_fa": "رگ به رگ شدن، پیچ خوردن",
+  "example_en": "I sprained my ankle playing football.",
+  "photo": "media/vocab/sprain.jpg"
+ },
+ {
+  "word": "stomach ache",
+  "phonetic": "ˈstʌmək eɪk",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Pain in your stomach.",
+  "meaning_fa": "دل‌درد، معده‌درد",
+  "example_en": "I have a bad stomach ache.",
+  "photo": "media/vocab/stomach-ache.jpg"
+ },
+ {
+  "word": "stress",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A feeling of worry caused by difficult situations.",
+  "meaning_fa": "استرس، فشار روانی",
+  "example_en": "Too much work causes a lot of stress.",
+  "photo": "media/vocab/stress.jpg"
+ },
+ {
+  "word": "stressed",
+  "phonetic": "strest",
+  "levels": [
+   "a1",
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling worried and unable to relax.",
+  "meaning_fa": "پراسترس، نگران",
+  "example_en": "I feel very stressed today.",
+  "photo": "media/vocab/stressed.jpg"
+ },
+ {
+  "word": "stressful",
+  "phonetic": "ˈstresfʊl",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Causing a lot of worry.",
+  "meaning_fa": "پراسترس، تنش‌زا",
+  "example_en": "Moving house can be very stressful.",
+  "photo": "media/vocab/stressful.jpg"
+ },
+ {
+  "word": "stroke",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A sudden serious illness affecting the brain.",
+  "meaning_fa": "سکته مغزی",
+  "example_en": "He had a stroke and lost his speech.",
+  "photo": "media/vocab/stroke.jpg"
+ },
+ {
+  "word": "suffer from sth",
+  "phonetic": "ˈsʌfə frɒm ˈsʌmθɪŋ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To have a disease or bad condition.",
+  "meaning_fa": "از چیزی رنج بردن",
+  "example_en": "He suffers from a bad cold every winter.",
+  "photo": "media/vocab/suffer-from-sth.jpg"
+ },
+ {
+  "word": "sunburn",
+  "phonetic": "ˈsʌnbɜːn",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Red, painful skin caused by too much sun.",
+  "meaning_fa": "آفتاب سوختگی",
+  "example_en": "I got a bad sunburn on my shoulders.",
+  "photo": "media/vocab/sunburn.jpg"
+ },
+ {
+  "word": "superfood",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A food considered very good for health.",
+  "meaning_fa": "غذای فوق‌العاده سالم",
+  "example_en": "Blueberries are often called a superfood.",
+  "photo": "media/vocab/superfood.jpg"
+ },
+ {
+  "word": "surgeon",
+  "phonetic": "ˈsɜːʤən",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A doctor who performs operations.",
+  "meaning_fa": "جراح",
+  "example_en": "The surgeon explained the operation to me.",
+  "photo": "media/vocab/surgeon.jpg"
+ },
+ {
+  "word": "surgery [an operation]",
+  "phonetic": "ˈsɜːʤəri",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A medical operation to repair or remove part of the body.",
+  "meaning_fa": "عمل جراحی",
+  "example_en": "She needed surgery on her knee.",
+  "photo": "media/vocab/surgery-an-operation.jpg"
+ },
+ {
+  "word": "suer",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To experience physical or mental pain or illness.",
+  "meaning_fa": "رنج بردن، درد کشیدن",
+  "example_en": "Many people suffer from chronic pain.",
+  "photo": "media/vocab/su-er.jpg"
+ },
+ {
+  "word": "tablet",
+  "phonetic": "ˈtæblət",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A small, solid piece of medicine.",
+  "meaning_fa": "قرص",
+  "example_en": "Take one tablet with water.",
+  "photo": "media/vocab/tablet.jpg"
+ },
+ {
+  "word": "teaspoonful",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The amount that a teaspoon can hold.",
+  "meaning_fa": "یک قاشق چایخوری",
+  "example_en": "Add one teaspoonful of sugar.",
+  "photo": "media/vocab/teaspoonful.jpg"
+ },
+ {
+  "word": "temperature",
+  "phonetic": "ˈtemprətʃə",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "How hot or cold something is.",
+  "meaning_fa": "دما، درجه حرارت",
+  "example_en": "The temperature is very high today.",
+  "photo": "media/vocab/temperature.jpg"
+ },
+ {
+  "word": "terminal",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A disease that will cause death.",
+  "meaning_fa": "کشنده، لاعلاج",
+  "example_en": "Doctors told him his illness was terminal.",
+  "photo": "media/vocab/terminal.jpg"
+ },
+ {
+  "word": "thermometer",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a tool for measuring temperature, especially body heat.",
+  "meaning_fa": "دماسنج",
+  "example_en": "The nurse used a thermometer to check my temperature.",
+  "photo": "media/vocab/thermometer.jpg"
+ },
+ {
+  "word": "tool",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An object used for a specific job or purpose.",
+  "meaning_fa": "ابزار، وسیله",
+  "example_en": "A hammer is a useful tool for building things.",
+  "photo": "media/vocab/tool.jpg"
+ },
+ {
+  "word": "toothache",
+  "phonetic": "ˈtuːθeɪk",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "Pain in a tooth.",
+  "meaning_fa": "دندان درد",
+  "example_en": "I have a bad toothache.",
+  "photo": "media/vocab/toothache.jpg"
+ },
+ {
+  "word": "treat",
+  "phonetic": "triːt",
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To behave towards someone in a certain way.",
+  "meaning_fa": "رفتار کردن",
+  "example_en": "Please treat others with kindness.",
+  "photo": "media/vocab/treat.jpg"
+ },
+ {
+  "word": "tremble",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To shake slightly, often from fear or cold.",
+  "meaning_fa": "لرزیدن، تکان خوردن",
+  "example_en": "Her hands began to tremble as she opened the letter.",
+  "photo": "media/vocab/tremble.jpg"
+ },
+ {
+  "word": "tropical",
+  "phonetic": "ˈtrɒpɪkəl",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "From very hot parts of the world.",
+  "meaning_fa": "گرمسیری",
+  "example_en": "We saw many tropical fish.",
+  "photo": "media/vocab/tropical.jpg"
+ },
+ {
+  "word": "vast",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "extremely large in area, size, or amount",
+  "meaning_fa": "وسیع، پهناور",
+  "example_en": "The desert is a vast, empty space.",
+  "photo": "media/vocab/vast.jpg"
+ },
+ {
+  "word": "virus",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a tiny thing that causes illness",
+  "meaning_fa": "ویروس",
+  "example_en": "The flu is caused by a virus.",
+  "photo": "media/vocab/virus.jpg"
+ },
+ {
+  "word": "vision",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the ability to see; eyesight",
+  "meaning_fa": "بینایی، دید",
+  "example_en": "Her vision is excellent.",
+  "photo": "media/vocab/vision.jpg"
+ },
+ {
+  "word": "vitamin",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a natural substance needed for health",
+  "meaning_fa": "ویتامین",
+  "example_en": "Oranges are full of vitamin C.",
+  "photo": "media/vocab/vitamin.jpg"
+ },
+ {
+  "word": "well",
+  "phonetic": "wel",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Healthy; not sick.",
+  "meaning_fa": "خوب، سالم",
+  "example_en": "I feel very well today.",
+  "photo": "media/vocab/well.jpg"
+ },
+ {
+  "word": "wheelchair",
+  "phonetic": "ˈwiːltʃeə",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "chair with wheels for disabled people",
+  "meaning_fa": "ویلچر",
+  "example_en": "He uses a wheelchair to move around.",
+  "photo": "media/vocab/wheelchair.jpg"
+ },
+ {
+  "word": "wholemeal",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "made from whole grains of wheat",
+  "meaning_fa": "سبوس‌دار",
+  "example_en": "I prefer wholemeal bread to white bread.",
+  "photo": "media/vocab/wholemeal.jpg"
+ },
+ {
+  "word": "wrist",
+  "phonetic": "rɪst",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The joint connecting hand and arm.",
+  "meaning_fa": "مچ دست",
+  "example_en": "I wear a watch on my wrist.",
+  "photo": "media/vocab/wrist.jpg"
+ },
+ {
+  "word": "X-ray",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A photograph of the inside of the body.",
+  "meaning_fa": "عکس رادیولوژی",
+  "example_en": "The doctor took an X-ray of my broken arm.",
+  "photo": "media/vocab/x-ray.jpg"
+ },
+ {
+  "word": "yacht",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A large boat used for pleasure or racing.",
+  "meaning_fa": "قایق تفریحی، یات",
+  "example_en": "They sailed their yacht across the sea.",
+  "photo": "media/vocab/yacht.jpg"
+ },
+ {
+  "word": "aches and pains",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Minor physical discomforts or soreness.",
+  "meaning_fa": "درد و کوفتگی، دردهای جزئی",
+  "example_en": "After the long hike, I had a lot of aches and pains.",
+  "photo": "media/vocab/aches-and-pains.jpg"
+ },
+ {
+  "word": "acupuncturist",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who practices acupuncture.",
+  "meaning_fa": "متخصص طب سوزنی",
+  "example_en": "The acupuncturist helped relieve her chronic pain.",
+  "photo": "media/vocab/acupuncturist.jpg"
+ },
+ {
+  "word": "acute",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "(Of a condition) severe and sudden in onset.",
+  "meaning_fa": "حاد، شدید",
+  "example_en": "He suffered an acute appendicitis attack.",
+  "photo": "media/vocab/acute.jpg"
+ },
+ {
+  "word": "adverse",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Unfavorable or harmful.",
+  "meaning_fa": "نامطلوب، مضر",
+  "example_en": "The drug had several adverse side effects.",
+  "photo": "media/vocab/adverse.jpg"
+ },
+ {
+  "word": "alternative medicine",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Medical treatments not part of conventional Western medicine.",
+  "meaning_fa": "طب جایگزین",
+  "example_en": "She explored alternative medicine for her chronic pain.",
+  "photo": "media/vocab/alternative-medicine.jpg"
+ },
+ {
+  "word": "anaesthesia",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A state of controlled temporary loss of sensation or awareness.",
+  "meaning_fa": "بیهوشی، بی‌حسی",
+  "example_en": "The patient was given general anaesthesia before surgery.",
+  "photo": "media/vocab/anaesthesia.jpg"
+ },
+ {
+  "word": "anaesthetist",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A medical doctor specializing in administering anaesthesia.",
+  "meaning_fa": "متخصص بیهوشی",
+  "example_en": "The anaesthetist carefully monitored the patient's vital signs.",
+  "photo": "media/vocab/anaesthetist.jpg"
+ },
+ {
+  "word": "aromatherapist",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who uses essential oils for therapeutic purposes.",
+  "meaning_fa": "رایحه‌درمانگر",
+  "example_en": "The aromatherapist recommended lavender oil for relaxation.",
+  "photo": "media/vocab/aromatherapist.jpg"
+ },
+ {
+  "word": "back on your feet",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Recovered from illness or difficulty; healthy again.",
+  "meaning_fa": "دوباره سرپا شدن، بهبود یافتن",
+  "example_en": "After the surgery, it took weeks to get back on my feet.",
+  "photo": "media/vocab/back-on-your-feet.jpg"
+ },
+ {
+  "word": "bowel",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The long tube in the body that digests food.",
+  "meaning_fa": "روده",
+  "example_en": "Eating fiber is good for bowel health.",
+  "photo": "media/vocab/bowel.jpg"
+ },
+ {
+  "word": "bunged up",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Blocked, especially referring to a nose or ear.",
+  "meaning_fa": "گرفته، مسدود (بینی)",
+  "example_en": "My nose is all bunged up from this cold.",
+  "photo": "media/vocab/bunged-up.jpg"
+ },
+ {
+  "word": "cardiologist",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A doctor specializing in heart diseases.",
+  "meaning_fa": "متخصص قلب، کاردیولوژیست",
+  "example_en": "My grandfather sees a cardiologist for his heart condition.",
+  "photo": "media/vocab/cardiologist.jpg"
+ },
+ {
+  "word": "carry the scars of",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "To show lasting physical or emotional damage from an experience.",
+  "meaning_fa": "زخم‌های (چیزی) را به دوش کشیدن",
+  "example_en": "He still carries the scars of his childhood trauma.",
+  "photo": "media/vocab/carry-the-scars-of.jpg"
+ },
+ {
+  "word": "chiropractor",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A healthcare professional treating spine and joint problems.",
+  "meaning_fa": "کایروپراکتور، متخصص ستون فقرات",
+  "example_en": "I saw a chiropractor for my persistent back pain.",
+  "photo": "media/vocab/chiropractor.jpg"
+ },
+ {
+  "word": "chronic",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "(Of a disease) lasting for a long time.",
+  "meaning_fa": "مزمن، طولانی‌مدت",
+  "example_en": "She suffers from chronic pain in her joints.",
+  "photo": "media/vocab/chronic.jpg"
+ },
+ {
+  "word": "clinic",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A place where people receive medical treatment or advice.",
+  "meaning_fa": "درمانگاه، کلینیک",
+  "example_en": "I have an appointment at the dental clinic tomorrow.",
+  "photo": "media/vocab/clinic.jpg"
+ },
+ {
+  "word": "come down with",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To become ill with a particular sickness.",
+  "meaning_fa": "بیمار شدن، مبتلا شدن",
+  "example_en": "I think I'm coming down with a cold.",
+  "photo": "media/vocab/come-down-with.jpg"
+ },
+ {
+  "word": "complementary medicine",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Treatments used alongside conventional medicine, not replacing it.",
+  "meaning_fa": "طب مکمل",
+  "example_en": "Acupuncture is a form of complementary medicine.",
+  "photo": "media/vocab/complementary-medicine.jpg"
+ },
+ {
+  "word": "cuts and bruises",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Minor injuries like small wounds and discolored skin.",
+  "meaning_fa": "بریدگی و کبودی",
+  "example_en": "After the fall, he only had a few cuts and bruises.",
+  "photo": "media/vocab/cuts-and-bruises.jpg"
+ },
+ {
+  "word": "dermatologist",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A doctor specializing in skin conditions and diseases.",
+  "meaning_fa": "متخصص پوست",
+  "example_en": "I consulted a dermatologist about my persistent rash.",
+  "photo": "media/vocab/dermatologist.jpg"
+ },
+ {
+  "word": "disorientation",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A state of confusion about one's location or identity.",
+  "meaning_fa": "سردرگمی، گیجی",
+  "example_en": "The patient experienced temporary disorientation after the surgery.",
+  "photo": "media/vocab/disorientation.jpg"
+ },
+ {
+  "word": "dull ache",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A persistent, mild, and not sharp pain.",
+  "meaning_fa": "درد مبهم، درد خفیف",
+  "example_en": "She felt a dull ache in her lower back all day.",
+  "photo": "media/vocab/dull-ache.jpg"
+ },
+ {
+  "word": "duration",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The length of time that something continues.",
+  "meaning_fa": "مدت، طول مدت",
+  "example_en": "The duration of the flight is approximately three hours.",
+  "photo": "media/vocab/duration.jpg"
+ },
+ {
+  "word": "excrement",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Waste matter discharged from the body; feces.",
+  "meaning_fa": "مدفوع، فضولات",
+  "example_en": "Animal excrement can be used as fertilizer.",
+  "photo": "media/vocab/excrement.jpg"
+ },
+ {
+  "word": "family doctor",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A general practitioner who treats all family members.",
+  "meaning_fa": "پزشک خانواده",
+  "example_en": "Our family doctor knows our medical history very well.",
+  "photo": "media/vocab/family-doctor.jpg"
+ },
+ {
+  "word": "fever",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An abnormally high body temperature, usually with illness.",
+  "meaning_fa": "تب",
+  "example_en": "The child had a high fever and felt very weak.",
+  "photo": "media/vocab/fever.jpg"
+ },
+ {
+  "word": "fever pitch",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A state of extreme excitement or intensity.",
+  "meaning_fa": "اوج هیجان، نقطه جوش",
+  "example_en": "Excitement for the concert reached fever pitch.",
+  "photo": "media/vocab/fever-pitch.jpg"
+ },
+ {
+  "word": "feverish",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having a fever or showing symptoms of one.",
+  "meaning_fa": "تب‌دار، تب‌آلود",
+  "example_en": "She felt feverish and decided to stay home from work.",
+  "photo": "media/vocab/feverish.jpg"
+ },
+ {
+  "word": "fight off",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To resist an attack or illness successfully.",
+  "meaning_fa": "دفع کردن، مبارزه کردن",
+  "example_en": "She managed to fight off the cold with rest.",
+  "photo": "media/vocab/fight-off.jpg"
+ },
+ {
+  "word": "gastrointestinal disease",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "A disease affecting the digestive system.",
+  "meaning_fa": "بیماری گوارشی",
+  "example_en": "He suffers from a chronic gastrointestinal disease.",
+  "photo": "media/vocab/gastrointestinal-disease.jpg"
+ },
+ {
+  "word": "general practitioner",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "A doctor treating common illnesses; a family doctor.",
+  "meaning_fa": "پزشک عمومی",
+  "example_en": "I need to see my general practitioner for a check-up.",
+  "photo": "media/vocab/general-practitioner.jpg"
+ },
+ {
+  "word": "go down with",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "Become ill with a particular disease.",
+  "meaning_fa": "بیمار شدن",
+  "example_en": "He went down with the flu last week.",
+  "photo": "media/vocab/go-down-with.jpg"
+ },
+ {
+  "word": "go private",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Choose private healthcare instead of public.",
+  "meaning_fa": "به بخش خصوصی رفتن",
+  "example_en": "He decided to go private for his knee surgery.",
+  "photo": "media/vocab/go-private.jpg"
+ },
+ {
+  "word": "gynaecologist",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A doctor specializing in women's reproductive health.",
+  "meaning_fa": "متخصص زنان و زایمان",
+  "example_en": "She scheduled an appointment with her gynaecologist for a check-up.",
+  "photo": "media/vocab/gynaecologist.jpg"
+ },
+ {
+  "word": "have your finger on the pulse",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "To be aware of current trends and developments.",
+  "meaning_fa": "از اوضاع باخبر بودن، نبض بازار را داشتن",
+  "example_en": "A good journalist has their finger on the pulse.",
+  "photo": "media/vocab/have-your-finger-on-the-pulse.jpg"
+ },
+ {
+  "word": "healthcare",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The organized provision of medical care.",
+  "meaning_fa": "مراقبت‌های بهداشتی، خدمات درمانی",
+  "example_en": "Access to affordable healthcare is a basic right.",
+  "photo": "media/vocab/healthcare.jpg"
+ },
+ {
+  "word": "home visit",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A visit by a professional to a person's home.",
+  "meaning_fa": "ویزیت در منزل، ملاقات خانگی",
+  "example_en": "The nurse scheduled a home visit for the elderly patient.",
+  "photo": "media/vocab/home-visit.jpg"
+ },
+ {
+  "word": "homeopathic doctor",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A doctor practicing homeopathy, an alternative medicine system.",
+  "meaning_fa": "پزشک هومیوپات",
+  "example_en": "She consulted a homeopathic doctor for her chronic allergies.",
+  "photo": "media/vocab/homeopathic-doctor.jpg"
+ },
+ {
+  "word": "hot and cold",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "To feel alternately enthusiastic and unenthusiastic.",
+  "meaning_fa": "متغیر، دمدمی، سرد و گرم",
+  "example_en": "She's been blowing hot and cold about the proposal.",
+  "photo": "media/vocab/hot-and-cold.jpg"
+ },
+ {
+  "word": "hurt (n. and v.)",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "(v) To cause pain; (n) physical or emotional pain.",
+  "meaning_fa": "(فعل) آسیب زدن، (اسم) درد، آسیب",
+  "example_en": "Did you hurt your knee? The hurt was unbearable.",
+  "photo": "media/vocab/hurt-n-and-v.jpg"
+ },
+ {
+  "word": "infect",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To transmit a disease or harmful agent to.",
+  "meaning_fa": "آلوده کردن، مبتلا کردن",
+  "example_en": "The virus can infect computers through email attachments.",
+  "photo": "media/vocab/infect.jpg"
+ },
+ {
+  "word": "insurance scheme",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A plan or system for providing insurance.",
+  "meaning_fa": "طرح بیمه",
+  "example_en": "The company offers a comprehensive health insurance scheme.",
+  "photo": "media/vocab/insurance-scheme.jpg"
+ },
+ {
+  "word": "jaundiced",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having a yellowish discoloration of the skin or eyes.",
+  "meaning_fa": "زردی گرفته، یرقانی",
+  "example_en": "The baby's skin looked slightly jaundiced.",
+  "photo": "media/vocab/jaundiced.jpg"
+ },
+ {
+  "word": "locum",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who temporarily stands in for another.",
+  "meaning_fa": "پزشک جانشین، قائم مقام",
+  "example_en": "The clinic hired a locum doctor for the summer.",
+  "photo": "media/vocab/locum.jpg"
+ },
+ {
+  "word": "low-dose",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Containing a small amount of an active substance.",
+  "meaning_fa": "دوز پایین",
+  "example_en": "The doctor prescribed a low-dose aspirin daily.",
+  "photo": "media/vocab/low-dose.jpg"
+ },
+ {
+  "word": "nagging ache",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A persistent, dull pain that bothers you.",
+  "meaning_fa": "درد مزمن و آزاردهنده",
+  "example_en": "He had a nagging ache in his lower back.",
+  "photo": "media/vocab/nagging-ache.jpg"
+ },
+ {
+  "word": "National Health Service",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "proper noun",
+  "meaning_en": "The publicly funded healthcare system in the UK.",
+  "meaning_fa": "سازمان ملی بهداشت (بریتانیا)",
+  "example_en": "The National Health Service provides free healthcare.",
+  "photo": "media/vocab/national-health-service.jpg"
+ },
+ {
+  "word": "national insurance",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A system of compulsory payments for state benefits.",
+  "meaning_fa": "بیمه ملی",
+  "example_en": "National insurance contributions fund pensions and unemployment benefits.",
+  "photo": "media/vocab/national-insurance.jpg"
+ },
+ {
+  "word": "nausea",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A feeling of sickness with an urge to vomit.",
+  "meaning_fa": "حالت تهوع",
+  "example_en": "She felt a wave of nausea after the bumpy ride.",
+  "photo": "media/vocab/nausea.jpg"
+ },
+ {
+  "word": "nauseous",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling sick and wanting to vomit.",
+  "meaning_fa": "دچار تهوع",
+  "example_en": "The smell of the food made him feel nauseous.",
+  "photo": "media/vocab/nauseous.jpg"
+ },
+ {
+  "word": "obstetrician",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A doctor specializing in childbirth and pregnancy.",
+  "meaning_fa": "متخصص زنان و زایمان",
+  "example_en": "She visited her obstetrician regularly throughout her pregnancy.",
+  "photo": "media/vocab/obstetrician.jpg"
+ },
+ {
+  "word": "off-colour",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Slightly unwell or not feeling well.",
+  "meaning_fa": "ناخوش، کسل",
+  "example_en": "I'm feeling a bit off-colour today, so I'll stay home.",
+  "photo": "media/vocab/off-colour.jpg"
+ },
+ {
+  "word": "on the mend",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Recovering from an illness or injury.",
+  "meaning_fa": "در حال بهبودی",
+  "example_en": "After a week in bed, she's finally on the mend.",
+  "photo": "media/vocab/on-the-mend.jpg"
+ },
+ {
+  "word": "ophthalmologist",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A doctor specializing in eye diseases and surgery.",
+  "meaning_fa": "چشم‌پزشک",
+  "example_en": "She saw an ophthalmologist for her vision problems.",
+  "photo": "media/vocab/ophthalmologist.jpg"
+ },
+ {
+  "word": "out of sorts",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Slightly unwell or unhappy; not feeling normal.",
+  "meaning_fa": "ناخوش، کسل",
+  "example_en": "She's been out of sorts all week, maybe she's catching a cold.",
+  "photo": "media/vocab/out-of-sorts.jpg"
+ },
+ {
+  "word": "over the worst",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Past the most difficult or dangerous part.",
+  "meaning_fa": "از بدترین مرحله عبور کردن",
+  "example_en": "The doctor said she's over the worst of the flu.",
+  "photo": "media/vocab/over-the-worst.jpg"
+ },
+ {
+  "word": "paediatrician",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A doctor specializing in the medical care of children.",
+  "meaning_fa": "متخصص اطفال",
+  "example_en": "We took our baby to see the paediatrician.",
+  "photo": "media/vocab/paediatrician.jpg"
+ },
+ {
+  "word": "particle",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A very small piece of matter.",
+  "meaning_fa": "ذره، بخش کوچک",
+  "example_en": "Air filters remove harmful particles from the environment.",
+  "photo": "media/vocab/particle.jpg"
+ },
+ {
+  "word": "past history",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A record of previous illnesses or medical conditions.",
+  "meaning_fa": "سابقه پزشکی",
+  "example_en": "The doctor asked about her past history of allergies.",
+  "photo": "media/vocab/past-history.jpg"
+ },
+ {
+  "word": "physician",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A medical doctor, especially one who is not a surgeon.",
+  "meaning_fa": "پزشک، طبیب",
+  "example_en": "Consult your physician for any persistent health concerns.",
+  "photo": "media/vocab/physician.jpg"
+ },
+ {
+  "word": "poo",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Solid waste material excreted from the body.",
+  "meaning_fa": "مدفوع",
+  "example_en": "The dog left a poo on the pavement.",
+  "photo": "media/vocab/poo.jpg"
+ },
+ {
+  "word": "poorly",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "In a bad or unsatisfactory way; unwell.",
+  "meaning_fa": "بد، ضعیف، ناخوش",
+  "example_en": "She's been feeling poorly all week.",
+  "photo": "media/vocab/poorly.jpg"
+ },
+ {
+  "word": "prescription",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A doctor's written order for medicine or treatment.",
+  "meaning_fa": "نسخه پزشک",
+  "example_en": "I need to pick up my prescription from the pharmacy.",
+  "photo": "media/vocab/prescription.jpg"
+ },
+ {
+  "word": "prescription charge",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "The fee paid for medicine prescribed by a doctor.",
+  "meaning_fa": "هزینه نسخه",
+  "example_en": "Some people are exempt from the prescription charge.",
+  "photo": "media/vocab/prescription-charge.jpg"
+ },
+ {
+  "word": "primary care",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Basic healthcare provided by general practitioners.",
+  "meaning_fa": "مراقبت‌های اولیه بهداشتی",
+  "example_en": "Access to good primary care is essential for public health.",
+  "photo": "media/vocab/primary-care.jpg"
+ },
+ {
+  "word": "prognosis",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A forecast of the likely course of a disease.",
+  "meaning_fa": "پیش‌آگهی، تشخیص آینده",
+  "example_en": "The doctor gave a good prognosis for her recovery.",
+  "photo": "media/vocab/prognosis.jpg"
+ },
+ {
+  "word": "psychiatrist",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A medical doctor specializing in mental illness.",
+  "meaning_fa": "روانپزشک",
+  "example_en": "She consulted a psychiatrist for her anxiety.",
+  "photo": "media/vocab/psychiatrist.jpg"
+ },
+ {
+  "word": "pulse",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The rhythmic throbbing of arteries as blood is pumped.",
+  "meaning_fa": "نبض",
+  "example_en": "The nurse checked the patient's pulse.",
+  "photo": "media/vocab/pulse.jpg"
+ },
+ {
+  "word": "recover from",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "Get better after an illness, shock, or difficulty.",
+  "meaning_fa": "بهبود یافتن از",
+  "example_en": "It took her months to recover from the surgery.",
+  "photo": "media/vocab/recover-from.jpg"
+ },
+ {
+  "word": "refer",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "Send someone to another person or place for help.",
+  "meaning_fa": "ارجاع دادن",
+  "example_en": "The doctor decided to refer me to a specialist.",
+  "photo": "media/vocab/refer.jpg"
+ },
+ {
+  "word": "scar",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A mark left on the skin after a wound heals.",
+  "meaning_fa": "جای زخم، اسکار",
+  "example_en": "The old injury left a noticeable scar on his arm.",
+  "photo": "media/vocab/scar.jpg"
+ },
+ {
+  "word": "scarred",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having permanent marks on the skin from wounds.",
+  "meaning_fa": "زخمی، دارای جای زخم",
+  "example_en": "His face was scarred from the childhood accident.",
+  "photo": "media/vocab/scarred.jpg"
+ },
+ {
+  "word": "secondary care",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Medical care provided by specialists or hospitals.",
+  "meaning_fa": "مراقبت‌های تخصصی پزشکی",
+  "example_en": "Patients are referred to secondary care by their GP.",
+  "photo": "media/vocab/secondary-care.jpg"
+ },
+ {
+  "word": "shivery",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling cold and trembling slightly.",
+  "meaning_fa": "لرزان، سردش شده",
+  "example_en": "She felt shivery after walking in the rain.",
+  "photo": "media/vocab/shivery.jpg"
+ },
+ {
+  "word": "side effect",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "An unintended, often unpleasant, secondary effect of a drug.",
+  "meaning_fa": "عارضه جانبی",
+  "example_en": "Drowsiness is a common side effect of this medication.",
+  "photo": "media/vocab/side-effect.jpg"
+ },
+ {
+  "word": "sleepless",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Unable to sleep; without sleep.",
+  "meaning_fa": "بی‌خواب",
+  "example_en": "He spent a sleepless night worrying about the exam.",
+  "photo": "media/vocab/sleepless.jpg"
+ },
+ {
+  "word": "spine",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The column of bones down the back; backbone.",
+  "meaning_fa": "ستون فقرات",
+  "example_en": "He injured his spine playing rugby last year.",
+  "photo": "media/vocab/spine.jpg"
+ },
+ {
+  "word": "stiff neck",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Pain and difficulty moving your neck.",
+  "meaning_fa": "گردن خشک، گرفتگی گردن",
+  "example_en": "I woke up with a really stiff neck this morning.",
+  "photo": "media/vocab/stiff-neck.jpg"
+ },
+ {
+  "word": "sting",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To cause a sharp, burning pain.",
+  "meaning_fa": "گزیدن، سوزش داشتن",
+  "example_en": "The antiseptic stung when applied to the cut.",
+  "photo": "media/vocab/sting.jpg"
+ },
+ {
+  "word": "stool",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Solid waste from the body.",
+  "meaning_fa": "مدفوع، فضولات",
+  "example_en": "The doctor asked for a stool sample.",
+  "photo": "media/vocab/stool.jpg"
+ },
+ {
+  "word": "suffer from",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To experience pain, illness, or a problem.",
+  "meaning_fa": "رنج بردن از، مبتلا بودن به",
+  "example_en": "He suffers from chronic back pain.",
+  "photo": "media/vocab/suffer-from.jpg"
+ },
+ {
+  "word": "surgery",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Medical treatment involving cutting into the body.",
+  "meaning_fa": "جراحی",
+  "example_en": "He needed surgery to repair his knee.",
+  "photo": "media/vocab/surgery.jpg"
+ },
+ {
+  "word": "symptom",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A physical or mental sign of an illness.",
+  "meaning_fa": "علامت، نشانه بیماری",
+  "example_en": "Fever is a common symptom of the flu.",
+  "photo": "media/vocab/symptom.jpg"
+ },
+ {
+  "word": "symptomatic",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Showing symptoms of a disease or problem.",
+  "meaning_fa": "علامتی، نشانه‌ای",
+  "example_en": "His fatigue was symptomatic of a deeper issue.",
+  "photo": "media/vocab/symptomatic.jpg"
+ },
+ {
+  "word": "throb",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "Beat or pulsate with a strong, regular rhythm.",
+  "meaning_fa": "ضربان داشتن، تیر کشیدن",
+  "example_en": "My head began to throb after the loud music.",
+  "photo": "media/vocab/throb.jpg"
+ },
+ {
+  "word": "throbbing ache",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A continuous, pulsating pain.",
+  "meaning_fa": "درد ضربان‌دار",
+  "example_en": "He had a throbbing ache in his injured knee.",
+  "photo": "media/vocab/throbbing-ache.jpg"
+ },
+ {
+  "word": "twist your ankle",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Injure your ankle by turning it awkwardly.",
+  "meaning_fa": "مچ پا را پیچاندن",
+  "example_en": "I twisted my ankle playing basketball yesterday.",
+  "photo": "media/vocab/twist-your-ankle.jpg"
+ },
+ {
+  "word": "usual aches and pains",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Minor, common physical discomforts.",
+  "meaning_fa": "درد و دل‌های معمول",
+  "example_en": "At my age, I just have the usual aches and pains.",
+  "photo": "media/vocab/usual-aches-and-pains.jpg"
+ },
+ {
+  "word": "vomiting",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The act of expelling stomach contents through the mouth.",
+  "meaning_fa": "استفراغ، تهوع",
+  "example_en": "Vomiting can be a symptom of various illnesses.",
+  "photo": "media/vocab/vomiting.jpg"
+ }
+]

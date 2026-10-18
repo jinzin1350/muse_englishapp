@@ -1,1 +1,2696 @@
-[{"word": "ability", "phonetic": "əˈbɪləti", "levels": ["b1"], "pos": "noun", "meaning_en": "the power or skill to do something", "meaning_fa": "توانایی، قابلیت", "example_en": "She has a great ability to learn new languages.", "photo": "media/vocab/ability.jpg"}, {"word": "able", "phonetic": "ˈeɪbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "having the skill or power to do something", "meaning_fa": "توانا، قادر", "example_en": "I am able to speak three languages.", "photo": "media/vocab/able.jpg"}, {"word": "action", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "the process of doing something", "meaning_fa": "عمل، اقدام", "example_en": "We need to take action to solve this problem.", "photo": "media/vocab/action.jpg"}, {"word": "actor", "phonetic": "ˈæktə", "levels": ["b1"], "pos": "noun", "meaning_en": "a person who performs in plays or films", "meaning_fa": "بازیگر", "example_en": "He is a famous actor from Hollywood.", "photo": "media/vocab/actor.jpg"}, {"word": "addressee", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The person to whom a letter or email is sent.", "meaning_fa": "گیرنده، مخاطب", "example_en": "The addressee's name was clearly written.", "photo": "media/vocab/addressee.jpg"}, {"word": "admission", "phonetic": "ədˈmɪʃən", "levels": ["b2"], "pos": "noun", "meaning_en": "The right to enter a place or join a group.", "meaning_fa": "پذیرش، ورود", "example_en": "Admission to the museum is free.", "photo": "media/vocab/admission.jpg"}, {"word": "alteration", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A change, usually small.", "meaning_fa": "تغییر، اصلاح", "example_en": "The tailor made an alteration to my dress.", "photo": "media/vocab/alteration.jpg"}, {"word": "annual", "phonetic": "ˈænjʊəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Happening once every year.", "meaning_fa": "سالانه", "example_en": "The school has an annual sports day.", "photo": "media/vocab/annual.jpg"}, {"word": "arrival", "phonetic": "əˈraɪvəl", "levels": ["b2"], "pos": "noun", "meaning_en": "The act of coming to a place.", "meaning_fa": "ورود، رسیدن", "example_en": "We waited for their arrival at the airport.", "photo": "media/vocab/arrival.jpg"}, {"word": "artist", "phonetic": "ˈɑːtɪst", "levels": ["b1"], "pos": "noun", "meaning_en": "A person who creates art.", "meaning_fa": "هنرمند", "example_en": "My sister is a talented artist.", "photo": "media/vocab/artist.jpg"}, {"word": "beautiful", "phonetic": "ˈbjuːtɪfəl", "levels": ["a2"], "pos": "adjective", "meaning_en": "Very pleasing to the senses; lovely.", "meaning_fa": "زیبا، قشنگ", "example_en": "She is a beautiful woman.", "photo": "media/vocab/beautiful.jpg"}, {"word": "beautify", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "Make something more beautiful.", "meaning_fa": "زیبا کردن، آراستن", "example_en": "They want to beautify the park.", "photo": "media/vocab/beautify.jpg"}, {"word": "brake n, v", "phonetic": "breɪk", "levels": ["b1"], "pos": "noun, verb", "meaning_en": "A device used to slow or stop a vehicle.", "meaning_fa": "ترمز (اسم و فعل)", "example_en": "Press the brake pedal to stop the car.", "photo": "media/vocab/brake-n-v.jpg"}, {"word": "brotherhood", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "feeling of friendship and understanding between people", "meaning_fa": "برادری، اخوت", "example_en": "They felt a strong sense of brotherhood.", "photo": "media/vocab/brotherhood.jpg"}, {"word": "brutal", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "very cruel and violent", "meaning_fa": "وحشیانه، بی‌رحمانه", "example_en": "The weather was brutal last winter.", "photo": "media/vocab/brutal.jpg"}, {"word": "Buddhism", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a religion and philosophy from India", "meaning_fa": "بودیسم", "example_en": "Buddhism teaches peace and meditation.", "photo": "media/vocab/buddhism.jpg"}, {"word": "calculator", "phonetic": "ˈkælkjəleɪtə", "levels": ["a2"], "pos": "noun", "meaning_en": "A small machine that does math.", "meaning_fa": "ماشین حساب", "example_en": "I use a calculator for my homework.", "photo": "media/vocab/calculator.jpg"}, {"word": "careful", "phonetic": "ˈkeəfəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Acting with caution to avoid mistakes or danger.", "meaning_fa": "مراقب، محتاط", "example_en": "Be careful when you cross the road.", "photo": "media/vocab/careful.jpg"}, {"word": "careless", "phonetic": "ˈkeələs", "levels": ["b1"], "pos": "adjective", "meaning_en": "Not paying enough attention; making mistakes.", "meaning_fa": "بی‌دقت، بی‌ملاحظه", "example_en": "He made a careless mistake on his homework.", "photo": "media/vocab/careless.jpg"}, {"word": "cellist", "phonetic": "ˈtʃelɪst", "levels": ["b2"], "pos": "noun", "meaning_en": "A person who plays the cello.", "meaning_fa": "نوازنده ویولنسل", "example_en": "The cellist played a beautiful song.", "photo": "media/vocab/cellist.jpg"}, {"word": "chat n, v", "phonetic": "tʃæt", "levels": ["b1"], "pos": "noun, verb", "meaning_en": "To talk in a friendly, informal way.", "meaning_fa": "گپ زدن، صحبت کردن", "example_en": "Let's have a quick chat after work.", "photo": "media/vocab/chat-n-v.jpg"}, {"word": "childhood", "phonetic": "ˈtʃaɪldhʊd", "levels": ["b2"], "pos": "noun", "meaning_en": "The time when someone is a child.", "meaning_fa": "دوران کودکی", "example_en": "My childhood memories are very happy.", "photo": "media/vocab/childhood.jpg"}, {"word": "coat hanger", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A shaped piece of wood or plastic to hang clothes.", "meaning_fa": "چوب لباسی", "example_en": "Please put your jacket on the coat hanger.", "photo": "media/vocab/coat-hanger.jpg"}, {"word": "colourful", "phonetic": "ˈkʌləfəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Having many bright colours.", "meaning_fa": "رنگارنگ", "example_en": "The market was full of colourful flowers.", "photo": "media/vocab/colourful.jpg"}, {"word": "comfortable", "phonetic": "ˈkʌmftəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Feeling relaxed and at ease.", "meaning_fa": "راحت، آسوده", "example_en": "This chair is very comfortable.", "photo": "media/vocab/comfortable.jpg"}, {"word": "commercialise", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make something available for profit.", "meaning_fa": "تجاری کردن", "example_en": "They want to commercialise the new invention.", "photo": "media/vocab/commercialise.jpg"}, {"word": "complication", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A problem that makes a situation more difficult.", "meaning_fa": "پیچیدگی، عارضه", "example_en": "There was a complication with the plan.", "photo": "media/vocab/complication.jpg"}, {"word": "computerise", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To start using computers for a system.", "meaning_fa": "کامپیوتری کردن", "example_en": "The company decided to computerise all its records.", "photo": "media/vocab/computerise.jpg"}, {"word": "cooker", "phonetic": "ˈkʊkə", "levels": ["a2"], "pos": "noun", "meaning_en": "A piece of kitchen equipment for cooking food.", "meaning_fa": "اجاق گاز", "example_en": "We bought a new electric cooker.", "photo": "media/vocab/cooker.jpg"}, {"word": "cultural", "phonetic": "ˈkʌltʃərəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Relating to the customs, arts, and social institutions.", "meaning_fa": "فرهنگی", "example_en": "The city has many cultural events.", "photo": "media/vocab/cultural.jpg"}, {"word": "cure n, v", "phonetic": "kjʊə", "levels": ["b1"], "pos": "noun, verb", "meaning_en": "(n) A medicine or treatment that makes you well. (v) To make someone well.", "meaning_fa": "(اسم) درمان، (فعل) درمان کردن", "example_en": "Doctors hope to find a cure for the disease.", "photo": "media/vocab/cure-n-v.jpg"}, {"word": "dancer", "phonetic": "ˈdɑːntsə", "levels": ["b1"], "pos": "noun", "meaning_en": "A person who dances, especially professionally.", "meaning_fa": "رقصنده", "example_en": "She wants to be a professional dancer.", "photo": "media/vocab/dancer.jpg"}, {"word": "delicious", "phonetic": "dɪˈlɪʃəs", "levels": ["b2"], "pos": "adjective", "meaning_en": "Having a very pleasant taste.", "meaning_fa": "خوشمزه", "example_en": "This cake is delicious!", "photo": "media/vocab/delicious.jpg"}, {"word": "develop", "phonetic": "dɪˈveləp", "levels": ["b1"], "pos": "verb", "meaning_en": "To grow or change into something bigger or better.", "meaning_fa": "توسعه دادن، رشد کردن", "example_en": "The city plans to develop a new park.", "photo": "media/vocab/develop.jpg"}, {"word": "development", "phonetic": "dɪˈveləpmənt", "levels": ["b1"], "pos": "noun", "meaning_en": "The process of growing or changing.", "meaning_fa": "توسعه، پیشرفت", "example_en": "The new housing development will create many jobs.", "photo": "media/vocab/development.jpg"}, {"word": "discuss", "phonetic": "dɪˈskʌs", "levels": ["b1"], "pos": "verb", "meaning_en": "To talk about something with another person.", "meaning_fa": "بحث کردن، گفتگو کردن", "example_en": "Let's discuss your ideas for the project.", "photo": "media/vocab/discuss.jpg"}, {"word": "discussion", "phonetic": "dɪˈskʌʃən", "levels": ["b1"], "pos": "noun", "meaning_en": "The act of talking about something.", "meaning_fa": "بحث، گفتگو", "example_en": "We had a long discussion about our plans.", "photo": "media/vocab/discussion.jpg"}, {"word": "donation", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Money or goods given to help.", "meaning_fa": "اهدا، کمک مالی", "example_en": "We made a donation to the local charity.", "photo": "media/vocab/donation.jpg"}, {"word": "donor", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A person who gives something, like blood or money.", "meaning_fa": "اهداکننده، بخشنده", "example_en": "He became a blood donor last year.", "photo": "media/vocab/donor.jpg"}, {"word": "dream n, v", "phonetic": "driːm", "levels": ["b1"], "pos": "noun, verb", "meaning_en": "Images and feelings in your sleep.", "meaning_fa": "رویا، خواب دیدن", "example_en": "I had a strange dream last night.", "photo": "media/vocab/dream-n-v.jpg"}, {"word": "drinkable", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Safe and pleasant to drink.", "meaning_fa": "قابل شرب", "example_en": "This water is not drinkable.", "photo": "media/vocab/drinkable.jpg"}, {"word": "economist", "phonetic": "iˈkɒnəmɪst", "levels": ["b1"], "pos": "noun", "meaning_en": "A person who studies economics.", "meaning_fa": "اقتصاددان", "example_en": "An economist studies how countries use money.", "photo": "media/vocab/economist.jpg"}, {"word": "edible", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Safe to eat.", "meaning_fa": "خوراکی", "example_en": "Are these mushrooms edible or poisonous?", "photo": "media/vocab/edible.jpg"}, {"word": "electrical", "phonetic": "ɪˈlektrɪkəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Using or producing electricity.", "meaning_fa": "برقی، الکتریکی", "example_en": "This is an electrical appliance.", "photo": "media/vocab/electrical.jpg"}, {"word": "employee", "phonetic": "ɪmˈplɔɪiː", "levels": ["b2"], "pos": "noun", "meaning_en": "A person who works for a company.", "meaning_fa": "کارمند", "example_en": "She is a new employee at the bank.", "photo": "media/vocab/employee.jpg"}, {"word": "employer", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A person or company that employs people.", "meaning_fa": "کارفرما", "example_en": "My employer gives good benefits.", "photo": "media/vocab/employer.jpg"}, {"word": "endless", "phonetic": "ˈendləs", "levels": ["a2"], "pos": "adjective", "meaning_en": "Without an end; continuing forever.", "meaning_fa": "بی‌پایان", "example_en": "The children had endless energy to play.", "photo": "media/vocab/endless.jpg"}, {"word": "enjoyable", "phonetic": "ɪnˈʤɔɪəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Giving pleasure; fun.", "meaning_fa": "لذت‌بخش", "example_en": "We had an enjoyable evening together.", "photo": "media/vocab/enjoyable.jpg"}, {"word": "enjoyment", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The feeling of pleasure and happiness.", "meaning_fa": "لذت، خوشی", "example_en": "I get great enjoyment from gardening.", "photo": "media/vocab/enjoyment.jpg"}, {"word": "excitement", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A feeling of great enthusiasm and eagerness.", "meaning_fa": "هیجان، شور", "example_en": "The children were full of excitement.", "photo": "media/vocab/excitement.jpg"}, {"word": "famous", "phonetic": "feɪməs", "levels": ["b1"], "pos": "adjective", "meaning_en": "Known by many people.", "meaning_fa": "مشهور، معروف", "example_en": "The city is famous for its old castle.", "photo": "media/vocab/famous.jpg"}, {"word": "fashionable", "phonetic": "ˈfæʃənəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Popular and stylish at a particular time.", "meaning_fa": "مد روز، شیک", "example_en": "That jacket is very fashionable this season.", "photo": "media/vocab/fashionable.jpg"}, {"word": "fit adj", "phonetic": "fɪt", "levels": ["b1"], "pos": "adjective", "meaning_en": "Healthy and strong, often from exercise.", "meaning_fa": "سالم، متناسب، ورزیده", "example_en": "She stays fit by running every day.", "photo": "media/vocab/fit-adj.jpg"}, {"word": "fitness", "phonetic": "ˈfɪtnəs", "levels": ["b1"], "pos": "noun", "meaning_en": "The state of being healthy and strong.", "meaning_fa": "تناسب اندام، سلامتی", "example_en": "Regular exercise improves your fitness.", "photo": "media/vocab/fitness.jpg"}, {"word": "flexibility", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The ability to change easily.", "meaning_fa": "انعطاف‌پذیری", "example_en": "The job requires a lot of flexibility.", "photo": "media/vocab/flexibility.jpg"}, {"word": "flexible", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Able to change easily or bend without breaking.", "meaning_fa": "منعطف، قابل تغییر", "example_en": "Our plans are flexible, so we can change them.", "photo": "media/vocab/flexible.jpg"}, {"word": "footballer", "phonetic": "ˈfʊtbɔːlə", "levels": ["b1"], "pos": "noun", "meaning_en": "A person who plays football.", "meaning_fa": "فوتبالیست", "example_en": "He dreams of becoming a famous footballer.", "photo": "media/vocab/footballer.jpg"}, {"word": "forgetful", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "often forgetting things.", "meaning_fa": "فراموشکار", "example_en": "My grandpa is very forgetful sometimes.", "photo": "media/vocab/forgetful.jpg"}, {"word": "forgetfulness", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "the state of often forgetting things.", "meaning_fa": "فراموشکاری", "example_en": "His forgetfulness caused some problems.", "photo": "media/vocab/forgetfulness.jpg"}, {"word": "forgivable", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "able to be forgiven.", "meaning_fa": "قابل بخشش", "example_en": "His mistake was forgivable.", "photo": "media/vocab/forgivable.jpg"}, {"word": "friendship", "phonetic": "ˈfrendʃɪp", "levels": ["b2"], "pos": "noun", "meaning_en": "a relationship between friends.", "meaning_fa": "دوستی", "example_en": "Their friendship lasted many years.", "photo": "media/vocab/friendship.jpg"}, {"word": "furious", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "very angry.", "meaning_fa": "خشمگین، عصبانی", "example_en": "She was furious about the delay.", "photo": "media/vocab/furious.jpg"}, {"word": "give sb a hug", "phonetic": "gɪv ˈsʌmbɒdi ə hʌg", "levels": ["b1"], "pos": "phrase", "meaning_en": "Put your arms around someone to show affection.", "meaning_fa": "کسی را در آغوش گرفتن", "example_en": "She gave her son a big hug.", "photo": "media/vocab/give-sb-a-hug.jpg"}, {"word": "goodness", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "the quality of being good or kind.", "meaning_fa": "خوبی، نیکی", "example_en": "Her goodness always shines through.", "photo": "media/vocab/goodness.jpg"}, {"word": "govern", "phonetic": "ˈgʌvən", "levels": ["b1"], "pos": "verb", "meaning_en": "to control and manage a country or area.", "meaning_fa": "حکومت کردن، اداره کردن", "example_en": "The president's job is to govern the country.", "photo": "media/vocab/govern.jpg"}, {"word": "government", "phonetic": "ˈgʌvənmənt", "levels": ["b1"], "pos": "noun", "meaning_en": "the group of people who govern a country.", "meaning_fa": "دولت، حکومت", "example_en": "The government makes new laws.", "photo": "media/vocab/government.jpg"}, {"word": "grater", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a tool used to rub food into small pieces.", "meaning_fa": "رنده", "example_en": "She used a grater for the carrots.", "photo": "media/vocab/grater.jpg"}, {"word": "guess n, v", "phonetic": "ges", "levels": ["b1"], "pos": "noun/verb", "meaning_en": "to try to answer when you don't know.", "meaning_fa": "حدس زدن، حدس", "example_en": "Can you guess my age?", "photo": "media/vocab/guess-n-v.jpg"}, {"word": "happily", "phonetic": "ˈhæpɪli", "levels": ["a2"], "pos": "adverb", "meaning_en": "In a happy way.", "meaning_fa": "با خوشحالی", "example_en": "She smiled happily at the news.", "photo": "media/vocab/happily.jpg"}, {"word": "happiness", "phonetic": "ˈhæpɪnəs", "levels": ["a2", "b1", "b2"], "pos": "noun", "meaning_en": "The state of being happy.", "meaning_fa": "خوشحالی، شادی", "example_en": "His children bring him great happiness.", "photo": "media/vocab/happiness.jpg"}, {"word": "harmless", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Not causing any damage or injury.", "meaning_fa": "بی‌ضرر", "example_en": "Don't worry, the snake is harmless.", "photo": "media/vocab/harmless.jpg"}, {"word": "helpful", "phonetic": "ˈhelpfəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Giving help; useful.", "meaning_fa": "مفید، یاری‌رسان", "example_en": "The teacher was very helpful with my homework.", "photo": "media/vocab/helpful.jpg"}, {"word": "homeless", "phonetic": "ˈhəʊmləs", "levels": ["b2"], "pos": "adjective", "meaning_en": "Without a home.", "meaning_fa": "بی‌خانمان", "example_en": "Many people are homeless after the earthquake.", "photo": "media/vocab/homeless.jpg"}, {"word": "hopeful", "phonetic": "ˈhəʊpfəl", "levels": ["b2"], "pos": "adjective", "meaning_en": "Feeling positive about the future.", "meaning_fa": "امیدوار", "example_en": "She is hopeful about getting the job.", "photo": "media/vocab/hopeful.jpg"}, {"word": "illness", "phonetic": "ˈɪlnəs", "levels": ["b1"], "pos": "noun", "meaning_en": "A disease or period of being sick.", "meaning_fa": "بیماری", "example_en": "He missed work due to a sudden illness.", "photo": "media/vocab/illness.jpg"}, {"word": "improve", "phonetic": "ɪmˈpruːv", "levels": ["b1"], "pos": "verb", "meaning_en": "To make something better.", "meaning_fa": "بهبود بخشیدن", "example_en": "You can improve your English by practicing daily.", "photo": "media/vocab/improve.jpg"}, {"word": "improvement", "phonetic": "ɪmˈpruːvmənt", "levels": ["b1"], "pos": "noun", "meaning_en": "The act of making something better.", "meaning_fa": "بهبود، پیشرفت", "example_en": "We have seen a big improvement in his grades.", "photo": "media/vocab/improvement.jpg"}, {"word": "inability", "phonetic": "ˌɪnəˈbɪləti", "levels": ["b1"], "pos": "noun", "meaning_en": "The state of not being able to do something.", "meaning_fa": "ناتوانی، عدم توانایی", "example_en": "His inability to swim made him nervous.", "photo": "media/vocab/inability.jpg"}, {"word": "industrialise", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To develop industries in a country or region.", "meaning_fa": "صنعتی کردن، صنعتی شدن", "example_en": "The government wants to industrialise the economy.", "photo": "media/vocab/industrialise.jpg"}, {"word": "instructor", "phonetic": "ɪnˈstrʌktə", "levels": ["a2"], "pos": "noun", "meaning_en": "A person who teaches a skill or subject.", "meaning_fa": "مربی، آموزگار", "example_en": "Our driving instructor was very patient.", "photo": "media/vocab/instructor.jpg"}, {"word": "invent", "phonetic": "ɪnˈvent", "levels": ["b1"], "pos": "verb", "meaning_en": "To create something new that did not exist before.", "meaning_fa": "اختراع کردن", "example_en": "Who invented the telephone?", "photo": "media/vocab/invent.jpg"}, {"word": "invention", "phonetic": "ɪnˈvenʃən", "levels": ["b1"], "pos": "noun", "meaning_en": "Something new that someone has created.", "meaning_fa": "اختراع", "example_en": "The internet is a great invention.", "photo": "media/vocab/invention.jpg"}, {"word": "journalism", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The job of collecting and writing news for media.", "meaning_fa": "روزنامه‌نگاری", "example_en": "She studied journalism because she loves writing news stories.", "photo": "media/vocab/journalism.jpg"}, {"word": "legal", "phonetic": "ˈliːgəl", "levels": ["b2"], "pos": "adjective", "meaning_en": "Allowed by law.", "meaning_fa": "قانونی", "example_en": "It is legal to drive here at 17.", "photo": "media/vocab/legal.jpg"}, {"word": "manage [run a business]", "phonetic": "ˈmænɪʤ", "levels": ["b1"], "pos": "verb", "meaning_en": "Control or be in charge of a business.", "meaning_fa": "اداره کردن، مدیریت کردن", "example_en": "She manages a small restaurant downtown.", "photo": "media/vocab/manage-run-a-business.jpg"}, {"word": "management", "phonetic": "ˈmænɪʤmənt", "levels": ["b1"], "pos": "noun", "meaning_en": "The people who control a company.", "meaning_fa": "مدیریت، مدیران", "example_en": "The management made a new decision.", "photo": "media/vocab/management.jpg"}, {"word": "Marxist", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Relating to the ideas of Karl Marx.", "meaning_fa": "مارکسیستی", "example_en": "He holds strong Marxist views.", "photo": "media/vocab/marxist.jpg"}, {"word": "membership", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Being a member of a group or club.", "meaning_fa": "عضویت", "example_en": "My gym membership expires next month.", "photo": "media/vocab/membership.jpg"}, {"word": "modernise", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "to make something modern or up-to-date", "meaning_fa": "مدرنیزه کردن، نوسازی کردن", "example_en": "They want to modernise the old building.", "photo": "media/vocab/modernise.jpg"}, {"word": "motherhood", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "the state of being a mother", "meaning_fa": "مادری", "example_en": "Motherhood is a wonderful experience.", "photo": "media/vocab/motherhood.jpg"}, {"word": "musical", "phonetic": "ˈmjuːzɪkəl", "levels": ["b1"], "pos": "noun", "meaning_en": "A play or film with songs and dancing.", "meaning_fa": "موزیکال", "example_en": "We watched a fun musical last night.", "photo": "media/vocab/musical.jpg"}, {"word": "national", "phonetic": "ˈnæʃənəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Related to a whole country.", "meaning_fa": "ملی، کشوری", "example_en": "We watched the national news.", "photo": "media/vocab/national.jpg"}, {"word": "normal", "phonetic": "ˈnɔːməl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Usual, expected, or typical.", "meaning_fa": "عادی، معمولی", "example_en": "It's normal to feel tired after work.", "photo": "media/vocab/normal.jpg"}, {"word": "operator", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A person who controls a machine or system.", "meaning_fa": "اپراتور، متصدی", "example_en": "The phone operator connected my call.", "photo": "media/vocab/operator.jpg"}, {"word": "outrageous", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Shocking and unacceptable.", "meaning_fa": "ظالمانه، رسواکننده", "example_en": "The prices in that shop are outrageous.", "photo": "media/vocab/outrageous.jpg"}, {"word": "painful", "phonetic": "ˈpeɪnfəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Causing physical or emotional pain.", "meaning_fa": "دردناک", "example_en": "My knee is very painful after the fall.", "photo": "media/vocab/painful.jpg"}, {"word": "painless", "phonetic": "ˈpeɪnləs", "levels": ["b1"], "pos": "adjective", "meaning_en": "Not causing any pain.", "meaning_fa": "بدون درد", "example_en": "The injection was surprisingly painless.", "photo": "media/vocab/painless.jpg"}, {"word": "partnership", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A relationship between two or more people or groups.", "meaning_fa": "شراکت، همکاری", "example_en": "Their business partnership lasted for many years.", "photo": "media/vocab/partnership.jpg"}, {"word": "passive", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Not active; allowing things to happen without reacting.", "meaning_fa": "منفعل، غیرفعال", "example_en": "The passive voice is used less often.", "photo": "media/vocab/passive.jpg"}, {"word": "payee", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The person who receives money.", "meaning_fa": "دریافت کننده وجه", "example_en": "Make sure the payee's name is correct on the cheque.", "photo": "media/vocab/payee.jpg"}, {"word": "peaceful", "phonetic": "ˈpiːsfəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Calm and without noise or trouble.", "meaning_fa": "آرام، صلح آمیز", "example_en": "The park is a peaceful place to relax.", "photo": "media/vocab/peaceful.jpg"}, {"word": "personal (opinion)", "phonetic": "ˈpɜːsənəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Your own private thoughts or feelings.", "meaning_fa": "شخصی (نظر)", "example_en": "That's just my personal opinion.", "photo": "media/vocab/personal-opinion.jpg"}, {"word": "physicist", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a scientist who studies physics.", "meaning_fa": "فیزیکدان", "example_en": "Albert Einstein was a famous physicist.", "photo": "media/vocab/physicist.jpg"}, {"word": "pianist", "phonetic": "ˈpiːənɪst", "levels": ["b2"], "pos": "noun", "meaning_en": "a person who plays the piano.", "meaning_fa": "پیانیست", "example_en": "She is a talented pianist.", "photo": "media/vocab/pianist.jpg"}, {"word": "pollution", "phonetic": "pəˈluːʃən", "levels": ["b2"], "pos": "noun", "meaning_en": "Harmful things in the air, water, or land.", "meaning_fa": "آلودگی", "example_en": "Air pollution is a big problem.", "photo": "media/vocab/pollution.jpg"}, {"word": "popular", "phonetic": "ˈpɒpjələ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Liked by many people.", "meaning_fa": "محبوب، پرطرفدار", "example_en": "This song is very popular.", "photo": "media/vocab/popular.jpg"}, {"word": "popularity", "phonetic": "ˌpɒpjəˈlærəti", "levels": ["b1"], "pos": "noun", "meaning_en": "The state of being liked by many people.", "meaning_fa": "محبوبیت", "example_en": "The singer's popularity grew quickly.", "photo": "media/vocab/popularity.jpg"}, {"word": "productive", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Producing a lot; achieving good results.", "meaning_fa": "پربار، مولد", "example_en": "We had a very productive meeting.", "photo": "media/vocab/productive.jpg"}, {"word": "productivity", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The rate at which goods are produced.", "meaning_fa": "بهره‌وری، تولیدی", "example_en": "We need to improve productivity.", "photo": "media/vocab/productivity.jpg"}, {"word": "projector", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A machine that shows images on a screen.", "meaning_fa": "پروژکتور", "example_en": "The teacher used a projector in class.", "photo": "media/vocab/projector.jpg"}, {"word": "promotion", "phonetic": "prəˈməʊʃən", "levels": ["b2"], "pos": "noun", "meaning_en": "A move to a more important job.", "meaning_fa": "ترفیع", "example_en": "He got a promotion at work.", "photo": "media/vocab/promotion.jpg"}, {"word": "purify", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make something clean and free from bad things.", "meaning_fa": "تصفیه کردن، پاک کردن", "example_en": "We need to purify the water before drinking it.", "photo": "media/vocab/purify.jpg"}, {"word": "quickly", "phonetic": "ˈkwɪkli", "levels": ["a2"], "pos": "adverb", "meaning_en": "at a fast speed", "meaning_fa": "سریع، به سرعت", "example_en": "He ran quickly to catch the bus.", "photo": "media/vocab/quickly.jpg"}, {"word": "readable", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "easy or pleasant to read", "meaning_fa": "خوانا، قابل خواندن", "example_en": "This book is very readable and interesting.", "photo": "media/vocab/readable.jpg"}, {"word": "readiness", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "the state of being prepared", "meaning_fa": "آمادگی", "example_en": "The team showed great readiness for the game.", "photo": "media/vocab/readiness.jpg"}, {"word": "reddish", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Slightly red in color.", "meaning_fa": "مایل به قرمز", "example_en": "The sky had a reddish glow at sunset.", "photo": "media/vocab/reddish.jpg"}, {"word": "reduction", "phonetic": "rɪˈdʌkʃən", "levels": ["b2"], "pos": "noun", "meaning_en": "An act of making something smaller or less.", "meaning_fa": "کاهش", "example_en": "There was a reduction in prices.", "photo": "media/vocab/reduction.jpg"}, {"word": "refusal", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The act of saying no to something.", "meaning_fa": "امتناع، رد", "example_en": "Her refusal to help surprised everyone.", "photo": "media/vocab/refusal.jpg"}, {"word": "relax", "phonetic": "rɪˈlæks", "levels": ["b1"], "pos": "verb", "meaning_en": "To rest and feel calm.", "meaning_fa": "استراحت کردن، آرام شدن", "example_en": "I like to relax after work.", "photo": "media/vocab/relax.jpg"}, {"word": "relaxation", "phonetic": "ˌriːlækˈseɪʃən", "levels": ["b1"], "pos": "noun", "meaning_en": "The state of being relaxed and calm.", "meaning_fa": "آرامش، استراحت", "example_en": "Yoga is good for relaxation.", "photo": "media/vocab/relaxation.jpg"}, {"word": "reliable", "phonetic": "rɪˈlaɪəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Able to be trusted or depended on.", "meaning_fa": "قابل اعتماد", "example_en": "My car is old but very reliable.", "photo": "media/vocab/reliable.jpg"}, {"word": "replacement", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A person or thing that takes another's place.", "meaning_fa": "جایگزین", "example_en": "The company is looking for a replacement for Sarah.", "photo": "media/vocab/replacement.jpg"}, {"word": "sadness", "phonetic": "ˈsædnəs", "levels": ["a2", "b2"], "pos": "noun", "meaning_en": "The feeling of being sad.", "meaning_fa": "غم، اندوه", "example_en": "She felt a deep sadness after the news.", "photo": "media/vocab/sadness.jpg"}, {"word": "sandy", "phonetic": "ˈsændi", "levels": ["a2"], "pos": "adjective", "meaning_en": "Covered with or like sand.", "meaning_fa": "شنی، ماسه‌ای", "example_en": "We walked along the sandy beach.", "photo": "media/vocab/sandy.jpg"}, {"word": "scarcity", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "When there is not enough of something.", "meaning_fa": "کمبود، نایابی", "example_en": "There is a scarcity of water in the desert.", "photo": "media/vocab/scarcity.jpg"}, {"word": "scientist", "phonetic": "ˈsaɪəntɪst", "levels": ["b1"], "pos": "noun", "meaning_en": "A person who studies science.", "meaning_fa": "دانشمند", "example_en": "Scientists are trying to find a cure.", "photo": "media/vocab/scientist.jpg"}, {"word": "sender", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "the person who sends something", "meaning_fa": "فرستنده", "example_en": "The sender's address was on the package.", "photo": "media/vocab/sender.jpg"}, {"word": "significance", "phonetic": "sɪgˈnɪfɪkəns", "levels": ["b1"], "pos": "noun", "meaning_en": "The importance of something.", "meaning_fa": "اهمیت، معنی", "example_en": "The discovery has great scientific significance.", "photo": "media/vocab/significance.jpg"}, {"word": "similar", "phonetic": "ˈsɪmɪlə", "levels": ["b1"], "pos": "adjective", "meaning_en": "Almost the same, but not exactly.", "meaning_fa": "مشابه، شبیه", "example_en": "Our ideas are very similar.", "photo": "media/vocab/similar.jpg"}, {"word": "similarity", "phonetic": "ˌsɪmɪˈlærɪti", "levels": ["b1"], "pos": "noun", "meaning_en": "The state of being similar.", "meaning_fa": "شباهت", "example_en": "There is a clear similarity between them.", "photo": "media/vocab/similarity.jpg"}, {"word": "singer", "phonetic": "ˈsɪŋə", "levels": ["b1"], "pos": "noun", "meaning_en": "A person who sings.", "meaning_fa": "خواننده", "example_en": "My favorite singer has a beautiful voice.", "photo": "media/vocab/singer.jpg"}, {"word": "sociable", "phonetic": "ˈsəʊʃəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Enjoying spending time with other people.", "meaning_fa": "اجتماعی، خوش‌مشرب", "example_en": "She is a very sociable person.", "photo": "media/vocab/sociable.jpg"}, {"word": "stapler", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A tool for joining papers with staples.", "meaning_fa": "منگنه", "example_en": "Can I borrow your stapler, please?", "photo": "media/vocab/stapler.jpg"}, {"word": "stupid", "phonetic": "ˈstjuːpɪd", "levels": ["b1"], "pos": "adjective", "meaning_en": "Not intelligent or clever.", "meaning_fa": "احمق، نادان", "example_en": "That was a stupid mistake.", "photo": "media/vocab/stupid.jpg"}, {"word": "stupidity", "phonetic": "stjuːˈpɪdəti", "levels": ["b1"], "pos": "noun", "meaning_en": "The quality of being stupid.", "meaning_fa": "حماقت، نادانی", "example_en": "His stupidity caused many problems.", "photo": "media/vocab/stupidity.jpg"}, {"word": "suitable", "phonetic": "ˈsuːtəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Right or appropriate for a particular purpose or occasion.", "meaning_fa": "مناسب، درخور", "example_en": "This movie is not suitable for children.", "photo": "media/vocab/suitable.jpg"}, {"word": "sunny", "phonetic": "ˈsʌni", "levels": ["a2"], "pos": "adjective", "meaning_en": "With a lot of bright light from the sun.", "meaning_fa": "آفتابی", "example_en": "It's a beautiful sunny day today.", "photo": "media/vocab/sunny.jpg"}, {"word": "supervisor", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A person who manages workers or students.", "meaning_fa": "سرپرست، ناظر", "example_en": "My supervisor helped me with the new task.", "photo": "media/vocab/supervisor.jpg"}, {"word": "swimmer", "phonetic": "ˈswɪmə", "levels": ["a2"], "pos": "noun", "meaning_en": "A person who swims.", "meaning_fa": "شناگر", "example_en": "She is a very fast swimmer.", "photo": "media/vocab/swimmer.jpg"}, {"word": "terrify", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make someone feel extremely scared.", "meaning_fa": "ترساندن", "example_en": "The loud noise terrified the small child.", "photo": "media/vocab/terrify.jpg"}, {"word": "terrorist", "phonetic": "ˈterərɪst", "levels": ["b2"], "pos": "noun", "meaning_en": "A person who uses violence for political reasons.", "meaning_fa": "تروریست", "example_en": "Police caught the suspected terrorist.", "photo": "media/vocab/terrorist.jpg"}, {"word": "traditional", "phonetic": "trəˈdɪʃənəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Following old customs or beliefs.", "meaning_fa": "سنتی، قدیمی", "example_en": "We had a traditional wedding ceremony.", "photo": "media/vocab/traditional.jpg"}, {"word": "translate (sth into sth)", "phonetic": "trænzˈleɪt", "levels": ["b1"], "pos": "verb", "meaning_en": "To change words from one language to another.", "meaning_fa": "ترجمه کردن", "example_en": "Can you translate this sentence into English?", "photo": "media/vocab/translate-sth-into-sth.jpg"}, {"word": "translation", "phonetic": "trænzˈleɪʃən", "levels": ["b1"], "pos": "noun", "meaning_en": "Words changed from one language to another.", "meaning_fa": "ترجمه", "example_en": "The book is available in English translation.", "photo": "media/vocab/translation.jpg"}, {"word": "translator", "phonetic": "trænzˈleɪtə", "levels": ["b1"], "pos": "noun", "meaning_en": "A person who changes words from one language to another.", "meaning_fa": "مترجم", "example_en": "She works as a professional translator.", "photo": "media/vocab/translator.jpg"}, {"word": "typist", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A person whose job is to type.", "meaning_fa": "تایپیست", "example_en": "The typist quickly finished the report.", "photo": "media/vocab/typist.jpg"}, {"word": "unbelievable", "phonetic": "ˌʌnbɪˈliːvəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Very surprising or difficult to believe.", "meaning_fa": "باورنکردنی، شگفت‌انگیز", "example_en": "The story he told was completely unbelievable.", "photo": "media/vocab/unbelievable.jpg"}, {"word": "uncomfortable", "phonetic": "ʌnˈkʌmftəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Not feeling relaxed or physically at ease.", "meaning_fa": "ناراحت، معذب", "example_en": "This chair is very uncomfortable to sit on.", "photo": "media/vocab/uncomfortable.jpg"}, {"word": "unfashionable", "phonetic": "ʌnˈfæʃənəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Not popular or modern in style.", "meaning_fa": "از مد افتاده، قدیمی", "example_en": "Those shoes are very unfashionable now.", "photo": "media/vocab/unfashionable.jpg"}, {"word": "unforgettable", "phonetic": "ˌʌnfəˈgetəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "So special that you will always remember it.", "meaning_fa": "فراموش‌نشدنی", "example_en": "We had an unforgettable trip to Italy.", "photo": "media/vocab/unforgettable.jpg"}, {"word": "unreasonable", "phonetic": "ʌnˈriːzənəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Not fair or sensible.", "meaning_fa": "غیرمنطقی، نامعقول", "example_en": "Your demands are completely unreasonable.", "photo": "media/vocab/unreasonable.jpg"}, {"word": "unreliable", "phonetic": "ˌʌnrɪˈlaɪəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Cannot be trusted or depended on.", "meaning_fa": "غیرقابل اعتماد", "example_en": "His old car is very unreliable.", "photo": "media/vocab/unreliable.jpg"}, {"word": "unsociable", "phonetic": "ʌnˈsəʊʃəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Not wanting to be with other people.", "meaning_fa": "غیر اجتماعی، گوشه‌گیر", "example_en": "He's a bit unsociable and prefers to stay home.", "photo": "media/vocab/unsociable.jpg"}, {"word": "unsuitable", "phonetic": "ʌnˈsuːtəbəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Not right or appropriate for a situation.", "meaning_fa": "نامناسب", "example_en": "That dress is unsuitable for a formal party.", "photo": "media/vocab/unsuitable.jpg"}, {"word": "useful", "phonetic": "ˈjuːsfəl", "levels": ["a2", "b1", "b2"], "pos": "adjective", "meaning_en": "helping you to do or achieve something", "meaning_fa": "مفید، کاربردی", "example_en": "This book is very useful for learning English.", "photo": "media/vocab/useful.jpg"}, {"word": "useless", "phonetic": "ˈjuːsləs", "levels": ["a2", "b1", "b2"], "pos": "adjective", "meaning_en": "not helping you to do or achieve anything", "meaning_fa": "بی‌فایده، بی‌مصرف", "example_en": "This broken pen is useless.", "photo": "media/vocab/useless.jpg"}, {"word": "violinist", "phonetic": "vaɪəˈlɪnɪst", "levels": ["b2"], "pos": "noun", "meaning_en": "a person who plays the violin", "meaning_fa": "ویولنیست", "example_en": "The violinist played a lovely tune.", "photo": "media/vocab/violinist.jpg"}, {"word": "washable", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Can be cleaned with water without being damaged.", "meaning_fa": "قابل شستشو", "example_en": "This shirt is washable, so you can clean it easily.", "photo": "media/vocab/washable.jpg"}, {"word": "weak", "phonetic": "wiːk", "levels": ["b1"], "pos": "adjective", "meaning_en": "Not strong; easily broken or tired.", "meaning_fa": "ضعیف", "example_en": "After the illness, he felt very weak.", "photo": "media/vocab/weak.jpg"}, {"word": "weakness", "phonetic": "ˈwiːknəs", "levels": ["b1", "b2"], "pos": "noun", "meaning_en": "The state of not being strong.", "meaning_fa": "ضعف", "example_en": "His main weakness is public speaking.", "photo": "media/vocab/weakness.jpg"}, {"word": "worker", "phonetic": "ˈwɜːkə", "levels": ["a2"], "pos": "noun", "meaning_en": "A person who works.", "meaning_fa": "کارگر", "example_en": "My father is a factory worker.", "photo": "media/vocab/worker.jpg"}]
+[
+ {
+  "word": "ability",
+  "phonetic": "əˈbɪləti",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "the power or skill to do something",
+  "meaning_fa": "توانایی، قابلیت",
+  "example_en": "She has a great ability to learn new languages.",
+  "photo": "media/vocab/ability.jpg"
+ },
+ {
+  "word": "able",
+  "phonetic": "ˈeɪbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "having the skill or power to do something",
+  "meaning_fa": "توانا، قادر",
+  "example_en": "I am able to speak three languages.",
+  "photo": "media/vocab/able.jpg"
+ },
+ {
+  "word": "action",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the process of doing something",
+  "meaning_fa": "عمل، اقدام",
+  "example_en": "We need to take action to solve this problem.",
+  "photo": "media/vocab/action.jpg"
+ },
+ {
+  "word": "actor",
+  "phonetic": "ˈæktə",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "a person who performs in plays or films",
+  "meaning_fa": "بازیگر",
+  "example_en": "He is a famous actor from Hollywood.",
+  "photo": "media/vocab/actor.jpg"
+ },
+ {
+  "word": "addressee",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The person to whom a letter or email is sent.",
+  "meaning_fa": "گیرنده، مخاطب",
+  "example_en": "The addressee's name was clearly written.",
+  "photo": "media/vocab/addressee.jpg"
+ },
+ {
+  "word": "admission",
+  "phonetic": "ədˈmɪʃən",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The right to enter a place or join a group.",
+  "meaning_fa": "پذیرش، ورود",
+  "example_en": "Admission to the museum is free.",
+  "photo": "media/vocab/admission.jpg"
+ },
+ {
+  "word": "alteration",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A change, usually small.",
+  "meaning_fa": "تغییر، اصلاح",
+  "example_en": "The tailor made an alteration to my dress.",
+  "photo": "media/vocab/alteration.jpg"
+ },
+ {
+  "word": "annual",
+  "phonetic": "ˈænjʊəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Happening once every year.",
+  "meaning_fa": "سالانه",
+  "example_en": "The school has an annual sports day.",
+  "photo": "media/vocab/annual.jpg"
+ },
+ {
+  "word": "arrival",
+  "phonetic": "əˈraɪvəl",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The act of coming to a place.",
+  "meaning_fa": "ورود، رسیدن",
+  "example_en": "We waited for their arrival at the airport.",
+  "photo": "media/vocab/arrival.jpg"
+ },
+ {
+  "word": "artist",
+  "phonetic": "ˈɑːtɪst",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who creates art.",
+  "meaning_fa": "هنرمند",
+  "example_en": "My sister is a talented artist.",
+  "photo": "media/vocab/artist.jpg"
+ },
+ {
+  "word": "beautiful",
+  "phonetic": "ˈbjuːtɪfəl",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very pleasing to the senses; lovely.",
+  "meaning_fa": "زیبا، قشنگ",
+  "example_en": "She is a beautiful woman.",
+  "photo": "media/vocab/beautiful.jpg"
+ },
+ {
+  "word": "beautify",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "Make something more beautiful.",
+  "meaning_fa": "زیبا کردن، آراستن",
+  "example_en": "They want to beautify the park.",
+  "photo": "media/vocab/beautify.jpg"
+ },
+ {
+  "word": "brake n, v",
+  "phonetic": "breɪk",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "A device used to slow or stop a vehicle.",
+  "meaning_fa": "ترمز (اسم و فعل)",
+  "example_en": "Press the brake pedal to stop the car.",
+  "photo": "media/vocab/brake-n-v.jpg"
+ },
+ {
+  "word": "brotherhood",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "feeling of friendship and understanding between people",
+  "meaning_fa": "برادری، اخوت",
+  "example_en": "They felt a strong sense of brotherhood.",
+  "photo": "media/vocab/brotherhood.jpg"
+ },
+ {
+  "word": "brutal",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "very cruel and violent",
+  "meaning_fa": "وحشیانه، بی‌رحمانه",
+  "example_en": "The weather was brutal last winter.",
+  "photo": "media/vocab/brutal.jpg"
+ },
+ {
+  "word": "Buddhism",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a religion and philosophy from India",
+  "meaning_fa": "بودیسم",
+  "example_en": "Buddhism teaches peace and meditation.",
+  "photo": "media/vocab/buddhism.jpg"
+ },
+ {
+  "word": "calculator",
+  "phonetic": "ˈkælkjəleɪtə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A small machine that does math.",
+  "meaning_fa": "ماشین حساب",
+  "example_en": "I use a calculator for my homework.",
+  "photo": "media/vocab/calculator.jpg"
+ },
+ {
+  "word": "careful",
+  "phonetic": "ˈkeəfəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Acting with caution to avoid mistakes or danger.",
+  "meaning_fa": "مراقب، محتاط",
+  "example_en": "Be careful when you cross the road.",
+  "photo": "media/vocab/careful.jpg"
+ },
+ {
+  "word": "careless",
+  "phonetic": "ˈkeələs",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not paying enough attention; making mistakes.",
+  "meaning_fa": "بی‌دقت، بی‌ملاحظه",
+  "example_en": "He made a careless mistake on his homework.",
+  "photo": "media/vocab/careless.jpg"
+ },
+ {
+  "word": "cellist",
+  "phonetic": "ˈtʃelɪst",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who plays the cello.",
+  "meaning_fa": "نوازنده ویولنسل",
+  "example_en": "The cellist played a beautiful song.",
+  "photo": "media/vocab/cellist.jpg"
+ },
+ {
+  "word": "chat n, v",
+  "phonetic": "tʃæt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "To talk in a friendly, informal way.",
+  "meaning_fa": "گپ زدن، صحبت کردن",
+  "example_en": "Let's have a quick chat after work.",
+  "photo": "media/vocab/chat-n-v.jpg"
+ },
+ {
+  "word": "childhood",
+  "phonetic": "ˈtʃaɪldhʊd",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The time when someone is a child.",
+  "meaning_fa": "دوران کودکی",
+  "example_en": "My childhood memories are very happy.",
+  "photo": "media/vocab/childhood.jpg"
+ },
+ {
+  "word": "coat hanger",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A shaped piece of wood or plastic to hang clothes.",
+  "meaning_fa": "چوب لباسی",
+  "example_en": "Please put your jacket on the coat hanger.",
+  "photo": "media/vocab/coat-hanger.jpg"
+ },
+ {
+  "word": "colourful",
+  "phonetic": "ˈkʌləfəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having many bright colours.",
+  "meaning_fa": "رنگارنگ",
+  "example_en": "The market was full of colourful flowers.",
+  "photo": "media/vocab/colourful.jpg"
+ },
+ {
+  "word": "comfortable",
+  "phonetic": "ˈkʌmftəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling relaxed and at ease.",
+  "meaning_fa": "راحت، آسوده",
+  "example_en": "This chair is very comfortable.",
+  "photo": "media/vocab/comfortable.jpg"
+ },
+ {
+  "word": "commercialise",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make something available for profit.",
+  "meaning_fa": "تجاری کردن",
+  "example_en": "They want to commercialise the new invention.",
+  "photo": "media/vocab/commercialise.jpg"
+ },
+ {
+  "word": "complication",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A problem that makes a situation more difficult.",
+  "meaning_fa": "پیچیدگی، عارضه",
+  "example_en": "There was a complication with the plan.",
+  "photo": "media/vocab/complication.jpg"
+ },
+ {
+  "word": "computerise",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To start using computers for a system.",
+  "meaning_fa": "کامپیوتری کردن",
+  "example_en": "The company decided to computerise all its records.",
+  "photo": "media/vocab/computerise.jpg"
+ },
+ {
+  "word": "cooker",
+  "phonetic": "ˈkʊkə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A piece of kitchen equipment for cooking food.",
+  "meaning_fa": "اجاق گاز",
+  "example_en": "We bought a new electric cooker.",
+  "photo": "media/vocab/cooker.jpg"
+ },
+ {
+  "word": "cultural",
+  "phonetic": "ˈkʌltʃərəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relating to the customs, arts, and social institutions.",
+  "meaning_fa": "فرهنگی",
+  "example_en": "The city has many cultural events.",
+  "photo": "media/vocab/cultural.jpg"
+ },
+ {
+  "word": "cure n, v",
+  "phonetic": "kjʊə",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "(n) A medicine or treatment that makes you well. (v) To make someone well.",
+  "meaning_fa": "(اسم) درمان، (فعل) درمان کردن",
+  "example_en": "Doctors hope to find a cure for the disease.",
+  "photo": "media/vocab/cure-n-v.jpg"
+ },
+ {
+  "word": "dancer",
+  "phonetic": "ˈdɑːntsə",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who dances, especially professionally.",
+  "meaning_fa": "رقصنده",
+  "example_en": "She wants to be a professional dancer.",
+  "photo": "media/vocab/dancer.jpg"
+ },
+ {
+  "word": "delicious",
+  "phonetic": "dɪˈlɪʃəs",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having a very pleasant taste.",
+  "meaning_fa": "خوشمزه",
+  "example_en": "This cake is delicious!",
+  "photo": "media/vocab/delicious.jpg"
+ },
+ {
+  "word": "develop",
+  "phonetic": "dɪˈveləp",
+  "levels": [
+   "b1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To grow or change into something bigger or better.",
+  "meaning_fa": "توسعه دادن، رشد کردن",
+  "example_en": "The city plans to develop a new park.",
+  "photo": "media/vocab/develop.jpg"
+ },
+ {
+  "word": "development",
+  "phonetic": "dɪˈveləpmənt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The process of growing or changing.",
+  "meaning_fa": "توسعه، پیشرفت",
+  "example_en": "The new housing development will create many jobs.",
+  "photo": "media/vocab/development.jpg"
+ },
+ {
+  "word": "discuss",
+  "phonetic": "dɪˈskʌs",
+  "levels": [
+   "b1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To talk about something with another person.",
+  "meaning_fa": "بحث کردن، گفتگو کردن",
+  "example_en": "Let's discuss your ideas for the project.",
+  "photo": "media/vocab/discuss.jpg"
+ },
+ {
+  "word": "discussion",
+  "phonetic": "dɪˈskʌʃən",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The act of talking about something.",
+  "meaning_fa": "بحث، گفتگو",
+  "example_en": "We had a long discussion about our plans.",
+  "photo": "media/vocab/discussion.jpg"
+ },
+ {
+  "word": "donation",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Money or goods given to help.",
+  "meaning_fa": "اهدا، کمک مالی",
+  "example_en": "We made a donation to the local charity.",
+  "photo": "media/vocab/donation.jpg"
+ },
+ {
+  "word": "donor",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who gives something, like blood or money.",
+  "meaning_fa": "اهداکننده، بخشنده",
+  "example_en": "He became a blood donor last year.",
+  "photo": "media/vocab/donor.jpg"
+ },
+ {
+  "word": "dream n, v",
+  "phonetic": "driːm",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "Images and feelings in your sleep.",
+  "meaning_fa": "رویا، خواب دیدن",
+  "example_en": "I had a strange dream last night.",
+  "photo": "media/vocab/dream-n-v.jpg"
+ },
+ {
+  "word": "drinkable",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Safe and pleasant to drink.",
+  "meaning_fa": "قابل شرب",
+  "example_en": "This water is not drinkable.",
+  "photo": "media/vocab/drinkable.jpg"
+ },
+ {
+  "word": "economist",
+  "phonetic": "iˈkɒnəmɪst",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who studies economics.",
+  "meaning_fa": "اقتصاددان",
+  "example_en": "An economist studies how countries use money.",
+  "photo": "media/vocab/economist.jpg"
+ },
+ {
+  "word": "edible",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Safe to eat.",
+  "meaning_fa": "خوراکی",
+  "example_en": "Are these mushrooms edible or poisonous?",
+  "photo": "media/vocab/edible.jpg"
+ },
+ {
+  "word": "electrical",
+  "phonetic": "ɪˈlektrɪkəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Using or producing electricity.",
+  "meaning_fa": "برقی، الکتریکی",
+  "example_en": "This is an electrical appliance.",
+  "photo": "media/vocab/electrical.jpg"
+ },
+ {
+  "word": "employee",
+  "phonetic": "ɪmˈplɔɪiː",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who works for a company.",
+  "meaning_fa": "کارمند",
+  "example_en": "She is a new employee at the bank.",
+  "photo": "media/vocab/employee.jpg"
+ },
+ {
+  "word": "employer",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person or company that employs people.",
+  "meaning_fa": "کارفرما",
+  "example_en": "My employer gives good benefits.",
+  "photo": "media/vocab/employer.jpg"
+ },
+ {
+  "word": "endless",
+  "phonetic": "ˈendləs",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Without an end; continuing forever.",
+  "meaning_fa": "بی‌پایان",
+  "example_en": "The children had endless energy to play.",
+  "photo": "media/vocab/endless.jpg"
+ },
+ {
+  "word": "enjoyable",
+  "phonetic": "ɪnˈʤɔɪəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Giving pleasure; fun.",
+  "meaning_fa": "لذت‌بخش",
+  "example_en": "We had an enjoyable evening together.",
+  "photo": "media/vocab/enjoyable.jpg"
+ },
+ {
+  "word": "enjoyment",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The feeling of pleasure and happiness.",
+  "meaning_fa": "لذت، خوشی",
+  "example_en": "I get great enjoyment from gardening.",
+  "photo": "media/vocab/enjoyment.jpg"
+ },
+ {
+  "word": "excitement",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A feeling of great enthusiasm and eagerness.",
+  "meaning_fa": "هیجان، شور",
+  "example_en": "The children were full of excitement.",
+  "photo": "media/vocab/excitement.jpg"
+ },
+ {
+  "word": "famous",
+  "phonetic": "feɪməs",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Known by many people.",
+  "meaning_fa": "مشهور، معروف",
+  "example_en": "The city is famous for its old castle.",
+  "photo": "media/vocab/famous.jpg"
+ },
+ {
+  "word": "fashionable",
+  "phonetic": "ˈfæʃənəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Popular and stylish at a particular time.",
+  "meaning_fa": "مد روز، شیک",
+  "example_en": "That jacket is very fashionable this season.",
+  "photo": "media/vocab/fashionable.jpg"
+ },
+ {
+  "word": "fit adj",
+  "phonetic": "fɪt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Healthy and strong, often from exercise.",
+  "meaning_fa": "سالم، متناسب، ورزیده",
+  "example_en": "She stays fit by running every day.",
+  "photo": "media/vocab/fit-adj.jpg"
+ },
+ {
+  "word": "fitness",
+  "phonetic": "ˈfɪtnəs",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of being healthy and strong.",
+  "meaning_fa": "تناسب اندام، سلامتی",
+  "example_en": "Regular exercise improves your fitness.",
+  "photo": "media/vocab/fitness.jpg"
+ },
+ {
+  "word": "flexibility",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The ability to change easily.",
+  "meaning_fa": "انعطاف‌پذیری",
+  "example_en": "The job requires a lot of flexibility.",
+  "photo": "media/vocab/flexibility.jpg"
+ },
+ {
+  "word": "flexible",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Able to change easily or bend without breaking.",
+  "meaning_fa": "منعطف، قابل تغییر",
+  "example_en": "Our plans are flexible, so we can change them.",
+  "photo": "media/vocab/flexible.jpg"
+ },
+ {
+  "word": "footballer",
+  "phonetic": "ˈfʊtbɔːlə",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who plays football.",
+  "meaning_fa": "فوتبالیست",
+  "example_en": "He dreams of becoming a famous footballer.",
+  "photo": "media/vocab/footballer.jpg"
+ },
+ {
+  "word": "forgetful",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "often forgetting things.",
+  "meaning_fa": "فراموشکار",
+  "example_en": "My grandpa is very forgetful sometimes.",
+  "photo": "media/vocab/forgetful.jpg"
+ },
+ {
+  "word": "forgetfulness",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the state of often forgetting things.",
+  "meaning_fa": "فراموشکاری",
+  "example_en": "His forgetfulness caused some problems.",
+  "photo": "media/vocab/forgetfulness.jpg"
+ },
+ {
+  "word": "forgivable",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "able to be forgiven.",
+  "meaning_fa": "قابل بخشش",
+  "example_en": "His mistake was forgivable.",
+  "photo": "media/vocab/forgivable.jpg"
+ },
+ {
+  "word": "friendship",
+  "phonetic": "ˈfrendʃɪp",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a relationship between friends.",
+  "meaning_fa": "دوستی",
+  "example_en": "Their friendship lasted many years.",
+  "photo": "media/vocab/friendship.jpg"
+ },
+ {
+  "word": "furious",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "very angry.",
+  "meaning_fa": "خشمگین، عصبانی",
+  "example_en": "She was furious about the delay.",
+  "photo": "media/vocab/furious.jpg"
+ },
+ {
+  "word": "give sb a hug",
+  "phonetic": "gɪv ˈsʌmbɒdi ə hʌg",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Put your arms around someone to show affection.",
+  "meaning_fa": "کسی را در آغوش گرفتن",
+  "example_en": "She gave her son a big hug.",
+  "photo": "media/vocab/give-sb-a-hug.jpg"
+ },
+ {
+  "word": "goodness",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the quality of being good or kind.",
+  "meaning_fa": "خوبی، نیکی",
+  "example_en": "Her goodness always shines through.",
+  "photo": "media/vocab/goodness.jpg"
+ },
+ {
+  "word": "govern",
+  "phonetic": "ˈgʌvən",
+  "levels": [
+   "b1"
+  ],
+  "pos": "verb",
+  "meaning_en": "to control and manage a country or area.",
+  "meaning_fa": "حکومت کردن، اداره کردن",
+  "example_en": "The president's job is to govern the country.",
+  "photo": "media/vocab/govern.jpg"
+ },
+ {
+  "word": "government",
+  "phonetic": "ˈgʌvənmənt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "the group of people who govern a country.",
+  "meaning_fa": "دولت، حکومت",
+  "example_en": "The government makes new laws.",
+  "photo": "media/vocab/government.jpg"
+ },
+ {
+  "word": "grater",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a tool used to rub food into small pieces.",
+  "meaning_fa": "رنده",
+  "example_en": "She used a grater for the carrots.",
+  "photo": "media/vocab/grater.jpg"
+ },
+ {
+  "word": "guess n, v",
+  "phonetic": "ges",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun/verb",
+  "meaning_en": "to try to answer when you don't know.",
+  "meaning_fa": "حدس زدن، حدس",
+  "example_en": "Can you guess my age?",
+  "photo": "media/vocab/guess-n-v.jpg"
+ },
+ {
+  "word": "happily",
+  "phonetic": "ˈhæpɪli",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "In a happy way.",
+  "meaning_fa": "با خوشحالی",
+  "example_en": "She smiled happily at the news.",
+  "photo": "media/vocab/happily.jpg"
+ },
+ {
+  "word": "happiness",
+  "phonetic": "ˈhæpɪnəs",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of being happy.",
+  "meaning_fa": "خوشحالی، شادی",
+  "example_en": "His children bring him great happiness.",
+  "photo": "media/vocab/happiness.jpg"
+ },
+ {
+  "word": "harmless",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not causing any damage or injury.",
+  "meaning_fa": "بی‌ضرر",
+  "example_en": "Don't worry, the snake is harmless.",
+  "photo": "media/vocab/harmless.jpg"
+ },
+ {
+  "word": "helpful",
+  "phonetic": "ˈhelpfəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Giving help; useful.",
+  "meaning_fa": "مفید، یاری‌رسان",
+  "example_en": "The teacher was very helpful with my homework.",
+  "photo": "media/vocab/helpful.jpg"
+ },
+ {
+  "word": "homeless",
+  "phonetic": "ˈhəʊmləs",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Without a home.",
+  "meaning_fa": "بی‌خانمان",
+  "example_en": "Many people are homeless after the earthquake.",
+  "photo": "media/vocab/homeless.jpg"
+ },
+ {
+  "word": "hopeful",
+  "phonetic": "ˈhəʊpfəl",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling positive about the future.",
+  "meaning_fa": "امیدوار",
+  "example_en": "She is hopeful about getting the job.",
+  "photo": "media/vocab/hopeful.jpg"
+ },
+ {
+  "word": "illness",
+  "phonetic": "ˈɪlnəs",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A disease or period of being sick.",
+  "meaning_fa": "بیماری",
+  "example_en": "He missed work due to a sudden illness.",
+  "photo": "media/vocab/illness.jpg"
+ },
+ {
+  "word": "improve",
+  "phonetic": "ɪmˈpruːv",
+  "levels": [
+   "b1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make something better.",
+  "meaning_fa": "بهبود بخشیدن",
+  "example_en": "You can improve your English by practicing daily.",
+  "photo": "media/vocab/improve.jpg"
+ },
+ {
+  "word": "improvement",
+  "phonetic": "ɪmˈpruːvmənt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The act of making something better.",
+  "meaning_fa": "بهبود، پیشرفت",
+  "example_en": "We have seen a big improvement in his grades.",
+  "photo": "media/vocab/improvement.jpg"
+ },
+ {
+  "word": "inability",
+  "phonetic": "ˌɪnəˈbɪləti",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of not being able to do something.",
+  "meaning_fa": "ناتوانی، عدم توانایی",
+  "example_en": "His inability to swim made him nervous.",
+  "photo": "media/vocab/inability.jpg"
+ },
+ {
+  "word": "industrialise",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To develop industries in a country or region.",
+  "meaning_fa": "صنعتی کردن، صنعتی شدن",
+  "example_en": "The government wants to industrialise the economy.",
+  "photo": "media/vocab/industrialise.jpg"
+ },
+ {
+  "word": "instructor",
+  "phonetic": "ɪnˈstrʌktə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who teaches a skill or subject.",
+  "meaning_fa": "مربی، آموزگار",
+  "example_en": "Our driving instructor was very patient.",
+  "photo": "media/vocab/instructor.jpg"
+ },
+ {
+  "word": "invent",
+  "phonetic": "ɪnˈvent",
+  "levels": [
+   "b1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To create something new that did not exist before.",
+  "meaning_fa": "اختراع کردن",
+  "example_en": "Who invented the telephone?",
+  "photo": "media/vocab/invent.jpg"
+ },
+ {
+  "word": "invention",
+  "phonetic": "ɪnˈvenʃən",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "Something new that someone has created.",
+  "meaning_fa": "اختراع",
+  "example_en": "The internet is a great invention.",
+  "photo": "media/vocab/invention.jpg"
+ },
+ {
+  "word": "journalism",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The job of collecting and writing news for media.",
+  "meaning_fa": "روزنامه‌نگاری",
+  "example_en": "She studied journalism because she loves writing news stories.",
+  "photo": "media/vocab/journalism.jpg"
+ },
+ {
+  "word": "legal",
+  "phonetic": "ˈliːgəl",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Allowed by law.",
+  "meaning_fa": "قانونی",
+  "example_en": "It is legal to drive here at 17.",
+  "photo": "media/vocab/legal.jpg"
+ },
+ {
+  "word": "manage [run a business]",
+  "phonetic": "ˈmænɪʤ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "verb",
+  "meaning_en": "Control or be in charge of a business.",
+  "meaning_fa": "اداره کردن، مدیریت کردن",
+  "example_en": "She manages a small restaurant downtown.",
+  "photo": "media/vocab/manage-run-a-business.jpg"
+ },
+ {
+  "word": "management",
+  "phonetic": "ˈmænɪʤmənt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The people who control a company.",
+  "meaning_fa": "مدیریت، مدیران",
+  "example_en": "The management made a new decision.",
+  "photo": "media/vocab/management.jpg"
+ },
+ {
+  "word": "Marxist",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relating to the ideas of Karl Marx.",
+  "meaning_fa": "مارکسیستی",
+  "example_en": "He holds strong Marxist views.",
+  "photo": "media/vocab/marxist.jpg"
+ },
+ {
+  "word": "membership",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Being a member of a group or club.",
+  "meaning_fa": "عضویت",
+  "example_en": "My gym membership expires next month.",
+  "photo": "media/vocab/membership.jpg"
+ },
+ {
+  "word": "modernise",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "to make something modern or up-to-date",
+  "meaning_fa": "مدرنیزه کردن، نوسازی کردن",
+  "example_en": "They want to modernise the old building.",
+  "photo": "media/vocab/modernise.jpg"
+ },
+ {
+  "word": "motherhood",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the state of being a mother",
+  "meaning_fa": "مادری",
+  "example_en": "Motherhood is a wonderful experience.",
+  "photo": "media/vocab/motherhood.jpg"
+ },
+ {
+  "word": "musical",
+  "phonetic": "ˈmjuːzɪkəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A play or film with songs and dancing.",
+  "meaning_fa": "موزیکال",
+  "example_en": "We watched a fun musical last night.",
+  "photo": "media/vocab/musical.jpg"
+ },
+ {
+  "word": "national",
+  "phonetic": "ˈnæʃənəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Related to a whole country.",
+  "meaning_fa": "ملی، کشوری",
+  "example_en": "We watched the national news.",
+  "photo": "media/vocab/national.jpg"
+ },
+ {
+  "word": "normal",
+  "phonetic": "ˈnɔːməl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Usual, expected, or typical.",
+  "meaning_fa": "عادی، معمولی",
+  "example_en": "It's normal to feel tired after work.",
+  "photo": "media/vocab/normal.jpg"
+ },
+ {
+  "word": "operator",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who controls a machine or system.",
+  "meaning_fa": "اپراتور، متصدی",
+  "example_en": "The phone operator connected my call.",
+  "photo": "media/vocab/operator.jpg"
+ },
+ {
+  "word": "outrageous",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Shocking and unacceptable.",
+  "meaning_fa": "ظالمانه، رسواکننده",
+  "example_en": "The prices in that shop are outrageous.",
+  "photo": "media/vocab/outrageous.jpg"
+ },
+ {
+  "word": "painful",
+  "phonetic": "ˈpeɪnfəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Causing physical or emotional pain.",
+  "meaning_fa": "دردناک",
+  "example_en": "My knee is very painful after the fall.",
+  "photo": "media/vocab/painful.jpg"
+ },
+ {
+  "word": "painless",
+  "phonetic": "ˈpeɪnləs",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not causing any pain.",
+  "meaning_fa": "بدون درد",
+  "example_en": "The injection was surprisingly painless.",
+  "photo": "media/vocab/painless.jpg"
+ },
+ {
+  "word": "partnership",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A relationship between two or more people or groups.",
+  "meaning_fa": "شراکت، همکاری",
+  "example_en": "Their business partnership lasted for many years.",
+  "photo": "media/vocab/partnership.jpg"
+ },
+ {
+  "word": "passive",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not active; allowing things to happen without reacting.",
+  "meaning_fa": "منفعل، غیرفعال",
+  "example_en": "The passive voice is used less often.",
+  "photo": "media/vocab/passive.jpg"
+ },
+ {
+  "word": "payee",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The person who receives money.",
+  "meaning_fa": "دریافت کننده وجه",
+  "example_en": "Make sure the payee's name is correct on the cheque.",
+  "photo": "media/vocab/payee.jpg"
+ },
+ {
+  "word": "peaceful",
+  "phonetic": "ˈpiːsfəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Calm and without noise or trouble.",
+  "meaning_fa": "آرام، صلح آمیز",
+  "example_en": "The park is a peaceful place to relax.",
+  "photo": "media/vocab/peaceful.jpg"
+ },
+ {
+  "word": "personal (opinion)",
+  "phonetic": "ˈpɜːsənəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Your own private thoughts or feelings.",
+  "meaning_fa": "شخصی (نظر)",
+  "example_en": "That's just my personal opinion.",
+  "photo": "media/vocab/personal-opinion.jpg"
+ },
+ {
+  "word": "physicist",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a scientist who studies physics.",
+  "meaning_fa": "فیزیکدان",
+  "example_en": "Albert Einstein was a famous physicist.",
+  "photo": "media/vocab/physicist.jpg"
+ },
+ {
+  "word": "pianist",
+  "phonetic": "ˈpiːənɪst",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a person who plays the piano.",
+  "meaning_fa": "پیانیست",
+  "example_en": "She is a talented pianist.",
+  "photo": "media/vocab/pianist.jpg"
+ },
+ {
+  "word": "pollution",
+  "phonetic": "pəˈluːʃən",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Harmful things in the air, water, or land.",
+  "meaning_fa": "آلودگی",
+  "example_en": "Air pollution is a big problem.",
+  "photo": "media/vocab/pollution.jpg"
+ },
+ {
+  "word": "popular",
+  "phonetic": "ˈpɒpjələ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Liked by many people.",
+  "meaning_fa": "محبوب، پرطرفدار",
+  "example_en": "This song is very popular.",
+  "photo": "media/vocab/popular.jpg"
+ },
+ {
+  "word": "popularity",
+  "phonetic": "ˌpɒpjəˈlærəti",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of being liked by many people.",
+  "meaning_fa": "محبوبیت",
+  "example_en": "The singer's popularity grew quickly.",
+  "photo": "media/vocab/popularity.jpg"
+ },
+ {
+  "word": "productive",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Producing a lot; achieving good results.",
+  "meaning_fa": "پربار، مولد",
+  "example_en": "We had a very productive meeting.",
+  "photo": "media/vocab/productive.jpg"
+ },
+ {
+  "word": "productivity",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The rate at which goods are produced.",
+  "meaning_fa": "بهره‌وری، تولیدی",
+  "example_en": "We need to improve productivity.",
+  "photo": "media/vocab/productivity.jpg"
+ },
+ {
+  "word": "projector",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A machine that shows images on a screen.",
+  "meaning_fa": "پروژکتور",
+  "example_en": "The teacher used a projector in class.",
+  "photo": "media/vocab/projector.jpg"
+ },
+ {
+  "word": "promotion",
+  "phonetic": "prəˈməʊʃən",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A move to a more important job.",
+  "meaning_fa": "ترفیع",
+  "example_en": "He got a promotion at work.",
+  "photo": "media/vocab/promotion.jpg"
+ },
+ {
+  "word": "purify",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make something clean and free from bad things.",
+  "meaning_fa": "تصفیه کردن، پاک کردن",
+  "example_en": "We need to purify the water before drinking it.",
+  "photo": "media/vocab/purify.jpg"
+ },
+ {
+  "word": "quickly",
+  "phonetic": "ˈkwɪkli",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "at a fast speed",
+  "meaning_fa": "سریع، به سرعت",
+  "example_en": "He ran quickly to catch the bus.",
+  "photo": "media/vocab/quickly.jpg"
+ },
+ {
+  "word": "readable",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "easy or pleasant to read",
+  "meaning_fa": "خوانا، قابل خواندن",
+  "example_en": "This book is very readable and interesting.",
+  "photo": "media/vocab/readable.jpg"
+ },
+ {
+  "word": "readiness",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the state of being prepared",
+  "meaning_fa": "آمادگی",
+  "example_en": "The team showed great readiness for the game.",
+  "photo": "media/vocab/readiness.jpg"
+ },
+ {
+  "word": "reddish",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Slightly red in color.",
+  "meaning_fa": "مایل به قرمز",
+  "example_en": "The sky had a reddish glow at sunset.",
+  "photo": "media/vocab/reddish.jpg"
+ },
+ {
+  "word": "reduction",
+  "phonetic": "rɪˈdʌkʃən",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An act of making something smaller or less.",
+  "meaning_fa": "کاهش",
+  "example_en": "There was a reduction in prices.",
+  "photo": "media/vocab/reduction.jpg"
+ },
+ {
+  "word": "refusal",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The act of saying no to something.",
+  "meaning_fa": "امتناع، رد",
+  "example_en": "Her refusal to help surprised everyone.",
+  "photo": "media/vocab/refusal.jpg"
+ },
+ {
+  "word": "relax",
+  "phonetic": "rɪˈlæks",
+  "levels": [
+   "b1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To rest and feel calm.",
+  "meaning_fa": "استراحت کردن، آرام شدن",
+  "example_en": "I like to relax after work.",
+  "photo": "media/vocab/relax.jpg"
+ },
+ {
+  "word": "relaxation",
+  "phonetic": "ˌriːlækˈseɪʃən",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of being relaxed and calm.",
+  "meaning_fa": "آرامش، استراحت",
+  "example_en": "Yoga is good for relaxation.",
+  "photo": "media/vocab/relaxation.jpg"
+ },
+ {
+  "word": "reliable",
+  "phonetic": "rɪˈlaɪəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Able to be trusted or depended on.",
+  "meaning_fa": "قابل اعتماد",
+  "example_en": "My car is old but very reliable.",
+  "photo": "media/vocab/reliable.jpg"
+ },
+ {
+  "word": "replacement",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person or thing that takes another's place.",
+  "meaning_fa": "جایگزین",
+  "example_en": "The company is looking for a replacement for Sarah.",
+  "photo": "media/vocab/replacement.jpg"
+ },
+ {
+  "word": "sadness",
+  "phonetic": "ˈsædnəs",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The feeling of being sad.",
+  "meaning_fa": "غم، اندوه",
+  "example_en": "She felt a deep sadness after the news.",
+  "photo": "media/vocab/sadness.jpg"
+ },
+ {
+  "word": "sandy",
+  "phonetic": "ˈsændi",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Covered with or like sand.",
+  "meaning_fa": "شنی، ماسه‌ای",
+  "example_en": "We walked along the sandy beach.",
+  "photo": "media/vocab/sandy.jpg"
+ },
+ {
+  "word": "scarcity",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "When there is not enough of something.",
+  "meaning_fa": "کمبود، نایابی",
+  "example_en": "There is a scarcity of water in the desert.",
+  "photo": "media/vocab/scarcity.jpg"
+ },
+ {
+  "word": "scientist",
+  "phonetic": "ˈsaɪəntɪst",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who studies science.",
+  "meaning_fa": "دانشمند",
+  "example_en": "Scientists are trying to find a cure.",
+  "photo": "media/vocab/scientist.jpg"
+ },
+ {
+  "word": "sender",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the person who sends something",
+  "meaning_fa": "فرستنده",
+  "example_en": "The sender's address was on the package.",
+  "photo": "media/vocab/sender.jpg"
+ },
+ {
+  "word": "significance",
+  "phonetic": "sɪgˈnɪfɪkəns",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The importance of something.",
+  "meaning_fa": "اهمیت، معنی",
+  "example_en": "The discovery has great scientific significance.",
+  "photo": "media/vocab/significance.jpg"
+ },
+ {
+  "word": "similar",
+  "phonetic": "ˈsɪmɪlə",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Almost the same, but not exactly.",
+  "meaning_fa": "مشابه، شبیه",
+  "example_en": "Our ideas are very similar.",
+  "photo": "media/vocab/similar.jpg"
+ },
+ {
+  "word": "similarity",
+  "phonetic": "ˌsɪmɪˈlærɪti",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of being similar.",
+  "meaning_fa": "شباهت",
+  "example_en": "There is a clear similarity between them.",
+  "photo": "media/vocab/similarity.jpg"
+ },
+ {
+  "word": "singer",
+  "phonetic": "ˈsɪŋə",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who sings.",
+  "meaning_fa": "خواننده",
+  "example_en": "My favorite singer has a beautiful voice.",
+  "photo": "media/vocab/singer.jpg"
+ },
+ {
+  "word": "sociable",
+  "phonetic": "ˈsəʊʃəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Enjoying spending time with other people.",
+  "meaning_fa": "اجتماعی، خوش‌مشرب",
+  "example_en": "She is a very sociable person.",
+  "photo": "media/vocab/sociable.jpg"
+ },
+ {
+  "word": "stapler",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A tool for joining papers with staples.",
+  "meaning_fa": "منگنه",
+  "example_en": "Can I borrow your stapler, please?",
+  "photo": "media/vocab/stapler.jpg"
+ },
+ {
+  "word": "stupid",
+  "phonetic": "ˈstjuːpɪd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not intelligent or clever.",
+  "meaning_fa": "احمق، نادان",
+  "example_en": "That was a stupid mistake.",
+  "photo": "media/vocab/stupid.jpg"
+ },
+ {
+  "word": "stupidity",
+  "phonetic": "stjuːˈpɪdəti",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The quality of being stupid.",
+  "meaning_fa": "حماقت، نادانی",
+  "example_en": "His stupidity caused many problems.",
+  "photo": "media/vocab/stupidity.jpg"
+ },
+ {
+  "word": "suitable",
+  "phonetic": "ˈsuːtəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Right or appropriate for a particular purpose or occasion.",
+  "meaning_fa": "مناسب، درخور",
+  "example_en": "This movie is not suitable for children.",
+  "photo": "media/vocab/suitable.jpg"
+ },
+ {
+  "word": "sunny",
+  "phonetic": "ˈsʌni",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "With a lot of bright light from the sun.",
+  "meaning_fa": "آفتابی",
+  "example_en": "It's a beautiful sunny day today.",
+  "photo": "media/vocab/sunny.jpg"
+ },
+ {
+  "word": "supervisor",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who manages workers or students.",
+  "meaning_fa": "سرپرست، ناظر",
+  "example_en": "My supervisor helped me with the new task.",
+  "photo": "media/vocab/supervisor.jpg"
+ },
+ {
+  "word": "swimmer",
+  "phonetic": "ˈswɪmə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who swims.",
+  "meaning_fa": "شناگر",
+  "example_en": "She is a very fast swimmer.",
+  "photo": "media/vocab/swimmer.jpg"
+ },
+ {
+  "word": "terrify",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make someone feel extremely scared.",
+  "meaning_fa": "ترساندن",
+  "example_en": "The loud noise terrified the small child.",
+  "photo": "media/vocab/terrify.jpg"
+ },
+ {
+  "word": "terrorist",
+  "phonetic": "ˈterərɪst",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who uses violence for political reasons.",
+  "meaning_fa": "تروریست",
+  "example_en": "Police caught the suspected terrorist.",
+  "photo": "media/vocab/terrorist.jpg"
+ },
+ {
+  "word": "traditional",
+  "phonetic": "trəˈdɪʃənəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Following old customs or beliefs.",
+  "meaning_fa": "سنتی، قدیمی",
+  "example_en": "We had a traditional wedding ceremony.",
+  "photo": "media/vocab/traditional.jpg"
+ },
+ {
+  "word": "translate (sth into sth)",
+  "phonetic": "trænzˈleɪt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To change words from one language to another.",
+  "meaning_fa": "ترجمه کردن",
+  "example_en": "Can you translate this sentence into English?",
+  "photo": "media/vocab/translate-sth-into-sth.jpg"
+ },
+ {
+  "word": "translation",
+  "phonetic": "trænzˈleɪʃən",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "Words changed from one language to another.",
+  "meaning_fa": "ترجمه",
+  "example_en": "The book is available in English translation.",
+  "photo": "media/vocab/translation.jpg"
+ },
+ {
+  "word": "translator",
+  "phonetic": "trænzˈleɪtə",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who changes words from one language to another.",
+  "meaning_fa": "مترجم",
+  "example_en": "She works as a professional translator.",
+  "photo": "media/vocab/translator.jpg"
+ },
+ {
+  "word": "typist",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person whose job is to type.",
+  "meaning_fa": "تایپیست",
+  "example_en": "The typist quickly finished the report.",
+  "photo": "media/vocab/typist.jpg"
+ },
+ {
+  "word": "unbelievable",
+  "phonetic": "ˌʌnbɪˈliːvəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very surprising or difficult to believe.",
+  "meaning_fa": "باورنکردنی، شگفت‌انگیز",
+  "example_en": "The story he told was completely unbelievable.",
+  "photo": "media/vocab/unbelievable.jpg"
+ },
+ {
+  "word": "uncomfortable",
+  "phonetic": "ʌnˈkʌmftəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not feeling relaxed or physically at ease.",
+  "meaning_fa": "ناراحت، معذب",
+  "example_en": "This chair is very uncomfortable to sit on.",
+  "photo": "media/vocab/uncomfortable.jpg"
+ },
+ {
+  "word": "unfashionable",
+  "phonetic": "ʌnˈfæʃənəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not popular or modern in style.",
+  "meaning_fa": "از مد افتاده، قدیمی",
+  "example_en": "Those shoes are very unfashionable now.",
+  "photo": "media/vocab/unfashionable.jpg"
+ },
+ {
+  "word": "unforgettable",
+  "phonetic": "ˌʌnfəˈgetəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "So special that you will always remember it.",
+  "meaning_fa": "فراموش‌نشدنی",
+  "example_en": "We had an unforgettable trip to Italy.",
+  "photo": "media/vocab/unforgettable.jpg"
+ },
+ {
+  "word": "unreasonable",
+  "phonetic": "ʌnˈriːzənəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not fair or sensible.",
+  "meaning_fa": "غیرمنطقی، نامعقول",
+  "example_en": "Your demands are completely unreasonable.",
+  "photo": "media/vocab/unreasonable.jpg"
+ },
+ {
+  "word": "unreliable",
+  "phonetic": "ˌʌnrɪˈlaɪəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Cannot be trusted or depended on.",
+  "meaning_fa": "غیرقابل اعتماد",
+  "example_en": "His old car is very unreliable.",
+  "photo": "media/vocab/unreliable.jpg"
+ },
+ {
+  "word": "unsociable",
+  "phonetic": "ʌnˈsəʊʃəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not wanting to be with other people.",
+  "meaning_fa": "غیر اجتماعی، گوشه‌گیر",
+  "example_en": "He's a bit unsociable and prefers to stay home.",
+  "photo": "media/vocab/unsociable.jpg"
+ },
+ {
+  "word": "unsuitable",
+  "phonetic": "ʌnˈsuːtəbəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not right or appropriate for a situation.",
+  "meaning_fa": "نامناسب",
+  "example_en": "That dress is unsuitable for a formal party.",
+  "photo": "media/vocab/unsuitable.jpg"
+ },
+ {
+  "word": "useful",
+  "phonetic": "ˈjuːsfəl",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "helping you to do or achieve something",
+  "meaning_fa": "مفید، کاربردی",
+  "example_en": "This book is very useful for learning English.",
+  "photo": "media/vocab/useful.jpg"
+ },
+ {
+  "word": "useless",
+  "phonetic": "ˈjuːsləs",
+  "levels": [
+   "a2",
+   "b1",
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "not helping you to do or achieve anything",
+  "meaning_fa": "بی‌فایده، بی‌مصرف",
+  "example_en": "This broken pen is useless.",
+  "photo": "media/vocab/useless.jpg"
+ },
+ {
+  "word": "violinist",
+  "phonetic": "vaɪəˈlɪnɪst",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a person who plays the violin",
+  "meaning_fa": "ویولنیست",
+  "example_en": "The violinist played a lovely tune.",
+  "photo": "media/vocab/violinist.jpg"
+ },
+ {
+  "word": "washable",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Can be cleaned with water without being damaged.",
+  "meaning_fa": "قابل شستشو",
+  "example_en": "This shirt is washable, so you can clean it easily.",
+  "photo": "media/vocab/washable.jpg"
+ },
+ {
+  "word": "weak",
+  "phonetic": "wiːk",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not strong; easily broken or tired.",
+  "meaning_fa": "ضعیف",
+  "example_en": "After the illness, he felt very weak.",
+  "photo": "media/vocab/weak.jpg"
+ },
+ {
+  "word": "weakness",
+  "phonetic": "ˈwiːknəs",
+  "levels": [
+   "b1",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of not being strong.",
+  "meaning_fa": "ضعف",
+  "example_en": "His main weakness is public speaking.",
+  "photo": "media/vocab/weakness.jpg"
+ },
+ {
+  "word": "worker",
+  "phonetic": "ˈwɜːkə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who works.",
+  "meaning_fa": "کارگر",
+  "example_en": "My father is a factory worker.",
+  "photo": "media/vocab/worker.jpg"
+ },
+ {
+  "word": "-able",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "Forms adjectives meaning \"can be done\" or \"suitable for\".",
+  "meaning_fa": "قابل، -پذیر",
+  "example_en": "The suffix \"-able\" turns verbs into adjectives, like \"readable\".",
+  "photo": "media/vocab/able-2.jpg"
+ },
+ {
+  "word": "additive-free",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Containing no artificial substances added to food.",
+  "meaning_fa": "بدون افزودنی",
+  "example_en": "She prefers additive-free organic products.",
+  "photo": "media/vocab/additive-free.jpg"
+ },
+ {
+  "word": "age-conscious",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Aware of or sensitive to age, especially one's own.",
+  "meaning_fa": "آگاه به سن، حساس به سن",
+  "example_en": "The brand targets age-conscious consumers.",
+  "photo": "media/vocab/age-conscious.jpg"
+ },
+ {
+  "word": "age-related",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Connected with or caused by a person's age.",
+  "meaning_fa": "مرتبط با سن",
+  "example_en": "Many health issues are age-related.",
+  "photo": "media/vocab/age-related.jpg"
+ },
+ {
+  "word": "-ant",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "Forms nouns (agent) or adjectives (performing an action).",
+  "meaning_fa": "پسوند (فاعل یا صفت)",
+  "example_en": "The suffix \"-ant\" appears in words like \"assistant\" and \"pleasant.\"",
+  "photo": "media/vocab/ant-2.jpg"
+ },
+ {
+  "word": "applicant",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who applies for a job or position.",
+  "meaning_fa": "متقاضی، داوطلب",
+  "example_en": "The company received many qualified applicants for the role.",
+  "photo": "media/vocab/applicant.jpg"
+ },
+ {
+  "word": "avoidable",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Possible to prevent or stop from happening.",
+  "meaning_fa": "قابل اجتناب، قابل پیشگیری",
+  "example_en": "Many accidents are entirely avoidable with proper care.",
+  "photo": "media/vocab/avoidable.jpg"
+ },
+ {
+  "word": "bedridden",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Confined to bed due to illness or weakness.",
+  "meaning_fa": "بستری، زمین‌گیر",
+  "example_en": "After the accident, she was bedridden for months.",
+  "photo": "media/vocab/bedridden.jpg"
+ },
+ {
+  "word": "calcium-rich",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Containing a lot of calcium, good for bones.",
+  "meaning_fa": "غنی از کلسیم",
+  "example_en": "Dairy products are known to be calcium-rich foods.",
+  "photo": "media/vocab/calcium-rich.jpg"
+ },
+ {
+  "word": "career-minded",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Focused on advancing one's professional life.",
+  "meaning_fa": "جاه‌طلب شغلی",
+  "example_en": "She is very career-minded and works hard to succeed.",
+  "photo": "media/vocab/career-minded.jpg"
+ },
+ {
+  "word": "claimant",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person making a claim, especially in a lawsuit.",
+  "meaning_fa": "مدعی، خواهان",
+  "example_en": "The claimant sought compensation for damages incurred.",
+  "photo": "media/vocab/claimant.jpg"
+ },
+ {
+  "word": "class-conscious",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Aware of and influenced by social class differences.",
+  "meaning_fa": "طبقاتی، آگاه به طبقه اجتماعی",
+  "example_en": "The novel explores a very class-conscious society.",
+  "photo": "media/vocab/class-conscious.jpg"
+ },
+ {
+  "word": "community-led",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Initiated and managed by local people.",
+  "meaning_fa": "جامعه‌محور، با رهبری جامعه",
+  "example_en": "The new park is a community-led initiative.",
+  "photo": "media/vocab/community-led.jpg"
+ },
+ {
+  "word": "-conscious",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "Aware of or concerned about something.",
+  "meaning_fa": "آگاه از، نگران",
+  "example_en": "\"Health-conscious\" means being aware of one's health.",
+  "photo": "media/vocab/conscious.jpg"
+ },
+ {
+  "word": "contestant",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who takes part in a contest.",
+  "meaning_fa": "شرکت‌کننده، رقیب",
+  "example_en": "Each contestant performed their best in the talent show.",
+  "photo": "media/vocab/contestant.jpg"
+ },
+ {
+  "word": "costly",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Expensive; involving great expense.",
+  "meaning_fa": "پرهزینه، گران",
+  "example_en": "The delay proved to be a very costly mistake.",
+  "photo": "media/vocab/costly.jpg"
+ },
+ {
+  "word": "crime-related",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Connected with or concerning crime.",
+  "meaning_fa": "مرتبط با جرم",
+  "example_en": "The police investigated all crime-related incidents in the area.",
+  "photo": "media/vocab/crime-related.jpg"
+ },
+ {
+  "word": "crime-ridden",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Full of crime; having a lot of crime.",
+  "meaning_fa": "جرم‌خیز، پر از جرم",
+  "example_en": "They moved from a crime-ridden neighborhood to a safer one.",
+  "photo": "media/vocab/crime-ridden.jpg"
+ },
+ {
+  "word": "disposable",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Designed to be thrown away after use.",
+  "meaning_fa": "یکبار مصرف",
+  "example_en": "Many restaurants use disposable cutlery for takeaways.",
+  "photo": "media/vocab/disposable.jpg"
+ },
+ {
+  "word": "-en",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "Forms verbs meaning 'to make or become'.",
+  "meaning_fa": "پسوند فعلی‌ساز",
+  "example_en": "The suffix \"-en\" can be seen in words like \"widen\" or \"strengthen.\"",
+  "photo": "media/vocab/en.jpg"
+ },
+ {
+  "word": "fibre-rich",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Containing a large amount of dietary fibre.",
+  "meaning_fa": "پرفیبر",
+  "example_en": "Whole grains and vegetables are fibre-rich foods.",
+  "photo": "media/vocab/fibre-rich.jpg"
+ },
+ {
+  "word": "-free",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "Without; not containing something specified.",
+  "meaning_fa": "بدون، عاری از",
+  "example_en": "This product is sugar-free and gluten-free.",
+  "photo": "media/vocab/free.jpg"
+ },
+ {
+  "word": "golden",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Excellent, valuable, or very successful.",
+  "meaning_fa": "طلایی، عالی",
+  "example_en": "This is a golden opportunity we cannot miss.",
+  "photo": "media/vocab/golden.jpg"
+ },
+ {
+  "word": "guilt-ridden",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling extremely guilty about something.",
+  "meaning_fa": "سرشار از احساس گناه",
+  "example_en": "She was guilt-ridden after forgetting her friend's birthday.",
+  "photo": "media/vocab/guilt-ridden.jpg"
+ },
+ {
+  "word": "health-conscious",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Mindful of one's health and well-being.",
+  "meaning_fa": "مراقب سلامتی، به فکر سلامتی",
+  "example_en": "She is very health-conscious and eats organic food.",
+  "photo": "media/vocab/health-conscious.jpg"
+ },
+ {
+  "word": "high-minded",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having strong moral principles.",
+  "meaning_fa": "بلندنظر، دارای اصول اخلاقی بالا",
+  "example_en": "Her high-minded ideals guided her political career.",
+  "photo": "media/vocab/high-minded.jpg"
+ },
+ {
+  "word": "-ible",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "Forms adjectives meaning \"able to be\" or \"capable of.\"",
+  "meaning_fa": "پسوند صفت‌ساز (قابل)",
+  "example_en": "The suffix \"-ible\" is seen in words like \"sensible.\"",
+  "photo": "media/vocab/ible.jpg"
+ },
+ {
+  "word": "idiot-proof",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "So simple that even a very foolish person can use it.",
+  "meaning_fa": "ضد احمق، بسیار ساده",
+  "example_en": "The new software is completely idiot-proof.",
+  "photo": "media/vocab/idiot-proof.jpg"
+ },
+ {
+  "word": "informant",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who gives information to another.",
+  "meaning_fa": "خبرچین، مخبر",
+  "example_en": "The police relied on an informant for crucial details.",
+  "photo": "media/vocab/informant.jpg"
+ },
+ {
+  "word": "-led",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "Guided or controlled by a specified person or thing.",
+  "meaning_fa": "تحت رهبری، هدایت شده",
+  "example_en": "The student-led initiative successfully raised funds for charity.",
+  "photo": "media/vocab/led.jpg"
+ },
+ {
+  "word": "leisurely",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Done in a relaxed, unhurried way.",
+  "meaning_fa": "با فراغت، آهسته",
+  "example_en": "They enjoyed a leisurely stroll through the park.",
+  "photo": "media/vocab/leisurely.jpg"
+ },
+ {
+  "word": "like-minded",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having similar opinions, interests, or goals.",
+  "meaning_fa": "همفکر، هم‌عقیده",
+  "example_en": "She joined a club for like-minded individuals interested in hiking.",
+  "photo": "media/vocab/like-minded.jpg"
+ },
+ {
+  "word": "-ly",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "Forms adverbs from adjectives, or adjectives from nouns.",
+  "meaning_fa": "پسوند قیدساز یا صفت‌ساز",
+  "example_en": "The suffix \"-ly\" often turns an adjective into an adverb, like \"quick\" to \"quickly.\"",
+  "photo": "media/vocab/ly.jpg"
+ },
+ {
+  "word": "manageable",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Able to be controlled, dealt with, or accomplished easily.",
+  "meaning_fa": "قابل مدیریت، قابل کنترل",
+  "example_en": "The project was broken into manageable tasks.",
+  "photo": "media/vocab/manageable.jpg"
+ },
+ {
+  "word": "-minded",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "Having a particular type of mind or way of thinking.",
+  "meaning_fa": "دارای ذهنیت خاص، بافکر",
+  "example_en": "He is very open-minded about new ideas.",
+  "photo": "media/vocab/minded.jpg"
+ },
+ {
+  "word": "moisten",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "Make something slightly wet.",
+  "meaning_fa": "مرطوب کردن",
+  "example_en": "She moistened the sponge before wiping the counter.",
+  "photo": "media/vocab/moisten.jpg"
+ },
+ {
+  "word": "money-minded",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Concerned primarily with money and financial gain.",
+  "meaning_fa": "پول دوست، مادی گرا",
+  "example_en": "He's very money-minded, always seeking financial opportunities.",
+  "photo": "media/vocab/money-minded.jpg"
+ },
+ {
+  "word": "newsworthy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Interesting enough to be reported as news.",
+  "meaning_fa": "قابل انتشار، خبری",
+  "example_en": "Her discovery was considered highly newsworthy.",
+  "photo": "media/vocab/newsworthy.jpg"
+ },
+ {
+  "word": "occupant",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who resides or is present in a place.",
+  "meaning_fa": "ساکن، سرنشین",
+  "example_en": "The occupants of the car were uninjured in the crash.",
+  "photo": "media/vocab/occupant.jpg"
+ },
+ {
+  "word": "ovenproof",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Safe to use inside an oven.",
+  "meaning_fa": "مقاوم در برابر حرارت فر",
+  "example_en": "Make sure the dish is ovenproof before baking it.",
+  "photo": "media/vocab/ovenproof.jpg"
+ },
+ {
+  "word": "-proof",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "Protected against something; resistant to something.",
+  "meaning_fa": "ضد، مقاوم در برابر",
+  "example_en": "This phone is waterproof and shockproof.",
+  "photo": "media/vocab/proof-2.jpg"
+ },
+ {
+  "word": "redden",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "Become red or make something red.",
+  "meaning_fa": "سرخ شدن، سرخ کردن",
+  "example_en": "Her cheeks began to redden with embarrassment.",
+  "photo": "media/vocab/redden.jpg"
+ },
+ {
+  "word": "-related",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "Connected with or caused by something.",
+  "meaning_fa": "مرتبط با، مربوط به",
+  "example_en": "\"Stress-related\" means connected to or caused by stress.",
+  "photo": "media/vocab/related.jpg"
+ },
+ {
+  "word": "-rich",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "containing a large amount of a specified substance",
+  "meaning_fa": "غنی از، سرشار از",
+  "example_en": "This soil is nutrient-rich, perfect for growing vegetables.",
+  "photo": "media/vocab/rich.jpg"
+ },
+ {
+  "word": "-ridden",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "full of or dominated by something unpleasant",
+  "meaning_fa": "پر از، گرفتار",
+  "example_en": "The old house was rat-ridden and needed repairs.",
+  "photo": "media/vocab/ridden.jpg"
+ },
+ {
+  "word": "safety-conscious",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "aware of and careful about potential dangers",
+  "meaning_fa": "ایمنی‌محور، محتاط در برابر خطر",
+  "example_en": "The company is very safety-conscious, prioritizing worker well-being.",
+  "photo": "media/vocab/safety-conscious.jpg"
+ },
+ {
+  "word": "soundproof",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Designed to prevent sound from passing through.",
+  "meaning_fa": "عایق صدا",
+  "example_en": "The studio walls are completely soundproof.",
+  "photo": "media/vocab/soundproof.jpg"
+ },
+ {
+  "word": "stress-free",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not causing or feeling any stress.",
+  "meaning_fa": "بدون استرس، آرام",
+  "example_en": "She enjoyed a stress-free vacation by the beach.",
+  "photo": "media/vocab/stress-free.jpg"
+ },
+ {
+  "word": "stress-related",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Caused by or connected to stress.",
+  "meaning_fa": "مرتبط با استرس",
+  "example_en": "Many illnesses are stress-related conditions.",
+  "photo": "media/vocab/stress-related.jpg"
+ },
+ {
+  "word": "student-led",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Organized or managed by students.",
+  "meaning_fa": "با مدیریت دانش‌آموزان/دانشجویان",
+  "example_en": "The university hosted a successful student-led conference.",
+  "photo": "media/vocab/student-led.jpg"
+ },
+ {
+  "word": "sweeten",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make something taste sweet or more pleasant.",
+  "meaning_fa": "شیرین کردن",
+  "example_en": "She sweetened her tea with honey.",
+  "photo": "media/vocab/sweeten.jpg"
+ },
+ {
+  "word": "tax-free",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not subject to taxes.",
+  "meaning_fa": "معاف از مالیات",
+  "example_en": "Her pension income is completely tax-free.",
+  "photo": "media/vocab/tax-free.jpg"
+ },
+ {
+  "word": "time-conscious",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Aware of time and the need to be punctual.",
+  "meaning_fa": "وقت‌شناس، آگاه به زمان",
+  "example_en": "Being time-conscious is crucial for meeting deadlines effectively.",
+  "photo": "media/vocab/time-conscious.jpg"
+ },
+ {
+  "word": "university-led",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Initiated or managed by a university.",
+  "meaning_fa": "تحت رهبری دانشگاه",
+  "example_en": "The research project was a university-led initiative.",
+  "photo": "media/vocab/university-led.jpg"
+ },
+ {
+  "word": "waterproof",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not allowing water to pass through it.",
+  "meaning_fa": "ضد آب",
+  "example_en": "I need a waterproof jacket for hiking in the rain.",
+  "photo": "media/vocab/waterproof.jpg"
+ },
+ {
+  "word": "worker-led",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "controlled or managed by the workers themselves.",
+  "meaning_fa": "کارگرمحور، تحت رهبری کارگران",
+  "example_en": "The company transitioned to a worker-led management style.",
+  "photo": "media/vocab/worker-led.jpg"
+ },
+ {
+  "word": "worsen",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "to make or become worse.",
+  "meaning_fa": "بدتر کردن/شدن",
+  "example_en": "His condition began to worsen overnight.",
+  "photo": "media/vocab/worsen.jpg"
+ },
+ {
+  "word": "-worthy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "deserving of; suitable for.",
+  "meaning_fa": "شایسته، قابل",
+  "example_en": "Her brave actions were truly praise-worthy.",
+  "photo": "media/vocab/worthy.jpg"
+ }
+]

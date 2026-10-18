@@ -1,1 +1,3683 @@
-[{"word": "absent-minded", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "often forgetting things or not paying attention", "meaning_fa": "حواس‌پرت", "example_en": "My absent-minded professor often loses his keys.", "photo": "media/vocab/absent-minded.jpg"}, {"word": "absolutely", "phonetic": "ˌæbsəˈluːtli", "levels": ["b1"], "pos": "adverb", "meaning_en": "completely, totally, or definitely", "meaning_fa": "کاملاً، قطعاً", "example_en": "\"Are you sure?\" \"Absolutely!\"", "photo": "media/vocab/absolutely.jpg"}, {"word": "air-conditioned", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "having a system that cools the air", "meaning_fa": "دارای تهویه مطبوع", "example_en": "The hotel room was air-conditioned.", "photo": "media/vocab/air-conditioned.jpg"}, {"word": "all-out", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Using maximum effort or resources.", "meaning_fa": "تمام‌عیار، با تمام قوا", "example_en": "The team made an all-out effort to win the championship.", "photo": "media/vocab/all-out.jpg"}, {"word": "amazed", "phonetic": "əˈmeɪzd", "levels": ["b1"], "pos": "adjective", "meaning_en": "Very surprised and impressed.", "meaning_fa": "شگفت‌زده، متحیر", "example_en": "I was amazed by her beautiful singing voice.", "photo": "media/vocab/amazed.jpg"}, {"word": "amazing [very good]", "phonetic": "əˈmeɪzɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Extremely good or wonderful.", "meaning_fa": "فوق‌العاده، عالی", "example_en": "The food at that restaurant is amazing.", "photo": "media/vocab/amazing-very-good.jpg"}, {"word": "amazing [very surprising]", "phonetic": "əˈmeɪzɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Very surprising and difficult to believe.", "meaning_fa": "شگفت‌انگیز، باورنکردنی", "example_en": "It's amazing how fast children grow up.", "photo": "media/vocab/amazing-very-surprising.jpg"}, {"word": "annoyed", "phonetic": "əˈnɔɪd", "levels": ["b1"], "pos": "adjective", "meaning_en": "Feeling a little angry or irritated.", "meaning_fa": "کلافه، آزرده", "example_en": "I was annoyed by the loud music.", "photo": "media/vocab/annoyed.jpg"}, {"word": "annoying", "phonetic": "əˈnɔɪɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Making you feel a little angry or irritated.", "meaning_fa": "آزاردهنده، کلافه‌کننده", "example_en": "That buzzing sound is very annoying.", "photo": "media/vocab/annoying.jpg"}, {"word": "antique n", "phonetic": "ænˈtiːk", "levels": ["b1"], "pos": "noun", "meaning_en": "An old object of high value.", "meaning_fa": "عتیقه، شیء باستانی", "example_en": "My grandmother has many beautiful antiques.", "photo": "media/vocab/antique-n.jpg"}, {"word": "artificial", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Made by humans, not natural.", "meaning_fa": "مصنوعی", "example_en": "The flowers were artificial, but looked real.", "photo": "media/vocab/artificial.jpg"}, {"word": "awful", "phonetic": "ˈɔːfəl", "levels": ["a2", "b1"], "pos": "adjective", "meaning_en": "Very bad or unpleasant.", "meaning_fa": "وحشتناک، افتضاح", "example_en": "The weather was awful yesterday.", "photo": "media/vocab/awful.jpg"}, {"word": "bad", "phonetic": "bæd", "levels": ["a2"], "pos": "adjective", "meaning_en": "Not good; unpleasant or harmful.", "meaning_fa": "بد، ناپسند", "example_en": "The weather was really bad yesterday.", "photo": "media/vocab/bad.jpg"}, {"word": "bang", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To hit something hard, making a loud noise.", "meaning_fa": "محکم کوبیدن، صدای بلند", "example_en": "He accidentally banged his head on the low doorframe.", "photo": "media/vocab/bang.jpg"}, {"word": "beam", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A long, strong piece of wood or metal.", "meaning_fa": "تیر، ستون", "example_en": "The roof is supported by strong wooden beams.", "photo": "media/vocab/beam.jpg"}, {"word": "bell", "phonetic": "bel", "levels": ["b1"], "pos": "noun", "meaning_en": "A metal object that makes a sound.", "meaning_fa": "زنگ، زنگوله", "example_en": "The church bell rings every hour.", "photo": "media/vocab/bell.jpg"}, {"word": "big-headed", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Thinking you are more important than others.", "meaning_fa": "خودبین، مغرور", "example_en": "He is very big-headed about his new car.", "photo": "media/vocab/big-headed.jpg"}, {"word": "bizarre", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Very strange or unusual, often in a funny way.", "meaning_fa": "عجیب و غریب", "example_en": "He told a bizarre story about aliens.", "photo": "media/vocab/bizarre.jpg"}, {"word": "blue-eyed", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having blue eyes.", "meaning_fa": "چشم آبی", "example_en": "My cousin is a blue-eyed girl with blonde hair.", "photo": "media/vocab/blue-eyed.jpg"}, {"word": "bone", "phonetic": "bəʊn", "levels": ["b1"], "pos": "noun", "meaning_en": "Hard white parts inside a body.", "meaning_fa": "استخوان", "example_en": "Dogs love to chew on a bone.", "photo": "media/vocab/bone.jpg"}, {"word": "bored", "phonetic": "bɔːd", "levels": ["b1"], "pos": "adjective", "meaning_en": "Feeling tired and unhappy because something is not interesting.", "meaning_fa": "خسته، بی‌حوصله", "example_en": "I was bored during the long meeting.", "photo": "media/vocab/bored.jpg"}, {"word": "boring", "phonetic": "ˈbɔːrɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Not interesting or exciting.", "meaning_fa": "خسته‌کننده، کسل‌کننده", "example_en": "That movie was so boring.", "photo": "media/vocab/boring.jpg"}, {"word": "brand-new", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Completely new; never used before.", "meaning_fa": "کاملاً نو، آکبند", "example_en": "She bought a brand-new car last week.", "photo": "media/vocab/brand-new.jpg"}, {"word": "bright", "phonetic": "braɪt", "levels": ["b2"], "pos": "adjective", "meaning_en": "Full of light; strong in color.", "meaning_fa": "روشن، درخشان", "example_en": "She wore a bright yellow shirt.", "photo": "media/vocab/bright.jpg"}, {"word": "brightness", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The quality of being full of light.", "meaning_fa": "روشنایی، درخشندگی", "example_en": "You can adjust the brightness of the screen.", "photo": "media/vocab/brightness.jpg"}, {"word": "broad-shouldered", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "having wide shoulders", "meaning_fa": "چهارشانه", "example_en": "He is a tall, broad-shouldered man.", "photo": "media/vocab/broad-shouldered.jpg"}, {"word": "bucket", "phonetic": "ˈbʌkɪt", "levels": ["b1"], "pos": "noun", "meaning_en": "a round open container with a handle", "meaning_fa": "سطل", "example_en": "Fill the bucket with water.", "photo": "media/vocab/bucket.jpg"}, {"word": "built-up", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "an area with many buildings", "meaning_fa": "پرساخت‌وساز، مسکونی", "example_en": "We live in a heavily built-up area.", "photo": "media/vocab/built-up.jpg"}, {"word": "bulky", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "large and difficult to carry", "meaning_fa": "حجیم، بزرگ", "example_en": "The package was too bulky to carry.", "photo": "media/vocab/bulky.jpg"}, {"word": "bullet-proof", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "able to stop bullets from going through", "meaning_fa": "ضد گلوله", "example_en": "The car had bullet-proof windows.", "photo": "media/vocab/bullet-proof.jpg"}, {"word": "business-class", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "A more comfortable and expensive section on a plane.", "meaning_fa": "کلاس تجاری (هواپیما)", "example_en": "He always flies business-class for work trips.", "photo": "media/vocab/business-class.jpg"}, {"word": "can (of cola)", "phonetic": "kæn", "levels": ["b1"], "pos": "noun", "meaning_en": "A metal container holding cola.", "meaning_fa": "قوطی نوشابه", "example_en": "He drank a can of cola.", "photo": "media/vocab/can-of-cola.jpg"}, {"word": "characterise", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To describe the typical qualities of someone or something.", "meaning_fa": "مشخص کردن، توصیف کردن", "example_en": "His kindness characterises his personality.", "photo": "media/vocab/characterise.jpg"}, {"word": "characteristic", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A typical quality or feature of someone or something.", "meaning_fa": "ویژگی، خصیصه", "example_en": "Politeness is a characteristic of his culture.", "photo": "media/vocab/characteristic.jpg"}, {"word": "chime", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make a ringing sound, like a bell.", "meaning_fa": "زنگ زدن، طنین انداختن", "example_en": "The clock chimes every hour.", "photo": "media/vocab/chime.jpg"}, {"word": "circle", "phonetic": "ˈsɜːkəl", "levels": ["b1"], "pos": "noun", "meaning_en": "A round shape with no corners.", "meaning_fa": "دایره", "example_en": "Draw a large circle on the paper.", "photo": "media/vocab/circle.jpg"}, {"word": "clang", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make a loud, metallic sound.", "meaning_fa": "صدای فلزی دادن", "example_en": "The metal gate clanged shut.", "photo": "media/vocab/clang.jpg"}, {"word": "clatter", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make a loud, rattling sound.", "meaning_fa": "صدای تق‌تق کردن", "example_en": "The dishes clattered as she dropped them.", "photo": "media/vocab/clatter.jpg"}, {"word": "coarse", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Rough to touch, not smooth.", "meaning_fa": "زبر، خشن", "example_en": "The fabric felt coarse against her skin.", "photo": "media/vocab/coarse.jpg"}, {"word": "confused", "phonetic": "kənˈfjuːzd", "levels": ["b1"], "pos": "adjective", "meaning_en": "Unable to understand or think clearly.", "meaning_fa": "گیج، سردرگم", "example_en": "I was confused by the difficult question.", "photo": "media/vocab/confused.jpg"}, {"word": "confusing", "phonetic": "kənˈfjuːzɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Difficult to understand; unclear.", "meaning_fa": "گیج کننده", "example_en": "The instructions were very confusing.", "photo": "media/vocab/confusing.jpg"}, {"word": "conventional", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Following traditional or accepted ways.", "meaning_fa": "سنتی، مرسوم", "example_en": "She prefers conventional methods of teaching.", "photo": "media/vocab/conventional.jpg"}, {"word": "cotton", "phonetic": "ˈkɒtən", "levels": ["b1"], "pos": "noun", "meaning_en": "A soft white material from a plant.", "meaning_fa": "پنبه، نخ پنبه", "example_en": "This shirt is made of soft cotton.", "photo": "media/vocab/cotton.jpg"}, {"word": "cumbersome", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Large, heavy, and difficult to carry or use.", "meaning_fa": "دست و پا گیر، سنگین", "example_en": "The old machine was very cumbersome.", "photo": "media/vocab/cumbersome.jpg"}, {"word": "curly-haired", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having hair that forms curls.", "meaning_fa": "موفرفری", "example_en": "The curly-haired girl smiled brightly.", "photo": "media/vocab/curly-haired.jpg"}, {"word": "cut-price", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Sold at a reduced price.", "meaning_fa": "ارزان، تخفیف‌خورده", "example_en": "I bought some cut-price clothes in the sale.", "photo": "media/vocab/cut-price.jpg"}, {"word": "dark", "phonetic": "dɑːk", "levels": ["b2"], "pos": "adjective", "meaning_en": "With little or no light.", "meaning_fa": "تاریک", "example_en": "It gets dark early in winter.", "photo": "media/vocab/dark.jpg"}, {"word": "darkness", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The absence of light.", "meaning_fa": "تاریکی", "example_en": "We couldn't see anything in the darkness.", "photo": "media/vocab/darkness.jpg"}, {"word": "dazzling", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Extremely bright, impressive, or beautiful.", "meaning_fa": "خیره‌کننده، درخشان", "example_en": "The fireworks display was truly dazzling.", "photo": "media/vocab/dazzling.jpg"}, {"word": "decent", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Good enough or acceptable.", "meaning_fa": "مناسب، خوب، آبرومند", "example_en": "He earns a decent salary at his new job.", "photo": "media/vocab/decent.jpg"}, {"word": "delicate", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Easily damaged or needing careful handling.", "meaning_fa": "ظریف، حساس", "example_en": "The antique vase is very delicate.", "photo": "media/vocab/delicate.jpg"}, {"word": "delicious", "phonetic": "dɪˈlɪʃəs", "levels": ["b1"], "pos": "adjective", "meaning_en": "Having a very pleasant taste.", "meaning_fa": "خوشمزه", "example_en": "This cake is delicious!", "photo": "media/vocab/delicious.jpg"}, {"word": "delighted", "phonetic": "dɪˈlaɪtɪd", "levels": ["b1"], "pos": "adjective", "meaning_en": "Very pleased and happy.", "meaning_fa": "خوشحال، مسرور", "example_en": "I was delighted to hear your good news.", "photo": "media/vocab/delighted.jpg"}, {"word": "dense", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having parts very close together; thick.", "meaning_fa": "متراکم، انبوه", "example_en": "The forest was very dense and dark.", "photo": "media/vocab/dense.jpg"}, {"word": "density", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The degree to which something is dense.", "meaning_fa": "تراکم، چگالی", "example_en": "The population density in the city is high.", "photo": "media/vocab/density.jpg"}, {"word": "depressed", "phonetic": "dɪˈprest", "levels": ["b1"], "pos": "adjective", "meaning_en": "Feeling very sad and without hope.", "meaning_fa": "افسرده", "example_en": "She felt depressed after losing her job.", "photo": "media/vocab/depressed.jpg"}, {"word": "depressing", "phonetic": "dɪˈpresɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Making you feel sad and without hope.", "meaning_fa": "افسرده‌کننده", "example_en": "The news was very depressing today.", "photo": "media/vocab/depressing.jpg"}, {"word": "dim d?m", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Not intelligent or quick to understand.", "meaning_fa": "کم‌هوش، کندذهن", "example_en": "He can be a bit dim sometimes.", "photo": "media/vocab/dim-d-m.jpg"}, {"word": "disappointed", "phonetic": "ˌdɪsəˈpɔɪntɪd", "levels": ["b1"], "pos": "adjective", "meaning_en": "Sad because something was not as good as expected.", "meaning_fa": "ناامید", "example_en": "I was disappointed with the movie.", "photo": "media/vocab/disappointed.jpg"}, {"word": "disappointing", "phonetic": "ˌdɪsəˈpɔɪntɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Not as good as you hoped.", "meaning_fa": "ناامیدکننده", "example_en": "The results were quite disappointing.", "photo": "media/vocab/disappointing.jpg"}, {"word": "dreadful", "phonetic": "ˈdredfəl", "levels": ["a2", "b1"], "pos": "adjective", "meaning_en": "Very bad or unpleasant.", "meaning_fa": "وحشتناک، افتضاح", "example_en": "The weather was dreadful yesterday.", "photo": "media/vocab/dreadful.jpg"}, {"word": "dull", "phonetic": "dʌl", "levels": ["b2"], "pos": "adjective", "meaning_en": "Not interesting or exciting.", "meaning_fa": "خسته‌کننده، کسل‌کننده", "example_en": "The town was very dull.", "photo": "media/vocab/dull.jpg"}, {"word": "duty-free", "phonetic": null, "levels": ["b2"], "pos": "adjective, adverb", "meaning_en": "Without paying government tax.", "meaning_fa": "معاف از گمرک", "example_en": "You can buy alcohol duty-free at the airport.", "photo": "media/vocab/duty-free-2.jpg"}, {"word": "easy-going", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Relaxed and not easily worried or annoyed.", "meaning_fa": "خوش‌مشرب، بی‌خیال", "example_en": "My friend is very easy-going and always happy.", "photo": "media/vocab/easy-going.jpg"}, {"word": "embarrassed", "phonetic": "ɪmˈbærəst", "levels": ["b1"], "pos": "adjective", "meaning_en": "Feeling shy or ashamed about something.", "meaning_fa": "خجالت‌زده", "example_en": "I felt embarrassed when I fell.", "photo": "media/vocab/embarrassed.jpg"}, {"word": "embarrassing", "phonetic": "ɪmˈbærəsɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Making you feel shy or ashamed.", "meaning_fa": "خجالت‌آور", "example_en": "It was embarrassing when I forgot her name.", "photo": "media/vocab/embarrassing.jpg"}, {"word": "enormous", "phonetic": "ɪˈnɔːməs", "levels": ["b1"], "pos": "adjective", "meaning_en": "Extremely large.", "meaning_fa": "عظیم، بزرگ", "example_en": "The elephant is an enormous animal.", "photo": "media/vocab/enormous.jpg"}, {"word": "entire", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "The whole of something; complete.", "meaning_fa": "کامل، تمام", "example_en": "He ate the entire cake by himself.", "photo": "media/vocab/entire.jpg"}, {"word": "essential", "phonetic": "ɪˈsenʃəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Absolutely necessary or important.", "meaning_fa": "ضروری، حیاتی", "example_en": "Water is essential for life.", "photo": "media/vocab/essential.jpg"}, {"word": "excellent", "phonetic": "ˈeksələnt", "levels": ["a2"], "pos": "adjective", "meaning_en": "Extremely good; outstanding.", "meaning_fa": "عالی، فوق‌العاده", "example_en": "That was an excellent meal!", "photo": "media/vocab/excellent.jpg"}, {"word": "exhausted", "phonetic": "ɪgˈzɔːstɪd", "levels": ["b1"], "pos": "adjective", "meaning_en": "Very tired.", "meaning_fa": "خسته، از پا افتاده", "example_en": "I was exhausted after the long trip.", "photo": "media/vocab/exhausted.jpg"}, {"word": "fake", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Not real, but made to look real.", "meaning_fa": "تقلبی، جعلی", "example_en": "He was wearing a fake designer watch.", "photo": "media/vocab/fake.jpg"}, {"word": "far-fetched", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Unlikely to be true; difficult to believe.", "meaning_fa": "بعید، غیرقابل باور", "example_en": "The plot of the movie was a bit far-fetched.", "photo": "media/vocab/far-fetched.jpg"}, {"word": "fascinating", "phonetic": "ˈfæsɪneɪtɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Very interesting and attractive.", "meaning_fa": "جذاب، دلربا", "example_en": "The book was so fascinating, I couldn't put it down.", "photo": "media/vocab/fascinating.jpg"}, {"word": "faulty", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Not working correctly; having a fault.", "meaning_fa": "معیوب، خراب", "example_en": "The faulty printer needs to be repaired.", "photo": "media/vocab/faulty.jpg"}, {"word": "feel", "phonetic": "fiːl", "levels": ["b2"], "pos": "verb", "meaning_en": "To experience a physical sensation.", "meaning_fa": "حس کردن، احساس کردن", "example_en": "I feel cold today.", "photo": "media/vocab/feel.jpg"}, {"word": "fine n, adj", "phonetic": null, "levels": ["b2"], "pos": "noun, adjective", "meaning_en": "(n) Money paid as punishment. (adj) Very good.", "meaning_fa": "(اسم) جریمه، (صفت) خوب", "example_en": "The police gave him a fine for parking.", "photo": "media/vocab/fine-n-adj.jpg"}, {"word": "first-born", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "The first child born to parents.", "meaning_fa": "فرزند اول، نخست‌زاده", "example_en": "My first-born son is starting school next year.", "photo": "media/vocab/first-born.jpg"}, {"word": "first-class", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Of the highest quality or best standard.", "meaning_fa": "درجه یک، عالی", "example_en": "The hotel offers first-class service to all guests.", "photo": "media/vocab/first-class.jpg"}, {"word": "first-hand", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Experienced or learned directly, not from others.", "meaning_fa": "دست اول، مستقیم", "example_en": "She has first-hand experience working with animals.", "photo": "media/vocab/first-hand.jpg"}, {"word": "flag", "phonetic": "flæg", "levels": ["b1"], "pos": "noun", "meaning_en": "A piece of cloth with a design, representing a country.", "meaning_fa": "پرچم", "example_en": "The flag of my country is red, white, and green.", "photo": "media/vocab/flag.jpg"}, {"word": "flexible", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Able to change easily or bend without breaking.", "meaning_fa": "منعطف، قابل تغییر", "example_en": "Our plans are flexible, so we can change them.", "photo": "media/vocab/flexible.jpg"}, {"word": "flicker", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To shine unsteadily, quickly going on and off.", "meaning_fa": "سوسو زدن، چشمک زدن", "example_en": "The candle flame began to flicker.", "photo": "media/vocab/flicker.jpg"}, {"word": "fragile", "phonetic": "ˈfræʤaɪl", "levels": ["b2"], "pos": "adjective", "meaning_en": "easily broken or damaged.", "meaning_fa": "شکننده", "example_en": "Be careful, the glass is fragile.", "photo": "media/vocab/fragile.jpg"}, {"word": "fur", "phonetic": "fɜː", "levels": ["b1"], "pos": "noun", "meaning_en": "the soft hair on an animal's body.", "meaning_fa": "خز، پشم", "example_en": "The cat has soft fur.", "photo": "media/vocab/fur.jpg"}, {"word": "furry", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "covered with soft hair or fur.", "meaning_fa": "پشمالو، خزدار", "example_en": "The cat has soft, furry paws.", "photo": "media/vocab/furry.jpg"}, {"word": "genuine", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "real, true, and not fake.", "meaning_fa": "واقعی، اصیل، حقیقی", "example_en": "Is this a genuine antique vase?", "photo": "media/vocab/genuine.jpg"}, {"word": "glare", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A strong, unpleasant light.", "meaning_fa": "نور خیره کننده", "example_en": "The glare from the sun hurt my eyes.", "photo": "media/vocab/glare.jpg"}, {"word": "glitter", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To shine brightly with small, sparkling flashes.", "meaning_fa": "درخشیدن، برق زدن", "example_en": "The snow glittered in the sunlight.", "photo": "media/vocab/glitter.jpg"}, {"word": "gloomy", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Dark and depressing; feeling sad.", "meaning_fa": "تاریک و دلگیر، غمگین", "example_en": "The weather was gloomy all day.", "photo": "media/vocab/gloomy.jpg"}, {"word": "glow", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To produce a soft, steady light.", "meaning_fa": "درخشش ملایم داشتن", "example_en": "The embers glowed in the fireplace.", "photo": "media/vocab/glow.jpg"}, {"word": "good", "phonetic": "gʊd", "levels": ["a2"], "pos": "adjective", "meaning_en": "Of high quality or standard.", "meaning_fa": "خوب", "example_en": "This is a very good book.", "photo": "media/vocab/good.jpg"}, {"word": "good-tempered", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "someone who is usually calm and does not get angry easily.", "meaning_fa": "خوش‌اخلاق، خوش‌رو", "example_en": "My grandmother is very good-tempered.", "photo": "media/vocab/good-tempered.jpg"}, {"word": "great", "phonetic": "greɪt", "levels": ["a2", "b2"], "pos": "adjective", "meaning_en": "very good or excellent.", "meaning_fa": "عالی، فوق‌العاده", "example_en": "We had a great time at the party.", "photo": "media/vocab/great.jpg"}, {"word": "grey", "phonetic": "greɪ", "levels": ["b1"], "pos": "adjective", "meaning_en": "a color between black and white.", "meaning_fa": "خاکستری", "example_en": "The sky was grey and cloudy.", "photo": "media/vocab/grey.jpg"}, {"word": "handmade", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Made by a person, not a machine.", "meaning_fa": "دست‌ساز", "example_en": "She sells beautiful handmade jewelry.", "photo": "media/vocab/handmade.jpg"}, {"word": "hard-up", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having very little money.", "meaning_fa": "بی‌پول، فقیر", "example_en": "After losing his job, he was hard-up.", "photo": "media/vocab/hard-up.jpg"}, {"word": "heavy as lead", "phonetic": null, "levels": ["b2"], "pos": "idiom", "meaning_en": "Extremely heavy.", "meaning_fa": "بسیار سنگین", "example_en": "This suitcase is heavy as lead!", "photo": "media/vocab/heavy-as-lead.jpg"}, {"word": "hiss", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make a sound like a long 's'.", "meaning_fa": "فیش فیش کردن، هیس کشیدن", "example_en": "The snake hissed loudly at us.", "photo": "media/vocab/hiss.jpg"}, {"word": "hollow", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Empty inside.", "meaning_fa": "توخالی", "example_en": "The tree trunk was hollow inside.", "photo": "media/vocab/hollow.jpg"}, {"word": "horrible", "phonetic": "ˈhɒrəbl", "levels": ["a2"], "pos": "adjective", "meaning_en": "Very bad or unpleasant.", "meaning_fa": "وحشتناک، افتضاح", "example_en": "The food tasted horrible.", "photo": "media/vocab/horrible.jpg"}, {"word": "How (awful)", "phonetic": "haʊ", "levels": ["a2"], "pos": "adverb", "meaning_en": "Used to express strong feelings about something.", "meaning_fa": "چقدر، چه", "example_en": "How beautiful this flower is!", "photo": "media/vocab/how-awful.jpg"}, {"word": "huge", "phonetic": "hjuːʤ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Very, very big.", "meaning_fa": "عظیم، بزرگ", "example_en": "They live in a huge house.", "photo": "media/vocab/huge.jpg"}, {"word": "hum", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To sing a tune with closed lips.", "meaning_fa": "زمزمه کردن، همهمه کردن", "example_en": "She started to hum a happy song.", "photo": "media/vocab/hum.jpg"}, {"word": "interest-free", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Without any extra charge for borrowing money.", "meaning_fa": "بدون بهره", "example_en": "You can buy it with an interest-free loan.", "photo": "media/vocab/interest-free.jpg"}, {"word": "jagged", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having sharp, uneven points or edges.", "meaning_fa": "دندانه‌دار، ناهموار", "example_en": "The broken glass had jagged edges.", "photo": "media/vocab/jagged.jpg"}, {"word": "ladder", "phonetic": "ˈlædə", "levels": ["b1"], "pos": "noun", "meaning_en": "A piece of equipment for climbing up or down.", "meaning_fa": "نردبان", "example_en": "He used a ladder to reach the high shelf.", "photo": "media/vocab/ladder.jpg"}, {"word": "last-minute", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Done or happening at the latest possible time.", "meaning_fa": "لحظه آخری", "example_en": "We made a last-minute decision to go.", "photo": "media/vocab/last-minute.jpg"}, {"word": "leather", "phonetic": "ˈleðə", "levels": ["b1"], "pos": "noun", "meaning_en": "Animal skin used for shoes, bags, etc.", "meaning_fa": "چرم", "example_en": "My new shoes are made of leather.", "photo": "media/vocab/leather.jpg"}, {"word": "le-handed", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Using your left hand more easily.", "meaning_fa": "چپ‌دست", "example_en": "My brother is left-handed and writes well.", "photo": "media/vocab/le-handed.jpg"}, {"word": "light as a feather", "phonetic": null, "levels": ["b2"], "pos": "idiom", "meaning_en": "Very light in weight.", "meaning_fa": "سبک مثل پر", "example_en": "The package was light as a feather.", "photo": "media/vocab/light-as-a-feather.jpg"}, {"word": "long-distance", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "travelling or communicating over a great distance.", "meaning_fa": "مسافت طولانی، راه دور", "example_en": "She runs long-distance races every weekend.", "photo": "media/vocab/long-distance.jpg"}, {"word": "long-haired", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "having hair that is long.", "meaning_fa": "موبلند", "example_en": "The long-haired cat slept on the sofa.", "photo": "media/vocab/long-haired.jpg"}, {"word": "long-legged", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "having legs that are long.", "meaning_fa": "پابلند", "example_en": "The long-legged bird walked through the water.", "photo": "media/vocab/long-legged.jpg"}, {"word": "long-standing", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "existing or happening for a long time.", "meaning_fa": "دیرینه، طولانی مدت", "example_en": "They have a long-standing friendship of over twenty years.", "photo": "media/vocab/long-standing.jpg"}, {"word": "lovely", "phonetic": "ˈlʌvli", "levels": ["a2"], "pos": "adjective", "meaning_en": "very pleasant or beautiful.", "meaning_fa": "دوست‌داشتنی، زیبا", "example_en": "What a lovely day it is!", "photo": "media/vocab/lovely.jpg"}, {"word": "marvellous", "phonetic": "ˈmɑːvələs", "levels": ["b1"], "pos": "adjective", "meaning_en": "Extremely good or wonderful.", "meaning_fa": "شگفت‌انگیز، عالی", "example_en": "What a marvellous idea!", "photo": "media/vocab/marvellous.jpg"}, {"word": "material", "phonetic": "məˈtɪəriəl", "levels": ["b1"], "pos": "noun", "meaning_en": "The substance from which something is made.", "meaning_fa": "ماده، جنس", "example_en": "What material is this shirt made of?", "photo": "media/vocab/material.jpg"}, {"word": "national", "phonetic": "ˈnæʃənəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "Related to a whole country.", "meaning_fa": "ملی، کشوری", "example_en": "We watched the national news.", "photo": "media/vocab/national.jpg"}, {"word": "natural", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Existing in nature, not made by humans.", "meaning_fa": "طبیعی", "example_en": "We need to protect our natural environment.", "photo": "media/vocab/natural.jpg"}, {"word": "navy blue", "phonetic": "ˈneɪvi bluː", "levels": ["b1"], "pos": "adjective", "meaning_en": "A very dark blue color.", "meaning_fa": "سرمه‌ای", "example_en": "He wore a smart navy blue suit.", "photo": "media/vocab/navy-blue.jpg"}, {"word": "never-ending", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Seeming to continue forever.", "meaning_fa": "بی‌پایان، تمام‌نشدنی", "example_en": "The journey felt never-ending.", "photo": "media/vocab/never-ending.jpg"}, {"word": "nice", "phonetic": "naɪs", "levels": ["a2"], "pos": "adjective", "meaning_en": "Kind, friendly, and pleasant.", "meaning_fa": "خوب، مهربان", "example_en": "She is a very nice person.", "photo": "media/vocab/nice.jpg"}, {"word": "noise", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A sound, often loud or unpleasant.", "meaning_fa": "سر و صدا، همهمه", "example_en": "The loud noise woke me up.", "photo": "media/vocab/noise.jpg"}, {"word": "not bad", "phonetic": "nɒt bæd", "levels": ["a2"], "pos": "phrase", "meaning_en": "Quite good or acceptable.", "meaning_fa": "بد نیست، خوب است", "example_en": "The food was not bad.", "photo": "media/vocab/not-bad.jpg"}, {"word": "object n", "phonetic": "ˈɒbʤɪkt", "levels": ["b1"], "pos": "noun", "meaning_en": "A non-living thing you can see or touch.", "meaning_fa": "شیء، جسم", "example_en": "What is that strange object?", "photo": "media/vocab/object-n.jpg"}, {"word": "opaque", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Not transparent; light cannot pass through.", "meaning_fa": "مات، کدر", "example_en": "The window was opaque, so I couldn't see outside.", "photo": "media/vocab/opaque.jpg"}, {"word": "open-necked", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "A shirt or dress with an open collar.", "meaning_fa": "یقه باز", "example_en": "He wore an open-necked shirt to the party.", "photo": "media/vocab/open-necked.jpg"}, {"word": "open-toed", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Shoes or sandals with an opening for the toes.", "meaning_fa": "جلو باز (کفش)", "example_en": "She wore open-toed sandals in summer.", "photo": "media/vocab/open-toed.jpg"}, {"word": "o-peak", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Not during the busiest or most popular times.", "meaning_fa": "خارج از اوج، کم‌ترافیک", "example_en": "Off-peak travel is cheaper.", "photo": "media/vocab/o-peak.jpg"}, {"word": "part-time", "phonetic": "ˌpɑːtˈtaɪm", "levels": ["b2"], "pos": "adjective", "meaning_en": "Working fewer hours than a full working week.", "meaning_fa": "پاره‌وقت", "example_en": "She works part-time while studying at university.", "photo": "media/vocab/part-time.jpg"}, {"word": "patter", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A sound of light, quick taps.", "meaning_fa": "صدای ضربات ریز", "example_en": "We heard the gentle patter of rain on the roof.", "photo": "media/vocab/patter.jpg"}, {"word": "perfect", "phonetic": "ˈpɜːfəkt", "levels": ["a2", "b2"], "pos": "adjective", "meaning_en": "Without any mistakes or flaws; excellent.", "meaning_fa": "عالی، کامل", "example_en": "The weather is perfect for a picnic.", "photo": "media/vocab/perfect.jpg"}, {"word": "pink", "phonetic": "pɪŋk", "levels": ["b1"], "pos": "adjective", "meaning_en": "a pale red color.", "meaning_fa": "صورتی", "example_en": "Her dress is a lovely pink color.", "photo": "media/vocab/pink.jpg"}, {"word": "plastic", "phonetic": "ˈplæstɪk", "levels": ["b1"], "pos": "adjective", "meaning_en": "made from a light, strong, artificial material.", "meaning_fa": "پلاستیکی", "example_en": "Don't forget your plastic shopping bag.", "photo": "media/vocab/plastic.jpg"}, {"word": "pointed", "phonetic": "ˈpɔɪntɪd", "levels": ["b1"], "pos": "adjective", "meaning_en": "Having a sharp end.", "meaning_fa": "نوک‌تیز، نوک‌دار", "example_en": "The pencil has a pointed tip.", "photo": "media/vocab/pointed.jpg"}, {"word": "polished", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Smooth and shiny because it has been rubbed.", "meaning_fa": "صیقلی، براق", "example_en": "The old table was beautifully polished.", "photo": "media/vocab/polished.jpg"}, {"word": "precise", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Exact and accurate.", "meaning_fa": "دقیق، صحیح", "example_en": "Give me the precise time.", "photo": "media/vocab/precise.jpg"}, {"word": "pretty (thick)", "phonetic": null, "levels": ["b2"], "pos": "adverb", "meaning_en": "Quite or rather, to some extent.", "meaning_fa": "نسبتاً، کاملاً", "example_en": "The book is pretty thick.", "photo": "media/vocab/pretty-thick.jpg"}, {"word": "prickly", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Covered with sharp points; easily annoyed.", "meaning_fa": "خاردار، زودرنج", "example_en": "The cactus has prickly leaves.", "photo": "media/vocab/prickly.jpg"}, {"word": "purple", "phonetic": "ˈpɜːpəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "A color that is a mix of red and blue.", "meaning_fa": "بنفش", "example_en": "She wore a beautiful purple dress to the party.", "photo": "media/vocab/purple.jpg"}, {"word": "quick-witted", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "able to think and respond quickly and cleverly", "meaning_fa": "باهوش، حاضر جواب", "example_en": "She is quick-witted and always has a clever answer.", "photo": "media/vocab/quick-witted.jpg"}, {"word": "racket", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a bat with strings used in tennis", "meaning_fa": "راکت (تنیس)", "example_en": "He bought a new tennis racket.", "photo": "media/vocab/racket.jpg"}, {"word": "real", "phonetic": "rɪəl", "levels": ["b1"], "pos": "adjective", "meaning_en": "existing truly, not fake", "meaning_fa": "واقعی، حقیقی", "example_en": "Is that a real diamond?", "photo": "media/vocab/real.jpg"}, {"word": "really [very]", "phonetic": "ˈrɪəli", "levels": ["b1"], "pos": "adverb", "meaning_en": "very much, to a great degree", "meaning_fa": "خیلی، واقعاً", "example_en": "The food was really delicious.", "photo": "media/vocab/really-very.jpg"}, {"word": "reasonably (good)", "phonetic": null, "levels": ["b2"], "pos": "adverb", "meaning_en": "quite good, fairly good", "meaning_fa": "نسبتاً خوب", "example_en": "The weather was reasonably good for our picnic.", "photo": "media/vocab/reasonably-good.jpg"}, {"word": "red-haired", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having hair that is red or reddish-orange.", "meaning_fa": "مو قرمز", "example_en": "She is a tall, red-haired woman.", "photo": "media/vocab/red-haired.jpg"}, {"word": "ring", "phonetic": "rɪŋ", "levels": ["b2"], "pos": "noun", "meaning_en": "A piece of jewellery worn on a finger.", "meaning_fa": "انگشتر", "example_en": "She wears a beautiful gold ring.", "photo": "media/vocab/ring.jpg"}, {"word": "roar", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make a loud, deep sound like a lion.", "meaning_fa": "غرش کردن، فریاد زدن", "example_en": "The lion roared loudly in its cage.", "photo": "media/vocab/roar.jpg"}, {"word": "rosy-cheeked", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having pink, healthy-looking cheeks.", "meaning_fa": "گلگون، سرخ‌گونه", "example_en": "The child was rosy-cheeked after playing outside.", "photo": "media/vocab/rosy-cheeked.jpg"}, {"word": "rough", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Not smooth or even.", "meaning_fa": "زبر، ناهموار", "example_en": "The road was rough, full of stones.", "photo": "media/vocab/rough.jpg"}, {"word": "round [shape]", "phonetic": "raʊnd", "levels": ["b1"], "pos": "adjective", "meaning_en": "Shaped like a circle or ball.", "meaning_fa": "گرد، دایره‌ای", "example_en": "The table was round, not square.", "photo": "media/vocab/round-shape.jpg"}, {"word": "rubber", "phonetic": "ˈrʌbə", "levels": ["b1"], "pos": "noun", "meaning_en": "A small piece of material used to erase pencil marks.", "meaning_fa": "پاک‌کن", "example_en": "I use a rubber to correct my drawings.", "photo": "media/vocab/rubber.jpg"}, {"word": "rumble", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make a deep, continuous, low sound.", "meaning_fa": "غرش کردن، صدا کردن (شکم)", "example_en": "My stomach started to rumble because I was hungry.", "photo": "media/vocab/rumble.jpg"}, {"word": "run-down", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "In poor condition; neglected.", "meaning_fa": "فرسوده، مخروبه", "example_en": "The old building looked very run-down.", "photo": "media/vocab/run-down-2.jpg"}, {"word": "rustle", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make a soft, dry sound, like leaves moving.", "meaning_fa": "خش‌خش کردن", "example_en": "The dry leaves rustled in the wind.", "photo": "media/vocab/rustle.jpg"}, {"word": "screech", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make a loud, unpleasant, high-pitched sound.", "meaning_fa": "جیغ کشیدن (صدای ناخوشایند)", "example_en": "The car screeched to a halt.", "photo": "media/vocab/screech.jpg"}, {"word": "self-centred", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Thinking only about yourself.", "meaning_fa": "خودخواه", "example_en": "He is very self-centred and rarely listens.", "photo": "media/vocab/self-centred.jpg"}, {"word": "semi-circle", "phonetic": "ˈsemiˈsɜːkəl", "levels": ["b1"], "pos": "noun", "meaning_en": "half of a circle", "meaning_fa": "نیم‌دایره", "example_en": "The students sat in a semi-circle around the teacher.", "photo": "media/vocab/semi-circle.jpg"}, {"word": "severe", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "very bad or serious", "meaning_fa": "شدید، وخیم", "example_en": "We had severe weather warnings today.", "photo": "media/vocab/severe.jpg"}, {"word": "shady", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "full of shade; not sunny", "meaning_fa": "سایه‌دار", "example_en": "We found a shady spot under the tree.", "photo": "media/vocab/shady.jpg"}, {"word": "shine", "phonetic": "ʃaɪn", "levels": ["b2"], "pos": "verb", "meaning_en": "to give out light; to be bright", "meaning_fa": "تابیدن، درخشیدن", "example_en": "The sun shines brightly today.", "photo": "media/vocab/shine.jpg"}, {"word": "shiny", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "reflecting light, often smooth and polished", "meaning_fa": "براق، درخشان", "example_en": "She polished the table until it was shiny.", "photo": "media/vocab/shiny.jpg"}, {"word": "shocked", "phonetic": "ʃɒkt", "levels": ["b1"], "pos": "adjective", "meaning_en": "Very surprised and upset by something bad.", "meaning_fa": "شوکه، متعجب", "example_en": "I was shocked to hear the news.", "photo": "media/vocab/shocked.jpg"}, {"word": "shocking", "phonetic": "ˈʃɒkɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Very surprising and upsetting, often in a bad way.", "meaning_fa": "تکان‌دهنده، شوک‌آور", "example_en": "The news about the accident was truly shocking.", "photo": "media/vocab/shocking.jpg"}, {"word": "silk", "phonetic": "sɪlk", "levels": ["b1"], "pos": "noun", "meaning_en": "A soft, smooth, shiny cloth made from worms.", "meaning_fa": "ابریشم", "example_en": "She wore a beautiful silk scarf.", "photo": "media/vocab/silk.jpg"}, {"word": "silky", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Soft and smooth like silk.", "meaning_fa": "ابریشمی، نرم و لطیف", "example_en": "Her hair felt wonderfully silky.", "photo": "media/vocab/silky.jpg"}, {"word": "sky-blue", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "A light blue color, like the sky.", "meaning_fa": "آبی آسمانی", "example_en": "She wore a beautiful sky-blue dress.", "photo": "media/vocab/sky-blue.jpg"}, {"word": "sleek", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Smooth and shiny, often looking elegant.", "meaning_fa": "براق، صیقلی، شیک", "example_en": "The new car has a sleek design.", "photo": "media/vocab/sleek.jpg"}, {"word": "slippery", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Difficult to hold or stand on.", "meaning_fa": "لغزنده، لیز", "example_en": "Be careful, the floor is slippery.", "photo": "media/vocab/slippery.jpg"}, {"word": "smooth", "phonetic": "smuːð", "levels": ["b2"], "pos": "adjective", "meaning_en": "Having an even surface, without bumps.", "meaning_fa": "صاف، هموار", "example_en": "The stone is very smooth.", "photo": "media/vocab/smooth.jpg"}, {"word": "so-called", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Called by that name, but perhaps not truly.", "meaning_fa": "به اصطلاح، به قول معروف", "example_en": "His so-called friend betrayed him.", "photo": "media/vocab/so-called.jpg"}, {"word": "solid", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Hard or firm, not liquid or gas.", "meaning_fa": "جامد، محکم", "example_en": "Ice is water in a solid form.", "photo": "media/vocab/solid.jpg"}, {"word": "solidify", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To become solid or make something solid.", "meaning_fa": "جامد کردن، سفت شدن", "example_en": "The jelly will solidify in the fridge.", "photo": "media/vocab/solidify.jpg"}, {"word": "sombre", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Dark and serious, making you feel sad.", "meaning_fa": "غم‌انگیز، تاریک", "example_en": "The sky was sombre before the storm.", "photo": "media/vocab/sombre.jpg"}, {"word": "sound", "phonetic": "saʊnd", "levels": ["b2"], "pos": "noun", "meaning_en": "Something you hear.", "meaning_fa": "صدا", "example_en": "I heard a strange sound outside.", "photo": "media/vocab/sound.jpg"}, {"word": "sparkle", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To shine brightly with small flashes of light.", "meaning_fa": "درخشیدن، برق زدن", "example_en": "The diamonds sparkle in the light.", "photo": "media/vocab/sparkle.jpg"}, {"word": "sparse", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Present only in small amounts or spread out.", "meaning_fa": "پراکنده، کم‌پشت", "example_en": "The desert has sparse vegetation.", "photo": "media/vocab/sparse.jpg"}, {"word": "square adj, n", "phonetic": "skweə", "levels": ["b1"], "pos": "adjective", "meaning_en": "Having four equal sides and four right angles.", "meaning_fa": "مربع شکل، چهارگوش", "example_en": "The table has a square top.", "photo": "media/vocab/square-adj-n.jpg"}, {"word": "sti", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Difficult or severe, not easy.", "meaning_fa": "دشوار، سخت", "example_en": "The company faces stiff competition.", "photo": "media/vocab/sti.jpg"}, {"word": "stripe", "phonetic": "straɪp", "levels": ["b1"], "pos": "noun", "meaning_en": "A long, narrow line of color.", "meaning_fa": "نوار، خط", "example_en": "The shirt has blue and white stripes.", "photo": "media/vocab/stripe.jpg"}, {"word": "strong", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having great power or force.", "meaning_fa": "قوی، شدید", "example_en": "The strong wind blew down trees.", "photo": "media/vocab/strong.jpg"}, {"word": "stuck-up", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Behaving in an unfriendly way because you think you are better.", "meaning_fa": "از خود راضی، متکبر", "example_en": "She's too stuck-up to talk to us.", "photo": "media/vocab/stuck-up.jpg"}, {"word": "sturdy", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Strong and not easily broken.", "meaning_fa": "محکم، بادوام", "example_en": "The table is very sturdy.", "photo": "media/vocab/sturdy.jpg"}, {"word": "stylish", "phonetic": "ˈstaɪlɪʃ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Fashionable and elegant.", "meaning_fa": "شیک، خوش‌سبک", "example_en": "She always wears stylish clothes.", "photo": "media/vocab/stylish.jpg"}, {"word": "sugar-free", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Containing no sugar.", "meaning_fa": "بدون شکر", "example_en": "I prefer sugar-free drinks for my health.", "photo": "media/vocab/sugar-free.jpg"}, {"word": "suntanned", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having brown skin from being in the sun.", "meaning_fa": "برنزه", "example_en": "He looked very healthy and suntanned after his trip.", "photo": "media/vocab/suntanned.jpg"}, {"word": "surface", "phonetic": "ˈsɜːfɪs", "levels": ["b2"], "pos": "noun", "meaning_en": "The outside or top layer of something.", "meaning_fa": "سطح", "example_en": "The table has a smooth, wooden surface.", "photo": "media/vocab/surface.jpg"}, {"word": "terrible", "phonetic": "ˈterəbəl", "levels": ["a2"], "pos": "adjective", "meaning_en": "Very bad or unpleasant.", "meaning_fa": "وحشتناک، افتضاح", "example_en": "The weather was terrible yesterday.", "photo": "media/vocab/terrible.jpg"}, {"word": "terrific", "phonetic": "təˈrɪfɪk", "levels": ["b1"], "pos": "adjective", "meaning_en": "Excellent; very good.", "meaning_fa": "عالی، فوق‌العاده", "example_en": "We had a terrific time at the party.", "photo": "media/vocab/terrific.jpg"}, {"word": "terrifying", "phonetic": "ˈterəfaɪɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "Extremely frightening; very scary.", "meaning_fa": "وحشتناک، ترسناک", "example_en": "It was a terrifying experience.", "photo": "media/vocab/terrifying.jpg"}, {"word": "texture", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "How something feels when you touch it.", "meaning_fa": "بافت", "example_en": "The fabric has a soft texture.", "photo": "media/vocab/texture.jpg"}, {"word": "thick", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "not intelligent; stupid.", "meaning_fa": "کودن، احمق", "example_en": "He can be a bit thick sometimes.", "photo": "media/vocab/thick.jpg"}, {"word": "thin", "phonetic": "θɪn", "levels": ["b2"], "pos": "adjective", "meaning_en": "having little fat on the body.", "meaning_fa": "لاغر", "example_en": "She is tall and very thin.", "photo": "media/vocab/thin.jpg"}, {"word": "thin-lipped", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "having lips that are narrow.", "meaning_fa": "لب‌نازک", "example_en": "His thin-lipped smile showed little emotion.", "photo": "media/vocab/thin-lipped.jpg"}, {"word": "thud", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a dull, heavy sound, like something falling.", "meaning_fa": "صدای افتادن سنگین", "example_en": "We heard a thud from upstairs.", "photo": "media/vocab/thud.jpg"}, {"word": "tight-fitting", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "clothes that fit very closely to the body.", "meaning_fa": "چسبان، تنگ", "example_en": "She wore a tight-fitting dress.", "photo": "media/vocab/tight-fitting.jpg"}, {"word": "time-consuming", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "taking a lot of time to do.", "meaning_fa": "وقت‌گیر", "example_en": "This task is very time-consuming.", "photo": "media/vocab/time-consuming.jpg"}, {"word": "tiny", "phonetic": "ˈtaɪni", "levels": ["b1"], "pos": "adjective", "meaning_en": "extremely small.", "meaning_fa": "بسیار کوچک، ریز", "example_en": "The baby wore tiny shoes.", "photo": "media/vocab/tiny.jpg"}, {"word": "tired", "phonetic": "taɪəd", "levels": ["b1"], "pos": "adjective", "meaning_en": "feeling sleepy or needing rest.", "meaning_fa": "خسته", "example_en": "I am tired after a long day.", "photo": "media/vocab/tired.jpg"}, {"word": "tiring", "phonetic": "ˈtaɪrəɪŋ", "levels": ["b1"], "pos": "adjective", "meaning_en": "causing you to feel tired.", "meaning_fa": "خسته‌کننده", "example_en": "Running a marathon is very tiring.", "photo": "media/vocab/tiring.jpg"}, {"word": "tissue", "phonetic": "ˈtɪʃuː", "levels": ["b1"], "pos": "noun", "meaning_en": "a soft paper for blowing your nose.", "meaning_fa": "دستمال کاغذی", "example_en": "Do you have a tissue?", "photo": "media/vocab/tissue.jpg"}, {"word": "top-secret", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Extremely secret and known by very few people.", "meaning_fa": "فوق محرمانه", "example_en": "This information is top-secret; don't tell anyone.", "photo": "media/vocab/top-secret.jpg"}, {"word": "tough", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Difficult to do or deal with.", "meaning_fa": "دشوار، سخت", "example_en": "Learning a new language can be tough.", "photo": "media/vocab/tough.jpg"}, {"word": "toy", "phonetic": "tɔɪ", "levels": ["b1"], "pos": "noun", "meaning_en": "An object for children to play with.", "meaning_fa": "اسباب بازی", "example_en": "My favorite toy is a robot.", "photo": "media/vocab/toy.jpg"}, {"word": "transparent", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Allowing light to pass through so you can see.", "meaning_fa": "شفاف، روشن", "example_en": "The window is made of transparent glass.", "photo": "media/vocab/transparent.jpg"}, {"word": "trivial", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Not important or serious; of little value.", "meaning_fa": "بی‌اهمیت، جزئی", "example_en": "Don't worry about such trivial matters.", "photo": "media/vocab/trivial.jpg"}, {"word": "trivialise", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To make something seem less important than it is.", "meaning_fa": "بی‌اهمیت جلوه دادن", "example_en": "Don't trivialise her feelings; they are real.", "photo": "media/vocab/trivialise.jpg"}, {"word": "twinkle", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To shine with a light that changes quickly.", "meaning_fa": "سوسو زدن، چشمک زدن", "example_en": "The stars began to twinkle in the night sky.", "photo": "media/vocab/twinkle.jpg"}, {"word": "two-faced", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Not sincere; saying different things to different people.", "meaning_fa": "دورو، ریاکار", "example_en": "I don't trust him; he's very two-faced.", "photo": "media/vocab/two-faced.jpg"}, {"word": "underfoot", "phonetic": null, "levels": ["b2"], "pos": "adverb", "meaning_en": "On the ground, beneath your feet.", "meaning_fa": "زیر پا، روی زمین", "example_en": "The path was muddy underfoot.", "photo": "media/vocab/underfoot.jpg"}, {"word": "unusually (strong)", "phonetic": null, "levels": ["b2"], "pos": "adverb", "meaning_en": "More than is normal or expected.", "meaning_fa": "به طور غیرمعمول", "example_en": "The coffee was unusually strong this morning.", "photo": "media/vocab/unusually-strong.jpg"}, {"word": "very (bad / good)", "phonetic": "ˈveri", "levels": ["a2"], "pos": "adverb", "meaning_en": "to a great degree; extremely", "meaning_fa": "خیلی، بسیار", "example_en": "The weather was very bad yesterday.", "photo": "media/vocab/very-bad-good.jpg"}, {"word": "vivid", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "producing clear, strong images in the mind", "meaning_fa": "واضح، زنده", "example_en": "I have a vivid memory of that day.", "photo": "media/vocab/vivid.jpg"}, {"word": "warm-hearted", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Kind, friendly, and sympathetic towards others.", "meaning_fa": "مهربان، دلسوز", "example_en": "She is a warm-hearted person who always helps.", "photo": "media/vocab/warm-hearted.jpg"}, {"word": "wavy-haired", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having hair that is not straight but has waves.", "meaning_fa": "دارای موهای موج‌دار", "example_en": "The wavy-haired girl smiled brightly.", "photo": "media/vocab/wavy-haired.jpg"}, {"word": "weak", "phonetic": "wiːk", "levels": ["b2"], "pos": "adjective", "meaning_en": "Not strong; easily broken or tired.", "meaning_fa": "ضعیف", "example_en": "After the illness, he felt very weak.", "photo": "media/vocab/weak.jpg"}, {"word": "weight", "phonetic": "weɪt", "levels": ["b2"], "pos": "noun", "meaning_en": "How heavy someone or something is.", "meaning_fa": "وزن", "example_en": "What is your weight?", "photo": "media/vocab/weight.jpg"}, {"word": "well-dressed", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "wearing nice, fashionable clothes", "meaning_fa": "خوش‌لباس", "example_en": "She always looks well-dressed for work.", "photo": "media/vocab/well-dressed.jpg"}, {"word": "well-o", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "having a lot of money", "meaning_fa": "ثروتمند، پولدار", "example_en": "They are quite well-off and live in a big house.", "photo": "media/vocab/well-o.jpg"}, {"word": "wonderful", "phonetic": "ˈwʌndəfəl", "levels": ["a2", "b1"], "pos": "adjective", "meaning_en": "Very good, excellent, or amazing.", "meaning_fa": "فوق العاده، شگفت انگیز", "example_en": "We had a wonderful time at the party.", "photo": "media/vocab/wonderful.jpg"}, {"word": "wooden", "phonetic": "ˈwʊdən", "levels": ["b1"], "pos": "adjective", "meaning_en": "Made of wood.", "meaning_fa": "چوبی", "example_en": "I have a small wooden box.", "photo": "media/vocab/wooden.jpg"}, {"word": "world-famous", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Known by many people around the world.", "meaning_fa": "مشهور جهانی", "example_en": "The Mona Lisa is a world-famous painting.", "photo": "media/vocab/world-famous.jpg"}, {"word": "worn-out", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Damaged or tired from too much use.", "meaning_fa": "فرسوده، خسته", "example_en": "My old shoes are completely worn-out.", "photo": "media/vocab/worn-out.jpg"}]
+[
+ {
+  "word": "absent-minded",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "often forgetting things or not paying attention",
+  "meaning_fa": "حواس‌پرت",
+  "example_en": "My absent-minded professor often loses his keys.",
+  "photo": "media/vocab/absent-minded.jpg"
+ },
+ {
+  "word": "absolutely",
+  "phonetic": "ˌæbsəˈluːtli",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adverb",
+  "meaning_en": "completely, totally, or definitely",
+  "meaning_fa": "کاملاً، قطعاً",
+  "example_en": "\"Are you sure?\" \"Absolutely!\"",
+  "photo": "media/vocab/absolutely.jpg"
+ },
+ {
+  "word": "air-conditioned",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "having a system that cools the air",
+  "meaning_fa": "دارای تهویه مطبوع",
+  "example_en": "The hotel room was air-conditioned.",
+  "photo": "media/vocab/air-conditioned.jpg"
+ },
+ {
+  "word": "all-out",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Using maximum effort or resources.",
+  "meaning_fa": "تمام‌عیار، با تمام قوا",
+  "example_en": "The team made an all-out effort to win the championship.",
+  "photo": "media/vocab/all-out.jpg"
+ },
+ {
+  "word": "amazed",
+  "phonetic": "əˈmeɪzd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very surprised and impressed.",
+  "meaning_fa": "شگفت‌زده، متحیر",
+  "example_en": "I was amazed by her beautiful singing voice.",
+  "photo": "media/vocab/amazed.jpg"
+ },
+ {
+  "word": "amazing [very good]",
+  "phonetic": "əˈmeɪzɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely good or wonderful.",
+  "meaning_fa": "فوق‌العاده، عالی",
+  "example_en": "The food at that restaurant is amazing.",
+  "photo": "media/vocab/amazing-very-good.jpg"
+ },
+ {
+  "word": "amazing [very surprising]",
+  "phonetic": "əˈmeɪzɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very surprising and difficult to believe.",
+  "meaning_fa": "شگفت‌انگیز، باورنکردنی",
+  "example_en": "It's amazing how fast children grow up.",
+  "photo": "media/vocab/amazing-very-surprising.jpg"
+ },
+ {
+  "word": "annoyed",
+  "phonetic": "əˈnɔɪd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling a little angry or irritated.",
+  "meaning_fa": "کلافه، آزرده",
+  "example_en": "I was annoyed by the loud music.",
+  "photo": "media/vocab/annoyed.jpg"
+ },
+ {
+  "word": "annoying",
+  "phonetic": "əˈnɔɪɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Making you feel a little angry or irritated.",
+  "meaning_fa": "آزاردهنده، کلافه‌کننده",
+  "example_en": "That buzzing sound is very annoying.",
+  "photo": "media/vocab/annoying.jpg"
+ },
+ {
+  "word": "antique n",
+  "phonetic": "ænˈtiːk",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "An old object of high value.",
+  "meaning_fa": "عتیقه، شیء باستانی",
+  "example_en": "My grandmother has many beautiful antiques.",
+  "photo": "media/vocab/antique-n.jpg"
+ },
+ {
+  "word": "artificial",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Made by humans, not natural.",
+  "meaning_fa": "مصنوعی",
+  "example_en": "The flowers were artificial, but looked real.",
+  "photo": "media/vocab/artificial.jpg"
+ },
+ {
+  "word": "awful",
+  "phonetic": "ˈɔːfəl",
+  "levels": [
+   "a2",
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very bad or unpleasant.",
+  "meaning_fa": "وحشتناک، افتضاح",
+  "example_en": "The weather was awful yesterday.",
+  "photo": "media/vocab/awful.jpg"
+ },
+ {
+  "word": "bad",
+  "phonetic": "bæd",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not good; unpleasant or harmful.",
+  "meaning_fa": "بد، ناپسند",
+  "example_en": "The weather was really bad yesterday.",
+  "photo": "media/vocab/bad.jpg"
+ },
+ {
+  "word": "bang",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To hit something hard, making a loud noise.",
+  "meaning_fa": "محکم کوبیدن، صدای بلند",
+  "example_en": "He accidentally banged his head on the low doorframe.",
+  "photo": "media/vocab/bang.jpg"
+ },
+ {
+  "word": "beam",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A long, strong piece of wood or metal.",
+  "meaning_fa": "تیر، ستون",
+  "example_en": "The roof is supported by strong wooden beams.",
+  "photo": "media/vocab/beam.jpg"
+ },
+ {
+  "word": "bell",
+  "phonetic": "bel",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A metal object that makes a sound.",
+  "meaning_fa": "زنگ، زنگوله",
+  "example_en": "The church bell rings every hour.",
+  "photo": "media/vocab/bell.jpg"
+ },
+ {
+  "word": "big-headed",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Thinking you are more important than others.",
+  "meaning_fa": "خودبین، مغرور",
+  "example_en": "He is very big-headed about his new car.",
+  "photo": "media/vocab/big-headed.jpg"
+ },
+ {
+  "word": "bizarre",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very strange or unusual, often in a funny way.",
+  "meaning_fa": "عجیب و غریب",
+  "example_en": "He told a bizarre story about aliens.",
+  "photo": "media/vocab/bizarre.jpg"
+ },
+ {
+  "word": "blue-eyed",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having blue eyes.",
+  "meaning_fa": "چشم آبی",
+  "example_en": "My cousin is a blue-eyed girl with blonde hair.",
+  "photo": "media/vocab/blue-eyed.jpg"
+ },
+ {
+  "word": "bone",
+  "phonetic": "bəʊn",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "Hard white parts inside a body.",
+  "meaning_fa": "استخوان",
+  "example_en": "Dogs love to chew on a bone.",
+  "photo": "media/vocab/bone.jpg"
+ },
+ {
+  "word": "bored",
+  "phonetic": "bɔːd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling tired and unhappy because something is not interesting.",
+  "meaning_fa": "خسته، بی‌حوصله",
+  "example_en": "I was bored during the long meeting.",
+  "photo": "media/vocab/bored.jpg"
+ },
+ {
+  "word": "boring",
+  "phonetic": "ˈbɔːrɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not interesting or exciting.",
+  "meaning_fa": "خسته‌کننده، کسل‌کننده",
+  "example_en": "That movie was so boring.",
+  "photo": "media/vocab/boring.jpg"
+ },
+ {
+  "word": "brand-new",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Completely new; never used before.",
+  "meaning_fa": "کاملاً نو، آکبند",
+  "example_en": "She bought a brand-new car last week.",
+  "photo": "media/vocab/brand-new.jpg"
+ },
+ {
+  "word": "bright",
+  "phonetic": "braɪt",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Full of light; strong in color.",
+  "meaning_fa": "روشن، درخشان",
+  "example_en": "She wore a bright yellow shirt.",
+  "photo": "media/vocab/bright.jpg"
+ },
+ {
+  "word": "brightness",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The quality of being full of light.",
+  "meaning_fa": "روشنایی، درخشندگی",
+  "example_en": "You can adjust the brightness of the screen.",
+  "photo": "media/vocab/brightness.jpg"
+ },
+ {
+  "word": "broad-shouldered",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "having wide shoulders",
+  "meaning_fa": "چهارشانه",
+  "example_en": "He is a tall, broad-shouldered man.",
+  "photo": "media/vocab/broad-shouldered.jpg"
+ },
+ {
+  "word": "bucket",
+  "phonetic": "ˈbʌkɪt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "a round open container with a handle",
+  "meaning_fa": "سطل",
+  "example_en": "Fill the bucket with water.",
+  "photo": "media/vocab/bucket.jpg"
+ },
+ {
+  "word": "built-up",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "an area with many buildings",
+  "meaning_fa": "پرساخت‌وساز، مسکونی",
+  "example_en": "We live in a heavily built-up area.",
+  "photo": "media/vocab/built-up.jpg"
+ },
+ {
+  "word": "bulky",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "large and difficult to carry",
+  "meaning_fa": "حجیم، بزرگ",
+  "example_en": "The package was too bulky to carry.",
+  "photo": "media/vocab/bulky.jpg"
+ },
+ {
+  "word": "bullet-proof",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "able to stop bullets from going through",
+  "meaning_fa": "ضد گلوله",
+  "example_en": "The car had bullet-proof windows.",
+  "photo": "media/vocab/bullet-proof.jpg"
+ },
+ {
+  "word": "business-class",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A more comfortable and expensive section on a plane.",
+  "meaning_fa": "کلاس تجاری (هواپیما)",
+  "example_en": "He always flies business-class for work trips.",
+  "photo": "media/vocab/business-class.jpg"
+ },
+ {
+  "word": "can (of cola)",
+  "phonetic": "kæn",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A metal container holding cola.",
+  "meaning_fa": "قوطی نوشابه",
+  "example_en": "He drank a can of cola.",
+  "photo": "media/vocab/can-of-cola.jpg"
+ },
+ {
+  "word": "characterise",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To describe the typical qualities of someone or something.",
+  "meaning_fa": "مشخص کردن، توصیف کردن",
+  "example_en": "His kindness characterises his personality.",
+  "photo": "media/vocab/characterise.jpg"
+ },
+ {
+  "word": "characteristic",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A typical quality or feature of someone or something.",
+  "meaning_fa": "ویژگی، خصیصه",
+  "example_en": "Politeness is a characteristic of his culture.",
+  "photo": "media/vocab/characteristic.jpg"
+ },
+ {
+  "word": "chime",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make a ringing sound, like a bell.",
+  "meaning_fa": "زنگ زدن، طنین انداختن",
+  "example_en": "The clock chimes every hour.",
+  "photo": "media/vocab/chime.jpg"
+ },
+ {
+  "word": "circle",
+  "phonetic": "ˈsɜːkəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A round shape with no corners.",
+  "meaning_fa": "دایره",
+  "example_en": "Draw a large circle on the paper.",
+  "photo": "media/vocab/circle.jpg"
+ },
+ {
+  "word": "clang",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make a loud, metallic sound.",
+  "meaning_fa": "صدای فلزی دادن",
+  "example_en": "The metal gate clanged shut.",
+  "photo": "media/vocab/clang.jpg"
+ },
+ {
+  "word": "clatter",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make a loud, rattling sound.",
+  "meaning_fa": "صدای تق‌تق کردن",
+  "example_en": "The dishes clattered as she dropped them.",
+  "photo": "media/vocab/clatter.jpg"
+ },
+ {
+  "word": "coarse",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Rough to touch, not smooth.",
+  "meaning_fa": "زبر، خشن",
+  "example_en": "The fabric felt coarse against her skin.",
+  "photo": "media/vocab/coarse.jpg"
+ },
+ {
+  "word": "confused",
+  "phonetic": "kənˈfjuːzd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Unable to understand or think clearly.",
+  "meaning_fa": "گیج، سردرگم",
+  "example_en": "I was confused by the difficult question.",
+  "photo": "media/vocab/confused.jpg"
+ },
+ {
+  "word": "confusing",
+  "phonetic": "kənˈfjuːzɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Difficult to understand; unclear.",
+  "meaning_fa": "گیج کننده",
+  "example_en": "The instructions were very confusing.",
+  "photo": "media/vocab/confusing.jpg"
+ },
+ {
+  "word": "conventional",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Following traditional or accepted ways.",
+  "meaning_fa": "سنتی، مرسوم",
+  "example_en": "She prefers conventional methods of teaching.",
+  "photo": "media/vocab/conventional.jpg"
+ },
+ {
+  "word": "cotton",
+  "phonetic": "ˈkɒtən",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A soft white material from a plant.",
+  "meaning_fa": "پنبه، نخ پنبه",
+  "example_en": "This shirt is made of soft cotton.",
+  "photo": "media/vocab/cotton.jpg"
+ },
+ {
+  "word": "cumbersome",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Large, heavy, and difficult to carry or use.",
+  "meaning_fa": "دست و پا گیر، سنگین",
+  "example_en": "The old machine was very cumbersome.",
+  "photo": "media/vocab/cumbersome.jpg"
+ },
+ {
+  "word": "curly-haired",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having hair that forms curls.",
+  "meaning_fa": "موفرفری",
+  "example_en": "The curly-haired girl smiled brightly.",
+  "photo": "media/vocab/curly-haired.jpg"
+ },
+ {
+  "word": "cut-price",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Sold at a reduced price.",
+  "meaning_fa": "ارزان، تخفیف‌خورده",
+  "example_en": "I bought some cut-price clothes in the sale.",
+  "photo": "media/vocab/cut-price.jpg"
+ },
+ {
+  "word": "dark",
+  "phonetic": "dɑːk",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "With little or no light.",
+  "meaning_fa": "تاریک",
+  "example_en": "It gets dark early in winter.",
+  "photo": "media/vocab/dark.jpg"
+ },
+ {
+  "word": "darkness",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The absence of light.",
+  "meaning_fa": "تاریکی",
+  "example_en": "We couldn't see anything in the darkness.",
+  "photo": "media/vocab/darkness.jpg"
+ },
+ {
+  "word": "dazzling",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely bright, impressive, or beautiful.",
+  "meaning_fa": "خیره‌کننده، درخشان",
+  "example_en": "The fireworks display was truly dazzling.",
+  "photo": "media/vocab/dazzling.jpg"
+ },
+ {
+  "word": "decent",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Good enough or acceptable.",
+  "meaning_fa": "مناسب، خوب، آبرومند",
+  "example_en": "He earns a decent salary at his new job.",
+  "photo": "media/vocab/decent.jpg"
+ },
+ {
+  "word": "delicate",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Easily damaged or needing careful handling.",
+  "meaning_fa": "ظریف، حساس",
+  "example_en": "The antique vase is very delicate.",
+  "photo": "media/vocab/delicate.jpg"
+ },
+ {
+  "word": "delicious",
+  "phonetic": "dɪˈlɪʃəs",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having a very pleasant taste.",
+  "meaning_fa": "خوشمزه",
+  "example_en": "This cake is delicious!",
+  "photo": "media/vocab/delicious.jpg"
+ },
+ {
+  "word": "delighted",
+  "phonetic": "dɪˈlaɪtɪd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very pleased and happy.",
+  "meaning_fa": "خوشحال، مسرور",
+  "example_en": "I was delighted to hear your good news.",
+  "photo": "media/vocab/delighted.jpg"
+ },
+ {
+  "word": "dense",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having parts very close together; thick.",
+  "meaning_fa": "متراکم، انبوه",
+  "example_en": "The forest was very dense and dark.",
+  "photo": "media/vocab/dense.jpg"
+ },
+ {
+  "word": "density",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The degree to which something is dense.",
+  "meaning_fa": "تراکم، چگالی",
+  "example_en": "The population density in the city is high.",
+  "photo": "media/vocab/density.jpg"
+ },
+ {
+  "word": "depressed",
+  "phonetic": "dɪˈprest",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling very sad and without hope.",
+  "meaning_fa": "افسرده",
+  "example_en": "She felt depressed after losing her job.",
+  "photo": "media/vocab/depressed.jpg"
+ },
+ {
+  "word": "depressing",
+  "phonetic": "dɪˈpresɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Making you feel sad and without hope.",
+  "meaning_fa": "افسرده‌کننده",
+  "example_en": "The news was very depressing today.",
+  "photo": "media/vocab/depressing.jpg"
+ },
+ {
+  "word": "dim d?m",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not intelligent or quick to understand.",
+  "meaning_fa": "کم‌هوش، کندذهن",
+  "example_en": "He can be a bit dim sometimes.",
+  "photo": "media/vocab/dim-d-m.jpg"
+ },
+ {
+  "word": "disappointed",
+  "phonetic": "ˌdɪsəˈpɔɪntɪd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Sad because something was not as good as expected.",
+  "meaning_fa": "ناامید",
+  "example_en": "I was disappointed with the movie.",
+  "photo": "media/vocab/disappointed.jpg"
+ },
+ {
+  "word": "disappointing",
+  "phonetic": "ˌdɪsəˈpɔɪntɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not as good as you hoped.",
+  "meaning_fa": "ناامیدکننده",
+  "example_en": "The results were quite disappointing.",
+  "photo": "media/vocab/disappointing.jpg"
+ },
+ {
+  "word": "dreadful",
+  "phonetic": "ˈdredfəl",
+  "levels": [
+   "a2",
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very bad or unpleasant.",
+  "meaning_fa": "وحشتناک، افتضاح",
+  "example_en": "The weather was dreadful yesterday.",
+  "photo": "media/vocab/dreadful.jpg"
+ },
+ {
+  "word": "dull",
+  "phonetic": "dʌl",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not interesting or exciting.",
+  "meaning_fa": "خسته‌کننده، کسل‌کننده",
+  "example_en": "The town was very dull.",
+  "photo": "media/vocab/dull.jpg"
+ },
+ {
+  "word": "duty-free",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective, adverb",
+  "meaning_en": "Without paying government tax.",
+  "meaning_fa": "معاف از گمرک",
+  "example_en": "You can buy alcohol duty-free at the airport.",
+  "photo": "media/vocab/duty-free-2.jpg"
+ },
+ {
+  "word": "easy-going",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relaxed and not easily worried or annoyed.",
+  "meaning_fa": "خوش‌مشرب، بی‌خیال",
+  "example_en": "My friend is very easy-going and always happy.",
+  "photo": "media/vocab/easy-going.jpg"
+ },
+ {
+  "word": "embarrassed",
+  "phonetic": "ɪmˈbærəst",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling shy or ashamed about something.",
+  "meaning_fa": "خجالت‌زده",
+  "example_en": "I felt embarrassed when I fell.",
+  "photo": "media/vocab/embarrassed.jpg"
+ },
+ {
+  "word": "embarrassing",
+  "phonetic": "ɪmˈbærəsɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Making you feel shy or ashamed.",
+  "meaning_fa": "خجالت‌آور",
+  "example_en": "It was embarrassing when I forgot her name.",
+  "photo": "media/vocab/embarrassing.jpg"
+ },
+ {
+  "word": "enormous",
+  "phonetic": "ɪˈnɔːməs",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely large.",
+  "meaning_fa": "عظیم، بزرگ",
+  "example_en": "The elephant is an enormous animal.",
+  "photo": "media/vocab/enormous.jpg"
+ },
+ {
+  "word": "entire",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "The whole of something; complete.",
+  "meaning_fa": "کامل، تمام",
+  "example_en": "He ate the entire cake by himself.",
+  "photo": "media/vocab/entire.jpg"
+ },
+ {
+  "word": "essential",
+  "phonetic": "ɪˈsenʃəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Absolutely necessary or important.",
+  "meaning_fa": "ضروری، حیاتی",
+  "example_en": "Water is essential for life.",
+  "photo": "media/vocab/essential.jpg"
+ },
+ {
+  "word": "excellent",
+  "phonetic": "ˈeksələnt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely good; outstanding.",
+  "meaning_fa": "عالی، فوق‌العاده",
+  "example_en": "That was an excellent meal!",
+  "photo": "media/vocab/excellent.jpg"
+ },
+ {
+  "word": "exhausted",
+  "phonetic": "ɪgˈzɔːstɪd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very tired.",
+  "meaning_fa": "خسته، از پا افتاده",
+  "example_en": "I was exhausted after the long trip.",
+  "photo": "media/vocab/exhausted.jpg"
+ },
+ {
+  "word": "fake",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not real, but made to look real.",
+  "meaning_fa": "تقلبی، جعلی",
+  "example_en": "He was wearing a fake designer watch.",
+  "photo": "media/vocab/fake.jpg"
+ },
+ {
+  "word": "far-fetched",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Unlikely to be true; difficult to believe.",
+  "meaning_fa": "بعید، غیرقابل باور",
+  "example_en": "The plot of the movie was a bit far-fetched.",
+  "photo": "media/vocab/far-fetched.jpg"
+ },
+ {
+  "word": "fascinating",
+  "phonetic": "ˈfæsɪneɪtɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very interesting and attractive.",
+  "meaning_fa": "جذاب، دلربا",
+  "example_en": "The book was so fascinating, I couldn't put it down.",
+  "photo": "media/vocab/fascinating.jpg"
+ },
+ {
+  "word": "faulty",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not working correctly; having a fault.",
+  "meaning_fa": "معیوب، خراب",
+  "example_en": "The faulty printer needs to be repaired.",
+  "photo": "media/vocab/faulty.jpg"
+ },
+ {
+  "word": "feel",
+  "phonetic": "fiːl",
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To experience a physical sensation.",
+  "meaning_fa": "حس کردن، احساس کردن",
+  "example_en": "I feel cold today.",
+  "photo": "media/vocab/feel.jpg"
+ },
+ {
+  "word": "fine n, adj",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun, adjective",
+  "meaning_en": "(n) Money paid as punishment. (adj) Very good.",
+  "meaning_fa": "(اسم) جریمه، (صفت) خوب",
+  "example_en": "The police gave him a fine for parking.",
+  "photo": "media/vocab/fine-n-adj.jpg"
+ },
+ {
+  "word": "first-born",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "The first child born to parents.",
+  "meaning_fa": "فرزند اول، نخست‌زاده",
+  "example_en": "My first-born son is starting school next year.",
+  "photo": "media/vocab/first-born.jpg"
+ },
+ {
+  "word": "first-class",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Of the highest quality or best standard.",
+  "meaning_fa": "درجه یک، عالی",
+  "example_en": "The hotel offers first-class service to all guests.",
+  "photo": "media/vocab/first-class.jpg"
+ },
+ {
+  "word": "first-hand",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Experienced or learned directly, not from others.",
+  "meaning_fa": "دست اول، مستقیم",
+  "example_en": "She has first-hand experience working with animals.",
+  "photo": "media/vocab/first-hand.jpg"
+ },
+ {
+  "word": "flag",
+  "phonetic": "flæg",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A piece of cloth with a design, representing a country.",
+  "meaning_fa": "پرچم",
+  "example_en": "The flag of my country is red, white, and green.",
+  "photo": "media/vocab/flag.jpg"
+ },
+ {
+  "word": "flexible",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Able to change easily or bend without breaking.",
+  "meaning_fa": "منعطف، قابل تغییر",
+  "example_en": "Our plans are flexible, so we can change them.",
+  "photo": "media/vocab/flexible.jpg"
+ },
+ {
+  "word": "flicker",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To shine unsteadily, quickly going on and off.",
+  "meaning_fa": "سوسو زدن، چشمک زدن",
+  "example_en": "The candle flame began to flicker.",
+  "photo": "media/vocab/flicker.jpg"
+ },
+ {
+  "word": "fragile",
+  "phonetic": "ˈfræʤaɪl",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "easily broken or damaged.",
+  "meaning_fa": "شکننده",
+  "example_en": "Be careful, the glass is fragile.",
+  "photo": "media/vocab/fragile.jpg"
+ },
+ {
+  "word": "fur",
+  "phonetic": "fɜː",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "the soft hair on an animal's body.",
+  "meaning_fa": "خز، پشم",
+  "example_en": "The cat has soft fur.",
+  "photo": "media/vocab/fur.jpg"
+ },
+ {
+  "word": "furry",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "covered with soft hair or fur.",
+  "meaning_fa": "پشمالو، خزدار",
+  "example_en": "The cat has soft, furry paws.",
+  "photo": "media/vocab/furry.jpg"
+ },
+ {
+  "word": "genuine",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "real, true, and not fake.",
+  "meaning_fa": "واقعی، اصیل، حقیقی",
+  "example_en": "Is this a genuine antique vase?",
+  "photo": "media/vocab/genuine.jpg"
+ },
+ {
+  "word": "glare",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A strong, unpleasant light.",
+  "meaning_fa": "نور خیره کننده",
+  "example_en": "The glare from the sun hurt my eyes.",
+  "photo": "media/vocab/glare.jpg"
+ },
+ {
+  "word": "glitter",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To shine brightly with small, sparkling flashes.",
+  "meaning_fa": "درخشیدن، برق زدن",
+  "example_en": "The snow glittered in the sunlight.",
+  "photo": "media/vocab/glitter.jpg"
+ },
+ {
+  "word": "gloomy",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Dark and depressing; feeling sad.",
+  "meaning_fa": "تاریک و دلگیر، غمگین",
+  "example_en": "The weather was gloomy all day.",
+  "photo": "media/vocab/gloomy.jpg"
+ },
+ {
+  "word": "glow",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To produce a soft, steady light.",
+  "meaning_fa": "درخشش ملایم داشتن",
+  "example_en": "The embers glowed in the fireplace.",
+  "photo": "media/vocab/glow.jpg"
+ },
+ {
+  "word": "good",
+  "phonetic": "gʊd",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Of high quality or standard.",
+  "meaning_fa": "خوب",
+  "example_en": "This is a very good book.",
+  "photo": "media/vocab/good.jpg"
+ },
+ {
+  "word": "good-tempered",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "someone who is usually calm and does not get angry easily.",
+  "meaning_fa": "خوش‌اخلاق، خوش‌رو",
+  "example_en": "My grandmother is very good-tempered.",
+  "photo": "media/vocab/good-tempered.jpg"
+ },
+ {
+  "word": "great",
+  "phonetic": "greɪt",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "very good or excellent.",
+  "meaning_fa": "عالی، فوق‌العاده",
+  "example_en": "We had a great time at the party.",
+  "photo": "media/vocab/great.jpg"
+ },
+ {
+  "word": "grey",
+  "phonetic": "greɪ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "a color between black and white.",
+  "meaning_fa": "خاکستری",
+  "example_en": "The sky was grey and cloudy.",
+  "photo": "media/vocab/grey.jpg"
+ },
+ {
+  "word": "handmade",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Made by a person, not a machine.",
+  "meaning_fa": "دست‌ساز",
+  "example_en": "She sells beautiful handmade jewelry.",
+  "photo": "media/vocab/handmade.jpg"
+ },
+ {
+  "word": "hard-up",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having very little money.",
+  "meaning_fa": "بی‌پول، فقیر",
+  "example_en": "After losing his job, he was hard-up.",
+  "photo": "media/vocab/hard-up.jpg"
+ },
+ {
+  "word": "heavy as lead",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Extremely heavy.",
+  "meaning_fa": "بسیار سنگین",
+  "example_en": "This suitcase is heavy as lead!",
+  "photo": "media/vocab/heavy-as-lead.jpg"
+ },
+ {
+  "word": "hiss",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make a sound like a long 's'.",
+  "meaning_fa": "فیش فیش کردن، هیس کشیدن",
+  "example_en": "The snake hissed loudly at us.",
+  "photo": "media/vocab/hiss.jpg"
+ },
+ {
+  "word": "hollow",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Empty inside.",
+  "meaning_fa": "توخالی",
+  "example_en": "The tree trunk was hollow inside.",
+  "photo": "media/vocab/hollow.jpg"
+ },
+ {
+  "word": "horrible",
+  "phonetic": "ˈhɒrəbl",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very bad or unpleasant.",
+  "meaning_fa": "وحشتناک، افتضاح",
+  "example_en": "The food tasted horrible.",
+  "photo": "media/vocab/horrible.jpg"
+ },
+ {
+  "word": "How (awful)",
+  "phonetic": "haʊ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "Used to express strong feelings about something.",
+  "meaning_fa": "چقدر، چه",
+  "example_en": "How beautiful this flower is!",
+  "photo": "media/vocab/how-awful.jpg"
+ },
+ {
+  "word": "huge",
+  "phonetic": "hjuːʤ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very, very big.",
+  "meaning_fa": "عظیم، بزرگ",
+  "example_en": "They live in a huge house.",
+  "photo": "media/vocab/huge.jpg"
+ },
+ {
+  "word": "hum",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To sing a tune with closed lips.",
+  "meaning_fa": "زمزمه کردن، همهمه کردن",
+  "example_en": "She started to hum a happy song.",
+  "photo": "media/vocab/hum.jpg"
+ },
+ {
+  "word": "interest-free",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Without any extra charge for borrowing money.",
+  "meaning_fa": "بدون بهره",
+  "example_en": "You can buy it with an interest-free loan.",
+  "photo": "media/vocab/interest-free.jpg"
+ },
+ {
+  "word": "jagged",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having sharp, uneven points or edges.",
+  "meaning_fa": "دندانه‌دار، ناهموار",
+  "example_en": "The broken glass had jagged edges.",
+  "photo": "media/vocab/jagged.jpg"
+ },
+ {
+  "word": "ladder",
+  "phonetic": "ˈlædə",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A piece of equipment for climbing up or down.",
+  "meaning_fa": "نردبان",
+  "example_en": "He used a ladder to reach the high shelf.",
+  "photo": "media/vocab/ladder.jpg"
+ },
+ {
+  "word": "last-minute",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Done or happening at the latest possible time.",
+  "meaning_fa": "لحظه آخری",
+  "example_en": "We made a last-minute decision to go.",
+  "photo": "media/vocab/last-minute.jpg"
+ },
+ {
+  "word": "leather",
+  "phonetic": "ˈleðə",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "Animal skin used for shoes, bags, etc.",
+  "meaning_fa": "چرم",
+  "example_en": "My new shoes are made of leather.",
+  "photo": "media/vocab/leather.jpg"
+ },
+ {
+  "word": "le-handed",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Using your left hand more easily.",
+  "meaning_fa": "چپ‌دست",
+  "example_en": "My brother is left-handed and writes well.",
+  "photo": "media/vocab/le-handed.jpg"
+ },
+ {
+  "word": "light as a feather",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Very light in weight.",
+  "meaning_fa": "سبک مثل پر",
+  "example_en": "The package was light as a feather.",
+  "photo": "media/vocab/light-as-a-feather.jpg"
+ },
+ {
+  "word": "long-distance",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "travelling or communicating over a great distance.",
+  "meaning_fa": "مسافت طولانی، راه دور",
+  "example_en": "She runs long-distance races every weekend.",
+  "photo": "media/vocab/long-distance.jpg"
+ },
+ {
+  "word": "long-haired",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "having hair that is long.",
+  "meaning_fa": "موبلند",
+  "example_en": "The long-haired cat slept on the sofa.",
+  "photo": "media/vocab/long-haired.jpg"
+ },
+ {
+  "word": "long-legged",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "having legs that are long.",
+  "meaning_fa": "پابلند",
+  "example_en": "The long-legged bird walked through the water.",
+  "photo": "media/vocab/long-legged.jpg"
+ },
+ {
+  "word": "long-standing",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "existing or happening for a long time.",
+  "meaning_fa": "دیرینه، طولانی مدت",
+  "example_en": "They have a long-standing friendship of over twenty years.",
+  "photo": "media/vocab/long-standing.jpg"
+ },
+ {
+  "word": "lovely",
+  "phonetic": "ˈlʌvli",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "very pleasant or beautiful.",
+  "meaning_fa": "دوست‌داشتنی، زیبا",
+  "example_en": "What a lovely day it is!",
+  "photo": "media/vocab/lovely.jpg"
+ },
+ {
+  "word": "marvellous",
+  "phonetic": "ˈmɑːvələs",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely good or wonderful.",
+  "meaning_fa": "شگفت‌انگیز، عالی",
+  "example_en": "What a marvellous idea!",
+  "photo": "media/vocab/marvellous.jpg"
+ },
+ {
+  "word": "material",
+  "phonetic": "məˈtɪəriəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The substance from which something is made.",
+  "meaning_fa": "ماده، جنس",
+  "example_en": "What material is this shirt made of?",
+  "photo": "media/vocab/material.jpg"
+ },
+ {
+  "word": "national",
+  "phonetic": "ˈnæʃənəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Related to a whole country.",
+  "meaning_fa": "ملی، کشوری",
+  "example_en": "We watched the national news.",
+  "photo": "media/vocab/national.jpg"
+ },
+ {
+  "word": "natural",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Existing in nature, not made by humans.",
+  "meaning_fa": "طبیعی",
+  "example_en": "We need to protect our natural environment.",
+  "photo": "media/vocab/natural.jpg"
+ },
+ {
+  "word": "navy blue",
+  "phonetic": "ˈneɪvi bluː",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A very dark blue color.",
+  "meaning_fa": "سرمه‌ای",
+  "example_en": "He wore a smart navy blue suit.",
+  "photo": "media/vocab/navy-blue.jpg"
+ },
+ {
+  "word": "never-ending",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Seeming to continue forever.",
+  "meaning_fa": "بی‌پایان، تمام‌نشدنی",
+  "example_en": "The journey felt never-ending.",
+  "photo": "media/vocab/never-ending.jpg"
+ },
+ {
+  "word": "nice",
+  "phonetic": "naɪs",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Kind, friendly, and pleasant.",
+  "meaning_fa": "خوب، مهربان",
+  "example_en": "She is a very nice person.",
+  "photo": "media/vocab/nice.jpg"
+ },
+ {
+  "word": "noise",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A sound, often loud or unpleasant.",
+  "meaning_fa": "سر و صدا، همهمه",
+  "example_en": "The loud noise woke me up.",
+  "photo": "media/vocab/noise.jpg"
+ },
+ {
+  "word": "not bad",
+  "phonetic": "nɒt bæd",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Quite good or acceptable.",
+  "meaning_fa": "بد نیست، خوب است",
+  "example_en": "The food was not bad.",
+  "photo": "media/vocab/not-bad.jpg"
+ },
+ {
+  "word": "object n",
+  "phonetic": "ˈɒbʤɪkt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A non-living thing you can see or touch.",
+  "meaning_fa": "شیء، جسم",
+  "example_en": "What is that strange object?",
+  "photo": "media/vocab/object-n.jpg"
+ },
+ {
+  "word": "opaque",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not transparent; light cannot pass through.",
+  "meaning_fa": "مات، کدر",
+  "example_en": "The window was opaque, so I couldn't see outside.",
+  "photo": "media/vocab/opaque.jpg"
+ },
+ {
+  "word": "open-necked",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A shirt or dress with an open collar.",
+  "meaning_fa": "یقه باز",
+  "example_en": "He wore an open-necked shirt to the party.",
+  "photo": "media/vocab/open-necked.jpg"
+ },
+ {
+  "word": "open-toed",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Shoes or sandals with an opening for the toes.",
+  "meaning_fa": "جلو باز (کفش)",
+  "example_en": "She wore open-toed sandals in summer.",
+  "photo": "media/vocab/open-toed.jpg"
+ },
+ {
+  "word": "o-peak",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not during the busiest or most popular times.",
+  "meaning_fa": "خارج از اوج، کم‌ترافیک",
+  "example_en": "Off-peak travel is cheaper.",
+  "photo": "media/vocab/o-peak.jpg"
+ },
+ {
+  "word": "part-time",
+  "phonetic": "ˌpɑːtˈtaɪm",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Working fewer hours than a full working week.",
+  "meaning_fa": "پاره‌وقت",
+  "example_en": "She works part-time while studying at university.",
+  "photo": "media/vocab/part-time.jpg"
+ },
+ {
+  "word": "patter",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A sound of light, quick taps.",
+  "meaning_fa": "صدای ضربات ریز",
+  "example_en": "We heard the gentle patter of rain on the roof.",
+  "photo": "media/vocab/patter.jpg"
+ },
+ {
+  "word": "perfect",
+  "phonetic": "ˈpɜːfəkt",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Without any mistakes or flaws; excellent.",
+  "meaning_fa": "عالی، کامل",
+  "example_en": "The weather is perfect for a picnic.",
+  "photo": "media/vocab/perfect.jpg"
+ },
+ {
+  "word": "pink",
+  "phonetic": "pɪŋk",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "a pale red color.",
+  "meaning_fa": "صورتی",
+  "example_en": "Her dress is a lovely pink color.",
+  "photo": "media/vocab/pink.jpg"
+ },
+ {
+  "word": "plastic",
+  "phonetic": "ˈplæstɪk",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "made from a light, strong, artificial material.",
+  "meaning_fa": "پلاستیکی",
+  "example_en": "Don't forget your plastic shopping bag.",
+  "photo": "media/vocab/plastic.jpg"
+ },
+ {
+  "word": "pointed",
+  "phonetic": "ˈpɔɪntɪd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having a sharp end.",
+  "meaning_fa": "نوک‌تیز، نوک‌دار",
+  "example_en": "The pencil has a pointed tip.",
+  "photo": "media/vocab/pointed.jpg"
+ },
+ {
+  "word": "polished",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Smooth and shiny because it has been rubbed.",
+  "meaning_fa": "صیقلی، براق",
+  "example_en": "The old table was beautifully polished.",
+  "photo": "media/vocab/polished.jpg"
+ },
+ {
+  "word": "precise",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Exact and accurate.",
+  "meaning_fa": "دقیق، صحیح",
+  "example_en": "Give me the precise time.",
+  "photo": "media/vocab/precise.jpg"
+ },
+ {
+  "word": "pretty (thick)",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "Quite or rather, to some extent.",
+  "meaning_fa": "نسبتاً، کاملاً",
+  "example_en": "The book is pretty thick.",
+  "photo": "media/vocab/pretty-thick.jpg"
+ },
+ {
+  "word": "prickly",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Covered with sharp points; easily annoyed.",
+  "meaning_fa": "خاردار، زودرنج",
+  "example_en": "The cactus has prickly leaves.",
+  "photo": "media/vocab/prickly.jpg"
+ },
+ {
+  "word": "purple",
+  "phonetic": "ˈpɜːpəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A color that is a mix of red and blue.",
+  "meaning_fa": "بنفش",
+  "example_en": "She wore a beautiful purple dress to the party.",
+  "photo": "media/vocab/purple.jpg"
+ },
+ {
+  "word": "quick-witted",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "able to think and respond quickly and cleverly",
+  "meaning_fa": "باهوش، حاضر جواب",
+  "example_en": "She is quick-witted and always has a clever answer.",
+  "photo": "media/vocab/quick-witted.jpg"
+ },
+ {
+  "word": "racket",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a bat with strings used in tennis",
+  "meaning_fa": "راکت (تنیس)",
+  "example_en": "He bought a new tennis racket.",
+  "photo": "media/vocab/racket.jpg"
+ },
+ {
+  "word": "real",
+  "phonetic": "rɪəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "existing truly, not fake",
+  "meaning_fa": "واقعی، حقیقی",
+  "example_en": "Is that a real diamond?",
+  "photo": "media/vocab/real.jpg"
+ },
+ {
+  "word": "really [very]",
+  "phonetic": "ˈrɪəli",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adverb",
+  "meaning_en": "very much, to a great degree",
+  "meaning_fa": "خیلی، واقعاً",
+  "example_en": "The food was really delicious.",
+  "photo": "media/vocab/really-very.jpg"
+ },
+ {
+  "word": "reasonably (good)",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "quite good, fairly good",
+  "meaning_fa": "نسبتاً خوب",
+  "example_en": "The weather was reasonably good for our picnic.",
+  "photo": "media/vocab/reasonably-good.jpg"
+ },
+ {
+  "word": "red-haired",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having hair that is red or reddish-orange.",
+  "meaning_fa": "مو قرمز",
+  "example_en": "She is a tall, red-haired woman.",
+  "photo": "media/vocab/red-haired.jpg"
+ },
+ {
+  "word": "ring",
+  "phonetic": "rɪŋ",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A piece of jewellery worn on a finger.",
+  "meaning_fa": "انگشتر",
+  "example_en": "She wears a beautiful gold ring.",
+  "photo": "media/vocab/ring.jpg"
+ },
+ {
+  "word": "roar",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make a loud, deep sound like a lion.",
+  "meaning_fa": "غرش کردن، فریاد زدن",
+  "example_en": "The lion roared loudly in its cage.",
+  "photo": "media/vocab/roar.jpg"
+ },
+ {
+  "word": "rosy-cheeked",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having pink, healthy-looking cheeks.",
+  "meaning_fa": "گلگون، سرخ‌گونه",
+  "example_en": "The child was rosy-cheeked after playing outside.",
+  "photo": "media/vocab/rosy-cheeked.jpg"
+ },
+ {
+  "word": "rough",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not smooth or even.",
+  "meaning_fa": "زبر، ناهموار",
+  "example_en": "The road was rough, full of stones.",
+  "photo": "media/vocab/rough.jpg"
+ },
+ {
+  "word": "round [shape]",
+  "phonetic": "raʊnd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Shaped like a circle or ball.",
+  "meaning_fa": "گرد، دایره‌ای",
+  "example_en": "The table was round, not square.",
+  "photo": "media/vocab/round-shape.jpg"
+ },
+ {
+  "word": "rubber",
+  "phonetic": "ˈrʌbə",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A small piece of material used to erase pencil marks.",
+  "meaning_fa": "پاک‌کن",
+  "example_en": "I use a rubber to correct my drawings.",
+  "photo": "media/vocab/rubber.jpg"
+ },
+ {
+  "word": "rumble",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make a deep, continuous, low sound.",
+  "meaning_fa": "غرش کردن، صدا کردن (شکم)",
+  "example_en": "My stomach started to rumble because I was hungry.",
+  "photo": "media/vocab/rumble.jpg"
+ },
+ {
+  "word": "run-down",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "In poor condition; neglected.",
+  "meaning_fa": "فرسوده، مخروبه",
+  "example_en": "The old building looked very run-down.",
+  "photo": "media/vocab/run-down-2.jpg"
+ },
+ {
+  "word": "rustle",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make a soft, dry sound, like leaves moving.",
+  "meaning_fa": "خش‌خش کردن",
+  "example_en": "The dry leaves rustled in the wind.",
+  "photo": "media/vocab/rustle.jpg"
+ },
+ {
+  "word": "screech",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make a loud, unpleasant, high-pitched sound.",
+  "meaning_fa": "جیغ کشیدن (صدای ناخوشایند)",
+  "example_en": "The car screeched to a halt.",
+  "photo": "media/vocab/screech.jpg"
+ },
+ {
+  "word": "self-centred",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Thinking only about yourself.",
+  "meaning_fa": "خودخواه",
+  "example_en": "He is very self-centred and rarely listens.",
+  "photo": "media/vocab/self-centred.jpg"
+ },
+ {
+  "word": "semi-circle",
+  "phonetic": "ˈsemiˈsɜːkəl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "half of a circle",
+  "meaning_fa": "نیم‌دایره",
+  "example_en": "The students sat in a semi-circle around the teacher.",
+  "photo": "media/vocab/semi-circle.jpg"
+ },
+ {
+  "word": "severe",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "very bad or serious",
+  "meaning_fa": "شدید، وخیم",
+  "example_en": "We had severe weather warnings today.",
+  "photo": "media/vocab/severe.jpg"
+ },
+ {
+  "word": "shady",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "full of shade; not sunny",
+  "meaning_fa": "سایه‌دار",
+  "example_en": "We found a shady spot under the tree.",
+  "photo": "media/vocab/shady.jpg"
+ },
+ {
+  "word": "shine",
+  "phonetic": "ʃaɪn",
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "to give out light; to be bright",
+  "meaning_fa": "تابیدن، درخشیدن",
+  "example_en": "The sun shines brightly today.",
+  "photo": "media/vocab/shine.jpg"
+ },
+ {
+  "word": "shiny",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "reflecting light, often smooth and polished",
+  "meaning_fa": "براق، درخشان",
+  "example_en": "She polished the table until it was shiny.",
+  "photo": "media/vocab/shiny.jpg"
+ },
+ {
+  "word": "shocked",
+  "phonetic": "ʃɒkt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very surprised and upset by something bad.",
+  "meaning_fa": "شوکه، متعجب",
+  "example_en": "I was shocked to hear the news.",
+  "photo": "media/vocab/shocked.jpg"
+ },
+ {
+  "word": "shocking",
+  "phonetic": "ˈʃɒkɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very surprising and upsetting, often in a bad way.",
+  "meaning_fa": "تکان‌دهنده، شوک‌آور",
+  "example_en": "The news about the accident was truly shocking.",
+  "photo": "media/vocab/shocking.jpg"
+ },
+ {
+  "word": "silk",
+  "phonetic": "sɪlk",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A soft, smooth, shiny cloth made from worms.",
+  "meaning_fa": "ابریشم",
+  "example_en": "She wore a beautiful silk scarf.",
+  "photo": "media/vocab/silk.jpg"
+ },
+ {
+  "word": "silky",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Soft and smooth like silk.",
+  "meaning_fa": "ابریشمی، نرم و لطیف",
+  "example_en": "Her hair felt wonderfully silky.",
+  "photo": "media/vocab/silky.jpg"
+ },
+ {
+  "word": "sky-blue",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A light blue color, like the sky.",
+  "meaning_fa": "آبی آسمانی",
+  "example_en": "She wore a beautiful sky-blue dress.",
+  "photo": "media/vocab/sky-blue.jpg"
+ },
+ {
+  "word": "sleek",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Smooth and shiny, often looking elegant.",
+  "meaning_fa": "براق، صیقلی، شیک",
+  "example_en": "The new car has a sleek design.",
+  "photo": "media/vocab/sleek.jpg"
+ },
+ {
+  "word": "slippery",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Difficult to hold or stand on.",
+  "meaning_fa": "لغزنده، لیز",
+  "example_en": "Be careful, the floor is slippery.",
+  "photo": "media/vocab/slippery.jpg"
+ },
+ {
+  "word": "smooth",
+  "phonetic": "smuːð",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having an even surface, without bumps.",
+  "meaning_fa": "صاف، هموار",
+  "example_en": "The stone is very smooth.",
+  "photo": "media/vocab/smooth.jpg"
+ },
+ {
+  "word": "so-called",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Called by that name, but perhaps not truly.",
+  "meaning_fa": "به اصطلاح، به قول معروف",
+  "example_en": "His so-called friend betrayed him.",
+  "photo": "media/vocab/so-called.jpg"
+ },
+ {
+  "word": "solid",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Hard or firm, not liquid or gas.",
+  "meaning_fa": "جامد، محکم",
+  "example_en": "Ice is water in a solid form.",
+  "photo": "media/vocab/solid.jpg"
+ },
+ {
+  "word": "solidify",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To become solid or make something solid.",
+  "meaning_fa": "جامد کردن، سفت شدن",
+  "example_en": "The jelly will solidify in the fridge.",
+  "photo": "media/vocab/solidify.jpg"
+ },
+ {
+  "word": "sombre",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Dark and serious, making you feel sad.",
+  "meaning_fa": "غم‌انگیز، تاریک",
+  "example_en": "The sky was sombre before the storm.",
+  "photo": "media/vocab/sombre.jpg"
+ },
+ {
+  "word": "sound",
+  "phonetic": "saʊnd",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Something you hear.",
+  "meaning_fa": "صدا",
+  "example_en": "I heard a strange sound outside.",
+  "photo": "media/vocab/sound.jpg"
+ },
+ {
+  "word": "sparkle",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To shine brightly with small flashes of light.",
+  "meaning_fa": "درخشیدن، برق زدن",
+  "example_en": "The diamonds sparkle in the light.",
+  "photo": "media/vocab/sparkle.jpg"
+ },
+ {
+  "word": "sparse",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Present only in small amounts or spread out.",
+  "meaning_fa": "پراکنده، کم‌پشت",
+  "example_en": "The desert has sparse vegetation.",
+  "photo": "media/vocab/sparse.jpg"
+ },
+ {
+  "word": "square adj, n",
+  "phonetic": "skweə",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having four equal sides and four right angles.",
+  "meaning_fa": "مربع شکل، چهارگوش",
+  "example_en": "The table has a square top.",
+  "photo": "media/vocab/square-adj-n.jpg"
+ },
+ {
+  "word": "sti",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Difficult or severe, not easy.",
+  "meaning_fa": "دشوار، سخت",
+  "example_en": "The company faces stiff competition.",
+  "photo": "media/vocab/sti.jpg"
+ },
+ {
+  "word": "stripe",
+  "phonetic": "straɪp",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A long, narrow line of color.",
+  "meaning_fa": "نوار، خط",
+  "example_en": "The shirt has blue and white stripes.",
+  "photo": "media/vocab/stripe.jpg"
+ },
+ {
+  "word": "strong",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having great power or force.",
+  "meaning_fa": "قوی، شدید",
+  "example_en": "The strong wind blew down trees.",
+  "photo": "media/vocab/strong.jpg"
+ },
+ {
+  "word": "stuck-up",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Behaving in an unfriendly way because you think you are better.",
+  "meaning_fa": "از خود راضی، متکبر",
+  "example_en": "She's too stuck-up to talk to us.",
+  "photo": "media/vocab/stuck-up.jpg"
+ },
+ {
+  "word": "sturdy",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Strong and not easily broken.",
+  "meaning_fa": "محکم، بادوام",
+  "example_en": "The table is very sturdy.",
+  "photo": "media/vocab/sturdy.jpg"
+ },
+ {
+  "word": "stylish",
+  "phonetic": "ˈstaɪlɪʃ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Fashionable and elegant.",
+  "meaning_fa": "شیک، خوش‌سبک",
+  "example_en": "She always wears stylish clothes.",
+  "photo": "media/vocab/stylish.jpg"
+ },
+ {
+  "word": "sugar-free",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Containing no sugar.",
+  "meaning_fa": "بدون شکر",
+  "example_en": "I prefer sugar-free drinks for my health.",
+  "photo": "media/vocab/sugar-free.jpg"
+ },
+ {
+  "word": "suntanned",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having brown skin from being in the sun.",
+  "meaning_fa": "برنزه",
+  "example_en": "He looked very healthy and suntanned after his trip.",
+  "photo": "media/vocab/suntanned.jpg"
+ },
+ {
+  "word": "surface",
+  "phonetic": "ˈsɜːfɪs",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The outside or top layer of something.",
+  "meaning_fa": "سطح",
+  "example_en": "The table has a smooth, wooden surface.",
+  "photo": "media/vocab/surface.jpg"
+ },
+ {
+  "word": "terrible",
+  "phonetic": "ˈterəbəl",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very bad or unpleasant.",
+  "meaning_fa": "وحشتناک، افتضاح",
+  "example_en": "The weather was terrible yesterday.",
+  "photo": "media/vocab/terrible.jpg"
+ },
+ {
+  "word": "terrific",
+  "phonetic": "təˈrɪfɪk",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Excellent; very good.",
+  "meaning_fa": "عالی، فوق‌العاده",
+  "example_en": "We had a terrific time at the party.",
+  "photo": "media/vocab/terrific.jpg"
+ },
+ {
+  "word": "terrifying",
+  "phonetic": "ˈterəfaɪɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely frightening; very scary.",
+  "meaning_fa": "وحشتناک، ترسناک",
+  "example_en": "It was a terrifying experience.",
+  "photo": "media/vocab/terrifying.jpg"
+ },
+ {
+  "word": "texture",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "How something feels when you touch it.",
+  "meaning_fa": "بافت",
+  "example_en": "The fabric has a soft texture.",
+  "photo": "media/vocab/texture.jpg"
+ },
+ {
+  "word": "thick",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "not intelligent; stupid.",
+  "meaning_fa": "کودن، احمق",
+  "example_en": "He can be a bit thick sometimes.",
+  "photo": "media/vocab/thick.jpg"
+ },
+ {
+  "word": "thin",
+  "phonetic": "θɪn",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "having little fat on the body.",
+  "meaning_fa": "لاغر",
+  "example_en": "She is tall and very thin.",
+  "photo": "media/vocab/thin.jpg"
+ },
+ {
+  "word": "thin-lipped",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "having lips that are narrow.",
+  "meaning_fa": "لب‌نازک",
+  "example_en": "His thin-lipped smile showed little emotion.",
+  "photo": "media/vocab/thin-lipped.jpg"
+ },
+ {
+  "word": "thud",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a dull, heavy sound, like something falling.",
+  "meaning_fa": "صدای افتادن سنگین",
+  "example_en": "We heard a thud from upstairs.",
+  "photo": "media/vocab/thud.jpg"
+ },
+ {
+  "word": "tight-fitting",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "clothes that fit very closely to the body.",
+  "meaning_fa": "چسبان، تنگ",
+  "example_en": "She wore a tight-fitting dress.",
+  "photo": "media/vocab/tight-fitting.jpg"
+ },
+ {
+  "word": "time-consuming",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "taking a lot of time to do.",
+  "meaning_fa": "وقت‌گیر",
+  "example_en": "This task is very time-consuming.",
+  "photo": "media/vocab/time-consuming.jpg"
+ },
+ {
+  "word": "tiny",
+  "phonetic": "ˈtaɪni",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "extremely small.",
+  "meaning_fa": "بسیار کوچک، ریز",
+  "example_en": "The baby wore tiny shoes.",
+  "photo": "media/vocab/tiny.jpg"
+ },
+ {
+  "word": "tired",
+  "phonetic": "taɪəd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "feeling sleepy or needing rest.",
+  "meaning_fa": "خسته",
+  "example_en": "I am tired after a long day.",
+  "photo": "media/vocab/tired.jpg"
+ },
+ {
+  "word": "tiring",
+  "phonetic": "ˈtaɪrəɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "causing you to feel tired.",
+  "meaning_fa": "خسته‌کننده",
+  "example_en": "Running a marathon is very tiring.",
+  "photo": "media/vocab/tiring.jpg"
+ },
+ {
+  "word": "tissue",
+  "phonetic": "ˈtɪʃuː",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "a soft paper for blowing your nose.",
+  "meaning_fa": "دستمال کاغذی",
+  "example_en": "Do you have a tissue?",
+  "photo": "media/vocab/tissue.jpg"
+ },
+ {
+  "word": "top-secret",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely secret and known by very few people.",
+  "meaning_fa": "فوق محرمانه",
+  "example_en": "This information is top-secret; don't tell anyone.",
+  "photo": "media/vocab/top-secret.jpg"
+ },
+ {
+  "word": "tough",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Difficult to do or deal with.",
+  "meaning_fa": "دشوار، سخت",
+  "example_en": "Learning a new language can be tough.",
+  "photo": "media/vocab/tough.jpg"
+ },
+ {
+  "word": "toy",
+  "phonetic": "tɔɪ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "An object for children to play with.",
+  "meaning_fa": "اسباب بازی",
+  "example_en": "My favorite toy is a robot.",
+  "photo": "media/vocab/toy.jpg"
+ },
+ {
+  "word": "transparent",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Allowing light to pass through so you can see.",
+  "meaning_fa": "شفاف، روشن",
+  "example_en": "The window is made of transparent glass.",
+  "photo": "media/vocab/transparent.jpg"
+ },
+ {
+  "word": "trivial",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not important or serious; of little value.",
+  "meaning_fa": "بی‌اهمیت، جزئی",
+  "example_en": "Don't worry about such trivial matters.",
+  "photo": "media/vocab/trivial.jpg"
+ },
+ {
+  "word": "trivialise",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make something seem less important than it is.",
+  "meaning_fa": "بی‌اهمیت جلوه دادن",
+  "example_en": "Don't trivialise her feelings; they are real.",
+  "photo": "media/vocab/trivialise.jpg"
+ },
+ {
+  "word": "twinkle",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To shine with a light that changes quickly.",
+  "meaning_fa": "سوسو زدن، چشمک زدن",
+  "example_en": "The stars began to twinkle in the night sky.",
+  "photo": "media/vocab/twinkle.jpg"
+ },
+ {
+  "word": "two-faced",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not sincere; saying different things to different people.",
+  "meaning_fa": "دورو، ریاکار",
+  "example_en": "I don't trust him; he's very two-faced.",
+  "photo": "media/vocab/two-faced.jpg"
+ },
+ {
+  "word": "underfoot",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "On the ground, beneath your feet.",
+  "meaning_fa": "زیر پا، روی زمین",
+  "example_en": "The path was muddy underfoot.",
+  "photo": "media/vocab/underfoot.jpg"
+ },
+ {
+  "word": "unusually (strong)",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "More than is normal or expected.",
+  "meaning_fa": "به طور غیرمعمول",
+  "example_en": "The coffee was unusually strong this morning.",
+  "photo": "media/vocab/unusually-strong.jpg"
+ },
+ {
+  "word": "very (bad / good)",
+  "phonetic": "ˈveri",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "to a great degree; extremely",
+  "meaning_fa": "خیلی، بسیار",
+  "example_en": "The weather was very bad yesterday.",
+  "photo": "media/vocab/very-bad-good.jpg"
+ },
+ {
+  "word": "vivid",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "producing clear, strong images in the mind",
+  "meaning_fa": "واضح، زنده",
+  "example_en": "I have a vivid memory of that day.",
+  "photo": "media/vocab/vivid.jpg"
+ },
+ {
+  "word": "warm-hearted",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Kind, friendly, and sympathetic towards others.",
+  "meaning_fa": "مهربان، دلسوز",
+  "example_en": "She is a warm-hearted person who always helps.",
+  "photo": "media/vocab/warm-hearted.jpg"
+ },
+ {
+  "word": "wavy-haired",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having hair that is not straight but has waves.",
+  "meaning_fa": "دارای موهای موج‌دار",
+  "example_en": "The wavy-haired girl smiled brightly.",
+  "photo": "media/vocab/wavy-haired.jpg"
+ },
+ {
+  "word": "weak",
+  "phonetic": "wiːk",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not strong; easily broken or tired.",
+  "meaning_fa": "ضعیف",
+  "example_en": "After the illness, he felt very weak.",
+  "photo": "media/vocab/weak.jpg"
+ },
+ {
+  "word": "weight",
+  "phonetic": "weɪt",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "How heavy someone or something is.",
+  "meaning_fa": "وزن",
+  "example_en": "What is your weight?",
+  "photo": "media/vocab/weight.jpg"
+ },
+ {
+  "word": "well-dressed",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "wearing nice, fashionable clothes",
+  "meaning_fa": "خوش‌لباس",
+  "example_en": "She always looks well-dressed for work.",
+  "photo": "media/vocab/well-dressed.jpg"
+ },
+ {
+  "word": "well-o",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "having a lot of money",
+  "meaning_fa": "ثروتمند، پولدار",
+  "example_en": "They are quite well-off and live in a big house.",
+  "photo": "media/vocab/well-o.jpg"
+ },
+ {
+  "word": "wonderful",
+  "phonetic": "ˈwʌndəfəl",
+  "levels": [
+   "a2",
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very good, excellent, or amazing.",
+  "meaning_fa": "فوق العاده، شگفت انگیز",
+  "example_en": "We had a wonderful time at the party.",
+  "photo": "media/vocab/wonderful.jpg"
+ },
+ {
+  "word": "wooden",
+  "phonetic": "ˈwʊdən",
+  "levels": [
+   "b1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Made of wood.",
+  "meaning_fa": "چوبی",
+  "example_en": "I have a small wooden box.",
+  "photo": "media/vocab/wooden.jpg"
+ },
+ {
+  "word": "world-famous",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Known by many people around the world.",
+  "meaning_fa": "مشهور جهانی",
+  "example_en": "The Mona Lisa is a world-famous painting.",
+  "photo": "media/vocab/world-famous.jpg"
+ },
+ {
+  "word": "worn-out",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Damaged or tired from too much use.",
+  "meaning_fa": "فرسوده، خسته",
+  "example_en": "My old shoes are completely worn-out.",
+  "photo": "media/vocab/worn-out.jpg"
+ },
+ {
+  "word": "akin",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Similar or related to something.",
+  "meaning_fa": "شبیه، خویشاوند",
+  "example_en": "Her joy was akin to pure ecstasy.",
+  "photo": "media/vocab/akin.jpg"
+ },
+ {
+  "word": "amber",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A yellowish-brown color.",
+  "meaning_fa": "کهربایی",
+  "example_en": "The sunset cast an amber glow over the fields.",
+  "photo": "media/vocab/amber.jpg"
+ },
+ {
+  "word": "analogy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A comparison between two different things to explain something.",
+  "meaning_fa": "قیاس، تمثیل",
+  "example_en": "She drew an analogy between a brain and a computer.",
+  "photo": "media/vocab/analogy.jpg"
+ },
+ {
+  "word": "beige",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A pale, yellowish-brown color.",
+  "meaning_fa": "بژ، کرم",
+  "example_en": "The walls were painted a calm beige color.",
+  "photo": "media/vocab/beige.jpg"
+ },
+ {
+  "word": "black as thunder",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Looking very angry or furious.",
+  "meaning_fa": "بسیار خشمگین، عصبانی",
+  "example_en": "After the argument, his face was black as thunder.",
+  "photo": "media/vocab/black-as-thunder.jpg"
+ },
+ {
+  "word": "black future",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A future that seems hopeless and without positive prospects.",
+  "meaning_fa": "آینده تاریک، آینده ناامیدکننده",
+  "example_en": "The economic crisis painted a black future for many young graduates.",
+  "photo": "media/vocab/black-future.jpg"
+ },
+ {
+  "word": "black mark",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A negative point against someone's reputation or record.",
+  "meaning_fa": "نمره منفی، سابقه بد",
+  "example_en": "Missing the deadline put a black mark on his perfect record.",
+  "photo": "media/vocab/black-mark.jpg"
+ },
+ {
+  "word": "black market",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "An illegal system for buying and selling goods.",
+  "meaning_fa": "بازار سیاه",
+  "example_en": "Rare artifacts are often sold on the black market.",
+  "photo": "media/vocab/black-market.jpg"
+ },
+ {
+  "word": "black sheep of the family",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "A family member who is different and causes shame.",
+  "meaning_fa": "وصله ناجور خانواده، مایه ننگ",
+  "example_en": "He was considered the black sheep for pursuing an unconventional career.",
+  "photo": "media/vocab/black-sheep-of-the-family.jpg"
+ },
+ {
+  "word": "blue-collar worker",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A worker who performs manual labor.",
+  "meaning_fa": "کارگر یدی، کارگر صنعتی",
+  "example_en": "Factory workers are typically blue-collar workers.",
+  "photo": "media/vocab/blue-collar-worker.jpg"
+ },
+ {
+  "word": "bluey green",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective phrase",
+  "meaning_en": "A color that is a mix of blue and green.",
+  "meaning_fa": "سبز مایل به آبی",
+  "example_en": "The ocean water had a beautiful bluey green hue.",
+  "photo": "media/vocab/bluey-green.jpg"
+ },
+ {
+  "word": "chestnut",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A reddish-brown color, like the nut.",
+  "meaning_fa": "خرمایی، قهوه‌ای مایل به قرمز",
+  "example_en": "She has beautiful long chestnut hair.",
+  "photo": "media/vocab/chestnut.jpg"
+ },
+ {
+  "word": "comparable",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Able to be compared; similar enough to be compared.",
+  "meaning_fa": "قابل مقایسه، مشابه",
+  "example_en": "The two studies yielded comparable results.",
+  "photo": "media/vocab/comparable.jpg"
+ },
+ {
+  "word": "comparative",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Involving comparison; relative to something else.",
+  "meaning_fa": "مقایسه‌ای، نسبی",
+  "example_en": "We conducted a comparative analysis of the two systems.",
+  "photo": "media/vocab/comparative.jpg"
+ },
+ {
+  "word": "coral",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Of a pinkish-orange color, like coral.",
+  "meaning_fa": "مرجانی (رنگ)",
+  "example_en": "She wore a beautiful coral dress to the party.",
+  "photo": "media/vocab/coral.jpg"
+ },
+ {
+  "word": "correspond",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To be in agreement or conformity with.",
+  "meaning_fa": "مطابقت داشتن، متناظر بودن",
+  "example_en": "The results of the experiment correspond with our predictions.",
+  "photo": "media/vocab/correspond.jpg"
+ },
+ {
+  "word": "crimson",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A deep, rich red color.",
+  "meaning_fa": "زرشکی، قرمز تیره",
+  "example_en": "The sunset painted the sky a beautiful crimson hue.",
+  "photo": "media/vocab/crimson.jpg"
+ },
+ {
+  "word": "differentiate",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To recognize or show the difference between things.",
+  "meaning_fa": "تمایز قائل شدن",
+  "example_en": "It's hard to differentiate between the two similar models.",
+  "photo": "media/vocab/differentiate.jpg"
+ },
+ {
+  "word": "discrete",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Individually separate and distinct.",
+  "meaning_fa": "مجزا، گسسته",
+  "example_en": "The project has several discrete phases.",
+  "photo": "media/vocab/discrete.jpg"
+ },
+ {
+  "word": "disparate",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Fundamentally different or distinct in kind.",
+  "meaning_fa": "متفاوت، نامتجانس",
+  "example_en": "The team comprised individuals with disparate skills and backgrounds.",
+  "photo": "media/vocab/disparate.jpg"
+ },
+ {
+  "word": "distinct",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Clearly separate and different.",
+  "meaning_fa": "متمایز، مشخص",
+  "example_en": "There are three distinct types of apples.",
+  "photo": "media/vocab/distinct.jpg"
+ },
+ {
+  "word": "distinctive",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having a quality that makes something recognizable.",
+  "meaning_fa": "متمایزکننده، خاص",
+  "example_en": "The building has a very distinctive architectural style.",
+  "photo": "media/vocab/distinctive.jpg"
+ },
+ {
+  "word": "distinguish",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To recognize or point out a difference.",
+  "meaning_fa": "تمایز قائل شدن، تشخیص دادن",
+  "example_en": "It's hard to distinguish between genuine and fake antiques.",
+  "photo": "media/vocab/distinguish.jpg"
+ },
+ {
+  "word": "diverge",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To separate and go in different directions.",
+  "meaning_fa": "واگرا شدن، جدا شدن",
+  "example_en": "Their opinions began to diverge on key policy issues.",
+  "photo": "media/vocab/diverge.jpg"
+ },
+ {
+  "word": "divergent",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Tending to be different or develop in different directions.",
+  "meaning_fa": "واگرا، متفاوت",
+  "example_en": "The study revealed divergent views among the participants.",
+  "photo": "media/vocab/divergent.jpg"
+ },
+ {
+  "word": "diverse",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Showing a great deal of variety; very different.",
+  "meaning_fa": "متنوع، گوناگون",
+  "example_en": "The city is known for its diverse cultural population.",
+  "photo": "media/vocab/diverse.jpg"
+ },
+ {
+  "word": "diversify",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make or become more varied.",
+  "meaning_fa": "متنوع کردن، گوناگون کردن",
+  "example_en": "Companies should diversify their investments to reduce risk.",
+  "photo": "media/vocab/diversify.jpg"
+ },
+ {
+  "word": "electric",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Powered by electricity; or very exciting and thrilling.",
+  "meaning_fa": "برقی، هیجان‌انگیز",
+  "example_en": "The atmosphere at the concert was absolutely electric.",
+  "photo": "media/vocab/electric.jpg"
+ },
+ {
+  "word": "emerald",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A rich, vivid green color, like the gemstone.",
+  "meaning_fa": "زمردی، سبز سیر",
+  "example_en": "Her eyes were a striking emerald green.",
+  "photo": "media/vocab/emerald.jpg"
+ },
+ {
+  "word": "equate",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To consider one thing to be the same as another.",
+  "meaning_fa": "برابر دانستن، معادل دانستن",
+  "example_en": "You shouldn't equate wealth with happiness.",
+  "photo": "media/vocab/equate.jpg"
+ },
+ {
+  "word": "feel blue",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "To feel sad or unhappy.",
+  "meaning_fa": "غمگین بودن، دلتنگ بودن",
+  "example_en": "She often feels blue during the long, dark winter months.",
+  "photo": "media/vocab/feel-blue.jpg"
+ },
+ {
+  "word": "fluorescent",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Producing bright light by absorbing and re-emitting radiation.",
+  "meaning_fa": "فلورسنت، درخشان",
+  "example_en": "The office was lit by harsh fluorescent lights.",
+  "photo": "media/vocab/fluorescent.jpg"
+ },
+ {
+  "word": "ginger",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having reddish-orange hair.",
+  "meaning_fa": "مو قرمز",
+  "example_en": "She has beautiful ginger hair and freckles.",
+  "photo": "media/vocab/ginger.jpg"
+ },
+ {
+  "word": "go green",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Adopt environmentally friendly practices.",
+  "meaning_fa": "دوستدار محیط زیست شدن",
+  "example_en": "Our company is trying to go green by reducing waste.",
+  "photo": "media/vocab/go-green.jpg"
+ },
+ {
+  "word": "Green Party",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A political party focused on environmental protection.",
+  "meaning_fa": "حزب سبز",
+  "example_en": "The Green Party advocates for sustainable policies.",
+  "photo": "media/vocab/green-party.jpg"
+ },
+ {
+  "word": "green tourism",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Environmentally responsible travel to natural areas.",
+  "meaning_fa": "گردشگری سبز",
+  "example_en": "Many resorts now promote green tourism initiatives.",
+  "photo": "media/vocab/green-tourism.jpg"
+ },
+ {
+  "word": "green with envy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Extremely jealous of someone else's possessions or success.",
+  "meaning_fa": "از حسادت سبز شدن",
+  "example_en": "I was green with envy when I saw her new car.",
+  "photo": "media/vocab/green-with-envy.jpg"
+ },
+ {
+  "word": "grey area",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A situation unclear or difficult to define.",
+  "meaning_fa": "منطقه خاکستری",
+  "example_en": "The legality of that action is a grey area.",
+  "photo": "media/vocab/grey-area.jpg"
+ },
+ {
+  "word": "grey cells",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Brain cells, often used humorously for intelligence.",
+  "meaning_fa": "سلول‌های خاکستری (مغز)",
+  "example_en": "I need to use my grey cells to solve this puzzle.",
+  "photo": "media/vocab/grey-cells.jpg"
+ },
+ {
+  "word": "grey matter",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Brain tissue, often used to refer to intelligence.",
+  "meaning_fa": "ماده خاکستری (مغز)",
+  "example_en": "This problem requires some serious grey matter.",
+  "photo": "media/vocab/grey-matter.jpg"
+ },
+ {
+  "word": "harsh colours",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Colours that are too bright or clashing.",
+  "meaning_fa": "رنگ‌های تند، زننده",
+  "example_en": "The artist used harsh colours to convey anger.",
+  "photo": "media/vocab/harsh-colours.jpg"
+ },
+ {
+  "word": "indistinguishable",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "So similar that it is impossible to tell apart.",
+  "meaning_fa": "غیرقابل تشخیص",
+  "example_en": "The twins were almost indistinguishable from each other.",
+  "photo": "media/vocab/indistinguishable.jpg"
+ },
+ {
+  "word": "interchangeable",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Able to be exchanged or used in place of another.",
+  "meaning_fa": "قابل تعویض، جایگزین‌پذیر",
+  "example_en": "The parts are interchangeable, making repairs much easier.",
+  "photo": "media/vocab/interchangeable.jpg"
+ },
+ {
+  "word": "jade",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A greenish color, like the precious stone.",
+  "meaning_fa": "یشمی، سبز تیره",
+  "example_en": "She wore a beautiful jade necklace.",
+  "photo": "media/vocab/jade.jpg"
+ },
+ {
+  "word": "jet black",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A very deep, shiny black color.",
+  "meaning_fa": "مشکی پرکلاغی، سیاه مطلق",
+  "example_en": "She had long, flowing jet black hair.",
+  "photo": "media/vocab/jet-black.jpg"
+ },
+ {
+  "word": "lime",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A small, green citrus fruit, similar to a lemon.",
+  "meaning_fa": "لیمو ترش",
+  "example_en": "I added a slice of lime to my drink.",
+  "photo": "media/vocab/lime.jpg"
+ },
+ {
+  "word": "look green",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "To appear sick or inexperienced.",
+  "meaning_fa": "رنگ‌پریده به نظر رسیدن، بی‌تجربه بودن",
+  "example_en": "After the long flight, he looked a bit green.",
+  "photo": "media/vocab/look-green.jpg"
+ },
+ {
+  "word": "mauve",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A pale purple color.",
+  "meaning_fa": "بنفش روشن، ارغوانی",
+  "example_en": "She painted her bedroom walls a soft mauve.",
+  "photo": "media/vocab/mauve.jpg"
+ },
+ {
+  "word": "monochrome",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Using only one color or shades of one color.",
+  "meaning_fa": "تک رنگ، سیاه و سفید",
+  "example_en": "The old photograph was a beautiful monochrome image.",
+  "photo": "media/vocab/monochrome.jpg"
+ },
+ {
+  "word": "mousy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Quiet, shy, and unassuming; also dull brown hair.",
+  "meaning_fa": "خجالتی، موش رنگ",
+  "example_en": "Her mousy brown hair blended into the background.",
+  "photo": "media/vocab/mousy.jpg"
+ },
+ {
+  "word": "navy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A very dark blue color.",
+  "meaning_fa": "سرمه ای",
+  "example_en": "He wore a smart navy suit to the interview.",
+  "photo": "media/vocab/navy.jpg"
+ },
+ {
+  "word": "pastel",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Pale and soft in color.",
+  "meaning_fa": "رنگ ملایم، پاستلی",
+  "example_en": "The room was decorated in lovely pastel shades of blue.",
+  "photo": "media/vocab/pastel.jpg"
+ },
+ {
+  "word": "pitch black",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely dark, with no light at all.",
+  "meaning_fa": "تاریک مطلق",
+  "example_en": "The cave was pitch black, requiring a flashlight.",
+  "photo": "media/vocab/pitch-black.jpg"
+ },
+ {
+  "word": "primary colour",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Any of three colors (red, yellow, blue) from which others are mixed.",
+  "meaning_fa": "رنگ اصلی",
+  "example_en": "Red, yellow, and blue are the primary colours.",
+  "photo": "media/vocab/primary-colour.jpg"
+ },
+ {
+  "word": "red",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "(Of a face) flushed with anger or embarrassment.",
+  "meaning_fa": "سرخ (از خشم یا خجالت)",
+  "example_en": "His face went red with fury.",
+  "photo": "media/vocab/red.jpg"
+ },
+ {
+  "word": "red alert",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A warning of extreme danger.",
+  "meaning_fa": "هشدار قرمز، وضعیت اضطراری",
+  "example_en": "The city was on red alert after the terror threat.",
+  "photo": "media/vocab/red-alert.jpg"
+ },
+ {
+  "word": "red flag",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "A warning sign of a potential problem or danger.",
+  "meaning_fa": "علامت هشدار، پرچم قرمز",
+  "example_en": "His inconsistent story raised a red flag for the detective.",
+  "photo": "media/vocab/red-flag.jpg"
+ },
+ {
+  "word": "red-carpet treatment",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Special, luxurious treatment given to an important guest.",
+  "meaning_fa": "پذیرایی ویژه، تشریفات خاص",
+  "example_en": "The visiting dignitary received full red-carpet treatment.",
+  "photo": "media/vocab/red-carpet-treatment.jpg"
+ },
+ {
+  "word": "reddish brown",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A color that is a mix of red and brown.",
+  "meaning_fa": "قهوه‌ای مایل به قرمز",
+  "example_en": "The old wooden table had a beautiful reddish brown hue.",
+  "photo": "media/vocab/reddish-brown.jpg"
+ },
+ {
+  "word": "red-letter day",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "A day that is memorable because of a special event.",
+  "meaning_fa": "روز مهم و به یاد ماندنی",
+  "example_en": "Our graduation was a real red-letter day for the whole family.",
+  "photo": "media/vocab/red-letter-day.jpg"
+ },
+ {
+  "word": "ruby",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "deep red in color, like the gemstone",
+  "meaning_fa": "یاقوتی، قرمز تیره",
+  "example_en": "She wore a beautiful ruby necklace to the gala.",
+  "photo": "media/vocab/ruby.jpg"
+ },
+ {
+  "word": "sapphire",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A deep blue color, like the precious gemstone.",
+  "meaning_fa": "یاقوت کبود، آبی تیره",
+  "example_en": "Her sapphire eyes sparkled in the sunlight.",
+  "photo": "media/vocab/sapphire.jpg"
+ },
+ {
+  "word": "scarlet",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A brilliant red color, often with an orange tinge.",
+  "meaning_fa": "قرمز روشن، زرشکی",
+  "example_en": "She wore a beautiful scarlet dress to the party.",
+  "photo": "media/vocab/scarlet.jpg"
+ },
+ {
+  "word": "see red",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "To become extremely angry suddenly.",
+  "meaning_fa": "از کوره در رفتن، عصبانی شدن",
+  "example_en": "When he insulted her, she just saw red.",
+  "photo": "media/vocab/see-red.jpg"
+ },
+ {
+  "word": "shocking pink",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A very bright, intense shade of pink.",
+  "meaning_fa": "صورتی جیغ",
+  "example_en": "She wore a dress in shocking pink.",
+  "photo": "media/vocab/shocking-pink.jpg"
+ },
+ {
+  "word": "strong colours",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Bright, intense, and vivid colors.",
+  "meaning_fa": "رنگ‌های تند و روشن",
+  "example_en": "The artist used strong colours in her abstract painting.",
+  "photo": "media/vocab/strong-colours.jpg"
+ },
+ {
+  "word": "tantamount",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Equivalent to something, especially something bad.",
+  "meaning_fa": "معادل، برابر",
+  "example_en": "His silence was tantamount to an admission of guilt.",
+  "photo": "media/vocab/tantamount.jpg"
+ },
+ {
+  "word": "tinge",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A slight amount of a color or feeling.",
+  "meaning_fa": "ته رنگ، رگه‌ای",
+  "example_en": "The sky had a beautiful orange tinge at sunset.",
+  "photo": "media/vocab/tinge.jpg"
+ },
+ {
+  "word": "turn green",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Become pale and sick-looking, often from nausea.",
+  "meaning_fa": "رنگ‌پریده شدن، حالت تهوع گرفتن",
+  "example_en": "The child started to turn green on the bumpy ride.",
+  "photo": "media/vocab/turn-green.jpg"
+ },
+ {
+  "word": "turquoise",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A greenish-blue color.",
+  "meaning_fa": "فیروزه‌ای",
+  "example_en": "The ocean water was a stunning turquoise.",
+  "photo": "media/vocab/turquoise.jpg"
+ },
+ {
+  "word": "white as a sheet",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Extremely pale, usually due to fear, shock, or illness.",
+  "meaning_fa": "مثل گچ سفید، رنگ‌پریده",
+  "example_en": "She went white as a sheet when she heard the news.",
+  "photo": "media/vocab/white-as-a-sheet.jpg"
+ },
+ {
+  "word": "white as snow",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Extremely white; pure and innocent.",
+  "meaning_fa": "مثل برف سفید، پاک و معصوم",
+  "example_en": "The freshly fallen snow was white as snow.",
+  "photo": "media/vocab/white-as-snow.jpg"
+ },
+ {
+  "word": "white-collar worker",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A person who performs professional, managerial, or administrative work.",
+  "meaning_fa": "کارمند اداری، یقه سفید",
+  "example_en": "Many white-collar workers are now working remotely.",
+  "photo": "media/vocab/white-collar-worker.jpg"
+ },
+ {
+  "word": "white-knuckle",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Causing intense fear or excitement.",
+  "meaning_fa": "دلهره‌آور، هیجان‌انگیز",
+  "example_en": "It was a white-knuckle ride on the roller coaster.",
+  "photo": "media/vocab/white-knuckle.jpg"
+ },
+ {
+  "word": "whiter than white",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Morally pure and beyond reproach; extremely virtuous.",
+  "meaning_fa": "پاک‌تر از پاک، بی‌عیب و نقص",
+  "example_en": "He tried to appear whiter than white, but his past was murky.",
+  "photo": "media/vocab/whiter-than-white.jpg"
+ },
+ {
+  "word": "-y",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "suffix",
+  "meaning_en": "forming adjectives meaning 'full of' or 'like'.",
+  "meaning_fa": "پسوند صفت‌ساز (مثل: بارانی)",
+  "example_en": "The weather was quite cloudy and windy today.",
+  "photo": "media/vocab/y.jpg"
+ }
+]

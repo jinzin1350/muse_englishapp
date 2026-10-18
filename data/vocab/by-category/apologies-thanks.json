@@ -1,1 +1,587 @@
-[{"word": "apologise for sth", "phonetic": "əˈpɒləʤaɪz fɔː ˈsʌmθɪŋ", "levels": ["b1"], "pos": "phrasal verb", "meaning_en": "To express regret for a specific thing.", "meaning_fa": "عذرخواهی کردن بابت چیزی", "example_en": "I apologise for the noise.", "photo": "media/vocab/apologise-for-sth.jpg"}, {"word": "apology", "phonetic": "əˈpɒləʤi", "levels": ["b1"], "pos": "noun", "meaning_en": "A statement saying you are sorry.", "meaning_fa": "عذرخواهی", "example_en": "He made an apology for his behavior.", "photo": "media/vocab/apology.jpg"}, {"word": "be delayed", "phonetic": "biː dɪˈleɪd", "levels": ["b1"], "pos": "verb phrase", "meaning_en": "Arrive or happen later than planned.", "meaning_fa": "تاخیر داشتن، به تعویق افتادن", "example_en": "My flight was delayed by two hours.", "photo": "media/vocab/be-delayed.jpg"}, {"word": "be held up", "phonetic": "biː held ʌp", "levels": ["b1"], "pos": "phrasal verb", "meaning_en": "Be delayed or stopped.", "meaning_fa": "معطل شدن، گیر افتادن", "example_en": "I was held up in traffic this morning.", "photo": "media/vocab/be-held-up.jpg"}, {"word": "cheers [thanks]", "phonetic": "tʃɪəz", "levels": ["b1"], "pos": "exclamation", "meaning_en": "An informal way to say thank you.", "meaning_fa": "ممنون (غیررسمی)", "example_en": "\"Cheers for helping me!\"", "photo": "media/vocab/cheers-thanks.jpg"}, {"word": "delay", "phonetic": "dɪˈleɪ", "levels": ["b1"], "pos": "noun, verb", "meaning_en": "(n) A time when something is late; (v) to make something late.", "meaning_fa": "(ن) تاخیر؛ (ف) به تاخیر انداختن", "example_en": "The flight had a two-hour delay.", "photo": "media/vocab/delay.jpg"}, {"word": "don’t worry", "phonetic": "dəʊnt ˈwʌri", "levels": ["b1"], "pos": "phrase", "meaning_en": "Don't be anxious or afraid.", "meaning_fa": "نگران نباش", "example_en": "Don't worry, everything will be okay.", "photo": "media/vocab/don-t-worry.jpg"}, {"word": "excuse me [say sorry]", "phonetic": "ɪkˈskjuːz miː", "levels": ["b1"], "pos": "phrase", "meaning_en": "Used to apologize for a small mistake.", "meaning_fa": "ببخشید (برای عذرخواهی)", "example_en": "Excuse me, I didn't see you there.", "photo": "media/vocab/excuse-me-say-sorry.jpg"}, {"word": "excuse n", "phonetic": "ɪkˈskjuːs", "levels": ["b1"], "pos": "noun", "meaning_en": "A reason you give to explain a mistake.", "meaning_fa": "بهانه، عذر", "example_en": "What's your excuse for being late?", "photo": "media/vocab/excuse-n.jpg"}, {"word": "hold-up", "phonetic": "həʊld ʌp", "levels": ["b1"], "pos": "noun", "meaning_en": "A delay.", "meaning_fa": "تاخیر، وقفه", "example_en": "Sorry for the hold-up, traffic was bad.", "photo": "media/vocab/hold-up.jpg"}, {"word": "I beg your pardon", "phonetic": "aɪ beg jɔː ˈpɑːdən", "levels": ["b1"], "pos": "phrase", "meaning_en": "A polite way to say sorry or ask to repeat something.", "meaning_fa": "ببخشید، متوجه نشدم", "example_en": "I beg your pardon, could you say that again?", "photo": "media/vocab/i-beg-your-pardon.jpg"}, {"word": "I must apologise for …", "phonetic": "aɪ mʌst əˈpɒləʤaɪz fɔː", "levels": ["b1"], "pos": "phrase", "meaning_en": "A formal way to say sorry for something.", "meaning_fa": "باید بابت ... عذرخواهی کنم", "example_en": "I must apologise for the delay.", "photo": "media/vocab/i-must-apologise-for.jpg"}, {"word": "interrupt", "phonetic": "ˌɪntəˈrʌpt", "levels": ["b1"], "pos": "verb", "meaning_en": "Stop someone talking or doing something.", "meaning_fa": "حرف کسی را قطع کردن", "example_en": "Sorry to interrupt, but I have a question.", "photo": "media/vocab/interrupt.jpg"}, {"word": "I’m sorry", "phonetic": "aɪm ˈsɒri", "levels": ["b1"], "pos": "phrase", "meaning_en": "An apology for something you did.", "meaning_fa": "متاسفم", "example_en": "I'm sorry for being late.", "photo": "media/vocab/i-m-sorry.jpg"}, {"word": "I’m sorry I’m late", "phonetic": "aɪm ˈsɒri aɪm leɪt", "levels": ["b1"], "pos": "phrase", "meaning_en": "An apology for arriving after the expected time.", "meaning_fa": "متاسفم که دیر کردم", "example_en": "I'm sorry I'm late, the traffic was bad.", "photo": "media/vocab/i-m-sorry-i-m-late.jpg"}, {"word": "never mind", "phonetic": "ˈnevə maɪnd", "levels": ["b1"], "pos": "phrase", "meaning_en": "Don't worry about it; it's not important.", "meaning_fa": "مهم نیست، فدای سرت", "example_en": "\"Sorry I'm late.\" \"Never mind.\"", "photo": "media/vocab/never-mind.jpg"}, {"word": "no problem", "phonetic": "nəʊ ˈprɒbləm", "levels": ["b1"], "pos": "phrase", "meaning_en": "Used to say \"you're welcome\" or \"it's easy\".", "meaning_fa": "مشکلی نیست، خواهش می‌کنم", "example_en": "\"Thanks for your help!\" \"No problem!\"", "photo": "media/vocab/no-problem.jpg"}, {"word": "not at all", "phonetic": "nɒt æt ɔːl", "levels": ["b1"], "pos": "phrase", "meaning_en": "Used to say \"you're welcome\" or \"no problem\".", "meaning_fa": "اصلاً، ابداً، خواهش می‌کنم", "example_en": "\"Thank you!\" \"Not at all.\"", "photo": "media/vocab/not-at-all.jpg"}, {"word": "oversleep", "phonetic": "ˌəʊvəˈsliːp", "levels": ["b1"], "pos": "verb", "meaning_en": "To sleep longer than intended.", "meaning_fa": "خواب ماندن", "example_en": "I overslept and missed my bus.", "photo": "media/vocab/oversleep.jpg"}, {"word": "sorry to disturb you", "phonetic": "ˈsɒri tuː dɪsˈtɜːb juː", "levels": ["b1"], "pos": "phrase", "meaning_en": "An polite apology for interrupting someone.", "meaning_fa": "ببخشید مزاحم شدم", "example_en": "Sorry to disturb you, but can I ask a question?", "photo": "media/vocab/sorry-to-disturb-you.jpg"}, {"word": "sorry to keep you waiting", "phonetic": "ˈsɒri tuː kiːp juː ˈweɪtɪŋ", "levels": ["b1"], "pos": "phrase", "meaning_en": "An apology for making someone wait.", "meaning_fa": "ببخشید که منتظرتان گذاشتم", "example_en": "Sorry to keep you waiting, the traffic was bad.", "photo": "media/vocab/sorry-to-keep-you-waiting.jpg"}, {"word": "terribly sorry", "phonetic": "ˈterəbli ˈsɒri", "levels": ["b1"], "pos": "phrase", "meaning_en": "Very sorry for something you did.", "meaning_fa": "خیلی متاسفم", "example_en": "I'm terribly sorry for being late.", "photo": "media/vocab/terribly-sorry.jpg"}, {"word": "thanks (very much)", "phonetic": "θæŋks", "levels": ["b1"], "pos": "phrase", "meaning_en": "A stronger way to say thank you.", "meaning_fa": "خیلی ممنون", "example_en": "Thanks very much for your help.", "photo": "media/vocab/thanks-very-much.jpg"}, {"word": "that’s all right/okay", "phonetic": "ðæts ɔːl raɪt/ əˈkeɪ", "levels": ["b1"], "pos": "phrase", "meaning_en": "Used to accept an apology or say no problem.", "meaning_fa": "اشکالی ندارد، خوب است", "example_en": "\"Sorry I'm late.\" \"That's all right.\"", "photo": "media/vocab/that-s-all-right-okay.jpg"}, {"word": "that’s very kind of you", "phonetic": "ðæts ˈveri kaɪnd ɒv juː", "levels": ["b1"], "pos": "phrase", "meaning_en": "Expressing thanks for someone's kindness.", "meaning_fa": "لطف دارید، خیلی مهربانید", "example_en": "\"Can I help you?\" \"That's very kind of you.\"", "photo": "media/vocab/that-s-very-kind-of-you.jpg"}, {"word": "won’t be long", "phonetic": "waʊnt biː lɒŋ", "levels": ["b1"], "pos": "phrase", "meaning_en": "It will happen or finish soon.", "meaning_fa": "طول نمی‌کشد، زود می‌آید", "example_en": "Don't worry, I won't be long.", "photo": "media/vocab/won-t-be-long.jpg"}]
+[
+ {
+  "word": "apologise for sth",
+  "phonetic": "əˈpɒləʤaɪz fɔː ˈsʌmθɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To express regret for a specific thing.",
+  "meaning_fa": "عذرخواهی کردن بابت چیزی",
+  "example_en": "I apologise for the noise.",
+  "photo": "media/vocab/apologise-for-sth.jpg"
+ },
+ {
+  "word": "apology",
+  "phonetic": "əˈpɒləʤi",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A statement saying you are sorry.",
+  "meaning_fa": "عذرخواهی",
+  "example_en": "He made an apology for his behavior.",
+  "photo": "media/vocab/apology.jpg"
+ },
+ {
+  "word": "be delayed",
+  "phonetic": "biː dɪˈleɪd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "verb phrase",
+  "meaning_en": "Arrive or happen later than planned.",
+  "meaning_fa": "تاخیر داشتن، به تعویق افتادن",
+  "example_en": "My flight was delayed by two hours.",
+  "photo": "media/vocab/be-delayed.jpg"
+ },
+ {
+  "word": "be held up",
+  "phonetic": "biː held ʌp",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "Be delayed or stopped.",
+  "meaning_fa": "معطل شدن، گیر افتادن",
+  "example_en": "I was held up in traffic this morning.",
+  "photo": "media/vocab/be-held-up.jpg"
+ },
+ {
+  "word": "cheers [thanks]",
+  "phonetic": "tʃɪəz",
+  "levels": [
+   "b1"
+  ],
+  "pos": "exclamation",
+  "meaning_en": "An informal way to say thank you.",
+  "meaning_fa": "ممنون (غیررسمی)",
+  "example_en": "\"Cheers for helping me!\"",
+  "photo": "media/vocab/cheers-thanks.jpg"
+ },
+ {
+  "word": "delay",
+  "phonetic": "dɪˈleɪ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "(n) A time when something is late; (v) to make something late.",
+  "meaning_fa": "(ن) تاخیر؛ (ف) به تاخیر انداختن",
+  "example_en": "The flight had a two-hour delay.",
+  "photo": "media/vocab/delay.jpg"
+ },
+ {
+  "word": "don’t worry",
+  "phonetic": "dəʊnt ˈwʌri",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Don't be anxious or afraid.",
+  "meaning_fa": "نگران نباش",
+  "example_en": "Don't worry, everything will be okay.",
+  "photo": "media/vocab/don-t-worry.jpg"
+ },
+ {
+  "word": "excuse me [say sorry]",
+  "phonetic": "ɪkˈskjuːz miː",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Used to apologize for a small mistake.",
+  "meaning_fa": "ببخشید (برای عذرخواهی)",
+  "example_en": "Excuse me, I didn't see you there.",
+  "photo": "media/vocab/excuse-me-say-sorry.jpg"
+ },
+ {
+  "word": "excuse n",
+  "phonetic": "ɪkˈskjuːs",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A reason you give to explain a mistake.",
+  "meaning_fa": "بهانه، عذر",
+  "example_en": "What's your excuse for being late?",
+  "photo": "media/vocab/excuse-n.jpg"
+ },
+ {
+  "word": "hold-up",
+  "phonetic": "həʊld ʌp",
+  "levels": [
+   "b1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A delay.",
+  "meaning_fa": "تاخیر، وقفه",
+  "example_en": "Sorry for the hold-up, traffic was bad.",
+  "photo": "media/vocab/hold-up.jpg"
+ },
+ {
+  "word": "I beg your pardon",
+  "phonetic": "aɪ beg jɔː ˈpɑːdən",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "A polite way to say sorry or ask to repeat something.",
+  "meaning_fa": "ببخشید، متوجه نشدم",
+  "example_en": "I beg your pardon, could you say that again?",
+  "photo": "media/vocab/i-beg-your-pardon.jpg"
+ },
+ {
+  "word": "I must apologise for …",
+  "phonetic": "aɪ mʌst əˈpɒləʤaɪz fɔː",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "A formal way to say sorry for something.",
+  "meaning_fa": "باید بابت ... عذرخواهی کنم",
+  "example_en": "I must apologise for the delay.",
+  "photo": "media/vocab/i-must-apologise-for.jpg"
+ },
+ {
+  "word": "interrupt",
+  "phonetic": "ˌɪntəˈrʌpt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "verb",
+  "meaning_en": "Stop someone talking or doing something.",
+  "meaning_fa": "حرف کسی را قطع کردن",
+  "example_en": "Sorry to interrupt, but I have a question.",
+  "photo": "media/vocab/interrupt.jpg"
+ },
+ {
+  "word": "I’m sorry",
+  "phonetic": "aɪm ˈsɒri",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "An apology for something you did.",
+  "meaning_fa": "متاسفم",
+  "example_en": "I'm sorry for being late.",
+  "photo": "media/vocab/i-m-sorry.jpg"
+ },
+ {
+  "word": "I’m sorry I’m late",
+  "phonetic": "aɪm ˈsɒri aɪm leɪt",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "An apology for arriving after the expected time.",
+  "meaning_fa": "متاسفم که دیر کردم",
+  "example_en": "I'm sorry I'm late, the traffic was bad.",
+  "photo": "media/vocab/i-m-sorry-i-m-late.jpg"
+ },
+ {
+  "word": "never mind",
+  "phonetic": "ˈnevə maɪnd",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Don't worry about it; it's not important.",
+  "meaning_fa": "مهم نیست، فدای سرت",
+  "example_en": "\"Sorry I'm late.\" \"Never mind.\"",
+  "photo": "media/vocab/never-mind.jpg"
+ },
+ {
+  "word": "no problem",
+  "phonetic": "nəʊ ˈprɒbləm",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Used to say \"you're welcome\" or \"it's easy\".",
+  "meaning_fa": "مشکلی نیست، خواهش می‌کنم",
+  "example_en": "\"Thanks for your help!\" \"No problem!\"",
+  "photo": "media/vocab/no-problem.jpg"
+ },
+ {
+  "word": "not at all",
+  "phonetic": "nɒt æt ɔːl",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Used to say \"you're welcome\" or \"no problem\".",
+  "meaning_fa": "اصلاً، ابداً، خواهش می‌کنم",
+  "example_en": "\"Thank you!\" \"Not at all.\"",
+  "photo": "media/vocab/not-at-all.jpg"
+ },
+ {
+  "word": "oversleep",
+  "phonetic": "ˌəʊvəˈsliːp",
+  "levels": [
+   "b1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To sleep longer than intended.",
+  "meaning_fa": "خواب ماندن",
+  "example_en": "I overslept and missed my bus.",
+  "photo": "media/vocab/oversleep.jpg"
+ },
+ {
+  "word": "sorry to disturb you",
+  "phonetic": "ˈsɒri tuː dɪsˈtɜːb juː",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "An polite apology for interrupting someone.",
+  "meaning_fa": "ببخشید مزاحم شدم",
+  "example_en": "Sorry to disturb you, but can I ask a question?",
+  "photo": "media/vocab/sorry-to-disturb-you.jpg"
+ },
+ {
+  "word": "sorry to keep you waiting",
+  "phonetic": "ˈsɒri tuː kiːp juː ˈweɪtɪŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "An apology for making someone wait.",
+  "meaning_fa": "ببخشید که منتظرتان گذاشتم",
+  "example_en": "Sorry to keep you waiting, the traffic was bad.",
+  "photo": "media/vocab/sorry-to-keep-you-waiting.jpg"
+ },
+ {
+  "word": "terribly sorry",
+  "phonetic": "ˈterəbli ˈsɒri",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Very sorry for something you did.",
+  "meaning_fa": "خیلی متاسفم",
+  "example_en": "I'm terribly sorry for being late.",
+  "photo": "media/vocab/terribly-sorry.jpg"
+ },
+ {
+  "word": "thanks (very much)",
+  "phonetic": "θæŋks",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "A stronger way to say thank you.",
+  "meaning_fa": "خیلی ممنون",
+  "example_en": "Thanks very much for your help.",
+  "photo": "media/vocab/thanks-very-much.jpg"
+ },
+ {
+  "word": "that’s all right/okay",
+  "phonetic": "ðæts ɔːl raɪt/ əˈkeɪ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Used to accept an apology or say no problem.",
+  "meaning_fa": "اشکالی ندارد، خوب است",
+  "example_en": "\"Sorry I'm late.\" \"That's all right.\"",
+  "photo": "media/vocab/that-s-all-right-okay.jpg"
+ },
+ {
+  "word": "that’s very kind of you",
+  "phonetic": "ðæts ˈveri kaɪnd ɒv juː",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Expressing thanks for someone's kindness.",
+  "meaning_fa": "لطف دارید، خیلی مهربانید",
+  "example_en": "\"Can I help you?\" \"That's very kind of you.\"",
+  "photo": "media/vocab/that-s-very-kind-of-you.jpg"
+ },
+ {
+  "word": "won’t be long",
+  "phonetic": "waʊnt biː lɒŋ",
+  "levels": [
+   "b1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "It will happen or finish soon.",
+  "meaning_fa": "طول نمی‌کشد، زود می‌آید",
+  "example_en": "Don't worry, I won't be long.",
+  "photo": "media/vocab/won-t-be-long.jpg"
+ },
+ {
+  "word": "accord",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An agreement or treaty.",
+  "meaning_fa": "توافق، پیمان",
+  "example_en": "The two nations reached a peace accord.",
+  "photo": "media/vocab/accord.jpg"
+ },
+ {
+  "word": "acquittal",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A judgment that a person is not guilty.",
+  "meaning_fa": "تبرئه، حکم برائت",
+  "example_en": "The jury's acquittal surprised many.",
+  "photo": "media/vocab/acquittal.jpg"
+ },
+ {
+  "word": "alibi",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Evidence that one was elsewhere when a crime occurred.",
+  "meaning_fa": "بهانه، مدرک بی‌گناهی",
+  "example_en": "He had a solid alibi for the night of the robbery.",
+  "photo": "media/vocab/alibi.jpg"
+ },
+ {
+  "word": "armistice",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A formal agreement to stop fighting in a war.",
+  "meaning_fa": "آتش‌بس، ترک مخاصمه",
+  "example_en": "The two nations signed an armistice to end the conflict.",
+  "photo": "media/vocab/armistice.jpg"
+ },
+ {
+  "word": "cast-iron",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very strong and certain; impossible to doubt.",
+  "meaning_fa": "محکم، غیرقابل انکار",
+  "example_en": "He gave a cast-iron guarantee that the work would be finished.",
+  "photo": "media/vocab/cast-iron.jpg"
+ },
+ {
+  "word": "excuse",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A reason given to justify a fault or offense.",
+  "meaning_fa": "بهانه، عذر",
+  "example_en": "He had no valid excuse for being late.",
+  "photo": "media/vocab/excuse.jpg"
+ },
+ {
+  "word": "exonerate",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To officially declare someone free from blame.",
+  "meaning_fa": "تبرئه کردن",
+  "example_en": "New evidence helped exonerate the innocent man.",
+  "photo": "media/vocab/exonerate.jpg"
+ },
+ {
+  "word": "flimsy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Easily damaged or broken; not strong or solid.",
+  "meaning_fa": "سست، ضعیف، بی‌دوام",
+  "example_en": "The excuse he gave was rather flimsy.",
+  "photo": "media/vocab/flimsy.jpg"
+ },
+ {
+  "word": "forgive and forget",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "To stop being angry and forget past offenses.",
+  "meaning_fa": "بخشیدن و فراموش کردن",
+  "example_en": "It's time to forgive and forget their past mistakes.",
+  "photo": "media/vocab/forgive-and-forget.jpg"
+ },
+ {
+  "word": "heartfelt",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Deeply felt and sincere.",
+  "meaning_fa": "صمیمانه، از ته دل",
+  "example_en": "She offered a heartfelt apology for her mistake.",
+  "photo": "media/vocab/heartfelt.jpg"
+ },
+ {
+  "word": "lame",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "(informal) Unconvincing or weak; unsatisfactory.",
+  "meaning_fa": "بی‌مزه، ضعیف، لنگ",
+  "example_en": "That's a pretty lame excuse for being late.",
+  "photo": "media/vocab/lame.jpg"
+ },
+ {
+  "word": "pardon",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To forgive someone for a mistake or crime.",
+  "meaning_fa": "بخشیدن، عفو کردن",
+  "example_en": "I beg your pardon, I didn't mean to interrupt.",
+  "photo": "media/vocab/pardon.jpg"
+ },
+ {
+  "word": "peace treaty",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A formal agreement between countries to end a war.",
+  "meaning_fa": "پیمان صلح",
+  "example_en": "The two nations signed a peace treaty after years of conflict.",
+  "photo": "media/vocab/peace-treaty.jpg"
+ },
+ {
+  "word": "phoney",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not real or genuine; fake.",
+  "meaning_fa": "جعلی، ساختگی",
+  "example_en": "His apology sounded completely phoney and insincere.",
+  "photo": "media/vocab/phoney.jpg"
+ },
+ {
+  "word": "posthumous",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Occurring, awarded, or appearing after death.",
+  "meaning_fa": "پس از مرگ",
+  "example_en": "He received a posthumous award for his bravery.",
+  "photo": "media/vocab/posthumous.jpg"
+ },
+ {
+  "word": "pretext",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A false reason given to hide the real one.",
+  "meaning_fa": "بهانه، دستاویز",
+  "example_en": "He used illness as a pretext for not attending.",
+  "photo": "media/vocab/pretext.jpg"
+ },
+ {
+  "word": "remorse",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Deep regret or guilt for a wrong committed.",
+  "meaning_fa": "پشیمانی، ندامت",
+  "example_en": "The criminal showed no remorse for his actions.",
+  "photo": "media/vocab/remorse.jpg"
+ },
+ {
+  "word": "repent",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "feel deep regret for past actions",
+  "meaning_fa": "توبه کردن، پشیمان شدن",
+  "example_en": "He truly repented his past mistakes and sought forgiveness.",
+  "photo": "media/vocab/repent.jpg"
+ },
+ {
+  "word": "repentance",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "feeling deep regret for one's past actions",
+  "meaning_fa": "توبه، پشیمانی",
+  "example_en": "His sincere repentance was evident in his changed behavior.",
+  "photo": "media/vocab/repentance.jpg"
+ },
+ {
+  "word": "reprieve",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a temporary delay of punishment or relief from trouble",
+  "meaning_fa": "مهلت، تعویق مجازات",
+  "example_en": "The prisoner received a last-minute reprieve from execution.",
+  "photo": "media/vocab/reprieve.jpg"
+ },
+ {
+  "word": "treaty",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A formal agreement between two or more countries.",
+  "meaning_fa": "معاهده، پیمان",
+  "example_en": "The two nations signed a peace treaty.",
+  "photo": "media/vocab/treaty.jpg"
+ }
+]

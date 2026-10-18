@@ -1,1 +1,1334 @@
-[{"word": "act [perform]", "phonetic": "ækt", "levels": ["a2"], "pos": "verb", "meaning_en": "to perform a role in a play or film", "meaning_fa": "بازی کردن (نقش)", "example_en": "She wants to act in movies.", "photo": "media/vocab/act-perform.jpg"}, {"word": "acting", "phonetic": "ˈæktɪŋ", "levels": ["a2"], "pos": "noun", "meaning_en": "the job of performing in plays or films", "meaning_fa": "بازیگری", "example_en": "Her acting in the play was superb.", "photo": "media/vocab/acting.jpg"}, {"word": "action film", "phonetic": "ˈækʃən fɪlm", "levels": ["a1"], "pos": "noun", "meaning_en": "a film with lots of exciting events and fighting", "meaning_fa": "فیلم اکشن", "example_en": "I love watching action films with my friends.", "photo": "media/vocab/action-film.jpg"}, {"word": "actor", "phonetic": "ˈæktə", "levels": ["a2"], "pos": "noun", "meaning_en": "a person who performs in plays or films", "meaning_fa": "بازیگر", "example_en": "He is a famous actor from Hollywood.", "photo": "media/vocab/actor.jpg"}, {"word": "appear in", "phonetic": null, "levels": ["b2"], "pos": "phrasal verb", "meaning_en": "To be in a film, play, or book.", "meaning_fa": "در (فیلم/کتاب) ظاهر شدن", "example_en": "He will appear in the new movie.", "photo": "media/vocab/appear-in.jpg"}, {"word": "audience", "phonetic": "ˈɔːdjəns", "levels": ["b2"], "pos": "noun", "meaning_en": "The people watching a play, concert, or film.", "meaning_fa": "تماشاگران، حضار", "example_en": "The audience clapped loudly after the show.", "photo": "media/vocab/audience.jpg"}, {"word": "author", "phonetic": "ˈɔːθə", "levels": ["a2"], "pos": "noun", "meaning_en": "A person who writes books.", "meaning_fa": "نویسنده", "example_en": "Who is the author of this book?", "photo": "media/vocab/author.jpg"}, {"word": "ballet", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A type of dance performed on a stage.", "meaning_fa": "باله (رقص)", "example_en": "We went to see a beautiful ballet performance.", "photo": "media/vocab/ballet.jpg"}, {"word": "biography", "phonetic": "baɪˈɒgrəfi", "levels": ["a2"], "pos": "noun", "meaning_en": "A book about someone's life written by another person.", "meaning_fa": "زندگینامه", "example_en": "I read a biography of a famous singer.", "photo": "media/vocab/biography.jpg"}, {"word": "boring", "phonetic": "ˈbɔːrɪŋ", "levels": ["a1"], "pos": "adjective", "meaning_en": "Not interesting or exciting.", "meaning_fa": "خسته‌کننده، کسل‌کننده", "example_en": "That movie was so boring.", "photo": "media/vocab/boring.jpg"}, {"word": "capture", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To record or represent something accurately.", "meaning_fa": "ثبت کردن، به تصویر کشیدن", "example_en": "The photographer tried to capture the beauty of the sunset.", "photo": "media/vocab/capture.jpg"}, {"word": "cartoon", "phonetic": "kɑːˈtuːn", "levels": ["a1"], "pos": "noun", "meaning_en": "A film or drawing with animated characters.", "meaning_fa": "کارتون، انیمیشن", "example_en": "My little brother loves watching cartoons.", "photo": "media/vocab/cartoon.jpg"}, {"word": "cast", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "All the actors in a play or film.", "meaning_fa": "بازیگران", "example_en": "The cast of the new movie is amazing.", "photo": "media/vocab/cast.jpg"}, {"word": "cinema", "phonetic": "ˈsɪnəmə", "levels": ["a1", "b2"], "pos": "noun", "meaning_en": "A place where you watch films.", "meaning_fa": "سینما", "example_en": "Let's go to the cinema tonight.", "photo": "media/vocab/cinema.jpg"}, {"word": "comedian", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A person who makes people laugh.", "meaning_fa": "کمدین، طنزپرداز", "example_en": "The comedian told funny jokes.", "photo": "media/vocab/comedian.jpg"}, {"word": "comedy", "phonetic": "ˈkɒmədi", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "A film or play that is funny.", "meaning_fa": "کمدی", "example_en": "Let's watch a comedy tonight.", "photo": "media/vocab/comedy.jpg"}, {"word": "complicated", "phonetic": "ˈkɒmplɪkeɪtɪd", "levels": ["a2"], "pos": "adjective", "meaning_en": "Difficult to understand or deal with.", "meaning_fa": "پیچیده", "example_en": "The instructions were too complicated.", "photo": "media/vocab/complicated.jpg"}, {"word": "costume", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Clothes worn by actors or for a special event.", "meaning_fa": "لباس مبدل، لباس نمایش", "example_en": "She wore a beautiful costume for the play.", "photo": "media/vocab/costume.jpg"}, {"word": "dance", "phonetic": "dɑːns", "levels": ["b2"], "pos": "verb", "meaning_en": "To move your body to music.", "meaning_fa": "رقصیدن", "example_en": "Let's dance to this song!", "photo": "media/vocab/dance.jpg"}, {"word": "dialogue", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A conversation between two or more people in a play or film.", "meaning_fa": "گفتگو، دیالوگ", "example_en": "The film had very witty dialogue.", "photo": "media/vocab/dialogue.jpg"}, {"word": "direct (a film)", "phonetic": "dɪˈrekt", "levels": ["a2"], "pos": "verb", "meaning_en": "To tell actors what to do in a film.", "meaning_fa": "کارگردانی کردن (فیلم)", "example_en": "Steven Spielberg directed many famous movies.", "photo": "media/vocab/direct-a-film.jpg"}, {"word": "directing", "phonetic": "dɪˈrektɪŋ", "levels": ["a2"], "pos": "noun", "meaning_en": "The job of telling actors what to do.", "meaning_fa": "کارگردانی", "example_en": "His directing in the new play was excellent.", "photo": "media/vocab/directing.jpg"}, {"word": "direction", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The way something moves or points.", "meaning_fa": "جهت، سمت", "example_en": "Which direction is the wind blowing?", "photo": "media/vocab/direction.jpg"}, {"word": "director", "phonetic": "dɪˈrektə", "levels": ["a1", "b2"], "pos": "noun", "meaning_en": "The person who tells actors what to do.", "meaning_fa": "کارگردان", "example_en": "The director made a great film.", "photo": "media/vocab/director.jpg"}, {"word": "director (of a film)", "phonetic": "dɪˈrektə", "levels": ["a2"], "pos": "noun", "meaning_en": "The person who controls the making of a film.", "meaning_fa": "کارگردان (فیلم)", "example_en": "The film's director won an award.", "photo": "media/vocab/director-of-a-film.jpg"}, {"word": "enjoy", "phonetic": "ɪnˈdʒɔɪ", "levels": ["a1"], "pos": "verb", "meaning_en": "To get pleasure from something.", "meaning_fa": "لذت بردن", "example_en": "I enjoy reading books.", "photo": "media/vocab/enjoy.jpg"}, {"word": "entertain", "phonetic": "ˌentəˈteɪn", "levels": ["a2"], "pos": "verb", "meaning_en": "To amuse people, often with a show.", "meaning_fa": "سرگرم کردن", "example_en": "The clown entertained the children.", "photo": "media/vocab/entertain.jpg"}, {"word": "entertainer", "phonetic": "ˌentəˈteɪnə", "levels": ["a2", "b2"], "pos": "noun", "meaning_en": "A person who performs for people.", "meaning_fa": "سرگرم‌کننده، هنرمند", "example_en": "The singer is a great entertainer.", "photo": "media/vocab/entertainer.jpg"}, {"word": "entertainment", "phonetic": "ˌentəˈteɪnmənt", "levels": ["a2"], "pos": "noun", "meaning_en": "Shows, movies, or other things that amuse people.", "meaning_fa": "سرگرمی", "example_en": "We watched a good movie for entertainment.", "photo": "media/vocab/entertainment.jpg"}, {"word": "fancy (doing) sth", "phonetic": "ˈfænsi ˈsʌmθɪŋ", "levels": ["a2"], "pos": "phrase", "meaning_en": "To want to do something.", "meaning_fa": "هوس چیزی کردن، مایل بودن", "example_en": "Do you fancy going to the cinema tonight?", "photo": "media/vocab/fancy-doing-sth.jpg"}, {"word": "fiction", "phonetic": "ˈfɪkʃən", "levels": ["a2"], "pos": "noun", "meaning_en": "Stories about imaginary people and events.", "meaning_fa": "داستان، تخیلی", "example_en": "I prefer reading fiction to non-fiction.", "photo": "media/vocab/fiction.jpg"}, {"word": "film", "phonetic": "fɪlm", "levels": ["a1"], "pos": "noun", "meaning_en": "A story shown in moving pictures; a movie.", "meaning_fa": "فیلم", "example_en": "Let's watch a film tonight.", "photo": "media/vocab/film.jpg"}, {"word": "film director", "phonetic": "fɪlm dɪˈrektə", "levels": ["a2"], "pos": "noun", "meaning_en": "The person who tells actors what to do.", "meaning_fa": "کارگردان فیلم", "example_en": "The film director won an award.", "photo": "media/vocab/film-director.jpg"}, {"word": "film star", "phonetic": "fɪlm stɑː", "levels": ["a1"], "pos": "noun", "meaning_en": "A famous actor in movies.", "meaning_fa": "ستاره سینما", "example_en": "She dreams of becoming a film star.", "photo": "media/vocab/film-star.jpg"}, {"word": "go", "phonetic": "gəʊ", "levels": ["a1"], "pos": "verb", "meaning_en": "Move from one place to another.", "meaning_fa": "رفتن", "example_en": "I go home after work.", "photo": "media/vocab/go.jpg"}, {"word": "horror", "phonetic": "ˈhɒrə", "levels": ["a1"], "pos": "noun", "meaning_en": "A strong feeling of fear.", "meaning_fa": "وحشت، ترس", "example_en": "The news filled me with horror.", "photo": "media/vocab/horror.jpg"}, {"word": "horror film", "phonetic": "ˈhɒrə fɪlm", "levels": ["a2"], "pos": "noun phrase", "meaning_en": "A movie designed to scare people.", "meaning_fa": "فیلم ترسناک", "example_en": "I don't like watching horror films.", "photo": "media/vocab/horror-film.jpg"}, {"word": "in", "phonetic": "ɪn", "levels": ["a1"], "pos": "preposition", "meaning_en": "Inside a place or container.", "meaning_fa": "در، داخل", "example_en": "The books are in the bag.", "photo": "media/vocab/in.jpg"}, {"word": "latest", "phonetic": "ˈleɪtɪst", "levels": ["a2"], "pos": "adjective", "meaning_en": "The newest or most recent.", "meaning_fa": "جدیدترین، آخرین", "example_en": "Have you heard her latest song?", "photo": "media/vocab/latest.jpg"}, {"word": "literature", "phonetic": "ˈlɪtərɪtʃə", "levels": ["a2"], "pos": "noun", "meaning_en": "Written works like novels, poems, and plays.", "meaning_fa": "ادبیات", "example_en": "I study English literature.", "photo": "media/vocab/literature.jpg"}, {"word": "love", "phonetic": "lʌv", "levels": ["a1"], "pos": "noun", "meaning_en": "a very strong feeling of liking someone or something.", "meaning_fa": "عشق، علاقه", "example_en": "My love for my family is endless.", "photo": "media/vocab/love.jpg"}, {"word": "modern ballet", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a style of ballet developed in the 20th century", "meaning_fa": "باله مدرن", "example_en": "We watched a beautiful modern ballet performance.", "photo": "media/vocab/modern-ballet.jpg"}, {"word": "musical", "phonetic": "ˈmjuːzɪkəl", "levels": ["a1"], "pos": "noun", "meaning_en": "A play or film with songs and dancing.", "meaning_fa": "موزیکال", "example_en": "We watched a fun musical last night.", "photo": "media/vocab/musical.jpg"}, {"word": "novel", "phonetic": "ˈnɒvəl", "levels": ["a2"], "pos": "noun", "meaning_en": "A long written story, usually in a book.", "meaning_fa": "رمان", "example_en": "I am reading a good novel.", "photo": "media/vocab/novel.jpg"}, {"word": "on TV", "phonetic": "ɒn tiːˈviː", "levels": ["a1"], "pos": "phrase", "meaning_en": "Broadcast on television.", "meaning_fa": "در تلویزیون", "example_en": "What's on TV tonight?", "photo": "media/vocab/on-tv.jpg"}, {"word": "opera", "phonetic": "ˈɒpərə", "levels": ["b2"], "pos": "noun", "meaning_en": "A play where words are sung to music.", "meaning_fa": "اپرا", "example_en": "I went to see an opera last night.", "photo": "media/vocab/opera.jpg"}, {"word": "performance", "phonetic": "pəˈfɔːməns", "levels": ["b2"], "pos": "noun", "meaning_en": "An act of singing, dancing, or acting.", "meaning_fa": "اجرا، نمایش", "example_en": "The concert performance was amazing.", "photo": "media/vocab/performance.jpg"}, {"word": "play", "phonetic": "pleɪ", "levels": ["a1"], "pos": "verb", "meaning_en": "to take part in a game or sport.", "meaning_fa": "بازی کردن", "example_en": "Do you want to play football?", "photo": "media/vocab/play.jpg"}, {"word": "poet", "phonetic": "ˈpəʊɪt", "levels": ["a2"], "pos": "noun", "meaning_en": "a person who writes poems.", "meaning_fa": "شاعر", "example_en": "William Shakespeare was a famous poet.", "photo": "media/vocab/poet.jpg"}, {"word": "poetry", "phonetic": "ˈpəʊɪtri", "levels": ["a2"], "pos": "noun", "meaning_en": "Beautiful writing in short lines, often with rhyme.", "meaning_fa": "شعر، شاعری", "example_en": "I like to read poetry.", "photo": "media/vocab/poetry.jpg"}, {"word": "production", "phonetic": "prəˈdʌkʃən", "levels": ["b2"], "pos": "noun", "meaning_en": "The process of making or growing things.", "meaning_fa": "تولید", "example_en": "Car production increased last year.", "photo": "media/vocab/production.jpg"}, {"word": "promote", "phonetic": "prəˈməʊt", "levels": ["b2"], "pos": "verb", "meaning_en": "To move someone to a higher job.", "meaning_fa": "ترفیع دادن", "example_en": "She was promoted to manager.", "photo": "media/vocab/promote.jpg"}, {"word": "rave", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "to praise something enthusiastically", "meaning_fa": "ستایش کردن، تعریف کردن", "example_en": "Critics rave about her new book.", "photo": "media/vocab/rave.jpg"}, {"word": "review", "phonetic": "rɪˈvjuː", "levels": ["b2"], "pos": "noun", "meaning_en": "An opinion about a book, film, or product.", "meaning_fa": "نقد، بررسی", "example_en": "I read a good review of that new movie.", "photo": "media/vocab/review.jpg"}, {"word": "reviewer", "phonetic": "rɪˈvjuːə", "levels": ["a2"], "pos": "noun", "meaning_en": "A person who writes opinions about books or films.", "meaning_fa": "منتقد، بازبین", "example_en": "The reviewer gave the play five stars.", "photo": "media/vocab/reviewer.jpg"}, {"word": "romantic (comedy)", "phonetic": "rəˈmæntɪk", "levels": ["a1"], "pos": "adjective", "meaning_en": "About love and relationships.", "meaning_fa": "عاشقانه", "example_en": "I like watching romantic movies.", "photo": "media/vocab/romantic-comedy.jpg"}, {"word": "romantic comedy", "phonetic": "rəʊˈmæntɪk ˈkɒmədi", "levels": ["a2"], "pos": "noun", "meaning_en": "A funny film or play about love.", "meaning_fa": "کمدی رمانتیک", "example_en": "Let's watch a romantic comedy tonight.", "photo": "media/vocab/romantic-comedy-2.jpg"}, {"word": "scene", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A part of a play, film, or book.", "meaning_fa": "صحنه (فیلم، نمایش)", "example_en": "My favorite scene in the movie was funny.", "photo": "media/vocab/scene.jpg"}, {"word": "science fiction", "phonetic": "saɪəns ˈfɪkʃən", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "Stories about future technology or space.", "meaning_fa": "علمی تخیلی", "example_en": "I like reading science fiction books.", "photo": "media/vocab/science-fiction.jpg"}, {"word": "score", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The music written for a film or play.", "meaning_fa": "موسیقی متن (فیلم)", "example_en": "The film's score was very dramatic.", "photo": "media/vocab/score.jpg"}, {"word": "screenplay", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The script for a film, including dialogue and directions.", "meaning_fa": "فیلمنامه", "example_en": "The director wrote the screenplay for the new movie.", "photo": "media/vocab/screenplay.jpg"}, {"word": "script", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The written text of a play or film.", "meaning_fa": "متن نمایش، فیلمنامه", "example_en": "The actors are learning their lines from the script.", "photo": "media/vocab/script.jpg"}, {"word": "see", "phonetic": "siː", "levels": ["a1"], "pos": "verb", "meaning_en": "To watch a film or play.", "meaning_fa": "دیدن (فیلم، نمایش)", "example_en": "Did you see the new movie?", "photo": "media/vocab/see.jpg"}, {"word": "set", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "the scenery and furniture used for a play or film", "meaning_fa": "صحنه، دکور", "example_en": "The film was shot on a beautiful set.", "photo": "media/vocab/set.jpg"}, {"word": "show", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A public performance or entertainment.", "meaning_fa": "نمایش، برنامه", "example_en": "We watched a great show at the theatre.", "photo": "media/vocab/show.jpg"}, {"word": "single [record]", "phonetic": "ˈsɪŋgəl", "levels": ["a2"], "pos": "noun", "meaning_en": "A song released separately from an album.", "meaning_fa": "تک‌آهنگ", "example_en": "The band released a new single last week.", "photo": "media/vocab/single-record.jpg"}, {"word": "stage", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The raised area where actors perform.", "meaning_fa": "صحنه نمایش", "example_en": "The singer walked onto the stage.", "photo": "media/vocab/stage.jpg"}, {"word": "star [famous actor]", "phonetic": "stɑː", "levels": ["a2"], "pos": "noun", "meaning_en": "A very famous actor or performer.", "meaning_fa": "ستاره (بازیگر معروف)", "example_en": "She is a big movie star.", "photo": "media/vocab/star-famous-actor.jpg"}, {"word": "theatre", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A building where plays are performed.", "meaning_fa": "تئاتر، سالن نمایش", "example_en": "We went to the theatre to see a play.", "photo": "media/vocab/theatre.jpg"}, {"word": "thriller", "phonetic": "ˈθrɪlə", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "a book or film with an exciting plot.", "meaning_fa": "فیلم/کتاب مهیج", "example_en": "I love watching a good thriller movie.", "photo": "media/vocab/thriller.jpg"}, {"word": "track [music]", "phonetic": "træk", "levels": ["a2"], "pos": "noun", "meaning_en": "One song or piece of music on an album.", "meaning_fa": "قطعه موسیقی", "example_en": "I love the first track on this CD.", "photo": "media/vocab/track-music.jpg"}, {"word": "TV", "phonetic": "ˌtiːˈviː", "levels": ["a1"], "pos": "noun", "meaning_en": "A device for watching programmes with pictures and sound.", "meaning_fa": "تلویزیون", "example_en": "Let's watch TV tonight.", "photo": "media/vocab/tv.jpg"}, {"word": "venue", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "the place where an event or meeting happens", "meaning_fa": "محل برگزاری، مکان", "example_en": "The concert venue was packed with fans.", "photo": "media/vocab/venue.jpg"}, {"word": "viewer", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a person who watches television or a video", "meaning_fa": "بیننده", "example_en": "Millions of viewers watched the show.", "photo": "media/vocab/viewer.jpg"}, {"word": "western", "phonetic": "ˈwestən", "levels": ["a1"], "pos": "adjective", "meaning_en": "relating to the west, often cowboys", "meaning_fa": "وسترن (فیلم)", "example_en": "My dad likes watching old western movies.", "photo": "media/vocab/western.jpg"}, {"word": "what’s on (at)", "phonetic": null, "levels": ["b2"], "pos": "phrase", "meaning_en": "asking what movies or shows are playing", "meaning_fa": "چه چیزی در حال نمایش است؟", "example_en": "What's on at the cinema tonight?", "photo": "media/vocab/what-s-on-at.jpg"}, {"word": "What’s on …?", "phonetic": "wɒts ɒn", "levels": ["a1"], "pos": "phrase", "meaning_en": "asking about events or shows", "meaning_fa": "چه چیزی در ... است؟", "example_en": "What's on at the theatre this week?", "photo": "media/vocab/what-s-on.jpg"}, {"word": "What’s on?", "phonetic": "wɒts ɒn", "levels": ["a2"], "pos": "phrase", "meaning_en": "asking about events or shows", "meaning_fa": "چه خبر است؟ چه چیزی در حال نمایش است؟", "example_en": "Let's go out. What's on tonight?", "photo": "media/vocab/what-s-on-2.jpg"}]
+[
+ {
+  "word": "act [perform]",
+  "phonetic": "ækt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "to perform a role in a play or film",
+  "meaning_fa": "بازی کردن (نقش)",
+  "example_en": "She wants to act in movies.",
+  "photo": "media/vocab/act-perform.jpg"
+ },
+ {
+  "word": "acting",
+  "phonetic": "ˈæktɪŋ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the job of performing in plays or films",
+  "meaning_fa": "بازیگری",
+  "example_en": "Her acting in the play was superb.",
+  "photo": "media/vocab/acting.jpg"
+ },
+ {
+  "word": "action film",
+  "phonetic": "ˈækʃən fɪlm",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "a film with lots of exciting events and fighting",
+  "meaning_fa": "فیلم اکشن",
+  "example_en": "I love watching action films with my friends.",
+  "photo": "media/vocab/action-film.jpg"
+ },
+ {
+  "word": "actor",
+  "phonetic": "ˈæktə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a person who performs in plays or films",
+  "meaning_fa": "بازیگر",
+  "example_en": "He is a famous actor from Hollywood.",
+  "photo": "media/vocab/actor.jpg"
+ },
+ {
+  "word": "appear in",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To be in a film, play, or book.",
+  "meaning_fa": "در (فیلم/کتاب) ظاهر شدن",
+  "example_en": "He will appear in the new movie.",
+  "photo": "media/vocab/appear-in.jpg"
+ },
+ {
+  "word": "audience",
+  "phonetic": "ˈɔːdjəns",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The people watching a play, concert, or film.",
+  "meaning_fa": "تماشاگران، حضار",
+  "example_en": "The audience clapped loudly after the show.",
+  "photo": "media/vocab/audience.jpg"
+ },
+ {
+  "word": "author",
+  "phonetic": "ˈɔːθə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who writes books.",
+  "meaning_fa": "نویسنده",
+  "example_en": "Who is the author of this book?",
+  "photo": "media/vocab/author.jpg"
+ },
+ {
+  "word": "ballet",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A type of dance performed on a stage.",
+  "meaning_fa": "باله (رقص)",
+  "example_en": "We went to see a beautiful ballet performance.",
+  "photo": "media/vocab/ballet.jpg"
+ },
+ {
+  "word": "biography",
+  "phonetic": "baɪˈɒgrəfi",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A book about someone's life written by another person.",
+  "meaning_fa": "زندگینامه",
+  "example_en": "I read a biography of a famous singer.",
+  "photo": "media/vocab/biography.jpg"
+ },
+ {
+  "word": "boring",
+  "phonetic": "ˈbɔːrɪŋ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not interesting or exciting.",
+  "meaning_fa": "خسته‌کننده، کسل‌کننده",
+  "example_en": "That movie was so boring.",
+  "photo": "media/vocab/boring.jpg"
+ },
+ {
+  "word": "capture",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To record or represent something accurately.",
+  "meaning_fa": "ثبت کردن، به تصویر کشیدن",
+  "example_en": "The photographer tried to capture the beauty of the sunset.",
+  "photo": "media/vocab/capture.jpg"
+ },
+ {
+  "word": "cartoon",
+  "phonetic": "kɑːˈtuːn",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A film or drawing with animated characters.",
+  "meaning_fa": "کارتون، انیمیشن",
+  "example_en": "My little brother loves watching cartoons.",
+  "photo": "media/vocab/cartoon.jpg"
+ },
+ {
+  "word": "cast",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "All the actors in a play or film.",
+  "meaning_fa": "بازیگران",
+  "example_en": "The cast of the new movie is amazing.",
+  "photo": "media/vocab/cast.jpg"
+ },
+ {
+  "word": "cinema",
+  "phonetic": "ˈsɪnəmə",
+  "levels": [
+   "a1",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A place where you watch films.",
+  "meaning_fa": "سینما",
+  "example_en": "Let's go to the cinema tonight.",
+  "photo": "media/vocab/cinema.jpg"
+ },
+ {
+  "word": "comedian",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who makes people laugh.",
+  "meaning_fa": "کمدین، طنزپرداز",
+  "example_en": "The comedian told funny jokes.",
+  "photo": "media/vocab/comedian.jpg"
+ },
+ {
+  "word": "comedy",
+  "phonetic": "ˈkɒmədi",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A film or play that is funny.",
+  "meaning_fa": "کمدی",
+  "example_en": "Let's watch a comedy tonight.",
+  "photo": "media/vocab/comedy.jpg"
+ },
+ {
+  "word": "complicated",
+  "phonetic": "ˈkɒmplɪkeɪtɪd",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Difficult to understand or deal with.",
+  "meaning_fa": "پیچیده",
+  "example_en": "The instructions were too complicated.",
+  "photo": "media/vocab/complicated.jpg"
+ },
+ {
+  "word": "costume",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Clothes worn by actors or for a special event.",
+  "meaning_fa": "لباس مبدل، لباس نمایش",
+  "example_en": "She wore a beautiful costume for the play.",
+  "photo": "media/vocab/costume.jpg"
+ },
+ {
+  "word": "dance",
+  "phonetic": "dɑːns",
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To move your body to music.",
+  "meaning_fa": "رقصیدن",
+  "example_en": "Let's dance to this song!",
+  "photo": "media/vocab/dance.jpg"
+ },
+ {
+  "word": "dialogue",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A conversation between two or more people in a play or film.",
+  "meaning_fa": "گفتگو، دیالوگ",
+  "example_en": "The film had very witty dialogue.",
+  "photo": "media/vocab/dialogue.jpg"
+ },
+ {
+  "word": "direct (a film)",
+  "phonetic": "dɪˈrekt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To tell actors what to do in a film.",
+  "meaning_fa": "کارگردانی کردن (فیلم)",
+  "example_en": "Steven Spielberg directed many famous movies.",
+  "photo": "media/vocab/direct-a-film.jpg"
+ },
+ {
+  "word": "directing",
+  "phonetic": "dɪˈrektɪŋ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The job of telling actors what to do.",
+  "meaning_fa": "کارگردانی",
+  "example_en": "His directing in the new play was excellent.",
+  "photo": "media/vocab/directing.jpg"
+ },
+ {
+  "word": "direction",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The way something moves or points.",
+  "meaning_fa": "جهت، سمت",
+  "example_en": "Which direction is the wind blowing?",
+  "photo": "media/vocab/direction.jpg"
+ },
+ {
+  "word": "director",
+  "phonetic": "dɪˈrektə",
+  "levels": [
+   "a1",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The person who tells actors what to do.",
+  "meaning_fa": "کارگردان",
+  "example_en": "The director made a great film.",
+  "photo": "media/vocab/director.jpg"
+ },
+ {
+  "word": "director (of a film)",
+  "phonetic": "dɪˈrektə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The person who controls the making of a film.",
+  "meaning_fa": "کارگردان (فیلم)",
+  "example_en": "The film's director won an award.",
+  "photo": "media/vocab/director-of-a-film.jpg"
+ },
+ {
+  "word": "enjoy",
+  "phonetic": "ɪnˈdʒɔɪ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To get pleasure from something.",
+  "meaning_fa": "لذت بردن",
+  "example_en": "I enjoy reading books.",
+  "photo": "media/vocab/enjoy.jpg"
+ },
+ {
+  "word": "entertain",
+  "phonetic": "ˌentəˈteɪn",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To amuse people, often with a show.",
+  "meaning_fa": "سرگرم کردن",
+  "example_en": "The clown entertained the children.",
+  "photo": "media/vocab/entertain.jpg"
+ },
+ {
+  "word": "entertainer",
+  "phonetic": "ˌentəˈteɪnə",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who performs for people.",
+  "meaning_fa": "سرگرم‌کننده، هنرمند",
+  "example_en": "The singer is a great entertainer.",
+  "photo": "media/vocab/entertainer.jpg"
+ },
+ {
+  "word": "entertainment",
+  "phonetic": "ˌentəˈteɪnmənt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Shows, movies, or other things that amuse people.",
+  "meaning_fa": "سرگرمی",
+  "example_en": "We watched a good movie for entertainment.",
+  "photo": "media/vocab/entertainment.jpg"
+ },
+ {
+  "word": "fancy (doing) sth",
+  "phonetic": "ˈfænsi ˈsʌmθɪŋ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "To want to do something.",
+  "meaning_fa": "هوس چیزی کردن، مایل بودن",
+  "example_en": "Do you fancy going to the cinema tonight?",
+  "photo": "media/vocab/fancy-doing-sth.jpg"
+ },
+ {
+  "word": "fiction",
+  "phonetic": "ˈfɪkʃən",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Stories about imaginary people and events.",
+  "meaning_fa": "داستان، تخیلی",
+  "example_en": "I prefer reading fiction to non-fiction.",
+  "photo": "media/vocab/fiction.jpg"
+ },
+ {
+  "word": "film",
+  "phonetic": "fɪlm",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A story shown in moving pictures; a movie.",
+  "meaning_fa": "فیلم",
+  "example_en": "Let's watch a film tonight.",
+  "photo": "media/vocab/film.jpg"
+ },
+ {
+  "word": "film director",
+  "phonetic": "fɪlm dɪˈrektə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The person who tells actors what to do.",
+  "meaning_fa": "کارگردان فیلم",
+  "example_en": "The film director won an award.",
+  "photo": "media/vocab/film-director.jpg"
+ },
+ {
+  "word": "film star",
+  "phonetic": "fɪlm stɑː",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A famous actor in movies.",
+  "meaning_fa": "ستاره سینما",
+  "example_en": "She dreams of becoming a film star.",
+  "photo": "media/vocab/film-star.jpg"
+ },
+ {
+  "word": "go",
+  "phonetic": "gəʊ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "verb",
+  "meaning_en": "Move from one place to another.",
+  "meaning_fa": "رفتن",
+  "example_en": "I go home after work.",
+  "photo": "media/vocab/go.jpg"
+ },
+ {
+  "word": "horror",
+  "phonetic": "ˈhɒrə",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A strong feeling of fear.",
+  "meaning_fa": "وحشت، ترس",
+  "example_en": "The news filled me with horror.",
+  "photo": "media/vocab/horror.jpg"
+ },
+ {
+  "word": "horror film",
+  "phonetic": "ˈhɒrə fɪlm",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A movie designed to scare people.",
+  "meaning_fa": "فیلم ترسناک",
+  "example_en": "I don't like watching horror films.",
+  "photo": "media/vocab/horror-film.jpg"
+ },
+ {
+  "word": "in",
+  "phonetic": "ɪn",
+  "levels": [
+   "a1"
+  ],
+  "pos": "preposition",
+  "meaning_en": "Inside a place or container.",
+  "meaning_fa": "در، داخل",
+  "example_en": "The books are in the bag.",
+  "photo": "media/vocab/in.jpg"
+ },
+ {
+  "word": "latest",
+  "phonetic": "ˈleɪtɪst",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "The newest or most recent.",
+  "meaning_fa": "جدیدترین، آخرین",
+  "example_en": "Have you heard her latest song?",
+  "photo": "media/vocab/latest.jpg"
+ },
+ {
+  "word": "literature",
+  "phonetic": "ˈlɪtərɪtʃə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Written works like novels, poems, and plays.",
+  "meaning_fa": "ادبیات",
+  "example_en": "I study English literature.",
+  "photo": "media/vocab/literature.jpg"
+ },
+ {
+  "word": "love",
+  "phonetic": "lʌv",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "a very strong feeling of liking someone or something.",
+  "meaning_fa": "عشق، علاقه",
+  "example_en": "My love for my family is endless.",
+  "photo": "media/vocab/love.jpg"
+ },
+ {
+  "word": "modern ballet",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a style of ballet developed in the 20th century",
+  "meaning_fa": "باله مدرن",
+  "example_en": "We watched a beautiful modern ballet performance.",
+  "photo": "media/vocab/modern-ballet.jpg"
+ },
+ {
+  "word": "musical",
+  "phonetic": "ˈmjuːzɪkəl",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A play or film with songs and dancing.",
+  "meaning_fa": "موزیکال",
+  "example_en": "We watched a fun musical last night.",
+  "photo": "media/vocab/musical.jpg"
+ },
+ {
+  "word": "novel",
+  "phonetic": "ˈnɒvəl",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A long written story, usually in a book.",
+  "meaning_fa": "رمان",
+  "example_en": "I am reading a good novel.",
+  "photo": "media/vocab/novel.jpg"
+ },
+ {
+  "word": "on TV",
+  "phonetic": "ɒn tiːˈviː",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Broadcast on television.",
+  "meaning_fa": "در تلویزیون",
+  "example_en": "What's on TV tonight?",
+  "photo": "media/vocab/on-tv.jpg"
+ },
+ {
+  "word": "opera",
+  "phonetic": "ˈɒpərə",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A play where words are sung to music.",
+  "meaning_fa": "اپرا",
+  "example_en": "I went to see an opera last night.",
+  "photo": "media/vocab/opera.jpg"
+ },
+ {
+  "word": "performance",
+  "phonetic": "pəˈfɔːməns",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An act of singing, dancing, or acting.",
+  "meaning_fa": "اجرا، نمایش",
+  "example_en": "The concert performance was amazing.",
+  "photo": "media/vocab/performance.jpg"
+ },
+ {
+  "word": "play",
+  "phonetic": "pleɪ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "verb",
+  "meaning_en": "to take part in a game or sport.",
+  "meaning_fa": "بازی کردن",
+  "example_en": "Do you want to play football?",
+  "photo": "media/vocab/play.jpg"
+ },
+ {
+  "word": "poet",
+  "phonetic": "ˈpəʊɪt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a person who writes poems.",
+  "meaning_fa": "شاعر",
+  "example_en": "William Shakespeare was a famous poet.",
+  "photo": "media/vocab/poet.jpg"
+ },
+ {
+  "word": "poetry",
+  "phonetic": "ˈpəʊɪtri",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Beautiful writing in short lines, often with rhyme.",
+  "meaning_fa": "شعر، شاعری",
+  "example_en": "I like to read poetry.",
+  "photo": "media/vocab/poetry.jpg"
+ },
+ {
+  "word": "production",
+  "phonetic": "prəˈdʌkʃən",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The process of making or growing things.",
+  "meaning_fa": "تولید",
+  "example_en": "Car production increased last year.",
+  "photo": "media/vocab/production.jpg"
+ },
+ {
+  "word": "promote",
+  "phonetic": "prəˈməʊt",
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To move someone to a higher job.",
+  "meaning_fa": "ترفیع دادن",
+  "example_en": "She was promoted to manager.",
+  "photo": "media/vocab/promote.jpg"
+ },
+ {
+  "word": "rave",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "to praise something enthusiastically",
+  "meaning_fa": "ستایش کردن، تعریف کردن",
+  "example_en": "Critics rave about her new book.",
+  "photo": "media/vocab/rave.jpg"
+ },
+ {
+  "word": "review",
+  "phonetic": "rɪˈvjuː",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An opinion about a book, film, or product.",
+  "meaning_fa": "نقد، بررسی",
+  "example_en": "I read a good review of that new movie.",
+  "photo": "media/vocab/review.jpg"
+ },
+ {
+  "word": "reviewer",
+  "phonetic": "rɪˈvjuːə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who writes opinions about books or films.",
+  "meaning_fa": "منتقد، بازبین",
+  "example_en": "The reviewer gave the play five stars.",
+  "photo": "media/vocab/reviewer.jpg"
+ },
+ {
+  "word": "romantic (comedy)",
+  "phonetic": "rəˈmæntɪk",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "About love and relationships.",
+  "meaning_fa": "عاشقانه",
+  "example_en": "I like watching romantic movies.",
+  "photo": "media/vocab/romantic-comedy.jpg"
+ },
+ {
+  "word": "romantic comedy",
+  "phonetic": "rəʊˈmæntɪk ˈkɒmədi",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A funny film or play about love.",
+  "meaning_fa": "کمدی رمانتیک",
+  "example_en": "Let's watch a romantic comedy tonight.",
+  "photo": "media/vocab/romantic-comedy-2.jpg"
+ },
+ {
+  "word": "scene",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A part of a play, film, or book.",
+  "meaning_fa": "صحنه (فیلم، نمایش)",
+  "example_en": "My favorite scene in the movie was funny.",
+  "photo": "media/vocab/scene.jpg"
+ },
+ {
+  "word": "science fiction",
+  "phonetic": "saɪəns ˈfɪkʃən",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Stories about future technology or space.",
+  "meaning_fa": "علمی تخیلی",
+  "example_en": "I like reading science fiction books.",
+  "photo": "media/vocab/science-fiction.jpg"
+ },
+ {
+  "word": "score",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The music written for a film or play.",
+  "meaning_fa": "موسیقی متن (فیلم)",
+  "example_en": "The film's score was very dramatic.",
+  "photo": "media/vocab/score.jpg"
+ },
+ {
+  "word": "screenplay",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The script for a film, including dialogue and directions.",
+  "meaning_fa": "فیلمنامه",
+  "example_en": "The director wrote the screenplay for the new movie.",
+  "photo": "media/vocab/screenplay.jpg"
+ },
+ {
+  "word": "script",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The written text of a play or film.",
+  "meaning_fa": "متن نمایش، فیلمنامه",
+  "example_en": "The actors are learning their lines from the script.",
+  "photo": "media/vocab/script.jpg"
+ },
+ {
+  "word": "see",
+  "phonetic": "siː",
+  "levels": [
+   "a1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To watch a film or play.",
+  "meaning_fa": "دیدن (فیلم، نمایش)",
+  "example_en": "Did you see the new movie?",
+  "photo": "media/vocab/see.jpg"
+ },
+ {
+  "word": "set",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the scenery and furniture used for a play or film",
+  "meaning_fa": "صحنه، دکور",
+  "example_en": "The film was shot on a beautiful set.",
+  "photo": "media/vocab/set.jpg"
+ },
+ {
+  "word": "show",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A public performance or entertainment.",
+  "meaning_fa": "نمایش، برنامه",
+  "example_en": "We watched a great show at the theatre.",
+  "photo": "media/vocab/show.jpg"
+ },
+ {
+  "word": "single [record]",
+  "phonetic": "ˈsɪŋgəl",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A song released separately from an album.",
+  "meaning_fa": "تک‌آهنگ",
+  "example_en": "The band released a new single last week.",
+  "photo": "media/vocab/single-record.jpg"
+ },
+ {
+  "word": "stage",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The raised area where actors perform.",
+  "meaning_fa": "صحنه نمایش",
+  "example_en": "The singer walked onto the stage.",
+  "photo": "media/vocab/stage.jpg"
+ },
+ {
+  "word": "star [famous actor]",
+  "phonetic": "stɑː",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A very famous actor or performer.",
+  "meaning_fa": "ستاره (بازیگر معروف)",
+  "example_en": "She is a big movie star.",
+  "photo": "media/vocab/star-famous-actor.jpg"
+ },
+ {
+  "word": "theatre",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A building where plays are performed.",
+  "meaning_fa": "تئاتر، سالن نمایش",
+  "example_en": "We went to the theatre to see a play.",
+  "photo": "media/vocab/theatre.jpg"
+ },
+ {
+  "word": "thriller",
+  "phonetic": "ˈθrɪlə",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a book or film with an exciting plot.",
+  "meaning_fa": "فیلم/کتاب مهیج",
+  "example_en": "I love watching a good thriller movie.",
+  "photo": "media/vocab/thriller.jpg"
+ },
+ {
+  "word": "track [music]",
+  "phonetic": "træk",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "One song or piece of music on an album.",
+  "meaning_fa": "قطعه موسیقی",
+  "example_en": "I love the first track on this CD.",
+  "photo": "media/vocab/track-music.jpg"
+ },
+ {
+  "word": "TV",
+  "phonetic": "ˌtiːˈviː",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A device for watching programmes with pictures and sound.",
+  "meaning_fa": "تلویزیون",
+  "example_en": "Let's watch TV tonight.",
+  "photo": "media/vocab/tv.jpg"
+ },
+ {
+  "word": "venue",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the place where an event or meeting happens",
+  "meaning_fa": "محل برگزاری، مکان",
+  "example_en": "The concert venue was packed with fans.",
+  "photo": "media/vocab/venue.jpg"
+ },
+ {
+  "word": "viewer",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a person who watches television or a video",
+  "meaning_fa": "بیننده",
+  "example_en": "Millions of viewers watched the show.",
+  "photo": "media/vocab/viewer.jpg"
+ },
+ {
+  "word": "western",
+  "phonetic": "ˈwestən",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "relating to the west, often cowboys",
+  "meaning_fa": "وسترن (فیلم)",
+  "example_en": "My dad likes watching old western movies.",
+  "photo": "media/vocab/western.jpg"
+ },
+ {
+  "word": "what’s on (at)",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "asking what movies or shows are playing",
+  "meaning_fa": "چه چیزی در حال نمایش است؟",
+  "example_en": "What's on at the cinema tonight?",
+  "photo": "media/vocab/what-s-on-at.jpg"
+ },
+ {
+  "word": "What’s on …?",
+  "phonetic": "wɒts ɒn",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "asking about events or shows",
+  "meaning_fa": "چه چیزی در ... است؟",
+  "example_en": "What's on at the theatre this week?",
+  "photo": "media/vocab/what-s-on.jpg"
+ },
+ {
+  "word": "What’s on?",
+  "phonetic": "wɒts ɒn",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "asking about events or shows",
+  "meaning_fa": "چه خبر است؟ چه چیزی در حال نمایش است؟",
+  "example_en": "Let's go out. What's on tonight?",
+  "photo": "media/vocab/what-s-on-2.jpg"
+ },
+ {
+  "word": "ahead of its time",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Having ideas or designs that are too advanced.",
+  "meaning_fa": "جلوتر از زمان خود",
+  "example_en": "That film was truly ahead of its time.",
+  "photo": "media/vocab/ahead-of-its-time.jpg"
+ },
+ {
+  "word": "anthology",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A collection of literary pieces by different authors.",
+  "meaning_fa": "گلچین ادبی، مجموعه",
+  "example_en": "She published an anthology of contemporary short stories.",
+  "photo": "media/vocab/anthology.jpg"
+ },
+ {
+  "word": "bedtime reading",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A book or story read before going to sleep.",
+  "meaning_fa": "مطالعه قبل از خواب",
+  "example_en": "I enjoy a good novel for my bedtime reading.",
+  "photo": "media/vocab/bedtime-reading.jpg"
+ },
+ {
+  "word": "blurb",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A short description promoting a book or product.",
+  "meaning_fa": "خلاصه معرفی، متن تبلیغاتی",
+  "example_en": "The blurb on the back of the book sounded intriguing.",
+  "photo": "media/vocab/blurb.jpg"
+ },
+ {
+  "word": "can’t put (book) down",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "A book is so interesting you want to keep reading it.",
+  "meaning_fa": "کتابی که نمی‌توان زمین گذاشت",
+  "example_en": "This novel is so gripping; I can't put it down.",
+  "photo": "media/vocab/cant-put-book-down.jpg"
+ },
+ {
+  "word": "chilling",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Frightening or disturbing.",
+  "meaning_fa": "ترسناک، وحشتناک",
+  "example_en": "The movie had a truly chilling and suspenseful ending.",
+  "photo": "media/vocab/chilling.jpg"
+ },
+ {
+  "word": "chronicle",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To record events in a factual and detailed way.",
+  "meaning_fa": "ثبت کردن، وقایع‌نگاری کردن",
+  "example_en": "The book chronicles the history of the ancient city.",
+  "photo": "media/vocab/chronicle.jpg"
+ },
+ {
+  "word": "compelling",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Evoking strong interest, attention, or admiration.",
+  "meaning_fa": "جذاب، گیرا، قانع‌کننده",
+  "example_en": "The film had a compelling storyline and great acting.",
+  "photo": "media/vocab/compelling.jpg"
+ },
+ {
+  "word": "compulsive reading",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "So interesting you cannot stop reading it.",
+  "meaning_fa": "خواندنی جذاب، اعتیادآور",
+  "example_en": "Her new novel is absolutely compulsive reading; I finished it in a day.",
+  "photo": "media/vocab/compulsive-reading.jpg"
+ },
+ {
+  "word": "encyclopedia",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A book or set of books giving information on many subjects.",
+  "meaning_fa": "دائرةالمعارف",
+  "example_en": "I looked up the definition in the encyclopedia.",
+  "photo": "media/vocab/encyclopedia.jpg"
+ },
+ {
+  "word": "engaging",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Interesting and holding one's attention.",
+  "meaning_fa": "جذاب، گیرا",
+  "example_en": "The speaker delivered an incredibly engaging presentation.",
+  "photo": "media/vocab/engaging.jpg"
+ },
+ {
+  "word": "enigmatic",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Mysterious and difficult to understand.",
+  "meaning_fa": "مرموز، معماگونه",
+  "example_en": "The character's enigmatic smile left the audience puzzled.",
+  "photo": "media/vocab/enigmatic.jpg"
+ },
+ {
+  "word": "eponymous",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Named after the main character or creator.",
+  "meaning_fa": "هم‌نام، نام‌برده از",
+  "example_en": "The band's eponymous debut album was a huge success.",
+  "photo": "media/vocab/eponymous.jpg"
+ },
+ {
+  "word": "get into",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To become interested or involved in something.",
+  "meaning_fa": "علاقه‌مند شدن، وارد شدن",
+  "example_en": "I really got into that new fantasy novel.",
+  "photo": "media/vocab/get-into.jpg"
+ },
+ {
+  "word": "heavy going",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Difficult or tedious to read or deal with.",
+  "meaning_fa": "دشوار، خسته‌کننده، سنگین",
+  "example_en": "The philosophy book was rather heavy going.",
+  "photo": "media/vocab/heavy-going.jpg"
+ },
+ {
+  "word": "informative",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Providing useful or interesting information.",
+  "meaning_fa": "آموزنده، پرمحتوا",
+  "example_en": "The documentary was very informative and engaging.",
+  "photo": "media/vocab/informative.jpg"
+ },
+ {
+  "word": "insight",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A deep understanding of a complex situation.",
+  "meaning_fa": "بینش، بصیرت",
+  "example_en": "Her book offers valuable insight into human behavior.",
+  "photo": "media/vocab/insight.jpg"
+ },
+ {
+  "word": "journal",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A serious magazine dealing with a particular subject.",
+  "meaning_fa": "مجله تخصصی، نشریه",
+  "example_en": "Her research was published in a prestigious academic journal.",
+  "photo": "media/vocab/journal.jpg"
+ },
+ {
+  "word": "lightweight",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not serious or important; lacking depth.",
+  "meaning_fa": "سبک، بی‌اهمیت",
+  "example_en": "The film was entertaining but ultimately a lightweight comedy.",
+  "photo": "media/vocab/lightweight.jpg"
+ },
+ {
+  "word": "logbook",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A book for recording events or observations.",
+  "meaning_fa": "دفتر ثبت وقایع",
+  "example_en": "The pilot meticulously updated the aircraft's logbook.",
+  "photo": "media/vocab/logbook.jpg"
+ },
+ {
+  "word": "lugubrious",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Looking or sounding very sad and dismal.",
+  "meaning_fa": "غمگین، محزون، دلگیر",
+  "example_en": "The play's lugubrious tone left the audience feeling depressed.",
+  "photo": "media/vocab/lugubrious.jpg"
+ },
+ {
+  "word": "macabre",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Disturbing and horrifying because of involvement with death.",
+  "meaning_fa": "ترسناک، وحشتناک، مهیب",
+  "example_en": "The film featured macabre scenes of a haunted house.",
+  "photo": "media/vocab/macabre.jpg"
+ },
+ {
+  "word": "manual",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A book of instructions, especially for operating a machine.",
+  "meaning_fa": "دفترچه راهنما، کتابچه",
+  "example_en": "I read the manual to learn how to use the new camera.",
+  "photo": "media/vocab/manual.jpg"
+ },
+ {
+  "word": "memoir",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A historical account or biography written from personal knowledge.",
+  "meaning_fa": "خاطرات، زندگی‌نامه",
+  "example_en": "She published a memoir about her childhood.",
+  "photo": "media/vocab/memoir.jpg"
+ },
+ {
+  "word": "page-turner",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A book that is so exciting you want to keep reading.",
+  "meaning_fa": "کتاب جذاب و خواندنی",
+  "example_en": "Her latest novel is an absolute page-turner.",
+  "photo": "media/vocab/page-turner.jpg"
+ },
+ {
+  "word": "poignant",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Evoking a keen sense of sadness or regret.",
+  "meaning_fa": "تأثرانگیز، سوزناک",
+  "example_en": "The film's ending was incredibly poignant and moving.",
+  "photo": "media/vocab/poignant.jpg"
+ },
+ {
+  "word": "product of its time",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Something that reflects the attitudes and values of its era.",
+  "meaning_fa": "محصول زمان خود",
+  "example_en": "That film is a product of its time, with outdated views.",
+  "photo": "media/vocab/product-of-its-time.jpg"
+ },
+ {
+  "word": "protagonist",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The main character in a story, play, or film.",
+  "meaning_fa": "شخصیت اصلی، قهرمان",
+  "example_en": "The protagonist embarks on a perilous journey.",
+  "photo": "media/vocab/protagonist.jpg"
+ },
+ {
+  "word": "readership",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The total number or type of people who read a publication.",
+  "meaning_fa": "خوانندگان، مخاطبان",
+  "example_en": "The magazine aims to expand its readership among young adults.",
+  "photo": "media/vocab/readership.jpg"
+ },
+ {
+  "word": "wry",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "using dry, mocking humor; ironic.",
+  "meaning_fa": "طعنه‌آمیز، کنایه‌آمیز",
+  "example_en": "He gave a wry smile, acknowledging the irony.",
+  "photo": "media/vocab/wry.jpg"
+ }
+]

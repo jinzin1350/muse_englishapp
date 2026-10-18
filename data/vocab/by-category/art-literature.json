@@ -1,1 +1,1506 @@
-[{"word": "abstract", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "art that uses shapes and colours, not real things", "meaning_fa": "انتزاعی، آبستره", "example_en": "I don't always understand abstract art, but I find it interesting.", "photo": "media/vocab/abstract.jpg"}, {"word": "architect", "phonetic": "ˈɑːkɪtekt", "levels": ["b2"], "pos": "noun", "meaning_en": "A person who designs buildings.", "meaning_fa": "معمار", "example_en": "My uncle is an architect; he designs houses.", "photo": "media/vocab/architect.jpg"}, {"word": "architecture", "phonetic": "ˈɑːkɪtektʃə", "levels": ["b2"], "pos": "noun", "meaning_en": "The art and science of designing buildings.", "meaning_fa": "معماری", "example_en": "I love studying old Roman architecture.", "photo": "media/vocab/architecture.jpg"}, {"word": "art", "phonetic": "ɑːt", "levels": ["b2"], "pos": "noun", "meaning_en": "Pictures, drawings, or sculptures.", "meaning_fa": "هنر", "example_en": "I like to draw and make art.", "photo": "media/vocab/art.jpg"}, {"word": "art lover", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Someone who enjoys and appreciates art very much.", "meaning_fa": "دوستدار هنر", "example_en": "My aunt is a true art lover.", "photo": "media/vocab/art-lover.jpg"}, {"word": "artistic", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Relating to art or having creative skill.", "meaning_fa": "هنری، با استعداد هنری", "example_en": "She has a very artistic eye for design.", "photo": "media/vocab/artistic.jpg"}, {"word": "arts (the)", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Creative activities like painting, music, and theatre.", "meaning_fa": "هنرها (نقاشی، موسیقی، تئاتر)", "example_en": "She loves going to the theatre and enjoying the arts.", "photo": "media/vocab/arts-the.jpg"}, {"word": "arts and cras", "phonetic": null, "levels": ["b2"], "pos": "phrase", "meaning_en": "Activities like making things with your hands.", "meaning_fa": "صنایع دستی و هنرهای دستی", "example_en": "We did some arts and crafts at school.", "photo": "media/vocab/arts-and-cra-s.jpg"}, {"word": "arts page", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A section in a newspaper about art and culture.", "meaning_fa": "صفحه هنری (روزنامه)", "example_en": "I always read the arts page first.", "photo": "media/vocab/arts-page.jpg"}, {"word": "bestseller", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A very popular book or product.", "meaning_fa": "پرفروش‌ترین", "example_en": "Her new novel became a bestseller.", "photo": "media/vocab/bestseller.jpg"}, {"word": "building", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a structure with walls and a roof", "meaning_fa": "ساختمان، بنا", "example_en": "That old building is very beautiful.", "photo": "media/vocab/building.jpg"}, {"word": "character", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A person or animal in a book or film.", "meaning_fa": "شخصیت (داستان)", "example_en": "My favorite character in the story is the hero.", "photo": "media/vocab/character.jpg"}, {"word": "copy", "phonetic": "ˈkɒpi", "levels": ["b2"], "pos": "verb", "meaning_en": "To make an exact duplicate of something.", "meaning_fa": "کپی کردن، رونوشت گرفتن", "example_en": "Can you copy this document for me?", "photo": "media/vocab/copy.jpg"}, {"word": "critic", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A person who judges and reviews art, films, etc.", "meaning_fa": "منتقد", "example_en": "The film critic gave it a bad review.", "photo": "media/vocab/critic.jpg"}, {"word": "design", "phonetic": "dɪˈzaɪn", "levels": ["b2"], "pos": "noun, verb", "meaning_en": "(n) A plan for how something looks; (v) to plan something.", "meaning_fa": "(ن) طرح، نقشه؛ (ف) طراحی کردن", "example_en": "I like the design of your new car.", "photo": "media/vocab/design.jpg"}, {"word": "extract n", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A short piece taken from a book or film.", "meaning_fa": "گزیده، عصاره", "example_en": "Read this extract from the novel.", "photo": "media/vocab/extract-n.jpg"}, {"word": "fine art(s)", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Art forms like painting and sculpture.", "meaning_fa": "هنرهای زیبا", "example_en": "She studies fine arts at university.", "photo": "media/vocab/fine-arts.jpg"}, {"word": "image", "phonetic": "ˈɪmɪʤ", "levels": ["b2"], "pos": "noun", "meaning_en": "A picture or a photograph.", "meaning_fa": "تصویر، عکس", "example_en": "The website has many beautiful images of nature.", "photo": "media/vocab/image.jpg"}, {"word": "landscape", "phonetic": "ˈlændskeɪp", "levels": ["b2"], "pos": "noun", "meaning_en": "All the visible features of an area of land.", "meaning_fa": "چشم‌انداز، منظره", "example_en": "The mountain landscape was very beautiful.", "photo": "media/vocab/landscape.jpg"}, {"word": "literary", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Relating to literature or books.", "meaning_fa": "ادبی", "example_en": "He enjoys reading literary novels.", "photo": "media/vocab/literary.jpg"}, {"word": "novelist", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A person who writes novels.", "meaning_fa": "رمان‌نویس", "example_en": "She is a famous novelist.", "photo": "media/vocab/novelist.jpg"}, {"word": "ook", "phonetic": null, "levels": ["b2"], "pos": "interjection", "meaning_en": "A sound made by an orangutan.", "meaning_fa": "صدای اورانگوتان", "example_en": "The orangutan made an \"ook\" sound.", "photo": "media/vocab/ook.jpg"}, {"word": "original ərdənəl", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "New and interesting; not a copy.", "meaning_fa": "اصیل، خلاق", "example_en": "She has a very original style.", "photo": "media/vocab/original-r-d-n-l.jpg"}, {"word": "passage", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A short part of a book, speech, or music.", "meaning_fa": "قطعه، بخش", "example_en": "Read the passage and answer the questions.", "photo": "media/vocab/passage.jpg"}, {"word": "performing art", "phonetic": null, "levels": ["b2"], "pos": "noun phrase", "meaning_en": "Art forms like music, dance, and theatre.", "meaning_fa": "هنرهای نمایشی", "example_en": "Ballet is a beautiful performing art.", "photo": "media/vocab/performing-art.jpg"}, {"word": "plot", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "the main story of a book or film.", "meaning_fa": "طرح داستان", "example_en": "The plot of the movie was very exciting.", "photo": "media/vocab/plot.jpg"}, {"word": "portrait", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A painting or photo of a person.", "meaning_fa": "پرتره، نقاشی چهره", "example_en": "She painted a beautiful portrait of her mother.", "photo": "media/vocab/portrait.jpg"}, {"word": "pot", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A round container used for cooking or plants.", "meaning_fa": "گلدان، قابلمه", "example_en": "She planted flowers in a clay pot.", "photo": "media/vocab/pot.jpg"}, {"word": "potter", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A person who makes pots from clay.", "meaning_fa": "کوزه‌گر، سفالگر", "example_en": "The potter shaped the clay carefully.", "photo": "media/vocab/potter.jpg"}, {"word": "pottery", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "Objects made from clay and baked.", "meaning_fa": "سفالگری، ظروف سفالی", "example_en": "We saw beautiful ancient pottery in the museum.", "photo": "media/vocab/pottery.jpg"}, {"word": "publication", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A book, magazine, or newspaper that is published.", "meaning_fa": "نشریه، انتشار", "example_en": "Her latest publication is a novel about space travel.", "photo": "media/vocab/publication.jpg"}, {"word": "reproduction", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A copy of a work of art.", "meaning_fa": "بازتولید، کپی", "example_en": "We bought a reproduction of a famous painting.", "photo": "media/vocab/reproduction.jpg"}, {"word": "review", "phonetic": "rɪˈvjuː", "levels": ["b2"], "pos": "noun", "meaning_en": "An opinion about a book, film, or product.", "meaning_fa": "نقد، بررسی", "example_en": "I read a good review of that new movie.", "photo": "media/vocab/review.jpg"}, {"word": "sculptor", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "An artist who makes sculptures.", "meaning_fa": "مجسمه‌ساز", "example_en": "The sculptor created a beautiful statue.", "photo": "media/vocab/sculptor.jpg"}, {"word": "sculpture", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A work of art made by shaping material.", "meaning_fa": "مجسمه", "example_en": "There is a modern sculpture in the park.", "photo": "media/vocab/sculpture.jpg"}, {"word": "series", "phonetic": "ˈsɪəriːz", "levels": ["b2"], "pos": "noun", "meaning_en": "a set of TV shows or books", "meaning_fa": "مجموعه، سریال", "example_en": "I watched a new TV series last night.", "photo": "media/vocab/series.jpg"}, {"word": "setting", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "the place and time where a story happens", "meaning_fa": "صحنه، محیط (داستان)", "example_en": "The setting of the novel is 19th-century London.", "photo": "media/vocab/setting.jpg"}, {"word": "short story", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A story that is shorter than a novel.", "meaning_fa": "داستان کوتاه", "example_en": "I enjoy reading short stories before bed.", "photo": "media/vocab/short-story.jpg"}, {"word": "showjumping", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A sport where horses jump over obstacles.", "meaning_fa": "پرش با اسب", "example_en": "She competes in showjumping events.", "photo": "media/vocab/showjumping.jpg"}, {"word": "statue", "phonetic": "ˈstætjuː", "levels": ["b2"], "pos": "noun", "meaning_en": "A sculpture of a person or animal.", "meaning_fa": "مجسمه", "example_en": "We saw a beautiful old statue.", "photo": "media/vocab/statue.jpg"}, {"word": "still life", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A painting of objects like fruit or flowers.", "meaning_fa": "نقاشی طبیعت بی‌جان", "example_en": "She painted a beautiful still life of fruit.", "photo": "media/vocab/still-life.jpg"}, {"word": "throw (a pot)", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "to shape clay on a potter's wheel.", "meaning_fa": "سفال ساختن (با چرخ)", "example_en": "The artist can throw a beautiful pot.", "photo": "media/vocab/throw-a-pot.jpg"}, {"word": "work of art", "phonetic": null, "levels": ["b2"], "pos": "noun phrase", "meaning_en": "A painting, sculpture, or other artistic creation.", "meaning_fa": "اثر هنری", "example_en": "This ancient vase is a true work of art.", "photo": "media/vocab/work-of-art.jpg"}]
+[
+ {
+  "word": "abstract",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "art that uses shapes and colours, not real things",
+  "meaning_fa": "انتزاعی، آبستره",
+  "example_en": "I don't always understand abstract art, but I find it interesting.",
+  "photo": "media/vocab/abstract.jpg"
+ },
+ {
+  "word": "architect",
+  "phonetic": "ˈɑːkɪtekt",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who designs buildings.",
+  "meaning_fa": "معمار",
+  "example_en": "My uncle is an architect; he designs houses.",
+  "photo": "media/vocab/architect.jpg"
+ },
+ {
+  "word": "architecture",
+  "phonetic": "ˈɑːkɪtektʃə",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The art and science of designing buildings.",
+  "meaning_fa": "معماری",
+  "example_en": "I love studying old Roman architecture.",
+  "photo": "media/vocab/architecture.jpg"
+ },
+ {
+  "word": "art",
+  "phonetic": "ɑːt",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Pictures, drawings, or sculptures.",
+  "meaning_fa": "هنر",
+  "example_en": "I like to draw and make art.",
+  "photo": "media/vocab/art.jpg"
+ },
+ {
+  "word": "art lover",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Someone who enjoys and appreciates art very much.",
+  "meaning_fa": "دوستدار هنر",
+  "example_en": "My aunt is a true art lover.",
+  "photo": "media/vocab/art-lover.jpg"
+ },
+ {
+  "word": "artistic",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relating to art or having creative skill.",
+  "meaning_fa": "هنری، با استعداد هنری",
+  "example_en": "She has a very artistic eye for design.",
+  "photo": "media/vocab/artistic.jpg"
+ },
+ {
+  "word": "arts (the)",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Creative activities like painting, music, and theatre.",
+  "meaning_fa": "هنرها (نقاشی، موسیقی، تئاتر)",
+  "example_en": "She loves going to the theatre and enjoying the arts.",
+  "photo": "media/vocab/arts-the.jpg"
+ },
+ {
+  "word": "arts and cras",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Activities like making things with your hands.",
+  "meaning_fa": "صنایع دستی و هنرهای دستی",
+  "example_en": "We did some arts and crafts at school.",
+  "photo": "media/vocab/arts-and-cra-s.jpg"
+ },
+ {
+  "word": "arts page",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A section in a newspaper about art and culture.",
+  "meaning_fa": "صفحه هنری (روزنامه)",
+  "example_en": "I always read the arts page first.",
+  "photo": "media/vocab/arts-page.jpg"
+ },
+ {
+  "word": "bestseller",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A very popular book or product.",
+  "meaning_fa": "پرفروش‌ترین",
+  "example_en": "Her new novel became a bestseller.",
+  "photo": "media/vocab/bestseller.jpg"
+ },
+ {
+  "word": "building",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a structure with walls and a roof",
+  "meaning_fa": "ساختمان، بنا",
+  "example_en": "That old building is very beautiful.",
+  "photo": "media/vocab/building.jpg"
+ },
+ {
+  "word": "character",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person or animal in a book or film.",
+  "meaning_fa": "شخصیت (داستان)",
+  "example_en": "My favorite character in the story is the hero.",
+  "photo": "media/vocab/character.jpg"
+ },
+ {
+  "word": "copy",
+  "phonetic": "ˈkɒpi",
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make an exact duplicate of something.",
+  "meaning_fa": "کپی کردن، رونوشت گرفتن",
+  "example_en": "Can you copy this document for me?",
+  "photo": "media/vocab/copy.jpg"
+ },
+ {
+  "word": "critic",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who judges and reviews art, films, etc.",
+  "meaning_fa": "منتقد",
+  "example_en": "The film critic gave it a bad review.",
+  "photo": "media/vocab/critic.jpg"
+ },
+ {
+  "word": "design",
+  "phonetic": "dɪˈzaɪn",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "(n) A plan for how something looks; (v) to plan something.",
+  "meaning_fa": "(ن) طرح، نقشه؛ (ف) طراحی کردن",
+  "example_en": "I like the design of your new car.",
+  "photo": "media/vocab/design.jpg"
+ },
+ {
+  "word": "extract n",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A short piece taken from a book or film.",
+  "meaning_fa": "گزیده، عصاره",
+  "example_en": "Read this extract from the novel.",
+  "photo": "media/vocab/extract-n.jpg"
+ },
+ {
+  "word": "fine art(s)",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Art forms like painting and sculpture.",
+  "meaning_fa": "هنرهای زیبا",
+  "example_en": "She studies fine arts at university.",
+  "photo": "media/vocab/fine-arts.jpg"
+ },
+ {
+  "word": "image",
+  "phonetic": "ˈɪmɪʤ",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A picture or a photograph.",
+  "meaning_fa": "تصویر، عکس",
+  "example_en": "The website has many beautiful images of nature.",
+  "photo": "media/vocab/image.jpg"
+ },
+ {
+  "word": "landscape",
+  "phonetic": "ˈlændskeɪp",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "All the visible features of an area of land.",
+  "meaning_fa": "چشم‌انداز، منظره",
+  "example_en": "The mountain landscape was very beautiful.",
+  "photo": "media/vocab/landscape.jpg"
+ },
+ {
+  "word": "literary",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relating to literature or books.",
+  "meaning_fa": "ادبی",
+  "example_en": "He enjoys reading literary novels.",
+  "photo": "media/vocab/literary.jpg"
+ },
+ {
+  "word": "novelist",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who writes novels.",
+  "meaning_fa": "رمان‌نویس",
+  "example_en": "She is a famous novelist.",
+  "photo": "media/vocab/novelist.jpg"
+ },
+ {
+  "word": "ook",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "interjection",
+  "meaning_en": "A sound made by an orangutan.",
+  "meaning_fa": "صدای اورانگوتان",
+  "example_en": "The orangutan made an \"ook\" sound.",
+  "photo": "media/vocab/ook.jpg"
+ },
+ {
+  "word": "original ərdənəl",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "New and interesting; not a copy.",
+  "meaning_fa": "اصیل، خلاق",
+  "example_en": "She has a very original style.",
+  "photo": "media/vocab/original-r-d-n-l.jpg"
+ },
+ {
+  "word": "passage",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A short part of a book, speech, or music.",
+  "meaning_fa": "قطعه، بخش",
+  "example_en": "Read the passage and answer the questions.",
+  "photo": "media/vocab/passage.jpg"
+ },
+ {
+  "word": "performing art",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Art forms like music, dance, and theatre.",
+  "meaning_fa": "هنرهای نمایشی",
+  "example_en": "Ballet is a beautiful performing art.",
+  "photo": "media/vocab/performing-art.jpg"
+ },
+ {
+  "word": "plot",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the main story of a book or film.",
+  "meaning_fa": "طرح داستان",
+  "example_en": "The plot of the movie was very exciting.",
+  "photo": "media/vocab/plot.jpg"
+ },
+ {
+  "word": "portrait",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A painting or photo of a person.",
+  "meaning_fa": "پرتره، نقاشی چهره",
+  "example_en": "She painted a beautiful portrait of her mother.",
+  "photo": "media/vocab/portrait.jpg"
+ },
+ {
+  "word": "pot",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A round container used for cooking or plants.",
+  "meaning_fa": "گلدان، قابلمه",
+  "example_en": "She planted flowers in a clay pot.",
+  "photo": "media/vocab/pot.jpg"
+ },
+ {
+  "word": "potter",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who makes pots from clay.",
+  "meaning_fa": "کوزه‌گر، سفالگر",
+  "example_en": "The potter shaped the clay carefully.",
+  "photo": "media/vocab/potter.jpg"
+ },
+ {
+  "word": "pottery",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Objects made from clay and baked.",
+  "meaning_fa": "سفالگری، ظروف سفالی",
+  "example_en": "We saw beautiful ancient pottery in the museum.",
+  "photo": "media/vocab/pottery.jpg"
+ },
+ {
+  "word": "publication",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A book, magazine, or newspaper that is published.",
+  "meaning_fa": "نشریه، انتشار",
+  "example_en": "Her latest publication is a novel about space travel.",
+  "photo": "media/vocab/publication.jpg"
+ },
+ {
+  "word": "reproduction",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A copy of a work of art.",
+  "meaning_fa": "بازتولید، کپی",
+  "example_en": "We bought a reproduction of a famous painting.",
+  "photo": "media/vocab/reproduction.jpg"
+ },
+ {
+  "word": "review",
+  "phonetic": "rɪˈvjuː",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An opinion about a book, film, or product.",
+  "meaning_fa": "نقد، بررسی",
+  "example_en": "I read a good review of that new movie.",
+  "photo": "media/vocab/review.jpg"
+ },
+ {
+  "word": "sculptor",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An artist who makes sculptures.",
+  "meaning_fa": "مجسمه‌ساز",
+  "example_en": "The sculptor created a beautiful statue.",
+  "photo": "media/vocab/sculptor.jpg"
+ },
+ {
+  "word": "sculpture",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A work of art made by shaping material.",
+  "meaning_fa": "مجسمه",
+  "example_en": "There is a modern sculpture in the park.",
+  "photo": "media/vocab/sculpture.jpg"
+ },
+ {
+  "word": "series",
+  "phonetic": "ˈsɪəriːz",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a set of TV shows or books",
+  "meaning_fa": "مجموعه، سریال",
+  "example_en": "I watched a new TV series last night.",
+  "photo": "media/vocab/series.jpg"
+ },
+ {
+  "word": "setting",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the place and time where a story happens",
+  "meaning_fa": "صحنه، محیط (داستان)",
+  "example_en": "The setting of the novel is 19th-century London.",
+  "photo": "media/vocab/setting.jpg"
+ },
+ {
+  "word": "short story",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A story that is shorter than a novel.",
+  "meaning_fa": "داستان کوتاه",
+  "example_en": "I enjoy reading short stories before bed.",
+  "photo": "media/vocab/short-story.jpg"
+ },
+ {
+  "word": "showjumping",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A sport where horses jump over obstacles.",
+  "meaning_fa": "پرش با اسب",
+  "example_en": "She competes in showjumping events.",
+  "photo": "media/vocab/showjumping.jpg"
+ },
+ {
+  "word": "statue",
+  "phonetic": "ˈstætjuː",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A sculpture of a person or animal.",
+  "meaning_fa": "مجسمه",
+  "example_en": "We saw a beautiful old statue.",
+  "photo": "media/vocab/statue.jpg"
+ },
+ {
+  "word": "still life",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A painting of objects like fruit or flowers.",
+  "meaning_fa": "نقاشی طبیعت بی‌جان",
+  "example_en": "She painted a beautiful still life of fruit.",
+  "photo": "media/vocab/still-life.jpg"
+ },
+ {
+  "word": "throw (a pot)",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "to shape clay on a potter's wheel.",
+  "meaning_fa": "سفال ساختن (با چرخ)",
+  "example_en": "The artist can throw a beautiful pot.",
+  "photo": "media/vocab/throw-a-pot.jpg"
+ },
+ {
+  "word": "work of art",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A painting, sculpture, or other artistic creation.",
+  "meaning_fa": "اثر هنری",
+  "example_en": "This ancient vase is a true work of art.",
+  "photo": "media/vocab/work-of-art.jpg"
+ },
+ {
+  "word": "applause",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Clapping hands to show approval or enjoyment.",
+  "meaning_fa": "کف زدن، تشویق",
+  "example_en": "The audience erupted in thunderous applause after the play.",
+  "photo": "media/vocab/applause.jpg"
+ },
+ {
+  "word": "audition",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "A trial performance to assess a performer's ability.",
+  "meaning_fa": "تست بازیگری/خوانندگی",
+  "example_en": "She prepared for her audition for the lead role.",
+  "photo": "media/vocab/audition.jpg"
+ },
+ {
+  "word": "award",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A prize or honor given for achievement.",
+  "meaning_fa": "جایزه، پاداش",
+  "example_en": "The novel won a prestigious literary award last year.",
+  "photo": "media/vocab/award.jpg"
+ },
+ {
+  "word": "black-and-white",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Lacking shades of grey; clear and simple.",
+  "meaning_fa": "سیاه و سفید، واضح",
+  "example_en": "The issue isn't black-and-white; there are many nuances.",
+  "photo": "media/vocab/black-and-white-2.jpg"
+ },
+ {
+  "word": "boo",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "interjection",
+  "meaning_en": "A sound made to show disapproval or scare someone.",
+  "meaning_fa": "هو کردن، صدای ترساندن",
+  "example_en": "The audience started to boo the bad performance.",
+  "photo": "media/vocab/boo.jpg"
+ },
+ {
+  "word": "clumsy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Awkward in movement or handling things; poorly made.",
+  "meaning_fa": "دست و پا چلفتی، ناشیانه",
+  "example_en": "The dialogue in the play felt a bit clumsy.",
+  "photo": "media/vocab/clumsy.jpg"
+ },
+ {
+  "word": "cover (n.)",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The outside part of a book or magazine.",
+  "meaning_fa": "جلد، رویه",
+  "example_en": "The book's cover featured a striking abstract design.",
+  "photo": "media/vocab/cover-n.jpg"
+ },
+ {
+  "word": "Cubist",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relating to Cubism, an art style using geometric shapes.",
+  "meaning_fa": "کوبیستی",
+  "example_en": "Picasso is famous for his groundbreaking Cubist paintings.",
+  "photo": "media/vocab/cubist.jpg"
+ },
+ {
+  "word": "dauber",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An unskilled or crude painter.",
+  "meaning_fa": "نقاش ناشی، بد نقاش",
+  "example_en": "His art teacher called him a dauber for his messy technique.",
+  "photo": "media/vocab/dauber.jpg"
+ },
+ {
+  "word": "deem",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To consider or judge something in a particular way.",
+  "meaning_fa": "تلقی کردن، پنداشتن",
+  "example_en": "The critics deemed the novel a masterpiece.",
+  "photo": "media/vocab/deem.jpg"
+ },
+ {
+  "word": "depict",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To show or represent something in art or words.",
+  "meaning_fa": "به تصویر کشیدن، نمایش دادن",
+  "example_en": "The painting vividly depicts a bustling market scene.",
+  "photo": "media/vocab/depict.jpg"
+ },
+ {
+  "word": "disjointed",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Lacking connection or coherence; disconnected.",
+  "meaning_fa": "نامنسجم، گسسته",
+  "example_en": "The novel's plot felt disjointed and hard to follow.",
+  "photo": "media/vocab/disjointed.jpg"
+ },
+ {
+  "word": "dreary",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Dull, bleak, and depressing.",
+  "meaning_fa": "دلگیر، کسل‌کننده، غم‌انگیز",
+  "example_en": "The dreary weather matched her mood perfectly.",
+  "photo": "media/vocab/dreary.jpg"
+ },
+ {
+  "word": "earnest",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Showing serious and sincere conviction.",
+  "meaning_fa": "جدی، صمیمی، بااخلاص",
+  "example_en": "His earnest performance captivated the audience.",
+  "photo": "media/vocab/earnest.jpg"
+ },
+ {
+  "word": "encore",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An additional performance given at the audience's request.",
+  "meaning_fa": "اجرای اضافی، تکرار",
+  "example_en": "The band played one more song as an encore.",
+  "photo": "media/vocab/encore.jpg"
+ },
+ {
+  "word": "evocative",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Bringing strong images, memories, or feelings to mind.",
+  "meaning_fa": "تداعی‌کننده، برانگیزاننده",
+  "example_en": "The old photograph was deeply evocative of her childhood.",
+  "photo": "media/vocab/evocative.jpg"
+ },
+ {
+  "word": "exquisite",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely beautiful and delicate.",
+  "meaning_fa": "نفیس، ظریف، عالی",
+  "example_en": "The museum displayed an exquisite collection of ancient pottery.",
+  "photo": "media/vocab/exquisite.jpg"
+ },
+ {
+  "word": "flop",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A complete failure, especially in entertainment.",
+  "meaning_fa": "شکست کامل، افتضاح",
+  "example_en": "The new movie was a box office flop.",
+  "photo": "media/vocab/flop.jpg"
+ },
+ {
+  "word": "glowing review",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "An extremely positive and enthusiastic appraisal.",
+  "meaning_fa": "نقد بسیار مثبت",
+  "example_en": "The new play received a glowing review from critics.",
+  "photo": "media/vocab/glowing-review.jpg"
+ },
+ {
+  "word": "hackneyed",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Overused and unoriginal; lacking freshness or impact.",
+  "meaning_fa": "کلیشه‌ای، نخ‌نما، تکراری",
+  "example_en": "The plot of the movie was so hackneyed and predictable.",
+  "photo": "media/vocab/hackneyed.jpg"
+ },
+ {
+  "word": "harrowing",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely distressing or traumatic.",
+  "meaning_fa": "دلخراش، رنج‌آور، وحشتناک",
+  "example_en": "The documentary contained harrowing accounts of the war.",
+  "photo": "media/vocab/harrowing.jpg"
+ },
+ {
+  "word": "highbrow",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Intellectual or cultured; appealing to educated tastes.",
+  "meaning_fa": "روشنفکرانه، سطح بالا",
+  "example_en": "He prefers highbrow literature and classical music.",
+  "photo": "media/vocab/highbrow.jpg"
+ },
+ {
+  "word": "hilarious",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely funny and amusing.",
+  "meaning_fa": "خنده‌دار، بامزه، مفرح",
+  "example_en": "The comedian's jokes were absolutely hilarious.",
+  "photo": "media/vocab/hilarious.jpg"
+ },
+ {
+  "word": "illuminate",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To light up; to make something clearer or easier to understand.",
+  "meaning_fa": "روشن کردن، توضیح دادن",
+  "example_en": "The streetlights illuminate the path at night.",
+  "photo": "media/vocab/illuminate.jpg"
+ },
+ {
+  "word": "illustrate",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To explain or make clear using examples or pictures.",
+  "meaning_fa": "توضیح دادن، مصور کردن",
+  "example_en": "The professor used diagrams to illustrate his point.",
+  "photo": "media/vocab/illustrate.jpg"
+ },
+ {
+  "word": "impenetrable",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Impossible to pass through or understand.",
+  "meaning_fa": "غیرقابل نفوذ، غیرقابل درک",
+  "example_en": "The ancient fortress had impenetrable walls.",
+  "photo": "media/vocab/impenetrable.jpg"
+ },
+ {
+  "word": "Impressionism",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A 19th-century art movement focusing on light and atmosphere.",
+  "meaning_fa": "امپرسیونیسم",
+  "example_en": "Monet is a famous artist of Impressionism.",
+  "photo": "media/vocab/impressionism.jpg"
+ },
+ {
+  "word": "interpretation",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An explanation or understanding of something, like a text or artwork.",
+  "meaning_fa": "تفسیر، تعبیر",
+  "example_en": "Her interpretation of the poem was deeply insightful.",
+  "photo": "media/vocab/interpretation.jpg"
+ },
+ {
+  "word": "intriguing",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Arousing great curiosity or interest; fascinating.",
+  "meaning_fa": "جذاب، گیرا، کنجکاوی‌برانگیز",
+  "example_en": "The novel had an intriguing plot twist at the end.",
+  "photo": "media/vocab/intriguing.jpg"
+ },
+ {
+  "word": "inured (to)",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Accustomed to something unpleasant, making it seem normal.",
+  "meaning_fa": "خو گرفته، عادت کرده",
+  "example_en": "The soldiers became inured to the harsh conditions.",
+  "photo": "media/vocab/inured-to.jpg"
+ },
+ {
+  "word": "laud",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To praise someone or something highly.",
+  "meaning_fa": "ستودن، تحسین کردن",
+  "example_en": "Critics laud the director's innovative approach to storytelling.",
+  "photo": "media/vocab/laud.jpg"
+ },
+ {
+  "word": "lowbrow",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not intellectual or cultured; unsophisticated.",
+  "meaning_fa": "عامه‌پسند، سطح پایین",
+  "example_en": "Some critics dismiss popular films as lowbrow entertainment.",
+  "photo": "media/vocab/lowbrow.jpg"
+ },
+ {
+  "word": "masterpiece",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A work of outstanding artistry, skill, or workmanship.",
+  "meaning_fa": "شاهکار، اثر برجسته",
+  "example_en": "Leonardo da Vinci's Mona Lisa is a true masterpiece.",
+  "photo": "media/vocab/masterpiece.jpg"
+ },
+ {
+  "word": "miscast",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "Choose an unsuitable actor for a role.",
+  "meaning_fa": "انتخاب بازیگر نامناسب",
+  "example_en": "The director miscast the lead actor; he lacked charisma.",
+  "photo": "media/vocab/miscast.jpg"
+ },
+ {
+  "word": "motif",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A recurring dominant idea or design.",
+  "meaning_fa": "نقش مایه، مضمون اصلی",
+  "example_en": "The dove is a common motif of peace in art.",
+  "photo": "media/vocab/motif.jpg"
+ },
+ {
+  "word": "mould",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A hollow container used to shape liquid material.",
+  "meaning_fa": "قالب",
+  "example_en": "She poured the chocolate into a heart-shaped mould.",
+  "photo": "media/vocab/mould.jpg"
+ },
+ {
+  "word": "moving",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Causing strong emotions, especially sadness or sympathy.",
+  "meaning_fa": "تاثیرگذار، تکان دهنده",
+  "example_en": "The film's ending was incredibly moving.",
+  "photo": "media/vocab/moving.jpg"
+ },
+ {
+  "word": "Op-art",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A style of art using optical illusions.",
+  "meaning_fa": "هنر دیدگانی، آپ آرت",
+  "example_en": "Op-art creates a sense of movement and vibration.",
+  "photo": "media/vocab/op-art.jpg"
+ },
+ {
+  "word": "original",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "New, fresh, and not a copy.",
+  "meaning_fa": "اصیل، بدیع، اصلی",
+  "example_en": "The artist's original work was truly groundbreaking.",
+  "photo": "media/vocab/original.jpg"
+ },
+ {
+  "word": "overrated",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not as good or important as people think.",
+  "meaning_fa": "بیش از حد تحسین شده",
+  "example_en": "Many critics consider that novel to be overrated.",
+  "photo": "media/vocab/overrated.jpg"
+ },
+ {
+  "word": "paint",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To create a picture using paint.",
+  "meaning_fa": "نقاشی کردن",
+  "example_en": "She loves to paint landscapes in her free time.",
+  "photo": "media/vocab/paint.jpg"
+ },
+ {
+  "word": "pan (v.)",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To criticize a film, play, or book severely.",
+  "meaning_fa": "به شدت نقد کردن",
+  "example_en": "Critics universally panned the new movie as a disaster.",
+  "photo": "media/vocab/pan-v.jpg"
+ },
+ {
+  "word": "pedestrian (adj.)",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Lacking inspiration or excitement; ordinary and dull.",
+  "meaning_fa": "معمولی، کسل‌کننده",
+  "example_en": "Critics described the play as rather pedestrian and unoriginal.",
+  "photo": "media/vocab/pedestrian-adj.jpg"
+ },
+ {
+  "word": "peerless",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Without equal; unmatched in quality or excellence.",
+  "meaning_fa": "بی‌نظیر، بی‌همتا",
+  "example_en": "Her peerless performance earned her a standing ovation.",
+  "photo": "media/vocab/peerless.jpg"
+ },
+ {
+  "word": "poorly done",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective phrase",
+  "meaning_en": "Executed or performed badly; of low quality.",
+  "meaning_fa": "بد انجام شده",
+  "example_en": "The painting was poorly done, lacking detail.",
+  "photo": "media/vocab/poorly-done.jpg"
+ },
+ {
+  "word": "portray",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To represent or describe someone or something.",
+  "meaning_fa": "به تصویر کشیدن",
+  "example_en": "The artist chose to portray her subject realistically.",
+  "photo": "media/vocab/portray.jpg"
+ },
+ {
+  "word": "portrayal",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The way someone or something is represented.",
+  "meaning_fa": "تصویرسازی، نمایش",
+  "example_en": "The film's portrayal of the war was very moving.",
+  "photo": "media/vocab/portrayal.jpg"
+ },
+ {
+  "word": "predictable",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Able to be foreseen or known in advance.",
+  "meaning_fa": "قابل پیش‌بینی",
+  "example_en": "The plot of the movie was quite predictable.",
+  "photo": "media/vocab/predictable.jpg"
+ },
+ {
+  "word": "priceless",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Extremely valuable; beyond any price.",
+  "meaning_fa": "بی‌قیمت، بسیار ارزشمند",
+  "example_en": "The ancient manuscript was a priceless artifact.",
+  "photo": "media/vocab/priceless.jpg"
+ },
+ {
+  "word": "primitive",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relating to an early stage of development; simple.",
+  "meaning_fa": "ابتدایی، بدوی",
+  "example_en": "The cave paintings depicted primitive hunting scenes.",
+  "photo": "media/vocab/primitive.jpg"
+ },
+ {
+  "word": "rehearsal",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A practice session for a performance.",
+  "meaning_fa": "تمرین، بازبینی",
+  "example_en": "The band had their final rehearsal before the concert.",
+  "photo": "media/vocab/rehearsal.jpg"
+ },
+ {
+  "word": "risqué",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "slightly indecent or shocking, especially sexually",
+  "meaning_fa": "گستاخانه، جسورانه (جنسی)",
+  "example_en": "The play contained some risqué humor that shocked audiences.",
+  "photo": "media/vocab/risqu.jpg"
+ },
+ {
+  "word": "school of art",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "A group of artists sharing similar styles or ideas.",
+  "meaning_fa": "مکتب هنری",
+  "example_en": "The Impressionists formed a revolutionary school of art.",
+  "photo": "media/vocab/school-of-art.jpg"
+ },
+ {
+  "word": "shadowy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Full of shadows; mysterious or indistinct.",
+  "meaning_fa": "سایه‌دار، مبهم",
+  "example_en": "The detective followed a shadowy figure down the alley.",
+  "photo": "media/vocab/shadowy.jpg"
+ },
+ {
+  "word": "shape",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The external form or outline of an object.",
+  "meaning_fa": "شکل، فرم",
+  "example_en": "Artists often experiment with abstract shapes.",
+  "photo": "media/vocab/shape.jpg"
+ },
+ {
+  "word": "sketchy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not complete or detailed; vague.",
+  "meaning_fa": "ناقص، مبهم",
+  "example_en": "The witness gave a sketchy description of the suspect.",
+  "photo": "media/vocab/sketchy.jpg"
+ },
+ {
+  "word": "skilful",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having or showing great skill; expert.",
+  "meaning_fa": "ماهر، چیره دست",
+  "example_en": "She is a very skilful painter.",
+  "photo": "media/vocab/skilful.jpg"
+ },
+ {
+  "word": "slate (v.)",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To criticize someone or something severely.",
+  "meaning_fa": "به شدت انتقاد کردن",
+  "example_en": "Critics slated the new movie as boring.",
+  "photo": "media/vocab/slate-v.jpg"
+ },
+ {
+  "word": "standing ovation",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "An enthusiastic applause where the audience stands up.",
+  "meaning_fa": "تشویق ایستاده",
+  "example_en": "The performance received a well-deserved standing ovation.",
+  "photo": "media/vocab/standing-ovation.jpg"
+ },
+ {
+  "word": "subject matter",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The topic or theme dealt with in a work.",
+  "meaning_fa": "موضوع، محتوا",
+  "example_en": "The artist's subject matter often explored nature.",
+  "photo": "media/vocab/subject-matter.jpg"
+ },
+ {
+  "word": "Surrealism",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An art movement emphasizing the subconscious and dream imagery.",
+  "meaning_fa": "سوررئالیسم",
+  "example_en": "Salvador Dalí is a famous artist of Surrealism.",
+  "photo": "media/vocab/surrealism.jpg"
+ },
+ {
+  "word": "Surrealist",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective, noun",
+  "meaning_en": "(adj) Relating to Surrealism; (n) an artist of Surrealism.",
+  "meaning_fa": "(صفت) سوررئالیستی؛ (اسم) هنرمند سوررئالیست",
+  "example_en": "His paintings have a distinct Surrealist quality.",
+  "photo": "media/vocab/surrealist.jpg"
+ },
+ {
+  "word": "tedious",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Too long, slow, or dull; boring.",
+  "meaning_fa": "خسته‌کننده، ملال‌آور",
+  "example_en": "The lecture was so tedious, I almost fell asleep.",
+  "photo": "media/vocab/tedious.jpg"
+ },
+ {
+  "word": "thought-provoking",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Making you think seriously about a subject.",
+  "meaning_fa": "تفکربرانگیز، تأمل‌برانگیز",
+  "example_en": "The documentary was very thought-provoking.",
+  "photo": "media/vocab/thought-provoking.jpg"
+ },
+ {
+  "word": "tongue-in-cheek",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Said or done as a joke, not seriously.",
+  "meaning_fa": "کنایه‌آمیز، شوخی",
+  "example_en": "His tongue-in-cheek comment made everyone laugh.",
+  "photo": "media/vocab/tongue-in-cheek.jpg"
+ },
+ {
+  "word": "total flop",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A complete failure.",
+  "meaning_fa": "شکست کامل، افتضاح",
+  "example_en": "The new play was a total flop, closing after one week.",
+  "photo": "media/vocab/total-flop.jpg"
+ },
+ {
+  "word": "typecast",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "Always cast an actor in similar roles.",
+  "meaning_fa": "در یک نقش خاص محدود کردن",
+  "example_en": "He was typecast as the villain in every movie.",
+  "photo": "media/vocab/typecast.jpg"
+ },
+ {
+  "word": "unconvincing",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not seeming true or real; not persuasive.",
+  "meaning_fa": "غیرقابل باور، نامتعدقانه",
+  "example_en": "The actor's performance was unconvincing, lacking genuine emotion.",
+  "photo": "media/vocab/unconvincing.jpg"
+ },
+ {
+  "word": "undemanding",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not requiring much effort, skill, or attention.",
+  "meaning_fa": "کم‌توقع، آسان",
+  "example_en": "It was an undemanding film, perfect for a relaxed evening.",
+  "photo": "media/vocab/undemanding.jpg"
+ },
+ {
+  "word": "understated",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Presented in a subtle, restrained way.",
+  "meaning_fa": "ساده و شیک، کم‌اهمیت جلوه داده شده",
+  "example_en": "Her understated elegance made her stand out.",
+  "photo": "media/vocab/understated.jpg"
+ },
+ {
+  "word": "uninspiring",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not exciting or stimulating; dull.",
+  "meaning_fa": "بی‌الهام، خسته‌کننده",
+  "example_en": "The play's uninspiring plot failed to captivate the audience.",
+  "photo": "media/vocab/uninspiring.jpg"
+ },
+ {
+  "word": "unstimulating",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not exciting or interesting; dull.",
+  "meaning_fa": "بی‌تحرک، خسته‌کننده",
+  "example_en": "The lecture was unstimulating, failing to engage the students.",
+  "photo": "media/vocab/unstimulating.jpg"
+ },
+ {
+  "word": "up-and-coming",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Likely to become famous or successful.",
+  "meaning_fa": "نوظهور، آینده‌دار",
+  "example_en": "She's an up-and-coming artist with a unique style.",
+  "photo": "media/vocab/up-and-coming.jpg"
+ },
+ {
+  "word": "version",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A particular form of something.",
+  "meaning_fa": "نسخه، ویرایش",
+  "example_en": "This is the director's cut version of the film.",
+  "photo": "media/vocab/version.jpg"
+ },
+ {
+  "word": "visually literate",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective phrase",
+  "meaning_en": "Able to understand and interpret visual information effectively.",
+  "meaning_fa": "سواد بصری داشتن",
+  "example_en": "Being visually literate is crucial for understanding modern media.",
+  "photo": "media/vocab/visually-literate.jpg"
+ },
+ {
+  "word": "worthless",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "having no value, importance, or use.",
+  "meaning_fa": "بی‌ارزش، بی‌فایده",
+  "example_en": "The old painting was deemed worthless by the expert.",
+  "photo": "media/vocab/worthless.jpg"
+ }
+]

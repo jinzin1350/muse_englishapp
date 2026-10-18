@@ -1,1 +1,1593 @@
-[{"word": "(bride) groom", "phonetic": "grʊm", "levels": ["a2"], "pos": "noun", "meaning_en": "a man who is getting married", "meaning_fa": "داماد", "example_en": "The groom looked very happy on his wedding day.", "photo": "media/vocab/bride-groom.jpg"}, {"word": "adult", "phonetic": "ˈædʌlt", "levels": ["a2"], "pos": "noun", "meaning_en": "A person who is fully grown.", "meaning_fa": "بزرگسال", "example_en": "Children must be accompanied by an adult.", "photo": "media/vocab/adult.jpg"}, {"word": "alive", "phonetic": "əˈlaɪv", "levels": ["a2"], "pos": "adjective", "meaning_en": "Not dead; living.", "meaning_fa": "زنده", "example_en": "Is your cat still alive?", "photo": "media/vocab/alive.jpg"}, {"word": "allow", "phonetic": "əˈlaʊ", "levels": ["a2"], "pos": "verb", "meaning_en": "To let someone do something.", "meaning_fa": "اجازه دادن", "example_en": "My parents allow me to play outside.", "photo": "media/vocab/allow.jpg"}, {"word": "almost", "phonetic": "ˈɔːlməʊst", "levels": ["a2"], "pos": "adverb", "meaning_en": "Very nearly; not quite.", "meaning_fa": "تقریباً", "example_en": "I almost missed the bus this morning.", "photo": "media/vocab/almost.jpg"}, {"word": "alone", "phonetic": "əˈləʊn", "levels": ["a2"], "pos": "adjective", "meaning_en": "Without other people.", "meaning_fa": "تنها، به تنهایی", "example_en": "She likes to read alone in her room.", "photo": "media/vocab/alone.jpg"}, {"word": "anniversary", "phonetic": "ˌænɪˈvɜːsəri", "levels": ["a2"], "pos": "noun", "meaning_en": "A day remembering an important event from a past year.", "meaning_fa": "سالگرد", "example_en": "Today is our wedding anniversary.", "photo": "media/vocab/anniversary.jpg"}, {"word": "approximately", "phonetic": "əˈprɒksɪmətli", "levels": ["a2"], "pos": "adverb", "meaning_en": "About; not exactly, but close to.", "meaning_fa": "تقریباً، حدوداً", "example_en": "The journey takes approximately two hours.", "photo": "media/vocab/approximately.jpg"}, {"word": "at first", "phonetic": "æt ˈfɜːst", "levels": ["a2"], "pos": "phrase", "meaning_en": "In the beginning; initially.", "meaning_fa": "در ابتدا، اولش", "example_en": "At first, I found the game difficult.", "photo": "media/vocab/at-first.jpg"}, {"word": "baby", "phonetic": "ˈbeɪbi", "levels": ["a1"], "pos": "noun", "meaning_en": "A very young child.", "meaning_fa": "نوزاد، کودک", "example_en": "The baby is sleeping now.", "photo": "media/vocab/baby.jpg"}, {"word": "be born", "phonetic": "biː bɔːn", "levels": ["a1"], "pos": "verb phrase", "meaning_en": "To come into life.", "meaning_fa": "متولد شدن", "example_en": "I was born in July.", "photo": "media/vocab/be-born.jpg"}, {"word": "birth", "phonetic": "bɜːθ", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "The time when a baby or animal comes out.", "meaning_fa": "تولد", "example_en": "My sister gave birth to a baby boy.", "photo": "media/vocab/birth.jpg"}, {"word": "birthday", "phonetic": "ˈbɜːθdeɪ", "levels": ["a1"], "pos": "noun", "meaning_en": "The day you were born, celebrated each year.", "meaning_fa": "روز تولد", "example_en": "Happy birthday! I hope you have a great day.", "photo": "media/vocab/birthday.jpg"}, {"word": "born", "phonetic": "bɔːn", "levels": ["a1"], "pos": "adjective", "meaning_en": "Existing as a result of birth.", "meaning_fa": "متولد شده", "example_en": "I was born in July.", "photo": "media/vocab/born.jpg"}, {"word": "break up [end a relationship]", "phonetic": "breɪk ʌp", "levels": ["a2"], "pos": "phrasal verb", "meaning_en": "To end a romantic relationship.", "meaning_fa": "به هم زدن (رابطه)", "example_en": "They decided to break up after five years.", "photo": "media/vocab/break-up-end-a-relationship.jpg"}, {"word": "bride", "phonetic": "braɪd", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "A woman on her wedding day.", "meaning_fa": "عروس", "example_en": "The bride wore a beautiful white dress.", "photo": "media/vocab/bride.jpg"}, {"word": "bridegroom", "phonetic": "ˈbraɪdgrʊm", "levels": ["a1"], "pos": "noun", "meaning_en": "A man on his wedding day.", "meaning_fa": "داماد", "example_en": "The bridegroom looked very happy.", "photo": "media/vocab/bridegroom.jpg"}, {"word": "bring sb up", "phonetic": "brɪŋ ˈsʌmbɒdi ʌp", "levels": ["a2"], "pos": "phrasal verb", "meaning_en": "To care for a child until they are an adult.", "meaning_fa": "بزرگ کردن، تربیت کردن", "example_en": "Her grandparents brought her up.", "photo": "media/vocab/bring-sb-up.jpg"}, {"word": "call after", "phonetic": "kɔːl ˈɑːftə", "levels": ["a1"], "pos": "phrasal verb", "meaning_en": "To name someone using another person's name.", "meaning_fa": "نام کسی را گذاشتن", "example_en": "They will call the baby after her grandmother.", "photo": "media/vocab/call-after.jpg"}, {"word": "celebrate", "phonetic": "ˈselɪbreɪt", "levels": ["a2"], "pos": "verb", "meaning_en": "To do something special for an important event.", "meaning_fa": "جشن گرفتن", "example_en": "We will celebrate my birthday tomorrow.", "photo": "media/vocab/celebrate.jpg"}, {"word": "celebration", "phonetic": "ˌselɪˈbreɪʃən", "levels": ["a2"], "pos": "noun", "meaning_en": "A special event to mark something important.", "meaning_fa": "جشن", "example_en": "The party was a big celebration.", "photo": "media/vocab/celebration.jpg"}, {"word": "ceremony", "phonetic": "ˈserɪməni", "levels": ["a2"], "pos": "noun", "meaning_en": "A formal event for a special occasion.", "meaning_fa": "مراسم، تشریفات", "example_en": "The wedding ceremony was beautiful.", "photo": "media/vocab/ceremony.jpg"}, {"word": "childhood", "phonetic": "ˈtʃaɪldhʊd", "levels": ["a2"], "pos": "noun", "meaning_en": "The time when someone is a child.", "meaning_fa": "دوران کودکی", "example_en": "My childhood memories are very happy.", "photo": "media/vocab/childhood.jpg"}, {"word": "couple [several]", "phonetic": "ˈkʌpəl", "levels": ["a2"], "pos": "noun", "meaning_en": "Two or a few things or people.", "meaning_fa": "چند تا، دو سه تا", "example_en": "I'll be back in a couple of minutes.", "photo": "media/vocab/couple-several.jpg"}, {"word": "date [romantic meeting]", "phonetic": "deɪt", "levels": ["a2"], "pos": "noun", "meaning_en": "A planned romantic meeting between two people.", "meaning_fa": "قرار ملاقات عاشقانه", "example_en": "He asked her out on a date.", "photo": "media/vocab/date-romantic-meeting.jpg"}, {"word": "dead", "phonetic": "ded", "levels": ["a1", "a2"], "pos": "adjective", "meaning_en": "No longer alive.", "meaning_fa": "مرده", "example_en": "The plant is dead, I forgot to water it.", "photo": "media/vocab/dead.jpg"}, {"word": "death", "phonetic": "deθ", "levels": ["a1"], "pos": "noun", "meaning_en": "The end of life.", "meaning_fa": "مرگ", "example_en": "His death was a great loss.", "photo": "media/vocab/death.jpg"}, {"word": "die", "phonetic": "daɪ", "levels": ["a1"], "pos": "verb", "meaning_en": "To stop living.", "meaning_fa": "مردن", "example_en": "My old dog died last year.", "photo": "media/vocab/die.jpg"}, {"word": "divorce", "phonetic": "dɪˈvɔːs", "levels": ["a2"], "pos": "noun", "meaning_en": "The legal ending of a marriage.", "meaning_fa": "طلاق", "example_en": "They decided to get a divorce last year.", "photo": "media/vocab/divorce.jpg"}, {"word": "divorced", "phonetic": "dɪˈvɔːst", "levels": ["a1"], "pos": "adjective", "meaning_en": "No longer married.", "meaning_fa": "مطلقه", "example_en": "My friend is divorced and lives alone.", "photo": "media/vocab/divorced.jpg"}, {"word": "early (20s/30s, etc.)", "phonetic": "ˈɜːli", "levels": ["a2"], "pos": "adjective", "meaning_en": "The first part of a decade of age.", "meaning_fa": "اوایل (دهه ۲۰/۳۰)", "example_en": "She is in her early twenties.", "photo": "media/vocab/early-20s-30s-etc.jpg"}, {"word": "elderly", "phonetic": "ˈeldəli", "levels": ["a2"], "pos": "adjective", "meaning_en": "Old, used to describe people.", "meaning_fa": "سالخورده، مسن", "example_en": "The elderly man needed help crossing the street.", "photo": "media/vocab/elderly.jpg"}, {"word": "engagement", "phonetic": "ɪnˈgeɪʤmənt", "levels": ["a2"], "pos": "noun", "meaning_en": "A formal agreement to get married.", "meaning_fa": "نامزدی", "example_en": "They announced their engagement last week.", "photo": "media/vocab/engagement.jpg"}, {"word": "funeral", "phonetic": "ˈfjuːnərəl", "levels": ["a1"], "pos": "noun", "meaning_en": "a ceremony for burying a dead person.", "meaning_fa": "مراسم خاکسپاری", "example_en": "We went to the funeral.", "photo": "media/vocab/funeral.jpg"}, {"word": "get divorced get", "phonetic": "dɪˈvɔːst", "levels": ["a2"], "pos": "phrase", "meaning_en": "to legally end a marriage.", "meaning_fa": "طلاق گرفتن", "example_en": "They decided to get divorced last year.", "photo": "media/vocab/get-divorced-get.jpg"}, {"word": "get engaged get", "phonetic": "ɪnˈgeɪʤd", "levels": ["a2"], "pos": "phrase", "meaning_en": "to agree to marry someone.", "meaning_fa": "نامزد کردن", "example_en": "My sister just got engaged.", "photo": "media/vocab/get-engaged-get.jpg"}, {"word": "get married get", "phonetic": "ˈmærɪd", "levels": ["a1"], "pos": "phrase", "meaning_en": "to become husband and wife.", "meaning_fa": "ازدواج کردن", "example_en": "They plan to get married next year.", "photo": "media/vocab/get-married-get.jpg"}, {"word": "get married to sb get", "phonetic": "ˈmærɪd tuː ˈsʌmbɒdi", "levels": ["a2"], "pos": "phrase", "meaning_en": "to become someone's husband or wife.", "meaning_fa": "با کسی ازدواج کردن", "example_en": "She got married to her best friend.", "photo": "media/vocab/get-married-to-sb-get.jpg"}, {"word": "get to know sb get", "phonetic": "tuː nəʊ ˈsʌmbɒdi", "levels": ["a2"], "pos": "phrase", "meaning_en": "Start to learn about a person.", "meaning_fa": "با کسی آشنا شدن", "example_en": "I want to get to know my new neighbors.", "photo": "media/vocab/get-to-know-sb-get.jpg"}, {"word": "give up sth [leave a job]", "phonetic": "gɪv ʌp ˈsʌmθɪŋ", "levels": ["a2"], "pos": "phrasal verb", "meaning_en": "Stop doing a job or activity.", "meaning_fa": "کاری را ترک کردن", "example_en": "She gave up her job to travel.", "photo": "media/vocab/give-up-sth-leave-a-job.jpg"}, {"word": "go out with sb", "phonetic": "gəʊ aʊt wɪð ˈsʌmbɒdi", "levels": ["a2"], "pos": "phrasal verb", "meaning_en": "To have a romantic relationship with someone.", "meaning_fa": "با کسی قرار گذاشتن", "example_en": "They have been going out for a year.", "photo": "media/vocab/go-out-with-sb.jpg"}, {"word": "go wrong", "phonetic": "gəʊ rɒŋ", "levels": ["a2"], "pos": "phrase", "meaning_en": "To make a mistake or fail.", "meaning_fa": "اشتباه کردن، خراب شدن", "example_en": "Something went wrong with the computer.", "photo": "media/vocab/go-wrong.jpg"}, {"word": "groom", "phonetic": "gruːm", "levels": ["a1"], "pos": "noun", "meaning_en": "a man who is about to get married.", "meaning_fa": "داماد", "example_en": "The groom looked very happy.", "photo": "media/vocab/groom.jpg"}, {"word": "have a baby", "phonetic": "hæv ə ˈbeɪbi", "levels": ["a1"], "pos": "verb phrase", "meaning_en": "To give birth to a child.", "meaning_fa": "بچه دار شدن", "example_en": "They are going to have a baby.", "photo": "media/vocab/have-a-baby.jpg"}, {"word": "honeymoon", "phonetic": "ˈhʌnɪmuːn", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "A holiday taken by a newly married couple.", "meaning_fa": "ماه عسل", "example_en": "They went to Paris for their honeymoon.", "photo": "media/vocab/honeymoon.jpg"}, {"word": "ill", "phonetic": "ɪl", "levels": ["a1"], "pos": "adjective", "meaning_en": "Not feeling well, sick.", "meaning_fa": "بیمار، ناخوش", "example_en": "She felt ill and went home from school.", "photo": "media/vocab/ill.jpg"}, {"word": "in love", "phonetic": "ɪn lʌv", "levels": ["a2"], "pos": "phrase", "meaning_en": "Having strong romantic feelings for someone.", "meaning_fa": "عاشق", "example_en": "They are deeply in love and plan to marry.", "photo": "media/vocab/in-love.jpg"}, {"word": "in the end", "phonetic": "ɪn ði end", "levels": ["a2"], "pos": "phrase", "meaning_en": "Finally, after a long time or many changes.", "meaning_fa": "در نهایت، سرانجام", "example_en": "We tried many ways, and in the end, we succeeded.", "photo": "media/vocab/in-the-end.jpg"}, {"word": "in your teens", "phonetic": "ɪn jɔː tiːnz", "levels": ["a2"], "pos": "phrase", "meaning_en": "Between 13 and 19 years old.", "meaning_fa": "در سنین نوجوانی (۱۳ تا ۱۹)", "example_en": "She was very shy in her teens.", "photo": "media/vocab/in-your-teens.jpg"}, {"word": "late (50s/60s, etc.)", "phonetic": "leɪt", "levels": ["a2"], "pos": "adjective", "meaning_en": "Near the end of a decade of age.", "meaning_fa": "اواخر (دهه)", "example_en": "My grandmother is in her late 70s.", "photo": "media/vocab/late-50s-60s-etc.jpg"}, {"word": "leave [end a relationship]", "phonetic": "liːv", "levels": ["a2"], "pos": "verb", "meaning_en": "To end a relationship with someone.", "meaning_fa": "ترک کردن (رابطه)", "example_en": "She decided to leave her husband.", "photo": "media/vocab/leave-end-a-relationship.jpg"}, {"word": "let [allow]", "phonetic": "let", "levels": ["a2"], "pos": "verb", "meaning_en": "To allow someone to do something.", "meaning_fa": "اجازه دادن", "example_en": "My parents let me stay out late.", "photo": "media/vocab/let-allow.jpg"}, {"word": "manage [succeed in doing sth]", "phonetic": "ˈmænɪʤ", "levels": ["a2"], "pos": "verb", "meaning_en": "Be able to do something.", "meaning_fa": "موفق شدن، توانستن", "example_en": "I managed to open the jar.", "photo": "media/vocab/manage-succeed-in-doing-sth.jpg"}, {"word": "marriage", "phonetic": "ˈmærɪdʒ", "levels": ["a1"], "pos": "noun", "meaning_en": "The state of being married.", "meaning_fa": "ازدواج", "example_en": "Their marriage lasted for fifty years.", "photo": "media/vocab/marriage.jpg"}, {"word": "married", "phonetic": "ˈmærɪd", "levels": ["a1"], "pos": "adjective", "meaning_en": "Having a husband or wife.", "meaning_fa": "متأهل", "example_en": "Are you married or single?", "photo": "media/vocab/married.jpg"}, {"word": "marry", "phonetic": "ˈmæri", "levels": ["a2"], "pos": "verb", "meaning_en": "To become husband and wife.", "meaning_fa": "ازدواج کردن", "example_en": "They plan to marry next summer.", "photo": "media/vocab/marry.jpg"}, {"word": "mid (30s/40s, etc.)", "phonetic": "mɪd", "levels": ["a2"], "pos": "adjective", "meaning_en": "In the middle part of a decade.", "meaning_fa": "اواسط (دهه)", "example_en": "She is in her mid-thirties.", "photo": "media/vocab/mid-30s-40s-etc.jpg"}, {"word": "middle-aged", "phonetic": "ˈmɪdəlˈeɪdʒd", "levels": ["a2"], "pos": "adjective", "meaning_en": "Between young and old, usually 40-60.", "meaning_fa": "میانسال", "example_en": "My parents are middle-aged.", "photo": "media/vocab/middle-aged.jpg"}, {"word": "nearly", "phonetic": "ˈnɪəli", "levels": ["a2"], "pos": "adverb", "meaning_en": "Almost; very close to.", "meaning_fa": "تقریباً، نزدیک به", "example_en": "I'm nearly finished with my homework.", "photo": "media/vocab/nearly.jpg"}, {"word": "on my/your own", "phonetic": "ɒn maɪ/jɔːr əʊn", "levels": ["a2"], "pos": "phrase", "meaning_en": "Alone; without help from others.", "meaning_fa": "به تنهایی، مستقل", "example_en": "I like to study on my own.", "photo": "media/vocab/on-my-your-own.jpg"}, {"word": "pregnancy", "phonetic": "ˈpregnənsi", "levels": ["a2"], "pos": "noun", "meaning_en": "The state of carrying a baby inside your body.", "meaning_fa": "بارداری", "example_en": "Her pregnancy lasted nine months.", "photo": "media/vocab/pregnancy.jpg"}, {"word": "pregnant", "phonetic": "ˈpregnənt", "levels": ["a2"], "pos": "adjective", "meaning_en": "Carrying a baby inside your body.", "meaning_fa": "باردار", "example_en": "My sister is pregnant with twins.", "photo": "media/vocab/pregnant.jpg"}, {"word": "reception [wedding party]", "phonetic": "rɪˈsepʃən", "levels": ["a2"], "pos": "noun", "meaning_en": "a formal party after a wedding ceremony", "meaning_fa": "مراسم پذیرایی عروسی", "example_en": "The wedding reception was held in a beautiful hall.", "photo": "media/vocab/reception-wedding-party.jpg"}, {"word": "relationship", "phonetic": "rɪˈleɪʃənʃɪp", "levels": ["a2"], "pos": "noun", "meaning_en": "The way two people or things are connected.", "meaning_fa": "رابطه", "example_en": "They have a very good relationship.", "photo": "media/vocab/relationship.jpg"}, {"word": "retired", "phonetic": "rɪˈtaɪəd", "levels": ["a2"], "pos": "adjective", "meaning_en": "Having stopped working due to age.", "meaning_fa": "بازنشسته", "example_en": "My aunt is a retired teacher.", "photo": "media/vocab/retired.jpg"}, {"word": "retirement", "phonetic": "rɪˈtaɪəmənt", "levels": ["a2"], "pos": "noun", "meaning_en": "The period after you stop working.", "meaning_fa": "بازنشستگی", "example_en": "She is looking forward to her retirement.", "photo": "media/vocab/retirement.jpg"}, {"word": "roughly", "phonetic": "ˈrʌfli", "levels": ["a2"], "pos": "adverb", "meaning_en": "Not exactly, approximately.", "meaning_fa": "تقریباً، حدوداً", "example_en": "There were roughly ten people at the party.", "photo": "media/vocab/roughly.jpg"}, {"word": "separated", "phonetic": "ˈsepəreɪtɪd", "levels": ["a1"], "pos": "adjective", "meaning_en": "living apart from your husband or wife", "meaning_fa": "جدا شده (از همسر)", "example_en": "My parents are separated now.", "photo": "media/vocab/separated.jpg"}, {"word": "serious [important]", "phonetic": "ˈsɪərɪəs", "levels": ["a2"], "pos": "adjective", "meaning_en": "important and needing careful thought", "meaning_fa": "جدی، مهم", "example_en": "This is a serious decision for your future.", "photo": "media/vocab/serious-important.jpg"}, {"word": "single", "phonetic": "ˈsɪŋgəl", "levels": ["a1"], "pos": "adjective", "meaning_en": "Not married or in a relationship.", "meaning_fa": "مجرد", "example_en": "She is a single mother.", "photo": "media/vocab/single.jpg"}, {"word": "stay out late", "phonetic": "steɪ aʊt leɪt", "levels": ["a2"], "pos": "verb phrase", "meaning_en": "Not return home until a late hour.", "meaning_fa": "تا دیروقت بیرون ماندن", "example_en": "Teenagers often like to stay out late.", "photo": "media/vocab/stay-out-late.jpg"}, {"word": "strict", "phonetic": "strɪkt", "levels": ["a2"], "pos": "adjective", "meaning_en": "Making sure rules are obeyed.", "meaning_fa": "سخت‌گیر، جدی", "example_en": "My teacher is very strict.", "photo": "media/vocab/strict.jpg"}, {"word": "teenager", "phonetic": "ˈtiːnˌeɪʤə", "levels": ["a2"], "pos": "noun", "meaning_en": "A person aged between 13 and 19.", "meaning_fa": "نوجوان", "example_en": "My brother is a teenager.", "photo": "media/vocab/teenager.jpg"}, {"word": "teens", "phonetic": "tiːnz", "levels": ["a2"], "pos": "noun", "meaning_en": "The years of a person's life from 13 to 19.", "meaning_fa": "سال‌های نوجوانی (۱۳ تا ۱۹)", "example_en": "She was very shy in her teens.", "photo": "media/vocab/teens.jpg"}, {"word": "toddler", "phonetic": "ˈtɒdlə", "levels": ["a2"], "pos": "noun", "meaning_en": "A very young child who is just learning to walk.", "meaning_fa": "نوپا، کودک خردسال", "example_en": "My little brother is a toddler now.", "photo": "media/vocab/toddler.jpg"}, {"word": "wedding", "phonetic": "ˈwedɪŋ", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "A ceremony where two people get married.", "meaning_fa": "عروسی", "example_en": "I went to my friend's wedding.", "photo": "media/vocab/wedding.jpg"}, {"word": "weigh", "phonetic": "weɪ", "levels": ["a1"], "pos": "verb", "meaning_en": "To measure how heavy something or someone is.", "meaning_fa": "وزن کردن", "example_en": "The doctor will weigh the baby.", "photo": "media/vocab/weigh.jpg"}, {"word": "widowed", "phonetic": "ˈwɪdəʊd", "levels": ["a1"], "pos": "adjective", "meaning_en": "having a husband or wife who died", "meaning_fa": "بیوه", "example_en": "My grandmother is widowed.", "photo": "media/vocab/widowed.jpg"}]
+[
+ {
+  "word": "(bride) groom",
+  "phonetic": "grʊm",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a man who is getting married",
+  "meaning_fa": "داماد",
+  "example_en": "The groom looked very happy on his wedding day.",
+  "photo": "media/vocab/bride-groom.jpg"
+ },
+ {
+  "word": "adult",
+  "phonetic": "ˈædʌlt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who is fully grown.",
+  "meaning_fa": "بزرگسال",
+  "example_en": "Children must be accompanied by an adult.",
+  "photo": "media/vocab/adult.jpg"
+ },
+ {
+  "word": "alive",
+  "phonetic": "əˈlaɪv",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not dead; living.",
+  "meaning_fa": "زنده",
+  "example_en": "Is your cat still alive?",
+  "photo": "media/vocab/alive.jpg"
+ },
+ {
+  "word": "allow",
+  "phonetic": "əˈlaʊ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To let someone do something.",
+  "meaning_fa": "اجازه دادن",
+  "example_en": "My parents allow me to play outside.",
+  "photo": "media/vocab/allow.jpg"
+ },
+ {
+  "word": "almost",
+  "phonetic": "ˈɔːlməʊst",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "Very nearly; not quite.",
+  "meaning_fa": "تقریباً",
+  "example_en": "I almost missed the bus this morning.",
+  "photo": "media/vocab/almost.jpg"
+ },
+ {
+  "word": "alone",
+  "phonetic": "əˈləʊn",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Without other people.",
+  "meaning_fa": "تنها، به تنهایی",
+  "example_en": "She likes to read alone in her room.",
+  "photo": "media/vocab/alone.jpg"
+ },
+ {
+  "word": "anniversary",
+  "phonetic": "ˌænɪˈvɜːsəri",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A day remembering an important event from a past year.",
+  "meaning_fa": "سالگرد",
+  "example_en": "Today is our wedding anniversary.",
+  "photo": "media/vocab/anniversary.jpg"
+ },
+ {
+  "word": "approximately",
+  "phonetic": "əˈprɒksɪmətli",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "About; not exactly, but close to.",
+  "meaning_fa": "تقریباً، حدوداً",
+  "example_en": "The journey takes approximately two hours.",
+  "photo": "media/vocab/approximately.jpg"
+ },
+ {
+  "word": "at first",
+  "phonetic": "æt ˈfɜːst",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "In the beginning; initially.",
+  "meaning_fa": "در ابتدا، اولش",
+  "example_en": "At first, I found the game difficult.",
+  "photo": "media/vocab/at-first.jpg"
+ },
+ {
+  "word": "baby",
+  "phonetic": "ˈbeɪbi",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A very young child.",
+  "meaning_fa": "نوزاد، کودک",
+  "example_en": "The baby is sleeping now.",
+  "photo": "media/vocab/baby.jpg"
+ },
+ {
+  "word": "be born",
+  "phonetic": "biː bɔːn",
+  "levels": [
+   "a1"
+  ],
+  "pos": "verb phrase",
+  "meaning_en": "To come into life.",
+  "meaning_fa": "متولد شدن",
+  "example_en": "I was born in July.",
+  "photo": "media/vocab/be-born.jpg"
+ },
+ {
+  "word": "birth",
+  "phonetic": "bɜːθ",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The time when a baby or animal comes out.",
+  "meaning_fa": "تولد",
+  "example_en": "My sister gave birth to a baby boy.",
+  "photo": "media/vocab/birth.jpg"
+ },
+ {
+  "word": "birthday",
+  "phonetic": "ˈbɜːθdeɪ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The day you were born, celebrated each year.",
+  "meaning_fa": "روز تولد",
+  "example_en": "Happy birthday! I hope you have a great day.",
+  "photo": "media/vocab/birthday.jpg"
+ },
+ {
+  "word": "born",
+  "phonetic": "bɔːn",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Existing as a result of birth.",
+  "meaning_fa": "متولد شده",
+  "example_en": "I was born in July.",
+  "photo": "media/vocab/born.jpg"
+ },
+ {
+  "word": "break up [end a relationship]",
+  "phonetic": "breɪk ʌp",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To end a romantic relationship.",
+  "meaning_fa": "به هم زدن (رابطه)",
+  "example_en": "They decided to break up after five years.",
+  "photo": "media/vocab/break-up-end-a-relationship.jpg"
+ },
+ {
+  "word": "bride",
+  "phonetic": "braɪd",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A woman on her wedding day.",
+  "meaning_fa": "عروس",
+  "example_en": "The bride wore a beautiful white dress.",
+  "photo": "media/vocab/bride.jpg"
+ },
+ {
+  "word": "bridegroom",
+  "phonetic": "ˈbraɪdgrʊm",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A man on his wedding day.",
+  "meaning_fa": "داماد",
+  "example_en": "The bridegroom looked very happy.",
+  "photo": "media/vocab/bridegroom.jpg"
+ },
+ {
+  "word": "bring sb up",
+  "phonetic": "brɪŋ ˈsʌmbɒdi ʌp",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To care for a child until they are an adult.",
+  "meaning_fa": "بزرگ کردن، تربیت کردن",
+  "example_en": "Her grandparents brought her up.",
+  "photo": "media/vocab/bring-sb-up.jpg"
+ },
+ {
+  "word": "call after",
+  "phonetic": "kɔːl ˈɑːftə",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To name someone using another person's name.",
+  "meaning_fa": "نام کسی را گذاشتن",
+  "example_en": "They will call the baby after her grandmother.",
+  "photo": "media/vocab/call-after.jpg"
+ },
+ {
+  "word": "celebrate",
+  "phonetic": "ˈselɪbreɪt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To do something special for an important event.",
+  "meaning_fa": "جشن گرفتن",
+  "example_en": "We will celebrate my birthday tomorrow.",
+  "photo": "media/vocab/celebrate.jpg"
+ },
+ {
+  "word": "celebration",
+  "phonetic": "ˌselɪˈbreɪʃən",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A special event to mark something important.",
+  "meaning_fa": "جشن",
+  "example_en": "The party was a big celebration.",
+  "photo": "media/vocab/celebration.jpg"
+ },
+ {
+  "word": "ceremony",
+  "phonetic": "ˈserɪməni",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A formal event for a special occasion.",
+  "meaning_fa": "مراسم، تشریفات",
+  "example_en": "The wedding ceremony was beautiful.",
+  "photo": "media/vocab/ceremony.jpg"
+ },
+ {
+  "word": "childhood",
+  "phonetic": "ˈtʃaɪldhʊd",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The time when someone is a child.",
+  "meaning_fa": "دوران کودکی",
+  "example_en": "My childhood memories are very happy.",
+  "photo": "media/vocab/childhood.jpg"
+ },
+ {
+  "word": "couple [several]",
+  "phonetic": "ˈkʌpəl",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Two or a few things or people.",
+  "meaning_fa": "چند تا، دو سه تا",
+  "example_en": "I'll be back in a couple of minutes.",
+  "photo": "media/vocab/couple-several.jpg"
+ },
+ {
+  "word": "date [romantic meeting]",
+  "phonetic": "deɪt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A planned romantic meeting between two people.",
+  "meaning_fa": "قرار ملاقات عاشقانه",
+  "example_en": "He asked her out on a date.",
+  "photo": "media/vocab/date-romantic-meeting.jpg"
+ },
+ {
+  "word": "dead",
+  "phonetic": "ded",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "No longer alive.",
+  "meaning_fa": "مرده",
+  "example_en": "The plant is dead, I forgot to water it.",
+  "photo": "media/vocab/dead.jpg"
+ },
+ {
+  "word": "death",
+  "phonetic": "deθ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The end of life.",
+  "meaning_fa": "مرگ",
+  "example_en": "His death was a great loss.",
+  "photo": "media/vocab/death.jpg"
+ },
+ {
+  "word": "die",
+  "phonetic": "daɪ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To stop living.",
+  "meaning_fa": "مردن",
+  "example_en": "My old dog died last year.",
+  "photo": "media/vocab/die.jpg"
+ },
+ {
+  "word": "divorce",
+  "phonetic": "dɪˈvɔːs",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The legal ending of a marriage.",
+  "meaning_fa": "طلاق",
+  "example_en": "They decided to get a divorce last year.",
+  "photo": "media/vocab/divorce.jpg"
+ },
+ {
+  "word": "divorced",
+  "phonetic": "dɪˈvɔːst",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "No longer married.",
+  "meaning_fa": "مطلقه",
+  "example_en": "My friend is divorced and lives alone.",
+  "photo": "media/vocab/divorced.jpg"
+ },
+ {
+  "word": "early (20s/30s, etc.)",
+  "phonetic": "ˈɜːli",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "The first part of a decade of age.",
+  "meaning_fa": "اوایل (دهه ۲۰/۳۰)",
+  "example_en": "She is in her early twenties.",
+  "photo": "media/vocab/early-20s-30s-etc.jpg"
+ },
+ {
+  "word": "elderly",
+  "phonetic": "ˈeldəli",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Old, used to describe people.",
+  "meaning_fa": "سالخورده، مسن",
+  "example_en": "The elderly man needed help crossing the street.",
+  "photo": "media/vocab/elderly.jpg"
+ },
+ {
+  "word": "engagement",
+  "phonetic": "ɪnˈgeɪʤmənt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A formal agreement to get married.",
+  "meaning_fa": "نامزدی",
+  "example_en": "They announced their engagement last week.",
+  "photo": "media/vocab/engagement.jpg"
+ },
+ {
+  "word": "funeral",
+  "phonetic": "ˈfjuːnərəl",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "a ceremony for burying a dead person.",
+  "meaning_fa": "مراسم خاکسپاری",
+  "example_en": "We went to the funeral.",
+  "photo": "media/vocab/funeral.jpg"
+ },
+ {
+  "word": "get divorced get",
+  "phonetic": "dɪˈvɔːst",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "to legally end a marriage.",
+  "meaning_fa": "طلاق گرفتن",
+  "example_en": "They decided to get divorced last year.",
+  "photo": "media/vocab/get-divorced-get.jpg"
+ },
+ {
+  "word": "get engaged get",
+  "phonetic": "ɪnˈgeɪʤd",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "to agree to marry someone.",
+  "meaning_fa": "نامزد کردن",
+  "example_en": "My sister just got engaged.",
+  "photo": "media/vocab/get-engaged-get.jpg"
+ },
+ {
+  "word": "get married get",
+  "phonetic": "ˈmærɪd",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "to become husband and wife.",
+  "meaning_fa": "ازدواج کردن",
+  "example_en": "They plan to get married next year.",
+  "photo": "media/vocab/get-married-get.jpg"
+ },
+ {
+  "word": "get married to sb get",
+  "phonetic": "ˈmærɪd tuː ˈsʌmbɒdi",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "to become someone's husband or wife.",
+  "meaning_fa": "با کسی ازدواج کردن",
+  "example_en": "She got married to her best friend.",
+  "photo": "media/vocab/get-married-to-sb-get.jpg"
+ },
+ {
+  "word": "get to know sb get",
+  "phonetic": "tuː nəʊ ˈsʌmbɒdi",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Start to learn about a person.",
+  "meaning_fa": "با کسی آشنا شدن",
+  "example_en": "I want to get to know my new neighbors.",
+  "photo": "media/vocab/get-to-know-sb-get.jpg"
+ },
+ {
+  "word": "give up sth [leave a job]",
+  "phonetic": "gɪv ʌp ˈsʌmθɪŋ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "Stop doing a job or activity.",
+  "meaning_fa": "کاری را ترک کردن",
+  "example_en": "She gave up her job to travel.",
+  "photo": "media/vocab/give-up-sth-leave-a-job.jpg"
+ },
+ {
+  "word": "go out with sb",
+  "phonetic": "gəʊ aʊt wɪð ˈsʌmbɒdi",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To have a romantic relationship with someone.",
+  "meaning_fa": "با کسی قرار گذاشتن",
+  "example_en": "They have been going out for a year.",
+  "photo": "media/vocab/go-out-with-sb.jpg"
+ },
+ {
+  "word": "go wrong",
+  "phonetic": "gəʊ rɒŋ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "To make a mistake or fail.",
+  "meaning_fa": "اشتباه کردن، خراب شدن",
+  "example_en": "Something went wrong with the computer.",
+  "photo": "media/vocab/go-wrong.jpg"
+ },
+ {
+  "word": "groom",
+  "phonetic": "gruːm",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "a man who is about to get married.",
+  "meaning_fa": "داماد",
+  "example_en": "The groom looked very happy.",
+  "photo": "media/vocab/groom.jpg"
+ },
+ {
+  "word": "have a baby",
+  "phonetic": "hæv ə ˈbeɪbi",
+  "levels": [
+   "a1"
+  ],
+  "pos": "verb phrase",
+  "meaning_en": "To give birth to a child.",
+  "meaning_fa": "بچه دار شدن",
+  "example_en": "They are going to have a baby.",
+  "photo": "media/vocab/have-a-baby.jpg"
+ },
+ {
+  "word": "honeymoon",
+  "phonetic": "ˈhʌnɪmuːn",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A holiday taken by a newly married couple.",
+  "meaning_fa": "ماه عسل",
+  "example_en": "They went to Paris for their honeymoon.",
+  "photo": "media/vocab/honeymoon.jpg"
+ },
+ {
+  "word": "ill",
+  "phonetic": "ɪl",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not feeling well, sick.",
+  "meaning_fa": "بیمار، ناخوش",
+  "example_en": "She felt ill and went home from school.",
+  "photo": "media/vocab/ill.jpg"
+ },
+ {
+  "word": "in love",
+  "phonetic": "ɪn lʌv",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Having strong romantic feelings for someone.",
+  "meaning_fa": "عاشق",
+  "example_en": "They are deeply in love and plan to marry.",
+  "photo": "media/vocab/in-love.jpg"
+ },
+ {
+  "word": "in the end",
+  "phonetic": "ɪn ði end",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Finally, after a long time or many changes.",
+  "meaning_fa": "در نهایت، سرانجام",
+  "example_en": "We tried many ways, and in the end, we succeeded.",
+  "photo": "media/vocab/in-the-end.jpg"
+ },
+ {
+  "word": "in your teens",
+  "phonetic": "ɪn jɔː tiːnz",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Between 13 and 19 years old.",
+  "meaning_fa": "در سنین نوجوانی (۱۳ تا ۱۹)",
+  "example_en": "She was very shy in her teens.",
+  "photo": "media/vocab/in-your-teens.jpg"
+ },
+ {
+  "word": "late (50s/60s, etc.)",
+  "phonetic": "leɪt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Near the end of a decade of age.",
+  "meaning_fa": "اواخر (دهه)",
+  "example_en": "My grandmother is in her late 70s.",
+  "photo": "media/vocab/late-50s-60s-etc.jpg"
+ },
+ {
+  "word": "leave [end a relationship]",
+  "phonetic": "liːv",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To end a relationship with someone.",
+  "meaning_fa": "ترک کردن (رابطه)",
+  "example_en": "She decided to leave her husband.",
+  "photo": "media/vocab/leave-end-a-relationship.jpg"
+ },
+ {
+  "word": "let [allow]",
+  "phonetic": "let",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To allow someone to do something.",
+  "meaning_fa": "اجازه دادن",
+  "example_en": "My parents let me stay out late.",
+  "photo": "media/vocab/let-allow.jpg"
+ },
+ {
+  "word": "manage [succeed in doing sth]",
+  "phonetic": "ˈmænɪʤ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "Be able to do something.",
+  "meaning_fa": "موفق شدن، توانستن",
+  "example_en": "I managed to open the jar.",
+  "photo": "media/vocab/manage-succeed-in-doing-sth.jpg"
+ },
+ {
+  "word": "marriage",
+  "phonetic": "ˈmærɪdʒ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of being married.",
+  "meaning_fa": "ازدواج",
+  "example_en": "Their marriage lasted for fifty years.",
+  "photo": "media/vocab/marriage.jpg"
+ },
+ {
+  "word": "married",
+  "phonetic": "ˈmærɪd",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having a husband or wife.",
+  "meaning_fa": "متأهل",
+  "example_en": "Are you married or single?",
+  "photo": "media/vocab/married.jpg"
+ },
+ {
+  "word": "marry",
+  "phonetic": "ˈmæri",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To become husband and wife.",
+  "meaning_fa": "ازدواج کردن",
+  "example_en": "They plan to marry next summer.",
+  "photo": "media/vocab/marry.jpg"
+ },
+ {
+  "word": "mid (30s/40s, etc.)",
+  "phonetic": "mɪd",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "In the middle part of a decade.",
+  "meaning_fa": "اواسط (دهه)",
+  "example_en": "She is in her mid-thirties.",
+  "photo": "media/vocab/mid-30s-40s-etc.jpg"
+ },
+ {
+  "word": "middle-aged",
+  "phonetic": "ˈmɪdəlˈeɪdʒd",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Between young and old, usually 40-60.",
+  "meaning_fa": "میانسال",
+  "example_en": "My parents are middle-aged.",
+  "photo": "media/vocab/middle-aged.jpg"
+ },
+ {
+  "word": "nearly",
+  "phonetic": "ˈnɪəli",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "Almost; very close to.",
+  "meaning_fa": "تقریباً، نزدیک به",
+  "example_en": "I'm nearly finished with my homework.",
+  "photo": "media/vocab/nearly.jpg"
+ },
+ {
+  "word": "on my/your own",
+  "phonetic": "ɒn maɪ/jɔːr əʊn",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Alone; without help from others.",
+  "meaning_fa": "به تنهایی، مستقل",
+  "example_en": "I like to study on my own.",
+  "photo": "media/vocab/on-my-your-own.jpg"
+ },
+ {
+  "word": "pregnancy",
+  "phonetic": "ˈpregnənsi",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of carrying a baby inside your body.",
+  "meaning_fa": "بارداری",
+  "example_en": "Her pregnancy lasted nine months.",
+  "photo": "media/vocab/pregnancy.jpg"
+ },
+ {
+  "word": "pregnant",
+  "phonetic": "ˈpregnənt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Carrying a baby inside your body.",
+  "meaning_fa": "باردار",
+  "example_en": "My sister is pregnant with twins.",
+  "photo": "media/vocab/pregnant.jpg"
+ },
+ {
+  "word": "reception [wedding party]",
+  "phonetic": "rɪˈsepʃən",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a formal party after a wedding ceremony",
+  "meaning_fa": "مراسم پذیرایی عروسی",
+  "example_en": "The wedding reception was held in a beautiful hall.",
+  "photo": "media/vocab/reception-wedding-party.jpg"
+ },
+ {
+  "word": "relationship",
+  "phonetic": "rɪˈleɪʃənʃɪp",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The way two people or things are connected.",
+  "meaning_fa": "رابطه",
+  "example_en": "They have a very good relationship.",
+  "photo": "media/vocab/relationship.jpg"
+ },
+ {
+  "word": "retired",
+  "phonetic": "rɪˈtaɪəd",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having stopped working due to age.",
+  "meaning_fa": "بازنشسته",
+  "example_en": "My aunt is a retired teacher.",
+  "photo": "media/vocab/retired.jpg"
+ },
+ {
+  "word": "retirement",
+  "phonetic": "rɪˈtaɪəmənt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The period after you stop working.",
+  "meaning_fa": "بازنشستگی",
+  "example_en": "She is looking forward to her retirement.",
+  "photo": "media/vocab/retirement.jpg"
+ },
+ {
+  "word": "roughly",
+  "phonetic": "ˈrʌfli",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "Not exactly, approximately.",
+  "meaning_fa": "تقریباً، حدوداً",
+  "example_en": "There were roughly ten people at the party.",
+  "photo": "media/vocab/roughly.jpg"
+ },
+ {
+  "word": "separated",
+  "phonetic": "ˈsepəreɪtɪd",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "living apart from your husband or wife",
+  "meaning_fa": "جدا شده (از همسر)",
+  "example_en": "My parents are separated now.",
+  "photo": "media/vocab/separated.jpg"
+ },
+ {
+  "word": "serious [important]",
+  "phonetic": "ˈsɪərɪəs",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "important and needing careful thought",
+  "meaning_fa": "جدی، مهم",
+  "example_en": "This is a serious decision for your future.",
+  "photo": "media/vocab/serious-important.jpg"
+ },
+ {
+  "word": "single",
+  "phonetic": "ˈsɪŋgəl",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not married or in a relationship.",
+  "meaning_fa": "مجرد",
+  "example_en": "She is a single mother.",
+  "photo": "media/vocab/single.jpg"
+ },
+ {
+  "word": "stay out late",
+  "phonetic": "steɪ aʊt leɪt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb phrase",
+  "meaning_en": "Not return home until a late hour.",
+  "meaning_fa": "تا دیروقت بیرون ماندن",
+  "example_en": "Teenagers often like to stay out late.",
+  "photo": "media/vocab/stay-out-late.jpg"
+ },
+ {
+  "word": "strict",
+  "phonetic": "strɪkt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Making sure rules are obeyed.",
+  "meaning_fa": "سخت‌گیر، جدی",
+  "example_en": "My teacher is very strict.",
+  "photo": "media/vocab/strict.jpg"
+ },
+ {
+  "word": "teenager",
+  "phonetic": "ˈtiːnˌeɪʤə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person aged between 13 and 19.",
+  "meaning_fa": "نوجوان",
+  "example_en": "My brother is a teenager.",
+  "photo": "media/vocab/teenager.jpg"
+ },
+ {
+  "word": "teens",
+  "phonetic": "tiːnz",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The years of a person's life from 13 to 19.",
+  "meaning_fa": "سال‌های نوجوانی (۱۳ تا ۱۹)",
+  "example_en": "She was very shy in her teens.",
+  "photo": "media/vocab/teens.jpg"
+ },
+ {
+  "word": "toddler",
+  "phonetic": "ˈtɒdlə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A very young child who is just learning to walk.",
+  "meaning_fa": "نوپا، کودک خردسال",
+  "example_en": "My little brother is a toddler now.",
+  "photo": "media/vocab/toddler.jpg"
+ },
+ {
+  "word": "wedding",
+  "phonetic": "ˈwedɪŋ",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A ceremony where two people get married.",
+  "meaning_fa": "عروسی",
+  "example_en": "I went to my friend's wedding.",
+  "photo": "media/vocab/wedding.jpg"
+ },
+ {
+  "word": "weigh",
+  "phonetic": "weɪ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "verb",
+  "meaning_en": "To measure how heavy something or someone is.",
+  "meaning_fa": "وزن کردن",
+  "example_en": "The doctor will weigh the baby.",
+  "photo": "media/vocab/weigh.jpg"
+ },
+ {
+  "word": "widowed",
+  "phonetic": "ˈwɪdəʊd",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "having a husband or wife who died",
+  "meaning_fa": "بیوه",
+  "example_en": "My grandmother is widowed.",
+  "photo": "media/vocab/widowed.jpg"
+ },
+ {
+  "word": "ashes",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun (plural)",
+  "meaning_en": "The powdery residue left after burning a body.",
+  "meaning_fa": "خاکستر (جسد)",
+  "example_en": "Her family scattered her ashes by the sea.",
+  "photo": "media/vocab/ashes.jpg"
+ },
+ {
+  "word": "be at death’s door",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Very close to dying; extremely ill.",
+  "meaning_fa": "در بستر مرگ بودن",
+  "example_en": "After the accident, he was at death's door.",
+  "photo": "media/vocab/be-at-deaths-door.jpg"
+ },
+ {
+  "word": "be on your last legs",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Very tired, about to fail, or near death.",
+  "meaning_fa": "در حال از پا افتادن، رو به اتمام",
+  "example_en": "This old car is on its last legs.",
+  "photo": "media/vocab/be-on-your-last-legs.jpg"
+ },
+ {
+  "word": "bequeath",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To leave property or money to someone by will.",
+  "meaning_fa": "وصیت کردن، به ارث گذاشتن",
+  "example_en": "He bequeathed his entire estate to his niece.",
+  "photo": "media/vocab/bequeath.jpg"
+ },
+ {
+  "word": "bequest",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Property or money left to someone in a will.",
+  "meaning_fa": "ارث، میراث",
+  "example_en": "The museum received a generous bequest from a patron.",
+  "photo": "media/vocab/bequest.jpg"
+ },
+ {
+  "word": "bereaved",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having suffered the death of a loved one.",
+  "meaning_fa": "داغدیده، عزادار",
+  "example_en": "The bereaved family received many condolences.",
+  "photo": "media/vocab/bereaved.jpg"
+ },
+ {
+  "word": "burial",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The act of placing a dead body in the ground.",
+  "meaning_fa": "دفن، خاکسپاری",
+  "example_en": "The family arranged a private burial for their loved one.",
+  "photo": "media/vocab/burial.jpg"
+ },
+ {
+  "word": "caesarean (section)",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A surgical operation to deliver a baby.",
+  "meaning_fa": "سزارین",
+  "example_en": "She had a caesarean section for the birth of her twins.",
+  "photo": "media/vocab/caesarean-section.jpg"
+ },
+ {
+  "word": "coffin",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A long box in which a dead person is buried.",
+  "meaning_fa": "تابوت",
+  "example_en": "The coffin was carried by six pallbearers.",
+  "photo": "media/vocab/coffin.jpg"
+ },
+ {
+  "word": "conceive",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To become pregnant.",
+  "meaning_fa": "باردار شدن، حامله شدن",
+  "example_en": "They tried for a year before she finally conceived.",
+  "photo": "media/vocab/conceive.jpg"
+ },
+ {
+  "word": "conception",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The moment when a woman becomes pregnant.",
+  "meaning_fa": "لقاح، بارداری",
+  "example_en": "The exact date of conception is often hard to determine.",
+  "photo": "media/vocab/conception.jpg"
+ },
+ {
+  "word": "condolence",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Expression of sympathy, especially after a death.",
+  "meaning_fa": "تسلیت، همدردی",
+  "example_en": "We offered our deepest condolences to the grieving family.",
+  "photo": "media/vocab/condolence.jpg"
+ },
+ {
+  "word": "cremation",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The process of burning a dead body to ashes.",
+  "meaning_fa": "سوزاندن جسد، خاکستر کردن",
+  "example_en": "The family opted for cremation instead of burial.",
+  "photo": "media/vocab/cremation.jpg"
+ },
+ {
+  "word": "crematorium",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A place where dead bodies are cremated.",
+  "meaning_fa": "کوره مرده‌سوزی",
+  "example_en": "The service was held at the local crematorium.",
+  "photo": "media/vocab/crematorium.jpg"
+ },
+ {
+  "word": "dementia",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A serious mental decline affecting memory and thinking.",
+  "meaning_fa": "زوال عقل، دمانس",
+  "example_en": "Her grandmother was diagnosed with early-stage dementia.",
+  "photo": "media/vocab/dementia.jpg"
+ },
+ {
+  "word": "doddery",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Weak and unsteady, typically due to old age.",
+  "meaning_fa": "لرزان، ناتوان (از پیری)",
+  "example_en": "The doddery old man slowly walked with a cane.",
+  "photo": "media/vocab/doddery.jpg"
+ },
+ {
+  "word": "embryo",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An unborn or unhatched offspring in early development.",
+  "meaning_fa": "جنین",
+  "example_en": "Scientists are studying the early stages of embryo development.",
+  "photo": "media/vocab/embryo.jpg"
+ },
+ {
+  "word": "expecting",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Pregnant; going to have a baby.",
+  "meaning_fa": "باردار، منتظر فرزند",
+  "example_en": "My sister is expecting her first child next month.",
+  "photo": "media/vocab/expecting.jpg"
+ },
+ {
+  "word": "fatality",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A death caused by an accident or violence.",
+  "meaning_fa": "تلفات، مرگ و میر",
+  "example_en": "There were no fatalities reported in the plane crash.",
+  "photo": "media/vocab/fatality.jpg"
+ },
+ {
+  "word": "fertilisation",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The process of combining male and female gametes.",
+  "meaning_fa": "لقاح، بارورسازی",
+  "example_en": "In vitro fertilisation is a common reproductive technology.",
+  "photo": "media/vocab/fertilisation.jpg"
+ },
+ {
+  "word": "fertilise",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To make an egg or plant capable of developing.",
+  "meaning_fa": "بارور کردن، لقاح دادن",
+  "example_en": "Farmers fertilise their fields to improve crop yield.",
+  "photo": "media/vocab/fertilise.jpg"
+ },
+ {
+  "word": "fertility drugs",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Medications used to stimulate ovulation or sperm production.",
+  "meaning_fa": "داروهای باروری",
+  "example_en": "Many couples use fertility drugs to help conceive.",
+  "photo": "media/vocab/fertility-drugs.jpg"
+ },
+ {
+  "word": "foetus",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "An unborn human or animal more than eight weeks old.",
+  "meaning_fa": "جنین",
+  "example_en": "The foetus develops rapidly during the second trimester.",
+  "photo": "media/vocab/foetus.jpg"
+ },
+ {
+  "word": "gaga",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Mentally confused or senile, often due to old age.",
+  "meaning_fa": "گیج، خرف",
+  "example_en": "My grandmother is getting a bit gaga in her old age.",
+  "photo": "media/vocab/gaga.jpg"
+ },
+ {
+  "word": "give birth",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "To produce a baby or young animal.",
+  "meaning_fa": "زایمان کردن",
+  "example_en": "My sister is due to give birth next month.",
+  "photo": "media/vocab/give-birth.jpg"
+ },
+ {
+  "word": "go into labour",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Begin the process of childbirth.",
+  "meaning_fa": "وارد مرحله زایمان شدن",
+  "example_en": "She went into labour early this morning.",
+  "photo": "media/vocab/go-into-labour.jpg"
+ },
+ {
+  "word": "have all your wits about you",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "To be alert and able to think quickly.",
+  "meaning_fa": "حواس جمع بودن، هوشیار بودن",
+  "example_en": "You need all your wits about you for this job.",
+  "photo": "media/vocab/have-all-your-wits-about-you.jpg"
+ },
+ {
+  "word": "implant",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To insert something surgically into a body.",
+  "meaning_fa": "کاشتن، پیوند زدن",
+  "example_en": "The dentist will implant a new tooth.",
+  "photo": "media/vocab/implant.jpg"
+ },
+ {
+  "word": "in vitro fertilisation",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Medical procedure where eggs are fertilized outside the body.",
+  "meaning_fa": "لقاح آزمایشگاهی",
+  "example_en": "In vitro fertilisation has helped many couples conceive.",
+  "photo": "media/vocab/in-vitro-fertilisation.jpg"
+ },
+ {
+  "word": "induce",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To bring about or cause something to happen.",
+  "meaning_fa": "القا کردن، باعث شدن",
+  "example_en": "The doctor decided to induce labor early.",
+  "photo": "media/vocab/induce.jpg"
+ },
+ {
+  "word": "induction",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The formal introduction of someone to a new job.",
+  "meaning_fa": "معارفه، دوره آشنایی",
+  "example_en": "New employees undergo a comprehensive induction program.",
+  "photo": "media/vocab/induction.jpg"
+ },
+ {
+  "word": "inheritance",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Money or property received from someone after their death.",
+  "meaning_fa": "ارث، میراث",
+  "example_en": "She received a substantial inheritance from her grandmother.",
+  "photo": "media/vocab/inheritance.jpg"
+ },
+ {
+  "word": "intestate",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Dying without having made a valid will.",
+  "meaning_fa": "بدون وصیت‌نامه",
+  "example_en": "He died intestate, complicating the distribution of his assets.",
+  "photo": "media/vocab/intestate.jpg"
+ },
+ {
+  "word": "IVF",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "abbreviation",
+  "meaning_en": "In Vitro Fertilization; a fertility treatment.",
+  "meaning_fa": "لقاح مصنوعی",
+  "example_en": "Many couples use IVF to help them conceive.",
+  "photo": "media/vocab/ivf.jpg"
+ },
+ {
+  "word": "midwife",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person trained to assist women in childbirth.",
+  "meaning_fa": "ماما",
+  "example_en": "The midwife helped deliver the baby safely.",
+  "photo": "media/vocab/midwife.jpg"
+ },
+ {
+  "word": "mourning",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The expression of sorrow for someone's death.",
+  "meaning_fa": "سوگواری، عزاداری",
+  "example_en": "She wore black during her period of mourning.",
+  "photo": "media/vocab/mourning.jpg"
+ },
+ {
+  "word": "pass away",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To die (a polite expression).",
+  "meaning_fa": "فوت کردن، درگذشتن",
+  "example_en": "Her grandmother passed away peacefully last night.",
+  "photo": "media/vocab/pass-away.jpg"
+ },
+ {
+  "word": "pass on",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To die (a polite way of saying).",
+  "meaning_fa": "فوت کردن، درگذشتن",
+  "example_en": "We were sad to hear that he passed on.",
+  "photo": "media/vocab/pass-on.jpg"
+ },
+ {
+  "word": "pass over",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To ignore or not choose someone for something.",
+  "meaning_fa": "نادیده گرفتن، رد کردن",
+  "example_en": "She felt passed over for the promotion despite her experience.",
+  "photo": "media/vocab/pass-over.jpg"
+ },
+ {
+  "word": "pensioner",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A person who receives a pension, usually retired.",
+  "meaning_fa": "بازنشسته",
+  "example_en": "Pensioners often receive discounts on public transport.",
+  "photo": "media/vocab/pensioner.jpg"
+ },
+ {
+  "word": "perish",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To die, especially in a sudden or violent way.",
+  "meaning_fa": "از بین رفتن، مردن",
+  "example_en": "Many ancient languages have perished over time.",
+  "photo": "media/vocab/perish.jpg"
+ },
+ {
+  "word": "placenta",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Organ connecting fetus to mother, providing nourishment.",
+  "meaning_fa": "جفت",
+  "example_en": "The placenta plays a vital role in fetal development.",
+  "photo": "media/vocab/placenta.jpg"
+ },
+ {
+  "word": "ripe old age",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "a very old age",
+  "meaning_fa": "سن بالا، عمر طولانی",
+  "example_en": "My grandmother lived to the ripe old age of 98.",
+  "photo": "media/vocab/ripe-old-age.jpg"
+ },
+ {
+  "word": "scatter ashes",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "To spread a deceased person's cremated remains.",
+  "meaning_fa": "خاکستر را پراکنده کردن",
+  "example_en": "They decided to scatter his ashes by the sea.",
+  "photo": "media/vocab/scatter-ashes.jpg"
+ },
+ {
+  "word": "sheltered accommodation",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Housing for elderly or disabled people with support.",
+  "meaning_fa": "اقامتگاه حمایتی",
+  "example_en": "My grandmother moved into sheltered accommodation last year.",
+  "photo": "media/vocab/sheltered-accommodation.jpg"
+ },
+ {
+  "word": "slaughtered",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Killed in a very cruel or violent way.",
+  "meaning_fa": "قتل عام شده",
+  "example_en": "Many innocent people were slaughtered during the war.",
+  "photo": "media/vocab/slaughtered.jpg"
+ },
+ {
+  "word": "test tube baby",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A baby conceived through in vitro fertilization.",
+  "meaning_fa": "نوزاد آزمایشگاهی",
+  "example_en": "The first test tube baby was born in 1978.",
+  "photo": "media/vocab/test-tube-baby.jpg"
+ },
+ {
+  "word": "uterus",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The organ in female mammals where offspring develop.",
+  "meaning_fa": "رحم",
+  "example_en": "The baby develops inside the mother's uterus.",
+  "photo": "media/vocab/uterus.jpg"
+ },
+ {
+  "word": "wake",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A gathering held to mourn and celebrate a deceased person.",
+  "meaning_fa": "مراسم یادبود، شب‌نشینی قبل از خاکسپاری",
+  "example_en": "Friends and family attended the wake to remember him.",
+  "photo": "media/vocab/wake.jpg"
+ },
+ {
+  "word": "will",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A legal document stating how property should be distributed after death.",
+  "meaning_fa": "وصیت‌نامه",
+  "example_en": "He left a detailed will outlining his wishes.",
+  "photo": "media/vocab/will.jpg"
+ }
+]

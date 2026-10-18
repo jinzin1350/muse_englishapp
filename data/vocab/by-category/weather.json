@@ -1,1 +1,1486 @@
-[{"word": "blow (ing) v", "phonetic": "bləʊ", "levels": ["a2"], "pos": "verb", "meaning_en": "When wind moves, it blows.", "meaning_fa": "وزیدن (باد)", "example_en": "The wind is blowing strongly today.", "photo": "media/vocab/blow-ing-v.jpg"}, {"word": "boiling", "phonetic": "ˈbɔɪlɪŋ", "levels": ["a2", "b2"], "pos": "adjective", "meaning_en": "Very hot.", "meaning_fa": "بسیار داغ، جوشان", "example_en": "It's boiling outside today, wear light clothes.", "photo": "media/vocab/boiling.jpg"}, {"word": "breeze", "phonetic": "briːz", "levels": ["b2"], "pos": "noun", "meaning_en": "A gentle, light wind.", "meaning_fa": "نسیم", "example_en": "A cool breeze blew through the trees.", "photo": "media/vocab/breeze.jpg"}, {"word": "chilly", "phonetic": "ˈtʃɪli", "levels": ["a2"], "pos": "adjective", "meaning_en": "A little cold, unpleasantly cold.", "meaning_fa": "خنک، سرد", "example_en": "It's a bit chilly outside today.", "photo": "media/vocab/chilly.jpg"}, {"word": "clear (sky)", "phonetic": "klɪə", "levels": ["a2"], "pos": "adjective", "meaning_en": "Without clouds or fog.", "meaning_fa": "صاف، بدون ابر", "example_en": "The sky is clear and blue today.", "photo": "media/vocab/clear-sky.jpg"}, {"word": "cloud", "phonetic": "klaʊd", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "A white or grey mass in the sky.", "meaning_fa": "ابر", "example_en": "There is a big cloud in the sky.", "photo": "media/vocab/cloud.jpg"}, {"word": "cloudy", "phonetic": "ˈklaʊdi", "levels": ["a1", "a2"], "pos": "adjective", "meaning_en": "Full of clouds.", "meaning_fa": "ابری", "example_en": "It's a cloudy day, so no sun.", "photo": "media/vocab/cloudy.jpg"}, {"word": "cold", "phonetic": "kəʊld", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "A common illness that makes you sneeze and cough.", "meaning_fa": "سرماخوردگی", "example_en": "I have a cold and feel tired.", "photo": "media/vocab/cold.jpg"}, {"word": "come out [sun]", "phonetic": "kʌm aʊt", "levels": ["a2"], "pos": "phrasal verb", "meaning_en": "For the sun to appear from behind clouds.", "meaning_fa": "(خورشید) بیرون آمدن", "example_en": "After the rain, the sun came out.", "photo": "media/vocab/come-out-sun.jpg"}, {"word": "cool", "phonetic": "kuːl", "levels": ["a2"], "pos": "adjective", "meaning_en": "Slightly cold, but not too cold.", "meaning_fa": "خنک", "example_en": "The weather is cool today.", "photo": "media/vocab/cool.jpg"}, {"word": "damp", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Slightly wet, often in an unpleasant way.", "meaning_fa": "مرطوب، نمناک", "example_en": "The clothes were still damp after drying.", "photo": "media/vocab/damp.jpg"}, {"word": "daytime", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "The period of time when there is light from the sun.", "meaning_fa": "روز، ساعات روز", "example_en": "It's much warmer during the daytime.", "photo": "media/vocab/daytime.jpg"}, {"word": "degree(s) [temperature]", "phonetic": "dɪˈgriː", "levels": ["a2"], "pos": "noun", "meaning_en": "A unit for measuring temperature.", "meaning_fa": "درجه (دما)", "example_en": "The temperature dropped to zero degrees.", "photo": "media/vocab/degrees-temperature.jpg"}, {"word": "degrees", "phonetic": "dɪˈgriːz", "levels": ["a1"], "pos": "noun", "meaning_en": "A unit for measuring temperature.", "meaning_fa": "درجه (دما)", "example_en": "It's 25 degrees outside today.", "photo": "media/vocab/degrees.jpg"}, {"word": "downpour", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A very heavy rain.", "meaning_fa": "باران شدید، رگبار", "example_en": "We got caught in a sudden downpour.", "photo": "media/vocab/downpour.jpg"}, {"word": "drought", "phonetic": "draʊt", "levels": ["b2"], "pos": "noun", "meaning_en": "A long period with no rain.", "meaning_fa": "خشکسالی", "example_en": "The country is suffering from a severe drought.", "photo": "media/vocab/drought.jpg"}, {"word": "dry", "phonetic": "draɪ", "levels": ["a1"], "pos": "adjective", "meaning_en": "Not wet.", "meaning_fa": "خشک", "example_en": "Please hang the clothes to dry.", "photo": "media/vocab/dry.jpg"}, {"word": "expect", "phonetic": "ɪkˈspekt", "levels": ["b2"], "pos": "verb", "meaning_en": "To think something will happen.", "meaning_fa": "انتظار داشتن", "example_en": "I expect my friend to arrive soon.", "photo": "media/vocab/expect.jpg"}, {"word": "extremely", "phonetic": "ɪkˈstriːmli", "levels": ["a2"], "pos": "adverb", "meaning_en": "Very, very much.", "meaning_fa": "بسیار، فوق‌العاده", "example_en": "It was extremely cold last night.", "photo": "media/vocab/extremely.jpg"}, {"word": "flood fld", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To cover with a large amount of water.", "meaning_fa": "سیل گرفتن، آبگرفتگی", "example_en": "The river might flood the town.", "photo": "media/vocab/flood-fl-d.jpg"}, {"word": "fog", "phonetic": "fɒg", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "Thick cloud close to the ground.", "meaning_fa": "مه", "example_en": "The fog made it hard to see.", "photo": "media/vocab/fog.jpg"}, {"word": "foggy", "phonetic": "ˈfɒgi", "levels": ["a1", "a2", "b2"], "pos": "adjective", "meaning_en": "Full of fog; unclear.", "meaning_fa": "مه‌آلود", "example_en": "It was a cold and foggy morning.", "photo": "media/vocab/foggy.jpg"}, {"word": "freeze", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "turn into ice because of cold.", "meaning_fa": "یخ زدن", "example_en": "The water will freeze overnight.", "photo": "media/vocab/freeze.jpg"}, {"word": "freezing", "phonetic": "ˈfriːzɪŋ", "levels": ["a2"], "pos": "adjective", "meaning_en": "very, very cold.", "meaning_fa": "بسیار سرد، یخبندان", "example_en": "It's freezing outside today.", "photo": "media/vocab/freezing.jpg"}, {"word": "frost", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "thin white ice on surfaces when it's cold.", "meaning_fa": "یخبندان، سرما", "example_en": "There was frost on the car windows.", "photo": "media/vocab/frost.jpg"}, {"word": "gale", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "a very strong wind.", "meaning_fa": "طوفان، باد شدید", "example_en": "The ship faced a strong gale at sea.", "photo": "media/vocab/gale.jpg"}, {"word": "gentle", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "not strong or severe; mild.", "meaning_fa": "ملایم، آرام", "example_en": "We had a gentle breeze today.", "photo": "media/vocab/gentle.jpg"}, {"word": "heatwave", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A period of unusually hot weather.", "meaning_fa": "موج گرما", "example_en": "We are having a heatwave this summer.", "photo": "media/vocab/heatwave.jpg"}, {"word": "heavy", "phonetic": "ˈhevi", "levels": ["b2"], "pos": "adjective", "meaning_en": "Weighing a lot; difficult to lift.", "meaning_fa": "سنگین", "example_en": "This box is very heavy.", "photo": "media/vocab/heavy.jpg"}, {"word": "heavy (rain)", "phonetic": "ˈhevi", "levels": ["a2"], "pos": "adjective", "meaning_en": "A lot of rain falling quickly.", "meaning_fa": "باران شدید", "example_en": "We had heavy rain all night.", "photo": "media/vocab/heavy-rain.jpg"}, {"word": "high", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Above the usual level or amount.", "meaning_fa": "بالا، زیاد", "example_en": "We expect high temperatures tomorrow.", "photo": "media/vocab/high.jpg"}, {"word": "hot", "phonetic": "hɒt", "levels": ["a1"], "pos": "adjective", "meaning_en": "Feeling warm or having a high temperature.", "meaning_fa": "گرم، داغ", "example_en": "I feel hot today.", "photo": "media/vocab/hot.jpg"}, {"word": "humid", "phonetic": "ˈhjuːmɪd", "levels": ["a2", "b2"], "pos": "adjective", "meaning_en": "When the air is warm and has a lot of water.", "meaning_fa": "مرطوب", "example_en": "The weather is very humid today.", "photo": "media/vocab/humid.jpg"}, {"word": "hurricane", "phonetic": "ˈhʌrɪkən", "levels": ["a1"], "pos": "noun", "meaning_en": "A very strong storm with powerful winds and rain.", "meaning_fa": "طوفان، گردباد", "example_en": "The hurricane caused a lot of damage.", "photo": "media/vocab/hurricane.jpg"}, {"word": "hurricane hrkən", "phonetic": null, "levels": ["b2"], "pos": "noun", "meaning_en": "A violent storm with very strong winds, especially in the Atlantic.", "meaning_fa": "طوفان، گردباد", "example_en": "The hurricane hit the coast with immense force.", "photo": "media/vocab/hurricane-h-r-k-n.jpg"}, {"word": "ice", "phonetic": "aɪs", "levels": ["a2"], "pos": "noun", "meaning_en": "Frozen water, very cold and hard.", "meaning_fa": "یخ", "example_en": "Be careful, there is ice on the road.", "photo": "media/vocab/ice.jpg"}, {"word": "icy", "phonetic": "ˈaɪsi", "levels": ["a2"], "pos": "adjective", "meaning_en": "Covered with ice, very cold and slippery.", "meaning_fa": "یخی، پوشیده از یخ", "example_en": "Be careful, the roads are very icy today.", "photo": "media/vocab/icy.jpg"}, {"word": "It’s a … day", "phonetic": "ɪts ə deɪ", "levels": ["a1"], "pos": "phrase", "meaning_en": "Describes the weather for the day.", "meaning_fa": "روز ... است", "example_en": "It's a sunny day today.", "photo": "media/vocab/it-s-a-day.jpg"}, {"word": "late", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Happening near the end of a period.", "meaning_fa": "اواخر، دیر", "example_en": "We expect snow in late winter.", "photo": "media/vocab/late.jpg"}, {"word": "light (rain/shower)", "phonetic": "laɪt", "levels": ["a2"], "pos": "adjective", "meaning_en": "Not heavy or strong.", "meaning_fa": "کم، خفیف (باران)", "example_en": "It was only a light rain.", "photo": "media/vocab/light-rain-shower.jpg"}, {"word": "light [not much]", "phonetic": "laɪt", "levels": ["a2"], "pos": "adjective", "meaning_en": "Small in amount or degree.", "meaning_fa": "کم، اندک", "example_en": "We had a light snowfall last night.", "photo": "media/vocab/light-not-much.jpg"}, {"word": "lightning", "phonetic": "ˈlaɪtnɪŋ", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "A flash of bright light in the sky.", "meaning_fa": "رعد و برق", "example_en": "I saw lightning during the storm.", "photo": "media/vocab/lightning.jpg"}, {"word": "melt", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To turn from solid to liquid by heat.", "meaning_fa": "ذوب شدن", "example_en": "The ice cream will melt in the sun.", "photo": "media/vocab/melt.jpg"}, {"word": "mild", "phonetic": "maɪld", "levels": ["a2"], "pos": "adjective", "meaning_en": "Not cold, not hot; pleasant.", "meaning_fa": "ملایم", "example_en": "The weather is mild today.", "photo": "media/vocab/mild.jpg"}, {"word": "minus", "phonetic": "ˈmaɪnəs", "levels": ["a1"], "pos": "preposition", "meaning_en": "Below zero; less than.", "meaning_fa": "منهای، زیر صفر", "example_en": "The temperature is minus five degrees.", "photo": "media/vocab/minus.jpg"}, {"word": "misty", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "with a lot of mist; difficult to see through", "meaning_fa": "مه آلود، غبارآلود", "example_en": "The morning was misty, so we couldn't see far.", "photo": "media/vocab/misty.jpg"}, {"word": "muggy", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "warm and humid, making you feel uncomfortable", "meaning_fa": "شرجی، دم کرده", "example_en": "It was a muggy day, so I felt tired.", "photo": "media/vocab/muggy.jpg"}, {"word": "overcast", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Covered with clouds; not sunny.", "meaning_fa": "ابری، گرفته", "example_en": "The sky is overcast today.", "photo": "media/vocab/overcast.jpg"}, {"word": "pour (with rain)", "phonetic": "pɔː", "levels": ["a2"], "pos": "verb", "meaning_en": "To rain very heavily.", "meaning_fa": "باران شدید باریدن", "example_en": "It's pouring with rain outside.", "photo": "media/vocab/pour-with-rain.jpg"}, {"word": "pour down", "phonetic": null, "levels": ["b2"], "pos": "phrasal verb", "meaning_en": "To rain very heavily.", "meaning_fa": "باران شدید باریدن", "example_en": "The rain was pouring down all night.", "photo": "media/vocab/pour-down.jpg"}, {"word": "rain", "phonetic": "reɪn", "levels": ["a1", "b2"], "pos": "noun", "meaning_en": "water falling from the sky", "meaning_fa": "باران", "example_en": "I like to walk in the rain.", "photo": "media/vocab/rain.jpg"}, {"word": "rain n, v", "phonetic": "reɪn", "levels": ["a2"], "pos": "noun, verb", "meaning_en": "water falling from the sky; to fall as water", "meaning_fa": "باران؛ باریدن", "example_en": "It often rains in autumn.", "photo": "media/vocab/rain-n-v.jpg"}, {"word": "rainy", "phonetic": "ˈreɪni", "levels": ["a1"], "pos": "adjective", "meaning_en": "having a lot of rain", "meaning_fa": "بارانی", "example_en": "It was a cold and rainy day.", "photo": "media/vocab/rainy.jpg"}, {"word": "severe", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "very bad or serious", "meaning_fa": "شدید، وخیم", "example_en": "We had severe weather warnings today.", "photo": "media/vocab/severe.jpg"}, {"word": "shine", "phonetic": "ʃaɪn", "levels": ["a2"], "pos": "verb", "meaning_en": "to give out light; to be bright", "meaning_fa": "تابیدن، درخشیدن", "example_en": "The sun shines brightly today.", "photo": "media/vocab/shine.jpg"}, {"word": "shining", "phonetic": null, "levels": ["a2"], "pos": "adjective", "meaning_en": "giving out or reflecting light", "meaning_fa": "درخشان، تابان", "example_en": "The shining sun made the day warm.", "photo": "media/vocab/shining.jpg"}, {"word": "shower", "phonetic": "ʃaʊə", "levels": ["b2"], "pos": "noun", "meaning_en": "A device that sprays water for washing.", "meaning_fa": "دوش", "example_en": "Our bathroom has a new shower.", "photo": "media/vocab/shower.jpg"}, {"word": "shower [of rain]", "phonetic": "ˈʃaʊə", "levels": ["a2"], "pos": "noun", "meaning_en": "A short period of rain.", "meaning_fa": "رگبار، باران کوتاه", "example_en": "We got caught in a sudden shower.", "photo": "media/vocab/shower-of-rain.jpg"}, {"word": "sky", "phonetic": "skaɪ", "levels": ["a2"], "pos": "noun", "meaning_en": "The space above the Earth where clouds are.", "meaning_fa": "آسمان", "example_en": "The sky is blue today.", "photo": "media/vocab/sky.jpg"}, {"word": "snow", "phonetic": "snəʊ", "levels": ["a1"], "pos": "noun", "meaning_en": "Soft white flakes of ice falling from the sky.", "meaning_fa": "برف", "example_en": "I like to play in the snow.", "photo": "media/vocab/snow.jpg"}, {"word": "snow v", "phonetic": "snəʊ", "levels": ["a2"], "pos": "verb", "meaning_en": "When snow falls from the sky.", "meaning_fa": "برف باریدن", "example_en": "It started to snow.", "photo": "media/vocab/snow-v.jpg"}, {"word": "snowing", "phonetic": "ˈsnəʊɪŋ", "levels": ["a1", "a2"], "pos": "verb", "meaning_en": "When snow is falling.", "meaning_fa": "در حال برف باریدن", "example_en": "It is snowing outside.", "photo": "media/vocab/snowing.jpg"}, {"word": "snowy", "phonetic": "ˈsnəʊi", "levels": ["a1", "a2"], "pos": "adjective", "meaning_en": "Covered with snow, or having snow.", "meaning_fa": "برفی", "example_en": "It was a snowy day.", "photo": "media/vocab/snowy.jpg"}, {"word": "stifling", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Very hot and difficult to breathe.", "meaning_fa": "خفه‌کننده، دم‌کرده", "example_en": "The air in the room was stifling.", "photo": "media/vocab/stifling.jpg"}, {"word": "storm", "phonetic": "stɔːm", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "Bad weather with strong wind and rain.", "meaning_fa": "طوفان", "example_en": "A big storm is coming.", "photo": "media/vocab/storm.jpg"}, {"word": "strong", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Having great power or force.", "meaning_fa": "قوی، شدید", "example_en": "The strong wind blew down trees.", "photo": "media/vocab/strong.jpg"}, {"word": "strong (wind)", "phonetic": "strɒŋ", "levels": ["a2"], "pos": "adjective", "meaning_en": "Powerful and moving fast.", "meaning_fa": "شدید (باد)", "example_en": "The strong wind made it cold.", "photo": "media/vocab/strong-wind.jpg"}, {"word": "sun", "phonetic": "sʌn", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "The star that gives light and heat to Earth.", "meaning_fa": "خورشید", "example_en": "The sun is shining brightly today.", "photo": "media/vocab/sun.jpg"}, {"word": "sunny", "phonetic": "ˈsʌni", "levels": ["a1", "a2"], "pos": "adjective", "meaning_en": "With a lot of bright light from the sun.", "meaning_fa": "آفتابی", "example_en": "It's a beautiful sunny day today.", "photo": "media/vocab/sunny.jpg"}, {"word": "thaw", "phonetic": null, "levels": ["b2"], "pos": "verb", "meaning_en": "To melt, or become unfrozen.", "meaning_fa": "آب شدن، ذوب شدن", "example_en": "The ice on the lake began to thaw.", "photo": "media/vocab/thaw.jpg"}, {"word": "the cold", "phonetic": "ðə kəʊld", "levels": ["a2"], "pos": "noun", "meaning_en": "Low temperature; cold weather.", "meaning_fa": "سرما", "example_en": "I don't like the cold in winter.", "photo": "media/vocab/the-cold.jpg"}, {"word": "thick fog", "phonetic": "θɪk fɒg", "levels": ["a2"], "pos": "noun phrase", "meaning_en": "very dense fog, making it hard to see.", "meaning_fa": "مه غلیظ", "example_en": "Driving was dangerous due to the thick fog.", "photo": "media/vocab/thick-fog.jpg"}, {"word": "thunder", "phonetic": "ˈθʌndə", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "the loud noise after lightning during a storm.", "meaning_fa": "رعد، غرش آسمان", "example_en": "We heard thunder in the distance.", "photo": "media/vocab/thunder.jpg"}, {"word": "thunderstorm", "phonetic": "ˈθʌndəstɔːm", "levels": ["a1", "a2"], "pos": "noun", "meaning_en": "a storm with thunder and lightning.", "meaning_fa": "رعد و برق، طوفان تندری", "example_en": "A thunderstorm kept us awake last night.", "photo": "media/vocab/thunderstorm.jpg"}, {"word": "thundery", "phonetic": "ˈθʌndəri", "levels": ["a1"], "pos": "adjective", "meaning_en": "relating to or producing thunder.", "meaning_fa": "رعد و برقی", "example_en": "The sky looked dark and thundery.", "photo": "media/vocab/thundery.jpg"}, {"word": "torrential rain", "phonetic": null, "levels": ["b2"], "pos": "noun phrase", "meaning_en": "Very heavy rain.", "meaning_fa": "باران سیل آسا", "example_en": "We couldn't go out because of the torrential rain.", "photo": "media/vocab/torrential-rain.jpg"}, {"word": "tropical ?trɒp?kəl", "phonetic": null, "levels": ["b2"], "pos": "adjective", "meaning_en": "Relating to the very hot areas near the equator.", "meaning_fa": "گرمسیری", "example_en": "Tropical weather is often hot and humid.", "photo": "media/vocab/tropical-tr-p-k-l.jpg"}, {"word": "weather", "phonetic": "ˈweðə", "levels": ["a1"], "pos": "noun", "meaning_en": "The state of the atmosphere, like sun, rain, wind.", "meaning_fa": "آب و هوا", "example_en": "The weather is sunny today.", "photo": "media/vocab/weather.jpg"}, {"word": "wet", "phonetic": "wet", "levels": ["a1", "a2"], "pos": "adjective", "meaning_en": "covered in water or liquid", "meaning_fa": "خیس", "example_en": "Don't sit there, the bench is wet.", "photo": "media/vocab/wet.jpg"}, {"word": "What’s the weather like?", "phonetic": "wɒts ðə ˈweðə laɪk", "levels": ["a1"], "pos": "phrase", "meaning_en": "asking about current weather conditions", "meaning_fa": "هوا چطور است؟", "example_en": "What's the weather like in London today?", "photo": "media/vocab/what-s-the-weather-like.jpg"}, {"word": "wind", "phonetic": "wɪnd", "levels": ["a1", "b2"], "pos": "noun", "meaning_en": "Moving air outside.", "meaning_fa": "باد", "example_en": "The wind is strong today.", "photo": "media/vocab/wind.jpg"}, {"word": "wind n", "phonetic": "wɪnd", "levels": ["a2"], "pos": "noun", "meaning_en": "Air moving quickly outside.", "meaning_fa": "باد", "example_en": "The strong wind blew my hat off.", "photo": "media/vocab/wind-n.jpg"}, {"word": "windy", "phonetic": "ˈwɪndi", "levels": ["a1", "a2"], "pos": "adjective", "meaning_en": "With a lot of wind.", "meaning_fa": "بادی", "example_en": "It is a very windy day.", "photo": "media/vocab/windy.jpg"}]
+[
+ {
+  "word": "blow (ing) v",
+  "phonetic": "bləʊ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "When wind moves, it blows.",
+  "meaning_fa": "وزیدن (باد)",
+  "example_en": "The wind is blowing strongly today.",
+  "photo": "media/vocab/blow-ing-v.jpg"
+ },
+ {
+  "word": "boiling",
+  "phonetic": "ˈbɔɪlɪŋ",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very hot.",
+  "meaning_fa": "بسیار داغ، جوشان",
+  "example_en": "It's boiling outside today, wear light clothes.",
+  "photo": "media/vocab/boiling.jpg"
+ },
+ {
+  "word": "breeze",
+  "phonetic": "briːz",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A gentle, light wind.",
+  "meaning_fa": "نسیم",
+  "example_en": "A cool breeze blew through the trees.",
+  "photo": "media/vocab/breeze.jpg"
+ },
+ {
+  "word": "chilly",
+  "phonetic": "ˈtʃɪli",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A little cold, unpleasantly cold.",
+  "meaning_fa": "خنک، سرد",
+  "example_en": "It's a bit chilly outside today.",
+  "photo": "media/vocab/chilly.jpg"
+ },
+ {
+  "word": "clear (sky)",
+  "phonetic": "klɪə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Without clouds or fog.",
+  "meaning_fa": "صاف، بدون ابر",
+  "example_en": "The sky is clear and blue today.",
+  "photo": "media/vocab/clear-sky.jpg"
+ },
+ {
+  "word": "cloud",
+  "phonetic": "klaʊd",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A white or grey mass in the sky.",
+  "meaning_fa": "ابر",
+  "example_en": "There is a big cloud in the sky.",
+  "photo": "media/vocab/cloud.jpg"
+ },
+ {
+  "word": "cloudy",
+  "phonetic": "ˈklaʊdi",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Full of clouds.",
+  "meaning_fa": "ابری",
+  "example_en": "It's a cloudy day, so no sun.",
+  "photo": "media/vocab/cloudy.jpg"
+ },
+ {
+  "word": "cold",
+  "phonetic": "kəʊld",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A common illness that makes you sneeze and cough.",
+  "meaning_fa": "سرماخوردگی",
+  "example_en": "I have a cold and feel tired.",
+  "photo": "media/vocab/cold.jpg"
+ },
+ {
+  "word": "come out [sun]",
+  "phonetic": "kʌm aʊt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "For the sun to appear from behind clouds.",
+  "meaning_fa": "(خورشید) بیرون آمدن",
+  "example_en": "After the rain, the sun came out.",
+  "photo": "media/vocab/come-out-sun.jpg"
+ },
+ {
+  "word": "cool",
+  "phonetic": "kuːl",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Slightly cold, but not too cold.",
+  "meaning_fa": "خنک",
+  "example_en": "The weather is cool today.",
+  "photo": "media/vocab/cool.jpg"
+ },
+ {
+  "word": "damp",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Slightly wet, often in an unpleasant way.",
+  "meaning_fa": "مرطوب، نمناک",
+  "example_en": "The clothes were still damp after drying.",
+  "photo": "media/vocab/damp.jpg"
+ },
+ {
+  "word": "daytime",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The period of time when there is light from the sun.",
+  "meaning_fa": "روز، ساعات روز",
+  "example_en": "It's much warmer during the daytime.",
+  "photo": "media/vocab/daytime.jpg"
+ },
+ {
+  "word": "degree(s) [temperature]",
+  "phonetic": "dɪˈgriː",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A unit for measuring temperature.",
+  "meaning_fa": "درجه (دما)",
+  "example_en": "The temperature dropped to zero degrees.",
+  "photo": "media/vocab/degrees-temperature.jpg"
+ },
+ {
+  "word": "degrees",
+  "phonetic": "dɪˈgriːz",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A unit for measuring temperature.",
+  "meaning_fa": "درجه (دما)",
+  "example_en": "It's 25 degrees outside today.",
+  "photo": "media/vocab/degrees.jpg"
+ },
+ {
+  "word": "downpour",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A very heavy rain.",
+  "meaning_fa": "باران شدید، رگبار",
+  "example_en": "We got caught in a sudden downpour.",
+  "photo": "media/vocab/downpour.jpg"
+ },
+ {
+  "word": "drought",
+  "phonetic": "draʊt",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A long period with no rain.",
+  "meaning_fa": "خشکسالی",
+  "example_en": "The country is suffering from a severe drought.",
+  "photo": "media/vocab/drought.jpg"
+ },
+ {
+  "word": "dry",
+  "phonetic": "draɪ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not wet.",
+  "meaning_fa": "خشک",
+  "example_en": "Please hang the clothes to dry.",
+  "photo": "media/vocab/dry.jpg"
+ },
+ {
+  "word": "expect",
+  "phonetic": "ɪkˈspekt",
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To think something will happen.",
+  "meaning_fa": "انتظار داشتن",
+  "example_en": "I expect my friend to arrive soon.",
+  "photo": "media/vocab/expect.jpg"
+ },
+ {
+  "word": "extremely",
+  "phonetic": "ɪkˈstriːmli",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adverb",
+  "meaning_en": "Very, very much.",
+  "meaning_fa": "بسیار، فوق‌العاده",
+  "example_en": "It was extremely cold last night.",
+  "photo": "media/vocab/extremely.jpg"
+ },
+ {
+  "word": "flood fld",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To cover with a large amount of water.",
+  "meaning_fa": "سیل گرفتن، آبگرفتگی",
+  "example_en": "The river might flood the town.",
+  "photo": "media/vocab/flood-fl-d.jpg"
+ },
+ {
+  "word": "fog",
+  "phonetic": "fɒg",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Thick cloud close to the ground.",
+  "meaning_fa": "مه",
+  "example_en": "The fog made it hard to see.",
+  "photo": "media/vocab/fog.jpg"
+ },
+ {
+  "word": "foggy",
+  "phonetic": "ˈfɒgi",
+  "levels": [
+   "a1",
+   "a2",
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Full of fog; unclear.",
+  "meaning_fa": "مه‌آلود",
+  "example_en": "It was a cold and foggy morning.",
+  "photo": "media/vocab/foggy.jpg"
+ },
+ {
+  "word": "freeze",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "turn into ice because of cold.",
+  "meaning_fa": "یخ زدن",
+  "example_en": "The water will freeze overnight.",
+  "photo": "media/vocab/freeze.jpg"
+ },
+ {
+  "word": "freezing",
+  "phonetic": "ˈfriːzɪŋ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "very, very cold.",
+  "meaning_fa": "بسیار سرد، یخبندان",
+  "example_en": "It's freezing outside today.",
+  "photo": "media/vocab/freezing.jpg"
+ },
+ {
+  "word": "frost",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "thin white ice on surfaces when it's cold.",
+  "meaning_fa": "یخبندان، سرما",
+  "example_en": "There was frost on the car windows.",
+  "photo": "media/vocab/frost.jpg"
+ },
+ {
+  "word": "gale",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a very strong wind.",
+  "meaning_fa": "طوفان، باد شدید",
+  "example_en": "The ship faced a strong gale at sea.",
+  "photo": "media/vocab/gale.jpg"
+ },
+ {
+  "word": "gentle",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "not strong or severe; mild.",
+  "meaning_fa": "ملایم، آرام",
+  "example_en": "We had a gentle breeze today.",
+  "photo": "media/vocab/gentle.jpg"
+ },
+ {
+  "word": "heatwave",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A period of unusually hot weather.",
+  "meaning_fa": "موج گرما",
+  "example_en": "We are having a heatwave this summer.",
+  "photo": "media/vocab/heatwave.jpg"
+ },
+ {
+  "word": "heavy",
+  "phonetic": "ˈhevi",
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Weighing a lot; difficult to lift.",
+  "meaning_fa": "سنگین",
+  "example_en": "This box is very heavy.",
+  "photo": "media/vocab/heavy.jpg"
+ },
+ {
+  "word": "heavy (rain)",
+  "phonetic": "ˈhevi",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "A lot of rain falling quickly.",
+  "meaning_fa": "باران شدید",
+  "example_en": "We had heavy rain all night.",
+  "photo": "media/vocab/heavy-rain.jpg"
+ },
+ {
+  "word": "high",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Above the usual level or amount.",
+  "meaning_fa": "بالا، زیاد",
+  "example_en": "We expect high temperatures tomorrow.",
+  "photo": "media/vocab/high.jpg"
+ },
+ {
+  "word": "hot",
+  "phonetic": "hɒt",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Feeling warm or having a high temperature.",
+  "meaning_fa": "گرم، داغ",
+  "example_en": "I feel hot today.",
+  "photo": "media/vocab/hot.jpg"
+ },
+ {
+  "word": "humid",
+  "phonetic": "ˈhjuːmɪd",
+  "levels": [
+   "a2",
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "When the air is warm and has a lot of water.",
+  "meaning_fa": "مرطوب",
+  "example_en": "The weather is very humid today.",
+  "photo": "media/vocab/humid.jpg"
+ },
+ {
+  "word": "hurricane",
+  "phonetic": "ˈhʌrɪkən",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "A very strong storm with powerful winds and rain.",
+  "meaning_fa": "طوفان، گردباد",
+  "example_en": "The hurricane caused a lot of damage.",
+  "photo": "media/vocab/hurricane.jpg"
+ },
+ {
+  "word": "hurricane hrkən",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A violent storm with very strong winds, especially in the Atlantic.",
+  "meaning_fa": "طوفان، گردباد",
+  "example_en": "The hurricane hit the coast with immense force.",
+  "photo": "media/vocab/hurricane-h-r-k-n.jpg"
+ },
+ {
+  "word": "ice",
+  "phonetic": "aɪs",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Frozen water, very cold and hard.",
+  "meaning_fa": "یخ",
+  "example_en": "Be careful, there is ice on the road.",
+  "photo": "media/vocab/ice.jpg"
+ },
+ {
+  "word": "icy",
+  "phonetic": "ˈaɪsi",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Covered with ice, very cold and slippery.",
+  "meaning_fa": "یخی، پوشیده از یخ",
+  "example_en": "Be careful, the roads are very icy today.",
+  "photo": "media/vocab/icy.jpg"
+ },
+ {
+  "word": "It’s a … day",
+  "phonetic": "ɪts ə deɪ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Describes the weather for the day.",
+  "meaning_fa": "روز ... است",
+  "example_en": "It's a sunny day today.",
+  "photo": "media/vocab/it-s-a-day.jpg"
+ },
+ {
+  "word": "late",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Happening near the end of a period.",
+  "meaning_fa": "اواخر، دیر",
+  "example_en": "We expect snow in late winter.",
+  "photo": "media/vocab/late.jpg"
+ },
+ {
+  "word": "light (rain/shower)",
+  "phonetic": "laɪt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not heavy or strong.",
+  "meaning_fa": "کم، خفیف (باران)",
+  "example_en": "It was only a light rain.",
+  "photo": "media/vocab/light-rain-shower.jpg"
+ },
+ {
+  "word": "light [not much]",
+  "phonetic": "laɪt",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Small in amount or degree.",
+  "meaning_fa": "کم، اندک",
+  "example_en": "We had a light snowfall last night.",
+  "photo": "media/vocab/light-not-much.jpg"
+ },
+ {
+  "word": "lightning",
+  "phonetic": "ˈlaɪtnɪŋ",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A flash of bright light in the sky.",
+  "meaning_fa": "رعد و برق",
+  "example_en": "I saw lightning during the storm.",
+  "photo": "media/vocab/lightning.jpg"
+ },
+ {
+  "word": "melt",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To turn from solid to liquid by heat.",
+  "meaning_fa": "ذوب شدن",
+  "example_en": "The ice cream will melt in the sun.",
+  "photo": "media/vocab/melt.jpg"
+ },
+ {
+  "word": "mild",
+  "phonetic": "maɪld",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Not cold, not hot; pleasant.",
+  "meaning_fa": "ملایم",
+  "example_en": "The weather is mild today.",
+  "photo": "media/vocab/mild.jpg"
+ },
+ {
+  "word": "minus",
+  "phonetic": "ˈmaɪnəs",
+  "levels": [
+   "a1"
+  ],
+  "pos": "preposition",
+  "meaning_en": "Below zero; less than.",
+  "meaning_fa": "منهای، زیر صفر",
+  "example_en": "The temperature is minus five degrees.",
+  "photo": "media/vocab/minus.jpg"
+ },
+ {
+  "word": "misty",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "with a lot of mist; difficult to see through",
+  "meaning_fa": "مه آلود، غبارآلود",
+  "example_en": "The morning was misty, so we couldn't see far.",
+  "photo": "media/vocab/misty.jpg"
+ },
+ {
+  "word": "muggy",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "warm and humid, making you feel uncomfortable",
+  "meaning_fa": "شرجی، دم کرده",
+  "example_en": "It was a muggy day, so I felt tired.",
+  "photo": "media/vocab/muggy.jpg"
+ },
+ {
+  "word": "overcast",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Covered with clouds; not sunny.",
+  "meaning_fa": "ابری، گرفته",
+  "example_en": "The sky is overcast today.",
+  "photo": "media/vocab/overcast.jpg"
+ },
+ {
+  "word": "pour (with rain)",
+  "phonetic": "pɔː",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To rain very heavily.",
+  "meaning_fa": "باران شدید باریدن",
+  "example_en": "It's pouring with rain outside.",
+  "photo": "media/vocab/pour-with-rain.jpg"
+ },
+ {
+  "word": "pour down",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To rain very heavily.",
+  "meaning_fa": "باران شدید باریدن",
+  "example_en": "The rain was pouring down all night.",
+  "photo": "media/vocab/pour-down.jpg"
+ },
+ {
+  "word": "rain",
+  "phonetic": "reɪn",
+  "levels": [
+   "a1",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "water falling from the sky",
+  "meaning_fa": "باران",
+  "example_en": "I like to walk in the rain.",
+  "photo": "media/vocab/rain.jpg"
+ },
+ {
+  "word": "rain n, v",
+  "phonetic": "reɪn",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun, verb",
+  "meaning_en": "water falling from the sky; to fall as water",
+  "meaning_fa": "باران؛ باریدن",
+  "example_en": "It often rains in autumn.",
+  "photo": "media/vocab/rain-n-v.jpg"
+ },
+ {
+  "word": "rainy",
+  "phonetic": "ˈreɪni",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "having a lot of rain",
+  "meaning_fa": "بارانی",
+  "example_en": "It was a cold and rainy day.",
+  "photo": "media/vocab/rainy.jpg"
+ },
+ {
+  "word": "severe",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "very bad or serious",
+  "meaning_fa": "شدید، وخیم",
+  "example_en": "We had severe weather warnings today.",
+  "photo": "media/vocab/severe.jpg"
+ },
+ {
+  "word": "shine",
+  "phonetic": "ʃaɪn",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "to give out light; to be bright",
+  "meaning_fa": "تابیدن، درخشیدن",
+  "example_en": "The sun shines brightly today.",
+  "photo": "media/vocab/shine.jpg"
+ },
+ {
+  "word": "shining",
+  "phonetic": null,
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "giving out or reflecting light",
+  "meaning_fa": "درخشان، تابان",
+  "example_en": "The shining sun made the day warm.",
+  "photo": "media/vocab/shining.jpg"
+ },
+ {
+  "word": "shower",
+  "phonetic": "ʃaʊə",
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A device that sprays water for washing.",
+  "meaning_fa": "دوش",
+  "example_en": "Our bathroom has a new shower.",
+  "photo": "media/vocab/shower.jpg"
+ },
+ {
+  "word": "shower [of rain]",
+  "phonetic": "ˈʃaʊə",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A short period of rain.",
+  "meaning_fa": "رگبار، باران کوتاه",
+  "example_en": "We got caught in a sudden shower.",
+  "photo": "media/vocab/shower-of-rain.jpg"
+ },
+ {
+  "word": "sky",
+  "phonetic": "skaɪ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The space above the Earth where clouds are.",
+  "meaning_fa": "آسمان",
+  "example_en": "The sky is blue today.",
+  "photo": "media/vocab/sky.jpg"
+ },
+ {
+  "word": "snow",
+  "phonetic": "snəʊ",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "Soft white flakes of ice falling from the sky.",
+  "meaning_fa": "برف",
+  "example_en": "I like to play in the snow.",
+  "photo": "media/vocab/snow.jpg"
+ },
+ {
+  "word": "snow v",
+  "phonetic": "snəʊ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "When snow falls from the sky.",
+  "meaning_fa": "برف باریدن",
+  "example_en": "It started to snow.",
+  "photo": "media/vocab/snow-v.jpg"
+ },
+ {
+  "word": "snowing",
+  "phonetic": "ˈsnəʊɪŋ",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "verb",
+  "meaning_en": "When snow is falling.",
+  "meaning_fa": "در حال برف باریدن",
+  "example_en": "It is snowing outside.",
+  "photo": "media/vocab/snowing.jpg"
+ },
+ {
+  "word": "snowy",
+  "phonetic": "ˈsnəʊi",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Covered with snow, or having snow.",
+  "meaning_fa": "برفی",
+  "example_en": "It was a snowy day.",
+  "photo": "media/vocab/snowy.jpg"
+ },
+ {
+  "word": "stifling",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very hot and difficult to breathe.",
+  "meaning_fa": "خفه‌کننده، دم‌کرده",
+  "example_en": "The air in the room was stifling.",
+  "photo": "media/vocab/stifling.jpg"
+ },
+ {
+  "word": "storm",
+  "phonetic": "stɔːm",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Bad weather with strong wind and rain.",
+  "meaning_fa": "طوفان",
+  "example_en": "A big storm is coming.",
+  "photo": "media/vocab/storm.jpg"
+ },
+ {
+  "word": "strong",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Having great power or force.",
+  "meaning_fa": "قوی، شدید",
+  "example_en": "The strong wind blew down trees.",
+  "photo": "media/vocab/strong.jpg"
+ },
+ {
+  "word": "strong (wind)",
+  "phonetic": "strɒŋ",
+  "levels": [
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Powerful and moving fast.",
+  "meaning_fa": "شدید (باد)",
+  "example_en": "The strong wind made it cold.",
+  "photo": "media/vocab/strong-wind.jpg"
+ },
+ {
+  "word": "sun",
+  "phonetic": "sʌn",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "The star that gives light and heat to Earth.",
+  "meaning_fa": "خورشید",
+  "example_en": "The sun is shining brightly today.",
+  "photo": "media/vocab/sun.jpg"
+ },
+ {
+  "word": "sunny",
+  "phonetic": "ˈsʌni",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "With a lot of bright light from the sun.",
+  "meaning_fa": "آفتابی",
+  "example_en": "It's a beautiful sunny day today.",
+  "photo": "media/vocab/sunny.jpg"
+ },
+ {
+  "word": "thaw",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To melt, or become unfrozen.",
+  "meaning_fa": "آب شدن، ذوب شدن",
+  "example_en": "The ice on the lake began to thaw.",
+  "photo": "media/vocab/thaw.jpg"
+ },
+ {
+  "word": "the cold",
+  "phonetic": "ðə kəʊld",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Low temperature; cold weather.",
+  "meaning_fa": "سرما",
+  "example_en": "I don't like the cold in winter.",
+  "photo": "media/vocab/the-cold.jpg"
+ },
+ {
+  "word": "thick fog",
+  "phonetic": "θɪk fɒg",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "very dense fog, making it hard to see.",
+  "meaning_fa": "مه غلیظ",
+  "example_en": "Driving was dangerous due to the thick fog.",
+  "photo": "media/vocab/thick-fog.jpg"
+ },
+ {
+  "word": "thunder",
+  "phonetic": "ˈθʌndə",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "the loud noise after lightning during a storm.",
+  "meaning_fa": "رعد، غرش آسمان",
+  "example_en": "We heard thunder in the distance.",
+  "photo": "media/vocab/thunder.jpg"
+ },
+ {
+  "word": "thunderstorm",
+  "phonetic": "ˈθʌndəstɔːm",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "a storm with thunder and lightning.",
+  "meaning_fa": "رعد و برق، طوفان تندری",
+  "example_en": "A thunderstorm kept us awake last night.",
+  "photo": "media/vocab/thunderstorm.jpg"
+ },
+ {
+  "word": "thundery",
+  "phonetic": "ˈθʌndəri",
+  "levels": [
+   "a1"
+  ],
+  "pos": "adjective",
+  "meaning_en": "relating to or producing thunder.",
+  "meaning_fa": "رعد و برقی",
+  "example_en": "The sky looked dark and thundery.",
+  "photo": "media/vocab/thundery.jpg"
+ },
+ {
+  "word": "torrential rain",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "Very heavy rain.",
+  "meaning_fa": "باران سیل آسا",
+  "example_en": "We couldn't go out because of the torrential rain.",
+  "photo": "media/vocab/torrential-rain.jpg"
+ },
+ {
+  "word": "tropical ?trɒp?kəl",
+  "phonetic": null,
+  "levels": [
+   "b2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relating to the very hot areas near the equator.",
+  "meaning_fa": "گرمسیری",
+  "example_en": "Tropical weather is often hot and humid.",
+  "photo": "media/vocab/tropical-tr-p-k-l.jpg"
+ },
+ {
+  "word": "weather",
+  "phonetic": "ˈweðə",
+  "levels": [
+   "a1"
+  ],
+  "pos": "noun",
+  "meaning_en": "The state of the atmosphere, like sun, rain, wind.",
+  "meaning_fa": "آب و هوا",
+  "example_en": "The weather is sunny today.",
+  "photo": "media/vocab/weather.jpg"
+ },
+ {
+  "word": "wet",
+  "phonetic": "wet",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "covered in water or liquid",
+  "meaning_fa": "خیس",
+  "example_en": "Don't sit there, the bench is wet.",
+  "photo": "media/vocab/wet.jpg"
+ },
+ {
+  "word": "What’s the weather like?",
+  "phonetic": "wɒts ðə ˈweðə laɪk",
+  "levels": [
+   "a1"
+  ],
+  "pos": "phrase",
+  "meaning_en": "asking about current weather conditions",
+  "meaning_fa": "هوا چطور است؟",
+  "example_en": "What's the weather like in London today?",
+  "photo": "media/vocab/what-s-the-weather-like.jpg"
+ },
+ {
+  "word": "wind",
+  "phonetic": "wɪnd",
+  "levels": [
+   "a1",
+   "b2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Moving air outside.",
+  "meaning_fa": "باد",
+  "example_en": "The wind is strong today.",
+  "photo": "media/vocab/wind.jpg"
+ },
+ {
+  "word": "wind n",
+  "phonetic": "wɪnd",
+  "levels": [
+   "a2"
+  ],
+  "pos": "noun",
+  "meaning_en": "Air moving quickly outside.",
+  "meaning_fa": "باد",
+  "example_en": "The strong wind blew my hat off.",
+  "photo": "media/vocab/wind-n.jpg"
+ },
+ {
+  "word": "windy",
+  "phonetic": "ˈwɪndi",
+  "levels": [
+   "a1",
+   "a2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "With a lot of wind.",
+  "meaning_fa": "بادی",
+  "example_en": "It is a very windy day.",
+  "photo": "media/vocab/windy.jpg"
+ },
+ {
+  "word": "blowy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Windy; characterized by strong breezes.",
+  "meaning_fa": "بادی، پرباد",
+  "example_en": "It was a blowy day, perfect for flying kites.",
+  "photo": "media/vocab/blowy.jpg"
+ },
+ {
+  "word": "breezy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Pleasantly windy; light and fresh.",
+  "meaning_fa": "نسیم‌دار، خنک",
+  "example_en": "It was a breezy afternoon, perfect for a walk.",
+  "photo": "media/vocab/breezy.jpg"
+ },
+ {
+  "word": "chuck it down",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrasal verb",
+  "meaning_en": "To rain very heavily.",
+  "meaning_fa": "باران شدید باریدن",
+  "example_en": "It's really chucking it down outside; bring an umbrella.",
+  "photo": "media/vocab/chuck-it-down.jpg"
+ },
+ {
+  "word": "clammy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Unpleasantly damp and sticky, often due to humidity.",
+  "meaning_fa": "مرطوب و چسبناک",
+  "example_en": "The air felt clammy before the thunderstorm broke.",
+  "photo": "media/vocab/clammy.jpg"
+ },
+ {
+  "word": "climate of change",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "An atmosphere or prevailing mood of significant transformation.",
+  "meaning_fa": "فضای تغییر",
+  "example_en": "The new leadership created a climate of change.",
+  "photo": "media/vocab/climate-of-change.jpg"
+ },
+ {
+  "word": "climate of distrust",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "An atmosphere where people generally do not trust each other.",
+  "meaning_fa": "فضای بی‌اعتمادی",
+  "example_en": "The scandal fostered a deep climate of distrust.",
+  "photo": "media/vocab/climate-of-distrust.jpg"
+ },
+ {
+  "word": "close",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "(Of weather) warm, humid, and uncomfortable.",
+  "meaning_fa": "شرجی، دم‌کرده",
+  "example_en": "The air felt very close before the rain started.",
+  "photo": "media/vocab/close.jpg"
+ },
+ {
+  "word": "cloud your judgement",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "To make it difficult to think clearly or make good decisions.",
+  "meaning_fa": "قضاوت را مختل کردن",
+  "example_en": "Personal feelings can often cloud your judgement.",
+  "photo": "media/vocab/cloud-your-judgement.jpg"
+ },
+ {
+  "word": "deluge",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A severe flood or a heavy fall of rain.",
+  "meaning_fa": "سیل، باران شدید",
+  "example_en": "The town was hit by a sudden deluge of rain.",
+  "photo": "media/vocab/deluge.jpg"
+ },
+ {
+  "word": "economic",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relating to the economy or the production and consumption of goods.",
+  "meaning_fa": "اقتصادی",
+  "example_en": "The country faces significant economic challenges this year.",
+  "photo": "media/vocab/economic.jpg"
+ },
+ {
+  "word": "financial",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relating to money or how money is managed.",
+  "meaning_fa": "مالی، اقتصادی",
+  "example_en": "The company faced significant financial challenges last year.",
+  "photo": "media/vocab/financial.jpg"
+ },
+ {
+  "word": "frosty",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very cold, with a thin layer of ice (frost).",
+  "meaning_fa": "یخبندان، سرد",
+  "example_en": "The morning was frosty, with ice on the windows.",
+  "photo": "media/vocab/frosty.jpg"
+ },
+ {
+  "word": "hail of abuse",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "A large number of angry or insulting remarks.",
+  "meaning_fa": "رگبار توهین، سیل ناسزا",
+  "example_en": "The politician faced a hail of abuse from protesters.",
+  "photo": "media/vocab/hail-of-abuse.jpg"
+ },
+ {
+  "word": "hail of bullets",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "A large number of bullets fired quickly.",
+  "meaning_fa": "رگبار گلوله، باران گلوله",
+  "example_en": "Soldiers advanced under a heavy hail of bullets.",
+  "photo": "media/vocab/hail-of-bullets.jpg"
+ },
+ {
+  "word": "hazy memory",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A memory that is unclear or vague.",
+  "meaning_fa": "خاطره مبهم، یاد گنگ",
+  "example_en": "I have only a hazy memory of my childhood.",
+  "photo": "media/vocab/hazy-memory.jpg"
+ },
+ {
+  "word": "in the mists of history",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom/phrase",
+  "meaning_en": "A very long time ago, difficult to remember clearly.",
+  "meaning_fa": "در اعماق تاریخ",
+  "example_en": "The origins of the ancient ritual are lost in the mists of history.",
+  "photo": "media/vocab/in-the-mists-of-history.jpg"
+ },
+ {
+  "word": "nippy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Pleasantly cold or chilly.",
+  "meaning_fa": "خنک، سرد و تیز",
+  "example_en": "It's a bit nippy outside, so wear a coat.",
+  "photo": "media/vocab/nippy.jpg"
+ },
+ {
+  "word": "oppressive",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Uncomfortably hot and humid.",
+  "meaning_fa": "طاقت‌فرسا، خفقان‌آور (هوا)",
+  "example_en": "The oppressive heat made it difficult to breathe.",
+  "photo": "media/vocab/oppressive.jpg"
+ },
+ {
+  "word": "pour",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "verb",
+  "meaning_en": "To flow rapidly in a steady stream.",
+  "meaning_fa": "ریختن، سرازیر شدن",
+  "example_en": "The rain began to pour heavily.",
+  "photo": "media/vocab/pour.jpg"
+ },
+ {
+  "word": "prevailing",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Most common or current at a particular time.",
+  "meaning_fa": "غالب، رایج",
+  "example_en": "The prevailing winds brought cold air from the north.",
+  "photo": "media/vocab/prevailing.jpg"
+ },
+ {
+  "word": "roasting",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "extremely hot",
+  "meaning_fa": "بسیار داغ، سوزان",
+  "example_en": "It was a roasting hot day, perfect for the beach.",
+  "photo": "media/vocab/roasting.jpg"
+ },
+ {
+  "word": "snowed under",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective (idiom)",
+  "meaning_en": "Having too much work to deal with.",
+  "meaning_fa": "غرق در کار، زیر بار کار",
+  "example_en": "I'm completely snowed under with assignments this week.",
+  "photo": "media/vocab/snowed-under.jpg"
+ },
+ {
+  "word": "social",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Relating to society or interacting with others.",
+  "meaning_fa": "اجتماعی، مربوط به جامعه",
+  "example_en": "Humans are inherently social creatures, needing interaction.",
+  "photo": "media/vocab/social.jpg"
+ },
+ {
+  "word": "sticky",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Hot and humid, causing sweat and discomfort.",
+  "meaning_fa": "شرجی، چسبناک (هوا)",
+  "example_en": "The weather was unpleasantly sticky and humid.",
+  "photo": "media/vocab/sticky.jpg"
+ },
+ {
+  "word": "storm of abuse",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "A sudden, intense outburst of angry criticism.",
+  "meaning_fa": "رگبار توهین، سیل ناسزا",
+  "example_en": "The politician faced a storm of abuse online.",
+  "photo": "media/vocab/storm-of-abuse.jpg"
+ },
+ {
+  "word": "sultry",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Hot and humid, often with a still atmosphere.",
+  "meaning_fa": "شرجی، گرم و مرطوب",
+  "example_en": "It was a sultry evening, perfect for a storm.",
+  "photo": "media/vocab/sultry.jpg"
+ },
+ {
+  "word": "sunny disposition",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "A cheerful, optimistic, and happy personality.",
+  "meaning_fa": "روحیه شاد و خوش‌بین",
+  "example_en": "Her sunny disposition made her popular with everyone.",
+  "photo": "media/vocab/sunny-disposition.jpg"
+ },
+ {
+  "word": "sweltering",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Uncomfortably hot and humid.",
+  "meaning_fa": "بسیار گرم و خفه‌کننده",
+  "example_en": "It was a sweltering day in the city.",
+  "photo": "media/vocab/sweltering.jpg"
+ },
+ {
+  "word": "thunderous",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "adjective",
+  "meaning_en": "Very loud, like thunder.",
+  "meaning_fa": "رعدآسا، مهیب",
+  "example_en": "The thunderous storm kept us awake all night.",
+  "photo": "media/vocab/thunderous.jpg"
+ },
+ {
+  "word": "thunderous applause",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "phrase",
+  "meaning_en": "Extremely loud and enthusiastic clapping from an audience.",
+  "meaning_fa": "کف زدن پرشور",
+  "example_en": "The band received thunderous applause after their performance.",
+  "photo": "media/vocab/thunderous-applause.jpg"
+ },
+ {
+  "word": "under a cloud",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Suspected of something bad; in disgrace.",
+  "meaning_fa": "زیر سوءظن، بدنام",
+  "example_en": "After the scandal, the politician remained under a cloud.",
+  "photo": "media/vocab/under-a-cloud.jpg"
+ },
+ {
+  "word": "whirlwind",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun",
+  "meaning_en": "A column of air spinning rapidly, often carrying dust.",
+  "meaning_fa": "گردباد، توفان",
+  "example_en": "A small whirlwind swept across the desert.",
+  "photo": "media/vocab/whirlwind.jpg"
+ },
+ {
+  "word": "whirlwind romance",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "noun phrase",
+  "meaning_en": "A very quick and intense romantic relationship.",
+  "meaning_fa": "عشق طوفانی، رابطه عاشقانه سریع",
+  "example_en": "They had a whirlwind romance and married within months.",
+  "photo": "media/vocab/whirlwind-romance.jpg"
+ },
+ {
+  "word": "winds of change",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Forces that are causing significant changes in a situation.",
+  "meaning_fa": "نسیم تغییر، بادهای تغییر",
+  "example_en": "The winds of change are blowing across the political landscape.",
+  "photo": "media/vocab/winds-of-change.jpg"
+ },
+ {
+  "word": "winds of democracy",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Forces promoting democratic political systems.",
+  "meaning_fa": "بادهای دموکراسی",
+  "example_en": "The region felt the winds of democracy after decades of authoritarian rule.",
+  "photo": "media/vocab/winds-of-democracy.jpg"
+ },
+ {
+  "word": "winds of discontent",
+  "phonetic": null,
+  "levels": [
+   "c1",
+   "c2"
+  ],
+  "pos": "idiom",
+  "meaning_en": "Feelings of dissatisfaction and unrest among people.",
+  "meaning_fa": "بادهای نارضایتی",
+  "example_en": "The government ignored the growing winds of discontent.",
+  "photo": "media/vocab/winds-of-discontent.jpg"
+ }
+]
