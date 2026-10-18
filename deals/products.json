@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "killer-bunnies-khaki-booster",
+      "name_fa": "بازی کارتی Killer Bunnies Khaki Booster",
+      "name_en": "Playroom Entertainment Killer Bunnies Khaki Booster Card Game",
+      "price_cad": 12.49,
+      "regular_cad": 25.98,
+      "discount_pct": 52,
+      "added_fa": "یکشنبه، ۱۸ اکتبر ۲۰۲۶",
+      "image": "img/killer-bunnies-khaki-booster.jpg",
+      "url": "https://www.amazon.ca/dp/B000I0ZQW4?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "بازی کارتی طنز خانوادگی؛ ۶ روز پیاپی روی کمترین قیمت ثبت‌شده"
+    },
+    {
+      "id": "delta-faucet-41618ss-towel-bar",
+      "name_fa": "میله حوله ۴۶ سانتی استیل Delta 41618-SS",
+      "name_en": "Delta Faucet 41618-SS Wall Mounted 18 Inch Towel Bar, Stainless Steel",
+      "price_cad": 88.0,
+      "regular_cad": 155.5,
+      "discount_pct": 43,
+      "added_fa": "یکشنبه، ۱۸ اکتبر ۲۰۲۶",
+      "image": "img/delta-faucet-41618ss-towel-bar.jpg",
+      "url": "https://www.amazon.ca/dp/B00I2HHD8U?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "میله حوله ۴۶ سانتی استیل دلتا؛ دیروز ۱۷۵٫۹۹ بود، نصف شد"
+    },
+    {
+      "id": "cap-barbell-5lb-plates-4pk",
+      "name_fa": "ست ۴ عددی وزنه ۵ پوندی المپیک CAP Barbell",
+      "name_en": "CAP Barbell 5 LB Cast Iron Olympic 2-Inch Grip Weight Plate, Set of 4",
+      "price_cad": 33.65,
+      "regular_cad": 56.99,
+      "discount_pct": 41,
+      "added_fa": "یکشنبه، ۱۸ اکتبر ۲۰۲۶",
+      "image": "img/cap-barbell-5lb-plates-4pk.jpg",
+      "url": "https://www.amazon.ca/dp/B09NLD1NP9?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "۴ وزنه ۵ پوندی چدن با دستگیره المپیک؛ سقوط از ۴۵ دلار به ۳۳٫۶۵ در دو هفته"
+    },
+    {
+      "id": "mighty-patch-invisible-39ct",
+      "name_fa": "پچ ضدجوش مایتی پچ Invisible+ (بسته ۳۹ عددی)",
+      "name_en": "Hero Cosmetics Mighty Patch Invisible+ Hydrocolloid Spot Treatment, 39 count",
+      "price_cad": 15.71,
+      "regular_cad": 25.26,
+      "discount_pct": 38,
+      "added_fa": "یکشنبه، ۱۸ اکتبر ۲۰۲۶",
+      "image": "img/mighty-patch-invisible-39ct.jpg",
+      "url": "https://www.amazon.ca/dp/B07T24XSPL?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پچ‌های هیدروکلوئیدی ضدجوش ۳۹ عددی؛ کمترین قیمت ثبت‌شده از جولای تا امروز"
+    },
+    {
       "id": "yeti-rambler-16oz-travel-bottle",
       "name_fa": "بطری مسافرتی یتی رامبلر ۱۶ اونسی",
       "name_en": "YETI Rambler 16 oz Travel Bottle",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "حلقه‌های فلزی ضدزنگ برای پرده حمام؛ نصب آسان و ظاهر شیک"
-    },
-    {
-      "id": "bedelite-mattress-topper-2026-10-17",
-      "name_fa": "تاپر تشک مموری فوم ۳ اینچی",
-      "name_en": "BEDELITE 3\" Egg Crate Memory Foam Mattress Topper, Full",
-      "price_cad": 64.99,
-      "regular_cad": 129.98,
-      "discount_pct": 50,
-      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
-      "image": "img/bedelite-mattress-topper-2026-10-17.jpg",
-      "url": "https://www.amazon.ca/dp/B0HD6RKRYY?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "مموری فوم شانه‌تخم‌مرغی برای خواب راحت‌تر با جریان هوای بهتر"
-    },
-    {
-      "id": "zwilling-sorrento-espresso-set-2026-10-17",
-      "name_fa": "ست ۲ تکه لیوان اسپرسو دوجداره",
-      "name_en": "ZWILLING Sorrento 2-Piece Double-Wall Espresso Glass Set",
-      "price_cad": 10.35,
-      "regular_cad": 19.99,
-      "discount_pct": 48,
-      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
-      "image": "img/zwilling-sorrento-espresso-set-2026-10-17.jpg",
-      "url": "https://www.amazon.ca/dp/B01BNWIXAW?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "لیوان دوجداره که نوشیدنی را داغ نگه می‌دارد و دست را نمی‌سوزاند"
-    },
-    {
-      "id": "wurese-carpet-spot-cleaner-2026-10-17",
-      "name_fa": "لکه‌بر فرش و مبل پرتابل",
-      "name_en": "WURESE Portable Carpet Spot Cleaner",
-      "price_cad": 75.2,
-      "regular_cad": 159.99,
-      "discount_pct": 53,
-      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
-      "image": "img/wurese-carpet-spot-cleaner-2026-10-17.jpg",
-      "url": "https://www.amazon.ca/dp/B0H71LR82M?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "لکه‌بر پرتابل با مکش قوی برای فرش و مبل؛ ایده‌آل برای صاحبان حیوانات خانگی"
-    },
-    {
-      "id": "self-wringing-mop-57in-2026-10-17",
-      "name_fa": "تی خودآبگیر ۵۷ اینچی میکروفایبر",
-      "name_en": "Self-Wringing Twist Mop, 57-inch Microfiber",
-      "price_cad": 17.49,
-      "regular_cad": 24.99,
-      "discount_pct": 30,
-      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
-      "image": "img/self-wringing-mop-57in-2026-10-17.jpg",
-      "url": "https://www.amazon.ca/dp/B0FMRPMVMF?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "تی میکروفایبر با آبگیر چرخشی؛ بدون خم شدن و خیس شدن دست‌ها"
     }
   ],
-  "updated_fa": "شنبه ۲۵ مهر"
+  "updated_fa": "یکشنبه ۲۶ مهر"
 }
