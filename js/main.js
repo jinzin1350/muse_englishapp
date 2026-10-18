@@ -3601,8 +3601,8 @@ async function createAssignment(btn) {
   btn.textContent = 'Sending…';
   try {
     const ins = await sb.from('assignments').insert({
-      teacher_id: state.user.id,
-      teacher_name: (state.teacher && state.teacher.display_name) || '',
+      teacher_id: tchViewId(),
+      teacher_name: ((state.twViewTeacher || state.teacher) && (state.twViewTeacher || state.teacher).display_name) || '',
       kind: kind, title: title, level: level,
       topic: assignSlug(topic), topic_label: topic,
       question_count: questions.length, questions: questions,
@@ -3739,8 +3739,8 @@ async function createV2Assignment(btn, ctx) {
   btn.textContent = 'Sending…';
   try {
     const ins = await sb.from('assignments').insert({
-      teacher_id: state.user.id,
-      teacher_name: (state.teacher && state.teacher.display_name) || '',
+      teacher_id: tchViewId(),
+      teacher_name: ((state.twViewTeacher || state.teacher) && (state.twViewTeacher || state.teacher).display_name) || '',
       kind: 'homework', title: title,
       level: lvls.join(','),
       topic: topicSlug, topic_label: topicLabel,
@@ -3834,8 +3834,8 @@ async function createExamAssignment(btn, ctx) {
   btn.textContent = 'Sending…';
   try {
     const ins = await sb.from('assignments').insert({
-      teacher_id: state.user.id,
-      teacher_name: (state.teacher && state.teacher.display_name) || '',
+      teacher_id: tchViewId(),
+      teacher_name: ((state.twViewTeacher || state.teacher) && (state.twViewTeacher || state.teacher).display_name) || '',
       kind: 'exam', title: title, level: level,
       topic: 'mixed', topic_label: compLabel,
       question_count: questions.length, questions: questions,
@@ -4173,8 +4173,8 @@ async function savePlanner(btn) {
         btn.textContent = 'Scheduling ' + (++n) + '/' + total + '…';
         const sendAt = wallTimeToUtc(r.dateStr, r.timeStr, tz);
         const ins = await sb.from('assignments').insert({
-          teacher_id: state.user.id,
-          teacher_name: (state.teacher && state.teacher.display_name) || '',
+          teacher_id: tchViewId(),
+          teacher_name: ((state.twViewTeacher || state.teacher) && (state.twViewTeacher || state.teacher).display_name) || '',
           kind: 'homework', title: '📝 ' + r.topic + ' (' + level.toUpperCase() + ')',
           level: level, topic: assignSlug(r.topic), topic_label: r.topic,
           question_count: questions.length, questions: questions,
@@ -12397,7 +12397,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610181857';
+var APP_VERSION = '202610181909';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
