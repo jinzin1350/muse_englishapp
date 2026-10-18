@@ -907,11 +907,14 @@ details.practice p { margin: 0.7rem 0 0; color: var(--herb-dark); font-weight: 5
   background: rgba(24, 18, 12, 0.55);
   display: flex; align-items: center; justify-content: center;
   padding: 1.25rem;
+  overflow-y: auto;
   animation: modal-fade 0.18s ease-out;
 }
 .modal-card {
   background: #fffdf7; color: var(--ink);
   border-radius: 18px; max-width: 400px; width: 100%;
+  max-height: calc(100vh - 2.5rem); max-height: calc(100dvh - 2.5rem);
+  overflow-y: auto; overscroll-behavior: contain;
   padding: 1.6rem 1.4rem 1.4rem;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
   text-align: center;
