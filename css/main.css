@@ -3608,7 +3608,9 @@ body.view-vocab #view { background: #FDF8F1; }
 .vc-start { width: 100%; padding: 0.85rem; margin: 0.2rem 0 0.4rem; }
 .vc-xp-note { text-align: center; color: #9AA1B5; font-size: 0.82rem; margin: 0 0 1.1rem; }
 .vc-words { display: flex; flex-direction: column; gap: 0.6rem; }
-.vc-word { background: #fff; border: 1px solid #F5EDDC; border-radius: 16px; padding: 0.75rem 0.9rem; box-shadow: 0 2px 8px rgba(120, 90, 40, 0.05); }
+.vc-word { background: #fff; border: 1px solid #F5EDDC; border-radius: 16px; padding: 0.75rem 0.9rem; box-shadow: 0 2px 8px rgba(120, 90, 40, 0.05); display: flex; gap: 0.75rem; align-items: flex-start; }
+.vc-word-img { width: 72px; height: 72px; object-fit: cover; border-radius: 12px; flex-shrink: 0; background: #FDF8F1; }
+.vc-word-body { flex: 1; min-width: 0; }
 .vc-word-top { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem; }
 .vc-word-top b { font-size: 1.05rem; color: #232B4D; }
 .vc-phon { color: #9AA1B5; font-size: 0.85rem; }
