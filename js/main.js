@@ -3197,7 +3197,7 @@ function assignSlug(topic) {
 
 /* ---- teacher composer ---- */
 function teacherAssignmentComposer() {
-  if (state.viewTeacher) { twReadOnlyNotice(); return; }
+  if (twReadOnly()) { twReadOnlyNotice(); return; }
   const list = state.teacherStudents || [];
   if (!state.teacher) return;
   if (!list.length) {    showModal('<div class="modal-ico">📝</div><h2>New assignment</h2>' +
@@ -4192,7 +4192,7 @@ function twReadOnlyNotice() {
     '<button class="tw-m-closebtn" data-action="modal-close">OK</button></div>');
 }
 async function deleteTeacherAssignment(i, btn) {
-  if (state.viewTeacher) { twReadOnlyNotice(); return; }
+  if (twReadOnly()) { twReadOnlyNotice(); return; }
   const r = (state.teacherAssignments || [])[i];
   if (!r || r.status === 'scheduled') return;
   const n = (r.student_ids || []).length;
@@ -4224,7 +4224,7 @@ async function deleteTeacherAssignment(i, btn) {
 }
 
 async function cancelScheduledAssignment(i, btn) {
-  if (state.viewTeacher) { twReadOnlyNotice(); return; }
+  if (twReadOnly()) { twReadOnlyNotice(); return; }
   const r = (state.teacherAssignments || [])[i];
   if (!r || r.status !== 'scheduled') return;
   if (!confirm('Cancel this scheduled assignment? It will not be sent.')) return;
@@ -6180,6 +6180,7 @@ function renderGrammarTopic(v, slug) {
       v.innerHTML = '<div class="g-topic"><div class="empty">Guide not found. <a href="#/grammar">Back to all guides</a></div></div>';
       return;
     }
+    if (t.v2) { renderGrammarTopicV2(v, t); return; }
     var prog = grammarProgress()[t.slug];
     var sections = (t.sections || []).map(function (s) {
       return '<section class="g-section"><h2>' + esc(s.h2) + '</h2>' + grammarBlocksHTML(s.blocks) + '</section>';
@@ -6215,6 +6216,216 @@ function renderGrammarTopic(v, slug) {
   });
 }
 
+/* v2 topic renderer: level bar, one section per level, H3 per point, practice per level */
+var G2_LEVEL_LABELS = { a1: 'A1 · Beginner', a2: 'A2 · Elementary', b1: 'B1 · Intermediate',
+  b2: 'B2 · Upper-intermediate', c1: 'C1 · Advanced', c2: 'C2 · Proficiency' };
+var G2_LEVEL_ORDER = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
+
+function renderGrammarTopicV2(v, t) {
+  var levels = t.v2_levels || [];
+  // Level bar
+  var bar = '<div class="g2-levelbar">' + levels.map(function (lv) {
+    return '<a href="#/grammar/' + esc(t.slug) + '" data-g2lv="' + lv + '">' + lv.toUpperCase() + '</a>';
+  }).join('') + '</div>';
+  // Group points by level
+  var byLevel = {};
+  (t.points || []).forEach(function (p) {
+    var lv = (p.level || '').toLowerCase();
+    (byLevel[lv] = byLevel[lv] || []).push(p);
+  });
+  // Group exercises by level
+  var exByLevel = {};
+  ((t.exercises && t.exercises.items) || []).forEach(function (ex) {
+    var lv = (ex.level || '').toLowerCase();
+    (exByLevel[lv] = exByLevel[lv] || []).push(ex);
+  });
+  var sections = levels.map(function (lv) {
+    var pts = (byLevel[lv] || []).map(function (p) {
+      var blocks = grammarBlocksHTML(p.blocks);
+      var examples = (p.examples || []).map(function (e) {
+        return '<li><div class="g-ex-text">' + gMd(e.text) + '</div>' +
+          (e.note ? '<div class="g-ex-note">' + gMd(e.note) + '</div>' : '') + '</li>';
+      }).join('');
+      var mistakes = (p.mistakes || []).map(function (m) {
+        return '<div class="g-mistake"><div class="g-mline bad">❌ ' + gMd(m.wrong) + '</div>' +
+          '<div class="g-mline good">✅ ' + gMd(m.right) + '</div>' +
+          (m.why ? '<div class="g-mwhy">' + gMd(m.why) + '</div>' : '') + '</div>';
+      }).join('');
+      return '<h3 id="' + esc(p.id) + '">' + esc(p.title) + ' <span class="gh-lv">' + lv.toUpperCase() + '</span></h3>' +
+        (p.summary ? '<p class="g2-summary">' + gMd(p.summary) + '</p>' : '') +
+        blocks +
+        (examples ? '<ol class="g-examples">' + examples + '</ol>' : '') +
+        (mistakes ? '<div class="g2-mistakes">' + mistakes + '</div>' : '');
+    }).join('');
+    var exs = exByLevel[lv] || [];
+    var practice = exs.length ? '<h3>Practice: ' + lv.toUpperCase() + '</h3>' +
+      '<p class="g2-practice-note">' + exs.length + ' exercises</p>' +
+      '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button>' : '';
+    return '<section class="g-section" id="g2-' + lv + '"><h2>' + (G2_LEVEL_LABELS[lv] || lv.toUpperCase()) + '</h2>' +
+      pts + practice + '</section>';
+  }).join('');
+  var intro = (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('');
+  v.innerHTML = '<div class="g-topic g2-topic">' +
+    '<a class="g-back" href="#/grammar">‹ All guides</a>' +
+    '<div class="g-hero"><h1>' + esc(t.h1) + '</h1></div>' +
+    bar + '<div class="g-intro">' + intro + '</div>' + sections + '</div>';
+  // Level bar scroll
+  Array.prototype.forEach.call(v.querySelectorAll('[data-g2lv]'), function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var el = document.getElementById('g2-' + a.getAttribute('data-g2lv'));
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+  // Practice buttons
+  Array.prototype.forEach.call(v.querySelectorAll('[data-g2quiz]'), function (btn) {
+    btn.addEventListener('click', function () {
+      startGrammarQuizV2(t, btn.getAttribute('data-g2quiz'));
+    });
+  });
+  window.scrollTo(0, 0);
+}
+
+/* v2 quiz: per-level exercises, supports mcq / gap / error types */
+function startGrammarQuizV2(topic, level) {
+  var items = ((topic.exercises && topic.exercises.items) || []).filter(function (ex) {
+    return (ex.level || '').toLowerCase() === level;
+  });
+  if (!items.length) return;
+  var prog = grammarProgress();
+  var rec = prog[topic.slug] || {};
+  rec.attempts = (rec.attempts || 0) + 1;
+  rec.h1 = topic.h1; rec.lastTs = Date.now();
+  prog._last = topic.slug; prog[topic.slug] = rec;
+  setGrammarProgress(prog);
+  state.gquiz = {
+    topic: topic, idx: 0, correct: 0, answered: false, picked: -1,
+    firstRun: !rec.claimed, v2: true, v2level: level,
+    items: shuffleArr(items)
+  };
+  document.body.classList.add('duo-playing');
+  window.scrollTo(0, 0);
+  renderGrammarQuizV2();
+}
+/* v2 quiz renderer: supports mcq / gap / error types */
+function renderGrammarQuizV2() {
+  var q = state.gquiz; if (!q || !q.v2) return;
+  var v = document.getElementById('view');
+  var it = q.items[q.idx];
+  var n = q.items.length;
+  var letters = ['A', 'B', 'C', 'D'];
+  
+  var inputHTML = '';
+  if (it.type === 'mcq') {
+    inputHTML = '<div class="gt-opts">' + it.options.map(function (op, i) {
+      var cls = 'gt-opt';
+      if (q.answered) {
+        if (i === it.answer) cls += ' ok';
+        else if (i === q.picked) cls += ' no';
+        else cls += ' dim';
+      }
+      return '<button class="' + cls + '"' + (q.answered ? ' disabled' : '') + ' data-gopt="' + i + '">' +
+        '<span class="gt-opt-letter">' + letters[i] + '</span>' +
+        '<span class="gt-opt-text">' + esc(op) + '</span></button>';
+    }).join('') + '</div>';
+  } else if (it.type === 'gap') {
+    inputHTML = '<div class="gt-gap-wrap"><input type="text" id="g2-gap-input" class="gt-gap-input" ' +
+      'placeholder="Type your answer" ' + (q.answered ? 'disabled' : '') + ' value="' + esc(q.typed || '') + '">' +
+      (q.answered ? '' : '<button class="gt-btn gt-btn-green" id="g2-gap-check">CHECK</button>') + '</div>';
+  } else if (it.type === 'error') {
+    inputHTML = '<div class="gt-opts gt-error-segs">' + (it.segments || []).map(function (seg, i) {
+      var cls = 'gt-opt';
+      if (q.answered) {
+        if (i === it.answer) cls += ' ok';
+        else if (i === q.picked) cls += ' no';
+        else cls += ' dim';
+      } else if (i === q.picked) cls += ' picked';
+      return '<button class="' + cls + '"' + (q.answered ? ' disabled' : '') + ' data-gseg="' + i + '">' +
+        '<span class="gt-opt-text">' + esc(seg) + '</span></button>';
+    }).join('') + '</div>';
+  }
+  
+  var sheet = '';
+  if (q.answered) {
+    var good = q.correct_flag;
+    var correctText = '';
+    if (it.type === 'mcq' || it.type === 'error') {
+      correctText = it.type === 'mcq' ? esc(it.options[it.answer]) : esc(it.correction || '');
+    } else {
+      correctText = esc((it.accept || []).join(' / '));
+    }
+    sheet = '<div class="gt-sheet ' + (good ? 'good' : 'bad') + '"><div class="gt-sheet-inner">' +
+      '<div class="gt-sheet-msg">' + (good ? '🎉 Correct!' : '💡 Correct answer: <b>' + correctText + '</b>') + '</div>' +
+      (it.explanation ? '<div class="gt-sheet-explain">' + gMd(it.explanation) + '</div>' : '') +
+      '<button class="gt-btn ' + (good ? 'gt-btn-green' : 'gt-btn-red') + ' gt-btn-block" id="g-next-btn">' +
+      (q.idx + 1 >= n ? 'SEE RESULTS' : 'CONTINUE') + '</button>' +
+      '</div></div>';
+  }
+  
+  var barPct = Math.round((q.idx + (q.answered ? 1 : 0)) / n * 100);
+  v.innerHTML = '<div class="g-quiz gt-wrap">' +
+    '<div class="gt-top"><button class="gt-x" id="g-quiz-quit" aria-label="Back to guide">✕</button>' +
+    '<div class="gt-progress"><span style="width:' + barPct + '%"></span></div>' +
+    '<div class="gt-qcount">' + (q.idx + 1) + '/' + n + '</div></div>' +
+    (q.firstRun ? '' : '<div class="gt-mode">Practice mode — no points</div>') +
+    '<div class="gt-q">' + esc(it.prompt).replace(/___/g, '…') + '</div>' +
+    inputHTML + sheet + '</div>';
+  
+  // Wire up events
+  Array.prototype.forEach.call(v.querySelectorAll('[data-gopt]'), function (btn) {
+    btn.addEventListener('click', function () { answerGrammarQuizV2(parseInt(btn.getAttribute('data-gopt'), 10)); });
+  });
+  Array.prototype.forEach.call(v.querySelectorAll('[data-gseg]'), function (btn) {
+    btn.addEventListener('click', function () { answerGrammarQuizV2(parseInt(btn.getAttribute('data-gseg'), 10)); });
+  });
+  var gapCheck = document.getElementById('g2-gap-check');
+  if (gapCheck) {
+    gapCheck.addEventListener('click', function () {
+      var input = document.getElementById('g2-gap-input');
+      answerGrammarQuizV2(input.value);
+    });
+  }
+  var next = document.getElementById('g-next-btn');
+  if (next) next.addEventListener('click', nextGrammarQuiz);
+  document.getElementById('g-quiz-quit').addEventListener('click', function () {
+    if (!quizGuardOk()) return;
+    state.gquiz = null;
+    document.body.classList.remove('duo-playing');
+    go('grammar', q.topic.slug);
+  });
+  window.scrollTo(0, 0);
+}
+
+function answerGrammarQuizV2(val) {
+  var q = state.gquiz;
+  if (!q || !q.v2 || q.answered) return;
+  q.answered = true;
+  var it = q.items[q.idx];
+  var correct = false;
+  
+  if (it.type === 'mcq' || it.type === 'error') {
+    q.picked = val;
+    correct = (val === it.answer);
+  } else if (it.type === 'gap') {
+    q.typed = val;
+    var norm = function(s) { return String(s).trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+    var vnorm = norm(val);
+    correct = (it.accept || []).some(function(a) { return norm(a) === vnorm; });
+  }
+  
+  q.correct_flag = correct;
+  if (correct) {
+    q.correct++;
+    if (q.firstRun) awardPoints('grammar_exercise', 5, 'gex-' + it.id);
+  } else {
+    saveMistake({ date: todayStr(), level: q.v2level, kind: 'grammar', topic: q.topic.slug,
+      question: it.prompt, options: it.options || [], answer: it.answer, picked: val });
+  }
+  renderGrammarQuizV2();
+  window.scrollTo(0, 0);
+}
+
+
 /* ---------------- grammar quiz ---------------- */
 
 function shuffleArr(a) {
@@ -6245,6 +6456,7 @@ function startGrammarQuiz(topic) {
 
 function renderGrammarQuiz() {
   var q = state.gquiz; if (!q) return;
+  if (q.v2) { renderGrammarQuizV2(); return; }
   var v = document.getElementById('view');
   var it = q.items[q.idx];
   var n = q.items.length;
@@ -6349,7 +6561,10 @@ function finishGrammarQuiz() {
     '<div class="gt-end-btns"><button class="gt-btn gt-btn-green gt-btn-big" id="g-retry-btn">TRY AGAIN</button>' +
     '<a class="gt-btn gt-btn-ghost" href="#/grammar">All guides</a></div>' +
     '</div></div>';
-  document.getElementById('g-retry-btn').addEventListener('click', function () { startGrammarQuiz(topic); });
+  document.getElementById('g-retry-btn').addEventListener('click', function () {
+    if (q.v2) startGrammarQuizV2(topic, q.v2level);
+    else startGrammarQuiz(topic);
+  });
   window.scrollTo(0, 0);
 }
 
@@ -11682,7 +11897,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610181437';
+var APP_VERSION = '202610181845';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -12050,6 +12265,8 @@ async function twGetTeacherList() {
 function twEffTeacher() { return state.twViewTeacher || state.teacher; }
 /* True when the admin is looking at someone else's dashboard. */
 function twReadOnly() {
+  /* Admins get full write access when viewing as a teacher. */
+  if (state.user && state.user.isAdmin) return false;
   var v = state.twViewTeacher;
   var me = state.teacher;
   return !!(v && (!me || v.user_id !== me.user_id));
@@ -12093,6 +12310,11 @@ function twPaintViewBanner() {
     host.innerHTML = '<div class="tw-viewbanner">👁 You’re viewing <b>' + esc(t.display_name) +
       '’s dashboard</b> — read-only. <button class="tw-btn tw-btn-sm tw-btn-white" id="tw-backmine">Back to my dashboard</button></div>';
     document.getElementById('tw-backmine').addEventListener('click', function () { twSetViewTeacher(null); });
+  } else if (state.twViewTeacher && state.user && state.user.isAdmin) {
+    var t2 = state.twViewTeacher;
+    host.innerHTML = '<div class="tw-viewbanner" style="background:#E8F5E9">✏️ You’re acting as <b>' + esc(t2.display_name) +
+      '</b> (admin). <button class="tw-btn tw-btn-sm tw-btn-white" id="tw-backmine2">Back to my dashboard</button></div>';
+    document.getElementById('tw-backmine2').addEventListener('click', function () { twSetViewTeacher(null); });
   } else host.innerHTML = '';
 }
 

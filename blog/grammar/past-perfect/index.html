@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Past Perfect: Rules, Examples &amp; Exercises | Muse English</title>
+<meta name="description" content="Learn the past perfect from B1 to C1: form, order of events, by the time, past vs present perfect, I had hoped to, reported speech, with exercises.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/past-perfect/">
+<meta property="og:type" content="article"><meta property="og:title" content="Past Perfect: Rules, Examples &amp; Exercises | Muse English">
+<meta property="og:description" content="Learn the past perfect from B1 to C1: form, order of events, by the time, past vs present perfect, I had hoped to, reported speech, with exercises."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/past-perfect/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Past Perfect (had done)", "description": "Learn the past perfect from B1 to C1: form, order of events, by the time, past vs present perfect, I had hoped to, reported speech, with exercises.", "url": "https://museenglishapp.com/blog/grammar/past-perfect/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Past Perfect (had done)", "item": "https://museenglishapp.com/blog/grammar/past-perfect/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}}</style>
+<script>
+function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Past Perfect (had done)</div>
+<h1>Past Perfect (had done)</h1>
+<div class="level-bar"><a href='#b1'>B1</a> · <a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p>We use the <strong>past perfect</strong> (<em>had</em> + past participle) for something that happened <strong>before</strong> another moment in the past: <em>When I arrived, the film <strong>had</strong> already <strong>started</strong>.</em></p><p>It takes you one step further back than the past simple. If you need to review the past simple first, see [Past Simple](/blog/grammar/past-simple/).</p>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='ppf-form-use'>Form and main use: something earlier in the past <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th></th><th>Form</th><th>Example</th></tr><tr><td>Positive</td><td><strong>had</strong> + past participle</td><td>She <strong>had left</strong>. (She&#x27;d left.)</td></tr><tr><td>Negative</td><td><strong>hadn&#x27;t</strong> + past participle</td><td>I <strong>hadn&#x27;t eaten</strong>.</td></tr><tr><td>Question</td><td><strong>Had</strong> + subject + past participle?</td><td><strong>Had</strong> you <strong>met</strong> him before?</td></tr><tr><td>Short answers</td><td>Yes, I <strong>had</strong>. / No, I <strong>hadn&#x27;t</strong>.</td><td>Had she called? – No, she hadn&#x27;t.</td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I couldn&#x27;t get in because I <strong>had lost</strong> my keys. <span class='exnote'>(earlier past)</span></li>
+<li>She was tired because she <strong>had worked</strong> all night. <span class='exnote'>(reason in the earlier past)</span></li>
+<li>I <strong>hadn&#x27;t seen</strong> the film, so I didn&#x27;t know the ending. <span class='exnote'>(negative)</span></li>
+<li><strong>Had</strong> you <strong>been</strong> to Asia before that trip? <span class='exnote'>(question)</span></li>
+<li>The streets were wet. It<strong>&#x27;d rained</strong> in the night. <span class='exnote'>(&#x27;d = had)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I had went to bed early. → ✅ I had gone to bed early. <span class='why'>(Use the past participle: gone.)</span></li>
+<li>❌ Had you ate before you came? → ✅ Had you eaten before you came? <span class='why'>(Use the past participle: eaten.)</span></li>
+<li>❌ She was tired because she had work all day. → ✅ She was tired because she had worked all day. <span class='why'>(had + past participle (worked).)</span></li>
+</ul></div>
+<h3 id='ppf-vs-past-simple'>Past simple or past perfect? The order of events <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<ul><li><em>When I arrived, the film <strong>started</strong>.</em> = I arrived, then the film started.</li><li><em>When I arrived, the film <strong>had started</strong>.</em> = The film started first, then I arrived.</li></ul>
+<p></p>
+<ul class='examples'>
+<li>When we got to the station, the train <strong>had left</strong>. <span class='exnote'>(it left first)</span></li>
+<li>When we got to the station, the train <strong>left</strong>. <span class='exnote'>(we arrived, then it left)</span></li>
+<li>When I got home, someone <strong>had eaten</strong> my cake. <span class='exnote'>(earlier)</span></li>
+<li>I <strong>got up</strong>, <strong>made</strong> breakfast and <strong>went</strong> for a run. <span class='exnote'>(in order: past simple)</span></li>
+<li>I didn&#x27;t know the way because I <strong>hadn&#x27;t been</strong> there before. <span class='exnote'>(earlier experience)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I had woken up, had had breakfast and had left. → ✅ I woke up, had breakfast and left. <span class='why'>(Events in order: past simple.)</span></li>
+<li>❌ When I arrived, the film has started. → ✅ When I arrived, the film had started. <span class='why'>(Earlier than a past moment: past perfect.)</span></li>
+</ul></div>
+<h3 id='ppf-time-words'>By the time, already, just, never … before <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Words</th><th>Example</th></tr><tr><td><strong>by the time</strong> + past simple</td><td><em>By the time we arrived, the concert <strong>had finished</strong>.</em></td></tr><tr><td><strong>already</strong></td><td><em>When I called, she <strong>had already left</strong>.</em></td></tr><tr><td><strong>just</strong></td><td><em>He <strong>had just sat</strong> down when the phone rang.</em></td></tr><tr><td><strong>never … before</strong></td><td><em>When she moved to Canada, she <strong>had never seen</strong> snow.</em></td></tr><tr><td><strong>ever</strong></td><td><strong><em>Had</strong> you <strong>ever</strong> tried sushi before that night?</em></td></tr></table></div>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>By the time we got there, everyone <strong>had gone</strong> home. <span class='exnote'>(by the time)</span></li>
+<li>She <strong>had already ordered</strong> when I arrived. <span class='exnote'>(already)</span></li>
+<li>I<strong>&#x27;d just got</strong> into bed when the alarm went off. <span class='exnote'>(just)</span></li>
+<li>He was nervous because he <strong>had never flown</strong> before. <span class='exnote'>(never … before)</span></li>
+<li>By the time I finished my degree, my parents <strong>had moved</strong> to Canada. <span class='exnote'>(by the time)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ By the time we got there, the shop closed. → ✅ By the time we got there, the shop had closed. <span class='why'>(By the time + earlier event: past perfect.)</span></li>
+<li>❌ She had left already when I called. → ✅ She had already left when I called. <span class='why'>(Already goes between had and the participle.)</span></li>
+</ul></div>
+<h3 id='ppf-vs-present-perfect'>Present perfect or past perfect? <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Present perfect (before now)</th><th>Past perfect (before then)</th></tr><tr><td><em>I&#x27;m not hungry. I<strong>&#x27;ve</strong> just <strong>eaten</strong>.</em></td><td><em>I wasn&#x27;t hungry. I<strong>&#x27;d</strong> just <strong>eaten</strong>.</em></td></tr><tr><td><em>I<strong>&#x27;ve</strong> never <strong>seen</strong> snow.</em></td><td><em>Until I moved to Canada, I<strong>&#x27;d</strong> never <strong>seen</strong> snow.</em></td></tr><tr><td><em>She looks great. She<strong>&#x27;s lost</strong> weight.</em></td><td><em>She looked great. She<strong>&#x27;d lost</strong> weight.</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>I can&#x27;t come out. I <strong>haven&#x27;t finished</strong> my homework. <span class='exnote'>(now)</span></li>
+<li>I couldn&#x27;t go out because I <strong>hadn&#x27;t finished</strong> my homework. <span class='exnote'>(then)</span></li>
+<li>Last summer I visited Rome. I<strong>&#x27;d</strong> never <strong>been</strong> there before. <span class='exnote'>(before then)</span></li>
+<li>When I met him, he <strong>had been</strong> in the army for ten years. <span class='exnote'>(up to then)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Before I came to Canada, I have never seen snow. → ✅ Before I came to Canada, I had never seen snow. <span class='why'>(Before a past moment: past perfect.)</span></li>
+<li>❌ I&#x27;m not hungry. I&#x27;d already eaten. → ✅ I&#x27;m not hungry. I&#x27;ve already eaten. <span class='why'>(Connected to now: present perfect.)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-ppf-form-use-s01">
+<div class="exq">1. When we got to the cinema, the film &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; already started.</div>
+<label><input type='radio' name='ppf-form-use-s01' value='0'> has</label><label><input type='radio' name='ppf-form-use-s01' value='1'> was</label><label><input type='radio' name='ppf-form-use-s01' value='2'> have</label><label><input type='radio' name='ppf-form-use-s01' value='3'> had</label>
+<div class="exexpl" style="display:none">Earlier than <em>got</em>: past perfect, <em>had started</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-form-use-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-form-use-s02">
+<div class="exq">2. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; you met Sarah before the party?</div>
+<label><input type='radio' name='ppf-form-use-s02' value='0'> Have</label><label><input type='radio' name='ppf-form-use-s02' value='1'> Had</label><label><input type='radio' name='ppf-form-use-s02' value='2'> Was</label><label><input type='radio' name='ppf-form-use-s02' value='3'> Were</label>
+<div class="exexpl" style="display:none">Past perfect question: <em>Had you met…?</em></div>
+<button class="excheck" onclick="checkEx('ppf-form-use-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-form-use-s03">
+<div class="exq">3. I had &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to bed early, so I didn&#x27;t hear the phone.</div>
+<label><input type='radio' name='ppf-form-use-s03' value='0'> went</label><label><input type='radio' name='ppf-form-use-s03' value='1'> go</label><label><input type='radio' name='ppf-form-use-s03' value='2'> gone</label><label><input type='radio' name='ppf-form-use-s03' value='3'> going</label>
+<div class="exexpl" style="display:none">had + past participle: <em>gone</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-form-use-s03', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-vs-past-simple-s01">
+<div class="exq">4. Choose the sentence that means the film started BEFORE I arrived.</div>
+<label><input type='radio' name='ppf-vs-past-simple-s01' value='0'> When I arrived, the film had started.</label><label><input type='radio' name='ppf-vs-past-simple-s01' value='1'> When I arrived, the film started.</label><label><input type='radio' name='ppf-vs-past-simple-s01' value='2'> When I arrived, the film was starting.</label><label><input type='radio' name='ppf-vs-past-simple-s01' value='3'> When I arrived, the film starts.</label>
+<div class="exexpl" style="display:none"><em>Had started</em> = it started first.</div>
+<button class="excheck" onclick="checkEx('ppf-vs-past-simple-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-vs-past-simple-s02">
+<div class="exq">5. I got up, &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; a shower and left the house.</div>
+<label><input type='radio' name='ppf-vs-past-simple-s02' value='0'> had had</label><label><input type='radio' name='ppf-vs-past-simple-s02' value='1'> have had</label><label><input type='radio' name='ppf-vs-past-simple-s02' value='2'> had</label><label><input type='radio' name='ppf-vs-past-simple-s02' value='3'> was having</label>
+<div class="exexpl" style="display:none">Events in order: past simple, <em>had a shower</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-vs-past-simple-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-vs-past-simple-s03">
+<div class="exq">6. I couldn&#x27;t pay because I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; my wallet at home.</div>
+<label><input type='radio' name='ppf-vs-past-simple-s03' value='0'> have left</label><label><input type='radio' name='ppf-vs-past-simple-s03' value='1'> had left</label><label><input type='radio' name='ppf-vs-past-simple-s03' value='2'> was leaving</label><label><input type='radio' name='ppf-vs-past-simple-s03' value='3'> leave</label>
+<div class="exexpl" style="display:none">Earlier than <em>couldn&#x27;t pay</em>: <em>had left</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-vs-past-simple-s03', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-time-words-s01">
+<div class="exq">7. By the time we arrived, the guests &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='ppf-time-words-s01' value='0'> had gone</label><label><input type='radio' name='ppf-time-words-s01' value='1'> have gone</label><label><input type='radio' name='ppf-time-words-s01' value='2'> has gone</label><label><input type='radio' name='ppf-time-words-s01' value='3'> had went</label>
+<div class="exexpl" style="display:none">By the time + earlier event: <em>had gone</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-time-words-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-time-words-s02">
+<div class="exq">8. She &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; never seen snow before she moved to Canada.</div>
+<label><input type='radio' name='ppf-time-words-s02' value='0'> has</label><label><input type='radio' name='ppf-time-words-s02' value='1'> have</label><label><input type='radio' name='ppf-time-words-s02' value='2'> was</label><label><input type='radio' name='ppf-time-words-s02' value='3'> had</label>
+<div class="exexpl" style="display:none">never … before a past moment: <em>had never seen</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-time-words-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-time-words-s03">
+<div class="exq">9. He &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; just finished dinner when the phone rang.</div>
+<label><input type='radio' name='ppf-time-words-s03' value='0'> had</label><label><input type='radio' name='ppf-time-words-s03' value='1'> has</label><label><input type='radio' name='ppf-time-words-s03' value='2'> was</label><label><input type='radio' name='ppf-time-words-s03' value='3'> did</label>
+<div class="exexpl" style="display:none"><em>Had just finished</em> = a moment before the phone rang.</div>
+<button class="excheck" onclick="checkEx('ppf-time-words-s03', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-vs-present-perfect-s01">
+<div class="exq">10. I&#x27;m not hungry. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; lunch.</div>
+<label><input type='radio' name='ppf-vs-present-perfect-s01' value='0'> &#x27;d just had</label><label><input type='radio' name='ppf-vs-present-perfect-s01' value='1'> just had had</label><label><input type='radio' name='ppf-vs-present-perfect-s01' value='2'> &#x27;ve just had</label><label><input type='radio' name='ppf-vs-present-perfect-s01' value='3'> &#x27;d just have</label>
+<div class="exexpl" style="display:none">Connected to now: present perfect, <em>I&#x27;ve just had</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-vs-present-perfect-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-vs-present-perfect-s02">
+<div class="exq">11. I wasn&#x27;t hungry because I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; lunch.</div>
+<label><input type='radio' name='ppf-vs-present-perfect-s02' value='0'> &#x27;ve already had</label><label><input type='radio' name='ppf-vs-present-perfect-s02' value='1'> already have</label><label><input type='radio' name='ppf-vs-present-perfect-s02' value='2'> &#x27;ve already have</label><label><input type='radio' name='ppf-vs-present-perfect-s02' value='3'> &#x27;d already had</label>
+<div class="exexpl" style="display:none">Before a past moment: past perfect, <em>I&#x27;d already had</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-vs-present-perfect-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-vs-present-perfect-s03">
+<div class="exq">12. Which sentence is correct?</div>
+<label><input type='radio' name='ppf-vs-present-perfect-s03' value='0'> Before she moved here, she has never lived abroad.</label><label><input type='radio' name='ppf-vs-present-perfect-s03' value='1'> Before she moved here, she had never lived abroad.</label><label><input type='radio' name='ppf-vs-present-perfect-s03' value='2'> Before she moved here, she never has lived abroad.</label><label><input type='radio' name='ppf-vs-present-perfect-s03' value='3'> Before she moved here, she had never live abroad.</label>
+<div class="exexpl" style="display:none">Before a past moment: <em>had never lived</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-vs-present-perfect-s03', 1)">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='ppf-first-time'>It was the first time I&#x27;d…; states up to a past moment <span class='lvl-badge'>B2</span></h3>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>It was the first time she<strong>&#x27;d been</strong> on a plane. <span class='exnote'>(first time)</span></li>
+<li>That was the third time he<strong>&#x27;d lost</strong> his phone that month. <span class='exnote'>(third time)</span></li>
+<li>It was the most beautiful place I<strong>&#x27;d</strong> ever <strong>seen</strong>. <span class='exnote'>(superlative)</span></li>
+<li>We <strong>had known</strong> each other for years before we started working together. <span class='exnote'>(state up to then)</span></li>
+<li>I<strong>&#x27;d had</strong> the car for only a month when it broke down. <span class='exnote'>(state: had had)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ It was the first time I&#x27;ve been abroad. → ✅ It was the first time I&#x27;d been abroad. <span class='why'>(It was the first time + past perfect.)</span></li>
+<li>❌ We had been knowing each other for ten years. → ✅ We had known each other for ten years. <span class='why'>(Know is a state: past perfect simple.)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-ppf-first-time-s01">
+<div class="exq">13. It was the first time I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; a horse.</div>
+<label><input type='radio' name='ppf-first-time-s01' value='0'> &#x27;ve ridden</label><label><input type='radio' name='ppf-first-time-s01' value='1'> &#x27;m riding</label><label><input type='radio' name='ppf-first-time-s01' value='2'> &#x27;d rode</label><label><input type='radio' name='ppf-first-time-s01' value='3'> &#x27;d ridden</label>
+<div class="exexpl" style="display:none">It was the first time + past perfect: <em>I&#x27;d ridden</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-first-time-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-first-time-s02">
+<div class="exq">14. It was the best meal we &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; in years.</div>
+<label><input type='radio' name='ppf-first-time-s02' value='0'> &#x27;d had</label><label><input type='radio' name='ppf-first-time-s02' value='1'> &#x27;ve had</label><label><input type='radio' name='ppf-first-time-s02' value='2'> are having</label><label><input type='radio' name='ppf-first-time-s02' value='3'> has had</label>
+<div class="exexpl" style="display:none">A past superlative + past perfect: <em>we&#x27;d had</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-first-time-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-first-time-s03">
+<div class="exq">15. They &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; each other for ten years when they got married.</div>
+<label><input type='radio' name='ppf-first-time-s03' value='0'> &#x27;d been knowing</label><label><input type='radio' name='ppf-first-time-s03' value='1'> &#x27;d known</label><label><input type='radio' name='ppf-first-time-s03' value='2'> were knowing</label><label><input type='radio' name='ppf-first-time-s03' value='3'> know</label>
+<div class="exexpl" style="display:none"><em>Know</em> is a state: past perfect simple, <em>had known</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-first-time-s03', 1)">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='ppf-optional'>When the past perfect is optional <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>After the guests <strong>had gone</strong> / <strong>went</strong>, we cleaned up. <span class='exnote'>(both fine)</span></li>
+<li>As soon as I<strong>&#x27;d sent</strong> / <strong>sent</strong> the message, I regretted it. <span class='exnote'>(both fine)</span></li>
+<li>She asked about the salary before she <strong>accepted</strong> the job. <span class='exnote'>(before + past simple)</span></li>
+<li>We<strong>&#x27;d lived</strong> in that flat for years. We <strong>loved</strong> it, but it was too small. <span class='exnote'>(continue in past simple)</span></li>
+<li>When the police arrived, the thief <strong>had escaped</strong>. <span class='exnote'>(needed: changes the order)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ After we have eaten, we went for a walk. → ✅ After we had eaten (or After we ate), we went for a walk. <span class='why'>(A past sequence: past perfect or past simple, not present perfect.)</span></li>
+</ul></div>
+<h3 id='ppf-reporting'>Past perfect in reported speech and thoughts <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>&#x27;I&#x27;ve finished.&#x27; → She said she <strong>had finished</strong>. <span class='exnote'>(present perfect → past perfect)</span></li>
+<li>&#x27;We haven&#x27;t decided yet.&#x27; → They said they <strong>hadn&#x27;t decided</strong> yet. <span class='exnote'>(negative)</span></li>
+<li>&#x27;I lost my phone.&#x27; → He said he <strong>had lost</strong> / <strong>lost</strong> his phone. <span class='exnote'>(both possible)</span></li>
+<li>I realised I<strong>&#x27;d left</strong> my umbrella on the bus. <span class='exnote'>(a thought)</span></li>
+<li>Police said twenty people <strong>had been</strong> / <strong>were</strong> injured. <span class='exnote'>(both possible)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I was sure that I have met him before. → ✅ I was sure that I had met him before. <span class='why'>(Reported in the past: present perfect → past perfect.)</span></li>
+<li>❌ She said she hasn&#x27;t finish yet. → ✅ She said she hadn&#x27;t finished yet. <span class='why'>(Past perfect, with the past participle finished.)</span></li>
+</ul></div>
+<h3 id='ppf-unfulfilled'>Plans that didn&#x27;t happen: I had hoped to… <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>We<strong>&#x27;d hoped</strong> to visit the museum, but it was closed. <span class='exnote'>(didn&#x27;t happen)</span></li>
+<li>I<strong>&#x27;d meant</strong> to call you, but I forgot. <span class='exnote'>(meant to)</span></li>
+<li>She <strong>had intended</strong> to stay a week, but she left after two days. <span class='exnote'>(intended to)</span></li>
+<li>They <strong>had planned</strong> to retire at 60, but they&#x27;re still working. <span class='exnote'>(planned to)</span></li>
+<li>I <strong>was hoping</strong> to see you at the party. <span class='exnote'>(similar meaning)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I had hope to finish today, but I couldn&#x27;t. → ✅ I had hoped to finish today, but I couldn&#x27;t. <span class='why'>(had + past participle: hoped.)</span></li>
+<li>❌ We had wanted visit you. → ✅ We had wanted to visit you. <span class='why'>(had wanted + to-infinitive.)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-ppf-optional-s01">
+<div class="exq">16. In which sentence can the past perfect change to the past simple without changing the meaning?</div>
+<label><input type='radio' name='ppf-optional-s01' value='0'> When I arrived, the film had started.</label><label><input type='radio' name='ppf-optional-s01' value='1'> When I got home, my wife had cooked dinner.</label><label><input type='radio' name='ppf-optional-s01' value='2'> After she had finished work, she went home.</label><label><input type='radio' name='ppf-optional-s01' value='3'> When the police arrived, the thief had escaped.</label>
+<div class="exexpl" style="display:none"><em>After</em> already shows the order, so <em>after she finished</em> means the same.</div>
+<button class="excheck" onclick="checkEx('ppf-optional-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-optional-s02">
+<div class="exq">17. <em>I sold my old guitar. I&#x27;d had it since I was fifteen, and I played it every day.</em> Is <em>played</em> correct here?</div>
+<label><input type='radio' name='ppf-optional-s02' value='0'> No: every verb must be in the past perfect.</label><label><input type='radio' name='ppf-optional-s02' value='1'> Yes: once the earlier time is set, the past simple is fine.</label><label><input type='radio' name='ppf-optional-s02' value='2'> Only if the verb is irregular.</label><label><input type='radio' name='ppf-optional-s02' value='3'> Only in questions.</label>
+<div class="exexpl" style="display:none">After the past perfect sets the earlier time, you can continue in the past simple.</div>
+<button class="excheck" onclick="checkEx('ppf-optional-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-optional-s03">
+<div class="exq">18. Which sentence has the same meaning as <em>As soon as she had sent the email, she noticed the mistake</em>?</div>
+<label><input type='radio' name='ppf-optional-s03' value='0'> As soon as she sent the email, she noticed the mistake.</label><label><input type='radio' name='ppf-optional-s03' value='1'> She noticed the mistake before she sent the email.</label><label><input type='radio' name='ppf-optional-s03' value='2'> She sent the email because she noticed the mistake.</label><label><input type='radio' name='ppf-optional-s03' value='3'> She never sent the email.</label>
+<div class="exexpl" style="display:none"><em>As soon as</em> already shows the order: both forms mean the same.</div>
+<button class="excheck" onclick="checkEx('ppf-optional-s03', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-reporting-s01">
+<div class="exq">19. &#x27;I&#x27;ve met him before.&#x27; → I was sure that I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; him before.</div>
+<label><input type='radio' name='ppf-reporting-s01' value='0'> met</label><label><input type='radio' name='ppf-reporting-s01' value='1'> have met</label><label><input type='radio' name='ppf-reporting-s01' value='2'> meet</label><label><input type='radio' name='ppf-reporting-s01' value='3'> had met</label>
+<div class="exexpl" style="display:none">Present perfect reported in the past → past perfect, <em>had met</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-reporting-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-reporting-s02">
+<div class="exq">20. &#x27;We haven&#x27;t decided yet.&#x27; → They said they &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; yet.</div>
+<label><input type='radio' name='ppf-reporting-s02' value='0'> didn&#x27;t decided</label><label><input type='radio' name='ppf-reporting-s02' value='1'> don&#x27;t decided</label><label><input type='radio' name='ppf-reporting-s02' value='2'> hadn&#x27;t decided</label><label><input type='radio' name='ppf-reporting-s02' value='3'> hasn&#x27;t decided</label>
+<div class="exexpl" style="display:none">Present perfect → past perfect: <em>hadn&#x27;t decided</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-reporting-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-reporting-s03">
+<div class="exq">21. &#x27;I lost my keys.&#x27; → She said she … her keys. Which verb forms are possible?</div>
+<label><input type='radio' name='ppf-reporting-s03' value='0'> Only had lost is possible.</label><label><input type='radio' name='ppf-reporting-s03' value='1'> Only lost is possible.</label><label><input type='radio' name='ppf-reporting-s03' value='2'> Only has lost is possible.</label><label><input type='radio' name='ppf-reporting-s03' value='3'> Both lost and had lost are possible.</label>
+<div class="exexpl" style="display:none">A reported past simple can stay or become past perfect.</div>
+<button class="excheck" onclick="checkEx('ppf-reporting-s03', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-unfulfilled-s01">
+<div class="exq">22. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to finish the report by Friday, but my computer broke.</div>
+<label><input type='radio' name='ppf-unfulfilled-s01' value='0'> have hoped</label><label><input type='radio' name='ppf-unfulfilled-s01' value='1'> hope</label><label><input type='radio' name='ppf-unfulfilled-s01' value='2'> had hoped</label><label><input type='radio' name='ppf-unfulfilled-s01' value='3'> am hoping</label>
+<div class="exexpl" style="display:none">A hope that didn&#x27;t happen: <em>had hoped</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-unfulfilled-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-unfulfilled-s02">
+<div class="exq">23. What does <em>We had meant to call you</em> mean?</div>
+<label><input type='radio' name='ppf-unfulfilled-s02' value='0'> We planned to call you, but we didn&#x27;t.</label><label><input type='radio' name='ppf-unfulfilled-s02' value='1'> We called you.</label><label><input type='radio' name='ppf-unfulfilled-s02' value='2'> We will call you.</label><label><input type='radio' name='ppf-unfulfilled-s02' value='3'> We never wanted to call you.</label>
+<div class="exexpl" style="display:none"><em>Had meant to</em> = a plan that didn&#x27;t happen.</div>
+<button class="excheck" onclick="checkEx('ppf-unfulfilled-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ppf-unfulfilled-s03">
+<div class="exq">24. She &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to stay longer, but she had to leave early.</div>
+<label><input type='radio' name='ppf-unfulfilled-s03' value='0'> has wanted</label><label><input type='radio' name='ppf-unfulfilled-s03' value='1'> had wanted</label><label><input type='radio' name='ppf-unfulfilled-s03' value='2'> wants</label><label><input type='radio' name='ppf-unfulfilled-s03' value='3'> is wanting</label>
+<div class="exexpl" style="display:none">A wish that didn&#x27;t happen: <em>had wanted</em>.</div>
+<button class="excheck" onclick="checkEx('ppf-unfulfilled-s03', 1)">Check</button>
+</div>
+</section>
+
+
+<div class="cta"><p>Tell stories about the past with confidence: Muse English lessons have example sentences with audio at your level.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

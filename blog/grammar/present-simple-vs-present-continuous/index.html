@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Present Simple vs Present Continuous: Rules | Muse English</title>
+<meta name="description" content="Present simple or present continuous? Learn the difference from A2 to C1: now vs in general, temporary vs permanent, stories, commentary and exercises.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/present-simple-vs-present-continuous/">
+<meta property="og:type" content="article"><meta property="og:title" content="Present Simple vs Present Continuous: Rules | Muse English">
+<meta property="og:description" content="Present simple or present continuous? Learn the difference from A2 to C1: now vs in general, temporary vs permanent, stories, commentary and exercises."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/present-simple-vs-present-continuous/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Present Simple vs Present Continuous", "description": "Present simple or present continuous? Learn the difference from A2 to C1: now vs in general, temporary vs permanent, stories, commentary and exercises.", "url": "https://museenglishapp.com/blog/grammar/present-simple-vs-present-continuous/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Present Simple vs Present Continuous", "item": "https://museenglishapp.com/blog/grammar/present-simple-vs-present-continuous/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}}</style>
+<script>
+function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Present Simple vs Present Continuous</div>
+<h1>Present Simple vs Present Continuous</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#c1'>C1</a></div>
+<p>The <strong>present simple</strong> is for things <strong>in general</strong>: habits, facts and permanent situations. The <strong>present continuous</strong> is for things happening <strong>now or around now</strong>, and for <strong>temporary</strong> situations.</p><p><em>I <strong>work</strong> from home on Fridays. I<strong>&#x27;m working</strong> from home today.</em></p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='psc-now-general'>Now or in general? <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th></th><th>Present simple</th><th>Present continuous</th></tr><tr><td>Use</td><td>habits, facts, things in general</td><td>happening now or around now</td></tr><tr><td>Form</td><td>I work / she works</td><td>I&#x27;m working / she&#x27;s working</td></tr><tr><td>Common words</td><td>every day, usually, often, never, on Mondays</td><td>now, right now, at the moment, Look!, Listen!</td></tr><tr><td>Example</td><td><em>It <strong>rains</strong> a lot in April.</em></td><td><em>Take an umbrella. It<strong>&#x27;s raining</strong>.</em></td></tr><tr><td>Example</td><td><em>She <strong>speaks</strong> three languages.</em></td><td><em>She<strong>&#x27;s speaking</strong> on the phone.</em></td></tr></table></div>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I usually <strong>walk</strong> to work, but today I<strong>&#x27;m taking</strong> the bus. <span class='exnote'>(habit vs today)</span></li>
+<li>Water <strong>boils</strong> at 100°C. Look, the water <strong>is boiling</strong>! <span class='exnote'>(fact vs now)</span></li>
+<li><strong>Do</strong> you <strong>play</strong> tennis? – Yes, but I<strong>&#x27;m not playing</strong> this week. <span class='exnote'>(in general vs now)</span></li>
+<li>Where&#x27;s Tom? – He<strong>&#x27;s having</strong> a shower. <span class='exnote'>(now)</span></li>
+<li>My dad <strong>cooks</strong> on Sundays. He<strong>&#x27;s cooking</strong> right now. <span class='exnote'>(routine vs now)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Look! The bus comes. → ✅ Look! The bus is coming. <span class='why'>(Happening now: present continuous.)</span></li>
+<li>❌ I&#x27;m going to the gym every day. → ✅ I go to the gym every day. <span class='why'>(A habit: present simple.)</span></li>
+<li>❌ She is speaking three languages. → ✅ She speaks three languages. <span class='why'>(A permanent ability, not now: present simple.)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-psc-now-general-s01">
+<div class="exq">1. I usually &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to work, but today I&#x27;m taking the bus.</div>
+<label><input type='radio' name='psc-now-general-s01' value='0'> &#x27;m walking</label><label><input type='radio' name='psc-now-general-s01' value='1'> walk</label><label><input type='radio' name='psc-now-general-s01' value='2'> walks</label><label><input type='radio' name='psc-now-general-s01' value='3'> walking</label>
+<div class="exexpl" style="display:none"><em>Usually</em> = a habit: present simple, <em>walk</em>.</div>
+<button class="excheck" onclick="checkEx('psc-now-general-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-psc-now-general-s02">
+<div class="exq">2. Where&#x27;s Tom? – He &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; a shower.</div>
+<label><input type='radio' name='psc-now-general-s02' value='0'> has</label><label><input type='radio' name='psc-now-general-s02' value='1'> have</label><label><input type='radio' name='psc-now-general-s02' value='2'> &#x27;s having</label><label><input type='radio' name='psc-now-general-s02' value='3'> having</label>
+<div class="exexpl" style="display:none">Right now: present continuous, <em>he&#x27;s having</em>.</div>
+<button class="excheck" onclick="checkEx('psc-now-general-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-psc-now-general-s03">
+<div class="exq">3. She &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; three languages.</div>
+<label><input type='radio' name='psc-now-general-s03' value='0'> is speaking</label><label><input type='radio' name='psc-now-general-s03' value='1'> speak</label><label><input type='radio' name='psc-now-general-s03' value='2'> speaking</label><label><input type='radio' name='psc-now-general-s03' value='3'> speaks</label>
+<div class="exexpl" style="display:none">A permanent ability: present simple, <em>speaks</em>.</div>
+<button class="excheck" onclick="checkEx('psc-now-general-s03', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-psc-now-general-s04">
+<div class="exq">4. Look! The bus &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;. Run!</div>
+<label><input type='radio' name='psc-now-general-s04' value='0'> is coming</label><label><input type='radio' name='psc-now-general-s04' value='1'> comes</label><label><input type='radio' name='psc-now-general-s04' value='2'> come</label><label><input type='radio' name='psc-now-general-s04' value='3'> coming</label>
+<div class="exexpl" style="display:none"><em>Look!</em> = now: <em>is coming</em>.</div>
+<button class="excheck" onclick="checkEx('psc-now-general-s04', 0)">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='psc-temporary-permanent'>Temporary or permanent? <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Permanent (present simple)</th><th>Temporary (present continuous)</th></tr><tr><td><em>My parents <strong>live</strong> in Toronto.</em></td><td><em>I<strong>&#x27;m living</strong> with friends until I find a flat.</em></td></tr><tr><td><em>Joe <strong>works</strong> hard most of the time.</em></td><td><em>You<strong>&#x27;re working</strong> hard today!</em></td></tr><tr><td><em>The river <strong>flows</strong> into the lake.</em></td><td><em>The river <strong>is flowing</strong> very fast today because of the rain.</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>I <strong>work</strong> in a bank, but this month I<strong>&#x27;m working</strong> in our Paris office. <span class='exnote'>(permanent vs temporary)</span></li>
+<li>We <strong>live</strong> in Ottawa. We<strong>&#x27;re staying</strong> with my aunt in Toronto this week. <span class='exnote'>(live vs stay)</span></li>
+<li>Our company <strong>isn&#x27;t doing</strong> very well this year. <span class='exnote'>(this year)</span></li>
+<li>He <strong>teaches</strong> maths, but this term he<strong>&#x27;s teaching</strong> physics too. <span class='exnote'>(this term)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I stay with my aunt until my flat is ready. → ✅ I&#x27;m staying with my aunt until my flat is ready. <span class='why'>(A temporary situation: present continuous.)</span></li>
+<li>❌ My parents are living in the same house all their lives. → ✅ My parents have lived in the same house all their lives. <span class='why'>(From the past until now: present perfect. See Present Perfect.)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-psc-temporary-permanent-s01">
+<div class="exq">5. My parents &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; in Toronto. They moved there in 1995.</div>
+<label><input type='radio' name='psc-temporary-permanent-s01' value='0'> are living</label><label><input type='radio' name='psc-temporary-permanent-s01' value='1'> lives</label><label><input type='radio' name='psc-temporary-permanent-s01' value='2'> live</label><label><input type='radio' name='psc-temporary-permanent-s01' value='3'> living</label>
+<div class="exexpl" style="display:none">A permanent situation: present simple, <em>live</em>.</div>
+<button class="excheck" onclick="checkEx('psc-temporary-permanent-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-psc-temporary-permanent-s02">
+<div class="exq">6. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; with a friend until I find my own flat.</div>
+<label><input type='radio' name='psc-temporary-permanent-s02' value='0'> stay</label><label><input type='radio' name='psc-temporary-permanent-s02' value='1'> stays</label><label><input type='radio' name='psc-temporary-permanent-s02' value='2'> staying</label><label><input type='radio' name='psc-temporary-permanent-s02' value='3'> &#x27;m staying</label>
+<div class="exexpl" style="display:none">Temporary (<em>until…</em>): <em>I&#x27;m staying</em>.</div>
+<button class="excheck" onclick="checkEx('psc-temporary-permanent-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-psc-temporary-permanent-s03">
+<div class="exq">7. Joe isn&#x27;t usually busy, but he &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; really hard this week.</div>
+<label><input type='radio' name='psc-temporary-permanent-s03' value='0'> works</label><label><input type='radio' name='psc-temporary-permanent-s03' value='1'> &#x27;s working</label><label><input type='radio' name='psc-temporary-permanent-s03' value='2'> work</label><label><input type='radio' name='psc-temporary-permanent-s03' value='3'> working</label>
+<div class="exexpl" style="display:none">Temporary (<em>this week</em>): <em>he&#x27;s working</em>.</div>
+<button class="excheck" onclick="checkEx('psc-temporary-permanent-s03', 1)">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='psc-stories-commentary'>Stories, jokes and live commentary <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>So I<strong>&#x27;m waiting</strong> for a taxi when a woman <strong>runs</strong> up to me… <span class='exnote'>(background + event)</span></li>
+<li>A man <strong>walks</strong> into a café and <strong>orders</strong> a coffee… <span class='exnote'>(joke)</span></li>
+<li>It<strong>&#x27;s raining</strong>, it<strong>&#x27;s getting</strong> dark, and suddenly the car <strong>stops</strong>. <span class='exnote'>(background + sudden event)</span></li>
+<li>And she <strong>serves</strong>… it&#x27;s an ace! <span class='exnote'>(commentary)</span></li>
+<li>The crowd <strong>is cheering</strong> as the runners <strong>cross</strong> the line. <span class='exnote'>(longer + quick actions)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ So I&#x27;m walking home and suddenly a dog is jumping at me. → ✅ So I&#x27;m walking home and suddenly a dog jumps at me. <span class='why'>(Main events: present simple.)</span></li>
+<li>❌ So I stand at the bus stop, and a man is coming up to me. → ✅ So I&#x27;m standing at the bus stop, and a man comes up to me. <span class='why'>(Background: continuous; main event: simple.)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-psc-stories-commentary-s01">
+<div class="exq">8. In an informal story told in present tenses, which tense usually gives the main events?</div>
+<label><input type='radio' name='psc-stories-commentary-s01' value='0'> present simple</label><label><input type='radio' name='psc-stories-commentary-s01' value='1'> present continuous</label><label><input type='radio' name='psc-stories-commentary-s01' value='2'> present perfect</label><label><input type='radio' name='psc-stories-commentary-s01' value='3'> future simple</label>
+<div class="exexpl" style="display:none">Main events: <strong>present simple</strong>; background: present continuous.</div>
+<button class="excheck" onclick="checkEx('psc-stories-commentary-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-psc-stories-commentary-s02">
+<div class="exq">9. So I&#x27;m sitting on the train, reading, and suddenly a man &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; next to me.</div>
+<label><input type='radio' name='psc-stories-commentary-s02' value='0'> is sitting down</label><label><input type='radio' name='psc-stories-commentary-s02' value='1'> sitted down</label><label><input type='radio' name='psc-stories-commentary-s02' value='2'> sits down</label><label><input type='radio' name='psc-stories-commentary-s02' value='3'> sit down</label>
+<div class="exexpl" style="display:none">A main event in the story: present simple, <em>sits down</em>.</div>
+<button class="excheck" onclick="checkEx('psc-stories-commentary-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-psc-stories-commentary-s03">
+<div class="exq">10. In live sports commentary, which sentence describes a quick, complete action?</div>
+<label><input type='radio' name='psc-stories-commentary-s03' value='0'> Silva is playing well today.</label><label><input type='radio' name='psc-stories-commentary-s03' value='1'> Silva shoots!</label><label><input type='radio' name='psc-stories-commentary-s03' value='2'> The fans are singing.</label><label><input type='radio' name='psc-stories-commentary-s03' value='3'> It&#x27;s raining in the stadium.</label>
+<div class="exexpl" style="display:none">Quick, complete actions: present simple, <em>shoots</em>.</div>
+<button class="excheck" onclick="checkEx('psc-stories-commentary-s03', 1)">Check</button>
+</div>
+</section>
+
+<div class='seealso'><p><strong>See also:</strong></p><ul><li><a href='#sv-basic'>sv-basic</a></li><li><a href='#sv-two-meanings'>sv-two-meanings</a></li><li><a href='#pc-always'>pc-always</a></li></ul></div>
+<div class="cta"><p>Hear both tenses in real sentences: every Muse English lesson has examples with audio at your level.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>
