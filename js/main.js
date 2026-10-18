@@ -12397,7 +12397,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610181849';
+var APP_VERSION = '202610181855';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -12841,7 +12841,7 @@ async function twGetStudents() {
   if (state.twStudents) return state.twStudents;
   var list = [];
   try {
-    var params = twReadOnly() ? { p_teacher: state.twViewTeacher.user_id } : {};
+    var params = state.twViewTeacher ? { p_teacher: state.twViewTeacher.user_id } : {};
     var r = await sb.rpc('get_my_students', params);
     if (r.error) throw r.error;
     list = r.data || [];
