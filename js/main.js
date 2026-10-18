@@ -1958,9 +1958,12 @@ function enforceOnboardingGate() {
 }
 
 function onRoute() {
+  /* Teacher portal: own path, own auth gate, own chrome. */
+  if (isTeachersPath()) { renderTeachers(); return; }
   /* Dedicated admin panel: own path, own auth gate, own chrome. */
   if (isPanelPath()) { renderAdminPanel(); return; }
   document.body.classList.remove('ap-mode');
+  document.body.classList.remove('tw-mode');
   const r = parseHash();
   /* Self-heal: the game player hides the tabbar; if the quiz state is gone
      (e.g. browser back), the tabbar must come back. */
@@ -2403,6 +2406,7 @@ async function submitTeacherRequest(e) {
     if (r.error) throw r.error;
     await loadTeacherStatus();
     trackEvent('teacher_requested', {});
+    if (isTeachersPath()) { renderTeachers(); return; }
     renderBecomeTeacher(document.getElementById('view'));
   } catch (err) {
     if (errEl) errEl.textContent = 'Could not send the request. ' + (err.message || '');
@@ -11485,6 +11489,7 @@ function bindEvents() {
     else if (a === 'teacher-sent') toggleTeacherSent(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-message') teacherMessageComposer(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'assignment-compose') teacherAssignmentComposer();
+    else if (a === 'tw-logout') twLogout();
     else if (a === 'assignment-create') createAssignment(t);
     else if (a === 'planner-save') savePlanner(t);
     else if (a === 'ai-report-student') aiReportStudent(t);
@@ -11590,7 +11595,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610172206';
+var APP_VERSION = '202610180059';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -11626,6 +11631,9 @@ async function init() {
   window._splashAt = Date.now();
   window._appReady = false;
 
+  /* Teacher portal: own path, own gate, own chrome — never the learner boot. */
+  if (isTeachersPath()) { renderTeachers(); hideSplashSoon(); return; }
+
   if (sb) {
     try {
       const { data } = await sb.auth.getSession();
@@ -11655,6 +11663,313 @@ function hideSplash() {
   if (!s || s.classList.contains('hide')) return;
   s.classList.add('hide');
   setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 600);
+}
+
+/* ==================== Teacher portal (/teachers) ====================
+   Public landing + dedicated teacher workspace at the /teachers path
+   (served via _redirects 200-rewrite to /, same pattern as /manage).
+   Same Supabase session as the learner app: teachers log in with their
+   normal account; an approved `teachers` row unlocks the workspace.
+   Learner chrome is hidden via body.tw-mode. */
+function isTeachersPath() { return /^\/teachers(\/|$)/.test(window.location.pathname); }
+
+var TW_SECTIONS = [
+  ['overview', '📊', 'Overview'],
+  ['students', '👥', 'Students'],
+  ['assignments', '✈️', 'Assignments'],
+  ['placement', '📝', 'Placement tests'],
+  ['links', '🔗', 'Invite & links']
+];
+
+async function renderTeachers() {
+  document.body.classList.add('tw-mode');
+  document.body.classList.remove('ap-mode');
+  var v = document.getElementById('view');
+  v.innerHTML = '<div class="tw-loading"><div class="tw-spin"></div><p class="muted">Loading…</p></div>';
+  var user = null;
+  try {
+    if (sb) { var r = await sb.auth.getUser(); user = (r.data && r.data.user) || null; }
+  } catch (e) {}
+  if (!user) { v.innerHTML = twLandingHTML(false); twWireLanding(); return; }
+  state.user = { id: user.id, email: user.email, demo: false, displayName: null };
+  try {
+    var p = await sb.from('profiles').select('display_name').eq('id', user.id).maybeSingle();
+    if (p.data && p.data.display_name) state.user.displayName = p.data.display_name;
+  } catch (e) {}
+  await loadTeacherStatus();
+  if (state.teacher) { twRenderWorkspace(v); return; }
+  if (state.teacherRequest) {
+    v.innerHTML = '<div class="tw-narrow">' +
+      '<div class="tw-brandrow">🍎 <b>Muse English</b><span>for Teachers</span></div>' +
+      '<div class="card tw-card"><h2>⏳ Request under review</h2>' +
+      '<p class="muted">Thanks for applying! We approve teachers manually — usually within a day. We will email you at <b>' + esc(user.email || '') + '</b> once you are in.</p>' +
+      '<button class="btn btn-ghost" data-action="tw-logout">Log out</button></div></div>';
+    return;
+  }
+  /* Logged in but not a teacher yet: landing with the request form inline. */
+  v.innerHTML = twLandingHTML(true);
+  twWireLanding();
+  var host = document.getElementById('tw-apply');
+  if (host) {
+    renderBecomeTeacher(host);
+    var back = host.querySelector('a[href="#/profile"]');
+    if (back) { back.setAttribute('href', '#tw-apply'); back.textContent = '← Back'; }
+  }
+}
+
+function twLandingHTML(loggedIn) {
+  var feats = [
+    ['📝', 'Placement test link', 'Send new students a 5-part test — vocabulary, listening, grammar, writing, speaking. Results land in your dashboard with a suggested level.'],
+    ['📊', 'Student activity', 'Streaks, XP, lessons completed and 14-day history for every student — updated automatically, no spreadsheets.'],
+    ['✈️', 'Assignments', 'Build quizzes from any topic and schedule them across the week. They come back graded, per student and per question.'],
+    ['🔗', 'Invite links', 'One link connects students to you. Everyone who signs up through it shows up on your roster.']
+  ];
+  var steps = [
+    ['1', 'Request access', 'Log in with your Muse English account and apply in one click. We approve teachers manually.'],
+    ['2', 'Share your link', 'Send your invite link — or the placement-test link — to your students.'],
+    ['3', 'Track & teach', 'Watch progress, nudge quiet students, and assign work from your dashboard.']
+  ];
+  return '<div class="tw-land">' +
+    '<header class="tw-top"><div class="tw-top-in">' +
+      '<div class="tw-brandrow">🍎 <b>Muse English</b><span>for Teachers</span></div>' +
+      '<nav class="tw-toplinks"><a href="#tw-features">Features</a><a href="#tw-how">How it works</a>' +
+      (loggedIn ? '<a class="btn btn-sm" href="#tw-apply">Request access</a>' : '<a class="btn btn-sm" href="#tw-login">Log in</a>') +
+      '</nav></div></header>' +
+    '<section class="tw-hero"><div class="tw-hero-in">' +
+      '<div class="tw-eyebrow">FOR ENGLISH TEACHERS</div>' +
+      '<h1>Your students, their progress,<br>one dashboard.</h1>' +
+      '<p class="tw-sub">Give every new student a placement test, watch their activity day by day, and send assignments — Muse English handles the busywork while you teach.</p>' +
+      '<div class="tw-cta">' +
+        (loggedIn
+          ? '<a class="btn btn-lg" href="#tw-apply">Request teacher access →</a>'
+          : '<a class="btn btn-lg" href="#tw-login">Log in →</a>') +
+        '<a class="btn btn-lg btn-ghost" href="#tw-how">How it works</a></div>' +
+      '<p class="tw-note">Already teaching with Muse English? Your login is the same account you use in the app.</p>' +
+    '</div></section>' +
+    '<section class="tw-sec" id="tw-features"><div class="tw-sec-in">' +
+      '<h2>Everything a teacher needs</h2>' +
+      '<div class="tw-feats">' + feats.map(function (f) {
+        return '<div class="card tw-feat"><div class="tw-feat-ico">' + f[0] + '</div><h3>' + f[1] + '</h3><p class="muted">' + f[2] + '</p></div>';
+      }).join('') + '</div></div></section>' +
+    '<section class="tw-sec tw-sec-alt" id="tw-how"><div class="tw-sec-in">' +
+      '<h2>Get started in minutes</h2>' +
+      '<div class="tw-steps">' + steps.map(function (s) {
+        return '<div class="card tw-step"><div class="tw-step-n">' + s[0] + '</div><h3>' + s[1] + '</h3><p class="muted">' + s[2] + '</p></div>';
+      }).join('') + '</div></div></section>' +
+    (loggedIn
+      ? '<section class="tw-sec" id="tw-apply"><div class="tw-narrow"><div class="card tw-card" id="tw-apply"></div></div></section>'
+      : '<section class="tw-sec" id="tw-login"><div class="tw-narrow"><div class="card tw-card">' +
+        '<h2>Teacher login</h2>' +
+        '<p class="muted">Use the same email and password as your Muse English account.</p>' +
+        '<form id="tw-login-form" novalidate>' +
+        '<div class="field"><label for="tw-email">Email</label><input id="tw-email" type="email" autocomplete="email" placeholder="you@example.com" required></div>' +
+        '<div class="field"><label for="tw-pass">Password</label><input id="tw-pass" type="password" autocomplete="current-password" placeholder="••••••••" required></div>' +
+        '<div class="form-error" id="tw-error" role="alert"></div>' +
+        '<button class="btn btn-block" type="submit" id="tw-submit">Log in</button></form>' +
+        '<p class="muted" style="margin-bottom:0">New to Muse English? <a class="link" href="/#/signup">Create a free account</a>, then come back here and log in.</p>' +
+        '</div></div></section>') +
+    '<footer class="tw-foot"><div class="tw-sec-in"><span>© 2026 Muse English · Built for teachers</span></div></footer>' +
+  '</div>';
+}
+
+function twWireLanding() {
+  var f = document.getElementById('tw-login-form');
+  if (f) f.addEventListener('submit', twDoLogin);
+}
+
+async function twDoLogin(e) {
+  e.preventDefault();
+  var em = document.getElementById('tw-email'), pw = document.getElementById('tw-pass');
+  var err = document.getElementById('tw-error'), btn = document.getElementById('tw-submit');
+  err.textContent = '';
+  var email = em.value.trim(), pass = pw.value;
+  if (!email || !pass) { err.textContent = 'Enter your email and password.'; return; }
+  if (!sb) { err.textContent = 'Login service could not load. Check your connection and try again.'; return; }
+  btn.disabled = true; btn.textContent = 'Signing in…';
+  try {
+    var r = await sb.auth.signInWithPassword({ email: email, password: pass });
+    if (r.error) throw r.error;
+    trackEvent('teacher_portal_login', {});
+    await renderTeachers();
+  } catch (ex) {
+    err.textContent = (ex && ex.message) || 'Sign in failed.';
+    btn.disabled = false; btn.textContent = 'Log in';
+  }
+}
+
+async function twLogout() {
+  try { if (sb) await sb.auth.signOut(); } catch (e) {}
+  state.user = null; state.teacher = null; state.teacherRequest = null; state.twSection = null;
+  window.location.href = '/teachers';
+}
+
+/* ---------------- Teacher workspace ---------------- */
+
+function twRenderWorkspace(v) {
+  if (!state.twSection) state.twSection = 'overview';
+  var t = state.teacher;
+  var initial = (t.display_name || tchMeEmail() || '?').charAt(0).toUpperCase();
+  v.innerHTML =
+    '<div class="tw-work">' +
+    '<aside class="tw-side">' +
+      '<div class="tw-brandrow tw-brandrow-side">🍎 <b>Muse English</b><span>for Teachers</span></div>' +
+      '<nav class="tw-nav">' + TW_SECTIONS.map(function (s) {
+        return '<button class="tw-navbtn' + (state.twSection === s[0] ? ' on' : '') + '" data-twsec="' + s[0] + '">' +
+          '<span class="tw-navico">' + s[1] + '</span>' + s[2] + '</button>';
+      }).join('') + '</nav>' +
+      '<div class="tw-side-foot">' +
+        '<div class="tw-me"><span class="tw-ava">' + esc(initial) + '</span>' +
+          '<span class="tw-me-txt"><b>' + esc(t.display_name || 'Teacher') + '</b><small>' + esc(state.user.email || '') + '</small></span></div>' +
+        '<a class="tw-footlink" href="/">← Learner app</a>' +
+        '<button class="tw-footlink tw-logout" data-action="tw-logout">Log out</button>' +
+      '</div>' +
+    '</aside>' +
+    '<main class="tw-main"><div class="tw-main-in" id="tw-content"></div></main>' +
+    '</div>';
+  Array.prototype.forEach.call(v.querySelectorAll('[data-twsec]'), function (b) {
+    b.addEventListener('click', function () { twShowSection(b.getAttribute('data-twsec')); });
+  });
+  twShowSection(state.twSection);
+}
+
+function tchMeEmail() { return (state.user && state.user.email) || ''; }
+
+function twShowSection(name) {
+  state.twSection = name;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-twsec]'), function (b) {
+    b.classList.toggle('on', b.getAttribute('data-twsec') === name);
+  });
+  var c = document.getElementById('tw-content');
+  if (!c) return;
+  window.scrollTo(0, 0);
+  if (name === 'overview') { twOverview(c); return; }
+  if (name === 'students') {
+    c.innerHTML = '<div class="tw-sec-head"><h1>My students <span id="tch-count" class="muted"></span></h1></div>' +
+      '<div id="tch-roster"><div class="empty">Loading…</div></div><div id="tch-detail"></div>';
+    loadTeacherRoster();
+    return;
+  }
+  if (name === 'assignments') {
+    c.innerHTML = '<div class="tw-sec-head"><h1>Assignments</h1>' +
+      '<span class="tch-actions"><button class="btn btn-sm" data-action="assignment-compose">＋ New assignment</button></span></div>' +
+      '<div class="tw-tabs"><button class="tw-tab on" data-twtab="list">Sent</button>' +
+      '<button class="tw-tab" data-twtab="planner">📅 Weekly planner</button></div>' +
+      '<div id="tw-assign-list"><div id="tch-assign"><div class="empty">Loading…</div></div></div>' +
+      '<div id="tw-assign-planner" hidden></div>';
+    loadTeacherAssignments().then(function () {
+      var h = document.getElementById('tch-assign');
+      if (h && !h.innerHTML.trim()) h.innerHTML = '<div class="empty">No assignments yet — click “＋ New assignment” above to create your first one. ✈️</div>';
+    });
+    Array.prototype.forEach.call(c.querySelectorAll('[data-twtab]'), function (b) {
+      b.addEventListener('click', function () { twAssignTab(b.getAttribute('data-twtab')); });
+    });
+    return;
+  }
+  if (name === 'placement') {
+    c.innerHTML = '<div class="tw-sec-head"><h1>Placement test results</h1></div>' +
+      '<div id="tch-ptest"><div class="empty">Loading…</div></div>';
+    loadPlacementResults();
+    return;
+  }
+  if (name === 'links') {
+    var t = state.teacher;
+    c.innerHTML = '<div class="tw-sec-head"><h1>Invite & links</h1></div>' +
+      '<div class="card tch-invite">' +
+        '<div class="muted" style="margin:0 0 0.4rem">Your personal invite link</div>' +
+        '<div class="tch-linkrow"><code>' + esc(teacherInviteLink(t.ref_code)) + '</code>' +
+        '<button class="btn btn-sm" data-action="copy-teacher-link">Copy</button></div>' +
+        '<p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0">Share it with your students — everyone who signs up through it shows up on your roster.</p></div>' +
+      '<div class="card tch-invite">' +
+        '<div class="muted" style="margin:0 0 0.4rem">📝 Placement test link for new students</div>' +
+        '<div class="tch-linkrow"><code>' + esc(teacherPlacementLink(t.ref_code)) + '</code>' +
+        '<button class="btn btn-sm" data-action="copy-ptest-link">Copy</button></div>' +
+        '<p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0">Send it to a new student — they take a 5-part test and the results land in your dashboard.</p></div>' +
+      '<div class="card"><h3 style="margin-top:0">🌟 My public profile</h3>' +
+      '<p class="muted" style="font-size:0.85rem;margin-top:-0.3rem">Students see this when choosing a teacher.</p>' +
+      '<div id="tch-profile-body"><div class="empty">Loading…</div></div></div>';
+    loadTeacherProfile();
+    return;
+  }
+}
+
+function twAssignTab(which) {
+  Array.prototype.forEach.call(document.querySelectorAll('[data-twtab]'), function (b) {
+    b.classList.toggle('on', b.getAttribute('data-twtab') === which);
+  });
+  document.getElementById('tw-assign-list').hidden = which !== 'list';
+  var ph = document.getElementById('tw-assign-planner');
+  ph.hidden = which !== 'planner';
+  if (which === 'planner' && !ph.getAttribute('data-loaded')) {
+    ph.setAttribute('data-loaded', '1');
+    renderPlanner(ph);
+  }
+}
+
+async function twOverview(c) {
+  var t = state.teacher;
+  c.innerHTML =
+    '<div class="tw-sec-head"><div><h1 style="margin:0">Welcome back, ' + esc(t.display_name || 'Teacher') + ' 👋</h1>' +
+    '<p class="muted" style="margin:0.3rem 0 0">Here is what is happening with your students.</p></div></div>' +
+    '<div class="tw-stats">' +
+      '<div class="card tw-stat"><span class="tw-stat-n" id="tw-s-students">…</span><span class="tw-stat-l">Students</span></div>' +
+      '<div class="card tw-stat"><span class="tw-stat-n" id="tw-s-active">…</span><span class="tw-stat-l">Active this week</span></div>' +
+      '<div class="card tw-stat"><span class="tw-stat-n" id="tw-s-pending">…</span><span class="tw-stat-l">Tests to review</span></div>' +
+      '<div class="card tw-stat"><span class="tw-stat-n" id="tw-s-quiet">…</span><span class="tw-stat-l">Quiet 7+ days</span></div>' +
+    '</div>' +
+    '<div class="tw-grid2">' +
+      '<div class="card"><div class="tw-cardhead"><h3 style="margin:0">📝 Latest placement tests</h3>' +
+      '<button class="btn btn-sm btn-ghost" data-twsec="placement">View all →</button></div>' +
+      '<div id="tw-recent-ptest"><div class="empty">Loading…</div></div></div>' +
+      '<div class="card"><div class="tw-cardhead"><h3 style="margin:0">⚠️ Needs attention</h3>' +
+      '<button class="btn btn-sm btn-ghost" data-twsec="students">View all →</button></div>' +
+      '<div id="tw-attn"><div class="empty">Loading…</div></div></div>' +
+    '</div>';
+  Array.prototype.forEach.call(c.querySelectorAll('[data-twsec]'), function (b) {
+    b.addEventListener('click', function () { twShowSection(b.getAttribute('data-twsec')); });
+  });
+  var set = function (id, v) { var el = document.getElementById(id); if (el) el.textContent = v; };
+  var students = [];
+  try {
+    var r = await sb.rpc('get_my_students');
+    if (!r.error) students = r.data || [];
+  } catch (e) {}
+  var now = Date.now();
+  var days = function (d) { return d ? Math.floor((now - new Date(d + 'T12:00:00').getTime()) / 86400000) : 999; };
+  var active = students.filter(function (s) { return days(s.last_active) < 7; });
+  var quiet = students.filter(function (s) { return days(s.last_active) >= 7; });
+  set('tw-s-students', students.length);
+  set('tw-s-active', active.length);
+  set('tw-s-quiet', quiet.length);
+  var attn = document.getElementById('tw-attn');
+  if (attn) {
+    attn.innerHTML = quiet.length
+      ? quiet.slice(0, 5).map(function (s) {
+          var nm = s.display_name || (s.email || '?').split('@')[0];
+          return '<div class="tw-row"><span>' + esc(nm) + '</span><span class="muted">' +
+            (s.last_active ? 'last active ' + esc(fmtLastActive(s.last_active)) : 'never active') + '</span></div>';
+        }).join('')
+      : '<div class="empty">Everyone is active. 🎉</div>';
+  }
+  var rp = document.getElementById('tw-recent-ptest');
+  var pending = 0;
+  try {
+    var pr = await sb.from('placement_results')
+      .select('id,student_name,status,completed_at,updated_at,suggested_level')
+      .eq('teacher_ref', t.ref_code).order('updated_at', { ascending: false }).limit(5);
+    if (!pr.error) {
+      var rows = pr.data || [];
+      pending = rows.filter(function (x) { return x.status !== 'completed'; }).length;
+      rp.innerHTML = rows.length
+        ? rows.map(function (x) {
+            return '<div class="tw-row"><span>' + esc(x.student_name || 'Student') + '</span>' +
+              '<span class="muted">' + (x.status === 'completed'
+                ? 'done' + (x.suggested_level ? ' · ' + esc(x.suggested_level) : '')
+                : 'in progress') + '</span></div>';
+          }).join('')
+        : '<div class="empty">No tests yet — share your placement link above.</div>';
+    } else { rp.innerHTML = '<div class="empty">Could not load.</div>'; }
+  } catch (e) { rp.innerHTML = '<div class="empty">Could not load.</div>'; }
+  set('tw-s-pending', pending);
 }
 
 /* ==================== Admin panel (/manage) — Phase 1 ====================
@@ -12422,7 +12737,7 @@ async function renderAdminPanel() {
   document.body.classList.add('ap-mode');
   if (!apPopBound) {
     apPopBound = true;
-    window.addEventListener('popstate', function () { if (isPanelPath()) renderAdminPanel(); });
+    window.addEventListener('popstate', function () { if (isPanelPath()) renderAdminPanel(); if (isTeachersPath()) renderTeachers(); });
   }
   apArmIdle();
   const v = document.getElementById('view');

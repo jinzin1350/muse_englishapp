@@ -10,6 +10,11 @@
 /manage / 200
 /manage/* / 200
 
+# Teacher portal: clean URL for the teacher landing + workspace (the app's
+# router takes over from the path, same pattern as /manage).
+/teachers / 200
+/teachers/* / 200
+
 # SEO Phase 1.4 (2026-10-13): 3 lessons with empty themes got proper slugs.
 # Both the sitemap-listed path (-lesson) and the built file path (-english-lesson)
 # 301 to the final extensionless URL, in one hop.
