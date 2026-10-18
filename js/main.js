@@ -3193,6 +3193,7 @@ function assignSlug(topic) {
 
 /* ---- teacher composer ---- */
 function teacherAssignmentComposer() {
+  if (state.viewTeacher) { twReadOnlyNotice(); return; }
   const list = state.teacherStudents || [];
   if (!state.teacher) return;
   if (!list.length) {    showModal('<div class="modal-ico">📝</div><h2>New assignment</h2>' +
@@ -4171,15 +4172,23 @@ async function openTeacherAssignment(i) {
     '<h2 class="tw-m-title">' + esc(r.title) + '</h2>' +
     '<p class="tw-m-sub">' + sub + '</p>' +
     statusBox +
-    (r.status === 'scheduled'
-      ? '<button class="tw-m-del" data-action="assignment-cancel" data-i="' + i + '">✕ Cancel scheduled send</button>'
-      : '<button class="tw-m-del" data-action="assignment-delete" data-i="' + i + '">🗑 Delete assignment</button>') +
+    (twReadOnly() ? '<p class="muted" style="font-size:0.85rem">👁 Read-only admin view.</p>'
+      : (r.status === 'scheduled'
+        ? '<button class="tw-m-del" data-action="assignment-cancel" data-i="' + i + '">✕ Cancel scheduled send</button>'
+        : '<button class="tw-m-del" data-action="assignment-delete" data-i="' + i + '">🗑 Delete assignment</button>')) +
     '<button class="tw-m-closebtn" data-action="modal-close">Close</button>' +
     '</div>'
   );
 }
 
+function twReadOnlyNotice() {
+  showModal('<div class="tw-modal"><div class="tw-m-ill"><span class="tw-m-clip">👁</span></div>' +
+    '<h2 class="tw-m-title">Read-only</h2>' +
+    '<p class="tw-m-sub">You’re viewing another teacher’s dashboard.<br>Switch back to your own to make changes.</p>' +
+    '<button class="tw-m-closebtn" data-action="modal-close">OK</button></div>');
+}
 async function deleteTeacherAssignment(i, btn) {
+  if (state.viewTeacher) { twReadOnlyNotice(); return; }
   const r = (state.teacherAssignments || [])[i];
   if (!r || r.status === 'scheduled') return;
   const n = (r.student_ids || []).length;
@@ -4211,6 +4220,7 @@ async function deleteTeacherAssignment(i, btn) {
 }
 
 async function cancelScheduledAssignment(i, btn) {
+  if (state.viewTeacher) { twReadOnlyNotice(); return; }
   const r = (state.teacherAssignments || [])[i];
   if (!r || r.status !== 'scheduled') return;
   if (!confirm('Cancel this scheduled assignment? It will not be sent.')) return;
@@ -11613,7 +11623,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610180226';
+var APP_VERSION = '202610180317';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -11815,13 +11825,15 @@ async function renderTeachers() {
     if (sb) { var r = await sb.auth.getUser(); user = (r.data && r.data.user) || null; }
   } catch (e) {}
   if (!user) { v.innerHTML = twLandingHTML(false); twWireLanding(); return; }
-  state.user = { id: user.id, email: user.email, demo: false, displayName: null };
+  var adminEmails = (typeof APP_CONFIG !== 'undefined' && APP_CONFIG.ADMIN_EMAILS) || [];
+  state.user = { id: user.id, email: user.email, demo: false, displayName: null,
+    isAdmin: adminEmails.indexOf((user.email || '').toLowerCase()) !== -1 };
   try {
     var p = await sb.from('profiles').select('display_name').eq('id', user.id).maybeSingle();
     if (p.data && p.data.display_name) state.user.displayName = p.data.display_name;
   } catch (e) {}
   await loadTeacherStatus();
-  if (state.teacher) { twRenderWorkspace(v); return; }
+  if (state.teacher || state.user.isAdmin) { twRenderWorkspace(v); return; }
   if (state.teacherRequest) {
     v.innerHTML = '<div class="tw-narrow">' +
       '<div class="tw-brandrow">🍎 <b>Muse English</b><span>for Teachers</span></div>' +
@@ -11923,6 +11935,7 @@ async function twLogout() {
   try { if (sb) await sb.auth.signOut(); } catch (e) {}
   state.user = null; state.teacher = null; state.teacherRequest = null;
   state.twSection = null; state.twStudents = null; state.twPtest = null; state.twAssignments = null;
+  state.twViewTeacher = null; state.viewTeacher = null; state.twTeacherList = null;
   window.location.href = '/teachers';
 }
 
@@ -11930,30 +11943,98 @@ async function twLogout() {
 
 function twRenderWorkspace(v) {
   if (!state.twSection) state.twSection = 'overview';
-  var t = state.teacher;
+  var t = state.teacher || {};
   var em = (state.user && state.user.email) || '';
+  var isAdmin = !!(state.user && state.user.isAdmin);
   v.innerHTML =
     '<div class="tw-work">' +
     '<aside class="tw-side">' +
       '<div class="tw-brandrow tw-brandrow-side"><span class="tw-apple">🍎</span><span><b>Muse English</b><small>for Teachers</small></span></div>' +
+      (isAdmin ? '<div class="tw-switchwrap"><label for="tw-teacher-switch">👁 Viewing</label>' +
+        '<select id="tw-teacher-switch" class="tw-select"><option value="">Loading teachers…</option></select></div>' : '') +
       '<nav class="tw-nav">' + TW_SECTIONS.map(function (s) {
         return '<button class="tw-navbtn' + (state.twSection === s[0] ? ' on' : '') + '" data-twsec="' + s[0] + '">' +
           '<span class="tw-navico">' + s[1] + '</span>' + s[2] + '</button>';
       }).join('') + '</nav>' +
       '<div class="tw-side-foot">' +
         '<div class="tw-me">' + twAvatar(t.display_name || em, 'tw-av-lg') +
-          '<span class="tw-me-txt"><b>' + esc(t.display_name || 'Teacher') + '</b><small>' + esc(em) + '</small></span></div>' +
+          '<span class="tw-me-txt"><b>' + esc(t.display_name || (isAdmin ? 'Admin' : 'Teacher')) + '</b><small>' + esc(em) + '</small></span></div>' +
         '<button class="tw-footlink" data-twsec="settings"><span>⚙️</span> Settings</button>' +
         '<a class="tw-footlink" href="/"><span>⬈</span> Learner app</a>' +
         '<button class="tw-footlink" data-action="tw-logout"><span>⎋</span> Log out</button>' +
       '</div>' +
     '</aside>' +
-    '<main class="tw-main"><div class="tw-main-in" id="tw-content"></div></main>' +
+    '<main class="tw-main"><div id="tw-viewbanner"></div><div class="tw-main-in" id="tw-content"></div></main>' +
     '</div>';
   Array.prototype.forEach.call(v.querySelectorAll('[data-twsec]'), function (b) {
     b.addEventListener('click', function () { twShowSection(b.getAttribute('data-twsec')); });
   });
+  if (isAdmin) twInitTeacherSwitch();
   twShowSection(state.twSection);
+}
+
+/* ---------------- admin: view-as-teacher ----------------
+   Admin-only teacher switcher inside the /teachers portal.
+   Viewing another teacher is strictly read-only. */
+async function twGetTeacherList() {
+  if (state.twTeacherList) return state.twTeacherList;
+  var list = [];
+  try {
+    var r = await sb.from('teachers').select('user_id,ref_code,display_name,status')
+      .eq('status', 'approved').order('display_name', { ascending: true });
+    if (!r.error) list = r.data || [];
+  } catch (e) {}
+  state.twTeacherList = list;
+  return list;
+}
+/* Effective teacher context: the viewed teacher, or the logged-in teacher. */
+function twEffTeacher() { return state.twViewTeacher || state.teacher; }
+/* True when the admin is looking at someone else's dashboard. */
+function twReadOnly() {
+  var v = state.twViewTeacher;
+  var me = state.teacher;
+  return !!(v && (!me || v.user_id !== me.user_id));
+}
+async function twInitTeacherSwitch() {
+  var sel = document.getElementById('tw-teacher-switch');
+  if (!sel) return;
+  var list = await twGetTeacherList();
+  var meId = state.teacher && state.teacher.user_id;
+  var others = list.filter(function (x) { return x.user_id !== meId; });
+  if (!state.teacher && others.length && !state.twViewTeacher) {
+    /* Admin without a teacher row: default to the first teacher. */
+    twSetViewTeacher(others[0]);
+    return;
+  }
+  sel.innerHTML = (state.teacher ? '<option value="">My dashboard</option>' : '') +
+    others.map(function (x) {
+      return '<option value="' + x.user_id + '"' +
+        (state.twViewTeacher && state.twViewTeacher.user_id === x.user_id ? ' selected' : '') + '>' +
+        esc(x.display_name) + '</option>';
+    }).join('') || '<option value="">No teachers yet</option>';
+  sel.addEventListener('change', function () {
+    var picked = others.filter(function (x) { return x.user_id === sel.value; })[0] || null;
+    twSetViewTeacher(picked);
+  });
+}
+function twSetViewTeacher(t) {
+  state.twViewTeacher = t;
+  /* Reuse the legacy view-as-teacher plumbing: tchViewId() then resolves to
+     the viewed teacher, and action buttons hide in the student detail. */
+  state.viewTeacher = t ? { user_id: t.user_id, display_name: t.display_name, ref_code: t.ref_code } : null;
+  state.twStudents = null; state.twPtest = null; state.twAssignments = null;
+  state.twSection = 'overview';
+  twRenderWorkspace(document.getElementById('view'));
+}
+function twPaintViewBanner() {
+  var host = document.getElementById('tw-viewbanner');
+  if (!host) return;
+  if (twReadOnly()) {
+    var t = state.twViewTeacher;
+    host.innerHTML = '<div class="tw-viewbanner">👁 You’re viewing <b>' + esc(t.display_name) +
+      '’s dashboard</b> — read-only. <button class="tw-btn tw-btn-sm tw-btn-white" id="tw-backmine">Back to my dashboard</button></div>';
+    document.getElementById('tw-backmine').addEventListener('click', function () { twSetViewTeacher(null); });
+  } else host.innerHTML = '';
 }
 
 function twShowSection(name) {
@@ -11964,6 +12045,7 @@ function twShowSection(name) {
   var c = document.getElementById('tw-content');
   if (!c) return;
   window.scrollTo(0, 0);
+  twPaintViewBanner();
   if (name === 'overview') twPageOverview(c);
   else if (name === 'students') twPageStudents(c);
   else if (name === 'assignments') twPageAssignments(c);
@@ -11978,9 +12060,14 @@ async function twGetStudents() {
   if (state.twStudents) return state.twStudents;
   var list = [];
   try {
-    var r = await sb.rpc('get_my_students');
-    if (!r.error) list = r.data || [];
-  } catch (e) {}
+    var params = twReadOnly() ? { p_teacher: state.twViewTeacher.user_id } : {};
+    var r = await sb.rpc('get_my_students', params);
+    if (r.error) throw r.error;
+    list = r.data || [];
+    state.twStudentsError = null;
+  } catch (e) {
+    state.twStudentsError = (e && e.message) || String(e);
+  }
   state.twStudents = list;
   state.teacherStudents = list; /* keep legacy detail renderer in sync */
   return list;
@@ -11988,10 +12075,11 @@ async function twGetStudents() {
 async function twGetPtest() {
   if (state.twPtest) return state.twPtest;
   var rows = [];
+  var t = twEffTeacher();
   try {
     var r = await sb.from('placement_results')
       .select('id,student_id,student_name,student_mobile,status,scores,suggested_level,sections,started_at,completed_at,updated_at')
-      .eq('teacher_ref', state.teacher.ref_code)
+      .eq('teacher_ref', t ? t.ref_code : '')
       .order('updated_at', { ascending: false }).limit(100);
     if (!r.error) rows = r.data || [];
   } catch (e) {}
@@ -12002,10 +12090,11 @@ async function twGetPtest() {
 async function twGetAssignments() {
   if (state.twAssignments) return state.twAssignments;
   var assigns = [], doneMap = {};
+  var t = twEffTeacher();
   try {
     var a = await sb.from('assignments')
       .select('id,kind,title,created_at,deadline,student_ids,question_count,status,send_at,send_tz')
-      .eq('teacher_id', state.user.id).order('created_at', { ascending: false }).limit(40);
+      .eq('teacher_id', t ? t.user_id : state.user.id).order('created_at', { ascending: false }).limit(40);
     if (a.error) throw a.error;
     assigns = a.data || [];
     var ids = assigns.map(function (x) { return x.id; });
@@ -12073,7 +12162,7 @@ async function twPageOverview(c) {
     b.addEventListener('click', function () { twShowSection(b.getAttribute('data-twsec')); });
   });
   c.querySelector('#tw-copy-ptest').addEventListener('click', function () {
-    twCopy(teacherPlacementLink(state.teacher.ref_code), this);
+    twCopy(teacherPlacementLink((twEffTeacher() || {}).ref_code), this);
   });
   var set = function (id, v) { var el = document.getElementById(id); if (el) el.textContent = v; };
   var students = await twGetStudents();
@@ -12102,7 +12191,7 @@ async function twPageOverview(c) {
         '<p class="muted">When your students take a placement test,<br>their results will appear here.</p>' +
         '<button class="tw-btn tw-btn-sm tw-btn-ghost" id="tw-share-ptest">🔗 Share your placement link</button>';
       var sh = document.getElementById('tw-share-ptest');
-      if (sh) sh.addEventListener('click', function () { twCopy(teacherPlacementLink(state.teacher.ref_code), this); });
+      if (sh) sh.addEventListener('click', function () { twCopy(teacherPlacementLink((twEffTeacher() || {}).ref_code), this); });
     } else {
       rp.innerHTML = rows.slice(0, 4).map(function (x) {
         var sc = x.scores || {};
@@ -12147,8 +12236,11 @@ async function twPageStudents(c) {
   var ptest = await twGetPtest();
   var ptestByStudent = {};
   ptest.forEach(function (x) { if (x.student_id && x.status === 'completed') ptestByStudent[x.student_id] = x; });
+  var ro = twReadOnly();
   c.innerHTML = twPageHead('STUDENTS', 'My students <span class="tw-count">(' + students.length + ')</span>',
       'View and manage your students’ progress, activity and placement test results.') +
+    (state.twStudentsError ? '<div class="tw-errbox">⚠️ Could not load students: ' + esc(state.twStudentsError) +
+      '<br><span class="muted">If you are viewing another teacher, run the admin migration in Supabase first.</span></div>' : '') +
     '<div class="tw-toolbar">' +
       '<div class="tw-search"><span>🔍</span><input id="tw-q" type="search" placeholder="Search students by name…"></div>' +
       '<select id="tw-flevel" class="tw-select"><option value="">All levels</option>' +
@@ -12157,7 +12249,7 @@ async function twPageStudents(c) {
         }).join('') + '</select>' +
       '<select id="tw-sort" class="tw-select"><option value="active">Last active</option>' +
         '<option value="name">Name A–Z</option><option value="xp">XP (7d)</option><option value="streak">Streak</option></select>' +
-      '<button class="tw-btn tw-btn-orange" id="tw-invite">＋ Invite student</button>' +
+      (ro ? '' : '<button class="tw-btn tw-btn-orange" id="tw-invite">＋ Invite student</button>') +
     '</div>' +
     '<div class="tw-tablecard"><div class="tw-table-scroll"><div class="tw-table">' +
       '<div class="tw-thead"><span>STUDENT</span><span>🔥 STREAK</span><span>📊 XP 7D</span><span>📖 LESSONS</span>' +
@@ -12196,8 +12288,10 @@ async function twPageStudents(c) {
     document.getElementById(id).addEventListener('input', render);
     document.getElementById(id).addEventListener('change', render);
   });
-  document.getElementById('tw-invite').addEventListener('click', function () {
-    twCopy(teacherInviteLink(state.teacher.ref_code), this);
+  var invBtn = document.getElementById('tw-invite');
+  if (invBtn) invBtn.addEventListener('click', function () {
+    var t = twEffTeacher();
+    if (t) twCopy(teacherInviteLink(t.ref_code), this);
   });
   document.getElementById('tw-tbody').addEventListener('click', function (e) {
     var mb = e.target.closest('[data-twmenu]');
@@ -12219,7 +12313,7 @@ function twStudentMenu(btn, students) {
   var nm = s.display_name || (s.email || '?').split('@')[0];
   m.innerHTML = '<b>' + esc(nm) + '</b>' +
     '<button data-m="view">📊 View 14-day activity</button>' +
-    '<button data-m="nudge">🔔 Send nudge</button>';
+    (twReadOnly() ? '' : '<button data-m="nudge">🔔 Send nudge</button>');
   var r = btn.getBoundingClientRect();
   m.style.top = (r.bottom + window.scrollY + 6) + 'px';
   m.style.left = Math.max(8, r.right + window.scrollX - 220) + 'px';
@@ -12254,13 +12348,14 @@ async function twSendNudge(i) {
 async function twPageAssignments(c) {
   var assigns = await twGetAssignments();
   var students = await twGetStudents();
+  var ro = twReadOnly();
   c.innerHTML = twPageHead('ASSIGNMENTS', 'Assignments',
       'Create, send and track assignments for your students.') +
     '<div class="tw-asg-top"><div class="tw-tabs">' +
       '<button class="tw-tab on" data-twtab="list">Sent</button>' +
-      '<button class="tw-tab" data-twtab="planner">📅 Weekly planner</button></div>' +
+      (ro ? '' : '<button class="tw-tab" data-twtab="planner">📅 Weekly planner</button>') + '</div>' +
       '<div class="tw-asg-actions"><button class="tw-btn tw-btn-white" id="tw-classreport">📊 Class report</button>' +
-      '<button class="tw-btn tw-btn-orange" data-action="assignment-compose">＋ New assignment</button></div></div>' +
+      (ro ? '' : '<button class="tw-btn tw-btn-orange" data-action="assignment-compose">＋ New assignment</button>') + '</div></div>' +
     '<div id="tw-assign-list"></div>' +
     '<div id="tw-assign-planner" hidden></div>';
   var paint = function () {
@@ -12353,7 +12448,7 @@ async function twPagePlacement(c) {
       '<button class="tw-btn tw-btn-orange" id="tw-copy-ptest2">🔗 Copy placement link</button></div>' +
     '<div id="tw-ptest-list"></div><div id="tch-ptest-detail"></div>';
   document.getElementById('tw-copy-ptest2').addEventListener('click', function () {
-    twCopy(teacherPlacementLink(state.teacher.ref_code), this);
+    twCopy(teacherPlacementLink((twEffTeacher() || {}).ref_code), this);
   });
   var host = document.getElementById('tw-ptest-list');
   if (!rows.length) {
@@ -12485,7 +12580,15 @@ function twProfileEditor(host) {
 }
 
 async function twPageLinks(c) {
-  var t = state.teacher;
+  var t = twEffTeacher();
+  if (!t) {
+    c.innerHTML = twPageHead('INVITE & LINKS', 'Invite & links',
+      'Share your links, bring in new students and build your profile.') +
+      '<div class="tw-emptybox"><div class="tw-empty-ill">🔗</div><b>No teacher selected</b>' +
+      '<p class="muted">Pick a teacher from the switcher above.</p></div>';
+    return;
+  }
+  var ro = twReadOnly();
   await twGetStudents();
   c.innerHTML = twPageHead('INVITE & LINKS', 'Invite & links',
       'Share your links, bring in new students and build your profile.') +
@@ -12501,16 +12604,17 @@ async function twPageLinks(c) {
       '<div class="tw-linkrow"><code>' + esc(teacherPlacementLink(t.ref_code)) + '</code>' +
       '<button class="tw-btn tw-btn-orange tw-btn-sm" id="tw-copy-ptest3">⧉ Copy</button></div></div>' +
       '<div class="tw-link-side"><div class="tw-link-note tw-link-note-p">Students take a 5-part placement test and their results will appear in your dashboard.</div></div></div>' +
-    '<div class="tw-profcard"><div class="tw-cardhead"><div><h3 style="margin:0">👤 My public profile</h3>' +
+    (ro ? '<div class="tw-profcard"><p class="muted" style="margin:0">👁 Read-only — you’re viewing ' + esc(t.display_name) + '’s links.</p></div>'
+      : '<div class="tw-profcard"><div class="tw-cardhead"><div><h3 style="margin:0">👤 My public profile</h3>' +
       '<p class="muted">Students see this when choosing a teacher.</p></div></div>' +
-      '<div id="tw-prof-edit"></div></div>';
+      '<div id="tw-prof-edit"></div></div>');
   document.getElementById('tw-copy-invite').addEventListener('click', function () {
     twCopy(teacherInviteLink(t.ref_code), this);
   });
   document.getElementById('tw-copy-ptest3').addEventListener('click', function () {
     twCopy(teacherPlacementLink(t.ref_code), this);
   });
-  twProfileEditor(document.getElementById('tw-prof-edit'));
+  if (!ro) twProfileEditor(document.getElementById('tw-prof-edit'));
 }
 
 function twPageSettings(c) {

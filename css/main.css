@@ -4012,3 +4012,16 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
 .tw-m-del:hover { background: #FDECEC; }
 .tw-m-closebtn { width: 100%; border: 0; background: #232B4D; color: #fff; border-radius: 14px; padding: 0.85rem; font-weight: 700; font-size: 1rem; cursor: pointer; font-family: inherit; }
 .tw-m-closebtn:hover { background: #2E3A63; }
+/* ---------- admin view-as-teacher ---------- */
+.tw-switchwrap { padding: 0 0.5rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.tw-switchwrap label { font-size: 0.72rem; letter-spacing: 0.08em; font-weight: 800; color: #A08C6E; }
+.tw-switchwrap .tw-select { width: 100%; box-sizing: border-box; }
+#tw-viewbanner { max-width: 1120px; margin: 0 auto; padding: 1.4rem 2.4rem 0; }
+.tw-viewbanner { background: #FFF6E8; border: 1px solid #F0D9A8; border-radius: 14px; padding: 0.75rem 1.1rem; display: flex; align-items: center; gap: 0.7rem; font-size: 0.92rem; color: #7A5E2E; flex-wrap: wrap; }
+.tw-viewbanner b { color: #232B4D; }
+.tw-viewbanner .tw-btn { margin-left: auto; }
+.tw-errbox { background: #FFF5F5; border: 1px solid #F0B4B4; color: #A33333; border-radius: 14px; padding: 0.9rem 1.1rem; margin-bottom: 1rem; font-size: 0.9rem; }
+@media (max-width: 1023px) {
+  #tw-viewbanner { padding: 0.9rem 0.9rem 0; }
+  .tw-switchwrap { padding: 0; min-width: 180px; }
+}
