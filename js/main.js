@@ -3210,21 +3210,9 @@ function assignSlug(topic) {
 }
 
 /* ---- teacher composer ---- */
-function teacherAssignmentComposer() {
-  if (twReadOnly()) { twReadOnlyNotice(); return; }
-  const list = state.teacherStudents || [];
-  if (!state.teacher) return;
-  if (!list.length) {    showModal('<div class="modal-ico">📝</div><h2>New assignment</h2>' +
-      '<p class="muted">You have no students yet — share your invite link first. 🌱</p>' +
-      '<button class="btn btn-ghost btn-block" data-action="modal-close">Close</button>');
-    return;
-  }
-  showModal(
-    '<div class="as2">' +
-    '<div class="as2-head"><div class="as2-ico"><span>📝</span></div>' +
-    '<i class="as2-spark s1"></i><i class="as2-spark s2"></i>' +
-    '<button class="as2-close" data-action="modal-close" aria-label="Close">✕</button></div>' +
-    '<h2>New assignment</h2>' +
+/* Shared assignment-composer form (used by the modal and by the /teachers full-page composer). */
+function assignmentComposerBodyHTML(list) {
+  return (
     '<div class="as2-modes" role="tablist">' +
     '<button type="button" class="as2-mode on" data-amode="homework">📝 Homework</button>' +
     '<button type="button" class="as2-mode" data-amode="exam">📋 Exam</button></div>' +
@@ -3273,14 +3261,14 @@ function teacherAssignmentComposer() {
     '<div class="field"><label for="as-deadline">Deadline <span class="as2-opt">(optional)</span></label>' +
     '<input id="as-deadline" class="input" type="date"></div>' +
     '<div class="form-error" id="as-error" role="alert"></div>' +
-    '<button class="as2-send" data-action="assignment-create">✈ Send to students</button>' +
-    '<button class="as2-cancel" data-action="modal-close">Cancel</button>' +
-    '</div>'
+    '<button class="as2-send" data-action="assignment-create">✈ Send to students</button>'
   );
-  const as2card = document.querySelector('#app-modal .modal-card');
-  if (as2card) as2card.classList.add('as2-card');
+}
+
+/* Wire composer events. Works in the modal and in the /teachers full-page composer. */
+function assignmentComposerWire() {
   assignMode = 'homework';
-  Array.prototype.forEach.call(document.querySelectorAll('#app-modal .as2-mode'), function (b) {
+  Array.prototype.forEach.call(document.querySelectorAll('.as2-mode'), function (b) {
     b.addEventListener('click', function () { setAssignMode(b.getAttribute('data-amode')); });
   });
   document.getElementById('as-addrow').addEventListener('click', function () { examAddRow(); });
@@ -3298,19 +3286,56 @@ function teacherAssignmentComposer() {
     document.getElementById('as-students').classList.toggle('hidden', this.checked);
   });
 }
+
+function teacherAssignmentComposer() {
+  if (twReadOnly()) { twReadOnlyNotice(); return; }
+  const list = state.teacherStudents || [];
+  if (!state.teacher) return;
+  if (!list.length) {    showModal('<div class="modal-ico">📝</div><h2>New assignment</h2>' +
+      '<p class="muted">You have no students yet — share your invite link first. 🌱</p>' +
+      '<button class="btn btn-ghost btn-block" data-action="modal-close">Close</button>');
+    return;
+  }
+  showModal(
+    '<div class="as2">' +
+    '<div class="as2-head"><div class="as2-ico"><span>📝</span></div>' +
+    '<i class="as2-spark s1"></i><i class="as2-spark s2"></i>' +
+    '<button class="as2-close" data-action="modal-close" aria-label="Close">✕</button></div>' +
+    '<h2>New assignment</h2>' +
+    assignmentComposerBodyHTML(list) +
+    '<button class="as2-cancel" data-action="modal-close">Cancel</button>' +
+    '</div>'
+  );
+  const as2card = document.querySelector('#app-modal .modal-card');
+  if (as2card) as2card.classList.add('as2-card');
+  assignmentComposerWire();
+}
 /* ---- assignment composer: homework | exam mode + mixed-topic rows ---- */
 var assignMode = 'homework';
 function setAssignMode(m) {
   assignMode = (m === 'exam') ? 'exam' : 'homework';
-  Array.prototype.forEach.call(document.querySelectorAll('#app-modal .as2-mode'), function (b) {
+  /* container-agnostic: works in the modal and in the /teachers full-page composer */
+  Array.prototype.forEach.call(document.querySelectorAll('.as2-mode'), function (b) {
     b.classList.toggle('on', b.getAttribute('data-amode') === assignMode);
   });
   const hw = document.getElementById('as-hw-fields'), ex = document.getElementById('as-exam-fields');
   if (hw) hw.classList.toggle('hidden', assignMode !== 'homework');
   if (ex) ex.classList.toggle('hidden', assignMode !== 'exam');
-  const ico = document.querySelector('#app-modal .as2-ico span');
+  const ico = document.querySelector('.as2-ico span');
   if (ico) ico.textContent = assignMode === 'exam' ? '📋' : '📝';
   if (typeof asV2PanelUpdate === 'function') asV2PanelUpdate();
+}
+/* After a successful send: close the modal (legacy) or return to the
+   assignments list (the /teachers full-page composer). */
+function asComposeDone() {
+  closeModal();
+  var twc = document.getElementById('tw-content');
+  if (twc && (state.twSection === 'compose' || state.twSection === 'assignments')) {
+    state.twAssignments = null; /* invalidate portal cache */
+    twShowSection('assignments');
+  } else {
+    loadTeacherAssignments();
+  }
 }
 function examTopicOptions(selected) {
   const lvEl = document.getElementById('as-level');
@@ -3618,8 +3643,7 @@ async function createAssignment(btn) {
         sb.rpc('send_nudge', { p_student: s.user_id })
       ]);
     }));
-    closeModal();
-    loadTeacherAssignments();
+    asComposeDone();
   } catch (e) {
     err('Could not send: ' + (e && e.message ? e.message : 'check your connection.'));
     btn.disabled = false; btn.textContent = orig;
@@ -3756,8 +3780,7 @@ async function createV2Assignment(btn, ctx) {
         sb.rpc('send_nudge', { p_student: s.user_id })
       ]);
     }));
-    closeModal();
-    loadTeacherAssignments();
+    asComposeDone();
   } catch (e) {
     err('Could not send: ' + (e && e.message ? e.message : 'check your connection.'));
     btn.disabled = false; btn.textContent = orig;
@@ -3851,8 +3874,7 @@ async function createExamAssignment(btn, ctx) {
         sb.rpc('send_nudge', { p_student: s.user_id })
       ]);
     }));
-    closeModal();
-    loadTeacherAssignments();
+    asComposeDone();
     if (skipped.length) alert('Exam sent, but these topics were skipped (no question bank yet):\n• ' + skipped.join('\n• '));
   } catch (e) {
     err('Could not send: ' + (e && e.message ? e.message : 'check your connection.'));
@@ -4613,8 +4635,7 @@ async function deleteTeacherAssignment(i, btn) {
     /* The assignment itself (RLS: own assignments — same as cancelScheduledAssignment). */
     const d = await sb.from('assignments').delete().eq('id', r.id).eq('teacher_id', tchViewId());
     if (d.error) throw d.error;
-    closeModal();
-    loadTeacherAssignments();
+    asComposeDone();
   } catch (e) {
     btn.disabled = false;
     btn.textContent = '🗑 Delete assignment';
@@ -4631,8 +4652,7 @@ async function cancelScheduledAssignment(i, btn) {
   try {
     const d = await sb.from('assignments').delete().eq('id', r.id);
     if (d.error) throw d.error;
-    closeModal();
-    loadTeacherAssignments();
+    asComposeDone();
   } catch (e) {
     btn.disabled = false;
     alert('Could not cancel: ' + (e.message || e));
@@ -12397,7 +12417,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610181909';
+var APP_VERSION = '202610181922';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -12830,6 +12850,7 @@ function twShowSection(name) {
   if (name === 'overview') twPageOverview(c);
   else if (name === 'students') twPageStudents(c);
   else if (name === 'assignments') twPageAssignments(c);
+  else if (name === 'compose') twPageCompose(c);
   else if (name === 'placement') twPagePlacement(c);
   else if (name === 'links') twPageLinks(c);
   else if (name === 'settings') twPageSettings(c);
@@ -13136,7 +13157,7 @@ async function twPageAssignments(c) {
       '<button class="tw-tab on" data-twtab="list">Sent</button>' +
       (ro ? '' : '<button class="tw-tab" data-twtab="planner">📅 Weekly planner</button>') + '</div>' +
       '<div class="tw-asg-actions"><button class="tw-btn tw-btn-white" id="tw-classreport">📊 Class report</button>' +
-      (ro ? '' : '<button class="tw-btn tw-btn-orange" data-action="assignment-compose">＋ New assignment</button>') + '</div></div>' +
+      (ro ? '' : '<button class="tw-btn tw-btn-orange" id="tw-new-assignment">＋ New assignment</button>') + '</div></div>' +
     '<div id="tw-assign-list"></div>' +
     '<div id="tw-assign-planner" hidden></div>';
   var paint = function () {
@@ -13187,7 +13208,32 @@ async function twPageAssignments(c) {
   document.getElementById('tw-classreport').addEventListener('click', function () {
     twClassReport(assigns, students);
   });
+  var newBtn = document.getElementById('tw-new-assignment');
+  if (newBtn) newBtn.addEventListener('click', function () { twShowSection('compose'); });
 }
+/* ---------------- page: new assignment (full-page composer) ---------------- */
+/* Full-page version of the assignment composer for the /teachers portal.
+   Reuses assignmentComposerBodyHTML() + assignmentComposerWire() (shared with the modal). */
+async function twPageCompose(c) {
+  if (twReadOnly()) { twShowSection('assignments'); return; }
+  var list = await twGetStudents();
+  var head = twPageHead('ASSIGNMENTS', 'New assignment',
+      'Pick a topic, choose teaching points and send it to your students.') +
+    '<div class="tw-backrow"><button class="tw-btn tw-btn-white" id="tw-back-assign">← Back to assignments</button></div>';
+  if (!list.length) {
+    c.innerHTML = head +
+      '<div class="tw-emptybox"><div class="tw-empty-ill">🌱</div><b>No students yet</b>' +
+      '<p class="muted">Share your invite link first, then create assignments.</p></div>';
+    document.getElementById('tw-back-assign').addEventListener('click', function () { twShowSection('assignments'); });
+    return;
+  }
+  c.innerHTML = head +
+    '<div class="tw-card tw-compose as2">' + assignmentComposerBodyHTML(list) + '</div>';
+  document.getElementById('tw-back-assign').addEventListener('click', function () { twShowSection('assignments'); });
+  assignmentComposerWire();
+  window.scrollTo(0, 0);
+}
+
 function twDueLabel(d) {
   var dt = new Date(d.length <= 10 ? d + 'T12:00:00' : d);
   if (isNaN(dt.getTime())) return d;

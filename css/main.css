@@ -4118,3 +4118,14 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
   #tw-viewbanner { padding: 0.9rem 0.9rem 0; }
   .tw-switchwrap { padding: 0; min-width: 180px; }
 }
+
+/* ---- /teachers full-page assignment composer ---- */
+.tw-backrow{margin:0 0 1rem}
+.tw-compose{padding:1.4rem;max-width:780px}
+.tw-compose .as2-modes{max-width:520px}
+@media(min-width:900px){.tw-compose{padding:2rem 2.4rem}}
+/* v2 points list: two columns on desktop */
+@media(min-width:900px){
+  #as-v2-points{display:grid;grid-template-columns:1fr 1fr;gap:.2rem 1.4rem;align-items:start}
+  #as-v2-points .as-v2-topic-head{grid-column:1/-1}
+}
