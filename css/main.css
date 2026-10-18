@@ -3442,31 +3442,54 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .g-b-bar { height: 6px; border-radius: 999px; background: #EBDFC9; overflow: hidden; margin-top: 0.25rem; }
 .g-b-bar span { display: block; height: 100%; background: var(--herb); border-radius: 999px; }
 
-/* Hub */
-.g-hub { max-width: var(--content-w); margin: 0 auto; padding: 0 0 2rem; }
-.g-head h1 { font-size: 1.6rem; margin: 0.2rem 0 0.15rem; }
-.g-head p { color: var(--muted); margin: 0 0 1rem; font-size: 0.9rem; }
-.g-filters { display: flex; gap: 0.45rem; overflow-x: auto; padding-bottom: 0.4rem; margin-bottom: 0.7rem; -webkit-overflow-scrolling: touch; }
-.g-pill {
-  flex: 0 0 auto; border: 1px solid var(--line); background: var(--card);
-  border-radius: 999px; padding: 0.42rem 0.9rem; font-size: 0.88rem; font-weight: 600;
-  color: var(--muted); cursor: pointer; font-family: inherit;
-}
-.g-pill.on { background: var(--ink); border-color: var(--ink); color: #fff; }
-.g-search { margin-bottom: 0.9rem; }
-.g-search input {
-  width: 100%; border: 1px solid var(--line); border-radius: 12px;
-  padding: 0.7rem 0.9rem; font-size: 1rem; font-family: inherit;
-  background: var(--card); color: var(--ink);
-}
-.g-cards { display: flex; flex-direction: column; gap: 0.55rem; }
-.g-card {
-  display: flex; align-items: center; gap: 0.75rem;
-  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
-  padding: 0.75rem 0.85rem; text-decoration: none; color: var(--ink);
-  box-shadow: var(--shadow);
-}
-.g-card:active { transform: scale(0.99); }
+/* Grammar hub v2 (mockup redesign 2026-10-17) */
+body.view-grammar #view { background: #FDF8F1; }
+.g-hub { max-width: var(--content-w); margin: 0 auto; padding: 0.3rem 0 2.5rem; }
+.g-hub #gtest-banner-wrap { margin-bottom: 0.9rem; }
+.gh-crumb { display: flex; align-items: center; gap: 0.32rem; color: #9AA1B5; font-size: 0.85rem; margin-bottom: 0.55rem; }
+.gh-crumb b { color: #232B4D; font-weight: 700; }
+.gh-crumb-sep { color: #C6CCDD; }
+.gh-hero { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.85rem; }
+.gh-hero-t { flex: 1 1 auto; min-width: 0; }
+.gh-hero-t h1 { font-family: "Fredoka", "Avenir Next", "Trebuchet MS", sans-serif; font-weight: 700; font-size: 2rem; line-height: 1.12; letter-spacing: -0.01em; color: #232B4D; margin: 0 0 0.45rem; }
+.gh-hero-t h1 em { font-style: normal; color: #F26522; }
+.gh-hero-t p { color: #5B6478; font-size: 0.92rem; line-height: 1.55; margin: 0; }
+.gh-mascot { width: 132px; height: auto; border-radius: 26px; box-shadow: 0 10px 26px rgba(242, 101, 34, 0.20); flex: 0 0 auto; }
+.gh-feats { display: flex; gap: 0.55rem; margin-bottom: 0.9rem; }
+.gh-feat { flex: 1 1 0; min-width: 0; display: flex; align-items: center; gap: 0.5rem; background: #fff; border: 1px solid #F3EAD9; border-radius: 14px; padding: 0.55rem 0.6rem; box-shadow: 0 2px 8px rgba(120, 90, 40, 0.06); }
+.gh-feat i { font-style: normal; font-size: 1.25rem; flex: 0 0 auto; }
+.gh-feat b { font-size: 0.72rem; line-height: 1.35; color: #232B4D; font-weight: 700; }
+.gh-filters { display: flex; gap: 0.45rem; overflow-x: auto; padding: 0.15rem 0 0.5rem; margin-bottom: 0.7rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.gh-filters::-webkit-scrollbar { display: none; }
+.gh-pill { flex: 0 0 auto; border: 1px solid transparent; border-radius: 999px; padding: 0.5rem 1.05rem; font-size: 0.88rem; font-weight: 700; color: #232B4D; cursor: pointer; font-family: inherit; }
+.gh-pill-lv-all { background: #FFFFFF; border-color: #EFE7D6; }
+.gh-pill-lv-a1 { background: #FDF3D2; } .gh-pill-lv-a2 { background: #FDEBD6; }
+.gh-pill-lv-b1 { background: #DFF3E6; } .gh-pill-lv-b2 { background: #FFE3CF; }
+.gh-pill-lv-c1 { background: #DFEFFC; } .gh-pill-lv-c2 { background: #EAE4FA; }
+.gh-pill.on { background: #F26522; border-color: #F26522; color: #fff; box-shadow: 0 4px 12px rgba(242, 101, 34, 0.35); }
+.gh-search { position: relative; margin-bottom: 1rem; }
+.gh-search-ico { position: absolute; left: 0.95rem; top: 50%; transform: translateY(-50%); font-size: 1.05rem; }
+.gh-search input { width: 100%; border: 1px solid #F0E6D2; border-radius: 16px; padding: 0.8rem 1rem 0.8rem 2.7rem; font-size: 0.95rem; font-family: inherit; background: #fff; color: #232B4D; box-shadow: 0 2px 8px rgba(120, 90, 40, 0.05); }
+.gh-search input::placeholder { color: #A7AEC2; }
+.gh-sec { display: flex; align-items: flex-start; gap: 0.7rem; margin: 0.1rem 0 0.8rem; }
+.gh-lv { flex: 0 0 auto; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.03em; color: #fff; border-radius: 9px; padding: 0.32rem 0.55rem; min-width: 40px; text-align: center; }
+.gh-sec-t { flex: 1 1 auto; min-width: 0; }
+.gh-sec-t h2 { font-family: "Fredoka", "Avenir Next", "Trebuchet MS", sans-serif; font-weight: 700; font-size: 1.15rem; color: #232B4D; margin: 0 0 0.15rem; }
+.gh-sec-t p { color: #8A93A6; font-size: 0.82rem; margin: 0; line-height: 1.45; }
+.gh-count { flex: 0 0 auto; color: #8A93A6; font-size: 0.82rem; padding-top: 0.25rem; white-space: nowrap; }
+.gh-cards { display: flex; flex-direction: column; gap: 0.65rem; }
+.gh-card { display: flex; align-items: center; gap: 0.75rem; background: #fff; border: 1px solid #F5EDDC; border-radius: 18px; padding: 0.7rem 0.8rem; text-decoration: none; color: #232B4D; box-shadow: 0 3px 12px rgba(120, 90, 40, 0.07); }
+.gh-card:active { transform: scale(0.99); }
+.gh-ico { flex: 0 0 auto; width: 60px; height: 60px; border-radius: 16px; overflow: hidden; background: #FBEFE3; }
+.gh-ico img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gh-card-main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 0.18rem; }
+.gh-titlerow { display: flex; align-items: center; gap: 0.5rem; min-width: 0; }
+.gh-titlerow b { font-size: 0.95rem; line-height: 1.3; color: #232B4D; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.gh-status { font-size: 0.78rem; color: #9AA1B5; padding-left: 4.35rem; }
+.gh-status.done { color: #2F9E44; font-weight: 700; }
+.gh-status.prog { color: #B4691E; }
+.gh-chev { flex: 0 0 auto; color: #C6CCDD; font-size: 1.4rem; font-weight: 300; }
+/* .g-lv badges: still used by the grammar topic page + placement report */
 .g-lv {
   flex: 0 0 auto; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em;
   color: #fff; border-radius: 8px; padding: 0.28rem 0.5rem; min-width: 38px; text-align: center;
@@ -3474,12 +3497,6 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .g-lv-a1 { background: #39745A; } .g-lv-a2 { background: #2A7F8E; }
 .g-lv-b1 { background: #C84B31; } .g-lv-b2 { background: #B45309; }
 .g-lv-c1 { background: #7C3AED; } .g-lv-c2 { background: #17212B; }
-.g-card-main { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 0.12rem; }
-.g-card-main b { font-size: 0.98rem; line-height: 1.3; }
-.g-status { font-size: 0.78rem; color: var(--muted); }
-.g-status.done { color: var(--herb-dark); font-weight: 700; }
-.g-status.prog { color: #B4691E; }
-.g-chev { flex: 0 0 auto; color: var(--muted); font-size: 1.3rem; }
 
 /* Topic */
 .g-topic { max-width: var(--content-w); margin: 0 auto; padding: 0 0 2rem; }
@@ -3531,7 +3548,9 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 
 @media (min-width: 1024px) {
   .g-hub, .g-topic, .g-quiz { max-width: 860px; }
-  .g-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+  .gh-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+  .gh-mascot { width: 168px; }
+  .gh-hero-t h1 { font-size: 2.4rem; }
   #home-grammar-wrap { margin: 0 0 1.1rem; }
   .dhome .g-banner { padding: 1rem 1.25rem; }
 }

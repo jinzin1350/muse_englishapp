@@ -2015,6 +2015,7 @@ function show(view, arg) {
   if (view !== 'ptest') { if (state.ptest) { document.body.classList.remove('duo-playing'); } state.ptest = null; }
   /* Desktop home uses the mockup v6 dashboard layout. */
   document.body.classList.toggle('view-home', view === 'home');
+  document.body.classList.toggle('view-grammar', view === 'grammar');
   setChrome();
   paintWelcomeHeader();
   _wasDesktop = isDesktop();
@@ -6047,21 +6048,69 @@ function grammarBlocksHTML(blocks) {
 
 /* ---------------- grammar hub (#/grammar) ---------------- */
 
+/* Hub v2 design tokens (mockup 2026-10-17) */
+var GH_LEVELS = [
+  { id: 'all', label: 'All' }, { id: 'a1', label: 'A1' }, { id: 'a2', label: 'A2' },
+  { id: 'b1', label: 'B1' }, { id: 'b2', label: 'B2' }, { id: 'c1', label: 'C1' }, { id: 'c2', label: 'C2' }
+];
+var GH_LV_COLORS = { a1: '#D9A21B', a2: '#E8833A', b1: '#3FA46A', b2: '#F26522', c1: '#4A90D9', c2: '#8E6FC8' };
+var GH_LV_SUB = {
+  all: 'Every grammar topic from A1 to C2 \u2014 read, practise, earn points.',
+  a1: 'Essential grammar basics with clear explanations and practice exercises.',
+  a2: 'Everyday grammar topics with clear explanations and practice exercises.',
+  b1: 'Intermediate grammar topics with clear explanations and practice exercises.',
+  b2: 'Advanced grammar topics with clear explanations and practice exercises.',
+  c1: 'Complex grammar topics for fluent use, with clear explanations and practice exercises.',
+  c2: 'Mastery-level grammar topics with clear explanations and practice exercises.'
+};
+var GH_ICON_ALIAS = {
+  'comparatives-superlatives': 'comparatives', 'much-many-a-few-a-little': 'much-many',
+  'must-have-to-should': 'must-have-to', 'passive-present-past': 'passive',
+  'prepositions-of-time-in-on-at': 'prepositions-of-time'
+};
+function ghIconSrc(slug) { return '/media/grammar/guides/guide-' + (GH_ICON_ALIAS[slug] || slug) + '.webp'; }
+function ghLvBadge(lv) {
+  var label = lv === 'all' ? 'A1\u2013C2' : lv.toUpperCase();
+  var color = lv === 'all' ? '#8A93A6' : (GH_LV_COLORS[lv] || '#8A93A6');
+  return '<span class="gh-lv" style="background:' + color + '">' + label + '</span>';
+}
+function paintGhHeader() {
+  var f = state.gFilter || { level: 'all', q: '' };
+  var crumb = document.getElementById('gh-crumb-lv');
+  if (crumb) crumb.textContent = f.level === 'all' ? 'All levels' : f.level.toUpperCase();
+  var secLv = document.getElementById('gh-sec-lv');
+  if (secLv) secLv.innerHTML = ghLvBadge(f.level);
+  var sub = document.getElementById('gh-sec-sub');
+  if (sub) sub.textContent = GH_LV_SUB[f.level] || GH_LV_SUB.all;
+}
+
 function renderGrammar(v, slug) {
   if (slug) { renderGrammarTopic(v, slug); return; }
   if (!state.gFilter) state.gFilter = { level: normalizeLevel(state.user && state.user.level) || 'a1', q: '' };
   var f = state.gFilter;
   v.innerHTML = '<div class="g-hub">' +
+    '<div class="gh-crumb"><span>\uD83D\uDCD6</span> Grammar <span class="gh-crumb-sep">\u203A</span> <b id="gh-crumb-lv"></b></div>' +
+    '<div class="gh-hero"><div class="gh-hero-t">' +
+      '<h1>Grammar <em>Guides</em></h1>' +
+      '<p>Clear explanations, real examples and practice exercises for every level.</p>' +
+    '</div><img class="gh-mascot" src="/media/grammar/mascot-hero.webp" alt="Grammar mascot"></div>' +
+    '<div class="gh-feats">' +
+      '<span class="gh-feat"><i>\uD83D\uDCD6</i><b>Simple<br>explanations</b></span>' +
+      '<span class="gh-feat"><i>\uD83D\uDCAC</i><b>Real<br>examples</b></span>' +
+      '<span class="gh-feat"><i>\u270F\uFE0F</i><b>Practice<br>exercises</b></span>' +
+    '</div>' +
     '<div id="gtest-banner-wrap"></div>' +
-    '<div class="g-head"><h1>\uD83D\uDCD6 Grammar Guides</h1>' +
-    '<p>' + GRAMMAR_TOTAL + ' topics · A1–C2 · read, practise, earn points</p></div>' +
-    '<div class="g-filters" role="tablist">' +
-    ['all'].concat(GRAMMAR_LEVELS).map(function (lv) {
-      var label = lv === 'all' ? 'All' : lv.toUpperCase();
-      return '<button class="g-pill' + (f.level === lv ? ' on' : '') + '" data-glevel="' + lv + '">' + label + '</button>';
+    '<div class="gh-filters" role="tablist">' +
+    GH_LEVELS.map(function (lv) {
+      return '<button class="gh-pill gh-pill-lv-' + lv.id + (f.level === lv.id ? ' on' : '') + '" data-glevel="' + lv.id + '">' + lv.label + '</button>';
     }).join('') + '</div>' +
-    '<div class="g-search"><input id="g-search" type="search" placeholder="Search topics…" value="' + esc(f.q) + '" aria-label="Search grammar topics"></div>' +
-    '<div id="g-list"><div class="empty">Loading…</div></div></div>';
+    '<div class="gh-search"><span class="gh-search-ico">\uD83D\uDD0D</span>' +
+      '<input id="g-search" type="search" placeholder="Search grammar topics..." value="' + esc(f.q) + '" aria-label="Search grammar topics"></div>' +
+    '<div class="gh-sec"><span id="gh-sec-lv"></span>' +
+      '<div class="gh-sec-t"><h2>Grammar Guides</h2><p id="gh-sec-sub"></p></div>' +
+      '<span class="gh-count" id="gh-count"></span></div>' +
+    '<div id="g-list"><div class="empty">Loading\u2026</div></div></div>';
+  paintGhHeader();
   paintGrammarList();
   paintGTestBanner();
   Array.prototype.forEach.call(v.querySelectorAll('[data-glevel]'), function (btn) {
@@ -6070,6 +6119,7 @@ function renderGrammar(v, slug) {
       Array.prototype.forEach.call(v.querySelectorAll('[data-glevel]'), function (bb) {
         bb.classList.toggle('on', bb === btn);
       });
+      paintGhHeader();
       paintGrammarList();
     });
   });
@@ -6094,7 +6144,9 @@ function paintGrammarList() {
       return true;
     });
     if (!list.length) { wrap.innerHTML = '<div class="empty">No topics match.</div>'; return; }
-    wrap.innerHTML = '<div class="g-cards">' + list.map(function (t) {
+    var count = document.getElementById('gh-count');
+    if (count) count.textContent = list.length + ' topic' + (list.length === 1 ? '' : 's');
+    wrap.innerHTML = '<div class="gh-cards">' + list.map(function (t) {
       return grammarCardHTML(t, prog[t.slug]);
     }).join('') + '</div>';
   }).catch(function () {
@@ -6104,13 +6156,13 @@ function paintGrammarList() {
 
 function grammarCardHTML(t, p) {
   var status;
-  if (p && p.done) status = '<span class="g-status done">✓ ' + p.best + '/' + (p.total || 16) + '</span>';
-  else if (p && p.attempts) status = '<span class="g-status prog">Best ' + p.best + '/' + (p.total || 16) + '</span>';
-  else status = '<span class="g-status new">16 exercises</span>';
-  return '<a class="g-card" href="#/grammar/' + esc(t.slug) + '">' +
-    '<span class="g-lv g-lv-' + t.level + '">' + t.level.toUpperCase() + '</span>' +
-    '<span class="g-card-main"><b>' + esc(t.h1) + '</b>' + status + '</span>' +
-    '<span class="g-chev" aria-hidden="true">›</span></a>';
+  if (p && p.done) status = '<span class="gh-status done">✓ ' + p.best + '/' + (p.total || 16) + '</span>';
+  else if (p && p.attempts) status = '<span class="gh-status prog">Best ' + p.best + '/' + (p.total || 16) + '</span>';
+  else status = '<span class="gh-status">16 exercises</span>';
+  return '<a class="gh-card" href="#/grammar/' + esc(t.slug) + '">' +
+    '<span class="gh-ico"><img src="' + ghIconSrc(t.slug) + '" alt="" loading="lazy"></span>' +
+    '<span class="gh-card-main"><span class="gh-titlerow">' + ghLvBadge(t.level) + '<b>' + esc(t.h1) + '</b></span>' + status + '</span>' +
+    '<span class="gh-chev" aria-hidden="true">›</span></a>';
 }
 
 /* ---------------- grammar topic (#/grammar/<slug>) ---------------- */
@@ -11623,7 +11675,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610180317';
+var APP_VERSION = '202610180401';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
