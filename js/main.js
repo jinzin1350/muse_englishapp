@@ -11595,7 +11595,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610180059';
+var APP_VERSION = '202610180155';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -11665,9 +11665,9 @@ function hideSplash() {
   setTimeout(function () { if (s.parentNode) s.parentNode.removeChild(s); }, 600);
 }
 
-/* ==================== Teacher portal (/teachers) ====================
-   Public landing + dedicated teacher workspace at the /teachers path
-   (served via _redirects 200-rewrite to /, same pattern as /manage).
+/* ==================== Teacher portal (/teachers) — v2 redesign ====================
+   Warm editorial design per supplied mockups (2026-10-17): cream background,
+   Lora serif display headings, orange primary buttons, pill statuses.
    Same Supabase session as the learner app: teachers log in with their
    normal account; an approved `teachers` row unlocks the workspace.
    Learner chrome is hidden via body.tw-mode. */
@@ -11681,9 +11681,115 @@ var TW_SECTIONS = [
   ['links', '🔗', 'Invite & links']
 ];
 
+var TW_LEVEL_LABEL = { a1: 'Beginner', a2: 'Elementary', b1: 'Intermediate', b2: 'Upper-Intermediate', c1: 'Advanced', c2: 'Proficient' };
+function twLevelLabel(l) {
+  l = String(l || '').toLowerCase();
+  return (l ? l.toUpperCase() : '—') + (TW_LEVEL_LABEL[l] ? ' · ' + TW_LEVEL_LABEL[l] : '');
+}
+/* Deterministic pastel avatar palette (bg, fg). */
+var TW_AV = [
+  ['#FDE3E3', '#D34F4F'], ['#E7E4FB', '#6C5CE7'], ['#DDF0FB', '#1D7FBF'],
+  ['#E4F5DB', '#4C9A2A'], ['#FFF0D6', '#C77F0A'], ['#E6F4F0', '#1F9D74']
+];
+function twAvatar(name, cls) {
+  var n = String(name || '?');
+  var h = 0, i;
+  for (i = 0; i < n.length; i++) h = (h * 31 + n.charCodeAt(i)) % 997;
+  var c = TW_AV[h % TW_AV.length];
+  return '<span class="tw-av ' + (cls || '') + '" style="background:' + c[0] + ';color:' + c[1] + '">' +
+    esc(n.trim().charAt(0).toUpperCase() || '?') + '</span>';
+}
+function twDaysSince(d) {
+  if (!d) return null;
+  var t = new Date(String(d).length <= 10 ? d + 'T12:00:00' : d).getTime();
+  if (isNaN(t)) return null;
+  return Math.floor((Date.now() - t) / 86400000);
+}
+function twAgo(d) {
+  var n = twDaysSince(d);
+  if (n === null) return 'never';
+  if (n <= 0) return 'today';
+  if (n === 1) return 'yesterday';
+  return n + ' days ago';
+}
+function twDate(d) { return String(d || '').slice(0, 10) || '—'; }
+function twRing(pct, sz) {
+  pct = Math.max(0, Math.min(100, Math.round(pct)));
+  sz = sz || 64;
+  var r = (sz - 8) / 2, circ = 2 * Math.PI * r;
+  var col = pct >= 80 ? '#4C9A2A' : (pct >= 50 ? '#58B368' : '#F0A030');
+  return '<span class="tw-ring" style="width:' + sz + 'px;height:' + sz + 'px">' +
+    '<svg viewBox="0 0 ' + sz + ' ' + sz + '">' +
+    '<circle cx="' + sz / 2 + '" cy="' + sz / 2 + '" r="' + r + '" fill="none" stroke="#EDE7DB" stroke-width="7"/>' +
+    '<circle cx="' + sz / 2 + '" cy="' + sz / 2 + '" r="' + r + '" fill="none" stroke="' + col + '" stroke-width="7" ' +
+    'stroke-linecap="round" stroke-dasharray="' + circ.toFixed(1) + '" stroke-dashoffset="' + (circ * (1 - pct / 100)).toFixed(1) + '" ' +
+    'transform="rotate(-90 ' + sz / 2 + ' ' + sz / 2 + ')"/></svg>' +
+    '<b>' + pct + '%</b></span>';
+}
+function twCopy(text, btn) {
+  var done = function () {
+    if (!btn) return;
+    var o = btn.innerHTML;
+    btn.innerHTML = '✓ Copied';
+    setTimeout(function () { btn.innerHTML = o; }, 1600);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(done, function () { fallback(); });
+  } else fallback();
+  function fallback() {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); ta.remove();
+    } catch (e) {}
+    done();
+  }
+}
+/* Warm decorative header illustration (books + mug + plant), abstract SVG. */
+function twDeco() {
+  return '<div class="tw-deco" aria-hidden="true">' +
+    '<svg viewBox="0 0 320 150">' +
+    '<ellipse cx="200" cy="70" rx="120" ry="62" fill="#FBEEDF"/>' +
+    '<ellipse cx="235" cy="45" rx="46" ry="30" fill="#FDF6EC"/>' +
+    '<circle cx="120" cy="40" r="7" fill="#F6DFC2"/><circle cx="140" cy="24" r="5" fill="#F9E8D2"/>' +
+    '<g><rect x="150" y="92" width="110" height="16" rx="3" fill="#5E8F5A"/>' +
+    '<rect x="150" y="92" width="110" height="5" rx="2" fill="#6FA06B"/>' +
+    '<rect x="158" y="76" width="96" height="16" rx="3" fill="#E8935A"/>' +
+    '<rect x="158" y="76" width="96" height="5" rx="2" fill="#F0A468"/></g>' +
+    '<g><rect x="196" y="44" width="34" height="32" rx="5" fill="#FFFFFF" stroke="#EAD9C2"/>' +
+    '<path d="M230 50 h10 a4 4 0 0 1 0 16 h-10" fill="none" stroke="#EAD9C2" stroke-width="4"/>' +
+    '<circle cx="213" cy="60" r="7" fill="#E2574C"/></g>' +
+    '<g stroke="#5E8F5A" stroke-width="5" stroke-linecap="round" fill="none">' +
+    '<path d="M282 96 C 282 70, 280 50, 272 30"/><path d="M282 96 C 284 72, 290 54, 300 40"/>' +
+    '<path d="M282 96 C 280 78, 274 66, 264 58"/></g>' +
+    '<g fill="#6FA06B"><ellipse cx="268" cy="28" rx="13" ry="7" transform="rotate(-35 268 28)"/>' +
+    '<ellipse cx="302" cy="38" rx="13" ry="7" transform="rotate(30 302 38)"/>' +
+    '<ellipse cx="261" cy="56" rx="11" ry="6" transform="rotate(-25 261 56)"/></g>' +
+    '<path d="M268 96 h28 l-5 22 h-18 z" fill="#F3E4CE"/>' +
+    '</svg></div>';
+}
+/* Dotted paper-plane flourish for bottom banners. */
+function twPlane() {
+  return '<svg class="tw-plane" viewBox="0 0 220 60" aria-hidden="true">' +
+    '<path d="M8 44 C 60 44, 90 40, 120 26 S 170 10, 196 12" fill="none" stroke="#E8B96A" ' +
+    'stroke-width="2.5" stroke-dasharray="1 9" stroke-linecap="round"/>' +
+    '<circle cx="8" cy="44" r="4.5" fill="#E8B96A"/>' +
+    '<g transform="translate(186,2) rotate(18)"><path d="M0 0 L34 10 L0 22 L7 11 Z" fill="#F0854C"/></g>' +
+    '</svg>';
+}
+function twPageHead(eyebrow, title, sub) {
+  return '<div class="tw-phead"><div><div class="tw-eyebrow">' + eyebrow + '</div>' +
+    '<h1 class="tw-title">' + title + '</h1>' +
+    (sub ? '<p class="tw-sub">' + sub + '</p>' : '') + '</div>' + twDeco() + '</div>';
+}
+
+/* ---------------- portal gate ---------------- */
+
 async function renderTeachers() {
   document.body.classList.add('tw-mode');
   document.body.classList.remove('ap-mode');
+  /* Hide the static marketing landing in index.html (same mechanism the app uses). */
+  document.documentElement.classList.add('app-mode');
   var v = document.getElementById('view');
   v.innerHTML = '<div class="tw-loading"><div class="tw-spin"></div><p class="muted">Loading…</p></div>';
   var user = null;
@@ -11701,12 +11807,11 @@ async function renderTeachers() {
   if (state.teacherRequest) {
     v.innerHTML = '<div class="tw-narrow">' +
       '<div class="tw-brandrow">🍎 <b>Muse English</b><span>for Teachers</span></div>' +
-      '<div class="card tw-card"><h2>⏳ Request under review</h2>' +
+      '<div class="card tw-card"><h2 class="tw-title-sm">⏳ Request under review</h2>' +
       '<p class="muted">Thanks for applying! We approve teachers manually — usually within a day. We will email you at <b>' + esc(user.email || '') + '</b> once you are in.</p>' +
       '<button class="btn btn-ghost" data-action="tw-logout">Log out</button></div></div>';
     return;
   }
-  /* Logged in but not a teacher yet: landing with the request form inline. */
   v.innerHTML = twLandingHTML(true);
   twWireLanding();
   var host = document.getElementById('tw-apply');
@@ -11733,39 +11838,38 @@ function twLandingHTML(loggedIn) {
     '<header class="tw-top"><div class="tw-top-in">' +
       '<div class="tw-brandrow">🍎 <b>Muse English</b><span>for Teachers</span></div>' +
       '<nav class="tw-toplinks"><a href="#tw-features">Features</a><a href="#tw-how">How it works</a>' +
-      (loggedIn ? '<a class="btn btn-sm" href="#tw-apply">Request access</a>' : '<a class="btn btn-sm" href="#tw-login">Log in</a>') +
+      (loggedIn ? '<a class="tw-btn tw-btn-sm" href="#tw-apply">Request access</a>' : '<a class="tw-btn tw-btn-sm" href="#tw-login">Log in</a>') +
       '</nav></div></header>' +
     '<section class="tw-hero"><div class="tw-hero-in">' +
       '<div class="tw-eyebrow">FOR ENGLISH TEACHERS</div>' +
-      '<h1>Your students, their progress,<br>one dashboard.</h1>' +
+      '<h1 class="tw-title">Your students, their progress,<br>one dashboard.</h1>' +
       '<p class="tw-sub">Give every new student a placement test, watch their activity day by day, and send assignments — Muse English handles the busywork while you teach.</p>' +
       '<div class="tw-cta">' +
-        (loggedIn
-          ? '<a class="btn btn-lg" href="#tw-apply">Request teacher access →</a>'
-          : '<a class="btn btn-lg" href="#tw-login">Log in →</a>') +
-        '<a class="btn btn-lg btn-ghost" href="#tw-how">How it works</a></div>' +
+        (loggedIn ? '<a class="tw-btn" href="#tw-apply">Request teacher access →</a>'
+                  : '<a class="tw-btn" href="#tw-login">Log in →</a>') +
+        '<a class="tw-btn tw-btn-ghost" href="#tw-how">How it works</a></div>' +
       '<p class="tw-note">Already teaching with Muse English? Your login is the same account you use in the app.</p>' +
     '</div></section>' +
     '<section class="tw-sec" id="tw-features"><div class="tw-sec-in">' +
-      '<h2>Everything a teacher needs</h2>' +
+      '<h2 class="tw-title-sm">Everything a teacher needs</h2>' +
       '<div class="tw-feats">' + feats.map(function (f) {
-        return '<div class="card tw-feat"><div class="tw-feat-ico">' + f[0] + '</div><h3>' + f[1] + '</h3><p class="muted">' + f[2] + '</p></div>';
+        return '<div class="tw-feat"><div class="tw-feat-ico">' + f[0] + '</div><h3>' + f[1] + '</h3><p>' + f[2] + '</p></div>';
       }).join('') + '</div></div></section>' +
     '<section class="tw-sec tw-sec-alt" id="tw-how"><div class="tw-sec-in">' +
-      '<h2>Get started in minutes</h2>' +
+      '<h2 class="tw-title-sm">Get started in minutes</h2>' +
       '<div class="tw-steps">' + steps.map(function (s) {
-        return '<div class="card tw-step"><div class="tw-step-n">' + s[0] + '</div><h3>' + s[1] + '</h3><p class="muted">' + s[2] + '</p></div>';
+        return '<div class="tw-step"><div class="tw-step-n">' + s[0] + '</div><h3>' + s[1] + '</h3><p>' + s[2] + '</p></div>';
       }).join('') + '</div></div></section>' +
     (loggedIn
-      ? '<section class="tw-sec" id="tw-apply"><div class="tw-narrow"><div class="card tw-card" id="tw-apply"></div></div></section>'
-      : '<section class="tw-sec" id="tw-login"><div class="tw-narrow"><div class="card tw-card">' +
-        '<h2>Teacher login</h2>' +
+      ? '<section class="tw-sec" id="tw-apply"><div class="tw-narrow"><div class="tw-applybox" id="tw-apply"></div></div></section>'
+      : '<section class="tw-sec" id="tw-login"><div class="tw-narrow"><div class="tw-logincard">' +
+        '<h2 class="tw-title-sm">Teacher login</h2>' +
         '<p class="muted">Use the same email and password as your Muse English account.</p>' +
         '<form id="tw-login-form" novalidate>' +
         '<div class="field"><label for="tw-email">Email</label><input id="tw-email" type="email" autocomplete="email" placeholder="you@example.com" required></div>' +
         '<div class="field"><label for="tw-pass">Password</label><input id="tw-pass" type="password" autocomplete="current-password" placeholder="••••••••" required></div>' +
         '<div class="form-error" id="tw-error" role="alert"></div>' +
-        '<button class="btn btn-block" type="submit" id="tw-submit">Log in</button></form>' +
+        '<button class="tw-btn tw-btn-block" type="submit" id="tw-submit">Log in</button></form>' +
         '<p class="muted" style="margin-bottom:0">New to Muse English? <a class="link" href="/#/signup">Create a free account</a>, then come back here and log in.</p>' +
         '</div></div></section>') +
     '<footer class="tw-foot"><div class="tw-sec-in"><span>© 2026 Muse English · Built for teachers</span></div></footer>' +
@@ -11799,29 +11903,31 @@ async function twDoLogin(e) {
 
 async function twLogout() {
   try { if (sb) await sb.auth.signOut(); } catch (e) {}
-  state.user = null; state.teacher = null; state.teacherRequest = null; state.twSection = null;
+  state.user = null; state.teacher = null; state.teacherRequest = null;
+  state.twSection = null; state.twStudents = null; state.twPtest = null; state.twAssignments = null;
   window.location.href = '/teachers';
 }
 
-/* ---------------- Teacher workspace ---------------- */
+/* ---------------- workspace shell ---------------- */
 
 function twRenderWorkspace(v) {
   if (!state.twSection) state.twSection = 'overview';
   var t = state.teacher;
-  var initial = (t.display_name || tchMeEmail() || '?').charAt(0).toUpperCase();
+  var em = (state.user && state.user.email) || '';
   v.innerHTML =
     '<div class="tw-work">' +
     '<aside class="tw-side">' +
-      '<div class="tw-brandrow tw-brandrow-side">🍎 <b>Muse English</b><span>for Teachers</span></div>' +
+      '<div class="tw-brandrow tw-brandrow-side"><span class="tw-apple">🍎</span><span><b>Muse English</b><small>for Teachers</small></span></div>' +
       '<nav class="tw-nav">' + TW_SECTIONS.map(function (s) {
         return '<button class="tw-navbtn' + (state.twSection === s[0] ? ' on' : '') + '" data-twsec="' + s[0] + '">' +
           '<span class="tw-navico">' + s[1] + '</span>' + s[2] + '</button>';
       }).join('') + '</nav>' +
       '<div class="tw-side-foot">' +
-        '<div class="tw-me"><span class="tw-ava">' + esc(initial) + '</span>' +
-          '<span class="tw-me-txt"><b>' + esc(t.display_name || 'Teacher') + '</b><small>' + esc(state.user.email || '') + '</small></span></div>' +
-        '<a class="tw-footlink" href="/">← Learner app</a>' +
-        '<button class="tw-footlink tw-logout" data-action="tw-logout">Log out</button>' +
+        '<div class="tw-me">' + twAvatar(t.display_name || em, 'tw-av-lg') +
+          '<span class="tw-me-txt"><b>' + esc(t.display_name || 'Teacher') + '</b><small>' + esc(em) + '</small></span></div>' +
+        '<button class="tw-footlink" data-twsec="settings"><span>⚙️</span> Settings</button>' +
+        '<a class="tw-footlink" href="/"><span>⬈</span> Learner app</a>' +
+        '<button class="tw-footlink" data-action="tw-logout"><span>⎋</span> Log out</button>' +
       '</div>' +
     '</aside>' +
     '<main class="tw-main"><div class="tw-main-in" id="tw-content"></div></main>' +
@@ -11832,8 +11938,6 @@ function twRenderWorkspace(v) {
   twShowSection(state.twSection);
 }
 
-function tchMeEmail() { return (state.user && state.user.email) || ''; }
-
 function twShowSection(name) {
   state.twSection = name;
   Array.prototype.forEach.call(document.querySelectorAll('[data-twsec]'), function (b) {
@@ -11842,134 +11946,561 @@ function twShowSection(name) {
   var c = document.getElementById('tw-content');
   if (!c) return;
   window.scrollTo(0, 0);
-  if (name === 'overview') { twOverview(c); return; }
-  if (name === 'students') {
-    c.innerHTML = '<div class="tw-sec-head"><h1>My students <span id="tch-count" class="muted"></span></h1></div>' +
-      '<div id="tch-roster"><div class="empty">Loading…</div></div><div id="tch-detail"></div>';
-    loadTeacherRoster();
-    return;
-  }
-  if (name === 'assignments') {
-    c.innerHTML = '<div class="tw-sec-head"><h1>Assignments</h1>' +
-      '<span class="tch-actions"><button class="btn btn-sm" data-action="assignment-compose">＋ New assignment</button></span></div>' +
-      '<div class="tw-tabs"><button class="tw-tab on" data-twtab="list">Sent</button>' +
-      '<button class="tw-tab" data-twtab="planner">📅 Weekly planner</button></div>' +
-      '<div id="tw-assign-list"><div id="tch-assign"><div class="empty">Loading…</div></div></div>' +
-      '<div id="tw-assign-planner" hidden></div>';
-    loadTeacherAssignments().then(function () {
-      var h = document.getElementById('tch-assign');
-      if (h && !h.innerHTML.trim()) h.innerHTML = '<div class="empty">No assignments yet — click “＋ New assignment” above to create your first one. ✈️</div>';
-    });
-    Array.prototype.forEach.call(c.querySelectorAll('[data-twtab]'), function (b) {
-      b.addEventListener('click', function () { twAssignTab(b.getAttribute('data-twtab')); });
-    });
-    return;
-  }
-  if (name === 'placement') {
-    c.innerHTML = '<div class="tw-sec-head"><h1>Placement test results</h1></div>' +
-      '<div id="tch-ptest"><div class="empty">Loading…</div></div>';
-    loadPlacementResults();
-    return;
-  }
-  if (name === 'links') {
-    var t = state.teacher;
-    c.innerHTML = '<div class="tw-sec-head"><h1>Invite & links</h1></div>' +
-      '<div class="card tch-invite">' +
-        '<div class="muted" style="margin:0 0 0.4rem">Your personal invite link</div>' +
-        '<div class="tch-linkrow"><code>' + esc(teacherInviteLink(t.ref_code)) + '</code>' +
-        '<button class="btn btn-sm" data-action="copy-teacher-link">Copy</button></div>' +
-        '<p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0">Share it with your students — everyone who signs up through it shows up on your roster.</p></div>' +
-      '<div class="card tch-invite">' +
-        '<div class="muted" style="margin:0 0 0.4rem">📝 Placement test link for new students</div>' +
-        '<div class="tch-linkrow"><code>' + esc(teacherPlacementLink(t.ref_code)) + '</code>' +
-        '<button class="btn btn-sm" data-action="copy-ptest-link">Copy</button></div>' +
-        '<p class="muted" style="font-size:0.82rem;margin:0.6rem 0 0">Send it to a new student — they take a 5-part test and the results land in your dashboard.</p></div>' +
-      '<div class="card"><h3 style="margin-top:0">🌟 My public profile</h3>' +
-      '<p class="muted" style="font-size:0.85rem;margin-top:-0.3rem">Students see this when choosing a teacher.</p>' +
-      '<div id="tch-profile-body"><div class="empty">Loading…</div></div></div>';
-    loadTeacherProfile();
-    return;
-  }
+  if (name === 'overview') twPageOverview(c);
+  else if (name === 'students') twPageStudents(c);
+  else if (name === 'assignments') twPageAssignments(c);
+  else if (name === 'placement') twPagePlacement(c);
+  else if (name === 'links') twPageLinks(c);
+  else if (name === 'settings') twPageSettings(c);
 }
 
-function twAssignTab(which) {
-  Array.prototype.forEach.call(document.querySelectorAll('[data-twtab]'), function (b) {
-    b.classList.toggle('on', b.getAttribute('data-twtab') === which);
-  });
-  document.getElementById('tw-assign-list').hidden = which !== 'list';
-  var ph = document.getElementById('tw-assign-planner');
-  ph.hidden = which !== 'planner';
-  if (which === 'planner' && !ph.getAttribute('data-loaded')) {
-    ph.setAttribute('data-loaded', '1');
-    renderPlanner(ph);
-  }
+/* ---------------- data ---------------- */
+
+async function twGetStudents() {
+  if (state.twStudents) return state.twStudents;
+  var list = [];
+  try {
+    var r = await sb.rpc('get_my_students');
+    if (!r.error) list = r.data || [];
+  } catch (e) {}
+  state.twStudents = list;
+  state.teacherStudents = list; /* keep legacy detail renderer in sync */
+  return list;
+}
+async function twGetPtest() {
+  if (state.twPtest) return state.twPtest;
+  var rows = [];
+  try {
+    var r = await sb.from('placement_results')
+      .select('id,student_id,student_name,student_mobile,status,scores,suggested_level,sections,started_at,completed_at,updated_at')
+      .eq('teacher_ref', state.teacher.ref_code)
+      .order('updated_at', { ascending: false }).limit(100);
+    if (!r.error) rows = r.data || [];
+  } catch (e) {}
+  state.twPtest = rows;
+  state.ptestRows = rows; /* keep legacy detail renderer in sync */
+  return rows;
+}
+async function twGetAssignments() {
+  if (state.twAssignments) return state.twAssignments;
+  var assigns = [], doneMap = {};
+  try {
+    var a = await sb.from('assignments')
+      .select('id,kind,title,created_at,deadline,student_ids,question_count,status,send_at,send_tz')
+      .eq('teacher_id', state.user.id).order('created_at', { ascending: false }).limit(40);
+    if (a.error) throw a.error;
+    assigns = a.data || [];
+    var ids = assigns.map(function (x) { return x.id; });
+    if (ids.length) {
+      var rr = await sb.from('assignment_results').select('assignment_id,student_id').in('assignment_id', ids);
+      if (!rr.error) (rr.data || []).forEach(function (x) {
+        (doneMap[x.assignment_id] = doneMap[x.assignment_id] || {})[x.student_id] = 1;
+      });
+    }
+  } catch (e) {}
+  state.twAssignments = assigns;
+  state.teacherAssignments = assigns;
+  state.twDoneMap = doneMap;
+  return assigns;
+}
+function twAsgStatus(a) {
+  var doneMap = state.twDoneMap || {};
+  if (a.status === 'scheduled') return ['Scheduled', 'sched'];
+  var targets = (a.student_ids || []).length;
+  var done = Object.keys(doneMap[a.id] || {}).length;
+  if (done === 0) return ['Pending', 'pending'];
+  if (targets && done >= targets) return ['Completed', 'done'];
+  return ['In review', 'review'];
+}
+function twPill(text, kind) {
+  return '<span class="tw-pill tw-pill-' + kind + '">' + text + '</span>';
 }
 
-async function twOverview(c) {
+/* ---------------- page: overview ---------------- */
+
+async function twPageOverview(c) {
   var t = state.teacher;
-  c.innerHTML =
-    '<div class="tw-sec-head"><div><h1 style="margin:0">Welcome back, ' + esc(t.display_name || 'Teacher') + ' 👋</h1>' +
-    '<p class="muted" style="margin:0.3rem 0 0">Here is what is happening with your students.</p></div></div>' +
-    '<div class="tw-stats">' +
-      '<div class="card tw-stat"><span class="tw-stat-n" id="tw-s-students">…</span><span class="tw-stat-l">Students</span></div>' +
-      '<div class="card tw-stat"><span class="tw-stat-n" id="tw-s-active">…</span><span class="tw-stat-l">Active this week</span></div>' +
-      '<div class="card tw-stat"><span class="tw-stat-n" id="tw-s-pending">…</span><span class="tw-stat-l">Tests to review</span></div>' +
-      '<div class="card tw-stat"><span class="tw-stat-n" id="tw-s-quiet">…</span><span class="tw-stat-l">Quiet 7+ days</span></div>' +
+  var first = esc((t.display_name || 'Teacher').split(' ')[0]);
+  c.innerHTML = twPageHead('OVERVIEW', 'Welcome back, ' + first + ' 👋',
+      'Here is what is happening with your students.') +
+    '<div class="tw-stats" id="tw-stats">' +
+      '<div class="tw-stat"><span class="tw-stat-ico" style="background:#FFE8D6">👥</span>' +
+        '<div class="tw-stat-top"><span class="tw-stat-n" id="tw-s-students">…</span><span class="tw-stat-l">Students</span></div>' +
+        '<div class="tw-stat-s">Total students in your class</div></div>' +
+      '<div class="tw-stat"><span class="tw-stat-ico" style="background:#E3F5D8">📊</span>' +
+        '<div class="tw-stat-top"><span class="tw-stat-n" id="tw-s-active">…</span><span class="tw-stat-l">Active this week</span></div>' +
+        '<div class="tw-stat-s">Students with recent activity</div></div>' +
+      '<div class="tw-stat"><span class="tw-stat-ico" style="background:#FFEFD2">📝</span>' +
+        '<div class="tw-stat-top"><span class="tw-stat-n" id="tw-s-pending">…</span><span class="tw-stat-l">Tests to review</span></div>' +
+        '<div class="tw-stat-s">Placement tests waiting</div></div>' +
+      '<div class="tw-stat"><span class="tw-stat-ico" style="background:#EDE7FB">🕐</span>' +
+        '<div class="tw-stat-top"><span class="tw-stat-n" id="tw-s-quiet">…</span><span class="tw-stat-l">Quiet 7+ days</span></div>' +
+        '<div class="tw-stat-s">Students with no activity</div></div>' +
     '</div>' +
     '<div class="tw-grid2">' +
-      '<div class="card"><div class="tw-cardhead"><h3 style="margin:0">📝 Latest placement tests</h3>' +
-      '<button class="btn btn-sm btn-ghost" data-twsec="placement">View all →</button></div>' +
+      '<div class="tw-panel"><div class="tw-cardhead"><div><h3>📄 Latest placement tests</h3>' +
+      '<p class="muted">Recent placement test results from your students.</p></div>' +
+      '<button class="tw-btn tw-btn-sm tw-btn-ghost" data-twsec="placement">View all →</button></div>' +
       '<div id="tw-recent-ptest"><div class="empty">Loading…</div></div></div>' +
-      '<div class="card"><div class="tw-cardhead"><h3 style="margin:0">⚠️ Needs attention</h3>' +
-      '<button class="btn btn-sm btn-ghost" data-twsec="students">View all →</button></div>' +
+      '<div class="tw-panel"><div class="tw-cardhead"><div><h3>⚠️ Needs attention</h3>' +
+      '<p class="muted">Students who have not been active recently.</p></div>' +
+      '<button class="tw-btn tw-btn-sm tw-btn-ghost" data-twsec="students">View all →</button></div>' +
       '<div id="tw-attn"><div class="empty">Loading…</div></div></div>' +
-    '</div>';
+    '</div>' +
+    '<div class="tw-banner"><div class="tw-banner-txt"><span class="tw-banner-ico">💡</span>' +
+      '<div><b>Get your students started</b><p>Share your class link so students can join and take a placement test.</p></div></div>' +
+      twPlane() +
+      '<button class="tw-btn tw-btn-orange" id="tw-copy-ptest">🔗 Copy placement link</button></div>';
   Array.prototype.forEach.call(c.querySelectorAll('[data-twsec]'), function (b) {
     b.addEventListener('click', function () { twShowSection(b.getAttribute('data-twsec')); });
   });
+  c.querySelector('#tw-copy-ptest').addEventListener('click', function () {
+    twCopy(teacherPlacementLink(state.teacher.ref_code), this);
+  });
   var set = function (id, v) { var el = document.getElementById(id); if (el) el.textContent = v; };
-  var students = [];
-  try {
-    var r = await sb.rpc('get_my_students');
-    if (!r.error) students = r.data || [];
-  } catch (e) {}
-  var now = Date.now();
-  var days = function (d) { return d ? Math.floor((now - new Date(d + 'T12:00:00').getTime()) / 86400000) : 999; };
-  var active = students.filter(function (s) { return days(s.last_active) < 7; });
-  var quiet = students.filter(function (s) { return days(s.last_active) >= 7; });
+  var students = await twGetStudents();
+  var quiet = students.filter(function (s) { var n = twDaysSince(s.last_active); return n === null || n >= 7; });
+  var active = students.filter(function (s) { var n = twDaysSince(s.last_active); return n !== null && n < 7; });
   set('tw-s-students', students.length);
   set('tw-s-active', active.length);
   set('tw-s-quiet', quiet.length);
   var attn = document.getElementById('tw-attn');
   if (attn) {
-    attn.innerHTML = quiet.length
-      ? quiet.slice(0, 5).map(function (s) {
-          var nm = s.display_name || (s.email || '?').split('@')[0];
-          return '<div class="tw-row"><span>' + esc(nm) + '</span><span class="muted">' +
-            (s.last_active ? 'last active ' + esc(fmtLastActive(s.last_active)) : 'never active') + '</span></div>';
-        }).join('')
-      : '<div class="empty">Everyone is active. 🎉</div>';
+    attn.innerHTML = quiet.length ? quiet.slice(0, 4).map(function (s) {
+      var nm = s.display_name || (s.email || '?').split('@')[0];
+      return '<div class="tw-attnrow">' + twAvatar(nm) +
+        '<span class="tw-attn-name"><b>' + esc(nm) + '</b><small>' + esc(twLevelLabel(s.level)) + '</small></span>' +
+        '<span class="tw-attn-when"><small class="muted">Last active</small><b>' + esc(twDate(s.last_active)) + '</b></span>' +
+        twPill(esc(twAgo(s.last_active)), 'red') + '</div>';
+    }).join('') : '<div class="empty">Everyone is active. 🎉</div>';
   }
   var rp = document.getElementById('tw-recent-ptest');
-  var pending = 0;
-  try {
-    var pr = await sb.from('placement_results')
-      .select('id,student_name,status,completed_at,updated_at,suggested_level')
-      .eq('teacher_ref', t.ref_code).order('updated_at', { ascending: false }).limit(5);
-    if (!pr.error) {
-      var rows = pr.data || [];
-      pending = rows.filter(function (x) { return x.status !== 'completed'; }).length;
-      rp.innerHTML = rows.length
-        ? rows.map(function (x) {
-            return '<div class="tw-row"><span>' + esc(x.student_name || 'Student') + '</span>' +
-              '<span class="muted">' + (x.status === 'completed'
-                ? 'done' + (x.suggested_level ? ' · ' + esc(x.suggested_level) : '')
-                : 'in progress') + '</span></div>';
-          }).join('')
-        : '<div class="empty">No tests yet — share your placement link above.</div>';
-    } else { rp.innerHTML = '<div class="empty">Could not load.</div>'; }
-  } catch (e) { rp.innerHTML = '<div class="empty">Could not load.</div>'; }
+  var rows = await twGetPtest();
+  var pending = rows.filter(function (x) { return x.status !== 'completed'; }).length;
   set('tw-s-pending', pending);
+  if (rp) {
+    if (!rows.length) {
+      rp.innerHTML = '<div class="tw-empty-ill">📝</div><b>No tests yet</b>' +
+        '<p class="muted">When your students take a placement test,<br>their results will appear here.</p>' +
+        '<button class="tw-btn tw-btn-sm tw-btn-ghost" id="tw-share-ptest">🔗 Share your placement link</button>';
+      var sh = document.getElementById('tw-share-ptest');
+      if (sh) sh.addEventListener('click', function () { twCopy(teacherPlacementLink(state.teacher.ref_code), this); });
+    } else {
+      rp.innerHTML = rows.slice(0, 4).map(function (x) {
+        var sc = x.scores || {};
+        return '<div class="tw-attnrow">' + twAvatar(x.student_name) +
+          '<span class="tw-attn-name"><b>' + esc(x.student_name || 'Student') + '</b>' +
+          '<small>' + (x.status === 'completed' ? 'Score ' + (sc.total || 0) + '/55' : 'In progress') + '</small></span>' +
+          (x.suggested_level ? twPill(esc(x.suggested_level), 'green') : twPill('In progress', 'gray')) + '</div>';
+      }).join('');
+    }
+  }
+}
+
+/* ---------------- page: students ---------------- */
+
+function twStudentRow(s, oi, ptestByStudent) {
+  var nm = s.display_name || (s.email || '?').split('@')[0];
+  var n = twDaysSince(s.last_active);
+  var st = s.last_active;
+  var statusPill, statusSub;
+  if (n !== null && n <= 0) { statusPill = twPill('● Active today', 'green'); statusSub = ''; }
+  else if (n !== null && n < 7) { statusPill = twPill('Active ' + twAgo(st), 'gray'); statusSub = ''; }
+  else { statusPill = twPill('● Needs attention', 'red'); statusSub = '<small class="muted">' + esc(twAgo(st)) + '</small>'; }
+  var pt = ptestByStudent[s.user_id];
+  var ptPill = pt ? twPill('✓ Completed', 'green') : twPill('🕐 Not started', 'gray');
+  var mins = s.podcast_min_7d || 0;
+  return '<div class="tw-trow" data-i="' + oi + '" role="button" tabindex="0">' +
+    '<div class="tw-tcell tw-tstudent">' + twAvatar(nm) +
+      '<span><b>' + esc(nm) + '</b><small>' + esc(twLevelLabel(s.level)) + '</small>' +
+      '<small class="muted">Last active ' + esc(twDate(st)) + '</small></span></div>' +
+    '<div class="tw-tcell tw-tnum">' + (s.current_streak > 0 ? '🔥' : '<span class="tw-dim">💧</span>') + ' ' + (s.current_streak || 0) + '</div>' +
+    '<div class="tw-tcell tw-tnum">' + (s.xp_7d || 0) + '</div>' +
+    '<div class="tw-tcell tw-tnum">' + (s.lessons_7d || 0) + '</div>' +
+    '<div class="tw-tcell tw-tnum">' + mins + 'm</div>' +
+    '<div class="tw-tcell">' + ptPill + '</div>' +
+    '<div class="tw-tcell"><span class="tw-statuswrap">' + statusPill + statusSub + '</span></div>' +
+    '<div class="tw-tcell tw-tmenu"><button class="tw-dots" data-twmenu="' + oi + '" aria-label="More">⋯</button></div>' +
+  '</div>';
+}
+
+async function twPageStudents(c) {
+  var students = await twGetStudents();
+  var ptest = await twGetPtest();
+  var ptestByStudent = {};
+  ptest.forEach(function (x) { if (x.student_id && x.status === 'completed') ptestByStudent[x.student_id] = x; });
+  c.innerHTML = twPageHead('STUDENTS', 'My students <span class="tw-count">(' + students.length + ')</span>',
+      'View and manage your students’ progress, activity and placement test results.') +
+    '<div class="tw-toolbar">' +
+      '<div class="tw-search"><span>🔍</span><input id="tw-q" type="search" placeholder="Search students by name…"></div>' +
+      '<select id="tw-flevel" class="tw-select"><option value="">All levels</option>' +
+        ['a1', 'a2', 'b1', 'b2', 'c1'].map(function (l) {
+          return '<option value="' + l + '">' + l.toUpperCase() + ' · ' + TW_LEVEL_LABEL[l] + '</option>';
+        }).join('') + '</select>' +
+      '<select id="tw-sort" class="tw-select"><option value="active">Last active</option>' +
+        '<option value="name">Name A–Z</option><option value="xp">XP (7d)</option><option value="streak">Streak</option></select>' +
+      '<button class="tw-btn tw-btn-orange" id="tw-invite">＋ Invite student</button>' +
+    '</div>' +
+    '<div class="tw-tablecard"><div class="tw-table-scroll"><div class="tw-table">' +
+      '<div class="tw-thead"><span>STUDENT</span><span>🔥 STREAK</span><span>📊 XP 7D</span><span>📖 LESSONS</span>' +
+      '<span>🎧 LISTENING</span><span>📝 PLACEMENT TEST</span><span>STATUS</span><span></span></div>' +
+      '<div id="tw-tbody"></div>' +
+    '</div></div></div>' +
+    '<div id="tch-detail"></div>' +
+    '<div class="tw-banner"><div class="tw-banner-txt"><span class="tw-banner-ico">💡</span>' +
+      '<div><b>Tap a student to see their 14-day activity.</b>' +
+      '<p>View detailed progress, lessons, and placement test results for each student.</p></div></div>' +
+      twPlane() + '</div>' +
+    '<div class="tw-menu" id="tw-menu" hidden></div>';
+  var render = function () {
+    var q = (document.getElementById('tw-q').value || '').toLowerCase();
+    var lv = document.getElementById('tw-flevel').value;
+    var sort = document.getElementById('tw-sort').value;
+    var idx = students.map(function (s, i) { return i; }).filter(function (i) {
+      var s = students[i];
+      var nm = (s.display_name || s.email || '').toLowerCase();
+      if (q && nm.indexOf(q) < 0) return false;
+      if (lv && String(s.level || '').toLowerCase() !== lv) return false;
+      return true;
+    });
+    idx.sort(function (a, b) {
+      var sa = students[a], sb2 = students[b];
+      if (sort === 'name') return String(sa.display_name || sa.email || '').localeCompare(String(sb2.display_name || sb2.email || ''));
+      if (sort === 'xp') return (sb2.xp_7d || 0) - (sa.xp_7d || 0);
+      if (sort === 'streak') return (sb2.current_streak || 0) - (sa.current_streak || 0);
+      return String(sb2.last_active || '').localeCompare(String(sa.last_active || ''));
+    });
+    document.getElementById('tw-tbody').innerHTML = idx.length
+      ? idx.map(function (i) { return twStudentRow(students[i], i, ptestByStudent); }).join('')
+      : '<div class="empty">No students match.</div>';
+  };
+  ['tw-q', 'tw-flevel', 'tw-sort'].forEach(function (id) {
+    document.getElementById(id).addEventListener('input', render);
+    document.getElementById(id).addEventListener('change', render);
+  });
+  document.getElementById('tw-invite').addEventListener('click', function () {
+    twCopy(teacherInviteLink(state.teacher.ref_code), this);
+  });
+  document.getElementById('tw-tbody').addEventListener('click', function (e) {
+    var mb = e.target.closest('[data-twmenu]');
+    if (mb) { twStudentMenu(mb, students); e.stopPropagation(); return; }
+    var row = e.target.closest('.tw-trow');
+    if (row) openTeacherStudent(parseInt(row.getAttribute('data-i'), 10));
+  });
+  document.addEventListener('click', function h(e) {
+    var m = document.getElementById('tw-menu');
+    if (m && !m.hidden && !e.target.closest('#tw-menu') && !e.target.closest('[data-twmenu]')) m.hidden = true;
+  });
+  render();
+}
+
+function twStudentMenu(btn, students) {
+  var m = document.getElementById('tw-menu');
+  var i = btn.getAttribute('data-twmenu');
+  var s = students[parseInt(i, 10)];
+  var nm = s.display_name || (s.email || '?').split('@')[0];
+  m.innerHTML = '<b>' + esc(nm) + '</b>' +
+    '<button data-m="view">📊 View 14-day activity</button>' +
+    '<button data-m="nudge">🔔 Send nudge</button>';
+  var r = btn.getBoundingClientRect();
+  m.style.top = (r.bottom + window.scrollY + 6) + 'px';
+  m.style.left = Math.max(8, r.right + window.scrollX - 220) + 'px';
+  m.hidden = false;
+  Array.prototype.forEach.call(m.querySelectorAll('button'), function (b) {
+    b.addEventListener('click', function () {
+      m.hidden = true;
+      if (b.getAttribute('data-m') === 'nudge') twSendNudge(i);
+      else openTeacherStudent(parseInt(i, 10));
+    });
+  });
+}
+
+async function twSendNudge(i) {
+  var s = (state.teacherStudents || [])[parseInt(i, 10)];
+  if (!s) return;
+  try {
+    var r = await sb.rpc('send_nudge', { p_student: s.user_id });
+    showModal('<div class="modal-ico">🔔</div><h2>' +
+      (r.data === true ? 'Nudge sent!' : 'Already sent today') + '</h2>' +
+      '<p class="muted">' + esc(s.display_name || 'Your student') + ' will see your nudge in the app.</p>' +
+      '<button class="tw-btn tw-btn-block" data-action="modal-close">OK</button>');
+  } catch (e) {
+    showModal('<div class="modal-ico">⚠️</div><h2>Could not send</h2>' +
+      '<p class="muted">' + esc((e && e.message) || 'Try again later.') + '</p>' +
+      '<button class="tw-btn tw-btn-block" data-action="modal-close">OK</button>');
+  }
+}
+
+/* ---------------- page: assignments ---------------- */
+
+async function twPageAssignments(c) {
+  var assigns = await twGetAssignments();
+  var students = await twGetStudents();
+  c.innerHTML = twPageHead('ASSIGNMENTS', 'Assignments',
+      'Create, send and track assignments for your students.') +
+    '<div class="tw-asg-top"><div class="tw-tabs">' +
+      '<button class="tw-tab on" data-twtab="list">Sent</button>' +
+      '<button class="tw-tab" data-twtab="planner">📅 Weekly planner</button></div>' +
+      '<div class="tw-asg-actions"><button class="tw-btn tw-btn-white" id="tw-classreport">📊 Class report</button>' +
+      '<button class="tw-btn tw-btn-orange" data-action="assignment-compose">＋ New assignment</button></div></div>' +
+    '<div id="tw-assign-list"></div>' +
+    '<div id="tw-assign-planner" hidden></div>';
+  var paint = function () {
+    var host = document.getElementById('tw-assign-list');
+    if (!assigns.length) {
+      host.innerHTML = '<div class="tw-emptybox"><div class="tw-empty-ill">✈️</div><b>No assignments yet</b>' +
+        '<p class="muted">Create your first assignment and send it to your students.</p></div>';
+      return;
+    }
+    host.innerHTML = assigns.map(function (a, i) {
+      var st = twAsgStatus(a);
+      var targets = (a.student_ids || []).length;
+      var done = Object.keys((state.twDoneMap || {})[a.id] || {}).length;
+      var pct = targets ? Math.round(done / targets * 100) : 0;
+      var due = a.deadline || a.send_at;
+      var kindIcon = a.kind === 'exam' ? '📋' : '📝';
+      var tint = a.status === 'scheduled' ? '#EDE7FB' : (st[1] === 'pending' ? '#FFF0D6' : '#E4F5DB');
+      var who = targets >= students.length && students.length ? 'All students' : targets + ' student' + (targets === 1 ? '' : 's');
+      return '<div class="tw-asg" data-i="' + i + '" role="button" tabindex="0">' +
+        '<span class="tw-asg-ico" style="background:' + tint + '">' + kindIcon + '</span>' +
+        '<span class="tw-asg-main"><b>' + esc(a.title || 'Assignment') + '</b>' +
+        '<small>📅 ' + (due ? 'Due ' + esc(twDueLabel(due)) : 'No due date') +
+        ' <i>·</i> 👥 ' + esc(who) + '</small></span>' +
+        '<span class="tw-asg-prog">' + twRing(pct) +
+        '<span class="tw-asg-frac"><b>' + done + ' / ' + targets + '</b><small>completed</small></span></span>' +
+        twPill(st[0], st[1]) + '<span class="tw-asg-arrow">→</span></div>';
+    }).join('');
+    Array.prototype.forEach.call(host.querySelectorAll('.tw-asg'), function (el) {
+      el.addEventListener('click', function () { openTeacherAssignment(parseInt(el.getAttribute('data-i'), 10)); });
+    });
+  };
+  paint();
+  Array.prototype.forEach.call(c.querySelectorAll('[data-twtab]'), function (b) {
+    b.addEventListener('click', function () {
+      Array.prototype.forEach.call(c.querySelectorAll('[data-twtab]'), function (x) {
+        x.classList.toggle('on', x === b);
+      });
+      var which = b.getAttribute('data-twtab');
+      document.getElementById('tw-assign-list').hidden = which !== 'list';
+      var ph = document.getElementById('tw-assign-planner');
+      ph.hidden = which !== 'planner';
+      if (which === 'planner' && !ph.getAttribute('data-loaded')) {
+        ph.setAttribute('data-loaded', '1');
+        renderPlanner(ph);
+      }
+    });
+  });
+  document.getElementById('tw-classreport').addEventListener('click', function () {
+    twClassReport(assigns, students);
+  });
+}
+function twDueLabel(d) {
+  var dt = new Date(d.length <= 10 ? d + 'T12:00:00' : d);
+  if (isNaN(dt.getTime())) return d;
+  return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+function twClassReport(assigns, students) {
+  var doneMap = state.twDoneMap || {};
+  var sent = assigns.filter(function (a) { return a.status !== 'scheduled'; }).slice(0, 8);
+  var body;
+  if (!sent.length || !students.length) {
+    body = '<div class="empty">Nothing to report yet.</div>';
+  } else {
+    body = '<div class="tw-table-scroll"><table class="tw-matrix"><tr><th>Student</th>' +
+      sent.map(function (a) { return '<th title="' + esc(a.title || '') + '">' + esc(String(a.title || '').slice(0, 14)) + '…</th>'; }).join('') + '</tr>' +
+      students.map(function (s) {
+        var nm = s.display_name || (s.email || '?').split('@')[0];
+        return '<tr><td><b>' + esc(nm) + '</b></td>' + sent.map(function (a) {
+          var dm = doneMap[a.id] || {};
+          if ((a.student_ids || []).indexOf(s.user_id) < 0) return '<td class="muted">–</td>';
+          return '<td>' + (dm[s.user_id] ? '<span class="tw-ok">✓</span>' : '<span class="tw-pend">○</span>') + '</td>';
+        }).join('') + '</tr>';
+      }).join('') + '</table></div>';
+  }
+  showModal('<div class="modal-ico">📊</div><h2>Class report</h2>' +
+    '<p class="muted">Completion per student across recent assignments.</p>' + body +
+    '<button class="tw-btn tw-btn-block" data-action="modal-close" style="margin-top:1rem">Close</button>');
+}
+
+/* ---------------- page: placement tests ---------------- */
+
+async function twPagePlacement(c) {
+  var rows = await twGetPtest();
+  c.innerHTML = twPageHead('PLACEMENT TESTS', 'Placement tests',
+      'Review your students’ 5-part placement tests — vocabulary, listening, grammar, writing, speaking.') +
+    '<div class="tw-banner"><div class="tw-banner-txt"><span class="tw-banner-ico">📝</span>' +
+      '<div><b>New student? Send them your placement link.</b>' +
+      '<p>Their results will appear here with a suggested level.</p></div></div>' +
+      twPlane() +
+      '<button class="tw-btn tw-btn-orange" id="tw-copy-ptest2">🔗 Copy placement link</button></div>' +
+    '<div id="tw-ptest-list"></div><div id="tch-ptest-detail"></div>';
+  document.getElementById('tw-copy-ptest2').addEventListener('click', function () {
+    twCopy(teacherPlacementLink(state.teacher.ref_code), this);
+  });
+  var host = document.getElementById('tw-ptest-list');
+  if (!rows.length) {
+    host.innerHTML = '<div class="tw-emptybox"><div class="tw-empty-ill">📝</div><b>No tests yet</b>' +
+      '<p class="muted">When your students take a placement test,<br>their results will appear here.</p></div>';
+    return;
+  }
+  host.innerHTML = '<div class="tw-ptests">' + rows.map(function (x, i) {
+    var sc = x.scores || {};
+    var done = x.status === 'completed';
+    return '<div class="tw-ptest" data-i="' + i + '" role="button" tabindex="0">' +
+      twAvatar(x.student_name) +
+      '<span class="tw-ptest-main"><b>' + esc(x.student_name || 'Student') + '</b>' +
+      '<small>' + esc(twDate(x.completed_at || x.updated_at)) +
+      (x.student_mobile ? ' · ' + esc(x.student_mobile) : '') + '</small></span>' +
+      (done ? '<span class="tw-ptest-score"><b>' + (sc.total || 0) + '/55</b><small>total</small></span>' +
+        (x.suggested_level ? twPill(esc(x.suggested_level), 'green') : '') : twPill('In progress', 'gray')) +
+      '<span class="tw-asg-arrow">→</span></div>';
+  }).join('') + '</div>';
+  Array.prototype.forEach.call(host.querySelectorAll('.tw-ptest'), function (el) {
+    el.addEventListener('click', function () {
+      openPlacementDetail(parseInt(el.getAttribute('data-i'), 10));
+      setTimeout(function () {
+        var d = document.getElementById('tch-ptest-detail');
+        if (d) d.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 60);
+    });
+  });
+}
+
+/* ---------------- page: invite & links + settings ---------------- */
+
+function twProfileEditor(host) {
+  host.innerHTML = '<div class="empty">Loading…</div>';
+  (async function () {
+    var p = {};
+    try {
+      var r = await sb.from('teachers')
+        .select('display_name,photo_url,experience_years,bio')
+        .eq('user_id', state.user.id).maybeSingle();
+      if (!r.error) p = r.data || {};
+    } catch (e) {}
+    var previewURL = null, pendingFile = null;
+    var photoHTML = function (url, name) {
+      return url
+        ? '<img id="tw-photo-prev" class="tw-prof-photo" src="' + esc(url) + '" alt="">'
+        : '<div id="tw-photo-prev" class="tw-prof-photo">' + esc((name || '?').charAt(0).toUpperCase()) + '</div>';
+    };
+    host.innerHTML =
+      '<div class="tw-prof-grid"><div>' +
+        '<div class="tw-prof-photowrap">' + photoHTML(p.photo_url, p.display_name) +
+        '<label class="tw-btn tw-btn-sm tw-btn-white" style="cursor:pointer">⬆ Upload photo<input type="file" id="tw-photo-file" accept="image/*" hidden></label>' +
+        '<small class="muted">JPG, PNG up to 2MB</small></div></div>' +
+      '<div class="tw-prof-fields">' +
+        '<div class="field"><label>Display name</label><input id="tw-f-name" maxlength="40" value="' + esc(p.display_name || '') + '"></div>' +
+        '<div class="field"><label>Years of teaching experience</label><input id="tw-f-exp" inputmode="numeric" placeholder="e.g. 5" value="' + esc(p.experience_years == null ? '' : p.experience_years) + '"></div>' +
+        '<div class="field"><label>Short bio (one line, max 200)</label>' +
+        '<textarea id="tw-f-bio" rows="2" maxlength="200" placeholder="e.g. IELTS coach — I help adults speak with confidence">' + esc(p.bio || '') + '</textarea>' +
+        '<small class="muted" id="tw-bio-count">' + (p.bio || '').length + '/200</small></div>' +
+        '<div><button class="tw-btn tw-btn-orange" id="tw-prof-save">Save profile</button> ' +
+        '<span class="muted" id="tw-prof-status" style="font-size:0.85rem;margin-left:0.5rem"></span></div>' +
+      '</div>' +
+      '<div class="tw-prof-preview"><div class="tw-cardhead"><h3 style="margin:0">👁 Profile preview</h3>' +
+      '<a class="tw-btn tw-btn-sm tw-btn-white" href="/#/choose-teacher" target="_blank" rel="noopener">View public profile ⬈</a></div>' +
+      '<div class="tw-pvcard" id="tw-pv"></div>' +
+      '<p class="muted" style="font-size:0.82rem">Here’s how students will see you.</p></div>' +
+      '</div>';
+    var paintPreview = function () {
+      var nm = host.querySelector('#tw-f-name').value.trim() || '?';
+      var bio = host.querySelector('#tw-f-bio').value.trim();
+      var url = previewURL || p.photo_url;
+      document.getElementById('tw-pv').innerHTML =
+        '<div class="tw-pv-top">' + (url
+          ? '<img class="tw-pv-photo" src="' + esc(url) + '" alt="">'
+          : '<div class="tw-pv-photo tw-pv-initial">' + esc(nm.charAt(0).toUpperCase()) + '</div>') +
+        '<div><b>' + esc(nm) + '</b><small>Teacher</small>' +
+        '<div>' + twPill('● New on Muse English', 'green') + '</div></div></div>' +
+        '<div class="tw-pv-meta"><span>📖 <b>' + (state.twStudents || []).length + '+ students</b></span>' +
+        '<span>⭐ <b>0.0</b> (0 reviews)</span></div>' +
+        '<p class="tw-pv-bio">' + esc(bio || 'No bio yet.') + '</p>';
+    };
+    host.querySelector('#tw-f-bio').addEventListener('input', function () {
+      host.querySelector('#tw-bio-count').textContent = this.value.length + '/200';
+      paintPreview();
+    });
+    host.querySelector('#tw-f-name').addEventListener('input', paintPreview);
+    host.querySelector('#tw-photo-file').addEventListener('change', function (e) {
+      var f = e.target.files && e.target.files[0];
+      if (!f) return;
+      pendingFile = f;
+      var rd = new FileReader();
+      rd.onload = function () { previewURL = rd.result; paintPreview(); };
+      rd.readAsDataURL(f);
+    });
+    host.querySelector('#tw-prof-save').addEventListener('click', async function () {
+      var status = host.querySelector('#tw-prof-status');
+      var say = function (t, ok) { status.textContent = t; status.style.color = ok ? '#2e7d32' : '#c62828'; };
+      var name = host.querySelector('#tw-f-name').value.trim();
+      var expRaw = host.querySelector('#tw-f-exp').value.trim();
+      var bio = host.querySelector('#tw-f-bio').value.trim();
+      if (name.length < 2) { say('Display name is too short.', false); return; }
+      var exp = expRaw === '' ? null : parseInt(expRaw, 10);
+      if (expRaw !== '' && !(exp >= 0 && exp <= 60)) { say('Experience must be 0–60 years.', false); return; }
+      if (bio.length > 200) { say('Bio is too long (max 200).', false); return; }
+      say('Saving…', true);
+      try {
+        var photoURL = p.photo_url || null;
+        if (pendingFile) {
+          var ext = ((pendingFile.name.split('.').pop() || 'jpg').toLowerCase().replace(/[^a-z0-9]/g, '')) || 'jpg';
+          var path = state.user.id + '/photo.' + ext;
+          var up = await sb.storage.from('teacher-photos').upload(path, pendingFile, { upsert: true, contentType: pendingFile.type || 'image/jpeg' });
+          if (up.error) throw up.error;
+          photoURL = sb.storage.from('teacher-photos').getPublicUrl(path).data.publicUrl;
+        }
+        var rr = await sb.rpc('update_teacher_profile', {
+          p_display_name: name, p_experience_years: exp, p_bio: bio, p_photo_url: photoURL || ''
+        });
+        if (rr.error || rr.data !== true) throw new Error('save failed');
+        p = { display_name: name, photo_url: photoURL, experience_years: exp, bio: bio };
+        if (state.teacher) state.teacher.display_name = name;
+        pendingFile = null; previewURL = photoURL;
+        say('Saved ✓', true);
+        paintPreview();
+        twRenderWorkspace(document.getElementById('view'));
+      } catch (e) { say('Save failed: ' + (e.message || e), false); }
+    });
+    paintPreview();
+  })();
+}
+
+async function twPageLinks(c) {
+  var t = state.teacher;
+  await twGetStudents();
+  c.innerHTML = twPageHead('INVITE & LINKS', 'Invite & links',
+      'Share your links, bring in new students and build your profile.') +
+    '<div class="tw-linkcard"><span class="tw-link-ico" style="background:#FFE8D6">🔗</span>' +
+      '<div class="tw-link-main"><b>Your personal invite link</b>' +
+      '<p class="muted">Share it with your students — everyone who signs up through it shows up on your roster.</p>' +
+      '<div class="tw-linkrow"><code>' + esc(teacherInviteLink(t.ref_code)) + '</code>' +
+      '<button class="tw-btn tw-btn-orange tw-btn-sm" id="tw-copy-invite">⧉ Copy</button></div></div>' +
+      '<div class="tw-link-side"><div class="tw-link-note">New students who sign up with this link will be added to your class roster.</div></div></div>' +
+    '<div class="tw-linkcard"><span class="tw-link-ico" style="background:#E4F5DB">📝</span>' +
+      '<div class="tw-link-main"><b>Placement test link for new students</b>' +
+      '<p class="muted">Send it to a new student — they take a 5-part test and the results land in your dashboard.</p>' +
+      '<div class="tw-linkrow"><code>' + esc(teacherPlacementLink(t.ref_code)) + '</code>' +
+      '<button class="tw-btn tw-btn-orange tw-btn-sm" id="tw-copy-ptest3">⧉ Copy</button></div></div>' +
+      '<div class="tw-link-side"><div class="tw-link-note tw-link-note-p">Students take a 5-part placement test and their results will appear in your dashboard.</div></div></div>' +
+    '<div class="tw-profcard"><div class="tw-cardhead"><div><h3 style="margin:0">👤 My public profile</h3>' +
+      '<p class="muted">Students see this when choosing a teacher.</p></div></div>' +
+      '<div id="tw-prof-edit"></div></div>';
+  document.getElementById('tw-copy-invite').addEventListener('click', function () {
+    twCopy(teacherInviteLink(t.ref_code), this);
+  });
+  document.getElementById('tw-copy-ptest3').addEventListener('click', function () {
+    twCopy(teacherPlacementLink(t.ref_code), this);
+  });
+  twProfileEditor(document.getElementById('tw-prof-edit'));
+}
+
+function twPageSettings(c) {
+  c.innerHTML = twPageHead('SETTINGS', 'Settings', 'Your public teacher profile.') +
+    '<div class="tw-profcard"><div class="tw-cardhead"><div><h3 style="margin:0">👤 My public profile</h3>' +
+    '<p class="muted">Students see this when choosing a teacher.</p></div></div>' +
+    '<div id="tw-prof-edit"></div></div>';
+  twProfileEditor(document.getElementById('tw-prof-edit'));
 }
 
 /* ==================== Admin panel (/manage) — Phase 1 ====================
