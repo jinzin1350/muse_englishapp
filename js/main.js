@@ -7883,6 +7883,7 @@ function paintHome(v, mistakes, attempts) {
   // 0b2 — Grammar guides banner (smart: explore / continue / completed)
   html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-vocab-wrap"></div>';
+  html += '<div id="home-words-wrap"></div>';
 
   // 0c — Homework from teacher (filled async; empty when none pending)
   html += '<div id="home-hw-wrap"></div>';
@@ -7952,6 +7953,7 @@ function paintHome(v, mistakes, attempts) {
   v.innerHTML = html;
   paintGrammarBanner();
   paintVocabBanner();
+  paintWordsBanner();
 }
 
 function attemptCardHTML(a) {
@@ -8201,6 +8203,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
   html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-vocab-wrap"></div>';
+  html += '<div id="home-words-wrap"></div>';
   html += '<div id="home-hw-wrap"></div>';
   html += '<div class="dh-grid">' + dhQuestsHTML() +
     '<div class="dh-col">' + dhLessonHTML(today) + dhMistakesHTML(mistakes) + '</div></div>';
@@ -8221,6 +8224,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   refreshDhProgress();
   paintGrammarBanner();
   paintVocabBanner();
+  paintWordsBanner();
 }
 
 /* ---------------- PROFILE ---------------- */
@@ -12281,7 +12285,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610192348';
+var APP_VERSION = '202610192354';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14850,6 +14854,22 @@ function paintVocabBanner() {
     '<span>6,298 words \u00B7 66 topics \u00B7 A1\u2013B2' +
     (doneCount ? ' \u00B7 ' + doneCount + ' practised' : '') + '</span></span><span class="g-b-cta">Explore \u2192</span>';
   wrap.innerHTML = '<a class="g-banner" href="#/vocab">' + inner + '</a>';
+}
+
+function paintWordsBanner() {
+  var wrap = document.getElementById('home-words-wrap');
+  if (!wrap) return;
+  var map = wordMapGet();
+  var inner;
+  if (map.tested) {
+    var n = Object.keys(map.words || {}).length;
+    inner = '<span class="g-b-icon">\uD83D\uDDFA\uFE0F</span><span class="g-b-main"><b>Word Map</b>' +
+      '<span>' + n.toLocaleString() + ' words mapped \u00B7 level ' + (map.level || '?').toUpperCase() + '</span></span><span class="g-b-cta">Continue \u2192</span>';
+  } else {
+    inner = '<span class="g-b-icon">\uD83D\uDDFA\uFE0F</span><span class="g-b-main"><b>Word Map</b>' +
+      '<span>Map your vocabulary \u00B7 9,136 words \u00B7 A1\u2013C2</span></span><span class="g-b-cta">Start \u2192</span>';
+  }
+  wrap.innerHTML = '<a class="g-banner" href="#/words">' + inner + '</a>';
 }
 
 })();
