@@ -1,0 +1,368 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Present Perfect: Rules, Examples &amp; Exercises | Muse English</title>
+<meta name="description" content="Learn the present perfect from A2 to C1: have done, ever and never, just, already and yet, been or gone, results, news and time clauses, with exercises.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/present-perfect/">
+<meta property="og:type" content="article"><meta property="og:title" content="Present Perfect: Rules, Examples &amp; Exercises | Muse English">
+<meta property="og:description" content="Learn the present perfect from A2 to C1: have done, ever and never, just, already and yet, been or gone, results, news and time clauses, with exercises."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/present-perfect/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Present Perfect (I have done)", "description": "Learn the present perfect from A2 to C1: have done, ever and never, just, already and yet, been or gone, results, news and time clauses, with exercises.", "url": "https://museenglishapp.com/blog/grammar/present-perfect/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Present Perfect (I have done)", "item": "https://museenglishapp.com/blog/grammar/present-perfect/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Present Perfect (I have done)</div>
+<h1>Present Perfect (I have done)</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#c1'>C1</a></div>
+<p>We use the <strong>present perfect</strong> (<em>have / has</em> + past participle) to connect the past with <strong>now</strong>: <em>I<strong>&#x27;ve lost</strong> my keys</em> (I can&#x27;t find them now). <em>She<strong>&#x27;s been</strong> to Japan three times</em> (in her life, up to now).</p><p>The important thing is not <strong>when</strong> it happened but that it matters <strong>now</strong>. If you say when (<em>yesterday, in 2020</em>), use the past simple. See <a href="/blog/grammar/present-perfect-vs-past-simple/">Present Perfect vs Past Simple</a>.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='pp-form'>Form: have / has + past participle <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th></th><th>I / you / we / they</th><th>he / she / it</th></tr><tr><td>Positive</td><td><em>I <strong>have</strong> (I<strong>&#x27;ve</strong>) <strong>finished</strong>.</em></td><td><em>She <strong>has</strong> (she<strong>&#x27;s</strong>) <strong>finished</strong>.</em></td></tr><tr><td>Negative</td><td><em>I <strong>haven&#x27;t finished</strong>.</em></td><td><em>She <strong>hasn&#x27;t finished</strong>.</em></td></tr><tr><td>Question</td><td><strong><em>Have</strong> you <strong>finished</strong>?</em></td><td><strong><em>Has</strong> she <strong>finished</strong>?</em></td></tr><tr><td>Short answers</td><td><em>Yes, I <strong>have</strong>. / No, I <strong>haven&#x27;t</strong>.</em></td><td><em>Yes, she <strong>has</strong>. / No, she <strong>hasn&#x27;t</strong>.</em></td></tr></table></div>
+<p></p>
+<div class="twrap"><table><tr><th>Verb</th><th>Past simple</th><th>Past participle</th></tr><tr><td>be</td><td>was / were</td><td><strong>been</strong></td></tr><tr><td>go</td><td>went</td><td><strong>gone</strong> / <strong>been</strong></td></tr><tr><td>do</td><td>did</td><td><strong>done</strong></td></tr><tr><td>see</td><td>saw</td><td><strong>seen</strong></td></tr><tr><td>eat</td><td>ate</td><td><strong>eaten</strong></td></tr><tr><td>write</td><td>wrote</td><td><strong>written</strong></td></tr><tr><td>take</td><td>took</td><td><strong>taken</strong></td></tr><tr><td>have</td><td>had</td><td><strong>had</strong></td></tr></table></div>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>We<strong>&#x27;ve bought</strong> a new car. <span class='exnote'>(have + bought)</span></li>
+<li>She <strong>hasn&#x27;t done</strong> her homework. <span class='exnote'>(negative)</span></li>
+<li><strong>Have</strong> you <strong>seen</strong> my phone? <span class='exnote'>(question)</span></li>
+<li>My parents <strong>have</strong> never <strong>eaten</strong> sushi. <span class='exnote'>(irregular participle)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ She have finished. → ✅ She has finished. <span class='why'>(she → has)</span></li>
+<li>❌ I have went to Spain. → ✅ I have been to Spain. <span class='why'>(Use the past participle (been / gone), not the past simple.)</span></li>
+<li>❌ Have you ate breakfast? → ✅ Have you eaten breakfast? <span class='why'>(eat → eaten)</span></li>
+</ul></div>
+<h3 id='pp-experience'>Experiences: ever, never, before <span class='lvl-badge'>A2</span></h3>
+<p></p>
+<ul><li><em>I<strong>&#x27;ve been</strong> to Italy three times.</em></li><li><strong><em>Have</strong> you <strong>ever ridden</strong> a horse?</em> (ever = at any time in your life)</li><li><em>She<strong>&#x27;s never seen</strong> snow.</em> (never = at no time)</li><li><em>I<strong>&#x27;ve met</strong> him <strong>before</strong>.</em></li></ul>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>Have</strong> you <strong>ever eaten</strong> Persian food? <span class='exnote'>(ever: at any time)</span></li>
+<li>I<strong>&#x27;ve never flown</strong> in a helicopter. <span class='exnote'>(never)</span></li>
+<li>We<strong>&#x27;ve seen</strong> this film before. <span class='exnote'>(before)</span></li>
+<li>How many countries <strong>have</strong> you <strong>visited</strong>? <span class='exnote'>(how many: up to now)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I have never not been to Asia. → ✅ I have never been to Asia. <span class='why'>(never already makes it negative)</span></li>
+<li>❌ Have you ever went to Rome? → ✅ Have you ever been to Rome? <span class='why'>(Use the past participle: been.)</span></li>
+<li>❌ I have been to London in 2019. → ✅ I went to London in 2019. <span class='why'>(With a past time: past simple)</span></li>
+</ul></div>
+<h3 id='pp-just-already-yet'>Just, already and yet <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Word</th><th>Meaning</th><th>Position</th><th>Example</th></tr><tr><td><strong>just</strong></td><td>a short time ago</td><td>before the participle</td><td><em>I<strong>&#x27;ve just had</strong> lunch.</em></td></tr><tr><td><strong>already</strong></td><td>before now, maybe sooner than expected</td><td>before the participle (or at the end)</td><td><em>She<strong>&#x27;s already left</strong>.</em></td></tr><tr><td><strong>yet</strong></td><td>up to now (expected to happen)</td><td>at the <strong>end</strong>; questions and negatives</td><td><strong><em>Have</strong> you <strong>finished yet</strong>? I <strong>haven&#x27;t finished yet</strong>.</em></td></tr></table></div>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>Your taxi<strong>&#x27;s just arrived</strong>. <span class='exnote'>(a moment ago)</span></li>
+<li>I<strong>&#x27;ve already paid</strong> the bill. <span class='exnote'>(sooner than you expected)</span></li>
+<li><strong>Has</strong> the film <strong>started yet</strong>? <span class='exnote'>(question with yet)</span></li>
+<li>We <strong>haven&#x27;t decided yet</strong>. <span class='exnote'>(negative with yet)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;ve finished yet. → ✅ I&#x27;ve already finished. <span class='why'>(yet is for questions and negatives)</span></li>
+<li>❌ Have you yet finished? → ✅ Have you finished yet? <span class='why'>(yet goes at the end)</span></li>
+<li>❌ I&#x27;ve eaten just. → ✅ I&#x27;ve just eaten. <span class='why'>(just goes before the participle)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-pp-form-s01">
+<div class="exq">1. My brother &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; his leg. He&#x27;s in hospital.</div>
+<label><input type='radio' name='pp-form-s01' value='0'> have broken</label><label><input type='radio' name='pp-form-s01' value='1'> has broken</label><label><input type='radio' name='pp-form-s01' value='2'> has broke</label><label><input type='radio' name='pp-form-s01' value='3'> broken</label>
+<div class="exexpl" style="display:none"><em>He</em> → <em>has</em> + past participle <em>broken</em>.</div>
+<button class="excheck" onclick="checkEx('pp-form-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-form-s02">
+<div class="exq">2. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; you finished your homework?</div>
+<label><input type='radio' name='pp-form-s02' value='0'> Has</label><label><input type='radio' name='pp-form-s02' value='1'> Did</label><label><input type='radio' name='pp-form-s02' value='2'> Have</label><label><input type='radio' name='pp-form-s02' value='3'> Are</label>
+<div class="exexpl" style="display:none"><em>You</em> → <em>Have you…?</em></div>
+<button class="excheck" onclick="checkEx('pp-form-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-form-s03">
+<div class="exq">3. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (write) three emails this morning. It&#x27;s still morning.</div>
+<input type="text" id="pp-form-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">It&#x27;s still morning: <em>have written</em> (American English may also use <em>wrote</em>).</div>
+<button class="excheck" onclick="checkGap('pp-form-s03', ["'ve written", "have written", "wrote"])">Check</button>
+</div>
+<div class="exblock" id="ex-pp-experience-s01">
+<div class="exq">4. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; been to a football match?</div>
+<label><input type='radio' name='pp-experience-s01' value='0'> Have you ever</label><label><input type='radio' name='pp-experience-s01' value='1'> Did you ever</label><label><input type='radio' name='pp-experience-s01' value='2'> Have ever you</label><label><input type='radio' name='pp-experience-s01' value='3'> Are you ever</label>
+<div class="exexpl" style="display:none">Experience question: <em>Have you ever been…?</em></div>
+<button class="excheck" onclick="checkEx('pp-experience-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-experience-s02">
+<div class="exq">5. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; a famous person.</div>
+<label><input type='radio' name='pp-experience-s02' value='0'> have ever met</label><label><input type='radio' name='pp-experience-s02' value='1'> haven&#x27;t never met</label><label><input type='radio' name='pp-experience-s02' value='2'> have met never</label><label><input type='radio' name='pp-experience-s02' value='3'> have never met</label>
+<div class="exexpl" style="display:none"><em>Have + never + participle</em>.</div>
+<button class="excheck" onclick="checkEx('pp-experience-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-experience-s03">
+<div class="exq">6. My grandmother is 85, and she &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (never / use) a computer in her life.</div>
+<input type="text" id="pp-experience-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Experience up to now: <em>has never used</em>.</div>
+<button class="excheck" onclick="checkGap('pp-experience-s03', ["has never used", "'s never used", "never used"])">Check</button>
+</div>
+<div class="exblock" id="ex-pp-just-already-yet-s01">
+<div class="exq">7. Don&#x27;t cook for me. I&#x27;ve &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; eaten.</div>
+<label><input type='radio' name='pp-just-already-yet-s01' value='0'> yet</label><label><input type='radio' name='pp-just-already-yet-s01' value='1'> already</label><label><input type='radio' name='pp-just-already-yet-s01' value='2'> ever</label><label><input type='radio' name='pp-just-already-yet-s01' value='3'> still</label>
+<div class="exexpl" style="display:none"><em>Already</em> = before now.</div>
+<button class="excheck" onclick="checkEx('pp-just-already-yet-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-just-already-yet-s02">
+<div class="exq">8. Have you booked the hotel &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;?</div>
+<label><input type='radio' name='pp-just-already-yet-s02' value='0'> still</label><label><input type='radio' name='pp-just-already-yet-s02' value='1'> just</label><label><input type='radio' name='pp-just-already-yet-s02' value='2'> yet</label><label><input type='radio' name='pp-just-already-yet-s02' value='3'> never</label>
+<div class="exexpl" style="display:none">A question about something expected: <em>yet</em> at the end.</div>
+<button class="excheck" onclick="checkEx('pp-just-already-yet-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-just-already-yet-s03">
+<div class="exq">9. Sorry, Mr Karimi isn&#x27;t here. He &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (just / go) out.</div>
+<input type="text" id="pp-just-already-yet-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">A moment ago: <em>has just gone</em> (American English: <em>just went</em>).</div>
+<button class="excheck" onclick="checkGap('pp-just-already-yet-s03', ["'s just gone", "has just gone", "just went"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='pp-been-gone'>Been or gone? <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Sentence</th><th>Meaning</th></tr><tr><td><em>Sara <strong>has gone</strong> to the bank.</em></td><td>She is at the bank now (or on the way).</td></tr><tr><td><em>Sara <strong>has been</strong> to the bank.</em></td><td>She went to the bank and she&#x27;s back now.</td></tr><tr><td><em>Sara <strong>has been</strong> to Japan.</em></td><td>She visited Japan at some time in her life.</td></tr></table></div>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>My parents <strong>have gone</strong> to Mashhad for a week. <span class='exnote'>(they&#x27;re there now)</span></li>
+<li>Have you ever <strong>been</strong> to Mashhad? <span class='exnote'>(experience)</span></li>
+<li>Where <strong>have</strong> you <strong>been</strong>? I&#x27;ve been waiting for an hour! <span class='exnote'>(you&#x27;re back now)</span></li>
+<li>Ali isn&#x27;t here. He<strong>&#x27;s gone</strong> home. <span class='exnote'>(he&#x27;s at home now)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;ve gone to Rome twice. → ✅ I&#x27;ve been to Rome twice. <span class='why'>(An experience: been.)</span></li>
+<li>❌ Where&#x27;s Reza? ~ He&#x27;s been to the gym. (he&#x27;s still there) → ✅ Where&#x27;s Reza? ~ He&#x27;s gone to the gym. <span class='why'>(He&#x27;s still there: gone.)</span></li>
+</ul></div>
+<h3 id='pp-result-news'>A past action with a result now, and news <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<ul><li><em>I<strong>&#x27;ve lost</strong> my keys.</em> (I can&#x27;t get in now.)</li><li><em>Somebody <strong>has broken</strong> the window.</em> (It&#x27;s broken now.)</li><li><em>She<strong>&#x27;s had</strong> a haircut.</em> (Her hair looks different now.)</li></ul>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>The lift <strong>has broken</strong> down again. We&#x27;ll have to use the stairs. <span class='exnote'>(result now)</span></li>
+<li>I<strong>&#x27;ve cut</strong> my finger. It&#x27;s bleeding. <span class='exnote'>(result now)</span></li>
+<li>Scientists <strong>have discovered</strong> a new species of frog. <span class='exnote'>(news)</span></li>
+<li>Prices <strong>have gone</strong> up. Everything is more expensive. <span class='exnote'>(change with a result now)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Prices have went up. → ✅ Prices have gone up. <span class='why'>(Past participle: gone.)</span></li>
+<li>❌ The president has resigned yesterday. → ✅ The president resigned yesterday. <span class='why'>(With yesterday: past simple.)</span></li>
+</ul></div>
+<h3 id='pp-unfinished-time'>Today, this week, recently, so far <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<ul><li><em>I<strong>&#x27;ve drunk</strong> three coffees <strong>today</strong>.</em> (Today isn&#x27;t finished.)</li><li><em>We <strong>haven&#x27;t had</strong> any rain <strong>this month</strong>.</em></li><li><em>She<strong>&#x27;s been</strong> very busy <strong>recently / lately</strong>.</em></li><li><strong><em>So far</strong>, 200 people <strong>have signed</strong> the letter.</em></li></ul>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I <strong>haven&#x27;t seen</strong> Ali <strong>this week</strong>. <span class='exnote'>(this week isn&#x27;t finished)</span></li>
+<li>It<strong>&#x27;s rained</strong> a lot <strong>this year</strong>. <span class='exnote'>(this year isn&#x27;t finished)</span></li>
+<li>Have you <strong>been</strong> to the cinema <strong>lately</strong>? <span class='exnote'>(lately)</span></li>
+<li><strong>Up to now</strong>, we <strong>haven&#x27;t had</strong> any problems. <span class='exnote'>(up to now)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;ve seen her yesterday. → ✅ I saw her yesterday. <span class='why'>(yesterday is finished: past simple.)</span></li>
+<li>❌ Lately I watched a lot of films. → ✅ Lately I&#x27;ve watched a lot of films. <span class='why'>(lately → present perfect)</span></li>
+</ul></div>
+<h3 id='pp-first-time-superlative'>It&#x27;s the first time… and the best… I&#x27;ve ever… <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<ul><li><strong><em>It&#x27;s the first time</strong> I<strong>&#x27;ve eaten</strong> sushi.</em> Not <em>It&#x27;s the first time I eat sushi</em>.</li><li><em>This is the <strong>third time</strong> he<strong>&#x27;s been</strong> late this week.</em></li><li><em>She&#x27;s the <strong>nicest</strong> person I<strong>&#x27;ve ever met</strong>.</em></li><li><em>That was the <strong>most boring</strong> film I<strong>&#x27;ve ever seen</strong>.</em></li></ul>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>This is the first time</strong> I<strong>&#x27;ve visited</strong> Canada. <span class='exnote'>(first time + present perfect)</span></li>
+<li>It&#x27;s the <strong>second time</strong> you<strong>&#x27;ve asked</strong> me that today. <span class='exnote'>(second time)</span></li>
+<li>This is the <strong>best</strong> coffee I<strong>&#x27;ve ever tasted</strong>. <span class='exnote'>(superlative + ever)</span></li>
+<li>He&#x27;s the <strong>funniest</strong> person I<strong>&#x27;ve</strong> ever <strong>known</strong>. <span class='exnote'>(superlative)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ It&#x27;s the first time I see snow. → ✅ It&#x27;s the first time I&#x27;ve seen snow. <span class='why'>(first time + present perfect)</span></li>
+<li>❌ This is the best book I ever read. → ✅ This is the best book I&#x27;ve ever read. <span class='why'>(superlative + present perfect (British English))</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-pp-been-gone-s01">
+<div class="exq">10. Hi! Where &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;? You look tired. ~ I&#x27;ve been to the gym.</div>
+<label><input type='radio' name='pp-been-gone-s01' value='0'> have you been</label><label><input type='radio' name='pp-been-gone-s01' value='1'> have you gone</label><label><input type='radio' name='pp-been-gone-s01' value='2'> have you went</label><label><input type='radio' name='pp-been-gone-s01' value='3'> are you</label>
+<div class="exexpl" style="display:none">You are back now: <em>have you been</em>.</div>
+<button class="excheck" onclick="checkEx('pp-been-gone-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-been-gone-s02">
+<div class="exq">11. You can&#x27;t speak to Maryam now. She &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to a meeting.</div>
+<label><input type='radio' name='pp-been-gone-s02' value='0'> has been</label><label><input type='radio' name='pp-been-gone-s02' value='1'> have gone</label><label><input type='radio' name='pp-been-gone-s02' value='2'> is been</label><label><input type='radio' name='pp-been-gone-s02' value='3'> has gone</label>
+<div class="exexpl" style="display:none">She is still at the meeting: <em>gone</em>.</div>
+<button class="excheck" onclick="checkEx('pp-been-gone-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-been-gone-s03">
+<div class="exq">12. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (be) to Shiraz three times. I love it.</div>
+<input type="text" id="pp-been-gone-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">An experience: <em>have been</em>.</div>
+<button class="excheck" onclick="checkGap('pp-been-gone-s03', ["'ve been", "have been"])">Check</button>
+</div>
+<div class="exblock" id="ex-pp-result-news-s01">
+<div class="exq">13. I can&#x27;t find my wallet. I think I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; it.</div>
+<label><input type='radio' name='pp-result-news-s01' value='0'> &#x27;ve lost</label><label><input type='radio' name='pp-result-news-s01' value='1'> lose</label><label><input type='radio' name='pp-result-news-s01' value='2'> was losing</label><label><input type='radio' name='pp-result-news-s01' value='3'> &#x27;ve lose</label>
+<div class="exexpl" style="display:none">Result now (I can&#x27;t find it): <em>have lost</em>.</div>
+<button class="excheck" onclick="checkEx('pp-result-news-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-result-news-s02">
+<div class="exq">14. Breaking news: a large earthquake &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the south of the country.</div>
+<label><input type='radio' name='pp-result-news-s02' value='0'> is hit</label><label><input type='radio' name='pp-result-news-s02' value='1'> is hitting</label><label><input type='radio' name='pp-result-news-s02' value='2'> has hit</label><label><input type='radio' name='pp-result-news-s02' value='3'> hitted</label>
+<div class="exexpl" style="display:none">News: present perfect.</div>
+<button class="excheck" onclick="checkEx('pp-result-news-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-result-news-s03">
+<div class="exq">15. Your hair looks great! &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (you / have) a haircut?</div>
+<input type="text" id="pp-result-news-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Present result (<em>looks great</em>): <em>Have you had…?</em> (American English often uses <em>Did you have…?</em>).</div>
+<button class="excheck" onclick="checkGap('pp-result-news-s03', ["Have you had", "Did you have"])">Check</button>
+</div>
+<div class="exblock" id="ex-pp-unfinished-time-s01">
+<div class="exq">16. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; much work this week. I&#x27;ve been ill.</div>
+<label><input type='radio' name='pp-unfinished-time-s01' value='0'> don&#x27;t done</label><label><input type='radio' name='pp-unfinished-time-s01' value='1'> don&#x27;t do</label><label><input type='radio' name='pp-unfinished-time-s01' value='2'> hadn&#x27;t done</label><label><input type='radio' name='pp-unfinished-time-s01' value='3'> haven&#x27;t done</label>
+<div class="exexpl" style="display:none">This week isn&#x27;t finished: present perfect.</div>
+<button class="excheck" onclick="checkEx('pp-unfinished-time-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-unfinished-time-s02">
+<div class="exq">17. How many cups of coffee &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; so far today?</div>
+<label><input type='radio' name='pp-unfinished-time-s02' value='0'> did you have</label><label><input type='radio' name='pp-unfinished-time-s02' value='1'> have you had</label><label><input type='radio' name='pp-unfinished-time-s02' value='2'> do you have</label><label><input type='radio' name='pp-unfinished-time-s02' value='3'> had you had</label>
+<div class="exexpl" style="display:none"><em>So far today</em> = up to now.</div>
+<button class="excheck" onclick="checkEx('pp-unfinished-time-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-unfinished-time-s03">
+<div class="exq">18. We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (have) a lot of visitors lately.</div>
+<input type="text" id="pp-unfinished-time-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Lately</em> → present perfect.</div>
+<button class="excheck" onclick="checkGap('pp-unfinished-time-s03', ["'ve had", "have had", "'ve been having", "have been having"])">Check</button>
+</div>
+<div class="exblock" id="ex-pp-first-time-superlative-s01">
+<div class="exq">19. This is the first time I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; a speech in English.</div>
+<label><input type='radio' name='pp-first-time-superlative-s01' value='0'> &#x27;ve given</label><label><input type='radio' name='pp-first-time-superlative-s01' value='1'> give</label><label><input type='radio' name='pp-first-time-superlative-s01' value='2'> gave</label><label><input type='radio' name='pp-first-time-superlative-s01' value='3'> was giving</label>
+<div class="exexpl" style="display:none"><em>It&#x27;s the first time</em> + present perfect.</div>
+<button class="excheck" onclick="checkEx('pp-first-time-superlative-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-first-time-superlative-s02">
+<div class="exq">20. That&#x27;s the most beautiful beach &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='pp-first-time-superlative-s02' value='0'> I ever see</label><label><input type='radio' name='pp-first-time-superlative-s02' value='1'> I&#x27;ve ever seen</label><label><input type='radio' name='pp-first-time-superlative-s02' value='2'> I&#x27;m ever seeing</label><label><input type='radio' name='pp-first-time-superlative-s02' value='3'> I&#x27;ve never seen ever</label>
+<div class="exexpl" style="display:none">Superlative + present perfect.</div>
+<button class="excheck" onclick="checkEx('pp-first-time-superlative-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-first-time-superlative-s03">
+<div class="exq">21. It&#x27;s the third time she &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (call) me today.</div>
+<input type="text" id="pp-first-time-superlative-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>The third time</em> + present perfect.</div>
+<button class="excheck" onclick="checkGap('pp-first-time-superlative-s03', ["'s called", "has called"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='pp-news-reports'>The present perfect in news and reports <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>The central bank <strong>has raised</strong> interest rates. The decision <strong>was announced</strong> this morning. <span class='exnote'>(news, then details)</span></li>
+<li>Researchers <strong>have developed</strong> a new test for the disease. They <strong>tested</strong> it on 500 patients. <span class='exnote'>(report, then details)</span></li>
+<li>Rescue teams <strong>have found</strong> two more survivors. <span class='exnote'>(news with a result now)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ A plane has crashed in the mountains. It has crashed at 6 am. → ✅ A plane has crashed in the mountains. It crashed at 6 am. <span class='why'>(With the time detail: past simple.)</span></li>
+<li>❌ Smith has published a famous study in 1998. → ✅ Smith published a famous study in 1998. <span class='why'>(A specific date: past simple.)</span></li>
+</ul></div>
+<h3 id='pp-future-time'>When I&#x27;ve finished…: the present perfect for the future <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<ul><li><em>I&#x27;ll call you <strong>when</strong> I<strong>&#x27;ve finished</strong> the report.</em> (first finish, then call)</li><li><em>You can&#x27;t leave <strong>until</strong> you<strong>&#x27;ve answered</strong> all the questions.</em></li><li><strong><em>Once</strong> you<strong>&#x27;ve tried</strong> it, you&#x27;ll love it.</em></li></ul>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>As soon as</strong> I<strong>&#x27;ve saved</strong> enough money, I&#x27;m going to buy a car. <span class='exnote'>(first save, then buy)</span></li>
+<li>Don&#x27;t send the email <strong>until</strong> you<strong>&#x27;ve checked</strong> it. <span class='exnote'>(complete the check first)</span></li>
+<li><strong>After</strong> we<strong>&#x27;ve eaten</strong>, we&#x27;ll go for a walk. <span class='exnote'>(first eat)</span></li>
+<li><strong>When</strong> I <strong>arrive</strong>, I&#x27;ll call you. <span class='exnote'>(same time: present simple)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;ll call you when I will finish. → ✅ I&#x27;ll call you when I&#x27;ve finished. <span class='why'>(No will in the time clause.)</span></li>
+<li>❌ When I&#x27;ve seen him tomorrow, I&#x27;ll give him the book. → ✅ When I see him tomorrow, I&#x27;ll give him the book. <span class='why'>(Same time: present simple.)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-pp-news-reports-s01">
+<div class="exq">22. <em>Police &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; a man after a robbery in the city centre. He was arrested at his home on Tuesday.</em></div>
+<label><input type='radio' name='pp-news-reports-s01' value='0'> arrested on Tuesday</label><label><input type='radio' name='pp-news-reports-s01' value='1'> have been arrested</label><label><input type='radio' name='pp-news-reports-s01' value='2'> were arresting</label><label><input type='radio' name='pp-news-reports-s01' value='3'> have arrested</label>
+<div class="exexpl" style="display:none">The news is introduced with the present perfect; the details follow in the past simple.</div>
+<button class="excheck" onclick="checkEx('pp-news-reports-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-news-reports-s02">
+<div class="exq">23. In an essay: <em>A number of researchers &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; this question in recent years.</em></div>
+<label><input type='radio' name='pp-news-reports-s02' value='0'> studied in 1990</label><label><input type='radio' name='pp-news-reports-s02' value='1'> study since</label><label><input type='radio' name='pp-news-reports-s02' value='2'> have studied</label><label><input type='radio' name='pp-news-reports-s02' value='3'> had studied</label>
+<div class="exexpl" style="display:none">A general state of recent research: present perfect.</div>
+<button class="excheck" onclick="checkEx('pp-news-reports-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-news-reports-s03">
+<div class="exq">24. A strong earthquake has shaken parts of Japan. It &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (strike) at 4.15 local time.</div>
+<input type="text" id="pp-news-reports-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">A time detail: past simple <em>struck</em>.</div>
+<button class="excheck" onclick="checkGap('pp-news-reports-s03', ["struck"])">Check</button>
+</div>
+<div class="exblock" id="ex-pp-future-time-s01">
+<div class="exq">25. You can watch TV after you &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; your homework.</div>
+<label><input type='radio' name='pp-future-time-s01' value='0'> will do</label><label><input type='radio' name='pp-future-time-s01' value='1'> &#x27;ve done</label><label><input type='radio' name='pp-future-time-s01' value='2'> &#x27;ll have done</label><label><input type='radio' name='pp-future-time-s01' value='3'> did</label>
+<div class="exexpl" style="display:none">Time clause, first action complete: <em>have done</em>.</div>
+<button class="excheck" onclick="checkEx('pp-future-time-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-future-time-s02">
+<div class="exq">26. I&#x27;ll lend you the book when I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; it.</div>
+<label><input type='radio' name='pp-future-time-s02' value='0'> &#x27;ve read</label><label><input type='radio' name='pp-future-time-s02' value='1'> will read</label><label><input type='radio' name='pp-future-time-s02' value='2'> &#x27;m reading</label><label><input type='radio' name='pp-future-time-s02' value='3'> had read</label>
+<div class="exexpl" style="display:none">The reading must be complete first: <em>have read</em>.</div>
+<button class="excheck" onclick="checkEx('pp-future-time-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-pp-future-time-s03">
+<div class="exq">27. Once you &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (fill) in the form, give it to the receptionist.</div>
+<input type="text" id="pp-future-time-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Once</em> + present perfect (or present simple): no <em>will</em>.</div>
+<button class="excheck" onclick="checkGap('pp-future-time-s03', ["'ve filled", "have filled", "fill"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/present-perfect-vs-past-simple/">Present Perfect vs Past Simple</a></li><li><a href="/blog/grammar/for-since/">For, Since and Ago</a></li><li><a href="/blog/grammar/present-perfect-continuous/">Present Perfect Continuous (I have been doing)</a></li><li><a href="/blog/grammar/past-simple/">Past Simple (I worked, I went)</a></li><li><a href="/blog/grammar/past-perfect/">Past Perfect (had done)</a></li><li><a href="/blog/grammar/future-time-clauses/">Future Time Clauses (When I get home, I&#x27;ll…)</a></li>
+</ul>
+
+<div class="cta"><p>Practise the present perfect with real sentences and audio: a new Muse English lesson is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

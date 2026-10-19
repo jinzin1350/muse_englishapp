@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Should, Ought To, Had Better: Advice &amp; Rules | Muse English</title>
+<meta name="description" content="Learn should, ought to and had better from A2 to C1: giving advice, should for expectations, be supposed to, and should in that-clauses, with exercises.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/should-ought-to/">
+<meta property="og:type" content="article"><meta property="og:title" content="Should, Ought To, Had Better: Advice &amp; Rules | Muse English">
+<meta property="og:description" content="Learn should, ought to and had better from A2 to C1: giving advice, should for expectations, be supposed to, and should in that-clauses, with exercises."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/should-ought-to/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Should, Ought To and Had Better", "description": "Learn should, ought to and had better from A2 to C1: giving advice, should for expectations, be supposed to, and should in that-clauses, with exercises.", "url": "https://museenglishapp.com/blog/grammar/should-ought-to/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Should, Ought To and Had Better", "item": "https://museenglishapp.com/blog/grammar/should-ought-to/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Should, Ought To and Had Better</div>
+<h1>Should, Ought To and Had Better</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p>We use <strong><em>should</strong></em> to give <strong>advice</strong> and to say what we think is <strong>right</strong>: <em>You <strong>should</strong> drink more water.</em> <strong><em>Ought to</strong></em> means almost the same, and <strong><em>had better</strong></em> is stronger, often a warning.</p><p><em>Should</em> is weaker than <em>must</em>: it&#x27;s advice, not a rule. For obligation, see <a href="/blog/grammar/must-have-to/">Must and Have To</a>. For past regrets (<em>I should have…</em>), see <a href="/blog/grammar/should-have-could-have-neednt-have/">Should Have, Could Have, Needn&#x27;t Have</a>.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='soa-should'>Should and shouldn&#x27;t for advice <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Form</th><th>Example</th></tr><tr><td>Positive</td><td><em>You <strong>should</strong> see a doctor.</em></td></tr><tr><td>Negative</td><td><em>You <strong>shouldn&#x27;t</strong> (should not) worry.</em></td></tr><tr><td>Question</td><td><strong><em>Should</strong> I <strong>call</strong> her?</em></td></tr><tr><td>Opinion</td><td><em>I think you <strong>should</strong> apologise. I <strong>don&#x27;t think</strong> you <strong>should</strong> go.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>You <strong>should</strong> try the fish. It&#x27;s delicious. <span class='exnote'>(advice)</span></li>
+<li>You <strong>shouldn&#x27;t</strong> drive when you&#x27;re tired. <span class='exnote'>(negative advice)</span></li>
+<li>What <strong>should</strong> I wear to the wedding? <span class='exnote'>(asking for advice)</span></li>
+<li>I <strong>think</strong> we <strong>should</strong> leave now. <span class='exnote'>(opinion)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ You should to see a doctor. → ✅ You should see a doctor. <span class='why'>(should + base verb)</span></li>
+<li>❌ She shoulds study more. → ✅ She should study more. <span class='why'>(no -s)</span></li>
+<li>❌ Do I should call him? → ✅ Should I call him? <span class='why'>(question: Should I…?)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-soa-should-s01">
+<div class="exq">1. You look tired. You &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; go to bed.</div>
+<label><input type='radio' name='soa-should-s01' value='0'> should to</label><label><input type='radio' name='soa-should-s01' value='1'> shoulds</label><label><input type='radio' name='soa-should-s01' value='2'> should</label><label><input type='radio' name='soa-should-s01' value='3'> are should</label>
+<div class="exexpl" style="display:none">Advice: <em>should</em> + base verb.</div>
+<button class="excheck" onclick="checkEx('soa-should-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-should-s02">
+<div class="exq">2. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I bring a present to the party?</div>
+<label><input type='radio' name='soa-should-s02' value='0'> Is</label><label><input type='radio' name='soa-should-s02' value='1'> Am</label><label><input type='radio' name='soa-should-s02' value='2'> Does</label><label><input type='radio' name='soa-should-s02' value='3'> Should</label>
+<div class="exexpl" style="display:none">Asking for advice: <em>Should I…?</em></div>
+<button class="excheck" onclick="checkEx('soa-should-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-should-s03">
+<div class="exq">3. You &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (should / not / eat) so much chocolate. It&#x27;s bad for your teeth.</div>
+<input type="text" id="soa-should-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Negative advice: <em>shouldn&#x27;t</em> + base verb.</div>
+<button class="excheck" onclick="checkGap('soa-should-s03', ["shouldn't eat", "should not eat"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='soa-ought-to'>Ought to <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>You <strong>ought to</strong> apologise to her. <span class='exnote'>(= should)</span></li>
+<li>We <strong>ought to</strong> be more careful with money. <span class='exnote'>(what&#x27;s right)</span></li>
+<li>You <strong>ought not to</strong> park there. <span class='exnote'>(formal negative)</span></li>
+<li>Ought I to tell him? → <strong>Should</strong> I tell him? <span class='exnote'>(questions: should is more natural)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ You ought apologise. → ✅ You ought to apologise. <span class='why'>(ought + to)</span></li>
+<li>❌ She oughts to know. → ✅ She ought to know. <span class='why'>(no -s)</span></li>
+</ul></div>
+<h3 id='soa-had-better'>Had better: strong advice and warnings <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>We<strong>&#x27;d better</strong> leave now. The traffic is terrible. <span class='exnote'>(warning)</span></li>
+<li>You<strong>&#x27;d better not</strong> tell Mum about this. <span class='exnote'>(negative)</span></li>
+<li>I<strong>&#x27;d better</strong> call my wife. She&#x27;s waiting for me. <span class='exnote'>(my own decision now)</span></li>
+<li>You<strong>&#x27;d better</strong> be careful. That dog bites. <span class='exnote'>(warning)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ You&#x27;d better to go now. → ✅ You&#x27;d better go now. <span class='why'>(had better + base verb)</span></li>
+<li>❌ You hadn&#x27;t better be late. → ✅ You&#x27;d better not be late. <span class='why'>(negative: had better not)</span></li>
+<li>❌ You would better hurry. → ✅ You&#x27;d better hurry. <span class='why'>(&#x27;d = had)</span></li>
+</ul></div>
+<h3 id='soa-expectation'>Should for expectations: It should arrive tomorrow <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>The train <strong>should</strong> be here in five minutes. <span class='exnote'>(probably will)</span></li>
+<li>You&#x27;ve studied a lot. You <strong>should</strong> pass easily. <span class='exnote'>(I expect so)</span></li>
+<li>It&#x27;s 7 pm. The shops <strong>should</strong> be open until 8. <span class='exnote'>(normally)</span></li>
+<li>The repair <strong>should have taken</strong> an hour, but it took all day. <span class='exnote'>(expected, didn&#x27;t happen)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ The bus should to arrive soon. → ✅ The bus should arrive soon. <span class='why'>(should + base verb)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-soa-ought-to-s01">
+<div class="exq">4. You &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to visit your grandparents more often.</div>
+<label><input type='radio' name='soa-ought-to-s01' value='0'> ought</label><label><input type='radio' name='soa-ought-to-s01' value='1'> should</label><label><input type='radio' name='soa-ought-to-s01' value='2'> must</label><label><input type='radio' name='soa-ought-to-s01' value='3'> better</label>
+<div class="exexpl" style="display:none"><em>Ought to</em> + base verb.</div>
+<button class="excheck" onclick="checkEx('soa-ought-to-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-ought-to-s02">
+<div class="exq">5. Which sentence means the same as <em>You should save more money</em>?</div>
+<label><input type='radio' name='soa-ought-to-s02' value='0'> You ought save more money.</label><label><input type='radio' name='soa-ought-to-s02' value='1'> You ought to save more money.</label><label><input type='radio' name='soa-ought-to-s02' value='2'> You must to save more money.</label><label><input type='radio' name='soa-ought-to-s02' value='3'> You oughts to save more money.</label>
+<div class="exexpl" style="display:none"><em>Ought to</em> = should.</div>
+<button class="excheck" onclick="checkEx('soa-ought-to-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-ought-to-s03">
+<div class="exq">6. We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (ought) to leave now if we want to get there on time.</div>
+<input type="text" id="soa-ought-to-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Ought to</em> + base verb.</div>
+<button class="excheck" onclick="checkGap('soa-ought-to-s03', ["ought"])">Check</button>
+</div>
+<div class="exblock" id="ex-soa-had-better-s01">
+<div class="exq">7. It&#x27;s late. We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; go home.</div>
+<label><input type='radio' name='soa-had-better-s01' value='0'> &#x27;d better</label><label><input type='radio' name='soa-had-better-s01' value='1'> &#x27;d better to</label><label><input type='radio' name='soa-had-better-s01' value='2'> would better</label><label><input type='radio' name='soa-had-better-s01' value='3'> better had</label>
+<div class="exexpl" style="display:none"><em>&#x27;d better</em> + base verb.</div>
+<button class="excheck" onclick="checkEx('soa-had-better-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-had-better-s02">
+<div class="exq">8. You&#x27;d &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; touch that. It&#x27;s hot!</div>
+<label><input type='radio' name='soa-had-better-s02' value='0'> not better</label><label><input type='radio' name='soa-had-better-s02' value='1'> better don&#x27;t</label><label><input type='radio' name='soa-had-better-s02' value='2'> better to not</label><label><input type='radio' name='soa-had-better-s02' value='3'> better not</label>
+<div class="exexpl" style="display:none">Negative: <em>&#x27;d better not</em>.</div>
+<button class="excheck" onclick="checkEx('soa-had-better-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-had-better-s03">
+<div class="exq">9. The shop closes in ten minutes. We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (better / hurry).</div>
+<input type="text" id="soa-had-better-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>&#x27;d better</em> + base verb.</div>
+<button class="excheck" onclick="checkGap('soa-had-better-s03', ["'d better hurry", "had better hurry"])">Check</button>
+</div>
+<div class="exblock" id="ex-soa-expectation-s01">
+<div class="exq">10. My flight lands at 6 pm, so I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; be home by 8. That&#x27;s the plan.</div>
+<label><input type='radio' name='soa-expectation-s01' value='0'> must to</label><label><input type='radio' name='soa-expectation-s01' value='1'> had better to</label><label><input type='radio' name='soa-expectation-s01' value='2'> should</label><label><input type='radio' name='soa-expectation-s01' value='3'> ought</label>
+<div class="exexpl" style="display:none">Expected according to the plan: <em>should</em>.</div>
+<button class="excheck" onclick="checkEx('soa-expectation-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-expectation-s02">
+<div class="exq">11. It&#x27;s 10 o&#x27;clock. Ali &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; be here by now. I wonder where he is.</div>
+<label><input type='radio' name='soa-expectation-s02' value='0'> must</label><label><input type='radio' name='soa-expectation-s02' value='1'> should</label><label><input type='radio' name='soa-expectation-s02' value='2'> can</label><label><input type='radio' name='soa-expectation-s02' value='3'> will</label>
+<div class="exexpl" style="display:none">Expected but not happened: <em>should … by now</em>.</div>
+<button class="excheck" onclick="checkEx('soa-expectation-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-expectation-s03">
+<div class="exq">12. The weather &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (should / be) good this weekend. The forecast says sunny.</div>
+<input type="text" id="soa-expectation-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Expectation: <em>should be</em>.</div>
+<button class="excheck" onclick="checkGap('soa-expectation-s03', ["should be"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='soa-supposed-to'>Be supposed to <span class='lvl-badge'>B2</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>We<strong>&#x27;re supposed to</strong> finish this by Friday. <span class='exnote'>(an arrangement)</span></li>
+<li>You <strong>weren&#x27;t supposed to</strong> tell anyone! <span class='exnote'>(you did tell)</span></li>
+<li>This restaurant <strong>is supposed to</strong> be the best in town. <span class='exnote'>(people say)</span></li>
+<li>What <strong>are</strong> we <strong>supposed to</strong> do now? <span class='exnote'>(what is expected)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ We&#x27;re suppose to arrive at 9. → ✅ We&#x27;re supposed to arrive at 9. <span class='why'>(supposed, with -d)</span></li>
+<li>❌ You supposed to call me. → ✅ You were supposed to call me. <span class='why'>(be + supposed to)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-soa-supposed-to-s01">
+<div class="exq">13. You &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; supposed to use your phone in the cinema.</div>
+<label><input type='radio' name='soa-supposed-to-s01' value='0'> don&#x27;t</label><label><input type='radio' name='soa-supposed-to-s01' value='1'> haven&#x27;t</label><label><input type='radio' name='soa-supposed-to-s01' value='2'> aren&#x27;t</label><label><input type='radio' name='soa-supposed-to-s01' value='3'> mustn&#x27;t</label>
+<div class="exexpl" style="display:none"><em>Be not supposed to</em> = not allowed.</div>
+<button class="excheck" onclick="checkEx('soa-supposed-to-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-supposed-to-s02">
+<div class="exq">14. The train was supposed to leave at 8, but it &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='soa-supposed-to-s02' value='0'> didn&#x27;t</label><label><input type='radio' name='soa-supposed-to-s02' value='1'> did</label><label><input type='radio' name='soa-supposed-to-s02' value='2'> was</label><label><input type='radio' name='soa-supposed-to-s02' value='3'> left</label>
+<div class="exexpl" style="display:none"><em>Was supposed to</em> often means it didn&#x27;t happen.</div>
+<button class="excheck" onclick="checkEx('soa-supposed-to-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-supposed-to-s03">
+<div class="exq">15. That new pizza place &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (be) supposed to be amazing. Shall we try it?</div>
+<input type="text" id="soa-supposed-to-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Is supposed to</em> = people say.</div>
+<button class="excheck" onclick="checkGap('soa-supposed-to-s03', ["is", "'s"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='soa-that-clause'>Should in that-clauses and for surprise <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>The doctor suggested that I <strong>should</strong> rest for a week. <span class='exnote'>(suggestion)</span></li>
+<li>It&#x27;s important that every child <strong>should</strong> have access to education. <span class='exnote'>(importance)</span></li>
+<li>It&#x27;s a pity that you <strong>should</strong> feel that way. <span class='exnote'>(emotion)</span></li>
+<li>I find it surprising that he <strong>should</strong> say such a thing. <span class='exnote'>(surprise)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I suggest that you should to apply. → ✅ I suggest that you should apply. <span class='why'>(should + base verb)</span></li>
+<li>❌ It&#x27;s essential that he should arrives on time. → ✅ It&#x27;s essential that he should arrive on time. <span class='why'>(should + base verb)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-soa-that-clause-s01">
+<div class="exq">16. The committee insisted that the report &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; rewritten.</div>
+<label><input type='radio' name='soa-that-clause-s01' value='0'> should is</label><label><input type='radio' name='soa-that-clause-s01' value='1'> should to be</label><label><input type='radio' name='soa-that-clause-s01' value='2'> was being should</label><label><input type='radio' name='soa-that-clause-s01' value='3'> should be</label>
+<div class="exexpl" style="display:none"><em>Should</em> + base verb (<em>be rewritten</em>).</div>
+<button class="excheck" onclick="checkEx('soa-that-clause-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-that-clause-s02">
+<div class="exq">17. Which sentence expresses surprise?</div>
+<label><input type='radio' name='soa-that-clause-s02' value='0'> You should ask me that.</label><label><input type='radio' name='soa-that-clause-s02' value='1'> It&#x27;s strange that you should ask me that.</label><label><input type='radio' name='soa-that-clause-s02' value='2'> You should have asked me that.</label><label><input type='radio' name='soa-that-clause-s02' value='3'> You ought to ask me that.</label>
+<div class="exexpl" style="display:none"><em>It&#x27;s strange that … should</em> = surprise.</div>
+<button class="excheck" onclick="checkEx('soa-that-clause-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-soa-that-clause-s03">
+<div class="exq">18. It&#x27;s vital that the patient &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (should / take) the medicine every day.</div>
+<input type="text" id="soa-that-clause-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Should</em> + base verb.</div>
+<button class="excheck" onclick="checkGap('soa-that-clause-s03', ["should take"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/must-have-to/">Must and Have To (Obligation)</a></li><li><a href="/blog/grammar/should-have-could-have-neednt-have/">Should Have, Could Have, Would Have, Needn&#x27;t Have</a></li><li><a href="/blog/grammar/modals-of-deduction/">Modals of Deduction and Probability</a></li><li><a href="/blog/grammar/subjunctive/">The Subjunctive (I Insist That He Be…)</a></li><li><a href="/blog/grammar/requests-offers-permission/">Requests, Offers and Permission (Can you…? May I…? Shall I…?)</a></li>
+</ul>
+
+<div class="cta"><p>Give advice and opinions in natural English: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

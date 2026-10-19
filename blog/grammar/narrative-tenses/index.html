@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Narrative Tenses: How to Tell a Story | Muse English</title>
+<meta name="description" content="Learn the narrative tenses from B1 to C1: past simple, past continuous, past perfect and past perfect continuous in stories, time linkers and style.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/narrative-tenses/">
+<meta property="og:type" content="article"><meta property="og:title" content="Narrative Tenses: How to Tell a Story | Muse English">
+<meta property="og:description" content="Learn the narrative tenses from B1 to C1: past simple, past continuous, past perfect and past perfect continuous in stories, time linkers and style."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/narrative-tenses/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Narrative Tenses: Telling Stories in the Past", "description": "Learn the narrative tenses from B1 to C1: past simple, past continuous, past perfect and past perfect continuous in stories, time linkers and style.", "url": "https://museenglishapp.com/blog/grammar/narrative-tenses/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Narrative Tenses: Telling Stories in the Past", "item": "https://museenglishapp.com/blog/grammar/narrative-tenses/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Narrative Tenses: Telling Stories in the Past</div>
+<h1>Narrative Tenses: Telling Stories in the Past</h1>
+<div class="level-bar"><a href='#b1'>B1</a> · <a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p>When we tell a story or describe past events, we use four <strong>narrative tenses</strong> together. Each one has a different job.</p><p>This page shows how to combine them, how to move back in time and forward again, and how to make a story clear and lively. For each tense on its own, see <a href="/blog/grammar/past-simple/">Past Simple</a>, <a href="/blog/grammar/past-continuous/">Past Continuous</a>, <a href="/blog/grammar/past-perfect/">Past Perfect</a> and <a href="/blog/grammar/past-perfect-continuous/">Past Perfect Continuous</a>.</p>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='nt-overview'>The four narrative tenses and their jobs <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Tense</th><th>Job in the story</th><th>Example</th></tr><tr><td>Past simple</td><td>the main events, in order</td><td><em>She <strong>opened</strong> the letter and <strong>read</strong> it.</em></td></tr><tr><td>Past continuous</td><td>the background, actions in progress</td><td><em>It <strong>was raining</strong> and the wind <strong>was blowing</strong>.</em></td></tr><tr><td>Past perfect</td><td>events <strong>before</strong> the main story</td><td><em>Someone <strong>had left</strong> the door open.</em></td></tr><tr><td>Past perfect continuous</td><td>activities that continued up to the main story</td><td><em>She<strong>&#x27;d been waiting</strong> for that letter for weeks.</em></td></tr></table></div>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>We <strong>were having</strong> lunch when the earthquake <strong>started</strong>. <span class='exnote'>(background + event)</span></li>
+<li>When we <strong>got</strong> to the cinema, the film <strong>had</strong> already <strong>started</strong>. <span class='exnote'>(earlier event)</span></li>
+<li>He <strong>was</strong> angry because he<strong>&#x27;d been waiting</strong> for two hours. <span class='exnote'>(earlier activity)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I was waking up at 7, had a shower and left. → ✅ I woke up at 7, had a shower and left. <span class='why'>(The main events in order: past simple.)</span></li>
+<li>❌ When I arrived, the train already left. → ✅ When I arrived, the train had already left. <span class='why'>(Earlier than the main event: past perfect.)</span></li>
+</ul></div>
+<h3 id='nt-flashback'>Going back in time and coming back <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>When I saw him, I knew him at once. We<strong>&#x27;d worked</strong> together years before. <span class='exnote'>(flashback)</span></li>
+<li>She <strong>opened</strong> the box. Her grandmother <strong>had given</strong> it to her when she <strong>was</strong> a child. <span class='exnote'>(jump back)</span></li>
+<li>I <strong>phoned</strong> the hotel after I <strong>saw</strong> the advert. <span class='exnote'>(order clear: past simple is fine)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I had met him at a party. I had liked him and we had talked all night and we had danced. → ✅ I had met him at a party. I liked him and we talked all night and danced. <span class='why'>(After the first verb, return to the past simple.)</span></li>
+<li>❌ When I arrived at the station, my train left. (it left earlier) → ✅ When I arrived at the station, my train had left. <span class='why'>(The earlier event needs the past perfect.)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-nt-overview-s01">
+<div class="exq">1. Which tense do we normally use for the main events of a story?</div>
+<label><input type='radio' name='nt-overview-s01' value='0'> past continuous</label><label><input type='radio' name='nt-overview-s01' value='1'> past simple</label><label><input type='radio' name='nt-overview-s01' value='2'> past perfect</label><label><input type='radio' name='nt-overview-s01' value='3'> past perfect continuous</label>
+<div class="exexpl" style="display:none">The past simple moves the story forward.</div>
+<button class="excheck" onclick="checkEx('nt-overview-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-nt-overview-s02">
+<div class="exq">2. It &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; heavily when we left the house, so we took an umbrella.</div>
+<label><input type='radio' name='nt-overview-s02' value='0'> was raining</label><label><input type='radio' name='nt-overview-s02' value='1'> had rained</label><label><input type='radio' name='nt-overview-s02' value='2'> rained once</label><label><input type='radio' name='nt-overview-s02' value='3'> rains</label>
+<div class="exexpl" style="display:none">Background in progress: past continuous.</div>
+<button class="excheck" onclick="checkEx('nt-overview-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-nt-overview-s03">
+<div class="exq">3. When I got to the airport, I realised I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (forget) my passport.</div>
+<input type="text" id="nt-overview-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Earlier than <em>realised</em>: past perfect.</div>
+<button class="excheck" onclick="checkGap('nt-overview-s03', ["had forgotten", "'d forgotten"])">Check</button>
+</div>
+<div class="exblock" id="ex-nt-flashback-s01">
+<div class="exq">4. I was nervous before the interview because I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; an interview in English before.</div>
+<label><input type='radio' name='nt-flashback-s01' value='0'> never have</label><label><input type='radio' name='nt-flashback-s01' value='1'> have never had</label><label><input type='radio' name='nt-flashback-s01' value='2'> was never having</label><label><input type='radio' name='nt-flashback-s01' value='3'> had never had</label>
+<div class="exexpl" style="display:none">Experience before a past moment: <em>had never had</em>.</div>
+<button class="excheck" onclick="checkEx('nt-flashback-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-nt-flashback-s02">
+<div class="exq">5. Which is the most natural way to continue? <em>I recognised the woman at once. She…</em></div>
+<label><input type='radio' name='nt-flashback-s02' value='0'> had been my teacher years before, and she had taught me and had given me books and had encouraged me.</label><label><input type='radio' name='nt-flashback-s02' value='1'> is my teacher years before.</label><label><input type='radio' name='nt-flashback-s02' value='2'> had been my teacher years before, and she taught me to love books.</label><label><input type='radio' name='nt-flashback-s02' value='3'> was being my teacher years before.</label>
+<div class="exexpl" style="display:none">Jump back with the past perfect, then continue in the past simple.</div>
+<button class="excheck" onclick="checkEx('nt-flashback-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-nt-flashback-s03">
+<div class="exq">6. When I saw the photo, I remembered the day. We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (go) to the lake with our grandfather.</div>
+<input type="text" id="nt-flashback-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">The jump back: past perfect.</div>
+<button class="excheck" onclick="checkGap('nt-flashback-s03', ["had gone", "'d gone"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='nt-time-linkers'>Time linkers in stories <span class='lvl-badge'>B2</span></h3>
+<div class="twrap"><table><tr><th>Linker</th><th>Use</th><th>Example</th></tr><tr><td><strong>when / as soon as</strong></td><td>one event right after another</td><td><em>As soon as I <strong>saw</strong> him, I <strong>knew</strong>.</em></td></tr><tr><td><strong>after / before</strong></td><td>order (past simple is often enough)</td><td><em>After we <strong>(had) eaten</strong>, we went out.</em></td></tr><tr><td><strong>by the time</strong></td><td>something was already complete</td><td><em>By the time we <strong>arrived</strong>, the shop <strong>had closed</strong>.</em></td></tr><tr><td><strong>until</strong></td><td>up to that time</td><td><em>I <strong>waited until</strong> the rain <strong>stopped</strong>.</em></td></tr><tr><td><strong>while / as</strong></td><td>two things at the same time</td><td><em>While I <strong>was cooking</strong>, the phone <strong>rang</strong>.</em></td></tr><tr><td><strong>during</strong> + noun</td><td>in the period of something</td><td><em>During the flight, I <strong>slept</strong>.</em></td></tr><tr><td><strong>eventually / in the end / at last</strong></td><td>after a long time or difficulties</td><td><em>We <strong>eventually found</strong> the hotel.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>By the time</strong> the ambulance <strong>arrived</strong>, the man <strong>had stopped</strong> breathing. <span class='exnote'>(by the time + past perfect)</span></li>
+<li>We <strong>didn&#x27;t leave until</strong> the storm <strong>had passed</strong>. <span class='exnote'>(until)</span></li>
+<li><strong>During</strong> the night, the temperature <strong>fell</strong> to −20. <span class='exnote'>(during + noun)</span></li>
+<li><strong>Eventually</strong>, after three hours, we <strong>reached</strong> the top. <span class='exnote'>(after a long time)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ During we were travelling, we met a lot of people. → ✅ While we were travelling, we met a lot of people. <span class='why'>(during + noun; while + clause)</span></li>
+<li>❌ By the time we arrived, the film already started. → ✅ By the time we arrived, the film had already started. <span class='why'>(by the time → past perfect)</span></li>
+<li>❌ At the end we found a taxi. → ✅ In the end we found a taxi. <span class='why'>(final result: in the end)</span></li>
+</ul></div>
+<h3 id='nt-choosing'>Choosing the right tense in a story <span class='lvl-badge'>B2</span></h3>
+<p></p>
+<ul><li>Is it the <strong>next event</strong> in the story? → past simple: <em>I <strong>ran</strong> to the door.</em></li><li>Was it <strong>in progress</strong> at that moment? → past continuous: <em>Someone <strong>was knocking</strong>.</em></li><li>Did it happen <strong>before</strong> the moment we&#x27;re talking about? → past perfect: <em>I <strong>had</strong> never <strong>seen</strong> him before.</em></li><li>Was it an <strong>activity going on up to</strong> that moment? → past perfect continuous: <em>He <strong>had been driving</strong> all night.</em></li></ul>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>The phone <strong>rang</strong>. I <strong>was</strong> in the shower. <span class='exnote'>(event + state)</span></li>
+<li>I <strong>had been working</strong> for ten hours, so I <strong>was</strong> exhausted. <span class='exnote'>(earlier activity + state)</span></li>
+<li>She <strong>didn&#x27;t recognise</strong> me because I<strong>&#x27;d changed</strong> so much. <span class='exnote'>(earlier change)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I was getting up, I was having breakfast and I was leaving. → ✅ I got up, had breakfast and left. <span class='why'>(Events in order: past simple.)</span></li>
+<li>❌ Everyone was knowing the answer. → ✅ Everyone knew the answer. <span class='why'>(know is a state verb.)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-nt-time-linkers-s01">
+<div class="exq">7. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the summer, we visited my cousins in Rasht.</div>
+<label><input type='radio' name='nt-time-linkers-s01' value='0'> While</label><label><input type='radio' name='nt-time-linkers-s01' value='1'> During</label><label><input type='radio' name='nt-time-linkers-s01' value='2'> When</label><label><input type='radio' name='nt-time-linkers-s01' value='3'> Until</label>
+<div class="exexpl" style="display:none"><em>During</em> + noun.</div>
+<button class="excheck" onclick="checkEx('nt-time-linkers-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-nt-time-linkers-s02">
+<div class="exq">8. By the time we got to the restaurant, the kitchen &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='nt-time-linkers-s02' value='0'> had closed</label><label><input type='radio' name='nt-time-linkers-s02' value='1'> closed</label><label><input type='radio' name='nt-time-linkers-s02' value='2'> is closing</label><label><input type='radio' name='nt-time-linkers-s02' value='3'> has closed</label>
+<div class="exexpl" style="display:none"><em>By the time</em> + past simple → past perfect.</div>
+<button class="excheck" onclick="checkEx('nt-time-linkers-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-nt-time-linkers-s03">
+<div class="exq">9. We waited &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the last guest had gone, then we started cleaning.</div>
+<input type="text" id="nt-time-linkers-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Until</em> = up to that time.</div>
+<button class="excheck" onclick="checkGap('nt-time-linkers-s03', ["until", "till"])">Check</button>
+</div>
+<div class="exblock" id="ex-nt-choosing-s01">
+<div class="exq">10. It was midnight. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; for hours and my eyes were tired.</div>
+<label><input type='radio' name='nt-choosing-s01' value='0'> was studying for hours before</label><label><input type='radio' name='nt-choosing-s01' value='1'> am studying</label><label><input type='radio' name='nt-choosing-s01' value='2'> have been studying</label><label><input type='radio' name='nt-choosing-s01' value='3'> had been studying</label>
+<div class="exexpl" style="display:none">An activity up to that moment: <em>had been studying</em>.</div>
+<button class="excheck" onclick="checkEx('nt-choosing-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-nt-choosing-s02">
+<div class="exq">11. I ran outside to see what &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='nt-choosing-s02' value='0'> has happened</label><label><input type='radio' name='nt-choosing-s02' value='1'> was happen</label><label><input type='radio' name='nt-choosing-s02' value='2'> had happened</label><label><input type='radio' name='nt-choosing-s02' value='3'> happens</label>
+<div class="exexpl" style="display:none">Earlier than <em>ran outside</em>: <em>had happened</em>.</div>
+<button class="excheck" onclick="checkEx('nt-choosing-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-nt-choosing-s03">
+<div class="exq">12. When I opened my eyes, the nurse &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (stand) next to my bed.</div>
+<input type="text" id="nt-choosing-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">In progress at that moment: <em>was standing</em> (in written stories, <em>stood</em> is also possible).</div>
+<button class="excheck" onclick="checkGap('nt-choosing-s03', ["was standing", "stood"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='nt-style'>Making stories lively: other tenses in narratives <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>So she <strong>looks</strong> at me and <strong>says</strong>, <em>Who are you?</em> <span class='exnote'>(present for drama)</span></li>
+<li>Every summer we <strong>would spend</strong> weeks at the lake. <span class='exnote'>(would: repeated)</span></li>
+<li>I <strong>was about to</strong> give up when I <strong>saw</strong> the sign. <span class='exnote'>(plan interrupted)</span></li>
+<li>We <strong>were going to</strong> have a party, but it <strong>was</strong> cancelled. <span class='exnote'>(plan that changed)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ So I walk into the room and everybody looked at me. → ✅ So I walk into the room and everybody looks at me. <span class='why'>(Keep the same time frame.)</span></li>
+<li>❌ I was about leaving when she arrived. → ✅ I was about to leave when she arrived. <span class='why'>(be about to + base verb)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-nt-style-s01">
+<div class="exq">13. In a spoken anecdote: <em>So I&#x27;m sitting on the train, and suddenly a man &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; next to me.</em></div>
+<label><input type='radio' name='nt-style-s01' value='0'> sits down</label><label><input type='radio' name='nt-style-s01' value='1'> sat down</label><label><input type='radio' name='nt-style-s01' value='2'> had sat down</label><label><input type='radio' name='nt-style-s01' value='3'> was sitting down</label>
+<div class="exexpl" style="display:none">Stay in the present once the story is in the present.</div>
+<button class="excheck" onclick="checkEx('nt-style-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-nt-style-s02">
+<div class="exq">14. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; call you, but then I saw your message.</div>
+<label><input type='radio' name='nt-style-s02' value='0'> would</label><label><input type='radio' name='nt-style-s02' value='1'> used to</label><label><input type='radio' name='nt-style-s02' value='2'> am going to</label><label><input type='radio' name='nt-style-s02' value='3'> was going to</label>
+<div class="exexpl" style="display:none">A plan that changed: <em>was going to</em>.</div>
+<button class="excheck" onclick="checkEx('nt-style-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-nt-style-s03">
+<div class="exq">15. We were about &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (leave) when the guests arrived.</div>
+<input type="text" id="nt-style-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Be about to</em> + base verb.</div>
+<button class="excheck" onclick="checkGap('nt-style-s03', ["to leave"])">Check</button>
+</div>
+</section>
+
+<div class='seealso'><p><strong>See also:</strong></p><ul><li><a href='#pspc-interrupted'>pspc-interrupted</a></li><li><a href='#pcn-background'>pcn-background</a></li><li><a href='#ppf-vs-past-simple'>ppf-vs-past-simple</a></li></ul></div>
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/past-simple/">Past Simple (I worked, I went)</a></li><li><a href="/blog/grammar/past-continuous/">Past Continuous (I was doing)</a></li><li><a href="/blog/grammar/past-simple-vs-past-continuous/">Past Simple vs Past Continuous</a></li><li><a href="/blog/grammar/past-perfect/">Past Perfect (had done)</a></li><li><a href="/blog/grammar/past-perfect-continuous/">Past Perfect Continuous (had been doing)</a></li><li><a href="/blog/grammar/used-to/">Used To (I used to play)</a></li>
+</ul>
+
+<div class="cta"><p>Read and listen to short stories at your level: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

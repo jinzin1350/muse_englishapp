@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Still, Yet, Already, Any More, No Longer | Muse English</title>
+<meta name="description" content="Learn still, yet, already, any more and no longer from A2 to C1: word order, still not and not yet, already in questions, and formal as yet and has yet to.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/still-yet-already/">
+<meta property="og:type" content="article"><meta property="og:title" content="Still, Yet, Already, Any More, No Longer | Muse English">
+<meta property="og:description" content="Learn still, yet, already, any more and no longer from A2 to C1: word order, still not and not yet, already in questions, and formal as yet and has yet to."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/still-yet-already/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Still, Yet, Already, Any More and No Longer", "description": "Learn still, yet, already, any more and no longer from A2 to C1: word order, still not and not yet, already in questions, and formal as yet and has yet to.", "url": "https://museenglishapp.com/blog/grammar/still-yet-already/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Still, Yet, Already, Any More and No Longer", "item": "https://museenglishapp.com/blog/grammar/still-yet-already/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Still, Yet, Already, Any More and No Longer</div>
+<h1>Still, Yet, Already, Any More and No Longer</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#c1'>C1</a></div>
+<p><strong><em>Still</strong></em> = something <strong>continues</strong>. <strong><em>Yet</strong></em> = something we expect <strong>hasn&#x27;t happened</strong> (in negatives and questions). <strong><em>Already</strong></em> = something happened <strong>sooner than expected</strong>.</p><p>For <em>just, yet</em> and <em>already</em> with the present perfect, see also <a href="/blog/grammar/present-perfect/#pp-just-already-yet">Present Perfect</a>.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='sya-basic'>Still, yet, already <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Word</th><th>Use</th><th>Position</th><th>Example</th></tr><tr><td><em>still</em></td><td>continuing</td><td>middle (before the main verb, after <em>be</em>)</td><td><em>She <strong>still</strong> lives with her parents. I&#x27;m <strong>still</strong> hungry.</em></td></tr><tr><td><em>already</em></td><td>sooner than expected</td><td>middle or end</td><td><em>I&#x27;ve <strong>already</strong> eaten. / I&#x27;ve eaten <strong>already</strong>.</em></td></tr><tr><td><em>yet</em></td><td>not until now (negatives, questions)</td><td>end</td><td><em>Have you finished <strong>yet</strong>? I haven&#x27;t finished <strong>yet</strong>.</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>Is it <strong>still</strong> raining? <span class='exnote'>(still)</span></li>
+<li>I&#x27;ve <strong>already</strong> seen this film. <span class='exnote'>(already)</span></li>
+<li>Have you done your homework <strong>yet</strong>? <span class='exnote'>(yet: question)</span></li>
+<li>The bus hasn&#x27;t come <strong>yet</strong>. <span class='exnote'>(yet: negative)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I have finished my work yet. → ✅ I have already finished my work. <span class='why'>(positive: already)</span></li>
+<li>❌ She lives still in Tehran. → ✅ She still lives in Tehran. <span class='why'>(still before the main verb)</span></li>
+<li>❌ Have you yet eaten? → ✅ Have you eaten yet? <span class='why'>(yet at the end)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-sya-basic-s01">
+<div class="exq">1. It&#x27;s 10 am, and he&#x27;s &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; in bed!</div>
+<label><input type='radio' name='sya-basic-s01' value='0'> yet</label><label><input type='radio' name='sya-basic-s01' value='1'> already</label><label><input type='radio' name='sya-basic-s01' value='2'> still</label><label><input type='radio' name='sya-basic-s01' value='3'> ever</label>
+<div class="exexpl" style="display:none">Continuing: <em>still</em>.</div>
+<button class="excheck" onclick="checkEx('sya-basic-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-sya-basic-s02">
+<div class="exq">2. Have you finished your homework &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;?</div>
+<label><input type='radio' name='sya-basic-s02' value='0'> still</label><label><input type='radio' name='sya-basic-s02' value='1'> yet</label><label><input type='radio' name='sya-basic-s02' value='2'> ever</label><label><input type='radio' name='sya-basic-s02' value='3'> never</label>
+<div class="exexpl" style="display:none">Question: <em>yet</em> at the end.</div>
+<button class="excheck" onclick="checkEx('sya-basic-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-sya-basic-s03">
+<div class="exq">3. I don&#x27;t need to buy milk. I&#x27;ve &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; bought some. (one word)</div>
+<input type="text" id="sya-basic-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Sooner than expected: <em>already</em>.</div>
+<button class="excheck" onclick="checkGap('sya-basic-s03', ["already", "just"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='sya-negatives'>Still not, not yet, already in questions <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Sentence</th><th>Meaning</th></tr><tr><td><em>She hasn&#x27;t replied <strong>yet</strong>.</em></td><td>neutral: I&#x27;m waiting</td></tr><tr><td><em>She <strong>still</strong> hasn&#x27;t replied.</em></td><td>surprise or impatience: it&#x27;s late</td></tr><tr><td><em>Have you finished <strong>yet</strong>?</em></td><td>neutral question</td></tr><tr><td><em>Have you finished <strong>already</strong>?</em></td><td>surprise: that was fast!</td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>I&#x27;ve been waiting for an hour, and the bus <strong>still</strong> hasn&#x27;t come! <span class='exnote'>(impatience)</span></li>
+<li>The results haven&#x27;t come out <strong>yet</strong>. <span class='exnote'>(neutral)</span></li>
+<li>Are you leaving <strong>already</strong>? It&#x27;s only nine! <span class='exnote'>(surprise)</span></li>
+<li>She <strong>still</strong> doesn&#x27;t understand. <span class='exnote'>(still + negative)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ He hasn&#x27;t still called me. → ✅ He still hasn&#x27;t called me. <span class='why'>(still before the negative)</span></li>
+<li>❌ Have you finished already? (neutral question) → ✅ Have you finished yet? <span class='why'>(neutral question: yet)</span></li>
+</ul></div>
+<h3 id='sya-any-more'>Not any more, not any longer, no longer <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Pattern</th><th>Example</th></tr><tr><td><em>not… any more</em> (BrE) / <em>anymore</em> (AmE)</td><td><em>He doesn&#x27;t play football <strong>any more</strong>.</em></td></tr><tr><td><em>not… any longer</em></td><td><em>I can&#x27;t wait <strong>any longer</strong>.</em></td></tr><tr><td><em>no longer</em> (formal)</td><td><em>The shop <strong>no longer</strong> sells newspapers.</em></td></tr><tr><td><em>still</em> (the opposite)</td><td><em>He <strong>still</strong> plays football.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>I don&#x27;t drink coffee <strong>any more</strong>. <span class='exnote'>(any more)</span></li>
+<li>We can&#x27;t stay <strong>any longer</strong>. <span class='exnote'>(any longer)</span></li>
+<li>He <strong>no longer</strong> lives in Tehran. <span class='exnote'>(no longer)</span></li>
+<li>Do you <strong>still</strong> play the piano? ~ No, not <strong>any more</strong>. <span class='exnote'>(still / any more)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I no longer don&#x27;t work there. → ✅ I no longer work there. <span class='why'>(no longer + positive verb)</span></li>
+<li>❌ She doesn&#x27;t any more work here. → ✅ She doesn&#x27;t work here any more. <span class='why'>(any more at the end)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-sya-negatives-s01">
+<div class="exq">4. I sent the email three weeks ago, and he &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; replied!</div>
+<label><input type='radio' name='sya-negatives-s01' value='0'> still hasn&#x27;t</label><label><input type='radio' name='sya-negatives-s01' value='1'> hasn&#x27;t still</label><label><input type='radio' name='sya-negatives-s01' value='2'> yet hasn&#x27;t</label><label><input type='radio' name='sya-negatives-s01' value='3'> hasn&#x27;t already</label>
+<div class="exexpl" style="display:none">Impatience: <em>still</em> before the negative.</div>
+<button class="excheck" onclick="checkEx('sya-negatives-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-sya-negatives-s02">
+<div class="exq">5. You&#x27;ve finished &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;? That was quick!</div>
+<label><input type='radio' name='sya-negatives-s02' value='0'> yet</label><label><input type='radio' name='sya-negatives-s02' value='1'> still</label><label><input type='radio' name='sya-negatives-s02' value='2'> ever</label><label><input type='radio' name='sya-negatives-s02' value='3'> already</label>
+<div class="exexpl" style="display:none">Surprise: <em>already</em>.</div>
+<button class="excheck" onclick="checkEx('sya-negatives-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-sya-negatives-s03">
+<div class="exq">6. It&#x27;s 11 pm, and my son &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; hasn&#x27;t come home. I&#x27;m worried. (one word)</div>
+<input type="text" id="sya-negatives-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Impatience or worry: <em>still hasn&#x27;t</em>.</div>
+<button class="excheck" onclick="checkGap('sya-negatives-s03', ["still"])">Check</button>
+</div>
+<div class="exblock" id="ex-sya-any-more-s01">
+<div class="exq">7. I used to smoke, but I don&#x27;t &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='sya-any-more-s01' value='0'> still</label><label><input type='radio' name='sya-any-more-s01' value='1'> yet</label><label><input type='radio' name='sya-any-more-s01' value='2'> any more</label><label><input type='radio' name='sya-any-more-s01' value='3'> no longer</label>
+<div class="exexpl" style="display:none">Stopped: <em>not… any more</em>.</div>
+<button class="excheck" onclick="checkEx('sya-any-more-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-sya-any-more-s02">
+<div class="exq">8. This model is &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; available.</div>
+<label><input type='radio' name='sya-any-more-s02' value='0'> no longer</label><label><input type='radio' name='sya-any-more-s02' value='1'> not any more</label><label><input type='radio' name='sya-any-more-s02' value='2'> any longer</label><label><input type='radio' name='sya-any-more-s02' value='3'> still not more</label>
+<div class="exexpl" style="display:none">Formal, after <em>be</em>: <em>no longer</em>.</div>
+<button class="excheck" onclick="checkEx('sya-any-more-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-sya-any-more-s03">
+<div class="exq">9. I&#x27;m sorry, I can&#x27;t wait any &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;. I have to go. (one word)</div>
+<input type="text" id="sya-any-more-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Not… any longer</em>.</div>
+<button class="excheck" onclick="checkGap('sya-any-more-s03', ["longer", "more"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='sya-advanced'>Formal yet and still: has yet to, as yet, still harder <span class='lvl-badge'>C1</span></h3>
+<div class="twrap"><table><tr><th>Pattern</th><th>Example</th><th>Meaning</th></tr><tr><td><em>have / be yet to</em> + verb</td><td><em>We <strong>have yet to</strong> receive payment.</em></td><td>we haven&#x27;t received it yet</td></tr><tr><td><em>as yet</em> (formal)</td><td><strong><em>As yet</strong>, nobody has claimed the prize.</em></td><td>until now</td></tr><tr><td><em>(and) yet</em></td><td><em>The plan is risky, <strong>(and) yet</strong> it could work.</em></td><td>but</td></tr><tr><td><em>Still,…</em></td><td><em>It was raining. <strong>Still</strong>, we had a great time.</em></td><td>even so</td></tr><tr><td><em>still</em> + comparative</td><td><em>The second test was <strong>still</strong> harder.</em></td><td>even harder</td></tr><tr><td>superlative + <em>yet</em></td><td><em>This is her best work <strong>yet</strong>.</em></td><td>so far</td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>The cause of the fire <strong>has yet to be</strong> found. <span class='exnote'>(has yet to)</span></li>
+<li><strong>As yet</strong>, there&#x27;s no cure. <span class='exnote'>(as yet)</span></li>
+<li>It&#x27;s a small car, <strong>yet</strong> it&#x27;s very comfortable. <span class='exnote'>(yet = but)</span></li>
+<li>The weather was awful. <strong>Still</strong>, we enjoyed the trip. <span class='exnote'>(still = even so)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ The results have not yet to be announced. → ✅ The results have yet to be announced. <span class='why'>(have yet to: positive form)</span></li>
+<li>❌ This is her better film yet. → ✅ This is her best film yet. <span class='why'>(superlative + yet)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-sya-advanced-s01">
+<div class="exq">10. The new bridge has &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; be opened.</div>
+<label><input type='radio' name='sya-advanced-s01' value='0'> not yet</label><label><input type='radio' name='sya-advanced-s01' value='1'> yet to</label><label><input type='radio' name='sya-advanced-s01' value='2'> already to</label><label><input type='radio' name='sya-advanced-s01' value='3'> yet</label>
+<div class="exexpl" style="display:none"><em>Have yet to</em> = haven&#x27;t… yet.</div>
+<button class="excheck" onclick="checkEx('sya-advanced-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-sya-advanced-s02">
+<div class="exq">11. It rained all day. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;, we had a great time.</div>
+<label><input type='radio' name='sya-advanced-s02' value='0'> Yet still</label><label><input type='radio' name='sya-advanced-s02' value='1'> Already</label><label><input type='radio' name='sya-advanced-s02' value='2'> Still yet</label><label><input type='radio' name='sya-advanced-s02' value='3'> Still</label>
+<div class="exexpl" style="display:none"><em>Still,…</em> = even so.</div>
+<button class="excheck" onclick="checkEx('sya-advanced-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-sya-advanced-s03">
+<div class="exq">12. This is the band&#x27;s best album &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;. (one word)</div>
+<input type="text" id="sya-advanced-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Superlative + <em>yet</em> = so far.</div>
+<button class="excheck" onclick="checkGap('sya-advanced-s03', ["yet", "ever"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/present-perfect/">Present Perfect (I have done)</a></li><li><a href="/blog/grammar/adverbs-of-frequency/">Adverbs of Frequency</a></li><li><a href="/blog/grammar/word-order/">Word Order in English</a></li><li><a href="/blog/grammar/present-continuous/">Present Continuous</a></li>
+</ul>
+
+<div class="cta"><p>Use still, yet and already naturally: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

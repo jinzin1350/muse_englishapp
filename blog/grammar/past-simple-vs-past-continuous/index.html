@@ -1,0 +1,245 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Past Simple vs Past Continuous: Rules | Muse English</title>
+<meta name="description" content="Past simple or past continuous? Learn interrupted actions, when and while, how the tense changes the meaning, and finished vs unfinished actions, A2 to C1.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/past-simple-vs-past-continuous/">
+<meta property="og:type" content="article"><meta property="og:title" content="Past Simple vs Past Continuous: Rules | Muse English">
+<meta property="og:description" content="Past simple or past continuous? Learn interrupted actions, when and while, how the tense changes the meaning, and finished vs unfinished actions, A2 to C1."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/past-simple-vs-past-continuous/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Past Simple vs Past Continuous", "description": "Past simple or past continuous? Learn interrupted actions, when and while, how the tense changes the meaning, and finished vs unfinished actions, A2 to C1.", "url": "https://museenglishapp.com/blog/grammar/past-simple-vs-past-continuous/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Past Simple vs Past Continuous", "item": "https://museenglishapp.com/blog/grammar/past-simple-vs-past-continuous/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Past Simple vs Past Continuous</div>
+<h1>Past Simple vs Past Continuous</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p>The <strong>past simple</strong> (<em>I walked</em>) tells us that an action happened and finished. The <strong>past continuous</strong> (<em>I was walking</em>) tells us that an action was <strong>in progress</strong> at a moment in the past.</p><p>We often use them together: <em>I <strong>was walking</strong> home <strong>when</strong> it <strong>started</strong> to rain.</em> This page shows how to choose between them, from the basic pattern to the differences in meaning.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='pspc-interrupted'>A longer action and a short action <span class='lvl-badge'>A2</span></h3>
+<p></p>
+<ul><li><em>I <strong>was having</strong> a shower <strong>when</strong> the phone <strong>rang</strong>.</em></li><li><em>We <strong>were driving</strong> to the airport <strong>when</strong> the car <strong>broke</strong> down.</em></li></ul>
+<p></p>
+<div class="twrap"><table><tr><th>Longer action (past continuous)</th><th>Short action (past simple)</th></tr><tr><td><em>She <strong>was reading</strong>…</em></td><td><em>…when the lights <strong>went out</strong>.</em></td></tr><tr><td><em>They <strong>were playing</strong> football…</em></td><td><em>…when it <strong>started</strong> to rain.</em></td></tr><tr><td><em>I <strong>was walking</strong> to work…</em></td><td><em>…when I <strong>saw</strong> an old friend.</em></td></tr></table></div>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I <strong>was cooking</strong> dinner <strong>when</strong> my sister <strong>arrived</strong>. <span class='exnote'>(cooking = longer, arrived = short)</span></li>
+<li>He <strong>was cycling</strong> to school <strong>when</strong> he <strong>fell</strong> off his bike. <span class='exnote'>(fell interrupted cycling)</span></li>
+<li>When I <strong>saw</strong> them, they <strong>were sitting</strong> in the park. <span class='exnote'>(the short action can come first)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I cooked dinner when my sister was arriving. → ✅ I was cooking dinner when my sister arrived. <span class='why'>(Longer action: past continuous; short action: past simple.)</span></li>
+<li>❌ When the phone was ringing, I had a shower. → ✅ When the phone rang, I was having a shower. <span class='why'>(The ring is the short action.)</span></li>
+<li>❌ I was knowing the answer. → ✅ I knew the answer. <span class='why'>(know is a state verb.)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-pspc-interrupted-s01">
+<div class="exq">1. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; TV when I heard a strange noise.</div>
+<label><input type='radio' name='pspc-interrupted-s01' value='0'> watched</label><label><input type='radio' name='pspc-interrupted-s01' value='1'> am watching</label><label><input type='radio' name='pspc-interrupted-s01' value='2'> was watching</label><label><input type='radio' name='pspc-interrupted-s01' value='3'> watch</label>
+<div class="exexpl" style="display:none">The longer action in progress: <em>was watching</em>.</div>
+<button class="excheck" onclick="checkEx('pspc-interrupted-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-interrupted-s02">
+<div class="exq">2. We were having dinner when the lights &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; out.</div>
+<label><input type='radio' name='pspc-interrupted-s02' value='0'> were going</label><label><input type='radio' name='pspc-interrupted-s02' value='1'> went</label><label><input type='radio' name='pspc-interrupted-s02' value='2'> go</label><label><input type='radio' name='pspc-interrupted-s02' value='3'> have gone</label>
+<div class="exexpl" style="display:none">The short action: past simple <em>went</em>.</div>
+<button class="excheck" onclick="checkEx('pspc-interrupted-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-interrupted-s03">
+<div class="exq">3. She &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (walk) to the bus stop when it started to snow.</div>
+<input type="text" id="pspc-interrupted-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Longer action in progress: <em>was walking</em>.</div>
+<button class="excheck" onclick="checkGap('pspc-interrupted-s03', ["was walking"])">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-interrupted-s04">
+<div class="exq">4. Find the mistake: tap the wrong part.</div>
+<div class="esent"><span class='eseg' data-idx='0' onclick="pickSeg('pspc-interrupted-s04', 0)">When I</span> <span class='eseg' data-idx='1' onclick="pickSeg('pspc-interrupted-s04', 1)">was seeing</span> <span class='eseg' data-idx='2' onclick="pickSeg('pspc-interrupted-s04', 2)">Sara,</span> <span class='eseg' data-idx='3' onclick="pickSeg('pspc-interrupted-s04', 3)">she was waiting for a taxi.</span> </div>
+<div class="exexpl" style="display:none">Correct: When I saw Sara, she was waiting for a taxi.<br>The short action is <em>saw</em> (past simple).</div>
+<button class="excheck" onclick="checkSeg('pspc-interrupted-s04', 1)">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='pspc-when-while'>When and while <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<ul><li><strong><em>while</strong> + longer action</em>: <em>The phone rang <strong>while</strong> I <strong>was having</strong> a shower.</em></li><li><strong><em>when</strong> + shorter action</em>: <em>I was having a shower <strong>when</strong> the phone <strong>rang</strong>.</em></li></ul>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>While</strong> we <strong>were watching</strong> the film, someone <strong>knocked</strong> at the door. <span class='exnote'>(while + longer action)</span></li>
+<li>We <strong>were watching</strong> the film <strong>when</strong> someone <strong>knocked</strong>. <span class='exnote'>(when + shorter action)</span></li>
+<li><strong>When</strong> the bell <strong>rang</strong>, everyone <strong>stood</strong> up. <span class='exnote'>(two short actions: one after the other)</span></li>
+<li><strong>When</strong> I <strong>was</strong> at university, I <strong>worked</strong> in a café. <span class='exnote'>(when + a period)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ When I was waiting for the bus, I was seeing an accident. → ✅ While I was waiting for the bus, I saw an accident. <span class='why'>(The accident is a short action: saw.)</span></li>
+<li>❌ During I was waiting, I read the news. → ✅ While I was waiting, I read the news. <span class='why'>(while + clause; during + noun)</span></li>
+</ul></div>
+<h3 id='pspc-meaning'>How the tense changes the meaning <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<div class="twrap"><table><tr><th>Sentence</th><th>Meaning</th></tr><tr><td><em>When Ana got home, her husband <strong>cooked</strong> dinner.</em></td><td>Ana got home → then he cooked.</td></tr><tr><td><em>When Ana got home, her husband <strong>was cooking</strong> dinner.</em></td><td>He started before she got home and was still cooking.</td></tr><tr><td><em>When Ana got home, her husband <strong>had cooked</strong> dinner.</em></td><td>Dinner was ready before she got home.</td></tr></table></div>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>When the teacher came in, the students <strong>were talking</strong>. <span class='exnote'>(already in progress)</span></li>
+<li>When the teacher came in, the students <strong>stopped</strong> talking. <span class='exnote'>(reaction: after she came in)</span></li>
+<li>When I looked outside, it <strong>was snowing</strong>. <span class='exnote'>(already in progress)</span></li>
+<li>When we got to the station, the train <strong>was leaving</strong>. <span class='exnote'>(in progress: we could still see it)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ When I woke up, the sun shone. → ✅ When I woke up, the sun was shining. <span class='why'>(Already in progress when I woke up.)</span></li>
+<li>❌ When I saw the cake, I was eating it. → ✅ When I saw the cake, I ate it. <span class='why'>(The reaction came after: past simple.)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-pspc-when-while-s01">
+<div class="exq">5. I hurt my back &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I was carrying some heavy boxes.</div>
+<label><input type='radio' name='pspc-when-while-s01' value='0'> during</label><label><input type='radio' name='pspc-when-while-s01' value='1'> when I</label><label><input type='radio' name='pspc-when-while-s01' value='2'> for</label><label><input type='radio' name='pspc-when-while-s01' value='3'> while</label>
+<div class="exexpl" style="display:none"><em>While</em> + the longer action in progress.</div>
+<button class="excheck" onclick="checkEx('pspc-when-while-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-when-while-s02">
+<div class="exq">6. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the film ended, we went for a pizza.</div>
+<label><input type='radio' name='pspc-when-while-s02' value='0'> When</label><label><input type='radio' name='pspc-when-while-s02' value='1'> While</label><label><input type='radio' name='pspc-when-while-s02' value='2'> During</label><label><input type='radio' name='pspc-when-while-s02' value='3'> As soon</label>
+<div class="exexpl" style="display:none">Two short actions, one after the other: <em>when</em>.</div>
+<button class="excheck" onclick="checkEx('pspc-when-while-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-when-while-s03">
+<div class="exq">7. Someone stole my bag while I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (look) at the menu and my friend was ordering.</div>
+<input type="text" id="pspc-when-while-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Two actions in progress: <em>was looking</em>, like <em>was ordering</em>.</div>
+<button class="excheck" onclick="checkGap('pspc-when-while-s03', ["was looking"])">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-meaning-s01">
+<div class="exq">8. When we arrived, the party &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;. We were just in time.</div>
+<label><input type='radio' name='pspc-meaning-s01' value='0'> had finished</label><label><input type='radio' name='pspc-meaning-s01' value='1'> starts</label><label><input type='radio' name='pspc-meaning-s01' value='2'> has started</label><label><input type='radio' name='pspc-meaning-s01' value='3'> was starting</label>
+<div class="exexpl" style="display:none">In progress at that moment: <em>was starting</em>. (<em>Had finished</em> would mean we were too late.)</div>
+<button class="excheck" onclick="checkEx('pspc-meaning-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-meaning-s02">
+<div class="exq">9. <em>When I called him, he was having dinner.</em> What does this mean?</div>
+<label><input type='radio' name='pspc-meaning-s02' value='0'> He started dinner after my call.</label><label><input type='radio' name='pspc-meaning-s02' value='1'> He was in the middle of dinner when I called.</label><label><input type='radio' name='pspc-meaning-s02' value='2'> He finished dinner before my call.</label><label><input type='radio' name='pspc-meaning-s02' value='3'> He never had dinner.</label>
+<div class="exexpl" style="display:none">The past continuous = already in progress.</div>
+<button class="excheck" onclick="checkEx('pspc-meaning-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-meaning-s03">
+<div class="exq">10. When I woke up, the sun &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (shine) and the birds were singing.</div>
+<input type="text" id="pspc-meaning-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Already in progress when I woke up: <em>was shining</em>.</div>
+<button class="excheck" onclick="checkGap('pspc-meaning-s03', ["was shining"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='pspc-complete-incomplete'>Finished or unfinished? <span class='lvl-badge'>B2</span></h3>
+<p></p>
+<div class="twrap"><table><tr><th>Past simple</th><th>Past continuous</th></tr><tr><td><em>I <strong>wrote</strong> a letter last night.</em> (it&#x27;s finished)</td><td><em>I <strong>was writing</strong> a letter last night.</em> (maybe not finished)</td></tr><tr><td><em>He <strong>drowned</strong>.</em> (he died)</td><td><em>He <strong>was drowning</strong>, but a lifeguard saved him.</em> (it didn&#x27;t happen)</td></tr><tr><td><em>They <strong>built</strong> a bridge.</em> (it&#x27;s there now)</td><td><em>They <strong>were building</strong> a bridge when the money ran out.</em> (not finished)</td></tr></table></div>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I <strong>was crossing</strong> the road when a car nearly hit me. <span class='exnote'>(in progress, interrupted)</span></li>
+<li>She <strong>was dying</strong>, but the doctors saved her. <span class='exnote'>(didn&#x27;t happen in the end)</span></li>
+<li>We <strong>painted</strong> the kitchen on Saturday. <span class='exnote'>(finished)</span></li>
+<li>We <strong>were painting</strong> the kitchen when we ran out of paint. <span class='exnote'>(not finished)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ He drowned, but a lifeguard saved him. → ✅ He was drowning, but a lifeguard saved him. <span class='why'>(He didn&#x27;t die: the action was in progress.)</span></li>
+<li>❌ We were fixing the car yesterday, and now it works perfectly. → ✅ We fixed the car yesterday, and now it works perfectly. <span class='why'>(The result is complete: past simple.)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-pspc-complete-incomplete-s01">
+<div class="exq">11. The building &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;, but the firefighters saved it.</div>
+<label><input type='radio' name='pspc-complete-incomplete-s01' value='0'> burned down</label><label><input type='radio' name='pspc-complete-incomplete-s01' value='1'> has burned down</label><label><input type='radio' name='pspc-complete-incomplete-s01' value='2'> was burning</label><label><input type='radio' name='pspc-complete-incomplete-s01' value='3'> burns down</label>
+<div class="exexpl" style="display:none">It wasn&#x27;t destroyed: the action was in progress, not completed.</div>
+<button class="excheck" onclick="checkEx('pspc-complete-incomplete-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-complete-incomplete-s02">
+<div class="exq">12. <em>I was reading a novel last night.</em> Did I finish it?</div>
+<label><input type='radio' name='pspc-complete-incomplete-s02' value='0'> Not necessarily.</label><label><input type='radio' name='pspc-complete-incomplete-s02' value='1'> Yes, definitely.</label><label><input type='radio' name='pspc-complete-incomplete-s02' value='2'> No, I didn&#x27;t start it.</label><label><input type='radio' name='pspc-complete-incomplete-s02' value='3'> Yes, and I read it again.</label>
+<div class="exexpl" style="display:none">The past continuous doesn&#x27;t say the action was completed.</div>
+<button class="excheck" onclick="checkEx('pspc-complete-incomplete-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-complete-incomplete-s03">
+<div class="exq">13. They &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (build) a new hospital, but the project stopped when the money ran out.</div>
+<input type="text" id="pspc-complete-incomplete-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Not finished: <em>were building</em>.</div>
+<button class="excheck" onclick="checkGap('pspc-complete-incomplete-s03', ["were building"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='pspc-news'>I was talking to… : introducing news and background <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<ul><li><em>I <strong>was talking</strong> to Maryam the other day and she <strong>said</strong> she&#x27;s moving to Vancouver.</em></li><li><em>I <strong>was reading</strong> an article about sleep, and it <strong>said</strong> we need eight hours.</em></li></ul>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I <strong>was chatting</strong> to my neighbour, and she <strong>told</strong> me about a great dentist. <span class='exnote'>(background + news)</span></li>
+<li>We <strong>were discussing</strong> your idea at the meeting, and everyone <strong>liked</strong> it. <span class='exnote'>(background + result)</span></li>
+<li>Sorry, what <strong>were</strong> you <strong>saying</strong>? <span class='exnote'>(returning to the conversation)</span></li>
+<li>As I <strong>was saying</strong> before the interruption, we need more staff. <span class='exnote'>(continuing a topic)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I talking to Sara yesterday, and she said she&#x27;s leaving. → ✅ I was talking to Sara yesterday, and she said she&#x27;s leaving. <span class='why'>(Past continuous: was + -ing.)</span></li>
+<li>❌ As I am saying, the deadline is Friday. → ✅ As I was saying, the deadline is Friday. <span class='why'>(The fixed phrase is as I was saying.)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-pspc-news-s01">
+<div class="exq">14. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to my cousin last week, and she said she&#x27;s getting married!</div>
+<label><input type='radio' name='pspc-news-s01' value='0'> I talk</label><label><input type='radio' name='pspc-news-s01' value='1'> I had talk</label><label><input type='radio' name='pspc-news-s01' value='2'> I was talking</label><label><input type='radio' name='pspc-news-s01' value='3'> I&#x27;m talking</label>
+<div class="exexpl" style="display:none">Past continuous to introduce news.</div>
+<button class="excheck" onclick="checkEx('pspc-news-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-news-s02">
+<div class="exq">15. After an interruption, the speaker says: <em>Now, as I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;, the results were very good.</em></div>
+<label><input type='radio' name='pspc-news-s02' value='0'> am saying</label><label><input type='radio' name='pspc-news-s02' value='1'> was saying</label><label><input type='radio' name='pspc-news-s02' value='2'> were saying</label><label><input type='radio' name='pspc-news-s02' value='3'> had saying</label>
+<div class="exexpl" style="display:none"><em>As I was saying</em> = continuing an interrupted point.</div>
+<button class="excheck" onclick="checkEx('pspc-news-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-pspc-news-s03">
+<div class="exq">16. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (read) an article about AI yesterday, and it said that most jobs will change.</div>
+<input type="text" id="pspc-news-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Both are correct; <em>was reading</em> sets the background for the news.</div>
+<button class="excheck" onclick="checkGap('pspc-news-s03', ["was reading", "read"])">Check</button>
+</div>
+</section>
+
+<div class='seealso'><p><strong>See also:</strong></p><ul><li><a href='#pcn-two-actions'>pcn-two-actions</a></li><li><a href='#pcn-background'>pcn-background</a></li><li><a href='#pcn-temporary-repeated'>pcn-temporary-repeated</a></li></ul></div>
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/past-simple/">Past Simple (I worked, I went)</a></li><li><a href="/blog/grammar/past-continuous/">Past Continuous (I was doing)</a></li><li><a href="/blog/grammar/narrative-tenses/">Narrative Tenses: Telling Stories in the Past</a></li><li><a href="/blog/grammar/was-were/">Was and Were (Past of Be)</a></li><li><a href="/blog/grammar/present-simple-vs-present-continuous/">Present Simple vs Present Continuous</a></li>
+</ul>
+
+<div class="cta"><p>Practise telling stories with both tenses: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

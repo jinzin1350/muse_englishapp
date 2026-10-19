@@ -1,0 +1,235 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indirect Questions: Do You Know Where…? | Muse English</title>
+<meta name="description" content="Learn indirect questions from A2 to C1: do you know where, I don&#x27;t know what, if or whether, could you tell me, what to do, and what he said is true.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/indirect-questions/">
+<meta property="og:type" content="article"><meta property="og:title" content="Indirect Questions: Do You Know Where…? | Muse English">
+<meta property="og:description" content="Learn indirect questions from A2 to C1: do you know where, I don&#x27;t know what, if or whether, could you tell me, what to do, and what he said is true."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/indirect-questions/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Indirect Questions (Do you know where…?)", "description": "Learn indirect questions from A2 to C1: do you know where, I don&#x27;t know what, if or whether, could you tell me, what to do, and what he said is true.", "url": "https://museenglishapp.com/blog/grammar/indirect-questions/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Indirect Questions (Do you know where…?)", "item": "https://museenglishapp.com/blog/grammar/indirect-questions/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Indirect Questions (Do you know where…?)</div>
+<h1>Indirect Questions (Do you know where…?)</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p>An <strong>indirect question</strong> is a question inside another sentence: <em>Where is the station?</em> → <em>Do you know <strong>where the station is</strong>?</em> Indirect questions are more polite and very common in conversation.</p><p>The rule: after the question word (or <em>if / whether</em>), use <strong>statement word order</strong> and no <em>do / does / did</em>. For direct questions, see <a href="/blog/grammar/question-words-and-forms/">Question Words and Question Forms</a>.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='iq-do-you-know'>Do you know where…? I don&#x27;t know what… <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Direct question</th><th>Indirect question</th></tr><tr><td><em>Where <strong>does she live</strong>?</em></td><td><em>Do you know where <strong>she lives</strong>?</em></td></tr><tr><td><em>What time <strong>is it</strong>?</em></td><td><em>Do you know what time <strong>it is</strong>?</em></td></tr><tr><td><em>Why <strong>did he leave</strong>?</em></td><td><em>I don&#x27;t know why <strong>he left</strong>.</em></td></tr><tr><td><em>How much <strong>does it cost</strong>?</em></td><td><em>I&#x27;m not sure how much <strong>it costs</strong>.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li><strong>Do you know where</strong> the post office <strong>is</strong>? <span class='exnote'>(statement order)</span></li>
+<li><strong>I don&#x27;t know what</strong> her name <strong>is</strong>. <span class='exnote'>(statement order)</span></li>
+<li><strong>I have no idea why</strong> he <strong>said</strong> that. <span class='exnote'>(no did)</span></li>
+<li><strong>Can you remember when</strong> the film <strong>starts</strong>? <span class='exnote'>(no does)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Do you know where is the station? → ✅ Do you know where the station is? <span class='why'>(statement order)</span></li>
+<li>❌ I don&#x27;t know where does he work. → ✅ I don&#x27;t know where he works. <span class='why'>(no does)</span></li>
+<li>❌ Do you know what time is it? → ✅ Do you know what time it is? <span class='why'>(statement order)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-iq-do-you-know-s01">
+<div class="exq">1. Do you know where &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;?</div>
+<label><input type='radio' name='iq-do-you-know-s01' value='0'> the bathroom is</label><label><input type='radio' name='iq-do-you-know-s01' value='1'> is the bathroom</label><label><input type='radio' name='iq-do-you-know-s01' value='2'> does the bathroom be</label><label><input type='radio' name='iq-do-you-know-s01' value='3'> the bathroom does</label>
+<div class="exexpl" style="display:none">Statement order: <em>the bathroom is</em>.</div>
+<button class="excheck" onclick="checkEx('iq-do-you-know-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-iq-do-you-know-s02">
+<div class="exq">2. I don&#x27;t know what time &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='iq-do-you-know-s02' value='0'> does the film start</label><label><input type='radio' name='iq-do-you-know-s02' value='1'> starts the film</label><label><input type='radio' name='iq-do-you-know-s02' value='2'> the film does start</label><label><input type='radio' name='iq-do-you-know-s02' value='3'> the film starts</label>
+<div class="exexpl" style="display:none">Statement order, no <em>does</em>.</div>
+<button class="excheck" onclick="checkEx('iq-do-you-know-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-iq-do-you-know-s03">
+<div class="exq">3. Where does Ali work? → Do you know where Ali &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (work)?</div>
+<input type="text" id="iq-do-you-know-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Statement order: <em>Ali works</em>.</div>
+<button class="excheck" onclick="checkGap('iq-do-you-know-s03', ["works"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='iq-if-whether'>If and whether: indirect yes/no questions <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li><strong>Do you know if</strong> the bank is open today? <span class='exnote'>(yes/no question)</span></li>
+<li><strong>I wonder whether</strong> she got my message. <span class='exnote'>(whether)</span></li>
+<li><strong>I&#x27;m not sure if</strong> I locked the door. <span class='exnote'>(not sure if)</span></li>
+<li>It depends <strong>on whether</strong> we have time. <span class='exnote'>(preposition + whether)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Do you know is the shop open? → ✅ Do you know if the shop is open? <span class='why'>(if + statement order)</span></li>
+<li>❌ I wonder if does she like me. → ✅ I wonder if she likes me. <span class='why'>(no does after if)</span></li>
+<li>❌ It depends on if it rains. → ✅ It depends on whether it rains. <span class='why'>(preposition + whether)</span></li>
+</ul></div>
+<h3 id='iq-polite'>Could you tell me…? Polite indirect questions <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Direct (more direct)</th><th>Indirect (more polite)</th></tr><tr><td><em>Where is the station?</em></td><td><strong><em>Could you tell me</strong> where the station is?</em></td></tr><tr><td><em>What time does it close?</em></td><td><strong><em>Do you happen to know</strong> what time it closes?</em></td></tr><tr><td><em>How much is this?</em></td><td><strong><em>Can I ask</strong> how much this is?</em></td></tr><tr><td><em>Why was my card refused?</em></td><td><strong><em>I was wondering why</strong> my card was refused.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li><strong>Could you tell me</strong> where the lifts are? <span class='exnote'>(polite)</span></li>
+<li><strong>Do you happen to know</strong> if there&#x27;s a pharmacy near here? <span class='exnote'>(very polite)</span></li>
+<li><strong>Would you mind telling me</strong> what your name is? <span class='exnote'>(polite (would you mind + -ing))</span></li>
+<li><strong>I&#x27;d like to know</strong> why the flight was cancelled. <span class='exnote'>(formal complaint)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Could you tell me where is the exit? → ✅ Could you tell me where the exit is? <span class='why'>(statement order)</span></li>
+<li>❌ I was wondering if could you help me? → ✅ I was wondering if you could help me. <span class='why'>(statement order; it&#x27;s a statement)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-iq-if-whether-s01">
+<div class="exq">4. Is the museum open on Mondays? → Do you know &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; open on Mondays?</div>
+<label><input type='radio' name='iq-if-whether-s01' value='0'> is the museum</label><label><input type='radio' name='iq-if-whether-s01' value='1'> the museum is if</label><label><input type='radio' name='iq-if-whether-s01' value='2'> if the museum is</label><label><input type='radio' name='iq-if-whether-s01' value='3'> if is the museum</label>
+<div class="exexpl" style="display:none"><em>If</em> + statement order.</div>
+<button class="excheck" onclick="checkEx('iq-if-whether-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-iq-if-whether-s02">
+<div class="exq">5. It depends &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; we can get tickets.</div>
+<label><input type='radio' name='iq-if-whether-s02' value='0'> on if</label><label><input type='radio' name='iq-if-whether-s02' value='1'> on whether</label><label><input type='radio' name='iq-if-whether-s02' value='2'> if on</label><label><input type='radio' name='iq-if-whether-s02' value='3'> whether on if</label>
+<div class="exexpl" style="display:none">After a preposition: <em>whether</em>.</div>
+<button class="excheck" onclick="checkEx('iq-if-whether-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-iq-if-whether-s03">
+<div class="exq">6. Did she pass the exam? → I don&#x27;t know &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; she passed the exam. (one word)</div>
+<input type="text" id="iq-if-whether-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Yes/no: <em>if</em> or <em>whether</em>.</div>
+<button class="excheck" onclick="checkGap('iq-if-whether-s03', ["if", "whether"])">Check</button>
+</div>
+<div class="exblock" id="ex-iq-polite-s01">
+<div class="exq">7. Excuse me, could you tell me &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;?</div>
+<label><input type='radio' name='iq-polite-s01' value='0'> where the station is</label><label><input type='radio' name='iq-polite-s01' value='1'> where is the station</label><label><input type='radio' name='iq-polite-s01' value='2'> where does the station</label><label><input type='radio' name='iq-polite-s01' value='3'> the station where is</label>
+<div class="exexpl" style="display:none">Statement order inside the question.</div>
+<button class="excheck" onclick="checkEx('iq-polite-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-iq-polite-s02">
+<div class="exq">8. Which is the most polite?</div>
+<label><input type='radio' name='iq-polite-s02' value='0'> What time does the shop close?</label><label><input type='radio' name='iq-polite-s02' value='1'> When&#x27;s closing time?</label><label><input type='radio' name='iq-polite-s02' value='2'> Tell me when the shop closes.</label><label><input type='radio' name='iq-polite-s02' value='3'> Do you happen to know what time the shop closes?</label>
+<div class="exexpl" style="display:none"><em>Do you happen to know…?</em> is very polite.</div>
+<button class="excheck" onclick="checkEx('iq-polite-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-iq-polite-s03">
+<div class="exq">9. Could you tell me how much this jacket &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (cost)?</div>
+<input type="text" id="iq-polite-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Statement order: <em>this jacket costs</em>.</div>
+<button class="excheck" onclick="checkGap('iq-polite-s03', ["costs"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='iq-whether-to'>What to do, whether to go: question word + to-infinitive <span class='lvl-badge'>B2</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>I don&#x27;t know <strong>what to wear</strong> to the wedding. <span class='exnote'>(what I should wear)</span></li>
+<li>Can you tell me <strong>how to get</strong> to the station? <span class='exnote'>(how I can get)</span></li>
+<li>We couldn&#x27;t decide <strong>whether to stay</strong> or <strong>go</strong>. <span class='exnote'>(whether + to)</span></li>
+<li>She showed me <strong>where to sign</strong>. <span class='exnote'>(where I should sign)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I don&#x27;t know what should I do. → ✅ I don&#x27;t know what to do. / I don&#x27;t know what I should do. <span class='why'>(question word + to)</span></li>
+<li>❌ I&#x27;m not sure if to accept. → ✅ I&#x27;m not sure whether to accept. <span class='why'>(whether + to (not if))</span></li>
+<li>❌ I don&#x27;t know why to go. → ✅ I don&#x27;t know why I should go. <span class='why'>(not why + to)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-iq-whether-to-s01">
+<div class="exq">10. I&#x27;ve never used this machine. Can you show me &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; it?</div>
+<label><input type='radio' name='iq-whether-to-s01' value='0'> how use</label><label><input type='radio' name='iq-whether-to-s01' value='1'> how to use</label><label><input type='radio' name='iq-whether-to-s01' value='2'> how using</label><label><input type='radio' name='iq-whether-to-s01' value='3'> how I to use</label>
+<div class="exexpl" style="display:none"><em>How to</em> + verb.</div>
+<button class="excheck" onclick="checkEx('iq-whether-to-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-iq-whether-to-s02">
+<div class="exq">11. He can&#x27;t decide &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to take the job or not.</div>
+<label><input type='radio' name='iq-whether-to-s02' value='0'> if</label><label><input type='radio' name='iq-whether-to-s02' value='1'> that</label><label><input type='radio' name='iq-whether-to-s02' value='2'> whether</label><label><input type='radio' name='iq-whether-to-s02' value='3'> what</label>
+<div class="exexpl" style="display:none"><em>Whether to</em> + verb (not <em>if to</em>).</div>
+<button class="excheck" onclick="checkEx('iq-whether-to-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-iq-whether-to-s03">
+<div class="exq">12. I didn&#x27;t know what &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (say), so I said nothing.</div>
+<input type="text" id="iq-whether-to-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>What to</em> + verb.</div>
+<button class="excheck" onclick="checkGap('iq-whether-to-s03', ["to say"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='iq-noun-clauses'>What he said is true: question-word clauses as subjects and objects <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<ul><li>as <strong>subject</strong>: <strong><em>What you need</strong> is a holiday. <strong>How he did it</strong> is a mystery. <strong>Whether we win</strong> doesn&#x27;t matter.</em></li><li>as <strong>object</strong>: <em>I can&#x27;t believe <strong>what she told me</strong>. I understand <strong>why you left</strong>.</em></li><li>after <strong>prepositions</strong>: <em>It depends on <strong>how much it costs</strong>. We talked about <strong>where to live</strong>.</em></li></ul>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>What happened next</strong> was amazing. <span class='exnote'>(subject)</span></li>
+<li><strong>Why she left</strong> remains unclear. <span class='exnote'>(subject (formal))</span></li>
+<li>I can&#x27;t remember <strong>where I parked</strong>. <span class='exnote'>(object)</span></li>
+<li>It depends on <strong>whether</strong> the weather improves. <span class='exnote'>(after a preposition)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ What did he say is true. → ✅ What he said is true. <span class='why'>(statement order)</span></li>
+<li>❌ Where does she live is a secret. → ✅ Where she lives is a secret. <span class='why'>(statement order)</span></li>
+<li>❌ I can&#x27;t believe what did she tell me. → ✅ I can&#x27;t believe what she told me. <span class='why'>(statement order, no did)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-iq-noun-clauses-s01">
+<div class="exq">13. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; is a mystery to everyone.</div>
+<label><input type='radio' name='iq-noun-clauses-s01' value='0'> How did he escape</label><label><input type='radio' name='iq-noun-clauses-s01' value='1'> How he escaped</label><label><input type='radio' name='iq-noun-clauses-s01' value='2'> How escaped he</label><label><input type='radio' name='iq-noun-clauses-s01' value='3'> He escaped how</label>
+<div class="exexpl" style="display:none">A clause as subject: statement order.</div>
+<button class="excheck" onclick="checkEx('iq-noun-clauses-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-iq-noun-clauses-s02">
+<div class="exq">14. I don&#x27;t agree with &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='iq-noun-clauses-s02' value='0'> what did you say</label><label><input type='radio' name='iq-noun-clauses-s02' value='1'> what said you</label><label><input type='radio' name='iq-noun-clauses-s02' value='2'> that what you said</label><label><input type='radio' name='iq-noun-clauses-s02' value='3'> what you said</label>
+<div class="exexpl" style="display:none">Object clause: statement order.</div>
+<button class="excheck" onclick="checkEx('iq-noun-clauses-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-iq-noun-clauses-s03">
+<div class="exq">15. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (whether / we / go) depends on the weather.</div>
+<input type="text" id="iq-noun-clauses-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">A clause as subject: <em>Whether we go…</em></div>
+<button class="excheck" onclick="checkGap('iq-noun-clauses-s03', ["Whether we go"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/question-words-and-forms/">Question Words and Question Forms</a></li><li><a href="/blog/grammar/reported-speech/">Reported Speech (She said that…)</a></li><li><a href="/blog/grammar/requests-offers-permission/">Requests, Offers and Permission (Can you…? May I…? Shall I…?)</a></li><li><a href="/blog/grammar/question-tags/">Question Tags (…, isn&#x27;t it? …, don&#x27;t you?)</a></li>
+</ul>
+
+<div class="cta"><p>Ask polite questions in natural English: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

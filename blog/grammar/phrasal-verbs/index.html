@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phrasal Verbs: Meaning, Word Order and Exercises | Muse English</title>
+<meta name="description" content="Learn phrasal verbs from A2 to C1: get up and turn on, turn it off not turn off it, look after, look forward to, many meanings, and phrasal nouns.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/phrasal-verbs/">
+<meta property="og:type" content="article"><meta property="og:title" content="Phrasal Verbs: Meaning, Word Order and Exercises | Muse English">
+<meta property="og:description" content="Learn phrasal verbs from A2 to C1: get up and turn on, turn it off not turn off it, look after, look forward to, many meanings, and phrasal nouns."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/phrasal-verbs/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Phrasal Verbs", "description": "Learn phrasal verbs from A2 to C1: get up and turn on, turn it off not turn off it, look after, look forward to, many meanings, and phrasal nouns.", "url": "https://museenglishapp.com/blog/grammar/phrasal-verbs/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Phrasal Verbs", "item": "https://museenglishapp.com/blog/grammar/phrasal-verbs/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Phrasal Verbs</div>
+<h1>Phrasal Verbs</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p>A <strong>phrasal verb</strong> is a verb + a small word called a <strong>particle</strong> (<em>up, down, on, off, out, back, in, over</em>): <em>get <strong>up</strong>, turn <strong>on</strong>, look <strong>after</strong></em>. The particle often changes the meaning completely: <em>look</em> (see) / <em>look <strong>for</strong></em> (try to find) / <em>look <strong>after</strong></em> (take care of).</p><p>Phrasal verbs are very common in everyday English, so learn them in <strong>real sentences</strong>, not as lists. This page also explains <strong>word order</strong>: <em>turn it on</em>, not <em>turn on it</em>.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='phv-basic'>Get up, turn on, put on, look for <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Phrasal verb</th><th>Meaning</th><th>Example</th></tr><tr><td><em>get up</em></td><td>leave your bed</td><td><em>I <strong>get up</strong> at 7.</em></td></tr><tr><td><em>wake up</em></td><td>stop sleeping</td><td><em>I <strong>woke up</strong> at 5.</em></td></tr><tr><td><em>sit down / stand up</em></td><td>sit / stand</td><td><em>Please <strong>sit down</strong>.</em></td></tr><tr><td><em>turn on / turn off</em></td><td>start / stop a machine or light</td><td><strong><em>Turn off</strong> the TV.</em></td></tr><tr><td><em>put on / take off</em></td><td>start / stop wearing clothes</td><td><strong><em>Put on</strong> your coat. <strong>Take off</strong> your shoes.</em></td></tr><tr><td><em>look for</em></td><td>try to find</td><td><em>I&#x27;m <strong>looking for</strong> my keys.</em></td></tr><tr><td><em>come back</em></td><td>return</td><td><em>When are you <strong>coming back</strong>?</em></td></tr><tr><td><em>go out</em></td><td>leave home to have fun</td><td><em>Let&#x27;s <strong>go out</strong> tonight.</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>I usually <strong>get up</strong> at half past six. <span class='exnote'>(get up)</span></li>
+<li><strong>Turn on</strong> the light, please. <span class='exnote'>(turn on)</span></li>
+<li>It&#x27;s cold. <strong>Put on</strong> a jumper. <span class='exnote'>(put on)</span></li>
+<li>She&#x27;s <strong>looking for</strong> a new job. <span class='exnote'>(look for)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Can you open the light? → ✅ Can you turn on the light? <span class='why'>(lights and machines: turn on)</span></li>
+<li>❌ I&#x27;m looking my phone. → ✅ I&#x27;m looking for my phone. <span class='why'>(look for = try to find)</span></li>
+<li>❌ Put off your shoes, please. → ✅ Take off your shoes, please. <span class='why'>(remove clothes: take off)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-phv-basic-s01">
+<div class="exq">1. It&#x27;s cold. Put &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; your jacket.</div>
+<label><input type='radio' name='phv-basic-s01' value='0'> on</label><label><input type='radio' name='phv-basic-s01' value='1'> off</label><label><input type='radio' name='phv-basic-s01' value='2'> up</label><label><input type='radio' name='phv-basic-s01' value='3'> out</label>
+<div class="exexpl" style="display:none">Start wearing: <em>put on</em>.</div>
+<button class="excheck" onclick="checkEx('phv-basic-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-basic-s02">
+<div class="exq">2. What time do you usually get &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; in the morning?</div>
+<label><input type='radio' name='phv-basic-s02' value='0'> on</label><label><input type='radio' name='phv-basic-s02' value='1'> off</label><label><input type='radio' name='phv-basic-s02' value='2'> out</label><label><input type='radio' name='phv-basic-s02' value='3'> up</label>
+<div class="exexpl" style="display:none">Leave your bed: <em>get up</em>.</div>
+<button class="excheck" onclick="checkEx('phv-basic-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-basic-s03">
+<div class="exq">3. Please take &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; your shoes before you come in. (one word)</div>
+<input type="text" id="phv-basic-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Remove clothes: <em>take off</em>.</div>
+<button class="excheck" onclick="checkGap('phv-basic-s03', ["off"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='phv-separable'>Turn it off, not turn off it: separable verbs <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>With a noun</th><th>With a pronoun</th></tr><tr><td><em>Turn on the TV.</em> / <em>Turn the TV on.</em></td><td><em>Turn <strong>it</strong> on.</em> (not <em>Turn on it</em>)</td></tr><tr><td><em>Pick up your toys.</em> / <em>Pick your toys up.</em></td><td><em>Pick <strong>them</strong> up.</em></td></tr><tr><td><em>Fill in the form.</em> / <em>Fill the form in.</em></td><td><em>Fill <strong>it</strong> in.</em></td></tr><tr><td><em>Wake up the kids.</em> / <em>Wake the kids up.</em></td><td><em>Wake <strong>them</strong> up.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>Can you <strong>pick me up</strong> at six? <span class='exnote'>(pronoun in the middle)</span></li>
+<li><strong>Write down</strong> the address. / <strong>Write</strong> the address <strong>down</strong>. <span class='exnote'>(noun before or after)</span></li>
+<li>Don&#x27;t <strong>throw it away</strong>! <span class='exnote'>(pronoun in the middle)</span></li>
+<li>Can I <strong>try these jeans on</strong>? <span class='exnote'>(noun in the middle)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;ll pick up you at six. → ✅ I&#x27;ll pick you up at six. <span class='why'>(pronoun in the middle)</span></li>
+<li>❌ Turn off it, please. → ✅ Turn it off, please. <span class='why'>(pronoun in the middle)</span></li>
+<li>❌ Can you fill in it? → ✅ Can you fill it in? <span class='why'>(pronoun in the middle)</span></li>
+</ul></div>
+<h3 id='phv-inseparable'>Look after her, get on the bus: inseparable verbs <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Phrasal verb</th><th>Meaning</th><th>Example</th></tr><tr><td><em>look after</em></td><td>take care of</td><td><em>She <strong>looks after</strong> her grandma. She looks after <strong>her</strong>.</em></td></tr><tr><td><em>come across</em></td><td>find by chance</td><td><em>I <strong>came across</strong> an old photo.</em></td></tr><tr><td><em>run into</em></td><td>meet by chance</td><td><em>I <strong>ran into</strong> Ali at the mall.</em></td></tr><tr><td><em>get on / get off</em></td><td>enter / leave a bus or train</td><td><strong><em>Get off</strong> at the next stop.</em></td></tr><tr><td><em>deal with</em></td><td>handle</td><td><em>I&#x27;ll <strong>deal with</strong> it.</em></td></tr><tr><td><em>get over</em></td><td>recover from</td><td><em>She <strong>got over</strong> the flu quickly.</em></td></tr><tr><td><em>break down</em> (no object)</td><td>stop working</td><td><em>My car <strong>broke down</strong>.</em></td></tr><tr><td><em>grow up</em> (no object)</td><td>become an adult</td><td><em>I <strong>grew up</strong> in Shiraz.</em></td></tr><tr><td><em>turn up</em> (no object)</td><td>arrive</td><td><em>He <strong>turned up</strong> late.</em></td></tr></table></div>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>Who <strong>looks after</strong> your dog when you travel? <span class='exnote'>(look after)</span></li>
+<li>I <strong>came across</strong> this café by chance. <span class='exnote'>(come across)</span></li>
+<li>The plane <strong>took off</strong> on time. <span class='exnote'>(no object)</span></li>
+<li>I&#x27;ll <strong>deal with</strong> the problem tomorrow. <span class='exnote'>(deal with)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Can you look your sister after? → ✅ Can you look after your sister? <span class='why'>(inseparable)</span></li>
+<li>❌ I came an old letter across. → ✅ I came across an old letter. <span class='why'>(inseparable)</span></li>
+<li>❌ She grew up three children. → ✅ She brought up three children. <span class='why'>(raise children: bring up)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-phv-separable-s01">
+<div class="exq">4. This music is too loud. Can you turn &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;?</div>
+<label><input type='radio' name='phv-separable-s01' value='0'> down it</label><label><input type='radio' name='phv-separable-s01' value='1'> down</label><label><input type='radio' name='phv-separable-s01' value='2'> it down</label><label><input type='radio' name='phv-separable-s01' value='3'> it</label>
+<div class="exexpl" style="display:none">Pronoun in the middle: <em>turn it down</em>.</div>
+<button class="excheck" onclick="checkEx('phv-separable-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-separable-s02">
+<div class="exq">5. Which is correct?</div>
+<label><input type='radio' name='phv-separable-s02' value='0'> I&#x27;ll give back it tomorrow.</label><label><input type='radio' name='phv-separable-s02' value='1'> I&#x27;ll give it back tomorrow.</label><label><input type='radio' name='phv-separable-s02' value='2'> I&#x27;ll turn off it now.</label><label><input type='radio' name='phv-separable-s02' value='3'> I&#x27;ll pick up them later.</label>
+<div class="exexpl" style="display:none">Pronoun in the middle: <em>give it back</em>.</div>
+<button class="excheck" onclick="checkEx('phv-separable-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-separable-s03">
+<div class="exq">6. Your room is a mess. Pick your clothes up and put &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; away. (one word)</div>
+<input type="text" id="phv-separable-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Pronoun in the middle: <em>put them away</em>.</div>
+<button class="excheck" onclick="checkGap('phv-separable-s03', ["them"])">Check</button>
+</div>
+<div class="exblock" id="ex-phv-inseparable-s01">
+<div class="exq">7. My mother looks &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; my kids when I&#x27;m at work.</div>
+<label><input type='radio' name='phv-inseparable-s01' value='0'> after</label><label><input type='radio' name='phv-inseparable-s01' value='1'> for</label><label><input type='radio' name='phv-inseparable-s01' value='2'> at</label><label><input type='radio' name='phv-inseparable-s01' value='3'> up</label>
+<div class="exexpl" style="display:none">Take care of: <em>look after</em>.</div>
+<button class="excheck" onclick="checkEx('phv-inseparable-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-inseparable-s02">
+<div class="exq">8. Which is correct?</div>
+<label><input type='radio' name='phv-inseparable-s02' value='0'> I ran him into at the supermarket.</label><label><input type='radio' name='phv-inseparable-s02' value='1'> I&#x27;ll look them after tonight.</label><label><input type='radio' name='phv-inseparable-s02' value='2'> I ran into him at the supermarket.</label><label><input type='radio' name='phv-inseparable-s02' value='3'> I came it across in a shop.</label>
+<div class="exexpl" style="display:none">Inseparable: <em>ran into him</em>.</div>
+<button class="excheck" onclick="checkEx('phv-inseparable-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-inseparable-s03">
+<div class="exq">9. Where did you grow &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;? ~ In a small village near Tabriz. (one word)</div>
+<input type="text" id="phv-inseparable-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Grow up</em>.</div>
+<button class="excheck" onclick="checkGap('phv-inseparable-s03', ["up"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='phv-three-part'>Look forward to, run out of, put up with <span class='lvl-badge'>B2</span></h3>
+<div class="twrap"><table><tr><th>Phrasal verb</th><th>Meaning</th><th>Example</th></tr><tr><td><em>look forward to</em></td><td>be happy about something in the future</td><td><em>I&#x27;m <strong>looking forward to</strong> the holidays.</em></td></tr><tr><td><em>get on with</em></td><td>have a good relationship with</td><td><em>I <strong>get on</strong> well <strong>with</strong> my boss.</em></td></tr><tr><td><em>run out of</em></td><td>have no more</td><td><em>We&#x27;ve <strong>run out of</strong> milk.</em></td></tr><tr><td><em>put up with</em></td><td>accept something bad</td><td><em>I can&#x27;t <strong>put up with</strong> the noise.</em></td></tr><tr><td><em>come up with</em></td><td>think of (an idea)</td><td><em>She <strong>came up with</strong> a great plan.</em></td></tr><tr><td><em>look up to</em></td><td>admire</td><td><em>I <strong>look up to</strong> my father.</em></td></tr><tr><td><em>get away with</em></td><td>not be punished</td><td><em>He <strong>got away with</strong> cheating.</em></td></tr><tr><td><em>cut down on</em></td><td>use or do less</td><td><em>I&#x27;m trying to <strong>cut down on</strong> sugar.</em></td></tr><tr><td><em>keep up with</em></td><td>stay at the same level</td><td><em>It&#x27;s hard to <strong>keep up with</strong> the news.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>I&#x27;m <strong>looking forward to</strong> the weekend. <span class='exnote'>(look forward to)</span></li>
+<li>We <strong>ran out of</strong> petrol on the motorway. <span class='exnote'>(run out of)</span></li>
+<li>How do you <strong>put up with</strong> him? <span class='exnote'>(put up with)</span></li>
+<li>He <strong>came up with</strong> a clever solution. <span class='exnote'>(come up with)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;m looking forward to see you. → ✅ I&#x27;m looking forward to seeing you. <span class='why'>(to + -ing)</span></li>
+<li>❌ We&#x27;ve run out petrol. → ✅ We&#x27;ve run out of petrol. <span class='why'>(run out of)</span></li>
+</ul></div>
+<h3 id='phv-meanings'>One phrasal verb, many meanings <span class='lvl-badge'>B2</span></h3>
+<div class="twrap"><table><tr><th>Phrasal verb</th><th>Meanings</th><th>Examples</th></tr><tr><td><em>take off</em></td><td>remove clothes; leave the ground; become successful</td><td><strong><em>Take off</strong> your coat. The plane <strong>took off</strong>. Her career <strong>took off</strong>.</em></td></tr><tr><td><em>pick up</em></td><td>lift; collect someone; learn without studying</td><td><strong><em>Pick up</strong> the box. I&#x27;ll <strong>pick</strong> you <strong>up</strong> at 6. I <strong>picked up</strong> some Spanish.</em></td></tr><tr><td><em>make up</em></td><td>invent; become friends again</td><td><em>He <strong>made up</strong> an excuse. They argued, then <strong>made up</strong>.</em></td></tr><tr><td><em>turn up</em></td><td>arrive; make louder</td><td><em>She <strong>turned up</strong> late. <strong>Turn up</strong> the radio.</em></td></tr><tr><td><em>work out</em></td><td>exercise; find the answer</td><td><em>I <strong>work out</strong> at the gym. I can&#x27;t <strong>work out</strong> this puzzle.</em></td></tr><tr><td><em>put off</em></td><td>postpone; make someone not want something</td><td><em>They <strong>put off</strong> the meeting. The smell <strong>put</strong> me <strong>off</strong>.</em></td></tr><tr><td><em>give up</em></td><td>stop a habit; stop trying</td><td><em>He <strong>gave up</strong> smoking. Don&#x27;t <strong>give up</strong>!</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>The plane <strong>took off</strong> at 6 am. <span class='exnote'>(leave the ground)</span></li>
+<li>I <strong>picked up</strong> some Italian when I lived in Rome. <span class='exnote'>(learn without studying)</span></li>
+<li>They had a fight but <strong>made up</strong> the next day. <span class='exnote'>(become friends again)</span></li>
+<li>The meeting has been <strong>put off</strong> until Friday. <span class='exnote'>(postpone)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ She gave up to smoke last year. → ✅ She gave up smoking last year. <span class='why'>(give up + -ing)</span></li>
+<li>❌ He made up with a story about a lost wallet. → ✅ He made up a story about a lost wallet. <span class='why'>(invent: make up (no with))</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-phv-three-part-s01">
+<div class="exq">10. We&#x27;ve run &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; of coffee. Can you buy some?</div>
+<label><input type='radio' name='phv-three-part-s01' value='0'> off</label><label><input type='radio' name='phv-three-part-s01' value='1'> away</label><label><input type='radio' name='phv-three-part-s01' value='2'> down</label><label><input type='radio' name='phv-three-part-s01' value='3'> out</label>
+<div class="exexpl" style="display:none">Have no more: <em>run out of</em>.</div>
+<button class="excheck" onclick="checkEx('phv-three-part-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-three-part-s02">
+<div class="exq">11. I&#x27;m looking forward to &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; you next week.</div>
+<label><input type='radio' name='phv-three-part-s02' value='0'> see</label><label><input type='radio' name='phv-three-part-s02' value='1'> seeing</label><label><input type='radio' name='phv-three-part-s02' value='2'> saw</label><label><input type='radio' name='phv-three-part-s02' value='3'> have seen</label>
+<div class="exexpl" style="display:none"><em>Look forward to</em> + <em>-ing</em>.</div>
+<button class="excheck" onclick="checkEx('phv-three-part-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-three-part-s03">
+<div class="exq">12. I don&#x27;t know how you put &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; with your noisy neighbours. (one word)</div>
+<input type="text" id="phv-three-part-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Accept something bad: <em>put up with</em>.</div>
+<button class="excheck" onclick="checkGap('phv-three-part-s03', ["up"])">Check</button>
+</div>
+<div class="exblock" id="ex-phv-meanings-s01">
+<div class="exq">13. In <em>Her career really took off after her first film</em>, <em>took off</em> means:</div>
+<label><input type='radio' name='phv-meanings-s01' value='0'> removed clothes</label><label><input type='radio' name='phv-meanings-s01' value='1'> left the ground</label><label><input type='radio' name='phv-meanings-s01' value='2'> stopped</label><label><input type='radio' name='phv-meanings-s01' value='3'> became successful</label>
+<div class="exexpl" style="display:none"><em>Take off</em> = become successful.</div>
+<button class="excheck" onclick="checkEx('phv-meanings-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-meanings-s02">
+<div class="exq">14. Which is the most formal?</div>
+<label><input type='radio' name='phv-meanings-s02' value='0'> The meeting has been put off.</label><label><input type='radio' name='phv-meanings-s02' value='1'> The meeting has been postponed.</label><label><input type='radio' name='phv-meanings-s02' value='2'> They&#x27;ve put the meeting off.</label><label><input type='radio' name='phv-meanings-s02' value='3'> The meeting&#x27;s been pushed back.</label>
+<div class="exexpl" style="display:none">Formal one-word verb: <em>postpone</em>.</div>
+<button class="excheck" onclick="checkEx('phv-meanings-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-meanings-s03">
+<div class="exq">15. My grandfather gave &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; smoking when he was 50. (one word)</div>
+<input type="text" id="phv-meanings-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Stop a habit: <em>give up</em>.</div>
+<button class="excheck" onclick="checkGap('phv-meanings-s03', ["up"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='phv-advanced'>Particle meanings, phrasal nouns, and passives <span class='lvl-badge'>C1</span></h3>
+<div class="twrap"><table><tr><th>Particle</th><th>Common meaning</th><th>Examples</th></tr><tr><td><em>up</em></td><td>completely; increase</td><td><em>eat up, use up, tidy up; speed up, go up</em></td></tr><tr><td><em>out</em></td><td>to the end; disappear; clearly</td><td><em>sort out, run out, die out, wipe out, point out</em></td></tr><tr><td><em>on</em></td><td>continue</td><td><em>carry on, keep on, go on, drag on</em></td></tr><tr><td><em>off</em></td><td>leave or start; stop or cancel</td><td><em>set off; call off, wear off, lay off</em></td></tr><tr><td><em>down</em></td><td>decrease; stop working; write</td><td><em>slow down, cut down; break down; write down</em></td></tr><tr><td><em>over</em></td><td>think or check carefully</td><td><em>think over, look over, talk over</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>The effect of the coffee soon <strong>wore off</strong>. <span class='exnote'>(off = stop)</span></li>
+<li>Many species have <strong>died out</strong>. <span class='exnote'>(out = disappear)</span></li>
+<li>There has been an <strong>outbreak</strong> of flu. <span class='exnote'>(phrasal noun)</span></li>
+<li>The concert <strong>was called off</strong> because of the storm. <span class='exnote'>(passive)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ The company is laying out 200 workers. → ✅ The company is laying off 200 workers. <span class='why'>(lay off = stop employing)</span></li>
+<li>❌ We had a break down on the motorway. → ✅ We had a breakdown on the motorway. <span class='why'>(phrasal noun: one word)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-phv-advanced-s01">
+<div class="exq">16. The match was called &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; because of the heavy rain.</div>
+<label><input type='radio' name='phv-advanced-s01' value='0'> out</label><label><input type='radio' name='phv-advanced-s01' value='1'> up</label><label><input type='radio' name='phv-advanced-s01' value='2'> off</label><label><input type='radio' name='phv-advanced-s01' value='3'> down</label>
+<div class="exexpl" style="display:none">Cancel: <em>call off</em>.</div>
+<button class="excheck" onclick="checkEx('phv-advanced-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-advanced-s02">
+<div class="exq">17. There has been a serious &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; of measles in the city.</div>
+<label><input type='radio' name='phv-advanced-s02' value='0'> outbreak</label><label><input type='radio' name='phv-advanced-s02' value='1'> outcome</label><label><input type='radio' name='phv-advanced-s02' value='2'> breakdown</label><label><input type='radio' name='phv-advanced-s02' value='3'> outlook</label>
+<div class="exexpl" style="display:none">Phrasal noun: <em>an outbreak</em>.</div>
+<button class="excheck" onclick="checkEx('phv-advanced-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-phv-advanced-s03">
+<div class="exq">18. The effect of the painkiller will wear &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; after a few hours. (one word)</div>
+<input type="text" id="phv-advanced-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Stop gradually: <em>wear off</em>.</div>
+<button class="excheck" onclick="checkGap('phv-advanced-s03', ["off"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/verbs-and-prepositions/">Verbs and Prepositions</a></li><li><a href="/blog/grammar/nouns-and-prepositions/">Nouns and Prepositions</a></li><li><a href="/blog/grammar/adjectives-and-prepositions/">Adjectives and Prepositions</a></li><li><a href="/blog/grammar/passive-voice/">Passive Voice (It was made in China)</a></li>
+</ul>
+
+<div class="cta"><p>Learn phrasal verbs in real conversations: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

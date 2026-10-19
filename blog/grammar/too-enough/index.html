@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Too and Enough: Rules and Exercises | Muse English</title>
+<meta name="description" content="Learn too and enough from A2 to C1: too hot, not old enough, enough money, too much and too many, too difficult for me to do, far too, and sufficiently.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/too-enough/">
+<meta property="og:type" content="article"><meta property="og:title" content="Too and Enough: Rules and Exercises | Muse English">
+<meta property="og:description" content="Learn too and enough from A2 to C1: too hot, not old enough, enough money, too much and too many, too difficult for me to do, far too, and sufficiently."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/too-enough/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Too and Enough", "description": "Learn too and enough from A2 to C1: too hot, not old enough, enough money, too much and too many, too difficult for me to do, far too, and sufficiently.", "url": "https://museenglishapp.com/blog/grammar/too-enough/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Too and Enough", "item": "https://museenglishapp.com/blog/grammar/too-enough/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Too and Enough</div>
+<h1>Too and Enough</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#c1'>C1</a></div>
+<p><strong><em>Too</strong></em> means <strong>more than necessary or wanted</strong>: <em>This coffee is <strong>too</strong> hot.</em> <strong><em>Enough</strong></em> means <strong>as much as necessary</strong>: <em>Is it warm <strong>enough</strong> for you? We have <strong>enough</strong> chairs.</em></p><p>Notice the word order: <strong><em>too</strong></em> goes <strong>before</strong> adjectives, and <strong><em>enough</strong></em> goes <strong>after</strong> adjectives but <strong>before</strong> nouns.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='te-basic'>Too hot, warm enough, enough money <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Pattern</th><th>Example</th></tr><tr><td><em>too</em> + adjective</td><td><em>This bag is <strong>too heavy</strong>.</em></td></tr><tr><td>adjective + <em>enough</em></td><td><em>He isn&#x27;t <strong>old enough</strong> to drive.</em></td></tr><tr><td><em>enough</em> + noun</td><td><em>We don&#x27;t have <strong>enough money</strong>.</em></td></tr><tr><td><em>not</em> + adjective + <em>enough</em></td><td><em>The room <strong>isn&#x27;t big enough</strong>.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>These shoes are <strong>too small</strong>. <span class='exnote'>(too + adjective)</span></li>
+<li>Is the water <strong>warm enough</strong>? <span class='exnote'>(adjective + enough)</span></li>
+<li>There isn&#x27;t <strong>enough milk</strong> for everyone. <span class='exnote'>(enough + noun)</span></li>
+<li>You&#x27;re driving <strong>too fast</strong>! <span class='exnote'>(too + adverb)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ She isn&#x27;t enough old to vote. → ✅ She isn&#x27;t old enough to vote. <span class='why'>(adjective + enough)</span></li>
+<li>❌ We don&#x27;t have time enough. → ✅ We don&#x27;t have enough time. <span class='why'>(enough + noun)</span></li>
+<li>❌ It&#x27;s too much hot today. → ✅ It&#x27;s too hot today. <span class='why'>(too + adjective)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-te-basic-s01">
+<div class="exq">1. I can&#x27;t drink this tea. It&#x27;s &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='te-basic-s01' value='0'> hot enough</label><label><input type='radio' name='te-basic-s01' value='1'> enough hot</label><label><input type='radio' name='te-basic-s01' value='2'> too hot</label><label><input type='radio' name='te-basic-s01' value='3'> too much hot</label>
+<div class="exexpl" style="display:none">A problem: <em>too</em> + adjective.</div>
+<button class="excheck" onclick="checkEx('te-basic-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-te-basic-s02">
+<div class="exq">2. My son is 12. He isn&#x27;t &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to drive.</div>
+<label><input type='radio' name='te-basic-s02' value='0'> enough old</label><label><input type='radio' name='te-basic-s02' value='1'> too old</label><label><input type='radio' name='te-basic-s02' value='2'> old too</label><label><input type='radio' name='te-basic-s02' value='3'> old enough</label>
+<div class="exexpl" style="display:none">Adjective + <em>enough</em>.</div>
+<button class="excheck" onclick="checkEx('te-basic-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-te-basic-s03">
+<div class="exq">3. We need six eggs. Have we got &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; eggs to make the cake? (one word: too or enough)</div>
+<input type="text" id="te-basic-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Enough</em> + noun.</div>
+<button class="excheck" onclick="checkGap('te-basic-s03', ["enough"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='te-too-much-many'>Too much, too many, too difficult for me to do <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Pattern</th><th>Example</th></tr><tr><td><em>too much</em> + uncountable</td><td><em>There&#x27;s <strong>too much</strong> sugar in this.</em></td></tr><tr><td><em>too many</em> + plural</td><td><em>There are <strong>too many</strong> people here.</em></td></tr><tr><td>verb + <em>too much</em></td><td><em>You work <strong>too much</strong>.</em></td></tr><tr><td><em>too</em> + adjective + <em>to</em></td><td><em>The box is <strong>too heavy to lift</strong>.</em></td></tr><tr><td><em>too</em> + adjective + <em>for</em> + person + <em>to</em></td><td><em>The text is <strong>too difficult for me to understand</strong>.</em></td></tr><tr><td>adjective + <em>enough</em> + <em>to</em></td><td><em>She&#x27;s <strong>old enough to</strong> travel alone.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>I ate <strong>too much</strong> cake. <span class='exnote'>(too much + uncountable)</span></li>
+<li>There are <strong>too many</strong> cars in the city. <span class='exnote'>(too many + plural)</span></li>
+<li>The coffee is <strong>too hot to drink</strong>. <span class='exnote'>(too + adjective + to)</span></li>
+<li>Is he <strong>strong enough to</strong> carry it? <span class='exnote'>(enough + to)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ There are too much people here. → ✅ There are too many people here. <span class='why'>(plural: too many)</span></li>
+<li>❌ The soup was too hot to eat it. → ✅ The soup was too hot to eat. <span class='why'>(no object after the verb)</span></li>
+<li>❌ It&#x27;s too difficult for I to understand. → ✅ It&#x27;s too difficult for me to understand. <span class='why'>(for + object pronoun)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-te-too-much-many-s01">
+<div class="exq">4. There&#x27;s &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; traffic in the city centre. Let&#x27;s take the metro.</div>
+<label><input type='radio' name='te-too-much-many-s01' value='0'> too much</label><label><input type='radio' name='te-too-much-many-s01' value='1'> too many</label><label><input type='radio' name='te-too-much-many-s01' value='2'> too</label><label><input type='radio' name='te-too-much-many-s01' value='3'> enough of</label>
+<div class="exexpl" style="display:none">Uncountable: <em>too much</em>.</div>
+<button class="excheck" onclick="checkEx('te-too-much-many-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-te-too-much-many-s02">
+<div class="exq">5. This suitcase is too heavy &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='te-too-much-many-s02' value='0'> to carry it</label><label><input type='radio' name='te-too-much-many-s02' value='1'> to carry</label><label><input type='radio' name='te-too-much-many-s02' value='2'> for carrying it</label><label><input type='radio' name='te-too-much-many-s02' value='3'> carrying</label>
+<div class="exexpl" style="display:none"><em>Too</em> + adjective + <em>to</em> (no object at the end).</div>
+<button class="excheck" onclick="checkEx('te-too-much-many-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-te-too-much-many-s03">
+<div class="exq">6. The exercise was too difficult &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; me to do. (one word)</div>
+<input type="text" id="te-too-much-many-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Too</em> + adjective + <em>for</em> + person + <em>to</em>.</div>
+<button class="excheck" onclick="checkGap('te-too-much-many-s03', ["for"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='te-advanced'>Far too, more than enough, sufficiently, overly <span class='lvl-badge'>C1</span></h3>
+<div class="twrap"><table><tr><th>Pattern</th><th>Example</th></tr><tr><td><em>far / much / way</em> (informal) + <em>too</em></td><td><em>It&#x27;s <strong>far too</strong> late. It&#x27;s <strong>way too</strong> expensive.</em></td></tr><tr><td><em>a bit / a little</em> + <em>too</em></td><td><em>It&#x27;s <strong>a bit too</strong> short.</em></td></tr><tr><td><em>more than enough</em></td><td><em>We have <strong>more than enough</strong> food.</em></td></tr><tr><td><em>barely / only just enough</em></td><td><em>We had <strong>barely enough</strong> time.</em></td></tr><tr><td><em>sufficiently</em> + adjective (formal)</td><td><em>The results were not <strong>sufficiently</strong> clear.</em></td></tr><tr><td><em>overly / excessively</em> + adjective (formal)</td><td><em>The report was <strong>overly</strong> optimistic.</em></td></tr><tr><td><em>enough</em> as a pronoun</td><td><em>I&#x27;ve had <strong>enough</strong>. Enough is enough!</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>The music is <strong>far too</strong> loud. <span class='exnote'>(far too)</span></li>
+<li>Don&#x27;t cook any more. We have <strong>more than enough</strong>. <span class='exnote'>(more than enough)</span></li>
+<li>The plan was not <strong>sufficiently</strong> detailed. <span class='exnote'>(formal)</span></li>
+<li>She was <strong>overly</strong> critical of her students. <span class='exnote'>(formal)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ The hotel was very too expensive. → ✅ The hotel was far too expensive. <span class='why'>(far / much + too)</span></li>
+<li>❌ We have enough more than food. → ✅ We have more than enough food. <span class='why'>(more than enough)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-te-advanced-s01">
+<div class="exq">7. It&#x27;s &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; cold to go to the beach today.</div>
+<label><input type='radio' name='te-advanced-s01' value='0'> far too</label><label><input type='radio' name='te-advanced-s01' value='1'> very too</label><label><input type='radio' name='te-advanced-s01' value='2'> too far</label><label><input type='radio' name='te-advanced-s01' value='3'> too very</label>
+<div class="exexpl" style="display:none">Stronger <em>too</em>: <em>far too</em>.</div>
+<button class="excheck" onclick="checkEx('te-advanced-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-te-advanced-s02">
+<div class="exq">8. Don&#x27;t buy any more bread. We have &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='te-advanced-s02' value='0'> enough more than</label><label><input type='radio' name='te-advanced-s02' value='1'> too enough</label><label><input type='radio' name='te-advanced-s02' value='2'> very enough</label><label><input type='radio' name='te-advanced-s02' value='3'> more than enough</label>
+<div class="exexpl" style="display:none">Plenty: <em>more than enough</em>.</div>
+<button class="excheck" onclick="checkEx('te-advanced-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-te-advanced-s03">
+<div class="exq">9. The evidence was not &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; strong to convict him. (one word, formal, meaning <em>enough</em>)</div>
+<input type="text" id="te-advanced-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Formal: <em>sufficiently</em> + adjective.</div>
+<button class="excheck" onclick="checkGap('te-advanced-s03', ["sufficiently"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/much-many-a-few-a-little/">Much, Many, A Lot Of, A Few, A Little</a></li><li><a href="/blog/grammar/so-such-so-that/">So, Such and So That</a></li><li><a href="/blog/grammar/quite-rather-fairly/">Quite, Rather, Fairly and Pretty</a></li><li><a href="/blog/grammar/comparatives-superlatives/">Comparatives and Superlatives</a></li>
+</ul>
+
+<div class="cta"><p>Use too and enough naturally in conversation: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

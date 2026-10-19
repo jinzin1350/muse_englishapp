@@ -1,0 +1,228 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Time Conjunctions: When, While, Before, Until | Muse English</title>
+<meta name="description" content="Learn time linkers from A2 to C1: when, while, before and after, as soon as, until, since, first, then, in the end, the moment, and no sooner than.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/time-conjunctions/">
+<meta property="og:type" content="article"><meta property="og:title" content="Time Conjunctions: When, While, Before, Until | Muse English">
+<meta property="og:description" content="Learn time linkers from A2 to C1: when, while, before and after, as soon as, until, since, first, then, in the end, the moment, and no sooner than."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/time-conjunctions/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Time Conjunctions and Sequencing Words", "description": "Learn time linkers from A2 to C1: when, while, before and after, as soon as, until, since, first, then, in the end, the moment, and no sooner than.", "url": "https://museenglishapp.com/blog/grammar/time-conjunctions/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Time Conjunctions and Sequencing Words", "item": "https://museenglishapp.com/blog/grammar/time-conjunctions/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Time Conjunctions and Sequencing Words</div>
+<h1>Time Conjunctions and Sequencing Words</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p><strong>Time conjunctions</strong> join two actions and show <strong>when</strong> they happen: <em>I had dinner <strong>when</strong> I got home. <strong>While</strong> I was cooking, the phone rang. Wash your hands <strong>before</strong> you eat.</em></p><p>This page is about time linkers in general and in the past. For the rule <em>when I <strong>get</strong> home</em> (present for the future), see <a href="/blog/grammar/future-time-clauses/">Future Time Clauses</a>.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='tcj-when-while'>When, while, before, after <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Conjunction</th><th>Example</th></tr><tr><td><em>when</em></td><td><strong><em>When</strong> I got home, I made dinner.</em></td></tr><tr><td><em>while</em></td><td><em>The phone rang <strong>while</strong> I was having a shower.</em></td></tr><tr><td><em>before</em></td><td><em>Brush your teeth <strong>before</strong> you go to bed.</em></td></tr><tr><td><em>after</em></td><td><strong><em>After</strong> we finished lunch, we went for a walk.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li><strong>When</strong> I saw her, I smiled. <span class='exnote'>(when)</span></li>
+<li>I fell asleep <strong>while</strong> I was watching TV. <span class='exnote'>(while + longer action)</span></li>
+<li>Check the price <strong>before</strong> you buy it. <span class='exnote'>(before)</span></li>
+<li><strong>After</strong> the meeting finished, we had coffee. <span class='exnote'>(after)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ While I watched TV, the phone was ringing. → ✅ While I was watching TV, the phone rang. <span class='why'>(longer action: past continuous)</span></li>
+<li>❌ After finish work, I go to the gym. → ✅ After finishing work, I go to the gym. <span class='why'>(after + -ing)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-tcj-when-while-s01">
+<div class="exq">1. I hurt my leg &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I was playing football.</div>
+<label><input type='radio' name='tcj-when-while-s01' value='0'> before</label><label><input type='radio' name='tcj-when-while-s01' value='1'> after</label><label><input type='radio' name='tcj-when-while-s01' value='2'> while</label><label><input type='radio' name='tcj-when-while-s01' value='3'> until</label>
+<div class="exexpl" style="display:none">During a longer action: <em>while</em>.</div>
+<button class="excheck" onclick="checkEx('tcj-when-while-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-tcj-when-while-s02">
+<div class="exq">2. Always wash your hands &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; you eat.</div>
+<label><input type='radio' name='tcj-when-while-s02' value='0'> while</label><label><input type='radio' name='tcj-when-while-s02' value='1'> until</label><label><input type='radio' name='tcj-when-while-s02' value='2'> since</label><label><input type='radio' name='tcj-when-while-s02' value='3'> before</label>
+<div class="exexpl" style="display:none">Order: <em>before</em>.</div>
+<button class="excheck" onclick="checkEx('tcj-when-while-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-tcj-when-while-s03">
+<div class="exq">3. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I arrived at the party, everyone was dancing. (one word: at that time)</div>
+<input type="text" id="tcj-when-while-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">At that time: <em>When</em>.</div>
+<button class="excheck" onclick="checkGap('tcj-when-while-s03', ["When", "As"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='tcj-until-since'>As soon as, until, since, once, by the time <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Conjunction</th><th>Example</th></tr><tr><td><em>as soon as</em></td><td><em>I called you <strong>as soon as</strong> I heard the news.</em></td></tr><tr><td><em>until / till</em></td><td><em>We waited <strong>until</strong> the rain stopped.</em></td></tr><tr><td><em>since</em></td><td><em>I&#x27;ve lived here <strong>since</strong> I was ten.</em></td></tr><tr><td><em>once</em></td><td><strong><em>Once</strong> you&#x27;ve paid, you&#x27;ll get a receipt.</em></td></tr><tr><td><em>by the time</em></td><td><strong><em>By the time</strong> we arrived, the film had started.</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>She left <strong>as soon as</strong> the lesson ended. <span class='exnote'>(immediately after)</span></li>
+<li>I stayed in bed <strong>until</strong> 10. <span class='exnote'>(up to that time)</span></li>
+<li>We&#x27;ve been friends <strong>since</strong> we met at university. <span class='exnote'>(from then to now)</span></li>
+<li><strong>By the time</strong> I got to the station, the train had left. <span class='exnote'>(by the time + past perfect)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I know him since I was a child. → ✅ I&#x27;ve known him since I was a child. <span class='why'>(since: present perfect)</span></li>
+<li>❌ Wait here until I will come back. → ✅ Wait here until I come back. <span class='why'>(until + present)</span></li>
+</ul></div>
+<h3 id='tcj-sequencing'>First, then, after that, finally, in the end, at last <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Word</th><th>Use</th><th>Example</th></tr><tr><td><em>first / firstly</em></td><td>the first step</td><td><strong><em>First</strong>, heat the oil.</em></td></tr><tr><td><em>then / next / after that</em></td><td>the next step</td><td><strong><em>Then</strong> add the onions. <strong>After that</strong>, add the rice.</em></td></tr><tr><td><em>finally</em></td><td>the last step</td><td><strong><em>Finally</strong>, add salt.</em></td></tr><tr><td><em>in the end</em></td><td>the final result after problems or changes</td><td><em>We looked at ten flats. <strong>In the end</strong>, we chose the first one.</em></td></tr><tr><td><em>at last</em></td><td>after a long wait (often relief)</td><td><strong><em>At last</strong>! You&#x27;re here!</em></td></tr><tr><td><em>eventually</em></td><td>after a long time</td><td><em>The bus <strong>eventually</strong> arrived.</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li><strong>First</strong>, open the app. <strong>Then</strong>, create an account. <span class='exnote'>(instructions)</span></li>
+<li><strong>After that</strong>, we had lunch in a café. <span class='exnote'>(next step)</span></li>
+<li><strong>In the end</strong>, we decided to stay at home. <span class='exnote'>(final result)</span></li>
+<li><strong>At last</strong>, the exams are over! <span class='exnote'>(relief)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ In the end of the lesson, we had a quiz. → ✅ At the end of the lesson, we had a quiz. <span class='why'>(the last part: at the end of)</span></li>
+<li>❌ After, we went to the cinema. → ✅ After that, we went to the cinema. <span class='why'>(after that (as a linker))</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-tcj-until-since-s01">
+<div class="exq">4. I&#x27;ve worked here &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I finished university.</div>
+<label><input type='radio' name='tcj-until-since-s01' value='0'> until</label><label><input type='radio' name='tcj-until-since-s01' value='1'> since</label><label><input type='radio' name='tcj-until-since-s01' value='2'> as soon as</label><label><input type='radio' name='tcj-until-since-s01' value='3'> by the time</label>
+<div class="exexpl" style="display:none">From then to now: <em>since</em>.</div>
+<button class="excheck" onclick="checkEx('tcj-until-since-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-tcj-until-since-s02">
+<div class="exq">5. We stayed on the beach &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the sun went down.</div>
+<label><input type='radio' name='tcj-until-since-s02' value='0'> until</label><label><input type='radio' name='tcj-until-since-s02' value='1'> since</label><label><input type='radio' name='tcj-until-since-s02' value='2'> by the time</label><label><input type='radio' name='tcj-until-since-s02' value='3'> as soon as</label>
+<div class="exexpl" style="display:none">Up to that time: <em>until</em>.</div>
+<button class="excheck" onclick="checkEx('tcj-until-since-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-tcj-until-since-s03">
+<div class="exq">6. I&#x27;ll call you as &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; as I land. (one word)</div>
+<input type="text" id="tcj-until-since-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>As soon as</em> = immediately after.</div>
+<button class="excheck" onclick="checkGap('tcj-until-since-s03', ["soon"])">Check</button>
+</div>
+<div class="exblock" id="ex-tcj-sequencing-s01">
+<div class="exq">7. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;, mix the flour and the sugar. Then add the eggs.</div>
+<label><input type='radio' name='tcj-sequencing-s01' value='0'> Finally</label><label><input type='radio' name='tcj-sequencing-s01' value='1'> First</label><label><input type='radio' name='tcj-sequencing-s01' value='2'> In the end</label><label><input type='radio' name='tcj-sequencing-s01' value='3'> At last</label>
+<div class="exexpl" style="display:none">First step: <em>First</em>.</div>
+<button class="excheck" onclick="checkEx('tcj-sequencing-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-tcj-sequencing-s02">
+<div class="exq">8. We waited for three hours, and &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the plane took off.</div>
+<label><input type='radio' name='tcj-sequencing-s02' value='0'> firstly</label><label><input type='radio' name='tcj-sequencing-s02' value='1'> at first</label><label><input type='radio' name='tcj-sequencing-s02' value='2'> eventually</label><label><input type='radio' name='tcj-sequencing-s02' value='3'> first</label>
+<div class="exexpl" style="display:none">After a long time: <em>eventually</em>.</div>
+<button class="excheck" onclick="checkEx('tcj-sequencing-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-tcj-sequencing-s03">
+<div class="exq">9. We&#x27;ll have a party at the &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; of the course. (one word)</div>
+<input type="text" id="tcj-sequencing-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">The last part: <em>at the end of</em>.</div>
+<button class="excheck" onclick="checkGap('tcj-sequencing-s03', ["end"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='tcj-the-moment'>The moment, every time, as, whenever <span class='lvl-badge'>B2</span></h3>
+<div class="twrap"><table><tr><th>Conjunction</th><th>Example</th></tr><tr><td><em>the moment / the minute</em></td><td><strong><em>The moment</strong> I saw him, I knew something was wrong.</em></td></tr><tr><td><em>every time / whenever</em></td><td><strong><em>Every time</strong> I see that photo, I smile.</em></td></tr><tr><td><em>as</em> (same time)</td><td><strong><em>As</strong> I was leaving, the phone rang. <strong>As</strong> you get older, you worry less.</em></td></tr><tr><td><em>just as</em></td><td><em>The bus left <strong>just as</strong> I arrived.</em></td></tr><tr><td><em>hardly / barely … when</em></td><td><em>I had <strong>hardly</strong> sat down <strong>when</strong> the doorbell rang.</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li><strong>The minute</strong> she walked in, everyone stopped talking. <span class='exnote'>(as soon as)</span></li>
+<li><strong>Whenever</strong> I go to Paris, I visit the Louvre. <span class='exnote'>(each time)</span></li>
+<li>The rain started <strong>just as</strong> we left the house. <span class='exnote'>(exactly then)</span></li>
+<li><strong>As</strong> prices rise, people spend less. <span class='exnote'>(two changes together)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Every times I call him, he&#x27;s busy. → ✅ Every time I call him, he&#x27;s busy. <span class='why'>(every time (singular))</span></li>
+<li>❌ I had hardly arrived than it started raining. → ✅ I had hardly arrived when it started raining. <span class='why'>(hardly … when)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-tcj-the-moment-s01">
+<div class="exq">10. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I hear this song, I think of my grandmother.</div>
+<label><input type='radio' name='tcj-the-moment-s01' value='0'> Every time</label><label><input type='radio' name='tcj-the-moment-s01' value='1'> Every times</label><label><input type='radio' name='tcj-the-moment-s01' value='2'> Each times</label><label><input type='radio' name='tcj-the-moment-s01' value='3'> All time</label>
+<div class="exexpl" style="display:none">Each time: <em>Every time</em>.</div>
+<button class="excheck" onclick="checkEx('tcj-the-moment-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-tcj-the-moment-s02">
+<div class="exq">11. The train left just &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; we got to the platform.</div>
+<label><input type='radio' name='tcj-the-moment-s02' value='0'> while</label><label><input type='radio' name='tcj-the-moment-s02' value='1'> since</label><label><input type='radio' name='tcj-the-moment-s02' value='2'> during</label><label><input type='radio' name='tcj-the-moment-s02' value='3'> as</label>
+<div class="exexpl" style="display:none">Exactly then: <em>just as</em>.</div>
+<button class="excheck" onclick="checkEx('tcj-the-moment-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-tcj-the-moment-s03">
+<div class="exq">12. The &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I saw the house, I knew I wanted to buy it. (one word)</div>
+<input type="text" id="tcj-the-moment-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>The moment</em> = as soon as.</div>
+<button class="excheck" onclick="checkGap('tcj-the-moment-s03', ["moment", "minute", "instant", "second"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='tcj-advanced'>No sooner … than, upon arrival, prior to, following <span class='lvl-badge'>C1</span></h3>
+<div class="twrap"><table><tr><th>Expression</th><th>Example</th></tr><tr><td><em>no sooner … than</em></td><td><em>We had <strong>no sooner</strong> arrived <strong>than</strong> it started to rain.</em> / <strong><em>No sooner had</strong> we arrived <strong>than</strong> it started to rain.</em></td></tr><tr><td><em>scarcely / hardly … when</em></td><td><strong><em>Scarcely had</strong> she left <strong>when</strong> the phone rang.</em></td></tr><tr><td><em>upon / on</em> + <em>-ing</em> or noun</td><td><strong><em>Upon arriving</strong>, guests are given a key. <strong>On arrival</strong>, …</em></td></tr><tr><td><em>prior to</em> (= before)</td><td><strong><em>Prior to</strong> the meeting, please read the report.</em></td></tr><tr><td><em>following</em> (= after)</td><td><strong><em>Following</strong> the announcement, shares fell.</em></td></tr><tr><td><em>having</em> + past participle</td><td><strong><em>Having finished</strong> the report, she went home.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li><strong>No sooner had</strong> I sat down <strong>than</strong> the phone rang. <span class='exnote'>(no sooner … than)</span></li>
+<li><strong>Upon</strong> receiving the results, the team celebrated. <span class='exnote'>(upon + -ing)</span></li>
+<li>Please arrive 30 minutes <strong>prior to</strong> departure. <span class='exnote'>(prior to)</span></li>
+<li><strong>Following</strong> the storm, many roads were closed. <span class='exnote'>(following)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ No sooner had I arrived when they left. → ✅ No sooner had I arrived than they left. <span class='why'>(no sooner … than)</span></li>
+<li>❌ No sooner I had arrived than they left. → ✅ No sooner had I arrived than they left. <span class='why'>(inversion: had I)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-tcj-advanced-s01">
+<div class="exq">13. No sooner had the match started &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; it began to snow.</div>
+<label><input type='radio' name='tcj-advanced-s01' value='0'> when</label><label><input type='radio' name='tcj-advanced-s01' value='1'> than</label><label><input type='radio' name='tcj-advanced-s01' value='2'> then</label><label><input type='radio' name='tcj-advanced-s01' value='3'> that</label>
+<div class="exexpl" style="display:none"><em>No sooner … than</em>.</div>
+<button class="excheck" onclick="checkEx('tcj-advanced-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-tcj-advanced-s02">
+<div class="exq">14. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the meeting, all participants must sign in.</div>
+<label><input type='radio' name='tcj-advanced-s02' value='0'> Prior</label><label><input type='radio' name='tcj-advanced-s02' value='1'> Before of</label><label><input type='radio' name='tcj-advanced-s02' value='2'> Prior to</label><label><input type='radio' name='tcj-advanced-s02' value='3'> Previous to the</label>
+<div class="exexpl" style="display:none">Formal <em>before</em>: <em>Prior to</em>.</div>
+<button class="excheck" onclick="checkEx('tcj-advanced-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-tcj-advanced-s03">
+<div class="exq">15. Scarcely had we left the house &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; it started to pour with rain. (one word)</div>
+<input type="text" id="tcj-advanced-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Scarcely … when</em>.</div>
+<button class="excheck" onclick="checkGap('tcj-advanced-s03', ["when", "before"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/future-time-clauses/">Future Time Clauses (When I get home, I&#x27;ll…)</a></li><li><a href="/blog/grammar/past-simple-vs-past-continuous/">Past Simple vs Past Continuous</a></li><li><a href="/blog/grammar/narrative-tenses/">Narrative Tenses: Telling Stories in the Past</a></li><li><a href="/blog/grammar/participle-clauses/">Participle Clauses</a></li>
+</ul>
+
+<div class="cta"><p>Tell stories in the right order: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gradable and Extreme Adjectives: Rules | Muse English</title>
+<meta name="description" content="Learn gradable and extreme adjectives from B1 to C1: very cold or absolutely freezing, completely different, and natural pairs like highly unlikely.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/gradable-adjectives/">
+<meta property="og:type" content="article"><meta property="og:title" content="Gradable and Extreme Adjectives: Rules | Muse English">
+<meta property="og:description" content="Learn gradable and extreme adjectives from B1 to C1: very cold or absolutely freezing, completely different, and natural pairs like highly unlikely."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/gradable-adjectives/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Gradable and Extreme Adjectives", "description": "Learn gradable and extreme adjectives from B1 to C1: very cold or absolutely freezing, completely different, and natural pairs like highly unlikely.", "url": "https://museenglishapp.com/blog/grammar/gradable-adjectives/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Gradable and Extreme Adjectives", "item": "https://museenglishapp.com/blog/grammar/gradable-adjectives/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Gradable and Extreme Adjectives</div>
+<h1>Gradable and Extreme Adjectives</h1>
+<div class="level-bar"><a href='#b1'>B1</a> · <a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p><strong>Gradable</strong> adjectives can be more or less: <em>cold, big, good</em>. Use <strong><em>very, a bit</strong></em> and <strong><em>extremely</strong></em> with them: <em>very cold</em>. <strong>Extreme</strong> adjectives already mean “very”: <em>freezing, huge, amazing</em>. Use <strong><em>absolutely</strong></em> or <strong><em>really</strong></em> with them: <em>absolutely freezing</em>.</p><p>Using the right word before an adjective is one of the easiest ways to sound more natural.</p>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='ga-basic'>Very cold, absolutely freezing <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Gradable (+ very)</th><th>Extreme (+ absolutely)</th></tr><tr><td><em>cold</em></td><td><em>freezing</em></td></tr><tr><td><em>hot</em></td><td><em>boiling</em></td></tr><tr><td><em>big</em></td><td><em>huge, enormous</em></td></tr><tr><td><em>small</em></td><td><em>tiny</em></td></tr><tr><td><em>good</em></td><td><em>amazing, fantastic, excellent</em></td></tr><tr><td><em>bad</em></td><td><em>terrible, awful</em></td></tr><tr><td><em>tired</em></td><td><em>exhausted</em></td></tr><tr><td><em>hungry</em></td><td><em>starving</em></td></tr><tr><td><em>angry</em></td><td><em>furious</em></td></tr><tr><td><em>interesting</em></td><td><em>fascinating</em></td></tr><tr><td><em>scared</em></td><td><em>terrified</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>It&#x27;s <strong>very cold</strong> today. <span class='exnote'>(gradable)</span></li>
+<li>It&#x27;s <strong>absolutely freezing</strong>! <span class='exnote'>(extreme)</span></li>
+<li>The hotel was <strong>really</strong> amazing. <span class='exnote'>(really: both)</span></li>
+<li>I&#x27;m <strong>extremely</strong> tired. <span class='exnote'>(gradable)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ The film was very fantastic. → ✅ The film was absolutely fantastic. <span class='why'>(extreme: absolutely)</span></li>
+<li>❌ I&#x27;m absolutely hungry. → ✅ I&#x27;m absolutely starving. <span class='why'>(absolutely + extreme adjective)</span></li>
+<li>❌ Their house is very enormous. → ✅ Their house is absolutely enormous. <span class='why'>(extreme: absolutely)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-ga-basic-s01">
+<div class="exq">1. I haven&#x27;t eaten all day. I&#x27;m &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='ga-basic-s01' value='0'> very starving</label><label><input type='radio' name='ga-basic-s01' value='1'> absolutely hungry</label><label><input type='radio' name='ga-basic-s01' value='2'> a bit starving</label><label><input type='radio' name='ga-basic-s01' value='3'> absolutely starving</label>
+<div class="exexpl" style="display:none">Extreme adjective + <em>absolutely</em>.</div>
+<button class="excheck" onclick="checkEx('ga-basic-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ga-basic-s02">
+<div class="exq">2. Their new house is &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;. It has eight bedrooms!</div>
+<label><input type='radio' name='ga-basic-s02' value='0'> absolutely enormous</label><label><input type='radio' name='ga-basic-s02' value='1'> very enormous</label><label><input type='radio' name='ga-basic-s02' value='2'> absolutely big</label><label><input type='radio' name='ga-basic-s02' value='3'> a bit enormous</label>
+<div class="exexpl" style="display:none">Extreme adjective + <em>absolutely</em>.</div>
+<button class="excheck" onclick="checkEx('ga-basic-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ga-basic-s03">
+<div class="exq">3. The view from the top was &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; amazing. (one word)</div>
+<input type="text" id="ga-basic-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Extreme adjective: <em>absolutely amazing</em>.</div>
+<button class="excheck" onclick="checkGap('ga-basic-s03', ["absolutely", "really", "truly", "totally", "simply", "so", "just", "utterly", "quite", "pretty"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='ga-absolute'>Absolute adjectives: completely different, almost empty <span class='lvl-badge'>B2</span></h3>
+<div class="twrap"><table><tr><th>Absolute adjective</th><th>Natural combinations</th></tr><tr><td><em>impossible</em></td><td><em>absolutely / completely impossible</em></td></tr><tr><td><em>different</em></td><td><em>completely / totally different</em></td></tr><tr><td><em>wrong / right</em></td><td><em>completely wrong, absolutely right</em></td></tr><tr><td><em>empty / full</em></td><td><em>completely empty, almost full</em></td></tr><tr><td><em>unique / perfect</em></td><td><em>absolutely perfect</em> (<em>very unique</em> is common but avoided in careful English)</td></tr><tr><td><em>finished / ready</em></td><td><em>almost / nearly finished</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>Her new job is <strong>completely different</strong> from her old one. <span class='exnote'>(completely)</span></li>
+<li>You&#x27;re <strong>absolutely right</strong>. <span class='exnote'>(absolutely)</span></li>
+<li>The cinema was <strong>almost empty</strong>. <span class='exnote'>(almost)</span></li>
+<li>It&#x27;s <strong>totally impossible</strong> to finish today. <span class='exnote'>(totally)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ This painting is very unique. → ✅ This painting is unique. <span class='why'>(unique: no very in careful English)</span></li>
+<li>❌ The task was very impossible. → ✅ The task was completely impossible. <span class='why'>(impossible: completely / absolutely)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-ga-absolute-s01">
+<div class="exq">4. The two brothers are &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; identical. Nobody can tell them apart.</div>
+<label><input type='radio' name='ga-absolute-s01' value='0'> very</label><label><input type='radio' name='ga-absolute-s01' value='1'> completely</label><label><input type='radio' name='ga-absolute-s01' value='2'> a bit</label><label><input type='radio' name='ga-absolute-s01' value='3'> fairly</label>
+<div class="exexpl" style="display:none">Absolute adjective: <em>completely identical</em>.</div>
+<button class="excheck" onclick="checkEx('ga-absolute-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-ga-absolute-s02">
+<div class="exq">5. The petrol tank is &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; empty. We need to stop soon.</div>
+<label><input type='radio' name='ga-absolute-s02' value='0'> very</label><label><input type='radio' name='ga-absolute-s02' value='1'> extremely</label><label><input type='radio' name='ga-absolute-s02' value='2'> almost</label><label><input type='radio' name='ga-absolute-s02' value='3'> a bit</label>
+<div class="exexpl" style="display:none">Not quite: <em>almost empty</em>.</div>
+<button class="excheck" onclick="checkEx('ga-absolute-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ga-absolute-s03">
+<div class="exq">6. You&#x27;re &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; right. I should apologise. (one word)</div>
+<input type="text" id="ga-absolute-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Absolute adjective: <em>absolutely right</em>.</div>
+<button class="excheck" onclick="checkGap('ga-absolute-s03', ["absolutely", "completely", "quite", "totally", "entirely", "so", "dead"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='ga-collocations'>Highly unlikely, deeply concerned: adverb + adjective pairs <span class='lvl-badge'>C1</span></h3>
+<div class="twrap"><table><tr><th>Adverb</th><th>Natural adjectives</th></tr><tr><td><em>highly</em></td><td><em>unlikely, likely, successful, recommended, qualified, effective</em></td></tr><tr><td><em>deeply</em></td><td><em>concerned, moved, shocked, offended, grateful</em></td></tr><tr><td><em>bitterly</em></td><td><em>disappointed, cold, opposed</em></td></tr><tr><td><em>fully</em></td><td><em>aware, booked, insured, qualified</em></td></tr><tr><td><em>perfectly</em></td><td><em>clear, normal, capable, safe</em></td></tr><tr><td><em>utterly / totally</em></td><td><em>ridiculous, exhausted, convinced</em></td></tr><tr><td><em>seriously / badly</em></td><td><em>ill, injured, damaged</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>It&#x27;s <strong>highly unlikely</strong> that it will snow in June. <span class='exnote'>(highly)</span></li>
+<li>I was <strong>deeply moved</strong> by her speech. <span class='exnote'>(deeply)</span></li>
+<li>The fans were <strong>bitterly disappointed</strong>. <span class='exnote'>(bitterly)</span></li>
+<li>I&#x27;m <strong>fully aware</strong> of the risks. <span class='exnote'>(fully)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ The hotel comes strongly recommended. → ✅ The hotel comes highly recommended. <span class='why'>(highly recommended)</span></li>
+<li>❌ He was heavily injured in the accident. → ✅ He was seriously injured in the accident. <span class='why'>(seriously / badly injured)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-ga-collocations-s01">
+<div class="exq">7. It&#x27;s &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; unlikely that he&#x27;ll get the job. He has no experience.</div>
+<label><input type='radio' name='ga-collocations-s01' value='0'> deeply</label><label><input type='radio' name='ga-collocations-s01' value='1'> bitterly</label><label><input type='radio' name='ga-collocations-s01' value='2'> heavily</label><label><input type='radio' name='ga-collocations-s01' value='3'> highly</label>
+<div class="exexpl" style="display:none">Collocation: <em>highly unlikely</em>.</div>
+<button class="excheck" onclick="checkEx('ga-collocations-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ga-collocations-s02">
+<div class="exq">8. We were &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; disappointed when the concert was cancelled.</div>
+<label><input type='radio' name='ga-collocations-s02' value='0'> bitterly</label><label><input type='radio' name='ga-collocations-s02' value='1'> highly</label><label><input type='radio' name='ga-collocations-s02' value='2'> fully</label><label><input type='radio' name='ga-collocations-s02' value='3'> heavily</label>
+<div class="exexpl" style="display:none">Collocation: <em>bitterly disappointed</em>.</div>
+<button class="excheck" onclick="checkEx('ga-collocations-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ga-collocations-s03">
+<div class="exq">9. I&#x27;m &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; aware of the risks, but I still want to try. (one word)</div>
+<input type="text" id="ga-collocations-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Collocation: <em>fully aware</em>.</div>
+<button class="excheck" onclick="checkGap('ga-collocations-s03', ["fully", "well", "perfectly", "very", "acutely", "quite", "completely", "totally", "keenly", "painfully"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/quite-rather-fairly/">Quite, Rather, Fairly and Pretty</a></li><li><a href="/blog/grammar/too-enough/">Too and Enough</a></li><li><a href="/blog/grammar/so-such-so-that/">So, Such and So That</a></li><li><a href="/blog/grammar/ed-ing-adjectives/">-ed and -ing Adjectives</a></li>
+</ul>
+
+<div class="cta"><p>Learn natural word pairs in context: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

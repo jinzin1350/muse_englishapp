@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For, Since and Ago: Rules and Exercises | Muse English</title>
+<meta name="description" content="Learn for, since and ago from A2 to C1: for a period, since a starting point, how long, it&#x27;s been two years since, ever since, and over the last few years.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/for-since/">
+<meta property="og:type" content="article"><meta property="og:title" content="For, Since and Ago: Rules and Exercises | Muse English">
+<meta property="og:description" content="Learn for, since and ago from A2 to C1: for a period, since a starting point, how long, it&#x27;s been two years since, ever since, and over the last few years."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/for-since/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "For, Since and Ago", "description": "Learn for, since and ago from A2 to C1: for a period, since a starting point, how long, it&#x27;s been two years since, ever since, and over the last few years.", "url": "https://museenglishapp.com/blog/grammar/for-since/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "For, Since and Ago", "item": "https://museenglishapp.com/blog/grammar/for-since/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / For, Since and Ago</div>
+<h1>For, Since and Ago</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p><strong><em>For</strong></em> and <strong><em>since</strong></em> both answer the question <em>How long?</em>, usually with the present perfect: <em>I&#x27;ve lived here <strong>for</strong> five years. I&#x27;ve lived here <strong>since</strong> 2020.</em> <strong><em>Ago</strong></em> tells us <strong>when</strong> something happened: <em>I moved here five years <strong>ago</strong>.</em></p><p>This page goes from the basic difference to useful patterns like <em>It&#x27;s two years since…</em> and <em>over the last few years</em>.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='fs-for-since'>For + a period, since + a starting point <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>for + a period</th><th>since + a starting point</th></tr><tr><td>for ten minutes</td><td>since 10 o&#x27;clock</td></tr><tr><td>for three days</td><td>since Monday</td></tr><tr><td>for two weeks</td><td>since 5 March</td></tr><tr><td>for six months</td><td>since January</td></tr><tr><td>for a long time</td><td>since 2015</td></tr><tr><td>for ages</td><td>since I was a child</td></tr></table></div>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I&#x27;ve known Maryam <strong>for</strong> fifteen years. <span class='exnote'>(a period)</span></li>
+<li>I&#x27;ve known Maryam <strong>since</strong> we were at school. <span class='exnote'>(a starting point)</span></li>
+<li>We&#x27;ve been here <strong>since</strong> 8 o&#x27;clock. <span class='exnote'>(a point on the clock)</span></li>
+<li>They&#x27;ve been married <strong>for</strong> a long time. <span class='exnote'>(a period)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;ve lived here since three years. → ✅ I&#x27;ve lived here for three years. <span class='why'>(three years is a period: for)</span></li>
+<li>❌ She&#x27;s been ill for Monday. → ✅ She&#x27;s been ill since Monday. <span class='why'>(Monday is a starting point: since)</span></li>
+<li>❌ I live here for five years. → ✅ I&#x27;ve lived here for five years. <span class='why'>(Up to now: present perfect.)</span></li>
+</ul></div>
+<h3 id='fs-ago'>Ago, for or since? <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Question</th><th>Answer</th><th>Tense</th></tr><tr><td><em>When did you come here?</em></td><td><em>Two years <strong>ago</strong>.</em></td><td>past simple</td></tr><tr><td><em>How long have you been here?</em></td><td><strong><em>For</strong> two years. / <strong>Since</strong> 2023.</em></td><td>present perfect</td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>The film started twenty minutes <strong>ago</strong>. <span class='exnote'>(when: past simple)</span></li>
+<li>The film has been on <strong>for</strong> twenty minutes. <span class='exnote'>(how long: present perfect)</span></li>
+<li>We moved here <strong>in</strong> 2021. We&#x27;ve lived here <strong>since</strong> 2021. <span class='exnote'>(in + year / since + year)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;ve started this job three months ago. → ✅ I started this job three months ago. <span class='why'>(ago → past simple)</span></li>
+<li>❌ I came here before two years. → ✅ I came here two years ago. <span class='why'>(ago after the time)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-fs-for-since-s01">
+<div class="exq">1. I&#x27;ve had this car &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; 2018.</div>
+<label><input type='radio' name='fs-for-since-s01' value='0'> since</label><label><input type='radio' name='fs-for-since-s01' value='1'> for</label><label><input type='radio' name='fs-for-since-s01' value='2'> from</label><label><input type='radio' name='fs-for-since-s01' value='3'> ago</label>
+<div class="exexpl" style="display:none"><em>2018</em> is a starting point: <em>since</em>.</div>
+<button class="excheck" onclick="checkEx('fs-for-since-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-for-since-s02">
+<div class="exq">2. We&#x27;ve been waiting &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; forty minutes!</div>
+<label><input type='radio' name='fs-for-since-s02' value='0'> since</label><label><input type='radio' name='fs-for-since-s02' value='1'> for</label><label><input type='radio' name='fs-for-since-s02' value='2'> during</label><label><input type='radio' name='fs-for-since-s02' value='3'> ago</label>
+<div class="exexpl" style="display:none"><em>Forty minutes</em> is a period: <em>for</em>.</div>
+<button class="excheck" onclick="checkEx('fs-for-since-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-for-since-s03">
+<div class="exq">3. He&#x27;s worked at the hospital &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; ten years.</div>
+<input type="text" id="fs-for-since-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">A period: <em>for</em>.</div>
+<button class="excheck" onclick="checkGap('fs-for-since-s03', ["for"])">Check</button>
+</div>
+<div class="exblock" id="ex-fs-ago-s01">
+<div class="exq">4. My sister got married six months &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='fs-ago-s01' value='0'> for</label><label><input type='radio' name='fs-ago-s01' value='1'> since</label><label><input type='radio' name='fs-ago-s01' value='2'> ago</label><label><input type='radio' name='fs-ago-s01' value='3'> before</label>
+<div class="exexpl" style="display:none">When it happened: <em>ago</em> + past simple.</div>
+<button class="excheck" onclick="checkEx('fs-ago-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-ago-s02">
+<div class="exq">5. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; him since we were children.</div>
+<label><input type='radio' name='fs-ago-s02' value='0'> knew</label><label><input type='radio' name='fs-ago-s02' value='1'> know</label><label><input type='radio' name='fs-ago-s02' value='2'> &#x27;ve knew</label><label><input type='radio' name='fs-ago-s02' value='3'> &#x27;ve known</label>
+<div class="exexpl" style="display:none"><em>Since</em> + a situation up to now: present perfect.</div>
+<button class="excheck" onclick="checkEx('fs-ago-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-ago-s03">
+<div class="exq">6. Dinner was ready an hour &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;. It&#x27;s cold now!</div>
+<input type="text" id="fs-ago-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">How long before now: <em>ago</em>.</div>
+<button class="excheck" onclick="checkGap('fs-ago-s03', ["ago"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='fs-how-long'>How long have you…? or When did you…? <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<ul><li><strong><em>How long have</strong> you <strong>known</strong> each other?</em></li><li><strong><em>How long have</strong> you <strong>been learning</strong> English?</em></li></ul>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>How long have</strong> you <strong>lived</strong> in Toronto? ~ For six years. <span class='exnote'>(length up to now)</span></li>
+<li><strong>When did</strong> you <strong>move</strong> to Toronto? ~ In 2019. <span class='exnote'>(point in the past)</span></li>
+<li><strong>How long have</strong> they <strong>been</strong> married? <span class='exnote'>(state verb: simple)</span></li>
+<li><strong>How long are</strong> you <strong>staying</strong> in Paris? ~ Until Friday. <span class='exnote'>(about the future)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ How long do you know him? → ✅ How long have you known him? <span class='why'>(Up to now: present perfect.)</span></li>
+<li>❌ How long are you married? → ✅ How long have you been married? <span class='why'>(Up to now: present perfect.)</span></li>
+<li>❌ When have you arrived? → ✅ When did you arrive? <span class='why'>(A point in the past: past simple.)</span></li>
+</ul></div>
+<h3 id='fs-its-been-since'>It&#x27;s two years since… and I haven&#x27;t… for… <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<div class="twrap"><table><tr><th>Pattern</th><th>Example</th></tr><tr><td><strong>It&#x27;s / It has been</strong> + period + <strong>since</strong> + past simple</td><td><strong><em>It&#x27;s</strong> two years <strong>since</strong> I <strong>saw</strong> her.</em></td></tr><tr><td><strong>haven&#x27;t</strong> + participle + <strong>for</strong> + period</td><td><em>I <strong>haven&#x27;t seen</strong> her <strong>for</strong> two years.</em></td></tr><tr><td><strong>The last time</strong> + past simple + <strong>was</strong> + ago / time</td><td><strong><em>The last time</strong> I <strong>saw</strong> her <strong>was</strong> two years <strong>ago</strong>.</em></td></tr><tr><td><strong>I last</strong> + past simple + ago</td><td><em>I <strong>last saw</strong> her two years ago.</em></td></tr></table></div>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>It&#x27;s</strong> five years <strong>since</strong> they <strong>moved</strong> to Canada. <span class='exnote'>(it&#x27;s + period + since)</span></li>
+<li>We <strong>haven&#x27;t been</strong> to the cinema <strong>for</strong> months. <span class='exnote'>(negative + for)</span></li>
+<li><strong>The last time</strong> I <strong>ate</strong> meat <strong>was</strong> in 2020. <span class='exnote'>(the last time)</span></li>
+<li>I <strong>last saw</strong> him at your wedding. <span class='exnote'>(I last…)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ It&#x27;s three years since I visit my aunt. → ✅ It&#x27;s three years since I visited my aunt. <span class='why'>(After it&#x27;s … since: past simple.)</span></li>
+<li>❌ I didn&#x27;t see him for a long time. (and I still haven&#x27;t) → ✅ I haven&#x27;t seen him for a long time. <span class='why'>(Up to now: present perfect.)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-fs-how-long-s01">
+<div class="exq">7. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; have you had your dog?</div>
+<label><input type='radio' name='fs-how-long-s01' value='0'> When</label><label><input type='radio' name='fs-how-long-s01' value='1'> How long time</label><label><input type='radio' name='fs-how-long-s01' value='2'> How long</label><label><input type='radio' name='fs-how-long-s01' value='3'> Since when ago</label>
+<div class="exexpl" style="display:none"><em>How long</em> + present perfect.</div>
+<button class="excheck" onclick="checkEx('fs-how-long-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-how-long-s02">
+<div class="exq">8. How long &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; in this company?</div>
+<label><input type='radio' name='fs-how-long-s02' value='0'> have you worked</label><label><input type='radio' name='fs-how-long-s02' value='1'> do you work</label><label><input type='radio' name='fs-how-long-s02' value='2'> did you work since</label><label><input type='radio' name='fs-how-long-s02' value='3'> are you working since</label>
+<div class="exexpl" style="display:none">Length up to now: present perfect.</div>
+<button class="excheck" onclick="checkEx('fs-how-long-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-how-long-s03">
+<div class="exq">9. How long &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (you / know) your best friend?</div>
+<input type="text" id="fs-how-long-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">State verb, up to now: <em>have you known</em>.</div>
+<button class="excheck" onclick="checkGap('fs-how-long-s03', ["have you known"])">Check</button>
+</div>
+<div class="exblock" id="ex-fs-its-been-since-s01">
+<div class="exq">10. It&#x27;s a long time since we &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='fs-its-been-since-s01' value='0'> will meet</label><label><input type='radio' name='fs-its-been-since-s01' value='1'> last met</label><label><input type='radio' name='fs-its-been-since-s01' value='2'> meet</label><label><input type='radio' name='fs-its-been-since-s01' value='3'> are meeting</label>
+<div class="exexpl" style="display:none"><em>It&#x27;s … since</em> + past simple.</div>
+<button class="excheck" onclick="checkEx('fs-its-been-since-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-its-been-since-s02">
+<div class="exq">11. <em>I haven&#x27;t been to the gym for a month.</em> Which means the same?</div>
+<label><input type='radio' name='fs-its-been-since-s02' value='0'> I went to the gym for a month.</label><label><input type='radio' name='fs-its-been-since-s02' value='1'> I&#x27;ve been to the gym a month ago.</label><label><input type='radio' name='fs-its-been-since-s02' value='2'> I haven&#x27;t gone to the gym since a month.</label><label><input type='radio' name='fs-its-been-since-s02' value='3'> It&#x27;s a month since I went to the gym.</label>
+<div class="exexpl" style="display:none"><em>It&#x27;s a month since</em> + past simple.</div>
+<button class="excheck" onclick="checkEx('fs-its-been-since-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-its-been-since-s03">
+<div class="exq">12. The last time I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (drive) a car was ten years ago.</div>
+<input type="text" id="fs-its-been-since-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>The last time</em> + past simple.</div>
+<button class="excheck" onclick="checkGap('fs-its-been-since-s03', ["drove"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='fs-since-clauses'>Since + a clause, ever since, and since meaning because <span class='lvl-badge'>B2</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>She&#x27;s been much happier <strong>since</strong> she <strong>changed</strong> jobs. <span class='exnote'>(since + past simple)</span></li>
+<li><strong>Ever since</strong> I was a child, I&#x27;ve loved music. <span class='exnote'>(ever since)</span></li>
+<li>He hasn&#x27;t called <strong>since</strong> he <strong>moved</strong> to Dubai. <span class='exnote'>(starting point)</span></li>
+<li><strong>Since</strong> you&#x27;re here, can you help me with this? <span class='exnote'>(since = because)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;ve lived here since I am a child. → ✅ I&#x27;ve lived here since I was a child. <span class='why'>(since + past simple for the starting point)</span></li>
+<li>❌ She has been sad for her cat died. → ✅ She has been sad since her cat died. <span class='why'>(since + clause)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-fs-since-clauses-s01">
+<div class="exq">13. Things have changed a lot since I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; this job.</div>
+<label><input type='radio' name='fs-since-clauses-s01' value='0'> have started</label><label><input type='radio' name='fs-since-clauses-s01' value='1'> start</label><label><input type='radio' name='fs-since-clauses-s01' value='2'> started</label><label><input type='radio' name='fs-since-clauses-s01' value='3'> am starting</label>
+<div class="exexpl" style="display:none">The starting point: past simple.</div>
+<button class="excheck" onclick="checkEx('fs-since-clauses-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-since-clauses-s02">
+<div class="exq">14. We met in 2010 and we&#x27;ve been close friends &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='fs-since-clauses-s02' value='0'> ever since</label><label><input type='radio' name='fs-since-clauses-s02' value='1'> ago</label><label><input type='radio' name='fs-since-clauses-s02' value='2'> for</label><label><input type='radio' name='fs-since-clauses-s02' value='3'> ever for</label>
+<div class="exexpl" style="display:none">At the end of the sentence: <em>ever since</em>.</div>
+<button class="excheck" onclick="checkEx('fs-since-clauses-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-since-clauses-s03">
+<div class="exq">15. How much weight have you lost since you &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (start) running?</div>
+<input type="text" id="fs-since-clauses-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Since</em> + past simple for the starting point.</div>
+<button class="excheck" onclick="checkGap('fs-since-clauses-s03', ["started"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='fs-over-the-last'>Over the last few years, in years, during, throughout <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<ul><li><strong><em>Over the last / past</strong> ten years, the population <strong>has doubled</strong>.</em></li><li><strong><em>In the last</strong> few months, we<strong>&#x27;ve had</strong> three new clients.</em></li><li><strong><em>Recently / Lately / So far</strong> …</em></li></ul>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>Over the past</strong> decade, smartphones <strong>have changed</strong> the way we live. <span class='exnote'>(period up to now)</span></li>
+<li>Our sales <strong>have risen</strong> by 15% <strong>in the last</strong> quarter. <span class='exnote'>(in the last)</span></li>
+<li>I haven&#x27;t heard that song <strong>in years</strong>. <span class='exnote'>(in years after a negative)</span></li>
+<li>He was in hospital <strong>for</strong> a week, and <strong>during</strong> that time he read five books. <span class='exnote'>(for = how long; during = in that period)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I stayed in Rome during three weeks. → ✅ I stayed in Rome for three weeks. <span class='why'>(How long: for)</span></li>
+<li>❌ During two years I lived in Paris. → ✅ For two years I lived in Paris. <span class='why'>(How long: for, not during.)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-fs-over-the-last-s01">
+<div class="exq">16. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the last five years, the company has opened twenty new shops.</div>
+<label><input type='radio' name='fs-over-the-last-s01' value='0'> Since</label><label><input type='radio' name='fs-over-the-last-s01' value='1'> Over</label><label><input type='radio' name='fs-over-the-last-s01' value='2'> Ago</label><label><input type='radio' name='fs-over-the-last-s01' value='3'> Until</label>
+<div class="exexpl" style="display:none"><em>Over the last…</em> + present perfect.</div>
+<button class="excheck" onclick="checkEx('fs-over-the-last-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-over-the-last-s02">
+<div class="exq">17. We lived in Ahvaz &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; six years before moving to Tehran.</div>
+<label><input type='radio' name='fs-over-the-last-s02' value='0'> during</label><label><input type='radio' name='fs-over-the-last-s02' value='1'> since</label><label><input type='radio' name='fs-over-the-last-s02' value='2'> throughout</label><label><input type='radio' name='fs-over-the-last-s02' value='3'> for</label>
+<div class="exexpl" style="display:none">How long: <em>for</em>.</div>
+<button class="excheck" onclick="checkEx('fs-over-the-last-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-fs-over-the-last-s03">
+<div class="exq">18. The baby cried twice &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the night.</div>
+<input type="text" id="fs-over-the-last-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">At some times in the period: <em>during</em>.</div>
+<button class="excheck" onclick="checkGap('fs-over-the-last-s03', ["during", "in"])">Check</button>
+</div>
+</section>
+
+<div class='seealso'><p><strong>See also:</strong></p><ul><li><a href='#pp-unfinished-time'>pp-unfinished-time</a></li></ul></div>
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/present-perfect/">Present Perfect (I have done)</a></li><li><a href="/blog/grammar/present-perfect-continuous/">Present Perfect Continuous (I have been doing)</a></li><li><a href="/blog/grammar/present-perfect-vs-past-simple/">Present Perfect vs Past Simple</a></li><li><a href="/blog/grammar/past-simple/">Past Simple (I worked, I went)</a></li><li><a href="/blog/grammar/prepositions-of-time-in-on-at/">Prepositions of Time: In, On and At</a></li>
+</ul>
+
+<div class="cta"><p>Practise talking about how long with real sentences and audio: a new Muse English lesson is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

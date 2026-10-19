@@ -1,0 +1,264 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Be Going To: Plans and Predictions, Exercises | Muse English</title>
+<meta name="description" content="Learn be going to from A1 to C1: plans and intentions, negatives and questions, predictions from evidence, going to or present continuous, was going to.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/be-going-to/">
+<meta property="og:type" content="article"><meta property="og:title" content="Be Going To: Plans and Predictions, Exercises | Muse English">
+<meta property="og:description" content="Learn be going to from A1 to C1: plans and intentions, negatives and questions, predictions from evidence, going to or present continuous, was going to."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/be-going-to/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Be Going To (I&#x27;m going to…)", "description": "Learn be going to from A1 to C1: plans and intentions, negatives and questions, predictions from evidence, going to or present continuous, was going to.", "url": "https://museenglishapp.com/blog/grammar/be-going-to/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Be Going To (I&#x27;m going to…)", "item": "https://museenglishapp.com/blog/grammar/be-going-to/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Be Going To (I&#x27;m going to…)</div>
+<h1>Be Going To (I&#x27;m going to…)</h1>
+<div class="level-bar"><a href='#a1'>A1</a> · <a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#c1'>C1</a></div>
+<p>We use <strong><em>be going to</strong></em> + base verb for <strong>plans</strong> we have already decided and for <strong>predictions</strong> based on what we can see now: <em>I<strong>&#x27;m going to</strong> learn Spanish. Look out! You<strong>&#x27;re going to</strong> fall!</em></p><p>To compare it with <em>will</em>, see <a href="/blog/grammar/will-vs-going-to/">Will vs Going To</a>. For arrangements with other people, see <a href="/blog/grammar/present-continuous/#pc-future">Present Continuous</a>.</p>
+<section id='a1'><h2>A1 · Beginner</h2>
+<h3 id='bgt-form'>I&#x27;m going to…: plans and intentions <span class='lvl-badge'>A1</span></h3>
+<div class="twrap"><table><tr><th>Subject</th><th>be</th><th>going to</th><th>base verb</th></tr><tr><td>I</td><td><strong>am (&#x27;m)</strong></td><td>going to</td><td><em>I<strong>&#x27;m going to</strong> study tonight.</em></td></tr><tr><td>he / she / it</td><td><strong>is (&#x27;s)</strong></td><td>going to</td><td><em>She<strong>&#x27;s going to</strong> visit Paris.</em></td></tr><tr><td>you / we / they</td><td><strong>are (&#x27;re)</strong></td><td>going to</td><td><em>We<strong>&#x27;re going to</strong> have a party.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I<strong>&#x27;m going to</strong> start a new job next month. <span class='exnote'>(a plan)</span></li>
+<li>My parents <strong>are going to</strong> visit us in July. <span class='exnote'>(they&#x27;ve decided)</span></li>
+<li>He<strong>&#x27;s going to</strong> sell his car. <span class='exnote'>(intention)</span></li>
+<li>We<strong>&#x27;re going to</strong> watch a film tonight. <span class='exnote'>(a plan)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I going to see my friends. → ✅ I&#x27;m going to see my friends. <span class='why'>(be + going to)</span></li>
+<li>❌ She&#x27;s going to visits her mum. → ✅ She&#x27;s going to visit her mum. <span class='why'>(going to + base verb)</span></li>
+<li>❌ They are going see a film. → ✅ They are going to see a film. <span class='why'>(going + to)</span></li>
+</ul></div>
+<h3 id='bgt-negative-questions'>Not going to and Are you going to…? <span class='lvl-badge'>A1</span></h3>
+<div class="twrap"><table><tr><th></th><th>Form</th><th>Example</th></tr><tr><td>Negative</td><td>subject + be + <strong>not</strong> + going to + verb</td><td><em>I<strong>&#x27;m not going to</strong> go out tonight.</em></td></tr><tr><td>Question</td><td>be + subject + going to + verb?</td><td><strong><em>Are</strong> you <strong>going to</strong> call him?</em></td></tr><tr><td>Wh-question</td><td>question word + be + subject + going to + verb?</td><td><em>What <strong>are</strong> you <strong>going to</strong> do?</em></td></tr><tr><td>Short answers</td><td>Yes, … am / is / are. No, … &#x27;m not / isn&#x27;t / aren&#x27;t.</td><td><em>Yes, I <strong>am</strong>. / No, I<strong>&#x27;m not</strong>.</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>I<strong>&#x27;m not going to</strong> buy that dress. It&#x27;s too expensive. <span class='exnote'>(negative)</span></li>
+<li><strong>Are</strong> you <strong>going to</strong> watch the match? ~ Yes, I <strong>am</strong>. <span class='exnote'>(question + short answer)</span></li>
+<li>What <strong>are</strong> you <strong>going to</strong> wear to the wedding? <span class='exnote'>(wh-question)</span></li>
+<li>They <strong>aren&#x27;t going to</strong> sell the house. <span class='exnote'>(negative)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I don&#x27;t going to come. → ✅ I&#x27;m not going to come. <span class='why'>(negative: be + not)</span></li>
+<li>❌ What you are going to do? → ✅ What are you going to do? <span class='why'>(be before the subject)</span></li>
+</ul></div>
+<h3>Practice: A1</h3>
+<div class="exblock" id="ex-bgt-form-s01">
+<div class="exq">1. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; going to visit my grandparents on Sunday.</div>
+<label><input type='radio' name='bgt-form-s01' value='0'> is</label><label><input type='radio' name='bgt-form-s01' value='1'> are</label><label><input type='radio' name='bgt-form-s01' value='2'> be</label><label><input type='radio' name='bgt-form-s01' value='3'> am</label>
+<div class="exexpl" style="display:none"><em>I</em> → <em>am going to</em>.</div>
+<button class="excheck" onclick="checkEx('bgt-form-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-form-s02">
+<div class="exq">2. My sister &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; going to have a baby in May.</div>
+<label><input type='radio' name='bgt-form-s02' value='0'> are</label><label><input type='radio' name='bgt-form-s02' value='1'> am</label><label><input type='radio' name='bgt-form-s02' value='2'> is</label><label><input type='radio' name='bgt-form-s02' value='3'> be</label>
+<div class="exexpl" style="display:none"><em>She</em> → <em>is going to</em>.</div>
+<button class="excheck" onclick="checkEx('bgt-form-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-form-s03">
+<div class="exq">3. We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (go) to the beach this weekend. We&#x27;ve already booked the hotel.</div>
+<input type="text" id="bgt-form-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">A plan: <em>are going to go</em>.</div>
+<button class="excheck" onclick="checkGap('bgt-form-s03', ["'re going to go", "are going to go", "'re going", "are going"])">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-negative-questions-s01">
+<div class="exq">4. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; you going to come to the party?</div>
+<label><input type='radio' name='bgt-negative-questions-s01' value='0'> Are</label><label><input type='radio' name='bgt-negative-questions-s01' value='1'> Do</label><label><input type='radio' name='bgt-negative-questions-s01' value='2'> Is</label><label><input type='radio' name='bgt-negative-questions-s01' value='3'> Will</label>
+<div class="exexpl" style="display:none">Question: <em>Are you going to…?</em></div>
+<button class="excheck" onclick="checkEx('bgt-negative-questions-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-negative-questions-s02">
+<div class="exq">5. Where &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; going to stay in London?</div>
+<label><input type='radio' name='bgt-negative-questions-s02' value='0'> you are</label><label><input type='radio' name='bgt-negative-questions-s02' value='1'> are you</label><label><input type='radio' name='bgt-negative-questions-s02' value='2'> do you</label><label><input type='radio' name='bgt-negative-questions-s02' value='3'> will you</label>
+<div class="exexpl" style="display:none"><em>Where are you going to…?</em></div>
+<button class="excheck" onclick="checkEx('bgt-negative-questions-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-negative-questions-s03">
+<div class="exq">6. She &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (not / go) to the meeting. She&#x27;s ill.</div>
+<input type="text" id="bgt-negative-questions-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Negative: <em>isn&#x27;t going to</em>.</div>
+<button class="excheck" onclick="checkGap('bgt-negative-questions-s03', ["isn't going to go", "is not going to go", "'s not going to go", "isn't going", "is not going", "'s not going"])">Check</button>
+</div>
+</section>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='bgt-evidence'>Predictions from evidence: It&#x27;s going to rain <span class='lvl-badge'>A2</span></h3>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>Look at the sky. It<strong>&#x27;s going to</strong> snow. <span class='exnote'>(evidence: the sky)</span></li>
+<li>Watch out! That glass <strong>is going to</strong> fall! <span class='exnote'>(it&#x27;s about to happen)</span></li>
+<li>We&#x27;re stuck in traffic. We<strong>&#x27;re going to</strong> be late. <span class='exnote'>(evidence: the traffic)</span></li>
+<li>The score is 4–0. They<strong>&#x27;re going to</strong> win. <span class='exnote'>(evidence: the score)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Look at those clouds! It rains. → ✅ Look at those clouds! It&#x27;s going to rain. <span class='why'>(prediction from evidence: going to)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-bgt-evidence-s01">
+<div class="exq">7. Look at that man on the ladder! He &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; fall!</div>
+<label><input type='radio' name='bgt-evidence-s01' value='0'> goes to</label><label><input type='radio' name='bgt-evidence-s01' value='1'> is go to</label><label><input type='radio' name='bgt-evidence-s01' value='2'> &#x27;s going to</label><label><input type='radio' name='bgt-evidence-s01' value='3'> going</label>
+<div class="exexpl" style="display:none">Evidence now: <em>is going to</em>.</div>
+<button class="excheck" onclick="checkEx('bgt-evidence-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-evidence-s02">
+<div class="exq">8. It&#x27;s 8:55 and the meeting starts at 9. We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; be late!</div>
+<label><input type='radio' name='bgt-evidence-s02' value='0'> &#x27;re going to</label><label><input type='radio' name='bgt-evidence-s02' value='1'> go to</label><label><input type='radio' name='bgt-evidence-s02' value='2'> are go</label><label><input type='radio' name='bgt-evidence-s02' value='3'> going to</label>
+<div class="exexpl" style="display:none">Evidence now: <em>are going to</em>.</div>
+<button class="excheck" onclick="checkEx('bgt-evidence-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-evidence-s03">
+<div class="exq">9. Look at those dark clouds. It &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (rain).</div>
+<input type="text" id="bgt-evidence-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Evidence: <em>is going to rain</em>.</div>
+<button class="excheck" onclick="checkGap('bgt-evidence-s03', ["'s going to rain", "is going to rain"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='bgt-vs-present-continuous'>Going to or present continuous for plans? <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>be going to (intention)</th><th>present continuous (arrangement)</th></tr><tr><td><em>I<strong>&#x27;m going to</strong> see a doctor.</em> (I&#x27;ve decided to.)</td><td><em>I<strong>&#x27;m seeing</strong> the doctor at 4.</em> (I have an appointment.)</td></tr><tr><td><em>We<strong>&#x27;re going to</strong> get married.</em> (We&#x27;ve decided.)</td><td><em>We<strong>&#x27;re getting</strong> married on June 5th.</em> (It&#x27;s organised.)</td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I<strong>&#x27;m going to</strong> learn to play the guitar. <span class='exnote'>(intention)</span></li>
+<li>I<strong>&#x27;m meeting</strong> Sara for lunch on Friday. <span class='exnote'>(arrangement)</span></li>
+<li>They<strong>&#x27;re flying</strong> to Rome tomorrow morning. <span class='exnote'>(booked)</span></li>
+<li>Someday I<strong>&#x27;m going to</strong> write a book. <span class='exnote'>(intention, no arrangement)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ One day I&#x27;m writing a novel. → ✅ One day I&#x27;m going to write a novel. <span class='why'>(an intention without arrangements: going to)</span></li>
+</ul></div>
+<h3 id='bgt-was-going-to'>Was going to: plans that changed <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I <strong>was going to</strong> cook, but we ordered a pizza. <span class='exnote'>(plan changed)</span></li>
+<li>They <strong>were going to</strong> get married in June, but they postponed it. <span class='exnote'>(didn&#x27;t happen)</span></li>
+<li>Sorry, I <strong>was going to</strong> tell you, but I didn&#x27;t have time. <span class='exnote'>(excuse)</span></li>
+<li>I had a feeling it <strong>was going to</strong> be a great day. <span class='exnote'>(past prediction)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I was go to call you. → ✅ I was going to call you. <span class='why'>(was going to + base verb)</span></li>
+<li>❌ We are going to visit you last week. → ✅ We were going to visit you last week. <span class='why'>(past: were going to)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-bgt-vs-present-continuous-s01">
+<div class="exq">10. I&#x27;ve booked a table. We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; dinner at Luigi&#x27;s at 8.</div>
+<label><input type='radio' name='bgt-vs-present-continuous-s01' value='0'> have</label><label><input type='radio' name='bgt-vs-present-continuous-s01' value='1'> &#x27;re having</label><label><input type='radio' name='bgt-vs-present-continuous-s01' value='2'> will have had</label><label><input type='radio' name='bgt-vs-present-continuous-s01' value='3'> had</label>
+<div class="exexpl" style="display:none">A fixed arrangement: present continuous.</div>
+<button class="excheck" onclick="checkEx('bgt-vs-present-continuous-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-vs-present-continuous-s02">
+<div class="exq">11. I&#x27;ve decided. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; eating sugar.</div>
+<label><input type='radio' name='bgt-vs-present-continuous-s02' value='0'> stop</label><label><input type='radio' name='bgt-vs-present-continuous-s02' value='1'> stopped</label><label><input type='radio' name='bgt-vs-present-continuous-s02' value='2'> &#x27;m go to stop</label><label><input type='radio' name='bgt-vs-present-continuous-s02' value='3'> &#x27;m going to stop</label>
+<div class="exexpl" style="display:none">An intention: <em>going to</em>.</div>
+<button class="excheck" onclick="checkEx('bgt-vs-present-continuous-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-vs-present-continuous-s03">
+<div class="exq">12. My sister &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (get) married next Saturday. All the guests have been invited.</div>
+<input type="text" id="bgt-vs-present-continuous-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">A fixed arrangement: present continuous (<em>going to</em> is also possible).</div>
+<button class="excheck" onclick="checkGap('bgt-vs-present-continuous-s03', ["'s getting married", "is getting married", "'s going to get married", "is going to get married"])">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-was-going-to-s01">
+<div class="exq">13. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; going to email you, but my laptop broke.</div>
+<label><input type='radio' name='bgt-was-going-to-s01' value='0'> am</label><label><input type='radio' name='bgt-was-going-to-s01' value='1'> was</label><label><input type='radio' name='bgt-was-going-to-s01' value='2'> were</label><label><input type='radio' name='bgt-was-going-to-s01' value='3'> will</label>
+<div class="exexpl" style="display:none">A past plan: <em>was going to</em>.</div>
+<button class="excheck" onclick="checkEx('bgt-was-going-to-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-was-going-to-s02">
+<div class="exq">14. What does <em>We were going to buy that house</em> mean?</div>
+<label><input type='radio' name='bgt-was-going-to-s02' value='0'> We planned to, but we didn&#x27;t.</label><label><input type='radio' name='bgt-was-going-to-s02' value='1'> We bought it.</label><label><input type='radio' name='bgt-was-going-to-s02' value='2'> We will buy it.</label><label><input type='radio' name='bgt-was-going-to-s02' value='3'> We are buying it now.</label>
+<div class="exexpl" style="display:none"><em>Were going to</em> = a plan that didn&#x27;t happen.</div>
+<button class="excheck" onclick="checkEx('bgt-was-going-to-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-was-going-to-s03">
+<div class="exq">15. She &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (going to / go) to the party, but she felt ill.</div>
+<input type="text" id="bgt-was-going-to-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">A plan that didn&#x27;t happen: <em>was going to go</em>.</div>
+<button class="excheck" onclick="checkGap('bgt-was-going-to-s03', ["was going to go"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='bgt-imminent-if'>Going to: imminent events, if + going to, and in formal English <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>Oh no, I think I<strong>&#x27;m going to</strong> cry! <span class='exnote'>(about to happen)</span></li>
+<li><strong>If you&#x27;re going to</strong> be late, please call me. <span class='exnote'>(if you intend to / if that&#x27;s the situation)</span></li>
+<li><strong>If</strong> we<strong>&#x27;re going to</strong> catch the train, we need to leave now. <span class='exnote'>(if that&#x27;s the plan)</span></li>
+<li>The new bridge <strong>will</strong> open next year. <span class='exnote'>(formal style: will)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ If you will be late, call me. → ✅ If you&#x27;re going to be late, call me. <span class='why'>(if + going to / present (not will) for this meaning)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-bgt-imminent-if-s01">
+<div class="exq">16. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to study abroad, you should start learning the language now.</div>
+<label><input type='radio' name='bgt-imminent-if-s01' value='0'> If you&#x27;ll go</label><label><input type='radio' name='bgt-imminent-if-s01' value='1'> If you&#x27;re go</label><label><input type='radio' name='bgt-imminent-if-s01' value='2'> If you&#x27;ll be going</label><label><input type='radio' name='bgt-imminent-if-s01' value='3'> If you&#x27;re going</label>
+<div class="exexpl" style="display:none"><em>If you&#x27;re going to…</em> = if that&#x27;s your plan.</div>
+<button class="excheck" onclick="checkEx('bgt-imminent-if-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-imminent-if-s02">
+<div class="exq">17. In a formal company report, which is most typical?</div>
+<label><input type='radio' name='bgt-imminent-if-s02' value='0'> The new office is gonna open in March.</label><label><input type='radio' name='bgt-imminent-if-s02' value='1'> The new office opens maybe in March.</label><label><input type='radio' name='bgt-imminent-if-s02' value='2'> The new office will open in March.</label><label><input type='radio' name='bgt-imminent-if-s02' value='3'> The new office is going open in March.</label>
+<div class="exexpl" style="display:none">Formal style prefers <em>will</em>.</div>
+<button class="excheck" onclick="checkEx('bgt-imminent-if-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-bgt-imminent-if-s03">
+<div class="exq">18. If you &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (going to / borrow) my car, please fill up the tank.</div>
+<input type="text" id="bgt-imminent-if-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>If</em> + <em>going to</em> = if you intend to.</div>
+<button class="excheck" onclick="checkGap('bgt-imminent-if-s03', ["'re going to borrow", "are going to borrow"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/will-and-shall/">Will and Shall</a></li><li><a href="/blog/grammar/will-vs-going-to/">Will vs Going To</a></li><li><a href="/blog/grammar/present-continuous/">Present Continuous</a></li><li><a href="/blog/grammar/future-in-the-past/">Future in the Past (was going to, would…)</a></li><li><a href="/blog/grammar/future-time-clauses/">Future Time Clauses (When I get home, I&#x27;ll…)</a></li>
+</ul>
+
+<div class="cta"><p>Talk about your plans in natural English: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

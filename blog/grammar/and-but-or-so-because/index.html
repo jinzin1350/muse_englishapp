@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>And, But, Or, So, Because: Linking Words | Muse English</title>
+<meta name="description" content="Learn and, but, or, so and because from A1 to B2: joining ideas, so or because, because of, also, too and as well, and however and therefore.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/and-but-or-so-because/">
+<meta property="og:type" content="article"><meta property="og:title" content="And, But, Or, So, Because: Linking Words | Muse English">
+<meta property="og:description" content="Learn and, but, or, so and because from A1 to B2: joining ideas, so or because, because of, also, too and as well, and however and therefore."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/and-but-or-so-because/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "And, But, Or, So and Because", "description": "Learn and, but, or, so and because from A1 to B2: joining ideas, so or because, because of, also, too and as well, and however and therefore.", "url": "https://museenglishapp.com/blog/grammar/and-but-or-so-because/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "And, But, Or, So and Because", "item": "https://museenglishapp.com/blog/grammar/and-but-or-so-because/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / And, But, Or, So and Because</div>
+<h1>And, But, Or, So and Because</h1>
+<div class="level-bar"><a href='#a1'>A1</a> · <a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#b2'>B2</a></div>
+<p><strong>Linking words</strong> (conjunctions) join ideas: <em>I like tea <strong>and</strong> coffee. It&#x27;s cheap <strong>but</strong> good. Tea <strong>or</strong> coffee? It was late, <strong>so</strong> I went home. I went home <strong>because</strong> it was late.</em></p><p>This page starts with the basics and goes up to formal linkers like <em>however</em> and <em>therefore</em>. For <em>although</em> and <em>despite</em>, see <a href="/blog/grammar/although-despite-in-spite-of/">Although, Despite and In Spite Of</a>.</p>
+<section id='a1'><h2>A1 · Beginner</h2>
+<h3 id='abo-basic'>And, but, or <span class='lvl-badge'>A1</span></h3>
+<div class="twrap"><table><tr><th>Word</th><th>Use</th><th>Example</th></tr><tr><td><em>and</em></td><td>adding</td><td><em>I have a brother <strong>and</strong> a sister.</em></td></tr><tr><td><em>but</em></td><td>contrast</td><td><em>The hotel was nice <strong>but</strong> expensive.</em></td></tr><tr><td><em>or</em></td><td>choice</td><td><em>Do you want tea <strong>or</strong> coffee?</em></td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I play football <strong>and</strong> tennis. <span class='exnote'>(adding)</span></li>
+<li>My flat is small <strong>but</strong> comfortable. <span class='exnote'>(contrast)</span></li>
+<li>Would you like rice <strong>or</strong> potatoes? <span class='exnote'>(choice)</span></li>
+<li>She doesn&#x27;t eat meat <strong>or</strong> fish. <span class='exnote'>(negative: or)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I like coffee but I like tea. → ✅ I like coffee and I like tea. <span class='why'>(adding, not contrast: and)</span></li>
+<li>❌ Do you want water and juice? (one of them) → ✅ Do you want water or juice? <span class='why'>(choice: or)</span></li>
+</ul></div>
+<h3>Practice: A1</h3>
+<div class="exblock" id="ex-abo-basic-s01">
+<div class="exq">1. I have a cat &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; a dog.</div>
+<label><input type='radio' name='abo-basic-s01' value='0'> but</label><label><input type='radio' name='abo-basic-s01' value='1'> or</label><label><input type='radio' name='abo-basic-s01' value='2'> and</label><label><input type='radio' name='abo-basic-s01' value='3'> so</label>
+<div class="exexpl" style="display:none">Adding: <em>and</em>.</div>
+<button class="excheck" onclick="checkEx('abo-basic-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-abo-basic-s02">
+<div class="exq">2. The film was long &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; very good.</div>
+<label><input type='radio' name='abo-basic-s02' value='0'> but</label><label><input type='radio' name='abo-basic-s02' value='1'> or</label><label><input type='radio' name='abo-basic-s02' value='2'> so</label><label><input type='radio' name='abo-basic-s02' value='3'> because</label>
+<div class="exexpl" style="display:none">Contrast: <em>but</em>.</div>
+<button class="excheck" onclick="checkEx('abo-basic-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-abo-basic-s03">
+<div class="exq">3. Do you want to go out &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; stay at home? (one word)</div>
+<input type="text" id="abo-basic-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Choice: <em>or</em>.</div>
+<button class="excheck" onclick="checkGap('abo-basic-s03', ["or"])">Check</button>
+</div>
+</section>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='abo-so-because'>So or because? Result and reason <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Reason → result</th><th>Result ← reason</th></tr><tr><td><em>It was raining, <strong>so</strong> we stayed at home.</em></td><td><em>We stayed at home <strong>because</strong> it was raining.</em></td></tr><tr><td><em>I was tired, <strong>so</strong> I went to bed.</em></td><td><em>I went to bed <strong>because</strong> I was tired.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>I&#x27;m learning English <strong>because</strong> I want a better job. <span class='exnote'>(reason)</span></li>
+<li>The shop was closed, <strong>so</strong> I went home. <span class='exnote'>(result)</span></li>
+<li><strong>Because</strong> he was ill, he didn&#x27;t come to work. <span class='exnote'>(because at the start)</span></li>
+<li>It&#x27;s cold, <strong>so</strong> take a jacket. <span class='exnote'>(result)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Because I was hungry, so I made a sandwich. → ✅ Because I was hungry, I made a sandwich. <span class='why'>(not because + so together)</span></li>
+<li>❌ I didn&#x27;t go out so I was ill. → ✅ I didn&#x27;t go out because I was ill. <span class='why'>(reason: because)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-abo-so-because-s01">
+<div class="exq">4. I was very tired, &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I went to bed early.</div>
+<label><input type='radio' name='abo-so-because-s01' value='0'> because</label><label><input type='radio' name='abo-so-because-s01' value='1'> but</label><label><input type='radio' name='abo-so-because-s01' value='2'> or</label><label><input type='radio' name='abo-so-because-s01' value='3'> so</label>
+<div class="exexpl" style="display:none">Result: <em>so</em>.</div>
+<button class="excheck" onclick="checkEx('abo-so-because-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-abo-so-because-s02">
+<div class="exq">5. She&#x27;s happy &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; she passed her exam.</div>
+<label><input type='radio' name='abo-so-because-s02' value='0'> so</label><label><input type='radio' name='abo-so-because-s02' value='1'> because</label><label><input type='radio' name='abo-so-because-s02' value='2'> but</label><label><input type='radio' name='abo-so-because-s02' value='3'> or</label>
+<div class="exexpl" style="display:none">Reason: <em>because</em>.</div>
+<button class="excheck" onclick="checkEx('abo-so-because-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-abo-so-because-s03">
+<div class="exq">6. The bus didn&#x27;t come, &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I took a taxi. (one word: a result)</div>
+<input type="text" id="abo-so-because-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Result: <em>so</em>.</div>
+<button class="excheck" onclick="checkGap('abo-so-because-s03', ["so"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='abo-because-of'>Because or because of? So, that&#x27;s why <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Pattern</th><th>Example</th></tr><tr><td><em>because</em> + subject + verb</td><td><em>We stayed in <strong>because it was raining</strong>.</em></td></tr><tr><td><em>because of</em> + noun / pronoun</td><td><em>We stayed in <strong>because of the rain</strong>.</em></td></tr><tr><td><em>so</em> + subject + verb</td><td><em>It was raining, <strong>so we stayed in</strong>.</em></td></tr><tr><td><em>That&#x27;s why</em> + subject + verb</td><td><em>It was raining. <strong>That&#x27;s why</strong> we stayed in.</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>The flight was cancelled <strong>because of</strong> the snow. <span class='exnote'>(because of + noun)</span></li>
+<li>The flight was cancelled <strong>because</strong> it was snowing. <span class='exnote'>(because + clause)</span></li>
+<li>I failed the test <strong>because of</strong> you! <span class='exnote'>(because of + pronoun)</span></li>
+<li>I missed the bus. <strong>That&#x27;s why</strong> I&#x27;m late. <span class='exnote'>(that&#x27;s why)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I was late because the traffic. → ✅ I was late because of the traffic. <span class='why'>(+ noun: because of)</span></li>
+<li>❌ I was late because of the traffic was bad. → ✅ I was late because the traffic was bad. <span class='why'>(+ clause: because)</span></li>
+</ul></div>
+<h3 id='abo-also-too'>Also, too, as well, either <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Word</th><th>Position</th><th>Example</th></tr><tr><td><em>also</em></td><td>before the main verb, after <em>be</em> and auxiliaries</td><td><em>She <strong>also</strong> speaks French. She&#x27;s <strong>also</strong> a doctor.</em></td></tr><tr><td><em>too</em></td><td>end of the sentence</td><td><em>She speaks French <strong>too</strong>.</em></td></tr><tr><td><em>as well</em></td><td>end of the sentence</td><td><em>She speaks French <strong>as well</strong>.</em></td></tr><tr><td><em>either</em></td><td>end of a negative sentence</td><td><em>She doesn&#x27;t speak German, and I don&#x27;t <strong>either</strong>.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>I <strong>also</strong> have a car. <span class='exnote'>(also before the verb)</span></li>
+<li>He&#x27;s a singer, and he&#x27;s <strong>also</strong> an actor. <span class='exnote'>(also after be)</span></li>
+<li>I love pizza. ~ Me <strong>too</strong>! <span class='exnote'>(too at the end)</span></li>
+<li>I can&#x27;t swim. ~ I can&#x27;t <strong>either</strong>. <span class='exnote'>(negative: either)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I like also football. → ✅ I also like football. <span class='why'>(also before the main verb)</span></li>
+<li>❌ I don&#x27;t eat meat too. → ✅ I don&#x27;t eat meat either. <span class='why'>(negative: either)</span></li>
+<li>❌ Too I speak Spanish. → ✅ I speak Spanish too. <span class='why'>(too at the end)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-abo-because-of-s01">
+<div class="exq">7. The match was cancelled &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the rain.</div>
+<label><input type='radio' name='abo-because-of-s01' value='0'> because</label><label><input type='radio' name='abo-because-of-s01' value='1'> so</label><label><input type='radio' name='abo-because-of-s01' value='2'> that&#x27;s why</label><label><input type='radio' name='abo-because-of-s01' value='3'> because of</label>
+<div class="exexpl" style="display:none">+ noun: <em>because of</em>.</div>
+<button class="excheck" onclick="checkEx('abo-because-of-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-abo-because-of-s02">
+<div class="exq">8. We couldn&#x27;t sleep &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; our neighbours were having a party.</div>
+<label><input type='radio' name='abo-because-of-s02' value='0'> because of</label><label><input type='radio' name='abo-because-of-s02' value='1'> so</label><label><input type='radio' name='abo-because-of-s02' value='2'> because</label><label><input type='radio' name='abo-because-of-s02' value='3'> that&#x27;s why</label>
+<div class="exexpl" style="display:none">+ clause: <em>because</em>.</div>
+<button class="excheck" onclick="checkEx('abo-because-of-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-abo-because-of-s03">
+<div class="exq">9. I didn&#x27;t hear the phone &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; of the noise. (one word)</div>
+<input type="text" id="abo-because-of-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Because of</em> + noun.</div>
+<button class="excheck" onclick="checkGap('abo-because-of-s03', ["because"])">Check</button>
+</div>
+<div class="exblock" id="ex-abo-also-too-s01">
+<div class="exq">10. I speak English, and I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; speak a little Spanish.</div>
+<label><input type='radio' name='abo-also-too-s01' value='0'> also</label><label><input type='radio' name='abo-also-too-s01' value='1'> too</label><label><input type='radio' name='abo-also-too-s01' value='2'> either</label><label><input type='radio' name='abo-also-too-s01' value='3'> as well</label>
+<div class="exexpl" style="display:none">Before the main verb: <em>also</em>.</div>
+<button class="excheck" onclick="checkEx('abo-also-too-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-abo-also-too-s02">
+<div class="exq">11. Mina doesn&#x27;t like horror films, and I don&#x27;t like them &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='abo-also-too-s02' value='0'> too</label><label><input type='radio' name='abo-also-too-s02' value='1'> either</label><label><input type='radio' name='abo-also-too-s02' value='2'> also</label><label><input type='radio' name='abo-also-too-s02' value='3'> as well</label>
+<div class="exexpl" style="display:none">Negative: <em>either</em>.</div>
+<button class="excheck" onclick="checkEx('abo-also-too-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-abo-also-too-s03">
+<div class="exq">12. I&#x27;m hungry. ~ Me &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;! Let&#x27;s eat. (one word)</div>
+<input type="text" id="abo-also-too-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Positive: <em>Me too</em>.</div>
+<button class="excheck" onclick="checkGap('abo-also-too-s03', ["too"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='abo-however-therefore'>However, therefore, in addition, as a result <span class='lvl-badge'>B2</span></h3>
+<div class="twrap"><table><tr><th>Use</th><th>Informal</th><th>Formal</th></tr><tr><td>contrast</td><td><em>but</em></td><td><strong><em>However</strong>, …</em> / <strong><em>Nevertheless</strong>, …</em></td></tr><tr><td>result</td><td><em>so</em></td><td><strong><em>Therefore</strong>, …</em> / <strong><em>As a result</strong>, …</em> / <strong><em>Consequently</strong>, …</em></td></tr><tr><td>adding</td><td><em>and</em>, <em>also</em></td><td><strong><em>In addition</strong>, …</em> / <strong><em>Moreover</strong>, …</em> / <strong><em>Furthermore</strong>, …</em></td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>The hotel was lovely. <strong>However</strong>, the food was terrible. <span class='exnote'>(contrast)</span></li>
+<li>Sales fell by 20%. <strong>As a result</strong>, 50 jobs were lost. <span class='exnote'>(result)</span></li>
+<li>The job is well paid. <strong>In addition</strong>, it offers flexible hours. <span class='exnote'>(adding)</span></li>
+<li>He didn&#x27;t study. <strong>Therefore</strong>, he failed. <span class='exnote'>(result)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ The weather was bad. But however, we went out. → ✅ The weather was bad. However, we went out. <span class='why'>(one linker, not two)</span></li>
+<li>❌ It&#x27;s cheap. Moreover it&#x27;s bad quality. (contrast) → ✅ It&#x27;s cheap. However, it&#x27;s bad quality. <span class='why'>(contrast: however)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-abo-however-therefore-s01">
+<div class="exq">13. The flat is in a great location. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;, it&#x27;s very small.</div>
+<label><input type='radio' name='abo-however-therefore-s01' value='0'> Therefore</label><label><input type='radio' name='abo-however-therefore-s01' value='1'> In addition</label><label><input type='radio' name='abo-however-therefore-s01' value='2'> As a result</label><label><input type='radio' name='abo-however-therefore-s01' value='3'> However</label>
+<div class="exexpl" style="display:none">Contrast: <em>However</em>.</div>
+<button class="excheck" onclick="checkEx('abo-however-therefore-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-abo-however-therefore-s02">
+<div class="exq">14. The company lost its biggest customer. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;, it had to close two factories.</div>
+<label><input type='radio' name='abo-however-therefore-s02' value='0'> However</label><label><input type='radio' name='abo-however-therefore-s02' value='1'> As a result</label><label><input type='radio' name='abo-however-therefore-s02' value='2'> In addition</label><label><input type='radio' name='abo-however-therefore-s02' value='3'> Although</label>
+<div class="exexpl" style="display:none">Result: <em>As a result</em>.</div>
+<button class="excheck" onclick="checkEx('abo-however-therefore-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-abo-however-therefore-s03">
+<div class="exq">15. The course is free. In &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;, students get a certificate at the end. (one word)</div>
+<input type="text" id="abo-however-therefore-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Adding: <em>In addition</em>.</div>
+<button class="excheck" onclick="checkGap('abo-however-therefore-s03', ["addition"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/although-despite-in-spite-of/">Although, Despite and In Spite Of</a></li><li><a href="/blog/grammar/because-as-since/">Because, As, Since and Due To</a></li><li><a href="/blog/grammar/time-conjunctions/">Time Conjunctions and Sequencing Words</a></li><li><a href="/blog/grammar/so-such-so-that/">So, Such and So That</a></li>
+</ul>
+
+<div class="cta"><p>Join your ideas naturally when you speak: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

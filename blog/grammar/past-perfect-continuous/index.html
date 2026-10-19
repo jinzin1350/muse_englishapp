@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Past Perfect Continuous: Rules &amp; Exercises | Muse English</title>
+<meta name="description" content="Learn the past perfect continuous from B2 to C1: had been doing, how long, evidence of an earlier activity, had done vs had been doing, reporting.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/past-perfect-continuous/">
+<meta property="og:type" content="article"><meta property="og:title" content="Past Perfect Continuous: Rules &amp; Exercises | Muse English">
+<meta property="og:description" content="Learn the past perfect continuous from B2 to C1: had been doing, how long, evidence of an earlier activity, had done vs had been doing, reporting."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/past-perfect-continuous/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Past Perfect Continuous (had been doing)", "description": "Learn the past perfect continuous from B2 to C1: had been doing, how long, evidence of an earlier activity, had done vs had been doing, reporting.", "url": "https://museenglishapp.com/blog/grammar/past-perfect-continuous/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Past Perfect Continuous (had been doing)", "item": "https://museenglishapp.com/blog/grammar/past-perfect-continuous/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Past Perfect Continuous (had been doing)</div>
+<h1>Past Perfect Continuous (had been doing)</h1>
+<div class="level-bar"><a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p>We use the <strong>past perfect continuous</strong> (<em>had been</em> + <em>-ing</em>) for an activity that was going on <strong>before</strong> a moment in the past, often <strong>up to</strong> that moment: <em>When the bus finally came, I <strong>had been waiting</strong> for an hour.</em></p><p>It is the past version of the present perfect continuous: <em>I<strong>&#x27;ve been waiting</strong> for an hour</em> (up to now) → <em>I<strong>&#x27;d been waiting</strong> for an hour</em> (up to then).</p>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='ppc-form-use'>Form and use: up to a moment in the past <span class='lvl-badge'>B2</span></h3>
+<div class="twrap"><table><tr><th>Form</th><th>Example</th></tr><tr><td>Positive: <strong>had been</strong> + -ing</td><td><em>She <strong>had been working</strong> there for ten years.</em></td></tr><tr><td>Short form</td><td><em>She<strong>&#x27;d been working</strong> there for ten years.</em></td></tr><tr><td>Negative</td><td><em>I <strong>hadn&#x27;t been sleeping</strong> well.</em></td></tr><tr><td>Question</td><td><strong><em>How long had</strong> you <strong>been waiting</strong>?</em></td></tr></table></div>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>We <strong>had been driving</strong> for six hours when we finally stopped. <span class='exnote'>(duration up to a past moment)</span></li>
+<li>How long <strong>had</strong> you <strong>been studying</strong> English before you moved to Canada? <span class='exnote'>(question)</span></li>
+<li>I <strong>hadn&#x27;t been feeling</strong> well, so I went to the doctor. <span class='exnote'>(negative)</span></li>
+<li>It <strong>had been raining</strong> all night, and the roads were flooded. <span class='exnote'>(up to the morning)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ When I arrived, she was waiting for two hours. → ✅ When I arrived, she had been waiting for two hours. <span class='why'>(Duration up to a past moment: had been + -ing.)</span></li>
+<li>❌ He had been work there for years. → ✅ He had been working there for years. <span class='why'>(had been + -ing)</span></li>
+<li>❌ How long you had been waiting? → ✅ How long had you been waiting? <span class='why'>(Question: had + subject + been + -ing.)</span></li>
+</ul></div>
+<h3 id='ppc-evidence'>Explaining what we saw: She&#x27;d been crying <span class='lvl-badge'>B2</span></h3>
+<p></p>
+<ul><li><em>The ground was wet. It <strong>had been raining</strong>.</em></li><li><em>She was out of breath because she <strong>had been running</strong>.</em></li><li><em>His hands were black. He<strong>&#x27;d been repairing</strong> the car.</em></li></ul>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>The kitchen smelled wonderful. Mum <strong>had been baking</strong>. <span class='exnote'>(evidence: the smell)</span></li>
+<li>When I came in, the kids looked guilty. They<strong>&#x27;d been fighting</strong>. <span class='exnote'>(evidence: their faces)</span></li>
+<li>My legs hurt because I<strong>&#x27;d been walking</strong> all day. <span class='exnote'>(the cause of the pain)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Her eyes were red because she has been crying. → ✅ Her eyes were red because she had been crying. <span class='why'>(Past situation: had been crying.)</span></li>
+<li>❌ The ground was wet. It had rained been. → ✅ The ground was wet. It had been raining. <span class='why'>(had been + -ing)</span></li>
+</ul></div>
+<h3 id='ppc-vs-past-perfect'>Had been doing or had done? <span class='lvl-badge'>B2</span></h3>
+<div class="twrap"><table><tr><th>had been doing (activity)</th><th>had done (completed / result)</th></tr><tr><td><em>She <strong>had been painting</strong> the room.</em> (maybe not finished)</td><td><em>She <strong>had painted</strong> the room.</em> (finished)</td></tr><tr><td><em>I<strong>&#x27;d been writing</strong> emails all morning.</em> (how long)</td><td><em>I<strong>&#x27;d written</strong> twenty emails.</em> (how many)</td></tr><tr><td><em>They<strong>&#x27;d been arguing</strong>.</em> (the activity)</td><td><em>They<strong>&#x27;d argued</strong> and stopped speaking.</em> (a completed event)</td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I<strong>&#x27;d been cleaning</strong> for two hours, but the house still looked messy. <span class='exnote'>(activity, not finished)</span></li>
+<li>I<strong>&#x27;d cleaned</strong> the whole house, so I relaxed. <span class='exnote'>(completed)</span></li>
+<li>He<strong>&#x27;d been taking</strong> photos all day. <span class='exnote'>(duration)</span></li>
+<li>He<strong>&#x27;d taken</strong> over 500 photos. <span class='exnote'>(how many)</span></li>
+<li>We<strong>&#x27;d known</strong> each other since school. <span class='exnote'>(state verb)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;d been knowing him for ten years. → ✅ I&#x27;d known him for ten years. <span class='why'>(know is a state verb.)</span></li>
+<li>❌ She had been writing three letters before lunch. → ✅ She had written three letters before lunch. <span class='why'>(how many: past perfect simple)</span></li>
+</ul></div>
+<h3 id='ppc-vs-past-continuous'>Was doing or had been doing? <span class='lvl-badge'>B2</span></h3>
+<p></p>
+<div class="twrap"><table><tr><th>Past continuous</th><th>Past perfect continuous</th></tr><tr><td><em>When I arrived, she <strong>was cooking</strong>.</em> (at that moment)</td><td><em>When I arrived, she <strong>had been cooking</strong> for hours.</em> (up to that moment)</td></tr><tr><td><em>It <strong>was raining</strong> when we left.</em> (it was raining then)</td><td><em>It <strong>had been raining</strong>, so the roads were wet.</em> (before, maybe stopped)</td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>When I called, he <strong>was having</strong> dinner. <span class='exnote'>(at that moment)</span></li>
+<li>When I called, he <strong>had been trying</strong> to call me too. <span class='exnote'>(up to that moment)</span></li>
+<li>The baby <strong>was sleeping</strong>, so we spoke quietly. <span class='exnote'>(at that moment)</span></li>
+<li>The baby <strong>had been sleeping</strong> for three hours when she woke up. <span class='exnote'>(duration up to then)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ When I arrived, they were playing for two hours. → ✅ When I arrived, they had been playing for two hours. <span class='why'>(How long up to a past moment: had been + -ing.)</span></li>
+<li>❌ When I phoned, he had been having a shower, so he didn&#x27;t answer. → ✅ When I phoned, he was having a shower, so he didn&#x27;t answer. <span class='why'>(In progress at that moment: was having.)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-ppc-form-use-s01">
+<div class="exq">1. When the plane finally took off, we &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; at the airport for five hours.</div>
+<label><input type='radio' name='ppc-form-use-s01' value='0'> have been waiting</label><label><input type='radio' name='ppc-form-use-s01' value='1'> had been waiting</label><label><input type='radio' name='ppc-form-use-s01' value='2'> were waiting</label><label><input type='radio' name='ppc-form-use-s01' value='3'> are waiting</label>
+<div class="exexpl" style="display:none">Duration up to a past moment: <em>had been waiting</em>.</div>
+<button class="excheck" onclick="checkEx('ppc-form-use-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-form-use-s02">
+<div class="exq">2. How long &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; before she got her first job?</div>
+<label><input type='radio' name='ppc-form-use-s02' value='0'> has she been studying</label><label><input type='radio' name='ppc-form-use-s02' value='1'> she had been studying</label><label><input type='radio' name='ppc-form-use-s02' value='2'> had been she studying</label><label><input type='radio' name='ppc-form-use-s02' value='3'> had she been studying</label>
+<div class="exexpl" style="display:none">Question: <em>had</em> + subject + <em>been</em> + <em>-ing</em>.</div>
+<button class="excheck" onclick="checkEx('ppc-form-use-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-form-use-s03">
+<div class="exq">3. By the time the doctor saw me, I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (sit) in the waiting room for over an hour.</div>
+<input type="text" id="ppc-form-use-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Duration up to a past moment: <em>had been sitting</em> (<em>had sat</em> is also possible).</div>
+<button class="excheck" onclick="checkGap('ppc-form-use-s03', ["had been sitting", "'d been sitting", "had sat", "'d sat"])">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-evidence-s01">
+<div class="exq">4. Tom&#x27;s clothes were covered in paint. He &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the fence.</div>
+<label><input type='radio' name='ppc-evidence-s01' value='0'> has been painting</label><label><input type='radio' name='ppc-evidence-s01' value='1'> is painting</label><label><input type='radio' name='ppc-evidence-s01' value='2'> had been painting</label><label><input type='radio' name='ppc-evidence-s01' value='3'> paints</label>
+<div class="exexpl" style="display:none">Evidence in the past: <em>had been painting</em>.</div>
+<button class="excheck" onclick="checkEx('ppc-evidence-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-evidence-s02">
+<div class="exq">5. <em>When I got home, the TV was warm.</em> What&#x27;s the best explanation?</div>
+<label><input type='radio' name='ppc-evidence-s02' value='0'> Someone had been watching it.</label><label><input type='radio' name='ppc-evidence-s02' value='1'> Someone has been watching it.</label><label><input type='radio' name='ppc-evidence-s02' value='2'> Someone watches it.</label><label><input type='radio' name='ppc-evidence-s02' value='3'> Someone will watch it.</label>
+<div class="exexpl" style="display:none">The past situation is explained by an earlier activity.</div>
+<button class="excheck" onclick="checkEx('ppc-evidence-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-evidence-s03">
+<div class="exq">6. She was hot and tired because she &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (play) tennis.</div>
+<input type="text" id="ppc-evidence-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">The activity that caused it: <em>had been playing</em> is the usual choice; <em>had played</em> is also possible.</div>
+<button class="excheck" onclick="checkGap('ppc-evidence-s03', ["had been playing", "'d been playing", "had played", "'d played"])">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-vs-past-perfect-s01">
+<div class="exq">7. By noon, I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; five kilometres.</div>
+<label><input type='radio' name='ppc-vs-past-perfect-s01' value='0'> had been walking</label><label><input type='radio' name='ppc-vs-past-perfect-s01' value='1'> have been walking</label><label><input type='radio' name='ppc-vs-past-perfect-s01' value='2'> was walking</label><label><input type='radio' name='ppc-vs-past-perfect-s01' value='3'> had walked</label>
+<div class="exexpl" style="display:none"><em>How many / how far</em> = completed amount: <em>had walked</em>.</div>
+<button class="excheck" onclick="checkEx('ppc-vs-past-perfect-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-vs-past-perfect-s02">
+<div class="exq">8. By the time we got married, we &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; each other for six years.</div>
+<label><input type='radio' name='ppc-vs-past-perfect-s02' value='0'> had been knowing</label><label><input type='radio' name='ppc-vs-past-perfect-s02' value='1'> had known</label><label><input type='radio' name='ppc-vs-past-perfect-s02' value='2'> have known</label><label><input type='radio' name='ppc-vs-past-perfect-s02' value='3'> were knowing</label>
+<div class="exexpl" style="display:none"><em>Know</em> is a state verb: <em>had known</em>.</div>
+<button class="excheck" onclick="checkEx('ppc-vs-past-perfect-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-vs-past-perfect-s03">
+<div class="exq">9. My hands were dirty because I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (work) in the garden.</div>
+<input type="text" id="ppc-vs-past-perfect-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">The activity explaining the situation: <em>had been working</em> is usual.</div>
+<button class="excheck" onclick="checkGap('ppc-vs-past-perfect-s03', ["had been working", "'d been working", "had worked", "'d worked"])">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-vs-past-continuous-s01">
+<div class="exq">10. When I looked out, it &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;. I could see the rain falling.</div>
+<label><input type='radio' name='ppc-vs-past-continuous-s01' value='0'> had been raining</label><label><input type='radio' name='ppc-vs-past-continuous-s01' value='1'> has been raining</label><label><input type='radio' name='ppc-vs-past-continuous-s01' value='2'> was raining</label><label><input type='radio' name='ppc-vs-past-continuous-s01' value='3'> rains</label>
+<div class="exexpl" style="display:none">In progress at that moment (I could see it): <em>was raining</em>.</div>
+<button class="excheck" onclick="checkEx('ppc-vs-past-continuous-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-vs-past-continuous-s02">
+<div class="exq">11. When I looked out, the streets were wet, but the sun was shining. It &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='ppc-vs-past-continuous-s02' value='0'> had been raining</label><label><input type='radio' name='ppc-vs-past-continuous-s02' value='1'> was raining</label><label><input type='radio' name='ppc-vs-past-continuous-s02' value='2'> rains</label><label><input type='radio' name='ppc-vs-past-continuous-s02' value='3'> has rained</label>
+<div class="exexpl" style="display:none">The rain had stopped before that moment: <em>had been raining</em>.</div>
+<button class="excheck" onclick="checkEx('ppc-vs-past-continuous-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-vs-past-continuous-s03">
+<div class="exq">12. When we arrived at the party, people &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (dance) for hours and were exhausted.</div>
+<input type="text" id="ppc-vs-past-continuous-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Duration up to the moment we arrived: <em>had been dancing</em>.</div>
+<button class="excheck" onclick="checkGap('ppc-vs-past-continuous-s03', ["had been dancing", "'d been dancing", "had danced", "'d danced"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='ppc-repeated'>Repeated activities and plans up to a past time <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<ul><li><em>She<strong>&#x27;d been phoning</strong> him all week, but he never answered.</em></li><li><em>We<strong>&#x27;d been seeing</strong> a lot of each other before he moved abroad.</em></li></ul>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>I<strong>&#x27;d been going</strong> to the gym every day before I hurt my knee. <span class='exnote'>(repeated up to a past time)</span></li>
+<li>He<strong>&#x27;d been sending</strong> her flowers for months. <span class='exnote'>(repeated)</span></li>
+<li>We<strong>&#x27;d been hoping</strong> to see you at the wedding. <span class='exnote'>(intention before a past moment)</span></li>
+<li>The phone <strong>had rung</strong> once and then stopped. <span class='exnote'>(a single action: simple)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ The guest had been arriving at 8. → ✅ The guest had arrived at 8. <span class='why'>(A single short action: had arrived.)</span></li>
+<li>❌ I&#x27;d meaning to tell you. → ✅ I&#x27;d been meaning to tell you. <span class='why'>(had been + -ing)</span></li>
+</ul></div>
+<h3 id='ppc-reporting'>In reported speech <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<div class="twrap"><table><tr><th>Direct speech</th><th>Reported speech</th></tr><tr><td><em>I<strong>&#x27;ve been working</strong> all day.</em></td><td><em>She said she <strong>had been working</strong> all day.</em></td></tr><tr><td><em>We <strong>were watching</strong> TV when it happened.</em></td><td><em>They said they <strong>had been watching</strong> TV when it happened.</em></td></tr><tr><td><em>How long <strong>have</strong> you <strong>been learning</strong> English?</em></td><td><em>He asked me how long I <strong>had been learning</strong> English.</em></td></tr></table></div>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>He told me he <strong>had been trying</strong> to call me for hours. <span class='exnote'>(from: I&#x27;ve been trying…)</span></li>
+<li>She admitted she <strong>hadn&#x27;t been paying</strong> attention. <span class='exnote'>(from: I haven&#x27;t been paying…)</span></li>
+<li>They asked us how long we <strong>had been living</strong> there. <span class='exnote'>(reported question)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ She said she has been waiting since 6. (the waiting is over) → ✅ She said she had been waiting since 6. <span class='why'>(The situation is finished: move back.)</span></li>
+<li>❌ He asked me how long had I been studying. → ✅ He asked me how long I had been studying. <span class='why'>(Reported questions: normal word order.)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-ppc-repeated-s01">
+<div class="exq">13. She was tired of the noise. Her neighbour &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the door all evening.</div>
+<label><input type='radio' name='ppc-repeated-s01' value='0'> had slammed once</label><label><input type='radio' name='ppc-repeated-s01' value='1'> had been slamming</label><label><input type='radio' name='ppc-repeated-s01' value='2'> slams</label><label><input type='radio' name='ppc-repeated-s01' value='3'> is slamming</label>
+<div class="exexpl" style="display:none">Repeated action over a period: <em>had been slamming</em>.</div>
+<button class="excheck" onclick="checkEx('ppc-repeated-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-repeated-s02">
+<div class="exq">14. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to call you for weeks, but I never found the time.</div>
+<label><input type='radio' name='ppc-repeated-s02' value='0'> had meant once</label><label><input type='radio' name='ppc-repeated-s02' value='1'> have been meant</label><label><input type='radio' name='ppc-repeated-s02' value='2'> had been meaning</label><label><input type='radio' name='ppc-repeated-s02' value='3'> was meant</label>
+<div class="exexpl" style="display:none">An intention up to a past time: <em>had been meaning</em>.</div>
+<button class="excheck" onclick="checkEx('ppc-repeated-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-repeated-s03">
+<div class="exq">15. By the time the police caught him, the thief &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (steal) bikes from the station for months.</div>
+<input type="text" id="ppc-repeated-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">A repeated activity over months: <em>had been stealing</em>.</div>
+<button class="excheck" onclick="checkGap('ppc-repeated-s03', ["had been stealing", "'d been stealing", "had stolen", "'d stolen"])">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-reporting-s01">
+<div class="exq">16. <em>I&#x27;ve been looking for a job for months.</em> → He said he &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; for a job for months.</div>
+<label><input type='radio' name='ppc-reporting-s01' value='0'> has been look</label><label><input type='radio' name='ppc-reporting-s01' value='1'> had been look</label><label><input type='radio' name='ppc-reporting-s01' value='2'> was been looking</label><label><input type='radio' name='ppc-reporting-s01' value='3'> had been looking</label>
+<div class="exexpl" style="display:none">Present perfect continuous → past perfect continuous.</div>
+<button class="excheck" onclick="checkEx('ppc-reporting-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-reporting-s02">
+<div class="exq">17. She asked me &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='ppc-reporting-s02' value='0'> how long I had been waiting</label><label><input type='radio' name='ppc-reporting-s02' value='1'> how long had I been waiting</label><label><input type='radio' name='ppc-reporting-s02' value='2'> how long I had been waited</label><label><input type='radio' name='ppc-reporting-s02' value='3'> how long was I waiting</label>
+<div class="exexpl" style="display:none">Reported question: normal word order (<em>I had been</em>).</div>
+<button class="excheck" onclick="checkEx('ppc-reporting-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ppc-reporting-s03">
+<div class="exq">18. <em>We&#x27;ve been practising every day.</em> → They told us they &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (practise) every day.</div>
+<input type="text" id="ppc-reporting-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Present perfect continuous → past perfect continuous.</div>
+<button class="excheck" onclick="checkGap('ppc-reporting-s03', ["had been practising", "'d been practising", "had been practicing", "'d been practicing"])">Check</button>
+</div>
+</section>
+
+<div class='seealso'><p><strong>See also:</strong></p><ul><li><a href='#ppf-first-time'>ppf-first-time</a></li></ul></div>
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/past-perfect/">Past Perfect (had done)</a></li><li><a href="/blog/grammar/present-perfect-continuous/">Present Perfect Continuous (I have been doing)</a></li><li><a href="/blog/grammar/past-continuous/">Past Continuous (I was doing)</a></li><li><a href="/blog/grammar/narrative-tenses/">Narrative Tenses: Telling Stories in the Past</a></li><li><a href="/blog/grammar/reported-speech/">Reported Speech (She said that…)</a></li>
+</ul>
+
+<div class="cta"><p>Practise the past perfect continuous in real stories: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Requests, Offers and Permission in English | Muse English</title>
+<meta name="description" content="Learn polite English from A1 to C1: can you and could you, may I, shall I, would you mind, be allowed to, and I was wondering if you could, with exercises.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/requests-offers-permission/">
+<meta property="og:type" content="article"><meta property="og:title" content="Requests, Offers and Permission in English | Muse English">
+<meta property="og:description" content="Learn polite English from A1 to C1: can you and could you, may I, shall I, would you mind, be allowed to, and I was wondering if you could, with exercises."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/requests-offers-permission/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Requests, Offers and Permission (Can you…? May I…? Shall I…?)", "description": "Learn polite English from A1 to C1: can you and could you, may I, shall I, would you mind, be allowed to, and I was wondering if you could, with exercises.", "url": "https://museenglishapp.com/blog/grammar/requests-offers-permission/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Requests, Offers and Permission (Can you…? May I…? Shall I…?)", "item": "https://museenglishapp.com/blog/grammar/requests-offers-permission/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Requests, Offers and Permission (Can you…? May I…? Shall I…?)</div>
+<h1>Requests, Offers and Permission (Can you…? May I…? Shall I…?)</h1>
+<div class="level-bar"><a href='#a1'>A1</a> · <a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#c1'>C1</a></div>
+<p>Modal verbs help us ask for things, offer help and ask for permission <strong>politely</strong>: <strong><em>Could</strong> you help me? <strong>May</strong> I come in? <strong>Shall</strong> I carry that for you?</em></p><p>In English, how polite you sound depends a lot on the words you choose. This page goes from simple requests to very polite and formal ones.</p>
+<section id='a1'><h2>A1 · Beginner</h2>
+<h3 id='rop-requests'>Can you…? Could you…? Asking someone to do something <span class='lvl-badge'>A1</span></h3>
+<div class="twrap"><table><tr><th>Request</th><th>How polite?</th></tr><tr><td><strong><em>Can</strong> you help me?</em></td><td>friendly, informal</td></tr><tr><td><strong><em>Could</strong> you help me, please?</em></td><td>more polite</td></tr><tr><td><strong><em>Will</strong> you help me?</em></td><td>direct (careful: can sound impatient)</td></tr><tr><td><strong><em>Would</strong> you help me, please?</em></td><td>polite</td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>Can</strong> you <strong>pass</strong> the salt? <span class='exnote'>(friendly)</span></li>
+<li><strong>Could</strong> you <strong>open</strong> the window, please? <span class='exnote'>(polite)</span></li>
+<li><strong>Could I have</strong> the bill, please? <span class='exnote'>(asking for something)</span></li>
+<li><strong>Would</strong> you <strong>help</strong> me with this box? <span class='exnote'>(polite)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Could you to help me? → ✅ Could you help me? <span class='why'>(could + base verb)</span></li>
+<li>❌ Can you helping me? → ✅ Can you help me? <span class='why'>(can + base verb)</span></li>
+</ul></div>
+<h3>Practice: A1</h3>
+<div class="exblock" id="ex-rop-requests-s01">
+<div class="exq">1. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; you tell me the time, please?</div>
+<label><input type='radio' name='rop-requests-s01' value='0'> Do</label><label><input type='radio' name='rop-requests-s01' value='1'> Are</label><label><input type='radio' name='rop-requests-s01' value='2'> Could</label><label><input type='radio' name='rop-requests-s01' value='3'> Shall</label>
+<div class="exexpl" style="display:none">A polite request: <em>Could you…?</em></div>
+<button class="excheck" onclick="checkEx('rop-requests-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-requests-s02">
+<div class="exq">2. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I have a coffee, please?</div>
+<label><input type='radio' name='rop-requests-s02' value='0'> Do</label><label><input type='radio' name='rop-requests-s02' value='1'> Am</label><label><input type='radio' name='rop-requests-s02' value='2'> Will</label><label><input type='radio' name='rop-requests-s02' value='3'> Can</label>
+<div class="exexpl" style="display:none">Asking for something: <em>Can I have…?</em></div>
+<button class="excheck" onclick="checkEx('rop-requests-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-requests-s03">
+<div class="exq">3. Could you &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (repeat) that, please?</div>
+<input type="text" id="rop-requests-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Could you</em> + base verb.</div>
+<button class="excheck" onclick="checkGap('rop-requests-s03', ["repeat"])">Check</button>
+</div>
+</section>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='rop-permission'>Can I…? Could I…? May I…? Asking for permission <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Asking</th><th>Answering yes</th><th>Answering no</th></tr><tr><td><strong><em>Can I</strong> use your phone?</em></td><td><em>Yes, of course. / Sure. / Go ahead.</em></td><td><em>Sorry, you can&#x27;t.</em></td></tr><tr><td><strong><em>Could I</strong> leave early today?</em></td><td><em>Yes, that&#x27;s fine.</em></td><td><em>I&#x27;m afraid not.</em></td></tr><tr><td><strong><em>May I</strong> sit here?</em></td><td><em>Yes, of course. / Please do.</em></td><td><em>I&#x27;m sorry, that seat is taken.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>Can I</strong> borrow your charger? <span class='exnote'>(informal)</span></li>
+<li><strong>Could I</strong> ask you a question? <span class='exnote'>(polite)</span></li>
+<li><strong>May I</strong> see your passport, please? <span class='exnote'>(formal)</span></li>
+<li>You <strong>can</strong> use my computer if you like. <span class='exnote'>(giving permission)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ May I to come in? → ✅ May I come in? <span class='why'>(may + base verb)</span></li>
+<li>❌ Could I open the window? ~ Yes, you could. → ✅ Could I open the window? ~ Yes, of course. / Yes, you can. <span class='why'>(Give permission with can, not could.)</span></li>
+</ul></div>
+<h3 id='rop-offers-suggestions'>Offers and suggestions: Shall I…? Shall we…? Would you like…? <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Function</th><th>Examples</th></tr><tr><td>offering to do something</td><td><strong><em>Shall I</strong> open the window? <strong>Can I</strong> help you? <strong>I&#x27;ll</strong> carry that.</em></td></tr><tr><td>offering something</td><td><strong><em>Would you like</strong> a drink?</em></td></tr><tr><td>making a suggestion</td><td><strong><em>Shall we</strong> go out tonight? <strong>Let&#x27;s</strong> take a taxi. <strong>Why don&#x27;t we</strong> eat here?</em></td></tr><tr><td>inviting</td><td><strong><em>Would you like to</strong> come to dinner?</em></td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>Shall I</strong> help you with that? <span class='exnote'>(offer)</span></li>
+<li><strong>Shall we</strong> meet at six? <span class='exnote'>(suggestion)</span></li>
+<li><strong>Would you like</strong> some tea? <span class='exnote'>(offering something)</span></li>
+<li><strong>Let&#x27;s</strong> order a pizza. <span class='exnote'>(suggestion)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Shall I to help you? → ✅ Shall I help you? <span class='why'>(shall + base verb)</span></li>
+<li>❌ Let&#x27;s to go to the beach. → ✅ Let&#x27;s go to the beach. <span class='why'>(let&#x27;s + base verb)</span></li>
+<li>❌ Do you like a coffee? (offering) → ✅ Would you like a coffee? <span class='why'>(offering: would you like)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-rop-permission-s01">
+<div class="exq">4. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I use your bathroom? (formal)</div>
+<label><input type='radio' name='rop-permission-s01' value='0'> Will</label><label><input type='radio' name='rop-permission-s01' value='1'> May</label><label><input type='radio' name='rop-permission-s01' value='2'> Shall</label><label><input type='radio' name='rop-permission-s01' value='3'> Do</label>
+<div class="exexpl" style="display:none">Formal permission: <em>May I…?</em></div>
+<button class="excheck" onclick="checkEx('rop-permission-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-permission-s02">
+<div class="exq">5. Could I sit here? ~ Yes, &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='rop-permission-s02' value='0'> of course</label><label><input type='radio' name='rop-permission-s02' value='1'> you could</label><label><input type='radio' name='rop-permission-s02' value='2'> I could</label><label><input type='radio' name='rop-permission-s02' value='3'> you couldn&#x27;t</label>
+<div class="exexpl" style="display:none">Give permission: <em>Yes, of course.</em> (not <em>you could</em>)</div>
+<button class="excheck" onclick="checkEx('rop-permission-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-permission-s03">
+<div class="exq">6. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (can / I) borrow your bike this afternoon?</div>
+<input type="text" id="rop-permission-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Informal permission: <em>Can I…?</em></div>
+<button class="excheck" onclick="checkGap('rop-permission-s03', ["Can I"])">Check</button>
+</div>
+<div class="exblock" id="ex-rop-offers-suggestions-s01">
+<div class="exq">7. It&#x27;s hot in here. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; I open the window?</div>
+<label><input type='radio' name='rop-offers-suggestions-s01' value='0'> Will</label><label><input type='radio' name='rop-offers-suggestions-s01' value='1'> Do</label><label><input type='radio' name='rop-offers-suggestions-s01' value='2'> Shall</label><label><input type='radio' name='rop-offers-suggestions-s01' value='3'> Am</label>
+<div class="exexpl" style="display:none">An offer: <em>Shall I…?</em></div>
+<button class="excheck" onclick="checkEx('rop-offers-suggestions-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-offers-suggestions-s02">
+<div class="exq">8. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; a cup of tea? ~ Yes, please.</div>
+<label><input type='radio' name='rop-offers-suggestions-s02' value='0'> Do you like</label><label><input type='radio' name='rop-offers-suggestions-s02' value='1'> Would you like</label><label><input type='radio' name='rop-offers-suggestions-s02' value='2'> Are you like</label><label><input type='radio' name='rop-offers-suggestions-s02' value='3'> Will you like</label>
+<div class="exexpl" style="display:none">Offering something: <em>Would you like…?</em></div>
+<button class="excheck" onclick="checkEx('rop-offers-suggestions-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-offers-suggestions-s03">
+<div class="exq">9. Let&#x27;s &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (go) to the cinema tonight.</div>
+<input type="text" id="rop-offers-suggestions-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Let&#x27;s</em> + base verb.</div>
+<button class="excheck" onclick="checkGap('rop-offers-suggestions-s03', ["go"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='rop-would-you-mind'>Would you mind…? Do you mind if…? <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Pattern</th><th>Meaning</th><th>Example</th></tr><tr><td><em>Would you mind</em> + <em>-ing</em>?</td><td>please do this</td><td><strong><em>Would you mind closing</strong> the door?</em></td></tr><tr><td><em>Do you mind if I</em> + present?</td><td>can I…?</td><td><strong><em>Do you mind if I sit</strong> here?</em></td></tr><tr><td><em>Would you mind if I</em> + past?</td><td>can I…? (more polite)</td><td><strong><em>Would you mind if I opened</strong> the window?</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li><strong>Would you mind waiting</strong> a moment? <span class='exnote'>(please wait)</span></li>
+<li><strong>Do you mind if I open</strong> the window? ~ No, go ahead. <span class='exnote'>(permission + yes)</span></li>
+<li><strong>Would you mind if I left</strong> a bit early? <span class='exnote'>(more polite)</span></li>
+<li><strong>Would you mind not smoking</strong> here? <span class='exnote'>(please don&#x27;t)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Would you mind to close the door? → ✅ Would you mind closing the door? <span class='why'>(mind + -ing)</span></li>
+<li>❌ Do you mind if I sit here? ~ Yes, sure! (meaning you can) → ✅ Do you mind if I sit here? ~ No, not at all. <span class='why'>(No = I don&#x27;t mind = you can.)</span></li>
+</ul></div>
+<h3 id='rop-allowed'>Be allowed to: permission and rules <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>Are we <strong>allowed to</strong> park here? <span class='exnote'>(question)</span></li>
+<li>Children <strong>aren&#x27;t allowed to</strong> swim without an adult. <span class='exnote'>(rule)</span></li>
+<li>My parents <strong>allowed</strong> me <strong>to</strong> travel alone when I was 16. <span class='exnote'>(allow someone to)</span></li>
+<li>Will I <strong>be allowed to</strong> bring my dog? <span class='exnote'>(future)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ We are not allow to eat here. → ✅ We are not allowed to eat here. <span class='why'>(allowed, with -ed)</span></li>
+<li>❌ I&#x27;m allowed bring a guest. → ✅ I&#x27;m allowed to bring a guest. <span class='why'>(allowed to + verb)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-rop-would-you-mind-s01">
+<div class="exq">10. Would you mind &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the window? It&#x27;s cold.</div>
+<label><input type='radio' name='rop-would-you-mind-s01' value='0'> to close</label><label><input type='radio' name='rop-would-you-mind-s01' value='1'> close</label><label><input type='radio' name='rop-would-you-mind-s01' value='2'> closed</label><label><input type='radio' name='rop-would-you-mind-s01' value='3'> closing</label>
+<div class="exexpl" style="display:none"><em>Would you mind</em> + <em>-ing</em>.</div>
+<button class="excheck" onclick="checkEx('rop-would-you-mind-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-would-you-mind-s02">
+<div class="exq">11. <em>Do you mind if I use your phone?</em> Which answer means <em>yes, you can</em>?</div>
+<label><input type='radio' name='rop-would-you-mind-s02' value='0'> No, not at all.</label><label><input type='radio' name='rop-would-you-mind-s02' value='1'> Yes, I do.</label><label><input type='radio' name='rop-would-you-mind-s02' value='2'> Yes, I mind.</label><label><input type='radio' name='rop-would-you-mind-s02' value='3'> No, you can&#x27;t.</label>
+<div class="exexpl" style="display:none"><em>No</em> = I don&#x27;t mind.</div>
+<button class="excheck" onclick="checkEx('rop-would-you-mind-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-would-you-mind-s03">
+<div class="exq">12. Would you mind if I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (bring) a friend to the party?</div>
+<input type="text" id="rop-would-you-mind-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Would you mind if I</em> + past simple.</div>
+<button class="excheck" onclick="checkGap('rop-would-you-mind-s03', ["brought", "bring"])">Check</button>
+</div>
+<div class="exblock" id="ex-rop-allowed-s01">
+<div class="exq">13. You &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; allowed to use your phone in the exam.</div>
+<label><input type='radio' name='rop-allowed-s01' value='0'> don&#x27;t</label><label><input type='radio' name='rop-allowed-s01' value='1'> haven&#x27;t</label><label><input type='radio' name='rop-allowed-s01' value='2'> mustn&#x27;t</label><label><input type='radio' name='rop-allowed-s01' value='3'> aren&#x27;t</label>
+<div class="exexpl" style="display:none"><em>Be not allowed to</em>.</div>
+<button class="excheck" onclick="checkEx('rop-allowed-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-allowed-s02">
+<div class="exq">14. Yesterday the teacher let us go early. We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; leave at 2 pm.</div>
+<label><input type='radio' name='rop-allowed-s02' value='0'> were allowed to</label><label><input type='radio' name='rop-allowed-s02' value='1'> could to</label><label><input type='radio' name='rop-allowed-s02' value='2'> allowed to</label><label><input type='radio' name='rop-allowed-s02' value='3'> are allowed to</label>
+<div class="exexpl" style="display:none">One particular occasion: <em>were allowed to</em>.</div>
+<button class="excheck" onclick="checkEx('rop-allowed-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-allowed-s03">
+<div class="exq">15. Are dogs &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (allow) in this park?</div>
+<input type="text" id="rop-allowed-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Be allowed</em> = have permission.</div>
+<button class="excheck" onclick="checkGap('rop-allowed-s03', ["allowed"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='rop-indirect'>Very polite requests: I was wondering if…, Would it be possible…? <span class='lvl-badge'>C1</span></h3>
+<div class="twrap"><table><tr><th>Phrase</th><th>Example</th></tr><tr><td><em>Do you think you could…?</em></td><td><strong><em>Do you think you could</strong> help me move on Saturday?</em></td></tr><tr><td><em>I was wondering if you could…</em></td><td><strong><em>I was wondering if you could</strong> check my CV.</em></td></tr><tr><td><em>Would it be possible (for me) to…?</em></td><td><strong><em>Would it be possible to</strong> change my appointment?</em></td></tr><tr><td><em>I&#x27;d be grateful / I&#x27;d appreciate it if you could…</em></td><td><strong><em>I&#x27;d appreciate it if you could</strong> reply by Friday.</em></td></tr><tr><td><em>Would you be so kind as to…?</em> (very formal)</td><td><strong><em>Would you be so kind as to</strong> close the door?</em></td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li><strong>I was wondering if</strong> you <strong>could</strong> give me a lift. <span class='exnote'>(soft request)</span></li>
+<li><strong>Would it be possible to</strong> pay by card? <span class='exnote'>(formal)</span></li>
+<li><strong>I&#x27;d be grateful if</strong> you <strong>could</strong> send me the details. <span class='exnote'>(email)</span></li>
+<li><strong>Do you think you could</strong> lower the music a little? <span class='exnote'>(polite)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I was wondering if could you help me. → ✅ I was wondering if you could help me. <span class='why'>(statement word order after if)</span></li>
+<li>❌ I&#x27;d appreciate if you could reply. → ✅ I&#x27;d appreciate it if you could reply. <span class='why'>(appreciate it if)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-rop-indirect-s01">
+<div class="exq">16. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; if you could look at my report before Monday.</div>
+<label><input type='radio' name='rop-indirect-s01' value='0'> I wonder you</label><label><input type='radio' name='rop-indirect-s01' value='1'> Do you wonder</label><label><input type='radio' name='rop-indirect-s01' value='2'> I was wondering</label><label><input type='radio' name='rop-indirect-s01' value='3'> I&#x27;m wonder</label>
+<div class="exexpl" style="display:none">A polite indirect request: <em>I was wondering if you could…</em></div>
+<button class="excheck" onclick="checkEx('rop-indirect-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-indirect-s02">
+<div class="exq">17. Which is the most polite request in a formal email?</div>
+<label><input type='radio' name='rop-indirect-s02' value='0'> Send the invoice.</label><label><input type='radio' name='rop-indirect-s02' value='1'> I would appreciate it if you could send the invoice.</label><label><input type='radio' name='rop-indirect-s02' value='2'> Can you send the invoice?</label><label><input type='radio' name='rop-indirect-s02' value='3'> You&#x27;ll send the invoice, right?</label>
+<div class="exexpl" style="display:none"><em>I would appreciate it if…</em> is formal and polite.</div>
+<button class="excheck" onclick="checkEx('rop-indirect-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-rop-indirect-s03">
+<div class="exq">18. Would it be &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to change my seat? (one word: the adjective from <em>possibility</em>)</div>
+<input type="text" id="rop-indirect-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Would it be possible to…?</em></div>
+<button class="excheck" onclick="checkGap('rop-indirect-s03', ["possible"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/can-could-be-able-to/">Can, Could and Be Able To (Ability and Possibility)</a></li><li><a href="/blog/grammar/would-like/">Would Like, Would Rather and Prefer</a></li><li><a href="/blog/grammar/may-might/">May and Might (Possibility)</a></li><li><a href="/blog/grammar/should-ought-to/">Should, Ought To and Had Better</a></li><li><a href="/blog/grammar/will-and-shall/">Will and Shall</a></li><li><a href="/blog/grammar/imperatives/">Imperatives</a></li>
+</ul>
+
+<div class="cta"><p>Sound polite and natural in real conversations: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

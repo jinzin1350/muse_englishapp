@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Will vs Going To: The Difference, with Exercises | Muse English</title>
+<meta name="description" content="When to use will or going to, from A2 to C1: decisions now or before, opinion or evidence, will, going to or present continuous, and when both work.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/will-vs-going-to/">
+<meta property="og:type" content="article"><meta property="og:title" content="Will vs Going To: The Difference, with Exercises | Muse English">
+<meta property="og:description" content="When to use will or going to, from A2 to C1: decisions now or before, opinion or evidence, will, going to or present continuous, and when both work."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/will-vs-going-to/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Will vs Going To", "description": "When to use will or going to, from A2 to C1: decisions now or before, opinion or evidence, will, going to or present continuous, and when both work.", "url": "https://museenglishapp.com/blog/grammar/will-vs-going-to/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Will vs Going To", "item": "https://museenglishapp.com/blog/grammar/will-vs-going-to/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Will vs Going To</div>
+<h1>Will vs Going To</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#c1'>C1</a></div>
+<p>Both <strong><em>will</strong></em> and <strong><em>be going to</strong></em> talk about the future, but they&#x27;re often used in different situations: <em>The phone&#x27;s ringing. ~ I<strong>&#x27;ll</strong> get it.</em> (deciding now) / <em>I<strong>&#x27;m going to</strong> call my mum tonight.</em> (already decided)</p><p>This page shows the main differences and when both are possible. For each form on its own, see <a href="/blog/grammar/will-and-shall/">Will and Shall</a> and <a href="/blog/grammar/be-going-to/">Be Going To</a>.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='wvg-decision'>Decision now (will) or decided before (going to)? <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>will: deciding now</th><th>going to: decided before</th></tr><tr><td><em>A: The bin is full. B: OK, I<strong>&#x27;ll</strong> take it out.</em></td><td><em>I<strong>&#x27;m going to</strong> take the bin out after dinner.</em> (I planned it)</td></tr><tr><td><em>A: I&#x27;m hungry. B: I<strong>&#x27;ll</strong> make you a sandwich.</em></td><td><em>I<strong>&#x27;m going to</strong> make lasagne tonight.</em> (I bought everything)</td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>A: Someone&#x27;s at the door. B: I<strong>&#x27;ll</strong> get it. <span class='exnote'>(deciding now)</span></li>
+<li>I<strong>&#x27;m going to</strong> sell my old bike. I&#x27;ve already put an ad online. <span class='exnote'>(decided before)</span></li>
+<li>A: We need bread. B: Oh, I<strong>&#x27;ll</strong> go to the bakery. <span class='exnote'>(deciding now)</span></li>
+<li>We<strong>&#x27;re going to</strong> have a barbecue on Saturday. We&#x27;ve invited everyone. <span class='exnote'>(decided before)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ A: The phone&#x27;s ringing. B: I&#x27;m going to answer it. → ✅ A: The phone&#x27;s ringing. B: I&#x27;ll answer it. <span class='why'>(deciding now: will)</span></li>
+<li>❌ I&#x27;ll visit my uncle next weekend. I bought the tickets last month. → ✅ I&#x27;m going to visit my uncle next weekend. I bought the tickets last month. <span class='why'>(decided before: going to)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-wvg-decision-s01">
+<div class="exq">1. A: It&#x27;s cold in here. B: OK, &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; close the window.</div>
+<label><input type='radio' name='wvg-decision-s01' value='0'> I&#x27;m going to</label><label><input type='radio' name='wvg-decision-s01' value='1'> I</label><label><input type='radio' name='wvg-decision-s01' value='2'> I&#x27;ll</label><label><input type='radio' name='wvg-decision-s01' value='3'> I&#x27;ve</label>
+<div class="exexpl" style="display:none">Deciding now: <em>I&#x27;ll</em>.</div>
+<button class="excheck" onclick="checkEx('wvg-decision-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-wvg-decision-s02">
+<div class="exq">2. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; my grandparents this weekend. I told them last week.</div>
+<label><input type='radio' name='wvg-decision-s02' value='0'> visit</label><label><input type='radio' name='wvg-decision-s02' value='1'> visited</label><label><input type='radio' name='wvg-decision-s02' value='2'> &#x27;ve visited</label><label><input type='radio' name='wvg-decision-s02' value='3'> &#x27;m going to visit</label>
+<div class="exexpl" style="display:none">Decided before: <em>going to</em>.</div>
+<button class="excheck" onclick="checkEx('wvg-decision-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-wvg-decision-s03">
+<div class="exq">3. A: There&#x27;s no coffee left. B: Really? I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (buy) some on my way home.</div>
+<input type="text" id="wvg-decision-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Deciding now: <em>will buy</em>.</div>
+<button class="excheck" onclick="checkGap('wvg-decision-s03', ["'ll buy", "will buy"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='wvg-prediction'>Predictions: opinion (will) or evidence (going to)? <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>will: opinion / belief</th><th>going to: evidence now</th></tr><tr><td><em>I think it<strong>&#x27;ll</strong> rain tomorrow.</em></td><td><em>Look at those clouds. It<strong>&#x27;s going to</strong> rain.</em></td></tr><tr><td><em>You<strong>&#x27;ll</strong> love this film.</em></td><td><em>The score is 5–0. We<strong>&#x27;re going to</strong> win!</em></td></tr></table></div>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I&#x27;m sure she<strong>&#x27;ll</strong> be a great teacher. <span class='exnote'>(opinion)</span></li>
+<li>She&#x27;s studied so hard. She<strong>&#x27;s going to</strong> pass. <span class='exnote'>(evidence)</span></li>
+<li>In 2050, cars <strong>will</strong> drive themselves. <span class='exnote'>(belief about the distant future)</span></li>
+<li>Mind the step! You<strong>&#x27;re going to</strong> trip! <span class='exnote'>(evidence now)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Look! That tree will fall on the car! (it&#x27;s moving now) → ✅ Look! That tree&#x27;s going to fall on the car! <span class='why'>(evidence now: going to)</span></li>
+</ul></div>
+<h3 id='wvg-three-futures'>Will, going to or present continuous? <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Form</th><th>Use</th><th>Example</th></tr><tr><td>present continuous</td><td>arrangements: people, time, place fixed</td><td><em>I<strong>&#x27;m flying</strong> to Rome on Friday.</em></td></tr><tr><td>be going to</td><td>intentions, decided plans; evidence</td><td><em>I<strong>&#x27;m going to</strong> look for a new job.</em></td></tr><tr><td>will</td><td>decisions now, offers, promises, opinions</td><td><em>I<strong>&#x27;ll</strong> call you later.</em></td></tr><tr><td>present simple</td><td>timetables and schedules</td><td><em>The train <strong>leaves</strong> at 6.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>I<strong>&#x27;m having</strong> lunch with my boss tomorrow. <span class='exnote'>(arrangement)</span></li>
+<li>I<strong>&#x27;m going to</strong> clean the car this afternoon. <span class='exnote'>(intention)</span></li>
+<li>Don&#x27;t worry, I<strong>&#x27;ll</strong> help you. <span class='exnote'>(offer now)</span></li>
+<li>The conference <strong>starts</strong> on Monday. <span class='exnote'>(timetable)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;ll see the dentist at 3 tomorrow. (it&#x27;s an appointment) → ✅ I&#x27;m seeing the dentist at 3 tomorrow. <span class='why'>(arrangement: present continuous)</span></li>
+<li>❌ The bus will leave at 7.15 every morning. → ✅ The bus leaves at 7.15 every morning. <span class='why'>(timetable: present simple)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-wvg-prediction-s01">
+<div class="exq">4. Look at the traffic! We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; be late.</div>
+<label><input type='radio' name='wvg-prediction-s01' value='0'> &#x27;re going to</label><label><input type='radio' name='wvg-prediction-s01' value='1'> &#x27;re go to</label><label><input type='radio' name='wvg-prediction-s01' value='2'> are going</label><label><input type='radio' name='wvg-prediction-s01' value='3'> going to</label>
+<div class="exexpl" style="display:none">Evidence now: <em>going to</em>.</div>
+<button class="excheck" onclick="checkEx('wvg-prediction-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-wvg-prediction-s02">
+<div class="exq">5. I think robots &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; most jobs in the future.</div>
+<label><input type='radio' name='wvg-prediction-s02' value='0'> do</label><label><input type='radio' name='wvg-prediction-s02' value='1'> will do</label><label><input type='radio' name='wvg-prediction-s02' value='2'> did</label><label><input type='radio' name='wvg-prediction-s02' value='3'> are doing</label>
+<div class="exexpl" style="display:none">Opinion about the distant future: <em>will</em>.</div>
+<button class="excheck" onclick="checkEx('wvg-prediction-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-wvg-prediction-s03">
+<div class="exq">6. Watch out! The ladder &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (fall)!</div>
+<input type="text" id="wvg-prediction-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Evidence now: <em>is going to fall</em>.</div>
+<button class="excheck" onclick="checkGap('wvg-prediction-s03', ["'s going to fall", "is going to fall", "'s falling", "is falling"])">Check</button>
+</div>
+<div class="exblock" id="ex-wvg-three-futures-s01">
+<div class="exq">7. I&#x27;ve got an appointment. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; the doctor at 10 tomorrow.</div>
+<label><input type='radio' name='wvg-three-futures-s01' value='0'> &#x27;m seeing</label><label><input type='radio' name='wvg-three-futures-s01' value='1'> &#x27;ve seen</label><label><input type='radio' name='wvg-three-futures-s01' value='2'> see</label><label><input type='radio' name='wvg-three-futures-s01' value='3'> saw</label>
+<div class="exexpl" style="display:none">A fixed arrangement: present continuous.</div>
+<button class="excheck" onclick="checkEx('wvg-three-futures-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-wvg-three-futures-s02">
+<div class="exq">8. According to the timetable, the next train &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; at 9:45.</div>
+<label><input type='radio' name='wvg-three-futures-s02' value='0'> leave</label><label><input type='radio' name='wvg-three-futures-s02' value='1'> leaves</label><label><input type='radio' name='wvg-three-futures-s02' value='2'> left</label><label><input type='radio' name='wvg-three-futures-s02' value='3'> leaving</label>
+<div class="exexpl" style="display:none">Timetable: present simple.</div>
+<button class="excheck" onclick="checkEx('wvg-three-futures-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-wvg-three-futures-s03">
+<div class="exq">9. A: I haven&#x27;t got any money. B: Don&#x27;t worry. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (lend) you some.</div>
+<input type="text" id="wvg-three-futures-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">An offer now: <em>will</em>.</div>
+<button class="excheck" onclick="checkGap('wvg-three-futures-s03', ["'ll lend", "will lend"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='wvg-nuance'>When both are possible, and formal uses of will <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>Prices <strong>will</strong> rise / <strong>are going to</strong> rise next year. <span class='exnote'>(both possible)</span></li>
+<li>The ceremony <strong>will</strong> take place at noon. <span class='exnote'>(formal announcement)</span></li>
+<li>I <strong>will</strong> pass this exam, whatever it takes! <span class='exnote'>(determination)</span></li>
+<li>Flight BA 207 <strong>will</strong> board at gate 12. <span class='exnote'>(announcement)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ The president is gonna visit Canada next week. (in a news report) → ✅ The president will visit Canada next week. <span class='why'>(formal: will)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-wvg-nuance-s01">
+<div class="exq">10. Which sentence is the most typical of a news report?</div>
+<label><input type='radio' name='wvg-nuance-s01' value='0'> The minister&#x27;s gonna announce the budget Monday.</label><label><input type='radio' name='wvg-nuance-s01' value='1'> The minister announces maybe the budget.</label><label><input type='radio' name='wvg-nuance-s01' value='2'> The minister announced the budget next Monday.</label><label><input type='radio' name='wvg-nuance-s01' value='3'> The minister will announce the new budget on Monday.</label>
+<div class="exexpl" style="display:none">Formal style: <em>will</em>.</div>
+<button class="excheck" onclick="checkEx('wvg-nuance-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-wvg-nuance-s02">
+<div class="exq">11. In which sentence are BOTH <em>will</em> and <em>going to</em> possible?</div>
+<label><input type='radio' name='wvg-nuance-s02' value='0'> A: The phone&#x27;s ringing. B: I ___ get it.</label><label><input type='radio' name='wvg-nuance-s02' value='1'> Look! That car ___ hit the wall!</label><label><input type='radio' name='wvg-nuance-s02' value='2'> It ___ be a difficult year for the company.</label><label><input type='radio' name='wvg-nuance-s02' value='3'> ___ you open the window, please?</label>
+<div class="exexpl" style="display:none">A general prediction allows both.</div>
+<button class="excheck" onclick="checkEx('wvg-nuance-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-wvg-nuance-s03">
+<div class="exq">12. Announcement: The train to Montreal &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (depart) from platform 3.</div>
+<input type="text" id="wvg-nuance-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Formal announcement: <em>will depart</em> (the present continuous or simple are also used).</div>
+<button class="excheck" onclick="checkGap('wvg-nuance-s03', ["will depart", "is departing", "departs", "will be departing"])">Check</button>
+</div>
+</section>
+
+<div class='seealso'><p><strong>See also:</strong></p><ul><li><a href='#pc-future'>pc-future</a></li><li><a href='#ps-timetables'>ps-timetables</a></li></ul></div>
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/will-and-shall/">Will and Shall</a></li><li><a href="/blog/grammar/be-going-to/">Be Going To (I&#x27;m going to…)</a></li><li><a href="/blog/grammar/present-continuous/">Present Continuous</a></li><li><a href="/blog/grammar/future-continuous-future-perfect/">Future Continuous and Future Perfect (will be doing, will have done)</a></li><li><a href="/blog/grammar/future-time-clauses/">Future Time Clauses (When I get home, I&#x27;ll…)</a></li>
+</ul>
+
+<div class="cta"><p>Choose the right future form without thinking: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

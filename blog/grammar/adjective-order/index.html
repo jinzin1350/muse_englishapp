@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adjective Order in English: Rules &amp; Exercises | Muse English</title>
+<meta name="description" content="Learn adjective order from A2 to C1: adjectives before nouns, opinion before fact, size, age, colour, origin and material, and with and, and something new.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/adjective-order/">
+<meta property="og:type" content="article"><meta property="og:title" content="Adjective Order in English: Rules &amp; Exercises | Muse English">
+<meta property="og:description" content="Learn adjective order from A2 to C1: adjectives before nouns, opinion before fact, size, age, colour, origin and material, and with and, and something new."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/adjective-order/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Adjective Order", "description": "Learn adjective order from A2 to C1: adjectives before nouns, opinion before fact, size, age, colour, origin and material, and with and, and something new.", "url": "https://museenglishapp.com/blog/grammar/adjective-order/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Adjective Order", "item": "https://museenglishapp.com/blog/grammar/adjective-order/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Adjective Order</div>
+<h1>Adjective Order</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p>In English, adjectives usually go <strong>before</strong> the noun (<em>a <strong>red</strong> car</em>) or after verbs like <em>be, look</em> and <em>seem</em> (<em>The car is <strong>red</strong></em>).</p><p>When there are two or more adjectives, there&#x27;s a usual order: <strong><em>opinion</strong></em> first, then facts like <strong>size, age, colour, origin</strong> and <strong>material</strong>: <em>a <strong>beautiful old Persian</strong> carpet</em>.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='ao-position'>Adjectives before nouns and after be <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Position</th><th>Example</th></tr><tr><td>before a noun</td><td><em>She has <strong>long</strong> hair. It&#x27;s a <strong>cheap</strong> hotel.</em></td></tr><tr><td>after <em>be, look, feel, seem, sound, taste, get</em></td><td><em>You <strong>look tired</strong>. This soup <strong>tastes great</strong>.</em></td></tr><tr><td>with plural nouns</td><td><strong><em>small</strong> flats</em> (not <em>smalls flats</em>)</td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>I bought a <strong>new</strong> phone. <span class='exnote'>(before a noun)</span></li>
+<li>Your idea <strong>sounds good</strong>. <span class='exnote'>(after sound)</span></li>
+<li>They live in a <strong>beautiful</strong> house. <span class='exnote'>(before a noun)</span></li>
+<li>The children are <strong>asleep</strong>. <span class='exnote'>(only after be)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I have a car red. → ✅ I have a red car. <span class='why'>(adjective before the noun)</span></li>
+<li>❌ They are very kinds people. → ✅ They are very kind people. <span class='why'>(no -s on adjectives)</span></li>
+<li>❌ There was an afraid child in the corner. → ✅ There was a frightened child in the corner. <span class='why'>(afraid: only after be)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-ao-position-s01">
+<div class="exq">1. She lives in a &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='ao-position-s01' value='0'> big house</label><label><input type='radio' name='ao-position-s01' value='1'> house big</label><label><input type='radio' name='ao-position-s01' value='2'> bigs house</label><label><input type='radio' name='ao-position-s01' value='3'> house bigs</label>
+<div class="exexpl" style="display:none">Adjective before the noun.</div>
+<button class="excheck" onclick="checkEx('ao-position-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ao-position-s02">
+<div class="exq">2. These are &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='ao-position-s02' value='0'> expensives shoes</label><label><input type='radio' name='ao-position-s02' value='1'> expensive shoes</label><label><input type='radio' name='ao-position-s02' value='2'> shoes expensives</label><label><input type='radio' name='ao-position-s02' value='3'> expensive shoe</label>
+<div class="exexpl" style="display:none">No <em>-s</em> on adjectives.</div>
+<button class="excheck" onclick="checkEx('ao-position-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-ao-position-s03">
+<div class="exq">3. Be quiet! The baby is &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;. (one word)</div>
+<input type="text" id="ao-position-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Asleep</em> comes after <em>be</em>.</div>
+<button class="excheck" onclick="checkGap('ao-position-s03', ["asleep", "sleeping", "napping", "dozing"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='ao-order'>Opinion, size, age, colour: a lovely big old house <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Order</th><th>Type</th><th>Examples</th></tr><tr><td>1</td><td>opinion</td><td><em>beautiful, lovely, nice, ugly</em></td></tr><tr><td>2</td><td>size</td><td><em>big, small, tall, long</em></td></tr><tr><td>3</td><td>age</td><td><em>old, new, young, ancient</em></td></tr><tr><td>4</td><td>shape</td><td><em>round, square, flat</em></td></tr><tr><td>5</td><td>colour</td><td><em>red, blue, grey</em></td></tr><tr><td>6</td><td>origin</td><td><em>Persian, Italian, Canadian</em></td></tr><tr><td>7</td><td>material</td><td><em>wooden, silk, leather, plastic</em></td></tr><tr><td>8</td><td>purpose (often a noun)</td><td><em>running</em> (shoes), <em>coffee</em> (table)</td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>She has <strong>beautiful long black</strong> hair. <span class='exnote'>(opinion, size, colour)</span></li>
+<li>We bought a <strong>small round wooden</strong> table. <span class='exnote'>(size, shape, material)</span></li>
+<li>It&#x27;s a <strong>lovely old Persian</strong> carpet. <span class='exnote'>(opinion, age, origin)</span></li>
+<li>He was wearing <strong>new white running</strong> shoes. <span class='exnote'>(age, colour, purpose)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ a black big dog → ✅ a big black dog <span class='why'>(size before colour)</span></li>
+<li>❌ a wooden old chair → ✅ an old wooden chair <span class='why'>(age before material)</span></li>
+<li>❌ an Italian beautiful car → ✅ a beautiful Italian car <span class='why'>(opinion first)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-ao-order-s01">
+<div class="exq">4. She bought a &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='ao-order-s01' value='0'> red lovely silk dress</label><label><input type='radio' name='ao-order-s01' value='1'> silk red lovely dress</label><label><input type='radio' name='ao-order-s01' value='2'> lovely silk red dress</label><label><input type='radio' name='ao-order-s01' value='3'> lovely red silk dress</label>
+<div class="exexpl" style="display:none">Opinion, colour, material.</div>
+<button class="excheck" onclick="checkEx('ao-order-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ao-order-s02">
+<div class="exq">5. We live in a &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='ao-order-s02' value='0'> old small house</label><label><input type='radio' name='ao-order-s02' value='1'> house small old</label><label><input type='radio' name='ao-order-s02' value='2'> small old house</label><label><input type='radio' name='ao-order-s02' value='3'> small house old</label>
+<div class="exexpl" style="display:none">Size before age.</div>
+<button class="excheck" onclick="checkEx('ao-order-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ao-order-s03">
+<div class="exq">6. He has a &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (black / big) dog. (two words)</div>
+<input type="text" id="ao-order-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Size before colour.</div>
+<button class="excheck" onclick="checkGap('ao-order-s03', ["big black"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='ao-and'>And between adjectives: big and bright, black and white <span class='lvl-badge'>B2</span></h3>
+<div class="twrap"><table><tr><th>Pattern</th><th>Example</th></tr><tr><td>after a verb: two adjectives</td><td><em>The weather was cold <strong>and</strong> wet.</em></td></tr><tr><td>after a verb: three adjectives</td><td><em>She&#x27;s clever, kind <strong>and</strong> funny.</em></td></tr><tr><td>before a noun: same type</td><td><em>a long, boring meeting</em> or <em>a long <strong>and</strong> boring meeting</em></td></tr><tr><td>before a noun: different types</td><td><em>a small red car</em> (no <em>and</em>, no comma)</td></tr><tr><td>colours of one thing</td><td><em>a black <strong>and</strong> white photo, a red <strong>and</strong> white flag</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>The hotel was clean <strong>and</strong> comfortable. <span class='exnote'>(after a verb)</span></li>
+<li>It was a long, tiring journey. <span class='exnote'>(same type: comma)</span></li>
+<li>She has a <strong>black and white</strong> cat. <span class='exnote'>(colours)</span></li>
+<li>My grandfather is wise, patient <strong>and</strong> kind. <span class='exnote'>(three adjectives)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ The food was cheap delicious. → ✅ The food was cheap and delicious. <span class='why'>(after a verb: and)</span></li>
+<li>❌ She&#x27;s clever and kind and funny and. → ✅ She&#x27;s clever, kind and funny. <span class='why'>(three adjectives: commas + and)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-ao-and-s01">
+<div class="exq">7. The flat is &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='ao-and-s01' value='0'> small and dark</label><label><input type='radio' name='ao-and-s01' value='1'> small dark</label><label><input type='radio' name='ao-and-s01' value='2'> small, dark</label><label><input type='radio' name='ao-and-s01' value='3'> small with dark</label>
+<div class="exexpl" style="display:none">After a verb: two adjectives with <em>and</em>.</div>
+<button class="excheck" onclick="checkEx('ao-and-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-ao-and-s02">
+<div class="exq">8. She took a &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; photo of her grandparents.</div>
+<label><input type='radio' name='ao-and-s02' value='0'> black white</label><label><input type='radio' name='ao-and-s02' value='1'> black, white</label><label><input type='radio' name='ao-and-s02' value='2'> black and white</label><label><input type='radio' name='ao-and-s02' value='3'> white black</label>
+<div class="exexpl" style="display:none">Colours of one thing: <em>black and white</em>.</div>
+<button class="excheck" onclick="checkEx('ao-and-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-ao-and-s03">
+<div class="exq">9. The hotel was clean &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; comfortable. (one word)</div>
+<input type="text" id="ao-and-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">After a verb: <em>and</em>.</div>
+<button class="excheck" onclick="checkGap('ao-and-s03', ["and"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='ao-advanced'>Adjectives after nouns: something new, the people involved <span class='lvl-badge'>C1</span></h3>
+<div class="twrap"><table><tr><th>Pattern</th><th>Example</th></tr><tr><td><em>something / anyone / somewhere</em> + adjective</td><td><em>Let&#x27;s do <strong>something different</strong>. Is there <strong>anyone famous</strong> here?</em></td></tr><tr><td>participles and <em>available</em> after the noun</td><td><em>the people <strong>involved</strong>, the problems <strong>mentioned</strong>, the tickets <strong>available</strong></em></td></tr><tr><td>measurements</td><td><em>The wall is three metres <strong>high</strong>. She&#x27;s six years <strong>old</strong>.</em></td></tr><tr><td>meaning change</td><td><em>the people <strong>present</strong></em> (= there) / <em>the <strong>present</strong> situation</em> (= now); <em>the people <strong>concerned</strong></em> (= involved) / <em>a <strong>concerned</strong> mother</em> (= worried)</td></tr><tr><td>adjective + phrase</td><td><em>a bag <strong>full of money</strong>, people <strong>interested in art</strong></em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>I want to try <strong>something new</strong>. <span class='exnote'>(something + adjective)</span></li>
+<li>All the people <strong>involved</strong> were interviewed. <span class='exnote'>(after the noun)</span></li>
+<li>The river is 200 metres <strong>wide</strong>. <span class='exnote'>(measurement)</span></li>
+<li>Are there any seats <strong>available</strong>? <span class='exnote'>(available after the noun)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I&#x27;d like to eat new something. → ✅ I&#x27;d like to eat something new. <span class='why'>(something + adjective)</span></li>
+<li>❌ The involved people were questioned. → ✅ The people involved were questioned. <span class='why'>(involved (= taking part): after the noun)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-ao-advanced-s01">
+<div class="exq">10. Let&#x27;s go &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; this weekend.</div>
+<label><input type='radio' name='ao-advanced-s01' value='0'> quiet somewhere</label><label><input type='radio' name='ao-advanced-s01' value='1'> somewhere quiet</label><label><input type='radio' name='ao-advanced-s01' value='2'> a somewhere quiet</label><label><input type='radio' name='ao-advanced-s01' value='3'> somewhere of quiet</label>
+<div class="exexpl" style="display:none"><em>Somewhere</em> + adjective.</div>
+<button class="excheck" onclick="checkEx('ao-advanced-s01', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-ao-advanced-s02">
+<div class="exq">11. The police spoke to everyone &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;.</div>
+<label><input type='radio' name='ao-advanced-s02' value='0'> involving</label><label><input type='radio' name='ao-advanced-s02' value='1'> in involved</label><label><input type='radio' name='ao-advanced-s02' value='2'> who involve</label><label><input type='radio' name='ao-advanced-s02' value='3'> involved</label>
+<div class="exexpl" style="display:none"><em>Involved</em> (= taking part) after the noun.</div>
+<button class="excheck" onclick="checkEx('ao-advanced-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-ao-advanced-s03">
+<div class="exq">12. The swimming pool is 25 metres &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; and 12 metres wide. (one word)</div>
+<input type="text" id="ao-advanced-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Measurement + adjective.</div>
+<button class="excheck" onclick="checkGap('ao-advanced-s03', ["long"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/ed-ing-adjectives/">-ed and -ing Adjectives</a></li><li><a href="/blog/grammar/comparatives-superlatives/">Comparatives and Superlatives</a></li><li><a href="/blog/grammar/noun-modifiers-compound-nouns/">Compound Nouns and Noun Modifiers</a></li><li><a href="/blog/grammar/word-order/">Word Order in English</a></li>
+</ul>
+
+<div class="cta"><p>Describe people and places like a native speaker: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

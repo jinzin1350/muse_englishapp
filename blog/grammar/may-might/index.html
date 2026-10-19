@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>May and Might: Possibility, Rules &amp; Exercises | Muse English</title>
+<meta name="description" content="Learn may and might from A2 to C1: possibility, might be doing, may as well, may well, he may be rich but…, and you might want to, with exercises.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/may-might/">
+<meta property="og:type" content="article"><meta property="og:title" content="May and Might: Possibility, Rules &amp; Exercises | Muse English">
+<meta property="og:description" content="Learn may and might from A2 to C1: possibility, might be doing, may as well, may well, he may be rich but…, and you might want to, with exercises."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/may-might/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "May and Might (Possibility)", "description": "Learn may and might from A2 to C1: possibility, might be doing, may as well, may well, he may be rich but…, and you might want to, with exercises.", "url": "https://museenglishapp.com/blog/grammar/may-might/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "May and Might (Possibility)", "item": "https://museenglishapp.com/blog/grammar/may-might/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / May and Might (Possibility)</div>
+<h1>May and Might (Possibility)</h1>
+<div class="level-bar"><a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#b2'>B2</a> · <a href='#c1'>C1</a></div>
+<p>We use <strong><em>might</strong></em> and <strong><em>may</strong></em> to say that something is <strong>possible</strong>, but we&#x27;re not sure: <em>I <strong>might</strong> go to the gym later. It <strong>may</strong> rain tomorrow.</em></p><p>For being sure or almost sure (<em>must, can&#x27;t</em>), and for possibility in the past (<em>might have done</em>), see <a href="/blog/grammar/modals-of-deduction/">Modals of Deduction</a>. For <em>May I…?</em>, see <a href="/blog/grammar/requests-offers-permission/">Requests, Offers and Permission</a>.</p>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='mm-might'>Might and might not: perhaps <span class='lvl-badge'>A2</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>I <strong>might</strong> buy a new laptop next month. <span class='exnote'>(perhaps)</span></li>
+<li>We <strong>might not</strong> have enough time. <span class='exnote'>(perhaps not)</span></li>
+<li>Ask Sara. She <strong>might</strong> know the answer. <span class='exnote'>(perhaps she knows)</span></li>
+<li>The shop <strong>might</strong> be closed now. It&#x27;s late. <span class='exnote'>(perhaps, now)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I might to go to the beach. → ✅ I might go to the beach. <span class='why'>(might + base verb)</span></li>
+<li>❌ He mights be late. → ✅ He might be late. <span class='why'>(no -s)</span></li>
+<li>❌ It might rains. → ✅ It might rain. <span class='why'>(might + base verb)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-mm-might-s01">
+<div class="exq">1. I&#x27;m not sure what to do tonight. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; watch a film.</div>
+<label><input type='radio' name='mm-might-s01' value='0'> might to</label><label><input type='radio' name='mm-might-s01' value='1'> mights</label><label><input type='radio' name='mm-might-s01' value='2'> might</label><label><input type='radio' name='mm-might-s01' value='3'> am might</label>
+<div class="exexpl" style="display:none">Perhaps: <em>might</em> + base verb.</div>
+<button class="excheck" onclick="checkEx('mm-might-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-might-s02">
+<div class="exq">2. Don&#x27;t wait for me. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; be late.</div>
+<label><input type='radio' name='mm-might-s02' value='0'> might</label><label><input type='radio' name='mm-might-s02' value='1'> might to</label><label><input type='radio' name='mm-might-s02' value='2'> mights</label><label><input type='radio' name='mm-might-s02' value='3'> am might</label>
+<div class="exexpl" style="display:none"><em>Might</em> + base verb.</div>
+<button class="excheck" onclick="checkEx('mm-might-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-might-s03">
+<div class="exq">3. We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (might / not / go) on holiday this year. We don&#x27;t have much money.</div>
+<input type="text" id="mm-might-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Perhaps not: <em>might not go</em>.</div>
+<button class="excheck" onclick="checkGap('mm-might-s03', ["might not go", "mightn't go"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='mm-may-might'>May or might? <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>The meeting <strong>may</strong> finish late. <span class='exnote'>(formal, perhaps)</span></li>
+<li>Side effects <strong>may</strong> include headaches. <span class='exnote'>(written instructions)</span></li>
+<li>If you asked her nicely, she <strong>might</strong> help you. <span class='exnote'>(unreal: might)</span></li>
+<li>I <strong>may not</strong> be able to come. <span class='exnote'>(perhaps not)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ If I won the lottery, I may stop working. → ✅ If I won the lottery, I might stop working. <span class='why'>(unreal: might)</span></li>
+<li>❌ May it rain tomorrow? → ✅ Do you think it will rain tomorrow? <span class='why'>(questions about possibility: Do you think…?)</span></li>
+</ul></div>
+<h3 id='mm-might-be-ing'>Might be doing: now or in the future <span class='lvl-badge'>B1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>Don&#x27;t phone him now. He <strong>might be driving</strong>. <span class='exnote'>(perhaps now)</span></li>
+<li>The kids are quiet. They <strong>may be watching</strong> TV. <span class='exnote'>(perhaps now)</span></li>
+<li>I <strong>might be moving</strong> to Calgary next year. <span class='exnote'>(possible plan)</span></li>
+<li>We <strong>might be getting</strong> a new manager soon. <span class='exnote'>(possible future change)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ She might sleeping. → ✅ She might be sleeping. <span class='why'>(might + be + -ing)</span></li>
+<li>❌ He might is working. → ✅ He might be working. <span class='why'>(might + be)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-mm-may-might-s01">
+<div class="exq">4. This medicine &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; cause drowsiness. Do not drive after taking it.</div>
+<label><input type='radio' name='mm-may-might-s01' value='0'> might to</label><label><input type='radio' name='mm-may-might-s01' value='1'> may to</label><label><input type='radio' name='mm-may-might-s01' value='2'> mays</label><label><input type='radio' name='mm-may-might-s01' value='3'> may</label>
+<div class="exexpl" style="display:none">Formal written warning: <em>may</em>.</div>
+<button class="excheck" onclick="checkEx('mm-may-might-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-may-might-s02">
+<div class="exq">5. If we left now, we &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; catch the earlier train.</div>
+<label><input type='radio' name='mm-may-might-s02' value='0'> may to</label><label><input type='radio' name='mm-may-might-s02' value='1'> might</label><label><input type='radio' name='mm-may-might-s02' value='2'> mays</label><label><input type='radio' name='mm-may-might-s02' value='3'> might to</label>
+<div class="exexpl" style="display:none">Unreal (second conditional): <em>might</em>.</div>
+<button class="excheck" onclick="checkEx('mm-may-might-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-may-might-s03">
+<div class="exq">6. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (may / not / be) home until 9, so don&#x27;t wait for me.</div>
+<input type="text" id="mm-may-might-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Perhaps not: <em>may not be</em>.</div>
+<button class="excheck" onclick="checkGap('mm-may-might-s03', ["may not be"])">Check</button>
+</div>
+<div class="exblock" id="ex-mm-might-be-ing-s01">
+<div class="exq">7. Where&#x27;s Sara? ~ I&#x27;m not sure. She &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; in the garden.</div>
+<label><input type='radio' name='mm-might-be-ing-s01' value='0'> might working</label><label><input type='radio' name='mm-might-be-ing-s01' value='1'> might works</label><label><input type='radio' name='mm-might-be-ing-s01' value='2'> mights be working</label><label><input type='radio' name='mm-might-be-ing-s01' value='3'> might be working</label>
+<div class="exexpl" style="display:none">Perhaps now: <em>might be working</em>.</div>
+<button class="excheck" onclick="checkEx('mm-might-be-ing-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-might-be-ing-s02">
+<div class="exq">8. I &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to Dubai for work next month. It isn&#x27;t decided yet.</div>
+<label><input type='radio' name='mm-might-be-ing-s02' value='0'> might going</label><label><input type='radio' name='mm-might-be-ing-s02' value='1'> might be go</label><label><input type='radio' name='mm-might-be-ing-s02' value='2'> might be going</label><label><input type='radio' name='mm-might-be-ing-s02' value='3'> might to be going</label>
+<div class="exexpl" style="display:none">Possible arrangement: <em>might be going</em>.</div>
+<button class="excheck" onclick="checkEx('mm-might-be-ing-s02', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-might-be-ing-s03">
+<div class="exq">9. Don&#x27;t call her now. She &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (might / have) dinner.</div>
+<input type="text" id="mm-might-be-ing-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Perhaps now: <em>might be having</em>.</div>
+<button class="excheck" onclick="checkGap('mm-might-be-ing-s03', ["might be having", "may be having"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='mm-may-as-well'>Might as well, may as well <span class='lvl-badge'>B2</span></h3>
+<p></p>
+<p></p>
+<div class='tip'><p></p></div>
+<ul class='examples'>
+<li>The film has already started. We <strong>might as well</strong> go home. <span class='exnote'>(no better option)</span></li>
+<li>We&#x27;ve got an hour before the train. We <strong>may as well</strong> have a coffee. <span class='exnote'>(nothing better to do)</span></li>
+<li>Nobody listens to me. I <strong>might as well</strong> talk to the wall. <span class='exnote'>(it would be the same)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ We might as well to walk. → ✅ We might as well walk. <span class='why'>(might as well + base verb)</span></li>
+<li>❌ We might as good stay here. → ✅ We might as well stay here. <span class='why'>(as well, not as good)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-mm-may-as-well-s01">
+<div class="exq">10. The last bus has gone. We &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; walk home.</div>
+<label><input type='radio' name='mm-may-as-well-s01' value='0'> might as well</label><label><input type='radio' name='mm-may-as-well-s01' value='1'> might as good</label><label><input type='radio' name='mm-may-as-well-s01' value='2'> had as well</label><label><input type='radio' name='mm-may-as-well-s01' value='3'> would as well</label>
+<div class="exexpl" style="display:none">No better option: <em>might as well</em>.</div>
+<button class="excheck" onclick="checkEx('mm-may-as-well-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-may-as-well-s02">
+<div class="exq">11. What does <em>I may as well finish the work tonight</em> mean?</div>
+<label><input type='radio' name='mm-may-as-well-s02' value='0'> I&#x27;m not allowed to finish.</label><label><input type='radio' name='mm-may-as-well-s02' value='1'> There&#x27;s no reason not to, so I&#x27;ll do it.</label><label><input type='radio' name='mm-may-as-well-s02' value='2'> I must finish it.</label><label><input type='radio' name='mm-may-as-well-s02' value='3'> I&#x27;ll certainly finish it well.</label>
+<div class="exexpl" style="display:none"><em>May as well</em> = no better option.</div>
+<button class="excheck" onclick="checkEx('mm-may-as-well-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-may-as-well-s03">
+<div class="exq">12. Nobody else wants the last piece of pizza, so I might as &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; eat it. (one word)</div>
+<input type="text" id="mm-may-as-well-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Might as well</em>.</div>
+<button class="excheck" onclick="checkGap('mm-may-as-well-s03', ["well"])">Check</button>
+</div>
+</section>
+<section id='c1'><h2>C1 · Advanced</h2>
+<h3 id='mm-concession'>He may be rich, but…: may and might for concession <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>The hotel <strong>may</strong> be old, <strong>but</strong> it&#x27;s very comfortable. <span class='exnote'>(I accept it&#x27;s old)</span></li>
+<li>You <strong>might</strong> not like him, <strong>but</strong> he&#x27;s a good manager. <span class='exnote'>(concession)</span></li>
+<li>He <strong>may have</strong> studied law, <strong>but</strong> he&#x27;s never worked as a lawyer. <span class='exnote'>(past)</span></li>
+<li>I <strong>may</strong> be wrong, <strong>but</strong> I think she&#x27;s lying. <span class='exnote'>(polite disagreement)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ The test may be difficult, so I passed it. → ✅ The test may have been difficult, but I passed it. <span class='why'>(concession + but; past: may have been)</span></li>
+</ul></div>
+<h3 id='mm-suggestion-well'>You might want to…, may well, might have told me <span class='lvl-badge'>C1</span></h3>
+<p></p>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>You <strong>might want to</strong> check the address before you go. <span class='exnote'>(polite suggestion)</span></li>
+<li>You <strong>might have</strong> warned me about the traffic! <span class='exnote'>(annoyance)</span></li>
+<li>The company <strong>may well</strong> close its London office. <span class='exnote'>(quite likely)</span></li>
+<li>She <strong>could well</strong> be right. <span class='exnote'>(quite likely)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ You might want check your answers. → ✅ You might want to check your answers. <span class='why'>(want to + verb)</span></li>
+<li>❌ He may well to win. → ✅ He may well win. <span class='why'>(may well + base verb)</span></li>
+</ul></div>
+<h3>Practice: C1</h3>
+<div class="exblock" id="ex-mm-concession-s01">
+<div class="exq">13. The flat &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; be small, but it&#x27;s in a great location.</div>
+<label><input type='radio' name='mm-concession-s01' value='0'> shall</label><label><input type='radio' name='mm-concession-s01' value='1'> ought</label><label><input type='radio' name='mm-concession-s01' value='2'> may</label><label><input type='radio' name='mm-concession-s01' value='3'> need</label>
+<div class="exexpl" style="display:none">Concession: <em>may … but</em>.</div>
+<button class="excheck" onclick="checkEx('mm-concession-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-concession-s02">
+<div class="exq">14. What does <em>He may be clever, but he&#x27;s lazy</em> mean?</div>
+<label><input type='radio' name='mm-concession-s02' value='0'> Perhaps he&#x27;s clever and perhaps he isn&#x27;t.</label><label><input type='radio' name='mm-concession-s02' value='1'> I agree he&#x27;s clever, but he&#x27;s lazy.</label><label><input type='radio' name='mm-concession-s02' value='2'> He&#x27;s not clever.</label><label><input type='radio' name='mm-concession-s02' value='3'> He&#x27;s clever because he&#x27;s lazy.</label>
+<div class="exexpl" style="display:none"><em>May … but</em> = a concession.</div>
+<button class="excheck" onclick="checkEx('mm-concession-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-concession-s03">
+<div class="exq">15. She &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (might / not / be) very friendly, but she&#x27;s an excellent doctor.</div>
+<input type="text" id="mm-concession-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Concession: <em>might not be … but</em>.</div>
+<button class="excheck" onclick="checkGap('mm-concession-s03', ["might not be", "may not be", "mightn't be"])">Check</button>
+</div>
+<div class="exblock" id="ex-mm-suggestion-well-s01">
+<div class="exq">16. Before you submit the form, you &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to read the instructions again.</div>
+<label><input type='radio' name='mm-suggestion-well-s01' value='0'> might want</label><label><input type='radio' name='mm-suggestion-well-s01' value='1'> might wanted</label><label><input type='radio' name='mm-suggestion-well-s01' value='2'> must wanting</label><label><input type='radio' name='mm-suggestion-well-s01' value='3'> might to want</label>
+<div class="exexpl" style="display:none">Polite suggestion: <em>might want to</em>.</div>
+<button class="excheck" onclick="checkEx('mm-suggestion-well-s01', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-suggestion-well-s02">
+<div class="exq">17. What does <em>You might have told me!</em> express?</div>
+<label><input type='radio' name='mm-suggestion-well-s02' value='0'> Perhaps you told me.</label><label><input type='radio' name='mm-suggestion-well-s02' value='1'> You told me.</label><label><input type='radio' name='mm-suggestion-well-s02' value='2'> Permission to tell me.</label><label><input type='radio' name='mm-suggestion-well-s02' value='3'> Annoyance: you didn&#x27;t tell me.</label>
+<div class="exexpl" style="display:none"><em>Might have</em> + past participle = annoyance.</div>
+<button class="excheck" onclick="checkEx('mm-suggestion-well-s02', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-mm-suggestion-well-s03">
+<div class="exq">18. Interest rates &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; (may / well) go up again this year.</div>
+<input type="text" id="mm-suggestion-well-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Quite likely: <em>may well</em>.</div>
+<button class="excheck" onclick="checkGap('mm-suggestion-well-s03', ["may well"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/modals-of-deduction/">Modals of Deduction and Probability</a></li><li><a href="/blog/grammar/can-could-be-able-to/">Can, Could and Be Able To (Ability and Possibility)</a></li><li><a href="/blog/grammar/requests-offers-permission/">Requests, Offers and Permission (Can you…? May I…? Shall I…?)</a></li><li><a href="/blog/grammar/will-and-shall/">Will and Shall</a></li><li><a href="/blog/grammar/should-ought-to/">Should, Ought To and Had Better</a></li>
+</ul>
+
+<div class="cta"><p>Talk about plans and possibilities naturally: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>

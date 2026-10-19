@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Some and Any: Rules and Exercises | Muse English</title>
+<meta name="description" content="Learn some and any from A1 to B2: some in positive sentences, any in questions, offers, someone and anything, any meaning every, and some 200 people.">
+<link rel="canonical" href="https://museenglishapp.com/blog/grammar/some-any/">
+<meta property="og:type" content="article"><meta property="og:title" content="Some and Any: Rules and Exercises | Muse English">
+<meta property="og:description" content="Learn some and any from A1 to B2: some in positive sentences, any in questions, offers, someone and anything, any meaning every, and some 200 people."><meta property="og:url" content="https://museenglishapp.com/blog/grammar/some-any/">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "Some and Any", "description": "Learn some and any from A1 to B2: some in positive sentences, any in questions, offers, someone and anything, any meaning every, and some 200 people.", "url": "https://museenglishapp.com/blog/grammar/some-any/", "inLanguage": "en", "author": {"@type": "Organization", "name": "Muse English", "url": "https://museenglishapp.com"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://museenglishapp.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://museenglishapp.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Grammar", "item": "https://museenglishapp.com/blog/grammar/"}, {"@type": "ListItem", "position": 4, "name": "Some and Any", "item": "https://museenglishapp.com/blog/grammar/some-any/"}]}]}</script>
+<style>body{font-family:system-ui,-apple-system,sans-serif;max-width:760px;margin:0 auto;padding:24px;line-height:1.7;color:#1a1a1a}h1{font-size:32px}h2{margin-top:36px}h3{margin-top:28px}table{border-collapse:collapse;width:100%;margin:16px 0}th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}th{background:#f5f5f5}.crumbs{color:#666;font-size:14px;margin-bottom:16px}.crumbs a{color:#666}.exblock{border:1px solid #eee;border-radius:10px;padding:14px;margin:12px 0}.exblock label{display:block;margin:6px 0;cursor:pointer}.exq{font-weight:600;margin-bottom:8px}.exexpl{margin-top:8px;color:#444;font-size:14px}.excheck{background:#FF9600;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;margin-top:12px}.vmeta{color:#666}.cta{background:#FFF7ED;border:1px solid #F0E6D2;border-radius:12px;padding:20px;margin:32px 0;text-align:center}.cta a{background:#FF9600;color:#fff;padding:12px 28px;border-radius:8px;text-decoration:none;font-weight:700}.tip{background:#F0F7FF;border-left:4px solid #1a73e8;padding:12px 16px;margin:16px 0;border-radius:0 8px 8px 0}.exnote{color:#666}.why{color:#555}.twrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.lvl-badge{background:#E8F5E9;color:#2E7D32;font-size:12px;padding:2px 8px;border-radius:10px;font-weight:600}.level-bar{background:#F5F5F5;padding:12px;border-radius:8px;margin:16px 0;text-align:center;position:sticky;top:0;z-index:10}.level-bar a{margin:0 8px;text-decoration:none;color:#FF9600;font-weight:600}.seealso{background:#FFF8E1;border:1px solid #FFE082;border-radius:8px;padding:12px 16px;margin:16px 0}.mistakes{background:#FFEBEE;border-radius:8px;padding:12px 16px;margin:16px 0}.examples li{margin:6px 0}.esent{font-size:18px;line-height:2}.eseg{cursor:pointer;padding:4px 8px;border-radius:6px;border:1px solid #ddd;margin:2px;display:inline-block}.eseg.picked{background:#FF9600;color:#fff;border-color:#FF9600}.gap{border-bottom:2px solid #333;min-width:60px;display:inline-block}.relgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;list-style:none;padding:0}.relgrid a{color:#1a73e8}@media(max-width:700px){.twrap{margin-left:-24px;margin-right:-24px;padding-left:24px;padding-right:24px}table{min-width:620px;font-size:14px}th,td{padding:7px 8px}.relgrid{grid-template-columns:1fr}}</style>
+<script>function checkEx(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var picked = block.querySelector('input:checked');
+  var expl = block.querySelector('.exexpl');
+  if (!picked) { alert('Pick an answer first.'); return; }
+  var correct = parseInt(picked.value) === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}
+function checkGap(id, accept) {
+  var input = document.getElementById(id + '-input');
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var norm = function(s) { return s.trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
+  var val = norm(input.value);
+  var correct = accept.some(function(a) { return norm(a) === val; });
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. Accepted: ' + accept.join(', ')) + '<br>' + expl.innerHTML;
+}
+var _pickedSeg = {};
+function pickSeg(id, idx) {
+  _pickedSeg[id] = idx;
+  var block = document.getElementById('ex-' + id);
+  block.querySelectorAll('.eseg').forEach(function(el) { el.classList.remove('picked'); });
+  block.querySelectorAll('.eseg')[idx].classList.add('picked');
+}
+function checkSeg(id, answer) {
+  var block = document.getElementById('ex-' + id);
+  var expl = block.querySelector('.exexpl');
+  var picked = _pickedSeg[id];
+  if (picked === undefined) { alert('Tap the wrong part first.'); return; }
+  var correct = picked === answer;
+  expl.style.display = 'block';
+  expl.innerHTML = (correct ? '✅ Correct! ' : '❌ Not quite. ') + expl.innerHTML;
+}</script>
+</head><body>
+<div class="crumbs"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <a href="/blog/grammar/">Grammar</a> / Some and Any</div>
+<h1>Some and Any</h1>
+<div class="level-bar"><a href='#a1'>A1</a> · <a href='#a2'>A2</a> · <a href='#b1'>B1</a> · <a href='#b2'>B2</a></div>
+<p><strong><em>Some</strong></em> and <strong><em>any</strong></em> talk about an amount that isn&#x27;t exact. Use them with <strong>plural</strong> nouns (<em>some eggs</em>) and <strong>uncountable</strong> nouns (<em>some milk</em>).</p><p>The basic rule is <strong><em>some</strong></em> in positive sentences and <strong><em>any</strong></em> in negatives and questions, but there are important exceptions. For countable and uncountable nouns, see <a href="/blog/grammar/countable-uncountable-nouns/">Countable and Uncountable Nouns</a>.</p>
+<section id='a1'><h2>A1 · Beginner</h2>
+<h3 id='sa-basic'>Some in positive sentences, any in negatives and questions <span class='lvl-badge'>A1</span></h3>
+<div class="twrap"><table><tr><th></th><th>Plural noun</th><th>Uncountable noun</th></tr><tr><td>positive</td><td><em>There are <strong>some</strong> eggs.</em></td><td><em>There&#x27;s <strong>some</strong> milk.</em></td></tr><tr><td>negative</td><td><em>There aren&#x27;t <strong>any</strong> eggs.</em></td><td><em>There isn&#x27;t <strong>any</strong> milk.</em></td></tr><tr><td>question</td><td><em>Are there <strong>any</strong> eggs?</em></td><td><em>Is there <strong>any</strong> milk?</em></td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>I bought <strong>some</strong> bread. <span class='exnote'>(positive)</span></li>
+<li>We don&#x27;t have <strong>any</strong> homework today. <span class='exnote'>(negative)</span></li>
+<li>Are there <strong>any</strong> good restaurants near here? <span class='exnote'>(question)</span></li>
+<li>There&#x27;s <strong>some</strong> juice in the fridge. <span class='exnote'>(uncountable)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I don&#x27;t have some money. → ✅ I don&#x27;t have any money. <span class='why'>(negative: any)</span></li>
+<li>❌ There are any chairs in the room. → ✅ There are some chairs in the room. <span class='why'>(positive: some)</span></li>
+<li>❌ Have you got any pen? → ✅ Have you got a pen? <span class='why'>(singular countable: a)</span></li>
+</ul></div>
+<h3>Practice: A1</h3>
+<div class="exblock" id="ex-sa-basic-s01">
+<div class="exq">1. There&#x27;s &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; milk in the fridge.</div>
+<label><input type='radio' name='sa-basic-s01' value='0'> any</label><label><input type='radio' name='sa-basic-s01' value='1'> a</label><label><input type='radio' name='sa-basic-s01' value='2'> many</label><label><input type='radio' name='sa-basic-s01' value='3'> some</label>
+<div class="exexpl" style="display:none">Positive + uncountable: <em>some</em>.</div>
+<button class="excheck" onclick="checkEx('sa-basic-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-sa-basic-s02">
+<div class="exq">2. I don&#x27;t have &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; brothers or sisters.</div>
+<label><input type='radio' name='sa-basic-s02' value='0'> some</label><label><input type='radio' name='sa-basic-s02' value='1'> any</label><label><input type='radio' name='sa-basic-s02' value='2'> a</label><label><input type='radio' name='sa-basic-s02' value='3'> an</label>
+<div class="exexpl" style="display:none">Negative: <em>any</em>.</div>
+<button class="excheck" onclick="checkEx('sa-basic-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-sa-basic-s03">
+<div class="exq">3. There aren&#x27;t &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; eggs left. Can you buy some? (one word)</div>
+<input type="text" id="sa-basic-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Negative: <em>any</em>.</div>
+<button class="excheck" onclick="checkGap('sa-basic-s03', ["any", "many", "enough"])">Check</button>
+</div>
+</section>
+<section id='a2'><h2>A2 · Elementary</h2>
+<h3 id='sa-offers'>Some in offers and requests: Can I have some water? <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th>Question type</th><th>Example</th></tr><tr><td>offers</td><td><em>Would you like <strong>some</strong> cake?</em></td></tr><tr><td>requests</td><td><em>Can I have <strong>some</strong> water, please? Could you lend me <strong>some</strong> money?</em></td></tr><tr><td>expecting <em>yes</em></td><td><em>Did you buy <strong>some</strong> bread?</em> (I think you did.)</td></tr><tr><td>real questions</td><td><em>Is there <strong>any</strong> bread?</em> (I don&#x27;t know.)</td></tr></table></div>
+<p></p>
+<ul class='examples'>
+<li>Would you like <strong>some</strong> biscuits? <span class='exnote'>(offer)</span></li>
+<li>Can I have <strong>some</strong> more rice, please? <span class='exnote'>(request)</span></li>
+<li>Could you give me <strong>some</strong> advice? <span class='exnote'>(request)</span></li>
+<li>Are there <strong>any</strong> messages for me? <span class='exnote'>(real question)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Can I have any water, please? → ✅ Can I have some water, please? <span class='why'>(request: some)</span></li>
+</ul></div>
+<h3 id='sa-compounds'>Someone, anything, nowhere, everybody <span class='lvl-badge'>A2</span></h3>
+<div class="twrap"><table><tr><th></th><th>some-</th><th>any-</th><th>no-</th><th>every-</th></tr><tr><td>people</td><td><em>someone / somebody</em></td><td><em>anyone / anybody</em></td><td><em>no one / nobody</em></td><td><em>everyone / everybody</em></td></tr><tr><td>things</td><td><em>something</em></td><td><em>anything</em></td><td><em>nothing</em></td><td><em>everything</em></td></tr><tr><td>places</td><td><em>somewhere</em></td><td><em>anywhere</em></td><td><em>nowhere</em></td><td><em>everywhere</em></td></tr></table></div>
+<p></p>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li><strong>Someone</strong> is knocking at the door. <span class='exnote'>(some-)</span></li>
+<li>I didn&#x27;t buy <strong>anything</strong>. <span class='exnote'>(negative: any-)</span></li>
+<li>There&#x27;s <strong>nowhere</strong> to park. <span class='exnote'>(no-)</span></li>
+<li><strong>Everybody</strong> loves her. <span class='exnote'>(every-)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ I didn&#x27;t say nothing. → ✅ I didn&#x27;t say anything. <span class='why'>(one negative only)</span></li>
+<li>❌ Everyone are happy. → ✅ Everyone is happy. <span class='why'>(singular verb)</span></li>
+<li>❌ I want to go to somewhere warm. → ✅ I want to go somewhere warm. <span class='why'>(no to before somewhere)</span></li>
+</ul></div>
+<h3>Practice: A2</h3>
+<div class="exblock" id="ex-sa-offers-s01">
+<div class="exq">4. Can I have &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; water, please? I&#x27;m really thirsty.</div>
+<label><input type='radio' name='sa-offers-s01' value='0'> any</label><label><input type='radio' name='sa-offers-s01' value='1'> many</label><label><input type='radio' name='sa-offers-s01' value='2'> some</label><label><input type='radio' name='sa-offers-s01' value='3'> a few</label>
+<div class="exexpl" style="display:none">Request: <em>some</em>.</div>
+<button class="excheck" onclick="checkEx('sa-offers-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-sa-offers-s02">
+<div class="exq">5. Which question is an offer?</div>
+<label><input type='radio' name='sa-offers-s02' value='0'> Would you like some cake?</label><label><input type='radio' name='sa-offers-s02' value='1'> Is there any cake?</label><label><input type='radio' name='sa-offers-s02' value='2'> Isn&#x27;t there any cake?</label><label><input type='radio' name='sa-offers-s02' value='3'> Have we got any cake?</label>
+<div class="exexpl" style="display:none">Offers: <em>Would you like some…?</em></div>
+<button class="excheck" onclick="checkEx('sa-offers-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-sa-offers-s03">
+<div class="exq">6. Could you lend me &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; money? I left my wallet at home. (one word)</div>
+<input type="text" id="sa-offers-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Request: <em>some</em>.</div>
+<button class="excheck" onclick="checkGap('sa-offers-s03', ["some"])">Check</button>
+</div>
+<div class="exblock" id="ex-sa-compounds-s01">
+<div class="exq">7. Is there &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; in the bathroom? The door is locked.</div>
+<label><input type='radio' name='sa-compounds-s01' value='0'> no one</label><label><input type='radio' name='sa-compounds-s01' value='1'> anything</label><label><input type='radio' name='sa-compounds-s01' value='2'> anyone</label><label><input type='radio' name='sa-compounds-s01' value='3'> everywhere</label>
+<div class="exexpl" style="display:none">Question about a person: <em>anyone</em>.</div>
+<button class="excheck" onclick="checkEx('sa-compounds-s01', 2)">Check</button>
+</div>
+<div class="exblock" id="ex-sa-compounds-s02">
+<div class="exq">8. I&#x27;m bored. There&#x27;s &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; to do here.</div>
+<label><input type='radio' name='sa-compounds-s02' value='0'> nothing</label><label><input type='radio' name='sa-compounds-s02' value='1'> anything</label><label><input type='radio' name='sa-compounds-s02' value='2'> something</label><label><input type='radio' name='sa-compounds-s02' value='3'> everywhere</label>
+<div class="exexpl" style="display:none">No-word with a positive verb: <em>There&#x27;s nothing</em>.</div>
+<button class="excheck" onclick="checkEx('sa-compounds-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-sa-compounds-s03">
+<div class="exq">9. I can&#x27;t find my keys &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt;. I&#x27;ve looked in every room. (one word ending in -where)</div>
+<input type="text" id="sa-compounds-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">Negative + place: <em>anywhere</em>.</div>
+<button class="excheck" onclick="checkGap('sa-compounds-s03', ["anywhere"])">Check</button>
+</div>
+</section>
+<section id='b1'><h2>B1 · Intermediate</h2>
+<h3 id='sa-any-meaning'>Any = it doesn&#x27;t matter which; any after if <span class='lvl-badge'>B1</span></h3>
+<div class="twrap"><table><tr><th>Use</th><th>Example</th></tr><tr><td>it doesn&#x27;t matter which</td><td><em>Choose <strong>any</strong> colour you like. <strong>Anyone</strong> can learn to cook.</em></td></tr><tr><td><em>if</em></td><td><em>If you have <strong>any</strong> questions, call me.</em></td></tr><tr><td>negative meaning</td><td><em>He <strong>never</strong> has <strong>any</strong> money. She left <strong>without</strong> saying <strong>anything</strong>.</em></td></tr><tr><td><em>hardly any</em></td><td><em>There&#x27;s <strong>hardly any</strong> milk left.</em> (= almost none)</td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li>You can sit <strong>anywhere</strong>. <span class='exnote'>(doesn&#x27;t matter where)</span></li>
+<li><strong>Any</strong> bus from this stop goes to the centre. <span class='exnote'>(doesn&#x27;t matter which)</span></li>
+<li>If you need <strong>anything</strong>, just ask. <span class='exnote'>(if)</span></li>
+<li>There were <strong>hardly any</strong> people at the party. <span class='exnote'>(hardly any)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ You can come some time you like. → ✅ You can come any time you like. <span class='why'>(doesn&#x27;t matter when: any)</span></li>
+<li>❌ There is hardly some food. → ✅ There is hardly any food. <span class='why'>(hardly + any)</span></li>
+<li>❌ I don&#x27;t have no time. → ✅ I don&#x27;t have any time. <span class='why'>(one negative only)</span></li>
+</ul></div>
+<h3>Practice: B1</h3>
+<div class="exblock" id="ex-sa-any-meaning-s01">
+<div class="exq">10. Call me &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; time. I&#x27;m always at home.</div>
+<label><input type='radio' name='sa-any-meaning-s01' value='0'> a</label><label><input type='radio' name='sa-any-meaning-s01' value='1'> no</label><label><input type='radio' name='sa-any-meaning-s01' value='2'> much</label><label><input type='radio' name='sa-any-meaning-s01' value='3'> any</label>
+<div class="exexpl" style="display:none">It doesn&#x27;t matter when: <em>any time</em>.</div>
+<button class="excheck" onclick="checkEx('sa-any-meaning-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-sa-any-meaning-s02">
+<div class="exq">11. If you have &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; problems, let me know.</div>
+<label><input type='radio' name='sa-any-meaning-s02' value='0'> no</label><label><input type='radio' name='sa-any-meaning-s02' value='1'> any</label><label><input type='radio' name='sa-any-meaning-s02' value='2'> a</label><label><input type='radio' name='sa-any-meaning-s02' value='3'> much</label>
+<div class="exexpl" style="display:none">After <em>if</em>: <em>any</em>.</div>
+<button class="excheck" onclick="checkEx('sa-any-meaning-s02', 1)">Check</button>
+</div>
+<div class="exblock" id="ex-sa-any-meaning-s03">
+<div class="exq">12. There&#x27;s hardly &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; petrol left. We need to stop. (one word)</div>
+<input type="text" id="sa-any-meaning-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none"><em>Hardly any</em> = almost none.</div>
+<button class="excheck" onclick="checkGap('sa-any-meaning-s03', ["any"])">Check</button>
+</div>
+</section>
+<section id='b2'><h2>B2 · Upper-intermediate</h2>
+<h3 id='sa-advanced'>Some 200 people, some idiot, any better, no faster <span class='lvl-badge'>B2</span></h3>
+<div class="twrap"><table><tr><th>Use</th><th>Example</th></tr><tr><td><em>some</em> + number = about (formal)</td><td><strong><em>Some</strong> 300 people attended the conference.</em></td></tr><tr><td><em>some</em> + singular noun = unknown</td><td><em>She married <strong>some</strong> guy she met online.</em></td></tr><tr><td>stressed <em>some</em> = certain, not all</td><td><strong><em>SOME</strong> people think it&#x27;s a good idea.</em> (but not everyone)</td></tr><tr><td><em>any</em> + comparative</td><td><em>Are you feeling <strong>any</strong> better? It isn&#x27;t <strong>any</strong> easier.</em></td></tr><tr><td><em>no</em> + comparative</td><td><em>The new phone is <strong>no</strong> faster than the old one.</em></td></tr></table></div>
+<p></p>
+<p></p>
+<ul class='examples'>
+<li><strong>Some</strong> 50,000 fans watched the match. <span class='exnote'>(about)</span></li>
+<li><strong>Some</strong> man called, but he didn&#x27;t leave his name. <span class='exnote'>(unknown person)</span></li>
+<li>Is your cold <strong>any</strong> better today? <span class='exnote'>(any + comparative)</span></li>
+<li><strong>No</strong> one knows the answer. <span class='exnote'>(no at the start)</span></li>
+</ul>
+<div class='mistakes'><p><strong>Common mistakes:</strong></p><ul>
+<li>❌ Not any of the students passed. → ✅ None of the students passed. <span class='why'>(at the start: none)</span></li>
+<li>❌ The traffic isn&#x27;t no better today. → ✅ The traffic isn&#x27;t any better today. <span class='why'>(not + any)</span></li>
+</ul></div>
+<h3>Practice: B2</h3>
+<div class="exblock" id="ex-sa-advanced-s01">
+<div class="exq">13. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; 5,000 people took part in the march.</div>
+<label><input type='radio' name='sa-advanced-s01' value='0'> Any</label><label><input type='radio' name='sa-advanced-s01' value='1'> No</label><label><input type='radio' name='sa-advanced-s01' value='2'> A</label><label><input type='radio' name='sa-advanced-s01' value='3'> Some</label>
+<div class="exexpl" style="display:none">About: <em>some</em> + number.</div>
+<button class="excheck" onclick="checkEx('sa-advanced-s01', 3)">Check</button>
+</div>
+<div class="exblock" id="ex-sa-advanced-s02">
+<div class="exq">14. Is the traffic &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; better today?</div>
+<label><input type='radio' name='sa-advanced-s02' value='0'> any</label><label><input type='radio' name='sa-advanced-s02' value='1'> some</label><label><input type='radio' name='sa-advanced-s02' value='2'> every</label><label><input type='radio' name='sa-advanced-s02' value='3'> a few</label>
+<div class="exexpl" style="display:none"><em>Any</em> + comparative in questions.</div>
+<button class="excheck" onclick="checkEx('sa-advanced-s02', 0)">Check</button>
+</div>
+<div class="exblock" id="ex-sa-advanced-s03">
+<div class="exq">15. &lt;span class=&quot;gap&quot;&gt;___&lt;/span&gt; students passed the exam. It was far too difficult. (one word)</div>
+<input type="text" id="sa-advanced-s03-input" placeholder="Type your answer" style="padding:8px;border:1px solid #ddd;border-radius:6px;width:200px">
+<div class="exexpl" style="display:none">At the start: <em>No students…</em></div>
+<button class="excheck" onclick="checkGap('sa-advanced-s03', ["No", "Few"])">Check</button>
+</div>
+</section>
+
+
+<h2>Related grammar</h2>
+<ul class='relgrid'>
+<li><a href="/blog/grammar/countable-uncountable-nouns/">Countable and Uncountable Nouns</a></li><li><a href="/blog/grammar/much-many-a-few-a-little/">Much, Many, A Lot Of, A Few, A Little</a></li><li><a href="/blog/grammar/quantifiers/">Quantifiers: All, Most, Each, Every, None</a></li><li><a href="/blog/grammar/a-an-the/">A, An and The (Articles)</a></li>
+</ul>
+
+<div class="cta"><p>Use some and any naturally in conversation: a new Muse English lesson with audio is ready every day.</p>
+<a href="/#/preview">Open today&#x27;s lesson</a></div>
+</body></html>
