@@ -3090,162 +3090,31 @@ async function teacherMessageSend(i, btn) {
 }
 
 /* ---------------- Teacher assignments: homework & exams (phase 5) ----------------
-   Teacher picks topic + level + count -> questions sampled from the quiz-bank
-   JSONs -> snapshot stored in public.assignments -> student plays it in the
-   classic quiz renderer -> result lands in public.assignment_results. */
+   Teacher picks v2 topic/points + level + count -> questions sampled from the
+   grammar_bank table -> snapshot stored in public.assignments -> student plays
+   it -> result lands in public.assignment_results. */
 const ASSIGN_LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
-const ASSIGN_TOPICS = {
-  a1: [
-    'Verb be: am/is/are',
-    'Possessive adjectives (my/your/his/her...)',
-    'a/an + plural nouns',
-    'this/that/these/those',
-    'Present simple: I/you/we/they',
-    'Present simple: he/she/it (3rd person -s)',
-    'Questions with be and do/does',
-    'Prepositions of place (in/on/under/behind...)',
-    "can/can't (ability, requests)",
-    "Possessive 's (my brother's car)",
-    'was/were (past of be)',
-    'Past simple: regular verbs',
-    'Past simple: irregular verbs',
-    'there is/there are (+ was/were)',
-    'some/any + countable/uncountable nouns',
-    'how much / how many',
-    'Comparatives (taller than)',
-    'Superlatives (the tallest)',
-    'be going to (plans)',
-    'Adverbs of frequency (always/usually/never)'
-  ],
-  a2: [
-    'Present continuous (right now)',
-    'Present simple vs present continuous',
-    'Past continuous',
-    'Past simple vs past continuous',
-    'going to vs will',
-    "will/won't (decisions, offers, promises)",
-    'Present continuous for future arrangements',
-    "have to / must / mustn't",
-    "should/shouldn't (advice)",
-    'Present perfect: ever/never/just/yet/already',
-    'Present perfect vs past simple',
-    'First conditional (if + will)',
-    'Second conditional (if + would)',
-    '(not) as...as, less, (not) enough',
-    'too much/too many, (a) little/(a) few',
-    'Articles: a/an/the/zero article',
-    'Relative clauses: who/which/that',
-    'so / such',
-    'Passive: present simple (is made)',
-    'Verb patterns: want to do / enjoy doing'
-  ],
-  b1: [
-    'Present perfect simple vs continuous',
-    'Past perfect',
-    'Narrative tenses (past simple/continuous/perfect)',
-    'Future forms (will / going to / present continuous)',
-    'Conditionals review (zero, first, second)',
-    'Third conditional',
-    'wish + past simple / would',
-    'Reported speech: statements',
-    'Reported speech: questions and orders',
-    'Passive: past & future, by-phrase',
-    'must / have to / should (obligation & advice)',
-    "Modals of deduction: must/might/can't (present)",
-    "used to / didn't use to",
-    'Gerund vs infinitive (basic patterns)',
-    'Defining vs non-defining relative clauses',
-    'Articles (advanced uses)',
-    'Quantifiers: both/neither/all/none',
-    'Question tags',
-    'Indirect questions (Do you know where...?)',
-    'so/such, too/enough (consolidation)'
-  ],
-  b2: [
-    'Past perfect continuous',
-    'Future perfect & future continuous',
-    'Mixed conditionals',
-    'wish / if only + past perfect',
-    "would rather / had better / it's time",
-    'Reported speech with reporting verbs',
-    'Passive advanced (be said to, have/get sth done)',
-    'Modals of deduction in the past (must have done...)',
-    "needn't have vs didn't need to",
-    'Gerund vs infinitive: meaning change (remember/stop/try...)',
-    'Participle clauses (-ing / -ed clauses)',
-    'Inversion (Never have I..., Not only...)',
-    'Cleft sentences (What I want is...)',
-    'Relative clauses: reduced & with prepositions',
-    'Articles & quantifiers (advanced)',
-    'Ellipsis & substitution (so/neither/do so)',
-    'Unreal past & hypothetical meaning',
-    'Linkers: contrast & addition (despite, whereas...)',
-    'Nominalization (decide → decision)',
-    'Emphasis with do/does/did'
-  ],
-  c1: [
-    'Conditionals: inversion (Had I known..., Were I to...)',
-    'Advanced mixed conditionals',
-    "Subjunctive (It's vital that he be...)",
-    'Future in the past (was going to / would)',
-    'Stative passive & passive with modals',
-    'Modals: criticism & regret (should have...)',
-    'Verb + object + infinitive (want him to go)',
-    'Advanced participle clauses',
-    'Advanced inversion (Scarcely..., No sooner...)',
-    'Cleft & pseudo-cleft (advanced focus)',
-    'Advanced ellipsis & substitution',
-    'Generic vs specific articles',
-    'each/every, either/neither (advanced)',
-    'Dependent prepositions (good at, famous for...)',
-    'make/do/have/take collocations',
-    'Hedging (tend to, apparently, seem)',
-    'Formal style & nominalization',
-    'suppose / what if + past (hypothetical)',
-    'Cohesive devices (advanced discourse)',
-    'Emphatic fronting'
-  ],
-  c2: [
-    'will/would: habits & willingness (nuance)',
-    'shall: formal offers & rules',
-    'Advanced inversion for rhetoric',
-    'It-clefts & extraposition (It is... that)',
-    'Absolute phrases & advanced participles',
-    'Subjunctive in formal registers',
-    'Conditionals: even if / only if / provided that',
-    'Unreal conditionals in formal style',
-    'Dense noun phrases (academic)',
-    'Hedging & stance (academic writing)',
-    'Idiomatic prepositions (advanced)',
-    'Articles with abstract nouns',
-    'Complex relatives (whereby, whereupon...)',
-    'Advanced reported structures',
-    'Emphasis: repetition & do-support',
-    'Concession linkers (much as, albeit, notwithstanding)',
-    'Rare verb complementation patterns',
-    'Register transformation (formal ↔ informal)',
-    'Fronting for focus (advanced)',
-    'Mixed advanced review (subtle distinctions)'
-  ]
-};
+
 
 /* ---- Grammar v2 pilot metadata (family -> topics, linked points) ---- */
-var V2_FAMILIES = {"present-tenses": {"title": "Present Tenses in English: Simple and Continuous", "topics": ["present-simple", "present-continuous", "present-simple-vs-present-continuous", "stative-verbs"]}, "past-tenses": {"title": "Past Tenses", "topics": ["past-perfect"]}};
-var V2_TOPICS = {"past-perfect": {"h1": "Past Perfect (had done)", "family": "past-tenses", "summary": "One step further back in the past: When I arrived, the film had started.", "linked_points": [], "levels": ["b1", "b2", "c1"], "points": [{"id": "ppf-form-use", "level": "b1", "title": "Form and main use: something earlier in the past", "summary": "had + past participle for an action before another past moment."}, {"id": "ppf-vs-past-simple", "level": "b1", "title": "Past simple or past perfect? The order of events", "summary": "Past simple for events in order; past perfect for an event that happened earlier than the one you're talking about."}, {"id": "ppf-time-words", "level": "b1", "title": "By the time, already, just, never … before", "summary": "by the time + past simple, then past perfect; already, just, never … before with the past perfect."}, {"id": "ppf-vs-present-perfect", "level": "b1", "title": "Present perfect or past perfect?", "summary": "have done = before now; had done = before a moment in the past."}, {"id": "ppf-first-time", "level": "b2", "title": "It was the first time I'd…; states up to a past moment", "summary": "It was the first time / the best … I'd ever + past perfect; state verbs up to a past moment use the past perfect simple."}, {"id": "ppf-optional", "level": "c1", "title": "When the past perfect is optional", "summary": "If the order is already clear (after, as soon as, before) the past simple is also fine; once the earlier time is set, you can continue in the past simple."}, {"id": "ppf-reporting", "level": "c1", "title": "Past perfect in reported speech and thoughts", "summary": "A present perfect becomes past perfect when reported in the past; a past simple can become past perfect or stay the same."}, {"id": "ppf-unfulfilled", "level": "c1", "title": "Plans that didn't happen: I had hoped to…", "summary": "had hoped / meant / intended / planned / wanted to = a plan or wish that didn't happen."}]}, "present-continuous": {"h1": "Present Continuous", "family": "present-tenses", "summary": "Now, around now, plans and changes: I'm working, are you coming?", "linked_points": [], "levels": ["a1", "a2", "b1", "c1"], "points": [{"id": "pc-form-now", "level": "a1", "title": "Form and use: I'm working (now)", "summary": "am / is / are + verb-ing for something happening at the moment of speaking."}, {"id": "pc-around-now", "level": "a2", "title": "Around now and temporary situations", "summary": "Use the present continuous for things happening around now (this week, at the moment) and temporary situations."}, {"id": "pc-future", "level": "a2", "title": "Future arrangements: I'm meeting Sam tonight", "summary": "Use the present continuous for future plans that are already arranged, usually with a time."}, {"id": "pc-changing", "level": "b1", "title": "Changing situations: It's getting colder", "summary": "Use the present continuous for situations that are changing now: get, become, increase, improve."}, {"id": "pc-always", "level": "b1", "title": "always + continuous: He's always complaining", "summary": "always / constantly / forever + continuous for something that happens too often, often annoying."}, {"id": "pc-regular-time", "level": "c1", "title": "In progress at a regular time; always for typical behaviour", "summary": "At 8 I'm usually driving = in the middle of it at that time; always + continuous can also describe typical (even positive) behaviour."}, {"id": "pc-future-limits", "level": "c1", "title": "When not to use it for the future", "summary": "Use the present continuous for arranged or decided plans, not for predictions or permanent future situations."}]}, "present-simple-vs-present-continuous": {"h1": "Present Simple vs Present Continuous", "family": "present-tenses", "summary": "How to choose: I work (in general) or I'm working (now)?", "linked_points": ["sv-basic", "sv-two-meanings", "pc-always"], "levels": ["a2", "b1", "c1"], "points": [{"id": "psc-now-general", "level": "a2", "title": "Now or in general?", "summary": "Present continuous for now; present simple for habits, facts and things in general."}, {"id": "psc-temporary-permanent", "level": "b1", "title": "Temporary or permanent?", "summary": "Present continuous for temporary situations; present simple for permanent ones."}, {"id": "psc-stories-commentary", "level": "c1", "title": "Stories, jokes and live commentary", "summary": "In informal stories and live commentary, the present continuous gives the background and the present simple gives the main events."}]}, "present-simple": {"h1": "Present Simple", "family": "present-tenses", "summary": "Habits, facts, timetables and more: I work, she works, do you work?", "linked_points": [], "levels": ["a1", "a2", "b1", "c1"], "points": [{"id": "ps-form", "level": "a1", "title": "Form: I work, she works", "summary": "Use the base verb with I, you, we, they; add -s or -es with he, she, it."}, {"id": "ps-negative-questions", "level": "a1", "title": "Negatives and questions: don't, doesn't, do, does", "summary": "Negatives: don't / doesn't + base verb. Questions: do / does + subject + base verb."}, {"id": "ps-uses", "level": "a1", "title": "Uses: habits, facts and permanent situations", "summary": "Use the present simple for habits, routines, facts, permanent situations and likes."}, {"id": "ps-timetables", "level": "a2", "title": "Timetables and schedules: The train leaves at 8", "summary": "Use the present simple for future events on a timetable or schedule."}, {"id": "ps-performatives", "level": "b1", "title": "I promise, I agree, I apologise: saying is doing", "summary": "Verbs like promise, agree and apologise do the action when you say them: use the present simple."}, {"id": "ps-headlines-reporting", "level": "c1", "title": "Headlines, summaries, instructions and I hear", "summary": "The present simple is also used in headlines, plot summaries, instructions and to pass on news (I hear, I gather)."}]}, "stative-verbs": {"h1": "Stative Verbs", "family": "present-tenses", "summary": "Verbs for states, not actions: I know (not I'm knowing), and when the continuous is possible.", "linked_points": [], "levels": ["a2", "b1", "b2", "c1"], "points": [{"id": "sv-basic", "level": "a2", "title": "Verbs we don't use in the continuous", "summary": "know, want, like, need, understand, believe, belong… use the simple form, even for now."}, {"id": "sv-two-meanings", "level": "b1", "title": "Verbs with two meanings: think, have, see, taste", "summary": "Some verbs are states with one meaning and actions with another; only the action meaning can be continuous."}, {"id": "sv-being", "level": "b2", "title": "He's being rude: be in the continuous, and states in perfect tenses", "summary": "is being + adjective = behaviour right now; state verbs stay simple in perfect tenses (I've known, not I've been knowing)."}, {"id": "sv-advanced", "level": "c1", "title": "State verbs in the continuous for emphasis or change", "summary": "Informally, some state verbs take the continuous to stress a temporary feeling or a gradual change: We're loving it, I'm regretting it."}]}};
+var V2_FAMILIES = {};
+var V2_TOPICS = {};
+var V2_INDEX_LOADED = false;
+/* Load the generated v2 topic index (21 families, 107 topics) once */
+async function loadV2Index() {
+  if (V2_INDEX_LOADED) return;
+  try {
+    const r = await fetch('data/grammar/v2-index.json');
+    if (!r.ok) return;
+    const idx = await r.json();
+    V2_FAMILIES = idx.families || {};
+    V2_TOPICS = idx.topics || {};
+    V2_INDEX_LOADED = true;
+  } catch (e) {}
+}
 
 /* Legacy topics hidden when v2 covers them (spec mapping table) */
-var V2_HIDDEN_LEGACY = [
-  'Present simple: I/you/we/they',
-  'Present simple: he/she/it (3rd person -s)',
-  'Present continuous (right now)',
-  'Present simple vs present continuous',
-  'Present continuous for future arrangements',
-  'Past perfect'
-];
 
-function assignSlug(topic) {
-  return String(topic).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-}
 
 /* ---- teacher composer ---- */
 /* Shared assignment-composer form (used by the modal and by the /teachers full-page composer). */
@@ -3327,8 +3196,9 @@ function assignmentComposerWire() {
   });
 }
 
-function teacherAssignmentComposer() {
+async function teacherAssignmentComposer() {
   if (twReadOnly()) { twReadOnlyNotice(); return; }
+  await loadV2Index();
   const list = state.teacherStudents || [];
   if (!state.teacher) return;
   if (!list.length) {    showModal('<div class="modal-ico">📝</div><h2>New assignment</h2>' +
@@ -3378,8 +3248,6 @@ function asComposeDone() {
   }
 }
 function examTopicOptions(selected) {
-  const lvEl = document.getElementById('as-level');
-  const lv = lvEl ? lvEl.value : 'a2';
   let html = '';
   Object.keys(V2_FAMILIES).forEach(function (famSlug) {
     const fam = V2_FAMILIES[famSlug];
@@ -3391,17 +3259,6 @@ function examTopicOptions(selected) {
     });
     html += '</optgroup>';
   });
-  const legacy = (ASSIGN_TOPICS[lv] || []).filter(function (t) {
-    return V2_HIDDEN_LEGACY.indexOf(t) === -1;
-  });
-  if (legacy.length) {
-    html += '<optgroup label="Classic">';
-    html += legacy.map(function (t) {
-      const val = 'legacy:' + t;
-      return '<option value="' + esc(val) + '"' + (val === selected ? ' selected' : '') + '>' + esc(t) + '</option>';
-    }).join('');
-    html += '</optgroup>';
-  }
   return html;
 }
 function examAddRow(topic, count) {
@@ -3426,7 +3283,6 @@ function examUpdateTotal() {
   host.textContent = 'Total: ' + total + ' questions' + (rows ? ' across ' + rows + ' topic' + (rows > 1 ? 's' : '') : '');
 }
 function assignmentFillTopics() {
-  const lv = document.getElementById('as-level').value;
   const sel = document.getElementById('as-topic');
   let html = '';
   /* v2 topics grouped by family */
@@ -3440,17 +3296,6 @@ function assignmentFillTopics() {
     });
     html += '</optgroup>';
   });
-  /* legacy topics (minus hidden) */
-  const legacy = (ASSIGN_TOPICS[lv] || []).filter(function (t) {
-    return V2_HIDDEN_LEGACY.indexOf(t) === -1;
-  });
-  if (legacy.length) {
-    html += '<optgroup label="Classic">';
-    html += legacy.map(function (t) {
-      return '<option value="legacy:' + esc(t) + '">' + esc(t) + '</option>';
-    }).join('');
-    html += '</optgroup>';
-  }
   sel.innerHTML = html;
   /* show/hide v2 panel */
   asV2PanelUpdate();
@@ -3607,21 +3452,25 @@ function asV2GetPool() {
   });
   return pool;
 }
-/* fetch bank exercises from Supabase (graceful if table missing) */
+/* fetch bank exercises from Supabase: server-side points overlap + pagination */
 async function asV2FetchBank(pointIds) {
   try {
-    if (typeof sb === 'undefined') return [];
-    const res = await sb.from('grammar_bank').select('id,data').in('id', pointIds.map(function (pid) {
-      /* bank ids are like pc-always-b03; match by point prefix */
-      return pid;
-    }));
-    /* Actually query by data->points overlap - simpler: fetch all and filter */
-    const all = await sb.from('grammar_bank').select('id,data').eq('status', 'active').limit(500);
-    if (all.error) return [];
-    return (all.data || []).filter(function (row) {
-      const pts = (row.data && row.data.points) || [];
-      return pts.some(function (pid) { return pointIds.indexOf(pid) !== -1; });
-    }).map(function (row) { return row.data; });
+    if (typeof sb === 'undefined' || !pointIds || !pointIds.length) return [];
+    var all = [];
+    var from = 0;
+    var PAGE = 1000;
+    for (;;) {
+      var res = await sb.from('grammar_bank').select('data')
+        .eq('status', 'active')
+        .overlaps('points', pointIds)
+        .range(from, from + PAGE - 1);
+      if (res.error) break;
+      var rows = res.data || [];
+      all = all.concat(rows);
+      if (rows.length < PAGE) break;
+      from += PAGE;
+    }
+    return all.map(function (row) { return row.data; });
   } catch (e) {
     return [];
   }
@@ -3630,12 +3479,7 @@ async function createAssignment(btn) {
   const errBox = document.getElementById('as-error');
   const err = function (m) { if (errBox) errBox.textContent = m; };
   err('');
-  const kind = 'homework';
   const level = document.getElementById('as-level').value;
-  let topic = document.getElementById('as-topic').value;
-  /* strip v2:/legacy: prefix for legacy flow */
-  if (topic.indexOf('legacy:') === 0) topic = topic.slice(7);
-  const count = parseInt(document.getElementById('as-count').value, 10) || 10;
   const roster = state.teacherStudents || [];
   const useAll = document.getElementById('as-all').checked;
   const targets = useAll ? roster.slice() : roster.filter(function (s) {
@@ -3645,55 +3489,8 @@ async function createAssignment(btn) {
   if (!targets.length) { err('Pick at least one student.'); return; }
   const mode = (typeof assignMode !== 'undefined' && assignMode === 'exam') ? 'exam' : 'homework';
   if (mode === 'exam') { await createExamAssignment(btn, { err: err, level: level, targets: targets, orig: btn.textContent }); return; }
-  /* v2 homework flow */
-  if (asIsV2()) { await createV2Assignment(btn, { err: err, targets: targets, orig: btn.textContent }); return; }
-  btn.disabled = true;
-  const orig = btn.textContent;
-  btn.textContent = 'Preparing…';
-  let bank;
-  try {
-    const r = await fetch('quiz-bank/' + level + '/' + assignSlug(topic) + '.json');
-    if (!r.ok) throw new Error('bank 404');
-    bank = await r.json();
-  } catch (e) {
-    err('Could not load the question bank — check your connection.');
-    btn.disabled = false; btn.textContent = orig; return;
-  }
-  const picked = shuffleArr((bank.questions || []).slice()).slice(0, Math.min(count, (bank.questions || []).length));
-  if (!picked.length) { err('This topic has no questions yet.'); btn.disabled = false; btn.textContent = orig; return; }
-  const questions = picked.map(function (q) {
-    return { q: q.q, options: q.options, answer: q.answer, explanation: q.explanation || '' };
-  });
-  const title = '📝 ' + topic + ' (' + level.toUpperCase() + ')';
-  const noteEl = document.getElementById('as-note');
-  const dlEl = document.getElementById('as-deadline');
-  const note = noteEl ? noteEl.value.trim() : '';
-  const deadline = dlEl && dlEl.value ? dlEl.value : null;
-  btn.textContent = 'Sending…';
-  try {
-    const ins = await sb.from('assignments').insert({
-      teacher_id: tchViewId(),
-      teacher_name: ((state.twViewTeacher || state.teacher) && (state.twViewTeacher || state.teacher).display_name) || '',
-      kind: kind, title: title, level: level,
-      topic: assignSlug(topic), topic_label: topic,
-      question_count: questions.length, questions: questions,
-      student_ids: targets.map(function (s) { return s.user_id; }),
-      note: note || null, deadline: deadline
-    }).select('id').single();
-    if (ins.error) throw ins.error;
-    const body = '📝 Your teacher sent you homework' +
-      ': ' + title + ' — open Muse English to start.';
-    await Promise.all(targets.map(function (s) {
-      return Promise.allSettled([
-        sb.rpc('send_teacher_message', { p_student: s.user_id, p_body: body }),
-        sb.rpc('send_nudge', { p_student: s.user_id })
-      ]);
-    }));
-    asComposeDone();
-  } catch (e) {
-    err('Could not send: ' + (e && e.message ? e.message : 'check your connection.'));
-    btn.disabled = false; btn.textContent = orig;
-  }
+  /* all topics are v2 now: homework always uses the v2 bank flow */
+  await createV2Assignment(btn, { err: err, targets: targets, orig: btn.textContent });
 }
 
 
@@ -3728,13 +3525,12 @@ async function createV2Assignment(btn, ctx) {
   const slugs = asV2Slugs();
   if (!slugs.length) { err('Select a topic.'); return; }
   const count = parseInt(document.getElementById('as-count').value, 10) || 10;
-  /* get pool */
-  let pool = asV2GetPool();
-  /* try bank for additional questions */
+  /* bank-first pool (site exercises only top up when the bank is short) */
   const selPts = [];
   Array.prototype.forEach.call(document.querySelectorAll('.as-v2-pt:checked'), function (cb) {
     selPts.push(cb.value);
   });
+  let pool = [];
   try {
     const bankQs = await asV2FetchBank(selPts);
     /* filter bank by selected levels/types/difficulty */
@@ -3750,11 +3546,17 @@ async function createV2Assignment(btn, ctx) {
       if (!selTypes[ex.type || 'mcq']) return;
       if (diff === 'easy' && ex.difficulty !== 1) return;
       if (diff === 'hard' && ex.difficulty !== 3) return;
-      /* avoid duplicates */
-      const exists = pool.some(function (p) { return p.id === ex.id; });
-      if (!exists) pool.push(ex);
+      pool.push(ex);
     });
   } catch (e) {}
+  if (pool.length < count) {
+    /* top up with site exercises only */
+    const seen = {};
+    pool.forEach(function (ex) { seen[ex.id] = true; });
+    asV2GetPool().forEach(function (ex) {
+      if (!seen[ex.id]) { pool.push(ex); seen[ex.id] = true; }
+    });
+  }
   if (!pool.length) { err('No questions available for this selection.'); return; }
   btn.disabled = true;
   btn.textContent = 'Preparing…';
@@ -3846,44 +3648,33 @@ async function createExamAssignment(btn, ctx) {
     let t = r.querySelector('.as-mix-topic').value;
     const c = parseInt(r.querySelector('.as-mix-count').value, 10) || 0;
     if (t && c > 0) {
-      /* normalize v2:/legacy: prefixes */
-      let isV2 = false, slug = t;
-      if (t.indexOf('v2:') === 0) { isV2 = true; slug = t.slice(3); }
-      else if (t.indexOf('legacy:') === 0) { slug = t.slice(7); }
-      mix.push({ topic: slug, count: c, isV2: isV2, raw: t });
+      /* v2 topic values look like v2:<slug> */
+      let slug = t;
+      if (t.indexOf('v2:') === 0) { slug = t.slice(3); }
+      mix.push({ topic: slug, count: c, raw: t });
     }
   });
   if (!mix.length) { err('Add at least one topic with at least 1 question.'); return; }
   btn.disabled = true;
   btn.textContent = 'Preparing…';
-  const settled = await Promise.all(mix.map(function (m) {
-    if (m.isV2) {
-      /* v2: get exercises from app data */
-      const topic = (typeof findGrammarTopic === 'function') ? findGrammarTopic(m.topic) : null;
-      const items = (topic && topic.v2 && topic.exercises && topic.exercises.items) || [];
-      /* filter by level */
-      const lvItems = items.filter(function (ex) {
-        return (ex.level || '').toLowerCase() === level;
-      });
-      return { m: m, bank: { questions: lvItems }, isV2: true };
-    }
-    return fetch('quiz-bank/' + level + '/' + assignSlug(m.topic) + '.json')
-      .then(function (r) { if (!r.ok) throw new Error('bank 404'); return r.json(); })
-      .then(function (bank) { return { m: m, bank: bank }; })
-      .catch(function () { return { m: m, bank: null }; });
+  const settled = await Promise.all(mix.map(async function (m) {
+    /* v2: bank questions for this topic's points, filtered by the exam level */
+    const t = V2_TOPICS[m.topic];
+    const ptIds = ((t && t.points) || []).map(function (p) { return p.id; });
+    let bankQs = [];
+    try { bankQs = await asV2FetchBank(ptIds); } catch (e) {}
+    const lvItems = bankQs.filter(function (ex) {
+      return String(ex.level || '').toLowerCase() === level;
+    });
+    return { m: m, bankQs: lvItems };
   }));
   const skipped = [];
   let questions = [];
   settled.forEach(function (s) {
-    const qs = (s.bank && s.bank.questions) || [];
+    const qs = s.bankQs || [];
     if (!qs.length) { skipped.push(s.m.topic); return; }
     shuffleArr(qs.slice()).slice(0, Math.min(s.m.count, qs.length)).forEach(function (q) {
-      if (s.isV2) {
-        /* v2 snapshot format */
-        questions.push(asV2SnapshotQ(q, s.m.topic));
-      } else {
-        questions.push({ q: q.q, options: q.options, answer: q.answer, explanation: q.explanation || '', topic_label: s.m.topic });
-      }
+      questions.push(asV2SnapshotQ(q, s.m.topic));
     });
   });
   if (!questions.length) {
@@ -4019,6 +3810,7 @@ function plannerDayLabel(dow, timeStr) {
 }
 async function renderPlanner(v) {
   if (!state.teacher) { go('become-teacher'); return; }
+  await loadV2Index();
   v.innerHTML = '<div class="tch-wrap"><a class="pl-back" href="#/teacher">← Teacher dashboard</a>' +
     '<h1 class="pl-title">📅 Weekly planner</h1>' +
     '<p class="muted" style="margin-top:-0.4rem">Pick a topic for each day — the rest uses your usual settings. Empty days are skipped.</p>' +
@@ -4118,13 +3910,19 @@ function plannerPrefillSched(schedMap) {
   });
 }
 function plannerFillTopics() {
-  const lv = document.getElementById('pl-level').value;
   Array.prototype.forEach.call(document.querySelectorAll('.pl-topic'), function (sel) {
     const cur = sel.value;
-    sel.innerHTML = '<option value="">— no homework —</option>' +
-      (ASSIGN_TOPICS[lv] || []).map(function (t) {
-        return '<option value="' + esc(t) + '">' + esc(t) + '</option>';
-      }).join('');
+    let html = '<option value="">— no homework —</option>';
+    Object.keys(V2_FAMILIES).forEach(function (famSlug) {
+      const fam = V2_FAMILIES[famSlug];
+      html += '<optgroup label="' + esc(fam.title) + '">';
+      fam.topics.forEach(function (tslug) {
+        const t = V2_TOPICS[tslug];
+        if (t) html += '<option value="v2:' + esc(tslug) + '">' + esc(t.h1) + '</option>';
+      });
+      html += '</optgroup>';
+    });
+    sel.innerHTML = html;
     sel.value = cur;
   });
 }
@@ -4229,22 +4027,27 @@ async function savePlanner(btn) {
     let n = 0;
     const total = rows.length * tzList.length;
     for (const r of rows) {
-      const br = await fetch('quiz-bank/' + level + '/' + assignSlug(r.topic) + '.json');
-      if (!br.ok) throw new Error('bank');
-      const bank = await br.json();
-      const picked = shuffleArr((bank.questions || []).slice()).slice(0, Math.min(r.count, (bank.questions || []).length));
-      if (!picked.length) throw new Error('empty');
-      const questions = picked.map(function (q) {
-        return { q: q.q, options: q.options, answer: q.answer, explanation: q.explanation || '' };
+      /* v2 topic value looks like v2:<slug> */
+      const slug = r.topic.indexOf('v2:') === 0 ? r.topic.slice(3) : r.topic;
+      const t = V2_TOPICS[slug];
+      const ptIds = ((t && t.points) || []).map(function (p) { return p.id; });
+      let bankQs = [];
+      try { bankQs = await asV2FetchBank(ptIds); } catch (e) {}
+      const lvItems = bankQs.filter(function (ex) {
+        return String(ex.level || '').toLowerCase() === level;
       });
+      const picked = shuffleArr(lvItems.slice()).slice(0, Math.min(r.count, lvItems.length));
+      if (!picked.length) throw new Error('empty');
+      const questions = picked.map(function (ex) { return asV2SnapshotQ(ex, slug); });
+      const topicLabel = t ? t.h1 : slug;
       for (const tz of tzList) {
         btn.textContent = 'Scheduling ' + (++n) + '/' + total + '…';
         const sendAt = wallTimeToUtc(r.dateStr, r.timeStr, tz);
         const ins = await sb.from('assignments').insert({
           teacher_id: tchViewId(),
           teacher_name: ((state.twViewTeacher || state.teacher) && (state.twViewTeacher || state.teacher).display_name) || '',
-          kind: 'homework', title: '📝 ' + r.topic + ' (' + level.toUpperCase() + ')',
-          level: level, topic: assignSlug(r.topic), topic_label: r.topic,
+          kind: 'homework', title: '📝 ' + topicLabel + ' (' + level.toUpperCase() + ')',
+          level: level, topic: slug, topic_label: topicLabel,
           question_count: questions.length, questions: questions,
           student_ids: groups[tz].map(function (s) { return s.user_id; }),
           note: null, deadline: null,
@@ -12476,7 +12279,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610192103';
+var APP_VERSION = '202610192235';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -13342,6 +13145,7 @@ async function twPageAssignmentDetail(c) {
    Reuses assignmentComposerBodyHTML() + assignmentComposerWire() (shared with the modal). */
 async function twPageCompose(c) {
   if (twReadOnly()) { twShowSection('assignments'); return; }
+  await loadV2Index();
   var list = await twGetStudents();
   var head = twPageHead('ASSIGNMENTS', 'New assignment',
       'Pick a topic, choose teaching points and send it to your students.') +
@@ -14545,7 +14349,7 @@ function renderVocabCat(v, slug) {
       var best = prog && prog.done ? '<span class="vc-best">\u2713 Practised</span>' : '';
       var rows = words.map(function (w) {
         return '<div class="vc-word">' +
-          (w.photo ? '<img class="vc-word-img" src="/' + w.photo + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '') +
+          (w.photo ? '<img class="vc-word-img" src="' + (/^https?:\/\//.test(w.photo) ? w.photo : '/' + w.photo) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '') +
           '<div class="vc-word-body">' +
           '<div class="vc-word-top"><b>' + esc(w.word) + '</b>' +
           (w.audio ? '<button class="vc-say" data-action="vc-say" data-audio="' + esc(/^https?:\/\//.test(w.audio) ? w.audio : '/' + w.audio) + '" aria-label="Listen to pronunciation">\uD83D\uDD0A</button>' : '') +
