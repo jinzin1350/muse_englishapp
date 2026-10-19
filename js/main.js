@@ -3214,8 +3214,8 @@ function assignSlug(topic) {
 function assignmentComposerBodyHTML(list) {
   return (
     '<div class="as2-modes" role="tablist">' +
-    '<button type="button" class="as2-mode on" data-amode="homework">📝 Homework</button>' +
-    '<button type="button" class="as2-mode" data-amode="exam">📋 Exam</button></div>' +
+    '<button type="button" class="as2-mode on" data-amode="homework"><span class="as2-mode-ico">📝</span><span class="as2-mode-txt"><b>Homework</b><small>Practice and reinforce learning</small></span></button>' +
+    '<button type="button" class="as2-mode" data-amode="exam"><span class="as2-mode-ico">📋</span><span class="as2-mode-txt"><b>Exam</b><small>Assess student knowledge</small></span></button></div>' +
     '<div class="field"><label for="as-level">Level</label>' +
     '<select id="as-level" class="input">' +
     ASSIGN_LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (lv === 'a2' ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') +
@@ -3228,14 +3228,14 @@ function assignmentComposerBodyHTML(list) {
     '<div id="as-v2-points"></div></div>' +
     '<div class="field"><label>Levels</label><div id="as-v2-levels"></div></div>' +
     '<div class="field"><label>Question types</label><div id="as-v2-types">' +
-    '<label class="chk"><input type="checkbox" class="as-v2-type" value="mcq" checked> Multiple choice</label>' +
-    '<label class="chk"><input type="checkbox" class="as-v2-type" value="gap" checked> Typing</label>' +
-    '<label class="chk"><input type="checkbox" class="as-v2-type" value="error" checked> Find the mistake</label>' +
+    '<label class="chk as2-type-card"><input type="checkbox" class="as-v2-type" value="mcq" checked> <span class="as2-type-ico">👥</span> Multiple choice</label>' +
+    '<label class="chk as2-type-card"><input type="checkbox" class="as-v2-type" value="gap" checked> <span class="as2-type-ico">⌨️</span> Typing</label>' +
+    '<label class="chk as2-type-card"><input type="checkbox" class="as-v2-type" value="error" checked> <span class="as2-type-ico">🔍</span> Find the mistake</label>' +
     '</div></div>' +
     '<div class="field"><label>Difficulty</label><div id="as-v2-diff">' +
-    '<label class="chk"><input type="radio" name="as-v2-diff" value="easy"> Easy</label>' +
-    '<label class="chk"><input type="radio" name="as-v2-diff" value="mixed" checked> Mixed</label>' +
-    '<label class="chk"><input type="radio" name="as-v2-diff" value="hard"> Hard</label>' +
+    '<label class="chk as2-diff-card"><input type="radio" name="as-v2-diff" value="easy"> <span class="as2-diff-txt"><b>Easy</b><small>Simpler questions</small></span></label>' +
+    '<label class="chk as2-diff-card"><input type="radio" name="as-v2-diff" value="mixed" checked> <span class="as2-diff-txt"><b>Mixed</b><small>A mix of easy and challenging questions</small></span></label>' +
+    '<label class="chk as2-diff-card"><input type="radio" name="as-v2-diff" value="hard"> <span class="as2-diff-txt"><b>Hard</b><small>More challenging questions</small></span></label>' +
     '</div></div>' +
     '<div class="muted" id="as-v2-pool" style="font-size:.85rem"></div>' +
     '</div>' +
@@ -3250,16 +3250,18 @@ function assignmentComposerBodyHTML(list) {
     '<div class="muted" id="as-mixtotal" style="margin-top:.45rem;font-size:.85rem">Total: 0 questions</div>' +
     '</div></div>' +
     '<div class="field"><label>Students</label><div class="as2-students">' +
-    '<label class="chk"><input type="checkbox" id="as-all" checked> All students (' + list.length + ')</label>' +
+    '<label class="chk as2-student-all"><input type="checkbox" id="as-all" checked> <span class="as2-type-ico">👥</span> <span class="as2-student-txt"><b>All students (' + list.length + ')</b><small>Send to your entire class</small></span></label>' +
     '<div id="as-students" class="as-pick hidden">' +
     list.map(function (s) {
       const nm = s.display_name || (s.email || '?').split('@')[0];
       return '<label class="chk"><input type="checkbox" class="as-st" value="' + esc(s.user_id) + '" checked> ' + esc(nm) + '</label>';
     }).join('') + '</div></div></div>' +
+    '<div class="as2-row2">' +
     '<div class="field"><label for="as-note">Note for students <span class="as2-opt">(optional)</span></label>' +
     '<input id="as-note" class="input" maxlength="200" placeholder="e.g. Focus on the verb forms!"></div>' +
     '<div class="field"><label for="as-deadline">Deadline <span class="as2-opt">(optional)</span></label>' +
-    '<input id="as-deadline" class="input" type="date"></div>' +
+    '<input id="as-deadline" class="input" type="date" placeholder="yyyy-mm-dd"></div>' +
+    '</div>' +
     '<div class="form-error" id="as-error" role="alert"></div>' +
     '<button class="as2-send" data-action="assignment-create">✈ Send to students</button>'
   );
@@ -3458,16 +3460,21 @@ function asV2PanelUpdate() {
   if (!pointsHost || !levelsHost) return;
   let ptsHtml = '';
   const allLevels = {};
-  slugs.forEach(function (slug) {
+  const secColors = ['peach', 'green', 'blue'];
+  slugs.forEach(function (slug, sidx) {
     const t = V2_TOPICS[slug];
     if (!t) return;
+    const color = secColors[sidx % 3];
+    ptsHtml += '<div class="as2-sec as2-sec-' + color + '">';
     ptsHtml += '<div class="as-v2-topic-head">' + esc(t.h1) + '</div>';
+    ptsHtml += '<div class="as2-pt-grid">';
     (t.points || []).forEach(function (p) {
       allLevels[p.level] = true;
-      ptsHtml += '<label class="chk as-v2-point"><input type="checkbox" class="as-v2-pt" value="' + esc(p.id) +
+      ptsHtml += '<label class="as2-pt-card"><input type="checkbox" class="as-v2-pt" value="' + esc(p.id) +
         '" data-level="' + esc(p.level) + '" checked> ' +
         '<span class="gh-lv">' + esc(p.level.toUpperCase()) + '</span> ' +
-        '<b>' + esc(p.title) + '</b><br><span class="muted">' + esc(p.summary) + '</span></label>';
+        '<span class="as2-pt-body"><b>' + esc(p.title) + '</b>' +
+        '<span class="muted">' + esc(p.summary) + '</span></span></label>';
     });
     /* linked points as optional extras */
     (t.linked_points || []).forEach(function (pid) {
@@ -3480,19 +3487,20 @@ function asV2PanelUpdate() {
       });
       if (found) {
         allLevels[found.p.level] = true;
-        ptsHtml += '<label class="chk as-v2-point as-v2-linked"><input type="checkbox" class="as-v2-pt" value="' + esc(found.p.id) +
+        ptsHtml += '<label class="as2-pt-card as-v2-linked"><input type="checkbox" class="as-v2-pt" value="' + esc(found.p.id) +
           '" data-level="' + esc(found.p.level) + '"> ' +
           '<span class="gh-lv">' + esc(found.p.level.toUpperCase()) + '</span> ' +
-          '<b>' + esc(found.p.title) + '</b> <span class="as2-opt">(from ' + esc(found.topic) + ')</span><br>' +
-          '<span class="muted">' + esc(found.p.summary) + '</span></label>';
+          '<span class="as2-pt-body"><b>' + esc(found.p.title) + '</b> <span class="as2-opt">(from ' + esc(found.topic) + ')</span>' +
+          '<span class="muted">' + esc(found.p.summary) + '</span></span></label>';
       }
     });
+    ptsHtml += '</div></div>';
   });
   pointsHost.innerHTML = ptsHtml;
   /* level chips */
   const lvls = Object.keys(allLevels).sort();
   levelsHost.innerHTML = lvls.map(function (lv) {
-    return '<label class="chk as-v2-lvchip"><input type="checkbox" class="as-v2-lv" value="' + esc(lv) + '" checked> ' +
+    return '<label class="chk as-v2-lvchip as2-lv-card"><input type="checkbox" class="as-v2-lv" value="' + esc(lv) + '" checked> ' +
       lv.toUpperCase() + '</label>';
   }).join('');
   /* wire up changes */
@@ -12417,7 +12425,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610182103';
+var APP_VERSION = '202610190233';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
