@@ -1903,7 +1903,7 @@ function shouldEnterAppMode() {
 }
 
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'vocab', 'ptest'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'vocab', 'words', 'ptest'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -2018,6 +2018,7 @@ function show(view, arg) {
   document.body.classList.toggle('view-home', view === 'home');
   document.body.classList.toggle('view-grammar', view === 'grammar');
   document.body.classList.toggle('view-vocab', view === 'vocab');
+  document.body.classList.toggle('view-words', view === 'words');
   setChrome();
   paintWelcomeHeader();
   _wasDesktop = isDesktop();
@@ -2049,6 +2050,7 @@ function show(view, arg) {
   else if (view === 'grammar') renderGrammar(v, arg);
   else if (view === 'grammar-test') renderGrammarTest(v, arg);
   else if (view === 'vocab') renderVocab(v, arg);
+  else if (view === 'words') renderWords(v, arg);
   else if (view === 'ptest') renderPTest(v, arg);
 }
 
@@ -12279,7 +12281,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610192257';
+var APP_VERSION = '202610192348';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14518,6 +14520,322 @@ function finishVocabQuiz() {
     loadVocabWords(q.slug).then(function (words) { startVocabQuiz({ slug: q.slug, title: q.title }, words); });
   });
   window.scrollTo(0, 0);
+}
+
+/* ---------------- word map (#/words): WordUp-style vocab study ---------------- */
+
+var WM_LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
+var WM_LV_COLORS = { a1: '#D9A21B', a2: '#E8833A', b1: '#3FA46A', b2: '#F26522', c1: '#4A90D9', c2: '#8E6FC8' };
+var WM_LV_RANK = { a1: 1, a2: 2, b1: 3, b2: 4, c1: 5, c2: 6 };
+
+function wordMapGet() {
+  var p = null;
+  try { p = JSON.parse(localStorage.getItem('muse_wordmap_v1')); } catch (e) { p = null; }
+  if (!p || typeof p !== 'object' || Array.isArray(p)) p = {};
+  if (!p.words || typeof p.words !== 'object') p.words = {};
+  return p;
+}
+function wordMapSet(p) {
+  try { localStorage.setItem('muse_wordmap_v1', JSON.stringify(p)); } catch (e) {}
+}
+function loadAllWords() {
+  if (state.allWords) return Promise.resolve(state.allWords);
+  return fetch('/data/vocab/words.json').then(function (res) {
+    if (!res.ok) throw new Error('words missing');
+    return res.json();
+  }).then(function (data) {
+    state.allWords = data;
+    return data;
+  });
+}
+function wmSlug(w) {
+  var ph = w.photo || '', m = ph.match(/([^\/]+)\.jpg$/);
+  if (m) return m[1];
+  return String(w.word || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+}
+function wmPrimaryLevel(w) {
+  var best = 'c2', br = 99;
+  (w.levels || []).forEach(function (l) {
+    var r = WM_LV_RANK[l] || 99;
+    if (r < br) { br = r; best = l; }
+  });
+  return best;
+}
+function wmPhotoSrc(w) {
+  var ph = w.photo || '';
+  return /^https?:\/\//.test(ph) ? ph : '/' + ph;
+}
+
+function renderWords(v, arg) {
+  if (arg === 'test') { renderWordTest(v); return; }
+  if (arg === 'discover') { renderDiscover(v); return; }
+  renderWordMap(v);
+}
+
+/* --- knowledge map hub --- */
+
+function renderWordMap(v) {
+  v.innerHTML = '<div class="wm-hub"><div class="empty">Loading\u2026</div></div>';
+  loadAllWords().then(function (words) {
+    var map = wordMapGet();
+    var stats = wmComputeStats(words, map);
+    var totalKnown = stats.levels.reduce(function (a, l) { return a + l.known; }, 0);
+    var html = '<div class="wm-hub">' +
+      '<div class="vc-crumb"><span>\uD83D\uDDFA\uFE0F</span> Word Map</div>' +
+      '<div class="vc-hero"><div class="vc-hero-t">' +
+      '<h1>Your <em>Word Map</em></h1>' +
+      '<p>Discover the words you don\u2019t know yet \u2014 ' + totalKnown.toLocaleString() + ' of ' + words.length.toLocaleString() + ' mapped so far.</p>' +
+      '</div><div class="vc-mascot" aria-hidden="true">\uD83D\uDDFA\uFE0F</div></div>';
+    if (!map.tested) {
+      html += '<div class="wm-cta-card"><div class="wm-cta-t">Find your starting point</div>' +
+        '<p>Take a quick 30-word test so we can map what you already know.</p>' +
+        '<a class="wm-btn wm-btn-primary" href="#/words/test">Start the test</a></div>';
+    } else {
+      html += '<div class="wm-level-tag">Your level: <b>' + map.level.toUpperCase() + '</b> <a href="#/words/test">retake</a></div>';
+    }
+    html += '<div class="wm-map">' + stats.levels.map(function (l) {
+      var pctK = l.total ? Math.round(l.known / l.total * 100) : 0;
+      var pctL = l.total ? Math.round(l.learning / l.total * 100) : 0;
+      return '<div class="wm-row">' +
+        '<span class="wm-lv" style="background:' + WM_LV_COLORS[l.lv] + '">' + l.lv.toUpperCase() + '</span>' +
+        '<div class="wm-barwrap"><div class="wm-bar">' +
+        '<i class="wm-seg-k" style="width:' + pctK + '%"></i>' +
+        '<i class="wm-seg-l" style="width:' + pctL + '%"></i>' +
+        '</div><div class="wm-row-sub">' + l.known + ' known \u00B7 ' + l.learning + ' learning \u00B7 ' + l.total + ' words</div></div>' +
+        '</div>';
+    }).join('') + '</div>';
+    html += '<div class="wm-legend"><span><i class="wm-dot" style="background:#3FA46A"></i>known</span>' +
+      '<span><i class="wm-dot" style="background:#E8A33D"></i>learning</span>' +
+      '<span><i class="wm-dot" style="background:#E4DCCB"></i>not mapped</span></div>';
+    if (map.tested) {
+      html += '<a class="wm-btn wm-btn-primary wm-btn-block" href="#/words/discover">Discover new words \u2192</a>';
+    }
+    html += '<a class="wm-link" href="#/vocab">Browse the word library \u2192</a></div>';
+    v.innerHTML = html;
+    window.scrollTo(0, 0);
+  }).catch(function () {
+    v.innerHTML = '<div class="wm-hub"><div class="empty">Could not load words. Check your connection.</div></div>';
+  });
+}
+
+function wmComputeStats(words, map) {
+  var per = {};
+  WM_LEVELS.forEach(function (lv) { per[lv] = { lv: lv, total: 0, known: 0, learning: 0 }; });
+  words.forEach(function (w) {
+    var lv = wmPrimaryLevel(w), s = wmSlug(w), st = map.words[s] && map.words[s].s;
+    per[lv].total++;
+    if (st === 'known') per[lv].known++;
+    else if (st === 'learning') per[lv].learning++;
+  });
+  return { levels: WM_LEVELS.map(function (lv) { return per[lv]; }) };
+}
+
+/* --- placement test: 30 words, know / don't know --- */
+
+function renderWordTest(v) {
+  v.innerHTML = '<div class="wm-wrap"><div class="empty">Loading\u2026</div></div>';
+  loadAllWords().then(function (words) {
+    var items = [];
+    WM_LEVELS.forEach(function (lv) {
+      var pool = words.filter(function (w) { return wmPrimaryLevel(w) === lv && w.word; });
+      shuffleArr(pool).slice(0, 5).forEach(function (w) { items.push({ w: w, lv: lv }); });
+    });
+    state.wtest = { items: shuffleArr(items), idx: 0, known: {} };
+    WM_LEVELS.forEach(function (lv) { state.wtest.known[lv] = 0; });
+    paintWordTest();
+    window.scrollTo(0, 0);
+  });
+}
+
+function paintWordTest() {
+  var t = state.wtest; if (!t) return;
+  var v = document.getElementById('view');
+  if (t.idx >= t.items.length) { finishWordTest(); return; }
+  var w = t.items[t.idx].w;
+  var photo = w.photo ? '<img class="wm-card-img" src="' + esc(wmPhotoSrc(w)) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '';
+  v.innerHTML = '<div class="wm-wrap">' +
+    '<div class="wm-test-top"><span>' + (t.idx + 1) + ' / ' + t.items.length + '</span>' +
+    '<div class="wm-test-bar"><i style="width:' + Math.round(t.idx / t.items.length * 100) + '%"></i></div></div>' +
+    '<div class="wm-card">' + photo +
+    '<button class="wm-audio" id="wm-test-audio" aria-label="Play pronunciation">\uD83D\uDD0A</button>' +
+    '<div class="wm-word">' + esc(w.word) + '</div>' +
+    (w.phonetic ? '<div class="wm-phon">' + esc(w.phonetic) + '</div>' : '') +
+    '</div>' +
+    '<p class="wm-q">Do you know this word?</p>' +
+    '<div class="wm-2btn">' +
+    '<button class="wm-btn wm-btn-yes" id="wm-yes">\u2705 I know it</button>' +
+    '<button class="wm-btn wm-btn-no" id="wm-no">\u274C I don\u2019t know</button>' +
+    '</div></div>';
+  document.getElementById('wm-test-audio').addEventListener('click', function () { playVocabAudio(w.audio); });
+  document.getElementById('wm-yes').addEventListener('click', function () { wmTestAnswer(true); });
+  document.getElementById('wm-no').addEventListener('click', function () { wmTestAnswer(false); });
+}
+
+function wmTestAnswer(knows) {
+  var t = state.wtest; if (!t) return;
+  var it = t.items[t.idx];
+  if (knows) t.known[it.lv]++;
+  // seed the map with the answer
+  var map = wordMapGet();
+  map.words[wmSlug(it.w)] = { s: knows ? 'known' : 'learning', d: Date.now() };
+  wordMapSet(map);
+  t.idx++;
+  paintWordTest();
+}
+
+function finishWordTest() {
+  var t = state.wtest; if (!t) return;
+  // estimated level: highest with >=3/5 known
+  var est = 'a1';
+  WM_LEVELS.forEach(function (lv) { if (t.known[lv] >= 3) est = lv; });
+  var map = wordMapGet();
+  map.tested = true;
+  map.level = est;
+  wordMapSet(map);
+  state.wtest = null;
+  var v = document.getElementById('view');
+  var rows = WM_LEVELS.map(function (lv) {
+    return '<div class="wm-res-row"><span class="wm-lv" style="background:' + WM_LV_COLORS[lv] + '">' + lv.toUpperCase() + '</span>' +
+      '<span>' + t.known[lv] + ' / 5</span></div>';
+  }).join('');
+  v.innerHTML = '<div class="wm-wrap wm-done">' +
+    '<div class="wm-done-ico">\uD83D\uDDFA\uFE0F</div>' +
+    '<h2>Your map is started!</h2>' +
+    '<p class="wm-done-sub">Estimated level: <b>' + est.toUpperCase() + '</b></p>' +
+    '<div class="wm-res">' + rows + '</div>' +
+    '<a class="wm-btn wm-btn-primary wm-btn-block" href="#/words/discover">Discover new words \u2192</a>' +
+    '<a class="wm-btn wm-btn-ghost wm-btn-block" href="#/words">Back to Word Map</a></div>';
+  window.scrollTo(0, 0);
+}
+
+/* --- discovery flow: know / teach me / test me --- */
+
+function renderDiscover(v) {
+  v.innerHTML = '<div class="wm-wrap"><div class="empty">Loading\u2026</div></div>';
+  loadAllWords().then(function (words) {
+    var map = wordMapGet();
+    if (!map.tested) { window.location.hash = '#/words/test'; return; }
+    var lv = map.level || 'b1';
+    var pool = words.filter(function (w) {
+      return wmPrimaryLevel(w) === lv && w.word && w.meaning_fa && !map.words[wmSlug(w)];
+    });
+    if (!pool.length) {
+      v.innerHTML = '<div class="wm-wrap wm-done"><div class="wm-done-ico">\uD83C\uDF89</div>' +
+        '<h2>All ' + lv.toUpperCase() + ' words mapped!</h2>' +
+        '<p class="wm-done-sub">Amazing. Move up a level or review your map.</p>' +
+        '<a class="wm-btn wm-btn-ghost wm-btn-block" href="#/words">Back to Word Map</a></div>';
+      return;
+    }
+    state.wdis = { items: shuffleArr(pool).slice(0, 10), idx: 0, mode: 'ask' };
+    paintDiscover();
+    window.scrollTo(0, 0);
+  });
+}
+
+function paintDiscover() {
+  var d = state.wdis; if (!d) return;
+  var v = document.getElementById('view');
+  if (d.idx >= d.items.length) {
+    v.innerHTML = '<div class="wm-wrap wm-done"><div class="wm-done-ico">\uD83C\uDF89</div>' +
+      '<h2>Session complete!</h2><p class="wm-done-sub">10 words mapped. Keep going!</p>' +
+      '<a class="wm-btn wm-btn-primary wm-btn-block" href="#/words/discover">Next 10 \u2192</a>' +
+      '<a class="wm-btn wm-btn-ghost wm-btn-block" href="#/words">Back to Word Map</a></div>';
+    window.scrollTo(0, 0);
+    return;
+  }
+  var w = d.items[d.idx];
+  var photo = w.photo ? '<img class="wm-card-img" src="' + esc(wmPhotoSrc(w)) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '';
+  var html = '<div class="wm-wrap">' +
+    '<div class="wm-test-top"><span>Word ' + (d.idx + 1) + ' / ' + d.items.length + '</span>' +
+    '<div class="wm-test-bar"><i style="width:' + Math.round(d.idx / d.items.length * 100) + '%"></i></div></div>' +
+    '<div class="wm-card">' + photo +
+    '<button class="wm-audio" id="wm-dis-audio" aria-label="Play pronunciation">\uD83D\uDD0A</button>' +
+    '<div class="wm-word">' + esc(w.word) + '</div>' +
+    (w.phonetic ? '<div class="wm-phon">' + esc(w.phonetic) + '</div>' : '') +
+    (w.pos ? '<div class="wm-pos">' + esc(w.pos) + '</div>' : '') +
+    '</div>';
+  if (d.mode === 'ask') {
+    html += '<p class="wm-q">What do you want to do with this word?</p>' +
+      '<div class="wm-3btn">' +
+      '<button class="wm-btn wm-btn-yes" id="wm-d-know">\u2705 I know it</button>' +
+      '<button class="wm-btn wm-btn-teach" id="wm-d-teach">\uD83D\uDCD6 Teach me</button>' +
+      '<button class="wm-btn wm-btn-test" id="wm-d-testme">\uD83C\uDFB2 Test me</button>' +
+      '</div>';
+  } else if (d.mode === 'teach') {
+    html += '<div class="wm-teach">' +
+      '<div class="wm-mean">' + esc(w.meaning_fa) + '</div>' +
+      '<div class="wm-mean-en">' + esc(w.meaning_en) + '</div>' +
+      (w.example_en ? '<div class="wm-ex">\u201C' + esc(w.example_en) + '\u201D</div>' : '') +
+      '</div>' +
+      '<button class="wm-btn wm-btn-primary wm-btn-block" id="wm-d-gotit">Got it, next \u2192</button>';
+  } else if (d.mode === 'quiz') {
+    var q = d.quiz;
+    html += '<p class="wm-q">What does it mean?</p><div class="wm-opts">' +
+      q.options.map(function (o, i) {
+        return '<button class="wm-opt' + (q.picked === i ? (i === q.answer ? ' ok' : ' bad') : '') + '" data-wm-opt="' + i + '"' +
+          (q.picked >= 0 ? ' disabled' : '') + '>' + esc(o) + '</button>';
+      }).join('') + '</div>';
+    if (q.picked >= 0) {
+      html += '<div class="wm-teach"><div class="wm-mean">' + esc(w.meaning_fa) + '</div></div>' +
+        '<button class="wm-btn wm-btn-primary wm-btn-block" id="wm-d-next">Next \u2192</button>';
+    }
+  }
+  html += '<a class="wm-link" href="#/words">End session</a></div>';
+  v.innerHTML = html;
+  document.getElementById('wm-dis-audio').addEventListener('click', function () { playVocabAudio(w.audio); });
+  var b;
+  if (d.mode === 'ask') {
+    document.getElementById('wm-d-know').addEventListener('click', function () { wmDisMark('known'); });
+    document.getElementById('wm-d-teach').addEventListener('click', function () { d.mode = 'teach'; paintDiscover(); });
+    document.getElementById('wm-d-testme').addEventListener('click', function () { wmDisQuiz(); });
+  } else if (d.mode === 'teach') {
+    document.getElementById('wm-d-gotit').addEventListener('click', function () { wmDisMark('learning'); });
+  } else if (d.mode === 'quiz') {
+    Array.prototype.forEach.call(v.querySelectorAll('[data-wm-opt]'), function (btn) {
+      btn.addEventListener('click', function () { wmDisQuizAnswer(parseInt(btn.getAttribute('data-wm-opt'), 10)); });
+    });
+    b = document.getElementById('wm-d-next');
+    if (b) b.addEventListener('click', function () {
+      wmDisMark(d.quiz.picked === d.quiz.answer ? 'known' : 'learning');
+    });
+  }
+}
+
+function wmDisMark(status) {
+  var d = state.wdis; if (!d) return;
+  var map = wordMapGet();
+  map.words[wmSlug(d.items[d.idx])] = { s: status, d: Date.now() };
+  wordMapSet(map);
+  d.idx++;
+  d.mode = 'ask';
+  paintDiscover();
+}
+
+function wmDisQuiz() {
+  var d = state.wdis; if (!d) return;
+  var w = d.items[d.idx];
+  var LV_RANK = { a1: 1, a2: 2, b1: 3, b2: 4, c1: 5, c2: 6 };
+  function maxLv(x) {
+    var m = 0;
+    (x.levels || []).forEach(function (l) { m = Math.max(m, LV_RANK[l] || 0); });
+    return m;
+  }
+  var lang = maxLv(w) <= 2 ? 'fa' : 'en';
+  var pool = state.allWords.filter(function (x) {
+    return x.word !== w.word && (lang === 'fa' ? x.meaning_fa : x.meaning_en);
+  });
+  var distract = shuffleArr(pool).slice(0, 3);
+  var correct = lang === 'fa' ? w.meaning_fa : w.meaning_en;
+  var options = shuffleArr([correct].concat(distract.map(function (x) { return lang === 'fa' ? x.meaning_fa : x.meaning_en; })));
+  d.quiz = { options: options, answer: options.indexOf(correct), picked: -1 };
+  d.mode = 'quiz';
+  paintDiscover();
+}
+
+function wmDisQuizAnswer(i) {
+  var d = state.wdis; if (!d || !d.quiz || d.quiz.picked >= 0) return;
+  d.quiz.picked = i;
+  paintDiscover();
 }
 
 /* ---------------- vocabulary home banner ---------------- */
