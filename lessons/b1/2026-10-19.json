@@ -1,0 +1,396 @@
+{
+ "date": "2026-10-19",
+ "theme": "review day",
+ "level": "b1",
+ "cefr": "B1",
+ "review": true,
+ "review_of": [
+  "2026-10-16",
+  "2026-10-17",
+  "2026-10-18"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "benefit",
+   "pos": "noun",
+   "meaning": "something good you get from a job, like free lunch or extra days off",
+   "example": "One benefit of the job is free lunch.",
+   "pronunciation": "BEN-uh-fit",
+   "persian": "مزیت، فایده",
+   "photo": "media/b1/2026-10-17/photos/benefit.jpg",
+   "word_audio": "media/b1/2026-10-17/word-audio/benefit.mp3"
+  },
+  {
+   "word": "ice hockey",
+   "pos": "noun",
+   "meaning": "A sport played on ice with sticks and a puck.",
+   "example": "My brother loves to play ice hockey in winter.",
+   "pronunciation": "ISE HOK-ee",
+   "persian": "هاکی روی یخ",
+   "photo": "media/b1/2026-10-18/photos/ice-hockey.jpg",
+   "word_audio": "media/b1/2026-10-18/word-audio/ice-hockey.mp3"
+  },
+  {
+   "word": "fetch",
+   "pos": "verb",
+   "meaning": "to go and bring something back; a game dogs play",
+   "example": "My dog loves to play fetch with a ball in the garden.",
+   "pronunciation": "FECH",
+   "persian": "آوردن (بازی پرتاب و آوردن)",
+   "photo": "media/b1/2026-10-16/photos/fetch.jpg",
+   "word_audio": "media/b1/2026-10-16/word-audio/fetch.mp3"
+  },
+  {
+   "word": "report",
+   "pos": "noun",
+   "meaning": "a written document about work that has been done",
+   "example": "She wrote a report about the meeting.",
+   "pronunciation": "ri-PORT",
+   "persian": "گزارش",
+   "photo": "media/b1/2026-10-17/photos/report.jpg",
+   "word_audio": "media/b1/2026-10-17/word-audio/report.mp3"
+  },
+  {
+   "word": "give up",
+   "pos": "phrasal verb",
+   "meaning": "Stop trying to do something.",
+   "example": "Don't give up on your dreams.",
+   "pronunciation": "GIV UP",
+   "persian": "دست کشیدن، رها کردن",
+   "photo": "media/b1/2026-10-18/photos/give-up.jpg",
+   "word_audio": "media/b1/2026-10-18/word-audio/give-up.mp3"
+  },
+  {
+   "word": "groom",
+   "pos": "verb",
+   "meaning": "to clean and brush an animal's hair",
+   "example": "She grooms her long-haired cat every evening.",
+   "pronunciation": "GROOM",
+   "persian": "شانه و تمیز کردن موی حیوان",
+   "photo": "media/b1/2026-10-16/photos/groom.jpg",
+   "word_audio": "media/b1/2026-10-16/word-audio/groom.mp3"
+  },
+  {
+   "word": "purr",
+   "pos": "verb",
+   "meaning": "the soft sound a cat makes when it is happy",
+   "example": "The cat sat on my lap and began to purr.",
+   "pronunciation": "PUR",
+   "persian": "خرخر کردن (گربه)",
+   "photo": "media/b1/2026-10-16/photos/purr.jpg",
+   "word_audio": "media/b1/2026-10-16/word-audio/purr.mp3"
+  },
+  {
+   "word": "do exercise",
+   "pos": "phrase",
+   "meaning": "To do physical activity to stay healthy.",
+   "example": "I try to do exercise every morning.",
+   "pronunciation": "doo EK-suh-size",
+   "persian": "ورزش کردن",
+   "photo": "media/b1/2026-10-18/photos/do-exercise.jpg",
+   "word_audio": "media/b1/2026-10-18/word-audio/do-exercise.mp3"
+  },
+  {
+   "word": "go swimming",
+   "pos": "verb",
+   "meaning": "Do an activity, often for fun or a task.",
+   "example": "We often go swimming on Saturdays.",
+   "pronunciation": "GOH SWIM-ing",
+   "persian": "رفتن (برای کاری)",
+   "photo": "media/b1/2026-10-18/photos/go-swimming.jpg",
+   "word_audio": "media/b1/2026-10-18/word-audio/go-swimming.mp3"
+  },
+  {
+   "word": "training",
+   "pos": "noun",
+   "meaning": "learning the skills you need for a job",
+   "example": "New employees get two weeks of training.",
+   "pronunciation": "TRAY-ning",
+   "persian": "آموزش",
+   "photo": "media/b1/2026-10-17/photos/training.jpg",
+   "word_audio": "media/b1/2026-10-17/word-audio/training.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-19/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Reviewing Pets, Work and Sports",
+  "audio": "media/b1/2026-10-19/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-19/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Alex's Busy Week",
+  "audio": "media/b1/2026-10-19/shadowing.mp3",
+  "transcript": "media/b1/2026-10-19/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-19/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/028.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/029.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/030.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/031.mp3",
+   "media/b1/2026-10-19/shadowing-sentences/032.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'benefit' mean?",
+   "options": [
+    "something good you get from a job, like free lunch or extra days off",
+    "To do physical activity to stay healthy.",
+    "a written document about work that has been done",
+    "A sport played on ice with sticks and a puck."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'ice hockey' mean?",
+   "options": [
+    "the soft sound a cat makes when it is happy",
+    "a written document about work that has been done",
+    "to clean and brush an animal's hair",
+    "A sport played on ice with sticks and a puck."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'fetch' mean?",
+   "options": [
+    "something good you get from a job, like free lunch or extra days off",
+    "Stop trying to do something.",
+    "To do physical activity to stay healthy.",
+    "to go and bring something back; a game dogs play"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'report' mean?",
+   "options": [
+    "learning the skills you need for a job",
+    "a written document about work that has been done",
+    "To do physical activity to stay healthy.",
+    "A sport played on ice with sticks and a puck."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'give up' mean?",
+   "options": [
+    "to clean and brush an animal's hair",
+    "Do an activity, often for fun or a task.",
+    "Stop trying to do something.",
+    "the soft sound a cat makes when it is happy"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'groom' mean?",
+   "options": [
+    "the soft sound a cat makes when it is happy",
+    "a written document about work that has been done",
+    "to go and bring something back; a game dogs play",
+    "to clean and brush an animal's hair"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'purr' mean?",
+   "options": [
+    "To do physical activity to stay healthy.",
+    "A sport played on ice with sticks and a puck.",
+    "learning the skills you need for a job",
+    "the soft sound a cat makes when it is happy"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'do exercise' mean?",
+   "options": [
+    "something good you get from a job, like free lunch or extra days off",
+    "Do an activity, often for fun or a task.",
+    "To do physical activity to stay healthy.",
+    "A sport played on ice with sticks and a puck."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'go swimming' mean?",
+   "options": [
+    "to go and bring something back; a game dogs play",
+    "Do an activity, often for fun or a task.",
+    "a written document about work that has been done",
+    "something good you get from a job, like free lunch or extra days off"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'training' mean?",
+   "options": [
+    "Do an activity, often for fun or a task.",
+    "learning the skills you need for a job",
+    "the soft sound a cat makes when it is happy",
+    "Stop trying to do something."
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "Stative Verbs",
+  "explanation": "**Stative verbs** describe states, not actions. They talk about thoughts, feelings, senses and possession.\n\nWe do not use them in the continuous. Say *I **know** the report* — never *I am knowing the report*.\n\nCommon stative verbs: **know, want, need, like, love, hate, seem, have** (own), **belong, cost**. I **know** that good training is important.\n\nSome verbs have two meanings. **Think** as an opinion is a state: *I **think** this report is good.* But **think** as an activity can be continuous: *I **am thinking** about my new job*.\n\n**Have** as possession is a state: *She **has** a dog.* **Have** as an action can be continuous: *We **are having** lunch now*.\n\nIn informal speech you may hear *I'm loving it!* This is fine in conversation, but use the simple form in exams and formal writing.",
+  "examples": [
+   "*I **don't understand** this question.* (thinking)",
+   "*This bag **belongs** to my sister.* (possession)",
+   "*He **seems** very tired today.* (appearance)",
+   "*I**'m thinking** of moving to Montreal.* (action meaning: considering)",
+   "*This coffee **tastes** a bit strange.* (senses)",
+   "*How much **does** this jacket **cost**?* (measuring)"
+  ],
+  "practice": [
+   {
+    "q": "Correct the mistake: I am knowing the answer about the report.",
+    "a": "I know the answer about the report."
+   },
+   {
+    "q": "Rewrite with a stative verb: The cat is wanting to purr.",
+    "a": "The cat wants to purr."
+   },
+   {
+    "q": "Choose the correct form: She ___ (have) two dogs. She ___ (have) lunch now.",
+    "a": "She has two dogs. She is having lunch now."
+   },
+   {
+    "q": "Correct the mistake: This training is belonging to the new employees.",
+    "a": "This training belongs to the new employees."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I ___ what you mean.",
+    "options": [
+     "am understanding",
+     "understand",
+     "understanding",
+     "understands"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Shh! I ___ about the problem. Give me a minute.",
+    "options": [
+     "am thinking",
+     "think",
+     "thinks",
+     "thought"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "This phone ___ to my brother.",
+    "options": [
+     "is belonging",
+     "belong",
+     "belongs",
+     "belonging"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "We ___ lunch right now. Can I call you later?",
+    "options": [
+     "have",
+     "has",
+     "are having",
+     "had"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I ___ this is a good idea.",
+    "options": [
+     "am thinking",
+     "think",
+     "thinking",
+     "am think"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "My uncle ___ three cars.",
+    "options": [
+     "is having",
+     "have",
+     "having",
+     "has"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "He ___ very rude today. That's not like him.",
+    "options": [
+     "are being",
+     "be",
+     "is being",
+     "being"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I ___ her for ten years.",
+    "options": [
+     "'ve been knowing",
+     "'m knowing",
+     "know",
+     "'ve known"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Look! The cat ___ at the bird.",
+    "options": [
+     "looks",
+     "look",
+     "is looking",
+     "are looking"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "You ___ tired. Did you sleep badly?",
+    "options": [
+     "are seeming",
+     "seem",
+     "seems",
+     "seeming"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

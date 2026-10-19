@@ -1,0 +1,394 @@
+{
+  "date": "2026-10-19",
+  "theme": "review day",
+  "level": "c2",
+  "cefr": "C2",
+  "review": true,
+  "review_of": [
+    "2026-10-16",
+    "2026-10-17",
+    "2026-10-18"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "accelerationism",
+      "pos": "noun",
+      "meaning": "the idea that technological and economic change should be accelerated rather than slowed down",
+      "example": "Silicon Valley accelerationism treats every regulation as an obstacle to inevitable progress.",
+      "pronunciation": "ak-sel-uh-RAY-shun-iz-um",
+      "persian": "باور به شتاب دادن به تغییرات فناورانه و اقتصادی",
+      "photo": "media/c2/2026-10-17/photos/accelerationism.jpg",
+      "word_audio": "media/c2/2026-10-17/word-audio/accelerationism.mp3"
+    },
+    {
+      "word": "lucubration",
+      "pos": "noun",
+      "meaning": "studious work or meditation, especially late at night; laborious study",
+      "example": "Her doctoral thesis was the fruit of years of quiet lucubration.",
+      "pronunciation": "loo-kyoo-BRAY-shun",
+      "persian": "مطالعهٔ عمیق و پیوسته",
+      "photo": "media/c2/2026-10-16/photos/lucubration.jpg",
+      "word_audio": "media/c2/2026-10-16/word-audio/lucubration.mp3"
+    },
+    {
+      "word": "dark pattern",
+      "pos": "noun",
+      "meaning": "a deceptive design trick in an app or website that manipulates users",
+      "example": "The checkout page used a classic dark pattern, hiding the cancel button in pale grey text.",
+      "pronunciation": "DARK PAT-urn",
+      "persian": "ترفند فریبندهٔ طراحی برای دستکاری کاربر",
+      "photo": "media/c2/2026-10-17/photos/dark-pattern.jpg",
+      "word_audio": "media/c2/2026-10-17/word-audio/dark-pattern.mp3"
+    },
+    {
+      "word": "heuristic",
+      "pos": "noun",
+      "meaning": "a practical method or rule that helps you find answers quickly, even if it is imperfect",
+      "example": "A useful heuristic for essays is to write the introduction after the body.",
+      "pronunciation": "hyoo-RIH-stik",
+      "persian": "قاعدهٔ ابتکاری",
+      "photo": "media/c2/2026-10-16/photos/heuristic.jpg",
+      "word_audio": "media/c2/2026-10-16/word-audio/heuristic.mp3"
+    },
+    {
+      "word": "cybernetics",
+      "pos": "noun",
+      "meaning": "the science of communication and automatic control in machines and living things",
+      "example": "Modern cybernetics treats the brain and the computer as variations on the same information-processing system.",
+      "pronunciation": "sy-bur-NET-iks",
+      "persian": "علم کنترل و ارتباط در ماشین‌ها و موجودات زنده",
+      "photo": "media/c2/2026-10-17/photos/cybernetics.jpg",
+      "word_audio": "media/c2/2026-10-17/word-audio/cybernetics.mp3"
+    },
+    {
+      "word": "technosolutionism",
+      "pos": "noun",
+      "meaning": "the belief that every social or political problem has a technological solution",
+      "example": "Technosolutionism tempts politicians to fund apps instead of fixing the underlying problem.",
+      "pronunciation": "tek-noh-suh-LOO-shuh-niz-um",
+      "persian": "باور به اینکه هر مشکلی راه‌حل فناورانه دارد",
+      "photo": "media/c2/2026-10-17/photos/technosolutionism.jpg",
+      "word_audio": "media/c2/2026-10-17/word-audio/technosolutionism.mp3"
+    },
+    {
+      "word": "technocratic",
+      "pos": "adjective",
+      "meaning": "decided or controlled by technical experts rather than by politicians or ordinary people",
+      "example": "The technocratic committee imposed the new data policy without consulting the public.",
+      "pronunciation": "tek-nuh-KRAT-ik",
+      "persian": "مبنی بر حکومت متخصصان فنی؛ تصمیم‌گیری توسط کارشناسان فنی",
+      "photo": "media/c2/2026-10-17/photos/technocratic.jpg",
+      "word_audio": "media/c2/2026-10-17/word-audio/technocratic.mp3"
+    },
+    {
+      "word": "anthropocene",
+      "pos": "noun",
+      "meaning": "the proposed geological age in which humans are the dominant force shaping Earth's systems",
+      "example": "Some scientists argue we have entered the Anthropocene, an era defined by human impact on the climate.",
+      "pronunciation": "AN-throh-puh-seen",
+      "persian": "عصر سلطهٔ انسان بر نظام‌های زمین",
+      "photo": "media/c2/2026-10-18/photos/anthropocene.jpg",
+      "word_audio": "media/c2/2026-10-18/word-audio/anthropocene.mp3"
+    },
+    {
+      "word": "bioremediation",
+      "pos": "noun",
+      "meaning": "the use of living organisms to clean pollution",
+      "example": "The wetland project uses bioremediation: reeds and microbes absorb the toxins from the river water.",
+      "pronunciation": "bye-oh-ruh-mee-dee-AY-shun",
+      "persian": "پاک‌سازی آلودگی با کمک موجودات زنده",
+      "photo": "media/c2/2026-10-18/photos/bioremediation.jpg",
+      "word_audio": "media/c2/2026-10-18/word-audio/bioremediation.mp3"
+    },
+    {
+      "word": "vernal",
+      "pos": "adjective",
+      "meaning": "relating to spring or the beginning of a season",
+      "example": "The garden wakes each year with vernal energy: crocuses, daffodils, and the first bees.",
+      "pronunciation": "VUR-nul",
+      "persian": "مربوط به بهار و آغاز فصل",
+      "photo": "media/c2/2026-10-18/photos/vernal.jpg",
+      "word_audio": "media/c2/2026-10-18/word-audio/vernal.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-19/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review — Words That Connect Worlds",
+    "audio": "media/c2/2026-10-19/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-19/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The River Experiment",
+    "audio": "media/c2/2026-10-19/shadowing.mp3",
+    "transcript": "media/c2/2026-10-19/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c2/2026-10-19/shadowing-sentences/001.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/002.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/003.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/004.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/005.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/006.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/007.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/008.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/009.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/010.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/011.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/012.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/013.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/014.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/015.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/016.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/017.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/018.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/019.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/020.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/021.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/022.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/023.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/024.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/025.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/026.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/027.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/028.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/029.mp3",
+      "media/c2/2026-10-19/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'accelerationism' mean?",
+      "options": [
+        "the idea that technological and economic change should be accelerated rather than slowed down",
+        "relating to spring or the beginning of a season",
+        "the use of living organisms to clean pollution",
+        "the science of communication and automatic control in machines and living things"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'lucubration' mean?",
+      "options": [
+        "the proposed geological age in which humans are the dominant force shaping Earth's systems",
+        "the science of communication and automatic control in machines and living things",
+        "studious work or meditation, especially late at night; laborious study",
+        "decided or controlled by technical experts rather than by politicians or ordinary people"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'dark pattern' mean?",
+      "options": [
+        "the belief that every social or political problem has a technological solution",
+        "relating to spring or the beginning of a season",
+        "the proposed geological age in which humans are the dominant force shaping Earth's systems",
+        "a deceptive design trick in an app or website that manipulates users"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'heuristic' mean?",
+      "options": [
+        "a practical method or rule that helps you find answers quickly, even if it is imperfect",
+        "the belief that every social or political problem has a technological solution",
+        "the use of living organisms to clean pollution",
+        "the science of communication and automatic control in machines and living things"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cybernetics' mean?",
+      "options": [
+        "a deceptive design trick in an app or website that manipulates users",
+        "the use of living organisms to clean pollution",
+        "the idea that technological and economic change should be accelerated rather than slowed down",
+        "the science of communication and automatic control in machines and living things"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'technosolutionism' mean?",
+      "options": [
+        "studious work or meditation, especially late at night; laborious study",
+        "the science of communication and automatic control in machines and living things",
+        "the belief that every social or political problem has a technological solution",
+        "relating to spring or the beginning of a season"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'technocratic' mean?",
+      "options": [
+        "decided or controlled by technical experts rather than by politicians or ordinary people",
+        "studious work or meditation, especially late at night; laborious study",
+        "the science of communication and automatic control in machines and living things",
+        "the proposed geological age in which humans are the dominant force shaping Earth's systems"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'anthropocene' mean?",
+      "options": [
+        "studious work or meditation, especially late at night; laborious study",
+        "relating to spring or the beginning of a season",
+        "the proposed geological age in which humans are the dominant force shaping Earth's systems",
+        "decided or controlled by technical experts rather than by politicians or ordinary people"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bioremediation' mean?",
+      "options": [
+        "the science of communication and automatic control in machines and living things",
+        "a deceptive design trick in an app or website that manipulates users",
+        "studious work or meditation, especially late at night; laborious study",
+        "the use of living organisms to clean pollution"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'vernal' mean?",
+      "options": [
+        "the proposed geological age in which humans are the dominant force shaping Earth's systems",
+        "studious work or meditation, especially late at night; laborious study",
+        "relating to spring or the beginning of a season",
+        "a deceptive design trick in an app or website that manipulates users"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Hedging and Distancing (it would appear that...)",
+    "explanation": "**Hedging** makes a claim **less direct or less certain**, so you never assert more than the evidence supports: *It accelerates growth. → **It would appear that** it accelerates growth.* At C2, hedging is reflexive in academic, professional, and diplomatic English.\n\nThe classic hedges cluster around a few tools: **seem / appear to** (*There **seems to be** a pattern*), the softest of all, **it would seem / appear that** (*This **would seem** to be the best **heuristic***), and modals like **may / might / could** (*This **may be** due to a **technocratic** committee overreaching*).\n\nCautious verbs such as **suggest** and **indicate** can carry a whole sentence's uncertainty (*The data **suggest** that the **anthropocene** is shifting **vernal** cycles*), while adverbs — **arguably, apparently, possibly, relatively, somewhat** — and phrases like **to some extent** or **there is some evidence that** fine-tune exactly how much confidence you claim.\n\n**Distancing** goes one step further: it signals the claim belongs to someone else. **Allegedly** and **reportedly** belong in news copy (*The update has **allegedly** shipped with a new **dark pattern***), and **apparently** marks what you heard rather than what you know. For maximum caution, frame an opinion as contestable: **It could be argued that** the last decade's **technosolutionism** has failed.\n\nMind the traps. After **would**, always the base form — ***It would appear***, never *appears*. **Seem**, **appear**, and **tend to** almost never take the continuous form: *are seeming* and *are tending* are wrong. And one small study never **proves** anything; at most, it **suggests** that **cybernetics** **may** benefit from late-night **lucubration** — it never proves it.",
+    "examples": [
+      "* **It would appear that** the problem has been solved.* (very cautious)",
+      "*The results **appear to** suggest a link between diet and mood.* (appear to)",
+      "*There **seems to be** a misunderstanding.* (seem to)",
+      "*People **tend to** underestimate how long tasks take.* (tend to)",
+      "*The CEO has **allegedly** resigned.* (distancing)",
+      "* **Arguably**, the new policy has been a success.* (arguably)"
+    ],
+    "practice": [
+      {
+        "q": "Hedge this claim with **would seem**: Accelerationism is the answer to every slow industry.",
+        "a": "Accelerationism would seem to be the answer to every slow industry."
+      },
+      {
+        "q": "Rewrite with a distancing adverb: The committee members took bribes — you only heard it second-hand.",
+        "a": "The committee members allegedly took bribes."
+      },
+      {
+        "q": "Soften this with **tend to**: Technocratic governments ignore ordinary voters.",
+        "a": "Technocratic governments tend to ignore ordinary voters."
+      },
+      {
+        "q": "Correct the mistake: It would appears that bioremediation will clean the river.",
+        "a": "It would appear that bioremediation may clean the river. (base form after would; cautious verbs hedge the claim)"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "It would ___ that the problem has been solved.",
+        "options": [
+          "appearing",
+          "seems",
+          "appear",
+          "to appear"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The results ___ to suggest a link between diet and mood.",
+        "options": [
+          "appear",
+          "appears to",
+          "are appearing",
+          "appearing"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "People ___ to spend more money in December.",
+        "options": [
+          "are tending",
+          "tend",
+          "tends",
+          "tending"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___, the new policy has been a success.",
+        "options": [
+          "Argue",
+          "Arguable",
+          "Argued",
+          "Arguably"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The CEO has ___ resigned, although the company hasn't confirmed it.",
+        "options": [
+          "allegation",
+          "allege",
+          "alleged",
+          "allegedly"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "It could ___ that the plan is too ambitious.",
+        "options": [
+          "be argued",
+          "argue",
+          "be arguing",
+          "have argue"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "This may ___ due to a lack of funding.",
+        "options": [
+          "being",
+          "to be",
+          "be",
+          "been"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Choose the most cautious (hedged) statement.",
+        "options": [
+          "This proves that social media causes anxiety.",
+          "Social media causes anxiety.",
+          "The data suggest that social media may contribute to anxiety.",
+          "Everyone knows social media causes anxiety."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___, the shop is closing next month. I heard it from a friend.",
+        "options": [
+          "Apparent",
+          "Apparently",
+          "Appearing",
+          "Appeared"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "This would ___ to be the best option.",
+        "options": [
+          "seem",
+          "seems",
+          "seeming",
+          "seemed"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

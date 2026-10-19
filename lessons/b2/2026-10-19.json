@@ -1,0 +1,394 @@
+{
+ "date": "2026-10-19",
+ "theme": "review day",
+ "level": "b2",
+ "cefr": "B2",
+ "review": true,
+ "review_of": [
+  "2026-10-16",
+  "2026-10-17",
+  "2026-10-18"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "perseverance",
+   "pos": "noun",
+   "meaning": "continuing to try even when something is very difficult; not giving up",
+   "example": "Her perseverance through years of training finally earned her a gold medal.",
+   "pronunciation": "pur-suh-VEER-unts",
+   "persian": "پشتکار",
+   "photo": "media/b2/2026-10-17/photos/perseverance.jpg",
+   "word_audio": "media/b2/2026-10-17/word-audio/perseverance.mp3"
+  },
+  {
+   "word": "adventurous",
+   "pos": "adjective",
+   "meaning": "willing to take risks and try new things",
+   "example": "She is an adventurous traveler.",
+   "pronunciation": "ad-VEN-chuh-russ",
+   "persian": "ماجراجو، جسور",
+   "photo": "media/b2/2026-10-18/photos/adventurous.jpg",
+   "word_audio": "media/b2/2026-10-18/word-audio/adventurous.mp3"
+  },
+  {
+   "word": "markup",
+   "pos": "noun",
+   "meaning": "the extra amount a store adds to the price of a product above what it paid for it",
+   "example": "The markup on restaurant wine can be three times the original cost.",
+   "pronunciation": "MARK-up",
+   "persian": "افزایش قیمت (سود اضافه‌ای که فروشنده روی قیمت می‌کشد)",
+   "photo": "media/b2/2026-10-16/photos/markup.jpg",
+   "word_audio": "media/b2/2026-10-16/word-audio/markup.mp3"
+  },
+  {
+   "word": "counterfeit",
+   "pos": "adjective",
+   "meaning": "fake; made to look real, but not real",
+   "example": "The police seized thousands of counterfeit banknotes at the market.",
+   "pronunciation": "KOWN-ter-fit",
+   "persian": "تقلبی، جعلی",
+   "photo": "media/b2/2026-10-16/photos/counterfeit.jpg",
+   "word_audio": "media/b2/2026-10-16/word-audio/counterfeit.mp3"
+  },
+  {
+   "word": "vulnerable",
+   "pos": "adjective",
+   "meaning": "easy to hurt physically or emotionally; needing protection",
+   "example": "Newborn babies are vulnerable and need constant care.",
+   "pronunciation": "VUL-nuh-ruh-bul",
+   "persian": "آسیب‌پذیر",
+   "photo": "media/b2/2026-10-17/photos/vulnerable.jpg",
+   "word_audio": "media/b2/2026-10-17/word-audio/vulnerable.mp3"
+  },
+  {
+   "word": "cashback",
+   "pos": "noun",
+   "meaning": "money your credit card company gives back to you after you buy something",
+   "example": "Her credit card gives her two percent cashback on every grocery purchase.",
+   "pronunciation": "KASH-bak",
+   "persian": "بازپرداخت بخشی از پول خرید (کش‌بک)",
+   "photo": "media/b2/2026-10-16/photos/cashback.jpg",
+   "word_audio": "media/b2/2026-10-16/word-audio/cashback.mp3"
+  },
+  {
+   "word": "charisma",
+   "pos": "noun",
+   "meaning": "a special personal quality that attracts people and makes them follow you",
+   "example": "The candidate's charisma won over the whole audience.",
+   "pronunciation": "kuh-RIZ-muh",
+   "persian": "کاریزما",
+   "photo": "media/b2/2026-10-17/photos/charisma.jpg",
+   "word_audio": "media/b2/2026-10-17/word-audio/charisma.mp3"
+  },
+  {
+   "word": "approach",
+   "pos": "verb",
+   "meaning": "to come closer to something or someone",
+   "example": "The train is starting to approach the station.",
+   "pronunciation": "uh-PROHCH",
+   "persian": "نزدیک شدن",
+   "photo": "media/b2/2026-10-18/photos/approach.jpg",
+   "word_audio": "media/b2/2026-10-18/word-audio/approach.mp3"
+  },
+  {
+   "word": "B&B",
+   "pos": "abbreviation, noun",
+   "meaning": "bed and breakfast; a place to sleep and eat breakfast",
+   "example": "We stayed in a nice B&B.",
+   "pronunciation": "BEE-und-BEE",
+   "persian": "اقامتگاه با صبحانه",
+   "photo": "media/b2/2026-10-18/photos/b_b.jpg",
+   "word_audio": "media/b2/2026-10-18/word-audio/b_b.mp3"
+  },
+  {
+   "word": "reimburse",
+   "pos": "verb",
+   "meaning": "to pay someone back for money they spent, usually for work",
+   "example": "The company will reimburse you for your travel expenses.",
+   "pronunciation": "ree-im-BURS",
+   "persian": "بازپرداخت کردن (پرداخت هزینه‌ای که کسی متحمل شده)",
+   "photo": "media/b2/2026-10-16/photos/reimburse.jpg",
+   "word_audio": "media/b2/2026-10-16/word-audio/reimburse.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b2/2026-10-19/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day",
+  "audio": "media/b2/2026-10-19/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b2/2026-10-19/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Nora's Little Bookshop",
+  "audio": "media/b2/2026-10-19/shadowing.mp3",
+  "transcript": "media/b2/2026-10-19/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b2/2026-10-19/shadowing-sentences/001.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/002.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/003.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/004.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/005.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/006.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/007.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/008.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/009.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/010.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/011.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/012.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/013.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/014.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/015.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/016.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/017.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/018.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/019.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/020.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/021.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/022.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/023.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/024.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/025.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/026.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/027.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/028.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/029.mp3",
+   "media/b2/2026-10-19/shadowing-sentences/030.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'perseverance' mean?",
+   "options": [
+    "continuing to try even when something is very difficult; not giving up",
+    "money your credit card company gives back to you after you buy something",
+    "fake; made to look real, but not real",
+    "bed and breakfast; a place to sleep and eat breakfast"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'adventurous' mean?",
+   "options": [
+    "willing to take risks and try new things",
+    "a special personal quality that attracts people and makes them follow you",
+    "continuing to try even when something is very difficult; not giving up",
+    "bed and breakfast; a place to sleep and eat breakfast"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'markup' mean?",
+   "options": [
+    "willing to take risks and try new things",
+    "the extra amount a store adds to the price of a product above what it paid for it",
+    "bed and breakfast; a place to sleep and eat breakfast",
+    "easy to hurt physically or emotionally; needing protection"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'counterfeit' mean?",
+   "options": [
+    "the extra amount a store adds to the price of a product above what it paid for it",
+    "willing to take risks and try new things",
+    "money your credit card company gives back to you after you buy something",
+    "fake; made to look real, but not real"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'vulnerable' mean?",
+   "options": [
+    "willing to take risks and try new things",
+    "money your credit card company gives back to you after you buy something",
+    "a special personal quality that attracts people and makes them follow you",
+    "easy to hurt physically or emotionally; needing protection"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'cashback' mean?",
+   "options": [
+    "continuing to try even when something is very difficult; not giving up",
+    "easy to hurt physically or emotionally; needing protection",
+    "the extra amount a store adds to the price of a product above what it paid for it",
+    "money your credit card company gives back to you after you buy something"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'charisma' mean?",
+   "options": [
+    "continuing to try even when something is very difficult; not giving up",
+    "a special personal quality that attracts people and makes them follow you",
+    "fake; made to look real, but not real",
+    "to pay someone back for money they spent, usually for work"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'approach' mean?",
+   "options": [
+    "willing to take risks and try new things",
+    "a special personal quality that attracts people and makes them follow you",
+    "the extra amount a store adds to the price of a product above what it paid for it",
+    "to come closer to something or someone"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'B&B' mean?",
+   "options": [
+    "the extra amount a store adds to the price of a product above what it paid for it",
+    "a special personal quality that attracts people and makes them follow you",
+    "bed and breakfast; a place to sleep and eat breakfast",
+    "money your credit card company gives back to you after you buy something"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'reimburse' mean?",
+   "options": [
+    "money your credit card company gives back to you after you buy something",
+    "easy to hurt physically or emotionally; needing protection",
+    "to pay someone back for money they spent, usually for work",
+    "fake; made to look real, but not real"
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "examples": [
+   "*I **wish** I **lived** closer to the sea.* (a present wish: past simple)",
+   "*She **wishes** she **could** speak Chinese.* (ability: could)",
+   "*I **wish** I **hadn't eaten** so much.* (a regret: past perfect)",
+   "*He **wishes** he **had taken** the job in Toronto.* (a regret: past perfect)",
+   "*I **wish** you **would** call me more often.* (a complaint: would)",
+   "***If only** we **had left** earlier!* (a strong regret)"
+  ],
+  "explanation": "We use **wish** and **if only** to talk about situations we want to be different. The verb after **wish** moves one step back in time, as in \"I wish I had more time\" when I do not have enough time now.\n\n**If only** means the same as **wish**, but it is stronger and more emotional. \"If only I had listened to you!\" shows a deep regret.\n\nFor wishes about the present, use **wish + past simple**: \"I wish I knew the answer.\" For ability, use **could**: \"I wish I were more adventurous.\" (After **wish**, **were** is common for all persons: \"I wish I were taller.\")\n\nFor regrets about the past, use **wish + past perfect**: \"I wish I had studied harder.\" So if you bought a counterfeit bag by mistake, you can say, \"I wish I had not bought that counterfeit bag.\"\n\nTo complain about someone's behavior or an annoying situation, use **wish + would**: \"I wish the bus would come.\" If a shop is slow to pay you back, you might say, \"I wish the store would reimburse me faster.\"\n\nUse **hope** for things that are still possible: \"I hope you pass your exam.\" Use **wish** for things that are unreal: \"I wish I were on holiday.\" For good wishes, use **wish** + person + noun, as in \"I wish you a pleasant stay at your B&B.\"",
+  "practice": [
+   {
+    "a": "I wish I were more adventurous.",
+    "q": "Rewrite as a wish about the present: \"I am not adventurous enough to try sailing.\""
+   },
+   {
+    "a": "I wish I had not paid the full markup on that jacket.",
+    "q": "Rewrite as a regret about the past: \"I paid the full markup on that jacket.\""
+   },
+   {
+    "a": "I wish the bank would reimburse me faster.",
+    "q": "Rewrite as a complaint with would: \"The bank never reimburses me on time.\""
+   },
+   {
+    "a": "If only I had listened to my friend's advice about the counterfeit watch!",
+    "q": "Rewrite as a strong regret with if only: \"I did not listen to my friend's advice about the counterfeit watch.\""
+   }
+  ],
+  "quiz": [
+   {
+    "answer": 1,
+    "options": [
+     "have",
+     "had",
+     "will have",
+     "am having"
+    ],
+    "question": "I wish I ___ more free time."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "would stop",
+     "stop",
+     "will stop",
+     "are stopping"
+    ],
+    "question": "I wish you ___ making that noise. It's driving me crazy!"
+   },
+   {
+    "answer": 3,
+    "options": [
+     "can",
+     "will",
+     "is able",
+     "could"
+    ],
+    "question": "She wishes she ___ play the piano."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "didn't eat",
+     "haven't eaten",
+     "hadn't eaten",
+     "don't eat"
+    ],
+    "question": "I wish I ___ so much last night. I feel terrible."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "wish",
+     "would",
+     "hope",
+     "if only"
+    ],
+    "question": "I ___ you pass your driving test tomorrow."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "listen",
+     "had listened",
+     "have listened",
+     "would listen"
+    ],
+    "question": "If only I ___ to your advice!"
+   },
+   {
+    "answer": 0,
+    "options": [
+     "had accepted",
+     "accepts",
+     "has accepted",
+     "would accept"
+    ],
+    "question": "He wishes he ___ the job in London. Now he regrets saying no."
+   },
+   {
+    "answer": 3,
+    "options": [
+     "isn't",
+     "won't be",
+     "hasn't been",
+     "wasn't"
+    ],
+    "question": "I wish it ___ so cold today."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "comes",
+     "will come",
+     "would come",
+     "is coming"
+    ],
+    "question": "I wish the bus ___. We've been waiting for 40 minutes!"
+   },
+   {
+    "answer": 1,
+    "options": [
+     "am",
+     "were",
+     "would be",
+     "will be"
+    ],
+    "question": "I wish I ___ taller."
+   }
+  ],
+  "title": "Wish and If Only"
+ }
+}

@@ -1,0 +1,384 @@
+{
+  "date": "2026-10-19",
+  "theme": "review day",
+  "level": "a1",
+  "cefr": "A1",
+  "review": true,
+  "review_of": [
+    "2026-10-16",
+    "2026-10-17",
+    "2026-10-18"
+  ],
+  "review_window_words": 15,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "soup",
+      "pos": "noun",
+      "meaning": "a hot food made with water, vegetables or meat",
+      "example": "Hot soup is good in winter.",
+      "pronunciation": "SOOP",
+      "persian": "سوپ",
+      "photo": "media/a1/2026-10-17/photos/soup.jpg",
+      "word_audio": "media/a1/2026-10-17/word-audio/soup.mp3"
+    },
+    {
+      "word": "feel",
+      "pos": "verb",
+      "meaning": "To experience a physical sensation.",
+      "example": "I feel cold today.",
+      "pronunciation": "FEEL",
+      "persian": "حس کردن، احساس کردن",
+      "photo": "media/a1/2026-10-18/photos/feel.jpg",
+      "word_audio": "media/a1/2026-10-18/word-audio/feel.mp3"
+    },
+    {
+      "word": "fish",
+      "pos": "noun",
+      "meaning": "an animal that lives in water",
+      "example": "I like to eat fish on Fridays.",
+      "pronunciation": "FISH",
+      "persian": "ماهی",
+      "photo": "media/a1/2026-10-17/photos/fish.jpg",
+      "word_audio": "media/a1/2026-10-17/word-audio/fish.mp3"
+    },
+    {
+      "word": "shoulder",
+      "pos": "noun",
+      "meaning": "the part of your body between your neck and your arm",
+      "example": "She puts her bag on her shoulder.",
+      "pronunciation": "SHOHL-dur",
+      "persian": "شانه",
+      "photo": "media/a1/2026-10-16/photos/shoulder.jpg",
+      "word_audio": "media/a1/2026-10-16/word-audio/shoulder.mp3"
+    },
+    {
+      "word": "tea",
+      "pos": "noun",
+      "meaning": "a hot drink made from tea leaves",
+      "example": "My mom drinks tea every morning.",
+      "pronunciation": "TEE",
+      "persian": "چای",
+      "photo": "media/a1/2026-10-17/photos/tea.jpg",
+      "word_audio": "media/a1/2026-10-17/word-audio/tea.mp3"
+    },
+    {
+      "word": "dark",
+      "pos": "adjective",
+      "meaning": "With little or no light.",
+      "example": "It gets dark early in winter.",
+      "pronunciation": "DARK",
+      "persian": "تاریک",
+      "photo": "media/a1/2026-10-18/photos/dark.jpg",
+      "word_audio": "media/a1/2026-10-18/word-audio/dark.mp3"
+    },
+    {
+      "word": "lemon",
+      "pos": "noun",
+      "meaning": "a small yellow fruit with a sour taste",
+      "example": "I put lemon in my tea.",
+      "pronunciation": "LEH-muhn",
+      "persian": "لیمو",
+      "photo": "media/a1/2026-10-17/photos/lemon.jpg",
+      "word_audio": "media/a1/2026-10-17/word-audio/lemon.mp3"
+    },
+    {
+      "word": "delicious",
+      "pos": "adjective",
+      "meaning": "Having a very pleasant taste.",
+      "example": "This cake is delicious!",
+      "pronunciation": "duh-LISH-uss",
+      "persian": "خوشمزه",
+      "photo": "media/a1/2026-10-18/photos/delicious.jpg",
+      "word_audio": "media/a1/2026-10-18/word-audio/delicious.mp3"
+    },
+    {
+      "word": "chicken",
+      "pos": "noun",
+      "meaning": "meat from a chicken",
+      "example": "We have chicken for dinner.",
+      "pronunciation": "CHI-kuhn",
+      "persian": "گوشت مرغ",
+      "photo": "media/a1/2026-10-17/photos/chicken.jpg",
+      "word_audio": "media/a1/2026-10-17/word-audio/chicken.mp3"
+    },
+    {
+      "word": "knee",
+      "pos": "noun",
+      "meaning": "the middle part of your leg; it bends",
+      "example": "My knee hurts.",
+      "pronunciation": "NEE",
+      "persian": "زانو",
+      "photo": "media/a1/2026-10-16/photos/knee.jpg",
+      "word_audio": "media/a1/2026-10-16/word-audio/knee.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-19/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day",
+    "audio": "media/a1/2026-10-19/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-19/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Warm Kitchen",
+    "audio": "media/a1/2026-10-19/shadowing.mp3",
+    "transcript": "media/a1/2026-10-19/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-19/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/016.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/017.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/018.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/019.mp3",
+      "media/a1/2026-10-19/shadowing-sentences/020.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'soup' mean?",
+      "options": [
+        "With little or no light.",
+        "the part of your body between your neck and your arm",
+        "a hot food made with water, vegetables or meat",
+        "a small yellow fruit with a sour taste"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'feel' mean?",
+      "options": [
+        "an animal that lives in water",
+        "a small yellow fruit with a sour taste",
+        "the middle part of your leg; it bends",
+        "To experience a physical sensation."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'fish' mean?",
+      "options": [
+        "an animal that lives in water",
+        "the middle part of your leg; it bends",
+        "a hot food made with water, vegetables or meat",
+        "To experience a physical sensation."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'shoulder' mean?",
+      "options": [
+        "a hot food made with water, vegetables or meat",
+        "the part of your body between your neck and your arm",
+        "a hot drink made from tea leaves",
+        "meat from a chicken"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'tea' mean?",
+      "options": [
+        "a small yellow fruit with a sour taste",
+        "a hot drink made from tea leaves",
+        "the part of your body between your neck and your arm",
+        "With little or no light."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'dark' mean?",
+      "options": [
+        "With little or no light.",
+        "the part of your body between your neck and your arm",
+        "meat from a chicken",
+        "To experience a physical sensation."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'lemon' mean?",
+      "options": [
+        "the part of your body between your neck and your arm",
+        "a small yellow fruit with a sour taste",
+        "a hot drink made from tea leaves",
+        "the middle part of your leg; it bends"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'delicious' mean?",
+      "options": [
+        "Having a very pleasant taste.",
+        "With little or no light.",
+        "an animal that lives in water",
+        "meat from a chicken"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'chicken' mean?",
+      "options": [
+        "a small yellow fruit with a sour taste",
+        "the middle part of your leg; it bends",
+        "To experience a physical sensation.",
+        "meat from a chicken"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'knee' mean?",
+      "options": [
+        "To experience a physical sensation.",
+        "the part of your body between your neck and your arm",
+        "the middle part of your leg; it bends",
+        "a hot food made with water, vegetables or meat"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Have Got and Has Got",
+    "explanation": "We use **have got** and **has got** to talk about things we own. *I've got soup* means the same as *I have soup*.\n\nUse **have got** with I, you, we, and they. Use **has got** with he, she, and it. *She's got tea.* *He's got fish.*\n\nFor a question, put **Have** or **Has** first. *Have you got lemon?* *Has she got chicken?*\n\nFor a negative, use **haven't got** or **hasn't got**. *I haven't got soup.* *He hasn't got tea.*\n\nShort answers do not use *got*. *Have you got soup? – Yes, I **have**.*\n\n**have got** is only for now, not the past. For the past, use **had**. *I had fish yesterday.*",
+    "examples": [
+      "*I**'ve got** two sisters and a brother.* (family)",
+      "*My dad **has got** a new car.* (things we own)",
+      "*We **haven't got** a garden.* (negative)",
+      "***Have** you **got** any brothers or sisters?* (question)",
+      "***Has** he **got** a job? – Yes, he **has**.* (short answer)"
+    ],
+    "practice": [
+      {
+        "q": "I have soup.",
+        "a": "I've got soup."
+      },
+      {
+        "q": "She has tea.",
+        "a": "She's got tea."
+      },
+      {
+        "q": "Do you have lemon?",
+        "a": "Have you got lemon?"
+      },
+      {
+        "q": "He doesn't have fish.",
+        "a": "He hasn't got fish."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ two brothers.",
+        "options": [
+          "has got",
+          "am got",
+          "have got",
+          "haves got"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ you got a bike?",
+        "options": [
+          "Have",
+          "Do",
+          "Are",
+          "Has"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ long brown hair.",
+        "options": [
+          "have got",
+          "is got",
+          "does got",
+          "has got"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We ___ got a garden, but we have a balcony.",
+        "options": [
+          "don't",
+          "haven't",
+          "hasn't",
+          "aren't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Has your sister got a car? – Yes, she ___.",
+        "options": [
+          "has got",
+          "has",
+          "is",
+          "got"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My grandparents ___ got a house by the sea.",
+        "options": [
+          "has",
+          "is",
+          "are",
+          "have"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ got a terrible headache.",
+        "options": [
+          "I've",
+          "I'm",
+          "I",
+          "I'll"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "How many cousins ___ got?",
+        "options": [
+          "do you",
+          "are you",
+          "have you",
+          "has you"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In 'He's got a new job', 's means ___.",
+        "options": [
+          "is",
+          "was",
+          "does",
+          "has"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Last year we ___ a dog called Max.",
+        "options": [
+          "have got",
+          "had",
+          "has got",
+          "have"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-10-19/grammar-en.mp3"
+  }
+}

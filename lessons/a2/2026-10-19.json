@@ -1,0 +1,390 @@
+{
+ "date": "2026-10-19",
+ "theme": "review day",
+ "level": "a2",
+ "cefr": "A2",
+ "review": true,
+ "review_of": [
+  "2026-10-16",
+  "2026-10-17",
+  "2026-10-18"
+ ],
+ "review_window_words": 15,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "depart",
+   "pos": "verb",
+   "meaning": "to leave a place to start a trip",
+   "example": "The train departs at seven thirty.",
+   "pronunciation": "dee-PART",
+   "persian": "حرکت کردن، ترک کردن",
+   "photo": "media/a2/2026-10-17/photos/depart.jpg",
+   "word_audio": "media/a2/2026-10-17/word-audio/depart.mp3"
+  },
+  {
+   "word": "bright",
+   "pos": "adjective",
+   "meaning": "Full of light; strong in color.",
+   "example": "She wore a bright yellow shirt.",
+   "pronunciation": "BRITE",
+   "persian": "روشن، درخشان",
+   "photo": "media/a2/2026-10-18/photos/bright.jpg",
+   "word_audio": "media/a2/2026-10-18/word-audio/bright.mp3"
+  },
+  {
+   "word": "depressed",
+   "pos": "adjective",
+   "meaning": "Feeling very sad and without hope.",
+   "example": "She felt depressed after losing her job.",
+   "pronunciation": "dih-PREST",
+   "persian": "افسرده",
+   "photo": "media/a2/2026-10-18/photos/depressed.jpg",
+   "word_audio": "media/a2/2026-10-18/word-audio/depressed.mp3"
+  },
+  {
+   "word": "confused",
+   "pos": "adjective",
+   "meaning": "Unable to understand or think clearly.",
+   "example": "I was confused by the difficult question.",
+   "pronunciation": "kun-FYOOZD",
+   "persian": "گیج، سردرگم",
+   "photo": "media/a2/2026-10-18/photos/confused.jpg",
+   "word_audio": "media/a2/2026-10-18/word-audio/confused.mp3"
+  },
+  {
+   "word": "surprised",
+   "pos": "adjective",
+   "meaning": "feeling shocked because something unexpected happened",
+   "example": "She was surprised by the birthday party.",
+   "pronunciation": "sur-PRYZD",
+   "persian": "شگفت‌زده",
+   "photo": "media/a2/2026-10-16/photos/surprised.jpg",
+   "word_audio": "media/a2/2026-10-16/word-audio/surprised.mp3"
+  },
+  {
+   "word": "nervous",
+   "pos": "adjective",
+   "meaning": "worried or afraid that something bad will happen",
+   "example": "I was nervous before my first day at work.",
+   "pronunciation": "NUR-vuhs",
+   "persian": "مضطرب",
+   "photo": "media/a2/2026-10-16/photos/nervous.jpg",
+   "word_audio": "media/a2/2026-10-16/word-audio/nervous.mp3"
+  },
+  {
+   "word": "corner",
+   "pos": "noun",
+   "meaning": "the place where two streets meet",
+   "example": "Turn left at the corner.",
+   "pronunciation": "KOR-ner",
+   "persian": "نبش، گوشه (محل تقاطع دو خیابان)",
+   "photo": "media/a2/2026-10-17/photos/corner.jpg",
+   "word_audio": "media/a2/2026-10-17/word-audio/corner.mp3"
+  },
+  {
+   "word": "lonely",
+   "pos": "adjective",
+   "meaning": "sad because you are alone",
+   "example": "She felt lonely in the new city.",
+   "pronunciation": "LOHN-lee",
+   "persian": "تنها",
+   "photo": "media/a2/2026-10-16/photos/lonely.jpg",
+   "word_audio": "media/a2/2026-10-16/word-audio/lonely.mp3"
+  },
+  {
+   "word": "grateful",
+   "pos": "adjective",
+   "meaning": "feeling thankful for something good",
+   "example": "I am grateful for my friends' help.",
+   "pronunciation": "GRAYT-fuhl",
+   "persian": "سپاسگزار",
+   "photo": "media/a2/2026-10-16/photos/grateful.jpg",
+   "word_audio": "media/a2/2026-10-16/word-audio/grateful.mp3"
+  },
+  {
+   "word": "awful",
+   "pos": "adjective",
+   "meaning": "Very bad or unpleasant.",
+   "example": "The weather was awful yesterday.",
+   "pronunciation": "AW-ful",
+   "persian": "وحشتناک، افتضاح",
+   "photo": "media/a2/2026-10-18/photos/awful.jpg",
+   "word_audio": "media/a2/2026-10-18/word-audio/awful.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-10-19/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day — Feelings, Travel, Colors",
+  "audio": "media/a2/2026-10-19/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-10-19/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "My Short Trip",
+  "audio": "media/a2/2026-10-19/shadowing.mp3",
+  "transcript": "media/a2/2026-10-19/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-10-19/shadowing-sentences/001.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/002.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/003.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/004.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/005.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/006.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/007.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/008.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/009.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/010.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/011.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/012.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/013.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/014.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/015.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/016.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/017.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/018.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/019.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/020.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/021.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/022.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/023.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/024.mp3",
+   "media/a2/2026-10-19/shadowing-sentences/025.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'depart' mean?",
+   "options": [
+    "to leave a place to start a trip",
+    "sad because you are alone",
+    "Unable to understand or think clearly.",
+    "the place where two streets meet"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'bright' mean?",
+   "options": [
+    "the place where two streets meet",
+    "Full of light; strong in color.",
+    "feeling shocked because something unexpected happened",
+    "worried or afraid that something bad will happen"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'depressed' mean?",
+   "options": [
+    "Feeling very sad and without hope.",
+    "Full of light; strong in color.",
+    "to leave a place to start a trip",
+    "Unable to understand or think clearly."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'confused' mean?",
+   "options": [
+    "feeling shocked because something unexpected happened",
+    "Unable to understand or think clearly.",
+    "the place where two streets meet",
+    "Very bad or unpleasant."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'surprised' mean?",
+   "options": [
+    "worried or afraid that something bad will happen",
+    "to leave a place to start a trip",
+    "sad because you are alone",
+    "feeling shocked because something unexpected happened"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'nervous' mean?",
+   "options": [
+    "sad because you are alone",
+    "Full of light; strong in color.",
+    "feeling shocked because something unexpected happened",
+    "worried or afraid that something bad will happen"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'corner' mean?",
+   "options": [
+    "Very bad or unpleasant.",
+    "feeling shocked because something unexpected happened",
+    "sad because you are alone",
+    "the place where two streets meet"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'lonely' mean?",
+   "options": [
+    "Feeling very sad and without hope.",
+    "worried or afraid that something bad will happen",
+    "Full of light; strong in color.",
+    "sad because you are alone"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'grateful' mean?",
+   "options": [
+    "Unable to understand or think clearly.",
+    "Feeling very sad and without hope.",
+    "feeling thankful for something good",
+    "Full of light; strong in color."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'awful' mean?",
+   "options": [
+    "feeling shocked because something unexpected happened",
+    "feeling thankful for something good",
+    "Full of light; strong in color.",
+    "Very bad or unpleasant."
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Imperatives (Open the door, Don't be late)",
+  "explanation": "We use the **imperative** to tell people what to do. It is used for instructions, directions, warnings, advice and invitations.\n\nThe form is very easy: use the **base form** of the verb, with no subject. It is the same for one person and for many people.\n\nFor a negative command, use **Don't** + verb. With an adjective, use **Don't be** — we never say 'Don't sad'.\n\nTo make a suggestion for 'we', use **Let's** + verb. To say no, use **Let's not** + verb.\n\nAn imperative can sound strong, so add **please** to be polite. **Always** and **never** go before the imperative.",
+  "examples": [
+   "***Sit** down, please.* (polite instruction)",
+   "***Don't** forget your keys.* (negative)",
+   "***Turn** right at the traffic lights.* (directions)",
+   "***Be** careful. The floor is wet.* (warning with be)",
+   "***Don't be** sad. Everything will be OK.* (negative with be)",
+   "***Never** leave your bag on the train.* (never + imperative)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite as an imperative: You should open the window.",
+    "a": "Open the window."
+   },
+   {
+    "q": "Rewrite as a negative imperative: You should not touch the cooker.",
+    "a": "Don't touch the cooker."
+   },
+   {
+    "q": "Rewrite as a polite imperative: You should turn left at the corner.",
+    "a": "Please turn left at the corner."
+   },
+   {
+    "q": "Make a suggestion with 'we': We can carry the bags to the gate.",
+    "a": "Let's carry the bags to the gate."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ the door, please. It's cold.",
+    "options": [
+     "Closes",
+     "Close",
+     "Closing",
+     "To close"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "___ touch that! It's hot.",
+    "options": [
+     "No",
+     "Not",
+     "Doesn't",
+     "Don't"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "___ late for class tomorrow.",
+    "options": [
+     "Don't be",
+     "Don't",
+     "Not be",
+     "Be not"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "It's a beautiful day. ___ go to the park!",
+    "options": [
+     "Let",
+     "Let us to",
+     "Let's",
+     "Lets"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "___ the lights when you leave.",
+    "options": [
+     "Turning off",
+     "Turns off",
+     "Turn off",
+     "To turning off"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Turn left at the bank and ___ straight on.",
+    "options": [
+     "go",
+     "goes",
+     "going",
+     "to go"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "___ your hands before dinner.",
+    "options": [
+     "Washing",
+     "To wash",
+     "Washes",
+     "Wash"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Please ___ your phone in class.",
+    "options": [
+     "not use",
+     "don't use",
+     "no use",
+     "doesn't use"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "___ forget your umbrella. It's going to rain.",
+    "options": [
+     "Don't",
+     "Not",
+     "No",
+     "Doesn't"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "Let's to have a pizza.",
+     "Let's having a pizza.",
+     "Let's have a pizza.",
+     "Let's has a pizza."
+    ],
+    "answer": 2
+   }
+  ],
+  "audio": "media/a2/2026-10-19/grammar-en.mp3"
+ }
+}

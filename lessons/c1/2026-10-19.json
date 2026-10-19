@@ -1,0 +1,392 @@
+{
+ "date": "2026-10-19",
+ "theme": "review day",
+ "level": "c1",
+ "cefr": "C1",
+ "review": true,
+ "review_of": [
+  "2026-10-16",
+  "2026-10-17",
+  "2026-10-18"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "upskill",
+   "pos": "verb",
+   "meaning": "to learn new skills for your current job or a future one",
+   "example": "She took an evening course to upskill before the promotion interview.",
+   "pronunciation": "up-SKIL",
+   "persian": "ارتقای مهارت",
+   "photo": "media/c1/2026-10-16/photos/upskill.jpg",
+   "word_audio": "media/c1/2026-10-16/word-audio/upskill.mp3"
+  },
+  {
+   "word": "networking",
+   "pos": "noun",
+   "meaning": "meeting people and building professional relationships",
+   "example": "She found her new job through networking at an industry conference.",
+   "pronunciation": "NET-wur-king",
+   "persian": "شبکه‌سازی حرفه‌ای",
+   "photo": "media/c1/2026-10-16/photos/networking.jpg",
+   "word_audio": "media/c1/2026-10-16/word-audio/networking.mp3"
+  },
+  {
+   "word": "schadenfreude",
+   "pos": "noun",
+   "meaning": "pleasure taken from someone else's misfortune",
+   "example": "He felt a flash of schadenfreude when his arrogant rival lost the competition.",
+   "pronunciation": "SHAA-dun-froy-duh",
+   "persian": "لذت بردن از بدبختی دیگران",
+   "photo": "media/c1/2026-10-17/photos/schadenfreude.jpg",
+   "word_audio": "media/c1/2026-10-17/word-audio/schadenfreude.mp3"
+  },
+  {
+   "word": "scholastic",
+   "pos": "adjective",
+   "meaning": "relating to schools or studies",
+   "example": "She won a scholarship for scholastic achievement.",
+   "pronunciation": "skuh-LAS-tik",
+   "persian": "مربوط به تحصیل و مطالعه",
+   "photo": "media/c1/2026-10-18/photos/scholastic.jpg",
+   "word_audio": "media/c1/2026-10-18/word-audio/scholastic.mp3"
+  },
+  {
+   "word": "philomath",
+   "pos": "noun",
+   "meaning": "a person who loves learning",
+   "example": "He is a true philomath who reads two books a week.",
+   "pronunciation": "FIL-uh-math",
+   "persian": "عاشق یادگیری و دانش",
+   "photo": "media/c1/2026-10-18/photos/philomath.jpg",
+   "word_audio": "media/c1/2026-10-18/word-audio/philomath.mp3"
+  },
+  {
+   "word": "exegesis",
+   "pos": "noun",
+   "meaning": "a careful, critical interpretation of a text",
+   "example": "The professor gave an exegesis of the poem's final stanza.",
+   "pronunciation": "ek-suh-JEE-sis",
+   "persian": "تفسیر و شرح متن",
+   "photo": "media/c1/2026-10-18/photos/exegesis.jpg",
+   "word_audio": "media/c1/2026-10-18/word-audio/exegesis.mp3"
+  },
+  {
+   "word": "vindictive",
+   "pos": "adjective",
+   "meaning": "seeking revenge; wanting to hurt someone who hurt you",
+   "example": "She sent a vindictive email after being passed over for the promotion.",
+   "pronunciation": "vin-DIK-tiv",
+   "persian": "کینه‌جو، انتقام‌جو",
+   "photo": "media/c1/2026-10-17/photos/vindictive.jpg",
+   "word_audio": "media/c1/2026-10-17/word-audio/vindictive.mp3"
+  },
+  {
+   "word": "imperturbable",
+   "pos": "adjective",
+   "meaning": "so calm that nothing can disturb or upset you",
+   "example": "Her imperturbable manner made her an excellent negotiator under pressure.",
+   "pronunciation": "im-pur-TUR-buh-bul",
+   "persian": "غیرقابل‌آشفته، بسیار آرام",
+   "photo": "media/c1/2026-10-17/photos/imperturbable.jpg",
+   "word_audio": "media/c1/2026-10-17/word-audio/imperturbable.mp3"
+  },
+  {
+   "word": "unflappable",
+   "pos": "adjective",
+   "meaning": "staying calm and steady in a crisis or under pressure",
+   "example": "The unflappable nurse handled the emergency with steady hands.",
+   "pronunciation": "un-FLAP-uh-bul",
+   "persian": "خونسرد در بحران، کنترل‌شده",
+   "photo": "media/c1/2026-10-17/photos/unflappable.jpg",
+   "word_audio": "media/c1/2026-10-17/word-audio/unflappable.mp3"
+  },
+  {
+   "word": "quixotic",
+   "pos": "adjective",
+   "meaning": "extremely idealistic and unrealistic; pursuing noble but impractical goals",
+   "example": "His quixotic plan to build a floating city attracted only dreamers.",
+   "pronunciation": "kwik-SOT-ik",
+   "persian": "خیال‌پردازانه و غیرواقع‌بینانه",
+   "photo": "media/c1/2026-10-17/photos/quixotic.jpg",
+   "word_audio": "media/c1/2026-10-17/word-audio/quixotic.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c1/2026-10-19/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Words in Review",
+  "audio": "media/c1/2026-10-19/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-10-19/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Imperturbable Philomath",
+  "audio": "media/c1/2026-10-19/shadowing.mp3",
+  "transcript": "media/c1/2026-10-19/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c1/2026-10-19/shadowing-sentences/001.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/002.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/003.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/004.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/005.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/006.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/007.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/008.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/009.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/010.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/011.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/012.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/013.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/014.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/015.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/016.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/017.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/018.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/019.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/020.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/021.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/022.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/023.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/024.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/025.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/026.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/027.mp3",
+   "media/c1/2026-10-19/shadowing-sentences/028.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'upskill' mean?",
+   "options": [
+    "so calm that nothing can disturb or upset you",
+    "a careful, critical interpretation of a text",
+    "extremely idealistic and unrealistic; pursuing noble but impractical goals",
+    "to learn new skills for your current job or a future one"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'networking' mean?",
+   "options": [
+    "meeting people and building professional relationships",
+    "to learn new skills for your current job or a future one",
+    "a careful, critical interpretation of a text",
+    "extremely idealistic and unrealistic; pursuing noble but impractical goals"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'schadenfreude' mean?",
+   "options": [
+    "a careful, critical interpretation of a text",
+    "relating to schools or studies",
+    "so calm that nothing can disturb or upset you",
+    "pleasure taken from someone else's misfortune"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'scholastic' mean?",
+   "options": [
+    "relating to schools or studies",
+    "seeking revenge; wanting to hurt someone who hurt you",
+    "staying calm and steady in a crisis or under pressure",
+    "a careful, critical interpretation of a text"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'philomath' mean?",
+   "options": [
+    "staying calm and steady in a crisis or under pressure",
+    "a person who loves learning",
+    "extremely idealistic and unrealistic; pursuing noble but impractical goals",
+    "relating to schools or studies"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'exegesis' mean?",
+   "options": [
+    "seeking revenge; wanting to hurt someone who hurt you",
+    "pleasure taken from someone else's misfortune",
+    "so calm that nothing can disturb or upset you",
+    "a careful, critical interpretation of a text"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'vindictive' mean?",
+   "options": [
+    "extremely idealistic and unrealistic; pursuing noble but impractical goals",
+    "staying calm and steady in a crisis or under pressure",
+    "seeking revenge; wanting to hurt someone who hurt you",
+    "so calm that nothing can disturb or upset you"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'imperturbable' mean?",
+   "options": [
+    "so calm that nothing can disturb or upset you",
+    "pleasure taken from someone else's misfortune",
+    "a person who loves learning",
+    "to learn new skills for your current job or a future one"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'unflappable' mean?",
+   "options": [
+    "seeking revenge; wanting to hurt someone who hurt you",
+    "staying calm and steady in a crisis or under pressure",
+    "extremely idealistic and unrealistic; pursuing noble but impractical goals",
+    "a careful, critical interpretation of a text"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'quixotic' mean?",
+   "options": [
+    "pleasure taken from someone else's misfortune",
+    "extremely idealistic and unrealistic; pursuing noble but impractical goals",
+    "staying calm and steady in a crisis or under pressure",
+    "seeking revenge; wanting to hurt someone who hurt you"
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "Wish and If Only",
+  "explanation": "We use **wish** and **if only** to describe realities we find unsatisfactory. After **wish**, the verb shifts one step back in time: a present wish takes the past simple (**I wish I were more imperturbable under pressure**), while a past regret takes the past perfect (**I wish I had networked more strategically in my twenties**).\n\n**If only** follows the same grammar as **wish** but carries greater emotional force. **If only** every young philomath enjoyed such patient mentorship! The exclamation alone signals deep feeling.\n\nTo complain about someone's behaviour, or a situation you long to change, use **wish + would**: **I wish** my vindictive former partner **would stop** spreading rumours. Note the restriction: we never say **I wish I would**. For your own desires, use **I wish I could** instead.\n\nFinally, distinguish **wish** from **hope**. **Hope** is reserved for outcomes that remain possible (**I hope my scholastic record earns me a place**); **wish** is for the unreal. A quixotic dreamer might sigh: **I wish I had published** my exegesis years ago. For fixed good wishes, the pattern is **wish + person + noun**: **I wish you** an unflappable calm before every exam.",
+  "examples": [
+   "*I **wish** I **lived** closer to the sea.* (present: past simple)",
+   "*She **wishes** she **could** speak Chinese.* (ability: could)",
+   "*I **wish** I **hadn't eaten** so much.* (regret: past perfect)",
+   "**If only** we **had left** earlier! (strong regret)",
+   "*I **wish** you **would** call me more often.* (complaint: would)",
+   "*He **wishes** he **had taken** the job in Toronto.* (regret)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite using wish: I don't have strong networking skills, and that frustrates me.",
+    "a": "I wish I had stronger networking skills."
+   },
+   {
+    "q": "Rewrite using if only: I feel embarrassed about the schadenfreude I felt yesterday.",
+    "a": "If only I hadn't felt schadenfreude yesterday!"
+   },
+   {
+    "q": "Rewrite as a complaint about someone's behaviour: That quixotic consultant keeps proposing impossible reforms.",
+    "a": "I wish that quixotic consultant would stop proposing impossible reforms."
+   },
+   {
+    "q": "Choose hope or wish: passing the exam is still possible, and I want it to happen.",
+    "a": "I hope I pass the exam."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I wish I ___ more free time.",
+    "options": [
+     "have",
+     "had",
+     "will have",
+     "am having"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "I wish you ___ making that noise. It's driving me crazy!",
+    "options": [
+     "would stop",
+     "stop",
+     "will stop",
+     "are stopping"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "She wishes she ___ play the piano.",
+    "options": [
+     "can",
+     "will",
+     "is able",
+     "could"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "I wish I ___ so much last night. I feel terrible.",
+    "options": [
+     "didn't eat",
+     "haven't eaten",
+     "hadn't eaten",
+     "don't eat"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I ___ you pass your driving test tomorrow.",
+    "options": [
+     "wish",
+     "would",
+     "hope",
+     "if only"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "If only I ___ to your advice!",
+    "options": [
+     "listen",
+     "had listened",
+     "have listened",
+     "would listen"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "He wishes he ___ the job in London. Now he regrets saying no.",
+    "options": [
+     "had accepted",
+     "accepts",
+     "has accepted",
+     "would accept"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I wish it ___ so cold today.",
+    "options": [
+     "isn't",
+     "won't be",
+     "hasn't been",
+     "wasn't"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "I wish I ___ taller.",
+    "options": [
+     "am",
+     "were",
+     "would be",
+     "will be"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "My sister wishes she ___ in a big city instead of a small village.",
+    "options": [
+     "lives",
+     "has lived",
+     "will live",
+     "lived"
+    ],
+    "answer": 3
+   }
+  ]
+ }
+}
