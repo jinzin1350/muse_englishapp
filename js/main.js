@@ -2620,6 +2620,32 @@ async function teacherNudge(i, btn) {
     btn.disabled = false;
   }
 }
+async function teacherSetLevel(i, btn) {
+  const s = (state.teacherStudents || state.twStudents || [])[i];
+  if (!s || !btn) return;
+  const sel = document.getElementById('tch-level-' + i);
+  const msg = document.getElementById('tch-level-msg-' + i);
+  if (!sel) return;
+  const newLevel = sel.value;
+  btn.disabled = true;
+  const orig = btn.textContent;
+  btn.textContent = 'Saving…';
+  if (msg) { msg.textContent = ''; msg.style.color = ''; }
+  try {
+    const r = await sb.rpc('set_student_level', { p_student: s.user_id, p_level: newLevel });
+    if (r.error) throw r.error;
+    if (r.data !== true) throw new Error('Not authorized');
+    // Update local state so the UI reflects the change immediately
+    s.level = newLevel;
+    if (msg) { msg.textContent = '✓ Saved'; msg.style.color = '#4C9A2A'; }
+    btn.textContent = 'Saved ✓';
+    setTimeout(function () { btn.textContent = orig; btn.disabled = false; }, 2000);
+  } catch (e) {
+    if (msg) { msg.textContent = 'Could not save — try again.'; msg.style.color = '#D34F4F'; }
+    btn.textContent = orig;
+    btn.disabled = false;
+  }
+}
 async function loadTeacherRoster() {
   const host = document.getElementById('tch-roster');
   if (!host) return;
@@ -2678,8 +2704,20 @@ async function openTeacherStudent(i) {
     const maxSec = Math.max.apply(null, [1].concat(rows.map(function (x) { return x.seconds_in_app || 0; })));
     const sum = function (k) { return rows.reduce(function (a, x) { return a + (x[k] || 0); }, 0); };
     const streakTxt = (s.current_streak || 0) > 0 ? ' · 🔥 ' + s.current_streak + '-day streak' : '';
+    const curLevel = String(s.level || '').toLowerCase();
+    const levelOpts = ['a1','a2','b1','b2','c1','c2'].map(function(lv) {
+      return '<option value="' + lv + '"' + (curLevel === lv ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>';
+    }).join('');
     host.innerHTML = '<div class="card"><h3 style="margin-top:0">' + esc(name) +
       ' <span class="muted" style="font-weight:400">· last 14 days' + streakTxt + '</span></h3>' +
+      '<div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.8rem;flex-wrap:wrap">' +
+        '<label style="font-size:0.85rem;color:#5B6478">📊 Level:</label>' +
+        '<select id="tch-level-' + i + '" data-student="' + esc(s.user_id) + '" style="padding:0.35rem 0.6rem;border:1px solid #E5DCCB;border-radius:8px;background:#FFFDF9;font-size:0.9rem">' +
+          levelOpts +
+        '</select>' +
+        '<button class="btn btn-sm" data-action="teacher-set-level" data-i="' + i + '">Save</button>' +
+        '<span id="tch-level-msg-' + i + '" style="font-size:0.8rem"></span>' +
+      '</div>' +
       (rows.length ? '<div class="tch-bars">' + rows.map(function (x) {
         const h = Math.max(4, Math.round((x.seconds_in_app || 0) / maxSec * 90));
         const mins = Math.round((x.seconds_in_app || 0) / 60);
@@ -12315,6 +12353,7 @@ function bindEvents() {
     else if (a === 'ptest-detail-close') { const pd = document.getElementById('tch-ptest-detail'); if (pd) pd.innerHTML = ''; }
     else if (a === 'teacher-student') openTeacherStudent(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
+    else if (a === 'teacher-set-level') teacherSetLevel(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-sent') toggleTeacherSent(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-message') teacherMessageComposer(parseInt(t.getAttribute('data-i'), 10));
@@ -12425,7 +12464,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610190233';
+var APP_VERSION = '202610190410';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
