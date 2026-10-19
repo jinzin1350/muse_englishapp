@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "quiet-dehumidifier-1000sqft",
+      "name_fa": "رطوبت‌گیر بی‌صدا (مناسب ۱۰۰۰ فوت مربع)",
+      "name_en": "Dehumidifier, 1000Sq.Ft Quiet Dehumidifier",
+      "price_cad": 50.74,
+      "regular_cad": 89.99,
+      "discount_pct": 44,
+      "added_fa": "دوشنبه، ۱۹ اکتبر ۲۰۲۶",
+      "image": "img/quiet-dehumidifier-1000sqft.jpg",
+      "url": "https://www.amazon.ca/dp/B0H8JRDLL9?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "رطوبت‌گیر بی‌صدا مناسب ۱۰۰۰ فوت مربع؛ ۴۴٪ زیر میانگین — ۵۰٫۷۴ دلار"
+    },
+    {
+      "id": "foodsaver-quart-vacuum-bags-43ct",
+      "name_fa": "کیسه‌های وکیوم فودسیور (بسته ۴۳ عددی)",
+      "name_en": "FoodSaver Quart Vacuum Sealer Bags, 946 mL, 43 Count",
+      "price_cad": 14.0,
+      "regular_cad": 22.97,
+      "discount_pct": 39,
+      "added_fa": "دوشنبه، ۱۹ اکتبر ۲۰۲۶",
+      "image": "img/foodsaver-quart-vacuum-bags-43ct.jpg",
+      "url": "https://www.amazon.ca/dp/B0DSJS53P9?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "کیسه‌های وکیوم فودسیور ۴۳ عددی؛ کمترین قیمت ثبت‌شده — ۱۴ دلار"
+    },
+    {
+      "id": "plus-plus-240pc-tropical",
+      "name_fa": "لگوهای خلاقیت پلاس-پلاس (بسته ۲۴۰ عددی)",
+      "name_en": "PLUS PLUS - 240 Pcs 12 x 20 mm Tropical Mix Building Blocks",
+      "price_cad": 19.63,
+      "regular_cad": 36.71,
+      "discount_pct": 47,
+      "added_fa": "دوشنبه، ۱۹ اکتبر ۲۰۲۶",
+      "image": "img/plus-plus-240pc-tropical.jpg",
+      "url": "https://www.amazon.ca/dp/B00ED272MK?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "لگوهای خلاقیت پلاس-پلاس ۲۴۰ عددی؛ امروز نصف شد — ۱۹٫۶۳ دلار"
+    },
+    {
+      "id": "ball-quilted-jelly-jars-12ct",
+      "name_fa": "شیشه‌های مربای بال مدل Quilted (بسته ۱۲ عددی)",
+      "name_en": "Ball Jar Crystal Jelly Jars with Lids and Bands, Quilted, 4-Ounce, Set of 12",
+      "price_cad": 45.22,
+      "regular_cad": 79.07,
+      "discount_pct": 43,
+      "added_fa": "دوشنبه، ۱۹ اکتبر ۲۰۲۶",
+      "image": "img/ball-quilted-jelly-jars-12ct.jpg",
+      "url": "https://www.amazon.ca/dp/B00B80TK2K?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "شیشه‌های مربای Quilted بال، بسته ۱۲ عددی؛ ۴۳٪ زیر میانگین ۳ ماهه — ۴۵٫۲۲ دلار"
+    },
+    {
       "id": "killer-bunnies-khaki-booster",
       "name_fa": "بازی کارتی Killer Bunnies Khaki Booster",
       "name_en": "Playroom Entertainment Killer Bunnies Khaki Booster Card Game",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "پچ‌های هیدروکلوئیدی ضدجوش ۳۹ عددی؛ کمترین قیمت ثبت‌شده از جولای تا امروز"
-    },
-    {
-      "id": "yeti-rambler-16oz-travel-bottle",
-      "name_fa": "بطری مسافرتی یتی رامبلر ۱۶ اونسی",
-      "name_en": "YETI Rambler 16 oz Travel Bottle",
-      "price_cad": 31.5,
-      "regular_cad": 42.0,
-      "discount_pct": null,
-      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
-      "image": "img/yeti-rambler-16oz-travel-bottle.jpg",
-      "url": "https://www.amazon.ca/dp/B0H7CYLRF4?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "بطری استیل وکیوم برند یتی با درِ ضدچکه؛ انتخاب مطمئن برای رفت‌وآمد روزانه"
-    },
-    {
-      "id": "fiesta-tablecloth-2pk-2026-10-17",
-      "name_fa": "رومیزی مهمانی مکزیکی ۲ عددی",
-      "name_en": "Mexican Fiesta Tablecloth, 2-Pack",
-      "price_cad": 8.79,
-      "regular_cad": 10.99,
-      "discount_pct": 20,
-      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
-      "image": "img/fiesta-tablecloth-2pk-2026-10-17.jpg",
-      "url": "https://www.amazon.ca/dp/B0GFX16ZNV?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "رومیزی رنگی یکبارمصرف برای مهمانی؛ بسته ۲ عددی"
-    },
-    {
-      "id": "mulberry-silk-pillowcases-2026-10-17",
-      "name_fa": "روبالشی ابریشم توت، صورتی",
-      "name_en": "Mulberry Silk Pillowcases King, Blush Pink",
-      "price_cad": 9.9,
-      "regular_cad": 19.8,
-      "discount_pct": 50,
-      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
-      "image": "img/mulberry-silk-pillowcases-2026-10-17.jpg",
-      "url": "https://www.amazon.ca/dp/B0F6WBP3ZG?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "ابریشم خالص توت؛ لطیف برای پوست و مو، ضد حساسیت"
-    },
-    {
-      "id": "shower-curtain-hooks-12pk-2026-10-17",
-      "name_fa": "حلقه پرده حمام فلزی مشکی ۱۲ عددی",
-      "name_en": "Black Metal Shower Curtain Hooks, 12-Pack",
-      "price_cad": 8.31,
-      "regular_cad": 10.39,
-      "discount_pct": 20,
-      "added_fa": "شنبه، ۱۷ اکتبر ۲۰۲۶",
-      "image": "img/shower-curtain-hooks-12pk-2026-10-17.jpg",
-      "url": "https://www.amazon.ca/dp/B0D9YJPNT5?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "حلقه‌های فلزی ضدزنگ برای پرده حمام؛ نصب آسان و ظاهر شیک"
     }
   ],
-  "updated_fa": "یکشنبه ۲۶ مهر"
+  "updated_fa": "دوشنبه ۲۷ مهر"
 }
