@@ -7683,6 +7683,11 @@ function ptestListeningQ() {
   if (!st.litems) st.litems = ptestListeningItems(st.bundle);
   var items = st.litems, cur = items[st.qIdx], n = items.length;
   var v = document.getElementById('view');
+  /* Preserve audio playback position when re-rendering (same audio file) */
+  var prevAudio = v.querySelector('audio.ptest-audio');
+  var savedTime = 0, savedSrc = '';
+  if (prevAudio && !prevAudio.paused) { prevAudio.pause(); }
+  if (prevAudio) { savedTime = prevAudio.currentTime || 0; savedSrc = prevAudio.getAttribute('src') || ''; }
   var answered = st.answered;
   var opts = ptestOptsHTML(cur.options, answered, st.picked, cur.answer);
   var sheet = answered ? ptestSheetHTML(st.picked === cur.answer, cur.options[cur.answer],
@@ -7693,6 +7698,11 @@ function ptestListeningQ() {
     '<div class="ptest-audio-hint">Listen carefully — you can replay it.</div></div>' +
     '<div class="gt-q">' + esc(cur.q) + '</div>' +
     '<div class="gt-opts">' + opts + '</div>' + sheet + '</div>';
+  /* Restore playback position if same audio file */
+  var newAudio = v.querySelector('audio.ptest-audio');
+  if (newAudio && savedSrc && newAudio.getAttribute('src') === savedSrc && savedTime > 0) {
+    newAudio.currentTime = savedTime;
+  }
   ptestWireQuit();
   Array.prototype.forEach.call(v.querySelectorAll('[data-popt]'), function (btn) {
     btn.addEventListener('click', function () {
@@ -12464,7 +12474,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610190410';
+var APP_VERSION = '202610190447';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
