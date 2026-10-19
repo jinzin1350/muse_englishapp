@@ -8063,6 +8063,7 @@ function renderHome(v) {
   }
 }
 
+/* ---------------- Mobile Home v2 (2026-10-19 redesign) ---------------- */
 function paintHome(v, mistakes, attempts) {
   if (isDesktop()) { paintHomeDesktop(v, mistakes, attempts); return; }
   const lessons = state.lessons;
@@ -12364,6 +12365,7 @@ function bindEvents() {
     else if (a === 'teacher-student') openTeacherStudent(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
     else if (a === 'teacher-set-level') teacherSetLevel(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (a === 'vc-say') playVocabAudio(t.getAttribute('data-audio'));
     else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-sent') toggleTeacherSent(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-message') teacherMessageComposer(parseInt(t.getAttribute('data-i'), 10));
@@ -12474,7 +12476,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610190447';
+var APP_VERSION = '202610191749';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14546,6 +14548,7 @@ function renderVocabCat(v, slug) {
           (w.photo ? '<img class="vc-word-img" src="/' + w.photo + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '') +
           '<div class="vc-word-body">' +
           '<div class="vc-word-top"><b>' + esc(w.word) + '</b>' +
+          (w.audio ? '<button class="vc-say" data-action="vc-say" data-audio="/' + esc(w.audio) + '" aria-label="Listen to pronunciation">\uD83D\uDD0A</button>' : '') +
           (w.phonetic ? '<span class="vc-phon">/' + esc(w.phonetic) + '/</span>' : '') +
           (w.pos ? '<span class="vc-pos">' + esc(w.pos) + '</span>' : '') +
           vcLevelBadges(w.levels) + '</div>' +
@@ -14574,6 +14577,23 @@ function renderVocabCat(v, slug) {
 }
 
 /* ---------------- vocabulary quiz ---------------- */
+
+/* Play a vocabulary word's TTS audio (single shared element; tap toggles). */
+var _vcAudio = null, _vcAudioSrc = '';
+function playVocabAudio(src) {
+  if (!src) return;
+  try {
+    if (_vcAudio && _vcAudioSrc === src && !_vcAudio.paused) {
+      _vcAudio.pause();
+      _vcAudio.currentTime = 0;
+      return;
+    }
+    if (_vcAudio) { try { _vcAudio.pause(); } catch (e) {} }
+    _vcAudioSrc = src;
+    _vcAudio = new Audio(src);
+    _vcAudio.play().catch(function () {});
+  } catch (e) {}
+}
 
 function startVocabQuiz(cat, words) {
   var LV_RANK = { a1: 1, a2: 2, b1: 3, b2: 4 };

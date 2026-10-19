@@ -3616,6 +3616,12 @@ body.view-vocab #view { background: #FDF8F1; }
 .vc-word-body { flex: 1; min-width: 0; }
 .vc-word-top { display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.25rem; }
 .vc-word-top b { font-size: 1.05rem; color: #232B4D; }
+.vc-say {
+  border: none; background: #FFF0DE; border-radius: 999px; cursor: pointer;
+  font-size: 0.95rem; line-height: 1; padding: 0.28rem 0.42rem;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.vc-say:active { transform: scale(0.92); }
 .vc-phon { color: #9AA1B5; font-size: 0.85rem; }
 .vc-pos { font-size: 0.7rem; font-weight: 700; color: #7C5CBF; background: #EFE9FB; border-radius: 7px; padding: 0.15rem 0.45rem; }
 .vc-word-top .vc-lv { font-size: 0.65rem; padding: 0.22rem 0.45rem; min-width: 0; }
@@ -4205,3 +4211,4 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
   .tw-compose .as2-row2{grid-template-columns:1fr}
   .tw-compose .as2-modes{flex-direction:column}
 }
+
