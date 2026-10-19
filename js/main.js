@@ -12476,7 +12476,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610191749';
+var APP_VERSION = '202610192103';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14548,7 +14548,7 @@ function renderVocabCat(v, slug) {
           (w.photo ? '<img class="vc-word-img" src="/' + w.photo + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '') +
           '<div class="vc-word-body">' +
           '<div class="vc-word-top"><b>' + esc(w.word) + '</b>' +
-          (w.audio ? '<button class="vc-say" data-action="vc-say" data-audio="/' + esc(w.audio) + '" aria-label="Listen to pronunciation">\uD83D\uDD0A</button>' : '') +
+          (w.audio ? '<button class="vc-say" data-action="vc-say" data-audio="' + esc(/^https?:\/\//.test(w.audio) ? w.audio : '/' + w.audio) + '" aria-label="Listen to pronunciation">\uD83D\uDD0A</button>' : '') +
           (w.phonetic ? '<span class="vc-phon">/' + esc(w.phonetic) + '/</span>' : '') +
           (w.pos ? '<span class="vc-pos">' + esc(w.pos) + '</span>' : '') +
           vcLevelBadges(w.levels) + '</div>' +
