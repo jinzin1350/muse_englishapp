@@ -12285,7 +12285,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610192354';
+var APP_VERSION = '202610200111';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14766,10 +14766,18 @@ function paintDiscover() {
       '<button class="wm-btn wm-btn-test" id="wm-d-testme">\uD83C\uDFB2 Test me</button>' +
       '</div>';
   } else if (d.mode === 'teach') {
+    var syn = (w.synonyms || []).length ? '<div class="wm-syn"><b>Synonyms:</b> ' + w.synonyms.map(esc).join(', ') + '</div>' : '';
+    var ant = (w.antonyms || []).length ? '<div class="wm-syn"><b>Opposites:</b> ' + w.antonyms.map(esc).join(', ') + '</div>' : '';
+    var fam = (w.family && Object.keys(w.family).length) ? '<div class="wm-syn"><b>Word family:</b> ' +
+      Object.keys(w.family).map(function (k) { return esc(w.family[k]) + ' <i>(' + k + ')</i>'; }).join(', ') + '</div>' : '';
+    var ex2 = (w.examples_extra || []).map(function (x) { return '<div class="wm-ex">\u201C' + esc(x) + '\u201D</div>'; }).join('');
+    var note = w.note_fa ? '<div class="wm-note">\uD83D\uDCA1 ' + esc(w.note_fa) + '</div>' : '';
     html += '<div class="wm-teach">' +
       '<div class="wm-mean">' + esc(w.meaning_fa) + '</div>' +
       '<div class="wm-mean-en">' + esc(w.meaning_en) + '</div>' +
-      (w.example_en ? '<div class="wm-ex">\u201C' + esc(w.example_en) + '\u201D</div>' : '') +
+      syn + ant + fam +
+      (w.example_en ? '<div class="wm-ex">\u201C' + esc(w.example_en) + '\u201D</div>' : '') + ex2 +
+      note +
       '</div>' +
       '<button class="wm-btn wm-btn-primary wm-btn-block" id="wm-d-gotit">Got it, next \u2192</button>';
   } else if (d.mode === 'quiz') {

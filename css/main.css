@@ -3611,6 +3611,11 @@ body.view-words #view { background: #FDF8F1; }
 .wm-mean { font-size: 1.35rem; font-weight: 700; color: #232B4D; margin-bottom: 0.3rem; }
 .wm-mean-en { color: #5B6478; font-size: 1rem; margin-bottom: 0.6rem; }
 .wm-ex { color: #8A93A6; font-style: italic; font-size: 0.92rem; line-height: 1.6; }
+.wm-ex + .wm-ex { margin-top: 0.4rem; }
+.wm-syn { font-size: 0.9rem; color: #5B6478; margin-top: 0.55rem; line-height: 1.6; }
+.wm-syn b { color: #232B4D; }
+.wm-syn i { color: #8A93A6; font-style: normal; font-size: 0.8rem; }
+.wm-note { background: #FFF8E6; border-radius: 12px; padding: 0.7rem 0.9rem; font-size: 0.9rem; color: #7A5C00; margin-top: 0.8rem; line-height: 1.7; text-align: right; }
 .wm-opts { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1rem; }
 .wm-opt { background: #fff; border: 2px solid #EFE7D6; border-radius: 14px; padding: 0.9rem 1rem; font-size: 1rem; text-align: right; cursor: pointer; font-family: inherit; color: #232B4D; }
 .wm-opt.ok { border-color: #3FA46A; background: #DFF3E6; }
