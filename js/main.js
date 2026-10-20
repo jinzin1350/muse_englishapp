@@ -6697,12 +6697,12 @@ function renderGrammarQuizV2() {
   
   var barPct = Math.round((q.idx + (q.answered ? 1 : 0)) / n * 100);
   v.innerHTML = '<div class="g-quiz gt-wrap">' +
-    '<div class="gt-top"><button class="gt-x" id="g-quiz-quit" aria-label="Back to guide">✕</button>' +
+    '<div class="gt-card"><div class="gt-top"><button class="gt-x" id="g-quiz-quit" aria-label="Back to guide">✕</button>' +
     '<div class="gt-progress"><span style="width:' + barPct + '%"></span></div>' +
     '<div class="gt-qcount">' + (q.idx + 1) + '/' + n + '</div></div>' +
     (q.firstRun ? '' : '<div class="gt-mode">Practice mode — no points</div>') +
     '<div class="gt-q">' + esc(it.prompt).replace(/___/g, '…') + '</div>' +
-    inputHTML + sheet + '</div>';
+    inputHTML + '</div>' + sheet + '</div>';
   
   // Wire up events
   Array.prototype.forEach.call(v.querySelectorAll('[data-gopt]'), function (btn) {
@@ -6817,12 +6817,12 @@ function renderGrammarQuiz() {
   }
   var barPct = Math.round((q.idx + (q.answered ? 1 : 0)) / n * 100);
   v.innerHTML = '<div class="g-quiz gt-wrap">' +
-    '<div class="gt-top"><button class="gt-x" id="g-quiz-quit" aria-label="Back to guide">✕</button>' +
+    '<div class="gt-card"><div class="gt-top"><button class="gt-x" id="g-quiz-quit" aria-label="Back to guide">✕</button>' +
     '<div class="gt-progress"><span style="width:' + barPct + '%"></span></div>' +
     '<div class="gt-qcount">' + (q.idx + 1) + '/' + n + '</div></div>' +
     (q.firstRun ? '' : '<div class="gt-mode">Practice mode — no points</div>') +
     '<div class="gt-q">' + esc(it.prompt).replace(/___/g, '…') + '</div>' +
-    '<div class="gt-opts">' + opts + '</div>' + sheet + '</div>';
+    '<div class="gt-opts">' + opts + '</div></div>' + sheet + '</div>';
   Array.prototype.forEach.call(v.querySelectorAll('[data-gopt]'), function (btn) {
     btn.addEventListener('click', function () { answerGrammarQuiz(parseInt(btn.getAttribute('data-gopt'), 10)); });
   });
@@ -12350,7 +12350,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610200411';
+var APP_VERSION = '202610200430';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

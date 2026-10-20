@@ -3885,6 +3885,44 @@ body.view-words #view { background: #FDF8F1; }
 }
 .gt-sheet-explain { font-size: 15px; color: #4B4B4B; margin-bottom: 14px; line-height: 1.55; }
 .gt-sheet-explain strong { color: #3C3C3C; }
+/* quiz card redesign (2026-10-20): white card + decorative cream blobs */
+.g-quiz.gt-wrap { position: relative; z-index: 0; }
+.g-quiz.gt-wrap::before, .g-quiz.gt-wrap::after { content: ""; position: fixed; z-index: 0; pointer-events: none; }
+.g-quiz.gt-wrap::before {
+  left: -140px; right: -140px; bottom: -180px; height: 400px;
+  background: #FBF0DC; border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+.g-quiz.gt-wrap::after {
+  right: -80px; bottom: -30px; width: 330px; height: 330px;
+  background: #FDF7EA; border-radius: 50%;
+}
+.gt-card {
+  position: relative; z-index: 1; background: #fff; border-radius: 26px;
+  padding: 20px 20px 24px; box-shadow: 0 14px 34px rgba(120, 90, 40, 0.12);
+}
+.gt-card .gt-top { margin-bottom: 14px; padding-bottom: 15px; border-bottom: 1.5px solid #F0EEE8; }
+.gt-card .gt-x {
+  width: 40px; height: 40px; border-radius: 50%; background: #F5F4F1; color: #8A8A8A;
+  font-size: 16px; padding: 0; display: flex; align-items: center; justify-content: center;
+  border: none; cursor: pointer; font-weight: 800; flex: 0 0 auto;
+}
+.gt-card .gt-progress { height: 16px; border-radius: 999px; }
+.gt-card .gt-progress span { border-radius: 999px; }
+.gt-card .gt-qcount { color: #9AA1B5; font-size: 15px; }
+.gt-card .gt-mode { margin: 0 0 14px; }
+.gt-card .gt-q {
+  font-family: "Fredoka", "Avenir Next", "Trebuchet MS", sans-serif; font-weight: 700;
+  font-size: 24px; line-height: 1.5; color: #232B4D; margin-bottom: 22px;
+}
+.gt-gap-wrap { display: flex; gap: 12px; align-items: stretch; }
+.gt-gap-input {
+  flex: 1 1 auto; min-width: 0; border: 2px solid #E5E5E5; border-radius: 14px;
+  padding: 14px 16px; font: inherit; font-size: 17px; font-weight: 600; color: #4B4B4B;
+  background: #fff;
+}
+.gt-gap-input:focus { outline: none; border-color: #1CB0F6; box-shadow: 0 0 0 3px rgba(28, 176, 246, 0.15); }
+.gt-gap-input:disabled { background: #F7F7F7; color: #8A8A8A; }
+.gt-gap-wrap .gt-btn { flex: 0 0 auto; padding: 14px 24px; }
 
 /* ---------------- teacher placement test (#/ptest) ---------------- */
 .ptest-parts { display: flex; flex-direction: column; gap: 10px; margin: 18px 0 8px; text-align: left; }
