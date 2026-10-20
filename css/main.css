@@ -3448,7 +3448,7 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .hm-q-titles{flex:1;min-width:0;text-align:left;}
 .hm-q-title{font-family:Georgia,"Times New Roman",serif;font-size:30px;font-weight:700;color:#232B4D;line-height:1.15;}
 .hm-q-sub{font-size:14.5px;color:#7C8499;margin-top:3px;}
-.hm-q-target{flex:0 0 auto;width:88px;height:auto;display:block;filter:drop-shadow(0 6px 10px rgba(200,60,40,.22));}
+.hm-q-target{flex:0 0 auto;width:104px;height:auto;display:block;filter:drop-shadow(0 8px 12px rgba(200,60,40,.22));}
 .hm-q-row{display:flex;align-items:center;gap:10px;background:#fff;border-radius:18px;padding:10px 12px;margin-bottom:10px;box-shadow:0 4px 14px rgba(35,43,77,.05);min-height:72px;}
 .hm-q-row.is-done{opacity:.78;}
 .hm-q-body{display:flex;align-items:center;gap:10px;flex:1;min-width:0;text-decoration:none;}
