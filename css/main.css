@@ -3695,6 +3695,12 @@ body.view-words #view { background: #FDF8F1; }
 .wm-syn i { color: #8A93A6; font-style: normal; font-size: 0.85rem; }
 .wm-note { background: #FFF8E6; border-radius: 12px; padding: 0.7rem 0.9rem; font-size: 0.9rem; color: #7A5C00; margin-top: 0.8rem; line-height: 1.7; text-align: right; }
 .wm-next { border-radius: 999px !important; padding: 1.05rem !important; font-size: 1.05rem !important; }
+/* Persian grammar audio lessons (2026-10-20) */
+.g-fa-audio { margin: 0.2rem 0 1.1rem; }
+.g-fa-btn { width: 100%; box-sizing: border-box; border: 2px solid #F26522; background: #FFF7EF; color: #B64A10; border-radius: 999px; padding: 0.8rem 1.1rem; font-size: 1rem; font-weight: 700; cursor: pointer; font-family: inherit; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+.g-fa-btn:active { background: #FDECD9; }
+.g-fa-dur { background: #F26522; color: #fff; font-size: 0.8rem; border-radius: 999px; padding: 0.15rem 0.6rem; font-weight: 700; }
+.g-fa-player { width: 100%; display: none; margin: 0.2rem 0 0.4rem; }
 @media (max-width: 560px) {
   .wm-3btn { flex-direction: column; }
   .wm-3btn .wm-btn { width: 100%; font-size: 1rem; padding: 0.9rem 1rem; }

@@ -6595,6 +6595,7 @@ function renderGrammarTopicV2(v, t) {
       '<p class="g2-practice-note">' + exs.length + ' exercises</p>' +
       '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button>' : '';
     return '<section class="g-section" id="g2-' + lv + '"><h2>' + (G2_LEVEL_LABELS[lv] || lv.toUpperCase()) + '</h2>' +
+      '<div class="g-fa-audio" data-fa-lv="' + lv + '"></div>' +
       pts + practice + '</section>';
   }).join('');
   var intro = (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('');
@@ -6616,7 +6617,43 @@ function renderGrammarTopicV2(v, t) {
       startGrammarQuizV2(t, btn.getAttribute('data-g2quiz'));
     });
   });
+  // Persian audio lessons (2026-10-20)
+  paintFaAudioBars(v, t.slug);
   window.scrollTo(0, 0);
+}
+
+/* Persian grammar audio lessons: one button per level section, reveals native <audio> */
+var _faAudioCache = {};
+function paintFaAudioBars(v, slug) {
+  var secs = v.querySelectorAll('.g-fa-audio');
+  if (!secs.length) return;
+  var lvs = {};
+  Array.prototype.forEach.call(secs, function (d) { lvs[d.getAttribute('data-fa-lv')] = 1; });
+  var maps = {};
+  var ps = Object.keys(lvs).map(function (lv) {
+    if (_faAudioCache[lv]) { maps[lv] = _faAudioCache[lv]; return Promise.resolve(); }
+    return fetch('/data/grammar/fa-audio/' + lv + '.json').then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (m) { _faAudioCache[lv] = m; maps[lv] = m; })
+      .catch(function () { _faAudioCache[lv] = {}; maps[lv] = {}; });
+  });
+  Promise.all(ps).then(function () {
+    Array.prototype.forEach.call(secs, function (d) {
+      var lv = d.getAttribute('data-fa-lv');
+      var e = (maps[lv] || {})[slug];
+      if (!e) return;
+      var m = Math.floor(e.sec / 60), s = e.sec % 60;
+      d.innerHTML = '<button class="g-fa-btn" type="button" dir="auto">\uD83C\uDFA7 \u0622\u0645\u0648\u0632\u0634 \u0635\u0648\u062A\u06CC \u0641\u0627\u0631\u0633\u06CC' +
+        ' <span class="g-fa-dur">' + m + ':' + (s < 10 ? '0' : '') + s + '</span></button>' +
+        '<audio class="g-fa-player" controls preload="none" src="' + esc(e.url) + '"></audio>';
+      var btn = d.querySelector('.g-fa-btn');
+      btn.addEventListener('click', function () {
+        btn.style.display = 'none';
+        var a = d.querySelector('.g-fa-player');
+        a.style.display = 'block';
+        a.play().catch(function () {});
+      });
+    });
+  });
 }
 
 /* v2 quiz: per-level exercises, supports mcq / gap / error types */
@@ -12350,7 +12387,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610200510';
+var APP_VERSION = '202610200522';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
