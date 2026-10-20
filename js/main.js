@@ -6513,8 +6513,7 @@ function renderGrammarTopic(v, slug) {
       v.innerHTML = '<div class="g-topic"><div class="empty">Guide not found. <a href="#/grammar">Back to all guides</a></div></div>';
       return;
     }
-    if (t.v2 && GT3_TOPICS[t.slug]) { renderGrammarTopicV3(v, t); return; }
-    if (t.v2) { renderGrammarTopicV2(v, t); return; }
+    if (t.v2) { renderGrammarTopicV3(v, t); return; }
     var prog = grammarProgress()[t.slug];
     var sections = (t.sections || []).map(function (s) {
       return '<section class="g-section"><h2>' + esc(s.h2) + '</h2>' + grammarBlocksHTML(s.blocks) + '</section>';
@@ -6658,8 +6657,8 @@ function paintFaAudioBars(v, slug) {
 }
 
 /* Topic page V3 (2026-10-20): anti-wall-of-text layout — quick-rule card per point,
-   visual blocks, examples & details behind an accordion. Gated per topic. */
-var GT3_TOPICS = { 'a-an-the': 1 };
+   visual blocks, examples & details behind an accordion. LIVE for all v2 topics
+   since 2026-10-20 (his order); renderGrammarTopicV2 kept for rollback. */
 function renderGrammarTopicV3(v, t) {
   var levels = t.v2_levels || [];
   var bar = '<div class="g2-levelbar">' + levels.map(function (lv) {
@@ -12468,7 +12467,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610201540';
+var APP_VERSION = '202610201545';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
