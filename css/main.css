@@ -3703,21 +3703,31 @@ body.view-words #view { background: #FDF8F1; }
 .g-fa-player { width: 100%; display: none; margin: 0.2rem 0 0.4rem; }
 /* Topic page V3 — anti-wall-of-text layout (2026-10-20) */
 .gt3-topic { font-size: 1.05rem; }
-.gt3-sec { margin: 1.6rem 0 2rem; background: color-mix(in srgb, var(--lv, #F26522) 6%, #FDF8F1); border: 1.5px solid color-mix(in srgb, var(--lv, #F26522) 16%, transparent); border-radius: 26px; padding: 1.2rem 1rem 1.4rem; }
-.gt3-sec-head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.9rem; }
+.gt3-sec { margin: 1.6rem 0 2rem; background: color-mix(in srgb, var(--lv, #F26522) 13%, #FFFDF7); border: 1.5px solid color-mix(in srgb, var(--lv, #F26522) 30%, transparent); border-radius: 26px; padding: 1.2rem 1rem 1.4rem; }
+.gt3-sec-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.9rem; }
 .gt3-sec-head h2 { font-size: 1.45rem; margin: 0; font-family: "Fredoka", "Avenir Next", sans-serif; color: #232B4D; }
-.gt3-lv-pill { color: #fff; font-weight: 800; font-size: 0.85rem; border-radius: 999px; padding: 0.32rem 0.8rem; letter-spacing: 0.03em; box-shadow: 0 3px 10px rgba(120, 90, 40, 0.18); }
+.gt3-lv-badge { flex: 0 0 auto; width: 47px; height: 47px; border-radius: 50%; color: #fff; font-weight: 800; font-size: 0.92rem; display: flex; align-items: center; justify-content: center; letter-spacing: 0.02em; box-shadow: 0 4px 12px rgba(120, 90, 40, 0.22); }
+.gt3-topic .g2-levelbar { gap: 0.45rem; }
+.gt3-topic .g2-levelbar a { border-radius: 999px; padding: 0.42rem 0.95rem; font-weight: 800; font-size: 0.88rem; text-decoration: none; }
+.gt3-topic .g2-levelbar a[data-g2lv="a1"] { background: #FBEFC8; color: #8A6508; }
+.gt3-topic .g2-levelbar a[data-g2lv="a2"] { background: #FDE3D3; color: #9A4A12; }
+.gt3-topic .g2-levelbar a[data-g2lv="b1"] { background: #DFF2E2; color: #1E6B3C; }
+.gt3-topic .g2-levelbar a[data-g2lv="b2"] { background: #FFE0D1; color: #A63E08; }
+.gt3-topic .g2-levelbar a[data-g2lv="c1"] { background: #DEEBFB; color: #20548F; }
+.gt3-topic .g2-levelbar a[data-g2lv="c2"] { background: #EAE3F7; color: #5B4390; }
 .gt3-point { background: #fff; border-radius: 22px; padding: 1.3rem 1.2rem 1.1rem; margin-bottom: 1.1rem; box-shadow: 0 6px 22px rgba(120, 90, 40, 0.08); border-top: 5px solid var(--lv, #F26522); }
 .gt3-point h3 { font-size: 1.2rem; margin: 0 0 0.8rem; color: #232B4D; line-height: 1.4; }
 .gt3-point .gh-lv { background: var(--lv, #F26522); color: #fff; font-size: 0.72rem; font-weight: 800; border-radius: 999px; padding: 0.18rem 0.6rem; vertical-align: middle; letter-spacing: 0.04em; }
-.gt3-quick { background: linear-gradient(135deg, #FFF6E3, #FDEFD2); border: 1.5px solid #F3DFAE; border-left: 5px solid var(--lv, #F26522); border-radius: 16px; padding: 0.95rem 1.05rem; }
+.gt3-quick { background: color-mix(in srgb, var(--lv, #F26522) 11%, #ffffff); border: 1.5px solid color-mix(in srgb, var(--lv, #F26522) 32%, #ffffff); border-left: 5px solid var(--lv, #F26522); border-radius: 16px; padding: 0.95rem 1.05rem; }
+.gt3-bolt { color: var(--lv, #F26522); vertical-align: -2px; margin-right: 0.15rem; }
 .gt3-quick-tag { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--lv, #F26522) 72%, #20242e); margin-bottom: 0.4rem; }
 .gt3-quick-body { line-height: 1.75; color: #3D4356; }
 .gt3-quick-body p { margin: 0 0 0.5rem; line-height: 1.75; }
 .gt3-quick-body p:last-child { margin-bottom: 0; }
-.gt3-more { width: 100%; margin-top: 0.9rem; background: #F7F4EC; border: 1px solid #EFE7D6; color: #5B6478; border-radius: 14px; padding: 0.75rem 1rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; font-family: inherit; }
-.gt3-more:active { background: #EFE7D6; }
-.gt3-chev { color: var(--lv, #F26522); }
+.gt3-more { width: 100%; margin-top: 0.9rem; background: #F5F4EF; border: none; color: #232B4D; border-radius: 14px; padding: 0.8rem 1rem; font-size: 0.95rem; font-weight: 600; cursor: pointer; font-family: inherit; }
+.gt3-more:active { background: #ECE9DF; }
+.gt3-chev { color: #8A93A6; font-size: 1.25rem; font-weight: 700; display: inline-block; transition: transform 0.2s; vertical-align: -2px; margin-left: 0.2rem; }
+.gt3-more.open .gt3-chev { transform: rotate(90deg); }
 .gt3-body { display: none; padding-top: 1rem; }
 .gt3-body.open { display: block; }
 .gt3-body p { line-height: 1.8; margin: 0 0 0.8rem; color: #3D4356; }

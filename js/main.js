@@ -6693,8 +6693,8 @@ function renderGrammarTopicV3(v, t) {
         (mistakes ? '<div class="g2-mistakes">' + mistakes + '</div>' : '');
       return '<div class="gt3-point">' +
         '<h3 id="' + esc(p.id) + '">' + esc(p.title) + ' <span class="gh-lv">' + lv.toUpperCase() + '</span></h3>' +
-        (p.summary ? '<div class="gt3-quick"><div class="gt3-quick-tag">⚡ The rule in 10 seconds</div><div class="gt3-quick-body">' + gMd(p.summary) + '</div></div>' : '') +
-        (body ? '<button class="gt3-more" type="button">Show examples &amp; details <span class="gt3-chev">▾</span></button>' +
+        (p.summary ? '<div class="gt3-quick"><div class="gt3-quick-tag"><svg class="gt3-bolt" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.8 22 19 10h-6.5L13 2z" fill="currentColor"/></svg> The rule in 10 seconds</div><div class="gt3-quick-body">' + gMd(p.summary) + '</div></div>' : '') +
+        (body ? '<button class="gt3-more" type="button">Show examples &amp; details <span class="gt3-chev">›</span></button>' +
           '<div class="gt3-body">' + body + '</div>' : '') +
         '</div>';
     }).join('');
@@ -6703,8 +6703,8 @@ function renderGrammarTopicV3(v, t) {
       '<p class="gt3-practice-n">' + exs.length + ' exercises for ' + lv.toUpperCase() + '</p>' +
       '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button></div>' : '';
     return '<section class="gt3-sec" id="g2-' + lv + '" style="--lv:' + (GH_LV_COLORS[lv] || '#8A93A6') + '">' +
-      '<div class="gt3-sec-head"><span class="gt3-lv-pill" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv.toUpperCase() + '</span>' +
-      '<h2>' + (G2_LEVEL_LABELS[lv] || lv.toUpperCase()) + '</h2></div>' +
+      '<div class="gt3-sec-head"><span class="gt3-lv-badge" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv.toUpperCase() + '</span>' +
+      '<h2>' + (TW_LEVEL_LABEL[lv] || lv.toUpperCase()) + '</h2></div>' +
       '<div class="g-fa-audio" data-fa-lv="' + lv + '"></div>' +
       pts + practice + '</section>';
   }).join('');
@@ -6729,8 +6729,8 @@ function renderGrammarTopicV3(v, t) {
     btn.addEventListener('click', function () {
       var body = btn.nextElementSibling;
       var open = body.classList.toggle('open');
+      btn.classList.toggle('open', open);
       btn.firstChild.textContent = open ? 'Hide examples & details ' : 'Show examples & details ';
-      btn.querySelector('.gt3-chev').textContent = open ? '▴' : '▾';
     });
   });
   paintFaAudioBars(v, t.slug);
@@ -12468,7 +12468,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610201518';
+var APP_VERSION = '202610201540';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
