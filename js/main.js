@@ -1900,8 +1900,8 @@ function shouldEnterAppMode() {
   return false;
 }
 
-const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'vocab', 'words', 'ptest'];
+const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest', 'certificate'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'vocab', 'words', 'ptest', 'certificate'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -2046,6 +2046,7 @@ function show(view, arg) {
   else if (view === 'become-teacher') renderBecomeTeacher(v);
   else if (view === 'choose-teacher') renderChooseTeacher(v);
   else if (view === 'grammar') renderGrammar(v, arg);
+  else if (view === 'certificate') renderCertificate(v, arg);
   else if (view === 'grammar-test') renderGrammarTest(v, arg);
   else if (view === 'vocab') renderVocab(v, arg);
   else if (view === 'words') renderWords(v, arg);
@@ -2646,6 +2647,171 @@ async function teacherSetLevel(i, btn) {
     btn.disabled = false;
   }
 }
+/* ---------------- Certificates (teacher-issued, 2026-10-20) ----------------
+   Teachers decide when a student earns one (his order — no auto-issue).
+   Data lives in Supabase `certificates`, accessed only via RPCs:
+   issue_certificate / get_student_certificates / get_my_certificates /
+   revoke_certificate / verify_certificate (public). */
+var CERT_LV_GRAD = { a1: ['#F0CE63', '#D9A21B'], a2: ['#F6AC68', '#E8833A'], b1: ['#6CC48C', '#3FA46A'], b2: ['#FF8145', '#F26522'], c1: ['#7DB4EC', '#4A90D9'], c2: ['#B39DE4', '#8E6FC8'] };
+function certDateLong(iso) {
+  if (!iso) return '';
+  var d = new Date(String(iso).slice(0, 10) + 'T12:00:00');
+  if (isNaN(d.getTime())) return String(iso).slice(0, 10);
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+function certCardHTML(c) {
+  var lv = String(c.level || 'a1').toLowerCase();
+  var grad = CERT_LV_GRAD[lv] || CERT_LV_GRAD.a1;
+  var lvName = (TW_LEVEL_LABEL[lv] || lv.toUpperCase());
+  var bodyTxt = c.title
+    ? 'has successfully completed the <b>' + esc(c.title) + '</b> course at Muse English.'
+    : 'has successfully completed the <b>CEFR Level ' + lv.toUpperCase() + ' · ' + esc(lvName) + '</b> English course at Muse English.';
+  return '<div class="cert-card">' +
+    '<div class="cert-blob cert-b1"></div><div class="cert-blob cert-b2"></div>' +
+    '<div class="cert-brand"><span class="cert-book">📖</span><span class="cert-brandname">Muse English</span></div>' +
+    '<div class="cert-rule"></div>' +
+    '<div class="cert-title">CERTIFICATE</div>' +
+    '<div class="cert-subtitle">of Completion</div>' +
+    '<div class="cert-presented">This certificate is proudly presented to</div>' +
+    '<div class="cert-student">' + esc(c.student_name || '') + '</div>' +
+    '<div class="cert-body">' + bodyTxt + '</div>' +
+    '<div class="cert-lvrow"><span class="cert-lvcircle" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv.toUpperCase() + '</span>' +
+    '<span class="cert-lvtext"><b>CEFR Level ' + lv.toUpperCase() + ' · ' + esc(lvName) + '</b>' +
+    '<small>Common European Framework of Reference for Languages</small></span></div>' +
+    '<div class="cert-bottom">' +
+    '<span class="cert-cell"><b>' + esc(certDateLong(c.issued_on || c.created_at)) + '</b><small>Date of Issue</small></span>' +
+    '<span class="cert-seal"><span class="cert-seal-disc">★</span><span class="cert-rib cert-r1"></span><span class="cert-rib cert-r2"></span></span>' +
+    '<span class="cert-cell"><b class="cert-issuer">' + esc(c.issuer_name || 'Muse English') + '</b><small>Teacher · Muse English</small></span>' +
+    '</div>' +
+    '<div class="cert-verify">Verify this certificate at <b>museenglishapp.com/#/certificate/' + esc(c.code || '') + '</b> · Certificate ID: <b>' + esc(c.code || '') + '</b></div>' +
+    '</div>';
+}
+/* Public verification page (#/certificate/<code>) — works logged out. */
+async function renderCertificate(v, code) {
+  code = String(code || '').trim().toUpperCase();
+  if (!code) { v.innerHTML = '<div class="cert-page"><div class="empty">No certificate code given.</div></div>'; return; }
+  v.innerHTML = '<div class="cert-page"><div class="empty">Verifying certificate…</div></div>';
+  try {
+    var r = await sb.rpc('verify_certificate', { p_code: code });
+    if (r.error) throw r.error;
+    var d = r.data || {};
+    if (!d.valid) {
+      v.innerHTML = '<div class="cert-page"><div class="cert-invalid"><div class="cert-invalid-ico">⚠️</div>' +
+        '<h2>Certificate not found</h2><p>This code is not valid — it may have been revoked or mistyped.</p>' +
+        '<a class="btn" href="#/home">Go to Muse English</a></div></div>';
+      return;
+    }
+    v.innerHTML = '<div class="cert-page">' +
+      '<div class="cert-verified">✓ Verified — this certificate was issued by Muse English</div>' +
+      certCardHTML(d) +
+      '<div class="cert-actions cert-noprint"><button class="btn btn-primary" data-action="cert-print">⬇ Download / Print PDF</button></div>' +
+      '</div>';
+  } catch (e) {
+    v.innerHTML = '<div class="cert-page"><div class="empty">Could not verify right now — please try again.</div></div>';
+  }
+}
+function printCertificate() {
+  document.body.classList.add('cert-printing');
+  var done = function () { document.body.classList.remove('cert-printing'); window.removeEventListener('afterprint', done); };
+  window.addEventListener('afterprint', done);
+  setTimeout(done, 4000);
+  window.print();
+}
+/* Student: my certificates (Progress page section) */
+async function loadMyCerts() {
+  var host = document.getElementById('my-certs');
+  if (!host) return;
+  if (!cloudReady()) { host.innerHTML = ''; return; }
+  try {
+    var r = await sb.rpc('get_my_certificates');
+    if (r.error) throw r.error;
+    var list = r.data || [];
+    if (!list.length) {
+      host.innerHTML = '<div class="empty">No certificates yet — your teacher issues them here when you complete a course. 🏅</div>';
+      return;
+    }
+    host.innerHTML = list.map(function (c) {
+      var lv = String(c.level || '').toUpperCase();
+      var grad = CERT_LV_GRAD[String(c.level || 'a1').toLowerCase()] || CERT_LV_GRAD.a1;
+      return '<a class="cert-row" href="#/certificate/' + esc(c.code) + '">' +
+        '<span class="cert-row-badge" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv + '</span>' +
+        '<span class="cert-row-main"><b>' + esc(c.title || ('CEFR Level ' + lv + ' · ' + (TW_LEVEL_LABEL[String(c.level || '').toLowerCase()] || ''))) + '</b>' +
+        '<small>' + esc(certDateLong(c.created_at)) + ' · ' + esc(c.code) + '</small></span>' +
+        '<span class="cert-row-go">View ›</span></a>';
+    }).join('');
+  } catch (e) {
+    host.innerHTML = '<div class="empty">Could not load certificates.</div>';
+  }
+}
+/* Teacher: certificates block inside the student detail card */
+async function loadTeacherStudentCerts(i, s) {
+  var host = document.getElementById('tch-cert-' + i);
+  if (!host) return;
+  var lvOpts = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'].map(function (lv) {
+    return '<option value="' + lv + '"' + (String(s.level || '').toLowerCase() === lv ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>';
+  }).join('');
+  var form = '<div class="an-title" style="margin-top:.8rem">🏅 Certificates</div>' +
+    '<div style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;margin-bottom:0.5rem">' +
+    '<select id="tch-cert-lv-' + i + '" style="padding:0.35rem 0.6rem;border:1px solid #E5DCCB;border-radius:8px;background:#FFFDF9;font-size:0.9rem">' + lvOpts + '</select>' +
+    '<input id="tch-cert-title-' + i + '" type="text" placeholder="Course title (optional)" style="flex:1;min-width:150px;padding:0.4rem 0.6rem;border:1px solid #E5DCCB;border-radius:8px;background:#FFFDF9;font-size:0.9rem"/>' +
+    '<button class="btn btn-sm" data-action="teacher-cert-issue" data-i="' + i + '">Issue certificate</button>' +
+    '<span id="tch-cert-msg-' + i + '" style="font-size:0.8rem"></span></div>' +
+    '<div id="tch-cert-list-' + i + '"><div class="empty">Loading…</div></div>';
+  host.innerHTML = form;
+  var listHost = document.getElementById('tch-cert-list-' + i);
+  try {
+    var r = await sb.rpc('get_student_certificates', { p_student: s.user_id });
+    if (r.error) throw r.error;
+    var list = r.data || [];
+    if (!list.length) { listHost.innerHTML = '<div class="empty">No certificates issued yet.</div>'; return; }
+    listHost.innerHTML = list.map(function (c) {
+      var lv = String(c.level || '').toUpperCase();
+      return '<div class="an-arow"><span>🏅 <b>' + lv + '</b> ' + esc(c.title || '') +
+        ' <span class="muted">· ' + esc(c.code) + ' · ' + esc(certDateLong(c.created_at)) + (c.revoked ? ' · <b style="color:#D34F4F">revoked</b>' : '') + '</span></span>' +
+        '<span style="display:flex;gap:0.4rem"><a class="btn btn-sm btn-ghost" href="#/certificate/' + esc(c.code) + '" target="_blank" rel="noopener">View</a>' +
+        (c.revoked ? '' : '<button class="btn btn-sm btn-ghost" data-action="teacher-cert-revoke" data-code="' + esc(c.code) + '" data-i="' + i + '">Revoke</button>') +
+        '</span></div>';
+    }).join('');
+  } catch (e) {
+    listHost.innerHTML = '<div class="empty">Certificates need the database migration first (ask Alireza if this persists).</div>';
+  }
+}
+async function teacherIssueCert(i, btn) {
+  var s = (state.teacherStudents || [])[i];
+  if (!s || !btn) return;
+  var lvSel = document.getElementById('tch-cert-lv-' + i);
+  var titleIn = document.getElementById('tch-cert-title-' + i);
+  var msg = document.getElementById('tch-cert-msg-' + i);
+  if (!lvSel) return;
+  btn.disabled = true;
+  var orig = btn.textContent;
+  btn.textContent = 'Issuing…';
+  if (msg) { msg.textContent = ''; msg.style.color = ''; }
+  try {
+    var params = { p_student: s.user_id, p_level: lvSel.value, p_title: titleIn ? titleIn.value : null };
+    if (state.viewTeacher && state.viewTeacher.user_id) params.p_as_teacher = state.viewTeacher.user_id;
+    var r = await sb.rpc('issue_certificate', params);
+    if (r.error) throw r.error;
+    if (!r.data) throw new Error('Not authorized');
+    if (msg) { msg.textContent = '✓ Issued: ' + r.data; msg.style.color = '#4C9A2A'; }
+    btn.textContent = 'Issued ✓';
+    loadTeacherStudentCerts(i, s);
+  } catch (e) {
+    if (msg) { msg.textContent = 'Could not issue — try again.'; msg.style.color = '#D34F4F'; }
+    btn.textContent = orig;
+    btn.disabled = false;
+  }
+}
+async function teacherRevokeCert(code, i) {
+  if (!window.confirm('Revoke certificate ' + code + '? Its verification page will stop working.')) return;
+  try {
+    var r = await sb.rpc('revoke_certificate', { p_code: code });
+    if (r.error) throw r.error;
+    var s = (state.teacherStudents || [])[i];
+    if (s) loadTeacherStudentCerts(i, s);
+  } catch (e) { /* list refresh shows current state */ }
+}
+
 async function loadTeacherRoster() {
   const host = document.getElementById('tch-roster');
   if (!host) return;
@@ -2732,6 +2898,7 @@ async function openTeacherStudent(i) {
         '<div><b>' + Math.round(sum('podcast_seconds') / 60) + '</b><span>podcast min</span></div>' +
       '</div>' +
       '<div id="tch-an-' + i + '"><div class="empty">Loading analytics…</div></div>' +
+      '<div id="tch-cert-' + i + '"><div class="empty">Loading certificates…</div></div>' +
       '<div id="tch-sh-' + i + '"><div class="empty">Loading shadowing…</div></div>' +
       '<div class="an-title" style="margin-top:.8rem">📤 Sent to this student</div>' +
       '<div id="tch-sent-' + i + '"><button class="btn btn-sm btn-ghost" data-action="teacher-sent" data-i="' + i + '">Show sent items</button></div>' +
@@ -2743,6 +2910,7 @@ async function openTeacherStudent(i) {
       '<button class="btn btn-ghost btn-sm" data-action="teacher-student-close">Close</button></div></div>';
     loadTeacherStudentAnalytics(i, s);
     loadTeacherStudentShadowing(i, s);
+    loadTeacherStudentCerts(i, s);
   } catch (e) {
     host.innerHTML = '<div class="empty">Could not load activity.</div>';
   }
@@ -11144,6 +11312,8 @@ function paintScores(v, arr, prog) {
   const avg = avgOfAttempts(arr);
   let html = '<h1 class="tut-anchor">Progress</h1>';
   html += progStatsHTML(prog);
+  html += '<div class="section-title"><h2>🏅 My certificates</h2></div>' +
+    '<div id="my-certs"><div class="empty">Loading certificates…</div></div>';
   html += rewardsPlaceholderHTML();
   html += '<div class="section-title"><h2>🎙️ Podcast summaries</h2></div>' +
     '<div id="sum-history"><div class="empty">Loading summaries…</div></div>';
@@ -11160,6 +11330,7 @@ function paintScores(v, arr, prog) {
   }
   v.innerHTML = html;
   refreshRewardsSection();
+  loadMyCerts();
   loadScoreAnalytics();
   loadSummaryHistory();
   loadShadowingStats();
@@ -12359,6 +12530,9 @@ function bindEvents() {
     else if (a === 'teacher-student') openTeacherStudent(parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
     else if (a === 'teacher-set-level') teacherSetLevel(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (a === 'teacher-cert-issue') teacherIssueCert(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (a === 'teacher-cert-revoke') teacherRevokeCert(t.getAttribute('data-code'), parseInt(t.getAttribute('data-i'), 10));
+    else if (a === 'cert-print') printCertificate();
     else if (a === 'vc-say') playVocabAudio(t.getAttribute('data-audio'));
     else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-sent') toggleTeacherSent(parseInt(t.getAttribute('data-i'), 10), t);
@@ -12470,7 +12644,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610201609';
+var APP_VERSION = '202610201658';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
