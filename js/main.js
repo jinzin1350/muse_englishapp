@@ -12350,7 +12350,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610200430';
+var APP_VERSION = '202610200510';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14721,11 +14721,11 @@ function paintWordTest() {
   var v = document.getElementById('view');
   if (t.idx >= t.items.length) { finishWordTest(); return; }
   var w = t.items[t.idx].w;
-  var photo = w.photo ? '<img class="wm-card-img" src="' + esc(wmPhotoSrc(w)) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '';
+  var photo = w.photo ? '<span class="wm-spark" aria-hidden="true"><i></i><i></i><i></i></span><img class="wm-card-img" src="' + esc(wmPhotoSrc(w)) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '';
   v.innerHTML = '<div class="wm-wrap">' +
     '<div class="wm-test-top"><span>' + (t.idx + 1) + ' / ' + t.items.length + '</span>' +
     '<div class="wm-test-bar"><i style="width:' + Math.round(t.idx / t.items.length * 100) + '%"></i></div></div>' +
-    '<div class="wm-card">' + photo +
+    '<div class="wm-card">' + (w.photo ? '<div class="wm-photo-wrap">' + photo + '</div>' : '') +
     '<button class="wm-audio" id="wm-test-audio" aria-label="Play pronunciation">\uD83D\uDD0A</button>' +
     '<div class="wm-word">' + esc(w.word) + '</div>' +
     (w.phonetic ? '<div class="wm-phon">' + esc(w.phonetic) + '</div>' : '') +
@@ -14813,11 +14813,11 @@ function paintDiscover() {
     return;
   }
   var w = d.items[d.idx];
-  var photo = w.photo ? '<img class="wm-card-img" src="' + esc(wmPhotoSrc(w)) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '';
+  var photo = w.photo ? '<span class="wm-spark" aria-hidden="true"><i></i><i></i><i></i></span><img class="wm-card-img" src="' + esc(wmPhotoSrc(w)) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '';
   var html = '<div class="wm-wrap">' +
     '<div class="wm-test-top"><span>Word ' + (d.idx + 1) + ' / ' + d.items.length + '</span>' +
     '<div class="wm-test-bar"><i style="width:' + Math.round(d.idx / d.items.length * 100) + '%"></i></div></div>' +
-    '<div class="wm-card">' + photo +
+    '<div class="wm-card">' + (w.photo ? '<div class="wm-photo-wrap">' + photo + '</div>' : '') +
     '<button class="wm-audio" id="wm-dis-audio" aria-label="Play pronunciation">\uD83D\uDD0A</button>' +
     '<div class="wm-word">' + esc(w.word) + '</div>' +
     (w.phonetic ? '<div class="wm-phon">' + esc(w.phonetic) + '</div>' : '') +
@@ -14826,9 +14826,9 @@ function paintDiscover() {
   if (d.mode === 'ask') {
     html += '<p class="wm-q">What do you want to do with this word?</p>' +
       '<div class="wm-3btn">' +
-      '<button class="wm-btn wm-btn-yes" id="wm-d-know">\u2705 I know it</button>' +
-      '<button class="wm-btn wm-btn-teach" id="wm-d-teach">\uD83D\uDCD6 Teach me</button>' +
-      '<button class="wm-btn wm-btn-test" id="wm-d-testme">\uD83C\uDFB2 Test me</button>' +
+      '<button class="wm-btn wm-btn-yes" id="wm-d-know"><i class="wm-bico">\u2705</i> I know it</button>' +
+      '<button class="wm-btn wm-btn-teach" id="wm-d-teach"><i class="wm-bico">\uD83D\uDCD6</i> Teach me</button>' +
+      '<button class="wm-btn wm-btn-test" id="wm-d-testme"><i class="wm-bico">\uD83C\uDFB2</i> Test me</button>' +
       '</div>';
   } else if (d.mode === 'teach') {
     var syn = (w.synonyms || []).length ? '<div class="wm-syn"><b>Synonyms:</b> ' + w.synonyms.map(esc).join(', ') + '</div>' : '';
@@ -14844,7 +14844,7 @@ function paintDiscover() {
       (w.example_en ? '<div class="wm-ex">\u201C' + esc(w.example_en) + '\u201D</div>' : '') + ex2 +
       note +
       '</div>' +
-      '<button class="wm-btn wm-btn-primary wm-btn-block" id="wm-d-gotit">Got it, next \u2192</button>';
+      '<button class="wm-btn wm-btn-primary wm-btn-block wm-next" id="wm-d-gotit">Got it, next \u2192</button>';
   } else if (d.mode === 'quiz') {
     var q = d.quiz;
     html += '<p class="wm-q">What does it mean?</p><div class="wm-opts">' +
