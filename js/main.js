@@ -832,8 +832,7 @@ function paintQuests() {
     host.innerHTML = '<section class="hm-quests" dir="ltr" lang="en" aria-label="Today\'s quests">' +
       '<div class="hm-q-head"><div class="hm-q-titles">' +
       '<div class="hm-q-title">Daily Quests</div>' +
-      '<div class="hm-q-sub">Complete quests, earn XP, level up!</div></div>' +
-      '<img class="hm-q-target" src="/media/home/review-target-nobg.png" alt=""></div>' +
+      '<div class="hm-q-sub">Complete quests, earn XP, level up!</div></div></div>' +
       '<div class="hm-q-rows">' + qs.map(questCardHTML).join('') + '</div></section>';
   } catch (e) {}
 }
@@ -12322,7 +12321,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610200326';
+var APP_VERSION = '202610200327';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
