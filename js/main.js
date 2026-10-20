@@ -6368,6 +6368,11 @@ var GH_LEVELS = [
   { id: 'b1', label: 'B1' }, { id: 'b2', label: 'B2' }, { id: 'c1', label: 'C1' }, { id: 'c2', label: 'C2' }
 ];
 var GH_LV_COLORS = { a1: '#D9A21B', a2: '#E8833A', b1: '#3FA46A', b2: '#F26522', c1: '#4A90D9', c2: '#8E6FC8' };
+var GH_LV_GRAD = {
+  a1: ['#F0CE63', '#D9A21B'], a2: ['#F6AC68', '#E8833A'], b1: ['#6CC48C', '#3FA46A'],
+  b2: ['#FF8145', '#F26522'], c1: ['#7DB4EC', '#4A90D9'], c2: ['#B39DE4', '#8E6FC8'],
+  all: ['#AEB6C9', '#8A93A6']
+};
 var GH_LV_SUB = {
   all: 'Every grammar topic from A1 to C2 \u2014 read, practise, earn points.',
   a1: 'Essential grammar basics with clear explanations and practice exercises.',
@@ -6380,13 +6385,34 @@ var GH_LV_SUB = {
 var GH_ICON_ALIAS = {
   'comparatives-superlatives': 'comparatives', 'much-many-a-few-a-little': 'much-many',
   'must-have-to-should': 'must-have-to', 'passive-present-past': 'passive',
-  'prepositions-of-time-in-on-at': 'prepositions-of-time'
+  'prepositions-of-time-in-on-at': 'prepositions-of-time',
+  /* release-3 slugs without their own icon yet — closest family icon */
+  'adjective-order': 'ed-ing-adjectives', 'and-but-or-so-because': 'advanced-cohesion',
+  'be-going-to': 'future-forms', 'be-to-be-about-to': 'future-in-the-past',
+  'because-as-since': 'advanced-cohesion', 'can-could-be-able-to': 'be-able-to',
+  'countable-uncountable-nouns': 'countable-uncountable-some-any',
+  'for-since': 'present-perfect-for-since-just-yet-already',
+  'gradable-adjectives': 'modifying-comparatives', 'indirect-questions': 'question-words-and-forms',
+  'introductory-it': 'there-is-there-are', 'like-as-as-if': 'like-love-hate-ing',
+  'make-or-do': 'verbs-and-prepositions', 'may-might': 'advanced-probability',
+  'modals-of-deduction': 'modals-of-deduction-present', 'narrative-tenses': 'past-continuous',
+  'nouns-and-prepositions': 'noun-modifiers-compound-nouns', 'passive-voice': 'passive',
+  'past-perfect': 'past-perfect-narrative-tenses', 'past-perfect-continuous': 'present-perfect-continuous',
+  'past-simple-vs-past-continuous': 'past-simple', 'present-perfect-vs-past-simple': 'present-perfect',
+  'present-simple-vs-present-continuous': 'present-simple', 'quite-rather-fairly': 'hedging-distancing',
+  'requests-offers-permission': 'would-like', 'should-ought-to': 'should-have-could-have-neednt-have',
+  'so-do-i-neither-do-i': 'both-either-neither-not-only', 'some-any': 'countable-uncountable-some-any',
+  'still-yet-already': 'present-perfect-for-since-just-yet-already',
+  'subject-verb-agreement': 'subject-pronouns-possessive-adjectives',
+  'time-conjunctions': 'future-time-clauses', 'too-enough': 'so-such-so-that',
+  'will-and-shall': 'future-forms', 'will-vs-going-to': 'future-forms',
+  'word-order': 'phrasal-verbs-word-order', 'zero-and-first-conditional': 'zero-first-conditional'
 };
 function ghIconSrc(slug) { return '/media/grammar/guides/guide-' + (GH_ICON_ALIAS[slug] || slug) + '.webp'; }
 function ghLvBadge(lv) {
   var label = lv === 'all' ? 'A1\u2013C2' : lv.toUpperCase();
-  var color = lv === 'all' ? '#8A93A6' : (GH_LV_COLORS[lv] || '#8A93A6');
-  return '<span class="gh-lv" style="background:' + color + '">' + label + '</span>';
+  var g = GH_LV_GRAD[lv] || GH_LV_GRAD.all;
+  return '<span class="gh-lv" style="background:linear-gradient(180deg,' + g[0] + ',' + g[1] + ')">' + label + '</span>';
 }
 function paintGhHeader() {
   var f = state.gFilter || { level: 'all', q: '' };
@@ -6407,18 +6433,14 @@ function renderGrammar(v, slug) {
     '<div class="gh-hero"><div class="gh-hero-t">' +
       '<h1>Grammar <em>Guides</em></h1>' +
       '<p>Clear explanations, real examples and practice exercises for every level.</p>' +
-    '</div><img class="gh-mascot" src="/media/grammar/mascot-hero.webp" alt="Grammar mascot"></div>' +
-    '<div class="gh-feats">' +
-      '<span class="gh-feat"><i>\uD83D\uDCD6</i><b>Simple<br>explanations</b></span>' +
-      '<span class="gh-feat"><i>\uD83D\uDCAC</i><b>Real<br>examples</b></span>' +
-      '<span class="gh-feat"><i>\u270F\uFE0F</i><b>Practice<br>exercises</b></span>' +
-    '</div>' +
+    '</div><img class="gh-mascot" src="/media/grammar/mascot-guides.webp" alt="Grammar mascot"></div>' +
+    '<img class="gh-feats-img" src="/media/grammar/feats-strip.webp" alt="Simple explanations, real examples, practice exercises">' +
     '<div id="gtest-banner-wrap"></div>' +
     '<div class="gh-filters" role="tablist">' +
     GH_LEVELS.map(function (lv) {
       return '<button class="gh-pill gh-pill-lv-' + lv.id + (f.level === lv.id ? ' on' : '') + '" data-glevel="' + lv.id + '">' + lv.label + '</button>';
     }).join('') + '</div>' +
-    '<div class="gh-search"><span class="gh-search-ico">\uD83D\uDD0D</span>' +
+    '<div class="gh-search"><span class="gh-search-ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#232B4D" stroke-width="2.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="7"></circle><path d="M16 16 L21.5 21.5"></path></svg></span>' +
       '<input id="g-search" type="search" placeholder="Search grammar topics..." value="' + esc(f.q) + '" aria-label="Search grammar topics"></div>' +
     '<div class="gh-sec"><span id="gh-sec-lv"></span>' +
       '<div class="gh-sec-t"><h2>Grammar Guides</h2><p id="gh-sec-sub"></p></div>' +
@@ -6472,7 +6494,7 @@ function grammarCardHTML(t, p) {
   var status;
   if (p && p.done) status = '<span class="gh-status done">✓ ' + p.best + '/' + (p.total || 16) + '</span>';
   else if (p && p.attempts) status = '<span class="gh-status prog">Best ' + p.best + '/' + (p.total || 16) + '</span>';
-  else status = '<span class="gh-status">16 exercises</span>';
+  else status = '<span class="gh-status">\uD83D\uDCC4 16 exercises</span>';
   return '<a class="gh-card" href="#/grammar/' + esc(t.slug) + '">' +
     '<span class="gh-ico"><img src="' + ghIconSrc(t.slug) + '" alt="" loading="lazy"></span>' +
     '<span class="gh-card-main"><span class="gh-titlerow">' + ghLvBadge(t.level) + '<b>' + esc(t.h1) + '</b></span>' + status + '</span>' +
@@ -12328,7 +12350,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610200340';
+var APP_VERSION = '202610200411';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
