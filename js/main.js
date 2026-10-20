@@ -6513,6 +6513,7 @@ function renderGrammarTopic(v, slug) {
       v.innerHTML = '<div class="g-topic"><div class="empty">Guide not found. <a href="#/grammar">Back to all guides</a></div></div>';
       return;
     }
+    if (t.v2 && GT3_TOPICS[t.slug]) { renderGrammarTopicV3(v, t); return; }
     if (t.v2) { renderGrammarTopicV2(v, t); return; }
     var prog = grammarProgress()[t.slug];
     var sections = (t.sections || []).map(function (s) {
@@ -6654,6 +6655,86 @@ function paintFaAudioBars(v, slug) {
       });
     });
   });
+}
+
+/* Topic page V3 (2026-10-20): anti-wall-of-text layout — quick-rule card per point,
+   visual blocks, examples & details behind an accordion. Gated per topic. */
+var GT3_TOPICS = { 'a-an-the': 1 };
+function renderGrammarTopicV3(v, t) {
+  var levels = t.v2_levels || [];
+  var bar = '<div class="g2-levelbar">' + levels.map(function (lv) {
+    return '<a href="#/grammar/' + esc(t.slug) + '" data-g2lv="' + lv + '">' + lv.toUpperCase() + '</a>';
+  }).join('') + '</div>';
+  var byLevel = {};
+  (t.points || []).forEach(function (p) {
+    var lv = (p.level || '').toLowerCase();
+    (byLevel[lv] = byLevel[lv] || []).push(p);
+  });
+  var exByLevel = {};
+  ((t.exercises && t.exercises.items) || []).forEach(function (ex) {
+    var lv = (ex.level || '').toLowerCase();
+    (exByLevel[lv] = exByLevel[lv] || []).push(ex);
+  });
+  var sections = levels.map(function (lv) {
+    var grad = GH_LV_GRAD[lv] || GH_LV_GRAD.all;
+    var pts = (byLevel[lv] || []).map(function (p) {
+      var blocks = grammarBlocksHTML(p.blocks);
+      var examples = (p.examples || []).map(function (e) {
+        return '<li><div class="g-ex-text">' + gMd(e.text) + '</div>' +
+          (e.note ? '<div class="g-ex-note">' + gMd(e.note) + '</div>' : '') + '</li>';
+      }).join('');
+      var mistakes = (p.mistakes || []).map(function (m) {
+        return '<div class="g-mistake"><div class="g-mline bad">❌ ' + gMd(m.wrong) + '</div>' +
+          '<div class="g-mline good">✅ ' + gMd(m.right) + '</div>' +
+          (m.why ? '<div class="g-mwhy">' + gMd(m.why) + '</div>' : '') + '</div>';
+      }).join('');
+      var body = blocks +
+        (examples ? '<ol class="g-examples">' + examples + '</ol>' : '') +
+        (mistakes ? '<div class="g2-mistakes">' + mistakes + '</div>' : '');
+      return '<div class="gt3-point">' +
+        '<h3 id="' + esc(p.id) + '">' + esc(p.title) + ' <span class="gh-lv">' + lv.toUpperCase() + '</span></h3>' +
+        (p.summary ? '<div class="gt3-quick"><div class="gt3-quick-tag">⚡ The rule in 10 seconds</div><div class="gt3-quick-body">' + gMd(p.summary) + '</div></div>' : '') +
+        (body ? '<button class="gt3-more" type="button">Show examples &amp; details <span class="gt3-chev">▾</span></button>' +
+          '<div class="gt3-body">' + body + '</div>' : '') +
+        '</div>';
+    }).join('');
+    var exs = exByLevel[lv] || [];
+    var practice = exs.length ? '<div class="gt3-practice"><div class="gt3-practice-t">Ready to practise?</div>' +
+      '<p class="gt3-practice-n">' + exs.length + ' exercises for ' + lv.toUpperCase() + '</p>' +
+      '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button></div>' : '';
+    return '<section class="gt3-sec" id="g2-' + lv + '">' +
+      '<div class="gt3-sec-head"><span class="gt3-lv-pill" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv.toUpperCase() + '</span>' +
+      '<h2>' + (G2_LEVEL_LABELS[lv] || lv.toUpperCase()) + '</h2></div>' +
+      '<div class="g-fa-audio" data-fa-lv="' + lv + '"></div>' +
+      pts + practice + '</section>';
+  }).join('');
+  var intro = (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('');
+  v.innerHTML = '<div class="g-topic gt3-topic">' +
+    '<a class="g-back" href="#/grammar">‹ All guides</a>' +
+    '<div class="g-hero"><h1>' + esc(t.h1) + '</h1></div>' +
+    bar + '<div class="g-intro">' + intro + '</div>' + sections + '</div>';
+  Array.prototype.forEach.call(v.querySelectorAll('[data-g2lv]'), function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var el = document.getElementById('g2-' + a.getAttribute('data-g2lv'));
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+  Array.prototype.forEach.call(v.querySelectorAll('[data-g2quiz]'), function (btn) {
+    btn.addEventListener('click', function () {
+      startGrammarQuizV2(t, btn.getAttribute('data-g2quiz'));
+    });
+  });
+  Array.prototype.forEach.call(v.querySelectorAll('.gt3-more'), function (btn) {
+    btn.addEventListener('click', function () {
+      var body = btn.nextElementSibling;
+      var open = body.classList.toggle('open');
+      btn.firstChild.textContent = open ? 'Hide examples & details ' : 'Show examples & details ';
+      btn.querySelector('.gt3-chev').textContent = open ? '▴' : '▾';
+    });
+  });
+  paintFaAudioBars(v, t.slug);
+  window.scrollTo(0, 0);
 }
 
 /* v2 quiz: per-level exercises, supports mcq / gap / error types */
@@ -12387,7 +12468,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610200522';
+var APP_VERSION = '202610201511';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
