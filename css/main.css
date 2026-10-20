@@ -3461,6 +3461,32 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .hm-q-xp{flex:0 0 auto;font-family:"Fredoka",sans-serif;font-size:13px;font-weight:700;background:#FFC53D;color:#5C4300;border-radius:999px;padding:6px 11px;white-space:nowrap;}
 .hm-q-xp.is-claimed{background:#E7F6DF;color:#2F7D1E;padding:6px 9px;}
 .hm-q-go{flex:0 0 auto;color:#B9BFD0;font-size:22px;font-weight:600;}
+/* ==== home lower redesign (2026-10-20, Alireza's mockup + supplied PNGs): Review + Progress ==== */
+.hml-head{display:flex;align-items:center;justify-content:space-between;margin:18px 0 10px;}
+.hml-head h2{font-family:Georgia,"Times New Roman",serif;font-size:26px;font-weight:700;color:#232B4D;margin:0;}
+.hml-viewall{font-size:14px;font-weight:600;color:#232B4D;text-decoration:none;background:#fff;border:1.5px solid #EFE3CE;border-radius:999px;padding:7px 14px;box-shadow:0 3px 10px rgba(120,80,0,.05);}
+.hml-rev{position:relative;display:flex;align-items:center;gap:12px;width:100%;border:0;cursor:pointer;font:inherit;background:linear-gradient(135deg,#FFF3DC 0%,#FFE3B3 100%);border-radius:26px;padding:16px 14px;margin-bottom:14px;text-decoration:none;box-shadow:0 8px 22px rgba(240,140,40,.14);overflow:hidden;}
+.hml-rev:active{transform:scale(.99);}
+.hml-rev-flame{flex:0 0 auto;width:112px;height:auto;display:block;}
+.hml-rev-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px;text-align:left;}
+.hml-rev-num{font-family:"Fredoka",sans-serif;font-size:21px;font-weight:700;color:#232B4D;line-height:1.15;}
+.hml-rev-num b{font-size:40px;color:#F26522;margin-right:6px;}
+.hml-rev-sub{font-size:13.5px;color:#6E6250;line-height:1.45;}
+.hml-rev-btn{align-self:flex-start;margin-top:8px;font-family:"Fredoka",sans-serif;font-size:15.5px;font-weight:600;color:#fff;background:linear-gradient(180deg,#FF8A2A,#F26522);border-radius:999px;padding:10px 20px;box-shadow:0 5px 14px rgba(242,101,34,.35);}
+.hml-rev-check{position:absolute;top:10px;right:10px;width:54px;height:auto;opacity:.95;transform:rotate(8deg);}
+.hml-prog-link{text-decoration:none;display:block;color:inherit;}
+.hml-prog{background:#fff;border-radius:26px;padding:16px 14px 12px;margin-bottom:14px;box-shadow:0 6px 20px rgba(35,43,77,.06);border:1px solid #FBF0DC;}
+.hml-prog-top{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.hml-prog-flame{flex:0 0 auto;width:84px;height:auto;display:block;}
+.hml-prog-txt{flex:1;min-width:0;text-align:left;}
+.hml-prog-txt b{display:block;font-size:19.5px;font-weight:800;color:#232B4D;}
+.hml-prog-txt span{font-size:14px;color:#7C8499;}
+.hml-prog-star{flex:0 0 auto;width:46px;height:auto;display:block;}
+.hml-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.hml-stat{background:#FFF8EC;border-radius:16px;padding:10px 4px 9px;text-align:center;}
+.hml-stat-ico{font-size:19px;line-height:1;}
+.hml-stat-num{font-family:"Fredoka",sans-serif;font-size:19px;font-weight:700;color:#232B4D;margin-top:3px;}
+.hml-stat-lbl{font-size:11px;color:#9AA1B5;margin-top:1px;}
 .g-banner {
   display: flex; align-items: center; gap: 0.8rem;
   background: linear-gradient(120deg, #FFFDF6 0%, #FBEEDF 60%, #F7E3CE 100%);

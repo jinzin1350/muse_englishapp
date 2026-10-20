@@ -7937,46 +7937,53 @@ function paintHome(v, mistakes, attempts) {
   // 1b — Previous lessons (days before today) → archive page
   html += prevLessonsHTML(lessons);
 
-  // 2 — Review (mistakes), learner-facing label "Review"
+  // 2 — Review (mistakes) — 2026-10-20 mockup redesign (hml-*)
   const todayMistakes = today ? mistakes.filter(function (x) { return x.date === today.date; }) : [];
-  html += '<div class="section-title"><h2>Review</h2>' +
-    (mistakes.length ? '<a class="btn btn-ghost btn-sm" href="#/review">View all</a>' : '') + '</div>';
+  html += '<div class="hml-head"><h2>Review</h2>' +
+    (mistakes.length ? '<a class="hml-viewall" href="#/review">View all ›</a>' : '') + '</div>';
   if (!mistakes.length) {
     html += '<div class="card plain"><p class="muted" style="margin:0">Nothing to review yet — wrong answers will appear here so you can practice them again.</p></div>';
   } else {
     const reviewAction = todayMistakes.length
       ? 'data-action="review-today" data-date="' + esc(today.date) + '"'
       : 'data-action="practice-again"';
-    html += '<button class="hrv-banner" ' + reviewAction + ' aria-label="Review your mistakes">' +
-      '<span class="hrv-count"><b>' + mistakes.length + '</b><span>to review</span></span>' +
+    html += '<button class="hml-rev" ' + reviewAction + ' aria-label="Review your mistakes">' +
+      '<img class="hml-rev-flame" src="/media/home/mascot-read-book.png" alt="" loading="lazy">' +
+      '<span class="hml-rev-main">' +
+        '<span class="hml-rev-num"><b>' + mistakes.length + '</b>to review</span>' +
+        '<span class="hml-rev-sub">Practice your mistakes and get even better!</span>' +
+        '<span class="hml-rev-btn">Review mistakes ›</span>' +
+      '</span>' +
+      '<img class="hml-rev-check" src="/media/home/ico-checkcard.png" alt="" loading="lazy">' +
     '</button>';
   }
 
-  // 3 — Progress: most recent meaningful activity, compact empty state
-  html += '<div class="section-title"><h2>Progress</h2>' +
-    (attempts.length ? '<a class="btn btn-ghost btn-sm" href="#/scores">View all</a>' : '') + '</div>';
-  html += '<a class="pg-link" href="#/scores" dir="rtl" lang="fa" aria-label="مشاهده پیشرفت من">' +
-    '<img class="pg-link-bg" src="/media/home/progress-banner-art.webp" alt="" loading="lazy">' +
-    '<span class="pg-link-scrim" aria-hidden="true"></span>' +
-    '<span class="pg-link-txt"><b>پیشرفت من</b><span>آمار کامل تمرین، XP، استریک، و روندهای فعال</span></span></a>';
-  if (!attempts.length) {
-    html += '<div class="card plain"><p class="muted" style="margin:0">No activity yet — finish a quiz and your latest result will show up here.</p></div>';
-  } else {
-    const a = attempts[0];
-    const pct = a.total ? Math.round((a.score / a.total) * 100) : 0;
-    const kindLabel = a.kind === 'grammar' ? 'Grammar quiz' : (a.kind === 'mistakes' ? 'Review session' : 'Word quiz');
-    html += '<a class="hpv-banner" href="#/scores" aria-label="View your progress">' +
-        '<img src="/media/home/progress-v2.webp" alt="" loading="lazy">' +
-      '</a>' +
-      '<div class="card plain hpv-card"><div class="attempt-card">' +
-      '<div class="attempt-info">' +
-        '<div class="attempt-theme">' + esc(a.theme || 'Lesson') + '</div>' +
-        '<div class="attempt-meta">Latest · ' + esc(kindLabel) + ' · ' + esc(a.date || '') + '</div>' +
-      '</div>' +
-      '<div class="percent-wrap"><div class="percent-num">' + a.score + '/' + a.total + ' · ' + pct + '%</div>' +
-      '<div class="progress"><div style="width:' + pct + '%"></div></div></div>' +
-    '</div></div>';
-  }
+  // 3 — Progress — 2026-10-20 mockup redesign (hml-*)
+  var xpTotal = 0;
+  try { xpTotal = state.myPoints || 0; } catch (e) {}
+  var streakNow = 0;
+  try { streakNow = (getStreakLocal() || {}).current_streak || 0; } catch (e) {}
+  var activeDays = 0;
+  try { activeDays = Object.keys(getStreakDayDates() || {}).length; } catch (e) {}
+  var statCell = function (ico, num, lbl) {
+    return '<div class="hml-stat"><div class="hml-stat-ico" aria-hidden="true">' + ico + '</div>' +
+      '<div class="hml-stat-num">' + num + '</div><div class="hml-stat-lbl">' + lbl + '</div></div>';
+  };
+  html += '<div class="hml-head"><h2>Progress</h2>' +
+    '<a class="hml-viewall" href="#/scores">View all ›</a></div>';
+  html += '<a class="hml-prog-link" href="#/scores" aria-label="View your progress"><div class="hml-prog">' +
+    '<div class="hml-prog-top">' +
+      '<img class="hml-prog-flame" src="/media/home/mascot-run.png" alt="" loading="lazy">' +
+      '<span class="hml-prog-txt"><b>Great progress!</b><span>Keep going, you\u2019re on a roll!</span></span>' +
+      '<img class="hml-prog-star" src="/media/home/ico-star.png" alt="" loading="lazy">' +
+    '</div>' +
+    '<div class="hml-stats">' +
+      statCell('⭐', Number(xpTotal).toLocaleString('en-US'), 'Total XP') +
+      statCell('🔥', streakNow, 'Day streak') +
+      statCell('📖', attempts.length, 'Lessons done') +
+      statCell('🗓️', activeDays, 'Active days') +
+    '</div>' +
+  '</div></a>';
 
   // 4 — Notifications: only after meaningful engagement (first quiz done), never automatic
   if (oneSignalReady() && !state.user.demo && !pushSubscribed() && hasAnyQuizDone()) {
@@ -12321,7 +12328,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610200327';
+var APP_VERSION = '202610200340';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
