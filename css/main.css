@@ -3514,17 +3514,17 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 /* Grammar hub v2 (mockup redesign 2026-10-17) */
 body.view-grammar #view { background: #FDF8F1; }
 .g-hub { max-width: var(--content-w); margin: 0 auto; padding: 0.3rem 0 2.5rem; }
-.g-hub #gtest-banner-wrap { margin-bottom: 0.9rem; }
+.g-hub #gtest-banner-wrap { margin-bottom: 0.75rem; }
 .gh-crumb { display: flex; align-items: center; gap: 0.32rem; color: #9AA1B5; font-size: 0.85rem; margin-bottom: 0.3rem; }
 .gh-crumb b { color: #232B4D; font-weight: 700; }
 .gh-crumb-sep { color: #C6CCDD; }
-.gh-hero { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.55rem; }
+.gh-hero { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.4rem; }
 .gh-hero-t { flex: 1 1 auto; min-width: 0; }
 .gh-hero-t h1 { font-family: "Fredoka", "Avenir Next", "Trebuchet MS", sans-serif; font-weight: 700; font-size: 2rem; line-height: 1.12; letter-spacing: -0.01em; color: #232B4D; margin: 0 0 0.45rem; }
 .gh-hero-t h1 em { font-style: normal; color: #F26522; }
 .gh-hero-t p { color: #5B6478; font-size: 0.9rem; line-height: 1.5; margin: 0; }
 .gh-mascot { width: 112px; height: auto; border-radius: 22px; box-shadow: 0 10px 26px rgba(242, 101, 34, 0.20); flex: 0 0 auto; }
-.gh-feats-img { display: block; width: 100%; height: auto; margin-bottom: 0.7rem; }
+.gh-feats-img { display: block; width: 100%; height: auto; margin-bottom: 0.45rem; }
 .gh-filters { display: flex; gap: 0.45rem; overflow-x: auto; padding: 0.15rem 0 0.5rem; margin-bottom: 0.7rem; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .gh-filters::-webkit-scrollbar { display: none; }
 .gh-pill { flex: 0 0 auto; border: 1px solid transparent; border-radius: 999px; padding: 0.62rem 1.2rem; font-size: 0.95rem; font-weight: 700; color: #232B4D; cursor: pointer; font-family: inherit; box-shadow: 0 2px 8px rgba(120, 90, 40, 0.07); }
