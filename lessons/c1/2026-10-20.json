@@ -1,331 +1,334 @@
 {
-  "date": "2026-10-20",
-  "theme": "housing and renting",
-  "level": "c1",
-  "cefr": "C1",
-  "words": [
-    {
-      "word": "breathe new life into",
-      "pos": "idiom",
-      "meaning": "To bring new energy or ideas to something.",
-      "example": "The new manager hopes to breathe new life into the team.",
-      "pronunciation": "breeth nyoo LYF IN-too",
-      "persian": "جان تازه بخشیدن، احیا کردن",
-      "photo": "media/c1/2026-10-20/photos/breathe new life into.jpg",
-      "word_audio": "media/c1/2026-10-20/word-audio/breathe new life into.mp3"
-    },
-    {
-      "word": "council estate",
-      "pos": "noun",
-      "meaning": "An area with houses built by the local council.",
-      "example": "Many families live on the large council estate.",
-      "pronunciation": "KOWN-sil eh-STAYT",
-      "persian": "شهرک مسکونی دولتی",
-      "photo": "media/c1/2026-10-20/photos/council estate.jpg",
-      "word_audio": "media/c1/2026-10-20/word-audio/council estate.mp3"
-    },
-    {
-      "word": "council housing",
-      "pos": "noun",
-      "meaning": "Houses provided by the local authority at low rent.",
-      "example": "There's a long waiting list for council housing.",
-      "pronunciation": "KOWN-sil HOW-zing",
-      "persian": "مسکن دولتی، مسکن عمومی",
-      "photo": "media/c1/2026-10-20/photos/council housing.jpg",
-      "word_audio": "media/c1/2026-10-20/word-audio/council housing.mp3"
-    },
-    {
-      "word": "dog’s life",
-      "pos": "idiom",
-      "meaning": "A very unhappy and difficult existence.",
-      "example": "After losing his job, he felt he was living a dog's life.",
-      "pronunciation": "DOGZ LYF",
-      "persian": "زندگی سخت و بدبختی",
-      "photo": "media/c1/2026-10-20/photos/dog’s life.jpg",
-      "word_audio": "media/c1/2026-10-20/word-audio/dog’s life.mp3"
-    },
-    {
-      "word": "furnished",
-      "pos": "adjective",
-      "meaning": "(Of a property) rented with furniture included.",
-      "example": "We're looking for a furnished apartment to rent.",
-      "pronunciation": "FUR-nisht",
-      "persian": "مبله",
-      "photo": "media/c1/2026-10-20/photos/furnished.jpg",
-      "word_audio": "media/c1/2026-10-20/word-audio/furnished.mp3"
-    },
-    {
-      "word": "get a new lease of life",
-      "pos": "idiom",
-      "meaning": "To become healthy, active, or interesting again.",
-      "example": "The old house got a new lease of life after renovation.",
-      "pronunciation": "get uh nyoo LEESS uhv LYF",
-      "persian": "جان تازه گرفتن، روحیه جدید یافتن",
-      "photo": "media/c1/2026-10-20/photos/get a new lease of life.jpg",
-      "word_audio": "media/c1/2026-10-20/word-audio/get a new lease of life.mp3"
-    },
-    {
-      "word": "granny flat",
-      "pos": "noun",
-      "meaning": "A small apartment attached to a house for an elderly relative.",
-      "example": "They built a granny flat for her aging mother.",
-      "pronunciation": "GRAN-ee FLAT",
-      "persian": "آپارتمان کوچک برای سالمندان",
-      "photo": "media/c1/2026-10-20/photos/granny flat.jpg",
-      "word_audio": "media/c1/2026-10-20/word-audio/granny flat.mp3"
-    }
-  ],
-  "pronunciation_audio": "media/c1/2026-10-20/pronunciation.mp3",
-  "podcast": {
-    "title": "Muse English: Home Sweet Rented Home",
-    "audio": "media/c1/2026-10-20/podcast.mp3",
-    "cover": null,
-    "transcript": "media/c1/2026-10-20/podcast-transcript.txt"
+ "date": "2026-10-20",
+ "theme": "housing and renting",
+ "level": "c1",
+ "cefr": "C1",
+ "words": [
+  {
+   "word": "breathe new life into",
+   "pos": "idiom",
+   "meaning": "To bring new energy or ideas to something.",
+   "example": "The new manager hopes to breathe new life into the team.",
+   "pronunciation": "BREETH noo LYF IN-too",
+   "persian": "جان تازه بخشیدن، احیا کردن",
+   "photo": "media/c1/2026-10-20/photos/breathe new life into.jpg",
+   "word_audio": "media/c1/2026-10-20/word-audio/breathe new life into.mp3"
   },
-  "shadowing": {
-    "title": "Sara's Sunny Granny Flat",
-    "audio": "media/c1/2026-10-20/shadowing.mp3",
-    "transcript": "media/c1/2026-10-20/shadowing-transcript.txt",
-    "sentence_audio": [
-      "media/c1/2026-10-20/shadowing-sentences/001.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/002.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/003.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/004.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/005.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/006.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/007.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/008.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/009.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/010.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/011.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/012.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/013.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/014.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/015.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/016.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/017.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/018.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/019.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/020.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/021.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/022.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/023.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/024.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/025.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/026.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/027.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/028.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/029.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/030.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/031.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/032.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/033.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/034.mp3",
-      "media/c1/2026-10-20/shadowing-sentences/035.mp3"
-    ]
+  {
+   "word": "council estate",
+   "pos": "noun",
+   "meaning": "An area with houses built by the local council.",
+   "example": "Many families live on the large council estate.",
+   "pronunciation": "KOWN-sil e-STAYT",
+   "persian": "شهرک مسکونی دولتی",
+   "photo": "media/c1/2026-10-20/photos/council estate.jpg",
+   "word_audio": "media/c1/2026-10-20/word-audio/council estate.mp3"
   },
-  "quiz": [
-    {
-      "question": "What does 'breathe new life into' mean?",
-      "options": [
-        "To bring new energy or ideas to something.",
-        "To become healthy, active, or interesting again.",
-        "An area with houses built by the local council.",
-        "Houses provided by the local authority at low rent."
-      ],
-      "answer": 0
-    },
-    {
-      "question": "What does 'council estate' mean?",
-      "options": [
-        "An area with houses built by the local council.",
-        "A small apartment attached to a house for an elderly relative.",
-        "Houses provided by the local authority at low rent.",
-        "To bring new energy or ideas to something."
-      ],
-      "answer": 0
-    },
-    {
-      "question": "What does 'council housing' mean?",
-      "options": [
-        "A very unhappy and difficult existence.",
-        "To bring new energy or ideas to something.",
-        "Houses provided by the local authority at low rent.",
-        "(Of a property) rented with furniture included."
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What does 'dog’s life' mean?",
-      "options": [
-        "An area with houses built by the local council.",
-        "Houses provided by the local authority at low rent.",
-        "A very unhappy and difficult existence.",
-        "To become healthy, active, or interesting again."
-      ],
-      "answer": 2
-    },
-    {
-      "question": "What does 'furnished' mean?",
-      "options": [
-        "To become healthy, active, or interesting again.",
-        "An area with houses built by the local council.",
-        "Houses provided by the local authority at low rent.",
-        "(Of a property) rented with furniture included."
-      ],
-      "answer": 3
-    },
-    {
-      "question": "What does 'get a new lease of life' mean?",
-      "options": [
-        "(Of a property) rented with furniture included.",
-        "To become healthy, active, or interesting again.",
-        "An area with houses built by the local council.",
-        "A very unhappy and difficult existence."
-      ],
-      "answer": 1
-    },
-    {
-      "question": "What does 'granny flat' mean?",
-      "options": [
-        "A small apartment attached to a house for an elderly relative.",
-        "To bring new energy or ideas to something.",
-        "(Of a property) rented with furniture included.",
-        "To become healthy, active, or interesting again."
-      ],
-      "answer": 0
-    }
-  ],
-  "grammar": {
-    "title": "Probability: Bound To, May Well, Likely To",
-    "explanation": "Beyond *will* and *might*, English has precise ways to say how likely something is. These expressions make you sound natural and exact, especially in discussion and writing.\n\nFor things that are almost certain, use **be bound to**, **be sure to**, or **be certain to** plus a verb. *The new tenants are **bound to** love the sunny granny flat.* (Never say *It is bound that*.)\n\nFor probable things, use **be likely to**, **may / might / could well** plus a verb, or **there is a good chance that**. *Rents for furnished apartments are **likely to** rise next year.*\n\nFor improbable things, use **be unlikely to** or **there is little chance that**. For impossible things, use **there is no chance that** or **can't possibly**. *There is **little chance** that the damp basement will improve without real repairs.*\n\nWatch the small details. **The chances are** takes a plural verb, and **probably** goes after *will* but before *won't*. *He will **probably** renew the lease. She **probably won't** move.*",
-    "examples": [
-      "*Don't worry, he's **bound to** call you back.* (almost certain)",
-      "*Prices are **likely to** rise again next year.* (probable)",
-      "*She **may well** be right, but we need more evidence.* (quite likely)",
-      "*The new rule is **unlikely to** make much difference.* (improbable)",
-      "*There's **no chance** that he'll change his mind.* (impossible)",
-      "*There's **a good chance** that it'll snow this weekend.* (probable)"
-    ],
-    "practice": [
-      {
-        "q": "Rewrite using **bound to**: I am certain the new tenants will love the granny flat.",
-        "a": "The new tenants are **bound to** love the granny flat."
-      },
-      {
-        "q": "Rewrite using **likely to**: Rents for furnished apartments will probably rise next year.",
-        "a": "Rents for furnished apartments are **likely to** rise next year."
-      },
-      {
-        "q": "Rewrite using **may well**: The old council estate could become popular again after the renovation.",
-        "a": "The old council estate **may well** become popular again after the renovation."
-      },
-      {
-        "q": "Rewrite using **unlikely to**: I doubt the damp basement will get a new lease of life.",
-        "a": "The damp basement is **unlikely to** get a new lease of life."
-      }
-    ],
-    "quiz": [
-      {
-        "question": "Don't worry, he's bound ___ call you back.",
-        "options": [
-          "of",
-          "to",
-          "for",
-          "that"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "It's ___ that the meeting will be cancelled. The boss is ill.",
-        "options": [
-          "bound",
-          "sure to",
-          "likely",
-          "may well"
-        ],
-        "answer": 2
-      },
-      {
-        "question": "She may ___ be right, but we need more evidence.",
-        "options": [
-          "well",
-          "good",
-          "likely",
-          "bound"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "There's a good ___ that it will rain this afternoon.",
-        "options": [
-          "likely",
-          "probable",
-          "sure",
-          "chance"
-        ],
-        "answer": 3
-      },
-      {
-        "question": "The chances ___ that he'll be late again.",
-        "options": [
-          "is",
-          "be",
-          "have",
-          "are"
-        ],
-        "answer": 3
-      },
-      {
-        "question": "Prices are ___ to rise again next year.",
-        "options": [
-          "probably",
-          "likely",
-          "possibly",
-          "may"
-        ],
-        "answer": 1
-      },
-      {
-        "question": "It's highly ___ that they'll win. They haven't won a game all season.",
-        "options": [
-          "unlikely",
-          "impossible to",
-          "doubtful to",
-          "uncertain to"
-        ],
-        "answer": 0
-      },
-      {
-        "question": "Choose the correct sentence.",
-        "options": [
-          "She's bound pass the exam.",
-          "She's bound to passing the exam.",
-          "She bounds to pass the exam.",
-          "She's bound to pass the exam."
-        ],
-        "answer": 3
-      },
-      {
-        "question": "He's ___ to be late. The traffic is terrible.",
-        "options": [
-          "probably",
-          "possibly",
-          "might",
-          "sure"
-        ],
-        "answer": 3
-      },
-      {
-        "question": "The new rule is unlikely ___ much difference.",
-        "options": [
-          "making",
-          "to make",
-          "make",
-          "that makes"
-        ],
-        "answer": 1
-      }
-    ]
+  {
+   "word": "council housing",
+   "pos": "noun",
+   "meaning": "Houses provided by the local authority at low rent.",
+   "example": "There's a long waiting list for council housing.",
+   "pronunciation": "KOWN-sil HOW-zing",
+   "persian": "مسکن دولتی، مسکن عمومی",
+   "photo": "media/c1/2026-10-20/photos/council housing.jpg",
+   "word_audio": "media/c1/2026-10-20/word-audio/council housing.mp3"
+  },
+  {
+   "word": "furnished",
+   "pos": "adjective",
+   "meaning": "(Of a property) rented with furniture included.",
+   "example": "We're looking for a furnished apartment to rent.",
+   "pronunciation": "FUR-nisht",
+   "persian": "مبله",
+   "photo": "media/c1/2026-10-20/photos/furnished.jpg",
+   "word_audio": "media/c1/2026-10-20/word-audio/furnished.mp3"
+  },
+  {
+   "word": "get a new lease of life",
+   "pos": "idiom",
+   "meaning": "To become healthy, active, or interesting again.",
+   "example": "The old house got a new lease of life after renovation.",
+   "pronunciation": "get uh NYOO LEESS uhv LYF",
+   "persian": "جان تازه گرفتن، روحیه جدید یافتن",
+   "photo": "media/c1/2026-10-20/photos/get a new lease of life.jpg",
+   "word_audio": "media/c1/2026-10-20/word-audio/get a new lease of life.mp3"
+  },
+  {
+   "word": "granny flat",
+   "pos": "noun",
+   "meaning": "A small apartment attached to a house for an elderly relative.",
+   "example": "They built a granny flat for her aging mother.",
+   "pronunciation": "GRAN-ee FLAT",
+   "persian": "آپارتمان کوچک برای سالمندان",
+   "photo": "media/c1/2026-10-20/photos/granny flat.jpg",
+   "word_audio": "media/c1/2026-10-20/word-audio/granny flat.mp3"
+  },
+  {
+   "word": "dog’s life",
+   "pos": "idiom",
+   "meaning": "A very unhappy and difficult existence.",
+   "example": "After losing his job, he felt he was living a dog's life.",
+   "pronunciation": "DOGZ LYF",
+   "persian": "زندگی سخت و بدبختی",
+   "photo": "media/c1/2026-10-20/photos/dog’s life.jpg",
+   "word_audio": "media/c1/2026-10-20/word-audio/dog’s life.mp3"
   }
+ ],
+ "pronunciation_audio": "media/c1/2026-10-20/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: A New Lease of Life",
+  "audio": "media/c1/2026-10-20/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-10-20/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Little House Behind the House",
+  "audio": "media/c1/2026-10-20/shadowing.mp3",
+  "transcript": "media/c1/2026-10-20/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c1/2026-10-20/shadowing-sentences/001.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/002.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/003.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/004.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/005.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/006.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/007.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/008.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/009.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/010.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/011.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/012.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/013.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/014.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/015.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/016.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/017.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/018.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/019.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/020.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/021.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/022.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/023.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/024.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/025.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/026.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/027.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/028.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/029.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/030.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/031.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/032.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/033.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/034.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/035.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/036.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/037.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/038.mp3",
+   "media/c1/2026-10-20/shadowing-sentences/039.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'breathe new life into' mean?",
+   "options": [
+    "To bring new energy or ideas to something.",
+    "A small apartment attached to a house for an elderly relative.",
+    "An area with houses built by the local council.",
+    "Houses provided by the local authority at low rent."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'council estate' mean?",
+   "options": [
+    "An area with houses built by the local council.",
+    "A very unhappy and difficult existence.",
+    "Houses provided by the local authority at low rent.",
+    "To bring new energy or ideas to something."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'council housing' mean?",
+   "options": [
+    "(Of a property) rented with furniture included.",
+    "To bring new energy or ideas to something.",
+    "Houses provided by the local authority at low rent.",
+    "To become healthy, active, or interesting again."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'furnished' mean?",
+   "options": [
+    "An area with houses built by the local council.",
+    "Houses provided by the local authority at low rent.",
+    "(Of a property) rented with furniture included.",
+    "A small apartment attached to a house for an elderly relative."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'get a new lease of life' mean?",
+   "options": [
+    "A small apartment attached to a house for an elderly relative.",
+    "An area with houses built by the local council.",
+    "Houses provided by the local authority at low rent.",
+    "To become healthy, active, or interesting again."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'granny flat' mean?",
+   "options": [
+    "To become healthy, active, or interesting again.",
+    "A small apartment attached to a house for an elderly relative.",
+    "An area with houses built by the local council.",
+    "(Of a property) rented with furniture included."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'dog’s life' mean?",
+   "options": [
+    "A very unhappy and difficult existence.",
+    "To bring new energy or ideas to something.",
+    "To become healthy, active, or interesting again.",
+    "A small apartment attached to a house for an elderly relative."
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "examples": [
+   "*I knew he **would** never see her again.*",
+   "*We **were about to** have dinner when the guests arrived.*",
+   "*He **was on the point of** resigning when they offered him a promotion.*",
+   "*She **was to** become one of the most famous writers of her time.*",
+   "*The new hospital **was to have been** opened in 2020, but the work was delayed.*"
+  ],
+  "explanation": "Sometimes we talk about the past and need to describe what was **in the future at that time**. English has several forms for this: **would**, **was about to**, **was on the point of**, **was / were to**, and **was to have done**.\n\n**Would** + verb is the past of *will*: a prediction, promise, or report seen from the past. *He promised he **would** be back by midnight.* Use it after past reporting verbs: *She said the package **would** arrive the next day.*\n\n**Was about to** + verb means something was very close to happening at that time. *I **was about to** leave when the phone rang.* **Was on the point of** + -ing is even nearer, often interrupted: *She **was on the point of giving** up when she found the answer.*\n\n**Was / were to** + verb talks about destiny or an official plan: what really happened later, or what was arranged. *They **were to** marry ten years later.* Imagine a couple who met on a council estate — little did they know they **were to** move into a granny flat by the sea.\n\n**Was / were to have** + past participle describes a plan that failed. *The meeting **was to have taken** place at 10, but it was cancelled.* The family **was to have moved** into the furnished flat, but the landlord changed his mind.",
+  "practice": [
+   {
+    "a": "I was going to leave, but then the phone rang. → I ___ leave when the phone rang.",
+    "q": "I was about to leave when the phone rang."
+   },
+   {
+    "a": "She said she will arrive tomorrow. → She said she ___ arrive the next day.",
+    "q": "She said she would arrive the next day."
+   },
+   {
+    "a": "The concert was planned for May, but it was cancelled. → The concert ___ place in May, but it was cancelled.",
+    "q": "The concert was to have taken place in May, but it was cancelled."
+   },
+   {
+    "a": "They met in 1990 and married in 2000. → They met in 1990; they ___ marry ten years later.",
+    "q": "They met in 1990; they were to marry ten years later."
+   }
+  ],
+  "quiz": [
+   {
+    "answer": 3,
+    "options": [
+     "on the point",
+     "will",
+     "would",
+     "about"
+    ],
+    "question": "I was ___ to leave when the phone rang."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "of giving",
+     "to give",
+     "giving",
+     "of give"
+    ],
+    "question": "She was on the point ___ up when she finally found the answer."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "will",
+     "would",
+     "is going to",
+     "is about to"
+    ],
+    "question": "He knew he ___ never see her again."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "will get",
+     "get",
+     "were to get",
+     "are to get"
+    ],
+    "question": "They met in 1990. Little did they know that they ___ married ten years later."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "takes place",
+     "will take place",
+     "was to have taken place",
+     "has taken place"
+    ],
+    "question": "The meeting ___ at 10, but it was cancelled."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "having",
+     "to have",
+     "have",
+     "to having"
+    ],
+    "question": "We were about ___ dinner when the guests arrived."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "would be",
+     "will be",
+     "is",
+     "is going to be"
+    ],
+    "question": "I thought it ___ a nice day, but it rained all afternoon."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "will be",
+     "is",
+     "would be",
+     "was being"
+    ],
+    "question": "He promised he ___ back by midnight."
+   },
+   {
+    "answer": 3,
+    "options": [
+     "will",
+     "am going to",
+     "am to",
+     "would"
+    ],
+    "question": "As a child, I had no idea that one day I ___ live in Canada."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "arrives",
+     "would arrive",
+     "will arrive",
+     "has arrived"
+    ],
+    "question": "She said the package ___ the next day."
+   }
+  ],
+  "title": "Future in the Past (was about to, was to, would)"
+ }
 }
