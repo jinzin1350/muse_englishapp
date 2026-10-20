@@ -3737,7 +3737,8 @@ body.view-words #view { background: #FDF8F1; }
 .gt3-body .g-table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 14px; font-size: 0.98rem; }
 .gt3-body .g-table th { background: #232B4D; color: #fff; text-align: left; padding: 0.6rem 0.8rem; font-weight: 700; }
 .gt3-body .g-table td { padding: 0.6rem 0.8rem; border-bottom: 1px solid #F0EBDD; line-height: 1.6; background: #fff; }
-.gt3-body .g-table td:first-child { background: #FFF6E9; font-weight: 700; color: #8A4B00; white-space: nowrap; }
+.gt3-body .g-table td:first-child { background: #FFF6E9; font-weight: 700; color: #8A4B00; }
+.gt3-body .g-table td { overflow-wrap: break-word; }
 .gt3-body .g-table tr:last-child td { border-bottom: none; }
 .gt3-body .gwrap { overflow-x: auto; margin: 0.4rem 0 0.9rem; }
 .gt3-body .g-tip { background: #EAF6EC; border: 1px solid #CBE7D2; border-radius: 14px; padding: 0.8rem 1rem; line-height: 1.7; margin: 0 0 0.9rem; }
@@ -3747,6 +3748,18 @@ body.view-words #view { background: #FDF8F1; }
 .gt3-practice-t { font-family: "Fredoka", "Avenir Next", sans-serif; font-weight: 700; font-size: 1.25rem; color: #232B4D; }
 .gt3-practice-n { color: #8A5E00; margin: 0.3rem 0 0.9rem; }
 .gt3-practice .g-start { width: 100%; border-radius: 999px; padding: 0.95rem; font-size: 1.02rem; }
+/* Grammar tables -> cards on small screens (2026-10-20: wide tables were unreadable) */
+@media (max-width: 640px) {
+  .gt3-body .gwrap { overflow: visible; margin: 0.4rem 0 0.9rem; }
+  .gt3-body .g-table { display: block; width: 100%; }
+  .gt3-body .g-table thead { display: none; }
+  .gt3-body .g-table tbody { display: block; }
+  .gt3-body .g-table tr { display: block; background: #fff; border: 1.5px solid #EFE7D6; border-radius: 14px; padding: 0.75rem 0.95rem; margin-bottom: 0.6rem; }
+  .gt3-body .g-table td { display: block; border: none; padding: 0.18rem 0; background: transparent; line-height: 1.6; }
+  .gt3-body .g-table td::before { content: attr(data-label); display: block; font-size: 0.68rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #9AA1B5; margin-bottom: 0.05rem; }
+  .gt3-body .g-table td:first-child { background: transparent; font-size: 1.06rem; color: #8A4B00; padding-top: 0; }
+  .gt3-body .g-table td:first-child::before { display: none; }
+}
 @media (max-width: 560px) {
   .wm-3btn { flex-direction: column; }
   .wm-3btn .wm-btn { width: 100%; font-size: 1rem; padding: 0.9rem 1rem; }

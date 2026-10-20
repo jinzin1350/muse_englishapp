@@ -6352,7 +6352,10 @@ function grammarBlocksHTML(blocks) {
     if (t === 'table') {
       var heads = (b.headers || []).map(function (hh) { return '<th>' + gMd(hh) + '</th>'; }).join('');
       var rows = (b.rows || []).map(function (r) {
-        return '<tr>' + r.map(function (c) { return '<td>' + gMd(c) + '</td>'; }).join('') + '</tr>';
+        return '<tr>' + r.map(function (c, ci) {
+          var lab = (b.headers || [])[ci] || '';
+          return '<td' + (lab ? ' data-label="' + esc(lab) + '"' : '') + '>' + gMd(c) + '</td>';
+        }).join('') + '</tr>';
       }).join('');
       return '<div class="gwrap"><table class="g-table"><thead><tr>' + heads + '</tr></thead><tbody>' + rows + '</tbody></table></div>';
     }
@@ -12467,7 +12470,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610201545';
+var APP_VERSION = '202610201609';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
