@@ -12285,7 +12285,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610200111';
+var APP_VERSION = '202610200221';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14260,7 +14260,7 @@ function renderVocab(v, slug) {
     '<div class="vc-crumb"><span>\uD83D\uDCDA</span> Vocabulary <span class="vc-crumb-sep">\u203A</span> <b id="vc-crumb-lv"></b></div>' +
     '<div class="vc-hero"><div class="vc-hero-t">' +
       '<h1>Vocabulary <em>Builder</em></h1>' +
-      '<p>6,298 words from the Vocabulary in Use books, grouped into 66 topics \u2014 with meanings and examples.</p>' +
+      '<p>9,136 words from the Vocabulary in Use books, grouped into 69 topics \u2014 with meanings and examples.</p>' +
     '</div><div class="vc-mascot" aria-hidden="true">\uD83D\uDCDA</div></div>' +
     '<div class="vc-feats">' +
       '<span class="vc-feat"><i>\uD83D\uDCD6</i><b>Real<br>meanings</b></span>' +
@@ -14859,7 +14859,7 @@ function paintVocabBanner() {
   var doneCount = 0;
   Object.keys(prog).forEach(function (k) { if (prog[k] && prog[k].done) doneCount++; });
   var inner = '<span class="g-b-icon">\uD83D\uDCDA</span><span class="g-b-main"><b>Vocabulary Builder</b>' +
-    '<span>6,298 words \u00B7 66 topics \u00B7 A1\u2013B2' +
+    '<span>9,136 words \u00B7 69 topics \u00B7 A1\u2013C2' +
     (doneCount ? ' \u00B7 ' + doneCount + ' practised' : '') + '</span></span><span class="g-b-cta">Explore \u2192</span>';
   wrap.innerHTML = '<a class="g-banner" href="#/vocab">' + inner + '</a>';
 }
