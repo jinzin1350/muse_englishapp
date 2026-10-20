@@ -1,0 +1,280 @@
+{
+  "date": "2026-10-20",
+  "theme": "rooms of the house",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "air conditioning",
+      "pos": "noun",
+      "meaning": "a system that cools the air",
+      "example": "The car has good air conditioning.",
+      "pronunciation": "air kun-DISH-ning",
+      "persian": "تهویه مطبوع",
+      "photo": "media/a2/2026-10-20/photos/air conditioning.jpg",
+      "word_audio": "media/a2/2026-10-20/word-audio/air conditioning.mp3"
+    },
+    {
+      "word": "balcony",
+      "pos": "noun",
+      "meaning": "A platform outside a building, above the ground.",
+      "example": "We sat on the balcony and enjoyed the view.",
+      "pronunciation": "BAL-kuh-nee",
+      "persian": "بالکن، ایوان",
+      "photo": "media/a2/2026-10-20/photos/balcony.jpg",
+      "word_audio": "media/a2/2026-10-20/word-audio/balcony.mp3"
+    },
+    {
+      "word": "bin",
+      "pos": "noun",
+      "meaning": "A container for rubbish.",
+      "example": "Put the paper in the bin.",
+      "pronunciation": "BIN",
+      "persian": "سطل زباله",
+      "photo": "media/a2/2026-10-20/photos/bin.jpg",
+      "word_audio": "media/a2/2026-10-20/word-audio/bin.mp3"
+    },
+    {
+      "word": "blanket",
+      "pos": "noun",
+      "meaning": "A warm cover for a bed or for keeping warm.",
+      "example": "I pulled the blanket over me.",
+      "pronunciation": "BLANG-kit",
+      "persian": "پتو",
+      "photo": "media/a2/2026-10-20/photos/blanket.jpg",
+      "word_audio": "media/a2/2026-10-20/word-audio/blanket.mp3"
+    },
+    {
+      "word": "blinds",
+      "pos": "noun",
+      "meaning": "Covers for windows made of strips of material.",
+      "example": "Please close the blinds, it's too sunny.",
+      "pronunciation": "BLYNDZ",
+      "persian": "پرده کرکره",
+      "photo": "media/a2/2026-10-20/photos/blinds.jpg",
+      "word_audio": "media/a2/2026-10-20/word-audio/blinds.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-20/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Rooms of the House",
+    "audio": "media/a2/2026-10-20/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-20/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Maya's New Home",
+    "audio": "media/a2/2026-10-20/shadowing.mp3",
+    "transcript": "media/a2/2026-10-20/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-10-20/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/022.mp3",
+      "media/a2/2026-10-20/shadowing-sentences/023.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'air conditioning' mean?",
+      "options": [
+        "a system that cools the air",
+        "A container for rubbish.",
+        "A platform outside a building, above the ground.",
+        "A warm cover for a bed or for keeping warm."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'balcony' mean?",
+      "options": [
+        "A warm cover for a bed or for keeping warm.",
+        "A platform outside a building, above the ground.",
+        "a system that cools the air",
+        "Covers for windows made of strips of material."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bin' mean?",
+      "options": [
+        "Covers for windows made of strips of material.",
+        "A platform outside a building, above the ground.",
+        "A container for rubbish.",
+        "a system that cools the air"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'blanket' mean?",
+      "options": [
+        "A platform outside a building, above the ground.",
+        "a system that cools the air",
+        "Covers for windows made of strips of material.",
+        "A warm cover for a bed or for keeping warm."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'blinds' mean?",
+      "options": [
+        "A container for rubbish.",
+        "Covers for windows made of strips of material.",
+        "A warm cover for a bed or for keeping warm.",
+        "A platform outside a building, above the ground."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Must, Have To and Should",
+    "explanation": "We use **must** and **have to** for obligation.\n\nObligation means something is necessary, not a choice.\n\nWe use **should** for advice.\n\nAdvice means something is a good idea, like when you help a friend.\n\n**Mustn't** and **don't have to** look similar, but they are very different.\n\n**Mustn't** means it is not allowed. **Don't have to** means it is not necessary.\n\nYou **must** empty the bin when it is full.\n\nYou **have to** open the blinds every morning. You **should** wash your blanket every two weeks.",
+    "examples": [
+      "*You **must** wear a helmet on a motorbike.* (a rule)",
+      "*She **has to** get up at 5 for work.* (obligation from a job)",
+      "*You **mustn't** use your phone during the exam.* (not allowed)",
+      "*We **don't have to** wear a uniform at school.* (not necessary)",
+      "*You **should** try this cake. It's delicious.* (advice)",
+      "*You **shouldn't** eat so much sugar.* (negative advice)"
+    ],
+    "practice": [
+      {
+        "q": "It is a rule: empty the bin every day.",
+        "a": "You must empty the bin every day."
+      },
+      {
+        "q": "It is necessary: close the blinds at night.",
+        "a": "You have to close the blinds at night."
+      },
+      {
+        "q": "My advice: buy a warm blanket for winter.",
+        "a": "You should buy a warm blanket for winter."
+      },
+      {
+        "q": "It is not allowed: sit on the balcony railing.",
+        "a": "You mustn't sit on the balcony railing."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "You ___ smoke in the hospital. It's not allowed.",
+        "options": [
+          "don't have to",
+          "mustn't",
+          "shouldn't to",
+          "haven't to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Tomorrow is Sunday, so I ___ get up early.",
+        "options": [
+          "mustn't",
+          "must",
+          "shouldn't to",
+          "don't have to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "You look tired. You ___ go to bed early.",
+        "options": [
+          "should",
+          "must to",
+          "have",
+          "shoulds"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ wear a uniform at work.",
+        "options": [
+          "have to",
+          "must to",
+          "has to",
+          "musts"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Yesterday I ___ work until 9 p.m.",
+        "options": [
+          "must",
+          "have to",
+          "had to",
+          "musted"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ we have to bring our own lunch?",
+        "options": [
+          "Do",
+          "Must",
+          "Have",
+          "Are"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You ___ pay for the museum. It's free.",
+        "options": [
+          "mustn't",
+          "must",
+          "should",
+          "don't have to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "You ___ eat so much sugar. It's bad for your teeth.",
+        "options": [
+          "don't have to",
+          "shouldn't",
+          "mustn't to",
+          "not should"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Next year, I'll ___ take the exam again.",
+        "options": [
+          "have to",
+          "must",
+          "must to",
+          "had to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Does he ___ work at weekends?",
+        "options": [
+          "has to",
+          "have to",
+          "must",
+          "had to"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-10-20/grammar-en.mp3"
+  }
+}

@@ -1,0 +1,330 @@
+{
+ "date": "2026-10-20",
+ "theme": "housing and renting",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "tap",
+   "pos": "noun",
+   "meaning": "A device that controls water flow.",
+   "example": "Turn off the tap to save water.",
+   "pronunciation": "TAP",
+   "persian": "شیر آب",
+   "photo": "media/b1/2026-10-20/photos/tap.jpg",
+   "word_audio": "media/b1/2026-10-20/word-audio/tap.mp3"
+  },
+  {
+   "word": "bowl",
+   "pos": "noun",
+   "meaning": "A round, deep dish for food.",
+   "example": "I ate a bowl of soup for lunch.",
+   "pronunciation": "BOHL",
+   "persian": "کاسه",
+   "photo": "media/b1/2026-10-20/photos/bowl.jpg",
+   "word_audio": "media/b1/2026-10-20/word-audio/bowl.mp3"
+  },
+  {
+   "word": "chest of drawers",
+   "pos": "noun",
+   "meaning": "A piece of furniture with drawers for clothes.",
+   "example": "I put my socks in the chest of drawers.",
+   "pronunciation": "chest-uv-DRAWZ",
+   "persian": "کمد کشودار",
+   "photo": "media/b1/2026-10-20/photos/chest-of-drawers.jpg",
+   "word_audio": "media/b1/2026-10-20/word-audio/chest-of-drawers.mp3"
+  },
+  {
+   "word": "do housework",
+   "pos": "phrase",
+   "meaning": "To clean and tidy your home.",
+   "example": "I help my mother do housework on Saturdays.",
+   "pronunciation": "doo-HOWS-wurk",
+   "persian": "کارهای خانه انجام دادن",
+   "photo": "media/b1/2026-10-20/photos/do-housework.jpg",
+   "word_audio": "media/b1/2026-10-20/word-audio/do-housework.mp3"
+  },
+  {
+   "word": "fridge",
+   "pos": "noun",
+   "meaning": "a machine that keeps food cold.",
+   "example": "Put the milk in the fridge.",
+   "pronunciation": "FRIJ",
+   "persian": "یخچال",
+   "photo": "media/b1/2026-10-20/photos/fridge.jpg",
+   "word_audio": "media/b1/2026-10-20/word-audio/fridge.mp3"
+  },
+  {
+   "word": "get dressed",
+   "pos": "phrase",
+   "meaning": "to put on your clothes.",
+   "example": "I get dressed before breakfast.",
+   "pronunciation": "get-DREST",
+   "persian": "لباس پوشیدن",
+   "photo": "media/b1/2026-10-20/photos/get-dressed.jpg",
+   "word_audio": "media/b1/2026-10-20/word-audio/get-dressed.mp3"
+  },
+  {
+   "word": "get undressed",
+   "pos": "phrase",
+   "meaning": "Take off your clothes.",
+   "example": "I need to get undressed for bed.",
+   "pronunciation": "get-un-DREST",
+   "persian": "لباس درآوردن",
+   "photo": "media/b1/2026-10-20/photos/get-undressed.jpg",
+   "word_audio": "media/b1/2026-10-20/word-audio/get-undressed.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-20/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Moving Into a New Home",
+  "audio": "media/b1/2026-10-20/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-20/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's New Home",
+  "audio": "media/b1/2026-10-20/shadowing.mp3",
+  "transcript": "media/b1/2026-10-20/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-20/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/028.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/029.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/030.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/031.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/032.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/033.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/034.mp3",
+   "media/b1/2026-10-20/shadowing-sentences/035.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'tap' mean?",
+   "options": [
+    "A piece of furniture with drawers for clothes.",
+    "To clean and tidy your home.",
+    "A device that controls water flow.",
+    "Take off your clothes."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'bowl' mean?",
+   "options": [
+    "A round, deep dish for food.",
+    "a machine that keeps food cold.",
+    "A piece of furniture with drawers for clothes.",
+    "To clean and tidy your home."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'chest of drawers' mean?",
+   "options": [
+    "A piece of furniture with drawers for clothes.",
+    "To clean and tidy your home.",
+    "Take off your clothes.",
+    "to put on your clothes."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'do housework' mean?",
+   "options": [
+    "To clean and tidy your home.",
+    "A round, deep dish for food.",
+    "A device that controls water flow.",
+    "Take off your clothes."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'fridge' mean?",
+   "options": [
+    "Take off your clothes.",
+    "A round, deep dish for food.",
+    "to put on your clothes.",
+    "a machine that keeps food cold."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'get dressed' mean?",
+   "options": [
+    "a machine that keeps food cold.",
+    "A piece of furniture with drawers for clothes.",
+    "to put on your clothes.",
+    "A round, deep dish for food."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'get undressed' mean?",
+   "options": [
+    "A round, deep dish for food.",
+    "To clean and tidy your home.",
+    "Take off your clothes.",
+    "to put on your clothes."
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "Could for Past Ability",
+  "explanation": "**Could** is the past of *can* for ability. Use it for general abilities in the past, like things you learned as a child.\n\nThe negative is **couldn't**. For example, she **couldn't** find the tap in the dark kitchen.\n\nFor one specific success in a particular situation, use **was able to** or **managed to**, not *could*. We **managed to** fix the fridge after an hour.\n\nTo ask a question, say **Could** + person + verb. For example: **Could** you get dressed fast when you were a child?\n\n**Could** is the same for every person. It never takes -s, and it never takes *to*: no *coulds*, no *could to do housework*.",
+  "examples": [
+   "*I **could** read before I started school.* (general ability)",
+   "*She **couldn't** speak English when she arrived in Canada.* (negative)",
+   "***Could** you swim when you were a child?* (question)",
+   "*After two hours, we **managed to** fix the car.* (one specific success)",
+   "*I **could** hear music from the next room.* (senses: could is OK here)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite using could: As a child, I was able to swim fast.",
+    "a": "As a child, I could swim fast."
+   },
+   {
+    "q": "Rewrite the negative: I was not able to open the fridge yesterday.",
+    "a": "I couldn't open the fridge yesterday."
+   },
+   {
+    "q": "Rewrite as a question: You were able to get dressed alone when you were five?",
+    "a": "Could you get dressed alone when you were five?"
+   },
+   {
+    "q": "Fix the mistake: He could to do housework when he was ten.",
+    "a": "He could do housework when he was ten."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "When I was four, I ___ read.",
+    "options": [
+     "can",
+     "could",
+     "coulds",
+     "could to"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "My grandmother ___ play the piano beautifully.",
+    "options": [
+     "could",
+     "coulds",
+     "can to",
+     "is able"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I ___ sleep last night because of the noise.",
+    "options": [
+     "can't",
+     "didn't could",
+     "couldn't",
+     "not could"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "___ you speak English when you were a child?",
+    "options": [
+     "Can",
+     "Coulds",
+     "Were",
+     "Could"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "The exam was difficult, but I ___ pass it.",
+    "options": [
+     "could",
+     "was able to",
+     "can",
+     "could to"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Could you ride a bike when you were five? – Yes, I ___.",
+    "options": [
+     "could",
+     "can",
+     "did",
+     "was"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "She ___ swim when she was three.",
+    "options": [
+     "can",
+     "could to",
+     "coulds",
+     "could"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "We ___ go to the park because it was raining.",
+    "options": [
+     "can't",
+     "didn't can",
+     "couldn't",
+     "weren't able"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "I didn't could find my keys.",
+     "I couldn't to find my keys.",
+     "I couldn't find my keys.",
+     "I not could find my keys."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I tried for hours, and finally I ___ open the box.",
+    "options": [
+     "could",
+     "managed to",
+     "can",
+     "managed"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

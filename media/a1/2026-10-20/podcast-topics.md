@@ -1,0 +1,4 @@
+- Rooms of the house: bedroom, bathroom, basin, armchair, basement
+- Touring a small house and a bigger house, favorite rooms
+- Morning routine at the basin, storing old things in the basement
+- Recap of the five words with quick definitions

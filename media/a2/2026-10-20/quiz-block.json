@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What does 'air conditioning' mean?",
+    "options": [
+      "a system that cools the air",
+      "A container for rubbish.",
+      "A platform outside a building, above the ground.",
+      "A warm cover for a bed or for keeping warm."
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What does 'balcony' mean?",
+    "options": [
+      "A warm cover for a bed or for keeping warm.",
+      "A platform outside a building, above the ground.",
+      "a system that cools the air",
+      "Covers for windows made of strips of material."
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does 'bin' mean?",
+    "options": [
+      "Covers for windows made of strips of material.",
+      "A platform outside a building, above the ground.",
+      "A container for rubbish.",
+      "a system that cools the air"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What does 'blanket' mean?",
+    "options": [
+      "A platform outside a building, above the ground.",
+      "a system that cools the air",
+      "Covers for windows made of strips of material.",
+      "A warm cover for a bed or for keeping warm."
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What does 'blinds' mean?",
+    "options": [
+      "A container for rubbish.",
+      "Covers for windows made of strips of material.",
+      "A warm cover for a bed or for keeping warm.",
+      "A platform outside a building, above the ground."
+    ],
+    "answer": 1
+  }
+]

@@ -1,0 +1,277 @@
+{
+  "date": "2026-10-20",
+  "theme": "rooms of the house",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "armchair",
+      "pos": "noun",
+      "meaning": "A comfortable chair with supports for your arms.",
+      "example": "I like to read in my comfy armchair.",
+      "pronunciation": "AHM-chair",
+      "persian": "مبل راحتی",
+      "photo": "media/a1/2026-10-20/photos/armchair.jpg",
+      "word_audio": "media/a1/2026-10-20/word-audio/armchair.mp3"
+    },
+    {
+      "word": "basement",
+      "pos": "noun",
+      "meaning": "A room or area below the ground floor.",
+      "example": "We keep old things in the basement.",
+      "pronunciation": "BAYS-munt",
+      "persian": "زیرزمین",
+      "photo": "media/a1/2026-10-20/photos/basement.jpg",
+      "word_audio": "media/a1/2026-10-20/word-audio/basement.mp3"
+    },
+    {
+      "word": "basin",
+      "pos": "noun",
+      "meaning": "A bowl in a bathroom for washing hands.",
+      "example": "Please wash your hands in the basin.",
+      "pronunciation": "BAY-suhn",
+      "persian": "روشویی، لگن",
+      "photo": "media/a1/2026-10-20/photos/basin.jpg",
+      "word_audio": "media/a1/2026-10-20/word-audio/basin.mp3"
+    },
+    {
+      "word": "bathroom",
+      "pos": "noun",
+      "meaning": "A room with a toilet and a bath or shower.",
+      "example": "The bathroom is upstairs, next to my room.",
+      "pronunciation": "BAH-throom",
+      "persian": "حمام، دستشویی",
+      "photo": "media/a1/2026-10-20/photos/bathroom.jpg",
+      "word_audio": "media/a1/2026-10-20/word-audio/bathroom.mp3"
+    },
+    {
+      "word": "bedroom",
+      "pos": "noun",
+      "meaning": "A room used for sleeping.",
+      "example": "My bedroom is very cozy.",
+      "pronunciation": "BED-room",
+      "persian": "اتاق خواب",
+      "photo": "media/a1/2026-10-20/photos/bedroom.jpg",
+      "word_audio": "media/a1/2026-10-20/word-audio/bedroom.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-20/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Rooms of the House",
+    "audio": "media/a1/2026-10-20/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-20/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My House",
+    "audio": "media/a1/2026-10-20/shadowing.mp3",
+    "transcript": "media/a1/2026-10-20/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-20/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/016.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/017.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/018.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/019.mp3",
+      "media/a1/2026-10-20/shadowing-sentences/020.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'armchair' mean?",
+      "options": [
+        "A room or area below the ground floor.",
+        "A comfortable chair with supports for your arms.",
+        "A bowl in a bathroom for washing hands.",
+        "A room used for sleeping."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'basement' mean?",
+      "options": [
+        "A room with a toilet and a bath or shower.",
+        "A bowl in a bathroom for washing hands.",
+        "A room or area below the ground floor.",
+        "A room used for sleeping."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'basin' mean?",
+      "options": [
+        "A comfortable chair with supports for your arms.",
+        "A room used for sleeping.",
+        "A room with a toilet and a bath or shower.",
+        "A bowl in a bathroom for washing hands."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'bathroom' mean?",
+      "options": [
+        "A room with a toilet and a bath or shower.",
+        "A room or area below the ground floor.",
+        "A comfortable chair with supports for your arms.",
+        "A bowl in a bathroom for washing hands."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bedroom' mean?",
+      "options": [
+        "A bowl in a bathroom for washing hands.",
+        "A comfortable chair with supports for your arms.",
+        "A room used for sleeping.",
+        "A room or area below the ground floor."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "There Is and There Are",
+    "explanation": "We use **there is** and **there are** to say that something is in a place.\n\nUse **there is** with one thing. *There's a basin in my bathroom.* Use **there are** with many things. *There are two bedrooms in my house.*\n\nFor no, use **there isn't** and **there aren't**. *There isn't a basement in my flat. There aren't any boxes in the bedroom.*\n\nFor questions, use **Is there** and **Are there**. *Is there an armchair in your room? Are there any towels in the bathroom?*\n\nIn the past, use **there was** and **there were**. *There was a party at my house. There were many people.*",
+    "examples": [
+      "*There's** a supermarket at the end of the street. (one thing)",
+      "*There are** twenty students in my class. (many things)",
+      "*There isn't** a lift in this building. (no)",
+      "*Are there** any good restaurants in your town? (question)",
+      "*There's** a soft armchair in my bedroom. (one thing)",
+      "*There are** two bathrooms in our house. (many things)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with **there is**: Our living room has a soft armchair.",
+        "a": "There is a soft armchair in our living room."
+      },
+      {
+        "q": "Rewrite with **there are**: My flat has two bathrooms.",
+        "a": "There are two bathrooms in my flat."
+      },
+      {
+        "q": "Make it negative: There is a basin in the bathroom.",
+        "a": "There isn't a basin in the bathroom."
+      },
+      {
+        "q": "Make a question: There are boxes in the basement.",
+        "a": "Are there any boxes in the basement?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "There ___ a book on the table.",
+        "options": [
+          "is",
+          "are",
+          "be",
+          "am"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "There ___ three bedrooms in our flat.",
+        "options": [
+          "is",
+          "be",
+          "are",
+          "has"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ there a bank near here?",
+        "options": [
+          "Are",
+          "Is",
+          "Has",
+          "Does"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ there any eggs in the fridge?",
+        "options": [
+          "Is",
+          "Have",
+          "Do",
+          "Are"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "There aren't ___ chairs in the room.",
+        "options": [
+          "some",
+          "any",
+          "a",
+          "an"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "There's ___ milk in the fridge.",
+        "options": [
+          "some",
+          "a",
+          "any",
+          "many"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Is there a car park? – Yes, there ___.",
+        "options": [
+          "'s",
+          "are",
+          "is",
+          "has"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Are there any good cafés here? – No, there ___.",
+        "options": [
+          "isn't",
+          "not",
+          "don't",
+          "aren't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "How many people ___ in your family?",
+        "options": [
+          "is there",
+          "there are",
+          "have there",
+          "are there"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "There's a new restaurant on my street. ___ really good.",
+        "options": [
+          "There's",
+          "It's",
+          "Is",
+          "There are"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-10-20/grammar-en.mp3"
+  }
+}
