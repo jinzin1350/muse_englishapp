@@ -6702,7 +6702,7 @@ function renderGrammarTopicV3(v, t) {
     var practice = exs.length ? '<div class="gt3-practice"><div class="gt3-practice-t">Ready to practise?</div>' +
       '<p class="gt3-practice-n">' + exs.length + ' exercises for ' + lv.toUpperCase() + '</p>' +
       '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button></div>' : '';
-    return '<section class="gt3-sec" id="g2-' + lv + '">' +
+    return '<section class="gt3-sec" id="g2-' + lv + '" style="--lv:' + (GH_LV_COLORS[lv] || '#8A93A6') + '">' +
       '<div class="gt3-sec-head"><span class="gt3-lv-pill" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv.toUpperCase() + '</span>' +
       '<h2>' + (G2_LEVEL_LABELS[lv] || lv.toUpperCase()) + '</h2></div>' +
       '<div class="g-fa-audio" data-fa-lv="' + lv + '"></div>' +
@@ -12468,7 +12468,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610201511';
+var APP_VERSION = '202610201518';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

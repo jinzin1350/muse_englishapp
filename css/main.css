@@ -3707,21 +3707,22 @@ body.view-words #view { background: #FDF8F1; }
 .gt3-sec-head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.9rem; }
 .gt3-sec-head h2 { font-size: 1.45rem; margin: 0; font-family: "Fredoka", "Avenir Next", sans-serif; color: #232B4D; }
 .gt3-lv-pill { color: #fff; font-weight: 800; font-size: 0.85rem; border-radius: 999px; padding: 0.32rem 0.8rem; letter-spacing: 0.03em; box-shadow: 0 3px 10px rgba(120, 90, 40, 0.18); }
-.gt3-point { background: #fff; border-radius: 22px; padding: 1.3rem 1.2rem 1.1rem; margin-bottom: 1.1rem; box-shadow: 0 6px 22px rgba(120, 90, 40, 0.08); }
+.gt3-point { background: #fff; border-radius: 22px; padding: 1.3rem 1.2rem 1.1rem; margin-bottom: 1.1rem; box-shadow: 0 6px 22px rgba(120, 90, 40, 0.08); border-top: 5px solid var(--lv, #F26522); }
 .gt3-point h3 { font-size: 1.2rem; margin: 0 0 0.8rem; color: #232B4D; line-height: 1.4; }
-.gt3-quick { background: linear-gradient(135deg, #FFF6E3, #FDEFD2); border: 1.5px solid #F3DFAE; border-radius: 16px; padding: 0.95rem 1.05rem; }
-.gt3-quick-tag { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #B07E10; margin-bottom: 0.4rem; }
+.gt3-point .gh-lv { background: var(--lv, #F26522); color: #fff; font-size: 0.72rem; font-weight: 800; border-radius: 999px; padding: 0.18rem 0.6rem; vertical-align: middle; letter-spacing: 0.04em; }
+.gt3-quick { background: linear-gradient(135deg, #FFF6E3, #FDEFD2); border: 1.5px solid #F3DFAE; border-left: 5px solid var(--lv, #F26522); border-radius: 16px; padding: 0.95rem 1.05rem; }
+.gt3-quick-tag { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: color-mix(in srgb, var(--lv, #F26522) 72%, #20242e); margin-bottom: 0.4rem; }
 .gt3-quick-body { line-height: 1.75; color: #3D4356; }
 .gt3-quick-body p { margin: 0 0 0.5rem; line-height: 1.75; }
 .gt3-quick-body p:last-child { margin-bottom: 0; }
 .gt3-more { width: 100%; margin-top: 0.9rem; background: #F7F4EC; border: 1px solid #EFE7D6; color: #5B6478; border-radius: 14px; padding: 0.75rem 1rem; font-size: 0.95rem; font-weight: 700; cursor: pointer; font-family: inherit; }
 .gt3-more:active { background: #EFE7D6; }
-.gt3-chev { color: #F26522; }
+.gt3-chev { color: var(--lv, #F26522); }
 .gt3-body { display: none; padding-top: 1rem; }
 .gt3-body.open { display: block; }
 .gt3-body p { line-height: 1.8; margin: 0 0 0.8rem; color: #3D4356; }
 .gt3-body .g-examples { list-style: none; padding: 0; margin: 0.4rem 0 0.9rem; }
-.gt3-body .g-examples li { background: #FBF9F4; border-left: 4px solid #F26522; border-radius: 0 12px 12px 0; padding: 0.65rem 0.9rem; margin-bottom: 0.55rem; line-height: 1.65; }
+.gt3-body .g-examples li { background: #FBF9F4; border-left: 4px solid var(--lv, #F26522); border-radius: 0 12px 12px 0; padding: 0.65rem 0.9rem; margin-bottom: 0.55rem; line-height: 1.65; }
 .gt3-body .g-ex-note { color: #8A93A6; font-size: 0.9rem; margin-top: 0.2rem; }
 .gt3-body .g-table { width: 100%; border-collapse: separate; border-spacing: 0; overflow: hidden; border-radius: 14px; font-size: 0.98rem; }
 .gt3-body .g-table th { background: #232B4D; color: #fff; text-align: left; padding: 0.6rem 0.8rem; font-weight: 700; }
