@@ -2768,7 +2768,7 @@ async function loadTeacherStudentCerts(i, s) {
       var lv = String(c.level || '').toUpperCase();
       return '<div class="an-arow"><span>🏅 <b>' + lv + '</b> ' + esc(c.title || '') +
         ' <span class="muted">· ' + esc(c.code) + ' · ' + esc(certDateLong(c.created_at)) + (c.revoked ? ' · <b style="color:#D34F4F">revoked</b>' : '') + '</span></span>' +
-        '<span style="display:flex;gap:0.4rem"><a class="btn btn-sm btn-ghost" href="#/certificate/' + esc(c.code) + '" target="_blank" rel="noopener">View</a>' +
+        '<span style="display:flex;gap:0.4rem"><a class="btn btn-sm btn-ghost" href="' + window.location.origin + '/#/certificate/' + esc(c.code) + '" target="_blank" rel="noopener">View</a>' +
         (c.revoked ? '' : '<button class="btn btn-sm btn-ghost" data-action="teacher-cert-revoke" data-code="' + esc(c.code) + '" data-i="' + i + '">Revoke</button>') +
         '</span></div>';
     }).join('');
@@ -12644,7 +12644,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610201658';
+var APP_VERSION = '202610201706';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
