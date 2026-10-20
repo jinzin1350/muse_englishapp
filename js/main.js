@@ -812,16 +812,15 @@ function questCardHTML(q) {
       ? p + ' / ' + q.target + ' XP'
       : (done ? 'Done' : 'Not done'));
   const side = done
-    ? '<span class="hq-xp is-claimed" aria-label="Rewarded">✅</span>'
-    : '<span class="hq-xp">XP +' + q.xp + '</span>';
-  return '<div class="hq-row' + (done ? ' is-done' : '') + '">' +
-    '<a class="hq-body" href="' + (q.link || '#/home') + '">' +
-    '<span class="hq-ico" aria-hidden="true">' + q.icon + '</span>' +
-    '<span class="hq-main"><span class="hq-title">' + q.title + '</span>' +
-    '<span class="hq-bar"><span style="width:' + pct + '%"></span></span>' +
-    '<span class="hq-prog">' + progTxt + '</span></span>' +
-    '<span class="hq-go" aria-hidden="true">›</span></a>' +
-    side + '</div>';
+    ? '<span class="hm-q-xp is-claimed" aria-label="Rewarded">✅</span>'
+    : '<span class="hm-q-xp">XP +' + q.xp + '</span>';
+  return '<div class="hm-q-row' + (done ? ' is-done' : '') + '">' +
+    '<a class="hm-q-body" href="' + (q.link || '#/home') + '">' +
+    '<span class="hm-q-ico" aria-hidden="true">' + q.icon + '</span>' +
+    '<span class="hm-q-main"><span class="hm-q-rtitle">' + q.title + '</span>' +
+    '<span class="hm-q-bar"><span style="width:' + pct + '%"></span></span>' +
+    '<span class="hm-q-stat">' + progTxt + '</span></span></a>' +
+    side + '<span class="hm-q-go" aria-hidden="true">›</span></div>';
 }
 function paintQuests() {
   try {
@@ -830,12 +829,12 @@ function paintQuests() {
     if (isDesktop()) return; /* desktop home paints its own quests card */
     if (!state.user || state.user.demo) { host.innerHTML = ''; return; }
     const qs = questDefs();
-    host.innerHTML = '<section class="hq-card" dir="ltr" lang="en" aria-label="Today\'s quests">' +
-      '<div class="hq-hero"><div class="hq-titles">' +
-      '<div class="hq-title">Daily Quests</div>' +
-      '<div class="hq-sub">Complete quests, earn XP, level up!</div></div>' +
-      '<span class="hq-mega" aria-hidden="true">🎯</span></div>' +
-      '<div class="hq-rows">' + qs.map(questCardHTML).join('') + '</div></section>';
+    host.innerHTML = '<section class="hm-quests" dir="ltr" lang="en" aria-label="Today\'s quests">' +
+      '<div class="hm-q-head"><div class="hm-q-titles">' +
+      '<div class="hm-q-title">Daily Quests</div>' +
+      '<div class="hm-q-sub">Complete quests, earn XP, level up!</div></div>' +
+      '<img class="hm-q-target" src="/media/home/v2/review-target.png" alt=""></div>' +
+      '<div class="hm-q-rows">' + qs.map(questCardHTML).join('') + '</div></section>';
   } catch (e) {}
 }
 function refreshQuests() { autoRewardQuests(); paintQuests(); }
@@ -6108,17 +6107,31 @@ const HOME_STEP_STYLE = {
 function streakBannerHTML(st, dates) {
   st = st || {};
   const n = st.current_streak || 0;
-  const numline = '<b>' + n + '</b>&nbsp;' + (n === 1 ? 'day!' : 'days!');
-  const sub = n > 0 ? 'Keep going! Learn a little every day 🧡' : 'Finish a lesson to ignite it 🔥';
-  return '<a class="stk-link" href="#/scores" dir="ltr" lang="en" aria-label="View your progress">' +
-    '<img class="stk-bg" src="/media/home/streak-banner-art.webp" alt="">' +
-    '<span class="stk-scrim" aria-hidden="true"></span>' +
-    '<span class="stk-txt">' +
-      '<span class="stk-kicker">Your streak is</span>' +
-      '<span class="stk-num">' + numline + '</span>' +
-      '<span class="stk-sub">' + sub + '</span>' +
+  const sub = n > 0 ? 'Keep going! Learn a little every day ❤️' : 'Finish a lesson to ignite it 🔥';
+  /* Desktop keeps the old artwork-style banner. */
+  if (typeof isDesktop === 'function' && isDesktop()) {
+    const numline = '<b>' + n + '</b>&nbsp;' + (n === 1 ? 'day!' : 'days!');
+    return '<a class="stk-link" href="#/scores" dir="ltr" lang="en" aria-label="View your progress">' +
+      '<img class="stk-bg" src="/media/home/streak-banner-art.webp" alt="">' +
+      '<span class="stk-scrim" aria-hidden="true"></span>' +
+      '<span class="stk-txt">' +
+        '<span class="stk-kicker">Your streak is</span>' +
+        '<span class="stk-num">' + numline + '</span>' +
+        '<span class="stk-sub">' + sub + '</span>' +
+      '</span>' +
+      '<span class="stk-go" aria-hidden="true">›</span>' +
+    '</a>';
+  }
+  /* Mobile: Alireza's 2026-10-20 mockup — big mascot, "Your streak is / N days!". */
+  const numline = '<b>' + n + '</b> ' + (n === 1 ? 'day!' : 'days!');
+  return '<a class="hm-streak" href="#/scores" dir="ltr" lang="en" aria-label="View your progress">' +
+    '<span class="hm-streak-mascot"><img src="/media/home/streak-mascot.webp" alt="Streak mascot"></span>' +
+    '<span class="hm-streak-txt">' +
+      '<span class="hm-streak-kicker">Your streak is</span>' +
+      '<span class="hm-streak-num">' + numline + '</span>' +
+      '<span class="hm-streak-sub">' + sub + '</span>' +
     '</span>' +
-    '<span class="stk-go" aria-hidden="true">›</span>' +
+    '<span class="hm-streak-go" aria-hidden="true">›</span>' +
   '</a>';
 }
 
@@ -6880,6 +6893,30 @@ function paintGrammarBanner() {
   });
   var lastSlug = prog._last;
   var lastRec = (lastSlug && prog[lastSlug] && !prog[lastSlug].done) ? prog[lastSlug] : null;
+  /* Mobile: 2026-10-20 mockup card (CONTINUE / GRAMMAR). Desktop keeps g-banner. */
+  if (!isDesktop()) {
+    if (doneCount >= GRAMMAR_TOTAL) {
+      wrap.innerHTML = '<a class="hm-card" href="#/grammar">' +
+        '<span class="hm-icon">🎉</span><span class="hm-main"><span class="hm-kicker">Grammar</span>' +
+        '<span class="hm-title">All ' + GRAMMAR_TOTAL + ' grammar guides completed!</span>' +
+        '<span class="hm-subtxt">Review any topic any time.</span></span>' +
+        '<span class="hm-btn hm-btn-soft">Review →</span></a>';
+    } else if (lastRec) {
+      var pct2 = Math.round(((lastRec.best || 0) / (lastRec.total || 16)) * 100);
+      wrap.innerHTML = '<a class="hm-card" href="#/grammar/' + esc(lastSlug) + '">' +
+        '<span class="hm-icon">📖</span><span class="hm-main"><span class="hm-kicker">Continue</span>' +
+        '<span class="hm-title">' + esc(lastRec.h1 || lastSlug) + '</span>' +
+        '<span class="hm-bar"><span style="width:' + pct2 + '%"></span></span></span>' +
+        '<span class="hm-btn hm-btn-solid">Continue →</span></a>';
+    } else {
+      wrap.innerHTML = '<a class="hm-card" href="#/grammar">' +
+        '<span class="hm-icon">📖</span><span class="hm-main"><span class="hm-kicker">Grammar</span>' +
+        '<span class="hm-title">Grammar Guides</span>' +
+        '<span class="hm-subtxt">' + GRAMMAR_TOTAL + ' topics · A1–C2 · read, practise, earn points</span></span>' +
+        '<span class="hm-btn hm-btn-soft">Explore →</span></a>';
+    }
+    return;
+  }
   var inner;
   if (doneCount >= GRAMMAR_TOTAL) {
     inner = '<span class="g-b-icon">🎉</span><span class="g-b-main"><b>All ' + GRAMMAR_TOTAL + ' grammar guides completed!</b>' +
@@ -12285,7 +12322,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610200221';
+var APP_VERSION = '202610200313';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14858,9 +14895,18 @@ function paintVocabBanner() {
   var prog = vocabProgress();
   var doneCount = 0;
   Object.keys(prog).forEach(function (k) { if (prog[k] && prog[k].done) doneCount++; });
+  var sub = '9,136 words \u00B7 69 topics \u00B7 A1\u2013C2' + (doneCount ? ' \u00B7 ' + doneCount + ' practised' : '');
+  /* Mobile: 2026-10-20 mockup card. Desktop keeps g-banner. */
+  if (!isDesktop()) {
+    wrap.innerHTML = '<a class="hm-card" href="#/vocab">' +
+      '<span class="hm-icon">🗂️</span><span class="hm-main"><span class="hm-kicker">Vocabulary</span>' +
+      '<span class="hm-title">Vocabulary Builder</span>' +
+      '<span class="hm-subtxt">' + sub + '</span></span>' +
+      '<span class="hm-btn hm-btn-soft">Explore →</span></a>';
+    return;
+  }
   var inner = '<span class="g-b-icon">\uD83D\uDCDA</span><span class="g-b-main"><b>Vocabulary Builder</b>' +
-    '<span>9,136 words \u00B7 69 topics \u00B7 A1\u2013C2' +
-    (doneCount ? ' \u00B7 ' + doneCount + ' practised' : '') + '</span></span><span class="g-b-cta">Explore \u2192</span>';
+    '<span>' + sub + '</span></span><span class="g-b-cta">Explore \u2192</span>';
   wrap.innerHTML = '<a class="g-banner" href="#/vocab">' + inner + '</a>';
 }
 
@@ -14868,6 +14914,24 @@ function paintWordsBanner() {
   var wrap = document.getElementById('home-words-wrap');
   if (!wrap) return;
   var map = wordMapGet();
+  /* Mobile: 2026-10-20 mockup card. Desktop keeps g-banner. */
+  if (!isDesktop()) {
+    if (map.tested) {
+      var n2 = Object.keys(map.words || {}).length;
+      wrap.innerHTML = '<a class="hm-card" href="#/words">' +
+        '<span class="hm-icon">🗺️</span><span class="hm-main"><span class="hm-kicker">Practice</span>' +
+        '<span class="hm-title">Word Map</span>' +
+        '<span class="hm-subtxt">' + n2.toLocaleString() + ' words mapped \u00B7 level ' + (map.level || '?').toUpperCase() + '</span></span>' +
+        '<span class="hm-btn hm-btn-soft">Continue →</span></a>';
+    } else {
+      wrap.innerHTML = '<a class="hm-card" href="#/words">' +
+        '<span class="hm-icon">🗺️</span><span class="hm-main"><span class="hm-kicker">Practice</span>' +
+        '<span class="hm-title">Word Map</span>' +
+        '<span class="hm-subtxt">Map your vocabulary \u00B7 9,136 words \u00B7 A1\u2013C2</span></span>' +
+        '<span class="hm-btn hm-btn-soft">Start →</span></a>';
+    }
+    return;
+  }
   var inner;
   if (map.tested) {
     var n = Object.keys(map.words || {}).length;
