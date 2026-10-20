@@ -2704,10 +2704,23 @@ async function renderCertificate(v, code) {
     v.innerHTML = '<div class="cert-page">' +
       '<div class="cert-verified">✓ Verified — this certificate was issued by Muse English</div>' +
       certCardHTML(d) +
-      '<div class="cert-actions cert-noprint"><button class="btn btn-primary" data-action="cert-print">⬇ Download / Print PDF</button></div>' +
+      '<div class="cert-actions cert-noprint"><button class="btn btn-primary" data-action="cert-print">⬇ Download / Print PDF</button> ' +
+      '<button class="btn" data-action="cert-share" data-code="' + esc(d.code) + '">🔗 Share / Copy link</button></div>' +
       '</div>';
   } catch (e) {
     v.innerHTML = '<div class="cert-page"><div class="empty">Could not verify right now — please try again.</div></div>';
+  }
+}
+async function shareCertificate(code, btn) {
+  var url = window.location.origin + '/#/certificate/' + code;
+  if (navigator.share) {
+    try { await navigator.share({ title: 'Muse English Certificate', text: 'My Muse English certificate — verify it here:', url: url }); return; } catch (e) { /* cancelled: fall through to copy */ }
+  }
+  try {
+    await navigator.clipboard.writeText(url);
+    if (btn) { var orig = btn.textContent; btn.textContent = '✓ Link copied'; setTimeout(function () { btn.textContent = orig; }, 2200); }
+  } catch (e) {
+    window.prompt('Copy your certificate link:', url);
   }
 }
 function printCertificate() {
@@ -12533,6 +12546,7 @@ function bindEvents() {
     else if (a === 'teacher-cert-issue') teacherIssueCert(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-cert-revoke') teacherRevokeCert(t.getAttribute('data-code'), parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'cert-print') printCertificate();
+    else if (a === 'cert-share') shareCertificate(t.getAttribute('data-code'), t);
     else if (a === 'vc-say') playVocabAudio(t.getAttribute('data-audio'));
     else if (a === 'teacher-nudge') teacherNudge(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-sent') toggleTeacherSent(parseInt(t.getAttribute('data-i'), 10), t);
@@ -12644,7 +12658,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610201706';
+var APP_VERSION = '202610201710';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
