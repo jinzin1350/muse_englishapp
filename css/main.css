@@ -3703,7 +3703,7 @@ body.view-words #view { background: #FDF8F1; }
 .g-fa-player { width: 100%; display: none; margin: 0.2rem 0 0.4rem; }
 /* Topic page V3 — anti-wall-of-text layout (2026-10-20) */
 .gt3-topic { font-size: 1.05rem; }
-.gt3-sec { margin: 2rem 0 2.4rem; }
+.gt3-sec { margin: 1.6rem 0 2rem; background: color-mix(in srgb, var(--lv, #F26522) 6%, #FDF8F1); border: 1.5px solid color-mix(in srgb, var(--lv, #F26522) 16%, transparent); border-radius: 26px; padding: 1.2rem 1rem 1.4rem; }
 .gt3-sec-head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: 0.9rem; }
 .gt3-sec-head h2 { font-size: 1.45rem; margin: 0; font-family: "Fredoka", "Avenir Next", sans-serif; color: #232B4D; }
 .gt3-lv-pill { color: #fff; font-weight: 800; font-size: 0.85rem; border-radius: 999px; padding: 0.32rem 0.8rem; letter-spacing: 0.03em; box-shadow: 0 3px 10px rgba(120, 90, 40, 0.18); }
