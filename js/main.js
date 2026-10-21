@@ -12983,7 +12983,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610210502';
+var APP_VERSION = '202610210512';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -13064,6 +13064,7 @@ function isTeachersPath() { return /^\/teachers(\/|$)/.test(window.location.path
 var TW_SECTIONS = [
   ['overview', '📊', 'Overview'],
   ['students', '👥', 'Students'],
+  ['daily', '📅', 'Daily study'],
   ['assignments', '✈️', 'Assignments'],
   ['placement', '📝', 'Placement tests'],
   ['links', '🔗', 'Invite & links']
@@ -13417,6 +13418,7 @@ function twShowSection(name) {
   twPaintViewBanner();
   if (name === 'overview') twPageOverview(c);
   else if (name === 'students') twPageStudents(c);
+  else if (name === 'daily') twPageDaily(c);
   else if (name === 'assignments') twPageAssignments(c);
   else if (name === 'assignment-detail') twPageAssignmentDetail(c);
   else if (name === 'compose') twPageCompose(c);
@@ -13715,6 +13717,52 @@ async function twSendNudge(i) {
 }
 
 /* ---------------- page: assignments ---------------- */
+
+/* Daily study — the admin panel's table, scoped to this teacher's students.
+   Same shared renderer/fetch as the admin + in-app teacher versions. */
+async function twPageDaily(c) {
+  c.innerHTML = twPageHead('DAILY STUDY', 'Daily study',
+      'Who studied how much, per day or range — your students only.') +
+    '<div id="twd-daily"><div class="tw-empty">Loading…</div></div>';
+  twLoadDaily();
+}
+async function twLoadDaily() {
+  var host = document.getElementById('twd-daily');
+  if (!host) return;
+  var roster = await twGetStudents();
+  var day = state.twDailyDay || todayStr();
+  var range = state.twDailyRange || 'day';
+  state.twDailyDay = day;
+  state.twDailyRange = range;
+  host.innerHTML = dailyStudyShell('twd', day, range, '📊 Daily study — who studied how much');
+  var rangeSel = document.getElementById('twd-daily-range');
+  if (rangeSel) rangeSel.addEventListener('change', function () {
+    state.twDailyRange = rangeSel.value; twLoadDaily();
+  });
+  var dayInput = document.getElementById('twd-daily-day');
+  if (dayInput) dayInput.addEventListener('change', function () {
+    if (dayInput.value) { state.twDailyDay = dayInput.value; twLoadDaily(); }
+  });
+  var body = document.getElementById('twd-daily-body');
+  var sum = document.getElementById('twd-daily-sum');
+  if (!roster.length) {
+    if (body) body.innerHTML = '<div class="empty">No students yet — share your invite link to get your first student.</div>';
+    return;
+  }
+  try {
+    var f = await fetchStudyRange(range, day, roster.map(function (s) { return s.user_id; }));
+    var rows = roster.map(function (s) {
+      return dailyStudyRow(s.user_id, f, s.display_name || '?', s.level);
+    });
+    rows.sort(function (a, b) { return b.min - a.min; });
+    var active = rows.filter(dailyStudyActive).length;
+    var totalMin = rows.reduce(function (a, r) { return a + r.min; }, 0);
+    if (sum) sum.textContent = active + ' / ' + rows.length + ' studied · ' + totalMin + ' total min · ' + rangeLabel(range);
+    if (body) body.innerHTML = dailyStudyTableHTML(rows, 'No study activity in ' + rangeLabel(range) + '.');
+  } catch (e) {
+    if (body) body.innerHTML = '<div class="empty">Could not load daily study: ' + esc((e && e.message) || e) + '</div>';
+  }
+}
 
 async function twPageAssignments(c) {
   var assigns = await twGetAssignments();
