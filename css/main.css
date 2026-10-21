@@ -4518,3 +4518,13 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
   .tw-compose .as2-modes{flex-direction:column}
 }
 
+/* Vocabulary assignments (2026-10-21) */
+.as-vocab-words { max-height: 260px; overflow-y: auto; border: 1.5px solid #EFE7D6; border-radius: 14px; padding: 0.5rem 0.7rem; background: #FFFDF9; display: flex; flex-direction: column; gap: 0.15rem; }
+.as-vw { display: flex; align-items: baseline; gap: 0.45rem; padding: 0.28rem 0.3rem; border-radius: 8px; cursor: pointer; font-size: 0.92rem; }
+.as-vw:hover { background: #FBF3E4; }
+.as-vw .muted { font-size: 0.82rem; }
+.tw-missed { padding: 0.55rem 0; border-top: 1px dashed #EFE7D6; }
+.tw-missed-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.45rem; }
+.tw-missed-chip { background: #FDF1E7; border: 1px solid #F5CBA8; color: #7A3E14; border-radius: 999px; padding: 0.28rem 0.7rem; font-size: 0.83rem; }
+.tw-missed-chip b { color: #232B4D; }
+

@@ -3304,10 +3304,40 @@ function assignmentComposerBodyHTML(list) {
     '<div class="as2-modes" role="tablist">' +
     '<button type="button" class="as2-mode on" data-amode="homework"><span class="as2-mode-ico">📝</span><span class="as2-mode-txt"><b>Homework</b><small>Practice and reinforce learning</small></span></button>' +
     '<button type="button" class="as2-mode" data-amode="exam"><span class="as2-mode-ico">📋</span><span class="as2-mode-txt"><b>Exam</b><small>Assess student knowledge</small></span></button></div>' +
-    '<div class="field"><label for="as-level">Level</label>' +
+    '<div class="field" id="as-level-field"><label for="as-level">Level</label>' +
     '<select id="as-level" class="input">' +
     ASSIGN_LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (lv === 'a2' ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') +
     '</select></div>' +
+    '<div class="field"><label>Content</label><div id="as-source">' +
+    '<label class="chk as2-type-card"><input type="radio" name="as-source" value="grammar" checked> <span class="as2-type-ico">📖</span> Grammar</label>' +
+    '<label class="chk as2-type-card"><input type="radio" name="as-source" value="vocab"> <span class="as2-type-ico">📚</span> Vocabulary</label>' +
+    '</div></div>' +
+    '<div id="as-vocab-panel" class="hidden">' +
+    '<div class="field"><label for="as-vocab-cat">Word category</label>' +
+    '<select id="as-vocab-cat" class="input"><option value="">Loading categories…</option></select></div>' +
+    '<div class="field"><label>Word levels</label><div id="as-vocab-levels">' +
+    ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'].map(function (lv) {
+      return '<label class="chk"><input type="checkbox" class="as-vocab-lv" value="' + lv + '"' + (lv === 'a2' ? ' checked' : '') + '> ' + lv.toUpperCase() + '</label>';
+    }).join('') +
+    '</div></div>' +
+    '<div class="muted" id="as-vocab-poolinfo" style="font-size:.85rem"></div>' +
+    '<div class="field"><label>Words <span class="as2-opt">— uncheck any you don\'t want</span></label>' +
+    '<div id="as-vocab-words" class="as-vocab-words"><div class="empty">Pick a category to see its words.</div></div></div>' +
+    '<div class="field"><label>Question types</label><div id="as-vocab-types">' +
+    '<label class="chk as2-type-card"><input type="checkbox" class="as-vocab-type" value="meaning" checked> <span class="as2-type-ico">🔤</span> Word → meaning</label>' +
+    '<label class="chk as2-type-card"><input type="checkbox" class="as-vocab-type" value="reverse" checked> <span class="as2-type-ico">🔁</span> Meaning → word</label>' +
+    '<label class="chk as2-type-card"><input type="checkbox" class="as-vocab-type" value="gap"> <span class="as2-type-ico">⌨️</span> Fill the gap</label>' +
+    '<label class="chk as2-type-card"><input type="checkbox" class="as-vocab-type" value="listen"> <span class="as2-type-ico">🎧</span> Listen &amp; choose</label>' +
+    '</div></div>' +
+    '<div class="field"><label>Wrong options come from</label><div id="as-vocab-dist">' +
+    '<label class="chk as2-diff-card"><input type="radio" name="as-vocab-dist" value="same" checked> <span class="as2-diff-txt"><b>Same category</b><small>Harder — similar words</small></span></label>' +
+    '<label class="chk as2-diff-card"><input type="radio" name="as-vocab-dist" value="any"> <span class="as2-diff-txt"><b>Any words</b><small>Easier — mixed words</small></span></label>' +
+    '</div></div>' +
+    '<div class="field"><label for="as-vocab-count">Questions</label>' +
+    '<select id="as-vocab-count" class="input">' +
+    [5, 10, 15, 20].map(function (n) { return '<option value="' + n + '"' + (n === 10 ? ' selected' : '') + '>' + n + '</option>'; }).join('') +
+    '</select></div>' +
+    '</div>' +
     '<div id="as-hw-fields">' +
     '<div class="field"><label for="as-topic">Topic</label>' +
     '<select id="as-topic" class="input"></select></div>' +
@@ -3375,6 +3405,19 @@ function assignmentComposerWire() {
   document.getElementById('as-all').addEventListener('change', function () {
     document.getElementById('as-students').classList.toggle('hidden', this.checked);
   });
+  /* vocabulary content source */
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="as-source"]'), function (r) {
+    r.addEventListener('change', asSourceUpdate);
+  });
+  var vcat = document.getElementById('as-vocab-cat');
+  if (vcat) vcat.addEventListener('change', asVocabPoolLoad);
+  Array.prototype.forEach.call(document.querySelectorAll('.as-vocab-lv'), function (cb) {
+    cb.addEventListener('change', asVocabPoolLoad);
+  });
+  var vwords = document.getElementById('as-vocab-words');
+  if (vwords) vwords.addEventListener('change', asVocabSelCount);
+  asVocabInit();
+  asSourceUpdate();
 }
 
 async function teacherAssignmentComposer() {
@@ -3415,6 +3458,7 @@ function setAssignMode(m) {
   const ico = document.querySelector('.as2-ico span');
   if (ico) ico.textContent = assignMode === 'exam' ? '📋' : '📝';
   if (typeof asV2PanelUpdate === 'function') asV2PanelUpdate();
+  if (typeof asSourceUpdate === 'function') asSourceUpdate();
 }
 /* After a successful send: close the modal (legacy) or return to the
    assignments list (the /teachers full-page composer). */
@@ -3669,6 +3713,8 @@ async function createAssignment(btn) {
   });
   if (!targets.length) { err('Pick at least one student.'); return; }
   const mode = (typeof assignMode !== 'undefined' && assignMode === 'exam') ? 'exam' : 'homework';
+  const srcEl = document.querySelector('input[name="as-source"]:checked');
+  if (srcEl && srcEl.value === 'vocab') { await createVocabAssignment(btn, { err: err, targets: targets, orig: btn.textContent, mode: mode }); return; }
   if (mode === 'exam') { await createExamAssignment(btn, { err: err, level: level, targets: targets, orig: btn.textContent }); return; }
   /* all topics are v2 now: homework always uses the v2 bank flow */
   await createV2Assignment(btn, { err: err, targets: targets, orig: btn.textContent });
@@ -3803,6 +3849,268 @@ async function createV2Assignment(btn, ctx) {
     }).select('id').single();
     if (ins.error) throw ins.error;
     const body = '📝 Your teacher sent you homework: ' + title + ' — open Muse English to start.';
+    await Promise.all(targets.map(function (s) {
+      return Promise.allSettled([
+        sb.rpc('send_teacher_message', { p_student: s.user_id, p_body: body }),
+        sb.rpc('send_nudge', { p_student: s.user_id })
+      ]);
+    }));
+    asComposeDone();
+  } catch (e) {
+    err('Could not send: ' + (e && e.message ? e.message : 'check your connection.'));
+    btn.disabled = false; btn.textContent = orig;
+  }
+}
+
+/* ---- vocabulary assignments (2026-10-21, his order) ----
+   Teacher picks a word category + levels from the 9,136-word bank; questions
+   are generated from word data at send time and stored in the same
+   `assignments` row shape as grammar homework/exams (topic='vocab'). */
+function asSource() {
+  var el = document.querySelector('input[name="as-source"]:checked');
+  return el ? el.value : 'grammar';
+}
+function asSourceUpdate() {
+  var panel = document.getElementById('as-vocab-panel');
+  if (!panel) return;
+  var vocab = asSource() === 'vocab';
+  panel.classList.toggle('hidden', !vocab);
+  var hw = document.getElementById('as-hw-fields'), ex = document.getElementById('as-exam-fields');
+  var lf = document.getElementById('as-level-field');
+  if (vocab) {
+    if (hw) hw.classList.add('hidden');
+    if (ex) ex.classList.add('hidden');
+    if (lf) lf.classList.add('hidden');
+  } else {
+    if (lf) lf.classList.remove('hidden');
+    var m = (typeof assignMode !== 'undefined') ? assignMode : 'homework';
+    if (hw) hw.classList.toggle('hidden', m !== 'homework');
+    if (ex) ex.classList.toggle('hidden', m !== 'exam');
+  }
+}
+async function asVocabInit() {
+  var sel = document.getElementById('as-vocab-cat');
+  if (!sel) return;
+  try {
+    if (!state.asVocabCats) {
+      var res = await fetch('/data/vocab/categories.json');
+      state.asVocabCats = await res.json();
+    }
+    sel.innerHTML = state.asVocabCats.map(function (ct) {
+      return '<option value="' + esc(ct.slug) + '">' + esc(ct.icon || '📚') + ' ' + esc(ct.title) + ' (' + ct.word_count + ' words)</option>';
+    }).join('');
+    asVocabPoolLoad();
+  } catch (e) {
+    sel.innerHTML = '<option value="">Could not load categories</option>';
+  }
+}
+function asVocabLevels() {
+  var out = [];
+  Array.prototype.forEach.call(document.querySelectorAll('.as-vocab-lv:checked'), function (cb) { out.push(cb.value); });
+  return out;
+}
+async function asVocabPoolLoad() {
+  var sel = document.getElementById('as-vocab-cat');
+  var host = document.getElementById('as-vocab-words');
+  var info = document.getElementById('as-vocab-poolinfo');
+  if (!sel || !host) return;
+  var slug = sel.value;
+  var lvls = asVocabLevels();
+  if (!slug) { host.innerHTML = '<div class="empty">Pick a category to see its words.</div>'; state.asVocabPool = []; return; }
+  if (!lvls.length) { host.innerHTML = '<div class="empty">Pick at least one level.</div>'; if (info) info.textContent = ''; state.asVocabPool = []; return; }
+  host.innerHTML = '<div class="empty">Loading words…</div>';
+  try {
+    var res = await fetch('/data/vocab/by-category/' + slug + '.json');
+    var words = await res.json();
+    var pool = words.filter(function (w) {
+      return (w.levels || []).some(function (l) { return lvls.indexOf(String(l).toLowerCase()) !== -1; });
+    });
+    state.asVocabPool = pool;
+    state.asVocabCatWords = words;
+    if (!pool.length) {
+      if (info) info.textContent = '';
+      host.innerHTML = '<div class="empty">No words at these levels in this category.</div>';
+      return;
+    }
+    host.innerHTML = pool.map(function (w, i) {
+      return '<label class="as-vw"><input type="checkbox" class="as-vocab-word" value="' + i + '" checked> ' +
+        '<b>' + esc(w.word) + '</b> <span class="muted">' + esc((w.levels || []).join('/').toUpperCase()) + ' · ' + esc(w.meaning_fa || w.meaning_en || '') + '</span></label>';
+    }).join('');
+    asVocabSelCount();
+  } catch (e) {
+    host.innerHTML = '<div class="empty">Could not load words for this category.</div>';
+  }
+}
+function asVocabSelCount() {
+  var info = document.getElementById('as-vocab-poolinfo');
+  var pool = state.asVocabPool || [];
+  if (!info || !pool.length) return;
+  var n = document.querySelectorAll('.as-vocab-word:checked').length;
+  info.textContent = n + ' of ' + pool.length + ' words selected.';
+}
+function asVocabSelectedWords() {
+  var pool = state.asVocabPool || [];
+  var out = [];
+  Array.prototype.forEach.call(document.querySelectorAll('.as-vocab-word:checked'), function (cb) {
+    var w = pool[parseInt(cb.value, 10)];
+    if (w) out.push(w);
+  });
+  return out;
+}
+var VOCAB_LV_RANK = { a1: 1, a2: 2, b1: 3, b2: 4, c1: 5, c2: 6 };
+function vocabMaxLevel(w) {
+  var best = 'a1', br = 0;
+  (w.levels || []).forEach(function (l) {
+    var r = VOCAB_LV_RANK[String(l).toLowerCase()] || 0;
+    if (r > br) { br = r; best = String(l).toLowerCase(); }
+  });
+  return best;
+}
+function vocabMeaning(w) {
+  /* fa for A1/A2 words, en for B1+ — same rule as the vocab practice quiz */
+  var lv = vocabMaxLevel(w);
+  return (lv === 'a1' || lv === 'a2') ? (w.meaning_fa || w.meaning_en || '') : (w.meaning_en || w.meaning_fa || '');
+}
+function vocabSlugOf(w) { return String(w.word || '').toLowerCase().replace(/[^a-z0-9]+/g, '-'); }
+function vocabDistractors(target, samePool, anyPool, mode, field) {
+  var seen = {};
+  seen[field(target)] = true;
+  var picks = [];
+  var take = function (src) {
+    shuffleArr((src || []).slice()).forEach(function (w) {
+      if (picks.length >= 3) return;
+      if (!w || w.word === target.word) return;
+      var v = field(w);
+      if (!v || seen[v]) return;
+      seen[v] = true;
+      picks.push(v);
+    });
+  };
+  if (mode === 'any') { take(anyPool); take(samePool); } else { take(samePool); take(anyPool); }
+  return picks;
+}
+function vocabGapSentence(w) {
+  var sents = [w.example_en].concat(w.examples_extra || []);
+  var word = String(w.word || '');
+  if (!word) return null;
+  for (var i = 0; i < sents.length; i++) {
+    var s = sents[i];
+    if (!s) continue;
+    var idx = s.toLowerCase().indexOf(word.toLowerCase());
+    if (idx !== -1) return s.slice(0, idx) + '___' + s.slice(idx + word.length);
+  }
+  return null;
+}
+function genVocabQuestions(selected, opts) {
+  var types = opts.types.length ? opts.types : ['meaning'];
+  var samePool = state.asVocabCatWords || selected;
+  var anyPool = opts.anyPool || [];
+  var words = shuffleArr(selected.slice());
+  var qs = [];
+  var ti = 0, wi = 0;
+  while (qs.length < opts.count && wi < words.length * 2) {
+    var w = words[wi % words.length];
+    wi++;
+    var type = types[ti % types.length];
+    ti++;
+    var q = null;
+    if (type === 'meaning') {
+      var m = vocabMeaning(w);
+      var ds = vocabDistractors(w, samePool, anyPool, opts.dist, vocabMeaning);
+      if (m && ds.length === 3) {
+        var o1 = shuffleArr([m].concat(ds));
+        q = { type: 'mcq', q: 'What does "' + w.word + '" mean?', options: o1, answer: o1.indexOf(m) };
+      }
+    } else if (type === 'reverse') {
+      var m2 = vocabMeaning(w);
+      var ds2 = vocabDistractors(w, samePool, anyPool, opts.dist, function (x) { return x.word; });
+      if (m2 && ds2.length === 3) {
+        var o2 = shuffleArr([w.word].concat(ds2));
+        q = { type: 'mcq', q: 'Which word means "' + m2 + '"?', options: o2, answer: o2.indexOf(w.word) };
+      }
+    } else if (type === 'gap') {
+      var sent = vocabGapSentence(w);
+      var ds3 = vocabDistractors(w, samePool, anyPool, opts.dist, function (x) { return x.word; });
+      if (sent && ds3.length === 3) {
+        var o3 = shuffleArr([w.word].concat(ds3));
+        q = { type: 'mcq', q: 'Choose the missing word: ' + sent, options: o3, answer: o3.indexOf(w.word) };
+      }
+    } else if (type === 'listen') {
+      var ds4 = vocabDistractors(w, samePool, anyPool, opts.dist, function (x) { return x.word; });
+      if (w.audio && ds4.length === 3) {
+        var o4 = shuffleArr([w.word].concat(ds4));
+        q = { type: 'listen', q: '🎧 Listen — which word do you hear?', audio: w.audio, options: o4, answer: o4.indexOf(w.word) };
+      }
+    }
+    if (q) {
+      q.id = 'vocab:' + vocabSlugOf(w) + ':' + type + ':' + qs.length;
+      q.prompt = q.q;
+      q.word = w.word;
+      q.level = vocabMaxLevel(w);
+      q.topic_label = opts.catTitle;
+      q.explanation = w.word + ' — ' + (w.meaning_en || '') + (w.meaning_fa ? ' · ' + w.meaning_fa : '') +
+        (w.example_en ? ' Example: ' + w.example_en : '');
+      qs.push(q);
+    }
+  }
+  return qs;
+}
+async function createVocabAssignment(btn, ctx) {
+  var err = ctx.err, targets = ctx.targets, orig = ctx.orig;
+  var catSel = document.getElementById('as-vocab-cat');
+  var cat = null;
+  (state.asVocabCats || []).forEach(function (x) { if (x.slug === (catSel ? catSel.value : '')) cat = x; });
+  if (!cat) { err('Pick a word category.'); return; }
+  var lvls = asVocabLevels();
+  if (!lvls.length) { err('Pick at least one word level.'); return; }
+  var selected = asVocabSelectedWords();
+  if (!selected.length) { err('Select at least one word.'); return; }
+  var types = [];
+  Array.prototype.forEach.call(document.querySelectorAll('.as-vocab-type:checked'), function (cb) { types.push(cb.value); });
+  if (!types.length) { err('Pick at least one question type.'); return; }
+  var countEl = document.getElementById('as-vocab-count');
+  var count = parseInt(countEl ? countEl.value : '10', 10) || 10;
+  var distEl = document.querySelector('input[name="as-vocab-dist"]:checked');
+  var dist = distEl ? distEl.value : 'same';
+  btn.disabled = true;
+  btn.textContent = 'Preparing…';
+  var anyPool = [];
+  if (dist === 'any') {
+    try {
+      var others = (state.asVocabCats || []).filter(function (x) { return x.slug !== cat.slug; })
+        .sort(function (a, b) { return (b.word_count || 0) - (a.word_count || 0); });
+      if (others.length) {
+        var res = await fetch('/data/vocab/by-category/' + others[0].slug + '.json');
+        anyPool = await res.json();
+      }
+    } catch (e) {}
+  }
+  var questions = genVocabQuestions(selected, { count: count, types: types, dist: dist, anyPool: anyPool, catTitle: cat.title });
+  if (!questions.length) {
+    err('Could not build questions from this selection — try more words or question types.');
+    btn.disabled = false; btn.textContent = orig;
+    return;
+  }
+  if (questions.length < count) err('Only ' + questions.length + ' questions could be built for this selection.');
+  var title = '📚 ' + cat.title + ' vocabulary (' + lvls.map(function (l) { return l.toUpperCase(); }).join(',') + ')';
+  var noteEl = document.getElementById('as-note');
+  var dlEl = document.getElementById('as-deadline');
+  var note = noteEl ? noteEl.value.trim() : '';
+  var deadline = dlEl && dlEl.value ? dlEl.value : null;
+  btn.textContent = 'Sending…';
+  try {
+    var ins = await sb.from('assignments').insert({
+      teacher_id: tchViewId(),
+      teacher_name: ((state.twViewTeacher || state.teacher) && (state.twViewTeacher || state.teacher).display_name) || '',
+      kind: ctx.mode, title: title,
+      level: lvls.join(','),
+      topic: 'vocab', topic_label: cat.title + ' vocabulary',
+      question_count: questions.length, questions: questions,
+      student_ids: targets.map(function (s) { return s.user_id; }),
+      note: note || null, deadline: deadline
+    }).select('id').single();
+    if (ins.error) throw ins.error;
+    var body = '📚 Your teacher sent you vocabulary ' + (ctx.mode === 'exam' ? 'exam' : 'homework') + ': ' + title + ' — open Muse English to start.';
     await Promise.all(targets.map(function (s) {
       return Promise.allSettled([
         sb.rpc('send_teacher_message', { p_student: s.user_id, p_body: body }),
@@ -4892,6 +5200,17 @@ function beginAssignment(a, prog) {
           options: segs.slice(), answer: q.answer,
           kind: 'assignment', explanation: (q.correction ? 'Correct: ' + q.correction + '. ' : '') + (q.explanation || ''),
           v2: { qid: q.id, points: q.points || [], type: 'error' }
+        };
+      }
+      if (qtype === 'listen') {
+        /* vocabulary listening: the duo player already supports 'listen'
+           (auto-play + replay button) — map audio/word through. */
+        return {
+          qtype: 'listen', question: q.q || q.prompt || 'Listen — which word do you hear?',
+          audio: q.audio || '', word: q.word || '',
+          options: (q.options || []).slice(), answer: q.answer,
+          kind: 'assignment', explanation: q.explanation || '',
+          v2: q.id ? { qid: q.id, points: [], type: 'listen' } : undefined
         };
       }
       /* mcq (default) */
@@ -12658,7 +12977,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610201710';
+var APP_VERSION = '202610210447';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -13472,7 +13791,7 @@ async function twPageAssignmentDetail(c) {
   var results = [];
   try {
     var q = await sb.from('assignment_results')
-      .select('student_id,score,total,completed_at').eq('assignment_id', r.id);
+      .select('student_id,score,total,completed_at,answers').eq('assignment_id', r.id);
     results = q.data || [];
   } catch (e) {}
   var byId = {};
@@ -13511,7 +13830,8 @@ async function twPageAssignmentDetail(c) {
   }
   c.innerHTML = twPageHead('ASSIGNMENTS', kindIcon + ' ' + esc(r.title || 'Assignment'), sub) +
     '<div class="tw-backrow"><button class="tw-btn tw-btn-white" id="tw-back-assign">← Back to assignments</button></div>' +
-    '<div class="tw-card tw-adetail">' + statusBox + actionBtn + '</div>';
+    '<div class="tw-card tw-adetail">' + statusBox + '<div id="tw-ad-missed"></div>' + actionBtn + '</div>';
+  twFillMissedWords(r, results, nameOf);
   document.getElementById('tw-back-assign').addEventListener('click', function () { twShowSection('assignments'); });
   var del = document.getElementById('tw-ad-delete');
   if (del) del.addEventListener('click', function () { deleteTeacherAssignment(idx, del); });
@@ -13519,6 +13839,42 @@ async function twPageAssignmentDetail(c) {
   if (can) can.addEventListener('click', function () { cancelScheduledAssignment(idx, can); });
   window.scrollTo(0, 0);
 }
+/* Vocabulary assignments: per-student missed words on the detail page.
+   Answers carry qid ('vocab:<slug>:<type>:<n>'); questions carry word +
+   explanation (word — meaning_en · meaning_fa · example). */
+async function twFillMissedWords(r, results, nameOf) {
+  var host = document.getElementById('tw-ad-missed');
+  if (!host || !results.length) return;
+  try {
+    var aq = await sb.from('assignments').select('topic,questions').eq('id', r.id).single();
+    if (aq.error || !aq.data || aq.data.topic !== 'vocab') return;
+    var byQid = {};
+    (aq.data.questions || []).forEach(function (q) { if (q.id) byQid[q.id] = q; });
+    var blocks = results.map(function (res) {
+      var missed = [];
+      var seenW = {};
+      (res.answers || []).forEach(function (a) {
+        var wrong = (a.isCorrect !== undefined) ? !a.isCorrect : (typeof a.correct === 'boolean' ? !a.correct : false);
+        if (!wrong || !a.qid) return;
+        var q = byQid[a.qid];
+        if (!q || !q.word || seenW[q.word]) return;
+        seenW[q.word] = true;
+        missed.push(q);
+      });
+      var nm = nameOf[res.student_id] || 'Student';
+      if (!missed.length) {
+        return '<div class="tw-missed"><b>' + esc(nm) + '</b> <span class="tw-pill tw-pill-green">✓ All words correct</span></div>';
+      }
+      return '<div class="tw-missed"><b>' + esc(nm) + '</b> <span class="muted">missed ' + missed.length + ' word' + (missed.length === 1 ? '' : 's') + ':</span>' +
+        '<div class="tw-missed-chips">' + missed.map(function (q) {
+          var m = String(q.explanation || '').split(' Example:')[0];
+          return '<span class="tw-missed-chip"><b>' + esc(q.word) + '</b>' + (m ? ' · ' + esc(m.replace(q.word + ' — ', '')) : '') + '</span>';
+        }).join('') + '</div></div>';
+    }).join('');
+    if (blocks) host.innerHTML = '<div class="an-title" style="margin-top:1rem">📚 Words to review</div>' + blocks;
+  } catch (e) {}
+}
+
 /* ---------------- page: new assignment (full-page composer) ---------------- */
 /* Full-page version of the assignment composer for the /teachers portal.
    Reuses assignmentComposerBodyHTML() + assignmentComposerWire() (shared with the modal). */
