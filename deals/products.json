@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "shark-flexstyle-hd430",
+      "name_fa": "ست حالت‌دهنده مو شارک فلکس‌استایل",
+      "name_en": "Shark FlexStyle HD430 Air Styling & Drying System",
+      "price_cad": 237.49,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "چهارشنبه، ۲۱ اکتبر ۲۰۲۶",
+      "image": "img/shark-flexstyle-hd430.jpg",
+      "url": "https://www.amazon.ca/dp/B0B89P16MC?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "خشک‌کن و حالت‌دهنده چندکاره بدون آسیب حرارت؛ جایگزین چند ابزار آرایشی."
+    },
+    {
+      "id": "philips-sonicare-diamondclean-9000",
+      "name_fa": "مسواک برقی فیلیپس سانی‌کِر دایموندکلین ۹۰۰۰",
+      "name_en": "Philips Sonicare DiamondClean 9000 Rechargeable Electric Toothbrush",
+      "price_cad": 124.95,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "چهارشنبه، ۲۱ اکتبر ۲۰۲۶",
+      "image": "img/philips-sonicare-diamondclean-9000.jpg",
+      "url": "https://www.amazon.ca/dp/B0B5VQQW6R?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "سفیدکنندگی حرفه‌ای با تکنولوژی سونیک، سنسور فشار لثه و اپ هوشمند با گزارش پیشرفت."
+    },
+    {
+      "id": "jbl-tune-670nc",
+      "name_fa": "هدفون روگوشی جی‌بی‌ال تیون ۶۷۰ ان‌سی",
+      "name_en": "JBL Tune 670NC Adaptive Noise Cancelling On-Ear Headphones",
+      "price_cad": 49.98,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "چهارشنبه، ۲۱ اکتبر ۲۰۲۶",
+      "image": "img/jbl-tune-670nc.jpg",
+      "url": "https://www.amazon.ca/dp/B0CT9SBWC9?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "نسخه سبک و تاشو با نویز کنسلینگ تطبیقی و باتری ۷۰ ساعته؛ بهترین گزینه زیر ۵۰ دلار."
+    },
+    {
+      "id": "jbl-live-770nc",
+      "name_fa": "هدفون دورگوشی جی‌بی‌ال لایو ۷۷۰ ان‌سی",
+      "name_en": "JBL Live 770NC True Adaptive Noise Cancelling Over-Ear Headphones",
+      "price_cad": 129.98,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "چهارشنبه، ۲۱ اکتبر ۲۰۲۶",
+      "image": "img/jbl-live-770nc.jpg",
+      "url": "https://www.amazon.ca/dp/B0CT6D6Q27?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "نویز کنسلینگ تطبیقی، باتری ۶۵ ساعته و صدای امضای جی‌بی‌ال با درایورهای ۴۰ میلی‌متری."
+    },
+    {
       "id": "volisun-20-ceiling-fan",
       "name_fa": "پنکه سقفی ۲۰ اینچی ولیسون با چراغ و ریموت",
       "name_en": "VOLISUN 20\" Low Profile Ceiling Fan with Dimmable LED Light & Remote",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "برند کانادایی محبوب، سرامیکی بدون مواد مضر، زیر ۱۰۰ دلار."
-    },
-    {
-      "id": "logitech-brio-101",
-      "name_fa": "وب‌کم لاجیتک برایو ۱۰۱",
-      "name_en": "Logitech Brio 101 Full HD 1080p Webcam",
-      "price_cad": 34.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "سه‌شنبه، ۲۰ اکتبر ۲۰۲۶",
-      "image": "img/logitech-brio-101.jpg",
-      "url": "https://www.amazon.ca/s?k=Logitech+Brio+101&tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "برای جلسات آنلاین، کلاس مجازی و تماس تصویری با خانواده؛ شاتر فیزیکی حریم خصوصی."
-    },
-    {
-      "id": "ugreen-nexode-pro-160w",
-      "name_fa": "شارژر دیواری ۱۶۰ واتی یوگرین نکسود پرو با نمایشگر لمسی",
-      "name_en": "UGREEN Nexode Pro 160W GaN Charger with LCD (X774)",
-      "price_cad": 84.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "سه‌شنبه، ۲۰ اکتبر ۲۰۲۶",
-      "image": "img/ugreen-nexode-pro-160w.jpg",
-      "url": "https://www.amazon.ca/dp/B0FYFDD1WW?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "۱۶۰ وات گان با نمایشگر لمسی؛ لپ‌تاپ، تبلت و گوشی هم‌زمان، جای چند آداپتور را می‌گیرد."
-    },
-    {
-      "id": "burts-bees-lip-shine-whisper-2026-10-19",
-      "name_fa": "برق‌لب برتس‌بیز",
-      "name_en": "Burt's Bees Lip Shine (Whisper)",
-      "price_cad": 4.97,
-      "regular_cad": 9.99,
-      "discount_pct": 50,
-      "added_fa": "دوشنبه، ۱۹ اکتبر ۲۰۲۶",
-      "image": "img/burts-bees-lip-shine-whisper-2026-10-19.jpg",
-      "url": "https://www.amazon.ca/dp/B00C7L1TEG?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "برق‌لب طبیعی برتس‌بیز با رنگ ملایم — مرطوب‌کننده و براق، نصف قیمت"
-    },
-    {
-      "id": "trond-surge-protector-power-bar-usbc-2026-10-19",
-      "name_fa": "چندراهی برق تراند با USB",
-      "name_en": "TROND Surge Protector Power Bar with USB C",
-      "price_cad": 31.99,
-      "regular_cad": 49.99,
-      "discount_pct": 36,
-      "added_fa": "دوشنبه، ۱۹ اکتبر ۲۰۲۶",
-      "image": "img/trond-surge-protector-power-bar-usbc-2026-10-19.jpg",
-      "url": "https://www.amazon.ca/dp/B09196JC1J?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "چندراهی برق با ۱۰ پریز، پورت USB و محافظ نوسان — برای پشت میز و اتاق کار عالیه"
     }
   ],
-  "updated_fa": "سه‌شنبه ۲۸ مهر"
+  "updated_fa": "چهارشنبه ۲۹ مهر"
 }
