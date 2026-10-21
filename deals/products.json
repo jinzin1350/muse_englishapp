@@ -1,6 +1,20 @@
 {
   "products": [
     {
+      "id": "pwperry-tire-inflator-150psi",
+      "name_fa": "پمپ باد شارژی خودرو",
+      "name_en": "Pwperry 150PSI Portable Tire Inflator",
+      "price_cad": 24.99,
+      "regular_cad": 49.99,
+      "discount_pct": 50,
+      "added_fa": "چهارشنبه، ۲۱ اکتبر ۲۰۲۶",
+      "image": "img/pwperry-tire-inflator-150psi.jpg",
+      "url": "https://www.amazon.ca/dp/B0FFN4N32Q?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "با کد 4D7XY96U نصف قیمت می‌شود؛ نمایشگر دیجیتال دارد و برای لاستیک ماشین، دوچرخه و توپ کار می‌کند."
+    },
+    {
       "id": "shark-flexstyle-hd430",
       "name_fa": "ست حالت‌دهنده مو شارک فلکس‌استایل",
       "name_en": "Shark FlexStyle HD430 Air Styling & Drying System",
@@ -97,20 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "امنیت خانه و دیدن بسته‌های پستی جلوی در؛ دید در شب و مکالمه دوطرفه."
-    },
-    {
-      "id": "starfrit-rock-terra-10pc",
-      "name_fa": "سرویس قابلمه و تابه ۱۰ تکه سرامیکی استارفریت «دِ راک ترا»",
-      "name_en": "Starfrit The Rock Terra 10-Piece Ceramic Cookware Set",
-      "price_cad": 94.97,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "سه‌شنبه، ۲۰ اکتبر ۲۰۲۶",
-      "image": "img/starfrit-rock-terra-10pc.jpg",
-      "url": "https://www.amazon.ca/s?k=Starfrit+The+Rock+Terra+10-piece&tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "برند کانادایی محبوب، سرامیکی بدون مواد مضر، زیر ۱۰۰ دلار."
     }
   ],
   "updated_fa": "چهارشنبه ۲۹ مهر"
