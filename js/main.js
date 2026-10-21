@@ -4336,7 +4336,7 @@ async function renderPlanner(v) {
       '<select id="pl-level" class="input">' +
       ASSIGN_LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (lv === startLevel ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') +
       '</select></div>' +
-      '<div class="field"><label>Students</label><div class="as2-students">' +
+      '<div class="field"><label>Students <span class="pl-selwrap"><button type="button" class="pl-selbtn" id="pl-select-all">Select all</button> · <button type="button" class="pl-selbtn" id="pl-deselect-all">Deselect all</button></span></label><div class="as2-students">' +
       '<label class="chk"><input type="checkbox" id="pl-all" checked> All students (' + list.length + ')</label>' +
       '<div id="pl-students" class="hidden">' +
       list.map(function (s) {
@@ -4364,6 +4364,18 @@ async function renderPlanner(v) {
     document.getElementById('pl-level').addEventListener('change', plannerFillTopics);
     document.getElementById('pl-all').addEventListener('change', function () {
       document.getElementById('pl-students').classList.toggle('hidden', this.checked);
+    });
+    var plSelAll = document.getElementById('pl-select-all');
+    if (plSelAll) plSelAll.addEventListener('click', function () {
+      document.getElementById('pl-all').checked = true;
+      document.getElementById('pl-students').classList.add('hidden');
+      Array.prototype.forEach.call(document.querySelectorAll('.pl-st'), function (cb) { cb.checked = true; });
+    });
+    var plDeselAll = document.getElementById('pl-deselect-all');
+    if (plDeselAll) plDeselAll.addEventListener('click', function () {
+      document.getElementById('pl-all').checked = false;
+      document.getElementById('pl-students').classList.remove('hidden');
+      Array.prototype.forEach.call(document.querySelectorAll('.pl-st'), function (cb) { cb.checked = false; });
     });
     Array.prototype.forEach.call(document.querySelectorAll('.pl-time'), function (t) {
       t.addEventListener('change', function () {
@@ -12983,7 +12995,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610210512';
+var APP_VERSION = '202610210525';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

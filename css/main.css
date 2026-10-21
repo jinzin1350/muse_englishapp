@@ -4528,3 +4528,8 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
 .tw-missed-chip { background: #FDF1E7; border: 1px solid #F5CBA8; color: #7A3E14; border-radius: 999px; padding: 0.28rem 0.7rem; font-size: 0.83rem; }
 .tw-missed-chip b { color: #232B4D; }
 
+
+/* Planner select/deselect-all shortcuts (2026-10-21) */
+.pl-selwrap { float: right; font-weight: 400; }
+.pl-selbtn { background: none; border: none; padding: 0; color: #C75B12; font-weight: 700; font-size: 0.85rem; cursor: pointer; font-family: inherit; }
+.pl-selbtn:hover { text-decoration: underline; }
