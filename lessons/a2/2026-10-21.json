@@ -1,0 +1,278 @@
+{
+  "date": "2026-10-21",
+  "theme": "food & cooking",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "add",
+      "pos": "verb",
+      "meaning": "To put something extra into food or drink.",
+      "example": "Please add some sugar to my tea.",
+      "pronunciation": "ad",
+      "persian": "اضافه کردن",
+      "photo": "media/a2/2026-10-21/photos/add.jpg",
+      "word_audio": "media/a2/2026-10-21/word-audio/add.mp3"
+    },
+    {
+      "word": "aubergine",
+      "pos": "noun",
+      "meaning": "A dark purple vegetable, also called eggplant.",
+      "example": "I like to cook aubergine with tomatoes.",
+      "pronunciation": "OH-buh-zheen",
+      "persian": "بادمجان",
+      "photo": "media/a2/2026-10-21/photos/aubergine.jpg",
+      "word_audio": "media/a2/2026-10-21/word-audio/aubergine.mp3"
+    },
+    {
+      "word": "barbecue n, v",
+      "pos": "noun, verb",
+      "meaning": "(n) A meal cooked outdoors; (v) to cook outdoors.",
+      "example": "We had a barbecue in the garden yesterday.",
+      "pronunciation": "BAH-bih-kyoo",
+      "persian": "(اسم) کباب‌پز، باربیکیو؛ (فعل) کباب کردن",
+      "photo": "media/a2/2026-10-21/photos/barbecue n, v.jpg",
+      "word_audio": "media/a2/2026-10-21/word-audio/barbecue n, v.mp3"
+    },
+    {
+      "word": "beans",
+      "pos": "noun",
+      "meaning": "Small seeds eaten as food.",
+      "example": "I like to eat beans for breakfast.",
+      "pronunciation": "beenz",
+      "persian": "لوبیا، باقلا",
+      "photo": "media/a2/2026-10-21/photos/beans.jpg",
+      "word_audio": "media/a2/2026-10-21/word-audio/beans.mp3"
+    },
+    {
+      "word": "beef",
+      "pos": "noun",
+      "meaning": "Meat from a cow.",
+      "example": "I like to eat beef with rice.",
+      "pronunciation": "beef",
+      "persian": "گوشت گاو",
+      "photo": "media/a2/2026-10-21/photos/beef.jpg",
+      "word_audio": "media/a2/2026-10-21/word-audio/beef.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-21/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Barbecue Party",
+    "audio": "media/a2/2026-10-21/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-21/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Lena's Big Barbecue",
+    "audio": "media/a2/2026-10-21/shadowing.mp3",
+    "transcript": "media/a2/2026-10-21/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-10-21/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-21/shadowing-sentences/022.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'add' mean?",
+      "options": [
+        "A dark purple vegetable, also called eggplant.",
+        "To put something extra into food or drink.",
+        "Meat from a cow.",
+        "Small seeds eaten as food."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'aubergine' mean?",
+      "options": [
+        "Small seeds eaten as food.",
+        "Meat from a cow.",
+        "(n) A meal cooked outdoors; (v) to cook outdoors.",
+        "A dark purple vegetable, also called eggplant."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'barbecue n, v' mean?",
+      "options": [
+        "(n) A meal cooked outdoors; (v) to cook outdoors.",
+        "To put something extra into food or drink.",
+        "Small seeds eaten as food.",
+        "Meat from a cow."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'beans' mean?",
+      "options": [
+        "Meat from a cow.",
+        "A dark purple vegetable, also called eggplant.",
+        "Small seeds eaten as food.",
+        "(n) A meal cooked outdoors; (v) to cook outdoors."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'beef' mean?",
+      "options": [
+        "To put something extra into food or drink.",
+        "(n) A meal cooked outdoors; (v) to cook outdoors.",
+        "Meat from a cow.",
+        "A dark purple vegetable, also called eggplant."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Much, Many, A Lot Of, A Few, A Little",
+    "explanation": "We use these words to talk about **quantity**. The choice depends on the noun.\n\n**Countable** nouns are things we can count: *beans*, *friends*, *apples*.\n\n**Uncountable** nouns are things we cannot count: *beef*, *sugar*, *time*, *money*.\n\nFor questions with countable nouns, use **How many**. *How **many** beans do you want?*\n\nFor questions with uncountable nouns, use **How much**. *How **much** sugar should I add?*\n\nIn positive sentences, **a lot of** works with both kinds. *We have **a lot of** time.*\n\nFor a small amount, use **a few** with countable nouns and **a little** with uncountable nouns. *I have **a few** ideas and **a little** patience.*\n\n**Few** and **little** (without \"a\") mean \"not enough\". *We have **little** time, so hurry!*\n\nAlso: **too many** for countable nouns, **too much** for uncountable nouns. *I drank **too much** coffee.*",
+    "examples": [
+      "*Could I have **a little** sugar, please?*",
+      "*There were **a lot of** people at the concert.*",
+      "*I drank **too much** coffee today.*",
+      "*There are **too many** cars in the city centre.*",
+      "*I've got **a few** ideas for the party.*"
+    ],
+    "practice": [
+      {
+        "q": "Fix the sentence: How much apples do you want?",
+        "a": "How many apples do you want?"
+      },
+      {
+        "q": "Fix the sentence: There isn't many milk in the fridge.",
+        "a": "There isn't much milk in the fridge."
+      },
+      {
+        "q": "Fix the sentence: I have a little friends at the barbecue.",
+        "a": "I have a few friends at the barbecue."
+      },
+      {
+        "q": "Fix the sentence: There are too much people in the garden.",
+        "a": "There are too many people in the garden."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "How ___ apples do you want?",
+        "options": [
+          "much",
+          "lot",
+          "many",
+          "few"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "There isn't ___ milk left. Can you buy some?",
+        "options": [
+          "much",
+          "many",
+          "a few",
+          "few"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Could I have ___ sugar in my tea, please?",
+        "options": [
+          "a few",
+          "many",
+          "few",
+          "a little"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "There were ___ people at the party. It was really crowded.",
+        "options": [
+          "much",
+          "a little",
+          "little",
+          "a lot of"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We have very ___ time. Hurry up!",
+        "options": [
+          "few",
+          "little",
+          "a little",
+          "many"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I don't have ___ questions. Just one.",
+        "options": [
+          "much",
+          "a little",
+          "little",
+          "many"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I drank too ___ coffee and now I can't sleep.",
+        "options": [
+          "many",
+          "few",
+          "much",
+          "a few"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "There are too ___ cars in the city centre.",
+        "options": [
+          "many",
+          "much",
+          "little",
+          "a little"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "How many money do you have?",
+          "How much money do you have?",
+          "How much moneys do you have?",
+          "How many moneys do you have?"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We've got ___ eggs. Let's make an omelette.",
+        "options": [
+          "a little",
+          "little",
+          "much",
+          "a few"
+        ],
+        "answer": 3
+      }
+    ],
+    "audio": "media/a2/2026-10-21/grammar-en.mp3"
+  }
+}

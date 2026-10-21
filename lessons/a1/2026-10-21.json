@@ -1,0 +1,277 @@
+{
+ "date": "2026-10-21",
+ "theme": "cities & daily life",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "alarm clock",
+   "pos": "noun",
+   "meaning": "a clock that makes a sound to wake you",
+   "example": "My alarm clock rings at 7 AM.",
+   "pronunciation": "uh-LAHM klok",
+   "persian": "ساعت زنگ‌دار",
+   "photo": "media/a1/2026-10-21/photos/alarm clock.jpg",
+   "word_audio": "media/a1/2026-10-21/word-audio/alarm clock.mp3"
+  },
+  {
+   "word": "bank",
+   "pos": "noun",
+   "meaning": "A place where you keep or borrow money.",
+   "example": "I need to go to the bank today.",
+   "pronunciation": "bangk",
+   "persian": "بانک",
+   "photo": "media/a1/2026-10-21/photos/bank.jpg",
+   "word_audio": "media/a1/2026-10-21/word-audio/bank.mp3"
+  },
+  {
+   "word": "bedside lamp",
+   "pos": "noun phrase",
+   "meaning": "A small light next to a bed.",
+   "example": "I turn on my bedside lamp to read.",
+   "pronunciation": "BED-syde lamp",
+   "persian": "چراغ خواب",
+   "photo": "media/a1/2026-10-21/photos/bedside lamp.jpg",
+   "word_audio": "media/a1/2026-10-21/word-audio/bedside lamp.mp3"
+  },
+  {
+   "word": "bedside table",
+   "pos": "noun phrase",
+   "meaning": "A small table next to a bed.",
+   "example": "My book is on the bedside table.",
+   "pronunciation": "BED-syde TAY-bul",
+   "persian": "پاتختی",
+   "photo": "media/a1/2026-10-21/photos/bedside table.jpg",
+   "word_audio": "media/a1/2026-10-21/word-audio/bedside table.mp3"
+  },
+  {
+   "word": "bin",
+   "pos": "noun",
+   "meaning": "A container for rubbish.",
+   "example": "Put the paper in the bin.",
+   "pronunciation": "bin",
+   "persian": "سطل زباله",
+   "photo": "media/a1/2026-10-21/photos/bin.jpg",
+   "word_audio": "media/a1/2026-10-21/word-audio/bin.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-10-21/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: A Day in the City",
+  "audio": "media/a1/2026-10-21/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a1/2026-10-21/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Busy Day in the City",
+  "audio": "media/a1/2026-10-21/shadowing.mp3",
+  "transcript": "media/a1/2026-10-21/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a1/2026-10-21/shadowing-sentences/001.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/002.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/003.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/004.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/005.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/006.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/007.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/008.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/009.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/010.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/011.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/012.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/013.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/014.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/015.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/016.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/017.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/018.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/019.mp3",
+   "media/a1/2026-10-21/shadowing-sentences/020.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'alarm clock' mean?",
+   "options": [
+    "A small light next to a bed.",
+    "a clock that makes a sound to wake you",
+    "A container for rubbish.",
+    "A place where you keep or borrow money."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'bank' mean?",
+   "options": [
+    "a clock that makes a sound to wake you",
+    "A small table next to a bed.",
+    "A place where you keep or borrow money.",
+    "A container for rubbish."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'bedside lamp' mean?",
+   "options": [
+    "A place where you keep or borrow money.",
+    "A small table next to a bed.",
+    "A small light next to a bed.",
+    "a clock that makes a sound to wake you"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'bedside table' mean?",
+   "options": [
+    "a clock that makes a sound to wake you",
+    "A small table next to a bed.",
+    "A container for rubbish.",
+    "A small light next to a bed."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'bin' mean?",
+   "options": [
+    "A small table next to a bed.",
+    "A place where you keep or borrow money.",
+    "A container for rubbish.",
+    "A small light next to a bed."
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "Present Simple",
+  "explanation": "We use the **present simple** for habits and routines. I **wake up** at seven every day.\n\nWith **I, you, we, they**, use the base verb. I **go** to the bank on Fridays.\n\nWith **he, she, it**, add **-s** to the verb. She **works** at a bank.\n\nFor negatives, use **don't** or **doesn't** plus the base verb. I **don't** turn on my bedside lamp in the morning.\n\nFor questions, use **do** or **does** first. **Does** he put the paper in the bin?\n\nThe verb **be** is different: I **am**, you **are**, she **is**. My alarm clock **is** on the bedside table.",
+  "examples": [
+   "*I **live** in a small flat.* (I + base verb)",
+   "*My brother **works** in a hospital.* (he + -s)",
+   "*We **don't watch** TV in the morning.* (don't + base verb)",
+   "*She **doesn't eat** meat.* (doesn't + base verb)",
+   "*What time **does** the shop **open**?* (wh- question)",
+   "*He **watches** football every weekend.* (-ch to -es)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with 'she': I turn on my bedside lamp at night.",
+    "a": "She turns on her bedside lamp at night."
+   },
+   {
+    "q": "Make it negative: He goes to the bank every Friday.",
+    "a": "He doesn't go to the bank every Friday."
+   },
+   {
+    "q": "Make a question: They put the paper in the bin.",
+    "a": "Do they put the paper in the bin?"
+   },
+   {
+    "q": "Fix the mistake: My alarm clock ring at seven.",
+    "a": "My alarm clock rings at seven."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "My brother ___ in a bank.",
+    "options": [
+     "work",
+     "works",
+     "working",
+     "is work"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "I ___ coffee every morning.",
+    "options": [
+     "drinks",
+     "am drink",
+     "drinking",
+     "drink"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "She ___ meat.",
+    "options": [
+     "don't eat",
+     "doesn't eat",
+     "doesn't eats",
+     "not eat"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "___ you live near here?",
+    "options": [
+     "Does",
+     "Are",
+     "Is",
+     "Do"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "What time ___ the film start?",
+    "options": [
+     "does",
+     "do",
+     "is",
+     "are"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "We ___ to work on Fridays.",
+    "options": [
+     "don't drive",
+     "doesn't drive",
+     "not drive",
+     "don't drives"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "My dad ___ the news every evening.",
+    "options": [
+     "watchs",
+     "watches",
+     "watching",
+     "watchies"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Lucy ___ hard for her exams.",
+    "options": [
+     "studies",
+     "studys",
+     "studyes",
+     "study"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "He ___ two brothers.",
+    "options": [
+     "haves",
+     "have",
+     "is have",
+     "has"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Choose the correct question.",
+    "options": [
+     "Does she likes music?",
+     "Do she like music?",
+     "Does she like music?",
+     "She likes music does?"
+    ],
+    "answer": 2
+   }
+  ],
+  "audio": "media/a1/2026-10-21/grammar-en.mp3"
+ }
+}

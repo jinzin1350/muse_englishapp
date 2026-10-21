@@ -1,0 +1,331 @@
+{
+  "date": "2026-10-21",
+  "theme": "travel & transport",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "aircraft",
+      "pos": "noun",
+      "meaning": "a vehicle that flies, like a plane",
+      "example": "Many aircraft fly over our house.",
+      "pronunciation": "AIR-kraaft",
+      "persian": "هواپیما، هواگرد",
+      "photo": "media/b1/2026-10-21/photos/aircraft.jpg",
+      "word_audio": "media/b1/2026-10-21/word-audio/aircraft.mp3"
+    },
+    {
+      "word": "airport",
+      "pos": "noun",
+      "meaning": "a place where planes take off and land",
+      "example": "We arrived at the airport early.",
+      "pronunciation": "AIR-port",
+      "persian": "فرودگاه",
+      "photo": "media/b1/2026-10-21/photos/airport.jpg",
+      "word_audio": "media/b1/2026-10-21/word-audio/airport.mp3"
+    },
+    {
+      "word": "at risk of",
+      "pos": "phrase",
+      "meaning": "In a situation where something bad might happen.",
+      "example": "People who smoke are at risk of lung disease.",
+      "pronunciation": "ut RISK uv",
+      "persian": "در معرض خطر",
+      "photo": "media/b1/2026-10-21/photos/at-risk-of.jpg",
+      "word_audio": "media/b1/2026-10-21/word-audio/at-risk-of.mp3"
+    },
+    {
+      "word": "available",
+      "pos": "adjective",
+      "meaning": "Able to be used or found.",
+      "example": "Are there any rooms available for tonight?",
+      "pronunciation": "uh-VAY-luh-bul",
+      "persian": "در دسترس، موجود",
+      "photo": "media/b1/2026-10-21/photos/available.jpg",
+      "word_audio": "media/b1/2026-10-21/word-audio/available.mp3"
+    },
+    {
+      "word": "away [distance]",
+      "pos": "adverb",
+      "meaning": "At a distance from a place.",
+      "example": "The shop is 5 miles away.",
+      "pronunciation": "uh-WAY",
+      "persian": "دور، فاصله",
+      "photo": "media/b1/2026-10-21/photos/away-distance.jpg",
+      "word_audio": "media/b1/2026-10-21/word-audio/away-distance.mp3"
+    },
+    {
+      "word": "beach",
+      "pos": "noun",
+      "meaning": "Sandy or stony land next to the sea.",
+      "example": "We walked on the beach yesterday.",
+      "pronunciation": "beech",
+      "persian": "ساحل",
+      "photo": "media/b1/2026-10-21/photos/beach.jpg",
+      "word_audio": "media/b1/2026-10-21/word-audio/beach.mp3"
+    },
+    {
+      "word": "bike",
+      "pos": "noun",
+      "meaning": "A bicycle.",
+      "example": "Let's ride our bikes to the park.",
+      "pronunciation": "byk",
+      "persian": "دوچرخه",
+      "photo": "media/b1/2026-10-21/photos/bike.jpg",
+      "word_audio": "media/b1/2026-10-21/word-audio/bike.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-10-21/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Travel and Transport",
+    "audio": "media/b1/2026-10-21/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-10-21/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Trip to the Beach",
+    "audio": "media/b1/2026-10-21/shadowing.mp3",
+    "transcript": "media/b1/2026-10-21/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b1/2026-10-21/shadowing-sentences/001.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/002.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/003.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/004.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/005.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/006.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/007.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/008.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/009.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/010.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/011.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/012.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/013.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/014.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/015.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/016.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/017.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/018.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/019.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/020.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/021.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/022.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/023.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/024.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/025.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/026.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/027.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/028.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/029.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/030.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/031.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/032.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/033.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/034.mp3",
+      "media/b1/2026-10-21/shadowing-sentences/035.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "answer": 0,
+      "options": [
+        "a vehicle that flies, like a plane",
+        "a place where planes take off and land",
+        "a bicycle",
+        "able to be used or found"
+      ],
+      "question": "What does 'aircraft' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "at a distance from a place",
+        "a place where planes take off and land",
+        "sandy or stony land next to the sea",
+        "in a situation where something bad might happen"
+      ],
+      "question": "What does 'airport' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "a bicycle",
+        "able to be used or found",
+        "a vehicle that flies, like a plane",
+        "in a situation where something bad might happen"
+      ],
+      "question": "What does 'at risk of' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "sandy or stony land next to the sea",
+        "able to be used or found",
+        "a place where planes take off and land",
+        "a bicycle"
+      ],
+      "question": "What does 'available' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "a vehicle that flies, like a plane",
+        "in a situation where something bad might happen",
+        "at a distance from a place",
+        "able to be used or found"
+      ],
+      "question": "What does 'away [distance]' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "a place where planes take off and land",
+        "sandy or stony land next to the sea",
+        "a vehicle that flies, like a plane",
+        "at a distance from a place"
+      ],
+      "question": "What does 'beach' mean?"
+    },
+    {
+      "answer": 3,
+      "options": [
+        "able to be used or found",
+        "in a situation where something bad might happen",
+        "a place where planes take off and land",
+        "a bicycle"
+      ],
+      "question": "What does 'bike' mean?"
+    }
+  ],
+  "grammar": {
+    "examples": [
+      "*I**'ll be able to** help you after lunch.* (future)",
+      "*She **hasn't been able to** find a job yet.* (present perfect)",
+      "*I hope **to be able to** visit you next summer.* (infinitive)",
+      "*After three hours, we **were able to** fix the car.* (one specific success in the past)",
+      "*You **must be able to** speak French for this job.* (after a modal verb)",
+      "*Are you **able to** come on Friday?* (present question)"
+    ],
+    "explanation": "**Be able to** means the same as *can*: *I **can** swim = I **am able to** swim.*\n\nWe need it because *can* has only two forms — *can* and *could*. For every other tense or structure, we use **be able to**: *I**'ll be able to** ride a bike to the beach tomorrow.* *I **haven't been able to** visit the airport this year.* *I'd love **to be able to** travel far away more often.*\n\nAfter a modal verb, never use *can* — use **be able to**: *I **will be able to** drive you to the airport* (never \"I will can drive\").\n\nIn the past, for a general ability, use *could* or **was able to**: *When I was young, I **could** ride a bike very fast.* For one specific success, use **was / were able to**, not *could*: *The traffic was terrible, but we **were able to** reach the airport in time.* In the negative, both are fine: *I **couldn't** / **wasn't able to** book the flight.*\n\nWith verbs of the senses and thinking, *could* is normal even for one moment: *I **could** see the aircraft from the beach.* And the -ing form is **being able to**: ***Being able to** swim is useful at the beach.*",
+    "practice": [
+      {
+        "a": "I am able to swim very well.",
+        "q": "Rewrite: I can swim very well."
+      },
+      {
+        "a": "We will be able to visit the beach tomorrow.",
+        "q": "Rewrite in the future: We can visit the beach tomorrow."
+      },
+      {
+        "a": "She wasn't able to find a bike available for rent.",
+        "q": "Rewrite: She couldn't find a bike available for rent."
+      },
+      {
+        "a": "I will be able to catch the aircraft at the airport.",
+        "q": "Correct the mistake: I will can catch the aircraft at the airport."
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 0,
+        "options": [
+          "be able to",
+          "can",
+          "could",
+          "able to"
+        ],
+        "question": "I'll ___ help you tomorrow."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "could",
+          "can",
+          "been able to",
+          "be able to"
+        ],
+        "question": "I haven't ___ sleep well recently."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "can",
+          "could",
+          "being able to",
+          "to be able to"
+        ],
+        "question": "I'd love ___ play the piano."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "could",
+          "was able to",
+          "can",
+          "were able"
+        ],
+        "question": "The fire spread quickly, but everyone ___ get out of the building."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "Can",
+          "Being able to",
+          "Could",
+          "Able to"
+        ],
+        "question": "___ speak two languages is very useful."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "can",
+          "could",
+          "be able to",
+          "to be able to"
+        ],
+        "question": "She hopes ___ find a job soon."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "can't",
+          "won't be able to",
+          "wasn't able to",
+          "am not able"
+        ],
+        "question": "Sorry, I ___ come to the party last night. I was ill."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "will be able to",
+          "can be able to",
+          "could be able",
+          "are able"
+        ],
+        "question": "If you practise every day, you ___ speak English fluently."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "could",
+          "can",
+          "are able to",
+          "were able to"
+        ],
+        "question": "After three hours, we finally ___ fix the car."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "can",
+          "be able to",
+          "could",
+          "able to"
+        ],
+        "question": "He might ___ come later."
+      }
+    ],
+    "title": "Be Able To (vs Can and Could)"
+  }
+}
