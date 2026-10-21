@@ -2815,6 +2815,37 @@ async function teacherIssueCert(i, btn) {
     btn.disabled = false;
   }
 }
+/* Teacher: remove a student from my class (unlink only — the student's
+   account and progress stay intact). RPC enforces ownership. */
+async function teacherRemoveStudent(i, btn) {
+  var s = (state.teacherStudents || [])[i];
+  if (!s || !btn) return;
+  var name = s.display_name || (s.email || '?').split('@')[0];
+  if (!confirm('Remove ' + name + ' from your class?\n\nTheir account and progress stay intact — they just won\'t be your student anymore, and you won\'t be able to send them assignments.')) return;
+  var msg = document.getElementById('tch-remove-msg-' + i);
+  btn.disabled = true;
+  try {
+    var params = { p_student: s.user_id };
+    if (state.viewTeacher && state.viewTeacher.user_id) params.p_as_teacher = state.viewTeacher.user_id;
+    var r = await sb.rpc('remove_student_from_class', params);
+    if (r.error) throw r.error;
+    if (r.data !== true) throw new Error('Not allowed — this student is not in your class.');
+    state.twStudents = null;
+    if (document.getElementById('tw-content')) {
+      twShowSection('students');
+    } else {
+      loadTeacherRoster();
+      var host = document.getElementById('tch-detail');
+      if (host) host.innerHTML = '<div class="empty">✅ ' + esc(name) + ' was removed from your class.</div>';
+    }
+  } catch (e) {
+    btn.disabled = false;
+    if (msg) msg.textContent = (e && e.message && /remove_student_from_class/.test(e.message))
+      ? 'Needs the database migration first (ask Alireza).'
+      : 'Could not remove: ' + ((e && e.message) || e);
+  }
+}
+
 async function teacherRevokeCert(code, i) {
   if (!window.confirm('Revoke certificate ' + code + '? Its verification page will stop working.')) return;
   try {
@@ -2915,6 +2946,11 @@ async function openTeacherStudent(i) {
       '<div id="tch-sh-' + i + '"><div class="empty">Loading shadowing…</div></div>' +
       '<div class="an-title" style="margin-top:.8rem">📤 Sent to this student</div>' +
       '<div id="tch-sent-' + i + '"><button class="btn btn-sm btn-ghost" data-action="teacher-sent" data-i="' + i + '">Show sent items</button></div>' +
+      '<div style="margin-top:1rem;border-top:1px solid #F0E4DC;padding-top:0.8rem">' +
+      '<div class="an-title" style="color:#B3382E">🚪 Class membership</div>' +
+      '<p class="muted" style="font-size:0.85rem;margin:0.3rem 0 0.6rem">Removing a student only unlinks them from your class — their account and progress stay intact. They will no longer be your student and you won\'t be able to send them assignments.</p>' +
+      '<button class="btn btn-sm" style="background:#FDECEA;color:#B3382E;border:1px solid #F3C6C0" data-action="teacher-remove-student" data-i="' + i + '">Remove from my class</button>' +
+      '<span id="tch-remove-msg-' + i + '" style="font-size:0.8rem;margin-left:0.5rem"></span></div>' +
       '<div style="display:flex;gap:0.5rem;margin-top:0.9rem;flex-wrap:wrap">' +
       (state.viewTeacher ? '' :
       '<button class="btn btn-sm" data-action="teacher-nudge" data-i="' + i + '">🔔 Nudge</button>' +
@@ -12881,6 +12917,7 @@ function bindEvents() {
     else if (a === 'teacher-student-close') { const d = document.getElementById('tch-detail'); if (d) d.innerHTML = ''; }
     else if (a === 'teacher-set-level') teacherSetLevel(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-cert-issue') teacherIssueCert(parseInt(t.getAttribute('data-i'), 10), t);
+    else if (a === 'teacher-remove-student') teacherRemoveStudent(parseInt(t.getAttribute('data-i'), 10), t);
     else if (a === 'teacher-cert-revoke') teacherRevokeCert(t.getAttribute('data-code'), parseInt(t.getAttribute('data-i'), 10));
     else if (a === 'cert-print') printCertificate();
     else if (a === 'cert-share') shareCertificate(t.getAttribute('data-code'), t);
@@ -12995,7 +13032,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610210525';
+var APP_VERSION = '202610211550';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14619,7 +14656,13 @@ async function apRenderUserDetail(v, id) {
         : '<div class="empty">No attempts yet.</div>') + '</div>' +
       '<div class="card"><h3>🎙️ Recent summary attempts</h3>' +
       (sumRecent ? '<div class="ap-tablewrap"><table class="ap-table"><thead><tr><th>Lesson</th><th>Score</th><th>Duration</th><th>When</th></tr></thead><tbody>' + sumRecent + '</tbody></table></div>'
-        : '<div class="empty">No summaries yet.</div>') + '</div>');
+        : '<div class="empty">No summaries yet.</div>') + '</div>' +
+      '<div class="card" style="border-color:#F3C6C0"><h3 style="color:#B3382E">🗑 Danger zone</h3>' +
+      '<p class="muted" style="margin:.2rem 0 .6rem">Permanently delete this user and <b>all</b> their data (profile, progress, XP, results, certificates and login) from the database. This cannot be undone.</p>' +
+      ((state.user && id === state.user.id)
+        ? '<div class="empty">You can\'t delete your own account.</div>'
+        : '<button class="btn btn-sm" id="ap-delete-user" style="background:#FDECEA;color:#B3382E;border:1px solid #F3C6C0">Delete this user permanently</button>') +
+      '</div>');
     apWireChrome(v);
     const sel = v.querySelector('#ap-setlevel');
     if (sel) sel.addEventListener('change', async function () {
@@ -14634,11 +14677,33 @@ async function apRenderUserDetail(v, id) {
         sel.disabled = false;
       }
     });
+    const delBtn = v.querySelector('#ap-delete-user');
+    if (delBtn) delBtn.addEventListener('click', function () { apDeleteUser(id, p); });
   } catch (e) {
     v.innerHTML = apShell('users',
       '<div class="ap-head"><a href="/manage/users" data-apnav="users" class="ap-back">← All users</a><h1>User</h1></div>' +
       '<div class="empty">Could not load user: ' + esc((e && e.message) || e) + '</div>');
     apWireChrome(v);
+  }
+}
+/* Admin: permanently delete a user + all their data (admin_delete_user RPC).
+   Double-guarded: confirm dialog + must type DELETE. */
+async function apDeleteUser(id, p) {
+  var name = (p && (p.display_name || (p.email || '?').split('@')[0])) || 'this user';
+  if (!confirm('Permanently delete ' + name + ' (' + ((p && p.email) || '') + ')?\n\nALL their data will be removed from the database — profile, progress, XP, results, certificates and their login. This cannot be undone.')) return;
+  var typed = prompt('Type DELETE to confirm permanent deletion of ' + name + ':');
+  if (typed !== 'DELETE') { alert('Deletion cancelled — you must type DELETE exactly.'); return; }
+  try {
+    var r = await sb.rpc('admin_delete_user', { p_user: id });
+    if (r.error) throw r.error;
+    if (r.data !== true) throw new Error('Not allowed.');
+    alert('✅ ' + name + ' has been permanently deleted.');
+    window.location.assign('/manage/users');
+  } catch (e) {
+    var m = (e && e.message) || String(e);
+    alert(/admin_delete_user/.test(m)
+      ? 'Needs the database migration first (delete-user-migration.sql).'
+      : 'Could not delete: ' + m);
   }
 }
 /* ---------------- admin panel: daily study ---------------- */
