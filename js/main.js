@@ -137,7 +137,7 @@ async function loadTeacherStatus() {
   if (!sb || !state.user || state.user.demo) return;
   try {
     const r = await sb.from('teachers')
-      .select('id,ref_code,display_name,status,requested_at')
+      .select('id,user_id,ref_code,display_name,status,requested_at')
       .eq('user_id', state.user.id).maybeSingle();
     if (r.data) {
       if (r.data.status === 'approved') state.teacher = r.data;
@@ -3166,15 +3166,21 @@ function inboxListHTML(msgs) {
   return msgs.map(function (m) {
     /* Assignment notifications (sent by the teacher composer) get a direct
        link — otherwise the student reads the message but can't find the quiz. */
-    const isAssignment = (m.body || '').indexOf('📝 Your teacher sent you ') === 0;
+    const isAssignment = (m.body || '').indexOf('📝 Your teacher sent you ') === 0 ||
+      (m.body || '').indexOf('📚 Your teacher sent you vocabulary ') === 0;
     let bodyHTML;
     if (isAssignment) {
-      const mm = /^📝 Your teacher sent you (homework|an exam): 📝 (.*) — open Muse English to start\.$/.exec(m.body || '');
+      const mm = /^📝 Your teacher sent you (homework|an exam): (📝|📚) (.*) — open Muse English to start\.$/.exec(m.body || '');
+      const mv = /^📚 Your teacher sent you vocabulary (homework|exam): (.*) — open Muse English to start\.$/.exec(m.body || '');
       bodyHTML = mm
         ? '<span class="msg2-line">📝 Your teacher sent you ' + esc(mm[1]) + ':</span>' +
-          '<span class="msg2-line">📝 ' + esc(mm[2]) + '</span>' +
+          '<span class="msg2-line">' + esc(mm[2]) + ' ' + esc(mm[3]) + '</span>' +
           '<span class="msg2-line msg2-dim">Open Muse English to start.</span>'
-        : esc(m.body);
+        : (mv
+          ? '<span class="msg2-line">📚 Your teacher sent you vocabulary ' + esc(mv[1]) + ':</span>' +
+            '<span class="msg2-line">' + esc(mv[2]) + '</span>' +
+            '<span class="msg2-line msg2-dim">Open Muse English to start.</span>'
+          : esc(m.body));
     } else {
       /* Plain messages: keep the sender's line breaks, one block per line,
          each with its own bidi base direction so mixed Persian/English
@@ -4110,7 +4116,7 @@ async function createVocabAssignment(btn, ctx) {
       note: note || null, deadline: deadline
     }).select('id').single();
     if (ins.error) throw ins.error;
-    var body = '📚 Your teacher sent you vocabulary ' + (ctx.mode === 'exam' ? 'exam' : 'homework') + ': ' + title + ' — open Muse English to start.';
+    var body = '📝 Your teacher sent you ' + (ctx.mode === 'exam' ? 'an exam' : 'homework') + ': ' + title + ' — open Muse English to start.';
     await Promise.all(targets.map(function (s) {
       return Promise.allSettled([
         sb.rpc('send_teacher_message', { p_student: s.user_id, p_body: body }),
@@ -12977,7 +12983,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610210447';
+var APP_VERSION = '202610210502';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
