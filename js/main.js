@@ -7153,6 +7153,7 @@ function renderGrammarTopicV2(v, t) {
       '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button>' : '';
     return '<section class="g-section" id="g2-' + lv + '"><h2>' + (G2_LEVEL_LABELS[lv] || lv.toUpperCase()) + '</h2>' +
       '<div class="g-fa-audio" data-fa-lv="' + lv + '"></div>' +
+      '<div class="g-en-audio" data-en-lv="' + lv + '"></div>' +
       pts + practice + '</section>';
   }).join('');
   var intro = (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('');
@@ -7176,6 +7177,7 @@ function renderGrammarTopicV2(v, t) {
   });
   // Persian audio lessons (2026-10-20)
   paintFaAudioBars(v, t.slug);
+  paintEnAudioBars(v, t.slug);
   window.scrollTo(0, 0);
 }
 
@@ -7206,6 +7208,41 @@ function paintFaAudioBars(v, slug) {
       btn.addEventListener('click', function () {
         btn.style.display = 'none';
         var a = d.querySelector('.g-fa-player');
+        a.style.display = 'block';
+        a.play().catch(function () {});
+      });
+    });
+  });
+}
+
+/* English audio lessons (2026-10-21): B1–C2 sections, built-in TTS.
+   Same pattern as the Persian bars, separate data + blue styling. */
+var _enAudioCache = {};
+function paintEnAudioBars(v, slug) {
+  var secs = v.querySelectorAll('.g-en-audio');
+  if (!secs.length) return;
+  var lvs = {};
+  Array.prototype.forEach.call(secs, function (d) { lvs[d.getAttribute('data-en-lv')] = 1; });
+  var maps = {};
+  var ps = Object.keys(lvs).map(function (lv) {
+    if (_enAudioCache[lv]) { maps[lv] = _enAudioCache[lv]; return Promise.resolve(); }
+    return fetch('/data/grammar/en-audio/' + lv + '.json').then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (m) { _enAudioCache[lv] = m; maps[lv] = m; })
+      .catch(function () { _enAudioCache[lv] = {}; maps[lv] = {}; });
+  });
+  Promise.all(ps).then(function () {
+    Array.prototype.forEach.call(secs, function (d) {
+      var lv = d.getAttribute('data-en-lv');
+      var e = (maps[lv] || {})[slug];
+      if (!e) return;
+      var m = Math.floor(e.sec / 60), s = e.sec % 60;
+      d.innerHTML = '<button class="g-en-btn" type="button">🎧 Listen in English' +
+        ' <span class="g-en-dur">' + m + ':' + (s < 10 ? '0' : '') + s + '</span></button>' +
+        '<audio class="g-en-player" controls preload="none" src="' + esc(e.url) + '"></audio>';
+      var btn = d.querySelector('.g-en-btn');
+      btn.addEventListener('click', function () {
+        btn.style.display = 'none';
+        var a = d.querySelector('.g-en-player');
         a.style.display = 'block';
         a.play().catch(function () {});
       });
@@ -7262,6 +7299,7 @@ function renderGrammarTopicV3(v, t) {
       '<div class="gt3-sec-head"><span class="gt3-lv-badge" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv.toUpperCase() + '</span>' +
       '<h2>' + (TW_LEVEL_LABEL[lv] || lv.toUpperCase()) + '</h2></div>' +
       '<div class="g-fa-audio" data-fa-lv="' + lv + '"></div>' +
+      '<div class="g-en-audio" data-en-lv="' + lv + '"></div>' +
       pts + practice + '</section>';
   }).join('');
   var intro = (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('');
@@ -7290,6 +7328,7 @@ function renderGrammarTopicV3(v, t) {
     });
   });
   paintFaAudioBars(v, t.slug);
+  paintEnAudioBars(v, t.slug);
   window.scrollTo(0, 0);
 }
 
@@ -13032,7 +13071,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610211550';
+var APP_VERSION = '202610211840';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

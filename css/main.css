@@ -3701,6 +3701,10 @@ body.view-words #view { background: #FDF8F1; }
 .g-fa-btn:active { background: #FDECD9; }
 .g-fa-dur { background: #F26522; color: #fff; font-size: 0.8rem; border-radius: 999px; padding: 0.15rem 0.6rem; font-weight: 700; }
 .g-fa-player { width: 100%; display: none; margin: 0.2rem 0 0.4rem; }
+.g-en-btn { width: 100%; box-sizing: border-box; border: 2px solid #4A90D9; background: #EFF6FF; color: #1D5FA8; border-radius: 999px; padding: 0.8rem 1.1rem; font-size: 1rem; font-weight: 700; cursor: pointer; font-family: inherit; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+.g-en-btn:active { background: #DCEBFB; }
+.g-en-dur { background: #4A90D9; color: #fff; font-size: 0.8rem; border-radius: 999px; padding: 0.15rem 0.6rem; font-weight: 700; }
+.g-en-player { width: 100%; display: none; margin: 0.2rem 0 0 0.4rem; }
 /* Topic page V3 — anti-wall-of-text layout (2026-10-20) */
 .gt3-topic { font-size: 1.05rem; }
 .gt3-sec { margin: 1.6rem 0 2rem; background: color-mix(in srgb, var(--lv, #F26522) 13%, #FFFDF7); border: 1.5px solid color-mix(in srgb, var(--lv, #F26522) 30%, transparent); border-radius: 26px; padding: 1.2rem 1rem 1.4rem; }
