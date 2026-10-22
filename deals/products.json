@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "nikon-prostaff-p3-8x42",
+      "name_fa": "دوربین دوچشمی نیکون پرواستف",
+      "name_en": "Nikon Prostaff P3 8x42 Binoculars",
+      "price_cad": 117.98,
+      "regular_cad": 179.0,
+      "discount_pct": 34,
+      "added_fa": "پنجشنبه، ۲۲ اکتبر ۲۰۲۶",
+      "image": "img/nikon-prostaff-p3-8x42.jpg",
+      "url": "https://www.amazon.ca/dp/B0B3JPP9T8?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "دوربین ۸×۴۲ ضدآب با لنزهای چندلایه؛ عالی برای طبیعت‌گردی پاییزی."
+    },
+    {
+      "id": "dewalt-dwht66719-screwdriver",
+      "name_fa": "پیچ‌گوشتی شارژی دیوالت",
+      "name_en": "DeWALT DWHT66719 4V Cordless Screwdriver 15-Piece Set",
+      "price_cad": 78.0,
+      "regular_cad": 124.0,
+      "discount_pct": 37,
+      "added_fa": "پنجشنبه، ۲۲ اکتبر ۲۰۲۶",
+      "image": "img/dewalt-dwht66719-screwdriver.jpg",
+      "url": "https://www.amazon.ca/dp/B0DJBQ9ZBF?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پیچ‌گوشتی شارژی ۴ ولت با کنترل فلکس‌درایو؛ بدون دکمه، فقط با چرخش مچ."
+    },
+    {
+      "id": "epson-expression-xp-4200",
+      "name_fa": "پرینتر چندکاره اپسون",
+      "name_en": "Epson Expression Home XP-4200 Wireless All-in-One Printer",
+      "price_cad": 69.99,
+      "regular_cad": 119.99,
+      "discount_pct": 42,
+      "added_fa": "پنجشنبه، ۲۲ اکتبر ۲۰۲۶",
+      "image": "img/epson-expression-xp-4200.jpg",
+      "url": "https://www.amazon.ca/dp/B0BDCZKJLS?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پرینتر جوهرافشان چندکاره با وای‌فای و چاپ دوروی خودکار؛ کارتریج‌های جداگانه."
+    },
+    {
+      "id": "simple-modern-trek-40oz",
+      "name_fa": "لیوان مسافرتی سیمپل‌مادرن ۴۰ اونسی",
+      "name_en": "Simple Modern 40oz Trek Tumbler with Handle and Straw",
+      "price_cad": 23.41,
+      "regular_cad": 48.99,
+      "discount_pct": 52,
+      "added_fa": "پنجشنبه، ۲۲ اکتبر ۲۰۲۶",
+      "image": "img/simple-modern-trek-40oz.jpg",
+      "url": "https://www.amazon.ca/dp/B0B9HY9YX1?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "لیوان ۴۰ اونسی دوجداره با دسته و نی؛ ساعت‌ها نوشیدنی رو سرد یا گرم نگه می‌داره."
+    },
+    {
       "id": "pwperry-tire-inflator-150psi",
       "name_fa": "پمپ باد شارژی خودرو",
       "name_en": "Pwperry 150PSI Portable Tire Inflator",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "نسخه سبک و تاشو با نویز کنسلینگ تطبیقی و باتری ۷۰ ساعته؛ بهترین گزینه زیر ۵۰ دلار."
-    },
-    {
-      "id": "jbl-live-770nc",
-      "name_fa": "هدفون دورگوشی جی‌بی‌ال لایو ۷۷۰ ان‌سی",
-      "name_en": "JBL Live 770NC True Adaptive Noise Cancelling Over-Ear Headphones",
-      "price_cad": 129.98,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "چهارشنبه، ۲۱ اکتبر ۲۰۲۶",
-      "image": "img/jbl-live-770nc.jpg",
-      "url": "https://www.amazon.ca/dp/B0CT6D6Q27?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "نویز کنسلینگ تطبیقی، باتری ۶۵ ساعته و صدای امضای جی‌بی‌ال با درایورهای ۴۰ میلی‌متری."
-    },
-    {
-      "id": "volisun-20-ceiling-fan",
-      "name_fa": "پنکه سقفی ۲۰ اینچی ولیسون با چراغ و ریموت",
-      "name_en": "VOLISUN 20\" Low Profile Ceiling Fan with Dimmable LED Light & Remote",
-      "price_cad": 62.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "سه‌شنبه، ۲۰ اکتبر ۲۰۲۶",
-      "image": "img/volisun-20-ceiling-fan.jpg",
-      "url": "https://www.amazon.ca/dp/B0F7MWTWDF?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پنکه و چراغ سقفی در یک دستگاه — کم‌صدا و مناسب سقف‌های کوتاه"
-    },
-    {
-      "id": "dreamegg-d1-nova",
-      "name_fa": "دستگاه نویز سفید و ساعت آلارم دریم‌اگ D1 Nova",
-      "name_en": "Dreamegg D1 Nova White Noise Machine & Alarm Clock",
-      "price_cad": 16.49,
-      "regular_cad": 32.98,
-      "discount_pct": 50,
-      "added_fa": "سه‌شنبه، ۲۰ اکتبر ۲۰۲۶",
-      "image": "img/dreamegg-d1-nova.jpg",
-      "url": "https://www.amazon.ca/dp/B0FCXTS3KP?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "۲۵ صدای آرامش‌بخش، ساعت آلارم ملایم و چراغ خواب — ۵۰٪ تخفیف با کد DGD1NOVA در سبد خرید"
-    },
-    {
-      "id": "blink-video-doorbell-gen2-bundle",
-      "name_fa": "زنگ درب تصویری هوشمند بلینک نسل دوم همراه سینک ماژول",
-      "name_en": "Blink Video Doorbell (2nd Gen) + Sync Module Core bundle, Black",
-      "price_cad": 52.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "سه‌شنبه، ۲۰ اکتبر ۲۰۲۶",
-      "image": "img/blink-video-doorbell-gen2-bundle.jpg",
-      "url": "https://www.amazon.ca/dp/B0DGQVYW2K?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "امنیت خانه و دیدن بسته‌های پستی جلوی در؛ دید در شب و مکالمه دوطرفه."
     }
   ],
-  "updated_fa": "چهارشنبه ۲۹ مهر"
+  "updated_fa": "پنجشنبه ۳۰ مهر"
 }
