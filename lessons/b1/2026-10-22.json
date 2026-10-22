@@ -1,0 +1,327 @@
+{
+ "date": "2026-10-22",
+ "theme": "food & cooking",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "bunch",
+   "pos": "noun",
+   "meaning": "a group of things held together",
+   "example": "I bought a bunch of bananas.",
+   "pronunciation": "BUHNCH",
+   "persian": "دسته، خوشه",
+   "photo": "media/b1/2026-10-22/photos/bunch.jpg",
+   "word_audio": "media/b1/2026-10-22/word-audio/bunch.mp3"
+  },
+  {
+   "word": "delicious",
+   "pos": "adjective",
+   "meaning": "Having a very pleasant taste.",
+   "example": "This cake is delicious!",
+   "pronunciation": "duh-LIH-shuhs",
+   "persian": "خوشمزه",
+   "photo": "media/b1/2026-10-22/photos/delicious.jpg",
+   "word_audio": "media/b1/2026-10-22/word-audio/delicious.mp3"
+  },
+  {
+   "word": "good/bad at sth",
+   "pos": "phrase",
+   "meaning": "able or unable to do something well.",
+   "example": "I am good at cooking pasta.",
+   "pronunciation": "GOOD (or BAD) at SUHM-thing",
+   "persian": "در کاری خوب/بد بودن",
+   "photo": "media/b1/2026-10-22/photos/good-bad-at-sth.jpg",
+   "word_audio": "media/b1/2026-10-22/word-audio/good-bad-at-sth.mp3"
+  },
+  {
+   "word": "taste [flavour]",
+   "pos": "verb",
+   "meaning": "Sense the flavor of food or drink.",
+   "example": "Can you taste the salt in this soup?",
+   "pronunciation": "TAYST",
+   "persian": "مزه کردن، چشیدن",
+   "photo": "media/b1/2026-10-22/photos/taste-flavour.jpg",
+   "word_audio": "media/b1/2026-10-22/word-audio/taste-flavour.mp3"
+  },
+  {
+   "word": "(a) bit of sth",
+   "pos": "phrase",
+   "meaning": "a small amount of something",
+   "example": "I need a bit of sugar for my tea.",
+   "pronunciation": "uh-BIT-uhv-SUHM-thing",
+   "persian": "کمی از چیزی",
+   "photo": "media/b1/2026-10-22/photos/a-bit-of-sth.jpg",
+   "word_audio": "media/b1/2026-10-22/word-audio/a-bit-of-sth.mp3"
+  },
+  {
+   "word": "(I) could not believe my eyes",
+   "pos": "idiom",
+   "meaning": "to be very surprised by what you see",
+   "example": "When I saw the huge cake, I could not believe my eyes.",
+   "pronunciation": "kuhd-NOT-buh-LEEV-my-AIZ",
+   "persian": "باورم نمی‌شد",
+   "photo": "media/b1/2026-10-22/photos/could-not-believe-my-eyes.jpg",
+   "word_audio": "media/b1/2026-10-22/word-audio/could-not-believe-my-eyes.mp3"
+  },
+  {
+   "word": "(I'm/you're, etc.) kidding",
+   "pos": "phrase",
+   "meaning": "saying something not true as a joke",
+   "example": "You won the lottery? You're kidding, right?",
+   "pronunciation": "KID-ing",
+   "persian": "شوخی می‌کنی",
+   "photo": "media/b1/2026-10-22/photos/kidding.jpg",
+   "word_audio": "media/b1/2026-10-22/word-audio/kidding.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-22/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: A Delicious Weekend Cooking Challenge",
+  "audio": "media/b1/2026-10-22/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-22/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sam's Kitchen Surprise",
+  "audio": "media/b1/2026-10-22/shadowing.mp3",
+  "transcript": "media/b1/2026-10-22/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-22/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/028.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/029.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/030.mp3",
+   "media/b1/2026-10-22/shadowing-sentences/031.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'bunch' mean?",
+   "options": [
+    "a group of things held together",
+    "to be very surprised by what you see",
+    "a small amount of something",
+    "saying something not true as a joke"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'delicious' mean?",
+   "options": [
+    "to be very surprised by what you see",
+    "a small amount of something",
+    "a group of things held together",
+    "Having a very pleasant taste."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'good/bad at sth' mean?",
+   "options": [
+    "Sense the flavor of food or drink.",
+    "a group of things held together",
+    "able or unable to do something well.",
+    "saying something not true as a joke"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'taste [flavour]' mean?",
+   "options": [
+    "saying something not true as a joke",
+    "to be very surprised by what you see",
+    "able or unable to do something well.",
+    "Sense the flavor of food or drink."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does '(a) bit of sth' mean?",
+   "options": [
+    "a small amount of something",
+    "a group of things held together",
+    "Sense the flavor of food or drink.",
+    "to be very surprised by what you see"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does '(I) could not believe my eyes' mean?",
+   "options": [
+    "to be very surprised by what you see",
+    "able or unable to do something well.",
+    "a small amount of something",
+    "Sense the flavor of food or drink."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does '(I'm/you're, etc.) kidding' mean?",
+   "options": [
+    "Sense the flavor of food or drink.",
+    "Having a very pleasant taste.",
+    "a small amount of something",
+    "saying something not true as a joke"
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "examples": [
+   "*She's not answering. She **must be** busy.* (almost sure)",
+   "*He **might be** at the gym.* (possible)",
+   "*That **can't be** Tom; he's in Paris.* (almost sure it isn't true)",
+   "*Someone's at the door. It **might be** the delivery driver.* (possible)",
+   "*He **must earn** a lot of money. He's got three cars.* (must + base verb)",
+   "*Where's my phone? It **could be** in the car.* (possible)"
+  ],
+  "explanation": "Sometimes we are not sure about something, so we make a guess. We call this a deduction.\n\nUse **must** when you are almost sure something is true: the food **must be** delicious because the line is so long.\n\nUse **might**, **may** or **could** when something is possible: he **might be** at the market; she **could be** cooking now.\n\nUse **can't** when you are almost sure something is NOT true: that **can't be** her cake — it looks too perfect!\n\nThe form is simple: **modal + base verb** (she **must know** the recipe). After these modals, never use *to* and never add -s: *she **must be** happy*, not *must to be*.",
+  "practice": [
+   {
+    "a": "She looks very tired. She must be exhausted.",
+    "q": "Rewrite using must: She looks very tired. I'm almost sure she is exhausted."
+   },
+   {
+    "a": "He might be in the kitchen. He is not sure, but it's possible.",
+    "q": "Rewrite using might: He is not sure, but it's possible that he is in the kitchen."
+   },
+   {
+    "a": "That can't be fresh fish. It smells bad.",
+    "q": "Rewrite using can't: I'm almost sure that is NOT fresh fish. It smells bad."
+   },
+   {
+    "a": "They could be tasting the soup. The kitchen smells delicious.",
+    "q": "Rewrite using could: It's possible that they are tasting the soup. The kitchen smells delicious."
+   }
+  ],
+  "quiz": [
+   {
+    "answer": 2,
+    "options": [
+     "can't",
+     "musts",
+     "must",
+     "must to"
+    ],
+    "question": "You've been travelling all day. You ___ be tired."
+   },
+   {
+    "answer": 3,
+    "options": [
+     "must",
+     "might",
+     "may",
+     "can't"
+    ],
+    "question": "That ___ be Tom. He's in Australia this month."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "might",
+     "must",
+     "can't",
+     "mights"
+    ],
+    "question": "I'm not sure where Lisa is. She ___ be in the library."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "can't",
+     "must",
+     "must to",
+     "musts"
+    ],
+    "question": "He ___ know the answer. He's a maths teacher."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "must have",
+     "must having",
+     "must be having",
+     "must to have"
+    ],
+    "question": "Listen! The neighbours ___ a party."
+   },
+   {
+    "answer": 3,
+    "options": [
+     "She might is at work.",
+     "She might to be at work.",
+     "She mights be at work.",
+     "She might be at work."
+    ],
+    "question": "Choose the correct sentence."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "can't be",
+     "must be",
+     "must being",
+     "can't being"
+    ],
+    "question": "The lights are off and nobody's answering. They ___ at home."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "must",
+     "might",
+     "can't",
+     "mustn't"
+    ],
+    "question": "It ___ rain later, so take an umbrella just in case."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "must to",
+     "can't to",
+     "could",
+     "coulds"
+    ],
+    "question": "Where are my keys? – They ___ be in your coat pocket. Have you checked?"
+   },
+   {
+    "answer": 3,
+    "options": [
+     "can't",
+     "mights",
+     "must to",
+     "must"
+    ],
+    "question": "She's been crying. Something ___ be wrong."
+   }
+  ],
+  "title": "Modals of Deduction: Must, Might, Can't"
+ }
+}

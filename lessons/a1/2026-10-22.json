@@ -1,0 +1,276 @@
+{
+  "date": "2026-10-22",
+  "theme": "days and dates",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "age",
+      "pos": "noun",
+      "meaning": "how old a person or thing is",
+      "example": "What is your age? I am ten.",
+      "pronunciation": "AYJ",
+      "persian": "سن، عمر",
+      "photo": "media/a1/2026-10-22/photos/age.jpg",
+      "word_audio": "media/a1/2026-10-22/word-audio/age.mp3"
+    },
+    {
+      "word": "fly",
+      "pos": "verb",
+      "meaning": "To travel in an aircraft.",
+      "example": "We will fly to Paris next week.",
+      "pronunciation": "FLAI",
+      "persian": "پرواز کردن",
+      "photo": "media/a1/2026-10-22/photos/fly.jpg",
+      "word_audio": "media/a1/2026-10-22/word-audio/fly.mp3"
+    },
+    {
+      "word": "second",
+      "pos": "adjective",
+      "meaning": "Coming after the first.",
+      "example": "He finished second in the race.",
+      "pronunciation": "SEH-kund",
+      "persian": "دوم",
+      "photo": "media/a1/2026-10-22/photos/second.jpg",
+      "word_audio": "media/a1/2026-10-22/word-audio/second.mp3"
+    },
+    {
+      "word": "about",
+      "pos": "preposition",
+      "meaning": "on the subject of; concerning",
+      "example": "What are you talking about?",
+      "pronunciation": "uh-BOWT",
+      "persian": "درباره، راجع به",
+      "photo": "media/a1/2026-10-22/photos/about.jpg",
+      "word_audio": "media/a1/2026-10-22/word-audio/about.mp3"
+    },
+    {
+      "word": "action film",
+      "pos": "noun",
+      "meaning": "a film with lots of exciting events and fighting",
+      "example": "I love watching action films with my friends.",
+      "pronunciation": "AK-shun film",
+      "persian": "فیلم اکشن",
+      "photo": "media/a1/2026-10-22/photos/action film.jpg",
+      "word_audio": "media/a1/2026-10-22/word-audio/action film.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-22/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Days and Dates",
+    "audio": "media/a1/2026-10-22/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-22/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Fun Week",
+    "audio": "media/a1/2026-10-22/shadowing.mp3",
+    "transcript": "media/a1/2026-10-22/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-22/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/016.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/017.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/018.mp3",
+      "media/a1/2026-10-22/shadowing-sentences/019.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'age' mean?",
+      "options": [
+        "To travel in an aircraft.",
+        "how old a person or thing is",
+        "a film with lots of exciting events and fighting",
+        "on the subject of; concerning"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'fly' mean?",
+      "options": [
+        "Coming after the first.",
+        "on the subject of; concerning",
+        "To travel in an aircraft.",
+        "how old a person or thing is"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'second' mean?",
+      "options": [
+        "on the subject of; concerning",
+        "a film with lots of exciting events and fighting",
+        "Coming after the first.",
+        "To travel in an aircraft."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'about' mean?",
+      "options": [
+        "a film with lots of exciting events and fighting",
+        "on the subject of; concerning",
+        "how old a person or thing is",
+        "Coming after the first."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'action film' mean?",
+      "options": [
+        "how old a person or thing is",
+        "To travel in an aircraft.",
+        "on the subject of; concerning",
+        "a film with lots of exciting events and fighting"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Adverbs of Frequency (always, usually, never)",
+    "explanation": "**Adverbs of frequency** say **how often** something happens. **Always** means 100% of the time, and **never** means 0%.\n\nThe adverb goes **before** the main verb. You can talk **about** your week: **usually** fly on Monday, **always** watch an action film on Friday.\n\nAfter the verb **be** (am, is, are), the adverb goes **after** it: **is always**, **are usually**.\n\nAsk with **How often...?** Answer with an adverb, or put a time expression like **twice a week** at the **end**.",
+    "examples": [
+      "*I **always** have coffee in the morning.* (before the main verb)",
+      "*We **usually** go to the beach in summer.* (before the main verb)",
+      "*She **often** reads before bed.* (before the main verb)",
+      "*My brother is **never** late.* (after be)",
+      "*He **doesn't usually** work on Saturdays.* (after doesn't)",
+      "*How often do you see your grandparents? – **Once a month**.* (frequency expression)"
+    ],
+    "practice": [
+      {
+        "q": "I watch an action film on Friday. (always)",
+        "a": "I always watch an action film on Friday."
+      },
+      {
+        "q": "She is late. (never)",
+        "a": "She is never late."
+      },
+      {
+        "q": "We fly to Paris. (usually)",
+        "a": "We usually fly to Paris."
+      },
+      {
+        "q": "I go swimming. (twice a week)",
+        "a": "I go swimming twice a week."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I get always up at 7.",
+          "I always get up at 7.",
+          "Always I get up at 7.",
+          "I get up always at 7."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ coffee. I don't like it.",
+        "options": [
+          "never drink",
+          "always drink",
+          "usually drink",
+          "often drink"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ late for class.",
+        "options": [
+          "nevers",
+          "never",
+          "is never",
+          "is not never"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We ___ to the cinema on Fridays.",
+        "options": [
+          "go often",
+          "often goes",
+          "goes often",
+          "often go"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "How ___ do you go swimming?",
+        "options": [
+          "much",
+          "many",
+          "often",
+          "ever"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My parents ___ busy at the weekend.",
+        "options": [
+          "are usual",
+          "are usually",
+          "usually is",
+          "is usually"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ calls me. Maybe once a year.",
+        "options": [
+          "hardly ever",
+          "always",
+          "usually",
+          "often"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I go to the gym ___ a week.",
+        "options": [
+          "two",
+          "second",
+          "double",
+          "twice"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She doesn't ___ work on Sundays.",
+        "options": [
+          "never",
+          "hardly ever",
+          "often",
+          "not"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Do you ___ eat breakfast?",
+        "options": [
+          "usual",
+          "usually",
+          "usualy",
+          "use"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-10-22/grammar-en.mp3"
+  }
+}

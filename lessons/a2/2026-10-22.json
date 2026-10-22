@@ -1,0 +1,285 @@
+{
+ "date": "2026-10-22",
+ "theme": "days and dates",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "(four) times a month",
+   "pos": "phrase",
+   "meaning": "happening four occasions within one month",
+   "example": "I visit my grandparents four times a month.",
+   "pronunciation": "TAIMZ uh MUNTH",
+   "persian": "چهار بار در ماه",
+   "photo": "media/a2/2026-10-22/photos/times-a-month.jpg",
+   "word_audio": "media/a2/2026-10-22/word-audio/times-a-month.mp3"
+  },
+  {
+   "word": "afternoon",
+   "pos": "noun",
+   "meaning": "the part of the day after noon",
+   "example": "I like to read books in the afternoon.",
+   "pronunciation": "ahf-ter-NOON",
+   "persian": "بعدازظهر",
+   "photo": "media/a2/2026-10-22/photos/afternoon.jpg",
+   "word_audio": "media/a2/2026-10-22/word-audio/afternoon.mp3"
+  },
+  {
+   "word": "ago",
+   "pos": "adverb",
+   "meaning": "in the past, from now",
+   "example": "I saw him two days ago.",
+   "pronunciation": "uh-GOH",
+   "persian": "پیش، قبل",
+   "photo": "media/a2/2026-10-22/photos/ago.jpg",
+   "word_audio": "media/a2/2026-10-22/word-audio/ago.mp3"
+  },
+  {
+   "word": "always",
+   "pos": "adverb",
+   "meaning": "At all times; every time.",
+   "example": "I always brush my teeth before bed.",
+   "pronunciation": "AWL-weyz",
+   "persian": "همیشه",
+   "photo": "media/a2/2026-10-22/photos/always.jpg",
+   "word_audio": "media/a2/2026-10-22/word-audio/always.mp3"
+  },
+  {
+   "word": "April",
+   "pos": "noun",
+   "meaning": "The fourth month of the year.",
+   "example": "My birthday is in April.",
+   "pronunciation": "AY-pril",
+   "persian": "آوریل",
+   "photo": "media/a2/2026-10-22/photos/april.jpg",
+   "word_audio": "media/a2/2026-10-22/word-audio/april.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-10-22/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Days and Dates",
+  "audio": "media/a2/2026-10-22/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-10-22/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "My Week and My Month",
+  "audio": "media/a2/2026-10-22/shadowing.mp3",
+  "transcript": "media/a2/2026-10-22/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-10-22/shadowing-sentences/001.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/002.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/003.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/004.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/005.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/006.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/007.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/008.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/009.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/010.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/011.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/012.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/013.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/014.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/015.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/016.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/017.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/018.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/019.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/020.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/021.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/022.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/023.mp3",
+   "media/a2/2026-10-22/shadowing-sentences/024.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does '(four) times a month' mean?",
+   "options": [
+    "happening four occasions within one month",
+    "The fourth month of the year.",
+    "the part of the day after noon",
+    "At all times; every time.",
+    "in the past, from now"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'afternoon' mean?",
+   "options": [
+    "in the past, from now",
+    "happening four occasions within one month",
+    "At all times; every time.",
+    "The fourth month of the year.",
+    "the part of the day after noon"
+   ],
+   "answer": 4
+  },
+  {
+   "question": "What does 'ago' mean?",
+   "options": [
+    "At all times; every time.",
+    "the part of the day after noon",
+    "happening four occasions within one month",
+    "The fourth month of the year.",
+    "in the past, from now"
+   ],
+   "answer": 4
+  },
+  {
+   "question": "What does 'always' mean?",
+   "options": [
+    "At all times; every time.",
+    "the part of the day after noon",
+    "happening four occasions within one month",
+    "in the past, from now",
+    "The fourth month of the year."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'April' mean?",
+   "options": [
+    "in the past, from now",
+    "happening four occasions within one month",
+    "the part of the day after noon",
+    "The fourth month of the year.",
+    "At all times; every time."
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Verb + -ing or To-Infinitive (want to, enjoy -ing)",
+  "explanation": "When one verb follows another, the second verb is either **to + verb** or **verb-ing**. It depends on the **first** verb: I **want to go**. I **enjoy going**.\n\nSome verbs always take **to**: **want**, **decide**, **hope**, **plan**, **promise**. For example: I **plan to visit** my family in April.\n\nSome verbs always take **-ing**: **enjoy**, **finish**, **mind**, **keep**. For example: She **enjoys reading** in the afternoon.\n\nAfter **like**, **love**, **hate** and **start**, both forms are fine: I love **to swim**. I love **swimming**.\n\nThere is no simple rule. Learn the verbs in each group, and check the grammar quiz!",
+  "examples": [
+   "*I **want to learn** Italian.* (want to)",
+   "*I **enjoy cooking** for my friends.* (enjoy -ing)",
+   "*Have you **finished eating**?* (finish -ing)",
+   "*She **promised to call** me.* (promise to)",
+   "*Do you **mind waiting** a few minutes?* (mind -ing)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite using 'enjoy': I like cooking in the afternoon.",
+    "a": "I enjoy cooking in the afternoon."
+   },
+   {
+    "q": "Rewrite using 'want to': I would like to visit my grandparents in April.",
+    "a": "I want to visit my grandparents in April."
+   },
+   {
+    "q": "Rewrite using 'decided to': We made the choice to stay home two days ago.",
+    "a": "We decided to stay home two days ago."
+   },
+   {
+    "q": "Rewrite using 'finished': Did you complete reading the book?",
+    "a": "Have you finished reading the book?"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I want ___ a new phone.",
+    "options": [
+     "buying",
+     "buy",
+     "buys",
+     "to buy"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "She enjoys ___ to music.",
+    "options": [
+     "listening",
+     "to listen",
+     "listen",
+     "listens"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "We decided ___ at home last night.",
+    "options": [
+     "staying",
+     "stay",
+     "to stay",
+     "stayed"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Have you finished ___ your homework?",
+    "options": [
+     "to do",
+     "doing",
+     "do",
+     "did"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "I hope ___ you again soon.",
+    "options": [
+     "seeing",
+     "to see",
+     "see",
+     "saw"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "He doesn't mind ___ late.",
+    "options": [
+     "to work",
+     "work",
+     "working",
+     "works"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "They're planning ___ to Spain in July.",
+    "options": [
+     "to travel",
+     "travelling",
+     "travel",
+     "travels"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "My brother keeps ___ my clothes without asking!",
+    "options": [
+     "to borrow",
+     "borrow",
+     "borrows",
+     "borrowing"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "I need ___ some milk on the way home.",
+    "options": [
+     "to buy",
+     "buying",
+     "buy",
+     "bought"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Would you like ___ to the beach with us?",
+    "options": [
+     "going",
+     "to go",
+     "go",
+     "went"
+    ],
+    "answer": 1
+   }
+  ],
+  "audio": "media/a2/2026-10-22/grammar-en.mp3"
+ }
+}

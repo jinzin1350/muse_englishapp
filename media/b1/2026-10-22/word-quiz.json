@@ -1,0 +1,72 @@
+[
+ {
+  "question": "What does 'bunch' mean?",
+  "options": [
+   "a group of things held together",
+   "to be very surprised by what you see",
+   "a small amount of something",
+   "saying something not true as a joke"
+  ],
+  "answer": 0
+ },
+ {
+  "question": "What does 'delicious' mean?",
+  "options": [
+   "to be very surprised by what you see",
+   "a small amount of something",
+   "a group of things held together",
+   "Having a very pleasant taste."
+  ],
+  "answer": 3
+ },
+ {
+  "question": "What does 'good/bad at sth' mean?",
+  "options": [
+   "Sense the flavor of food or drink.",
+   "a group of things held together",
+   "able or unable to do something well.",
+   "saying something not true as a joke"
+  ],
+  "answer": 2
+ },
+ {
+  "question": "What does 'taste [flavour]' mean?",
+  "options": [
+   "saying something not true as a joke",
+   "to be very surprised by what you see",
+   "able or unable to do something well.",
+   "Sense the flavor of food or drink."
+  ],
+  "answer": 3
+ },
+ {
+  "question": "What does '(a) bit of sth' mean?",
+  "options": [
+   "a small amount of something",
+   "a group of things held together",
+   "Sense the flavor of food or drink.",
+   "to be very surprised by what you see"
+  ],
+  "answer": 0
+ },
+ {
+  "question": "What does '(I) could not believe my eyes' mean?",
+  "options": [
+   "to be very surprised by what you see",
+   "able or unable to do something well.",
+   "a small amount of something",
+   "Sense the flavor of food or drink."
+  ],
+  "answer": 0
+ },
+ {
+  "question": "What does '(I'm/you're, etc.) kidding' mean?",
+  "options": [
+   "Sense the flavor of food or drink.",
+   "Having a very pleasant taste.",
+   "a small amount of something",
+   "saying something not true as a joke"
+  ],
+  "answer": 3
+ }
+]
