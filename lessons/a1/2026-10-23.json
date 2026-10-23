@@ -1,0 +1,383 @@
+{
+  "date": "2026-10-23",
+  "theme": "review day",
+  "level": "a1",
+  "cefr": "A1",
+  "review": true,
+  "review_of": [
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22"
+  ],
+  "review_window_words": 15,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "basement",
+      "pos": "noun",
+      "meaning": "A room or area below the ground floor.",
+      "example": "We keep old things in the basement.",
+      "pronunciation": "BAYS-munt",
+      "persian": "زیرزمین",
+      "photo": "media/a1/2026-10-20/photos/basement.jpg",
+      "word_audio": "media/a1/2026-10-20/word-audio/basement.mp3"
+    },
+    {
+      "word": "action film",
+      "pos": "noun",
+      "meaning": "a film with lots of exciting events and fighting",
+      "example": "I love watching action films with my friends.",
+      "pronunciation": "AK-shun film",
+      "persian": "فیلم اکشن",
+      "photo": "media/a1/2026-10-22/photos/action film.jpg",
+      "word_audio": "media/a1/2026-10-22/word-audio/action film.mp3"
+    },
+    {
+      "word": "bank",
+      "pos": "noun",
+      "meaning": "A place where you keep or borrow money.",
+      "example": "I need to go to the bank today.",
+      "pronunciation": "bangk",
+      "persian": "بانک",
+      "photo": "media/a1/2026-10-21/photos/bank.jpg",
+      "word_audio": "media/a1/2026-10-21/word-audio/bank.mp3"
+    },
+    {
+      "word": "bedside table",
+      "pos": "noun phrase",
+      "meaning": "A small table next to a bed.",
+      "example": "My book is on the bedside table.",
+      "pronunciation": "BED-syde TAY-bul",
+      "persian": "پاتختی",
+      "photo": "media/a1/2026-10-21/photos/bedside table.jpg",
+      "word_audio": "media/a1/2026-10-21/word-audio/bedside table.mp3"
+    },
+    {
+      "word": "fly",
+      "pos": "verb",
+      "meaning": "To travel in an aircraft.",
+      "example": "We will fly to Paris next week.",
+      "pronunciation": "FLAI",
+      "persian": "پرواز کردن",
+      "photo": "media/a1/2026-10-22/photos/fly.jpg",
+      "word_audio": "media/a1/2026-10-22/word-audio/fly.mp3"
+    },
+    {
+      "word": "bin",
+      "pos": "noun",
+      "meaning": "A container for rubbish.",
+      "example": "Put the paper in the bin.",
+      "pronunciation": "bin",
+      "persian": "سطل زباله",
+      "photo": "media/a1/2026-10-21/photos/bin.jpg",
+      "word_audio": "media/a1/2026-10-21/word-audio/bin.mp3"
+    },
+    {
+      "word": "about",
+      "pos": "preposition",
+      "meaning": "on the subject of; concerning",
+      "example": "What are you talking about?",
+      "pronunciation": "uh-BOWT",
+      "persian": "درباره، راجع به",
+      "photo": "media/a1/2026-10-22/photos/about.jpg",
+      "word_audio": "media/a1/2026-10-22/word-audio/about.mp3"
+    },
+    {
+      "word": "bathroom",
+      "pos": "noun",
+      "meaning": "A room with a toilet and a bath or shower.",
+      "example": "The bathroom is upstairs, next to my room.",
+      "pronunciation": "BAH-throom",
+      "persian": "حمام، دستشویی",
+      "photo": "media/a1/2026-10-20/photos/bathroom.jpg",
+      "word_audio": "media/a1/2026-10-20/word-audio/bathroom.mp3"
+    },
+    {
+      "word": "bedside lamp",
+      "pos": "noun phrase",
+      "meaning": "A small light next to a bed.",
+      "example": "I turn on my bedside lamp to read.",
+      "pronunciation": "BED-syde lamp",
+      "persian": "چراغ خواب",
+      "photo": "media/a1/2026-10-21/photos/bedside lamp.jpg",
+      "word_audio": "media/a1/2026-10-21/word-audio/bedside lamp.mp3"
+    },
+    {
+      "word": "bedroom",
+      "pos": "noun",
+      "meaning": "A room used for sleeping.",
+      "example": "My bedroom is very cozy.",
+      "pronunciation": "BED-room",
+      "persian": "اتاق خواب",
+      "photo": "media/a1/2026-10-20/photos/bedroom.jpg",
+      "word_audio": "media/a1/2026-10-20/word-audio/bedroom.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-23/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day — This Week's Words",
+    "audio": "media/a1/2026-10-23/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-23/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Busy Day at Home",
+    "audio": "media/a1/2026-10-23/shadowing.mp3",
+    "transcript": "media/a1/2026-10-23/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-23/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/016.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/017.mp3",
+      "media/a1/2026-10-23/shadowing-sentences/018.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'basement' mean?",
+      "options": [
+        "on the subject of; concerning",
+        "A room or area below the ground floor.",
+        "a film with lots of exciting events and fighting",
+        "A room with a toilet and a bath or shower."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'action film' mean?",
+      "options": [
+        "a film with lots of exciting events and fighting",
+        "A container for rubbish.",
+        "A room used for sleeping.",
+        "A room or area below the ground floor."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bank' mean?",
+      "options": [
+        "To travel in an aircraft.",
+        "A place where you keep or borrow money.",
+        "a film with lots of exciting events and fighting",
+        "A room or area below the ground floor."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bedside table' mean?",
+      "options": [
+        "on the subject of; concerning",
+        "A room used for sleeping.",
+        "A room or area below the ground floor.",
+        "A small table next to a bed."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'fly' mean?",
+      "options": [
+        "a film with lots of exciting events and fighting",
+        "A small light next to a bed.",
+        "To travel in an aircraft.",
+        "A small table next to a bed."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bin' mean?",
+      "options": [
+        "A room with a toilet and a bath or shower.",
+        "A room used for sleeping.",
+        "A small light next to a bed.",
+        "A container for rubbish."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'about' mean?",
+      "options": [
+        "A room or area below the ground floor.",
+        "on the subject of; concerning",
+        "A small light next to a bed.",
+        "A small table next to a bed."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bathroom' mean?",
+      "options": [
+        "A small light next to a bed.",
+        "A room with a toilet and a bath or shower.",
+        "To travel in an aircraft.",
+        "A place where you keep or borrow money."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bedside lamp' mean?",
+      "options": [
+        "A small light next to a bed.",
+        "A small table next to a bed.",
+        "A room or area below the ground floor.",
+        "A room used for sleeping."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bedroom' mean?",
+      "options": [
+        "on the subject of; concerning",
+        "A room used for sleeping.",
+        "A small table next to a bed.",
+        "A room with a toilet and a bath or shower."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Present Continuous (and Present Simple vs Continuous)",
+    "explanation": "We use the **present continuous** for actions happening **now**.\nLook at this sentence: I **am reading** about films now.\n\nMake it with **am / is / are + verb-ing**.\nI **am reading**. She **is reading**. They **are reading**.\n\nWe also use it for things happening around now.\nI **am reading** a book about an action film this week.\n\nWe use the **present simple** for habits.\nI go to the bank every Monday. But now I **am going** to the bank.\n\nSome verbs are not actions, and we do not use them in the continuous.\nWe say I **know** the answer. Never say \"I am knowing\".",
+    "examples": [
+      "*I**'m cooking** dinner right now.*",
+      "*She **isn't working** today.*",
+      "***Are** you **listening** to me?*",
+      "*What **are** you **doing**?*",
+      "*The children **are playing** in the garden.*",
+      "*We **aren't watching** the film. You can turn it off.* (film — like our action film!)"
+    ],
+    "practice": [
+      {
+        "q": "My brother cleans the bathroom every day. (Say it is happening NOW.)",
+        "a": "My brother is cleaning the bathroom now."
+      },
+      {
+        "q": "I read with my bedside lamp every night. (Say it is happening NOW.)",
+        "a": "I am reading with my bedside lamp now."
+      },
+      {
+        "q": "They watch an action film. (Say they are NOT watching now.)",
+        "a": "They aren't watching an action film now."
+      },
+      {
+        "q": "She works at the bank today. (Make a question.)",
+        "a": "Is she working at the bank today?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Be quiet! The baby ___.",
+        "options": [
+          "sleeps",
+          "is sleeping",
+          "sleep",
+          "is sleep"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ dinner at the moment.",
+        "options": [
+          "cook",
+          "cooks",
+          "cooking",
+          "am cooking"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "They ___ TV right now.",
+        "options": [
+          "aren't watching",
+          "don't watching",
+          "isn't watching",
+          "not watching"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ she working today?",
+        "options": [
+          "Does",
+          "Do",
+          "Are",
+          "Is"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What ___ you doing?",
+        "options": [
+          "is",
+          "do",
+          "are",
+          "does"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He's ___ in the sea.",
+        "options": [
+          "swiming",
+          "swim",
+          "swimming",
+          "swimeing"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She's ___ a letter to her grandmother.",
+        "options": [
+          "writing",
+          "writeing",
+          "writting",
+          "writes"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Look! It ___.",
+        "options": [
+          "snows",
+          "snowing",
+          "snow",
+          "is snowing"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I ___ the answer.",
+        "options": [
+          "am knowing",
+          "know",
+          "knowing",
+          "am know"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My sister usually ___ to school, but today she's taking the bus.",
+        "options": [
+          "walks",
+          "is walking",
+          "walk",
+          "walking"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a1/2026-10-23/grammar-en.mp3"
+  }
+}

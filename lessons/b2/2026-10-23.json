@@ -1,0 +1,395 @@
+{
+ "date": "2026-10-23",
+ "theme": "review day",
+ "level": "b2",
+ "cefr": "B2",
+ "review": true,
+ "review_of": [
+  "2026-10-20",
+  "2026-10-21",
+  "2026-10-22"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "apply for",
+   "pos": "phrasal verb",
+   "meaning": "To make a formal request for something, like a job.",
+   "example": "You should apply for that manager position.",
+   "pronunciation": "uh-PLY for",
+   "persian": "درخواست کردن برای",
+   "photo": "media/b2/2026-10-21/photos/apply for.jpg",
+   "word_audio": "media/b2/2026-10-21/word-audio/apply for.mp3"
+  },
+  {
+   "word": "administrator",
+   "pos": "noun",
+   "meaning": "A person who manages an organization or system.",
+   "example": "The system administrator fixed the problem.",
+   "pronunciation": "ud-MIN-i-stray-tuh",
+   "persian": "مدیر، سرپرست",
+   "photo": "media/b2/2026-10-21/photos/administrator.jpg",
+   "word_audio": "media/b2/2026-10-21/word-audio/administrator.mp3"
+  },
+  {
+   "word": "bungalow",
+   "pos": "noun",
+   "meaning": "a house with only one floor",
+   "example": "My grandparents live in a bungalow.",
+   "pronunciation": "BUNG-uh-loh",
+   "persian": "خانه یک طبقه",
+   "photo": "media/b2/2026-10-20/photos/bungalow.jpg",
+   "word_audio": "media/b2/2026-10-20/word-audio/bungalow.mp3"
+  },
+  {
+   "word": "adventure holiday",
+   "pos": "noun",
+   "meaning": "A holiday involving exciting and dangerous activities.",
+   "example": "We went on an adventure holiday last year.",
+   "pronunciation": "ud-VEN-chur HOL-uh-day",
+   "persian": "تعطیلات ماجراجویانه",
+   "photo": "media/b2/2026-10-22/photos/adventure holiday.jpg",
+   "word_audio": "media/b2/2026-10-22/word-audio/adventure holiday.mp3"
+  },
+  {
+   "word": "coat hanger",
+   "pos": "noun",
+   "meaning": "A shaped piece of wood or plastic to hang clothes.",
+   "example": "Please put your jacket on the coat hanger.",
+   "pronunciation": "KOHT hang-ur",
+   "persian": "چوب لباسی",
+   "photo": "media/b2/2026-10-20/photos/coat hanger.jpg",
+   "word_audio": "media/b2/2026-10-20/word-audio/coat hanger.mp3"
+  },
+  {
+   "word": "beach",
+   "pos": "noun",
+   "meaning": "Sandy or stony land next to the sea.",
+   "example": "We walked on the beach yesterday.",
+   "pronunciation": "BEECH",
+   "persian": "ساحل",
+   "photo": "media/b2/2026-10-22/photos/beach.jpg",
+   "word_audio": "media/b2/2026-10-22/word-audio/beach.mp3"
+  },
+  {
+   "word": "choice",
+   "pos": "noun",
+   "meaning": "The act of choosing between things.",
+   "example": "You have a choice of three colours.",
+   "pronunciation": "CHOISS",
+   "persian": "انتخاب",
+   "photo": "media/b2/2026-10-20/photos/choice.jpg",
+   "word_audio": "media/b2/2026-10-20/word-audio/choice.mp3"
+  },
+  {
+   "word": "exhilarating",
+   "pos": "adjective",
+   "meaning": "Making you feel very happy, excited, and full of energy.",
+   "example": "The roller coaster ride was exhilarating.",
+   "pronunciation": "ig-ZIL-uh-RAY-ting",
+   "persian": "نشاط‌آور، هیجان‌انگیز",
+   "photo": "media/b2/2026-10-22/photos/exhilarating.jpg",
+   "word_audio": "media/b2/2026-10-22/word-audio/exhilarating.mp3"
+  },
+  {
+   "word": "bumpy",
+   "pos": "adjective",
+   "meaning": "not smooth, with many rough parts",
+   "example": "The road was very bumpy.",
+   "pronunciation": "BUM-pee",
+   "persian": "ناهموار، پردست‌انداز",
+   "photo": "media/b2/2026-10-22/photos/bumpy.jpg",
+   "word_audio": "media/b2/2026-10-22/word-audio/bumpy.mp3"
+  },
+  {
+   "word": "chopping board",
+   "pos": "noun",
+   "meaning": "A board used for cutting food on.",
+   "example": "Always use a chopping board to protect the counter.",
+   "pronunciation": "CHOP-ping board",
+   "persian": "تخته آشپزخانه",
+   "photo": "media/b2/2026-10-20/photos/chopping board.jpg",
+   "word_audio": "media/b2/2026-10-20/word-audio/chopping board.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b2/2026-10-23/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day — Lock In This Week's Words",
+  "audio": "media/b2/2026-10-23/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b2/2026-10-23/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Bungalow by the Sea",
+  "audio": "media/b2/2026-10-23/shadowing.mp3",
+  "transcript": "media/b2/2026-10-23/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b2/2026-10-23/shadowing-sentences/001.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/002.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/003.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/004.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/005.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/006.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/007.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/008.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/009.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/010.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/011.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/012.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/013.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/014.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/015.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/016.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/017.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/018.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/019.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/020.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/021.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/022.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/023.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/024.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/025.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/026.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/027.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/028.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/029.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/030.mp3",
+   "media/b2/2026-10-23/shadowing-sentences/031.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'apply for' mean?",
+   "options": [
+    "A holiday involving exciting and dangerous activities.",
+    "not smooth, with many rough parts",
+    "To make a formal request for something, like a job.",
+    "A shaped piece of wood or plastic to hang clothes."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'administrator' mean?",
+   "options": [
+    "A person who manages an organization or system.",
+    "To make a formal request for something, like a job.",
+    "not smooth, with many rough parts",
+    "A shaped piece of wood or plastic to hang clothes."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'bungalow' mean?",
+   "options": [
+    "A person who manages an organization or system.",
+    "a house with only one floor",
+    "A board used for cutting food on.",
+    "A holiday involving exciting and dangerous activities."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'adventure holiday' mean?",
+   "options": [
+    "To make a formal request for something, like a job.",
+    "A holiday involving exciting and dangerous activities.",
+    "Making you feel very happy, excited, and full of energy.",
+    "Sandy or stony land next to the sea."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'coat hanger' mean?",
+   "options": [
+    "a house with only one floor",
+    "A shaped piece of wood or plastic to hang clothes.",
+    "The act of choosing between things.",
+    "A person who manages an organization or system."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'beach' mean?",
+   "options": [
+    "Sandy or stony land next to the sea.",
+    "Making you feel very happy, excited, and full of energy.",
+    "A person who manages an organization or system.",
+    "a house with only one floor"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'choice' mean?",
+   "options": [
+    "A shaped piece of wood or plastic to hang clothes.",
+    "To make a formal request for something, like a job.",
+    "The act of choosing between things.",
+    "not smooth, with many rough parts"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'exhilarating' mean?",
+   "options": [
+    "To make a formal request for something, like a job.",
+    "A holiday involving exciting and dangerous activities.",
+    "Sandy or stony land next to the sea.",
+    "Making you feel very happy, excited, and full of energy."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'bumpy' mean?",
+   "options": [
+    "A person who manages an organization or system.",
+    "To make a formal request for something, like a job.",
+    "not smooth, with many rough parts",
+    "A holiday involving exciting and dangerous activities."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'chopping board' mean?",
+   "options": [
+    "Making you feel very happy, excited, and full of energy.",
+    "A person who manages an organization or system.",
+    "A board used for cutting food on.",
+    "not smooth, with many rough parts"
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "Used To, Would, Be Used To and Get Used To",
+  "explanation": "These four forms look similar but mean very different things, and mixing them up is one of the most common B2 mistakes.\n\n**used to** + verb talks about a past habit or state that is not true now. *I **used to live** in a bungalow, but now I live in a flat.* The administrator **used to work** in another city before she moved here.\n\n**would** + verb also talks about the past, but only for repeated actions, never states. *Every summer we **would drive** to the beach.* You cannot use **would** for a state: not *I would have a bungalow*, but *I **used to have** a bungalow*.\n\n**be used to** + -ing or noun means something is normal for you now. *I'm **used to getting up** early.* After a month in the new job, Daniel was **used to** the long commute.\n\n**get used to** + -ing or noun means something becomes normal — it is a process. *It took me months to **get used to** the bumpy roads.* You will soon **get used to** the new routine.\n\nWatch the spelling after *did*: ***Did** you **use to** apply for jobs online?* — no *-d* after *did*, and the same for negatives: *I **didn't use to** like the beach.*\n\nAnd remember: after **be used to** and **get used to**, the *to* is a preposition, so a verb must take **-ing**. *I'm used to **swimming***, never *I'm used to swim*. Choosing the right form is a smart **choice** — get it right and your English sounds instantly more natural.",
+  "examples": [
+   "*We **used to live** in a village, but now we live in the city.* (past state)",
+   "*My dad **would** make pancakes every Sunday.* (repeated past action)",
+   "*I'm a nurse, so I**'m used to working** nights.* (it's normal for me)",
+   "*It took me a year to **get used to** the Canadian winter.* (a process)",
+   "*I'm slowly **getting used to** my new glasses.* (process, continuous)",
+   "*You'll **get used to** speaking English every day.* (future)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with **used to**: In the past, Daniel lived in a bungalow. Now he lives in a flat.",
+    "a": "Daniel **used to live** in a bungalow, but now he lives in a flat."
+   },
+   {
+    "q": "Rewrite with **would**: Every summer, when he was a child, he visited the beach.",
+    "a": "Every summer he **would visit** the beach when he was a child."
+   },
+   {
+    "q": "Rewrite with **be used to**: Driving on bumpy roads is normal for her now.",
+    "a": "She **is used to driving** on bumpy roads."
+   },
+   {
+    "q": "Rewrite with **get used to**: It took him three months, and then the new job felt normal.",
+    "a": "It took him three months to **get used to** the new job."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I've lived in Canada for ten years, so I'm used to ___ in the snow.",
+    "options": [
+     "driving",
+     "drive",
+     "drove",
+     "have driven"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "When I first moved to London, I couldn't get used to ___ on the left.",
+    "options": [
+     "drive",
+     "to drive",
+     "drove",
+     "driving"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "We ___ live in a small village, but now we live in the city.",
+    "options": [
+     "would",
+     "are used to",
+     "used to",
+     "got used to"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "She's a nurse, so she ___ working at night.",
+    "options": [
+     "used to",
+     "would",
+     "is used to",
+     "uses to"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "When I was a child, my grandmother ___ tell me stories every night.",
+    "options": [
+     "would",
+     "was used to",
+     "got used to",
+     "is used to"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I ___ have long hair when I was at school.",
+    "options": [
+     "would",
+     "used to",
+     "was used to",
+     "got used to"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "It took me months to ___ the cold weather.",
+    "options": [
+     "used to",
+     "be use to",
+     "use to",
+     "get used to"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Did you ___ play football when you were young?",
+    "options": [
+     "used to",
+     "using to",
+     "use to",
+     "were used to"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "I'm used to work long hours.",
+     "I used to working long hours.",
+     "I would be used working long hours.",
+     "I'm used to working long hours."
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Living alone was strange at first, but now I ___ it.",
+    "options": [
+     "used to",
+     "am used to",
+     "use to",
+     "would"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

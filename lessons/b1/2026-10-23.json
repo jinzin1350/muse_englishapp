@@ -1,0 +1,395 @@
+{
+ "date": "2026-10-23",
+ "theme": "review day",
+ "level": "b1",
+ "cefr": "B1",
+ "review": true,
+ "review_of": [
+  "2026-10-20",
+  "2026-10-21",
+  "2026-10-22"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "(I'm/you're, etc.) kidding",
+   "pos": "phrase",
+   "meaning": "saying something not true as a joke",
+   "example": "You won the lottery? You're kidding, right?",
+   "pronunciation": "KID-ing",
+   "persian": "شوخی می‌کنی",
+   "photo": "media/b1/2026-10-22/photos/kidding.jpg",
+   "word_audio": "media/b1/2026-10-22/word-audio/kidding.mp3"
+  },
+  {
+   "word": "bunch",
+   "pos": "noun",
+   "meaning": "a group of things held together",
+   "example": "I bought a bunch of bananas.",
+   "pronunciation": "BUHNCH",
+   "persian": "دسته، خوشه",
+   "photo": "media/b1/2026-10-22/photos/bunch.jpg",
+   "word_audio": "media/b1/2026-10-22/word-audio/bunch.mp3"
+  },
+  {
+   "word": "bowl",
+   "pos": "noun",
+   "meaning": "A round, deep dish for food.",
+   "example": "I ate a bowl of soup for lunch.",
+   "pronunciation": "BOHL",
+   "persian": "کاسه",
+   "photo": "media/b1/2026-10-20/photos/bowl.jpg",
+   "word_audio": "media/b1/2026-10-20/word-audio/bowl.mp3"
+  },
+  {
+   "word": "chest of drawers",
+   "pos": "noun",
+   "meaning": "A piece of furniture with drawers for clothes.",
+   "example": "I put my socks in the chest of drawers.",
+   "pronunciation": "chest-uv-DRAWZ",
+   "persian": "کمد کشودار",
+   "photo": "media/b1/2026-10-20/photos/chest-of-drawers.jpg",
+   "word_audio": "media/b1/2026-10-20/word-audio/chest-of-drawers.mp3"
+  },
+  {
+   "word": "at risk of",
+   "pos": "phrase",
+   "meaning": "In a situation where something bad might happen.",
+   "example": "People who smoke are at risk of lung disease.",
+   "pronunciation": "ut RISK uv",
+   "persian": "در معرض خطر",
+   "photo": "media/b1/2026-10-21/photos/at-risk-of.jpg",
+   "word_audio": "media/b1/2026-10-21/word-audio/at-risk-of.mp3"
+  },
+  {
+   "word": "airport",
+   "pos": "noun",
+   "meaning": "a place where planes take off and land",
+   "example": "We arrived at the airport early.",
+   "pronunciation": "AIR-port",
+   "persian": "فرودگاه",
+   "photo": "media/b1/2026-10-21/photos/airport.jpg",
+   "word_audio": "media/b1/2026-10-21/word-audio/airport.mp3"
+  },
+  {
+   "word": "taste [flavour]",
+   "pos": "verb",
+   "meaning": "Sense the flavor of food or drink.",
+   "example": "Can you taste the salt in this soup?",
+   "pronunciation": "TAYST",
+   "persian": "مزه کردن، چشیدن",
+   "photo": "media/b1/2026-10-22/photos/taste-flavour.jpg",
+   "word_audio": "media/b1/2026-10-22/word-audio/taste-flavour.mp3"
+  },
+  {
+   "word": "delicious",
+   "pos": "adjective",
+   "meaning": "Having a very pleasant taste.",
+   "example": "This cake is delicious!",
+   "pronunciation": "duh-LIH-shuhs",
+   "persian": "خوشمزه",
+   "photo": "media/b1/2026-10-22/photos/delicious.jpg",
+   "word_audio": "media/b1/2026-10-22/word-audio/delicious.mp3"
+  },
+  {
+   "word": "do housework",
+   "pos": "phrase",
+   "meaning": "To clean and tidy your home.",
+   "example": "I help my mother do housework on Saturdays.",
+   "pronunciation": "doo-HOWS-wurk",
+   "persian": "کارهای خانه انجام دادن",
+   "photo": "media/b1/2026-10-20/photos/do-housework.jpg",
+   "word_audio": "media/b1/2026-10-20/word-audio/do-housework.mp3"
+  },
+  {
+   "word": "fridge",
+   "pos": "noun",
+   "meaning": "a machine that keeps food cold.",
+   "example": "Put the milk in the fridge.",
+   "pronunciation": "FRIJ",
+   "persian": "یخچال",
+   "photo": "media/b1/2026-10-20/photos/fridge.jpg",
+   "word_audio": "media/b1/2026-10-20/word-audio/fridge.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-23/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day — Home, Travel and Food",
+  "audio": "media/b1/2026-10-23/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-23/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Nina's Busy Saturday",
+  "audio": "media/b1/2026-10-23/shadowing.mp3",
+  "transcript": "media/b1/2026-10-23/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-23/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/028.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/029.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/030.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/031.mp3",
+   "media/b1/2026-10-23/shadowing-sentences/032.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does '(I'm/you're, etc.) kidding' mean?",
+   "options": [
+    "a group of things held together",
+    "a machine that keeps food cold.",
+    "A piece of furniture with drawers for clothes.",
+    "saying something not true as a joke"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'bunch' mean?",
+   "options": [
+    "In a situation where something bad might happen.",
+    "Sense the flavor of food or drink.",
+    "a group of things held together",
+    "A round, deep dish for food."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'bowl' mean?",
+   "options": [
+    "A round, deep dish for food.",
+    "In a situation where something bad might happen.",
+    "A piece of furniture with drawers for clothes.",
+    "To clean and tidy your home."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'chest of drawers' mean?",
+   "options": [
+    "a machine that keeps food cold.",
+    "To clean and tidy your home.",
+    "Sense the flavor of food or drink.",
+    "A piece of furniture with drawers for clothes."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'at risk of' mean?",
+   "options": [
+    "Having a very pleasant taste.",
+    "Sense the flavor of food or drink.",
+    "In a situation where something bad might happen.",
+    "a group of things held together"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'airport' mean?",
+   "options": [
+    "A round, deep dish for food.",
+    "A piece of furniture with drawers for clothes.",
+    "a place where planes take off and land",
+    "In a situation where something bad might happen."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'taste [flavour]' mean?",
+   "options": [
+    "Having a very pleasant taste.",
+    "A round, deep dish for food.",
+    "In a situation where something bad might happen.",
+    "Sense the flavor of food or drink."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'delicious' mean?",
+   "options": [
+    "In a situation where something bad might happen.",
+    "A round, deep dish for food.",
+    "a machine that keeps food cold.",
+    "Having a very pleasant taste."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'do housework' mean?",
+   "options": [
+    "A round, deep dish for food.",
+    "saying something not true as a joke",
+    "a machine that keeps food cold.",
+    "To clean and tidy your home."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'fridge' mean?",
+   "options": [
+    "A piece of furniture with drawers for clothes.",
+    "Sense the flavor of food or drink.",
+    "a machine that keeps food cold.",
+    "a group of things held together"
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "Second Conditional",
+  "explanation": "Use the **second conditional** for **unreal or unlikely** situations in the present or future, and their results. *If I **had** a million dollars, I**'d buy** a house by the sea* — but I do not have a million dollars.\n\nThe form is **if + past simple** in the *if* clause and **would + base verb** in the main clause. If the airport **were** closer, I **would walk** there.\n\nThe past tense here does not mean past time. It shows the situation is **unreal**, and *would* is often contracted: *I**'d**, she**'d**.*\n\nTo give advice, use **If I were you**. If I **were** you, I**'d taste** the cake, because it looks delicious.\n\nNever put *would* in the *if* clause. Say *If I **had** time*, not *If I would have time*.\n\nHow is this different from the **first conditional**? The first is a real possibility: *If I **win** the lottery, I**'ll** buy a new fridge.* The second is an unlikely dream: *If I **won** the lottery, I**'d** buy a beach house.",
+  "examples": [
+   "*If I **had** more free time, I**'d travel** more.* (unreal present)",
+   "*If I **were** you, I**'d accept** the offer.* (advice)",
+   "*What **would** you **do** if you **lost** your phone?* (question)",
+   "*If we **lived** by the sea, we **could** swim every day.* (could)",
+   "*If I **spoke** Japanese, I **might** get a job in Tokyo.* (might)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite using the second conditional: I don't have a fridge, so I can't keep the milk cold.",
+    "a": "If I had a fridge, I would keep the milk cold."
+   },
+   {
+    "q": "Rewrite using the second conditional: My kitchen is small, so I can't put a chest of drawers in it.",
+    "a": "If my kitchen were bigger, I could put a chest of drawers in it."
+   },
+   {
+    "q": "Give advice with 'If I were you': This flight is at risk of being late. I think you should go to the airport earlier.",
+    "a": "If I were you, I'd go to the airport earlier."
+   },
+   {
+    "q": "Fix the mistake: If I would win the lottery, I would buy a beach house.",
+    "a": "If I won the lottery, I would buy a beach house."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If I ___ a million dollars, I'd buy a house by the sea.",
+    "options": [
+     "have",
+     "will have",
+     "had",
+     "would have"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "If she studied more, she ___ the exam.",
+    "options": [
+     "would pass",
+     "will pass",
+     "passes",
+     "passed"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "If I ___ you, I'd talk to her.",
+    "options": [
+     "am",
+     "be",
+     "will be",
+     "were"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "What ___ you do if you lost your phone?",
+    "options": [
+     "will",
+     "would",
+     "do",
+     "did"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "If we lived in the city, we ___ walk to work.",
+    "options": [
+     "can",
+     "could",
+     "will can",
+     "would could"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "I'd travel more if I ___ more free time.",
+    "options": [
+     "have",
+     "would have",
+     "will have",
+     "had"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "If he ___ so far away, I'd visit him more often.",
+    "options": [
+     "didn't live",
+     "doesn't live",
+     "won't live",
+     "wouldn't live"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "She ___ happier if she changed jobs.",
+    "options": [
+     "will be",
+     "is",
+     "would be",
+     "were"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "If you could live anywhere, where ___ you live?",
+    "options": [
+     "will",
+     "do",
+     "did",
+     "would"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "If I would have time, I would help you.",
+     "If I had time, I would help you.",
+     "If I had time, I will help you.",
+     "If I have time, I would help you."
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

@@ -1,0 +1,396 @@
+{
+  "date": "2026-10-23",
+  "theme": "review day",
+  "level": "c2",
+  "cefr": "C2",
+  "review": true,
+  "review_of": [
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "home truth",
+      "pos": "noun phrase",
+      "meaning": "An unpleasant fact about oneself that is true.",
+      "example": "My friend told me some home truths about my spending habits.",
+      "pronunciation": "HOME TROOTH",
+      "persian": "حقیقت تلخ، واقعیت ناخوشایند",
+      "photo": "media/c2/2026-10-20/photos/home truth.jpg",
+      "word_audio": "media/c2/2026-10-20/word-audio/home truth.mp3"
+    },
+    {
+      "word": "hit home",
+      "pos": "idiom",
+      "meaning": "To be fully understood and have a strong effect.",
+      "example": "His words about poverty really hit home.",
+      "pronunciation": "HIT HOME",
+      "persian": "تاثیر عمیق گذاشتن، به دل نشستن",
+      "photo": "media/c2/2026-10-20/photos/hit home.jpg",
+      "word_audio": "media/c2/2026-10-20/word-audio/hit home.mp3"
+    },
+    {
+      "word": "approachable",
+      "pos": "adjective",
+      "meaning": "Friendly and easy to talk to.",
+      "example": "Her approachable demeanor made students feel comfortable asking questions.",
+      "pronunciation": "uh-PROH-chuh-bul",
+      "persian": "صمیمی، قابل دسترس",
+      "photo": "media/c2/2026-10-21/photos/approachable.jpg",
+      "word_audio": "media/c2/2026-10-21/word-audio/approachable.mp3"
+    },
+    {
+      "word": "alarmed",
+      "pos": "adjective",
+      "meaning": "Frightened or worried.",
+      "example": "The sudden noise left her feeling alarmed.",
+      "pronunciation": "uh-LARMD",
+      "persian": "نگران، وحشت‌زده",
+      "photo": "media/c2/2026-10-21/photos/alarmed.jpg",
+      "word_audio": "media/c2/2026-10-21/word-audio/alarmed.mp3"
+    },
+    {
+      "word": "appease",
+      "pos": "verb",
+      "meaning": "To pacify someone by granting their demands.",
+      "example": "He tried to appease his angry boss with an apology.",
+      "pronunciation": "uh-PEEZ",
+      "persian": "آرام کردن، راضی کردن",
+      "photo": "media/c2/2026-10-21/photos/appease.jpg",
+      "word_audio": "media/c2/2026-10-21/word-audio/appease.mp3"
+    },
+    {
+      "word": "household word",
+      "pos": "noun phrase",
+      "meaning": "A person or thing widely known by everyone.",
+      "example": "Coca-Cola has become a household word globally.",
+      "pronunciation": "HOWSS-hold WURD",
+      "persian": "نام آشنا، معروف، سرشناس",
+      "photo": "media/c2/2026-10-20/photos/household word.jpg",
+      "word_audio": "media/c2/2026-10-20/word-audio/household word.mp3"
+    },
+    {
+      "word": "achieve economic growth",
+      "pos": "phrase",
+      "meaning": "To increase a country's wealth and prosperity.",
+      "example": "Governments aim to achieve economic growth.",
+      "pronunciation": "uh-CHEEV ee-kuh-NOM-ik GROHTH",
+      "persian": "دستیابی به رشد اقتصادی",
+      "photo": "media/c2/2026-10-22/photos/achieve economic growth.jpg",
+      "word_audio": "media/c2/2026-10-22/word-audio/achieve economic growth.mp3"
+    },
+    {
+      "word": "have the time of your life",
+      "pos": "idiom",
+      "meaning": "To enjoy oneself immensely.",
+      "example": "We had the time of our lives at the party.",
+      "pronunciation": "hav thuh TYME uhv yawr LYFE",
+      "persian": "بهترین دوران زندگی را داشتن",
+      "photo": "media/c2/2026-10-20/photos/have the time of your life.jpg",
+      "word_audio": "media/c2/2026-10-20/word-audio/have the time of your life.mp3"
+    },
+    {
+      "word": "altruistic",
+      "pos": "adjective",
+      "meaning": "Showing selfless concern for the well-being of others.",
+      "example": "His altruistic actions benefited the entire community.",
+      "pronunciation": "al-troo-ISS-tik",
+      "persian": "نوع‌دوست، فداکار",
+      "photo": "media/c2/2026-10-21/photos/altruistic.jpg",
+      "word_audio": "media/c2/2026-10-21/word-audio/altruistic.mp3"
+    },
+    {
+      "word": "antipathy",
+      "pos": "noun",
+      "meaning": "A deep-seated feeling of dislike or aversion.",
+      "example": "His antipathy towards modern art was well-known.",
+      "pronunciation": "an-TIH-puh-thee",
+      "persian": "انزجار، تنفر",
+      "photo": "media/c2/2026-10-21/photos/antipathy.jpg",
+      "word_audio": "media/c2/2026-10-21/word-audio/antipathy.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-23/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day — Words That Hit Home",
+    "audio": "media/c2/2026-10-23/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-23/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Night the City Listened",
+    "audio": "media/c2/2026-10-23/shadowing.mp3",
+    "transcript": "media/c2/2026-10-23/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c2/2026-10-23/shadowing-sentences/001.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/002.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/003.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/004.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/005.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/006.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/007.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/008.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/009.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/010.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/011.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/012.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/013.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/014.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/015.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/016.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/017.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/018.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/019.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/020.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/021.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/022.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/023.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/024.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/025.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/026.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/027.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/028.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/029.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/030.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/031.mp3",
+      "media/c2/2026-10-23/shadowing-sentences/032.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'home truth' mean?",
+      "options": [
+        "A person or thing widely known by everyone.",
+        "An unpleasant fact about oneself that is true.",
+        "Showing selfless concern for the well-being of others.",
+        "A deep-seated feeling of dislike or aversion."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'hit home' mean?",
+      "options": [
+        "A person or thing widely known by everyone.",
+        "Frightened or worried.",
+        "To be fully understood and have a strong effect.",
+        "To increase a country's wealth and prosperity."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'approachable' mean?",
+      "options": [
+        "Friendly and easy to talk to.",
+        "Frightened or worried.",
+        "To pacify someone by granting their demands.",
+        "Showing selfless concern for the well-being of others."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'alarmed' mean?",
+      "options": [
+        "Frightened or worried.",
+        "To increase a country's wealth and prosperity.",
+        "To enjoy oneself immensely.",
+        "To be fully understood and have a strong effect."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'appease' mean?",
+      "options": [
+        "To pacify someone by granting their demands.",
+        "To increase a country's wealth and prosperity.",
+        "A person or thing widely known by everyone.",
+        "Showing selfless concern for the well-being of others."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'household word' mean?",
+      "options": [
+        "Friendly and easy to talk to.",
+        "To be fully understood and have a strong effect.",
+        "Frightened or worried.",
+        "A person or thing widely known by everyone."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'achieve economic growth' mean?",
+      "options": [
+        "To be fully understood and have a strong effect.",
+        "An unpleasant fact about oneself that is true.",
+        "Showing selfless concern for the well-being of others.",
+        "To increase a country's wealth and prosperity."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'have the time of your life' mean?",
+      "options": [
+        "To increase a country's wealth and prosperity.",
+        "Friendly and easy to talk to.",
+        "To enjoy oneself immensely.",
+        "To be fully understood and have a strong effect."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'altruistic' mean?",
+      "options": [
+        "To pacify someone by granting their demands.",
+        "An unpleasant fact about oneself that is true.",
+        "A deep-seated feeling of dislike or aversion.",
+        "Showing selfless concern for the well-being of others."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'antipathy' mean?",
+      "options": [
+        "A deep-seated feeling of dislike or aversion.",
+        "Friendly and easy to talk to.",
+        "To be fully understood and have a strong effect.",
+        "To enjoy oneself immensely."
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "examples": [
+      "*The manager insisted that he **appease** the angry customer.* (insist that + base form)",
+      "*It is **vital that** every leader **be** approachable.* (no -s, even with every person)",
+      "*The minister proposed that the plan **achieve economic growth** within a year.* (propose that)",
+      "*The lawyer suggested that the report **not contain** any home truths.* (negative: not + base form)",
+      "*If I **were** you, I would not repeat that home truth.* (unreal: were for all persons)",
+      "***Be that as it may**, we still need a decision.* (fixed phrase)"
+    ],
+    "explanation": "The **subjunctive** is a verb form for things **demanded, suggested or necessary**, not facts. It always uses the **base form** of the verb, for every person: *The manager insisted that he **appease** the angry client.* (not *appeases*)\n\nIt follows **that**-clauses after verbs like **insist, suggest, demand, recommend, propose** and adjectives like **essential, vital, crucial**: *It is **vital that** every leader **be** approachable.* Notice — no *-s*, even with *he / she / it*.\n\nNegatives put **not** before the base form: *The lawyer suggested that the report **not contain** any home truths.* The passive works too: *It is **essential that** the plan **be approved** before we try to achieve economic growth.*\n\nFor unreal situations, use **were** for every person: *If I **were** you, I would not repeat that home truth.* And the old fixed phrases survive in modern English: **be that as it may**, **come what may**, **if need be**, **so be it**.\n\nCommon mistake: never add **to** or **-s**. Say *I suggest that he **pay*** — never *pays* or *to pay*. British English often uses *should* instead: *…that he **should pay***.",
+    "practice": [
+      {
+        "a": "The CEO demanded that the team be approachable.",
+        "q": "The CEO wanted the team to be approachable. (use: demanded that)"
+      },
+      {
+        "a": "It is essential that we have the time of our lives on holiday.",
+        "q": "It is very important that we have the time of our lives on holiday. (use: essential that)"
+      },
+      {
+        "a": "The manager recommended that she not share the home truth with the press.",
+        "q": "The manager asked her not to share the home truth with the press. (use: recommended that)"
+      },
+      {
+        "a": "Come what may, the board will hire an altruistic director.",
+        "q": "The board wants to hire an altruistic director, and nothing will stop them. (use: come what may)"
+      }
+    ],
+    "title": "The Subjunctive (I insist that he be on time)",
+    "quiz": [
+      {
+        "question": "The doctor insisted that she ___ in bed for a week.",
+        "options": [
+          "to stay",
+          "stay",
+          "staying",
+          "will stay"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "It is essential that every student ___ on time.",
+        "options": [
+          "to be",
+          "is being",
+          "will be",
+          "be"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "They recommended that he ___ the job.",
+        "options": [
+          "not accept",
+          "doesn't accept",
+          "not to accept",
+          "not accepting"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The committee demanded that the report ___ immediately.",
+        "options": [
+          "to publish",
+          "is publishing",
+          "be published",
+          "being published"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I suggest that she ___ a lawyer before signing.",
+        "options": [
+          "to consult",
+          "consulting",
+          "will consult",
+          "consult"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ that as it may, we still need to make a decision.",
+        "options": [
+          "Be",
+          "Being",
+          "Is",
+          "Was"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "It is vital that the patient ___ any food before surgery.",
+        "options": [
+          "not eating",
+          "not to eat",
+          "not eat",
+          "won't eat"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If I ___ you, I'd take the offer.",
+        "options": [
+          "am",
+          "were",
+          "be",
+          "been"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The law requires that every driver ___ insurance.",
+        "options": [
+          "have",
+          "has got to",
+          "having",
+          "to have"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We'll finish the project on time, come what ___.",
+        "options": [
+          "will",
+          "is",
+          "may",
+          "be"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

@@ -1,0 +1,390 @@
+{
+ "date": "2026-10-23",
+ "theme": "review day",
+ "level": "a2",
+ "cefr": "A2",
+ "review": true,
+ "review_of": [
+  "2026-10-20",
+  "2026-10-21",
+  "2026-10-22"
+ ],
+ "review_window_words": 15,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "ago",
+   "pos": "adverb",
+   "meaning": "in the past, from now",
+   "example": "I saw him two days ago.",
+   "pronunciation": "uh-GOH",
+   "persian": "پیش، قبل",
+   "photo": "media/a2/2026-10-22/photos/ago.jpg",
+   "word_audio": "media/a2/2026-10-22/word-audio/ago.mp3"
+  },
+  {
+   "word": "air conditioning",
+   "pos": "noun",
+   "meaning": "a system that cools the air",
+   "example": "The car has good air conditioning.",
+   "pronunciation": "air kun-DISH-ning",
+   "persian": "تهویه مطبوع",
+   "photo": "media/a2/2026-10-20/photos/air conditioning.jpg",
+   "word_audio": "media/a2/2026-10-20/word-audio/air conditioning.mp3"
+  },
+  {
+   "word": "(four) times a month",
+   "pos": "phrase",
+   "meaning": "happening four occasions within one month",
+   "example": "I visit my grandparents four times a month.",
+   "pronunciation": "TAIMZ uh MUNTH",
+   "persian": "چهار بار در ماه",
+   "photo": "media/a2/2026-10-22/photos/times-a-month.jpg",
+   "word_audio": "media/a2/2026-10-22/word-audio/times-a-month.mp3"
+  },
+  {
+   "word": "beef",
+   "pos": "noun",
+   "meaning": "Meat from a cow.",
+   "example": "I like to eat beef with rice.",
+   "pronunciation": "beef",
+   "persian": "گوشت گاو",
+   "photo": "media/a2/2026-10-21/photos/beef.jpg",
+   "word_audio": "media/a2/2026-10-21/word-audio/beef.mp3"
+  },
+  {
+   "word": "balcony",
+   "pos": "noun",
+   "meaning": "A platform outside a building, above the ground.",
+   "example": "We sat on the balcony and enjoyed the view.",
+   "pronunciation": "BAL-kuh-nee",
+   "persian": "بالکن، ایوان",
+   "photo": "media/a2/2026-10-20/photos/balcony.jpg",
+   "word_audio": "media/a2/2026-10-20/word-audio/balcony.mp3"
+  },
+  {
+   "word": "blanket",
+   "pos": "noun",
+   "meaning": "A warm cover for a bed or for keeping warm.",
+   "example": "I pulled the blanket over me.",
+   "pronunciation": "BLANG-kit",
+   "persian": "پتو",
+   "photo": "media/a2/2026-10-20/photos/blanket.jpg",
+   "word_audio": "media/a2/2026-10-20/word-audio/blanket.mp3"
+  },
+  {
+   "word": "aubergine",
+   "pos": "noun",
+   "meaning": "A dark purple vegetable, also called eggplant.",
+   "example": "I like to cook aubergine with tomatoes.",
+   "pronunciation": "OH-buh-zheen",
+   "persian": "بادمجان",
+   "photo": "media/a2/2026-10-21/photos/aubergine.jpg",
+   "word_audio": "media/a2/2026-10-21/word-audio/aubergine.mp3"
+  },
+  {
+   "word": "always",
+   "pos": "adverb",
+   "meaning": "At all times; every time.",
+   "example": "I always brush my teeth before bed.",
+   "pronunciation": "AWL-weyz",
+   "persian": "همیشه",
+   "photo": "media/a2/2026-10-22/photos/always.jpg",
+   "word_audio": "media/a2/2026-10-22/word-audio/always.mp3"
+  },
+  {
+   "word": "add",
+   "pos": "verb",
+   "meaning": "To put something extra into food or drink.",
+   "example": "Please add some sugar to my tea.",
+   "pronunciation": "ad",
+   "persian": "اضافه کردن",
+   "photo": "media/a2/2026-10-21/photos/add.jpg",
+   "word_audio": "media/a2/2026-10-21/word-audio/add.mp3"
+  },
+  {
+   "word": "barbecue n, v",
+   "pos": "noun, verb",
+   "meaning": "(n) A meal cooked outdoors; (v) to cook outdoors.",
+   "example": "We had a barbecue in the garden yesterday.",
+   "pronunciation": "BAH-bih-kyoo",
+   "persian": "(اسم) کباب‌پز، باربیکیو؛ (فعل) کباب کردن",
+   "photo": "media/a2/2026-10-21/photos/barbecue n, v.jpg",
+   "word_audio": "media/a2/2026-10-21/word-audio/barbecue n, v.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-10-23/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day — Kitchen Week",
+  "audio": "media/a2/2026-10-23/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-10-23/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "My Busy Kitchen Week",
+  "audio": "media/a2/2026-10-23/shadowing.mp3",
+  "transcript": "media/a2/2026-10-23/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-10-23/shadowing-sentences/001.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/002.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/003.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/004.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/005.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/006.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/007.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/008.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/009.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/010.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/011.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/012.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/013.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/014.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/015.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/016.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/017.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/018.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/019.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/020.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/021.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/022.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/023.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/024.mp3",
+   "media/a2/2026-10-23/shadowing-sentences/025.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'ago' mean?",
+   "options": [
+    "in the past, from now",
+    "(n) A meal cooked outdoors; (v) to cook outdoors.",
+    "A dark purple vegetable, also called eggplant.",
+    "To put something extra into food or drink."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'air conditioning' mean?",
+   "options": [
+    "A dark purple vegetable, also called eggplant.",
+    "To put something extra into food or drink.",
+    "(n) A meal cooked outdoors; (v) to cook outdoors.",
+    "a system that cools the air"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does '(four) times a month' mean?",
+   "options": [
+    "At all times; every time.",
+    "happening four occasions within one month",
+    "A dark purple vegetable, also called eggplant.",
+    "Meat from a cow."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'beef' mean?",
+   "options": [
+    "in the past, from now",
+    "A platform outside a building, above the ground.",
+    "Meat from a cow.",
+    "(n) A meal cooked outdoors; (v) to cook outdoors."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'balcony' mean?",
+   "options": [
+    "a system that cools the air",
+    "happening four occasions within one month",
+    "To put something extra into food or drink.",
+    "A platform outside a building, above the ground."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'blanket' mean?",
+   "options": [
+    "a system that cools the air",
+    "At all times; every time.",
+    "A platform outside a building, above the ground.",
+    "A warm cover for a bed or for keeping warm."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'aubergine' mean?",
+   "options": [
+    "Meat from a cow.",
+    "happening four occasions within one month",
+    "A dark purple vegetable, also called eggplant.",
+    "(n) A meal cooked outdoors; (v) to cook outdoors."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'always' mean?",
+   "options": [
+    "a system that cools the air",
+    "At all times; every time.",
+    "in the past, from now",
+    "A warm cover for a bed or for keeping warm."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'add' mean?",
+   "options": [
+    "(n) A meal cooked outdoors; (v) to cook outdoors.",
+    "Meat from a cow.",
+    "A platform outside a building, above the ground.",
+    "To put something extra into food or drink."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'barbecue n, v' mean?",
+   "options": [
+    "To put something extra into food or drink.",
+    "a system that cools the air",
+    "(n) A meal cooked outdoors; (v) to cook outdoors.",
+    "A dark purple vegetable, also called eggplant."
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "The Verb To Be (am, is, are)",
+  "explanation": "**Be** is the most important verb in English. In the present it has three forms: **am, is, are**.\n\nUse **am** with I: *I **am** hungry.* Use **is** with one person or thing: *The beef **is** ready.* Use **are** with more than one: *They **are** always late.*\n\nFor a negative, put **not** after the verb: *I **am not** cold. She **isn't** at the barbecue.* Common short forms: **isn't, aren't, I'm not**.\n\nFor a question, put the verb first: ***Are** you tired? **Is** the air conditioning on?* Answer yes with the full form: *Yes, I **am**.*\n\nWe also use **be** for age: *I**’m** 30.* (never \"I have 30 years\"). And to describe things: *The blanket **is** warm. The aubergines **are** fresh.*",
+  "examples": [
+   "*I**'m** a student. (I + am)",
+   "*My mother **is** a doctor. (one person + is)",
+   "*They**'re** from Japan. (they + are)",
+   "*It**'s** cold today. (it + is)",
+   "*How old **are** you? – I**'m** 19. (age)",
+   "***Are** you OK? – Yes, I **am**. (short answer)"
+  ],
+  "practice": [
+   {
+    "q": "I ___ hungry. (complete with am, is or are)",
+    "a": "I am hungry."
+   },
+   {
+    "q": "The beef ___ hot. (complete with am, is or are)",
+    "a": "The beef is hot."
+   },
+   {
+    "q": "They ___ on the balcony. (make it negative)",
+    "a": "They aren't on the balcony. (They are not on the balcony.)"
+   },
+   {
+    "q": "___ the air conditioning on? (make it a question)",
+    "a": "Is the air conditioning on?"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I ___ a teacher.",
+    "options": [
+     "is",
+     "am",
+     "are",
+     "be"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "My parents ___ at home.",
+    "options": [
+     "is",
+     "am",
+     "be",
+     "are"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "She ___ from Italy.",
+    "options": [
+     "is",
+     "are",
+     "am",
+     "be"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "___ you tired?",
+    "options": [
+     "Is",
+     "Am",
+     "Are",
+     "Be"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "They ___ my friends.",
+    "options": [
+     "aren't",
+     "isn't",
+     "am not",
+     "not are"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "It ___ cold today. It's very hot!",
+    "options": [
+     "aren't",
+     "isn't",
+     "am not",
+     "not is"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Are you hungry? – Yes, I ___.",
+    "options": [
+     "'m",
+     "is",
+     "am",
+     "are"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Is your brother a student? – No, he ___.",
+    "options": [
+     "aren't",
+     "not",
+     "doesn't",
+     "isn't"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "How old ___ your sister?",
+    "options": [
+     "is",
+     "are",
+     "am",
+     "has"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "I have 30 years.",
+     "I am 30.",
+     "I has 30 years.",
+     "I is 30."
+    ],
+    "answer": 1
+   }
+  ],
+  "audio": "media/a2/2026-10-23/grammar-en.mp3"
+ }
+}

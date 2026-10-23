@@ -1,0 +1,394 @@
+{
+ "date": "2026-10-23",
+ "theme": "review day",
+ "level": "c1",
+ "cefr": "C1",
+ "review": true,
+ "review_of": [
+  "2026-10-20",
+  "2026-10-21",
+  "2026-10-22"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "hit home",
+   "pos": "idiom",
+   "meaning": "To be fully understood and have a strong effect.",
+   "example": "His words about poverty really hit home.",
+   "pronunciation": "HIT HOHM",
+   "persian": "تاثیر عمیق گذاشتن، به دل نشستن",
+   "photo": "media/c1/2026-10-22/photos/hit-home.jpg",
+   "word_audio": "media/c1/2026-10-22/word-audio/hit-home.mp3"
+  },
+  {
+   "example": "My new desktop has a very powerful processor.",
+   "meaning": "A computer designed for use on a desk.",
+   "persian": "کامپیوتر رومیزی",
+   "photo": "media/c1/2026-10-21/photos/desktop.jpg",
+   "pos": "noun",
+   "pronunciation": "DESK-top",
+   "word": "desktop",
+   "word_audio": "media/c1/2026-10-21/word-audio/desktop.mp3"
+  },
+  {
+   "word": "dog’s life",
+   "pos": "idiom",
+   "meaning": "A very unhappy and difficult existence.",
+   "example": "After losing his job, he felt he was living a dog's life.",
+   "pronunciation": "DOGZ LYF",
+   "persian": "زندگی سخت و بدبختی",
+   "photo": "media/c1/2026-10-20/photos/dog’s life.jpg",
+   "word_audio": "media/c1/2026-10-20/word-audio/dog’s life.mp3"
+  },
+  {
+   "word": "home truth",
+   "pos": "noun phrase",
+   "meaning": "An unpleasant fact about oneself that is true.",
+   "example": "My friend told me some home truths about my spending habits.",
+   "pronunciation": "HOHM TROOTH",
+   "persian": "حقیقت تلخ، واقعیت ناخوشایند",
+   "photo": "media/c1/2026-10-22/photos/home-truth.jpg",
+   "word_audio": "media/c1/2026-10-22/word-audio/home-truth.mp3"
+  },
+  {
+   "example": "AI is transforming many industries rapidly.",
+   "meaning": "Artificial intelligence; computer systems performing human-like tasks.",
+   "persian": "هوش مصنوعی",
+   "photo": "media/c1/2026-10-21/photos/AI.jpg",
+   "pos": "noun",
+   "pronunciation": "ay-EYE",
+   "word": "AI",
+   "word_audio": "media/c1/2026-10-21/word-audio/AI.mp3"
+  },
+  {
+   "word": "have the time of your life",
+   "pos": "idiom",
+   "meaning": "To enjoy oneself immensely.",
+   "example": "We had the time of our lives at the party.",
+   "pronunciation": "hav thuh TYM uv yawr LYF",
+   "persian": "بهترین دوران زندگی را داشتن",
+   "photo": "media/c1/2026-10-22/photos/have-the-time-of-your-life.jpg",
+   "word_audio": "media/c1/2026-10-22/word-audio/have-the-time-of-your-life.mp3"
+  },
+  {
+   "word": "get a new lease of life",
+   "pos": "idiom",
+   "meaning": "To become healthy, active, or interesting again.",
+   "example": "The old house got a new lease of life after renovation.",
+   "pronunciation": "get uh NYOO LEESS uhv LYF",
+   "persian": "جان تازه گرفتن، روحیه جدید یافتن",
+   "photo": "media/c1/2026-10-20/photos/get a new lease of life.jpg",
+   "word_audio": "media/c1/2026-10-20/word-audio/get a new lease of life.mp3"
+  },
+  {
+   "word": "high-rise (flat)",
+   "pos": "noun phrase",
+   "meaning": "A tall building with many floors.",
+   "example": "They live in a modern high-rise flat downtown.",
+   "pronunciation": "HY-ryz (flat)",
+   "persian": "آپارتمان بلند، برج مسکونی",
+   "photo": "media/c1/2026-10-22/photos/high-rise-flat.jpg",
+   "word_audio": "media/c1/2026-10-22/word-audio/high-rise-flat.mp3"
+  },
+  {
+   "word": "breathe new life into",
+   "pos": "idiom",
+   "meaning": "To bring new energy or ideas to something.",
+   "example": "The new manager hopes to breathe new life into the team.",
+   "pronunciation": "BREETH noo LYF IN-too",
+   "persian": "جان تازه بخشیدن، احیا کردن",
+   "photo": "media/c1/2026-10-20/photos/breathe new life into.jpg",
+   "word_audio": "media/c1/2026-10-20/word-audio/breathe new life into.mp3"
+  },
+  {
+   "word": "furnished",
+   "pos": "adjective",
+   "meaning": "(Of a property) rented with furniture included.",
+   "example": "We're looking for a furnished apartment to rent.",
+   "pronunciation": "FUR-nisht",
+   "persian": "مبله",
+   "photo": "media/c1/2026-10-20/photos/furnished.jpg",
+   "word_audio": "media/c1/2026-10-20/word-audio/furnished.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c1/2026-10-23/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day — Three Days in One",
+  "audio": "media/c1/2026-10-23/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-10-23/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Apartment on the Fourteenth Floor",
+  "audio": "media/c1/2026-10-23/shadowing.mp3",
+  "transcript": "media/c1/2026-10-23/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c1/2026-10-23/shadowing-sentences/001.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/002.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/003.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/004.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/005.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/006.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/007.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/008.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/009.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/010.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/011.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/012.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/013.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/014.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/015.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/016.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/017.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/018.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/019.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/020.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/021.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/022.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/023.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/024.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/025.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/026.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/027.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/028.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/029.mp3",
+   "media/c1/2026-10-23/shadowing-sentences/030.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'hit home' mean?",
+   "options": [
+    "An unpleasant fact about oneself that is true.",
+    "To be fully understood and have a strong effect.",
+    "To bring new energy or ideas to something.",
+    "Artificial intelligence; computer systems performing human-like tasks."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'desktop' mean?",
+   "options": [
+    "Artificial intelligence; computer systems performing human-like tasks.",
+    "A computer designed for use on a desk.",
+    "A tall building with many floors.",
+    "To bring new energy or ideas to something."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'dog’s life' mean?",
+   "options": [
+    "(Of a property) rented with furniture included.",
+    "A very unhappy and difficult existence.",
+    "To be fully understood and have a strong effect.",
+    "A computer designed for use on a desk."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'home truth' mean?",
+   "options": [
+    "An unpleasant fact about oneself that is true.",
+    "A very unhappy and difficult existence.",
+    "(Of a property) rented with furniture included.",
+    "To be fully understood and have a strong effect."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'AI' mean?",
+   "options": [
+    "Artificial intelligence; computer systems performing human-like tasks.",
+    "A very unhappy and difficult existence.",
+    "To become healthy, active, or interesting again.",
+    "To bring new energy or ideas to something."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'have the time of your life' mean?",
+   "options": [
+    "A computer designed for use on a desk.",
+    "To bring new energy or ideas to something.",
+    "(Of a property) rented with furniture included.",
+    "To enjoy oneself immensely."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'get a new lease of life' mean?",
+   "options": [
+    "(Of a property) rented with furniture included.",
+    "To become healthy, active, or interesting again.",
+    "Artificial intelligence; computer systems performing human-like tasks.",
+    "To enjoy oneself immensely."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'high-rise (flat)' mean?",
+   "options": [
+    "To become healthy, active, or interesting again.",
+    "To be fully understood and have a strong effect.",
+    "A tall building with many floors.",
+    "(Of a property) rented with furniture included."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'breathe new life into' mean?",
+   "options": [
+    "To become healthy, active, or interesting again.",
+    "A tall building with many floors.",
+    "A computer designed for use on a desk.",
+    "To bring new energy or ideas to something."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'furnished' mean?",
+   "options": [
+    "An unpleasant fact about oneself that is true.",
+    "To become healthy, active, or interesting again.",
+    "To be fully understood and have a strong effect.",
+    "(Of a property) rented with furniture included."
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Noun Modifiers and Compound Nouns",
+  "explanation": "In English, one noun can describe another: a **bus** stop, a **shoe** shop, a **coffee** cup. The first noun works like an adjective, and the **second** noun is the main one — a **high-rise flat** is a kind of flat, a **coffee cup** a kind of cup.\n\nThe first noun is usually **singular**: a **toothbrush** (never *teethbrush*), a **taxi** driver, a **book** club. A few are plural by tradition: a **sports** car, a **clothes** shop, a **savings** account.\n\nWhen a **number + noun** comes **before** another noun, use a hyphen and drop the plural: a **ten-minute** walk, a **five-year-old** child, a **five-star** hotel. Compare *The walk takes ten **minutes*** — with no noun after it, the plural returns.\n\nChoose between **noun + noun**, **of**, and **'s** by meaning. **Noun + noun** names a type, purpose, or material: a **glass door** in a furnished flat is a door made of glass. **Of** names contents or a part: a **cup of coffee** is a cup with coffee in it. **'s** shows possession by a person or animal: **my sister's** car.\n\nIn speech, compound nouns usually take the **stress on the first part**: **BUS** stop, **TOOTH**brush, **FOOT**ball match. Getting that stress right really makes your English **hit home** with native listeners.",
+  "examples": [
+   "*Where's the nearest **bus stop**?* (two words)",
+   "*Put the plates in the **dishwasher**.* (one word)",
+   "*It's a **ten-minute walk** from here.* (number + noun)",
+   "*They have a **five-year-old** son.* (age before a noun)",
+   "*He drives a **sports car**.* (plural first noun)",
+   "*Could I have a **glass of water**?* (container + contents)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with a number + noun: The walk from the high-rise to the station takes ten minutes.",
+    "a": "It's a ten-minute walk from the high-rise to the station."
+   },
+   {
+    "q": "Rewrite as a compound noun: a driver of a taxi",
+    "a": "a taxi driver"
+   },
+   {
+    "q": "Rewrite using 'of': a glass with water in it",
+    "a": "a glass of water"
+   },
+   {
+    "q": "Rewrite as a compound noun: an account for savings",
+    "a": "a savings account"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "It's a ___ walk from here to the station.",
+    "options": [
+     "ten minutes",
+     "ten-minutes",
+     "ten-minute",
+     "ten minute's"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "My daughter is a ___ girl.",
+    "options": [
+     "five-years-old",
+     "five-year-old",
+     "five years old",
+     "five-year-olds"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Where's the nearest ___?",
+    "options": [
+     "stop of bus",
+     "buses stop",
+     "bus's stop",
+     "bus stop"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Put the dirty plates in the ___.",
+    "options": [
+     "dishwasher",
+     "dishes washer",
+     "dish's washer",
+     "washer of dishes"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "She works in a ___.",
+    "options": [
+     "shoes shop",
+     "shoe's shop",
+     "shop of shoes",
+     "shoe shop"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "He drives a red ___.",
+    "options": [
+     "sport car",
+     "sports car",
+     "sport's car",
+     "car of sports"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "The company has a ___ budget for next year.",
+    "options": [
+     "million-dollars",
+     "millions-dollar",
+     "million-dollar",
+     "million dollar's"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "We stayed in a ___ hotel.",
+    "options": [
+     "five-stars",
+     "five star's",
+     "fives-star",
+     "five-star"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "The ___ was cancelled because of the snow.",
+    "options": [
+     "football's match",
+     "match of football",
+     "footballs match",
+     "football match"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "We had a long ___ about the project.",
+    "options": [
+     "teams meeting",
+     "team meeting",
+     "team's meeting",
+     "meeting of team"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}
