@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "leapfrog-magic-adventures-microscope",
+      "name_fa": "میکروسکوپ جادویی لیپ‌فراگ",
+      "name_en": "LeapFrog Magic Adventures Microscope",
+      "price_cad": 59.97,
+      "regular_cad": 79.99,
+      "discount_pct": 25,
+      "added_fa": "جمعه، ۲۳ اکتبر ۲۰۲۶",
+      "image": "img/leapfrog-magic-adventures-microscope.jpg",
+      "url": "https://www.amazon.ca/dp/B09MW25SG9?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "میکروسکوپ واقعی آموزشی با بزرگ‌نمایی ۲۰۰ برابر و اسلایدهای هوشمند بی‌بی‌سی"
+    },
+    {
+      "id": "my-arcade-space-invaders-pocket-player",
+      "name_fa": "کنسول دستی اسپیس اینویدرز",
+      "name_en": "My Arcade Space Invaders Pocket Player Pro",
+      "price_cad": 29.97,
+      "regular_cad": 54.99,
+      "discount_pct": 45,
+      "added_fa": "جمعه، ۲۳ اکتبر ۲۰۲۶",
+      "image": "img/my-arcade-space-invaders-pocket-player.jpg",
+      "url": "https://www.amazon.ca/dp/B0BT49M6Y1?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "کنسول دستی رسمی با ۱۰۰ بازی کلاسیک آتاری؛ هدیهٔ عالی برای نوستالژی‌بازها"
+    },
+    {
+      "id": "roku-streaming-stick-4k",
+      "name_fa": "استیک استریمینگ روکو ۴کی",
+      "name_en": "Roku Streaming Stick 4K",
+      "price_cad": 49.98,
+      "regular_cad": 69.99,
+      "discount_pct": 29,
+      "added_fa": "جمعه، ۲۳ اکتبر ۲۰۲۶",
+      "image": "img/roku-streaming-stick-4k.jpg",
+      "url": "https://www.amazon.ca/dp/B09QMRNL86?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "استیک ۴کی با دالبی ویژن و ریموت صوتی؛ ارزان‌ترین راه برای هوشمند کردن تلویزیون"
+    },
+    {
+      "id": "nespresso-vertuo-next",
+      "name_fa": "قهوه‌ساز نسپرسو ورتو نکست",
+      "name_en": "Nespresso Vertuo Next Coffee & Espresso Machine",
+      "price_cad": 115.0,
+      "regular_cad": 249.99,
+      "discount_pct": 54,
+      "added_fa": "جمعه، ۲۳ اکتبر ۲۰۲۶",
+      "image": "img/nespresso-vertuo-next.jpg",
+      "url": "https://www.amazon.ca/dp/B085SBTSBD?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "قهوه‌ساز کپسولی با فناوری چرخش سریع؛ پنج سایز نوشیدنی با کف غلیظ طبیعی"
+    },
+    {
       "id": "nikon-prostaff-p3-8x42",
       "name_fa": "دوربین دوچشمی نیکون پرواستف",
       "name_en": "Nikon Prostaff P3 8x42 Binoculars",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "لیوان ۴۰ اونسی دوجداره با دسته و نی؛ ساعت‌ها نوشیدنی رو سرد یا گرم نگه می‌داره."
-    },
-    {
-      "id": "pwperry-tire-inflator-150psi",
-      "name_fa": "پمپ باد شارژی خودرو",
-      "name_en": "Pwperry 150PSI Portable Tire Inflator",
-      "price_cad": 24.99,
-      "regular_cad": 49.99,
-      "discount_pct": 50,
-      "added_fa": "چهارشنبه، ۲۱ اکتبر ۲۰۲۶",
-      "image": "img/pwperry-tire-inflator-150psi.jpg",
-      "url": "https://www.amazon.ca/dp/B0FFN4N32Q?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "با کد 4D7XY96U نصف قیمت می‌شود؛ نمایشگر دیجیتال دارد و برای لاستیک ماشین، دوچرخه و توپ کار می‌کند."
-    },
-    {
-      "id": "shark-flexstyle-hd430",
-      "name_fa": "ست حالت‌دهنده مو شارک فلکس‌استایل",
-      "name_en": "Shark FlexStyle HD430 Air Styling & Drying System",
-      "price_cad": 237.49,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "چهارشنبه، ۲۱ اکتبر ۲۰۲۶",
-      "image": "img/shark-flexstyle-hd430.jpg",
-      "url": "https://www.amazon.ca/dp/B0B89P16MC?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "خشک‌کن و حالت‌دهنده چندکاره بدون آسیب حرارت؛ جایگزین چند ابزار آرایشی."
-    },
-    {
-      "id": "philips-sonicare-diamondclean-9000",
-      "name_fa": "مسواک برقی فیلیپس سانی‌کِر دایموندکلین ۹۰۰۰",
-      "name_en": "Philips Sonicare DiamondClean 9000 Rechargeable Electric Toothbrush",
-      "price_cad": 124.95,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "چهارشنبه، ۲۱ اکتبر ۲۰۲۶",
-      "image": "img/philips-sonicare-diamondclean-9000.jpg",
-      "url": "https://www.amazon.ca/dp/B0B5VQQW6R?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "سفیدکنندگی حرفه‌ای با تکنولوژی سونیک، سنسور فشار لثه و اپ هوشمند با گزارش پیشرفت."
-    },
-    {
-      "id": "jbl-tune-670nc",
-      "name_fa": "هدفون روگوشی جی‌بی‌ال تیون ۶۷۰ ان‌سی",
-      "name_en": "JBL Tune 670NC Adaptive Noise Cancelling On-Ear Headphones",
-      "price_cad": 49.98,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "چهارشنبه، ۲۱ اکتبر ۲۰۲۶",
-      "image": "img/jbl-tune-670nc.jpg",
-      "url": "https://www.amazon.ca/dp/B0CT9SBWC9?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "نسخه سبک و تاشو با نویز کنسلینگ تطبیقی و باتری ۷۰ ساعته؛ بهترین گزینه زیر ۵۰ دلار."
     }
   ],
-  "updated_fa": "پنجشنبه ۳۰ مهر"
+  "updated_fa": "جمعه ۱ آبان"
 }
