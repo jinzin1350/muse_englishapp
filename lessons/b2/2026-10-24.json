@@ -1,0 +1,331 @@
+{
+ "date": "2026-10-24",
+ "theme": "health & body",
+ "level": "b2",
+ "cefr": "B2",
+ "words": [
+  {
+   "word": "ache",
+   "pos": "verb",
+   "meaning": "to feel a continuous, dull pain",
+   "example": "My back aches after working all day.",
+   "pronunciation": "AYK",
+   "persian": "درد کردن",
+   "photo": "media/b2/2026-10-24/photos/ache.jpg",
+   "word_audio": "media/b2/2026-10-24/word-audio/ache.mp3"
+  },
+  {
+   "word": "advance",
+   "pos": "verb",
+   "meaning": "To make progress or move forward.",
+   "example": "Medical science continues to advance rapidly.",
+   "pronunciation": "ud-VAHNS",
+   "persian": "پیشرفت کردن، جلو رفتن",
+   "photo": "media/b2/2026-10-24/photos/advance.jpg",
+   "word_audio": "media/b2/2026-10-24/word-audio/advance.mp3"
+  },
+  {
+   "word": "ageing",
+   "pos": "adjective",
+   "meaning": "becoming older",
+   "example": "Ageing skin needs special care.",
+   "pronunciation": "AY-jing",
+   "persian": "پیر شدن، سالخورده",
+   "photo": "media/b2/2026-10-24/photos/ageing.jpg",
+   "word_audio": "media/b2/2026-10-24/word-audio/ageing.mp3"
+  },
+  {
+   "word": "ankle",
+   "pos": "noun",
+   "meaning": "The joint connecting your foot and leg.",
+   "example": "I hurt my ankle playing football.",
+   "pronunciation": "ANG-kul",
+   "persian": "مچ پا",
+   "photo": "media/b2/2026-10-24/photos/ankle.jpg",
+   "word_audio": "media/b2/2026-10-24/word-audio/ankle.mp3"
+  },
+  {
+   "word": "artificial hip",
+   "pos": "noun",
+   "meaning": "A man-made replacement for a damaged hip joint.",
+   "example": "She had an operation for an artificial hip.",
+   "pronunciation": "ar-tuh-FISH-ul HIP",
+   "persian": "مفصل ران مصنوعی",
+   "photo": "media/b2/2026-10-24/photos/artificial hip.jpg",
+   "word_audio": "media/b2/2026-10-24/word-audio/artificial hip.mp3"
+  },
+  {
+   "word": "automatically",
+   "pos": "adverb",
+   "meaning": "Without human control or thought.",
+   "example": "The door opens automatically when you get close.",
+   "pronunciation": "aw-tuh-MAT-ik-lee",
+   "persian": "به طور خودکار",
+   "photo": "media/b2/2026-10-24/photos/automatically.jpg",
+   "word_audio": "media/b2/2026-10-24/word-audio/automatically.mp3"
+  },
+  {
+   "word": "backache",
+   "pos": "noun",
+   "meaning": "A pain in your back.",
+   "example": "I have a bad backache from sitting all day.",
+   "pronunciation": "BAK-ayk",
+   "persian": "کمردرد",
+   "photo": "media/b2/2026-10-24/photos/backache.jpg",
+   "word_audio": "media/b2/2026-10-24/word-audio/backache.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b2/2026-10-24/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Your Body, Your Health",
+  "audio": "media/b2/2026-10-24/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b2/2026-10-24/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Healthy Week",
+  "audio": "media/b2/2026-10-24/shadowing.mp3",
+  "transcript": "media/b2/2026-10-24/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b2/2026-10-24/shadowing-sentences/001.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/002.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/003.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/004.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/005.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/006.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/007.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/008.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/009.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/010.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/011.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/012.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/013.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/014.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/015.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/016.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/017.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/018.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/019.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/020.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/021.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/022.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/023.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/024.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/025.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/026.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/027.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/028.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/029.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/030.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/031.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/032.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/033.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/034.mp3",
+   "media/b2/2026-10-24/shadowing-sentences/035.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'ache' mean?",
+   "options": [
+    "A pain in your back.",
+    "to feel a continuous, dull pain",
+    "A man-made replacement for a damaged hip joint.",
+    "To make progress or move forward."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'advance' mean?",
+   "options": [
+    "The joint connecting your foot and leg.",
+    "A pain in your back.",
+    "A man-made replacement for a damaged hip joint.",
+    "To make progress or move forward."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'ageing' mean?",
+   "options": [
+    "Without human control or thought.",
+    "To make progress or move forward.",
+    "A pain in your back.",
+    "becoming older"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'ankle' mean?",
+   "options": [
+    "Without human control or thought.",
+    "to feel a continuous, dull pain",
+    "The joint connecting your foot and leg.",
+    "becoming older"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'artificial hip' mean?",
+   "options": [
+    "A pain in your back.",
+    "becoming older",
+    "A man-made replacement for a damaged hip joint.",
+    "to feel a continuous, dull pain"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'automatically' mean?",
+   "options": [
+    "A man-made replacement for a damaged hip joint.",
+    "Without human control or thought.",
+    "To make progress or move forward.",
+    "The joint connecting your foot and leg."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'backache' mean?",
+   "options": [
+    "A man-made replacement for a damaged hip joint.",
+    "A pain in your back.",
+    "Without human control or thought.",
+    "becoming older"
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "examples": [
+   "*I**'ve been waiting** for the bus for twenty minutes.* (still waiting)",
+   "*It**'s been raining** all day.* (all day up to now)",
+   "*How long **have** you **been learning** to drive?* (how long)",
+   "*She's tired because she**'s been working** late every night.* (repeated activity)",
+   "*We**'ve been looking** for a new flat since January.* (since + a starting point)",
+   "*He **hasn't been feeling** well recently.* (negative)"
+  ],
+  "explanation": "We use the **present perfect continuous** for an activity that started in the past and is **still continuing** now.\n\nWe also use it for an activity that has **just stopped** when we can see the result now.\n\nForm it with **have** or **has** + **been** + a verb ending in -ing. For example, **have been waiting**.\n\nUse **for** for a period of time and **since** for a starting point. Use **how long** to ask about time.\n\nUse the continuous form for the activity itself. For a number or a finished result, use the simple form.\n\nDo not use state verbs like **know** in the continuous form. Say **have known**, not have been knowing.",
+  "practice": [
+   {
+    "a": "My back has been aching since this morning.",
+    "q": "My back hurts. It started this morning and it still hurts now. Rewrite with the present perfect continuous."
+   },
+   {
+    "a": "She has been looking after her ageing skin for years.",
+    "q": "She looks after her skin every day. She started years ago. Rewrite with the present perfect continuous."
+   },
+   {
+    "a": "He has been walking to work since last month.",
+    "q": "He walks to work every day. He started last month. Rewrite with the present perfect continuous."
+   },
+   {
+    "a": "I have been sitting all day, and now I have a backache.",
+    "q": "I sit at my desk all day. My back hurts now. Rewrite with the present perfect continuous."
+   }
+  ],
+  "quiz": [
+   {
+    "answer": 2,
+    "options": [
+     "'m waiting",
+     "'ve been waited",
+     "'ve been waiting",
+     "'ve been wait"
+    ],
+    "question": "I ___ for you for an hour!"
+   },
+   {
+    "answer": 1,
+    "options": [
+     "are",
+     "have",
+     "do",
+     "did"
+    ],
+    "question": "How long ___ you been learning English?"
+   },
+   {
+    "answer": 3,
+    "options": [
+     "are you been",
+     "did you been",
+     "have you",
+     "have you been"
+    ],
+    "question": "Your hands are dirty. What ___ doing?"
+   },
+   {
+    "answer": 0,
+    "options": [
+     "has been working",
+     "have been working",
+     "has been work",
+     "is working"
+    ],
+    "question": "She ___ in this company since 2018."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "'ve been knowing",
+     "know",
+     "'ve known",
+     "'m knowing"
+    ],
+    "question": "I ___ him since we were children."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "'s raining since",
+     "'s been raining",
+     "rains",
+     "'s been rain"
+    ],
+    "question": "It ___ all day. The streets are wet."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "'ve been looking",
+     "are looking",
+     "look",
+     "'ve been look"
+    ],
+    "question": "We ___ for a new flat for months, but we haven't found one yet."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "haven't been feeling",
+     "isn't feeling since",
+     "hasn't been feeling",
+     "hasn't been feel"
+    ],
+    "question": "He ___ well recently."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "'m been running",
+     "'ve been running",
+     "'ve been ran",
+     "run"
+    ],
+    "question": "Why are you out of breath? – I ___."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "'ve been study",
+     "'ve been studying",
+     "'m been studying",
+     "have studying"
+    ],
+    "question": "I'm so tired. I ___ all day."
+   }
+  ],
+  "title": "Present Perfect Continuous"
+ }
+}
