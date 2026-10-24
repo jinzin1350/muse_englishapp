@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "waterpik-cordless-pearl",
+      "name_fa": "واترفلوسر شارژی واترپیک کردلس پرل",
+      "name_en": "Waterpik Cordless Pearl Water Flosser",
+      "price_cad": 69.99,
+      "regular_cad": 89.99,
+      "discount_pct": 22,
+      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
+      "image": "img/waterpik-cordless-pearl.jpg",
+      "url": "https://www.amazon.ca/dp/B09C2QZQFQ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "۴ سری همراه؛ قابل استفاده در حمام و مناسب بریس و ایمپلنت"
+    },
+    {
+      "id": "thermomaven-g2-bluetooth-thermometer",
+      "name_fa": "دماسنج بلوتوثی گوشت ترموماون جی۲",
+      "name_en": "ThermoMaven G2 Bluetooth Meat Thermometer",
+      "price_cad": 79.99,
+      "regular_cad": 159.99,
+      "discount_pct": 50,
+      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
+      "image": "img/thermomaven-g2-bluetooth-thermometer.jpg",
+      "url": "https://www.amazon.ca/dp/B0DFW43B44?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "دو پروب بی‌سیم با دقت تاییدشده؛ برای کباب، فر و باربیکیو"
+    },
+    {
       "id": "dyson-v15-detect-plus",
       "name_fa": "جاروبرقی شارژی دایسون وی۱۵ دیتکت پلاس",
       "name_en": "Dyson V15 Detect Plus Cordless Vacuum",
@@ -83,34 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "سرخ‌کن بزرگ خانوادگی با سبد ۸ لیتری؛ غذای ترد با روغن کمتر."
-    },
-    {
-      "id": "instant-pot-duo-6qt",
-      "name_fa": "زودپز چندکاره اینستنت پات دوو ۶ لیتر",
-      "name_en": "Instant Pot Duo 7-in-1 Electric Pressure Cooker, 6 Quart",
-      "price_cad": 99.99,
-      "regular_cad": 153.7,
-      "discount_pct": 35,
-      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
-      "image": "img/instant-pot-duo-6qt.jpg",
-      "url": "https://www.amazon.ca/dp/B00FLYWNYQ?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "هفت دستگاه در یکی؛ غذا تا ۷۰٪ سریع‌تر آماده می‌شود."
-    },
-    {
-      "id": "cuisinart-purelyceramic-12pc-sapphire",
-      "name_fa": "ست قابلمه و ماهیتابه سرامیکی کویزینارت ۱۲ پارچه",
-      "name_en": "Cuisinart PURELYCERAMIC 12-Piece Pots and Pans Set, Sapphire",
-      "price_cad": 140.9,
-      "regular_cad": 251.61,
-      "discount_pct": 44,
-      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
-      "image": "img/cuisinart-purelyceramic-12pc-sapphire.jpg",
-      "url": "https://www.amazon.ca/dp/B0C7HFH8QB?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "ست کامل سرامیکی بدون چسبندگی؛ برای آشپزخانه‌ای که هر روز در آن آشپزی می‌شود."
     }
   ],
   "updated_fa": "شنبه ۲ آبان"
