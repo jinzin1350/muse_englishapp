@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "yes4all-wall-mounted-rack",
+      "name_fa": "استند دیواری وزنه و هالتر یس‌۴‌آل",
+      "name_en": "Yes4All Wall-Mounted Weight Plate Barbell Rack",
+      "price_cad": 128.08,
+      "regular_cad": 246.97,
+      "discount_pct": 48,
+      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
+      "image": "img/yes4all-wall-mounted-rack.jpg",
+      "url": "https://www.amazon.ca/dp/B0B6V2FT59?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "نظم‌دهندهٔ دیواری وزنه‌ها و هالتر برای باشگاه خونگی"
+    },
+    {
+      "id": "brother-work-smart-1360",
+      "name_fa": "پرینتر وایرلس رنگی برادر ورک‌اسمارت ۱۳۶۰",
+      "name_en": "Brother Work Smart 1360 Wireless Color Printer",
+      "price_cad": 89.99,
+      "regular_cad": 143.66,
+      "discount_pct": 37,
+      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
+      "image": "img/brother-work-smart-1360.jpg",
+      "url": "https://www.amazon.ca/dp/B0FGC43YCL?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "چاپ، کپی، اسکن وایرلس با چاپ دوروی خودکار"
+    },
+    {
+      "id": "overmont-ultralight-camping-chair",
+      "name_fa": "صندلی کمپینگ اولترالایت اورمونت",
+      "name_en": "Overmont Ultralight Camping Chair 2.7 lb",
+      "price_cad": 60.7,
+      "regular_cad": 81.69,
+      "discount_pct": 26,
+      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
+      "image": "img/overmont-ultralight-camping-chair.jpg",
+      "url": "https://www.amazon.ca/dp/B0DXV21H7Y?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "فقط ۲.۷ پوند؛ جمع‌شونده توی کیف کوچیک برای کمپینگ و سفر"
+    },
+    {
+      "id": "evenflo-revolve360-slim",
+      "name_fa": "صندلی ماشین چرخشی ایون‌فلو روالو ۳۶۰ اسلیم",
+      "name_en": "Evenflo Revolve360 Slim Rotational Car Seat",
+      "price_cad": 399.97,
+      "regular_cad": 632.54,
+      "discount_pct": 37,
+      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
+      "image": "img/evenflo-revolve360-slim.jpg",
+      "url": "https://www.amazon.ca/dp/B08398Q7HL?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "صندلی ماشین چرخشی با چرخش ۳۶۰ درجه‌ای؛ از نوزادی تا پنج‌سالگی"
+    },
+    {
       "id": "dreo-4l-humidifier",
       "name_fa": "بخور سرد دریو ۴ لیتری",
       "name_en": "DREO 4L Cool Mist Humidifier",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "کنسول دستی رسمی با ۱۰۰ بازی کلاسیک آتاری؛ هدیهٔ عالی برای نوستالژی‌بازها"
-    },
-    {
-      "id": "roku-streaming-stick-4k",
-      "name_fa": "استیک استریمینگ روکو ۴کی",
-      "name_en": "Roku Streaming Stick 4K",
-      "price_cad": 49.98,
-      "regular_cad": 69.99,
-      "discount_pct": 29,
-      "added_fa": "جمعه، ۲۳ اکتبر ۲۰۲۶",
-      "image": "img/roku-streaming-stick-4k.jpg",
-      "url": "https://www.amazon.ca/dp/B09QMRNL86?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "استیک ۴کی با دالبی ویژن و ریموت صوتی؛ ارزان‌ترین راه برای هوشمند کردن تلویزیون"
-    },
-    {
-      "id": "nespresso-vertuo-next",
-      "name_fa": "قهوه‌ساز نسپرسو ورتو نکست",
-      "name_en": "Nespresso Vertuo Next Coffee & Espresso Machine",
-      "price_cad": 115.0,
-      "regular_cad": 249.99,
-      "discount_pct": 54,
-      "added_fa": "جمعه، ۲۳ اکتبر ۲۰۲۶",
-      "image": "img/nespresso-vertuo-next.jpg",
-      "url": "https://www.amazon.ca/dp/B085SBTSBD?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "قهوه‌ساز کپسولی با فناوری چرخش سریع؛ پنج سایز نوشیدنی با کف غلیظ طبیعی"
-    },
-    {
-      "id": "nikon-prostaff-p3-8x42",
-      "name_fa": "دوربین دوچشمی نیکون پرواستف",
-      "name_en": "Nikon Prostaff P3 8x42 Binoculars",
-      "price_cad": 117.98,
-      "regular_cad": 179.0,
-      "discount_pct": 34,
-      "added_fa": "پنجشنبه، ۲۲ اکتبر ۲۰۲۶",
-      "image": "img/nikon-prostaff-p3-8x42.jpg",
-      "url": "https://www.amazon.ca/dp/B0B3JPP9T8?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "دوربین ۸×۴۲ ضدآب با لنزهای چندلایه؛ عالی برای طبیعت‌گردی پاییزی."
-    },
-    {
-      "id": "dewalt-dwht66719-screwdriver",
-      "name_fa": "پیچ‌گوشتی شارژی دیوالت",
-      "name_en": "DeWALT DWHT66719 4V Cordless Screwdriver 15-Piece Set",
-      "price_cad": 78.0,
-      "regular_cad": 124.0,
-      "discount_pct": 37,
-      "added_fa": "پنجشنبه، ۲۲ اکتبر ۲۰۲۶",
-      "image": "img/dewalt-dwht66719-screwdriver.jpg",
-      "url": "https://www.amazon.ca/dp/B0DJBQ9ZBF?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پیچ‌گوشتی شارژی ۴ ولت با کنترل فلکس‌درایو؛ بدون دکمه، فقط با چرخش مچ."
     }
   ],
-  "updated_fa": "جمعه ۱ آبان"
+  "updated_fa": "شنبه ۲ آبان"
 }
