@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "falan-mule-leather-belt",
+      "name_fa": "کمربند چرم مردانه فالان مول",
+      "name_en": "FALAN MULE Men's Leather Dress Belt",
+      "price_cad": 9.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "یکشنبه، ۲۵ اکتبر ۲۰۲۶",
+      "image": "img/falan-mule-leather-belt.jpg",
+      "url": "https://www.amazon.ca/dp/B0CYKXF3LG?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "کمربند چرم کلاسیک با سگک محکم؛ با کد XVMPSC5P (درصد تخفیف تأییدنشده، اعلام نشده)"
+    },
+    {
+      "id": "yu7-max-cordless-vacuum",
+      "name_fa": "جاروی شارژی یو۷ مکس",
+      "name_en": "YU7 MAX Cordless Vacuum Cleaner 600W",
+      "price_cad": 89.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "یکشنبه، ۲۵ اکتبر ۲۰۲۶",
+      "image": "img/yu7-max-cordless-vacuum.jpg",
+      "url": "https://www.amazon.ca/dp/B0GDXPZZGC?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "موتور ۶۰۰ واتی و مکش ۵۵ کیلوپاسکال؛ با کد FE3TESYS (درصد تخفیف تأییدنشده، اعلام نشده)"
+    },
+    {
+      "id": "liwan-solar-cameras-2pack",
+      "name_fa": "دوربین امنیتی خورشیدی لیوان، پک دوتایی",
+      "name_en": "LIWAN Solar Security Cameras Wireless Outdoor 2-Pack",
+      "price_cad": 70.39,
+      "regular_cad": 119.99,
+      "discount_pct": 41,
+      "added_fa": "یکشنبه، ۲۵ اکتبر ۲۰۲۶",
+      "image": "img/liwan-solar-cameras-2pack.jpg",
+      "url": "https://www.amazon.ca/dp/B0DMP3B363?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "دو دوربین خورشیدی ۲کی با چرخش ۳۶۰ درجه؛ با کوپن و کد O3OFAP3V"
+    },
+    {
+      "id": "anker-laptop-charger-pro-100w",
+      "name_fa": "شارژر ۱۰۰ واتی انکر با نمایشگر هوشمند",
+      "name_en": "Anker Laptop Charger Pro 100W GaN Charger with Smart Display",
+      "price_cad": 51.49,
+      "regular_cad": 79.99,
+      "discount_pct": 36,
+      "added_fa": "یکشنبه، ۲۵ اکتبر ۲۰۲۶",
+      "image": "img/anker-laptop-charger-pro-100w.jpg",
+      "url": "https://www.amazon.ca/dp/B0H87DRN2H?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "شارژر ۱۰۰ واتی با نمایشگر هوشمند و حالت مراقبت باتری؛ با کوپن و حساب بیزینس آمازون"
+    },
+    {
       "id": "waterpik-cordless-pearl",
       "name_fa": "واترفلوسر شارژی واترپیک کردلس پرل",
       "name_en": "Waterpik Cordless Pearl Water Flosser",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "صفحه کار اضافه با کابینت و چرخ؛ راه‌حل کاندوهای کوچک برای آشپزخانه شلوغ."
-    },
-    {
-      "id": "kitchenaid-artisan-ksm195psbk",
-      "name_fa": "همزن ایستاده کیچن‌اید آرتیزان با ست لوازم",
-      "name_en": "KitchenAid Artisan Series 5-Quart Tilt-Head Stand Mixer with Premium Accessory Pack, Black, KSM195PSBK",
-      "price_cad": 389.99,
-      "regular_cad": 544.99,
-      "discount_pct": 28,
-      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
-      "image": "img/kitchenaid-artisan-ksm195psbk.jpg",
-      "url": "https://www.amazon.ca/dp/B0BNLXS4DS?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "همزن افسانه‌ای آشپزخانه با سری‌های اضافه؛ برای نان، کیک و شیرینی خانگی."
-    },
-    {
-      "id": "ninja-possiblecooker-pro-mc1001c",
-      "name_fa": "مولتی‌کوکر نینجا فودی پاسیبل‌کوکر پرو ۸٫۵ لیتر",
-      "name_en": "Ninja MC1001C Foodi PossibleCooker PRO 8.5-Quart Multi-Cooker, Sea Salt Gray",
-      "price_cad": 139.99,
-      "regular_cad": 199.99,
-      "discount_pct": 30,
-      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
-      "image": "img/ninja-possiblecooker-pro-mc1001c.jpg",
-      "url": "https://www.amazon.ca/dp/B0BDSLFXQ1?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "آرام‌پز، بخارپز و فر در یک دستگاه؛ از روی اجاق تا سر سفره."
-    },
-    {
-      "id": "lifewit-storage-bags-6pack-35l",
-      "name_fa": "کیسه‌های نگهداری لباس لایف‌ویت ۶ عددی ۳۵ لیتر",
-      "name_en": "Lifewit Clothes Storage Bags, 6-Pack, 35L, Grey",
-      "price_cad": 23.99,
-      "regular_cad": 34.99,
-      "discount_pct": 31,
-      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
-      "image": "img/lifewit-storage-bags-6pack-35l.jpg",
-      "url": "https://www.amazon.ca/dp/B094Y5WZY9?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "نظم‌دهی کمد و زیر تخت؛ لباس‌های فصلی مرتب و در دسترس می‌مانند."
-    },
-    {
-      "id": "cuisinart-compactmax-air-210c",
-      "name_fa": "سرخ‌کن بدون روغن کویزینارت کامپکت‌مکس ۸ لیتر",
-      "name_en": "Cuisinart CompactMax 8-Qt Basket Air Fryer, AIR-210C",
-      "price_cad": 104.99,
-      "regular_cad": 177.95,
-      "discount_pct": 41,
-      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
-      "image": "img/cuisinart-compactmax-air-210c.jpg",
-      "url": "https://www.amazon.ca/dp/B0FNYBG8F7?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "سرخ‌کن بزرگ خانوادگی با سبد ۸ لیتری؛ غذای ترد با روغن کمتر."
     }
   ],
-  "updated_fa": "شنبه ۲ آبان"
+  "updated_fa": "یکشنبه ۳ آبان"
 }
