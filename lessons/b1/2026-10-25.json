@@ -1,0 +1,331 @@
+{
+ "date": "2026-10-25",
+ "theme": "technology",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "abbreviation",
+   "pos": "noun",
+   "meaning": "a short form of a word or phrase",
+   "example": "'Dr.' is an abbreviation for 'Doctor'.",
+   "pronunciation": "uh-BREE-vee-AY-shun",
+   "persian": "مخفف",
+   "photo": "media/b1/2026-10-25/photos/abbreviation.jpg",
+   "word_audio": "media/b1/2026-10-25/word-audio/abbreviation.mp3"
+  },
+  {
+   "word": "access (to sth)",
+   "pos": "noun",
+   "meaning": "the ability to enter or use something",
+   "example": "Do you have internet access at home?",
+   "pronunciation": "AK-ses",
+   "persian": "دسترسی (به چیزی)",
+   "photo": "media/b1/2026-10-25/photos/access-to-sth.jpg",
+   "word_audio": "media/b1/2026-10-25/word-audio/access-to-sth.mp3"
+  },
+  {
+   "word": "answerphone",
+   "pos": "noun",
+   "meaning": "A machine that records phone messages.",
+   "example": "Leave a message on my answerphone.",
+   "pronunciation": "AHN-suh-fohn",
+   "persian": "پیغام‌گیر تلفن",
+   "photo": "media/b1/2026-10-25/photos/answerphone.jpg",
+   "word_audio": "media/b1/2026-10-25/word-audio/answerphone.mp3"
+  },
+  {
+   "word": "anti-virus software",
+   "pos": "noun",
+   "meaning": "Program to protect computers from harmful viruses.",
+   "example": "Install anti-virus software on your computer.",
+   "pronunciation": "AN-tee-VY-rus SOFT-wair",
+   "persian": "نرم‌افزار ضد ویروس",
+   "photo": "media/b1/2026-10-25/photos/anti-virus-software.jpg",
+   "word_audio": "media/b1/2026-10-25/word-audio/anti-virus-software.mp3"
+  },
+  {
+   "word": "application (computer)",
+   "pos": "noun",
+   "meaning": "A program designed for a specific task on a computer or phone.",
+   "example": "I use a new application to edit photos.",
+   "pronunciation": "AP-li-KAY-shun",
+   "persian": "برنامه کامپیوتری، اپلیکیشن",
+   "photo": "media/b1/2026-10-25/photos/application-computer.jpg",
+   "word_audio": "media/b1/2026-10-25/word-audio/application-computer.mp3"
+  },
+  {
+   "word": "at [@]",
+   "pos": "preposition",
+   "meaning": "Used in email addresses.",
+   "example": "My email is john at example dot com.",
+   "pronunciation": "at",
+   "persian": "در (ایمیل)",
+   "photo": "media/b1/2026-10-25/photos/at.jpg",
+   "word_audio": "media/b1/2026-10-25/word-audio/at.mp3"
+  },
+  {
+   "word": "attachment",
+   "pos": "noun",
+   "meaning": "A file sent with an email message.",
+   "example": "I sent the report as an attachment.",
+   "pronunciation": "uh-TACH-ment",
+   "persian": "پیوست (ایمیل)",
+   "photo": "media/b1/2026-10-25/photos/attachment.jpg",
+   "word_audio": "media/b1/2026-10-25/word-audio/attachment.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-25/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Technology at Home and at Work",
+  "audio": "media/b1/2026-10-25/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-25/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Busy Day Online",
+  "audio": "media/b1/2026-10-25/shadowing.mp3",
+  "transcript": "media/b1/2026-10-25/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-25/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/028.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/029.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/030.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/031.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/032.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/033.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/034.mp3",
+   "media/b1/2026-10-25/shadowing-sentences/035.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'abbreviation' mean?",
+   "options": [
+    "A file sent with an email message.",
+    "A machine that records phone messages.",
+    "Used in email addresses.",
+    "a short form of a word or phrase"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'access (to sth)' mean?",
+   "options": [
+    "A program designed for a specific task on a computer or phone.",
+    "A file sent with an email message.",
+    "the ability to enter or use something",
+    "Used in email addresses."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'answerphone' mean?",
+   "options": [
+    "A machine that records phone messages.",
+    "A file sent with an email message.",
+    "Program to protect computers from harmful viruses.",
+    "a short form of a word or phrase"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'anti-virus software' mean?",
+   "options": [
+    "the ability to enter or use something",
+    "A file sent with an email message.",
+    "Program to protect computers from harmful viruses.",
+    "Used in email addresses."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'application (computer)' mean?",
+   "options": [
+    "A machine that records phone messages.",
+    "Used in email addresses.",
+    "A file sent with an email message.",
+    "A program designed for a specific task on a computer or phone."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'at [@]' mean?",
+   "options": [
+    "the ability to enter or use something",
+    "Program to protect computers from harmful viruses.",
+    "a short form of a word or phrase",
+    "Used in email addresses."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'attachment' mean?",
+   "options": [
+    "A machine that records phone messages.",
+    "Program to protect computers from harmful viruses.",
+    "A file sent with an email message.",
+    "Used in email addresses."
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "Third Conditional",
+  "explanation": "We use the **third conditional** to imagine a different past. Something did not happen, and we imagine what its result would have been.\n\nThe form is **if + had + past participle** in the if clause, and **would have + past participle** in the result.\n\nUse **could have** for something that was possible in the past. Use **might have** when the result was possible but not certain.\n\nYou can put the if clause first or second. Use a comma only when the if clause comes first.\n\nNever write **would of**. The short form **would've** means **would have**, and **'d** after if means **had**.\n\nTry it with today's words: if Sara had installed anti-virus software, her computer would have stayed safe.",
+  "examples": [
+   "*If I **had known** about the party, I **would have come**.* (I did not know, so I did not come)",
+   "*If it **hadn't rained**, we **would have played** tennis.* (it rained, so we did not play)",
+   "*We **would have won** the game if our best player **hadn't been** injured.* (result first, no comma)",
+   "*If you **had asked** me, I **could have helped** you.* (could have = it was possible)",
+   "*If they **had booked** earlier, they **might have found** a cheaper hotel.* (might have = maybe)",
+   "*What **would** you **have done** if you **had missed** the flight?* (a question)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with the third conditional: I did not install anti-virus software, so my computer got a virus.",
+    "a": "If I had installed anti-virus software, my computer would not have got a virus."
+   },
+   {
+    "q": "Rewrite with the third conditional: She did not check the attachment, so she missed the mistake.",
+    "a": "If she had checked the attachment, she would have found the mistake."
+   },
+   {
+    "q": "Rewrite with the third conditional: He did not open the application, so he did not see the message.",
+    "a": "If he had opened the application, he would have seen the message."
+   },
+   {
+    "q": "Rewrite with the third conditional: I did not know the abbreviation, so I did not understand the email.",
+    "a": "If I had known the abbreviation, I would have understood the email."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If I ___ about the traffic, I would have taken the train.",
+    "options": [
+     "had known",
+     "would have known",
+     "have known",
+     "know"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "If you had asked me, I ___ you with your homework last night.",
+    "options": [
+     "would help",
+     "had helped",
+     "would have helped",
+     "will help"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "If she ___ the bus, she wouldn't have been late for the interview.",
+    "options": [
+     "didn't miss",
+     "hadn't missed",
+     "wouldn't have missed",
+     "doesn't miss"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "We ___ last night's match if our goalkeeper hadn't been injured.",
+    "options": [
+     "would win",
+     "won",
+     "had won",
+     "would have won"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "If I would have seen you, I would have said hello.",
+     "If I had saw you, I would have said hello.",
+     "If I had seen you, I would have said hello.",
+     "If I had seen you, I would said hello."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "If it hadn't rained on Sunday, we ___ a picnic.",
+    "options": [
+     "would have had",
+     "would have",
+     "had had",
+     "will have"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "If I'd known you were vegetarian, I ___ meat.",
+    "options": [
+     "didn't cook",
+     "wouldn't have cooked",
+     "won't cook",
+     "hadn't cooked"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "What ___ if you had lost your passport?",
+    "options": [
+     "would you had done",
+     "had you done",
+     "would you done",
+     "would you have done"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "If they had booked earlier, they ___ a cheaper flight. (maybe, not certain)",
+    "options": [
+     "might find",
+     "may find",
+     "had found",
+     "might have found"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "He would have passed the exam if he ___ harder.",
+    "options": [
+     "had studied",
+     "would have studied",
+     "has studied",
+     "studies"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}

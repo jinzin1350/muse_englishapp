@@ -1,0 +1,280 @@
+{
+  "date": "2026-10-25",
+  "theme": "telling the time",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "at the moment",
+      "pos": "phrase",
+      "meaning": "Now; right now.",
+      "example": "I am busy at the moment.",
+      "pronunciation": "at thuh MOH-ment",
+      "persian": "در حال حاضر",
+      "photo": "media/a2/2026-10-25/photos/at the moment.jpg",
+      "word_audio": "media/a2/2026-10-25/word-audio/at the moment.mp3"
+    },
+    {
+      "word": "August",
+      "pos": "noun",
+      "meaning": "The eighth month of the year.",
+      "example": "My birthday is in August.",
+      "pronunciation": "AW-gust",
+      "persian": "مرداد، اوت",
+      "photo": "media/a2/2026-10-25/photos/August.jpg",
+      "word_audio": "media/a2/2026-10-25/word-audio/August.mp3"
+    },
+    {
+      "word": "autumn",
+      "pos": "noun",
+      "meaning": "The season between summer and winter.",
+      "example": "The leaves turn red in autumn.",
+      "pronunciation": "AW-tum",
+      "persian": "پاییز",
+      "photo": "media/a2/2026-10-25/photos/autumn.jpg",
+      "word_audio": "media/a2/2026-10-25/word-audio/autumn.mp3"
+    },
+    {
+      "word": "century",
+      "pos": "noun",
+      "meaning": "A score of one hundred runs in cricket.",
+      "example": "The batsman scored a century in the match.",
+      "pronunciation": "SEN-chuh-ree",
+      "persian": "صد امتیاز (در کریکت)",
+      "photo": "media/a2/2026-10-25/photos/century.jpg",
+      "word_audio": "media/a2/2026-10-25/word-audio/century.mp3"
+    },
+    {
+      "word": "day",
+      "pos": "noun",
+      "meaning": "A period of 24 hours.",
+      "example": "There are seven days in a week.",
+      "pronunciation": "DAY",
+      "persian": "روز",
+      "photo": "media/a2/2026-10-25/photos/day.jpg",
+      "word_audio": "media/a2/2026-10-25/word-audio/day.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-25/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Time Words",
+    "audio": "media/a2/2026-10-25/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-25/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Day in August and Autumn",
+    "audio": "media/a2/2026-10-25/shadowing.mp3",
+    "transcript": "media/a2/2026-10-25/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-10-25/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/022.mp3",
+      "media/a2/2026-10-25/shadowing-sentences/023.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'at the moment' mean?",
+      "options": [
+        "The season between summer and winter.",
+        "Now; right now.",
+        "A period of 24 hours.",
+        "The eighth month of the year."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'August' mean?",
+      "options": [
+        "A score of one hundred runs in cricket.",
+        "Now; right now.",
+        "The eighth month of the year.",
+        "A period of 24 hours."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'autumn' mean?",
+      "options": [
+        "The eighth month of the year.",
+        "A period of 24 hours.",
+        "A score of one hundred runs in cricket.",
+        "The season between summer and winter."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'century' mean?",
+      "options": [
+        "A score of one hundred runs in cricket.",
+        "The season between summer and winter.",
+        "Now; right now.",
+        "The eighth month of the year."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'day' mean?",
+      "options": [
+        "Now; right now.",
+        "A score of one hundred runs in cricket.",
+        "A period of 24 hours.",
+        "The season between summer and winter."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Adverbs of Manner (slowly, well, hard)",
+    "explanation": "**Adverbs of manner** tell us **how** someone does something. She speaks **quietly**, and he drives **carefully**.\n\nAn **adjective** describes a noun, like a **careful** driver. An **adverb** describes a verb, like he drives **carefully**.\n\nMake most adverbs with **adjective + -ly**. **Quick** becomes **quickly**, and **careful** becomes **carefully**.\n\nSome adverbs are irregular. **Good** becomes **well**, **fast** stays **fast**, and **hard** stays **hard**.\n\nPut the adverb **after the verb**, or **after the object**. She speaks English **slowly**, not slowly English.\n\nAfter **be**, **look**, **feel**, **seem**, **sound**, **taste**, and **smell**, use an **adjective**. You **look happy**, and this soup **tastes delicious**.\n\nAt the moment, watch out for **hardly** and **lately**. **Hardly** means almost not, and **lately** means recently.",
+    "examples": [
+      "*Please read the instructions **carefully**.* (careful → carefully)",
+      "*The children played **happily** in the garden.* (happy → happily)",
+      "*He speaks Spanish very **well**.* (good → well)",
+      "*She works **hard** and never complains.* (hard, not hardly)",
+      "*I passed the test **easily**.* (easy → easily)",
+      "*We arrived **late** because of the traffic.* (late, not lately)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with an adverb of manner: She reads the instructions in a careful way.",
+        "a": "She reads the instructions carefully."
+      },
+      {
+        "q": "Rewrite with an adverb of manner: He speaks Spanish in a good way.",
+        "a": "He speaks Spanish very well."
+      },
+      {
+        "q": "Correct the mistake: The children played happy in the garden in autumn.",
+        "a": "The children played happily in the garden in autumn."
+      },
+      {
+        "q": "Rewrite with an adverb of manner: At the moment, she works in a hard way.",
+        "a": "At the moment, she works hard."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She speaks English very ___.",
+        "options": [
+          "good",
+          "well",
+          "goodly",
+          "best"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Read the instructions ___ before you start.",
+        "options": [
+          "careful",
+          "carefuly",
+          "care",
+          "carefully"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He runs very ___. He always wins.",
+        "options": [
+          "fast",
+          "fastly",
+          "fastest",
+          "faster"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The children played ___ in the garden.",
+        "options": [
+          "happy",
+          "happyly",
+          "happily",
+          "happiness"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I passed the test ___. It wasn't difficult at all.",
+        "options": [
+          "easy",
+          "easyly",
+          "easily",
+          "ease"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She works very ___. She's always busy.",
+        "options": [
+          "hard",
+          "hardly",
+          "hardy",
+          "harder"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You look ___ today. Did something good happen?",
+        "options": [
+          "happily",
+          "happyly",
+          "happiness",
+          "happy"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She sings ___. Everyone loves her voice.",
+        "options": [
+          "beautiful",
+          "beautifully",
+          "beauty",
+          "beautifuly"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He asked ___ for the bill.",
+        "options": [
+          "polite",
+          "politeness",
+          "politelly",
+          "politely"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "She speaks well French.",
+          "She well speaks French.",
+          "She speaks French well.",
+          "She speaks French good."
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a2/2026-10-25/grammar-en.mp3"
+  }
+}

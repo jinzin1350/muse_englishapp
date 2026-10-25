@@ -1,0 +1,327 @@
+{
+ "date": "2026-10-25",
+ "theme": "sports & fitness",
+ "level": "c1",
+ "cefr": "C1",
+ "words": [
+  {
+   "word": "BMI",
+   "pos": "noun",
+   "meaning": "Body Mass Index, a measure of body fat.",
+   "example": "Doctors use BMI to assess a person's healthy weight range.",
+   "pronunciation": "bee-em-EYE",
+   "persian": "شاخص توده بدنی",
+   "photo": "media/c1/2026-10-25/photos/BMI.jpg",
+   "word_audio": "media/c1/2026-10-25/word-audio/BMI.mp3"
+  },
+  {
+   "word": "brisk",
+   "pos": "adjective",
+   "meaning": "Quick and energetic.",
+   "example": "We took a brisk walk to warm up.",
+   "pronunciation": "BRISK",
+   "persian": "سریع و پرانرژی، تند",
+   "photo": "media/c1/2026-10-25/photos/brisk.jpg",
+   "word_audio": "media/c1/2026-10-25/word-audio/brisk.mp3"
+  },
+  {
+   "word": "burn calories",
+   "pos": "phrase",
+   "meaning": "To use energy from food through physical activity.",
+   "example": "Running is an excellent way to burn calories quickly.",
+   "pronunciation": "BURN KAL-uh-reez",
+   "persian": "کالری سوزاندن",
+   "photo": "media/c1/2026-10-25/photos/burn calories.jpg",
+   "word_audio": "media/c1/2026-10-25/word-audio/burn calories.mp3"
+  },
+  {
+   "word": "cardiovascular",
+   "pos": "adjective",
+   "meaning": "Relating to the heart and blood vessels.",
+   "example": "Regular exercise improves cardiovascular health significantly.",
+   "pronunciation": "kar-dee-oh-VAS-kyuh-ler",
+   "persian": "قلبی عروقی",
+   "photo": "media/c1/2026-10-25/photos/cardiovascular.jpg",
+   "word_audio": "media/c1/2026-10-25/word-audio/cardiovascular.mp3"
+  },
+  {
+   "word": "cholesterol-rich",
+   "pos": "adjective",
+   "meaning": "Containing a high amount of cholesterol.",
+   "example": "Avoid cholesterol-rich foods for a healthier diet.",
+   "pronunciation": "koh-LES-tuh-rol RICH",
+   "persian": "غنی از کلسترول",
+   "photo": "media/c1/2026-10-25/photos/cholesterol-rich.jpg",
+   "word_audio": "media/c1/2026-10-25/word-audio/cholesterol-rich.mp3"
+  },
+  {
+   "word": "clog",
+   "pos": "verb",
+   "meaning": "To block something, preventing movement or flow.",
+   "example": "Leaves can clog the drains during autumn storms.",
+   "pronunciation": "KLOG",
+   "persian": "مسدود کردن، گرفتگی ایجاد کردن",
+   "photo": "media/c1/2026-10-25/photos/clog.jpg",
+   "word_audio": "media/c1/2026-10-25/word-audio/clog.mp3"
+  },
+  {
+   "word": "diabetes",
+   "pos": "noun",
+   "meaning": "A medical condition affecting blood sugar levels.",
+   "example": "Regular exercise helps manage diabetes effectively.",
+   "pronunciation": "dy-uh-BEE-teez",
+   "persian": "دیابت، بیماری قند",
+   "photo": "media/c1/2026-10-25/photos/diabetes.jpg",
+   "word_audio": "media/c1/2026-10-25/word-audio/diabetes.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c1/2026-10-25/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Fitness, Food and a Healthy Heart",
+  "audio": "media/c1/2026-10-25/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-10-25/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Healthy Week with Sara",
+  "audio": "media/c1/2026-10-25/shadowing.mp3",
+  "transcript": "media/c1/2026-10-25/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c1/2026-10-25/shadowing-sentences/001.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/002.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/003.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/004.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/005.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/006.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/007.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/008.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/009.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/010.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/011.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/012.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/013.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/014.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/015.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/016.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/017.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/018.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/019.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/020.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/021.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/022.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/023.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/024.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/025.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/026.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/027.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/028.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/029.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/030.mp3",
+   "media/c1/2026-10-25/shadowing-sentences/031.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'BMI' mean?",
+   "options": [
+    "Body Mass Index, a measure of body fat.",
+    "Containing a high amount of cholesterol.",
+    "To block something, preventing movement or flow.",
+    "Quick and energetic."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'brisk' mean?",
+   "options": [
+    "Containing a high amount of cholesterol.",
+    "Relating to the heart and blood vessels.",
+    "To use energy from food through physical activity.",
+    "Quick and energetic."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'burn calories' mean?",
+   "options": [
+    "Containing a high amount of cholesterol.",
+    "To use energy from food through physical activity.",
+    "To block something, preventing movement or flow.",
+    "Quick and energetic."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'cardiovascular' mean?",
+   "options": [
+    "To use energy from food through physical activity.",
+    "A medical condition affecting blood sugar levels.",
+    "Relating to the heart and blood vessels.",
+    "Containing a high amount of cholesterol."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'cholesterol-rich' mean?",
+   "options": [
+    "A medical condition affecting blood sugar levels.",
+    "Body Mass Index, a measure of body fat.",
+    "To use energy from food through physical activity.",
+    "Containing a high amount of cholesterol."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'clog' mean?",
+   "options": [
+    "To block something, preventing movement or flow.",
+    "Relating to the heart and blood vessels.",
+    "A medical condition affecting blood sugar levels.",
+    "Quick and energetic."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'diabetes' mean?",
+   "options": [
+    "A medical condition affecting blood sugar levels.",
+    "Containing a high amount of cholesterol.",
+    "Body Mass Index, a measure of body fat.",
+    "Quick and energetic."
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "title": "Non-Defining Relative Clauses",
+  "explanation": "A **non-defining relative clause** adds extra information about someone or something we have already identified.\n\nWe put the clause between **commas**. The sentence still makes sense without it.\n\nUse **who** for people, **which** for things, **whose** for possession, and **where** for places.\n\nNever use **that** in a non-defining clause. You also cannot leave the pronoun out.\n\n**Which** can refer to a whole idea. After a quantifier, use **of whom** for people or **of which** for things.\n\nWriters use these clauses to add colour. You can describe a person, a place, or even a habit, such as a brisk walk, without starting a new sentence.",
+  "examples": [
+   "*My grandmother, **who** is 90, still swims every day.* (extra information about a person)",
+   "*The film, **which** lasted three hours, was fantastic.* (**which** for things)",
+   "*We stayed in Lisbon, **where** my cousin lives.* (**where** for places)",
+   "*Mark, **whose** wife is a chef, loves cooking too.* (**whose** for possession)",
+   "*I lost my phone, **which** was really annoying.* (**which** = the whole idea)",
+   "*I invited ten people, **most of whom** came.* (quantifier + **of whom**)"
+  ],
+  "practice": [
+   {
+    "q": "Combine into one sentence: My coach is a marathon runner. He eats no cholesterol-rich food.",
+    "a": "My coach, who eats no cholesterol-rich food, is a marathon runner."
+   },
+   {
+    "q": "Combine into one sentence: The gym is near my house. I burn calories there every day.",
+    "a": "The gym, where I burn calories every day, is near my house."
+   },
+   {
+    "q": "Combine into one sentence: My uncle has diabetes. He walks every day.",
+    "a": "My uncle, who has diabetes, walks every day."
+   },
+   {
+    "q": "Combine into one sentence: The new diet is excellent for cardiovascular health. It surprised everyone.",
+    "a": "The new diet is excellent for cardiovascular health, which surprised everyone."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "My sister, ___ lives in Dublin, is a nurse.",
+    "options": [
+     "that",
+     "who",
+     "which",
+     "whose"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Rome, ___ I spent my childhood, is my favourite city.",
+    "options": [
+     "where",
+     "which",
+     "that",
+     "who"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The Eiffel Tower, ___ was completed in 1889, is very popular.",
+    "options": [
+     "that",
+     "who",
+     "which",
+     "where"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "He missed the bus, ___ made him late for work.",
+    "options": [
+     "what",
+     "that",
+     "who",
+     "which"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "My father, that is a doctor, works hard.",
+     "My father who is a doctor, works hard.",
+     "My father, who is a doctor, works hard.",
+     "My father, is a doctor, works hard."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Our neighbour, ___ dog barks all night, has finally moved.",
+    "options": [
+     "who",
+     "whose",
+     "which",
+     "that"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "I have two brothers, both of ___ are engineers.",
+    "options": [
+     "whom",
+     "who",
+     "which",
+     "whose"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Which sentence has a non-defining relative clause?",
+    "options": [
+     "The man who called you is here.",
+     "The book that I read was great.",
+     "People who exercise live longer.",
+     "My mum, who loves gardening, grows tomatoes."
+    ],
+    "answer": 3
+   },
+   {
+    "question": "The concert, ___ started at 8, finished at midnight.",
+    "options": [
+     "who",
+     "which",
+     "that",
+     "where"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "She didn't call me back, ___ was strange.",
+    "options": [
+     "which",
+     "what",
+     "that",
+     "it"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,276 @@
+{
+  "date": "2026-10-25",
+  "theme": "telling the time",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "actually",
+      "pos": "adverb",
+      "meaning": "used to emphasize what is true or real",
+      "example": "I thought it was easy, but actually it was hard.",
+      "pronunciation": "AK-choo-uh-lee",
+      "persian": "در واقع، حقیقتاً",
+      "photo": "media/a1/2026-10-25/photos/actually.jpg",
+      "word_audio": "media/a1/2026-10-25/word-audio/actually.mp3"
+    },
+    {
+      "word": "add to basket",
+      "pos": "phrase",
+      "meaning": "To put an item you want to buy into a virtual shopping cart.",
+      "example": "Click here to add to basket.",
+      "pronunciation": "ad tuh BAS-kit",
+      "persian": "اضافه کردن به سبد خرید",
+      "photo": "media/a1/2026-10-25/photos/add to basket.jpg",
+      "word_audio": "media/a1/2026-10-25/word-audio/add to basket.mp3"
+    },
+    {
+      "word": "address",
+      "pos": "noun",
+      "meaning": "The number and street where you live.",
+      "example": "What is your home address?",
+      "pronunciation": "uh-DRES",
+      "persian": "آدرس",
+      "photo": "media/a1/2026-10-25/photos/address.jpg",
+      "word_audio": "media/a1/2026-10-25/word-audio/address.mp3"
+    },
+    {
+      "word": "Africa",
+      "pos": "proper noun",
+      "meaning": "A large continent south of Europe.",
+      "example": "Africa is a big continent.",
+      "pronunciation": "AF-ri-kuh",
+      "persian": "آفریقا",
+      "photo": "media/a1/2026-10-25/photos/Africa.jpg",
+      "word_audio": "media/a1/2026-10-25/word-audio/Africa.mp3"
+    },
+    {
+      "word": "agree",
+      "pos": "verb",
+      "meaning": "to have the same opinion",
+      "example": "Yes, I agree with you.",
+      "pronunciation": "uh-GREE",
+      "persian": "موافق بودن",
+      "photo": "media/a1/2026-10-25/photos/agree.jpg",
+      "word_audio": "media/a1/2026-10-25/word-audio/agree.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-25/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Shopping Words",
+    "audio": "media/a1/2026-10-25/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-25/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Shopping with Sara",
+    "audio": "media/a1/2026-10-25/shadowing.mp3",
+    "transcript": "media/a1/2026-10-25/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-25/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/016.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/017.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/018.mp3",
+      "media/a1/2026-10-25/shadowing-sentences/019.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'actually' mean?",
+      "options": [
+        "A large continent south of Europe.",
+        "used to emphasize what is true or real",
+        "to have the same opinion",
+        "The number and street where you live."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'add to basket' mean?",
+      "options": [
+        "To put an item you want to buy into a virtual shopping cart.",
+        "The number and street where you live.",
+        "used to emphasize what is true or real",
+        "A large continent south of Europe."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'address' mean?",
+      "options": [
+        "to have the same opinion",
+        "A large continent south of Europe.",
+        "The number and street where you live.",
+        "used to emphasize what is true or real"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'Africa' mean?",
+      "options": [
+        "used to emphasize what is true or real",
+        "to have the same opinion",
+        "To put an item you want to buy into a virtual shopping cart.",
+        "A large continent south of Europe."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'agree' mean?",
+      "options": [
+        "The number and street where you live.",
+        "to have the same opinion",
+        "A large continent south of Europe.",
+        "used to emphasize what is true or real"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Can and Can't",
+    "explanation": "We use **can** for ability. I **can** swim, and I **can** say my address.\n\nWe use **can** for permission. **Can** I use your phone? Yes, you **can**.\n\nWe use **can** for requests. **Can** you pass the salt, please? **Can** you open the door for me?\n\nThe negative is **can't**. I **can't** drive. Penguins **can't** fly, but they **can** swim.\n\n**Can** is the same for every person. Use **can** plus the base verb, with no -s and no to.",
+    "examples": [
+      "*I **can** play the guitar.* (ability)",
+      "*She **can't** come to the party.* (negative)",
+      "* **Can** you speak Spanish? – Yes, I **can**.* (question + short answer)",
+      "* **Can** I use your phone?* (permission)",
+      "* **Can** you open the door for me, please?* (request)",
+      "*Penguins **can't** fly, but they **can** swim very well.* (ability)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with can: Sara is able to shop in Africa.",
+        "a": "Sara can shop in Africa."
+      },
+      {
+        "q": "Rewrite with can: I am able to say my address.",
+        "a": "I can say my address."
+      },
+      {
+        "q": "Ask for permission with can: I / use your phone",
+        "a": "Can I use your phone?"
+      },
+      {
+        "q": "Correct the mistake: He cans agree with me.",
+        "a": "He can agree with me."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "My sister ___ speak four languages.",
+        "options": [
+          "can",
+          "cans",
+          "can to",
+          "is can"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ swim. I never learned.",
+        "options": [
+          "can",
+          "don't can",
+          "can't",
+          "not can"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ you play the piano?",
+        "options": [
+          "Cans",
+          "Can",
+          "Are",
+          "Does"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Can you ride a bike? – Yes, I ___.",
+        "options": [
+          "do",
+          "am",
+          "cans",
+          "can"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He can ___ very fast.",
+        "options": [
+          "runs",
+          "run",
+          "to run",
+          "running"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ I sit here? – Yes, of course.",
+        "options": [
+          "Do",
+          "Am",
+          "Can",
+          "Does"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You ___ smoke in this building. It's not allowed.",
+        "options": [
+          "can",
+          "don't can",
+          "not can",
+          "can't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "Can you help me?",
+          "Do you can help me?",
+          "You can help me do?",
+          "Can you to help me?"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Penguins ___ fly.",
+        "options": [
+          "can",
+          "cans",
+          "can't",
+          "don't can"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ you pass me the salt, please?",
+        "options": [
+          "Do",
+          "Can",
+          "Are",
+          "Have"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-10-25/grammar-en.mp3"
+  }
+}

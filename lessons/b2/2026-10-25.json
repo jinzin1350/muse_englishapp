@@ -1,0 +1,331 @@
+{
+ "date": "2026-10-25",
+ "theme": "money & shopping",
+ "level": "b2",
+ "cefr": "B2",
+ "words": [
+  {
+   "word": "amount",
+   "pos": "noun",
+   "meaning": "A quantity of something.",
+   "example": "Please pay the full amount.",
+   "pronunciation": "uh-MOWNT",
+   "persian": "مقدار، میزان",
+   "photo": "media/b2/2026-10-25/photos/amount.jpg",
+   "word_audio": "media/b2/2026-10-25/word-audio/amount.mp3"
+  },
+  {
+   "word": "bank account",
+   "pos": "noun",
+   "meaning": "Money you keep in a bank.",
+   "example": "I opened a new bank account last week.",
+   "pronunciation": "BANGK uh-KOWNT",
+   "persian": "حساب بانکی",
+   "photo": "media/b2/2026-10-25/photos/bank account.jpg",
+   "word_audio": "media/b2/2026-10-25/word-audio/bank account.mp3"
+  },
+  {
+   "word": "cash machine",
+   "pos": "noun",
+   "meaning": "A machine where you can get money.",
+   "example": "I need to find a cash machine.",
+   "pronunciation": "KASH muh-SHEEN",
+   "persian": "خودپرداز",
+   "photo": "media/b2/2026-10-25/photos/cash machine.jpg",
+   "word_audio": "media/b2/2026-10-25/word-audio/cash machine.mp3"
+  },
+  {
+   "word": "charge (interest)",
+   "pos": "verb",
+   "meaning": "To ask for money as a fee or price.",
+   "example": "The bank charges high interest on loans.",
+   "pronunciation": "CHARJ",
+   "persian": "سود گرفتن، هزینه دریافت کردن",
+   "photo": "media/b2/2026-10-25/photos/charge.jpg",
+   "word_audio": "media/b2/2026-10-25/word-audio/charge.mp3"
+  },
+  {
+   "word": "competitive",
+   "pos": "adjective",
+   "meaning": "Wanting to win or be more successful than others.",
+   "example": "He is very competitive in sports.",
+   "pronunciation": "kum-PET-uh-tiv",
+   "persian": "رقابتی، جاه طلب",
+   "photo": "media/b2/2026-10-25/photos/competitive.jpg",
+   "word_audio": "media/b2/2026-10-25/word-audio/competitive.mp3"
+  },
+  {
+   "word": "consolidate",
+   "pos": "verb",
+   "meaning": "To combine things into one stronger whole.",
+   "example": "We need to consolidate our debts.",
+   "pronunciation": "kun-SOL-uh-dayt",
+   "persian": "یکپارچه کردن، تحکیم کردن",
+   "photo": "media/b2/2026-10-25/photos/consolidate.jpg",
+   "word_audio": "media/b2/2026-10-25/word-audio/consolidate.mp3"
+  },
+  {
+   "word": "corporation tax",
+   "pos": "noun phrase",
+   "meaning": "Tax that companies pay on their profits.",
+   "example": "The government plans to reduce corporation tax.",
+   "pronunciation": "kor-puh-RAY-shun TAKS",
+   "persian": "مالیات شرکت ها",
+   "photo": "media/b2/2026-10-25/photos/corporation tax.jpg",
+   "word_audio": "media/b2/2026-10-25/word-audio/corporation tax.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b2/2026-10-25/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Money and Shopping",
+  "audio": "media/b2/2026-10-25/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b2/2026-10-25/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Shopping Saturday",
+  "audio": "media/b2/2026-10-25/shadowing.mp3",
+  "transcript": "media/b2/2026-10-25/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b2/2026-10-25/shadowing-sentences/001.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/002.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/003.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/004.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/005.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/006.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/007.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/008.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/009.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/010.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/011.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/012.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/013.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/014.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/015.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/016.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/017.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/018.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/019.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/020.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/021.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/022.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/023.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/024.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/025.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/026.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/027.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/028.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/029.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/030.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/031.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/032.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/033.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/034.mp3",
+   "media/b2/2026-10-25/shadowing-sentences/035.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'amount' mean?",
+   "options": [
+    "To ask for money as a fee or price.",
+    "To combine things into one stronger whole.",
+    "Money you keep in a bank.",
+    "A quantity of something."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'bank account' mean?",
+   "options": [
+    "Money you keep in a bank.",
+    "To ask for money as a fee or price.",
+    "A quantity of something.",
+    "To combine things into one stronger whole."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'cash machine' mean?",
+   "options": [
+    "To combine things into one stronger whole.",
+    "Tax that companies pay on their profits.",
+    "Wanting to win or be more successful than others.",
+    "A machine where you can get money."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'charge (interest)' mean?",
+   "options": [
+    "Tax that companies pay on their profits.",
+    "To combine things into one stronger whole.",
+    "To ask for money as a fee or price.",
+    "Money you keep in a bank."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'competitive' mean?",
+   "options": [
+    "To ask for money as a fee or price.",
+    "A quantity of something.",
+    "Wanting to win or be more successful than others.",
+    "A machine where you can get money."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'consolidate' mean?",
+   "options": [
+    "A quantity of something.",
+    "A machine where you can get money.",
+    "Money you keep in a bank.",
+    "To combine things into one stronger whole."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'corporation tax' mean?",
+   "options": [
+    "A quantity of something.",
+    "Tax that companies pay on their profits.",
+    "To combine things into one stronger whole.",
+    "Money you keep in a bank."
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "Future Continuous and Future Perfect",
+  "explanation": "The **future continuous** (**will be** + -ing) describes an action in progress at a future time. For example, this time tomorrow you **will be shopping** for a jacket.\n\nThe **future perfect** (**will have** + past participle) describes an action finished before a future time. By Friday, you **will have paid** the full amount.\n\nUse **will have been** + -ing (the **future perfect continuous**) to say how long something will have continued. By June, she **will have been working** here for five years.\n\nUse the future perfect with **by** and **by the time** for completion. After **by the time**, **when**, **before** and **until**, use a **present** tense, not **will**.",
+  "examples": [
+   "*This time next week, we**'ll be lying** on a beach.* (in progress)",
+   "*I**'ll be waiting** for you at the station at 6.* (in progress)",
+   "*By the time we get there, the film **will have started**.* (completed before)",
+   "*I**'ll have finished** this book by Friday.* (by + time)",
+   "*Next month, I**'ll have been learning** English for three years.* (duration)",
+   "*By the time she retires, she**'ll have taught** thousands of students.* (total by a future time)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with the future continuous: Tomorrow at 10, I shop for a jacket.",
+    "a": "Tomorrow at 10, I'll be shopping for a jacket."
+   },
+   {
+    "q": "Rewrite with the future perfect: By Friday, I pay the full amount.",
+    "a": "By Friday, I'll have paid the full amount."
+   },
+   {
+    "q": "Rewrite with the future perfect: By next year, we consolidate our debts.",
+    "a": "By next year, we'll have consolidated our debts."
+   },
+   {
+    "q": "Correct the mistake: By the time you will arrive, we'll have eaten.",
+    "a": "By the time you arrive, we'll have eaten."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "This time tomorrow, I ___ on a beach in Mexico.",
+    "options": [
+     "will lie",
+     "will be lying",
+     "will have lain",
+     "lie"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "By the time you get home, I ___ dinner.",
+    "options": [
+     "cooked",
+     "am cooking",
+     "cook",
+     "will have cooked"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Don't call me at 8. I ___ the kids to bed then.",
+    "options": [
+     "'ll be putting",
+     "'ll have put",
+     "put",
+     "'m put"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I hope that by 2030, scientists ___ a cure for this disease.",
+    "options": [
+     "are finding",
+     "find",
+     "will have found",
+     "will be find"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "By next June, I ___ here for five years.",
+    "options": [
+     "will have worked",
+     "will work",
+     "am working",
+     "work"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "At 10 a.m. tomorrow, we ___ our presentation, so we can't answer the phone.",
+    "options": [
+     "will have given",
+     "will be giving",
+     "give",
+     "are given"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Will you ___ the car tonight? If not, can I borrow it?",
+    "options": [
+     "have used",
+     "been using",
+     "using",
+     "be using"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "I'm sure they ___ by the time we arrive. They always leave early.",
+    "options": [
+     "will leaving",
+     "leave",
+     "will have left",
+     "have left"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "By the end of this month, she ___ for the company for 20 years.",
+    "options": [
+     "will work",
+     "is working",
+     "has been working",
+     "will have been working"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Don't worry about the dishes. I ___ them by the time you wake up.",
+    "options": [
+     "'ll have done",
+     "'m doing",
+     "do",
+     "'ll be done"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}
