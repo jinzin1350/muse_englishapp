@@ -10960,6 +10960,13 @@ async function grantFreeze() {
   s.streak_freezes = nf; setStreakLocal(s);
   return nf;
 }
+/* Called by the podcast gift when a Streak Freeze is won (was referenced but
+   never defined — ReferenceError, 2026-10-25). The freeze count is rendered
+   by the home streak banner and the progress stats from streak state, so a
+   banner refresh is all that is needed; safe no-op anywhere else. */
+function updateFreezeLine(n) {
+  try { if (document.getElementById('home-streak-wrap')) refreshHomeStreak(); } catch (e) {}
+}
 /* Dates (YYYY-MM-DD) with words read + quiz done — the streak-qualifying
    days (2026-10-14 rule). Used for the streak week strip, which lives on
    the streak card. */
@@ -11590,12 +11597,24 @@ function podMsLayout() {
     const root = document.getElementById('podms');
     if (!root) return;
     const stage = root.getAttribute('data-stage');
-    const zs = PODMS_ZONES[stage];
-    if (!zs) return;
     const W = root.clientWidth, H = root.clientHeight;
     const iw = 941, ih = 1672;
-    const sc = Math.max(W / iw, H / ih);
+    /* Wide screens: fit the art by HEIGHT so the whole design stays visible
+       (phone-like card centered on the black backdrop). Portrait phones keep
+       the cover fit. Pure cover on landscape cropped the top/bottom of the
+       portrait art — the baked buttons live at ~86% height, so they and their
+       tap zones landed off-screen and the milestone could not be dismissed
+       on desktop (Alireza, 2026-10-25). The art box is sized explicitly here
+       so the zones below always map onto the visible art. */
+    const sc = (W / H > iw / ih) ? (H / ih) : Math.max(W / iw, H / ih);
     const dw = iw * sc, dh = ih * sc, ox = (W - dw) / 2, oy = (H - dh) / 2;
+    const art = root.querySelector('.podms-art');
+    if (art) {
+      art.style.left = ox + 'px'; art.style.top = oy + 'px';
+      art.style.width = dw + 'px'; art.style.height = dh + 'px';
+    }
+    const zs = PODMS_ZONES[stage];
+    if (!zs) return;
     const btns = root.querySelectorAll('.podms-tap');
     btns.forEach(function (b, i) {
       const z = zs[i]; if (!z) return;
@@ -11657,6 +11676,8 @@ function podMsShowEnd() {
     '</div>';
   document.body.appendChild(root);
   document.getElementById('podms-end-stage').addEventListener('click', closePodMs);
+  podMsLayout();
+  window.addEventListener('resize', podMsLayout);
 }
 function podMsClear() {
   window.removeEventListener('resize', podMsLayout);
@@ -13306,7 +13327,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610252305';
+var APP_VERSION = '202610252325';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
