@@ -9032,7 +9032,8 @@ function renderProfile(v) {
 
   '<div class="section-title"><h2>Teaching</h2></div>' +
   (state.teacher
-    ? '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/teacher" style="margin-top:0">🍎 Teacher dashboard</a></div>'
+    ? '<div class="card plain"><a class="btn btn-ghost btn-block" href="/teachers" style="margin-top:0">🍎 Teacher portal</a>' +
+      '<a class="btn btn-ghost btn-block" href="#/teacher" style="margin-top:0.6rem">🍎 Teacher dashboard</a></div>'
     : (state.teacherRequest && state.teacherRequest.status === 'pending'
       ? '<div class="card plain"><p class="muted" style="margin:0">⏳ Teacher request under review — <a class="link" href="#/become-teacher">view status</a></p></div>'
       : '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/become-teacher" style="margin-top:0">🍎 Become a teacher</a></div>')) +
@@ -13071,7 +13072,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610211840';
+var APP_VERSION = '202610251922';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
