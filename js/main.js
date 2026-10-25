@@ -11771,7 +11771,7 @@ function renderScores(v) {
     const progP = sb.rpc('my_progress').then(function (r) {
       return (r.error || !r.data) ? null : r.data;
     }, function () { return null; });
-    const frP = sb.from('profiles').select('streak_freezes').eq('user_id', state.user.id).maybeSingle().then(function (fr) {
+    const frP = sb.from('profiles').select('streak_freezes').eq('id', state.user.id).maybeSingle().then(function (fr) {
       return (!fr.error && fr.data && fr.data.streak_freezes != null) ? fr.data.streak_freezes : null;
     }, function () { return null; });
     Promise.all([getAttempts(), progP, frP]).then(function (res) {
@@ -13327,7 +13327,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610252325';
+var APP_VERSION = '202610252352';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
