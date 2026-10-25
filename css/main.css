@@ -3852,6 +3852,7 @@ body.view-words #view { background: #FDF8F1; }
 .vc-pill-lv-a1 { background: #FDF3D2; } .vc-pill-lv-a2 { background: #FDEBD6; }
 .vc-pill-lv-b1 { background: #DFF3E6; } .vc-pill-lv-b2 { background: #FFE3CF; }
 .vc-pill-lv-c1 { background: #DCEBFB; } .vc-pill-lv-c2 { background: #E9E2F7; }
+.sb-done-note { background: #EAF6D8; color: #3E7A1E; border: 1px solid #CFE8AC; border-radius: 14px; padding: 0.7rem 0.95rem; font-size: 0.88rem; font-weight: 600; margin: 0 0 0.9rem; }
 .vc-pill.on { background: #F26522; border-color: #F26522; color: #fff; box-shadow: 0 4px 12px rgba(242, 101, 34, 0.35); }
 .vc-search { position: relative; margin-bottom: 1rem; }
 .vc-search-ico { position: absolute; left: 0.95rem; top: 50%; transform: translateY(-50%); font-size: 1.05rem; }

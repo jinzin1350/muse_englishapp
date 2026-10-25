@@ -10207,6 +10207,7 @@ async function startQuiz(kind, dateStr) {
     questions = buildSavedDeck(await getSavedWords());
   } else if (kind === 'sentence') {
     if (!m) m = { date: todayStr(), level: (state.user && state.user.level) || '', theme: '' };
+    state._sbKey = 'saved';
     questions = buildSentenceDeck(await getSavedWords());
   }
   if (!questions.length) return;
@@ -10238,8 +10239,11 @@ function beginQuizSession(kind, m, questions, prog) {
     log: (prog && prog.log) || [],
     answered: false, picked: -1, wasCorrect: false,
     hearts: qHearts,
+    sbKey: kind === 'sentence' ? (state._sbKey || 'saved') : null,
+    sbXp: 0,
     date: m.date, level: m.level, theme: m.theme
   };
+  state._sbKey = null;
   saveQuizProgress();
   renderQuizView();
 }
@@ -10391,9 +10395,16 @@ function finishQuiz() {
     awardPoints('assignment_quiz', 10, q.date || todayStr());
     saveAssignmentResult();
   }
+  /* Sentence game completion bonus (Alireza, 2026-10-25): +20 once per
+     lesson — 'saved' for the Review game, 'cat:<slug>' per bank topic. */
+  if (q.kind === 'sentence') {
+    const bk = 'sentence_done|' + (q.sbKey || 'saved');
+    if (!ptsGet('done')[bk]) q.sbXp = (q.sbXp || 0) + 20;
+    awardPoints('sentence_done', 20, q.sbKey || 'saved', true);
+  }
   state.quiz = null;
   const praise = pct >= 85 ? 'Excellent work! ✨' : pct >= 60 ? 'Good — keep practicing! 💪' : 'Keep going — you\'ve got this! 📚';
-  const xpGain = q.kind === 'word' ? 10 + q.correct : 10;
+  const xpGain = q.kind === 'word' ? 10 + q.correct : (q.kind === 'sentence' ? (q.sbXp || 0) : 10);
   /* resuming a quiz paused for a hearts review (Fix 2: word/grammar too) */
   const resumeA = (q.kind === 'mistakes' && state.pausedQuiz && state.pausedQuiz.kind !== 'mistakes') ? state.pausedQuiz : null;
   const resumeLabel = resumeA
@@ -10405,7 +10416,8 @@ function finishQuiz() {
     '<div class="duo-hero"><img src="/media/quiz/trophy.png" alt="" loading="lazy"></div>' +
     '<div class="duo-score-big">' + q.correct + '/' + total + '</div>' +
     '<div class="duo-score-sub">' + pct + '% · ' + praise +
-    (heartEarned ? '<br>❤️ +1 heart earned!' : '') + '</div>' +
+    (heartEarned ? '<br>❤️ +1 heart earned!' : '') +
+    (q.kind === 'sentence' && !(q.sbXp > 0) ? '<br>⭐ Points already earned — this round was practice' : '') + '</div>' +
     '<div class="duo-pills">' +
       '<div class="duo-pill green"><span class="pi">✓</span><span class="pn">' + q.correct + '</span><span class="pl">correct</span></div>' +
       '<div class="duo-pill red"><span class="pi">✕</span><span class="pn">' + (total - q.correct) + '</span><span class="pl">to review</span></div>' +
@@ -10760,6 +10772,14 @@ function duoCheck() {
   q.answered = true;
   q.wasCorrect = (built === cur.tokens.join(' '));
   if (q.wasCorrect) q.correct++;
+  /* Sentence game XP (Alireza, 2026-10-25): +5 per correct sentence, paid
+     ONCE per word ever — awardPoints is idempotent on (action, ref), and the
+     local done-mirror drives the results-screen total + already-done notes. */
+  if (q.wasCorrect && q.kind === 'sentence' && cur.word) {
+    const dk = 'sentence_word|' + cur.word.toLowerCase();
+    if (!ptsGet('done')[dk]) q.sbXp = (q.sbXp || 0) + 5;
+    awardPoints('sentence_word', 5, cur.word.toLowerCase(), true);
+  }
   else if (q.kind !== 'mistakes' && duoLoseHeart(q) <= 0) { saveProgressAny(); renderHeartsOut(); return; }
   saveProgressAny();
   renderDuoQuizView();
@@ -11985,6 +12005,7 @@ function savedWordsHTML(arr) {
       ? '<div style="margin:0 0 0.6rem;display:flex;gap:0.5rem;flex-wrap:wrap">' +
         (practicable ? '<button class="btn btn-sm" data-action="practice-saved">▶ Practice ' + arr.length + ' words</button>' : '') +
         (playable ? '<button class="btn btn-sm" data-action="sentence-game">🧩 Sentence game</button>' : '') +
+        (playable && ptsGet('done')['sentence_done|saved'] ? '<span style="font-size:0.78rem;color:#4C9A2A;align-self:center">✓ Completed once — replays are practice</span>' : '') +
         '</div>'
       : '<p class="muted" style="font-size:0.8rem">Bookmark at least 2 words to unlock the practice quiz.</p>') +
     arr.map(function (x) {
@@ -12370,6 +12391,7 @@ function startSentenceBankGame(cat, words) {
   var deck = buildSentenceDeck(pick);
   if (!deck.length) return;
   var m = { date: todayStr(), level: (state.user && state.user.level) || '', theme: cat ? cat.title : '' };
+  state._sbKey = 'cat:' + (cat ? cat.slug : '');
   beginQuizSession('sentence', m, deck, null);
 }
 
@@ -12464,6 +12486,7 @@ function renderSentenceCat(v, slug) {
     }
     return loadVocabWords(slug).then(function (words) {
       var level = (state.sbFilter && state.sbFilter.level) || 'all';
+      var doneBefore = !!ptsGet('done')['sentence_done|cat:' + slug];
       var pool = sbPlayableWords(words, level);
       var rows = pool.map(function (w) {
         return '<div class="vc-word">' +
@@ -12484,6 +12507,7 @@ function renderSentenceCat(v, slug) {
         '<h1>' + esc(cat.title) + '</h1>' +
         '<p>' + pool.length + ' sentences to build' + (level !== 'all' ? ' · level ' + level.toUpperCase() : ' · all levels') + ' ' + vcLevelBadges(cat.levels) + '</p>' +
         '</div></div>' +
+        (doneBefore ? '<div class="sb-done-note">✓ You already completed this topic — replaying is practice; points are earned only once.</div>' : '') +
         (pool.length
           ? '<button class="btn btn-primary vc-start" id="sb-start-btn">🧩 Play · ' + Math.min(15, pool.length) + ' sentences →</button>' +
             '<p class="vc-xp-note">Tap the words in order · the Persian meaning is your hint</p>'
@@ -13282,7 +13306,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610252252';
+var APP_VERSION = '202610252305';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
