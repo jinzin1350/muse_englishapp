@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "cottonelle-ultra-clean-36-mega",
+      "name_fa": "دستمال توالت کاتنل، ۳۶ رول مگا",
+      "name_en": "Cottonelle Ultra Clean Toilet Paper, 36 Mega Rolls = 144 Regular Rolls",
+      "price_cad": 21.98,
+      "regular_cad": 43.96,
+      "discount_pct": 50,
+      "added_fa": "یکشنبه، ۲۵ اکتبر ۲۰۲۶",
+      "image": "img/cottonelle-ultra-clean-36-mega.jpg",
+      "url": "https://www.amazon.ca/dp/B0CNWMZGWM?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "۳۶ رول مگا معادل ۱۴۴ رول معمولی؛ با کوپن Subscribe & Save"
+    },
+    {
+      "id": "craftsman-hivis-tape-2pack",
+      "name_fa": "متر نواری کرافتسمن، پک دوتایی",
+      "name_en": "CRAFTSMAN Hi-Vis Tape Measure 8M/26-Ft (Pack of 2)",
+      "price_cad": 15.98,
+      "regular_cad": 30.98,
+      "discount_pct": 48,
+      "added_fa": "یکشنبه، ۲۵ اکتبر ۲۰۲۶",
+      "image": "img/craftsman-hivis-tape-2pack.jpg",
+      "url": "https://www.amazon.ca/dp/B0H1PSWPQS?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پک دوتایی متر ۸ متری های‌ویز کرافتسمن؛ خوانا، محکم و مناسب هر جعبه‌ابزار"
+    },
+    {
       "id": "falan-mule-leather-belt",
       "name_fa": "کمربند چرم مردانه فالان مول",
       "name_en": "FALAN MULE Men's Leather Dress Belt",
@@ -83,34 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "دو پروب بی‌سیم با دقت تاییدشده؛ برای کباب، فر و باربیکیو"
-    },
-    {
-      "id": "dyson-v15-detect-plus",
-      "name_fa": "جاروبرقی شارژی دایسون وی۱۵ دیتکت پلاس",
-      "name_en": "Dyson V15 Detect Plus Cordless Vacuum",
-      "price_cad": 799.99,
-      "regular_cad": 999.99,
-      "discount_pct": 20,
-      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
-      "image": "img/dyson-v15-detect-plus.jpg",
-      "url": "https://www.amazon.ca/dp/B0CT97D9R2?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "لیزر تشخیص گردوغبار و مکش قدرتمند؛ تمیزکاری عمیق بدون سیم."
-    },
-    {
-      "id": "vevor-kitchen-island-cart-45in",
-      "name_fa": "جزیره آشپزخانه چرخ‌دار ویور با صفحه چوبی",
-      "name_en": "VEVOR Kitchen Island Cart with Solid Wood Top, 45.3-Inch, White",
-      "price_cad": 225.27,
-      "regular_cad": 284.99,
-      "discount_pct": 21,
-      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
-      "image": "img/vevor-kitchen-island-cart-45in.jpg",
-      "url": "https://www.amazon.ca/dp/B0CB11144S?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "صفحه کار اضافه با کابینت و چرخ؛ راه‌حل کاندوهای کوچک برای آشپزخانه شلوغ."
     }
   ],
   "updated_fa": "یکشنبه ۳ آبان"
