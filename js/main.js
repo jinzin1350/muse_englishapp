@@ -10200,6 +10200,9 @@ async function startQuiz(kind, dateStr) {
   } else if (kind === 'saved') {
     if (!m) m = { date: todayStr(), level: (state.user && state.user.level) || '', theme: '' };
     questions = buildSavedDeck(await getSavedWords());
+  } else if (kind === 'sentence') {
+    if (!m) m = { date: todayStr(), level: (state.user && state.user.level) || '', theme: '' };
+    questions = buildSentenceDeck(await getSavedWords());
   }
   if (!questions.length) return;
   /* Fix 2: resume an in-progress word/grammar quiz instead of restarting it. */
@@ -10218,7 +10221,7 @@ function beginQuizSession(kind, m, questions, prog) {
   let qHearts;
   if (prog) {
     qHearts = Math.max(prog.hearts || 0, getHearts());
-  } else if (kind === 'word' || kind === 'grammar' || kind === 'saved') {
+  } else if (kind === 'word' || kind === 'grammar' || kind === 'saved' || kind === 'sentence') {
     qHearts = sessionHeartGrant();
     setHearts(qHearts);
   } else {
@@ -10264,7 +10267,7 @@ function renderQuizView() {
   /* Fix 4: the mistakes review uses the same full-screen Duolingo-style player
      as the word/grammar quizzes (one question at a time, instant feedback,
      hearts, progress bar, XP/result screen). */
-  if (q.kind === 'word' || q.kind === 'assignment' || q.kind === 'grammar' || q.kind === 'mistakes' || q.kind === 'saved') { renderDuoQuizView(); return; }
+  if (q.kind === 'word' || q.kind === 'assignment' || q.kind === 'grammar' || q.kind === 'mistakes' || q.kind === 'saved' || q.kind === 'sentence') { renderDuoQuizView(); return; }
   const v = $('#view');
   const cur = q.questions[q.idx];
   const total = q.questions.length;
@@ -11966,10 +11969,18 @@ async function loadSavedWordsSection() {
 function savedWordsHTML(arr) {
   if (!arr.length) return '';
   const practicable = arr.length >= 2;
+  const playable = arr.filter(function (x) {
+    if (!x || !x.example) return false;
+    const n = sentenceTokens(x.example).length;
+    return n >= 4 && n <= 12;
+  }).length;
   return '<div class="card"><div class="tch-weekly-title"><img src="/icons/bookmark.png" alt="" class="bm-ico"> Saved words <span class="muted">(' + arr.length + ')</span></div>' +
     '<p class="muted" style="font-size:0.82rem;margin:0.25rem 0 0.6rem">Hard words you bookmarked — review them here, or run a practice quiz.</p>' +
-    (practicable
-      ? '<div style="margin:0 0 0.6rem"><button class="btn btn-sm" data-action="practice-saved">▶ Practice ' + arr.length + ' words</button></div>'
+    (practicable || playable
+      ? '<div style="margin:0 0 0.6rem;display:flex;gap:0.5rem;flex-wrap:wrap">' +
+        (practicable ? '<button class="btn btn-sm" data-action="practice-saved">▶ Practice ' + arr.length + ' words</button>' : '') +
+        (playable ? '<button class="btn btn-sm" data-action="sentence-game">🧩 Sentence game</button>' : '') +
+        '</div>'
       : '<p class="muted" style="font-size:0.8rem">Bookmark at least 2 words to unlock the practice quiz.</p>') +
     arr.map(function (x) {
       return '<div class="saved-row">' +
@@ -12293,7 +12304,27 @@ function buildSavedDeck(arr) {
   return shuffleArr(deck).slice(0, 14);
 }
 
-/* ---------------- admin view ---------------- */
+/* Sentence game (Alireza, 2026-10-25): every saved word's example sentence
+   becomes a "Tap the words in order" puzzle on the duo engine — same assist
+   question shape as the teacher-assignment generator. All playable sentences
+   (4-12 words) are in the deck, shuffled; no slice, he asked for all of them. */
+function sentenceTokens(example) {
+  return String(example || '').replace(/["“”']/g, '').trim().split(/\s+/).filter(Boolean);
+}
+function buildSentenceDeck(arr) {
+  const deck = [];
+  shuffleArr((arr || []).filter(function (x) { return x && x.word && x.example; }).slice()).forEach(function (x) {
+    const tokens = sentenceTokens(x.example);
+    if (tokens.length < 4 || tokens.length > 12) return;
+    deck.push({
+      qtype: 'assist', question: 'Tap the words in order', hint: x.persian,
+      tokens: tokens,
+      bank: shuffleArr(tokens.map(function (t, i) { return { t: t, k: i }; })),
+      placed: [], kind: 'sentence', word: x.word
+    });
+  });
+  return deck;
+}
 /* ---------------- Daily study report (admin + teacher) ----------------
    Per-day, per-user: minutes in app, lessons opened, quizzes, XP, podcast
    minutes, shadowing speaking tries and shadowing sentence listens.
@@ -12916,6 +12947,12 @@ function bindEvents() {
         else go('review');
       });
     }
+    else if (a === 'sentence-game') {
+      getSavedWords().then(function (arr) {
+        if (buildSentenceDeck(arr).length) startQuiz('sentence');
+        else go('review');
+      });
+    }
     else if (a === 'toggle-save-word') { toggleSaveWordBtn(t); }
     else if (a === 'unsave-word') {
       removeSavedWord(t.getAttribute('data-id'), t.getAttribute('data-word'), t.getAttribute('data-date')).then(function () {
@@ -13073,7 +13110,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610252229';
+var APP_VERSION = '202610252239';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
