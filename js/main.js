@@ -1442,7 +1442,7 @@ function toggleTranscript(btn) {
    sentence seeks there. */
 function txTimingsUrl(transcriptUrl) {
   if (!transcriptUrl || transcriptUrl.indexOf('podcast-transcript.txt') === -1) return null;
-  return transcriptUrl.replace('podcast-transcript.txt', 'podcast-timings.json');
+  return transcriptUrl.replace('podcast-transcript.txt', 'podcast-timings.json?v=2');
 }
 function trySyncTranscript(panel, transcriptUrl) {
   const tu = txTimingsUrl(transcriptUrl);
@@ -13439,7 +13439,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610260033';
+var APP_VERSION = '202610260122';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
