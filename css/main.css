@@ -530,6 +530,12 @@ p { margin: 0 0 0.75em; }
 }
 .transcript-panel p { margin: 0 0 0.7rem; }
 .transcript-panel p:last-child { margin-bottom: 0; }
+.tx-hint { font-size: 0.78rem; color: #8A93A6; margin-bottom: 0.6rem; }
+.tx-line { margin: 0 0 0.55rem; }
+.tx-sp { font-weight: 800; }
+.tx-s { border-radius: 7px; padding: 0.06rem 0.14rem; cursor: pointer; transition: background 0.25s ease; }
+.tx-s:hover { background: #FFF1CF; }
+.tx-s.on { background: #FFDF8E; }
 
 /* ---------- Persistent mini-player ---------- */
 .mini-player {
