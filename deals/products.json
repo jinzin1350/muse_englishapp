@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "north-face-surge-2026-10-26",
+      "name_fa": "کوله‌پشتی نورث فیس سرج",
+      "name_en": "The North Face Surge Commuter Laptop Backpack",
+      "price_cad": 125.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "دوشنبه، ۲۶ اکتبر ۲۰۲۶",
+      "image": "img/north-face-surge-2026-10-26.jpg",
+      "url": "https://www.amazon.ca/dp/B0CN9SHHZ9?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "کوله‌پشتی ۳۱ لیتری ضد آب با محفظه لپ‌تاپ ۱۶ اینچی."
+    },
+    {
+      "id": "razer-orochi-v2-2026-10-26",
+      "name_fa": "ماوس گیمینگ ریزر اوروچی وی۲",
+      "name_en": "Razer Orochi V2 Wireless Gaming Mouse",
+      "price_cad": 47.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "دوشنبه، ۲۶ اکتبر ۲۰۲۶",
+      "image": "img/razer-orochi-v2-2026-10-26.jpg",
+      "url": "https://www.amazon.ca/dp/B0916N2LPZ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "ماوس بی‌سیم سبک زیر ۶۰ گرم با باتری تا ۹۵۰ ساعت."
+    },
+    {
+      "id": "tfal-deep-fryer-2026-10-26",
+      "name_fa": "سرخ‌کن استیل تی‌فال ۳.۵ لیتری",
+      "name_en": "T-fal 3.5L Deep Fryer with Oil Filtration",
+      "price_cad": 69.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "دوشنبه، ۲۶ اکتبر ۲۰۲۶",
+      "image": "img/tfal-deep-fryer-2026-10-26.jpg",
+      "url": "https://www.amazon.ca/dp/B00QC2XBYM?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "سرخ‌کن ۱۷۰۰ واتی با سیستم ایزی‌کلین و فیلتر روغن."
+    },
+    {
+      "id": "sony-wf-c710n-2026-10-26",
+      "name_fa": "ایربادز سونی دبلیو‌اف-سی۷۱۰ان",
+      "name_en": "Sony WF-C710N Noise Cancelling Earbuds",
+      "price_cad": 98.0,
+      "regular_cad": 169.99,
+      "discount_pct": 42,
+      "added_fa": "دوشنبه، ۲۶ اکتبر ۲۰۲۶",
+      "image": "img/sony-wf-c710n-2026-10-26.jpg",
+      "url": "https://www.amazon.ca/dp/B0DWHPBK42?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "ایربادز سونی با حذف نویز فعال و ۳۰ ساعت پخش با کیس."
+    },
+    {
       "id": "cottonelle-ultra-clean-36-mega",
       "name_fa": "دستمال توالت کاتنل، ۳۶ رول مگا",
       "name_en": "Cottonelle Ultra Clean Toilet Paper, 36 Mega Rolls = 144 Regular Rolls",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "موتور ۶۰۰ واتی و مکش ۵۵ کیلوپاسکال؛ با کد FE3TESYS (درصد تخفیف تأییدنشده، اعلام نشده)"
-    },
-    {
-      "id": "liwan-solar-cameras-2pack",
-      "name_fa": "دوربین امنیتی خورشیدی لیوان، پک دوتایی",
-      "name_en": "LIWAN Solar Security Cameras Wireless Outdoor 2-Pack",
-      "price_cad": 70.39,
-      "regular_cad": 119.99,
-      "discount_pct": 41,
-      "added_fa": "یکشنبه، ۲۵ اکتبر ۲۰۲۶",
-      "image": "img/liwan-solar-cameras-2pack.jpg",
-      "url": "https://www.amazon.ca/dp/B0DMP3B363?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "دو دوربین خورشیدی ۲کی با چرخش ۳۶۰ درجه؛ با کوپن و کد O3OFAP3V"
-    },
-    {
-      "id": "anker-laptop-charger-pro-100w",
-      "name_fa": "شارژر ۱۰۰ واتی انکر با نمایشگر هوشمند",
-      "name_en": "Anker Laptop Charger Pro 100W GaN Charger with Smart Display",
-      "price_cad": 51.49,
-      "regular_cad": 79.99,
-      "discount_pct": 36,
-      "added_fa": "یکشنبه، ۲۵ اکتبر ۲۰۲۶",
-      "image": "img/anker-laptop-charger-pro-100w.jpg",
-      "url": "https://www.amazon.ca/dp/B0H87DRN2H?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "شارژر ۱۰۰ واتی با نمایشگر هوشمند و حالت مراقبت باتری؛ با کوپن و حساب بیزینس آمازون"
-    },
-    {
-      "id": "waterpik-cordless-pearl",
-      "name_fa": "واترفلوسر شارژی واترپیک کردلس پرل",
-      "name_en": "Waterpik Cordless Pearl Water Flosser",
-      "price_cad": 69.99,
-      "regular_cad": 89.99,
-      "discount_pct": 22,
-      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
-      "image": "img/waterpik-cordless-pearl.jpg",
-      "url": "https://www.amazon.ca/dp/B09C2QZQFQ?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "۴ سری همراه؛ قابل استفاده در حمام و مناسب بریس و ایمپلنت"
-    },
-    {
-      "id": "thermomaven-g2-bluetooth-thermometer",
-      "name_fa": "دماسنج بلوتوثی گوشت ترموماون جی۲",
-      "name_en": "ThermoMaven G2 Bluetooth Meat Thermometer",
-      "price_cad": 79.99,
-      "regular_cad": 159.99,
-      "discount_pct": 50,
-      "added_fa": "شنبه، ۲۴ اکتبر ۲۰۲۶",
-      "image": "img/thermomaven-g2-bluetooth-thermometer.jpg",
-      "url": "https://www.amazon.ca/dp/B0DFW43B44?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "دو پروب بی‌سیم با دقت تاییدشده؛ برای کباب، فر و باربیکیو"
     }
   ],
-  "updated_fa": "یکشنبه ۳ آبان"
+  "updated_fa": "دوشنبه ۴ آبان"
 }
