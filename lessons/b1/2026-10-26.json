@@ -1,0 +1,330 @@
+{
+ "date": "2026-10-26",
+ "theme": "money & shopping",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "bag",
+   "pos": "noun",
+   "meaning": "A container made of soft material, with a handle.",
+   "example": "I carry my lunch in a small bag.",
+   "pronunciation": "BAG",
+   "persian": "کیف، کیسه",
+   "photo": "media/b1/2026-10-26/photos/bag.jpg",
+   "word_audio": "media/b1/2026-10-26/word-audio/bag.mp3"
+  },
+  {
+   "word": "cashpoint",
+   "pos": "noun",
+   "meaning": "A machine where you can get money.",
+   "example": "There's a cashpoint near the bank.",
+   "pronunciation": "KASH-point",
+   "persian": "خودپرداز",
+   "photo": "media/b1/2026-10-26/photos/cashpoint.jpg",
+   "word_audio": "media/b1/2026-10-26/word-audio/cashpoint.mp3"
+  },
+  {
+   "word": "credit card",
+   "pos": "noun",
+   "meaning": "A plastic card used to buy things now and pay later.",
+   "example": "I paid with my credit card.",
+   "pronunciation": "KRED-it kard",
+   "persian": "کارت اعتباری",
+   "photo": "media/b1/2026-10-26/photos/credit-card.jpg",
+   "word_audio": "media/b1/2026-10-26/word-audio/credit-card.mp3"
+  },
+  {
+   "word": "fall over",
+   "pos": "phrasal verb",
+   "meaning": "To lose your balance and drop to the ground.",
+   "example": "The child ran too fast and fell over.",
+   "pronunciation": "FAWL OH-vuh",
+   "persian": "افتادن، سرنگون شدن",
+   "photo": "media/b1/2026-10-26/photos/fall-over.jpg",
+   "word_audio": "media/b1/2026-10-26/word-audio/fall-over.mp3"
+  },
+  {
+   "word": "furniture",
+   "pos": "noun",
+   "meaning": "things like chairs, tables, beds for a house.",
+   "example": "We need new furniture for the living room.",
+   "pronunciation": "FUR-ni-chuh",
+   "persian": "مبلمان، اثاثیه",
+   "photo": "media/b1/2026-10-26/photos/furniture.jpg",
+   "word_audio": "media/b1/2026-10-26/word-audio/furniture.mp3"
+  },
+  {
+   "word": "income tax",
+   "pos": "noun",
+   "meaning": "Money paid to the government from your earnings.",
+   "example": "Everyone has to pay income tax.",
+   "pronunciation": "IN-kum taks",
+   "persian": "مالیات بر درآمد",
+   "photo": "media/b1/2026-10-26/photos/income-tax.jpg",
+   "word_audio": "media/b1/2026-10-26/word-audio/income-tax.mp3"
+  },
+  {
+   "word": "item",
+   "pos": "noun",
+   "meaning": "A single thing or object.",
+   "example": "I bought three items from the store.",
+   "pronunciation": "EYE-tum",
+   "persian": "کالا، قلم",
+   "photo": "media/b1/2026-10-26/photos/item.jpg",
+   "word_audio": "media/b1/2026-10-26/word-audio/item.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-26/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: A Saturday of Shopping",
+  "audio": "media/b1/2026-10-26/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-26/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Shopping Day to Remember",
+  "audio": "media/b1/2026-10-26/shadowing.mp3",
+  "transcript": "media/b1/2026-10-26/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-26/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/028.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/029.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/030.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/031.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/032.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/033.mp3",
+   "media/b1/2026-10-26/shadowing-sentences/034.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'bag' mean?",
+   "options": [
+    "A plastic card used to buy things now and pay later.",
+    "A container made of soft material, with a handle.",
+    "A single thing or object.",
+    "Money paid to the government from your earnings."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'cashpoint' mean?",
+   "options": [
+    "A machine where you can get money.",
+    "A container made of soft material, with a handle.",
+    "A single thing or object.",
+    "To lose your balance and drop to the ground."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'credit card' mean?",
+   "options": [
+    "A container made of soft material, with a handle.",
+    "things like chairs, tables, beds for a house.",
+    "To lose your balance and drop to the ground.",
+    "A plastic card used to buy things now and pay later."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'fall over' mean?",
+   "options": [
+    "A container made of soft material, with a handle.",
+    "A single thing or object.",
+    "To lose your balance and drop to the ground.",
+    "A machine where you can get money."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'furniture' mean?",
+   "options": [
+    "A plastic card used to buy things now and pay later.",
+    "A single thing or object.",
+    "A container made of soft material, with a handle.",
+    "things like chairs, tables, beds for a house."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'income tax' mean?",
+   "options": [
+    "A single thing or object.",
+    "things like chairs, tables, beds for a house.",
+    "Money paid to the government from your earnings.",
+    "A plastic card used to buy things now and pay later."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'item' mean?",
+   "options": [
+    "A single thing or object.",
+    "A machine where you can get money.",
+    "A plastic card used to buy things now and pay later.",
+    "Money paid to the government from your earnings."
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "title": "Future Time Clauses (when, as soon as, until)",
+  "explanation": "After **when**, **as soon as**, **until**, **before**, **after** and **once**, we use the **present simple**, not **will**, to talk about the future. We say 'I will call you **when** I get home', not 'when I will get home'.\n\nThe main clause uses **will** or an imperative. You can say 'Text me **when** you arrive'.\n\nUse the **present perfect** to show the first action will be finished first. For example, 'I will go shopping **when** I have finished my work'.\n\n**If** and **unless** work the same way. We say '**If** it rains, we will stay at home', not 'if it will rain'.\n\n**When** means you are sure it will happen. **If** means it might happen.\n\nTry it with today's words: 'I will pay with my credit card **when** I buy the next item'.",
+  "examples": [
+   "*I'll send you the photos **when** I **get** home.* (when + present simple)",
+   "* **As soon as** the rain **stops**, we'll go for a walk.* (as soon as)",
+   "*We'll wait **until** you**'re** ready.* (until)",
+   "*Brush your teeth **before** you **go** to bed.* (imperative + before)",
+   "* **After** I **finish** university, I'm going to travel.* (after + going to)",
+   "*I'll call you **as soon as** I**'ve spoken** to the manager.* (present perfect: completion)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite using 'as soon as': Sara will pay. First she will get cash from the cashpoint.",
+    "a": "Sara will pay as soon as she has got cash from the cashpoint."
+   },
+   {
+    "q": "Rewrite using 'when': I will buy the furniture. First I will check my credit card.",
+    "a": "I will buy the furniture when I have checked my credit card."
+   },
+   {
+    "q": "Rewrite using 'until': Do not pay for the item. First check the price.",
+    "a": "Do not pay for the item until you have checked the price."
+   },
+   {
+    "q": "Rewrite using 'before': Put every item in your bag. Then leave the shop.",
+    "a": "Put every item in your bag before you leave the shop."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I'll call you when I ___ home.",
+    "options": [
+     "will get",
+     "get",
+     "am going to get",
+     "got"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "She ___ you as soon as she lands tomorrow.",
+    "options": [
+     "will phone",
+     "phones",
+     "phoned",
+     "phoning"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Wait here until I ___ back.",
+    "options": [
+     "will come",
+     "am coming",
+     "came",
+     "come"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "As soon as the film ___, we'll go for dinner.",
+    "options": [
+     "will end",
+     "is going to end",
+     "ends",
+     "ended"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I won't buy a new phone until this one ___.",
+    "options": [
+     "will break",
+     "is breaking",
+     "breaks",
+     "broke"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Before you ___ the house, turn off the lights.",
+    "options": [
+     "will leave",
+     "leave",
+     "are leaving",
+     "left"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "When I see her, I'll tell her.",
+     "When I'll see her, I'll tell her.",
+     "When I saw her, I'll tell her.",
+     "When I will see her, I tell her."
+    ],
+    "answer": 0
+   },
+   {
+    "question": "After she ___ university, she's going to work in Spain.",
+    "options": [
+     "will finish",
+     "is finishing",
+     "finished",
+     "finishes"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "I'll go to bed when I ___ this chapter.",
+    "options": [
+     "'ll finish",
+     "'ve finished",
+     "'ll have finished",
+     "finished"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "I'll text you as soon as I ___ the results.",
+    "options": [
+     "get",
+     "will get",
+     "got",
+     "getting"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}

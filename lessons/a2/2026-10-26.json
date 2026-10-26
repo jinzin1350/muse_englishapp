@@ -1,0 +1,280 @@
+{
+  "cefr": "A2",
+  "date": "2026-10-26",
+  "grammar": {
+    "audio": "media/a2/2026-10-26/grammar-en.mp3",
+    "examples": [
+      "*If you heat water to 100°C, it **boils**.* (zero: always true)",
+      "*Plants die if they **don't get** water.* (zero)",
+      "*If it **rains** tomorrow, we**'ll stay** at home.* (first)",
+      "*If she **gets** the job, she**'ll move** to London.* (first)",
+      "*If you **have** any questions, **ask** your teacher.* (first + imperative)",
+      "*I'll call you **when** I **get** home.* (when + present)"
+    ],
+    "explanation": "**Zero conditional** sentences talk about things that are **always true**. **If you heat ice, it melts.**\n\nThe form is **if + present simple** in both parts. **If you mix red and white, you get pink.**\n\n**First conditional** sentences talk about a **real future possibility**. **If it rains tomorrow, we will stay at home.**\n\nThe form is **if + present simple** in the if part, and **will + verb** in the main part. **If you study, you will pass.**\n\nNever put **will** in the if part. Say **if it rains**, not if it will rain.\n\nThe two parts can change order. Put a comma when **if** comes first. **You will catch the bus if you hurry.**\n\n**When** means you are sure it will happen. **I will call you when I get home.** **Unless** means **if not**. **Unless you hurry, you will miss the bus.**\n\nYou can use conditionals for feelings too. **If you feel anxious before a test, you will feel better after a deep breath.**",
+    "practice": [
+      {
+        "a": "If you heat water to 100 degrees, it boils.",
+        "q": "Rewrite with a zero conditional: Water always boils when you heat it to 100 degrees."
+      },
+      {
+        "a": "If she feels anxious before the test, she will breathe slowly.",
+        "q": "Rewrite with a first conditional: She feels anxious before the test, so she will breathe slowly."
+      },
+      {
+        "a": "If it rains tomorrow, we will stay at home.",
+        "q": "Correct the mistake: If it will rain tomorrow, we stay at home."
+      },
+      {
+        "a": "You cannot come in unless you have a ticket.",
+        "q": "Rewrite with unless: You cannot come in if you do not have a ticket."
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 0,
+        "options": [
+          "boils",
+          "boiled",
+          "would boil",
+          "is boiling"
+        ],
+        "question": "If you heat water to 100°C, it ___."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "will rain",
+          "rained",
+          "would rain",
+          "rains"
+        ],
+        "question": "If it ___ tomorrow, we'll stay at home."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "passed",
+          "would pass",
+          "will pass",
+          "had passed"
+        ],
+        "question": "If you study hard, you ___ the exam."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "will get",
+          "get",
+          "got",
+          "would get"
+        ],
+        "question": "I'll call you when I ___ home."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "If",
+          "When",
+          "As",
+          "Unless"
+        ],
+        "question": "___ you hurry, you'll miss the bus."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "got",
+          "get",
+          "would get",
+          "had got"
+        ],
+        "question": "If you mix red and white, you ___ pink."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "gets",
+          "will get",
+          "would get",
+          "got"
+        ],
+        "question": "If she ___ the job, she'll move to London."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "closed",
+          "closing",
+          "close",
+          "will close"
+        ],
+        "question": "If you're cold, ___ the window."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "won't get",
+          "don't get",
+          "didn't get",
+          "wouldn't get"
+        ],
+        "question": "Plants die if they ___ water."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "are",
+          "would be",
+          "will be",
+          "were"
+        ],
+        "question": "We ___ late if we don't leave now."
+      }
+    ],
+    "title": "Zero and First Conditional"
+  },
+  "level": "a2",
+  "podcast": {
+    "audio": "media/a2/2026-10-26/podcast.mp3",
+    "cover": null,
+    "title": "Muse English: Feelings and Looks",
+    "transcript": "media/a2/2026-10-26/podcast-transcript.txt"
+  },
+  "pronunciation_audio": "media/a2/2026-10-26/pronunciation.mp3",
+  "quiz": [
+    {
+      "answer": 1,
+      "options": [
+        "A strong feeling of being annoyed or unhappy.",
+        "makes adjectives mean 'a little bit like'",
+        "The way someone or something looks.",
+        "A feeling of worry or nervousness."
+      ],
+      "question": "What does '-ish' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "Feeling worried or nervous about something.",
+        "The way someone or something looks.",
+        "A strong feeling of being annoyed or unhappy.",
+        "A feeling of worry or nervousness."
+      ],
+      "question": "What does 'anger' mean?"
+    },
+    {
+      "answer": 0,
+      "options": [
+        "A feeling of worry or nervousness.",
+        "A strong feeling of being annoyed or unhappy.",
+        "Feeling worried or nervous about something.",
+        "The way someone or something looks."
+      ],
+      "question": "What does 'anxiety' mean?"
+    },
+    {
+      "answer": 2,
+      "options": [
+        "The way someone or something looks.",
+        "A feeling of worry or nervousness.",
+        "Feeling worried or nervous about something.",
+        "A strong feeling of being annoyed or unhappy."
+      ],
+      "question": "What does 'anxious' mean?"
+    },
+    {
+      "answer": 1,
+      "options": [
+        "Feeling worried or nervous about something.",
+        "The way someone or something looks.",
+        "A strong feeling of being annoyed or unhappy.",
+        "A feeling of worry or nervousness."
+      ],
+      "question": "What does 'appearance' mean?"
+    }
+  ],
+  "shadowing": {
+    "audio": "media/a2/2026-10-26/shadowing.mp3",
+    "sentence_audio": [
+      "media/a2/2026-10-26/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/022.mp3",
+      "media/a2/2026-10-26/shadowing-sentences/023.mp3"
+    ],
+    "title": "Sara's Calm Test Day",
+    "transcript": "media/a2/2026-10-26/shadowing-transcript.txt"
+  },
+  "theme": "emotions & character",
+  "words": [
+    {
+      "example": "She has reddish hair, a little bit red.",
+      "meaning": "makes adjectives mean 'a little bit like'",
+      "persian": "پسوند (تقریباً، کمی)",
+      "photo": "media/a2/2026-10-26/photos/-ish.jpg",
+      "pos": "suffix",
+      "pronunciation": "ISH",
+      "word": "-ish",
+      "word_audio": "media/a2/2026-10-26/word-audio/-ish.mp3"
+    },
+    {
+      "example": "He felt a lot of anger about the unfair decision.",
+      "meaning": "A strong feeling of being annoyed or unhappy.",
+      "persian": "خشم، عصبانیت",
+      "photo": "media/a2/2026-10-26/photos/anger.jpg",
+      "pos": "noun",
+      "pronunciation": "ANG-ger",
+      "word": "anger",
+      "word_audio": "media/a2/2026-10-26/word-audio/anger.mp3"
+    },
+    {
+      "example": "She felt anxiety before the exam.",
+      "meaning": "A feeling of worry or nervousness.",
+      "persian": "اضطراب، نگرانی",
+      "photo": "media/a2/2026-10-26/photos/anxiety.jpg",
+      "pos": "noun",
+      "pronunciation": "ang-ZY-uh-tee",
+      "word": "anxiety",
+      "word_audio": "media/a2/2026-10-26/word-audio/anxiety.mp3"
+    },
+    {
+      "example": "I feel anxious about my test.",
+      "meaning": "Feeling worried or nervous about something.",
+      "persian": "مضطرب، نگران",
+      "photo": "media/a2/2026-10-26/photos/anxious.jpg",
+      "pos": "adjective",
+      "pronunciation": "ANGK-shus",
+      "word": "anxious",
+      "word_audio": "media/a2/2026-10-26/word-audio/anxious.mp3"
+    },
+    {
+      "example": "Her appearance changed after her haircut.",
+      "meaning": "The way someone or something looks.",
+      "persian": "ظاهر، قیافه",
+      "photo": "media/a2/2026-10-26/photos/appearance.jpg",
+      "pos": "noun",
+      "pronunciation": "uh-PEER-unss",
+      "word": "appearance",
+      "word_audio": "media/a2/2026-10-26/word-audio/appearance.mp3"
+    }
+  ]
+}

@@ -1,0 +1,325 @@
+{
+  "date": "2026-10-26",
+  "theme": "technology",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "(the) Web",
+      "pos": "noun",
+      "meaning": "the internet, a system of linked computer documents",
+      "example": "I found the information I needed on the Web.",
+      "pronunciation": "WEB",
+      "persian": "اینترنت، وب",
+      "photo": "media/b2/2026-10-26/photos/Web.jpg",
+      "word_audio": "media/b2/2026-10-26/word-audio/Web.mp3"
+    },
+    {
+      "word": "account",
+      "pos": "noun",
+      "meaning": "a record of your money or online profile",
+      "example": "I need to create an account to use this app.",
+      "pronunciation": "uh-KOWNT",
+      "persian": "حساب کاربری، حساب بانکی",
+      "photo": "media/b2/2026-10-26/photos/account.jpg",
+      "word_audio": "media/b2/2026-10-26/word-audio/account.mp3"
+    },
+    {
+      "word": "address",
+      "pos": "noun",
+      "meaning": "The number and street where you live.",
+      "example": "What is your home address?",
+      "pronunciation": "uh-DRES",
+      "persian": "آدرس",
+      "photo": "media/b2/2026-10-26/photos/address.jpg",
+      "word_audio": "media/b2/2026-10-26/word-audio/address.mp3"
+    },
+    {
+      "word": "alter",
+      "pos": "verb",
+      "meaning": "To change something, usually slightly.",
+      "example": "We need to alter the plan slightly.",
+      "pronunciation": "AWL-tur",
+      "persian": "تغییر دادن، عوض کردن",
+      "photo": "media/b2/2026-10-26/photos/alter.jpg",
+      "word_audio": "media/b2/2026-10-26/word-audio/alter.mp3"
+    },
+    {
+      "word": "analyse",
+      "pos": "verb",
+      "meaning": "To examine something carefully to understand it.",
+      "example": "We need to analyse the data to find a solution.",
+      "pronunciation": "AN-uh-lyz",
+      "persian": "تحلیل کردن، تجزیه و تحلیل کردن",
+      "photo": "media/b2/2026-10-26/photos/analyse.jpg",
+      "word_audio": "media/b2/2026-10-26/word-audio/analyse.mp3"
+    },
+    {
+      "word": "app",
+      "pos": "noun",
+      "meaning": "A small computer program for a phone.",
+      "example": "I downloaded a new app for learning English.",
+      "pronunciation": "AP",
+      "persian": "اپلیکیشن، برنامه",
+      "photo": "media/b2/2026-10-26/photos/app.jpg",
+      "word_audio": "media/b2/2026-10-26/word-audio/app.mp3"
+    },
+    {
+      "word": "application",
+      "pos": "noun",
+      "meaning": "A formal request, often for a course or job.",
+      "example": "Her application for university was successful.",
+      "pronunciation": "ap-li-KAY-shun",
+      "persian": "درخواست، تقاضا",
+      "photo": "media/b2/2026-10-26/photos/application.jpg",
+      "word_audio": "media/b2/2026-10-26/word-audio/application.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-10-26/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Tech That Connects Us",
+    "audio": "media/b2/2026-10-26/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-10-26/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Tech Week",
+    "audio": "media/b2/2026-10-26/shadowing.mp3",
+    "transcript": "media/b2/2026-10-26/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-10-26/shadowing-sentences/001.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/002.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/003.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/004.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/005.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/006.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/007.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/008.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/009.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/010.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/011.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/012.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/013.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/014.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/015.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/016.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/017.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/018.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/019.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/020.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/021.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/022.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/023.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/024.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/025.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/026.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/027.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/028.mp3",
+      "media/b2/2026-10-26/shadowing-sentences/029.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does '(the) Web' mean?",
+      "options": [
+        "To change something, usually slightly.",
+        "the internet, a system of linked computer documents",
+        "To examine something carefully to understand it.",
+        "A small computer program for a phone."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'account' mean?",
+      "options": [
+        "the internet, a system of linked computer documents",
+        "To change something, usually slightly.",
+        "a record of your money or online profile",
+        "A formal request, often for a course or job."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'address' mean?",
+      "options": [
+        "A formal request, often for a course or job.",
+        "To examine something carefully to understand it.",
+        "The number and street where you live.",
+        "a record of your money or online profile"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'alter' mean?",
+      "options": [
+        "The number and street where you live.",
+        "To examine something carefully to understand it.",
+        "To change something, usually slightly.",
+        "a record of your money or online profile"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'analyse' mean?",
+      "options": [
+        "To examine something carefully to understand it.",
+        "the internet, a system of linked computer documents",
+        "a record of your money or online profile",
+        "The number and street where you live."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'app' mean?",
+      "options": [
+        "A formal request, often for a course or job.",
+        "The number and street where you live.",
+        "A small computer program for a phone.",
+        "a record of your money or online profile"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'application' mean?",
+      "options": [
+        "the internet, a system of linked computer documents",
+        "A formal request, often for a course or job.",
+        "a record of your money or online profile",
+        "To examine something carefully to understand it."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "examples": [
+      "*I **remember watching** this cartoon as a kid.* (a memory)",
+      "*Did you **remember to call** the dentist?* (something to do)",
+      "*She **stopped eating** meat ten years ago.* (does not do it now)",
+      "*He **stopped to tie** his shoelace.* (in order to do something else)",
+      "*I **tried to open** the jar, but it was too tight.* (an effort)",
+      "*Try **turning** it off and on again.* (an experiment)"
+    ],
+    "explanation": "Some verbs can take both **-ing** and **to** + verb, but the meaning changes.\n\n**Remember** + **-ing** means a memory of something you did before. **Remember to** means something you still need to do.\n\n**Stop** + **-ing** means you do not do something any more. **Stop to** means you stop one thing in order to do another.\n\n**Try to** means you make an effort, and it may be difficult. **Try** + **-ing** means you do something as an experiment, to see if it works.\n\n**Regret** + **-ing** means you are sorry about something you did. **Regret to** is formal, and it introduces bad news.\n\n**Go on** + **-ing** means you continue the same activity. **Go on to** means you do something new next.\n\n**Mean to** means you intend something. **Mean** + **-ing** means something involves a result. **Need** + **-ing** has a passive meaning: something needs to be done.",
+    "practice": [
+      {
+        "a": "I remember watching this film when I was a child.",
+        "q": "Rewrite using remember + -ing: I watched this film when I was a child, and I still think about it."
+      },
+      {
+        "a": "We stopped to have a coffee.",
+        "q": "Rewrite using stop + to: We were driving, and then we had a coffee."
+      },
+      {
+        "a": "Try drinking warm milk.",
+        "q": "Rewrite using try + -ing: You cannot sleep. Do this as an experiment: drink warm milk."
+      },
+      {
+        "a": "The Web page needs cleaning.",
+        "q": "Rewrite using need + -ing: The Web page for my application is messy. Somebody should clean it."
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 2,
+        "options": [
+          "to watch",
+          "watch",
+          "watching",
+          "to have watch"
+        ],
+        "question": "I remember ___ this film when I was a child. I loved it."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "locking",
+          "to lock",
+          "lock",
+          "locked"
+        ],
+        "question": "Please remember ___ the door when you leave."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "to smoke",
+          "smoke",
+          "to smoking",
+          "smoking"
+        ],
+        "question": "He stopped ___ ten years ago, and he feels much healthier now."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "to have",
+          "having",
+          "have",
+          "to having"
+        ],
+        "question": "We were driving for hours, so we stopped ___ a coffee."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "concentrating",
+          "to concentrate",
+          "concentrate",
+          "concentrated"
+        ],
+        "question": "Please be quiet. I'm trying ___."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "for drinking",
+          "drink",
+          "drank",
+          "drinking"
+        ],
+        "question": "If you can't sleep, try ___ a glass of warm milk before bed."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "being",
+          "to be",
+          "be",
+          "to being"
+        ],
+        "question": "I regret ___ so rude to her. I should apologise."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "to talk",
+          "talk",
+          "talked",
+          "talking"
+        ],
+        "question": "After the break, the teacher went on ___ about the same topic for another hour."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "to come",
+          "come",
+          "came",
+          "coming"
+        ],
+        "question": "If you take this job, it will mean ___ to work every weekend."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "wash",
+          "to wash",
+          "washing",
+          "washed"
+        ],
+        "question": "The car is really dirty. It needs ___."
+      }
+    ],
+    "title": "Verbs That Change Meaning: -ing or To-Infinitive"
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "date": "2026-10-26",
+  "theme": "technology",
+  "level": "c2",
+  "cefr": "C2",
+  "words": [
+    {
+      "word": "AI",
+      "pos": "noun",
+      "meaning": "Artificial intelligence; computer systems performing human-like tasks.",
+      "example": "AI is transforming many industries rapidly.",
+      "pronunciation": "AY-EYE",
+      "persian": "هوش مصنوعی",
+      "photo": "media/c2/2026-10-26/photos/AI.jpg",
+      "word_audio": "media/c2/2026-10-26/word-audio/AI.mp3"
+    },
+    {
+      "word": "analogue",
+      "pos": "adjective",
+      "meaning": "Relating to a signal or data that is continuous.",
+      "example": "Many older devices still use analogue technology.",
+      "pronunciation": "AN-uh-log",
+      "persian": "آنالوگ، قیاسی",
+      "photo": "media/c2/2026-10-26/photos/analogue.jpg",
+      "word_audio": "media/c2/2026-10-26/word-audio/analogue.mp3"
+    },
+    {
+      "word": "artificial intelligence",
+      "pos": "noun",
+      "meaning": "Computer systems performing tasks normally requiring human intelligence.",
+      "example": "Artificial intelligence is transforming many industries rapidly.",
+      "pronunciation": "ar-tuh-FISH-ul in-TEL-uh-junss",
+      "persian": "هوش مصنوعی",
+      "photo": "media/c2/2026-10-26/photos/artificial intelligence.jpg",
+      "word_audio": "media/c2/2026-10-26/word-audio/artificial intelligence.mp3"
+    },
+    {
+      "word": "biotechnology",
+      "pos": "noun",
+      "meaning": "Using living organisms to develop products or processes.",
+      "example": "Biotechnology offers solutions for medicine and agriculture.",
+      "pronunciation": "by-oh-tek-NOL-uh-jee",
+      "persian": "بیوتکنولوژی، زیست‌فناوری",
+      "photo": "media/c2/2026-10-26/photos/biotechnology.jpg",
+      "word_audio": "media/c2/2026-10-26/word-audio/biotechnology.mp3"
+    },
+    {
+      "word": "Bluetooth™",
+      "pos": "noun",
+      "meaning": "Wireless technology for short-range device communication.",
+      "example": "My headphones connect to my phone via Bluetooth.",
+      "pronunciation": "BLOO-tooth",
+      "persian": "بلوتوث",
+      "photo": "media/c2/2026-10-26/photos/Bluetooth™.jpg",
+      "word_audio": "media/c2/2026-10-26/word-audio/Bluetooth™.mp3"
+    },
+    {
+      "word": "cloning",
+      "pos": "noun",
+      "meaning": "The process of creating an exact genetic copy of an organism.",
+      "example": "Ethical debates surround the potential of human cloning.",
+      "pronunciation": "KLOH-ning",
+      "persian": "شبیه‌سازی",
+      "photo": "media/c2/2026-10-26/photos/cloning.jpg",
+      "word_audio": "media/c2/2026-10-26/word-audio/cloning.mp3"
+    },
+    {
+      "word": "designer baby",
+      "pos": "noun phrase",
+      "meaning": "A baby whose genetic makeup is chosen by parents.",
+      "example": "The ethics of creating a designer baby are widely debated.",
+      "pronunciation": "dih-ZY-ner BAY-bee",
+      "persian": "نوزاد مهندسی ژنتیک شده",
+      "photo": "media/c2/2026-10-26/photos/designer baby.jpg",
+      "word_audio": "media/c2/2026-10-26/word-audio/designer baby.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-26/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Technology That Changes Life",
+    "audio": "media/c2/2026-10-26/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-26/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Day at the Science Museum",
+    "audio": "media/c2/2026-10-26/shadowing.mp3",
+    "transcript": "media/c2/2026-10-26/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c2/2026-10-26/shadowing-sentences/001.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/002.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/003.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/004.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/005.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/006.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/007.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/008.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/009.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/010.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/011.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/012.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/013.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/014.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/015.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/016.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/017.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/018.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/019.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/020.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/021.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/022.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/023.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/024.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/025.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/026.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/027.mp3",
+      "media/c2/2026-10-26/shadowing-sentences/028.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'AI' mean?",
+      "options": [
+        "Computer systems performing tasks normally requiring human intelligence.",
+        "Artificial intelligence; computer systems performing human-like tasks.",
+        "Relating to a signal or data that is continuous.",
+        "The process of creating an exact genetic copy of an organism."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'analogue' mean?",
+      "options": [
+        "Using living organisms to develop products or processes.",
+        "Relating to a signal or data that is continuous.",
+        "Artificial intelligence; computer systems performing human-like tasks.",
+        "Wireless technology for short-range device communication."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'artificial intelligence' mean?",
+      "options": [
+        "Computer systems performing tasks normally requiring human intelligence.",
+        "The process of creating an exact genetic copy of an organism.",
+        "A baby whose genetic makeup is chosen by parents.",
+        "Using living organisms to develop products or processes."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'biotechnology' mean?",
+      "options": [
+        "Artificial intelligence; computer systems performing human-like tasks.",
+        "Using living organisms to develop products or processes.",
+        "Relating to a signal or data that is continuous.",
+        "Computer systems performing tasks normally requiring human intelligence."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'Bluetooth™' mean?",
+      "options": [
+        "Relating to a signal or data that is continuous.",
+        "Wireless technology for short-range device communication.",
+        "Using living organisms to develop products or processes.",
+        "A baby whose genetic makeup is chosen by parents."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cloning' mean?",
+      "options": [
+        "A baby whose genetic makeup is chosen by parents.",
+        "The process of creating an exact genetic copy of an organism.",
+        "Wireless technology for short-range device communication.",
+        "Using living organisms to develop products or processes."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'designer baby' mean?",
+      "options": [
+        "A baby whose genetic makeup is chosen by parents.",
+        "The process of creating an exact genetic copy of an organism.",
+        "Computer systems performing tasks normally requiring human intelligence.",
+        "Relating to a signal or data that is continuous."
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Cleft Sentences (It was... that, What I need is...)",
+    "explanation": "A **cleft sentence** splits one idea into two parts to **emphasise** one of them. For example, Tom broke the window becomes **It was Tom who** broke the window.\n\nAn **it-cleft** puts the emphasised part after **It is** or **It was**, then adds **that** or **who**. Use **who** for people and **that** for things, places, or times.\n\nThe verb stays singular even with a plural focus: **It was** my parents who paid. We often use it-clefts to correct someone.\n\nA **wh-cleft** starts with a **what** clause, then **is** or **was**, then the focus. **What I need is** a holiday is a typical example.\n\nFor actions, use **do**: **What I did was** call the manager. For events, use **What happened was (that)**. Similar patterns are **All I want is**, **The thing that**, **The reason why**, and **The place where**.\n\nDo not add **it** after a what clause: say **What I like is**, not What I like it is. In a debate about a designer baby or about cloning, a cleft sentence lets you stress exactly what matters: **It is** the ethics **that** worry people, not the technology itself.",
+    "examples": [
+      "* **It was my sister who** told me the news.* (it-cleft, person)",
+      "* **It's** the noise **that** I can't stand, not the heat.* (it-cleft, thing)",
+      "* **It was** in Paris **that** they first met.* (it-cleft, place)",
+      "* **What I need is** a long holiday.* (wh-cleft)",
+      "* **What we did was** book a taxi.* (wh-cleft, action)",
+      "* **The reason why** I'm late **is** that the train was cancelled.* (the reason why)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite using an it-cleft to emphasise biotechnology: Biotechnology saved the patient.",
+        "a": "It was biotechnology that saved the patient."
+      },
+      {
+        "q": "Rewrite as a wh-cleft: We need clear rules for cloning.",
+        "a": "What we need is clear rules for cloning."
+      },
+      {
+        "q": "Rewrite using 'The reason why': She chose an analogue radio because she loved its warm sound.",
+        "a": "The reason why she chose an analogue radio was that she loved its warm sound."
+      },
+      {
+        "q": "Rewrite using 'All I want is': I want a Bluetooth speaker.",
+        "a": "All I want is a Bluetooth speaker."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "___ I need is a long holiday.",
+        "options": [
+          "That",
+          "Which",
+          "It",
+          "What"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "It was my sister ___ told me the news.",
+        "options": [
+          "what",
+          "who",
+          "which",
+          "when"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "It was in 2015 ___ we moved to Canada.",
+        "options": [
+          "where",
+          "which",
+          "that",
+          "what"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What I did ___ call the manager.",
+        "options": [
+          "was",
+          "is being",
+          "did",
+          "were"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "All I want ___ a cup of tea.",
+        "options": [
+          "is",
+          "are",
+          "be",
+          "it is"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ annoys me is people who talk during films.",
+        "options": [
+          "It",
+          "That",
+          "What",
+          "Which"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "It's not the money I care about. ___ the people I work with.",
+        "options": [
+          "It's what",
+          "What it's",
+          "That's it",
+          "It's"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The reason ___ I left was the long working hours.",
+        "options": [
+          "what",
+          "why",
+          "because",
+          "how"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What happened ___ that the car broke down.",
+        "options": [
+          "it was",
+          "did",
+          "was",
+          "has"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "It was only when I got home ___ I realised I'd lost my phone.",
+        "options": [
+          "when",
+          "what",
+          "then",
+          "that"
+        ],
+        "answer": 3
+      }
+    ]
+  }
+}

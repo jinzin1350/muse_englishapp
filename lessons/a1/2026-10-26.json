@@ -1,0 +1,276 @@
+{
+  "date": "2026-10-26",
+  "theme": "health & body",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "aspirin",
+      "pos": "noun",
+      "meaning": "A common medicine for pain or fever.",
+      "example": "I took an aspirin for my headache.",
+      "pronunciation": "AS-prin",
+      "persian": "آسپرین",
+      "photo": "media/a1/2026-10-26/photos/aspirin.jpg",
+      "word_audio": "media/a1/2026-10-26/word-audio/aspirin.mp3"
+    },
+    {
+      "word": "asthma",
+      "pos": "noun",
+      "meaning": "A health problem making it hard to breathe.",
+      "example": "My friend has asthma and uses an inhaler.",
+      "pronunciation": "AZ-muh",
+      "persian": "آسم، تنگی نفس",
+      "photo": "media/a1/2026-10-26/photos/asthma.jpg",
+      "word_audio": "media/a1/2026-10-26/word-audio/asthma.mp3"
+    },
+    {
+      "word": "blood",
+      "pos": "noun",
+      "meaning": "The red liquid inside your body.",
+      "example": "I saw some blood on my hand.",
+      "pronunciation": "BLUD",
+      "persian": "خون",
+      "photo": "media/a1/2026-10-26/photos/blood.jpg",
+      "word_audio": "media/a1/2026-10-26/word-audio/blood.mp3"
+    },
+    {
+      "word": "body",
+      "pos": "noun",
+      "meaning": "The whole physical structure of a person or animal.",
+      "example": "Your body needs food and water.",
+      "pronunciation": "BOD-ee",
+      "persian": "بدن",
+      "photo": "media/a1/2026-10-26/photos/body.jpg",
+      "word_audio": "media/a1/2026-10-26/word-audio/body.mp3"
+    },
+    {
+      "word": "brain",
+      "pos": "noun",
+      "meaning": "The organ inside your head that controls thought.",
+      "example": "Your brain helps you think and learn new things.",
+      "pronunciation": "BRAYN",
+      "persian": "مغز",
+      "photo": "media/a1/2026-10-26/photos/brain.jpg",
+      "word_audio": "media/a1/2026-10-26/word-audio/brain.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-26/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Health and Body",
+    "audio": "media/a1/2026-10-26/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-26/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Body, My Brain",
+    "audio": "media/a1/2026-10-26/shadowing.mp3",
+    "transcript": "media/a1/2026-10-26/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-26/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/016.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/017.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/018.mp3",
+      "media/a1/2026-10-26/shadowing-sentences/019.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'aspirin' mean?",
+      "options": [
+        "The red liquid inside your body.",
+        "A common medicine for pain or fever.",
+        "The organ inside your head that controls thought.",
+        "The whole physical structure of a person or animal."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'asthma' mean?",
+      "options": [
+        "A health problem making it hard to breathe.",
+        "The red liquid inside your body.",
+        "A common medicine for pain or fever.",
+        "The whole physical structure of a person or animal."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'blood' mean?",
+      "options": [
+        "The organ inside your head that controls thought.",
+        "The whole physical structure of a person or animal.",
+        "The red liquid inside your body.",
+        "A health problem making it hard to breathe."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'body' mean?",
+      "options": [
+        "A common medicine for pain or fever.",
+        "The organ inside your head that controls thought.",
+        "A health problem making it hard to breathe.",
+        "The whole physical structure of a person or animal."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'brain' mean?",
+      "options": [
+        "The whole physical structure of a person or animal.",
+        "The organ inside your head that controls thought.",
+        "The red liquid inside your body.",
+        "A common medicine for pain or fever."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Imperatives (Open the door, Don't be late)",
+    "explanation": "We use the **imperative** to tell people what to do. It gives instructions, directions, warnings, advice, and invitations.\n\nThe form is easy. Use the **base form** of the verb, with no subject. Say **Open** the door, not Opens the door.\n\nFor a negative, use **Don't** plus the verb. Say **Don't touch** that. Say **Don't be** late.\n\nFor a suggestion, use **Let's** plus the verb. Say **Let's drink** water for our body.\n\nAdd **please** to be polite. Say **Please sit** down. **Always** and **never** go before the verb: **Never tell** anyone your password.",
+    "examples": [
+      "* **Sit** down, please. (polite instruction)",
+      "* **Don't** forget your keys. (negative)",
+      "* **Turn** right at the traffic lights. (directions)",
+      "* **Be** careful. The floor is wet. (warning with be)",
+      "* **Let's** have a pizza tonight. (suggestion)",
+      "* **Never** leave your bag on the train. (never + imperative)"
+    ],
+    "practice": [
+      {
+        "q": "Tell a friend to take care of his body.",
+        "a": "Take care of your body."
+      },
+      {
+        "q": "Tell a friend not to forget his aspirin.",
+        "a": "Don't forget your aspirin."
+      },
+      {
+        "q": "Suggest that you and a friend drink water for your blood.",
+        "a": "Let's drink water for our blood."
+      },
+      {
+        "q": "Warn a friend not to be late for the doctor.",
+        "a": "Don't be late for the doctor."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "___ the door, please. It's cold.",
+        "options": [
+          "Closes",
+          "Close",
+          "Closing",
+          "To close"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ touch that! It's hot.",
+        "options": [
+          "No",
+          "Not",
+          "Doesn't",
+          "Don't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ late for class tomorrow.",
+        "options": [
+          "Don't be",
+          "Don't",
+          "Not be",
+          "Be not"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "It's a beautiful day. ___ go to the park!",
+        "options": [
+          "Let",
+          "Let us to",
+          "Let's",
+          "Lets"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ the lights when you leave.",
+        "options": [
+          "Turning off",
+          "Turns off",
+          "Turn off",
+          "To turning off"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Turn left at the bank and ___ straight on.",
+        "options": [
+          "go",
+          "goes",
+          "going",
+          "to go"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ your hands before dinner.",
+        "options": [
+          "Washing",
+          "To wash",
+          "Washes",
+          "Wash"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Please ___ your phone in class.",
+        "options": [
+          "not use",
+          "don't use",
+          "no use",
+          "doesn't use"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ forget your umbrella. It's going to rain.",
+        "options": [
+          "Don't",
+          "Not",
+          "No",
+          "Doesn't"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "Let's to have a pizza.",
+          "Let's having a pizza.",
+          "Let's have a pizza.",
+          "Let's has a pizza."
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a1/2026-10-26/grammar-en.mp3"
+  }
+}
