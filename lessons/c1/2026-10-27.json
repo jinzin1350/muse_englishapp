@@ -1,0 +1,395 @@
+{
+  "date": "2026-10-27",
+  "theme": "review day",
+  "level": "c1",
+  "cefr": "C1",
+  "review": true,
+  "review_of": [
+    "2026-10-24",
+    "2026-10-25",
+    "2026-10-26"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "altruistic",
+      "pos": "adjective",
+      "meaning": "Showing selfless concern for the well-being of others.",
+      "example": "His altruistic actions benefited the entire community.",
+      "pronunciation": "al-troo-ISS-tik",
+      "persian": "نوع‌دوست، فداکار",
+      "photo": "media/c1/2026-10-24/photos/altruistic.jpg",
+      "word_audio": "media/c1/2026-10-24/word-audio/altruistic.mp3"
+    },
+    {
+      "word": "brisk",
+      "pos": "adjective",
+      "meaning": "Quick and energetic.",
+      "example": "We took a brisk walk to warm up.",
+      "pronunciation": "BRISK",
+      "persian": "سریع و پرانرژی، تند",
+      "photo": "media/c1/2026-10-25/photos/brisk.jpg",
+      "word_audio": "media/c1/2026-10-25/word-audio/brisk.mp3"
+    },
+    {
+      "word": "cardiovascular",
+      "pos": "adjective",
+      "meaning": "Relating to the heart and blood vessels.",
+      "example": "Regular exercise improves cardiovascular health significantly.",
+      "pronunciation": "kar-dee-oh-VAS-kyuh-ler",
+      "persian": "قلبی عروقی",
+      "photo": "media/c1/2026-10-25/photos/cardiovascular.jpg",
+      "word_audio": "media/c1/2026-10-25/word-audio/cardiovascular.mp3"
+    },
+    {
+      "word": "allocate funds",
+      "pos": "phrase",
+      "meaning": "To distribute money for a particular purpose.",
+      "example": "The government will allocate funds for education.",
+      "pronunciation": "AL-uh-kayt FUNDZ",
+      "persian": "تخصیص بودجه، اختصاص وجوه",
+      "photo": "media/c1/2026-10-26/photos/allocate funds.jpg",
+      "word_audio": "media/c1/2026-10-26/word-audio/allocate funds.mp3"
+    },
+    {
+      "word": "achieve economic growth",
+      "pos": "phrase",
+      "meaning": "To increase a country's wealth and prosperity.",
+      "example": "Governments aim to achieve economic growth.",
+      "pronunciation": "uh-CHEEV ek-uh-NOM-ik GROHTH",
+      "persian": "دستیابی به رشد اقتصادی",
+      "photo": "media/c1/2026-10-26/photos/achieve economic growth.jpg",
+      "word_audio": "media/c1/2026-10-26/word-audio/achieve economic growth.mp3"
+    },
+    {
+      "word": "abject poverty",
+      "pos": "phrase",
+      "meaning": "The state of being extremely poor and without hope.",
+      "example": "Millions live in abject poverty worldwide.",
+      "pronunciation": "AB-jekt POV-er-tee",
+      "persian": "فقر مطلق، فقر شدید",
+      "photo": "media/c1/2026-10-26/photos/abject poverty.jpg",
+      "word_audio": "media/c1/2026-10-26/word-audio/abject poverty.mp3"
+    },
+    {
+      "word": "alleviate debt",
+      "pos": "phrase",
+      "meaning": "To make debt less severe or burdensome.",
+      "example": "The new policy aims to alleviate debt for students.",
+      "pronunciation": "uh-LEE-vee-ayt DET",
+      "persian": "کاهش بدهی، سبک کردن بدهی",
+      "photo": "media/c1/2026-10-26/photos/alleviate debt.jpg",
+      "word_audio": "media/c1/2026-10-26/word-audio/alleviate debt.mp3"
+    },
+    {
+      "word": "alarming",
+      "pos": "adjective",
+      "meaning": "Causing worry or fear.",
+      "example": "The rise in crime rates is alarming.",
+      "pronunciation": "uh-LAR-ming",
+      "persian": "نگران‌کننده، هشداردهنده",
+      "photo": "media/c1/2026-10-24/photos/alarming.jpg",
+      "word_audio": "media/c1/2026-10-24/word-audio/alarming.mp3"
+    },
+    {
+      "word": "abhorrence",
+      "pos": "noun",
+      "meaning": "A feeling of intense dislike or hatred.",
+      "example": "His abhorrence for violence was evident.",
+      "pronunciation": "ab-HOR-unss",
+      "persian": "تنفر، انزجار",
+      "photo": "media/c1/2026-10-24/photos/abhorrence.jpg",
+      "word_audio": "media/c1/2026-10-24/word-audio/abhorrence.mp3"
+    },
+    {
+      "word": "clog",
+      "pos": "verb",
+      "meaning": "To block something, preventing movement or flow.",
+      "example": "Leaves can clog the drains during autumn storms.",
+      "pronunciation": "KLOG",
+      "persian": "مسدود کردن، گرفتگی ایجاد کردن",
+      "photo": "media/c1/2026-10-25/photos/clog.jpg",
+      "word_audio": "media/c1/2026-10-25/word-audio/clog.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-27/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day",
+    "audio": "media/c1/2026-10-27/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-27/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Walk That Changed a Town",
+    "audio": "media/c1/2026-10-27/shadowing.mp3",
+    "transcript": "media/c1/2026-10-27/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-10-27/shadowing-sentences/001.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/002.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/003.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/004.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/005.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/006.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/007.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/008.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/009.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/010.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/011.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/012.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/013.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/014.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/015.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/016.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/017.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/018.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/019.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/020.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/021.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/022.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/023.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/024.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/025.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/026.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/027.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/028.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/029.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/030.mp3",
+      "media/c1/2026-10-27/shadowing-sentences/031.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'altruistic' mean?",
+      "options": [
+        "A feeling of intense dislike or hatred.",
+        "Relating to the heart and blood vessels.",
+        "To increase a country's wealth and prosperity.",
+        "Showing selfless concern for the well-being of others."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'brisk' mean?",
+      "options": [
+        "Showing selfless concern for the well-being of others.",
+        "A feeling of intense dislike or hatred.",
+        "The state of being extremely poor and without hope.",
+        "Quick and energetic."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'cardiovascular' mean?",
+      "options": [
+        "Relating to the heart and blood vessels.",
+        "The state of being extremely poor and without hope.",
+        "To increase a country's wealth and prosperity.",
+        "To distribute money for a particular purpose."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'allocate funds' mean?",
+      "options": [
+        "Causing worry or fear.",
+        "To distribute money for a particular purpose.",
+        "Relating to the heart and blood vessels.",
+        "The state of being extremely poor and without hope."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'achieve economic growth' mean?",
+      "options": [
+        "To block something, preventing movement or flow.",
+        "Relating to the heart and blood vessels.",
+        "To increase a country's wealth and prosperity.",
+        "Showing selfless concern for the well-being of others."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'abject poverty' mean?",
+      "options": [
+        "To increase a country's wealth and prosperity.",
+        "To block something, preventing movement or flow.",
+        "Quick and energetic.",
+        "The state of being extremely poor and without hope."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'alleviate debt' mean?",
+      "options": [
+        "Showing selfless concern for the well-being of others.",
+        "Quick and energetic.",
+        "To distribute money for a particular purpose.",
+        "To make debt less severe or burdensome."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'alarming' mean?",
+      "options": [
+        "Showing selfless concern for the well-being of others.",
+        "Relating to the heart and blood vessels.",
+        "Causing worry or fear.",
+        "To make debt less severe or burdensome."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'abhorrence' mean?",
+      "options": [
+        "A feeling of intense dislike or hatred.",
+        "Quick and energetic.",
+        "To increase a country's wealth and prosperity.",
+        "Showing selfless concern for the well-being of others."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'clog' mean?",
+      "options": [
+        "Causing worry or fear.",
+        "To distribute money for a particular purpose.",
+        "To block something, preventing movement or flow.",
+        "To increase a country's wealth and prosperity."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Participle Clauses (-ing, -ed, having done)",
+    "explanation": "A **participle clause** is a short way to give information without a full clause.\n\nInstead of saying **as she opened the door, she saw**, you can say **opening the door, she saw**.\n\nThere are three main types. **-ing** is active and happens at the same time or gives a reason.\n\n**-ed** is passive, as in **built in 1889**. **Having + -ed** shows one action finished before another.\n\nA participle can also replace a relative clause. **The woman sitting next to me** means the woman who is sitting next to me.\n\nYou can keep a conjunction for clarity, as in **before leaving** or **while living** in Japan.\n\nThe participle clause and the main clause must share the **same subject**. Otherwise you get a dangling participle, which sounds wrong or funny.",
+    "examples": [
+      "*Realising it was late, we took a taxi.* (reason, active)",
+      "*Woken by the noise, the baby started crying.* (passive)",
+      "*Having left his keys at home, he couldn't get in.* (earlier action)",
+      "*Not knowing the area, we got lost.* (negative)",
+      "*Anyone wishing to join should contact the secretary.* (reduced relative, active)",
+      "*Most of the people invited to the party were old friends.* (reduced relative, passive)"
+    ],
+    "practice": [
+      {
+        "q": "Because she walked briskly, she arrived on time.",
+        "a": "Walking briskly, she arrived on time."
+      },
+      {
+        "q": "After the city allocated funds for clinics, it improved public health.",
+        "a": "Having allocated funds for clinics, the city improved public health."
+      },
+      {
+        "q": "Because the report was alarming, the committee acted quickly.",
+        "a": "Alarmed by the report, the committee acted quickly."
+      },
+      {
+        "q": "The government wanted to alleviate debt, so it changed the rules.",
+        "a": "Wanting to alleviate debt, the government changed the rules."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "___ in 1889, the Eiffel Tower is now a symbol of France.",
+        "options": [
+          "Building",
+          "Built",
+          "Having built",
+          "To build"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ the door, she realised someone had been in the house.",
+        "options": [
+          "Opening",
+          "Opened",
+          "Being opened",
+          "To have opened"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Most of the people ___ to the party were old friends.",
+        "options": [
+          "inviting",
+          "having invited",
+          "invited",
+          "invite"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Not ___ what to say, I stayed silent.",
+        "options": [
+          "knowing not",
+          "knew",
+          "knowing",
+          "known"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Anyone ___ to join the club should contact the secretary.",
+        "options": [
+          "wished",
+          "wishing",
+          "wish",
+          "having wished"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The letter, ___ in pencil, was hard to read.",
+        "options": [
+          "written",
+          "writing",
+          "having written",
+          "wrote"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the sentence with a correct participle clause.",
+        "options": [
+          "Walking home, the rain started.",
+          "Walked home, I got wet.",
+          "Walking home, I got caught in the rain.",
+          "Having walking home, I got wet."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "While ___ in Japan, I learned a lot about the culture.",
+        "options": [
+          "live",
+          "lived",
+          "living",
+          "to live"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The bridge ___ now is going to be the longest in the country.",
+        "options": [
+          "building",
+          "being built",
+          "built",
+          "having built"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ by his friends, he felt very lonely.",
+        "options": [
+          "Abandoned",
+          "Abandoning",
+          "Having abandoned",
+          "To abandon"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

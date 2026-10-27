@@ -1,0 +1,384 @@
+{
+  "date": "2026-10-27",
+  "theme": "review day",
+  "level": "a1",
+  "cefr": "A1",
+  "review": true,
+  "review_of": [
+    "2026-10-24",
+    "2026-10-25",
+    "2026-10-26"
+  ],
+  "review_window_words": 15,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "brain",
+      "pos": "noun",
+      "meaning": "The organ inside your head that controls thought.",
+      "example": "Your brain helps you think and learn new things.",
+      "pronunciation": "BRAYN",
+      "persian": "مغز",
+      "photo": "media/a1/2026-10-26/photos/brain.jpg",
+      "word_audio": "media/a1/2026-10-26/word-audio/brain.mp3"
+    },
+    {
+      "word": "actually",
+      "pos": "adverb",
+      "meaning": "used to emphasize what is true or real",
+      "example": "I thought it was easy, but actually it was hard.",
+      "pronunciation": "AK-choo-uh-lee",
+      "persian": "در واقع، حقیقتاً",
+      "photo": "media/a1/2026-10-25/photos/actually.jpg",
+      "word_audio": "media/a1/2026-10-25/word-audio/actually.mp3"
+    },
+    {
+      "word": "Africa",
+      "pos": "proper noun",
+      "meaning": "A large continent south of Europe.",
+      "example": "Africa is a big continent.",
+      "pronunciation": "AF-ri-kuh",
+      "persian": "آفریقا",
+      "photo": "media/a1/2026-10-25/photos/Africa.jpg",
+      "word_audio": "media/a1/2026-10-25/word-audio/Africa.mp3"
+    },
+    {
+      "word": "add to basket",
+      "pos": "phrase",
+      "meaning": "To put an item you want to buy into a virtual shopping cart.",
+      "example": "Click here to add to basket.",
+      "pronunciation": "ad tuh BAS-kit",
+      "persian": "اضافه کردن به سبد خرید",
+      "photo": "media/a1/2026-10-25/photos/add to basket.jpg",
+      "word_audio": "media/a1/2026-10-25/word-audio/add to basket.mp3"
+    },
+    {
+      "example": "I left my car in the car park.",
+      "meaning": "An area where people can leave their cars.",
+      "persian": "پارکینگ",
+      "photo": "media/a1/2026-10-24/photos/car park.jpg",
+      "pos": "noun",
+      "pronunciation": "KAR PARK",
+      "word": "car park",
+      "word_audio": "media/a1/2026-10-24/word-audio/car park.mp3"
+    },
+    {
+      "example": "I like to eat carrots.",
+      "meaning": "An orange vegetable.",
+      "persian": "هویج",
+      "photo": "media/a1/2026-10-24/photos/carrot(s).jpg",
+      "pos": "noun",
+      "pronunciation": "KA-ruht",
+      "word": "carrot(s)",
+      "word_audio": "media/a1/2026-10-24/word-audio/carrot(s).mp3"
+    },
+    {
+      "example": "I like fish and chips for lunch.",
+      "meaning": "Thin pieces of fried potato. (US: fries)",
+      "persian": "سیب‌زمینی سرخ‌کرده",
+      "photo": "media/a1/2026-10-24/photos/chips.jpg",
+      "pos": "noun",
+      "pronunciation": "CHIPS",
+      "word": "chips",
+      "word_audio": "media/a1/2026-10-24/word-audio/chips.mp3"
+    },
+    {
+      "example": "I like to eat beans for breakfast.",
+      "meaning": "Small seeds eaten as food.",
+      "persian": "لوبیا، باقلا",
+      "photo": "media/a1/2026-10-24/photos/beans.jpg",
+      "pos": "noun",
+      "pronunciation": "BEENZ",
+      "word": "beans",
+      "word_audio": "media/a1/2026-10-24/word-audio/beans.mp3"
+    },
+    {
+      "word": "asthma",
+      "pos": "noun",
+      "meaning": "A health problem making it hard to breathe.",
+      "example": "My friend has asthma and uses an inhaler.",
+      "pronunciation": "AZ-muh",
+      "persian": "آسم، تنگی نفس",
+      "photo": "media/a1/2026-10-26/photos/asthma.jpg",
+      "word_audio": "media/a1/2026-10-26/word-audio/asthma.mp3"
+    },
+    {
+      "word": "agree",
+      "pos": "verb",
+      "meaning": "to have the same opinion",
+      "example": "Yes, I agree with you.",
+      "pronunciation": "uh-GREE",
+      "persian": "موافق بودن",
+      "photo": "media/a1/2026-10-25/photos/agree.jpg",
+      "word_audio": "media/a1/2026-10-25/word-audio/agree.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-27/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day",
+    "audio": "media/a1/2026-10-27/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-27/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Shopping Day",
+    "audio": "media/a1/2026-10-27/shadowing.mp3",
+    "transcript": "media/a1/2026-10-27/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-27/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/016.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/017.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/018.mp3",
+      "media/a1/2026-10-27/shadowing-sentences/019.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'brain' mean?",
+      "options": [
+        "The organ inside your head that controls thought.",
+        "to have the same opinion",
+        "Thin pieces of fried potato. (US: fries)",
+        "A health problem making it hard to breathe."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'actually' mean?",
+      "options": [
+        "used to emphasize what is true or real",
+        "An area where people can leave their cars.",
+        "Small seeds eaten as food.",
+        "To put an item you want to buy into a virtual shopping cart."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'Africa' mean?",
+      "options": [
+        "used to emphasize what is true or real",
+        "An area where people can leave their cars.",
+        "A large continent south of Europe.",
+        "The organ inside your head that controls thought."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'add to basket' mean?",
+      "options": [
+        "used to emphasize what is true or real",
+        "An area where people can leave their cars.",
+        "To put an item you want to buy into a virtual shopping cart.",
+        "A large continent south of Europe."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'car park' mean?",
+      "options": [
+        "To put an item you want to buy into a virtual shopping cart.",
+        "A health problem making it hard to breathe.",
+        "An area where people can leave their cars.",
+        "Thin pieces of fried potato. (US: fries)"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'carrot(s)' mean?",
+      "options": [
+        "An area where people can leave their cars.",
+        "An orange vegetable.",
+        "to have the same opinion",
+        "used to emphasize what is true or real"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'chips' mean?",
+      "options": [
+        "Thin pieces of fried potato. (US: fries)",
+        "used to emphasize what is true or real",
+        "Small seeds eaten as food.",
+        "A large continent south of Europe."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'beans' mean?",
+      "options": [
+        "An area where people can leave their cars.",
+        "Small seeds eaten as food.",
+        "The organ inside your head that controls thought.",
+        "A health problem making it hard to breathe."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'asthma' mean?",
+      "options": [
+        "Small seeds eaten as food.",
+        "The organ inside your head that controls thought.",
+        "A health problem making it hard to breathe.",
+        "An orange vegetable."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'agree' mean?",
+      "options": [
+        "used to emphasize what is true or real",
+        "An area where people can leave their cars.",
+        "Thin pieces of fried potato. (US: fries)",
+        "to have the same opinion"
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Prepositions of Place (in, on, under, next to)",
+    "explanation": "**Prepositions of place** tell us **where** something is.\n\nUse **in** for inside something, like a room, a city, or a country.\n\nUse **on** for a surface, like a table, a wall, or a floor.\n\nUse **under** for below something.\n\nUse **next to** for at the side of something. Remember the word **to**.\n\nUse **between** for the middle of two things.\n\nUse **at** for a point, like **at** the bus stop, **at** home, and **at** school.",
+    "examples": [
+      "*My books are **in** my bag.* (inside)",
+      "*There's a clock **on** the wall.* (surface)",
+      "*Your shoes are **under** the bed.* (below)",
+      "*Our house is **next to** a park.* (at the side)",
+      "*The café is **between** the bank and the cinema.* (two things)",
+      "*Wait for me **at** the bus stop.* (a point)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with 'in': The carrots are inside the box.",
+        "a": "The carrots are in the box."
+      },
+      {
+        "q": "Rewrite with 'on': The chips are on top of the table.",
+        "a": "The chips are on the table."
+      },
+      {
+        "q": "Rewrite with 'next to': Sara sits at the side of her friend.",
+        "a": "Sara sits next to her friend."
+      },
+      {
+        "q": "Rewrite with 'between': The car park is in the middle of the bank and the shops.",
+        "a": "The car park is between the bank and the shops."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "The milk is ___ the fridge. It's nice and cold.",
+        "options": [
+          "on",
+          "at",
+          "under",
+          "in"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "There's a picture ___ the wall.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "under"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The ball is ___ the table. (The table is above it.)",
+        "options": [
+          "on",
+          "in",
+          "under",
+          "between"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The bank is ___ the post office and the supermarket.",
+        "options": [
+          "between",
+          "next",
+          "in",
+          "at"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I live ___ Toronto.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "under"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Sit ___ me. There's a free chair here.",
+        "options": [
+          "next",
+          "between",
+          "next to",
+          "in"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Are you ___ home? – No, I'm at work.",
+        "options": [
+          "in",
+          "at",
+          "on",
+          "to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Don't stand ___ the TV! I can't see.",
+        "options": [
+          "behind",
+          "under",
+          "between",
+          "in front of"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Wait for me ___ the bus stop.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "under"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The supermarket is ___ the bank. Just cross the street.",
+        "options": [
+          "opposite",
+          "between",
+          "under",
+          "in"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a1/2026-10-27/grammar-en.mp3"
+  }
+}

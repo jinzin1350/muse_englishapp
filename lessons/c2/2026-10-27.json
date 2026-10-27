@@ -1,0 +1,396 @@
+{
+  "date": "2026-10-27",
+  "theme": "review day",
+  "level": "c2",
+  "cefr": "C2",
+  "review": true,
+  "review_of": [
+    "2026-10-24",
+    "2026-10-25",
+    "2026-10-26"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "absolute poverty",
+      "pos": "phrase",
+      "meaning": "Lacking basic necessities like food, water, and shelter.",
+      "example": "Absolute poverty remains a global challenge.",
+      "pronunciation": "AB-suh-loot POV-er-tee",
+      "persian": "فقر مطلق",
+      "photo": "media/c2/2026-10-25/photos/absolute poverty.jpg",
+      "word_audio": "media/c2/2026-10-25/word-audio/absolute poverty.mp3"
+    },
+    {
+      "word": "artificial intelligence",
+      "pos": "noun",
+      "meaning": "Computer systems performing tasks normally requiring human intelligence.",
+      "example": "Artificial intelligence is transforming many industries rapidly.",
+      "pronunciation": "ar-tuh-FISH-ul in-TEL-uh-junss",
+      "persian": "هوش مصنوعی",
+      "photo": "media/c2/2026-10-26/photos/artificial intelligence.jpg",
+      "word_audio": "media/c2/2026-10-26/word-audio/artificial intelligence.mp3"
+    },
+    {
+      "word": "analogue",
+      "pos": "adjective",
+      "meaning": "Relating to a signal or data that is continuous.",
+      "example": "Many older devices still use analogue technology.",
+      "pronunciation": "AN-uh-log",
+      "persian": "آنالوگ، قیاسی",
+      "photo": "media/c2/2026-10-26/photos/analogue.jpg",
+      "word_audio": "media/c2/2026-10-26/word-audio/analogue.mp3"
+    },
+    {
+      "word": "breathalyser",
+      "pos": "noun",
+      "meaning": "A device used to measure alcohol in breath.",
+      "example": "Police used a breathalyser to check for drunk driving.",
+      "pronunciation": "BRETH-uh-ly-zer",
+      "persian": "دستگاه تست الکل",
+      "photo": "media/c2/2026-10-24/photos/breathalyser.jpg",
+      "word_audio": "media/c2/2026-10-24/word-audio/breathalyser.mp3"
+    },
+    {
+      "word": "besiege",
+      "pos": "verb",
+      "meaning": "To surround a place with armed forces; overwhelm.",
+      "example": "The city was besieged by enemy forces for months.",
+      "pronunciation": "buh-SEEJ",
+      "persian": "محاصره کردن، تحت فشار قرار دادن",
+      "photo": "media/c2/2026-10-25/photos/besiege.jpg",
+      "word_audio": "media/c2/2026-10-25/word-audio/besiege.mp3"
+    },
+    {
+      "word": "AI",
+      "pos": "noun",
+      "meaning": "Artificial intelligence; computer systems performing human-like tasks.",
+      "example": "AI is transforming many industries rapidly.",
+      "pronunciation": "AY-EYE",
+      "persian": "هوش مصنوعی",
+      "photo": "media/c2/2026-10-26/photos/AI.jpg",
+      "word_audio": "media/c2/2026-10-26/word-audio/AI.mp3"
+    },
+    {
+      "word": "Bluetooth™",
+      "pos": "noun",
+      "meaning": "Wireless technology for short-range device communication.",
+      "example": "My headphones connect to my phone via Bluetooth.",
+      "pronunciation": "BLOO-tooth",
+      "persian": "بلوتوث",
+      "photo": "media/c2/2026-10-26/photos/Bluetooth™.jpg",
+      "word_audio": "media/c2/2026-10-26/word-audio/Bluetooth™.mp3"
+    },
+    {
+      "word": "budget airline",
+      "pos": "noun phrase",
+      "meaning": "An airline offering cheap flights with fewer services.",
+      "example": "We flew with a budget airline to save money.",
+      "pronunciation": "BUJ-it AIR-line",
+      "persian": "خط هوایی ارزان قیمت",
+      "photo": "media/c2/2026-10-24/photos/budget airline.jpg",
+      "word_audio": "media/c2/2026-10-24/word-audio/budget airline.mp3"
+    },
+    {
+      "word": "beep your horn",
+      "pos": "phrase",
+      "meaning": "To make a short, loud sound with a car horn.",
+      "example": "Please don't beep your horn unnecessarily in residential areas.",
+      "pronunciation": "BEEP yor HORN",
+      "persian": "بوق زدن",
+      "photo": "media/c2/2026-10-24/photos/beep your horn.jpg",
+      "word_audio": "media/c2/2026-10-24/word-audio/beep your horn.mp3"
+    },
+    {
+      "word": "berth",
+      "pos": "noun",
+      "meaning": "A sleeping place on a ship, train, or plane.",
+      "example": "I booked a comfortable berth for the overnight train journey.",
+      "pronunciation": "BURTH",
+      "persian": "جای خواب (کشتی، قطار)",
+      "photo": "media/c2/2026-10-24/photos/berth.jpg",
+      "word_audio": "media/c2/2026-10-24/word-audio/berth.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-27/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day",
+    "audio": "media/c2/2026-10-27/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-27/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Journey to Remember",
+    "audio": "media/c2/2026-10-27/shadowing.mp3",
+    "transcript": "media/c2/2026-10-27/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c2/2026-10-27/shadowing-sentences/001.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/002.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/003.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/004.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/005.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/006.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/007.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/008.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/009.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/010.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/011.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/012.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/013.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/014.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/015.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/016.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/017.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/018.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/019.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/020.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/021.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/022.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/023.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/024.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/025.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/026.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/027.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/028.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/029.mp3",
+      "media/c2/2026-10-27/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'absolute poverty' mean?",
+      "options": [
+        "A sleeping place on a ship, train, or plane.",
+        "Lacking basic necessities like food, water, and shelter.",
+        "A device used to measure alcohol in breath.",
+        "Artificial intelligence; computer systems performing human-like tasks."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'artificial intelligence' mean?",
+      "options": [
+        "A sleeping place on a ship, train, or plane.",
+        "To surround a place with armed forces; overwhelm.",
+        "Computer systems performing tasks normally requiring human intelligence.",
+        "Lacking basic necessities like food, water, and shelter."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'analogue' mean?",
+      "options": [
+        "To make a short, loud sound with a car horn.",
+        "An airline offering cheap flights with fewer services.",
+        "Wireless technology for short-range device communication.",
+        "Relating to a signal or data that is continuous."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'breathalyser' mean?",
+      "options": [
+        "Artificial intelligence; computer systems performing human-like tasks.",
+        "Lacking basic necessities like food, water, and shelter.",
+        "A device used to measure alcohol in breath.",
+        "Relating to a signal or data that is continuous."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'besiege' mean?",
+      "options": [
+        "To surround a place with armed forces; overwhelm.",
+        "A sleeping place on a ship, train, or plane.",
+        "To make a short, loud sound with a car horn.",
+        "Computer systems performing tasks normally requiring human intelligence."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'AI' mean?",
+      "options": [
+        "Relating to a signal or data that is continuous.",
+        "Lacking basic necessities like food, water, and shelter.",
+        "Artificial intelligence; computer systems performing human-like tasks.",
+        "A sleeping place on a ship, train, or plane."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'Bluetooth™' mean?",
+      "options": [
+        "Artificial intelligence; computer systems performing human-like tasks.",
+        "Lacking basic necessities like food, water, and shelter.",
+        "To make a short, loud sound with a car horn.",
+        "Wireless technology for short-range device communication."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'budget airline' mean?",
+      "options": [
+        "Computer systems performing tasks normally requiring human intelligence.",
+        "An airline offering cheap flights with fewer services.",
+        "Wireless technology for short-range device communication.",
+        "A device used to measure alcohol in breath."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'beep your horn' mean?",
+      "options": [
+        "To make a short, loud sound with a car horn.",
+        "Artificial intelligence; computer systems performing human-like tasks.",
+        "Computer systems performing tasks normally requiring human intelligence.",
+        "Lacking basic necessities like food, water, and shelter."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'berth' mean?",
+      "options": [
+        "Lacking basic necessities like food, water, and shelter.",
+        "An airline offering cheap flights with fewer services.",
+        "To surround a place with armed forces; overwhelm.",
+        "A sleeping place on a ship, train, or plane."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Fronting and Word Order for Emphasis",
+    "explanation": "**Fronting** means moving part of a sentence to the **beginning** to give it emphasis or a dramatic effect. For example, *A castle stood on the hill* becomes ***On the hill stood** a castle*.\n\nSometimes fronting also changes the word order of the subject and verb. This change is called **inversion**, and it is common in storytelling, speeches, and formal writing.\n\nAfter a fronted place or direction, a simple verb like **be**, **stand**, **lie**, **come**, or **go** can come **before a noun subject**. For example, ***Into the room walked** a tall man* and ***Next to the door lay** a pile of newspapers*.\n\nWith a **pronoun** subject, do not invert. Say *Here **it comes***, never *Here comes it*.\n\nFronted adjectives and participles follow the pattern adjective plus **be** plus subject, as in ***Gone are** the days* and ***Lucky are** those who have good friends*.\n\nWith **so** and **such**, the pattern is **so** plus adjective plus **be** or an auxiliary plus subject plus **that**. For example, ***So loud was** the music **that** we could not hear each other*.\n\nYou can also front an object for contrast, and then the rest of the sentence stays in **normal order**. For example, ***Coffee** I love; **tea** I cannot stand*.",
+    "examples": [
+      "***Here comes** the bus!* (here plus verb plus noun)",
+      "***On the top of the hill stood** an old castle.* (place plus verb plus subject)",
+      "***Into the room walked** a man in a black coat.* (direction plus verb plus subject)",
+      "***Gone are** the days of cheap flights.* (participle fronting)",
+      "***So difficult was** the exam **that** only two students passed.* (so plus adjective plus that)",
+      "***Such was** his anger **that** he could not speak.* (such plus be plus that)",
+      "***Lucky are** those who love their jobs.* (adjective fronting)",
+      "***Some things** you just cannot explain.* (object fronting, normal order)"
+    ],
+    "practice": [
+      {
+        "a": "On the hill stood an old castle, and a budget airline now flies tourists there every week.",
+        "q": "Rewrite with fronting: An old castle stood on the hill."
+      },
+      {
+        "a": "So powerful was the artificial intelligence that it changed the whole industry.",
+        "q": "Rewrite with so-fronting: The artificial intelligence was so powerful that it changed the whole industry."
+      },
+      {
+        "a": "Gone are the days of analogue radio in every kitchen.",
+        "q": "Rewrite with participle fronting: The days of analogue radio in every kitchen are gone."
+      },
+      {
+        "a": "Bluetooth I love; tangled cables I cannot stand.",
+        "q": "Rewrite by fronting the object: I love Bluetooth, but I cannot stand tangled cables."
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 3,
+        "options": [
+          "the bus comes",
+          "does the bus come",
+          "comes it",
+          "comes the bus"
+        ],
+        "question": "Look! Here ___!"
+      },
+      {
+        "answer": 1,
+        "options": [
+          "comes he",
+          "he comes",
+          "does he come",
+          "he does come"
+        ],
+        "question": "Look, there's Tom. Here ___ now."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "stood",
+          "did stand",
+          "was standing it",
+          "stood it"
+        ],
+        "question": "On the top of the hill ___ an old castle."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "the music was",
+          "the music was being",
+          "was the music",
+          "did the music be"
+        ],
+        "question": "So loud ___ that we couldn't hear each other."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "Gone are",
+          "Gone is",
+          "Are gone",
+          "Gone were being"
+        ],
+        "question": "___ the days when we could leave our doors unlocked."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "did",
+          "has",
+          "is being",
+          "was"
+        ],
+        "question": "Such ___ his anger that he couldn't speak."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "did walk",
+          "walked he",
+          "walked",
+          "was walk"
+        ],
+        "question": "Into the room ___ a tall man in a black coat."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "can't I stand",
+          "I can't stand",
+          "can I not stand",
+          "I stand can't"
+        ],
+        "question": "Coffee I love; tea ___."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "Here are they.",
+          "Here they come are.",
+          "Here they are.",
+          "Here are come they."
+        ],
+        "question": "Choose the correct sentence."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "is",
+          "are",
+          "do",
+          "have"
+        ],
+        "question": "Lucky ___ those who have good friends."
+      }
+    ]
+  }
+}

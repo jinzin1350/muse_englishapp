@@ -1,0 +1,394 @@
+{
+ "date": "2026-10-27",
+ "theme": "review day",
+ "level": "b1",
+ "cefr": "B1",
+ "review": true,
+ "review_of": [
+  "2026-10-24",
+  "2026-10-25",
+  "2026-10-26"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "income tax",
+   "pos": "noun",
+   "meaning": "Money paid to the government from your earnings.",
+   "example": "Everyone has to pay income tax.",
+   "pronunciation": "IN-kum taks",
+   "persian": "مالیات بر درآمد",
+   "photo": "media/b1/2026-10-26/photos/income-tax.jpg",
+   "word_audio": "media/b1/2026-10-26/word-audio/income-tax.mp3"
+  },
+  {
+   "word": "attachment",
+   "pos": "noun",
+   "meaning": "A file sent with an email message.",
+   "example": "I sent the report as an attachment.",
+   "pronunciation": "uh-TACH-ment",
+   "persian": "پیوست (ایمیل)",
+   "photo": "media/b1/2026-10-25/photos/attachment.jpg",
+   "word_audio": "media/b1/2026-10-25/word-audio/attachment.mp3"
+  },
+  {
+   "word": "answerphone",
+   "pos": "noun",
+   "meaning": "A machine that records phone messages.",
+   "example": "Leave a message on my answerphone.",
+   "pronunciation": "AHN-suh-fohn",
+   "persian": "پیغام‌گیر تلفن",
+   "photo": "media/b1/2026-10-25/photos/answerphone.jpg",
+   "word_audio": "media/b1/2026-10-25/word-audio/answerphone.mp3"
+  },
+  {
+   "word": "can’t stand",
+   "pos": "phrase",
+   "meaning": "Really dislike something or someone.",
+   "example": "I can't stand loud music.",
+   "pronunciation": "KANT STAND",
+   "persian": "متنفر بودن، تحمل نکردن",
+   "photo": "media/b1/2026-10-24/photos/cant-stand.jpg",
+   "word_audio": "media/b1/2026-10-24/word-audio/cant-stand.mp3"
+  },
+  {
+   "word": "cheek",
+   "pos": "noun",
+   "meaning": "The soft part of your face below your eye.",
+   "example": "She kissed her baby's soft cheek.",
+   "pronunciation": "CHEEK",
+   "persian": "گونه",
+   "photo": "media/b1/2026-10-24/photos/cheek.jpg",
+   "word_audio": "media/b1/2026-10-24/word-audio/cheek.mp3"
+  },
+  {
+   "word": "item",
+   "pos": "noun",
+   "meaning": "A single thing or object.",
+   "example": "I bought three items from the store.",
+   "pronunciation": "EYE-tum",
+   "persian": "کالا، قلم",
+   "photo": "media/b1/2026-10-26/photos/item.jpg",
+   "word_audio": "media/b1/2026-10-26/word-audio/item.mp3"
+  },
+  {
+   "word": "credit card",
+   "pos": "noun",
+   "meaning": "A plastic card used to buy things now and pay later.",
+   "example": "I paid with my credit card.",
+   "pronunciation": "KRED-it kard",
+   "persian": "کارت اعتباری",
+   "photo": "media/b1/2026-10-26/photos/credit-card.jpg",
+   "word_audio": "media/b1/2026-10-26/word-audio/credit-card.mp3"
+  },
+  {
+   "word": "able",
+   "pos": "adjective",
+   "meaning": "having the skill or power to do something",
+   "example": "I am able to speak three languages.",
+   "pronunciation": "AY-bul",
+   "persian": "توانا، قادر",
+   "photo": "media/b1/2026-10-24/photos/able.jpg",
+   "word_audio": "media/b1/2026-10-24/word-audio/able.mp3"
+  },
+  {
+   "word": "be into sth [like sth]",
+   "pos": "phrasal verb",
+   "meaning": "Like or be interested in something.",
+   "example": "She is really into sports and plays every day.",
+   "pronunciation": "bee IN-too",
+   "persian": "علاقه داشتن به، دوست داشتن",
+   "photo": "media/b1/2026-10-24/photos/be-into-sth.jpg",
+   "word_audio": "media/b1/2026-10-24/word-audio/be-into-sth.mp3"
+  },
+  {
+   "word": "bag",
+   "pos": "noun",
+   "meaning": "A container made of soft material, with a handle.",
+   "example": "I carry my lunch in a small bag.",
+   "pronunciation": "BAG",
+   "persian": "کیف، کیسه",
+   "photo": "media/b1/2026-10-26/photos/bag.jpg",
+   "word_audio": "media/b1/2026-10-26/word-audio/bag.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-27/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day",
+  "audio": "media/b1/2026-10-27/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-27/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Week of Words",
+  "audio": "media/b1/2026-10-27/shadowing.mp3",
+  "transcript": "media/b1/2026-10-27/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-27/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/028.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/029.mp3",
+   "media/b1/2026-10-27/shadowing-sentences/030.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'income tax' mean?",
+   "options": [
+    "The soft part of your face below your eye.",
+    "A plastic card used to buy things now and pay later.",
+    "A machine that records phone messages.",
+    "Money paid to the government from your earnings."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'attachment' mean?",
+   "options": [
+    "A machine that records phone messages.",
+    "having the skill or power to do something",
+    "Like or be interested in something.",
+    "A file sent with an email message."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'answerphone' mean?",
+   "options": [
+    "The soft part of your face below your eye.",
+    "A plastic card used to buy things now and pay later.",
+    "A machine that records phone messages.",
+    "A file sent with an email message."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'can’t stand' mean?",
+   "options": [
+    "Money paid to the government from your earnings.",
+    "having the skill or power to do something",
+    "Really dislike something or someone.",
+    "The soft part of your face below your eye."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'cheek' mean?",
+   "options": [
+    "Really dislike something or someone.",
+    "A single thing or object.",
+    "The soft part of your face below your eye.",
+    "Like or be interested in something."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'item' mean?",
+   "options": [
+    "A plastic card used to buy things now and pay later.",
+    "Like or be interested in something.",
+    "Money paid to the government from your earnings.",
+    "A single thing or object."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'credit card' mean?",
+   "options": [
+    "A plastic card used to buy things now and pay later.",
+    "Like or be interested in something.",
+    "The soft part of your face below your eye.",
+    "A single thing or object."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'able' mean?",
+   "options": [
+    "A plastic card used to buy things now and pay later.",
+    "A container made of soft material, with a handle.",
+    "A single thing or object.",
+    "having the skill or power to do something"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'be into sth [like sth]' mean?",
+   "options": [
+    "Really dislike something or someone.",
+    "Like or be interested in something.",
+    "having the skill or power to do something",
+    "A single thing or object."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'bag' mean?",
+   "options": [
+    "having the skill or power to do something",
+    "A container made of soft material, with a handle.",
+    "Money paid to the government from your earnings.",
+    "A machine that records phone messages."
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "Reported Speech: Statements and Questions",
+  "explanation": "We use **reported speech** to say what someone said without repeating their exact words.\n\nAfter a past reporting verb like **said**, **told** or **asked**, the tense usually moves **one step back** into the past.\n\nFor example, present simple becomes past simple, and **will** becomes **would**.\n\nUse **say** + (that) + sentence, but **tell** + person + (that) + sentence.\n\nNever put a person after **say**, and never use **tell** without a person.\n\nReported questions use **normal sentence word order**, with no **do / does / did** and no question mark.\n\nFor yes/no questions, use **if** or **whether**.\n\nFor requests and orders, use **ask / tell + person + to + base verb**, and **not to** for negatives.\n\nTime words change too when the time has changed, like **tomorrow** to **the next day**.",
+  "examples": [
+   "*\"I'm busy.\" → She said she **was** busy.* (am → was)",
+   "*\"I work in a hotel.\" → He told me he **worked** in a hotel.* (tell + person)",
+   "*\"I'll help you.\" → She said she **would** help me.* (will → would)",
+   "*\"Where is the station?\" → She asked me where the station **was**.* (statement word order)",
+   "*\"Do you like jazz?\" → He asked me **if** I **liked** jazz.* (yes/no question → if)",
+   "*\"Please close the window.\" → She asked me **to close** the window.* (request → ask + to)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite as reported speech: \"I can't stand loud music.\"",
+    "a": "She said she couldn't stand loud music."
+   },
+   {
+    "q": "Rewrite as reported speech: \"I am able to speak three languages.\"",
+    "a": "She said she was able to speak three languages."
+   },
+   {
+    "q": "Rewrite as reported speech: \"I bought three items from the store.\"",
+    "a": "She said she had bought three items from the store."
+   },
+   {
+    "q": "Rewrite as a reported question: \"Do you have a credit card?\"",
+    "a": "He asked me if I had a credit card."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "“I'm tired.” → She said she ___ tired.",
+    "options": [
+     "is being",
+     "was",
+     "were",
+     "has"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "“I'll call you tomorrow.” → He said he ___ me the next day.",
+    "options": [
+     "will call",
+     "calls",
+     "would call",
+     "is calling"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "He ___ me that he was hungry.",
+    "options": [
+     "said",
+     "asked",
+     "spoke",
+     "told"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "She ___ that she was busy.",
+    "options": [
+     "said",
+     "told",
+     "told to",
+     "asked"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "“Where do you live?” → She asked me where ___.",
+    "options": [
+     "did I live",
+     "lived I",
+     "do I live",
+     "I lived"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "“Are you hungry?” → He asked me ___ hungry.",
+    "options": [
+     "if I was",
+     "was I",
+     "that I was",
+     "if was I"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "“I've finished my homework.” → She said she ___ her homework.",
+    "options": [
+     "finishing",
+     "had finished",
+     "have finished",
+     "was finish"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "“I can swim.” → He said he ___ swim.",
+    "options": [
+     "coulds",
+     "was can",
+     "could",
+     "can to"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "“What time is it?” → She asked me what time ___.",
+    "options": [
+     "was it",
+     "it was",
+     "is it",
+     "it is being"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "“Did you see the match?” → He asked me ___ the match.",
+    "options": [
+     "if I had seen",
+     "had I seen",
+     "did I see",
+     "if had I seen"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}

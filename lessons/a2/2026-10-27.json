@@ -1,0 +1,387 @@
+{
+ "date": "2026-10-27",
+ "theme": "review day",
+ "level": "a2",
+ "cefr": "A2",
+ "review": true,
+ "review_of": [
+  "2026-10-24",
+  "2026-10-25",
+  "2026-10-26"
+ ],
+ "review_window_words": 15,
+ "review_sampled": 10,
+ "words": [
+  {
+   "example": "She felt anxiety before the exam.",
+   "meaning": "A feeling of worry or nervousness.",
+   "persian": "اضطراب، نگرانی",
+   "photo": "media/a2/2026-10-26/photos/anxiety.jpg",
+   "pos": "noun",
+   "pronunciation": "ang-ZY-uh-tee",
+   "word": "anxiety",
+   "word_audio": "media/a2/2026-10-26/word-audio/anxiety.mp3"
+  },
+  {
+   "example": "We traveled by aeroplane to Paris.",
+   "meaning": "A vehicle with wings that flies through the air.",
+   "persian": "هواپیما",
+   "photo": "media/a2/2026-10-24/photos/aeroplane.jpg",
+   "pos": "noun",
+   "pronunciation": "AIR-uh-playn",
+   "word": "aeroplane",
+   "word_audio": "media/a2/2026-10-24/word-audio/aeroplane.mp3"
+  },
+  {
+   "example": "I'd like a return ticket to London, please.",
+   "meaning": "a ticket for a journey to a place and back",
+   "persian": "بلیط رفت و برگشت",
+   "photo": "media/a2/2026-10-24/photos/a-return.jpg",
+   "pos": "noun",
+   "pronunciation": "uh ri-TURN",
+   "word": "a return",
+   "word_audio": "media/a2/2026-10-24/word-audio/a-return.mp3"
+  },
+  {
+   "example": "Her appearance changed after her haircut.",
+   "meaning": "The way someone or something looks.",
+   "persian": "ظاهر، قیافه",
+   "photo": "media/a2/2026-10-26/photos/appearance.jpg",
+   "pos": "noun",
+   "pronunciation": "uh-PEER-unss",
+   "word": "appearance",
+   "word_audio": "media/a2/2026-10-26/word-audio/appearance.mp3"
+  },
+  {
+   "example": "He felt a lot of anger about the unfair decision.",
+   "meaning": "A strong feeling of being annoyed or unhappy.",
+   "persian": "خشم، عصبانیت",
+   "photo": "media/a2/2026-10-26/photos/anger.jpg",
+   "pos": "noun",
+   "pronunciation": "ANG-ger",
+   "word": "anger",
+   "word_audio": "media/a2/2026-10-26/word-audio/anger.mp3"
+  },
+  {
+   "example": "We went on an adventure holiday last year.",
+   "meaning": "A holiday involving exciting and dangerous activities.",
+   "persian": "تعطیلات ماجراجویانه",
+   "photo": "media/a2/2026-10-24/photos/adventure-holiday.jpg",
+   "pos": "noun",
+   "pronunciation": "ud-VEN-chur HOL-i-day",
+   "word": "adventure holiday",
+   "word_audio": "media/a2/2026-10-24/word-audio/adventure-holiday.mp3"
+  },
+  {
+   "example": "We found cheap accommodation near the beach.",
+   "meaning": "a place to live or stay",
+   "persian": "محل اقامت",
+   "photo": "media/a2/2026-10-24/photos/accommodation.jpg",
+   "pos": "noun",
+   "pronunciation": "uh-kom-uh-DAY-shun",
+   "word": "accommodation",
+   "word_audio": "media/a2/2026-10-24/word-audio/accommodation.mp3"
+  },
+  {
+   "word": "century",
+   "pos": "noun",
+   "meaning": "A score of one hundred runs in cricket.",
+   "example": "The batsman scored a century in the match.",
+   "pronunciation": "SEN-chuh-ree",
+   "persian": "صد امتیاز (در کریکت)",
+   "photo": "media/a2/2026-10-25/photos/century.jpg",
+   "word_audio": "media/a2/2026-10-25/word-audio/century.mp3"
+  },
+  {
+   "example": "He had a car accident yesterday.",
+   "meaning": "something bad that happens by chance",
+   "persian": "تصادف، حادثه",
+   "photo": "media/a2/2026-10-24/photos/accident.jpg",
+   "pos": "noun",
+   "pronunciation": "AK-si-duhnt",
+   "word": "accident",
+   "word_audio": "media/a2/2026-10-24/word-audio/accident.mp3"
+  },
+  {
+   "word": "at the moment",
+   "pos": "phrase",
+   "meaning": "Now; right now.",
+   "example": "I am busy at the moment.",
+   "pronunciation": "at thuh MOH-ment",
+   "persian": "در حال حاضر",
+   "photo": "media/a2/2026-10-25/photos/at the moment.jpg",
+   "word_audio": "media/a2/2026-10-25/word-audio/at the moment.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-10-27/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day",
+  "audio": "media/a2/2026-10-27/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-10-27/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Adventure Holiday",
+  "audio": "media/a2/2026-10-27/shadowing.mp3",
+  "transcript": "media/a2/2026-10-27/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-10-27/shadowing-sentences/001.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/002.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/003.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/004.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/005.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/006.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/007.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/008.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/009.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/010.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/011.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/012.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/013.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/014.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/015.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/016.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/017.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/018.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/019.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/020.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/021.mp3",
+   "media/a2/2026-10-27/shadowing-sentences/022.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'anxiety' mean?",
+   "options": [
+    "A feeling of worry or nervousness.",
+    "A strong feeling of being annoyed or unhappy.",
+    "A vehicle with wings that flies through the air.",
+    "a place to live or stay"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'aeroplane' mean?",
+   "options": [
+    "a place to live or stay",
+    "Now; right now.",
+    "A vehicle with wings that flies through the air.",
+    "A holiday involving exciting and dangerous activities."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'a return' mean?",
+   "options": [
+    "something bad that happens by chance",
+    "a ticket for a journey to a place and back",
+    "A score of one hundred runs in cricket.",
+    "A vehicle with wings that flies through the air."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'appearance' mean?",
+   "options": [
+    "A vehicle with wings that flies through the air.",
+    "The way someone or something looks.",
+    "A strong feeling of being annoyed or unhappy.",
+    "A score of one hundred runs in cricket."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'anger' mean?",
+   "options": [
+    "A strong feeling of being annoyed or unhappy.",
+    "Now; right now.",
+    "A feeling of worry or nervousness.",
+    "A holiday involving exciting and dangerous activities."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'adventure holiday' mean?",
+   "options": [
+    "Now; right now.",
+    "A holiday involving exciting and dangerous activities.",
+    "a ticket for a journey to a place and back",
+    "something bad that happens by chance"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'accommodation' mean?",
+   "options": [
+    "a place to live or stay",
+    "A feeling of worry or nervousness.",
+    "The way someone or something looks.",
+    "Now; right now."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'century' mean?",
+   "options": [
+    "Now; right now.",
+    "A strong feeling of being annoyed or unhappy.",
+    "A vehicle with wings that flies through the air.",
+    "A score of one hundred runs in cricket."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'accident' mean?",
+   "options": [
+    "The way someone or something looks.",
+    "A vehicle with wings that flies through the air.",
+    "A holiday involving exciting and dangerous activities.",
+    "something bad that happens by chance"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'at the moment' mean?",
+   "options": [
+    "A feeling of worry or nervousness.",
+    "A score of one hundred runs in cricket.",
+    "A holiday involving exciting and dangerous activities.",
+    "Now; right now."
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Prepositions of Place (in, on, under, next to)",
+  "explanation": "**Prepositions of place** tell us **where** something is.\n\nUse **in** for inside something, like a room, a city, or a country.\n\nUse **on** for a surface, like a table, a wall, or a floor.\n\nUse **under** for below something, and **next to** for at the side of something.\n\nUse **between** for the middle of two things, and **behind** for at the back.\n\nUse **in front of** for facing the front, **opposite** for across the street, and **near** for not far away.\n\nUse **at** for a point, like **at** home, **at** work, or **at** the bus stop.\n\nRemember: **next to** always needs **to**, and **in front of** always needs **of**.",
+  "examples": [
+   "*My books are **in** my bag.* (inside)",
+   "*There's a clock **on** the wall.* (surface)",
+   "*Your shoes are **under** the bed.* (below)",
+   "*Our house is **next to** a park.* (at the side)",
+   "*The café is **between** the bank and the cinema.* (two things)",
+   "*Wait for me **at** the bus stop.* (a point)"
+  ],
+  "practice": [
+   {
+    "a": "The milk is in the fridge.",
+    "q": "Rewrite using **in**: The milk is inside the fridge."
+   },
+   {
+    "a": "The picture is on the wall.",
+    "q": "Rewrite using **on**: The picture is touching the wall."
+   },
+   {
+    "a": "Sara sits next to her friend on the aeroplane.",
+    "q": "Rewrite using **next to**: Sara sits beside her friend on the aeroplane."
+   },
+   {
+    "a": "The shop is between the bank and the café.",
+    "q": "Rewrite using **between**: The shop is in the middle of the bank and the café."
+   }
+  ],
+  "quiz": [
+   {
+    "answer": 3,
+    "options": [
+     "on",
+     "at",
+     "under",
+     "in"
+    ],
+    "question": "The milk is ___ the fridge. It's nice and cold."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "in",
+     "on",
+     "at",
+     "under"
+    ],
+    "question": "There's a picture ___ the wall."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "on",
+     "in",
+     "under",
+     "between"
+    ],
+    "question": "The ball is ___ the table. (The table is above it.)"
+   },
+   {
+    "answer": 0,
+    "options": [
+     "between",
+     "next",
+     "in",
+     "at"
+    ],
+    "question": "The bank is ___ the post office and the supermarket."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "in",
+     "on",
+     "at",
+     "under"
+    ],
+    "question": "I live ___ Toronto."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "next",
+     "between",
+     "next to",
+     "in"
+    ],
+    "question": "Sit ___ me. There's a free chair here."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "in",
+     "at",
+     "on",
+     "to"
+    ],
+    "question": "Are you ___ home? – No, I'm at work."
+   },
+   {
+    "answer": 3,
+    "options": [
+     "behind",
+     "under",
+     "between",
+     "in front of"
+    ],
+    "question": "Don't stand ___ the TV! I can't see."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "in",
+     "on",
+     "at",
+     "under"
+    ],
+    "question": "Wait for me ___ the bus stop."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "opposite",
+     "between",
+     "under",
+     "in"
+    ],
+    "question": "The supermarket is ___ the bank. Just cross the street."
+   }
+  ],
+  "audio": "media/a2/2026-10-27/grammar-en.mp3"
+ }
+}

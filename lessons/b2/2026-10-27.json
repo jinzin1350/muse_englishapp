@@ -1,0 +1,395 @@
+{
+ "date": "2026-10-27",
+ "theme": "review day",
+ "level": "b2",
+ "cefr": "B2",
+ "review": true,
+ "review_of": [
+  "2026-10-24",
+  "2026-10-25",
+  "2026-10-26"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "application",
+   "pos": "noun",
+   "meaning": "A formal request, often for a course or job.",
+   "example": "Her application for university was successful.",
+   "pronunciation": "ap-li-KAY-shun",
+   "persian": "درخواست، تقاضا",
+   "photo": "media/b2/2026-10-26/photos/application.jpg",
+   "word_audio": "media/b2/2026-10-26/word-audio/application.mp3"
+  },
+  {
+   "word": "backache",
+   "pos": "noun",
+   "meaning": "A pain in your back.",
+   "example": "I have a bad backache from sitting all day.",
+   "pronunciation": "BAK-ayk",
+   "persian": "کمردرد",
+   "photo": "media/b2/2026-10-24/photos/backache.jpg",
+   "word_audio": "media/b2/2026-10-24/word-audio/backache.mp3"
+  },
+  {
+   "word": "corporation tax",
+   "pos": "noun phrase",
+   "meaning": "Tax that companies pay on their profits.",
+   "example": "The government plans to reduce corporation tax.",
+   "pronunciation": "kor-puh-RAY-shun TAKS",
+   "persian": "مالیات شرکت ها",
+   "photo": "media/b2/2026-10-25/photos/corporation tax.jpg",
+   "word_audio": "media/b2/2026-10-25/word-audio/corporation tax.mp3"
+  },
+  {
+   "word": "app",
+   "pos": "noun",
+   "meaning": "A small computer program for a phone.",
+   "example": "I downloaded a new app for learning English.",
+   "pronunciation": "AP",
+   "persian": "اپلیکیشن، برنامه",
+   "photo": "media/b2/2026-10-26/photos/app.jpg",
+   "word_audio": "media/b2/2026-10-26/word-audio/app.mp3"
+  },
+  {
+   "word": "analyse",
+   "pos": "verb",
+   "meaning": "To examine something carefully to understand it.",
+   "example": "We need to analyse the data to find a solution.",
+   "pronunciation": "AN-uh-lyz",
+   "persian": "تحلیل کردن، تجزیه و تحلیل کردن",
+   "photo": "media/b2/2026-10-26/photos/analyse.jpg",
+   "word_audio": "media/b2/2026-10-26/word-audio/analyse.mp3"
+  },
+  {
+   "word": "artificial hip",
+   "pos": "noun",
+   "meaning": "A man-made replacement for a damaged hip joint.",
+   "example": "She had an operation for an artificial hip.",
+   "pronunciation": "ar-tuh-FISH-ul HIP",
+   "persian": "مفصل ران مصنوعی",
+   "photo": "media/b2/2026-10-24/photos/artificial hip.jpg",
+   "word_audio": "media/b2/2026-10-24/word-audio/artificial hip.mp3"
+  },
+  {
+   "word": "(the) Web",
+   "pos": "noun",
+   "meaning": "the internet, a system of linked computer documents",
+   "example": "I found the information I needed on the Web.",
+   "pronunciation": "WEB",
+   "persian": "اینترنت، وب",
+   "photo": "media/b2/2026-10-26/photos/Web.jpg",
+   "word_audio": "media/b2/2026-10-26/word-audio/Web.mp3"
+  },
+  {
+   "word": "amount",
+   "pos": "noun",
+   "meaning": "A quantity of something.",
+   "example": "Please pay the full amount.",
+   "pronunciation": "uh-MOWNT",
+   "persian": "مقدار، میزان",
+   "photo": "media/b2/2026-10-25/photos/amount.jpg",
+   "word_audio": "media/b2/2026-10-25/word-audio/amount.mp3"
+  },
+  {
+   "word": "automatically",
+   "pos": "adverb",
+   "meaning": "Without human control or thought.",
+   "example": "The door opens automatically when you get close.",
+   "pronunciation": "aw-tuh-MAT-ik-lee",
+   "persian": "به طور خودکار",
+   "photo": "media/b2/2026-10-24/photos/automatically.jpg",
+   "word_audio": "media/b2/2026-10-24/word-audio/automatically.mp3"
+  },
+  {
+   "word": "cash machine",
+   "pos": "noun",
+   "meaning": "A machine where you can get money.",
+   "example": "I need to find a cash machine.",
+   "pronunciation": "KASH muh-SHEEN",
+   "persian": "خودپرداز",
+   "photo": "media/b2/2026-10-25/photos/cash machine.jpg",
+   "word_audio": "media/b2/2026-10-25/word-audio/cash machine.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b2/2026-10-27/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day",
+  "audio": "media/b2/2026-10-27/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b2/2026-10-27/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Review Week",
+  "audio": "media/b2/2026-10-27/shadowing.mp3",
+  "transcript": "media/b2/2026-10-27/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b2/2026-10-27/shadowing-sentences/001.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/002.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/003.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/004.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/005.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/006.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/007.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/008.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/009.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/010.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/011.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/012.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/013.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/014.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/015.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/016.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/017.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/018.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/019.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/020.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/021.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/022.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/023.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/024.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/025.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/026.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/027.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/028.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/029.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/030.mp3",
+   "media/b2/2026-10-27/shadowing-sentences/031.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'application' mean?",
+   "options": [
+    "To examine something carefully to understand it.",
+    "A machine where you can get money.",
+    "A quantity of something.",
+    "A formal request, often for a course or job."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'backache' mean?",
+   "options": [
+    "A formal request, often for a course or job.",
+    "A quantity of something.",
+    "A pain in your back.",
+    "Tax that companies pay on their profits."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'corporation tax' mean?",
+   "options": [
+    "Without human control or thought.",
+    "Tax that companies pay on their profits.",
+    "A formal request, often for a course or job.",
+    "A machine where you can get money."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'app' mean?",
+   "options": [
+    "A small computer program for a phone.",
+    "A quantity of something.",
+    "Tax that companies pay on their profits.",
+    "Without human control or thought."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'analyse' mean?",
+   "options": [
+    "A pain in your back.",
+    "A quantity of something.",
+    "To examine something carefully to understand it.",
+    "A formal request, often for a course or job."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'artificial hip' mean?",
+   "options": [
+    "A man-made replacement for a damaged hip joint.",
+    "Without human control or thought.",
+    "A machine where you can get money.",
+    "A formal request, often for a course or job."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does '(the) Web' mean?",
+   "options": [
+    "the internet, a system of linked computer documents",
+    "A pain in your back.",
+    "A man-made replacement for a damaged hip joint.",
+    "A quantity of something."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'amount' mean?",
+   "options": [
+    "A quantity of something.",
+    "To examine something carefully to understand it.",
+    "A man-made replacement for a damaged hip joint.",
+    "A pain in your back."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'automatically' mean?",
+   "options": [
+    "A small computer program for a phone.",
+    "the internet, a system of linked computer documents",
+    "A formal request, often for a course or job.",
+    "Without human control or thought."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'cash machine' mean?",
+   "options": [
+    "A small computer program for a phone.",
+    "A formal request, often for a course or job.",
+    "A machine where you can get money.",
+    "A man-made replacement for a damaged hip joint."
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "examples": [
+   "*He **offered to carry** my bag.* (offer + to-infinitive)",
+   "*She **refused to do** it.* (refuse + to-infinitive)",
+   "*My boss **advised me to take** a break.* (advise someone to do something)",
+   "*Mum **reminded me to take** my passport.* (remind someone to do something)",
+   "*He **denied breaking** it.* (deny + -ing)",
+   "*She **suggested ordering** pizza.* (suggest + -ing)"
+  ],
+  "explanation": "Instead of **say** and **tell**, we often use a **reporting verb** that shows the speaker's purpose.\n\nEach reporting verb has its own **pattern**: a to-infinitive, object + to-infinitive, -ing, preposition + -ing, or a **that** clause.\n\nUse verb + **to**-infinitive after **agree**, **offer**, **promise**, **refuse**, **threaten**, **decide** and **claim**.\n\nUse verb + object + **to**-infinitive after **advise**, **ask**, **tell**, **warn**, **remind**, **encourage**, **persuade**, **invite** and **order**.\n\nUse verb + **-ing** after **deny**, **admit**, **suggest** and **recommend**.\n\n**Suggest** never takes object + to-infinitive. Use **-ing** or a **that** clause instead.\n\nFor a negative infinitive, put **not** before **to**. Say **warned me not to touch** it.",
+  "practice": [
+   {
+    "a": "My friend advised me to analyse the data carefully.",
+    "q": "My friend said, 'You should analyse the data carefully.' Rewrite with a reporting verb."
+   },
+   {
+    "a": "He denied taking money from the cash machine.",
+    "q": "'I didn't take money from the cash machine,' he said. Rewrite with a reporting verb."
+   },
+   {
+    "a": "She suggested downloading a new app for learning English.",
+    "q": "'Let's download a new app for learning English,' she said. Rewrite with a reporting verb."
+   },
+   {
+    "a": "The bank reminded me to pay the full amount.",
+    "q": "'Don't forget to pay the full amount,' the bank said. Rewrite with a reporting verb."
+   }
+  ],
+  "quiz": [
+   {
+    "answer": 3,
+    "options": [
+     "helping",
+     "me to help",
+     "for helping",
+     "to help"
+    ],
+    "question": "'I'll help you with your homework,' Dad said. → Dad offered ___ me with my homework."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "not to touch",
+     "to not touching",
+     "not touching",
+     "don't touch"
+    ],
+    "question": "'Don't touch the cooker,' she said to her son. → She warned her son ___ the cooker."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "to take",
+     "to have take",
+     "taking",
+     "take"
+    ],
+    "question": "'I didn't take the money,' he said. → He denied ___ the money."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "to go",
+     "going",
+     "us to go",
+     "go"
+    ],
+    "question": "'Why don't we go to the beach?' Tom said. → Tom suggested ___ to the beach."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "to see",
+     "seeing",
+     "see",
+     "for seeing"
+    ],
+    "question": "'You should see a doctor,' my friend said. → My friend advised me ___ a doctor."
+   },
+   {
+    "answer": 3,
+    "options": [
+     "to be",
+     "about be",
+     "for be",
+     "for being"
+    ],
+    "question": "'I'm sorry I'm late,' she said. → She apologised ___ late."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "for breaking",
+     "of breaking",
+     "to break",
+     "that I broke"
+    ],
+    "question": "'You broke the window!' the neighbour said to me. → The neighbour accused me ___ the window."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "of passing",
+     "to pass",
+     "on passing",
+     "about passing"
+    ],
+    "question": "'Congratulations on passing your exam!' they said. → They congratulated me ___ my exam."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "buying",
+     "of buying",
+     "to buy",
+     "that buy"
+    ],
+    "question": "'Remember to buy some bread,' Mum said to me. → Mum reminded me ___ some bread."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "signing",
+     "to sign",
+     "sign",
+     "for signing"
+    ],
+    "question": "'I won't sign the contract,' he said. → He refused ___ the contract."
+   }
+  ],
+  "title": "Reporting Verbs (suggest, advise, deny, refuse)"
+ }
+}
