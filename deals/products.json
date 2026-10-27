@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "schlage-keypad-lock",
+      "name_fa": "قفل رمزی شلاگ با اهرم پلیموث",
+      "name_en": "Schlage Electronic Keypad Lock Plymouth Lever",
+      "price_cad": 99.97,
+      "regular_cad": 159.97,
+      "discount_pct": 38,
+      "added_fa": "سه‌شنبه، ۲۷ اکتبر ۲۰۲۶",
+      "image": "img/schlage-keypad-lock.jpg",
+      "url": "https://www.amazon.ca/dp/B089J9G4RN?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "قفل بدون کلید با ۱۹ کد؛ پایین‌ترین قیمت ۹۰ روز گذشته"
+    },
+    {
+      "id": "xsense-leak-detector-kit",
+      "name_fa": "کیت نشت‌یاب وای‌فای ایکس-سنس با ۴ حسگر",
+      "name_en": "X-Sense Wi-Fi Water Leak Detector Kit",
+      "price_cad": 56.69,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "سه‌شنبه، ۲۷ اکتبر ۲۰۲۶",
+      "image": "img/xsense-leak-detector-kit.jpg",
+      "url": "https://www.amazon.ca/dp/B0DFCMJH5L?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "۴ حسگر و ایستگاه مرکزی؛ هشدار نشت آب روی گوشی"
+    },
+    {
+      "id": "astroai-tire-inflator-20v",
+      "name_fa": "بادکننده شارژی آستروای‌آی با باتری ۲۰ ولتی",
+      "name_en": "AstroAI 20V Cordless Tire Inflator",
+      "price_cad": 55.99,
+      "regular_cad": 99.99,
+      "discount_pct": 44,
+      "added_fa": "سه‌شنبه، ۲۷ اکتبر ۲۰۲۶",
+      "image": "img/astroai-tire-inflator-20v.jpg",
+      "url": "https://www.amazon.ca/dp/B0BSGH7L51?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "بادکننده بی‌سیم لاستیک برای زمستان کانادا"
+    },
+    {
+      "id": "toshiba-rice-cooker-3cup",
+      "name_fa": "پلوپز توشیبا ۳ پیمانه‌ای با ۸ برنامه",
+      "name_en": "Toshiba 3-Cup Rice Cooker with 8 Functions",
+      "price_cad": 101.99,
+      "regular_cad": 148.92,
+      "discount_pct": 32,
+      "added_fa": "سه‌شنبه، ۲۷ اکتبر ۲۰۲۶",
+      "image": "img/toshiba-rice-cooker-3cup.jpg",
+      "url": "https://www.amazon.ca/dp/B0CX94FW8V?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پلوپز ۳ پیمانه‌ای با ۸ برنامه؛ پایین‌ترین قیمت ۹۰ روز گذشته"
+    },
+    {
       "id": "soundcore-v20i-open-ear",
       "name_fa": "ایربادز اوپن‌ایر ساندکور V20i انکر",
       "name_en": "Soundcore by Anker V20i Open-Ear Earbuds",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "ماوس بی‌سیم سبک زیر ۶۰ گرم با باتری تا ۹۵۰ ساعت."
-    },
-    {
-      "id": "tfal-deep-fryer-2026-10-26",
-      "name_fa": "سرخ‌کن استیل تی‌فال ۳.۵ لیتری",
-      "name_en": "T-fal 3.5L Deep Fryer with Oil Filtration",
-      "price_cad": 69.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "دوشنبه، ۲۶ اکتبر ۲۰۲۶",
-      "image": "img/tfal-deep-fryer-2026-10-26.jpg",
-      "url": "https://www.amazon.ca/dp/B00QC2XBYM?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "سرخ‌کن ۱۷۰۰ واتی با سیستم ایزی‌کلین و فیلتر روغن."
-    },
-    {
-      "id": "sony-wf-c710n-2026-10-26",
-      "name_fa": "ایربادز سونی دبلیو‌اف-سی۷۱۰ان",
-      "name_en": "Sony WF-C710N Noise Cancelling Earbuds",
-      "price_cad": 98.0,
-      "regular_cad": 169.99,
-      "discount_pct": 42,
-      "added_fa": "دوشنبه، ۲۶ اکتبر ۲۰۲۶",
-      "image": "img/sony-wf-c710n-2026-10-26.jpg",
-      "url": "https://www.amazon.ca/dp/B0DWHPBK42?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "ایربادز سونی با حذف نویز فعال و ۳۰ ساعت پخش با کیس."
-    },
-    {
-      "id": "cottonelle-ultra-clean-36-mega",
-      "name_fa": "دستمال توالت کاتنل، ۳۶ رول مگا",
-      "name_en": "Cottonelle Ultra Clean Toilet Paper, 36 Mega Rolls = 144 Regular Rolls",
-      "price_cad": 21.98,
-      "regular_cad": 43.96,
-      "discount_pct": 50,
-      "added_fa": "یکشنبه، ۲۵ اکتبر ۲۰۲۶",
-      "image": "img/cottonelle-ultra-clean-36-mega.jpg",
-      "url": "https://www.amazon.ca/dp/B0CNWMZGWM?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "۳۶ رول مگا معادل ۱۴۴ رول معمولی؛ با کوپن Subscribe & Save"
-    },
-    {
-      "id": "craftsman-hivis-tape-2pack",
-      "name_fa": "متر نواری کرافتسمن، پک دوتایی",
-      "name_en": "CRAFTSMAN Hi-Vis Tape Measure 8M/26-Ft (Pack of 2)",
-      "price_cad": 15.98,
-      "regular_cad": 30.98,
-      "discount_pct": 48,
-      "added_fa": "یکشنبه، ۲۵ اکتبر ۲۰۲۶",
-      "image": "img/craftsman-hivis-tape-2pack.jpg",
-      "url": "https://www.amazon.ca/dp/B0H1PSWPQS?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پک دوتایی متر ۸ متری های‌ویز کرافتسمن؛ خوانا، محکم و مناسب هر جعبه‌ابزار"
     }
   ],
-  "updated_fa": "دوشنبه ۴ آبان"
+  "updated_fa": "سه‌شنبه ۵ آبان"
 }
