@@ -3814,7 +3814,8 @@ function asV2GetPool() {
     let topic = null;
     if (typeof findGrammarTopic === 'function') topic = findGrammarTopic(slug);
     if (!topic || !topic.v2) return;
-    const items = (topic.exercises && topic.exercises.items) || [];
+    const items = (typeof grammarAllItems === 'function') ? grammarAllItems(topic)
+      : ((topic.exercises && topic.exercises.items) || []);
     items.forEach(function (ex) {
       const exLv = (ex.level || '').toLowerCase();
       const exType = ex.type || 'mcq';
@@ -6987,6 +6988,26 @@ function findGrammarTopic(slug) {
   }
   return null;
 }
+/* A v2 topic has one copy per level file; each copy carries ALL levels'
+   points but only ITS OWN level's exercises. findGrammarTopic returns the
+   first (lowest-level) copy, so anything needing a topic's exercises must
+   merge across copies — otherwise only the lowest level's quiz works. */
+function grammarTopicCopies(slug) {
+  var out = [];
+  for (var i = 0; i < GRAMMAR_LEVELS.length; i++) {
+    var topics = state.grammarCache[GRAMMAR_LEVELS[i]] || [];
+    for (var j = 0; j < topics.length; j++) if (topics[j].slug === slug) out.push(topics[j]);
+  }
+  return out;
+}
+function grammarAllItems(topic) {
+  var items = [];
+  grammarTopicCopies(topic.slug).forEach(function (cp) {
+    ((cp.exercises && cp.exercises.items) || []).forEach(function (ex) { items.push(ex); });
+  });
+  if (!items.length) items = (topic.exercises && topic.exercises.items) || [];
+  return items;
+}
 
 /* Inline markdown used by the grammar pages: **bold**, *italic*, [text](url).
    Internal /blog/grammar/<slug>/ links become in-app #/grammar/<slug> links. */
@@ -7238,7 +7259,7 @@ function renderGrammarTopicV2(v, t) {
   });
   // Group exercises by level
   var exByLevel = {};
-  ((t.exercises && t.exercises.items) || []).forEach(function (ex) {
+  grammarAllItems(t).forEach(function (ex) {
     var lv = (ex.level || '').toLowerCase();
     (exByLevel[lv] = exByLevel[lv] || []).push(ex);
   });
@@ -7377,7 +7398,7 @@ function renderGrammarTopicV3(v, t) {
     (byLevel[lv] = byLevel[lv] || []).push(p);
   });
   var exByLevel = {};
-  ((t.exercises && t.exercises.items) || []).forEach(function (ex) {
+  grammarAllItems(t).forEach(function (ex) {
     var lv = (ex.level || '').toLowerCase();
     (exByLevel[lv] = exByLevel[lv] || []).push(ex);
   });
@@ -7447,7 +7468,7 @@ function renderGrammarTopicV3(v, t) {
 
 /* v2 quiz: per-level exercises, supports mcq / gap / error types */
 function startGrammarQuizV2(topic, level) {
-  var items = ((topic.exercises && topic.exercises.items) || []).filter(function (ex) {
+  var items = grammarAllItems(topic).filter(function (ex) {
     return (ex.level || '').toLowerCase() === level;
   });
   if (!items.length) return;
@@ -13439,7 +13460,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610260122';
+var APP_VERSION = '202610270303';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
