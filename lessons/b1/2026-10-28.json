@@ -1,0 +1,328 @@
+{
+ "date": "2026-10-28",
+ "theme": "travel & transport",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "brake n, v",
+   "pos": "noun, verb",
+   "meaning": "A device used to slow or stop a vehicle.",
+   "example": "Press the brake pedal to stop the car.",
+   "pronunciation": "BRAYK",
+   "persian": "ترمز (اسم و فعل)",
+   "photo": "media/b1/2026-10-28/photos/brake-n-v.jpg",
+   "word_audio": "media/b1/2026-10-28/word-audio/brake-n-v.mp3"
+  },
+  {
+   "word": "breeze",
+   "pos": "noun",
+   "meaning": "A gentle, light wind.",
+   "example": "A cool breeze blew through the trees.",
+   "pronunciation": "BREEZ",
+   "persian": "نسیم",
+   "photo": "media/b1/2026-10-28/photos/breeze.jpg",
+   "word_audio": "media/b1/2026-10-28/word-audio/breeze.mp3"
+  },
+  {
+   "word": "bus stop",
+   "pos": "noun",
+   "meaning": "A place where a bus stops for people.",
+   "example": "I wait for the bus at the bus stop.",
+   "pronunciation": "BUS STOP",
+   "persian": "ایستگاه اتوبوس",
+   "photo": "media/b1/2026-10-28/photos/bus-stop.jpg",
+   "word_audio": "media/b1/2026-10-28/word-audio/bus-stop.mp3"
+  },
+  {
+   "word": "calm (sea)",
+   "pos": "adjective",
+   "meaning": "Without big waves or strong wind.",
+   "example": "The sea was calm for our boat trip.",
+   "pronunciation": "KAHM",
+   "persian": "آرام، بی‌موج",
+   "photo": "media/b1/2026-10-28/photos/calm-sea.jpg",
+   "word_audio": "media/b1/2026-10-28/word-audio/calm-sea.mp3"
+  },
+  {
+   "word": "cliff",
+   "pos": "noun",
+   "meaning": "A high, steep rock face, usually by the sea.",
+   "example": "We walked along the top of the cliff.",
+   "pronunciation": "KLIF",
+   "persian": "صخره، پرتگاه",
+   "photo": "media/b1/2026-10-28/photos/cliff.jpg",
+   "word_audio": "media/b1/2026-10-28/word-audio/cliff.mp3"
+  },
+  {
+   "word": "coast",
+   "pos": "noun",
+   "meaning": "The land next to the sea.",
+   "example": "We spent our holiday on the coast.",
+   "pronunciation": "KOHST",
+   "persian": "ساحل، کرانه",
+   "photo": "media/b1/2026-10-28/photos/coast.jpg",
+   "word_audio": "media/b1/2026-10-28/word-audio/coast.mp3"
+  },
+  {
+   "word": "depart",
+   "pos": "verb",
+   "meaning": "To leave a place, especially to start a journey.",
+   "example": "The train will depart from platform 3.",
+   "pronunciation": "duh-PART",
+   "persian": "حرکت کردن، عزیمت کردن",
+   "photo": "media/b1/2026-10-28/photos/depart.jpg",
+   "word_audio": "media/b1/2026-10-28/word-audio/depart.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-28/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: A Trip to the Coast",
+  "audio": "media/b1/2026-10-28/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-28/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Trip to the Coast",
+  "audio": "media/b1/2026-10-28/shadowing.mp3",
+  "transcript": "media/b1/2026-10-28/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-28/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/028.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/029.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/030.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/031.mp3",
+   "media/b1/2026-10-28/shadowing-sentences/032.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'brake n, v' mean?",
+   "options": [
+    "A device used to slow or stop a vehicle.",
+    "Without big waves or strong wind.",
+    "A high, steep rock face, usually by the sea.",
+    "The land next to the sea."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'breeze' mean?",
+   "options": [
+    "A device used to slow or stop a vehicle.",
+    "Without big waves or strong wind.",
+    "A gentle, light wind.",
+    "A high, steep rock face, usually by the sea."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'bus stop' mean?",
+   "options": [
+    "A place where a bus stops for people.",
+    "To leave a place, especially to start a journey.",
+    "The land next to the sea.",
+    "Without big waves or strong wind."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'calm (sea)' mean?",
+   "options": [
+    "A high, steep rock face, usually by the sea.",
+    "The land next to the sea.",
+    "To leave a place, especially to start a journey.",
+    "Without big waves or strong wind."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'cliff' mean?",
+   "options": [
+    "A high, steep rock face, usually by the sea.",
+    "Without big waves or strong wind.",
+    "A gentle, light wind.",
+    "A place where a bus stops for people."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'coast' mean?",
+   "options": [
+    "A place where a bus stops for people.",
+    "To leave a place, especially to start a journey.",
+    "A gentle, light wind.",
+    "The land next to the sea."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'depart' mean?",
+   "options": [
+    "Without big waves or strong wind.",
+    "To leave a place, especially to start a journey.",
+    "A high, steep rock face, usually by the sea.",
+    "A device used to slow or stop a vehicle."
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "Past Simple and Irregular Verbs",
+  "explanation": "Use the **past simple** for finished actions and situations in the past. We say \"We **visited** the coast yesterday.\"\n\nRegular verbs add **-ed**. For example, **depart** becomes **departed**: \"Our train **departed** at seven o'clock.\"\n\nIrregular verbs have their own past form. **Go** becomes **went**: \"We **went** to the cliff.\"\n\nIn negatives, use **didn't** + the base verb. We say \"We **didn't** wait at the bus stop,\" not \"didn't waited.\"\n\nIn questions, use **did** + subject + base verb. \"**Did** you feel the breeze on the cliff?\"\n\n**Was** and **were** are the past of **be**. The sea **was** calm, and the cliffs **were** high.\n\nCommon time words are **yesterday**, **last week**, and **two days ago**. \"Two days ago, the sea **was** calm.\"",
+  "examples": [
+   "*I **visited** my grandmother yesterday.* (finished action)",
+   "*She **called** me last night.* (finished time)",
+   "*He **got up**, **had** a shower and **left** for work.* (actions in order)",
+   "*We **lived** in Toronto for five years.* (finished situation)",
+   "*I **didn't go**. **Did** you go?* (negative and question with did)",
+   "*A young girl **found** an old key in the garden.* (story)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite in the past simple: Our train departs for the coast at seven o'clock.",
+    "a": "Our train departed for the coast at seven o'clock."
+   },
+   {
+    "q": "Rewrite in the past simple: We wait at the bus stop and feel the breeze.",
+    "a": "We waited at the bus stop and felt the breeze."
+   },
+   {
+    "q": "Make it negative: We visited the cliff yesterday.",
+    "a": "We didn't visit the cliff yesterday."
+   },
+   {
+    "q": "Make it a question: The driver used the brake at the bus stop.",
+    "a": "Did the driver use the brake at the bus stop?"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "We ___ dinner at a Thai restaurant last night.",
+    "options": [
+     "have",
+     "has",
+     "had",
+     "haved"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "She ___ her keys this morning, so she couldn't open the door.",
+    "options": [
+     "lost",
+     "loses",
+     "losed",
+     "lose"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I ___ the email because I was busy.",
+    "options": [
+     "don't read",
+     "not read",
+     "didn't readed",
+     "didn't read"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "___ you see the match last Sunday?",
+    "options": [
+     "Do",
+     "Did",
+     "Were",
+     "Was"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "They ___ to Spain two years ago.",
+    "options": [
+     "go",
+     "goed",
+     "gone",
+     "went"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "My parents ___ at home when I arrived.",
+    "options": [
+     "were",
+     "was",
+     "did",
+     "been"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "He ___ to the party because he was ill.",
+    "options": [
+     "didn't came",
+     "wasn't come",
+     "didn't come",
+     "not came"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Where ___ you go on holiday last summer?",
+    "options": [
+     "were",
+     "did",
+     "do",
+     "was"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "The children ___ in the garden all afternoon.",
+    "options": [
+     "plaied",
+     "playd",
+     "plaid",
+     "played"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "I ___ for my exam all weekend.",
+    "options": [
+     "studied",
+     "studyed",
+     "studed",
+     "studdied"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}

@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-28",
+  "theme": "technology",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "destiny",
+      "pos": "noun",
+      "meaning": "The events that will happen to a person or thing.",
+      "example": "She believes it was her destiny to become an artist.",
+      "pronunciation": "DES-tuh-nee",
+      "persian": "سرنوشت، تقدیر",
+      "photo": "media/c1/2026-10-28/photos/destiny.jpg",
+      "word_audio": "media/c1/2026-10-28/word-audio/destiny.mp3"
+    },
+    {
+      "word": "digital technology",
+      "pos": "noun phrase",
+      "meaning": "Electronic tools and systems that process data digitally.",
+      "example": "Digital technology has transformed how we communicate globally.",
+      "pronunciation": "DIJ-i-tul tek-NOL-uh-jee",
+      "persian": "فناوری دیجیتال",
+      "photo": "media/c1/2026-10-28/photos/digital-technology.jpg",
+      "word_audio": "media/c1/2026-10-28/word-audio/digital-technology.mp3"
+    },
+    {
+      "word": "disease-resistant",
+      "pos": "adjective",
+      "meaning": "Able to withstand or fight off diseases.",
+      "example": "Scientists are developing disease-resistant crops to improve yields.",
+      "pronunciation": "dih-ZEEZ-ri-ZIS-tunt",
+      "persian": "مقاوم به بیماری",
+      "photo": "media/c1/2026-10-28/photos/disease-resistant.jpg",
+      "word_audio": "media/c1/2026-10-28/word-audio/disease-resistant.mp3"
+    },
+    {
+      "word": "doomsday scenario",
+      "pos": "noun",
+      "meaning": "A prediction of a catastrophic future event or disaster.",
+      "example": "Experts warned of a doomsday scenario if climate change continues.",
+      "pronunciation": "DOOMZ-day suh-NAIR-ee-oh",
+      "persian": "سناریوی فاجعه‌بار، آخرالزمانی",
+      "photo": "media/c1/2026-10-28/photos/doomsday-scenario.jpg",
+      "word_audio": "media/c1/2026-10-28/word-audio/doomsday-scenario.mp3"
+    },
+    {
+      "word": "drastic measures",
+      "pos": "phrase",
+      "meaning": "Extreme and severe actions taken to solve a problem.",
+      "example": "Drastic measures are needed to combat climate change.",
+      "pronunciation": "DRAS-tik MEZH-erz",
+      "persian": "اقدامات شدید، تدابیر جدی",
+      "photo": "media/c1/2026-10-28/photos/drastic-measures.jpg",
+      "word_audio": "media/c1/2026-10-28/word-audio/drastic-measures.mp3"
+    },
+    {
+      "word": "e-reader",
+      "pos": "noun",
+      "meaning": "An electronic device for reading digital books.",
+      "example": "My e-reader holds hundreds of books.",
+      "pronunciation": "EE-ree-der",
+      "persian": "کتاب‌خوان الکترونیکی",
+      "photo": "media/c1/2026-10-28/photos/e-reader.jpg",
+      "word_audio": "media/c1/2026-10-28/word-audio/e-reader.mp3"
+    },
+    {
+      "word": "envisage",
+      "pos": "verb",
+      "meaning": "To imagine something as a future possibility.",
+      "example": "We envisage a future where technology enhances learning.",
+      "pronunciation": "en-VIZ-ij",
+      "persian": "تصور کردن، پیش‌بینی کردن",
+      "photo": "media/c1/2026-10-28/photos/envisage.jpg",
+      "word_audio": "media/c1/2026-10-28/word-audio/envisage.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-28/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Technology and the Future We Envisage",
+    "audio": "media/c1/2026-10-28/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-28/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Garden That Changed a Town",
+    "audio": "media/c1/2026-10-28/shadowing.mp3",
+    "transcript": "media/c1/2026-10-28/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-10-28/shadowing-sentences/001.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/002.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/003.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/004.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/005.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/006.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/007.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/008.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/009.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/010.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/011.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/012.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/013.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/014.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/015.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/016.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/017.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/018.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/019.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/020.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/021.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/022.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/023.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/024.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/025.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/026.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/027.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/028.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/029.mp3",
+      "media/c1/2026-10-28/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'destiny' mean?",
+      "options": [
+        "The events that will happen to a person or thing.",
+        "To imagine something as a future possibility.",
+        "Able to withstand or fight off diseases.",
+        "An electronic device for reading digital books."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'digital technology' mean?",
+      "options": [
+        "To imagine something as a future possibility.",
+        "Electronic tools and systems that process data digitally.",
+        "The events that will happen to a person or thing.",
+        "A prediction of a catastrophic future event or disaster."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'disease-resistant' mean?",
+      "options": [
+        "Extreme and severe actions taken to solve a problem.",
+        "Able to withstand or fight off diseases.",
+        "The events that will happen to a person or thing.",
+        "Electronic tools and systems that process data digitally."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'doomsday scenario' mean?",
+      "options": [
+        "Able to withstand or fight off diseases.",
+        "Extreme and severe actions taken to solve a problem.",
+        "The events that will happen to a person or thing.",
+        "A prediction of a catastrophic future event or disaster."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'drastic measures' mean?",
+      "options": [
+        "The events that will happen to a person or thing.",
+        "Electronic tools and systems that process data digitally.",
+        "Able to withstand or fight off diseases.",
+        "Extreme and severe actions taken to solve a problem."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'e-reader' mean?",
+      "options": [
+        "An electronic device for reading digital books.",
+        "Extreme and severe actions taken to solve a problem.",
+        "Electronic tools and systems that process data digitally.",
+        "To imagine something as a future possibility."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'envisage' mean?",
+      "options": [
+        "The events that will happen to a person or thing.",
+        "Electronic tools and systems that process data digitally.",
+        "An electronic device for reading digital books.",
+        "To imagine something as a future possibility."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Ellipsis and Substitution",
+    "explanation": "Natural English avoids repeating words. We either **replace** them with a short word (**substitution**) or **leave them out** (**ellipsis**).\n\nFor nouns, use **one** for a singular countable noun and **ones** for a plural noun. With digital technology, we rarely repeat long phrases: I love my old e-reader, but I want the new **one**.\n\nFor verb phrases, use **do**, **does** or **did**, or the formal **do so**. She speaks French better than I **do**, and he was asked to leave, so he **did so** at once.\n\nFor a whole clause, use **so** for a positive reply and **not** for a negative one, especially after think, hope, expect, suppose and be afraid. I hope **so**. I am afraid **not**.\n\nWith think, expect and suppose, the usual negative is I don't think **so**, not I think not. With hope and be afraid, use **not**.\n\nIn ellipsis, words are left out after an auxiliary or modal, as in my sister **can**, or after **to**, as in I'd love **to**. Words are also left out when the subject or verb is shared.\n\nWatch two common mistakes. Do not use both the substitute and the noun: say the old **ones**, not the old ones shoes. And always keep **to** when the verb is left out: I'd love **to**, not I'd love.",
+    "examples": [
+      "*I'd like a coffee. Would you like **one**?* (one = a coffee)",
+      "*The red apples are sweeter than the green **ones**.* (ones = apples)",
+      "*Nobody works harder than she **does**.* (does = works)",
+      "*Are you coming tonight? – I hope **so**.* (so = that I'm coming)",
+      "*Is it going to rain? – I hope **not**.* (not = that it won't rain)",
+      "*I don't think **so**.* (negative with think)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite using a substitute word: I don't like this e-reader. Can I see the new e-reader?",
+        "a": "I don't like this e-reader. Can I see the new one?"
+      },
+      {
+        "q": "Rewrite with ellipsis: Maya reads on her e-reader, and her grandmother reads on her e-reader too.",
+        "a": "Maya reads on her e-reader, and her grandmother does too."
+      },
+      {
+        "q": "Rewrite using a substitute word: Will digital technology change our destiny? - I think digital technology will change our destiny.",
+        "a": "Will digital technology change our destiny? - I think so."
+      },
+      {
+        "q": "Rewrite with ellipsis: Do you want to envisage a better future? - I'd love to envisage a better future.",
+        "a": "Do you want to envisage a better future? - I'd love to."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I don't like this jacket. Can I see the blue ___?",
+        "options": [
+          "it",
+          "that",
+          "one",
+          "ones"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Is it going to rain? – I hope ___.",
+        "options": [
+          "not",
+          "no",
+          "so not",
+          "don't"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She speaks French better than I ___.",
+        "options": [
+          "am",
+          "does",
+          "have",
+          "do"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Will you be at the meeting? – I don't think ___.",
+        "options": [
+          "it",
+          "so",
+          "that",
+          "not"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Would you like to come with us? – I'd love ___!",
+        "options": [
+          "it",
+          "so",
+          "that",
+          "to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "These shoes are too small. Do you have any bigger ___?",
+        "options": [
+          "one",
+          "ones",
+          "it",
+          "them"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He was asked to leave the room, and he did ___ immediately.",
+        "options": [
+          "so",
+          "such",
+          "it so",
+          "that so"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I haven't finished my homework yet, but Sara ___.",
+        "options": [
+          "did",
+          "is",
+          "has",
+          "was"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I can't play the piano, but my sister ___.",
+        "options": [
+          "can",
+          "does",
+          "is",
+          "plays it can"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Who wants more cake? – I ___!",
+        "options": [
+          "want",
+          "am",
+          "do",
+          "does"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}
