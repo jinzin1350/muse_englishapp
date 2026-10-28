@@ -4547,9 +4547,11 @@ function plannerPrefillSched(schedMap) {
     const dayEl = document.querySelector('.pl-day[data-dow="' + dow + '"]');
     if (!dayEl) return;
     const topicSel = dayEl.querySelector('.pl-topic');
-    if (topicSel && g.topic) {
-      const hasOpt = Array.prototype.some.call(topicSel.options, function (o) { return o.value === g.topic; });
-      if (hasOpt) topicSel.value = g.topic;
+    if (topicSel && (g.slug || g.topic)) {
+      /* options are 'v2:<slug>' — match on the stored slug, not the label */
+      const want = g.slug ? 'v2:' + g.slug : g.topic;
+      const hasOpt = Array.prototype.some.call(topicSel.options, function (o) { return o.value === want; });
+      if (hasOpt) topicSel.value = want;
     }
     const countSel = dayEl.querySelector('.pl-count');
     if (countSel && g.count) countSel.value = String(g.count);
@@ -4602,7 +4604,7 @@ async function plannerSchedMap() {
   const map = {};
   try {
     const r = await sb.from('assignments')
-      .select('topic_label,question_count,level,send_at,send_tz,student_ids')
+      .select('topic,topic_label,question_count,level,send_at,send_tz,student_ids')
       .eq('teacher_id', state.user.id).eq('status', 'scheduled')
       .gt('send_at', new Date().toISOString())
       .order('send_at', { ascending: true }).limit(60);
@@ -4611,7 +4613,7 @@ async function plannerSchedMap() {
       const tz = x.send_tz || teacherTz();
       const dow = dowInTz(x.send_at, tz);
       const g = (map[dow] = map[dow] || {
-        topic: x.topic_label, count: x.question_count || 10, level: x.level,
+        topic: x.topic_label, slug: x.topic, count: x.question_count || 10, level: x.level,
         time: timeInTz(x.send_at, tz), groups: []
       });
       g.groups.push({ tz: tz, n: (x.student_ids || []).length });
@@ -4657,6 +4659,50 @@ async function savePlanner(btn) {
   btn.disabled = true;
   const orig = btn.textContent;
   try {
+    /* Phase 1 — build every day's questions BEFORE touching the existing
+       schedule, so a failure leaves the old plan intact. Bank-first (same as
+       the composer); when the bank is short at the picked level, top up from
+       the topic's site exercises — 257 of 642 topic×level pairs have no bank
+       items at all, and the old code died on those with a bare "empty". */
+    const built = [];
+    if (rows.length) {
+      btn.textContent = 'Preparing questions…';
+      let grammarLoaded = false;
+      for (const r of rows) {
+        /* v2 topic value looks like v2:<slug> */
+        const slug = r.topic.indexOf('v2:') === 0 ? r.topic.slice(3) : r.topic;
+        const t = V2_TOPICS[slug];
+        const ptIds = ((t && t.points) || []).map(function (p) { return p.id; });
+        let bankQs = [];
+        try { bankQs = await asV2FetchBank(ptIds); } catch (e) {}
+        const lvItems = bankQs.filter(function (ex) {
+          return String(ex.level || '').toLowerCase() === level;
+        });
+        if (lvItems.length < r.count) {
+          try {
+            if (!grammarLoaded) { await loadAllGrammar(); grammarLoaded = true; }
+            const gt = findGrammarTopic(slug);
+            if (gt) {
+              const seen = {};
+              lvItems.forEach(function (ex) { if (ex.id) seen[ex.id] = 1; });
+              grammarAllItems(gt).forEach(function (ex) {
+                if (String(ex.level || '').toLowerCase() === level && !(ex.id && seen[ex.id])) lvItems.push(ex);
+              });
+            }
+          } catch (e) { /* top-up is best-effort; the empty check below reports */ }
+        }
+        const picked = shuffleArr(lvItems.slice()).slice(0, Math.min(r.count, lvItems.length));
+        const topicLabel = t ? t.h1 : slug;
+        if (!picked.length) {
+          throw new Error('No questions for "' + topicLabel + '" at ' +
+            level.toUpperCase() + ' yet — pick another topic or level for that day.');
+        }
+        built.push({
+          r: r, slug: slug, topicLabel: topicLabel,
+          questions: picked.map(function (ex) { return asV2SnapshotQ(ex, slug); })
+        });
+      }
+    }
     /* Replace semantics: cancel this teacher's still-pending scheduled rows
        first, so the planner always reflects the current plan (and re-saving
        never duplicates). Rows already due stay for the sender.
@@ -4681,22 +4727,11 @@ async function savePlanner(btn) {
       window.scrollTo(0, 0);
       return;
     }
+    /* Phase 2 — insert the built plan, one row per day per timezone group. */
     let n = 0;
-    const total = rows.length * tzList.length;
-    for (const r of rows) {
-      /* v2 topic value looks like v2:<slug> */
-      const slug = r.topic.indexOf('v2:') === 0 ? r.topic.slice(3) : r.topic;
-      const t = V2_TOPICS[slug];
-      const ptIds = ((t && t.points) || []).map(function (p) { return p.id; });
-      let bankQs = [];
-      try { bankQs = await asV2FetchBank(ptIds); } catch (e) {}
-      const lvItems = bankQs.filter(function (ex) {
-        return String(ex.level || '').toLowerCase() === level;
-      });
-      const picked = shuffleArr(lvItems.slice()).slice(0, Math.min(r.count, lvItems.length));
-      if (!picked.length) throw new Error('empty');
-      const questions = picked.map(function (ex) { return asV2SnapshotQ(ex, slug); });
-      const topicLabel = t ? t.h1 : slug;
+    const total = built.length * tzList.length;
+    for (const b of built) {
+      const r = b.r, questions = b.questions, topicLabel = b.topicLabel;
       for (const tz of tzList) {
         btn.textContent = 'Scheduling ' + (++n) + '/' + total + '…';
         const sendAt = wallTimeToUtc(r.dateStr, r.timeStr, tz);
@@ -4704,7 +4739,7 @@ async function savePlanner(btn) {
           teacher_id: tchViewId(),
           teacher_name: ((state.twViewTeacher || state.teacher) && (state.twViewTeacher || state.teacher).display_name) || '',
           kind: 'homework', title: '📝 ' + topicLabel + ' (' + level.toUpperCase() + ')',
-          level: level, topic: slug, topic_label: topicLabel,
+          level: level, topic: b.slug, topic_label: topicLabel,
           question_count: questions.length, questions: questions,
           student_ids: groups[tz].map(function (s) { return s.user_id; }),
           note: null, deadline: null,
@@ -13460,7 +13495,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610270303';
+var APP_VERSION = '202610280056';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
