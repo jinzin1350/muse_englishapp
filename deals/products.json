@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "lego-city-express-train",
+      "name_fa": "قطار مسافربری لگو سیتی",
+      "name_en": "LEGO City Express Passenger Train Set",
+      "price_cad": 239.0,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "چهارشنبه، ۲۸ اکتبر ۲۰۲۶",
+      "image": "img/lego-city-express-train.jpg",
+      "url": "https://www.amazon.ca/dp/B09XWPF29F?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "قطار ریموت‌دار با ایستگاه و ریل؛ پایین‌ترین قیمت ۹۰ روز گذشته؛ هدیه عالی برای بچه‌ها"
+    },
+    {
+      "id": "cuisinart-food-processor-10cup",
+      "name_fa": "غذاساز کویزینارت ۱۰ پیمانه‌ای",
+      "name_en": "Cuisinart Core Custom 10-Cup Food Processor",
+      "price_cad": 128.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "چهارشنبه، ۲۸ اکتبر ۲۰۲۶",
+      "image": "img/cuisinart-food-processor-10cup.jpg",
+      "url": "https://www.amazon.ca/dp/B0B67P4T7D?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "غذاساز ۱۰ پیمانه‌ای چندکاره؛ پایین‌ترین قیمت ۹۰ روز گذشته"
+    },
+    {
+      "id": "blink-2k-security-system",
+      "name_fa": "سیستم امنیتی بلینک با زنگ در تصویری",
+      "name_en": "Blink 2K Security System with Outdoor Cameras and Doorbell",
+      "price_cad": 127.97,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "چهارشنبه، ۲۸ اکتبر ۲۰۲۶",
+      "image": "img/blink-2k-security-system.jpg",
+      "url": "https://www.amazon.ca/dp/B0H1J7DRMG?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "دو دوربین فضای باز و زنگ در تصویری با ویدیوی ۲کی؛ بی‌سیم"
+    },
+    {
+      "id": "dewalt-work-light-dcl040",
+      "name_fa": "چراغ کار ال‌ای‌دی دیوالت با باتری ۲۰ ولتی",
+      "name_en": "DeWalt 20V Max LED Work Light DCL040",
+      "price_cad": 27.98,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "چهارشنبه، ۲۸ اکتبر ۲۰۲۶",
+      "image": "img/dewalt-work-light-dcl040.jpg",
+      "url": "https://www.amazon.ca/dp/B0052MILZM?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "چراغ کار ال‌ای‌دی با باتری ۲۰ ولتی؛ پایین‌ترین قیمت ۹۰ روز گذشته؛ باتری جداگانه فروخته می‌شود"
+    },
+    {
       "id": "black-decker-dustbuster-bdh2000l",
       "name_fa": "جارو شارژی داست‌باستر بلک‌انددکر ۲۰ ولتی",
       "name_en": "BLACK+DECKER dustbuster 20V Hand Vacuum BDH2000L",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "۴ حسگر و ایستگاه مرکزی؛ هشدار نشت آب روی گوشی"
-    },
-    {
-      "id": "astroai-tire-inflator-20v",
-      "name_fa": "بادکننده شارژی آستروای‌آی با باتری ۲۰ ولتی",
-      "name_en": "AstroAI 20V Cordless Tire Inflator",
-      "price_cad": 55.99,
-      "regular_cad": 99.99,
-      "discount_pct": 44,
-      "added_fa": "سه‌شنبه، ۲۷ اکتبر ۲۰۲۶",
-      "image": "img/astroai-tire-inflator-20v.jpg",
-      "url": "https://www.amazon.ca/dp/B0BSGH7L51?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "بادکننده بی‌سیم لاستیک برای زمستان کانادا"
-    },
-    {
-      "id": "toshiba-rice-cooker-3cup",
-      "name_fa": "پلوپز توشیبا ۳ پیمانه‌ای با ۸ برنامه",
-      "name_en": "Toshiba 3-Cup Rice Cooker with 8 Functions",
-      "price_cad": 101.99,
-      "regular_cad": 148.92,
-      "discount_pct": 32,
-      "added_fa": "سه‌شنبه، ۲۷ اکتبر ۲۰۲۶",
-      "image": "img/toshiba-rice-cooker-3cup.jpg",
-      "url": "https://www.amazon.ca/dp/B0CX94FW8V?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پلوپز ۳ پیمانه‌ای با ۸ برنامه؛ پایین‌ترین قیمت ۹۰ روز گذشته"
-    },
-    {
-      "id": "soundcore-v20i-open-ear",
-      "name_fa": "ایربادز اوپن‌ایر ساندکور V20i انکر",
-      "name_en": "Soundcore by Anker V20i Open-Ear Earbuds",
-      "price_cad": 35.99,
-      "regular_cad": 59.99,
-      "discount_pct": null,
-      "added_fa": "دوشنبه، ۲۶ اکتبر ۲۰۲۶",
-      "image": "img/soundcore-v20i-open-ear.jpg",
-      "url": "https://www.amazon.ca/dp/B0D31C567W?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "ایربادز روگوشی برای ورزش؛ گوش باز می‌ماند و ۳۶ ساعت پخش دارد"
-    },
-    {
-      "id": "soundcore-p20i-earbuds",
-      "name_fa": "ایربادز ساندکور P20i انکر",
-      "name_en": "Soundcore by Anker P20i True Wireless Earbuds",
-      "price_cad": 29.99,
-      "regular_cad": 39.99,
-      "discount_pct": null,
-      "added_fa": "دوشنبه، ۲۶ اکتبر ۲۰۲۶",
-      "image": "img/soundcore-p20i-earbuds.jpg",
-      "url": "https://www.amazon.ca/dp/B0BTYCJXBK?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "ایربادز محبوب انکر با بیس قوی و ۳۰ ساعت پخش؛ امتیاز ۴٫۳ از نزدیک ۹۷ هزار نظر"
     }
   ],
-  "updated_fa": "سه‌شنبه ۵ آبان"
+  "updated_fa": "چهارشنبه ۶ آبان"
 }
