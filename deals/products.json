@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "samsung-odyssey-g6-27-qhd",
+      "name_fa": "مانیتور گیمینگ سامسونگ اودیسه ۲۷ اینچی",
+      "name_en": "Samsung 27-inch Odyssey G6 QHD Gaming Monitor",
+      "price_cad": 298.0,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "پنجشنبه، ۲۹ اکتبر ۲۰۲۶",
+      "image": "img/samsung-odyssey-g6-27-qhd.jpg",
+      "url": "https://www.amazon.ca/dp/B0GJXLZDYH?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "مانیتور گیمینگ ۲۷ اینچی با وضوح کیو‌اچ‌دی"
+    },
+    {
+      "id": "skullcandy-push-540-open",
+      "name_fa": "ایربادز اسکال‌کندی پوش ۵۴۰",
+      "name_en": "Skullcandy Push 540 Open-Ear Wireless Earbuds",
+      "price_cad": 69.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "پنجشنبه، ۲۹ اکتبر ۲۰۲۶",
+      "image": "img/skullcandy-push-540-open.jpg",
+      "url": "https://www.amazon.ca/dp/B0GQJSWK42?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "ایربادز اوپن‌ایر با قلاب دور گوش و بند گردنی؛ پایین‌ترین قیمت ۹۰ روز گذشته؛ شارژ کلی تا ۴۲ ساعت"
+    },
+    {
+      "id": "dewalt-20v-angle-grinder-bare",
+      "name_fa": "سنگ‌فرز شارژی دیوالت ۲۰ ولتی",
+      "name_en": "DEWALT 20V MAX Cordless Angle Grinder, Bare Tool",
+      "price_cad": 128.0,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "پنجشنبه، ۲۹ اکتبر ۲۰۲۶",
+      "image": "img/dewalt-20v-angle-grinder-bare.jpg",
+      "url": "https://www.amazon.ca/dp/B0DQYKZYMJ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "سنگ‌فرز شارژی با موتور بدون زغال؛ پایین‌ترین قیمت ۹۰ روز گذشته؛ فقط بدنه ابزار، باتری جداگانه فروخته می‌شود"
+    },
+    {
+      "id": "asus-proart-pa401-pc-case",
+      "name_fa": "کیس ایسوس پروآرت با نمای چوبی",
+      "name_en": "ASUS ProArt PA401 Wood Edition ATX Mid-Tower PC Case",
+      "price_cad": 109.88,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "پنجشنبه، ۲۹ اکتبر ۲۰۲۶",
+      "image": "img/asus-proart-pa401-pc-case.jpg",
+      "url": "https://www.amazon.ca/dp/B0DJ1VD4JX?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "کیس میدتاور با پنل جلویی چوبی و شیشه دودی؛ پایین‌ترین قیمت ۹۰ روز گذشته"
+    },
+    {
       "id": "oral-b-pro-limited",
       "name_fa": "مسواک برقی اورال‌بی پرو لیمیتد",
       "name_en": "Oral-B Pro Limited Rechargeable Electric Toothbrush",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "غذاساز ۱۰ پیمانه‌ای چندکاره؛ پایین‌ترین قیمت ۹۰ روز گذشته"
-    },
-    {
-      "id": "blink-2k-security-system",
-      "name_fa": "سیستم امنیتی بلینک با زنگ در تصویری",
-      "name_en": "Blink 2K Security System with Outdoor Cameras and Doorbell",
-      "price_cad": 127.97,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "چهارشنبه، ۲۸ اکتبر ۲۰۲۶",
-      "image": "img/blink-2k-security-system.jpg",
-      "url": "https://www.amazon.ca/dp/B0H1J7DRMG?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "دو دوربین فضای باز و زنگ در تصویری با ویدیوی ۲کی؛ بی‌سیم"
-    },
-    {
-      "id": "dewalt-work-light-dcl040",
-      "name_fa": "چراغ کار ال‌ای‌دی دیوالت با باتری ۲۰ ولتی",
-      "name_en": "DeWalt 20V Max LED Work Light DCL040",
-      "price_cad": 27.98,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "چهارشنبه، ۲۸ اکتبر ۲۰۲۶",
-      "image": "img/dewalt-work-light-dcl040.jpg",
-      "url": "https://www.amazon.ca/dp/B0052MILZM?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "چراغ کار ال‌ای‌دی با باتری ۲۰ ولتی؛ پایین‌ترین قیمت ۹۰ روز گذشته؛ باتری جداگانه فروخته می‌شود"
-    },
-    {
-      "id": "black-decker-dustbuster-bdh2000l",
-      "name_fa": "جارو شارژی داست‌باستر بلک‌انددکر ۲۰ ولتی",
-      "name_en": "BLACK+DECKER dustbuster 20V Hand Vacuum BDH2000L",
-      "price_cad": 85.0,
-      "regular_cad": 119.99,
-      "discount_pct": null,
-      "added_fa": "سه‌شنبه، ۲۷ اکتبر ۲۰۲۶",
-      "image": "img/black-decker-dustbuster-bdh2000l.jpg",
-      "url": "https://www.amazon.ca/dp/B008R3F0J8?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "جارو دستی بی‌سیم با مکش قوی؛ برای تمیزکاری سریع خانه و ماشین."
-    },
-    {
-      "id": "bissell-little-green-pro-2505d",
-      "name_fa": "لکه‌بر قابل‌حمل بیسل لیتل گرین پرو",
-      "name_en": "BISSELL Little Green Pro Portable Spot & Stain Cleaner 2505D",
-      "price_cad": 99.0,
-      "regular_cad": 199.99,
-      "discount_pct": null,
-      "added_fa": "سه‌شنبه، ۲۷ اکتبر ۲۰۲۶",
-      "image": "img/bissell-little-green-pro-2505d.jpg",
-      "url": "https://www.amazon.ca/dp/B0BSJF118D?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "قوی‌ترین لکه‌بر قابل‌حمل بیسل؛ برای فرش، مبل، پله و داخل ماشین عالی است."
     }
   ],
-  "updated_fa": "چهارشنبه ۶ آبان"
+  "updated_fa": "پنجشنبه ۷ آبان"
 }
