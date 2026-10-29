@@ -1,0 +1,3 @@
+- Everyday health words for A2 learners: ache, ankle, back, backache, bandage
+- A sore ankle from football, a dull ache, back pain from sitting and heavy bags
+- First aid basics: resting an injury and using a bandage for small cuts

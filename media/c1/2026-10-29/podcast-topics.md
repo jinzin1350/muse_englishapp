@@ -1,0 +1,5 @@
+- Travel and transport vocabulary: budget airline, all-inclusive holiday, 4x4, awe-inspiring, berth, beep your horn, breathalyser
+- Choosing flights and holidays: cheap fares versus all-inclusive prices
+- Mountain driving in a 4x4 and awe-inspiring views
+- Overnight trains and sleeping in a berth
+- Driving manners and road safety, including breathalyser checks

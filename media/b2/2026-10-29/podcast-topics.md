@@ -1,0 +1,5 @@
+- Going out for dinner: booking a table, restaurant bookings, car parks
+- Eating well: a balanced diet, a bunch of bananas and fresh ingredients
+- Dessert: afters, the sweet course at the end of a meal
+- Changing plans: how and why to cancel a reservation politely
+- Muse English app promos: daily words, podcast, shadowing, quizzes, grammar, leaderboard

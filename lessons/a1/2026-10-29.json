@@ -1,0 +1,275 @@
+{
+  "date": "2026-10-29",
+  "theme": "sports & fitness",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "American football",
+      "pos": "noun",
+      "meaning": "A team sport played with an oval ball.",
+      "example": "Many people watch American football on Sundays.",
+      "pronunciation": "uh-MAIR-ih-kun FOOT-ball",
+      "persian": "فوتبال آمریکایی",
+      "photo": "media/a1/2026-10-29/photos/American football.jpg",
+      "word_audio": "media/a1/2026-10-29/word-audio/American football.mp3"
+    },
+    {
+      "word": "badminton",
+      "pos": "noun",
+      "meaning": "A sport played with rackets and a shuttlecock.",
+      "example": "We play badminton in the park on Sundays.",
+      "pronunciation": "BAD-min-tun",
+      "persian": "بدمینتون",
+      "photo": "media/a1/2026-10-29/photos/badminton.jpg",
+      "word_audio": "media/a1/2026-10-29/word-audio/badminton.mp3"
+    },
+    {
+      "word": "ball game",
+      "pos": "noun",
+      "meaning": "A sport played with a ball.",
+      "example": "Baseball is a popular ball game in America.",
+      "pronunciation": "BALL GAYM",
+      "persian": "بازی توپی",
+      "photo": "media/a1/2026-10-29/photos/ball game.jpg",
+      "word_audio": "media/a1/2026-10-29/word-audio/ball game.mp3"
+    },
+    {
+      "word": "baseball",
+      "pos": "noun",
+      "meaning": "A game played with a bat and ball.",
+      "example": "My brother loves to play baseball.",
+      "pronunciation": "BAYS-ball",
+      "persian": "بیسبال",
+      "photo": "media/a1/2026-10-29/photos/baseball.jpg",
+      "word_audio": "media/a1/2026-10-29/word-audio/baseball.mp3"
+    },
+    {
+      "word": "basketball",
+      "pos": "noun",
+      "meaning": "A game where players throw a ball into a net.",
+      "example": "They play basketball every Tuesday.",
+      "pronunciation": "BAS-kit-ball",
+      "persian": "بسکتبال",
+      "photo": "media/a1/2026-10-29/photos/basketball.jpg",
+      "word_audio": "media/a1/2026-10-29/word-audio/basketball.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-10-29/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Sports and Ball Games",
+    "audio": "media/a1/2026-10-29/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-10-29/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Fun Day of Sports",
+    "audio": "media/a1/2026-10-29/shadowing.mp3",
+    "transcript": "media/a1/2026-10-29/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-10-29/shadowing-sentences/001.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/002.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/003.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/004.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/005.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/006.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/007.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/008.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/009.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/010.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/011.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/012.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/013.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/014.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/015.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/016.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/017.mp3",
+      "media/a1/2026-10-29/shadowing-sentences/018.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'American football' mean?",
+      "options": [
+        "A sport played with rackets and a shuttlecock.",
+        "A team sport played with an oval ball.",
+        "A game played with a bat and ball.",
+        "A game where players throw a ball into a net."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'badminton' mean?",
+      "options": [
+        "A sport played with a ball.",
+        "A game played with a bat and ball.",
+        "A sport played with rackets and a shuttlecock.",
+        "A game where players throw a ball into a net."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'ball game' mean?",
+      "options": [
+        "A game where players throw a ball into a net.",
+        "A sport played with a ball.",
+        "A team sport played with an oval ball.",
+        "A sport played with rackets and a shuttlecock."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'baseball' mean?",
+      "options": [
+        "A game where players throw a ball into a net.",
+        "A sport played with rackets and a shuttlecock.",
+        "A game played with a bat and ball.",
+        "A sport played with a ball."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'basketball' mean?",
+      "options": [
+        "A game played with a bat and ball.",
+        "A sport played with a ball.",
+        "A sport played with rackets and a shuttlecock.",
+        "A game where players throw a ball into a net."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Possessive 's",
+    "explanation": "We use **'s** after a person or animal to show that something belongs to them. For example, **Tom's** car means the car of Tom.\n\nAdd **'s** to a singular noun. Add only **'** to a plural noun that ends in s. Add **'s** to an irregular plural, like **children's**.\n\nFor things, we usually use **of**. We say the end **of** the film, not the film's end.\n\nAsk about possession with **whose**. For example, **Whose** bag is this? It is Lucy's.\n\nBe careful: **'s** can also mean is or has. **She's** happy means she is happy.",
+    "examples": [
+      "*This is **Maria's** phone.* (name + 's)",
+      "*My **brother's** wife is a nurse.* (singular noun + 's)",
+      "*The **children's** bedroom is upstairs.* (irregular plural + 's)",
+      "*My **parents'** house has a big garden.* (plural ending in s + ')",
+      "*I'm staying at my **aunt's** this weekend.* (at my aunt's house)",
+      "*Tom and Lisa's wedding was beautiful.* (two people, one wedding)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with 's: This is the basketball of Sam.",
+        "a": "This is Sam's basketball."
+      },
+      {
+        "q": "Rewrite with 's: These are the rackets of the children.",
+        "a": "These are the children's rackets."
+      },
+      {
+        "q": "Rewrite with 's: This is the baseball of my brother.",
+        "a": "This is my brother's baseball."
+      },
+      {
+        "q": "Rewrite with 's: That is the badminton racket of Anna.",
+        "a": "That is Anna's badminton racket."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "This is ___ bike.",
+        "options": [
+          "Tom",
+          "Toms",
+          "Tom's",
+          "Toms'"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ phone is this? – It's Anna's.",
+        "options": [
+          "Whose",
+          "Who's",
+          "Who",
+          "Which's"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "My ___ house is near the beach. (I have two parents.)",
+        "options": [
+          "parent's",
+          "parents'",
+          "parents's",
+          "parent"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The ___ toys are all over the floor.",
+        "options": [
+          "childrens'",
+          "childs'",
+          "childrens",
+          "children's"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She's ___ sister.",
+        "options": [
+          "Davids",
+          "David's",
+          "Davids'",
+          "David"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My ___ name is Leo. He's ten.",
+        "options": [
+          "brothers'",
+          "brothers",
+          "brother's",
+          "brother"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What does 's mean in 'She's tired'?",
+        "options": [
+          "is",
+          "has",
+          "possessive",
+          "was"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We're having dinner at my ___ tonight. She's a great cook.",
+        "options": [
+          "grandmothers",
+          "grandmother",
+          "grandmothers'",
+          "grandmother's"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The ___ results were excellent. All 30 students passed.",
+        "options": [
+          "student's",
+          "students'",
+          "students's",
+          "student"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Tom and ___ flat is very small.",
+        "options": [
+          "Lisa's",
+          "Lisas",
+          "Lisa",
+          "Lisas'"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a1/2026-10-29/grammar-en.mp3"
+  }
+}

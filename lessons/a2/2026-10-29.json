@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-29",
+  "theme": "health & body",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "ache n, v",
+      "pos": "noun, verb",
+      "meaning": "a continuous, dull pain",
+      "example": "I have a headache. My head aches.",
+      "pronunciation": "AYK",
+      "persian": "درد (اسم و فعل)",
+      "photo": "media/a2/2026-10-29/photos/ache n, v.jpg",
+      "word_audio": "media/a2/2026-10-29/word-audio/ache n, v.mp3"
+    },
+    {
+      "word": "ankle",
+      "pos": "noun",
+      "meaning": "The joint connecting your foot and leg.",
+      "example": "I hurt my ankle playing football.",
+      "pronunciation": "ANG-kul",
+      "persian": "مچ پا",
+      "photo": "media/a2/2026-10-29/photos/ankle.jpg",
+      "word_audio": "media/a2/2026-10-29/word-audio/ankle.mp3"
+    },
+    {
+      "word": "back",
+      "pos": "noun",
+      "meaning": "The part of your body opposite your stomach.",
+      "example": "My back hurts after carrying heavy bags.",
+      "pronunciation": "BAK",
+      "persian": "کمر، پشت",
+      "photo": "media/a2/2026-10-29/photos/back.jpg",
+      "word_audio": "media/a2/2026-10-29/word-audio/back.mp3"
+    },
+    {
+      "word": "backache",
+      "pos": "noun",
+      "meaning": "A pain in your back.",
+      "example": "I have a bad backache from sitting all day.",
+      "pronunciation": "BAK-ayk",
+      "persian": "کمردرد",
+      "photo": "media/a2/2026-10-29/photos/backache.jpg",
+      "word_audio": "media/a2/2026-10-29/word-audio/backache.mp3"
+    },
+    {
+      "word": "bandage",
+      "pos": "noun",
+      "meaning": "A strip of cloth to cover an injury.",
+      "example": "She put a bandage on her cut finger.",
+      "pronunciation": "BAN-dij",
+      "persian": "باند، نوار زخم‌بندی",
+      "photo": "media/a2/2026-10-29/photos/bandage.jpg",
+      "word_audio": "media/a2/2026-10-29/word-audio/bandage.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-29/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Small Health Problems",
+    "audio": "media/a2/2026-10-29/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-29/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Tom and the Blue Bandage",
+    "audio": "media/a2/2026-10-29/shadowing.mp3",
+    "transcript": "media/a2/2026-10-29/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-10-29/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/022.mp3",
+      "media/a2/2026-10-29/shadowing-sentences/023.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'ache n, v' mean?",
+      "options": [
+        "A pain in your back.",
+        "The joint connecting your foot and leg.",
+        "a continuous, dull pain",
+        "The part of your body opposite your stomach.",
+        "A strip of cloth to cover an injury."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'ankle' mean?",
+      "options": [
+        "The part of your body opposite your stomach.",
+        "A strip of cloth to cover an injury.",
+        "The joint connecting your foot and leg.",
+        "A pain in your back.",
+        "a continuous, dull pain"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'back' mean?",
+      "options": [
+        "A strip of cloth to cover an injury.",
+        "The part of your body opposite your stomach.",
+        "A pain in your back.",
+        "a continuous, dull pain",
+        "The joint connecting your foot and leg."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'backache' mean?",
+      "options": [
+        "a continuous, dull pain",
+        "A pain in your back.",
+        "The part of your body opposite your stomach.",
+        "The joint connecting your foot and leg.",
+        "A strip of cloth to cover an injury."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bandage' mean?",
+      "options": [
+        "A strip of cloth to cover an injury.",
+        "The part of your body opposite your stomach.",
+        "a continuous, dull pain",
+        "A pain in your back.",
+        "The joint connecting your foot and leg."
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Possessive Pronouns (mine, yours, hers...)",
+    "explanation": "**Possessive pronouns** are **mine**, **yours**, **his**, **hers**, **ours**, and **theirs**. They take the place of a possessive adjective and a noun.\n\nWe use them so we do not repeat the noun. Your car is red, and **mine** is blue.\n\nYou can use them with health words too. My **ankle** hurts, and **yours** feels fine.\n\nNever use an apostrophe in these words. Write **yours**, **hers**, **ours**, and **theirs**, not your's or their's.\n\nDo not use **the** before them. Say \"It is **mine**\", not \"It is the mine\".\n\nWe also use them in phrases like **a friend of mine**. It means one of my friends.",
+    "examples": [
+      "*That isn't my coffee. **Mine** is the one with milk.* (mine = my coffee)",
+      "*Is this umbrella **yours**?* (yours = your umbrella)",
+      "*Sam forgot his book, so I gave him **mine**.* (mine = my book)",
+      "*Lisa says the blue bike is **hers**.* (hers = her bike)",
+      "*Their garden is big, but **ours** is bigger.* (ours = our garden)",
+      "*She's a friend **of mine**.* (one of my friends)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite using a possessive pronoun: This is my bandage.",
+        "a": "This bandage is mine."
+      },
+      {
+        "q": "Rewrite using a possessive pronoun: That backache is her backache.",
+        "a": "That backache is hers."
+      },
+      {
+        "q": "Rewrite using possessive pronouns: Our bandages are in the box, and their bandages are on the table.",
+        "a": "Ours are in the box, and theirs are on the table."
+      },
+      {
+        "q": "Rewrite using a friend of mine: He is one of my friends.",
+        "a": "He is a friend of mine."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "This isn't my bag. ___ is blue.",
+        "options": [
+          "My",
+          "Me",
+          "Mine",
+          "Mines"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Is this your pen? – No, it's not ___. It's Tom's.",
+        "options": [
+          "my",
+          "me",
+          "myself",
+          "mine"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "That's not their car. ___ is the red one.",
+        "options": [
+          "Theirs",
+          "Their",
+          "Their's",
+          "Theirs'"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Whose coat is this? Is it ___, Anna?",
+        "options": [
+          "your",
+          "yours",
+          "your's",
+          "you"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We've got our tickets. Have you got ___?",
+        "options": [
+          "your",
+          "yours",
+          "your's",
+          "yourself"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Sam lent me a book. It's ___, not mine.",
+        "options": [
+          "his",
+          "him",
+          "he's",
+          "hes"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Lisa says the umbrella is ___.",
+        "options": [
+          "her",
+          "she",
+          "hers",
+          "her's"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Our house is bigger than ___.",
+        "options": [
+          "their",
+          "them",
+          "their's",
+          "theirs"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He's a friend of ___.",
+        "options": [
+          "mine",
+          "me",
+          "my",
+          "I"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "This isn't your room. It's ___. (It belongs to my brother and me.)",
+        "options": [
+          "our",
+          "us",
+          "our's",
+          "ours"
+        ],
+        "answer": 3
+      }
+    ],
+    "audio": "media/a2/2026-10-29/grammar-en.mp3"
+  }
+}
