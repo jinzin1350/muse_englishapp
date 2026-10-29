@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "dimaka-29-cat-scratching-post",
+      "name_fa": "پایه خاراندن گربه دیماکا ۲۹ اینچی",
+      "name_en": "Dimaka 29\" Tall Cat Scratching Post with Sisal Rope and Toy Ball",
+      "price_cad": 29.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "پنجشنبه، ۲۹ اکتبر ۲۰۲۶",
+      "image": "img/dimaka-29-cat-scratching-post.jpg",
+      "url": "https://www.amazon.ca/dp/B07P93T2KN?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پایه محکم با طناب سیسال طبیعی و توپ بازی؛ مبلمان خانه را از چنگ گربه نجات می‌دهد"
+    },
+    {
+      "id": "levoit-core-300p-air-purifier",
+      "name_fa": "تصفیه‌کننده هوای لیویت مدل کور ۳۰۰",
+      "name_en": "LEVOIT Core 300-P Air Purifier",
+      "price_cad": 129.98,
+      "regular_cad": 169.99,
+      "discount_pct": 24,
+      "added_fa": "پنجشنبه، ۲۹ اکتبر ۲۰۲۶",
+      "image": "img/levoit-core-300p-air-purifier.jpg",
+      "url": "https://www.amazon.ca/dp/B0DW8YP1LY?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پرفروش‌ترین تصفیه‌کننده آمازون با امتیاز ۴٫۶ از بیش از ۳۶ هزار نظر؛ گرده، دود و بو را از هوای اتاق پاک می‌کند"
+    },
+    {
       "id": "samsung-odyssey-g6-27-qhd",
       "name_fa": "مانیتور گیمینگ سامسونگ اودیسه ۲۷ اینچی",
       "name_en": "Samsung 27-inch Odyssey G6 QHD Gaming Monitor",
@@ -83,34 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "شارژر ۶۵ واتی گان با ۳ پورت؛ لپ‌تاپ، گوشی و تبلت را هم‌زمان و سریع شارژ می‌کند."
-    },
-    {
-      "id": "lego-city-express-train",
-      "name_fa": "قطار مسافربری لگو سیتی",
-      "name_en": "LEGO City Express Passenger Train Set",
-      "price_cad": 239.0,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "چهارشنبه، ۲۸ اکتبر ۲۰۲۶",
-      "image": "img/lego-city-express-train.jpg",
-      "url": "https://www.amazon.ca/dp/B09XWPF29F?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "قطار ریموت‌دار با ایستگاه و ریل؛ پایین‌ترین قیمت ۹۰ روز گذشته؛ هدیه عالی برای بچه‌ها"
-    },
-    {
-      "id": "cuisinart-food-processor-10cup",
-      "name_fa": "غذاساز کویزینارت ۱۰ پیمانه‌ای",
-      "name_en": "Cuisinart Core Custom 10-Cup Food Processor",
-      "price_cad": 128.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "چهارشنبه، ۲۸ اکتبر ۲۰۲۶",
-      "image": "img/cuisinart-food-processor-10cup.jpg",
-      "url": "https://www.amazon.ca/dp/B0B67P4T7D?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "غذاساز ۱۰ پیمانه‌ای چندکاره؛ پایین‌ترین قیمت ۹۰ روز گذشته"
     }
   ],
   "updated_fa": "پنجشنبه ۷ آبان"
