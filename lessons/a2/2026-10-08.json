@@ -11,8 +11,8 @@
       "example": "I run in the park every morning.",
       "pronunciation": "RUN",
       "persian": "دویدن",
-      "photo": "media/a2/2026-10-08/photos/run.jpg",
-      "word_audio": "media/a2/2026-10-08/word-audio/run.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/photos/run.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/word-audio/run.mp3"
     },
     {
       "word": "ball",
@@ -21,8 +21,8 @@
       "example": "The boy kicks the ball to me.",
       "pronunciation": "BAWL",
       "persian": "توپ",
-      "photo": "media/a2/2026-10-08/photos/ball.jpg",
-      "word_audio": "media/a2/2026-10-08/word-audio/ball.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/photos/ball.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/word-audio/ball.mp3"
     },
     {
       "word": "game",
@@ -31,8 +31,8 @@
       "example": "The game starts at six o'clock.",
       "pronunciation": "GAYM",
       "persian": "بازی",
-      "photo": "media/a2/2026-10-08/photos/game.jpg",
-      "word_audio": "media/a2/2026-10-08/word-audio/game.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/photos/game.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/word-audio/game.mp3"
     },
     {
       "word": "win",
@@ -41,8 +41,8 @@
       "example": "Our team wants to win the game today.",
       "pronunciation": "WIN",
       "persian": "برنده شدن",
-      "photo": "media/a2/2026-10-08/photos/win.jpg",
-      "word_audio": "media/a2/2026-10-08/word-audio/win.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/photos/win.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/word-audio/win.mp3"
     },
     {
       "word": "play",
@@ -51,45 +51,45 @@
       "example": "The children play football after school.",
       "pronunciation": "PLAY",
       "persian": "بازی کردن",
-      "photo": "media/a2/2026-10-08/photos/play.jpg",
-      "word_audio": "media/a2/2026-10-08/word-audio/play.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/photos/play.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/word-audio/play.mp3"
     }
   ],
-  "pronunciation_audio": "media/a2/2026-10-08/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/pronunciation.mp3",
   "podcast": {
     "title": "Word Kitchen: Sports Time",
-    "audio": "media/a2/2026-10-08/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/podcast.mp3",
     "cover": null,
-    "transcript": "media/a2/2026-10-08/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/podcast-transcript.txt"
   },
   "shadowing": {
     "title": "A Day of Sports",
-    "audio": "media/a2/2026-10-08/shadowing.mp3",
-    "transcript": "media/a2/2026-10-08/shadowing-transcript.txt",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing.mp3",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/a2/2026-10-08/shadowing-sentences/001.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/002.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/003.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/004.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/005.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/006.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/007.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/008.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/009.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/010.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/011.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/012.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/013.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/014.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/015.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/016.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/017.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/018.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/019.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/020.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/021.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/022.mp3",
-      "media/a2/2026-10-08/shadowing-sentences/023.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/019.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/020.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/021.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/022.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/shadowing-sentences/023.mp3"
     ]
   },
   "quiz": [
@@ -265,6 +265,6 @@
         "answer": 1
       }
     ],
-    "audio": "media/a2/2026-10-08/grammar-en.mp3"
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-08/grammar-en.mp3"
   }
 }

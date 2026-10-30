@@ -11,8 +11,8 @@
       "example": "I call my mother on my phone.",
       "pronunciation": "FOHN",
       "persian": "تلفن",
-      "photo": "media/a1/2026-10-06/photos/phone.jpg",
-      "word_audio": "media/a1/2026-10-06/word-audio/phone.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/photos/phone.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/word-audio/phone.mp3"
     },
     {
       "word": "computer",
@@ -21,8 +21,8 @@
       "example": "My father works on his computer.",
       "pronunciation": "kuhm-PYOO-tuhr",
       "persian": "کامپیوتر",
-      "photo": "media/a1/2026-10-06/photos/computer.jpg",
-      "word_audio": "media/a1/2026-10-06/word-audio/computer.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/photos/computer.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/word-audio/computer.mp3"
     },
     {
       "word": "screen",
@@ -31,8 +31,8 @@
       "example": "Look at the big screen!",
       "pronunciation": "SKREEN",
       "persian": "صفحه نمایش",
-      "photo": "media/a1/2026-10-06/photos/screen.jpg",
-      "word_audio": "media/a1/2026-10-06/word-audio/screen.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/photos/screen.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/word-audio/screen.mp3"
     },
     {
       "word": "mouse",
@@ -41,8 +41,8 @@
       "example": "Click with the mouse.",
       "pronunciation": "MOWS",
       "persian": "موس",
-      "photo": "media/a1/2026-10-06/photos/mouse.jpg",
-      "word_audio": "media/a1/2026-10-06/word-audio/mouse.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/photos/mouse.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/word-audio/mouse.mp3"
     },
     {
       "word": "charger",
@@ -51,40 +51,40 @@
       "example": "Where is my phone charger?",
       "pronunciation": "CHAHR-juhr",
       "persian": "شارژر",
-      "photo": "media/a1/2026-10-06/photos/charger.jpg",
-      "word_audio": "media/a1/2026-10-06/word-audio/charger.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/photos/charger.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/word-audio/charger.mp3"
     }
   ],
-  "pronunciation_audio": "media/a1/2026-10-06/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/pronunciation.mp3",
   "podcast": {
     "title": "Word Kitchen: Technology at Home",
-    "audio": "media/a1/2026-10-06/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/podcast.mp3",
     "cover": null,
-    "transcript": "media/a1/2026-10-06/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/podcast-transcript.txt"
   },
   "shadowing": {
     "title": "My Computer and Phone",
-    "audio": "media/a1/2026-10-06/shadowing.mp3",
-    "transcript": "media/a1/2026-10-06/shadowing-transcript.txt",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing.mp3",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/a1/2026-10-06/shadowing-sentences/001.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/002.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/003.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/004.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/005.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/006.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/007.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/008.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/009.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/010.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/011.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/012.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/013.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/014.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/015.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/016.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/017.mp3",
-      "media/a1/2026-10-06/shadowing-sentences/018.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/shadowing-sentences/018.mp3"
     ]
   },
   "quiz": [
@@ -261,6 +261,6 @@
         "answer": 0
       }
     ],
-    "audio": "media/a1/2026-10-06/grammar-en.mp3"
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-06/grammar-en.mp3"
   }
 }

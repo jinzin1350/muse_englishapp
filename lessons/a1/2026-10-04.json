@@ -11,8 +11,8 @@
       "example": "I read a book every day.",
       "pronunciation": "BOOK",
       "persian": "کتاب",
-      "photo": "media/a1/2026-10-04/photos/book.jpg",
-      "word_audio": "media/a1/2026-10-04/word-audio/book.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/photos/book.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/word-audio/book.mp3"
     },
     {
       "word": "pen",
@@ -21,8 +21,8 @@
       "example": "I write with a blue pen.",
       "pronunciation": "PEN",
       "persian": "خودکار",
-      "photo": "media/a1/2026-10-04/photos/pen.jpg",
-      "word_audio": "media/a1/2026-10-04/word-audio/pen.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/photos/pen.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/word-audio/pen.mp3"
     },
     {
       "word": "pencil",
@@ -31,8 +31,8 @@
       "example": "She draws with a pencil.",
       "pronunciation": "PEN-suhl",
       "persian": "مداد",
-      "photo": "media/a1/2026-10-04/photos/pencil.jpg",
-      "word_audio": "media/a1/2026-10-04/word-audio/pencil.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/photos/pencil.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/word-audio/pencil.mp3"
     },
     {
       "word": "notebook",
@@ -41,8 +41,8 @@
       "example": "He writes in his notebook.",
       "pronunciation": "NOTE-book",
       "persian": "دفتر",
-      "photo": "media/a1/2026-10-04/photos/notebook.jpg",
-      "word_audio": "media/a1/2026-10-04/word-audio/notebook.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/photos/notebook.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/word-audio/notebook.mp3"
     },
     {
       "word": "bag",
@@ -51,42 +51,42 @@
       "example": "My bag is on the desk.",
       "pronunciation": "BAG",
       "persian": "کیف",
-      "photo": "media/a1/2026-10-04/photos/bag.jpg",
-      "word_audio": "media/a1/2026-10-04/word-audio/bag.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/photos/bag.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/word-audio/bag.mp3"
     }
   ],
-  "pronunciation_audio": "media/a1/2026-10-04/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/pronunciation.mp3",
   "podcast": {
     "title": "Word Kitchen: School Things",
-    "audio": "media/a1/2026-10-04/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/podcast.mp3",
     "cover": null,
-    "transcript": "media/a1/2026-10-04/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/podcast-transcript.txt"
   },
   "shadowing": {
     "title": "My School Bag",
-    "audio": "media/a1/2026-10-04/shadowing.mp3",
-    "transcript": "media/a1/2026-10-04/shadowing-transcript.txt",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing.mp3",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/a1/2026-10-04/shadowing-sentences/001.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/002.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/003.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/004.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/005.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/006.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/007.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/008.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/009.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/010.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/011.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/012.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/013.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/014.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/015.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/016.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/017.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/018.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/019.mp3",
-      "media/a1/2026-10-04/shadowing-sentences/020.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/019.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/shadowing-sentences/020.mp3"
     ]
   },
   "quiz": [
@@ -267,6 +267,6 @@
         "answer": 2
       }
     ],
-    "audio": "media/a1/2026-10-04/grammar-en.mp3"
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-04/grammar-en.mp3"
   }
 }

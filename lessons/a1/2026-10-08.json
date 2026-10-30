@@ -11,8 +11,8 @@
       "example": "The nurse is very kind.",
       "pronunciation": "NURS",
       "persian": "پرستار",
-      "photo": "media/a1/2026-10-08/photos/nurse.jpg",
-      "word_audio": "media/a1/2026-10-08/word-audio/nurse.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/photos/nurse.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/word-audio/nurse.mp3"
     },
     {
       "word": "hospital",
@@ -21,8 +21,8 @@
       "example": "I go to the hospital when I am sick.",
       "pronunciation": "HAH-spih-tul",
       "persian": "بیمارستان",
-      "photo": "media/a1/2026-10-08/photos/hospital.jpg",
-      "word_audio": "media/a1/2026-10-08/word-audio/hospital.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/photos/hospital.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/word-audio/hospital.mp3"
     },
     {
       "word": "medicine",
@@ -31,8 +31,8 @@
       "example": "Take your medicine with water.",
       "pronunciation": "MED-uh-sun",
       "persian": "دارو",
-      "photo": "media/a1/2026-10-08/photos/medicine.jpg",
-      "word_audio": "media/a1/2026-10-08/word-audio/medicine.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/photos/medicine.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/word-audio/medicine.mp3"
     },
     {
       "word": "pill",
@@ -41,8 +41,8 @@
       "example": "He takes one pill every day.",
       "pronunciation": "PIL",
       "persian": "قرص",
-      "photo": "media/a1/2026-10-08/photos/pill.jpg",
-      "word_audio": "media/a1/2026-10-08/word-audio/pill.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/photos/pill.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/word-audio/pill.mp3"
     },
     {
       "word": "fever",
@@ -51,41 +51,41 @@
       "example": "She has a fever and stays in bed.",
       "pronunciation": "FEE-vur",
       "persian": "تب",
-      "photo": "media/a1/2026-10-08/photos/fever.jpg",
-      "word_audio": "media/a1/2026-10-08/word-audio/fever.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/photos/fever.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/word-audio/fever.mp3"
     }
   ],
-  "pronunciation_audio": "media/a1/2026-10-08/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/pronunciation.mp3",
   "podcast": {
     "title": "Word Kitchen: At the Hospital",
-    "audio": "media/a1/2026-10-08/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/podcast.mp3",
     "cover": null,
-    "transcript": "media/a1/2026-10-08/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/podcast-transcript.txt"
   },
   "shadowing": {
     "title": "The Kind Nurse",
-    "audio": "media/a1/2026-10-08/shadowing.mp3",
-    "transcript": "media/a1/2026-10-08/shadowing-transcript.txt",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing.mp3",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/a1/2026-10-08/shadowing-sentences/001.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/002.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/003.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/004.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/005.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/006.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/007.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/008.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/009.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/010.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/011.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/012.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/013.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/014.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/015.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/016.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/017.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/018.mp3",
-      "media/a1/2026-10-08/shadowing-sentences/019.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/shadowing-sentences/019.mp3"
     ]
   },
   "quiz": [
@@ -261,6 +261,6 @@
         "answer": 1
       }
     ],
-    "audio": "media/a1/2026-10-08/grammar-en.mp3"
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-08/grammar-en.mp3"
   }
 }

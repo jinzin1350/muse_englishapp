@@ -11,8 +11,8 @@
       "example": "We left our luggage at the hotel reception.",
       "pronunciation": "LUH-gij",
       "persian": "چمدان‌ها و ساک‌های مسافرتی",
-      "photo": "media/b1/2026-09-30/photos/luggage.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/luggage.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/luggage.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/luggage.mp3"
     },
     {
       "word": "journey",
@@ -21,8 +21,8 @@
       "example": "The journey from Paris to Rome took eight hours.",
       "pronunciation": "JER-nee",
       "persian": "سفر (معمولاً طولانی)",
-      "photo": "media/b1/2026-09-30/photos/journey.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/journey.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/journey.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/journey.mp3"
     },
     {
       "word": "departure",
@@ -31,8 +31,8 @@
       "example": "Our departure is at six in the morning.",
       "pronunciation": "dee-PAR-chur",
       "persian": "عزیمت؛ حرکت",
-      "photo": "media/b1/2026-09-30/photos/departure.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/departure.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/departure.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/departure.mp3"
     },
     {
       "word": "arrival",
@@ -41,8 +41,8 @@
       "example": "They announced our arrival in London.",
       "pronunciation": "uh-RY-vul",
       "persian": "ورود؛ رسیدن",
-      "photo": "media/b1/2026-09-30/photos/arrival.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/arrival.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/arrival.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/arrival.mp3"
     },
     {
       "word": "terminal",
@@ -51,8 +51,8 @@
       "example": "Our flight leaves from Terminal 2.",
       "pronunciation": "TER-muh-nul",
       "persian": "ترمینال فرودگاه",
-      "photo": "media/b1/2026-09-30/photos/terminal.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/terminal.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/terminal.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/terminal.mp3"
     },
     {
       "word": "suitcase",
@@ -61,8 +61,8 @@
       "example": "She packed her suitcase the night before.",
       "pronunciation": "SOOT-kayss",
       "persian": "چمدان",
-      "photo": "media/b1/2026-09-30/photos/suitcase.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/suitcase.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/suitcase.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/suitcase.mp3"
     },
     {
       "word": "hostel",
@@ -71,8 +71,8 @@
       "example": "We stayed in a friendly hostel near the beach.",
       "pronunciation": "HOSS-tul",
       "persian": "هاستل؛ مهمان‌پذیر ارزان",
-      "photo": "media/b1/2026-09-30/photos/hostel.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/hostel.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/hostel.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/hostel.mp3"
     },
     {
       "word": "resort",
@@ -81,8 +81,8 @@
       "example": "The resort has three swimming pools.",
       "pronunciation": "ree-ZORT",
       "persian": "تفرجگاه؛ اقامتگاه تفریحی",
-      "photo": "media/b1/2026-09-30/photos/resort.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/resort.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/resort.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/resort.mp3"
     },
     {
       "word": "sightseeing",
@@ -91,8 +91,8 @@
       "example": "We spent the day sightseeing in the old town.",
       "pronunciation": "SYTE-see-ing",
       "persian": "گردش و بازدید از جاهای دیدنی",
-      "photo": "media/b1/2026-09-30/photos/sightseeing.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/sightseeing.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/sightseeing.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/sightseeing.mp3"
     },
     {
       "word": "landmark",
@@ -101,8 +101,8 @@
       "example": "The Eiffel Tower is a famous landmark.",
       "pronunciation": "LAND-mark",
       "persian": "بنای شاخص و معروف",
-      "photo": "media/b1/2026-09-30/photos/landmark.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/landmark.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/landmark.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/landmark.mp3"
     },
     {
       "word": "delay",
@@ -111,8 +111,8 @@
       "example": "Our flight was delayed by two hours.",
       "pronunciation": "dee-LAY",
       "persian": "تأخیر",
-      "photo": "media/b1/2026-09-30/photos/delay.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/delay.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/delay.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/delay.mp3"
     },
     {
       "word": "cancel",
@@ -121,8 +121,8 @@
       "example": "They cancelled our flight because of the storm.",
       "pronunciation": "KAN-sul",
       "persian": "لغو کردن",
-      "photo": "media/b1/2026-09-30/photos/cancel.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/cancel.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/cancel.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/cancel.mp3"
     },
     {
       "word": "reserve",
@@ -131,8 +131,8 @@
       "example": "I reserved a table at the restaurant.",
       "pronunciation": "ree-ZERV",
       "persian": "رزرو کردن",
-      "photo": "media/b1/2026-09-30/photos/reserve.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/reserve.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/reserve.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/reserve.mp3"
     },
     {
       "word": "guidebook",
@@ -141,8 +141,8 @@
       "example": "This guidebook lists all the best restaurants.",
       "pronunciation": "GYDE-book",
       "persian": "کتاب راهنمای سفر",
-      "photo": "media/b1/2026-09-30/photos/guidebook.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/guidebook.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/guidebook.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/guidebook.mp3"
     },
     {
       "word": "backpack",
@@ -151,8 +151,8 @@
       "example": "He carried his backpack through the mountains.",
       "pronunciation": "BAK-pak",
       "persian": "کوله‌پشتی",
-      "photo": "media/b1/2026-09-30/photos/backpack.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/backpack.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/backpack.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/backpack.mp3"
     },
     {
       "word": "ferry",
@@ -161,8 +161,8 @@
       "example": "We took the ferry to the island.",
       "pronunciation": "FEH-ree",
       "persian": "کشتی مسافربری (فری)",
-      "photo": "media/b1/2026-09-30/photos/ferry.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/ferry.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/ferry.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/ferry.mp3"
     },
     {
       "word": "cruise",
@@ -171,8 +171,8 @@
       "example": "They went on a cruise around the Mediterranean.",
       "pronunciation": "KROOZ",
       "persian": "سفر دریایی تفریحی (کروز)",
-      "photo": "media/b1/2026-09-30/photos/cruise.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/cruise.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/cruise.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/cruise.mp3"
     },
     {
       "word": "adventure",
@@ -181,8 +181,8 @@
       "example": "Our trip to the desert was a real adventure.",
       "pronunciation": "ad-VEN-chur",
       "persian": "ماجراجویی",
-      "photo": "media/b1/2026-09-30/photos/adventure.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/adventure.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/adventure.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/adventure.mp3"
     },
     {
       "word": "souvenir",
@@ -191,8 +191,8 @@
       "example": "I bought a small souvenir for my mother.",
       "pronunciation": "soo-vuh-NEER",
       "persian": "سوغاتی",
-      "photo": "media/b1/2026-09-30/photos/souvenir.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/souvenir.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/souvenir.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/souvenir.mp3"
     },
     {
       "word": "explore",
@@ -201,46 +201,46 @@
       "example": "We explored the city on foot.",
       "pronunciation": "ik-SPLOR",
       "persian": "گشتن و کشف کردن",
-      "photo": "media/b1/2026-09-30/photos/explore.jpg",
-      "word_audio": "media/b1/2026-09-30/word-audio/explore.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/photos/explore.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/word-audio/explore.mp3"
     }
   ],
-  "pronunciation_audio": "media/b1/2026-09-30/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/pronunciation.mp3",
   "podcast": {
     "title": "Word Kitchen: Travel & Holidays",
-    "audio": "media/b1/2026-09-30/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/podcast.mp3",
     "cover": null,
-    "transcript": "media/b1/2026-09-30/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/podcast-transcript.txt"
   },
   "shadowing": {
     "title": "Shadowing: A Holiday Journey",
-    "audio": "media/b1/2026-09-30/shadowing.mp3",
-    "transcript": "media/b1/2026-09-30/shadowing-transcript.txt",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing.mp3",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/b1/2026-09-30/shadowing-sentences/001.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/002.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/003.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/004.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/005.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/006.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/007.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/008.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/009.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/010.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/011.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/012.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/013.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/014.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/015.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/016.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/017.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/018.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/019.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/020.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/021.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/022.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/023.mp3",
-      "media/b1/2026-09-30/shadowing-sentences/024.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/019.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/020.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/021.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/022.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/023.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-09-30/shadowing-sentences/024.mp3"
     ]
   },
   "quiz": [

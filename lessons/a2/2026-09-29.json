@@ -1,7 +1,7 @@
 {
  "date": "2026-09-29",
  "level": "a2",
- "cover": "media/a2/2026-09-29/podcast-cover.jpg",
+ "cover": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/podcast-cover.jpg",
  "words": [
   {
    "word": "river",
@@ -9,8 +9,8 @@
    "example": "My town has a river.",
    "pronunciation": "RIV-ur",
    "fa": "رودخانه",
-   "photo": "media/a2/2026-09-29/photos/river.jpg",
-   "audio": "media/a2/2026-09-29/word-audio/river.mp3",
+   "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/photos/river.jpg",
+   "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/word-audio/river.mp3",
    "pos": "noun"
   },
   {
@@ -19,8 +19,8 @@
    "example": "We walked in the forest.",
    "pronunciation": "FOR-ist",
    "fa": "جنگل",
-   "photo": "media/a2/2026-09-29/photos/forest.jpg",
-   "audio": "media/a2/2026-09-29/word-audio/forest.mp3",
+   "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/photos/forest.jpg",
+   "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/word-audio/forest.mp3",
    "pos": "noun"
   },
   {
@@ -29,8 +29,8 @@
    "example": "The mountain is white with snow.",
    "pronunciation": "MOWN-tin",
    "fa": "کوه",
-   "photo": "media/a2/2026-09-29/photos/mountain.jpg",
-   "audio": "media/a2/2026-09-29/word-audio/mountain.mp3",
+   "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/photos/mountain.jpg",
+   "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/word-audio/mountain.mp3",
    "pos": "noun"
   },
   {
@@ -39,8 +39,8 @@
    "example": "The ocean is deep and blue.",
    "pronunciation": "OH-shun",
    "fa": "اقیانوس",
-   "photo": "media/a2/2026-09-29/photos/ocean.jpg",
-   "audio": "media/a2/2026-09-29/word-audio/ocean.mp3",
+   "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/photos/ocean.jpg",
+   "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/word-audio/ocean.mp3",
    "pos": "noun"
   },
   {
@@ -49,8 +49,8 @@
    "example": "She gave me a red flower.",
    "pronunciation": "FLOW-ur",
    "fa": "گل",
-   "photo": "media/a2/2026-09-29/photos/flower.jpg",
-   "audio": "media/a2/2026-09-29/word-audio/flower.mp3",
+   "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/photos/flower.jpg",
+   "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/word-audio/flower.mp3",
    "pos": "noun"
   },
   {
@@ -59,8 +59,8 @@
    "example": "A yellow leaf fell down.",
    "pronunciation": "LEEF",
    "fa": "برگ",
-   "photo": "media/a2/2026-09-29/photos/leaf.jpg",
-   "audio": "media/a2/2026-09-29/word-audio/leaf.mp3",
+   "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/photos/leaf.jpg",
+   "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/word-audio/leaf.mp3",
    "pos": "noun"
   },
   {
@@ -69,8 +69,8 @@
    "example": "We need rain for the garden.",
    "pronunciation": "RAYN",
    "fa": "باران",
-   "photo": "media/a2/2026-09-29/photos/rain.jpg",
-   "audio": "media/a2/2026-09-29/word-audio/rain.mp3",
+   "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/photos/rain.jpg",
+   "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/word-audio/rain.mp3",
    "pos": "noun"
   },
   {
@@ -79,8 +79,8 @@
    "example": "The wind is strong today.",
    "pronunciation": "WIND",
    "fa": "باد",
-   "photo": "media/a2/2026-09-29/photos/wind.jpg",
-   "audio": "media/a2/2026-09-29/word-audio/wind.mp3",
+   "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/photos/wind.jpg",
+   "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/word-audio/wind.mp3",
    "pos": "noun"
   },
   {
@@ -89,8 +89,8 @@
    "example": "The sand is warm.",
    "pronunciation": "SAND",
    "fa": "شن و ماسه",
-   "photo": "media/a2/2026-09-29/photos/sand.jpg",
-   "audio": "media/a2/2026-09-29/word-audio/sand.mp3",
+   "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/photos/sand.jpg",
+   "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/word-audio/sand.mp3",
    "pos": "noun"
   },
   {
@@ -99,53 +99,53 @@
    "example": "Look at that white cloud.",
    "pronunciation": "KLOWD",
    "fa": "ابر",
-   "photo": "media/a2/2026-09-29/photos/cloud.jpg",
-   "audio": "media/a2/2026-09-29/word-audio/cloud.mp3",
+   "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/photos/cloud.jpg",
+   "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/word-audio/cloud.mp3",
    "pos": "noun"
   }
  ],
  "podcast": {
-  "audio": "media/a2/2026-09-29/podcast.mp3",
-  "cover": "media/a2/2026-09-29/podcast-cover.jpg",
-  "transcript": "media/a2/2026-09-29/podcast-transcript.txt"
+  "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/podcast.mp3",
+  "cover": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/podcast-cover.jpg",
+  "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/podcast-transcript.txt"
  },
  "shadowing": {
-  "audio": "media/a2/2026-09-29/shadowing.mp3",
-  "transcript": "media/a2/2026-09-29/shadowing-transcript.txt",
+  "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing.mp3",
+  "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-transcript.txt",
   "sentence_audio": [
-   "media/a2/2026-09-29/shadowing-sentences/001.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/002.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/003.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/004.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/005.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/006.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/007.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/008.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/009.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/010.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/011.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/012.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/013.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/014.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/015.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/016.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/017.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/018.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/019.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/020.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/021.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/022.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/023.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/024.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/025.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/026.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/027.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/028.mp3",
-   "media/a2/2026-09-29/shadowing-sentences/029.mp3"
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/001.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/002.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/003.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/004.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/005.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/006.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/007.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/008.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/009.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/010.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/011.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/012.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/013.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/014.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/015.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/016.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/017.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/018.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/019.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/020.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/021.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/022.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/023.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/024.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/025.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/026.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/027.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/028.mp3",
+   "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/shadowing-sentences/029.mp3"
   ]
  },
  "grammar": {
-  "audio": "media/a2/2026-09-29/grammar-en.mp3",
+  "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-09-29/grammar-en.mp3",
   "examples": [
    "You *must* wear warm clothes in the rain. (a rule)",
    "I *have to* clean the sand off my shoes before I go inside. (an outside rule)",

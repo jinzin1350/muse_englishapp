@@ -11,8 +11,8 @@
       "example": "A fever is a common symptom of the flu.",
       "pronunciation": "SIMP-tum",
       "persian": "علامت بیماری",
-      "photo": "media/b1/2026-10-06/photos/symptom.jpg",
-      "word_audio": "media/b1/2026-10-06/word-audio/symptom.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/photos/symptom.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/word-audio/symptom.mp3"
     },
     {
       "word": "prescribe",
@@ -21,8 +21,8 @@
       "example": "The doctor prescribed some pills for my cold.",
       "pronunciation": "pruh-SCRYBE",
       "persian": "تجویز کردن",
-      "photo": "media/b1/2026-10-06/photos/prescribe.jpg",
-      "word_audio": "media/b1/2026-10-06/word-audio/prescribe.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/photos/prescribe.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/word-audio/prescribe.mp3"
     },
     {
       "word": "diagnosis",
@@ -31,8 +31,8 @@
       "example": "The diagnosis was just a simple cold.",
       "pronunciation": "dy-uhg-NOH-sis",
       "persian": "تشخیص بیماری",
-      "photo": "media/b1/2026-10-06/photos/diagnosis.jpg",
-      "word_audio": "media/b1/2026-10-06/word-audio/diagnosis.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/photos/diagnosis.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/word-audio/diagnosis.mp3"
     },
     {
       "word": "recovery",
@@ -41,8 +41,8 @@
       "example": "His recovery took about two weeks.",
       "pronunciation": "ree-KUH-vuh-ree",
       "persian": "بهبودی",
-      "photo": "media/b1/2026-10-06/photos/recovery.jpg",
-      "word_audio": "media/b1/2026-10-06/word-audio/recovery.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/photos/recovery.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/word-audio/recovery.mp3"
     },
     {
       "word": "allergy",
@@ -51,8 +51,8 @@
       "example": "She has an allergy to peanuts.",
       "pronunciation": "AL-uhr-jee",
       "persian": "آلرژی (حساسیت)",
-      "photo": "media/b1/2026-10-06/photos/allergy.jpg",
-      "word_audio": "media/b1/2026-10-06/word-audio/allergy.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/photos/allergy.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/word-audio/allergy.mp3"
     },
     {
       "word": "vitamin",
@@ -61,8 +61,8 @@
       "example": "Oranges have a lot of vitamin C.",
       "pronunciation": "VY-tuh-min",
       "persian": "ویتامین",
-      "photo": "media/b1/2026-10-06/photos/vitamin.jpg",
-      "word_audio": "media/b1/2026-10-06/word-audio/vitamin.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/photos/vitamin.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/word-audio/vitamin.mp3"
     },
     {
       "word": "infection",
@@ -71,8 +71,8 @@
       "example": "He had an infection in his throat.",
       "pronunciation": "in-FEK-shun",
       "persian": "عفونت",
-      "photo": "media/b1/2026-10-06/photos/infection.jpg",
-      "word_audio": "media/b1/2026-10-06/word-audio/infection.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/photos/infection.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/word-audio/infection.mp3"
     },
     {
       "word": "immunity",
@@ -81,8 +81,8 @@
       "example": "Good sleep helps build your immunity.",
       "pronunciation": "i-MYOO-nuh-tee",
       "persian": "ایمنی بدن",
-      "photo": "media/b1/2026-10-06/photos/immunity.jpg",
-      "word_audio": "media/b1/2026-10-06/word-audio/immunity.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/photos/immunity.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/word-audio/immunity.mp3"
     },
     {
       "word": "nutritious",
@@ -91,8 +91,8 @@
       "example": "A nutritious breakfast gives you energy.",
       "pronunciation": "noo-TRI-shus",
       "persian": "مغذی",
-      "photo": "media/b1/2026-10-06/photos/nutritious.jpg",
-      "word_audio": "media/b1/2026-10-06/word-audio/nutritious.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/photos/nutritious.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/word-audio/nutritious.mp3"
     },
     {
       "word": "remedy",
@@ -101,53 +101,53 @@
       "example": "Hot tea is a simple remedy for a cold.",
       "pronunciation": "REM-uh-dee",
       "persian": "درمان، علاج",
-      "photo": "media/b1/2026-10-06/photos/remedy.jpg",
-      "word_audio": "media/b1/2026-10-06/word-audio/remedy.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/photos/remedy.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/word-audio/remedy.mp3"
     }
   ],
-  "pronunciation_audio": "media/b1/2026-10-06/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/pronunciation.mp3",
   "podcast": {
     "title": "Word Kitchen: Staying Healthy",
-    "audio": "media/b1/2026-10-06/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/podcast.mp3",
     "cover": null,
-    "transcript": "media/b1/2026-10-06/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/podcast-transcript.txt"
   },
   "shadowing": {
     "title": "A Week of Getting Well",
-    "audio": "media/b1/2026-10-06/shadowing.mp3",
-    "transcript": "media/b1/2026-10-06/shadowing-transcript.txt",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing.mp3",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/b1/2026-10-06/shadowing-sentences/001.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/002.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/003.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/004.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/005.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/006.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/007.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/008.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/009.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/010.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/011.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/012.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/013.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/014.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/015.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/016.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/017.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/018.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/019.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/020.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/021.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/022.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/023.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/024.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/025.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/026.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/027.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/028.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/029.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/030.mp3",
-      "media/b1/2026-10-06/shadowing-sentences/031.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/019.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/020.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/021.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/022.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/023.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/024.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/025.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/026.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/027.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/028.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/029.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/030.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-06/shadowing-sentences/031.mp3"
     ]
   },
   "quiz": [

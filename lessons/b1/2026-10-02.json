@@ -126,12 +126,12 @@
   },
   "level": "b1",
   "podcast": {
-    "audio": "media/b1/2026-10-02/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/podcast.mp3",
     "cover": null,
     "title": "Word Kitchen: Study Smart",
-    "transcript": "media/b1/2026-10-02/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/podcast-transcript.txt"
   },
-  "pronunciation_audio": "media/b1/2026-10-02/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/pronunciation.mp3",
   "quiz": [
     {
       "answer": 2,
@@ -235,45 +235,45 @@
     }
   ],
   "shadowing": {
-    "audio": "media/b1/2026-10-02/shadowing.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing.mp3",
     "title": "Shadowing: Mina's Big Week",
-    "transcript": "media/b1/2026-10-02/shadowing-transcript.txt",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/b1/2026-10-02/shadowing-sentences/001.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/002.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/003.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/004.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/005.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/006.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/007.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/008.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/009.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/010.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/011.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/012.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/013.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/014.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/015.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/016.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/017.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/018.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/019.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/020.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/021.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/022.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/023.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/024.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/025.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/026.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/027.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/028.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/029.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/030.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/031.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/032.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/033.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/034.mp3",
-      "media/b1/2026-10-02/shadowing-sentences/035.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/019.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/020.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/021.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/022.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/023.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/024.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/025.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/026.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/027.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/028.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/029.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/030.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/031.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/032.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/033.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/034.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/shadowing-sentences/035.mp3"
     ]
   },
   "theme": "Education & Learning",
@@ -282,101 +282,101 @@
       "example": "I have a math exam on Friday.",
       "meaning": "a test of what you know at school",
       "persian": "آزمون",
-      "photo": "media/b1/2026-10-02/photos/exam.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/photos/exam.jpg",
       "pos": "noun",
       "pronunciation": "ig-ZAM",
       "word": "exam",
-      "word_audio": "media/b1/2026-10-02/word-audio/exam.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/word-audio/exam.mp3"
     },
     {
       "example": "She got a good grade on her essay.",
       "meaning": "a mark you get for your school work",
       "persian": "نمره",
-      "photo": "media/b1/2026-10-02/photos/grade.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/photos/grade.jpg",
       "pos": "noun",
       "pronunciation": "grayd",
       "word": "grade",
-      "word_audio": "media/b1/2026-10-02/word-audio/grade.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/word-audio/grade.mp3"
     },
     {
       "example": "Our teacher gave us a difficult assignment.",
       "meaning": "school work you must do at home",
       "persian": "تکلیف درسی",
-      "photo": "media/b1/2026-10-02/photos/assignment.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/photos/assignment.jpg",
       "pos": "noun",
       "pronunciation": "uh-SYNE-munt",
       "word": "assignment",
-      "word_audio": "media/b1/2026-10-02/word-audio/assignment.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/word-audio/assignment.mp3"
     },
     {
       "example": "The lecture lasted for one hour.",
       "meaning": "a talk a teacher gives to students",
       "persian": "سخنرانی؛ کلاس درس",
-      "photo": "media/b1/2026-10-02/photos/lecture.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/photos/lecture.jpg",
       "pos": "noun",
       "pronunciation": "LEK-chur",
       "word": "lecture",
-      "word_audio": "media/b1/2026-10-02/word-audio/lecture.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/word-audio/lecture.mp3"
     },
     {
       "example": "He won a scholarship to study in Canada.",
       "meaning": "money a school gives you to study for free",
       "persian": "بورسیهٔ تحصیلی",
-      "photo": "media/b1/2026-10-02/photos/scholarship.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/photos/scholarship.jpg",
       "pos": "noun",
       "pronunciation": "SKAH-lur-ship",
       "word": "scholarship",
-      "word_audio": "media/b1/2026-10-02/word-audio/scholarship.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/word-audio/scholarship.mp3"
     },
     {
       "example": "She has a degree in engineering.",
       "meaning": "the paper you get when you finish university",
       "persian": "مدرک دانشگاهی",
-      "photo": "media/b1/2026-10-02/photos/degree.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/photos/degree.jpg",
       "pos": "noun",
       "pronunciation": "duh-GREE",
       "word": "degree",
-      "word_audio": "media/b1/2026-10-02/word-audio/degree.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/word-audio/degree.mp3"
     },
     {
       "example": "I memorized twenty new words yesterday.",
       "meaning": "to learn something so you can say it from memory",
       "persian": "حفظ کردن",
-      "photo": "media/b1/2026-10-02/photos/memorize.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/photos/memorize.jpg",
       "pos": "verb",
       "pronunciation": "MEM-uh-ryze",
       "word": "memorize",
-      "word_audio": "media/b1/2026-10-02/word-audio/memorize.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/word-audio/memorize.mp3"
     },
     {
       "example": "I cannot concentrate when it is noisy.",
       "meaning": "to give all your attention to one thing",
       "persian": "تمرکز کردن",
-      "photo": "media/b1/2026-10-02/photos/concentrate.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/photos/concentrate.jpg",
       "pos": "verb",
       "pronunciation": "KAHN-sun-trayt",
       "word": "concentrate",
-      "word_audio": "media/b1/2026-10-02/word-audio/concentrate.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/word-audio/concentrate.mp3"
     },
     {
       "example": "My English tutor is very patient.",
       "meaning": "a private teacher who helps you one to one",
       "persian": "معلم خصوصی",
-      "photo": "media/b1/2026-10-02/photos/tutor.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/photos/tutor.jpg",
       "pos": "noun",
       "pronunciation": "TOO-tur",
       "word": "tutor",
-      "word_audio": "media/b1/2026-10-02/word-audio/tutor.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/word-audio/tutor.mp3"
     },
     {
       "example": "She will graduate from college next June.",
       "meaning": "to finish school or university",
       "persian": "فارغ‌التحصیل شدن",
-      "photo": "media/b1/2026-10-02/photos/graduate.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/photos/graduate.jpg",
       "pos": "verb",
       "pronunciation": "GRAJ-oo-ayt",
       "word": "graduate",
-      "word_audio": "media/b1/2026-10-02/word-audio/graduate.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b1/2026-10-02/word-audio/graduate.mp3"
     }
   ]
 }

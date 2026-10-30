@@ -11,8 +11,8 @@
       "example": "I am happy today.",
       "pronunciation": "HAP-ee",
       "persian": "خوشحال",
-      "photo": "media/a1/2026-10-05/photos/happy.jpg",
-      "word_audio": "media/a1/2026-10-05/word-audio/happy.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/photos/happy.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/word-audio/happy.mp3"
     },
     {
       "word": "sad",
@@ -21,8 +21,8 @@
       "example": "She is sad now.",
       "pronunciation": "sad",
       "persian": "غمگین",
-      "photo": "media/a1/2026-10-05/photos/sad.jpg",
-      "word_audio": "media/a1/2026-10-05/word-audio/sad.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/photos/sad.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/word-audio/sad.mp3"
     },
     {
       "word": "tired",
@@ -31,8 +31,8 @@
       "example": "I am tired tonight.",
       "pronunciation": "TY-urd",
       "persian": "خسته",
-      "photo": "media/a1/2026-10-05/photos/tired.jpg",
-      "word_audio": "media/a1/2026-10-05/word-audio/tired.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/photos/tired.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/word-audio/tired.mp3"
     },
     {
       "word": "hungry",
@@ -41,8 +41,8 @@
       "example": "The baby is hungry.",
       "pronunciation": "HUNG-ree",
       "persian": "گرسنه",
-      "photo": "media/a1/2026-10-05/photos/hungry.jpg",
-      "word_audio": "media/a1/2026-10-05/word-audio/hungry.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/photos/hungry.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/word-audio/hungry.mp3"
     },
     {
       "word": "angry",
@@ -51,41 +51,41 @@
       "example": "He is angry with me.",
       "pronunciation": "ANG-ree",
       "persian": "عصبانی",
-      "photo": "media/a1/2026-10-05/photos/angry.jpg",
-      "word_audio": "media/a1/2026-10-05/word-audio/angry.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/photos/angry.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/word-audio/angry.mp3"
     }
   ],
-  "pronunciation_audio": "media/a1/2026-10-05/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/pronunciation.mp3",
   "podcast": {
     "title": "Word Kitchen: How Are You Feeling?",
-    "audio": "media/a1/2026-10-05/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/podcast.mp3",
     "cover": null,
-    "transcript": "media/a1/2026-10-05/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/podcast-transcript.txt"
   },
   "shadowing": {
     "title": "A Busy Day",
-    "audio": "media/a1/2026-10-05/shadowing.mp3",
-    "transcript": "media/a1/2026-10-05/shadowing-transcript.txt",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing.mp3",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/a1/2026-10-05/shadowing-sentences/001.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/002.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/003.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/004.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/005.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/006.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/007.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/008.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/009.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/010.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/011.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/012.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/013.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/014.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/015.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/016.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/017.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/018.mp3",
-      "media/a1/2026-10-05/shadowing-sentences/019.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/shadowing-sentences/019.mp3"
     ]
   },
   "quiz": [
@@ -266,6 +266,6 @@
         "answer": 0
       }
     ],
-    "audio": "media/a1/2026-10-05/grammar-en.mp3"
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a1/2026-10-05/grammar-en.mp3"
   }
 }

@@ -2,7 +2,7 @@
   "cefr": "A2",
   "date": "2026-10-04",
   "grammar": {
-    "audio": "media/a2/2026-10-04/grammar-en.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/grammar-en.mp3",
     "examples": [
       "I *used to* pay with cash. (an old habit - now I use a card)",
       "She *didn't use to* keep her receipts. (negative - now she keeps them)",
@@ -131,12 +131,12 @@
   },
   "level": "a2",
   "podcast": {
-    "audio": "media/a2/2026-10-04/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/podcast.mp3",
     "cover": null,
     "title": "Word Kitchen: Money and Shopping",
-    "transcript": "media/a2/2026-10-04/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/podcast-transcript.txt"
   },
-  "pronunciation_audio": "media/a2/2026-10-04/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/pronunciation.mp3",
   "quiz": [
     {
       "answer": 0,
@@ -190,32 +190,32 @@
     }
   ],
   "shadowing": {
-    "audio": "media/a2/2026-10-04/shadowing.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing.mp3",
     "title": "A Day at the Market",
-    "transcript": "media/a2/2026-10-04/shadowing-transcript.txt",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/a2/2026-10-04/shadowing-sentences/001.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/002.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/003.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/004.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/005.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/006.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/007.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/008.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/009.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/010.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/011.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/012.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/013.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/014.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/015.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/016.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/017.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/018.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/019.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/020.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/021.mp3",
-      "media/a2/2026-10-04/shadowing-sentences/022.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/019.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/020.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/021.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/shadowing-sentences/022.mp3"
     ]
   },
   "theme": "money & shopping",
@@ -224,51 +224,51 @@
       "example": "I lost my wallet in the shop yesterday.",
       "meaning": "a small flat case where you keep money and cards",
       "persian": "کیف پول",
-      "photo": "media/a2/2026-10-04/photos/wallet.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/photos/wallet.jpg",
       "pos": "noun",
       "pronunciation": "WAH-let",
       "word": "wallet",
-      "word_audio": "media/a2/2026-10-04/word-audio/wallet.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/word-audio/wallet.mp3"
     },
     {
       "example": "She kept the receipt to return the shoes.",
       "meaning": "a small paper that shows you paid for something",
       "persian": "رسید خرید",
-      "photo": "media/a2/2026-10-04/photos/receipt.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/photos/receipt.jpg",
       "pos": "noun",
       "pronunciation": "ruh-SEET",
       "word": "receipt",
-      "word_audio": "media/a2/2026-10-04/word-audio/receipt.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/word-audio/receipt.mp3"
     },
     {
       "example": "The price of the bread was one dollar.",
       "meaning": "the money you must pay for something",
       "persian": "قیمت",
-      "photo": "media/a2/2026-10-04/photos/price.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/photos/price.jpg",
       "pos": "noun",
       "pronunciation": "PRYS",
       "word": "price",
-      "word_audio": "media/a2/2026-10-04/word-audio/price.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/word-audio/price.mp3"
     },
     {
       "example": "The shop gave me fifty cents in change.",
       "meaning": "money you get back after you pay",
       "persian": "باقی پول",
-      "photo": "media/a2/2026-10-04/photos/change.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/photos/change.jpg",
       "pos": "noun",
       "pronunciation": "CHAYNJ",
       "word": "change",
-      "word_audio": "media/a2/2026-10-04/word-audio/change.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/word-audio/change.mp3"
     },
     {
       "example": "Do you pay by cash or card?",
       "meaning": "money in coins and paper notes, not a card",
       "persian": "پول نقد",
-      "photo": "media/a2/2026-10-04/photos/cash.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/photos/cash.jpg",
       "pos": "noun",
       "pronunciation": "KASH",
       "word": "cash",
-      "word_audio": "media/a2/2026-10-04/word-audio/cash.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-04/word-audio/cash.mp3"
     }
   ]
 }

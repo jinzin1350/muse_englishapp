@@ -137,12 +137,12 @@
   },
   "level": "c1",
   "podcast": {
-    "audio": "media/c1/2026-09-28/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/podcast.mp3",
     "cover": null,
     "title": "Word Kitchen: The Art of Learning",
-    "transcript": "media/c1/2026-09-28/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/podcast-transcript.txt"
   },
-  "pronunciation_audio": "media/c1/2026-09-28/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/pronunciation.mp3",
   "quiz": [
     {
       "answer": 0,
@@ -246,45 +246,45 @@
     }
   ],
   "shadowing": {
-    "audio": "media/c1/2026-09-28/shadowing.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing.mp3",
     "title": "Shadowing Story: Sara's Road to Graduation",
-    "transcript": "media/c1/2026-09-28/shadowing-transcript.txt",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/c1/2026-09-28/shadowing-sentences/001.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/002.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/003.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/004.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/005.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/006.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/007.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/008.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/009.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/010.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/011.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/012.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/013.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/014.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/015.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/016.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/017.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/018.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/019.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/020.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/021.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/022.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/023.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/024.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/025.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/026.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/027.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/028.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/029.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/030.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/031.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/032.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/033.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/034.mp3",
-      "media/c1/2026-09-28/shadowing-sentences/035.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/019.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/020.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/021.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/022.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/023.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/024.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/025.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/026.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/027.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/028.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/029.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/030.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/031.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/032.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/033.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/034.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/shadowing-sentences/035.mp3"
     ]
   },
   "theme": "The Art of Learning",
@@ -293,101 +293,101 @@
       "example": "Her pedagogy mixes short lectures with hands-on projects.",
       "meaning": "the method and practice of teaching",
       "persian": "روش تدریس",
-      "photo": "media/c1/2026-09-28/photos/pedagogy.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/photos/pedagogy.jpg",
       "pos": "noun",
       "pronunciation": "peh-duh-GOH-jee",
       "word": "pedagogy",
-      "word_audio": "media/c1/2026-09-28/word-audio/pedagogy.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/word-audio/pedagogy.mp3"
     },
     {
       "example": "The new curriculum adds coding classes in every grade.",
       "meaning": "the subjects that make up a course of study",
       "persian": "برنامه درسی",
-      "photo": "media/c1/2026-09-28/photos/curriculum.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/photos/curriculum.jpg",
       "pos": "noun",
       "pronunciation": "kuh-RIK-yuh-lum",
       "word": "curriculum",
-      "word_audio": "media/c1/2026-09-28/word-audio/curriculum.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/word-audio/curriculum.mp3"
     },
     {
       "example": "The syllabus lists every reading for the semester.",
       "meaning": "an outline of the topics in a course",
       "persian": "سرفصل درسی",
-      "photo": "media/c1/2026-09-28/photos/syllabus.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/photos/syllabus.jpg",
       "pos": "noun",
       "pronunciation": "SIH-luh-bus",
       "word": "syllabus",
-      "word_audio": "media/c1/2026-09-28/word-audio/syllabus.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/word-audio/syllabus.mp3"
     },
     {
       "example": "The erudite professor could quote ancient texts from memory.",
       "meaning": "showing great knowledge",
       "persian": "فاضل و دانشمند",
-      "photo": "media/c1/2026-09-28/photos/erudite.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/photos/erudite.jpg",
       "pos": "adjective",
       "pronunciation": "EH-ruh-dyte",
       "word": "erudite",
-      "word_audio": "media/c1/2026-09-28/word-audio/erudite.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/word-audio/erudite.mp3"
     },
     {
       "example": "As an autodidact, she learned three languages online.",
       "meaning": "a person who teaches themselves",
       "persian": "خودآموخته",
-      "photo": "media/c1/2026-09-28/photos/autodidact.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/photos/autodidact.jpg",
       "pos": "noun",
       "pronunciation": "aw-toh-dih-DAKT",
       "word": "autodidact",
-      "word_audio": "media/c1/2026-09-28/word-audio/autodidact.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/word-audio/autodidact.mp3"
     },
     {
       "example": "A simple mnemonic helped him remember the planets in order.",
       "meaning": "a trick that helps you remember something",
       "persian": "تکنیک حفظی",
-      "photo": "media/c1/2026-09-28/photos/mnemonic.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/photos/mnemonic.jpg",
       "pos": "noun",
       "pronunciation": "nih-MAH-nik",
       "word": "mnemonic",
-      "word_audio": "media/c1/2026-09-28/word-audio/mnemonic.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/word-audio/mnemonic.mp3"
     },
     {
       "example": "He crammed all night before the final exam.",
       "meaning": "to study a huge amount in a short time",
       "persian": "فشرده خواندن (در شب امتحان)",
-      "photo": "media/c1/2026-09-28/photos/cram.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/photos/cram.jpg",
       "pos": "verb",
       "pronunciation": "KRAM",
       "word": "cram",
-      "word_audio": "media/c1/2026-09-28/word-audio/cram.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/word-audio/cram.mp3"
     },
     {
       "example": "She flunked chemistry and had to retake it.",
       "meaning": "to fail an exam or course",
       "persian": "مردود شدن در امتحان",
-      "photo": "media/c1/2026-09-28/photos/flunk.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/photos/flunk.jpg",
       "pos": "verb",
       "pronunciation": "FLUNK",
       "word": "flunk",
-      "word_audio": "media/c1/2026-09-28/word-audio/flunk.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/word-audio/flunk.mp3"
     },
     {
       "example": "Plagiarism can get you expelled from university.",
       "meaning": "copying someone else's work as your own",
       "persian": "سرقت ادبی",
-      "photo": "media/c1/2026-09-28/photos/plagiarism.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/photos/plagiarism.jpg",
       "pos": "noun",
       "pronunciation": "PLAY-juh-ri-zum",
       "word": "plagiarism",
-      "word_audio": "media/c1/2026-09-28/word-audio/plagiarism.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/word-audio/plagiarism.mp3"
     },
     {
       "example": "His thesis on public health won a national prize.",
       "meaning": "a long research paper written for a degree",
       "persian": "پایان‌نامه",
-      "photo": "media/c1/2026-09-28/photos/thesis.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/photos/thesis.jpg",
       "pos": "noun",
       "pronunciation": "THEE-sis",
       "word": "thesis",
-      "word_audio": "media/c1/2026-09-28/word-audio/thesis.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/c1/2026-09-28/word-audio/thesis.mp3"
     }
   ]
 }

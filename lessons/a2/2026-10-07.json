@@ -2,7 +2,7 @@
   "cefr": "A2",
   "date": "2026-10-07",
   "grammar": {
-    "audio": "media/a2/2026-10-07/grammar-en.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/grammar-en.mp3",
     "examples": [
       "*If you charge your phone*, it will work all day. (if + present simple)",
       "I *will download* the app if the wifi is fast. (will shows the result)",
@@ -127,12 +127,12 @@
   },
   "level": "a2",
   "podcast": {
-    "audio": "media/a2/2026-10-07/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/podcast.mp3",
     "cover": null,
     "title": "Word Kitchen: Your Phone, Your Day",
-    "transcript": "media/a2/2026-10-07/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/podcast-transcript.txt"
   },
-  "pronunciation_audio": "media/a2/2026-10-07/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/pronunciation.mp3",
   "quiz": [
     {
       "answer": 1,
@@ -186,33 +186,33 @@
     }
   ],
   "shadowing": {
-    "audio": "media/a2/2026-10-07/shadowing.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing.mp3",
     "title": "A Day With My Phone",
-    "transcript": "media/a2/2026-10-07/shadowing-transcript.txt",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/a2/2026-10-07/shadowing-sentences/001.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/002.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/003.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/004.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/005.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/006.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/007.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/008.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/009.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/010.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/011.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/012.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/013.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/014.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/015.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/016.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/017.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/018.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/019.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/020.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/021.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/022.mp3",
-      "media/a2/2026-10-07/shadowing-sentences/023.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/019.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/020.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/021.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/022.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/shadowing-sentences/023.mp3"
     ]
   },
   "theme": "technology",
@@ -221,51 +221,51 @@
       "example": "I charge my phone every night.",
       "meaning": "to put electricity into a phone or other device",
       "persian": "شارژ کردن (برق‌رسانی به گوشی یا دستگاه)",
-      "photo": "media/a2/2026-10-07/photos/charge.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/photos/charge.jpg",
       "pos": "verb",
       "pronunciation": "CHARJ",
       "word": "charge",
-      "word_audio": "media/a2/2026-10-07/word-audio/charge.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/word-audio/charge.mp3"
     },
     {
       "example": "I downloaded a new game yesterday.",
       "meaning": "to get a file or app from the internet onto your phone",
       "persian": "دانلود کردن",
-      "photo": "media/a2/2026-10-07/photos/download.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/photos/download.jpg",
       "pos": "verb",
       "pronunciation": "DOWN-load",
       "word": "download",
-      "word_audio": "media/a2/2026-10-07/word-audio/download.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/word-audio/download.mp3"
     },
     {
       "example": "My phone screen is too bright.",
       "meaning": "the flat part of a phone or TV that shows pictures",
       "persian": "صفحه نمایش",
-      "photo": "media/a2/2026-10-07/photos/screen.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/photos/screen.jpg",
       "pos": "noun",
       "pronunciation": "SKREEN",
       "word": "screen",
-      "word_audio": "media/a2/2026-10-07/word-audio/screen.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/word-audio/screen.mp3"
     },
     {
       "example": "I use a weather app every day.",
       "meaning": "a small program on your phone",
       "persian": "اپلیکیشن (برنامه موبایل)",
-      "photo": "media/a2/2026-10-07/photos/app.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/photos/app.jpg",
       "pos": "noun",
       "pronunciation": "ap",
       "word": "app",
-      "word_audio": "media/a2/2026-10-07/word-audio/app.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/word-audio/app.mp3"
     },
     {
       "example": "Do not tell anyone your password.",
       "meaning": "secret letters or numbers you use to open an account",
       "persian": "رمز عبور",
-      "photo": "media/a2/2026-10-07/photos/password.jpg",
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/photos/password.jpg",
       "pos": "noun",
       "pronunciation": "PASS-wurd",
       "word": "password",
-      "word_audio": "media/a2/2026-10-07/word-audio/password.mp3"
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-07/word-audio/password.mp3"
     }
   ]
 }

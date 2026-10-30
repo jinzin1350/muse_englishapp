@@ -11,8 +11,8 @@
       "example": "I downloaded the new app last night.",
       "pronunciation": "DOWN-lohd",
       "persian": "دانلود کردن، دریافت فایل از اینترنت",
-      "photo": "media/b2/2026-09-29/photos/download.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/download.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/download.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/download.mp3"
     },
     {
       "word": "upload",
@@ -21,8 +21,8 @@
       "example": "She uploaded her vacation photos to the website.",
       "pronunciation": "UP-lohd",
       "persian": "آپلود کردن، بارگذاری فایل در اینترنت",
-      "photo": "media/b2/2026-09-29/photos/upload.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/upload.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/upload.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/upload.mp3"
     },
     {
       "word": "install",
@@ -31,8 +31,8 @@
       "example": "I need to install the new version of this game.",
       "pronunciation": "in-STAWL",
       "persian": "نصب کردن",
-      "photo": "media/b2/2026-09-29/photos/install.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/install.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/install.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/install.mp3"
     },
     {
       "word": "update",
@@ -41,8 +41,8 @@
       "example": "My phone updates its apps every night.",
       "pronunciation": "up-DAYT",
       "persian": "به‌روزرسانی کردن",
-      "photo": "media/b2/2026-09-29/photos/update.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/update.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/update.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/update.mp3"
     },
     {
       "word": "delete",
@@ -51,8 +51,8 @@
       "example": "I deleted ten old photos to free up space.",
       "pronunciation": "dih-LEET",
       "persian": "حذف کردن، پاک کردن",
-      "photo": "media/b2/2026-09-29/photos/delete.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/delete.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/delete.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/delete.mp3"
     },
     {
       "word": "scroll",
@@ -61,8 +61,8 @@
       "example": "He scrolled through the news on his phone.",
       "pronunciation": "SKROHL",
       "persian": "اسکرول کردن، بالا و پایین بردن صفحه با انگشت",
-      "photo": "media/b2/2026-09-29/photos/scroll.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/scroll.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/scroll.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/scroll.mp3"
     },
     {
       "word": "swipe",
@@ -71,8 +71,8 @@
       "example": "Swipe left to see the next photo.",
       "pronunciation": "SWAYP",
       "persian": "کشیدن انگشت روی صفحه",
-      "photo": "media/b2/2026-09-29/photos/swipe.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/swipe.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/swipe.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/swipe.mp3"
     },
     {
       "word": "stream",
@@ -81,8 +81,8 @@
       "example": "We streamed a movie last night.",
       "pronunciation": "STREEM",
       "persian": "تماشا یا گوش دادن آنلاین بدون دانلود",
-      "photo": "media/b2/2026-09-29/photos/stream.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/stream.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/stream.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/stream.mp3"
     },
     {
       "word": "attach",
@@ -91,8 +91,8 @@
       "example": "I attached the document to the email.",
       "pronunciation": "uh-TACH",
       "persian": "پیوست کردن فایل",
-      "photo": "media/b2/2026-09-29/photos/attach.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/attach.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/attach.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/attach.mp3"
     },
     {
       "word": "crash",
@@ -101,8 +101,8 @@
       "example": "The app crashed while I was writing a message.",
       "pronunciation": "KRASH",
       "persian": "از کار افتادن ناگهانی برنامه یا کامپیوتر",
-      "photo": "media/b2/2026-09-29/photos/crash.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/crash.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/crash.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/crash.mp3"
     },
     {
       "word": "device",
@@ -111,8 +111,8 @@
       "example": "He owns three devices: a phone, a tablet, and a laptop.",
       "pronunciation": "dih-VYS",
       "persian": "دستگاه الکترونیکی",
-      "photo": "media/b2/2026-09-29/photos/device.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/device.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/device.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/device.mp3"
     },
     {
       "word": "battery",
@@ -121,8 +121,8 @@
       "example": "My battery is low, so I need to charge my phone.",
       "pronunciation": "BAT-uh-ree",
       "persian": "باتری",
-      "photo": "media/b2/2026-09-29/photos/battery.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/battery.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/battery.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/battery.mp3"
     },
     {
       "word": "password",
@@ -131,8 +131,8 @@
       "example": "Never share your password with anyone.",
       "pronunciation": "PAS-wurd",
       "persian": "رمز عبور",
-      "photo": "media/b2/2026-09-29/photos/password.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/password.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/password.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/password.mp3"
     },
     {
       "word": "notification",
@@ -141,8 +141,8 @@
       "example": "I got a notification that my food had arrived.",
       "pronunciation": "noh-tuh-fuh-KAY-shun",
       "persian": "اعلان",
-      "photo": "media/b2/2026-09-29/photos/notification.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/notification.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/notification.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/notification.mp3"
     },
     {
       "word": "feature",
@@ -151,8 +151,8 @@
       "example": "The best feature of this phone is its camera.",
       "pronunciation": "FEE-chur",
       "persian": "ویژگی، قابلیت",
-      "photo": "media/b2/2026-09-29/photos/feature.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/feature.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/feature.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/feature.mp3"
     },
     {
       "word": "shortcut",
@@ -161,8 +161,8 @@
       "example": "Learn the keyboard shortcuts to work faster.",
       "pronunciation": "SHORT-kut",
       "persian": "میانبر",
-      "photo": "media/b2/2026-09-29/photos/shortcut.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/shortcut.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/shortcut.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/shortcut.mp3"
     },
     {
       "word": "gadget",
@@ -171,8 +171,8 @@
       "example": "His desk is full of cool gadgets.",
       "pronunciation": "GAJ-it",
       "persian": "ابزارک، وسیله الکترونیکی کوچک و هوشمند",
-      "photo": "media/b2/2026-09-29/photos/gadget.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/gadget.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/gadget.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/gadget.mp3"
     },
     {
       "word": "data",
@@ -181,8 +181,8 @@
       "example": "Back up your data so you never lose it.",
       "pronunciation": "DAY-tuh",
       "persian": "داده‌ها، اطلاعات",
-      "photo": "media/b2/2026-09-29/photos/data.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/data.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/data.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/data.mp3"
     },
     {
       "word": "wireless",
@@ -191,8 +191,8 @@
       "example": "These wireless headphones are very comfortable.",
       "pronunciation": "WYUR-luhs",
       "persian": "بی‌سیم",
-      "photo": "media/b2/2026-09-29/photos/wireless.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/wireless.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/wireless.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/wireless.mp3"
     },
     {
       "word": "innovative",
@@ -201,8 +201,8 @@
       "example": "It was an innovative idea to teach English with short videos.",
       "pronunciation": "IN-uh-vay-tiv",
       "persian": "نوآورانه",
-      "photo": "media/b2/2026-09-29/photos/innovative.jpg",
-      "word_audio": "media/b2/2026-09-29/word-audio/innovative.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/photos/innovative.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/word-audio/innovative.mp3"
     }
   ],
   "quiz": [
@@ -535,50 +535,50 @@
       }
     ]
   },
-  "pronunciation_audio": "media/b2/2026-09-29/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/pronunciation.mp3",
   "podcast": {
     "title": "Word Kitchen: 20 Tech Words for Everyday Life",
-    "audio": "media/b2/2026-09-29/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/podcast.mp3",
     "cover": null,
     "transcript": null
   },
   "shadowing": {
     "title": "Shadowing practice",
-    "audio": "media/b2/2026-09-29/shadowing.mp3",
-    "transcript": "media/b2/2026-09-29/shadowing-transcript.txt",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing.mp3",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/b2/2026-09-29/shadowing-sentences/001.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/002.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/003.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/004.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/005.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/006.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/007.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/008.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/009.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/010.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/011.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/012.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/013.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/014.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/015.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/016.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/017.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/018.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/019.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/020.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/021.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/022.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/023.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/024.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/025.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/026.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/027.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/028.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/029.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/030.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/031.mp3",
-      "media/b2/2026-09-29/shadowing-sentences/032.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/019.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/020.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/021.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/022.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/023.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/024.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/025.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/026.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/027.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/028.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/029.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/030.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/031.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/b2/2026-09-29/shadowing-sentences/032.mp3"
     ]
   }
 }

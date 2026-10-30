@@ -11,8 +11,8 @@
       "example": "This soup is delicious.",
       "pronunciation": "duh-LIH-shus",
       "persian": "خوشمزه",
-      "photo": "media/a2/2026-10-03/photos/delicious.jpg",
-      "word_audio": "media/a2/2026-10-03/word-audio/delicious.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/photos/delicious.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/word-audio/delicious.mp3"
     },
     {
       "word": "spicy",
@@ -21,8 +21,8 @@
       "example": "I like spicy food.",
       "pronunciation": "SPY-see",
       "persian": "تند",
-      "photo": "media/a2/2026-10-03/photos/spicy.jpg",
-      "word_audio": "media/a2/2026-10-03/word-audio/spicy.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/photos/spicy.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/word-audio/spicy.mp3"
     },
     {
       "word": "oven",
@@ -31,8 +31,8 @@
       "example": "Bake the bread in the oven.",
       "pronunciation": "UH-vun",
       "persian": "فر",
-      "photo": "media/a2/2026-10-03/photos/oven.jpg",
-      "word_audio": "media/a2/2026-10-03/word-audio/oven.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/photos/oven.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/word-audio/oven.mp3"
     },
     {
       "word": "snack",
@@ -41,8 +41,8 @@
       "example": "I ate an apple as a snack.",
       "pronunciation": "SNACK",
       "persian": "میان‌وعده",
-      "photo": "media/a2/2026-10-03/photos/snack.jpg",
-      "word_audio": "media/a2/2026-10-03/word-audio/snack.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/photos/snack.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/word-audio/snack.mp3"
     },
     {
       "word": "sweet",
@@ -51,8 +51,8 @@
       "example": "The cake is very sweet.",
       "pronunciation": "SWEET",
       "persian": "شیرین",
-      "photo": "media/a2/2026-10-03/photos/sweet.jpg",
-      "word_audio": "media/a2/2026-10-03/word-audio/sweet.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/photos/sweet.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/word-audio/sweet.mp3"
     },
     {
       "word": "kitchen",
@@ -61,8 +61,8 @@
       "example": "She cooks dinner in the kitchen.",
       "pronunciation": "KIH-chin",
       "persian": "آشپزخانه",
-      "photo": "media/a2/2026-10-03/photos/kitchen.jpg",
-      "word_audio": "media/a2/2026-10-03/word-audio/kitchen.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/photos/kitchen.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/word-audio/kitchen.mp3"
     },
     {
       "word": "dessert",
@@ -71,8 +71,8 @@
       "example": "Ice cream is my favorite dessert.",
       "pronunciation": "duh-ZERT",
       "persian": "دسر",
-      "photo": "media/a2/2026-10-03/photos/dessert.jpg",
-      "word_audio": "media/a2/2026-10-03/word-audio/dessert.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/photos/dessert.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/word-audio/dessert.mp3"
     },
     {
       "word": "fresh",
@@ -81,8 +81,8 @@
       "example": "I buy fresh bread every morning.",
       "pronunciation": "FRESH",
       "persian": "تازه",
-      "photo": "media/a2/2026-10-03/photos/fresh.jpg",
-      "word_audio": "media/a2/2026-10-03/word-audio/fresh.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/photos/fresh.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/word-audio/fresh.mp3"
     },
     {
       "word": "grill",
@@ -91,8 +91,8 @@
       "example": "We grilled fish for dinner.",
       "pronunciation": "GRIL",
       "persian": "گریل کردن",
-      "photo": "media/a2/2026-10-03/photos/grill.jpg",
-      "word_audio": "media/a2/2026-10-03/word-audio/grill.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/photos/grill.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/word-audio/grill.mp3"
     },
     {
       "word": "soup",
@@ -101,48 +101,48 @@
       "example": "I had hot soup for lunch.",
       "pronunciation": "SOOP",
       "persian": "سوپ",
-      "photo": "media/a2/2026-10-03/photos/soup.jpg",
-      "word_audio": "media/a2/2026-10-03/word-audio/soup.mp3"
+      "photo": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/photos/soup.jpg",
+      "word_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/word-audio/soup.mp3"
     }
   ],
-  "pronunciation_audio": "media/a2/2026-10-03/pronunciation.mp3",
+  "pronunciation_audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/pronunciation.mp3",
   "podcast": {
     "title": "Word Kitchen: Food and Cooking",
-    "audio": "media/a2/2026-10-03/podcast.mp3",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/podcast.mp3",
     "cover": null,
-    "transcript": "media/a2/2026-10-03/podcast-transcript.txt"
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/podcast-transcript.txt"
   },
   "shadowing": {
     "title": "A Delicious Day in the Kitchen",
-    "audio": "media/a2/2026-10-03/shadowing.mp3",
-    "transcript": "media/a2/2026-10-03/shadowing-transcript.txt",
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing.mp3",
+    "transcript": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-transcript.txt",
     "sentence_audio": [
-      "media/a2/2026-10-03/shadowing-sentences/001.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/002.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/003.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/004.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/005.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/006.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/007.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/008.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/009.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/010.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/011.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/012.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/013.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/014.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/015.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/016.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/017.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/018.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/019.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/020.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/021.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/022.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/023.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/024.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/025.mp3",
-      "media/a2/2026-10-03/shadowing-sentences/026.mp3"
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/001.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/002.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/003.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/004.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/005.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/006.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/007.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/008.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/009.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/010.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/011.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/012.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/013.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/014.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/015.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/016.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/017.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/018.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/019.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/020.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/021.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/022.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/023.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/024.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/025.mp3",
+      "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/shadowing-sentences/026.mp3"
     ]
   },
   "quiz": [
@@ -374,6 +374,6 @@
         "answer": 0
       }
     ],
-    "audio": "media/a2/2026-10-03/grammar-en.mp3"
+    "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/media/a2/2026-10-03/grammar-en.mp3"
   }
 }
