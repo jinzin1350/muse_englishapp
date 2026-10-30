@@ -1,0 +1,282 @@
+{
+  "date": "2026-10-30",
+  "theme": "travel & transport",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "aircraft",
+      "pos": "noun",
+      "meaning": "a vehicle that flies, like a plane",
+      "example": "Many aircraft fly over our house.",
+      "pronunciation": "AIR-kraft",
+      "persian": "هواپیما، هواگرد",
+      "photo": "media/a2/2026-10-30/photos/aircraft.jpg",
+      "word_audio": "media/a2/2026-10-30/word-audio/aircraft.mp3"
+    },
+    {
+      "word": "announcement",
+      "pos": "noun",
+      "meaning": "A public statement giving information.",
+      "example": "The train station made an announcement.",
+      "pronunciation": "uh-NOWNS-munt",
+      "persian": "اطلاعیه، اعلام",
+      "photo": "media/a2/2026-10-30/photos/announcement.jpg",
+      "word_audio": "media/a2/2026-10-30/word-audio/announcement.mp3"
+    },
+    {
+      "word": "approach",
+      "pos": "verb",
+      "meaning": "To come closer to something or someone.",
+      "example": "The train is starting to approach the station.",
+      "pronunciation": "uh-PROHCH",
+      "persian": "نزدیک شدن",
+      "photo": "media/a2/2026-10-30/photos/approach.jpg",
+      "word_audio": "media/a2/2026-10-30/word-audio/approach.mp3"
+    },
+    {
+      "word": "ask sb the way",
+      "pos": "phrase",
+      "meaning": "To ask someone for directions.",
+      "example": "We asked a man the way to the park.",
+      "pronunciation": "ASK SUM-buh-dee thuh WAY",
+      "persian": "از کسی آدرس پرسیدن",
+      "photo": "media/a2/2026-10-30/photos/ask sb the way.jpg",
+      "word_audio": "media/a2/2026-10-30/word-audio/ask sb the way.mp3"
+    },
+    {
+      "word": "attraction",
+      "pos": "noun",
+      "meaning": "A place or thing that people want to visit.",
+      "example": "The Eiffel Tower is a famous tourist attraction.",
+      "pronunciation": "uh-TRAK-shun",
+      "persian": "جاذبه، دیدنی",
+      "photo": "media/a2/2026-10-30/photos/attraction.jpg",
+      "word_audio": "media/a2/2026-10-30/word-audio/attraction.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-30/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: A Trip to the City",
+    "audio": "media/a2/2026-10-30/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-30/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Trip to the City",
+    "audio": "media/a2/2026-10-30/shadowing.mp3",
+    "transcript": "media/a2/2026-10-30/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-10-30/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/022.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/023.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/024.mp3",
+      "media/a2/2026-10-30/shadowing-sentences/025.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'aircraft' mean?",
+      "options": [
+        "A public statement giving information.",
+        "a vehicle that flies, like a plane",
+        "A place or thing that people want to visit.",
+        "To come closer to something or someone."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'announcement' mean?",
+      "options": [
+        "To come closer to something or someone.",
+        "To ask someone for directions.",
+        "A public statement giving information.",
+        "a vehicle that flies, like a plane"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'approach' mean?",
+      "options": [
+        "A place or thing that people want to visit.",
+        "A public statement giving information.",
+        "To ask someone for directions.",
+        "To come closer to something or someone."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'ask sb the way' mean?",
+      "options": [
+        "To ask someone for directions.",
+        "a vehicle that flies, like a plane",
+        "To come closer to something or someone.",
+        "A public statement giving information."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'attraction' mean?",
+      "options": [
+        "To come closer to something or someone.",
+        "A place or thing that people want to visit.",
+        "A public statement giving information.",
+        "To ask someone for directions."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "-ed and -ing Adjectives (bored or boring?)",
+    "explanation": "Many adjectives have two forms. The **-ed** form describes how a person feels.\n\nThe **-ing** form describes the thing or person that causes the feeling.\n\nWith people, the two forms mean very different things. **Bored** means you feel bored, but **boring** means you make other people feel bored.\n\nA visit to a famous **attraction** can be **exciting**, and you feel **excited**.\n\nSome **-ed** adjectives go with a preposition. We say **interested in**, **bored with**, **excited about**, and **worried about**.",
+    "examples": [
+      "*The lesson was **boring**. Everyone was **bored**.* (the cause and the feeling)",
+      "*I'm very **tired**. It was a **tiring** day.* (feeling and cause)",
+      "*The kids are **excited** about the holiday.* (feeling, with about)",
+      "*This is an **exciting** match!* (cause)",
+      "*I was **surprised** by the news.* (feeling)",
+      "*A walk on the beach is very **relaxing**.* (cause)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with an -ing adjective: The attraction makes visitors feel excited.",
+        "a": "The attraction is exciting."
+      },
+      {
+        "q": "Rewrite with an -ed adjective: The long wait made Sara feel tired.",
+        "a": "Sara was tired after the long wait."
+      },
+      {
+        "q": "Rewrite with an -ed adjective: The news about the train made us feel surprised.",
+        "a": "We were surprised by the news about the train."
+      },
+      {
+        "q": "Rewrite with an -ing adjective: The film makes people feel bored.",
+        "a": "The film is boring."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "The film was really ___. I fell asleep.",
+        "options": [
+          "bored",
+          "boring",
+          "bore",
+          "boredly"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I feel ___. I've worked for twelve hours.",
+        "options": [
+          "tired",
+          "tiring",
+          "tire",
+          "tiredly"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "This book is very ___. I can't stop reading it.",
+        "options": [
+          "interested",
+          "interest",
+          "interestingly",
+          "interesting"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We were ___ when we heard the news. Nobody expected it.",
+        "options": [
+          "surprising",
+          "surprise",
+          "surprised",
+          "surprisingly"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The instructions are so ___. I don't understand them.",
+        "options": [
+          "confused",
+          "confuse",
+          "confusedly",
+          "confusing"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Are you ___ in football?",
+        "options": [
+          "interesting",
+          "interested",
+          "interest",
+          "interestingly"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "It was an ___ day. We moved house and started new jobs.",
+        "options": [
+          "exhausting",
+          "exhausted",
+          "exhaust",
+          "exhaustion"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She felt ___ when she fell over in front of everyone.",
+        "options": [
+          "embarrassing",
+          "embarrass",
+          "embarrassed",
+          "embarrassment"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The kids are so ___ about the trip to the zoo!",
+        "options": [
+          "exciting",
+          "excite",
+          "excited",
+          "excitement"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "That noise is really ___. Can you turn it off?",
+        "options": [
+          "annoyed",
+          "annoy",
+          "annoyance",
+          "annoying"
+        ],
+        "answer": 3
+      }
+    ],
+    "audio": "media/a2/2026-10-30/grammar-en.mp3"
+  }
+}

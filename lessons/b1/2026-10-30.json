@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-30",
+  "theme": "health & body",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "consider",
+      "pos": "verb",
+      "meaning": "To think carefully about something.",
+      "example": "I will consider your offer carefully.",
+      "pronunciation": "kun-SID-er",
+      "persian": "در نظر گرفتن، فکر کردن",
+      "photo": "media/b1/2026-10-30/photos/consider.jpg",
+      "word_audio": "media/b1/2026-10-30/word-audio/consider.mp3"
+    },
+    {
+      "word": "decade",
+      "pos": "noun",
+      "meaning": "A period of ten years.",
+      "example": "The company has grown a lot in the last decade.",
+      "pronunciation": "DEK-ayd",
+      "persian": "دهه",
+      "photo": "media/b1/2026-10-30/photos/decade.jpg",
+      "word_audio": "media/b1/2026-10-30/word-audio/decade.mp3"
+    },
+    {
+      "word": "depressed",
+      "pos": "adjective",
+      "meaning": "Feeling very sad and without hope.",
+      "example": "She felt depressed after losing her job.",
+      "pronunciation": "di-PREST",
+      "persian": "افسرده",
+      "photo": "media/b1/2026-10-30/photos/depressed.jpg",
+      "word_audio": "media/b1/2026-10-30/word-audio/depressed.mp3"
+    },
+    {
+      "word": "development",
+      "pos": "noun",
+      "meaning": "The process of growing or changing.",
+      "example": "The new housing development will create many jobs.",
+      "pronunciation": "di-VEL-up-munt",
+      "persian": "توسعه، پیشرفت",
+      "photo": "media/b1/2026-10-30/photos/development.jpg",
+      "word_audio": "media/b1/2026-10-30/word-audio/development.mp3"
+    },
+    {
+      "word": "die",
+      "pos": "verb",
+      "meaning": "To stop living.",
+      "example": "My old dog died last year.",
+      "pronunciation": "DY",
+      "persian": "مردن",
+      "photo": "media/b1/2026-10-30/photos/die.jpg",
+      "word_audio": "media/b1/2026-10-30/word-audio/die.mp3"
+    },
+    {
+      "word": "exhausted",
+      "pos": "adjective",
+      "meaning": "Very tired.",
+      "example": "I was exhausted after the long trip.",
+      "pronunciation": "ig-ZAW-stid",
+      "persian": "خسته، از پا افتاده",
+      "photo": "media/b1/2026-10-30/photos/exhausted.jpg",
+      "word_audio": "media/b1/2026-10-30/word-audio/exhausted.mp3"
+    },
+    {
+      "word": "fitness",
+      "pos": "noun",
+      "meaning": "The state of being healthy and strong.",
+      "example": "Regular exercise improves your fitness.",
+      "pronunciation": "FIT-nus",
+      "persian": "تناسب اندام، سلامتی",
+      "photo": "media/b1/2026-10-30/photos/fitness.jpg",
+      "word_audio": "media/b1/2026-10-30/word-audio/fitness.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-10-30/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Health, Energy, and Small Steps",
+    "audio": "media/b1/2026-10-30/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-10-30/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Healthy Change",
+    "audio": "media/b1/2026-10-30/shadowing.mp3",
+    "transcript": "media/b1/2026-10-30/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b1/2026-10-30/shadowing-sentences/001.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/002.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/003.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/004.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/005.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/006.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/007.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/008.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/009.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/010.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/011.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/012.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/013.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/014.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/015.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/016.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/017.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/018.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/019.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/020.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/021.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/022.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/023.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/024.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/025.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/026.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/027.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/028.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/029.mp3",
+      "media/b1/2026-10-30/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'consider' mean?",
+      "options": [
+        "Feeling very sad and without hope.",
+        "The state of being healthy and strong.",
+        "A period of ten years.",
+        "To think carefully about something."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'decade' mean?",
+      "options": [
+        "To stop living.",
+        "A period of ten years.",
+        "To think carefully about something.",
+        "The state of being healthy and strong."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'depressed' mean?",
+      "options": [
+        "To stop living.",
+        "Very tired.",
+        "Feeling very sad and without hope.",
+        "The state of being healthy and strong."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'development' mean?",
+      "options": [
+        "The state of being healthy and strong.",
+        "The process of growing or changing.",
+        "A period of ten years.",
+        "Very tired."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'die' mean?",
+      "options": [
+        "To stop living.",
+        "The process of growing or changing.",
+        "To think carefully about something.",
+        "Very tired."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'exhausted' mean?",
+      "options": [
+        "To stop living.",
+        "Very tired.",
+        "A period of ten years.",
+        "The process of growing or changing."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'fitness' mean?",
+      "options": [
+        "Very tired.",
+        "Feeling very sad and without hope.",
+        "A period of ten years.",
+        "The state of being healthy and strong."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Defining Relative Clauses",
+    "explanation": "A **defining relative clause** tells us **which** person or thing we mean. Without it, the sentence is not clear.\n\nDo not use commas around a **defining relative clause**.\n\nUse **who** for people, **which** for things and animals, and **that** for people or things. In everyday speech, **that** is very common.\n\nUse **where** for places, **whose** for possession, and **when** for times.\n\nConsider the clause carefully: you can leave out **who**, **which** or **that** when it is the **object** of the clause, that is, when another subject comes after it.\n\nYou cannot leave it out when it is the **subject** of the clause.\n\nDo not repeat the pronoun. The relative pronoun already replaces **he**, **she**, **it** or **them**, so do not add another pronoun after it.",
+    "examples": [
+      "*The teacher **who** helped me is from Ireland.* (who for people)",
+      "*Is this the bus **that** goes to the airport?* (that for things)",
+      "*The phone (**that**) I bought last week has stopped working.* (object: that is optional)",
+      "*That's the restaurant **where** we had our first date.* (where for places)",
+      "*I have a friend **whose** dad is a famous chef.* (whose for possession)",
+      "*Sunday is the day **when** I relax.* (when for times)"
+    ],
+    "practice": [
+      {
+        "q": "Join the sentences with whose: I know a man. His car is electric.",
+        "a": "I know a man whose car is electric."
+      },
+      {
+        "q": "Join the sentences with that: This is the gym. I go to the gym for my fitness.",
+        "a": "This is the gym that I go to for my fitness."
+      },
+      {
+        "q": "Rewrite without that: The book that I'm reading is great.",
+        "a": "The book I'm reading is great."
+      },
+      {
+        "q": "Correct the sentence: The film that I watched it was boring.",
+        "a": "The film that I watched was boring."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "The woman ___ lives next door is a nurse.",
+        "options": [
+          "which",
+          "who",
+          "where",
+          "whose"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "This is the phone ___ I bought yesterday.",
+        "options": [
+          "who",
+          "where",
+          "which",
+          "whose"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "That's the café ___ we first met.",
+        "options": [
+          "which",
+          "who",
+          "whose",
+          "where"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He's the boy ___ dog bit me.",
+        "options": [
+          "whose",
+          "who",
+          "which",
+          "that"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "In which sentence can you leave out *that* or *who*?",
+        "options": [
+          "The man who called you is here.",
+          "The book that I'm reading is great.",
+          "The girl who sits next to me is nice.",
+          "The bus that goes to the airport is late."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I don't like people ___ are rude.",
+        "options": [
+          "which",
+          "where",
+          "who",
+          "whose"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "The car that I bought it is red.",
+          "The car who I bought is red.",
+          "The car where I bought is red.",
+          "The car that I bought is red."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Is this the bus ___ goes to the city centre?",
+        "options": [
+          "that",
+          "who",
+          "where",
+          "whose"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "The man lives next door is a pilot.",
+          "The man which lives next door is a pilot.",
+          "The man who lives next door is a pilot.",
+          "The man who he lives next door is a pilot."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "That's the shop ___ I bought my shoes.",
+        "options": [
+          "which",
+          "where",
+          "who",
+          "whose"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}
