@@ -1,4 +1,0 @@
-- Word Kitchen episode on feelings and character: cheerful, confident, shy, lonely, proud, embarrassed, grateful, impatient, sensitive, calm
-- Maya and Lena discuss each word with real-life examples (neighbor, teacher, job interviews, moving cities, driving test, traffic)
-- Q&A segment: being shy AND confident, healthy pride, lonely feelings at night, handling embarrassment at work, sensitive coworkers, stopping impatience
-- Ends with a review of all ten words
