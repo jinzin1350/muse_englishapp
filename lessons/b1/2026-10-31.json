@@ -1,0 +1,392 @@
+{
+ "date": "2026-10-31",
+ "theme": "review day",
+ "level": "b1",
+ "cefr": "B1",
+ "review": true,
+ "review_of": [
+  "2026-10-28",
+  "2026-10-29",
+  "2026-10-30"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "breeze",
+   "pos": "noun",
+   "meaning": "A gentle, light wind.",
+   "example": "A cool breeze blew through the trees.",
+   "pronunciation": "BREEZ",
+   "persian": "نسیم",
+   "photo": "media/b1/2026-10-28/photos/breeze.jpg",
+   "word_audio": "media/b1/2026-10-28/word-audio/breeze.mp3"
+  },
+  {
+   "word": "consider",
+   "pos": "verb",
+   "meaning": "To think carefully about something.",
+   "example": "I will consider your offer carefully.",
+   "pronunciation": "kun-SID-er",
+   "persian": "در نظر گرفتن، فکر کردن",
+   "photo": "media/b1/2026-10-30/photos/consider.jpg",
+   "word_audio": "media/b1/2026-10-30/word-audio/consider.mp3"
+  },
+  {
+   "word": "calm (sea)",
+   "pos": "adjective",
+   "meaning": "Without big waves or strong wind.",
+   "example": "The sea was calm for our boat trip.",
+   "pronunciation": "KAHM",
+   "persian": "آرام، بی‌موج",
+   "photo": "media/b1/2026-10-28/photos/calm-sea.jpg",
+   "word_audio": "media/b1/2026-10-28/word-audio/calm-sea.mp3"
+  },
+  {
+   "word": "die",
+   "pos": "verb",
+   "meaning": "To stop living.",
+   "example": "My old dog died last year.",
+   "pronunciation": "DY",
+   "persian": "مردن",
+   "photo": "media/b1/2026-10-30/photos/die.jpg",
+   "word_audio": "media/b1/2026-10-30/word-audio/die.mp3"
+  },
+  {
+   "word": "depressed",
+   "pos": "adjective",
+   "meaning": "Feeling very sad and without hope.",
+   "example": "She felt depressed after losing her job.",
+   "pronunciation": "di-PREST",
+   "persian": "افسرده",
+   "photo": "media/b1/2026-10-30/photos/depressed.jpg",
+   "word_audio": "media/b1/2026-10-30/word-audio/depressed.mp3"
+  },
+  {
+   "word": "decade",
+   "pos": "noun",
+   "meaning": "A period of ten years.",
+   "example": "The company has grown a lot in the last decade.",
+   "pronunciation": "DEK-ayd",
+   "persian": "دهه",
+   "photo": "media/b1/2026-10-30/photos/decade.jpg",
+   "word_audio": "media/b1/2026-10-30/word-audio/decade.mp3"
+  },
+  {
+   "word": "calculator",
+   "pos": "noun",
+   "meaning": "A small machine that does math.",
+   "example": "I use a calculator for my homework.",
+   "pronunciation": "KAL-kyuh-lay-tur",
+   "persian": "ماشین حساب",
+   "photo": "media/b1/2026-10-29/photos/calculator.jpg",
+   "word_audio": "media/b1/2026-10-29/word-audio/calculator.mp3"
+  },
+  {
+   "word": "depart",
+   "pos": "verb",
+   "meaning": "To leave a place, especially to start a journey.",
+   "example": "The train will depart from platform 3.",
+   "pronunciation": "duh-PART",
+   "persian": "حرکت کردن، عزیمت کردن",
+   "photo": "media/b1/2026-10-28/photos/depart.jpg",
+   "word_audio": "media/b1/2026-10-28/word-audio/depart.mp3"
+  },
+  {
+   "word": "bus stop",
+   "pos": "noun",
+   "meaning": "A place where a bus stops for people.",
+   "example": "I wait for the bus at the bus stop.",
+   "pronunciation": "BUS STOP",
+   "persian": "ایستگاه اتوبوس",
+   "photo": "media/b1/2026-10-28/photos/bus-stop.jpg",
+   "word_audio": "media/b1/2026-10-28/word-audio/bus-stop.mp3"
+  },
+  {
+   "word": "army",
+   "pos": "noun",
+   "meaning": "A large group of soldiers fighting for a country.",
+   "example": "My grandfather served in the army.",
+   "pronunciation": "AR-mee",
+   "persian": "ارتش، سپاه",
+   "photo": "media/b1/2026-10-29/photos/army.jpg",
+   "word_audio": "media/b1/2026-10-29/word-audio/army.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-10-31/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: A Week to Remember",
+  "audio": "media/b1/2026-10-31/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-10-31/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's New Start",
+  "audio": "media/b1/2026-10-31/shadowing.mp3",
+  "transcript": "media/b1/2026-10-31/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-10-31/shadowing-sentences/001.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/002.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/003.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/004.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/005.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/006.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/007.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/008.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/009.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/010.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/011.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/012.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/013.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/014.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/015.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/016.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/017.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/018.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/019.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/020.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/021.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/022.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/023.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/024.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/025.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/026.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/027.mp3",
+   "media/b1/2026-10-31/shadowing-sentences/028.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'breeze' mean?",
+   "options": [
+    "To stop living.",
+    "A gentle, light wind.",
+    "Without big waves or strong wind.",
+    "A period of ten years."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'consider' mean?",
+   "options": [
+    "A place where a bus stops for people.",
+    "To think carefully about something.",
+    "Feeling very sad and without hope.",
+    "To stop living."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'calm (sea)' mean?",
+   "options": [
+    "To leave a place, especially to start a journey.",
+    "A small machine that does math.",
+    "A large group of soldiers fighting for a country.",
+    "Without big waves or strong wind."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'die' mean?",
+   "options": [
+    "Feeling very sad and without hope.",
+    "To stop living.",
+    "A small machine that does math.",
+    "A large group of soldiers fighting for a country."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'depressed' mean?",
+   "options": [
+    "A large group of soldiers fighting for a country.",
+    "To think carefully about something.",
+    "Feeling very sad and without hope.",
+    "A gentle, light wind."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'decade' mean?",
+   "options": [
+    "Feeling very sad and without hope.",
+    "A period of ten years.",
+    "A gentle, light wind.",
+    "Without big waves or strong wind."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'calculator' mean?",
+   "options": [
+    "Without big waves or strong wind.",
+    "A period of ten years.",
+    "To stop living.",
+    "A small machine that does math."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'depart' mean?",
+   "options": [
+    "Without big waves or strong wind.",
+    "A period of ten years.",
+    "To leave a place, especially to start a journey.",
+    "Feeling very sad and without hope."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'bus stop' mean?",
+   "options": [
+    "A period of ten years.",
+    "A gentle, light wind.",
+    "A place where a bus stops for people.",
+    "Without big waves or strong wind."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'army' mean?",
+   "options": [
+    "Without big waves or strong wind.",
+    "A large group of soldiers fighting for a country.",
+    "To think carefully about something.",
+    "A place where a bus stops for people."
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "Question Tags",
+  "explanation": "A **question tag** is a short question at the end of a sentence. We use it to check information or to ask someone to agree.\n\nThe basic rule is simple. A positive sentence takes a negative tag: *She is French, **isn't she**?*\n\nA negative sentence takes a positive tag: *He can't swim, **can he**?*\n\nUse the same auxiliary verb as the sentence, like **be**, **have**, **can** or **will**. If there is no auxiliary, use **do**, **does** or **did**.\n\nThe tag uses a pronoun, not a noun. We say *Your brother works here, **doesn't he**?*, not \"doesn't your brother\".\n\nSome cases are special. *I am* becomes **aren't I**, *Let's* becomes **shall we**, and an order takes **will you**.\n\nWords like **never**, **nobody** and **nothing** make a sentence negative, so the tag is positive. *You never call me, **do you**?*\n\n*There is* and *there are* take **isn't there** and **aren't there**. *Everyone* and *nobody* take **they**.\n\nIntonation matters too. If your voice goes down at the end, you are fairly sure and want agreement. If it goes up, it is a real question.",
+  "examples": [
+   "*It's a beautiful day, **isn't it**?* (be)",
+   "*You don't like coffee, **do you**?* (negative sentence, positive tag)",
+   "*She lives near here, **doesn't she**?* (present simple, use does)",
+   "*They didn't come, **did they**?* (past simple, use did)",
+   "*I'm right, **aren't I**?* (I am becomes aren't I)",
+   "*Let's have a break, **shall we**?* (let's becomes shall we)"
+  ],
+  "practice": [
+   {
+    "q": "Add a question tag: You wait at the bus stop every morning.",
+    "a": "You wait at the bus stop every morning, don't you?"
+   },
+   {
+    "q": "Add a question tag: She didn't consider the new job.",
+    "a": "She didn't consider the new job, did she?"
+   },
+   {
+    "q": "Add a question tag: The sea is calm today.",
+    "a": "The sea is calm today, isn't it?"
+   },
+   {
+    "q": "Correct the tag: You never use your calculator, don't you?",
+    "a": "You never use your calculator, do you?"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "It's cold today, ___?",
+    "options": [
+     "doesn't it",
+     "isn't it",
+     "it isn't",
+     "isn't this"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "They didn't call, ___?",
+    "options": [
+     "did they",
+     "didn't they",
+     "do they",
+     "were they"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "She lives in Toronto, ___?",
+    "options": [
+     "isn't she",
+     "don't she",
+     "didn't she",
+     "doesn't she"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "You don't eat meat, ___?",
+    "options": [
+     "don't you",
+     "are you",
+     "do you",
+     "eat you"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "You've seen this film, ___?",
+    "options": [
+     "don't you",
+     "haven't you",
+     "didn't you",
+     "hasn't you"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Let's go to the beach, ___?",
+    "options": [
+     "shall we",
+     "do we",
+     "let we",
+     "don't we"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I'm late, ___?",
+    "options": [
+     "amn't I",
+     "isn't I",
+     "don't I",
+     "aren't I"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "He can swim, ___?",
+    "options": [
+     "doesn't he",
+     "isn't he",
+     "can't he",
+     "couldn't he"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "There's a bus stop near here, ___?",
+    "options": [
+     "isn't it",
+     "there isn't",
+     "isn't there",
+     "aren't there"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Your sister works in a bank, ___?",
+    "options": [
+     "doesn't your sister",
+     "doesn't she",
+     "isn't she",
+     "don't she"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

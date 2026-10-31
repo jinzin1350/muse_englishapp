@@ -1,0 +1,394 @@
+{
+  "date": "2026-10-31",
+  "theme": "review day",
+  "level": "c1",
+  "cefr": "C1",
+  "review": true,
+  "review_of": [
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "berth",
+      "pos": "noun",
+      "meaning": "A sleeping place on a ship, train, or plane.",
+      "example": "I booked a comfortable berth for the overnight train journey.",
+      "pronunciation": "BURTH",
+      "persian": "جای خواب (کشتی، قطار)",
+      "photo": "media/c1/2026-10-29/photos/berth.jpg",
+      "word_audio": "media/c1/2026-10-29/word-audio/berth.mp3"
+    },
+    {
+      "word": "beep your horn",
+      "pos": "phrase",
+      "meaning": "To make a short, loud sound with a car horn.",
+      "example": "Please don't beep your horn unnecessarily in residential areas.",
+      "pronunciation": "BEEP yor HORN",
+      "persian": "بوق زدن",
+      "photo": "media/c1/2026-10-29/photos/beep-your-horn.jpg",
+      "word_audio": "media/c1/2026-10-29/word-audio/beep-your-horn.mp3"
+    },
+    {
+      "word": "envisage",
+      "pos": "verb",
+      "meaning": "To imagine something as a future possibility.",
+      "example": "We envisage a future where technology enhances learning.",
+      "pronunciation": "en-VIZ-ij",
+      "persian": "تصور کردن، پیش‌بینی کردن",
+      "photo": "media/c1/2026-10-28/photos/envisage.jpg",
+      "word_audio": "media/c1/2026-10-28/word-audio/envisage.mp3"
+    },
+    {
+      "word": "blissful",
+      "pos": "adjective",
+      "meaning": "Extremely happy; full of joy.",
+      "example": "They spent a blissful honeymoon in the Maldives.",
+      "pronunciation": "BLIS-ful",
+      "persian": "سعادتمند، بسیار شاد",
+      "photo": "media/c1/2026-10-30/photos/blissful.jpg",
+      "word_audio": "media/c1/2026-10-30/word-audio/blissful.mp3"
+    },
+    {
+      "word": "averse",
+      "pos": "adjective",
+      "meaning": "Having a strong dislike or opposition to something.",
+      "example": "He is not averse to taking risks.",
+      "pronunciation": "uh-VURS",
+      "persian": "بیزار، مخالف",
+      "photo": "media/c1/2026-10-30/photos/averse.jpg",
+      "word_audio": "media/c1/2026-10-30/word-audio/averse.mp3"
+    },
+    {
+      "word": "appease",
+      "pos": "verb",
+      "meaning": "To pacify someone by granting their demands.",
+      "example": "He tried to appease his angry boss with an apology.",
+      "pronunciation": "uh-PEEZ",
+      "persian": "آرام کردن، راضی کردن",
+      "photo": "media/c1/2026-10-30/photos/appease.jpg",
+      "word_audio": "media/c1/2026-10-30/word-audio/appease.mp3"
+    },
+    {
+      "word": "digital technology",
+      "pos": "noun phrase",
+      "meaning": "Electronic tools and systems that process data digitally.",
+      "example": "Digital technology has transformed how we communicate globally.",
+      "pronunciation": "DIJ-i-tul tek-NOL-uh-jee",
+      "persian": "فناوری دیجیتال",
+      "photo": "media/c1/2026-10-28/photos/digital-technology.jpg",
+      "word_audio": "media/c1/2026-10-28/word-audio/digital-technology.mp3"
+    },
+    {
+      "word": "disease-resistant",
+      "pos": "adjective",
+      "meaning": "Able to withstand or fight off diseases.",
+      "example": "Scientists are developing disease-resistant crops to improve yields.",
+      "pronunciation": "dih-ZEEZ-ri-ZIS-tunt",
+      "persian": "مقاوم به بیماری",
+      "photo": "media/c1/2026-10-28/photos/disease-resistant.jpg",
+      "word_audio": "media/c1/2026-10-28/word-audio/disease-resistant.mp3"
+    },
+    {
+      "word": "bliss",
+      "pos": "noun",
+      "meaning": "Perfect happiness or joy.",
+      "example": "Lying on the beach was pure bliss.",
+      "pronunciation": "BLIS",
+      "persian": "سعادت، خوشبختی کامل",
+      "photo": "media/c1/2026-10-30/photos/bliss.jpg",
+      "word_audio": "media/c1/2026-10-30/word-audio/bliss.mp3"
+    },
+    {
+      "word": "awe-inspiring",
+      "pos": "adjective",
+      "meaning": "Causing a feeling of great wonder and respect.",
+      "example": "The Grand Canyon is an truly awe-inspiring natural wonder.",
+      "pronunciation": "AW-in-SPY-uh-ring",
+      "persian": "الهام‌بخش، شگفت‌انگیز",
+      "photo": "media/c1/2026-10-29/photos/awe-inspiring.jpg",
+      "word_audio": "media/c1/2026-10-29/word-audio/awe-inspiring.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-10-31/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: A Review Journey to Remember",
+    "audio": "media/c1/2026-10-31/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-10-31/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Night Train to a Blissful Morning",
+    "audio": "media/c1/2026-10-31/shadowing.mp3",
+    "transcript": "media/c1/2026-10-31/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-10-31/shadowing-sentences/001.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/002.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/003.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/004.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/005.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/006.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/007.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/008.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/009.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/010.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/011.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/012.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/013.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/014.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/015.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/016.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/017.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/018.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/019.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/020.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/021.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/022.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/023.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/024.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/025.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/026.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/027.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/028.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/029.mp3",
+      "media/c1/2026-10-31/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'berth' mean?",
+      "options": [
+        "Perfect happiness or joy.",
+        "A sleeping place on a ship, train, or plane.",
+        "Having a strong dislike or opposition to something.",
+        "Electronic tools and systems that process data digitally."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'beep your horn' mean?",
+      "options": [
+        "Able to withstand or fight off diseases.",
+        "Extremely happy; full of joy.",
+        "To make a short, loud sound with a car horn.",
+        "To pacify someone by granting their demands."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'envisage' mean?",
+      "options": [
+        "Able to withstand or fight off diseases.",
+        "Perfect happiness or joy.",
+        "A sleeping place on a ship, train, or plane.",
+        "To imagine something as a future possibility."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'blissful' mean?",
+      "options": [
+        "Having a strong dislike or opposition to something.",
+        "To make a short, loud sound with a car horn.",
+        "A sleeping place on a ship, train, or plane.",
+        "Extremely happy; full of joy."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'averse' mean?",
+      "options": [
+        "Having a strong dislike or opposition to something.",
+        "To pacify someone by granting their demands.",
+        "Perfect happiness or joy.",
+        "Able to withstand or fight off diseases."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'appease' mean?",
+      "options": [
+        "Having a strong dislike or opposition to something.",
+        "Able to withstand or fight off diseases.",
+        "Extremely happy; full of joy.",
+        "To pacify someone by granting their demands."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'digital technology' mean?",
+      "options": [
+        "Causing a feeling of great wonder and respect.",
+        "To make a short, loud sound with a car horn.",
+        "Electronic tools and systems that process data digitally.",
+        "Having a strong dislike or opposition to something."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'disease-resistant' mean?",
+      "options": [
+        "To imagine something as a future possibility.",
+        "Able to withstand or fight off diseases.",
+        "A sleeping place on a ship, train, or plane.",
+        "Electronic tools and systems that process data digitally."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bliss' mean?",
+      "options": [
+        "Having a strong dislike or opposition to something.",
+        "Perfect happiness or joy.",
+        "Causing a feeling of great wonder and respect.",
+        "Electronic tools and systems that process data digitally."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'awe-inspiring' mean?",
+      "options": [
+        "Causing a feeling of great wonder and respect.",
+        "To imagine something as a future possibility.",
+        "Extremely happy; full of joy.",
+        "To pacify someone by granting their demands."
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Inverted Conditionals (Had I known, Should you need...)",
+    "explanation": "In formal English, we can drop **if** and invert the subject and the auxiliary: If I had known becomes **Had I known**.\n\nThis works with only three words: **should**, **were** and **had**. Never use will, would, did or was in this structure.\n\n**Should you need** help is a possible future, polite and formal. **Were I** you is an unreal present, and **Were the government to raise** taxes is an unlikely future.\n\n**Had I known** is an unreal past. Use **had** plus a past participle, as in **Had we left** earlier.\n\nFor negatives, put **not** after the subject and never use a contraction: **Had I not seen** it, not Hadn't I seen it.\n\nLearn two fixed phrases: **Were it not for** your help and **Had it not been for** your help.\n\nA common mistake is keeping **if** when you invert. Say **Had I known**, not If had I known.",
+    "examples": [
+      "***Should you have** any questions, don't hesitate to ask.* (should)",
+      "***Were I** in your position, I would accept the offer.* (were)",
+      "***Had we left** earlier, we wouldn't have missed the train.* (had)",
+      "***Had I not seen** it, I wouldn't have believed it.* (negative)",
+      "***Were it not for** the rain, we could have a picnic.* (were it not for)",
+      "***Had it not been for** your help, we would have failed.* (had it not been for)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with inversion: If Sara had booked a berth earlier, she would have slept better.",
+        "a": "Had Sara booked a berth earlier, she would have slept better."
+      },
+      {
+        "q": "Rewrite with inversion: If you need a blissful break, call me.",
+        "a": "Should you need a blissful break, call me."
+      },
+      {
+        "q": "Rewrite with inversion: If I had known about the awe-inspiring view, I would have brought my camera.",
+        "a": "Had I known about the awe-inspiring view, I would have brought my camera."
+      },
+      {
+        "q": "Rewrite with inversion: If it had not been for digital technology, we would not have planned the trip so well.",
+        "a": "Had it not been for digital technology, we would not have planned the trip so well."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "___ I known about the traffic, I would have left earlier.",
+        "options": [
+          "Had",
+          "If",
+          "Did",
+          "Have"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ you need any help, please call me.",
+        "options": [
+          "Do",
+          "Would",
+          "Will",
+          "Should"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ I in your position, I would accept the offer.",
+        "options": [
+          "Was",
+          "Were",
+          "If",
+          "Am"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Had it not ___ for your help, we would have failed.",
+        "options": [
+          "was",
+          "be",
+          "been",
+          "being"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Were it not ___ the rain, we could have a picnic.",
+        "options": [
+          "of",
+          "for",
+          "to",
+          "by"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Should you ___ to cancel, please let us know 24 hours in advance.",
+        "options": [
+          "wished",
+          "wishing",
+          "wish",
+          "to wish"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ we left earlier, we wouldn't have missed the train.",
+        "options": [
+          "Have",
+          "Did",
+          "Should",
+          "Had"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "Had I not seen it, I wouldn't have believed it.",
+          "Hadn't I seen it, I wouldn't have believed it.",
+          "Had not I seen it, I wouldn't have believed it.",
+          "Had I not saw it, I wouldn't have believed it."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Were the government ___ taxes, people would protest.",
+        "options": [
+          "raise",
+          "raising",
+          "raised",
+          "to raise"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ you have any questions, don't hesitate to ask.",
+        "options": [
+          "Had",
+          "Should",
+          "Were",
+          "Would"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

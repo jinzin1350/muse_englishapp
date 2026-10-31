@@ -1,0 +1,387 @@
+{
+  "date": "2026-10-31",
+  "theme": "review day",
+  "level": "a2",
+  "cefr": "A2",
+  "review": true,
+  "review_of": [
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30"
+  ],
+  "review_window_words": 15,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "ask sb the way",
+      "pos": "phrase",
+      "meaning": "To ask someone for directions.",
+      "example": "We asked a man the way to the park.",
+      "pronunciation": "ASK SUM-buh-dee thuh WAY",
+      "persian": "از کسی آدرس پرسیدن",
+      "photo": "media/a2/2026-10-30/photos/ask sb the way.jpg",
+      "word_audio": "media/a2/2026-10-30/word-audio/ask sb the way.mp3"
+    },
+    {
+      "word": "broccoli",
+      "pos": "noun",
+      "meaning": "green vegetable with a tree-like head",
+      "example": "I like to eat steamed broccoli.",
+      "pronunciation": "BROK-uh-lee",
+      "persian": "کلم بروکلی",
+      "photo": "media/a2/2026-10-28/photos/broccoli.jpg",
+      "word_audio": "media/a2/2026-10-28/word-audio/broccoli.mp3"
+    },
+    {
+      "word": "bunch",
+      "pos": "noun",
+      "meaning": "a group of things held together",
+      "example": "I bought a bunch of bananas.",
+      "pronunciation": "BUNCH",
+      "persian": "دسته، خوشه",
+      "photo": "media/a2/2026-10-28/photos/bunch.jpg",
+      "word_audio": "media/a2/2026-10-28/word-audio/bunch.mp3"
+    },
+    {
+      "word": "attraction",
+      "pos": "noun",
+      "meaning": "A place or thing that people want to visit.",
+      "example": "The Eiffel Tower is a famous tourist attraction.",
+      "pronunciation": "uh-TRAK-shun",
+      "persian": "جاذبه، دیدنی",
+      "photo": "media/a2/2026-10-30/photos/attraction.jpg",
+      "word_audio": "media/a2/2026-10-30/word-audio/attraction.mp3"
+    },
+    {
+      "word": "announcement",
+      "pos": "noun",
+      "meaning": "A public statement giving information.",
+      "example": "The train station made an announcement.",
+      "pronunciation": "uh-NOWNS-munt",
+      "persian": "اطلاعیه، اعلام",
+      "photo": "media/a2/2026-10-30/photos/announcement.jpg",
+      "word_audio": "media/a2/2026-10-30/word-audio/announcement.mp3"
+    },
+    {
+      "word": "ankle",
+      "pos": "noun",
+      "meaning": "The joint connecting your foot and leg.",
+      "example": "I hurt my ankle playing football.",
+      "pronunciation": "ANG-kul",
+      "persian": "مچ پا",
+      "photo": "media/a2/2026-10-29/photos/ankle.jpg",
+      "word_audio": "media/a2/2026-10-29/word-audio/ankle.mp3"
+    },
+    {
+      "word": "bitter",
+      "pos": "adjective",
+      "meaning": "Having a strong, sharp taste, not sweet.",
+      "example": "This coffee is very bitter.",
+      "pronunciation": "BIT-er",
+      "persian": "تلخ",
+      "photo": "media/a2/2026-10-28/photos/bitter.jpg",
+      "word_audio": "media/a2/2026-10-28/word-audio/bitter.mp3"
+    },
+    {
+      "word": "approach",
+      "pos": "verb",
+      "meaning": "To come closer to something or someone.",
+      "example": "The train is starting to approach the station.",
+      "pronunciation": "uh-PROHCH",
+      "persian": "نزدیک شدن",
+      "photo": "media/a2/2026-10-30/photos/approach.jpg",
+      "word_audio": "media/a2/2026-10-30/word-audio/approach.mp3"
+    },
+    {
+      "word": "bandage",
+      "pos": "noun",
+      "meaning": "A strip of cloth to cover an injury.",
+      "example": "She put a bandage on her cut finger.",
+      "pronunciation": "BAN-dij",
+      "persian": "باند، نوار زخم‌بندی",
+      "photo": "media/a2/2026-10-29/photos/bandage.jpg",
+      "word_audio": "media/a2/2026-10-29/word-audio/bandage.mp3"
+    },
+    {
+      "word": "ache n, v",
+      "pos": "noun, verb",
+      "meaning": "a continuous, dull pain",
+      "example": "I have a headache. My head aches.",
+      "pronunciation": "AYK",
+      "persian": "درد (اسم و فعل)",
+      "photo": "media/a2/2026-10-29/photos/ache n, v.jpg",
+      "word_audio": "media/a2/2026-10-29/word-audio/ache n, v.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-10-31/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: A Review Trip",
+    "audio": "media/a2/2026-10-31/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-10-31/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Market Trip",
+    "audio": "media/a2/2026-10-31/shadowing.mp3",
+    "transcript": "media/a2/2026-10-31/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-10-31/shadowing-sentences/001.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/002.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/003.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/004.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/005.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/006.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/007.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/008.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/009.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/010.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/011.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/012.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/013.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/014.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/015.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/016.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/017.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/018.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/019.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/020.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/021.mp3",
+      "media/a2/2026-10-31/shadowing-sentences/022.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'ask sb the way' mean?",
+      "options": [
+        "a continuous, dull pain",
+        "To ask someone for directions.",
+        "A strip of cloth to cover an injury.",
+        "The joint connecting your foot and leg."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'broccoli' mean?",
+      "options": [
+        "A place or thing that people want to visit.",
+        "a group of things held together",
+        "A strip of cloth to cover an injury.",
+        "green vegetable with a tree-like head"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'bunch' mean?",
+      "options": [
+        "a group of things held together",
+        "To come closer to something or someone.",
+        "green vegetable with a tree-like head",
+        "A strip of cloth to cover an injury."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'attraction' mean?",
+      "options": [
+        "A place or thing that people want to visit.",
+        "green vegetable with a tree-like head",
+        "a group of things held together",
+        "To ask someone for directions."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'announcement' mean?",
+      "options": [
+        "a continuous, dull pain",
+        "A public statement giving information.",
+        "The joint connecting your foot and leg.",
+        "A place or thing that people want to visit."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'ankle' mean?",
+      "options": [
+        "Having a strong, sharp taste, not sweet.",
+        "The joint connecting your foot and leg.",
+        "A strip of cloth to cover an injury.",
+        "a continuous, dull pain"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bitter' mean?",
+      "options": [
+        "To come closer to something or someone.",
+        "A place or thing that people want to visit.",
+        "Having a strong, sharp taste, not sweet.",
+        "The joint connecting your foot and leg."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'approach' mean?",
+      "options": [
+        "To come closer to something or someone.",
+        "To ask someone for directions.",
+        "a group of things held together",
+        "A strip of cloth to cover an injury."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bandage' mean?",
+      "options": [
+        "The joint connecting your foot and leg.",
+        "Having a strong, sharp taste, not sweet.",
+        "A place or thing that people want to visit.",
+        "A strip of cloth to cover an injury."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'ache n, v' mean?",
+      "options": [
+        "a continuous, dull pain",
+        "To come closer to something or someone.",
+        "A strip of cloth to cover an injury.",
+        "To ask someone for directions."
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Articles: A, An and The",
+    "explanation": "Use **a** or **an** for one thing when it is not special, or when you mention it for the first time.\n\nUse **an** before a vowel **sound**, not just a vowel letter. Say **an** apple and **an** hour.\n\nUse **a** before a consonant **sound**. Say **a** car, **a** bunch of bananas, and **a** bandage.\n\nUse **the** when we know which thing we mean, or when we talk about it again.\n\nUse **the** for the only one. Say **the** sun and **the** moon.\n\nUse **no article** for things in general, for most places, and for meals. Say I like broccoli, not I like the broccoli, when you mean broccoli in general.",
+    "examples": [
+      "*I have **a** brother and **a** sister.* (first mention)",
+      "*She's **an** English teacher.* (a job; vowel sound)",
+      "*Can you open **the** window, please?* (we know which window)",
+      "***The** sun is very hot today.* (there is only one)",
+      "*We bought **a** car. **The** car is red.* (first mention, then second mention)",
+      "*It takes **an** hour to get there.* (silent h)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with an: Sara bought apple at the market.",
+        "a": "Sara bought an apple at the market."
+      },
+      {
+        "q": "Rewrite with the: We visited attraction in the city.",
+        "a": "We visited the attraction in the city."
+      },
+      {
+        "q": "Rewrite with a: She put bandage on her ankle.",
+        "a": "She put a bandage on her ankle."
+      },
+      {
+        "q": "Rewrite with a: Sara bought bunch of broccoli at the market.",
+        "a": "Sara bought a bunch of broccoli at the market."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "My uncle is a engineer.",
+          "My uncle is engineer.",
+          "My uncle is an engineer.",
+          "My uncle is an engineers."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "It takes ___ hour to drive to the airport.",
+        "options": [
+          "a",
+          "the",
+          "(no article)",
+          "an"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She studies at ___ in Spain.",
+        "options": [
+          "a university",
+          "an university",
+          "a universities",
+          "an universities"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Look at ___ moon! It's so bright tonight.",
+        "options": [
+          "a",
+          "the",
+          "an",
+          "(no article)"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I bought a shirt and a jacket. ___ jacket was expensive.",
+        "options": [
+          "A",
+          "An",
+          "(no article)",
+          "The"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I'm tired. I'm going to ___ bed.",
+        "options": [
+          "(no article)",
+          "a",
+          "the",
+          "an"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He goes to ___ work by bus.",
+        "options": [
+          "the",
+          "a",
+          "(no article)",
+          "an"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She speaks ___ English and French.",
+        "options": [
+          "the",
+          "(no article)",
+          "a",
+          "an"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We visited ___ USA last summer.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "(no article)"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Can you close ___ door, please? It's cold in here.",
+        "options": [
+          "a",
+          "an",
+          "(no article)",
+          "the"
+        ],
+        "answer": 3
+      }
+    ],
+    "audio": "media/a2/2026-10-31/grammar-en.mp3"
+  }
+}

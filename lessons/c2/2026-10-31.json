@@ -1,0 +1,394 @@
+{
+  "date": "2026-10-31",
+  "theme": "review day",
+  "level": "c2",
+  "cefr": "C2",
+  "review": true,
+  "review_of": [
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "contactless",
+      "pos": "adjective",
+      "meaning": "Payment method not requiring physical contact with a reader.",
+      "example": "I paid for my coffee using a contactless card.",
+      "pronunciation": "KON-takt-less",
+      "persian": "بدون تماس",
+      "photo": "media/c2/2026-10-30/photos/contactless.jpg",
+      "word_audio": "media/c2/2026-10-30/word-audio/contactless.mp3"
+    },
+    {
+      "word": "articulate (adj.)",
+      "pos": "adjective",
+      "meaning": "Expressing ideas clearly and fluently.",
+      "example": "She is a highly articulate speaker, always clear and concise.",
+      "pronunciation": "ar-TIK-yuh-lit",
+      "persian": "فصیح، شیوا",
+      "photo": "media/c2/2026-10-29/photos/articulate (adj.).jpg",
+      "word_audio": "media/c2/2026-10-29/word-audio/articulate (adj.).mp3"
+    },
+    {
+      "word": "academic journal",
+      "pos": "noun phrase",
+      "meaning": "A periodical containing scholarly articles on a specific subject.",
+      "example": "She published her research in a prestigious academic journal.",
+      "pronunciation": "ak-uh-DEM-ik JUR-nul",
+      "persian": "مجله علمی، نشریه دانشگاهی",
+      "photo": "media/c2/2026-10-29/photos/academic journal.jpg",
+      "word_audio": "media/c2/2026-10-29/word-audio/academic journal.mp3"
+    },
+    {
+      "word": "cover (v.)",
+      "pos": "verb",
+      "meaning": "To provide enough money to pay for something.",
+      "example": "Does your insurance cover dental treatment?",
+      "pronunciation": "KUV-er",
+      "persian": "پوشش دادن، تأمین کردن",
+      "photo": "media/c2/2026-10-30/photos/cover (v.).jpg",
+      "word_audio": "media/c2/2026-10-30/word-audio/cover (v.).mp3"
+    },
+    {
+      "word": "adjoining",
+      "pos": "adjective",
+      "meaning": "Next to or in contact with.",
+      "example": "The library is in the adjoining building.",
+      "pronunciation": "uh-JOY-ning",
+      "persian": "مجاور، همسایه",
+      "photo": "media/c2/2026-10-29/photos/adjoining.jpg",
+      "word_audio": "media/c2/2026-10-29/word-audio/adjoining.mp3"
+    },
+    {
+      "word": "aversion",
+      "pos": "noun",
+      "meaning": "Strong dislike or feeling of repugnance towards something.",
+      "example": "She has a strong aversion to public speaking.",
+      "pronunciation": "uh-VUR-zhun",
+      "persian": "بیزاری، تنفر",
+      "photo": "media/c2/2026-10-28/photos/aversion.jpg",
+      "word_audio": "media/c2/2026-10-28/word-audio/aversion.mp3"
+    },
+    {
+      "word": "blissfully",
+      "pos": "adverb",
+      "meaning": "In a state of perfect happiness.",
+      "example": "She smiled blissfully, enjoying the quiet morning.",
+      "pronunciation": "BLIS-fuh-lee",
+      "persian": "با سعادت، با خوشحالی کامل",
+      "photo": "media/c2/2026-10-28/photos/blissfully.jpg",
+      "word_audio": "media/c2/2026-10-28/word-audio/blissfully.mp3"
+    },
+    {
+      "word": "bite your nails",
+      "pos": "idiom",
+      "meaning": "To chew on one's fingernails, usually from nervousness.",
+      "example": "She tends to bite her nails when she's stressed.",
+      "pronunciation": "BITE yaw NAYLZ",
+      "persian": "ناخن جویدن",
+      "photo": "media/c2/2026-10-28/photos/bite-your-nails.jpg",
+      "word_audio": "media/c2/2026-10-28/word-audio/bite-your-nails.mp3"
+    },
+    {
+      "word": "charge to (a credit card)",
+      "pos": "phrasal verb",
+      "meaning": "To pay for something using a credit card.",
+      "example": "You can charge the purchase to your credit card.",
+      "pronunciation": "CHARJ too uh KREH-dit KARD",
+      "persian": "با کارت اعتباری پرداخت کردن",
+      "photo": "media/c2/2026-10-30/photos/charge to (a credit card).jpg",
+      "word_audio": "media/c2/2026-10-30/word-audio/charge to (a credit card).mp3"
+    },
+    {
+      "word": "bliss",
+      "pos": "noun",
+      "meaning": "Perfect happiness or joy.",
+      "example": "Lying on the beach was pure bliss.",
+      "pronunciation": "BLIS",
+      "persian": "سعادت، خوشبختی کامل",
+      "photo": "media/c2/2026-10-28/photos/bliss.jpg",
+      "word_audio": "media/c2/2026-10-28/word-audio/bliss.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-10-31/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Feelings, Study, and Money Review",
+    "audio": "media/c2/2026-10-31/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-10-31/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Review Week",
+    "audio": "media/c2/2026-10-31/shadowing.mp3",
+    "transcript": "media/c2/2026-10-31/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c2/2026-10-31/shadowing-sentences/001.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/002.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/003.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/004.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/005.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/006.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/007.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/008.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/009.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/010.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/011.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/012.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/013.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/014.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/015.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/016.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/017.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/018.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/019.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/020.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/021.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/022.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/023.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/024.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/025.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/026.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/027.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/028.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/029.mp3",
+      "media/c2/2026-10-31/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'contactless' mean?",
+      "options": [
+        "Payment method not requiring physical contact with a reader.",
+        "In a state of perfect happiness.",
+        "To pay for something using a credit card.",
+        "Perfect happiness or joy."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'articulate (adj.)' mean?",
+      "options": [
+        "A periodical containing scholarly articles on a specific subject.",
+        "To pay for something using a credit card.",
+        "Expressing ideas clearly and fluently.",
+        "Strong dislike or feeling of repugnance towards something."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'academic journal' mean?",
+      "options": [
+        "A periodical containing scholarly articles on a specific subject.",
+        "To chew on one's fingernails, usually from nervousness.",
+        "Payment method not requiring physical contact with a reader.",
+        "In a state of perfect happiness."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cover (v.)' mean?",
+      "options": [
+        "Expressing ideas clearly and fluently.",
+        "In a state of perfect happiness.",
+        "Next to or in contact with.",
+        "To provide enough money to pay for something."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'adjoining' mean?",
+      "options": [
+        "To provide enough money to pay for something.",
+        "Payment method not requiring physical contact with a reader.",
+        "Next to or in contact with.",
+        "To pay for something using a credit card."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'aversion' mean?",
+      "options": [
+        "Next to or in contact with.",
+        "To provide enough money to pay for something.",
+        "Strong dislike or feeling of repugnance towards something.",
+        "To chew on one's fingernails, usually from nervousness."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'blissfully' mean?",
+      "options": [
+        "In a state of perfect happiness.",
+        "To provide enough money to pay for something.",
+        "To chew on one's fingernails, usually from nervousness.",
+        "Expressing ideas clearly and fluently."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bite your nails' mean?",
+      "options": [
+        "In a state of perfect happiness.",
+        "To chew on one's fingernails, usually from nervousness.",
+        "Next to or in contact with.",
+        "A periodical containing scholarly articles on a specific subject."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'charge to (a credit card)' mean?",
+      "options": [
+        "Payment method not requiring physical contact with a reader.",
+        "To pay for something using a credit card.",
+        "Strong dislike or feeling of repugnance towards something.",
+        "Perfect happiness or joy."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bliss' mean?",
+      "options": [
+        "To pay for something using a credit card.",
+        "Strong dislike or feeling of repugnance towards something.",
+        "Expressing ideas clearly and fluently.",
+        "Perfect happiness or joy."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Advanced Cohesion and Discourse Markers",
+    "explanation": "**Cohesion** is what makes a text flow: the words that link sentences and show how ideas relate.\n\n**Discourse markers** like **moreover**, **consequently** and **admittedly** tell the reader what kind of idea comes next.\n\nAt C2, choose the **exact** marker for the relationship, and punctuate it correctly.\n\nMarkers group by function: **moreover** and **furthermore** add, **however** and **nevertheless** contrast, and **consequently** and **therefore** show result.\n\n**Admittedly** and **that said** concede a point, **namely** specifies exactly, and **in other words** rephrases an idea.\n\n**Subsequently** and **finally** order events, while **all in all** and **to sum up** summarise.\n\nAdverb markers link **two sentences** or clauses joined by a semicolon, never by a comma alone.\n\n**Whereas** and **while** are conjunctions, so they join two clauses in one sentence.\n\nReference words also create cohesion: **the former** means the first of two, and **the latter** means the second.",
+    "examples": [
+      "*The hotel was in a beautiful location. **Moreover**, the service was excellent.* (adding)",
+      "*Demand fell sharply. **Consequently**, the factory had to close.* (result)",
+      "***Admittedly**, the plan has weaknesses, but overall it's a good one.* (concession)",
+      "*Only one candidate, **namely** Dr Patel, met all the criteria.* (specifying)",
+      "*Electric cars are cleaner. **On the other hand**, they're often more expensive.* (contrast)",
+      "*Prices have risen. **Meanwhile**, wages have stayed the same.* (contrast in time)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite as one sentence using moreover: The academic journal article was clear. The adjoining library was quiet.",
+        "a": "The academic journal article was clear; moreover, the adjoining library was quiet."
+      },
+      {
+        "q": "Rewrite using consequently: She felt a strong aversion to public speaking. She avoided the talk.",
+        "a": "She felt a strong aversion to public speaking; consequently, she avoided the talk."
+      },
+      {
+        "q": "Fix the punctuation: The plan was good, however it failed.",
+        "a": "The plan was good. However, it failed. / The plan was good; however, it failed."
+      },
+      {
+        "q": "Rewrite using whereas: Sara loves contactless payment. Her brother prefers cash.",
+        "a": "Sara loves contactless payment, whereas her brother prefers cash."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "The hotel was in a beautiful location. ___, it had excellent service.",
+        "options": [
+          "However",
+          "Moreover",
+          "Consequently",
+          "Nevertheless"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Demand fell sharply. ___, the factory had to close.",
+        "options": [
+          "Moreover",
+          "Whereas",
+          "Nevertheless",
+          "Consequently"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "My brother loves city life, ___ I prefer the countryside.",
+        "options": [
+          "however",
+          "moreover",
+          "whereas",
+          "therefore"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___, the plan has some weaknesses, but overall it's a good one.",
+        "options": [
+          "Admittedly",
+          "Consequently",
+          "Furthermore",
+          "Conversely"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We offer two drinks: coffee and tea. ___ is free; the latter costs $2.",
+        "options": [
+          "The latter",
+          "These",
+          "The former",
+          "Such"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Many big cities, ___ London and Paris, have introduced congestion charges.",
+        "options": [
+          "such as",
+          "namely as",
+          "for instance as",
+          "so as"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The project was late and over budget. ___, it was a failure.",
+        "options": [
+          "Conversely",
+          "Whereas",
+          "Admittedly",
+          "In other words"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The experiment was repeated three times. ___, the results were published.",
+        "options": [
+          "Whereas",
+          "Subsequently",
+          "Conversely",
+          "Admittedly"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Electric cars are cleaner. ___, they are often more expensive.",
+        "options": [
+          "Therefore",
+          "Thus",
+          "Hence",
+          "On the other hand"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correctly punctuated sentence.",
+        "options": [
+          "The plan was good however it failed.",
+          "The plan was good; however, it failed.",
+          "The plan was good, however it failed.",
+          "The plan was good however, it failed."
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

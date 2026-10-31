@@ -1,0 +1,394 @@
+{
+ "date": "2026-10-31",
+ "theme": "review day",
+ "level": "b2",
+ "cefr": "B2",
+ "review": true,
+ "review_of": [
+  "2026-10-28",
+  "2026-10-29",
+  "2026-10-30"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "anger",
+   "pos": "noun",
+   "meaning": "A strong feeling of being annoyed or unhappy.",
+   "example": "He felt a lot of anger about the unfair decision.",
+   "pronunciation": "ANG-ger",
+   "persian": "خشم، عصبانیت",
+   "photo": "media/b2/2026-10-28/photos/anger.jpg",
+   "word_audio": "media/b2/2026-10-28/word-audio/anger.mp3"
+  },
+  {
+   "word": "cancel (a reservation)",
+   "pos": "verb",
+   "meaning": "To say you will not use a booking.",
+   "example": "I need to cancel my dinner reservation.",
+   "pronunciation": "KAN-sul uh rez-ur-VAY-shun",
+   "persian": "رزرو را لغو کردن",
+   "photo": "media/b2/2026-10-29/photos/cancel-a-reservation.jpg",
+   "word_audio": "media/b2/2026-10-29/word-audio/cancel-a-reservation.mp3"
+  },
+  {
+   "word": "arrangement",
+   "pos": "noun",
+   "meaning": "A plan or agreement made for something.",
+   "example": "We made an arrangement to meet on Friday.",
+   "pronunciation": "uh-RAYNJ-ment",
+   "persian": "ترتیب، تنظیم، توافق",
+   "photo": "media/b2/2026-10-30/photos/arrangement.jpg",
+   "word_audio": "media/b2/2026-10-30/word-audio/arrangement.mp3"
+  },
+  {
+   "word": "booking",
+   "pos": "noun",
+   "meaning": "An arrangement to use something at a future time.",
+   "example": "Do you have a booking under your name?",
+   "pronunciation": "BUK-ing",
+   "persian": "رزرو",
+   "photo": "media/b2/2026-10-29/photos/booking.jpg",
+   "word_audio": "media/b2/2026-10-29/word-audio/booking.mp3"
+  },
+  {
+   "word": "bunch",
+   "pos": "noun",
+   "meaning": "a group of things held together",
+   "example": "I bought a bunch of bananas.",
+   "pronunciation": "BUNCH",
+   "persian": "دسته، خوشه",
+   "photo": "media/b2/2026-10-29/photos/bunch.jpg",
+   "word_audio": "media/b2/2026-10-29/word-audio/bunch.mp3"
+  },
+  {
+   "word": "absolutely",
+   "pos": "adverb",
+   "meaning": "completely, totally, or definitely",
+   "example": "\"Are you sure?\" \"Absolutely!\"",
+   "pronunciation": "ab-suh-LOOT-lee",
+   "persian": "کاملاً، قطعاً",
+   "photo": "media/b2/2026-10-28/photos/absolutely.jpg",
+   "word_audio": "media/b2/2026-10-28/word-audio/absolutely.mp3"
+  },
+  {
+   "word": "ambitious",
+   "pos": "adjective",
+   "meaning": "Having a strong desire to succeed.",
+   "example": "She is an ambitious student who wants to go to university.",
+   "pronunciation": "am-BISH-us",
+   "persian": "جاه‌طلب، بلندپرواز",
+   "photo": "media/b2/2026-10-28/photos/ambitious.jpg",
+   "word_audio": "media/b2/2026-10-28/word-audio/ambitious.mp3"
+  },
+  {
+   "word": "aggressive",
+   "pos": "adjective",
+   "meaning": "behaving in an angry or violent way",
+   "example": "His aggressive behavior scared everyone.",
+   "pronunciation": "uh-GRES-iv",
+   "persian": "پرخاشگر، تهاجمی",
+   "photo": "media/b2/2026-10-28/photos/aggressive.jpg",
+   "word_audio": "media/b2/2026-10-28/word-audio/aggressive.mp3"
+  },
+  {
+   "word": "book (a table)",
+   "pos": "verb",
+   "meaning": "Arrange to use something at a future time.",
+   "example": "We should book a table for dinner tonight.",
+   "pronunciation": "BUK uh TAY-buhl",
+   "persian": "رزرو کردن (میز)",
+   "photo": "media/b2/2026-10-29/photos/book-a-table.jpg",
+   "word_audio": "media/b2/2026-10-29/word-audio/book-a-table.mp3"
+  },
+  {
+   "word": "able",
+   "pos": "adjective",
+   "meaning": "having the skill or power to do something",
+   "example": "I am able to speak three languages.",
+   "pronunciation": "AY-bul",
+   "persian": "توانا، قادر",
+   "photo": "media/b2/2026-10-28/photos/able.jpg",
+   "word_audio": "media/b2/2026-10-28/word-audio/able.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b2/2026-10-31/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day: Feelings, Food and Work",
+  "audio": "media/b2/2026-10-31/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b2/2026-10-31/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Saturday Dinner",
+  "audio": "media/b2/2026-10-31/shadowing.mp3",
+  "transcript": "media/b2/2026-10-31/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b2/2026-10-31/shadowing-sentences/001.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/002.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/003.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/004.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/005.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/006.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/007.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/008.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/009.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/010.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/011.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/012.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/013.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/014.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/015.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/016.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/017.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/018.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/019.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/020.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/021.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/022.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/023.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/024.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/025.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/026.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/027.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/028.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/029.mp3",
+   "media/b2/2026-10-31/shadowing-sentences/030.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'anger' mean?",
+   "options": [
+    "a group of things held together",
+    "A plan or agreement made for something.",
+    "having the skill or power to do something",
+    "A strong feeling of being annoyed or unhappy."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'cancel (a reservation)' mean?",
+   "options": [
+    "a group of things held together",
+    "A strong feeling of being annoyed or unhappy.",
+    "To say you will not use a booking.",
+    "having the skill or power to do something"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'arrangement' mean?",
+   "options": [
+    "behaving in an angry or violent way",
+    "A plan or agreement made for something.",
+    "a group of things held together",
+    "Arrange to use something at a future time."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'booking' mean?",
+   "options": [
+    "having the skill or power to do something",
+    "a group of things held together",
+    "To say you will not use a booking.",
+    "An arrangement to use something at a future time."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'bunch' mean?",
+   "options": [
+    "a group of things held together",
+    "A strong feeling of being annoyed or unhappy.",
+    "completely, totally, or definitely",
+    "To say you will not use a booking."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'absolutely' mean?",
+   "options": [
+    "A plan or agreement made for something.",
+    "completely, totally, or definitely",
+    "Having a strong desire to succeed.",
+    "An arrangement to use something at a future time."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'ambitious' mean?",
+   "options": [
+    "A plan or agreement made for something.",
+    "having the skill or power to do something",
+    "completely, totally, or definitely",
+    "Having a strong desire to succeed."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'aggressive' mean?",
+   "options": [
+    "behaving in an angry or violent way",
+    "To say you will not use a booking.",
+    "Having a strong desire to succeed.",
+    "A strong feeling of being annoyed or unhappy."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'book (a table)' mean?",
+   "options": [
+    "having the skill or power to do something",
+    "A plan or agreement made for something.",
+    "Arrange to use something at a future time.",
+    "behaving in an angry or violent way"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'able' mean?",
+   "options": [
+    "An arrangement to use something at a future time.",
+    "To say you will not use a booking.",
+    "Arrange to use something at a future time.",
+    "having the skill or power to do something"
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "The Passive: All Tenses and Passive Infinitive",
+  "explanation": "The passive is **be** + past participle. To make any tense passive, put **be** in that tense.\n\nFor example, we say **is being painted**, **has been finished**, and **will be announced**.\n\nWith modals, use modal + **be** + past participle, like **must be signed** and **can be done**.\n\nFor the past, use modal + **have been** + past participle, like **should have been sent**.\n\nThe passive infinitive is **to be** + past participle, and the passive -ing form is **being** + past participle.\n\nWith verbs like give and offer, either object can become the subject, so **I was given** a prize is common.\n\nUse the passive to focus on the action, not the person, and in formal writing. In informal English, **get** + past participle is common for bad things, like **got fired**.\n\nAvoid perfect continuous passives like **has been being built**. They are very rare.",
+  "examples": [
+   "*The kitchen **is being redecorated** this week.* (present continuous passive)",
+   "*Over 200 people **have been invited** to the wedding.* (present perfect passive)",
+   "*The match **will be shown** live on TV.* (will passive)",
+   "*Phones **must be switched off** during the exam.* (modal passive)",
+   "*I hate **being kept** waiting.* (passive -ing)",
+   "*She expects **to be promoted** next year.* (passive infinitive)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite in the passive: The restaurant confirmed Sara's booking.",
+    "a": "Sara's booking was confirmed by the restaurant."
+   },
+   {
+    "q": "Rewrite in the passive: The ambitious student will finish the project tomorrow.",
+    "a": "The project will be finished by the ambitious student tomorrow."
+   },
+   {
+    "q": "Rewrite using the passive infinitive: She expects the company to promote her next year.",
+    "a": "She expects to be promoted next year."
+   },
+   {
+    "q": "Rewrite using being + past participle: Sara hates it when people interrupt her.",
+    "a": "Sara hates being interrupted."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The road ___ at the moment, so take another route.",
+    "options": [
+     "is repairing",
+     "is being repaired",
+     "has repaired",
+     "is repaired being"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "The results ___ next Monday.",
+    "options": [
+     "will announce",
+     "will been announced",
+     "are announcing",
+     "will be announced"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "My laptop ___. I left it on the train.",
+    "options": [
+     "has stolen",
+     "is stealing",
+     "has been stolen",
+     "has been stole"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "When we got to the hotel, our room ___.",
+    "options": [
+     "was still being cleaned",
+     "was still cleaning",
+     "still cleaned",
+     "had still clean"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "This form must ___ in black ink.",
+    "options": [
+     "completed",
+     "be complete",
+     "be completed",
+     "been completed"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "All the tickets ___ before we arrived.",
+    "options": [
+     "had been sell",
+     "had been sold",
+     "have been sold",
+     "was sold"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "She was ___ a prize for her research.",
+    "options": [
+     "given",
+     "giving",
+     "gave",
+     "give"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I hate ___ what to do.",
+    "options": [
+     "to tell",
+     "telling",
+     "be told",
+     "being told"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "The letter should ___ yesterday.",
+    "options": [
+     "have sent",
+     "been sent",
+     "be sent",
+     "have been sent"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "The meeting ___ until next week.",
+    "options": [
+     "has postponed",
+     "has been postponed",
+     "has been postpone",
+     "is postponing"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

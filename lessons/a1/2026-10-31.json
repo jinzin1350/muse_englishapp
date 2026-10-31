@@ -1,0 +1,385 @@
+{
+ "date": "2026-10-31",
+ "theme": "review day",
+ "level": "a1",
+ "cefr": "A1",
+ "review": true,
+ "review_of": [
+  "2026-10-28",
+  "2026-10-29",
+  "2026-10-30"
+ ],
+ "review_window_words": 15,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "be born",
+   "pos": "verb phrase",
+   "meaning": "To come into life.",
+   "example": "I was born in July.",
+   "pronunciation": "bee BORN",
+   "persian": "متولد شدن",
+   "photo": "media/a1/2026-10-28/photos/be-born.jpg",
+   "word_audio": "media/a1/2026-10-28/word-audio/be-born.mp3"
+  },
+  {
+   "word": "birth",
+   "pos": "noun",
+   "meaning": "The time when a baby or animal comes out.",
+   "example": "My sister gave birth to a baby boy.",
+   "pronunciation": "BERTH",
+   "persian": "تولد",
+   "photo": "media/a1/2026-10-28/photos/birth.jpg",
+   "word_audio": "media/a1/2026-10-28/word-audio/birth.mp3"
+  },
+  {
+   "word": "aunt",
+   "pos": "noun",
+   "meaning": "Your mother's or father's sister.",
+   "example": "My aunt lives in another city.",
+   "pronunciation": "AHNT",
+   "persian": "عمه، خاله",
+   "photo": "media/a1/2026-10-28/photos/aunt.jpg",
+   "word_audio": "media/a1/2026-10-28/word-audio/aunt.mp3"
+  },
+  {
+   "example": "We bought a new electric cooker.",
+   "meaning": "A piece of kitchen equipment for cooking food.",
+   "persian": "اجاق گاز",
+   "photo": "media/a1/2026-10-30/photos/cooker.jpg",
+   "pos": "noun",
+   "pronunciation": "KOOK-er",
+   "word": "cooker",
+   "word_audio": "media/a1/2026-10-30/word-audio/cooker.mp3"
+  },
+  {
+   "example": "I need a cold drink.",
+   "meaning": "A liquid you can swallow. To swallow liquid.",
+   "persian": "نوشیدنی، نوشیدن",
+   "photo": "media/a1/2026-10-30/photos/drink.jpg",
+   "pos": "noun, verb",
+   "pronunciation": "DRINK",
+   "word": "drink",
+   "word_audio": "media/a1/2026-10-30/word-audio/drink.mp3"
+  },
+  {
+   "word": "ball game",
+   "pos": "noun",
+   "meaning": "A sport played with a ball.",
+   "example": "Baseball is a popular ball game in America.",
+   "pronunciation": "BALL GAYM",
+   "persian": "بازی توپی",
+   "photo": "media/a1/2026-10-29/photos/ball game.jpg",
+   "word_audio": "media/a1/2026-10-29/word-audio/ball game.mp3"
+  },
+  {
+   "word": "American football",
+   "pos": "noun",
+   "meaning": "A team sport played with an oval ball.",
+   "example": "Many people watch American football on Sundays.",
+   "pronunciation": "uh-MAIR-ih-kun FOOT-ball",
+   "persian": "فوتبال آمریکایی",
+   "photo": "media/a1/2026-10-29/photos/American football.jpg",
+   "word_audio": "media/a1/2026-10-29/word-audio/American football.mp3"
+  },
+  {
+   "word": "badminton",
+   "pos": "noun",
+   "meaning": "A sport played with rackets and a shuttlecock.",
+   "example": "We play badminton in the park on Sundays.",
+   "pronunciation": "BAD-min-tun",
+   "persian": "بدمینتون",
+   "photo": "media/a1/2026-10-29/photos/badminton.jpg",
+   "word_audio": "media/a1/2026-10-29/word-audio/badminton.mp3"
+  },
+  {
+   "example": "I drink coffee every morning.",
+   "meaning": "A dark brown drink made from roasted beans.",
+   "persian": "قهوه",
+   "photo": "media/a1/2026-10-30/photos/coffee.jpg",
+   "pos": "noun",
+   "pronunciation": "KOF-ee",
+   "word": "coffee",
+   "word_audio": "media/a1/2026-10-30/word-audio/coffee.mp3"
+  },
+  {
+   "word": "baseball",
+   "pos": "noun",
+   "meaning": "A game played with a bat and ball.",
+   "example": "My brother loves to play baseball.",
+   "pronunciation": "BAYS-ball",
+   "persian": "بیسبال",
+   "photo": "media/a1/2026-10-29/photos/baseball.jpg",
+   "word_audio": "media/a1/2026-10-29/word-audio/baseball.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-10-31/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day Fun",
+  "audio": "media/a1/2026-10-31/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a1/2026-10-31/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "My Aunt's Happy Day",
+  "audio": "media/a1/2026-10-31/shadowing.mp3",
+  "transcript": "media/a1/2026-10-31/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a1/2026-10-31/shadowing-sentences/001.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/002.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/003.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/004.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/005.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/006.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/007.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/008.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/009.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/010.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/011.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/012.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/013.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/014.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/015.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/016.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/017.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/018.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/019.mp3",
+   "media/a1/2026-10-31/shadowing-sentences/020.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'be born' mean?",
+   "options": [
+    "A sport played with rackets and a shuttlecock.",
+    "A piece of kitchen equipment for cooking food.",
+    "The time when a baby or animal comes out.",
+    "To come into life."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'birth' mean?",
+   "options": [
+    "To come into life.",
+    "A game played with a bat and ball.",
+    "A team sport played with an oval ball.",
+    "The time when a baby or animal comes out."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'aunt' mean?",
+   "options": [
+    "Your mother's or father's sister.",
+    "A sport played with a ball.",
+    "To come into life.",
+    "A dark brown drink made from roasted beans."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'cooker' mean?",
+   "options": [
+    "To come into life.",
+    "A piece of kitchen equipment for cooking food.",
+    "A sport played with a ball.",
+    "The time when a baby or animal comes out."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'drink' mean?",
+   "options": [
+    "A liquid you can swallow. To swallow liquid.",
+    "A sport played with a ball.",
+    "A dark brown drink made from roasted beans.",
+    "A sport played with rackets and a shuttlecock."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'ball game' mean?",
+   "options": [
+    "A sport played with a ball.",
+    "To come into life.",
+    "A game played with a bat and ball.",
+    "A piece of kitchen equipment for cooking food."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'American football' mean?",
+   "options": [
+    "A team sport played with an oval ball.",
+    "A game played with a bat and ball.",
+    "A sport played with a ball.",
+    "The time when a baby or animal comes out."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'badminton' mean?",
+   "options": [
+    "Your mother's or father's sister.",
+    "To come into life.",
+    "A liquid you can swallow. To swallow liquid.",
+    "A sport played with rackets and a shuttlecock."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'coffee' mean?",
+   "options": [
+    "A dark brown drink made from roasted beans.",
+    "A sport played with rackets and a shuttlecock.",
+    "To come into life.",
+    "A piece of kitchen equipment for cooking food."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'baseball' mean?",
+   "options": [
+    "A dark brown drink made from roasted beans.",
+    "A sport played with rackets and a shuttlecock.",
+    "A piece of kitchen equipment for cooking food.",
+    "A game played with a bat and ball."
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Like, Love, Hate + -ing",
+  "explanation": "We use **like**, **love**, **hate**, **enjoy**, **don't mind** and **can't stand** with a verb + **-ing** to talk about activities.\n\nI **love swimming**. She **hates getting up** early.\n\nWe can also use a noun after these words. I love **music**. I don't like **coffee**.\n\nTo make **-ing**, add **-ing** to most verbs. Drop a final **-e**: dance becomes **dancing**. Double the last letter of a short verb: swim becomes **swimming**.\n\nFor questions, use **do** or **does**. **Do** you like cooking? **Does** he like dancing?\n\nBe careful: after **enjoy**, **don't mind** and **can't stand**, use only **-ing**. We say I enjoy **swimming**, not I enjoy to swim.",
+  "examples": [
+   "*I **love travelling** with my friends.* (love + -ing)",
+   "*My sister **enjoys playing** the piano.* (enjoy + -ing)",
+   "*He **doesn't like cooking**.* (negative)",
+   "*I **don't mind walking**. It's not far.* (it's OK for me)",
+   "*We **hate waiting** for the bus in the rain.* (hate + -ing)",
+   "*She **can't stand** watching horror films.* (strong dislike)"
+  ],
+  "practice": [
+   {
+    "q": "My aunt plays badminton. Say it with love.",
+    "a": "My aunt loves playing badminton."
+   },
+   {
+    "q": "I drink coffee every morning. Say it with like.",
+    "a": "I like drinking coffee every morning."
+   },
+   {
+    "q": "My brother plays baseball. Say it with hate in the negative.",
+    "a": "My brother doesn't like playing baseball."
+   },
+   {
+    "q": "We watch American football on Sundays. Ask a question with do.",
+    "a": "Do you like watching American football on Sundays?"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I love ___ in the sea.",
+    "options": [
+     "swimming",
+     "swim",
+     "swims",
+     "swiming"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "She enjoys ___ books.",
+    "options": [
+     "read",
+     "reads",
+     "reading",
+     "to reading"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "My brother hates ___ up early.",
+    "options": [
+     "get",
+     "getting",
+     "gets",
+     "geting"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Do you like ___? – Yes, I go to salsa classes.",
+    "options": [
+     "danceing",
+     "dancs",
+     "danced",
+     "dancing"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "I don't mind ___ the dishes.",
+    "options": [
+     "do",
+     "does",
+     "did",
+     "doing"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "What ___ doing at the weekend?",
+    "options": [
+     "you like",
+     "do you like",
+     "are you like",
+     "does you like"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Tom ___ playing football. He plays every day.",
+    "options": [
+     "like",
+     "is like",
+     "likes",
+     "liking"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I can't stand ___ in traffic.",
+    "options": [
+     "sitting",
+     "sit",
+     "sits",
+     "to sitting"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "My parents ___ watching horror films. They think they're boring.",
+    "options": [
+     "likes",
+     "don't like",
+     "doesn't like",
+     "not like"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "She doesn't like ___. She always eats in restaurants.",
+    "options": [
+     "cook",
+     "cooks",
+     "cooked",
+     "cooking"
+    ],
+    "answer": 3
+   }
+  ],
+  "audio": "media/a1/2026-10-31/grammar-en.mp3"
+ }
+}
