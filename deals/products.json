@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "thermomaven-g1-meat-thermometer",
+      "name_fa": "دماسنج وای‌فای گوشت ترموموین",
+      "name_en": "ThermoMaven G1 WiFi Wireless Meat Thermometer",
+      "price_cad": 39.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "شنبه، ۳۱ اکتبر ۲۰۲۶",
+      "image": "img/thermomaven-g1-meat-thermometer.jpg",
+      "url": "https://www.amazon.ca/dp/B0DG5GKJKB?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "دماسنج بی‌سیم با دقت نیم درجه فارنهایت؛ دمای کباب را از هر جای خانه با گوشی چک کنید"
+    },
+    {
+      "id": "oral-b-pro-limited-toothbrush",
+      "name_fa": "مسواک برقی اورال‌بی پرو لیمیتد",
+      "name_en": "Oral-B Pro Limited Rechargeable Electric Toothbrush (White)",
+      "price_cad": 74.99,
+      "regular_cad": 119.99,
+      "discount_pct": 37,
+      "added_fa": "شنبه، ۳۱ اکتبر ۲۰۲۶",
+      "image": "img/oral-b-pro-limited-toothbrush.jpg",
+      "url": "https://www.amazon.ca/dp/B0B1QX5XLY?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "مسواک شارژی اورال‌بی با امتیاز ۴.۴ از هزاران خریدار؛ تمیزی در حد دندان‌پزشک، بدون امکانات اضافه"
+    },
+    {
       "id": "niimbot-d110-label-maker",
       "name_fa": "لیبل‌زن مینی نیمبات دی۱۱۰ با نوار",
       "name_en": "NIIMBOT D110 Mini Label Maker Machine with Tape, 12x40mm",
@@ -83,34 +111,6 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "تعمیرات کوچک خونه بدون سیم؛ گرم‌شدن سریع و خاموشی خودکار. با کد تخفیف KSJ33RH2."
-    },
-    {
-      "id": "blink-mini-2k-plus-3pack",
-      "name_fa": "دوربین امنیتی بلینک مینی ۲کی پلاس، ست ۳ عددی",
-      "name_en": "Blink Mini 2K+ Plug-in Security Camera, 3-Pack",
-      "price_cad": 61.99,
-      "regular_cad": 98.28,
-      "discount_pct": 37,
-      "added_fa": "شنبه، ۳۱ اکتبر ۲۰۲۶",
-      "image": "img/blink-mini-2k-plus-3pack.jpg",
-      "url": "https://www.amazon.ca/dp/B0FM4KTWNL?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "سه دوربین ۲کی برای ورودی، پذیرایی و اتاق بچه؛ نصب در چند دقیقه."
-    },
-    {
-      "id": "ninja-air-fryer-pro-af141c",
-      "name_fa": "سرخ‌کن بدون روغن نینجا پرو ۵ لیتر",
-      "name_en": "Ninja Air Fryer Pro AF141C, Canadian Version, 5-Qt",
-      "price_cad": 99.99,
-      "regular_cad": 179.99,
-      "discount_pct": 44,
-      "added_fa": "شنبه، ۳۱ اکتبر ۲۰۲۶",
-      "image": "img/ninja-air-fryer-pro-af141c.jpg",
-      "url": "https://www.amazon.ca/dp/B0DBN87GQJ?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "سرخ‌کن خانوادگی ۵ لیتری؛ غذای ترد با تا ۷۵٪ چربی کمتر."
     }
   ],
   "updated_fa": "شنبه ۹ آبان"
