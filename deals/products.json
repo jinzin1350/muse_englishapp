@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "shark-hv370c-rocket-pro-vacuum",
+      "name_fa": "جاروبرقی شارک راکت پرو",
+      "name_en": "Shark HV370C Rocket Pro Corded Stick Vacuum",
+      "price_cad": 139.99,
+      "regular_cad": 199.99,
+      "discount_pct": null,
+      "added_fa": "شنبه، ۳۱ اکتبر ۲۰۲۶",
+      "image": "img/shark-hv370c-rocket-pro-vacuum.jpg",
+      "url": "https://www.amazon.ca/dp/B0C2ZMTXSG?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "جاروبرقی با سیم با تمیزکاری عمیق فرش و تبدیل به جاروی دستی؛ قیمت سازنده ۱۹۹.۹۹ دلار"
+    },
+    {
+      "id": "greenworks-24v-leaf-blower",
+      "name_fa": "برگ‌روب شارژی گرین‌ورکس ۲۴ ولت",
+      "name_en": "Greenworks 24V Brushless Axial Leaf Blower",
+      "price_cad": 109.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "شنبه، ۳۱ اکتبر ۲۰۲۶",
+      "image": "img/greenworks-24v-leaf-blower.jpg",
+      "url": "https://www.amazon.ca/dp/B0GKFS932F?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "برگ‌روب شارژی با سرعت ۱۳۰ مایل در ساعت؛ پایین‌ترین قیمت ۹۰ روز گذشته؛ باتری جداگانه فروخته می‌شود"
+    },
+    {
+      "id": "bosch-glm100-23-laser-measure",
+      "name_fa": "متر لیزری بوش تا ۱۰۰ فوت",
+      "name_en": "Bosch GLM100-23 100 ft Laser Distance Measure",
+      "price_cad": 47.46,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "شنبه، ۳۱ اکتبر ۲۰۲۶",
+      "image": "img/bosch-glm100-23-laser-measure.jpg",
+      "url": "https://www.amazon.ca/dp/B0C76CPGC7?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "متر لیزری تا ۱۰۰ فوت با دقت یک‌شانزدهم اینچ؛ پایین‌ترین قیمت ۹۰ روز گذشته"
+    },
+    {
+      "id": "dewalt-12v-xtreme-screwdriver-kit",
+      "name_fa": "کیت پیچ‌گوشتی شارژی دیوالت ۱۲ ولت",
+      "name_en": "DEWALT 12V MAX Xtreme Brushless Screwdriver Kit",
+      "price_cad": 128.0,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "شنبه، ۳۱ اکتبر ۲۰۲۶",
+      "image": "img/dewalt-12v-xtreme-screwdriver-kit.jpg",
+      "url": "https://www.amazon.ca/dp/B07TXN17NS?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "پیچ‌گوشتی شارژی ۱۲ ولت با موتور بدون زغال و ۱۵ حالت کلاچ؛ پایین‌ترین قیمت ۹۰ روز گذشته"
+    },
+    {
       "id": "viofo-a119-mini-2-dash-cam",
       "name_fa": "دش‌کم خودرو ویوفو ای۱۱۹ مینی ۲",
       "name_en": "VIOFO A119 Mini 2 Dash Cam",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "هدفون روی گوشی با حذف نویز تطبیقی و شارژ کلی تا ۷۰ ساعت؛ پایین‌ترین قیمت ۹۰ روز گذشته"
-    },
-    {
-      "id": "ninja-4qt-air-fryer-af101c",
-      "name_fa": "سرخ‌کن بدون روغن نینجا ۴ کوارتی",
-      "name_en": "Ninja 4-Qt Air Fryer, 4-in-1, AF101C",
-      "price_cad": 99.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "جمعه، ۳۰ اکتبر ۲۰۲۶",
-      "image": "img/ninja-4qt-air-fryer-af101c.jpg",
-      "url": "https://www.amazon.ca/dp/B07JGF236Q?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "سرخ‌کن ۴ کاره با تا ۷۵ درصد چربی کمتر؛ پایین‌ترین قیمت ۹۰ روز گذشته"
-    },
-    {
-      "id": "samsung-85-mini-led-tv-m70h",
-      "name_fa": "تلویزیون ۸۵ اینچی سامسونگ مینی ال‌ای‌دی",
-      "name_en": "Samsung 85\" Mini LED Smart TV, M70H",
-      "price_cad": 1098.0,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "جمعه، ۳۰ اکتبر ۲۰۲۶",
-      "image": "img/samsung-85-mini-led-tv-m70h.jpg",
-      "url": "https://www.amazon.ca/dp/B0GSCDKCY7?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "تلویزیون ۸۵ اینچی با پنل مینی ال‌ای‌دی و ارتقای ۴کی؛ پایین‌ترین قیمت ۹۰ روز گذشته"
-    },
-    {
-      "id": "dimaka-29-cat-scratching-post",
-      "name_fa": "پایه خاراندن گربه دیماکا ۲۹ اینچی",
-      "name_en": "Dimaka 29\" Tall Cat Scratching Post with Sisal Rope and Toy Ball",
-      "price_cad": 29.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "پنجشنبه، ۲۹ اکتبر ۲۰۲۶",
-      "image": "img/dimaka-29-cat-scratching-post.jpg",
-      "url": "https://www.amazon.ca/dp/B07P93T2KN?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پایه محکم با طناب سیسال طبیعی و توپ بازی؛ مبلمان خانه را از چنگ گربه نجات می‌دهد"
-    },
-    {
-      "id": "levoit-core-300p-air-purifier",
-      "name_fa": "تصفیه‌کننده هوای لیویت مدل کور ۳۰۰",
-      "name_en": "LEVOIT Core 300-P Air Purifier",
-      "price_cad": 129.98,
-      "regular_cad": 169.99,
-      "discount_pct": 24,
-      "added_fa": "پنجشنبه، ۲۹ اکتبر ۲۰۲۶",
-      "image": "img/levoit-core-300p-air-purifier.jpg",
-      "url": "https://www.amazon.ca/dp/B0DW8YP1LY?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پرفروش‌ترین تصفیه‌کننده آمازون با امتیاز ۴٫۶ از بیش از ۳۶ هزار نظر؛ گرده، دود و بو را از هوای اتاق پاک می‌کند"
     }
   ],
-  "updated_fa": "جمعه ۸ آبان"
+  "updated_fa": "شنبه ۹ آبان"
 }
