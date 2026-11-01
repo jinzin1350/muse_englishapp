@@ -1,0 +1,278 @@
+{
+ "date": "2026-11-01",
+ "theme": "sports & fitness",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "against [compete]",
+   "pos": "preposition",
+   "meaning": "competing with someone",
+   "example": "Our team played against a strong opponent.",
+   "pronunciation": "uh-GENST",
+   "persian": "در مقابل، با",
+   "photo": "media/a2/2026-11-01/photos/against.jpg",
+   "word_audio": "media/a2/2026-11-01/word-audio/against.mp3"
+  },
+  {
+   "word": "athlete",
+   "pos": "noun",
+   "meaning": "A person who competes in sports.",
+   "example": "She is a great athlete and runs fast.",
+   "pronunciation": "ATH-leet",
+   "persian": "ورزشکار",
+   "photo": "media/a2/2026-11-01/photos/athlete.jpg",
+   "word_audio": "media/a2/2026-11-01/word-audio/athlete.mp3"
+  },
+  {
+   "word": "athletics",
+   "pos": "noun",
+   "meaning": "Sports like running, jumping, and throwing.",
+   "example": "She loves watching athletics on TV.",
+   "pronunciation": "ath-LET-iks",
+   "persian": "دو و میدانی",
+   "photo": "media/a2/2026-11-01/photos/athletics.jpg",
+   "word_audio": "media/a2/2026-11-01/word-audio/athletics.mp3"
+  },
+  {
+   "word": "beat",
+   "pos": "verb",
+   "meaning": "Win against someone in a game or fight.",
+   "example": "Our team can beat them easily.",
+   "pronunciation": "BEET",
+   "persian": "شکست دادن، بردن",
+   "photo": "media/a2/2026-11-01/photos/beat.jpg",
+   "word_audio": "media/a2/2026-11-01/word-audio/beat.mp3"
+  },
+  {
+   "word": "boxing",
+   "pos": "noun",
+   "meaning": "A sport where two people fight with gloves.",
+   "example": "Boxing is a popular sport in many countries.",
+   "pronunciation": "BOK-sing",
+   "persian": "بوکس",
+   "photo": "media/a2/2026-11-01/photos/boxing.jpg",
+   "word_audio": "media/a2/2026-11-01/word-audio/boxing.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-11-01/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Sports and Fitness",
+  "audio": "media/a2/2026-11-01/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-11-01/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara the Athlete",
+  "audio": "media/a2/2026-11-01/shadowing.mp3",
+  "transcript": "media/a2/2026-11-01/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-11-01/shadowing-sentences/001.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/002.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/003.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/004.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/005.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/006.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/007.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/008.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/009.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/010.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/011.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/012.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/013.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/014.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/015.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/016.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/017.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/018.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/019.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/020.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/021.mp3",
+   "media/a2/2026-11-01/shadowing-sentences/022.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'against [compete]' mean?",
+   "options": [
+    "Sports like running, jumping, and throwing.",
+    "A sport where two people fight with gloves.",
+    "Win against someone in a game or fight.",
+    "competing with someone"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'athlete' mean?",
+   "options": [
+    "Sports like running, jumping, and throwing.",
+    "A person who competes in sports.",
+    "competing with someone",
+    "A sport where two people fight with gloves."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'athletics' mean?",
+   "options": [
+    "Sports like running, jumping, and throwing.",
+    "competing with someone",
+    "Win against someone in a game or fight.",
+    "A person who competes in sports."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'beat' mean?",
+   "options": [
+    "A sport where two people fight with gloves.",
+    "A person who competes in sports.",
+    "Sports like running, jumping, and throwing.",
+    "Win against someone in a game or fight."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'boxing' mean?",
+   "options": [
+    "Sports like running, jumping, and throwing.",
+    "A sport where two people fight with gloves.",
+    "competing with someone",
+    "A person who competes in sports."
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "The or No Article?",
+  "explanation": "We use **no article** for things in general. **Athletics** is fun.\n\nWe use **the** for a specific thing that we both know. **The athlete** in my street runs fast.\n\nUse **no article** for sports and games. We watch **athletics**, not the athletics.\n\nUse **no article** for meals and for **by** + transport. We have **lunch** at one o'clock, and we go **by bus**.\n\nUse **the** for unique things. **The sun**, **the moon**, and **the world** take **the**.\n\nUse **the** with rivers and mountain ranges. We say **the Nile** and **the Himalayas**, but Lake Ontario and Mount Everest take no article.",
+  "examples": [
+   "*I don't like **cats**.* (cats in general)",
+   "***The cats** in my street are very noisy.* (specific cats)",
+   "*She plays **basketball** at school.* (sport)",
+   "*We have **lunch** at 1 o'clock.* (meal)",
+   "***The moon** is very bright tonight.* (unique)"
+  ],
+  "practice": [
+   {
+    "q": "Say it in general, with no article: I love the boxing.",
+    "a": "I love boxing."
+   },
+   {
+    "q": "Say it about a specific athlete: Athlete in my street runs fast.",
+    "a": "The athlete in my street runs fast."
+   },
+   {
+    "q": "Fix this sentence: She watches the athletics on TV.",
+    "a": "She watches athletics on TV."
+   },
+   {
+    "q": "Fix this sentence: We have the lunch at one o'clock after the game.",
+    "a": "We have lunch at one o'clock after the game."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I love ___. I think all dogs are wonderful.",
+    "options": [
+     "the dogs",
+     "a dogs",
+     "dogs",
+     "a dog"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "___ is the closest star to Earth.",
+    "options": [
+     "Sun",
+     "A sun",
+     "Sunny",
+     "The sun"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "We have ___ at 7 o'clock every evening.",
+    "options": [
+     "the dinner",
+     "dinner",
+     "a dinners",
+     "the dinners"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "She speaks ___ and French.",
+    "options": [
+     "Spanish",
+     "the Spanish",
+     "a Spanish",
+     "Spanishes"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I usually go to work ___.",
+    "options": [
+     "by bus",
+     "by the bus",
+     "by a bus",
+     "on bus"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "___ is the longest river in Africa.",
+    "options": [
+     "Nile",
+     "The Nile",
+     "A Nile",
+     "Nile River"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Have you ever been to ___?",
+    "options": [
+     "United States",
+     "a United States",
+     "the United State",
+     "the United States"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "My brother plays ___ every Saturday.",
+    "options": [
+     "the football",
+     "a football",
+     "football",
+     "footballs"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Can you pass me ___, please? It's next to you.",
+    "options": [
+     "salt",
+     "the salt",
+     "a salt",
+     "salts"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "They live in ___.",
+    "options": [
+     "Canada",
+     "the Canada",
+     "a Canada",
+     "Canadas"
+    ],
+    "answer": 0
+   }
+  ],
+  "audio": "media/a2/2026-11-01/grammar-en.mp3"
+ }
+}

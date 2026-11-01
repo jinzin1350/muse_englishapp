@@ -1,0 +1,282 @@
+{
+ "date": "2026-11-01",
+ "theme": "cities & daily life",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "bookshelf (bookshelves)",
+   "pos": "noun",
+   "meaning": "A shelf for holding books.",
+   "example": "My bookshelf is full of novels.",
+   "pronunciation": "BOOK-shelf",
+   "persian": "قفسه کتاب",
+   "photo": "media/a1/2026-11-01/photos/bookshelf.jpg",
+   "word_audio": "media/a1/2026-11-01/word-audio/bookshelf.mp3"
+  },
+  {
+   "word": "bus station",
+   "pos": "noun",
+   "meaning": "A place where buses start and end journeys.",
+   "example": "Let's meet at the bus station.",
+   "pronunciation": "BUS STAY-shun",
+   "persian": "ایستگاه اتوبوس",
+   "photo": "media/a1/2026-11-01/photos/bus-station.jpg",
+   "word_audio": "media/a1/2026-11-01/word-audio/bus-station.mp3"
+  },
+  {
+   "word": "by bus",
+   "pos": "phrase",
+   "meaning": "Using a bus as transport.",
+   "example": "I go to work by bus.",
+   "pronunciation": "by BUS",
+   "persian": "با اتوبوس",
+   "photo": "media/a1/2026-11-01/photos/by-bus.jpg",
+   "word_audio": "media/a1/2026-11-01/word-audio/by-bus.mp3"
+  },
+  {
+   "word": "by car",
+   "pos": "phrase",
+   "meaning": "Using a car as transport.",
+   "example": "We travel by car on weekends.",
+   "pronunciation": "by KAR",
+   "persian": "با ماشین",
+   "photo": "media/a1/2026-11-01/photos/by-car.jpg",
+   "word_audio": "media/a1/2026-11-01/word-audio/by-car.mp3"
+  },
+  {
+   "word": "by train",
+   "pos": "phrase",
+   "meaning": "Using a train as transport.",
+   "example": "He travels to London by train.",
+   "pronunciation": "by TRAYN",
+   "persian": "با قطار",
+   "photo": "media/a1/2026-11-01/photos/by-train.jpg",
+   "word_audio": "media/a1/2026-11-01/word-audio/by-train.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-11-01/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: A Day in the City",
+  "audio": "media/a1/2026-11-01/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a1/2026-11-01/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Day in the City",
+  "audio": "media/a1/2026-11-01/shadowing.mp3",
+  "transcript": "media/a1/2026-11-01/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a1/2026-11-01/shadowing-sentences/001.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/002.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/003.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/004.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/005.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/006.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/007.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/008.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/009.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/010.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/011.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/012.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/013.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/014.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/015.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/016.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/017.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/018.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/019.mp3",
+   "media/a1/2026-11-01/shadowing-sentences/020.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'bookshelf (bookshelves)' mean?",
+   "options": [
+    "A shelf for holding books.",
+    "Using a train as transport.",
+    "A place where buses start and end journeys.",
+    "Using a car as transport.",
+    "Using a bus as transport."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'bus station' mean?",
+   "options": [
+    "Using a bus as transport.",
+    "A place where buses start and end journeys.",
+    "A shelf for holding books.",
+    "Using a car as transport.",
+    "Using a train as transport."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'by bus' mean?",
+   "options": [
+    "A shelf for holding books.",
+    "Using a bus as transport.",
+    "Using a car as transport.",
+    "Using a train as transport.",
+    "A place where buses start and end journeys."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'by car' mean?",
+   "options": [
+    "Using a bus as transport.",
+    "Using a train as transport.",
+    "A shelf for holding books.",
+    "Using a car as transport.",
+    "A place where buses start and end journeys."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'by train' mean?",
+   "options": [
+    "Using a car as transport.",
+    "Using a train as transport.",
+    "A place where buses start and end journeys.",
+    "A shelf for holding books.",
+    "Using a bus as transport."
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "I'd Like and Would You Like...?",
+  "explanation": "We use **I'd like** to ask for things in a polite way. **I'd like** means I want, but it is softer and kinder.\n\nUse **I'd like** with a noun. **I'd like** a coffee, please. At the **bus station**, you can say: **I'd like** a ticket, please.\n\nUse **I'd like to** with a verb. **I'd like to** go home. Remember the word **to** before the verb.\n\nWe use **Would you like** to offer something or to invite someone. **Would you like** some tea? **Would you like to** come with us?\n\nAnswer an offer with **Yes, please** or **No, thank you**. Answer an invitation with **Yes, I'd love to** or **I'm sorry, I can't**.\n\n**Do you like** is different. It asks about things in general, not about now. **Would you like** a coffee asks about now.",
+  "examples": [
+   "*I**'d like** a glass of water, please.* (request)",
+   "*We**'d like to** see the menu, please.* (request + to + verb)",
+   "***Would you like** some cake? – Yes, please.* (offer)",
+   "***Would you like to** have dinner with us? – I'd love to.* (invitation)",
+   "*What **would you like** to drink?* (question)",
+   "*I**'d like** a room for two nights, please.* (at a hotel)"
+  ],
+  "practice": [
+   {
+    "q": "Say this in a polite way: I want a ticket at the bus station.",
+    "a": "I'd like a ticket at the bus station, please."
+   },
+   {
+    "q": "Say this in a polite way: I want to travel by train.",
+    "a": "I'd like to travel by train."
+   },
+   {
+    "q": "Offer your friend a book from your bookshelf: Do you like a book?",
+    "a": "Would you like a book?"
+   },
+   {
+    "q": "Invite your friend to travel by car with you: Do you travel by car with us?",
+    "a": "Would you like to travel by car with us?"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I'd ___ a cheese sandwich, please.",
+    "options": [
+     "likes",
+     "like",
+     "liking",
+     "to like"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Would you like ___ to the cinema tonight?",
+    "options": [
+     "to come",
+     "come",
+     "coming",
+     "comes"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "___ like some tea? – Yes, please.",
+    "options": [
+     "Do you",
+     "You would",
+     "Are you",
+     "Would you"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Would you like a biscuit? – ___",
+    "options": [
+     "Yes, I like.",
+     "Yes, I would like.",
+     "Yes, please.",
+     "Yes, I do."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I'd like ___ a taxi, please.",
+    "options": [
+     "to book",
+     "book",
+     "booking",
+     "books"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Would you like to come to my party? – Yes, I'd ___!",
+    "options": [
+     "love",
+     "loved",
+     "loving",
+     "love to"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "___ coffee? – Yes, I drink it every morning.",
+    "options": [
+     "Would you like",
+     "Do you like",
+     "Like you",
+     "Would like you"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "___ a glass of water? – No, thank you. I'm fine.",
+    "options": [
+     "Do you like",
+     "Like you",
+     "Would you like",
+     "You like"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "What ___ for dinner tonight?",
+    "options": [
+     "you like",
+     "you would like",
+     "would you like",
+     "would like you"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "She'd like ___ Japanese.",
+    "options": [
+     "learning",
+     "to learn",
+     "learn",
+     "learns"
+    ],
+    "answer": 1
+   }
+  ],
+  "audio": "media/a1/2026-11-01/grammar-en.mp3"
+ }
+}

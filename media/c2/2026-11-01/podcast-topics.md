@@ -1,0 +1,5 @@
+- Food labels and additives: what an additive is and why shoppers question long ingredient lists
+- Convenience food versus home cooking: time pressure and healthier balance
+- Food allergy: living with an allergy, eating out, and explaining it to others
+- Animal welfare and battery farming: ethical food choices and price dilemmas
+- The idiom "all the ingredients of": having everything necessary for success
