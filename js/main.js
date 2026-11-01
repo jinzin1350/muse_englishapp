@@ -7649,8 +7649,12 @@ function answerGrammarQuizV2(val) {
     q.correct++;
     if (q.firstRun) awardPoints('grammar_exercise', 5, 'gex-' + it.id);
   } else {
+    /* Error-spotting items have no options — their choices ARE the sentence
+       segments. Save segments as the review options, or the Review replay
+       shows the question with zero choices (bug found 2026-11-01, after the
+       bank release made error items common). */
     saveMistake({ date: todayStr(), level: q.v2level, kind: 'grammar', topic: q.topic.slug,
-      question: it.prompt, options: it.options || [], answer: it.answer, picked: val });
+      question: it.prompt, options: it.type === 'error' ? (it.segments || []) : (it.options || []), answer: it.answer, picked: val });
   }
   renderGrammarQuizV2();
   window.scrollTo(0, 0);
@@ -8015,7 +8019,7 @@ function answerGTest(i) {
     awardPoints('grammar_exercise', 5, 'gex-' + cur.topic.slug + '-' + it.id);
   } else {
     saveMistake({ date: todayStr(), level: cur.lv, kind: 'grammar', topic: cur.topic.slug,
-      question: it.prompt, options: it.options, answer: it.answer, picked: i });
+      question: it.prompt, options: it.type === 'error' ? (it.segments || []) : (it.options || []), answer: it.answer, picked: i });
   }
   renderGTestQ();
 }
@@ -10386,6 +10390,10 @@ async function startQuiz(kind, dateStr) {
   } else if (kind === 'mistakes') {
     let arr = await getMistakes();
     if (dateStr) arr = arr.filter(function (x) { return x.date === dateStr; });
+    /* Never replay a mistake with no options (legacy error/gap saves stored
+       options: [] — the question renders with zero choices and the session
+       soft-locks on a blank screen, 2026-11-01). */
+    arr = arr.filter(function (x) { return Array.isArray(x.options) && x.options.length; });
     questions = arr.map(function (mk) {
       return { question: mk.question, options: mk.options, answer: mk.answer, kind: mk.kind || 'word', mistakeId: mk.id };
     });
@@ -13514,7 +13522,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611011725';
+var APP_VERSION = '202611011800';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
