@@ -3826,6 +3826,10 @@ function asV2GetPool() {
     const items = (typeof grammarAllItems === 'function') ? grammarAllItems(topic)
       : ((topic.exercises && topic.exercises.items) || []);
     items.forEach(function (ex) {
+      /* bank items live in the app data since 2026-11-01, but for teacher
+         assignments the bank is fetched from Supabase — skip them here so
+         this pool stays site-only (the caller dedupes by id anyway). */
+      if (ex.use === 'bank') return;
       const exLv = (ex.level || '').toLowerCase();
       const exType = ex.type || 'mcq';
       if (!selLvls[exLv]) return;
@@ -4695,6 +4699,7 @@ async function savePlanner(btn) {
               const seen = {};
               lvItems.forEach(function (ex) { if (ex.id) seen[ex.id] = 1; });
               grammarAllItems(gt).forEach(function (ex) {
+                if (ex.use === 'bank') return; /* bank comes from the fetch above; app-data copies are for student practice */
                 if (String(ex.level || '').toLowerCase() === level && !(ex.id && seen[ex.id])) lvItems.push(ex);
               });
             }
@@ -7229,7 +7234,7 @@ function grammarCardHTML(t, p) {
   var status;
   if (p && p.done) status = '<span class="gh-status done">✓ ' + p.best + '/' + (p.total || 16) + '</span>';
   else if (p && p.attempts) status = '<span class="gh-status prog">Best ' + p.best + '/' + (p.total || 16) + '</span>';
-  else status = '<span class="gh-status">\uD83D\uDCC4 16 exercises</span>';
+  else status = '<span class="gh-status">\uD83D\uDCC4 10 exercises per level</span>';
   return '<a class="gh-card" href="#/grammar/' + esc(t.slug) + '">' +
     '<span class="gh-ico"><img src="' + ghIconSrc(t.slug) + '" alt="" loading="lazy"></span>' +
     '<span class="gh-card-main"><span class="gh-titlerow">' + ghLvBadge(t.level) + '<b>' + esc(t.h1) + '</b></span>' + status + '</span>' +
@@ -7327,7 +7332,7 @@ function renderGrammarTopicV2(v, t) {
     }).join('');
     var exs = exByLevel[lv] || [];
     var practice = exs.length ? '<h3>Practice: ' + lv.toUpperCase() + '</h3>' +
-      '<p class="g2-practice-note">' + exs.length + ' exercises</p>' +
+      '<p class="g2-practice-note">' + Math.min(exs.length, 10) + ' exercises</p>' +
       '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button>' : '';
     return '<section class="g-section" id="g2-' + lv + '"><h2>' + (G2_LEVEL_LABELS[lv] || lv.toUpperCase()) + '</h2>' +
       '<div class="g-fa-audio" data-fa-lv="' + lv + '"></div>' +
@@ -7471,7 +7476,7 @@ function renderGrammarTopicV3(v, t) {
     }).join('');
     var exs = exByLevel[lv] || [];
     var practice = exs.length ? '<div class="gt3-practice"><div class="gt3-practice-t">Ready to practise?</div>' +
-      '<p class="gt3-practice-n">' + exs.length + ' exercises for ' + lv.toUpperCase() + '</p>' +
+      '<p class="gt3-practice-n">' + Math.min(exs.length, 10) + ' exercises for ' + lv.toUpperCase() + '</p>' +
       '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button></div>' : '';
     return '<section class="gt3-sec" id="g2-' + lv + '" style="--lv:' + (GH_LV_COLORS[lv] || '#8A93A6') + '">' +
       '<div class="gt3-sec-head"><span class="gt3-lv-badge" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv.toUpperCase() + '</span>' +
@@ -7510,7 +7515,9 @@ function renderGrammarTopicV3(v, t) {
   window.scrollTo(0, 0);
 }
 
-/* v2 quiz: per-level exercises, supports mcq / gap / error types */
+/* v2 quiz: per-level exercises, supports mcq / gap / error types.
+   Pool = site + bank exercises for the level (bank released 2026-11-01,
+   Alireza's order); each run is capped at 10 questions (his order). */
 function startGrammarQuizV2(topic, level) {
   var items = grammarAllItems(topic).filter(function (ex) {
     return (ex.level || '').toLowerCase() === level;
@@ -7525,7 +7532,7 @@ function startGrammarQuizV2(topic, level) {
   state.gquiz = {
     topic: topic, idx: 0, correct: 0, answered: false, picked: -1,
     firstRun: !rec.claimed, v2: true, v2level: level,
-    items: shuffleArr(items)
+    items: shuffleArr(items).slice(0, 10)
   };
   document.body.classList.add('duo-playing');
   window.scrollTo(0, 0);
@@ -7875,7 +7882,10 @@ function sampleGTestQuestions(bundles) {
   var out = [];
   GTEST_LEVELS.forEach(function (lv) {
     var perTopic = shuffleArr((bundles[lv] || []).slice()).map(function (t) {
-      return { topic: t, items: shuffleArr(((t.exercises || {}).items || []).slice()) };
+      /* site exercises only, as before the bank release: the test renderer
+         is MCQ-only, and the bank pool is mostly gap/error items. */
+      var siteItems = ((t.exercises || {}).items || []).filter(function (ex) { return ex.use !== 'bank'; });
+      return { topic: t, items: shuffleArr(siteItems.slice()) };
     }).filter(function (pt) { return pt.items.length; });
     var picked = [], round = 0;
     while (picked.length < GTEST_PER_LEVEL && round < 60) {
@@ -13504,7 +13514,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611011521';
+var APP_VERSION = '202611011725';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
