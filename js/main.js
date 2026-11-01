@@ -1793,8 +1793,17 @@ function cardAudioTitle(card) {
 // Make this card's track the active player track (loads + plays if needed).
 /* Element-level src for a track: use the pre-downloaded blob when we have one
    for this exact URL (instant, fully seekable); otherwise the network URL. */
+/* Saved-word / saved-sentence snapshots taken before the 2026-10-30 R2
+   migration still hold relative media/<level>/<date>/... paths for
+   pre-2026-10-10 lessons; those files now live only on R2. Translate the
+   stale path at playback time so old snapshots play again. */
+var R2_MEDIA_BASE = 'https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/';
 function playableSrc(src) {
   if (src && player._blobFor === src && player._blobUrl) return player._blobUrl;
+  if (src && src.indexOf('media/') === 0) {
+    var m = /^media\/[^/]+\/(\d{4}-\d{2}-\d{2})\//.exec(src);
+    if (m && m[1] < '2026-10-10') return R2_MEDIA_BASE + encodeURI(src);
+  }
   return src;
 }
 
@@ -13495,7 +13504,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202610280056';
+var APP_VERSION = '202611011521';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
