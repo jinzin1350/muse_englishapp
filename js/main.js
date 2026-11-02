@@ -7939,9 +7939,15 @@ function sampleGTestQuestions(bundles) {
   var out = [];
   GTEST_LEVELS.forEach(function (lv) {
     var perTopic = shuffleArr((bundles[lv] || []).slice()).map(function (t) {
-      /* site exercises only, as before the bank release: the test renderer
-         is MCQ-only, and the bank pool is mostly gap/error items. */
-      var siteItems = ((t.exercises || {}).items || []).filter(function (ex) { return ex.use !== 'bank'; });
+      /* Site exercises only, as before the bank release — and strictly the
+         ones this MCQ renderer can show: a real options list and a numeric
+         answer. Gap items (options: [], answer: null, accept: [...]) pass a
+         plain use!=='bank' filter and render as a dead-end question with no
+         way to answer (the 2026-11-01 "The baby ___ (cry)" bug). */
+      var siteItems = ((t.exercises || {}).items || []).filter(function (ex) {
+        return ex.use !== 'bank' && (ex.options || []).length >= 2 &&
+          typeof ex.answer === 'number' && ex.answer >= 0 && ex.answer < ex.options.length;
+      });
       return { topic: t, items: shuffleArr(siteItems.slice()) };
     }).filter(function (pt) { return pt.items.length; });
     var picked = [], round = 0;
@@ -8023,6 +8029,13 @@ function renderGTestQ() {
   var q = state.gtest; if (!q || q.done) return;
   var v = document.getElementById('view');
   var cur = q.items[q.idx], it = cur.item;
+  /* Safety net: never strand the student on an unanswerable question. */
+  if (!it.options || it.options.length < 2) {
+    if (q.idx + 1 >= q.items.length) { finishGTest(false); return; }
+    q.idx++;
+    renderGTestQ();
+    return;
+  }
   var n = q.items.length;
   var letters = ['A', 'B', 'C', 'D'];
   var opts = it.options.map(function (op, i) {
@@ -13576,7 +13589,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020113';
+var APP_VERSION = '202611020134';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
