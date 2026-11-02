@@ -460,19 +460,30 @@ function isWordSaved(word, date) {
     return savedWordKey(x.word, x.lesson_date) === k;
   });
 }
-async function toggleSaveWord(word, date) {
+/* `data` (optional): pre-mapped fields in lesson-word shape, used by callers
+   outside a lesson (vocabulary pages) so the saved row still carries the
+   meaning / example / Persian / audio / photo. */
+async function toggleSaveWord(word, date, data) {
   const m = state.lesson;
-  const w = ((m && m.words) || []).find(function (x) { return x.word === word; }) || { word: word };
+  const w = data || ((m && m.words) || []).find(function (x) { return x.word === word; }) || { word: word };
+  const lvl = (data && data.level) || (m && m.level) || '';
   const k = savedWordKey(word, date);
   const wasSaved = isWordSaved(word, date);
   if (cloudReady()) {
     try {
       if (wasSaved) {
-        await sb.from('saved_words').delete().eq('user_id', state.user.id)
-          .eq('word', word).eq('lesson_date', date || null);
+        /* Delete by row id when known: an eq() on a NULL lesson_date
+           (vocabulary saves) never matches in Postgres. */
+        const row = (state.savedWords || []).find(function (x) { return savedWordKey(x.word, x.lesson_date) === k; });
+        if (row && row.id) {
+          await sb.from('saved_words').delete().eq('id', row.id).eq('user_id', state.user.id);
+        } else {
+          await sb.from('saved_words').delete().eq('user_id', state.user.id)
+            .eq('word', word).eq('lesson_date', date || null);
+        }
       } else {
         await sb.from('saved_words').insert({
-          user_id: state.user.id, word: word, level: (m && m.level) || null, lesson_date: date || null,
+          user_id: state.user.id, word: word, level: lvl || null, lesson_date: date || null,
           meaning: w.meaning || '', pronunciation: w.pronunciation || '', example: w.example || '',
           persian: w.persian || '', pos: w.pos || '', word_audio: w.word_audio || '', photo: w.photo || ''
         });
@@ -484,7 +495,7 @@ async function toggleSaveWord(word, date) {
   const arr = lsGet('savedWords');
   if (wasSaved) lsSet('savedWords', arr.filter(function (x) { return savedWordKey(x.word, x.lesson_date) !== k; }));
   else {
-    arr.unshift({ id: uid(), word: word, level: (m && m.level) || '', lesson_date: date || '',
+    arr.unshift({ id: uid(), word: word, level: lvl, lesson_date: date || '',
       meaning: w.meaning || '', pronunciation: w.pronunciation || '', example: w.example || '',
       persian: w.persian || '', pos: w.pos || '', word_audio: w.word_audio || '', photo: w.photo || '' });
     lsSet('savedWords', arr.slice(0, 500));
@@ -521,6 +532,48 @@ async function toggleSaveWordBtn(btn) {
     const nowSaved = await toggleSaveWord(btn.getAttribute('data-word'), btn.getAttribute('data-date'));
     btn.classList.toggle('saved', nowSaved);
   } finally { btn.disabled = false; }
+}
+/* ---------------- vocabulary-page bookmarks ----------------
+   Same saved_words store as lesson bookmarks, with lesson_date '' (null in
+   the cloud) so vocab saves coexist with per-lesson saves of the same word. */
+function findVocabWord(word) {
+  const wl = String(word || '').toLowerCase();
+  const pools = [];
+  if (state.allWords) pools.push(state.allWords);
+  if (state.vocabWords) Object.keys(state.vocabWords).forEach(function (k) { pools.push(state.vocabWords[k]); });
+  for (let i = 0; i < pools.length; i++) {
+    const arr = pools[i] || [];
+    for (let j = 0; j < arr.length; j++) {
+      if (String(arr[j].word || '').toLowerCase() === wl) return arr[j];
+    }
+  }
+  return null;
+}
+async function toggleVocabSaveBtn(btn) {
+  const word = btn.getAttribute('data-word');
+  const w = findVocabWord(word);
+  btn.disabled = true;
+  try {
+    const nowSaved = await toggleSaveWord(word, '', w ? {
+      meaning: w.meaning_en || '', pronunciation: w.phonetic || '', example: w.example_en || '',
+      persian: w.meaning_fa || '', pos: w.pos || '', word_audio: w.audio || '', photo: w.photo || '',
+      level: (w.levels && w.levels[0]) || ''
+    } : null);
+    document.querySelectorAll('.save-word-btn[data-action="vc-toggle-save"]').forEach(function (b) {
+      if (String(b.getAttribute('data-word') || '').toLowerCase() === String(word || '').toLowerCase()) {
+        b.classList.toggle('saved', nowSaved);
+      }
+    });
+  } finally { btn.disabled = false; }
+}
+/* Paint saved state onto vocab word-row bookmark buttons from the store. */
+async function refreshVocabSaveButtons(root) {
+  const arr = await getSavedWords();
+  const set = {};
+  arr.forEach(function (x) { if (!x.lesson_date) set[String(x.word || '').toLowerCase()] = 1; });
+  (root || document).querySelectorAll('.save-word-btn[data-action="vc-toggle-save"]').forEach(function (b) {
+    b.classList.toggle('saved', !!set[String(b.getAttribute('data-word') || '').toLowerCase()]);
+  });
 }
 async function getOverallAverage() {
   return avgOfAttempts(await getAttempts());
@@ -13366,6 +13419,7 @@ function bindEvents() {
       });
     }
     else if (a === 'toggle-save-word') { toggleSaveWordBtn(t); }
+    else if (a === 'vc-toggle-save') { toggleVocabSaveBtn(t); }
     else if (a === 'unsave-word') {
       removeSavedWord(t.getAttribute('data-id'), t.getAttribute('data-word'), t.getAttribute('data-date')).then(function () {
         if (state.view === 'review') renderMistakes($('#view'));
@@ -13522,7 +13576,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020016';
+var APP_VERSION = '202611020027';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -15673,7 +15727,8 @@ function vocabWordRowHTML(w, catTitleBySlug) {
     (w.audio ? '<button class="vc-say" data-action="vc-say" data-audio="' + esc(/^https?:\/\//.test(w.audio) ? w.audio : '/' + w.audio) + '" aria-label="Listen to pronunciation">\uD83D\uDD0A</button>' : '') +
     (w.phonetic ? '<span class="vc-phon">/' + esc(w.phonetic) + '/</span>' : '') +
     (w.pos ? '<span class="vc-pos">' + esc(w.pos) + '</span>' : '') +
-    vcLevelBadges(w.levels) + '</div>' +
+    vcLevelBadges(w.levels) +
+    '<button class="save-word-btn vc-save' + (isWordSaved(w.word, '') ? ' saved' : '') + '" data-action="vc-toggle-save" data-word="' + esc(w.word) + '" aria-label="Bookmark this word" title="Save for later practice"><img src="/icons/bookmark.png" alt=""></button></div>' +
     (w.meaning_fa ? '<div class="vc-meaning">' + esc(w.meaning_fa) + '</div>' : '') +
     (w.example_en ? '<div class="vc-example">' + esc(w.example_en) + '</div>' : '') +
     topics +
@@ -15749,6 +15804,7 @@ function paintVocabList() {
         }).join('') + '</div>';
       }
       wrap.innerHTML = html;
+      if (matches.length) refreshVocabSaveButtons(wrap);
     });
   }).catch(function () {
     wrap.innerHTML = '<div class="empty">Could not load vocabulary topics. Check your connection and try again.</div>';
@@ -15793,6 +15849,7 @@ function renderVocabCat(v, slug) {
       document.getElementById('vc-start-btn').addEventListener('click', function () {
         startVocabQuiz(cat, words);
       });
+      refreshVocabSaveButtons(v);
       window.scrollTo(0, 0);
     });
   }).catch(function () {

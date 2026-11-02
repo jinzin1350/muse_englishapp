@@ -3890,6 +3890,7 @@ body.view-words #view { background: #FDF8F1; }
 .vc-best { font-size: 0.82rem; color: var(--herb-dark); font-weight: 700; background: #E3F0E8; padding: 0.3rem 0.7rem; border-radius: 999px; }
 .vc-start { width: 100%; padding: 0.85rem; margin: 0.2rem 0 0.4rem; }
 .vc-xp-note { text-align: center; color: #9AA1B5; font-size: 0.82rem; margin: 0 0 1.1rem; }
+.vc-word-top .vc-save { margin-left: auto; flex-shrink: 0; }
 .vc-search-h { font-size: 1.05rem; font-weight: 800; color: #232B4D; margin: 0.4rem 0 0.6rem; }
 .vc-search-h:not(:first-child) { margin-top: 1.2rem; }
 .vc-word-topics { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.45rem; }
