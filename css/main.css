@@ -1422,6 +1422,7 @@ body{background:#FFF9F3;}
 .att-d-btns{display:flex;gap:0.5rem;flex-wrap:wrap;margin:0.7rem 0 0.2rem;}
 .att-missed{margin-top:0.65rem;}
 .att-miss{background:#FFF9F1;border:1px solid #F3E7D2;border-radius:12px;padding:0.6rem 0.75rem;margin-top:0.45rem;}
+.att-fixed{color:#4C9A2A;font-weight:700;font-size:0.8rem;margin-top:0.3rem;}
 /* ---------- bottom nav ---------- */
 .tabbar{background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:1px solid #F6EAD9;border-radius:26px 26px 0 0;box-shadow:0 -10px 28px rgba(190,130,70,.12);}
 .tab{color:#9AA3B2;}

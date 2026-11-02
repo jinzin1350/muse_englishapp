@@ -371,7 +371,8 @@ function rowToMistake(r) {
 }
 function rowToAttempt(r) {
   return { id: r.id, ts: r.created_at ? new Date(r.created_at).getTime() : Date.now(),
-           date: r.date, level: r.level, theme: r.theme, kind: r.kind, score: r.score, total: r.total };
+           date: r.date, level: r.level, theme: r.theme, kind: r.kind, score: r.score, total: r.total,
+           missed: r.missed || null };
 }
 async function getMistakes() {
   if (cloudReady()) {
@@ -395,18 +396,44 @@ async function getAttempts() {
 }
 async function saveAttempt(a) {
   const rec = Object.assign({ ts: Date.now() }, a);
+  /* Missed-question snapshot (2026-11-02): mirrored into a per-device
+     archive immediately, and into the cloud row's `missed` jsonb column
+     once the migration has run — the insert retries without the column
+     until then, so nothing breaks before it. */
+  if (a.missed && a.missed.length) saveAttemptMissedLocal(rec);
   if (cloudReady()) {
     try {
-      const res = await sb.from('quiz_attempts').insert({
+      const payload = {
         user_id: state.user.id, date: a.date || null, level: a.level || null,
         theme: a.theme || null, kind: a.kind || null, score: a.score, total: a.total
-      });
+      };
+      if (a.missed) payload.missed = a.missed;
+      let res = await sb.from('quiz_attempts').insert(payload);
+      if (res.error && a.missed) { delete payload.missed; res = await sb.from('quiz_attempts').insert(payload); }
       if (!res.error) return;
     } catch (e) {}
   }
   const arr = lsGet('scores');
   arr.unshift(rec);
   lsSet('scores', arr.slice(0, 200));
+}
+function attSnapKey(x) {
+  return (x.date || '') + '|' + (x.kind || '') + '|' + (x.theme || '') + '|' + x.score + '/' + x.total;
+}
+function saveAttemptMissedLocal(rec) {
+  const arch = lsGet('attemptMissed');
+  arch.unshift({ key: attSnapKey(rec), ts: rec.ts, missed: rec.missed });
+  lsSet('attemptMissed', arch.slice(0, 100));
+}
+function getAttemptMissedLocal(a) {
+  const arch = lsGet('attemptMissed');
+  if (!arch.length) return null;
+  const k = attSnapKey(a);
+  const hit = arch.find(function (e) { return e.key === k; });
+  if (hit) return hit.missed;
+  const head = k.split('|').slice(0, 3).join('|');
+  const cand = arch.filter(function (e) { return e.key.split('|').slice(0, 3).join('|') === head; });
+  return cand.length ? cand[0].missed : null;
 }
 async function saveMistake(m) {
   if (cloudReady()) {
@@ -7698,6 +7725,7 @@ function answerGrammarQuizV2(val) {
   }
   
   q.correct_flag = correct;
+  (q.log = q.log || []).push({ picked: val, correct: correct });
   if (correct) {
     q.correct++;
     if (q.firstRun) awardPoints('grammar_exercise', 5, 'gex-' + it.id);
@@ -7800,6 +7828,7 @@ function answerGrammarQuiz(i) {
   if (!q || q.answered) return;
   q.answered = true; q.picked = i;
   var it = q.items[q.idx];
+  (q.log = q.log || []).push({ picked: i, correct: i === it.answer });
   if (i === it.answer) {
     q.correct++;
     if (q.firstRun) awardPoints('grammar_exercise', 5, 'gex-' + q.topic.slug + '-' + it.id);
@@ -7831,7 +7860,15 @@ function finishGrammarQuiz() {
   var bonus = q.firstRun && !rec.claimed;
   if (bonus) { rec.claimed = true; awardPoints('grammar_topic_done', 20, 'gtd-' + slug); }
   prog[slug] = rec; setGrammarProgress(prog);
-  saveAttempt({ kind: 'grammar_topic', theme: slug, level: topic.level, score: correct, total: total, date: todayStr() });
+  var missedSnap = [];
+  (q.items || []).forEach(function (it, i) {
+    var lg = (q.log || [])[i];
+    if (lg && !lg.correct) {
+      if (it.type === 'gap') missedSnap.push({ q: it.prompt, o: [], a: null, p: String(lg.picked), acc: it.accept || [] });
+      else missedSnap.push({ q: it.prompt, o: it.type === 'error' ? (it.segments || []) : (it.options || []), a: it.answer, p: lg.picked });
+    }
+  });
+  saveAttempt({ kind: 'grammar_topic', theme: slug, level: topic.level, score: correct, total: total, date: todayStr(), missed: missedSnap.length ? missedSnap.slice(0, 30) : undefined });
   state.gquiz = null;
   document.body.classList.remove('duo-playing');
   var v = document.getElementById('view');
@@ -8136,7 +8173,12 @@ function finishGTest(timeUp) {
      and the score trend — not just the latest report. */
   store.history = [report].concat((store.history || []).filter(function (r) { return r.ts !== report.ts; })).slice(0, 12);
   setGTestStore(store);
-  saveAttempt({ kind: 'grammar_test', theme: 'placement', score: correct, total: total, date: todayStr() });
+  var missedSnap = [];
+  q.items.forEach(function (cur, idx) {
+    var r = q.results[idx];
+    if (r && !r.ok) missedSnap.push({ q: cur.item.prompt, o: cur.item.options, a: cur.item.answer, p: r.picked });
+  });
+  saveAttempt({ kind: 'grammar_test', theme: 'placement', score: correct, total: total, date: todayStr(), missed: missedSnap.length ? missedSnap.slice(0, 30) : undefined });
   state.gtest = null;
   renderGTestReport(document.getElementById('view'), report);
 }
@@ -9107,6 +9149,25 @@ function attemptCardHTML(a, i) {
    a deep link back to the lesson/topic, and the questions missed that
    day (joined from the mistakes list by date + kind; mistakes answered
    correctly later are already gone from that list). */
+async function renderAttemptSnap(host, snap) {
+  let still = {};
+  try {
+    if (!state._mistakesCache) state._mistakesCache = await getMistakes();
+    (state._mistakesCache || []).forEach(function (m) { still[m.question] = 1; });
+  } catch (e) {}
+  host.innerHTML = '<div class="att-d-line">❌ <b>Missed in this attempt (' + snap.length + ')</b></div>' +
+    snap.map(function (s) {
+      const fixed = !still[s.q];
+      return '<div class="att-miss"><div class="mistake-q">' + esc(s.q) + '</div>' +
+        (s.acc
+          ? '<div class="mistake-a">✅ ' + esc(s.acc[0] || '') + '</div>' +
+            '<div class="mistake-was">You wrote: ' + esc(s.p) + '</div>'
+          : '<div class="mistake-a">✅ ' + esc((s.o || [])[s.a] || '') + '</div>' +
+            (typeof s.p === 'number' && s.p !== s.a
+              ? '<div class="mistake-was">You chose: ' + esc((s.o || [])[s.p] || '') + '</div>' : '')) +
+        (fixed ? '<div class="att-fixed">✓ Fixed since</div>' : '') + '</div>';
+    }).join('');
+}
 function attDateStr(ts) {
   const d = new Date(ts);
   return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
@@ -9157,6 +9218,11 @@ function attemptActionHTML(a) {
 }
 async function fillAttemptMissed(a, host) {
   if (!host) return;
+  /* Permanent snapshot first (saved with the attempt itself, 2026-11-02):
+     survives the mistakes being fixed later. Older attempts fall back to
+     the day-join against the live mistakes list below. */
+  const snap = (a.missed && a.missed.length) ? a.missed : getAttemptMissedLocal(a);
+  if (snap) { renderAttemptSnap(host, snap); return; }
   const mk = (a.kind === 'grammar' || a.kind === 'grammar_topic' || a.kind === 'grammar_test') ? 'grammar'
     : (a.kind === 'mistakes' ? null : 'word');
   if (!mk) {
@@ -10792,9 +10858,17 @@ function finishQuiz() {
   const total = q.questions.length;
   const pct = Math.round((q.correct / total) * 100);
   let heartEarned = false;
+  const missedSnap = [];
+  q.questions.forEach(function (cur, i) {
+    const lg = (q.log || [])[i];
+    if (lg && lg.picked !== lg.correct && cur.question && Array.isArray(cur.options)) {
+      missedSnap.push({ q: cur.question, o: cur.options, a: cur.answer, p: lg.picked });
+    }
+  });
   saveAttempt({
     date: q.date, level: q.level, theme: q.theme,
-    kind: q.kind, score: q.correct, total: total
+    kind: q.kind, score: q.correct, total: total,
+    missed: missedSnap.length ? missedSnap.slice(0, 30) : undefined
   });
   bumpStat('quizzes_completed', 1);
   trackEvent('quiz_completed', { kind: q.kind, score: q.correct, total: total, date: q.date, level: q.level, theme: q.theme || '' });
@@ -13855,7 +13929,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020258';
+var APP_VERSION = '202611020311';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
