@@ -13576,7 +13576,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020101';
+var APP_VERSION = '202611020113';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14001,7 +14001,8 @@ function twPaintViewBanner() {
 function twShowSection(name) {
   state.twSection = name;
   /* Detail pages keep the parent nav highlighted. */
-  var navName = (name === 'assignment-detail' || name === 'class-report') ? 'assignments' : name;
+  var navName = (name === 'assignment-detail' || name === 'class-report') ? 'assignments'
+    : (name === 'student-report') ? 'students' : name;
   Array.prototype.forEach.call(document.querySelectorAll('[data-twsec]'), function (b) {
     b.classList.toggle('on', b.getAttribute('data-twsec') === navName);
   });
@@ -14015,6 +14016,7 @@ function twShowSection(name) {
   else if (name === 'assignments') twPageAssignments(c);
   else if (name === 'assignment-detail') twPageAssignmentDetail(c);
   else if (name === 'class-report') twPageClassReport(c);
+  else if (name === 'student-report') twPageStudentReport(c);
   else if (name === 'compose') twPageCompose(c);
   else if (name === 'placement') twPagePlacement(c);
   else if (name === 'links') twPageLinks(c);
@@ -14280,6 +14282,7 @@ function twStudentMenu(btn, students) {
   var nm = s.display_name || (s.email || '?').split('@')[0];
   m.innerHTML = '<b>' + esc(nm) + '</b>' +
     '<button data-m="view">📊 View 14-day activity</button>' +
+    '<button data-m="report">📋 Assignment report</button>' +
     (twReadOnly() ? '' : '<button data-m="nudge">🔔 Send nudge</button>');
   var r = btn.getBoundingClientRect();
   m.style.top = (r.bottom + window.scrollY + 6) + 'px';
@@ -14289,6 +14292,10 @@ function twStudentMenu(btn, students) {
     b.addEventListener('click', function () {
       m.hidden = true;
       if (b.getAttribute('data-m') === 'nudge') twSendNudge(i);
+      else if (b.getAttribute('data-m') === 'report') {
+        state.twReportUid = s.user_id;
+        twShowSection('student-report');
+      }
       else openTeacherStudent(parseInt(i, 10));
     });
   });
@@ -14478,7 +14485,8 @@ async function twPageAssignmentDetail(c) {
   }
   c.innerHTML = twPageHead('ASSIGNMENTS', kindIcon + ' ' + esc(r.title || 'Assignment'), sub) +
     '<div class="tw-backrow"><button class="tw-btn tw-btn-white" id="tw-back-assign">← Back to assignments</button></div>' +
-    '<div class="tw-card tw-adetail">' + statusBox + '<div id="tw-ad-missed"></div>' + actionBtn + '</div>';
+    '<div class="tw-card tw-adetail">' + statusBox + '<div id="tw-ad-hardest"></div><div id="tw-ad-missed"></div>' + actionBtn + '</div>';
+  twFillHardest(r, results);
   twFillMissedWords(r, results, nameOf);
   document.getElementById('tw-back-assign').addEventListener('click', function () { twShowSection('assignments'); });
   var del = document.getElementById('tw-ad-delete');
@@ -14584,6 +14592,261 @@ async function twPageClassReport(c) {
     body;
   document.getElementById('tw-back-assign').addEventListener('click', function () { twShowSection('assignments'); });
   window.scrollTo(0, 0);
+}
+
+/* ---------------- assignment answer helpers ---------------- */
+
+function twAnsIsCorrect(a) {
+  if (!a) return false;
+  if (a.isCorrect !== undefined) return !!a.isCorrect;
+  if (typeof a.correct === 'boolean') return a.correct;
+  return a.picked === a.correct;
+}
+function twAnsText(q, v) {
+  if (v === undefined || v === null) return '—';
+  if (typeof v === 'number') {
+    if (q && q.type === 'error') {
+      var sg = (q.segments || [])[v];
+      return sg !== undefined ? sg : ('Part ' + (v + 1));
+    }
+    if (q && (q.options || []).length) {
+      return q.options[v] !== undefined ? q.options[v] : ('Option ' + (v + 1));
+    }
+    return String(v);
+  }
+  return String(v);
+}
+function twCorrectText(q, a) {
+  if (!q) return '—';
+  if (q.type === 'gap') return (q.accept && q.accept[0]) || twAnsText(q, q.answer);
+  var v = (a && typeof a.correct !== 'boolean' && a.correct !== undefined) ? a.correct : q.answer;
+  return twAnsText(q, v);
+}
+function twQPrompt(q) {
+  if (!q) return '';
+  if (q.type === 'error') return 'Which part is wrong? ' + (q.segments || []).join(' · ');
+  return q.prompt || q.q || '';
+}
+function twCleanExpl(x) { return String(x || '').replace(/\*/g, ''); }
+
+/* ---------------- page: student assignment report ---------------- */
+
+async function twPageStudentReport(c) {
+  var students = await twGetStudents();
+  var s = null;
+  students.forEach(function (x) { if (x.user_id === state.twReportUid) s = x; });
+  if (!s) { twShowSection('students'); return; }
+  var nm = s.display_name || (s.email || '?').split('@')[0];
+  var head = twPageHead('STUDENTS', '📊 ' + esc(nm),
+      esc(s.email || '') + (s.level ? ' · Level ' + esc(String(s.level).toUpperCase()) : '') +
+      ((s.current_streak || 0) > 0 ? ' · 🔥 ' + s.current_streak + '-day streak' : '')) +
+    '<div class="tw-backrow"><button class="tw-btn tw-btn-white" id="tw-back-students">← Back to students</button></div>';
+  c.innerHTML = head + '<div class="empty">Loading report…</div>';
+  document.getElementById('tw-back-students').addEventListener('click', function () { twShowSection('students'); });
+
+  var assigns = await twGetAssignments();
+  var mine = assigns.filter(function (a) { return (a.student_ids || []).indexOf(s.user_id) >= 0; });
+  var myIds = {};
+  mine.forEach(function (a) { myIds[a.id] = 1; });
+  var results = [];
+  try {
+    var rq = await sb.from('assignment_results')
+      .select('assignment_id,score,total,completed_at,answers').eq('student_id', s.user_id);
+    if (!rq.error) results = (rq.data || []).filter(function (r) { return myIds[r.assignment_id]; });
+  } catch (e) {}
+  var resBy = {};
+  results.forEach(function (r) { resBy[r.assignment_id] = r; });
+
+  /* ---- summary ---- */
+  var sent = mine.filter(function (a) { return a.status !== 'scheduled'; });
+  var doneList = sent.filter(function (a) { return resBy[a.id]; });
+  var avg = doneList.length
+    ? Math.round(doneList.reduce(function (acc, a) {
+        var r = resBy[a.id];
+        return acc + (r.total ? (r.score / r.total) * 100 : 0);
+      }, 0) / doneList.length)
+    : null;
+  var lastDone = null;
+  results.forEach(function (r) { if (!lastDone || r.completed_at > lastDone) lastDone = r.completed_at; });
+
+  /* ---- weak points + missed words ---- */
+  var ptAtt = {}, ptWrong = {}, wordWrong = {};
+  results.forEach(function (r) {
+    (r.answers || []).forEach(function (a) {
+      var ok = twAnsIsCorrect(a);
+      (a.points || []).forEach(function (pid) {
+        ptAtt[pid] = (ptAtt[pid] || 0) + 1;
+        if (!ok) ptWrong[pid] = (ptWrong[pid] || 0) + 1;
+      });
+      if (!ok && a.qid && a.qid.indexOf('vocab:') === 0) {
+        var slug = a.qid.split(':')[1] || '';
+        if (slug) wordWrong[slug] = (wordWrong[slug] || 0) + 1;
+      }
+    });
+  });
+  var ptTitles = {};
+  try {
+    var all = await loadAllGrammar();
+    (all || []).forEach(function (t) {
+      (t.points || []).forEach(function (p) { if (p.id) ptTitles[p.id] = p.title || p.id; });
+    });
+  } catch (e) {}
+  var weakPts = Object.keys(ptWrong).map(function (pid) {
+    return { label: ptTitles[pid] || pid, wrong: ptWrong[pid], att: ptAtt[pid] || 0 };
+  }).sort(function (a, b) { return b.wrong - a.wrong; }).slice(0, 8);
+  var missedWords = Object.keys(wordWrong).map(function (slug) {
+    return { word: slug.replace(/-/g, ' ').replace(/\s+/g, ' ').trim(), n: wordWrong[slug] };
+  }).sort(function (a, b) { return b.n - a.n; }).slice(0, 12);
+
+  /* ---- render ---- */
+  var statCard = function (ico, bg, n, l, sub) {
+    return '<div class="tw-stat"><span class="tw-stat-ico" style="background:' + bg + '">' + ico + '</span>' +
+      '<div class="tw-stat-top"><span class="tw-stat-n">' + n + '</span><span class="tw-stat-l">' + l + '</span></div>' +
+      '<div class="tw-stat-s">' + sub + '</div></div>';
+  };
+  var html = head +
+    '<div class="tw-stats">' +
+      statCard('📨', '#EDE7FB', sent.length, 'Assignments sent', 'Assignments this student received') +
+      statCard('✅', '#E3F5D8', doneList.length, 'Completed', sent.length ? Math.round(doneList.length / sent.length * 100) + '% completion rate' : 'Nothing sent yet') +
+      statCard('🎯', '#FFE8D6', avg === null ? '–' : avg + '%', 'Average score', 'Across completed assignments') +
+      statCard('🕐', '#DFF3E6', lastDone ? twDate(lastDone) : '–', 'Last completed', lastDone ? 'Most recent submission' : 'No submissions yet') +
+    '</div>';
+
+  if (weakPts.length || missedWords.length) {
+    html += '<div class="tw-card" style="padding:1.1rem 1.25rem;margin-bottom:1.2rem"><div class="an-title">🎯 Weak points</div>';
+    if (weakPts.length) {
+      html += '<p class="muted" style="margin:0.4rem 0 0">Grammar points with the most mistakes:</p><div class="tw-missed-chips">' +
+        weakPts.map(function (p) {
+          return '<span class="tw-missed-chip"><b>' + esc(p.label) + '</b> · ✗ ' + p.wrong + ' of ' + p.att + '</span>';
+        }).join('') + '</div>';
+    }
+    if (missedWords.length) {
+      html += '<p class="muted" style="margin:0.7rem 0 0">Words most often missed:</p><div class="tw-missed-chips">' +
+        missedWords.map(function (w) {
+          return '<span class="tw-missed-chip"><b>' + esc(w.word) + '</b>' + (w.n > 1 ? ' · ✗ ' + w.n : '') + '</span>';
+        }).join('') + '</div>';
+    }
+    html += '</div>';
+  }
+
+  var sorted = mine.slice().sort(function (a, b) {
+    return String(b.send_at || b.created_at || '').localeCompare(String(a.send_at || a.created_at || ''));
+  });
+  html += '<div class="an-title" style="margin-bottom:0.6rem">🗂 Assignment history (' + sorted.length + ')</div>';
+  if (!sorted.length) {
+    html += '<div class="tw-emptybox"><div class="tw-empty-ill">📭</div><b>No assignments yet</b>' +
+      '<p class="muted">This student has not received any assignments.</p></div>';
+  } else {
+    html += sorted.map(function (a) {
+      var r = resBy[a.id];
+      var when = a.send_at || a.created_at;
+      var meta = '📅 ' + (a.status === 'scheduled' ? 'Sends ' : 'Sent ') + twDate(when) +
+        (a.level ? ' · ' + esc(String(a.level).toUpperCase()) : '') +
+        ' · ' + (a.question_count || ((a.questions || []).length) || '?') + ' questions' +
+        (a.deadline ? ' · Due ' + twDate(a.deadline) : '');
+      var pill, btn = '';
+      if (a.status === 'scheduled') pill = twPill('Scheduled', 'sched');
+      else if (r) {
+        var pct = r.total ? Math.round((r.score / r.total) * 100) : 0;
+        pill = twPill('✓ ' + r.score + '/' + r.total + ' · ' + pct + '%', pct >= 60 ? 'green' : 'gray');
+        btn = '<button class="tw-btn tw-btn-white tw-btn-sm" data-rep-toggle="' + a.id + '">Answers ▾</button>';
+      } else if (a.deadline && new Date(a.deadline) < new Date()) pill = twPill('Overdue', 'gray');
+      else pill = twPill('Pending', 'pending');
+      return '<div class="tw-card tw-rep-asg"><div class="tw-rep-head"><div class="tw-rep-main">' +
+        '<b>' + esc(a.title || 'Assignment') + '</b><small>' + meta +
+        (r ? ' · Submitted ' + twDate(r.completed_at) : '') + '</small></div>' +
+        pill + btn + '</div>' +
+        '<div class="tw-rep-body" id="tw-rep-body-' + a.id + '" hidden></div></div>';
+    }).join('');
+  }
+  c.innerHTML = html;
+  document.getElementById('tw-back-students').addEventListener('click', function () { twShowSection('students'); });
+  Array.prototype.forEach.call(c.querySelectorAll('[data-rep-toggle]'), function (b) {
+    b.addEventListener('click', function () { twToggleRepAnswers(b, resBy[b.getAttribute('data-rep-toggle')]); });
+  });
+  window.scrollTo(0, 0);
+}
+
+async function twToggleRepAnswers(btn, res) {
+  var aid = btn.getAttribute('data-rep-toggle');
+  var body = document.getElementById('tw-rep-body-' + aid);
+  if (!body) return;
+  if (!body.hidden) { body.hidden = true; btn.textContent = 'Answers ▾'; return; }
+  body.hidden = false;
+  btn.textContent = 'Answers ▴';
+  if (body.getAttribute('data-loaded') || !res) return;
+  body.setAttribute('data-loaded', '1');
+  body.innerHTML = '<div class="empty">Loading answers…</div>';
+  var questions = [];
+  try {
+    var aq = await sb.from('assignments').select('questions').eq('id', aid).single();
+    if (!aq.error && aq.data) questions = aq.data.questions || [];
+  } catch (e) {}
+  var byQid = {};
+  questions.forEach(function (q) { if (q.id) byQid[q.id] = q; });
+  var rows = (res.answers || []).map(function (a, i) {
+    var q = (a.qid && byQid[a.qid]) || questions[i];
+    var ok = twAnsIsCorrect(a);
+    var line = '<div class="tw-rep-q"><div class="tw-rep-qhead"><span class="tw-rep-qn">Q' + (i + 1) + '</span>' +
+      '<span class="tw-rep-qp">' + esc(twQPrompt(q)) + '</span>' +
+      (ok ? '<span class="tw-ok">✓</span>' : '<span class="tw-ans-bad">✗</span>') + '</div>';
+    if (!ok && q) {
+      line += '<div class="tw-rep-detail">Their answer: <span class="tw-ans-bad">' + esc(twAnsText(q, a.picked)) + '</span>' +
+        ' &nbsp;·&nbsp; Correct: <span class="tw-ans-good">' + esc(twCorrectText(q, a)) + '</span>' +
+        (q.type === 'error' && q.correction ? '<br>Correction: ' + esc(q.correction) : '') +
+        (q.explanation ? '<br><span class="muted">' + esc(twCleanExpl(q.explanation)) + '</span>' : '') +
+        '</div>';
+    }
+    return line + '</div>';
+  }).join('');
+  body.innerHTML = rows || '<div class="empty">No answer detail stored for this assignment.</div>';
+}
+
+/* ---------------- assignment detail: hardest questions ---------------- */
+
+async function twFillHardest(r, results) {
+  var host = document.getElementById('tw-ad-hardest');
+  if (!host || !results.length) return;
+  try {
+    var aq = await sb.from('assignments').select('questions').eq('id', r.id).single();
+    if (aq.error || !aq.data) return;
+    var questions = aq.data.questions || [];
+    var byQid = {};
+    questions.forEach(function (q) { if (q.id) byQid[q.id] = q; });
+    var stat = {};
+    results.forEach(function (res) {
+      (res.answers || []).forEach(function (a, i) {
+        var q = (a.qid && byQid[a.qid]) || questions[i];
+        if (!q) return;
+        var key = a.qid || ('i' + i);
+        var st = stat[key] || (stat[key] = { q: q, att: 0, wrong: 0, picks: {} });
+        st.att++;
+        if (!twAnsIsCorrect(a)) {
+          st.wrong++;
+          var t = twAnsText(q, a.picked);
+          st.picks[t] = (st.picks[t] || 0) + 1;
+        }
+      });
+    });
+    var list = Object.keys(stat).map(function (k) { return stat[k]; })
+      .filter(function (x) { return x.wrong > 0; });
+    list.sort(function (x, y) { return (y.wrong / y.att) - (x.wrong / x.att) || y.wrong - x.wrong; });
+    list = list.slice(0, 5);
+    if (!list.length) {
+      host.innerHTML = '<div class="an-title" style="margin-top:1rem">🎯 Hardest questions</div>' +
+        '<p class="muted">No mistakes yet — everyone answered everything correctly.</p>';
+      return;
+    }
+    host.innerHTML = '<div class="an-title" style="margin-top:1rem">🎯 Hardest questions</div>' +
+      list.map(function (x) {
+        var pct = Math.round((x.wrong / x.att) * 100);
+        var topPick = Object.keys(x.picks).sort(function (p1, p2) { return x.picks[p2] - x.picks[p1]; })[0];
+        return '<div class="tw-rep-q"><b>' + esc(twQPrompt(x.q)) + '</b>' +
+          '<div class="muted" style="font-size:0.86rem">✗ ' + x.wrong + ' of ' + x.att + ' missed (' + pct + '%)' +
+          (topPick ? ' · most common wrong answer: <span class="tw-ans-bad">' + esc(topPick) + '</span>' : '') +
+          '<br>Correct answer: <span class="tw-ans-good">' + esc(twCorrectText(x.q, null)) + '</span></div></div>';
+      }).join('');
+  } catch (e) {}
 }
 
 /* ---------------- page: placement tests ---------------- */

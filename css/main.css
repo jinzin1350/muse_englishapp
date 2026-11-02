@@ -4543,6 +4543,19 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
 .as-vw { display: flex; align-items: baseline; gap: 0.45rem; padding: 0.28rem 0.3rem; border-radius: 8px; cursor: pointer; font-size: 0.92rem; }
 .as-vw:hover { background: #FBF3E4; }
 .as-vw .muted { font-size: 0.82rem; }
+.tw-rep-asg { padding: 1rem 1.25rem; margin-bottom: 0.8rem; }
+.tw-rep-head { display: flex; align-items: center; gap: 0.9rem; }
+.tw-rep-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 0.15rem; }
+.tw-rep-main b { color: var(--tw-ink); }
+.tw-rep-main small { color: #9AA1B5; font-size: 0.8rem; }
+.tw-rep-body { margin-top: 0.6rem; }
+.tw-rep-q { border-top: 1px dashed #EFE7D6; padding: 0.55rem 0; }
+.tw-rep-qhead { display: flex; gap: 0.6rem; align-items: baseline; }
+.tw-rep-qn { font-size: 0.72rem; font-weight: 800; color: #9AA1B5; flex-shrink: 0; }
+.tw-rep-qp { flex: 1; color: var(--tw-ink); font-size: 0.92rem; }
+.tw-rep-detail { margin: 0.35rem 0 0 2.1rem; font-size: 0.87rem; line-height: 1.55; }
+.tw-ans-bad { color: #B3261E; font-weight: 700; }
+.tw-ans-good { color: #2E7D32; font-weight: 700; }
 .tw-missed { padding: 0.55rem 0; border-top: 1px dashed #EFE7D6; }
 .tw-missed-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.45rem; }
 .tw-missed-chip { background: #FDF1E7; border: 1px solid #F5CBA8; color: #7A3E14; border-radius: 999px; padding: 0.28rem 0.7rem; font-size: 0.83rem; }
