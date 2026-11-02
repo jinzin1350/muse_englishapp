@@ -12237,16 +12237,13 @@ function paintScores(v, arr, prog) {
     '<div id="sum-history"><div class="empty">Loading summaries…</div></div>';
   html += '<div class="section-title"><h2>🎤 Shadowing</h2></div>' +
     '<div id="sp-history"><div class="empty">Loading shadowing…</div></div>';
-  if (avg === null) {
-    html += '<div class="empty">No quiz attempts yet.<br>Finish a quiz and your scores will appear here.</div>';
-  } else {
-    html += '<div class="card avg-card"><div class="avg-num">' + avg + '%</div><div class="muted">overall average · ' + arr.length + ' attempts</div></div>';
+  if (avg !== null) {
     html += '<div class="section-title"><h2>📊 Analytics</h2>' +
       '<button class="btn btn-sm" data-action="ai-report-student">🤖 AI report</button></div>' +
       '<div id="score-analytics"><div class="empty">Loading analytics…</div></div>';
-    state._progAttempts = arr;
-    html += arr.map(function (a, i) { return attemptCardHTML(a, i); }).join('');
   }
+  /* The attempt-history list itself moved to Review → Quiz history
+     (Alireza 2026-11-02: "jash onjast"). */
   v.innerHTML = html;
   refreshRewardsSection();
   loadMyCerts();
@@ -12418,7 +12415,7 @@ async function aiReportStudent(btn) {
 
 /* ---------------- review view (mistakes) ---------------- */
 function renderMistakes(v, arg) {
-  state.reviewArg = (arg === 'words' || arg === 'shadowing' || arg === 'mistakes') ? arg : '';
+  state.reviewArg = (arg === 'words' || arg === 'shadowing' || arg === 'mistakes' || arg === 'history') ? arg : '';
   paintMistakes(v, lsGet('mistakes'), state.reviewArg);
   if (cloudReady()) {
     getMistakes().then(function (arr) {
@@ -12431,6 +12428,7 @@ function renderMistakes(v, arg) {
    three section cards, each opening its own page — #/review/words,
    #/review/shadowing, #/review/mistakes. */
 var REV_ICONS = {
+  history: '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="4.5" y="3" width="15" height="18" rx="2.5" fill="none" stroke="#2E9E5B" stroke-width="1.9"/><path d="M8.2 8.4h7.6M8.2 12h7.6M8.2 15.6h4.8" stroke="#2E9E5B" stroke-width="1.9" stroke-linecap="round"/></svg>',
   words: '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M7 2.8h10a1.2 1.2 0 0 1 1.2 1.2v17.2L12 16.9l-6.2 4.3V4A1.2 1.2 0 0 1 7 2.8z" fill="#F0443E"/><path d="M12 5.6l1.25 2.53 2.79.4-2.02 1.97.48 2.78L12 11.97l-2.5 1.31.48-2.78-2.02-1.97 2.79-.4z" fill="#fff"/></svg>',
   shadowing: '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="9" y="2" width="6" height="11.5" rx="3" fill="#2B3350"/><path d="M6 11.2a6 6 0 0 0 12 0" fill="none" stroke="#2B3350" stroke-width="1.9" stroke-linecap="round"/><path d="M12 17.4V21M8.6 21h6.8" stroke="#2B3350" stroke-width="1.9" stroke-linecap="round"/></svg>',
   mistakes: '<svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><rect x="1.6" y="1.6" width="20.8" height="20.8" rx="6" fill="#2F7DE1"/><path d="M7.6 12a4.4 4.4 0 0 1 7.5-3.1M16.4 12a4.4 4.4 0 0 1-7.5 3.1" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><path d="M15.5 5.7v3.4h-3.4M8.5 18.3v-3.4h3.4" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>'
@@ -12477,6 +12475,12 @@ function paintMistakes(v, arr, arg) {
     v.innerHTML = mhtml;
     return;
   }
+  if (arg === 'history') {
+    v.innerHTML = '<a class="rev-back" href="#/review">‹ Review</a><h1>Quiz history</h1>' +
+      '<div id="att-history"><div class="empty">Loading history…</div></div>';
+    loadAttemptHistory();
+    return;
+  }
   /* Hub: hero + one card per section, nothing else (his design 2026-11-02). */
   const spCount = getSavedSpSentences().length;
   v.innerHTML = '<h1 class="rev-title">Review</h1>' +
@@ -12485,7 +12489,8 @@ function paintMistakes(v, arr, arg) {
     '<img class="rev-hero-img" src="/media/home/mascot-read-book.png" alt=""></div>' +
     reviewCatCard('#/review/words', 'words', REV_ICONS.words, 'Saved words', 'Hard words you bookmarked — practice quiz & sentence game', '…', 'rev-words-count') +
     reviewCatCard('#/review/shadowing', 'shadowing', REV_ICONS.shadowing, 'Saved shadowing', 'Sentences you saved to practice aloud', spCount, '') +
-    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', arr.length ? 'Get one right and it leaves the list' : 'Nothing to review — nice work! 🎉', arr.length, '');
+    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', arr.length ? 'Get one right and it leaves the list' : 'Nothing to review — nice work! 🎉', arr.length, '') +
+    reviewCatCard('#/review/history', 'history', REV_ICONS.history, 'Quiz history', 'Every quiz you have taken — tap one for details', '…', 'rev-att-count');
   loadReviewHubCounts();
 }
 async function loadReviewHubCounts() {
@@ -12494,6 +12499,34 @@ async function loadReviewHubCounts() {
   const arr = await getSavedWords();
   const cur = document.getElementById('rev-words-count');
   if (cur) cur.textContent = arr.length;
+  const atts = await getAttempts();
+  const ac = document.getElementById('rev-att-count');
+  if (ac) ac.textContent = atts.length;
+}
+/* Quiz history page (moved here from Progress, Alireza 2026-11-02):
+   overall average + every attempt card (tap to expand, see
+   toggleAttemptDetail). Local paint first, cloud refresh after. */
+function paintAttemptHistory(arr) {
+  const host = document.getElementById('att-history');
+  if (!host) return;
+  state._progAttempts = arr;
+  const avg = avgOfAttempts(arr);
+  if (avg === null) {
+    host.innerHTML = '<div class="empty">No quiz attempts yet.<br>Finish a quiz and your history will appear here.</div>';
+    return;
+  }
+  host.innerHTML = '<div class="card avg-card"><div class="avg-num">' + avg + '%</div>' +
+    '<div class="muted">overall average · ' + arr.length + ' attempts</div></div>' +
+    arr.map(function (a, i) { return attemptCardHTML(a, i); }).join('');
+}
+async function loadAttemptHistory() {
+  paintAttemptHistory(lsGet('scores'));
+  if (cloudReady()) {
+    try {
+      const arr = await getAttempts();
+      if (document.getElementById('att-history')) paintAttemptHistory(arr);
+    } catch (e) { /* keep the local paint */ }
+  }
 }
 
 /* Bookmarked words block at the top of Review: list + practice quiz. */
@@ -13822,7 +13855,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020250';
+var APP_VERSION = '202611020258';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

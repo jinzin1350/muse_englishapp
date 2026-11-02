@@ -1526,6 +1526,7 @@ body{background:#FFF9F3;}
 .rev-cat-words { --tint: #FBD9AE; --tile: #FDEBD7; --pill: #FDEBD2; }
 .rev-cat-shadowing { --tint: #D9D2F5; --tile: #E9E4FA; --pill: #EAE5FA; }
 .rev-cat-mistakes { --tint: #BCD8F8; --tile: #DCEBFB; --pill: #E1EEFC; }
+.rev-cat-history { --tint: #BFE6CC; --tile: #DDF0E2; --pill: #E4F4E9; }
 .rev-cat-ico { position: relative; z-index: 1; background: var(--tile, #FDF3E3); border-radius: 17px; width: 3.55rem; height: 3.55rem; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
 .rev-cat-main { position: relative; z-index: 1; flex: 1 1 auto; display: flex; flex-direction: column; gap: 0.22rem; min-width: 0; }
 .rev-cat-main b { font-size: 1.17rem; font-weight: 800; color: #232B4D; }
