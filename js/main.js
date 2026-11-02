@@ -13576,7 +13576,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020027';
+var APP_VERSION = '202611020034';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -15607,15 +15607,17 @@ window.MuseApp = {
 
 var VC_LEVELS = [
   { id: 'all', label: 'All' }, { id: 'a1', label: 'A1' }, { id: 'a2', label: 'A2' },
-  { id: 'b1', label: 'B1' }, { id: 'b2', label: 'B2' }
+  { id: 'b1', label: 'B1' }, { id: 'b2', label: 'B2' }, { id: 'c1', label: 'C1' }, { id: 'c2', label: 'C2' }
 ];
-var VC_LV_COLORS = { a1: '#D9A21B', a2: '#E8833A', b1: '#3FA46A', b2: '#F26522' };
+var VC_LV_COLORS = { a1: '#D9A21B', a2: '#E8833A', b1: '#3FA46A', b2: '#F26522', c1: '#4A90D9', c2: '#8E6FC8' };
 var VC_LV_SUB = {
-  all: 'Every vocabulary topic from A1 to B2 \u2014 words with meanings and examples.',
+  all: 'Every vocabulary topic from A1 to C2 \u2014 words with meanings and examples.',
   a1: 'Essential everyday words with meanings and examples.',
   a2: 'Everyday words with meanings and examples.',
   b1: 'Intermediate words with meanings and examples.',
-  b2: 'Upper-intermediate words with meanings and examples.'
+  b2: 'Upper-intermediate words with meanings and examples.',
+  c1: 'Advanced words with meanings and examples.',
+  c2: 'Proficiency words with meanings and examples.'
 };
 
 function vocabProgress() {
@@ -15646,7 +15648,7 @@ function loadVocabWords(slug) {
   });
 }
 function vcLvBadge(lv) {
-  var label = lv === 'all' ? 'A1\u2013B2' : lv.toUpperCase();
+  var label = lv === 'all' ? 'A1\u2013C2' : lv.toUpperCase();
   var color = lv === 'all' ? '#8A93A6' : (VC_LV_COLORS[lv] || '#8A93A6');
   return '<span class="vc-lv" style="background:' + color + '">' + label + '</span>';
 }
@@ -15656,8 +15658,7 @@ function vcLevelBadges(levels) {
 
 function renderVocab(v, slug) {
   if (slug) { renderVocabCat(v, slug); return; }
-  if (!state.vcFilter) state.vcFilter = { level: normalizeLevel(state.user && state.user.level) || 'a1', q: '' };
-  if (state.vcFilter.level === 'c1' || state.vcFilter.level === 'c2') state.vcFilter.level = 'b2';
+  if (!state.vcFilter) state.vcFilter = { level: 'all', q: '' };
   var f = state.vcFilter;
   var totalWords = (state.vocabCats || []).reduce(function (a, c) { return a + (c.word_count || 0); }, 0);
   v.innerHTML = '<div class="vc-hub">' +
@@ -15877,7 +15878,7 @@ function playVocabAudio(src) {
 }
 
 function startVocabQuiz(cat, words) {
-  var LV_RANK = { a1: 1, a2: 2, b1: 3, b2: 4 };
+  var LV_RANK = { a1: 1, a2: 2, b1: 3, b2: 4, c1: 5, c2: 6 };
   function maxLv(w) {
     var m = 0;
     (w.levels || []).forEach(function (l) { m = Math.max(m, LV_RANK[l] || 0); });
