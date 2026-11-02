@@ -13522,7 +13522,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611011800';
+var APP_VERSION = '202611020016';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -15622,7 +15622,7 @@ function renderVocab(v, slug) {
       return '<button class="vc-pill vc-pill-lv-' + lv.id + (f.level === lv.id ? ' on' : '') + '" data-vlevel="' + lv.id + '">' + lv.label + '</button>';
     }).join('') + '</div>' +
     '<div class="vc-search"><span class="vc-search-ico">\uD83D\uDD0D</span>' +
-      '<input id="vc-search" type="search" placeholder="Search vocabulary topics..." value="' + esc(f.q) + '" aria-label="Search vocabulary topics"></div>' +
+      '<input id="vc-search" type="search" placeholder="Search words or topics..." value="' + esc(f.q) + '" aria-label="Search words or topics"></div>' +
     '<div class="vc-sec"><span id="vc-sec-lv"></span>' +
       '<div class="vc-sec-t"><h2>Vocabulary Topics</h2><p id="vc-sec-sub"></p></div>' +
       '<span class="vc-count" id="vc-count"></span></div>' +
@@ -15656,24 +15656,100 @@ function paintVcHeader() {
   if (sub) sub.textContent = VC_LV_SUB[f.level] || VC_LV_SUB.all;
 }
 
+/* One word row — shared by the topic page and hub word-search results.
+   catTitleBySlug (optional): when given, the row links to the word's topics. */
+function vocabWordRowHTML(w, catTitleBySlug) {
+  var topics = '';
+  if (catTitleBySlug && w.categories && w.categories.length) {
+    var links = w.categories.map(function (s) {
+      return catTitleBySlug[s] ? '<a href="#/vocab/' + esc(s) + '">' + esc(catTitleBySlug[s]) + '</a>' : '';
+    }).join('');
+    if (links) topics = '<div class="vc-word-topics">' + links + '</div>';
+  }
+  return '<div class="vc-word">' +
+    (w.photo ? '<img class="vc-word-img" src="' + (/^https?:\/\//.test(w.photo) ? w.photo : '/' + w.photo) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '') +
+    '<div class="vc-word-body">' +
+    '<div class="vc-word-top"><b>' + esc(w.word) + '</b>' +
+    (w.audio ? '<button class="vc-say" data-action="vc-say" data-audio="' + esc(/^https?:\/\//.test(w.audio) ? w.audio : '/' + w.audio) + '" aria-label="Listen to pronunciation">\uD83D\uDD0A</button>' : '') +
+    (w.phonetic ? '<span class="vc-phon">/' + esc(w.phonetic) + '/</span>' : '') +
+    (w.pos ? '<span class="vc-pos">' + esc(w.pos) + '</span>' : '') +
+    vcLevelBadges(w.levels) + '</div>' +
+    (w.meaning_fa ? '<div class="vc-meaning">' + esc(w.meaning_fa) + '</div>' : '') +
+    (w.example_en ? '<div class="vc-example">' + esc(w.example_en) + '</div>' : '') +
+    topics +
+    '</div></div>';
+}
+
+/* Word search over the full 9,136-word bank: exact / starts-with / contains
+   on the headword first, then Persian meaning, then English meaning. */
+function vcSearchWords(all, q, level) {
+  var ql = q.toLowerCase();
+  var scored = [];
+  for (var i = 0; i < all.length; i++) {
+    var w = all[i];
+    if (level !== 'all' && (w.levels || []).indexOf(level) === -1) continue;
+    var wl = (w.word || '').toLowerCase();
+    var s = -1;
+    if (wl === ql) s = 0;
+    else if (wl.indexOf(ql) === 0) s = 1;
+    else if (wl.indexOf(ql) !== -1) s = 2;
+    else if ((w.meaning_fa || '').indexOf(q) !== -1) s = 3;
+    else if ((w.meaning_en || '').toLowerCase().indexOf(ql) !== -1) s = 4;
+    if (s >= 0) scored.push({ w: w, s: s });
+  }
+  scored.sort(function (a, b) {
+    if (a.s !== b.s) return a.s - b.s;
+    return String(a.w.word).localeCompare(String(b.w.word));
+  });
+  return scored.slice(0, 30).map(function (x) { return x.w; });
+}
+
 function paintVocabList() {
   var wrap = document.getElementById('vc-list');
   if (!wrap) return;
   var f = state.vcFilter || { level: 'all', q: '' };
   loadVocabCats().then(function (cats) {
     var prog = vocabProgress();
-    var q = (f.q || '').toLowerCase();
+    var q = (f.q || '').trim();
+    var ql = q.toLowerCase();
     var list = cats.filter(function (c) {
       if (f.level !== 'all' && c.levels.indexOf(f.level) === -1) return false;
-      if (q && c.title.toLowerCase().indexOf(q) === -1) return false;
+      if (ql && c.title.toLowerCase().indexOf(ql) === -1) return false;
       return true;
     });
-    if (!list.length) { wrap.innerHTML = '<div class="empty">No topics match.</div>'; return; }
     var count = document.getElementById('vc-count');
-    if (count) count.textContent = list.length + ' topic' + (list.length === 1 ? '' : 's');
-    wrap.innerHTML = '<div class="vc-cards">' + list.map(function (c) {
-      return vocabCardHTML(c, prog[c.slug]);
-    }).join('') + '</div>';
+    if (!q) {
+      if (!list.length) { wrap.innerHTML = '<div class="empty">No topics match.</div>'; return; }
+      if (count) count.textContent = list.length + ' topic' + (list.length === 1 ? '' : 's');
+      wrap.innerHTML = '<div class="vc-cards">' + list.map(function (c) {
+        return vocabCardHTML(c, prog[c.slug]);
+      }).join('') + '</div>';
+      return;
+    }
+    /* Search mode: matching words first (from the full bank), then matching topics. */
+    return loadAllWords().then(function (all) {
+      var catTitle = {};
+      cats.forEach(function (c) { catTitle[c.slug] = c.title; });
+      var matches = vcSearchWords(all, q, f.level);
+      if (!matches.length && !list.length) {
+        if (count) count.textContent = '0 results';
+        wrap.innerHTML = '<div class="empty">No words or topics match.</div>';
+        return;
+      }
+      if (count) count.textContent = (matches.length + list.length) + ' result' + ((matches.length + list.length) === 1 ? '' : 's');
+      var html = '';
+      if (matches.length) {
+        html += '<div class="vc-search-h">Words</div><div class="vc-words">' + matches.map(function (w) {
+          return vocabWordRowHTML(w, catTitle);
+        }).join('') + '</div>';
+      }
+      if (list.length) {
+        html += '<div class="vc-search-h">Topics</div><div class="vc-cards">' + list.map(function (c) {
+          return vocabCardHTML(c, prog[c.slug]);
+        }).join('') + '</div>';
+      }
+      wrap.innerHTML = html;
+    });
   }).catch(function () {
     wrap.innerHTML = '<div class="empty">Could not load vocabulary topics. Check your connection and try again.</div>';
   });
@@ -15703,19 +15779,7 @@ function renderVocabCat(v, slug) {
     return loadVocabWords(slug).then(function (words) {
       var prog = vocabProgress()[slug];
       var best = prog && prog.done ? '<span class="vc-best">\u2713 Practised</span>' : '';
-      var rows = words.map(function (w) {
-        return '<div class="vc-word">' +
-          (w.photo ? '<img class="vc-word-img" src="' + (/^https?:\/\//.test(w.photo) ? w.photo : '/' + w.photo) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'"/>' : '') +
-          '<div class="vc-word-body">' +
-          '<div class="vc-word-top"><b>' + esc(w.word) + '</b>' +
-          (w.audio ? '<button class="vc-say" data-action="vc-say" data-audio="' + esc(/^https?:\/\//.test(w.audio) ? w.audio : '/' + w.audio) + '" aria-label="Listen to pronunciation">\uD83D\uDD0A</button>' : '') +
-          (w.phonetic ? '<span class="vc-phon">/' + esc(w.phonetic) + '/</span>' : '') +
-          (w.pos ? '<span class="vc-pos">' + esc(w.pos) + '</span>' : '') +
-          vcLevelBadges(w.levels) + '</div>' +
-          (w.meaning_fa ? '<div class="vc-meaning">' + esc(w.meaning_fa) + '</div>' : '') +
-          (w.example_en ? '<div class="vc-example">' + esc(w.example_en) + '</div>' : '') +
-          '</div></div>';
-      }).join('');
+      var rows = words.map(function (w) { return vocabWordRowHTML(w); }).join('');
       v.innerHTML = '<div class="vc-topic">' +
         '<a class="vc-back" href="#/vocab">\u2039 All topics</a>' +
         '<div class="vc-hero vc-hero-topic"><div class="vc-hero-t">' +
