@@ -8132,6 +8132,9 @@ function finishGTest(timeUp) {
   var store = getGTestStore();
   store.last = report;
   store.count = (store.count || 0) + 1;
+  /* Keep every run (newest first) so Progress can show the full history
+     and the score trend — not just the latest report. */
+  store.history = [report].concat((store.history || []).filter(function (r) { return r.ts !== report.ts; })).slice(0, 12);
   setGTestStore(store);
   saveAttempt({ kind: 'grammar_test', theme: 'placement', score: correct, total: total, date: todayStr() });
   state.gtest = null;
@@ -8174,6 +8177,94 @@ function renderGTestReport(v, report) {
     '</div></div>';
   document.getElementById('gt-retake').addEventListener('click', function () { go('grammar-test'); });
   window.scrollTo(0, 0);
+}
+
+/* ---------------- grammar check-up on Progress ----------------
+   Latest report in full + every past run (date, score) + score trend.
+   Detail (per-level bars, weak spots) lives in the local store; the
+   date+score history is merged with the cloud quiz_attempts rows
+   (kind='grammar_test') so tests taken on another device still appear. */
+
+function gtestDateStr(ts) {
+  var d = new Date(ts);
+  return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+}
+function gtestFmtDate(ts) {
+  return new Date(ts).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+function gtestEntries(cloudRows) {
+  var store = getGTestStore();
+  var local = (store.history && store.history.length) ? store.history.slice()
+    : (store.last ? [store.last] : []);
+  var seen = {};
+  var out = local.map(function (r) {
+    seen[gtestDateStr(r.ts) + '|' + r.correct + '|' + r.total] = 1;
+    return { ts: r.ts, correct: r.correct, total: r.total, timeUp: r.timeUp, perLevel: r.perLevel, weak: r.weak };
+  });
+  (cloudRows || []).forEach(function (row) {
+    var ts = row.created_at ? new Date(row.created_at).getTime()
+      : new Date((row.date || '') + 'T12:00:00').getTime();
+    if (!ts || isNaN(ts)) return;
+    var key = (row.date || gtestDateStr(ts)) + '|' + row.score + '|' + row.total;
+    if (seen[key]) return;
+    seen[key] = 1;
+    out.push({ ts: ts, correct: row.score, total: row.total, cloudOnly: true });
+  });
+  out.sort(function (a, b) { return b.ts - a.ts; });
+  return out.slice(0, 12);
+}
+function gtestProgressCardHTML(entries) {
+  if (!entries.length) {
+    return '<div class="card plain"><p style="margin:0 0 0.7rem">Find your weak spots with a quick 30-question grammar check-up (A1–C1). Your results will live here.</p>' +
+      '<a class="btn btn-primary" href="#/grammar-test">🎯 Start the check-up</a></div>';
+  }
+  var last = entries[0];
+  var pct = last.total ? Math.round((last.correct / last.total) * 100) : 0;
+  var html = '<div class="card plain gt-prog">';
+  html += '<div class="gt-prog-top"><div><div class="gt-prog-score"><b>' + last.correct + '</b><span>/' + last.total + ' correct · ' + pct + '%</span></div>' +
+    '<div class="muted">🗓 ' + gtestFmtDate(last.ts) + (last.timeUp ? ' · ⏰ time ran out' : '') +
+    (entries.length > 1 ? ' · test #' + entries.length : '') + '</div></div>' +
+    '<div class="gt-prog-btns">' +
+    (last.perLevel ? '<a class="btn btn-sm" href="#/grammar-test/report">Full report</a>' : '') +
+    '<a class="btn btn-sm btn-primary" href="#/grammar-test">Retake</a></div></div>';
+  if (last.perLevel) {
+    html += '<div class="gt-levels" style="margin-top:0.9rem">' + last.perLevel.map(function (p) {
+      var lp = p.t ? Math.round(p.c / p.t * 100) : 0;
+      return '<div class="gt-level-row"><span class="g-lv g-lv-' + p.lv + '">' + p.lv.toUpperCase() + '</span>' +
+        '<div class="gt-level-bar"><span style="width:' + lp + '%"></span></div>' +
+        '<span class="gt-level-num">' + p.c + '/' + p.t + '</span></div>';
+    }).join('') + '</div>';
+  }
+  if (last.weak && last.weak.length) {
+    html += '<div class="gt-prog-weak"><b>🎯 Focus on:</b> ' + last.weak.slice(0, 3).map(function (w) {
+      return '<a class="gt-weak-chip" href="#/grammar/' + esc(w.slug) + '">' + esc(w.h1) + ' · ' + w.wrong + ' missed</a>';
+    }).join('') + (last.weak.length > 3 ? '<span class="muted">+' + (last.weak.length - 3) + ' more in the full report</span>' : '') + '</div>';
+  }
+  if (entries.length >= 2) {
+    var pts = entries.slice().reverse().map(function (e) {
+      return { label: gtestFmtDate(e.ts).replace(/, \d{4}$/, ''), pct: e.total ? Math.round((e.correct / e.total) * 100) : 0 };
+    });
+    html += '<div class="an-title" style="margin-top:1rem">📈 Score trend</div>' + trendChartHTML(pts);
+    html += '<div class="gt-hist">' + entries.map(function (e) {
+      var p2 = e.total ? Math.round((e.correct / e.total) * 100) : 0;
+      return '<div class="gt-hist-row"><span>🗓 ' + gtestFmtDate(e.ts) + '</span>' +
+        '<span class="gt-hist-score">' + e.correct + '/' + e.total + ' · ' + p2 + '%' + '</span>' +
+        '<span class="muted">' + (e.weak ? e.weak.length + ' weak spot' + (e.weak.length === 1 ? '' : 's') : (e.cloudOnly ? 'taken on another device' : '')) + '</span></div>';
+    }).join('') + '</div>';
+  }
+  return html + '</div>';
+}
+async function loadGTestProgress() {
+  var host = document.getElementById('gt-progress-card');
+  if (!host || !cloudReady() || !state.user) return;
+  try {
+    var q = await sb.from('quiz_attempts').select('date,score,total,created_at')
+      .eq('user_id', state.user.id).eq('kind', 'grammar_test')
+      .order('created_at', { ascending: false }).limit(24);
+    if (q.error) throw q.error;
+    if (!document.getElementById('gt-progress-card')) return;
+    host.innerHTML = gtestProgressCardHTML(gtestEntries(q.data || []));
+  } catch (e) { /* keep the local paint */ }
 }
 
 /* Hub banner: "Check your grammar!" first time, last-report summary after. */
@@ -12050,6 +12141,8 @@ function paintScores(v, arr, prog) {
   html += progStatsHTML(prog);
   html += '<div class="section-title"><h2>🏅 My certificates</h2></div>' +
     '<div id="my-certs"><div class="empty">Loading certificates…</div></div>';
+  html += '<div class="section-title"><h2>🎯 Grammar check-up</h2></div>' +
+    '<div id="gt-progress-card">' + gtestProgressCardHTML(gtestEntries(null)) + '</div>';
   html += rewardsPlaceholderHTML();
   html += '<div class="section-title"><h2>🎙️ Podcast summaries</h2></div>' +
     '<div id="sum-history"><div class="empty">Loading summaries…</div></div>';
@@ -12067,6 +12160,7 @@ function paintScores(v, arr, prog) {
   v.innerHTML = html;
   refreshRewardsSection();
   loadMyCerts();
+  loadGTestProgress();
   loadScoreAnalytics();
   loadSummaryHistory();
   loadShadowingStats();
@@ -13589,7 +13683,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020134';
+var APP_VERSION = '202611020205';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

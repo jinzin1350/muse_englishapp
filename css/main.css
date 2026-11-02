@@ -3976,6 +3976,15 @@ body.view-words #view { background: #FDF8F1; }
 .gt-weak-main b { font-size: 15px; color: #3C3C3C; }
 .gt-weak-main span { font-size: 13px; color: #AFAFAF; font-weight: 700; }
 .gt-levels { text-align: left; margin-bottom: 24px; }
+.gt-prog-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; }
+.gt-prog-score { font-size: 1.05rem; color: var(--ink); }
+.gt-prog-score b { font-size: 1.9rem; font-weight: 800; margin-right: 0.15rem; }
+.gt-prog-btns { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.gt-prog-weak { margin-top: 0.8rem; display: flex; align-items: center; gap: 0.45rem; flex-wrap: wrap; }
+.gt-weak-chip { background: #FDF1E7; border: 1px solid #F5CBA8; color: #7A3E14; border-radius: 999px; padding: 0.28rem 0.7rem; font-size: 0.83rem; text-decoration: none; font-weight: 600; }
+.gt-hist { margin-top: 0.6rem; }
+.gt-hist-row { display: flex; gap: 1rem; align-items: baseline; padding: 0.45rem 0; border-top: 1px dashed #EFE7D6; font-size: 0.92rem; }
+.gt-hist-score { font-weight: 800; color: var(--ink); }
 .gt-level-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
 .gt-level-bar { flex: 1 1 auto; height: 12px; background: #E5E5E5; border-radius: 8px; overflow: hidden; }
 .gt-level-bar span { display: block; height: 100%; background: #1CB0F6; border-radius: 8px; }
