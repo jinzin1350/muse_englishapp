@@ -12340,10 +12340,15 @@ function renderMistakes(v, arg) {
 /* Review is a hub now (Alireza 2026-11-02: the page was too crowded):
    three section cards, each opening its own page — #/review/words,
    #/review/shadowing, #/review/mistakes. */
-function reviewCatCard(href, ico, title, desc, count, countId) {
-  return '<a class="rev-cat" href="' + href + '">' +
+var REV_ICONS = {
+  words: '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M7 2.8h10a1.2 1.2 0 0 1 1.2 1.2v17.2L12 16.9l-6.2 4.3V4A1.2 1.2 0 0 1 7 2.8z" fill="#F0443E"/><path d="M12 5.6l1.25 2.53 2.79.4-2.02 1.97.48 2.78L12 11.97l-2.5 1.31.48-2.78-2.02-1.97 2.79-.4z" fill="#fff"/></svg>',
+  shadowing: '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="9" y="2" width="6" height="11.5" rx="3" fill="#2B3350"/><path d="M6 11.2a6 6 0 0 0 12 0" fill="none" stroke="#2B3350" stroke-width="1.9" stroke-linecap="round"/><path d="M12 17.4V21M8.6 21h6.8" stroke="#2B3350" stroke-width="1.9" stroke-linecap="round"/></svg>',
+  mistakes: '<svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><rect x="1.6" y="1.6" width="20.8" height="20.8" rx="6" fill="#2F7DE1"/><path d="M7.6 12a4.4 4.4 0 0 1 7.5-3.1M16.4 12a4.4 4.4 0 0 1-7.5 3.1" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><path d="M15.5 5.7v3.4h-3.4M8.5 18.3v-3.4h3.4" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+};
+function reviewCatCard(href, mod, ico, title, desc, count, countId) {
+  return '<a class="rev-cat rev-cat-' + mod + '" href="' + href + '">' +
     '<span class="rev-cat-ico">' + ico + '</span>' +
-    '<span class="rev-cat-main"><b>' + title + '</b><span class="muted">' + desc + '</span></span>' +
+    '<span class="rev-cat-main"><b>' + title + '</b><span class="rev-cat-desc">' + desc + '</span></span>' +
     '<span class="rev-cat-count"' + (countId ? ' id="' + countId + '"' : '') + '>' + count + '</span>' +
     '<span class="rev-cat-arrow">›</span></a>';
 }
@@ -12382,12 +12387,15 @@ function paintMistakes(v, arr, arg) {
     v.innerHTML = mhtml;
     return;
   }
-  /* Hub: one card per section, nothing else. */
+  /* Hub: hero + one card per section, nothing else (his design 2026-11-02). */
   const spCount = getSavedSpSentences().length;
-  v.innerHTML = '<h1>Review</h1>' +
-    reviewCatCard('#/review/words', '🔖', 'Saved words', 'Hard words you bookmarked — practice quiz & sentence game', '…', 'rev-words-count') +
-    reviewCatCard('#/review/shadowing', '🎤', 'Saved shadowing', 'Sentences you saved to practice aloud', spCount, '') +
-    reviewCatCard('#/review/mistakes', '🔁', 'Mistakes to review', arr.length ? 'Get one right and it leaves the list' : 'Nothing to review — nice work! 🎉', arr.length, '');
+  v.innerHTML = '<h1 class="rev-title">Review</h1>' +
+    '<div class="rev-hero"><div class="rev-hero-text"><h2>Keep Your English Fresh</h2>' +
+    '<p>Practice saved words, shadowing and mistakes.</p></div>' +
+    '<img class="rev-hero-img" src="/media/home/mascot-read-book.png" alt=""></div>' +
+    reviewCatCard('#/review/words', 'words', REV_ICONS.words, 'Saved words', 'Hard words you bookmarked — practice quiz & sentence game', '…', 'rev-words-count') +
+    reviewCatCard('#/review/shadowing', 'shadowing', REV_ICONS.shadowing, 'Saved shadowing', 'Sentences you saved to practice aloud', spCount, '') +
+    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', arr.length ? 'Get one right and it leaves the list' : 'Nothing to review — nice work! 🎉', arr.length, '');
   loadReviewHubCounts();
 }
 async function loadReviewHubCounts() {
@@ -13723,7 +13731,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020212';
+var APP_VERSION = '202611020239';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

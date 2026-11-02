@@ -1499,14 +1499,27 @@ body{background:#FFF9F3;}
 
 
 /* ============ Review banner (2026-10-02) ============ */
-.rev-cat { display: flex; align-items: center; gap: 0.9rem; background: #fff; border: 1px solid #F0E4CF; border-radius: 18px; padding: 1rem 1.1rem; margin-bottom: 0.8rem; text-decoration: none; color: var(--ink); box-shadow: 0 1px 3px rgba(60,40,10,0.05); }
+.rev-title { font-size: 2.55rem; font-weight: 800; color: #1E2A45; letter-spacing: -0.01em; margin: 0.4rem 0 1.1rem; position: relative; padding-bottom: 0.55rem; }
+.rev-title::after { content: ""; position: absolute; left: 0.1rem; bottom: 0; width: 64px; height: 6px; border-radius: 99px; background: linear-gradient(90deg, #F59E0B, #EE4D1C); }
+.rev-hero { position: relative; overflow: hidden; display: flex; align-items: center; gap: 0.6rem; background: linear-gradient(120deg, #FFF8EC 0%, #FDEFD8 55%, #FBE3C2 100%); border: 1px solid #F6E7CE; border-radius: 28px; padding: 1.35rem 1.4rem; margin-bottom: 1.05rem; }
+.rev-hero::before { content: ""; position: absolute; left: -70px; bottom: -95px; width: 240px; height: 170px; border-radius: 50%; background: rgba(255, 255, 255, 0.5); }
+.rev-hero::after { content: ""; position: absolute; right: -50px; top: -80px; width: 190px; height: 150px; border-radius: 50%; background: rgba(255, 255, 255, 0.45); }
+.rev-hero-text { position: relative; z-index: 1; flex: 1 1 auto; min-width: 0; }
+.rev-hero-text h2 { font-size: 1.52rem; font-weight: 800; color: #1E2A45; margin: 0 0 0.45rem; line-height: 1.2; }
+.rev-hero-text p { margin: 0; color: #5B6579; font-size: 0.98rem; line-height: 1.5; }
+.rev-hero-img { position: relative; z-index: 1; height: 148px; width: auto; flex: 0 0 auto; margin: -0.5rem -0.3rem -1rem 0; }
+.rev-cat { position: relative; overflow: hidden; display: flex; align-items: center; gap: 1rem; background: #fff; border: 1px solid #F6EBD9; border-radius: 26px; padding: 1.15rem 1.2rem; margin-bottom: 1rem; text-decoration: none; color: var(--ink); box-shadow: 0 8px 22px rgba(96, 64, 16, 0.06); }
 .rev-cat:active { transform: scale(0.99); }
-.rev-cat-ico { font-size: 1.5rem; background: #FDF3E3; border-radius: 14px; width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
-.rev-cat-main { flex: 1 1 auto; display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
-.rev-cat-main b { font-size: 1.02rem; }
-.rev-cat-main .muted { font-size: 0.82rem; }
-.rev-cat-count { font-weight: 800; font-size: 1.05rem; color: #EE4D1C; background: #FDF1E7; border-radius: 999px; padding: 0.2rem 0.65rem; }
-.rev-cat-arrow { font-size: 1.5rem; color: #C9B99B; font-weight: 700; }
+.rev-cat::after { content: ""; position: absolute; right: -46px; bottom: -64px; width: 165px; height: 130px; border-radius: 50%; background: var(--tint, #FBE3C2); opacity: 0.4; pointer-events: none; }
+.rev-cat-words { --tint: #FBD9AE; --tile: #FDEBD7; --pill: #FDEBD2; }
+.rev-cat-shadowing { --tint: #D9D2F5; --tile: #E9E4FA; --pill: #EAE5FA; }
+.rev-cat-mistakes { --tint: #BCD8F8; --tile: #DCEBFB; --pill: #E1EEFC; }
+.rev-cat-ico { position: relative; z-index: 1; background: var(--tile, #FDF3E3); border-radius: 17px; width: 3.55rem; height: 3.55rem; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+.rev-cat-main { position: relative; z-index: 1; flex: 1 1 auto; display: flex; flex-direction: column; gap: 0.22rem; min-width: 0; }
+.rev-cat-main b { font-size: 1.17rem; font-weight: 800; color: #232B4D; }
+.rev-cat-desc { font-size: 0.9rem; color: #66708A; line-height: 1.45; }
+.rev-cat-count { position: relative; z-index: 1; font-weight: 800; font-size: 1.28rem; color: #F26B1D; background: var(--pill, #FDF1E7); border-radius: 999px; padding: 0.32rem 0.85rem; }
+.rev-cat-arrow { position: relative; z-index: 1; font-size: 1.65rem; color: #9AA3B8; font-weight: 600; }
 .rev-back { display: inline-block; margin-bottom: 0.4rem; color: #EE4D1C; font-weight: 700; text-decoration: none; }
 .review-banner{position:relative;display:block;width:100%;border:0;padding:0;cursor:pointer;
   border-radius:22px;background:#FEFBF6 url('/media/home/review-banner.webp') top center/cover no-repeat;
