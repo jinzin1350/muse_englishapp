@@ -1858,8 +1858,26 @@ async function audioAvailable(url) {
   } catch (e) {}
   try {
     const r = await fetch(url, { method: 'HEAD' });
-    return r.ok;
-  } catch (e) { return false; }
+    if (r.ok) return true;
+  } catch (e) {}
+  // Hosts without CORS headers (e.g. the R2 public bucket holding the
+  // pre-2026-10-10 lesson media) fail the fetch check even when the file
+  // exists, but a media element can still load them — probe with one.
+  return new Promise(function (resolve) {
+    const probe = new Audio();
+    let done = false;
+    const finish = function (ok) {
+      if (done) return;
+      done = true;
+      try { probe.removeAttribute('src'); probe.load(); } catch (e) {}
+      resolve(ok);
+    };
+    probe.preload = 'metadata';
+    probe.addEventListener('loadedmetadata', function () { finish(true); });
+    probe.addEventListener('error', function () { finish(false); });
+    setTimeout(function () { finish(false); }, 8000);
+    probe.src = url;
+  });
 }
 
 /* Seek & skip: shared helpers for the audio cards. */
@@ -13941,7 +13959,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020320';
+var APP_VERSION = '202611020413';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
