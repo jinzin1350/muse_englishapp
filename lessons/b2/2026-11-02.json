@@ -1,0 +1,324 @@
+{
+  "date": "2026-11-02",
+  "theme": "sports & fitness",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "archer",
+      "pos": "noun",
+      "meaning": "A person who shoots with a bow and arrow.",
+      "example": "The archer aimed carefully at the target.",
+      "pronunciation": "AR-cher",
+      "persian": "کماندار",
+      "photo": "media/b2/2026-11-02/photos/archer.jpg",
+      "word_audio": "media/b2/2026-11-02/word-audio/archer.mp3"
+    },
+    {
+      "word": "archery",
+      "pos": "noun",
+      "meaning": "The sport of shooting with a bow and arrow.",
+      "example": "Archery requires good focus and steady hands.",
+      "pronunciation": "AR-cher-ee",
+      "persian": "تیراندازی با کمان",
+      "photo": "media/b2/2026-11-02/photos/archery.jpg",
+      "word_audio": "media/b2/2026-11-02/word-audio/archery.mp3"
+    },
+    {
+      "word": "athletics",
+      "pos": "noun",
+      "meaning": "Sports like running, jumping, and throwing.",
+      "example": "She loves watching athletics on TV.",
+      "pronunciation": "ath-LET-iks",
+      "persian": "دو و میدانی",
+      "photo": "media/b2/2026-11-02/photos/athletics.jpg",
+      "word_audio": "media/b2/2026-11-02/word-audio/athletics.mp3"
+    },
+    {
+      "word": "billiards",
+      "pos": "noun",
+      "meaning": "A game played with balls and cues.",
+      "example": "He enjoys playing billiards with friends.",
+      "pronunciation": "BIL-yerdz",
+      "persian": "بیلیارد",
+      "photo": "media/b2/2026-11-02/photos/billiards.jpg",
+      "word_audio": "media/b2/2026-11-02/word-audio/billiards.mp3"
+    },
+    {
+      "word": "bow",
+      "pos": "noun",
+      "meaning": "A weapon for shooting arrows.",
+      "example": "He learned to shoot an arrow with a bow.",
+      "pronunciation": "BOH",
+      "persian": "کمان",
+      "photo": "media/b2/2026-11-02/photos/bow.jpg",
+      "word_audio": "media/b2/2026-11-02/word-audio/bow.mp3"
+    },
+    {
+      "word": "canoeist",
+      "pos": "noun",
+      "meaning": "A person who paddles a small, light boat.",
+      "example": "The canoeist skillfully navigated the fast river rapids.",
+      "pronunciation": "kuh-NOO-ist",
+      "persian": "قایقران کانو",
+      "photo": "media/b2/2026-11-02/photos/canoeist.jpg",
+      "word_audio": "media/b2/2026-11-02/word-audio/canoeist.mp3"
+    },
+    {
+      "word": "club",
+      "pos": "noun",
+      "meaning": "A group of people who meet for an activity.",
+      "example": "He joined a local football club.",
+      "pronunciation": "KLUB",
+      "persian": "باشگاه",
+      "photo": "media/b2/2026-11-02/photos/club.jpg",
+      "word_audio": "media/b2/2026-11-02/word-audio/club.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-11-02/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: A Day at the Sports Club",
+    "audio": "media/b2/2026-11-02/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-11-02/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Busy Saturday at the Sports Club",
+    "audio": "media/b2/2026-11-02/shadowing.mp3",
+    "transcript": "media/b2/2026-11-02/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-11-02/shadowing-sentences/001.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/002.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/003.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/004.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/005.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/006.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/007.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/008.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/009.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/010.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/011.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/012.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/013.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/014.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/015.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/016.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/017.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/018.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/019.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/020.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/021.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/022.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/023.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/024.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/025.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/026.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/027.mp3",
+      "media/b2/2026-11-02/shadowing-sentences/028.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'archer' mean?",
+      "options": [
+        "The sport of shooting with a bow and arrow.",
+        "A weapon for shooting arrows.",
+        "A person who shoots with a bow and arrow.",
+        "A person who paddles a small, light boat."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'archery' mean?",
+      "options": [
+        "A person who shoots with a bow and arrow.",
+        "Sports like running, jumping, and throwing.",
+        "The sport of shooting with a bow and arrow.",
+        "A weapon for shooting arrows."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'athletics' mean?",
+      "options": [
+        "Sports like running, jumping, and throwing.",
+        "A group of people who meet for an activity.",
+        "A person who paddles a small, light boat.",
+        "A weapon for shooting arrows."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'billiards' mean?",
+      "options": [
+        "The sport of shooting with a bow and arrow.",
+        "A person who paddles a small, light boat.",
+        "A person who shoots with a bow and arrow.",
+        "A game played with balls and cues."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'bow' mean?",
+      "options": [
+        "A person who shoots with a bow and arrow.",
+        "A group of people who meet for an activity.",
+        "A person who paddles a small, light boat.",
+        "A weapon for shooting arrows."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'canoeist' mean?",
+      "options": [
+        "A weapon for shooting arrows.",
+        "A person who paddles a small, light boat.",
+        "A group of people who meet for an activity.",
+        "A person who shoots with a bow and arrow."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'club' mean?",
+      "options": [
+        "A group of people who meet for an activity.",
+        "A person who paddles a small, light boat.",
+        "A person who shoots with a bow and arrow.",
+        "The sport of shooting with a bow and arrow."
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Causative: Have/Get Something Done",
+    "explanation": "We use **have something done** when we arrange for another person to do something for us, usually a service.\n\nFor example, an archer can **have his bow repaired** at a shop, and a club can **have its billiards tables cleaned** each week.\n\n**Get something done** means the same, but it is more informal.\n\nWord order matters: the object goes **before** the past participle, as in **have my hair cut**.\n\nWe also use **have something done** for bad experiences, like **had her bag stolen** on the train.\n\nWith people, we use **have someone do** something, and **get someone to do** something, as in **got my brother to help** me.",
+    "examples": [
+      "*I **had my hair cut** last week.* (a service)",
+      "*We're **getting** the house **painted** next month.* (a plan)",
+      "*You should **have** your eyes **tested**.* (advice)",
+      "*She **had her phone stolen** at the station.* (a bad experience)",
+      "*I need to **get** my passport **renewed**.* (a service you need)",
+      "*I **got my friend to check** my essay.* (persuading someone)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite using have something done: Someone will repair the archer's bow for him.",
+        "a": "The archer will have his bow repaired."
+      },
+      {
+        "q": "Rewrite using have something done: Someone cleans the club's billiards tables every week.",
+        "a": "The club has its billiards tables cleaned every week."
+      },
+      {
+        "q": "Rewrite using get someone to do: Persuade your friend to join the athletics club.",
+        "a": "Get your friend to join the athletics club."
+      },
+      {
+        "q": "Rewrite using have someone do: The coach arranged for the canoeist to check the boat.",
+        "a": "The coach had the canoeist check the boat."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ last week. It looks great!",
+        "options": [
+          "had my hair cut",
+          "had cut my hair",
+          "cut my hair had",
+          "had my hair cutting"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You should get that cut ___ by a doctor.",
+        "options": [
+          "check",
+          "checking",
+          "checked",
+          "to check"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We're having our kitchen ___ next month.",
+        "options": [
+          "paint",
+          "painted",
+          "painting",
+          "to paint"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She had her wallet ___ on the bus.",
+        "options": [
+          "steal",
+          "stealing",
+          "stole",
+          "stolen"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I had my car repairing at the garage.",
+          "I had my car repair at the garage.",
+          "I had my car repaired at the garage.",
+          "I had my car to repair at the garage."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I got my sister ___ me with my homework.",
+        "options": [
+          "help",
+          "to help",
+          "helped",
+          "helping"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "They ___ their flight cancelled because of the storm.",
+        "options": [
+          "had",
+          "made",
+          "did",
+          "let"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "How often do you ___ your car serviced?",
+        "options": [
+          "make",
+          "do",
+          "let",
+          "have"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Where did you ___ your nails done?",
+        "options": [
+          "make",
+          "do",
+          "get",
+          "let"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I'll have my assistant ___ you back.",
+        "options": [
+          "to call",
+          "call",
+          "called",
+          "calling"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "date": "2026-11-02",
+  "theme": "nature & environment",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "cholera",
+      "pos": "noun",
+      "meaning": "A serious disease causing severe diarrhoea.",
+      "example": "Cholera can spread quickly in poor areas.",
+      "pronunciation": "KOL-er-uh",
+      "persian": "وبا",
+      "photo": "media/a1/2026-11-02/photos/cholera.jpg",
+      "word_audio": "media/a1/2026-11-02/word-audio/cholera.mp3"
+    },
+    {
+      "word": "cloudy",
+      "pos": "adjective",
+      "meaning": "Full of clouds.",
+      "example": "It's a cloudy day, so no sun.",
+      "pronunciation": "KLOW-dee",
+      "persian": "ابری",
+      "photo": "media/a1/2026-11-02/photos/cloudy.jpg",
+      "word_audio": "media/a1/2026-11-02/word-audio/cloudy.mp3"
+    },
+    {
+      "word": "cold",
+      "pos": "noun",
+      "meaning": "A common illness that makes you sneeze and cough.",
+      "example": "I have a cold and feel tired.",
+      "pronunciation": "KOHLD",
+      "persian": "سرماخوردگی",
+      "photo": "media/a1/2026-11-02/photos/cold.jpg",
+      "word_audio": "media/a1/2026-11-02/word-audio/cold.mp3"
+    },
+    {
+      "word": "dead",
+      "pos": "adjective",
+      "meaning": "No longer alive.",
+      "example": "The plant is dead, I forgot to water it.",
+      "pronunciation": "DED",
+      "persian": "مرده",
+      "photo": "media/a1/2026-11-02/photos/dead.jpg",
+      "word_audio": "media/a1/2026-11-02/word-audio/dead.mp3"
+    },
+    {
+      "word": "death",
+      "pos": "noun",
+      "meaning": "The end of life.",
+      "example": "His death was a great loss.",
+      "pronunciation": "DETH",
+      "persian": "مرگ",
+      "photo": "media/a1/2026-11-02/photos/death.jpg",
+      "word_audio": "media/a1/2026-11-02/word-audio/death.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-02/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: A Cloudy Day, Health, and Clean Water",
+    "audio": "media/a1/2026-11-02/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-11-02/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Cloudy Day",
+    "audio": "media/a1/2026-11-02/shadowing.mp3",
+    "transcript": "media/a1/2026-11-02/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-02/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/010.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/011.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/012.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/013.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/014.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/015.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/016.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/017.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/018.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/019.mp3",
+      "media/a1/2026-11-02/shadowing-sentences/020.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'cholera' mean?",
+      "options": [
+        "Full of clouds.",
+        "A serious disease causing severe diarrhoea.",
+        "No longer alive.",
+        "The end of life."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cloudy' mean?",
+      "options": [
+        "A common illness that makes you sneeze and cough.",
+        "The end of life.",
+        "Full of clouds.",
+        "A serious disease causing severe diarrhoea."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'cold' mean?",
+      "options": [
+        "No longer alive.",
+        "Full of clouds.",
+        "The end of life.",
+        "A common illness that makes you sneeze and cough."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'dead' mean?",
+      "options": [
+        "No longer alive.",
+        "A serious disease causing severe diarrhoea.",
+        "Full of clouds.",
+        "A common illness that makes you sneeze and cough."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'death' mean?",
+      "options": [
+        "A common illness that makes you sneeze and cough.",
+        "No longer alive.",
+        "The end of life.",
+        "Full of clouds."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Was and Were",
+    "explanation": "**Was** and **were** are the past of **be**. They talk about yesterday, not today.\n\nUse **was** with I, he, she, and it. Use **were** with you, we, and they.\n\nFor no, use **wasn't** and **weren't**. Do not use did with **was** and **were**.\n\nUse **there was** for one thing. Use **there were** for many things.\n\n**Was born** talks about birth. She **was born** in Mexico.",
+    "examples": [
+      "*I **was** at home yesterday.* (I + was)",
+      "*The film **was** really funny.* (it + was)",
+      "*My parents **were** teachers.* (they + were)",
+      "*We **weren't** hungry.* (negative)",
+      "*Was it cold in Paris?* (question)",
+      "*Where **were** you last night?* (wh- question)"
+    ],
+    "practice": [
+      {
+        "q": "I am tired today. Say it about yesterday.",
+        "a": "I was tired yesterday."
+      },
+      {
+        "q": "They are at school now. Say it about yesterday.",
+        "a": "They were at school yesterday."
+      },
+      {
+        "q": "It is cloudy today. Say it about yesterday.",
+        "a": "It was cloudy yesterday."
+      },
+      {
+        "q": "You are happy now. Ask about yesterday.",
+        "a": "Were you happy yesterday?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ at the gym yesterday.",
+        "options": [
+          "were",
+          "am",
+          "was",
+          "be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My friends ___ at the party last night.",
+        "options": [
+          "was",
+          "were",
+          "are",
+          "is"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ you at home last Saturday?",
+        "options": [
+          "Was",
+          "Did",
+          "Are",
+          "Were"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "It ___ cold yesterday. It was warm.",
+        "options": [
+          "wasn't",
+          "weren't",
+          "didn't",
+          "not was"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ born in Brazil.",
+        "options": [
+          "were",
+          "is",
+          "was",
+          "did"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We ___ late for the meeting.",
+        "options": [
+          "wasn't",
+          "didn't",
+          "not were",
+          "weren't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Was the film good? – Yes, it ___.",
+        "options": [
+          "were",
+          "was",
+          "is",
+          "did"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Where ___ you last night?",
+        "options": [
+          "were",
+          "did",
+          "was",
+          "are"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "There ___ a lot of people at the concert.",
+        "options": [
+          "was",
+          "is",
+          "were",
+          "be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "There ___ a problem with my computer yesterday.",
+        "options": [
+          "were",
+          "was",
+          "is",
+          "are"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-11-02/grammar-en.mp3"
+  }
+}

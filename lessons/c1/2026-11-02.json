@@ -1,0 +1,329 @@
+{
+ "date": "2026-11-02",
+ "theme": "nature & environment",
+ "level": "c1",
+ "cefr": "C1",
+ "words": [
+  {
+   "word": "absolute poverty",
+   "pos": "phrase",
+   "meaning": "Lacking basic necessities like food, water, and shelter.",
+   "example": "Absolute poverty remains a global challenge.",
+   "pronunciation": "AB-suh-loot POV-er-tee",
+   "persian": "فقر مطلق",
+   "photo": "media/c1/2026-11-02/photos/absolute-poverty.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/absolute-poverty.mp3"
+  },
+  {
+   "word": "affluence",
+   "pos": "noun",
+   "meaning": "The state of having a great deal of money.",
+   "example": "The country's affluence led to increased consumption.",
+   "pronunciation": "AF-loo-uhns",
+   "persian": "ثروت، رفاه",
+   "photo": "media/c1/2026-11-02/photos/affluence.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/affluence.mp3"
+  },
+  {
+   "word": "ambush (n. and v.)",
+   "pos": "noun, verb",
+   "meaning": "A surprise attack from a hidden position.",
+   "example": "The rebels planned an ambush on the convoy carrying aid.",
+   "pronunciation": "AM-boosh",
+   "persian": "کمین، حمله غافلگیرانه",
+   "photo": "media/c1/2026-11-02/photos/ambush.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/ambush.mp3"
+  },
+  {
+   "word": "animal (rescue) shelter",
+   "pos": "noun",
+   "meaning": "A place providing temporary care for homeless animals.",
+   "example": "We adopted our dog from the local animal rescue shelter.",
+   "pronunciation": "AN-uh-muhl REH-skyoo SHEL-ter",
+   "persian": "پناهگاه حیوانات",
+   "photo": "media/c1/2026-11-02/photos/animal-rescue-shelter.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/animal-rescue-shelter.mp3"
+  },
+  {
+   "word": "animal rights activist",
+   "pos": "noun",
+   "meaning": "A person campaigning for the ethical treatment of animals.",
+   "example": "Animal rights activists protested against the fur industry.",
+   "pronunciation": "AN-uh-muhl RYTS AK-tuh-vist",
+   "persian": "فعال حقوق حیوانات",
+   "photo": "media/c1/2026-11-02/photos/animal-rights-activist.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/animal-rights-activist.mp3"
+  },
+  {
+   "word": "appliance",
+   "pos": "noun",
+   "meaning": "A device or machine for a specific purpose.",
+   "example": "Energy-efficient appliances help reduce household carbon footprint.",
+   "pronunciation": "uh-PLY-uhns",
+   "persian": "لوازم خانگی، دستگاه",
+   "photo": "media/c1/2026-11-02/photos/appliance.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/appliance.mp3"
+  },
+  {
+   "word": "besiege",
+   "pos": "verb",
+   "meaning": "To surround a place with armed forces; overwhelm.",
+   "example": "The city was besieged by enemy forces for months.",
+   "pronunciation": "buh-SEEJ",
+   "persian": "محاصره کردن، تحت فشار قرار دادن",
+   "photo": "media/c1/2026-11-02/photos/besiege.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/besiege.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c1/2026-11-02/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Wealth, Wildlife, and the World We Share",
+  "audio": "media/c1/2026-11-02/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-11-02/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Town That Chose Kindness",
+  "audio": "media/c1/2026-11-02/shadowing.mp3",
+  "transcript": "media/c1/2026-11-02/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c1/2026-11-02/shadowing-sentences/001.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/002.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/003.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/004.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/005.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/006.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/007.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/008.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/009.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/010.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/011.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/012.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/013.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/014.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/015.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/016.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/017.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/018.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/019.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/020.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/021.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/022.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/023.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/024.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/025.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/026.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/027.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/028.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/029.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/030.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/031.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/032.mp3",
+   "media/c1/2026-11-02/shadowing-sentences/033.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'absolute poverty' mean?",
+   "options": [
+    "The state of having a great deal of money.",
+    "A device or machine for a specific purpose.",
+    "Lacking basic necessities like food, water, and shelter.",
+    "A place providing temporary care for homeless animals."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'affluence' mean?",
+   "options": [
+    "The state of having a great deal of money.",
+    "A surprise attack from a hidden position.",
+    "A person campaigning for the ethical treatment of animals.",
+    "Lacking basic necessities like food, water, and shelter."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'ambush (n. and v.)' mean?",
+   "options": [
+    "Lacking basic necessities like food, water, and shelter.",
+    "A place providing temporary care for homeless animals.",
+    "To surround a place with armed forces; overwhelm.",
+    "A surprise attack from a hidden position."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'animal (rescue) shelter' mean?",
+   "options": [
+    "The state of having a great deal of money.",
+    "A surprise attack from a hidden position.",
+    "A place providing temporary care for homeless animals.",
+    "To surround a place with armed forces; overwhelm."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'animal rights activist' mean?",
+   "options": [
+    "A place providing temporary care for homeless animals.",
+    "The state of having a great deal of money.",
+    "A person campaigning for the ethical treatment of animals.",
+    "A device or machine for a specific purpose."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'appliance' mean?",
+   "options": [
+    "A device or machine for a specific purpose.",
+    "A person campaigning for the ethical treatment of animals.",
+    "The state of having a great deal of money.",
+    "A place providing temporary care for homeless animals."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'besiege' mean?",
+   "options": [
+    "To surround a place with armed forces; overwhelm.",
+    "The state of having a great deal of money.",
+    "A person campaigning for the ethical treatment of animals.",
+    "A device or machine for a specific purpose."
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "title": "Modals of Deduction in the Past (must have, can't have)",
+  "explanation": "When we guess about the past, we use **modal + have + past participle**. The modal shows how sure we are.\n\n**must have** + past participle means we are almost sure something happened. The beach was covered in plastic, so the town **must have ignored** the problem for years.\n\n**might have**, **may have**, and **could have** + past participle mean something was possible. The shelter **might have received** more donations than we know.\n\n**can't have** and **couldn't have** + past participle mean we are almost sure something did NOT happen. A true animal rights activist **can't have ignored** an injured dog.\n\nFor an action in progress, use **modal + have been + -ing**. Sara **must have been working** at the shelter all day.\n\nIn speech, **must have** sounds like must-uv, but in writing always write **have**, never of.",
+  "examples": [
+   "*The lights are off. They **must have gone** to bed.* (almost sure)",
+   "*I can't find my wallet. I **might have left** it at the restaurant.* (possible)",
+   "*She **can't have forgotten** your birthday. She talked about it all week.* (almost sure it didn't happen)",
+   "*She **must have been studying** all night. She looks exhausted.* (continuous)",
+   "*The window is broken. A ball **could have hit** it.* (possible explanation)",
+   "*Someone **must have taken** my umbrella by mistake.* (almost sure)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite using must have: The shelter is empty. The volunteers definitely took the dogs to the vet.",
+    "a": "The volunteers must have taken the dogs to the vet."
+   },
+   {
+    "q": "Rewrite using might have: Maybe the poachers left the trap near the river.",
+    "a": "The poachers might have left the trap near the river."
+   },
+   {
+    "q": "Rewrite using can't have: It is impossible that the animal rights activist ignored the injured dog.",
+    "a": "The animal rights activist can't have ignored the injured dog."
+   },
+   {
+    "q": "Rewrite using must have been + -ing: Sara was surely working at the shelter all day.",
+    "a": "Sara must have been working at the shelter all day."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The ground is wet. It ___ last night.",
+    "options": [
+     "must rained",
+     "must have rained",
+     "must have rain",
+     "must to have rained"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "She ___ you. She was in Paris all last week.",
+    "options": [
+     "can't have seen",
+     "must have seen",
+     "might have seen",
+     "must see"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I can't find my keys. I ___ them at work.",
+    "options": [
+     "might left",
+     "might have leave",
+     "might have left",
+     "might leaving"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I'm not sure why he's late. He ___ the bus.",
+    "options": [
+     "must have missed",
+     "can't have missed",
+     "may have missed",
+     "may missed"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "You ___ exhausted after such a long flight.",
+    "options": [
+     "must be been",
+     "must have been",
+     "must have be",
+     "can't have been"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "They ___ about the party. It was a complete surprise.",
+    "options": [
+     "couldn't have known",
+     "must have known",
+     "should know",
+     "must know"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "She looks exhausted. She ___ all night.",
+    "options": [
+     "must be worked",
+     "must have work",
+     "must have been working",
+     "must working"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "The window is broken. Someone ___ it.",
+    "options": [
+     "must have broke",
+     "must have broken",
+     "must broken",
+     "must to break"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "He ___ the answer. Nobody had told him, and he'd never studied chemistry.",
+    "options": [
+     "must have known",
+     "can't have knew",
+     "can't have known",
+     "can't known"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Where's my umbrella? Someone ___ it by mistake.",
+    "options": [
+     "might have took",
+     "might have taken",
+     "might taken",
+     "might have take"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

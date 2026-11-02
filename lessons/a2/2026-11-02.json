@@ -1,0 +1,279 @@
+{
+  "date": "2026-11-02",
+  "theme": "money & shopping",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "afford",
+      "pos": "verb",
+      "meaning": "To have enough money to buy or do something.",
+      "example": "I can't afford a new car.",
+      "pronunciation": "uh-FORD",
+      "persian": "از عهده برآمدن، توانایی مالی داشتن",
+      "photo": "media/a2/2026-11-02/photos/afford.jpg",
+      "word_audio": "media/a2/2026-11-02/word-audio/afford.mp3"
+    },
+    {
+      "word": "amount",
+      "pos": "noun",
+      "meaning": "A quantity of something.",
+      "example": "Please pay the full amount.",
+      "pronunciation": "uh-MOWNT",
+      "persian": "مقدار، میزان",
+      "photo": "media/a2/2026-11-02/photos/amount.jpg",
+      "word_audio": "media/a2/2026-11-02/word-audio/amount.mp3"
+    },
+    {
+      "word": "at home",
+      "pos": "phrase",
+      "meaning": "In your own house or apartment.",
+      "example": "I like to relax at home on weekends.",
+      "pronunciation": "at HOHM",
+      "persian": "در خانه",
+      "photo": "media/a2/2026-11-02/photos/at-home.jpg",
+      "word_audio": "media/a2/2026-11-02/word-audio/at-home.mp3"
+    },
+    {
+      "word": "bank account",
+      "pos": "noun",
+      "meaning": "Money you keep in a bank.",
+      "example": "I opened a new bank account last week.",
+      "pronunciation": "BANK uh-KOWNT",
+      "persian": "حساب بانکی",
+      "photo": "media/a2/2026-11-02/photos/bank-account.jpg",
+      "word_audio": "media/a2/2026-11-02/word-audio/bank-account.mp3"
+    },
+    {
+      "word": "bank loan",
+      "pos": "noun",
+      "meaning": "Money borrowed from a bank that you must pay back.",
+      "example": "They took out a bank loan to buy a car.",
+      "pronunciation": "BANK LOHN",
+      "persian": "وام بانکی",
+      "photo": "media/a2/2026-11-02/photos/bank-loan.jpg",
+      "word_audio": "media/a2/2026-11-02/word-audio/bank-loan.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-02/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Money and Shopping",
+    "audio": "media/a2/2026-11-02/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-02/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara Plans Her Money",
+    "audio": "media/a2/2026-11-02/shadowing.mp3",
+    "transcript": "media/a2/2026-11-02/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-02/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/015.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/016.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/017.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/018.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/019.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/020.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/021.mp3",
+      "media/a2/2026-11-02/shadowing-sentences/022.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'afford' mean?",
+      "options": [
+        "A quantity of something.",
+        "In your own house or apartment.",
+        "To have enough money to buy or do something.",
+        "Money you keep in a bank."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'amount' mean?",
+      "options": [
+        "To have enough money to buy or do something.",
+        "Money you keep in a bank.",
+        "In your own house or apartment.",
+        "A quantity of something."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'at home' mean?",
+      "options": [
+        "Money you keep in a bank.",
+        "To have enough money to buy or do something.",
+        "In your own house or apartment.",
+        "Money borrowed from a bank that you must pay back."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bank account' mean?",
+      "options": [
+        "In your own house or apartment.",
+        "A quantity of something.",
+        "Money you keep in a bank.",
+        "To have enough money to buy or do something."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bank loan' mean?",
+      "options": [
+        "Money borrowed from a bank that you must pay back.",
+        "Money you keep in a bank.",
+        "In your own house or apartment.",
+        "A quantity of something."
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Past Simple and Irregular Verbs",
+    "explanation": "We use the **past simple** for finished actions in the past. We say when it happened, like yesterday or last week.\n\nRegular verbs add **-ed**. For example, work becomes **worked** and watch becomes **watched**.\n\nIrregular verbs have their own past form. For example, go becomes **went** and buy becomes **bought**.\n\nFor negatives, we use **didn't** + the base verb. We say I **didn't buy** the jacket, not I didn't bought it.\n\nFor questions, we use **Did** + subject + the base verb. We say **Did** you **check** your bank account?\n\nWith be, we use **was** and **were**, not did. We say I **was** at home, not I did be at home.",
+    "examples": [
+      "*I **watched** a film last night.* (regular verb: add -ed)",
+      "*We **went** to the beach on Saturday.* (irregular: go → went)",
+      "*She **didn't call** me yesterday.* (negative: didn't + base verb)",
+      "*My grandfather **worked** in a bank for 30 years.* (finished situation)",
+      "*I **bought** a new phone two weeks ago.* (irregular: buy → bought)",
+      "*They **moved** to Canada in 2018.* (finished time)"
+    ],
+    "practice": [
+      {
+        "q": "I buy a new jacket yesterday.",
+        "a": "I bought a new jacket yesterday."
+      },
+      {
+        "q": "She didn't checked her bank account last week.",
+        "a": "She didn't check her bank account last week."
+      },
+      {
+        "q": "I can't afford the phone last year.",
+        "a": "I couldn't afford the phone last year."
+      },
+      {
+        "q": "They take out a bank loan last year.",
+        "a": "They took out a bank loan last year."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She ___ her keys this morning, so she couldn't open the door.",
+        "options": [
+          "lost",
+          "loses",
+          "losed",
+          "lose"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ the email because I was busy.",
+        "options": [
+          "don't read",
+          "not read",
+          "didn't readed",
+          "didn't read"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "They ___ to Spain two years ago.",
+        "options": [
+          "go",
+          "goed",
+          "gone",
+          "went"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "My parents ___ at home when I arrived.",
+        "options": [
+          "were",
+          "was",
+          "did",
+          "been"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Where ___ you go on holiday last summer?",
+        "options": [
+          "were",
+          "did",
+          "do",
+          "was"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The children ___ in the garden all afternoon.",
+        "options": [
+          "plaied",
+          "playd",
+          "plaid",
+          "played"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The bus ___ suddenly, and everyone fell forward.",
+        "options": [
+          "stoped",
+          "stopt",
+          "stopped",
+          "stoppd"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I didn't knew the answer.",
+          "I didn't know the answer.",
+          "I not knew the answer.",
+          "I don't knew the answer."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ it cold in Montreal last week?",
+        "options": [
+          "Was",
+          "Did",
+          "Were",
+          "Does"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Which verb has an extra syllable when you say the -ed ending?",
+        "options": [
+          "worked",
+          "wanted",
+          "played",
+          "watched"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-11-02/grammar-en.mp3"
+  }
+}
