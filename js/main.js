@@ -9085,18 +9085,107 @@ function paintHome(v, mistakes, attempts) {
   paintSentenceBanner();
 }
 
-function attemptCardHTML(a) {
+function attemptCardHTML(a, i) {
   const pct = a.total ? Math.round((a.score / a.total) * 100) : 0;
-  const kindLabel = a.kind === 'grammar' ? 'Grammar quiz' : (a.kind === 'mistakes' ? 'Review session' : 'Word quiz');
+  const kindLabel = (a.kind === 'grammar' || a.kind === 'grammar_topic') ? 'Grammar quiz'
+    : a.kind === 'grammar_test' ? 'Grammar check-up'
+    : a.kind === 'mistakes' ? 'Review session' : 'Word quiz';
   return '' +
-  '<div class="card plain"><div class="attempt-card">' +
+  '<div class="card plain att-card"><div class="attempt-card" data-action="att-toggle" data-i="' + i + '" role="button" tabindex="0" aria-label="Show details">' +
     '<div class="attempt-info">' +
       '<div class="attempt-theme">' + esc(a.theme || 'Lesson') + '</div>' +
       '<div class="attempt-meta">' + esc(kindLabel) + ' · ' + esc(a.date || '') + ' · ' + esc(fmtDateTime(a.ts)) + '</div>' +
     '</div>' +
     '<div class="percent-wrap"><div class="percent-num">' + a.score + '/' + a.total + '</div>' +
     '<div class="progress"><div style="width:' + pct + '%"></div></div></div>' +
-  '</div></div>';
+    '<span class="att-arrow">›</span>' +
+  '</div><div class="att-detail" id="att-detail-' + i + '" hidden></div></div>';
+}
+
+/* Attempt detail (Alireza 2026-11-02): tap a Progress history row and it
+   expands — score context, how often this quiz was taken + best score,
+   a deep link back to the lesson/topic, and the questions missed that
+   day (joined from the mistakes list by date + kind; mistakes answered
+   correctly later are already gone from that list). */
+function attDateStr(ts) {
+  const d = new Date(ts);
+  return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+}
+function toggleAttemptDetail(i) {
+  const box = document.getElementById('att-detail-' + i);
+  const arr = state._progAttempts || [];
+  const a = arr[i];
+  if (!box || !a) return;
+  if (!box.hidden) { box.hidden = true; return; }
+  box.hidden = false;
+  if (!box.dataset.built) {
+    box.dataset.built = '1';
+    box.innerHTML = attemptDetailHTML(a, arr);
+    fillAttemptMissed(a, box.querySelector('.att-missed'));
+  }
+}
+function attemptDetailHTML(a, all) {
+  const pct = a.total ? Math.round((a.score / a.total) * 100) : 0;
+  const same = all.filter(function (x) { return x.theme === a.theme && x.kind === a.kind; })
+    .slice().sort(function (x, y) { return x.ts - y.ts; });
+  let h = '<div class="att-d-head"><b>' + a.score + '/' + a.total + '</b><span>' + pct + '% · ' +
+    esc(fmtDateTime(a.ts)) + (a.level ? ' · ' + esc(String(a.level).toUpperCase()) : '') + '</span></div>';
+  if (same.length > 1) {
+    const best = same.reduce(function (m, x) { return Math.max(m, x.total ? x.score / x.total : 0); }, 0);
+    h += '<div class="att-d-line">🔁 Taken ' + same.length + ' times · best ' + Math.round(best * 100) + '%</div>' +
+      '<div class="att-d-chips">' + same.map(function (x) {
+        return '<span class="att-chip">' + esc((x.date || '').slice(5)) + ' · ' + x.score + '/' + x.total + '</span>';
+      }).join('') + '</div>';
+  }
+  h += attemptActionHTML(a);
+  h += '<div class="att-missed"><p class="muted" style="margin:0">Loading missed questions…</p></div>';
+  return h;
+}
+function attemptActionHTML(a) {
+  let btns = '';
+  if (a.kind === 'grammar_test') {
+    btns = '<a class="btn btn-sm" href="#/grammar-test/report">📊 Full report</a>' +
+      '<a class="btn btn-sm btn-primary" href="#/grammar-test">Retake</a>';
+  } else if ((a.kind === 'grammar' || a.kind === 'grammar_topic') && /^[a-z0-9-]+$/.test(a.theme || '')) {
+    btns = '<a class="btn btn-sm btn-primary" href="#/grammar/' + esc(a.theme) + '">📖 Open this topic</a>';
+  } else if (a.kind === 'mistakes') {
+    btns = '<a class="btn btn-sm btn-primary" href="#/review/mistakes">🔁 Go to mistakes</a>';
+  } else if (/^\d{4}-\d{2}-\d{2}$/.test(a.date || '')) {
+    btns = '<a class="btn btn-sm btn-primary" href="#/lesson/' + esc(a.date) + '">📚 Open that lesson</a>';
+  }
+  return btns ? '<div class="att-d-btns">' + btns + '</div>' : '';
+}
+async function fillAttemptMissed(a, host) {
+  if (!host) return;
+  const mk = (a.kind === 'grammar' || a.kind === 'grammar_topic' || a.kind === 'grammar_test') ? 'grammar'
+    : (a.kind === 'mistakes' ? null : 'word');
+  if (!mk) {
+    host.innerHTML = '<p class="muted" style="margin:0">This was a practice session built from your mistakes list.</p>';
+    return;
+  }
+  try {
+    if (!state._mistakesCache) state._mistakesCache = await getMistakes();
+    const dates = {};
+    if (a.date) dates[a.date] = 1;
+    dates[attDateStr(a.ts)] = 1;
+    const seenQ = {}, missed = [];
+    (state._mistakesCache || []).forEach(function (m) {
+      if (m.kind === mk && dates[m.date] && !seenQ[m.question]) { seenQ[m.question] = 1; missed.push(m); }
+    });
+    if (!missed.length) {
+      host.innerHTML = '<p class="muted" style="margin:0">No missed questions from that day are still on your list 🎉<br>' +
+        '<span style="font-size:0.8rem">Mistakes you later answered correctly are removed automatically.</span></p>';
+      return;
+    }
+    host.innerHTML = '<div class="att-d-line">❌ <b>Missed that day (' + missed.length + ')</b></div>' +
+      missed.slice(0, 8).map(function (m) {
+        return '<div class="att-miss"><div class="mistake-q">' + esc(m.question) + '</div>' +
+          '<div class="mistake-a">✅ ' + esc(m.options[m.answer] || '') + '</div>' +
+          (typeof m.picked === 'number' && m.picked !== m.answer
+            ? '<div class="mistake-was">You chose: ' + esc(m.options[m.picked] || '') + '</div>' : '') + '</div>';
+      }).join('') +
+      (missed.length > 8 ? '<p class="muted" style="margin:0.3rem 0 0">…and ' + (missed.length - 8) + ' more in Review → Mistakes.</p>' : '');
+  } catch (e) { host.innerHTML = ''; }
 }
 
 /* ---------------- desktop home (mockup v6, >=1024px) ---------------- */
@@ -12155,7 +12244,8 @@ function paintScores(v, arr, prog) {
     html += '<div class="section-title"><h2>📊 Analytics</h2>' +
       '<button class="btn btn-sm" data-action="ai-report-student">🤖 AI report</button></div>' +
       '<div id="score-analytics"><div class="empty">Loading analytics…</div></div>';
-    html += arr.map(attemptCardHTML).join('');
+    state._progAttempts = arr;
+    html += arr.map(function (a, i) { return attemptCardHTML(a, i); }).join('');
   }
   v.innerHTML = html;
   refreshRewardsSection();
@@ -13555,6 +13645,7 @@ function bindEvents() {
         renderDuoQuizView();
       } else { go('home'); }
     }
+    else if (a === 'att-toggle') { toggleAttemptDetail(parseInt(t.getAttribute('data-i'), 10) || 0); }
     else if (a === 'practice-again') {
       getMistakes().then(function (arr) {
         if (arr.length) startQuiz('mistakes');
@@ -13731,7 +13822,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020239';
+var APP_VERSION = '202611020250';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

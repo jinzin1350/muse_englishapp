@@ -1410,6 +1410,18 @@ body{background:#FFF9F3;}
 .stat-row{display:flex;align-items:center;gap:1rem;margin-bottom:1.05rem;}
 .stat-example{font-size:.81rem;color:#9AA3B2;margin-top:.25rem;}
 .attempt-card{display:flex;align-items:center;gap:.95rem;}
+.att-card .attempt-card{cursor:pointer;}
+.att-arrow{font-size:1.45rem;color:#9AA3B8;font-weight:600;flex:0 0 auto;}
+.att-detail{border-top:1px dashed #EFE7D6;margin-top:0.75rem;padding-top:0.75rem;}
+.att-d-head{display:flex;align-items:baseline;gap:0.6rem;}
+.att-d-head b{font-size:1.35rem;color:var(--ink);}
+.att-d-head span{color:#66708A;font-size:0.88rem;}
+.att-d-line{margin-top:0.45rem;font-size:0.92rem;}
+.att-d-chips{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.45rem;}
+.att-chip{background:#FDF3E3;border:1px solid #F0DFC0;border-radius:999px;padding:0.18rem 0.6rem;font-size:0.8rem;font-weight:600;}
+.att-d-btns{display:flex;gap:0.5rem;flex-wrap:wrap;margin:0.7rem 0 0.2rem;}
+.att-missed{margin-top:0.65rem;}
+.att-miss{background:#FFF9F1;border:1px solid #F3E7D2;border-radius:12px;padding:0.6rem 0.75rem;margin-top:0.45rem;}
 /* ---------- bottom nav ---------- */
 .tabbar{background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:1px solid #F6EAD9;border-radius:26px 26px 0 0;box-shadow:0 -10px 28px rgba(190,130,70,.12);}
 .tab{color:#9AA3B2;}
