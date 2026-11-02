@@ -13576,7 +13576,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020034';
+var APP_VERSION = '202611020052';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14559,7 +14559,10 @@ function twClassReport(assigns, students) {
     body = '<div class="empty">Nothing to report yet.</div>';
   } else {
     body = '<div class="tw-table-scroll"><table class="tw-matrix"><tr><th>Student</th>' +
-      sent.map(function (a) { return '<th title="' + esc(a.title || '') + '">' + esc(String(a.title || '').slice(0, 14)) + '…</th>'; }).join('') + '</tr>' +
+      sent.map(function (a) {
+        var t = String(a.title || '');
+        return '<th title="' + esc(t) + '">' + esc(t.length > 16 ? t.slice(0, 16) + '…' : t) + '</th>';
+      }).join('') + '</tr>' +
       students.map(function (s) {
         var nm = s.display_name || (s.email || '?').split('@')[0];
         return '<tr><td><b>' + esc(nm) + '</b></td>' + sent.map(function (a) {
@@ -14569,9 +14572,11 @@ function twClassReport(assigns, students) {
         }).join('') + '</tr>';
       }).join('') + '</table></div>';
   }
-  showModal('<div class="modal-ico">📊</div><h2>Class report</h2>' +
+  showModal('<div class="tw-modal tw-report">' +
+    '<button class="tw-m-x" data-action="modal-close" aria-label="Close">✕</button>' +
+    '<div class="modal-ico">📊</div><h2>Class report</h2>' +
     '<p class="muted">Completion per student across recent assignments.</p>' + body +
-    '<button class="tw-btn tw-btn-block" data-action="modal-close" style="margin-top:1rem">Close</button>');
+    '<button class="tw-btn tw-btn-block" data-action="modal-close" style="margin-top:1rem">Close</button></div>');
 }
 
 /* ---------------- page: placement tests ---------------- */
