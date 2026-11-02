@@ -4342,11 +4342,12 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
 .tw-asg-arrow { color: var(--tw-ink); font-size: 1.3rem; font-weight: 700; }
 .tw-emptybox { background: var(--tw-card); border: 1px dashed #E0D5BE; border-radius: 18px; padding: 3rem 1.5rem; text-align: center; }
 .tw-emptybox b { color: var(--tw-ink); font-size: 1.1rem; display: block; margin-bottom: 0.4rem; }
-.tw-matrix { border-collapse: separate; border-spacing: 0; width: max-content; min-width: 100%; font-size: 0.88rem; }
-.tw-matrix th, .tw-matrix td { border-bottom: 1px solid #F3EDE0; padding: 0.55rem 0.6rem; text-align: center; min-width: 76px; }
-.tw-matrix th:first-child, .tw-matrix td:first-child { text-align: left; position: sticky; left: 0; background: #FFFDF7; min-width: 150px; z-index: 1; }
-.tw-matrix td:first-child b { display: block; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.tw-matrix th { color: #9AA1B5; font-size: 0.75rem; white-space: nowrap; }
+.tw-matrix { border-collapse: separate; border-spacing: 0; width: 100%; table-layout: fixed; font-size: 0.88rem; }
+.tw-matrix th, .tw-matrix td { border-bottom: 1px solid #F3EDE0; padding: 0.5rem 0.6rem; text-align: center; }
+.tw-matrix tr:last-child td { border-bottom: 0; }
+.tw-matrix th:first-child, .tw-matrix td:first-child { text-align: left; width: 200px; }
+.tw-matrix td:first-child b { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tw-matrix th { color: #9AA1B5; font-size: 0.75rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tw-ok { color: var(--tw-green); font-weight: 800; font-size: 1.05rem; }
 .tw-pend { color: #D8CFBC; font-size: 1.05rem; }
 /* ---------- placement tests ---------- */
@@ -4418,7 +4419,6 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
 }
 /* ---------- teacher assignment detail modal (v2) ---------- */
 .modal-card:has(.tw-modal) { padding: 2rem 1.8rem 1.6rem; border-radius: 24px; max-width: 560px; }
-.modal-card:has(.tw-report) { max-width: 1020px; width: 100%; }
 .tw-modal { position: relative; text-align: center; }
 .tw-m-x { position: absolute; top: -1.2rem; right: -1rem; border: 0; background: none; font-size: 1.25rem; color: #9AA1B5; cursor: pointer; padding: 0.4rem; border-radius: 8px; }
 .tw-m-x:hover { background: #F3EDE0; color: #5B6478; }

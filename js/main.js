@@ -13576,7 +13576,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020052';
+var APP_VERSION = '202611020101';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -14001,7 +14001,7 @@ function twPaintViewBanner() {
 function twShowSection(name) {
   state.twSection = name;
   /* Detail pages keep the parent nav highlighted. */
-  var navName = (name === 'assignment-detail') ? 'assignments' : name;
+  var navName = (name === 'assignment-detail' || name === 'class-report') ? 'assignments' : name;
   Array.prototype.forEach.call(document.querySelectorAll('[data-twsec]'), function (b) {
     b.classList.toggle('on', b.getAttribute('data-twsec') === navName);
   });
@@ -14014,6 +14014,7 @@ function twShowSection(name) {
   else if (name === 'daily') twPageDaily(c);
   else if (name === 'assignments') twPageAssignments(c);
   else if (name === 'assignment-detail') twPageAssignmentDetail(c);
+  else if (name === 'class-report') twPageClassReport(c);
   else if (name === 'compose') twPageCompose(c);
   else if (name === 'placement') twPagePlacement(c);
   else if (name === 'links') twPageLinks(c);
@@ -14419,7 +14420,7 @@ async function twPageAssignments(c) {
     });
   });
   document.getElementById('tw-classreport').addEventListener('click', function () {
-    twClassReport(assigns, students);
+    twShowSection('class-report');
   });
   var newBtn = document.getElementById('tw-new-assignment');
   if (newBtn) newBtn.addEventListener('click', function () { twShowSection('compose'); });
@@ -14551,17 +14552,21 @@ function twDueLabel(d) {
   if (isNaN(dt.getTime())) return d;
   return dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
-function twClassReport(assigns, students) {
+/* ---------------- page: class report (full page, no popup) ---------------- */
+
+async function twPageClassReport(c) {
+  var assigns = await twGetAssignments();
+  var students = await twGetStudents();
   var doneMap = state.twDoneMap || {};
   var sent = assigns.filter(function (a) { return a.status !== 'scheduled'; }).slice(0, 8);
   var body;
   if (!sent.length || !students.length) {
-    body = '<div class="empty">Nothing to report yet.</div>';
+    body = '<div class="tw-emptybox"><div class="tw-empty-ill">📊</div><b>Nothing to report yet</b>' +
+      '<p class="muted">Once assignments are sent and students start completing them,<br>the report will appear here.</p></div>';
   } else {
-    body = '<div class="tw-table-scroll"><table class="tw-matrix"><tr><th>Student</th>' +
+    body = '<div class="tw-tablecard"><table class="tw-matrix"><tr><th>Student</th>' +
       sent.map(function (a) {
-        var t = String(a.title || '');
-        return '<th title="' + esc(t) + '">' + esc(t.length > 16 ? t.slice(0, 16) + '…' : t) + '</th>';
+        return '<th title="' + esc(a.title || '') + '">' + esc(a.title || '') + '</th>';
       }).join('') + '</tr>' +
       students.map(function (s) {
         var nm = s.display_name || (s.email || '?').split('@')[0];
@@ -14570,13 +14575,15 @@ function twClassReport(assigns, students) {
           if ((a.student_ids || []).indexOf(s.user_id) < 0) return '<td class="muted">–</td>';
           return '<td>' + (dm[s.user_id] ? '<span class="tw-ok">✓</span>' : '<span class="tw-pend">○</span>') + '</td>';
         }).join('') + '</tr>';
-      }).join('') + '</table></div>';
+      }).join('') + '</table></div>' +
+      '<p class="muted" style="font-size:0.85rem"><span class="tw-ok">✓</span> completed &nbsp;·&nbsp; <span class="tw-pend">○</span> pending &nbsp;·&nbsp; – not assigned</p>';
   }
-  showModal('<div class="tw-modal tw-report">' +
-    '<button class="tw-m-x" data-action="modal-close" aria-label="Close">✕</button>' +
-    '<div class="modal-ico">📊</div><h2>Class report</h2>' +
-    '<p class="muted">Completion per student across recent assignments.</p>' + body +
-    '<button class="tw-btn tw-btn-block" data-action="modal-close" style="margin-top:1rem">Close</button></div>');
+  c.innerHTML = twPageHead('ASSIGNMENTS', '📊 Class report',
+      'Completion per student across recent assignments.') +
+    '<div class="tw-backrow"><button class="tw-btn tw-btn-white" id="tw-back-assign">← Back to assignments</button></div>' +
+    body;
+  document.getElementById('tw-back-assign').addEventListener('click', function () { twShowSection('assignments'); });
+  window.scrollTo(0, 0);
 }
 
 /* ---------------- page: placement tests ---------------- */
