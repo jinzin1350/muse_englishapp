@@ -4236,7 +4236,7 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
 .tw-foot { border-top: 1px solid var(--tw-line); padding: 1.4rem 0; color: #A08C6E; font-size: 0.88rem; }
 /* ---------- workspace shell ---------- */
 .tw-work { display: grid; grid-template-columns: 272px 1fr; min-height: 100vh; background: var(--tw-bg); }
-.tw-side { background: #FFFDF9; border-right: 1px solid var(--tw-line); padding: 1.3rem 1rem; display: flex; flex-direction: column; gap: 1.4rem; position: sticky; top: 0; height: 100vh; }
+.tw-side { background: #FFFDF9; border-right: 1px solid var(--tw-line); padding: 1.3rem 1rem; display: flex; flex-direction: column; gap: 1.4rem; position: sticky; top: 0; height: 100vh; height: 100dvh; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; }
 .tw-brandrow-side { padding: 0 0.5rem; align-items: flex-start; }
 .tw-brandrow-side .tw-apple { font-size: 1.7rem; }
 .tw-brandrow-side b { font-size: 1.08rem; display: block; line-height: 1.25; }
