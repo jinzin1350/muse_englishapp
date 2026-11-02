@@ -1499,6 +1499,15 @@ body{background:#FFF9F3;}
 
 
 /* ============ Review banner (2026-10-02) ============ */
+.rev-cat { display: flex; align-items: center; gap: 0.9rem; background: #fff; border: 1px solid #F0E4CF; border-radius: 18px; padding: 1rem 1.1rem; margin-bottom: 0.8rem; text-decoration: none; color: var(--ink); box-shadow: 0 1px 3px rgba(60,40,10,0.05); }
+.rev-cat:active { transform: scale(0.99); }
+.rev-cat-ico { font-size: 1.5rem; background: #FDF3E3; border-radius: 14px; width: 3rem; height: 3rem; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; }
+.rev-cat-main { flex: 1 1 auto; display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
+.rev-cat-main b { font-size: 1.02rem; }
+.rev-cat-main .muted { font-size: 0.82rem; }
+.rev-cat-count { font-weight: 800; font-size: 1.05rem; color: #EE4D1C; background: #FDF1E7; border-radius: 999px; padding: 0.2rem 0.65rem; }
+.rev-cat-arrow { font-size: 1.5rem; color: #C9B99B; font-weight: 700; }
+.rev-back { display: inline-block; margin-bottom: 0.4rem; color: #EE4D1C; font-weight: 700; text-decoration: none; }
 .review-banner{position:relative;display:block;width:100%;border:0;padding:0;cursor:pointer;
   border-radius:22px;background:#FEFBF6 url('/media/home/review-banner.webp') top center/cover no-repeat;
   aspect-ratio:1200/571;container-type:inline-size;text-align:left;font:inherit;

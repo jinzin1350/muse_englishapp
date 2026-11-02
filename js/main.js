@@ -2208,7 +2208,7 @@ function show(view, arg) {
   else if (view === 'lessons') renderLessons(v);
   else if (view === 'scores') renderScores(v);
   else if (view === 'progress') renderScores(v); /* merged into Scores 2026-10-09 */
-  else if (view === 'review') renderMistakes(v);
+  else if (view === 'review') renderMistakes(v, arg);
   else if (view === 'profile') renderProfile(v);
   else if (view === 'challenge') renderChallenge(v);
   else if (view === 'inbox') renderInbox(v);
@@ -12327,37 +12327,75 @@ async function aiReportStudent(btn) {
 }
 
 /* ---------------- review view (mistakes) ---------------- */
-function renderMistakes(v) {
-  paintMistakes(v, lsGet('mistakes'));
+function renderMistakes(v, arg) {
+  state.reviewArg = (arg === 'words' || arg === 'shadowing' || arg === 'mistakes') ? arg : '';
+  paintMistakes(v, lsGet('mistakes'), state.reviewArg);
   if (cloudReady()) {
     getMistakes().then(function (arr) {
-      if (state.view === 'review' && !state.quiz) paintMistakes(v, arr);
+      if (state.view === 'review' && !state.quiz) paintMistakes(v, arr, state.reviewArg);
     }).catch(function () { /* keep the local paint */ });
   }
 }
 
-function paintMistakes(v, arr) {
-  let html = '<h1>Review</h1><div id="saved-words-sec"><div class="empty">Loading saved words…</div></div><div id="saved-sp-sec"></div>' +
-    '<p class="muted">Words you missed, ready to practice again. Get one right and it leaves the list.</p>';
-  if (!arr.length) {
-    html += '<div class="empty">Nothing to review — nice work! 🎉</div>';
-  } else {
-    html += '<button class="review-banner" data-action="practice-again" aria-label="Practice your mistakes">' +
-      '<span class="review-banner-count">' + arr.length + ' to review</span>' +
-    '</button>';
-    html += arr.map(function (m) {
-      return '<div class="card plain">' +
-        '<div class="mistake-q">' + esc(m.question) + '</div>' +
-        '<div class="mistake-a">✅ ' + esc(m.options[m.answer]) + '</div>' +
-        (typeof m.picked === 'number' && m.picked !== m.answer
-          ? '<div class="mistake-was">You chose: ' + esc(m.options[m.picked]) + '</div>' : '') +
-        '<div class="muted" style="margin-top:0.4rem;font-size:0.78rem">' + esc(m.date || '') + ' · ' + esc(m.kind || 'word') + ' quiz</div>' +
-      '</div>';
-    }).join('');
+/* Review is a hub now (Alireza 2026-11-02: the page was too crowded):
+   three section cards, each opening its own page — #/review/words,
+   #/review/shadowing, #/review/mistakes. */
+function reviewCatCard(href, ico, title, desc, count, countId) {
+  return '<a class="rev-cat" href="' + href + '">' +
+    '<span class="rev-cat-ico">' + ico + '</span>' +
+    '<span class="rev-cat-main"><b>' + title + '</b><span class="muted">' + desc + '</span></span>' +
+    '<span class="rev-cat-count"' + (countId ? ' id="' + countId + '"' : '') + '>' + count + '</span>' +
+    '<span class="rev-cat-arrow">›</span></a>';
+}
+function paintMistakes(v, arr, arg) {
+  if (arg === 'words') {
+    v.innerHTML = '<a class="rev-back" href="#/review">‹ Review</a><h1>Saved words</h1>' +
+      '<div id="saved-words-sec"><div class="empty">Loading saved words…</div></div>';
+    loadSavedWordsSection(true);
+    return;
   }
-  v.innerHTML = html;
-  loadSavedWordsSection();
-  loadSavedSpSection();
+  if (arg === 'shadowing') {
+    v.innerHTML = '<a class="rev-back" href="#/review">‹ Review</a><h1>Saved shadowing sentences</h1>' +
+      '<div id="saved-sp-sec"></div>';
+    loadSavedSpSection(true);
+    return;
+  }
+  if (arg === 'mistakes') {
+    let mhtml = '<a class="rev-back" href="#/review">‹ Review</a><h1>Mistakes to review</h1>' +
+      '<p class="muted">Words you missed, ready to practice again. Get one right and it leaves the list.</p>';
+    if (!arr.length) {
+      mhtml += '<div class="empty">Nothing to review — nice work! 🎉</div>';
+    } else {
+      mhtml += '<button class="review-banner" data-action="practice-again" aria-label="Practice your mistakes">' +
+        '<span class="review-banner-count">' + arr.length + ' to review</span>' +
+      '</button>';
+      mhtml += arr.map(function (m) {
+        return '<div class="card plain">' +
+          '<div class="mistake-q">' + esc(m.question) + '</div>' +
+          '<div class="mistake-a">✅ ' + esc(m.options[m.answer]) + '</div>' +
+          (typeof m.picked === 'number' && m.picked !== m.answer
+            ? '<div class="mistake-was">You chose: ' + esc(m.options[m.picked]) + '</div>' : '') +
+          '<div class="muted" style="margin-top:0.4rem;font-size:0.78rem">' + esc(m.date || '') + ' · ' + esc(m.kind || 'word') + ' quiz</div>' +
+        '</div>';
+      }).join('');
+    }
+    v.innerHTML = mhtml;
+    return;
+  }
+  /* Hub: one card per section, nothing else. */
+  const spCount = getSavedSpSentences().length;
+  v.innerHTML = '<h1>Review</h1>' +
+    reviewCatCard('#/review/words', '🔖', 'Saved words', 'Hard words you bookmarked — practice quiz & sentence game', '…', 'rev-words-count') +
+    reviewCatCard('#/review/shadowing', '🎤', 'Saved shadowing', 'Sentences you saved to practice aloud', spCount, '') +
+    reviewCatCard('#/review/mistakes', '🔁', 'Mistakes to review', arr.length ? 'Get one right and it leaves the list' : 'Nothing to review — nice work! 🎉', arr.length, '');
+  loadReviewHubCounts();
+}
+async function loadReviewHubCounts() {
+  const el = document.getElementById('rev-words-count');
+  if (!el) return;
+  const arr = await getSavedWords();
+  const cur = document.getElementById('rev-words-count');
+  if (cur) cur.textContent = arr.length;
 }
 
 /* Bookmarked words block at the top of Review: list + practice quiz. */
@@ -12365,7 +12403,8 @@ async function loadSavedWordsSection() {
   const host = document.getElementById('saved-words-sec');
   if (!host) return;
   const arr = await getSavedWords();
-  host.innerHTML = savedWordsHTML(arr);
+  host.innerHTML = savedWordsHTML(arr) ||
+    '<div class="empty">No saved words yet.<br>Tap the bookmark on a hard word in any lesson and it will wait for you here.</div>';
 }
 function savedWordsHTML(arr) {
   if (!arr.length) return '';
@@ -12447,7 +12486,8 @@ function refreshSpSaveButtons(date) {
 function loadSavedSpSection() {
   const host = document.getElementById('saved-sp-sec');
   if (!host) return;
-  host.innerHTML = savedSpHTML(getSavedSpSentences());
+  host.innerHTML = savedSpHTML(getSavedSpSentences()) ||
+    '<div class="empty">No saved sentences yet.<br>Bookmark a sentence in the Shadowing tab and it will wait for you here.</div>';
 }
 function savedSpHTML(arr) {
   if (!arr.length) return '';
@@ -13529,13 +13569,13 @@ function bindEvents() {
     else if (a === 'vc-toggle-save') { toggleVocabSaveBtn(t); }
     else if (a === 'unsave-word') {
       removeSavedWord(t.getAttribute('data-id'), t.getAttribute('data-word'), t.getAttribute('data-date')).then(function () {
-        if (state.view === 'review') renderMistakes($('#view'));
+        if (state.view === 'review') renderMistakes($('#view'), state.reviewArg);
         else if (state.view === 'lesson' && state.lessonTab === 'words') renderLessonTab($('#lesson-body'));
       });
     }
     else if (a === 'unsave-sp') {
       removeSavedSp(t.getAttribute('data-date'), t.getAttribute('data-i'));
-      if (state.view === 'review') renderMistakes($('#view'));
+      if (state.view === 'review') renderMistakes($('#view'), state.reviewArg);
     }
     else if (a === 'sp-say-saved') {
       /* TTS fallback for saved sentences from lessons without per-sentence
@@ -13683,7 +13723,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020205';
+var APP_VERSION = '202611020212';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
