@@ -10013,6 +10013,13 @@ function spCollapseRepeats(text) {
 const SHADOW_SCORING = { fuzzy: true, minRun: 1, greatAt: 70, okAt: 40 };
 /* First attempt of a sentence is graded strictly; retries are lenient. */
 const SHADOW_SCORING_FIRST = { fuzzy: true, minRun: 2, greatAt: 80, okAt: 50 };
+/* Third try onwards (Alireza 2026-11-02): grade very generously so a
+   learner who keeps practising can reach the green band and stay
+   motivated. Same word matching — only the band thresholds drop. */
+const SHADOW_SCORING_EASY = { fuzzy: true, minRun: 1, greatAt: 50, okAt: 25 };
+function spScoringFor(prior) {
+  return prior <= 0 ? SHADOW_SCORING_FIRST : prior === 1 ? SHADOW_SCORING : SHADOW_SCORING_EASY;
+}
 
 /* Word-level analysis: LCS between the story transcript and what the user
    said. Returns accuracy (of the words you said, how many matched the story
@@ -10092,10 +10099,7 @@ function spSentResultHTML(a, said, pts, slim) {
         '<div class="sp-score-label">We couldn\'t catch any words. Try again.</div></div>';
     } else {
       head = '<div class="sp-score ' + cls + '"><div class="sp-score-num">' + a.accuracy + '%</div>' +
-        '<div class="sp-score-label">of this sentence' + (pts ? ' · +' + pts + ' pts' : '') + '</div>' +
-        (sc === SHADOW_SCORING_FIRST
-          ? '<div class="sp-score-mode">🎯 First try — strict grading. Try again for lenient scoring.</div>'
-          : '<div class="sp-score-mode">🌱 Practice round — lenient scoring.</div>') + '</div>';
+        '<div class="sp-score-label">of this sentence' + (pts ? ' · +' + pts + ' pts' : '') + '</div></div>';
     }
   }
   const words = a.targetWords.map(function (w, idx) {
@@ -10454,7 +10458,7 @@ async function wireShadowingPractice(body, m) {
           if (mm && parseInt(mm[1], 10) === sentN) prior++;
         });
       } catch (e) {}
-      const scoring = prior === 0 ? SHADOW_SCORING_FIRST : SHADOW_SCORING;
+      const scoring = spScoringFor(prior);
       const a = analyzeSpeech(sentences[i], said, scoring);
       trackEvent('shadowing_attempt', { sentence: sentN, score: a.accuracy, date: m.date || null, attempt: prior + 1 });
       let pts = 0, awarded = false;
@@ -12882,15 +12886,23 @@ async function finishSavedSp(a, said) {
     const pKey = 'sp_p_' + (a.date || 'lesson');
     let scored = [];
     try { scored = JSON.parse(localStorage.getItem(pKey) || '[]'); } catch (e) { scored = []; }
-    const prior = scored.indexOf(a.i) !== -1 ? 1 : 0;
-    const scoring = prior === 0 ? SHADOW_SCORING_FIRST : SHADOW_SCORING;
+    const wasScored = scored.indexOf(a.i) !== -1;
+    /* Real attempt count for the grading tier (the XP ledger above only
+       knows scored/not — attempts on saved sentences live in sp_att_). */
+    const attKey = 'sp_att_' + (a.date || 'lesson');
+    let counts = {};
+    try { counts = JSON.parse(localStorage.getItem(attKey) || '{}'); } catch (e) { counts = {}; }
+    const prior = counts[a.i] || 0;
+    counts[a.i] = prior + 1;
+    try { localStorage.setItem(attKey, JSON.stringify(counts)); } catch (e) {}
+    const scoring = spScoringFor(prior);
     const an = analyzeSpeech(a.target, said, scoring);
     try { trackEvent('shadowing_attempt', { sentence: a.i + 1, score: an.accuracy, date: a.date || null, attempt: prior + 1, from: 'review' }); } catch (e) {}
     let pts = 0, awarded = false;
     if (an.accuracy >= scoring.greatAt) pts = 5;
     else if (an.accuracy >= scoring.okAt) pts = 3;
     else if (an.accuracy > 0) pts = 1;
-    if (state.user && state.user.id && pts > 0 && prior === 0) {
+    if (state.user && state.user.id && pts > 0 && !wasScored) {
       scored.push(a.i);
       try { localStorage.setItem(pKey, JSON.stringify(scored)); } catch (e) {}
       awardPoints('shadowing_speaking', pts, (a.date || 'lesson') + '#s' + a.i);
@@ -13929,7 +13941,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611020311';
+var APP_VERSION = '202611020320';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
