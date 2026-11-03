@@ -1,0 +1,277 @@
+{
+  "date": "2026-11-03",
+  "theme": "family & relationships",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "bride",
+      "pos": "noun",
+      "meaning": "A woman on her wedding day.",
+      "example": "The bride wore a beautiful white dress.",
+      "pronunciation": "BRYD",
+      "persian": "عروس",
+      "photo": "media/a1/2026-11-03/photos/bride.jpg",
+      "word_audio": "media/a1/2026-11-03/word-audio/bride.mp3"
+    },
+    {
+      "word": "bridegroom",
+      "pos": "noun",
+      "meaning": "A man on his wedding day.",
+      "example": "The bridegroom looked very happy.",
+      "pronunciation": "BRYD-groom",
+      "persian": "داماد",
+      "photo": "media/a1/2026-11-03/photos/bridegroom.jpg",
+      "word_audio": "media/a1/2026-11-03/word-audio/bridegroom.mp3"
+    },
+    {
+      "word": "call after",
+      "pos": "phrasal verb",
+      "meaning": "To name someone using another person's name.",
+      "example": "They will call the baby after her grandmother.",
+      "pronunciation": "KAWL AF-tur",
+      "persian": "نام کسی را گذاشتن",
+      "photo": "media/a1/2026-11-03/photos/call-after.jpg",
+      "word_audio": "media/a1/2026-11-03/word-audio/call-after.mp3"
+    },
+    {
+      "word": "can’t stand",
+      "pos": "phrase",
+      "meaning": "Really dislike something or someone.",
+      "example": "I can't stand loud music.",
+      "pronunciation": "KANT STAND",
+      "persian": "متنفر بودن، تحمل نکردن",
+      "photo": "media/a1/2026-11-03/photos/cant-stand.jpg",
+      "word_audio": "media/a1/2026-11-03/word-audio/cant-stand.mp3"
+    },
+    {
+      "word": "children",
+      "pos": "noun",
+      "meaning": "Young people, sons or daughters.",
+      "example": "My friend has two children.",
+      "pronunciation": "CHIL-drun",
+      "persian": "بچه‌ها، فرزندان",
+      "photo": "media/a1/2026-11-03/photos/children.jpg",
+      "word_audio": "media/a1/2026-11-03/word-audio/children.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-03/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Family Wedding Words",
+    "audio": "media/a1/2026-11-03/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-11-03/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Happy Wedding Day",
+    "audio": "media/a1/2026-11-03/shadowing.mp3",
+    "transcript": "media/a1/2026-11-03/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-03/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/010.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/011.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/012.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/013.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/014.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/015.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/016.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/017.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/018.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/019.mp3",
+      "media/a1/2026-11-03/shadowing-sentences/020.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'bride' mean?",
+      "options": [
+        "A man on his wedding day.",
+        "To name someone using another person's name.",
+        "A woman on her wedding day.",
+        "Really dislike something or someone."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bridegroom' mean?",
+      "options": [
+        "A woman on her wedding day.",
+        "A man on his wedding day.",
+        "To name someone using another person's name.",
+        "Really dislike something or someone."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'call after' mean?",
+      "options": [
+        "To name someone using another person's name.",
+        "A woman on her wedding day.",
+        "Really dislike something or someone.",
+        "A man on his wedding day."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'can’t stand' mean?",
+      "options": [
+        "A woman on her wedding day.",
+        "Young people, sons or daughters.",
+        "Really dislike something or someone.",
+        "To name someone using another person's name."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'children' mean?",
+      "options": [
+        "To name someone using another person's name.",
+        "Really dislike something or someone.",
+        "Young people, sons or daughters.",
+        "A woman on her wedding day."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "The Verb To Be (am, is, are)",
+    "explanation": "**Be** is the most important verb in English. It has three forms: **am**, **is**, and **are**.\n\nUse **am** with I. Use **is** with one person or one thing. Use **are** with more than one person or thing.\n\nThe bride **is** happy. The children **are** happy.\n\nFor negatives, add not: **am not**, **is not**, **are not**. Short forms are **isn't** and **aren't**.\n\nFor questions, put **am**, **is**, or **are** first. Short answers use the full form: Yes, I **am**.",
+    "examples": [
+      "*I **am** a student. (I + am)",
+      "*My mother **is** a doctor. (one person + is)",
+      "*They **are** from Japan. (they + are)",
+      "*It **is** cold today. (it + is)",
+      "*We **aren't** ready. (negative)",
+      "*Are you OK? Yes, I **am**. (short answer)"
+    ],
+    "practice": [
+      {
+        "q": "Fix this sentence: The bride are happy.",
+        "a": "The bride is happy."
+      },
+      {
+        "q": "Fix this sentence: The children is happy.",
+        "a": "The children are happy."
+      },
+      {
+        "q": "Fix this sentence: I is a student.",
+        "a": "I am a student."
+      },
+      {
+        "q": "Make a question: You are tired.",
+        "a": "Are you tired?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ a teacher.",
+        "options": [
+          "is",
+          "am",
+          "are",
+          "be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My parents ___ at home.",
+        "options": [
+          "is",
+          "am",
+          "be",
+          "are"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She ___ from Italy.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ you tired?",
+        "options": [
+          "Is",
+          "Am",
+          "Are",
+          "Be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Are you hungry? – Yes, I ___.",
+        "options": [
+          "'m",
+          "is",
+          "am",
+          "are"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Is your brother a student? – No, he ___.",
+        "options": [
+          "aren't",
+          "not",
+          "doesn't",
+          "isn't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "How old ___ your sister?",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "has"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I have 30 years.",
+          "I am 30.",
+          "I has 30 years.",
+          "I is 30."
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Where ___ you from?",
+        "options": [
+          "is",
+          "am",
+          "are",
+          "do"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Choose the correct short form.",
+        "options": [
+          "I amn't",
+          "I not",
+          "I aren't",
+          "I'm not"
+        ],
+        "answer": 3
+      }
+    ],
+    "audio": "media/a1/2026-11-03/grammar-en.mp3"
+  }
+}

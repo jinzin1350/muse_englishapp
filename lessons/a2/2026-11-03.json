@@ -1,0 +1,280 @@
+{
+  "date": "2026-11-03",
+  "theme": "cities & daily life",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "(three) times a week",
+      "pos": "phrase",
+      "meaning": "happening three occasions within one week",
+      "example": "I go to the gym three times a week.",
+      "pronunciation": "THREE TYMZ uh WEEK",
+      "persian": "سه بار در هفته",
+      "photo": "media/a2/2026-11-03/photos/three-times-a-week.jpg",
+      "word_audio": "media/a2/2026-11-03/word-audio/three-times-a-week.mp3"
+    },
+    {
+      "word": "advantage",
+      "pos": "noun",
+      "meaning": "Something that helps you be better or more successful.",
+      "example": "Living near the park is an advantage.",
+      "pronunciation": "ud-VAN-tij",
+      "persian": "مزیت، برتری",
+      "photo": "media/a2/2026-11-03/photos/advantage.jpg",
+      "word_audio": "media/a2/2026-11-03/word-audio/advantage.mp3"
+    },
+    {
+      "word": "armchair",
+      "pos": "noun",
+      "meaning": "A comfortable chair with supports for your arms.",
+      "example": "I like to read in my comfy armchair.",
+      "pronunciation": "ARM-chair",
+      "persian": "مبل راحتی",
+      "photo": "media/a2/2026-11-03/photos/armchair.jpg",
+      "word_audio": "media/a2/2026-11-03/word-audio/armchair.mp3"
+    },
+    {
+      "word": "away [distance]",
+      "pos": "adverb",
+      "meaning": "At a distance from a place.",
+      "example": "The shop is 5 miles away.",
+      "pronunciation": "uh-WAY",
+      "persian": "دور، فاصله",
+      "photo": "media/a2/2026-11-03/photos/away.jpg",
+      "word_audio": "media/a2/2026-11-03/word-audio/away.mp3"
+    },
+    {
+      "word": "B&B",
+      "pos": "abbreviation, noun",
+      "meaning": "Bed and Breakfast; a place to sleep and eat breakfast.",
+      "example": "We stayed in a nice B&B.",
+      "pronunciation": "BEE un BEE",
+      "persian": "اقامتگاه با صبحانه",
+      "photo": "media/a2/2026-11-03/photos/b-and-b.jpg",
+      "word_audio": "media/a2/2026-11-03/word-audio/b-and-b.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-03/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: City Life and Daily Routines",
+    "audio": "media/a2/2026-11-03/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-03/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Cozy Week in the City",
+    "audio": "media/a2/2026-11-03/shadowing.mp3",
+    "transcript": "media/a2/2026-11-03/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-03/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/015.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/016.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/017.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/018.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/019.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/020.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/021.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/022.mp3",
+      "media/a2/2026-11-03/shadowing-sentences/023.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does '(three) times a week' mean?",
+      "options": [
+        "Something that helps you be better or more successful.",
+        "happening three occasions within one week",
+        "A comfortable chair with supports for your arms.",
+        "At a distance from a place."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'advantage' mean?",
+      "options": [
+        "A comfortable chair with supports for your arms.",
+        "Bed and Breakfast; a place to sleep and eat breakfast.",
+        "Something that helps you be better or more successful.",
+        "happening three occasions within one week"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'armchair' mean?",
+      "options": [
+        "At a distance from a place.",
+        "A comfortable chair with supports for your arms.",
+        "Something that helps you be better or more successful.",
+        "Bed and Breakfast; a place to sleep and eat breakfast."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'away [distance]' mean?",
+      "options": [
+        "happening three occasions within one week",
+        "Bed and Breakfast; a place to sleep and eat breakfast.",
+        "A comfortable chair with supports for your arms.",
+        "At a distance from a place."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'B&B' mean?",
+      "options": [
+        "Bed and Breakfast; a place to sleep and eat breakfast.",
+        "Something that helps you be better or more successful.",
+        "happening three occasions within one week",
+        "At a distance from a place."
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Past Continuous and Past Simple",
+    "explanation": "We use the **past continuous** for an action in progress in the past. We make it with **was / were + verb-ing**.\n\nUse **was** with I, he, she, and it. Use **were** with you, we, and they.\n\nThe **past continuous** is the long background action. The **past simple** is the short action in the middle of it.\n\nUse **when** before the short action. Use **while** before the long action.\n\nFor negatives, use **wasn't** or **weren't**. For questions, put **was** or **were** first.",
+    "examples": [
+      "*At 7 o'clock this morning, I **was having** breakfast. (in progress at a time)",
+      "*They **were playing** football when it **started** to snow. (interrupted action)",
+      "*While we **were waiting** for the bus, we **saw** an accident. (while + long action)",
+      "*She **wasn't wearing** a coat, so she was cold. (negative)",
+      "*I **was reading** while my brother **was cooking**. (two actions at the same time)",
+      "*What **were** you **doing** at midnight? (question)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with the past continuous: At 8 last night, I read in my armchair.",
+        "a": "At 8 last night, I was reading in my armchair."
+      },
+      {
+        "q": "Rewrite with the past continuous: She stayed in a B and B when it rained.",
+        "a": "She was staying in a B and B when it rained."
+      },
+      {
+        "q": "Fix this sentence: They was walking to the shop far away.",
+        "a": "They were walking to the shop far away."
+      },
+      {
+        "q": "Make a question: You were sleeping at midnight.",
+        "a": "Were you sleeping at midnight?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "At 9 p.m. yesterday, I ___ TV.",
+        "options": [
+          "was watching",
+          "were watching",
+          "am watching",
+          "was watch"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They ___ football when it started to rain.",
+        "options": [
+          "was playing",
+          "are playing",
+          "were play",
+          "were playing"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I was cooking when the phone ___.",
+        "options": [
+          "has rung",
+          "rings",
+          "rang",
+          "ringed"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ you sleeping when I called?",
+        "options": [
+          "Did",
+          "Were",
+          "Was",
+          "Are"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "While she ___ for the bus, she met an old friend.",
+        "options": [
+          "were waiting",
+          "is waiting",
+          "was waiting",
+          "was wait"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What ___ you doing at midnight last night?",
+        "options": [
+          "was",
+          "did",
+          "are",
+          "were"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He ___ the answer, so he put his hand up.",
+        "options": [
+          "knew",
+          "was knowing",
+          "knows",
+          "was know"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ my finger while I was cutting vegetables.",
+        "options": [
+          "was cutting",
+          "cut",
+          "am cutting",
+          "cutted"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The sun ___ and the birds were singing.",
+        "options": [
+          "were shining",
+          "shines",
+          "is shining",
+          "was shining"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We ___ when you rang the doorbell.",
+        "options": [
+          "weren't sleeping",
+          "didn't sleeping",
+          "wasn't sleeping",
+          "not sleeping"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a2/2026-11-03/grammar-en.mp3"
+  }
+}
