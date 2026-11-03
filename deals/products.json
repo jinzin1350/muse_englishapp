@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "miceylive-pro-red-light-mask",
+      "name_fa": "ماسک نور قرمز مایس‌لایو پرو برای صورت",
+      "name_en": "MICEYLIVE Pro Red Light Mask for Full Face",
+      "price_cad": 75.99,
+      "regular_cad": 149.99,
+      "discount_pct": 50,
+      "added_fa": "سه‌شنبه، ۳ نوامبر ۲۰۲۶",
+      "image": "img/miceylive-pro-red-light-mask.jpg",
+      "url": "https://www.amazon.ca/dp/B0FJRNG57P?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "ماسک سیلیکونی نرم با نور قرمز و مادون قرمز برای مراقبت از پوست در خانه؛ با کد AVHOBYF2"
+    },
+    {
+      "id": "ecovacs-deebot-t80-omni",
+      "name_fa": "جاروبرقی رباتیک اکووکس دیبات تی۸۰ آمنی",
+      "name_en": "ECOVACS DEEBOT T80 OMNI Robot Vacuum and Mop",
+      "price_cad": 475.0,
+      "regular_cad": 601.27,
+      "discount_pct": 21,
+      "added_fa": "سه‌شنبه، ۳ نوامبر ۲۰۲۶",
+      "image": "img/ecovacs-deebot-t80-omni.jpg",
+      "url": "https://www.amazon.ca/dp/B0DZXK525Y?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "جارو و تی هم‌زمان با مکش ۱۸٬۰۰۰ پاسکال و ایستگاه شست‌وشوی خودکار؛ تمیزکاری خانه بدون دردسر"
+    },
+    {
       "id": "usx-full-motion-tv-mount-xml019",
       "name_fa": "پایه دیواری تلویزیون یواس‌ایکس، تمام‌حرکتی",
       "name_en": "USX Mount Full Motion TV Wall Mount for Most 37-86 inch TV, XML019",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "کابل‌های داخلی، شارژ سریع ۲۰ وات و شارژر مغناطیسی اپل واچ؛ با کد 40RORRYD2B"
-    },
-    {
-      "id": "trond-3way-outlet-extender",
-      "name_fa": "سه‌راهی برق تراند با دوشاخه چرخان",
-      "name_en": "TROND Multi Plug Outlet Extender, 360 Rotating, 3-Way, 1875W",
-      "price_cad": 11.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "یکشنبه، ۱ نوامبر ۲۰۲۶",
-      "image": "img/trond-3way-outlet-extender.jpg",
-      "url": "https://www.amazon.ca/dp/B0DXTT5SRH?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "سه‌راهی برق با دوشاخه چرخان ۳۶۰ درجه و توان ۱۸۷۵ وات"
-    },
-    {
-      "id": "tmy-1080p-projector-80in-screen",
-      "name_fa": "ویدئوپروژکتور تی‌ام‌وای با پرده ۸۰ اینچ",
-      "name_en": "TMY Native 1080P Projector with 80in Screen",
-      "price_cad": 59.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "یکشنبه، ۱ نوامبر ۲۰۲۶",
-      "image": "img/tmy-1080p-projector-80in-screen.jpg",
-      "url": "https://www.amazon.ca/dp/B0BMQCFBC2?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "ویدئوپروژکتور ۱۰۸۰پی با پرده ۸۰ اینچی همراه؛ قیمت با کد تخفیف HJTOSV5R"
     }
   ],
-  "updated_fa": "دوشنبه ۱۱ آبان"
+  "updated_fa": "سه‌شنبه ۱۲ آبان"
 }
