@@ -9197,42 +9197,44 @@ function ieltsIntro(v) {
   var arch = lsGet('ieltsResults');
   var hasArch = arch && arch.length;
   var last = hasArch ? arch[0] : null;
-  v.innerHTML = '<div class="ix-wrap"><div class="ix-intro">' +
-    '<div class="gt-mascot">🎓</div>' +
-    '<h1>IELTS Academic — Full Mock Test</h1>' +
-    '<p class="gt-sub">4 skills · real timing · band scores</p>' +
-    '<p>This mock follows the official IELTS Academic format, like the British Council computer test: ' +
+  var startImg = '<img src="/media/ielts/design/start-button.png" alt="START THE MOCK TEST">';
+  v.innerHTML = '<div class="ix-wrap"><div class="ix2">' +
+    '<img class="ix2-books" src="/media/ielts/design/books.png" alt="">' +
+    '<img class="ix2-cap" src="/media/ielts/design/cap.png" alt="">' +
+    '<h1 class="ix2-title">IELTS Academic \u2014 Full Mock Test</h1>' +
+    '<img class="ix2-badge" src="/media/ielts/design/badge.png" alt="4 skills \u00B7 real timing \u00B7 band scores">' +
+    '<p class="ix2-lede">This mock follows the official IELTS Academic format, like the British Council computer test: ' +
     'each skill is taken in one sitting, the recordings play <b>once</b>, and Listening &amp; Reading are scored ' +
     'instantly with the published band conversion tables. Writing shows a transparent estimate plus model ' +
-    'answers. Speaking is different: your answers are <b>recorded and sent to your teacher</b>, who listens and awards your band — no AI scoring.</p>' +
-    '<div class="ix-format">' +
-    '<div><b>🎧 Listening</b><span>4 parts · 40 questions · ~30 min</span></div>' +
-    '<div><b>📖 Reading</b><span>3 passages · 40 questions · 60 min</span></div>' +
-    '<div><b>✍️ Writing</b><span>2 tasks · chart + essay · 60 min</span></div>' +
-    '<div><b>🎤 Speaking</b><span>3 parts · interview · ~14 min</span></div>' +
+    'answers. Speaking is different: your answers are <b>recorded and sent to your teacher</b>, who listens and awards your band \u2014 no AI scoring.</p>' +
+    '<div class="ix2-cards">' +
+    '<img src="/media/ielts/design/card-listening.png" alt="Listening \u2014 4 parts, 40 questions, about 30 minutes">' +
+    '<img src="/media/ielts/design/card-reading.png" alt="Reading \u2014 3 passages, 40 questions, 60 minutes">' +
+    '<img src="/media/ielts/design/card-writing.png" alt="Writing \u2014 2 tasks, chart and essay, 60 minutes">' +
+    '<img src="/media/ielts/design/card-speaking.png" alt="Speaking \u2014 3 parts, interview, about 14 minutes">' +
     '</div>' +
-    (last ? '<p class="gt-last">Your last mock: <b>Overall Band ' + ieltsBandTxt(last.overall) + '</b> · ' +
-      'L ' + ieltsBandTxt(last.bands.l) + ' · R ' + ieltsBandTxt(last.bands.r) + ' · W ' + ieltsBandTxt(last.bands.w) + ' · S ' + (last.bands.s === null || last.bands.s === undefined ? '⏳ teacher' : ieltsBandTxt(last.bands.s)) +
-      ' · <a href="#/ielts/report">view report</a></p>' : '') +
+    (last ? '<p class="gt-last">Your last mock: <b>Overall Band ' + ieltsBandTxt(last.overall) + '</b> \u00B7 ' +
+      'L ' + ieltsBandTxt(last.bands.l) + ' \u00B7 R ' + ieltsBandTxt(last.bands.r) + ' \u00B7 W ' + ieltsBandTxt(last.bands.w) + ' \u00B7 S ' + (last.bands.s === null || last.bands.s === undefined ? '\u23F3 teacher' : ieltsBandTxt(last.bands.s)) +
+      ' \u00B7 <a href="#/ielts/report">view report</a></p>' : '') +
     '<div id="ix-intro-err"></div>' +
-    '<button class="gt-btn gt-btn-green gt-btn-big" id="ix-start">START THE MOCK TEST</button>' +
-    '<p class="ix-note">Find a quiet place and use headphones. You need a microphone for Speaking. ' +
-    'Your progress is saved on this device, so you can continue if the page reloads.</p>' +
+    '<button class="ix2-start" id="ix-start" aria-label="Start the mock test">' + startImg + '</button>' +
+    '<div class="ix2-note"><svg class="ix2-hp" viewBox="0 0 24 24" fill="none" stroke="#F26522" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 15v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6.5" rx="1.8"/><rect x="17" y="14" width="4" height="6.5" rx="1.8"/></svg>' +
+    '<p>Find a quiet place and use headphones. You need a microphone for Speaking. ' +
+    'Your progress is saved on this device, so you can continue if the page reloads.</p></div>' +
     '</div></div>';
   document.getElementById('ix-start').addEventListener('click', function () {
-    var btn = this; btn.disabled = true; btn.textContent = 'LOADING…';
+    var btn = this; btn.disabled = true; btn.innerHTML = '<span class="ix2-loading-txt">LOADING\u2026</span>';
     loadIeltsData().then(function () {
       var run = ieltsNewRun();
       ieltsSaveRun(run);
       ieltsRenderStage(ieltsView(), run);
     }).catch(function () {
-      btn.disabled = false; btn.textContent = 'START THE MOCK TEST';
+      btn.disabled = false; btn.innerHTML = startImg;
       document.getElementById('ix-intro-err').innerHTML = '<div class="empty">Could not load the test. Check your connection and try again.</div>';
     });
   });
   window.scrollTo(0, 0);
 }
-
 /* ---------- manual stop (pause / exit / discard) ---------- */
 function ieltsShowStop() {
   ieltsStopMedia();
@@ -14894,7 +14896,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611042031';
+var APP_VERSION = '202611042259';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

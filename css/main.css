@@ -4724,3 +4724,31 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
 .vip-tag { background:#FFF1D6; color:#B97A0F; border-radius:999px; padding:1px 8px; font-size:.72rem; font-weight:800; margin-left:6px; }
 .vip-toggle { margin-left:8px; background:#fff; border:1.5px solid #E8E2D6; color:#889; font-weight:800; border-radius:999px; padding:6px 12px; cursor:pointer; font-size:.8rem; }
 .vip-toggle.on { background:#FFF1D6; border-color:#F2C94C; color:#B97A0F; }
+
+/* ---------------- IELTS intro design v2 (Alireza's supplied mockup, 2026-11-04) ---------------- */
+.ix2 { position: relative; overflow: hidden; text-align: center; border-radius: 28px; padding: 36px 26px 32px;
+  box-shadow: inset 0 0 0 1px #F6E7CE, 0 10px 30px rgba(190, 140, 60, .08);
+  background: #FDF6EE; }
+.ix2-books { position: absolute; top: 10px; right: 12px; width: 118px; pointer-events: none; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 30%), linear-gradient(to top, transparent 0, #000 24%); -webkit-mask-composite: source-in; mask-image: linear-gradient(to right, transparent 0, #000 30%), linear-gradient(to top, transparent 0, #000 24%); mask-composite: intersect; }
+.ix2-cap { width: 235px; max-width: 58vw; margin-top: 4px; }
+.ix2-title { font-family: "Lora", Georgia, serif; font-weight: 700; color: #1D2A4D; font-size: 2.15rem; line-height: 1.2; margin: 12px 0 14px; }
+.ix2-badge { width: 345px; max-width: 100%; height: auto; }
+.ix2-lede { max-width: 770px; margin: 20px auto 4px; color: #2A3350; font-size: 1.02rem; line-height: 1.65; }
+.ix2-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; max-width: 950px; margin: 24px auto 4px; }
+.ix2-cards img { width: 100%; height: auto; display: block; filter: drop-shadow(0 6px 14px rgba(190, 140, 60, .12)); }
+.ix2-start { background: none; border: none; padding: 0; cursor: pointer; margin-top: 22px; max-width: 100%; transition: transform .12s ease, filter .12s ease; }
+.ix2-start img { width: 520px; max-width: 100%; display: block; }
+.ix2-start:hover { transform: translateY(-1px); filter: brightness(1.03); }
+.ix2-start:disabled { opacity: .65; cursor: default; transform: none; filter: none; }
+.ix2-loading-txt { display: inline-block; padding: 20px 70px; font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 1.15rem; letter-spacing: .06em; color: #EE4D1C; }
+.ix2-note { display: flex; gap: 10px; align-items: flex-start; max-width: 770px; margin: 24px auto 0; text-align: left; color: #5A6076; font-size: .92rem; line-height: 1.55; }
+.ix2-note .ix2-hp { width: 30px; height: 30px; flex: 0 0 30px; margin-top: 1px; }
+.ix2-note p { margin: 0; }
+.ix2 .gt-last { margin-top: 16px; }
+@media (max-width: 760px) {
+  .ix2 { padding: 26px 16px 24px; }
+  .ix2-cards { grid-template-columns: repeat(2, 1fr); }
+  .ix2-books { width: 82px; top: 6px; right: 6px; }
+  .ix2-title { font-size: 1.55rem; }
+  .ix2-cap { width: 185px; }
+}
