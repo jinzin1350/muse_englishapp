@@ -1,0 +1,1116 @@
+{
+ "id": "academic-mock-1",
+ "title": "IELTS Academic — Full Mock Test 1",
+ "type": "Academic",
+ "listening": {
+  "parts": [
+   {
+    "part": 1,
+    "title": "Joining the Riverside Community Centre",
+    "setting": "A man phones a community centre to ask about membership and classes.",
+    "audio": "media/ielts/mock1/part1.mp3",
+    "questions": [
+     {
+      "id": "L1",
+      "type": "gap",
+      "q": "The man's surname is ___.",
+      "accept": [
+       "reyes"
+      ]
+     },
+     {
+      "id": "L2",
+      "type": "gap",
+      "q": "His new mobile number is 07700 914 ___.",
+      "accept": [
+       "582"
+      ]
+     },
+     {
+      "id": "L3",
+      "type": "gap",
+      "q": "He decides to attend the yoga class on ___ morning.",
+      "accept": [
+       "friday"
+      ]
+     },
+     {
+      "id": "L4",
+      "type": "mcq",
+      "q": "What mainly persuaded Daniel to join the centre?",
+      "options": [
+       "a recommendation from a work colleague",
+       "a post he saw on social media",
+       "a leaflet he received at home"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "L5",
+      "type": "gap",
+      "q": "He will pay £___ per month for his membership.",
+      "accept": [
+       "32",
+       "thirty-two",
+       "thirty two"
+      ]
+     },
+     {
+      "id": "L6",
+      "type": "gap",
+      "q": "His membership will start on ___.",
+      "accept": [
+       "14 march",
+       "march 14",
+       "14th march",
+       "the 14th of march",
+       "14"
+      ]
+     },
+     {
+      "id": "L7",
+      "type": "mcq",
+      "q": "Before Daniel can use the gym, he must",
+      "options": [
+       "pass a fitness assessment",
+       "attend an induction session",
+       "take a swimming test"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "L8",
+      "type": "gap",
+      "q": "For the lockers, Daniel needs to bring a ___ from home.",
+      "accept": [
+       "padlock"
+      ]
+     },
+     {
+      "id": "L9",
+      "type": "mcq",
+      "q": "How will Daniel pay his monthly membership fee?",
+      "options": [
+       "by card each month",
+       "in cash at reception",
+       "by direct debit"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "L10",
+      "type": "gap",
+      "q": "Daniel lives at 18 ___ Avenue.",
+      "accept": [
+       "millbrook"
+      ]
+     }
+    ]
+   },
+   {
+    "part": 2,
+    "title": "The Saturday Farmers' Market",
+    "setting": "The manager of a weekly farmers' market gives a talk about changes and events at the market.",
+    "audio": "media/ielts/mock1/part2.mp3",
+    "questions": [
+     {
+      "id": "L11",
+      "type": "mcq",
+      "q": "What is the main purpose of the talk?",
+      "options": [
+       "to tell visitors about changes at the market",
+       "to recruit new stallholders",
+       "to advertise courses at a cookery school"
+      ],
+      "answer": 0
+     },
+     {
+      "id": "L12",
+      "type": "gap",
+      "q": "From this Saturday, the market will open at ___.",
+      "accept": [
+       "8.30",
+       "8:30",
+       "eight thirty",
+       "half past eight"
+      ]
+     },
+     {
+      "id": "L13",
+      "type": "gap",
+      "q": "This season, the market has a total of ___ stalls.",
+      "accept": [
+       "64",
+       "sixty-four",
+       "sixty four"
+      ]
+     },
+     {
+      "id": "L14",
+      "type": "mcq",
+      "q": "What new feature has the market introduced this season?",
+      "options": [
+       "a larger car park",
+       "live cooking demonstrations",
+       "a children's play area"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "L15",
+      "type": "gap",
+      "q": "The cooking demonstrations take place in the ___ beside the bandstand.",
+      "accept": [
+       "demonstration tent",
+       "tent"
+      ]
+     },
+     {
+      "id": "L16",
+      "type": "gap",
+      "q": "At the Dale Farm stall, visitors can taste ___ different types of cheese.",
+      "accept": [
+       "12",
+       "twelve"
+      ]
+     },
+     {
+      "id": "L17",
+      "type": "gap",
+      "q": "Children can take part in a ___ hunt around the market.",
+      "accept": [
+       "treasure"
+      ]
+     },
+     {
+      "id": "L18",
+      "type": "mcq",
+      "q": "What does the speaker say about parking at the market?",
+      "options": [
+       "It is free for the first hour.",
+       "It costs £2 per hour.",
+       "The car park is closed on Saturdays."
+      ],
+      "answer": 0
+     },
+     {
+      "id": "L19",
+      "type": "gap",
+      "q": "Next month's workshop will teach ___.",
+      "accept": [
+       "bread-making",
+       "bread making",
+       "bread"
+      ]
+     },
+     {
+      "id": "L20",
+      "type": "mcq",
+      "q": "How can visitors book a place on a workshop?",
+      "options": [
+       "by phone",
+       "at the information desk",
+       "on the market website"
+      ],
+      "answer": 2
+     }
+    ]
+   },
+   {
+    "part": 3,
+    "title": "Planning a Survey on Student Travel",
+    "setting": "Two students discuss their group research project with their tutor.",
+    "audio": "media/ielts/mock1/part3.mp3",
+    "questions": [
+     {
+      "id": "L21",
+      "type": "mcq",
+      "q": "What stage has the project reached?",
+      "options": [
+       "The students have finished collecting their data.",
+       "The students are still designing their questionnaire.",
+       "The students are writing their final report."
+      ],
+      "answer": 1
+     },
+     {
+      "id": "L22",
+      "type": "mcq",
+      "q": "Which topic have the students decided to focus on?",
+      "options": [
+       "car sharing",
+       "bus travel",
+       "cycling to campus"
+      ],
+      "answer": 2
+     },
+     {
+      "id": "L23",
+      "type": "gap",
+      "q": "The students have set a target of surveying ___ students.",
+      "accept": [
+       "200",
+       "two hundred"
+      ]
+     },
+     {
+      "id": "L24",
+      "type": "mcq",
+      "q": "What problem does the tutor find with some of the questionnaire questions?",
+      "options": [
+       "They are too general.",
+       "They are leading questions.",
+       "There are too many of them."
+      ],
+      "answer": 1
+     },
+     {
+      "id": "L25",
+      "type": "gap",
+      "q": "The questionnaire will be distributed through the university ___.",
+      "accept": [
+       "app"
+      ]
+     },
+     {
+      "id": "L26",
+      "type": "mcq",
+      "q": "Who will conduct the interviews with students?",
+      "options": [
+       "Tom",
+       "Priya",
+       "the tutor"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "L27",
+      "type": "gap",
+      "q": "The new deadline for the project is ___ May.",
+      "accept": [
+       "21",
+       "21st",
+       "twenty-one",
+       "twenty first"
+      ]
+     },
+     {
+      "id": "L28",
+      "type": "mcq",
+      "q": "What does the tutor suggest the students do with their extra time?",
+      "options": [
+       "increase the sample size",
+       "run a pilot survey",
+       "change the project topic"
+      ],
+      "answer": 1
+     },
+     {
+      "id": "L29",
+      "type": "gap",
+      "q": "The next meeting will be held in the ___ in the library.",
+      "accept": [
+       "seminar room"
+      ]
+     },
+     {
+      "id": "L30",
+      "type": "mcq",
+      "q": "What advice does the tutor give about the final presentation?",
+      "options": [
+       "Use more technical terms.",
+       "Put less text on the slides.",
+       "Speak more slowly than usual."
+      ],
+      "answer": 1
+     }
+    ]
+   },
+   {
+    "part": 4,
+    "title": "Cooling Our Cities: What Trees Actually Do",
+    "setting": "A university lecture about how urban trees affect city temperatures and health.",
+    "audio": "media/ielts/mock1/part4.mp3",
+    "questions": [
+     {
+      "id": "L31",
+      "type": "gap",
+      "q": "A shaded street can be up to ___ degrees Celsius cooler than an unshaded street.",
+      "accept": [
+       "4",
+       "four"
+      ]
+     },
+     {
+      "id": "L32",
+      "type": "gap",
+      "q": "Trees cool the air through a process called ___.",
+      "accept": [
+       "transpiration"
+      ]
+     },
+     {
+      "id": "L33",
+      "type": "gap",
+      "q": "A mature oak can release up to ___ litres of water in a day.",
+      "accept": [
+       "400",
+       "four hundred"
+      ]
+     },
+     {
+      "id": "L34",
+      "type": "gap",
+      "q": "The case study described in the lecture was carried out in ___, Australia.",
+      "accept": [
+       "melbourne"
+      ]
+     },
+     {
+      "id": "L35",
+      "type": "gap",
+      "q": "City planners commonly aim for tree canopy to cover ___ per cent of a city.",
+      "accept": [
+       "40",
+       "forty"
+      ]
+     },
+     {
+      "id": "L36",
+      "type": "gap",
+      "q": "Many newly planted street trees die within ___ years of planting.",
+      "accept": [
+       "three",
+       "3"
+      ]
+     },
+     {
+      "id": "L37",
+      "type": "gap",
+      "q": "The most common cause of early tree death is a lack of ___.",
+      "accept": [
+       "water"
+      ]
+     },
+     {
+      "id": "L38",
+      "type": "gap",
+      "q": "The tree most commonly seen along London's streets is the London ___.",
+      "accept": [
+       "plane",
+       "plane tree"
+      ]
+     },
+     {
+      "id": "L39",
+      "type": "gap",
+      "q": "Shade from trees reduces exposure to ___ radiation.",
+      "accept": [
+       "ultraviolet",
+       "uv"
+      ]
+     },
+     {
+      "id": "L40",
+      "type": "gap",
+      "q": "Planting programmes fail without long-term ___.",
+      "accept": [
+       "maintenance"
+      ]
+     }
+    ]
+   }
+  ]
+ },
+ "reading": {
+  "passages": [
+   {
+    "n": 1,
+    "paragraphs": [
+     {
+      "label": "A",
+      "text": "For roughly a third of our lives, we lie motionless and unaware of the world, and for most of human history this nightly shutdown was regarded as little more than an interruption to waking life. Sleep was what happened when there was nothing better to do, and advice about it rarely extended beyond warnings against laziness. Over the past fifty years, however, neuroscience has overturned that view entirely. Far from switching off, the sleeping brain follows a highly organised programme of activity, and researchers now argue that many of the processes essential to learning, emotional balance and physical repair can take place only while we are asleep. Understanding what happens during those hours has become one of the most productive fields in modern brain science."
+     },
+     {
+      "label": "B",
+      "text": "A night's sleep is not a uniform state but a sequence of stages that repeat in cycles of about ninety minutes. The first stage is light non-rapid eye movement (NREM) sleep, a transitional state from which a sleeper can be woken easily. This deepens into slow-wave sleep, when heart rate and breathing fall and the brain produces large, rhythmic waves of electrical activity. The sleeper then returns through the lighter stages into rapid eye movement (REM) sleep, in which the eyes move quickly beneath closed lids, most vivid dreams occur, and brain activity resembles wakefulness. Early in the night, deep NREM sleep dominates each cycle; as morning approaches, the proportion of REM sleep grows longer."
+     },
+     {
+      "label": "C",
+      "text": "One of sleep's best-established functions is the consolidation of memory. During the day, new experiences are recorded in a small structure called the hippocampus, but these records are fragile. During deep sleep, the hippocampus replays the day's events and the information is gradually transferred to the cortex, where long-term memories are stored. In one frequently cited experiment, students who learned a list of words and then slept remembered significantly more of them the following day than students who stayed awake for the same period. The effect is not limited to facts: people practising a new motor skill, such as a piano sequence, often perform it better after a night's sleep than they did at the end of their practice session, despite having done no further rehearsal."
+     },
+     {
+      "label": "D",
+      "text": "Sleep also plays a central role in regulating emotion. Brain-imaging studies show that after a night without sleep, the amygdala, a region involved in processing threat and fear, reacts far more strongly to negative images, while its connection to the prefrontal cortex, which normally restrains emotional responses, becomes weaker. The result is that tired people are more irritable, more anxious and less able to judge risks calmly. REM sleep appears to be particularly important for emotional memory: during dreaming, the brain seems to revisit emotional experiences in a state in which stress-related chemicals are unusually low, allowing the memory to be retained while some of its emotional charge fades."
+     },
+     {
+      "label": "E",
+      "text": "While the brain is busy consolidating and calming, the body undertakes essential maintenance. The pituitary gland releases most of its daily growth hormone during deep sleep, supporting the repair of muscles and other tissues. More surprisingly, researchers have identified a waste-clearance mechanism, the glymphatic system, which becomes dramatically more active during sleep. Channels alongside blood vessels widen, allowing fluid to wash through brain tissue and carry away metabolic by-products, including the protein beta-amyloid, whose accumulation is associated with Alzheimer's disease. In experiments on mice, this clearance proceeded roughly twice as fast in sleeping animals as in those that were awake, suggesting that one of sleep's original purposes may have been simple housekeeping."
+     },
+     {
+      "label": "F",
+      "text": "Given this evidence, the modern habit of treating sleep as negotiable is costly. Artificial light, and especially the light emitted by phones and tablets, suppresses the hormone melatonin and delays the onset of sleepiness. Shift workers, whose occupations force them to sleep during the day, frequently suffer a disrupted circadian rhythm, the internal clock that coordinates sleep with darkness, and face higher rates of heart disease and diabetes. Public health experts now recommend regular sleep schedules, dark bedrooms and at least seven hours of sleep for adults. The message of the research is consistent: sleep is not an obstacle to performance but one of its foundations, and societies that ignore it pay for the neglect in health and productivity. Employers have begun to take notice as well: a small but growing number of companies now schedule meetings later in the morning and discourage staff from sending email late at night, treating rested employees as an asset rather than a luxury."
+     }
+    ],
+    "questions": [
+     {
+      "answer": 3,
+      "id": "R1",
+      "options": [
+       "i. A nightly cleaning service for the brain",
+       "ii. The stages that make up a night's sleep",
+       "iii. How new learning is made permanent",
+       "iv. From idle rest to scientific priority",
+       "v. Why some people need less sleep than others",
+       "vi. Keeping feelings under control",
+       "vii. Dreams as a window into illness",
+       "viii. The discovery of the brain's electrical waves"
+      ],
+      "q": "Paragraph A",
+      "type": "heading"
+     },
+     {
+      "answer": 1,
+      "id": "R2",
+      "options": [
+       "i. A nightly cleaning service for the brain",
+       "ii. The stages that make up a night's sleep",
+       "iii. How new learning is made permanent",
+       "iv. From idle rest to scientific priority",
+       "v. Why some people need less sleep than others",
+       "vi. Keeping feelings under control",
+       "vii. Dreams as a window into illness",
+       "viii. The discovery of the brain's electrical waves"
+      ],
+      "q": "Paragraph B",
+      "type": "heading"
+     },
+     {
+      "answer": 2,
+      "id": "R3",
+      "options": [
+       "i. A nightly cleaning service for the brain",
+       "ii. The stages that make up a night's sleep",
+       "iii. How new learning is made permanent",
+       "iv. From idle rest to scientific priority",
+       "v. Why some people need less sleep than others",
+       "vi. Keeping feelings under control",
+       "vii. Dreams as a window into illness",
+       "viii. The discovery of the brain's electrical waves"
+      ],
+      "q": "Paragraph C",
+      "type": "heading"
+     },
+     {
+      "answer": 5,
+      "id": "R4",
+      "options": [
+       "i. A nightly cleaning service for the brain",
+       "ii. The stages that make up a night's sleep",
+       "iii. How new learning is made permanent",
+       "iv. From idle rest to scientific priority",
+       "v. Why some people need less sleep than others",
+       "vi. Keeping feelings under control",
+       "vii. Dreams as a window into illness",
+       "viii. The discovery of the brain's electrical waves"
+      ],
+      "q": "Paragraph D",
+      "type": "heading"
+     },
+     {
+      "answer": 0,
+      "id": "R5",
+      "options": [
+       "i. A nightly cleaning service for the brain",
+       "ii. The stages that make up a night's sleep",
+       "iii. How new learning is made permanent",
+       "iv. From idle rest to scientific priority",
+       "v. Why some people need less sleep than others",
+       "vi. Keeping feelings under control",
+       "vii. Dreams as a window into illness",
+       "viii. The discovery of the brain's electrical waves"
+      ],
+      "q": "Paragraph E",
+      "type": "heading"
+     },
+     {
+      "answer": 1,
+      "id": "R6",
+      "options": [
+       "were able to learn the words faster than the other group",
+       "remembered more of the words the following day",
+       "needed less practice the next morning",
+       "reported feeling less tired than the other group"
+      ],
+      "q": "In the experiment described in paragraph C, students who slept after learning a list of words",
+      "type": "mcq"
+     },
+     {
+      "answer": 2,
+      "id": "R7",
+      "options": [
+       "It controls the body's internal clock",
+       "It produces most of the body's growth hormone",
+       "It carries waste products away from the brain",
+       "It triggers the start of dreaming"
+      ],
+      "q": "What does the glymphatic system do?",
+      "type": "mcq"
+     },
+     {
+      "answer": 0,
+      "id": "R8",
+      "options": [
+       "delays the feeling of sleepiness",
+       "shortens REM cycles permanently",
+       "raises the body's temperature",
+       "has no effect on shift workers"
+      ],
+      "q": "According to paragraph F, light from phones and tablets",
+      "type": "mcq"
+     },
+     {
+      "answer": 1,
+      "id": "R9",
+      "options": [
+       "To argue that dreams are more important than deep sleep",
+       "To describe the functions sleep performs and why it should be protected",
+       "To explain how sleep disorders can be cured",
+       "To compare human sleep with that of other animals"
+      ],
+      "q": "What is the main purpose of the passage?",
+      "type": "mcq"
+     },
+     {
+      "accept": [
+       "wakefulness"
+      ],
+      "id": "R10",
+      "q": "During REM sleep, brain activity is similar to ___.",
+      "type": "gap"
+     },
+     {
+      "accept": [
+       "cortex",
+       "the cortex"
+      ],
+      "id": "R11",
+      "q": "During deep sleep, information is transferred from the hippocampus to the ___.",
+      "type": "gap"
+     },
+     {
+      "accept": [
+       "deep"
+      ],
+      "id": "R12",
+      "q": "Most growth hormone is released while a person is in ___ sleep.",
+      "type": "gap"
+     },
+     {
+      "accept": [
+       "circadian"
+      ],
+      "id": "R13",
+      "q": "People who work at night often suffer from a disrupted ___ rhythm.",
+      "type": "gap"
+     }
+    ],
+    "title": "The Night Shift: What Sleep Does for the Brain"
+   },
+   {
+    "n": 2,
+    "paragraphs": [
+     {
+      "label": "A",
+      "text": "The bicycle began not as a machine for sport but as an emergency response to a transport crisis. In 1817, after a series of poor harvests had made horse feed scarce and expensive, the German baron Karl von Drais unveiled a wooden vehicle with two wheels arranged in line, which the rider pushed along with his feet. Known as the draisine, it had no pedals, no chain and no brakes, yet on good roads it allowed travellers to move at roughly twice walking speed. Drais demonstrated his invention on a journey of about thirteen kilometres, completed in less than an hour, and within months imitations appeared in Paris, London and New York."
+     },
+     {
+      "label": "B",
+      "text": "For the next fifty years, progress was slow, and it was the addition of pedals, first attached directly to the front wheel, that transformed the machine. The design culminated in the 1870s in the penny-farthing, named after two British coins of very different sizes: an enormous front wheel, sometimes 1.5 metres across, with a tiny wheel behind. The large wheel allowed impressive speeds, since each turn of the pedals carried the rider a long way, but mounting required athleticism and a fall could mean being thrown over the handlebars. Despite the danger, or perhaps because of it, the penny-farthing became a symbol of daring and status among wealthy young men."
+     },
+     {
+      "label": "C",
+      "text": "The breakthrough came in 1885, when John Kemp Starley, an English engineer, produced the Rover safety bicycle. Its two wheels were of roughly equal size, the rider sat low between them, and a chain drove the rear wheel, so speed no longer depended on wheel diameter. Three years later, the Scottish veterinarian John Boyd Dunlop fitted his son's tricycle with an air-filled rubber tyre, prompted, family legend claims, by the headaches the boy suffered from riding over rough cobbles, and the pneumatic tyre made cycling dramatically more comfortable. Steering, braking and frame design all improved rapidly, and by the early 1890s the bicycle had assumed essentially the form it retains today."
+     },
+     {
+      "label": "D",
+      "text": "The social consequences were profound, and nowhere more than for women. Cycling offered many women their first experience of independent travel: for the first time, they could leave home unaccompanied and decide for themselves where to go. The activity also challenged conventions of dress, since long skirts were impractical and even dangerous on a bicycle; the adoption of looser garments and divided skirts, known as rational dress, became a visible sign of changing expectations. The American campaigner Susan B. Anthony judged in 1896 that bicycling had done more to emancipate women than anything else in the world. Cycling clubs, meanwhile, grew into powerful organisations whose members campaigned for the better road surfaces that cyclists needed."
+     },
+     {
+      "label": "E",
+      "text": "What turned a fashionable novelty into mass transport was manufacturing. In the mid-1880s a well-made bicycle could cost the equivalent of several months' wages for a skilled worker, restricting ownership to the comfortable middle classes. As factories adopted standardised parts and assembly-line methods during the 1890s, prices fell steeply, and by the end of the decade second-hand machines were within reach of almost anyone in regular work. In Britain, France and the United States, annual production ran into the millions, repair shops appeared in every town, and the bicycle became the first personal mechanical vehicle that ordinary people could own. Railway companies, quick to spot a new market, added bicycle vans to their trains and published guides to rural touring routes, allowing urban riders to explore the countryside at weekends and deepening the machine's hold on the public imagination."
+     },
+     {
+      "label": "F",
+      "text": "The bicycle's dominance was brief. In the early twentieth century the motor car inherited the improved roads and much of the technology, such as chains, gears and pneumatic tyres, that cycling had pioneered, and bicycle use declined across the industrialised world. Yet the story did not end there. From the 1970s onwards, concerns about congestion and air quality prompted some cities to rebuild their streets around the bicycle; the Netherlands and Denmark invested in protected cycle lanes and now record the highest rates of everyday cycling in the developed world. More recently, electric motors have extended the bicycle's range to older riders and hillier cities, giving a two-hundred-year-old invention a new lease of life."
+     }
+    ],
+    "questions": [
+     {
+      "answer": 1,
+      "id": "R14",
+      "options": [
+       "True",
+       "False",
+       "Not Given"
+      ],
+      "q": "The draisine was propelled by pedals attached to its front wheel.",
+      "type": "tfng"
+     },
+     {
+      "answer": 0,
+      "id": "R15",
+      "options": [
+       "True",
+       "False",
+       "Not Given"
+      ],
+      "q": "Penny-farthing riders risked being thrown over the handlebars in a fall.",
+      "type": "tfng"
+     },
+     {
+      "answer": 1,
+      "id": "R16",
+      "options": [
+       "True",
+       "False",
+       "Not Given"
+      ],
+      "q": "On Starley's safety bicycle, speed depended mainly on the size of the front wheel.",
+      "type": "tfng"
+     },
+     {
+      "answer": 2,
+      "id": "R17",
+      "options": [
+       "True",
+       "False",
+       "Not Given"
+      ],
+      "q": "Dunlop became wealthy by selling the patent for the pneumatic tyre.",
+      "type": "tfng"
+     },
+     {
+      "answer": 0,
+      "id": "R18",
+      "options": [
+       "True",
+       "False",
+       "Not Given"
+      ],
+      "q": "Cycling clubs pressed for improvements to road surfaces.",
+      "type": "tfng"
+     },
+     {
+      "answer": 1,
+      "id": "R19",
+      "options": [
+       "True",
+       "False",
+       "Not Given"
+      ],
+      "q": "By 1900, bicycles had become too expensive for most working people.",
+      "type": "tfng"
+     },
+     {
+      "answer": 1,
+      "id": "R20",
+      "options": [
+       "It was the cheapest form of transport available",
+       "It offered speed and carried social prestige",
+       "It was specifically designed for women's use",
+       "It could be ridden safely on rough roads"
+      ],
+      "q": "Why was the penny-farthing popular despite its dangers?",
+      "type": "mcq"
+     },
+     {
+      "answer": 2,
+      "id": "R21",
+      "options": [
+       "Repair shops became common in small towns",
+       "Owners formed clubs to protect their interests",
+       "Falling prices turned the bicycle into transport for the masses",
+       "Manufacturers competed to build the largest wheels"
+      ],
+      "q": "What is the main idea of paragraph E?",
+      "type": "mcq"
+     },
+     {
+      "answer": 1,
+      "id": "R22",
+      "options": [
+       "the formal dress required at cycling events",
+       "clothing adapted to make cycling practical for women",
+       "protective clothing worn by racing cyclists",
+       "the traditional dress of rural workers"
+      ],
+      "q": "The phrase 'rational dress' in paragraph D refers to",
+      "type": "mcq"
+     },
+     {
+      "answer": 0,
+      "id": "R23",
+      "options": [
+       "cars inherited improved roads and technology pioneered by cycling",
+       "governments taxed bicycles to fund road building for cars",
+       "bicycle factories immediately switched to building cars",
+       "cyclists demanded that cars replace bicycles"
+      ],
+      "q": "According to paragraph F, the motor car benefited from cycling because",
+      "type": "mcq"
+     },
+     {
+      "accept": [
+       "wood"
+      ],
+      "id": "R24",
+      "q": "The draisine was constructed mainly from ___.",
+      "type": "gap"
+     },
+     {
+      "accept": [
+       "chain"
+      ],
+      "id": "R25",
+      "q": "On the safety bicycle, power was transmitted to the rear wheel by a ___.",
+      "type": "gap"
+     },
+     {
+      "accept": [
+       "tricycle"
+      ],
+      "id": "R26",
+      "q": "Dunlop's first pneumatic tyre was fitted to his son's ___.",
+      "type": "gap"
+     }
+    ],
+    "title": "Two Wheels: How the Bicycle Remade Society"
+   },
+   {
+    "n": 3,
+    "paragraphs": [
+     {
+      "label": "A",
+      "text": "By 2050, the world's population is expected to approach ten billion, and nearly seventy per cent of those people will live in cities. Feeding them with conventional agriculture will require more land, more water and longer supply chains at precisely the moment when climate change is making harvests less predictable. One proposed answer is to move farming indoors and upwards. Vertical farms grow crops in stacked layers inside warehouses, former factories and purpose-built towers, often in the middle of the cities they supply. Supporters describe them as a revolution in food production; sceptics see an expensive niche. The reality, as the first generation of commercial farms matures, lies somewhere between the two."
+     },
+     {
+      "label": "B",
+      "text": "Inside a vertical farm, almost every variable that a field farmer must endure is brought under control. Plants grow not in soil but in shallow trays of nutrient-rich water, a technique called hydroponics, or with their roots suspended in air and sprayed with a fine mist of nutrients, known as aeroponics. Light comes from banks of LED lamps tuned to the wavelengths plants absorb most efficiently, and temperature, humidity and carbon dioxide are adjusted to keep growth conditions constant day and night. Sensors monitor the plants continuously, and in the most advanced facilities robots move trays, transplant seedlings and harvest leaves with minimal human involvement. Some operators have converted disused warehouses, attracted by their large floor areas and low rents."
+     },
+     {
+      "label": "C",
+      "text": "The most frequently quoted advantage is water. In open fields, much of the water applied to crops evaporates or drains away; in a closed vertical farm, water that is not absorbed is captured, filtered and used again. Operators commonly report using up to 95 per cent less water than conventional farms growing the same crop. Because the environment is sealed and sterile, pests rarely gain a foothold, so pesticides are seldom needed. And because conditions never change with the seasons, production continues all year round, with predictable harvests that can be scheduled to match orders from retailers."
+     },
+     {
+      "label": "D",
+      "text": "Yields can be striking. Freed from seasons and bad weather, a fast-growing crop such as lettuce may be harvested many more times per year than in a field, and each layer multiplies the output of the floor area below it. Location brings further benefits: a farm supplying a city from within its boundaries can cut the distance food travels from thousands of kilometres to a short van journey, reducing both transport emissions and spoilage. Consumers, in turn, receive produce that was picked hours rather than weeks earlier, and retailers value a supply that does not depend on weather on another continent. For growers, such predictability also simplifies contracts with supermarkets, which may penalise suppliers that fail to deliver agreed quantities on schedule."
+     },
+     {
+      "label": "E",
+      "text": "Against these advantages stands one formidable obstacle: energy. Sunlight is free; electricity is not. The lamps, pumps and cooling systems of a vertical farm consume large amounts of power, and energy is typically the largest single cost of production. If that electricity is generated from fossil fuels, the carbon footprint of the enterprise can exceed that of importing field-grown produce, cancelling out the savings from shorter transport. For this reason, the economics and the environmental case for vertical farming both depend heavily on access to cheap, renewable electricity, and several operators have failed commercially when energy prices rose."
+     },
+     {
+      "label": "F",
+      "text": "Cost shapes what can be grown. Building an automated facility requires heavy investment, and the crops that repay it are those that grow quickly, sell for a good price and consist mostly of water: leafy greens such as lettuce and spinach, herbs and strawberries dominate commercial production. Staple crops are a different matter. Wheat, rice and potatoes yield relatively few calories for the space, time and light they demand, and no vertical farm can currently grow them at a price competitive with a sunny field. Until lighting and automation become far cheaper, the world's basic calories will continue to come from the soil."
+     },
+     {
+      "label": "G",
+      "text": "The industry's future is therefore likely to be complementary rather than revolutionary. Researchers are working on more efficient LEDs, on breeding varieties of crops suited to indoor conditions, and on integrating farms with solar installations and waste heat from nearby buildings. Automation should gradually lower labour costs, and rising water scarcity may improve the relative economics in dry regions. Vertical farms will probably supply a growing share of the fresh, perishable produce eaten in large cities, while fields continue to provide grains and other staples. Judged not as a replacement for agriculture but as an addition to it, the vertical farm looks less like a fantasy and more like a practical tool."
+     }
+    ],
+    "questions": [
+     {
+      "answer": 1,
+      "id": "R27",
+      "options": [
+       "To argue that vertical farming will replace traditional agriculture",
+       "To present both the potential and the limitations of vertical farming",
+       "To describe the history of indoor farming",
+       "To persuade city governments to invest in vertical farms"
+      ],
+      "q": "What is the main purpose of the passage?",
+      "type": "mcq"
+     },
+     {
+      "answer": 1,
+      "id": "R28",
+      "options": [
+       "in shallow trays of water",
+       "with their roots hanging in air and sprayed with nutrients",
+       "in soil enriched with artificial fertiliser",
+       "under natural sunlight in glasshouses"
+      ],
+      "q": "In aeroponics, plants are grown",
+      "type": "mcq"
+     },
+     {
+      "answer": 2,
+      "id": "R29",
+      "options": [
+       "Vertical farms use more water than field farms",
+       "Water in a vertical farm is used only once",
+       "Vertical farms can use up to 95 per cent less water than conventional farms",
+       "Water is the main production cost in vertical farming"
+      ],
+      "q": "According to paragraph C, which statement about water is correct?",
+      "type": "mcq"
+     },
+     {
+      "answer": 1,
+      "id": "R30",
+      "options": [
+       "plants receive more carbon dioxide",
+       "food travels a much shorter distance to consumers",
+       "harvests can be grown without light",
+       "consumers always pay lower prices"
+      ],
+      "q": "According to paragraph D, one benefit of locating a vertical farm inside a city is that",
+      "type": "mcq"
+     },
+     {
+      "answer": 2,
+      "id": "R31",
+      "options": [
+       "Vertical farms will eventually produce most of the world's food",
+       "Vertical farms are a passing fashion with no long-term future",
+       "Vertical farms will work alongside, not instead of, traditional farming",
+       "Governments should subsidise vertical farms in all cities"
+      ],
+      "q": "What is the writer's conclusion in paragraph G?",
+      "type": "mcq"
+     },
+     {
+      "answer": 5,
+      "id": "R32",
+      "options": [
+       "Paragraph A",
+       "Paragraph B",
+       "Paragraph C",
+       "Paragraph D",
+       "Paragraph E",
+       "Paragraph F",
+       "Paragraph G"
+      ],
+      "q": "Which paragraph mentions crops that vertical farms cannot yet produce at a competitive price?",
+      "type": "mcq"
+     },
+     {
+      "answer": 1,
+      "id": "R33",
+      "options": [
+       "Paragraph A",
+       "Paragraph B",
+       "Paragraph C",
+       "Paragraph D",
+       "Paragraph E",
+       "Paragraph F",
+       "Paragraph G"
+      ],
+      "q": "Which paragraph describes plant roots being sprayed with a fine mist of nutrients?",
+      "type": "mcq"
+     },
+     {
+      "answer": 3,
+      "id": "R34",
+      "options": [
+       "Paragraph A",
+       "Paragraph B",
+       "Paragraph C",
+       "Paragraph D",
+       "Paragraph E",
+       "Paragraph F",
+       "Paragraph G"
+      ],
+      "q": "Which paragraph mentions produce reaching consumers within hours of being picked?",
+      "type": "mcq"
+     },
+     {
+      "answer": 6,
+      "id": "R35",
+      "options": [
+       "Paragraph A",
+       "Paragraph B",
+       "Paragraph C",
+       "Paragraph D",
+       "Paragraph E",
+       "Paragraph F",
+       "Paragraph G"
+      ],
+      "q": "Which paragraph mentions research into more efficient lighting?",
+      "type": "mcq"
+     },
+     {
+      "accept": [
+       "95"
+      ],
+      "id": "R36",
+      "q": "Vertical farms may use up to ___ per cent less water than conventional farms.",
+      "type": "gap"
+     },
+     {
+      "accept": [
+       "strawberries"
+      ],
+      "id": "R37",
+      "q": "Besides leafy greens, commercial vertical farms commonly grow herbs and ___.",
+      "type": "gap"
+     },
+     {
+      "accept": [
+       "footprint"
+      ],
+      "id": "R38",
+      "q": "If its electricity comes from fossil fuels, a vertical farm may have a very large carbon ___.",
+      "type": "gap"
+     },
+     {
+      "answer": 1,
+      "id": "R39",
+      "options": [
+       "True",
+       "False",
+       "Not Given"
+      ],
+      "q": "The writer concludes that vertical farms will eventually replace field farming entirely.",
+      "type": "tfng"
+     },
+     {
+      "answer": 0,
+      "id": "R40",
+      "options": [
+       "True",
+       "False",
+       "Not Given"
+      ],
+      "q": "Some vertical farms have been set up in buildings that were previously used for other purposes.",
+      "type": "tfng"
+     }
+    ],
+    "title": "Farming Upwards: Vertical Farms and the Future of Food"
+   }
+  ]
+ },
+ "writing": {
+  "tasks": [
+   {
+    "bandNotes": [
+     "Overview: a clear 'overall' paragraph states the main trend (internet dominates for the young, television for the old) before any details.",
+     "Paraphrase: the introduction restates the chart title in the writer's own words rather than copying it.",
+     "Data selection: figures are grouped by pattern (three younger groups, then the crossover) instead of listing every bar mechanically.",
+     "Comparisons: every figure is supported by data and contrasted using structures such as 'compared with', 'slightly more than' and 'the sharpest contrast'."
+    ],
+    "chart": {
+     "categories": [
+      "16-24",
+      "25-34",
+      "35-44",
+      "45-54",
+      "55+"
+     ],
+     "kind": "bar",
+     "series": [
+      {
+       "name": "Television",
+       "values": [
+        18,
+        16,
+        15,
+        17,
+        21
+       ]
+      },
+      {
+       "name": "Internet",
+       "values": [
+        28,
+        25,
+        20,
+        14,
+        8
+       ]
+      }
+     ],
+     "title": "Average weekly hours spent watching television and using the internet, by age group (2023)",
+     "unit": "hours per week"
+    },
+    "minWords": 150,
+    "modelAnswer": "The chart compares how much time people in five age groups in a European country spent watching television and using the internet each week in 2023. Overall, internet use was far more popular than television among younger people, but this pattern reversed with age: the oldest group watched considerably more television than they spent online. While time spent online fell steadily across the age groups, television viewing followed a U-shaped pattern. Among 16- to 24-year-olds, the internet dominated leisure screen time, at 28 hours per week, compared with 18 hours for television. A similar gap appeared in the 25-34 group, where people spent 25 hours online and 16 hours watching television, and among 35- to 44-year-olds the figures were 20 and 15 hours respectively. From the 45-54 group onwards, however, television took the lead. People in this group watched television for 17 hours a week, slightly more than the 14 hours they spent online. The contrast was sharpest among those aged 55 and over: they watched television for 21 hours per week, the highest figure for television in any group, but used the internet for only 8 hours, the lowest online figure overall.",
+    "n": 1,
+    "prompt": "The chart below shows the average number of hours per week spent watching television and using the internet by people in five age groups in a European country in 2023. Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.",
+    "suggestedMinutes": 20,
+    "type": "chart"
+   },
+   {
+    "bandNotes": [
+     "Clear position: the writer's view is signposted in the introduction, stated in full in the fourth paragraph and restated in the conclusion.",
+     "Balanced structure: each view is developed in its own paragraph with a topic sentence, explanation and supporting detail before the writer's view is given.",
+     "Range of structures: conditionals ('When fees are high...'), concession ('although tuition fees have some logic') and passive and relative clauses are used naturally.",
+     "Lexical resource: precise collocations such as 'equality of opportunity', 'bear the full cost', 'outstrip funding' and 'wastes the very talent it needs'."
+    ],
+    "minWords": 250,
+    "modelAnswer": "Whether university education should be free is one of the most contested questions in education policy. While some argue that tuition fees should be abolished entirely, others insist that students themselves should bear the full cost. This essay will examine both perspectives before giving my own view. Supporters of free university education point, first, to equality of opportunity. When fees are high, talented young people from low-income families may be discouraged from applying, or graduate burdened by debts that shape their career choices for decades. Education, on this view, is a public good: a highly educated workforce benefits the whole of society through higher productivity, innovation and tax revenues, so it is reasonable for society as a whole to pay. Countries such as Germany and Norway charge little or nothing, yet maintain respected universities. Opponents, however, argue that free tuition is neither fair nor sustainable. A degree substantially raises a graduate's lifetime earnings, so it seems unjust that taxpayers who never attended university, many of them in modestly paid jobs, should subsidise those who will out-earn them. Moreover, without fees, demand for places can outstrip funding, leading to overcrowded lecture halls and under-resourced departments. Charging students, its defenders claim, also encourages them to take their studies seriously. In my view, the social benefits of widening access outweigh these objections. The funding problem can be addressed by limiting free places to the numbers the economy needs, while high-earning graduates would in any case repay far more through progressive taxation than their education cost. A society that prices able students out of university wastes the very talent it needs. In conclusion, although tuition fees have some logic, free university education, carefully managed, is both fairer and more beneficial in the long term.",
+    "n": 2,
+    "prompt": "Some people believe that university education should be provided free of charge to all students. Others argue that students should pay the full cost of their tuition themselves. Discuss both views and give your own opinion. Give reasons for your answer and include any relevant examples from your own knowledge or experience. Write at least 250 words.",
+    "suggestedMinutes": 40,
+    "type": "essay"
+   }
+  ]
+ },
+ "speaking": {
+  "part1": {
+   "topics": [
+    {
+     "topic": "Work and study",
+     "questions": [
+      "Do you work, or are you a student?",
+      "What do you enjoy most about your work or your studies?",
+      "Did you always want to do this kind of work or study this subject?",
+      "Would you like to change anything about your job or your course in the future?"
+     ]
+    },
+    {
+     "topic": "Hometown",
+     "questions": [
+      "Where is your hometown?",
+      "What do you like most about living there?",
+      "Is your hometown a good place for young people? Why, or why not?",
+      "Would you like to live in your hometown in the future?"
+     ]
+    },
+    {
+     "topic": "Hobbies",
+     "questions": [
+      "What do you enjoy doing in your free time?",
+      "Did you have the same hobbies when you were a child?",
+      "Do you prefer spending your free time alone or with other people?",
+      "Is there a new hobby you would like to take up in the future?"
+     ]
+    }
+   ]
+  },
+  "part2": {
+   "cueCard": "Describe a skill you learned as an adult.",
+   "points": [
+    "You should say:",
+    "what the skill is",
+    "when and where you learned it",
+    "how you learned it",
+    "and explain why you wanted to learn this skill."
+   ],
+   "prepSeconds": 60,
+   "talkSeconds": 120
+  },
+  "part3": {
+   "theme": "Learning skills in adult life",
+   "questions": [
+    "Why do some adults decide to learn new skills, while others stop learning after they leave school?",
+    "Do you think it is easier to learn a new skill as a child or as an adult? Why?",
+    "How has technology changed the way adults learn new skills?",
+    "Should employers be responsible for training their staff, or should workers pay for their own training?",
+    "In the future, do you think people will need to change careers more often than they do today?",
+    "What skills do you think will be most important for young people to learn in the next twenty years?"
+   ]
+  }
+ }
+}

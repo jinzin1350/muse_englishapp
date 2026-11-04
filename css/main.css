@@ -4611,3 +4611,100 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
 .pl-selwrap { float: right; font-weight: 400; }
 .pl-selbtn { background: none; border: none; padding: 0; color: #C75B12; font-weight: 700; font-size: 0.85rem; cursor: pointer; font-family: inherit; }
 .pl-selbtn:hover { text-decoration: underline; }
+
+/* ---------------- IELTS mock (#/ielts) ---------------- */
+.ix-wrap { max-width: 1060px; margin: 0 auto; padding: 18px 14px 60px; }
+.ix-intro { text-align: center; max-width: 720px; margin: 0 auto; }
+.ix-intro h1 { color: #1E2A45; font-size: 1.9rem; margin: 6px 0 2px; }
+.ix-format { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 18px 0; text-align: left; }
+.ix-format > div { background: #fff; border: 1.5px solid #E8E2D6; border-radius: 16px; padding: 12px 14px; display: flex; flex-direction: column; gap: 3px; }
+.ix-format b { color: #232B4D; }
+.ix-format span { color: #778; font-size: .85rem; }
+.ix-note { color: #778; font-size: .88rem; line-height: 1.5; }
+.ix-head { margin-bottom: 12px; }
+.ix-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.ix-pill { font-size: .78rem; font-weight: 700; color: #99a; background: #F1EEE6; border-radius: 999px; padding: 4px 12px; }
+.ix-pill.on { background: #232B4D; color: #fff; }
+.ix-pill.done { background: #EAF6D8; color: #4C9A2A; }
+.ix-head-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.ix-head-row h2 { color: #1E2A45; margin: 0; font-size: 1.45rem; }
+.ix-timer { font-weight: 800; font-size: 1.25rem; color: #232B4D; background: #FFF4E0; border: 1.5px solid #F2C879; border-radius: 12px; padding: 4px 14px; font-variant-numeric: tabular-nums; }
+.ix-timer.low { background: #FDE8E0; border-color: #EE4D1C; color: #C23A10; }
+.ix-timer-sm { font-size: 1rem; padding: 2px 10px; }
+.ix-sub { color: #667; margin: 4px 0 10px; line-height: 1.5; }
+.ix-card { background: #fff; border: 1.5px solid #E8E2D6; border-radius: 20px; padding: 18px; margin-bottom: 16px; }
+.ix-card h3 { color: #1E2A45; margin: 2px 0 8px; }
+.ix-card h4 { color: #232B4D; margin: 14px 0 6px; }
+.ix-center { text-align: center; }
+.ix-player { display: flex; align-items: center; gap: 12px; background: #F7F3EA; border-radius: 14px; padding: 10px 14px; margin: 10px 0 16px; }
+.ix-play { width: 52px; height: 52px; flex: 0 0 52px; border: none; border-radius: 50%; background: #EE4D1C; color: #fff; font-size: 1.3rem; cursor: pointer; }
+.ix-play:disabled { background: #4C9A2A; cursor: default; }
+.ix-prog { flex: 1; height: 10px; background: #E8E2D6; border-radius: 99px; overflow: hidden; }
+.ix-prog-bar { height: 100%; width: 0; background: #F26522; transition: width .3s linear; }
+.ix-ptime { font-size: .85rem; color: #667; font-variant-numeric: tabular-nums; min-width: 74px; text-align: right; }
+.ix-qs { display: flex; flex-direction: column; gap: 16px; margin-bottom: 18px; }
+.ix-q-text { color: #23232e; line-height: 1.55; margin-bottom: 8px; }
+.ix-q-label { font-size: .78rem; font-weight: 700; color: #99a; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 6px; }
+.ix-opts { display: flex; flex-direction: column; gap: 7px; }
+.ix-opt { display: flex; gap: 10px; align-items: flex-start; text-align: left; background: #FBF9F4; border: 1.5px solid #E8E2D6; border-radius: 12px; padding: 9px 12px; cursor: pointer; font-size: .97rem; color: #23232e; line-height: 1.45; }
+.ix-opt:hover { border-color: #F2C879; }
+.ix-opt.sel { border-color: #4A90D9; background: #EBF3FD; }
+.ix-opt-l { flex: 0 0 24px; width: 24px; height: 24px; border-radius: 50%; background: #EDEAE0; color: #556; font-weight: 800; font-size: .8rem; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+.ix-opt.sel .ix-opt-l { background: #4A90D9; color: #fff; }
+.ix-gap { display: inline-block; width: 170px; max-width: 60vw; border: none; border-bottom: 2px solid #4A90D9; background: #F4F9FF; border-radius: 6px 6px 0 0; padding: 2px 8px; margin: 0 4px; font-size: 1rem; color: #1E2A45; }
+.ix-tabs { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.ix-tab { border: 1.5px solid #E8E2D6; background: #fff; border-radius: 999px; padding: 7px 18px; font-weight: 700; color: #556; cursor: pointer; }
+.ix-tab.on { background: #232B4D; color: #fff; border-color: #232B4D; }
+.ix-read-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+@media (max-width: 860px) { .ix-read-grid { grid-template-columns: 1fr; } }
+.ix-passage { max-height: 76vh; overflow-y: auto; line-height: 1.75; color: #2b2b33; }
+.ix-passage p { margin: 0 0 12px; }
+.ix-plab { display: inline-flex; width: 24px; height: 24px; border-radius: 7px; background: #232B4D; color: #fff; font-weight: 800; font-size: .8rem; align-items: center; justify-content: center; margin-right: 4px; }
+.ix-prompt { background: #F7F3EA; border-radius: 12px; padding: 12px 14px; line-height: 1.6; color: #2b2b33; }
+.ix-chart { width: 100%; height: auto; background: #fff; }
+.ix-legend { display: flex; gap: 18px; justify-content: center; font-size: .88rem; color: #445; margin-top: 4px; }
+.ix-swatch { display: inline-block; width: 13px; height: 13px; border-radius: 4px; margin-right: 6px; vertical-align: -1px; }
+.ix-editor { width: 100%; min-height: 300px; border: 1.5px solid #E8E2D6; border-radius: 14px; padding: 14px; font-size: 1rem; line-height: 1.65; font-family: inherit; color: #23232e; box-sizing: border-box; margin-top: 12px; }
+.ix-editor:focus { outline: 2px solid #4A90D9; }
+.ix-wc { text-align: right; color: #778; font-size: .88rem; margin: 6px 0 14px; font-variant-numeric: tabular-nums; }
+.ix-topic { color: #1E2A45; margin: 18px 0 8px; }
+.ix-sp-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+.ix-rec { border: none; background: #232B4D; color: #fff; font-weight: 700; border-radius: 999px; padding: 8px 18px; cursor: pointer; }
+.ix-rec.recording { background: #EE4D1C; }
+.ix-rec:disabled { background: #B9BDC9; cursor: not-allowed; }
+.ix-sp-state { color: #4C9A2A; font-size: .88rem; font-weight: 700; }
+.ix-sp-text { width: 100%; min-height: 62px; border: 1.5px solid #E8E2D6; border-radius: 12px; padding: 10px 12px; font-size: .97rem; line-height: 1.55; font-family: inherit; box-sizing: border-box; }
+.ix-cue { background: #FFF8EC; border: 1.5px solid #F2C879; border-radius: 14px; padding: 14px 18px; line-height: 1.6; margin-bottom: 12px; }
+.ix-cue ul { margin: 8px 0 2px; padding-left: 20px; }
+.ix-overall { display: flex; flex-direction: column; align-items: center; gap: 2px; margin: 10px 0 16px; }
+.ix-overall span { color: #778; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: .8rem; }
+.ix-overall b { font-size: 3.4rem; color: #1E2A45; line-height: 1; }
+.ix-bands { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 12px; }
+.ix-band { background: #fff; border: 1.5px solid #E8E2D6; border-radius: 16px; padding: 12px; text-align: center; }
+.ix-band-ic { font-size: 1.5rem; }
+.ix-band-n { font-weight: 800; color: #232B4D; margin-top: 2px; }
+.ix-band-v { font-size: 2rem; font-weight: 800; color: #EE4D1C; line-height: 1.15; }
+.ix-band-s { color: #889; font-size: .8rem; }
+.ix-det { border: 1.5px solid #E8E2D6; border-radius: 12px; padding: 10px 14px; margin: 10px 0; background: #FBF9F4; }
+.ix-det summary { cursor: pointer; font-weight: 700; color: #232B4D; }
+.ix-rev { padding: 8px 0; border-bottom: 1px dashed #E8E2D6; }
+.ix-rev:last-child { border-bottom: none; }
+.ix-rev-q { line-height: 1.5; color: #2b2b33; }
+.ix-rev.ok .ix-rev-a { color: #4C9A2A; }
+.ix-rev.bad .ix-rev-a { color: #C23A10; }
+.ix-rev-a { font-size: .9rem; margin-top: 2px; }
+.ix-notes { margin: 6px 0 10px; padding-left: 20px; line-height: 1.6; color: #2b2b33; }
+.ix-wtext { white-space: pre-wrap; line-height: 1.7; color: #2b2b33; padding-top: 8px; }
+
+/* IELTS speaking scoring (teacher portal) */
+.tw-ix-card { background:#fff; border:1.5px solid #E8E2D6; border-radius:16px; padding:14px 16px; margin-bottom:12px; }
+.tw-ix-head { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:8px; }
+.tw-ix-when { color:#889; font-size:.82rem; }
+.tw-ix-badge { margin-left:auto; font-size:.8rem; font-weight:800; color:#B97A0F; background:#FFF4E0; border-radius:999px; padding:3px 10px; }
+.tw-ix-badge.done { color:#4C9A2A; background:#EAF6D8; }
+.tw-ix-audio { display:flex; align-items:center; gap:10px; margin:6px 0; }
+.tw-ix-audio audio { flex:1; height:38px; }
+.tw-ix-score { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-top:10px; }
+.tw-ix-score select { padding:7px 10px; border-radius:10px; border:1.5px solid #E8E2D6; font-weight:700; }
+.tw-ix-score input { flex:1; min-width:200px; padding:8px 12px; border-radius:10px; border:1.5px solid #E8E2D6; }
+.ix-recpanel { display:flex; align-items:center; gap:10px; flex-wrap:wrap; background:#F7F3EA; border-radius:14px; padding:10px 14px; margin:12px 0; }
