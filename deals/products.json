@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "ugreen-magflow-25w-2in1-foldable",
+      "name_fa": "شارژر تاشوی یوگرین مگ‌فلو ۲۵ وات",
+      "name_en": "UGREEN MagFlow 25W 2-in-1 Foldable Charging Station",
+      "price_cad": 38.24,
+      "regular_cad": 59.99,
+      "discount_pct": 36,
+      "added_fa": "چهارشنبه، ۴ نوامبر ۲۰۲۶",
+      "image": "img/ugreen-magflow-25w-2in1-foldable.jpg",
+      "url": "https://www.amazon.ca/dp/B0GYZ8CRJH?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "شارژ بی‌سیم تاشوی ۲۵ وات برای آیفون و ایرپادز هم‌زمان؛ جمع‌وجور، مناسب سفر و امتیاز بالای کاربران"
+    },
+    {
+      "id": "ninja-air-fryer-pro-af141c",
+      "name_fa": "هواپز نینجا پرو ۴ کاره ۵ کوارت",
+      "name_en": "Ninja Air Fryer Pro 4-in-1, 5 QT (AF141C)",
+      "price_cad": 99.99,
+      "regular_cad": 179.99,
+      "discount_pct": 44,
+      "added_fa": "چهارشنبه، ۴ نوامبر ۲۰۲۶",
+      "image": "img/ninja-air-fryer-pro-af141c.jpg",
+      "url": "https://www.amazon.ca/dp/B0DBN87GQJ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "هواپز ۴ کاره با ظرفیت ۵ کوارت؛ غذای ترد با روغن کمتر، تمیزکاری آسان و امتیاز ۴٫۶ از صدها خریدار"
+    },
+    {
       "id": "dremel-4300-rotary-tool-kit",
       "name_fa": "ابزار چرخشی درمل ۴۳۰۰",
       "name_en": "Dremel 4300 Rotary Tool Kit with 40 Accessories",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "جارو و تی هم‌زمان با مکش ۱۸٬۰۰۰ پاسکال و ایستگاه شست‌وشوی خودکار؛ تمیزکاری خانه بدون دردسر"
-    },
-    {
-      "id": "usx-full-motion-tv-mount-xml019",
-      "name_fa": "پایه دیواری تلویزیون یواس‌ایکس، تمام‌حرکتی",
-      "name_en": "USX Mount Full Motion TV Wall Mount for Most 37-86 inch TV, XML019",
-      "price_cad": 55.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "دوشنبه، ۲ نوامبر ۲۰۲۶",
-      "image": "img/usx-full-motion-tv-mount-xml019.jpg",
-      "url": "https://www.amazon.ca/dp/B08M92P11W?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پایه دیواری تمام‌حرکتی برای تلویزیون‌های ۳۷ تا ۸۶ اینچ تا ۱۳۲ پوند"
-    },
-    {
-      "id": "shark-navigator-robot-vacuum-av2110s",
-      "name_fa": "جاروبرقی رباتیک شارک نویگیتور",
-      "name_en": "Shark Navigator Robot Vacuum, SmartPath Navigation, AV2110S",
-      "price_cad": 199.93,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "دوشنبه، ۲ نوامبر ۲۰۲۶",
-      "image": "img/shark-navigator-robot-vacuum-av2110s.jpg",
-      "url": "https://www.amazon.ca/dp/B0F2GRYPD1?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "جاروبرقی رباتیک با ناوبری اسمارت‌پث و ایستگاه تخلیه خودکار تا ۳۰ روز"
     }
   ],
-  "updated_fa": "سه‌شنبه ۱۲ آبان"
+  "updated_fa": "چهارشنبه ۱۳ آبان"
 }
