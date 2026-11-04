@@ -4708,3 +4708,13 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
 .tw-ix-score select { padding:7px 10px; border-radius:10px; border:1.5px solid #E8E2D6; font-weight:700; }
 .tw-ix-score input { flex:1; min-width:200px; padding:8px 12px; border-radius:10px; border:1.5px solid #E8E2D6; }
 .ix-recpanel { display:flex; align-items:center; gap:10px; flex-wrap:wrap; background:#F7F3EA; border-radius:14px; padding:10px 14px; margin:12px 0; }
+
+/* IELTS manual stop */
+.ix-stop { margin-left:auto; background:#fff; color:#C0392B; border:1.5px solid #E8B4AE; font-weight:800; border-radius:999px; padding:6px 14px; cursor:pointer; font-size:.85rem; }
+.ix-stop:hover { background:#FDECEA; }
+.ix-overlay { position:fixed; inset:0; background:rgba(30,42,69,.5); z-index:1200; display:flex; align-items:center; justify-content:center; padding:18px; }
+.ix-overlay-card { background:#fff; border-radius:20px; padding:22px; max-width:420px; width:100%; text-align:center; box-shadow:0 18px 50px rgba(30,42,69,.35); }
+.ix-overlay-card h3 { margin:0 0 8px; color:#1E2A45; }
+.ix-overlay-card p { color:#556; font-size:.92rem; margin:0 0 14px; }
+.ix-overlay-card .gt-btn { display:block; width:100%; margin:8px 0; }
+.ix-stop-discard { color:#C0392B !important; }

@@ -9191,6 +9191,43 @@ function ieltsIntro(v) {
   window.scrollTo(0, 0);
 }
 
+/* ---------- manual stop (pause / exit / discard) ---------- */
+function ieltsShowStop() {
+  ieltsStopMedia();
+  if (document.getElementById('ix-stop-overlay')) return;
+  var ov = document.createElement('div');
+  ov.className = 'ix-overlay';
+  ov.id = 'ix-stop-overlay';
+  ov.innerHTML = '<div class="ix-overlay-card"><h3>\u23F8 Test stopped</h3>' +
+    '<p>Your answers so far are saved automatically. Keep going now, pause and resume later from the IELTS page, or discard this test and start over.</p>' +
+    '<button class="gt-btn gt-btn-green" id="ix-stop-keep">\u25B6 Keep going</button>' +
+    '<button class="gt-btn" id="ix-stop-exit">\u23F8 Pause & exit</button>' +
+    '<button class="gt-btn ix-stop-discard" id="ix-stop-discard">\uD83D\uDDD1 Discard this test</button></div>';
+  document.body.appendChild(ov);
+  document.getElementById('ix-stop-keep').addEventListener('click', function () {
+    ov.remove();
+    var run = ieltsGetRun();
+    if (run && !run.done) ieltsRenderStage(ieltsView(), run);
+    else ieltsIntro(ieltsView());
+  });
+  document.getElementById('ix-stop-exit').addEventListener('click', function () {
+    ov.remove();
+    window.location.hash = '#/home';
+  });
+  document.getElementById('ix-stop-discard').addEventListener('click', function () {
+    ov.remove();
+    lsSet('ieltsRun', {});
+    state.ielts = {};
+    ieltsIntro(ieltsView());
+  });
+}
+if (!window.__ieltsStopBound) {
+  window.__ieltsStopBound = true;
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.id === 'ix-stopbtn') ieltsShowStop();
+  });
+}
+
 function ieltsHeadHTML(run, title, sub, timerSecs) {
   var steps = ['Listening', 'Reading', 'Writing', 'Speaking'];
   var cur = { 'l-intro': 0, 'listening': 0, 'r-intro': 1, 'reading': 1, 'w-intro': 2, 'writing': 2, 's-intro': 3, 'speaking': 3 }[run.stage];
@@ -9200,6 +9237,7 @@ function ieltsHeadHTML(run, title, sub, timerSecs) {
   return '<div class="ix-head"><div class="ix-pills">' + pills + '</div>' +
     '<div class="ix-head-row"><h2>' + esc(title) + '</h2>' +
     (timerSecs !== null && timerSecs !== undefined ? '<div class="ix-timer" id="ix-timer">' + gtestFmt(timerSecs) + '</div>' : '') +
+    '<button type="button" class="ix-stop" id="ix-stopbtn">⏹ Stop test</button>' +
     '</div>' + (sub ? '<p class="ix-sub">' + sub + '</p>' : '') + '</div>';
 }
 
