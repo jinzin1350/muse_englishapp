@@ -4718,3 +4718,9 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
 .ix-overlay-card p { color:#556; font-size:.92rem; margin:0 0 14px; }
 .ix-overlay-card .gt-btn { display:block; width:100%; margin:8px 0; }
 .ix-stop-discard { color:#C0392B !important; }
+
+/* VIP (IELTS gate + admin toggle) */
+.ix-vip-badge { background:#FFF1D6; color:#B97A0F; border-radius:999px; padding:1px 8px; font-size:.72rem; font-weight:800; vertical-align:2px; }
+.vip-tag { background:#FFF1D6; color:#B97A0F; border-radius:999px; padding:1px 8px; font-size:.72rem; font-weight:800; margin-left:6px; }
+.vip-toggle { margin-left:8px; background:#fff; border:1.5px solid #E8E2D6; color:#889; font-weight:800; border-radius:999px; padding:6px 12px; cursor:pointer; font-size:.8rem; }
+.vip-toggle.on { background:#FFF1D6; border-color:#F2C94C; color:#B97A0F; }

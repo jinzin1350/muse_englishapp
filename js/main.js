@@ -148,6 +148,9 @@ async function loadTeacherStatus() {
 function teacherInviteLink(code) {
   return window.location.origin + '/?ref=' + encodeURIComponent(code);
 }
+function teacherIeltsLink(code) {
+  return window.location.origin + '/?ref=' + encodeURIComponent(code) + '#/ielts';
+}
 function initHeartbeat() {
   setInterval(function () {
     try {
@@ -9131,24 +9134,63 @@ function paintIeltsBanner() {
   if (!isDesktop()) {
     wrap.innerHTML = '<a class="hm-card" href="#/ielts">' +
       '<span class="hm-icon">🎓</span><span class="hm-main"><span class="hm-kicker">IELTS</span>' +
-      '<span class="hm-title">IELTS Mock Test</span>' +
+      '<span class="hm-title">IELTS Mock Test <span class="ix-vip-badge">⭐ VIP</span></span>' +
       '<span class="hm-subtxt">' + esc(sub) + '</span></span>' +
       '<span class="hm-btn hm-btn-soft">Start →</span></a>';
     return;
   }
   wrap.innerHTML = '<a class="g-banner" href="#/ielts">' +
-    '<span class="g-b-icon">🎓</span><span class="g-b-main"><b>IELTS Mock Test</b>' +
+    '<span class="g-b-icon">🎓</span><span class="g-b-main"><b>IELTS Mock Test</b> <span class="ix-vip-badge">⭐ VIP</span>' +
     '<span>' + esc(sub) + '</span></span><span class="g-b-cta">Start →</span></a>';
 }
 
+/* ---------- VIP gate (Alireza's order 2026-11-04) ----------
+   The IELTS mock is a VIP-only feature. Admins and approved teachers
+   always pass; students need profiles.is_vip = true (Admin panel toggle). */
+async function ieltsFetchVip() {
+  if (!state.user) return false;
+  if (state.user.isAdmin) return true;
+  if (state.user.demo) return false;
+  if (state.user.isVip !== undefined) return state.user.isVip;
+  var vip = false;
+  if (sb) {
+    try { var pr = await sb.from('profiles').select('is_vip').eq('id', state.user.id).single(); if (pr.data) vip = !!pr.data.is_vip; } catch (e) {}
+    if (!vip) { try { var tr = await sb.from('teachers').select('status').eq('user_id', state.user.id).single(); if (tr.data && tr.data.status === 'approved') vip = true; } catch (e) {} }
+  }
+  state.user.isVip = vip;
+  return vip;
+}
+
+function ieltsLocked(v) {
+  v.innerHTML = '<div class="ix-wrap"><div class="ix-intro">' +
+    '<div class="gt-mascot">🎓</div>' +
+    '<h1>IELTS Academic — Full Mock Test</h1>' +
+    '<p class="gt-sub">⭐ This feature is for <b>VIP members</b> only</p>' +
+    '<div class="ix-format">' +
+    '<div><b>🎧 Listening</b><span>4 parts · 40 questions · ~30 min</span></div>' +
+    '<div><b>📖 Reading</b><span>3 passages · 40 questions · 60 min</span></div>' +
+    '<div><b>✍️ Writing</b><span>2 tasks · chart + essay · 60 min</span></div>' +
+    '<div><b>🎤 Speaking</b><span>3 parts · recorded · scored by your teacher</span></div>' +
+    '</div>' +
+    '<div class="ix-card ix-center"><div class="gt-mascot">⭐</div><h3>VIP members only</h3>' +
+    '<p>The full IELTS mock test — including Speaking scored by a real teacher — is part of the VIP plan.</p>' +
+    '<p class="ix-note">Ask your teacher to activate VIP on your account, or contact the Muse English team. The moment you are VIP, this page opens for you.</p>' +
+    '<a class="gt-btn" href="#/home">Back to home</a></div></div></div>';
+  window.scrollTo(0, 0);
+}
+
 function renderIelts(v, arg) {
-  if (arg === 'report') { ieltsRenderResults(v, null); return; }
   ieltsStopMedia();
-  ieltsFlushPending();
-  state.ielts = state.ielts || {};
-  var run = ieltsGetRun();
-  if (run && !run.done) { ieltsRenderStage(v, run); return; }
-  ieltsIntro(v);
+  if (arg === 'report') { ieltsRenderResults(v, null); return; }
+  v.innerHTML = '<div class="ix-wrap"><div class="empty">Loading…</div></div>';
+  ieltsFetchVip().then(function (vip) {
+    if (!vip) { ieltsLocked(v); return; }
+    ieltsFlushPending();
+    state.ielts = state.ielts || {};
+    var run = ieltsGetRun();
+    if (run && !run.done) { ieltsRenderStage(v, run); return; }
+    ieltsIntro(v);
+  });
 }
 
 function ieltsIntro(v) {
@@ -14495,9 +14537,10 @@ async function loadAdminUsers() {
     if (state.user.demo) {
       state.adminUsers = state.adminUsers.length ? state.adminUsers : DEMO_USERS.map(function (u) { return Object.assign({}, u); });
     } else if (sb) {
-      const { data, error } = await sb.from('profiles').select('id,email,level,created_at,referred_by').order('created_at', { ascending: true });
-      if (error) throw error;
-      state.adminUsers = data || [];
+      let res = await sb.from('profiles').select('id,email,level,created_at,referred_by,is_vip').order('created_at', { ascending: true });
+      if (res.error) res = await sb.from('profiles').select('id,email,level,created_at,referred_by').order('created_at', { ascending: true });
+      if (res.error) throw res.error;
+      state.adminUsers = res.data || [];
     }
   } catch (e) {
     if (list) list.innerHTML = '<div class="empty">Could not load users: ' + esc(e.message || e) + '</div>';
@@ -14519,7 +14562,7 @@ async function loadAdminUsers() {
     const pending = !u.level;
     return '<div class="user-row">' +
       '<div class="user-info">' +
-        '<div class="user-email">' + esc(u.email) + (pending ? '<span class="pending-tag">PENDING</span>' : '') + (u.referred_by ? '<span class="ref-tag">📣 ' + esc(u.referred_by) + '</span>' : '') + '</div>' +
+        '<div class="user-email">' + esc(u.email) + (pending ? '<span class="pending-tag">PENDING</span>' : '') + (u.is_vip ? '<span class="vip-tag">⭐ VIP</span>' : '') + (u.referred_by ? '<span class="ref-tag">📣 ' + esc(u.referred_by) + '</span>' : '') + '</div>' +
         '<div class="user-date">joined ' + esc(String(u.created_at || '').slice(0, 10)) + '</div>' +
       '</div>' +
       '<select class="level-select" data-user-id="' + esc(u.id) + '" aria-label="Set level for ' + esc(u.email) + '">' +
@@ -14528,8 +14571,12 @@ async function loadAdminUsers() {
           return '<option value="' + lv + '"' + (normalizeLevel(u.level) === lv ? ' selected' : '') + '>' + levelLabel(lv) + '</option>';
         }).join('') +
       '</select>' +
+      '<button type="button" class="vip-toggle' + (u.is_vip ? ' on' : '') + '" data-vip-id="' + esc(u.id) + '" title="Toggle VIP for ' + esc(u.email) + '">' + (u.is_vip ? '⭐ VIP' : '☆ Make VIP') + '</button>' +
     '</div>';
   }).join('') : '<div class="empty">No users yet.</div>') + '</div>';
+  list.querySelectorAll('.vip-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () { setUserVip(btn.getAttribute('data-vip-id'), !btn.classList.contains('on')); });
+  });
 }
 
 async function setUserLevel(id, level) {
@@ -14545,6 +14592,22 @@ async function setUserLevel(id, level) {
     await loadAdminUsers();
   } catch (e) {
     alert('Could not update level: ' + (e.message || e));
+    await loadAdminUsers();
+  }
+}
+
+async function setUserVip(id, vip) {
+  try {
+    if (state.user.demo) {
+      const u = state.adminUsers.find(function (x) { return String(x.id) === String(id); });
+      if (u) u.is_vip = vip;
+    } else if (sb) {
+      const { error } = await sb.from('profiles').update({ is_vip: vip }).eq('id', id);
+      if (error) throw error;
+    }
+    await loadAdminUsers();
+  } catch (e) {
+    alert('Could not update VIP — the is_vip column may be missing (run the VIP SQL migration first): ' + (e.message || e));
     await loadAdminUsers();
   }
 }
@@ -15798,9 +15861,16 @@ async function twFillMissedWords(r, results, nameOf) {
    speaking is never AI-scored (Alireza's order 2026-11-04). */
 
 async function twPageIelts(c) {
+  var ixT = twEffTeacher();
+  var ieltsLinkCard = ixT ? '<div class="tw-ix-card"><b>🔗 Your IELTS Mock link</b>' +
+    '<p class="tw-sub" style="margin:4px 0 8px">Send this link to your students — the full mock is ⭐ VIP-only, and their Speaking recordings come back to this page for your score.</p>' +
+    '<div class="tw-linkrow"><code>' + esc(teacherIeltsLink(ixT.ref_code)) + '</code>' +
+    '<button class="tw-btn tw-btn-orange tw-btn-sm" id="tw-copy-ielts2">⧉ Copy</button></div></div>' : '';
   c.innerHTML = '<div class="tw-page"><h2 class="tw-h">🎓 IELTS Speaking</h2>' +
     '<p class="tw-sub">Your students record the IELTS Speaking parts in the app. Listen to each part, then award the band (0–9, half bands) with optional feedback. The student sees your score in their mock results.</p>' +
-    '<div id="tw-ix-list"><div class="empty">Loading…</div></div></div>';
+    ieltsLinkCard + '<div id="tw-ix-list"><div class="empty">Loading…</div></div></div>';
+  var ixCopyBtn = document.getElementById('tw-copy-ielts2');
+  if (ixCopyBtn && ixT) ixCopyBtn.addEventListener('click', function () { twCopy(teacherIeltsLink(ixT.ref_code), this); });
   var listEl = document.getElementById('tw-ix-list');
   var rows = [];
   try {
@@ -16361,6 +16431,12 @@ async function twPageLinks(c) {
       '<div class="tw-linkrow"><code>' + esc(teacherPlacementLink(t.ref_code)) + '</code>' +
       '<button class="tw-btn tw-btn-orange tw-btn-sm" id="tw-copy-ptest3">⧉ Copy</button></div></div>' +
       '<div class="tw-link-side"><div class="tw-link-note tw-link-note-p">Students take a 5-part placement test and their results will appear in your dashboard.</div></div></div>' +
+    '<div class="tw-linkcard"><span class="tw-link-ico" style="background:#FFF1D6">🎓</span>' +
+      '<div class="tw-link-main"><b>IELTS Mock Test link</b>' +
+      '<p class="muted">Send your students the full IELTS Academic mock — Listening, Reading, Writing, and a recorded Speaking test that lands in your IELTS Speaking page for you to score.</p>' +
+      '<div class="tw-linkrow"><code>' + esc(teacherIeltsLink(t.ref_code)) + '</code>' +
+      '<button class="tw-btn tw-btn-orange tw-btn-sm" id="tw-copy-ielts">⧉ Copy</button></div></div>' +
+      '<div class="tw-link-side"><div class="tw-link-note">⭐ The mock is a VIP feature — a student needs VIP active on their account to open it.</div></div></div>' +
     (ro ? '<div class="tw-profcard"><p class="muted" style="margin:0">👁 Read-only — you’re viewing ' + esc(t.display_name) + '’s links.</p></div>'
       : '<div class="tw-profcard"><div class="tw-cardhead"><div><h3 style="margin:0">👤 My public profile</h3>' +
       '<p class="muted">Students see this when choosing a teacher.</p></div></div>' +
@@ -16370,6 +16446,9 @@ async function twPageLinks(c) {
   });
   document.getElementById('tw-copy-ptest3').addEventListener('click', function () {
     twCopy(teacherPlacementLink(t.ref_code), this);
+  });
+  document.getElementById('tw-copy-ielts').addEventListener('click', function () {
+    twCopy(teacherIeltsLink(t.ref_code), this);
   });
   if (!ro) twProfileEditor(document.getElementById('tw-prof-edit'));
 }
