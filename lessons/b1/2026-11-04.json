@@ -1,0 +1,394 @@
+{
+ "date": "2026-11-04",
+ "theme": "review day",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "a long time ago",
+   "pos": "phrase",
+   "meaning": "many years in the past",
+   "example": "Dinosaurs lived on Earth a long time ago.",
+   "pronunciation": "uh LONG TYM uh-GOH",
+   "persian": "خیلی وقت پیش",
+   "photo": "media/b1/2026-11-02/photos/a-long-time-ago.jpg",
+   "word_audio": "media/b1/2026-11-02/word-audio/a-long-time-ago.mp3"
+  },
+  {
+   "word": "act [do sth]",
+   "pos": "verb",
+   "meaning": "to do something in a particular situation",
+   "example": "We must act now to protect the environment.",
+   "pronunciation": "AKT",
+   "persian": "عمل کردن، اقدام کردن",
+   "photo": "media/b1/2026-11-02/photos/act-do-sth.jpg",
+   "word_audio": "media/b1/2026-11-02/word-audio/act-do-sth.mp3"
+  },
+  {
+   "word": "size",
+   "pos": "noun",
+   "meaning": "How big or small something is.",
+   "example": "What size is this shirt?",
+   "pronunciation": "SYZ",
+   "persian": "اندازه",
+   "photo": "media/b1/2026-11-03/photos/size.jpg",
+   "word_audio": "media/b1/2026-11-03/word-audio/size.mp3"
+  },
+  {
+   "word": "carry guns",
+   "pos": "phrase",
+   "meaning": "To have a gun with you.",
+   "example": "It is illegal for civilians to carry guns in many countries.",
+   "pronunciation": "KA-ree GUNZ",
+   "persian": "حمل سلاح گرم",
+   "photo": "media/b1/2026-11-02/photos/carry-guns.jpg",
+   "word_audio": "media/b1/2026-11-02/word-audio/carry-guns.mp3"
+  },
+  {
+   "word": "do a course",
+   "pos": "phrase",
+   "meaning": "To study a series of lessons.",
+   "example": "I want to do a photography course.",
+   "pronunciation": "doo uh KORSS",
+   "persian": "دوره گذراندن",
+   "photo": "media/b1/2026-11-01/photos/do-a-course.jpg",
+   "word_audio": "media/b1/2026-11-01/word-audio/do-a-course.mp3"
+  },
+  {
+   "word": "large number/amount",
+   "pos": "phrase",
+   "meaning": "A lot of something.",
+   "example": "A large number of people came to the sale.",
+   "pronunciation": "LARJ NUM-bur/uh-MOWNT",
+   "persian": "تعداد/مقدار زیاد",
+   "photo": "media/b1/2026-11-03/photos/large-number-amount.jpg",
+   "word_audio": "media/b1/2026-11-03/word-audio/large-number-amount.mp3"
+  },
+  {
+   "word": "battle",
+   "pos": "noun",
+   "meaning": "A fight between armies or groups.",
+   "example": "The soldiers fought a long battle.",
+   "pronunciation": "BAT-uhl",
+   "persian": "نبرد، جنگ",
+   "photo": "media/b1/2026-11-02/photos/battle.jpg",
+   "word_audio": "media/b1/2026-11-02/word-audio/battle.mp3"
+  },
+  {
+   "word": "push",
+   "pos": "verb",
+   "meaning": "To move something away from yourself.",
+   "example": "Push the door to close it.",
+   "pronunciation": "PUSH",
+   "persian": "هل دادن",
+   "photo": "media/b1/2026-11-03/photos/push.jpg",
+   "word_audio": "media/b1/2026-11-03/word-audio/push.mp3"
+  },
+  {
+   "word": "bomb",
+   "pos": "noun",
+   "meaning": "A weapon that explodes and causes damage.",
+   "example": "The old bomb was safely removed.",
+   "pronunciation": "BOM",
+   "persian": "بمب",
+   "photo": "media/b1/2026-11-02/photos/bomb.jpg",
+   "word_audio": "media/b1/2026-11-02/word-audio/bomb.mp3"
+  },
+  {
+   "word": "do homework",
+   "pos": "phrase",
+   "meaning": "To complete school assignments at home.",
+   "example": "My children do their homework after school.",
+   "pronunciation": "doo HOME-wurk",
+   "persian": "مشق انجام دادن",
+   "photo": "media/b1/2026-11-01/photos/do-homework.jpg",
+   "word_audio": "media/b1/2026-11-01/word-audio/do-homework.mp3"
+  }
+ ],
+ "review": true,
+ "review_of": [
+  "2026-11-01",
+  "2026-11-02",
+  "2026-11-03"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "pronunciation_audio": "media/b1/2026-11-04/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day",
+  "audio": "media/b1/2026-11-04/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-11-04/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Busy Review Week",
+  "audio": "media/b1/2026-11-04/shadowing.mp3",
+  "transcript": "media/b1/2026-11-04/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-11-04/shadowing-sentences/001.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/002.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/003.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/004.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/005.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/006.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/007.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/008.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/009.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/010.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/011.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/012.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/013.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/014.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/015.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/016.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/017.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/018.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/019.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/020.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/021.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/022.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/023.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/024.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/025.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/026.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/027.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/028.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/029.mp3",
+   "media/b1/2026-11-04/shadowing-sentences/030.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'a long time ago' mean?",
+   "options": [
+    "To have a gun with you.",
+    "many years in the past",
+    "How big or small something is.",
+    "To move something away from yourself."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'act [do sth]' mean?",
+   "options": [
+    "To study a series of lessons.",
+    "To move something away from yourself.",
+    "A lot of something.",
+    "to do something in a particular situation"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'size' mean?",
+   "options": [
+    "How big or small something is.",
+    "A fight between armies or groups.",
+    "A weapon that explodes and causes damage.",
+    "To have a gun with you."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'carry guns' mean?",
+   "options": [
+    "A fight between armies or groups.",
+    "A weapon that explodes and causes damage.",
+    "To move something away from yourself.",
+    "To have a gun with you."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'do a course' mean?",
+   "options": [
+    "A lot of something.",
+    "How big or small something is.",
+    "To move something away from yourself.",
+    "To study a series of lessons."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'large number/amount' mean?",
+   "options": [
+    "How big or small something is.",
+    "A weapon that explodes and causes damage.",
+    "A lot of something.",
+    "many years in the past"
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'battle' mean?",
+   "options": [
+    "How big or small something is.",
+    "To study a series of lessons.",
+    "A fight between armies or groups.",
+    "To move something away from yourself."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'push' mean?",
+   "options": [
+    "To move something away from yourself.",
+    "How big or small something is.",
+    "to do something in a particular situation",
+    "To complete school assignments at home."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'bomb' mean?",
+   "options": [
+    "many years in the past",
+    "A weapon that explodes and causes damage.",
+    "A fight between armies or groups.",
+    "To study a series of lessons."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'do homework' mean?",
+   "options": [
+    "To complete school assignments at home.",
+    "A weapon that explodes and causes damage.",
+    "To move something away from yourself.",
+    "A fight between armies or groups."
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "title": "Reflexive Pronouns (myself) and Each Other",
+  "explanation": "We use **reflexive pronouns** like **myself**, **yourself**, **himself**, and **themselves** when the subject and the object are the same person. For example, I cut **myself**, and she taught **herself** to do a course online.\n\nWe use **each other** when two or more people do something to the other person. Tom and Anna love **each other**, and my sister and I phone **each other** every day.\n\nReflexive pronouns also add emphasis, meaning that person and nobody else. I fixed my bike **myself**, and the kids made breakfast **themselves**.\n\n**By + reflexive** means alone, without help. She lives **by herself**, and the door closed **by itself**.\n\nSome verbs do not need a reflexive pronoun. Say I **relaxed**, I **feel** tired, and I can't **concentrate**, not relaxed myself or feel myself.\n\nDo not mix up **themselves** and **each other**. They looked at **themselves** means each person looked in a mirror, but they looked at **each other** means A looked at B and B looked at A.",
+  "examples": [
+   "*Be careful! Don't cut **yourself**.* (same person)",
+   "*We really enjoyed **ourselves** at the wedding.* (enjoy yourself)",
+   "*She lives **by herself** in a small flat.* (by herself = alone)",
+   "*I fixed my bike **myself**.* (emphasis)",
+   "*My sister and I phone **each other** every day.* (each other)",
+   "*I can't **concentrate** with this noise.* (no reflexive)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with a reflexive pronoun: Sara did her homework alone, with no help.",
+    "a": "Sara did her homework by herself."
+   },
+   {
+    "q": "Fix the mistake: He hurt him when he fell off his bike.",
+    "a": "He hurt himself when he fell off his bike."
+   },
+   {
+    "q": "Fix the mistake: Tom and Anna love themselves. (Tom loves Anna and Anna loves Tom.)",
+    "a": "Tom and Anna love each other."
+   },
+   {
+    "q": "Fix the mistake: I relaxed myself after work.",
+    "a": "I relaxed after work."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Be careful with that knife. Don't cut ___.",
+    "options": [
+     "you",
+     "your",
+     "yours",
+     "yourself"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "We really enjoyed ___ at the party.",
+    "options": [
+     "us",
+     "ourselves",
+     "ourself",
+     "ours"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Tom and Lisa love ___. They're getting married next month.",
+    "options": [
+     "each other",
+     "themselves",
+     "themself",
+     "theirselves"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "She lives by ___ in a small flat.",
+    "options": [
+     "her",
+     "hers",
+     "herself",
+     "itself"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "The children made the cake ___. Nobody helped them.",
+    "options": [
+     "themselves",
+     "theirselves",
+     "each other",
+     "them"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I don't need help. I can do it ___.",
+    "options": [
+     "me",
+     "mine",
+     "myself",
+     "by me"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Everyone, please help ___ to some food and drinks.",
+    "options": [
+     "you",
+     "yourselves",
+     "yourselfs",
+     "yours"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Nobody touched it. The door closed by ___.",
+    "options": [
+     "it",
+     "its",
+     "it's",
+     "itself"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "My sister and I phone ___ every day.",
+    "options": [
+     "ourselves",
+     "each other",
+     "us",
+     "ourself"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Did you paint the house ___? – Yes, we did it all without help.",
+    "options": [
+     "yourself's",
+     "you",
+     "yours",
+     "yourselves"
+    ],
+    "answer": 3
+   }
+  ]
+ }
+}

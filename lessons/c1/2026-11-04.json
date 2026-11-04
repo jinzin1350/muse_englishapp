@@ -1,0 +1,395 @@
+{
+ "date": "2026-11-04",
+ "theme": "review day",
+ "level": "c1",
+ "cefr": "C1",
+ "words": [
+  {
+   "word": "affluence",
+   "pos": "noun",
+   "meaning": "The state of having a great deal of money.",
+   "example": "The country's affluence led to increased consumption.",
+   "pronunciation": "AF-loo-uhns",
+   "persian": "ثروت، رفاه",
+   "photo": "media/c1/2026-11-02/photos/affluence.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/affluence.mp3"
+  },
+  {
+   "word": "besiege",
+   "pos": "verb",
+   "meaning": "To surround a place with armed forces; overwhelm.",
+   "example": "The city was besieged by enemy forces for months.",
+   "pronunciation": "buh-SEEJ",
+   "persian": "محاصره کردن، تحت فشار قرار دادن",
+   "photo": "media/c1/2026-11-02/photos/besiege.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/besiege.mp3"
+  },
+  {
+   "word": "animal (rescue) shelter",
+   "pos": "noun",
+   "meaning": "A place providing temporary care for homeless animals.",
+   "example": "We adopted our dog from the local animal rescue shelter.",
+   "pronunciation": "AN-uh-muhl REH-skyoo SHEL-ter",
+   "persian": "پناهگاه حیوانات",
+   "photo": "media/c1/2026-11-02/photos/animal-rescue-shelter.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/animal-rescue-shelter.mp3"
+  },
+  {
+   "word": "affinity",
+   "pos": "noun",
+   "meaning": "A natural liking or understanding of something.",
+   "example": "He has a strong affinity for languages.",
+   "pronunciation": "uh-FIN-uh-tee",
+   "persian": "خویشاوندی، علاقه",
+   "photo": "media/c1/2026-11-01/photos/affinity.jpg",
+   "word_audio": "media/c1/2026-11-01/word-audio/affinity.mp3"
+  },
+  {
+   "word": "academic journal",
+   "pos": "noun phrase",
+   "meaning": "A periodical containing scholarly articles on a specific subject.",
+   "example": "She published her research in a prestigious academic journal.",
+   "pronunciation": "ak-uh-DEM-ik JUR-nul",
+   "persian": "مجله علمی، نشریه دانشگاهی",
+   "photo": "media/c1/2026-11-03/photos/academic-journal.jpg",
+   "word_audio": "media/c1/2026-11-03/word-audio/academic-journal.mp3"
+  },
+  {
+   "word": "animal rights activist",
+   "pos": "noun",
+   "meaning": "A person campaigning for the ethical treatment of animals.",
+   "example": "Animal rights activists protested against the fur industry.",
+   "pronunciation": "AN-uh-muhl RYTS AK-tuh-vist",
+   "persian": "فعال حقوق حیوانات",
+   "photo": "media/c1/2026-11-02/photos/animal-rights-activist.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/animal-rights-activist.mp3"
+  },
+  {
+   "word": "adjoining",
+   "pos": "adjective",
+   "meaning": "Next to or in contact with.",
+   "example": "The library is in the adjoining building.",
+   "pronunciation": "uh-JOY-ning",
+   "persian": "مجاور، همسایه",
+   "photo": "media/c1/2026-11-03/photos/adjoining.jpg",
+   "word_audio": "media/c1/2026-11-03/word-audio/adjoining.mp3"
+  },
+  {
+   "word": "absolute poverty",
+   "pos": "phrase",
+   "meaning": "Lacking basic necessities like food, water, and shelter.",
+   "example": "Absolute poverty remains a global challenge.",
+   "pronunciation": "AB-suh-loot POV-er-tee",
+   "persian": "فقر مطلق",
+   "photo": "media/c1/2026-11-02/photos/absolute-poverty.jpg",
+   "word_audio": "media/c1/2026-11-02/word-audio/absolute-poverty.mp3"
+  },
+  {
+   "word": "annual bonus",
+   "pos": "noun",
+   "meaning": "An extra payment given to employees once a year.",
+   "example": "Employees received a generous annual bonus after a successful year.",
+   "pronunciation": "AN-yoo-ul BOH-nus",
+   "persian": "پاداش سالانه",
+   "photo": "media/c1/2026-11-01/photos/annual-bonus.jpg",
+   "word_audio": "media/c1/2026-11-01/word-audio/annual-bonus.mp3"
+  },
+  {
+   "word": "articulate (adj.)",
+   "pos": "adjective",
+   "meaning": "Expressing ideas clearly and fluently.",
+   "example": "She is a highly articulate speaker, always clear and concise.",
+   "pronunciation": "ar-TIK-yuh-lit",
+   "persian": "فصیح، شیوا",
+   "photo": "media/c1/2026-11-03/photos/articulate.jpg",
+   "word_audio": "media/c1/2026-11-03/word-audio/articulate.mp3"
+  }
+ ],
+ "review": true,
+ "review_of": [
+  "2026-11-01",
+  "2026-11-02",
+  "2026-11-03"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "pronunciation_audio": "media/c1/2026-11-04/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day — Words That Stick",
+  "audio": "media/c1/2026-11-04/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-11-04/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Journalist and the Shelter",
+  "audio": "media/c1/2026-11-04/shadowing.mp3",
+  "transcript": "media/c1/2026-11-04/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c1/2026-11-04/shadowing-sentences/001.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/002.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/003.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/004.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/005.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/006.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/007.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/008.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/009.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/010.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/011.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/012.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/013.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/014.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/015.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/016.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/017.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/018.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/019.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/020.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/021.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/022.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/023.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/024.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/025.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/026.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/027.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/028.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/029.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/030.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/031.mp3",
+   "media/c1/2026-11-04/shadowing-sentences/032.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'affluence' mean?",
+   "options": [
+    "Expressing ideas clearly and fluently.",
+    "To surround a place with armed forces; overwhelm.",
+    "A periodical containing scholarly articles on a specific subject.",
+    "The state of having a great deal of money."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'besiege' mean?",
+   "options": [
+    "Expressing ideas clearly and fluently.",
+    "Lacking basic necessities like food, water, and shelter.",
+    "An extra payment given to employees once a year.",
+    "To surround a place with armed forces; overwhelm."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'animal (rescue) shelter' mean?",
+   "options": [
+    "The state of having a great deal of money.",
+    "A place providing temporary care for homeless animals.",
+    "An extra payment given to employees once a year.",
+    "A natural liking or understanding of something."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'affinity' mean?",
+   "options": [
+    "A natural liking or understanding of something.",
+    "To surround a place with armed forces; overwhelm.",
+    "Next to or in contact with.",
+    "The state of having a great deal of money."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'academic journal' mean?",
+   "options": [
+    "Next to or in contact with.",
+    "To surround a place with armed forces; overwhelm.",
+    "A periodical containing scholarly articles on a specific subject.",
+    "A natural liking or understanding of something."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'animal rights activist' mean?",
+   "options": [
+    "The state of having a great deal of money.",
+    "A person campaigning for the ethical treatment of animals.",
+    "A natural liking or understanding of something.",
+    "A periodical containing scholarly articles on a specific subject."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'adjoining' mean?",
+   "options": [
+    "Lacking basic necessities like food, water, and shelter.",
+    "A natural liking or understanding of something.",
+    "Next to or in contact with.",
+    "An extra payment given to employees once a year."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'absolute poverty' mean?",
+   "options": [
+    "Next to or in contact with.",
+    "Lacking basic necessities like food, water, and shelter.",
+    "A periodical containing scholarly articles on a specific subject.",
+    "A natural liking or understanding of something."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'annual bonus' mean?",
+   "options": [
+    "An extra payment given to employees once a year.",
+    "Next to or in contact with.",
+    "Lacking basic necessities like food, water, and shelter.",
+    "A natural liking or understanding of something."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'articulate (adj.)' mean?",
+   "options": [
+    "To surround a place with armed forces; overwhelm.",
+    "A person campaigning for the ethical treatment of animals.",
+    "Expressing ideas clearly and fluently.",
+    "A natural liking or understanding of something."
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "Future in the Past (was about to, was to, would)",
+  "explanation": "Sometimes we talk about the past and describe what was in the future at that time. For this we use **would**, **was about to**, **was on the point of**, **was to**, and **was to have done**.\n\n**Would** is the past form of will. We use it after past reporting verbs, for example when an articulate speaker said she **would** present her academic journal article the next day.\n\n**Was about to** means something was very near in the future at that time. It is often interrupted, as in: she **was about to** leave when the phone rang.\n\n**Was on the point of** is even nearer than was about to. It takes an -ing form, so we say she **was on the point of** giving up, not to give up.\n\n**Was to** describes destiny or an official plan seen from the past. In stories it tells us what really happened later, as in: they met in 1990, and they **were to** marry ten years later.\n\n**Was to have done** describes a plan that did not happen. The meeting **was to have taken** place at ten, but it was cancelled, and the annual bonus **was to have been** paid in December, but it was delayed.",
+  "examples": [
+   "*I knew he **would** never see her again.* (would — future seen from the past)",
+   "*We **were about to** have dinner when the guests arrived.* (about to — very near future, interrupted)",
+   "*He **was on the point of** resigning when they offered him a promotion.* (on the point of — just about to)",
+   "*She **was to** become one of the most famous writers of her time.* (was to — destiny)",
+   "*The new hospital **was to have been** opened in 2020, but the work was delayed.* (was to have been — a plan that failed)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite using would: She said, \"I will call you tomorrow.\"",
+    "a": "She said she would call me the next day."
+   },
+   {
+    "q": "Rewrite using was about to: I almost left when the phone rang.",
+    "a": "I was about to leave when the phone rang."
+   },
+   {
+    "q": "Rewrite using was on the point of: She almost gave up, and then she found the answer in an academic journal.",
+    "a": "She was on the point of giving up when she found the answer in an academic journal."
+   },
+   {
+    "q": "Rewrite using was to have done: The new shelter was planned to open in spring, but the work was delayed.",
+    "a": "The new shelter was to have been opened in spring, but the work was delayed."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I was ___ to leave when the phone rang.",
+    "options": [
+     "on the point",
+     "will",
+     "would",
+     "about"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "She was on the point ___ up when she finally found the answer.",
+    "options": [
+     "of giving",
+     "to give",
+     "giving",
+     "of give"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "He knew he ___ never see her again.",
+    "options": [
+     "will",
+     "would",
+     "is going to",
+     "is about to"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "They met in 1990. Little did they know that they ___ married ten years later.",
+    "options": [
+     "will get",
+     "get",
+     "were to get",
+     "are to get"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "The meeting ___ at 10, but it was cancelled.",
+    "options": [
+     "takes place",
+     "will take place",
+     "was to have taken place",
+     "has taken place"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "We were about ___ dinner when the guests arrived.",
+    "options": [
+     "having",
+     "to have",
+     "have",
+     "to having"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "I thought it ___ a nice day, but it rained all afternoon.",
+    "options": [
+     "would be",
+     "will be",
+     "is",
+     "is going to be"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "She was ___ become one of the most famous writers of her time.",
+    "options": [
+     "about",
+     "on the point",
+     "would",
+     "to"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "The train ___ leave when we got to the platform.",
+    "options": [
+     "is about to",
+     "was about to",
+     "will",
+     "would be about"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "He promised he ___ back by midnight.",
+    "options": [
+     "will be",
+     "is",
+     "would be",
+     "was being"
+    ],
+    "answer": 2
+   }
+  ]
+ }
+}

@@ -1,0 +1,385 @@
+{
+ "date": "2026-11-04",
+ "theme": "review day",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "children",
+   "pos": "noun",
+   "meaning": "Young people, sons or daughters.",
+   "example": "My friend has two children.",
+   "pronunciation": "CHIL-drun",
+   "persian": "بچه‌ها، فرزندان",
+   "photo": "media/a1/2026-11-03/photos/children.jpg",
+   "word_audio": "media/a1/2026-11-03/word-audio/children.mp3"
+  },
+  {
+   "word": "call after",
+   "pos": "phrasal verb",
+   "meaning": "To name someone using another person's name.",
+   "example": "They will call the baby after her grandmother.",
+   "pronunciation": "KAWL AF-tur",
+   "persian": "نام کسی را گذاشتن",
+   "photo": "media/a1/2026-11-03/photos/call-after.jpg",
+   "word_audio": "media/a1/2026-11-03/word-audio/call-after.mp3"
+  },
+  {
+   "word": "cloudy",
+   "pos": "adjective",
+   "meaning": "Full of clouds.",
+   "example": "It's a cloudy day, so no sun.",
+   "pronunciation": "KLOW-dee",
+   "persian": "ابری",
+   "photo": "media/a1/2026-11-02/photos/cloudy.jpg",
+   "word_audio": "media/a1/2026-11-02/word-audio/cloudy.mp3"
+  },
+  {
+   "word": "by train",
+   "pos": "phrase",
+   "meaning": "Using a train as transport.",
+   "example": "He travels to London by train.",
+   "pronunciation": "by TRAYN",
+   "persian": "با قطار",
+   "photo": "media/a1/2026-11-01/photos/by-train.jpg",
+   "word_audio": "media/a1/2026-11-01/word-audio/by-train.mp3"
+  },
+  {
+   "word": "death",
+   "pos": "noun",
+   "meaning": "The end of life.",
+   "example": "His death was a great loss.",
+   "pronunciation": "DETH",
+   "persian": "مرگ",
+   "photo": "media/a1/2026-11-02/photos/death.jpg",
+   "word_audio": "media/a1/2026-11-02/word-audio/death.mp3"
+  },
+  {
+   "word": "cold",
+   "pos": "noun",
+   "meaning": "A common illness that makes you sneeze and cough.",
+   "example": "I have a cold and feel tired.",
+   "pronunciation": "KOHLD",
+   "persian": "سرماخوردگی",
+   "photo": "media/a1/2026-11-02/photos/cold.jpg",
+   "word_audio": "media/a1/2026-11-02/word-audio/cold.mp3"
+  },
+  {
+   "word": "bookshelf (bookshelves)",
+   "pos": "noun",
+   "meaning": "A shelf for holding books.",
+   "example": "My bookshelf is full of novels.",
+   "pronunciation": "BOOK-shelf",
+   "persian": "قفسه کتاب",
+   "photo": "media/a1/2026-11-01/photos/bookshelf.jpg",
+   "word_audio": "media/a1/2026-11-01/word-audio/bookshelf.mp3"
+  },
+  {
+   "word": "bride",
+   "pos": "noun",
+   "meaning": "A woman on her wedding day.",
+   "example": "The bride wore a beautiful white dress.",
+   "pronunciation": "BRYD",
+   "persian": "عروس",
+   "photo": "media/a1/2026-11-03/photos/bride.jpg",
+   "word_audio": "media/a1/2026-11-03/word-audio/bride.mp3"
+  },
+  {
+   "word": "cholera",
+   "pos": "noun",
+   "meaning": "A serious disease causing severe diarrhoea.",
+   "example": "Cholera can spread quickly in poor areas.",
+   "pronunciation": "KOL-er-uh",
+   "persian": "وبا",
+   "photo": "media/a1/2026-11-02/photos/cholera.jpg",
+   "word_audio": "media/a1/2026-11-02/word-audio/cholera.mp3"
+  },
+  {
+   "word": "by car",
+   "pos": "phrase",
+   "meaning": "Using a car as transport.",
+   "example": "We travel by car on weekends.",
+   "pronunciation": "by KAR",
+   "persian": "با ماشین",
+   "photo": "media/a1/2026-11-01/photos/by-car.jpg",
+   "word_audio": "media/a1/2026-11-01/word-audio/by-car.mp3"
+  }
+ ],
+ "review": true,
+ "review_of": [
+  "2026-11-01",
+  "2026-11-02",
+  "2026-11-03"
+ ],
+ "review_window_words": 15,
+ "review_sampled": 10,
+ "pronunciation_audio": "media/a1/2026-11-04/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day",
+  "audio": "media/a1/2026-11-04/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a1/2026-11-04/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Children and the Cloudy Day",
+  "audio": "media/a1/2026-11-04/shadowing.mp3",
+  "transcript": "media/a1/2026-11-04/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a1/2026-11-04/shadowing-sentences/001.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/002.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/003.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/004.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/005.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/006.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/007.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/008.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/009.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/010.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/011.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/012.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/013.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/014.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/015.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/016.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/017.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/018.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/019.mp3",
+   "media/a1/2026-11-04/shadowing-sentences/020.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'children' mean?",
+   "options": [
+    "Young people, sons or daughters.",
+    "A shelf for holding books.",
+    "A serious disease causing severe diarrhoea.",
+    "A woman on her wedding day."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'call after' mean?",
+   "options": [
+    "The end of life.",
+    "Using a train as transport.",
+    "To name someone using another person's name.",
+    "A shelf for holding books."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'cloudy' mean?",
+   "options": [
+    "To name someone using another person's name.",
+    "Full of clouds.",
+    "Using a car as transport.",
+    "A serious disease causing severe diarrhoea."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'by train' mean?",
+   "options": [
+    "The end of life.",
+    "Using a train as transport.",
+    "A woman on her wedding day.",
+    "Using a car as transport."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'death' mean?",
+   "options": [
+    "The end of life.",
+    "A common illness that makes you sneeze and cough.",
+    "A woman on her wedding day.",
+    "Using a car as transport."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'cold' mean?",
+   "options": [
+    "Using a train as transport.",
+    "A common illness that makes you sneeze and cough.",
+    "A woman on her wedding day.",
+    "To name someone using another person's name."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'bookshelf (bookshelves)' mean?",
+   "options": [
+    "A serious disease causing severe diarrhoea.",
+    "To name someone using another person's name.",
+    "A shelf for holding books.",
+    "Using a train as transport."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'bride' mean?",
+   "options": [
+    "A shelf for holding books.",
+    "A woman on her wedding day.",
+    "Young people, sons or daughters.",
+    "To name someone using another person's name."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'cholera' mean?",
+   "options": [
+    "Full of clouds.",
+    "A serious disease causing severe diarrhoea.",
+    "A woman on her wedding day.",
+    "A common illness that makes you sneeze and cough."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'by car' mean?",
+   "options": [
+    "To name someone using another person's name.",
+    "Using a car as transport.",
+    "A common illness that makes you sneeze and cough.",
+    "A serious disease causing severe diarrhoea."
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "Subject Pronouns and Possessive Adjectives",
+  "explanation": "**Subject pronouns** take the place of a person or a thing. **I**, **you**, **he**, **she**, **it**, **we** and **they** are subject pronouns. We use **she** for the bride, and **they** for the children.\n\n**Possessive adjectives** go before a noun and show who owns something. **My**, **your**, **his**, **her**, **its**, **our** and **their** are possessive adjectives. We say **my** bookshelf and **their** children.\n\nThe word depends on the owner, not the thing. Anna and **her** children. Tom and **his** bookshelf.\n\n**Its** means belonging to it, with no apostrophe. **It's** means it is. On a cloudy day, we say **it's** cloudy.\n\nEnglish sentences always need a subject. We say **it's** raining, not just raining.",
+  "examples": [
+   "* **I**'m from Brazil. **My** name is Sara.",
+   "* **He** works in a bank. **His** office is in the city centre.",
+   "* **She** has a cat. **Her** cat is black.",
+   "* **We** love **our** new flat.",
+   "* **They** are my neighbours. **Their** children are very friendly.",
+   "* **It**'s a small town, but **its** beaches are beautiful."
+  ],
+  "practice": [
+   {
+    "q": "Anna has two children. Anna's children are funny.",
+    "a": "Anna has two children. Her children are funny."
+   },
+   {
+    "q": "Tom travels by train. Tom's bag is on the train.",
+    "a": "Tom travels by train. His bag is on the train."
+   },
+   {
+    "q": "I have a bookshelf. The bookshelf is big.",
+    "a": "I have a bookshelf. My bookshelf is big."
+   },
+   {
+    "q": "The children play in the garden. The children's garden is big.",
+    "a": "The children play in the garden. Their garden is big."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "___ am a teacher.",
+    "options": [
+     "Me",
+     "I",
+     "My",
+     "Mine"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "We love ___ new car.",
+    "options": [
+     "our",
+     "us",
+     "we",
+     "ours"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "This is my brother. ___ name is Ali.",
+    "options": [
+     "Her",
+     "He",
+     "His",
+     "Its"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Anna and ___ husband live in Rome.",
+    "options": [
+     "his",
+     "she",
+     "their",
+     "her"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "The dog is eating ___ food.",
+    "options": [
+     "it's",
+     "it",
+     "its",
+     "it is"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "My friends are from Chile. ___ live in Toronto now.",
+    "options": [
+     "Their",
+     "They",
+     "Them",
+     "There"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Is this ___ phone, Maria?",
+    "options": [
+     "your",
+     "you",
+     "you're",
+     "yours"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "___ raining. Take an umbrella.",
+    "options": [
+     "Its",
+     "Is",
+     "It",
+     "It's"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Tom is washing ___ car. (It's Tom's car.)",
+    "options": [
+     "her",
+     "its",
+     "his",
+     "he"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "My parents sold ___ house last year.",
+    "options": [
+     "they're",
+     "their",
+     "there",
+     "them"
+    ],
+    "answer": 1
+   }
+  ],
+  "audio": "media/a1/2026-11-04/grammar-en.mp3"
+ }
+}

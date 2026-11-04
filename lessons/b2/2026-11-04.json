@@ -1,0 +1,394 @@
+{
+  "date": "2026-11-04",
+  "theme": "review day",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "archer",
+      "pos": "noun",
+      "meaning": "A person who shoots with a bow and arrow.",
+      "example": "The archer aimed carefully at the target.",
+      "pronunciation": "AR-cher",
+      "persian": "کماندار",
+      "photo": "media/b2/2026-11-02/photos/archer.jpg",
+      "word_audio": "media/b2/2026-11-02/word-audio/archer.mp3"
+    },
+    {
+      "word": "bat",
+      "pos": "noun",
+      "meaning": "A wooden stick used for hitting a ball.",
+      "example": "The baseball player swung his bat.",
+      "pronunciation": "BAT",
+      "persian": "چوب بیسبال/کریکت",
+      "photo": "media/b2/2026-11-01/photos/bat.jpg",
+      "word_audio": "media/b2/2026-11-01/word-audio/bat.mp3"
+    },
+    {
+      "word": "bark",
+      "pos": "verb",
+      "meaning": "The loud sound a dog makes.",
+      "example": "The dog started to bark loudly at the stranger.",
+      "pronunciation": "BARK",
+      "persian": "پارس کردن",
+      "photo": "media/b2/2026-11-01/photos/bark.jpg",
+      "word_audio": "media/b2/2026-11-01/word-audio/bark.mp3"
+    },
+    {
+      "word": "bow",
+      "pos": "noun",
+      "meaning": "A weapon for shooting arrows.",
+      "example": "He learned to shoot an arrow with a bow.",
+      "pronunciation": "BOH",
+      "persian": "کمان",
+      "photo": "media/b2/2026-11-02/photos/bow.jpg",
+      "word_audio": "media/b2/2026-11-02/word-audio/bow.mp3"
+    },
+    {
+      "word": "canoeist",
+      "pos": "noun",
+      "meaning": "A person who paddles a small, light boat.",
+      "example": "The canoeist skillfully navigated the fast river rapids.",
+      "pronunciation": "kuh-NOO-ist",
+      "persian": "قایقران کانو",
+      "photo": "media/b2/2026-11-02/photos/canoeist.jpg",
+      "word_audio": "media/b2/2026-11-02/word-audio/canoeist.mp3"
+    },
+    {
+      "word": "air pollution",
+      "pos": "noun",
+      "meaning": "harmful substances in the air",
+      "example": "Air pollution is a big problem in cities.",
+      "pronunciation": "air puh-LOO-shun",
+      "persian": "آلودگی هوا",
+      "photo": "media/b2/2026-11-01/photos/air-pollution.jpg",
+      "word_audio": "media/b2/2026-11-01/word-audio/air-pollution.mp3"
+    },
+    {
+      "word": "club",
+      "pos": "noun",
+      "meaning": "A group of people who meet for an activity.",
+      "example": "He joined a local football club.",
+      "pronunciation": "KLUB",
+      "persian": "باشگاه",
+      "photo": "media/b2/2026-11-02/photos/club.jpg",
+      "word_audio": "media/b2/2026-11-02/word-audio/club.mp3"
+    },
+    {
+      "word": "AIDS",
+      "pos": "noun",
+      "meaning": "a serious disease that attacks the body's immune system",
+      "example": "Research continues to find a cure for AIDS.",
+      "pronunciation": "AYDZ",
+      "persian": "ایدز (بیماری)",
+      "photo": "media/b2/2026-11-01/photos/aids.jpg",
+      "word_audio": "media/b2/2026-11-01/word-audio/aids.mp3"
+    },
+    {
+      "word": "atmosphere",
+      "pos": "noun",
+      "meaning": "The feeling or mood in a place.",
+      "example": "The restaurant had a lovely atmosphere.",
+      "pronunciation": "AT-muh-sfeer",
+      "persian": "جو، فضا",
+      "photo": "media/b2/2026-11-01/photos/atmosphere.jpg",
+      "word_audio": "media/b2/2026-11-01/word-audio/atmosphere.mp3"
+    },
+    {
+      "example": "Which internet browser do you use?",
+      "meaning": "software to view websites",
+      "persian": "مرورگر",
+      "photo": "media/b2/2026-11-03/photos/browser.jpg",
+      "pos": "noun",
+      "pronunciation": "BROW-zur",
+      "word": "browser",
+      "word_audio": "media/b2/2026-11-03/word-audio/browser.mp3"
+    }
+  ],
+  "review": true,
+  "review_of": [
+    "2026-11-01",
+    "2026-11-02",
+    "2026-11-03"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "pronunciation_audio": "media/b2/2026-11-04/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day - Sports, Nature, and the Web",
+    "audio": "media/b2/2026-11-04/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-11-04/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Day at the Club",
+    "audio": "media/b2/2026-11-04/shadowing.mp3",
+    "transcript": "media/b2/2026-11-04/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-11-04/shadowing-sentences/001.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/002.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/003.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/004.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/005.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/006.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/007.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/008.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/009.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/010.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/011.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/012.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/013.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/014.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/015.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/016.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/017.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/018.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/019.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/020.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/021.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/022.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/023.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/024.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/025.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/026.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/027.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/028.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/029.mp3",
+      "media/b2/2026-11-04/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'archer' mean?",
+      "options": [
+        "A wooden stick used for hitting a ball.",
+        "A weapon for shooting arrows.",
+        "A person who shoots with a bow and arrow.",
+        "harmful substances in the air"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bat' mean?",
+      "options": [
+        "A wooden stick used for hitting a ball.",
+        "harmful substances in the air",
+        "A person who shoots with a bow and arrow.",
+        "The loud sound a dog makes."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bark' mean?",
+      "options": [
+        "The loud sound a dog makes.",
+        "A wooden stick used for hitting a ball.",
+        "harmful substances in the air",
+        "a serious disease that attacks the body's immune system"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bow' mean?",
+      "options": [
+        "A weapon for shooting arrows.",
+        "The loud sound a dog makes.",
+        "harmful substances in the air",
+        "a serious disease that attacks the body's immune system"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'canoeist' mean?",
+      "options": [
+        "The feeling or mood in a place.",
+        "The loud sound a dog makes.",
+        "software to view websites",
+        "A person who paddles a small, light boat."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'air pollution' mean?",
+      "options": [
+        "The loud sound a dog makes.",
+        "harmful substances in the air",
+        "A weapon for shooting arrows.",
+        "A wooden stick used for hitting a ball."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'club' mean?",
+      "options": [
+        "The loud sound a dog makes.",
+        "A person who paddles a small, light boat.",
+        "A weapon for shooting arrows.",
+        "A group of people who meet for an activity."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'AIDS' mean?",
+      "options": [
+        "A person who paddles a small, light boat.",
+        "The loud sound a dog makes.",
+        "A group of people who meet for an activity.",
+        "a serious disease that attacks the body's immune system"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'atmosphere' mean?",
+      "options": [
+        "software to view websites",
+        "The feeling or mood in a place.",
+        "A group of people who meet for an activity.",
+        "A person who shoots with a bow and arrow."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'browser' mean?",
+      "options": [
+        "software to view websites",
+        "a serious disease that attacks the body's immune system",
+        "The feeling or mood in a place.",
+        "A person who paddles a small, light boat."
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Mixed Conditionals",
+    "explanation": "**Mixed conditionals** mix two times. The condition is in one time, and the result is in another.\n\nFor a past condition with a present result, use **if + past perfect, would + base verb**. Add **now** to show the present result.\n\nFor a present condition with a past result, use **if + past simple, would have + past participle**. The condition is usually a general fact.\n\nDo not use **would** in the **if** clause. Use **would**, **could**, or **might** only in the result.\n\nThe word **now**, or a past time word like **yesterday**, tells you which mixed pattern to use.",
+    "examples": [
+      "*If I **had studied** medicine, I **would be** a doctor now.* (past condition, present result)",
+      "*If she **hadn't missed** the flight, she **would be** in Rome now.* (past condition, present result)",
+      "*If I **weren't** afraid of heights, I **would have gone** on the roller coaster.* (present condition, past result)",
+      "*If he **were** more organised, he **wouldn't have forgotten** the meeting.* (present condition, past result)",
+      "*If you **had told** me earlier, I **wouldn't be** so worried now.* (past condition, present result)",
+      "*If he **had trained** harder, he **might be** a professional now.* (**might** in the result)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with a mixed conditional: I didn't join the club, so I don't have new friends now.",
+        "a": "If I had joined the club, I would have new friends now."
+      },
+      {
+        "q": "Rewrite with a mixed conditional: She isn't a good archer, so she didn't win the match yesterday.",
+        "a": "If she were a good archer, she would have won the match yesterday."
+      },
+      {
+        "q": "Rewrite with a mixed conditional: He didn't check the air pollution report, so he feels ill now.",
+        "a": "If he had checked the air pollution report, he wouldn't feel ill now."
+      },
+      {
+        "q": "Rewrite with a mixed conditional: I don't know how to use this browser, so I didn't finish the work yesterday.",
+        "a": "If I knew how to use this browser, I would have finished the work yesterday."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "If I had taken that job, I ___ rich now.",
+        "options": [
+          "would be",
+          "would have been",
+          "will be",
+          "am"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "If she ___ the train, she would be here now.",
+        "options": [
+          "didn't miss",
+          "hadn't missed",
+          "wouldn't miss",
+          "doesn't miss"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "If I spoke Japanese, I ___ the film last night.",
+        "options": [
+          "would understand",
+          "will understand",
+          "would have understood",
+          "understood"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If he ___ so lazy, he would have finished the project on time.",
+        "options": [
+          "hadn't",
+          "isn't",
+          "wouldn't be",
+          "weren't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "If we had left earlier, we ___ there by now.",
+        "options": [
+          "would have been",
+          "would be",
+          "will be",
+          "are"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the mixed conditional.",
+        "options": [
+          "If I had more money, I'd buy a car.",
+          "If I'd had more money, I'd have bought a car.",
+          "If I'd saved more money, I'd have a car now.",
+          "If I have more money, I'll buy a car."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If I ___ afraid of flying, I would have visited you in Australia.",
+        "options": [
+          "weren't",
+          "wasn't been",
+          "am not",
+          "won't be"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "If you had gone to bed earlier, you ___ so tired now.",
+        "options": [
+          "wouldn't have been",
+          "won't be",
+          "aren't",
+          "wouldn't be"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "If she had accepted his offer, she ___ in Paris now.",
+        "options": [
+          "would have lived",
+          "lives",
+          "would live",
+          "will live"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If I ___ a car, I would have driven you to the airport yesterday.",
+        "options": [
+          "have",
+          "had",
+          "would have",
+          "will have"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}
