@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "oral-b-io2-limited-pure-white",
+      "name_fa": "مسواک برقی اورال‌بی آی‌او سری ۲ لیمیتد",
+      "name_en": "Oral-B iO Series 2 Limited Rechargeable Electric Toothbrush, Pure White",
+      "price_cad": 59.99,
+      "regular_cad": 119.99,
+      "discount_pct": 50,
+      "added_fa": "پنجشنبه، ۵ نوامبر ۲۰۲۶",
+      "image": "img/oral-b-io2-limited-pure-white.jpg",
+      "url": "https://www.amazon.ca/dp/B0DLLC8HHP?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "مسواک برقی با سنسور فشار برای محافظت از لثه و تایمر دو دقیقه‌ای؛ همراه با کیف مسافرتی"
+    },
+    {
+      "id": "shark-flexstyle-hd435c",
+      "name_fa": "سیستم استایل مو شارک فلکس‌استایل",
+      "name_en": "Shark FlexStyle Air Styling & Drying System HD435C (Canadian Version)",
+      "price_cad": 237.49,
+      "regular_cad": 399.99,
+      "discount_pct": 41,
+      "added_fa": "پنجشنبه، ۵ نوامبر ۲۰۲۶",
+      "image": "img/shark-flexstyle-hd435c.jpg",
+      "url": "https://www.amazon.ca/dp/B0CTN1Y4QH?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "سشوار و استایلر چندکاره با سری‌های فرکننده، حجم‌دهنده و دیفیوزر؛ خشک‌کردن سریع بدون آسیب حرارتی"
+    },
+    {
       "id": "hoover-cleanslate-xl-spot-cleaner",
       "name_fa": "لکه‌بر هوور کلین‌اسلیت ایکس‌ال",
       "name_en": "Hoover CleanSlate XL Portable Carpet Spot Cleaner",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "هواپز ۴ کاره با ظرفیت ۵ کوارت؛ غذای ترد با روغن کمتر، تمیزکاری آسان و امتیاز ۴٫۶ از صدها خریدار"
-    },
-    {
-      "id": "dremel-4300-rotary-tool-kit",
-      "name_fa": "ابزار چرخشی درمل ۴۳۰۰",
-      "name_en": "Dremel 4300 Rotary Tool Kit with 40 Accessories",
-      "price_cad": 99.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "سه‌شنبه، ۳ نوامبر ۲۰۲۶",
-      "image": "img/dremel-4300-rotary-tool-kit.jpg",
-      "url": "https://www.amazon.ca/dp/B01M1SJNVU?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "ابزار چرخشی با ۵ اتصال و ۴۰ قطعه جانبی، چراغ ال‌ای‌دی و کیف نگهداری؛ برای برش و سنباده و حکاکی"
-    },
-    {
-      "id": "north-face-surge-commuter-backpack",
-      "name_fa": "کوله‌پشتی نورث فیس سرج",
-      "name_en": "The North Face Surge Commuter Laptop Backpack",
-      "price_cad": 125.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "سه‌شنبه، ۳ نوامبر ۲۰۲۶",
-      "image": "img/north-face-surge-commuter-backpack.jpg",
-      "url": "https://www.amazon.ca/dp/B0FS6T7C16?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "کوله‌پشتی ۳۱ لیتر برای رفت‌وآمد روزانه با جیب لپ‌تاپ و روکش مقاوم در برابر آب"
     }
   ],
-  "updated_fa": "چهارشنبه ۱۳ آبان"
+  "updated_fa": "پنجشنبه ۱۴ آبان"
 }
