@@ -1,0 +1,280 @@
+{
+ "date": "2026-11-05",
+ "theme": "travel & transport",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "available",
+   "pos": "adjective",
+   "meaning": "Able to be used or found.",
+   "example": "Are there any rooms available for tonight?",
+   "pronunciation": "uh-VAY-luh-bul",
+   "persian": "در دسترس، موجود",
+   "photo": "media/a2/2026-11-05/photos/available.jpg",
+   "word_audio": "media/a2/2026-11-05/word-audio/available.mp3"
+  },
+  {
+   "word": "baggage reclaim",
+   "pos": "noun phrase",
+   "meaning": "The area at an airport where you collect your bags.",
+   "example": "Let's go to baggage reclaim to get our suitcases.",
+   "pronunciation": "BAG-ij ree-KLAYM",
+   "persian": "قسمت تحویل بار",
+   "photo": "media/a2/2026-11-05/photos/baggage reclaim.jpg",
+   "word_audio": "media/a2/2026-11-05/word-audio/baggage reclaim.mp3"
+  },
+  {
+   "word": "beach holiday",
+   "pos": "noun phrase",
+   "meaning": "A vacation spent by the sea.",
+   "example": "We want to go on a beach holiday.",
+   "pronunciation": "BEECH HOL-uh-day",
+   "persian": "تعطیلات ساحلی",
+   "photo": "media/a2/2026-11-05/photos/beach holiday.jpg",
+   "word_audio": "media/a2/2026-11-05/word-audio/beach holiday.mp3"
+  },
+  {
+   "word": "bend",
+   "pos": "noun, verb",
+   "meaning": "A curve in a road or object. To curve.",
+   "example": "Be careful, there's a sharp bend in the road.",
+   "pronunciation": "BEND",
+   "persian": "پیچ، خم؛ خم کردن",
+   "photo": "media/a2/2026-11-05/photos/bend.jpg",
+   "word_audio": "media/a2/2026-11-05/word-audio/bend.mp3"
+  },
+  {
+   "word": "bicycle",
+   "pos": "noun",
+   "meaning": "A vehicle with two wheels, you pedal it.",
+   "example": "I ride my bicycle to school.",
+   "pronunciation": "BY-suh-kul",
+   "persian": "دوچرخه",
+   "photo": "media/a2/2026-11-05/photos/bicycle.jpg",
+   "word_audio": "media/a2/2026-11-05/word-audio/bicycle.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-11-05/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Travel and Transport",
+  "audio": "media/a2/2026-11-05/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-11-05/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Beach Holiday",
+  "audio": "media/a2/2026-11-05/shadowing.mp3",
+  "transcript": "media/a2/2026-11-05/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-11-05/shadowing-sentences/001.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/002.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/003.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/004.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/005.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/006.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/007.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/008.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/009.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/010.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/011.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/012.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/013.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/014.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/015.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/016.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/017.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/018.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/019.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/020.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/021.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/022.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/023.mp3",
+   "media/a2/2026-11-05/shadowing-sentences/024.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'available' mean?",
+   "options": [
+    "Able to be used or found.",
+    "A curve in a road or object. To curve.",
+    "A vacation spent by the sea.",
+    "A vehicle with two wheels, you pedal it."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'baggage reclaim' mean?",
+   "options": [
+    "A vehicle with two wheels, you pedal it.",
+    "The area at an airport where you collect your bags.",
+    "A curve in a road or object. To curve.",
+    "Able to be used or found."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'beach holiday' mean?",
+   "options": [
+    "The area at an airport where you collect your bags.",
+    "A curve in a road or object. To curve.",
+    "A vacation spent by the sea.",
+    "A vehicle with two wheels, you pedal it."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'bend' mean?",
+   "options": [
+    "A vacation spent by the sea.",
+    "A curve in a road or object. To curve.",
+    "Able to be used or found.",
+    "A vehicle with two wheels, you pedal it."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'bicycle' mean?",
+   "options": [
+    "Able to be used or found.",
+    "A curve in a road or object. To curve.",
+    "A vehicle with two wheels, you pedal it.",
+    "A vacation spent by the sea."
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "Comparatives and Superlatives",
+  "explanation": "We use a **comparative** to compare two things. *My bicycle is **faster than** your bicycle.*\n\nWe use a **superlative** to say one thing is more than all the others in a group. *Sara had **the best** beach holiday of her life.*\n\nShort adjectives add **-er** and **-est**. *Cheap → **cheaper** → **the cheapest**. A room can be **cheaper than** another room.*\n\nLong adjectives use **more** and **the most**. *A beach holiday is **more expensive than** a day at home. It is **the most relaxing** holiday.*\n\nSome words are irregular. *Good → **better** → **the best**. Bad → **worse** → **the worst**. The bend in the road was **worse than** we thought!*\n\nWe use **than** after a comparative. *A train is **faster than** a bicycle.* We use **the** before a superlative. *It is **the longest** road in the town.*\n\n**As ... as** means the same. *My bag is **as heavy as** yours.* **Not as ... as** means less. *The bus is **not as fast as** the train.*\n\nUse **much** to make a comparative stronger. *This room is **much bigger than** my old room.* Do not use *very* with a comparative.",
+  "examples": [
+   "*This is **the most beautiful** beach I've ever seen.* (long adjective — use **the most**)",
+   "*The bus is **cheaper than** the train, but it's **less comfortable**.* (**less** is the opposite of more)",
+   "*My new flat is **bigger than** my old one.* (big → bigger: double the g)",
+   "*English is **easier** for me **than** French.* (easy → easier)",
+   "*That was **the worst** meal of my life.* (bad → the worst)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with a comparative: A train is fast. A bicycle is slow.",
+    "a": "A train is faster than a bicycle."
+   },
+   {
+    "q": "Rewrite with a superlative: This beach is beautiful. It is the best beach on the island.",
+    "a": "This is the most beautiful beach on the island."
+   },
+   {
+    "q": "Rewrite with 'the best': Sara had a good beach holiday. It was the best holiday of her life.",
+    "a": "It was the best beach holiday of her life."
+   },
+   {
+    "q": "Rewrite with 'not as ... as': The bend is dangerous. The straight road is safe.",
+    "a": "The straight road is not as dangerous as the bend."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "My bag is ___ than yours.",
+    "options": [
+     "heavier",
+     "heavyer",
+     "heaviest",
+     "most heavy"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Everest is ___ mountain in the world.",
+    "options": [
+     "the higher",
+     "higher",
+     "the most high",
+     "the highest"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Flying is ___ than driving, but it's more expensive.",
+    "options": [
+     "fast",
+     "more fast",
+     "faster",
+     "fastest"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "This exam was ___ than the last one. I failed it!",
+    "options": [
+     "badder",
+     "worst",
+     "more bad",
+     "worse"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "My new job is ___ than my old one.",
+    "options": [
+     "more interesting",
+     "interestinger",
+     "most interesting",
+     "more interestinger"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Yesterday was ___ day of the year so far.",
+    "options": [
+     "the hotest",
+     "the hottest",
+     "hotter",
+     "the most hot"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Your phone is ___ mine.",
+    "options": [
+     "newer than",
+     "newer then",
+     "more new than",
+     "newest than"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The film wasn't ___ the book.",
+    "options": [
+     "as better as",
+     "as good than",
+     "as good as",
+     "good as"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Is London ___ Paris?",
+    "options": [
+     "more big than",
+     "bigger than",
+     "biggest than",
+     "bigger that"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Train tickets are ___ than plane tickets.",
+    "options": [
+     "less expensiver",
+     "least expensive",
+     "less expensive",
+     "the less expensive"
+    ],
+    "answer": 2
+   }
+  ],
+  "audio": "media/a2/2026-11-05/grammar-en.mp3"
+ }
+}

@@ -1,0 +1,277 @@
+{
+ "date": "2026-11-05",
+ "theme": "food & cooking",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "fish and chips",
+   "pos": "noun phrase",
+   "meaning": "A popular British dish of fried fish and potatoes.",
+   "example": "Let's get fish and chips for lunch.",
+   "pronunciation": "FISH and CHIPS",
+   "persian": "ماهی و سیب‌زمینی سرخ‌کرده",
+   "photo": "media/a1/2026-11-05/photos/fish and chips.jpg",
+   "word_audio": "media/a1/2026-11-05/word-audio/fish and chips.mp3"
+  },
+  {
+   "word": "food",
+   "pos": "noun",
+   "meaning": "Things that people and animals eat.",
+   "example": "I like Italian food.",
+   "pronunciation": "FOOD",
+   "persian": "غذا",
+   "photo": "media/a1/2026-11-05/photos/food.jpg",
+   "word_audio": "media/a1/2026-11-05/word-audio/food.mp3"
+  },
+  {
+   "word": "fruit",
+   "pos": "noun",
+   "meaning": "sweet food from trees or plants.",
+   "example": "I eat a lot of fruit.",
+   "pronunciation": "FROOT",
+   "persian": "میوه",
+   "photo": "media/a1/2026-11-05/photos/fruit.jpg",
+   "word_audio": "media/a1/2026-11-05/word-audio/fruit.mp3"
+  },
+  {
+   "word": "fruit juice",
+   "pos": "noun",
+   "meaning": "a drink made from fruit.",
+   "example": "I like orange fruit juice.",
+   "pronunciation": "FROOT JOOSS",
+   "persian": "آب میوه",
+   "photo": "media/a1/2026-11-05/photos/fruit juice.jpg",
+   "word_audio": "media/a1/2026-11-05/word-audio/fruit juice.mp3"
+  },
+  {
+   "word": "frying pan",
+   "pos": "noun",
+   "meaning": "a flat pan for frying food.",
+   "example": "Heat the oil in the frying pan.",
+   "pronunciation": "FRY-ing PAN",
+   "persian": "ماهیتابه",
+   "photo": "media/a1/2026-11-05/photos/frying pan.jpg",
+   "word_audio": "media/a1/2026-11-05/word-audio/frying pan.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-11-05/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Food and Cooking",
+  "audio": "media/a1/2026-11-05/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a1/2026-11-05/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Lunch at Home",
+  "audio": "media/a1/2026-11-05/shadowing.mp3",
+  "transcript": "media/a1/2026-11-05/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a1/2026-11-05/shadowing-sentences/001.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/002.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/003.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/004.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/005.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/006.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/007.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/008.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/009.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/010.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/011.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/012.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/013.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/014.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/015.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/016.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/017.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/018.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/019.mp3",
+   "media/a1/2026-11-05/shadowing-sentences/020.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'fish and chips' mean?",
+   "options": [
+    "sweet food from trees or plants.",
+    "A popular British dish of fried fish and potatoes.",
+    "Things that people and animals eat.",
+    "a flat pan for frying food."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'food' mean?",
+   "options": [
+    "a drink made from fruit.",
+    "a flat pan for frying food.",
+    "Things that people and animals eat.",
+    "sweet food from trees or plants."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'fruit' mean?",
+   "options": [
+    "sweet food from trees or plants.",
+    "A popular British dish of fried fish and potatoes.",
+    "Things that people and animals eat.",
+    "a drink made from fruit."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'fruit juice' mean?",
+   "options": [
+    "Things that people and animals eat.",
+    "sweet food from trees or plants.",
+    "a flat pan for frying food.",
+    "a drink made from fruit."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'frying pan' mean?",
+   "options": [
+    "a drink made from fruit.",
+    "a flat pan for frying food.",
+    "A popular British dish of fried fish and potatoes.",
+    "Things that people and animals eat."
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "Object Pronouns (me, him, us...)",
+  "explanation": "**Object pronouns** replace the object of a sentence. The object is the person or thing that gets the action.\n\nUse **me**, **you**, **him**, **her**, **it**, **us**, and **them** after a verb. For example: *I love **you**.*\n\nUse them after a preposition too, like **with**, **for**, and **to**. For example: *This food is **for you**.*\n\nUse the subject pronoun before the verb. Use the object pronoun after the verb. *She called **me**.* *I called **her**.*",
+  "examples": [
+   "*Can you help **me**, please?* (after a verb)",
+   "*I don't know **him**.* (he → him)",
+   "*We met **her** at the party.* (she → her)",
+   "*This cake is **for you**.* (after a preposition)",
+   "*I bought a new phone. I love **it**!* (a thing → it)",
+   "*Do you want to come with **us**?* (after with)"
+  ],
+  "practice": [
+   {
+    "q": "Fix this sentence: Can you help I?",
+    "a": "Can you help me?"
+   },
+   {
+    "q": "Fix this sentence: I saw she at the shop yesterday.",
+    "a": "I saw her at the shop yesterday."
+   },
+   {
+    "q": "Fix this sentence: This fruit juice is for they.",
+    "a": "This fruit juice is for them."
+   },
+   {
+    "q": "Fix this sentence: She invited Tom and I to lunch.",
+    "a": "She invited Tom and me to lunch."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Can you help ___?",
+    "options": [
+     "I",
+     "me",
+     "my",
+     "mine"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Where's my phone? I can't find ___.",
+    "options": [
+     "it",
+     "him",
+     "its",
+     "them"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I saw ___ at the supermarket yesterday. She said hello.",
+    "options": [
+     "she",
+     "hers",
+     "her",
+     "he"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "These flowers are for ___. Happy birthday, Mum!",
+    "options": [
+     "your",
+     "yours",
+     "you're",
+     "you"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Do you want to come with ___?",
+    "options": [
+     "we",
+     "our",
+     "us",
+     "ours"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "My grandparents live far away, so we don't see ___ often.",
+    "options": [
+     "they",
+     "them",
+     "their",
+     "theirs"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Who's at the door? – It's ___!",
+    "options": [
+     "me",
+     "my",
+     "mine",
+     "myself"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I like Tom. I'm going to call ___.",
+    "options": [
+     "he",
+     "his",
+     "her",
+     "him"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "Him and me are friends.",
+     "Him and I are friends.",
+     "He and I are friends.",
+     "Me and him are friends."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "She invited Tom and ___ to her wedding.",
+    "options": [
+     "I",
+     "me",
+     "my",
+     "mine"
+    ],
+    "answer": 1
+   }
+  ],
+  "audio": "media/a1/2026-11-05/grammar-en.mp3"
+ }
+}

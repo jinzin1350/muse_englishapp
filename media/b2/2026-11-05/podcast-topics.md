@@ -1,0 +1,7 @@
+- Nature and the environment: the secret life of trees through the seasons
+- Spring: buds opening and trees blossoming
+- Summer heat and shade under a thick bough
+- Science branches: botany and biology
+- Animals breeding in spring and protecting their habitats
+- Wildfire: how a fire can break out and why early action matters
+- A nature diary habit for English practice

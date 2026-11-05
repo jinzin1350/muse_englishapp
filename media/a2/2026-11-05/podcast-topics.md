@@ -1,0 +1,3 @@
+- Travel and transport vocabulary for A2: available, baggage reclaim, beach holiday, bend, bicycle
+- A beach holiday story: hotel rooms, airport baggage reclaim, renting a bicycle
+- How to use comparatives in travel talk (faster, cheaper, more comfortable)

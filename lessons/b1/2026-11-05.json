@@ -1,0 +1,331 @@
+{
+  "date": "2026-11-05",
+  "theme": "work & career",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "economist",
+      "pos": "noun",
+      "meaning": "A person who studies economics.",
+      "example": "An economist studies how countries use money.",
+      "pronunciation": "ih-KON-uh-mist",
+      "persian": "اقتصاددان",
+      "photo": "media/b1/2026-11-05/photos/economist.jpg",
+      "word_audio": "media/b1/2026-11-05/word-audio/economist.mp3"
+    },
+    {
+      "word": "experience [knowledge]",
+      "pos": "noun",
+      "meaning": "Knowledge or skill from doing things.",
+      "example": "He has good work experience.",
+      "pronunciation": "ik-SPEER-ee-uhns",
+      "persian": "تجربه",
+      "photo": "media/b1/2026-11-05/photos/experience-knowledge.jpg",
+      "word_audio": "media/b1/2026-11-05/word-audio/experience-knowledge.mp3"
+    },
+    {
+      "word": "gun",
+      "pos": "noun",
+      "meaning": "A weapon that shoots bullets.",
+      "example": "The police officer carried a gun.",
+      "pronunciation": "GUN",
+      "persian": "اسلحه، تفنگ",
+      "photo": "media/b1/2026-11-05/photos/gun.jpg",
+      "word_audio": "media/b1/2026-11-05/word-audio/gun.mp3"
+    },
+    {
+      "word": "install",
+      "pos": "verb",
+      "meaning": "To put equipment in place for use.",
+      "example": "We need to install new software on the computer.",
+      "pronunciation": "in-STAWL",
+      "persian": "نصب کردن",
+      "photo": "media/b1/2026-11-05/photos/install.jpg",
+      "word_audio": "media/b1/2026-11-05/word-audio/install.mp3"
+    },
+    {
+      "word": "judge",
+      "pos": "noun",
+      "meaning": "A person in court who decides how to punish criminals.",
+      "example": "The judge listened carefully to all the evidence.",
+      "pronunciation": "JUJ",
+      "persian": "قاضی",
+      "photo": "media/b1/2026-11-05/photos/judge.jpg",
+      "word_audio": "media/b1/2026-11-05/word-audio/judge.mp3"
+    },
+    {
+      "word": "on strike",
+      "pos": "phrase",
+      "meaning": "Refusing to work as a protest.",
+      "example": "The factory workers are on strike.",
+      "pronunciation": "on STRIKE",
+      "persian": "در اعتصاب",
+      "photo": "media/b1/2026-11-05/photos/on-strike.jpg",
+      "word_audio": "media/b1/2026-11-05/word-audio/on-strike.mp3"
+    },
+    {
+      "word": "per cent",
+      "pos": "noun phrase",
+      "meaning": "One part of every hundred.",
+      "example": "Ten per cent of students passed.",
+      "pronunciation": "pur SENT",
+      "persian": "درصد",
+      "photo": "media/b1/2026-11-05/photos/per-cent.jpg",
+      "word_audio": "media/b1/2026-11-05/word-audio/per-cent.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-11-05/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Work, Jobs and Careers",
+    "audio": "media/b1/2026-11-05/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-11-05/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's New Job",
+    "audio": "media/b1/2026-11-05/shadowing.mp3",
+    "transcript": "media/b1/2026-11-05/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b1/2026-11-05/shadowing-sentences/001.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/002.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/003.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/004.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/005.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/006.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/007.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/008.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/009.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/010.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/011.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/012.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/013.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/014.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/015.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/016.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/017.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/018.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/019.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/020.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/021.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/022.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/023.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/024.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/025.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/026.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/027.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/028.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/029.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/030.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/031.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/032.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/033.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/034.mp3",
+      "media/b1/2026-11-05/shadowing-sentences/035.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'economist' mean?",
+      "options": [
+        "A person who studies economics.",
+        "A weapon that shoots bullets.",
+        "Knowledge or skill from doing things.",
+        "To put equipment in place for use."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'experience [knowledge]' mean?",
+      "options": [
+        "To put equipment in place for use.",
+        "Knowledge or skill from doing things.",
+        "A person who studies economics.",
+        "A weapon that shoots bullets."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'gun' mean?",
+      "options": [
+        "Knowledge or skill from doing things.",
+        "A weapon that shoots bullets.",
+        "To put equipment in place for use.",
+        "A person who studies economics."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'install' mean?",
+      "options": [
+        "To put equipment in place for use.",
+        "Knowledge or skill from doing things.",
+        "A weapon that shoots bullets.",
+        "A person who studies economics."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'judge' mean?",
+      "options": [
+        "Knowledge or skill from doing things.",
+        "A weapon that shoots bullets.",
+        "A person in court who decides how to punish criminals.",
+        "A person who studies economics."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'on strike' mean?",
+      "options": [
+        "Knowledge or skill from doing things.",
+        "A person who studies economics.",
+        "A weapon that shoots bullets.",
+        "Refusing to work as a protest."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'per cent' mean?",
+      "options": [
+        "Knowledge or skill from doing things.",
+        "A person who studies economics.",
+        "One part of every hundred.",
+        "A weapon that shoots bullets."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Past Simple and Irregular Verbs",
+    "explanation": "We use the **past simple** for finished actions in the past. The time is finished: yesterday, last week, in 2019.\n\nRegular verbs add **-ed**: **worked**, **installed**, **watched**. Irregular verbs have their own past form: **go → went** and **buy → bought**.\n\nIn negatives and questions, use **did** + the base verb. We say \"I **didn't go**\" and \"**Did** you **go**?\"\n\nThe past form is the same for every person. There is no **-s** in the past: \"He **worked** late.\"\n\n**Be** is different. Use **was** and **were**, and do not use **did**: \"I **wasn't** tired.\" \"**Were** you at home?\"\n\nSpelling: a verb that ends in **-e** adds only **-d**, like **lived**. Consonant + **y** changes to **-ied**, like **studied**. One vowel + one consonant doubles the last letter, like **stopped**.\n\nThe economist **worked** in London last year. Use the past simple when the time is finished, not when it is still true now.",
+    "examples": [
+      "*I **watched** a film last night.* (regular verb: + -ed)",
+      "*We **went** to the beach on Saturday.* (irregular: go → went)",
+      "*She **didn't call** me yesterday.* (negative: didn't + base verb)",
+      "*Did you **finish** your homework?* (question: did + base verb)",
+      "*He **was** very tired after work.* (be: was)",
+      "*My grandfather **worked** in a bank for 30 years.* (finished situation: he doesn't work there now)"
+    ],
+    "practice": [
+      {
+        "q": "The economist studies prices every day. → Yesterday, ...",
+        "a": "The economist studied prices yesterday."
+      },
+      {
+        "q": "Sara installs new software on the computers. → Last week, ...",
+        "a": "Sara installed new software on the computers last week."
+      },
+      {
+        "q": "The judge does not listen to the workers. → ...",
+        "a": "The judge didn't listen to the workers."
+      },
+      {
+        "q": "Do the factory workers go on strike? → Last month, ...",
+        "a": "Did the factory workers go on strike last month?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "We ___ dinner at a Thai restaurant last night.",
+        "options": [
+          "have",
+          "has",
+          "had",
+          "haved"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She ___ her keys this morning, so she couldn't open the door.",
+        "options": [
+          "lost",
+          "loses",
+          "losed",
+          "lose"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ the email because I was busy.",
+        "options": [
+          "don't read",
+          "not read",
+          "didn't readed",
+          "didn't read"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ you see the match last Sunday?",
+        "options": [
+          "Do",
+          "Did",
+          "Were",
+          "Was"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "They ___ to Spain two years ago.",
+        "options": [
+          "go",
+          "goed",
+          "gone",
+          "went"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "My parents ___ at home when I arrived.",
+        "options": [
+          "were",
+          "was",
+          "did",
+          "been"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He ___ to the party because he was ill.",
+        "options": [
+          "didn't came",
+          "wasn't come",
+          "didn't come",
+          "not came"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Where ___ you go on holiday last summer?",
+        "options": [
+          "were",
+          "did",
+          "do",
+          "was"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ for my exam all weekend.",
+        "options": [
+          "studied",
+          "studyed",
+          "studed",
+          "studdied"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I didn't knew the answer.",
+          "I didn't know the answer.",
+          "I not knew the answer.",
+          "I don't knew the answer."
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}

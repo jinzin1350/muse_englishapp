@@ -1,0 +1,326 @@
+{
+ "date": "2026-11-05",
+ "theme": "technology",
+ "level": "c1",
+ "cefr": "C1",
+ "words": [
+  {
+   "word": "extraterrestrial being",
+   "pos": "noun phrase",
+   "meaning": "A hypothetical intelligent life form from another planet.",
+   "example": "Scientists search for signs of extraterrestrial beings.",
+   "pronunciation": "ek-struh-tuh-RES-tree-ul BEE-ing",
+   "persian": "موجود فرازمینی",
+   "photo": "media/c1/2026-11-05/photos/extraterrestrial-being.jpg",
+   "word_audio": "media/c1/2026-11-05/word-audio/extraterrestrial-being.mp3"
+  },
+  {
+   "word": "flat-screen TV",
+   "pos": "noun phrase",
+   "meaning": "A television with a thin, flat display screen.",
+   "example": "We bought a new flat-screen TV for the living room.",
+   "pronunciation": "FLAT-skreen tee-VEE",
+   "persian": "تلویزیون صفحه تخت",
+   "photo": "media/c1/2026-11-05/photos/flat-screen-tv.jpg",
+   "word_audio": "media/c1/2026-11-05/word-audio/flat-screen-tv.mp3"
+  },
+  {
+   "word": "foresee",
+   "pos": "verb",
+   "meaning": "To know or predict something before it happens.",
+   "example": "We couldn't foresee the sudden change in weather.",
+   "pronunciation": "for-SEE",
+   "persian": "پیش‌بینی کردن",
+   "photo": "media/c1/2026-11-05/photos/foresee.jpg",
+   "word_audio": "media/c1/2026-11-05/word-audio/foresee.mp3"
+  },
+  {
+   "word": "games console",
+   "pos": "noun",
+   "meaning": "An electronic device for playing video games.",
+   "example": "My brother got a new games console for his birthday.",
+   "pronunciation": "GAYMZ KON-sohl",
+   "persian": "کنسول بازی",
+   "photo": "media/c1/2026-11-05/photos/games-console.jpg",
+   "word_audio": "media/c1/2026-11-05/word-audio/games-console.mp3"
+  },
+  {
+   "word": "gene therapy",
+   "pos": "phrase",
+   "meaning": "Treating disease by replacing faulty genes.",
+   "example": "Gene therapy offers hope for many genetic conditions.",
+   "pronunciation": "JEEN THAIR-uh-pee",
+   "persian": "ژن‌درمانی",
+   "photo": "media/c1/2026-11-05/photos/gene-therapy.jpg",
+   "word_audio": "media/c1/2026-11-05/word-audio/gene-therapy.mp3"
+  },
+  {
+   "word": "genetic modification",
+   "pos": "phrase",
+   "meaning": "Altering an organism's genetic material for specific traits.",
+   "example": "Genetic modification raises ethical concerns for some.",
+   "pronunciation": "juh-NET-ik mod-uh-fuh-KAY-shun",
+   "persian": "اصلاح ژنتیکی",
+   "photo": "media/c1/2026-11-05/photos/genetic-modification.jpg",
+   "word_audio": "media/c1/2026-11-05/word-audio/genetic-modification.mp3"
+  },
+  {
+   "word": "genetically modified food",
+   "pos": "phrase",
+   "meaning": "Food from organisms with altered genetic material.",
+   "example": "Many consumers are wary of genetically modified food.",
+   "pronunciation": "juh-NET-ik-lee MOD-uh-fyed FOOD",
+   "persian": "غذای اصلاح‌شده ژنتیکی",
+   "photo": "media/c1/2026-11-05/photos/genetically-modified-food.jpg",
+   "word_audio": "media/c1/2026-11-05/word-audio/genetically-modified-food.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c1/2026-11-05/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Technology That Changes Our Lives",
+  "audio": "media/c1/2026-11-05/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-11-05/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Scientist and the Stars",
+  "audio": "media/c1/2026-11-05/shadowing.mp3",
+  "transcript": "media/c1/2026-11-05/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c1/2026-11-05/shadowing-sentences/001.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/002.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/003.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/004.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/005.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/006.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/007.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/008.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/009.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/010.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/011.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/012.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/013.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/014.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/015.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/016.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/017.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/018.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/019.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/020.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/021.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/022.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/023.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/024.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/025.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/026.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/027.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/028.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/029.mp3",
+   "media/c1/2026-11-05/shadowing-sentences/030.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'extraterrestrial being' mean?",
+   "options": [
+    "Altering an organism's genetic material for specific traits.",
+    "An electronic device for playing video games.",
+    "Food from organisms with altered genetic material.",
+    "A hypothetical intelligent life form from another planet."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'flat-screen TV' mean?",
+   "options": [
+    "A hypothetical intelligent life form from another planet.",
+    "Food from organisms with altered genetic material.",
+    "Treating disease by replacing faulty genes.",
+    "A television with a thin, flat display screen."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'foresee' mean?",
+   "options": [
+    "Food from organisms with altered genetic material.",
+    "An electronic device for playing video games.",
+    "To know or predict something before it happens.",
+    "Treating disease by replacing faulty genes."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'games console' mean?",
+   "options": [
+    "Food from organisms with altered genetic material.",
+    "An electronic device for playing video games.",
+    "A television with a thin, flat display screen.",
+    "To know or predict something before it happens."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'gene therapy' mean?",
+   "options": [
+    "An electronic device for playing video games.",
+    "Food from organisms with altered genetic material.",
+    "To know or predict something before it happens.",
+    "Treating disease by replacing faulty genes."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'genetic modification' mean?",
+   "options": [
+    "Altering an organism's genetic material for specific traits.",
+    "Food from organisms with altered genetic material.",
+    "An electronic device for playing video games.",
+    "A television with a thin, flat display screen."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'genetically modified food' mean?",
+   "options": [
+    "To know or predict something before it happens.",
+    "A television with a thin, flat display screen.",
+    "Treating disease by replacing faulty genes.",
+    "Food from organisms with altered genetic material."
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Concession: Albeit, Much As, Notwithstanding",
+  "explanation": "**Concession** means accepting one fact while saying something that contrasts with it. At B1 you learned **although**, **despite** and **in spite of**.\n\nAt C1, you can use more precise and formal forms. **Albeit** adds a short phrase, **much as** starts a clause, and **notwithstanding** comes with a noun.\n\n**Albeit** is followed by an adjective, an adverb or a phrase, never a full clause. We say a good, **albeit** short, holiday, not **albeit** it was short.\n\n**Much as** means although very much, and it starts a clause. **Much as** I like him, I do not trust him.\n\n**Notwithstanding** is formal and goes before or after a noun. **Notwithstanding** the risks, research into gene therapy moves forward.\n\n**However** plus an adjective or adverb means it does not matter how. **However hard** researchers try, they cannot foresee every result.\n\nYou can also put an adjective first for emphasis: **strange as** it may seem, or **tired though** she was. And **nevertheless** starts a new sentence after a contrast.",
+  "examples": [
+   "*He accepted the offer, **albeit** reluctantly.* (albeit + adverb)",
+   "***Much as** I admire her work, I can't agree with her.* (much as + clause)",
+   "***Notwithstanding** the bad weather, the concert went ahead.* (notwithstanding + noun)",
+   "*Budget limits **notwithstanding**, the team delivered on time.* (noun + notwithstanding)",
+   "***However much** you earn, you'll always want more.* (however much)",
+   "***Strange as** it may seem, I've never been on a plane.* (adjective + as)"
+  ],
+  "practice": [
+   {
+    "q": "Although the flat-screen TV was expensive, we bought it.",
+    "a": "We bought the flat-screen TV, **albeit** an expensive one."
+   },
+   {
+    "q": "I like the games console very much, but I cannot afford it.",
+    "a": "**Much as** I like the games console, I cannot afford it."
+   },
+   {
+    "q": "Despite the risks, scientists continue their research into gene therapy.",
+    "a": "**Notwithstanding** the risks, scientists continue their research into gene therapy."
+   },
+   {
+    "q": "No matter how hard researchers try, they cannot foresee every result.",
+    "a": "**However hard** researchers try, they cannot foresee every result."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The plan was successful, ___ expensive.",
+    "options": [
+     "albeit",
+     "although it",
+     "despite",
+     "much as"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "___ I like him, I don't trust him.",
+    "options": [
+     "Albeit",
+     "Despite",
+     "Notwithstanding",
+     "Much as"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "___ hard I try, I can't understand this.",
+    "options": [
+     "Although",
+     "Much as",
+     "However",
+     "Despite"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "___ the bad weather, the event went ahead.",
+    "options": [
+     "Although",
+     "Notwithstanding",
+     "Albeit",
+     "Much as"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "He accepted the offer, ___ reluctantly.",
+    "options": [
+     "much as",
+     "however",
+     "albeit",
+     "despite"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "The results were disappointing. ___, we learned a lot.",
+    "options": [
+     "Although",
+     "Albeit",
+     "Despite",
+     "Nevertheless"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "The project, ___ its high cost, was approved.",
+    "options": [
+     "although",
+     "albeit",
+     "despite",
+     "much as"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "___ I'd love to help, I simply don't have time.",
+    "options": [
+     "Much as",
+     "Albeit",
+     "However",
+     "Despite"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "___ the fact that he was ill, he went to work.",
+    "options": [
+     "Although",
+     "Albeit",
+     "Much as",
+     "Despite"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "___ she's very talented, she's also very modest.",
+    "options": [
+     "While",
+     "Albeit",
+     "Despite",
+     "However"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}
