@@ -1,0 +1,281 @@
+{
+ "date": "2026-11-06",
+ "theme": "food & cooking",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "cabbage",
+   "pos": "noun",
+   "meaning": "A round, green vegetable with thick leaves.",
+   "persian": "کلم",
+   "example": "My mom cooked soup with cabbage.",
+   "pronunciation": "KAB-ij",
+   "photo": "media/a2/2026-11-06/photos/cabbage.jpg",
+   "word_audio": "media/a2/2026-11-06/word-audio/cabbage.mp3"
+  },
+  {
+   "word": "calf",
+   "pos": "noun",
+   "meaning": "A baby cow.",
+   "persian": "گوساله",
+   "example": "The calf drank milk from its mother.",
+   "pronunciation": "KAHF",
+   "photo": "media/a2/2026-11-06/photos/calf.jpg",
+   "word_audio": "media/a2/2026-11-06/word-audio/calf.mp3"
+  },
+  {
+   "word": "car park",
+   "pos": "noun",
+   "meaning": "An area where people can leave their cars.",
+   "persian": "پارکینگ",
+   "example": "I left my car in the car park.",
+   "pronunciation": "KAR PARK",
+   "photo": "media/a2/2026-11-06/photos/car park.jpg",
+   "word_audio": "media/a2/2026-11-06/word-audio/car park.mp3"
+  },
+  {
+   "word": "carrot",
+   "pos": "noun",
+   "meaning": "A long, orange vegetable that grows underground.",
+   "persian": "هویج",
+   "example": "Rabbits like to eat carrots.",
+   "pronunciation": "KAR-ut",
+   "photo": "media/a2/2026-11-06/photos/carrot.jpg",
+   "word_audio": "media/a2/2026-11-06/word-audio/carrot.mp3"
+  },
+  {
+   "word": "chef",
+   "pos": "noun",
+   "meaning": "A skilled cook, especially in a restaurant.",
+   "persian": "سرآشپز",
+   "example": "The chef prepared a delicious meal.",
+   "pronunciation": "SHEF",
+   "photo": "media/a2/2026-11-06/photos/chef.jpg",
+   "word_audio": "media/a2/2026-11-06/word-audio/chef.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-11-06/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Food and Cooking",
+  "audio": "media/a2/2026-11-06/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-11-06/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Chef's Soup",
+  "audio": "media/a2/2026-11-06/shadowing.mp3",
+  "transcript": "media/a2/2026-11-06/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-11-06/shadowing-sentences/001.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/002.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/003.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/004.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/005.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/006.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/007.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/008.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/009.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/010.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/011.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/012.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/013.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/014.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/015.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/016.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/017.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/018.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/019.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/020.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/021.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/022.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/023.mp3",
+   "media/a2/2026-11-06/shadowing-sentences/024.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'cabbage' mean?",
+   "options": [
+    "A round, green vegetable with thick leaves.",
+    "A long, orange vegetable that grows underground.",
+    "A baby cow.",
+    "A skilled cook, especially in a restaurant."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'calf' mean?",
+   "options": [
+    "A skilled cook, especially in a restaurant.",
+    "An area where people can leave their cars.",
+    "A long, orange vegetable that grows underground.",
+    "A baby cow."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'car park' mean?",
+   "options": [
+    "An area where people can leave their cars.",
+    "A round, green vegetable with thick leaves.",
+    "A baby cow.",
+    "A skilled cook, especially in a restaurant."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'carrot' mean?",
+   "options": [
+    "A long, orange vegetable that grows underground.",
+    "A baby cow.",
+    "An area where people can leave their cars.",
+    "A round, green vegetable with thick leaves."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'chef' mean?",
+   "options": [
+    "A long, orange vegetable that grows underground.",
+    "An area where people can leave their cars.",
+    "A round, green vegetable with thick leaves.",
+    "A skilled cook, especially in a restaurant."
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Future Forms: Going To, Will and Present Continuous",
+  "explanation": "English has three ways to talk about the future. We use **be going to**, **will**, and the **present continuous**.\n\nUse **be going to** for a plan. The chef **is going to** cook soup tomorrow. Use it too when you can see what will happen. Look at the clouds. It **is going to** rain.\n\nUse **will** for a quick decision. I am thirsty. I**'ll** get some water. Use **will** for offers and promises too. I **won't** be late, I promise.\n\nUse the **present continuous** for a fixed plan with a time. I**'m meeting** Sam at 6 tonight. The chef **is meeting** the farmer at 9 in the morning.\n\nFor a timetable, use the **present simple**. The film **starts** at 8. Do not use the present simple for a decision. Say I**'ll** answer it, not I answer it.",
+  "examples": [
+   "*We**'re going to** paint the kitchen this weekend.* (plan)",
+   "*Look out! That glass **is going to** fall.* (evidence)",
+   "*I'm tired. I think I**'ll** go to bed.* (decision now)",
+   "*I**'ll** call you tomorrow, I promise.* (promise)",
+   "*She**'s starting** her new job on Monday.* (arrangement)",
+   "*The concert **starts** at 8 p.m.* (timetable)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite: The chef cooks soup tomorrow. The chef ___ cook soup tomorrow.",
+    "a": "The chef is going to cook soup tomorrow."
+   },
+   {
+    "q": "Rewrite: The phone is ringing. I answer it. I ___ answer it.",
+    "a": "I'll answer it."
+   },
+   {
+    "q": "Rewrite: Look at the clouds. It rains. Look at the clouds. It ___ rain.",
+    "a": "It's going to rain."
+   },
+   {
+    "q": "Rewrite: We meet the chef at 6 tonight. We ___ the chef at 6 tonight.",
+    "a": "We're meeting the chef at 6 tonight."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "I ___ visit my grandparents this weekend. I bought the train tickets yesterday.",
+    "options": [
+     "going to",
+     "am going to",
+     "will to",
+     "am go to"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "A: We've run out of milk. B: Oh, really? I ___ some on my way home.",
+    "options": [
+     "'ll buy",
+     "buy",
+     "am buy",
+     "buys"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "It's cold in here. ___ I close the window?",
+    "options": [
+     "Will",
+     "Am",
+     "Shall",
+     "Do"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "She ___ study medicine at university.",
+    "options": [
+     "is going",
+     "goes to going",
+     "going to",
+     "is going to"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Don't worry, I ___ tell anyone. I promise.",
+    "options": [
+     "don't",
+     "won't",
+     "am not",
+     "not will"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "A: Tea or coffee? B: I ___ coffee, please.",
+    "options": [
+     "'ll have",
+     "have will",
+     "am have",
+     "having"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Look at those black clouds! It ___ rain.",
+    "options": [
+     "going to",
+     "will to",
+     "is go to",
+     "is going to"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "We ___ dinner with Tom and Anna at 7 tonight. We booked the table last week.",
+    "options": [
+     "having",
+     "are have",
+     "are having",
+     "have having"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "___ you going to watch the match tonight?",
+    "options": [
+     "Do",
+     "Are",
+     "Will",
+     "Is"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Which sentence is a promise?",
+    "options": [
+     "I'll always love you.",
+     "I'm going to the gym on Monday.",
+     "It's going to snow.",
+     "The bus leaves at 9."
+    ],
+    "answer": 0
+   }
+  ],
+  "audio": "media/a2/2026-11-06/grammar-en.mp3"
+ }
+}

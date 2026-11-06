@@ -1,0 +1,330 @@
+{
+  "date": "2026-11-06",
+  "theme": "travel & transport",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "diving",
+      "pos": "noun",
+      "meaning": "The sport of jumping into water head first.",
+      "example": "I enjoy diving in the clear blue sea.",
+      "pronunciation": "DY-ving",
+      "persian": "شیرجه، غواصی",
+      "photo": "media/b1/2026-11-06/photos/diving.jpg",
+      "word_audio": "media/b1/2026-11-06/word-audio/diving.mp3"
+    },
+    {
+      "word": "fascinating",
+      "pos": "adjective",
+      "meaning": "Very interesting and attractive.",
+      "example": "The book was so fascinating, I couldn't put it down.",
+      "pronunciation": "FASS-in-ay-ting",
+      "persian": "جذاب، دلربا",
+      "photo": "media/b1/2026-11-06/photos/fascinating.jpg",
+      "word_audio": "media/b1/2026-11-06/word-audio/fascinating.mp3"
+    },
+    {
+      "word": "get in [enter]",
+      "pos": "phrasal verb",
+      "meaning": "to enter a car, taxi, or small boat.",
+      "example": "Get in the car, we're leaving.",
+      "pronunciation": "get IN",
+      "persian": "وارد شدن، سوار شدن",
+      "photo": "media/b1/2026-11-06/photos/get-in-enter.jpg",
+      "word_audio": "media/b1/2026-11-06/word-audio/get-in-enter.mp3"
+    },
+    {
+      "word": "get out [leave]",
+      "pos": "phrasal verb",
+      "meaning": "To leave a car, bus, or building.",
+      "example": "Let's get out of the car here.",
+      "pronunciation": "get OUT",
+      "persian": "پیاده شدن، خارج شدن",
+      "photo": "media/b1/2026-11-06/photos/get-out-leave.jpg",
+      "word_audio": "media/b1/2026-11-06/word-audio/get-out-leave.mp3"
+    },
+    {
+      "word": "go for (a swim/drive, etc.)",
+      "pos": "phrase",
+      "meaning": "To do an activity like swimming or driving.",
+      "example": "Let's go for a swim in the sea.",
+      "pronunciation": "go FOR",
+      "persian": "برای شنا/رانندگی رفتن",
+      "photo": "media/b1/2026-11-06/photos/go-for-a-swim-drive-etc.jpg",
+      "word_audio": "media/b1/2026-11-06/word-audio/go-for-a-swim-drive-etc.mp3"
+    },
+    {
+      "word": "have a (swim/drink, etc.)",
+      "pos": "verb phrase",
+      "meaning": "To do an activity like swimming or drinking.",
+      "example": "Let's have a swim in the pool.",
+      "pronunciation": "hav uh",
+      "persian": "انجام دادن (شنا، نوشیدن و غیره)",
+      "photo": "media/b1/2026-11-06/photos/have-a-swim-drink-etc.jpg",
+      "word_audio": "media/b1/2026-11-06/word-audio/have-a-swim-drink-etc.mp3"
+    },
+    {
+      "word": "miss the bus/train (etc.)",
+      "pos": "phrase",
+      "meaning": "To arrive too late for transport.",
+      "example": "Hurry up, or we will miss the bus!",
+      "pronunciation": "miss thuh BUS",
+      "persian": "از دست دادن (اتوبوس/قطار)",
+      "photo": "media/b1/2026-11-06/photos/miss-the-bus-train-etc.jpg",
+      "word_audio": "media/b1/2026-11-06/word-audio/miss-the-bus-train-etc.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-11-06/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: A Trip to the Sea",
+    "audio": "media/b1/2026-11-06/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-11-06/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Day at the Sea",
+    "audio": "media/b1/2026-11-06/shadowing.mp3",
+    "transcript": "media/b1/2026-11-06/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b1/2026-11-06/shadowing-sentences/001.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/002.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/003.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/004.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/005.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/006.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/007.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/008.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/009.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/010.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/011.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/012.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/013.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/014.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/015.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/016.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/017.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/018.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/019.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/020.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/021.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/022.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/023.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/024.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/025.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/026.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/027.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/028.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/029.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/030.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/031.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/032.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/033.mp3",
+      "media/b1/2026-11-06/shadowing-sentences/034.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'diving' mean?",
+      "options": [
+        "The sport of jumping into water head first.",
+        "To arrive too late for transport.",
+        "Very interesting and attractive.",
+        "To leave a car, bus, or building."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'fascinating' mean?",
+      "options": [
+        "To do an activity like swimming or driving.",
+        "Very interesting and attractive.",
+        "To enter a car, taxi, or small boat.",
+        "To do an activity like swimming or drinking."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'get in [enter]' mean?",
+      "options": [
+        "To leave a car, bus, or building.",
+        "The sport of jumping into water head first.",
+        "To arrive too late for transport.",
+        "To enter a car, taxi, or small boat."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'get out [leave]' mean?",
+      "options": [
+        "To leave a car, bus, or building.",
+        "Very interesting and attractive.",
+        "To do an activity like swimming or driving.",
+        "To enter a car, taxi, or small boat."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'go for (a swim/drive, etc.)' mean?",
+      "options": [
+        "To do an activity like swimming or drinking.",
+        "To arrive too late for transport.",
+        "To do an activity like swimming or driving.",
+        "The sport of jumping into water head first."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'have a (swim/drink, etc.)' mean?",
+      "options": [
+        "To do an activity like swimming or drinking.",
+        "Very interesting and attractive.",
+        "To leave a car, bus, or building.",
+        "To enter a car, taxi, or small boat."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'miss the bus/train (etc.)' mean?",
+      "options": [
+        "To do an activity like swimming or driving.",
+        "The sport of jumping into water head first.",
+        "To do an activity like swimming or drinking.",
+        "To arrive too late for transport."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Both, Either, Neither and Not Only",
+    "explanation": "We use **both**, **either** and **neither** to talk about **two** people or things. **Both** means two together, **either** means one of two, and **neither** means not one and not the other.\n\nUse **both... and** for two things together: **both** my brother **and** my sister. Use **either... or** for a choice: we can go **either** by bus **or** by train, but we must not **miss the bus**.\n\nUse **neither... nor** when you mean not the first and not the second. **Neither** my phone **nor** my laptop is working.\n\nBefore words like the, my, these, or a pronoun, add **of**: **both of** my parents, **either of** these days, **neither of** us. With **neither... nor** and **either... or**, the verb usually agrees with the noun closest to it.\n\n**Not only... but also** adds a second, often surprising, point. The sea is **not only** beautiful **but also** fascinating, and the two parts after **not only** and **but also** must have the same form.\n\nIn short answers, use **too** for positive sentences and **either** for negative sentences. To agree with a negative sentence, say **Me neither** or **Neither do I**.\n\nRemember: **neither** is already negative, so never add **not** with it. Say **Neither of them came**, not **Neither of them didn't come**.",
+    "examples": [
+      "* **Both** my parents were born in Italy.* (both + plural noun)",
+      "*You can pay **either** by card **or** in cash.* (either… or)",
+      "* **Neither** Sam **nor** Lisa knew the answer.* (neither… nor)",
+      "*He's **not only** a great teacher **but also** a talented musician.* (not only… but also)",
+      "*I can't swim. – **Neither can I.*** (short answer: agree with a negative)",
+      "*We visited **both** Rome **and** Florence.* (both… and)"
+    ],
+    "practice": [
+      {
+        "q": "Sara likes diving. Tom likes diving. → Sara and Tom ...",
+        "a": "Both Sara and Tom like diving."
+      },
+      {
+        "q": "We can go by bus. We can go by train. → We can go ...",
+        "a": "We can go either by bus or by train."
+      },
+      {
+        "q": "I don't like the cold sea. Sara doesn't like the cold sea. → ... of us likes the cold sea.",
+        "a": "Neither of us likes the cold sea."
+      },
+      {
+        "q": "The sea is beautiful. The sea is fascinating. → The sea is ...",
+        "a": "The sea is not only beautiful but also fascinating."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "___ my brother and my sister live in London.",
+        "options": [
+          "Either",
+          "Both",
+          "Neither",
+          "Not only"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "You can have either tea ___ coffee.",
+        "options": [
+          "and",
+          "nor",
+          "or",
+          "but"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Neither Tom ___ Anna came to the meeting.",
+        "options": [
+          "nor",
+          "or",
+          "and",
+          "but"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She speaks not only English ___ Chinese.",
+        "options": [
+          "and also",
+          "or",
+          "nor",
+          "but also"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I don't like horror films. – I don't like them ___.",
+        "options": [
+          "too",
+          "also",
+          "either",
+          "neither"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ of my parents are teachers. My mum teaches maths and my dad teaches English.",
+        "options": [
+          "Both",
+          "Either",
+          "Neither",
+          "Each"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Monday or Tuesday? – ___ day is fine. I'm free all week.",
+        "options": [
+          "Both",
+          "Neither",
+          "None",
+          "Either"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We can go ___ by bus or by train.",
+        "options": [
+          "both",
+          "either",
+          "neither",
+          "not only"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I can't swim. – ___ can I.",
+        "options": [
+          "Neither",
+          "Either",
+          "Both",
+          "So"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The hotel was ___ cheap but also very comfortable.",
+        "options": [
+          "both",
+          "either",
+          "neither",
+          "not only"
+        ],
+        "answer": 3
+      }
+    ]
+  }
+}
