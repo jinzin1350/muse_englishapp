@@ -563,6 +563,93 @@ async function toggleSaveWordBtn(btn) {
     btn.classList.toggle('saved', nowSaved);
   } finally { btn.disabled = false; }
 }
+/* ---------------- saved-word spaced repetition (Alireza, 2026-11-06) ----
+   Bookmarked words join a spaced-repetition cycle so the app brings them
+   back on later days: first review the day after saving, then doubling
+   intervals (1, 2, 4, 8, 16, 32, 60 days). A correct answer doubles the
+   interval; a wrong answer restarts at 1 day — the same rules as the word
+   deck. The schedule lives in localStorage keyed by lowercase word; the
+   saved_words rows stay the source of truth for WHAT is bookmarked. */
+var SRS_KEY = 'muse_saved_srs_v1';
+function srsGet() {
+  try {
+    const o = JSON.parse(localStorage.getItem(SRS_KEY) || '{}');
+    return o && typeof o === 'object' && !Array.isArray(o) ? o : {};
+  } catch (e) { return {}; }
+}
+function srsSet(map) {
+  try { localStorage.setItem(SRS_KEY, JSON.stringify(map || {})); } catch (e) {}
+}
+function srsAddDays(ds, n) {
+  const d = new Date(ds + 'T12:00:00');
+  d.setDate(d.getDate() + n);
+  return fmtDate(d);
+}
+/* Ensure a schedule entry exists for a saved row. First review: the day
+   after the save date when known (cloud rows carry created_at), otherwise
+   today — so older bookmarks are due immediately (catch-up). */
+function srsEntryFor(map, row) {
+  const k = String((row && row.word) || '').toLowerCase();
+  if (!k) return null;
+  if (!map[k]) {
+    const first = row.created_at ? srsAddDays(String(row.created_at).slice(0, 10), 1) : todayStr();
+    map[k] = { i: 1, due: first, asked: 0, correct: 0 };
+  }
+  return map[k];
+}
+/* Saved rows whose review is due today or overdue (one per unique word). */
+function srsDueRows(arr) {
+  const map = srsGet();
+  const t = todayStr();
+  const out = [];
+  const seen = {};
+  let dirty = false;
+  (arr || []).forEach(function (row) {
+    if (!row || !row.word) return;
+    const k = String(row.word).toLowerCase();
+    if (seen[k]) return;
+    seen[k] = 1;
+    const had = !!map[k];
+    const e = srsEntryFor(map, row);
+    if (!had) dirty = true;
+    if (e && e.due <= t) out.push(row);
+  });
+  if (dirty) srsSet(map);
+  return out;
+}
+function srsDueCount(arr) { return srsDueRows(arr).length; }
+/* Short label for a saved row's next review: 'Due today' / 'Tomorrow' /
+   'in N days'. Enrolls the word on the fly, like srsDueRows. */
+function srsLabelFor(row) {
+  const map = srsGet();
+  const had = !!map[String((row && row.word) || '').toLowerCase()];
+  const e = srsEntryFor(map, row);
+  if (!had) srsSet(map);
+  if (!e) return '';
+  const days = Math.round((new Date(e.due + 'T12:00:00') - new Date(todayStr() + 'T12:00:00')) / 86400000);
+  if (days <= 0) return 'Due today';
+  if (days === 1) return 'Tomorrow';
+  return 'in ' + days + ' days';
+}
+/* Grade one answered bookmark question: correct doubles the interval
+   (cap 60), wrong restarts at 1 day; next due = today + interval. */
+function srsGrade(word, correct) {
+  const k = String(word || '').toLowerCase();
+  if (!k) return;
+  const map = srsGet();
+  const e = map[k] || { i: 1, due: todayStr(), asked: 0, correct: 0 };
+  e.asked = (e.asked || 0) + 1;
+  if (correct) {
+    e.correct = (e.correct || 0) + 1;
+    e.i = Math.min((e.i || 1) * 2, 60);
+  } else {
+    e.i = 1;
+  }
+  e.due = srsAddDays(todayStr(), e.i);
+  map[k] = e;
+  srsSet(map);
+}
+
 /* ---------------- vocabulary-page bookmarks ----------------
    Same saved_words store as lesson bookmarks, with lesson_date '' (null in
    the cloud) so vocab saves coexist with per-lesson saves of the same word. */
@@ -9124,6 +9211,31 @@ function ieltsStopMedia() {
 }
 function ieltsView() { return document.getElementById('view'); }
 
+/* Daily-review reminder card (Alireza, 2026-11-06): appears on Home only
+   when bookmarked words are due for their spaced-repetition review. */
+async function paintReviewDue() {
+  const wrap = document.getElementById('home-review-wrap');
+  if (!wrap) return;
+  let arr = [];
+  try { arr = await getSavedWords(); } catch (e) { return; }
+  if (!document.getElementById('home-review-wrap')) return;
+  const due = srsDueRows(arr).length;
+  if (!due) { wrap.innerHTML = ''; return; }
+  const label = due + ' saved word' + (due > 1 ? 's' : '') + ' due for review';
+  if (!isDesktop()) {
+    wrap.innerHTML = '<div class="hm-card">' +
+      '<span class="hm-icon">🔁</span><span class="hm-main"><span class="hm-kicker">DAILY REVIEW</span>' +
+      '<span class="hm-title">' + label + '</span>' +
+      '<span class="hm-subtxt">Spaced repetition — a few minutes keeps them in your memory</span></span>' +
+      '<button class="hm-btn" data-action="review-due-start">Review →</button></div>';
+    return;
+  }
+  wrap.innerHTML = '<div class="g-banner">' +
+    '<span class="g-b-icon">🔁</span><span class="g-b-main"><b>Daily review</b>' +
+    '<span>' + label + ' — spaced repetition keeps them in your memory</span></span>' +
+    '<button class="g-b-cta" data-action="review-due-start">Review →</button></div>';
+}
+
 function paintIeltsBanner() {
   var wrap = document.getElementById('home-ielts-wrap');
   if (!wrap) return;
@@ -9975,6 +10087,7 @@ function paintHome(v, mistakes, attempts) {
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
 
   // 0b2 — Grammar guides banner (smart: explore / continue / completed)
+  html += '<div id="home-review-wrap"></div>';
   html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-ielts-wrap"></div>';
   html += '<div id="home-vocab-wrap"></div>';
@@ -10054,7 +10167,7 @@ function paintHome(v, mistakes, attempts) {
   }
 
   v.innerHTML = html;
-  paintGrammarBanner(); paintIeltsBanner();
+  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner();
   paintVocabBanner();
   paintWordsBanner();
   paintSentenceBanner();
@@ -10418,6 +10531,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   const today = lessons[0] || null;
   let html = '<div class="dhome">';
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
+  html += '<div id="home-review-wrap"></div>';
   html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-ielts-wrap"></div>';
   html += '<div id="home-vocab-wrap"></div>';
@@ -10441,7 +10555,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   v.innerHTML = html;
   wireDhPlayer();
   refreshDhProgress();
-  paintGrammarBanner(); paintIeltsBanner();
+  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner();
   paintVocabBanner();
   paintWordsBanner();
   paintSentenceBanner();
@@ -11654,6 +11768,10 @@ async function startQuiz(kind, dateStr) {
     if (!m) m = { date: todayStr(), level: (state.user && state.user.level) || '', theme: '' };
     state._sbKey = 'saved';
     questions = buildSentenceDeck(await getSavedWords());
+  } else if (kind === 'srs') {
+    if (!m) m = { date: todayStr(), level: (state.user && state.user.level) || '', theme: '' };
+    const allSaved = await getSavedWords();
+    questions = buildSavedDeck(srsDueRows(allSaved), allSaved);
   }
   if (!questions.length) return;
   /* Fix 2: resume an in-progress word/grammar quiz instead of restarting it. */
@@ -11672,7 +11790,7 @@ function beginQuizSession(kind, m, questions, prog) {
   let qHearts;
   if (prog) {
     qHearts = Math.max(prog.hearts || 0, getHearts());
-  } else if (kind === 'word' || kind === 'grammar' || kind === 'saved' || kind === 'sentence') {
+  } else if (kind === 'word' || kind === 'grammar' || kind === 'saved' || kind === 'sentence' || kind === 'srs') {
     qHearts = sessionHeartGrant();
     setHearts(qHearts);
   } else {
@@ -11721,7 +11839,7 @@ function renderQuizView() {
   /* Fix 4: the mistakes review uses the same full-screen Duolingo-style player
      as the word/grammar quizzes (one question at a time, instant feedback,
      hearts, progress bar, XP/result screen). */
-  if (q.kind === 'word' || q.kind === 'assignment' || q.kind === 'grammar' || q.kind === 'mistakes' || q.kind === 'saved' || q.kind === 'sentence') { renderDuoQuizView(); return; }
+  if (q.kind === 'word' || q.kind === 'assignment' || q.kind === 'grammar' || q.kind === 'mistakes' || q.kind === 'saved' || q.kind === 'sentence' || q.kind === 'srs') { renderDuoQuizView(); return; }
   const v = $('#view');
   const cur = q.questions[q.idx];
   const total = q.questions.length;
@@ -12140,6 +12258,8 @@ async function duoAnswer(idx) {
     }
     q.log.push(entry);
   }
+  /* Saved-word SRS: every bookmark-quiz answer moves the word's schedule. */
+  if (cur.kind === 'saved' && cur.word) { try { srsGrade(cur.word, q.wasCorrect); } catch (e) {} }
   /* listening: answering dismisses the mini-player bar */
   if (cur.qtype === 'listen') closePlayer();
   if (q.wasCorrect) {
@@ -13510,7 +13630,10 @@ async function loadReviewHubCounts() {
   if (!el) return;
   const arr = await getSavedWords();
   const cur = document.getElementById('rev-words-count');
-  if (cur) cur.textContent = arr.length;
+  if (cur) {
+    const dueN = srsDueCount(arr);
+    cur.innerHTML = arr.length + (dueN ? ' <span class="rev-due-pill">' + dueN + ' due</span>' : '');
+  }
   const atts = await getAttempts();
   const ac = document.getElementById('rev-att-count');
   if (ac) ac.textContent = atts.length;
@@ -13551,6 +13674,12 @@ async function loadSavedWordsSection() {
 }
 function savedWordsHTML(arr) {
   if (!arr.length) return '';
+  const dueRows = srsDueRows(arr);
+  const dueKeys = {};
+  dueRows.forEach(function (x) { dueKeys[String(x.word || '').toLowerCase()] = 1; });
+  const ordered = dueRows.concat(arr.filter(function (x) {
+    return !dueKeys[String((x && x.word) || '').toLowerCase()];
+  }));
   const practicable = arr.length >= 2;
   const playable = arr.filter(function (x) {
     if (!x || !x.example) return false;
@@ -13559,6 +13688,10 @@ function savedWordsHTML(arr) {
   }).length;
   return '<div class="card"><div class="tch-weekly-title"><img src="/icons/bookmark.png" alt="" class="bm-ico"> Saved words <span class="muted">(' + arr.length + ')</span></div>' +
     '<p class="muted" style="font-size:0.82rem;margin:0.25rem 0 0.6rem">Hard words you bookmarked — review them here, or run a practice quiz.</p>' +
+    (dueRows.length
+      ? '<div class="srs-due-banner"><span>🔁 <b>' + dueRows.length + ' word' + (dueRows.length > 1 ? 's' : '') + ' due for review</b> — spaced repetition brings them back so they stick.</span>' +
+        (practicable ? '<button class="btn btn-sm" data-action="review-due-start">▶ Start review</button>' : '') + '</div>'
+      : '') +
     (practicable || playable
       ? '<div style="margin:0 0 0.6rem;display:flex;gap:0.5rem;flex-wrap:wrap">' +
         (practicable ? '<button class="btn btn-sm" data-action="practice-saved">▶ Practice ' + arr.length + ' words</button>' : '') +
@@ -13566,14 +13699,17 @@ function savedWordsHTML(arr) {
         (playable && ptsGet('done')['sentence_done|saved'] ? '<span style="font-size:0.78rem;color:#4C9A2A;align-self:center">✓ Completed once — replays are practice</span>' : '') +
         '</div>'
       : '<p class="muted" style="font-size:0.8rem">Bookmark at least 2 words to unlock the practice quiz.</p>') +
-    arr.map(function (x) {
+    ordered.map(function (x) {
       return '<div class="saved-row">' +
         '<div class="saved-word"><b>' + esc(x.word) + '</b>' +
         (x.pronunciation ? '<span class="muted"> /' + esc(x.pronunciation) + '/</span>' : '') +
         (x.persian ? '<div dir="auto" style="font-size:0.85rem">' + esc(x.persian) + '</div>' : '') +
         (x.meaning ? '<div class="muted" style="font-size:0.82rem">' + esc(x.meaning) + '</div>' : '') +
         (x.example ? '<div style="font-size:0.85rem;font-style:italic;margin-top:0.15rem">“' + esc(x.example) + '”</div>' : '') +
-        '<div class="muted" style="font-size:0.75rem">' + esc(x.lesson_date || '') + (x.level ? ' · ' + esc(String(x.level).toUpperCase()) : '') + '</div></div>' +
+        '<div class="muted" style="font-size:0.75rem">' + esc(x.lesson_date || '') + (x.level ? ' · ' + esc(String(x.level).toUpperCase()) : '') +
+        (dueKeys[String((x && x.word) || '').toLowerCase()]
+          ? '<span class="srs-chip srs-due">🔁 Due today</span>'
+          : '<span class="srs-chip">Next review · ' + esc(srsLabelFor(x)) + '</span>') + '</div></div>' +
         '<div class="saved-actions">' +
         (x.word_audio ? '<button class="speaker-btn" data-action="play-track" data-src="' + esc(x.word_audio) + '" data-title="' + esc(x.word) + '" aria-label="Hear ' + esc(x.word) + '">🔊</button>' : '') +
         '<button class="save-word-btn saved" data-action="unsave-word" data-id="' + esc(x.id || '') + '" data-word="' + esc(x.word) + '" data-date="' + esc(x.lesson_date || '') + '" aria-label="Remove bookmark" title="Remove bookmark"><img src="/icons/bookmark.png" alt=""></button>' +
@@ -13870,11 +14006,12 @@ async function finishSavedSp(a, said) {
 }
 /* Practice quiz built from bookmarked words: Persian->English + listening,
    distractors drawn from the user's own saved pool. */
-function buildSavedDeck(arr) {
+function buildSavedDeck(arr, pool) {
   const deck = [];
   const words = arr.filter(function (x) { return x && x.word; });
+  const poolWords = (pool || arr).filter(function (x) { return x && x.word; });
   const distractors = function (word, n) {
-    return shuffleArr(words.filter(function (x) { return x.word !== word; }))
+    return shuffleArr(poolWords.filter(function (x) { return x.word !== word; }))
       .slice(0, n).map(function (x) { return x.word; });
   };
   shuffleArr(words.slice()).forEach(function (x) {
@@ -14707,7 +14844,7 @@ function bindEvents() {
     else if (a === 'resume-paused') {
       const pq = state.pausedQuiz;
       state.pausedQuiz = null;
-      if (pq && (pq.kind === 'assignment' || pq.kind === 'word' || pq.kind === 'grammar' || pq.kind === 'saved')) {
+      if (pq && (pq.kind === 'assignment' || pq.kind === 'word' || pq.kind === 'grammar' || pq.kind === 'saved' || pq.kind === 'srs')) {
         /* the heart-killing question was answered wrong — let them retry it fresh.
            Hearts earned in review apply: keep the better of saved/current (Fix 2). */
         if (pq.log && pq.log.length > pq.idx) pq.log.pop();
@@ -14730,6 +14867,12 @@ function bindEvents() {
       getSavedWords().then(function (arr) {
         if (arr.length >= 2) startQuiz('saved');
         else go('review');
+      });
+    }
+    else if (a === 'review-due-start') {
+      getSavedWords().then(function (arr) {
+        if (arr.length >= 2 && srsDueRows(arr).length) startQuiz('srs');
+        else location.hash = '#/review/words';
       });
     }
     else if (a === 'sentence-game') {
@@ -14896,7 +15039,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611042259';
+var APP_VERSION = '202611062238';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

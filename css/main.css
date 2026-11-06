@@ -4752,3 +4752,10 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
   .ix2-title { font-size: 1.55rem; }
   .ix2-cap { width: 185px; }
 }
+
+/* ---------------- Saved-word spaced repetition (2026-11-06) ---------------- */
+.srs-due-banner { display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; flex-wrap: wrap; background: #FFF4E0; border: 1.5px solid #F2C879; border-radius: 14px; padding: 0.6rem 0.8rem; margin: 0 0 0.6rem; font-size: 0.88rem; color: #7A4A12; }
+.srs-chip { display: inline-block; font-size: 0.72rem; font-weight: 700; border-radius: 999px; padding: 1px 8px; margin-left: 6px; background: #F1EEE6; color: #778; vertical-align: 1px; }
+.srs-chip.srs-due { background: #FDE8E0; color: #C23A10; }
+.rev-due-pill { display: inline-block; font-size: 0.72rem; font-weight: 800; background: #EE4D1C; color: #fff; border-radius: 999px; padding: 2px 8px; vertical-align: 2px; }
+button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inherit; }
