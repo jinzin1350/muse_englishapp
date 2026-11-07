@@ -4759,3 +4759,117 @@ body.tw-mode #view { max-width: none; padding: 0; margin: 0; }
 .srs-chip.srs-due { background: #FDE8E0; color: #C23A10; }
 .rev-due-pill { display: inline-block; font-size: 0.72rem; font-weight: 800; background: #EE4D1C; color: #fff; border-radius: 999px; padding: 2px 8px; vertical-align: 2px; }
 button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inherit; }
+
+/* ===== Word Map v2 (WordUp-style, 2026-11-07) ===== */
+.wm2-wrap { max-width: 720px; margin: 0 auto; padding: 1rem 1rem 3rem; }
+.wm2-hero { background: linear-gradient(140deg, #7B2FF7 0%, #5B21B6 100%); border-radius: 24px; color: #fff; padding: 1.3rem 1.4rem 1.2rem; box-shadow: 0 12px 28px rgba(91, 33, 182, 0.30); margin-bottom: 1.2rem; }
+.wm2-hero-top { display: flex; align-items: center; gap: 1rem; }
+.wm2-ava { flex: 0 0 auto; width: 74px; height: 74px; border-radius: 50%; background: #12B5A5; color: #fff; font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 2rem; display: flex; align-items: center; justify-content: center; text-transform: uppercase; }
+.wm2-hero-label { font-family: "Fredoka", sans-serif; font-weight: 600; font-size: 1.25rem; line-height: 1.25; }
+.wm2-hero-num { margin-left: auto; font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 2.6rem; line-height: 1; }
+.wm2-bar { height: 12px; border-radius: 999px; background: rgba(255,255,255,0.28); overflow: hidden; margin: 1.1rem 0 0.8rem; }
+.wm2-bar i { display: block; height: 100%; background: #2DD4BF; border-radius: 999px; }
+.wm2-counts { display: flex; justify-content: space-between; align-items: flex-start; font-size: 0.98rem; }
+.wm2-c-knew { color: #5EEAD4; font-weight: 600; }
+.wm2-c-right { display: flex; flex-direction: column; text-align: right; gap: 0.15rem; }
+.wm2-c-learn { color: #D8B4FE; font-weight: 600; }
+.wm2-c-started { color: #F5D0FE; }
+.wm2-sec-t { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 1.55rem; color: #3D1566; text-align: center; margin: 1.6rem 0 0.2rem; }
+.wm2-sec-sub { text-align: center; color: #8A7CA8; margin: 0 0 1rem; font-size: 0.95rem; }
+.wm2-rev-card { background: #fff; border-radius: 20px; box-shadow: 0 6px 22px rgba(80, 50, 140, 0.10); padding: 1.1rem 1.2rem 1.2rem; }
+.wm2-rev-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+.wm2-rev-num { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 2.9rem; color: #A259E6; line-height: 1; min-width: 3.2rem; text-align: center; }
+.wm2-rev-thumbs { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.wm2-rev-thumbs img { width: 74px; height: 50px; object-fit: cover; border-radius: 8px; }
+.wm2-rev-none { text-align: center; color: #5B6478; padding: 0.6rem 0 0.2rem; }
+.wm2-btn { display: inline-block; border: none; border-radius: 16px; padding: 0.9rem 1.3rem; font-size: 1rem; font-weight: 700; cursor: pointer; font-family: "Fredoka", sans-serif; text-decoration: none; text-align: center; box-sizing: border-box; }
+.wm2-btn-block { display: block; width: 100%; }
+.wm2-btn-purple { background: linear-gradient(135deg, #9333EA, #6D28D9); color: #fff; box-shadow: 0 5px 16px rgba(124, 58, 237, 0.35); }
+.wm2-btn-teal { background: #12B5A5; color: #fff; box-shadow: 0 5px 16px rgba(18, 181, 165, 0.35); }
+.wm2-btn-soft { background: #C084FC; color: #fff; }
+.wm2-btn-ghost { background: #fff; color: #3D1566; border: 1px solid #E7DEF5; margin-top: 0.9rem; }
+.wm2-map-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+.wm2-side-card { background: #fff; border-radius: 20px; box-shadow: 0 6px 22px rgba(80, 50, 140, 0.10); padding: 0.8rem; }
+.wm2-collage { display: grid; grid-template-columns: 1fr 1fr; gap: 0.45rem; margin-bottom: 0.8rem; }
+.wm2-collage img, .wm2-collage span { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 10px; background: #EFEAF9; display: block; }
+.wm2-next-img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 10px; margin-bottom: 0.8rem; display: block; background: #EFEAF9; }
+.wm2-next-empty { display: flex; align-items: center; justify-content: center; font-size: 2.4rem; }
+.wm2-side-cap { text-align: center; color: #8A7CA8; font-size: 0.9rem; margin-top: 0.6rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.wm2-topbar { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+.wm2-back { font-size: 1.5rem; color: #3D1566; text-decoration: none; font-weight: 700; line-height: 1; padding: 0.2rem 0.4rem; }
+.wm2-top-title { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 1.35rem; color: #3D1566; flex: 1; text-align: center; }
+.wm2-top-count { color: #8A7CA8; font-weight: 600; min-width: 3.2rem; text-align: right; }
+.wm2-hearts { flex: 1; text-align: center; font-family: "Fredoka", sans-serif; font-weight: 700; color: #E11D48; font-size: 1.1rem; }
+.wm2-view-toggles { display: flex; gap: 0.35rem; }
+.wm2-view-toggles button { border: 1px solid #E7DEF5; background: #fff; color: #6D28D9; border-radius: 10px; width: 40px; height: 40px; font-size: 1.05rem; cursor: pointer; }
+.wm2-view-toggles button.on { background: #6D28D9; color: #fff; border-color: #6D28D9; }
+.wm2-prog { margin-bottom: 1rem; }
+.wm2-card { background: #fff; border-radius: 24px; box-shadow: 0 10px 30px rgba(80, 50, 140, 0.12); overflow: hidden; margin-bottom: 1.1rem; }
+.wm2-photo img { width: 100%; height: auto; display: block; }
+.wm2-card-body { padding: 1.1rem 1.3rem 1.3rem; }
+.wm2-word-row { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; }
+.wm2-word { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 1.85rem; color: #2A1052; }
+.wm2-audio { border: none; background: #F3EEFC; border-radius: 50%; width: 46px; height: 46px; font-size: 1.25rem; cursor: pointer; flex: 0 0 auto; }
+.wm2-phon { color: #9A8BB5; margin-top: 0.15rem; font-size: 1rem; }
+.wm2-rank { color: #B9AED3; }
+.wm2-pos { color: #B9AED3; font-style: italic; }
+.wm2-mean { color: #3F3D56; font-size: 1.06rem; line-height: 1.5; margin: 0.7rem 0 0.4rem; }
+.wm2-mean-fa { font-size: 1.15rem; font-weight: 700; color: #6D28D9; margin-bottom: 0.6rem; }
+.wm2-more-link { background: none; border: none; color: #9A8BB5; text-decoration: underline; cursor: pointer; font-size: 0.95rem; padding: 0.2rem 0; }
+.wm2-more-body { border-top: 1px solid #F1EBFA; margin-top: 0.6rem; padding-top: 0.8rem; }
+.wm2-status-note { text-align: center; color: #6D28D9; font-weight: 600; margin-bottom: 0.7rem; }
+.wm2-2btn { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+.wm2-strip-box { margin-top: 1.4rem; }
+.wm2-range-label { text-align: center; font-family: "Fredoka", sans-serif; font-weight: 700; color: #3D1566; font-size: 1.15rem; margin-bottom: 0.7rem; }
+.wm2-strip-row { display: flex; align-items: center; gap: 0.5rem; }
+.wm2-arrow { border: none; background: none; font-size: 1.9rem; color: #3D1566; cursor: pointer; padding: 0 0.2rem; line-height: 1; }
+.wm2-strip { flex: 1; display: grid; grid-template-columns: repeat(25, 1fr); gap: 3px; }
+.wm2-cell { display: block; aspect-ratio: 1 / 1; border-radius: 2px; background: #E9E4F5; cursor: pointer; }
+.wm2-cell.cK { background: #12B5A5; }
+.wm2-cell.cL { background: #A259E6; }
+.wm2-cell.cX { background: #F4F1FA; cursor: default; }
+.wm2-cell.sel { outline: 2px solid #2A1052; outline-offset: 1px; }
+.wm2-chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.55rem; }
+.wm2-chip { border: none; border-radius: 8px; padding: 0.85rem 0.3rem; font-size: 0.98rem; font-weight: 600; cursor: pointer; background: #EDE9F7; color: #6B6390; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wm2-chip.cK { background: #12B5A5; color: #fff; }
+.wm2-chip.cL { background: #A259E6; color: #fff; }
+.wm2-list { display: flex; flex-direction: column; gap: 0.6rem; }
+.wm2-row { display: flex; align-items: center; gap: 0.8rem; background: #fff; border-radius: 14px; padding: 0.55rem 0.7rem; box-shadow: 0 2px 10px rgba(80, 50, 140, 0.06); }
+.wm2-row img { width: 92px; height: 62px; object-fit: cover; border-radius: 10px; flex: 0 0 auto; cursor: pointer; }
+.wm2-row-main { flex: 1; min-width: 0; cursor: pointer; }
+.wm2-row-word { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 1.12rem; color: #2A1052; }
+.wm2-row-mean { color: #6E6590; font-size: 0.9rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.wm2-row-sel { flex: 0 0 auto; border: 1px solid #E7DEF5; background: #F7F3FD; color: #6D28D9; border-radius: 999px; padding: 0.45rem 0.6rem; font-weight: 600; font-size: 0.88rem; max-width: 9.2rem; }
+.wm2-row-sel.knew { color: #0E9488; }
+.wm2-row-sel.learn { color: #9333EA; }
+.wm2-qword { text-align: center; font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 2.3rem; color: #2A1052; margin: 1.2rem 0 0.2rem; }
+.wm2-qphon { text-align: center; color: #9A8BB5; margin-bottom: 1.4rem; }
+.wm2-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+.wm2-opt { position: relative; border: 2px solid #EFEAF9; background: #fff; border-radius: 16px; overflow: hidden; cursor: pointer; padding: 0; text-align: center; }
+.wm2-opt img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; display: block; }
+.wm2-opt-letter { position: absolute; top: 0; left: 0; background: rgba(42, 16, 82, 0.85); color: #5EEAD4; font-weight: 700; padding: 0.25rem 0.55rem; border-radius: 0 0 10px 0; z-index: 2; }
+.wm2-opt-mean { display: block; padding: 0.7rem 0.6rem 0.85rem; color: #3D1566; font-size: 0.98rem; line-height: 1.4; }
+.wm2-opt.ok { border-color: #22C55E; background: #F0FDF4; }
+.wm2-opt.bad { border-color: #EF4444; background: #FEF2F2; }
+.wm2-opt.dim { opacity: 0.5; }
+.wm2-notsure { display: block; margin: 1.3rem auto 0; background: none; border: none; color: #3D1566; font-family: "Fredoka", sans-serif; font-weight: 600; font-size: 1.05rem; cursor: pointer; }
+.wm2-overlay { position: fixed; inset: 0; background: rgba(43, 24, 84, 0.45); display: flex; align-items: center; justify-content: center; z-index: 1200; padding: 1rem; }
+.wm2-modal { background: #fff; border-radius: 24px; padding: 1.6rem 1.5rem 1.4rem; width: 100%; max-width: 430px; box-shadow: 0 24px 60px rgba(30, 10, 70, 0.35); max-height: 92vh; overflow-y: auto; }
+.wm2-modal-word { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 1.7rem; color: #12B5A5; text-align: center; margin-bottom: 0.7rem; }
+.wm2-modal-meta { text-align: center; color: #3D1566; font-size: 1.02rem; margin-bottom: 0.35rem; }
+.wm2-modal-next { color: #3D1566; font-size: 1.05rem; margin: 1.1rem 0 0.5rem; }
+.wm2-radio { display: flex; align-items: center; gap: 0.7rem; padding: 0.5rem 0.2rem; cursor: pointer; color: #3D1566; font-size: 1.02rem; }
+.wm2-radio input { display: none; }
+.wm2-radio-dot { flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%; border: 2px solid #12B5A5; position: relative; }
+.wm2-radio input:checked + .wm2-radio-dot::after { content: ""; position: absolute; inset: 3px; border-radius: 50%; background: #12B5A5; }
+.wm2-segs { display: flex; gap: 3px; margin-top: 1rem; }
+.wm2-segs i { flex: 1; height: 7px; border-radius: 4px; background: #E9E4F5; }
+.wm2-segs i.on { background: #12B5A5; }
+.wm2-segs-cap { color: #8A7CA8; font-size: 0.88rem; margin: 0.35rem 0 1rem; }
+@media (max-width: 560px) {
+  .wm2-strip { gap: 2px; }
+  .wm2-hero-num { font-size: 2.1rem; }
+  .wm2-ava { width: 60px; height: 60px; font-size: 1.6rem; }
+  .wm2-chips { grid-template-columns: repeat(2, 1fr); }
+  .wm2-row-sel { max-width: 7.6rem; }
+}
