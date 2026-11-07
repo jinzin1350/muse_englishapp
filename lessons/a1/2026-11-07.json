@@ -1,0 +1,277 @@
+{
+ "date": "2026-11-07",
+ "theme": "sports & fitness",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "camping",
+   "pos": "noun",
+   "meaning": "Staying outdoors in a tent.",
+   "example": "We love going camping in the summer.",
+   "pronunciation": "KAMP-ing",
+   "persian": "چادر زدن، کمپینگ",
+   "photo": "media/a1/2026-11-07/photos/camping.jpg",
+   "word_audio": "media/a1/2026-11-07/word-audio/camping.mp3"
+  },
+  {
+   "word": "court",
+   "pos": "noun",
+   "meaning": "An area for playing sports like tennis.",
+   "example": "They played tennis on the court.",
+   "pronunciation": "KORT",
+   "persian": "زمین بازی",
+   "photo": "media/a1/2026-11-07/photos/court.jpg",
+   "word_audio": "media/a1/2026-11-07/word-audio/court.mp3"
+  },
+  {
+   "word": "do",
+   "pos": "verb",
+   "meaning": "To perform an action or activity.",
+   "example": "What do you do on weekends?",
+   "pronunciation": "DOO",
+   "persian": "انجام دادن",
+   "photo": "media/a1/2026-11-07/photos/do.jpg",
+   "word_audio": "media/a1/2026-11-07/word-audio/do.mp3"
+  },
+  {
+   "word": "Do you do any...?",
+   "pos": "phrase",
+   "meaning": "Do you participate in any activities?",
+   "example": "Do you do any sports?",
+   "pronunciation": "DOO yoo DOO EN-ee",
+   "persian": "آیا شما (کاری) انجام می‌دهید؟",
+   "photo": "media/a1/2026-11-07/photos/do-you-do-any.jpg",
+   "word_audio": "media/a1/2026-11-07/word-audio/do-you-do-any.mp3"
+  },
+  {
+   "word": "Do you play …?",
+   "pos": "phrase",
+   "meaning": "Do you play a sport or instrument?",
+   "example": "Do you play the guitar?",
+   "pronunciation": "DOO yoo PLAY",
+   "persian": "آیا (چیزی) بازی می‌کنید؟",
+   "photo": "media/a1/2026-11-07/photos/do-you-play.jpg",
+   "word_audio": "media/a1/2026-11-07/word-audio/do-you-play.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-11-07/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Sports and Weekend Fun",
+  "audio": "media/a1/2026-11-07/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a1/2026-11-07/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Fun Weekend",
+  "audio": "media/a1/2026-11-07/shadowing.mp3",
+  "transcript": "media/a1/2026-11-07/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a1/2026-11-07/shadowing-sentences/001.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/002.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/003.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/004.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/005.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/006.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/007.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/008.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/009.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/010.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/011.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/012.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/013.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/014.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/015.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/016.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/017.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/018.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/019.mp3",
+   "media/a1/2026-11-07/shadowing-sentences/020.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'camping' mean?",
+   "options": [
+    "An area for playing sports like tennis.",
+    "Staying outdoors in a tent.",
+    "Do you play a sport or instrument?",
+    "Do you participate in any activities?"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'court' mean?",
+   "options": [
+    "Do you participate in any activities?",
+    "Do you play a sport or instrument?",
+    "An area for playing sports like tennis.",
+    "To perform an action or activity."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'do' mean?",
+   "options": [
+    "Do you participate in any activities?",
+    "To perform an action or activity.",
+    "An area for playing sports like tennis.",
+    "Do you play a sport or instrument?"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'Do you do any...?' mean?",
+   "options": [
+    "Do you participate in any activities?",
+    "Staying outdoors in a tent.",
+    "Do you play a sport or instrument?",
+    "To perform an action or activity."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'Do you play …?' mean?",
+   "options": [
+    "Staying outdoors in a tent.",
+    "Do you participate in any activities?",
+    "To perform an action or activity.",
+    "Do you play a sport or instrument?"
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "This, That, These, Those",
+  "explanation": "We use **this** and **these** for things that are **near** us.\n\nWe use **that** and **those** for things that are **far** from us.\n\n**This** and **that** are for one thing. **These** and **those** are for many things.\n\nYou can use **this**, **that**, **these**, or **those** before a noun. You can also use them alone.\n\nWe also use **this** to introduce a person and to talk about **this** week. We use **that** to talk about a day in the past.\n\nOn the **court**, you can say: **This** is my friend Sam. We **do** sports **this** week.",
+  "examples": [
+   "* **This** coffee is too hot.* (near, one thing)",
+   "*Who is **that** man over there?* (far, one person)",
+   "* **These** shoes are very comfortable.* (near, many things)",
+   "*Can you see **those** birds in the sky?* (far, many things)",
+   "* **This** is my sister, Lena.* (introducing a person)",
+   "*I am very busy **this** week.* (time: now)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite: This is my friend. Use 'that' for a friend far away.",
+    "a": "That is my friend."
+   },
+   {
+    "q": "Rewrite: This book is mine. Make it plural.",
+    "a": "These books are mine."
+   },
+   {
+    "q": "Rewrite: That bird is in the sky. Make it plural.",
+    "a": "Those birds are in the sky."
+   },
+   {
+    "q": "Rewrite: I go camping. Say it about this week.",
+    "a": "I go camping this week."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Do you remember ___ summer we spent in Greece? It was ten years ago.",
+    "options": [
+     "that",
+     "this",
+     "these",
+     "those"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "___ days, lots of people work from home.",
+    "options": [
+     "This",
+     "That",
+     "Those",
+     "These"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "I don't like this jacket. I prefer ___ one.",
+    "options": [
+     "those",
+     "these",
+     "that",
+     "them"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Are ___ your keys on the table over there?",
+    "options": [
+     "this",
+     "those",
+     "that",
+     "these"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Who's ___ boy over there with the red hat?",
+    "options": [
+     "that",
+     "these",
+     "those",
+     "this"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "___ pens in my bag don't work. Can I borrow yours?",
+    "options": [
+     "This",
+     "That",
+     "Them",
+     "These"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Who is ___ woman over there?",
+    "options": [
+     "that",
+     "this",
+     "these",
+     "those"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Hello, ___ is Anna. Can I speak to Tom, please?",
+    "options": [
+     "these",
+     "those",
+     "this",
+     "here"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "___ is my phone.",
+    "options": [
+     "This",
+     "These",
+     "Those",
+     "Them"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I failed my driving test. – Oh, ___ a shame.",
+    "options": [
+     "these are",
+     "those are",
+     "that's",
+     "this are"
+    ],
+    "answer": 2
+   }
+  ],
+  "audio": "media/a1/2026-11-07/grammar-en.mp3"
+ }
+}

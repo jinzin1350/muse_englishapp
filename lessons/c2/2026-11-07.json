@@ -1,0 +1,331 @@
+{
+ "date": "2026-11-07",
+ "theme": "technology",
+ "level": "c2",
+ "cefr": "C2",
+ "words": [
+  {
+   "word": "desktop",
+   "pos": "noun",
+   "meaning": "A computer designed for use on a desk.",
+   "example": "My new desktop has a very powerful processor.",
+   "pronunciation": "DESK-top",
+   "persian": "کامپیوتر رومیزی",
+   "photo": "media/c2/2026-11-07/photos/desktop.jpg",
+   "word_audio": "media/c2/2026-11-07/word-audio/desktop.mp3"
+  },
+  {
+   "word": "destiny",
+   "pos": "noun",
+   "meaning": "The events that will happen to a person or thing.",
+   "example": "She believes it was her destiny to become an artist.",
+   "pronunciation": "DES-tuh-nee",
+   "persian": "سرنوشت، تقدیر",
+   "photo": "media/c2/2026-11-07/photos/destiny.jpg",
+   "word_audio": "media/c2/2026-11-07/word-audio/destiny.mp3"
+  },
+  {
+   "word": "digital technology",
+   "pos": "noun phrase",
+   "meaning": "Electronic tools and systems that process data digitally.",
+   "example": "Digital technology has transformed how we communicate globally.",
+   "pronunciation": "DIJ-uh-tul tek-NOL-uh-jee",
+   "persian": "فناوری دیجیتال",
+   "photo": "media/c2/2026-11-07/photos/digital technology.jpg",
+   "word_audio": "media/c2/2026-11-07/word-audio/digital technology.mp3"
+  },
+  {
+   "word": "disease-resistant",
+   "pos": "adjective",
+   "meaning": "Able to withstand or fight off diseases.",
+   "example": "Scientists are developing disease-resistant crops to improve yields.",
+   "pronunciation": "duh-ZEEZ ruh-ZIS-tunt",
+   "persian": "مقاوم به بیماری",
+   "photo": "media/c2/2026-11-07/photos/disease-resistant.jpg",
+   "word_audio": "media/c2/2026-11-07/word-audio/disease-resistant.mp3"
+  },
+  {
+   "word": "doomsday scenario",
+   "pos": "noun",
+   "meaning": "A prediction of a catastrophic future event or disaster.",
+   "example": "Experts warned of a doomsday scenario if climate change continues.",
+   "pronunciation": "DOOMZ-day suh-NAIR-ee-oh",
+   "persian": "سناریوی فاجعه‌بار، آخرالزمانی",
+   "photo": "media/c2/2026-11-07/photos/doomsday scenario.jpg",
+   "word_audio": "media/c2/2026-11-07/word-audio/doomsday scenario.mp3"
+  },
+  {
+   "word": "drastic measures",
+   "pos": "phrase",
+   "meaning": "Extreme and severe actions taken to solve a problem.",
+   "example": "Drastic measures are needed to combat climate change.",
+   "pronunciation": "DRAS-tik MEZH-erz",
+   "persian": "اقدامات شدید، تدابیر جدی",
+   "photo": "media/c2/2026-11-07/photos/drastic measures.jpg",
+   "word_audio": "media/c2/2026-11-07/word-audio/drastic measures.mp3"
+  },
+  {
+   "word": "e-reader",
+   "pos": "noun",
+   "meaning": "An electronic device for reading digital books.",
+   "example": "My e-reader holds hundreds of books.",
+   "pronunciation": "EE-ree-der",
+   "persian": "کتاب‌خوان الکترونیکی",
+   "photo": "media/c2/2026-11-07/photos/e-reader.jpg",
+   "word_audio": "media/c2/2026-11-07/word-audio/e-reader.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c2/2026-11-07/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Technology and Destiny",
+  "audio": "media/c2/2026-11-07/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c2/2026-11-07/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Engineer Who Changed Her Destiny",
+  "audio": "media/c2/2026-11-07/shadowing.mp3",
+  "transcript": "media/c2/2026-11-07/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c2/2026-11-07/shadowing-sentences/001.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/002.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/003.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/004.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/005.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/006.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/007.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/008.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/009.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/010.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/011.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/012.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/013.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/014.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/015.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/016.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/017.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/018.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/019.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/020.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/021.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/022.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/023.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/024.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/025.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/026.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/027.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/028.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/029.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/030.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/031.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/032.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/033.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/034.mp3",
+   "media/c2/2026-11-07/shadowing-sentences/035.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'desktop' mean?",
+   "options": [
+    "Electronic tools and systems that process data digitally.",
+    "The events that will happen to a person or thing.",
+    "A prediction of a catastrophic future event or disaster.",
+    "A computer designed for use on a desk."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'destiny' mean?",
+   "options": [
+    "The events that will happen to a person or thing.",
+    "An electronic device for reading digital books.",
+    "Extreme and severe actions taken to solve a problem.",
+    "A prediction of a catastrophic future event or disaster."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'digital technology' mean?",
+   "options": [
+    "A prediction of a catastrophic future event or disaster.",
+    "A computer designed for use on a desk.",
+    "Electronic tools and systems that process data digitally.",
+    "Able to withstand or fight off diseases."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'disease-resistant' mean?",
+   "options": [
+    "Electronic tools and systems that process data digitally.",
+    "Able to withstand or fight off diseases.",
+    "The events that will happen to a person or thing.",
+    "An electronic device for reading digital books."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'doomsday scenario' mean?",
+   "options": [
+    "Able to withstand or fight off diseases.",
+    "A prediction of a catastrophic future event or disaster.",
+    "An electronic device for reading digital books.",
+    "A computer designed for use on a desk."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'drastic measures' mean?",
+   "options": [
+    "The events that will happen to a person or thing.",
+    "An electronic device for reading digital books.",
+    "Extreme and severe actions taken to solve a problem.",
+    "Electronic tools and systems that process data digitally."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'e-reader' mean?",
+   "options": [
+    "Able to withstand or fight off diseases.",
+    "The events that will happen to a person or thing.",
+    "An electronic device for reading digital books.",
+    "A prediction of a catastrophic future event or disaster."
+   ],
+   "answer": 2
+  }
+ ],
+ "grammar": {
+  "title": "Probability: Bound To, May Well, Likely To",
+  "explanation": "English has many ways to say **how likely** something is. Beyond **will**, **might** and **probably**, you can say **bound to**, **may well** or **likely to**. For example, digital technology is **likely to** change how we read.\n\nThink of a scale from almost certain to impossible. At the top, **be bound to**, **be sure to** and **be certain to** mean something will almost certainly happen.\n\nIn the middle, **be likely to**, **may well**, **there's a good chance** and **in all likelihood** mean something is probable. At the bottom, **be unlikely to** and **there's no chance** mean it almost certainly will not happen.\n\nWatch the grammar. **Bound to**, **likely to** and **unlikely to** take **to + verb**, while **may well** adds **well** after the modal. Note that **bound** and **sure** never take **It ... that**.\n\nPlace **probably** carefully. It comes after **will** and before **won't**, as in **He'll probably forget** and **She probably won't come**.",
+  "examples": [
+   "*Don't worry, he's **bound to** call you back.* (almost certain)",
+   "*Prices are **likely to** rise again next year.* (probable)",
+   "*She **may well** be right, but we need more evidence.* (quite likely)",
+   "*There's **a good chance** that it'll snow this weekend.* (probable)",
+   "*The new rule is **unlikely to** make much difference.* (improbable)",
+   "*There's **no chance** that he'll change his mind.* (impossible)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite using bound to: The new e-reader will certainly become popular.",
+    "a": "The new e-reader is bound to become popular."
+   },
+   {
+    "q": "Rewrite using may well: It is quite likely that digital technology will change farming.",
+    "a": "Digital technology may well change farming."
+   },
+   {
+    "q": "Rewrite using likely to: Experts think prices will probably rise.",
+    "a": "Prices are likely to rise."
+   },
+   {
+    "q": "Rewrite using unlikely to: The doomsday scenario probably will not happen.",
+    "a": "The doomsday scenario is unlikely to happen."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Don't worry, he's bound ___ call you back.",
+    "options": [
+     "of",
+     "to",
+     "for",
+     "that"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "It's ___ that the meeting will be cancelled. The boss is ill.",
+    "options": [
+     "bound",
+     "sure to",
+     "likely",
+     "may well"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "She may ___ be right, but we need more evidence.",
+    "options": [
+     "well",
+     "good",
+     "likely",
+     "bound"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "There's a good ___ that it will rain this afternoon.",
+    "options": [
+     "likely",
+     "probable",
+     "sure",
+     "chance"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "The chances ___ that he'll be late again.",
+    "options": [
+     "is",
+     "be",
+     "have",
+     "are"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "He'll ___ forget. He always does.",
+    "options": [
+     "probably",
+     "be probably",
+     "probable",
+     "likely be"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "She probably ___ come to the party. She's very busy.",
+    "options": [
+     "will",
+     "won't be",
+     "won't",
+     "doesn't will"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Prices are ___ to rise again next year.",
+    "options": [
+     "probably",
+     "likely",
+     "possibly",
+     "may"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "It's highly ___ that they'll win. They haven't won a game all season.",
+    "options": [
+     "unlikely",
+     "impossible to",
+     "doubtful to",
+     "uncertain to"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "In all ___, the project will be finished by May.",
+    "options": [
+     "likely",
+     "likelihood",
+     "likeliness",
+     "likelihoods"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

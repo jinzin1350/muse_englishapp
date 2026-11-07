@@ -1,0 +1,286 @@
+{
+ "date": "2026-11-07",
+ "theme": "health & body",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "bleed",
+   "pos": "verb",
+   "meaning": "To lose blood from your body.",
+   "example": "My finger is bleeding after I cut it.",
+   "pronunciation": "BLEED",
+   "persian": "خونریزی کردن",
+   "photo": "media/a2/2026-11-07/photos/bleed.jpg",
+   "word_audio": "media/a2/2026-11-07/word-audio/bleed.mp3"
+  },
+  {
+   "word": "blow your nose",
+   "pos": "phrase",
+   "meaning": "Clear your nose by forcing air through it.",
+   "example": "He had a cold and had to blow his nose.",
+   "pronunciation": "BLOH yor NOHZ",
+   "persian": "فین کردن",
+   "photo": "media/a2/2026-11-07/photos/blow your nose.jpg",
+   "word_audio": "media/a2/2026-11-07/word-audio/blow your nose.mp3"
+  },
+  {
+   "word": "bottom",
+   "pos": "noun",
+   "meaning": "The lowest part of something.",
+   "example": "The book fell to the bottom of the stairs.",
+   "pronunciation": "BOT-um",
+   "persian": "پایین، ته",
+   "photo": "media/a2/2026-11-07/photos/bottom.jpg",
+   "word_audio": "media/a2/2026-11-07/word-audio/bottom.mp3"
+  },
+  {
+   "word": "breast",
+   "pos": "noun",
+   "meaning": "Either of two soft parts on a woman's chest.",
+   "example": "Babies drink milk from their mother's breast.",
+   "pronunciation": "BREST",
+   "persian": "سینه (زن)",
+   "photo": "media/a2/2026-11-07/photos/breast.jpg",
+   "word_audio": "media/a2/2026-11-07/word-audio/breast.mp3"
+  },
+  {
+   "word": "breathe (in/out)",
+   "pos": "phrasal verb",
+   "meaning": "To take air into your lungs or push it out.",
+   "example": "Breathe in slowly, then breathe out.",
+   "pronunciation": "BREETH",
+   "persian": "نفس کشیدن (داخل/خارج)",
+   "photo": "media/a2/2026-11-07/photos/breathe-in-out.jpg",
+   "word_audio": "media/a2/2026-11-07/word-audio/breathe.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-11-07/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Health and Your Body",
+  "audio": "media/a2/2026-11-07/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-11-07/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Cold Morning",
+  "audio": "media/a2/2026-11-07/shadowing.mp3",
+  "transcript": "media/a2/2026-11-07/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-11-07/shadowing-sentences/001.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/002.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/003.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/004.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/005.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/006.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/007.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/008.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/009.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/010.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/011.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/012.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/013.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/014.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/015.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/016.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/017.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/018.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/019.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/020.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/021.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/022.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/023.mp3",
+   "media/a2/2026-11-07/shadowing-sentences/024.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'bleed' mean?",
+   "options": [
+    "Either of two soft parts on a woman's chest.",
+    "The lowest part of something.",
+    "Clear your nose by forcing air through it.",
+    "To lose blood from your body.",
+    "To take air into your lungs or push it out."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'blow your nose' mean?",
+   "options": [
+    "To lose blood from your body.",
+    "Either of two soft parts on a woman's chest.",
+    "Clear your nose by forcing air through it.",
+    "The lowest part of something.",
+    "To take air into your lungs or push it out."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'bottom' mean?",
+   "options": [
+    "Either of two soft parts on a woman's chest.",
+    "To lose blood from your body.",
+    "To take air into your lungs or push it out.",
+    "Clear your nose by forcing air through it.",
+    "The lowest part of something."
+   ],
+   "answer": 4
+  },
+  {
+   "question": "What does 'breast' mean?",
+   "options": [
+    "To lose blood from your body.",
+    "To take air into your lungs or push it out.",
+    "Clear your nose by forcing air through it.",
+    "Either of two soft parts on a woman's chest.",
+    "The lowest part of something."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'breathe (in/out)' mean?",
+   "options": [
+    "To take air into your lungs or push it out.",
+    "To lose blood from your body.",
+    "The lowest part of something.",
+    "Clear your nose by forcing air through it.",
+    "Either of two soft parts on a woman's chest."
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "title": "Present Perfect for Experience (ever, never)",
+  "explanation": "We use the **present perfect** to talk about experiences in our life up to now. We do not say exactly when they happened.\n\nThe form is **have / has + past participle**. For example: I **have cut** my finger. She **has never eaten** chicken breast.\n\nUse **ever** in questions about your life: **Have** you **ever** cut your finger?\n\nUse **never** with a positive verb: I**'ve never been** to the doctor. Do not say: I haven't never been.\n\n**Been to** means you went and came back. **Gone to** means you went and you are still there.\n\nWhen you say **when**, use the **past simple**: I **went** to the doctor in 2025. Start with the present perfect, then continue in the past simple.\n\nTo say how often, use a number: I**'ve seen** this film **three times**.",
+  "examples": [
+   "*I**'ve been** to Canada twice.* (experience + how many times)",
+   "* **Have** you **ever eaten** octopus?* (ever in a question)",
+   "*She**'s never driven** a car.* (never + past participle)",
+   "*I**'ve seen** this film three times.* (how many times)",
+   "*It's the most beautiful place I**'ve ever seen**.* (superlative + ever)",
+   "*Have you ever been to Italy? – Yes, I have. I **went** in 2022.* (present perfect, then past simple)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite: I have cut my finger. Use 'never' to say it never happened to you.",
+    "a": "I have never cut my finger."
+   },
+   {
+    "q": "Rewrite: I went to the doctor last year. Ask about the experience with 'ever'.",
+    "a": "Have you ever been to the doctor?"
+   },
+   {
+    "q": "Rewrite: He has tried chicken breast. Make it a question with 'ever'.",
+    "a": "Has he ever tried chicken breast?"
+   },
+   {
+    "q": "Rewrite: I have never saw snow. Fix the mistake.",
+    "a": "I have never seen snow."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Have you ever ___ to Australia?",
+    "options": [
+     "went",
+     "go",
+     "been",
+     "being"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I've never ___ sushi.",
+    "options": [
+     "eaten",
+     "eat",
+     "ate",
+     "eating"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "___ she ever met a famous person?",
+    "options": [
+     "Have",
+     "Has",
+     "Did",
+     "Is"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "We ___ been to that restaurant. Is it good?",
+    "options": [
+     "haven't never",
+     "are never",
+     "has never",
+     "have never"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "My brother ___ in a band.",
+    "options": [
+     "has never play",
+     "has never played",
+     "have never played",
+     "never has play"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Have you ever seen a ghost? – No, I ___.",
+    "options": [
+     "didn't",
+     "don't",
+     "haven't",
+     "hasn't"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I've seen this film ___ times.",
+    "options": [
+     "three",
+     "ever",
+     "never",
+     "since"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "It's the best pizza I've ___ eaten.",
+    "options": [
+     "never",
+     "yet",
+     "already",
+     "ever"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Have you ever been to Rome? – Yes, I went there ___.",
+    "options": [
+     "since 2019",
+     "for 2019",
+     "in 2019",
+     "ever"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "I went to Paris last year.",
+     "I've been to Paris last year.",
+     "I've went to Paris last year.",
+     "I go to Paris last year."
+    ],
+    "answer": 0
+   }
+  ],
+  "audio": "media/a2/2026-11-07/grammar-en.mp3"
+ }
+}
