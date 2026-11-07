@@ -11193,22 +11193,41 @@ function spSentResultHTML(a, said, pts, slim) {
     (a.targetWords.length ? '<p class="sp-target" dir="auto">' + words + '</p>' : '');
 }
 
-/* Split a story transcript into sentences. Handles numbered lines
-   ("1. Hello.") and plain lines; drops a leading title line. */
-function splitSentences(text) {
+/* Split a story transcript into practice items. Handles numbered lines
+   ("1. Hello.") and plain lines; drops a leading title line.
+   The per-sentence studio clips are generated ONE PER TRANSCRIPT LINE, so
+   line items are the pairing truth. The old code also cut lines at every
+   '.', which split "Mr. Lee" into two fake sentences and shifted every
+   text<->audio pairing after it (his desync report, 2026-11-06). Now:
+   line items win whenever their count matches the clip count; otherwise
+   an abbreviation-safe sentence split is tried, and the candidate that
+   matches (or comes closest to) the clip count is used. */
+function splitSentences(text, audioCount) {
   const lines = String(text || '').split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
-  const out = [];
+  const lineItems = [];
   lines.forEach(function (ln, idx) {
     const numbered = ln.match(/^\d+\.\s*(.+)$/);
     const s = (numbered ? numbered[1] : ln).trim();
     if (idx === 0 && !numbered && !/[.!?…]$/.test(s)) return; /* title line */
-    const parts = s.match(/[^.!?]+[.!?]+["'”’]?/g) || [s];
+    if (s.length > 1) lineItems.push(s);
+  });
+  if (!audioCount || lineItems.length === audioCount) return lineItems;
+  const sentItems = [];
+  lineItems.forEach(function (s) {
+    /* Protect dots that are not sentence ends (Mr., Dr., e.g., 3.5). */
+    const safe = s
+      .replace(/\b(Mr|Mrs|Ms|Dr|St|Prof|Sr|Jr|vs)\./gi, '$1\uE000')
+      .replace(/\b([A-Za-z])\.([A-Za-z])\./g, '$1\uE000$2\uE000')
+      .replace(/(\d)\.(\d)/g, '$1\uE000$2');
+    const parts = safe.match(/[^.!?]+[.!?]+["'”’]?/g) || [safe];
     parts.forEach(function (p) {
-      p = p.trim();
-      if (p.length > 1) out.push(p);
+      p = p.replace(/\uE000/g, '.').trim();
+      if (p.length > 1) sentItems.push(p);
     });
   });
-  return out;
+  if (sentItems.length === audioCount) return sentItems;
+  return Math.abs(sentItems.length - audioCount) < Math.abs(lineItems.length - audioCount)
+    ? sentItems : lineItems;
 }
 
 /* Per-sentence speaking practice: live transcription (Web Speech API) +
@@ -11235,7 +11254,8 @@ async function wireShadowingPractice(body, m) {
     try { targetText = await (await fetch(m.shadowing.transcript)).text(); }
     catch (e) { /* sentences fall back to empty */ }
   }
-  const sentences = splitSentences(targetText);
+  const sentences = splitSentences(targetText,
+    (m.shadowing && m.shadowing.sentence_audio || []).length);
 
   if (!SR && !useServerSTT) {
     list.innerHTML = '<div class="empty">🎤 Voice practice needs Chrome or Edge (Android or desktop).</div>';
@@ -15073,7 +15093,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611070014';
+var APP_VERSION = '202611070345';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
