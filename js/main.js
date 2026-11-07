@@ -12156,7 +12156,7 @@ function duoAssistHTML(q, cur) {
   }).join('') + '</div>';
   if (!q.answered) {
     const ready = cur.placed.length === cur.tokens.length;
-    if (q.kind === 'sentence') {
+    if (q.kind !== 'mistakes' && q.kind !== 'assignment') {
       const canHint = q.hearts > 0 && cur.placed.length < cur.tokens.length;
       html += '<button class="duo-hint-btn" data-action="duo-hint"' + (canHint ? '' : ' disabled') + '>' +
         (q.hearts > 0 ? '\uD83D\uDCA1 Hint <span class="duo-hint-cost">\u22121 \u2764\uFE0F</span>' : '\uD83D\uDCA1 Hint \u2014 no \u2764\uFE0F left') + '</button>';
@@ -12401,7 +12401,7 @@ function duoUnpick(bi) {
    meaning line stays as-is (his call). Sentence games only. */
 function duoHint() {
   const q = state.quiz;
-  if (!q || q.answered || q.kind !== 'sentence') return;
+  if (!q || q.answered || q.kind === 'mistakes' || q.kind === 'assignment') return;
   const cur = q.questions[q.idx];
   if (!cur || cur.qtype !== 'assist') return;
   if (q.hearts <= 0 || cur.placed.length >= cur.tokens.length) return;
@@ -12510,7 +12510,7 @@ async function buyHearts(btn) {
   const say = function (msg) {
     if (note) { note.textContent = msg; note.style.display = 'block'; }
   };
-  const wasAssignment = state.quiz && state.quiz.kind === 'assignment';
+  const resumeKind = state.quiz && (state.quiz.kind === 'assignment' || state.quiz.kind === 'sentence') ? state.quiz.kind : null;
   if (btn) btn.disabled = true;
   try {
     await refreshMyPoints();
@@ -12531,14 +12531,14 @@ async function buyHearts(btn) {
     setHearts(sessionHeartGrant());
     say('❤️ Hearts refilled! Starting a new run…');
     setTimeout(function () {
-      if (wasAssignment && state.quiz && state.quiz.kind === 'assignment') {
-        /* resume the exam where it stopped, retrying the heart-killing question */
+      if (resumeKind && state.quiz && state.quiz.kind === resumeKind) {
+        /* resume where it stopped, retrying the heart-killing question */
         const pq = state.quiz;
         if (pq.log && pq.log.length > pq.idx) pq.log.pop();
         pq.answered = false; pq.picked = -1; pq.wasCorrect = false;
         pq.hearts = getHearts();
         document.body.classList.add('duo-playing');
-        saveAssignProgress();
+        if (resumeKind === 'assignment') saveAssignProgress(); else saveProgressAny();
         renderDuoQuizView();
       } else {
         startQuiz('word');
@@ -14902,7 +14902,7 @@ function bindEvents() {
          An in-progress quiz is stashed so the student can resume it exactly
          where they left off after the review (Fix 2: word/grammar too). */
       t.disabled = true;
-      if (state.quiz && (state.quiz.kind === 'assignment' || state.quiz.kind === 'word' || state.quiz.kind === 'grammar')) {
+      if (state.quiz && (state.quiz.kind === 'assignment' || state.quiz.kind === 'word' || state.quiz.kind === 'grammar' || state.quiz.kind === 'sentence')) {
         state.pausedQuiz = state.quiz;
         saveProgressAny();
       }
@@ -14927,7 +14927,7 @@ function bindEvents() {
     else if (a === 'resume-paused') {
       const pq = state.pausedQuiz;
       state.pausedQuiz = null;
-      if (pq && (pq.kind === 'assignment' || pq.kind === 'word' || pq.kind === 'grammar' || pq.kind === 'saved' || pq.kind === 'srs')) {
+      if (pq && (pq.kind === 'assignment' || pq.kind === 'word' || pq.kind === 'grammar' || pq.kind === 'saved' || pq.kind === 'srs' || pq.kind === 'sentence')) {
         /* the heart-killing question was answered wrong — let them retry it fresh.
            Hearts earned in review apply: keep the better of saved/current (Fix 2). */
         if (pq.log && pq.log.length > pq.idx) pq.log.pop();
@@ -15122,7 +15122,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611072334';
+var APP_VERSION = '202611072351';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
