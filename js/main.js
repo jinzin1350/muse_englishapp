@@ -12144,7 +12144,7 @@ function duoAssistHTML(q, cur) {
   if (cur.hint) html += '<div class="duo-hint-wrap"><span class="duo-hint">💡 ' + esc(cur.hint) + '</span></div>';
   html += '<div class="duo-slots">' + (cur.placed.length
     ? cur.placed.map(function (bi) {
-      return '<button class="duo-tok" data-action="duo-unpick" data-bi="' + bi + '"' +
+      return '<button class="duo-tok' + (cur.hinted && cur.hinted[bi] ? ' hinted' : '') + '" data-action="duo-unpick" data-bi="' + bi + '"' +
         (q.answered ? ' disabled' : '') + '>' + esc(cur.bank[bi].t) + '</button>';
     }).join('')
     : '<span class="duo-slots-empty">Tap the words below…</span>') + '</div>';
@@ -12156,6 +12156,11 @@ function duoAssistHTML(q, cur) {
   }).join('') + '</div>';
   if (!q.answered) {
     const ready = cur.placed.length === cur.tokens.length;
+    if (q.kind === 'sentence') {
+      const canHint = q.hearts > 0 && cur.placed.length < cur.tokens.length;
+      html += '<button class="duo-hint-btn" data-action="duo-hint"' + (canHint ? '' : ' disabled') + '>' +
+        (q.hearts > 0 ? '\uD83D\uDCA1 Hint <span class="duo-hint-cost">\u22121 \u2764\uFE0F</span>' : '\uD83D\uDCA1 Hint \u2014 no \u2764\uFE0F left') + '</button>';
+    }
     html += '<button class="btn btn-block duo-check" data-action="duo-check"' +
       (ready ? '' : ' disabled') + '>CHECK</button>';
   }
@@ -12387,6 +12392,29 @@ function duoUnpick(bi) {
   if (!q || q.answered) return;
   const cur = q.questions[q.idx];
   cur.placed = cur.placed.filter(function (x) { return x !== bi; });
+  if (cur.hinted) delete cur.hinted[bi];
+  renderDuoQuizView();
+}
+
+/* Sentence Builder hint (Alireza, 2026-11-07): each tap spends 1 heart
+   and places the next correct word for the player. The free Persian
+   meaning line stays as-is (his call). Sentence games only. */
+function duoHint() {
+  const q = state.quiz;
+  if (!q || q.answered || q.kind !== 'sentence') return;
+  const cur = q.questions[q.idx];
+  if (!cur || cur.qtype !== 'assist') return;
+  if (q.hearts <= 0 || cur.placed.length >= cur.tokens.length) return;
+  const need = cur.placed.length;
+  let bi = -1;
+  for (let i = 0; i < cur.bank.length; i++) {
+    if (cur.bank[i].k === need && cur.placed.indexOf(i) === -1) { bi = i; break; }
+  }
+  if (bi === -1) return;
+  duoLoseHeart(q);
+  cur.placed.push(bi);
+  if (!cur.hinted) cur.hinted = {};
+  cur.hinted[bi] = true;
   renderDuoQuizView();
 }
 
@@ -14862,6 +14890,7 @@ function bindEvents() {
     else if (a === 'duo-opt') duoAnswer(parseInt(t.getAttribute('data-idx'), 10));
     else if (a === 'duo-next') duoNext();
     else if (a === 'duo-pick') duoPick(parseInt(t.getAttribute('data-bi'), 10));
+    else if (a === 'duo-hint') duoHint();
     else if (a === 'duo-unpick') duoUnpick(parseInt(t.getAttribute('data-bi'), 10));
     else if (a === 'duo-check') duoCheck();
     else if (a === 'duo-typein-check') duoTypeinCheck();
@@ -15093,7 +15122,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611072319';
+var APP_VERSION = '202611072334';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

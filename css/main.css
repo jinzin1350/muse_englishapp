@@ -4873,3 +4873,9 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
   .wm2-chips { grid-template-columns: repeat(2, 1fr); }
   .wm2-row-sel { max-width: 7.6rem; }
 }
+
+/* Sentence Builder hint button + hinted tokens (2026-11-07) */
+.duo-hint-btn{display:block;width:100%;margin:0 0 .7rem;border:2px dashed #C9A227;background:#FFF7DE;color:#8A6D1B;border-radius:18px;padding:.8rem;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit;}
+.duo-hint-btn:disabled{opacity:.4;cursor:default;}
+.duo-hint-cost{color:#E11D48;font-weight:800;}
+.duo-tok.hinted{background:#E9D5FF !important;box-shadow:0 3px 0 #B794E0 !important;}
