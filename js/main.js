@@ -568,8 +568,12 @@ async function toggleSaveWordBtn(btn) {
    back on later days: first review the day after saving, then doubling
    intervals (1, 2, 4, 8, 16, 32, 60 days). A correct answer doubles the
    interval; a wrong answer restarts at 1 day — the same rules as the word
-   deck. The schedule lives in localStorage keyed by lowercase word; the
-   saved_words rows stay the source of truth for WHAT is bookmarked. */
+   deck. v1 kept the schedule in localStorage keyed by lowercase word.
+   v2 (2026-11-06, his call for the server version + push): the schedule
+   lives on the saved_words rows themselves (srs_interval / srs_due /
+   srs_asked / srs_correct) whenever the row carries one, so it follows
+   the user across devices and the nightly job can push a reminder when
+   words come due. localStorage remains the offline/demo fallback. */
 var SRS_KEY = 'muse_saved_srs_v1';
 function srsGet() {
   try {
@@ -591,6 +595,10 @@ function srsAddDays(ds, n) {
 function srsEntryFor(map, row) {
   const k = String((row && row.word) || '').toLowerCase();
   if (!k) return null;
+  if (row.srs_due) {
+    return { i: row.srs_interval || 1, due: String(row.srs_due).slice(0, 10),
+             asked: row.srs_asked || 0, correct: row.srs_correct || 0, cloud: true };
+  }
   if (!map[k]) {
     const first = row.created_at ? srsAddDays(String(row.created_at).slice(0, 10), 1) : todayStr();
     map[k] = { i: 1, due: first, asked: 0, correct: 0 };
@@ -609,7 +617,7 @@ function srsDueRows(arr) {
     const k = String(row.word).toLowerCase();
     if (seen[k]) return;
     seen[k] = 1;
-    const had = !!map[k];
+    const had = !!map[k] || !!row.srs_due;
     const e = srsEntryFor(map, row);
     if (!had) dirty = true;
     if (e && e.due <= t) out.push(row);
@@ -622,7 +630,7 @@ function srsDueCount(arr) { return srsDueRows(arr).length; }
    'in N days'. Enrolls the word on the fly, like srsDueRows. */
 function srsLabelFor(row) {
   const map = srsGet();
-  const had = !!map[String((row && row.word) || '').toLowerCase()];
+  const had = !!map[String((row && row.word) || '').toLowerCase()] || !!(row && row.srs_due);
   const e = srsEntryFor(map, row);
   if (!had) srsSet(map);
   if (!e) return '';
@@ -637,7 +645,16 @@ function srsGrade(word, correct) {
   const k = String(word || '').toLowerCase();
   if (!k) return;
   const map = srsGet();
-  const e = map[k] || { i: 1, due: todayStr(), asked: 0, correct: 0 };
+  /* Base the grade on the server entry when the word has one — a fresh
+     device's empty local map must never reset a long interval to 1. */
+  let base = null;
+  (state.savedWords || []).forEach(function (r) {
+    if (!base && r && r.srs_due && String(r.word || '').toLowerCase() === k) {
+      base = { i: r.srs_interval || 1, due: String(r.srs_due).slice(0, 10),
+               asked: r.srs_asked || 0, correct: r.srs_correct || 0 };
+    }
+  });
+  const e = map[k] || base || { i: 1, due: todayStr(), asked: 0, correct: 0 };
   e.asked = (e.asked || 0) + 1;
   if (correct) {
     e.correct = (e.correct || 0) + 1;
@@ -648,6 +665,23 @@ function srsGrade(word, correct) {
   e.due = srsAddDays(todayStr(), e.i);
   map[k] = e;
   srsSet(map);
+  srsGradeCloud(k, e);
+}
+/* Write a graded schedule back to the word's saved_words rows
+   (fire-and-forget: the local map above is the offline record, and a
+   pre-migration database simply answers with an error we ignore). The
+   in-memory rows are updated too, so due badges refresh without a refetch. */
+function srsGradeCloud(k, e) {
+  if (!cloudReady()) return;
+  (state.savedWords || []).forEach(function (r) {
+    if (!r || !r.id || String(r.word || '').toLowerCase() !== k) return;
+    r.srs_interval = e.i; r.srs_due = e.due; r.srs_asked = e.asked; r.srs_correct = e.correct;
+    try {
+      sb.from('saved_words').update({
+        srs_interval: e.i, srs_due: e.due, srs_asked: e.asked, srs_correct: e.correct
+      }).eq('id', r.id).eq('user_id', state.user.id).then(function () {}, function () {});
+    } catch (err) {}
+  });
 }
 
 /* ---------------- vocabulary-page bookmarks ----------------
@@ -15039,7 +15073,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611062238';
+var APP_VERSION = '202611070014';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
