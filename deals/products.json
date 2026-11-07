@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "manspot-manscape-trimmer",
+      "name_fa": "تریمر بدن من‌اسپات",
+      "name_en": "MANSPOT Manscape Finishing Hair Trimmer",
+      "price_cad": 28.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "شنبه، ۷ نوامبر ۲۰۲۶",
+      "image": "img/manspot-manscape-trimmer.jpg",
+      "url": "https://www.amazon.ca/dp/B09VGM9KPZ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "تریمر ضدآب با تیغه سرامیکی، ۹۰ دقیقه شارژدهی و چهار شانه؛ کد تخفیف MKYIYUEV"
+    },
+    {
+      "id": "ecoflow-65w-rapid-charger",
+      "name_fa": "شارژر سریع اکوفلو ۶۵ وات",
+      "name_en": "EcoFlow RAPID 65W GaN Charger",
+      "price_cad": 20.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "شنبه، ۷ نوامبر ۲۰۲۶",
+      "image": "img/ecoflow-65w-rapid-charger.jpg",
+      "url": "https://www.amazon.ca/dp/B0DBZ2SCNX?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "شارژر گان ۶۵ وات با سه پورت؛ لپ‌تاپ، تبلت و گوشی را هم‌زمان و سریع شارژ می‌کند"
+    },
+    {
       "id": "nespresso-vertuo-pop-plus-deluxe",
       "name_fa": "قهوه‌ساز نسپرسو ورتوو پاپ پلاس",
       "name_en": "Nespresso Vertuo Pop+ Deluxe Coffee Machine",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "شارژ بی‌سیم ۱۵ وات مگ‌سیف با آهنربای قوی؛ گوشی را در ماشین محکم نگه می‌دارد و هم‌زمان شارژ می‌کند"
-    },
-    {
-      "id": "sony-wh-ch520-headphones",
-      "name_fa": "هدفون سونی دبلیو‌اچ-سی‌اچ۵۲۰",
-      "name_en": "Sony WH-CH520 Wireless Headphones, Black",
-      "price_cad": 48.0,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "پنجشنبه، ۵ نوامبر ۲۰۲۶",
-      "image": "img/sony-wh-ch520-headphones.jpg",
-      "url": "https://www.amazon.ca/dp/B0BS1PRC4L?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "هدفون بی‌سیم روگوشی با بلوتوث، میکروفون داخلی و تا ۵۰ ساعت شاردهی"
-    },
-    {
-      "id": "arlo-essential-2k-2pack",
-      "name_fa": "دوربین امنیتی آرلو اسنشال ۲کی، بسته دوتایی",
-      "name_en": "Arlo Essential 2K Outdoor Camera, 2-Pack",
-      "price_cad": 99.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "پنجشنبه، ۵ نوامبر ۲۰۲۶",
-      "image": "img/arlo-essential-2k-2pack.jpg",
-      "url": "https://www.amazon.ca/dp/B0DNTZ412R?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "بسته دوتایی دوربین بی‌سیم با تصویر ۲کی، دید در شب رنگی و نورافکن"
     }
   ],
-  "updated_fa": "جمعه ۱۵ آبان"
+  "updated_fa": "شنبه ۱۶ آبان"
 }
