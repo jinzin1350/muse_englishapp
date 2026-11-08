@@ -458,6 +458,38 @@ async function saveMistake(m) {
     lsSet('mistakes', arr.slice(0, 500));
   }
 }
+/* Mistake graduation (his design 2026-11-08): a mistake leaves the list
+   only after 3 correct answers in separate sittings, spaced along the
+   forgetting curve — correct #1 -> due tomorrow, #2 -> due in 3 days,
+   #3 -> graduated (removed). A wrong answer resets the streak to 0 and
+   re-dues it tomorrow. Schedule: localStorage muse_mistakes_srs_v1 keyed
+   by mistake id, synced across devices through user_kv. */
+function mistakeSrsGet() { try { return JSON.parse(localStorage.getItem('muse_mistakes_srs_v1') || '{}'); } catch (e) { return {}; } }
+function mistakeSrsSet(map) { try { localStorage.setItem('muse_mistakes_srs_v1', JSON.stringify(map)); } catch (e) {} try { kvSchedulePush('muse_mistakes_srs_v1'); } catch (e) {} }
+function mistakeEntry(id) { return mistakeSrsGet()[id] || { s: 0, due: null }; }
+function mistakeDue(id) { const e = mistakeEntry(id); return !e.due || e.due <= todayStr(); }
+function mistakeGrade(id, correct) {
+  if (!id) return;
+  const map = mistakeSrsGet();
+  const e = map[id] || { s: 0, due: null };
+  if (correct) {
+    e.s = (e.s || 0) + 1;
+    if (e.s >= 3) { delete map[id]; mistakeSrsSet(map); removeMistake(id); return; }
+    e.due = srsAddDays(todayStr(), e.s === 1 ? 1 : 3);
+  } else {
+    e.s = 0;
+    e.due = srsAddDays(todayStr(), 1);
+  }
+  map[id] = e;
+  mistakeSrsSet(map);
+}
+function mistakeDots(id) {
+  const e = mistakeEntry(id);
+  const s = e.s || 0;
+  const dots = [0, 1, 2].map(function (i) { return i < s ? '\u25CF' : '\u25CB'; }).join(' ');
+  const dueTxt = (e.due && e.due > todayStr()) ? ' \u00B7 next review ' + e.due : '';
+  return dots + '  ' + s + ' of 3 correct' + dueTxt;
+}
 async function removeMistake(id) {
   if (cloudReady()) {
     try {
@@ -694,7 +726,7 @@ function srsGradeCloud(k, e) {
    write wins by updated_at. All fire-and-forget — before the user_kv
    migration runs, the calls fail silently and local remains the working
    record, the same pattern as saved-word SRS cloud writes. */
-var KV_SYNC_KEYS = ['muse_wordmap_v1', 'muse_tricky_v1'];
+var KV_SYNC_KEYS = ['muse_wordmap_v1', 'muse_tricky_v1', 'muse_mistakes_srs_v1'];
 function kvMetaAll() {
   try { return JSON.parse(localStorage.getItem('muse_kv_meta') || '{}') || {}; }
   catch (e) { return {}; }
@@ -1002,7 +1034,7 @@ async function paintHomeCards() {
   try { mArr = await getMistakes(); } catch (e) { mArr = []; }
   if (!document.getElementById('home-cards-wrap')) return;
   wrap.innerHTML =
-    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', mArr.length ? 'Get one right and it leaves the list' : 'Nothing to review — nice work! 🎉', mArr.length, '') +
+    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', mArr.length ? '3 spaced correct answers clear it' : 'Nothing to review — nice work! 🎉', mArr.length, '') +
     reviewCatCard('#/tricky', 'tricky', REV_ICONS.tricky, 'Tricky Bits', 'The easy-to-forget bits — phrasal verbs, articles, prepositions & pairs', '…', 'home-tricky-count');
   loadTrickyIndex().then(function (items) {
     const tc = document.getElementById('home-tricky-count');
@@ -12145,6 +12177,9 @@ async function startQuiz(kind, dateStr) {
        options: [] — the question renders with zero choices and the session
        soft-locks on a blank screen, 2026-11-01). */
     arr = arr.filter(function (x) { return Array.isArray(x.options) && x.options.length; });
+    /* Spaced graduation: mistakes still resting after a correct answer sit
+       out today's session and come back on their due date. */
+    arr = arr.filter(function (x) { return mistakeDue(x.id); });
     questions = arr.map(function (mk) {
       return { question: mk.question, options: mk.options, answer: mk.answer, kind: mk.kind || 'word', mistakeId: mk.id };
     });
@@ -12274,7 +12309,9 @@ function answerQuiz(idx) {
   const cur = q.questions[q.idx];
   if (idx === cur.answer) {
     q.correct++;
-    if (q.kind === 'mistakes' && cur.mistakeId) removeMistake(cur.mistakeId);
+    if (q.kind === 'mistakes' && cur.mistakeId) mistakeGrade(cur.mistakeId, true);
+  } else if (q.kind === 'mistakes') {
+    if (cur.mistakeId) mistakeGrade(cur.mistakeId, false);
   } else if (q.kind !== 'mistakes') {
     saveMistake({
       date: q.date, level: q.level, kind: cur.kind,
@@ -12665,9 +12702,11 @@ async function duoAnswer(idx) {
   if (cur.qtype === 'listen') closePlayer();
   if (q.wasCorrect) {
     q.correct++;
-    /* Fix 4: answering a review question correctly clears that mistake. */
-    if (q.kind === 'mistakes' && cur.mistakeId) removeMistake(cur.mistakeId);
-  } else if (q.kind !== 'mistakes') {
+    /* Spaced graduation: 3 spaced correct answers clear a mistake. */
+    if (q.kind === 'mistakes' && cur.mistakeId) mistakeGrade(cur.mistakeId, true);
+  } else if (q.kind === 'mistakes') {
+    if (cur.mistakeId) mistakeGrade(cur.mistakeId, false);
+  } else {
     /* every wrong answer becomes reviewable; chained so the review button never races it.
        (A mistakes-review question is already a mistake: never re-save it, and a
        wrong review answer never costs a heart — Fix 4.) */
@@ -14012,20 +14051,27 @@ function paintMistakes(v, arr, arg) {
   }
   if (arg === 'mistakes') {
     let mhtml = '<a class="rev-back" href="#/review">‹ Review</a><h1>Mistakes to review</h1>' +
-      '<p class="muted">Words you missed, ready to practice again. Get one right and it leaves the list.</p>';
+      '<p class="muted">Words you missed, ready to practice again. Answer each one right 3 times, on different days, and it leaves the list.</p>';
     if (!arr.length) {
       mhtml += '<div class="empty">Nothing to review — nice work! 🎉</div>';
     } else {
-      mhtml += '<button class="review-banner" data-action="practice-again" aria-label="Practice your mistakes">' +
-        '<span class="review-banner-count">' + arr.length + ' to review</span>' +
-      '</button>';
+      const dueN = arr.filter(function (m) { return mistakeDue(m.id); }).length;
+      if (dueN) {
+        mhtml += '<button class="review-banner" data-action="practice-again" aria-label="Practice your mistakes">' +
+          '<span class="review-banner-count">' + dueN + ' to review</span>' +
+        '</button>';
+      }
+      if (arr.length - dueN > 0) {
+        mhtml += '<p class="muted">' + (arr.length - dueN) + ' resting \u2014 they come back after a break, so the fix sticks.</p>';
+      }
       mhtml += arr.map(function (m) {
         return '<div class="card plain">' +
           '<div class="mistake-q">' + esc(m.question) + '</div>' +
           '<div class="mistake-a">✅ ' + esc(m.options[m.answer]) + '</div>' +
           (typeof m.picked === 'number' && m.picked !== m.answer
             ? '<div class="mistake-was">You chose: ' + esc(m.options[m.picked]) + '</div>' : '') +
-          '<div class="muted" style="margin-top:0.4rem;font-size:0.78rem">' + esc(m.date || '') + ' · ' + esc(m.kind || 'word') + ' quiz</div>' +
+          '<div class="muted" style="margin-top:0.4rem;font-size:0.78rem">' + esc(m.date || '') + ' \u00B7 ' + esc(m.kind || 'word') + ' quiz</div>' +
+          '<div class="mistake-srs">' + mistakeDots(m.id) + '</div>' +
         '</div>';
       }).join('');
     }
@@ -14047,7 +14093,7 @@ function paintMistakes(v, arr, arg) {
     reviewCatCard('#/review/words', 'words', REV_ICONS.words, 'Saved words', 'Hard words you bookmarked — practice quiz & sentence game', '…', 'rev-words-count') +
     reviewCatCard('#/tricky', 'tricky', REV_ICONS.tricky, 'Tricky Bits', 'The easy-to-forget bits — phrasal verbs, articles, prepositions & pairs', '…', 'rev-tricky-count') +
     reviewCatCard('#/review/shadowing', 'shadowing', REV_ICONS.shadowing, 'Saved shadowing', 'Sentences you saved to practice aloud', spCount, '') +
-    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', arr.length ? 'Get one right and it leaves the list' : 'Nothing to review — nice work! 🎉', arr.length, '') +
+    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', arr.length ? '3 spaced correct answers clear it' : 'Nothing to review — nice work! 🎉', arr.length, '') +
     reviewCatCard('#/review/history', 'history', REV_ICONS.history, 'Quiz history', 'Every quiz you have taken — tap one for details', '…', 'rev-att-count');
   loadReviewHubCounts();
 }
@@ -15475,7 +15521,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611081515';
+var APP_VERSION = '202611081628';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
