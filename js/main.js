@@ -12180,8 +12180,26 @@ async function startQuiz(kind, dateStr) {
     /* Spaced graduation: mistakes still resting after a correct answer sit
        out today's session and come back on their due date. */
     arr = arr.filter(function (x) { return mistakeDue(x.id); });
+    /* Tricky mistakes keep only their text in storage, so the footer had no
+       lesson to link to (his report 2026-11-08). Recover it by matching the
+       prompt + option set against the tricky index. */
+    let trickyByKey = null;
+    if (arr.some(function (x) { return x.kind === 'tricky'; })) {
+      try {
+        const tItems = await loadTrickyIndex();
+        trickyByKey = {};
+        tItems.forEach(function (it) {
+          if (it.prompt && Array.isArray(it.options)) trickyByKey[it.prompt + '|' + it.options.slice().sort().join('|')] = it;
+        });
+      } catch (e) {}
+    }
     questions = arr.map(function (mk) {
-      return { question: mk.question, options: mk.options, answer: mk.answer, kind: mk.kind || 'word', mistakeId: mk.id };
+      const q = { question: mk.question, options: mk.options, answer: mk.answer, kind: mk.kind || 'word', mistakeId: mk.id };
+      if (trickyByKey && mk.kind === 'tricky' && Array.isArray(mk.options)) {
+        const it = trickyByKey[mk.question + '|' + mk.options.slice().sort().join('|')];
+        if (it) q.lesson = it.slug ? '#/grammar/' + it.slug : (it.cat === 'phrasal' ? '#/vocab/phrasal-verbs' : null);
+      }
+      return q;
     });
   } else if (kind === 'saved') {
     if (!m) m = { date: todayStr(), level: (state.user && state.user.level) || '', theme: '' };
@@ -15521,7 +15539,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611081628';
+var APP_VERSION = '202611082019';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
