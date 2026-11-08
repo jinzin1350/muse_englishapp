@@ -486,6 +486,20 @@ function mistakeGrade(id, correct) {
 /* The card number counts what can be answered TODAY (due), not every open
    mistake — resting ones would promise a session that is not there. */
 function mistakesDueCount(arr) { return arr.filter(function (m) { return mistakeDue(m.id); }).length; }
+/* Home mistakes tap with nothing due: say so on the spot instead of
+   opening an empty page (his order 2026-11-08). */
+function showMistakesNotice(total) {
+  if (document.getElementById('mistakes-notice')) return;
+  const d = document.createElement('div');
+  d.className = 'duo-modal-wrap';
+  d.id = 'mistakes-notice';
+  d.innerHTML = '<div class="duo-modal"><h3>No mistake review for now \u2713</h3>' +
+    '<p>' + (total ? 'Your ' + total + ' mistake' + (total === 1 ? ' is' : 's are') + ' resting \u2014 they come back tomorrow, so the fix sticks.' : 'Nothing to review \u2014 nice work! \uD83C\uDF89') + '</p>' +
+    '<button class="duo-continue btn-block" id="mistakes-notice-ok">Got it</button></div>';
+  $('#view').appendChild(d);
+  document.getElementById('mistakes-notice-ok').onclick = function () { d.remove(); };
+  d.addEventListener('click', function (e) { if (e.target === d) d.remove(); });
+}
 function mistakesCardDesc(arr) {
   if (mistakesDueCount(arr)) return '3 spaced correct answers clear it';
   if (arr.length) return arr.length + ' resting \u2014 back tomorrow';
@@ -1042,7 +1056,7 @@ async function paintHomeCards() {
   try { mArr = await getMistakes(); } catch (e) { mArr = []; }
   if (!document.getElementById('home-cards-wrap')) return;
   wrap.innerHTML =
-    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', mistakesCardDesc(mArr), mistakesDueCount(mArr), '') +
+    reviewActionCard('home-mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', mistakesCardDesc(mArr), mistakesDueCount(mArr)) +
     reviewCatCard('#/tricky', 'tricky', REV_ICONS.tricky, 'Tricky Bits', 'The easy-to-forget bits — phrasal verbs, articles, prepositions & pairs', '…', 'home-tricky-count');
   loadTrickyIndex().then(function (items) {
     const tc = document.getElementById('home-tricky-count');
@@ -14055,6 +14069,13 @@ var REV_ICONS = {
   mistakes: '<svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><rect x="1.6" y="1.6" width="20.8" height="20.8" rx="6" fill="#2F7DE1"/><path d="M7.6 12a4.4 4.4 0 0 1 7.5-3.1M16.4 12a4.4 4.4 0 0 1-7.5 3.1" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><path d="M15.5 5.7v3.4h-3.4M8.5 18.3v-3.4h3.4" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>',
   tricky: '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#7C3AED"/><path d="M13 4.5 6.8 13h4L9.8 19.5 16.5 10.6h-4.2z" fill="#fff"/></svg>'
 };
+function reviewActionCard(action, mod, ico, title, desc, count) {
+  return '<div class="rev-cat rev-cat-' + mod + '" data-action="' + action + '" role="button" style="cursor:pointer">' +
+    '<span class="rev-cat-ico">' + ico + '</span>' +
+    '<span class="rev-cat-main"><b>' + title + '</b><span class="rev-cat-desc">' + desc + '</span></span>' +
+    '<span class="rev-cat-count">' + count + '</span>' +
+    '<span class="rev-cat-arrow">\u203A</span></div>';
+}
 function reviewCatCard(href, mod, ico, title, desc, count, countId) {
   return '<a class="rev-cat rev-cat-' + mod + '" href="' + href + '">' +
     '<span class="rev-cat-ico">' + ico + '</span>' +
@@ -15363,6 +15384,12 @@ function bindEvents() {
       } else { go('home'); }
     }
     else if (a === 'att-toggle') { toggleAttemptDetail(parseInt(t.getAttribute('data-i'), 10) || 0); }
+    else if (a === 'home-mistakes') {
+      getMistakes().then(function (arr) {
+        if (mistakesDueCount(arr)) startQuiz('mistakes');
+        else showMistakesNotice(arr.length);
+      });
+    }
     else if (a === 'practice-again') {
       getMistakes().then(function (arr) {
         if (arr.length) startQuiz('mistakes');
@@ -15547,7 +15574,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611082131';
+var APP_VERSION = '202611082138';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
