@@ -993,6 +993,26 @@ async function paintTrickyDue() {
     '<button class="g-b-cta" data-action="tricky-all">Review →</button></div>';
 }
 
+/* Home cards for Mistakes + Tricky Bits (his order 2026-11-07: the two
+   Review-hub cards also live on the home page, same look, live counts). */
+async function paintHomeCards() {
+  const wrap = document.getElementById('home-cards-wrap');
+  if (!wrap) return;
+  let mArr = [];
+  try { mArr = await getMistakes(); } catch (e) { mArr = []; }
+  if (!document.getElementById('home-cards-wrap')) return;
+  wrap.innerHTML =
+    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', mArr.length ? 'Get one right and it leaves the list' : 'Nothing to review — nice work! 🎉', mArr.length, '') +
+    reviewCatCard('#/tricky', 'tricky', REV_ICONS.tricky, 'Tricky Bits', 'The easy-to-forget bits — phrasal verbs, articles, prepositions & pairs', '…', 'home-tricky-count');
+  loadTrickyIndex().then(function (items) {
+    const tc = document.getElementById('home-tricky-count');
+    if (tc) {
+      const dN = trickyDueList(items, 'all').length;
+      tc.innerHTML = items.length + (dN ? ' <span class="rev-due-pill">' + dN + ' due</span>' : '');
+    }
+  }).catch(function () {});
+}
+
 /* ---------------- vocabulary-page bookmarks ----------------
    Same saved_words store as lesson bookmarks, with lesson_date '' (null in
    the cloud) so vocab saves coexist with per-lesson saves of the same word. */
@@ -10432,7 +10452,7 @@ function paintHome(v, mistakes, attempts) {
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
 
   // 0b2 — Grammar guides banner (smart: explore / continue / completed)
-  html += '<div id="home-review-wrap"></div><div id="home-tricky-wrap"></div>';
+  html += '<div id="home-review-wrap"></div><div id="home-tricky-wrap"></div><div id="home-cards-wrap"></div>';
   html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-ielts-wrap"></div>';
   html += '<div id="home-vocab-wrap"></div>';
@@ -10512,7 +10532,7 @@ function paintHome(v, mistakes, attempts) {
   }
 
   v.innerHTML = html;
-  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue(); kvPullAll();
+  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue(); paintHomeCards(); kvPullAll();
   paintVocabBanner();
   paintWordsBanner();
   paintSentenceBanner();
@@ -10876,7 +10896,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   const today = lessons[0] || null;
   let html = '<div class="dhome">';
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
-  html += '<div id="home-review-wrap"></div><div id="home-tricky-wrap"></div>';
+  html += '<div id="home-review-wrap"></div><div id="home-tricky-wrap"></div><div id="home-cards-wrap"></div>';
   html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-ielts-wrap"></div>';
   html += '<div id="home-vocab-wrap"></div>';
@@ -10900,7 +10920,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   v.innerHTML = html;
   wireDhPlayer();
   refreshDhProgress();
-  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue(); kvPullAll();
+  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue(); paintHomeCards(); kvPullAll();
   paintVocabBanner();
   paintWordsBanner();
   paintSentenceBanner();
@@ -15453,7 +15473,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611080124';
+var APP_VERSION = '202611080131';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
