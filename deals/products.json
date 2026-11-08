@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "tmy-native-1080p-projector-80in-screen",
+      "name_fa": "پروژکتور تی‌ام‌وای ۱۰۸۰پی",
+      "name_en": "TMY Native 1080P Projector with WiFi and Bluetooth, 80in Screen",
+      "price_cad": 59.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "یکشنبه، ۸ نوامبر ۲۰۲۶",
+      "image": "img/tmy-native-1080p-projector-80in-screen.jpg",
+      "url": "https://www.amazon.ca/dp/B0DMW2G124?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "سینمای خانگی با صفحه ۸۰ اینچی، وای‌فای و بلوتوث؛ کد تخفیف: HJTOSV5R"
+    },
+    {
+      "id": "honeywell-hul525wc-mini-mist-humidifier",
+      "name_fa": "رطوبت‌ساز مینی میست هانیول",
+      "name_en": "Honeywell HUL525WC Mini Mist Ultrasonic Cool Humidifier",
+      "price_cad": 39.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "یکشنبه، ۸ نوامبر ۲۰۲۶",
+      "image": "img/honeywell-hul525wc-mini-mist-humidifier.jpg",
+      "url": "https://www.amazon.ca/dp/B097CLGZNL?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "رطوبت‌ساز اولتراسونیک بی‌صدا با مخزن ۱٫۹ لیتری؛ هوای خشک زمستان خانه را مرطوب می‌کند"
+    },
+    {
       "id": "philips-led-60w-a19-4pack-463380",
       "name_fa": "لامپ ال‌ای‌دی فیلیپس ۶۰ وات، بسته ۴ عددی",
       "name_en": "Philips LED 60W A19 Non-Dimmable Light Bulb 2700K, 4-Pack (463380)",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "سنباده مداری براش‌لس برای رنگ و نوسازی مبلمان خونه؛ فقط بدنه، بدون باتری."
-    },
-    {
-      "id": "arlo-chime-2-doorbell-chime",
-      "name_fa": "زنگ درب آرلو چایم ۲",
-      "name_en": "Arlo Chime 2 Doorbell Chime and Siren",
-      "price_cad": 39.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "شنبه، ۷ نوامبر ۲۰۲۶",
-      "image": "img/arlo-chime-2-doorbell-chime.jpg",
-      "url": "https://www.amazon.ca/dp/B0DNV13HDB?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "زنگ درب هوشمند با هشدار زنگ و حرکت دوربین و آژیر بالای ۸۰ دسی‌بل"
-    },
-    {
-      "id": "lego-city-express-passenger-train-60337",
-      "name_fa": "قطار مسافربری لگو سیتی",
-      "name_en": "LEGO City Express Passenger Train 60337",
-      "price_cad": 239.0,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "شنبه، ۷ نوامبر ۲۰۲۶",
-      "image": "img/lego-city-express-passenger-train-60337.jpg",
-      "url": "https://www.amazon.ca/dp/B09XWPF29F?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "قطار مسافربری با کنترل از راه دور، چراغ‌های جلو و ۶ مینی‌فیگور"
     }
   ],
-  "updated_fa": "شنبه ۱۶ آبان"
+  "updated_fa": "یکشنبه ۱۷ آبان"
 }
