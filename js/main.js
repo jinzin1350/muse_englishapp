@@ -12335,7 +12335,7 @@ function finishQuiz() {
     awardPoints('assignment_quiz', 10, q.date || todayStr());
     saveAssignmentResult();
   } else if (q.kind === 'tricky') {
-    awardPoints('tricky_drill', 10, q.date || todayStr());
+    /* XP is per answered question (5 XP each, awarded in duoAnswer). */
   }
   /* Sentence game completion bonus (Alireza, 2026-10-25): +20 once per
      lesson — 'saved' for the Review game, 'cat:<slug>' per bank topic. */
@@ -12346,7 +12346,7 @@ function finishQuiz() {
   }
   state.quiz = null;
   const praise = pct >= 85 ? 'Excellent work! ✨' : pct >= 60 ? 'Good — keep practicing! 💪' : 'Keep going — you\'ve got this! 📚';
-  const xpGain = q.kind === 'word' ? 10 + q.correct : (q.kind === 'sentence' ? (q.sbXp || 0) : 10);
+  const xpGain = q.kind === 'word' ? 10 + q.correct : (q.kind === 'sentence' ? (q.sbXp || 0) : (q.kind === 'tricky' ? 5 * (q.trickyAnswered || 0) : 10));
   /* resuming a quiz paused for a hearts review (Fix 2: word/grammar too) */
   const resumeA = (q.kind === 'mistakes' && state.pausedQuiz && state.pausedQuiz.kind !== 'mistakes') ? state.pausedQuiz : null;
   const resumeLabel = resumeA
@@ -12594,7 +12594,7 @@ function duoTypeinCheck() {
   const correct = (cur.accept || []).some(function (a) { return duoNormalize(a) === norm; });
   q.wasCorrect = correct;
   q.picked = val; /* store typed text */
-  if (cur.kind === 'tricky' && cur.tid) { try { trickyGrade(cur.tid, q.wasCorrect); } catch (e) {} }
+  if (cur.kind === 'tricky' && cur.tid) { try { trickyGrade(cur.tid, q.wasCorrect); } catch (e) {} } q.trickyAnswered = (q.trickyAnswered || 0) + 1; try { awardPoints('tricky_q', 5, 'tq-' + cur.tid + '-' + Date.now(), true); } catch (e) {}
   if (q.log) {
     const entry = { picked: val, correct: correct };
     if (cur.v2) {
@@ -12637,7 +12637,7 @@ async function duoAnswer(idx) {
   }
   /* Saved-word SRS: every bookmark-quiz answer moves the word's schedule. */
   if (cur.kind === 'saved' && cur.word) { try { srsGrade(cur.word, q.wasCorrect); } catch (e) {} }
-  if (cur.kind === 'tricky' && cur.tid) { try { trickyGrade(cur.tid, q.wasCorrect); } catch (e) {} }
+  if (cur.kind === 'tricky' && cur.tid) { try { trickyGrade(cur.tid, q.wasCorrect); } catch (e) {} } q.trickyAnswered = (q.trickyAnswered || 0) + 1; try { awardPoints('tricky_q', 5, 'tq-' + cur.tid + '-' + Date.now(), true); } catch (e) {}
   /* listening: answering dismisses the mini-player bar */
   if (cur.qtype === 'listen') closePlayer();
   if (q.wasCorrect) {
@@ -15452,7 +15452,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611080106';
+var APP_VERSION = '202611080113';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
