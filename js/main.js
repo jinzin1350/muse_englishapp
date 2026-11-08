@@ -483,6 +483,14 @@ function mistakeGrade(id, correct) {
   map[id] = e;
   mistakeSrsSet(map);
 }
+/* The card number counts what can be answered TODAY (due), not every open
+   mistake — resting ones would promise a session that is not there. */
+function mistakesDueCount(arr) { return arr.filter(function (m) { return mistakeDue(m.id); }).length; }
+function mistakesCardDesc(arr) {
+  if (mistakesDueCount(arr)) return '3 spaced correct answers clear it';
+  if (arr.length) return arr.length + ' resting \u2014 back tomorrow';
+  return 'Nothing to review \u2014 nice work! \uD83C\uDF89';
+}
 function mistakeDots(id) {
   const e = mistakeEntry(id);
   const s = e.s || 0;
@@ -1034,7 +1042,7 @@ async function paintHomeCards() {
   try { mArr = await getMistakes(); } catch (e) { mArr = []; }
   if (!document.getElementById('home-cards-wrap')) return;
   wrap.innerHTML =
-    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', mArr.length ? '3 spaced correct answers clear it' : 'Nothing to review — nice work! 🎉', mArr.length, '') +
+    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', mistakesCardDesc(mArr), mistakesDueCount(mArr), '') +
     reviewCatCard('#/tricky', 'tricky', REV_ICONS.tricky, 'Tricky Bits', 'The easy-to-forget bits — phrasal verbs, articles, prepositions & pairs', '…', 'home-tricky-count');
   loadTrickyIndex().then(function (items) {
     const tc = document.getElementById('home-tricky-count');
@@ -14111,7 +14119,7 @@ function paintMistakes(v, arr, arg) {
     reviewCatCard('#/review/words', 'words', REV_ICONS.words, 'Saved words', 'Hard words you bookmarked — practice quiz & sentence game', '…', 'rev-words-count') +
     reviewCatCard('#/tricky', 'tricky', REV_ICONS.tricky, 'Tricky Bits', 'The easy-to-forget bits — phrasal verbs, articles, prepositions & pairs', '…', 'rev-tricky-count') +
     reviewCatCard('#/review/shadowing', 'shadowing', REV_ICONS.shadowing, 'Saved shadowing', 'Sentences you saved to practice aloud', spCount, '') +
-    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', arr.length ? '3 spaced correct answers clear it' : 'Nothing to review — nice work! 🎉', arr.length, '') +
+    reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', mistakesCardDesc(arr), mistakesDueCount(arr), '') +
     reviewCatCard('#/review/history', 'history', REV_ICONS.history, 'Quiz history', 'Every quiz you have taken — tap one for details', '…', 'rev-att-count');
   loadReviewHubCounts();
 }
@@ -15539,7 +15547,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611082019';
+var APP_VERSION = '202611082131';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
