@@ -1,0 +1,398 @@
+{
+ "date": "2026-11-08",
+ "theme": "review day",
+ "level": "c2",
+ "cefr": "C2",
+ "review": true,
+ "review_of": [
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "defuse",
+   "pos": "verb",
+   "meaning": "To make a dangerous or difficult situation calmer.",
+   "example": "He tried to defuse the tension with a joke.",
+   "pronunciation": "dee-FYOOZ",
+   "persian": "خنثی کردن، آرام کردن",
+   "photo": "media/c2/2026-11-05/photos/defuse.jpg",
+   "word_audio": "media/c2/2026-11-05/word-audio/defuse.mp3"
+  },
+  {
+   "word": "breadline",
+   "pos": "noun",
+   "meaning": "The state of being extremely poor.",
+   "example": "Many families are living on the breadline due to unemployment.",
+   "pronunciation": "BRED-line",
+   "persian": "خط فقر، فقر شدید",
+   "photo": "media/c2/2026-11-06/photos/breadline.jpg",
+   "word_audio": "media/c2/2026-11-06/word-audio/breadline.mp3"
+  },
+  {
+   "word": "bird sanctuary",
+   "pos": "noun phrase",
+   "meaning": "A protected area for birds to live safely.",
+   "example": "We visited a bird sanctuary to observe rare species.",
+   "pronunciation": "BURD SANK-choo-air-ee",
+   "persian": "پناهگاه پرندگان",
+   "photo": "media/c2/2026-11-06/photos/bird-sanctuary.jpg",
+   "word_audio": "media/c2/2026-11-06/word-audio/bird-sanctuary.mp3"
+  },
+  {
+   "word": "doomsday scenario",
+   "pos": "noun",
+   "meaning": "A prediction of a catastrophic future event or disaster.",
+   "example": "Experts warned of a doomsday scenario if climate change continues.",
+   "pronunciation": "DOOMZ-day suh-NAIR-ee-oh",
+   "persian": "سناریوی فاجعه‌بار، آخرالزمانی",
+   "photo": "media/c2/2026-11-07/photos/doomsday scenario.jpg",
+   "word_audio": "media/c2/2026-11-07/word-audio/doomsday scenario.mp3"
+  },
+  {
+   "word": "biomass",
+   "pos": "noun",
+   "meaning": "Organic matter used as fuel or for energy production.",
+   "example": "Burning biomass can be a renewable energy source.",
+   "pronunciation": "BY-oh-mass",
+   "persian": "زیست‌توده",
+   "photo": "media/c2/2026-11-06/photos/biomass.jpg",
+   "word_audio": "media/c2/2026-11-06/word-audio/biomass.mp3"
+  },
+  {
+   "word": "crave",
+   "pos": "verb",
+   "meaning": "To have a very strong desire for something.",
+   "example": "After a long day, I always crave a hot cup of tea.",
+   "pronunciation": "KRAYV",
+   "persian": "هوس کردن، اشتیاق داشتن",
+   "photo": "media/c2/2026-11-05/photos/crave.jpg",
+   "word_audio": "media/c2/2026-11-05/word-audio/crave.mp3"
+  },
+  {
+   "word": "destiny",
+   "pos": "noun",
+   "meaning": "The events that will happen to a person or thing.",
+   "example": "She believes it was her destiny to become an artist.",
+   "pronunciation": "DES-tuh-nee",
+   "persian": "سرنوشت، تقدیر",
+   "photo": "media/c2/2026-11-07/photos/destiny.jpg",
+   "word_audio": "media/c2/2026-11-07/word-audio/destiny.mp3"
+  },
+  {
+   "word": "digital technology",
+   "pos": "noun phrase",
+   "meaning": "Electronic tools and systems that process data digitally.",
+   "example": "Digital technology has transformed how we communicate globally.",
+   "pronunciation": "DIJ-uh-tul tek-NOL-uh-jee",
+   "persian": "فناوری دیجیتال",
+   "photo": "media/c2/2026-11-07/photos/digital technology.jpg",
+   "word_audio": "media/c2/2026-11-07/word-audio/digital technology.mp3"
+  },
+  {
+   "word": "conscience",
+   "pos": "noun",
+   "meaning": "An inner feeling guiding right or wrong behavior.",
+   "example": "His conscience bothered him after he lied.",
+   "pronunciation": "KON-shuns",
+   "persian": "وجدان",
+   "photo": "media/c2/2026-11-05/photos/conscience.jpg",
+   "word_audio": "media/c2/2026-11-05/word-audio/conscience.mp3"
+  },
+  {
+   "word": "drastic measures",
+   "pos": "phrase",
+   "meaning": "Extreme and severe actions taken to solve a problem.",
+   "example": "Drastic measures are needed to combat climate change.",
+   "pronunciation": "DRAS-tik MEZH-erz",
+   "persian": "اقدامات شدید، تدابیر جدی",
+   "photo": "media/c2/2026-11-07/photos/drastic measures.jpg",
+   "word_audio": "media/c2/2026-11-07/word-audio/drastic measures.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c2/2026-11-08/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day — Three Days, Twenty-One Words",
+  "audio": "media/c2/2026-11-08/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c2/2026-11-08/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Scientist and the Sanctuary",
+  "audio": "media/c2/2026-11-08/shadowing.mp3",
+  "transcript": "media/c2/2026-11-08/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c2/2026-11-08/shadowing-sentences/001.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/002.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/003.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/004.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/005.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/006.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/007.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/008.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/009.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/010.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/011.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/012.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/013.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/014.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/015.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/016.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/017.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/018.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/019.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/020.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/021.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/022.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/023.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/024.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/025.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/026.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/027.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/028.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/029.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/030.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/031.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/032.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/033.mp3",
+   "media/c2/2026-11-08/shadowing-sentences/034.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'defuse' mean?",
+   "options": [
+    "The state of being extremely poor.",
+    "Organic matter used as fuel or for energy production.",
+    "To make a dangerous or difficult situation calmer.",
+    "Extreme and severe actions taken to solve a problem."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'breadline' mean?",
+   "options": [
+    "A protected area for birds to live safely.",
+    "Electronic tools and systems that process data digitally.",
+    "The state of being extremely poor.",
+    "A prediction of a catastrophic future event or disaster."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'bird sanctuary' mean?",
+   "options": [
+    "Organic matter used as fuel or for energy production.",
+    "Electronic tools and systems that process data digitally.",
+    "A protected area for birds to live safely.",
+    "The state of being extremely poor."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'doomsday scenario' mean?",
+   "options": [
+    "The state of being extremely poor.",
+    "A prediction of a catastrophic future event or disaster.",
+    "Organic matter used as fuel or for energy production.",
+    "Extreme and severe actions taken to solve a problem."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'biomass' mean?",
+   "options": [
+    "The events that will happen to a person or thing.",
+    "A prediction of a catastrophic future event or disaster.",
+    "To make a dangerous or difficult situation calmer.",
+    "Organic matter used as fuel or for energy production."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'crave' mean?",
+   "options": [
+    "Extreme and severe actions taken to solve a problem.",
+    "Electronic tools and systems that process data digitally.",
+    "To have a very strong desire for something.",
+    "A protected area for birds to live safely."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'destiny' mean?",
+   "options": [
+    "The state of being extremely poor.",
+    "The events that will happen to a person or thing.",
+    "An inner feeling guiding right or wrong behavior.",
+    "Extreme and severe actions taken to solve a problem."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'digital technology' mean?",
+   "options": [
+    "A protected area for birds to live safely.",
+    "A prediction of a catastrophic future event or disaster.",
+    "Electronic tools and systems that process data digitally.",
+    "Organic matter used as fuel or for energy production."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'conscience' mean?",
+   "options": [
+    "A protected area for birds to live safely.",
+    "To have a very strong desire for something.",
+    "Organic matter used as fuel or for energy production.",
+    "An inner feeling guiding right or wrong behavior."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'drastic measures' mean?",
+   "options": [
+    "An inner feeling guiding right or wrong behavior.",
+    "The events that will happen to a person or thing.",
+    "Electronic tools and systems that process data digitally.",
+    "Extreme and severe actions taken to solve a problem."
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Hedging and Distancing (it would appear that...)",
+  "explanation": "**Hedging** means making a statement **less direct or less certain**, so you do not claim more than you can prove. Say *The data **suggest** that social media **may contribute** to anxiety*, not *Social media causes anxiety*.\n\n**Distancing** means showing that a claim comes from someone else, not from you. *The CEO has **allegedly** resigned* keeps you at a safe distance from the claim.\n\nUse **seem / appear (+ to)** and **it would seem / appear that** to soften a claim. *There **seems to be** a problem* is gentler than *There is a problem*.\n\nModals soften a claim too: **may / might / could**, and the verb **tend to** for habits. *This **may be** due to a lack of funding*, and *People **tend to** spend more in December*.\n\nCautious verbs and adverbs help as well. The data **suggest / indicate** that something is true, and words like **arguably**, **possibly**, **apparently** and **somewhat** soften the message. Phrases such as **to some extent** and **it could be argued that** do the same job.\n\nFor distancing, use **apparently**, **allegedly / reportedly**, **according to**, and passive reporting such as **It is believed that** and **He is said to be**. Note that **would** makes a hedge even softer, as in *This **would seem** to be the best option*.\n\nHedging matters most when the stakes are high. Experts warn of a **doomsday scenario** if climate change continues, but careful writers say the data **suggest** that **drastic measures may** be needed.\n\nAvoid common mistakes. After **would**, use the base form, so *It would **appear** that he left*. And do not use **seem**, **appear** or **tend to** in the continuous form.",
+  "examples": [
+   "* **It would appear that** the problem has been solved.* (very cautious)",
+   "*The results **appear to** suggest a link between diet and mood.* (appear to)",
+   "*There **seems to be** a misunderstanding.* (seem to)",
+   "*People **tend to** underestimate how long tasks take.* (tend to)",
+   "*This **may be** due to a lack of funding.* (modal)",
+   "*The CEO has **allegedly** resigned.* (distancing)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with hedging (it would appear that): The new policy has solved the problem.",
+    "a": "It would appear that the new policy has solved the problem."
+   },
+   {
+    "q": "Rewrite as a hedged claim using the data suggest: Drastic measures are needed to stop the doomsday scenario.",
+    "a": "The data suggest that drastic measures may be needed to stop the doomsday scenario."
+   },
+   {
+    "q": "Rewrite with distancing (allegedly): The manager stole the money.",
+    "a": "The manager has allegedly stolen the money."
+   },
+   {
+    "q": "Rewrite with arguably: The bird sanctuary is the best project in the village.",
+    "a": "Arguably, the bird sanctuary is the best project in the village."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "It would ___ that the problem has been solved.",
+    "options": [
+     "appearing",
+     "seems",
+     "appear",
+     "to appear"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "People ___ to spend more money in December.",
+    "options": [
+     "are tending",
+     "tend",
+     "tends",
+     "tending"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "There is ___ evidence that the drug may help.",
+    "options": [
+     "any",
+     "some",
+     "a",
+     "much of"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "The CEO has ___ resigned, although the company hasn't confirmed it.",
+    "options": [
+     "allegation",
+     "allege",
+     "alleged",
+     "allegedly"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "This may ___ due to a lack of funding.",
+    "options": [
+     "being",
+     "to be",
+     "be",
+     "been"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "To some ___, the critics are right.",
+    "options": [
+     "extend",
+     "way",
+     "degree of",
+     "extent"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Choose the most cautious (hedged) statement.",
+    "options": [
+     "This proves that social media causes anxiety.",
+     "Social media causes anxiety.",
+     "The data suggest that social media may contribute to anxiety.",
+     "Everyone knows social media causes anxiety."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "___, the shop is closing next month. I heard it from a friend.",
+    "options": [
+     "Apparent",
+     "Apparently",
+     "Appearing",
+     "Appeared"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "It is ___ that prices will fall next year, but not certain.",
+    "options": [
+     "possibly",
+     "possible",
+     "possibility",
+     "possibilities"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "This would ___ to be the best option.",
+    "options": [
+     "seem",
+     "seems",
+     "seeming",
+     "seemed"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}

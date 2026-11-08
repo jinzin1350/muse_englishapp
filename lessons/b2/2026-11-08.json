@@ -1,0 +1,395 @@
+{
+  "date": "2026-11-08",
+  "theme": "review day",
+  "level": "b2",
+  "cefr": "B2",
+  "review": true,
+  "review_of": [
+    "2026-11-05",
+    "2026-11-06",
+    "2026-11-07"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "complain",
+      "pos": "verb",
+      "meaning": "To say you are unhappy about something.",
+      "example": "I need to complain about the service.",
+      "pronunciation": "kum-PLAYN",
+      "persian": "شکایت کردن",
+      "photo": "media/b2/2026-11-07/photos/complain.jpg",
+      "word_audio": "media/b2/2026-11-07/word-audio/complain.mp3"
+    },
+    {
+      "word": "bough",
+      "pos": "noun",
+      "meaning": "A large branch of a tree.",
+      "example": "A bird was sitting on a thick bough of the oak tree.",
+      "pronunciation": "BOW",
+      "persian": "شاخه بزرگ درخت",
+      "photo": "media/b2/2026-11-05/photos/bough.jpg",
+      "word_audio": "media/b2/2026-11-05/word-audio/bough.mp3"
+    },
+    {
+      "word": "boiling",
+      "pos": "adjective",
+      "meaning": "Very hot.",
+      "example": "It's boiling outside today, wear light clothes.",
+      "pronunciation": "BOY-ling",
+      "persian": "بسیار داغ، جوشان",
+      "photo": "media/b2/2026-11-05/photos/boiling.jpg",
+      "word_audio": "media/b2/2026-11-05/word-audio/boiling.mp3"
+    },
+    {
+      "word": "assertive",
+      "pos": "adjective",
+      "meaning": "Expressing your opinions and needs strongly and confidently.",
+      "example": "She is assertive and always speaks her mind.",
+      "pronunciation": "uh-SUR-tiv",
+      "persian": "قاطع، با اعتماد به نفس",
+      "photo": "media/b2/2026-11-06/photos/assertive.jpg",
+      "word_audio": "media/b2/2026-11-06/word-audio/assertive.mp3"
+    },
+    {
+      "word": "attitude",
+      "pos": "noun",
+      "meaning": "A way of thinking or feeling about something.",
+      "example": "He has a positive attitude towards work.",
+      "pronunciation": "AT-i-tood",
+      "persian": "نگرش، طرز فکر",
+      "photo": "media/b2/2026-11-06/photos/attitude.jpg",
+      "word_audio": "media/b2/2026-11-06/word-audio/attitude.mp3"
+    },
+    {
+      "word": "coast",
+      "pos": "noun",
+      "meaning": "The land next to the sea.",
+      "example": "We spent our holiday on the coast.",
+      "pronunciation": "KOHST",
+      "persian": "ساحل، کرانه",
+      "photo": "media/b2/2026-11-07/photos/coast.jpg",
+      "word_audio": "media/b2/2026-11-07/word-audio/coast.mp3"
+    },
+    {
+      "word": "bud",
+      "pos": "noun",
+      "meaning": "a small new part of a plant",
+      "example": "The rose bush has many buds.",
+      "pronunciation": "BUD",
+      "persian": "غنچه، جوانه",
+      "photo": "media/b2/2026-11-05/photos/bud.jpg",
+      "word_audio": "media/b2/2026-11-05/word-audio/bud.mp3"
+    },
+    {
+      "word": "break out",
+      "pos": "phrasal verb",
+      "meaning": "To start suddenly (e.g., a war, fire, disease).",
+      "example": "A fire broke out in the old factory.",
+      "pronunciation": "BRAYK OWT",
+      "persian": "ناگهان شروع شدن، شیوع یافتن",
+      "photo": "media/b2/2026-11-05/photos/break out.jpg",
+      "word_audio": "media/b2/2026-11-05/word-audio/break out.mp3"
+    },
+    {
+      "word": "crew",
+      "pos": "noun",
+      "meaning": "The people who work on a ship, plane, or film.",
+      "example": "The airline crew was very helpful.",
+      "pronunciation": "KROO",
+      "persian": "خدمه",
+      "photo": "media/b2/2026-11-07/photos/crew.jpg",
+      "word_audio": "media/b2/2026-11-07/word-audio/crew.mp3"
+    },
+    {
+      "word": "appal",
+      "pos": "verb",
+      "meaning": "To shock or horrify someone greatly.",
+      "example": "The news of the accident appalled everyone.",
+      "pronunciation": "uh-PAWL",
+      "persian": "وحشت‌زده کردن، شوکه کردن",
+      "photo": "media/b2/2026-11-06/photos/appal.jpg",
+      "word_audio": "media/b2/2026-11-06/word-audio/appal.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-11-08/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day — Coast, Trees, and Character",
+    "audio": "media/b2/2026-11-08/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-11-08/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Boiling Day at the Coast",
+    "audio": "media/b2/2026-11-08/shadowing.mp3",
+    "transcript": "media/b2/2026-11-08/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-11-08/shadowing-sentences/001.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/002.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/003.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/004.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/005.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/006.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/007.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/008.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/009.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/010.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/011.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/012.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/013.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/014.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/015.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/016.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/017.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/018.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/019.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/020.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/021.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/022.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/023.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/024.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/025.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/026.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/027.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/028.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/029.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/030.mp3",
+      "media/b2/2026-11-08/shadowing-sentences/031.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'complain' mean?",
+      "options": [
+        "The land next to the sea.",
+        "a small new part of a plant",
+        "Very hot.",
+        "To say you are unhappy about something."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'bough' mean?",
+      "options": [
+        "To say you are unhappy about something.",
+        "A large branch of a tree.",
+        "A way of thinking or feeling about something.",
+        "The people who work on a ship, plane, or film."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'boiling' mean?",
+      "options": [
+        "The people who work on a ship, plane, or film.",
+        "To start suddenly (e.g., a war, fire, disease).",
+        "Very hot.",
+        "a small new part of a plant"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'assertive' mean?",
+      "options": [
+        "The people who work on a ship, plane, or film.",
+        "Very hot.",
+        "The land next to the sea.",
+        "Expressing your opinions and needs strongly and confidently."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'attitude' mean?",
+      "options": [
+        "A large branch of a tree.",
+        "A way of thinking or feeling about something.",
+        "Expressing your opinions and needs strongly and confidently.",
+        "The land next to the sea."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'coast' mean?",
+      "options": [
+        "Expressing your opinions and needs strongly and confidently.",
+        "The land next to the sea.",
+        "a small new part of a plant",
+        "A large branch of a tree."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bud' mean?",
+      "options": [
+        "To say you are unhappy about something.",
+        "The land next to the sea.",
+        "a small new part of a plant",
+        "To shock or horrify someone greatly."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'break out' mean?",
+      "options": [
+        "A large branch of a tree.",
+        "To start suddenly (e.g., a war, fire, disease).",
+        "The land next to the sea.",
+        "To shock or horrify someone greatly."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'crew' mean?",
+      "options": [
+        "The land next to the sea.",
+        "To shock or horrify someone greatly.",
+        "The people who work on a ship, plane, or film.",
+        "To start suddenly (e.g., a war, fire, disease)."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'appal' mean?",
+      "options": [
+        "Very hot.",
+        "a small new part of a plant",
+        "A large branch of a tree.",
+        "To shock or horrify someone greatly."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Modals of Deduction in the Past (must have, can't have)",
+    "explanation": "To guess about the past, use **modal + have + past participle**. The ground is wet. It **must have rained** last night.\n\n**Must have** means you are almost sure it happened. **Can't have** means you are almost sure it did NOT happen.\n\n**Might have**, **may have**, and **could have** mean it is possible that it happened. **Might not have** and **may not have** mean it is possible that it did not happen.\n\nFor an action in progress, use **modal + have been + -ing**. She **must have been sleeping** when you called.\n\nAlways use the past participle after **have**. Write **have**, never **of**, and never **has** after a modal.",
+    "examples": [
+      "*I can't find my wallet. I **might have left** it at the restaurant.* (possible)",
+      "*She **can't have forgotten** your birthday. She talked about it all week.* (almost sure it didn't happen)",
+      "*You **must have been** really worried.* (must have been)",
+      "*It **might not have been** his fault.* (possible negative)",
+      "*She **must have been studying** all night. She looks exhausted.* (continuous)",
+      "*The window is broken. A ball **could have hit** it.* (possible explanation)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with must have: The crew was very tired after the long hot day.",
+        "a": "The crew must have been very tired after the long hot day."
+      },
+      {
+        "q": "Rewrite with can't have: Sara did not see the fire. She was at the coast all morning.",
+        "a": "Sara can't have seen the fire. She was at the coast all morning."
+      },
+      {
+        "q": "Rewrite with might have: The guest left his bag in the hotel. I am not sure.",
+        "a": "The guest might have left his bag in the hotel."
+      },
+      {
+        "q": "Rewrite with could have: The bud opened early because the weather was warm.",
+        "a": "The bud could have opened early because the weather was warm."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "The ground is wet. It ___ last night.",
+        "options": [
+          "must rained",
+          "must have rained",
+          "must have rain",
+          "must to have rained"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ you. She was in Paris all last week.",
+        "options": [
+          "can't have seen",
+          "must have seen",
+          "might have seen",
+          "must see"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I can't find my keys. I ___ them at work.",
+        "options": [
+          "might left",
+          "might have leave",
+          "might have left",
+          "might leaving"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He ___ the email. He replied to it an hour ago.",
+        "options": [
+          "can't have read",
+          "might not have read",
+          "mustn't read",
+          "must have read"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I'm not sure why he's late. He ___ the bus.",
+        "options": [
+          "must have missed",
+          "can't have missed",
+          "may have missed",
+          "may missed"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "You ___ exhausted after such a long flight.",
+        "options": [
+          "must be been",
+          "must have been",
+          "must have be",
+          "can't have been"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "She must have went home.",
+          "She must gone home.",
+          "She must has gone home.",
+          "She must have gone home."
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She looks exhausted. She ___ all night.",
+        "options": [
+          "must be worked",
+          "must have work",
+          "must have been working",
+          "must working"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Which sentence means 'Maybe she didn't hear the phone'?",
+        "options": [
+          "She may not have heard the phone.",
+          "She must have heard the phone.",
+          "She can't have heard the phone.",
+          "She must hear the phone."
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You ___ been very proud when your daughter graduated.",
+        "options": [
+          "must have",
+          "must has",
+          "must of",
+          "must"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

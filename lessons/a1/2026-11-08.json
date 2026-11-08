@@ -1,0 +1,384 @@
+{
+ "date": "2026-11-08",
+ "theme": "review day",
+ "level": "a1",
+ "cefr": "A1",
+ "review": true,
+ "review_of": [
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07"
+ ],
+ "review_window_words": 15,
+ "review_sampled": 10,
+ "words": [
+  {
+   "example": "I have an appointment with the dentist.",
+   "meaning": "A doctor who takes care of teeth.",
+   "persian": "دندانپزشک",
+   "photo": "media/a1/2026-11-06/photos/dentist.jpg",
+   "pos": "noun",
+   "pronunciation": "DEN-tist",
+   "word": "dentist",
+   "word_audio": "media/a1/2026-11-06/word-audio/dentist.mp3"
+  },
+  {
+   "word": "Do you do any...?",
+   "pos": "phrase",
+   "meaning": "Do you participate in any activities?",
+   "example": "Do you do any sports?",
+   "pronunciation": "DOO yoo DOO EN-ee",
+   "persian": "آیا شما (کاری) انجام می‌دهید؟",
+   "photo": "media/a1/2026-11-07/photos/do-you-do-any.jpg",
+   "word_audio": "media/a1/2026-11-07/word-audio/do-you-do-any.mp3"
+  },
+  {
+   "word": "do",
+   "pos": "verb",
+   "meaning": "To perform an action or activity.",
+   "example": "What do you do on weekends?",
+   "pronunciation": "DOO",
+   "persian": "انجام دادن",
+   "photo": "media/a1/2026-11-07/photos/do.jpg",
+   "word_audio": "media/a1/2026-11-07/word-audio/do.mp3"
+  },
+  {
+   "word": "court",
+   "pos": "noun",
+   "meaning": "An area for playing sports like tennis.",
+   "example": "They played tennis on the court.",
+   "pronunciation": "KORT",
+   "persian": "زمین بازی",
+   "photo": "media/a1/2026-11-07/photos/court.jpg",
+   "word_audio": "media/a1/2026-11-07/word-audio/court.mp3"
+  },
+  {
+   "word": "frying pan",
+   "pos": "noun",
+   "meaning": "a flat pan for frying food.",
+   "example": "Heat the oil in the frying pan.",
+   "pronunciation": "FRY-ing PAN",
+   "persian": "ماهیتابه",
+   "photo": "media/a1/2026-11-05/photos/frying pan.jpg",
+   "word_audio": "media/a1/2026-11-05/word-audio/frying pan.mp3"
+  },
+  {
+   "word": "fish and chips",
+   "pos": "noun phrase",
+   "meaning": "A popular British dish of fried fish and potatoes.",
+   "example": "Let's get fish and chips for lunch.",
+   "pronunciation": "FISH and CHIPS",
+   "persian": "ماهی و سیب‌زمینی سرخ‌کرده",
+   "photo": "media/a1/2026-11-05/photos/fish and chips.jpg",
+   "word_audio": "media/a1/2026-11-05/word-audio/fish and chips.mp3"
+  },
+  {
+   "example": "Eating a healthy diet is important.",
+   "meaning": "The food and drink a person usually eats.",
+   "persian": "رژیم غذایی",
+   "photo": "media/a1/2026-11-06/photos/diet.jpg",
+   "pos": "noun",
+   "pronunciation": "DYE-ut",
+   "word": "diet",
+   "word_audio": "media/a1/2026-11-06/word-audio/diet.mp3"
+  },
+  {
+   "example": "He felt a pain in his chest.",
+   "meaning": "The front part of your body between your neck and stomach.",
+   "persian": "سینه",
+   "photo": "media/a1/2026-11-06/photos/chest.jpg",
+   "pos": "noun",
+   "pronunciation": "CHEST",
+   "word": "chest",
+   "word_audio": "media/a1/2026-11-06/word-audio/chest.mp3"
+  },
+  {
+   "word": "fruit juice",
+   "pos": "noun",
+   "meaning": "a drink made from fruit.",
+   "example": "I like orange fruit juice.",
+   "pronunciation": "FROOT JOOSS",
+   "persian": "آب میوه",
+   "photo": "media/a1/2026-11-05/photos/fruit juice.jpg",
+   "word_audio": "media/a1/2026-11-05/word-audio/fruit juice.mp3"
+  },
+  {
+   "example": "My old dog died last year.",
+   "meaning": "To stop living.",
+   "persian": "مردن",
+   "photo": "media/a1/2026-11-06/photos/die.jpg",
+   "pos": "verb",
+   "pronunciation": "DYE",
+   "word": "die",
+   "word_audio": "media/a1/2026-11-06/word-audio/die.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-11-08/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day — Food, Health and Sport",
+  "audio": "media/a1/2026-11-08/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a1/2026-11-08/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Food, Sport, and the Dentist",
+  "audio": "media/a1/2026-11-08/shadowing.mp3",
+  "transcript": "media/a1/2026-11-08/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a1/2026-11-08/shadowing-sentences/001.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/002.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/003.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/004.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/005.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/006.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/007.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/008.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/009.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/010.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/011.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/012.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/013.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/014.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/015.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/016.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/017.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/018.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/019.mp3",
+   "media/a1/2026-11-08/shadowing-sentences/020.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'dentist' mean?",
+   "options": [
+    "An area for playing sports like tennis.",
+    "A doctor who takes care of teeth.",
+    "To stop living.",
+    "To perform an action or activity."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'Do you do any...?' mean?",
+   "options": [
+    "The food and drink a person usually eats.",
+    "A doctor who takes care of teeth.",
+    "Do you participate in any activities?",
+    "To perform an action or activity."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'do' mean?",
+   "options": [
+    "The front part of your body between your neck and stomach.",
+    "To perform an action or activity.",
+    "A popular British dish of fried fish and potatoes.",
+    "The food and drink a person usually eats."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'court' mean?",
+   "options": [
+    "An area for playing sports like tennis.",
+    "a drink made from fruit.",
+    "a flat pan for frying food.",
+    "Do you participate in any activities?"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'frying pan' mean?",
+   "options": [
+    "To stop living.",
+    "A popular British dish of fried fish and potatoes.",
+    "An area for playing sports like tennis.",
+    "a flat pan for frying food."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'fish and chips' mean?",
+   "options": [
+    "To stop living.",
+    "A popular British dish of fried fish and potatoes.",
+    "To perform an action or activity.",
+    "An area for playing sports like tennis."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'diet' mean?",
+   "options": [
+    "An area for playing sports like tennis.",
+    "The food and drink a person usually eats.",
+    "A doctor who takes care of teeth.",
+    "To stop living."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'chest' mean?",
+   "options": [
+    "The food and drink a person usually eats.",
+    "Do you participate in any activities?",
+    "a flat pan for frying food.",
+    "The front part of your body between your neck and stomach."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'fruit juice' mean?",
+   "options": [
+    "The food and drink a person usually eats.",
+    "Do you participate in any activities?",
+    "a drink made from fruit.",
+    "An area for playing sports like tennis."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'die' mean?",
+   "options": [
+    "To stop living.",
+    "a flat pan for frying food.",
+    "A popular British dish of fried fish and potatoes.",
+    "An area for playing sports like tennis."
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "title": "Articles: A, An and The",
+  "explanation": "Use **a** or **an** with one thing when it is not specific, or when you mention it for the first time. Say **a frying pan** and **a dentist**.\n\nUse **an** before a vowel **sound**, not a vowel letter. Say **an apple** and **an hour**.\n\nUse **the** when the listener knows which thing you mean. Say **the sun** and **the door**.\n\nUse **the** when you talk about something again. First **a car**, then **the car**.\n\nUse no article with plural nouns in general and with uncountable nouns in general. Say **I like dogs** and **I drink fruit juice**.\n\nUse no article with meals and with **school**, **work**, **bed**, and **home**. Say **I go to bed**.\n\nJobs need **a** or **an**. Say **She is a doctor**, not **She is doctor**.",
+  "examples": [
+   "*Can you open **the** window, please?* (we know which window)",
+   "* **The** sun is very hot today.* (there is only one)",
+   "*I don't like **coffee**.* (uncountable, in general)",
+   "* **Dogs** are friendly animals.* (plural, in general)",
+   "*This is **the** best pizza in town.* (superlative)"
+  ],
+  "practice": [
+   {
+    "q": "Fix this sentence: I bought a frying pan. Frying pan is hot.",
+    "a": "I bought a frying pan. The frying pan is hot."
+   },
+   {
+    "q": "Fix this sentence: I drink a fruit juice every morning.",
+    "a": "I drink fruit juice every morning."
+   },
+   {
+    "q": "Fix this sentence: She is dentist.",
+    "a": "She is a dentist."
+   },
+   {
+    "q": "Fix this sentence: I go to the court on Sunday. I play the tennis.",
+    "a": "I go to the court on Sunday. I play tennis."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "She studies at ___ in Spain.",
+    "options": [
+     "a university",
+     "an university",
+     "a universities",
+     "an universities"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "He goes to ___ work by bus.",
+    "options": [
+     "the",
+     "a",
+     "(no article)",
+     "an"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "We visited ___ USA last summer.",
+    "options": [
+     "a",
+     "an",
+     "the",
+     "(no article)"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "The life is short.",
+     "Lifes is short.",
+     "An life is short.",
+     "Life is short."
+    ],
+    "answer": 3
+   },
+   {
+    "question": "My grandfather is ___.",
+    "options": [
+     "a honest man",
+     "honest man",
+     "an honest man",
+     "an honest men"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "I need an advice.",
+     "I need some advice.",
+     "I need a advice.",
+     "I need advices."
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "My uncle is a engineer.",
+     "My uncle is engineer.",
+     "My uncle is an engineer.",
+     "My uncle is an engineers."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I bought a shirt and a jacket. ___ jacket was expensive.",
+    "options": [
+     "A",
+     "An",
+     "(no article)",
+     "The"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Can you close ___ door, please? It's cold in here.",
+    "options": [
+     "a",
+     "an",
+     "(no article)",
+     "the"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "This is ___ best day of my life!",
+    "options": [
+     "the",
+     "a",
+     "an",
+     "(no article)"
+    ],
+    "answer": 0
+   }
+  ],
+  "audio": "media/a1/2026-11-08/grammar-en.mp3"
+ }
+}

@@ -1,0 +1,388 @@
+{
+ "date": "2026-11-08",
+ "theme": "review day",
+ "level": "a2",
+ "cefr": "A2",
+ "review": true,
+ "review_of": [
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07"
+ ],
+ "review_window_words": 15,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "bicycle",
+   "pos": "noun",
+   "meaning": "A vehicle with two wheels, you pedal it.",
+   "example": "I ride my bicycle to school.",
+   "pronunciation": "BY-suh-kul",
+   "persian": "دوچرخه",
+   "photo": "media/a2/2026-11-05/photos/bicycle.jpg",
+   "word_audio": "media/a2/2026-11-05/word-audio/bicycle.mp3"
+  },
+  {
+   "word": "breast",
+   "pos": "noun",
+   "meaning": "Either of two soft parts on a woman's chest.",
+   "example": "Babies drink milk from their mother's breast.",
+   "pronunciation": "BREST",
+   "persian": "سینه (زن)",
+   "photo": "media/a2/2026-11-07/photos/breast.jpg",
+   "word_audio": "media/a2/2026-11-07/word-audio/breast.mp3"
+  },
+  {
+   "word": "bend",
+   "pos": "noun, verb",
+   "meaning": "A curve in a road or object. To curve.",
+   "example": "Be careful, there's a sharp bend in the road.",
+   "pronunciation": "BEND",
+   "persian": "پیچ، خم؛ خم کردن",
+   "photo": "media/a2/2026-11-05/photos/bend.jpg",
+   "word_audio": "media/a2/2026-11-05/word-audio/bend.mp3"
+  },
+  {
+   "word": "chef",
+   "pos": "noun",
+   "meaning": "A skilled cook, especially in a restaurant.",
+   "persian": "سرآشپز",
+   "example": "The chef prepared a delicious meal.",
+   "pronunciation": "SHEF",
+   "photo": "media/a2/2026-11-06/photos/chef.jpg",
+   "word_audio": "media/a2/2026-11-06/word-audio/chef.mp3"
+  },
+  {
+   "word": "cabbage",
+   "pos": "noun",
+   "meaning": "A round, green vegetable with thick leaves.",
+   "persian": "کلم",
+   "example": "My mom cooked soup with cabbage.",
+   "pronunciation": "KAB-ij",
+   "photo": "media/a2/2026-11-06/photos/cabbage.jpg",
+   "word_audio": "media/a2/2026-11-06/word-audio/cabbage.mp3"
+  },
+  {
+   "word": "baggage reclaim",
+   "pos": "noun phrase",
+   "meaning": "The area at an airport where you collect your bags.",
+   "example": "Let's go to baggage reclaim to get our suitcases.",
+   "pronunciation": "BAG-ij ree-KLAYM",
+   "persian": "قسمت تحویل بار",
+   "photo": "media/a2/2026-11-05/photos/baggage reclaim.jpg",
+   "word_audio": "media/a2/2026-11-05/word-audio/baggage reclaim.mp3"
+  },
+  {
+   "word": "bleed",
+   "pos": "verb",
+   "meaning": "To lose blood from your body.",
+   "example": "My finger is bleeding after I cut it.",
+   "pronunciation": "BLEED",
+   "persian": "خونریزی کردن",
+   "photo": "media/a2/2026-11-07/photos/bleed.jpg",
+   "word_audio": "media/a2/2026-11-07/word-audio/bleed.mp3"
+  },
+  {
+   "word": "carrot",
+   "pos": "noun",
+   "meaning": "A long, orange vegetable that grows underground.",
+   "persian": "هویج",
+   "example": "Rabbits like to eat carrots.",
+   "pronunciation": "KAR-ut",
+   "photo": "media/a2/2026-11-06/photos/carrot.jpg",
+   "word_audio": "media/a2/2026-11-06/word-audio/carrot.mp3"
+  },
+  {
+   "word": "beach holiday",
+   "pos": "noun phrase",
+   "meaning": "A vacation spent by the sea.",
+   "example": "We want to go on a beach holiday.",
+   "pronunciation": "BEECH HOL-uh-day",
+   "persian": "تعطیلات ساحلی",
+   "photo": "media/a2/2026-11-05/photos/beach holiday.jpg",
+   "word_audio": "media/a2/2026-11-05/word-audio/beach holiday.mp3"
+  },
+  {
+   "word": "car park",
+   "pos": "noun",
+   "meaning": "An area where people can leave their cars.",
+   "persian": "پارکینگ",
+   "example": "I left my car in the car park.",
+   "pronunciation": "KAR PARK",
+   "photo": "media/a2/2026-11-06/photos/car park.jpg",
+   "word_audio": "media/a2/2026-11-06/word-audio/car park.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-11-08/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day — Travel, Food and Health",
+  "audio": "media/a2/2026-11-08/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-11-08/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara's Bicycle Trip to the Beach",
+  "audio": "media/a2/2026-11-08/shadowing.mp3",
+  "transcript": "media/a2/2026-11-08/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/a2/2026-11-08/shadowing-sentences/001.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/002.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/003.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/004.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/005.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/006.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/007.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/008.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/009.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/010.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/011.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/012.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/013.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/014.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/015.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/016.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/017.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/018.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/019.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/020.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/021.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/022.mp3",
+   "media/a2/2026-11-08/shadowing-sentences/023.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'bicycle' mean?",
+   "options": [
+    "To lose blood from your body.",
+    "A skilled cook, especially in a restaurant.",
+    "A round, green vegetable with thick leaves.",
+    "A vehicle with two wheels, you pedal it."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'breast' mean?",
+   "options": [
+    "Either of two soft parts on a woman's chest.",
+    "To lose blood from your body.",
+    "A vehicle with two wheels, you pedal it.",
+    "A round, green vegetable with thick leaves."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'bend' mean?",
+   "options": [
+    "To lose blood from your body.",
+    "A curve in a road or object. To curve.",
+    "A skilled cook, especially in a restaurant.",
+    "A vacation spent by the sea."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'chef' mean?",
+   "options": [
+    "A curve in a road or object. To curve.",
+    "A skilled cook, especially in a restaurant.",
+    "A vacation spent by the sea.",
+    "Either of two soft parts on a woman's chest."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'cabbage' mean?",
+   "options": [
+    "An area where people can leave their cars.",
+    "A long, orange vegetable that grows underground.",
+    "A round, green vegetable with thick leaves.",
+    "To lose blood from your body."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'baggage reclaim' mean?",
+   "options": [
+    "To lose blood from your body.",
+    "Either of two soft parts on a woman's chest.",
+    "The area at an airport where you collect your bags.",
+    "A skilled cook, especially in a restaurant."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'bleed' mean?",
+   "options": [
+    "A long, orange vegetable that grows underground.",
+    "A curve in a road or object. To curve.",
+    "An area where people can leave their cars.",
+    "To lose blood from your body."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'carrot' mean?",
+   "options": [
+    "An area where people can leave their cars.",
+    "The area at an airport where you collect your bags.",
+    "A vacation spent by the sea.",
+    "A long, orange vegetable that grows underground."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'beach holiday' mean?",
+   "options": [
+    "A long, orange vegetable that grows underground.",
+    "Either of two soft parts on a woman's chest.",
+    "A vehicle with two wheels, you pedal it.",
+    "A vacation spent by the sea."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'car park' mean?",
+   "options": [
+    "To lose blood from your body.",
+    "An area where people can leave their cars.",
+    "A skilled cook, especially in a restaurant.",
+    "A curve in a road or object. To curve."
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "Can and Can't",
+  "explanation": "We use **can** for three things: ability, permission, and requests. *I **can** ride a bicycle.* ***Can** I sit here?* ***Can** you help me?*\n\nThe negative is **can't** (cannot). *I **can't** swim very well.* *The chef **can't** cook cabbage today.*\n\nThe form is simple: subject + **can** + base verb. *She **can speak** three languages.* ***Can** you **cook**?*\n\nFor questions, put **can** first: **Can** + subject + base verb? Answer short: *Yes, I **can**.* *No, she **can't**.*\n\n**Can** is the same for every person. *I can, he can, they can.* Never add -s and never add to: *He **can play***, not *He cans play* or *He can to play*.\n\nUse **can** for possibility too. *You **can** buy tickets online.* *We **can** meet tomorrow if you like.*\n\nFor the past, use **could / couldn't**. *I **could** read when I was four.* *I **couldn't** ride a bicycle when I was small.*\n\nSay it right: in positive sentences, **can** is short and weak. **Can't** is strong and clear. *I can swim. I CAN'T swim.*",
+  "examples": [
+   "*I **can** play the guitar.* (ability)",
+   "*She **can't** come to the party.* (negative)",
+   "***Can** you speak Spanish? – Yes, I **can**.* (question + short answer)",
+   "***Can** I use your phone?* (permission)",
+   "*Penguins **can't** fly, but they **can** swim very well.* (ability)",
+   "*What languages **can** you speak?* (wh- question)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with 'can': Sara rides her bicycle to the beach every day.",
+    "a": "Sara can ride her bicycle to the beach every day."
+   },
+   {
+    "q": "Rewrite with 'can't': The chef does not cook cabbage today.",
+    "a": "The chef can't cook cabbage today."
+   },
+   {
+    "q": "Rewrite as a question: You ride a bicycle to school.",
+    "a": "Can you ride a bicycle to school?"
+   },
+   {
+    "q": "Rewrite with 'can' to ask for permission: I use your phone.",
+    "a": "Can I use your phone?"
+   }
+  ],
+  "quiz": [
+   {
+    "question": "My sister ___ speak four languages.",
+    "options": [
+     "can",
+     "cans",
+     "can to",
+     "is can"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "I ___ swim. I never learned.",
+    "options": [
+     "can",
+     "don't can",
+     "can't",
+     "not can"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Can you ride a bike? – Yes, I ___.",
+    "options": [
+     "do",
+     "am",
+     "cans",
+     "can"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "___ I sit here? – Yes, of course.",
+    "options": [
+     "Do",
+     "Am",
+     "Can",
+     "Does"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "Can you help me?",
+     "Do you can help me?",
+     "You can help me do?",
+     "Can you to help me?"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Penguins ___ fly.",
+    "options": [
+     "can",
+     "cans",
+     "can't",
+     "don't can"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Can she drive? – No, she ___.",
+    "options": [
+     "doesn't",
+     "isn't",
+     "not",
+     "can't"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "What languages ___ you speak?",
+    "options": [
+     "are",
+     "is",
+     "can",
+     "does"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Which word is the negative of *can*?",
+    "options": [
+     "cann't",
+     "cannot",
+     "can'not",
+     "canot"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "___ I use your phone, please? Mine is dead.",
+    "options": [
+     "Can",
+     "Do",
+     "Am",
+     "Will"
+    ],
+    "answer": 0
+   }
+  ],
+  "audio": "media/a2/2026-11-08/grammar-en.mp3"
+ }
+}

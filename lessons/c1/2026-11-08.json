@@ -1,0 +1,394 @@
+{
+ "date": "2026-11-08",
+ "theme": "review day",
+ "level": "c1",
+ "cefr": "C1",
+ "review": true,
+ "review_of": [
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "bounce",
+   "pos": "verb",
+   "meaning": "(of a cheque) To be returned unpaid due to insufficient funds.",
+   "example": "My cheque bounced because I forgot to deposit money.",
+   "pronunciation": "BOWNS",
+   "persian": "برگشت خوردن (چک)",
+   "photo": "media/c1/2026-11-06/photos/bounce.jpg",
+   "word_audio": "media/c1/2026-11-06/word-audio/bounce.mp3"
+  },
+  {
+   "word": "genetically modified food",
+   "pos": "phrase",
+   "meaning": "Food from organisms with altered genetic material.",
+   "example": "Many consumers are wary of genetically modified food.",
+   "pronunciation": "juh-NET-ik-lee MOD-uh-fyed FOOD",
+   "persian": "غذای اصلاح‌شده ژنتیکی",
+   "photo": "media/c1/2026-11-05/photos/genetically-modified-food.jpg",
+   "word_audio": "media/c1/2026-11-05/word-audio/genetically-modified-food.mp3"
+  },
+  {
+   "word": "extraterrestrial being",
+   "pos": "noun phrase",
+   "meaning": "A hypothetical intelligent life form from another planet.",
+   "example": "Scientists search for signs of extraterrestrial beings.",
+   "pronunciation": "ek-struh-tuh-RES-tree-ul BEE-ing",
+   "persian": "موجود فرازمینی",
+   "photo": "media/c1/2026-11-05/photos/extraterrestrial-being.jpg",
+   "word_audio": "media/c1/2026-11-05/word-audio/extraterrestrial-being.mp3"
+  },
+  {
+   "word": "capital asset",
+   "pos": "noun",
+   "meaning": "A valuable long-term asset, like property or equipment.",
+   "example": "The new factory building is a significant capital asset.",
+   "pronunciation": "KAP-ih-tul ASS-et",
+   "persian": "دارایی سرمایه‌ای",
+   "photo": "media/c1/2026-11-07/photos/capital-asset.jpg",
+   "word_audio": "media/c1/2026-11-07/word-audio/capital-asset.mp3"
+  },
+  {
+   "word": "flat-screen TV",
+   "pos": "noun phrase",
+   "meaning": "A television with a thin, flat display screen.",
+   "example": "We bought a new flat-screen TV for the living room.",
+   "pronunciation": "FLAT-skreen tee-VEE",
+   "persian": "تلویزیون صفحه تخت",
+   "photo": "media/c1/2026-11-05/photos/flat-screen-tv.jpg",
+   "word_audio": "media/c1/2026-11-05/word-audio/flat-screen-tv.mp3"
+  },
+  {
+   "word": "contactless",
+   "pos": "adjective",
+   "meaning": "Payment method not requiring physical contact with a reader.",
+   "example": "I paid for my coffee using a contactless card.",
+   "pronunciation": "KON-takt-less",
+   "persian": "بدون تماس",
+   "photo": "media/c1/2026-11-06/photos/contactless.jpg",
+   "word_audio": "media/c1/2026-11-06/word-audio/contactless.mp3"
+  },
+  {
+   "word": "charge to (a credit card)",
+   "pos": "phrasal verb",
+   "meaning": "To pay for something using a credit card.",
+   "example": "You can charge the purchase to your credit card.",
+   "pronunciation": "CHARJ too uh KREH-dit KARD",
+   "persian": "با کارت اعتباری پرداخت کردن",
+   "photo": "media/c1/2026-11-06/photos/charge-to-a-credit-card.jpg",
+   "word_audio": "media/c1/2026-11-06/word-audio/charge-to-a-credit-card.mp3"
+  },
+  {
+   "word": "gene therapy",
+   "pos": "phrase",
+   "meaning": "Treating disease by replacing faulty genes.",
+   "example": "Gene therapy offers hope for many genetic conditions.",
+   "pronunciation": "JEEN THAIR-uh-pee",
+   "persian": "ژن‌درمانی",
+   "photo": "media/c1/2026-11-05/photos/gene-therapy.jpg",
+   "word_audio": "media/c1/2026-11-05/word-audio/gene-therapy.mp3"
+  },
+  {
+   "word": "bidder",
+   "pos": "noun",
+   "meaning": "A person who offers a price for something.",
+   "example": "The highest bidder won the antique painting.",
+   "pronunciation": "BID-er",
+   "persian": "پیشنهاد دهنده، خریدار",
+   "photo": "media/c1/2026-11-07/photos/bidder.jpg",
+   "word_audio": "media/c1/2026-11-07/word-audio/bidder.mp3"
+  },
+  {
+   "word": "cover (v.)",
+   "pos": "verb",
+   "meaning": "To provide enough money to pay for something.",
+   "example": "Does your insurance cover dental treatment?",
+   "pronunciation": "KUH-vur",
+   "persian": "پوشش دادن، تأمین کردن",
+   "photo": "media/c1/2026-11-06/photos/cover.jpg",
+   "word_audio": "media/c1/2026-11-06/word-audio/cover.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c1/2026-11-08/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day — Three Stories, Ten Words",
+  "audio": "media/c1/2026-11-08/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-11-08/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Tom's Big Weekend",
+  "audio": "media/c1/2026-11-08/shadowing.mp3",
+  "transcript": "media/c1/2026-11-08/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c1/2026-11-08/shadowing-sentences/001.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/002.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/003.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/004.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/005.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/006.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/007.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/008.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/009.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/010.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/011.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/012.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/013.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/014.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/015.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/016.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/017.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/018.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/019.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/020.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/021.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/022.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/023.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/024.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/025.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/026.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/027.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/028.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/029.mp3",
+   "media/c1/2026-11-08/shadowing-sentences/030.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'bounce' mean?",
+   "options": [
+    "Treating disease by replacing faulty genes.",
+    "A person who offers a price for something.",
+    "(of a cheque) To be returned unpaid due to insufficient funds.",
+    "A valuable long-term asset, like property or equipment."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'genetically modified food' mean?",
+   "options": [
+    "A television with a thin, flat display screen.",
+    "Payment method not requiring physical contact with a reader.",
+    "Food from organisms with altered genetic material.",
+    "A valuable long-term asset, like property or equipment."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'extraterrestrial being' mean?",
+   "options": [
+    "Food from organisms with altered genetic material.",
+    "A television with a thin, flat display screen.",
+    "A hypothetical intelligent life form from another planet.",
+    "Treating disease by replacing faulty genes."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'capital asset' mean?",
+   "options": [
+    "A television with a thin, flat display screen.",
+    "Food from organisms with altered genetic material.",
+    "(of a cheque) To be returned unpaid due to insufficient funds.",
+    "A valuable long-term asset, like property or equipment."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'flat-screen TV' mean?",
+   "options": [
+    "A hypothetical intelligent life form from another planet.",
+    "A television with a thin, flat display screen.",
+    "To provide enough money to pay for something.",
+    "Food from organisms with altered genetic material."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'contactless' mean?",
+   "options": [
+    "A valuable long-term asset, like property or equipment.",
+    "A hypothetical intelligent life form from another planet.",
+    "Treating disease by replacing faulty genes.",
+    "Payment method not requiring physical contact with a reader."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'charge to (a credit card)' mean?",
+   "options": [
+    "A person who offers a price for something.",
+    "To pay for something using a credit card.",
+    "A hypothetical intelligent life form from another planet.",
+    "A valuable long-term asset, like property or equipment."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'gene therapy' mean?",
+   "options": [
+    "Treating disease by replacing faulty genes.",
+    "(of a cheque) To be returned unpaid due to insufficient funds.",
+    "To provide enough money to pay for something.",
+    "A valuable long-term asset, like property or equipment."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'bidder' mean?",
+   "options": [
+    "Payment method not requiring physical contact with a reader.",
+    "A person who offers a price for something.",
+    "Treating disease by replacing faulty genes.",
+    "Food from organisms with altered genetic material."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'cover (v.)' mean?",
+   "options": [
+    "Treating disease by replacing faulty genes.",
+    "A television with a thin, flat display screen.",
+    "To pay for something using a credit card.",
+    "To provide enough money to pay for something."
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Inversion After Negative Adverbials",
+  "explanation": "When a sentence **starts** with a negative or limiting word, such as **never**, **rarely**, **hardly**, **not only** or **only when**, we use **question word order** — auxiliary verb before the subject. ***Never have I** seen such a beautiful view.*\n\nThis is called **inversion**. It is formal and emphatic, and it is common in writing, speeches and storytelling. It makes a sentence sound stronger and more dramatic.\n\nIf there is no auxiliary verb, add **do**, **does** or **did**. We rarely see talent like this becomes **Rarely do we** see talent like this. With **be**, just put **be** first: **Not only was he** late.\n\n**Hardly** and **scarcely** go with **when**, and **no sooner** goes with **than**. **Hardly had** we arrived **when** it started to rain. **No sooner had** she left **than** he arrived. Do not mix them.\n\n**Not only** goes with **but (also)**. **Not only does** she speak French, **but** she also speaks Arabic. The inversion is in the first part, and **but** introduces the second part.\n\nWith **only when**, **only after**, **only then** and **not until**, the inversion is in the **main clause**. **Only when** I got home **did I** realise. **Not until** the end **did we** find out the truth.\n\nStrong negative phrases also trigger inversion: **under no circumstances**, **on no account**, **at no time**, **in no way**. **Under no circumstances should** you open this door. **Little** means not at all: **Little did** I know that my life was about to change.\n\nA common mistake is to keep normal word order after the negative word. *Never I have seen* is wrong. Say **Never have I** seen. And never put **would** in the wrong place: the auxiliary must come before the subject.",
+  "examples": [
+   "***Never have I** felt so proud.* (never + present perfect)",
+   "***Seldom has** the city looked so beautiful.* (seldom)",
+   "***No sooner had** she left **than** he arrived.* (no sooner… than)",
+   "***Not only is** the hotel cheap, **but** it's also very comfortable.* (not only… but)",
+   "***Not until** I got home **did I** notice the missing wallet.* (not until)",
+   "***Little did** they know that we were watching.* (little = not at all)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with inversion: I have never seen such a beautiful flat-screen TV.",
+    "a": "**Never have I** seen such a beautiful flat-screen TV."
+   },
+   {
+    "q": "Rewrite with inversion: We rarely see a bidder pay with a contactless card.",
+    "a": "**Rarely do we** see a bidder pay with a contactless card."
+   },
+   {
+    "q": "Rewrite with inversion: She left the office, and then the phone rang immediately.",
+    "a": "**No sooner had** she left the office **than** the phone rang."
+   },
+   {
+    "q": "Rewrite with inversion: I realised only when I got home that my cheque had bounced.",
+    "a": "**Only when** I got home **did I** realise that my cheque had bounced."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "Never ___ such a beautiful sunset.",
+    "options": [
+     "I have seen",
+     "I saw",
+     "have I seen",
+     "I had seen"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "Hardly ___ arrived when it started to rain.",
+    "options": [
+     "we had",
+     "we have",
+     "have we",
+     "had we"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Not only ___ late, but he also forgot the tickets.",
+    "options": [
+     "he was",
+     "was he",
+     "he is being",
+     "did he be"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Only when I got home ___ that I had lost my wallet.",
+    "options": [
+     "I realised",
+     "I did realise",
+     "realised I",
+     "did I realise"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Under no circumstances ___ the door to strangers.",
+    "options": [
+     "should you open",
+     "you should open",
+     "you open",
+     "open you"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Not until the end of the film ___ who the killer was.",
+    "options": [
+     "did we find out",
+     "we found out",
+     "we did find out",
+     "found we out"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "At no time ___ the passengers in danger.",
+    "options": [
+     "did",
+     "had",
+     "have",
+     "were"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Choose the correct sentence.",
+    "options": [
+     "Only after the meeting I understood the problem.",
+     "Only after the meeting understood I the problem.",
+     "Only after the meeting did I understand the problem.",
+     "Only after the meeting I did understand the problem."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "No sooner ___ the house than I realised I'd forgotten my keys.",
+    "options": [
+     "had I left",
+     "I had left",
+     "have I left",
+     "I left"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "On no account ___ leave your bags unattended.",
+    "options": [
+     "you must",
+     "must you",
+     "you mustn't",
+     "mustn't you"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}

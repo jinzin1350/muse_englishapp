@@ -1,0 +1,398 @@
+{
+ "date": "2026-11-08",
+ "theme": "review day",
+ "level": "b1",
+ "cefr": "B1",
+ "review": true,
+ "review_of": [
+  "2026-11-05",
+  "2026-11-06",
+  "2026-11-07"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10,
+ "words": [
+  {
+   "word": "gun",
+   "pos": "noun",
+   "meaning": "A weapon that shoots bullets.",
+   "example": "The police officer carried a gun.",
+   "pronunciation": "GUN",
+   "persian": "اسلحه، تفنگ",
+   "photo": "media/b1/2026-11-05/photos/gun.jpg",
+   "word_audio": "media/b1/2026-11-05/word-audio/gun.mp3"
+  },
+  {
+   "word": "get in [enter]",
+   "pos": "phrasal verb",
+   "meaning": "to enter a car, taxi, or small boat.",
+   "example": "Get in the car, we're leaving.",
+   "pronunciation": "get IN",
+   "persian": "وارد شدن، سوار شدن",
+   "photo": "media/b1/2026-11-06/photos/get-in-enter.jpg",
+   "word_audio": "media/b1/2026-11-06/word-audio/get-in-enter.mp3"
+  },
+  {
+   "word": "per cent",
+   "pos": "noun phrase",
+   "meaning": "One part of every hundred.",
+   "example": "Ten per cent of students passed.",
+   "pronunciation": "pur SENT",
+   "persian": "درصد",
+   "photo": "media/b1/2026-11-05/photos/per-cent.jpg",
+   "word_audio": "media/b1/2026-11-05/word-audio/per-cent.mp3"
+  },
+  {
+   "word": "dislike n, v",
+   "pos": "noun, verb",
+   "meaning": "A feeling of not liking something, or to not like.",
+   "example": "My main dislike is crowded places.",
+   "pronunciation": "dis-LYK",
+   "persian": "عدم علاقه، دوست نداشتن",
+   "photo": "media/b1/2026-11-07/photos/dislike-n-v.jpg",
+   "word_audio": "media/b1/2026-11-07/word-audio/dislike-n-v.mp3"
+  },
+  {
+   "word": "delighted",
+   "pos": "adjective",
+   "meaning": "Very pleased and happy.",
+   "example": "I was delighted to hear your good news.",
+   "pronunciation": "dih-LY-tid",
+   "persian": "خوشحال، مسرور",
+   "photo": "media/b1/2026-11-07/photos/delighted.jpg",
+   "word_audio": "media/b1/2026-11-07/word-audio/delighted.mp3"
+  },
+  {
+   "word": "get out [leave]",
+   "pos": "phrasal verb",
+   "meaning": "To leave a car, bus, or building.",
+   "example": "Let's get out of the car here.",
+   "pronunciation": "get OUT",
+   "persian": "پیاده شدن، خارج شدن",
+   "photo": "media/b1/2026-11-06/photos/get-out-leave.jpg",
+   "word_audio": "media/b1/2026-11-06/word-audio/get-out-leave.mp3"
+  },
+  {
+   "word": "dishonest",
+   "pos": "adjective",
+   "meaning": "Not truthful; tending to lie or cheat.",
+   "example": "It was dishonest of him to take the money.",
+   "pronunciation": "dis-ON-ist",
+   "persian": "ناصادق، دروغگو",
+   "photo": "media/b1/2026-11-07/photos/dishonest.jpg",
+   "word_audio": "media/b1/2026-11-07/word-audio/dishonest.mp3"
+  },
+  {
+   "word": "judge",
+   "pos": "noun",
+   "meaning": "A person in court who decides how to punish criminals.",
+   "example": "The judge listened carefully to all the evidence.",
+   "pronunciation": "JUJ",
+   "persian": "قاضی",
+   "photo": "media/b1/2026-11-05/photos/judge.jpg",
+   "word_audio": "media/b1/2026-11-05/word-audio/judge.mp3"
+  },
+  {
+   "word": "install",
+   "pos": "verb",
+   "meaning": "To put equipment in place for use.",
+   "example": "We need to install new software on the computer.",
+   "pronunciation": "in-STAWL",
+   "persian": "نصب کردن",
+   "photo": "media/b1/2026-11-05/photos/install.jpg",
+   "word_audio": "media/b1/2026-11-05/word-audio/install.mp3"
+  },
+  {
+   "word": "experience [knowledge]",
+   "pos": "noun",
+   "meaning": "Knowledge or skill from doing things.",
+   "example": "He has good work experience.",
+   "pronunciation": "ik-SPEER-ee-uhns",
+   "persian": "تجربه",
+   "photo": "media/b1/2026-11-05/photos/experience-knowledge.jpg",
+   "word_audio": "media/b1/2026-11-05/word-audio/experience-knowledge.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-11-08/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day — Work, Travel and Feelings",
+  "audio": "media/b1/2026-11-08/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-11-08/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara and the Judge's New Computer",
+  "audio": "media/b1/2026-11-08/shadowing.mp3",
+  "transcript": "media/b1/2026-11-08/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b1/2026-11-08/shadowing-sentences/001.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/002.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/003.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/004.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/005.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/006.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/007.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/008.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/009.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/010.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/011.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/012.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/013.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/014.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/015.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/016.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/017.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/018.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/019.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/020.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/021.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/022.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/023.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/024.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/025.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/026.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/027.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/028.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/029.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/030.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/031.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/032.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/033.mp3",
+   "media/b1/2026-11-08/shadowing-sentences/034.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'gun' mean?",
+   "options": [
+    "To leave a car, bus, or building.",
+    "to enter a car, taxi, or small boat.",
+    "A weapon that shoots bullets.",
+    "A person in court who decides how to punish criminals."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'get in [enter]' mean?",
+   "options": [
+    "Very pleased and happy.",
+    "A person in court who decides how to punish criminals.",
+    "A feeling of not liking something, or to not like.",
+    "to enter a car, taxi, or small boat."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'per cent' mean?",
+   "options": [
+    "Knowledge or skill from doing things.",
+    "Very pleased and happy.",
+    "A feeling of not liking something, or to not like.",
+    "One part of every hundred."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'dislike n, v' mean?",
+   "options": [
+    "Not truthful; tending to lie or cheat.",
+    "A feeling of not liking something, or to not like.",
+    "A person in court who decides how to punish criminals.",
+    "Very pleased and happy."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'delighted' mean?",
+   "options": [
+    "Very pleased and happy.",
+    "To put equipment in place for use.",
+    "Knowledge or skill from doing things.",
+    "A feeling of not liking something, or to not like."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'get out [leave]' mean?",
+   "options": [
+    "A feeling of not liking something, or to not like.",
+    "Very pleased and happy.",
+    "To put equipment in place for use.",
+    "To leave a car, bus, or building."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'dishonest' mean?",
+   "options": [
+    "Knowledge or skill from doing things.",
+    "A person in court who decides how to punish criminals.",
+    "Not truthful; tending to lie or cheat.",
+    "to enter a car, taxi, or small boat."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'judge' mean?",
+   "options": [
+    "A weapon that shoots bullets.",
+    "A person in court who decides how to punish criminals.",
+    "Very pleased and happy.",
+    "To leave a car, bus, or building."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'install' mean?",
+   "options": [
+    "To put equipment in place for use.",
+    "Not truthful; tending to lie or cheat.",
+    "A weapon that shoots bullets.",
+    "One part of every hundred."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'experience [knowledge]' mean?",
+   "options": [
+    "A feeling of not liking something, or to not like.",
+    "One part of every hundred.",
+    "to enter a car, taxi, or small boat.",
+    "Knowledge or skill from doing things."
+   ],
+   "answer": 3
+  }
+ ],
+ "grammar": {
+  "title": "Modifying Comparatives (much better, twice as big)",
+  "explanation": "We can say **how much** bigger, better or more expensive something is. Put a word before the comparative: **much bigger**, **slightly cheaper**, **far better**, **even worse**.\n\nFor a big difference, use **much**, **far**, **a lot** or **considerably**. The train is **much faster** than the bus, and the new program is **far easier** to install.\n\nFor a small difference, use **a bit**, **a little** or **slightly**. This hotel is **slightly cheaper**, and the new phone is **a bit more** expensive.\n\nFor a surprising difference, use **even**. The first film was good, but this one is **even better**.\n\nNever use **very** with a comparative. Say **much better**, not **very better**. And never use **more** with **-er**: say **much faster**, not **more faster**.\n\nThe same words work with **more** + adjective: **a lot more** expensive, **slightly more** comfortable, **far less** interesting.\n\nWe can also modify **as… as**. **Just as** good **as** means the same. **Nearly as** fast **as** means almost the same. **Twice as** big **as** means two times bigger.\n\nFor a big difference with **as… as**, use **not nearly as** or **nowhere near as** expensive **as**. The new court room is **nowhere near as** big as the old one.\n\nRepeat the comparative for something that keeps changing: **harder and harder**, **more and more** quickly. English is becoming **more and more** important.\n\nUse **the** + comparative, **the** + comparative when one change causes another. **The more** you practise, **the better** you get. **The sooner**, **the better**.",
+  "examples": [
+   "*My new job is **much more interesting** than my old one.* (big difference)",
+   "*Could you speak **a bit more slowly**, please?* (small difference)",
+   "*The new program is **far easier** to install than the old one.* (big difference)",
+   "*Their house is **twice as big as** ours.* (multiple)",
+   "*English is becoming **more and more** important.* (changing)",
+   "* **The older** I get, **the less** I worry.* (connected)"
+  ],
+  "practice": [
+   {
+    "q": "The new computer is fast. The old computer is slow. → The new computer is ... than the old computer.",
+    "a": "The new computer is much faster than the old computer."
+   },
+   {
+    "q": "Sara was delighted with her new job. Now she is delighted again, and more. → Sara is ... delighted than before.",
+    "a": "Sara is even more delighted than before."
+   },
+   {
+    "q": "The judge's office is big. The court room is two times bigger. → The court room is ... the judge's office.",
+    "a": "The court room is twice as big as the judge's office."
+   },
+   {
+    "q": "You practise more. You get better. → ... you practise, ... you get.",
+    "a": "The more you practise, the better you get."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The train is ___ faster than the bus.",
+    "options": [
+     "very",
+     "more",
+     "much",
+     "most"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "My new flat is ___ bigger than my old one, but only by a few square metres.",
+    "options": [
+     "slightly",
+     "much",
+     "far",
+     "a lot"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "The first film was good, but the second one was ___ better.",
+    "options": [
+     "very",
+     "more",
+     "so",
+     "even"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "My city is ___ as big as Tokyo. Tokyo is about ten times bigger.",
+    "options": [
+     "nearly",
+     "nowhere near",
+     "just",
+     "twice"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "The ___ you practise, the better you get.",
+    "options": [
+     "much",
+     "most",
+     "many",
+     "more"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "This phone costs ___ as that one. They're both $500.",
+    "options": [
+     "twice as much",
+     "just as much",
+     "much more",
+     "as much more"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "It's getting ___ to find a cheap flat in this city.",
+    "options": [
+     "harder and harder",
+     "hard and harder",
+     "more hard and hard",
+     "hardest and hardest"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "My brother is ___ older than me: twelve years!",
+    "options": [
+     "a bit",
+     "slightly",
+     "a lot",
+     "a little"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "The test was ___ easier than I expected. I finished in ten minutes.",
+    "options": [
+     "very",
+     "far",
+     "more",
+     "most"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "The sooner we leave, ___ we'll arrive.",
+    "options": [
+     "the earlier",
+     "earlier",
+     "the more early",
+     "the earliest"
+    ],
+    "answer": 0
+   }
+  ]
+ }
+}
