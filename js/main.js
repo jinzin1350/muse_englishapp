@@ -842,7 +842,7 @@ function trickyDueList(items, scope) {
     return (map[a.id].due < map[b.id].due ? -1 : 1);
   });
 }
-function trickyQuestionFor(it, phrasalPool) {
+function trickyQuestionFor(it, phrasalPool, gapPools) {
   if (it.type === 'mcq') {
     const pairs = (it.options || []).map(function (op, i) { return { op: op, ok: i === it.answer }; });
     const sh = shuffleArr(pairs);
@@ -852,7 +852,19 @@ function trickyQuestionFor(it, phrasalPool) {
       kind: 'tricky', tid: it.id };
   }
   if (it.type === 'gap') {
-    return { qtype: 'typein', question: it.prompt, accept: it.accept || [],
+    const correct = (it.accept || [])[0];
+    if (!correct) return null;
+    const seen = {}; seen[String(correct).toLowerCase()] = 1;
+    const ds = [];
+    shuffleArr(((gapPools && gapPools[it.cat]) || []).slice()).forEach(function (a) {
+      const k = String(a).toLowerCase();
+      if (!seen[k] && ds.length < 3) { seen[k] = 1; ds.push(a); }
+    });
+    if (ds.length < 3) return null;
+    const gopts = shuffleArr([{ t: correct, ok: true }].concat(ds.map(function (t) { return { t: t, ok: false }; })));
+    return { qtype: 'select', question: it.prompt,
+      options: gopts.map(function (x) { return x.t; }),
+      answer: gopts.findIndex(function (x) { return x.ok; }),
       kind: 'tricky', tid: it.id };
   }
   /* phrasal verb: meaning choice or word choice, language by level */
@@ -895,9 +907,16 @@ async function buildTrickyDeck(scope) {
       .slice(0, 5);
   }
   const phrasalPool = items.filter(function (x) { return x.type === 'phrasal'; });
+  const gapPools = {};
+  items.forEach(function (x) {
+    if (x.type === 'gap' && x.accept && x.accept[0]) {
+      (gapPools[x.cat] = gapPools[x.cat] || []);
+      if (gapPools[x.cat].indexOf(x.accept[0]) === -1) gapPools[x.cat].push(x.accept[0]);
+    }
+  });
   const qs = [];
   shuffleArr(picked).forEach(function (it) {
-    const q = trickyQuestionFor(it, phrasalPool);
+    const q = trickyQuestionFor(it, phrasalPool, gapPools);
     if (q) qs.push(q);
   });
   return qs;
@@ -15431,7 +15450,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611080040';
+var APP_VERSION = '202611080047';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
