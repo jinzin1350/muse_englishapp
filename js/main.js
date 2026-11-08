@@ -15475,7 +15475,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611080140';
+var APP_VERSION = '202611081515';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -18553,7 +18553,9 @@ function wmCardHTML(w, opts) {
     (w.photo ? '<div class="wm2-photo"><img src="' + esc(wmPhotoSrc(w)) + '" alt="" onerror="this.parentNode.style.display=\'none\'"/></div>' : '') +
     '<div class="wm2-card-body">' +
     '<div class="wm2-word-row"><span class="wm2-word">' + esc(w.word) + '</span>' +
-    (w.audio ? '<button class="wm2-audio" data-wm2-audio aria-label="Play pronunciation">\uD83D\uDD0A</button>' : '') + '</div>' +
+    '<span class="wm2-row-btns">' +
+    '<button class="save-word-btn wm2-save' + (isWordSaved(w.word, '') ? ' saved' : '') + '" data-action="vc-toggle-save" data-word="' + esc(w.word) + '" aria-label="Bookmark this word" title="Save for later practice"><img src="/icons/bookmark.png" alt=""></button>' +
+    (w.audio ? '<button class="wm2-audio" data-wm2-audio aria-label="Play pronunciation">\uD83D\uDD0A</button>' : '') + '</span></div>' +
     '<div class="wm2-phon">' + (w.phonetic ? '/' + esc(w.phonetic) + '/' : '') +
     (rank ? ' <span class="wm2-rank">#' + rank.toLocaleString() + '</span>' : '') +
     (w.pos ? ' <span class="wm2-pos">' + esc(w.pos) + '</span>' : '') + '</div>' +
@@ -18574,6 +18576,7 @@ function wmCardHTML(w, opts) {
   return html;
 }
 function wmWireCard(v, w, onMore) {
+  try { refreshVocabSaveButtons(v); } catch (e) {}
   var a = v.querySelector('[data-wm2-audio]');
   if (a) a.addEventListener('click', function () { playVocabAudio(w.audio); });
   var m = v.querySelector('[data-wm2-more]');

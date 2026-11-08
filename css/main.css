@@ -4915,3 +4915,7 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
   .g-quiz.gt-wrap::before { height: 280px; bottom: -150px; }
   #app-header .brand-name { white-space: nowrap; font-size: 1.12rem; }
 }
+/* Word Map card bookmark (2026-11-08): matches the audio button's round tile */
+.wm2-row-btns { display: flex; align-items: center; gap: 0.5rem; flex: 0 0 auto; }
+.wm2-save { width: 46px; height: 46px; border-radius: 50%; background: #F3EEFC; display: flex; align-items: center; justify-content: center; padding: 0; }
+.wm2-save img { width: 22px; height: 22px; }
