@@ -4908,3 +4908,10 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
 .tk-bar-fill { position: absolute; left: 0; top: 0; }
 .duo-lesson-link { display: block; text-align: center; margin: 0 0 10px; padding: 11px 14px; border-radius: 12px; background: #fff; border: 2px solid #E9D5FF; color: #6D28D9; font-weight: 800; text-decoration: none; }
 .duo-lesson-link:active { transform: translateY(1px); }
+/* grammar quiz report: white card above the decorative blobs + small-screen blob/header fixes (2026-11-07) */
+.g-quiz .gt-report { position: relative; z-index: 1; background: #fff; border-radius: 26px; padding: 28px 20px 30px; box-shadow: 0 14px 34px rgba(120, 90, 40, 0.12); }
+@media (max-width: 480px) {
+  .g-quiz.gt-wrap::after { width: 210px; height: 210px; right: -110px; }
+  .g-quiz.gt-wrap::before { height: 280px; bottom: -150px; }
+  #app-header .brand-name { white-space: nowrap; font-size: 1.12rem; }
+}

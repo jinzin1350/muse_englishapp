@@ -8359,12 +8359,14 @@ function finishGrammarQuiz() {
     '<p class="gt-sub">' + esc(topic.h1) + '</p>' +
     (bonus ? '<p class="g-xp-note">+20 completion bonus earned!</p>' : '') +
     '<div class="gt-end-btns"><button class="gt-btn gt-btn-green gt-btn-big" id="g-retry-btn">TRY AGAIN</button>' +
+    '<button class="gt-btn gt-btn-ghost" id="g-back-btn">📖 Back to this guide</button>' +
     '<a class="gt-btn gt-btn-ghost" href="#/grammar">All guides</a></div>' +
     '</div></div>';
   document.getElementById('g-retry-btn').addEventListener('click', function () {
     if (q.v2) startGrammarQuizV2(topic, q.v2level);
     else startGrammarQuiz(topic);
   });
+  document.getElementById('g-back-btn').addEventListener('click', function () { go('grammar', slug); });
   window.scrollTo(0, 0);
 }
 
@@ -15473,7 +15475,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611080131';
+var APP_VERSION = '202611080140';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
