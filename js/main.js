@@ -7758,6 +7758,7 @@ function startGrammarQuizV2(topic, level) {
     firstRun: !rec.claimed, v2: true, v2level: level,
     items: shuffleArr(items).slice(0, 10)
   };
+  state.gquiz.items.forEach(function (it) { delete it.typed; });
   document.body.classList.add('duo-playing');
   window.scrollTo(0, 0);
   renderGrammarQuizV2();
@@ -7785,7 +7786,7 @@ function renderGrammarQuizV2() {
     }).join('') + '</div>';
   } else if (it.type === 'gap') {
     inputHTML = '<div class="gt-gap-wrap"><input type="text" id="g2-gap-input" class="gt-gap-input" ' +
-      'placeholder="Type your answer" ' + (q.answered ? 'disabled' : '') + ' value="' + esc(q.typed || '') + '">' +
+      'placeholder="Type your answer" ' + (q.answered ? 'disabled' : '') + ' value="' + esc(it.typed || '') + '">' +
       (q.answered ? '' : '<button class="gt-btn gt-btn-green" id="g2-gap-check">CHECK</button>') + '</div>';
   } else if (it.type === 'error') {
     inputHTML = '<div class="gt-opts gt-error-segs">' + (it.segments || []).map(function (seg, i) {
@@ -7862,7 +7863,7 @@ function answerGrammarQuizV2(val) {
     q.picked = val;
     correct = (val === it.answer);
   } else if (it.type === 'gap') {
-    q.typed = val;
+    it.typed = val;
     var norm = function(s) { return String(s).trim().toLowerCase().replace(/\s+/g, ' ').replace(/[\u2018\u2019]/g, "'").replace(/\.$/, ''); };
     var vnorm = norm(val);
     correct = (it.accept || []).some(function(a) { return norm(a) === vnorm; });
@@ -12198,7 +12199,7 @@ function duoFooter(q, cur) {
 
 /* typein: typed-answer question (v2 gap) */
 function duoTypeinHTML(q, cur) {
-  const val = q.typed || '';
+  const val = cur.typed || '';
   let html = '<div class="duo-q">' + esc(cur.question).replace(/___/g, '…') + '</div>';
   html += '<div class="duo-typein-wrap"><input type="text" id="duo-typein-input" class="duo-typein-input" ' +
     'placeholder="Type your answer…" value="' + esc(val) + '"' + (q.answered ? ' disabled' : '') + ' autocomplete="off"></div>';
@@ -12271,7 +12272,7 @@ function duoTypeinCheck() {
   if (cur.qtype !== 'typein') return;
   const input = document.getElementById('duo-typein-input');
   const val = input ? input.value : '';
-  q.typed = val;
+  cur.typed = val;
   q.answered = true;
   const norm = duoNormalize(val);
   const correct = (cur.accept || []).some(function (a) { return duoNormalize(a) === norm; });
@@ -15122,7 +15123,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611072351';
+var APP_VERSION = '202611080003';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
