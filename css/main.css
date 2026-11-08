@@ -4919,3 +4919,8 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
 .wm2-row-btns { display: flex; align-items: center; gap: 0.5rem; flex: 0 0 auto; }
 .wm2-save { width: 46px; height: 46px; border-radius: 50%; background: #F3EEFC; display: flex; align-items: center; justify-content: center; padding: 0; }
 .wm2-save img { width: 22px; height: 22px; }
+
+/* ============ Splash (boot screen) ============ */
+#splash { position: fixed; inset: 0; z-index: 300; background: #FF9000; display: flex; align-items: center; justify-content: center; transition: opacity .55s ease; }
+#splash.hide { opacity: 0; pointer-events: none; }
+#splash-img { width: 100%; height: 100%; object-fit: cover; display: block; }
