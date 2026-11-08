@@ -684,6 +684,210 @@ function srsGradeCloud(k, e) {
   });
 }
 
+
+/* ---------------- Tricky Bits: easy-to-forget drills + SRS ----------------
+   Retention layer for the areas learners keep forgetting (no-rule
+   memorisation + L1-interference): phrasal-verb meanings, dependent
+   prepositions, articles, -ing/to, fine differences, collocations & pairs.
+   Items come from data/tricky/index.json (grammar-bank exercises + the
+   phrasal-verbs vocab category + a hand-authored pairs set). Sessions run
+   on the duo engine as kind 'tricky'; schedules live in localStorage
+   (muse_tricky_v1) with the same interval math as saved-word SRS. */
+var TRICKY_CATS = [
+  { id: 'phrasal',   ico: '🔗', name: 'Phrasal verbs', desc: 'Meanings you cannot guess from the verb' },
+  { id: 'verb-prep', ico: '🧲', name: 'Verb + preposition', desc: 'depend on, listen to, wait for…' },
+  { id: 'adj-prep',  ico: '🎯', name: 'Adjective + preposition', desc: 'good at, afraid of, interested in…' },
+  { id: 'articles',  ico: '📰', name: 'Articles: a / an / the', desc: 'And when English uses no article at all' },
+  { id: 'ing-or-to', ico: '🔀', name: '-ing or to-infinitive', desc: 'enjoy -ing, want to… and meaning changes' },
+  { id: 'fine-diff', ico: '⚖️', name: 'Fine differences', desc: 'few / a few, so / such, another / other…' },
+  { id: 'quantity',  ico: '🔢', name: 'Quantity', desc: 'much / many, some / any, countable or not' },
+  { id: 'ed-ing',    ico: '😴', name: '-ed / -ing adjectives', desc: 'bored or boring? tired or tiring?' },
+  { id: 'used-to',   ico: '🕰', name: 'Used to family', desc: 'used to, be used to, get used to' },
+  { id: 'in-on-at',  ico: '📍', name: 'in / on / at', desc: 'Prepositions of time and place' },
+  { id: 'pairs',     ico: '👯', name: 'Collocations & confusing pairs', desc: 'make or do? say or tell? borrow or lend?' }
+];
+function trickyCatMeta(id) {
+  for (let i = 0; i < TRICKY_CATS.length; i++) if (TRICKY_CATS[i].id === id) return TRICKY_CATS[i];
+  return { id: id, ico: '🧠', name: id, desc: '' };
+}
+var _trickyIndexP = null;
+function loadTrickyIndex() {
+  if (!_trickyIndexP) {
+    _trickyIndexP = fetch('data/tricky/index.json').then(function (r) {
+      if (!r.ok) throw new Error('tricky index ' + r.status);
+      return r.json();
+    }).then(function (j) { return (j && j.items) || []; });
+  }
+  return _trickyIndexP;
+}
+function trickyGet() {
+  try { return JSON.parse(localStorage.getItem('muse_tricky_v1') || '{}') || {}; }
+  catch (e) { return {}; }
+}
+function trickySet(map) {
+  try { localStorage.setItem('muse_tricky_v1', JSON.stringify(map)); } catch (e) {}
+}
+/* Same grading math as saved-word SRS: correct doubles the interval
+   (cap 60 days), wrong restarts at 1 day; due = today + interval. */
+function trickyGrade(tid, correct) {
+  if (!tid) return;
+  const map = trickyGet();
+  const e = map[tid] || { i: 1, due: todayStr(), asked: 0, correct: 0 };
+  e.asked = (e.asked || 0) + 1;
+  if (correct) {
+    e.correct = (e.correct || 0) + 1;
+    e.i = Math.min((e.i || 1) * 2, 60);
+  } else {
+    e.i = 1;
+  }
+  e.due = srsAddDays(todayStr(), e.i);
+  map[tid] = e;
+  trickySet(map);
+}
+function trickyPool(items, scope) {
+  if (!scope || scope === 'all') return items.slice();
+  return items.filter(function (it) { return it.cat === scope; });
+}
+function trickyDueList(items, scope) {
+  const map = trickyGet();
+  const t = todayStr();
+  return trickyPool(items, scope).filter(function (it) {
+    const e = map[it.id];
+    return e && e.due <= t;
+  }).sort(function (a, b) {
+    return (map[a.id].due < map[b.id].due ? -1 : 1);
+  });
+}
+function trickyQuestionFor(it, phrasalPool) {
+  if (it.type === 'mcq') {
+    const pairs = (it.options || []).map(function (op, i) { return { op: op, ok: i === it.answer }; });
+    const sh = shuffleArr(pairs);
+    return { qtype: 'select', question: it.prompt,
+      options: sh.map(function (x) { return x.op; }),
+      answer: sh.findIndex(function (x) { return x.ok; }),
+      kind: 'tricky', tid: it.id };
+  }
+  if (it.type === 'gap') {
+    return { qtype: 'typein', question: it.prompt, accept: it.accept || [],
+      kind: 'tricky', tid: it.id };
+  }
+  /* phrasal verb: meaning choice or word choice, language by level */
+  const useFa = (it.lv === 'a1' || it.lv === 'a2');
+  const getM = function (x) { return useFa ? x.fa : x.en; };
+  const others = shuffleArr((phrasalPool || []).filter(function (x) {
+    return x.id !== it.id && getM(x);
+  })).slice(0, 3);
+  if (!others.length) return null;
+  if (Math.random() < 0.5) {
+    const opts = shuffleArr([{ t: getM(it), ok: true }].concat(others.map(function (x) { return { t: getM(x), ok: false }; })));
+    return { qtype: 'select',
+      question: 'What does “' + it.word + '” mean?' + (it.ex ? ' — “' + it.ex + '”' : ''),
+      options: opts.map(function (x) { return x.t; }),
+      answer: opts.findIndex(function (x) { return x.ok; }),
+      kind: 'tricky', tid: it.id };
+  }
+  const opts2 = shuffleArr([{ t: it.word, ok: true }].concat(others.map(function (x) { return { t: x.word, ok: false }; })));
+  return { qtype: 'select',
+    question: 'Which phrasal verb means: ' + getM(it),
+    options: opts2.map(function (x) { return x.t; }),
+    answer: opts2.findIndex(function (x) { return x.ok; }),
+    kind: 'tricky', tid: it.id };
+}
+async function buildTrickyDeck(scope) {
+  const items = await loadTrickyIndex();
+  const pool = trickyPool(items, scope);
+  if (!pool.length) return [];
+  const map = trickyGet();
+  const due = trickyDueList(items, scope);
+  let fresh = shuffleArr(pool.filter(function (it) { return !map[it.id]; }));
+  let picked = due.slice(0, 12);
+  const room = 15 - picked.length;
+  if (room > 0) picked = picked.concat(fresh.slice(0, Math.min(5, room)));
+  if (!picked.length) {
+    /* nothing due and nothing new: pull the soonest reviews forward so a
+       session can always start from a non-empty category */
+    picked = pool.filter(function (it) { return map[it.id]; })
+      .sort(function (a, b) { return (map[a.id].due < map[b.id].due ? -1 : 1); })
+      .slice(0, 5);
+  }
+  const phrasalPool = items.filter(function (x) { return x.type === 'phrasal'; });
+  const qs = [];
+  shuffleArr(picked).forEach(function (it) {
+    const q = trickyQuestionFor(it, phrasalPool);
+    if (q) qs.push(q);
+  });
+  return qs;
+}
+function renderTricky(v, arg) {
+  v.innerHTML = '<h1 class="tk-title">🧠 Tricky Bits</h1>' +
+    '<p class="tk-sub">Easy to forget — quick daily drills with spaced repetition.</p>' +
+    '<div class="empty">Loading drills…</div>';
+  loadTrickyIndex().then(function (items) {
+    if (!document.querySelector('.tk-title')) return;
+    const map = trickyGet();
+    const t = todayStr();
+    const dueAll = trickyDueList(items, 'all').length;
+    let masteredAll = 0;
+    items.forEach(function (it) { const e = map[it.id]; if (e && (e.i || 0) >= 30) masteredAll++; });
+    let html = '<h1 class="tk-title">🧠 Tricky Bits</h1>' +
+      '<p class="tk-sub">Easy to forget — quick daily drills with spaced repetition.</p>' +
+      '<div class="tk-hero">' +
+      '<div class="tk-hero-main"><span class="tk-due-big">' + dueAll + '</span>' +
+      '<span class="tk-due-label">due for review<br><span class="tk-hero-sub">' + masteredAll + ' of ' + items.length + ' mastered</span></span></div>' +
+      '<button class="btn tk-go" data-action="tricky-all"' + (dueAll ? '' : ' disabled') + '>▶ Review all due</button></div>';
+    TRICKY_CATS.forEach(function (c) {
+      const pool = trickyPool(items, c.id);
+      if (!pool.length) return;
+      let due = 0, fresh = 0, mastered = 0;
+      pool.forEach(function (it) {
+        const e = map[it.id];
+        if (!e) fresh++;
+        else {
+          if (e.due <= t) due++;
+          if ((e.i || 0) >= 30) mastered++;
+        }
+      });
+      const pct = pool.length ? Math.round(mastered / pool.length * 100) : 0;
+      html += '<div class="tk-row">' +
+        '<span class="tk-ico">' + c.ico + '</span>' +
+        '<span class="tk-main"><b>' + esc(c.name) + '</b>' +
+        '<span class="tk-desc">' + esc(c.desc) + '</span>' +
+        '<span class="tk-counts">' + due + ' due · ' + fresh + ' new · ' + pool.length + ' total</span>' +
+        '<span class="tk-bar"><span class="tk-bar-fill" style="width:' + pct + '%"></span></span></span>' +
+        '<button class="btn tk-practice" data-action="tricky-cat" data-cat="' + c.id + '">Practice</button></div>';
+    });
+    v.innerHTML = html;
+    window.scrollTo(0, 0);
+  }).catch(function () {
+    if (!document.querySelector('.tk-title')) return;
+    v.innerHTML = '<h1 class="tk-title">🧠 Tricky Bits</h1>' +
+      '<div class="empty">Could not load the drills — check your connection and try again.</div>';
+  });
+}
+/* Home daily card (mirrors paintReviewDue): only when drills are due. */
+async function paintTrickyDue() {
+  const wrap = document.getElementById('home-tricky-wrap');
+  if (!wrap) return;
+  let items = [];
+  try { items = await loadTrickyIndex(); } catch (e) { return; }
+  if (!document.getElementById('home-tricky-wrap')) return;
+  const due = trickyDueList(items, 'all').length;
+  if (!due) { wrap.innerHTML = ''; return; }
+  const label = due + ' tricky bit' + (due > 1 ? 's' : '') + ' due for review';
+  if (!isDesktop()) {
+    wrap.innerHTML = '<div class="hm-card">' +
+      '<span class="hm-icon">🧠</span><span class="hm-main"><span class="hm-kicker">TRICKY BITS</span>' +
+      '<span class="hm-title">' + label + '</span>' +
+      '<span class="hm-subtxt">The easy-to-forget bits — a quick drill keeps them sharp</span></span>' +
+      '<button class="hm-btn" data-action="tricky-all">Review →</button></div>';
+    return;
+  }
+  wrap.innerHTML = '<div class="g-banner">' +
+    '<span class="g-b-icon">🧠</span><span class="g-b-main"><b>Tricky Bits</b>' +
+    '<span>' + label + ' — a quick drill keeps them sharp</span></span>' +
+    '<button class="g-b-cta" data-action="tricky-all">Review →</button></div>';
+}
+
 /* ---------------- vocabulary-page bookmarks ----------------
    Same saved_words store as lesson bookmarks, with lesson_date '' (null in
    the cloud) so vocab saves coexist with per-lesson saves of the same word. */
@@ -2244,7 +2448,7 @@ function shouldEnterAppMode() {
 }
 
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest', 'certificate'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'ptest', 'certificate'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'ptest', 'certificate'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -2396,6 +2600,7 @@ function show(view, arg) {
   else if (view === 'vocab') renderVocab(v, arg);
   else if (view === 'sentences') renderSentences(v, arg);
   else if (view === 'words') renderWords(v, arg);
+  else if (view === 'tricky') renderTricky(v, arg);
   else if (view === 'ptest') renderPTest(v, arg);
 }
 
@@ -10122,7 +10327,7 @@ function paintHome(v, mistakes, attempts) {
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
 
   // 0b2 — Grammar guides banner (smart: explore / continue / completed)
-  html += '<div id="home-review-wrap"></div>';
+  html += '<div id="home-review-wrap"></div><div id="home-tricky-wrap"></div>';
   html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-ielts-wrap"></div>';
   html += '<div id="home-vocab-wrap"></div>';
@@ -10202,7 +10407,7 @@ function paintHome(v, mistakes, attempts) {
   }
 
   v.innerHTML = html;
-  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner();
+  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue();
   paintVocabBanner();
   paintWordsBanner();
   paintSentenceBanner();
@@ -10566,7 +10771,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   const today = lessons[0] || null;
   let html = '<div class="dhome">';
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
-  html += '<div id="home-review-wrap"></div>';
+  html += '<div id="home-review-wrap"></div><div id="home-tricky-wrap"></div>';
   html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-ielts-wrap"></div>';
   html += '<div id="home-vocab-wrap"></div>';
@@ -10590,7 +10795,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   v.innerHTML = html;
   wireDhPlayer();
   refreshDhProgress();
-  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner();
+  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue();
   paintVocabBanner();
   paintWordsBanner();
   paintSentenceBanner();
@@ -11827,6 +12032,10 @@ async function startQuiz(kind, dateStr) {
     if (!m) m = { date: todayStr(), level: (state.user && state.user.level) || '', theme: '' };
     const allSaved = await getSavedWords();
     questions = buildSavedDeck(srsDueRows(allSaved), allSaved);
+  } else if (kind === 'tricky') {
+    m = { date: todayStr(), level: (state.user && state.user.level) || (m && m.level) || '', theme: 'Tricky Bits' };
+    questions = await buildTrickyDeck(state._trickyScope || 'all');
+    state._trickyScope = null;
   }
   if (!questions.length) return;
   /* Fix 2: resume an in-progress word/grammar quiz instead of restarting it. */
@@ -11845,7 +12054,7 @@ function beginQuizSession(kind, m, questions, prog) {
   let qHearts;
   if (prog) {
     qHearts = Math.max(prog.hearts || 0, getHearts());
-  } else if (kind === 'word' || kind === 'grammar' || kind === 'saved' || kind === 'sentence' || kind === 'srs') {
+  } else if (kind === 'word' || kind === 'grammar' || kind === 'saved' || kind === 'sentence' || kind === 'srs' || kind === 'tricky') {
     qHearts = sessionHeartGrant();
     setHearts(qHearts);
   } else {
@@ -11894,7 +12103,7 @@ function renderQuizView() {
   /* Fix 4: the mistakes review uses the same full-screen Duolingo-style player
      as the word/grammar quizzes (one question at a time, instant feedback,
      hearts, progress bar, XP/result screen). */
-  if (q.kind === 'word' || q.kind === 'assignment' || q.kind === 'grammar' || q.kind === 'mistakes' || q.kind === 'saved' || q.kind === 'sentence' || q.kind === 'srs') { renderDuoQuizView(); return; }
+  if (q.kind === 'word' || q.kind === 'assignment' || q.kind === 'grammar' || q.kind === 'mistakes' || q.kind === 'saved' || q.kind === 'sentence' || q.kind === 'srs' || q.kind === 'tricky') { renderDuoQuizView(); return; }
   const v = $('#view');
   const cur = q.questions[q.idx];
   const total = q.questions.length;
@@ -12020,6 +12229,8 @@ function finishQuiz() {
     }
     awardPoints('assignment_quiz', 10, q.date || todayStr());
     saveAssignmentResult();
+  } else if (q.kind === 'tricky') {
+    awardPoints('tricky_drill', 10, q.date || todayStr());
   }
   /* Sentence game completion bonus (Alireza, 2026-10-25): +20 once per
      lesson — 'saved' for the Review game, 'cat:<slug>' per bank topic. */
@@ -12278,6 +12489,7 @@ function duoTypeinCheck() {
   const correct = (cur.accept || []).some(function (a) { return duoNormalize(a) === norm; });
   q.wasCorrect = correct;
   q.picked = val; /* store typed text */
+  if (cur.kind === 'tricky' && cur.tid) { try { trickyGrade(cur.tid, q.wasCorrect); } catch (e) {} }
   if (q.log) {
     const entry = { picked: val, correct: correct };
     if (cur.v2) {
@@ -12320,6 +12532,7 @@ async function duoAnswer(idx) {
   }
   /* Saved-word SRS: every bookmark-quiz answer moves the word's schedule. */
   if (cur.kind === 'saved' && cur.word) { try { srsGrade(cur.word, q.wasCorrect); } catch (e) {} }
+  if (cur.kind === 'tricky' && cur.tid) { try { trickyGrade(cur.tid, q.wasCorrect); } catch (e) {} }
   /* listening: answering dismisses the mini-player bar */
   if (cur.qtype === 'listen') closePlayer();
   if (q.wasCorrect) {
@@ -12511,7 +12724,7 @@ async function buyHearts(btn) {
   const say = function (msg) {
     if (note) { note.textContent = msg; note.style.display = 'block'; }
   };
-  const resumeKind = state.quiz && (state.quiz.kind === 'assignment' || state.quiz.kind === 'sentence') ? state.quiz.kind : null;
+  const resumeKind = state.quiz && (state.quiz.kind === 'assignment' || state.quiz.kind === 'sentence' || state.quiz.kind === 'tricky') ? state.quiz.kind : null;
   if (btn) btn.disabled = true;
   try {
     await refreshMyPoints();
@@ -13646,7 +13859,8 @@ var REV_ICONS = {
   history: '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="4.5" y="3" width="15" height="18" rx="2.5" fill="none" stroke="#2E9E5B" stroke-width="1.9"/><path d="M8.2 8.4h7.6M8.2 12h7.6M8.2 15.6h4.8" stroke="#2E9E5B" stroke-width="1.9" stroke-linecap="round"/></svg>',
   words: '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M7 2.8h10a1.2 1.2 0 0 1 1.2 1.2v17.2L12 16.9l-6.2 4.3V4A1.2 1.2 0 0 1 7 2.8z" fill="#F0443E"/><path d="M12 5.6l1.25 2.53 2.79.4-2.02 1.97.48 2.78L12 11.97l-2.5 1.31.48-2.78-2.02-1.97 2.79-.4z" fill="#fff"/></svg>',
   shadowing: '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="9" y="2" width="6" height="11.5" rx="3" fill="#2B3350"/><path d="M6 11.2a6 6 0 0 0 12 0" fill="none" stroke="#2B3350" stroke-width="1.9" stroke-linecap="round"/><path d="M12 17.4V21M8.6 21h6.8" stroke="#2B3350" stroke-width="1.9" stroke-linecap="round"/></svg>',
-  mistakes: '<svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><rect x="1.6" y="1.6" width="20.8" height="20.8" rx="6" fill="#2F7DE1"/><path d="M7.6 12a4.4 4.4 0 0 1 7.5-3.1M16.4 12a4.4 4.4 0 0 1-7.5 3.1" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><path d="M15.5 5.7v3.4h-3.4M8.5 18.3v-3.4h3.4" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+  mistakes: '<svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true"><rect x="1.6" y="1.6" width="20.8" height="20.8" rx="6" fill="#2F7DE1"/><path d="M7.6 12a4.4 4.4 0 0 1 7.5-3.1M16.4 12a4.4 4.4 0 0 1-7.5 3.1" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round"/><path d="M15.5 5.7v3.4h-3.4M8.5 18.3v-3.4h3.4" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  tricky: '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#7C3AED"/><path d="M13 4.5 6.8 13h4L9.8 19.5 16.5 10.6h-4.2z" fill="#fff"/></svg>'
 };
 function reviewCatCard(href, mod, ico, title, desc, count, countId) {
   return '<a class="rev-cat rev-cat-' + mod + '" href="' + href + '">' +
@@ -13703,6 +13917,7 @@ function paintMistakes(v, arr, arg) {
     '<p>Practice saved words, shadowing and mistakes.</p></div>' +
     '<img class="rev-hero-img" src="/media/home/mascot-read-book.png" alt=""></div>' +
     reviewCatCard('#/review/words', 'words', REV_ICONS.words, 'Saved words', 'Hard words you bookmarked — practice quiz & sentence game', '…', 'rev-words-count') +
+    reviewCatCard('#/tricky', 'tricky', REV_ICONS.tricky, 'Tricky Bits', 'The easy-to-forget bits — phrasal verbs, articles, prepositions & pairs', '…', 'rev-tricky-count') +
     reviewCatCard('#/review/shadowing', 'shadowing', REV_ICONS.shadowing, 'Saved shadowing', 'Sentences you saved to practice aloud', spCount, '') +
     reviewCatCard('#/review/mistakes', 'mistakes', REV_ICONS.mistakes, 'Mistakes to review', arr.length ? 'Get one right and it leaves the list' : 'Nothing to review — nice work! 🎉', arr.length, '') +
     reviewCatCard('#/review/history', 'history', REV_ICONS.history, 'Quiz history', 'Every quiz you have taken — tap one for details', '…', 'rev-att-count');
@@ -13717,6 +13932,13 @@ async function loadReviewHubCounts() {
     const dueN = srsDueCount(arr);
     cur.innerHTML = arr.length + (dueN ? ' <span class="rev-due-pill">' + dueN + ' due</span>' : '');
   }
+  loadTrickyIndex().then(function (items) {
+    const tc = document.getElementById('rev-tricky-count');
+    if (tc) {
+      const dN = trickyDueList(items, 'all').length;
+      tc.innerHTML = items.length + (dN ? ' <span class="rev-due-pill">' + dN + ' due</span>' : '');
+    }
+  }).catch(function () {});
   const atts = await getAttempts();
   const ac = document.getElementById('rev-att-count');
   if (ac) ac.textContent = atts.length;
@@ -14903,7 +15125,7 @@ function bindEvents() {
          An in-progress quiz is stashed so the student can resume it exactly
          where they left off after the review (Fix 2: word/grammar too). */
       t.disabled = true;
-      if (state.quiz && (state.quiz.kind === 'assignment' || state.quiz.kind === 'word' || state.quiz.kind === 'grammar' || state.quiz.kind === 'sentence')) {
+      if (state.quiz && (state.quiz.kind === 'assignment' || state.quiz.kind === 'word' || state.quiz.kind === 'grammar' || state.quiz.kind === 'sentence' || state.quiz.kind === 'tricky')) {
         state.pausedQuiz = state.quiz;
         saveProgressAny();
       }
@@ -14928,7 +15150,7 @@ function bindEvents() {
     else if (a === 'resume-paused') {
       const pq = state.pausedQuiz;
       state.pausedQuiz = null;
-      if (pq && (pq.kind === 'assignment' || pq.kind === 'word' || pq.kind === 'grammar' || pq.kind === 'saved' || pq.kind === 'srs' || pq.kind === 'sentence')) {
+      if (pq && (pq.kind === 'assignment' || pq.kind === 'word' || pq.kind === 'grammar' || pq.kind === 'saved' || pq.kind === 'srs' || pq.kind === 'sentence' || pq.kind === 'tricky')) {
         /* the heart-killing question was answered wrong — let them retry it fresh.
            Hearts earned in review apply: keep the better of saved/current (Fix 2). */
         if (pq.log && pq.log.length > pq.idx) pq.log.pop();
@@ -14965,6 +15187,8 @@ function bindEvents() {
         else go('review');
       });
     }
+    else if (a === 'tricky-all') { state._trickyScope = 'all'; startQuiz('tricky'); }
+    else if (a === 'tricky-cat') { state._trickyScope = t.getAttribute('data-cat'); startQuiz('tricky'); }
     else if (a === 'toggle-save-word') { toggleSaveWordBtn(t); }
     else if (a === 'vc-toggle-save') { toggleVocabSaveBtn(t); }
     else if (a === 'unsave-word') {
@@ -15123,7 +15347,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611080003';
+var APP_VERSION = '202611080030';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

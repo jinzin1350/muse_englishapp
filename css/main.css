@@ -4879,3 +4879,27 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
 .duo-hint-btn:disabled{opacity:.4;cursor:default;}
 .duo-hint-cost{color:#E11D48;font-weight:800;}
 .duo-tok.hinted{background:#E9D5FF !important;box-shadow:0 3px 0 #B794E0 !important;}
+
+/* ---------------- Tricky Bits hub ---------------- */
+.tk-title { font-family: 'Fredoka', sans-serif; font-size: 30px; color: #2A1052; margin: 18px 0 4px; }
+.tk-sub { color: #6B6390; margin: 0 0 16px; font-size: 15px; }
+.tk-hero { display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  background: linear-gradient(135deg, #6D28D9, #9333EA); color: #fff; border-radius: 20px;
+  padding: 18px 20px; margin-bottom: 16px; box-shadow: 0 10px 24px rgba(109, 40, 217, .25); }
+.tk-hero-main { display: flex; align-items: center; gap: 14px; }
+.tk-due-big { font-family: 'Fredoka', sans-serif; font-size: 44px; line-height: 1; }
+.tk-due-label { font-weight: 600; font-size: 15px; line-height: 1.35; }
+.tk-hero-sub { font-weight: 400; opacity: .85; font-size: 13px; }
+.tk-go { background: #fff; color: #6D28D9; font-weight: 700; border: none; border-radius: 999px; padding: 12px 18px; }
+.tk-go:disabled { opacity: .55; }
+.tk-row { display: flex; align-items: center; gap: 14px; background: #fff; border-radius: 16px;
+  padding: 14px 16px; margin-bottom: 10px; box-shadow: 0 2px 10px rgba(42, 16, 82, .06); }
+.tk-ico { font-size: 30px; width: 44px; text-align: center; flex: none; }
+.tk-main { flex: 1; display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.tk-main b { color: #2A1052; font-size: 16px; }
+.tk-desc { color: #6B6390; font-size: 13px; }
+.tk-counts { color: #12B5A5; font-size: 12.5px; font-weight: 600; margin-top: 2px; }
+.tk-bar { display: block; height: 6px; background: #EFE9FB; border-radius: 999px; margin-top: 6px; overflow: hidden; }
+.tk-bar-fill { display: block; height: 100%; background: #12B5A5; border-radius: 999px; }
+.tk-practice { background: #6D28D9; color: #fff; border: none; border-radius: 999px;
+  padding: 10px 16px; font-weight: 700; flex: none; }
