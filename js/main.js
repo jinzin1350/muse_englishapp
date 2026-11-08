@@ -849,7 +849,7 @@ function trickyQuestionFor(it, phrasalPool, gapPools) {
     return { qtype: 'select', question: it.prompt,
       options: sh.map(function (x) { return x.op; }),
       answer: sh.findIndex(function (x) { return x.ok; }),
-      kind: 'tricky', tid: it.id };
+      kind: 'tricky', tid: it.id, lesson: it.slug ? '#/grammar/' + it.slug : null };
   }
   if (it.type === 'gap') {
     const correct = (it.accept || [])[0];
@@ -865,7 +865,7 @@ function trickyQuestionFor(it, phrasalPool, gapPools) {
     return { qtype: 'select', question: it.prompt,
       options: gopts.map(function (x) { return x.t; }),
       answer: gopts.findIndex(function (x) { return x.ok; }),
-      kind: 'tricky', tid: it.id };
+      kind: 'tricky', tid: it.id, lesson: it.slug ? '#/grammar/' + it.slug : null };
   }
   /* phrasal verb: meaning choice or word choice, language by level */
   const useFa = (it.lv === 'a1' || it.lv === 'a2');
@@ -880,14 +880,14 @@ function trickyQuestionFor(it, phrasalPool, gapPools) {
       question: 'What does “' + it.word + '” mean?' + (it.ex ? ' — “' + it.ex + '”' : ''),
       options: opts.map(function (x) { return x.t; }),
       answer: opts.findIndex(function (x) { return x.ok; }),
-      kind: 'tricky', tid: it.id };
+      kind: 'tricky', tid: it.id, lesson: '#/vocab/phrasal-verbs' };
   }
   const opts2 = shuffleArr([{ t: it.word, ok: true }].concat(others.map(function (x) { return { t: x.word, ok: false }; })));
   return { qtype: 'select',
     question: 'Which phrasal verb means: ' + getM(it),
     options: opts2.map(function (x) { return x.t; }),
     answer: opts2.findIndex(function (x) { return x.ok; }),
-    kind: 'tricky', tid: it.id };
+    kind: 'tricky', tid: it.id, lesson: '#/vocab/phrasal-verbs' };
 }
 async function buildTrickyDeck(scope) {
   const items = await loadTrickyIndex();
@@ -1104,7 +1104,7 @@ var PTS_LABELS = {
   shadowing_complete: 'Shadowing complete',
   word_quiz: 'Word quiz complete',
   grammar_quiz: 'Grammar quiz complete',
-  grammar_exercise: 'Grammar exercise',
+  grammar_exercise: 'Grammar exercise', tricky_q: 'Tricky Bits',
   grammar_topic_done: 'Grammar guide complete',
   deck_review: 'Review complete',
   streak_7: '7-day streak',
@@ -12508,6 +12508,7 @@ function duoFooter(q, cur) {
     '<div><div class="duo-tray-title">' + title + '</div>' +
     '<div class="duo-tray-text">' + esc(duoTrayText(q, cur)) + '</div></div></div>' +
     ((!ok && cur.explanation) ? '<div class="duo-explain">💡 ' + esc(cur.explanation) + '</div>' : '') +
+    ((!ok && cur.kind === 'tricky' && cur.lesson) ? '<a class="duo-lesson-link" href="' + cur.lesson + '">📖 Review the lesson</a>' : '') +
     '<button class="duo-continue ' + (ok ? 'ok' : 'bad') + '" data-action="duo-next">' +
     (last ? 'See my score' : 'Continue') + ' <span>→</span></button>' +
     '</div></div>';
@@ -12594,7 +12595,7 @@ function duoTypeinCheck() {
   const correct = (cur.accept || []).some(function (a) { return duoNormalize(a) === norm; });
   q.wasCorrect = correct;
   q.picked = val; /* store typed text */
-  if (cur.kind === 'tricky' && cur.tid) { try { trickyGrade(cur.tid, q.wasCorrect); } catch (e) {} } q.trickyAnswered = (q.trickyAnswered || 0) + 1; try { awardPoints('tricky_q', 5, 'tq-' + cur.tid + '-' + Date.now(), true); } catch (e) {}
+  if (cur.kind === 'tricky' && cur.tid) { try { trickyGrade(cur.tid, q.wasCorrect); } catch (e) {} } q.trickyAnswered = (q.trickyAnswered || 0) + 1; try { awardPoints('tricky_q', 5, 'tq-' + cur.tid + '-' + Date.now()); } catch (e) {}
   if (q.log) {
     const entry = { picked: val, correct: correct };
     if (cur.v2) {
@@ -12637,7 +12638,7 @@ async function duoAnswer(idx) {
   }
   /* Saved-word SRS: every bookmark-quiz answer moves the word's schedule. */
   if (cur.kind === 'saved' && cur.word) { try { srsGrade(cur.word, q.wasCorrect); } catch (e) {} }
-  if (cur.kind === 'tricky' && cur.tid) { try { trickyGrade(cur.tid, q.wasCorrect); } catch (e) {} } q.trickyAnswered = (q.trickyAnswered || 0) + 1; try { awardPoints('tricky_q', 5, 'tq-' + cur.tid + '-' + Date.now(), true); } catch (e) {}
+  if (cur.kind === 'tricky' && cur.tid) { try { trickyGrade(cur.tid, q.wasCorrect); } catch (e) {} } q.trickyAnswered = (q.trickyAnswered || 0) + 1; try { awardPoints('tricky_q', 5, 'tq-' + cur.tid + '-' + Date.now()); } catch (e) {}
   /* listening: answering dismisses the mini-player bar */
   if (cur.qtype === 'listen') closePlayer();
   if (q.wasCorrect) {
@@ -15452,7 +15453,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611080113';
+var APP_VERSION = '202611080124';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

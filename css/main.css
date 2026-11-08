@@ -4906,3 +4906,5 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
 .tk-bar { position: relative; }
 .tk-bar-seen { position: absolute; left: 0; top: 0; height: 100%; background: #C4B5FD; border-radius: 999px; }
 .tk-bar-fill { position: absolute; left: 0; top: 0; }
+.duo-lesson-link { display: block; text-align: center; margin: 0 0 10px; padding: 11px 14px; border-radius: 12px; background: #fff; border: 2px solid #E9D5FF; color: #6D28D9; font-weight: 800; text-decoration: none; }
+.duo-lesson-link:active { transform: translateY(1px); }
