@@ -930,13 +930,13 @@ function renderTricky(v, arg) {
     const map = trickyGet();
     const t = todayStr();
     const dueAll = trickyDueList(items, 'all').length;
-    let masteredAll = 0;
-    items.forEach(function (it) { const e = map[it.id]; if (e && (e.i || 0) >= 30) masteredAll++; });
+    let masteredAll = 0, startedAll = 0;
+    items.forEach(function (it) { const e = map[it.id]; if (e) { startedAll++; if ((e.i || 0) >= 30) masteredAll++; } });
     let html = '<h1 class="tk-title">🧠 Tricky Bits</h1>' +
       '<p class="tk-sub">Easy to forget — quick daily drills with spaced repetition.</p>' +
       '<div class="tk-hero">' +
       '<div class="tk-hero-main"><span class="tk-due-big">' + dueAll + '</span>' +
-      '<span class="tk-due-label">due for review<br><span class="tk-hero-sub">' + masteredAll + ' of ' + items.length + ' mastered</span></span></div>' +
+      '<span class="tk-due-label">due for review<br><span class="tk-hero-sub">' + startedAll + ' of ' + items.length + ' started · ' + masteredAll + ' mastered</span></span></div>' +
       '<button class="btn tk-go" data-action="tricky-all"' + (dueAll ? '' : ' disabled') + '>▶ Review all due</button></div>';
     TRICKY_CATS.forEach(function (c) {
       const pool = trickyPool(items, c.id);
@@ -950,13 +950,15 @@ function renderTricky(v, arg) {
           if ((e.i || 0) >= 30) mastered++;
         }
       });
+      const seen = pool.length - fresh;
+      const pctSeen = pool.length ? Math.round(seen / pool.length * 100) : 0;
       const pct = pool.length ? Math.round(mastered / pool.length * 100) : 0;
       html += '<div class="tk-row">' +
         '<span class="tk-ico">' + c.ico + '</span>' +
         '<span class="tk-main"><b>' + esc(c.name) + '</b>' +
         '<span class="tk-desc">' + esc(c.desc) + '</span>' +
-        '<span class="tk-counts">' + due + ' due · ' + fresh + ' new · ' + pool.length + ' total</span>' +
-        '<span class="tk-bar"><span class="tk-bar-fill" style="width:' + pct + '%"></span></span></span>' +
+        '<span class="tk-counts">' + due + ' due · ' + (seen - mastered) + ' learning · ' + fresh + ' new · ' + pool.length + ' total' + (mastered ? ' · ' + mastered + ' mastered' : '') + '</span>' +
+        '<span class="tk-bar"><span class="tk-bar-seen" style="width:' + pctSeen + '%"></span><span class="tk-bar-fill" style="width:' + pct + '%"></span></span></span>' +
         '<button class="btn tk-practice" data-action="tricky-cat" data-cat="' + c.id + '">Practice</button></div>';
     });
     v.innerHTML = html;
@@ -15450,7 +15452,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611080047';
+var APP_VERSION = '202611080106';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

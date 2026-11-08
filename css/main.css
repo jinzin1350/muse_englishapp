@@ -4903,3 +4903,6 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
 .tk-bar-fill { display: block; height: 100%; background: #12B5A5; border-radius: 999px; }
 .tk-practice { background: #6D28D9; color: #fff; border: none; border-radius: 999px;
   padding: 10px 16px; font-weight: 700; flex: none; }
+.tk-bar { position: relative; }
+.tk-bar-seen { position: absolute; left: 0; top: 0; height: 100%; background: #C4B5FD; border-radius: 999px; }
+.tk-bar-fill { position: absolute; left: 0; top: 0; }
