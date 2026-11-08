@@ -685,6 +685,89 @@ function srsGradeCloud(k, e) {
 }
 
 
+
+/* ---------------- cross-device sync for local progress blobs ----------------
+   Word Map state (muse_wordmap_v1) and the Tricky Bits schedule
+   (muse_tricky_v1) are single JSON blobs per user. They sync through the
+   user_kv table: pull once per session (cloud wins when newer and there
+   are no unpushed local writes), push debounced on every write; last
+   write wins by updated_at. All fire-and-forget — before the user_kv
+   migration runs, the calls fail silently and local remains the working
+   record, the same pattern as saved-word SRS cloud writes. */
+var KV_SYNC_KEYS = ['muse_wordmap_v1', 'muse_tricky_v1'];
+function kvMetaAll() {
+  try { return JSON.parse(localStorage.getItem('muse_kv_meta') || '{}') || {}; }
+  catch (e) { return {}; }
+}
+function kvMetaSet(m) {
+  try { localStorage.setItem('muse_kv_meta', JSON.stringify(m)); } catch (e) {}
+}
+function kvLocalEmpty(lsKey) {
+  try {
+    const v = JSON.parse(localStorage.getItem(lsKey) || 'null');
+    if (!v) return true;
+    if (lsKey === 'muse_wordmap_v1') return !(v.words && Object.keys(v.words).length);
+    return !Object.keys(v).length;
+  } catch (e) { return true; }
+}
+async function kvPush(lsKey) {
+  if (!cloudReady() || !state.user) return;
+  let val = null;
+  try { val = JSON.parse(localStorage.getItem(lsKey) || 'null'); } catch (e) {}
+  if (val === null) return;
+  const meta = kvMetaAll();
+  const m = meta[lsKey] || { u: 0, dirty: false };
+  const stamp = new Date(Math.max(Date.now(), (m.u || 0) + 1)).toISOString();
+  try {
+    const res = await sb.from('user_kv').upsert(
+      { user_id: state.user.id, key: lsKey, value: val, updated_at: stamp },
+      { onConflict: 'user_id,key' });
+    if (res && res.error) return;
+    m.u = Date.parse(stamp); m.dirty = false; meta[lsKey] = m; kvMetaSet(meta);
+  } catch (e) {}
+}
+var _kvTimers = {};
+function kvSchedulePush(lsKey) {
+  const meta = kvMetaAll();
+  const m = meta[lsKey] || { u: 0, dirty: false };
+  m.u = Date.now(); m.dirty = true; meta[lsKey] = m; kvMetaSet(meta);
+  if (!cloudReady()) return;
+  if (_kvTimers[lsKey]) clearTimeout(_kvTimers[lsKey]);
+  _kvTimers[lsKey] = setTimeout(function () { kvPush(lsKey); }, 1200);
+}
+async function kvPullAll() {
+  if (state._kvPulled || !cloudReady() || !state.user) return;
+  state._kvPulled = true;
+  let rows = [];
+  try {
+    const res = await sb.from('user_kv').select('key,value,updated_at').eq('user_id', state.user.id);
+    if (res && !res.error && Array.isArray(res.data)) rows = res.data;
+    else return;
+  } catch (e) { return; }
+  const byKey = {};
+  rows.forEach(function (r) { byKey[r.key] = r; });
+  const meta = kvMetaAll();
+  let changed = false;
+  for (let ki = 0; ki < KV_SYNC_KEYS.length; ki++) {
+    const lsKey = KV_SYNC_KEYS[ki];
+    const m = meta[lsKey] || { u: 0, dirty: false };
+    const row = byKey[lsKey];
+    if (row) {
+      const cloudU = Date.parse(row.updated_at) || 0;
+      if (m.dirty && (m.u || 0) >= cloudU) {
+        kvPush(lsKey);
+      } else if (cloudU > (m.u || 0)) {
+        try { localStorage.setItem(lsKey, JSON.stringify(row.value)); } catch (e) {}
+        m.u = cloudU; m.dirty = false; meta[lsKey] = m; changed = true;
+      }
+    } else if (!kvLocalEmpty(lsKey)) {
+      kvPush(lsKey);
+    }
+  }
+  kvMetaSet(meta);
+  if (changed) { try { onRoute(); } catch (e) {} }
+}
+
 /* ---------------- Tricky Bits: easy-to-forget drills + SRS ----------------
    Retention layer for the areas learners keep forgetting (no-rule
    memorisation + L1-interference): phrasal-verb meanings, dependent
@@ -726,6 +809,7 @@ function trickyGet() {
 }
 function trickySet(map) {
   try { localStorage.setItem('muse_tricky_v1', JSON.stringify(map)); } catch (e) {}
+  kvSchedulePush('muse_tricky_v1');
 }
 /* Same grading math as saved-word SRS: correct doubles the interval
    (cap 60 days), wrong restarts at 1 day; due = today + interval. */
@@ -10407,7 +10491,7 @@ function paintHome(v, mistakes, attempts) {
   }
 
   v.innerHTML = html;
-  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue();
+  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue(); kvPullAll();
   paintVocabBanner();
   paintWordsBanner();
   paintSentenceBanner();
@@ -10795,7 +10879,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   v.innerHTML = html;
   wireDhPlayer();
   refreshDhProgress();
-  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue();
+  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue(); kvPullAll();
   paintVocabBanner();
   paintWordsBanner();
   paintSentenceBanner();
@@ -15347,7 +15431,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611080030';
+var APP_VERSION = '202611080040';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -18191,6 +18275,7 @@ function wordMapGet() {
 }
 function wordMapSet(p) {
   try { localStorage.setItem('muse_wordmap_v1', JSON.stringify(p)); } catch (e) {}
+  kvSchedulePush('muse_wordmap_v1');
 }
 function loadAllWords() {
   if (state.allWords) return Promise.resolve(state.allWords);
