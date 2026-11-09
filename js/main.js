@@ -10507,6 +10507,22 @@ function paintHome(v, mistakes, attempts) {
   // data first, then refreshed with cloud state by refreshHomeStreak().
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
 
+  // 0b1 — Today's lesson + Daily quests FIRST, right under the streak
+  // (2026-11-09, Alireza's order: new users must get the point of the app
+  // immediately — lesson first, then the quests that send them into it).
+  // 1 — Today's lesson (mockup v5 lesson card with illustrated hero)
+  if (!today) {
+    html += '<div class="empty">No lessons published yet — check back tomorrow.</div>';
+  } else {
+    html += lessonBannerHTML(today);
+  }
+
+  // Daily quests (painted with local progress)
+  html += '<div id="home-quests-wrap"></div>';
+
+  // 1b — Previous lessons (days before today) → archive page
+  html += prevLessonsHTML(lessons);
+
   // 0b2 — Grammar guides banner (smart: explore / continue / completed)
   html += '<div id="home-review-wrap"></div><div id="home-tricky-wrap"></div><div id="home-cards-wrap"></div>';
   html += '<div id="home-grammar-wrap"></div>';
@@ -10517,19 +10533,6 @@ function paintHome(v, mistakes, attempts) {
 
   // 0c — Homework from teacher (filled async; empty when none pending)
   html += '<div id="home-hw-wrap"></div>';
-
-  // 0d — Daily quests (painted with local progress)
-  html += '<div id="home-quests-wrap"></div>';
-
-  // 1 — Today's lesson (mockup v5 lesson card with illustrated hero)
-  if (!today) {
-    html += '<div class="empty">No lessons published yet — check back tomorrow.</div>';
-  } else {
-    html += lessonBannerHTML(today);
-  }
-
-  // 1b — Previous lessons (days before today) → archive page
-  html += prevLessonsHTML(lessons);
 
   // 2 — Review (mistakes) — 2026-10-20 mockup redesign (hml-*)
   const todayMistakes = today ? mistakes.filter(function (x) { return x.date === today.date; }) : [];
@@ -15574,7 +15577,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611082138';
+var APP_VERSION = '202611091858';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
