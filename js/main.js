@@ -10955,6 +10955,8 @@ function paintHomeDesktop(v, mistakes, attempts) {
   const today = lessons[0] || null;
   let html = '<div class="dhome">';
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
+  html += '<div class="dh-grid">' + dhQuestsHTML() +
+    '<div class="dh-col">' + dhLessonHTML(today) + dhMistakesHTML(mistakes) + '</div></div>';
   html += '<div id="home-review-wrap"></div><div id="home-tricky-wrap"></div><div id="home-cards-wrap"></div>';
   html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-ielts-wrap"></div>';
@@ -10962,8 +10964,6 @@ function paintHomeDesktop(v, mistakes, attempts) {
   html += '<div id="home-words-wrap"></div>';
   html += '<div id="home-sentence-wrap"></div>';
   html += '<div id="home-hw-wrap"></div>';
-  html += '<div class="dh-grid">' + dhQuestsHTML() +
-    '<div class="dh-col">' + dhLessonHTML(today) + dhMistakesHTML(mistakes) + '</div></div>';
   html += '<div class="dh-grid3">' +
     '<section class="dh-card" id="dh-progress">' + dhProgressHTML({}) + '</section>' +
     dhPodcastHTML(today) +
@@ -15577,7 +15577,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611091858';
+var APP_VERSION = '202611091923';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
