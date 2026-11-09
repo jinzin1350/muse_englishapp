@@ -1,0 +1,275 @@
+{
+  "date": "2026-11-09",
+  "theme": "education & learning",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "art",
+      "pos": "noun",
+      "meaning": "Pictures, drawings, or sculptures.",
+      "example": "I like to draw and make art.",
+      "pronunciation": "ART",
+      "persian": "هنر",
+      "photo": "media/a1/2026-11-09/photos/art.jpg",
+      "word_audio": "media/a1/2026-11-09/word-audio/art.mp3"
+    },
+    {
+      "word": "biology",
+      "pos": "noun",
+      "meaning": "The study of living things like plants and animals.",
+      "example": "We learn about plants in biology class.",
+      "pronunciation": "by-OL-uh-jee",
+      "persian": "زیست‌شناسی",
+      "photo": "media/a1/2026-11-09/photos/biology.jpg",
+      "word_audio": "media/a1/2026-11-09/word-audio/biology.mp3"
+    },
+    {
+      "word": "board",
+      "pos": "noun",
+      "meaning": "A flat piece of wood or plastic.",
+      "example": "We write on the board in class.",
+      "pronunciation": "BORD",
+      "persian": "تخته",
+      "photo": "media/a1/2026-11-09/photos/board.jpg",
+      "word_audio": "media/a1/2026-11-09/word-audio/board.mp3"
+    },
+    {
+      "word": "board pen",
+      "pos": "noun",
+      "meaning": "A pen used for writing on a whiteboard.",
+      "example": "Please use a board pen for the whiteboard.",
+      "pronunciation": "BORD PEN",
+      "persian": "ماژیک وایت‌برد",
+      "photo": "media/a1/2026-11-09/photos/board-pen.jpg",
+      "word_audio": "media/a1/2026-11-09/word-audio/board-pen.mp3"
+    },
+    {
+      "word": "board rubber",
+      "pos": "noun",
+      "meaning": "An object used to clean a whiteboard.",
+      "example": "Can you pass me the board rubber?",
+      "pronunciation": "BORD RUB-er",
+      "persian": "تخته پاک‌کن",
+      "photo": "media/a1/2026-11-09/photos/board-rubber.jpg",
+      "word_audio": "media/a1/2026-11-09/word-audio/board-rubber.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-09/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: School Words",
+    "audio": "media/a1/2026-11-09/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-11-09/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara at School",
+    "audio": "media/a1/2026-11-09/shadowing.mp3",
+    "transcript": "media/a1/2026-11-09/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-09/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/010.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/011.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/012.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/013.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/014.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/015.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/016.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/017.mp3",
+      "media/a1/2026-11-09/shadowing-sentences/018.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'art' mean?",
+      "options": [
+        "The study of living things like plants and animals.",
+        "A flat piece of wood or plastic.",
+        "Pictures, drawings, or sculptures.",
+        "An object used to clean a whiteboard."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'biology' mean?",
+      "options": [
+        "Pictures, drawings, or sculptures.",
+        "A pen used for writing on a whiteboard.",
+        "The study of living things like plants and animals.",
+        "A flat piece of wood or plastic."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'board' mean?",
+      "options": [
+        "An object used to clean a whiteboard.",
+        "A flat piece of wood or plastic.",
+        "The study of living things like plants and animals.",
+        "A pen used for writing on a whiteboard."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'board pen' mean?",
+      "options": [
+        "Pictures, drawings, or sculptures.",
+        "A flat piece of wood or plastic.",
+        "An object used to clean a whiteboard.",
+        "A pen used for writing on a whiteboard."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'board rubber' mean?",
+      "options": [
+        "A pen used for writing on a whiteboard.",
+        "Pictures, drawings, or sculptures.",
+        "An object used to clean a whiteboard.",
+        "The study of living things like plants and animals."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Have Got and Has Got",
+    "explanation": "We use **have got** and **has got** to talk about things we own, our family, how people look, and illnesses. It means the same as **have**.\n\nUse **have got** with I, you, we, and they. Use **has got** with he, she, and it.\n\nFor example, Sara **has got** a board pen in her bag. I **have got** a book about biology.\n\nThe negative forms are **haven't got** and **hasn't got**. For example: I **haven't got** a board rubber today.\n\nFor questions, say **Have** you **got**...? or **Has** she **got**...? Short answers do not use got: Yes, I **have**. No, she **hasn't**.\n\nDo not mix the two forms. Say **Have** you **got** a pen? or **Do** you **have** a pen?\n\n**Have got** is only for the present. For the past, use **had**: when I was a child, I **had** a small desk for art.\n\nFor actions, use only **have**, not **have got**. I **have** breakfast at seven o'clock.",
+    "examples": [
+      "*I**'ve got** two sisters and a brother.* (family)",
+      "*My dad **has got** a new car.* (possession)",
+      "*She**'s got** long dark hair and brown eyes.* (appearance)",
+      "*I can't come today. I**'ve got** a cold.* (illness)",
+      "*We **haven't got** a garden.* (negative)",
+      "***Have** you **got** any brothers or sisters?* (question)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite: Sara has a board rubber. Use 'has got'.",
+        "a": "Sara has got a board rubber."
+      },
+      {
+        "q": "Rewrite: I have got a book about art. Make it negative.",
+        "a": "I haven't got a book about art."
+      },
+      {
+        "q": "Make a question: You have got a board pen.",
+        "a": "Have you got a board pen?"
+      },
+      {
+        "q": "Rewrite: Last year, we have got a new board. Use the past form.",
+        "a": "Last year, we had a new board."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ two brothers.",
+        "options": [
+          "has got",
+          "am got",
+          "have got",
+          "haves got"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ you got a bike?",
+        "options": [
+          "Have",
+          "Do",
+          "Are",
+          "Has"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ long brown hair.",
+        "options": [
+          "have got",
+          "is got",
+          "does got",
+          "has got"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We ___ got a garden, but we have a balcony.",
+        "options": [
+          "don't",
+          "haven't",
+          "hasn't",
+          "aren't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Has your sister got a car? – Yes, she ___.",
+        "options": [
+          "has got",
+          "has",
+          "is",
+          "got"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My grandparents ___ got a house by the sea.",
+        "options": [
+          "has",
+          "is",
+          "are",
+          "have"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ got a terrible headache.",
+        "options": [
+          "I've",
+          "I'm",
+          "I",
+          "I'll"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "How many cousins ___ got?",
+        "options": [
+          "do you",
+          "are you",
+          "have you",
+          "has you"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "In 'He's got a new job', 's means ___.",
+        "options": [
+          "is",
+          "was",
+          "does",
+          "has"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Last year we ___ a dog called Max.",
+        "options": [
+          "have got",
+          "had",
+          "has got",
+          "have"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-11-09/grammar-en.mp3"
+  }
+}

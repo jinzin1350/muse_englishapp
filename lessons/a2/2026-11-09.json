@@ -1,0 +1,279 @@
+{
+  "date": "2026-11-09",
+  "theme": "nature and environment",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "(bride) groom",
+      "pos": "noun",
+      "meaning": "a man who is getting married",
+      "example": "The groom looked very happy on his wedding day.",
+      "pronunciation": "GROOM",
+      "persian": "داماد",
+      "photo": "media/a2/2026-11-09/photos/groom.jpg",
+      "word_audio": "media/a2/2026-11-09/word-audio/groom.mp3"
+    },
+    {
+      "word": "a great deal",
+      "pos": "phrase",
+      "meaning": "a lot, a large amount",
+      "example": "We learned a great deal from the project.",
+      "pronunciation": "uh GRAYT DEEL",
+      "persian": "مقدار زیادی، خیلی",
+      "photo": "media/a2/2026-11-09/photos/a-great-deal.jpg",
+      "word_audio": "media/a2/2026-11-09/word-audio/a-great-deal.mp3"
+    },
+    {
+      "word": "a week/month/year (etc.) [every]",
+      "pos": "adverbial phrase",
+      "meaning": "happening each week, month, or year",
+      "example": "I get paid once a month.",
+      "pronunciation": "uh WEEK MUNTH YEER",
+      "persian": "هر هفته/ماه/سال",
+      "photo": "media/a2/2026-11-09/photos/a-week-month-year.jpg",
+      "word_audio": "media/a2/2026-11-09/word-audio/a-week-month-year.mp3"
+    },
+    {
+      "word": "abroad",
+      "pos": "adverb",
+      "meaning": "in or to a foreign country",
+      "example": "I want to study abroad next year.",
+      "pronunciation": "uh-BRAWD",
+      "persian": "خارج از کشور",
+      "photo": "media/a2/2026-11-09/photos/abroad.jpg",
+      "word_audio": "media/a2/2026-11-09/word-audio/abroad.mp3"
+    },
+    {
+      "word": "absent",
+      "pos": "adjective",
+      "meaning": "not present in a place",
+      "example": "She was absent from school yesterday.",
+      "pronunciation": "AB-sunt",
+      "persian": "غایب",
+      "photo": "media/a2/2026-11-09/photos/absent.jpg",
+      "word_audio": "media/a2/2026-11-09/word-audio/absent.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-09/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Weddings, Travel and Time",
+    "audio": "media/a2/2026-11-09/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-09/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Groom Abroad",
+    "audio": "media/a2/2026-11-09/shadowing.mp3",
+    "transcript": "media/a2/2026-11-09/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-09/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/015.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/016.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/017.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/018.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/019.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/020.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/021.mp3",
+      "media/a2/2026-11-09/shadowing-sentences/022.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does '(bride) groom' mean?",
+      "options": [
+        "in or to a foreign country",
+        "a man who is getting married",
+        "a lot, a large amount",
+        "not present in a place"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'a great deal' mean?",
+      "options": [
+        "a lot, a large amount",
+        "not present in a place",
+        "happening each week, month, or year",
+        "a man who is getting married"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'a week/month/year (etc.) [every]' mean?",
+      "options": [
+        "in or to a foreign country",
+        "a man who is getting married",
+        "happening each week, month, or year",
+        "a lot, a large amount"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'abroad' mean?",
+      "options": [
+        "not present in a place",
+        "happening each week, month, or year",
+        "a lot, a large amount",
+        "in or to a foreign country"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'absent' mean?",
+      "options": [
+        "a man who is getting married",
+        "not present in a place",
+        "in or to a foreign country",
+        "happening each week, month, or year"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Could for Past Ability",
+    "explanation": "**Could** is the past of *can* for ability. Use it for general abilities in the past.\n\nUse subject + **could** + base verb, with no -s and no *to*. For example, the groom **could** swim when he was five.\n\nThe negative is **couldn't**. For example: I **couldn't** sleep last night, and I was absent from class.\n\nFor questions, say **Could** you...? Short answers are: Yes, I **could**. No, I **couldn't**.\n\nFor one specific success, use **was able to** or **managed to**, not *could*. In the negative, **couldn't** is fine for both.\n\nWith verbs like see, hear and understand, **could** is fine for a specific situation. I **could** hear music from abroad on the radio.",
+    "examples": [
+      "*I **could** read before I started school.* (general ability)",
+      "*She **couldn't** speak English when she arrived in Canada.* (negative)",
+      "***Could** you swim when you were a child?* (question)",
+      "*My dad **could** run very fast when he was young.* (general ability)",
+      "*I **could** hear music from the next room.* (senses)",
+      "*After two hours, we **managed to** fix the car.* (one success)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite: The groom can swim now, in the past. Use 'could'.",
+        "a": "The groom could swim."
+      },
+      {
+        "q": "Rewrite: I could not sleep last night. Use the short negative form.",
+        "a": "I couldn't sleep last night."
+      },
+      {
+        "q": "Make a question: You could speak English abroad as a child.",
+        "a": "Could you speak English abroad as a child?"
+      },
+      {
+        "q": "Rewrite: Last night I could finish my work on time, as one specific success. Use 'managed to'.",
+        "a": "Last night I managed to finish my work on time."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "When I was four, I ___ read.",
+        "options": [
+          "can",
+          "could",
+          "coulds",
+          "could to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My grandmother ___ play the piano beautifully.",
+        "options": [
+          "could",
+          "coulds",
+          "can to",
+          "is able"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ sleep last night because of the noise.",
+        "options": [
+          "can't",
+          "didn't could",
+          "couldn't",
+          "not could"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ you speak English when you were a child?",
+        "options": [
+          "Can",
+          "Coulds",
+          "Were",
+          "Could"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The exam was difficult, but I ___ pass it.",
+        "options": [
+          "could",
+          "was able to",
+          "can",
+          "could to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Could you ride a bike when you were five? – Yes, I ___.",
+        "options": [
+          "could",
+          "can",
+          "did",
+          "was"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ swim when she was three.",
+        "options": [
+          "can",
+          "could to",
+          "coulds",
+          "could"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We ___ go to the park because it was raining.",
+        "options": [
+          "can't",
+          "didn't can",
+          "couldn't",
+          "weren't able"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "I didn't could find my keys.",
+          "I couldn't to find my keys.",
+          "I couldn't find my keys.",
+          "I not could find my keys."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I tried for hours, and finally I ___ open the box.",
+        "options": [
+          "could",
+          "managed to",
+          "can",
+          "managed"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-11-09/grammar-en.mp3"
+  }
+}

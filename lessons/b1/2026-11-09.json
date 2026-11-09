@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-09",
+  "theme": "health & body",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "flu",
+      "pos": "noun",
+      "meaning": "A common illness like a bad cold.",
+      "example": "I have the flu and feel very tired.",
+      "pronunciation": "FLOO",
+      "persian": "آنفولانزا، سرماخوردگی شدید",
+      "photo": "media/b1/2026-11-09/photos/flu.jpg",
+      "word_audio": "media/b1/2026-11-09/word-audio/flu.mp3"
+    },
+    {
+      "word": "ill",
+      "pos": "adjective",
+      "meaning": "Not feeling well, sick.",
+      "example": "She felt ill and went home from school.",
+      "pronunciation": "IL",
+      "persian": "بیمار، ناخوش",
+      "photo": "media/b1/2026-11-09/photos/ill.jpg",
+      "word_audio": "media/b1/2026-11-09/word-audio/ill.mp3"
+    },
+    {
+      "word": "illness",
+      "pos": "noun",
+      "meaning": "A disease or period of being sick.",
+      "example": "He missed work due to a sudden illness.",
+      "pronunciation": "IL-nus",
+      "persian": "بیماری",
+      "photo": "media/b1/2026-11-09/photos/illness.jpg",
+      "word_audio": "media/b1/2026-11-09/word-audio/illness.mp3"
+    },
+    {
+      "word": "obesity",
+      "pos": "noun",
+      "meaning": "The state of being very fat and unhealthy.",
+      "example": "Obesity is a serious health problem.",
+      "pronunciation": "uh-BEE-suh-tee",
+      "persian": "چاقی مفرط",
+      "photo": "media/b1/2026-11-09/photos/obesity.jpg",
+      "word_audio": "media/b1/2026-11-09/word-audio/obesity.mp3"
+    },
+    {
+      "word": "painful",
+      "pos": "adjective",
+      "meaning": "Causing physical or emotional pain.",
+      "example": "My knee is very painful after the fall.",
+      "pronunciation": "PAYN-ful",
+      "persian": "دردناک",
+      "photo": "media/b1/2026-11-09/photos/painful.jpg",
+      "word_audio": "media/b1/2026-11-09/word-audio/painful.mp3"
+    },
+    {
+      "word": "quantity",
+      "pos": "noun",
+      "meaning": "An amount or number of something.",
+      "example": "We need a large quantity of food for the party.",
+      "pronunciation": "KWON-tuh-tee",
+      "persian": "مقدار، کمیت",
+      "photo": "media/b1/2026-11-09/photos/quantity.jpg",
+      "word_audio": "media/b1/2026-11-09/word-audio/quantity.mp3"
+    },
+    {
+      "word": "reduce",
+      "pos": "verb",
+      "meaning": "To make something smaller or less.",
+      "example": "We need to reduce our waste.",
+      "pronunciation": "ri-DYOOS",
+      "persian": "کاهش دادن",
+      "photo": "media/b1/2026-11-09/photos/reduce.jpg",
+      "word_audio": "media/b1/2026-11-09/word-audio/reduce.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-11-09/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Staying Healthy",
+    "audio": "media/b1/2026-11-09/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-11-09/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Tom and the Flu",
+    "audio": "media/b1/2026-11-09/shadowing.mp3",
+    "transcript": "media/b1/2026-11-09/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b1/2026-11-09/shadowing-sentences/001.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/002.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/003.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/004.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/005.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/006.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/007.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/008.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/009.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/010.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/011.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/012.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/013.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/014.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/015.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/016.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/017.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/018.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/019.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/020.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/021.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/022.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/023.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/024.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/025.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/026.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/027.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/028.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/029.mp3",
+      "media/b1/2026-11-09/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'flu' mean?",
+      "options": [
+        "A disease or period of being sick.",
+        "A common illness like a bad cold.",
+        "An amount or number of something.",
+        "Not feeling well, sick."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'ill' mean?",
+      "options": [
+        "To make something smaller or less.",
+        "An amount or number of something.",
+        "The state of being very fat and unhealthy.",
+        "Not feeling well, sick."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'illness' mean?",
+      "options": [
+        "The state of being very fat and unhealthy.",
+        "To make something smaller or less.",
+        "Causing physical or emotional pain.",
+        "A disease or period of being sick."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'obesity' mean?",
+      "options": [
+        "Not feeling well, sick.",
+        "A disease or period of being sick.",
+        "The state of being very fat and unhealthy.",
+        "A common illness like a bad cold."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'painful' mean?",
+      "options": [
+        "To make something smaller or less.",
+        "A common illness like a bad cold.",
+        "A disease or period of being sick.",
+        "Causing physical or emotional pain."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'quantity' mean?",
+      "options": [
+        "Causing physical or emotional pain.",
+        "Not feeling well, sick.",
+        "The state of being very fat and unhealthy.",
+        "An amount or number of something."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'reduce' mean?",
+      "options": [
+        "Causing physical or emotional pain.",
+        "To make something smaller or less.",
+        "A disease or period of being sick.",
+        "A common illness like a bad cold."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "examples": [
+      "*He's very **good at** drawing.* (good at + -ing)",
+      "*I'm not **interested in** football.* (interested in)",
+      "*Are you **afraid of** spiders?* (afraid of)",
+      "*She's **married to** an Australian.* (married to, not with)",
+      "*Canada is **famous for** its lakes and mountains.* (famous for)",
+      "*I'm **worried about** my exam.* (worried about)"
+    ],
+    "explanation": "Many adjectives are followed by a **fixed preposition**. For example, we say **good at**, **interested in**, and **married to**.\n\nThe preposition is often different from your language, so learn each adjective together with its preposition.\n\nUse **at** with **good at** and **bad at**. Use **in** with **interested in**.\n\nUse **of** with **afraid of**, **tired of**, **proud of**, and **full of**. When Tom was ill, he was **tired of** staying in bed with the flu.\n\nUse **about** with **worried about** and **excited about**. Use **to** with **married to**, **similar to**, and **kind to**.\n\nUse **for** with **famous for** and **responsible for**. Use **on** with **keen on**, and **from** with **different from**.\n\nAfter the preposition, use a noun, a pronoun, or a verb with **-ing**. Say **tired of waiting**, never tired of wait.\n\nA good diet can reduce the quantity of sugar you eat, but the grammar stays the same: adjectives keep their fixed prepositions.",
+    "practice": [
+      {
+        "a": "She is married to a doctor.",
+        "q": "Rewrite with the correct preposition: She is married with a doctor."
+      },
+      {
+        "a": "I am interested in healthy food that can reduce illness.",
+        "q": "Rewrite with the correct preposition: I am interested on healthy food that can reduce illness."
+      },
+      {
+        "a": "He is good at cooking a large quantity of soup when he has the flu.",
+        "q": "Rewrite with the correct preposition: He is good in cooking a large quantity of soup when he has the flu."
+      },
+      {
+        "a": "I am tired of waiting at the doctor's office because my knee is painful.",
+        "q": "Rewrite with -ing: I am tired of wait at the doctor's office because my knee is painful."
+      }
+    ],
+    "quiz": [
+      {
+        "answer": 0,
+        "options": [
+          "at",
+          "of",
+          "on",
+          "for"
+        ],
+        "question": "She's very good ___ playing tennis."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "on",
+          "at",
+          "for",
+          "in"
+        ],
+        "question": "I'm interested ___ learning Japanese."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "from",
+          "of",
+          "at",
+          "with"
+        ],
+        "question": "My little brother is afraid ___ the dark."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "of",
+          "with",
+          "for",
+          "about"
+        ],
+        "question": "Montreal is famous ___ its bagels."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "in",
+          "at",
+          "of",
+          "on"
+        ],
+        "question": "I'm really tired ___ waiting. Let's go."
+      },
+      {
+        "answer": 1,
+        "options": [
+          "with",
+          "to",
+          "for",
+          "at"
+        ],
+        "question": "She's married ___ a doctor."
+      },
+      {
+        "answer": 3,
+        "options": [
+          "on",
+          "of",
+          "in",
+          "about"
+        ],
+        "question": "We're very excited ___ our holiday."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "to",
+          "with",
+          "from",
+          "as"
+        ],
+        "question": "Your phone is similar ___ mine."
+      },
+      {
+        "answer": 2,
+        "options": [
+          "of",
+          "at",
+          "about",
+          "on"
+        ],
+        "question": "I'm worried ___ my exam tomorrow."
+      },
+      {
+        "answer": 0,
+        "options": [
+          "of",
+          "on",
+          "at",
+          "with"
+        ],
+        "question": "My parents are very proud ___ me."
+      }
+    ],
+    "title": "Adjectives + Prepositions (good at, married to)"
+  }
+}

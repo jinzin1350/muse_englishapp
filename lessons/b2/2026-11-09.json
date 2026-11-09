@@ -1,0 +1,324 @@
+{
+  "date": "2026-11-09",
+  "theme": "work & career",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "be promoted",
+      "pos": "verb phrase",
+      "meaning": "Get a higher position in your job.",
+      "example": "She was promoted to manager last month.",
+      "pronunciation": "bee pruh-MOH-ted",
+      "persian": "ترفیع گرفتن، ارتقا یافتن",
+      "photo": "media/b2/2026-11-09/photos/be-promoted.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/be-promoted.mp3"
+    },
+    {
+      "word": "break down",
+      "pos": "phrasal verb",
+      "meaning": "To stop working (for a machine or vehicle).",
+      "example": "My car broke down on the way to work.",
+      "pronunciation": "BRAYK DOWN",
+      "persian": "خراب شدن، از کار افتادن",
+      "photo": "media/b2/2026-11-09/photos/break-down.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/break-down.mp3"
+    },
+    {
+      "word": "brick",
+      "pos": "noun",
+      "meaning": "A hard block used for building walls.",
+      "example": "The house is made of red bricks.",
+      "pronunciation": "BRIK",
+      "persian": "آجر",
+      "photo": "media/b2/2026-11-09/photos/brick.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/brick.mp3"
+    },
+    {
+      "word": "build",
+      "pos": "verb",
+      "meaning": "make something by putting parts together",
+      "example": "They will build a new house.",
+      "pronunciation": "BILD",
+      "persian": "ساختن، بنا کردن",
+      "photo": "media/b2/2026-11-09/photos/build.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/build.mp3"
+    },
+    {
+      "word": "business plan",
+      "pos": "noun",
+      "meaning": "A detailed plan for a new business.",
+      "example": "We need a solid business plan to get funding.",
+      "pronunciation": "BIZ-nis PLAN",
+      "persian": "طرح کسب و کار",
+      "photo": "media/b2/2026-11-09/photos/business-plan.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/business-plan.mp3"
+    },
+    {
+      "word": "carpenter",
+      "pos": "noun",
+      "meaning": "A person who builds and repairs things made of wood.",
+      "example": "My father is a carpenter and makes furniture.",
+      "pronunciation": "KAR-pin-ter",
+      "persian": "نجار",
+      "photo": "media/b2/2026-11-09/photos/carpenter.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/carpenter.mp3"
+    },
+    {
+      "word": "CEO",
+      "pos": "noun",
+      "meaning": "Chief Executive Officer; the highest manager in a company.",
+      "example": "The CEO made an important decision for the company.",
+      "pronunciation": "SEE-ee-oh",
+      "persian": "مدیر عامل",
+      "photo": "media/b2/2026-11-09/photos/ceo.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/ceo.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-11-09/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Building a Career",
+    "audio": "media/b2/2026-11-09/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-11-09/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Carpenter and the New House",
+    "audio": "media/b2/2026-11-09/shadowing.mp3",
+    "transcript": "media/b2/2026-11-09/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-11-09/shadowing-sentences/001.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/002.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/003.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/004.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/005.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/006.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/007.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/008.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/009.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/010.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/011.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/012.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/013.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/014.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/015.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/016.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/017.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/018.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/019.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/020.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/021.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/022.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/023.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/024.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/025.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/026.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/027.mp3",
+      "media/b2/2026-11-09/shadowing-sentences/028.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'be promoted' mean?",
+      "options": [
+        "A detailed plan for a new business.",
+        "make something by putting parts together",
+        "Get a higher position in your job.",
+        "Chief Executive Officer; the highest manager in a company."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'break down' mean?",
+      "options": [
+        "To stop working (for a machine or vehicle).",
+        "A hard block used for building walls.",
+        "make something by putting parts together",
+        "A detailed plan for a new business."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'brick' mean?",
+      "options": [
+        "A hard block used for building walls.",
+        "Get a higher position in your job.",
+        "To stop working (for a machine or vehicle).",
+        "A person who builds and repairs things made of wood."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'build' mean?",
+      "options": [
+        "make something by putting parts together",
+        "To stop working (for a machine or vehicle).",
+        "Get a higher position in your job.",
+        "Chief Executive Officer; the highest manager in a company."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'business plan' mean?",
+      "options": [
+        "make something by putting parts together",
+        "A detailed plan for a new business.",
+        "A person who builds and repairs things made of wood.",
+        "To stop working (for a machine or vehicle)."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'carpenter' mean?",
+      "options": [
+        "Chief Executive Officer; the highest manager in a company.",
+        "A person who builds and repairs things made of wood.",
+        "A detailed plan for a new business.",
+        "Get a higher position in your job."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'CEO' mean?",
+      "options": [
+        "To stop working (for a machine or vehicle).",
+        "A hard block used for building walls.",
+        "Chief Executive Officer; the highest manager in a company.",
+        "make something by putting parts together"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Present Perfect vs Past Simple",
+    "explanation": "Use the **past simple** for a time that is finished. The action ended, and we often say when it happened: yesterday, last week, or in 2019.\n\nUse the **present perfect** when the past connects to now. The time is not finished, or the exact time is not important.\n\nThe **past simple** form is the second form of the verb: **went**, **had**, **broke**. For questions and negatives, use **did**: **Did** you **work**?\n\nThe **present perfect** form is **have** or **has** plus the past participle: I **have worked**, she **has gone**.\n\nUse the **present perfect** for life experience with no time given. *Have you ever been to Japan?* asks about your life up to now.\n\nUse the **present perfect** with **since** and **for** for a period that continues until now. Our carpenter **has worked** with wood **since** 2019, and he still loves the job.\n\nUse the **past simple** for a finished period. A builder who **lived** in Italy for ten years does not live there now.\n\nNever use the **present perfect** with a finished time word. Say *I **saw** the CEO yesterday*, never *I have seen the CEO yesterday*.\n\nQuestions with **When** always use the **past simple**: **When did** the truck break down? **When did** Sara start her job?",
+    "examples": [
+      "*I **went** to Paris in 2019.* (finished time)",
+      "*I**'ve been** to Paris three times.* (experience)",
+      "*We **had** dinner two hours ago.* (ago)",
+      "*She**'s lived** here **since** 2015.* (since: still true)",
+      "***Have** you ever **eaten** sushi?* (experience question)",
+      "*She **broke** her leg last year.* (finished time)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with the past simple: Sara has started her new job yesterday.",
+        "a": "Sara started her new job yesterday."
+      },
+      {
+        "q": "Rewrite with the present perfect: Tom worked as a carpenter since 2019. (He still works there.)",
+        "a": "Tom has worked as a carpenter since 2019."
+      },
+      {
+        "q": "Rewrite with the past simple: The CEO has visited the building site last week.",
+        "a": "The CEO visited the building site last week."
+      },
+      {
+        "q": "Rewrite with the present perfect: I build brick houses for ten years. (I still build them.)",
+        "a": "I have built brick houses for ten years."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ to Paris in 2019.",
+        "options": [
+          "have been",
+          "have gone",
+          "was going",
+          "went"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She ___ here since 2015. She loves it.",
+        "options": [
+          "lived",
+          "has lived",
+          "lives",
+          "is living"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We ___ dinner two hours ago.",
+        "options": [
+          "had",
+          "have had",
+          "have",
+          "has had"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ you ever eaten sushi?",
+        "options": [
+          "Did",
+          "Do",
+          "Have",
+          "Has"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "When ___ you start learning English?",
+        "options": [
+          "did",
+          "have",
+          "has",
+          "are"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ three cups of coffee so far today.",
+        "options": [
+          "drank",
+          "drink",
+          "have drunk",
+          "had drunk"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My grandfather ___ in Italy for ten years before he moved to Canada.",
+        "options": [
+          "has lived",
+          "lived",
+          "lives",
+          "has been living"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How long ___ you known each other? – Since we were at school.",
+        "options": [
+          "did",
+          "do",
+          "are",
+          "have"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She ___ her leg last year, but it's fine now.",
+        "options": [
+          "has broken",
+          "breaks",
+          "broke",
+          "has been breaking"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We ___ each other for five years. We're best friends.",
+        "options": [
+          "have known",
+          "knew",
+          "know",
+          "are knowing"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,326 @@
+{
+  "date": "2026-11-09",
+  "theme": "technology",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "global village",
+      "pos": "noun",
+      "meaning": "The world connected by electronic communication.",
+      "example": "The internet has truly created a global village.",
+      "pronunciation": "GLOH-bul VIL-ij",
+      "persian": "دهکده جهانی",
+      "photo": "media/c1/2026-11-09/photos/global-village.jpg",
+      "word_audio": "media/c1/2026-11-09/word-audio/global-village.mp3"
+    },
+    {
+      "word": "gridlock",
+      "pos": "noun",
+      "meaning": "A situation where traffic cannot move in any direction.",
+      "example": "The accident caused complete gridlock downtown.",
+      "pronunciation": "GRID-lok",
+      "persian": "ترافیک قفل شده",
+      "photo": "media/c1/2026-11-09/photos/gridlock.jpg",
+      "word_audio": "media/c1/2026-11-09/word-audio/gridlock.mp3"
+    },
+    {
+      "word": "hands-free",
+      "pos": "adjective",
+      "meaning": "Operating without needing to be held.",
+      "example": "Her new car has a hands-free phone system.",
+      "pronunciation": "HANDZ-FREE",
+      "persian": "بدون نیاز به دست، هندزفری",
+      "photo": "media/c1/2026-11-09/photos/hands-free.jpg",
+      "word_audio": "media/c1/2026-11-09/word-audio/hands-free.mp3"
+    },
+    {
+      "word": "human genome",
+      "pos": "noun phrase",
+      "meaning": "The complete set of genetic instructions for a human.",
+      "example": "Mapping the human genome was a scientific breakthrough.",
+      "pronunciation": "HYOO-mun JEE-nohm",
+      "persian": "ژنوم انسانی",
+      "photo": "media/c1/2026-11-09/photos/human-genome.jpg",
+      "word_audio": "media/c1/2026-11-09/word-audio/human-genome.mp3"
+    },
+    {
+      "word": "interplanetary travel",
+      "pos": "noun phrase",
+      "meaning": "Travel between planets within our solar system.",
+      "example": "Interplanetary travel remains a distant dream for humanity.",
+      "pronunciation": "in-ter-PLAN-uh-ter-ee TRAV-ul",
+      "persian": "سفر بین سیاره‌ای",
+      "photo": "media/c1/2026-11-09/photos/interplanetary-travel.jpg",
+      "word_audio": "media/c1/2026-11-09/word-audio/interplanetary-travel.mp3"
+    },
+    {
+      "word": "laptop (computer)",
+      "pos": "noun",
+      "meaning": "A portable computer that can be used on one's lap.",
+      "example": "I always take my laptop when I travel for work.",
+      "pronunciation": "LAP-top",
+      "persian": "لپ‌تاپ، رایانه همراه",
+      "photo": "media/c1/2026-11-09/photos/laptop-computer.jpg",
+      "word_audio": "media/c1/2026-11-09/word-audio/laptop-computer.mp3"
+    },
+    {
+      "word": "mega-city",
+      "pos": "noun",
+      "meaning": "A very large city, typically with over ten million people.",
+      "example": "Tokyo is a prime example of a bustling mega-city.",
+      "pronunciation": "MEG-uh SIT-ee",
+      "persian": "کلان‌شهر، ابرشهر",
+      "photo": "media/c1/2026-11-09/photos/mega-city.jpg",
+      "word_audio": "media/c1/2026-11-09/word-audio/mega-city.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-11-09/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Technology and the Connected World",
+    "audio": "media/c1/2026-11-09/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-11-09/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Mega-City Morning",
+    "audio": "media/c1/2026-11-09/shadowing.mp3",
+    "transcript": "media/c1/2026-11-09/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-11-09/shadowing-sentences/001.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/002.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/003.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/004.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/005.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/006.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/007.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/008.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/009.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/010.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/011.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/012.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/013.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/014.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/015.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/016.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/017.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/018.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/019.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/020.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/021.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/022.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/023.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/024.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/025.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/026.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/027.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/028.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/029.mp3",
+      "media/c1/2026-11-09/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'global village' mean?",
+      "options": [
+        "The world connected by electronic communication.",
+        "A very large city, typically with over ten million people.",
+        "A situation where traffic cannot move in any direction.",
+        "Travel between planets within our solar system."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'gridlock' mean?",
+      "options": [
+        "A very large city, typically with over ten million people.",
+        "A situation where traffic cannot move in any direction.",
+        "Travel between planets within our solar system.",
+        "The world connected by electronic communication."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'hands-free' mean?",
+      "options": [
+        "A portable computer that can be used on one's lap.",
+        "A very large city, typically with over ten million people.",
+        "Operating without needing to be held.",
+        "A situation where traffic cannot move in any direction."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'human genome' mean?",
+      "options": [
+        "A portable computer that can be used on one's lap.",
+        "The world connected by electronic communication.",
+        "A situation where traffic cannot move in any direction.",
+        "The complete set of genetic instructions for a human."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'interplanetary travel' mean?",
+      "options": [
+        "Travel between planets within our solar system.",
+        "Operating without needing to be held.",
+        "The world connected by electronic communication.",
+        "The complete set of genetic instructions for a human."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'laptop (computer)' mean?",
+      "options": [
+        "Travel between planets within our solar system.",
+        "A portable computer that can be used on one's lap.",
+        "Operating without needing to be held.",
+        "A very large city, typically with over ten million people."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'mega-city' mean?",
+      "options": [
+        "The complete set of genetic instructions for a human.",
+        "A situation where traffic cannot move in any direction.",
+        "A very large city, typically with over ten million people.",
+        "A portable computer that can be used on one's lap."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Cleft Sentences (It was... that, What I need is...)",
+    "explanation": "A **cleft sentence** splits one idea into two parts to **emphasise** one of them. *Tom broke the window* becomes **It was Tom who** broke the window.\n\nThere are two main types: **it-clefts** and **wh-clefts**.\n\nUse an **it-cleft** for emphasis: **It is** or **It was** + the focus + **that**, or **who** for people. **It was in 2015 that** we moved to the mega-city.\n\n**It** + singular **be** stays the same with a plural focus: **It was** my parents who paid. We often use it to correct someone: **It's** not the gridlock I hate, **it's** the noise.\n\nUse a **wh-cleft** starting with a **what** clause: **What I need is** a hands-free headset. For an action, use **do**: **What I did was** call the manager.\n\nFor an event, say **What happened was** the laptop computer stopped working. Similar patterns are **All I want is**, **The reason why**, **The place where**, and **The thing that**.\n\nThe verb after the **what** clause is usually singular: What we need **is** more time. Never add **it**: say **What I like is**, not *What I like it is*.\n\nCleft sentences help you sound precise and natural when you discuss big ideas, from the human genome to interplanetary travel, because the listener hears exactly which part matters most.",
+    "examples": [
+      "*It was **my sister who** told me the news.* (it-cleft, person)",
+      "*It's **the noise that** I can't stand, not the heat.* (it-cleft, thing)",
+      "*It was **in Paris that** they first met.* (it-cleft, place)",
+      "*What I need is **a long holiday**.* (wh-cleft)",
+      "*What we did was **book a taxi**.* (wh-cleft, action)",
+      "*All I want is **some peace and quiet**.* (all-cleft)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite to emphasise 'Nadia': Nadia announced the interplanetary travel news.",
+        "a": "It was Nadia who announced the interplanetary travel news."
+      },
+      {
+        "q": "Rewrite as a wh-cleft: I need a hands-free headset.",
+        "a": "What I need is a hands-free headset."
+      },
+      {
+        "q": "Rewrite to emphasise the time: We left the mega-city in 2015.",
+        "a": "It was in 2015 that we left the mega-city."
+      },
+      {
+        "q": "Rewrite with 'All': I only want a laptop computer.",
+        "a": "All I want is a laptop computer."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "___ I need is a long holiday.",
+        "options": [
+          "That",
+          "Which",
+          "It",
+          "What"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "It was my sister ___ told me the news.",
+        "options": [
+          "what",
+          "who",
+          "which",
+          "when"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "It was in 2015 ___ we moved to Canada.",
+        "options": [
+          "where",
+          "which",
+          "that",
+          "what"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What I did ___ call the manager.",
+        "options": [
+          "was",
+          "is being",
+          "did",
+          "were"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "All I want ___ a cup of tea.",
+        "options": [
+          "is",
+          "are",
+          "be",
+          "it is"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ annoys me is people who talk during films.",
+        "options": [
+          "It",
+          "That",
+          "What",
+          "Which"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "It's not the money I care about. ___ the people I work with.",
+        "options": [
+          "It's what",
+          "What it's",
+          "That's it",
+          "It's"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "The reason ___ I left was the long working hours.",
+        "options": [
+          "what",
+          "why",
+          "because",
+          "how"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "What happened ___ that the car broke down.",
+        "options": [
+          "it was",
+          "did",
+          "was",
+          "has"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "It was only when I got home ___ I realised I'd lost my phone.",
+        "options": [
+          "when",
+          "what",
+          "then",
+          "that"
+        ],
+        "answer": 3
+      }
+    ]
+  }
+}
