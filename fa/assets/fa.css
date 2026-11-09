@@ -1,0 +1,97 @@
+/* Muse English — Persian (/fa/) pages. Self-hosted Vazirmatn, RTL. */
+@font-face{font-family:'Vazirmatn';src:url('../fonts/Vazirmatn-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('../fonts/Vazirmatn-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('../fonts/Vazirmatn-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Vazirmatn';src:url('../fonts/Vazirmatn-ExtraBold.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Vazirmatn',Tahoma,sans-serif;background:#FFF9F2;color:#232838;line-height:1.9;font-size:17px}
+img{max-width:100%}
+a{color:#C2410C}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+/* header */
+.fa-head{position:sticky;top:0;z-index:50;background:rgba(255,249,242,.92);backdrop-filter:blur(8px);border-bottom:1px solid #F3E3D3}
+.fa-head-in{display:flex;align-items:center;gap:18px;padding:10px 0}
+.fa-brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#232838;font-weight:800;font-size:1.05rem}
+.fa-brand img{width:38px;height:38px;border-radius:10px}
+.fa-nav{display:flex;gap:4px;margin-inline-start:auto;flex-wrap:wrap}
+.fa-nav a{text-decoration:none;color:#4A5165;font-weight:500;padding:6px 10px;border-radius:10px;font-size:.95rem}
+.fa-nav a:hover{background:#FDEBD9;color:#9A3412}
+.fa-nav a[aria-current="page"]{background:#FDEBD9;color:#9A3412;font-weight:700}
+.btn{display:inline-block;background:#EE4D1C;color:#fff!important;text-decoration:none;font-weight:700;padding:12px 26px;border-radius:999px;border:0;cursor:pointer;font-family:inherit;font-size:1rem;box-shadow:0 6px 18px rgba(238,77,28,.28);transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(238,77,28,.32)}
+.btn.ghost{background:#fff;color:#C2410C!important;border:2px solid #F5C9A8;box-shadow:none}
+.btn.sm{padding:8px 18px;font-size:.92rem}
+.head-cta{flex:0 0 auto}
+/* hero */
+.hero{padding:56px 0 30px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+.kicker{display:inline-block;background:#FDEBD9;color:#9A3412;font-weight:700;font-size:.85rem;padding:4px 14px;border-radius:999px;margin-bottom:14px}
+h1{font-size:2.35rem;line-height:1.45;font-weight:800;margin:0 0 14px}
+.lede{font-size:1.13rem;color:#4A5165;margin:0 0 22px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.hero-note{font-size:.9rem;color:#7A8199;margin-top:12px}
+.hero-art{background:#fff;border:1px solid #F3E3D3;border-radius:26px;padding:22px;box-shadow:0 18px 40px rgba(190,120,40,.10);text-align:center}
+.hero-art img{max-height:300px;width:auto}
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:26px 0 6px}
+.stat{background:#fff;border:1px solid #F3E3D3;border-radius:18px;padding:16px 10px;text-align:center}
+.stat b{display:block;font-size:1.45rem;font-weight:800;color:#C2410C;line-height:1.3}
+.stat span{font-size:.88rem;color:#7A8199}
+/* sections */
+section.blk{padding:38px 0 8px}
+h2{font-size:1.65rem;font-weight:800;line-height:1.5;margin:0 0 8px}
+.sec-sub{color:#4A5165;margin:0 0 20px;max-width:46rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cards.c2{grid-template-columns:repeat(2,1fr)}
+.cards.c4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid #F3E3D3;border-radius:20px;padding:20px}
+.card .ic{font-size:1.7rem;line-height:1}
+.card h3{margin:10px 0 6px;font-size:1.08rem;font-weight:700}
+.card p{margin:0;color:#4A5165;font-size:.97rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.step{background:#fff;border:1px solid #F3E3D3;border-radius:20px;padding:20px}
+.step .n{display:inline-flex;width:34px;height:34px;border-radius:50%;background:#EE4D1C;color:#fff;font-weight:800;align-items:center;justify-content:center}
+.step h3{margin:10px 0 6px;font-size:1.05rem}
+.step p{margin:0;color:#4A5165;font-size:.97rem}
+.notice{background:#FFF3E2;border:1.5px dashed #EE4D1C;border-radius:20px;padding:20px 22px}
+.notice h3{margin:0 0 6px}
+.notice p{margin:0;color:#4A5165}
+/* tables */
+.tbl-wrap{overflow-x:auto;background:#fff;border:1px solid #F3E3D3;border-radius:18px;margin:14px 0}
+table{border-collapse:collapse;width:100%;min-width:560px;font-size:.95rem}
+th,td{padding:10px 12px;text-align:center;border-bottom:1px solid #F6E8D8;white-space:nowrap}
+th{background:#FDEBD9;color:#7C2D12;font-weight:700}
+td:first-child,th:first-child{font-weight:700;color:#C2410C}
+tr:last-child td{border-bottom:0}
+.src{font-size:.88rem;color:#7A8199}
+.src a{color:#7A8199}
+/* faq */
+details{background:#fff;border:1px solid #F3E3D3;border-radius:16px;padding:14px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{color:#4A5165;margin:8px 0 2px}
+/* cta band */
+.cta-band{margin:44px 0;background:linear-gradient(120deg,#EE4D1C,#FF9000);border-radius:26px;padding:34px 30px;color:#fff;text-align:center}
+.cta-band h2{color:#fff;margin-bottom:6px}
+.cta-band p{margin:0 0 18px;opacity:.95}
+.cta-band .btn{background:#fff;color:#C2410C!important;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+/* footer */
+.fa-foot{border-top:1px solid #F3E3D3;margin-top:56px;padding:30px 0 38px;background:#FFF3E4}
+.foot-grid{display:flex;gap:34px;flex-wrap:wrap}
+.foot-grid h4{margin:0 0 8px;font-size:.98rem}
+.foot-grid ul{list-style:none;margin:0;padding:0}
+.foot-grid li{margin:4px 0}
+.foot-grid a{text-decoration:none;color:#4A5165}
+.foot-grid a:hover{color:#C2410C}
+.foot-base{margin-top:22px;font-size:.85rem;color:#7A8199}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .cards,.cards.c4,.steps{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  h1{font-size:1.8rem}
+  .fa-nav{display:none}
+}
+@media (max-width:520px){
+  .cards,.cards.c2,.cards.c4,.steps{grid-template-columns:1fr}
+  body{font-size:16px}
+}
