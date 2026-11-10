@@ -2627,7 +2627,7 @@ function shouldEnterAppMode() {
 }
 
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest', 'certificate'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'ptest', 'certificate'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'support', 'ptest', 'certificate'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 
 function parseHash() {
@@ -2765,6 +2765,7 @@ function show(view, arg) {
   else if (view === 'profile') renderProfile(v);
   else if (view === 'challenge') renderChallenge(v);
   else if (view === 'inbox') renderInbox(v);
+  else if (view === 'support') renderSupport(v);
   else if (view === 'homework') renderHomework(v);
   else if (view === 'admin') renderAdmin(v);
   else if (view === 'admin-teacher') renderAdminTeacherView(v, arg);
@@ -6894,6 +6895,7 @@ async function maybeShowWelcome() {
   u.welcomeSeenAt = now;
   try { localStorage.setItem('el_welcome_seen_' + u.id, '1'); } catch (e) {}
   try { if (sb) await sb.rpc('set_welcome_seen'); } catch (e) {}
+  try { if (sb) await sb.rpc('send_welcome_message', { p_body: welcomeBody(fa) }); } catch (e) {}
 }
 
 /* ---------------- guided first-run tutorial ----------------
@@ -10590,8 +10592,11 @@ function paintHome(v, mistakes, attempts) {
       '<button class="btn btn-sm" data-action="enable-push">Enable notifications</button></div>';
   }
 
+  // 5 — Support banner (very bottom of Home, Alireza's order 2026-11-10)
+  html += supportBannerHTML();
+
   v.innerHTML = html;
-  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue(); paintHomeCards(); kvPullAll();
+  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue(); paintHomeCards(); kvPullAll(); paintSupportBadges();
   paintVocabBanner();
   paintWordsBanner();
   paintSentenceBanner();
@@ -10976,10 +10981,11 @@ function paintHomeDesktop(v, mistakes, attempts) {
       '<button class="btn btn-sm" data-action="enable-push">Enable notifications</button></div>';
   }
   html += '</div>';
+  html += supportBannerHTML();
   v.innerHTML = html;
   wireDhPlayer();
   refreshDhProgress();
-  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue(); paintHomeCards(); kvPullAll();
+  paintReviewDue(); paintGrammarBanner(); paintIeltsBanner(); paintTrickyDue(); paintHomeCards(); kvPullAll(); paintSupportBadges();
   paintVocabBanner();
   paintWordsBanner();
   paintSentenceBanner();
@@ -11032,9 +11038,11 @@ function renderProfile(v) {
   '</div>' +
 
   '<div class="section-title"><h2>Help</h2></div>' +
-  '<div class="card plain"><button class="btn btn-ghost btn-block" data-action="tut-replay" style="margin-top:0">🎓 App tour — show me around</button></div>' +
+  '<div class="card plain"><button class="btn btn-ghost btn-block" data-action="tut-replay" style="margin-top:0">🎓 App tour — show me around</button>' +
+  '<a class="btn btn-ghost btn-block" href="#/support" style="margin-top:0.6rem">💬 Support — ask a question <span class="sup-badge hidden" data-sup-badge></span></a></div>' +
   '<div class="section-title"><h2>Account</h2></div>' +
   '<div class="card plain"><button class="btn btn-ghost btn-block" data-action="logout" style="margin-top:0">Log out</button></div>';
+  paintSupportBadges();
 }
 
 async function saveCountryManual() {
@@ -11049,6 +11057,153 @@ async function saveCountryManual() {
   } catch (e) { /* RPC missing or offline -> kept locally, retried later */ }
   renderProfile(document.getElementById('view'));
 }
+
+/* ---------------- support (learner <-> admin) + welcome message ----------------
+   2026-11-10, Alireza's order: newcomers get a welcome inbox message, and
+   learners can ask the admin questions from a banner at the bottom of Home
+   and from Profile. Data lives behind SECURITY DEFINER RPCs
+   (support-and-welcome-migration.sql); until he runs it, every call here
+   fails soft — banners still show, the thread shows a "try later" note. */
+function supportIsFa() {
+  try { var l = normalizeLevel(state.user && state.user.level); return l === 'a1' || l === 'a2'; } catch (e) { return false; }
+}
+
+function supportBannerHTML() {
+  var fa = supportIsFa();
+  return '<a class="sup-banner" href="#/support">' +
+    '<span class="sup-banner-ico">💬</span>' +
+    '<span class="sup-banner-txt"><b>' + (fa ? 'سؤالی داری؟ از ما بپرس' : 'Questions? Ask us') + '</b>' +
+    '<span>' + (fa ? 'پشتیبانی Muse English — جوابت همین‌جا میاد' : 'Muse English support — we reply right here') + '</span></span>' +
+    '<span class="sup-badge hidden" data-sup-badge></span>' +
+    '<span class="sup-banner-arrow">›</span></a>';
+}
+
+function paintSupportBadges() {
+  if (!document.querySelector('[data-sup-badge]')) return;
+  if (!sb || !state.user || state.user.demo) return;
+  sb.rpc('support_unread').then(function (r) {
+    var n = (!r.error && typeof r.data === 'number') ? r.data : 0;
+    document.querySelectorAll('[data-sup-badge]').forEach(function (el) {
+      el.textContent = n ? String(n) : '';
+      el.classList.toggle('hidden', !n);
+    });
+  }).catch(function () {});
+}
+
+function welcomeBody(fa) {
+  if (fa) return '👋 به Muse English خوش اومدی!\n\nاینجا هر روز یه درس کوتاه و کامل داری: کلمه‌های جدید، پادکست، شدویینگ (تمرین تلفظ)، گرامر و کوئیز — روزی حدود ۱۰ دقیقه کافیه.\n\n🔥 استریک: هر روز که درس بخونی، زنجیره‌ت ادامه پیدا می‌کنه.\n🎯 کوئست‌های روزانه: فعالیت‌ها رو کامل کن و XP بگیر.\n🔖 هر کلمه‌ای رو که ذخیره کنی، اپ سر وقت برای مرور برش می‌گردونه.\n📖 بخش گرامر ۱۰۷ موضوع با تمرین داره و 🎓 یه آزمون کامل آیلتس آکادمیک هم برای تمرین آماده‌ست.\n\n❓ هر سؤالی داشتی، از بنر «پشتیبانی» پایین صفحهٔ اصلی یا صفحهٔ پروفایل بپرس — جوابت همون‌جا میاد.\n\nموفق باشی! 🌱';
+  return '👋 Welcome to Muse English!\n\nEvery day you get one short, complete lesson: new words, a podcast, shadowing (speaking practice), grammar and a quiz — about 10 minutes a day is enough.\n\n🔥 Streak: study every day to keep your chain going.\n🎯 Daily quests: finish activities and earn XP.\n🔖 Save any word and the app brings it back for review at the right time.\n📖 The Grammar section has 107 topics with practice, and 🎓 a full IELTS Academic mock is ready when you are.\n\n❓ Questions? Tap the Support banner at the bottom of the Home page or on your Profile — we reply right there.\n\nGood luck! 🌱';
+}
+
+function supTime(ts) {
+  try {
+    var d = new Date(ts);
+    return d.toLocaleDateString('en-GB') + ' ' + d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+  } catch (e) { return ''; }
+}
+
+function supportMsgHTML(m, fa, asAdmin) {
+  var mine = asAdmin ? !!m.from_admin : !m.from_admin;
+  var who = mine ? (fa ? 'شما' : 'You') : (asAdmin ? 'Learner' : 'Muse English');
+  return '<div class="sup-msg ' + (mine ? 'me' : 'them') + '">' +
+    '<div class="sup-bubble">' + esc(m.body).replace(/\n/g, '<br>') + '</div>' +
+    '<div class="sup-time">' + who + ' · ' + supTime(m.created_at) + '</div></div>';
+}
+
+async function renderSupport(v) {
+  var fa = supportIsFa();
+  v.innerHTML = '<div class="sup-wrap"' + (fa ? ' dir="rtl" lang="fa"' : '') + '>' +
+    '<h1 class="sup-title">💬 ' + (fa ? 'پشتیبانی' : 'Support') + '</h1>' +
+    '<p class="muted">' + (fa ? 'سؤالت رو این‌جا بپرس؛ جواب هم این‌جا میاد. معمولاً ظرف یه روز جواب می‌دیم.' : 'Ask your question here — the reply lands right here too. We usually reply within a day.') + '</p>' +
+    '<div id="sup-thread" class="sup-thread"><div class="empty">…</div></div>' +
+    '<div class="sup-composer"><textarea id="sup-input" rows="3" maxlength="2000" placeholder="' + (fa ? 'سؤالت رو بنویس…' : 'Write your question…') + '"></textarea>' +
+    '<div class="form-error" id="sup-error" role="alert"></div>' +
+    '<button class="btn btn-orange btn-block" id="sup-send">' + (fa ? 'ارسال' : 'Send') + '</button></div></div>';
+  var host = document.getElementById('sup-thread');
+  var msgs = null;
+  if (sb && state.user && !state.user.demo) {
+    try { var r = await sb.rpc('my_support_thread'); if (r.error) throw r.error; msgs = r.data || []; } catch (e) { msgs = null; }
+  }
+  if (msgs === null) {
+    host.innerHTML = '<div class="empty">' + (fa ? 'فعلاً نمی‌شه پیام‌ها رو آورد؛ یه کم دیگه دوباره سر بزن.' : 'Messages could not be loaded right now — please try again a little later.') + '</div>';
+  } else if (!msgs.length) {
+    host.innerHTML = '<div class="empty">' + (fa ? 'هنوز پیامی نداری. اولین سؤالت رو بپرس 👇' : 'No messages yet. Ask your first question below 👇') + '</div>';
+  } else {
+    host.innerHTML = msgs.map(function (m) { return supportMsgHTML(m, fa, false); }).join('');
+  }
+  paintSupportBadges();
+  var btn = document.getElementById('sup-send');
+  if (btn) btn.addEventListener('click', async function () {
+    var inp = document.getElementById('sup-input');
+    var err = document.getElementById('sup-error');
+    var body = ((inp && inp.value) || '').trim();
+    if (!body) { if (err) err.textContent = fa ? 'اول سؤالت رو بنویس.' : 'Write your question first.'; return; }
+    btn.disabled = true;
+    var ok = false;
+    try { var rr = await sb.rpc('send_support_message', { p_body: body }); ok = !rr.error && rr.data === true; } catch (e) { ok = false; }
+    if (ok) {
+      if (host.querySelector('.empty')) host.innerHTML = '';
+      host.insertAdjacentHTML('beforeend', supportMsgHTML({ from_admin: false, body: body, created_at: new Date().toISOString() }, fa, false));
+      inp.value = ''; if (err) err.textContent = '';
+      window.scrollTo(0, document.body.scrollHeight);
+    } else {
+      if (err) err.textContent = fa ? 'ارسال نشد؛ اتصالت رو چک کن و دوباره تلاش کن.' : 'Could not send — check your connection and try again.';
+    }
+    btn.disabled = false;
+  });
+}
+
+/* ---------------- admin panel: support ---------------- */
+async function apRenderSupport(v) {
+  v.innerHTML = apShell('support',
+    '<div class="ap-head"><h1>💬 Support</h1><p class="muted">Questions from learners, newest first. Open a thread to reply — the reply appears on the learner\u2019s Support page.</p></div>' +
+    '<div id="ap-sup-host"><div class="empty">Loading…</div></div>');
+  apWireChrome(v);
+  var host = v.querySelector('#ap-sup-host');
+  var rows = null;
+  try { var r = await sb.rpc('admin_support_threads'); if (r.error) throw r.error; rows = r.data || []; } catch (e) { rows = null; }
+  if (!rows) { host.innerHTML = '<div class="empty">Could not load support threads — is the support migration installed?</div>'; return; }
+  if (!rows.length) { host.innerHTML = '<div class="empty">No support messages yet.</div>'; return; }
+  host.innerHTML = rows.map(function (t) {
+    return '<a class="ap-sup-row" href="/manage/support/' + esc(t.user_id) + '">' +
+      '<span class="ap-sup-main"><b>' + esc(t.display_name || t.email || t.user_id) + '</b> ' +
+      '<span class="muted">' + esc(t.email || '') + (t.level ? ' · ' + esc(t.level) : '') + '</span>' +
+      '<span class="ap-sup-last">' + (t.last_from_admin ? 'You: ' : '') + esc(t.last_body || '') + '</span></span>' +
+      (t.unread ? '<span class="sup-badge">' + t.unread + '</span>' : '') + '</a>';
+  }).join('');
+}
+
+async function apRenderSupportThread(v, userId) {
+  v.innerHTML = apShell('support',
+    '<div class="ap-head"><h1>💬 Support thread</h1><p class="muted"><a href="/manage/support">← All threads</a></p></div>' +
+    '<div id="ap-sup-thread" class="sup-thread"><div class="empty">Loading…</div></div>' +
+    '<div class="sup-composer"><textarea id="ap-sup-input" rows="3" maxlength="2000" placeholder="Write your reply…"></textarea>' +
+    '<div class="form-error" id="ap-sup-error" role="alert"></div>' +
+    '<button class="btn btn-orange btn-block" id="ap-sup-send">Send reply</button></div>');
+  apWireChrome(v);
+  var host = v.querySelector('#ap-sup-thread');
+  async function load() {
+    var rows = null;
+    try { var r = await sb.rpc('admin_support_thread', { p_user: userId }); if (r.error) throw r.error; rows = r.data || []; } catch (e) { rows = null; }
+    if (!rows) { host.innerHTML = '<div class="empty">Could not load this thread.</div>'; return; }
+    host.innerHTML = rows.length ? rows.map(function (m) { return supportMsgHTML(m, false, true); }).join('') : '<div class="empty">No messages.</div>';
+  }
+  await load();
+  var btn = v.querySelector('#ap-sup-send');
+  if (btn) btn.addEventListener('click', async function () {
+    var inp = v.querySelector('#ap-sup-input');
+    var err = v.querySelector('#ap-sup-error');
+    var body = ((inp && inp.value) || '').trim();
+    if (!body) { if (err) err.textContent = 'Write a reply first.'; return; }
+    btn.disabled = true;
+    var ok = false;
+    try { var rr = await sb.rpc('admin_send_support', { p_user: userId, p_body: body }); ok = !rr.error && rr.data === true; } catch (e) { ok = false; }
+    if (ok) { inp.value = ''; if (err) err.textContent = ''; await load(); window.scrollTo(0, document.body.scrollHeight); }
+    else if (err) err.textContent = 'Could not send — try again.';
+    btn.disabled = false;
+  });
+}
+
 
 /* ---------------- lesson view ---------------- */
 function lessonTabsHTML() {
@@ -15577,7 +15732,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611091923';
+var APP_VERSION = '202611101556';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -17206,7 +17361,7 @@ function apArmIdle() {
   reset();
 }
 function apShell(active, bodyHTML) {
-  const items = [['dashboard', '📊 Dashboard'], ['users', '👥 Users'], ['daily', '📊 Daily study'], ['teachers', '🍎 Teachers'], ['telegram', '🤖 Telegram']];
+  const items = [['dashboard', '📊 Dashboard'], ['users', '👥 Users'], ['daily', '📊 Daily study'], ['teachers', '🍎 Teachers'], ['telegram', '🤖 Telegram'], ['support', '💬 Support']];
   const nav = items.map(function (it) {
     const href = '/manage' + (it[0] === 'dashboard' ? '' : '/' + it[0]);
     return '<a href="' + href + '" data-apnav="' + it[0] + '"' +
@@ -17961,6 +18116,8 @@ async function renderAdminPanel() {
   else if (sp.section === 'daily') apRenderDaily(v);
   else if (sp.section === 'teachers') apRenderTeachers(v);
   else if (sp.section === 'telegram') apRenderTelegram(v);
+  else if (sp.section === 'support' && sp.arg) apRenderSupportThread(v, sp.arg);
+  else if (sp.section === 'support') apRenderSupport(v);
   else apRenderDashboard(v);
   hideSplashSoon();
 }

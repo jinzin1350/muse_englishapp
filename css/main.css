@@ -4924,3 +4924,28 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
 #splash { position: fixed; inset: 0; z-index: 300; background: #FF9000; display: flex; align-items: center; justify-content: center; transition: opacity .55s ease; }
 #splash.hide { opacity: 0; pointer-events: none; }
 #splash-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* support (2026-11-10) */
+.sup-banner{display:flex;align-items:center;gap:.7rem;background:linear-gradient(135deg,#FFF3E4,#FFE7D1);border:1.5px solid #F5C99B;border-radius:18px;padding:.85rem 1rem;margin:1rem 0;text-decoration:none;color:#232838}
+.sup-banner-ico{font-size:1.5rem}
+.sup-banner-txt{flex:1;display:flex;flex-direction:column;gap:.1rem;min-width:0}
+.sup-banner-txt b{font-size:1rem}
+.sup-banner-txt span{font-size:.8rem;color:#6B7280}
+.sup-banner-arrow{font-size:1.4rem;color:#EE4D1C;font-weight:700}
+.sup-badge{background:#E02424;color:#fff;border-radius:999px;min-width:1.35rem;height:1.35rem;display:inline-flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;padding:0 .35rem;vertical-align:middle}
+.sup-badge.hidden{display:none}
+.sup-title{margin:.4rem 0 .2rem}
+.sup-thread{display:flex;flex-direction:column;gap:.55rem;margin:1rem 0}
+.sup-msg{display:flex;flex-direction:column;max-width:85%}
+.sup-msg.me{align-self:flex-end;align-items:flex-end}
+.sup-msg.them{align-self:flex-start;align-items:flex-start}
+.sup-bubble{padding:.6rem .8rem;border-radius:16px;font-size:.92rem;line-height:1.55}
+.sup-msg.me .sup-bubble{background:#EE4D1C;color:#fff;border-bottom-right-radius:6px}
+.sup-msg.them .sup-bubble{background:#fff;border:1.5px solid #EFE3D3;border-bottom-left-radius:6px}
+.sup-time{font-size:.68rem;color:#9AA0AE;margin-top:.15rem}
+.sup-composer{margin-top:1rem}
+.sup-composer textarea{width:100%;border:1.5px solid #E7DFD2;border-radius:14px;padding:.7rem;font:inherit;resize:vertical;box-sizing:border-box}
+.sup-composer .btn{padding:.85rem 1rem;border-radius:14px;font-size:1rem;cursor:pointer}
+.ap-sup-row{display:flex;align-items:center;gap:.7rem;background:#fff;border:1.5px solid #EFE3D3;border-radius:14px;padding:.7rem .9rem;margin-bottom:.55rem;text-decoration:none;color:#232838}
+.ap-sup-main{flex:1;display:flex;flex-direction:column;gap:.1rem;min-width:0}
+.ap-sup-last{font-size:.82rem;color:#6B7280;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
