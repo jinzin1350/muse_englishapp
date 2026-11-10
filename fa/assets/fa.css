@@ -113,3 +113,21 @@ main{display:block}
 .src li{margin:0 0 6px}
 .hero-note{background:#fff;border:1px solid #F3E3D3;border-radius:12px;padding:8px 12px;display:inline-block}
 @media (max-width:520px){.fa-head .head-cta{padding:7px 14px;font-size:.85rem}.fa-steps li{padding-inline-start:56px}table{min-width:0;font-size:.8rem}th,td{padding:8px 4px}}
+/* v3 (Claude, 2026-11-10): site-wide links on the Persian pages */
+section[id]{scroll-margin-top:120px}
+.fa-head-in{padding-left:20px;padding-right:20px}
+@media (max-width:520px){.fa-head-in{padding-left:16px;padding-right:16px}}
+.fa-links{margin:8px 0 14px}
+.fa-links .card{display:block;text-decoration:none;color:inherit;transition:border-color .15s ease,transform .15s ease}
+.fa-links .card:hover{border-color:#F5C9A8;transform:translateY(-2px)}
+.fa-links .card h3{margin:0 0 4px;font-size:1.02rem;color:#C2410C}
+.fa-chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:8px 0 14px}
+.fa-chips a{display:inline-block;background:#fff;border:1px solid #F3E3D3;border-radius:999px;padding:6px 14px;text-decoration:none;color:#7C2D12;font-weight:500;font-size:.95rem}
+.fa-chips a:hover{background:#FDEBD9}
+@media (max-width:860px){
+  .fa-head-in{flex-wrap:wrap;row-gap:4px;padding-bottom:6px}
+  .fa-head .head-cta{margin-inline-start:auto}
+  .fa-nav{display:flex;order:3;width:100%;flex-wrap:nowrap;overflow-x:auto;margin:0;gap:2px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .fa-nav::-webkit-scrollbar{display:none}
+  .fa-nav a{white-space:nowrap;flex:0 0 auto;font-size:.9rem;padding:5px 10px}
+}
