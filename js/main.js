@@ -1487,6 +1487,9 @@ function ensureNickname(suggestion) {
       '<div class="field" style="text-align:left"><label for="nick-input">Nickname</label>' +
       '<input id="nick-input" maxlength="20" placeholder="e.g. word_warrior" autocomplete="off" autocapitalize="off" spellcheck="false">' +
       '<p class="muted" style="margin:0.3rem 0 0;font-size:0.8rem">3–20 characters: A–Z, 0–9, _ or -</p></div>' +
+      '<div class="field" style="text-align:left"><label for="nick-phone">Mobile number</label>' +
+      '<input id="nick-phone" type="tel" autocomplete="tel" placeholder="e.g. +98 912 345 6789">' +
+      '<p class="muted" style="margin:0.3rem 0 0;font-size:0.8rem">So your teacher can reach you — international format is fine.</p></div>' +
       '<div class="form-error" id="nick-error" role="alert"></div>' +
       '<button class="btn btn-block" id="nick-save">Join the Challenge</button>',
       true
@@ -1500,6 +1503,12 @@ function ensureNickname(suggestion) {
         if (err) err.textContent = 'Use 3–20 characters: letters, numbers, _ or -.';
         return;
       }
+      const phoneEl0 = document.getElementById('nick-phone');
+      const phone = normalizePhone(phoneEl0 ? phoneEl0.value : '');
+      if (!validPhone(phone)) {
+        if (err) err.textContent = 'Enter a valid mobile number (7–15 digits, + is fine).';
+        return;
+      }
       if (err) err.textContent = '';
       if (btn) { btn.disabled = true; btn.textContent = 'Checking…'; }
       nicknameTaken(nick).then(function (taken) {
@@ -1510,7 +1519,12 @@ function ensureNickname(suggestion) {
         }
         if (btn) btn.textContent = 'Saving…';
         saveNickname(nick).then(function (ok) {
-          if (ok) { closeModal(); resolve(true); }
+          if (ok) {
+            savePhone(phone).then(function (pok) {
+              if (!pok) stashPendingPhone(phone);
+              closeModal(); resolve(true);
+            });
+          }
           else {
             if (err) err.textContent = 'Couldn’t save — check your connection and try again.';
             if (btn) { btn.disabled = false; btn.textContent = 'Join the Challenge'; }
@@ -1526,6 +1540,11 @@ function ensureNickname(suggestion) {
       inpEl.addEventListener('keydown', function (e) { if (e.key === 'Enter') save(); });
       setTimeout(function () { try { inpEl.focus(); } catch (e) {} }, 120);
     }
+    const phEl = document.getElementById('nick-phone');
+    if (phEl) {
+      try { const pre = localStorage.getItem('el_pending_phone'); if (pre) phEl.value = pre; } catch (e) {}
+      phEl.addEventListener('keydown', function (e) { if (e.key === 'Enter') save(); });
+    }
   });
 }
 
@@ -1540,6 +1559,33 @@ async function saveNickname(nick) {
     state.user.displayName = nick;
     return true;
   } catch (e) { return false; }
+}
+
+/* Mobile number (2026-11-10, Alireza's order): collected at onboarding --
+   in the nickname modal and on the signup form -- and saved via the
+   set_phone RPC (profiles.phone). If the RPC is unavailable (migration
+   not run yet) or fails, the number is stashed in localStorage and
+   retried on every enterApp until it lands. */
+function normalizePhone(raw) { return (raw || '').replace(/[\s\-()]/g, ''); }
+function validPhone(raw) { return /^\+?\d{7,15}$/.test(normalizePhone(raw)); }
+function stashPendingPhone(phone) { try { localStorage.setItem('el_pending_phone', phone); } catch (e) {} }
+async function savePhone(phone) {
+  try {
+    if (!sb || !state.user || !state.user.id) return false;
+    const r = await sb.rpc('set_phone', { p_phone: phone });
+    return !r.error && r.data === true;
+  } catch (e) { return false; }
+}
+async function retryPendingPhone(u) {
+  try {
+    if (!sb) return;
+    let v = null;
+    try { v = localStorage.getItem('el_pending_phone'); } catch (e) {}
+    if (!v && u && u.user_metadata && u.user_metadata.phone) v = u.user_metadata.phone;
+    if (!v || !validPhone(v)) return;
+    const ok = await savePhone(normalizePhone(v));
+    if (ok) { try { localStorage.removeItem('el_pending_phone'); } catch (e) {} }
+  } catch (e) {}
 }
 
 /* Award words_viewed when the learner scrolls to the last word card. */
@@ -3131,6 +3177,9 @@ function renderSignup(v) {
         '<div class="field"><label for="su-nick">Nickname</label>' +
         '<input id="su-nick" name="signup-nickname" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. word_warrior" maxlength="20" required>' +
         '<p class="muted" style="margin:0.3rem 0 0;font-size:0.8rem">Shown on the Challenge leaderboard · 3–20 characters: A–Z, 0–9, _ or -</p></div>' +
+        '<div class="field"><label for="su-phone">Mobile number</label>' +
+        '<input id="su-phone" name="signup-phone" type="tel" autocomplete="tel" placeholder="e.g. +98 912 345 6789" required>' +
+        '<p class="muted" style="margin:0.3rem 0 0;font-size:0.8rem">So your teacher can reach you — international format is fine.</p></div>' +
         '<div class="field"><label>Your English level</label>' + levelPickerHTML('su-level') +
         '<p class="muted" style="margin-top:0.4rem">Pick the closest one — your lessons start right away.</p></div>' +
         '<div class="form-error" id="su-error" role="alert"></div>' +
@@ -6715,6 +6764,9 @@ async function doSignup() {
   const nickEl = document.getElementById('su-nick');
   const nickname = nickEl ? nickEl.value.trim() : '';
   if (!validNickname(nickname)) { authError('su', 'Pick a nickname: 3–20 characters, letters, numbers, _ or -.'); return; }
+  const phoneEl = document.getElementById('su-phone');
+  const phone = normalizePhone(phoneEl ? phoneEl.value : '');
+  if (!validPhone(phone)) { authError('su', 'Enter a valid mobile number (7–15 digits, + is fine).'); return; }
   authError('su', '');
   if (!sb) { authError('su', 'Signup service couldn’t load. Check your connection and try again.'); return; }
   const taken = await nicknameTaken(nickname);
@@ -6726,7 +6778,7 @@ async function doSignup() {
     const signupOpts = { emailRedirectTo: window.location.origin + '/' };
     // Server-side persistence: the handle_new_user trigger saves level (+ref) on the
     // profile at signup, so email confirmation on another device/browser keeps them.
-    const signupMeta = { level: chosenLevel, display_name: nickname };
+    const signupMeta = { level: chosenLevel, display_name: nickname, phone: phone };
     const signupRef = getRefCode();
     if (signupRef) signupMeta.referred_by = signupRef;
     signupOpts.data = signupMeta;
@@ -6747,6 +6799,7 @@ async function doSignup() {
       // Email confirmation disabled -> already signed in: save level now.
       // Server-side writes: profiles has no user UPDATE/INSERT policy.
       try { await sb.rpc('set_level', { p_level: chosenLevel }); } catch (e) {}
+      try { const rp = await sb.rpc('set_phone', { p_phone: phone }); if (!rp || rp.error || rp.data !== true) stashPendingPhone(phone); } catch (e) { stashPendingPhone(phone); }
       try { const r = getRefCode(); if (r) await sb.rpc('set_referred_by', { p_code: r }); } catch (e) {}
       state.justSignedUp = true;
       authNote('su', '✓ Account created — loading your lessons…');
@@ -6755,6 +6808,7 @@ async function doSignup() {
     }
     // Confirmation required: stash the level, applied on first sign-in.
     try { localStorage.setItem('el_pending_level', JSON.stringify({ email: email, level: chosenLevel, ref: getRefCode() || null })); } catch (e) {}
+    stashPendingPhone(phone);
     state.afterSignup = email;
     state.showConfirmPopup = email;
     go('signin');
@@ -6828,6 +6882,7 @@ async function enterApp() {
   try { identifyPushUser(u.id, u.email, normalizeLevel(level)); } catch (e) {}
   ensureCountrySaved().catch(function () {});
   ensureTimezoneSaved().catch(function () {});
+  retryPendingPhone(u).catch(function () {});
   migrateLocalToCloud().catch(function () {});
   flushPointsQueue().then(function () { refreshMyPoints().catch(function () {}); },
                           function () { refreshMyPoints().catch(function () {}); });
@@ -15789,7 +15844,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611101909';
+var APP_VERSION = '202611101948';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
