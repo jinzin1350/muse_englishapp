@@ -2638,6 +2638,28 @@ const RETURN_KEY = 'muse_return_v1';
 function saveReturnRoute(view) {
   try { localStorage.setItem(RETURN_KEY, JSON.stringify({ h: '#/' + view, t: Date.now() })); } catch (e) {}
 }
+/* Teacher portal login (Claude for Alireza, 2026-11-10): /teachers has no
+   login form of its own any more. Its "Log in" / "Create account" buttons
+   send teachers to the main sign-in/sign-up page (Google + email), with this
+   one-shot flag; enterApp() sends them back to /teachers right after auth,
+   before any learner onboarding. Only whitelisted paths; 30-minute TTL. */
+const AUTH_RETURN_KEY = 'muse_auth_return_v1';
+const AUTH_RETURN_PATHS = ['/teachers'];
+function setAuthReturnPath(path) {
+  try { localStorage.setItem(AUTH_RETURN_KEY, JSON.stringify({ p: path, t: Date.now() })); } catch (e) {}
+}
+function peekAuthReturnPath() {
+  try {
+    const o = JSON.parse(localStorage.getItem(AUTH_RETURN_KEY) || 'null');
+    if (!o || AUTH_RETURN_PATHS.indexOf(o.p) === -1 || Date.now() - (o.t || 0) > 30 * 60000) return null;
+    return o.p;
+  } catch (e) { return null; }
+}
+function takeAuthReturnPath() {
+  const p = peekAuthReturnPath();
+  try { localStorage.removeItem(AUTH_RETURN_KEY); } catch (e) {}
+  return p;
+}
 function takeReturnRoute() {
   try {
     const raw = localStorage.getItem(RETURN_KEY);
@@ -3050,6 +3072,9 @@ function renderSignin(v) {
       '<button class="btn btn-ghost btn-block" data-action="demo-admin">Continue in demo mode (admin)</button>'
     )
   );
+  if (peekAuthReturnPath() === '/teachers') {
+    authNote('si', '🍎 Teacher login: after you sign in (Google or email) you go straight to the teacher portal.');
+  }
   // Arriving here right after signup: prefill email + explain the next step.
   if (state.afterSignup) {
     const em = document.getElementById('si-email');
@@ -6743,6 +6768,9 @@ async function enterApp() {
   const { data } = await sb.auth.getUser();
   const u = data.user;
   if (!u) { window.location.replace('/'); return; }  // session gone -> static landing
+  /* Teacher portal login round-trip (see AUTH_RETURN_KEY). */
+  const authBack = takeAuthReturnPath();
+  if (authBack) { window.location.replace(authBack); return; }
   let level = null;
   let prof = null;
   try {
@@ -15761,7 +15789,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611101824';
+var APP_VERSION = '202611101909';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -16008,7 +16036,7 @@ function twLandingHTML(loggedIn) {
     '<header class="tw-top"><div class="tw-top-in">' +
       '<div class="tw-brandrow">🍎 <b>Muse English</b><span>for Teachers</span></div>' +
       '<nav class="tw-toplinks"><a href="#tw-features">Features</a><a href="#tw-how">How it works</a>' +
-      (loggedIn ? '<a class="tw-btn tw-btn-sm" href="#tw-apply">Request access</a>' : '<a class="tw-btn tw-btn-sm" href="#tw-login">Log in</a>') +
+      (loggedIn ? '<a class="tw-btn tw-btn-sm" href="#tw-apply">Request access</a>' : '<a class="tw-btn tw-btn-sm" href="/#/signin" data-tw-auth>Log in</a>') +
       '</nav></div></header>' +
     '<section class="tw-hero"><div class="tw-hero-in">' +
       '<div class="tw-eyebrow">FOR ENGLISH TEACHERS</div>' +
@@ -16016,7 +16044,7 @@ function twLandingHTML(loggedIn) {
       '<p class="tw-sub">Give every new student a placement test, watch their activity day by day, and send assignments — Muse English handles the busywork while you teach.</p>' +
       '<div class="tw-cta">' +
         (loggedIn ? '<a class="tw-btn" href="#tw-apply">Request teacher access →</a>'
-                  : '<a class="tw-btn" href="#tw-login">Log in →</a>') +
+                  : '<a class="tw-btn" href="/#/signin" data-tw-auth>Log in →</a>') +
         '<a class="tw-btn tw-btn-ghost" href="#tw-how">How it works</a></div>' +
       '<p class="tw-note">Already teaching with Muse English? Your login is the same account you use in the app.</p>' +
     '</div></section>' +
@@ -16034,13 +16062,9 @@ function twLandingHTML(loggedIn) {
       ? '<section class="tw-sec" id="tw-apply"><div class="tw-narrow"><div class="tw-applybox" id="tw-apply"></div></div></section>'
       : '<section class="tw-sec" id="tw-login"><div class="tw-narrow"><div class="tw-logincard">' +
         '<h2 class="tw-title-sm">Teacher login</h2>' +
-        '<p class="muted">Use the same email and password as your Muse English account.</p>' +
-        '<form id="tw-login-form" novalidate>' +
-        '<div class="field"><label for="tw-email">Email</label><input id="tw-email" type="email" autocomplete="email" placeholder="you@example.com" required></div>' +
-        '<div class="field"><label for="tw-pass">Password</label><input id="tw-pass" type="password" autocomplete="current-password" placeholder="••••••••" required></div>' +
-        '<div class="form-error" id="tw-error" role="alert"></div>' +
-        '<button class="tw-btn tw-btn-block" type="submit" id="tw-submit">Log in</button></form>' +
-        '<p class="muted" style="margin-bottom:0">New to Muse English? <a class="link" href="/#/signup">Create a free account</a>, then come back here and log in.</p>' +
+        '<p class="muted">Log in with your Muse English account, with Google or with email and password. You come straight back to this portal.</p>' +
+        '<a class="tw-btn tw-btn-block" href="/#/signin" data-tw-auth>Log in →</a>' +
+        '<p class="muted" style="margin:14px 0 0">New to Muse English? <a class="link" href="/#/signup" data-tw-auth>Create a free account</a>. You come back here afterwards to request teacher access.</p>' +
         '</div></div></section>') +
     '<footer class="tw-foot"><div class="tw-sec-in"><span>© 2026 Muse English · Built for teachers</span></div></footer>' +
   '</div>';
@@ -16049,6 +16073,10 @@ function twLandingHTML(loggedIn) {
 function twWireLanding() {
   var f = document.getElementById('tw-login-form');
   if (f) f.addEventListener('submit', twDoLogin);
+  /* Log in / sign up happen on the main auth page; remember to come back here. */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-tw-auth]'), function (a) {
+    a.addEventListener('click', function () { setAuthReturnPath('/teachers'); });
+  });
 }
 
 async function twDoLogin(e) {
