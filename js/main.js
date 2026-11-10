@@ -11280,7 +11280,7 @@ async function apRenderSupport(v) {
     return '<a class="ap-sup-row" href="/manage/support/' + esc(t.user_id) + '">' +
       '<span class="ap-sup-main"><b>' + esc(t.display_name || t.email || t.user_id) + '</b> ' +
       '<span class="muted">' + esc(t.email || '') + (t.level ? ' · ' + esc(t.level) : '') + '</span>' +
-      '<span class="ap-sup-last">' + (t.last_from_admin ? 'You: ' : '') + esc(t.last_body || '') + '</span></span>' +
+      '<span class="ap-sup-last" dir="auto">' + (t.last_from_admin ? 'You: ' : '') + esc(t.last_body || '') + '</span></span>' +
       (t.unread ? '<span class="sup-badge">' + t.unread + '</span>' : '') + '</a>';
   }).join('');
 }
@@ -15844,7 +15844,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611101948';
+var APP_VERSION = '202611102028';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
