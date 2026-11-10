@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Persian pages. Kept separate from sitemap-pages.xml, which the daily blog job regenerates. Listed in robots.txt. -->
+<!-- Persian pages + the English home (/en/). Kept separate from sitemap-pages.xml, which the daily blog job regenerates. Listed in robots.txt. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://museenglishapp.com/fa/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://museenglishapp.com/fa/ielts/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://museenglishapp.com/fa/mohajerat/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://museenglishapp.com/fa/az-sefr/</loc><lastmod>2026-11-10</lastmod></url>
+  <url><loc>https://museenglishapp.com/en/</loc><lastmod>2026-11-10</lastmod></url>
 </urlset>

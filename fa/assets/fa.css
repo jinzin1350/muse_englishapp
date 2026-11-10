@@ -131,3 +131,10 @@ section[id]{scroll-margin-top:120px}
   .fa-nav::-webkit-scrollbar{display:none}
   .fa-nav a{white-space:nowrap;flex:0 0 auto;font-size:.9rem;padding:5px 10px}
 }
+/* v4: header sign-in + language links */
+.head-link{flex:0 0 auto;text-decoration:none;color:#4A5165;font-weight:700;font-size:.92rem;padding:6px 8px;border-radius:10px}
+.head-link:hover{background:#FDEBD9;color:#9A3412}
+.fa-head .head-link[href="/#/signin"]{margin-inline-start:12px}
+@media (max-width:860px){.fa-head .head-link[href="/#/signin"]{margin-inline-start:auto}.fa-head .head-cta{margin-inline-start:0}}
+@media (max-width:520px){.fa-head-in{gap:10px}.head-link{padding:6px 4px}}
+@media (max-width:430px){.fa-brand bdi{display:none}}
