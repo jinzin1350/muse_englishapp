@@ -11091,8 +11091,8 @@ function paintSupportBadges() {
 }
 
 function welcomeBody(fa) {
-  if (fa) return '👋 به Muse English خوش اومدی!\n\nاینجا هر روز یه درس کوتاه و کامل داری: کلمه‌های جدید، پادکست، شدویینگ (تمرین تلفظ)، گرامر و کوئیز — روزی حدود ۱۰ دقیقه کافیه.\n\n🔥 استریک: هر روز که درس بخونی، زنجیره‌ت ادامه پیدا می‌کنه.\n🎯 کوئست‌های روزانه: فعالیت‌ها رو کامل کن و XP بگیر.\n🔖 هر کلمه‌ای رو که ذخیره کنی، اپ سر وقت برای مرور برش می‌گردونه.\n📖 بخش گرامر ۱۰۷ موضوع با تمرین داره و 🎓 یه آزمون کامل آیلتس آکادمیک هم برای تمرین آماده‌ست.\n\n❓ هر سؤالی داشتی، از بنر «پشتیبانی» پایین صفحهٔ اصلی یا صفحهٔ پروفایل بپرس — جوابت همون‌جا میاد.\n\nموفق باشی! 🌱';
-  return '👋 Welcome to Muse English!\n\nEvery day you get one short, complete lesson: new words, a podcast, shadowing (speaking practice), grammar and a quiz — about 10 minutes a day is enough.\n\n🔥 Streak: study every day to keep your chain going.\n🎯 Daily quests: finish activities and earn XP.\n🔖 Save any word and the app brings it back for review at the right time.\n📖 The Grammar section has 107 topics with practice, and 🎓 a full IELTS Academic mock is ready when you are.\n\n❓ Questions? Tap the Support banner at the bottom of the Home page or on your Profile — we reply right there.\n\nGood luck! 🌱';
+  if (fa) return '👋 به Muse English خوش اومدی!\n\nهر روز یه درس کوتاه داری: کلمه، پادکست، شدویینگ، گرامر و کوئیز — روزی ۱۰ دقیقه کافیه.\n🔥 هر روز بخونی، استریکت ادامه پیدا می‌کنه.\n🎯 با کوئست‌های روزانه XP بگیر؛ 🔖 کلمه ذخیره کن تا سر وقت برای مرور برگرده.\n📖 گرامر: ۱۰۷ موضوع با تمرین؛ 🎓 آزمون آیلتس آکادمیک هم آماده‌ست.\n❓ سؤالی داشتی؟ از بنر «پشتیبانی» پایین صفحهٔ اصلی بپرس — جوابت همون‌جا میاد.\nموفق باشی! 🌱';
+  return '👋 Welcome to Muse English!\n\nEvery day: one short lesson — words, podcast, shadowing, grammar and a quiz. About 10 minutes a day.\n🔥 Study daily to keep your streak.\n🎯 Finish daily quests to earn XP; 🔖 save words and they come back for review on time.\n📖 Grammar: 107 topics with practice. 🎓 A full IELTS Academic mock is ready too.\n❓ Questions? Tap the Support banner at the bottom of Home — we reply right there.\nGood luck! 🌱';
 }
 
 function supTime(ts) {
@@ -15732,7 +15732,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611101556';
+var APP_VERSION = '202611101618';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
