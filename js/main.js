@@ -2629,6 +2629,26 @@ function shouldEnterAppMode() {
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest', 'certificate'];
 const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'support', 'ptest', 'certificate'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
+/* Return-after-signup (Claude for Alireza, 2026-11-10): a signed-out visitor
+   who opens one of these routes (e.g. the /fa/ielts/ CTA -> #/ielts) sees the
+   signup page, and after sign-up/sign-in + onboarding lands back on the route.
+   localStorage (not sessionStorage) so it survives an email-confirm tab; 24h TTL. */
+const RETURN_VIEWS = ['ielts', 'grammar-test'];
+const RETURN_KEY = 'muse_return_v1';
+function saveReturnRoute(view) {
+  try { localStorage.setItem(RETURN_KEY, JSON.stringify({ h: '#/' + view, t: Date.now() })); } catch (e) {}
+}
+function takeReturnRoute() {
+  try {
+    const raw = localStorage.getItem(RETURN_KEY);
+    if (!raw) return null;
+    localStorage.removeItem(RETURN_KEY);
+    const o = JSON.parse(raw);
+    if (!o || typeof o.h !== 'string' || Date.now() - (o.t || 0) > 86400000) return null;
+    const m = o.h.match(/^#\/([a-z-]+)$/);
+    return (m && RETURN_VIEWS.indexOf(m[1]) !== -1) ? o.h : null;
+  } catch (e) { return null; }
+}
 
 function parseHash() {
   const h = window.location.hash || '#/';
@@ -2700,7 +2720,8 @@ function onRoute() {
   }
   let view = r.name || 'landing';
   if (!state.user) {
-    if (PUBLIC_VIEWS.indexOf(view) === -1) view = 'landing';
+    if (RETURN_VIEWS.indexOf(view) !== -1 && !r.arg) { saveReturnRoute(view); view = 'signup'; }
+    else if (PUBLIC_VIEWS.indexOf(view) === -1) view = 'landing';
   } else {
     // Logged-in: onboarding gate first — no nickname/level means no app views.
     if (enforceOnboardingGate()) return;
@@ -6840,6 +6861,9 @@ async function afterLogin() {
       if (window.location.hash !== ptestBack) { window.location.hash = ptestBack; return; }
     }
   } catch (e) {}
+  /* Return-after-signup (see RETURN_VIEWS). */
+  const backTo = takeReturnRoute();
+  if (backTo && window.location.hash !== backTo) window.location.hash = backTo;
   hideSplashSoon();
   maybeShowWelcome();
   // Teacher inbox: badge in the header + a prompt if unread messages arrived.
@@ -9669,21 +9693,26 @@ function paintIeltsBanner() {
   if (!isDesktop()) {
     wrap.innerHTML = '<a class="hm-card" href="#/ielts">' +
       '<span class="hm-icon">🎓</span><span class="hm-main"><span class="hm-kicker">IELTS</span>' +
-      '<span class="hm-title">IELTS Mock Test <span class="ix-vip-badge">⭐ VIP</span></span>' +
+      '<span class="hm-title">IELTS Mock Test ' + (IELTS_MOCK_FREE ? '<span class="ix-vip-badge">Free</span>' : '<span class="ix-vip-badge">⭐ VIP</span>') + '</span>' +
       '<span class="hm-subtxt">' + esc(sub) + '</span></span>' +
       '<span class="hm-btn hm-btn-soft">Start →</span></a>';
     return;
   }
   wrap.innerHTML = '<a class="g-banner" href="#/ielts">' +
-    '<span class="g-b-icon">🎓</span><span class="g-b-main"><b>IELTS Mock Test</b> <span class="ix-vip-badge">⭐ VIP</span>' +
+    '<span class="g-b-icon">🎓</span><span class="g-b-main"><b>IELTS Mock Test</b> ' + (IELTS_MOCK_FREE ? '<span class="ix-vip-badge">Free</span>' : '<span class="ix-vip-badge">⭐ VIP</span>') +
     '<span>' + esc(sub) + '</span></span><span class="g-b-cta">Start →</span></a>';
 }
 
 /* ---------- VIP gate (Alireza's order 2026-11-04) ----------
    The IELTS mock is a VIP-only feature. Admins and approved teachers
    always pass; students need profiles.is_vip = true (Admin panel toggle). */
+/* FREE MODE (Alireza 2026-11-10): the mock is free for every signed-in
+   learner "for now". Set IELTS_MOCK_FREE = false to restore the VIP gate.
+   If you flip it back, the /fa/ielts/ page copy must change the same day. */
+var IELTS_MOCK_FREE = true;
 async function ieltsFetchVip() {
   if (!state.user) return false;
+  if (IELTS_MOCK_FREE && !state.user.demo) return true;
   if (state.user.isAdmin) return true;
   if (state.user.demo) return false;
   if (state.user.isVip !== undefined) return state.user.isVip;
@@ -9741,7 +9770,7 @@ function ieltsIntro(v) {
     '<p class="ix2-lede">This mock follows the official IELTS Academic format, like the British Council computer test: ' +
     'each skill is taken in one sitting, the recordings play <b>once</b>, and Listening &amp; Reading are scored ' +
     'instantly with the published band conversion tables. Writing shows a transparent estimate plus model ' +
-    'answers. Speaking is different: your answers are <b>recorded and sent to your teacher</b>, who listens and awards your band \u2014 no AI scoring.</p>' +
+    'answers. Speaking is different: your answers are <b>recorded and sent to your teacher</b> (or to the Muse English team if you don\u2019t have one), who listens and awards your band \u2014 no AI scoring.</p>' +
     '<div class="ix2-cards">' +
     '<img src="/media/ielts/design/card-listening.png" alt="Listening \u2014 4 parts, 40 questions, about 30 minutes">' +
     '<img src="/media/ielts/design/card-reading.png" alt="Reading \u2014 3 passages, 40 questions, 60 minutes">' +
@@ -15732,7 +15761,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611101618';
+var APP_VERSION = '202611101824';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -16701,7 +16730,7 @@ async function twFillMissedWords(r, results, nameOf) {
 async function twPageIelts(c) {
   var ixT = twEffTeacher();
   var ieltsLinkCard = ixT ? '<div class="tw-ix-card"><b>🔗 Your IELTS Mock link</b>' +
-    '<p class="tw-sub" style="margin:4px 0 8px">Send this link to your students — the full mock is ⭐ VIP-only, and their Speaking recordings come back to this page for your score.</p>' +
+    '<p class="tw-sub" style="margin:4px 0 8px">Send this link to your students — the full mock is ' + (IELTS_MOCK_FREE ? 'free for every learner' : '⭐ VIP-only') + ', and their Speaking recordings come back to this page for your score.</p>' +
     '<div class="tw-linkrow"><code>' + esc(teacherIeltsLink(ixT.ref_code)) + '</code>' +
     '<button class="tw-btn tw-btn-orange tw-btn-sm" id="tw-copy-ielts2">⧉ Copy</button></div></div>' : '';
   c.innerHTML = '<div class="tw-page"><h2 class="tw-h">🎓 IELTS Speaking</h2>' +
@@ -17274,7 +17303,7 @@ async function twPageLinks(c) {
       '<p class="muted">Send your students the full IELTS Academic mock — Listening, Reading, Writing, and a recorded Speaking test that lands in your IELTS Speaking page for you to score.</p>' +
       '<div class="tw-linkrow"><code>' + esc(teacherIeltsLink(t.ref_code)) + '</code>' +
       '<button class="tw-btn tw-btn-orange tw-btn-sm" id="tw-copy-ielts">⧉ Copy</button></div></div>' +
-      '<div class="tw-link-side"><div class="tw-link-note">⭐ The mock is a VIP feature — a student needs VIP active on their account to open it.</div></div></div>' +
+      '<div class="tw-link-side"><div class="tw-link-note">' + (IELTS_MOCK_FREE ? 'The mock is free for every learner right now — no VIP needed.' : '⭐ The mock is a VIP feature — a student needs VIP active on their account to open it.') + '</div></div></div>' +
     (ro ? '<div class="tw-profcard"><p class="muted" style="margin:0">👁 Read-only — you’re viewing ' + esc(t.display_name) + '’s links.</p></div>'
       : '<div class="tw-profcard"><div class="tw-cardhead"><div><h3 style="margin:0">👤 My public profile</h3>' +
       '<p class="muted">Students see this when choosing a teacher.</p></div></div>' +
