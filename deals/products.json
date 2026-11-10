@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "conair-318rc-hair-dryer",
+      "name_fa": "سشوار کان‌ایر ۱۸۷۵ وات",
+      "name_en": "Conair 318RC Hair Dryer 1875 Watt Mid-Size Blow Dryer, Blue",
+      "price_cad": 11.86,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "سه‌شنبه، ۱۰ نوامبر ۲۰۲۶",
+      "image": "img/conair-318rc-hair-dryer.jpg",
+      "url": "https://www.amazon.ca/dp/B0852913V2?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "خشک‌کردن سریع با دو حالت گرما و سرعت و دکمه باد سرد"
+    },
+    {
+      "id": "philips-2200-ep2220-espresso",
+      "name_fa": "اسپرسوساز فیلیپس سری ۲۲۰۰",
+      "name_en": "Philips 2200 Series Fully Automatic Espresso Machine, Classic Milk Frother (EP2220/14)",
+      "price_cad": 349.99,
+      "regular_cad": null,
+      "discount_pct": null,
+      "added_fa": "سه‌شنبه، ۱۰ نوامبر ۲۰۲۶",
+      "image": "img/philips-2200-ep2220-espresso.jpg",
+      "url": "https://www.amazon.ca/dp/B07VBPLPH5?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "اسپرسو و قهوه از دانه تازه با آسیاب سرامیکی و کف‌ساز شیر"
+    },
+    {
       "id": "dewalt-dcl040-led-work-light",
       "name_fa": "چراغ کار دی‌والت ۲۰ ولت مکس",
       "name_en": "DEWALT 20V MAX LED Work Light / Flashlight (DCL040)",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "هدفون روگوشی پشت‌باز با صدای طبیعی و دقیق برای عاشقان موسیقی"
-    },
-    {
-      "id": "samsung-galaxy-s26-ultra-256gb-black",
-      "name_fa": "گوشی سامسونگ گلکسی اس۲۶ اولترا",
-      "name_en": "Samsung Galaxy S26 Ultra 256GB Unlocked (Black)",
-      "price_cad": 949.99,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "یکشنبه، ۸ نوامبر ۲۰۲۶",
-      "image": "img/samsung-galaxy-s26-ultra-256gb-black.jpg",
-      "url": "https://www.amazon.ca/dp/B0GH1H83JX?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "دوربین ۲۰۰ مگاپیکسلی، قلم اس، نمایشگر ۶.۹ اینچی و باتری یک روزه"
-    },
-    {
-      "id": "ninja-ultracrush-pro-bp401",
-      "name_fa": "مخلوط‌کن نینجا اولتراکراش پرو",
-      "name_en": "Ninja UltraCrush Pro 1500W 72oz Kitchen Blender System (BP401)",
-      "price_cad": 129.0,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "یکشنبه، ۸ نوامبر ۲۰۲۶",
-      "image": "img/ninja-ultracrush-pro-bp401.jpg",
-      "url": "https://www.amazon.ca/dp/B0G86TCCQS?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "موتور ۱۵۰۰ وات با پارچ ۷۲ اونسی، لیوان تک‌نفره و کاسه غذاساز"
     }
   ],
-  "updated_fa": "دوشنبه ۱۸ آبان"
+  "updated_fa": "سه‌شنبه ۱۹ آبان"
 }
