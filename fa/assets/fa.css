@@ -95,3 +95,21 @@ details p{color:#4A5165;margin:8px 0 2px}
   .cards,.cards.c2,.cards.c4,.steps{grid-template-columns:1fr}
   body{font-size:16px}
 }
+/* v2 (Claude, 2026-11-10): prose blocks for the copy-driven pages */
+bdi{unicode-bidi:isolate}
+main{display:block}
+.fa-prose{max-width:820px}
+.fa-prose>p{margin:0 0 14px;color:#2E3445}
+.fa-prose .notice{margin:14px 0 18px}
+.fa-badges{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 20px}
+.fa-badges li{background:#fff;border:1px solid #F3E3D3;border-radius:999px;padding:4px 14px;font-size:.9rem;font-weight:500;color:#7C2D12}
+.fa-list{margin:0 0 16px;padding-inline-start:1.3em}
+.fa-list li{margin:0 0 10px}
+.fa-list li::marker{color:#EE4D1C}
+.fa-steps{list-style:none;counter-reset:fa-step;margin:0 0 16px;padding:0}
+.fa-steps li{counter-increment:fa-step;position:relative;background:#fff;border:1px solid #F3E3D3;border-radius:18px;padding:14px 18px;padding-inline-start:62px;margin:0 0 10px}
+.fa-steps li::before{content:counter(fa-step,persian);position:absolute;inset-inline-start:16px;top:14px;width:32px;height:32px;border-radius:50%;background:#EE4D1C;color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;line-height:1}
+.src{font-size:.9rem}
+.src li{margin:0 0 6px}
+.hero-note{background:#fff;border:1px solid #F3E3D3;border-radius:12px;padding:8px 12px;display:inline-block}
+@media (max-width:520px){.fa-head .head-cta{padding:7px 14px;font-size:.85rem}.fa-steps li{padding-inline-start:56px}table{min-width:0;font-size:.8rem}th,td{padding:8px 4px}}
