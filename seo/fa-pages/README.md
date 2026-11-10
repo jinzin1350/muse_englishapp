@@ -1,7 +1,9 @@
 # Persian pages (/fa/) and the English home (/en/)
 
 - `content.py`: the Persian page text. Written by Claude for Alireza. Do not edit the wording; ask Alireza/Claude.
-- `render.py`: renders `content.py` into `fa/**/index.html` (template: `fa/assets/fa.css`).
+- `render.py`: renders `content.py` into `fa/**/index.html` using the English landing's design system
+  (it generates `fa/assets/fa-site.css` from the landing CSS in the root `index.html` + an RTL layer).
+  Re-run it after the landing CSS changes, so the Persian pages keep matching.
   Run: `python3 seo/fa-pages/render.py .`
 - `make_en.py`: builds `en/index.html` (English home) from the landing block of the root `index.html`.
   Run after the landing generator changes the root landing: `python3 seo/fa-pages/make_en.py .`
