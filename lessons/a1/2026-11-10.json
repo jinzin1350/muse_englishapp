@@ -1,0 +1,276 @@
+{
+  "date": "2026-11-10",
+  "theme": "family & relationships",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "divorced",
+      "pos": "adjective",
+      "meaning": "No longer married.",
+      "example": "My friend is divorced and lives alone.",
+      "pronunciation": "dih-VORST",
+      "persian": "مطلقه",
+      "photo": "media/a1/2026-11-10/photos/divorced.jpg",
+      "word_audio": "media/a1/2026-11-10/word-audio/divorced.mp3"
+    },
+    {
+      "word": "Do you come from …?",
+      "pos": "phrase",
+      "meaning": "Where are you from?",
+      "example": "Do you come from Italy?",
+      "pronunciation": "doo yoo KUM from",
+      "persian": "اهل کجا هستید؟",
+      "photo": "media/a1/2026-11-10/photos/do-you-come-from.jpg",
+      "word_audio": "media/a1/2026-11-10/word-audio/do-you-come-from.mp3"
+    },
+    {
+      "word": "elderly",
+      "pos": "adjective",
+      "meaning": "Old, used to describe people.",
+      "example": "The elderly man needed help crossing the street.",
+      "pronunciation": "EL-der-lee",
+      "persian": "سالخورده، مسن",
+      "photo": "media/a1/2026-11-10/photos/elderly.jpg",
+      "word_audio": "media/a1/2026-11-10/word-audio/elderly.mp3"
+    },
+    {
+      "word": "family",
+      "pos": "noun",
+      "meaning": "A group of people related to each other.",
+      "example": "I love spending time with my family.",
+      "pronunciation": "FAM-uh-lee",
+      "persian": "خانواده",
+      "photo": "media/a1/2026-11-10/photos/family.jpg",
+      "word_audio": "media/a1/2026-11-10/word-audio/family.mp3"
+    },
+    {
+      "word": "friend",
+      "pos": "noun",
+      "meaning": "a person you know and like.",
+      "example": "She is my best friend.",
+      "pronunciation": "FREND",
+      "persian": "دوست",
+      "photo": "media/a1/2026-11-10/photos/friend.jpg",
+      "word_audio": "media/a1/2026-11-10/word-audio/friend.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-10/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Family and Friends",
+    "audio": "media/a1/2026-11-10/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-11-10/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "My Family and My Friends",
+    "audio": "media/a1/2026-11-10/shadowing.mp3",
+    "transcript": "media/a1/2026-11-10/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-10/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/010.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/011.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/012.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/013.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/014.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/015.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/016.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/017.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/018.mp3",
+      "media/a1/2026-11-10/shadowing-sentences/019.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'divorced' mean?",
+      "options": [
+        "Old, used to describe people.",
+        "A group of people related to each other.",
+        "No longer married.",
+        "a person you know and like."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'Do you come from …?' mean?",
+      "options": [
+        "Where are you from?",
+        "No longer married.",
+        "a person you know and like.",
+        "Old, used to describe people."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'elderly' mean?",
+      "options": [
+        "a person you know and like.",
+        "Where are you from?",
+        "A group of people related to each other.",
+        "Old, used to describe people."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'family' mean?",
+      "options": [
+        "No longer married.",
+        "A group of people related to each other.",
+        "Where are you from?",
+        "Old, used to describe people."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'friend' mean?",
+      "options": [
+        "A group of people related to each other.",
+        "Old, used to describe people.",
+        "a person you know and like.",
+        "Where are you from?"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "There Is and There Are",
+    "explanation": "We use **there is** and **there are** to say that something exists or is in a place. Your friend is at home, and your family is there too.\n\nUse **there is** for one thing or for things we cannot count. For example, there is one elderly man in the park.\n\nUse **there are** for two or more things. For example, there are three people in my family.\n\nFor a negative sentence, use **there isn't** for one thing and **there aren't** for many things. Use **any** in negative sentences and in questions, and **some** in positive sentences.\n\nFor a question with one thing, ask **Is there** a park near here? For many things, ask **Are there** any shops near here?\n\nTo ask about a number, say **How many** people **are there** in your family?\n\nUse **there is** to say something exists. Then use **it is** to talk about it: there is a new café, and it is very nice.\n\nFor the past, use **there was** for one thing and **there were** for many things.",
+    "examples": [
+      "* **There's** a supermarket at the end of the street.* (one thing)",
+      "* **There are** twenty students in my class.* (plural)",
+      "* **There isn't** a lift in this building.* (negative)",
+      "* **There aren't** any eggs in the fridge.* (negative + any)",
+      "* **Is there** a pharmacy near here?* (question)",
+      "*How many people **are there** in your family?* (how many)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite: A friend is in the house. Use 'there is'.",
+        "a": "There is a friend in the house."
+      },
+      {
+        "q": "Rewrite: Three people are in my family photo. Use 'there are'.",
+        "a": "There are three people in my family photo."
+      },
+      {
+        "q": "Make a question: An elderly man is in the park. Use 'is there'.",
+        "a": "Is there an elderly man in the park?"
+      },
+      {
+        "q": "Rewrite: There are some friends at school. Make it negative with 'any'.",
+        "a": "There aren't any friends at school."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "There ___ a book on the table.",
+        "options": [
+          "is",
+          "are",
+          "be",
+          "am"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "There ___ three bedrooms in our flat.",
+        "options": [
+          "is",
+          "be",
+          "are",
+          "has"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ there a bank near here?",
+        "options": [
+          "Are",
+          "Is",
+          "Has",
+          "Does"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ there any eggs in the fridge?",
+        "options": [
+          "Is",
+          "Have",
+          "Do",
+          "Are"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "There aren't ___ chairs in the room.",
+        "options": [
+          "some",
+          "any",
+          "a",
+          "an"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "There's ___ milk in the fridge.",
+        "options": [
+          "some",
+          "a",
+          "any",
+          "many"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Is there a car park? – Yes, there ___.",
+        "options": [
+          "'s",
+          "are",
+          "is",
+          "has"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Are there any good cafés here? – No, there ___.",
+        "options": [
+          "isn't",
+          "not",
+          "don't",
+          "aren't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "How many people ___ in your family?",
+        "options": [
+          "is there",
+          "there are",
+          "have there",
+          "are there"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "There's a new restaurant on my street. ___ really good.",
+        "options": [
+          "There's",
+          "It's",
+          "Is",
+          "There are"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a1/2026-11-10/grammar-en.mp3"
+  }
+}

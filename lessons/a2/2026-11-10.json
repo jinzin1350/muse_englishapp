@@ -1,0 +1,279 @@
+{
+  "date": "2026-11-10",
+  "theme": "education & learning",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "accent",
+      "pos": "noun",
+      "meaning": "way of speaking that shows where you are from",
+      "example": "She has a beautiful French accent.",
+      "pronunciation": "AK-sent",
+      "persian": "لهجه",
+      "photo": "media/a2/2026-11-10/photos/accent.jpg",
+      "word_audio": "media/a2/2026-11-10/word-audio/accent.mp3"
+    },
+    {
+      "word": "accept",
+      "pos": "verb",
+      "meaning": "to agree to take something or agree with an idea",
+      "example": "I accept your apology.",
+      "pronunciation": "ak-SEPT",
+      "persian": "پذیرفتن، قبول کردن",
+      "photo": "media/a2/2026-11-10/photos/accept.jpg",
+      "word_audio": "media/a2/2026-11-10/word-audio/accept.mp3"
+    },
+    {
+      "word": "accurate(ly)",
+      "pos": "adjective/adverb",
+      "meaning": "correct or exact, without mistakes",
+      "example": "Please try to write accurately.",
+      "pronunciation": "AK-yuh-rut-lee",
+      "persian": "دقیق، صحیح",
+      "photo": "media/a2/2026-11-10/photos/accurate.jpg",
+      "word_audio": "media/a2/2026-11-10/word-audio/accurate.mp3"
+    },
+    {
+      "word": "active",
+      "pos": "adjective",
+      "meaning": "always doing things, not sitting still",
+      "example": "My dog is very active and loves to run.",
+      "pronunciation": "AK-tiv",
+      "persian": "فعال، پرتحرک",
+      "photo": "media/a2/2026-11-10/photos/active.jpg",
+      "word_audio": "media/a2/2026-11-10/word-audio/active.mp3"
+    },
+    {
+      "word": "adjective",
+      "pos": "noun",
+      "meaning": "A word that describes a noun.",
+      "example": "\"Happy\" is an adjective.",
+      "pronunciation": "AJ-ik-tiv",
+      "persian": "صفت",
+      "photo": "media/a2/2026-11-10/photos/adjective.jpg",
+      "word_audio": "media/a2/2026-11-10/word-audio/adjective.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-10/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Education and Learning",
+    "audio": "media/a2/2026-11-10/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-10/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Learning at School",
+    "audio": "media/a2/2026-11-10/shadowing.mp3",
+    "transcript": "media/a2/2026-11-10/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-10/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/015.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/016.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/017.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/018.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/019.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/020.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/021.mp3",
+      "media/a2/2026-11-10/shadowing-sentences/022.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'accent' mean?",
+      "options": [
+        "correct or exact, without mistakes",
+        "always doing things, not sitting still",
+        "way of speaking that shows where you are from",
+        "A word that describes a noun."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'accept' mean?",
+      "options": [
+        "always doing things, not sitting still",
+        "to agree to take something or agree with an idea",
+        "correct or exact, without mistakes",
+        "way of speaking that shows where you are from"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'accurate(ly)' mean?",
+      "options": [
+        "always doing things, not sitting still",
+        "correct or exact, without mistakes",
+        "to agree to take something or agree with an idea",
+        "way of speaking that shows where you are from"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'active' mean?",
+      "options": [
+        "A word that describes a noun.",
+        "way of speaking that shows where you are from",
+        "to agree to take something or agree with an idea",
+        "always doing things, not sitting still"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'adjective' mean?",
+      "options": [
+        "way of speaking that shows where you are from",
+        "A word that describes a noun.",
+        "always doing things, not sitting still",
+        "to agree to take something or agree with an idea"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Must, Have To and Should",
+    "explanation": "We use **must** and **have to** for obligation, when something is necessary. An active student, for example, **has to** bring a book to class.\n\nWe use **should** for advice, when something is a good idea. You **should** write accurately and check your work.\n\n**Must** and **should** never take **to** or **-s**. She **must** go, and she **should** go.\n\n**Have to** changes like a normal verb. She **has to** go, yesterday she **had to** go, and tomorrow she will **have to** go.\n\n**Mustn't** means it is not allowed, do not do it. You **mustn't** use your phone during the exam.\n\n**Don't have to** means it is not necessary, but you can if you want. You **don't have to** pay, because it is free.\n\nFor questions, ask **Do** you **have to** go, or **Should** I call her? Try to accept the answer and learn from it.",
+    "examples": [
+      "*You **must** wear a helmet on a motorbike.* (rule)",
+      "*She **has to** get up at 5 for work.* (external obligation)",
+      "*You **mustn't** use your phone during the exam.* (not allowed)",
+      "*We **don't have to** wear a uniform at school.* (not necessary)",
+      "*I **had to** wait for an hour yesterday.* (past)",
+      "*You **should** try this cake. It's delicious.* (advice)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite: It is necessary to wear a seatbelt. Use 'must'.",
+        "a": "You must wear a seatbelt."
+      },
+      {
+        "q": "Rewrite: She needs to get up early for work. Use 'has to'.",
+        "a": "She has to get up early for work."
+      },
+      {
+        "q": "Rewrite: It is not necessary to pay. It is free. Use 'don't have to'.",
+        "a": "You don't have to pay. It is free."
+      },
+      {
+        "q": "Give advice to a tired student. Use 'should'.",
+        "a": "You should go to bed early."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "You ___ smoke in the hospital. It's not allowed.",
+        "options": [
+          "don't have to",
+          "mustn't",
+          "shouldn't to",
+          "haven't to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Tomorrow is Sunday, so I ___ get up early.",
+        "options": [
+          "mustn't",
+          "must",
+          "shouldn't to",
+          "don't have to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "You look tired. You ___ go to bed early.",
+        "options": [
+          "should",
+          "must to",
+          "have",
+          "shoulds"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She ___ wear a uniform at work.",
+        "options": [
+          "have to",
+          "must to",
+          "has to",
+          "musts"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Yesterday I ___ work until 9 p.m.",
+        "options": [
+          "must",
+          "have to",
+          "had to",
+          "musted"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ we have to bring our own lunch?",
+        "options": [
+          "Do",
+          "Must",
+          "Have",
+          "Are"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You ___ pay for the museum. It's free.",
+        "options": [
+          "mustn't",
+          "must",
+          "should",
+          "don't have to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "You ___ eat so much sugar. It's bad for your teeth.",
+        "options": [
+          "don't have to",
+          "shouldn't",
+          "mustn't to",
+          "not should"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Next year, I'll ___ take the exam again.",
+        "options": [
+          "have to",
+          "must",
+          "must to",
+          "had to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Does he ___ work at weekends?",
+        "options": [
+          "has to",
+          "have to",
+          "must",
+          "had to"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-11-10/grammar-en.mp3"
+  }
+}
