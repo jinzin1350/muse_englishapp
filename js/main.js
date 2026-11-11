@@ -6380,7 +6380,7 @@ function admFilteredUsers() {
   let list = (st.users || []).slice();
   const q = (f.q || '').toLowerCase().trim();
   if (q) list = list.filter(function (u) {
-    return ((u.display_name || '') + ' ' + (u.email || '')).toLowerCase().indexOf(q) !== -1;
+    return ((u.display_name || '') + ' ' + (u.email || '') + ' ' + (u.phone || '')).toLowerCase().indexOf(q) !== -1;
   });
   if (f.level) list = list.filter(function (u) { return normalizeLevel(u.level) === f.level; });
   if (f.teacher) list = list.filter(function (u) { return u.referred_by === f.teacher; });
@@ -15901,7 +15901,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611111827';
+var APP_VERSION = '202611112042';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -17755,7 +17755,7 @@ function apFilteredUsers(users) {
   let list = users.slice();
   const q = (f.q || '').toLowerCase().trim();
   if (q) list = list.filter(function (u) {
-    return ((u.display_name || '') + ' ' + (u.email || '')).toLowerCase().indexOf(q) !== -1;
+    return ((u.display_name || '') + ' ' + (u.email || '') + ' ' + (u.phone || '')).toLowerCase().indexOf(q) !== -1;
   });
   if (f.level) list = list.filter(function (u) { return normalizeLevel(u.level) === f.level; });
   if (f.teacher) list = list.filter(function (u) { return u.referred_by === f.teacher; });
@@ -17784,11 +17784,12 @@ function apUsersTableHTML(users) {
   return refSummary +
     '<div class="muted" style="margin:.4rem 0">' + rows.length + ' users · tap a row for full detail</div>' +
     '<div class="ap-tablewrap"><table class="ap-table"><thead><tr>' +
-    '<th>User</th><th>Level</th><th>🔥</th><th>XP</th><th>XP 7d</th><th>Min 30d</th><th>Last active</th><th>Joined</th>' +
+    '<th>User</th><th>Phone</th><th>Level</th><th>🔥</th><th>XP</th><th>XP 7d</th><th>Min 30d</th><th>Last active</th><th>Joined</th>' +
     '</tr></thead><tbody>' +
     rows.map(function (u) {
       return '<tr data-apuser="' + esc(u.user_id) + '"><td><b>' + esc(u.display_name || (u.email || '?').split('@')[0]) +
         '</b><br><small class="muted">' + esc(u.email || '') + (u.referred_by ? ' · 📣' + esc(u.referred_by) : '') + '</small></td>' +
+        '<td>' + (u.phone ? esc(u.phone) : '<span class="muted">—</span>') + '</td>' +
         '<td>' + esc(String(u.level || '—').toUpperCase()) + '</td>' +
         '<td>' + (u.current_streak || 0) + '</td>' +
         '<td><b>' + (u.xp_total || 0) + '</b></td><td>' + (u.xp_7d || 0) + '</td>' +
@@ -17801,7 +17802,7 @@ async function apRenderUsers(v) {
   v.innerHTML = apShell('users',
     '<div class="ap-head"><h1>Users</h1><p class="muted">Everyone on the product. Click a row for the full profile.</p></div>' +
     '<div class="adm-filters">' +
-    '<input type="search" id="ap-q" placeholder="Search name or email…" value="' + esc(apUserFilter.q) + '" aria-label="Search users">' +
+    '<input type="search" id="ap-q" placeholder="Search name, email or phone…" value="' + esc(apUserFilter.q) + '" aria-label="Search users">' +
     '<select id="ap-f-level" aria-label="Filter by level"><option value="">All levels</option>' +
     LEVELS.map(function (lv) { return '<option value="' + lv + '"' + (apUserFilter.level === lv ? ' selected' : '') + '>' + lv.toUpperCase() + '</option>'; }).join('') + '</select>' +
     '<select id="ap-f-teacher" aria-label="Filter by teacher"><option value="">All teachers</option></select>' +
@@ -17826,6 +17827,19 @@ async function apRenderUsers(v) {
     body.innerHTML = '<div class="empty">Could not load users: ' + esc((e && e.message) || e) + '</div>';
     return;
   }
+  /* Phone numbers live on profiles (admin_user_stats predates the phone
+     column) — fetch them directly and merge by user id. Best-effort: if
+     the query fails, the Phone column simply shows —. */
+  try {
+    const phoneById = {};
+    const ids = users.map(function (u) { return u.user_id; }).filter(Boolean);
+    for (let i = 0; i < ids.length; i += 200) {
+      const pr = await sb.from('profiles').select('id,phone').in('id', ids.slice(i, i + 200));
+      if (pr.error) throw pr.error;
+      (pr.data || []).forEach(function (p) { if (p.phone) phoneById[p.id] = p.phone; });
+    }
+    users.forEach(function (u) { if (!u.phone && phoneById[u.user_id]) u.phone = phoneById[u.user_id]; });
+  } catch (e) {}
   const tsel = v.querySelector('#ap-f-teacher');
   const codes = {};
   users.forEach(function (u) { if (u.referred_by) codes[u.referred_by] = 1; });
@@ -17878,6 +17892,7 @@ async function apRenderUserDetail(v, id) {
       '<div class="ap-cards">' +
       '<div class="card"><h3>Profile</h3>' +
       '<div class="ap-kv"><span>Level</span><b>' + esc(String(p.level || '—').toUpperCase()) + '</b></div>' +
+      '<div class="ap-kv"><span>Phone</span><b>' + (p.phone ? esc(p.phone) : '—') + '</b></div>' +
       '<div class="ap-kv"><span>Streak</span><b>🔥 ' + (p.current_streak || 0) + '</b></div>' +
       '<div class="ap-kv"><span>Active days</span><b>' + (t.active_days || 0) + '</b></div>' +
       '<div class="ap-kv"><span>First / last active</span><b>' + esc(String(t.first_active || '—').slice(0, 10)) + ' → ' + esc(String(t.last_active || '—').slice(0, 10)) + '</b></div>' +
