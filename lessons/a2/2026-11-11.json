@@ -1,0 +1,280 @@
+{
+  "date": "2026-11-11",
+  "theme": "travel & transport",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "board",
+      "pos": "verb",
+      "meaning": "Get on a ship, train, or plane.",
+      "example": "We need to board the plane soon.",
+      "pronunciation": "BORD",
+      "persian": "سوار شدن",
+      "photo": "media/a2/2026-11-11/photos/board.jpg",
+      "word_audio": "media/a2/2026-11-11/word-audio/board.mp3"
+    },
+    {
+      "word": "boat",
+      "pos": "noun",
+      "meaning": "A small vehicle that travels on water.",
+      "example": "We took a small boat on the lake.",
+      "pronunciation": "BOTE",
+      "persian": "قایق",
+      "photo": "media/a2/2026-11-11/photos/boat.jpg",
+      "word_audio": "media/a2/2026-11-11/word-audio/boat.mp3"
+    },
+    {
+      "word": "book",
+      "pos": "noun",
+      "meaning": "Pages with words and pictures, bound together.",
+      "example": "I like to read a good book.",
+      "pronunciation": "BOOK",
+      "persian": "کتاب",
+      "photo": "media/a2/2026-11-11/photos/book.jpg",
+      "word_audio": "media/a2/2026-11-11/word-audio/book.mp3"
+    },
+    {
+      "word": "book a seat",
+      "pos": "phrase",
+      "meaning": "Reserve a place to sit.",
+      "example": "I need to book a seat on the train.",
+      "pronunciation": "book uh SEET",
+      "persian": "صندلی رزرو کردن",
+      "photo": "media/a2/2026-11-11/photos/book-a-seat.jpg",
+      "word_audio": "media/a2/2026-11-11/word-audio/book-a-seat.mp3"
+    },
+    {
+      "word": "book online",
+      "pos": "phrase",
+      "meaning": "Reserve something using the internet.",
+      "example": "You can book tickets online easily.",
+      "pronunciation": "book on-LYNE",
+      "persian": "آنلاین رزرو کردن",
+      "photo": "media/a2/2026-11-11/photos/book-online.jpg",
+      "word_audio": "media/a2/2026-11-11/word-audio/book-online.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-11/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: A Boat Trip",
+    "audio": "media/a2/2026-11-11/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-11/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Boat Trip",
+    "audio": "media/a2/2026-11-11/shadowing.mp3",
+    "transcript": "media/a2/2026-11-11/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-11/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/015.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/016.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/017.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/018.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/019.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/020.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/021.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/022.mp3",
+      "media/a2/2026-11-11/shadowing-sentences/023.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'board' mean?",
+      "options": [
+        "Reserve something using the internet.",
+        "Get on a ship, train, or plane.",
+        "Reserve a place to sit.",
+        "Pages with words and pictures, bound together."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'boat' mean?",
+      "options": [
+        "Reserve something using the internet.",
+        "A small vehicle that travels on water.",
+        "Pages with words and pictures, bound together.",
+        "Reserve a place to sit."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'book' mean?",
+      "options": [
+        "Get on a ship, train, or plane.",
+        "Reserve something using the internet.",
+        "A small vehicle that travels on water.",
+        "Pages with words and pictures, bound together."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'book a seat' mean?",
+      "options": [
+        "Pages with words and pictures, bound together.",
+        "A small vehicle that travels on water.",
+        "Reserve a place to sit.",
+        "Get on a ship, train, or plane."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'book online' mean?",
+      "options": [
+        "Get on a ship, train, or plane.",
+        "Pages with words and pictures, bound together.",
+        "Reserve a place to sit.",
+        "Reserve something using the internet."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Much, Many, A Lot Of, A Few, A Little",
+    "explanation": "These words talk about **quantity**, how much of something there is. The right word depends on the noun.\n\nUse **many** with countable nouns and **much** with uncountable nouns. Ask **How many** boats are there, but **How much** time do we have before we board?\n\nIn positive sentences, **a lot of** works with both kinds of nouns. There are **a lot of** people on the boat today.\n\n**A few** means a small number, and **a little** means a small amount. I have **a few** books in my bag, and **a little** time to read one.\n\nWithout **a**, **few** and **little** mean almost none, a negative idea. Very **few** people book a seat early, so please hurry.\n\n**Too many** and **too much** mean more than you want. There are **too many** bags on this small boat.",
+    "examples": [
+      "*How **many** brothers and sisters do you have?* (countable question)",
+      "*How **much** does this cost?* (price)",
+      "*There isn't **much** milk left.* (uncountable negative)",
+      "*There were **a lot of** people at the concert.* (positive)",
+      "*I've got **a few** ideas for the party.* (some, countable)",
+      "*Could I have **a little** sugar, please?* (some, uncountable)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with 'a few': I have some books in my bag.",
+        "a": "I have a few books in my bag."
+      },
+      {
+        "q": "Ask about the price of the boat ticket. Use 'How much'.",
+        "a": "How much does the boat ticket cost?"
+      },
+      {
+        "q": "Rewrite with 'too many': There are a lot of people on the boat, more than we want.",
+        "a": "There are too many people on the boat."
+      },
+      {
+        "q": "Rewrite with 'a little': I have some time before we board.",
+        "a": "I have a little time before we board."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "How ___ apples do you want?",
+        "options": [
+          "much",
+          "lot",
+          "many",
+          "few"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "There isn't ___ milk left. Can you buy some?",
+        "options": [
+          "much",
+          "many",
+          "a few",
+          "few"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I've got ___ friends in Toronto, so I'm not lonely.",
+        "options": [
+          "a little",
+          "a few",
+          "few",
+          "much"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Could I have ___ sugar in my tea, please?",
+        "options": [
+          "a few",
+          "many",
+          "few",
+          "a little"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "How ___ does this jacket cost?",
+        "options": [
+          "much",
+          "many",
+          "lot",
+          "few"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "There were ___ people at the party. It was really crowded.",
+        "options": [
+          "much",
+          "a little",
+          "little",
+          "a lot of"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Very ___ people came to the meeting, so we cancelled it.",
+        "options": [
+          "little",
+          "a few",
+          "few",
+          "much"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We have very ___ time. Hurry up!",
+        "options": [
+          "few",
+          "little",
+          "a little",
+          "many"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I don't have ___ questions. Just one.",
+        "options": [
+          "much",
+          "a little",
+          "little",
+          "many"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I drank too ___ coffee and now I can't sleep.",
+        "options": [
+          "many",
+          "few",
+          "much",
+          "a few"
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a2/2026-11-11/grammar-en.mp3"
+  }
+}

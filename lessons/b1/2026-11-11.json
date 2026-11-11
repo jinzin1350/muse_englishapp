@@ -1,0 +1,324 @@
+{
+  "date": "2026-11-11",
+  "theme": "work & career",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "scientist",
+      "pos": "noun",
+      "meaning": "A person who studies science.",
+      "example": "Scientists are trying to find a cure.",
+      "pronunciation": "SY-un-tist",
+      "persian": "دانشمند",
+      "photo": "media/b1/2026-11-11/photos/scientist.jpg",
+      "word_audio": "media/b1/2026-11-11/word-audio/scientist.mp3"
+    },
+    {
+      "word": "slightly",
+      "pos": "adverb",
+      "meaning": "A little bit.",
+      "example": "The weather is slightly warmer today.",
+      "pronunciation": "SLYT-lee",
+      "persian": "کمی، اندکی",
+      "photo": "media/b1/2026-11-11/photos/slightly.jpg",
+      "word_audio": "media/b1/2026-11-11/word-audio/slightly.mp3"
+    },
+    {
+      "word": "soldier",
+      "pos": "noun",
+      "meaning": "A person who works in the army.",
+      "example": "My brother is a brave soldier.",
+      "pronunciation": "SOHL-juh",
+      "persian": "سرباز",
+      "photo": "media/b1/2026-11-11/photos/soldier.jpg",
+      "word_audio": "media/b1/2026-11-11/word-audio/soldier.mp3"
+    },
+    {
+      "word": "type v",
+      "pos": "verb",
+      "meaning": "To write using a keyboard.",
+      "example": "She can type very fast.",
+      "pronunciation": "TYPE",
+      "persian": "تایپ کردن",
+      "photo": "media/b1/2026-11-11/photos/type-v.jpg",
+      "word_audio": "media/b1/2026-11-11/word-audio/type-v.mp3"
+    },
+    {
+      "word": "vet",
+      "pos": "noun",
+      "meaning": "an animal doctor",
+      "example": "We took our dog to the vet.",
+      "pronunciation": "VET",
+      "persian": "دامپزشک",
+      "photo": "media/b1/2026-11-11/photos/vet.jpg",
+      "word_audio": "media/b1/2026-11-11/word-audio/vet.mp3"
+    },
+    {
+      "word": "a bit [slightly]",
+      "pos": "adverb",
+      "meaning": "a little, to a small degree",
+      "example": "I'm feeling a bit tired today.",
+      "pronunciation": "uh BIT",
+      "persian": "کمی، اندکی",
+      "photo": "media/b1/2026-11-11/photos/a-bit-slightly.jpg",
+      "word_audio": "media/b1/2026-11-11/word-audio/a-bit-slightly.mp3"
+    },
+    {
+      "word": "a laugh",
+      "pos": "noun",
+      "meaning": "(informal) something funny or enjoyable",
+      "example": "That party was a real laugh!",
+      "pronunciation": "uh LAHF",
+      "persian": "خنده دار، سرگرم کننده",
+      "photo": "media/b1/2026-11-11/photos/a-laugh.jpg",
+      "word_audio": "media/b1/2026-11-11/word-audio/a-laugh.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-11-11/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Work and Careers",
+    "audio": "media/b1/2026-11-11/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-11-11/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Nadia's First Week at Work",
+    "audio": "media/b1/2026-11-11/shadowing.mp3",
+    "transcript": "media/b1/2026-11-11/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b1/2026-11-11/shadowing-sentences/001.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/002.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/003.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/004.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/005.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/006.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/007.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/008.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/009.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/010.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/011.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/012.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/013.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/014.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/015.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/016.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/017.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/018.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/019.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/020.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/021.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/022.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/023.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/024.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/025.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/026.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/027.mp3",
+      "media/b1/2026-11-11/shadowing-sentences/028.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'scientist' mean?",
+      "options": [
+        "an animal doctor",
+        "A person who studies science.",
+        "A person who works in the army.",
+        "(informal) something funny or enjoyable"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'slightly' mean?",
+      "options": [
+        "A little bit.",
+        "(informal) something funny or enjoyable",
+        "an animal doctor",
+        "A person who works in the army."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'soldier' mean?",
+      "options": [
+        "A person who studies science.",
+        "a little, to a small degree",
+        "A person who works in the army.",
+        "an animal doctor"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'type v' mean?",
+      "options": [
+        "a little, to a small degree",
+        "A little bit.",
+        "To write using a keyboard.",
+        "an animal doctor"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'vet' mean?",
+      "options": [
+        "an animal doctor",
+        "a little, to a small degree",
+        "A person who works in the army.",
+        "(informal) something funny or enjoyable"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'a bit [slightly]' mean?",
+      "options": [
+        "A person who studies science.",
+        "a little, to a small degree",
+        "(informal) something funny or enjoyable",
+        "To write using a keyboard."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'a laugh' mean?",
+      "options": [
+        "an animal doctor",
+        "A little bit.",
+        "(informal) something funny or enjoyable",
+        "A person who works in the army."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Present Perfect vs Past Simple",
+    "explanation": "Use the **past simple** for a **finished** time in the past. The time is over, like **yesterday**, **last week**, or **in 2019**, as when a soldier **worked** last year or a scientist **typed** a report yesterday.\n\nUse the **present perfect** when the time is **not finished** or connects the past to **now**. Say *I **have been** to Paris three times* for life experience, with no finished time given.\n\nThe present perfect form is **have** or **has** plus the past participle. A vet **has helped** many animals, and scientists **have found** new answers.\n\nUse **since** with a starting point and **for** with a period of time. She **has lived** here **since** 2015, and he **has worked** there **for** ten years, slightly longer than he planned.\n\nAsk about a specific past moment with **When did...?** and the **past simple**. Ask about experience with **Have you ever...?** and the **present perfect**.\n\nBe careful: never use the present perfect with a finished time expression. Say *I **saw** him yesterday*, not *I have seen him yesterday* — that mistake is a bit common, but easy to fix, and fixing it will give your teacher a laugh.",
+    "examples": [
+      "*I **went** to Paris in 2019.* (finished time)",
+      "*I**'ve been** to Paris three times.* (experience)",
+      "*We **had** dinner two hours ago.* (ago)",
+      "*I**'ve drunk** three coffees so far today.* (unfinished time)",
+      "*She**'s lived** here since 2015.* (since: still true)",
+      "*She **broke** her leg last year.* (finished time)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with the past simple: I have seen the soldier yesterday.",
+        "a": "I saw the soldier yesterday."
+      },
+      {
+        "q": "Rewrite with the present perfect: She lives here since 2015.",
+        "a": "She has lived here since 2015."
+      },
+      {
+        "q": "Ask about experience: you / ever / work as a vet?",
+        "a": "Have you ever worked as a vet?"
+      },
+      {
+        "q": "Rewrite with the past simple: When have you typed the report?",
+        "a": "When did you type the report?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ to Paris in 2019.",
+        "options": [
+          "have been",
+          "have gone",
+          "was going",
+          "went"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She ___ here since 2015. She loves it.",
+        "options": [
+          "lived",
+          "has lived",
+          "lives",
+          "is living"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We ___ dinner two hours ago.",
+        "options": [
+          "had",
+          "have had",
+          "have",
+          "has had"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ you ever eaten sushi?",
+        "options": [
+          "Did",
+          "Do",
+          "Have",
+          "Has"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "When ___ you start learning English?",
+        "options": [
+          "did",
+          "have",
+          "has",
+          "are"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ three cups of coffee so far today.",
+        "options": [
+          "drank",
+          "drink",
+          "have drunk",
+          "had drunk"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My grandfather ___ in Italy for ten years before he moved to Canada.",
+        "options": [
+          "has lived",
+          "lived",
+          "lives",
+          "has been living"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "How long ___ you known each other? – Since we were at school.",
+        "options": [
+          "did",
+          "do",
+          "are",
+          "have"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She ___ her leg last year, but it's fine now.",
+        "options": [
+          "has broken",
+          "breaks",
+          "broke",
+          "has been breaking"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We ___ each other for five years. We're best friends.",
+        "options": [
+          "have known",
+          "knew",
+          "know",
+          "are knowing"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}
