@@ -1,0 +1,119 @@
+# must-have-to — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***must*** و ***have to*** را برای گفتن اینکه کاری **لازم** است («باید») به کار می‌بریم: *I **have to** get up early tomorrow. You **must** wear a helmet.*
+i1: منفی‌هایشان خیلی با هم فرق دارد: *You **mustn't** smoke here* (اجازه ندارید؛ «نباید») اما *You **don't have to** come* (لازم نیست). برای نصیحت صفحهٔ [should و ought to](/blog/grammar/should-ought-to/) را ببینید.
+
+mht-have-to.t: *have to*: لازم است
+mht-have-to.s: **have to / has to** + شکل سادهٔ فعل یعنی لازم است: *I **have to** work on Saturday. She **has to** wear a uniform.*
+mht-have-to.b0.h:  | I / you / we / they | he / she / it
+mht-have-to.b0.0: مثبت ‖ = ‖ =
+mht-have-to.b0.1: منفی ‖ = ‖ =
+mht-have-to.b0.2: سؤالی ‖ = ‖ =
+mht-have-to.b1: *have to* مثل یک فعل معمولی رفتار می‌کند و برای سؤالی و منفی از *do / does* کمک می‌گیرد: ***Do** you **have to** work tomorrow?*
+mht-have-to.b2: برای قانون‌ها، کارهای روزمره و چیزهایی که دیگران تعیین می‌کنند خیلی رایج است: *In my job I **have to** answer a lot of emails.*
+mht-have-to.b3: تلفظ: در گفتار تند، *have to* شبیه /ˈhæftə/ و *has to* شبیه /ˈhæstə/ شنیده می‌شود.
+mht-have-to.n0: لازم است
+mht-have-to.n1: با *he / she / it*: *has to*
+mht-have-to.n2: سؤالی
+mht-have-to.n3: لازم نیست
+mht-have-to.w0: با *he / she / it*: *has to*
+mht-have-to.w1: *have* + *to*
+mht-have-to.w2: بعد از *must* حرف *to* نمی‌آید
+
+mht-must.t: *must*: اجبار قوی و توصیهٔ جدی
+mht-must.s: **must** + شکل سادهٔ فعل برای اجبار قوی، اغلب حسِ خودِ گوینده، و برای قانون‌ها: *I **must** call my mum. You **must** wear a seat belt.*
+mht-must.b0: ***must*** برای همهٔ اشخاص یکی است و *to* ندارد: *I **must** go, she **must** go.* نه *She musts go* و نه *I must to go*.
+mht-must.b1: *must* را برای این‌ها به کار می‌بریم:
+mht-must.b2.0: چیزهایی که **خودمان** لازم می‌دانیم: *I **must** remember to call Lisa.*
+mht-must.b2.1: **قانون‌ها** و **تابلوها**، اغلب در نوشته: *Passengers **must** wear a seat belt.*
+mht-must.b2.2: **توصیه‌های جدی**: *You **must** try this cake. It's amazing!*
+mht-must.b3: *must* فقط برای حال و آینده است. برای گذشته *had to* بیاورید: *Yesterday I **had to** work late.* نه *I musted*. بخش [must یا have to؟](#mht-must-vs-have-to) را ببینید.
+mht-must.n0: حسِ خودم
+mht-must.n1: قانون نوشته‌شده
+mht-must.n2: توصیهٔ جدی
+mht-must.n3: پیشنهاد دوستانه
+mht-must.w0: *must* حرف *-s* نمی‌گیرد
+mht-must.w1: *must* + شکل سادهٔ فعل (بدون *to*)
+mht-must.w2: گذشته: *had to*
+
+mht-mustnt-dont-have-to.t: *mustn't* یا *don't have to*؟
+mht-mustnt-dont-have-to.s: **mustn't** یعنی اجازه نیست / این کار را نکنید («نباید»). **don't have to** یعنی لازم نیست (اگر بخواهید می‌توانید).
+mht-mustnt-dont-have-to.b0.h: *mustn't* | *don't have to*
+mht-mustnt-dont-have-to.b0.0: *You **mustn't** smoke here.* (ممنوع است.) ‖ *You **don't have to** come.* (لازم نیست.)
+mht-mustnt-dont-have-to.b0.1: *You **mustn't** tell anyone.* (به هیچ‌کس نگو!) ‖ *You **don't have to** tell me.* (اگر بخواهی می‌توانی بگویی.)
+mht-mustnt-dont-have-to.b1: ***mustn't*** (*must not*) یعنی موظفید کاری را **نکنید**: *You **mustn't** park here.*
+mht-mustnt-dont-have-to.b2: ***don't / doesn't have to*** یعنی **هیچ اجباری نیست**: *You **don't have to** pay. It's free.* می‌توانید انجامش بدهید، اما لازم نیست.
+mht-mustnt-dont-have-to.b3: این یکی از رایج‌ترین اشتباه‌هاست (چون در فارسی هر دو را «نباید» ترجمه می‌کنیم). از خودتان بپرسید: *ممنوع است؟* ← *mustn't*. *اختیاری است؟* ← *don't have to*.
+mht-mustnt-dont-have-to.n0: ممنوع
+mht-mustnt-dont-have-to.n1: لازم نیست
+mht-mustnt-dont-have-to.n2: مهم است که این کار نشود
+mht-mustnt-dont-have-to.n3: اجباری نیست
+mht-mustnt-dont-have-to.w0: ممنوع: *mustn't*
+mht-mustnt-dont-have-to.w1: لازم نیست: *don't have to*
+
+mht-must-vs-have-to.t: *must* یا *have to*؟
+mht-must-vs-have-to.s: **must** اغلب یعنی گوینده آن را لازم می‌داند. **have to** یعنی یک قانون یا موقعیت آن را لازم کرده. برای گذشته و آینده **had to / will have to** بیاورید.
+mht-must-vs-have-to.b0.h: *must* | *have to*
+mht-must-vs-have-to.b0.0: *I **must** stop eating sweets.* (خودم تصمیم می‌گیرم) ‖ *I **have to** wear a uniform.* (مدرسه تعیین می‌کند)
+mht-must-vs-have-to.b0.1: *You **must** come and see us.* (دلم می‌خواهد بیایی) ‖ *You **have to** show your passport.* (قانون است)
+mht-must-vs-have-to.b1: در خیلی از جمله‌ها هر دو ممکن‌اند، به‌خصوص در انگلیسی بریتانیایی. اما اغلب فرقی هست:
+mht-must-vs-have-to.b2.0: ***must*** یعنی حس یا تصمیمِ **خودِ گوینده**: *I **must** call her.* (فکر می‌کنم مهم است.)
+mht-must-vs-have-to.b2.1: ***have to*** یعنی قانون یا موقعیتی **بیرونی**: *I **have to** call her. It's my job.*
+mht-must-vs-have-to.b3: در انگلیسی آمریکایی برای اجبار *have to* (یا *have got to*) خیلی رایج‌تر از *must* است.
+mht-must-vs-have-to.b4: ***have got to*** همان معنی *have to* را دارد و در گفتار خودمانی رایج است: *I**'ve got to** go.* فقط در زمان حال به کار می‌رود.
+mht-must-vs-have-to.n0: تصمیم خودم
+mht-must-vs-have-to.n1: قانون بیرونی
+mht-must-vs-have-to.n2: توصیهٔ گوینده
+mht-must-vs-have-to.n3: قانون
+mht-must-vs-have-to.w0: قانون بیرونی: *have to* (طبیعی‌تر)
+mht-must-vs-have-to.w1: گذشته: *had to*
+
+mht-past-future.t: *had to, will have to, have had to*
+mht-past-future.s: *must* شکل گذشته یا آینده ندارد. برای گذشته **had to**، برای آینده **will have to** و برای حال کامل **have had to** بیاورید.
+mht-past-future.b0.h: زمان | ساختار | مثال
+mht-past-future.b0.0: گذشته ‖ = ‖ =
+mht-past-future.b0.1: گذشتهٔ منفی ‖ = ‖ =
+mht-past-future.b0.2: آینده ‖ = ‖ =
+mht-past-future.b0.3: حال کامل ‖ = ‖ =
+mht-past-future.b0.4: بعد از فعل‌های وجهی ‖ = ‖ =
+mht-past-future.b1: سؤال در گذشته: ***Did** you **have to** wait long?*
+mht-past-future.b2: برای آینده، وقتی همین حالا تصمیم گرفته می‌شود *must* و *have to* هر دو ممکن‌اند: *I **must / have to** leave early tomorrow.* وقتی اجبار در آینده به وجود می‌آید ***will have to*** بیاورید: *If you fail, you**'ll have to** take the exam again.*
+mht-past-future.n0: اجبار در گذشته
+mht-past-future.n1: سؤال در گذشته
+mht-past-future.n2: آینده
+mht-past-future.n3: حال کامل
+mht-past-future.w0: گذشته: *had to*
+mht-past-future.w1: *did* + *have to*
+
+mht-need.t: *need to, don't need to, needn't*
+mht-need.s: **need to** یعنی لازم است. **don't need to / needn't** یعنی لازم نیست: *You **needn't** come. You **don't need to** come.*
+mht-need.b0: ***need to*** مثل یک فعل معمولی رفتار می‌کند: *I **need to** buy some milk. **Do** you **need to** leave?*
+mht-need.b1: برای **لازم نبودن**، ***don't need to*** یا ***needn't*** (بیشتر بریتانیایی و کمی رسمی) بیاورید: *You **don't need to** shout. / You **needn't** shout.* هر دو همان معنی *don't have to* را دارند.
+mht-need.b2: بعد از ***needn't*** شکل سادهٔ فعل بدون *to* می‌آید: *You **needn't** worry.* نه *You needn't to worry*.
+mht-need.b3: برای گذشته، *didn't need to* و *needn't have* معنی‌های متفاوتی دارند. صفحهٔ [should have، could have و needn't have](/blog/grammar/should-have-could-have-neednt-have/) را ببینید.
+mht-need.n0: لازم است
+mht-need.n1: لازم نیست
+mht-need.n2: لازم نیست (بریتانیایی)
+mht-need.n3: سؤالی
+mht-need.w0: *needn't* + شکل سادهٔ فعل
+mht-need.w1: *doesn't* + *need*
+mht-need.w2: سؤالی: *Do I need to…?*
+
+x.mht-have-to-s01: با *she*: *has to*.
+x.mht-have-to-s02: سؤالی: *Do you have to…?*
+x.mht-have-to-s03: با *we*: *have to*.
+x.mht-must-s01: قانون: *must* + شکل سادهٔ فعل.
+x.mht-must-s02: توصیهٔ جدی: *must*.
+x.mht-must-s03: *must* + شکل سادهٔ فعل.
+x.mht-mustnt-dont-have-to-s01: گفتنش ممنوع است: *mustn't*.
+x.mht-mustnt-dont-have-to-s02: لازم نیست: *don't have to*.
+x.mht-mustnt-dont-have-to-s03: لازم نیست: *don't have to*.
+x.mht-must-vs-have-to-s01: یک مرجع بیرونی (دکتر) تعیین می‌کند: *have to*.
+q.mht-must-vs-have-to-s02: کدام جمله تصمیمِ خودِ گوینده را واضح‌تر نشان می‌دهد؟
+x.mht-must-vs-have-to-s02: *must* یعنی حسِ خودِ گوینده.
+x.mht-must-vs-have-to-s03: *I've got to* یعنی *I have to* (خودمانی).
+x.mht-past-future-s01: گذشته: *had to*.
+x.mht-past-future-s02: اجبار در آینده: *will have to*.
+x.mht-past-future-s03: سؤال در گذشته: *Did you have to…?*
+x.mht-need-s01: لازم نیست: *don't need to*.
+x.mht-need-s02: *needn't* + شکل سادهٔ فعل.
+x.mht-need-s03: لازم است: *need to*.

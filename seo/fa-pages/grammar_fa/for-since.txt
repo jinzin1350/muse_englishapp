@@ -1,0 +1,74 @@
+# for-since — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***for*** و ***since*** هر دو به سؤال *How long?* («چه مدت؟») جواب می‌دهند، معمولاً با حال کامل: *I've lived here **for** five years. I've lived here **since** 2020.* ***ago*** می‌گوید چیزی **کِی** اتفاق افتاد: *I moved here five years **ago**.*
+i1: این صفحه از فرق پایه شروع می‌شود و به الگوهای کاربردی مثل *It's two years since…* و *over the last few years* می‌رسد.
+
+fs-for-since.t: *for* + مدت، *since* + نقطهٔ شروع
+fs-for-since.s: **for** + مدت زمان (*for three hours, for ten years*)؛ **since** + زمانی که شروع شد (*since 9 am, since Monday, since 2019*).
+fs-for-since.b0.h: *for* + مدت | *since* + نقطهٔ شروع
+fs-for-since.b1: با حال کامل، هر دو موقعیتی را توصیف می‌کنند که **در گذشته شروع شده و هنوز ادامه دارد**: *She**'s worked** here **for** two years / **since** 2023.*
+fs-for-since.b2: برای انتخاب بپرسید: آیا **مقدار** زمان است (چقدر وقت)؟ ← *for*. آیا یک **نقطه** روی تقویم یا ساعت است؟ ← *since*.
+fs-for-since.n0: مدت
+fs-for-since.n1: نقطهٔ شروع
+fs-for-since.n2: نقطه‌ای روی ساعت
+fs-for-since.n3: مدت
+fs-for-since.w0: *three years* مدت است: *for*
+fs-for-since.w1: *Monday* نقطهٔ شروع است: *since*
+fs-for-since.w2: تا حالا: حال کامل.
+
+fs-ago.t: *ago*، *for* یا *since*؟
+fs-ago.s: **ago** یعنی چه مدت قبل از حالا چیزی اتفاق افتاد (با گذشتهٔ ساده): *I came two years ago.* **for / since** یعنی موقعیتی چه مدت ادامه داشته (با حال کامل).
+fs-ago.b0.h: سؤال | جواب | زمان فعل
+fs-ago.b0.0: = ‖ = ‖ گذشتهٔ ساده
+fs-ago.b0.1: = ‖ = ‖ حال کامل
+fs-ago.b1: ***ago*** **بعد از** مقدار زمان می‌آید: *three days ago, a long time ago, ten minutes ago*. با **گذشتهٔ ساده** به کار می‌رود.
+fs-ago.b2: این سه جمله می‌توانند یک موقعیت را توصیف کنند: *I **met** him five years **ago**. I**'ve known** him **for** five years. I**'ve known** him **since** 2020.*
+fs-ago.b3: *ago* را با حال کامل نیاورید: *I came here two years ago* یا *I've been here for two years*. نه *I've been here two years ago*.
+fs-ago.n0: کِی: گذشتهٔ ساده
+fs-ago.n1: چه مدت: حال کامل
+fs-ago.n2: *in* + سال / *since* + سال
+fs-ago.w0: *ago* ← گذشتهٔ ساده
+fs-ago.w1: *ago* بعد از مقدار زمان
+
+fs-how-long.t: *How long have you…?* یا *When did you…?*
+fs-how-long.s: *How long **have** you **been** here?* (تا حالا) در برابر *When **did** you **arrive**?* (نقطه‌ای در گذشته). برای «چه مدت تا حالا» حال ساده نیاورید.
+fs-how-long.b0: برای پرسیدن **مدت** یک موقعیت تا حالا، ***How long*** + حال کامل (ساده یا استمراری) بیاورید:
+fs-how-long.b2: برای پرسیدن **نقطه‌ای** در گذشته، ***When / What time*** + گذشتهٔ ساده بیاورید: ***When did** you **meet**?*
+fs-how-long.b3: یک اشتباه خیلی رایج استفاده از حال ساده است: *How long are you here?* یعنی «چقدر می‌مانی؟» (دربارهٔ آینده)، نه «چه مدت است اینجایی؟».
+fs-how-long.b4: فعل‌های حالتی (*know, have, be, like*) با حال کاملِ ساده می‌آیند: *How long **have** you **had** this phone?* برای فعالیت‌ها اغلب شکل استمراری می‌آید: *How long **have** you **been waiting**?* صفحهٔ [حال کامل استمراری](/blog/grammar/present-perfect-continuous/) را ببینید.
+fs-how-long.n0: مدت تا حالا
+fs-how-long.n1: نقطه‌ای در گذشته
+fs-how-long.n2: فعل حالتی: ساده
+fs-how-long.n3: دربارهٔ آینده
+fs-how-long.w0: تا حالا: حال کامل.
+fs-how-long.w1: تا حالا: حال کامل.
+fs-how-long.w2: نقطه‌ای در گذشته: گذشتهٔ ساده.
+
+fs-its-been-since.t: *It's two years since…* و *I haven't… for…*
+fs-its-been-since.s: سه راه برای گفتن یک چیز: *It's two years since I saw her. I haven't seen her for two years. The last time I saw her was two years ago.*
+fs-its-been-since.b0: این الگوها برای گفتن اینکه از اتفاقی چقدر گذشته به کار می‌آیند:
+fs-its-been-since.b1.h: الگو | مثال
+fs-its-been-since.b1.0: **It's / It has been** + مدت + **since** + گذشتهٔ ساده ‖ =
+fs-its-been-since.b1.1: **haven't** + اسم مفعول + **for** + مدت ‖ =
+fs-its-been-since.b1.2: **The last time** + گذشتهٔ ساده + **was** + *ago* / زمان ‖ =
+fs-its-been-since.b1.3: **I last** + گذشتهٔ ساده + *ago* ‖ =
+fs-its-been-since.b2: بعد از ***It's … since*** انتخاب معمول **گذشتهٔ ساده** است: *It's ages since we **went** out.*
+fs-its-been-since.b3: در انگلیسی آمریکایی بعد از جملهٔ منفی *in* رایج است: *I haven't seen her **in** two years.* اینجا هم *for* درست است و هم *in*.
+fs-its-been-since.n0: *it's* + مدت + *since*
+fs-its-been-since.n1: منفی + *for*
+fs-its-been-since.n2: *the last time*
+fs-its-been-since.w0: بعد از *it's … since*: گذشتهٔ ساده.
+fs-its-been-since.w1: تا حالا: حال کامل.
+
+x.fs-for-since-s01: *2018* نقطهٔ شروع است: *since*.
+x.fs-for-since-s02: *forty minutes* مدت است: *for*.
+x.fs-for-since-s03: مدت: *for*.
+x.fs-ago-s01: کِی اتفاق افتاد: *ago* + گذشتهٔ ساده.
+x.fs-ago-s02: *since* + موقعیتی تا حالا: حال کامل.
+x.fs-ago-s03: چه مدت قبل از حالا: *ago*.
+x.fs-how-long-s01: *How long* + حال کامل.
+x.fs-how-long-s02: مدت تا حالا: حال کامل.
+x.fs-how-long-s03: فعل حالتی، تا حالا: *have you known*.
+x.fs-its-been-since-s01: *It's … since* + گذشتهٔ ساده.
+q.fs-its-been-since-s02: جملهٔ *I haven't been to the gym for a month.* با کدام هم‌معنی است؟
+x.fs-its-been-since-s02: *It's a month since* + گذشتهٔ ساده.
+x.fs-its-been-since-s03: *The last time* + گذشتهٔ ساده.

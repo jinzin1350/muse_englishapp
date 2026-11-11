@@ -1,0 +1,55 @@
+# will-vs-going-to — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: هم ***will*** و هم ***be going to*** دربارهٔ آینده‌اند، اما اغلب در موقعیت‌های متفاوتی به کار می‌روند: *The phone's ringing. ~ I**'ll** get it.* (همین لحظه تصمیم می‌گیرم) / *I**'m going to** call my mum tonight.* (از قبل تصمیم گرفته‌ام)
+i1: این صفحه فرق‌های اصلی را نشان می‌دهد و اینکه کِی هر دو ممکن‌اند. برای هر کدام به‌تنهایی صفحه‌های [will و shall](/blog/grammar/will-and-shall/) و [be going to](/blog/grammar/be-going-to/) را ببینید.
+
+wvg-decision.t: تصمیمِ همین لحظه (*will*) یا تصمیمِ قبلی (*going to*)؟
+wvg-decision.s: **will** یعنی همان لحظهٔ صحبت تصمیم می‌گیرم. **going to** یعنی از قبل تصمیم گرفته‌ام: *We've run out of milk. ~ I'll buy some.* / *I'm going to buy milk later.*
+wvg-decision.b0.h: *will*: تصمیمِ همین لحظه | *going to*: تصمیمِ قبلی
+wvg-decision.b0.0: = ‖ *I**'m going to** take the bin out after dinner.* (برنامه‌اش را ریخته‌ام)
+wvg-decision.b0.1: = ‖ *I**'m going to** make lasagne tonight.* (همه‌چیز را خریده‌ام)
+wvg-decision.b1: از خودتان بپرسید: **کِی تصمیم گرفتم؟** اگر **همین حالا** و موقع صحبت است، *will* بیاورید. اگر **از قبل** تصمیم گرفته‌اید، *going to*.
+wvg-decision.b2: موقعیت‌های معمولِ *will*: جواب دادن تلفن یا باز کردن در، پیشنهاد کمک، انتخاب در رستوران یا مغازه.
+wvg-decision.n0: تصمیمِ همین لحظه
+wvg-decision.n1: تصمیمِ قبلی
+wvg-decision.n2: تصمیمِ همین لحظه
+wvg-decision.n3: تصمیمِ قبلی
+wvg-decision.w0: تصمیمِ همین لحظه: *will*
+wvg-decision.w1: تصمیمِ قبلی: *going to*
+
+wvg-prediction.t: پیش‌بینی: نظر (*will*) یا نشانه (*going to*)؟
+wvg-prediction.s: **will** برای پیش‌بینی بر اساس نظر، باور یا تجربه: *I think you'll like it.* **going to** برای پیش‌بینی بر اساس نشانه‌ای که الان هست: *Look out! It's going to fall!*
+wvg-prediction.b0.h: *will*: نظر / باور | *going to*: نشانه‌ای که الان هست
+wvg-prediction.b1: با ***will***، پیش‌بینی از چیزی می‌آید که **فکر می‌کنید**، اغلب با *I think, I'm sure, probably*.
+wvg-prediction.b2: با ***going to***، همین الان چیزی را **می‌بینید** که نشان می‌دهد چه اتفاقی می‌افتد.
+wvg-prediction.b3: در خیلی از پیش‌بینی‌ها هر دو قابل قبول‌اند. وقتی نشانه درست جلوی چشمتان است، به‌خصوص اگر اتفاق نزدیک باشد، *going to* قوی‌تر است.
+wvg-prediction.n0: نظر
+wvg-prediction.n1: نشانه
+wvg-prediction.n2: باور دربارهٔ آیندهٔ دور
+wvg-prediction.n3: نشانه‌ای که الان هست
+wvg-prediction.w0: نشانه‌ای که الان هست: *going to*
+
+wvg-three-futures.t: *will*، *going to* یا حال استمراری؟
+wvg-three-futures.s: **حال استمراری** یعنی قرار قطعی (*I'm meeting Ali at 6*). **going to** یعنی قصد (*I'm going to learn Spanish*). **will** یعنی تصمیمِ همین لحظه، پیش‌بینی و قول.
+wvg-three-futures.b0.h: ساختار | کاربرد | مثال
+wvg-three-futures.b0.0: حال استمراری ‖ قرار: آدم‌ها، زمان و مکان قطعی شده ‖ =
+wvg-three-futures.b0.1: = ‖ قصد و برنامهٔ تصمیم‌گرفته؛ نشانه ‖ =
+wvg-three-futures.b0.2: = ‖ تصمیمِ همین لحظه، پیشنهاد کمک، قول، نظر ‖ =
+wvg-three-futures.b0.3: حال ساده ‖ جدول زمانی و برنامهٔ ثابت ‖ =
+wvg-three-futures.b1: برای **برنامه‌های شخصی** اغلب هم حال استمراری ممکن است و هم *going to*. برای کاری که از قبل هماهنگ کرده‌اید *will* معمولاً غلط است: *I**'m meeting** Sara tomorrow* (اگر قرار گذاشته‌اید، نه *I'll meet Sara tomorrow*).
+wvg-three-futures.b2: برای **جدول زمانی** حال ساده بیاورید: *The film **starts** at 8.* صفحهٔ [حال ساده](/blog/grammar/present-simple/#ps-timetables) را ببینید.
+wvg-three-futures.n0: قرار
+wvg-three-futures.n1: قصد
+wvg-three-futures.n2: پیشنهاد کمک در همان لحظه
+wvg-three-futures.n3: برنامهٔ ثابت
+wvg-three-futures.w0: قرار: حال استمراری
+wvg-three-futures.w1: جدول زمانی: حال ساده
+
+x.wvg-decision-s01: تصمیمِ همین لحظه: *I'll*.
+x.wvg-decision-s02: تصمیمِ قبلی: *going to*.
+x.wvg-decision-s03: تصمیمِ همین لحظه: *will buy*.
+x.wvg-prediction-s01: نشانه‌ای که الان هست: *going to*.
+x.wvg-prediction-s02: نظر دربارهٔ آیندهٔ دور: *will*.
+x.wvg-prediction-s03: نشانه‌ای که الان هست: *is going to fall*.
+x.wvg-three-futures-s01: قرار قطعی: حال استمراری.
+x.wvg-three-futures-s02: جدول زمانی: حال ساده.
+x.wvg-three-futures-s03: پیشنهاد کمک در همان لحظه: *will*.

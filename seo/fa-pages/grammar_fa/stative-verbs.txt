@@ -1,0 +1,45 @@
+# stative-verbs — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **فعل‌های حالتی** (ایستا) حالت را توصیف می‌کنند، نه کار را: فکر، احساس، حس‌ها، مالکیت و وجود داشتن.
+i1: معمولاً این فعل‌ها را در زمان‌های استمراری به کار نمی‌بریم: *I **know** the answer.* (نه *I'm knowing*) *She **wants** a new phone.* (نه *She's wanting*)
+
+sv-basic.t: فعل‌هایی که استمراری نمی‌شوند
+sv-basic.s: *know, want, like, need, understand, believe, belong…* را حتی برای همین حالا به شکل ساده بیاورید.
+sv-basic.b0.h: نوع | فعل‌ها
+sv-basic.b0.0: فکر و دانستن ‖ =
+sv-basic.b0.1: احساس و خواستن ‖ =
+sv-basic.b0.2: حس‌ها و ظاهر ‖ =
+sv-basic.b0.3: مالکیت ‖ *have* (به معنی داشتن)، *own, belong*
+sv-basic.b0.4: حالت‌های دیگر ‖ =
+sv-basic.b1: شکل ساده را **حتی وقتی منظورتان همین حالاست** بیاورید: *I'm hungry. I **want** something to eat.* (نه *I'm wanting*) *Do you **understand** what I mean?*
+sv-basic.b2: *have* به معنی «داشتن» حالت است: *I **have** a car.* اما *have* در عبارت‌هایی مثل *have lunch, have a shower, have fun* کار است، پس استمراری‌اش درست است: *We**'re having** lunch.*
+sv-basic.n4: *have* به معنی خوردن: کار
+sv-basic.w0: *know* فعل حالتی است.
+sv-basic.w1: *belong* فعل حالتی است.
+sv-basic.w2: *have* به معنی داشتن: حالت.
+
+sv-two-meanings.t: فعل‌های دومعنایی: *think, have, see, taste*
+sv-two-meanings.s: بعضی فعل‌ها در یک معنا حالت‌اند و در معنای دیگر کار؛ فقط معنای «کار» می‌تواند استمراری شود.
+sv-two-meanings.b0.h: فعل | حالت (ساده) | کار (استمراری درست است)
+sv-two-meanings.b0.0: = ‖ *I **think** it's a good idea.* (نظر) ‖ *I**'m thinking** about my holiday.* (فکر کردن به چیزی)
+sv-two-meanings.b0.1: = ‖ *She **has** two cats.* (داشتن) ‖ =
+sv-two-meanings.b0.2: = ‖ *I **see** what you mean.* (فهمیدن) ‖ *I**'m seeing** the doctor tomorrow.* (دیدار و قرار)
+sv-two-meanings.b0.3: = ‖ = ‖ *He**'s tasting** the soup.* (دارد مزه‌اش را امتحان می‌کند)
+sv-two-meanings.b0.4: = ‖ *You **look** tired.* (به نظر رسیدن) ‖ *Why **are** you **looking** at me?* (نگاه کردن)
+sv-two-meanings.b1: با *feel* (یعنی حالِ جسم یا روحیه) هر دو شکل درست‌اند: *I **feel** tired. / I**'m feeling** tired.* اما *feel* به معنی «فکر کردن» حالت است: *I **feel** you're right.*
+sv-two-meanings.n0: *think* یعنی فکر کردن به چیزی
+sv-two-meanings.n1: *think* یعنی نظر
+sv-two-meanings.n2: *have* یعنی تجربه کردن
+sv-two-meanings.n3: *taste*: حالت
+sv-two-meanings.n4: *look*: کار
+sv-two-meanings.w0: *think* به معنی نظر: حالت.
+sv-two-meanings.w1: *think* به معنی فکر کردن به چیزی: کار.
+sv-two-meanings.w2: *taste* یعنی مزه‌ای که دارد: حالت.
+
+x.sv-basic-s01: *understand* فعل حالتی است: *I understand*.
+x.sv-basic-s02: *need* فعل حالتی است: *she needs*.
+x.sv-basic-s03: *belong* فعل حالتی است: *it belongs*.
+x.sv-basic-s04: *believe* فعل حالتی است: *I don't believe you*.
+x.sv-two-meanings-s01: *think* به معنی فکر کردن به چیزی (کار): *I'm thinking*.
+x.sv-two-meanings-s02: *have lunch* کار است: *we're having*.
+x.sv-two-meanings-s03: *taste* یعنی مزه‌ای که دارد (حالت): *tastes*.
+x.sv-two-meanings-s04: *see* یعنی دیدار (قرار): *I'm seeing*.

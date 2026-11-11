@@ -1,0 +1,104 @@
+# present-simple — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **حال ساده** را برای عادت‌ها، کارهای روزمره و چیزهایی به کار می‌بریم که به طور کلی درست‌اند: *I **drink** coffee every morning. The sun **rises** in the east.*
+i1: با **he, she, it** به فعل **-s** اضافه کنید: *She **works** in a bank.* برای جملهٔ منفی و سؤالی از **do / does** کمک می‌گیریم: *I **don't** like fish. **Does** he **speak** French?*
+
+ps-form.t: ساختار: *I work, she works*
+ps-form.s: با *I, you, we, they* شکل سادهٔ فعل را بیاورید؛ با *he, she, it* به فعل *-s* یا *-es* اضافه کنید.
+ps-form.b0.h: فاعل | فعل | مثال
+ps-form.b0.0: = ‖ شکل سادهٔ فعل ‖ =
+ps-form.b0.1: = ‖ فعل **+ -s / -es** ‖ =
+ps-form.b1.h: قاعدهٔ املایی (*he / she / it*) | مثال
+ps-form.b1.0: بیشتر فعل‌ها: **-s** اضافه کنید ‖ =
+ps-form.b1.1: فعل‌هایی که به **-s, -sh, -ch, -x, -o** ختم می‌شوند: **-es** اضافه کنید ‖ =
+ps-form.b1.2: حرف بی‌صدا + **y**: حرف *y* را به **-ies** تبدیل کنید ‖ =
+ps-form.b1.3: حرف صدادار + **y**: **-s** اضافه کنید ‖ =
+ps-form.b1.4: بی‌قاعده ‖ =
+ps-form.b2.h: تلفظ *-s / -es* | مثال
+ps-form.b2.2: /ɪz/ (یک هجای اضافه) ‖ =
+ps-form.b3: فعل **be** فرق دارد: *I **am**, you **are**, she **is**.* در حال ساده *am / is / are* را همراه فعل دیگر نیاورید: *I **work*** (نه *I am work*).
+ps-form.n0: *I* + شکل سادهٔ فعل
+ps-form.w0: با *he / she / it* فعل *-s* می‌گیرد.
+ps-form.w1: *have* می‌شود *has*.
+ps-form.w2: فعل‌هایی که به *-ch* ختم می‌شوند *-es* می‌گیرند.
+ps-form.w3: *am / is / are* اضافه نکنید.
+
+ps-negative-questions.t: منفی و سؤالی: *don't, doesn't, do, does*
+ps-negative-questions.s: منفی: *don't / doesn't* + شکل سادهٔ فعل. سؤالی: *do / does* + فاعل + شکل سادهٔ فعل.
+ps-negative-questions.b0.h:  | I / you / we / they | he / she / it
+ps-negative-questions.b0.0: منفی ‖ = ‖ =
+ps-negative-questions.b0.1: سؤالی ‖ = ‖ =
+ps-negative-questions.b0.2: جواب کوتاه ‖ = ‖ =
+ps-negative-questions.b0.3: سؤال با کلمهٔ پرسشی ‖ = ‖ =
+ps-negative-questions.b1: **-s** را فقط یک بار بیاورید. بعد از *doesn't* و *does* شکل سادهٔ فعل می‌آید: *She doesn't **work**. Does she **work**?* (نه *doesn't works*)
+ps-negative-questions.b2: ترتیب سؤال را نگه دارید: کلمهٔ پرسشی + *do / does* + فاعل + فعل: *What **does** this word **mean**?* (نه *What means this word?*)
+ps-negative-questions.n0: جملهٔ منفی
+ps-negative-questions.n1: *doesn't* + شکل سادهٔ فعل
+ps-negative-questions.n2: سؤال + جواب کوتاه
+ps-negative-questions.n3: *does* + شکل سادهٔ فعل
+ps-negative-questions.n4: سؤال با کلمهٔ پرسشی
+ps-negative-questions.w0: با *he / she / it*: *doesn't*.
+ps-negative-questions.w1: بعد از *doesn't* شکل سادهٔ فعل می‌آید.
+ps-negative-questions.w2: بعد از *does* شکل سادهٔ فعل می‌آید.
+ps-negative-questions.w3: سؤال به *do / does* نیاز دارد.
+
+ps-uses.t: کاربردها: عادت‌ها، واقعیت‌ها و موقعیت‌های دائمی
+ps-uses.s: حال ساده برای عادت‌ها، کارهای روزمره، واقعیت‌ها، موقعیت‌های دائمی و دوست داشتن یا نداشتن به کار می‌رود.
+ps-uses.b0.0: عادت‌ها و کارهای روزمره: *I **get up** at 7 o'clock. We **play** football on Saturdays.*
+ps-uses.b0.1: واقعیت‌ها و چیزهایی که همیشه درست‌اند: *Water **boils** at 100°C. The sun **rises** in the east.*
+ps-uses.b0.2: موقعیت‌های دائمی: *My parents **live** in Toronto. She **works** for a big company.*
+ps-uses.b0.3: دوست داشتن، دوست نداشتن و نظر: *I **love** pizza. He **doesn't like** cold weather.*
+ps-uses.b1: کلمه‌های زمانیِ رایج: *every day, every week, on Mondays, in the morning, twice a week.* برای پرسیدن اینکه کاری چند وقت یک بار انجام می‌شود از ***How often**…?* استفاده کنید: *How often **do** you **go** to the gym?*
+ps-uses.b2: *always, usually, often, sometimes, never* **قبل از** فعل اصلی می‌آیند اما **بعد از** *be*: *I **usually** walk to work. He**'s always** late.* صفحهٔ [قیدهای تکرار](/blog/grammar/adverbs-of-frequency/) را ببینید.
+ps-uses.n0: کار روزمره
+ps-uses.n1: واقعیت
+ps-uses.n2: موقعیت دائمی
+ps-uses.n3: دوست داشتن و نداشتن
+ps-uses.n4: چند وقت یک بار
+ps-uses.w0: قید تکرار بعد از *be* می‌آید.
+ps-uses.w1: کلمه‌های زمانی مثل *every day* معمولاً آخر جمله می‌آیند.
+ps-uses.w2: برای واقعیت‌هایی که همیشه درست‌اند حال ساده بیاورید.
+
+ps-timetables.t: جدول زمانی و برنامه‌ها: *The train leaves at 8*
+ps-timetables.s: برای اتفاق‌های آینده که در جدول زمانی یا برنامهٔ ثابت هستند حال ساده به کار ببرید.
+ps-timetables.b0: برای اتفاق‌های **آینده** که در جدول زمانی یا برنامهٔ ثابت آمده‌اند حال ساده به کار ببرید: حرکت قطار و اتوبوس، فیلم‌ها، کلاس‌ها، ساعت کار. *The train **leaves** at 8:30 tomorrow. What time **does** the film **start** tonight?*
+ps-timetables.b1: برای **برنامه‌های شخصی خودتان** با دیگران حال استمراری یا *be going to* بیاورید، نه حال ساده: *I**'m meeting** Sam tonight.* (نه *I meet Sam tonight*). صفحهٔ [زمان آینده](/blog/grammar/future-forms/) را ببینید.
+ps-timetables.b2: بعد از *when, as soon as, before, after, until* برای آینده حال ساده می‌آید: *I'll call you when I **get** home.* (نه *when I will get*). صفحهٔ [جمله‌واره‌های زمانی آینده](/blog/grammar/future-time-clauses/) را ببینید.
+ps-timetables.n0: جدول حرکت
+ps-timetables.n1: برنامه
+ps-timetables.n2: تاریخ ثابت
+ps-timetables.n3: ساعت کار
+ps-timetables.n4: جمله‌وارهٔ زمانی
+ps-timetables.w0: برنامهٔ شخصی: حال استمراری.
+ps-timetables.w1: بعد از *when* برای آینده حال ساده می‌آید.
+
+ps-performatives.t: *I promise, I agree, I apologise*: گفتنش یعنی انجامش
+ps-performatives.s: فعل‌هایی مثل *promise, agree, apologise* همان لحظه‌ای که گفته می‌شوند کار را انجام می‌دهند؛ با آن‌ها حال ساده بیاورید.
+ps-performatives.b0: بعضی فعل‌ها با گفته شدن **کاری را انجام می‌دهند**. وقتی می‌گویید *I promise*، در واقع قول می‌دهید. با این فعل‌ها حال ساده بیاورید، نه استمراری: *I **promise** I won't be late.* (نه *I'm promising*)
+ps-performatives.b1: فعل‌های رایج: *promise, agree, apologise, suggest, advise, insist, admit, refuse, warn, thank, congratulate, request.*
+ps-performatives.b2: برای مؤدبانه‌تر یا رسمی‌تر شدن یک فعل وجهی اضافه کنید: *I **would suggest** leaving early. I **must insist** that you stay. We **would advise** you to book in advance.*
+ps-performatives.n0: قول
+ps-performatives.n1: نه *I'm agree*
+ps-performatives.n2: عذرخواهی
+ps-performatives.n3: پیشنهاد
+ps-performatives.n4: رسمی‌تر
+ps-performatives.w0: گفتنش خودِ کار است: حال ساده.
+ps-performatives.w1: *agree* فعل است؛ *am* اضافه نکنید.
+ps-performatives.w2: گفتنش خودِ کار است: حال ساده.
+
+x.ps-form-s01: فاعل *he* است (*my brother*)، پس **-s** اضافه کنید: *works*.
+x.ps-form-s02: فعل‌هایی که به *-ch* ختم می‌شوند **-es** می‌گیرند: *watches*.
+x.ps-form-s03: حرف بی‌صدا + *y*، پس **-ies**: *studies*.
+x.ps-form-s04: با *he / she / it* فعل *have* می‌شود **has**.
+x.ps-negative-questions-s01: با *she*: **doesn't** + شکل سادهٔ فعل.
+x.ps-negative-questions-s02: با *you*: *Do you live…?*
+x.ps-negative-questions-s03: فاعل *the shop* است (*it*)، پس **does**.
+x.ps-negative-questions-s04: جواب کوتاه: *Yes, she does.*
+x.ps-uses-s01: واقعیتی که همیشه درست است: حال ساده، *boils*.
+x.ps-uses-s02: کار روزمره با *I*: شکل سادهٔ فعل، *get*.
+x.ps-uses-s03: قیدهای تکرار **بعد از** *be* می‌آیند: *She is always late.*
+x.ps-timetables-s01: جدول حرکت: حال ساده، *leaves*.
+x.ps-timetables-s02: برنامهٔ ثابت: *What time does the concert start?*
+x.ps-timetables-s03: بعد از *as soon as* برای آینده حال ساده می‌آید: *arrive*.
+x.ps-performatives-s01: با گفتنش قول می‌دهید: حال ساده، *I promise*.
+x.ps-performatives-s02: *agree* فعل است و با حال ساده می‌آید: *I agree*.
+x.ps-performatives-s03: با گفتنش عذرخواهی می‌کنید: حال ساده، *I apologise*.

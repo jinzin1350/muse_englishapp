@@ -1,0 +1,72 @@
+# plural-nouns — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: بیشتر اسم‌های انگلیسی با ***-s*** جمع بسته می‌شوند: *one book, two books*. اما قاعده‌های املایی (*box → boxes, city → cities*) و چند جمعِ **بی‌قاعدهٔ** رایج (*man → men, child → children*) هم هست. (در فارسی بعد از عدد اسم مفرد می‌آید، «سه کتاب»، اما در انگلیسی اسم جمع می‌شود: *three books*.)
+i1: بعضی اسم‌ها همیشه جمع‌اند (*jeans, scissors*) و بعضی اصلاً جمع بسته نمی‌شوند. برای این‌ها صفحهٔ [اسم‌های قابل‌شمارش و غیرقابل‌شمارش](/blog/grammar/countable-uncountable-nouns/) را ببینید.
+
+pn-regular.t: جمع‌های باقاعده: *-s, -es, -ies, -ves*
+pn-regular.s: به بیشتر اسم‌ها **-s** اضافه کنید (*cars*). بعد از *-s, -sh, -ch, -x* **-es** اضافه کنید (*boxes*). حرف بی‌صدا + *y* ← **-ies** (*cities*). خیلی از کلمه‌هایی که به *-f / -fe* ختم می‌شوند ← **-ves** (*knives*).
+pn-regular.b0.h: قاعده | مثال
+pn-regular.b0.0: بیشتر اسم‌ها: + *-s* ‖ =
+pn-regular.b0.1: *-s, -ss, -sh, -ch, -x*: + *-es* ‖ =
+pn-regular.b0.2: حرف بی‌صدا + *-y*: *y* ← *-ies* ‖ =
+pn-regular.b0.3: حرف صدادار + *-y*: + *-s* ‖ =
+pn-regular.b0.4: بعضی کلمه‌های *-o*دار: + *-es* ‖ =
+pn-regular.b0.5: بقیهٔ کلمه‌های *-o*دار: + *-s* ‖ =
+pn-regular.b0.6: خیلی از کلمه‌های *-f / -fe*دار: ← *-ves* ‖ =
+pn-regular.b1: **تلفظ**: *-s* بعد از /p, t, k, f/ صدای /s/ می‌دهد (*books*)، بعد از بیشتر صداهای دیگر /z/ (*cars, days*)، و بعد از /s, z, ʃ, tʃ, dʒ/ صدای /ɪz/ (*buses, watches, pages*).
+pn-regular.b2: بعضی کلمه‌های *-f*دار فقط *-s* می‌گیرند: *roofs, chefs, beliefs*.
+pn-regular.w1: حرف بی‌صدا + *y* ← *ies*
+
+pn-irregular.t: جمع‌های بی‌قاعده: *men, children, feet, people*
+pn-irregular.s: بعضی اسم‌های رایج جمعِ **بی‌قاعده** دارند: *man → men, woman → women, child → children, person → people, foot → feet, tooth → teeth, mouse → mice*. بعضی هم تغییر نمی‌کنند: *sheep, fish*.
+pn-irregular.b0.h: مفرد | جمع
+pn-irregular.b0.5: = ‖ *sheep / fish / deer* (بدون تغییر)
+pn-irregular.b1: این اسم‌ها *-s* نمی‌گیرند، اما باز هم **فعل جمع** می‌گیرند: *The children **are** playing.*
+pn-irregular.b2: *people* جمعِ معمولِ *person* است. (*persons* خیلی رسمی است، مثلاً در اطلاعیه‌های حقوقی.)
+pn-irregular.n3: بدون تغییر
+
+pn-plural-only.t: همیشه جمع: *jeans, scissors, clothes, police*
+pn-plural-only.s: بعضی اسم‌ها **همیشه جمع‌اند**: *trousers, jeans, glasses, scissors, clothes*. برای شمردنشان از **a pair of** («یک جفت») استفاده کنید. ***police*** و ***people*** هم فعل جمع می‌گیرند.
+pn-plural-only.b0.h: همیشه جمع | مثال
+pn-plural-only.b0.0: لباس‌هایی که دو پاچه دارند ‖ =
+pn-plural-only.b0.1: چیزهایی که دو قسمت دارند ‖ =
+pn-plural-only.b0.2: بقیه ‖ =
+pn-plural-only.b0.3: فعل جمع، بدون *-s* ‖ =
+pn-plural-only.b1: این اسم‌ها **فعل جمع** می‌گیرند: *My jeans **are** too tight. Where **are** my glasses?*
+pn-plural-only.b2: برای شمردن ***a pair of*** بیاورید: *I bought **a pair of** jeans and **two pairs of** shoes.* (نه *a jeans*)
+pn-plural-only.b3: *police* جمع است: ***The police are** looking for him.*
+pn-plural-only.n0: فعل جمع
+pn-plural-only.n2: فعل جمع
+pn-plural-only.n3: *police* + فعل جمع
+pn-plural-only.w0: *jeans*: فعل جمع
+pn-plural-only.w2: *police*: فعل جمع
+
+pn-group-nouns.t: اسم‌های جمعی: *the team is* یا *the team are*؟
+pn-group-nouns.s: **اسم‌های جمعی** مثل *family, team, government, staff, class* در انگلیسی بریتانیایی می‌توانند **فعل مفرد یا جمع** بگیرند (*The team is / are winning*). انگلیسی آمریکایی معمولاً مفرد می‌آورد.
+pn-group-nouns.b0.h: اسم | یک واحد (مفرد) | آدم‌های داخلش (جمع، بریتانیایی)
+pn-group-nouns.b1: وقتی گروه را **یک واحد** در نظر می‌گیرید فعل **مفرد** بیاورید. در انگلیسی بریتانیایی وقتی به **تک‌تکِ آدم‌ها** فکر می‌کنید فعل **جمع** رایج است.
+pn-group-nouns.b2: انگلیسی آمریکایی معمولاً فعل مفرد می‌آورد: *The team **is** celebrating.*
+pn-group-nouns.b3: بعضی کلمه‌های جمعی همیشه جمع‌اند: ***people, police, cattle***.
+pn-group-nouns.b4: ضمیر با فعل هماهنگ می‌شود: *The company **has** changed **its** logo. / The team **are** proud of **their** coach.*
+pn-group-nouns.n0: یک واحد
+pn-group-nouns.n1: آدم‌ها (بریتانیایی)
+pn-group-nouns.n2: یک واحد
+pn-group-nouns.n3: آدم‌ها (بریتانیایی)
+pn-group-nouns.w0: *police* همیشه جمع است
+pn-group-nouns.w1: *people*: جمع
+pn-group-nouns.w2: فعل جمع ← *their*
+
+q.pn-regular-s01: جمعِ *city* چیست؟
+x.pn-regular-s01: حرف بی‌صدا + *y* ← *-ies*.
+q.pn-regular-s02: کدام جمع درست است؟
+x.pn-regular-s02: *photo* + *-s*.
+x.pn-regular-s03: *-x* + *-es*.
+x.pn-irregular-s01: *man* ← *men*.
+x.pn-irregular-s02: *person* ← *people*.
+x.pn-irregular-s03: *tooth* ← *teeth*.
+x.pn-plural-only-s01: *jeans* فعل جمع می‌گیرد.
+x.pn-plural-only-s02: با *a pair of* شمرده می‌شود.
+x.pn-plural-only-s03: *police* فعل جمع می‌گیرد.
+x.pn-group-nouns-s01: *police* همیشه فعل جمع می‌گیرد.
+q.pn-group-nouns-s02: کدام جمله هم در انگلیسی بریتانیایی و هم آمریکایی درست است؟
+x.pn-group-nouns-s02: فعل مفرد + *its*: همه‌جا درست است.
+x.pn-group-nouns-s03: فعل مفرد ← *its*.

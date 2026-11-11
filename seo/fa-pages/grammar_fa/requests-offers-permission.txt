@@ -1,0 +1,95 @@
+# requests-offers-permission — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: فعل‌های وجهی به ما کمک می‌کنند **مؤدبانه** چیزی بخواهیم، کمک پیشنهاد کنیم و اجازه بگیریم: ***Could** you help me? **May** I come in? **Shall** I carry that for you?*
+i1: در انگلیسی، اینکه چقدر مؤدب به نظر برسید خیلی به کلمه‌هایی بستگی دارد که انتخاب می‌کنید. این صفحه از درخواست‌های ساده شروع می‌شود و به درخواست‌های خیلی مؤدبانه و رسمی می‌رسد.
+
+rop-requests.t: *Can you…? Could you…?*: خواستن از کسی که کاری بکند
+rop-requests.s: **Can you…?** و **Could you…?** + شکل سادهٔ فعل برای خواستن از کسی که کاری انجام بدهد. *could* مؤدبانه‌تر است: *Could you close the door, please?*
+rop-requests.b0.h: درخواست | چقدر مؤدبانه؟
+rop-requests.b0.0: = ‖ دوستانه، خودمانی
+rop-requests.b0.1: = ‖ مؤدبانه‌تر
+rop-requests.b0.2: = ‖ مستقیم (مراقب باشید: ممکن است بی‌حوصله به نظر برسد)
+rop-requests.b0.3: = ‖ مؤدبانه
+rop-requests.b1: برای اینکه از **کسی بخواهید کاری بکند**، *Can / Could / Would you* + شکل سادهٔ فعل بیاورید: ***Could** you **speak** more slowly, please?*
+rop-requests.b2: برای **خواستن چیزی**، ***Can I have…?*** یا ***Could I have…?*** بیاورید: ***Can I have** a glass of water, please?*
+rop-requests.b3: برای مؤدبانه‌تر شدن ***please*** اضافه کنید. جواب‌های رایج: *Sure. / Of course. / No problem. / Sorry, I can't.*
+rop-requests.n0: دوستانه
+rop-requests.n1: مؤدبانه
+rop-requests.n2: خواستن چیزی
+rop-requests.n3: مؤدبانه
+rop-requests.w0: *could* + شکل سادهٔ فعل
+rop-requests.w1: *can* + شکل سادهٔ فعل
+
+rop-permission.t: *Can I…? Could I…? May I…?*: اجازه گرفتن
+rop-permission.s: **Can I…?** (خودمانی)، **Could I…?** (مؤدبانه) و **May I…?** (رسمی) برای اجازه گرفتن: *May I come in?*
+rop-permission.b0.h: پرسیدن | جواب مثبت | جواب منفی
+rop-permission.b1: ***May I…?*** از همه رسمی‌تر است و در مغازه، اداره و با آدم‌هایی که خوب نمی‌شناسید رایج است.
+rop-permission.b2: برای **اجازه دادن** *can* یا *may* بیاورید (نه *could*): *Yes, you **can**.* / *You **may** go now.* (رسمی)
+rop-permission.b3: به *Could I…?* جواب ندهید *Yes, you could*. بگویید *Yes, you **can**.* یا *Of course.*
+rop-permission.n0: خودمانی
+rop-permission.n1: مؤدبانه
+rop-permission.n2: رسمی
+rop-permission.n3: اجازه دادن
+rop-permission.w0: *may* + شکل سادهٔ فعل
+rop-permission.w1: با *can* اجازه بدهید، نه *could*.
+
+rop-offers-suggestions.t: پیشنهاد کمک و پیشنهاد کار: *Shall I…? Shall we…? Would you like…?*
+rop-offers-suggestions.s: پیشنهاد کمک: **Shall I…? / Can I…? / I'll…** پیشنهاد کار: **Shall we…? / Let's… / Why don't we…?** دعوت: **Would you like…?**
+rop-offers-suggestions.b0.h: کاربرد | مثال
+rop-offers-suggestions.b0.0: پیشنهاد انجام کاری ‖ =
+rop-offers-suggestions.b0.1: تعارف کردن چیزی ‖ =
+rop-offers-suggestions.b0.2: پیشنهاد کاری با هم ‖ =
+rop-offers-suggestions.b0.3: دعوت کردن ‖ =
+rop-offers-suggestions.b1: ***Shall I / shall we*** + شکل سادهٔ فعل برای پیشنهاد کمک و پیشنهاد کار به کار می‌رود، بیشتر در انگلیسی بریتانیایی: ***Shall I** call a taxi?* در انگلیسی آمریکایی بیشتر ***Should I…?*** یا ***Do you want me to…?*** می‌گویند.
+rop-offers-suggestions.b2: ***I'll*** + شکل سادهٔ فعل، همان لحظهٔ صحبت پیشنهاد کمک می‌دهد: *You look busy. **I'll** make dinner.*
+rop-offers-suggestions.b3: *Let's* + شکل سادهٔ فعل (بدون *to*): ***Let's go*** (نه *Let's to go*). منفی: ***Let's not*** argue.
+rop-offers-suggestions.n0: پیشنهاد کمک
+rop-offers-suggestions.n1: پیشنهاد کار
+rop-offers-suggestions.n2: تعارف کردن
+rop-offers-suggestions.n3: پیشنهاد کار
+rop-offers-suggestions.w0: *shall* + شکل سادهٔ فعل
+rop-offers-suggestions.w1: *let's* + شکل سادهٔ فعل
+rop-offers-suggestions.w2: برای تعارف: *would you like*
+
+rop-would-you-mind.t: *Would you mind…? Do you mind if…?*
+rop-would-you-mind.s: **Would you mind** + فعل ing‌دار یعنی درخواستی مؤدبانه. **Do you mind if I** + حال / **Would you mind if I** + گذشته یعنی اجازه گرفتن. برای «بله» جواب بدهید *No, not at all*!
+rop-would-you-mind.b0.h: الگو | معنی | مثال
+rop-would-you-mind.b0.0: *Would you mind* + فعل ing‌دار؟ ‖ لطفاً این کار را بکن ‖ =
+rop-would-you-mind.b0.1: *Do you mind if I* + حال؟ ‖ اجازه هست…؟ ‖ =
+rop-would-you-mind.b0.2: *Would you mind if I* + گذشته؟ ‖ اجازه هست…؟ (مؤدبانه‌تر) ‖ =
+rop-would-you-mind.b1: *mind* یعنی «ناراحت شدن، مخالف بودن». پس جوابِ مؤدبانه برای **بله** این است: ***No, not at all*** / ***No, go ahead*** / ***Of course not***: *Do you mind if I sit here? ~ **No, not at all.*** (یعنی بله، بفرمایید.)
+rop-would-you-mind.b2: اگر واقعاً ناراحت می‌شوید، چیزی شبیه این بگویید: *Actually, I'd rather you didn't. / Sorry, that seat is taken.*
+rop-would-you-mind.n0: لطفاً صبر کن
+rop-would-you-mind.n1: اجازه + جواب «بله»
+rop-would-you-mind.n2: مؤدبانه‌تر
+rop-would-you-mind.n3: لطفاً این کار را نکن
+rop-would-you-mind.w0: *mind* + فعل ing‌دار
+rop-would-you-mind.w1: *No* یعنی ناراحت نمی‌شوم، یعنی می‌توانی.
+
+rop-allowed.t: *be allowed to*: اجازه و قانون
+rop-allowed.s: **be allowed to** + فعل یعنی اجازه داشتن: *We **are allowed to** use phones at break.* گذشته: **was allowed to** / **could** (کلی). قانون: **not allowed to**.
+rop-allowed.b0: ***be allowed to*** اجازه‌ای را توصیف می‌کند که کسِ دیگری یا یک قانون داده: *Students **are allowed to** use dictionaries in the exam. You**'re not allowed to** smoke here.*
+rop-allowed.b1: در همهٔ زمان‌ها به کار می‌رود: *Will we **be allowed to** take photos? I **wasn't allowed to** go out late when I was a teenager.*
+rop-allowed.b2: برای اجازهٔ **کلی** در گذشته *could* هم ممکن است: *When I was a child, I **could** stay up late at weekends.* برای **یک بارِ مشخص** ***was allowed to*** بیاورید: *I **was allowed to** leave early yesterday.* (برای یک کارِ مجاز در یک بار، نه *I could leave early yesterday*)
+rop-allowed.n0: سؤالی
+rop-allowed.n1: قانون
+rop-allowed.n2: اجازه دادن به کسی
+rop-allowed.n3: آینده
+rop-allowed.w0: *allowed* با *-ed*
+rop-allowed.w1: *allowed to* + فعل
+
+x.rop-requests-s01: درخواست مؤدبانه: *Could you…?*
+x.rop-requests-s02: خواستن چیزی: *Can I have…?*
+x.rop-requests-s03: *Could you* + شکل سادهٔ فعل.
+x.rop-permission-s01: اجازهٔ رسمی: *May I…?*
+x.rop-permission-s02: اجازه دادن: *Yes, of course.* (نه *you could*)
+x.rop-permission-s03: اجازهٔ خودمانی: *Can I…?*
+x.rop-offers-suggestions-s01: پیشنهاد کمک: *Shall I…?*
+x.rop-offers-suggestions-s02: تعارف کردن: *Would you like…?*
+x.rop-offers-suggestions-s03: *Let's* + شکل سادهٔ فعل.
+x.rop-would-you-mind-s01: *Would you mind* + فعل ing‌دار.
+q.rop-would-you-mind-s02: در جواب *Do you mind if I use your phone?* کدام جواب یعنی «بله، می‌توانی»؟
+x.rop-would-you-mind-s02: *No* یعنی ناراحت نمی‌شوم.
+x.rop-would-you-mind-s03: *Would you mind if I* + گذشتهٔ ساده.
+x.rop-allowed-s01: *be not allowed to*.
+x.rop-allowed-s02: یک بارِ مشخص: *were allowed to*.
+x.rop-allowed-s03: *be allowed* یعنی اجازه داشتن.

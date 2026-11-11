@@ -1,0 +1,48 @@
+# object-pronouns — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **ضمیرهای مفعولی** (*me, you, him, her, it, us, them*) **بعد از** فعل یا حرف اضافه می‌آیند (مثل «من را، به او، با آن‌ها»): *Can you help **me**? I'm waiting for **them**.*
+i1: برای *I, he, she, they* صفحهٔ [ضمیرهای فاعلی و صفت‌های ملکی](/blog/grammar/subject-pronouns-possessive-adjectives/) را ببینید.
+
+op-basic.t: *me, you, him, her, it, us, them* بعد از فعل
+op-basic.s: بعد از فعل **ضمیر مفعولی** بیاورید: *I love **her**. She called **me**. We saw **them**.*
+op-basic.b0.h: فاعلی | مفعولی
+op-basic.b1: فاعل کار را انجام می‌دهد؛ مفعول کار رویش انجام می‌شود: ***She** helps **me**. **I** help **her**.*
+op-basic.b2: *you* و *it* تغییر نمی‌کنند.
+op-basic.w0: بعد از فعل: *me*
+op-basic.w1: بعد از فعل: *her*
+op-basic.w2: فعل مفعول لازم دارد: *it*
+
+op-prepositions.t: ضمیر مفعولی بعد از حرف اضافه: *with me, for them*
+op-prepositions.s: بعد از **حرف اضافه** **ضمیر مفعولی** بیاورید: *with me, for her, about him, to us, from them*.
+op-prepositions.b0.h: حرف اضافه + ضمیر مفعولی | مثال
+op-prepositions.b1: بعد از حرف‌های اضافه (*with, for, to, about, at, from, without, near, behind*) ضمیر **مفعولی** می‌آید: *Come **with us**! This is **for you**. Look **at me**.*
+op-prepositions.b2: بعضی فعل‌ها قبل از مفعول حرف اضافه لازم دارند: *listen **to** me, wait **for** him, look **at** them, talk **to** her*.
+op-prepositions.w0: بعد از حرف اضافه: *her*
+op-prepositions.w1: بعد از حرف اضافه: *us*
+op-prepositions.w2: *listen to*
+
+op-me-too.t: *me too*، *it's me* و *my friend and I*
+op-me-too.s: در جواب کوتاه و بعد از ***be***، در انگلیسی روزمره **ضمیر مفعولی** می‌آید: *Me too! Who's there? ~ It's me.* وقتی فاعل **دو نفر** است، شکل **فاعلی** بیاورید و خودتان را **آخر** بگذارید: *My friend and I went to the cinema.*
+op-me-too.b0.h: موقعیت | انگلیسی روزمره | توضیح
+op-me-too.b0.0: جواب کوتاه ‖ = ‖ *I do / I am* هم ممکن است
+op-me-too.b0.1: بعد از *be* ‖ = ‖ *It is I* خیلی رسمی و قدیمی است
+op-me-too.b0.2: دو فاعل ‖ = ‖ *Me and my friend went out* خیلی خودمانی است
+op-me-too.b0.3: دو مفعول ‖ = ‖ بعد از فعل شکل مفعولی
+op-me-too.b1: برای امتحان کردنِ ضمیر، نفر دیگر را حذف کنید: *My friend and **I** went out* ← ***I** went out*. *She invited my friend and **me*** ← *She invited **me***.
+op-me-too.b2: *Me and my friend went…* در گفتار خودمانی رایج است، اما در نوشتن و امتحان غلط حساب می‌شود.
+op-me-too.n0: جواب کوتاه
+op-me-too.n1: جواب کوتاه
+op-me-too.n2: دو فاعل
+op-me-too.n3: دو مفعول
+op-me-too.w0: فاعل: *I*، و خودتان را آخر بگذارید
+op-me-too.w1: مفعول: *me*
+op-me-too.w2: جواب کوتاه: *me too*
+
+x.op-basic-s01: مفعولِ *see*، یک مرد: *him*.
+x.op-basic-s02: مفعولِ جمع: *them*.
+x.op-basic-s03: مفعول، یک زن: *her*.
+x.op-prepositions-s01: بعد از حرف اضافه: *you*.
+x.op-prepositions-s02: بعد از حرف اضافه: *us*.
+x.op-prepositions-s03: *wait for* + مفعول.
+x.op-me-too-s01: فاعل: *my brother and I* (*my brother and me* در گفتار خودمانی رایج است، اما در انگلیسیِ دقیق نه).
+x.op-me-too-s02: مفعول: *Sara and me*.
+x.op-me-too-s03: جواب کوتاه: *Me too*.

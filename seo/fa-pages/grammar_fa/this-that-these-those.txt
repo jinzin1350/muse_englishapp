@@ -1,0 +1,59 @@
+# this-that-these-those — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***this*** (مفرد) و ***these*** (جمع) را برای چیزهای **نزدیک** («این، این‌ها») و ***that*** (مفرد) و ***those*** (جمع) را برای چیزهای **دور** («آن، آن‌ها») به کار ببرید: ***This** is my bag. **That** car over there is my dad's.*
+i1: برای زمان هم به کار می‌روند (*this week, in those days*)، در گفت‌وگو (*That's great!*) و در نوشتن برای اشاره به حرفی که قبلاً زده شده (*This means that…*).
+
+ttt-near-far.t: *this, that, these, those*: نزدیک و دور
+ttt-near-far.s: ***this*** + مفرد و ***these*** + جمع یعنی **نزدیک**. ***that*** + مفرد و ***those*** + جمع یعنی **دور**.
+ttt-near-far.b0.h:  | نزدیک (اینجا) | دور (آنجا)
+ttt-near-far.b0.0: مفرد ‖ = ‖ =
+ttt-near-far.b0.1: جمع ‖ = ‖ =
+ttt-near-far.b1: آن‌ها را **قبل از اسم** (*this phone*) یا **تنها** (*What's **this**?*) بیاورید.
+ttt-near-far.b2: فعل هماهنگ می‌شود: ***This is**… / **These are**…* و ***That is**… / **Those are**…*
+ttt-near-far.n0: نزدیک، مفرد
+ttt-near-far.n1: نزدیک، جمع
+ttt-near-far.n2: دور، مفرد
+ttt-near-far.n3: دور، جمع
+ttt-near-far.w0: جمع: *these*
+ttt-near-far.w1: مفرد: *that*
+ttt-near-far.w2: مفرد: *this*
+
+ttt-pronouns-phone.t: *This is…*، *that's great*، *this one*
+ttt-pronouns-phone.s: ***this*** را برای معرفی کردن آدم‌ها (*This is my friend*) و پشت تلفن (*Hi, this is Sara*) بیاورید. ***That's*** واکنش به حرفی است که کسی همین الان زده (*That's great!*). ***This one / that one*** جای اسم را می‌گیرند.
+ttt-pronouns-phone.b0.h: کاربرد | مثال
+ttt-pronouns-phone.b0.0: معرفی کردن ‖ =
+ttt-pronouns-phone.b0.1: پشت تلفن ‖ *Hello, **this is** Ali. Is **that** Reza?* (آمریکایی: *Is **this** Reza?*)
+ttt-pronouns-phone.b0.2: واکنش نشان دادن ‖ =
+ttt-pronouns-phone.b0.3: *one / ones* ‖ =
+ttt-pronouns-phone.b1: *that* اغلب به چیزی اشاره می‌کند که **همین الان گفته شد**: *I'm getting married. ~ Really? **That's** wonderful!*
+ttt-pronouns-phone.b2: *this one / that one* از تکرار اسم جلوگیری می‌کنند: *Which cake do you want? ~ **That one**, please.* با جمع، خودِ *these / those* رایج‌تر از *these ones* است.
+ttt-pronouns-phone.n0: معرفی کردن
+ttt-pronouns-phone.n1: پشت تلفن
+ttt-pronouns-phone.n2: واکنش
+ttt-pronouns-phone.w0: جمع: *are*
+ttt-pronouns-phone.w1: پشت تلفن: *this is*
+
+ttt-time.t: *this morning, that day, these days, in those days*
+ttt-time.s: ***this*** + زمان یعنی **حالا** یا زمانی **نزدیک** (*this morning, this week*). ***that*** + زمان یعنی زمانی در **گذشته** که از آن حرف زده‌ایم (*that day, that night*). ***these days*** یعنی این روزها؛ ***in those days*** یعنی آن روزها در گذشته.
+ttt-time.b0.h: عبارت | معنی
+ttt-time.b0.0: = ‖ صبحِ امروز / همین هفته / امسال
+ttt-time.b0.1: = ‖ زمانی در گذشته که از آن حرف زده‌ایم
+ttt-time.b0.2: = ‖ این روزها، این دوره
+ttt-time.b0.3: = ‖ آن روزها، آن زمان در گذشته
+ttt-time.b1: وقتی داستان تعریف می‌کنید ***that*** بیاورید: *We met in 2015. **That** summer was amazing.*
+ttt-time.b2: در نقل قول غیرمستقیم، *this* اغلب به *that* تبدیل می‌شود: *“I'm busy this week.” → She said she was busy **that** week.* صفحهٔ [نقل قول غیرمستقیم](/blog/grammar/reported-speech/) را ببینید.
+ttt-time.n0: حال
+ttt-time.n1: گذشته
+ttt-time.n2: این روزها
+ttt-time.n3: در گذشته
+ttt-time.w0: دیشب: *last night*
+ttt-time.w1: گذشته: *in those days*
+
+x.ttt-near-far-s01: نزدیک، جمع: *these*.
+x.ttt-near-far-s02: دور، مفرد: *that*.
+x.ttt-near-far-s03: نزدیک، جمع: *these*.
+x.ttt-pronouns-phone-s01: معرفی یک نفر: *this is*.
+x.ttt-pronouns-phone-s02: واکنش به خبر: *That's great!*
+x.ttt-pronouns-phone-s03: *that one* جای اسم را می‌گیرد.
+x.ttt-time-s01: امروز: *this morning*.
+x.ttt-time-s02: گذشته: *in those days*.
+x.ttt-time-s03: این روزها: *these days*.

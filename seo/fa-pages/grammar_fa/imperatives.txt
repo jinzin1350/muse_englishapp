@@ -1,0 +1,69 @@
+# imperatives — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **جملهٔ امری** همان **شکل سادهٔ فعل** است، بدون فاعل: ***Open** the window. **Sit** down. **Don't** touch that!* آن را برای **دستورالعمل**، **دستور**، **نصیحت**، **هشدار** و **دعوت** به کار می‌بریم.
+i1: برای مؤدبانه‌تر کردن جملهٔ امری، ***please*** اضافه کنید یا سؤالی مثل *Could you…?* بپرسید. صفحهٔ [درخواست، پیشنهاد و اجازه گرفتن](/blog/grammar/requests-offers-permission/) را ببینید.
+
+imp-basic.t: *Open the door. Don't run.*
+imp-basic.s: **مثبت**: شکل سادهٔ فعل (*Sit down. Be quiet.*). **منفی**: ***Don't*** + شکل سادهٔ فعل (*Don't worry. Don't be late.*). برای دستورالعمل، دستور، نصیحت و هشدار.
+imp-basic.b0.h: مثبت | منفی
+imp-basic.b1: جملهٔ امری برای یک نفر و چند نفر **یکی** است: *Sit down, Ali. Sit down, everyone.*
+imp-basic.b2: با ***be***، منفی می‌شود ***Don't be***: ***Don't be** silly.* (نه *Be not silly*)
+imp-basic.n0: دستورالعمل
+imp-basic.n1: نصیحت
+imp-basic.n2: هشدار
+imp-basic.n3: هشدار
+imp-basic.w0: شکل سادهٔ فعل
+imp-basic.w1: *don't* + فعل
+imp-basic.w2: *don't* + شکل سادهٔ فعل
+
+imp-lets.t: *Let's go, let's not, shall we?*
+imp-lets.s: ***Let's*** + شکل سادهٔ فعل **پیشنهادی** است که **من و تو** را با هم شامل می‌شود («بیا…»): ***Let's** go to the beach.* منفی: ***Let's not*** + فعل (*Let's not argue*). برای نرم‌تر شدن ***shall we?*** اضافه کنید.
+imp-lets.b0.h: الگو | مثال
+imp-lets.b0.0: *Let's* + فعل ‖ =
+imp-lets.b0.1: *Let's not* + فعل ‖ =
+imp-lets.b0.3: *Let me* + فعل (پیشنهاد کمک) ‖ =
+imp-lets.b1: ***Let's*** یعنی *let us*. شکل کاملِ *let us* رسمی است: ***Let us** pray.*
+imp-lets.b2: ***Let me*** + فعل یعنی پیشنهاد کمک، یا راهی مؤدبانه برای گفتن کاری که می‌خواهید بکنید: ***Let me** explain.*
+imp-lets.n0: پیشنهاد
+imp-lets.n1: منفی
+imp-lets.n3: پیشنهاد کمک
+imp-lets.w0: *let's* + شکل سادهٔ فعل
+imp-lets.w2: شکل سادهٔ فعل
+
+imp-polite.t: *please, make sure, don't forget to*
+imp-polite.s: جملهٔ امری را با ***please***، ***just*** و عبارت‌هایی مثل ***Make sure you…***، ***Don't forget to…***، ***Remember to…***، ***Feel free to…***، ***Have a…*** دوستانه‌تر کنید.
+imp-polite.b0.h: عبارت | مثال
+imp-polite.b0.1: *just* (نرم‌تر) ‖ =
+imp-polite.b0.2: *Make sure (that)* + جمله ‖ =
+imp-polite.b0.3: *Don't forget / Remember to* + فعل ‖ =
+imp-polite.b0.4: *Feel free to* + فعل ‖ =
+imp-polite.b0.5: *Have a* + اسم (آرزوی خوب) ‖ =
+imp-polite.b1: جملهٔ امری اگر به غریبه یا رئیس‌تان بگویید ممکن است **بی‌ادبانه** به نظر برسد. ***please*** اضافه کنید یا سؤال بپرسید: *Could you close the door, **please**?*
+imp-polite.n3: آرزوی خوب
+imp-polite.w0: *forget to* + فعل
+imp-polite.w1: *make sure* + جمله یا *to* + فعل
+
+imp-subject.t: *You sit here. Somebody call a doctor!*
+imp-subject.s: گاهی جملهٔ امری برای **تأکید** یا **تضاد** فاعل دارد: ***You** sit here, and **I'll** sit there.* با ***someone / everybody***: ***Somebody** call an ambulance! **Everyone** listen.* و ***Don't you dare…!*** (هشداری قوی).
+imp-subject.b0.h: الگو | مثال | کاربرد
+imp-subject.b0.0: *You* + فعل امری ‖ = ‖ تضاد، تأکید
+imp-subject.b0.1: *somebody / everyone* + فعل امری ‖ = ‖ چه کسی باید کاری بکند
+imp-subject.b0.2: *Don't you* + فعل ‖ = ‖ دلگرمی یا هشدار
+imp-subject.b0.3: *Don't you dare* + فعل ‖ = ‖ هشدار قوی
+imp-subject.b0.4: فعل امری + *will you / can you?* ‖ = ‖ درخواست نرم‌تر
+imp-subject.b1: فاعل در جملهٔ امری ممکن است **بی‌حوصله** یا **تند** به نظر برسد، پس با احتیاط به کارش ببرید.
+imp-subject.n0: تضاد
+imp-subject.w0: *don't you* + شکل سادهٔ فعل
+imp-subject.w1: شکل سادهٔ فعل
+
+x.imp-basic-s01: جملهٔ امری: شکل سادهٔ فعل.
+x.imp-basic-s02: منفی با *be*: *Don't be*.
+x.imp-basic-s03: منفی: *Don't* + فعل.
+x.imp-lets-s01: *Let's* + شکل سادهٔ فعل.
+x.imp-lets-s02: پیشنهاد منفی: *Let's not*.
+x.imp-lets-s03: پسوند سؤالی: *Let's…, shall we?*
+x.imp-polite-s01: *Make sure (that)* + جمله.
+x.imp-polite-s02: *Don't forget to* + فعل.
+x.imp-polite-s03: آرزوی خوب: *Have a…*
+x.imp-subject-s01: جملهٔ امری با فاعل: شکل سادهٔ فعل.
+x.imp-subject-s02: هشدار قوی: *Don't you dare*.
+x.imp-subject-s03: پسوند سؤالی: *will you?*

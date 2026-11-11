@@ -1,0 +1,87 @@
+# be-going-to — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***be going to*** + شکل سادهٔ فعل را برای **برنامه‌هایی** که از قبل تصمیمش را گرفته‌ایم و برای **پیش‌بینی** بر اساس چیزی که الان می‌بینیم به کار می‌بریم: *I**'m going to** learn Spanish. Look out! You**'re going to** fall!*
+i1: برای مقایسه با *will* صفحهٔ [will یا going to](/blog/grammar/will-vs-going-to/) را ببینید. برای قرارهایی که با دیگران هماهنگ شده، صفحهٔ [حال استمراری](/blog/grammar/present-continuous/#pc-future) را ببینید.
+
+bgt-form.t: *I'm going to…*: برنامه و قصد
+bgt-form.s: **am / is / are going to** + شکل سادهٔ فعل، برای کارهایی که از قبل تصمیم گرفته‌اید انجام بدهید: *I'm going to buy a new phone.*
+bgt-form.b0.h: فاعل | *be* | *going to* | شکل سادهٔ فعل
+bgt-form.b1: *be going to* را برای **قصد** به کار ببرید: چیزی که **قبل از** صحبت کردن تصمیمش را گرفته‌اید. *I**'m going to** clean my room this weekend.*
+bgt-form.b2: کلمه‌های زمانیِ رایج: *tonight, tomorrow, this weekend, next week, next year, soon.*
+bgt-form.b3: در گفتار تند و خودمانی، *going to* اغلب شبیه *gonna* شنیده می‌شود: *I'm gonna call her.* در انگلیسی رسمی *gonna* ننویسید.
+bgt-form.n0: برنامه
+bgt-form.n1: تصمیمشان را گرفته‌اند
+bgt-form.n2: قصد
+bgt-form.n3: برنامه
+bgt-form.w0: *be* + *going to*
+bgt-form.w1: *going to* + شکل سادهٔ فعل
+bgt-form.w2: *going* + *to*
+
+bgt-negative-questions.t: *not going to* و *Are you going to…?*
+bgt-negative-questions.s: منفی: **'m not / isn't / aren't going to**. سؤالی: *Are you going to…? What are you going to do?*
+bgt-negative-questions.b0.h:  | ساختار | مثال
+bgt-negative-questions.b0.0: منفی ‖ فاعل + *be* + **not** + *going to* + فعل ‖ =
+bgt-negative-questions.b0.1: سؤالی ‖ *be* + فاعل + *going to* + فعل؟ ‖ =
+bgt-negative-questions.b0.2: سؤال با کلمهٔ پرسشی ‖ کلمهٔ پرسشی + *be* + فاعل + *going to* + فعل؟ ‖ =
+bgt-negative-questions.b0.3: جواب کوتاه ‖ = ‖ =
+bgt-negative-questions.b1: در سؤال، *be* را قبل از فاعل بیاورید: ***Is** she **going to** come?* نه *She is going to come?* (در نوشتن).
+bgt-negative-questions.n0: منفی
+bgt-negative-questions.n1: سؤال + جواب کوتاه
+bgt-negative-questions.n2: سؤال با کلمهٔ پرسشی
+bgt-negative-questions.n3: منفی
+bgt-negative-questions.w0: منفی: *be* + *not*
+bgt-negative-questions.w1: *be* قبل از فاعل
+
+bgt-evidence.t: پیش‌بینی بر اساس نشانه: *It's going to rain*
+bgt-evidence.s: **be going to** را برای پیش‌بینی بر اساس چیزی که **الان** می‌بینیم یا می‌دانیم بیاورید: *Look at those clouds. It's going to rain.*
+bgt-evidence.b0: وقتی **همین الان نشانه‌ای** هست که چیزی اتفاق می‌افتد، *be going to* بیاورید: *Look at that car! It**'s going to** crash!* *She's pregnant. She**'s going to** have a baby in June.*
+bgt-evidence.b1: آن اتفاق اغلب خیلی نزدیک است یا می‌بینیم که دارد شروع می‌شود: *I feel terrible. I think I**'m going to** be sick.*
+bgt-evidence.b2: برای پیش‌بینی‌ای که فقط نظر ماست *will* رایج است: *I think she**'ll** win.* برای پیش‌بینی بر اساس نشانه *going to* طبیعی‌تر است: *She's so far ahead. She**'s going to** win.* صفحهٔ [will یا going to](/blog/grammar/will-vs-going-to/#wvg-prediction) را ببینید.
+bgt-evidence.n0: نشانه: آسمان
+bgt-evidence.n1: الان است که اتفاق بیفتد
+bgt-evidence.n2: نشانه: ترافیک
+bgt-evidence.n3: نشانه: نتیجهٔ بازی
+bgt-evidence.w0: پیش‌بینی بر اساس نشانه: *going to*
+
+bgt-vs-present-continuous.t: برای برنامه‌ها: *going to* یا حال استمراری؟
+bgt-vs-present-continuous.s: **be going to** یعنی قصد (تصمیمم را گرفته‌ام). **حال استمراری** یعنی قرارِ هماهنگ‌شده (با آدم‌ها، زمان و مکانِ مشخص قطعی شده).
+bgt-vs-present-continuous.b0.h: *be going to* (قصد) | حال استمراری (قرار)
+bgt-vs-present-continuous.b0.0: *I**'m going to** see a doctor.* (تصمیمش را گرفته‌ام.) ‖ *I**'m seeing** the doctor at 4.* (وقت دکتر دارم.)
+bgt-vs-present-continuous.b0.1: *We**'re going to** get married.* (تصمیممان را گرفته‌ایم.) ‖ *We**'re getting** married on June 5th.* (همه‌چیز هماهنگ شده.)
+bgt-vs-present-continuous.b1: اغلب هر دو ممکن است: *I**'m going to** visit / I**'m visiting** my aunt on Saturday.* حال استمراری نشان می‌دهد برنامه **قطعی** است (عمه‌ام خبر دارد و ساعتش را گذاشته‌ایم).
+bgt-vs-present-continuous.b2: وقتی فقط **قصد** است و هنوز هماهنگی‌ای نشده، *going to* بیاورید (نه حال استمراری): *One day I**'m going to** climb Everest.*
+bgt-vs-present-continuous.b3: با *go* و *come* معمولاً حال استمراری را ترجیح می‌دهند تا *going to go* نشود: *I**'m going** to Spain next month* (طبیعی‌تر از *I'm going to go to Spain*).
+bgt-vs-present-continuous.n0: قصد
+bgt-vs-present-continuous.n1: قرار
+bgt-vs-present-continuous.n2: رزرو شده
+bgt-vs-present-continuous.n3: قصد، بدون هماهنگی
+bgt-vs-present-continuous.w0: قصدی که هنوز هماهنگ نشده: *going to*
+
+bgt-was-going-to.t: *was going to*: برنامه‌هایی که عوض شدند
+bgt-was-going-to.s: **was / were going to** + شکل سادهٔ فعل یعنی برنامه‌ای در گذشته، که اغلب **انجام نشد**: *I was going to call you, but I forgot.*
+bgt-was-going-to.b0: ***was / were going to*** را برای کاری بیاورید که در گذشته **قصد داشتید** انجام بدهید: *We **were going to** take the train, but there was a strike.*
+bgt-was-going-to.b1: خیلی وقت‌ها آن برنامه **انجام نشد** و با *but* دلیلش را می‌گوییم: *I **was going to** go to the gym, **but** I was too tired.*
+bgt-was-going-to.b2: برای پیش‌بینی‌ای در گذشته هم به کار می‌رود: *I knew it **was going to** rain.*
+bgt-was-going-to.b3: برای راه‌های دیگرِ گفتن آینده از نگاه گذشته صفحهٔ [آینده در گذشته](/blog/grammar/future-in-the-past/) را ببینید.
+bgt-was-going-to.n0: برنامه عوض شد
+bgt-was-going-to.n1: انجام نشد
+bgt-was-going-to.n2: بهانه آوردن
+bgt-was-going-to.n3: پیش‌بینی در گذشته
+bgt-was-going-to.w0: *was going to* + شکل سادهٔ فعل
+bgt-was-going-to.w1: گذشته: *were going to*
+
+x.bgt-form-s01: با *I*: *am going to*.
+x.bgt-form-s02: با *she*: *is going to*.
+x.bgt-form-s03: برنامه: *are going to go*.
+x.bgt-negative-questions-s01: سؤالی: *Are you going to…?*
+x.bgt-negative-questions-s02: *Where are you going to…?*
+x.bgt-negative-questions-s03: منفی: *isn't going to*.
+x.bgt-evidence-s01: نشانه‌ای همین الان: *is going to*.
+x.bgt-evidence-s02: نشانه‌ای همین الان: *are going to*.
+x.bgt-evidence-s03: نشانه: *is going to rain*.
+x.bgt-vs-present-continuous-s01: قرار قطعی: حال استمراری.
+x.bgt-vs-present-continuous-s02: قصد: *going to*.
+x.bgt-vs-present-continuous-s03: قرار قطعی: حال استمراری (*going to* هم ممکن است).
+x.bgt-was-going-to-s01: برنامه‌ای در گذشته: *was going to*.
+q.bgt-was-going-to-s02: جملهٔ *We were going to buy that house* یعنی چه؟
+x.bgt-was-going-to-s02: *were going to* یعنی برنامه‌ای که انجام نشد.
+x.bgt-was-going-to-s03: برنامه‌ای که انجام نشد: *was going to go*.

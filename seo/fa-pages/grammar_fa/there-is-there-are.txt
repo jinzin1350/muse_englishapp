@@ -1,0 +1,58 @@
+# there-is-there-are — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***there is*** (*there's*) و ***there are*** را برای گفتن اینکه چیزی **وجود دارد** یا **جایی هست** به کار ببرید، به‌خصوص **اولین بار** که از آن حرف می‌زنید: ***There's** a café on the corner. **There are** three people in my family.*
+i1: برای فرق *there is* و *it is* صفحهٔ [it مقدماتی](/blog/grammar/introductory-it/#iit-there-it) را ببینید.
+
+tia-basic.t: *There's a…, there are some…*
+tia-basic.s: ***There is / There's*** + اسم **مفرد** یا **غیرقابل‌شمارش**. ***There are*** + اسم **جمع**: ***There's** a sofa. **There's** some milk. **There are** two chairs.*
+tia-basic.b0.h: *There is* (مفرد / غیرقابل‌شمارش) | *There are* (جمع)
+tia-basic.b1: برای این معنی *It has* نگویید: ***There's** a park near my house* (نه *It has a park near my house*). (در فارسی می‌گوییم «یک پارک دارد»، اما در انگلیسی *there is* می‌آید.)
+tia-basic.n0: مفرد
+tia-basic.n1: جمع
+tia-basic.n2: غیرقابل‌شمارش
+tia-basic.n3: جمع
+tia-basic.w1: جمع: *there are*
+
+tia-neg-q.t: *There isn't, there aren't any* و *Is there…?*
+tia-neg-q.s: **منفی**: ***There isn't a… / There isn't any…*** (غیرقابل‌شمارش)، ***There aren't any…*** (جمع). **سؤالی**: ***Is there a…? Are there any…?*** جواب کوتاه: *Yes, there is. No, there aren't.*
+tia-neg-q.b0.h: منفی | سؤالی | جواب کوتاه
+tia-neg-q.b1: ***There's no*** + اسم هم یک شکل دیگرِ منفی است: ***There's no** milk. **There are no** shops.*
+tia-neg-q.n0: منفیِ مفرد
+tia-neg-q.n1: سؤالیِ جمع
+tia-neg-q.n2: سؤال + جواب کوتاه
+tia-neg-q.n3: منفیِ جمع
+tia-neg-q.w0: در منفی: *any*
+tia-neg-q.w1: جمع: *are there*
+tia-neg-q.w2: جواب کوتاه: بدون شکل کوتاه
+
+tia-tenses.t: *there was, there were, there will be, there has been*
+tia-tenses.s: برای زمان‌های دیگر ***be*** را عوض کنید: ***there was / were*** (گذشته)، ***there will be*** / ***there's going to be*** (آینده)، ***there has / have been*** (حال کامل).
+tia-tenses.b0.h: زمان | مفرد / غیرقابل‌شمارش | جمع
+tia-tenses.b0.0: گذشته ‖ = ‖ =
+tia-tenses.b0.1: آینده ‖ = ‖ =
+tia-tenses.b0.3: حال کامل ‖ = ‖ =
+tia-tenses.b1: در سؤال، فعل یا فعل کمکی را قبل از ***there*** بیاورید: ***Was there** a problem? **Will there be** food? **Has there been** any news?*
+tia-tenses.n0: گذشته
+tia-tenses.n1: گذشتهٔ جمع
+tia-tenses.n2: آینده
+tia-tenses.n3: حال کامل
+tia-tenses.w0: جمع: *were*
+
+tia-modals.t: *there must be, there seems to be, there used to be*
+tia-modals.s: ***there*** با **فعل‌های وجهی** و فعل‌های دیگر هم می‌آید: ***there must / might / could / should be***، ***there seems / appears to be***، ***there used to be***، ***there's bound / likely to be***.
+tia-modals.b0.h: الگو | مثال
+tia-modals.b1: در گفتار خودمانی خیلی‌ها ***there's*** + اسم جمع می‌گویند: *There's two problems.* در نوشتن ***there are*** بیاورید.
+tia-modals.n0: نتیجه‌گیری
+tia-modals.n2: وضعیتِ گذشته
+tia-modals.n3: احتمال
+tia-modals.w1: وجود داشتن: *there used to be*
+
+x.tia-basic-s01: مفرد: *There's*.
+x.tia-basic-s02: جمع: *There are*.
+x.tia-basic-s03: غیرقابل‌شمارش: *there is*.
+x.tia-neg-q-s01: سؤالیِ مفرد: *Is there…?*
+x.tia-neg-q-s02: منفیِ جمع: *aren't any*.
+x.tia-neg-q-s03: جواب کوتاه: *No, there aren't.*
+x.tia-tenses-s01: گذشتهٔ جمع: *There were*.
+x.tia-tenses-s02: آینده: *There will be*.
+x.tia-tenses-s03: حال کامل: *has been*.
+x.tia-modals-s01: نتیجه‌گیری: *There must be*.

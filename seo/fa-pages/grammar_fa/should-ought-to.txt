@@ -1,0 +1,72 @@
+# should-ought-to — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***should*** را برای **نصیحت** و گفتن اینکه به نظرمان چه کاری **درست** است («بهتر است، باید») به کار می‌بریم: *You **should** drink more water.* ***ought to*** تقریباً همان معنی را دارد و ***had better*** قوی‌تر است و اغلب هشدار است.
+i1: *should* از *must* ضعیف‌تر است: نصیحت است، نه قانون. برای اجبار صفحهٔ [must و have to](/blog/grammar/must-have-to/) و برای حسرت‌های گذشته (*I should have…*) صفحهٔ [should have، could have و needn't have](/blog/grammar/should-have-could-have-neednt-have/) را ببینید.
+
+soa-should.t: *should* و *shouldn't* برای نصیحت
+soa-should.s: **should / shouldn't** + شکل سادهٔ فعل برای نصیحت و نظر: *You **should** go to bed earlier. You **shouldn't** eat so much sugar.*
+soa-should.b0.h: ساختار | مثال
+soa-should.b0.0: مثبت ‖ =
+soa-should.b0.1: منفی ‖ =
+soa-should.b0.2: سؤالی ‖ =
+soa-should.b0.3: نظر ‖ =
+soa-should.b1: *should* برای همهٔ اشخاص یکی است و بعدش **شکل سادهٔ فعل** می‌آید: *She **should** rest.* نه *She shoulds rest* و نه *She should to rest*.
+soa-should.b2: برای نظرِ نرم‌تر اغلب ***I think … should*** یا ***I don't think … should*** می‌آوریم: *I **don't think** you **should** buy it.* (طبیعی‌تر از *I think you shouldn't buy it*)
+soa-should.n0: نصیحت
+soa-should.n1: نصیحتِ منفی
+soa-should.n2: نصیحت خواستن
+soa-should.n3: نظر
+soa-should.w0: *should* + شکل سادهٔ فعل
+soa-should.w1: بدون *-s*
+soa-should.w2: سؤالی: *Should I…?*
+
+soa-ought-to.t: *ought to*
+soa-ought-to.s: **ought to** + شکل سادهٔ فعل یعنی *should*. کمی رسمی‌تر است و در سؤالی و منفی کمتر به کار می‌رود: *You **ought to** call your mother.*
+soa-ought-to.b0: ***ought to*** برای نصیحت و کار درست همان معنی *should* را دارد: *You **ought to** tell the truth.* = *You **should** tell the truth.*
+soa-ought-to.b1: برخلاف *should*، ***to*** دارد: *ought **to** go* (نه *ought go*). برای همهٔ اشخاص یکی است: *She **ought to** go.*
+soa-ought-to.b2: منفیِ ***ought not to / oughtn't to*** وجود دارد اما رسمی به نظر می‌رسد. سؤال با *ought* (*Ought I to…?*) کم پیش می‌آید. بیشتر مردم برای هر دو *should* می‌آورند: *You **shouldn't** go. **Should** I go?*
+soa-ought-to.b3: *ought to* اغلب وظیفه یا کار درستِ اخلاقی را نشان می‌دهد: *We **ought to** help them.* در انگلیسی آمریکایی *should* خیلی رایج‌تر است.
+soa-ought-to.n0: = *should*
+soa-ought-to.n1: کار درست
+soa-ought-to.n2: منفیِ رسمی
+soa-ought-to.n3: در سؤال *should* طبیعی‌تر است
+soa-ought-to.w0: *ought* + *to*
+soa-ought-to.w1: بدون *-s*
+
+soa-had-better.t: *had better*: نصیحت جدی و هشدار
+soa-had-better.s: **had better ('d better)** + شکل سادهٔ فعل یعنی نصیحت جدی برای یک موقعیت مشخص، اغلب همراه هشدار («بهتر است… وگرنه»): *You**'d better** hurry or you'll miss the train.*
+soa-had-better.b0: ***had better*** از *should* قوی‌تر است و نشان می‌دهد اگر به نصیحت عمل نکنید، **اتفاق بدی** می‌افتد: *You**'d better** take an umbrella. It's going to rain.*
+soa-had-better.b1: دربارهٔ **یک موقعیت مشخص الان یا به‌زودی** است، نه نصیحت کلی: *You**'d better** go now* (نه *You'd better eat vegetables* به عنوان نصیحت کلی).
+soa-had-better.b2: ساختار: ***had better*** (معمولاً ***'d better***) + شکل سادهٔ فعل. منفی: ***had better not***: *You**'d better not** be late.* با اینکه *had* دارد، دربارهٔ **حال یا آینده** است.
+soa-had-better.n0: هشدار
+soa-had-better.n1: منفی
+soa-had-better.n2: تصمیمِ همین حالای خودم
+soa-had-better.n3: هشدار
+soa-had-better.w0: *had better* + شکل سادهٔ فعل
+soa-had-better.w1: منفی: *had better not*
+soa-had-better.w2: *'d* یعنی *had*
+
+soa-expectation.t: *should* برای انتظار: *It should arrive tomorrow*
+soa-expectation.s: **should** معنی «احتمالاً…» یا «قرار است…» هم دارد: *The package **should** arrive tomorrow. They **should** be here by now.*
+soa-expectation.b0: *should* می‌تواند بگوید چیزی **محتمل** یا **مورد انتظار** است، چون عادی یا برنامه‌ریزی‌شده است: *The meeting **should** finish at five.* (برنامه این است.) *This test **should** be easy for you.* (انتظارش را دارم.)
+soa-expectation.b1: ***should be*** + فعل ing‌دار و ***should have*** + اسم مفعول برای انتظارِ الان یا گذشته: *They **should be arriving** soon. The parcel **should have arrived** yesterday.* (اما نرسید)
+soa-expectation.b2: با *by now*، *should* اغلب نشان می‌دهد آن چیزِ مورد انتظار اتفاق نیفتاده: *It's 9 o'clock. Jo **should** be here by now.* (پس کجاست؟)
+soa-expectation.b3: *should* (انتظار دارم، اما مطمئن نیستم) را با *must* (از روی نشانه مطمئنم) مقایسه کنید: *She **should** be home soon* در برابر *Her car is outside. She **must** be home.* صفحهٔ [فعل‌های وجهی برای حدس و استنتاج](/blog/grammar/modals-of-deduction/) را ببینید.
+soa-expectation.n0: احتمالاً
+soa-expectation.n1: انتظارش را دارم
+soa-expectation.n2: معمولاً
+soa-expectation.n3: انتظار داشتیم، اما نشد
+soa-expectation.w0: *should* + شکل سادهٔ فعل
+
+x.soa-should-s01: نصیحت: *should* + شکل سادهٔ فعل.
+x.soa-should-s02: نصیحت خواستن: *Should I…?*
+x.soa-should-s03: نصیحتِ منفی: *shouldn't* + شکل سادهٔ فعل.
+x.soa-ought-to-s01: *ought to* + شکل سادهٔ فعل.
+q.soa-ought-to-s02: کدام جمله همان معنی *You should save more money* را دارد؟
+x.soa-ought-to-s02: *ought to* یعنی *should*.
+x.soa-ought-to-s03: *ought to* + شکل سادهٔ فعل.
+x.soa-had-better-s01: *'d better* + شکل سادهٔ فعل.
+x.soa-had-better-s02: منفی: *'d better not*.
+x.soa-had-better-s03: *'d better* + شکل سادهٔ فعل.
+x.soa-expectation-s01: طبق برنامه انتظارش می‌رود: *should*.
+x.soa-expectation-s02: انتظار داشتیم اما نشده: *should … by now*.
+x.soa-expectation-s03: انتظار: *should be*.

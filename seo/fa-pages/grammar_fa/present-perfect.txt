@@ -1,0 +1,127 @@
+# present-perfect — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **حال کامل** (*have / has* + اسم مفعول) گذشته را به **حالا** وصل می‌کند: *I**'ve lost** my keys* (الان پیدایشان نمی‌کنم). *She**'s been** to Japan three times* (در طول زندگی‌اش تا حالا).
+i1: مهم این نیست که **کِی** اتفاق افتاده، مهم این است که **حالا** اهمیت دارد. اگر زمانش را بگویید (*yesterday, in 2020*)، گذشتهٔ ساده بیاورید. صفحهٔ [حال کامل یا گذشتهٔ ساده](/blog/grammar/present-perfect-vs-past-simple/) را ببینید.
+
+pp-form.t: ساختار: *have / has* + اسم مفعول
+pp-form.s: **have / has + اسم مفعول** (قسمت سوم فعل): *I've finished. She hasn't called. Have you eaten?*
+pp-form.b0.h:  | I / you / we / they | he / she / it
+pp-form.b0.0: مثبت ‖ = ‖ =
+pp-form.b0.1: منفی ‖ = ‖ =
+pp-form.b0.2: سؤالی ‖ = ‖ =
+pp-form.b0.3: جواب کوتاه ‖ = ‖ =
+pp-form.b1: **اسم مفعولِ** فعل‌های باقاعده مثل گذشتهٔ ساده به *-ed* ختم می‌شود: *work → worked, play → played*. فعل‌های بی‌قاعده شکل خودشان را دارند:
+pp-form.b2.h: فعل | گذشتهٔ ساده | اسم مفعول
+pp-form.b3: *He's* می‌تواند *he is* باشد یا *he has*. اگر کلمهٔ بعدی اسم مفعول باشد، *has* است: *He**'s gone*** یعنی *he has gone*. *He**'s going*** یعنی *he is going*.
+pp-form.n1: منفی
+pp-form.n2: سؤالی
+pp-form.n3: اسم مفعولِ بی‌قاعده
+pp-form.w0: با *she*: *has*
+pp-form.w1: اسم مفعول بیاورید (*been / gone*)، نه گذشتهٔ ساده.
+
+pp-experience.t: تجربه‌ها: *ever, never, before*
+pp-experience.s: حال کامل را برای **تجربه‌های زندگی** تا امروز به کار ببرید، بدون گفتن زمانش: *Have you ever been to Canada? I've never tried sushi.*
+pp-experience.b0: وقتی از تجربه‌هایمان در زندگی حرف می‌زنیم (در هر زمانی تا حالا)، حال کامل می‌آوریم و نمی‌گوییم **کِی**:
+pp-experience.b1.1: ***Have** you **ever ridden** a horse?* (*ever* یعنی «تا حالا، هیچ وقت در زندگی‌تان»)
+pp-experience.b1.2: *She**'s never seen** snow.* (*never* یعنی «هیچ وقت»)
+pp-experience.b2: ***ever*** در سؤال می‌آید؛ ***never*** خودش جمله را منفی می‌کند (*not* اضافه نکنید): *I've **never** been there.* نه *I haven't never been there*.
+pp-experience.b3: اگر بعد جزئیات بدهید (کِی، کجا، چطور)، به **گذشتهٔ ساده** بروید: *I**'ve been** to Rome. I **went** there in 2019 with my family.*
+pp-experience.b4: *been to* یعنی رفته و برگشته (یک تجربه). *I've been to Paris* یعنی زمانی در زندگی‌ام به پاریس سفر کرده‌ام.
+pp-experience.n0: *ever*: هیچ وقت تا حالا
+pp-experience.n3: چندتا: تا حالا
+pp-experience.w0: *never* خودش جمله را منفی می‌کند
+pp-experience.w1: اسم مفعول بیاورید: *been*.
+pp-experience.w2: با زمانِ گذشتهٔ مشخص: گذشتهٔ ساده
+
+pp-just-already-yet.t: *just, already* و *yet*
+pp-just-already-yet.s: **just** یعنی کمی پیش؛ **already** یعنی زودتر از آنچه انتظار داشتیم؛ **yet** یعنی تا حالا (در سؤال و منفی، آخر جمله).
+pp-just-already-yet.b0.h: کلمه | معنی | جایگاه | مثال
+pp-just-already-yet.b0.0: = ‖ کمی پیش، همین الان ‖ قبل از اسم مفعول ‖ =
+pp-just-already-yet.b0.1: = ‖ قبل از حالا، شاید زودتر از انتظار ‖ قبل از اسم مفعول (یا آخر جمله) ‖ =
+pp-just-already-yet.b0.2: = ‖ تا حالا (انتظار داریم اتفاق بیفتد) ‖ **آخر** جمله؛ در سؤال و منفی ‖ =
+pp-just-already-yet.b1: ***yet*** در سؤال می‌پرسد آیا کاری که انتظارش را داریم انجام شده یا نه. در جملهٔ منفی یعنی هنوز انجام نشده، اما انتظار داریم بشود: *The bus **hasn't come yet**.*
+pp-just-already-yet.b2: در انگلیسی آمریکایی با این کلمه‌ها گذشتهٔ ساده هم رایج است: *I **just ate**. Did you **finish yet**?* در انگلیسی بریتانیایی حال کامل انتخاب معمول است. هر دو درست‌اند.
+pp-just-already-yet.n0: همین چند لحظه پیش
+pp-just-already-yet.n1: زودتر از آنچه فکر می‌کردید
+pp-just-already-yet.n2: سؤال با *yet*
+pp-just-already-yet.n3: منفی با *yet*
+pp-just-already-yet.w0: *yet* برای سؤال و منفی است
+pp-just-already-yet.w1: *yet* آخر جمله می‌آید
+pp-just-already-yet.w2: *just* قبل از اسم مفعول می‌آید
+
+pp-been-gone.t: *been* یا *gone*؟
+pp-been-gone.s: *She's **gone** to Paris* یعنی الان آنجاست. *She's **been** to Paris* یعنی رفته و برگشته.
+pp-been-gone.b0.h: جمله | معنی
+pp-been-gone.b0.0: = ‖ الان در بانک است (یا در راه بانک).
+pp-been-gone.b0.1: = ‖ به بانک رفته و الان برگشته.
+pp-been-gone.b0.2: = ‖ زمانی در زندگی‌اش به ژاپن سفر کرده.
+pp-been-gone.b1: وقتی آن آدم **هنوز آنجاست** ***gone*** بیاورید. وقتی **برگشته** و برای تجربه‌ها ***been*** بیاورید.
+pp-been-gone.b2: *Where have you been?* یعنی جایی بودی و حالا برگشته‌ای. *Where has he gone?* یعنی الان اینجا نیست.
+pp-been-gone.n0: الان آنجا هستند
+pp-been-gone.n1: تجربه
+pp-been-gone.n2: الان برگشته‌ای
+pp-been-gone.n3: الان خانه است
+pp-been-gone.w0: تجربه: *been*.
+pp-been-gone.w1: هنوز آنجاست: *gone*.
+
+pp-result-news.t: کاری در گذشته که نتیجه‌اش الان پیداست، و خبر
+pp-result-news.s: حال کامل نشان می‌دهد کاری در گذشته **الان نتیجه‌ای دارد** (*I've lost my keys* یعنی کلیدها را ندارم) و **خبر تازه** می‌دهد: *The prime minister has resigned.*
+pp-result-news.b0: اغلب وقتی حال کامل می‌آوریم که کاری در گذشته به خاطر **نتیجه‌اش در حال** مهم است:
+pp-result-news.b1.0: *I**'ve lost** my keys.* (الان نمی‌توانم وارد شوم.)
+pp-result-news.b1.1: *Somebody **has broken** the window.* (الان شکسته است.)
+pp-result-news.b1.2: *She**'s had** a haircut.* (موهایش الان فرق کرده.)
+pp-result-news.b2: برای دادن **خبر** هم به کار می‌رود: *The police **have arrested** a man in connection with the robbery.* وقتی جزئیات اضافه می‌کنیم (کِی، چطور)، معمولاً به گذشتهٔ ساده می‌رویم: *He **was arrested** at his home last night.*
+pp-result-news.b3: مقایسه کنید: *I**'ve lost** my keys* (هنوز پیدایشان نکرده‌ام) و *I **lost** my keys yesterday, but I found them later* (ماجرای تمام‌شده). صفحهٔ [حال کامل یا گذشتهٔ ساده](/blog/grammar/present-perfect-vs-past-simple/) را ببینید.
+pp-result-news.n0: نتیجه در حال
+pp-result-news.n1: نتیجه در حال
+pp-result-news.n2: خبر
+pp-result-news.n3: تغییری که نتیجه‌اش الان پیداست
+pp-result-news.w0: اسم مفعول: *gone*.
+pp-result-news.w1: با *yesterday*: گذشتهٔ ساده.
+
+pp-unfinished-time.t: *today, this week, recently, so far*
+pp-unfinished-time.s: حال کامل را با بازه‌های زمانیِ **تمام‌نشده** به کار ببرید: *today, this week, this year, recently, lately, so far, up to now.*
+pp-unfinished-time.b0: وقتی بازهٔ زمانی **حالا را هم شامل می‌شود**، حال کامل بیاورید:
+pp-unfinished-time.b1.0: *I**'ve drunk** three coffees **today**.* (امروز هنوز تمام نشده.)
+pp-unfinished-time.b2: مقایسه کنید: *I**'ve seen** her **this morning*** (هنوز صبح است) و *I **saw** her **this morning*** (الان بعدازظهر است و صبح تمام شده).
+pp-unfinished-time.b3: ***recently*** با هر دو زمان می‌آید: *I**'ve recently started** yoga* / *I **recently started** yoga.* ***lately*** معمولاً با حال کامل می‌آید.
+pp-unfinished-time.n0: این هفته تمام نشده
+pp-unfinished-time.n1: امسال تمام نشده
+pp-unfinished-time.n2: این اواخر
+pp-unfinished-time.n3: تا حالا
+pp-unfinished-time.w0: *yesterday* تمام شده: گذشتهٔ ساده.
+pp-unfinished-time.w1: با *lately*: حال کامل
+
+pp-first-time-superlative.t: *It's the first time…* و *the best… I've ever…*
+pp-first-time-superlative.s: بعد از *It's the first / second time* و بعد از صفت عالی + *ever* حال کامل بیاورید: *It's the first time I've driven. It's the best film I've ever seen.*
+pp-first-time-superlative.b0: وقتی دربارهٔ **حالا** حرف می‌زنیم، بعد از این الگوها حال کامل می‌آوریم:
+pp-first-time-superlative.b1.0: ***It's the first time** I**'ve eaten** sushi.* نه *It's the first time I eat sushi*.
+pp-first-time-superlative.b2: برای موقعیتی در گذشته گذشتهٔ کامل بیاورید: *It **was** the first time I**'d** ever **flown**.* صفحهٔ [گذشتهٔ کامل](/blog/grammar/past-perfect/#ppf-first-time) را ببینید.
+pp-first-time-superlative.b3: *ever* با صفت عالی اختیاری است، اما خیلی رایج است: *the best meal I've (ever) had*.
+pp-first-time-superlative.n0: بار اول + حال کامل
+pp-first-time-superlative.n1: بار دوم
+pp-first-time-superlative.n2: صفت عالی + *ever*
+pp-first-time-superlative.n3: صفت عالی
+pp-first-time-superlative.w0: بار اول + حال کامل
+pp-first-time-superlative.w1: صفت عالی + حال کامل (انگلیسی بریتانیایی)
+
+x.pp-form-s01: با *he*: *has* + اسم مفعول *broken*.
+x.pp-form-s02: با *you*: *Have you…?*
+x.pp-form-s03: هنوز صبح است: *have written* (در انگلیسی آمریکایی *wrote* هم ممکن است).
+x.pp-experience-s01: سؤال دربارهٔ تجربه: *Have you ever been…?*
+x.pp-experience-s02: *have + never* + اسم مفعول.
+x.pp-experience-s03: تجربه تا امروز: *has never used*.
+x.pp-just-already-yet-s01: *already* یعنی قبل از حالا.
+x.pp-just-already-yet-s02: سؤال دربارهٔ کاری که انتظارش را داریم: *yet* آخر جمله.
+x.pp-just-already-yet-s03: همین چند لحظه پیش: *has just gone* (در انگلیسی آمریکایی: *just went*).
+x.pp-been-gone-s01: الان برگشته‌ای: *have you been*.
+x.pp-been-gone-s02: هنوز در جلسه است: *gone*.
+x.pp-been-gone-s03: تجربه: *have been*.
+x.pp-result-news-s01: نتیجه در حال (پیدایش نمی‌کنم): *have lost*.
+x.pp-result-news-s02: خبر: حال کامل.
+x.pp-result-news-s03: نتیجه در حال (موهایت عالی شده): *Have you had…?* (در انگلیسی آمریکایی اغلب *Did you have…?*).
+x.pp-unfinished-time-s01: این هفته تمام نشده: حال کامل.
+x.pp-unfinished-time-s02: *so far today* یعنی تا این لحظه.
+x.pp-unfinished-time-s03: با *lately*: حال کامل.
+x.pp-first-time-superlative-s01: *It's the first time* + حال کامل.
+x.pp-first-time-superlative-s02: صفت عالی + حال کامل.
+x.pp-first-time-superlative-s03: *the third time* + حال کامل.

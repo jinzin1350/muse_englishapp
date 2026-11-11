@@ -1,0 +1,40 @@
+# present-simple-vs-present-continuous — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **حال ساده** برای چیزهای **کلی** است: عادت‌ها، واقعیت‌ها و موقعیت‌های دائمی. **حال استمراری** برای کارهایی است که **همین حالا یا این روزها** در جریان‌اند، و برای موقعیت‌های **موقت**.
+i1: *I **work** from home on Fridays. I**'m working** from home today.*
+
+psc-now-general.t: همین حالا یا به طور کلی؟
+psc-now-general.s: حال استمراری برای همین حالا؛ حال ساده برای عادت‌ها، واقعیت‌ها و چیزهای کلی.
+psc-now-general.b0.h:  | حال ساده | حال استمراری
+psc-now-general.b0.0: کاربرد ‖ عادت‌ها، واقعیت‌ها، چیزهای کلی ‖ در جریانِ همین حالا یا این روزها
+psc-now-general.b0.1: ساختار ‖ = ‖ =
+psc-now-general.b0.2: کلمه‌های رایج ‖ = ‖ =
+psc-now-general.b0.3: مثال ‖ = ‖ =
+psc-now-general.b0.4: مثال ‖ = ‖ =
+psc-now-general.b1: بعضی فعل‌ها (*know, want, like, understand…*) معمولاً استمراری نمی‌شوند، حتی برای همین حالا: *I **know** the answer* (نه *I'm knowing*). صفحهٔ [فعل‌های حالتی](/blog/grammar/stative-verbs/) را ببینید.
+psc-now-general.n0: عادت در برابر امروز
+psc-now-general.n1: واقعیت در برابر همین حالا
+psc-now-general.n2: به طور کلی در برابر همین حالا
+psc-now-general.n3: همین حالا
+psc-now-general.n4: کار روزمره در برابر همین حالا
+psc-now-general.w0: همین حالا در جریان است: حال استمراری.
+psc-now-general.w1: عادت: حال ساده.
+psc-now-general.w2: توانایی دائمی، نه همین حالا: حال ساده.
+
+psc-temporary-permanent.t: موقت یا دائمی؟
+psc-temporary-permanent.s: حال استمراری برای موقعیت‌های موقت؛ حال ساده برای موقعیت‌های دائمی.
+psc-temporary-permanent.b0.h: دائمی (حال ساده) | موقت (حال استمراری)
+psc-temporary-permanent.b1: کلمه‌هایی مثل *today, this week, this year, at the moment, until…* اغلب نشان می‌دهند موقعیت موقت است.
+psc-temporary-permanent.n0: دائمی در برابر موقت
+psc-temporary-permanent.n1: *live* در برابر *stay*
+psc-temporary-permanent.n2: امسال
+psc-temporary-permanent.n3: این ترم
+psc-temporary-permanent.w0: موقعیت موقت: حال استمراری.
+psc-temporary-permanent.w1: از گذشته تا حالا: حال کامل. صفحهٔ حال کامل را ببینید.
+
+x.psc-now-general-s01: *usually* یعنی عادت: حال ساده، *walk*.
+x.psc-now-general-s02: همین حالا: حال استمراری، *he's having*.
+x.psc-now-general-s03: توانایی دائمی: حال ساده، *speaks*.
+x.psc-now-general-s04: *Look!* یعنی همین حالا: *is coming*.
+x.psc-temporary-permanent-s01: موقعیت دائمی: حال ساده، *live*.
+x.psc-temporary-permanent-s02: موقت (*until…*): *I'm staying*.
+x.psc-temporary-permanent-s03: موقت (*this week*): *he's working*.

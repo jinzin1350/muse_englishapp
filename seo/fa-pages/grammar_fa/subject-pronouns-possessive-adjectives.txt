@@ -1,0 +1,69 @@
+# subject-pronouns-possessive-adjectives — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **ضمیرهای فاعلی** (*I, you, he, she, it, we, they*) قبل از فعل می‌آیند: ***She** works in a bank.* **صفت‌های ملکی** (*my, your, his, her, its, our, their*) قبل از اسم می‌آیند: ***Her** bank is near **my** house.*
+i1: برای *me, him, her, us, them* صفحهٔ [ضمیرهای مفعولی](/blog/grammar/object-pronouns/) و برای *mine, yours, hers* صفحهٔ [ضمیرهای ملکی](/blog/grammar/possessive-pronouns/) را ببینید.
+
+spa-subject.t: ضمیرهای فاعلی: *I, you, he, she, it, we, they*
+spa-subject.s: **ضمیر فاعلی** را قبل از فعل بیاورید: *I, you, he, she, it, we, they*. جملهٔ انگلیسی **حتماً** فاعل لازم دارد: *It's raining.* (نه *Is raining*)
+spa-subject.b0.h: مفرد | جمع
+spa-subject.b0.2: *he* (مرد / پسر)، *she* (زن / دختر)، *it* (شیء / حیوان) ‖ *they* (آدم‌ها یا چیزها)
+spa-subject.b1: انگلیسی همیشه فاعل لازم دارد، حتی وقتی در زبان‌های دیگر فعل نشان می‌دهد کیست (مثل فارسی: «خسته‌ام»): ***I** am tired.* (نه *Am tired*). ***It** is cold today.*
+spa-subject.b2: فاعل را با ضمیر تکرار نکنید: *My brother lives in Ottawa.* (نه *My brother he lives…*)
+spa-subject.b3: *I* همیشه با حرف بزرگ نوشته می‌شود. (در فارسی برای مرد و زن هر دو «او» می‌گوییم، اما در انگلیسی *he* برای مرد و *she* برای زن است؛ این را قاطی نکنید.)
+spa-subject.n3: *it* (برای هوا)
+spa-subject.w0: فاعل را تکرار نکنید
+spa-subject.w1: انگلیسی فاعل لازم دارد
+spa-subject.w2: *I* با حرف بزرگ
+
+spa-possessive.t: صفت‌های ملکی: *my, your, his, her, its, our, their*
+spa-possessive.s: **صفت ملکی** را قبل از اسم بیاورید تا نشان بدهید چیزی مالِ کیست: *my bag, your phone, his car, her house, its tail, our school, their children*.
+spa-possessive.b0.h: ضمیر فاعلی | صفت ملکی
+spa-possessive.b1: صفت ملکی با **صاحب** چیز هماهنگ است، نه با خودِ آن چیز: *Ali loves **his** mother.* (علی مرد است ← *his*). *Sara loves **her** father.* (سارا زن است ← *her*).
+spa-possessive.b2: صفت ملکی برای اسم جمع تغییر نمی‌کند: *my book, my books*.
+spa-possessive.w0: صاحبش زن است: *her*
+spa-possessive.w1: *they* ← *their*
+spa-possessive.w2: *you* ← *your*
+
+spa-its-their.t: *its* یا *it's*؟ *their*، *there* یا *they're*؟ *your* یا *you're*؟
+spa-its-their.s: صفت ملکی را با شکل کوتاه قاطی نکنید: ***its*** (ملکی) / ***it's*** (یعنی *it is / it has*)؛ ***their*** (ملکی) / ***there*** (مکان) / ***they're*** (یعنی *they are*)؛ ***your*** / ***you're*** (یعنی *you are*).
+spa-its-their.b0.h: ملکی | هم‌صدا با آن | معنی
+spa-its-their.b0.1: = ‖ = ‖ مکان / *they are*
+spa-its-their.b1: صفت ملکی **هرگز** آپاستروف ندارد: *its, your, their, whose*.
+spa-its-their.b2: یک آزمون سریع: آیا می‌توانید به جایش *it is, they are, you are, who is* بگویید؟ پس شکلِ آپاستروف‌دار را بنویسید.
+spa-its-their.n0: ملکی
+spa-its-their.n1: *it is*
+spa-its-their.n2: *they are* / ملکی / مکان
+spa-its-their.n3: *you are* / ملکی
+spa-its-their.w0: ملکی: *its*
+spa-its-their.w1: *they are*: *they're*
+spa-its-their.w2: ملکی: *your*
+
+spa-it-uses.t: *it* برای هوا، زمان و فاصله؛ *it* به عنوان فاعلِ خالی
+spa-it-uses.s: ***it*** را به عنوان **فاعلِ خالی** برای هوا، ساعت، تاریخ و فاصله (*It's raining. It's 5 o'clock. It's 10 km to the city.*)، قبل از صفت + *to / that* (*It's important to sleep well*) و با ***it takes*** + زمان بیاورید.
+spa-it-uses.b0.h: کاربرد | مثال
+spa-it-uses.b0.0: هوا ‖ =
+spa-it-uses.b0.1: ساعت و تاریخ ‖ =
+spa-it-uses.b0.2: فاصله ‖ =
+spa-it-uses.b0.3: *it* + صفت + *to* / *that* ‖ =
+spa-it-uses.b0.4: *it takes* + زمان ‖ =
+spa-it-uses.b1: انگلیسی فاعل لازم دارد، حتی وقتی «انجام‌دهندهٔ» واقعی‌ای در کار نیست: ***It** is raining* (نه *Is raining* و نه *Rains*).
+spa-it-uses.b2: فاعلِ طولانیِ مصدری را با ***it*** به آخر جمله ببرید: *To learn a language is hard* ← ***It's** hard **to learn** a language.* (طبیعی‌تر)
+spa-it-uses.n0: هوا
+spa-it-uses.n1: ساعت
+spa-it-uses.n2: فاصله
+spa-it-uses.n3: *it* + صفت + *to*
+spa-it-uses.w0: هوا: *it*
+spa-it-uses.w1: *it* + صفت + *to*
+spa-it-uses.w2: *it takes* + زمان
+
+x.spa-subject-s01: یک زن: *she*.
+x.spa-subject-s02: *Ali and I* یعنی *we*.
+x.spa-subject-s03: یک شیء: *it*.
+x.spa-possessive-s01: علی مرد است ← *his*.
+x.spa-possessive-s02: دو نفر ← *their*.
+x.spa-possessive-s03: *I* ← *my*.
+x.spa-its-their-s01: *It is* ← *it's*.
+x.spa-its-their-s02: ملکی + اسم: *their*.
+x.spa-its-their-s03: *You are* ← *you're*.
+x.spa-it-uses-s01: هوا: *it*.
+x.spa-it-uses-s02: زمانِ لازم: *it takes*.
+x.spa-it-uses-s03: تاریخ و روز: *it*.

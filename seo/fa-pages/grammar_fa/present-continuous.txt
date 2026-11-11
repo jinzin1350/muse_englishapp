@@ -1,0 +1,91 @@
+# present-continuous — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **حال استمراری** را برای کارهایی به کار می‌بریم که **همین حالا** یا **این روزها** در جریان‌اند: *I**'m reading** a book. She**'s studying** for her exams this week.*
+i1: ساختارش **am / is / are + فعل ing‌دار** است. در سطح‌های بالاتر برای برنامه‌های آینده، موقعیت‌هایی که دارند تغییر می‌کنند و عادت‌های آزاردهنده هم به کار می‌رود.
+
+pc-form-now.t: ساختار و کاربرد: *I'm working* (همین حالا)
+pc-form-now.s: *am / is / are* + فعل ing‌دار، برای کاری که همین لحظه در جریان است.
+pc-form-now.b0.h:  | ساختار | مثال
+pc-form-now.b0.0: مثبت ‖ فاعل + **am / is / are** + فعل ing‌دار ‖ =
+pc-form-now.b0.1: منفی ‖ فاعل + **am not / isn't / aren't** + فعل ing‌دار ‖ =
+pc-form-now.b0.2: سؤالی ‖ **Am / Is / Are** + فاعل + فعل ing‌دار؟ ‖ =
+pc-form-now.b0.3: جواب کوتاه ‖ *Yes,* + فاعل + *am / is / are.* / *No,* + فاعل + *'m not / isn't / aren't.* ‖ =
+pc-form-now.b0.4: سؤال با کلمهٔ پرسشی ‖ کلمهٔ پرسشی + **am / is / are** + فاعل + فعل ing‌دار؟ ‖ =
+pc-form-now.b1.h: املا: فعل + *-ing* | مثال
+pc-form-now.b1.0: بیشتر فعل‌ها: **-ing** اضافه کنید ‖ =
+pc-form-now.b1.1: فعل به **-e** ختم می‌شود: *e* را بردارید ‖ =
+pc-form-now.b1.2: یک حرف صدادار + یک حرف بی‌صدا در آخرِ هجای تکیه‌دار: حرف آخر را دوتا کنید ‖ =
+pc-form-now.b1.3: فعل به **-ie** ختم می‌شود: *ie* را به **-ying** تبدیل کنید ‖ =
+pc-form-now.b2: برای کاری که **همین لحظهٔ صحبت** در جریان است. کلمه‌های رایج: *now, right now, at the moment, Look!, Listen!*
+pc-form-now.b3: در صحبت کردن معمولاً شکل کوتاه می‌آوریم: *I'm, you're, he's, she's, it's, we're, they're.* املای بریتانیایی و آمریکایی در بعضی فعل‌هایی که به *-l* ختم می‌شوند فرق دارد: *travelling* (بریتانیا) / *traveling* (آمریکا). هر دو درست‌اند.
+pc-form-now.n0: همین حالا
+pc-form-now.n1: منفی
+pc-form-now.n2: سؤالی
+pc-form-now.n3: *Look!* + استمراری
+pc-form-now.w0: *am / is / are* را فراموش نکنید.
+pc-form-now.w1: فعل ing‌دار بیاورید.
+pc-form-now.w2: حرف *n* دوتا می‌شود: *run → running*.
+pc-form-now.w3: ترتیب سؤال: *are* + فاعل + فعل ing‌دار.
+
+pc-around-now.t: این روزها و موقعیت‌های موقت
+pc-around-now.s: حال استمراری را برای کارهایی که این روزها در جریان‌اند (این هفته، این مدت) و موقعیت‌های موقت به کار ببرید.
+pc-around-now.b0: لازم نیست کار دقیقاً همین ثانیه در جریان باشد؛ کافی است **این روزها** در جریان باشد: *I**'m reading** a great book at the moment.* (شاید همین الان نمی‌خوانمش، اما شروعش کرده‌ام و هنوز تمامش نکرده‌ام.)
+pc-around-now.b1: برای موقعیت‌های **موقت** هم به کار می‌رود: *My cousin **is staying** with us this month. Sam **is working** from home this week.*
+pc-around-now.b2: کلمه‌های رایج: *at the moment, today, this week, this month, this year, currently.*
+pc-around-now.n0: این روزها
+pc-around-now.n1: موقت
+pc-around-now.n2: این هفته
+pc-around-now.n3: امسال
+pc-around-now.n4: موقعیتِ فعلی
+pc-around-now.w0: کاری که این روزها در جریان است: حال استمراری.
+pc-around-now.w1: موقعیت موقت: حال استمراری.
+
+pc-future.t: قرارهای آینده: *I'm meeting Sam tonight*
+pc-future.s: حال استمراری را برای برنامه‌های آینده‌ای به کار ببرید که از قبل هماهنگ شده‌اند و معمولاً زمانشان مشخص است.
+pc-future.b0: حال استمراری را برای **قرارهای آینده** به کار ببرید: برنامه‌هایی که از قبل گذاشته‌اید، اغلب با زمان، مکان یا آدم‌های مشخص: *I**'m meeting** Sam at 6 tonight. We**'re flying** to Rome on Monday.*
+pc-future.b1: کلمه‌های رایج: *tonight, tomorrow, on Friday, next week, at the weekend.*
+pc-future.b2: برای برنامه‌ها *be going to* هم درست است: *I'm going to meet Sam at 6.* برای جدول زمانی حال ساده بیاورید: *The film **starts** at 8.* صفحهٔ [زمان آینده](/blog/grammar/future-forms/) را ببینید.
+pc-future.n0: قرار
+pc-future.n1: بلیت رزرو شده
+pc-future.n2: پرسیدن برنامه
+pc-future.n3: برنامهٔ قطعی
+pc-future.n4: منفی
+pc-future.w0: قرار شخصی: حال استمراری.
+pc-future.w1: پرسیدن برنامه: حال استمراری.
+
+pc-changing.t: موقعیت‌هایی که دارند تغییر می‌کنند: *It's getting colder*
+pc-changing.s: حال استمراری را برای موقعیت‌هایی به کار ببرید که همین حالا دارند تغییر می‌کنند: *get, become, increase, improve*.
+pc-changing.b0: حال استمراری را برای **تغییری که در حال اتفاق افتادن است** به کار ببرید: *The weather **is getting** colder. Prices **are rising**.*
+pc-changing.b1: فعل‌هایی که اغلب این‌طور به کار می‌روند: *get, become, change, improve, increase, rise, fall, grow, start, begin.* ترکیب *get* + صفت تفضیلی خیلی رایج است: *It's **getting darker**. Your English is **getting better**.*
+pc-changing.n0: *get* + صفت تفضیلی
+pc-changing.w0: تغییری که همین حالا در جریان است: حال استمراری.
+pc-changing.w1: تغییری که همین حالا در جریان است: حال استمراری.
+
+pc-always.t: *always* + استمراری: *He's always complaining*
+pc-always.s: *always / constantly / forever* + استمراری برای کاری که زیادی تکرار می‌شود و معمولاً آزاردهنده است.
+pc-always.b0: *always*، *constantly* یا *forever* + حال استمراری یعنی کاری **خیلی زیاد، معمولاً بیش از حد** تکرار می‌شود. بیشتر برای گله و شکایت به کار می‌رود: *He**'s always complaining**. You**'re forever losing** your keys!*
+pc-always.b1: مقایسه کنید: *I **always walk** to work* یعنی هر بار؛ یک عادت معمولی (بدون حس منفی).
+pc-always.b2: ترتیب کلمه‌ها: **be + always + فعل ing‌دار**: *She**'s always interrupting** me.* (نه *always is interrupting*)
+pc-always.n0: ناراحتی و گله
+pc-always.n1: بیش از حد
+pc-always.n4: عادت معمولی: حال ساده
+pc-always.w0: ترتیب کلمه‌ها: *be + always* + فعل ing‌دار.
+pc-always.w1: برای عادت معمولی حال ساده بیاورید.
+
+x.pc-form-now-s01: همین حالا در جریان است: حال استمراری، *is sleeping*.
+x.pc-form-now-s02: منفی: *aren't* + فعل ing‌دار.
+x.pc-form-now-s03: حرف *m* دوتا می‌شود: *swim → swimming*.
+x.pc-form-now-s04: *Listen!* یعنی همین حالا: *is knocking*.
+x.pc-around-now-s01: این روزها: *I'm reading*.
+x.pc-around-now-s02: موقعیت موقت: *is staying*.
+x.pc-around-now-s03: *this week* (این روزها): *are doing*.
+x.pc-future-s01: قرار هماهنگ‌شده: حال استمراری، *I'm visiting*.
+x.pc-future-s02: پرسیدن برنامه: *What are you doing…?*
+q.pc-future-s03: کدام جمله دربارهٔ یک قرارِ هماهنگ‌شده است؟
+x.pc-future-s03: برنامه‌ای با یک آدم مشخص و زمان مشخص: *I'm having lunch with Maria tomorrow.*
+x.pc-changing-s01: تغییری که همین حالا در جریان است: *it's getting dark*.
+x.pc-changing-s02: تغییری در جریان: *are rising*.
+x.pc-changing-s03: تغییری که شروع شده: *I'm starting to enjoy it*.
+x.pc-always-s01: *be + always* + فعل ing‌دار: *he's always borrowing*.
+q.pc-always-s02: کدام جمله نشان می‌دهد گوینده ناراحت و کلافه است؟
+x.pc-always-s02: *always* + استمراری یعنی بیش از حد، و آزاردهنده.
+x.pc-always-s03: عادت معمولی: حال ساده، *I always walk*.

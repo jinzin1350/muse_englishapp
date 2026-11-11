@@ -1,0 +1,32 @@
+# possessive-pronouns — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **ضمیرهای ملکی** (*mine, yours, his, hers, ours, theirs*) جای **صفت ملکی + اسم** را می‌گیرند (مثل «مال من، مال تو»): *This is **my bag** → This bag is **mine**.*
+i1: برای *my, your, his* و *her* صفحهٔ [ضمیرهای فاعلی و صفت‌های ملکی](/blog/grammar/subject-pronouns-possessive-adjectives/#spa-possessive) و برای *Ali's* و *my parents'* صفحهٔ [مالکیت با آپاستروف و s](/blog/grammar/possessive-s/) را ببینید.
+
+ppr-basic.t: *mine, yours, his, hers, ours, theirs*
+ppr-basic.s: **ضمیر ملکی** را بدون اسم بیاورید: *This phone is **mine**. Is this **yours**?* **صفت ملکی** را قبل از اسم بیاورید: *This is **my** phone.*
+ppr-basic.b0.h: صفت ملکی + اسم | ضمیر ملکی
+ppr-basic.b1: ضمیرهای ملکی **تنها** می‌آیند و هیچ وقت قبل از اسم نمی‌آیند: *This is **mine**.* (نه *This is mine bag*)
+ppr-basic.b2: **آپاستروف ندارند**: *yours, hers, ours, theirs* (نه *your's, her's*).
+ppr-basic.w0: قبل از اسم: *my*
+ppr-basic.w1: بدون آپاستروف
+ppr-basic.w2: تنها: *ours*
+
+ppr-whose.t: *Whose is it? Whose bag is this?*
+ppr-whose.s: برای پرسیدن صاحبِ چیزی ***whose*** («مال کی») بیاورید: *Whose bag is this?* یا *Whose is this bag?* با ضمیر ملکی یا *'s* جواب بدهید: *It's **mine**. It's **Ali's**.*
+ppr-whose.b0.h: سؤال | جواب
+ppr-whose.b1: ***whose*** می‌تواند **قبل از اسم** (*Whose car is this?*) یا **تنها** (*Whose is this car?*) بیاید.
+ppr-whose.b2: ***whose*** (مالکیت) را با ***who's*** (یعنی *who is / who has*) قاطی نکنید.
+ppr-whose.n0: *whose* + اسم
+ppr-whose.n1: *whose* تنها
+ppr-whose.n2: نوبت
+ppr-whose.n3: *who is*
+ppr-whose.w0: مالکیت: *whose*
+ppr-whose.w1: *'s*
+ppr-whose.w2: مالکیت: *whose*
+
+x.ppr-basic-s01: تنها: *mine*.
+x.ppr-basic-s02: تنها: *ours*.
+x.ppr-basic-s03: تنها، یک زن: *hers*.
+x.ppr-whose-s01: مالکیت: *whose*.
+x.ppr-whose-s02: صاحب + *'s*.
+x.ppr-whose-s03: مالکیت: *whose turn*.

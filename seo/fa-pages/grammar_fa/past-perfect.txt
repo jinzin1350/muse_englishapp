@@ -1,0 +1,70 @@
+# past-perfect — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **گذشتهٔ کامل** (*had* + اسم مفعول) را برای کاری به کار می‌بریم که **قبل از** لحظهٔ دیگری در گذشته اتفاق افتاده بود (در فارسی: «ماضی بعید»، مثل «رفته بود»): *When I arrived, the film **had** already **started**.*
+i1: این زمان یک قدم عقب‌تر از گذشتهٔ ساده می‌رود. اگر اول باید گذشتهٔ ساده را مرور کنید، صفحهٔ [گذشتهٔ ساده](/blog/grammar/past-simple/) را ببینید.
+
+ppf-form-use.t: ساختار و کاربرد اصلی: چیزی که زودتر در گذشته اتفاق افتاده بود
+ppf-form-use.s: *had* + اسم مفعول، برای کاری قبل از یک لحظهٔ دیگر در گذشته.
+ppf-form-use.b0.h:  | ساختار | مثال
+ppf-form-use.b0.0: مثبت ‖ **had** + اسم مفعول ‖ =
+ppf-form-use.b0.1: منفی ‖ **hadn't** + اسم مفعول ‖ =
+ppf-form-use.b0.2: سؤالی ‖ **Had** + فاعل + اسم مفعول؟ ‖ =
+ppf-form-use.b0.3: جواب کوتاه ‖ = ‖ =
+ppf-form-use.b1: *had* برای همهٔ اشخاص یکی است: *I had, you had, she had, they had.* **اسم مفعول** بیاورید: *gone, eaten, seen, been* (نه *went, ate, saw*). فهرست فعل‌های بی‌قاعده را در صفحهٔ [گذشتهٔ ساده](/blog/grammar/past-simple/) ببینید.
+ppf-form-use.b2: دو لحظه در گذشته را در نظر بگیرید. گذشتهٔ کامل آن یکی است که **زودتر** بوده: *I couldn't get in* (گذشته) *because I **had lost** my keys* (زودتر از آن).
+ppf-form-use.b3: در گفتار *had* اغلب **'d** می‌شود: *I'd forgotten. They'd gone.* حواستان باشد: *'d* می‌تواند *would* هم باشد (*I'd like*). اگر بعدش اسم مفعول بیاید، *had* است.
+ppf-form-use.n0: گذشتهٔ زودتر
+ppf-form-use.n1: دلیل، در گذشتهٔ زودتر
+ppf-form-use.n2: منفی
+ppf-form-use.n3: سؤالی
+ppf-form-use.n4: *'d* یعنی *had*
+ppf-form-use.w0: اسم مفعول بیاورید: *gone*.
+ppf-form-use.w1: اسم مفعول بیاورید: *eaten*.
+ppf-form-use.w2: *had* + اسم مفعول (*worked*).
+
+ppf-vs-past-simple.t: گذشتهٔ ساده یا گذشتهٔ کامل؟ ترتیب اتفاق‌ها
+ppf-vs-past-simple.s: گذشتهٔ ساده برای اتفاق‌ها به ترتیب؛ گذشتهٔ کامل برای اتفاقی که زودتر از اتفاقِ موردِ صحبت افتاده بود.
+ppf-vs-past-simple.b0: زمان فعل **ترتیب** اتفاق‌ها را عوض می‌کند:
+ppf-vs-past-simple.b1.0: *When I arrived, the film **started**.* یعنی من رسیدم، بعد فیلم شروع شد.
+ppf-vs-past-simple.b1.1: *When I arrived, the film **had started**.* یعنی اول فیلم شروع شده بود، بعد من رسیدم.
+ppf-vs-past-simple.b2: وقتی اتفاق‌ها را **به همان ترتیبی که افتادند** تعریف می‌کنید، گذشتهٔ ساده بیاورید. برای هر کار گذشته‌ای گذشتهٔ کامل نیاورید: *I **woke up**, **had** a shower and **left** the house.*
+ppf-vs-past-simple.n0: اول قطار رفته بود
+ppf-vs-past-simple.n1: ما رسیدیم، بعد قطار رفت
+ppf-vs-past-simple.n2: زودتر
+ppf-vs-past-simple.n3: به ترتیب: گذشتهٔ ساده
+ppf-vs-past-simple.n4: تجربهٔ زودتر
+ppf-vs-past-simple.w0: اتفاق‌ها به ترتیب: گذشتهٔ ساده.
+ppf-vs-past-simple.w1: زودتر از یک لحظه در گذشته: گذشتهٔ کامل.
+
+ppf-time-words.t: *by the time, already, just, never … before*
+ppf-time-words.s: *by the time* + گذشتهٔ ساده، و بعد گذشتهٔ کامل؛ *already, just, never … before* با گذشتهٔ کامل.
+ppf-time-words.b0.h: کلمه‌ها | مثال
+ppf-time-words.b0.0: **by the time** + گذشتهٔ ساده ‖ =
+ppf-time-words.b1: *already, just, never* و *ever* بین *had* و اسم مفعول می‌آیند: *had **already** left, had **just** sat, had **never** seen.*
+ppf-time-words.n3: *never … before*
+ppf-time-words.w0: *by the time* + اتفاقِ زودتر: گذشتهٔ کامل.
+ppf-time-words.w1: *already* بین *had* و اسم مفعول می‌آید.
+
+ppf-vs-present-perfect.t: حال کامل یا گذشتهٔ کامل؟
+ppf-vs-present-perfect.s: *have done* یعنی قبل از حالا؛ *had done* یعنی قبل از لحظه‌ای در گذشته.
+ppf-vs-present-perfect.b0.h: حال کامل (قبل از حالا) | گذشتهٔ کامل (قبل از آن موقع)
+ppf-vs-present-perfect.b1: حال کامل گذشته را به **حالا** وصل می‌کند. گذشتهٔ کامل گذشتهٔ زودتر را به **لحظه‌ای در گذشته** وصل می‌کند.
+ppf-vs-present-perfect.n0: حالا
+ppf-vs-present-perfect.n1: آن موقع
+ppf-vs-present-perfect.n2: قبل از آن موقع
+ppf-vs-present-perfect.n3: تا آن موقع
+ppf-vs-present-perfect.w0: قبل از لحظه‌ای در گذشته: گذشتهٔ کامل.
+ppf-vs-present-perfect.w1: وصل به حالا: حال کامل.
+
+x.ppf-form-use-s01: زودتر از *got*: گذشتهٔ کامل، *had started*.
+x.ppf-form-use-s02: سؤالِ گذشتهٔ کامل: *Had you met…?*
+x.ppf-form-use-s03: *had* + اسم مفعول: *gone*.
+q.ppf-vs-past-simple-s01: جمله‌ای را انتخاب کنید که یعنی فیلم **قبل از** رسیدن من شروع شده بود.
+x.ppf-vs-past-simple-s01: *had started* یعنی اول شروع شده بود.
+x.ppf-vs-past-simple-s02: اتفاق‌ها به ترتیب: گذشتهٔ ساده، *had a shower*.
+x.ppf-vs-past-simple-s03: زودتر از *couldn't pay*: *had left*.
+x.ppf-time-words-s01: *by the time* + اتفاقِ زودتر: *had gone*.
+x.ppf-time-words-s02: *never … before* یک لحظه در گذشته: *had never seen*.
+x.ppf-time-words-s03: *had just finished* یعنی کمی قبل از اینکه تلفن زنگ بزند.
+x.ppf-vs-present-perfect-s01: وصل به حالا: حال کامل، *I've just had*.
+x.ppf-vs-present-perfect-s02: قبل از لحظه‌ای در گذشته: گذشتهٔ کامل، *I'd already had*.
+x.ppf-vs-present-perfect-s03: قبل از لحظه‌ای در گذشته: *had never lived*.

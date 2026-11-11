@@ -1,0 +1,71 @@
+# present-perfect-vs-past-simple — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: هر دو زمان دربارهٔ گذشته‌اند. **گذشتهٔ ساده** (*I lost*) دربارهٔ زمانی **تمام‌شده** است. **حال کامل** (*I've lost*) گذشته را به **حالا** وصل می‌کند.
+i1: مهم‌ترین سؤال این است: **آیا زمانی تمام‌شده را می‌گویید یا در ذهن دارید؟** اگر بله، گذشتهٔ ساده بیاورید. این صفحه از این قاعدهٔ پایه شروع می‌شود و به موقعیت‌هایی می‌رسد که هر دو ممکن‌اند.
+
+ppps-finished-time.t: زمانِ تمام‌شده یا تا حالا؟
+ppps-finished-time.s: گذشتهٔ ساده با **زمانِ تمام‌شده** (*yesterday, last week, in 2019, ago*). حال کامل وقتی **زمانِ تمام‌شده‌ای در کار نیست** و گذشته به حالا وصل است.
+ppps-finished-time.b0.h: گذشتهٔ ساده (زمانِ تمام‌شده) | حال کامل (تا حالا / بدون گفتن زمان)
+ppps-finished-time.b1: کلمه‌هایی که **زمانِ تمام‌شده** را نشان می‌دهند با گذشتهٔ ساده می‌آیند: *yesterday, last night / week / year, ago, in 2015, on Monday, when I was a child, What time…? When…?*
+ppps-finished-time.b2: کلمه‌هایی که معنی **تا حالا** دارند اغلب با حال کامل می‌آیند: *ever, never, already, yet, so far, since, for* (تا حالا).
+ppps-finished-time.b3: حال کامل را با زمانِ تمام‌شده نمی‌شود به کار برد: *I saw him yesterday.* نه *I've seen him yesterday*.
+ppps-finished-time.n0: زمانِ تمام‌شده
+ppps-finished-time.n1: نتیجه در حال، بدون زمان
+ppps-finished-time.n2: *When* ← گذشتهٔ ساده
+ppps-finished-time.n3: بدون زمان، نتیجه در حال
+ppps-finished-time.w0: *last night* تمام شده: گذشتهٔ ساده
+ppps-finished-time.w1: *When* ← گذشتهٔ ساده
+ppps-finished-time.w2: *on Sunday* تمام شده: گذشتهٔ ساده
+
+ppps-experience-details.t: *Have you ever…?* و *Yes, I went there in…*
+ppps-experience-details.s: با حال کامل دربارهٔ یک تجربه **بپرسید یا آن را مطرح کنید**، بعد برای **جزئیات** (کِی، کجا، چطور) گذشتهٔ ساده بیاورید.
+ppps-experience-details.b0: گفت‌وگو دربارهٔ تجربه‌ها اغلب با حال کامل شروع می‌شود و با گذشتهٔ ساده ادامه پیدا می‌کند:
+ppps-experience-details.b5: سؤال اول دربارهٔ زندگی تا حالاست (بدون زمان). سؤال‌های بعدی دربارهٔ یک سفرِ **مشخص** است، پس با گذشتهٔ ساده می‌آیند.
+ppps-experience-details.b6: *Have you been…?* دربارهٔ خودِ تجربه می‌پرسد. *When did you go?* دربارهٔ جزئیات.
+ppps-experience-details.n0: تجربه + جزئیات
+ppps-experience-details.n1: سؤال + جزئیات
+ppps-experience-details.n2: کلی + مشخص
+ppps-experience-details.w0: جزئیات با زمان: گذشتهٔ ساده.
+ppps-experience-details.w1: جزئیات دربارهٔ آن مسابقه: گذشتهٔ ساده.
+
+ppps-still-true.t: هنوز درست است یا تمام شده؟
+ppps-still-true.s: *I**'ve lived** here for ten years* یعنی هنوز اینجا زندگی می‌کنم. *I **lived** there for ten years* یعنی الان نه. برای کسانی که درگذشته‌اند: گذشتهٔ ساده.
+ppps-still-true.b0: با *for* و دربارهٔ موقعیت‌ها، زمان فعل نشان می‌دهد موقعیت **هنوز ادامه دارد** یا نه:
+ppps-still-true.b1.h: حال کامل (هنوز درست است) | گذشتهٔ ساده (تمام شده)
+ppps-still-true.b1.0: *He**'s worked** at the bank for five years.* (هنوز آنجا کار می‌کند) ‖ *He **worked** at the bank for five years.* (الان نه)
+ppps-still-true.b1.1: = ‖ *We **were** married for ten years.* (الان نه)
+ppps-still-true.b2: وقتی دربارهٔ کسانی حرف می‌زنیم که **دیگر زنده نیستند**، یا دوره‌هایی که تمام شده‌اند، گذشتهٔ ساده می‌آوریم: *Hafez **wrote** beautiful poetry.* برای آدم‌های زنده که کارشان ادامه دارد، حال کامل رایج است: *This author **has written** twelve novels* (و شاید بیشتر هم بنویسد).
+ppps-still-true.b3: به **حالا** فکر کنید: آیا موقعیت هنوز ادامه دارد؟ آیا آن آدم هنوز می‌تواند آن کار را بکند؟ اگر نه، گذشتهٔ ساده بیاورید.
+ppps-still-true.n0: درگذشته است
+ppps-still-true.n1: هنوز آنجا زندگی می‌کنند
+ppps-still-true.n2: دیگر زنده نیست
+ppps-still-true.n3: می‌تواند بیشتر بنویسد
+ppps-still-true.w0: تمام شده: گذشتهٔ ساده.
+ppps-still-true.w1: دیگر زنده نیست: گذشتهٔ ساده.
+
+ppps-this-morning.t: *today, this morning, this year*: تمام شده یا نه؟
+ppps-this-morning.s: *this morning, today, this week* اگر آن بازه **هنوز تمام نشده** با حال کامل می‌آیند و اگر **تمام شده** با گذشتهٔ ساده.
+ppps-this-morning.b0: بعضی عبارت‌های زمانی می‌توانند بازه‌ای تمام‌شده یا تمام‌نشده باشند. بستگی دارد **کِی دارید حرف می‌زنید**:
+ppps-this-morning.b1.h: ساعت ۱۰ صبح حرف می‌زنید | ساعت ۳ بعدازظهر حرف می‌زنید
+ppps-this-morning.b1.0: *I**'ve had** two coffees **this morning**.* (هنوز صبح است) ‖ *I **had** two coffees **this morning**.* (صبح تمام شده)
+ppps-this-morning.b2: با ***today, this week, this month, this year*** تا وقتی آن بازه ادامه دارد، حال کامل انتخاب معمول است: *It**'s been** a busy week.* آخرِ بازه، خیلی‌ها گذشتهٔ ساده می‌آورند: *(جمعه عصر) It **was** a busy week.*
+ppps-this-morning.b3: اگر زمان مشخصی **داخل** همان بازهٔ تمام‌نشده را بگویید، گذشتهٔ ساده بیاورید: *I**'ve** spoken to her **today**. I **spoke** to her **at 9**.*
+ppps-this-morning.n0: صبح تمام نشده
+ppps-this-morning.n1: صبح تمام شده
+ppps-this-morning.n2: *today* + زمان مشخص
+ppps-this-morning.n3: سال تمام نشده
+ppps-this-morning.w0: ساعت ۹ شب، صبح تمام شده است.
+ppps-this-morning.w1: زمان مشخص: گذشتهٔ ساده.
+
+x.ppps-finished-time-s01: *last weekend* زمانِ تمام‌شده است.
+x.ppps-finished-time-s02: تجربهٔ زندگی: *Have you ever flown…?*
+x.ppps-finished-time-s03: *in 2020* زمانِ تمام‌شده است.
+x.ppps-experience-details-s01: جزئیات با زمان: گذشتهٔ ساده.
+x.ppps-experience-details-s02: *When* ← گذشتهٔ ساده.
+x.ppps-experience-details-s03: جزئیاتِ یک بارِ مشخص: گذشتهٔ ساده.
+x.ppps-still-true-s01: تمام شده: گذشتهٔ ساده.
+q.ppps-still-true-s02: جملهٔ *She has taught here for twenty years.* آیا او هنوز اینجا درس می‌دهد؟
+x.ppps-still-true-s02: حال کامل + *for* یعنی هنوز درست است.
+x.ppps-still-true-s03: دیگر زنده نیست: گذشتهٔ ساده.
+x.ppps-this-morning-s01: ساعت ۴ بعدازظهر صبح تمام شده: گذشتهٔ ساده.
+x.ppps-this-morning-s02: هنوز صبح است: حال کامل.
+x.ppps-this-morning-s03: زمان مشخص: گذشتهٔ ساده.

@@ -1,0 +1,56 @@
+# verb-to-be — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***be*** پرکاربردترین فعل انگلیسی است. در زمان حال سه شکل دارد: ***am, is, are***: *I **am** a student. She **is** from Iran. We **are** happy.* و در گذشته: ***was, were***.
+i1: این صفحه شکل‌های حالِ *be* و کاربردهایش را توضیح می‌دهد. برای گذشته صفحهٔ [was و were](/blog/grammar/was-were/) را ببینید.
+
+vtb-forms.t: *I am, you are, he is*: شکل‌ها و شکل کوتاه
+vtb-forms.s: ***I am*** (*I'm*)، ***you / we / they are*** (*'re*)، ***he / she / it is*** (*'s*). در صحبت کردن معمولاً **شکل کوتاه** را به کار می‌بریم.
+vtb-forms.b0.h: شکل کامل | شکل کوتاه
+vtb-forms.b1: وقتی فاعل **اسم** است، برای مفرد *is* و برای جمع *are* بیاورید: *My brother **is** a doctor. My parents **are** teachers.*
+vtb-forms.b2: ***it's*** (یعنی *it is*) را با ***its*** (مالکیت: «ـَش») قاطی نکنید: ***It's** a nice car. **Its** colour is red.*
+vtb-forms.n3: اسم جمع
+
+vtb-neg-q.t: *I'm not, isn't, aren't* و *Are you…?*
+vtb-neg-q.s: **منفی**: ***I'm not, he isn't (is not), they aren't (are not)***. **سؤالی**: *be* را اول جمله بیاورید: ***Are** you OK? **Is** she here?* جواب کوتاه: *Yes, I am. No, she isn't.*
+vtb-neg-q.b0.h: منفی | سؤالی | جواب کوتاه
+vtb-neg-q.b1: بگویید ***I'm not*** (نه *I amn't*). هم ***he isn't*** درست است و هم ***he's not***.
+vtb-neg-q.b2: در جواب کوتاهِ مثبت شکل کوتاه نیاورید: *Yes, I **am**.* (نه *Yes, I'm.*)
+vtb-neg-q.n0: منفی
+vtb-neg-q.n1: سؤالی
+vtb-neg-q.n2: منفیِ جمع
+vtb-neg-q.n3: سؤال + جواب کوتاه
+vtb-neg-q.w1: در سؤال *be* اول می‌آید
+vtb-neg-q.w2: آخر جمله شکل کوتاه نمی‌آید
+
+vtb-uses.t: *I'm 25, I'm hungry, I'm cold*: با *be*، نه *have*
+vtb-uses.s: انگلیسی برای **سن** (*I'm 25*)، **احساس و حال** (*I'm hungry, I'm cold, I'm afraid*)، **شغل** (*She's a doctor*)، **ملیت** و **به دنیا آمدن** (*I was born in 1990*) از ***be*** استفاده می‌کند، نه *have*. (در فارسی می‌گوییم «۲۵ سال دارم»، اما در انگلیسی *have* نمی‌آید.)
+vtb-uses.b0.h: انگلیسیِ درست (با *be*) | نه
+vtb-uses.b0.5: = ‖ *She's doctor.* (*a* لازم دارد)
+vtb-uses.b1: ***be born*** برای به دنیا آمدن همیشه در **گذشته** است: *I **was born** in 1995.*
+vtb-uses.n0: سن
+vtb-uses.n1: احساس
+vtb-uses.n2: حق داشتن
+vtb-uses.w0: سن: با *be*
+vtb-uses.w1: احساس: با *be*
+
+vtb-be-or-do.t: *I agree*، نه *I'm agree*: *be* یا *do*؟
+vtb-be-or-do.s: در حال ساده ***be*** را همراه فعل دیگر نیاورید: *I **agree*** (نه *I'm agree*)، *I **don't understand*** (نه *I'm not understand*)، ***Do** you like…?* (نه *Are you like…?*). ***be*** را با **صفت**، **اسم** و **فعل ing‌دار** به کار ببرید.
+vtb-be-or-do.b0.h: درست | نه
+vtb-be-or-do.b0.4: *Are you ready?* (صفت) ‖ =
+vtb-be-or-do.b0.5: *I'm working.* (*be* + فعل ing‌دار) ‖ =
+vtb-be-or-do.b1: از خودتان بپرسید: آیا **فعل دیگری** در جمله هست؟ اگر هست، برای سؤال و منفی ***do / does*** بیاورید: *Do you **live** here?* اگر **فعل دیگری نیست** (فقط صفت یا اسم)، ***be*** بیاورید: *Are you **tired**?*
+vtb-be-or-do.n0: *agree* (بدون *be*)
+vtb-be-or-do.n1: *do* + فعل
+vtb-be-or-do.n2: *be* + صفت
+vtb-be-or-do.n3: منفی با *do*
+vtb-be-or-do.w0: بدون *be*
+vtb-be-or-do.w1: *do* + فعل
+vtb-be-or-do.w2: حال ساده
+
+x.vtb-forms-s01: اسم مفرد: *is*.
+x.vtb-neg-q-s01: سؤالی: *Are you…?*
+x.vtb-neg-q-s03: جواب کوتاه: *No, he isn't.*
+x.vtb-uses-s01: سن: با *be*.
+x.vtb-uses-s02: احساس: *I'm thirsty*.
+x.vtb-be-or-do-s01: *agree* فعل است: *I agree*.
+x.vtb-be-or-do-s02: فعل دیگری هست (*like*): *Do you…?*
+x.vtb-be-or-do-s03: منفی با *do*: *I don't understand*.

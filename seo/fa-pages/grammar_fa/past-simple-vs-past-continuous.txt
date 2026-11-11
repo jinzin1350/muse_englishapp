@@ -1,0 +1,59 @@
+# past-simple-vs-past-continuous — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **گذشتهٔ ساده** (*I walked*) می‌گوید کاری انجام شد و تمام شد. **گذشتهٔ استمراری** (*I was walking*) می‌گوید کاری در لحظه‌ای در گذشته **در جریان بود**.
+i1: اغلب این دو را با هم به کار می‌بریم: *I **was walking** home **when** it **started** to rain.* این صفحه نشان می‌دهد چطور بین این دو انتخاب کنید، از الگوی پایه تا فرق‌های معنایی.
+
+pspc-interrupted.t: یک کار طولانی و یک کار کوتاه
+pspc-interrupted.s: گذشتهٔ استمراری برای کارِ طولانی‌ای که در جریان بود؛ گذشتهٔ ساده برای کار کوتاهی که وسط آن اتفاق افتاد.
+pspc-interrupted.b0: برای کارِ طولانی‌تر (پس‌زمینه) **گذشتهٔ استمراری** و برای کار کوتاه‌تری که وسطش پیش آمد **گذشتهٔ ساده** بیاورید:
+pspc-interrupted.b2: کارِ طولانی‌تر اول شروع شده بود. کار کوتاه وسط آن اتفاق افتاد.
+pspc-interrupted.b3.h: کار طولانی (گذشتهٔ استمراری) | کار کوتاه (گذشتهٔ ساده)
+pspc-interrupted.b4: بعضی فعل‌ها معمولاً استمراری نمی‌شوند: *know, want, like, believe, understand*. بگویید *I **knew** the answer*، نه *I was knowing the answer*. صفحهٔ [فعل‌های حالتی](/blog/grammar/stative-verbs/) را ببینید.
+pspc-interrupted.n0: *cooking* کار طولانی است، *arrived* کار کوتاه
+pspc-interrupted.n1: *fell* وسط دوچرخه‌سواری پیش آمد
+pspc-interrupted.n2: کار کوتاه می‌تواند اول جمله بیاید
+pspc-interrupted.w0: کار طولانی: گذشتهٔ استمراری؛ کار کوتاه: گذشتهٔ ساده.
+pspc-interrupted.w1: زنگ خوردن کار کوتاه است.
+pspc-interrupted.w2: *know* فعل حالتی است.
+
+pspc-when-while.t: *when* و *while*
+pspc-when-while.s: **while** معمولاً قبل از کار طولانی‌تر (گذشتهٔ استمراری) می‌آید. **when** معمولاً قبل از کار کوتاه‌تر (گذشتهٔ ساده).
+pspc-when-while.b0: هر دو کلمه می‌توانند دو کار را به هم وصل کنند، اما معمولاً جای متفاوتی دارند:
+pspc-when-while.b1.0: ***while*** + کار طولانی‌تر: *The phone rang **while** I **was having** a shower.*
+pspc-when-while.b1.1: ***when*** + کار کوتاه‌تر: *I was having a shower **when** the phone **rang**.*
+pspc-when-while.b2: *when* می‌تواند یک دورهٔ طولانی یا یک حالت را هم شروع کند: ***When** I **was** a child, I lived in Mashhad. **When** we **were living** in Paris, we often went to museums.*
+pspc-when-while.b3: اگر هر دو کار کوتاه‌اند، برای هر دو گذشتهٔ ساده بیاورید. با *when* این یعنی یک کار **بلافاصله بعد از** دیگری اتفاق افتاد: ***When** she **saw** the spider, she **screamed**.*
+pspc-when-while.b4: می‌توانید با هر کدام از دو بخش شروع کنید. وقتی *when* یا *while* اول جمله است، بعد از بخش اول ویرگول بگذارید: ***While** I was waiting, I read the news.* / *I read the news **while** I was waiting.*
+pspc-when-while.n0: *while* + کار طولانی‌تر
+pspc-when-while.n1: *when* + کار کوتاه‌تر
+pspc-when-while.n2: دو کار کوتاه، یکی بعد از دیگری
+pspc-when-while.n3: *when* + یک دوره
+pspc-when-while.w0: تصادف کار کوتاه است: *saw*.
+pspc-when-while.w1: *while* + جمله؛ *during* + اسم
+
+pspc-meaning.t: زمان فعل چطور معنی را عوض می‌کند
+pspc-meaning.s: *When I arrived, they **had** lunch* یعنی بعد از رسیدن من. *When I arrived, they **were having** lunch* یعنی از قبل در جریان بود.
+pspc-meaning.b0: با *when*، زمانِ فعلِ کار دوم **ترتیب** را نشان می‌دهد:
+pspc-meaning.b1.h: جمله | معنی
+pspc-meaning.b1.0: = ‖ آنا به خانه رسید ← بعد همسرش شام پخت.
+pspc-meaning.b1.1: = ‖ همسرش قبل از رسیدن آنا شروع کرده بود و هنوز داشت شام می‌پخت.
+pspc-meaning.b1.2: = ‖ شام قبل از رسیدن آنا آماده بود.
+pspc-meaning.b2: جملهٔ سوم گذشتهٔ کامل است. صفحهٔ [گذشتهٔ کامل](/blog/grammar/past-perfect/) را ببینید.
+pspc-meaning.b3: از خودتان بپرسید: آیا آن کار در آن لحظه **از قبل در جریان بود**؟ اگر بله، گذشتهٔ استمراری بیاورید. اگر **همان لحظه یا بعدش شروع شد**، گذشتهٔ ساده.
+pspc-meaning.n0: از قبل در جریان بود
+pspc-meaning.n1: واکنش: بعد از آمدنش
+pspc-meaning.n2: از قبل در جریان بود
+pspc-meaning.n3: در جریان بود: هنوز می‌دیدیمش
+pspc-meaning.w0: وقتی بیدار شدم از قبل در جریان بود.
+pspc-meaning.w1: واکنش بعدش آمد: گذشتهٔ ساده.
+
+x.pspc-interrupted-s01: کار طولانی‌ای که در جریان بود: *was watching*.
+x.pspc-interrupted-s02: کار کوتاه: گذشتهٔ ساده، *went*.
+x.pspc-interrupted-s03: کار طولانی‌ای که در جریان بود: *was walking*.
+x.pspc-interrupted-s04: کار کوتاه *saw* است (گذشتهٔ ساده).
+x.pspc-when-while-s01: *while* + کار طولانی‌ای که در جریان بود.
+x.pspc-when-while-s02: دو کار کوتاه، یکی بعد از دیگری: *when*.
+x.pspc-when-while-s03: دو کار در جریان: *was looking*، مثل *was ordering*.
+x.pspc-meaning-s01: در آن لحظه در جریان بود: *was starting*. (*had finished* یعنی دیر رسیده بودیم.)
+q.pspc-meaning-s02: جملهٔ *When I called him, he was having dinner.* یعنی چه؟
+x.pspc-meaning-s02: گذشتهٔ استمراری یعنی از قبل در جریان بود.
+x.pspc-meaning-s03: وقتی بیدار شدم از قبل در جریان بود: *was shining*.

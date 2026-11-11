@@ -1,0 +1,53 @@
+# may-might — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***might*** و ***may*** را برای گفتن اینکه چیزی **ممکن** است اما مطمئن نیستیم («شاید») به کار می‌بریم: *I **might** go to the gym later. It **may** rain tomorrow.*
+i1: برای مطمئن بودن یا تقریباً مطمئن بودن (*must, can't*) و برای احتمال در گذشته (*might have done*) صفحهٔ [فعل‌های وجهی برای حدس و استنتاج](/blog/grammar/modals-of-deduction/) را ببینید. برای *May I…?* صفحهٔ [درخواست، پیشنهاد و اجازه گرفتن](/blog/grammar/requests-offers-permission/) را ببینید.
+
+mm-might.t: *might* و *might not*: شاید
+mm-might.s: **might / might not** + شکل سادهٔ فعل یعنی «شاید» (الان یا در آینده): *I **might** go to the party. It **might not** rain.*
+mm-might.b0: ***might*** + شکل سادهٔ فعل یعنی «شاید»، دربارهٔ حال یا آینده: *Take an umbrella. It **might** rain.* یعنی شاید باران بیاید.
+mm-might.b1: منفی‌اش ***might not*** است (*mightn't* کم‌کاربرد و فقط بریتانیایی است): *I **might not** come.* یعنی شاید نیایم.
+mm-might.b2: مثل بقیهٔ فعل‌های وجهی، *might* برای همهٔ اشخاص یکی است و *to* ندارد: *She **might** call.* نه *She mights call* و نه *might to call*.
+mm-might.b3: مقایسه کنید: *I**'m going to** visit Ali* (برنامه) / *I **might** visit Ali* (شاید، مطمئن نیستم). برای سؤال معمولاً *Do you think…?* می‌گوییم: ***Do you think** it'll rain?* (نه *Might it rain?*)
+mm-might.n0: شاید
+mm-might.n1: شاید نه
+mm-might.n2: شاید او بداند
+mm-might.n3: شاید، همین الان
+mm-might.w0: *might* + شکل سادهٔ فعل
+mm-might.w1: بدون *-s*
+mm-might.w2: *might* + شکل سادهٔ فعل
+
+mm-may-might.t: *may* یا *might*؟
+mm-may-might.s: **may** و **might** هر دو یعنی «شاید». *may* کمی رسمی‌تر است و ممکن است کمی مطمئن‌تر به نظر برسد. برای موقعیت‌های غیرواقعی *might* بیاورید.
+mm-may-might.b0: در بیشتر جمله‌ها ***may*** و ***might*** هر دو با یک معنی ممکن‌اند: *She **may / might** be at home.* *We **may / might** move to Vancouver.*
+mm-may-might.b1: ***may*** کمی **رسمی‌تر** است و در نوشته رایج است: *Some medicines **may** cause sleepiness.* خیلی از انگلیسی‌زبان‌ها آن را کمی محتمل‌تر از *might* حس می‌کنند.
+mm-may-might.b2: در جمله‌های **غیرواقعی** (شرطی نوع دوم) ***might*** بیاورید، نه *may*: *If I had more money, I **might** buy a house.* نه *I may buy*.
+mm-may-might.b3: *may not* یعنی «شاید نه»: *He **may not** know.* (در قانون‌های رسمی، *may not* می‌تواند یعنی «اجازه ندارید»: *Visitors **may not** take photos.*)
+mm-may-might.n0: رسمی، شاید
+mm-may-might.n1: دستورالعمل نوشته‌شده
+mm-may-might.n2: غیرواقعی: *might*
+mm-may-might.n3: شاید نه
+mm-may-might.w0: غیرواقعی: *might*
+mm-may-might.w1: سؤال دربارهٔ احتمال: *Do you think…?*
+
+mm-might-be-ing.t: *might be doing*: الان یا در آینده
+mm-might-be-ing.s: **might / may be** + فعل ing‌دار یعنی شاید کاری همین الان در جریان باشد، یا برنامه‌ریزی شده باشد: *Don't call now. She **might be sleeping**. I **might be working** late tonight.*
+mm-might-be-ing.b0: ***might / may + be*** + فعل ing‌دار نشان می‌دهد شاید کاری **همین الان در جریان** باشد: *Where's Tom? ~ He **might be having** a shower.*
+mm-might-be-ing.b1: می‌تواند دربارهٔ **یک قرارِ احتمالی در آینده** هم باشد: *I **may be going** to Paris next week.* (هنوز قطعی نیست.)
+mm-might-be-ing.b2: مقایسه کنید: *She **might work** at home* (شاید وضعیت کاری‌اش این است) / *She **might be working** at home today* (شاید همین الان دارد کار می‌کند).
+mm-might-be-ing.b3: برای احتمال در گذشته (*might have done*) صفحهٔ [فعل‌های وجهی برای حدس و استنتاج](/blog/grammar/modals-of-deduction/) را ببینید.
+mm-might-be-ing.n0: شاید همین الان
+mm-might-be-ing.n1: شاید همین الان
+mm-might-be-ing.n2: برنامهٔ احتمالی
+mm-might-be-ing.n3: تغییر احتمالی در آینده
+mm-might-be-ing.w0: *might + be* + فعل ing‌دار
+mm-might-be-ing.w1: *might* + *be*
+
+x.mm-might-s01: شاید: *might* + شکل سادهٔ فعل.
+x.mm-might-s02: *might* + شکل سادهٔ فعل.
+x.mm-might-s03: شاید نه: *might not go*.
+x.mm-may-might-s01: هشدارِ رسمیِ نوشته‌شده: *may*.
+x.mm-may-might-s02: غیرواقعی (شرطی نوع دوم): *might*.
+x.mm-may-might-s03: شاید نه: *may not be*.
+x.mm-might-be-ing-s01: شاید همین الان: *might be working*.
+x.mm-might-be-ing-s02: قرار احتمالی: *might be going*.
+x.mm-might-be-ing-s03: شاید همین الان: *might be having*.

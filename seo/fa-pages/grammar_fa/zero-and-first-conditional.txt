@@ -1,0 +1,73 @@
+# zero-and-first-conditional — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **شرطی‌های واقعی** دربارهٔ موقعیت‌هایی‌اند که درست یا ممکن‌اند. **شرطی نوع صفر** برای چیزهایی است که **همیشه** درست‌اند: *If you **heat** ice, it **melts**.* **شرطی نوع اول** برای یک موقعیتِ **ممکن در آینده** است: *If it **rains** tomorrow, we**'ll stay** at home.*
+i1: در هر دو، بخشِ *if* با زمان **حال** می‌آید، حتی وقتی منظورمان آینده است. برای موقعیت‌های خیالی صفحهٔ [شرطی نوع دوم](/blog/grammar/second-conditional/) را ببینید.
+
+zfc-zero.t: شرطی نوع صفر: همیشه درست
+zfc-zero.s: **if / when + حال ساده، حال ساده** برای واقعیت‌ها و چیزهایی که همیشه اتفاق می‌افتند: *If you mix red and white, you get pink.*
+zfc-zero.b0: شرطی نوع صفر **حقیقت‌های کلی**، واقعیت‌های علمی و چیزهایی را توصیف می‌کند که در یک موقعیت **همیشه** اتفاق می‌افتند:
+zfc-zero.b1.h: بخشِ *if* | بخشِ اصلی
+zfc-zero.b2: در شرطی نوع صفر، ***if*** همان معنی ***when*** یا ***whenever*** («هر وقت») را دارد: ***When** you heat water to 100°C, it boils.*
+zfc-zero.b3: برای دستورالعمل، بخش اصلی می‌تواند **امری** باشد: *If the alarm **rings**, **leave** the building.*
+zfc-zero.b4: جای دو بخش می‌تواند عوض شود. فقط وقتی بخشِ *if* اول می‌آید ویرگول بگذارید: *If it rains, the roads get wet.* / *The roads get wet if it rains.*
+zfc-zero.n0: واقعیت
+zfc-zero.n1: همیشه اتفاق می‌افتد
+zfc-zero.n2: بخشِ *if* دوم آمده، بدون ویرگول
+zfc-zero.n3: دستورالعمل
+zfc-zero.w0: در بخشِ *if* حرف *will* نمی‌آید.
+zfc-zero.w1: حقیقت کلی: در هر دو بخش زمان حال.
+
+zfc-first.t: شرطی نوع اول: آیندهٔ ممکن
+zfc-first.s: **if + حال ساده، will + شکل سادهٔ فعل** برای یک احتمالِ واقعی در آینده: *If it rains, we'll stay at home.*
+zfc-first.b0.h: بخشِ *if* (حال) | بخشِ اصلی (*will* + شکل سادهٔ فعل)
+zfc-first.b1: شرطی نوع اول دربارهٔ موقعیتی است که در آینده **ممکن** است پیش بیاید، و **نتیجهٔ محتملِ** آن.
+zfc-first.b2: در بخشِ *if* **حال ساده** بیاورید، با اینکه معنی آینده است. آنجا *will* نیاورید: *If it **rains**…* نه *If it will rain…* (در فارسی هم می‌گوییم «اگر باران **بیاید**»، نه «اگر باران خواهد آمد».)
+zfc-first.b3: سؤالی و منفی: ***What will** you **do** if you **don't pass**?* *If you **don't study**, you **won't pass**.*
+zfc-first.b4: بخشِ *if* می‌تواند اول یا دوم بیاید: *I'll call you if I'm late.* / *If I'm late, I'll call you.*
+zfc-first.n0: نتیجهٔ محتمل
+zfc-first.n1: بخشِ *if* دوم آمده
+zfc-first.n2: سؤالی
+zfc-first.n3: آیندهٔ ممکن
+zfc-first.w0: بعد از *if* حرف *will* نمی‌آید.
+zfc-first.w1: در بخشِ *if* حال، در نتیجه *will*.
+
+zfc-first-variations.t: شرطی نوع اول با *can, might, should* و فعل امری
+zfc-first-variations.s: نتیجه می‌تواند با فعل‌های دیگر هم بیاید: *If you're free, you **can** come. If it rains, we **might** stay in. If you see him, **tell** him.*
+zfc-first-variations.b0: بخش اصلی همیشه *will* ندارد. می‌توانیم این‌ها را بیاوریم:
+zfc-first-variations.b1.0: **فعل‌های وجهی**: *If you finish early, you **can** go home. If it's cold, we **might** stay in. If you feel ill, you **should** see a doctor.*
+zfc-first-variations.b1.1: **be going to**: *If the weather's bad, we**'re going to** cancel.*
+zfc-first-variations.b1.2: **فعل امری**: *If you see Sara, **tell** her to call me. If you're cold, **close** the window.*
+zfc-first-variations.b2: بخشِ *if* می‌تواند حال استمراری یا حال کامل هم باشد: *If you**'re waiting** for the bus, it's late today. If you**'ve finished**, you can leave.*
+zfc-first-variations.b3: *might* و *may* نتیجه را از *will* نامطمئن‌تر می‌کنند: *If we leave now, we**'ll** arrive on time* (مطمئن) / *we **might** arrive on time* (ممکن).
+zfc-first-variations.n0: فعل امری
+zfc-first-variations.n1: نامطمئن‌تر
+zfc-first-variations.n2: حال کامل در بخشِ *if*
+zfc-first-variations.n3: حال استمراری + درخواست
+zfc-first-variations.w0: در بخشِ *if* حرف *will* نمی‌آید.
+zfc-first-variations.w1: حال کامل، نه *will*.
+
+zfc-if-or-when.t: *if* یا *when*؟
+zfc-if-or-when.s: **when** یعنی مطمئنید اتفاق می‌افتد. **if** یعنی ممکن است اتفاق بیفتد یا نیفتد. *When I get home, I'll call you. If I get the job, I'll call you.*
+zfc-if-or-when.b0: در جمله‌های آینده، بعد از ***when*** و ***if*** هر دو زمان حال می‌آید، اما معنی فرق دارد:
+zfc-if-or-when.b1.h: *when* (مطمئن) | *if* (ممکن)
+zfc-if-or-when.b1.0: *I'll call you **when** I get home.* (حتماً به خانه می‌رسم.) ‖ *I'll call you **if** I'm late.* (شاید دیر کنم.)
+zfc-if-or-when.b2: در شرطی نوع صفر (حقیقت‌های کلی)، *if* و *when* تقریباً یک معنی دارند: ***If / When** you heat ice, it melts.*
+zfc-if-or-when.b3: بعد از *when* هم *will* نیاورید: *When I **arrive**, I'll text you.* نه *When I will arrive*. صفحهٔ [جمله‌واره‌های زمانی آینده](/blog/grammar/future-time-clauses/) را ببینید.
+zfc-if-or-when.n0: حتماً می‌بینمش
+zfc-if-or-when.n1: شاید ببینمش
+zfc-if-or-when.n2: حتماً هوا تاریک می‌شود
+zfc-if-or-when.n3: شاید هوا سرد باشد
+zfc-if-or-when.w0: حتماً اتفاق می‌افتد: *when*
+zfc-if-or-when.w1: بعد از *when* حرف *will* نمی‌آید
+
+x.zfc-zero-s01: شرطی نوع صفر: *if* + حال ساده.
+x.zfc-zero-s02: حقیقت کلی: حال ساده.
+x.zfc-zero-s03: *if* + حال ساده.
+x.zfc-first-s01: *if* + حال ساده.
+x.zfc-first-s02: نتیجه در آینده: *won't* + شکل سادهٔ فعل.
+x.zfc-first-s03: *if* + حال ساده.
+x.zfc-first-variations-s01: دستور: فعل امری.
+x.zfc-first-variations-s02: ممکن اما نه قطعی: *might*.
+x.zfc-first-variations-s03: *if* + حال کامل (یا حال ساده).
+x.zfc-if-or-when-s01: حتماً به خانه می‌رسید: *when*.
+x.zfc-if-or-when-s02: شاید کمک لازم داشته باشید: *if*.
+x.zfc-if-or-when-s03: حتماً اتفاق می‌افتد: *when*.

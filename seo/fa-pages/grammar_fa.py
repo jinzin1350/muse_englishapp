@@ -75,8 +75,27 @@ def units(t):
                     out += [("%s.%d.%d" % (key, r, c), cell) for c, cell in enumerate(row)]
         out += [("%s.n%d" % (pid, k), e["note"]) for k, e in enumerate(p["examples"]) if e.get("note")]
         out += [("%s.w%d" % (pid, k), m["why"]) for k, m in enumerate(p["mistakes"]) if m.get("why")]
-    out += [("x." + e["id"], e["explanation"]) for e in site_exercises(t) if e["level"] in FA_LEVELS and e.get("explanation")]
+    for e in site_exercises(t):
+        if e["level"] in FA_LEVELS:
+            if is_instruction(e) and e["prompt"] not in PROMPT_FA:
+                out.append(("q." + e["id"], e["prompt"]))
+            if e.get("explanation"):
+                out.append(("x." + e["id"], e["explanation"]))
     return out
+
+# exercise prompts that are instructions (not English sentences to complete)
+PROMPT_FA = {
+    "Which sentence is correct?": "کدام جمله درست است؟",
+    "Which sentence is NOT correct?": "کدام جمله درست **نیست**؟",
+    "Which is correct?": "کدام درست است؟",
+    "Choose the correct sentence.": "جملهٔ درست را انتخاب کنید.",
+    "Which is the most formal?": "کدام از همه رسمی‌تر است؟",
+    "Which is the most polite?": "کدام از همه مؤدبانه‌تر است؟",
+    "Which sentence is the most informal?": "کدام جمله از همه خودمانی‌تر است؟",
+}
+
+def is_instruction(e):
+    return e["type"] != "error" and "___" not in e.get("prompt", "")
 
 def load_fa(slug):
     p = os.path.join(FA_DIR, slug + ".txt")
@@ -262,7 +281,13 @@ def render_ex(e, n, F, fa_mode):
             o.append('<div class="exexpl" style="display:none">Correct: %s<br>%s</div>' % (corr, expl))
         o.append("<button class=\"excheck\" onclick=\"checkSeg('%s', %d)\">بررسی</button>" % (eid, e.get("answer") or 0))
     else:
-        o.append('<div class="exq" dir="ltr">%d. %s</div>' % (n, gap(md(e["prompt"]))))
+        q = None
+        if fa_mode and is_instruction(e):
+            q = F.get("q." + eid, e["prompt"]) or PROMPT_FA.get(e["prompt"])
+        if q:
+            o.append('<div class="exq" dir="rtl">%d. %s</div>' % (n, md_fa(q)))
+        else:
+            o.append('<div class="exq" dir="ltr">%d. %s</div>' % (n, gap(md(e["prompt"]))))
         if e["type"] == "mcq":
             o.append("".join("<label dir=\"ltr\"><input type='radio' name='%s' value='%d'> %s</label>" % (eid, i, html.escape(x)) for i, x in enumerate(e.get("options", []))))
             btn = "<button class=\"excheck\" onclick=\"checkEx('%s', %d)\">بررسی</button>" % (eid, e.get("answer") or 0)
@@ -387,7 +412,9 @@ def status():
         F = FA(slug)
         if not F.d:
             todo.append(slug); continue
-        main = [k for k, _ in U if re.search(r"(^i\d+$|\.t$|\.s$|\.b\d+$|\.b\d+\.h$)", k)]
+        # blocks that are only an English example (*…*) don't need Persian
+        main = [k for k, v in U if re.search(r"(^i\d+$|\.t$|\.s$|\.b\d+$|\.b\d+\.h$)", k)
+                and re.search(r"[A-Za-z]", re.sub(r"\*[^*]*\*|\*", "", v))]
         miss = [k for k in main if k not in F.d]
         (part if miss else done).append((slug, len(miss)))
     # render once to collect stale entries

@@ -1,0 +1,69 @@
+# have-got — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***have got*** برای **مالکیت**، **خانواده**، **ظاهر** و **بیماری** همان معنی ***have*** («داشتن») را دارد: *I**'ve got** two sisters. She**'s got** blue eyes. I**'ve got** a cold.* در انگلیسی **بریتانیایی**، به‌خصوص در گفتار، خیلی رایج است.
+i1: در انگلیسی آمریکایی معمولاً *I have* و *Do you have…?* می‌گویند. هر دو درست‌اند. برای *have to* (اجبار) صفحهٔ [must و have to](/blog/grammar/must-have-to/) را ببینید.
+
+hg-forms.t: *I've got, she's got*: شکل‌ها
+hg-forms.s: ***I / you / we / they have got*** (*'ve got*). ***He / she / it has got*** (*'s got*). برای چیزهایی که **دارید**، **خانواده**، **ظاهر** و **بیماری** به کار ببرید.
+hg-forms.b0.h: شکل کامل | شکل کوتاه | مثال
+hg-forms.b1: ***He's got*** یعنی *he has got* (نه *he is got*). از جمله معلوم می‌شود: *He's got a dog* (*has*) / *He's tired* (*is*).
+hg-forms.n0: خانواده
+hg-forms.n1: ظاهر
+hg-forms.n2: مالکیت
+hg-forms.n3: بیماری
+hg-forms.w0: با *she*: *has*
+hg-forms.w1: *have got*
+
+hg-neg-q.t: *I haven't got* و *have you got…?*
+hg-neg-q.s: **منفی**: ***haven't got / hasn't got***. **سؤالی**: ***Have you got…? Has she got…?*** جواب کوتاه: *Yes, I have. No, she hasn't.* (نه *Yes, I've got*)
+hg-neg-q.b0.h: منفی | سؤالی | جواب کوتاه
+hg-neg-q.b1: با *have got* از *do* استفاده نکنید: ***Have** you got…?* (نه *Do you have got…?*)
+hg-neg-q.n0: منفی
+hg-neg-q.n1: سؤالی
+hg-neg-q.n2: سؤال + جواب کوتاه
+hg-neg-q.n3: منفی
+hg-neg-q.w0: با *have got* حرف *do* نمی‌آید
+hg-neg-q.w1: منفی
+hg-neg-q.w2: جواب کوتاه
+
+hg-or-have.t: *have got* یا *have*؟ *have breakfast, had a car*
+hg-or-have.s: ***have got*** و ***have*** برای **مالکیت** یک معنی دارند. اما برای **کارها** (*have breakfast, have a shower, have a party*) و در **گذشته** (*I had a bike*، نه *I had got a bike*) فقط ***have*** بیاورید.
+hg-or-have.b0.h: *have got* = *have* | فقط *have*
+hg-or-have.b0.0: = ‖ *I **have** breakfast at 7.* (یک کار)
+hg-or-have.b0.2: = ‖ *I **had** a bike when I was a child.* (گذشته)
+hg-or-have.b0.3:  ‖ *I usually **have** a shower in the morning.* (عادت)
+hg-or-have.b1: با ***have*** (نه *have got*)، برای سؤالی و منفی ***do*** می‌آید: ***Do** you **have** a car? I **don't have** time.*
+hg-or-have.n0: کار: *have*
+hg-or-have.n1: گذشته: *had*
+hg-or-have.n2: *have* + *do*
+hg-or-have.n3: مالکیت: *have got*
+hg-or-have.w0: کار: *have*
+hg-or-have.w1: گذشته: *had*
+
+hg-got-to.t: *have got to*، *got* و *gotten*
+hg-got-to.s: ***have got to*** + فعل یعنی ***have to*** (اجبار، خودمانی): *I**'ve got to** go.* در انگلیسی آمریکایی اسم مفعولِ *get* اغلب ***gotten*** است (*It's gotten cold*)، اما ***have got*** (مالکیت) در هر دو یکی است.
+hg-got-to.b0.h: الگو | مثال | توضیح
+hg-got-to.b0.0: = ‖ = ‖ یعنی *have to* (خودمانی)
+hg-got-to.b0.1: = ‖ = ‖ یعنی *has to*
+hg-got-to.b0.2: *gotta* (خیلی خودمانی) ‖ = ‖ فقط در گفتار
+hg-got-to.b0.3: *gotten* (آمریکایی) ‖ = ‖ اسم مفعولِ *get*
+hg-got-to.b1: ***have got to*** برای **حال** و **آینده** است. برای گذشته ***had to*** بیاورید: *I **had to** work late yesterday.* (نه *I had got to*)
+hg-got-to.b2: ***gotta*** یعنی *(have) got to* در گفتار خیلی خودمانی و ترانه‌ها. در نوشتن به کار نبرید.
+hg-got-to.n0: اجبار
+hg-got-to.n1: اجبار
+hg-got-to.n2: سؤالی
+hg-got-to.n3: *gotten* (آمریکایی)
+hg-got-to.w0: گذشته: *had to*
+hg-got-to.w1: *got to* + فعل
+
+x.hg-forms-s01: *She has got*.
+x.hg-forms-s02: *We have got*.
+x.hg-forms-s03: *I have got*.
+x.hg-neg-q-s01: سؤالی: *Have you got…?*
+x.hg-neg-q-s02: منفی: *hasn't got*.
+x.hg-neg-q-s03: جواب کوتاه: *Yes, it has.*
+x.hg-or-have-s01: کار / عادت: *have*.
+x.hg-or-have-s02: گذشته: *had*.
+x.hg-or-have-s03: *have* + *do*: *Do you have…?*
+x.hg-got-to-s01: اجبار: *I've got to*.
+x.hg-got-to-s02: گذشته: *had to*.
+x.hg-got-to-s03: *have got to* + فعل.

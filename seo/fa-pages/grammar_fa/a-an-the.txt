@@ -1,0 +1,75 @@
+# a-an-the — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***a / an*** (حرف تعریف **نامعین**) دربارهٔ یک چیزِ نامشخص است: *I need **a** pen.* (یک خودکار، هر خودکاری). ***the*** (حرف تعریف **معین**) دربارهٔ چیز مشخصی است که شنونده می‌داند کدام است: *Can you pass me **the** pen?* (همان خودکاری که روی میز است)
+i1: حرف تعریف برای خیلی از زبان‌آموزها سخت است، چون بعضی زبان‌ها آن را ندارند؛ فارسی هم حرف تعریف معینی مثل *the* ندارد. این صفحه قدم‌به‌قدم جلو می‌رود. برای وقتی که **هیچ حرف تعریفی** لازم نیست، صفحهٔ [the یا بدون حرف تعریف](/blog/grammar/the-or-no-article/) را ببینید.
+
+art-a-an.t: *a* یا *an*؟
+art-a-an.s: **a** را قبل از **صدای** بی‌صدا (*a car, a university*) و **an** را قبل از **صدای** صدادار (*an apple, an hour*) بیاورید. فقط با اسم مفردِ قابل‌شمارش.
+art-a-an.b0.h: *a* + صدای بی‌صدا | *an* + صدای صدادار
+art-a-an.b0.2: = ‖ *an **h**our* (حرف *h* خوانده نمی‌شود)
+art-a-an.b1: انتخاب به **صدا** بستگی دارد، نه به حرف: *an hour* (*h* خوانده نمی‌شود)، *a uniform* (با صدای /juː/ شروع می‌شود).
+art-a-an.b2: *a / an* را فقط با اسم **مفردِ قابل‌شمارش** بیاورید: *a chair*. نه *a chairs* و نه *a water*.
+art-a-an.n1: *h* خوانده نمی‌شود
+art-a-an.n2: صدای /juː/
+art-a-an.n3: صدای صدادار
+art-a-an.w0: صدای صدادار: *an*
+art-a-an.w1: صدای /juː/: *a*
+art-a-an.w2: غیرقابل‌شمارش: بدون *a*
+
+art-a-vs-the.t: *a* یا *the*؟ بار اولِ گفتن و چیزی که هر دو می‌دانیم
+art-a-vs-the.s: اولین بار که از چیزی حرف می‌زنید **a / an** بیاورید. وقتی معلوم است کدام یکی است **the** بیاورید: *I saw a cat. The cat was black.* برای چیزهایی که فقط یکی از آن‌ها هست هم **the** می‌آید: *the sun, the moon*.
+art-a-vs-the.b0: ***a / an*** یعنی یکی از چندتا؛ شنونده هنوز نمی‌داند کدام: *There's **a** man at the door.*
+art-a-vs-the.b1: ***the*** یعنی شنونده می‌داند کدام، چون:
+art-a-vs-the.b2.0: قبلاً از آن حرف زده‌ایم: *A man called. **The** man said he was your uncle.*
+art-a-vs-the.b2.1: از موقعیت معلوم است: *Close **the** door, please.* (درِ همین اتاق)
+art-a-vs-the.b2.2: فقط یکی هست: ***the** sun, **the** sky, **the** internet, **the** world*.
+art-a-vs-the.n0: بار اول *a*، بعد *the*
+art-a-vs-the.n1: از موقعیت معلوم است
+art-a-vs-the.n2: فقط یکی هست
+art-a-vs-the.n3: بار اول
+art-a-vs-the.w0: بار دوم: *the*
+art-a-vs-the.w1: فقط یکی هست: *the*
+
+art-jobs-prices.t: *a / an* برای شغل، توصیف، قیمت و دفعات
+art-jobs-prices.s: **a / an** را برای شغل (*She's a nurse*)، توصیف (*It's a beautiful day*)، **what a…!** و به معنی **«در هر»** (*twice a week, $5 a kilo*) به کار ببرید.
+art-jobs-prices.b0: ***a / an*** به کار می‌رود:
+art-jobs-prices.b1.0: برای **شغل** و **نقش**: *My father is **an** engineer.* (نه *My father is engineer*)
+art-jobs-prices.b1.1: در **توصیف** با *be*: *It's **a** great idea. She's **a** very kind person.*
+art-jobs-prices.b1.2: در **جمله‌های تعجبی** با اسم مفردِ قابل‌شمارش: ***What a** beautiful view!*
+art-jobs-prices.b1.3: به معنی ***per*** (در هر): *three times **a** day, 60 km **an** hour, $3 **a** kilo*.
+art-jobs-prices.b2: با اسم غیرقابل‌شمارش یا جمع، بعد از *what* حرف تعریف نمی‌آید: ***What** lovely weather! **What** nice people!*
+art-jobs-prices.n0: شغل
+art-jobs-prices.n1: توصیف
+art-jobs-prices.n2: جملهٔ تعجبی
+art-jobs-prices.n3: در هر
+art-jobs-prices.w0: شغل: *a / an*
+art-jobs-prices.w1: غیرقابل‌شمارش: *what* (بدون *a*)
+art-jobs-prices.w2: در هر: *a*
+
+art-the-uses.t: *the cinema, the piano, the same, the best*
+art-the-uses.s: **the** را با جاهای رایج شهر (*the bank, the cinema*)، سازها (*play the guitar*)، صفت عالی (*the best*)، و *the same, the first, the only* بیاورید.
+art-the-uses.b0.h: کاربرد | مثال
+art-the-uses.b0.0: جاهای رایج ‖ =
+art-the-uses.b0.1: سازهای موسیقی ‖ =
+art-the-uses.b0.2: صفت عالی ‖ =
+art-the-uses.b0.3: ترتیب و *only / same* ‖ =
+art-the-uses.b0.4: محیط دور و بر ما ‖ =
+art-the-uses.b1: اینجا *the* به معنی یک ساختمانِ مشخص نیست: *I'm going to **the** bank* (هر شعبه‌ای).
+art-the-uses.b2: ورزش‌ها و بازی‌ها **حرف تعریف ندارند**: *play football, play chess* (نه *play the football*).
+art-the-uses.n0: جاهای رایج
+art-the-uses.n1: ساز
+art-the-uses.n2: صفت عالی
+art-the-uses.w0: ورزش: بدون حرف تعریف
+art-the-uses.w1: صفت عالی: *the*
+
+x.art-a-an-s01: صدای صدادار: *an egg*.
+x.art-a-an-s02: *university* با صدای /juː/ شروع می‌شود: *a*.
+x.art-a-an-s03: *h* خوانده نمی‌شود: *an hour*.
+x.art-a-vs-the-s01: بار دوم: *the hotel*.
+x.art-a-vs-the-s02: از موقعیت معلوم است: *the door* (درِ همین اتاق).
+x.art-a-vs-the-s03: فقط یکی هست: *the sun*.
+x.art-jobs-prices-s01: شغل + صدای صدادار: *an architect*.
+x.art-jobs-prices-s02: اسم مفردِ قابل‌شمارش: *What an amazing view!*
+x.art-jobs-prices-s03: در هر: *a month* (یا *per month*).
+x.art-the-uses-s01: سازها: *the guitar*.
+x.art-the-uses-s02: صفت عالی: *the highest*.
+x.art-the-uses-s03: جاهای رایج: *the cinema*.

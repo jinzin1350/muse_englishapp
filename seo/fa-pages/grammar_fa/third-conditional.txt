@@ -1,0 +1,35 @@
+# third-conditional — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **شرطی نوع سوم** را برای تصور کردن **گذشته‌ای متفاوت** به کار می‌بریم: چیزی که اتفاق نیفتاد و نتیجه‌ای که می‌توانست داشته باشد. *If I **had known** you were ill, I **would have visited** you.* (نمی‌دانستم، پس به دیدنت نیامدم.) در فارسی: «اگر می‌دانستم… می‌آمدم».
+i1: اغلب برای حسرت، انتقاد و خیال راحت به کار می‌رود. برای موقعیت‌های خیالی در حال صفحهٔ [شرطی نوع دوم](/blog/grammar/second-conditional/) و برای ترکیب گذشته و حال صفحهٔ [شرطی‌های ترکیبی](/blog/grammar/mixed-conditionals/) را ببینید.
+
+tc-form-use.t: ساختار و کاربرد: *if* + گذشتهٔ کامل، *would have* + اسم مفعول
+tc-form-use.s: **if + had + اسم مفعول، would have + اسم مفعول** برای گذشته‌ای خیالی: *If we had left earlier, we would have caught the train.*
+tc-form-use.b0.h: بخشِ *if* (گذشتهٔ کامل) | بخشِ اصلی (*would have* + اسم مفعول)
+tc-form-use.b1: هر دو نیمه دربارهٔ **گذشته‌اند** و هر دو **واقعی نیستند**: *If I had studied harder, I would have passed* یعنی سخت درس نخواندم و قبول نشدم.
+tc-form-use.b2: در بخشِ *if* حرف *would have* نیاورید: *If I **had known**…* نه *If I would have known…*
+tc-form-use.b3: بخشِ *if* می‌تواند دوم بیاید: *I **would have called** you if I **had had** your number.* (*had had* گذشتهٔ کاملِ *have* است.)
+tc-form-use.n0: باران آمد، پس پیک‌نیک نرفتیم
+tc-form-use.n1: تو نپرسیدی
+tc-form-use.n2: بخشِ *if* دوم آمده
+tc-form-use.n3: سؤالی
+tc-form-use.w0: در بخشِ *if* حرف *would* نمی‌آید.
+tc-form-use.w1: نتیجه در گذشته: *would have* + اسم مفعول.
+tc-form-use.w2: *had* + اسم مفعول
+
+tc-contractions.t: *'d* یعنی *had* یا *would*؟ شکل‌های کوتاه در شرطی نوع سوم
+tc-contractions.s: در *If I'd known, I'd have called*، اولین **'d** یعنی *had* و دومی یعنی *would*. *'d* + اسم مفعول یعنی *had*؛ *'d have* یعنی *would have*.
+tc-contractions.b0: در گفتار، هم *had* و هم *would* کوتاه می‌شوند و ***'d*** می‌شوند: *If I**'d** known, I**'d** have called you.*
+tc-contractions.b1: راه تشخیص: ***'d* + اسم مفعول** یعنی *had* (*I'd known* = *I had known*). ***'d have* + اسم مفعول** یعنی *would have* (*I'd have called* = *I would have called*).
+tc-contractions.b2: *would have* اغلب /ˈwʊdəv/ تلفظ می‌شود و در نوشتهٔ خودمانی *would've* نوشته می‌شود. هرگز ننویسید *would of*.
+tc-contractions.n3: نوشتهٔ خودمانی
+tc-contractions.w0: هرگز *of*
+tc-contractions.w1: در بخشِ *if*، *'d* یعنی *had* و *have* نمی‌آید
+
+x.tc-form-use-s01: *if* + گذشتهٔ کامل.
+x.tc-form-use-s02: نتیجه در گذشته: *wouldn't have been*.
+x.tc-form-use-s03: *if* + گذشتهٔ کامل.
+q.tc-contractions-s01: در جملهٔ *If you'd told me, I'd have come*، اولین *'d* یعنی چه؟
+x.tc-contractions-s01: *'d* + اسم مفعول (*told*) یعنی *had*.
+q.tc-contractions-s02: در جملهٔ *She'd have helped if you'd asked*، عبارت *She'd have* یعنی چه؟
+x.tc-contractions-s02: *'d have* + اسم مفعول یعنی *would have*.
+x.tc-contractions-s03: هرگز *of* ننویسید: *If I'd known*.

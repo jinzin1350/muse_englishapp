@@ -1,0 +1,82 @@
+# used-to — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***used to*** + شکل سادهٔ فعل را برای کارهایی به کار می‌بریم که در گذشته مرتب انجام می‌شدند یا درست بودند، اما **حالا دیگر نه**: *I **used to play** the piano.* (الان نمی‌زنم.) *She **used to live** in Isfahan.* (الان آنجا زندگی نمی‌کند.) در فارسی معمولاً با «قبلاً… می‌کردم» می‌گوییم.
+i1: این صفحه از ساختار پایه شروع می‌شود و به فرق *used to* و *would* می‌رسد، و اینکه *will* و *would* چطور رفتارِ همیشگیِ کسی را توصیف می‌کنند.
+
+ut-form.t: *used to*: عادت‌ها و حالت‌های گذشته
+ut-form.s: **used to** + شکل سادهٔ فعل، برای چیزی که در گذشته درست بود یا مرتب اتفاق می‌افتاد اما حالا نه.
+ut-form.b0: ***used to*** برای همهٔ اشخاص یکی است: *I / you / he / she / we / they **used to** + base verb.*
+ut-form.b1.0: **عادت‌های گذشته** (کارهای تکراری): *I **used to walk** to school every day.*
+ut-form.b1.1: **حالت‌های گذشته** (موقعیت‌ها): *We **used to have** a dog. There **used to be** a cinema here.*
+ut-form.b2: معنی‌اش همیشه این است: در گذشته این‌طور بود، اما **الان فرق کرده**. *I used to smoke* یعنی قبلاً سیگار می‌کشیدم، اما الان نه.
+ut-form.b3: *used to* فقط در گذشته وجود دارد. برای عادت‌های حال، حال ساده بیاورید: *I **usually** walk to work.* نه *I use to walk to work*.
+ut-form.n0: حالتِ گذشته
+ut-form.n1: الان نه
+ut-form.n2: عادتِ گذشته
+ut-form.n3: *there used to be*
+ut-form.w0: در جملهٔ مثبت *used to* بنویسید.
+ut-form.w1: *used to* + شکل سادهٔ فعل
+ut-form.w2: *used to* فقط برای گذشته است.
+
+ut-negative-questions.t: *didn't use to* و *Did you use to…?*
+ut-negative-questions.s: منفی: **didn't use to**. سؤالی: **Did … use to…?** (بعد از *did* حرف *d* نمی‌آید).
+ut-negative-questions.b0.h:  | ساختار | مثال
+ut-negative-questions.b0.0: مثبت ‖ **used to** + شکل سادهٔ فعل ‖ =
+ut-negative-questions.b0.1: منفی ‖ **didn't use to** + شکل سادهٔ فعل ‖ =
+ut-negative-questions.b0.2: سؤالی ‖ **Did** + فاعل + **use to** + شکل سادهٔ فعل؟ ‖ =
+ut-negative-questions.b0.3: جواب کوتاه ‖ = ‖ =
+ut-negative-questions.b1: بعد از *did* و *didn't*، مثل فعل‌های دیگر ***use to*** (بدون *-d*) بنویسید: *didn't **go**, didn't **use to** go*.
+ut-negative-questions.b2: می‌توانید منفی را با *never* هم بسازید: *I **never used to** eat vegetables.* این در گفتار خیلی رایج است.
+ut-negative-questions.n0: منفی
+ut-negative-questions.n1: سؤالی
+ut-negative-questions.n2: سؤال با کلمهٔ پرسشی
+ut-negative-questions.w0: بعد از *didn't*: *use to*.
+ut-negative-questions.w1: بعد از *did*: *use to*.
+ut-negative-questions.w2: سؤالی: *did* + فاعل + *use to*.
+
+ut-vs-past-simple.t: *used to* یا گذشتهٔ ساده؟
+ut-vs-past-simple.s: *used to* را برای کارهای تکراری یا موقعیت‌های طولانی بیاورید. برای یک کارِ تک، تعداد دفعات مشخص یا مدت زمانِ دقیق **گذشتهٔ ساده** بیاورید.
+ut-vs-past-simple.b0: *used to* فقط کارهای **تکراری** یا موقعیت‌هایی را که مدت زیادی طول کشیدند توصیف می‌کند. برای بقیهٔ کارهای گذشته گذشتهٔ ساده بیاورید:
+ut-vs-past-simple.b1.h: *used to* | گذشتهٔ ساده (نه *used to*)
+ut-vs-past-simple.b1.0: *I **used to go** to the gym.* (مرتب) ‖ *I **went** to the gym yesterday.* (یک بار)
+ut-vs-past-simple.b1.1: = ‖ *She **lived** in Rome **for six years**.* (مدت دقیق)
+ut-vs-past-simple.b1.2: = ‖ *We **visited** them **three times**.* (تعداد دفعات)
+ut-vs-past-simple.b2: برای کارهای تکراریِ گذشته گذشتهٔ ساده هم درست است: *I **went** to the gym every day when I was a student.* *used to* این معنی را اضافه می‌کند که **الان دیگر این‌طور نیست**.
+ut-vs-past-simple.b3: *used to* را با *for* + مدت یا با *how long* نیاورید: *How long **did** you **live** there?* نه *How long did you use to live there?*
+ut-vs-past-simple.n0: تکراری، الان نه
+ut-vs-past-simple.n1: یک بار
+ut-vs-past-simple.n2: مدت دقیق
+ut-vs-past-simple.n3: تعداد دفعات
+ut-vs-past-simple.w0: یک بار: گذشتهٔ ساده
+ut-vs-past-simple.w1: مدت دقیق: گذشتهٔ ساده
+ut-vs-past-simple.w2: تعداد دفعات: گذشتهٔ ساده
+
+ut-vs-be-used-to.t: *used to do* یا *be used to doing*؟
+ut-vs-be-used-to.s: *I **used to work** at night* یعنی در گذشته (الان نه). *I**'m used to working** at night* یعنی برایم عادی است، عجیب نیست.
+ut-vs-be-used-to.b0: این‌ها شبیه هم‌اند اما معنی‌شان فرق دارد:
+ut-vs-be-used-to.b1.h: ساختار | معنی | مثال
+ut-vs-be-used-to.b1.0: **used to** + شکل سادهٔ فعل ‖ عادت یا حالتی در گذشته، الان نه ‖ *I **used to live** alone.* (اما الان نه)
+ut-vs-be-used-to.b1.1: **be used to** + اسم / فعل ing‌دار ‖ چیزی برایمان آشناست و عجیب یا سخت نیست ‖ *I**'m used to living** alone.* (برایم عادی است)
+ut-vs-be-used-to.b1.2: **get used to** + اسم / فعل ing‌دار ‖ به چیزی عادت کردن ‖ *I'm **getting used to living** alone.* (دارد راحت‌تر می‌شود)
+ut-vs-be-used-to.b2: بعد از *be used to* و *get used to*، کلمهٔ *to* حرف اضافه است، پس بعدش **اسم** یا **فعل ing‌دار** می‌آید: *I'm used to **the cold**. I'm used to **getting up** early.*
+ut-vs-be-used-to.b3: برای *be used to* و *get used to* در همهٔ زمان‌ها صفحهٔ [be used to و get used to](/blog/grammar/would-be-get-used-to/) را ببینید.
+ut-vs-be-used-to.n0: عادتِ گذشته
+ut-vs-be-used-to.n1: برایم عادی است
+ut-vs-be-used-to.n2: *be used to* + اسم
+ut-vs-be-used-to.n3: *get used to* یعنی عادت کردن
+ut-vs-be-used-to.w0: *be used to* + فعل ing‌دار
+ut-vs-be-used-to.w1: عادتِ گذشته: *used to* + شکل سادهٔ فعل
+
+x.ut-form-s01: *used to* + شکل سادهٔ فعل *be*.
+q.ut-form-s02: جملهٔ *My grandmother used to make bread* یعنی چه؟
+x.ut-form-s02: *used to* یعنی عادتی در گذشته که الان دیگر نیست.
+x.ut-form-s03: *there used to be* یعنی در گذشته وجود داشت.
+x.ut-negative-questions-s01: منفی: *didn't use to*.
+x.ut-negative-questions-s02: سؤالی: *Did you use to…?*
+x.ut-negative-questions-s03: بعد از *didn't*: *use to*.
+x.ut-vs-past-simple-s01: یک بار: گذشتهٔ ساده.
+x.ut-vs-past-simple-s02: مدت دقیق (*for fifty years*): گذشتهٔ ساده.
+x.ut-vs-past-simple-s03: همه درست‌اند؛ *used to* تأکید می‌کند که الان دیگر این‌طور نیست.
+x.ut-vs-be-used-to-s01: الان برایم عادی است: *be used to* + اسم.
+q.ut-vs-be-used-to-s02: جملهٔ *He's used to working long hours* یعنی چه؟
+x.ut-vs-be-used-to-s02: *be used to* + فعل ing‌دار یعنی آشناست و سخت نیست.
+x.ut-vs-be-used-to-s03: عادتی در گذشته، الان نه: *used to* + شکل سادهٔ فعل.
