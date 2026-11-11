@@ -1,0 +1,90 @@
+/* Persian layer for the generated blog pages (lessons, levels, blog index, vocabulary, grammar, about).
+   Loaded by seo/fa-pages/blog_fa.py. Persian glyphs come from Vazirmatn (Arabic-script ranges only),
+   so English text keeps the pages' original fonts. */
+@font-face{font-family:'Vazirmatn';src:url('/fa/fonts/Vazirmatn-Regular.woff2') format('woff2');font-weight:400;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F,U+2010-2011,U+204F,U+2E41,U+0001-000D}
+@font-face{font-family:'Vazirmatn';src:url('/fa/fonts/Vazirmatn-Medium.woff2') format('woff2');font-weight:500;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F}
+@font-face{font-family:'Vazirmatn';src:url('/fa/fonts/Vazirmatn-Bold.woff2') format('woff2');font-weight:600 700;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F}
+@font-face{font-family:'Vazirmatn';src:url('/fa/fonts/Vazirmatn-ExtraBold.woff2') format('woff2');font-weight:800 900;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F}
+
+html[lang="fa"] body,html[lang="fa"] button,html[lang="fa"] input,html[lang="fa"] select{font-family:"Vazirmatn",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif}
+html[lang="fa"] h1,html[lang="fa"] h2,html[lang="fa"] h3,html[lang="fa"] h4{font-family:"Vazirmatn","Fredoka",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;letter-spacing:0}
+html[lang="fa"] body{line-height:1.8}
+bdi{unicode-bidi:isolate}
+[dir="ltr"]{text-align:left}
+
+/* lesson pages */
+.wfa{color:#FFC46B;font-weight:700;font-size:16px;margin:6px 0 4px;direction:rtl;text-align:left;unicode-bidi:plaintext}
+.wcard[dir="ltr"] .wpos{direction:rtl;unicode-bidi:isolate}
+html[dir="rtl"] .leschef{right:auto;left:24px}
+html[dir="rtl"] .obtn{margin-left:0;margin-right:auto}
+html[dir="rtl"] .tline{text-align:left}
+html[dir="rtl"] .grambox p[dir="ltr"]{text-align:left}
+html[dir="rtl"] .prevnext{direction:rtl}
+html[dir="rtl"] .lfoot a{color:inherit}
+html[dir="rtl"] .lfoot{line-height:2}
+html[dir="rtl"] .bcard .bbadge{left:auto;right:14px}
+html[dir="rtl"] .bherom{right:auto;left:0}
+
+/* nav: links become a swipeable second row on phones */
+@media(max-width:700px){
+  html[dir="rtl"] .lnav .wrap{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:8px;row-gap:6px}
+  html[dir="rtl"] .lnav .links{order:3;width:100%;overflow-x:auto;gap:16px;white-space:nowrap;scrollbar-width:none;padding-bottom:2px}
+  html[dir="rtl"] .lnav .links::-webkit-scrollbar{display:none}
+  html[dir="rtl"] .lnav .obtn{padding:8px 16px!important;font-size:14px;width:auto!important;margin:0!important}
+  html[dir="rtl"] .leschef{width:88px;left:8px;right:auto;opacity:.95}
+  html[dir="rtl"] .leshero .in{padding-left:96px}
+}
+
+/* level pages: Persian card label, English words underneath */
+.ltheme .lwl{display:block;direction:ltr;text-align:right;font-size:.86em;font-weight:600;opacity:.82;margin-top:2px}
+html[dir="rtl"] .bfoot span{line-height:2}
+
+/* vocabulary + grammar index (gnav template) */
+html[lang="fa"] .gbrand,html[lang="fa"] .gcard-body b{font-family:"Vazirmatn","Fredoka",system-ui,sans-serif}
+html[lang="fa"] .vbadge{letter-spacing:0}
+html[dir="rtl"] .gnav-links{margin-left:0;margin-right:auto}
+html[dir="rtl"] .gsearch{margin-left:0;margin-right:auto}
+html[dir="rtl"] .llvl{left:auto;right:12px}
+html[dir="rtl"] .gchev,html[dir="rtl"] .vside-row .vn,html[dir="rtl"] .vpop .chev,html[dir="rtl"] .seeall,html[dir="rtl"] .pcard .wplay{margin-left:0;margin-right:auto}
+.gcard-body .ven{font-size:12.5px;color:#8a93a6;font-weight:600;direction:ltr;text-align:right;margin-top:-4px}
+.gcard-body b[dir="ltr"]{text-align:right}
+.hsec-head h2 .hen{font-size:13px;color:#8a93a6;font-weight:600;margin-right:8px;unicode-bidi:isolate}
+.pcard b[dir="ltr"]{text-align:right}
+html[dir="rtl"] .qq-screen{text-align:right}
+html[dir="rtl"] .qq-opt{direction:ltr;text-align:right}
+html[dir="rtl"] .transcript[dir="ltr"]{text-align:left}
+@media(max-width:700px){
+  html[dir="rtl"] .gsearch{margin-right:0}
+  html[dir="rtl"] .gnav-in{flex-wrap:wrap;row-gap:4px;padding-top:10px;padding-bottom:8px}
+  html[dir="rtl"] .gnav-links{display:flex;order:3;width:100%;margin:0;overflow-x:auto;gap:18px;white-space:nowrap;scrollbar-width:none;padding-bottom:4px}
+  html[dir="rtl"] .gnav-links::-webkit-scrollbar{display:none}
+  html[dir="rtl"] .gsearch-ico,html[dir="rtl"] .gnav-cta{margin-right:auto}
+  html[dir="rtl"] .gsearch-ico + .gnav-cta{margin-right:0}
+}
+
+/* grammar guides (plain template): Persian frame, English guide in one LTR block */
+.fa-top{display:flex;align-items:center;gap:10px 18px;flex-wrap:wrap;margin:-6px 0 18px;padding-bottom:12px;border-bottom:1px solid #F0E6D2}
+.fa-brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:18px;color:#1a1a1a;text-decoration:none;white-space:nowrap}
+.fa-brand img{width:30px;height:30px;border-radius:8px}
+.fa-top nav{display:flex;gap:16px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+.fa-top nav::-webkit-scrollbar{display:none}
+.fa-top nav a{color:#4a5568;text-decoration:none;font-weight:600;font-size:15px}
+.fa-top nav a.on{color:#E8590C}
+.fa-go{margin-right:auto;background:#FF9600;color:#fff!important;padding:8px 18px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap}
+@media(max-width:700px){.fa-top nav{order:3;width:100%}}
+h1 .h1en{display:block;font-size:.56em;color:#777;font-weight:600;margin-top:6px;text-align:right}
+.gram-en{text-align:left}
+.gram-en .fa-l{text-align:right}
+.fa-fb{font-weight:700;margin-bottom:4px;text-align:right}
+.tfa{color:#E8590C;font-weight:700;margin:-6px 0 4px}
+.relgrid a small{display:block;color:#888;font-size:13px;text-align:right}
+.fa-foot{margin-top:36px;padding-top:16px;border-top:1px solid #eee;color:#777;font-size:14px;line-height:2;text-align:center}
+.fa-foot a{color:#555}
+/* phones: the long filter-pill row stretched the topic page's grid column past the screen */
+.hmain>*,.gmain>*{min-width:0}
+/* vocabulary filter pills had no style of their own (same look as the grammar pills) */
+.vpill{border:1.5px solid #eee0c8;background:#fff;color:#5b6472;font-weight:700;font-size:13.5px;padding:7px 15px;border-radius:999px;cursor:pointer;font-family:inherit;line-height:1.6}
+.vpill.on{background:#FF9600;border-color:#FF9600;color:#fff}
+html[lang="fa"] h1,html[lang="fa"] h2,html[lang="fa"] h3{line-height:1.45}
+.wbody .wfa{color:#D9480F;font-size:15px}
+.llogo img,.blogo img{border-radius:8px}
