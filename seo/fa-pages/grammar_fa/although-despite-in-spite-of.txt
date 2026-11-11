@@ -1,0 +1,42 @@
+# although-despite-in-spite-of — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: این کلمه‌ها **تضاد** را نشان می‌دهند: چیزی با وجود چیز دیگری غیرمنتظره است (یعنی «با اینکه»، «با وجودِ»): ***Although** it was raining, we went out. **Despite** the rain, we went out.*
+i1: فرق اصلی در **دستور** است: *although* + **جمله‌واره** (فاعل + فعل)، *despite / in spite of* + **اسم** یا ***-ing***. برای *but* و *however* صفحهٔ [and، but، or، so، because](/blog/grammar/and-but-or-so-because/) را ببینید.
+
+ads-although.t: *although* و *though* + جمله‌واره
+ads-although.s: ***although*** (یا ***though***) + فاعل + فعل یک تضاد غیرمنتظره را نشان می‌دهد (با اینکه): ***Although** it was cold, we went swimming.* *although* و *but* را با هم نیاورید.
+ads-although.b0.h: الگو | مثال
+ads-although.b0.0: *although* + جمله‌واره، جملهٔ اصلی ‖ =
+ads-although.b0.1: جملهٔ اصلی + *although* + جمله‌واره ‖ =
+ads-although.b0.2: *though* (خودمانی‌تر) ‖ =
+ads-although.b1: **یک** کلمهٔ ربط بیاورید، نه دوتا: ***Although** it was expensive, I bought it.* یا *It was expensive, **but** I bought it.* (نه *Although it was expensive, but I bought it.*). فارسی می‌گوید «با اینکه گران بود، **ولی** خریدمش»، اما انگلیسی فقط یکی را می‌آورد.
+ads-although.b2: وقتی جمله‌وارهٔ *although* **اول** می‌آید، بعدش **ویرگول** بگذارید.
+ads-although.n0: *although* در اول
+ads-although.n1: *although* در وسط
+ads-although.n2: *though*
+ads-although.n3: تضاد غیرمنتظره
+ads-although.w0: *although* و *but* با هم نه.
+ads-although.w1: *although* + جمله‌واره.
+
+ads-despite.t: *despite / in spite of* + اسم یا *-ing*
+ads-despite.s: ***despite*** و ***in spite of*** همان معنی *although* را دارند (با وجودِ)، اما بعدشان **اسم**، **ضمیر** یا ***-ing*** می‌آید: ***Despite** the rain… **In spite of** being tired…* با جمله‌واره ***despite the fact that*** بیاورید.
+ads-despite.b0.h: الگو | مثال
+ads-despite.b0.0: *despite / in spite of* + اسم ‖ =
+ads-despite.b0.1: *despite / in spite of* + *-ing* ‖ =
+ads-despite.b0.2: *despite / in spite of the fact that* + جمله‌واره ‖ =
+ads-despite.b0.3: *although* + جمله‌واره ‖ =
+ads-despite.b1: بگویید ***despite*** (بدون *of*) یا ***in spite of*** (با *of*). نه *despite of*.
+ads-despite.b2: *despite* + فاعل + فعل نمی‌شود: نه *Despite it was raining*. *although* یا *despite the fact that* بیاورید.
+ads-despite.n0: *despite* + اسم
+ads-despite.n1: *in spite of* + اسم
+ads-despite.n2: *despite* + *-ing*
+ads-despite.n3: *despite the fact that*
+ads-despite.w0: بعد از *despite* حرف *of* نمی‌آید.
+ads-despite.w1: *despite* + اسم، نه جمله‌واره.
+ads-despite.w2: *in spite of*.
+
+x.ads-although-s01: تضاد: *Although*.
+x.ads-although-s02: فقط یک کلمهٔ ربط.
+x.ads-although-s03: تضاد: *Although*.
+x.ads-despite-s01: با اسم: *Despite*.
+x.ads-despite-s02: با *-ing*: *in spite of*.
+x.ads-despite-s03: *In spite of* + اسم.

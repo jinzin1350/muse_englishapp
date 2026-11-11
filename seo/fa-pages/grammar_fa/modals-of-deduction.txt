@@ -1,0 +1,41 @@
+# modals-of-deduction — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: با فعل‌های وجهی نشان می‌دهیم بر اساس چیزهایی که می‌دانیم، **چقدر مطمئن** هستیم: *She **must** be at home* (مطمئنم؛ «حتماً خانه است»). *She **might** be at home* (شاید). *She **can't** be at home* (مطمئنم که نیست؛ «امکان ندارد خانه باشد»).
+i1: همین فعل‌ها با *have* + اسم مفعول دربارهٔ **گذشته** حرف می‌زنند: *She **must have left** early.* این صفحه راه‌های قوی‌تر و رسمی‌ترِ بیان احتمال، مثل *bound to* و *likely to*، را هم توضیح می‌دهد. برای *might* به معنی «شاید» به طور کلی صفحهٔ [may و might](/blog/grammar/may-might/) را ببینید.
+
+md-must-cant.t: *must* و *can't*: مطمئنم
+md-must-cant.s: **must** یعنی مطمئنم درست است (حتماً). **can't** یعنی مطمئنم درست نیست (امکان ندارد). *He's been working all day. He **must** be tired. That **can't** be Tom. He's in Paris.*
+md-must-cant.b0.h: چقدر مطمئن؟ | فعل وجهی | مثال
+md-must-cant.b0.0: مطمئنم درست است ‖ = ‖ =
+md-must-cant.b0.1: مطمئنم درست نیست ‖ = ‖ =
+md-must-cant.b1: وقتی دلیل خوبی (شواهد) داریم که مطمئن باشیم، ***must*** می‌آوریم: *You've been travelling for 20 hours. You **must** be exhausted.*
+md-must-cant.b2: برای منفی ***can't*** (یا *couldn't*) بیاورید، نه *mustn't*: *That **can't** be right.* نه *That mustn't be right* (در انگلیسی بریتانیایی *mustn't* یعنی «اجازه نیست»).
+md-must-cant.b3: در انگلیسی آمریکایی ***must not*** هم برای استنتاج منفی به کار می‌رود: *He **must not** be home. His car is gone.* در انگلیسی بریتانیایی انتخاب معمول *can't* است.
+md-must-cant.n0: مطمئنم
+md-must-cant.n1: مطمئنم نیست
+md-must-cant.n2: شواهد: جمع صورت‌حساب غلط است
+md-must-cant.n3: مطمئنم نیست
+md-must-cant.w0: استنتاج منفی: *can't* (انگلیسی بریتانیایی).
+md-must-cant.w1: *must* + شکل سادهٔ فعل.
+
+md-might-could.t: *might, may, could*: ممکن است
+md-might-could.s: **might / may / could** یعنی ممکن است (شاید درست باشد). **couldn't** یعنی مطمئنم نیست. *He might be at work. It could be a virus.*
+md-might-could.b0.h: چقدر مطمئن؟ | فعل‌های وجهی | مثال
+md-might-could.b0.0: ممکن است ‖ = ‖ =
+md-might-could.b0.1: ممکن است نباشد ‖ = ‖ =
+md-might-could.b0.2: مطمئنم نیست ‖ = ‖ =
+md-might-could.b1: وقتی فکر می‌کنید چیزی ممکن است اما **شواهد کافی** برای مطمئن بودن ندارید، *might, may* یا *could* بیاورید: *Where's my phone? ~ It **could** be in the car.*
+md-might-could.b2: مراقب شکل‌های منفی باشید: ***might not / may not*** یعنی شاید نه. ***couldn't*** یعنی مطمئنم نیست (مثل *can't*). *He **might not** be at home* (شاید خانه نباشد) با *He **couldn't** be at home* (غیرممکن است) فرق دارد.
+md-might-could.n0: ممکن است
+md-might-could.n1: ممکن است
+md-might-could.n2: شاید نه
+md-might-could.n3: غیرممکن
+md-might-could.w0: شاید نه: *might not*.
+md-might-could.w1: یک احتمالِ مشخص: *might / could*.
+
+x.md-must-cant-s01: با توجه به شواهد مطمئنم: *must*.
+x.md-must-cant-s02: مطمئنم نیست: *can't*.
+x.md-must-cant-s03: مطمئنم: *must be*.
+x.md-might-could-s01: ممکن است، مطمئن نیستم: *might*.
+q.md-might-could-s02: کدام جمله یعنی «شاید خانه نباشد»؟
+x.md-might-could-s02: *Might not* یعنی شاید نه.
+x.md-might-could-s03: ممکن است: *could be*.

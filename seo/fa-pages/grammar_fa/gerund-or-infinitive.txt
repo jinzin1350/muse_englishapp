@@ -1,0 +1,99 @@
+# gerund-or-infinitive — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: وقتی فعلی بعد از فعل دیگر می‌آید، فعل دوم اغلب یا **شکل -ing** دارد (*gerund*، اسم مصدر) یا **to + شکل سادهٔ فعل** (*infinitive*، مصدر): *I enjoy **cooking**. I want **to cook**.* فعل اول تعیین می‌کند کدام شکل لازم است.
+i1: قاعدهٔ ساده‌ای برای همهٔ فعل‌ها نیست، اما الگوهای مفیدی وجود دارد. این صفحه از پایه تا شکل‌های پیشرفته پیش می‌رود. بعضی فعل‌ها با *-ing* یا *to* معنی‌شان عوض می‌شود: صفحهٔ [فعل‌هایی که معنی‌شان عوض می‌شود](/blog/grammar/verbs-change-meaning-ing-infinitive/) را ببینید.
+
+gi-like-ing.t: *like, love, hate* + *-ing*
+gi-like-ing.s: بعد از **like, love, hate, enjoy** فعل **-ing**‌دار بیاورید: *I like swimming. She loves reading. They hate getting up early.* (*like / love / hate + to* هم درست است.)
+gi-like-ing.b0: برای حرف زدن دربارهٔ کارهایی که دوست دارید یا ندارید، ***like / love / enjoy / hate / don't mind*** + **-ing** بیاورید: *I **love dancing**. My dad **hates waiting**.*
+gi-like-ing.b1: بعد از *like, love* و *hate*، ***to*** + فعل هم درست است، به‌خصوص در انگلیسی آمریکایی: *I **like to swim** / I **like swimming**.* اما بعد از ***enjoy*** و ***don't mind*** فقط *-ing* درست است: *I **enjoy swimming*** (نه *enjoy to swim*).
+gi-like-ing.b2: **املا**: *swim → swimming, make → making, run → running, lie → lying*. قاعده‌ها همان قاعده‌های حال استمراری است.
+gi-like-ing.n0: *like* + *-ing*
+gi-like-ing.n1: *love* + *-ing*
+gi-like-ing.n2: *enjoy* فقط با *-ing*
+gi-like-ing.n3: *don't mind* فقط با *-ing*
+gi-like-ing.w0: *enjoy* + *-ing*.
+gi-like-ing.w1: *like* + *-ing* یا *to*.
+gi-like-ing.w2: *don't mind* + *-ing*.
+
+gi-want-to.t: *want to, need to, decide to, hope to*
+gi-want-to.s: بعد از **want, need, would like, decide, hope, plan, try, learn, forget, promise** فعلِ **to + شکل ساده** بیاورید: *I want to travel. She decided to leave.*
+gi-want-to.b0: خیلی از فعل‌هایی که دربارهٔ خواسته، برنامه و تصمیم‌اند ***to*** + شکل سادهٔ فعل می‌گیرند: *I **want to** learn Spanish. We **hope to** see you soon. They **decided to** move.*
+gi-want-to.b1: شکل منفی ***not to*** است: *I **decided not to** go.* (در انگلیسیِ دقیق نه *decided to not go*، هرچند در صحبت رایج است)
+gi-want-to.n0: *need to*
+gi-want-to.n1: *would like to*
+gi-want-to.n2: *plan to*
+gi-want-to.n3: *not to*
+gi-want-to.w0: *want* + *to*.
+gi-want-to.w1: *decide* + *to*.
+gi-want-to.w2: *hope* + *to*.
+
+gi-enjoy-ing.t: *enjoy, finish, mind, stop, avoid* + *-ing*
+gi-enjoy-ing.s: بعد از **enjoy, finish, mind, stop, avoid, keep, suggest, miss, practise** فعل **-ing**‌دار بیاورید: *Have you finished eating? I can't stop laughing.*
+gi-enjoy-ing.b0: بعضی فعل‌ها همیشه **-ing** می‌گیرند، هیچ‌وقت *to*: *I **finished working** at six. He **kept talking**. Do you **mind waiting**?*
+gi-enjoy-ing.b1: ***keep (on) -ing*** یعنی ادامه دادن یا تکرار کردن: *She **keeps** **asking** me the same question.*
+gi-enjoy-ing.b2: ***stop + -ing*** یعنی دیگر آن کار را نمی‌کنید: *I **stopped smoking** last year.* *stop + to* معنی دیگری دارد. صفحهٔ [فعل‌هایی که معنی‌شان عوض می‌شود](/blog/grammar/verbs-change-meaning-ing-infinitive/#vcm-stop-go-on) را ببینید.
+gi-enjoy-ing.n0: *finish* + *-ing*
+gi-enjoy-ing.n1: *miss* + *-ing*
+gi-enjoy-ing.n2: *avoid* + *-ing*
+gi-enjoy-ing.n3: *practise* + *-ing*
+gi-enjoy-ing.w0: *finish* + *-ing*.
+gi-enjoy-ing.w1: *avoid* + *-ing*.
+gi-enjoy-ing.w2: *mind* + *-ing*.
+
+gi-want-someone-to.t: *want someone to do*: فعل + مفعول + *to*
+gi-want-someone-to.s: **want / would like / ask / tell / expect / help + شخص + to + فعل**: *I want you to come. She asked me to help her.* نه *I want that you come*.
+gi-want-someone-to.b0: برای گفتن اینکه می‌خواهید **شخص دیگری** کاری بکند، ***want + شخص + to*** + فعل بیاورید: *I **want you to** listen. My parents **want me to** study medicine.*
+gi-want-someone-to.b1: فعل‌های دیگر با همین الگو: *would like, ask, tell, expect, help, teach, allow, advise, remind, encourage*: *She **taught me to** drive.*
+gi-want-someone-to.b2: بعد از ***help*** شکل سادهٔ فعل بدون *to* هم می‌آید: *Can you **help me (to) carry** this?*
+gi-want-someone-to.b3: بعد از *want* جمله‌واره با *that* نیاورید: *I want **you to** come* (نه *I want that you come*). فارسی می‌گوید «می‌خواهم که بیایی»، اما انگلیسی این ساختار را ندارد. صفحهٔ [فعل‌های نقل قول](/blog/grammar/reporting-verbs/#rv-verb-object-to) را ببینید.
+gi-want-someone-to.n0: *want* + شخص + *to*
+gi-want-someone-to.n1: *expect*
+gi-want-someone-to.n2: *ask*
+gi-want-someone-to.n3: *help* + شکل سادهٔ فعل (یا *to move*)
+gi-want-someone-to.w0: *want* + شخص + *to*.
+gi-want-someone-to.w1: + *to*.
+gi-want-someone-to.w2: *tell* + شخص + *to*.
+
+gi-preposition-ing.t: بعد از حرف اضافه: *-ing* (*interested in learning, before leaving*)
+gi-preposition-ing.s: بعد از **حرف اضافه** (*in, at, of, for, about, before, after, without*) فعل **-ing**‌دار بیاورید: *I'm interested in learning Chinese. Think before speaking.*
+gi-preposition-ing.b0: فعلی که بعد از حرف اضافه می‌آید همیشه شکل ***-ing*** دارد: *She's good **at drawing**. Thank you **for coming**. **After finishing** work, I went home.*
+gi-preposition-ing.b1: مراقب ***to*** باشید وقتی **حرف اضافه** است، نه بخشی از مصدر: *I look forward **to seeing** you. I'm used **to getting** up early.* (امتحانش کنید: اگر بشود بعدش اسم گذاشت، حرف اضافه است: *I look forward to the party.*)
+gi-preposition-ing.n0: *of* + *-ing*
+gi-preposition-ing.n1: *without* + *-ing*
+gi-preposition-ing.n2: *in* + *-ing*
+gi-preposition-ing.n3: *to* (حرف اضافه) + *-ing*
+gi-preposition-ing.w0: حرف اضافه + *-ing*.
+gi-preposition-ing.w1: *look forward to* + *-ing*.
+gi-preposition-ing.w2: *before* + *-ing*.
+
+gi-lists.t: فعل‌های رایج با *-ing* و با *to*
+gi-lists.s: الگوهای پرکاربرد را یاد بگیرید. **+ -ing**: *admit, avoid, consider, deny, imagine, keep, mind, miss, practise, risk, suggest*. **+ to**: *afford, agree, arrange, decide, expect, fail, hope, manage, offer, plan, promise, refuse, seem*.
+gi-lists.b0.h: فعل + *-ing* | فعل + *to* + فعل
+gi-lists.b1: بعضی فعل‌ها **هر دو** را می‌گیرند، با تفاوت معنایی کم یا بدون تفاوت: *begin, start, continue, like, love, hate, prefer*: *It started **raining** / **to rain**.*
+gi-lists.b2: یک نکتهٔ کمکی: خیلی از فعل‌های *to* به **آینده** نگاه می‌کنند (*hope, plan, promise, decide*)؛ خیلی از فعل‌های *-ing* دربارهٔ چیزی‌اند که **واقعی است یا در جریان است** (*enjoy, finish, avoid, admit*). قاعدهٔ کاملی نیست، اما کمک می‌کند.
+gi-lists.n0: *consider* + *-ing*
+gi-lists.n1: *afford* + *to*
+gi-lists.n2: *pretend* + *to*
+gi-lists.n3: *admit* + *-ing*
+gi-lists.w0: *afford* + *to*.
+gi-lists.w1: *consider* + *-ing*.
+gi-lists.w2: *manage* + *to*.
+
+x.gi-like-ing-s01: *Enjoy* فقط با *-ing*.
+x.gi-like-ing-s02: *Hate* + *-ing* (یا *to do*).
+x.gi-like-ing-s03: *Love* + *-ing* (یا *to go*).
+x.gi-want-to-s01: *Want* + *to* + فعل.
+x.gi-want-to-s02: *Decide* + *to* + فعل.
+x.gi-want-to-s03: *Hope* + *to* + فعل.
+x.gi-enjoy-ing-s01: *Finish* + *-ing*.
+x.gi-enjoy-ing-s02: *Keep* + *-ing*.
+x.gi-enjoy-ing-s03: *Mind* + *-ing*.
+x.gi-want-someone-to-s01: *Would like* + شخص + *to* + فعل.
+x.gi-want-someone-to-s02: *Want* + شخص + *to* + فعل.
+x.gi-want-someone-to-s03: *Help* + شخص + شکل سادهٔ فعل (یا *to* + فعل).
+x.gi-preposition-ing-s01: *Good at* + *-ing*.
+x.gi-preposition-ing-s02: *Look forward to* + *-ing*.
+x.gi-preposition-ing-s03: *Without* + *-ing*.
+x.gi-lists-s01: *Afford* + *to* + فعل.
+x.gi-lists-s02: *Consider* + *-ing*.
+x.gi-lists-s03: *Refuse* + *to* + فعل.

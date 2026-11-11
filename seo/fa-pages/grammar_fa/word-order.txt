@@ -1,0 +1,76 @@
+# word-order — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ترتیب کلمه‌ها در انگلیسی نسبتاً **ثابت** است: ***فاعل + فعل + مفعول***: *Sara **loves** coffee.* (نه *Sara coffee loves*). در فارسی فعل آخر می‌آید («سارا قهوه دوست دارد»)، اما در انگلیسی فعل بعد از فاعل می‌آید. اطلاعات **مکان** و **زمان** معمولاً آخر جمله و به همین ترتیب می‌آیند.
+i1: این صفحه ترتیب پایه، جای قیدها و نحوهٔ آوردن دو مفعول را نشان می‌دهد.
+
+wo-svo.t: فاعل + فعل + مفعول
+wo-svo.s: ترتیب عادی **فاعل + فعل + مفعول** است (*I like tea*). **بین** فعل و مفعولش چیزی نگذارید: *I like tea very much* (نه *I like very much tea*).
+wo-svo.b0.h: فاعل | فعل | مفعول | بقیه
+wo-svo.b1: در انگلیسی، در جملهٔ خبری **فاعل** قبل از فعل می‌آید، حتی برای هوا: ***It*** *is raining.* (فارسی می‌گوید «باران می‌آید» بدون فاعل جدا، اما انگلیسی *It* لازم دارد.)
+wo-svo.b2: فعل و مفعولش را **کنار هم** نگه دارید: *She speaks English well.* (نه *She speaks well English*)
+wo-svo.n0: فاعل + فعل + مفعول
+wo-svo.n1: فعل و مفعول کنار هم
+wo-svo.n2: فاعل + فعل + مفعول
+wo-svo.n3: فاعل + فعل + مفعول
+wo-svo.w0: فعل و مفعول کنار هم.
+wo-svo.w1: فعل و مفعول کنار هم.
+wo-svo.w2: فاعل اول می‌آید.
+
+wo-place-time.t: مکان قبل از زمان: *at the station yesterday*
+wo-place-time.s: آخر جمله، **مکان** را قبل از **زمان** بیاورید: *I met her **at the station yesterday**.* اگر حالت (چطور) هم باشد، ترتیب معمول **حالت ← مکان ← زمان** است: *She worked **hard at the office all day**.*
+wo-place-time.b0.h: فاعل + فعل (+ مفعول) + حالت | مکان (کجا) | زمان (کی)
+wo-place-time.b1: عبارت‌های **زمان** می‌توانند **اول** جمله هم بیایند: ***Yesterday** I met Ali at the station.*
+wo-place-time.b2: کلمه‌هایی مثل *today* و *tomorrow* آخر یا اول جمله می‌آیند، نه وسط: *I'm working **today**.* (نه *I'm today working*)
+wo-place-time.n0: مکان، زمان
+wo-place-time.n1: مکان، زمان
+wo-place-time.n2: زمان در اول جمله
+wo-place-time.n3: حالت، مکان
+wo-place-time.w0: آخر جمله مکان قبل از زمان می‌آید.
+wo-place-time.w1: مکان قبل از زمان.
+wo-place-time.w2: زمان در آخر جمله.
+
+wo-adverbs.t: قیدها کجا می‌آیند؟ *also, probably, already, only*
+wo-adverbs.s: خیلی از قیدهای کوتاه **وسط** جمله می‌آیند: **قبل از فعل اصلی**، اما **بعد از** *be* و اولین **فعل کمکی**: *I **also** like tea. She's **probably** at home. We've **already** eaten.*
+wo-adverbs.b0.h: قید | جا | مثال
+wo-adverbs.b0.0: = ‖ قبل از فعل اصلی ‖ =
+wo-adverbs.b0.1:  ‖ بعد از *be* ‖ =
+wo-adverbs.b0.2:  ‖ بعد از اولین فعل کمکی ‖ =
+wo-adverbs.b0.3: *probably, definitely* + منفی ‖ قبل از *won't / don't* ‖ =
+wo-adverbs.b1: در جملهٔ منفی، *probably* و *definitely* **قبل از** فعل کمکیِ منفی می‌آیند: *I **probably won't** be late.* بیشتر قیدهای دیگر بعد از آن می‌آیند: *I **don't often** go.*
+wo-adverbs.b2: ***only*** قبل از کلمه‌ای می‌آید که توصیفش می‌کند، و جایش می‌تواند معنی را عوض کند: ***Only** I saw her* (فقط من، نه کس دیگر) / *I **only** saw her* (فقط دیدمش، با او حرف نزدم).
+wo-adverbs.n0: قبل از فعل اصلی
+wo-adverbs.n1: بعد از *be*
+wo-adverbs.n2: بعد از فعل کمکی
+wo-adverbs.n3: *probably* + منفی
+wo-adverbs.w0: قبل از فعل اصلی.
+wo-adverbs.w1: *probably* قبل از *won't*.
+wo-adverbs.w2: نه بین فعل و مفعولش.
+
+wo-two-objects.t: دو مفعول: *give me the book, give the book to me*
+wo-two-objects.s: فعل‌هایی مثل ***give, send, show, lend, tell*** می‌توانند دو مفعول داشته باشند: ***give** someone something* (*She gave me a present*) یا ***give** something **to** someone* (*She gave a present to me*). با *buy, make, get, cook* از ***for*** استفاده کنید.
+wo-two-objects.b0.h: الگو | مثال
+wo-two-objects.b0.0: فعل + شخص + چیز ‖ =
+wo-two-objects.b0.1: فعل + چیز + *to* + شخص ‖ =
+wo-two-objects.b0.2: فعل + چیز + *for* + شخص (*buy, make, get, cook*) ‖ =
+wo-two-objects.b0.3: وقتی «چیز» ضمیر است ‖ *Give **it** to me.* (*Give me it* خودمانی است)
+wo-two-objects.b1: وقتی «چیز» **ضمیر** است (*it, them*)، از *to / for* استفاده کنید: *Can you send **it to** me?*
+wo-two-objects.b2: بعضی فعل‌ها فقط ***to*** + شخص می‌گیرند: ***explain** it **to** me, **describe** it **to** her, **say** something **to** him* (نه *explain me it*).
+wo-two-objects.n0: شخص + چیز
+wo-two-objects.n1: چیز + *to* + شخص
+wo-two-objects.n2: *for*
+wo-two-objects.n3: *explain* + *to*
+wo-two-objects.w0: *explain* + *to*. (فارسی می‌گوید «برایم توضیح بده»، ولی *explain me* غلط است.)
+wo-two-objects.w1: *buy* + *for*.
+wo-two-objects.w2: وقتی «چیز» ضمیر است: *to* (در انگلیسیِ دقیق).
+
+x.wo-svo-s01: فعل و مفعول کنار هم: *love pizza*.
+x.wo-svo-s02: فعل و مفعول کنار هم: *speaks Spanish*.
+x.wo-svo-s03: فعل + مفعول: *plays tennis*.
+x.wo-place-time-s01: فعل + مفعول، بعد مکان، بعد زمان.
+x.wo-place-time-s02: فعل + مفعول، بعد مکان، بعد زمان.
+x.wo-place-time-s03: مکان قبل از زمان.
+x.wo-adverbs-s01: قبل از فعل اصلی: *also speaks*.
+x.wo-adverbs-s02: بعد از فعل کمکی: *will probably*.
+x.wo-adverbs-s03: بعد از فعل کمکی: *have already eaten*.
+x.wo-two-objects-s01: فعل + شخص + چیز.
+x.wo-two-objects-s02: *Buy* + چیز + *for* + شخص.
+x.wo-two-objects-s03: *Explain* + چیز + *to* + شخص.

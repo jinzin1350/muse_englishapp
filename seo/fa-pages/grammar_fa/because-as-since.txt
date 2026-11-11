@@ -1,0 +1,22 @@
+# because-as-since — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***because*** رایج‌ترین راه برای گفتن **دلیل** است: *I stayed at home **because** I was ill.* ***as*** و ***since*** همان معنی را دارند (چون، از آنجا که)، و وقتی دلیل از قبل **معلوم** است اغلب اول جمله می‌آیند: ***As** it's late, let's go home.*
+i1: بعد از ***due to, owing to*** و ***thanks to***، مثل *because of*، **اسم** می‌آید. برای پایهٔ *so* و *because* صفحهٔ [and، but، or، so، because](/blog/grammar/and-but-or-so-because/) را ببینید.
+
+bas-as-since.t: *because, as* و *since*
+bas-as-since.s: ***because***، ***as*** و ***since*** همه دلیل + جمله‌واره می‌آورند. ***because*** روی دلیل تأکید بیشتری دارد و جواب معمول به *Why?* است. ***as*** و ***since*** وقتی دلیل روشن یا از قبل معلوم است اغلب اول جمله می‌آیند.
+bas-as-since.b0.h: کلمه | کاربرد معمول | مثال
+bas-as-since.b0.0: = ‖ دلیل همان اطلاعات تازه و مهم است ‖ =
+bas-as-since.b0.1: = ‖ دلیلِ معلوم، اغلب اول جمله ‖ =
+bas-as-since.b0.2: = ‖ دلیلِ معلوم، اغلب اول جمله ‖ =
+bas-as-since.b1: برای جواب دادن به سؤالِ ***Why?*** از ***because*** استفاده کنید: *Why are you late? ~ **Because** I missed the bus.* (نه *As I missed the bus*)
+bas-as-since.b2: ***since*** معنی «از زمانِ» هم دارد (*since 2010*) و ***as*** معنی «در حالی که» یا «مثلِ»، پس معنی را در جمله چک کنید.
+bas-as-since.n0: دلیلِ معلوم
+bas-as-since.n1: دلیلِ معلوم
+bas-as-since.n2: دلیل به‌عنوان اطلاعات تازه
+bas-as-since.n3: جواب به *Why?*
+bas-as-since.w0: جواب به *Why?*: *because*.
+bas-as-since.w1: *as* و *so* با هم نه.
+
+x.bas-as-since-s01: دلیلِ معلوم: *As*.
+x.bas-as-since-s02: جواب به *Why?*: *Because*.
+x.bas-as-since-s03: دلیلِ معلوم: *Since*.

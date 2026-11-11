@@ -1,0 +1,65 @@
+# the-or-no-article — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: در انگلیسی خیلی از اسم‌ها اصلاً حرف تعریف ندارند. به این **حرف تعریفِ صفر** می‌گویند: *I love **music**. **Dogs** are friendly. She's **at work**.* این صفحه نشان می‌دهد کِی ***the*** بیاورید و کِی **هیچ چیز**.
+i1: برای *a / an* و کاربردهای پایهٔ *the* صفحهٔ [a، an و the](/blog/grammar/a-an-the/) را ببینید.
+
+tna-general.t: کلی یا مشخص؟ *music* یا *the music*
+tna-general.s: برای چیزها **به طور کلی** (اسم جمع و غیرقابل‌شمارش) حرف تعریف نیاورید: *I love music. Cats are clever.* برای چیزهای **مشخص** **the** بیاورید: *The music at the party was great.*
+tna-general.b0.h: کلی (بدون حرف تعریف) | مشخص (*the*)
+tna-general.b1: با اسم **جمع** و **غیرقابل‌شمارش**، نبودنِ حرف تعریف یعنی همه‌شان، به طور کلی: ***Children** need sleep. **Water** is important.*
+tna-general.b2: ***the*** آن را مشخص می‌کند: گروه یا چیزی خاص که می‌شود تشخیصش داد: *the children in my class, the water in this bottle*.
+tna-general.b3: خیلی از زبان‌ها برای مفهوم‌های کلی *the* می‌آورند. در انگلیسی، کلی یعنی بدون حرف تعریف: ***Love** is blind. **Nature** is beautiful.* (فارسی‌زبان‌ها گاهی «زندگی» یا «طبیعت» را با *the* ترجمه می‌کنند؛ لازم نیست.)
+tna-general.n0: کلی
+tna-general.n1: مشخص
+tna-general.n2: کلی، غیرقابل‌شمارش
+tna-general.n3: گروهِ مشخص
+tna-general.w0: کلی: بدون حرف تعریف.
+tna-general.w1: کلی: بدون حرف تعریف.
+tna-general.w2: مفهومِ کلی و انتزاعی: بدون حرف تعریف.
+
+tna-home-work-school.t: *at home, go to work, in bed, by bus, have lunch*
+tna-home-work-school.s: در عبارت‌های ثابت با **home, work, school, bed, hospital, prison, church, university**، با **وعده‌های غذا** (*have breakfast*) و با **by + وسیلهٔ نقلیه** (*by bus*) حرف تعریف نمی‌آید.
+tna-home-work-school.b0.h: کلمه | عبارت‌های بدون حرف تعریف
+tna-home-work-school.b0.0: = ‖ *go **home**, be **at home*** (نه *go to home*)
+tna-home-work-school.b0.4: = ‖ *be **in hospital*** (بریتانیایی)، *go **to church***
+tna-home-work-school.b0.5: وعده‌های غذا ‖ =
+tna-home-work-school.b0.6: وسیلهٔ نقلیه ‖ =
+tna-home-work-school.b1: این عبارت‌ها دربارهٔ **کاربرد** آن مکان‌اند: *go to school* یعنی برای درس خواندن؛ *in hospital* یعنی به‌عنوان بیمار. وقتی منظورتان **خودِ ساختمان** است ***the*** بیاورید: *My mother went to **the school** to talk to the teacher.* (او دانش‌آموز نیست.)
+tna-home-work-school.b2: با صفت یا یک وعدهٔ غذای مشخص حرف تعریف بیاورید: *We had **a** great lunch. **The** dinner at the wedding was amazing.*
+tna-home-work-school.b3: انگلیسی آمریکایی معمولاً می‌گوید *in **the** hospital*. هر دو درست است.
+tna-home-work-school.n0: با *home* حرف *to* نمی‌آید
+tna-home-work-school.n1: *at work*
+tna-home-work-school.n2: وعدهٔ غذا
+tna-home-work-school.n3: *by* + وسیلهٔ نقلیه
+tna-home-work-school.n4: خودِ ساختمان (به‌عنوان ملاقات‌کننده)
+tna-home-work-school.w0: *to bed*: بدون حرف تعریف.
+tna-home-work-school.w1: *home*: بدون *to* و بدون حرف تعریف.
+tna-home-work-school.w2: *by* + وسیلهٔ نقلیه: بدون حرف تعریف.
+
+tna-geography.t: کشورها، شهرها، رودها و کوه‌ها
+tna-geography.s: برای بیشتر **کشورها، شهرها، خیابان‌ها، دریاچه‌ها، تک‌کوه‌ها و قاره‌ها** حرف تعریف نیاورید (*Canada, Lake Ontario, Mount Everest*). برای **رودها، دریاها، اقیانوس‌ها، رشته‌کوه‌ها، مجمع‌الجزایر، بیابان‌ها** و اسم‌های جمع **the** بیاورید (*the Nile, the Alps, the USA*).
+tna-geography.b0.h: بدون حرف تعریف | *the*
+tna-geography.b0.0: کشورها: *Canada, Iran, Japan* ‖ =
+tna-geography.b0.1: شهرها: *Toronto, Shiraz* ‖ رودها: *the Nile, the Thames*
+tna-geography.b0.2: قاره‌ها: *Asia, Europe* ‖ دریاها و اقیانوس‌ها: *the Caspian Sea, the Pacific*
+tna-geography.b0.3: خیابان‌ها و میدان‌ها: *Oxford Street, Times Square* ‖ بیابان‌ها: *the Sahara*
+tna-geography.b0.4: تک‌کوه‌ها: *Mount Everest, Damavand* ‖ رشته‌کوه‌ها: *the Alps, the Rockies*
+tna-geography.b0.5: دریاچه‌ها: *Lake Ontario* ‖ مجمع‌الجزایر: *the Bahamas*
+tna-geography.b1: با اسم کشورهایی که *Republic, Kingdom, States* یا *Union* دارند یا **جمع**‌اند ***the*** بیاورید: *the Czech Republic, the United Kingdom, the United States, the Netherlands*.
+tna-geography.b2: با *north, south, east, west* به معنی منطقه ***the*** بیاورید: *the north of Iran, the Middle East*. اما وقتی جهت بخشی از اسم است حرف تعریف نمی‌آید: *North America, South Korea*.
+tna-geography.n0: بدون حرف تعریف
+tna-geography.n1: رود، دریا
+tna-geography.n2: رشته‌کوه
+tna-geography.n3: *States*
+tna-geography.w0: کشورها: بدون حرف تعریف.
+tna-geography.w1: دریاها: *the*.
+tna-geography.w2: تک‌کوه: بدون حرف تعریف.
+
+x.tna-general-s01: کلی، انتزاعی: *love* (بدون حرف تعریف).
+x.tna-general-s02: کلی: *nature* (بدون حرف تعریف).
+x.tna-general-s03: گروهِ مشخص: *the students in my class*.
+x.tna-home-work-school-s01: *Go to bed*.
+x.tna-home-work-school-s02: *By* + وسیلهٔ نقلیه: بدون حرف تعریف.
+x.tna-home-work-school-s03: خودِ ساختمان: *the school* (یا *my school*). او دانش‌آموز نیست.
+x.tna-geography-s01: اسمِ جمع: *the Netherlands*.
+x.tna-geography-s02: رودها: *the Nile*.
+x.tna-geography-s03: *The USA* (*States*).

@@ -1,0 +1,100 @@
+# reported-speech — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **نقل قول غیرمستقیم** (*reported speech*) یعنی به کسی بگوییم شخص دیگری چه گفته، بدون اینکه عین کلماتش را تکرار کنیم: *“I'm tired.” → She **said** (that) she **was** tired.*
+i1: تغییرهای اصلی در **زمان فعل**، **ضمیرها** و **کلمه‌های زمان** است. برای فعل‌های نقل قولِ دیگر (*promise, suggest, warn*) صفحهٔ [فعل‌های نقل قول](/blog/grammar/reporting-verbs/) را ببینید.
+
+rs-said-told.t: *say* یا *tell*؟ *She said* / *She told me*
+rs-said-told.s: **say** + (that) + حرف: *She said (that) she was hungry.* **tell + شخص** + (that): *She told me (that) she was hungry.*
+rs-said-told.b0.h: say | tell
+rs-said-told.b0.2: *She **said to me** that…* (ممکن، اما کمتر رایج) ‖ *She **told** that…* ✗ (شخص لازم دارد)
+rs-said-told.b1: بعد از ***tell*** باید **شخص** بیاید: *tell me, tell him, tell the class*. ***say*** شخص نمی‌خواهد: *say something*. اگر بعد از *say* شخص می‌خواهید، *to* بیاورید: *He **said to** me…*
+rs-said-told.b2: ***that*** بعد از هر دو اختیاری است: *She said **(that)** she was busy.*
+rs-said-told.b3: عبارت‌های ثابت با *tell*: *tell the truth, tell a lie, tell a story, tell a joke, tell the time*. با *say*: *say hello, say goodbye, say sorry, say something / nothing*.
+rs-said-told.n0: *say* + حرف
+rs-said-told.n1: *tell* + شخص
+rs-said-told.n2: *tell* + قصه
+rs-said-told.n3: *say* + *goodbye*
+rs-said-told.w0: *tell* شخص لازم دارد.
+rs-said-told.w1: با شخص: *tell*. (فارسی می‌گوید «به من گفت»، اما *said me* غلط است.)
+rs-said-told.w2: *tell the time*.
+
+rs-backshift.t: تغییر زمان: یک قدم به عقب
+rs-backshift.s: وقتی فعل نقل قول گذشته است (*said, told*)، زمان فعل معمولاً **یک قدم به عقب** می‌رود: *“I'm tired” → She said she **was** tired. “I'll call” → He said he **would** call.* (در فارسی زمان عوض نمی‌شود: «گفت خسته است».)
+rs-backshift.b0.h: نقل قول مستقیم | نقل قول غیرمستقیم
+rs-backshift.b0.0: حال ساده: *“I **work** here.”* ‖ گذشتهٔ ساده: *He said he **worked** there.*
+rs-backshift.b0.1: حال استمراری: *“I**'m** **leaving**.”* ‖ گذشتهٔ استمراری: *She said she **was leaving**.*
+rs-backshift.b0.2: حال کامل: *“I**'ve finished**.”* ‖ گذشتهٔ کامل: *He said he **had finished**.*
+rs-backshift.b0.3: گذشتهٔ ساده: *“I **lost** it.”* ‖ گذشتهٔ کامل: *She said she **had lost** it.* (یا *lost*)
+rs-backshift.b1: ضمیرها هم عوض می‌شوند تا با گویندهٔ جدید جور باشند: *“**I** love **my** job.” → She said **she** loved **her** job.*
+rs-backshift.b2: وقتی زمان روشن است، گذشتهٔ ساده در نقل قول غیرمستقیم می‌تواند تغییر نکند: *She said she **lost** / **had lost** her keys yesterday.*
+rs-backshift.n0: حال ← گذشته
+rs-backshift.n1: استمراری
+rs-backshift.n2: حال کامل ← گذشتهٔ کامل
+rs-backshift.n3: *will* ← *would*
+rs-backshift.w0: یک قدم به عقب: *was* (او الان خسته نیست).
+rs-backshift.w1: *will* ← *would* (آن زمان گذشته است).
+
+rs-no-backshift.t: وقتی زمان عوض نمی‌شود
+rs-no-backshift.s: وقتی فعل نقل قول **حال** است (*She says she's tired*) زمان را عوض نکنید؛ و وقتی موقعیت **هنوز درست است** عوض کردنش اختیاری است: *He said he lives in Paris.*
+rs-no-backshift.b0: اگر فعل نقل قول **حال** باشد (*says, tells, thinks*)، زمان عوض نمی‌شود: *My doctor **says** I **need** more rest.*
+rs-no-backshift.b1: اگر حرفی که زده شده **هنوز درست است**، می‌توانید زمان اصلی را نگه دارید: *“I'm a vegetarian.” → She said she **is** a vegetarian.* (هنوز گیاه‌خوار است.) اینجا هم *is* درست است هم *was*.
+rs-no-backshift.b2: حقیقت‌های کلی معمولاً حال می‌مانند: *The teacher said that water **boils** at 100°C.*
+rs-no-backshift.b3: اگر شک دارید، زمان را یک قدم به عقب ببرید. بعد از فعل نقل قولِ گذشته، اگر آن حرف در آن زمان درست بوده، این کار همیشه درست است.
+rs-no-backshift.n0: فعل نقل قولِ حال
+rs-no-backshift.n1: هنوز درست است
+rs-no-backshift.n2: حقیقت کلی
+rs-no-backshift.n3: فعل نقل قولِ حال
+rs-no-backshift.w0: فعل نقل قولِ حال: زمان عوض نمی‌شود.
+
+rs-time-place.t: کلمه‌های زمان و مکان: *tomorrow → the next day*
+rs-time-place.s: وقتی زمان یا مکان عوض شده، کلمه‌هایی مثل **now, today, tomorrow, here, this** هم عوض می‌شوند: *“I'll see you tomorrow.” → He said he'd see me **the next day**.*
+rs-time-place.b0.h: مستقیم | غیرمستقیم
+rs-time-place.b1: این کلمه‌ها را فقط وقتی عوض کنید که موقع نقل کردن، زمان یا مکان **فرق کرده** باشد. اگر همان روز نقل می‌کنید، *“I'll call you tomorrow”* می‌تواند بماند: *He said he'd call me **tomorrow***.
+rs-time-place.n0: *today* ← *that day*
+rs-time-place.n1: *yesterday* ← *the day before*
+rs-time-place.n2: *tomorrow* ← *the next day*
+rs-time-place.n3: *here* ← *there*
+rs-time-place.w0: بعداً نقل شده: *the next day*.
+
+rs-questions.t: نقل سؤال: *He asked me where I lived*
+rs-questions.s: در نقل سؤال، **ترتیب جملهٔ خبری** می‌آید و *do / did* نمی‌آید: *“Where do you live?” → He asked me where I **lived**.* برای سؤال‌های بله/نه **if / whether** بیاورید.
+rs-questions.b0.h: سؤال مستقیم | سؤال نقل‌شده
+rs-questions.b1: در نقل سؤال: ترتیبِ سؤالی نه، *do / does / did* نه، علامت سؤال نه: *She asked where **the station was**.* نه *She asked where was the station?*
+rs-questions.b2: زمان فعل مثل جمله‌های خبری یک قدم به عقب می‌رود.
+rs-questions.n0: ترتیب جملهٔ خبری
+rs-questions.n1: بله/نه: *if*
+rs-questions.n2: ترتیب جملهٔ خبری
+rs-questions.n3: *whether*
+rs-questions.w0: بدون *did*؛ ترتیب جملهٔ خبری.
+rs-questions.w1: بله/نه: *if / whether*.
+rs-questions.w2: ترتیب جملهٔ خبری.
+
+rs-orders-requests.t: نقل دستور و درخواست: *told me to, asked me not to*
+rs-orders-requests.s: **tell / ask + شخص + (not) to + فعل**: *“Sit down.” → She told me **to sit** down. “Please don't shout.” → He asked us **not to** shout.*
+rs-orders-requests.b0.h: مستقیم | غیرمستقیم
+rs-orders-requests.b1: برای دستور و راهنمایی ***tell*** و برای درخواست ***ask*** بیاورید. شکل منفی ***not to*** + فعل است (نه *to don't*).
+rs-orders-requests.n0: دستور
+rs-orders-requests.n1: درخواست
+rs-orders-requests.n2: دستور منفی
+rs-orders-requests.n3: درخواست
+rs-orders-requests.w0: *not to* + فعل.
+rs-orders-requests.w1: *ask* + شخص + *to*.
+rs-orders-requests.w2: *tell* + شخص (بدون *to*).
+
+x.rs-said-told-s01: *Tell* + شخص.
+x.rs-said-told-s02: *Say* + (that): بعدش شخص نمی‌آید.
+x.rs-said-told-s03: *Tell* + شخص.
+x.rs-backshift-s01: حال ← گذشته: *was*.
+x.rs-backshift-s02: *Will* ← *would*.
+x.rs-backshift-s03: حال کامل ← گذشتهٔ کامل (*lost* هم رایج است).
+x.rs-no-backshift-s01: فعل نقل قولِ حال: زمان عوض نمی‌شود.
+x.rs-no-backshift-s02: حقیقت کلی: حال طبیعی است (*was* هم ممکن است).
+x.rs-no-backshift-s03: فعل نقل قولِ حال: زمان عوض نمی‌شود.
+x.rs-time-place-s01: *Yesterday* ← *the day before*.
+x.rs-time-place-s02: *Tomorrow* ← *the next day*.
+x.rs-time-place-s03: *Now* ← *then*.
+x.rs-questions-s01: ترتیب جملهٔ خبری، یک قدم به عقب: *I worked*.
+x.rs-questions-s02: سؤال بله/نه: *if* (یا *whether*).
+x.rs-questions-s03: ترتیب جملهٔ خبری، بدون *does*: *started*.
+x.rs-orders-requests-s01: *Ask* + شخص + *to* + فعل.
+x.rs-orders-requests-s02: منفی: *not to* + فعل.
+x.rs-orders-requests-s03: *Tell* + شخص + *to* + فعل.

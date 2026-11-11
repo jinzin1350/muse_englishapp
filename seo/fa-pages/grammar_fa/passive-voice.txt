@@ -1,0 +1,92 @@
+# passive-voice — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: در جملهٔ **مجهول**، کسی یا چیزی که کار **رویش** انجام می‌شود فاعل جمله می‌شود: *The bridge **was built** in 1932.* (پل در ۱۹۳۲ ساخته شد.) لازم نیست بگوییم چه کسی آن را ساخت.
+i1: مجهول با **be** + **اسم مفعول** (قسمت سوم فعل) ساخته می‌شود، در هر زمانی: *is made, was made, has been made, will be made*. با جملهٔ معلوم مقایسه کنید: *Engineers **built** the bridge in 1932.*
+
+pv-present.t: مجهولِ حال ساده: *is made, are sold*
+pv-present.s: **am / is / are + اسم مفعول**: *Cheese **is made** from milk. These phones **are made** in Korea.*
+pv-present.b0.h: معلوم | مجهول
+pv-present.b1: با فاعل مفرد *is* و با فاعل جمع *are* بیاورید. بعد **اسم مفعول** را اضافه کنید (*made, spoken, cleaned*).
+pv-present.b2: منفی و سؤالی مثل *be* ساخته می‌شوند: *Breakfast **isn't included**. **Is** breakfast **included**?*
+pv-present.n0: واقعیت کلی
+pv-present.n1: با *by*
+pv-present.n2: *made of* (ساخته‌شده از)
+pv-present.n3: سؤالی
+pv-present.w0: *is* + اسم مفعول.
+pv-present.w1: جمع: *are*.
+pv-present.w2: مجهول *be* لازم دارد.
+
+pv-past.t: مجهولِ گذشتهٔ ساده: *was built, were invited*
+pv-past.s: **was / were + اسم مفعول**: *The castle **was built** in 1450. We **were invited** to the wedding.* برای گفتن اینکه چه کسی کار را کرده **by** اضافه کنید.
+pv-past.b0.h: معلوم | مجهول
+pv-past.b1: با *I / he / she / it* ***was*** و با *you / we / they* ***were*** بیاورید: *The car **was repaired**. The cars **were repaired**.*
+pv-past.b2: ***by*** + شخص یا چیز را فقط وقتی بیاورید که گفتنِ انجام‌دهندهٔ کار مهم است: *The telephone **was invented by** Bell.*
+pv-past.n0: نمی‌دانیم چه کسی
+pv-past.n1: *by* + انجام‌دهنده
+pv-past.n2: دلیل
+pv-past.n3: *born* مجهول است
+pv-past.w0: *was* + اسم مفعول.
+pv-past.w1: جمع: *were*.
+pv-past.w2: انجام‌دهنده: *by*. (فارسی می‌گوید «**توسط** حافظ» یا «**از** حافظ»، ولی انگلیسی فقط *by*.)
+
+pv-use-by.t: کِی مجهول به کار می‌بریم؟ و کِی *by* لازم است؟
+pv-use-by.s: وقتی **انجام‌دهندهٔ کار** معلوم نیست، واضح است یا مهم نیست، یا وقتی می‌خواهیم روی **خودِ کار یا نتیجه** تمرکز کنیم، مجهول بیاورید. **by** را فقط وقتی بیاورید که انجام‌دهنده اطلاعات مفیدی اضافه کند.
+pv-use-by.b0: مجهول را وقتی به کار می‌بریم که:
+pv-use-by.b1.0: **نمی‌دانیم** چه کسی کار را کرده: *My wallet **has been stolen**.*
+pv-use-by.b1.1: انجام‌دهنده **واضح** است یا **مهم نیست**: *The rubbish **is collected** on Mondays.* (معلوم است که شهرداری جمع می‌کند)
+pv-use-by.b1.2: می‌خواهیم روی خودِ چیز **تمرکز** کنیم، نه روی آدم: *This song **was written** in 1965.*
+pv-use-by.b1.3: در نوشتهٔ **رسمی، علمی یا خبری**: *The samples **were heated** to 100°C.*
+pv-use-by.b2: وقتی *by* + انجام‌دهنده چیز تازه‌ای نمی‌گوید، حذفش کنید: *The thief **was arrested*** (نه *by the police*، که واضح است). وقتی مهم است نگهش دارید: *The film **was directed by** a 19-year-old.*
+pv-use-by.b3: در استفاده از مجهول زیاده‌روی نکنید. در صحبت روزمره، جملهٔ معلوم معمولاً طبیعی‌تر است: *Someone stole my bike* یا *My bike was stolen* هر دو خوب‌اند؛ *My bike was stolen by someone* طبیعی نیست.
+pv-use-by.n0: نمی‌دانیم چه کسی
+pv-use-by.n1: انجام‌دهنده مهم است
+pv-use-by.n2: تمرکز روی کار، نه آدم
+pv-use-by.n3: یک فرایند (رسمی)
+pv-use-by.w0: *by someone* چیزی اضافه نمی‌کند.
+pv-use-by.w1: انجام‌دهندهٔ واضح را حذف کنید (معلوم است که پلیس دستگیر می‌کند).
+
+pv-continuous-perfect.t: مجهولِ استمراری و کامل: *is being done, has been done*
+pv-continuous-perfect.s: استمراری: **is / was being + اسم مفعول**. کامل: **has / had been + اسم مفعول**: *The road is being repaired. My bike has been stolen.*
+pv-continuous-perfect.b0.h: زمان | شکل مجهول | مثال
+pv-continuous-perfect.b0.0: حال استمراری ‖ *am / is / are **being*** + اسم مفعول ‖ =
+pv-continuous-perfect.b0.1: گذشتهٔ استمراری ‖ *was / were **being*** + اسم مفعول ‖ =
+pv-continuous-perfect.b0.2: حال کامل ‖ *has / have **been*** + اسم مفعول ‖ =
+pv-continuous-perfect.b0.3: گذشتهٔ کامل ‖ *had **been*** + اسم مفعول ‖ =
+pv-continuous-perfect.b1: زمان را همان‌طور انتخاب کنید که برای جملهٔ معلوم انتخاب می‌کردید، بعد با یک شکل از ***be*** + اسم مفعول مجهولش کنید.
+pv-continuous-perfect.b2: ***being*** (استمراری) و ***been*** (کامل) را قاطی نکنید: *is **being** built* (الان در حال ساخت است) / *has **been** built* (ساخته شده و تمام شده).
+pv-continuous-perfect.n0: الان در جریان است
+pv-continuous-perfect.n1: در گذشته در جریان بود
+pv-continuous-perfect.n2: حال کامل
+pv-continuous-perfect.n3: گذشتهٔ کامل
+pv-continuous-perfect.w0: استمراری: *being*.
+pv-continuous-perfect.w1: کامل: *been*.
+
+pv-modals.t: مجهولِ آینده و فعل‌های وجهی: *will be done, can be done, must be done*
+pv-modals.s: بعد از **will, can, must, should, might** شکل **be + اسم مفعول** بیاورید: *The results will be announced tomorrow. This can't be done.*
+pv-modals.b0.h: معلوم | مجهول
+pv-modals.b1: الگو همیشه ***فعل وجهی + be + اسم مفعول*** است: *will be built, can be seen, must be paid, might be cancelled*.
+pv-modals.b2: *be going to* هم همین‌طور است: *The match **is going to be shown** on TV.*
+pv-modals.b3: برای گذشته ***فعل وجهی + have been + اسم مفعول*** بیاورید: *It **should have been fixed** last week.* *The letter **might have been lost**.*
+pv-modals.n0: مجهولِ آینده
+pv-modals.n1: قانون
+pv-modals.n2: احتمال
+pv-modals.n3: مجهولِ وجهی در گذشته
+pv-modals.w0: فعل وجهی + *be* + اسم مفعول.
+pv-modals.w1: اسم مفعول: *done*.
+
+x.pv-present-s01: مجهولِ حال ساده: *is spoken*.
+x.pv-present-s02: فاعل جمع: *are made*.
+x.pv-present-s03: *Is* + اسم مفعول.
+x.pv-past-s01: مجهولِ گذشتهٔ ساده: *was built*.
+x.pv-past-s02: انجام‌دهنده: *by*.
+x.pv-past-s03: *Was* + اسم مفعول.
+q.pv-use-by-s01: کدام جمله مجهول را طبیعی‌تر به کار برده است؟
+x.pv-use-by-s01: انجام‌دهنده معلوم نیست یا واضح است: بدون *by*.
+q.pv-use-by-s02: در کدام جمله عبارتِ *by* مفید است؟
+x.pv-use-by-s02: *By a famous architect* اطلاعات تازه و مفیدی اضافه می‌کند.
+x.pv-use-by-s03: مجهولِ آینده: *will be published*.
+x.pv-continuous-perfect-s01: مجهولِ حال استمراری: *is being cleaned*.
+x.pv-continuous-perfect-s02: مجهولِ حال کامل: *has been approved*.
+x.pv-continuous-perfect-s03: مجهولِ گذشتهٔ کامل: *hadn't been prepared*.
+x.pv-modals-s01: مجهولِ آینده: *will be sent*.
+x.pv-modals-s02: مجهولِ وجهی: *can be recycled*.
+x.pv-modals-s03: مجهولِ وجهی: *must be completed*.

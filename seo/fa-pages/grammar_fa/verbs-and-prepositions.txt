@@ -1,0 +1,60 @@
+# verbs-and-prepositions — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: بعد از خیلی از فعل‌ها یک **حرف اضافهٔ ثابت** می‌آید: *I'm **waiting for** the bus. It **depends on** the weather. Can you **listen to** me?* فعل و حرف اضافه‌اش را **با هم** یاد بگیرید.
+i1: بعضی فعل‌ها اصلاً **حرف اضافه نمی‌گیرند** (*discuss the problem*، نه *discuss about*) و بعضی با حرف اضافهٔ دیگر معنی‌شان عوض می‌شود (*look at, look for, look after*). برای صفت‌ها صفحهٔ [صفت‌ها و حرف اضافه](/blog/grammar/adjectives-and-prepositions/) را ببینید.
+
+vp-common.t: *listen to, wait for, look at, depend on*
+vp-common.s: جفت‌های رایج: **listen to**، **wait for**، **look at**، **ask for**، **pay for**، **talk to / about**، **think about**، **belong to**، **depend on**، **agree with**.
+vp-common.b0.h: فعل + حرف اضافه | مثال
+vp-common.b0.5: *talk **to*** کسی ***about*** چیزی ‖ =
+vp-common.b1: در سؤال، حرف اضافه همراه فعل می‌ماند و اغلب **آخر** جمله می‌آید: *Who are you **waiting for**? What are you **looking at**?*
+vp-common.n0: *listen to* (گوش دادن به)
+vp-common.n1: *wait for* (منتظرِ … بودن)
+vp-common.n2: *look at* (نگاه کردن به)
+vp-common.n3: *depend on* (بستگی داشتن به)
+vp-common.w0: *listen to*.
+vp-common.w1: *wait for*. (فارسی می‌گوید «منتظرم باش»، ولی انگلیسی *for* لازم دارد.)
+vp-common.w2: *depend on*.
+
+vp-no-preposition.t: *discuss, enter, marry, call*: بدون حرف اضافه
+vp-no-preposition.s: بعضی فعل‌ها **مفعول مستقیم** می‌گیرند، **بدون حرف اضافه**: **discuss** a problem، **enter** a room، **marry** someone، **call / phone** someone، **answer** a question، **reach** a place، **approach** someone، **lack** something. (این‌ها همان‌هایی‌اند که فارسی‌زبان‌ها به خاطر «دربارهٔ»، «وارد … شدن»، «با … ازدواج کردن» و «به … زنگ زدن» برایشان حرف اضافه می‌گذارند.)
+vp-no-preposition.b0.h: درست | غلط
+vp-no-preposition.b1: اما **اسم**‌های این فعل‌ها اغلب حرف اضافه دارند: *a **discussion about** the plan, the **answer to** the question, a **lack of** experience*.
+vp-no-preposition.b2: ***explain*** چیزی را **to** کسی (نه *explain me*): *Can you **explain** the rule **to me**?*
+vp-no-preposition.n0: *discuss*
+vp-no-preposition.n1: *marry*
+vp-no-preposition.n2: *call*
+vp-no-preposition.n3: *reach*
+vp-no-preposition.w0: *discuss* حرف اضافه نمی‌گیرد.
+vp-no-preposition.w1: *explain* چیزی *to* کسی.
+vp-no-preposition.w2: *phone* حرف اضافه نمی‌گیرد.
+
+vp-object-preposition.t: *thank someone for, remind someone of, spend money on*
+vp-object-preposition.s: **فعل + مفعول + حرف اضافه**: **thank / blame** کسی **for**، **accuse** کسی **of**، **remind** کسی **of / about**، **spend** پول **on**، **provide** کسی **with**، **protect / prevent** کسی **from**، **congratulate** کسی **on**، **borrow** چیزی **from**.
+vp-object-preposition.b0.h: الگو | مثال
+vp-object-preposition.b0.0: *thank* کسی ***for*** ‖ =
+vp-object-preposition.b0.1: *blame* کسی ***for*** ‖ =
+vp-object-preposition.b0.2: *remind* کسی ***of*** (شبیه بودن) / ***about*** (یادآوری کردن) ‖ =
+vp-object-preposition.b0.3: *spend* پول / وقت ***on*** ‖ =
+vp-object-preposition.b0.4: *provide* کسی ***with*** ‖ =
+vp-object-preposition.b0.5: *protect / prevent* کسی ***from*** ‖ =
+vp-object-preposition.b0.6: *congratulate* کسی ***on*** ‖ =
+vp-object-preposition.b0.7: *borrow* چیزی ***from*** ‖ =
+vp-object-preposition.b0.8: *translate / divide* چیزی ***into*** ‖ =
+vp-object-preposition.b1: بعد از حرف اضافه اسم یا ***-ing*** بیاورید: *Thank you **for helping**. They prevented us **from leaving**.*
+vp-object-preposition.n0: *thank for*
+vp-object-preposition.n1: *spend on*
+vp-object-preposition.n2: *remind of* (آدم را یادِ … انداختن)
+vp-object-preposition.n3: *congratulate on*
+vp-object-preposition.w0: *for* + *-ing*.
+vp-object-preposition.w1: *protect from*.
+vp-object-preposition.w2: *borrow from*.
+
+x.vp-common-s01: *Wait for*.
+x.vp-common-s02: *Belong to*.
+x.vp-common-s03: *Listen to*.
+x.vp-no-preposition-s01: *Discuss* + مفعول (بدون حرف اضافه).
+x.vp-no-preposition-s02: *Explain* چیزی را *to* کسی.
+x.vp-no-preposition-s03: *Phone* + مفعول، بدون حرف اضافه.
+x.vp-object-preposition-s01: *Thank* کسی *for*.
+x.vp-object-preposition-s02: *Spend* پول *on*.
+x.vp-object-preposition-s03: *Prevent* کسی *from* + *-ing*.

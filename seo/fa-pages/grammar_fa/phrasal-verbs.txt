@@ -1,0 +1,69 @@
+# phrasal-verbs — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **فعل عبارتی** (*phrasal verb*) یعنی فعل + یک کلمهٔ کوچک به اسم **حرف همراه** (*up, down, on, off, out, back, in, over*): *get **up**, turn **on**, look **after***. حرف همراه اغلب معنی را کاملاً عوض می‌کند: *look* (نگاه کردن) / *look **for*** (دنبال چیزی گشتن) / *look **after*** (مراقبت کردن).
+i1: فعل‌های عبارتی در انگلیسی روزمره خیلی رایج‌اند، پس آن‌ها را در **جملهٔ واقعی** یاد بگیرید، نه به شکل فهرست. این صفحه **ترتیب کلمه‌ها** را هم توضیح می‌دهد: *turn it on*، نه *turn on it*.
+
+phv-basic.t: *get up, turn on, put on, look for*
+phv-basic.s: فعل‌های عبارتیِ روزمره: **get up, wake up, sit down, stand up, turn on / off, put on, take off, look for, come back, go out**. حرف همراه معنی را عوض می‌کند.
+phv-basic.b0.h: فعل عبارتی | معنی | مثال
+phv-basic.b0.0: = ‖ از رختخواب بلند شدن ‖ =
+phv-basic.b0.1: = ‖ بیدار شدن ‖ =
+phv-basic.b0.2: = ‖ نشستن / بلند شدن ‖ =
+phv-basic.b0.3: = ‖ روشن / خاموش کردن دستگاه یا چراغ ‖ =
+phv-basic.b0.4: = ‖ پوشیدن / درآوردن لباس ‖ =
+phv-basic.b0.5: = ‖ دنبال چیزی گشتن ‖ =
+phv-basic.b0.6: = ‖ برگشتن ‖ =
+phv-basic.b0.7: = ‖ برای تفریح بیرون رفتن ‖ =
+phv-basic.b1: در انگلیسی چراغ یا تلویزیون را **turn on** می‌کنید (نه *open the light*؛ «چراغ را باز کن» را کلمه‌به‌کلمه ترجمه نکنید)؛ و برای کارِ پوشیدن لباس **put on** می‌گویید (*wear* یعنی لباسی را به تن داشتن).
+phv-basic.n0: *get up*
+phv-basic.n1: *turn on*
+phv-basic.n2: *put on*
+phv-basic.n3: *look for*
+phv-basic.w0: چراغ و دستگاه: *turn on*.
+phv-basic.w1: *look for* یعنی دنبال چیزی گشتن.
+phv-basic.w2: درآوردن لباس: *take off*.
+
+phv-separable.t: *turn it off*، نه *turn off it*: فعل‌های جداشدنی
+phv-separable.s: در خیلی از فعل‌های عبارتی، **اسم** می‌تواند **قبل یا بعد** از حرف همراه بیاید (*turn off the TV / turn the TV off*)، اما **ضمیر** باید **وسط** بیاید: *turn **it** off* (نه *turn off it*).
+phv-separable.b0.h: با اسم | با ضمیر
+phv-separable.b0.0: = ‖ *Turn **it** on.* (نه *Turn on it*)
+phv-separable.b1: فعل‌های عبارتیِ جداشدنیِ رایج: *turn on / off, put on, take off, pick up, throw away, give back, fill in, write down, try on, put away, wake up* (کسی را)، *call back*.
+phv-separable.b2: **ضمیر** (*it, them, me, him, her, us*) همیشه **بین** فعل و حرف همراه می‌آید.
+phv-separable.n0: ضمیر در وسط
+phv-separable.n1: اسم قبل یا بعد
+phv-separable.n2: ضمیر در وسط
+phv-separable.n3: اسم در وسط
+phv-separable.w0: ضمیر در وسط.
+phv-separable.w1: ضمیر در وسط.
+phv-separable.w2: ضمیر در وسط.
+
+phv-inseparable.t: *look after her, get on the bus*: فعل‌های جدانشدنی
+phv-inseparable.s: بعضی فعل‌های عبارتی **جدانشدنی**‌اند: مفعول همیشه **بعد از** حرف همراه می‌آید، حتی اگر ضمیر باشد (*look after **her***، *come across **it***). بعضی‌ها هم اصلاً **مفعول ندارند**: *get up, grow up, break down*.
+phv-inseparable.b0.h: فعل عبارتی | معنی | مثال
+phv-inseparable.b0.0: = ‖ مراقبت کردن ‖ =
+phv-inseparable.b0.1: = ‖ تصادفی پیدا کردن ‖ =
+phv-inseparable.b0.2: = ‖ تصادفی دیدن کسی ‖ =
+phv-inseparable.b0.3: = ‖ سوار / پیاده شدن از اتوبوس یا قطار ‖ =
+phv-inseparable.b0.4: = ‖ رسیدگی کردن ‖ =
+phv-inseparable.b0.5: = ‖ خوب شدن، کنار آمدن ‖ =
+phv-inseparable.b0.6: *break down* (بدون مفعول) ‖ خراب شدن ‖ =
+phv-inseparable.b0.7: *grow up* (بدون مفعول) ‖ بزرگ شدن ‖ =
+phv-inseparable.b0.8: *turn up* (بدون مفعول) ‖ سر و کلهٔ کسی پیدا شدن ‖ =
+phv-inseparable.b1: در فعل‌های جدانشدنی هیچ‌وقت مفعول را وسط نگذارید: *look after **the baby*** (نه *look the baby after*).
+phv-inseparable.b2: ***grow up*** مفعول ندارد. برای بزرگ کردن بچه‌ها ***bring up*** بیاورید: *She **brought up** three children.*
+phv-inseparable.n0: *look after*
+phv-inseparable.n1: *come across*
+phv-inseparable.n2: بدون مفعول
+phv-inseparable.n3: *deal with*
+phv-inseparable.w0: جدانشدنی.
+phv-inseparable.w1: جدانشدنی.
+phv-inseparable.w2: بزرگ کردن بچه: *bring up*.
+
+x.phv-basic-s01: پوشیدن: *put on*.
+x.phv-basic-s02: از رختخواب بلند شدن: *get up*.
+x.phv-basic-s03: درآوردن لباس: *take off*.
+x.phv-separable-s01: ضمیر در وسط: *turn it down*.
+x.phv-separable-s02: ضمیر در وسط: *give it back*.
+x.phv-separable-s03: ضمیر در وسط: *put them away*.
+x.phv-inseparable-s01: مراقبت کردن: *look after*.
+x.phv-inseparable-s02: جدانشدنی: *ran into him*.
+x.phv-inseparable-s03: *Grow up*.

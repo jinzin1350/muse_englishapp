@@ -1,0 +1,35 @@
+# nouns-and-prepositions — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: بعد از خیلی از اسم‌ها یک **حرف اضافهٔ ثابت** می‌آید: *the **reason for** the delay, the **cause of** the fire, a **solution to** the problem*. اسم و حرف اضافه‌اش را **با هم** یاد بگیرید.
+i1: عبارت‌های ثابتِ **حرف اضافه + اسم** هم داریم: *on purpose, by mistake, in advance*. برای حرف اضافه بعد از فعل و صفت صفحه‌های [فعل‌ها و حرف اضافه](/blog/grammar/verbs-and-prepositions/) و [صفت‌ها و حرف اضافه](/blog/grammar/adjectives-and-prepositions/) را ببینید.
+
+np-common.t: *the reason for, a solution to, a problem with*
+np-common.s: جفت‌های رایج: **reason for**، **cause of**، **solution / answer / key to**، **invitation to**، **increase / rise in**، **demand / need for**، **problem with**، **relationship with**، **difference between**، **interest in**، **damage to**، **effect on**.
+np-common.b0.h: حرف اضافه | اسم‌ها | مثال
+np-common.b0.5: = ‖ *difference, relationship* (بین دو چیز) ‖ =
+np-common.b1: حرف اضافهٔ اسم اغلب با فعلش فرق دارد: *They **solved** the problem* (بدون حرف اضافه) / *a **solution to** the problem*.
+np-common.n0: *reason for* (دلیلِ)
+np-common.n1: *key to* (کلیدِ)
+np-common.n2: *demand for* (تقاضا برای)
+np-common.n3: *difference between* (فرقِ … با …)
+np-common.w0: *reason for*. (فارسی می‌گوید «دلیلِ تأخیر»، ولی انگلیسی *for*، نه *of*.)
+np-common.w1: *key to*.
+np-common.w2: *problem with*.
+
+np-prep-noun.t: *on purpose, by mistake, in advance, on holiday*
+np-prep-noun.s: عبارت‌های ثابتِ **حرف اضافه + اسم**: **on purpose** (عمداً)، **by mistake / accident / chance** (اشتباهی / تصادفی)، **in advance** (از قبل)، **in a hurry** (با عجله)، **on holiday / business** (در تعطیلات / سفر کاری)، **for sale**، **on sale**، **in danger**، **at risk**، **out of order** (خراب)، **out of date** (تاریخ‌گذشته)، **in charge of** (مسئولِ).
+np-prep-noun.b0.h: حرف اضافه | عبارت‌ها | مثال
+np-prep-noun.b1: ***for sale*** یعنی کسی می‌خواهد آن را بفروشد. ***on sale*** یعنی در مغازه‌ها موجود است، یا (به‌خصوص در انگلیسی آمریکایی) با تخفیف.
+np-prep-noun.n0: *by mistake* (اشتباهی)
+np-prep-noun.n1: *by chance* (تصادفی)
+np-prep-noun.n2: *in advance* (از قبل)
+np-prep-noun.n3: *out of date* (تاریخ‌گذشته)
+np-prep-noun.w0: *on purpose*.
+np-prep-noun.w1: *on holiday*.
+np-prep-noun.w2: *in a hurry*.
+
+x.np-common-s01: *Reason for*.
+x.np-common-s02: *Invitation to*.
+x.np-common-s03: *Cause of*.
+x.np-prep-noun-s01: *On purpose* یعنی عمداً.
+x.np-prep-noun-s02: *By mistake*.
+x.np-prep-noun-s03: *In a hurry*.

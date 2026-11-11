@@ -1,0 +1,34 @@
+# future-time-clauses — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: در جمله‌هایی که دربارهٔ آینده‌اند، کلمه‌هایی مثل ***when, as soon as, before, after, until*** یک **جمله‌وارهٔ زمانی** را شروع می‌کنند. در جمله‌وارهٔ زمانی زمان **حال** می‌آوریم، نه *will*: *I'll call you **when** I **get** home.* نه *when I will get home*. (فارسی هم می‌گوید «وقتی **رسیدم** زنگ می‌زنم»، نه «وقتی خواهم رسید».)
+i1: این همان قاعدهٔ *if* در شرطی نوع اول است. برای فرق *if* و *when* صفحهٔ [شرطی نوع صفر و اول](/blog/grammar/zero-and-first-conditional/#zfc-if-or-when) را ببینید.
+
+ftc-when.t: *when, as soon as, before, after* + حال
+ftc-when.s: برای آینده، بعد از *when, as soon as, before, after, until* **حال ساده** بیاورید: *I'll text you **as soon as** I **arrive**.*
+ftc-when.b0.h: جمله‌وارهٔ زمانی (حال) | جملهٔ اصلی (آینده)
+ftc-when.b1: **جملهٔ اصلی** یک شکل آینده (*will, going to*) یا فعل امری دارد. **جمله‌وارهٔ زمانی** حال است: *I'll be ready **when** you **come**.*
+ftc-when.b2: وقتی جمله‌وارهٔ زمانی اول می‌آید، ویرگول بگذارید: ***When** I get home, I'll call you.* / *I'll call you **when** I get home.*
+ftc-when.n0: *when* + حال
+ftc-when.n1: *as soon as* + حال
+ftc-when.n2: *before* + حال
+ftc-when.n3: *after* + حال
+ftc-when.w0: بعد از *when* حرف *will* نمی‌آید.
+ftc-when.w1: بعد از *as soon as* حال می‌آید.
+
+ftc-present-perfect.t: *When I've finished…*: حال کامل در جمله‌وارهٔ زمانی
+ftc-present-perfect.s: در جمله‌وارهٔ زمانی **حال کامل** بیاورید تا نشان دهید کار اول قبل از کار دوم **کامل تمام می‌شود**: *I'll call you when I've finished work.*
+ftc-present-perfect.b0: *When I **finish** work, I'll call you* و *When I**'ve finished** work, I'll call you* هر دو دربارهٔ آینده‌اند. حال کامل تأکید می‌کند که کار اول اول **کاملاً تمام می‌شود**.
+ftc-present-perfect.b1: حال کامل با *when, after, as soon as, until, once* رایج است: *You can go out **after** you**'ve done** your homework.*
+ftc-present-perfect.b2: وقتی دو کار **هم‌زمان** اتفاق می‌افتند حال کامل نیاورید: *When I **see** him, I'll tell him.* (اگر منظورتان همان لحظه است، نه *When I've seen him*)
+ftc-present-perfect.n0: اول خواندن، بعد قرض دادن
+ftc-present-perfect.n1: اول کامل تمام می‌شود
+ftc-present-perfect.n2: اول کامل تمام می‌شود
+ftc-present-perfect.n3: اول کامل تمام می‌شود
+ftc-present-perfect.w0: در جمله‌وارهٔ زمانی *will* نمی‌آید.
+
+x.ftc-when-s01: *When* + حال ساده.
+x.ftc-when-s02: *As soon as* + حال.
+x.ftc-when-s03: *When* + حال ساده (یا حال کامل).
+x.ftc-present-perfect-s01: اول کامل تمام می‌شود: حال کامل.
+q.ftc-present-perfect-s02: کدام جمله تأکید می‌کند که کار اول کامل تمام می‌شود؟
+x.ftc-present-perfect-s02: *When I've finished* یعنی اول کاملاً تمام می‌شود.
+x.ftc-present-perfect-s03: اول کامل تمام می‌شود: *have packed* (یا *pack*).

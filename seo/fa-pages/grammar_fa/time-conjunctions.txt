@@ -1,0 +1,53 @@
+# time-conjunctions — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **حرف‌های ربط زمانی** دو کار را به هم وصل می‌کنند و نشان می‌دهند **کِی** اتفاق می‌افتند: *I had dinner **when** I got home. **While** I was cooking, the phone rang. Wash your hands **before** you eat.*
+i1: این صفحه دربارهٔ کلمه‌های ربط زمانی به طور کلی و در گذشته است. برای قاعدهٔ *when I **get** home* (حال برای آینده) صفحهٔ [جمله‌واره‌های زمانی آینده](/blog/grammar/future-time-clauses/) را ببینید.
+
+tcj-when-while.t: *when, while, before, after*
+tcj-when-while.s: ***when*** یعنی در آن زمان (وقتی که). ***while*** یعنی در طول یک کارِ طولانی‌تر (اغلب با گذشتهٔ استمراری). ***before*** و ***after*** ترتیب را نشان می‌دهند. جمله‌وارهٔ زمانی می‌تواند **اول** (با ویرگول) یا **دوم** بیاید.
+tcj-when-while.b0.h: حرف ربط | مثال
+tcj-when-while.b1: وقتی جمله‌وارهٔ زمانی **اول** می‌آید، بعدش **ویرگول** بگذارید: ***When** the film ended**,** we went home.* وقتی دوم می‌آید ویرگول لازم نیست: *We went home **when** the film ended.*
+tcj-when-while.b2: بعد از ***before*** و ***after*** فعل ***-ing***‌دار هم می‌آید: ***Before leaving**, turn off the lights. **After finishing** work, I went to the gym.*
+tcj-when-while.n0: *when*
+tcj-when-while.n1: *while* + کار طولانی‌تر
+tcj-when-while.n2: *before*
+tcj-when-while.n3: *after*
+tcj-when-while.w0: کار طولانی‌تر: گذشتهٔ استمراری.
+tcj-when-while.w1: *after* + *-ing*.
+
+tcj-until-since.t: *as soon as, until, since, once, by the time*
+tcj-until-since.s: ***as soon as*** یعنی بلافاصله بعد از. ***until*** یعنی تا آن زمان. ***since*** یعنی از آن زمان تا الان (با حال کامل). ***once*** یعنی بعد از اینکه (وقتی چیزی تمام شد). ***by the time*** یعنی تا وقتی که، قبل از آن لحظه یا همان لحظه.
+tcj-until-since.b0.h: حرف ربط | مثال
+tcj-until-since.b1: بعد از ***since*** یک زمانِ گذشته بیاورید (*since 2019*، *since I left school*)؛ جملهٔ اصلی معمولاً **حال کامل** است: *I**'ve known** him **since** we were children.*
+tcj-until-since.n0: بلافاصله بعد از
+tcj-until-since.n1: تا آن زمان
+tcj-until-since.n2: از آن موقع تا الان
+tcj-until-since.n3: *by the time* + گذشتهٔ کامل
+tcj-until-since.w0: *since*: حال کامل. (فارسی می‌گوید «از بچگی **می‌شناسمش**»، اما انگلیسی حال کامل لازم دارد.)
+tcj-until-since.w1: *until* + حال.
+
+tcj-sequencing.t: *first, then, after that, finally, in the end, at last*
+tcj-sequencing.s: برای تعریف کردن ماجرا یا دادن دستورالعمل به ترتیب: ***first*** (اول)، ***then / next / after that*** (بعد)، ***finally*** (در آخر). ***in the end*** یعنی بعد از مدتی طولانی یا تغییرهای زیاد. ***at last*** یعنی بالاخره، بعد از انتظاری طولانی (با حس آسودگی). ***eventually*** یعنی سرانجام، بعد از مدتی طولانی.
+tcj-sequencing.b0.h: کلمه | کاربرد | مثال
+tcj-sequencing.b0.0: = ‖ قدم اول ‖ =
+tcj-sequencing.b0.1: = ‖ قدم بعدی ‖ =
+tcj-sequencing.b0.2: = ‖ قدم آخر ‖ =
+tcj-sequencing.b0.3: = ‖ نتیجهٔ نهایی بعد از مشکل‌ها یا تغییرها ‖ =
+tcj-sequencing.b0.4: = ‖ بعد از انتظاری طولانی (اغلب با آسودگی) ‖ =
+tcj-sequencing.b0.5: = ‖ بعد از مدتی طولانی ‖ =
+tcj-sequencing.b1: ***in the end*** (سرانجام) را با ***at the end of*** (بخش آخرِ چیزی) قاطی نکنید: ***At the end of** the film, everyone cried.*
+tcj-sequencing.n0: دستورالعمل
+tcj-sequencing.n1: قدم بعدی
+tcj-sequencing.n2: نتیجهٔ نهایی
+tcj-sequencing.n3: آسودگی
+tcj-sequencing.w0: بخش آخرِ چیزی: *at the end of*.
+tcj-sequencing.w1: *after that* (به‌عنوان کلمهٔ ربط).
+
+x.tcj-when-while-s01: در طول یک کار طولانی‌تر: *while*.
+x.tcj-when-while-s02: ترتیب: *before*.
+x.tcj-when-while-s03: در آن زمان: *When*.
+x.tcj-until-since-s01: از آن موقع تا الان: *since*.
+x.tcj-until-since-s02: تا آن زمان: *until*.
+x.tcj-until-since-s03: *As soon as* یعنی بلافاصله بعد از.
+x.tcj-sequencing-s01: قدم اول: *First*.
+x.tcj-sequencing-s02: بعد از مدتی طولانی: *eventually*.
+x.tcj-sequencing-s03: بخش آخر: *at the end of*.

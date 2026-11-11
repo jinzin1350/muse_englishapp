@@ -1,0 +1,72 @@
+# defining-relative-clauses — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **جمله‌وارهٔ موصولیِ تعریفی** به ما می‌گوید دربارهٔ **کدام** آدم یا چیز حرف می‌زنیم (مثل «مردی **که** به تو زنگ زد»): *The man **who called you** is my uncle.* بدون این جمله‌واره، جمله کامل یا روشن نیست.
+i1: جمله‌واره‌های تعریفی ویرگول نمی‌گیرند. برای جمله‌واره‌هایی که اطلاعات **اضافه** می‌دهند (*My uncle, who is a doctor, …*) صفحهٔ [جمله‌واره‌های موصولیِ غیرتعریفی](/blog/grammar/non-defining-relative-clauses/) را ببینید.
+
+drc-who-which-that.t: *who, which* و *that*
+drc-who-which-that.s: **who** برای آدم‌ها، **which** برای چیزها، **that** برای هر دو: *the girl who / that won*، *the car which / that I bought*. (هر سه معادل «که» در فارسی‌اند.)
+drc-who-which-that.b0.h: ضمیر موصولی | برای | مثال
+drc-who-which-that.b0.0: = ‖ آدم‌ها ‖ =
+drc-who-which-that.b0.1: = ‖ چیزها، حیوان‌ها ‖ =
+drc-who-which-that.b0.2: = ‖ آدم‌ها یا چیزها (خودمانی) ‖ =
+drc-who-which-that.b1: ضمیر موصولی **جای** یک کلمه را می‌گیرد. آن کلمه را تکرار نکنید: *The man who **he** lives next door* ✗ ← *The man who lives next door* ✓. (فارسی گاهی ضمیر را تکرار می‌کند: «مردی که **او** کنار ما زندگی می‌کند»؛ انگلیسی نه.)
+drc-who-which-that.b2: جمله‌وارهٔ موصولیِ تعریفی ویرگول نمی‌گیرد: *The book **that** you gave me is great.*
+drc-who-which-that.n0: آدم‌ها: *who*
+drc-who-which-that.n1: چیزها: *that*
+drc-who-which-that.n2: چیزها: *which*
+drc-who-which-that.n3: آدم‌ها: *who*
+drc-who-which-that.w0: آدم‌ها: *who / that*.
+drc-who-which-that.w1: چیزها: *which / that*.
+drc-who-which-that.w2: فاعل را تکرار نکنید.
+
+drc-leaving-out.t: حذف *who, which* یا *that*: *the people we met*
+drc-leaving-out.s: وقتی ضمیر موصولی **مفعولِ** جمله‌واره است، می‌توانید حذفش کنید: *the book (that) I'm reading, the people (who) we met*.
+drc-leaving-out.b0: به کلمهٔ بعد از ضمیر نگاه کنید. اگر **فاعل** است (*I, we, she, the teacher…*)، ضمیر **مفعول** است و می‌توانید حذفش کنید: *The film **(that) we saw** was great.*
+drc-leaving-out.b1: اگر ضمیر خودش **فاعل** است (یعنی بلافاصله بعدش فعل آمده)، **نمی‌توانید** حذفش کنید: *The man **who called** you…* (نه *The man called you…* که معنی دیگری دارد).
+drc-leaving-out.n0: مفعول: می‌شود حذف کرد
+drc-leaving-out.n1: مفعول: می‌شود حذف کرد
+drc-leaving-out.n2: فاعل: نمی‌شود حذف کرد
+drc-leaving-out.n3: مفعول: می‌شود حذف کرد
+drc-leaving-out.w0: فاعل: *who* را نگه دارید.
+drc-leaving-out.w1: *it* اضافه نکنید.
+
+drc-whose-where-when.t: *whose, where* و *when*
+drc-whose-where-when.s: **whose** یعنی «که … اش» (*the man whose car was stolen*، مردی که ماشینش دزدیده شد). **where** یعنی «که آنجا» (*the town where I grew up*). **when** برای زمان (*the day when we met*).
+drc-whose-where-when.b0.h: کلمه | جای چه چیزی می‌آید | مثال
+drc-whose-where-when.b0.0: = ‖ *his / her / their / its* ‖ =
+drc-whose-where-when.b0.1: = ‖ *in / at which* (مکان) ‖ =
+drc-whose-where-when.b0.2: = ‖ زمان ‖ =
+drc-whose-where-when.b1: بعد از ***whose*** یک **اسم** می‌آید: *the man **whose wife** is a judge*. برای آدم‌ها و گاهی چیزها به کار می‌رود: *a company **whose** products are famous*.
+drc-whose-where-when.b2: ***where*** را نمی‌شود حذف کرد، اما می‌توانید *which / that … in* بیاورید: *the house **where** I live* = *the house (that) I live **in***.
+drc-whose-where-when.b3: ***when*** بعد از *the day, the year, the time* می‌تواند حذف شود: *the day **(when)** we met*.
+drc-whose-where-when.n0: *whose* + اسم
+drc-whose-where-when.n1: مکان
+drc-whose-where-when.n2: زمان
+drc-whose-where-when.n3: *whose*
+drc-whose-where-when.w0: *whose* (نه *who's* که یعنی *who is*).
+drc-whose-where-when.w1: مکان: *where* یا *which … at*.
+
+drc-prepositions.t: حرف اضافه در جمله‌وارهٔ موصولی: *the house I live in*
+drc-prepositions.s: در انگلیسی روزمره، حرف اضافه **آخر** می‌آید: *the house I live in, the person I spoke to*. در انگلیسی رسمی: *the person to whom I spoke*.
+drc-prepositions.b0: خیلی از فعل‌ها و صفت‌ها حرف اضافه دارند (*live in, talk to, look for, interested in*). در جمله‌وارهٔ موصولی، حرف اضافه معمولاً **بعد از فعل** می‌ماند: *That's the man **I was talking to**. Is this the job **you applied for**?*
+drc-prepositions.b1: ضمیر اغلب حذف می‌شود: *the music **(that) I listen to***.
+drc-prepositions.b2: در انگلیسی **رسمی**، حرف اضافه می‌تواند اول بیاید و بعدش ***which*** (برای چیزها) یا ***whom*** (برای آدم‌ها): *the house **in which** I live*، *the person **to whom** I spoke*. هیچ‌وقت بعد از حرف اضافه *that* یا *who* نیاورید.
+drc-prepositions.n0: حرف اضافه در آخر
+drc-prepositions.n1: حرف اضافه در آخر
+drc-prepositions.n2: حرف اضافه در آخر
+drc-prepositions.n3: رسمی
+drc-prepositions.w0: حرف اضافه + *whom* (رسمی).
+drc-prepositions.w1: حرف اضافه + *that* نه.
+
+x.drc-who-which-that-s01: آدم‌ها: *who* (یا *that*).
+x.drc-who-which-that-s02: چیزها: *that* (یا *which*).
+x.drc-who-which-that-s03: آدم‌ها: *who* یا *that*.
+q.drc-leaving-out-s01: در کدام جمله می‌توانید *that* را حذف کنید؟
+x.drc-leaving-out-s01: *That I bought*: ضمیر مفعول است.
+x.drc-leaving-out-s02: ضمیر را می‌شود حذف کرد (مفعول است)، و *it* نمی‌آید.
+x.drc-leaving-out-s03: ضمیر فاعل است: نمی‌شود حذفش کرد.
+x.drc-whose-where-when-s01: مالکیت: *whose* + اسم.
+x.drc-whose-where-when-s02: مکان: *where*.
+x.drc-whose-where-when-s03: زمان: *when* (یا *that*).
+x.drc-prepositions-s01: حرف اضافه در آخر.
+x.drc-prepositions-s02: رسمی: حرف اضافه + *whom*.
+x.drc-prepositions-s03: *Talk to*: حرف اضافه در آخر.

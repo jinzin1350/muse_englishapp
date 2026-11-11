@@ -1,0 +1,39 @@
+# should-have-could-have-neednt-have — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: با ***فعل وجهی + have + اسم مفعول*** دربارهٔ چیزهایی در گذشته حرف می‌زنیم که **اتفاق نیفتادند** یا از آن‌ها **پشیمانیم**: *I **should have** left earlier.* (باید زودتر راه می‌افتادم؛ نیفتادم و حالا دیرم شده.)
+i1: برای استنتاج دربارهٔ گذشته (*must have, can't have, might have*) صفحهٔ [فعل‌های وجهیِ استنتاج](/blog/grammar/modals-of-deduction/#md-past-must-cant) را ببینید. برای جمله‌های *if* دربارهٔ گذشته صفحهٔ [شرطی نوع سوم](/blog/grammar/third-conditional/) را ببینید.
+
+shc-should-have.t: *should have / shouldn't have*: پشیمانی و انتقاد
+shc-should-have.s: **should have + اسم مفعول** یعنی فکر خوبی بود، اما انجام نشد (باید … می‌کردم). **shouldn't have** یعنی انجام شد، اما اشتباه بود (نباید … می‌کردم).
+shc-should-have.b0.h: ساختار | معنی | مثال
+shc-should-have.b0.0: *should have* + اسم مفعول ‖ انجام نشد (اما فکر خوبی بود) ‖ =
+shc-should-have.b0.1: *shouldn't have* + اسم مفعول ‖ انجام شد (اما فکر بدی بود) ‖ =
+shc-should-have.b1: این شکل‌ها را برای **پشیمانی** از کارهای خودمان و **انتقاد** از کار دیگران به کار می‌بریم: *We **should have** booked a table. You **shouldn't have** shouted at him.*
+shc-should-have.b2: ***ought to have*** همان معنی *should have* را دارد اما رسمی‌تر است: *You **ought to have** told me.*
+shc-should-have.b3: در صحبت، *should have* شبیه /ˈʃʊdəv/ (*should've*) شنیده می‌شود. هیچ‌وقت *should of* ننویسید.
+shc-should-have.n0: کاپشن نیاوردم
+shc-should-have.n1: خوردی
+shc-should-have.n2: انتقاد
+shc-should-have.n3: سؤالی
+shc-should-have.w0: *should have* + اسم مفعول.
+shc-should-have.w1: *have*، نه *of*.
+shc-should-have.w2: *should* + *have* + اسم مفعول.
+
+shc-could-have.t: *could have*: فرصتی که از دست رفت
+shc-could-have.s: **could have + اسم مفعول** یعنی ممکن بود، اما اتفاق نیفتاد (می‌توانستم … بکنم): *I **could have** gone to university, but I started working.*
+shc-could-have.b0: *could have* یک **امکان** یا **فرصت** در گذشته را توصیف می‌کند که **اتفاق نیفتاد**: *We **could have** stayed longer, but we were tired.*
+shc-could-have.b1: برای **انتقاد** هم به کار می‌رود (انجامش ندادی، در حالی که باید می‌دادی): *You **could have** told me you were coming!* و برای چیزهایی که نزدیک بود اتفاق بیفتند: *That was dangerous. You **could have** had an accident.*
+shc-could-have.b2: ***couldn't have*** یعنی ممکن نبود: *I **couldn't have** come. I was in hospital.*
+shc-could-have.n0: ممکن بود، اتفاق نیفتاد
+shc-could-have.n1: انتقاد
+shc-could-have.n2: نزدیک بود اتفاق بیفتد
+shc-could-have.n3: ممکن نبود
+shc-could-have.w0: *could have* + اسم مفعول.
+shc-could-have.w1: *could* + *have* + اسم مفعول.
+
+x.shc-should-have-s01: پشیمانی: *should have* + اسم مفعول.
+x.shc-should-have-s02: انجام شد، اما اشتباه بود: *shouldn't have sent*.
+x.shc-should-have-s03: پشیمانی: *should have left*.
+x.shc-could-have-s01: امکانی که اتفاق نیفتاد: *could have earned*.
+q.shc-could-have-s02: جملهٔ *You could have called me!* چه چیزی را بیان می‌کند؟
+x.shc-could-have-s02: *Could have* اینجا یعنی زنگ نزدی، در حالی که باید می‌زدی.
+x.shc-could-have-s03: نزدیک بود اتفاق بیفتد: *could have died*.
