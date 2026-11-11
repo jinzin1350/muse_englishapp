@@ -1599,7 +1599,7 @@ function ensurePhone(u) {
       '<input id="phone-input" type="tel" autocomplete="tel" placeholder="e.g. +98 912 345 6789">' +
       '<p class="muted" style="margin:0.3rem 0 0;font-size:0.8rem">International format is fine.</p></div>' +
       '<div class="form-error" id="phone-error" role="alert"></div>' +
-      '<button class="btn btn-block" id="phone-save">Save</button>',
+      '<button class="btn btn-orange btn-block" id="phone-save" style="padding:0.95rem 1rem;font-size:1.05rem;border-radius:14px">Save</button>',
       true
     );
     const save = function () {
@@ -15901,7 +15901,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611111733';
+var APP_VERSION = '202611111827';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
