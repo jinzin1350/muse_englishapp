@@ -1573,7 +1573,8 @@ async function savePhone(phone) {
   try {
     if (!sb || !state.user || !state.user.id) return false;
     const r = await sb.rpc('set_phone', { p_phone: phone });
-    return !r.error && r.data === true;
+    if (!r.error && r.data === true) { try { state.user.phone = phone; } catch (e) {} return true; }
+    return false;
   } catch (e) { return false; }
 }
 async function retryPendingPhone(u) {
@@ -1586,6 +1587,53 @@ async function retryPendingPhone(u) {
     const ok = await savePhone(normalizePhone(v));
     if (ok) { try { localStorage.removeItem('el_pending_phone'); } catch (e) {} }
   } catch (e) {}
+}
+
+function ensurePhone(u) {
+  return new Promise(function (resolve) {
+    showModal(
+      '<div class="nick-trophy">\u{1F4F1}</div>' +
+      '<h2>Your mobile number</h2>' +
+      '<p class="muted">We still need a mobile number for your account, so your teacher can reach you.</p>' +
+      '<div class="field" style="text-align:left"><label for="phone-input">Mobile number</label>' +
+      '<input id="phone-input" type="tel" autocomplete="tel" placeholder="e.g. +98 912 345 6789">' +
+      '<p class="muted" style="margin:0.3rem 0 0;font-size:0.8rem">International format is fine.</p></div>' +
+      '<div class="form-error" id="phone-error" role="alert"></div>' +
+      '<button class="btn btn-block" id="phone-save">Save</button>',
+      true
+    );
+    const save = function () {
+      const inp = document.getElementById('phone-input');
+      const err = document.getElementById('phone-error');
+      const btn = document.getElementById('phone-save');
+      const phone = normalizePhone(inp ? inp.value : '');
+      if (!validPhone(phone)) {
+        if (err) err.textContent = 'Enter a valid mobile number (7\u201315 digits, + is fine).';
+        return;
+      }
+      if (err) err.textContent = '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Saving\u2026'; }
+      savePhone(phone).then(function (ok) {
+        if (ok) { closeModal(); resolve(true); }
+        else {
+          stashPendingPhone(phone);
+          if (err) err.textContent = 'Couldn\u2019t save \u2014 check your connection and try again.';
+          if (btn) { btn.disabled = false; btn.textContent = 'Save'; }
+        }
+      });
+    };
+    const saveBtn = document.getElementById('phone-save');
+    if (saveBtn) saveBtn.addEventListener('click', save);
+    const inpEl = document.getElementById('phone-input');
+    if (inpEl) {
+      let pre = null;
+      try { pre = localStorage.getItem('el_pending_phone'); } catch (e) {}
+      if (!pre && u && u.user_metadata && u.user_metadata.phone) pre = u.user_metadata.phone;
+      if (pre) inpEl.value = pre;
+      inpEl.addEventListener('keydown', function (e) { if (e.key === 'Enter') save(); });
+      setTimeout(function () { try { inpEl.focus(); } catch (e) {} }, 120);
+    }
+  });
 }
 
 /* Award words_viewed when the learner scrolls to the last word card. */
@@ -6828,7 +6876,7 @@ async function enterApp() {
   let level = null;
   let prof = null;
   try {
-    const res = await sb.from('profiles').select('level,display_name,referred_by,country_code,country,country_source,welcome_seen_at,created_at').eq('id', u.id).single();
+    const res = await sb.from('profiles').select('level,display_name,referred_by,country_code,country,country_source,welcome_seen_at,phone,created_at').eq('id', u.id).single();
     if (res.error) throw res.error;
     prof = res.data || null;
   } catch (e) {
@@ -6869,6 +6917,7 @@ async function enterApp() {
   state.user = {
     id: u.id, email: u.email, level: level, isAdmin: isAdmin, demo: false,
     displayName: (prof && prof.display_name) || null,
+    phone: (prof && prof.phone) || null,
     countryCode: (prof && prof.country_code) || null,
     country: (prof && prof.country) || null,
     countrySource: (prof && prof.country_source) || null,
@@ -6892,6 +6941,14 @@ async function enterApp() {
   // Google name suggested.
   if (!state.user.demo && !state.user.displayName) {
     await ensureNickname(suggestNickname(u));
+  }
+  // Mandatory mobile number (2026-11-11, Alireza's pick: option A): users
+  // who predate phone collection -- or never saved a number -- get a
+  // blocking phone-only prompt on entry until a valid number is saved.
+  // Anyone who just completed the nickname modal already saved one there
+  // (savePhone updates state.user.phone), so they are not asked twice.
+  if (!state.user.demo && !state.user.phone) {
+    await ensurePhone(u);
   }
   await afterLogin();
 }
@@ -15844,7 +15901,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611102028';
+var APP_VERSION = '202611111733';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
