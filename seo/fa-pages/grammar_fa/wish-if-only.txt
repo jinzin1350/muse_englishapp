@@ -1,0 +1,53 @@
+# wish-if-only — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***wish*** و ***if only*** را وقتی به کار می‌بریم که دلمان می‌خواهد موقعیتی با آنچه هست یا بود **فرق داشته باشد** (یعنی «کاش»): *I **wish** I **had** more time.* (کاش وقت بیشتری داشتم؛ یعنی وقت کافی ندارم.)
+i1: فعلِ بعد از *wish* **یک قدم به عقب** می‌رود: حال ← گذشتهٔ ساده، گذشته ← گذشتهٔ کامل. همین اتفاق در [شرطی نوع دوم](/blog/grammar/second-conditional/) و [شرطی نوع سوم](/blog/grammar/third-conditional/) هم می‌افتد.
+
+wio-present.t: *wish* + گذشتهٔ ساده: چیزهایی که دلتان می‌خواهد الان فرق داشته باشند
+wio-present.s: **wish + گذشتهٔ ساده** برای موقعیتی در زمان حال که دوستش ندارید: *I **wish** I **lived** near the sea.* (کاش نزدیک دریا زندگی می‌کردم؛ زندگی نمی‌کنم.)
+wio-present.b0.h: موقعیت واقعی | آرزو با *wish*
+wio-present.b1: بعد از *wish*، **گذشتهٔ ساده** دربارهٔ **حال** حرف می‌زند و نشان می‌دهد موقعیت واقعی نیست. (فارسی هم بعد از «کاش» گذشته می‌آورد: «کاش ماشین **داشتم**».)
+wio-present.b2: با *be*، بعد از *I / he / she / it* هم ***were*** به کار می‌رود هم ***was***. *were* رسمی‌تر است: *I wish I **were** on holiday.*
+wio-present.b3: برای موقعیتی در زمان حال، بعد از *wish* حرف *will* یا زمان حال نیاورید: *I wish I **had** more money.* نه *I wish I have more money*.
+wio-present.n0: فرانسوی بلد نیستم
+wio-present.n1: مجبور است
+wio-present.n2: تابستان نیست
+wio-present.n3: سؤالی
+wio-present.w0: *wish* + گذشتهٔ ساده.
+wio-present.w1: *wish* + *were / was*.
+wio-present.w2: *wish* + گذشتهٔ ساده.
+
+wio-could.t: *wish* + *could*: توانایی‌ها و امکان‌ها
+wio-could.s: **wish + could** برای کاری که الان نمی‌توانید انجام دهید: *I **wish** I **could** swim. I **wish** I **could** come to your party.* (کاش می‌توانستم…)
+wio-could.b0: وقتی دربارهٔ **توانایی** یا **امکان** حرف می‌زنید، بعد از *wish* ***could*** بیاورید: *I can't drive.* ← *I **wish** I **could** drive.*
+wio-could.b1: برای اینکه مؤدبانه بگویید نمی‌توانید کاری بکنید هم به کار می‌رود: *I **wish** I **could** help, but I'm busy.*
+wio-could.n0: بلد نیستم بزنم
+wio-could.n1: ممکن نیست
+wio-could.n2: یادم نمی‌آید
+wio-could.w0: *wish* + *could*.
+wio-could.w1: توانایی: *could*، نه *would*.
+
+wio-vs-hope.t: *wish* یا *hope*؟
+wio-vs-hope.s: **hope** (امیدوارم) برای چیزی که **ممکن** است: *I hope you pass.* **wish** (کاش) برای چیزی که درست یا محتمل **نیست**: *I wish I were younger.*
+wio-vs-hope.b0.h: *hope* (ممکن) | *wish* (غیرواقعی)
+wio-vs-hope.b0.0: = ‖ *I **wish** it **were** sunny today.* (آفتابی نیست)
+wio-vs-hope.b0.1: = ‖ *I **wish** you **could** come.* (نمی‌توانی بیایی)
+wio-vs-hope.b0.2: *I **hope** I **passed**.* (هنوز نمی‌دانم) ‖ *I **wish** I **had passed**.* (قبول نشدم)
+wio-vs-hope.b1: بعد از ***hope*** زمان‌های معمولی بیاورید، از جمله حال و *will*: *I hope she **calls**. I hope she**'ll call**.*
+wio-vs-hope.b2: بعد از ***wish*** فعل به عقب می‌رود: گذشتهٔ ساده، گذشتهٔ کامل، *could*، *would*.
+wio-vs-hope.b3: ***wish*** + شخص + اسم برای آرزوهای خوب به کار می‌رود: *We **wish you** a happy new year. I **wish you** good luck!* اینجا *wish* یعنی «برایت آرزو می‌کنم».
+wio-vs-hope.n0: ممکن
+wio-vs-hope.n1: الان واقعی نیست
+wio-vs-hope.n2: هنوز نمی‌دانم
+wio-vs-hope.n3: آرزوی خوب
+wio-vs-hope.w0: آیندهٔ ممکن: *hope*. (فارسی‌زبان‌ها «آرزو می‌کنم سفر خوبی داشته باشی» را اشتباهی *I wish you have* ترجمه می‌کنند.)
+wio-vs-hope.w1: غیرواقعی: *wish*.
+
+x.wio-present-s01: *Wish* + گذشتهٔ ساده برای زمان حال.
+x.wio-present-s02: *Wish* + *were* (یا *was*).
+x.wio-present-s03: *Wish* + گذشتهٔ ساده.
+x.wio-could-s01: *Wish* + *could*.
+x.wio-could-s02: توانایی: *could*.
+x.wio-could-s03: *Wish* + *could*.
+x.wio-vs-hope-s01: آیندهٔ ممکن: *hope*.
+x.wio-vs-hope-s02: غیرواقعی: *wish*.
+x.wio-vs-hope-s03: آرزوی خوب: *wish* + شخص + اسم.

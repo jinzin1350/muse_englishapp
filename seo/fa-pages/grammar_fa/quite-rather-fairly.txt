@@ -1,0 +1,44 @@
+# quite-rather-fairly — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***fairly, quite, pretty*** و ***rather*** قبل از صفت و قید می‌آیند و یعنی «بیشتر از کمی، ولی نه خیلی» (نسبتاً): *The test was **fairly** easy. It's **pretty** cold today.*
+i1: معنی دقیقشان به کلمهٔ بعدشان، لحن صدای شما و انگلیسی بریتانیایی یا آمریکایی بستگی دارد.
+
+qrf-basic.t: *a bit, fairly, quite, very*: چقدر قوی؟
+qrf-basic.s: از ضعیف به قوی: ***a bit / a little*** (کمی) < ***fairly*** (نسبتاً) < ***quite / pretty*** (نسبتاً زیاد) < ***very / really*** (خیلی) < ***extremely*** (فوق‌العاده).
+qrf-basic.b0.h: کلمه | مثال | معنی
+qrf-basic.b0.0: = ‖ = ‖ کمی (اغلب منفی)
+qrf-basic.b0.1: = ‖ = ‖ بیشتر از کمی، نه خیلی
+qrf-basic.b0.2: = ‖ = ‖ کمی بیشتر از *fairly* (*pretty* خودمانی است)
+qrf-basic.b0.3: = ‖ = ‖ قوی
+qrf-basic.b0.4: = ‖ = ‖ خیلی قوی
+qrf-basic.b1: ***a bit*** با صفت‌های **منفی** رایج است: *It's **a bit** expensive. I'm **a bit** tired.*
+qrf-basic.b2: این کلمه‌ها **قبل از** صفت می‌آیند: *It's **quite** big.* با اسم، ترتیب معمول ***quite a*** + صفت + اسم است: *It's **quite a** big house.*
+qrf-basic.n0: کمی
+qrf-basic.n1: نه خیلی
+qrf-basic.n2: خودمانی
+qrf-basic.n3: قوی
+qrf-basic.w0: *very* + صفت.
+qrf-basic.w1: *a bit* + صفت.
+
+qrf-quite-meanings.t: *quite*: نسبتاً یا کاملاً؟
+qrf-quite-meanings.s: با بیشتر صفت‌ها ***quite*** یعنی **نسبتاً** (*quite good*). با صفت‌های **مطلق** (*amazing, impossible, sure, right*)، ***quite*** یعنی **کاملاً** (*quite impossible, quite right*). ***quite a lot / quite a few*** یعنی تعداد یا مقدارِ نسبتاً زیاد.
+qrf-quite-meanings.b0.h: کاربرد | مثال | معنی
+qrf-quite-meanings.b0.0: *quite* + صفت معمولی ‖ = ‖ نسبتاً خوب
+qrf-quite-meanings.b0.1: *quite* + صفت مطلق ‖ = ‖ کاملاً
+qrf-quite-meanings.b0.2: = ‖ = ‖ تعداد نسبتاً زیاد
+qrf-quite-meanings.b0.3: = ‖ = ‖ تقریباً، اما نه کامل
+qrf-quite-meanings.b0.4: *quite* + فعل (بریتانیایی) ‖ = ‖ دوستش دارم، اما نه خیلی
+qrf-quite-meanings.b1: در **انگلیسی آمریکایی** *quite* اغلب یعنی *very*: *The food was **quite** good* (یعنی خیلی خوب). در انگلیسی بریتانیایی اغلب یعنی *fairly*.
+qrf-quite-meanings.b2: ***not quite*** یعنی تقریباً، نه کامل: *I haven't **quite** finished.*
+qrf-quite-meanings.n0: نسبتاً
+qrf-quite-meanings.n1: کاملاً
+qrf-quite-meanings.n2: مقدار نسبتاً زیاد
+qrf-quite-meanings.n3: تقریباً
+qrf-quite-meanings.w0: *quite* قبل از صفت.
+qrf-quite-meanings.w1: *quite a lot of*.
+
+x.qrf-basic-s01: کمی (منفی): *a bit*.
+x.qrf-basic-s02: *Quite* + صفت.
+x.qrf-basic-s03: *Quite a* + صفت + اسم.
+x.qrf-quite-meanings-s01: صفت مطلق: *quite right* یعنی کاملاً درست.
+x.qrf-quite-meanings-s02: *Not quite* یعنی تقریباً.
+x.qrf-quite-meanings-s03: *Quite a few* یعنی تعداد نسبتاً زیاد.

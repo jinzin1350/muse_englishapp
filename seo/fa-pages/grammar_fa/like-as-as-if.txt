@@ -1,0 +1,53 @@
+# like-as-as-if — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***like*** یعنی **شبیهِ، مثلِ**: *She sings **like** a professional.* ***as*** یعنی **در نقشِ، به‌عنوان** (*He works **as** a waiter*) یا **همان‌طور که** + جمله‌واره (*Do **as** I say*). ***as if*** توصیف می‌کند چیزی **چطور به نظر می‌رسد** (انگار که): *It looks **as if** it's going to rain.*
+i1: برای *as if* + گذشته برای چیزِ غیرواقعی (*He talks as if he knew everything*) صفحهٔ [گذشتهٔ غیرواقعی](/blog/grammar/unreal-past/#up-as-if) را ببینید.
+
+lai-like-as.t: *like* (شبیهِ) یا *as* (شغل یا نقش)؟
+lai-like-as.s: ***like*** + اسم یعنی **شبیهِ** (اما واقعاً آن نیست): *He swims **like** a fish.* ***as*** + اسم یعنی یک **شغل، نقش یا کاربردِ واقعی**: *She works **as** a nurse. I used my scarf **as** a blanket.*
+lai-like-as.b0.h: *like* یعنی شبیهِ | *as* یعنی در نقشِ
+lai-like-as.b0.0: *He talks **like** a teacher.* (معلم نیست.) ‖ *He works **as** a teacher.* (معلم است.)
+lai-like-as.b1: بعد از ***like*** **اسم** یا **ضمیر** بیاورید: *like **me**, like **a child***.
+lai-like-as.n0: شبیهِ
+lai-like-as.n1: شغل واقعی
+lai-like-as.n2: شبیهِ
+lai-like-as.n3: کاربرد
+lai-like-as.w0: شغل واقعی: *as* (شغلش همین است).
+lai-like-as.w1: شبیهِ: *like*.
+
+lai-as-clause.t: *as I said, as usual, do as I say*
+lai-as-clause.s: ***as*** + جمله‌واره یعنی **همان‌طور که**: *Do **as** I say. **As** I said, … **As** you know, …* عبارت‌های ثابت: ***as usual*** (طبق معمول)، ***as expected*** (همان‌طور که انتظار می‌رفت). در انگلیسیِ خودمانی ***like*** + جمله‌واره هم رایج است (*like I said*).
+lai-as-clause.b0.h: عبارت | مثال
+lai-as-clause.b0.0: *as* + جمله‌واره (همان‌طور که) ‖ =
+lai-as-clause.b0.4: *like* + جمله‌واره (خودمانی) ‖ =
+lai-as-clause.b1: در انگلیسیِ دقیق یا رسمی قبل از جمله‌واره ***as*** بیاورید: ***As** I mentioned in my email, …* در صحبت خودمانی *like* خیلی رایج است: *Nobody cooks **like** my mum does.*
+lai-as-clause.n0: همان‌طور که می‌بینید
+lai-as-clause.n1: طبق معمول
+lai-as-clause.n2: همان‌طور که
+lai-as-clause.n3: طبق برنامه
+lai-as-clause.w0: *as usual*.
+lai-as-clause.w1: *as* + جمله‌واره، بعد جملهٔ اصلی.
+
+lai-look-like.t: *look like, look happy, what's it like?*
+lai-look-like.s: ***look / sound / feel / taste / smell*** + **صفت** (*You look **tired***)، اما ***look like*** + **اسم** (*You look **like** your dad*). ***What's it like?*** توصیف می‌خواهد (چطور است؟)؛ ***What does it look like?*** دربارهٔ ظاهر می‌پرسد (چه شکلی است؟).
+lai-look-like.b0.h: الگو | مثال
+lai-look-like.b0.0: *look / sound / feel* + صفت ‖ =
+lai-look-like.b0.1: *look / sound / feel* + *like* + اسم ‖ =
+lai-look-like.b0.2: *What's … like?* (توصیف) ‖ =
+lai-look-like.b0.3: *What does … look like?* (ظاهر) ‖ =
+lai-look-like.b1: قبل از صفت *like* نیاورید: *You look **tired*** (نه *You look like tired*). («خسته به نظر می‌رسی» را با *like* ترجمه نکنید.)
+lai-look-like.n0: *look* + صفت
+lai-look-like.n1: *sound like* + اسم
+lai-look-like.n2: توصیف
+lai-look-like.n3: ظاهر
+lai-look-like.w0: *look* + صفت (بدون *like*).
+lai-look-like.w1: *what … like?*
+
+x.lai-like-as-s01: شغل واقعی: *as*.
+x.lai-like-as-s02: شبیهِ (واقعاً بدنساز نیست): *like*.
+x.lai-like-as-s03: شبیهِ: *like*.
+x.lai-as-clause-s01: عبارت ثابت: *As usual*.
+x.lai-as-clause-s02: رسمی: *As I mentioned*.
+x.lai-as-clause-s03: عبارت ثابت: *as planned*.
+x.lai-look-like-s01: *Look* + صفت.
+x.lai-look-like-s02: توصیف: *What's … like?*
+x.lai-look-like-s03: *Sound like* + اسم.

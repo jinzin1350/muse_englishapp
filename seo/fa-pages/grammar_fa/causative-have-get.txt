@@ -1,0 +1,40 @@
+# causative-have-get — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: وقتی ترتیبی می‌دهیم که **شخص دیگری** کاری را برایمان انجام دهد، معمولاً یک خدمت، ***have something done*** می‌آوریم: *I **had my car repaired**.* (مکانیک تعمیرش کرد؛ خودم تعمیرش نکردم.) فارسی هم می‌گوید «ماشینم را تعمیر کردم» در حالی که مکانیک تعمیرش کرده؛ انگلیسی این فرق را نشان می‌دهد.
+i1: مقایسه کنید: *I repaired my car* (خودم انجامش دادم) / *I **had** my car **repaired*** (کس دیگری برایم انجامش داد). برای مجهول به طور کلی صفحهٔ [مجهول](/blog/grammar/passive-voice/) را ببینید.
+
+cau-have-done.t: *have something done*: خدمات
+cau-have-done.s: **have + مفعول + اسم مفعول** یعنی ترتیب دادن که کسی کاری را انجام دهد: *I have my hair cut every month. We had the house painted.*
+cau-have-done.b0.h: ساختار | مثال
+cau-have-done.b0.0: *have* + مفعول + اسم مفعول ‖ =
+cau-have-done.b0.1: گذشته ‖ =
+cau-have-done.b0.2: آینده ‖ =
+cau-have-done.b0.3: سؤالی ‖ =
+cau-have-done.b1: ترتیب کلمه‌ها مهم است: ***have + چیز + اسم مفعول***. *I had **my car washed*** (کسی آن را شست). *I had washed my car* (گذشتهٔ کامل: خودم شستمش).
+cau-have-done.b2: *have* اینجا یک فعل معمولی است، پس سؤال و منفی با *do / does / did* ساخته می‌شوند: ***Did** you **have** the TV **repaired**?*
+cau-have-done.n0: آرایشگر کوتاهش کرد
+cau-have-done.n1: ترتیبش داده شده
+cau-have-done.n2: خدمت همیشگی
+cau-have-done.n3: توصیه
+cau-have-done.w0: *have* + مفعول + اسم مفعول.
+cau-have-done.w1: کس دیگری انجامش داد (آرایشگر).
+cau-have-done.w2: *did* + *have*.
+
+cau-get-done.t: *get something done*
+cau-get-done.s: **get + مفعول + اسم مفعول** همان معنی *have something done* را دارد، اما خودمانی‌تر است: *I need to get my phone fixed.* معنی «تمام کردن» هم می‌دهد: *get the work done*.
+cau-get-done.b0: در صحبت روزمره ***get*** به جای *have* خیلی رایج است: *I **got my hair cut**. I must **get my passport renewed**.*
+cau-get-done.b1: *get something done* می‌تواند یعنی **تمامش کردن** (خودتان انجامش دهید یا مطمئن شوید انجام می‌شود): *I need to **get this report done** by Friday.*
+cau-get-done.b2: با *get* اغلب حس زحمت یا کاری که باید از سر بگذرانیم هست: *I finally **got the washing machine fixed**.*
+cau-get-done.n0: خودمانی
+cau-get-done.n1: ترتیبش داده شد
+cau-get-done.n2: تمام کردن
+cau-get-done.n3: سؤالی
+cau-get-done.w0: *get* + مفعول + اسم مفعول.
+cau-get-done.w1: اسم مفعول: *washed*.
+
+x.cau-have-done-s01: *Have* + مفعول + اسم مفعول.
+x.cau-have-done-s02: سؤالی: *did you have…?*
+x.cau-have-done-s03: *Have* + مفعول + اسم مفعول.
+x.cau-get-done-s01: *Get* + مفعول + اسم مفعول.
+q.cau-get-done-s02: *Let's get the cleaning done* یعنی چه؟
+x.cau-get-done-s02: *Get something done* می‌تواند یعنی «تمامش کنیم».
+x.cau-get-done-s03: *Get* + مفعول + اسم مفعول.

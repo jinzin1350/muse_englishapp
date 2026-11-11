@@ -1,0 +1,43 @@
+# subject-verb-agreement — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: فعل باید با فاعلش **جور** باشد: فاعل **مفرد** فعل **مفرد** می‌گیرد (*She **works***) و فاعل **جمع** فعل **جمع** (*They **work***).
+i1: با فاعل‌های کوتاه این کار آسان است، اما با کلمه‌هایی مثل *everyone, each* و *one of* و با فاعل‌های طولانی سخت‌تر می‌شود. برای اسم‌های گروهی مثل *team* و *family* صفحهٔ [اسم‌های جمع](/blog/grammar/plural-nouns/#pn-group-nouns) را ببینید.
+
+sva-basic.t: *he works, they work*؛ *there is, there are*
+sva-basic.s: در زمان حال، با *he, she, it* و اسم مفرد **-s** بیاورید (*My brother works*). با *I, you, we, they* و اسم جمع *-s* نمی‌آید (*My brothers work*). **there is** + مفرد و **there are** + جمع.
+sva-basic.b0.h: فاعل | *be* | فعل‌های دیگر (حال)
+sva-basic.b0.1: *he / she / it*، اسم مفرد ‖ = ‖ =
+sva-basic.b0.2: *you / we / they*، اسم جمع ‖ = ‖ =
+sva-basic.b1: ***There is*** + اسم مفرد یا غیرقابل‌شمارش: *There **is** a bank. There **is** some milk.* ***There are*** + جمع: *There **are** two banks.*
+sva-basic.b2: گذشتهٔ *be* هم عوض می‌شود: *I / he / she / it **was***؛ *you / we / they **were***. و با *he, she, it* ***has***: *She **has** a car.*
+sva-basic.n0: اسم مفرد + *-s*
+sva-basic.n1: اسم جمع
+sva-basic.n2: مفرد
+sva-basic.n3: جمع
+sva-basic.w0: اسم مفرد: *-s*.
+sva-basic.w1: جمع: *are*.
+sva-basic.w2: جمع: *there are*.
+
+sva-everyone-each.t: *everyone is, each student has, one of my friends is*
+sva-everyone-each.s: ***everyone, everybody, someone, nobody, everything*** فعل **مفرد** می‌گیرند (*Everyone is here*)، هرچند معنی‌شان جمع به نظر می‌رسد. ***each*** و ***every*** + اسم هم همین‌طور. ***one of*** + اسم جمع هم فعل **مفرد** می‌گیرد (*One of my friends lives in Paris*).
+sva-everyone-each.b0.h: فاعل | فعل | مثال
+sva-everyone-each.b0.0: = ‖ مفرد ‖ =
+sva-everyone-each.b0.1: *each / every* + اسم مفرد ‖ مفرد ‖ =
+sva-everyone-each.b0.2: *each of* + جمع ‖ مفرد ‖ =
+sva-everyone-each.b0.3: *one of* + اسم جمع ‖ مفرد ‖ =
+sva-everyone-each.b0.4: = ‖ جمع ‖ =
+sva-everyone-each.b1: فعل با ***one*** جور می‌شود، نه با اسم جمعِ بعد از *of*: ***One** of the students **is** late.* (یکی از دانشجوها دیر کرده.)
+sva-everyone-each.b2: بعد از *everyone / someone* اغلب برای اشاره به آن‌ها *they / their* می‌آوریم: *Everyone **has** **their** own room.*
+sva-everyone-each.n0: مفرد
+sva-everyone-each.n1: *every* + مفرد
+sva-everyone-each.n2: *one of*
+sva-everyone-each.n3: *each of*
+sva-everyone-each.w0: *everybody*: مفرد.
+sva-everyone-each.w1: *one of*: مفرد.
+sva-everyone-each.w2: *every* + اسم مفرد.
+
+x.sva-basic-s01: اسم مفرد: *works*.
+x.sva-basic-s02: جمع: *there are*.
+x.sva-basic-s03: اسم مفرد: + *-s*.
+x.sva-everyone-each-s01: *Everybody* + فعل مفرد.
+x.sva-everyone-each-s02: *One of* + فعل مفرد.
+x.sva-everyone-each-s03: *Every* + اسم مفرد + فعل مفرد.

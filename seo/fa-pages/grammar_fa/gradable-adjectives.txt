@@ -1,0 +1,19 @@
+# gradable-adjectives — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: صفت‌های **درجه‌پذیر** می‌توانند کم یا زیاد باشند: *cold, big, good*. با آن‌ها ***very, a bit*** و ***extremely*** بیاورید: *very cold*. صفت‌های **مطلق** خودشان معنی «خیلی» را دارند: *freezing* (یخ‌زده)، *huge* (غول‌آسا)، *amazing* (فوق‌العاده). با آن‌ها ***absolutely*** یا ***really*** بیاورید: *absolutely freezing*.
+i1: آوردنِ کلمهٔ درست قبل از صفت یکی از آسان‌ترین راه‌ها برای طبیعی‌تر حرف زدن است.
+
+ga-basic.t: *very cold, absolutely freezing*
+ga-basic.s: با صفت‌های **درجه‌پذیر** ***very / extremely / a bit*** بیاورید (*very big*). با صفت‌های **مطلق** ***absolutely*** یا ***really*** بیاورید (*absolutely huge*). ***really*** با هر دو می‌آید.
+ga-basic.b0.h: درجه‌پذیر (+ *very*) | مطلق (+ *absolutely*)
+ga-basic.b1: نگویید *very freezing* یا *absolutely cold*. ***really*** با هر دو درست است: *really cold, really freezing*. (در فارسی «خیلی» با همه چیز می‌آید، اما در انگلیسی *very* با صفت مطلق نمی‌آید.)
+ga-basic.n0: درجه‌پذیر
+ga-basic.n1: مطلق
+ga-basic.n2: *really* با هر دو
+ga-basic.n3: درجه‌پذیر
+ga-basic.w0: صفت مطلق: *absolutely*.
+ga-basic.w1: *absolutely* + صفت مطلق.
+ga-basic.w2: صفت مطلق: *absolutely*.
+
+x.ga-basic-s01: صفت مطلق + *absolutely*.
+x.ga-basic-s02: صفت مطلق + *absolutely*.
+x.ga-basic-s03: صفت مطلق: *absolutely amazing*.

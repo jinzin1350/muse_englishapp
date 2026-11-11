@@ -1,0 +1,59 @@
+# quantifiers — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **کمیت‌نماها** می‌گویند چند تا یا چه مقدار: *all, most, some, none, each, every, both, either, neither*. خیلی از آن‌ها با ***of*** یا بدون آن به کار می‌روند: *most people / most of the people*.
+i1: برای *much, many, a few* و *a little* صفحهٔ [much، many، a few، a little](/blog/grammar/much-many-a-few-a-little/) را ببینید. برای *both… and* و *either… or* صفحهٔ [both… and، either… or](/blog/grammar/both-either-neither-not-only/) را ببینید.
+
+qn-all-most-none.t: *all, most, some, no*: با *of* یا بدون آن
+qn-all-most-none.s: برای چیزها **به طور کلی** ***all / most / some / no*** + اسم بیاورید (*Most people like music*، بیشتر مردم). برای یک گروهِ **مشخص** ***all of / most of / some of / none of*** + ***the / my / these*** + اسم، یا یک ضمیر بیاورید (*Most of my friends live here*، بیشترِ دوستانم).
+qn-all-most-none.b0.h: کلی (بدون *of*) | مشخص (*of* + *the / my / these…*)
+qn-all-most-none.b1: با **ضمیر** همیشه *of* بیاورید: ***most of them**, **some of us**, **all of it**, **none of you***.
+qn-all-most-none.b2: ***all*** قبل از *the / my / these* می‌تواند *of* را حذف کند: ***all the** students = **all of the** students*. *most* و *some* نمی‌توانند: ***most of the** students* (نه *most the students*).
+qn-all-most-none.n0: کلی
+qn-all-most-none.n1: مشخص
+qn-all-most-none.n2: ضمیر
+qn-all-most-none.n3: *none of*
+qn-all-most-none.w0: کلی: بدون *of*. (فارسی می‌گوید «بیشترِ مردم»، اما برای مردم به طور کلی *of* نمی‌آید.)
+qn-all-most-none.w1: مشخص: *most of the*.
+qn-all-most-none.w2: فعل جمع.
+
+qn-each-every.t: *each* یا *every*؟
+qn-each-every.s: ***each*** و ***every*** + اسم **مفرد** + فعل **مفرد**. ***every*** یعنی همهٔ یک گروه، با هم (*Every student passed*). ***each*** یعنی یکی‌یکی، جداجدا (*Each child got a present*). فقط ***each*** می‌تواند با ***of*** یا به‌تنهایی بیاید.
+qn-each-every.b0.h: each | every
+qn-each-every.b0.0: یکی‌یکی: *Each player has a number.* ‖ همه با هم: *Every player wants to win.*
+qn-each-every.b0.1: برای دو تا هم: *She had a ring on each hand.* ‖ برای دو تا نه (نه *every hand*)
+qn-each-every.b0.3: به‌تنهایی: *They cost $5 **each**.* ‖ زمانِ تکراری: ***every** day, **every** three hours*
+qn-each-every.b1: هر دو فعل **مفرد** می‌گیرند: ***Every** room **has** a TV. **Each** of the rooms **has** a TV.*
+qn-each-every.b2: برای چیزهایی که مرتب تکرار می‌شوند ***every*** بیاورید: ***every** morning, **every** two weeks* (نه *each two weeks*).
+qn-each-every.n0: همهٔ بچه‌ها
+qn-each-every.n1: یکی‌یکی
+qn-each-every.n2: *each of*
+qn-each-every.n3: زمانِ تکراری
+qn-each-every.w0: با *of*: *each*.
+qn-each-every.w1: اسم مفرد + فعل مفرد.
+qn-each-every.w2: زمانِ تکراری: *every*.
+
+qn-both-either-neither.t: *both, either, neither (of)*
+qn-both-either-neither.s: برای **دو** چیز: ***both*** یعنی هر دو (+ جمع)؛ ***either*** یعنی یکی از دو تا، هر کدام (+ مفرد)؛ ***neither*** یعنی هیچ‌کدام از دو تا (+ مفرد). با ***of***: *both of / either of / neither of* + ***the / my / them***.
+qn-both-either-neither.b0.h: کلمه | + اسم | + *of*
+qn-both-either-neither.b0.0: = ‖ *both **children*** (جمع) ‖ =
+qn-both-either-neither.b0.1: = ‖ *either **day*** (مفرد) ‖ =
+qn-both-either-neither.b0.2: = ‖ *neither **answer*** (مفرد) ‖ =
+qn-both-either-neither.b1: ***neither*** خودش منفی است، پس فعل **مثبت** بیاورید: ***Neither** of them **came**.* (نه *didn't come*). در جملهٔ منفی ***either*** بیاورید: *I **don't** like **either** of them.*
+qn-both-either-neither.b2: بعد از ***neither of / either of***، فعل **مفرد** رسمی‌تر است و فعل جمع در صحبت رایج است: *Neither of my parents **speaks / speak** English.*
+qn-both-either-neither.b3: برای **بیش از دو** تا *all, any* و *none* بیاورید: *None of my three brothers…*
+qn-both-either-neither.n0: *both*
+qn-both-either-neither.n1: *either*
+qn-both-either-neither.n2: *neither*
+qn-both-either-neither.n3: منفی: *either*
+qn-both-either-neither.w0: *both*: فعل جمع.
+qn-both-either-neither.w1: *neither*: فعل مثبت.
+qn-both-either-neither.w2: فعل منفی: *either*.
+
+x.qn-all-most-none-s01: به طور کلی: *most* + اسم.
+x.qn-all-most-none-s02: مشخص (*my friends*): *most of*.
+x.qn-all-most-none-s03: با ضمیر: *none of them*.
+x.qn-each-every-s01: با *of*: *each of*.
+x.qn-each-every-s02: زمانِ تکراری: *every few hours*.
+x.qn-each-every-s03: به‌تنهایی در آخر جمله: *each*.
+x.qn-both-either-neither-s01: هر دو: *both* (+ جمع).
+x.qn-both-either-neither-s02: هر کدام از دو تا: *either* + مفرد.
+x.qn-both-either-neither-s03: هیچ‌کدام از دو تا: *neither*.

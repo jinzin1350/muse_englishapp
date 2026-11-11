@@ -1,0 +1,22 @@
+# ellipsis-substitution — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: انگلیسیِ خوب از **تکرار** کلمه‌ها پرهیز می‌کند. می‌توانیم کلمه‌ها را **حذف کنیم** (*ellipsis*): *I wanted to go, but I couldn't (go).* یا **جایشان** یک کلمهٔ کوتاه بگذاریم (*substitution*): *I don't like this shirt. Can I see a different **one**?*
+i1: برای جواب کوتاه و *so do I* صفحهٔ [so do I، neither do I](/blog/grammar/so-do-i-neither-do-i/) را ببینید. *I think so* هم در همان صفحه است.
+
+ell-one.t: *one* و *ones*: *the red one, these ones*
+ell-one.s: به جای تکرار یک **اسم قابل‌شمارش**، ***one*** (مفرد) و ***ones*** (جمع) بیاورید (مثل «قرمزه» یا «مشکیه» در فارسیِ محاوره): *I don't like this jacket. I prefer the black **one**. These shoes are nicer than the old **ones**.*
+ell-one.b0.h: الگو | مثال
+ell-one.b0.0: *the* + صفت + *one* ‖ =
+ell-one.b0.1: *a* + صفت + *one* ‖ =
+ell-one.b0.2: *the one(s)* + عبارت / جمله‌واره ‖ =
+ell-one.b1: برای اسم‌های **غیرقابل‌شمارش** *one* نیاورید: *I like white wine more than red* (نه *red one*).
+ell-one.b2: بعد از *this / that* اغلب *one* می‌آید: *I'll take **this one***. بعد از *these / those*، *ones* در انگلیسی بریتانیایی اختیاری است: *I prefer **those (ones)**.*
+ell-one.n0: *one*
+ell-one.n1: *ones* + عبارت
+ell-one.n2: *a* + صفت + *one*
+ell-one.n3: *which one*
+ell-one.w0: صفت + *one*. (صفت در انگلیسی به‌تنهایی جای اسم نمی‌نشیند.)
+ell-one.w1: غیرقابل‌شمارش: *one* نمی‌آید.
+
+x.ell-one-s01: مفرد: *a new one*.
+x.ell-one-s02: جمع: *bigger ones*.
+x.ell-one-s03: مفرد: *the blue one*.

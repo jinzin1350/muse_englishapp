@@ -1,0 +1,46 @@
+# adjective-order — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: در انگلیسی صفت معمولاً **قبل از** اسم می‌آید (*a **red** car*)، برعکس فارسی که می‌گوید «ماشینِ قرمز»؛ یا بعد از فعل‌هایی مثل *be, look* و *seem* (*The car is **red***).
+i1: وقتی دو صفت یا بیشتر داریم، ترتیب معمولی وجود دارد: اول ***نظر***، بعد واقعیت‌هایی مثل **اندازه، سن، رنگ، ملیت** و **جنس**: *a **beautiful old Persian** carpet*.
+
+ao-position.t: صفت قبل از اسم و بعد از *be*
+ao-position.s: صفت **قبل از اسم** می‌آید (*a small flat*) یا **بعد از** *be, look, feel, seem, sound, taste, get* (*The flat is small*). صفت در جمع *-s* **نمی‌گیرد**: *two small flats*.
+ao-position.b0.h: جا | مثال
+ao-position.b0.0: قبل از اسم ‖ =
+ao-position.b0.1: بعد از *be, look, feel, seem, sound, taste, get* ‖ =
+ao-position.b0.2: با اسم جمع ‖ ***small** flats* (نه *smalls flats*)
+ao-position.b1: چند صفت **فقط بعد از** فعل می‌آیند: *afraid, alone, asleep, awake, alive*: *The baby is **asleep**.* (قبل از اسم بگویید *a **sleeping** baby*.)
+ao-position.n0: قبل از اسم
+ao-position.n1: بعد از *sound*
+ao-position.n2: قبل از اسم
+ao-position.n3: فقط بعد از *be*
+ao-position.w0: صفت قبل از اسم.
+ao-position.w1: صفت *-s* نمی‌گیرد.
+ao-position.w2: *afraid* فقط بعد از *be* می‌آید.
+
+ao-order.t: نظر، اندازه، سن، رنگ: *a lovely big old house*
+ao-order.s: با بیش از یک صفت، اول **نظر** را بیاورید، بعد **واقعیت‌ها** را، معمولاً به این ترتیب: **اندازه ← سن ← شکل ← رنگ ← ملیت ← جنس ← کاربرد** + اسم: *a lovely small old round wooden table* (اما دو یا سه صفت طبیعی‌تر است).
+ao-order.b0.h: ترتیب | نوع | مثال
+ao-order.b0.0: ۱ ‖ نظر ‖ =
+ao-order.b0.1: ۲ ‖ اندازه ‖ =
+ao-order.b0.2: ۳ ‖ سن ‖ =
+ao-order.b0.3: ۴ ‖ شکل ‖ =
+ao-order.b0.4: ۵ ‖ رنگ ‖ =
+ao-order.b0.5: ۶ ‖ ملیت ‖ =
+ao-order.b0.6: ۷ ‖ جنس ‖ =
+ao-order.b0.7: ۸ ‖ کاربرد (اغلب یک اسم) ‖ *running* (shoes), *coffee* (table)
+ao-order.b1: در انگلیسیِ واقعی به‌ندرت بیش از **سه** صفت قبل از اسم می‌آید: *a **lovely old wooden** house*.
+ao-order.b2: صفت‌های **نظر** (*nice, beautiful, terrible*) قبل از صفت‌های **واقعیت** (*big, old, red*) می‌آیند: *a **nice big** room* (نه *a big nice room*).
+ao-order.n0: نظر، اندازه، رنگ
+ao-order.n1: اندازه، شکل، جنس
+ao-order.n2: نظر، سن، ملیت
+ao-order.n3: سن، رنگ، کاربرد
+ao-order.w0: اندازه قبل از رنگ.
+ao-order.w1: سن قبل از جنس.
+ao-order.w2: اول نظر.
+
+x.ao-position-s01: صفت قبل از اسم.
+x.ao-position-s02: صفت *-s* نمی‌گیرد.
+x.ao-position-s03: *Asleep* بعد از *be* می‌آید.
+x.ao-order-s01: نظر، رنگ، جنس.
+x.ao-order-s02: اندازه قبل از سن.
+x.ao-order-s03: اندازه قبل از رنگ.

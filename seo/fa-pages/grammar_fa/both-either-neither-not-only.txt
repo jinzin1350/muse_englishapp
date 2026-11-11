@@ -1,0 +1,61 @@
+# both-either-neither-not-only — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: این **حرف‌های ربطِ جفتی** دو کلمه، عبارت یا جمله‌واره را به هم وصل می‌کنند: *I speak **both** English **and** Persian. We can go **either** today **or** tomorrow.* (هم … هم، یا … یا)
+i1: برای *both, either* و *neither* به‌تنهایی (*both of them, either day*) صفحهٔ [کمیت‌نماها](/blog/grammar/quantifiers/#qn-both-either-neither) را ببینید.
+
+ben-both-and.t: *both… and* (هم … هم)
+ben-both-and.s: ***Both X and Y*** یعنی هم X و هم Y، هر دو با هم: *Both my mother and my father are teachers.* با دو فاعل، فعل **جمع** بیاورید.
+ben-both-and.b0.h: وصل می‌کند | مثال
+ben-both-and.b0.0: دو اسم ‖ =
+ben-both-and.b0.1: دو صفت ‖ =
+ben-both-and.b0.2: دو فعل ‖ =
+ben-both-and.b1: ***both… and*** تأکید می‌کند که هر دو چیز درست‌اند: *She speaks **both** French **and** Spanish.*
+ben-both-and.b2: دو فاعل با *both… and* فعل **جمع** می‌گیرند: ***Both** Ali **and** Sara **are** coming.*
+ben-both-and.b3: *both* را درست قبل از چیز اول بیاورید: *She's **both** clever **and** funny.*
+ben-both-and.n0: دو فاعل
+ben-both-and.n1: دو صفت
+ben-both-and.n2: دو اسم
+ben-both-and.w0: فعل جمع.
+ben-both-and.w1: *both… and*.
+
+ben-either-or.t: *either… or*: یکی از دو تا
+ben-either-or.s: ***Either X or Y*** یعنی یا X یا Y، یکی از این دو: *We can either take the bus or walk.* در جملهٔ منفی، ***not… either… or*** یعنی نه X و نه Y. با دو فاعل، فعل با فاعلِ **نزدیک‌تر** جور می‌شود.
+ben-either-or.b0.h: کاربرد | مثال
+ben-either-or.b0.0: انتخاب ‖ =
+ben-either-or.b0.1: دو فعل ‖ =
+ben-either-or.b0.2: منفی ‖ *I **don't** speak **either** French **or** German.* (یعنی هیچ‌کدام را)
+ben-either-or.b0.3: مطابقت فعل ‖ =
+ben-either-or.b1: با دو فاعل، فعل با فاعلِ **نزدیک‌تر** جور می‌شود: *Either my parents or **my brother is** going to pick you up.*
+ben-either-or.b2: *either… or* را برای انتخاب بین **دو** چیز بیاورید. با چیزهای بیشتر معمولاً فقط *or* می‌آید: *You can pay by cash, card **or** cheque.*
+ben-either-or.n0: انتخاب
+ben-either-or.n1: انتخاب قاطع
+ben-either-or.n2: منفی
+ben-either-or.n3: دو فاعل
+ben-either-or.w0: *either… or*.
+ben-either-or.w1: فاعلِ نزدیک‌تر مفرد است.
+
+ben-neither-nor.t: *neither… nor*: نه این و نه آن
+ben-neither-nor.s: ***Neither X nor Y*** یعنی نه X و نه Y: *Neither my brother nor my sister can swim.* فعل را **مثبت** بیاورید، چون *neither… nor* خودش منفی است.
+ben-neither-nor.b0.h: کاربرد | مثال
+ben-neither-nor.b0.0: دو فاعل ‖ =
+ben-neither-nor.b0.1: دو مفعول ‖ =
+ben-neither-nor.b0.2: دو صفت ‖ =
+ben-neither-nor.b0.3: دو فعل ‖ =
+ben-neither-nor.b1: فعل **مثبت** بیاورید: *I **have** neither time nor money.* (یعنی نه وقت دارم نه پول)، نه *I don't have neither…*. فارسی می‌گوید «نه وقت **دارم** نه پول» و این بار فعل فارسی هم مثبت است.
+ben-neither-nor.b2: با دو فاعل، فعل با فاعلِ **نزدیک‌تر** جور می‌شود: *Neither the teacher nor **the students were** ready.*
+ben-neither-nor.b3: *neither… nor* کمی رسمی است. در مکالمه *not… either… or* رایج است: *I **don't** like **either** coffee **or** tea.*
+ben-neither-nor.n0: دو فاعل
+ben-neither-nor.n1: دو صفت
+ben-neither-nor.n2: دو فعل
+ben-neither-nor.n3: فاعلِ نزدیک‌تر
+ben-neither-nor.w0: فعل مثبت.
+ben-neither-nor.w1: *neither… nor*.
+
+x.ben-both-and-s01: *Both… and*.
+x.ben-both-and-s02: دو فاعل: فعل جمع.
+x.ben-both-and-s03: *Both… and*.
+x.ben-either-or-s01: *Either… or*.
+x.ben-either-or-s02: فاعلِ نزدیک‌تر: *my brother* (مفرد).
+x.ben-either-or-s03: *Either… or*.
+x.ben-neither-nor-s01: *Neither… nor*.
+x.ben-neither-nor-s02: *Neither… nor*.
+x.ben-neither-nor-s03: فاعلِ نزدیک‌تر: *the students* (جمع).

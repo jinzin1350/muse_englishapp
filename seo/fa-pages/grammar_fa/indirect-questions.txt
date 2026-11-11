@@ -1,0 +1,50 @@
+# indirect-questions — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **سؤال غیرمستقیم** سؤالی است که داخل یک جملهٔ دیگر آمده: *Where is the station?* ← *Do you know **where the station is**?* سؤال‌های غیرمستقیم مؤدبانه‌ترند و در مکالمه خیلی رایج‌اند.
+i1: قاعده: بعد از کلمهٔ پرسشی (یا *if / whether*)، **ترتیب جملهٔ خبری** بیاورید و *do / does / did* نیاورید. برای سؤال‌های مستقیم صفحهٔ [کلمه‌های پرسشی و ساختار سؤال](/blog/grammar/question-words-and-forms/) را ببینید.
+
+iq-do-you-know.t: *Do you know where…? I don't know what…*
+iq-do-you-know.s: بعد از **Do you know…? / I don't know…** **ترتیب جملهٔ خبری** بیاورید: *Do you know where she **lives**?* (نه *where does she live*)
+iq-do-you-know.b0.h: سؤال مستقیم | سؤال غیرمستقیم
+iq-do-you-know.b1: کلمهٔ پرسشی می‌ماند، اما ترتیب کلمه‌ها **فاعل + فعل** می‌شود و *do / does / did* حذف می‌شوند: *Where **is** the bank?* ← *Do you know where **the bank is**?*
+iq-do-you-know.b2: علامت سؤال را فقط وقتی بگذارید که کل جمله سؤال باشد: *Do you know where it is**?*** / *I don't know where it is**.***
+iq-do-you-know.n0: ترتیب جملهٔ خبری
+iq-do-you-know.n1: ترتیب جملهٔ خبری
+iq-do-you-know.n2: بدون *did*
+iq-do-you-know.n3: بدون *does*
+iq-do-you-know.w0: ترتیب جملهٔ خبری.
+iq-do-you-know.w1: بدون *does*.
+iq-do-you-know.w2: ترتیب جملهٔ خبری.
+
+iq-if-whether.t: *if* و *whether*: سؤال‌های بله/نهِ غیرمستقیم
+iq-if-whether.s: برای سؤال‌های بله/نه **if** یا **whether** بیاورید (یعنی «که آیا»): *Is she coming?* ← *Do you know **if / whether** she's coming?*
+iq-if-whether.b0: وقتی سؤال مستقیم **کلمهٔ پرسشی ندارد** (سؤال بله/نه)، ***if*** یا ***whether*** بیاورید: *Are you free?* ← *I wonder **if** you're free.* *Did he pass?* ← *Do you know **whether** he passed?*
+iq-if-whether.b1: ***whether*** کمی رسمی‌تر است و با ***or not*** و بعد از **حرف اضافه** انتخاب معمول است: *I'm not sure **whether or not** to go. It depends **on whether** it rains.*
+iq-if-whether.n0: سؤال بله/نه
+iq-if-whether.n1: *whether*
+iq-if-whether.n2: *not sure if*
+iq-if-whether.n3: حرف اضافه + *whether*
+iq-if-whether.w0: *if* + ترتیب جملهٔ خبری.
+iq-if-whether.w1: بعد از *if* حرف *does* نمی‌آید.
+iq-if-whether.w2: حرف اضافه + *whether*.
+
+iq-polite.t: *Could you tell me…?* سؤال‌های غیرمستقیمِ مؤدبانه
+iq-polite.s: سؤال غیرمستقیم درخواستِ اطلاعات را **مؤدبانه‌تر** می‌کند: *Could you tell me where the toilets are? Would you mind telling me how old you are?*
+iq-polite.b0.h: مستقیم (رُک‌تر) | غیرمستقیم (مؤدبانه‌تر)
+iq-polite.b1: این عبارت‌ها را با غریبه‌ها، در محل کار، در مغازه و در موقعیت‌های رسمی به کار ببرید. سؤالِ داخل جمله همیشه **ترتیب جملهٔ خبری** دارد.
+iq-polite.b2: *I was wondering…* و *I'd like to know…* جملهٔ خبری‌اند، پس با نقطه تمام می‌شوند: *I was wondering if you could help me.*
+iq-polite.n0: مؤدبانه
+iq-polite.n1: خیلی مؤدبانه
+iq-polite.n2: مؤدبانه (*would you mind* + *-ing*)
+iq-polite.n3: شکایت رسمی
+iq-polite.w0: ترتیب جملهٔ خبری.
+iq-polite.w1: ترتیب جملهٔ خبری؛ جمله خبری است.
+
+x.iq-do-you-know-s01: ترتیب جملهٔ خبری: *the bathroom is*.
+x.iq-do-you-know-s02: ترتیب جملهٔ خبری، بدون *does*.
+x.iq-do-you-know-s03: ترتیب جملهٔ خبری: *Ali works*.
+x.iq-if-whether-s01: *If* + ترتیب جملهٔ خبری.
+x.iq-if-whether-s02: بعد از حرف اضافه: *whether*.
+x.iq-if-whether-s03: بله/نه: *if* یا *whether*.
+x.iq-polite-s01: سؤالِ داخل جمله ترتیب جملهٔ خبری دارد.
+x.iq-polite-s02: *Do you happen to know…?* خیلی مؤدبانه است.
+x.iq-polite-s03: ترتیب جملهٔ خبری: *this jacket costs*.

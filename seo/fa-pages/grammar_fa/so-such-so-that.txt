@@ -1,0 +1,22 @@
+# so-such-so-that — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***so*** و ***such*** توصیف را قوی‌تر می‌کنند (یعنی «خیلی»، «چه … ای»): *I'm **so** tired! It was **such** a long day!* با یک جمله‌وارهٔ ***that*** **نتیجه** را نشان دهید: *It was **so** cold **that** we stayed inside.* (آن‌قدر سرد بود که…)
+i1: این‌ها را با ***so that*** قاطی نکنید که **هدف** را نشان می‌دهد: *I left early **so that** I could catch the train.*
+
+sst-so-such.t: *so* یا *such*؟ *so hot, such a hot day*
+sst-so-such.s: ***so*** + صفت یا قید بیاورید (*so tired, so quickly*). ***such*** + (*a / an*) + (صفت) + اسم بیاورید (*such a nice man, such good weather*).
+sst-so-such.b0.h: so | such
+sst-so-such.b0.0: *so* + صفت: *It's **so** cold!* ‖ *such a / an* + صفت + اسم مفرد: *It's **such a** cold day!*
+sst-so-such.b0.1: *so* + قید: *She speaks **so** fast.* ‖ *such* + صفت + اسم جمع: ***such** nice people*
+sst-so-such.b0.2: *so much / so many* + اسم: ***so many** people* ‖ *such* + صفت + اسم غیرقابل‌شمارش: ***such** good weather*
+sst-so-such.b1: هر دو معنی را **قوی‌تر** می‌کنند، مثل *very*، اما احساسی‌تر به نظر می‌رسند: *I'm **so** happy! You're **such** a good friend.*
+sst-so-such.n0: *so* + صفت
+sst-so-such.n1: *such a* + صفت + اسم
+sst-so-such.n2: *such* + جمع
+sst-so-such.n3: *so many*
+sst-so-such.w0: *such a* + اسم.
+sst-so-such.w1: *so* + صفت.
+sst-so-such.w2: *such a* (ترتیب کلمه‌ها).
+
+x.sst-so-such-s01: *So* + صفت.
+x.sst-so-such-s02: *Such a* + صفت + اسم.
+x.sst-so-such-s03: *Such* + صفت + اسم جمع.

@@ -1,0 +1,21 @@
+# unreal-past — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: در بعضی ساختارها، شکل **گذشته** دربارهٔ زمان گذشته نیست؛ نشان می‌دهد موقعیتی **غیرواقعی**، **خیالی** یا **دلخواه** است: *It's time we **went**.* (وقتش است برویم؛ یعنی باید همین حالا برویم.)
+i1: این را از [شرطی نوع دوم](/blog/grammar/second-conditional/) و [wish و if only](/blog/grammar/wish-if-only/) می‌شناسید. این صفحه ساختارهای رایج دیگر را توضیح می‌دهد: *it's time, would rather, as if, suppose* و *what if*.
+
+up-its-time.t: *It's time…*: *it's time to go, it's time we went*
+up-its-time.s: **It's time + to + فعل** یا **It's time + فاعل + گذشتهٔ ساده**: *It's time to go. It's time we went.* **high / about time** یعنی باید تا حالا اتفاق می‌افتاد.
+up-its-time.b0: دو الگو داریم:
+up-its-time.b1.0: ***It's time + to + فعل***: *It's late. **It's time to go**.* / ***It's time for** + اسم*: ***It's time for** bed.*
+up-its-time.b1.1: ***It's time + فاعل + گذشتهٔ ساده***: *It's late. **It's time we went** home.* معنی‌اش **الان** است، نه گذشته.
+up-its-time.b2: ***It's high time*** و ***it's about time*** + فاعل + گذشتهٔ ساده قوی‌ترند. نشان می‌دهند **دیر شده** و آن کار باید تا حالا انجام می‌شد، اغلب به شکل گلایه: ***It's about time** you **found** a job!* (دیگر وقتش است کار پیدا کنی!)
+up-its-time.b3: بعد از *It's time* + فاعل، زمان حال نیاورید: *It's time we **left**.* نه *It's time we leave* (در صحبت خودمانی شنیده می‌شود، اما در امتحان و نوشتن از آن پرهیز کنید).
+up-its-time.n0: *time* + *to*
+up-its-time.n1: *time* + فاعل + گذشته
+up-its-time.n2: گلایه
+up-its-time.n3: باید تا حالا انجام می‌شد
+up-its-time.w0: *time* + فاعل + گذشتهٔ ساده.
+up-its-time.w1: *time* + فاعل + گذشتهٔ ساده.
+
+x.up-its-time-s01: *It's time* + فاعل + گذشتهٔ ساده.
+x.up-its-time-s02: *It's time* + *to* + فعل.
+x.up-its-time-s03: *It's about time* + فاعل + گذشتهٔ ساده.

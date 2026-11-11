@@ -1,0 +1,52 @@
+# conditionals-unless-provided — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: *if* تنها کلمه برای شرط نیست. انگلیسی از ***unless, as long as, provided (that), in case*** و ***even if*** برای معنی‌های مختلف استفاده می‌کند: یک استثنا، یک شرط سفت‌وسخت، یک احتیاط، یا «فرقی نمی‌کند».
+i1: بعد از همهٔ این‌ها، مثل بعد از *if*، برای آینده زمان **حال** می‌آوریم: *I'll come **unless** it **rains**.* برای الگوهای پایه صفحهٔ [شرطی نوع صفر و اول](/blog/grammar/zero-and-first-conditional/) را ببینید.
+
+cup-unless.t: *unless* یعنی *if … not* (مگر اینکه)
+cup-unless.s: **unless** یعنی *if … not* (مگر اینکه). بعد از آن فعل **مثبت** بیاورید: *I'll go **unless** it rains* (یعنی اگر باران نیاید).
+cup-unless.b0: ***unless*** یعنی «مگر اینکه» یا «اگر … نه»: *You can't come in **unless** you have a ticket.* = You can't come in **if** you **don't** have a ticket.
+cup-unless.b1: فعلِ بعد از *unless* از نظر شکل **مثبت** است، اما معنی منفی دارد. *not* اضافه نکنید: ***unless** it **rains*** (نه *unless it doesn't rain*).
+cup-unless.b2: مثل *if*، بعد از *unless* برای آینده زمان **حال** می‌آید: ***Unless** you **hurry**, you'll miss the bus.*
+cup-unless.n0: یعنی اگر قطار دیر نکند
+cup-unless.n1: یعنی اگر رزرو نکنید
+cup-unless.n2: فقط اگر اورژانسی باشد
+cup-unless.n3: یعنی اگر از او نخواهید
+cup-unless.w0: *unless* + فعل مثبت.
+cup-unless.w1: بعد از *unless* حرف *will* نمی‌آید.
+
+cup-as-long-as.t: *as long as, provided (that), providing*
+cup-as-long-as.s: **as long as / provided (that) / providing** یعنی فقط به شرطی که: *You can borrow my car **as long as** you're careful.*
+cup-as-long-as.b0: این عبارت‌ها یعنی ***فقط اگر*** یا ***به شرطی که***. یک شرط سفت‌وسخت می‌گذارند: *You can go out **as long as** you're back by ten.* یعنی می‌توانی بیرون بروی، اما فقط به شرطی که تا ساعت ده برگردی.
+cup-as-long-as.b1: ***provided (that)*** و ***providing (that)*** همان معنی را دارند، اما رسمی‌ترند. ***on condition that*** خیلی رسمی است: *The loan was approved **on condition that** it was repaid within a year.*
+cup-as-long-as.b2: برای آینده زمان **حال** بیاورید: ***As long as** you **work** hard, you'll pass.* نه *as long as you will work*.
+cup-as-long-as.n0: فقط اگر
+cup-as-long-as.n1: رسمی
+cup-as-long-as.n2: فقط اگر
+cup-as-long-as.n3: خیلی رسمی
+cup-as-long-as.w0: بعد از *as long as* حال می‌آید.
+cup-as-long-as.w1: *provided* یعنی «فقط اگر»، نه «اگر نه»؛ اینجا *unless* لازم است.
+
+cup-in-case.t: *in case*: برای احتیاط
+cup-in-case.s: **in case** یعنی چون ممکن است چیزی **اتفاق بیفتد** (محض احتیاط): *Take an umbrella **in case** it rains.* با *if* فرق دارد.
+cup-in-case.b0: کاری را ***in case*** چیزی انجام می‌دهیم یعنی محض احتیاط، چون **ممکن است** اتفاق بیفتد: *I'll take an umbrella **in case** it rains.* (چتر را همین حالا برمی‌دارم، چون شاید باران بیاید.)
+cup-in-case.b1: مقایسه کنید: *I'll take an umbrella **if** it rains* یعنی فقط اگر موقع بیرون رفتن باران بیاید چتر برمی‌دارم.
+cup-in-case.b2: بعد از *in case* برای آینده زمان **حال** بیاورید: *in case it **rains*** (نه *in case it will rain*). برای گذشته گذشتهٔ ساده بیاورید: *I took my coat **in case** it **got** cold.*
+cup-in-case.b3: ***in case of*** + اسم روی تابلوها و در انگلیسی رسمی به کار می‌رود: ***In case of** fire, use the stairs.* (یعنی اگر آتش‌سوزی شد)
+cup-in-case.n0: احتیاط
+cup-in-case.n1: چون ممکن است لازم شود
+cup-in-case.n2: گذشته
+cup-in-case.n3: رسمی: اگر اورژانسی پیش آمد
+cup-in-case.w0: بعد از *in case* حرف *will* نمی‌آید.
+cup-in-case.w1: فقط وقتی دیرم شد زنگ می‌زنم: *if*.
+
+x.cup-unless-s01: *Unless* یعنی *if … not*: اگر ورزش نکنی، روی فرم نمی‌آیی.
+x.cup-unless-s02: *Unless* یعنی *if … not*.
+x.cup-unless-s03: *Unless* یعنی اگر الان راه نیفتیم.
+x.cup-as-long-as-s01: فقط اگر تمامش کرده باشی: *as long as*.
+q.cup-as-long-as-s02: کدام عبارت از همه رسمی‌تر است؟
+x.cup-as-long-as-s02: *On condition that* از همه رسمی‌تر است.
+x.cup-as-long-as-s03: بعد از *as long as* حال ساده می‌آید.
+x.cup-in-case-s01: احتیاط: *in case*.
+q.cup-in-case-s02: جملهٔ *I'll buy some extra food in case Tom comes.* یعنی چه؟
+x.cup-in-case-s02: *In case* یعنی محض احتیاط، از همین حالا.
+x.cup-in-case-s03: بعد از *in case* حال ساده می‌آید.

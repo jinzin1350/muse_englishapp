@@ -1,0 +1,47 @@
+# noun-modifiers-compound-nouns — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: در انگلیسی یک اسم می‌تواند مثل صفت، قبل از اسم دیگری بیاید: *a **bus** stop, a **coffee** cup, a **city** map*. اسم **دوم** اسم اصلی است: *bus stop* نوعی ایستگاه است. (ترتیب برعکس فارسی است: «ایستگاهِ اتوبوس» ← *bus stop*.)
+i1: به این‌ها **اسم مرکب** یا **اسمِ توصیف‌گر** می‌گویند. در انگلیسی روزمره خیلی رایج‌اند و در خبر و نوشتهٔ رسمی از آن هم رایج‌تر.
+
+nm-noun-noun.t: اسم + اسم: *a bus stop, a shoe shop*
+nm-noun-noun.s: یک اسم را **قبل از** اسم دیگری بیاورید تا توصیفش کند: *a bus stop, a tennis ball, a shoe shop*. اسم اول معمولاً **مفرد** است و اسم **دوم** اسم اصلی است.
+nm-noun-noun.b0.h: اسم مرکب | معنی
+nm-noun-noun.b0.0: = ‖ ایستگاهِ اتوبوس
+nm-noun-noun.b0.1: = ‖ مغازه‌ای که کفش می‌فروشد
+nm-noun-noun.b0.2: = ‖ فنجانِ قهوه
+nm-noun-noun.b0.3: = ‖ مرکزِ شهر
+nm-noun-noun.b0.4: = ‖ شمارهٔ تلفن
+nm-noun-noun.b0.5: = ‖ میزِ آشپزخانه
+nm-noun-noun.b1: اسم **اول** مثل صفت کار می‌کند، پس معمولاً **مفرد** است: *a shoe shop* (نه *a shoes shop*).
+nm-noun-noun.b2: اسم **دوم** اسم اصلی است و جمع می‌شود: *two bus **stops**, three shoe **shops***.
+nm-noun-noun.b3: ترتیب مهم است: *a **flower garden*** یک باغ است (باغِ گل)؛ *a **garden flower*** یک گل است (گلِ باغچه).
+nm-noun-noun.n0: اسم + اسم
+nm-noun-noun.n1: اسم + اسم
+nm-noun-noun.n2: جمع روی اسم دوم
+nm-noun-noun.n3: اسم + اسم
+nm-noun-noun.w0: اسم اول: مفرد.
+nm-noun-noun.w1: اسم اصلی در آخر. (ترتیب فارسیِ «ایستگاهِ اتوبوس» را کلمه‌به‌کلمه نیاورید.)
+nm-noun-noun.w2: جمع روی اسم اصلی.
+
+nm-forms.t: یک کلمه، دو کلمه یا با خط تیره؟
+nm-forms.s: اسم‌های مرکب می‌توانند **یک کلمه** نوشته شوند (*toothbrush, bedroom*)، **دو کلمه** (*bus stop, credit card*) یا با **خط تیره** (*mother-in-law, check-in*). قاعدهٔ ثابتی ندارد، پس در فرهنگ لغت چک کنید.
+nm-forms.b0.h: شکل | مثال
+nm-forms.b0.0: یک کلمه ‖ =
+nm-forms.b0.1: دو کلمه ‖ =
+nm-forms.b0.2: با خط تیره ‖ =
+nm-forms.b1: اسم‌های مرکبِ خیلی رایج به مرور اغلب **یک کلمه** می‌شوند: *email, website, weekend*.
+nm-forms.b2: تکیه معمولاً روی بخش **اول** است: ***BUS** stop, **BED**room, **SWIM**ming pool*.
+nm-forms.b3: ترکیب‌های **فعلِ *-ing*‌دار + اسم** اغلب **کاربرد** را توصیف می‌کنند: *a **swimming** pool* (استخری برای شنا)، *a **washing** machine, a **parking** space*.
+nm-forms.n0: یک کلمه
+nm-forms.n1: دو کلمه
+nm-forms.n2: با خط تیره
+nm-forms.n3: *-ing* + اسم
+nm-forms.w0: *-ing* + اسم: کاربرد اول می‌آید.
+nm-forms.w1: *-ing* + اسم: کاربرد اول می‌آید.
+
+x.nm-noun-noun-s01: اسم اصلی در آخر: *bus stop*.
+x.nm-noun-noun-s02: اسم اول مفرد: *a shoe shop*.
+x.nm-noun-noun-s03: جمع روی اسم دوم.
+x.nm-forms-s01: *-ing* + اسم: *swimming pool*.
+q.nm-forms-s02: کدام اسم مرکب یک کلمه نوشته می‌شود؟
+x.nm-forms-s02: *Bedroom* یک کلمه است.
+x.nm-forms-s03: *Credit card*: دو کلمه.

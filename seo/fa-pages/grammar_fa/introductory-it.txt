@@ -1,0 +1,57 @@
+# introductory-it — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: جملهٔ انگلیسی **فاعل** لازم دارد، پس اغلب ***it*** را به‌عنوان فاعلِ «خالی» می‌آوریم: ***It**'s raining. **It**'s five o'clock.* (در فارسی می‌گوییم «باران می‌آید» یا «ساعت پنج است» بدون فاعلِ جدا.) ***it*** را برای **معرفی** یک ایدهٔ طولانی که بعداً می‌آید هم به کار می‌بریم: ***It**'s important **to drink water**.* (یعنی آب خوردن مهم است.)
+i1: این صفحه از پایه تا الگوهای پیشرفته‌ای مثل *I find it hard to…* و *It goes without saying that…* پیش می‌رود. برای *It is said that…* صفحهٔ [ساختارهای نقل قولِ مجهول](/blog/grammar/passive-reporting-structures/) را ببینید.
+
+iit-basic.t: *It's raining, it's 5 o'clock, it's 10 km*
+iit-basic.s: برای **هوا**، **ساعت**، **تاریخ**، **روزها** و **فاصله** ***it*** را فاعل بیاورید: ***It**'s cold. **It**'s half past six. **It**'s Monday. **It**'s 3 km to the station.*
+iit-basic.b0.h: کاربرد | مثال
+iit-basic.b0.0: هوا ‖ =
+iit-basic.b0.1: ساعت ‖ =
+iit-basic.b0.2: روز و تاریخ ‖ =
+iit-basic.b0.3: فاصله ‖ =
+iit-basic.b0.4: موقعیت‌ها ‖ =
+iit-basic.b1: ***it*** را حذف نکنید: ***It**'s raining* (نه *Is raining*).
+iit-basic.n0: هوا
+iit-basic.n1: ساعت
+iit-basic.n2: تاریخ
+iit-basic.n3: فاصله
+iit-basic.w0: هوا: *it*.
+iit-basic.w1: ساعت: *it*.
+
+iit-there-it.t: *it is* یا *there is*؟
+iit-there-it.s: ***there is / are*** می‌گوید چیزی **وجود دارد** یا جایی هست (اولین بار که اسمش می‌آید): ***There's** a problem.* (یک مشکلی هست.) ***it is*** چیزی را که **از قبل معلوم** است توصیف یا معرفی می‌کند: ***It's** a big problem.*
+iit-there-it.b0.h: *there is / are* | *it is*
+iit-there-it.b0.0: = ‖ ***It's** very good.* (همان کافه)
+iit-there-it.b1: با ***there*** چیز تازه‌ای را **معرفی** کنید؛ بعد برای حرف زدن دربارهٔ آن ***it*** (یا *they*) بیاورید: ***There's** a new film at the cinema. **It**'s really funny.*
+iit-there-it.n0: اول *there*، بعد *it*
+iit-there-it.n1: اول *there are*، بعد *they*
+iit-there-it.n2: معرفی کردن
+iit-there-it.n3: وجود ندارد
+iit-there-it.w0: وجود دارد: *there is* (اولین بار که اسمش می‌آید).
+iit-there-it.w1: هوا: *it*.
+
+iit-adj-to.t: *it's easy to learn, it's nice to meet you*
+iit-adj-to.s: ***It's*** + **صفت** + ***to*** + فعل: ***It's easy to** use. **It's nice to** meet you.* با ***for*** + شخص: ***It's hard for me to** understand.* همچنین ***It takes*** + زمان + ***to***: ***It takes** an hour **to** get there.* (یک ساعت طول می‌کشد.)
+iit-adj-to.b0.h: الگو | مثال
+iit-adj-to.b0.0: *It's* + صفت + *to* + فعل ‖ =
+iit-adj-to.b0.1: *It's* + صفت + *for* + شخص + *to* ‖ =
+iit-adj-to.b0.2: *It's* + صفت + *of* + شخص + *to* (برای رفتار) ‖ =
+iit-adj-to.b0.3: *It takes* + زمان + *to* ‖ =
+iit-adj-to.b0.4: *It costs* + پول + *to* ‖ =
+iit-adj-to.b1: این الگو از شروع جمله با *to* طبیعی‌تر است: ***It's** easy **to** cook pasta* (معمولاً نه *To cook pasta is easy*).
+iit-adj-to.n0: صفت + *to*
+iit-adj-to.n1: *for* + شخص
+iit-adj-to.n2: *of* + شخص
+iit-adj-to.n3: *it takes*
+iit-adj-to.w0: *it* + *be*.
+iit-adj-to.w1: *for* + شخص.
+
+x.iit-basic-s01: هوا: *It's*.
+x.iit-basic-s02: ساعت: *What time is it?*
+x.iit-basic-s03: هوا: *It's*.
+x.iit-there-it-s01: وجود دارد (اولین بار): *There's*.
+x.iit-there-it-s02: همان نامه: *It's*.
+x.iit-there-it-s03: وجود دارد: *Is there…?*
+x.iit-adj-to-s01: *It's* + صفت + *to*.
+x.iit-adj-to-s02: *For* + شخص.
+x.iit-adj-to-s03: *It takes* + زمان + *to*.
