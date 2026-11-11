@@ -15,9 +15,11 @@ re-wrote a line in English converts that line again.
 Text: written by Claude for Alireza. Don't edit the Persian wording; ask.
 """
 import glob, html, json, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import grammar_fa as GF
 
 REPO = os.path.abspath(sys.argv[1] if len(sys.argv) > 1 else ".")
-CSS_HREF = "/fa/assets/blog-fa.css?v=2"
+CSS_HREF = "/fa/assets/blog-fa.css?v=3"
 MARK = '<meta name="muse-lang" content="fa">'
 UNKNOWN = set()
 
@@ -913,12 +915,42 @@ GRAM_JS = [
 
 def do_grammar_page(path, slug):
     t = open(path, encoding="utf-8").read()
-    if MARK in t:
-        return t, False
+    o = t
+    if MARK not in t:
+        t = grammar_phase1(t, slug)
+    T = GF.topics(REPO).get(slug)
+    if T:
+        t = grammar_phase2(t, slug, T)
+    return t, t != o
+
+def grammar_phase2(t, slug, T):
+    """Rebuild the guide body from data/grammar (A1–B1 in Persian where written)."""
+    i = t.find("</h1>")
+    if i < 0:
+        return t
+    i += 5
+    ends = [x for x in (t.find("<h2>گرامرهای مرتبط</h2>", i), t.find('<div class="cta">', i), t.find('<footer class="fa-foot">', i)) if x >= 0]
+    if not ends:
+        return t
+    j = min(ends)
+    t = t[:i] + "\n" + GF.render_body(T, GF.see_also_links(t[i:j], REPO)) + "\n\n" + t[j:]
+    if GF.has_fa(T):
+        en = plain(T["h1"])
+        f = GRAM_FA.get(slug) or en
+        fs, es = short_fa(f), short_fa(en)
+        latin = bool(re.search(r"[A-Za-z]", fs))
+        lv = sorted(p["level"] for p in T["points"])
+        desc = ("آموزش %s%s به زبان فارسی، با مثال‌های انگلیسی: قاعده‌ها، اشتباه‌های رایج و تمرین تعاملی، از سطح %s تا %s. رایگان در Muse English."
+                % (fs, "" if latin else " (%s)" % es, lv[0].upper(), lv[-1].upper()))
+        t = head_common(t, None, desc)
+        t = ld_fix(t, None, None, desc)
+    return t
+
+def grammar_phase1(t, slug):
     o = t
     hm = re.search(r"<h1>(.*?)</h1>", t, re.S)
     if not hm:
-        return t, False
+        return t
     en = plain(hm.group(1))
     family = "<h2>Topics in this family</h2>" in t
     f = FAM_FA.get(slug) if family else GRAM_FA.get(slug)
@@ -980,7 +1012,7 @@ def do_grammar_page(path, slug):
                '<div class="cta"><p>این گرامر را در جمله‌های واقعی هم ببینید: هر روز یک درس تازهٔ Muse English با صدا آماده است.</p>\n'
                '<a href="/#/preview">باز کردن درس امروز</a></div>', t, count=1, flags=re.S)
     t = t.replace("</body>", '<footer class="fa-foot">%s</footer>\n</body>' % FOOT_LINE, 1)
-    return t, t != o
+    return t
 
 def grammar_step():
     changed = 0
@@ -1063,6 +1095,8 @@ def main():
     for extra in EXTRA_STEPS:
         changed += extra()
     print("blog_fa: %d files changed" % changed)
+    if GF.STALE:
+        UNKNOWN.update("grammar text changed, Persian skipped: " + x for x in GF.STALE)
     if UNKNOWN:
         print("blog_fa: no Persian label yet (left in English) — tell Claude:\n  " + "\n  ".join(sorted(UNKNOWN)))
 

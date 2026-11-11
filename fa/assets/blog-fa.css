@@ -88,3 +88,17 @@ h1 .h1en{display:block;font-size:.56em;color:#777;font-weight:600;margin-top:6px
 html[lang="fa"] h1,html[lang="fa"] h2,html[lang="fa"] h3{line-height:1.45}
 .wbody .wfa{color:#D9480F;font-size:15px}
 .llogo img,.blogo img{border-radius:8px}
+
+/* grammar guides, phase 2: A1–B1 sections in Persian, English islands LTR */
+.gbody section[dir="rtl"] th,.gbody section[dir="rtl"] td{text-align:right}
+.gbody td[dir="ltr"],.gbody th[dir="ltr"]{text-align:left}
+.gbody .tip{border-left:0;border-inline-start:4px solid #1a73e8;border-radius:8px}
+.psum{background:#FFF8EC;border-inline-start:4px solid #FF9600;padding:10px 14px;border-radius:8px;margin:10px 0 14px}
+.gbody section[dir="rtl"] .exexpl[dir="rtl"],.gbody .gintro:not([dir="ltr"]){text-align:right}
+.gbody .exnote[dir="rtl"],.gbody .why[dir="rtl"]{unicode-bidi:isolate}
+.gbody em[dir="ltr"]{unicode-bidi:isolate}
+.gbody section[dir="rtl"] .exq[dir="ltr"],.gbody section[dir="rtl"] label[dir="ltr"],.gbody section[dir="rtl"] .esent{text-align:left}
+.gbody section[dir="rtl"] .excheck{display:block}
+.gbody section[dir="rtl"] td[dir="ltr"],.gbody section[dir="rtl"] th[dir="ltr"]{text-align:right}
+.gbody section[dir="rtl"] em[dir="ltr"],.gbody .gintro:not([dir="ltr"]) em[dir="ltr"]{display:inline-block}
+.gbody .why[dir="rtl"],.gbody .exnote[dir="rtl"]{display:block;text-align:left;font-size:.92em;margin-top:1px}
