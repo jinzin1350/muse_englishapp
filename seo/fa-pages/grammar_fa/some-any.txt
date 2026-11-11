@@ -1,0 +1,80 @@
+# some-any — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***some*** و ***any*** دربارهٔ مقداری حرف می‌زنند که دقیق نیست (معمولاً «مقداری، چند تا»). آن‌ها را با اسم‌های **جمع** (*some eggs*) و **غیرقابل‌شمارش** (*some milk*) بیاورید.
+i1: قاعدهٔ اصلی این است: ***some*** در جملهٔ مثبت و ***any*** در جملهٔ منفی و سؤالی؛ اما چند استثنای مهم دارد. برای اسم‌های قابل‌شمارش و غیرقابل‌شمارش صفحهٔ [اسم‌های قابل‌شمارش و غیرقابل‌شمارش](/blog/grammar/countable-uncountable-nouns/) را ببینید.
+
+sa-basic.t: *some* در جملهٔ مثبت، *any* در منفی و سؤالی
+sa-basic.s: در جملهٔ **مثبت** ***some*** بیاورید (*I've got some apples*). در جملهٔ **منفی** (*I haven't got any apples*) و بیشتر **سؤال‌ها** (*Have you got any apples?*) ***any*** بیاورید.
+sa-basic.b0.h:  | اسم جمع | اسم غیرقابل‌شمارش
+sa-basic.b0.0: مثبت ‖ = ‖ =
+sa-basic.b0.1: منفی ‖ = ‖ =
+sa-basic.b0.2: سؤالی ‖ = ‖ =
+sa-basic.b1: *some / any* را با اسم **جمع** و **غیرقابل‌شمارش** بیاورید. با اسم مفردِ قابل‌شمارش *a / an* بیاورید: *Is there **a** bank near here?* (نه *any bank*)
+sa-basic.n0: مثبت
+sa-basic.n1: منفی
+sa-basic.n2: سؤالی
+sa-basic.n3: غیرقابل‌شمارش
+sa-basic.w0: در جملهٔ منفی *any* می‌آید.
+sa-basic.w1: در جملهٔ مثبت *some* می‌آید.
+sa-basic.w2: اسم مفردِ قابل‌شمارش: *a*.
+
+sa-offers.t: *some* در تعارف و درخواست: *Can I have some water?*
+sa-offers.s: وقتی چیزی **تعارف می‌کنید** یا چیزی **درخواست می‌کنید**، یا انتظار دارید جواب *yes* باشد، در سؤال هم ***some*** بیاورید: *Would you like **some** coffee? Can I have **some** water?*
+sa-offers.b0.h: نوع سؤال | مثال
+sa-offers.b0.0: تعارف ‖ =
+sa-offers.b0.1: درخواست ‖ =
+sa-offers.b0.2: وقتی انتظار *yes* دارید ‖ *Did you buy **some** bread?* (فکر می‌کنم خریده‌ای.)
+sa-offers.b0.3: سؤال واقعی ‖ *Is there **any** bread?* (نمی‌دانم.)
+sa-offers.b1: مقایسه کنید: *Have you got **any** questions?* (یک سؤال باز) / *Would you like **some** more tea?* (تعارف).
+sa-offers.n0: تعارف
+sa-offers.n1: درخواست
+sa-offers.n2: درخواست
+sa-offers.n3: سؤال واقعی
+sa-offers.w0: درخواست: *some*.
+
+sa-compounds.t: *someone, anything, nowhere, everybody*
+sa-compounds.s: ***some-, any-, no-, every-*** با ***-one / -body*** (برای آدم‌ها)، ***-thing*** (برای چیزها) و ***-where*** (برای جاها) ترکیب می‌شوند: *someone, anything, nowhere, everybody*. این‌ها را مثل *some* و *any* به کار ببرید.
+sa-compounds.b0.h:  | some- | any- | no- | every-
+sa-compounds.b0.0: آدم‌ها ‖ = ‖ = ‖ = ‖ =
+sa-compounds.b0.1: چیزها ‖ = ‖ = ‖ = ‖ =
+sa-compounds.b0.2: جاها ‖ = ‖ = ‖ = ‖ =
+sa-compounds.b1: کلمه‌های ***no-*** خودشان معنی منفی دارند، پس فعل **مثبت** بیاورید: *I saw **nobody**.* = *I didn't see **anybody**.* (نه *I didn't see nobody*). در فارسی می‌گوییم «هیچ‌کس را **ندیدم**» و دو منفی داریم، اما در انگلیسی فقط یک منفی می‌آید.
+sa-compounds.b2: این کلمه‌ها فعل **مفرد** می‌گیرند: ***Everyone is** here. **Nothing has** changed.*
+sa-compounds.b3: بعد از *go* قبل از *somewhere / anywhere* حرف *to* نیاورید: *Let's go **somewhere** quiet.*
+sa-compounds.n0: *some-*
+sa-compounds.n1: منفی: *any-*
+sa-compounds.n2: *no-*
+sa-compounds.n3: *every-*
+sa-compounds.w0: فقط یک منفی.
+sa-compounds.w1: فعل مفرد.
+sa-compounds.w2: قبل از *somewhere* حرف *to* نمی‌آید.
+
+sa-any-meaning.t: *any* یعنی «هر کدام، فرقی نمی‌کند»؛ *any* بعد از *if*
+sa-any-meaning.s: در جملهٔ **مثبت**، ***any*** یعنی **هر کدام، فرقی نمی‌کند کدام**: *Call me **any** time.* بعد از ***if*** و با کلمه‌هایی که **معنی منفی** دارند (*never, hardly, without*) هم ***any*** بیاورید.
+sa-any-meaning.b0.h: کاربرد | مثال
+sa-any-meaning.b0.0: فرقی نمی‌کند کدام ‖ =
+sa-any-meaning.b0.1: = ‖ =
+sa-any-meaning.b0.2: معنی منفی ‖ =
+sa-any-meaning.b0.3: = ‖ *There's **hardly any** milk left.* (یعنی تقریباً هیچ)
+sa-any-meaning.b1: با این معنی، *any* می‌تواند با اسم **مفرد** بیاید: ***Any** child can do it. Take **any** bus from here.*
+sa-any-meaning.b2: ***Not… any*** یعنی ***no***: *There **aren't any** chairs.* = *There **are no** chairs.* فقط **یک** منفی بیاورید.
+sa-any-meaning.n0: فرقی نمی‌کند کجا
+sa-any-meaning.n1: فرقی نمی‌کند کدام
+sa-any-meaning.n2: *if*
+sa-any-meaning.n3: *hardly any* (تقریباً هیچ)
+sa-any-meaning.w0: فرقی نمی‌کند کی: *any*.
+sa-any-meaning.w1: *hardly* + *any*.
+sa-any-meaning.w2: فقط یک منفی.
+
+x.sa-basic-s01: مثبت + غیرقابل‌شمارش: *some*.
+x.sa-basic-s02: منفی: *any*.
+x.sa-basic-s03: منفی: *any*.
+x.sa-offers-s01: درخواست: *some*.
+q.sa-offers-s02: کدام سؤال تعارف است؟
+x.sa-offers-s02: تعارف: *Would you like some…?*
+x.sa-offers-s03: درخواست: *some*.
+x.sa-compounds-s01: سؤال دربارهٔ یک آدم: *anyone*.
+x.sa-compounds-s02: کلمهٔ *no-* با فعل مثبت: *There's nothing*.
+x.sa-compounds-s03: منفی + جا: *anywhere*.
+x.sa-any-meaning-s01: فرقی نمی‌کند کی: *any time*.
+x.sa-any-meaning-s02: بعد از *if*: *any*.
+x.sa-any-meaning-s03: *Hardly any* یعنی تقریباً هیچ.

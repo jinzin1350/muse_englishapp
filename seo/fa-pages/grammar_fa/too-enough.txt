@@ -1,0 +1,46 @@
+# too-enough — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***too*** یعنی **بیشتر از حدِ لازم یا دلخواه** (زیادی): *This coffee is **too** hot.* ***enough*** یعنی **به اندازهٔ کافی**: *Is it warm **enough** for you? We have **enough** chairs.*
+i1: به ترتیب کلمه‌ها دقت کنید: ***too*** **قبل از** صفت می‌آید، و ***enough*** **بعد از** صفت ولی **قبل از** اسم.
+
+te-basic.t: *too hot, warm enough, enough money*
+te-basic.s: ***too*** + صفت یا قید (*too expensive*)، صفت یا قید + ***enough*** (*big enough*)، و ***enough*** + اسم (*enough time*).
+te-basic.b0.h: الگو | مثال
+te-basic.b0.0: *too* + صفت ‖ =
+te-basic.b0.1: صفت + *enough* ‖ =
+te-basic.b0.2: *enough* + اسم ‖ =
+te-basic.b0.3: *not* + صفت + *enough* ‖ =
+te-basic.b1: ***too*** معنی **منفی** دارد (یعنی مشکلی هست): *It's **too** cold to swim.* با ***very*** مقایسه کنید: *It's **very** cold, but we can still swim.* («خیلی سرد» را همیشه *too cold* ترجمه نکنید.)
+te-basic.b2: ترتیب کلمه‌ها: ***enough*** **بعد از** صفت می‌آید (*good enough*) ولی **قبل از** اسم (*enough food*).
+te-basic.n0: *too* + صفت
+te-basic.n1: صفت + *enough*
+te-basic.n2: *enough* + اسم
+te-basic.n3: *too* + قید
+te-basic.w0: صفت + *enough*.
+te-basic.w1: *enough* + اسم.
+te-basic.w2: *too* + صفت.
+
+te-too-much-many.t: *too much, too many*، *too difficult for me to do*
+te-too-much-many.s: ***too much*** را با اسم غیرقابل‌شمارش و ***too many*** را با اسم جمع بیاورید. الگوی ***too / enough*** + ***(for someone)*** + ***to*** + فعل: *It's too cold (for us) to swim. She's old enough to vote.*
+te-too-much-many.b0.h: الگو | مثال
+te-too-much-many.b0.0: *too much* + غیرقابل‌شمارش ‖ =
+te-too-much-many.b0.1: *too many* + جمع ‖ =
+te-too-much-many.b0.2: فعل + *too much* ‖ =
+te-too-much-many.b0.3: *too* + صفت + *to* ‖ =
+te-too-much-many.b0.4: *too* + صفت + *for* + شخص + *to* ‖ =
+te-too-much-many.b0.5: صفت + *enough* + *to* ‖ =
+te-too-much-many.b1: در جمله‌های *too… to* مفعول را آخر جمله تکرار نکنید: *The box is too heavy to lift.* (نه *to lift **it***)
+te-too-much-many.b2: قبل از صفت ***too much*** نیاورید: *too hot* (نه *too much hot*).
+te-too-much-many.n0: *too much* + غیرقابل‌شمارش
+te-too-much-many.n1: *too many* + جمع
+te-too-much-many.n2: *too* + صفت + *to*
+te-too-much-many.n3: *enough* + *to*
+te-too-much-many.w0: جمع: *too many*.
+te-too-much-many.w1: بعد از فعل، مفعول نیاورید.
+te-too-much-many.w2: *for* + ضمیر مفعولی.
+
+x.te-basic-s01: مشکل: *too* + صفت.
+x.te-basic-s02: صفت + *enough*.
+x.te-basic-s03: *Enough* + اسم.
+x.te-too-much-many-s01: غیرقابل‌شمارش: *too much*.
+x.te-too-much-many-s02: *Too* + صفت + *to* (بدون مفعول در آخر).
+x.te-too-much-many-s03: *Too* + صفت + *for* + شخص + *to*.

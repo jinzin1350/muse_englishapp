@@ -1,0 +1,35 @@
+# ed-ing-adjectives — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: صفت‌های ***-ed*** می‌گویند یک آدم چه **احساسی دارد**: *I'm **bored**.* (حوصله‌ام سر رفته). صفت‌های ***-ing*** چیز یا کسی را توصیف می‌کنند که **باعث** آن احساس می‌شود: *The film is **boring**.* (فیلم خسته‌کننده است)
+i1: بیشتر این صفت‌ها از فعل ساخته شده‌اند: *bore, interest, excite, tire, surprise, confuse*.
+
+eia-basic.t: *bored* یا *boring*؟ *interested* یا *interesting*؟
+eia-basic.s: ***-ed*** یعنی شما چه **احساسی دارید** (*I'm tired*). ***-ing*** یعنی چه چیزی **باعث** آن احساس می‌شود (*My job is tiring*).
+eia-basic.b0.h: *-ed* (احساس) | *-ing* (عامل احساس)
+eia-basic.b1: آدم‌ها می‌توانند هر دو باشند: *He's **bored*** (حوصله‌اش سر رفته) / *He's **boring*** (آدم کسل‌کننده‌ای است و حوصلهٔ بقیه را سر می‌برد!).
+eia-basic.n0: احساس
+eia-basic.n1: عامل احساس
+eia-basic.n2: احساس
+eia-basic.n3: عامل احساس
+eia-basic.w0: احساس: *-ed*.
+eia-basic.w1: عامل احساس: *-ing*.
+eia-basic.w2: احساس: *-ed* (منظور این است که حوصله‌ام سر رفته).
+
+eia-more-pairs.t: *confused* یا *confusing*؟ *embarrassed* یا *embarrassing*؟
+eia-more-pairs.s: جفت‌های رایج دیگر: *confused / confusing, embarrassed / embarrassing, disappointed / disappointing, frightened / frightening, worried / worrying, annoyed / annoying, relaxed / relaxing, shocked / shocking*.
+eia-more-pairs.b0.h: *-ed* (احساس) | *-ing* (عامل احساس)
+eia-more-pairs.b1: بعد از خیلی از صفت‌های *-ed* حرف اضافه می‌آید: *disappointed **with / by**, worried **about**, annoyed **with** someone, frightened **of***. صفحهٔ [صفت‌ها و حرف اضافه](/blog/grammar/adjectives-and-prepositions/) را ببینید.
+eia-more-pairs.b2: بعضی صفت‌های احساس به این شکل جفتِ *-ing* ندارند: *scared, upset*.
+eia-more-pairs.n0: احساس
+eia-more-pairs.n1: عامل احساس
+eia-more-pairs.n2: عامل احساس
+eia-more-pairs.n3: عامل احساس
+eia-more-pairs.w0: احساس: *-ed*.
+eia-more-pairs.w1: عامل احساس: *-ing*.
+eia-more-pairs.w2: عامل احساس: *-ing*.
+
+x.eia-basic-s01: احساس: *bored*.
+x.eia-basic-s02: عامل احساس: *exciting*.
+x.eia-basic-s03: احساس: *interested*.
+x.eia-more-pairs-s01: عامل احساس: *embarrassing*.
+x.eia-more-pairs-s02: احساس: *worried*.
+x.eia-more-pairs-s03: عامل احساس: *disappointing*.

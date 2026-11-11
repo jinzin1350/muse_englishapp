@@ -1,0 +1,62 @@
+# possessive-s — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: برای اینکه نشان دهید چیزی مالِ کسی است، به اسم آن شخص ***'s*** اضافه کنید: *This is **Sara's** bag.* (کیفِ سارا). برای اسم‌های جمعی که به *-s* ختم می‌شوند فقط **آپاستروف** بگذارید: *my **parents'** house*.
+i1: برای کلمه‌های ملکی مثل *my, his, mine* و *hers* صفحهٔ [ضمیرهای ملکی](/blog/grammar/possessive-pronouns/) را ببینید.
+
+pos-basic.t: *'s* و *s'*: *my sister's car, my parents' house*
+pos-basic.s: برای نشان دادن مالکیت به اسم آدم یا حیوان **'s** اضافه کنید: *Ali's phone, my sister's car*. برای جمع‌های باقاعده که به *-s* ختم می‌شوند فقط **آپاستروف** بگذارید: *my parents' house*. جمع‌های بی‌قاعده **'s** می‌گیرند: *the children's toys*.
+pos-basic.b0.h: اسم | شکل ملکی
+pos-basic.b0.0: مفرد: *my sister* ‖ =
+pos-basic.b0.1: جمع باقاعده: *my parents* ‖ =
+pos-basic.b0.2: جمع بی‌قاعده: *the children, men, women* ‖ =
+pos-basic.b0.3: اسم شخص: *Sara* ‖ =
+pos-basic.b1: چیزی که مال کسی است **بعد از** شکل ملکی می‌آید: *Ali's **book*** (نه *the book of Ali*). ترتیب برعکس فارسی است: «کتابِ علی» ← *Ali's book*.
+pos-basic.b2: *'s* ملکی را با *'s* به معنی *is* یا *has* قاطی نکنید: *Ali**'s** tired* (یعنی *Ali is tired*). *Ali**'s** car* (ملکی).
+pos-basic.n0: مفرد
+pos-basic.n1: جمع باقاعده
+pos-basic.n2: جمع بی‌قاعده
+pos-basic.n3: اسم شخص
+pos-basic.w0: برای آدم‌ها: *'s*.
+pos-basic.w1: جمع: *s'* (دو والد).
+pos-basic.w2: جمع بی‌قاعده: *'s*.
+
+pos-places-pairs.t: *at the doctor's*، *Ali and Sara's house*
+pos-places-pairs.s: برای **مغازه‌ها و خانهٔ کسی** می‌توانید *'s* را بدون اسم بیاورید: *at the doctor's, at my aunt's* (مطبِ دکتر، خانهٔ خاله). وقتی دو نفر در چیزی **شریک‌اند**، *'s* را به اسم **دوم** اضافه کنید: *Ali and Sara's flat*. برای چیزهای **جدا**، به هر دو اسم: *Ali's and Sara's phones*.
+pos-places-pairs.b0.h: کاربرد | مثال
+pos-places-pairs.b0.0: مغازه‌ها و محل کار ‖ =
+pos-places-pairs.b0.1: خانهٔ کسی ‖ *We had dinner **at my aunt's**.* (یعنی خانهٔ خاله / عمه‌ام)
+pos-places-pairs.b0.2: مشترک ‖ ***Ali and Sara's** wedding* (یک عروسی)
+pos-places-pairs.b0.3: جدا ‖ ***Ali's and Sara's** cars* (دو ماشین جدا)
+pos-places-pairs.b0.4: اسم‌هایی که به *-s* ختم می‌شوند ‖ ***James's** car* یا ***James'** car* (هر دو درست)
+pos-places-pairs.b1: در انگلیسی آمریکایی اغلب *the dentist, the doctor* را بدون *'s* می‌گویند. هر دو درست است.
+pos-places-pairs.n0: مکان
+pos-places-pairs.n1: خانه
+pos-places-pairs.n2: مشترک
+pos-places-pairs.n3: اسمِ ختم به *-s*
+pos-places-pairs.w0: مشترک: *'s* روی اسم دوم (یک عروسی).
+pos-places-pairs.w1: خانهٔ کسی: *'s*.
+
+pos-of.t: *'s* یا *of*؟ *my friend's name, the end of the film*
+pos-of.s: **'s** را بیشتر برای **آدم‌ها و حیوان‌ها** بیاورید (*my friend's name*). **of** را برای **بخش‌های یک چیز** (*the end of the street, the top of the page*). با **مکان‌ها و سازمان‌ها** هر دو ممکن است (*Canada's capital / the capital of Canada*).
+pos-of.b0.h: 's | of
+pos-of.b0.0: آدم‌ها: *my mother's job* ‖ بخش‌های یک چیز: *the top of the page, the back of the room*
+pos-of.b0.1: حیوان‌ها: *the cat's tail* ‖ =
+pos-of.b0.2: مکان‌ها، سازمان‌ها: *Toronto's mayor, the company's profits* ‖ =
+pos-of.b0.3: صاحبِ کوتاه و معلوم ‖ توصیف طولانی: *the son of the woman who lives next door*
+pos-of.b1: برای **چیزها** معمولاً *of* یا یک **اسم مرکب** طبیعی‌تر است: *the end of the street, the car door, the kitchen window*. با *top, bottom, back, front, middle, end* حرف *of* بیاورید: *the back **of** the room* (نه *the room's back*).
+pos-of.b2: وقتی توصیف آن شخص **طولانی** است، *of* بیاورید: *the phone number **of** the man I met at the party*.
+pos-of.n0: آدم
+pos-of.n1: بخشی از یک چیز
+pos-of.n2: مکان
+pos-of.n3: بخشی از یک چیز
+pos-of.w0: بخش‌ها: *of*.
+pos-of.w1: بخش‌ها: *of*.
+
+x.pos-basic-s01: اسم شخص + *'s*.
+x.pos-basic-s02: جمع باقاعده: فقط آپاستروف.
+x.pos-basic-s03: جمع بی‌قاعده: + *'s*.
+x.pos-places-pairs-s01: خانهٔ کسی: *at my aunt's*.
+x.pos-places-pairs-s02: مشترک (یک عروسی): *'s* روی اسم دوم.
+x.pos-places-pairs-s03: مکان: *the dentist's* (در انگلیسی آمریکایی *the dentist*).
+x.pos-of-s01: بخش‌های یک چیز: *the top of*.
+x.pos-of-s02: آدم‌ها: *'s*.
+x.pos-of-s03: بخش‌ها: *the middle of*.

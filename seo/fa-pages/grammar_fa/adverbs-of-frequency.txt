@@ -1,0 +1,66 @@
+# adverbs-of-frequency — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **قیدهای تکرار** می‌گویند کاری **چند وقت یک بار** انجام می‌شود: *always, usually, often, sometimes, rarely, never*.
+i1: نکتهٔ اصلی **ترتیب کلمه‌ها**ست: این قیدها **قبل از** بیشتر فعل‌ها می‌آیند (*I **often** cook*)، اما **بعد از** *be* (*I'm **often** tired*).
+
+af-basic.t: *always, usually, often, sometimes, never*
+af-basic.s: از بیشترین به کمترین: ***always*** (۱۰۰٪) > ***usually*** > ***often*** > ***sometimes*** > ***rarely / hardly ever*** > ***never*** (۰٪).
+af-basic.b0.h: قید | چقدر | مثال
+af-basic.b0.0: *always* (همیشه) ‖ ۱۰۰٪ ‖ =
+af-basic.b0.1: *usually* (معمولاً) ‖ حدود ۸۰٪ ‖ =
+af-basic.b0.2: *often* (اغلب، زیاد) ‖ حدود ۶۰٪ ‖ =
+af-basic.b0.3: *sometimes* (گاهی) ‖ حدود ۴۰٪ ‖ =
+af-basic.b0.4: *rarely / hardly ever* (به‌ندرت) ‖ حدود ۱۰٪ ‖ =
+af-basic.b0.5: *never* (هرگز) ‖ ۰٪ ‖ =
+af-basic.b1: ***never*** خودش منفی است، پس فعل **مثبت** بیاورید: *I **never** eat meat.* (نه *I don't never eat meat*). در فارسی می‌گوییم «هرگز گوشت **نمی‌خورم**»، اما در انگلیسی فعل منفی نمی‌شود.
+af-basic.b2: برای عادت‌ها این قیدها را با **حال ساده** بیاورید: *I **usually** get up at 7.*
+af-basic.n0: *always* (همیشه)
+af-basic.n1: *often* (اغلب)
+af-basic.n2: *sometimes* (گاهی)
+af-basic.n3: *never* (هرگز)
+af-basic.w0: *never* + فعل مثبت.
+af-basic.w1: قید قبل از فعل اصلی می‌آید.
+
+af-word-order.t: ترتیب کلمه‌ها: *I always go, I'm always tired*
+af-word-order.s: قیدهای تکرار **قبل از فعل اصلی** می‌آیند (*I often go*)، اما **بعد از** *be* (*I'm often late*) و **بعد از** اولین **فعل کمکی** (*I have never been, I can't always come*).
+af-word-order.b0.h: جای قید | مثال
+af-word-order.b0.0: قبل از فعل اصلی ‖ =
+af-word-order.b0.1: بعد از *be* ‖ =
+af-word-order.b0.2: بعد از فعل کمکی یا فعل وجهی ‖ =
+af-word-order.b0.3: سؤالی ‖ =
+af-word-order.b0.4: منفی ‖ =
+af-word-order.b1: ***sometimes، usually*** و ***often*** می‌توانند **اول** یا **آخر** جمله هم بیایند: ***Sometimes** I walk to work. I walk to work **sometimes**.*
+af-word-order.b2: ***always*** و ***never*** معمولاً اول جمله نمی‌آیند (جز *Never…* برای تأکید در انگلیسی رسمی).
+af-word-order.n0: قبل از فعل اصلی
+af-word-order.n1: بعد از *be*
+af-word-order.n2: بعد از فعل کمکی
+af-word-order.n3: منفی
+af-word-order.w0: بعد از *be*.
+af-word-order.w1: بعد از *be*.
+af-word-order.w2: بعد از فعل کمکی.
+
+af-how-often.t: *How often?* یعنی چند وقت یک بار؟ *once a week, every day, twice a month*
+af-how-often.s: با ***How often…?*** بپرسید و با **عبارت‌های تکرار** جواب بدهید: *every day, once a week, twice a month, three times a year, every other day*. این عبارت‌ها معمولاً **آخر** جمله می‌آیند.
+af-how-often.b0.h: عبارت | مثال
+af-how-often.b0.0: *every* + زمان ‖ =
+af-how-often.b0.1: *once / twice / three times* + *a* + زمان ‖ =
+af-how-often.b0.2: *every other* + زمان ‖ *I wash my hair **every other day**.* (یعنی یک روز در میان)
+af-how-often.b0.3: *on* + روزها ‖ =
+af-how-often.b0.4: = ‖ *We meet **from time to time**.* (یعنی گاهی)
+af-how-often.b1: بگویید ***once*** (یک بار) و ***twice*** (دو بار)، بعد ***three times, four times***…: *I've been there **twice**.* (*two times* در صحبت رایج است، اما *twice* بهتر است.)
+af-how-often.n0: سالی دو بار
+af-how-often.n1: *every* (هر)
+af-how-often.n2: *every* + عدد
+af-how-often.n3: هفته‌ای یک بار
+af-how-often.w0: *times* + *a*. (فارسی می‌گوید «سه بار در هفته»، ولی انگلیسی *three times a week*، بدون *in*.)
+af-how-often.w1: *how often*.
+af-how-often.w2: *every* + اسم مفرد.
+
+x.af-basic-s01: هر روز یعنی ۱۰۰٪: *always*.
+x.af-basic-s02: ۰٪: *never*.
+x.af-basic-s03: نه زیاد: *rarely*.
+x.af-word-order-s01: بعد از *be*: *is often*.
+x.af-word-order-s02: سؤالی: *Do you usually…?*
+x.af-word-order-s03: بعد از فعل کمکی: *have never*.
+x.af-how-often-s01: *How often…?*
+x.af-how-often-s02: *Three times a week*.
+x.af-how-often-s03: دو بار: *twice*.

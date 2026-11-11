@@ -1,0 +1,53 @@
+# infinitive-of-purpose — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: برای اینکه بگوییم کسی **چرا** کاری را انجام می‌دهد، معمولاً ***to*** + شکل سادهٔ فعل می‌آوریم (یعنی «برای اینکه»): *I went to the bank **to get** some money.* به این **مصدرِ هدف** می‌گویند.
+i1: ***for*** + اسم، ***so that*** + جمله‌واره و ***in order to / so as to*** (رسمی‌تر) هم به کار می‌روند. این صفحه نشان می‌دهد هر کدام کِی می‌آید.
+
+ip-to.t: *to* + فعل: *I went to the shop to buy bread*
+ip-to.s: برای گفتن هدف **to + شکل سادهٔ فعل** بیاورید: *I'm saving money to buy a car. She called to say sorry.*
+ip-to.b0: مصدر با *to* به سؤال **چرا؟** جواب می‌دهد: *Why did you go to the shop? ~ **To buy** some bread.*
+ip-to.b1: معمولاً بعد از کار اصلی می‌آید: *I went to the library **to study**. We use a knife **to cut** bread.*
+ip-to.b2: برای گفتن هدف *for* + فعل نیاورید: *I came here **to learn** English.* نه *for learn* و نه *for to learn*. («برای یاد گرفتن» را کلمه‌به‌کلمه ترجمه نکنید.)
+ip-to.n0: هدف
+ip-to.n1: هدف
+ip-to.n2: هدف
+ip-to.n3: جواب کوتاه
+ip-to.w0: هدف: *to* + فعل.
+ip-to.w1: *to* + فعل.
+
+ip-for.t: *to* یا *for*؟ *for* + اسم، *for* + *-ing*
+ip-for.s: **to + فعل** برای یک کار: *I went out to get some milk.* **for + اسم**: *I went out for some milk.* **for + -ing** برای اینکه یک وسیله به چه دردی می‌خورد: *a knife for cutting bread.*
+ip-for.b0.h: الگو | مثال
+ip-for.b0.0: *to* + فعل (چرا کسی کاری می‌کند) ‖ =
+ip-for.b0.1: *for* + اسم ‖ =
+ip-for.b0.2: *for* + *-ing* (کاربرد یک وسیله) ‖ =
+ip-for.b1: ***for + -ing*** **کاربرد** کلیِ یک چیز را توصیف می‌کند: *A thermometer is used **for measuring** temperature.* برای هدفِ یک آدم ***to*** بیاورید: *I used the thermometer **to measure** the baby's temperature.*
+ip-for.b2: ***for*** + شخص + ***to*** + فعل: *There's a bus **for students to** get to campus.*
+ip-for.n0: *for* + اسم
+ip-for.n1: *for* + اسم
+ip-for.n2: کاربرد
+ip-for.n3: هدفِ یک آدم
+ip-for.w0: هدفِ یک آدم: *to*.
+ip-for.w1: *for* + اسم، *to* + فعل.
+
+ip-so-that.t: *so that* + *can / could / will / would*
+ip-so-that.s: برای هدف **so that** + فاعل + **can / could / will / would** بیاورید (یعنی «تا اینکه»)، به‌خصوص وقتی فاعل عوض می‌شود: *I'll write it down so that I don't forget. She spoke slowly so that we could understand.*
+ip-so-that.b0: ***so that*** یک **جمله‌وارهٔ** کامل را برای هدف شروع می‌کند. به‌خصوص وقتی فاعل دوم **فرق دارد** به درد می‌خورد: *I gave him my number **so that he could** call me.*
+ip-so-that.b1: برای حال و آینده ***can / will*** و برای گذشته ***could / would*** بیاورید: *I'm leaving early **so that I can** catch the train. I left early **so that I could** catch the train.*
+ip-so-that.b2: در صحبت *that* اغلب حذف می‌شود: *Speak louder **so** everyone can hear.*
+ip-so-that.b3: برای هدفِ **منفی**، *so that … won't / don't* اغلب از *to* طبیعی‌تر است: *I wrote it down **so that I wouldn't** forget.* (در انگلیسیِ دقیق نه *to not forget*)
+ip-so-that.n0: فاعل دیگر (*I*)
+ip-so-that.n1: هدف منفی، گذشته
+ip-so-that.n2: فاعل دیگر
+ip-so-that.n3: غیررسمی: *so*
+ip-so-that.w0: *so that* + فعل وجهی.
+ip-so-that.w1: گذشته: *could*.
+
+x.ip-to-s01: هدف: *to* + فعل.
+x.ip-to-s02: هدف: *To get fit.*
+x.ip-to-s03: هدف: *to buy*.
+x.ip-for-s01: *For* + اسم.
+x.ip-for-s02: کاربرد یک وسیله: *for* + *-ing*.
+x.ip-for-s03: *For* + اسم.
+x.ip-so-that-s01: *So that* + جمله‌واره.
+x.ip-so-that-s02: گذشته، هدف منفی: *wouldn't*.
+x.ip-so-that-s03: هدف در آینده: *so that you can*.

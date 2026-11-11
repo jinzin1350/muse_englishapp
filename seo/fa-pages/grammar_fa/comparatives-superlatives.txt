@@ -1,0 +1,78 @@
+# comparatives-superlatives — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **صفت تفضیلی** (مثل «بزرگ‌تر») را برای مقایسهٔ دو چیز به کار ببرید (*Toronto is **bigger than** Ottawa*) و **صفت عالی** (مثل «بزرگ‌ترین») را برای اینکه بگویید کدام در یک گروه از همه بیشتر است (*It's **the biggest** city in Canada*).
+i1: این صفحه *as… as* را هم توضیح می‌دهد و اینکه چطور مقایسه را قوی‌تر یا ضعیف‌تر کنید (*much bigger, a bit cheaper, by far the best*).
+
+cs-forms.t: *bigger, more expensive, the biggest, the most expensive*
+cs-forms.s: صفت‌های کوتاه **-er / the -est** می‌گیرند (*cheap → cheaper → the cheapest*). صفت‌های بلند **more / the most** می‌گیرند (*expensive → more expensive → the most expensive*). بعد از صفت تفضیلی **than** بیاورید.
+cs-forms.b0.h: صفت | تفضیلی | عالی
+cs-forms.b0.0: یک‌هجایی: *cheap, tall* ‖ = ‖ =
+cs-forms.b0.1: ختم به *-e*: *nice, large* ‖ = ‖ =
+cs-forms.b0.2: یک حرف صدادار + یک حرف بی‌صدا: *big, hot* ‖ = ‖ =
+cs-forms.b0.3: دوهجایی ختم به *-y*: *happy, easy* ‖ = ‖ =
+cs-forms.b0.4: دوهجایی یا بلندتر: *modern, expensive* ‖ = ‖ =
+cs-forms.b1: بعد از صفت تفضیلی ***than*** بیاورید (یعنی «از»): *My brother is taller **than** me.* قبل از صفت عالی ***the*** بیاورید، اغلب با *in* یا *of*: *the tallest **in** the class, the best day **of** my life*.
+cs-forms.b2: بعضی صفت‌های دوهجایی هر دو شکل را می‌گیرند: *quieter / more quiet, simpler / more simple, cleverer / more clever*.
+cs-forms.n0: *-er* + *than*
+cs-forms.n1: *the most*
+cs-forms.n2: حرف بی‌صدا دوتا می‌شود
+cs-forms.n3: *y* ← *ier*
+cs-forms.w0: صفت کوتاه: *-er*.
+cs-forms.w1: صفت کوتاه: *the -est*.
+cs-forms.w2: *than*.
+cs-forms.w3: صفت عالی + *in* (برای مکان).
+
+cs-irregular.t: *good, better, best*؛ *bad, worse, worst*؛ *far, further*
+cs-irregular.s: شکل‌های بی‌قاعده: **good → better → the best**، **bad → worse → the worst**، **far → farther / further → the farthest / the furthest**. قیدهای **well** و **badly** هم می‌شوند **better** و **worse**.
+cs-irregular.b0.h: صفت / قید | تفضیلی | عالی
+cs-irregular.b0.4: *little* (برای مقدار) ‖ = ‖ =
+cs-irregular.b1: ***further*** معنی **بیشتر، اضافه** هم دارد: *For **further** information, call us.* (اینجا *farther* نمی‌آید)
+cs-irregular.n0: *good* ← *better*
+cs-irregular.n1: *bad* ← *the worst*
+cs-irregular.n2: *far*
+cs-irregular.n3: *much* ← *more*
+cs-irregular.w0: *good* ← *better*.
+cs-irregular.w1: *bad* ← *the worst*.
+cs-irregular.w2: *bad* ← *worse*.
+
+cs-as-as.t: *as… as, not as… as, the same as*
+cs-as-as.s: با ***as + صفت + as*** بگویید دو چیز **برابرند** (یعنی «به اندازهٔ»): *She's as tall as her mother.* ***not as / not so… as*** یعنی کمتر: *Ottawa isn't as big as Toronto.* برای چیزهای یکسان ***the same as*** بیاورید.
+cs-as-as.b0.h: الگو | مثال
+cs-as-as.b0.0: *as… as* (برابر) ‖ =
+cs-as-as.b0.1: *not as / not so… as* (کمتر) ‖ =
+cs-as-as.b1: بعد از *as… as*، انگلیسی روزمره ضمیر مفعولی می‌آورد: *as tall as **me***. انگلیسی دقیق‌تر: *as tall as **I am***.
+cs-as-as.n0: برابر
+cs-as-as.n1: کمتر
+cs-as-as.n2: *the same as*
+cs-as-as.n3: *twice as… as* (دو برابر)
+cs-as-as.w0: *as* + صفت ساده + *as*.
+cs-as-as.w1: *the same as*. (نه *the same like*)
+cs-as-as.w2: *as… as*.
+
+cs-modifying.t: *much bigger, a bit cheaper, by far the best*
+cs-modifying.s: صفت تفضیلی را با ***much, a lot, far*** قوی‌تر کنید (*much bigger*، یعنی خیلی بزرگ‌تر) و با ***a bit, a little, slightly*** ضعیف‌تر (*a bit cheaper*، یعنی کمی ارزان‌تر). صفت عالی را با ***by far*** قوی‌تر کنید (*by far the best*، یعنی بی‌شک بهترین).
+cs-modifying.b0.h: شدت | تفضیلی | عالی
+cs-modifying.b0.0: تفاوت زیاد ‖ = ‖ =
+cs-modifying.b0.1: تفاوت کم ‖ = ‖ 
+cs-modifying.b0.2: بدون تفاوت ‖ ***no** cheaper* (رسمی)، *not any cheaper* ‖ 
+cs-modifying.b0.3: = ‖ *It's **even** colder today.* (و از قبل هم سرد بود) ‖ 
+cs-modifying.b1: با صفت تفضیلی ***very*** نیاورید: *much better* (نه *very better*). فارسی «خیلی بهتر» را *very better* ترجمه نکنید.
+cs-modifying.b2: ***even*** + صفت تفضیلی نشان می‌دهد چیز اول هم از قبل زیاد بود (یعنی «حتی»): *Yesterday was hot, but today is **even hotter**.*
+cs-modifying.n0: *much*
+cs-modifying.n1: *a bit*
+cs-modifying.n2: *by far*
+cs-modifying.n3: *even*
+cs-modifying.w0: *very* با صفت تفضیلی نمی‌آید.
+cs-modifying.w1: *by far* + صفت عالی.
+
+x.cs-forms-s01: یک حرف صدادار + یک حرف بی‌صدا: *bigger*.
+x.cs-forms-s02: صفت بلند: *the most expensive*.
+x.cs-forms-s03: صفت کوتاه: *colder*.
+x.cs-irregular-s01: *Bad* ← *worse*.
+x.cs-irregular-s02: *Good* ← *the best*.
+x.cs-irregular-s03: *Well* ← *better*.
+x.cs-as-as-s01: برابر: *as… as*.
+x.cs-as-as-s02: کمتر: *not as… as*.
+x.cs-as-as-s03: *The same as*.
+x.cs-modifying-s01: تفاوت زیاد: *much faster*.
+x.cs-modifying-s02: *By far* + صفت عالی.
+x.cs-modifying-s03: تفاوت کم: *a bit more expensive*.

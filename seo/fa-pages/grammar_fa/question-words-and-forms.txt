@@ -1,0 +1,118 @@
+# question-words-and-forms — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: در سؤال‌های انگلیسی، **فعل کمکی** (*be, do, have, can, will…*) معمولاً **قبل از** فاعل می‌آید: ***Are** you hungry? **Do** you like tea? **Can** she swim?* (در فارسی ترتیب کلمه‌ها در سؤال عوض نمی‌شود، اما در انگلیسی عوض می‌شود.)
+i1: با کلمه‌های پرسشی (*what, where, when…*) کلمهٔ پرسشی اول می‌آید: ***Where do** you live?* این صفحه از سؤال‌های ساده شروع می‌کند و تا سؤال‌های منفی و تکراری پیش می‌رود. برای *Do you know where…?* صفحهٔ [سؤال‌های غیرمستقیم](/blog/grammar/indirect-questions/) را ببینید.
+
+qw-yes-no.t: سؤال‌های بله/نه: *Are you…? Do you…? Can you…?*
+qw-yes-no.s: **be** یا یک **فعل کمکی** (*do, does, did, can, will, have*) را قبل از فاعل بیاورید: *Are you ready? Does she work here? Can you swim?*
+qw-yes-no.b0.h: فعل | جملهٔ خبری | سؤال
+qw-yes-no.b0.0: *be* ‖ = ‖ =
+qw-yes-no.b0.1: حال ساده ‖ = ‖ =
+qw-yes-no.b0.2: *he / she / it* ‖ = ‖ =
+qw-yes-no.b0.3: گذشتهٔ ساده ‖ = ‖ =
+qw-yes-no.b0.4: فعل وجهی ‖ = ‖ =
+qw-yes-no.b0.5: حال کامل ‖ = ‖ =
+qw-yes-no.b1: با *be* و فعل‌های وجهی فقط جای کلمه‌ها را عوض کنید. با فعل‌های دیگر ***do / does / did*** اضافه کنید و **شکل سادهٔ فعل** را بیاورید: ***Does** she **like** it?* نه *Does she likes it?*
+qw-yes-no.b2: در جواب کوتاه، فعل کمکی تکرار می‌شود: *Yes, she **does**. / No, I **can't**. / Yes, they **are**.*
+qw-yes-no.n0: *be*
+qw-yes-no.n1: *do*
+qw-yes-no.n2: *did*
+qw-yes-no.n3: *have*
+qw-yes-no.w0: *be* قبل از فاعل می‌آید. (در نوشتن، سؤال را فقط با علامت سؤال نسازید.)
+qw-yes-no.w1: *does* + شکل سادهٔ فعل.
+qw-yes-no.w2: فعل وجهی *do* نمی‌خواهد.
+
+qw-wh-words.t: کلمه‌های پرسشی: *what, where, when, who, why, how*
+qw-wh-words.s: کلمهٔ پرسشی را **اول** بیاورید، بعد فعل کمکی و فاعل: *Where do you live? What is your name? Why did she leave?*
+qw-wh-words.b0.h: کلمه | دربارهٔ چه می‌پرسد | مثال
+qw-wh-words.b0.0: *what* (چه، چی) ‖ چیزها، کارها ‖ =
+qw-wh-words.b0.1: *where* (کجا) ‖ جاها ‖ =
+qw-wh-words.b0.2: *when* (کی، چه وقت) ‖ زمان ‖ =
+qw-wh-words.b0.3: *who* (چه کسی) ‖ آدم‌ها ‖ =
+qw-wh-words.b0.4: *why* (چرا) ‖ دلیل ‖ =
+qw-wh-words.b0.5: *how* (چطور) ‖ روش، حال ‖ =
+qw-wh-words.b0.6: *which* (کدام) ‖ انتخاب ‖ =
+qw-wh-words.b0.7: *whose* (مالِ چه کسی) ‖ صاحب ‖ =
+qw-wh-words.b1: ترتیب: **کلمهٔ پرسشی + فعل کمکی / be + فاعل + فعل اصلی**: ***Where do** you **work**?* ***What are** you **doing**?*
+qw-wh-words.n0: *what*
+qw-wh-words.n1: *where* + *did*
+qw-wh-words.n2: *why* + *be*
+qw-wh-words.n3: *whose*
+qw-wh-words.w0: *do* اضافه کنید.
+qw-wh-words.w1: *does* + شکل سادهٔ فعل اضافه کنید.
+qw-wh-words.w2: *be* قبل از فاعل می‌آید.
+
+qw-how.t: *how much, how many, how long, how often, how far*
+qw-how.s: **how + صفت / قید** دربارهٔ مقدار، زمان و تکرار می‌پرسد: *How much is it? How long does it take? How often do you exercise?*
+qw-how.b0.h: سؤال | دربارهٔ چه می‌پرسد | نمونهٔ جواب
+qw-how.b0.0: = ‖ قیمت، مقدارِ غیرقابل‌شمارش ‖ =
+qw-how.b0.1: = ‖ تعدادِ قابل‌شمارش ‖ =
+qw-how.b0.2: = ‖ مدت زمان ‖ =
+qw-how.b0.3: = ‖ چند وقت یک بار ‖ =
+qw-how.b0.4: = ‖ فاصله ‖ =
+qw-how.b0.5: = ‖ سن ‖ =
+qw-how.b1: ***How long does it take** (to…)?* می‌پرسد یک سفر یا کار چقدر وقت می‌گیرد: *How long does it take to get to the airport? ~ It takes about 40 minutes.*
+qw-how.b2: ***how much*** با اسم غیرقابل‌شمارش می‌آید (*money, time, water*)؛ ***how many*** با اسم جمع (*people, books*).
+qw-how.n0: قیمت
+qw-how.n1: تعداد
+qw-how.n2: زمان
+qw-how.n3: چند وقت یک بار
+qw-how.w0: غیرقابل‌شمارش: *how much*.
+qw-how.w1: *does* اضافه کنید.
+
+qw-subject-object.t: *Who saw you?* یا *Who did you see?* سؤال دربارهٔ فاعل و مفعول
+qw-subject-object.s: وقتی **who / what** خودش **فاعل** است، *do / did* نیاورید: *Who called you?* وقتی **مفعول** است، *do / did* بیاورید: *Who did you call?*
+qw-subject-object.b0.h: سؤال دربارهٔ فاعل (بدون *do*) | سؤال دربارهٔ مفعول (با *do*)
+qw-subject-object.b0.0: ***Who called** you?* (کسی به شما زنگ زد.) ‖ ***Who did** you **call**?* (شما به کسی زنگ زدید.)
+qw-subject-object.b1: از خودتان بپرسید: آیا کلمهٔ پرسشی همان کسی یا چیزی است که کار را **انجام می‌دهد**؟ اگر بله، **فاعل** است: ترتیب عادی، بدون *do*: ***Who broke** the window? ~ Tom did.*
+qw-subject-object.b2: اگر کلمهٔ پرسشی کسی یا چیزی است که کار **رویش انجام می‌شود**، *do / does / did* بیاورید: ***Who did** Tom **see**? ~ He saw Maria.*
+qw-subject-object.n0: فاعل: کسی این را به شما گفت
+qw-subject-object.n1: مفعول: شما به کسی گفتید
+qw-subject-object.n2: فاعل: بدون *do*
+qw-subject-object.n3: فاعل: بدون *do*
+qw-subject-object.w0: سؤال دربارهٔ فاعل: بدون *did*.
+qw-subject-object.w1: سؤال دربارهٔ فاعل (می‌پرسیم چه کسی این کار را کرد).
+qw-subject-object.w2: سؤال دربارهٔ مفعول: *did*.
+
+qw-prepositions.t: *Who is she talking to? What is it like?* حرف اضافه در آخر سؤال
+qw-prepositions.s: در سؤال، حرف اضافه معمولاً **آخر** می‌آید: *Who are you talking **to**? Where are you **from**?* **What is it like?** یعنی «چطور است؟ توصیفش کن».
+qw-prepositions.b0: وقتی فعل حرف اضافه دارد (*talk to, look at, come from, wait for, think about*)، حرف اضافه **آخر** سؤال می‌آید: *What are you looking **at**? Who is this present **for**?* (در فارسی حرف اضافه اول می‌آید: «به چی نگاه می‌کنی؟»)
+qw-prepositions.b1: ***What is … like?*** **توصیف** می‌خواهد: *What's your new school **like**? ~ It's big and modern.* با *Do you like…?* (آیا از آن خوشت می‌آید؟) فرق دارد.
+qw-prepositions.b2: در انگلیسی خیلی رسمی، حرف اضافه می‌تواند اول بیاید: ***To whom** did you speak?* در انگلیسی معمولی *Who did you speak to?* خیلی رایج‌تر است.
+qw-prepositions.n0: حرف اضافه در آخر
+qw-prepositions.n1: *think about*
+qw-prepositions.n2: *from*
+qw-prepositions.n3: توصیفش کن
+qw-prepositions.w0: حرف اضافه در آخر.
+qw-prepositions.w1: *What … like?* (فارسی‌زبان‌ها از «چطور است؟» اشتباهی *How is … like* می‌سازند.)
+
+qw-what-which.t: *what* یا *which*؟ *What kind of…?*
+qw-what-which.s: **which** یعنی انتخاب از یک گروه کوچک و معلوم: *Which colour do you want, red or blue?* **what** یعنی انتخاب باز: *What colour is your car?*
+qw-what-which.b0: وقتی گزینه‌ها **محدود**‌اند، معمولاً گفته شده‌اند یا معلوم‌اند، ***which*** بیاورید: ***Which** of these bags is yours? **Which** way is the station, left or right?*
+qw-what-which.b1: برای سؤال **باز** با جواب‌های زیاد ***what*** بیاورید: ***What** music do you like? **What** time is it?*
+qw-what-which.b2: ***which one(s)?*** و ***which of*** + جمع: ***Which one** do you want? **Which of** your friends is coming?* (نه *what of*)
+qw-what-which.b3: ***what kind of / what sort of*** دربارهٔ نوع می‌پرسد: ***What kind of** films do you like?*
+qw-what-which.n0: دو گزینه
+qw-what-which.n1: سؤال باز
+qw-what-which.n2: *which of*
+qw-what-which.n3: نوع
+qw-what-which.w0: *which of*.
+qw-what-which.w1: *which one* / *which of*.
+
+x.qw-yes-no-s01: حال ساده با *you*: *Do you…?*
+x.qw-yes-no-s02: سؤال با *be*: *Is your sister…?*
+x.qw-yes-no-s03: *Does* + فاعل + شکل سادهٔ فعل.
+x.qw-wh-words-s01: زمان: *When*.
+x.qw-wh-words-s02: روش: *How*.
+x.qw-wh-words-s03: جا: *Where*.
+x.qw-how-s01: قابل‌شمارش: *How many*.
+x.qw-how-s02: زمان: *How long does it take…?*
+x.qw-how-s03: چند وقت یک بار: *How often*.
+x.qw-subject-object-s01: سؤال دربارهٔ فاعل: *Who made…?*
+x.qw-subject-object-s02: سؤال دربارهٔ مفعول: *Who did you meet…?*
+x.qw-subject-object-s03: سؤال دربارهٔ فاعل: بدون *did*.
+x.qw-prepositions-s01: *Wait for* ← *Who are you waiting for?*
+x.qw-prepositions-s02: توصیف: *What is … like?*
+x.qw-prepositions-s03: *Listen to* ← حرف اضافه در آخر.
+x.qw-what-which-s01: انتخاب از دو گزینه: *Which*.
+x.qw-what-which-s02: *Which of* + گروه.
+x.qw-what-which-s03: *What kind of…?*

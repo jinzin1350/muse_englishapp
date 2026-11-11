@@ -1,0 +1,62 @@
+# reflexive-reciprocal-pronouns — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: وقتی فاعل و مفعول **یک نفرند**، **ضمیر انعکاسی** بیاورید (مثل «خودم، خودش»): *I cut **myself**. She taught **herself** English.*
+i1: وقتی دو یا چند نفر کاری را **برای همدیگر** انجام می‌دهند، ***each other*** (همدیگر) بیاورید: *They love **each other**.*
+
+rrp-forms.t: *myself, yourself, himself, herself, itself, ourselves, themselves*
+rrp-forms.s: وقتی **فاعل و مفعول یکی‌اند**، **ضمیر انعکاسی** بیاورید: *I hurt **myself**. They enjoyed **themselves**.*
+rrp-forms.b0.h: فاعل | ضمیر انعکاسی
+rrp-forms.b0.1: *you* (یک نفر) ‖ =
+rrp-forms.b0.4: *you* (بیشتر از یک نفر) ‖ =
+rrp-forms.b1: مقایسه کنید: *She looked at **her**.* (به زن دیگری نگاه کرد) / *She looked at **herself**.* (به خودش در آینه نگاه کرد)
+rrp-forms.b2: املا: مفرد *-self*، جمع *-selves*. بگویید *himself* و *themselves* (نه *hisself, theirselves*).
+rrp-forms.n0: *myself* (خودم)
+rrp-forms.n1: *yourself* (خودت)
+rrp-forms.n2: *itself*
+rrp-forms.n3: *ourselves* (خودمان)
+rrp-forms.n4: *herself* (خودش)
+rrp-forms.w0: *himself*.
+rrp-forms.w1: *themselves*.
+rrp-forms.w2: جمع: *-selves*.
+
+rrp-verbs.t: *enjoy yourself, help yourself, by myself*؛ *relax, feel, meet*
+rrp-verbs.s: بعضی فعل‌ها اغلب ضمیر انعکاسی می‌گیرند: ***enjoy yourself, help yourself, behave yourself, introduce yourself***. خیلی از فعل‌ها در انگلیسی معمولاً ضمیر انعکاسی **نمی‌گیرند**: *relax, feel, concentrate, meet, wash, get dressed*. ***by myself*** یعنی تنهایی.
+rrp-verbs.b0.h: اغلب با ضمیر انعکاسی | معمولاً بدون ضمیر انعکاسی
+rrp-verbs.b0.0: *enjoy yourself* (خوش بگذرانید) ‖ *relax* (نه *relax yourself*)
+rrp-verbs.b0.1: *help yourself* (بفرمایید، هرچه می‌خواهید بردارید) ‖ *feel* (نه *feel myself tired*)
+rrp-verbs.b0.4: = ‖ *meet* (*We met in 2010.*)
+rrp-verbs.b0.5: *by myself* یعنی تنهایی، بدون کمک ‖ =
+rrp-verbs.b1: ***enjoy*** مفعول لازم دارد: *Did you **enjoy yourself**? Did you **enjoy the party**?* (نه *Did you enjoy?*)
+rrp-verbs.b2: *wash, shave* و *get dressed* را بدون *myself* بیاورید، مگر اینکه بخواهید تأکید کنید: *I got up, **washed** and **got dressed**.*
+rrp-verbs.n0: *enjoy*
+rrp-verbs.n1: *help yourself* (بفرمایید)
+rrp-verbs.n2: بدون ضمیر انعکاسی
+rrp-verbs.n3: تنهایی
+rrp-verbs.w0: *relax* ضمیر انعکاسی نمی‌گیرد.
+rrp-verbs.w1: *feel* ضمیر انعکاسی نمی‌گیرد. (فارسی می‌گوید «احساس خستگی می‌کنم»، ولی انگلیسی *I feel tired*.)
+rrp-verbs.w2: *meet* ضمیر انعکاسی نمی‌گیرد.
+rrp-verbs.w3: *enjoy* مفعول لازم دارد.
+
+rrp-each-other.t: *each other* و *one another* (همدیگر)
+rrp-each-other.s: وقتی دو یا چند نفر کاری را **با همدیگر / برای همدیگر** انجام می‌دهند، ***each other*** (یا ***one another***) بیاورید: *Ali and Sara love **each other**.* مقایسه کنید: *They blamed **themselves*** (هر کدام خودش را مقصر دانست) / *They blamed **each other*** (یکی دیگری را مقصر دانست و برعکس).
+rrp-each-other.b0.h: انعکاسی (خود) | متقابل (همدیگر)
+rrp-each-other.b0.0: *They blamed **themselves**.* (هر کدام خودش را مقصر دانست) ‖ *They blamed **each other**.* (اولی دومی را مقصر دانست و دومی اولی را)
+rrp-each-other.b1: ***each other's*** شکل ملکی است: *They borrowed **each other's** notes.* (جزوه‌های همدیگر)
+rrp-each-other.b2: ***one another*** همان معنی را دارد و کمی رسمی‌تر است: *The students helped **one another**.*
+rrp-each-other.b3: بعضی فعل‌ها *each other* لازم ندارند: *They **met** in 2010. They **kissed**. They **got married**.*
+rrp-each-other.n0: *each other*
+rrp-each-other.n1: *each other*
+rrp-each-other.n2: *each other's*
+rrp-each-other.n3: *one another*
+rrp-each-other.w0: *each other* (منظور این است که آن‌ها همدیگر را دوست دارند).
+rrp-each-other.w1: *to each other*.
+rrp-each-other.w2: بدون *-s*.
+
+x.rrp-forms-s01: *He* ← *himself*.
+x.rrp-forms-s02: بیشتر از یک نفر: *yourselves*.
+x.rrp-forms-s03: *We* ← *ourselves*.
+x.rrp-verbs-s01: *Enjoy yourself* یعنی خوش گذراندن.
+x.rrp-verbs-s02: *Concentrate* ضمیر انعکاسی نمی‌گیرد.
+x.rrp-verbs-s03: *Help yourself* یعنی بفرمایید، هرچه می‌خواهید بردارید.
+x.rrp-each-other-s01: اولی به دومی می‌گوید و دومی به اولی: *each other*.
+x.rrp-each-other-s02: به همدیگر نگاه کردند: *each other*.
+x.rrp-each-other-s03: *Each other*.

@@ -1,0 +1,54 @@
+# much-many-a-few-a-little — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***many*** و ***a few*** را با اسم‌های **جمعِ قابل‌شمارش** بیاورید (*many books, a few friends*)، و ***much*** و ***a little*** را با اسم‌های **غیرقابل‌شمارش** (*much time, a little milk*). ***A lot of*** با هر دو می‌آید.
+i1: صفحه‌های [اسم‌های قابل‌شمارش و غیرقابل‌شمارش](/blog/grammar/countable-uncountable-nouns/) و [some و any](/blog/grammar/some-any/) را هم ببینید.
+
+mmf-much-many.t: *much, many, a lot of*؛ *how much, how many*
+mmf-much-many.s: ***many*** را با اسم جمع و ***much*** را با اسم غیرقابل‌شمارش بیاورید، بیشتر در **سؤال و جملهٔ منفی**. ***a lot of / lots of*** با هر دو می‌آید، به‌خصوص در جملهٔ **مثبت**. برای پرسیدن تعداد ***How many…?*** و برای مقدار ***How much…?*** بیاورید.
+mmf-much-many.b0.h:  | قابل‌شمارش (جمع) | غیرقابل‌شمارش
+mmf-much-many.b0.0: سؤالی ‖ = ‖ =
+mmf-much-many.b0.1: منفی ‖ = ‖ =
+mmf-much-many.b0.2: مثبت ‖ = ‖ =
+mmf-much-many.b1: در جملهٔ مثبت، ***a lot of*** از *much* طبیعی‌تر است: *I drink **a lot of** coffee.* (نه *I drink much coffee*). *many* در جملهٔ مثبت درست است، اما در صحبت روزمره *a lot of* رایج‌تر است.
+mmf-much-many.b2: ***How much*** برای پرسیدن **قیمت** هم به کار می‌رود: *How much is this jacket?*
+mmf-much-many.n0: قابل‌شمارش
+mmf-much-many.n1: غیرقابل‌شمارش، منفی
+mmf-much-many.n2: مثبت
+mmf-much-many.n3: قیمت
+mmf-much-many.w0: قابل‌شمارش: *many*.
+mmf-much-many.w1: غیرقابل‌شمارش: *much*.
+mmf-much-many.w2: اسم جمع: *are*.
+
+mmf-a-few-a-little.t: *a few* و *a little*: کمی، نه زیاد
+mmf-a-few-a-little.s: ***a few*** با اسم جمع و ***a little*** با اسم غیرقابل‌شمارش یعنی **مقداری، کمی، چند تا**: *I have a few friends here. Can I have a little sugar?*
+mmf-a-few-a-little.b0.h: قابل‌شمارش (جمع) | غیرقابل‌شمارش
+mmf-a-few-a-little.b1: *a few* و *a little* معنی **مثبت** دارند: یعنی «چند تا / کمی»، و اغلب یعنی «به اندازهٔ کافی»: *I have **a few** friends in Toronto, so I'm not lonely.*
+mmf-a-few-a-little.b2: ***a little*** قبل از صفت هم می‌آید و یعنی «یک کم»: *I'm **a little** tired.*
+mmf-a-few-a-little.n0: قابل‌شمارش
+mmf-a-few-a-little.n1: غیرقابل‌شمارش
+mmf-a-few-a-little.n2: قابل‌شمارش
+mmf-a-few-a-little.n3: غیرقابل‌شمارش
+mmf-a-few-a-little.w0: قابل‌شمارش: *a few*.
+mmf-a-few-a-little.w1: غیرقابل‌شمارش: *a little*.
+
+mmf-few-little.t: *few* یا *a few*؟ *little* یا *a little*؟
+mmf-few-little.s: ***a few / a little*** یعنی **چند تا، کمی** (مثبت). ***few / little*** (بدون *a*) یعنی **زیاد نه، خیلی کم** (منفی): *I have a few friends* (اوضاعم خوب است). *I have few friends* (تنها هستم).
+mmf-few-little.b0.h: مثبت (کمی، کافی) | منفی (ناکافی، تقریباً هیچ)
+mmf-few-little.b1: *few* و *little* (بدون *a*) نسبتاً **رسمی**‌اند. در صحبت روزمره معمولاً می‌گویند *not many / not much*: *Not many people came.*
+mmf-few-little.b2: ***very few / very little*** رایج است: *There's **very little** money left.*
+mmf-few-little.b3: ***quite a few*** یعنی نسبتاً زیاد: *Quite a few people came.*
+mmf-few-little.n0: یعنی *not many*
+mmf-few-little.n1: یعنی *not much*
+mmf-few-little.n2: چند تا (مثبت)
+mmf-few-little.n3: نسبتاً زیاد
+mmf-few-little.w0: معنی منفی: *few*.
+mmf-few-little.w1: معنی مثبت: *a little*.
+
+x.mmf-much-many-s01: قابل‌شمارش: *How many?*
+x.mmf-much-many-s02: غیرقابل‌شمارش، منفی: *much*.
+x.mmf-much-many-s03: غیرقابل‌شمارش: *How much?*
+x.mmf-a-few-a-little-s01: قابل‌شمارش: *a few*.
+x.mmf-a-few-a-little-s02: غیرقابل‌شمارش: *a little*.
+x.mmf-a-few-a-little-s03: قابل‌شمارش: *a few minutes*.
+x.mmf-few-little-s01: معنی منفی (زیاد نه): *few*.
+x.mmf-few-little-s02: معنی مثبت (کمی): *a little*.
+x.mmf-few-little-s03: *Very few* یعنی تقریباً هیچ.

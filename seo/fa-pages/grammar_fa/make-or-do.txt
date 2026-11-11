@@ -1,0 +1,53 @@
+# make-or-do — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: ***make*** معمولاً یعنی چیز تازه‌ای را **ساختن** یا **درست کردن**: ***make** a cake, **make** a plan*. ***do*** برای **فعالیت‌ها**، **کار** و **وظیفه‌ها** است: ***do** your homework, **do** the dishes*. (در فارسی هر دو اغلب «کردن» یا «درست کردن» ترجمه می‌شوند.)
+i1: خیلی از عبارت‌ها از این قاعده پیروی نمی‌کنند، پس آن‌ها را **جفتی** یاد بگیرید: ***make** a mistake* (نه *do a mistake*)، ***do** someone a favour* (نه *make a favour*).
+
+mod-basic.t: *make a cake, do your homework*
+mod-basic.s: ***make*** یعنی ساختن یا تولید کردن (*make a cake, make tea, make a mess*). ***do*** برای فعالیت‌ها، کارها و وظیفه‌هاست (*do homework, do the dishes, do sport*)، و برای کارهای کلی با *something, anything, nothing, what*.
+mod-basic.b0.h: *make* (ساختن، تولید کردن) | *do* (فعالیت‌ها، کار)
+mod-basic.b1: برای فعالیت‌های کلی ***do*** بیاورید: *What are you **doing**? I'm not **doing** anything. What do you **do**?* (یعنی شغلتان چیست؟)
+mod-basic.n0: تولید کردن
+mod-basic.n1: وظیفه
+mod-basic.n2: تولید کردن
+mod-basic.n3: کار خانه
+mod-basic.w0: *do homework*.
+mod-basic.w1: *make* یعنی درست کردن.
+mod-basic.w2: *make the bed* (رختخواب را مرتب کردن).
+
+mod-collocations.t: *make a mistake, do me a favour*
+mod-collocations.s: جفت‌های **ثابتِ** رایج. با **make**: *a mistake, a decision, money, progress, an effort, friends, a plan, an appointment, an excuse, a complaint, a suggestion*. با **do**: *a favour, business, your best, damage, good, harm, research, a course, an exam* (بریتانیایی).
+mod-collocations.b0.h: make | do
+mod-collocations.b0.6: = ‖ *do an exam / a test* (بریتانیایی؛ *take* هم می‌گویند)
+mod-collocations.b1: این‌ها **هم‌آیی** هستند، یعنی کلمه‌هایی که با هم می‌آیند: قاعدهٔ دقیقی ندارند، پس کل عبارت را یاد بگیرید.
+mod-collocations.n0: *make a mistake* (اشتباه کردن)
+mod-collocations.n1: *do a favour* (لطف کردن)
+mod-collocations.n2: *make progress* (پیشرفت کردن)
+mod-collocations.n3: *do damage* (خسارت زدن)
+mod-collocations.w0: *make a mistake*.
+mod-collocations.w1: *do a favour*.
+mod-collocations.w2: *make money* (پول درآوردن).
+
+mod-make-someone.t: *It made me laugh*؛ *she made me wait*
+mod-make-someone.s: ***make*** + شخص + **شکل سادهٔ فعل** یعنی کسی را وادار کردن یا باعث شدن کسی کاری بکند: *The film **made me laugh**. My boss **made me work** late.* ***make*** + شخص + **صفت**: *It **made me happy**.* مجهول: *I **was made to wait**.*
+mod-make-someone.b0.h: الگو | مثال
+mod-make-someone.b0.0: *make* + شخص + شکل سادهٔ فعل ‖ *Onions **make me cry**.* (نه *make me to cry*)
+mod-make-someone.b0.1: *make* + شخص + صفت ‖ =
+mod-make-someone.b0.2: *be made to* + فعل (مجهول) ‖ =
+mod-make-someone.b0.3: *make yourself* + اسم مفعول ‖ =
+mod-make-someone.b1: در جملهٔ **معلوم** ***to* نمی‌آید**: *She made me **stay***. در جملهٔ **مجهول** ***to*** برمی‌گردد: *I was made **to stay***.
+mod-make-someone.n0: *make* + شکل سادهٔ فعل
+mod-make-someone.n1: *make* + صفت
+mod-make-someone.n2: وادار کردن
+mod-make-someone.n3: مجهول: *to*
+mod-make-someone.w0: در جملهٔ معلوم *to* نمی‌آید.
+mod-make-someone.w1: *make* + صفت.
+
+x.mod-basic-s01: درست کردن غذا: *make dinner*.
+x.mod-basic-s02: وظیفه: *do homework*.
+x.mod-basic-s03: *Make a noise* (سروصدا کردن).
+x.mod-collocations-s01: *Make a decision* (تصمیم گرفتن).
+x.mod-collocations-s02: *Do someone a favour*.
+x.mod-collocations-s03: *Do your best* (نهایت تلاشت را بکن).
+x.mod-make-someone-s01: *Make* + شخص + شکل سادهٔ فعل.
+x.mod-make-someone-s02: *Make* + شخص + صفت.
+x.mod-make-someone-s03: مجهول: *be made to*.

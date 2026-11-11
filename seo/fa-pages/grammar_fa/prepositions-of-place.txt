@@ -1,0 +1,68 @@
+# prepositions-of-place — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **حرف‌های اضافهٔ مکان** می‌گویند چیزی **کجا**ست: *The keys are **on** the table. The cat is **under** the bed. I'm **at** the station.*
+i1: سه حرف اضافهٔ اصلی ***in، on*** و ***at*** هستند و گیج‌کننده‌ترین‌ها هم همین‌ها هستند. این صفحه قدم‌به‌قدم توضیحشان می‌دهد.
+
+ppl-basic.t: *in, on, under, next to, between, behind*
+ppl-basic.s: حرف‌های اضافهٔ پایهٔ مکان: ***in*** (داخلِ)، ***on*** (روی یک سطح)، ***under, next to, between, behind, in front of, opposite, near***.
+ppl-basic.b0.h: حرف اضافه | مثال
+ppl-basic.b0.0: *in* (داخلِ) ‖ =
+ppl-basic.b0.1: *on* (روی سطح) ‖ =
+ppl-basic.b0.2: *under* (زیرِ) ‖ =
+ppl-basic.b0.3: *next to / beside* (کنارِ) ‖ =
+ppl-basic.b0.4: *between* (بینِ) ‖ =
+ppl-basic.b0.5: *behind / in front of* (پشتِ / جلوی) ‖ =
+ppl-basic.b0.6: *opposite* (روبه‌روی) ‖ *The school is **opposite** the park.* (آن طرف خیابان)
+ppl-basic.b0.7: *near* (نزدیکِ) ‖ =
+ppl-basic.b1: ***next to*** و ***in front of*** همهٔ کلمه‌هایشان را لازم دارند: *next **to** the door, in front **of** the school*. ***near*** حرف *to* نمی‌خواهد: *near the door*.
+ppl-basic.n0: *in* (داخلِ)
+ppl-basic.n1: *on* (روی)
+ppl-basic.n2: *under* (زیرِ)
+ppl-basic.n3: *next to* (کنارِ)
+ppl-basic.w0: روی سطح: *on*.
+ppl-basic.w1: *next to*.
+ppl-basic.w2: *in front of*.
+
+ppl-in-on-at.t: *in*، *on* یا *at*؟ *at the door, in the room, on the wall*
+ppl-in-on-at.s: ***at*** یعنی یک **نقطه** یا جایی که کاری آنجا انجام می‌شود (*at the bus stop, at work, at a party*). ***in*** یعنی **داخلِ** یک محدوده یا فضا (*in the kitchen, in Toronto*). ***on*** یعنی روی یک **سطح** یا یک **خط** (*on the wall, on the second floor*).
+ppl-in-on-at.b0.h: at | in | on
+ppl-in-on-at.b0.0: یک نقطه: *at the door, at the traffic lights* ‖ داخلِ: *in the box, in the car* ‖ سطح: *on the table, on the wall*
+ppl-in-on-at.b0.1: مراسم یا فعالیت: *at a party, at work, at school* ‖ شهر یا کشور: *in Tehran, in Canada* ‖ طبقه‌ها: *on the third floor*
+ppl-in-on-at.b0.2: نشانی: *at 25 King Street* ‖ اتاق یا ساختمان (داخلش): *in the kitchen* ‖ خیابان: *on Queen Street*
+ppl-in-on-at.b1: برای ساختمان، وقتی منظورتان **فعالیت** یا **محل قرار** است ***at*** بیاورید: *I'll meet you **at** the cinema.* وقتی منظورتان **داخل** آن است ***in*** بیاورید: *It's cold **in** the cinema.*
+ppl-in-on-at.b2: با اسم خیابان ***on*** می‌آید (*on Queen Street*)، اما با نشانی کامل ***at*** (*at 15 Queen Street*).
+ppl-in-on-at.n0: یک نقطه
+ppl-in-on-at.n1: شهر
+ppl-in-on-at.n2: طبقه
+ppl-in-on-at.n3: فعالیت
+ppl-in-on-at.w0: کشور: *in*.
+ppl-in-on-at.w1: طبقه: *on*. (فارسی می‌گوید «در طبقهٔ دوم»، ولی انگلیسی *on*.)
+ppl-in-on-at.w2: مراسم: *at*.
+
+ppl-transport.t: *on the bus, in the car*؛ *arrive in* یا *arrive at*
+ppl-transport.s: برای وسیلهٔ نقلیهٔ عمومی و دوچرخه ***on*** بیاورید (*on the bus, on a plane, on my bike*) و برای ماشین و تاکسی ***in*** (*in the car*). به شهر یا کشور ***arrive in***؛ به ساختمان یا یک مکان ***arrive at*** (*arrive at the airport*). هیچ‌وقت *arrive to* نگویید.
+ppl-transport.b0.h: الگو | مثال
+ppl-transport.b0.0: *on* + اتوبوس، قطار، هواپیما، کشتی، دوچرخه ‖ =
+ppl-transport.b0.1: *in* + ماشین، تاکسی ‖ =
+ppl-transport.b0.2: *get on / off* (سوار / پیاده شدن از اتوبوس یا قطار) ‖ =
+ppl-transport.b0.3: *get in(to) / out of* (سوار / پیاده شدن از ماشین یا تاکسی) ‖ =
+ppl-transport.b0.4: *arrive in* + شهر / کشور ‖ =
+ppl-transport.b0.5: *arrive at* + ساختمان / مکان ‖ =
+ppl-transport.b0.6: *go to / get to* + یک مکان ‖ *How do I **get to** the station?* (اما *get **home*** بدون *to*)
+ppl-transport.b1: ***by*** + وسیلهٔ نقلیه، بدون *the*: *by bus, by car, by plane* (اما پیاده: *on foot*).
+ppl-transport.n0: *on* + قطار
+ppl-transport.n1: *into* + تاکسی
+ppl-transport.n2: *arrive at*
+ppl-transport.n3: *arrive in*
+ppl-transport.w0: *arrive at*. (فارسی می‌گوید «به هتل رسیدم»، ولی *arrive to* غلط است.)
+ppl-transport.w1: ماشین: *in*.
+ppl-transport.w2: *by* + وسیلهٔ نقلیه. (فارسی می‌گوید «با اتوبوس»، ولی انگلیسی *by bus*.)
+
+x.ppl-basic-s01: روی سطح: *on*.
+x.ppl-basic-s02: بین دو چیز: *between*.
+x.ppl-basic-s03: روی سطح: *on*.
+x.ppl-in-on-at-s01: شهر: *in*.
+x.ppl-in-on-at-s02: محل قرار: *at*.
+x.ppl-in-on-at-s03: طبقه‌ها: *on*.
+x.ppl-transport-s01: یک مکان: *arrive at*.
+x.ppl-transport-s02: وسیلهٔ نقلیهٔ عمومی: *on*.
+x.ppl-transport-s03: ماشین: *get in / into*.

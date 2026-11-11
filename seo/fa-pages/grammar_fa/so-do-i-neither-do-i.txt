@@ -1,0 +1,69 @@
+# so-do-i-neither-do-i — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: در مکالمه، به جای تکرار کل جمله، اغلب فقط با **فعل کمکی** جواب می‌دهیم: *Do you like jazz? ~ Yes, I **do**. I'm tired. ~ So **am** I.*
+i1: این کار انگلیسی شما را طبیعی‌تر و کم‌تکرارتر می‌کند. فعل کمکی باید با فعل جملهٔ اول جور باشد: *be* ← *am / is / are*، حال ساده ← *do / does*، گذشتهٔ ساده ← *did* و غیره.
+
+sdn-short-answers.t: جواب کوتاه: *Yes, I do. No, she isn't.*
+sdn-short-answers.s: به سؤال‌های بله/نه با **Yes / No + ضمیر + فعل کمکی** جواب بدهید: *Are you hungry? ~ Yes, I **am**. Do they live here? ~ No, they **don't**.*
+sdn-short-answers.b0.h: سؤال | بله | نه
+sdn-short-answers.b1: **همان فعل کمکیِ** سؤال را بیاورید. جواب کوتاهِ مثبت را مخفف نکنید: *Yes, I **am**.* نه *Yes, I'm*.
+sdn-short-answers.b2: جوابِ تک‌کلمه‌ای (*Yes.*) ممکن است خشک به نظر برسد. *Yes, I do* مؤدبانه‌تر و طبیعی‌تر است.
+sdn-short-answers.n0: *be*
+sdn-short-answers.n1: *does*
+sdn-short-answers.n2: *did*
+sdn-short-answers.n3: *will*
+sdn-short-answers.w0: جواب کوتاهِ مثبت مخفف نمی‌شود.
+sdn-short-answers.w1: فعل کمکی بیاورید.
+sdn-short-answers.w2: مخفف نکنید.
+
+sdn-so-neither.t: *So do I, Neither can I, Me too, Me neither* (من هم همین‌طور)
+sdn-so-neither.s: برای موافقت: **So + فعل کمکی + I** (مثبت): *I'm hungry. ~ So am I.* **Neither + فعل کمکی + I** (منفی): *I can't swim. ~ Neither can I.*
+sdn-so-neither.b0.h: جمله | موافقت (رسمی / معمولی) | موافقت (خودمانی)
+sdn-so-neither.b1: ترتیب کلمه‌ها: ***So / Neither + فعل کمکی + فاعل***: *So **do I**. Neither **have we**.* نه *So I do*.
+sdn-so-neither.b2: ***nor*** هم مثل *neither* به کار می‌رود، به‌خصوص در انگلیسی بریتانیایی: *I don't like it. ~ **Nor do I**.*
+sdn-so-neither.b3: برای **مخالفت** فعل کمکیِ برعکس را بیاورید: *I love horror films. ~ Really? I **don't**. / I don't like coffee. ~ Oh, I **do**.*
+sdn-so-neither.n0: *be*
+sdn-so-neither.n1: گذشتهٔ ساده ← *did*
+sdn-so-neither.n2: حال کامل
+sdn-so-neither.n3: خودمانی
+sdn-so-neither.w0: *so* + فعل کمکی + فاعل.
+sdn-so-neither.w1: منفی: *neither*.
+sdn-so-neither.w2: منفی: *me neither*. (فارسی در هر دو حالت می‌گوید «من هم»، اما در منفی انگلیسی *Me too* غلط است.)
+
+sdn-reply-questions.t: سؤال‌های واکنشی: *Have you? Really? Is she?*
+sdn-reply-questions.s: **سؤال‌های واکنشیِ** کوتاه (*Have you? Did she? Is it?*) علاقه یا تعجب را نشان می‌دهند، مثل «جدی؟» در فارسی: *I've just got married! ~ Have you? Congratulations!*
+sdn-reply-questions.b0: برای اینکه نشان دهید **گوش می‌دهید** و **علاقه دارید**، با *فعل کمکی + ضمیر* به شکل سؤال جواب بدهید: *I live in Calgary. ~ **Do you**? I've been there!*
+sdn-reply-questions.b1: فعل کمکی با جمله جور است: مثبت ← مثبت، منفی ← منفی: *I don't eat meat. ~ **Don't you**? I didn't know that.*
+sdn-reply-questions.b2: لحن صدا احساس شما را نشان می‌دهد: لحنِ رو به بالا برای علاقه یا تعجب، لحنِ رو به پایین برای چیزی که از قبل حدس می‌زدید.
+sdn-reply-questions.n0: علاقه
+sdn-reply-questions.n1: تعجب
+sdn-reply-questions.n2: منفی ← منفی
+sdn-reply-questions.n3: علاقه
+sdn-reply-questions.w0: همان فعل کمکی: *have*.
+sdn-reply-questions.w1: حال ساده ← *does*.
+
+sdn-think-so.t: *I think so, I hope so, I'm afraid not, I don't think so*
+sdn-think-so.s: به جای تکرار یک جمله‌واره **so** / **not** بیاورید: *Is it going to rain? ~ I hope not. Will she come? ~ I think so.* (فکر کنم / امیدوارم)
+sdn-think-so.b0.h: مثبت | منفی
+sdn-think-so.b0.3: *I guess so.* (خودمانی) ‖ =
+sdn-think-so.b0.4: *I'm afraid so.* (خبر بد) ‖ =
+sdn-think-so.b1: ***so*** جای یک جمله‌وارهٔ مثبت را می‌گیرد: *Is the shop open? ~ I **think so**.* (یعنی فکر کنم باز است.)
+sdn-think-so.b2: با *think, expect, believe, suppose* شکل منفی معمولاً ***I don't think so*** است. با ***hope*** و ***be afraid*** از ***not*** استفاده کنید: *I **hope not**. I'm **afraid not**.* (نه *I don't hope so*)
+sdn-think-so.n0: امید مثبت
+sdn-think-so.n1: نظر منفی
+sdn-think-so.n2: خبر بد، بله
+sdn-think-so.n3: «نه» مؤدبانه
+sdn-think-so.w0: *hope* ← *I hope not*.
+sdn-think-so.w1: *think so*.
+
+x.sdn-short-answers-s01: سؤال در حال ساده ← *do*.
+x.sdn-short-answers-s02: *Is* ← *isn't*.
+x.sdn-short-answers-s03: *Can* ← *can*.
+x.sdn-so-neither-s01: مثبت با *be*: *So am I.*
+x.sdn-so-neither-s02: منفی در گذشته: *Neither did I.*
+x.sdn-so-neither-s03: حال کامل: *Neither have I.*
+x.sdn-reply-questions-s01: *I've* ← *Have you?*
+x.sdn-reply-questions-s02: حال ساده ← *Does he?*
+x.sdn-reply-questions-s03: منفی در گذشته ← *Didn't you?*
+x.sdn-think-so-s01: نظر منفی: *I don't think so.*
+x.sdn-think-so-s02: *Hope* ← *I hope not.*
+x.sdn-think-so-s03: خبر بد، بله: *I'm afraid so.*

@@ -1,0 +1,57 @@
+# countable-uncountable-nouns — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: اسم‌های **قابل‌شمارش** را می‌شود شمرد: *one apple, two apples*. اسم‌های **غیرقابل‌شمارش** را نمی‌شود: *water, rice, advice*. نمی‌توانید بگویید *two rices* یا *an advice*.
+i1: این تفاوت، کلمه‌هایی را که همراه اسم می‌آیند عوض می‌کند: *a, some, much, many, a few, a little*. صفحهٔ [much, many, a few, a little](/blog/grammar/much-many-a-few-a-little/) را هم ببینید.
+
+cun-basics.t: قابل‌شمارش یا غیرقابل‌شمارش؟
+cun-basics.s: اسم‌های **قابل‌شمارش** شکل مفرد و جمع دارند (*an apple, two apples*). اسم‌های **غیرقابل‌شمارش** جمع ندارند و *a / an* نمی‌گیرند (*water, rice, money*)، و فعلشان مفرد است.
+cun-basics.b0.h: قابل‌شمارش | غیرقابل‌شمارش
+cun-basics.b0.0: *a / an* + مفرد: *a banana, an egg* ‖ بدون *a / an*: *bread, milk* (نه *a bread*)
+cun-basics.b0.1: جمع: *bananas, eggs* ‖ جمع ندارد: *rice* (نه *rices*)
+cun-basics.b0.2: *How many?* *many, a few* ‖ *How much?* *much, a little*
+cun-basics.b0.3: *some / any* + جمع: *some eggs* ‖ *some / any*: *some milk*
+cun-basics.b1: اسم‌های غیرقابل‌شمارش اغلب این‌ها هستند: **مایع‌ها** (*water, juice*)، **جنس‌ها و مواد** (*wood, paper, gold*)، **خوراکی‌هایی که دانه‌دانه شمرده نمی‌شوند** (*rice, sugar, cheese*) و **مفهوم‌ها** (*love, help, time*).
+cun-basics.b2: اسم‌های غیرقابل‌شمارش **فعل مفرد** می‌گیرند: *The milk **is** in the fridge. Money **isn't** everything.*
+cun-basics.n0: قابل‌شمارش / غیرقابل‌شمارش
+cun-basics.n1: فعل مفرد
+cun-basics.n2: قابل‌شمارش
+cun-basics.n3: غیرقابل‌شمارش
+cun-basics.w0: *money* جمع ندارد.
+cun-basics.w1: غیرقابل‌شمارش: فعل مفرد.
+cun-basics.w2: *bread* حرف *a* نمی‌گیرد. (در فارسی می‌گوییم «یک نان»، ولی در انگلیسی *bread* غیرقابل‌شمارش است.)
+
+cun-tricky.t: اسم‌های غیرقابل‌شمارشِ دردسرساز: *advice, information, news*
+cun-tricky.s: بعضی اسم‌ها در انگلیسی **غیرقابل‌شمارش**‌اند، هرچند در فارسی و خیلی از زبان‌ها شمرده می‌شوند: *advice, information, news, furniture, luggage, homework, equipment, traffic, weather, work, travel*.
+cun-tricky.b0.h: غیرقابل‌شمارش (بدون *a* و بدون جمع) | جایگزینِ قابل‌شمارش
+cun-tricky.b0.8: = ‖ شکل قابل‌شمارش ندارد: *What lovely weather!*
+cun-tricky.b1: این اسم‌ها **فعل مفرد** می‌گیرند و *-s* نمی‌گیرند: *The information **is** on the website. Your advice **was** very helpful.*
+cun-tricky.b2: با آن‌ها از *some, any, much, a lot of* یا *a piece of* استفاده کنید: *Can I give you **some advice**? I don't have **much homework**.*
+cun-tricky.n0: *some* + غیرقابل‌شمارش
+cun-tricky.n1: *a lot of*
+cun-tricky.n2: فعل مفرد
+cun-tricky.n3: *job* (قابل‌شمارش) / *work* (غیرقابل‌شمارش)
+cun-tricky.w0: *advice* حرف *a* نمی‌گیرد. (فارسی‌زبان‌ها می‌گویند «یک نصیحت»، ولی در انگلیسی *an advice* غلط است.)
+cun-tricky.w1: *furniture* حرف *-s* نمی‌گیرد.
+cun-tricky.w2: *news* فعل مفرد می‌گیرد.
+cun-tricky.w3: *travel* غیرقابل‌شمارش است؛ به جایش *trip* بیاورید.
+
+cun-units.t: *a piece of, a slice of, a bottle of*
+cun-units.s: برای شمردن اسم‌های غیرقابل‌شمارش از یک **واحد** استفاده کنید: *a piece of cake, a slice of bread, a bottle of water, a cup of coffee, a bar of chocolate, a loaf of bread*.
+cun-units.b0.h: واحد | مثال
+cun-units.b1: **واحد** قابل‌شمارش است، پس می‌تواند جمع شود: *two **slices** of bread, three **bottles** of water*. ولی اسم غیرقابل‌شمارش مفرد می‌ماند: *two slices of **bread*** (نه *breads*).
+cun-units.n0: *glass* (لیوان)
+cun-units.n1: *loaf* ← *loaves*
+cun-units.n2: *piece*
+cun-units.n3: *carton* (پاکت)
+cun-units.w0: *bread* غیرقابل‌شمارش است؛ از *loaf* استفاده کنید.
+cun-units.w1: اسم غیرقابل‌شمارش مفرد می‌ماند.
+
+x.cun-basics-s01: غیرقابل‌شمارش: *some milk*.
+q.cun-basics-s02: کدام اسم غیرقابل‌شمارش است؟
+x.cun-basics-s02: *Rice* جمع ندارد.
+x.cun-basics-s03: غیرقابل‌شمارش: فعل مفرد.
+x.cun-tricky-s01: غیرقابل‌شمارش: *some advice*.
+x.cun-tricky-s02: غیرقابل‌شمارش: *a lot of homework*.
+x.cun-tricky-s03: غیرقابل‌شمارش: فعل مفرد.
+x.cun-units-s01: *A slice of pizza* (یک تکه پیتزا).
+x.cun-units-s02: *Loaf* در جمع می‌شود *loaves*.
+x.cun-units-s03: *A carton / bottle of milk* (یک پاکت / بطری شیر).

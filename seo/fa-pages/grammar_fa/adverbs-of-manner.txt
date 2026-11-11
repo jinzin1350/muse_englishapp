@@ -1,0 +1,54 @@
+# adverbs-of-manner — Persian text by Claude for Muse English. Don't edit the wording; ask.
+i0: **قیدهای حالت** می‌گویند کاری **چطور** انجام می‌شود: *She sings **beautifully**. Drive **carefully**!* بیشترشان از صفت + ***-ly*** ساخته می‌شوند: *slow → slowly*.
+i1: صفت **اسم** را توصیف می‌کند (*a careful driver*)؛ قید **فعل** را (*He drives carefully*). در فارسی گاهی هر دو یک کلمه‌اند («آرام»)، اما در انگلیسی فرق دارند.
+
+am-ly.t: صفت یا قید؟ *quick* یا *quickly*؟
+am-ly.s: با اسم **صفت** بیاورید (*a quick lunch*) و با فعل **قید** (*She ate quickly*). بیشتر قیدها = صفت + **-ly**.
+am-ly.b0.h: صفت | قید | قاعدهٔ املایی
+am-ly.b1: قیدهای حالت معمولاً **بعد از فعل** یا **بعد از مفعول** می‌آیند: *She speaks **quietly**. He opened the door **slowly**.* (نه *He opened slowly the door*)
+am-ly.n0: صفت / قید
+am-ly.n1: *-y* ← *-ily*
+am-ly.n2: بعد از فعل
+am-ly.n3: بعد از مفعول
+am-ly.w0: فعل را قید توصیف می‌کند.
+am-ly.w1: فعل را قید توصیف می‌کند.
+am-ly.w2: قید بعد از مفعول می‌آید.
+
+am-irregular.t: *good* یا *well*؟ *hard, fast, late, early*
+am-irregular.s: قیدِ ***good*** می‌شود ***well***. بعضی قیدها **همان** شکل صفت را دارند: ***hard, fast, late, early, straight***. ***hardly*** و ***lately*** معنی دیگری دارند.
+am-irregular.b0.h: صفت | قید | مثال
+am-irregular.b1: ***hardly*** یعنی تقریباً نه: *I **hardly** slept.* (تقریباً نخوابیدم). ***lately*** یعنی اخیراً: *Have you seen him **lately**?* این دو قیدِ *hard* و *late* **نیستند**.
+am-irregular.b2: ***well*** صفت هم هست، به معنی **سالم، سرحال**: *I don't feel **well**.*
+am-irregular.n0: *good* ← *well*
+am-irregular.n1: *hard* (با تلاش)
+am-irregular.n2: *fast*
+am-irregular.n3: *hardly* یعنی تقریباً نه
+am-irregular.w0: با فعل: *well*.
+am-irregular.w1: *hard* (قید) یعنی با تلاش.
+am-irregular.w2: *fast* حرف *-ly* نمی‌گیرد.
+
+am-ly-adjectives.t: *friendly, lively, lovely*؛ *look good, feel tired*
+am-ly-adjectives.s: بعضی کلمه‌هایی که به ***-ly*** ختم می‌شوند **صفت**‌اند: *friendly, lovely, lonely, lively, silly, ugly*. برای معنی قیدی از ***in a … way*** استفاده کنید: *in a friendly way*. بعد از **فعل‌های ربطی** (*be, look, feel, sound, taste, smell, seem*) **صفت** بیاورید: *You look tired.*
+am-ly-adjectives.b0.h: الگو | مثال
+am-ly-adjectives.b0.0: صفت‌هایی که به *-ly* ختم می‌شوند ‖ =
+am-ly-adjectives.b0.1: معنی قیدی ‖ *She smiled **in a friendly way**.* (نه *friendlily*)
+am-ly-adjectives.b0.2: فعل ربطی + صفت ‖ =
+am-ly-adjectives.b0.3: فعلِ کاری + قید ‖ *She **looked** at me **angrily**.* (یک کار)
+am-ly-adjectives.b1: مقایسه کنید: *She **looks** angry.* (یعنی عصبانی به نظر می‌رسد: صفت) / *She **looked** at me **angrily**.* (یعنی چطور به من نگاه کرد: قید).
+am-ly-adjectives.n0: صفتِ ختم به *-ly*
+am-ly-adjectives.n1: *in a … way*
+am-ly-adjectives.n2: فعل ربطی + صفت
+am-ly-adjectives.n3: *seem* + صفت
+am-ly-adjectives.w0: *friendly* صفت است.
+am-ly-adjectives.w1: فعل ربطی + صفت.
+am-ly-adjectives.w2: *look* (به معنی به نظر رسیدن) + صفت.
+
+x.am-ly-s01: با فعل: قید *carefully*.
+x.am-ly-s02: با اسم: صفت *beautiful*.
+x.am-ly-s03: با فعل: قید *quietly*.
+x.am-irregular-s01: قیدِ *good* می‌شود *well*.
+x.am-irregular-s02: با تلاش: *hard*.
+x.am-irregular-s03: قیدِ *late* هم *late* است.
+x.am-ly-adjectives-s01: *Friendly* صفت است: *in a friendly way*.
+x.am-ly-adjectives-s02: فعل ربطی + صفت.
+x.am-ly-adjectives-s03: *Look* (به معنی به نظر رسیدن) + صفت.
