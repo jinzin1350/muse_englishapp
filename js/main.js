@@ -372,8 +372,7 @@ function maybeSoftPushPrompt() {
   } catch (e) {}
 }
 function showSoftPushPrompt() {
-  const lvl = (state.user && state.user.level) || '';
-  const fa = (lvl === 'a1' || lvl === 'a2');
+  const fa = uiLang() === 'fa';  /* same rule as the Persian app UI (A1–B1, Profile › App language) */
   const html = fa
     ? '<div dir="rtl" style="text-align:right"><div class="modal-ico">\uD83D\uDD14</div>' +
       '<h2>یادآوری مرور لغت‌ها</h2>' +
@@ -1457,7 +1456,7 @@ function paintQuests() {
     if (isDesktop()) return; /* desktop home paints its own quests card */
     if (!state.user || state.user.demo) { host.innerHTML = ''; return; }
     const qs = questDefs();
-    host.innerHTML = '<section class="hm-quests" dir="ltr" lang="en" aria-label="Today\'s quests">' +
+    host.innerHTML = '<section class="hm-quests"' + (_faOn ? '' : ' dir=\'ltr\' lang=\'en\'') + ' aria-label="Today\'s quests">' +
       '<div class="hm-q-head"><div class="hm-q-titles">' +
       '<div class="hm-q-title">Daily Quests</div>' +
       '<div class="hm-q-sub">Complete quests, earn XP, level up!</div></div></div>' +
@@ -2598,7 +2597,7 @@ function audioCardHTML(o) {
     return '<button class="speed-btn" data-action="speed" data-rate="' + r + '" aria-label="Playback speed ' + r + 'x">' + r + 'x</button>';
   }).join('') : '';
   const transcriptBtn = o.transcript
-    ? '<button class="btn btn-ghost btn-sm ap-chip" data-action="toggle-transcript" data-transcript="' + esc(o.transcript) + '" aria-expanded="false">📝 Transcript</button>'
+    ? '<button class="btn btn-ghost btn-sm ap-chip" data-action="toggle-transcript" data-transcript="' + esc(o.transcript) + '" aria-expanded="false"' + (o.fa ? ' lang="fa"' : '') + '>📝 ' + (o.fa ? 'متن کامل' : 'Transcript') + '</button>'
     : '';
   const cover = o.cover
     ? '<div class="ap-cover"><img src="' + esc(o.cover) + '" alt="" loading="lazy" onerror="this.closest(\'.ap-cover\').style.display=\'none\'">' +
@@ -2622,7 +2621,7 @@ function audioCardHTML(o) {
       (speeds ? '<div class="speed-row ap-speeds" role="group" aria-label="Playback speed">' + speeds + '</div>' : '') +
     '</div>' +
     '<div class="transcript-panel hidden"></div>' +
-    '<div class="coming-soon hidden">🎵 Audio is coming soon — it will appear here automatically once published.</div>' +
+    '<div class="coming-soon hidden"' + (o.fa ? ' dir="rtl" lang="fa">🎵 صدای این بخش هنوز منتشر نشده و به‌زودی همین‌جا می‌آید.' : '>🎵 Audio is coming soon — it will appear here automatically once published.') + '</div>' +
   '</div>';
 }
 
@@ -2717,6 +2716,196 @@ async function loadPreviewLesson() {
     d.setDate(d.getDate() - 1);
   }
   return null;
+}
+
+/* ---------------- Persian app UI (2026-11-12, Claude for Alireza) ----------------
+   Learners at A1–B1 (and everyone on the sign-in / sign-up screens) see the
+   app's menus, buttons and labels in Persian. The markup in this file stays
+   English; js/fa-ui.js (window.MUSE_FA_UI, written by Claude) holds the
+   Persian for each label, and this engine swaps the text in the DOM as views
+   render (a MutationObserver), so new screens need no code changes here.
+   - Exact match on a whole text node (or placeholder / aria-label / title),
+     then the regex rules in MUSE_FA_UI.rx for labels with numbers or names.
+   - Learning content (English words, meanings, examples, transcripts,
+     questions) is never matched: anything inside FA_SKIP is left alone, and
+     a label that is not in the dictionary simply stays English.
+   - B2+ learners keep the English UI. Profile > App language overrides it
+     (localStorage muse_ui_lang = 'fa' | 'en').
+   - Lesson themes come from /data/fa/themes.json (seo/fa-pages/blog_fa.py). */
+var FA_OFF_VIEWS = ['admin', 'admin-teacher', 'teacher', 'planner', 'certificate'];
+var FA_SKIP = ['#landing', '.pv', 'script', 'style', 'textarea', 'code', 'body [dir="ltr"]', 'body [lang="en"]', '[data-no-fa]',
+  '.word-title', '.word-meaning', '.word-example', '.word-pron', '.transcript-panel', '.rule-card', '.example-card',
+  'details.practice', '.gt3-sec:not(.gt3-fa)', '.gt-q', '.gt-opt', '.gt-opts', '.gt-sheet-explain:not([lang="fa"])',
+  '[data-fa-skip]'].join(',');
+var _faOn = false, _faObs = null, _faThemes = false, _faLog = [];
+/* Undo log, so the English UI comes back when Persian turns off (e.g. a B2 learner signs in). */
+function faRestore() {
+  for (var i = _faLog.length - 1; i >= 0; i--) {
+    var r = _faLog[i], x = r[0];
+    if (!x.isConnected) continue;
+    if (r[1] === '#text') {
+      x.nodeValue = r[2];
+      var sp = x.parentNode;
+      if (sp && sp.nodeName === 'SPAN' && sp.hasAttribute('data-fa-wrap') && sp.parentNode) sp.parentNode.replaceChild(x, sp);
+    } else if (r[2] === null) x.removeAttribute(r[1]);
+    else x.setAttribute(r[1], r[2]);
+  }
+  _faLog = [];
+}
+function faUi() { return (typeof window !== 'undefined' && window.MUSE_FA_UI) || null; }
+function uiLang() {
+  var o = null;
+  try { o = localStorage.getItem('muse_ui_lang'); } catch (e) {}
+  if (o === 'fa' || o === 'en') return o;
+  var u = state.user;
+  if (!u) return 'fa';
+  if (u.isAdmin) return 'en';
+  var lv = normalizeLevel(u.level);
+  return (!u.level || lv === 'a1' || lv === 'a2' || lv === 'b1') ? 'fa' : 'en';
+}
+function faNum(s) { return String(s).replace(/[0-9]/g, function (d) { return '۰۱۲۳۴۵۶۷۸۹'.charAt(+d); }); }
+function faLookup(k) {
+  var F = faUi(); if (!F) return null;
+  var v = F.t[k];
+  if (v !== undefined) return v;
+  var rx = F.rx || [];
+  for (var i = 0; i < rx.length; i++) {
+    var m = k.match(rx[i][0]);
+    if (m) { var r = rx[i][1](m, faLookup, faNum); if (r != null) return r; }
+  }
+  return null;
+}
+function faAttrs(el) {
+  ['placeholder', 'aria-label', 'title'].forEach(function (a) {
+    var v = el.getAttribute(a);
+    if (!v || !/[A-Za-z]/.test(v)) return;
+    var r = faLookup(v.replace(/\s+/g, ' ').trim());
+    if (r != null) { _faLog.push([el, a, v]); el.setAttribute(a, r); }
+  });
+}
+function faApply(nodes) {
+  var byParent = [];
+  nodes.forEach(function (n) {
+    var raw = n.nodeValue;
+    if (!raw || !/[A-Za-z]/.test(raw)) return;
+    var el = n.parentNode;
+    if (!el || el.nodeType !== 1) return;
+    var r = faLookup(raw.replace(/\s+/g, ' ').trim());
+    if (r == null) return;
+    _faLog.push([n, '#text', raw]);
+    n.nodeValue = (/^\s/.test(raw) ? ' ' : '') + r + (/\s$/.test(raw) ? ' ' : '');
+    var rec = null;
+    for (var i = 0; i < byParent.length; i++) if (byParent[i][0] === el) { rec = byParent[i]; break; }
+    if (!rec) { rec = [el, []]; byParent.push(rec); }
+    rec[1].push(n);
+  });
+  byParent.forEach(function (rec) {
+    var el = rec[0];
+    if (!/[A-Za-z]/.test(el.textContent)) {
+      if (!el.hasAttribute('data-fa')) { _faLog.push([el, 'data-fa', null]); el.setAttribute('data-fa', ''); }
+      if (!el.hasAttribute('dir')) { _faLog.push([el, 'dir', null]); el.setAttribute('dir', 'rtl'); }
+      return;
+    }
+    rec[1].forEach(function (n) {
+      if (n.parentNode !== el) return;
+      var sp = document.createElement('span');
+      sp.setAttribute('dir', 'rtl'); sp.setAttribute('data-fa', ''); sp.setAttribute('data-fa-wrap', '');
+      el.replaceChild(sp, n); sp.appendChild(n);
+    });
+  });
+}
+function faWalk(root) {
+  if (!root || !_faOn) return;
+  if (root.nodeType === 3) {
+    var p = root.parentNode;
+    if (p && p.nodeType === 1 && !p.closest(FA_SKIP)) faApply([root]);
+    return;
+  }
+  if (root.nodeType !== 1 || root.closest(FA_SKIP)) return;
+  var texts = [], done = [], F = faUi(), multi = F && F.m;
+  faAttrs(root);
+  if (multi) faMulti(root, multi, done);
+  var tw = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
+    acceptNode: function (n) {
+      if (n.nodeType === 1) return n.matches(FA_SKIP) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  var n;
+  while ((n = tw.nextNode())) {
+    if (n.nodeType === 3) { if (done.indexOf(n) === -1) texts.push(n); }
+    else {
+      if (n.hasAttribute('placeholder') || n.hasAttribute('aria-label') || n.hasAttribute('title')) faAttrs(n);
+      if (multi) faMulti(n, multi, done);
+    }
+  }
+  faApply(texts);
+}
+/* A label split over several text nodes ("Real<br>meanings", "Vocabulary <em>Builder</em>"):
+   MUSE_FA_UI.m maps the parts joined by '|' to the Persian parts joined by '|'. */
+function faMulti(el, multi, done) {
+  if (el.childNodes.length < 2) return;
+  var nodes = [], tw = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), x;
+  while ((x = tw.nextNode())) {
+    if (!x.nodeValue.trim()) continue;
+    nodes.push(x);
+    if (nodes.length > 5) return;
+  }
+  if (nodes.length < 2) return;
+  var sig = nodes.map(function (z) { return z.nodeValue.replace(/\s+/g, ' ').trim(); }).join('|');
+  var v = multi[sig];
+  if (v === undefined) return;
+  var parts = v.split('|');
+  nodes.forEach(function (z, i) {
+    var raw = z.nodeValue;
+    _faLog.push([z, '#text', raw]);
+    z.nodeValue = (/^\s/.test(raw) ? ' ' : '') + (parts[i] || '') + (/\s$/.test(raw) ? ' ' : '');
+    done.push(z);
+  });
+  if (!el.hasAttribute('data-fa')) { _faLog.push([el, 'data-fa', null]); el.setAttribute('data-fa', ''); }
+  if (!el.hasAttribute('dir')) { _faLog.push([el, 'dir', null]); el.setAttribute('dir', 'rtl'); }
+}
+function faLoadThemes() {
+  if (_faThemes) return;
+  _faThemes = true;
+  fetch('/data/fa/themes.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
+    .then(function (d) {
+      var F = faUi();
+      if (!d || !F) return;
+      Object.keys(d.themes || {}).forEach(function (k) {
+        var fa = d.themes[k];
+        if (F.t[k] === undefined) F.t[k] = fa;
+        F.t[k + ' 🔁'] = fa + ' 🔁';
+        F.t['Open lesson ' + k] = 'باز کردن درس ' + fa;
+      });
+      if (_faOn) faWalk(document.body);
+    });
+}
+function faSync() {
+  var on = !!(faUi() && uiLang() === 'fa' && FA_OFF_VIEWS.indexOf(state.view) === -1 && !isTeachersPath() && !isPanelPath());
+  var was = _faOn;
+  _faOn = on;
+  document.documentElement.classList.toggle('ui-fa', on);
+  if (!on) { if (was) faRestore(); return; }
+  _faLog = _faLog.filter(function (r) { return r[0].isConnected; });
+  faLoadThemes();
+  if (!_faObs && typeof MutationObserver !== 'undefined') {
+    _faObs = new MutationObserver(function (list) {
+      if (!_faOn) return;
+      for (var i = 0; i < list.length; i++) {
+        var m = list[i];
+        if (m.type === 'childList') { for (var j = 0; j < m.addedNodes.length; j++) faWalk(m.addedNodes[j]); }
+        else if (m.type === 'characterData') faWalk(m.target);
+        else if (m.type === 'attributes' && m.target.nodeType === 1 && !m.target.closest(FA_SKIP)) faAttrs(m.target);
+      }
+    });
+    _faObs.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['placeholder', 'aria-label', 'title'] });
+  }
+  faWalk(document.body);
+}
+function setUiLang(l) {
+  try { localStorage.setItem('muse_ui_lang', l); } catch (e) {}
+  window.location.reload();
 }
 
 /* ---------------- router (hash routes — safe on static hosting) ---------------- */
@@ -2910,6 +3099,7 @@ function onRoute() {
 
 function show(view, arg) {
   state.view = view;
+  faSync();
   if (view !== 'admin-teacher') state.viewTeacher = null; /* leaving view-as-teacher mode */
   if (view !== 'lesson') { state.quiz = null; }
   if (view !== 'grammar') { state.gquiz = null; document.body.classList.remove('duo-playing'); }
@@ -2922,6 +3112,7 @@ function show(view, arg) {
   document.body.classList.toggle('view-grammar', view === 'grammar');
   document.body.classList.toggle('view-vocab', view === 'vocab');
   document.body.classList.toggle('view-words', view === 'words');
+  document.body.classList.toggle('view-preview', view === 'preview');
   setChrome();
   paintWelcomeHeader();
   _wasDesktop = isDesktop();
@@ -3132,43 +3323,249 @@ function renderPreviewTab(which, m) {
   refreshTrackCards();
 }
 
-/* Public read-only lesson preview (no login required). */
-function renderPreview(v) {
-  v.innerHTML = '<div class="landing"><p class="muted"><a class="link" href="#/" title="Back to the Muse English website">← Back to website</a></p>' +
-    '<div id="preview-full"><p class="muted">Loading today’s lesson…</p></div></div>';
-  loadPreviewLesson().then(function (m) {
-    const host = document.getElementById('preview-full');
-    if (!host || state.view !== 'preview') return;
-    if (!m) { host.innerHTML = '<div class="empty">Could not load the preview.</div>'; return; }
-    let html = '<div class="hero-date">' + esc(m.date || '') + ' · Today’s lesson · ' + esc(levelLabel(normalizeLevel(m.level))) + '</div>' +
-      '<h1 style="text-transform:capitalize">' + esc(m.theme || 'Daily lesson') + '</h1>' +
-      '<p class="muted">A read-only peek — sign up to get your own level’s lesson every day.</p>';
-    html += '<h2>Words</h2><div class="preview-words">' + (m.words || []).map(function (w) {
-      return '<div class="preview-word">' +
-        (w.photo ? '<img src="' + esc(w.photo) + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">' : '') +
-        '<div><div class="pw-word">' + esc(w.word) + '</div>' +
-        '<div class="pw-meaning">' + esc(w.meaning || '') + '</div></div></div>';
-    }).join('') + '</div>';
-    if (m.podcast && m.podcast.audio) {
-      html += '<h2 style="margin-top:1.4rem">Podcast</h2>' + audioCardHTML({
-        id: 'preview-full-podcast', src: m.podcast.audio, title: m.podcast.title || 'Podcast',
-        sub: 'With transcript', speeds: false, download: false, transcript: m.podcast.transcript || null
-      });
+/* Public sample lesson (#/preview), Persian, in the look of the /fa/ pages
+   (redesign 2026-11-12, Claude for Alireza). Reached from "یک درس نمونه ببینید"
+   on /fa/ and by anonymous app users. Shows a real recent lesson (review days
+   skipped) for the level the visitor picks. Persian theme and level labels come
+   from /data/fa/themes.json (written by seo/fa-pages/blog_fa.py). */
+var PV_LV = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'];
+var PV_NAV = [['/fa/', 'خانه'], ['/blog/', 'درس‌ها'], ['/blog/vocabulary/', 'لغت‌ها'], ['/blog/grammar/', 'گرامر'],
+  ['/fa/ielts/', 'آیلتس'], ['/fa/mohajerat/', 'مهاجرت به کانادا'], ['/fa/az-sefr/', 'شروع از صفر']];
+var PV_LVNAME = { a1: 'مبتدی', a2: 'مقدماتی', b1: 'متوسط', b2: 'بالاتر از متوسط', c1: 'پیشرفته', c2: 'تسلط کامل' };
+var _pvLessons = {}, _pvFa = null;
+function pvNum(n) { return String(n).replace(/[0-9]/g, function (d) { return '۰۱۲۳۴۵۶۷۸۹'.charAt(+d); }); }
+function pvMedia(p) { p = String(p || ''); return (!p || /^(https?:)?\//.test(p)) ? p : '/' + p; }
+function pvFaData() {
+  if (_pvFa) return Promise.resolve(_pvFa);
+  return fetch('/data/fa/themes.json').then(function (r) { return r.ok ? r.json() : null; })
+    .catch(function () { return null; })
+    .then(function (d) { _pvFa = d || { themes: {}, levels: {} }; return _pvFa; });
+}
+function pvIsReview(m) { return m && (m.review === true || String(m.review).toLowerCase() === 'true'); }
+async function pvLesson(lv) {
+  if (_pvLessons[lv] !== undefined) return _pvLessons[lv];
+  var d = new Date(), fallback = null;
+  for (var i = 0; i < 10; i++) {
+    try {
+      var m = await fetchLesson(lv, fmtDate(d));
+      if (!pvIsReview(m)) { _pvLessons[lv] = m; return m; }
+      if (!fallback) fallback = m;
+    } catch (e) { /* no lesson that day */ }
+    d.setDate(d.getDate() - 1);
+  }
+  _pvLessons[lv] = fallback;
+  return fallback;
+}
+function pvDate(s) {
+  try {
+    return new Intl.DateTimeFormat('fa-IR-u-ca-gregory', { weekday: 'long', day: 'numeric', month: 'long' })
+      .format(new Date(s + 'T12:00:00'));
+  } catch (e) { return pvNum(s || ''); }
+}
+function pvSlug(t) { return String(t || '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, ''); }
+
+function pvHeaderHTML() {
+  return '<header class="pv-nav"><div class="pv-wrap pv-nav-in">' +
+    '<a class="pv-brand" href="/fa/"><img src="/icons/icon-192.png" alt="" width="34" height="34"><bdi>Muse English</bdi></a>' +
+    '<nav class="pv-links" aria-label="منوی اصلی">' + PV_NAV.map(function (n) {
+      return '<a href="' + n[0] + '">' + n[1] + '</a>';
+    }).join('') + '</nav>' +
+    '<div class="pv-acts"><a class="pv-alink" href="#/signin">ورود</a><a class="pv-btn pv-btn-sm" href="#/signup">شروع رایگان</a></div>' +
+  '</div></header>';
+}
+function pvFooterHTML() {
+  var lv = [['a1', 'مبتدی'], ['a2', 'مقدماتی'], ['b1', 'متوسط'], ['b2', 'بالاتر از متوسط'], ['c1', 'پیشرفته'], ['c2', 'تسلط کامل']];
+  return '<footer class="pv-foot"><div class="pv-wrap pv-foot-grid">' +
+    '<div class="pv-foot-col"><div class="pv-foot-brand"><img src="/icons/icon-192.png" alt=""><bdi>Muse English</bdi></div>' +
+    '<p><a href="mailto:info@museenglishapp.com"><bdi>info@museenglishapp.com</bdi></a></p></div>' +
+    '<div class="pv-foot-col"><h4>یادگیری</h4><ul><li><a href="/blog/">درس‌های روزانه</a></li><li><a href="/blog/vocabulary/">لغت‌ها بر اساس موضوع</a></li><li><a href="/blog/grammar/">راهنماهای گرامر</a></li></ul></div>' +
+    '<div class="pv-foot-col"><h4>سطح‌ها</h4><ul>' + lv.map(function (l) {
+      return '<li><a href="/blog/' + l[0] + '/"><bdi>' + l[0].toUpperCase() + '</bdi>، ' + l[1] + '</a></li>';
+    }).join('') + '</ul></div>' +
+    '<div class="pv-foot-col"><h4>صفحه‌های فارسی</h4><ul><li><a href="/fa/">صفحهٔ اصلی</a></li><li><a href="/fa/ielts/">آزمون آزمایشی آیلتس</a></li><li><a href="/fa/mohajerat/">مهاجرت به کانادا</a></li><li><a href="/fa/az-sefr/">شروع از صفر</a></li></ul></div>' +
+    '<div class="pv-foot-col"><h4><bdi>Muse English</bdi></h4><ul><li><a href="/about/">دربارهٔ ما</a></li><li><a href="#/signin">ورود</a></li><li><a href="#/signup">ثبت‌نام رایگان</a></li></ul></div>' +
+  '</div><div class="pv-wrap pv-foot-base">© ۲۰۲۶ <bdi>Muse English</bdi></div></footer>';
+}
+function pvStepHead(n, title, sub) {
+  return '<div class="pv-head"><span class="pv-step" aria-hidden="true">' + pvNum(n) + '</span>' +
+    '<div><h2>' + title + '</h2>' + (sub ? '<p>' + sub + '</p>' : '') + '</div></div>';
+}
+function pvCoverHTML(m, fa) {
+  var ph = (m.words || []).filter(function (w) { return w.photo; }).slice(0, 3);
+  var th = (fa.themes || {})[String(m.theme || '').toLowerCase()] || '';
+  var lv = normalizeLevel(m.level);
+  return '<div class="pv-collage pv-n' + ph.length + '">' + ph.map(function (w, i) {
+      return '<figure class="pv-tile pv-tile-' + i + '"><img src="' + esc(pvMedia(w.photo)) + '" alt="" loading="' + (i ? 'lazy' : 'eager') + '" onerror="this.parentNode.style.visibility=\'hidden\'">' +
+        '<figcaption dir="ltr">' + esc(w.word) + '</figcaption></figure>';
+    }).join('') + '</div>' +
+    '<div class="pv-ticket">' +
+      '<span class="pv-ticket-lv"><bdi>' + lv.toUpperCase() + '</bdi> ' + esc(PV_LVNAME[lv] || '') + '</span>' +
+      '<b>' + (th ? esc(th) : '<span dir="ltr">' + esc(m.theme || '') + '</span>') + '</b>' +
+      '<span class="pv-ticket-date">درس ' + esc(pvDate(m.date)) + '</span>' +
+    '</div>';
+}
+function pvExampleHTML(e) {
+  var t = String(e || ''), note = '';
+  var mm = t.match(/\(([^()]*)\)\s*$/);
+  if (mm) { note = mm[1]; t = t.slice(0, mm.index).trim(); }
+  return '<li>' + esc(t).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\*/g, '') +
+    (note ? ' <span class="pv-gnote">' + esc(note) + '</span>' : '') + '</li>';
+}
+function pvBodyHTML(m) {
+  var words = m.words || [], quiz = (m.quiz || []).slice(0, 3), g = m.grammar || null;
+  var parts = [['pv-words', 'لغت‌ها']];
+  if (m.podcast && m.podcast.audio) parts.push(['pv-podcast', 'پادکست']);
+  if (m.shadowing && m.shadowing.audio) parts.push(['pv-shadow', 'تمرین تلفظ']);
+  if (g && g.title) parts.push(['pv-grammar', 'گرامر']);
+  if (quiz.length) parts.push(['pv-quiz', 'آزمون']);
+  var step = {}; parts.forEach(function (p, i) { step[p[0]] = i + 1; });
+  var h = '<nav class="pv-map" aria-label="بخش‌های این درس"><div class="pv-wrap"><span class="pv-map-t">این درس ' + pvNum(parts.length) + ' بخش دارد:</span><ol>' +
+    parts.map(function (p, i) {
+      return '<li><button type="button" data-pv-go="' + p[0] + '"><b>' + pvNum(i + 1) + '</b>' + p[1] + '</button></li>';
+    }).join('') + '</ol></div></nav>';
+
+  h += '<section class="pv-sec" id="pv-words"><div class="pv-wrap">' +
+    pvStepHead(step['pv-words'], 'لغت‌های این درس', pvNum(words.length) + ' لغت با عکس، معنی فارسی و جملهٔ نمونه. روی بلندگو بزنید تا تلفظ را بشنوید.') +
+    '<div class="pv-words" style="--pv-cols:' + Math.min(5, words.length <= 5 ? Math.max(words.length, 1) : Math.ceil(words.length / 2)) + '">' + words.map(function (w) {
+      var say = w.word_audio
+        ? '<button type="button" class="pv-say" data-action="play-track" data-src="' + esc(pvMedia(w.word_audio)) + '" data-title="' + esc(w.word) + '" aria-label="تلفظ ' + esc(w.word) + '">' +
+          '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button>'
+        : '';
+      return '<article class="pv-word">' +
+        (w.photo ? '<div class="pv-ph"><img src="' + esc(pvMedia(w.photo)) + '" alt="' + esc(w.word) + '" loading="lazy" onerror="this.parentNode.remove()"></div>' : '') +
+        '<div class="pv-wb"><div class="pv-wtop" dir="ltr"><span><b>' + esc(w.word) + '</b>' + (w.pos ? '<span class="pv-pos">' + esc(w.pos) + '</span>' : '') + '</span>' + say + '</div>' +
+        (w.persian ? '<p class="pv-fa">' + esc(w.persian) + '</p>' : '<p class="pv-def" dir="ltr">' + esc(w.meaning || '') + '</p>') +
+        (w.example ? '<p class="pv-ex" dir="ltr">' + esc(w.example) + '</p>' : '') +
+        '</div></article>';
+    }).join('') + '</div></div></section>';
+
+  if (step['pv-podcast'] || step['pv-shadow']) {
+    h += '<section class="pv-sec pv-sec-tint"><div class="pv-wrap pv-listen">';
+    if (step['pv-podcast']) {
+      h += '<div id="pv-podcast" class="pv-col">' + pvStepHead(step['pv-podcast'], 'پادکست', 'یک گفت‌وگوی کوتاه انگلیسی دربارهٔ موضوع درس، با همین لغت‌ها. متن کامل را هم می‌توانید بخوانید.') +
+        '<div dir="ltr">' + audioCardHTML({ id: 'pv-podcast-card', src: pvMedia(m.podcast.audio), title: m.podcast.title || 'Podcast',
+          speeds: false, download: false, transcript: m.podcast.transcript ? pvMedia(m.podcast.transcript) : null, fa: true }) + '</div></div>';
     }
-    if (m.shadowing && m.shadowing.audio) {
-      html += '<h2 style="margin-top:1.4rem">Shadowing</h2>' + audioCardHTML({
-        id: 'preview-full-shadow', src: m.shadowing.audio, title: m.shadowing.title || 'Shadowing',
-        sub: 'Each sentence read twice', speeds: true, download: false, transcript: m.shadowing.transcript || null
-      });
+    if (step['pv-shadow']) {
+      h += '<div id="pv-shadow" class="pv-col">' + pvStepHead(step['pv-shadow'], 'تمرین تلفظ', 'هر جمله دو بار خوانده می‌شود. بعد از گوینده بلند تکرار کنید؛ سرعت را هم می‌توانید کم کنید.') +
+        '<div dir="ltr">' + audioCardHTML({ id: 'pv-shadow-card', src: pvMedia(m.shadowing.audio), title: m.shadowing.title || 'Shadowing',
+          speeds: true, download: false, transcript: m.shadowing.transcript ? pvMedia(m.shadowing.transcript) : null, fa: true }) + '</div></div>';
     }
-    html += '<div class="final-cta"><h2>Like what you see?</h2>' +
-      '<p class="muted">Get a lesson like this every day — matched to your level.</p>' +
-      '<a class="btn" href="#/signup">Start learning</a><br>' +
-      '<span class="muted">Already have an account? <a class="link" href="#/signin">Sign in</a></span></div>';
-    host.innerHTML = html;
-    wireAudioCards(host);
+    h += '</div></section>';
+  }
+
+  if (step['pv-grammar']) {
+    var slug = pvSlug(g.title), faT = gFaTitle(slug);
+    var guide = faT
+      ? '<a class="pv-glink" href="/blog/grammar/' + esc(slug) + '/">راهنمای کامل این مبحث به فارسی: ' + esc(faT) + '</a>'
+      : '<a class="pv-glink" href="/blog/grammar/">همهٔ راهنماهای گرامر به فارسی</a>';
+    h += '<section class="pv-sec" id="pv-grammar"><div class="pv-wrap">' +
+      pvStepHead(step['pv-grammar'], 'گرامر این درس', 'هر درس یک نکتهٔ گرامری دارد که در پادکست و جمله‌ها هم تکرار می‌شود.') +
+      '<div class="pv-gram"><h3 dir="ltr">' + esc(g.title) + '</h3>' +
+      ((g.examples || []).length ? '<ul class="pv-gex" dir="ltr">' + g.examples.slice(0, 4).map(pvExampleHTML).join('') + '</ul>' : '') +
+      guide + '</div></div></section>';
+  }
+
+  if (quiz.length) {
+    var rest = (m.quiz || []).length - quiz.length;
+    h += '<section class="pv-sec pv-sec-tint" id="pv-quiz"><div class="pv-wrap">' +
+      pvStepHead(step['pv-quiz'], 'آزمون کوتاه', 'سؤال‌های اول آزمون همین درس. جواب را انتخاب کنید تا درست یا غلط بودنش را ببینید.') +
+      '<div class="pv-quiz">' + quiz.map(function (q, i) {
+        return '<div class="pv-q" data-pv-q="' + i + '" data-answer="' + esc(q.answer) + '">' +
+          '<p class="pv-qt" dir="ltr"><span class="pv-qn">' + (i + 1) + '</span>' + esc(q.question) + '</p>' +
+          '<div class="pv-opts" dir="ltr">' + (q.options || []).map(function (o, j) {
+            return '<button type="button" class="pv-opt" data-pv-opt="' + j + '">' + esc(o) + '</button>';
+          }).join('') + '</div>' +
+          '<p class="pv-qfb" role="status" aria-live="polite"></p></div>';
+      }).join('') + '</div>' +
+      (rest > 0 ? '<p class="pv-qmore">آزمون کامل این درس ' + pvNum((m.quiz || []).length) + ' سؤال دارد. با ثبت‌نام، امتیازتان ذخیره می‌شود و سؤال‌هایی که غلط جواب داده‌اید برای مرور برمی‌گردند.</p>' : '') +
+      '</div></section>';
+  }
+  return h;
+}
+function pvPaint(lv) {
+  var body = document.getElementById('pv-body'), cover = document.getElementById('pv-cover');
+  if (!body) return;
+  body.setAttribute('aria-busy', 'true');
+  Promise.all([pvLesson(lv), pvFaData(), gFaIndex()]).then(function (r) {
+    var m = r[0], fa = r[1];
+    if (state.view !== 'preview' || !document.getElementById('pv-body')) return;
+    var desc = document.getElementById('pv-lvdesc');
+    if (desc) desc.textContent = ((fa.levels || {})[lv] || {}).desc || '';
+    if (!m) {
+      cover.innerHTML = '';
+      body.innerHTML = '<div class="pv-wrap"><p class="pv-empty">درس این سطح الان در دسترس نیست. سطح دیگری را انتخاب کنید یا صفحه را دوباره باز کنید.</p></div>';
+      body.removeAttribute('aria-busy');
+      return;
+    }
+    cover.innerHTML = pvCoverHTML(m, fa);
+    body.innerHTML = pvBodyHTML(m);
+    body.removeAttribute('aria-busy');
+    wireAudioCards(body);
     refreshTrackCards();
   });
+}
+
+/* Public read-only lesson preview (no login required). */
+function renderPreview(v) {
+  try { document.title = 'درس نمونهٔ رایگان انگلیسی | Muse English'; } catch (e) {}
+  var lv = 'a2';
+  try { var s = localStorage.getItem('muse_pv_lv'); if (PV_LV.indexOf(s) !== -1) lv = s; } catch (e) {}
+  v.innerHTML = '<div class="pv" dir="rtl" lang="fa">' + pvHeaderHTML() +
+    '<section class="pv-hero"><div class="pv-wrap pv-hero-grid">' +
+      '<div class="pv-hero-text">' +
+        '<span class="pv-badge">درس نمونه، بدون ثبت‌نام</span>' +
+        '<h1>یک درس کامل را همین‌جا امتحان کنید</h1>' +
+        '<p class="pv-lead">برای هر سطح هر روز یک درس تازه منتشر می‌شود. این یکی از درس‌های همین هفته است: لغت با عکس و معنی فارسی، پادکست، تمرین تلفظ، گرامر و آزمون.</p>' +
+        '<div class="pv-pick"><span class="pv-pick-t" id="pv-pick-t">سطح خودتان را انتخاب کنید</span>' +
+          '<div class="pv-chips" role="group" aria-labelledby="pv-pick-t">' + PV_LV.map(function (l) {
+            return '<button type="button" class="pv-chip" data-pv-lv="' + l + '" aria-pressed="' + (l === lv) + '"><b dir="ltr">' + l.toUpperCase() + '</b><span>' + PV_LVNAME[l] + '</span></button>';
+          }).join('') + '</div>' +
+          '<p class="pv-lvdesc" id="pv-lvdesc"></p></div>' +
+      '</div>' +
+      '<div class="pv-cover" id="pv-cover"></div>' +
+    '</div></section>' +
+    '<div id="pv-body"><div class="pv-wrap"><p class="pv-empty">در حال آماده کردن درس…</p></div></div>' +
+    '<section class="pv-cta"><div class="pv-wrap pv-cta-in"><div><h2>هر روز یک درس مثل این، در سطح خودتان</h2>' +
+      '<p>کاملاً رایگان: اشتراک ماهانه ندارد و کارت بانکی هم لازم نیست.</p></div>' +
+      '<div class="pv-cta-btns"><a class="pv-btn" href="#/signup">شروع رایگان</a><a class="pv-btn-ghost" href="#/signin">قبلاً ثبت‌نام کرده‌ام، ورود</a></div></div></section>' +
+    pvFooterHTML() + '</div>';
+  var root = v.querySelector('.pv');
+  root.addEventListener('click', function (e) {
+    var t = e.target.closest ? e.target : null;
+    if (!t) return;
+    var chip = t.closest('[data-pv-lv]');
+    if (chip) {
+      var nl = chip.getAttribute('data-pv-lv');
+      $$('[data-pv-lv]', root).forEach(function (c) { c.setAttribute('aria-pressed', String(c === chip)); });
+      try { localStorage.setItem('muse_pv_lv', nl); } catch (err) {}
+      pvPaint(nl);
+      return;
+    }
+    var go = t.closest('[data-pv-go]');
+    if (go) {
+      var el = document.getElementById(go.getAttribute('data-pv-go'));
+      if (el) el.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+      return;
+    }
+    var opt = t.closest('[data-pv-opt]');
+    if (opt) {
+      var q = opt.closest('[data-pv-q]');
+      if (!q || q.classList.contains('pv-done')) return;
+      var ans = +q.getAttribute('data-answer'), pick = +opt.getAttribute('data-pv-opt');
+      q.classList.add('pv-done');
+      $$('[data-pv-opt]', q).forEach(function (b) {
+        var j = +b.getAttribute('data-pv-opt');
+        b.disabled = true;
+        if (j === ans) b.classList.add('pv-right');
+        else if (j === pick) b.classList.add('pv-wrong');
+      });
+      var fb = q.querySelector('.pv-qfb'), right = q.querySelector('.pv-right');
+      fb.innerHTML = pick === ans ? 'درست است!' : 'جواب درست: <b dir="ltr">' + esc(right ? right.textContent : '') + '</b>';
+      fb.className = 'pv-qfb ' + (pick === ans ? 'pv-fb-ok' : 'pv-fb-no');
+    }
+  });
+  pvPaint(lv);
 }
 
 /* ---------------- auth: separate sign-in / create-account views ---------------- */
@@ -7117,8 +7514,8 @@ function markTutorialSeen() {
   try { localStorage.setItem('el_tutorial_seen_' + (state.user && state.user.id), '1'); } catch (e) {}
 }
 function tutLang() {
-  const lvl = normalizeLevel(state.user && state.user.level);
-  return (lvl === 'a1' || lvl === 'a2') ? 'fa' : 'en';
+  /* Same rule as the app UI (Persian for A1–B1, Profile > App language overrides). */
+  return uiLang();
 }
 function buildTutorialSteps() {
   const fa = tutLang() === 'fa';
@@ -7642,7 +8039,7 @@ function streakBannerHTML(st, dates) {
   /* Desktop keeps the old artwork-style banner. */
   if (typeof isDesktop === 'function' && isDesktop()) {
     const numline = '<b>' + n + '</b>&nbsp;' + (n === 1 ? 'day!' : 'days!');
-    return '<a class="stk-link" href="#/scores" dir="ltr" lang="en" aria-label="View your progress">' +
+    return '<a class="stk-link" href="#/scores"' + (_faOn ? '' : ' dir=\'ltr\' lang=\'en\'') + ' aria-label="View your progress">' +
       '<img class="stk-bg" src="/media/home/streak-banner-art.webp" alt="">' +
       '<span class="stk-scrim" aria-hidden="true"></span>' +
       '<span class="stk-txt">' +
@@ -7655,7 +8052,7 @@ function streakBannerHTML(st, dates) {
   }
   /* Mobile: Alireza's 2026-10-20 mockup — big mascot, "Your streak is / N days!". */
   const numline = '<b>' + n + '</b> ' + (n === 1 ? 'day!' : 'days!');
-  return '<a class="hm-streak" href="#/scores" dir="ltr" lang="en" aria-label="View your progress">' +
+  return '<a class="hm-streak" href="#/scores"' + (_faOn ? '' : ' dir=\'ltr\' lang=\'en\'') + ' aria-label="View your progress">' +
     '<span class="hm-streak-mascot"><img src="/media/home/streak-mascot.webp" alt="Streak mascot"></span>' +
     '<span class="hm-streak-txt">' +
       '<span class="hm-streak-kicker">Your streak is</span>' +
@@ -7915,6 +8312,67 @@ function grammarBlocksHTML(blocks) {
   }).join('');
 }
 
+/* Persian grammar (2026-11-11, Claude, Alireza's order): A1–B1 sections in Persian;
+   example sentences, exercise sentences and answers stay English. Data:
+   /data/grammar/fa/<slug>.json + index.json, written by seo/fa-pages/grammar_fa.py
+   (export_app, run by blog_fa.py — never edit by hand). The strings in it are
+   pre-rendered, escaped HTML (English islands as <em dir="ltr">). No file, or a
+   level missing from its "lv" list = that part stays English. */
+var _gFa = {};
+var _gFaIdx = null;
+function gFaLoad(slug) {
+  if (Object.prototype.hasOwnProperty.call(_gFa, slug)) return Promise.resolve(_gFa[slug]);
+  return fetch('/data/grammar/fa/' + encodeURIComponent(slug) + '.json')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .catch(function () { return null; })
+    .then(function (d) { _gFa[slug] = (d && d.lv && d.lv.length) ? d : null; return _gFa[slug]; });
+}
+function gFaIndex() {
+  if (_gFaIdx) return Promise.resolve(_gFaIdx);
+  return fetch('/data/grammar/fa/index.json')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .catch(function () { return null; })
+    .then(function (d) { _gFaIdx = (d && d.titles) ? d : { titles: {}, fa: [] }; return _gFaIdx; });
+}
+function gFaTitle(slug) { return (_gFaIdx && _gFaIdx.titles && _gFaIdx.titles[slug]) || ''; }
+function gFaFor(slug, lv) {
+  var d = _gFa[slug];
+  return (d && d.lv && d.lv.indexOf(lv) !== -1) ? d : null;
+}
+function grammarBlocksHTMLFa(blocks, fb) {
+  fb = fb || [];
+  return (blocks || []).map(function (b, i) {
+    var f = fb[i], t = b.type;
+    if (t === 'p') return f ? '<p>' + f + '</p>' : '<p dir="ltr">' + gMd(b.md) + '</p>';
+    if (t === 'tip') return f ? '<div class="g-tip">' + f + '</div>' : '<div class="g-tip" dir="ltr">' + gMd(b.md) + '</div>';
+    if (t === 'list') {
+      var fl = f || {};
+      return (b.md ? (fl.md ? '<p>' + fl.md + '</p>' : '<p dir="ltr">' + gMd(b.md) + '</p>') : '') +
+        '<ul class="g-list">' + (b.items || []).map(function (it, j) {
+          var w = fl.items && fl.items[j];
+          return w ? '<li>' + w + '</li>' : '<li dir="ltr">' + gMd(it) + '</li>';
+        }).join('') + '</ul>';
+    }
+    if (t === 'table') {
+      var ft = f || {};
+      var heads = (b.headers || []).map(function (hh, ci) {
+        var fh = ft.h ? ft.h[ci] : null;
+        return (fh !== undefined && fh !== null) ? '<th>' + fh + '</th>' : '<th dir="ltr">' + gMd(hh) + '</th>';
+      }).join('');
+      var rows = (b.rows || []).map(function (r, ri) {
+        return '<tr>' + r.map(function (c, ci) {
+          var lab = (ft.hl && ft.hl[ci]) || (b.headers || [])[ci] || '';
+          var la = lab ? ' data-label="' + esc(lab) + '"' : '';
+          var fc = ft.c && ft.c[ri] ? ft.c[ri][ci] : null;
+          return fc ? '<td' + la + '>' + fc + '</td>' : '<td dir="ltr"' + la + '>' + gMd(c) + '</td>';
+        }).join('') + '</tr>';
+      }).join('');
+      return '<div class="gwrap"><table class="g-table"><thead><tr>' + heads + '</tr></thead><tbody>' + rows + '</tbody></table></div>';
+    }
+    return grammarBlocksHTML([b]);
+  }).join('');
+}
+
 /* ---------------- grammar hub (#/grammar) ---------------- */
 
 /* Hub v2 design tokens (mockup 2026-10-17) */
@@ -8026,12 +8484,13 @@ function paintGrammarList() {
   if (!wrap) return;
   var f = state.gFilter || { level: 'all', q: '' };
   var needAll = f.level === 'all' || !!f.q;
-  (needAll ? loadAllGrammar() : loadGrammarLevel(f.level)).then(function (topics) {
+  Promise.all([needAll ? loadAllGrammar() : loadGrammarLevel(f.level), gFaIndex()]).then(function (res) {
+    var topics = res[0];
     var prog = grammarProgress();
     var q = (f.q || '').toLowerCase();
     var list = topics.filter(function (t) {
       if (f.level !== 'all' && t.level !== f.level) return false;
-      if (q && (t.h1 || '').toLowerCase().indexOf(q) === -1) return false;
+      if (q && (t.h1 || '').toLowerCase().indexOf(q) === -1 && gFaTitle(t.slug).indexOf(f.q) === -1) return false;
       return true;
     });
     if (!list.length) { wrap.innerHTML = '<div class="empty">No topics match.</div>'; return; }
@@ -8052,7 +8511,9 @@ function grammarCardHTML(t, p) {
   else status = '<span class="gh-status">\uD83D\uDCC4 10 exercises per level</span>';
   return '<a class="gh-card" href="#/grammar/' + esc(t.slug) + '">' +
     '<span class="gh-ico"><img src="' + ghIconSrc(t.slug) + '" alt="" loading="lazy"></span>' +
-    '<span class="gh-card-main"><span class="gh-titlerow">' + ghLvBadge(t.level) + '<b>' + esc(t.h1) + '</b></span>' + status + '</span>' +
+    '<span class="gh-card-main"><span class="gh-titlerow">' + ghLvBadge(t.level) +
+      (gFaTitle(t.slug) ? '<b dir="rtl" lang="fa" class="gh-fa-t">' + esc(gFaTitle(t.slug)) + '</b>' : '<b>' + esc(t.h1) + '</b>') + '</span>' +
+      (gFaTitle(t.slug) ? '<span class="gh-en-t" dir="ltr">' + esc(t.h1) + '</span>' : '') + status + '</span>' +
     '<span class="gh-chev" aria-hidden="true">›</span></a>';
 }
 
@@ -8068,7 +8529,10 @@ function renderGrammarTopic(v, slug) {
       v.innerHTML = '<div class="g-topic"><div class="empty">Guide not found. <a href="#/grammar">Back to all guides</a></div></div>';
       return;
     }
-    if (t.v2) { renderGrammarTopicV3(v, t); return; }
+    if (t.v2) {
+      Promise.all([gFaLoad(t.slug), gFaIndex()]).then(function () { renderGrammarTopicV3(v, t); });
+      return;
+    }
     var prog = grammarProgress()[t.slug];
     var sections = (t.sections || []).map(function (s) {
       return '<section class="g-section"><h2>' + esc(s.h2) + '</h2>' + grammarBlocksHTML(s.blocks) + '</section>';
@@ -8266,9 +8730,36 @@ function renderGrammarTopicV3(v, t) {
     var lv = (ex.level || '').toLowerCase();
     (exByLevel[lv] = exByLevel[lv] || []).push(ex);
   });
+  var FA = _gFa[t.slug] || null;
+  var faLv = FA ? FA.lv : [];
+  function faPoint(p, lv) {
+    var P = (FA.p && FA.p[p.id]) || {};
+    var examples = (p.examples || []).map(function (e, k) {
+      var n = P.n && P.n[k];
+      return '<li><div class="g-ex-text">' + gMd(e.text) + '</div>' +
+        (e.note ? (n ? '<div class="g-ex-note" dir="rtl" lang="fa">' + n + '</div>' : '<div class="g-ex-note">' + gMd(e.note) + '</div>') : '') + '</li>';
+    }).join('');
+    var mistakes = (p.mistakes || []).map(function (m, k) {
+      var w = P.w && P.w[k];
+      return '<div class="g-mistake"><div class="g-mline bad">❌ ' + gMd(m.wrong) + '</div>' +
+        '<div class="g-mline good">✅ ' + gMd(m.right) + '</div>' +
+        (m.why ? (w ? '<div class="g-mwhy" dir="rtl" lang="fa">' + w + '</div>' : '<div class="g-mwhy">' + gMd(m.why) + '</div>') : '') + '</div>';
+    }).join('');
+    var body = grammarBlocksHTMLFa(p.blocks, P.b) +
+      (examples ? '<ol class="g-examples" dir="ltr">' + examples + '</ol>' : '') +
+      (mistakes ? '<div class="g2-mistakes" dir="ltr"><div class="g2-mtitle" dir="rtl" lang="fa">اشتباه‌های رایج</div>' + mistakes + '</div>' : '');
+    return '<div class="gt3-point">' +
+      '<h3 id="' + esc(p.id) + '">' + (P.t || '<span dir="ltr">' + esc(p.title) + '</span>') + ' <span class="gh-lv">' + lv.toUpperCase() + '</span></h3>' +
+      (p.summary ? '<div class="gt3-quick"><div class="gt3-quick-tag"><svg class="gt3-bolt" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.8 22 19 10h-6.5L13 2z" fill="currentColor"/></svg> قاعده در ۱۰ ثانیه</div><div class="gt3-quick-body"' + (P.s ? '' : ' dir="ltr"') + '>' + (P.s || gMd(p.summary)) + '</div></div>' : '') +
+      (body ? '<button class="gt3-more" type="button" data-show="مثال‌ها و جزئیات" data-hide="بستن مثال‌ها و جزئیات">مثال‌ها و جزئیات <span class="gt3-chev">›</span></button>' +
+        '<div class="gt3-body">' + body + '</div>' : '') +
+      '</div>';
+  }
   var sections = levels.map(function (lv) {
     var grad = GH_LV_GRAD[lv] || GH_LV_GRAD.all;
+    var fa = faLv.indexOf(lv) !== -1;
     var pts = (byLevel[lv] || []).map(function (p) {
+      if (fa) return faPoint(p, lv);
       var blocks = grammarBlocksHTML(p.blocks);
       var examples = (p.examples || []).map(function (e) {
         return '<li><div class="g-ex-text">' + gMd(e.text) + '</div>' +
@@ -8290,21 +8781,30 @@ function renderGrammarTopicV3(v, t) {
         '</div>';
     }).join('');
     var exs = exByLevel[lv] || [];
-    var practice = exs.length ? '<div class="gt3-practice"><div class="gt3-practice-t">Ready to practise?</div>' +
-      '<p class="gt3-practice-n">' + Math.min(exs.length, 10) + ' exercises for ' + lv.toUpperCase() + '</p>' +
-      '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button></div>' : '';
-    return '<section class="gt3-sec" id="g2-' + lv + '" style="--lv:' + (GH_LV_COLORS[lv] || '#8A93A6') + '">' +
-      '<div class="gt3-sec-head"><span class="gt3-lv-badge" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv.toUpperCase() + '</span>' +
-      '<h2>' + (TW_LEVEL_LABEL[lv] || lv.toUpperCase()) + '</h2></div>' +
+    var nEx = Math.min(exs.length, 10);
+    var practice = !exs.length ? '' : fa
+      ? '<div class="gt3-practice"><div class="gt3-practice-t">آماده‌ای تمرین کنی؟</div>' +
+        '<p class="gt3-practice-n">' + nEx + ' تمرین برای سطح <bdi>' + lv.toUpperCase() + '</bdi></p>' +
+        '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">شروع تمرین‌های <bdi>' + lv.toUpperCase() + '</bdi></button></div>'
+      : '<div class="gt3-practice"><div class="gt3-practice-t">Ready to practise?</div>' +
+        '<p class="gt3-practice-n">' + nEx + ' exercises for ' + lv.toUpperCase() + '</p>' +
+        '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button></div>';
+    return '<section class="gt3-sec' + (fa ? ' gt3-fa" dir="rtl" lang="fa' : '') + '" id="g2-' + lv + '" style="--lv:' + (GH_LV_COLORS[lv] || '#8A93A6') + '">' +
+      '<div class="gt3-sec-head"><span class="gt3-lv-badge" dir="ltr" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv.toUpperCase() + '</span>' +
+      '<h2>' + (fa ? esc((FA.lvfa && FA.lvfa[lv]) || '') : (TW_LEVEL_LABEL[lv] || lv.toUpperCase())) + '</h2></div>' +
       '<div class="g-fa-audio" data-fa-lv="' + lv + '"></div>' +
       '<div class="g-en-audio" data-en-lv="' + lv + '"></div>' +
       pts + practice + '</section>';
   }).join('');
-  var intro = (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('');
+  var intro = (FA && FA.intro)
+    ? '<div class="g-intro g-intro-fa" dir="rtl" lang="fa">' + FA.intro.map(function (p) { return '<p>' + p + '</p>'; }).join('') + '</div>'
+    : '<div class="g-intro">' + (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('') + '</div>';
+  var faT = faLv.length ? gFaTitle(t.slug) : '';
   v.innerHTML = '<div class="g-topic gt3-topic">' +
-    '<a class="g-back" href="#/grammar">‹ All guides</a>' +
-    '<div class="g-hero"><h1>' + esc(t.h1) + '</h1></div>' +
-    bar + '<div class="g-intro">' + intro + '</div>' + sections + '</div>';
+    '<a class="g-back" href="#/grammar">‹ ' + (faT ? '<span class="g-back-fa" lang="fa">همهٔ راهنماها</span>' : 'All guides') + '</a>' +
+    '<div class="g-hero">' + (faT ? '<h1 dir="rtl" lang="fa" class="g-h1-fa">' + esc(faT) + '</h1><div class="g-h1-en" dir="ltr">' + esc(t.h1) + '</div>'
+      : '<h1>' + esc(t.h1) + '</h1>') + '</div>' +
+    bar + intro + sections + '</div>';
   Array.prototype.forEach.call(v.querySelectorAll('[data-g2lv]'), function (a) {
     a.addEventListener('click', function (e) {
       e.preventDefault();
@@ -8322,7 +8822,7 @@ function renderGrammarTopicV3(v, t) {
       var body = btn.nextElementSibling;
       var open = body.classList.toggle('open');
       btn.classList.toggle('open', open);
-      btn.firstChild.textContent = open ? 'Hide examples & details ' : 'Show examples & details ';
+      btn.firstChild.textContent = (open ? (btn.getAttribute('data-hide') || 'Hide examples & details') : (btn.getAttribute('data-show') || 'Show examples & details')) + ' ';
     });
   });
   paintFaAudioBars(v, t.slug);
@@ -8361,6 +8861,7 @@ function renderGrammarQuizV2() {
   var it = q.items[q.idx];
   var n = q.items.length;
   var letters = ['A', 'B', 'C', 'D'];
+  var F = gFaFor(q.topic.slug, q.v2level);
   
   var inputHTML = '';
   if (it.type === 'mcq') {
@@ -8376,9 +8877,9 @@ function renderGrammarQuizV2() {
         '<span class="gt-opt-text">' + esc(op) + '</span></button>';
     }).join('') + '</div>';
   } else if (it.type === 'gap') {
-    inputHTML = '<div class="gt-gap-wrap"><input type="text" id="g2-gap-input" class="gt-gap-input" ' +
-      'placeholder="Type your answer" ' + (q.answered ? 'disabled' : '') + ' value="' + esc(it.typed || '') + '">' +
-      (q.answered ? '' : '<button class="gt-btn gt-btn-green" id="g2-gap-check">CHECK</button>') + '</div>';
+    inputHTML = '<div class="gt-gap-wrap"><input type="text" id="g2-gap-input" class="gt-gap-input" dir="ltr" ' +
+      'placeholder="' + (F ? 'جواب را بنویسید' : 'Type your answer') + '" ' + (q.answered ? 'disabled' : '') + ' value="' + esc(it.typed || '') + '">' +
+      (q.answered ? '' : '<button class="gt-btn gt-btn-green" id="g2-gap-check">' + (F ? 'بررسی' : 'CHECK') + '</button>') + '</div>';
   } else if (it.type === 'error') {
     inputHTML = '<div class="gt-opts gt-error-segs">' + (it.segments || []).map(function (seg, i) {
       var cls = 'gt-opt';
@@ -8401,21 +8902,27 @@ function renderGrammarQuizV2() {
     } else {
       correctText = esc((it.accept || []).join(' / '));
     }
+    var fx = F && F.x ? F.x[it.id] : null;
     sheet = '<div class="gt-sheet ' + (good ? 'good' : 'bad') + '"><div class="gt-sheet-inner">' +
-      '<div class="gt-sheet-msg">' + (good ? '🎉 Correct!' : '💡 Correct answer: <b>' + correctText + '</b>') + '</div>' +
-      (it.explanation ? '<div class="gt-sheet-explain">' + gMd(it.explanation) + '</div>' : '') +
+      (F ? '<div class="gt-sheet-msg" dir="rtl" lang="fa">' + (good ? '🎉 درست است!' : '💡 جواب درست: <b dir="ltr">' + correctText + '</b>') + '</div>'
+         : '<div class="gt-sheet-msg">' + (good ? '🎉 Correct!' : '💡 Correct answer: <b>' + correctText + '</b>') + '</div>') +
+      (fx ? '<div class="gt-sheet-explain" dir="rtl" lang="fa">' + fx + '</div>'
+         : (it.explanation ? '<div class="gt-sheet-explain">' + gMd(it.explanation) + '</div>' : '')) +
       '<button class="gt-btn ' + (good ? 'gt-btn-green' : 'gt-btn-red') + ' gt-btn-block" id="g-next-btn">' +
-      (q.idx + 1 >= n ? 'SEE RESULTS' : 'CONTINUE') + '</button>' +
+      (F ? (q.idx + 1 >= n ? 'دیدن نتیجه' : 'ادامه') : (q.idx + 1 >= n ? 'SEE RESULTS' : 'CONTINUE')) + '</button>' +
       '</div></div>';
   }
+  var qHTML = esc(it.prompt).replace(/___/g, '…');
+  if (F && it.type === 'error') qHTML = '<span dir="rtl" lang="fa" class="gt-q-fa">' + F.err + '</span>';
+  else if (F && F.q && F.q[it.id]) qHTML = '<span dir="rtl" lang="fa" class="gt-q-fa">' + F.q[it.id] + '</span>';
   
   var barPct = Math.round((q.idx + (q.answered ? 1 : 0)) / n * 100);
   v.innerHTML = '<div class="g-quiz gt-wrap">' +
     '<div class="gt-card"><div class="gt-top"><button class="gt-x" id="g-quiz-quit" aria-label="Back to guide">✕</button>' +
     '<div class="gt-progress"><span style="width:' + barPct + '%"></span></div>' +
     '<div class="gt-qcount">' + (q.idx + 1) + '/' + n + '</div></div>' +
-    (q.firstRun ? '' : '<div class="gt-mode">Practice mode — no points</div>') +
-    '<div class="gt-q">' + esc(it.prompt).replace(/___/g, '…') + '</div>' +
+    (q.firstRun ? '' : (F ? '<div class="gt-mode" dir="rtl" lang="fa">حالت تمرین: بدون امتیاز</div>' : '<div class="gt-mode">Practice mode — no points</div>')) +
+    '<div class="gt-q">' + qHTML + '</div>' +
     inputHTML + '</div>' + sheet + '</div>';
   
   // Wire up events
@@ -8608,20 +9115,24 @@ function finishGrammarQuiz() {
   state.gquiz = null;
   document.body.classList.remove('duo-playing');
   var v = document.getElementById('view');
-  var msg = correct === total ? 'Perfect!'
-    : correct >= total * 0.7 ? 'Great job!'
-    : correct >= total * 0.4 ? 'Good effort!'
-    : 'Keep practising!';
+  var F = q.v2 ? gFaFor(slug, q.v2level) : null;
+  var L = F ? ['عالی بود!', 'آفرین!', 'تلاش خوبی بود!', 'باز هم تمرین کن!', '۲۰ امتیاز جایزهٔ تمام کردن گرفتی!', 'دوباره', '📖 برگشت به این راهنما', 'همهٔ راهنماها']
+    : ['Perfect!', 'Great job!', 'Good effort!', 'Keep practising!', '+20 completion bonus earned!', 'TRY AGAIN', '📖 Back to this guide', 'All guides'];
+  var msg = correct === total ? L[0]
+    : correct >= total * 0.7 ? L[1]
+    : correct >= total * 0.4 ? L[2]
+    : L[3];
   var mascot = correct === total ? '🏆' : correct >= total * 0.7 ? '🎉' : '📝';
-  v.innerHTML = '<div class="g-quiz gt-wrap"><div class="gt-report">' +
+  var sub = F && gFaTitle(slug) ? '<p class="gt-sub" dir="rtl" lang="fa">' + esc(gFaTitle(slug)) + '</p>' : '<p class="gt-sub">' + esc(topic.h1) + '</p>';
+  v.innerHTML = '<div class="g-quiz gt-wrap"><div class="gt-report"' + (F ? ' dir="rtl" lang="fa"' : '') + '>' +
     '<div class="gt-mascot">' + mascot + '</div>' +
     '<h1>' + msg + '</h1>' +
-    '<div class="gt-score"><b>' + correct + '</b><span>/' + total + '</span></div>' +
-    '<p class="gt-sub">' + esc(topic.h1) + '</p>' +
-    (bonus ? '<p class="g-xp-note">+20 completion bonus earned!</p>' : '') +
-    '<div class="gt-end-btns"><button class="gt-btn gt-btn-green gt-btn-big" id="g-retry-btn">TRY AGAIN</button>' +
-    '<button class="gt-btn gt-btn-ghost" id="g-back-btn">📖 Back to this guide</button>' +
-    '<a class="gt-btn gt-btn-ghost" href="#/grammar">All guides</a></div>' +
+    '<div class="gt-score" dir="ltr"><b>' + correct + '</b><span>/' + total + '</span></div>' +
+    sub +
+    (bonus ? '<p class="g-xp-note">' + L[4] + '</p>' : '') +
+    '<div class="gt-end-btns"><button class="gt-btn gt-btn-green gt-btn-big" id="g-retry-btn">' + L[5] + '</button>' +
+    '<button class="gt-btn gt-btn-ghost" id="g-back-btn">' + L[6] + '</button>' +
+    '<a class="gt-btn gt-btn-ghost" href="#/grammar">' + L[7] + '</a></div>' +
     '</div></div>';
   document.getElementById('g-retry-btn').addEventListener('click', function () {
     if (q.v2) startGrammarQuizV2(topic, q.v2level);
@@ -10998,7 +11509,7 @@ function dhQuestRowHTML(q) {
 }
 function dhQuestsHTML() {
   const qs = questDefs();
-  return '<section class="dh-card dh-quests" dir="ltr" lang="en" aria-label="Daily quests">' +
+  return '<section class="dh-card dh-quests"' + (_faOn ? '' : ' dir=\'ltr\' lang=\'en\'') + ' aria-label="Daily quests">' +
     '<div class="dh-card-head"><span class="dh-hico" aria-hidden="true">🎯</span>' +
     '<div class="dh-htitles"><h2>Daily Quests</h2><p>Complete quests, earn XP, level up!</p></div>' +
     '<a class="dh-link" href="#/scores">View all <span aria-hidden="true">›</span></a></div>' +
@@ -11247,6 +11758,12 @@ function renderProfile(v) {
     '<button class="btn btn-sm" data-action="save-country">Save country</button>' +
   '</div>' +
 
+  /* App language (2026-11-12): Persian by default for A1–B1, English for B2+. */
+  '<div class="section-title"><h2>App language</h2></div>' +
+  '<div class="card plain ui-lang-card"><div class="ui-lang-row" role="group" aria-label="App language">' +
+    '<button class="btn btn-sm ' + (uiLang() === 'fa' ? '' : 'btn-ghost') + '" data-action="ui-lang" data-lang="fa" aria-pressed="' + (uiLang() === 'fa') + '" data-no-fa lang="fa">فارسی</button>' +
+    '<button class="btn btn-sm ' + (uiLang() === 'en' ? '' : 'btn-ghost') + '" data-action="ui-lang" data-lang="en" aria-pressed="' + (uiLang() === 'en') + '" data-no-fa>English</button>' +
+  '</div><p class="muted ui-lang-note">Menus and buttons. Lessons stay in English.</p></div>' +
   '<div class="section-title"><h2>Help</h2></div>' +
   '<div class="card plain"><button class="btn btn-ghost btn-block" data-action="tut-replay" style="margin-top:0">🎓 App tour — show me around</button>' +
   '<a class="btn btn-ghost btn-block" href="#/support" style="margin-top:0.6rem">💬 Support — ask a question <span class="sup-badge hidden" data-sup-badge></span></a></div>' +
@@ -15675,6 +16192,7 @@ function bindEvents() {
     else if (a === 'save-country') saveCountryManual();
     else if (a === 'logout') doLogout();
     else if (a === 'tut-replay') startTutorial();
+    else if (a === 'ui-lang') setUiLang(t.getAttribute('data-lang') === 'en' ? 'en' : 'fa');
     else if (a === 'open-lesson') { state.lessonTab = 'words'; go('lesson', t.getAttribute('data-date')); }
     else if (a === 'today-cta') {
       const d = t.getAttribute('data-date');
@@ -15942,7 +16460,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611121741';
+var APP_VERSION = '202611121800';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
