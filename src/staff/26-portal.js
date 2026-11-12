@@ -1390,8 +1390,6 @@ let apVerified = null;   /* { email } once /api/admin/verify passes this load */
 let apPopBound = false;
 let apIdleArmed = false;
 let apIdleTimer = null;
-
-function isPanelPath() { return window.location.pathname.indexOf('/manage') === 0; }
 function apSubpath() {
   const parts = window.location.pathname.replace(/^\/manage\/?/, '').split('/').filter(Boolean);
   return { section: parts[0] || 'dashboard', arg: parts[1] ? decodeURIComponent(parts[1]) : '' };
@@ -2212,18 +2210,3 @@ async function renderAdminPanel() {
   else apRenderDashboard(v);
   hideSplashSoon();
 }
-
-document.addEventListener('DOMContentLoaded', init);
-
-/* Test/debug hooks (harmless in production). */
-window.MuseApp = {
-  state: state, player: player, showModal: showModal, closeModal: closeModal,
-  detectCountry: detectCountry, maybeShowWelcome: maybeShowWelcome,
-  renderSignin: renderSignin, renderProfile: renderProfile,
-  ensureCountrySaved: ensureCountrySaved,
-  queuePointsPopup: queuePointsPopup, ensureNickname: ensureNickname,
-  renderChallenge: renderChallenge, awardPoints: awardPoints, demoLogin: demoLogin,
-  launchCelebration: launchCelebration, maybeShowInboxPrompt: maybeShowInboxPrompt,
-  renderInbox: renderInbox, loadAdminBot: loadAdminBot, saveAdminBot: saveAdminBot,
-};
-

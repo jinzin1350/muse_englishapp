@@ -13,8 +13,10 @@ A failed check makes the Cloudflare build fail, so the broken commit is never pu
 the live site stays on the last good version.
 
 Checks:
-  - js/main.js is exactly the build of src/app/*.js (tools/build_app.py --check)
-  - node --check js/main.js and js/fa-ui.js (when node is installed)
+  - js/main.js is exactly the build of src/app/*.js, and js/staff.js of src/staff/*.js
+    (tools/build_app.py --check)
+  - node --check js/main.js, js/staff.js and js/fa-ui.js (when node is installed)
+  - the hidden landing in index.html has no images that load in the app (all loading="lazy")
   - Claude's Persian work is still there (functions + script tag), no /en/ leftovers
   - index.html ?v= hashes match the files
 """
@@ -46,14 +48,17 @@ if DEPLOY:
     if build_app.fix_hashes():
         print('check_app: fixed ?v= hashes in index.html for this deploy')
 
-# 1. js/main.js must be the build of src/app
+# 1. js/main.js must be the build of src/app, js/staff.js the build of src/staff
 if build_app.build_text() != read('js/main.js'):
     problems.append('js/main.js is not the build of src/app/*.js. Edit src/app/ and run '
                     'python3 tools/build_app.py (never edit js/main.js directly).')
+if not os.path.exists(os.path.join(REPO, 'js', 'staff.js')) or build_app.staff_text() != read('js/staff.js'):
+    problems.append('js/staff.js is not the build of src/staff/*.js. Edit src/staff/ and run '
+                    'python3 tools/build_app.py (never edit js/staff.js directly).')
 
 # 2. syntax
 if shutil.which('node'):
-    for f in ('js/main.js', 'js/fa-ui.js'):
+    for f in ('js/main.js', 'js/staff.js', 'js/fa-ui.js'):
         code, out = run(['node', '--check', f])
         if code != 0:
             problems.append('%s has a syntax error:\n%s' % (f, out[-1500:]))
@@ -77,7 +82,12 @@ for f in sorted(os.listdir(REPO)):
     if f.startswith('sitemap') and f.endswith('.xml') and 'museenglishapp.com/en/' in read(f):
         problems.append('%s lists /en/ (run python3 seo/fa-pages/blog_fa.py . as the last step).' % f)
 
-# 4. cache-busting hashes
+# 4. the hidden landing must not download images in the app
+if build_app.lazy_landing_images(index) != index:
+    problems.append('index.html: <img> tags in the LANDING block without loading="lazy" (they download on every '
+                    'app open although the landing is hidden). Run python3 tools/build_app.py.')
+
+# 5. cache-busting hashes
 for rel, name in build_app.HASHED:
     if not os.path.exists(os.path.join(REPO, rel)):
         continue

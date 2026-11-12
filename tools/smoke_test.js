@@ -1,7 +1,8 @@
 /* Smoke test for the app (Claude, 2026-11-12). Run by .github/workflows/app-check.yml.
    Starts no server itself: expects the repo served at BASE (default http://localhost:8765).
    Demo mode: js/config.js is replaced with placeholder keys so the demo buttons appear.
-   Fails (exit 1) on any page error or when a key screen does not render. */
+   Fails (exit 1) on any page error or when a key screen does not render.
+   Also checks the staff split: learners never download js/staff.js; the admin page loads it once. */
 const { chromium } = require('playwright');
 const BASE = process.env.BASE || 'http://localhost:8765';
 const DEMO_CONFIG = 'const APP_CONFIG={SUPABASE_URL:"https://YOUR-PROJECT.supabase.co",SUPABASE_ANON_KEY:"x",ADMIN_EMAILS:[]};';
@@ -18,7 +19,9 @@ async function run(browser, lang) {
   const pg = await ctx.newPage();
   pg.setDefaultTimeout(8000);
   const errors = [];
+  let staffReqs = 0;
   pg.on('pageerror', e => errors.push(e.message));
+  pg.on('request', r => { if (r.url().includes('/js/staff.js')) staffReqs++; });
   const go = async (hash, wait) => { await pg.evaluate(h => { location.hash = h; }, hash); await pg.waitForTimeout(wait || 1800); };
   const has = sel => pg.$(sel).then(Boolean);
 
@@ -49,6 +52,37 @@ async function run(browser, lang) {
   await go('#/review');
   check((await pg.textContent('#view')).trim().length > 50, tag + 'review renders');
 
+  check(staffReqs === 0, tag + 'learner never downloads js/staff.js (requests: ' + staffReqs + ')');
+  check(errors.length === 0, tag + 'no page errors' + (errors.length ? ': ' + errors.slice(0, 3).join(' | ') : ''));
+  await ctx.close();
+}
+
+async function runAdmin(browser) {
+  const tag = '[admin] ';
+  const ctx = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  await ctx.route('**/js/config.js*', r => r.fulfill({ contentType: 'application/javascript', body: DEMO_CONFIG }));
+  await ctx.route(/jsdelivr|onesignal|hotjar|googletagmanager|google-analytics|clarity|doubleclick/i, r => r.abort());
+  const pg = await ctx.newPage();
+  pg.setDefaultTimeout(8000);
+  const errors = [];
+  let staffReqs = 0;
+  pg.on('pageerror', e => errors.push(e.message));
+  pg.on('dialog', d => d.dismiss());
+  pg.on('request', r => { if (r.url().includes('/js/staff.js')) staffReqs++; });
+  await pg.goto(BASE + '/#/signin', { waitUntil: 'load' });
+  await pg.waitForTimeout(2000);
+  await pg.click('[data-action="demo-admin"]');
+  await pg.waitForTimeout(2500);
+  check(staffReqs === 0, tag + 'js/staff.js not loaded before a staff page is opened');
+  await pg.evaluate(() => { location.hash = '#/admin'; });
+  await pg.waitForTimeout(3000);
+  check(await pg.$('#admin-daily').then(Boolean), tag + 'admin page renders (loads js/staff.js on demand)');
+  check(staffReqs === 1, tag + 'js/staff.js downloaded once (requests: ' + staffReqs + ')');
+  await pg.evaluate(() => { location.hash = '#/home'; });
+  await pg.waitForTimeout(1500);
+  await pg.evaluate(() => { location.hash = '#/admin'; });
+  await pg.waitForTimeout(1500);
+  check(staffReqs === 1, tag + 'second visit uses the loaded code (requests: ' + staffReqs + ')');
   check(errors.length === 0, tag + 'no page errors' + (errors.length ? ': ' + errors.slice(0, 3).join(' | ') : ''));
   await ctx.close();
 }
@@ -59,6 +93,7 @@ async function run(browser, lang) {
     await run(browser, null);
     await run(browser, 'fa');
     await run(browser, 'en');
+    await runAdmin(browser);
   } catch (e) {
     fails.push('smoke test crashed: ' + e.message.split('\n')[0]);
     console.log('FAIL ' + e.message);

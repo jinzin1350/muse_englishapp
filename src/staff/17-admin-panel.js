@@ -48,5 +48,3 @@ async function apRenderSupportThread(v, userId) {
     btn.disabled = false;
   });
 }
-
-
