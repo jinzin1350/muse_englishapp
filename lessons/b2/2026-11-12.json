@@ -1,0 +1,394 @@
+{
+  "date": "2026-11-12",
+  "theme": "review day",
+  "level": "b2",
+  "cefr": "B2",
+  "review": true,
+  "review_of": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "blood pressure",
+      "pos": "noun",
+      "meaning": "The force of blood moving through your body.",
+      "example": "The doctor checked my blood pressure.",
+      "pronunciation": "BLUD PRESH-er",
+      "persian": "فشار خون",
+      "photo": "media/b2/2026-11-10/photos/blood-pressure.jpg",
+      "word_audio": "media/b2/2026-11-10/word-audio/blood-pressure.mp3"
+    },
+    {
+      "word": "CEO",
+      "pos": "noun",
+      "meaning": "Chief Executive Officer; the highest manager in a company.",
+      "example": "The CEO made an important decision for the company.",
+      "pronunciation": "SEE-ee-oh",
+      "persian": "مدیر عامل",
+      "photo": "media/b2/2026-11-09/photos/ceo.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/ceo.mp3"
+    },
+    {
+      "word": "carpenter",
+      "pos": "noun",
+      "meaning": "A person who builds and repairs things made of wood.",
+      "example": "My father is a carpenter and makes furniture.",
+      "pronunciation": "KAR-pin-ter",
+      "persian": "نجار",
+      "photo": "media/b2/2026-11-09/photos/carpenter.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/carpenter.mp3"
+    },
+    {
+      "word": "brick",
+      "pos": "noun",
+      "meaning": "A hard block used for building walls.",
+      "example": "The house is made of red bricks.",
+      "pronunciation": "BRIK",
+      "persian": "آجر",
+      "photo": "media/b2/2026-11-09/photos/brick.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/brick.mp3"
+    },
+    {
+      "word": "bandage",
+      "pos": "noun",
+      "meaning": "A strip of cloth to cover an injury.",
+      "example": "She put a bandage on her cut finger.",
+      "pronunciation": "BAN-dij",
+      "persian": "باند، نوار زخم‌بندی",
+      "photo": "media/b2/2026-11-10/photos/bandage.jpg",
+      "word_audio": "media/b2/2026-11-10/word-audio/bandage.mp3"
+    },
+    {
+      "word": "bowl",
+      "pos": "noun",
+      "meaning": "A round, deep dish for food.",
+      "example": "I ate a bowl of soup for lunch.",
+      "pronunciation": "BOHL",
+      "persian": "کاسه",
+      "photo": "media/b2/2026-11-11/photos/bowl.jpg",
+      "word_audio": "media/b2/2026-11-11/word-audio/bowl.mp3"
+    },
+    {
+      "word": "bathroom",
+      "pos": "noun",
+      "meaning": "A room with a toilet and a bath or shower.",
+      "example": "The bathroom is upstairs, next to my room.",
+      "pronunciation": "BAH-throom",
+      "persian": "حمام، دستشویی",
+      "photo": "media/b2/2026-11-11/photos/bathroom.jpg",
+      "word_audio": "media/b2/2026-11-11/word-audio/bathroom.mp3"
+    },
+    {
+      "word": "break down",
+      "pos": "phrasal verb",
+      "meaning": "To stop working (for a machine or vehicle).",
+      "example": "My car broke down on the way to work.",
+      "pronunciation": "BRAYK DOWN",
+      "persian": "خراب شدن، از کار افتادن",
+      "photo": "media/b2/2026-11-09/photos/break-down.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/break-down.mp3"
+    },
+    {
+      "word": "be promoted",
+      "pos": "verb phrase",
+      "meaning": "Get a higher position in your job.",
+      "example": "She was promoted to manager last month.",
+      "pronunciation": "bee pruh-MOH-ted",
+      "persian": "ترفیع گرفتن، ارتقا یافتن",
+      "photo": "media/b2/2026-11-09/photos/be-promoted.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/be-promoted.mp3"
+    },
+    {
+      "word": "business plan",
+      "pos": "noun",
+      "meaning": "A detailed plan for a new business.",
+      "example": "We need a solid business plan to get funding.",
+      "pronunciation": "BIZ-nis PLAN",
+      "persian": "طرح کسب و کار",
+      "photo": "media/b2/2026-11-09/photos/business-plan.jpg",
+      "word_audio": "media/b2/2026-11-09/word-audio/business-plan.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-11-12/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day",
+    "audio": "media/b2/2026-11-12/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-11-12/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Carpenter Who Would Be Promoted",
+    "audio": "media/b2/2026-11-12/shadowing.mp3",
+    "transcript": "media/b2/2026-11-12/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-11-12/shadowing-sentences/001.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/002.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/003.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/004.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/005.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/006.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/007.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/008.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/009.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/010.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/011.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/012.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/013.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/014.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/015.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/016.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/017.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/018.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/019.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/020.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/021.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/022.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/023.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/024.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/025.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/026.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/027.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/028.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/029.mp3",
+      "media/b2/2026-11-12/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'blood pressure' mean?",
+      "options": [
+        "The force of blood moving through your body.",
+        "A strip of cloth to cover an injury.",
+        "A hard block used for building walls.",
+        "A round, deep dish for food."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'CEO' mean?",
+      "options": [
+        "A person who builds and repairs things made of wood.",
+        "The force of blood moving through your body.",
+        "Get a higher position in your job.",
+        "Chief Executive Officer; the highest manager in a company."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'carpenter' mean?",
+      "options": [
+        "A person who builds and repairs things made of wood.",
+        "The force of blood moving through your body.",
+        "A room with a toilet and a bath or shower.",
+        "Get a higher position in your job."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'brick' mean?",
+      "options": [
+        "A room with a toilet and a bath or shower.",
+        "A hard block used for building walls.",
+        "Get a higher position in your job.",
+        "A detailed plan for a new business."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bandage' mean?",
+      "options": [
+        "A person who builds and repairs things made of wood.",
+        "A strip of cloth to cover an injury.",
+        "The force of blood moving through your body.",
+        "A room with a toilet and a bath or shower."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bowl' mean?",
+      "options": [
+        "Chief Executive Officer; the highest manager in a company.",
+        "A room with a toilet and a bath or shower.",
+        "A person who builds and repairs things made of wood.",
+        "A round, deep dish for food."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'bathroom' mean?",
+      "options": [
+        "A room with a toilet and a bath or shower.",
+        "The force of blood moving through your body.",
+        "A detailed plan for a new business.",
+        "Get a higher position in your job."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'break down' mean?",
+      "options": [
+        "A room with a toilet and a bath or shower.",
+        "Get a higher position in your job.",
+        "The force of blood moving through your body.",
+        "To stop working (for a machine or vehicle)."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'be promoted' mean?",
+      "options": [
+        "A person who builds and repairs things made of wood.",
+        "Chief Executive Officer; the highest manager in a company.",
+        "Get a higher position in your job.",
+        "A round, deep dish for food."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'business plan' mean?",
+      "options": [
+        "A hard block used for building walls.",
+        "A detailed plan for a new business.",
+        "A room with a toilet and a bath or shower.",
+        "The force of blood moving through your body."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Future Continuous and Future Perfect",
+    "explanation": "The **future continuous** (**will be** + -ing) describes an action **in progress** at a time in the future. This time tomorrow, the carpenter **will be laying** a brick, and the CEO **will be checking** the new bathroom.\n\nThe **future perfect** (**will have** + past participle) describes an action **completed before** a time in the future. By Friday, Daniel **will have finished** his business plan, and by June he **will have been promoted**.\n\nUse **by** and **by the time** for the future deadline. By the time the nurse checks his blood pressure, Daniel **will have put** a bandage on his cut and **will have eaten** from his bowl.\n\nThe **future perfect continuous** (**will have been** + -ing) says **how long** an action will have continued. By June, Daniel **will have been working** as a carpenter for ten years.\n\nFor negatives, use **won't be** and **won't have**. For questions, ask ***Will** you **be using** the bathroom?* or ***Will** they **have arrived** by eight?*\n\nAfter **by the time**, **when**, **before** and **until**, use a **present** tense for the future. Say *By the time you **get** home*, not *will get*.",
+    "examples": [
+      "*This time next week, we **'ll be lying** on a beach.* (in progress)",
+      "*I **'ll be waiting** for you at the station at 6.* (in progress)",
+      "***Will** you **be coming** to the meeting?* (polite question)",
+      "*I **'ll be passing** the post office anyway, so I can post your letter.* (normal plan)",
+      "*By the time we get there, the film **will have started**.* (completed before)",
+      "*I **'ll have finished** this book by Friday.* (by + time)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite in the future continuous: At nine tomorrow, Daniel lays a brick. (this time tomorrow)",
+        "a": "This time tomorrow, Daniel will be laying a brick."
+      },
+      {
+        "q": "Rewrite in the future perfect: Daniel finishes his business plan before Friday.",
+        "a": "Daniel will have finished his business plan by Friday."
+      },
+      {
+        "q": "Complete: By the time the CEO arrives, the carpenter ___ (finish) the bathroom.",
+        "a": "By the time the CEO arrives, the carpenter will have finished the bathroom."
+      },
+      {
+        "q": "Rewrite: In June, Daniel will complete ten years as a carpenter. (future perfect continuous, by June)",
+        "a": "By June, Daniel will have been working as a carpenter for ten years."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "This time tomorrow, I ___ on a beach in Mexico.",
+        "options": [
+          "will lie",
+          "will be lying",
+          "will have lain",
+          "lie"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "By the time you get home, I ___ dinner.",
+        "options": [
+          "cooked",
+          "am cooking",
+          "cook",
+          "will have cooked"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Don't call me at 8. I ___ the kids to bed then.",
+        "options": [
+          "'ll be putting",
+          "'ll have put",
+          "put",
+          "'m put"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I hope that by 2030, scientists ___ a cure for this disease.",
+        "options": [
+          "are finding",
+          "find",
+          "will have found",
+          "will be find"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "By next June, I ___ here for five years.",
+        "options": [
+          "will have worked",
+          "will work",
+          "am working",
+          "work"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "At 10 a.m. tomorrow, we ___ our presentation, so we can't answer the phone.",
+        "options": [
+          "will have given",
+          "will be giving",
+          "give",
+          "are given"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Will you ___ the car tonight? If not, can I borrow it?",
+        "options": [
+          "have used",
+          "been using",
+          "using",
+          "be using"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I'm sure they ___ by the time we arrive. They always leave early.",
+        "options": [
+          "will leaving",
+          "leave",
+          "will have left",
+          "have left"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "By the end of this month, she ___ for the company for 20 years.",
+        "options": [
+          "will work",
+          "is working",
+          "has been working",
+          "will have been working"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Don't worry about the dishes. I ___ them by the time you wake up.",
+        "options": [
+          "'ll have done",
+          "'m doing",
+          "do",
+          "'ll be done"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,394 @@
+{
+  "date": "2026-11-12",
+  "theme": "review day",
+  "level": "c2",
+  "cefr": "C2",
+  "review": true,
+  "review_of": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "debit card",
+      "pos": "noun",
+      "meaning": "A card used to pay directly from a bank account.",
+      "example": "I paid for groceries with my debit card.",
+      "pronunciation": "DEB-it kard",
+      "persian": "کارت بانکی، کارت بدهی",
+      "photo": "media/c2/2026-11-09/photos/debit-card.jpg",
+      "word_audio": "media/c2/2026-11-09/word-audio/debit-card.mp3"
+    },
+    {
+      "word": "cabin",
+      "pos": "noun",
+      "meaning": "A small room on a ship or airplane.",
+      "example": "Our cruise ship cabin had a lovely ocean view.",
+      "pronunciation": "KAB-in",
+      "persian": "کابین، اتاقک",
+      "photo": "media/c2/2026-11-10/photos/cabin.jpg",
+      "word_audio": "media/c2/2026-11-10/word-audio/cabin.mp3"
+    },
+    {
+      "word": "chalet",
+      "pos": "noun",
+      "meaning": "A wooden house or hut, especially in mountains.",
+      "example": "We rented a cozy chalet for our ski holiday.",
+      "pronunciation": "SHA-lay",
+      "persian": "کلبه چوبی (کوهستانی)",
+      "photo": "media/c2/2026-11-10/photos/chalet.jpg",
+      "word_audio": "media/c2/2026-11-10/word-audio/chalet.mp3"
+    },
+    {
+      "word": "debtor nation",
+      "pos": "noun phrase",
+      "meaning": "A nation that owes money to other nations.",
+      "example": "The debtor nation faced economic challenges due to its loans.",
+      "pronunciation": "DET-er NAY-shun",
+      "persian": "ملت بدهکار",
+      "photo": "media/c2/2026-11-09/photos/debtor-nation.jpg",
+      "word_audio": "media/c2/2026-11-09/word-audio/debtor-nation.mp3"
+    },
+    {
+      "word": "carriage",
+      "pos": "noun",
+      "meaning": "A separate section of a train for passengers.",
+      "example": "We found our seats in the third carriage of the train.",
+      "pronunciation": "KA-rij",
+      "persian": "واگن (قطار)",
+      "photo": "media/c2/2026-11-10/photos/carriage.jpg",
+      "word_audio": "media/c2/2026-11-10/word-audio/carriage.mp3"
+    },
+    {
+      "word": "bureaucratic",
+      "pos": "adjective",
+      "meaning": "Relating to a system of administration with many rules.",
+      "example": "Dealing with the bureaucratic paperwork was frustrating.",
+      "pronunciation": "byoor-oh-KRAT-ik",
+      "persian": "بوروکراتیک، دیوان‌سالارانه",
+      "photo": "media/c2/2026-11-11/photos/bureaucratic.jpg",
+      "word_audio": "media/c2/2026-11-11/word-audio/bureaucratic.mp3"
+    },
+    {
+      "word": "at your earliest convenience",
+      "pos": "phrase",
+      "meaning": "As soon as you are able to.",
+      "example": "Please submit your forms at your earliest convenience.",
+      "pronunciation": "at yor ER-lee-est kun-VEE-nee-ence",
+      "persian": "در اسرع وقت ممکن",
+      "photo": "media/c2/2026-11-11/photos/at-your-earliest-convenience.jpg",
+      "word_audio": "media/c2/2026-11-11/word-audio/at-your-earliest-convenience.mp3"
+    },
+    {
+      "word": "debt relief",
+      "pos": "noun phrase",
+      "meaning": "The partial or total cancellation of debts.",
+      "example": "The organization advocates for debt relief for poor countries.",
+      "pronunciation": "det ri-LEEF",
+      "persian": "بخشودگی بدهی",
+      "photo": "media/c2/2026-11-09/photos/debt-relief.jpg",
+      "word_audio": "media/c2/2026-11-09/word-audio/debt-relief.mp3"
+    },
+    {
+      "word": "bestow",
+      "pos": "verb",
+      "meaning": "To present an honor, right, or gift.",
+      "example": "The university will bestow honorary degrees next month.",
+      "pronunciation": "beh-STOH",
+      "persian": "اعطا کردن، بخشیدن",
+      "photo": "media/c2/2026-11-11/photos/bestow.jpg",
+      "word_audio": "media/c2/2026-11-11/word-audio/bestow.mp3"
+    },
+    {
+      "word": "credit card fraud",
+      "pos": "noun phrase",
+      "meaning": "Illegal use of someone else's credit card information.",
+      "example": "He was a victim of credit card fraud last month.",
+      "pronunciation": "KRED-it kard frawd",
+      "persian": "کلاهبرداری کارت اعتباری",
+      "photo": "media/c2/2026-11-09/photos/credit-card-fraud.jpg",
+      "word_audio": "media/c2/2026-11-09/word-audio/credit-card-fraud.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-11-12/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day",
+    "audio": "media/c2/2026-11-12/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-11-12/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Elena and the Mountain Journey",
+    "audio": "media/c2/2026-11-12/shadowing.mp3",
+    "transcript": "media/c2/2026-11-12/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c2/2026-11-12/shadowing-sentences/001.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/002.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/003.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/004.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/005.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/006.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/007.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/008.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/009.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/010.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/011.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/012.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/013.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/014.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/015.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/016.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/017.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/018.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/019.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/020.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/021.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/022.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/023.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/024.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/025.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/026.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/027.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/028.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/029.mp3",
+      "media/c2/2026-11-12/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'debit card' mean?",
+      "options": [
+        "A wooden house or hut, especially in mountains.",
+        "A card used to pay directly from a bank account.",
+        "A nation that owes money to other nations.",
+        "A separate section of a train for passengers."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cabin' mean?",
+      "options": [
+        "As soon as you are able to.",
+        "Illegal use of someone else's credit card information.",
+        "Relating to a system of administration with many rules.",
+        "A small room on a ship or airplane."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'chalet' mean?",
+      "options": [
+        "As soon as you are able to.",
+        "A nation that owes money to other nations.",
+        "A wooden house or hut, especially in mountains.",
+        "Relating to a system of administration with many rules."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'debtor nation' mean?",
+      "options": [
+        "A wooden house or hut, especially in mountains.",
+        "A small room on a ship or airplane.",
+        "A nation that owes money to other nations.",
+        "A separate section of a train for passengers."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'carriage' mean?",
+      "options": [
+        "The partial or total cancellation of debts.",
+        "A separate section of a train for passengers.",
+        "A small room on a ship or airplane.",
+        "A card used to pay directly from a bank account."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bureaucratic' mean?",
+      "options": [
+        "As soon as you are able to.",
+        "Relating to a system of administration with many rules.",
+        "Illegal use of someone else's credit card information.",
+        "A small room on a ship or airplane."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'at your earliest convenience' mean?",
+      "options": [
+        "As soon as you are able to.",
+        "A separate section of a train for passengers.",
+        "A nation that owes money to other nations.",
+        "The partial or total cancellation of debts."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'debt relief' mean?",
+      "options": [
+        "A card used to pay directly from a bank account.",
+        "To present an honor, right, or gift.",
+        "The partial or total cancellation of debts.",
+        "As soon as you are able to."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'bestow' mean?",
+      "options": [
+        "To present an honor, right, or gift.",
+        "A nation that owes money to other nations.",
+        "As soon as you are able to.",
+        "A card used to pay directly from a bank account."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'credit card fraud' mean?",
+      "options": [
+        "As soon as you are able to.",
+        "Relating to a system of administration with many rules.",
+        "Illegal use of someone else's credit card information.",
+        "A separate section of a train for passengers."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "The Subjunctive (I insist that he be on time)",
+    "explanation": "The **subjunctive** is a verb form for things that are **demanded, suggested or necessary**, not facts. It uses the **base form** of the verb for every person: the doctor insisted that she **stay** in bed.\n\nUse it after verbs such as **insist**, **suggest**, **recommend**, **demand**, **propose** and **require**, followed by **that**. A bureaucratic officer might insist that a debtor nation **submit** its forms at your earliest convenience.\n\nUse it after adjectives such as **essential**, **vital**, **important**, **necessary** and **crucial**, followed by **that**. It is essential that every passenger in the carriage **be** on time, and that he **have** a valid debit card.\n\nThe verb **be** stays **be** for every person in the subjunctive. It is important that she **be** informed before the university can bestow the award.\n\nThe negative is **not** plus the base form. They recommended that he **not accept** the job, and the bank demanded that the traveller **not be** a victim of credit card fraud.\n\nThe passive is **be** plus a past participle. The committee demanded that the debt relief report **be published** immediately.\n\nFor unreal situations, use **were** for every person. If I **were** you, I would stay in the chalet. Fixed phrases keep old subjunctive forms: **be that as it may**, **come what may**, **if need be**, **so be it** and **long live** the King.",
+    "examples": [
+      "*The doctor insisted that she **stay** in bed for a week.* (insist that)",
+      "*I suggest that he **apply** for the job.* (suggest that)",
+      "*It is vital that the patient **not eat** before surgery.* (negative)",
+      "*The committee demanded that the report **be published** immediately.* (passive)",
+      "*It's important that she **be** informed.* (be)",
+      "*The law requires that every driver **have** insurance.* (require that)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite using the subjunctive: The officer insisted: 'Elena should stay in the cabin.'",
+        "a": "The officer insisted that Elena stay in the cabin."
+      },
+      {
+        "q": "Rewrite using the subjunctive: It is essential that he is on time for the carriage.",
+        "a": "It is essential that he be on time for the carriage."
+      },
+      {
+        "q": "Rewrite with the negative subjunctive: They recommended that he should not accept the bureaucratic job.",
+        "a": "They recommended that he not accept the bureaucratic job."
+      },
+      {
+        "q": "Rewrite using the subjunctive: The bank demanded that the debt relief report should be published.",
+        "a": "The bank demanded that the debt relief report be published."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "The doctor insisted that she ___ in bed for a week.",
+        "options": [
+          "to stay",
+          "stay",
+          "staying",
+          "will stay"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "It is essential that every student ___ on time.",
+        "options": [
+          "to be",
+          "is being",
+          "will be",
+          "be"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "They recommended that he ___ the job.",
+        "options": [
+          "not accept",
+          "doesn't accept",
+          "not to accept",
+          "not accepting"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The committee demanded that the report ___ immediately.",
+        "options": [
+          "to publish",
+          "is publishing",
+          "be published",
+          "being published"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I suggest that she ___ a lawyer before signing.",
+        "options": [
+          "to consult",
+          "consulting",
+          "will consult",
+          "consult"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ that as it may, we still need to make a decision.",
+        "options": [
+          "Be",
+          "Being",
+          "Is",
+          "Was"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "It is vital that the patient ___ any food before surgery.",
+        "options": [
+          "not eating",
+          "not to eat",
+          "not eat",
+          "won't eat"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If I ___ you, I'd take the offer.",
+        "options": [
+          "am",
+          "were",
+          "be",
+          "been"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The law requires that every driver ___ insurance.",
+        "options": [
+          "have",
+          "has got to",
+          "having",
+          "to have"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We'll finish the project on time, come what ___.",
+        "options": [
+          "will",
+          "is",
+          "may",
+          "be"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

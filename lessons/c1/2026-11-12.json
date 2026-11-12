@@ -1,0 +1,394 @@
+{
+  "date": "2026-11-12",
+  "theme": "review day",
+  "level": "c1",
+  "cefr": "C1",
+  "review": true,
+  "review_of": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "chatty",
+      "pos": "adjective",
+      "meaning": "Fond of talking; talkative.",
+      "example": "She's a very chatty person and loves meeting new people.",
+      "pronunciation": "CHAT-ee",
+      "persian": "پرحرف، وراج",
+      "photo": "media/c1/2026-11-10/photos/chatty.jpg",
+      "word_audio": "media/c1/2026-11-10/word-audio/chatty.mp3"
+    },
+    {
+      "word": "brutal suppression",
+      "pos": "noun phrase",
+      "meaning": "Harsh and violent control or crushing of dissent.",
+      "example": "The government's brutal suppression of protests drew international condemnation.",
+      "pronunciation": "BROO-tul suh-PRESH-un",
+      "persian": "سرکوب وحشیانه",
+      "photo": "media/c1/2026-11-11/photos/brutal-suppression.jpg",
+      "word_audio": "media/c1/2026-11-11/word-audio/brutal-suppression.mp3"
+    },
+    {
+      "word": "approachable",
+      "pos": "adjective",
+      "meaning": "Friendly and easy to talk to.",
+      "example": "Her approachable demeanor made students feel comfortable asking questions.",
+      "pronunciation": "uh-PROH-chuh-bul",
+      "persian": "صمیمی، قابل دسترس",
+      "photo": "media/c1/2026-11-10/photos/approachable.jpg",
+      "word_audio": "media/c1/2026-11-10/word-audio/approachable.mp3"
+    },
+    {
+      "word": "blowy",
+      "pos": "adjective",
+      "meaning": "Windy; characterized by strong breezes.",
+      "example": "It was a blowy day, perfect for flying kites.",
+      "pronunciation": "BLOH-ee",
+      "persian": "بادی، پرباد",
+      "photo": "media/c1/2026-11-11/photos/blowy.jpg",
+      "word_audio": "media/c1/2026-11-11/word-audio/blowy.mp3"
+    },
+    {
+      "word": "hands-free",
+      "pos": "adjective",
+      "meaning": "Operating without needing to be held.",
+      "example": "Her new car has a hands-free phone system.",
+      "pronunciation": "HANDZ-FREE",
+      "persian": "بدون نیاز به دست، هندزفری",
+      "photo": "media/c1/2026-11-09/photos/hands-free.jpg",
+      "word_audio": "media/c1/2026-11-09/word-audio/hands-free.mp3"
+    },
+    {
+      "word": "breezy",
+      "pos": "adjective",
+      "meaning": "Pleasantly windy; light and fresh.",
+      "example": "It was a breezy afternoon, perfect for a walk.",
+      "pronunciation": "BREE-zee",
+      "persian": "نسیم‌دار، خنک",
+      "photo": "media/c1/2026-11-11/photos/breezy.jpg",
+      "word_audio": "media/c1/2026-11-11/word-audio/breezy.mp3"
+    },
+    {
+      "word": "blissfully unaware",
+      "pos": "adjective phrase",
+      "meaning": "Happily not knowing about something negative.",
+      "example": "She was blissfully unaware of the gossip circulating about her.",
+      "pronunciation": "BLISS-fuh-lee un-uh-WAIR",
+      "persian": "بی‌خبر و بی‌خیال، غافل",
+      "photo": "media/c1/2026-11-10/photos/blissfully-unaware.jpg",
+      "word_audio": "media/c1/2026-11-10/word-audio/blissfully-unaware.mp3"
+    },
+    {
+      "word": "bulk up",
+      "pos": "phrasal verb",
+      "meaning": "To gain muscle mass and become bigger.",
+      "example": "He's trying to bulk up for the bodybuilding competition.",
+      "pronunciation": "BULK UP",
+      "persian": "عضله آوردن، حجم گرفتن",
+      "photo": "media/c1/2026-11-10/photos/bulk-up.jpg",
+      "word_audio": "media/c1/2026-11-10/word-audio/bulk-up.mp3"
+    },
+    {
+      "word": "mega-city",
+      "pos": "noun",
+      "meaning": "A very large city, typically with over ten million people.",
+      "example": "Tokyo is a prime example of a bustling mega-city.",
+      "pronunciation": "MEG-uh SIT-ee",
+      "persian": "کلان‌شهر، ابرشهر",
+      "photo": "media/c1/2026-11-09/photos/mega-city.jpg",
+      "word_audio": "media/c1/2026-11-09/word-audio/mega-city.mp3"
+    },
+    {
+      "word": "biomass",
+      "pos": "noun",
+      "meaning": "Organic matter used as fuel or for energy production.",
+      "example": "Burning biomass can be a renewable energy source.",
+      "pronunciation": "BY-oh-mass",
+      "persian": "زیست‌توده",
+      "photo": "media/c1/2026-11-11/photos/biomass.jpg",
+      "word_audio": "media/c1/2026-11-11/word-audio/biomass.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-11-12/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day",
+    "audio": "media/c1/2026-11-12/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-11-12/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Hill Above the Mega-City",
+    "audio": "media/c1/2026-11-12/shadowing.mp3",
+    "transcript": "media/c1/2026-11-12/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-11-12/shadowing-sentences/001.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/002.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/003.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/004.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/005.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/006.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/007.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/008.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/009.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/010.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/011.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/012.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/013.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/014.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/015.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/016.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/017.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/018.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/019.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/020.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/021.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/022.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/023.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/024.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/025.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/026.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/027.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/028.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/029.mp3",
+      "media/c1/2026-11-12/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'chatty' mean?",
+      "options": [
+        "A very large city, typically with over ten million people.",
+        "Organic matter used as fuel or for energy production.",
+        "Fond of talking; talkative.",
+        "To gain muscle mass and become bigger."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'brutal suppression' mean?",
+      "options": [
+        "Harsh and violent control or crushing of dissent.",
+        "Windy; characterized by strong breezes.",
+        "Operating without needing to be held.",
+        "Fond of talking; talkative."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'approachable' mean?",
+      "options": [
+        "Fond of talking; talkative.",
+        "Friendly and easy to talk to.",
+        "To gain muscle mass and become bigger.",
+        "Harsh and violent control or crushing of dissent."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'blowy' mean?",
+      "options": [
+        "A very large city, typically with over ten million people.",
+        "Happily not knowing about something negative.",
+        "Pleasantly windy; light and fresh.",
+        "Windy; characterized by strong breezes."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'hands-free' mean?",
+      "options": [
+        "Pleasantly windy; light and fresh.",
+        "To gain muscle mass and become bigger.",
+        "Operating without needing to be held.",
+        "Happily not knowing about something negative."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'breezy' mean?",
+      "options": [
+        "Fond of talking; talkative.",
+        "Harsh and violent control or crushing of dissent.",
+        "Windy; characterized by strong breezes.",
+        "Pleasantly windy; light and fresh."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'blissfully unaware' mean?",
+      "options": [
+        "Pleasantly windy; light and fresh.",
+        "Happily not knowing about something negative.",
+        "Operating without needing to be held.",
+        "A very large city, typically with over ten million people."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bulk up' mean?",
+      "options": [
+        "Operating without needing to be held.",
+        "To gain muscle mass and become bigger.",
+        "Windy; characterized by strong breezes.",
+        "A very large city, typically with over ten million people."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'mega-city' mean?",
+      "options": [
+        "Pleasantly windy; light and fresh.",
+        "To gain muscle mass and become bigger.",
+        "Harsh and violent control or crushing of dissent.",
+        "A very large city, typically with over ten million people."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'biomass' mean?",
+      "options": [
+        "Fond of talking; talkative.",
+        "Friendly and easy to talk to.",
+        "A very large city, typically with over ten million people.",
+        "Organic matter used as fuel or for energy production."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Ellipsis and Substitution",
+    "explanation": "Natural English avoids repeating words. We either **replace** them with a short word, which is **substitution**, or **leave them out**, which is **ellipsis**.\n\nUse **one** for a singular countable noun and **ones** for a plural noun. A chatty guide in a mega-city might say, this tour is full, but the breezy evening **one** still has places.\n\nUse **do**, **does** or **did** to replace a verb phrase. She speaks French better than I **do**, and an approachable teacher answers more questions than most **do**.\n\nUse **so** to replace a positive clause and **not** to replace a negative clause after verbs like **think**, **hope**, **expect** and **be afraid**. Will the blowy weather stop? I hope **so**. Will biomass replace coal soon? I am afraid **not**.\n\nWith **think**, **expect** and **suppose**, the natural negative is I do not think **so**. With **hope** and **be afraid**, use **not**: I hope **not**, I am afraid **not**.\n\nIn **ellipsis**, leave out words after an auxiliary or modal verb. I cannot play the piano, but my sister **can**. She said she would use a hands-free phone, and she **did**.\n\nAfter **to**, keep the **to** and leave out the verb. Would you like to bulk up safely? I would love **to**, but I need a good coach first.\n\nThe formal pattern **do so** replaces an action in careful writing. Anyone who wishes to visit the biomass plant should **do so** before Friday, blissfully unaware visitors included.",
+    "examples": [
+      "*I'd like a coffee. Would you like **one**?* (one = a coffee)",
+      "*The red apples are sweeter than the green **ones**.* (ones = apples)",
+      "*Nobody works harder than she **does**.* (does = works)",
+      "*Are you coming tonight? – I hope **so**.* (so = that I'm coming)",
+      "*Is it going to rain? – I hope **not**.* (not = that it won't rain)",
+      "*I've never been to Asia, but my brother **has**.* (ellipsis after has)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with 'one': I don't like this jacket. Can I see the blue jacket?",
+        "a": "I don't like this jacket. Can I see the blue one?"
+      },
+      {
+        "q": "Rewrite with substitution: Will the breezy weather continue? (answer: yes, I think ...)",
+        "a": "Yes, I think so."
+      },
+      {
+        "q": "Rewrite with ellipsis: I haven't visited the mega-city, but Sara has visited it.",
+        "a": "I haven't visited the mega-city, but Sara has."
+      },
+      {
+        "q": "Rewrite keeping 'to': Would you like to bulk up? Yes, I'd love to bulk up.",
+        "a": "Would you like to bulk up? Yes, I'd love to."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I don't like this jacket. Can I see the blue ___?",
+        "options": [
+          "it",
+          "that",
+          "one",
+          "ones"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Is it going to rain? – I hope ___.",
+        "options": [
+          "not",
+          "no",
+          "so not",
+          "don't"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She speaks French better than I ___.",
+        "options": [
+          "am",
+          "does",
+          "have",
+          "do"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Will you be at the meeting? – I don't think ___.",
+        "options": [
+          "it",
+          "so",
+          "that",
+          "not"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Would you like to come with us? – I'd love ___!",
+        "options": [
+          "it",
+          "so",
+          "that",
+          "to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "These shoes are too small. Do you have any bigger ___?",
+        "options": [
+          "one",
+          "ones",
+          "it",
+          "them"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He was asked to leave the room, and he did ___ immediately.",
+        "options": [
+          "so",
+          "such",
+          "it so",
+          "that so"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I haven't finished my homework yet, but Sara ___.",
+        "options": [
+          "did",
+          "is",
+          "has",
+          "was"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I can't play the piano, but my sister ___.",
+        "options": [
+          "can",
+          "does",
+          "is",
+          "plays it can"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Who wants more cake? – I ___!",
+        "options": [
+          "want",
+          "am",
+          "do",
+          "does"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}

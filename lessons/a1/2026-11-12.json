@@ -1,0 +1,383 @@
+{
+  "date": "2026-11-12",
+  "theme": "review day",
+  "level": "a1",
+  "cefr": "A1",
+  "review": true,
+  "review_of": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11"
+  ],
+  "review_window_words": 15,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "grape(s)",
+      "pos": "noun",
+      "meaning": "a small, round, sweet fruit.",
+      "example": "I like to eat green grapes.",
+      "pronunciation": "GRAYPS",
+      "persian": "انگور",
+      "photo": "media/a1/2026-11-11/photos/grape-s.jpg",
+      "word_audio": "media/a1/2026-11-11/word-audio/grape-s.mp3"
+    },
+    {
+      "word": "Do you come from …?",
+      "pos": "phrase",
+      "meaning": "Where are you from?",
+      "example": "Do you come from Italy?",
+      "pronunciation": "doo yoo KUM from",
+      "persian": "اهل کجا هستید؟",
+      "photo": "media/a1/2026-11-10/photos/do-you-come-from.jpg",
+      "word_audio": "media/a1/2026-11-10/word-audio/do-you-come-from.mp3"
+    },
+    {
+      "word": "heavy",
+      "pos": "adjective",
+      "meaning": "Weighing a lot; difficult to lift.",
+      "example": "This box is very heavy.",
+      "pronunciation": "HEV-ee",
+      "persian": "سنگین",
+      "photo": "media/a1/2026-11-11/photos/heavy.jpg",
+      "word_audio": "media/a1/2026-11-11/word-audio/heavy.mp3"
+    },
+    {
+      "word": "garlic",
+      "pos": "noun",
+      "meaning": "a plant with a strong smell, used in cooking.",
+      "example": "I like to add garlic to my food.",
+      "pronunciation": "GAR-lik",
+      "persian": "سیر",
+      "photo": "media/a1/2026-11-11/photos/garlic.jpg",
+      "word_audio": "media/a1/2026-11-11/word-audio/garlic.mp3"
+    },
+    {
+      "word": "divorced",
+      "pos": "adjective",
+      "meaning": "No longer married.",
+      "example": "My friend is divorced and lives alone.",
+      "pronunciation": "dih-VORST",
+      "persian": "مطلقه",
+      "photo": "media/a1/2026-11-10/photos/divorced.jpg",
+      "word_audio": "media/a1/2026-11-10/word-audio/divorced.mp3"
+    },
+    {
+      "word": "family",
+      "pos": "noun",
+      "meaning": "A group of people related to each other.",
+      "example": "I love spending time with my family.",
+      "pronunciation": "FAM-uh-lee",
+      "persian": "خانواده",
+      "photo": "media/a1/2026-11-10/photos/family.jpg",
+      "word_audio": "media/a1/2026-11-10/word-audio/family.mp3"
+    },
+    {
+      "word": "friend",
+      "pos": "noun",
+      "meaning": "a person you know and like.",
+      "example": "She is my best friend.",
+      "pronunciation": "FREND",
+      "persian": "دوست",
+      "photo": "media/a1/2026-11-10/photos/friend.jpg",
+      "word_audio": "media/a1/2026-11-10/word-audio/friend.mp3"
+    },
+    {
+      "word": "board",
+      "pos": "noun",
+      "meaning": "A flat piece of wood or plastic.",
+      "example": "We write on the board in class.",
+      "pronunciation": "BORD",
+      "persian": "تخته",
+      "photo": "media/a1/2026-11-09/photos/board.jpg",
+      "word_audio": "media/a1/2026-11-09/word-audio/board.mp3"
+    },
+    {
+      "word": "hamburger",
+      "pos": "noun",
+      "meaning": "A flat round piece of minced meat, often in a bun.",
+      "example": "I want a hamburger and fries.",
+      "pronunciation": "HAM-bur-gur",
+      "persian": "همبرگر",
+      "photo": "media/a1/2026-11-11/photos/hamburger.jpg",
+      "word_audio": "media/a1/2026-11-11/word-audio/hamburger.mp3"
+    },
+    {
+      "word": "hot",
+      "pos": "adjective",
+      "meaning": "Feeling warm or having a high temperature.",
+      "example": "I feel hot today.",
+      "pronunciation": "HOT",
+      "persian": "گرم، داغ",
+      "photo": "media/a1/2026-11-11/photos/hot.jpg",
+      "word_audio": "media/a1/2026-11-11/word-audio/hot.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-12/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day",
+    "audio": "media/a1/2026-11-12/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a1/2026-11-12/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Day with My Family and My Friend",
+    "audio": "media/a1/2026-11-12/shadowing.mp3",
+    "transcript": "media/a1/2026-11-12/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-12/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/010.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/011.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/012.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/013.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/014.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/015.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/016.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/017.mp3",
+      "media/a1/2026-11-12/shadowing-sentences/018.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'grape(s)' mean?",
+      "options": [
+        "Weighing a lot; difficult to lift.",
+        "A flat piece of wood or plastic.",
+        "a small, round, sweet fruit.",
+        "Where are you from?"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'Do you come from …?' mean?",
+      "options": [
+        "Weighing a lot; difficult to lift.",
+        "Where are you from?",
+        "A group of people related to each other.",
+        "A flat round piece of minced meat, often in a bun."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'heavy' mean?",
+      "options": [
+        "A group of people related to each other.",
+        "Weighing a lot; difficult to lift.",
+        "A flat piece of wood or plastic.",
+        "a plant with a strong smell, used in cooking."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'garlic' mean?",
+      "options": [
+        "a plant with a strong smell, used in cooking.",
+        "a person you know and like.",
+        "A group of people related to each other.",
+        "A flat piece of wood or plastic."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'divorced' mean?",
+      "options": [
+        "a person you know and like.",
+        "No longer married.",
+        "A flat piece of wood or plastic.",
+        "A group of people related to each other."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'family' mean?",
+      "options": [
+        "No longer married.",
+        "a small, round, sweet fruit.",
+        "A group of people related to each other.",
+        "a person you know and like."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'friend' mean?",
+      "options": [
+        "A group of people related to each other.",
+        "No longer married.",
+        "Where are you from?",
+        "a person you know and like."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'board' mean?",
+      "options": [
+        "a plant with a strong smell, used in cooking.",
+        "A flat piece of wood or plastic.",
+        "a person you know and like.",
+        "a small, round, sweet fruit."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'hamburger' mean?",
+      "options": [
+        "No longer married.",
+        "A flat round piece of minced meat, often in a bun.",
+        "A group of people related to each other.",
+        "Where are you from?"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'hot' mean?",
+      "options": [
+        "No longer married.",
+        "A flat round piece of minced meat, often in a bun.",
+        "Feeling warm or having a high temperature.",
+        "a plant with a strong smell, used in cooking."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Present Continuous (and Present Simple vs Continuous)",
+    "explanation": "We use the **present continuous** for actions happening **now** or **around now**. My friend **is eating** grapes now, and my family **is cooking** with garlic this week.\n\nForm it with **am / is / are + verb-ing**. Use **am** with I, **is** with he, she, and it, and **are** with you, we, and they.\n\nFor a negative sentence, use **isn't** or **aren't** before the verb-ing. For example, she **isn't working** today.\n\nFor a question, put **Am / Is / Are** first. For example, **Are** you **listening** to your friend?\n\nFor spelling, most verbs just add **-ing**. Verbs ending in **-e** drop the e, like make → making, and short verbs like run double the last letter, like run → running.\n\nUse the **present simple** for habits and facts, not for now. My family **eats** a hamburger every Friday, but today we **are eating** grapes.\n\nSome verbs are states, not actions, so we do not use them in the continuous. Say I **know** the answer and I **want** a hamburger, not I am knowing or I am wanting.",
+    "examples": [
+      "*I**'m cooking** dinner right now.* (now)",
+      "*She **isn't working** today.* (negative)",
+      "***Are** you **listening** to me?* (question)",
+      "*The children **are playing** in the garden.* (plural: are)",
+      "*What **are** you **doing**?* (wh- question)",
+      "*It**'s snowing**! Let's go outside.* (happening now)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite: I cook garlic now. Use the present continuous.",
+        "a": "I am cooking garlic now."
+      },
+      {
+        "q": "Rewrite: She eats a hamburger now. Use the present continuous.",
+        "a": "She is eating a hamburger now."
+      },
+      {
+        "q": "Make a question: You are listening to your friend.",
+        "a": "Are you listening to your friend?"
+      },
+      {
+        "q": "Fix the mistake: He is knowing the answer.",
+        "a": "He knows the answer."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Be quiet! The baby ___.",
+        "options": [
+          "sleeps",
+          "is sleeping",
+          "sleep",
+          "is sleep"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ dinner at the moment.",
+        "options": [
+          "cook",
+          "cooks",
+          "cooking",
+          "am cooking"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "They ___ TV right now.",
+        "options": [
+          "aren't watching",
+          "don't watching",
+          "isn't watching",
+          "not watching"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ she working today?",
+        "options": [
+          "Does",
+          "Do",
+          "Are",
+          "Is"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What ___ you doing?",
+        "options": [
+          "is",
+          "do",
+          "are",
+          "does"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "He's ___ in the sea.",
+        "options": [
+          "swiming",
+          "swim",
+          "swimming",
+          "swimeing"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She's ___ a letter to her grandmother.",
+        "options": [
+          "writing",
+          "writeing",
+          "writting",
+          "writes"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Look! It ___.",
+        "options": [
+          "snows",
+          "snowing",
+          "snow",
+          "is snowing"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I ___ the answer.",
+        "options": [
+          "am knowing",
+          "know",
+          "knowing",
+          "am know"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My sister usually ___ to school, but today she's taking the bus.",
+        "options": [
+          "walks",
+          "is walking",
+          "walk",
+          "walking"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a1/2026-11-12/grammar-en.mp3"
+  }
+}

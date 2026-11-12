@@ -1,0 +1,387 @@
+{
+  "date": "2026-11-12",
+  "theme": "review day",
+  "level": "a2",
+  "cefr": "A2",
+  "review": true,
+  "review_of": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11"
+  ],
+  "review_window_words": 15,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "a week/month/year (etc.) [every]",
+      "pos": "adverbial phrase",
+      "meaning": "happening each week, month, or year",
+      "example": "I get paid once a month.",
+      "pronunciation": "uh WEEK MUNTH YEER",
+      "persian": "هر هفته/ماه/سال",
+      "photo": "media/a2/2026-11-09/photos/a-week-month-year.jpg",
+      "word_audio": "media/a2/2026-11-09/word-audio/a-week-month-year.mp3"
+    },
+    {
+      "word": "accept",
+      "pos": "verb",
+      "meaning": "to agree to take something or agree with an idea",
+      "example": "I accept your apology.",
+      "pronunciation": "ak-SEPT",
+      "persian": "پذیرفتن، قبول کردن",
+      "photo": "media/a2/2026-11-10/photos/accept.jpg",
+      "word_audio": "media/a2/2026-11-10/word-audio/accept.mp3"
+    },
+    {
+      "word": "accurate(ly)",
+      "pos": "adjective/adverb",
+      "meaning": "correct or exact, without mistakes",
+      "example": "Please try to write accurately.",
+      "pronunciation": "AK-yuh-rut-lee",
+      "persian": "دقیق، صحیح",
+      "photo": "media/a2/2026-11-10/photos/accurate.jpg",
+      "word_audio": "media/a2/2026-11-10/word-audio/accurate.mp3"
+    },
+    {
+      "word": "adjective",
+      "pos": "noun",
+      "meaning": "A word that describes a noun.",
+      "example": "\"Happy\" is an adjective.",
+      "pronunciation": "AJ-ik-tiv",
+      "persian": "صفت",
+      "photo": "media/a2/2026-11-10/photos/adjective.jpg",
+      "word_audio": "media/a2/2026-11-10/word-audio/adjective.mp3"
+    },
+    {
+      "word": "accent",
+      "pos": "noun",
+      "meaning": "way of speaking that shows where you are from",
+      "example": "She has a beautiful French accent.",
+      "pronunciation": "AK-sent",
+      "persian": "لهجه",
+      "photo": "media/a2/2026-11-10/photos/accent.jpg",
+      "word_audio": "media/a2/2026-11-10/word-audio/accent.mp3"
+    },
+    {
+      "word": "book a seat",
+      "pos": "phrase",
+      "meaning": "Reserve a place to sit.",
+      "example": "I need to book a seat on the train.",
+      "pronunciation": "book uh SEET",
+      "persian": "صندلی رزرو کردن",
+      "photo": "media/a2/2026-11-11/photos/book-a-seat.jpg",
+      "word_audio": "media/a2/2026-11-11/word-audio/book-a-seat.mp3"
+    },
+    {
+      "word": "a great deal",
+      "pos": "phrase",
+      "meaning": "a lot, a large amount",
+      "example": "We learned a great deal from the project.",
+      "pronunciation": "uh GRAYT DEEL",
+      "persian": "مقدار زیادی، خیلی",
+      "photo": "media/a2/2026-11-09/photos/a-great-deal.jpg",
+      "word_audio": "media/a2/2026-11-09/word-audio/a-great-deal.mp3"
+    },
+    {
+      "word": "boat",
+      "pos": "noun",
+      "meaning": "A small vehicle that travels on water.",
+      "example": "We took a small boat on the lake.",
+      "pronunciation": "BOTE",
+      "persian": "قایق",
+      "photo": "media/a2/2026-11-11/photos/boat.jpg",
+      "word_audio": "media/a2/2026-11-11/word-audio/boat.mp3"
+    },
+    {
+      "word": "active",
+      "pos": "adjective",
+      "meaning": "always doing things, not sitting still",
+      "example": "My dog is very active and loves to run.",
+      "pronunciation": "AK-tiv",
+      "persian": "فعال، پرتحرک",
+      "photo": "media/a2/2026-11-10/photos/active.jpg",
+      "word_audio": "media/a2/2026-11-10/word-audio/active.mp3"
+    },
+    {
+      "word": "board",
+      "pos": "verb",
+      "meaning": "Get on a ship, train, or plane.",
+      "example": "We need to board the plane soon.",
+      "pronunciation": "BORD",
+      "persian": "سوار شدن",
+      "photo": "media/a2/2026-11-11/photos/board.jpg",
+      "word_audio": "media/a2/2026-11-11/word-audio/board.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-12/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day",
+    "audio": "media/a2/2026-11-12/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-12/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Active Boat Trip",
+    "audio": "media/a2/2026-11-12/shadowing.mp3",
+    "transcript": "media/a2/2026-11-12/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-12/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/015.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/016.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/017.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/018.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/019.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/020.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/021.mp3",
+      "media/a2/2026-11-12/shadowing-sentences/022.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'a week/month/year (etc.) [every]' mean?",
+      "options": [
+        "happening each week, month, or year",
+        "Reserve a place to sit.",
+        "A word that describes a noun.",
+        "always doing things, not sitting still"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'accept' mean?",
+      "options": [
+        "A small vehicle that travels on water.",
+        "a lot, a large amount",
+        "to agree to take something or agree with an idea",
+        "Reserve a place to sit."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'accurate(ly)' mean?",
+      "options": [
+        "way of speaking that shows where you are from",
+        "A word that describes a noun.",
+        "happening each week, month, or year",
+        "correct or exact, without mistakes"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'adjective' mean?",
+      "options": [
+        "way of speaking that shows where you are from",
+        "always doing things, not sitting still",
+        "A word that describes a noun.",
+        "to agree to take something or agree with an idea"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'accent' mean?",
+      "options": [
+        "A small vehicle that travels on water.",
+        "way of speaking that shows where you are from",
+        "happening each week, month, or year",
+        "a lot, a large amount"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'book a seat' mean?",
+      "options": [
+        "way of speaking that shows where you are from",
+        "Reserve a place to sit.",
+        "always doing things, not sitting still",
+        "A small vehicle that travels on water."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'a great deal' mean?",
+      "options": [
+        "a lot, a large amount",
+        "way of speaking that shows where you are from",
+        "Get on a ship, train, or plane.",
+        "always doing things, not sitting still"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'boat' mean?",
+      "options": [
+        "happening each week, month, or year",
+        "way of speaking that shows where you are from",
+        "A small vehicle that travels on water.",
+        "Get on a ship, train, or plane."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'active' mean?",
+      "options": [
+        "always doing things, not sitting still",
+        "Get on a ship, train, or plane.",
+        "Reserve a place to sit.",
+        "A word that describes a noun."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'board' mean?",
+      "options": [
+        "a lot, a large amount",
+        "Get on a ship, train, or plane.",
+        "correct or exact, without mistakes",
+        "Reserve a place to sit."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Like, Love, Hate + -ing",
+    "explanation": "To talk about activities we like or do not like, we use **like**, **love**, **hate**, **enjoy**, **don't mind** and **can't stand**.\n\nAfter these verbs, the next verb ends with **-ing**. For example, an **active** student can say, I **love travelling** by **boat**.\n\n**Love** is the strongest positive word. **Like** and **enjoy** are positive, **don't mind** means it is OK, and **hate** and **can't stand** are strongly negative.\n\nAfter **like**, **love** and **hate** you can also use **to** + verb. After **enjoy**, **don't mind** and **can't stand**, use only **-ing**.\n\nWatch the spelling. Most verbs just add **-ing**, verbs ending in -e drop the e, and short verbs like swim double the last letter: **swimming**.\n\nFor questions, use **do** or **does**: **Do** you like cooking? For an offer now, use **Would you like...?**, not Do you like.",
+    "examples": [
+      "*I **love travelling** with my friends.*",
+      "*My sister **enjoys playing** the piano.*",
+      "*He **doesn't like cooking**.*",
+      "*I **don't mind walking**. It's not far.*",
+      "*We **hate waiting** for the bus in the rain.*",
+      "*She **can't stand** watching horror films.*"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with love + -ing: I travel by boat once a week.",
+        "a": "I love travelling by boat once a week."
+      },
+      {
+        "q": "Rewrite with enjoy + -ing: She reads a book on the boat.",
+        "a": "She enjoys reading a book on the boat."
+      },
+      {
+        "q": "Rewrite with hate + -ing: We wait to board the plane.",
+        "a": "We hate waiting to board the plane."
+      },
+      {
+        "q": "Rewrite with don't mind + -ing: It is OK for me to write each adjective accurately.",
+        "a": "I don't mind writing each adjective accurately."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I love ___ in the sea.",
+        "options": [
+          "swimming",
+          "swim",
+          "swims",
+          "swiming"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "She enjoys ___ books.",
+        "options": [
+          "read",
+          "reads",
+          "reading",
+          "to reading"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My brother hates ___ up early.",
+        "options": [
+          "get",
+          "getting",
+          "gets",
+          "geting"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Do you like ___? – Yes, I go to salsa classes.",
+        "options": [
+          "danceing",
+          "dancs",
+          "danced",
+          "dancing"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I don't mind ___ the dishes.",
+        "options": [
+          "do",
+          "does",
+          "did",
+          "doing"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What ___ doing at the weekend?",
+        "options": [
+          "you like",
+          "do you like",
+          "are you like",
+          "does you like"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Tom ___ playing football. He plays every day.",
+        "options": [
+          "like",
+          "is like",
+          "likes",
+          "liking"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I can't stand ___ in traffic.",
+        "options": [
+          "sitting",
+          "sit",
+          "sits",
+          "to sitting"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "My parents ___ watching horror films. They think they're boring.",
+        "options": [
+          "likes",
+          "don't like",
+          "doesn't like",
+          "not like"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She doesn't like ___. She always eats in restaurants.",
+        "options": [
+          "cook",
+          "cooks",
+          "cooked",
+          "cooking"
+        ],
+        "answer": 3
+      }
+    ],
+    "audio": "media/a2/2026-11-12/grammar-en.mp3"
+  }
+}

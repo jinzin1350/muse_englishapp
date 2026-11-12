@@ -1,0 +1,392 @@
+{
+  "date": "2026-11-12",
+  "theme": "review day",
+  "level": "b1",
+  "cefr": "B1",
+  "review": true,
+  "review_of": [
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "ill",
+      "pos": "adjective",
+      "meaning": "Not feeling well, sick.",
+      "example": "She felt ill and went home from school.",
+      "pronunciation": "IL",
+      "persian": "بیمار، ناخوش",
+      "photo": "media/b1/2026-11-09/photos/ill.jpg",
+      "word_audio": "media/b1/2026-11-09/word-audio/ill.mp3"
+    },
+    {
+      "word": "obesity",
+      "pos": "noun",
+      "meaning": "The state of being very fat and unhealthy.",
+      "example": "Obesity is a serious health problem.",
+      "pronunciation": "uh-BEE-suh-tee",
+      "persian": "چاقی مفرط",
+      "photo": "media/b1/2026-11-09/photos/obesity.jpg",
+      "word_audio": "media/b1/2026-11-09/word-audio/obesity.mp3"
+    },
+    {
+      "word": "add to basket/bag",
+      "pos": "phrase",
+      "meaning": "To select an item for purchase online.",
+      "example": "I will add this book to my basket.",
+      "pronunciation": "ad too BAS-kit bag",
+      "persian": "اضافه کردن به سبد خرید",
+      "photo": "media/b1/2026-11-10/photos/add-to-basket-bag.jpg",
+      "word_audio": "media/b1/2026-11-10/word-audio/add-to-basket-bag.mp3"
+    },
+    {
+      "word": "type v",
+      "pos": "verb",
+      "meaning": "To write using a keyboard.",
+      "example": "She can type very fast.",
+      "pronunciation": "TYPE",
+      "persian": "تایپ کردن",
+      "photo": "media/b1/2026-11-11/photos/type-v.jpg",
+      "word_audio": "media/b1/2026-11-11/word-audio/type-v.mp3"
+    },
+    {
+      "word": "browser",
+      "pos": "noun",
+      "meaning": "software to view websites",
+      "example": "Which internet browser do you use?",
+      "pronunciation": "BROW-zuh",
+      "persian": "مرورگر",
+      "photo": "media/b1/2026-11-10/photos/browser.jpg",
+      "word_audio": "media/b1/2026-11-10/word-audio/browser.mp3"
+    },
+    {
+      "word": "scientist",
+      "pos": "noun",
+      "meaning": "A person who studies science.",
+      "example": "Scientists are trying to find a cure.",
+      "pronunciation": "SY-un-tist",
+      "persian": "دانشمند",
+      "photo": "media/b1/2026-11-11/photos/scientist.jpg",
+      "word_audio": "media/b1/2026-11-11/word-audio/scientist.mp3"
+    },
+    {
+      "word": "painful",
+      "pos": "adjective",
+      "meaning": "Causing physical or emotional pain.",
+      "example": "My knee is very painful after the fall.",
+      "pronunciation": "PAYN-ful",
+      "persian": "دردناک",
+      "photo": "media/b1/2026-11-09/photos/painful.jpg",
+      "word_audio": "media/b1/2026-11-09/word-audio/painful.mp3"
+    },
+    {
+      "word": "back up sth",
+      "pos": "phrasal verb",
+      "meaning": "To make a copy of computer data.",
+      "example": "Always back up your important files.",
+      "pronunciation": "BAK UP",
+      "persian": "پشتیبان گرفتن (از اطلاعات)",
+      "photo": "media/b1/2026-11-10/photos/back-up-sth.jpg",
+      "word_audio": "media/b1/2026-11-10/word-audio/back-up-sth.mp3"
+    },
+    {
+      "word": "soldier",
+      "pos": "noun",
+      "meaning": "A person who works in the army.",
+      "example": "My brother is a brave soldier.",
+      "pronunciation": "SOHL-juh",
+      "persian": "سرباز",
+      "photo": "media/b1/2026-11-11/photos/soldier.jpg",
+      "word_audio": "media/b1/2026-11-11/word-audio/soldier.mp3"
+    },
+    {
+      "word": "reduce",
+      "pos": "verb",
+      "meaning": "To make something smaller or less.",
+      "example": "We need to reduce our waste.",
+      "pronunciation": "ri-DYOOS",
+      "persian": "کاهش دادن",
+      "photo": "media/b1/2026-11-09/photos/reduce.jpg",
+      "word_audio": "media/b1/2026-11-09/word-audio/reduce.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-11-12/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day",
+    "audio": "media/b1/2026-11-12/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-11-12/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Scientist and the Soldier",
+    "audio": "media/b1/2026-11-12/shadowing.mp3",
+    "transcript": "media/b1/2026-11-12/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b1/2026-11-12/shadowing-sentences/001.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/002.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/003.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/004.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/005.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/006.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/007.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/008.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/009.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/010.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/011.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/012.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/013.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/014.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/015.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/016.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/017.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/018.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/019.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/020.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/021.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/022.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/023.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/024.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/025.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/026.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/027.mp3",
+      "media/b1/2026-11-12/shadowing-sentences/028.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'ill' mean?",
+      "options": [
+        "To make something smaller or less.",
+        "A person who works in the army.",
+        "A person who studies science.",
+        "Not feeling well, sick."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'obesity' mean?",
+      "options": [
+        "To select an item for purchase online.",
+        "To write using a keyboard.",
+        "The state of being very fat and unhealthy.",
+        "Causing physical or emotional pain."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'add to basket/bag' mean?",
+      "options": [
+        "To select an item for purchase online.",
+        "The state of being very fat and unhealthy.",
+        "software to view websites",
+        "Causing physical or emotional pain."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'type v' mean?",
+      "options": [
+        "To write using a keyboard.",
+        "The state of being very fat and unhealthy.",
+        "software to view websites",
+        "A person who works in the army."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'browser' mean?",
+      "options": [
+        "To write using a keyboard.",
+        "A person who works in the army.",
+        "software to view websites",
+        "To make a copy of computer data."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'scientist' mean?",
+      "options": [
+        "To select an item for purchase online.",
+        "To write using a keyboard.",
+        "A person who studies science.",
+        "To make a copy of computer data."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'painful' mean?",
+      "options": [
+        "Causing physical or emotional pain.",
+        "To make something smaller or less.",
+        "A person who studies science.",
+        "Not feeling well, sick."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'back up sth' mean?",
+      "options": [
+        "Not feeling well, sick.",
+        "To make something smaller or less.",
+        "The state of being very fat and unhealthy.",
+        "To make a copy of computer data."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'soldier' mean?",
+      "options": [
+        "A person who works in the army.",
+        "To make something smaller or less.",
+        "software to view websites",
+        "A person who studies science."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'reduce' mean?",
+      "options": [
+        "A person who works in the army.",
+        "To make something smaller or less.",
+        "The state of being very fat and unhealthy.",
+        "To select an item for purchase online."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Present Perfect with For, Since, Just, Yet, Already",
+    "explanation": "We use the **present perfect** (**have/has** + past participle) with **for** and **since** to say how long something has continued until now.\n\nUse **for** with a period of time, like **for** ten minutes or **for** two weeks. Use **since** with the starting point, like **since** Monday or **since** 2015.\n\nAsk about time with **How long...?** For example, the scientist in today's story has worked in her city **for** three years, **since** 2023.\n\nWe use **just** for a very short time ago. It goes between **have/has** and the past participle: *She **has just** left.*\n\n**Already** means sooner than expected. Say *I **have already** finished*, not with **yet**.\n\n**Yet** goes at the end of questions and negative sentences: *Have you finished **yet**?* and *I have not finished **yet**.*\n\nIf you feel ill, you can say *I **have been** ill **since** Monday.* If the situation has finished, use the past simple instead.",
+    "examples": [
+      "*I **'ve known** Maria **for** five years.* (for + a period)",
+      "*I **'ve known** Maria **since** 2021.* (since + the starting point)",
+      "*He **'s worked** here **since** he left university.* (since + a past clause)",
+      "*We **'ve been** friends **for** twenty years.* (for + a period)",
+      "*I **'ve had** this phone **since** January.* (since + a starting point)",
+      "*The film **has just** started.* (just: very recent)"
+    ],
+    "practice": [
+      {
+        "q": "Complete with since: I have known the soldier ___ 2020.",
+        "a": "I have known the soldier since 2020."
+      },
+      {
+        "q": "Complete with for: She has worked as a scientist ___ ten years.",
+        "a": "She has worked as a scientist for ten years."
+      },
+      {
+        "q": "Make a question: you / finish / yet?",
+        "a": "Have you finished yet?"
+      },
+      {
+        "q": "Rewrite with just: The browser closed a very short time ago.",
+        "a": "The browser has just closed."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I've known Sarah ___ ten years.",
+        "options": [
+          "since",
+          "for",
+          "from",
+          "during"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We've lived in this flat ___ 2020.",
+        "options": [
+          "for",
+          "from",
+          "since",
+          "in"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "How long ___ you had your car?",
+        "options": [
+          "do",
+          "did",
+          "are",
+          "have"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She ___ here since she was 18.",
+        "options": [
+          "has worked",
+          "works",
+          "is working",
+          "worked"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I've ___ had lunch, so I'm not hungry.",
+        "options": [
+          "yet",
+          "since",
+          "just",
+          "still"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Have you finished your homework ___?",
+        "options": [
+          "yet",
+          "just",
+          "since",
+          "for"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "They haven't arrived ___.",
+        "options": [
+          "already",
+          "just",
+          "since",
+          "yet"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I ___ seen this film. Let's watch something else.",
+        "options": [
+          "'m already",
+          "'ve already",
+          "'ve yet",
+          "have since"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He ___ to Paris. He'll be back next week.",
+        "options": [
+          "has been",
+          "has go",
+          "is been",
+          "has gone"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I haven't seen my cousins ___ ages.",
+        "options": [
+          "for",
+          "since",
+          "from",
+          "ago"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}
