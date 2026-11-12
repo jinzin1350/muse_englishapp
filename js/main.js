@@ -379,12 +379,12 @@ function showSoftPushPrompt() {
       '<h2>یادآوری مرور لغت‌ها</h2>' +
       '<p class="muted">کلمه‌ت ذخیره شد و از فردا برای مرور برمی‌گرده. می‌خوای وقتی لغت‌هات موقع مرورشون شد، با یه اعلان کوتاه خبرت کنیم؟</p>' +
       '<button class="btn btn-orange btn-block" id="soft-push-yes" style="padding:0.95rem 1rem;font-size:1.05rem;border-radius:14px;margin-top:0.8rem">آره، فعال کن</button>' +
-      '<button class="btn btn-block" id="soft-push-no" style="margin-top:0.5rem">فعلاً نه</button></div>'
+      '<button class="btn btn-block" id="soft-push-no" style="background:#FFF8EE;border:1.5px solid #EBD5B8;color:#8C5A28;font-weight:700;padding:0.9rem 1rem;font-size:1rem;border-radius:14px;margin-top:0.6rem;box-shadow:0 2px 8px rgba(160,110,40,.10);cursor:pointer">فعلاً نه</button></div>'
     : '<div class="modal-ico">\uD83D\uDD14</div>' +
       '<h2>Word review reminders</h2>' +
       '<p class="muted">Your word is saved and comes back for review starting tomorrow. Want a short notification when your saved words are due, so they really stick?</p>' +
       '<button class="btn btn-orange btn-block" id="soft-push-yes" style="padding:0.95rem 1rem;font-size:1.05rem;border-radius:14px;margin-top:0.8rem">Yes, turn it on</button>' +
-      '<button class="btn btn-block" id="soft-push-no" style="margin-top:0.5rem">Not now</button>';
+      '<button class="btn btn-block" id="soft-push-no" style="background:#FFF8EE;border:1.5px solid #EBD5B8;color:#8C5A28;font-weight:700;padding:0.9rem 1rem;font-size:1rem;border-radius:14px;margin-top:0.6rem;box-shadow:0 2px 8px rgba(160,110,40,.10);cursor:pointer">Not now</button>';
   const ov = showModal(html);
   ov.querySelector('#soft-push-yes').addEventListener('click', function () { closeModal(); promptPush(null); });
   ov.querySelector('#soft-push-no').addEventListener('click', function () { closeModal(); });
@@ -15942,7 +15942,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611121732';
+var APP_VERSION = '202611121741';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
