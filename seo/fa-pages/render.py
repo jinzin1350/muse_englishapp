@@ -186,8 +186,8 @@ def page(p, css_v):
     nav = "".join('<a href="%s"%s>%s</a>' % (h, ' aria-current="page"' if h == path else "", l) for h, l in HEAD_NAV)
     hreflang = ""
     if home:
-        hreflang = ('<link rel="alternate" hreflang="en" href="%s/en/">\n<link rel="alternate" hreflang="fa" href="%s/fa/">\n'
-                    '<link rel="alternate" hreflang="x-default" href="%s/">\n') % (SITE, SITE, SITE)
+        hreflang = ('<link rel="alternate" hreflang="fa" href="%s/fa/">\n'
+                    '<link rel="alternate" hreflang="x-default" href="%s/">\n') % (SITE, SITE)
     crumbs = [{"@type": "ListItem", "position": 1, "name": CRUMB["/fa/"], "item": SITE + "/fa/"}]
     if not home:
         crumbs.append({"@type": "ListItem", "position": 2, "name": CRUMB[path], "item": url})
@@ -243,7 +243,7 @@ def page(p, css_v):
             '<div class="lfoot-col"><h4>یادگیری</h4><ul><li><a href="/blog/">درس‌های روزانه</a></li><li><a href="/blog/vocabulary/">لغت‌ها بر اساس موضوع</a></li><li><a href="/blog/grammar/">راهنماهای گرامر</a></li></ul></div>'
             '<div class="lfoot-col"><h4>سطح‌ها</h4><ul>%s</ul></div>'
             '<div class="lfoot-col"><h4>صفحه‌های فارسی</h4><ul>%s</ul></div>'
-            '<div class="lfoot-col"><h4><bdi>Muse English</bdi></h4><ul><li><a href="/en/" lang="en" hreflang="en" data-home-lang="en"><bdi>English</bdi></a></li>'
+            '<div class="lfoot-col"><h4><bdi>Muse English</bdi></h4><ul>'
             '<li><a href="/about/">دربارهٔ ما</a></li><li><a href="/#/signin">ورود</a></li><li><a href="/#/signup">ثبت‌نام رایگان</a></li></ul></div>'
             '</div><div class="lfoot-base">© ۲۰۲۶ <bdi>Muse English</bdi></div></footer>') % (
         "".join('<li><a href="%s">%s</a></li>' % (h, inline(l)) for h, l in LEVELS),
@@ -280,7 +280,7 @@ def page(p, css_v):
 <header class="lnav"><div class="lnav-in">
 <a class="lbrand" href="/fa/"><img src="/icons/icon-192.png" alt="" width="34" height="34"><bdi>Muse English</bdi></a>
 <nav class="lnav-links" aria-label="منوی اصلی">{nav}</nav>
-<div class="lfa-acts"><a class="lfa-alink" href="/#/signin">ورود</a><a class="lfa-alink" href="/en/" lang="en" hreflang="en" data-home-lang="en">EN</a><a class="lnav-cta" href="/#/signup">شروع رایگان</a></div>
+<div class="lfa-acts"><a class="lfa-alink" href="/#/signin">ورود</a><a class="lnav-cta" href="/#/signup">شروع رایگان</a></div>
 </div></header>
 <main>
 {hero}

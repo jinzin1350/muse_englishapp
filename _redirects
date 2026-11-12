@@ -49,3 +49,8 @@
 /blog/grammar/modifying-comparatives/  /blog/grammar/comparatives-superlatives/  301
 /blog/grammar/phrasal-verbs-word-order/  /blog/grammar/phrasal-verbs/  301
 /blog/grammar/concession-albeit-much-as/  /blog/grammar/although-despite-in-spite-of/  301
+
+# 2026-11-12 (Claude, approved by Alireza): the English home /en/ was removed; the site is Persian-first.
+/en      /fa/  301
+/en/     /fa/  301
+/en/*    /fa/  301

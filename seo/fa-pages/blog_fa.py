@@ -1101,7 +1101,24 @@ def main():
     if UNKNOWN:
         print("blog_fa: no Persian label yet (left in English) — tell Claude:\n  " + "\n  ".join(sorted(UNKNOWN)))
 
-EXTRA_STEPS = [vocab_step, grammar_step, about_step]
+def no_en_step():
+    """/en/ was removed on 2026-11-12 (it 301s to /fa/). The sitemap generator in the daily job
+    still lists it, so drop it from every sitemap here, and remove en/ if something rebuilt it."""
+    n = 0
+    for f in sorted(os.listdir(REPO)):
+        if f.startswith("sitemap") and f.endswith(".xml"):
+            p = os.path.join(REPO, f)
+            t = open(p, encoding="utf-8").read()
+            u = re.sub(r"[ \t]*<url>\s*<loc>https://museenglishapp\.com/en/?</loc>.*?</url>\s*?\n", "", t, flags=re.S)
+            if u != t: write(p, u); n += 1
+    p = os.path.join(REPO, "en", "index.html")
+    if os.path.exists(p):
+        os.remove(p); n += 1
+        try: os.rmdir(os.path.dirname(p))
+        except OSError: pass
+    return n
+
+EXTRA_STEPS = [vocab_step, grammar_step, about_step, no_en_step]
 
 if __name__ == "__main__":
     main()

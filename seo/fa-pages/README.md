@@ -1,16 +1,16 @@
-# Persian pages (/fa/) and the English home (/en/)
+# Persian pages (/fa/)
 
 - `content.py`: the Persian page text. Written by Claude for Alireza. Do not edit the wording; ask Alireza/Claude.
 - `render.py`: renders `content.py` into `fa/**/index.html` using the English landing's design system
   (it generates `fa/assets/fa-site.css` from the landing CSS in the root `index.html` + an RTL layer).
   Re-run it after the landing CSS changes, so the Persian pages keep matching.
   Run: `python3 seo/fa-pages/render.py .`
-- `make_en.py`: builds `en/index.html` (English home) from the landing block of the root `index.html`.
-  Run after the landing generator changes the root landing: `python3 seo/fa-pages/make_en.py .`
-  (The dated "Today's lessons" + hero card on /en/ also refresh in the browser from `/`.)
+- `/en/` (the English home) was removed on 2026-11-12 and 301s to `/fa/` (`_redirects`). Don't recreate it.
+  `blog_fa.py` drops `/en/` from the sitemaps and deletes `en/` if something rebuilds it.
+- NOTE: the live `fa/**/index.html` have the GTM snippet and the mobile hamburger menu, which `render.py` does
+  not produce yet. Don't run `render.py` until it is synced, or those two are lost.
 
-Home routing (index.html head script, "PERSIAN HOME"): a bare `/` with no app signal opens `/fa/`,
-or `/en/` if the visitor chose English (`localStorage.muse_home_lang`). Sitemap: `sitemap-fa.xml` (in robots.txt).
+Home routing (index.html head script, "PERSIAN HOME"): a bare `/` with no app signal opens `/fa/`. Sitemap: `sitemap-fa.xml` (in robots.txt).
 
 ## Persian-first blog (`blog_fa.py`, phase 1)
 
