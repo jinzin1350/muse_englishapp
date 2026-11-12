@@ -480,6 +480,10 @@ p { margin: 0 0 0.75em; }
 .word-meaning { font-weight: 600; }
 .word-example { font-style: italic; color: #3A4754; border-left: 3px solid var(--mist); padding-left: 0.7rem; margin: 0.5rem 0; }
 .word-fa { color: var(--muted); }
+.word-example-fa { color: var(--muted); font-size: 14px; margin-top: 2px; }
+.sp-sent-fa { color: var(--muted); font-size: 14px; margin: 4px 0 2px; }
+.lesson-fa-toggle { margin: 0 0 12px; }
+.fa-tr-off .word-example-fa, .fa-tr-off .sp-sent-fa { display: none !important; }
 .speaker-btn {
   border: 1px solid var(--line); background: #fff; border-radius: 999px;
   font-size: 1.1rem; padding: 0.35rem 0.7rem; cursor: pointer; line-height: 1;

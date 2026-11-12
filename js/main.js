@@ -1400,8 +1400,9 @@ function pastLessonDone() {
 function questDefs() {
   const d = todayStr();
   const done = function (action) { return ptsDoneToday(action) ? 1 : 0; };
+  const nSteps = stepsForDate(d).length;
   const pool = [
-    { key: 'lesson', icon: '📝', xp: 30, target: 5, title: 'Complete today\'s lesson',
+    { key: 'lesson', icon: '📝', xp: 30, target: nSteps, title: 'Complete today\'s lesson',
       progress: function () { try { return dayDoneCount(d); } catch (e) { return 0; } },
       unit: 'steps', link: lessonLink() },
     { key: 'xp100', icon: '⚡', xp: 20, target: 100, title: 'Earn 100 XP',
@@ -1429,6 +1430,26 @@ function questDefs() {
       progress: function () { return pastLessonDone() ? 1 : 0; },
       unit: '', link: '#/lessons' }
   ];
+  /* Task 4: on a no-podcast day the podcast quest becomes the shadowing
+     quest (and the pool's own shadowing entry is dropped to avoid a dup). */
+  try {
+    const tm = (state.lessons || []).find(function (x) { return x.date === d; });
+    if (tm && !lessonHasPodcast(tm)) {
+      for (let qi = 0; qi < pool.length; qi++) {
+        if (pool[qi].key === 'podcast') {
+          pool[qi] = { key: 'shadowing', icon: '🎤', xp: 20, target: 1, title: 'Complete shadowing',
+            progress: function () { return done('shadowing_complete'); },
+            unit: '', link: lessonLink('shadowing') };
+        }
+      }
+      let seenShadowing = false;
+      for (let qi = pool.length - 1; qi >= 0; qi--) {
+        if (pool[qi].key === 'shadowing') {
+          if (seenShadowing) pool.splice(qi, 1); else seenShadowing = true;
+        }
+      }
+    }
+  } catch (e) {}
   const anchor = pool[0];
   const rest = pool.slice(1);
   const dayNum = Math.floor(Date.parse(d + 'T12:00:00') / 86400000);
@@ -2050,6 +2071,31 @@ function rowHTML(r, isMe) {
    Tracks which steps of each daily lesson the learner has engaged with.
    Steps: words → quiz (reward!) → bonus: podcast → shadowing → grammar. */
 const STEPS = ['words', 'quiz', 'podcast', 'shadowing', 'grammar'];
+/* Task 4 (2026-11-12): lessons may have no podcast (A1) and may carry Persian
+   help (shadowing.transcript_fa, words[].example_fa). Steps/visibility derive
+   from the manifest so old and new formats both work. */
+function lessonHasPodcast(m) { return !!(m && m.podcast && m.podcast.audio); }
+function stepsForLesson(m) { return lessonHasPodcast(m) ? STEPS : STEPS.filter(function (x) { return x !== 'podcast'; }); }
+function stepsForDate(dateStr) {
+  const m = (state.lessons || []).find(function (x) { return x.date === dateStr; });
+  return m ? stepsForLesson(m) : STEPS;
+}
+function lessonHasFaTr(m) {
+  if (!m) return false;
+  if (m.shadowing && m.shadowing.transcript_fa) return true;
+  return (m.words || []).some(function (w) { return !!w.example_fa; });
+}
+function faTrVisible(m) {
+  const lvl = normalizeLevel(m && m.level);
+  if (lvl === 'a1' || lvl === 'a2') return true;
+  if (lvl === 'b1') return !!state.lessonFaShow;
+  return false;
+}
+function faToggleBtn(m) {
+  if (normalizeLevel(m && m.level) !== 'b1' || !lessonHasFaTr(m)) return '';
+  return '<button class="btn btn-ghost btn-sm lesson-fa-toggle" data-action="toggle-lesson-fa">' +
+    (state.lessonFaShow ? 'Hide Persian translation' : 'Show Persian translation') + '</button>';
+}
 const STEP_LABELS = { words: 'Words', podcast: 'Podcast', shadowing: 'Shadowing', grammar: 'Grammar', quiz: 'Quiz' };
 function progressKey() {
   return 'ela_progress_' + (state.user ? state.user.email : 'anon');
@@ -2096,12 +2142,13 @@ function markStep(dateStr, step, extra) {
 }
 function dayDoneCount(dateStr) {
   const d = getDayProgress(dateStr);
-  return STEPS.filter(function (s) { return !!d[s]; }).length;
+  return stepsForDate(dateStr).filter(function (s) { return !!d[s]; }).length;
 }
 function nextStep(dateStr) {
   const d = getDayProgress(dateStr);
-  for (let i = 0; i < STEPS.length; i++) {
-    if (!d[STEPS[i]]) return STEPS[i];
+  const steps = stepsForDate(dateStr);
+  for (let i = 0; i < steps.length; i++) {
+    if (!d[steps[i]]) return steps[i];
   }
   return null;
 }
@@ -8018,11 +8065,11 @@ async function checkLevel() {
 function todayCardHTML(m) {
   const p = getDayProgress(m.date);
   const done = dayDoneCount(m.date);
-  const pct = Math.round((done / STEPS.length) * 100);
+  const pct = Math.round((done / stepsForLesson(m).length) * 100);
   const ns = nextStep(m.date);
   const isToday = m.date === todayStr();
 
-  const stepsHTML = STEPS.map(function (s, i) {
+  const stepsHTML = stepsForLesson(m).map(function (s, i) {
     const isDone = !!p[s];
     const isNext = !isDone && s === ns;
     const cls = isDone ? 'done' : (isNext ? 'next' : 'todo');
@@ -8060,7 +8107,7 @@ function todayCardHTML(m) {
     '</div>' +
     '<ul class="today-steps" aria-label="Lesson steps">' + stepsHTML + '</ul>' +
     '<div class="today-progress">' +
-      '<div class="tp-label"><span>Daily progress</span><span>' + done + ' of ' + STEPS.length + ' steps</span></div>' +
+      '<div class="tp-label"><span>Daily progress</span><span>' + done + ' of ' + stepsForLesson(m).length + ' steps</span></div>' +
       '<div class="progress" role="progressbar" aria-valuenow="' + pct + '" aria-valuemin="0" aria-valuemax="100" aria-label="Daily progress"><div style="width:' + pct + '%"></div></div>' +
     '</div>' +
     '<button class="btn btn-block" data-action="today-cta" data-date="' + esc(m.date) + '" data-tab="' + tabFor + '">' + esc(cta) + '</button>' +
@@ -8114,11 +8161,11 @@ function streakBannerHTML(st, dates) {
 function lessonBannerHTML(m) {
   const p = getDayProgress(m.date);
   const done = dayDoneCount(m.date);
-  const total = HOME_STEP_ORDER.length;
+  const total = HOME_STEP_ORDER.filter(function (x) { return stepsForLesson(m).indexOf(x) >= 0; }).length;
   const pct = Math.round((done / total) * 100);
   const ns = nextStep(m.date);
 
-  const rows = HOME_STEP_ORDER.map(function (s, i) {
+  const rows = HOME_STEP_ORDER.filter(function (x) { return stepsForLesson(m).indexOf(x) >= 0; }).map(function (s, i) {
     const isDone = !!p[s];
     const isNext = !isDone && s === ns;
     const st = HOME_STEP_STYLE[s];
@@ -8195,7 +8242,7 @@ function prevLessonsHTML(lessons) {
     html += '<div class="prev-strip">' + older.map(function (m) {
       const cover = lessonCover(m);
       const done = dayDoneCount(m.date);
-      const pct = Math.round((done / STEPS.length) * 100);
+      const pct = Math.round((done / stepsForLesson(m).length) * 100);
       return '<button class="prev-card v2" data-action="open-lesson" data-date="' + esc(m.date) + '" aria-label="Open lesson ' + esc(m.theme || m.date) + '">' +
         '<span class="pcv-photo">' +
           (cover
@@ -8206,7 +8253,7 @@ function prevLessonsHTML(lessons) {
         '<span class="pcv-body">' +
           '<span class="pcv-theme">' + esc(m.theme || 'Lesson') + (m.review ? ' 🔁' : '') + '</span>' +
           '<span class="pcv-row">' +
-            '<span class="pcv-bar" role="progressbar" aria-label="Lesson progress" aria-valuenow="' + done + '" aria-valuemin="0" aria-valuemax="' + STEPS.length + '"><span style="width:' + pct + '%"></span></span>' +
+            '<span class="pcv-bar" role="progressbar" aria-label="Lesson progress" aria-valuenow="' + done + '" aria-valuemin="0" aria-valuemax="' + stepsForLesson(m).length + '"><span style="width:' + pct + '%"></span></span>' +
             '<span class="pcv-ico" aria-hidden="true">' + prevIconFor(m.theme) + '</span>' +
           '</span>' +
         '</span>' +
@@ -8219,7 +8266,7 @@ function prevLessonsHTML(lessons) {
 function archiveCardHTML(m) {
   const cover = lessonCover(m);
   const done = dayDoneCount(m.date);
-  const pct = Math.round((done / STEPS.length) * 100);
+  const pct = Math.round((done / stepsForLesson(m).length) * 100);
   return '<button class="prev-card v2" data-action="open-lesson" data-date="' + esc(m.date) + '" aria-label="Open lesson ' + esc(m.theme || m.date) + '">' +
     '<span class="pcv-photo">' +
       (cover
@@ -8231,7 +8278,7 @@ function archiveCardHTML(m) {
       '<span class="pcv-theme">' + esc(m.theme || 'Lesson') + '</span>' +
       '<span class="arc-meta">' + esc((normalizeLevel(m.level) || 'b2').toUpperCase()) + ' · ' + lessonWordCount(m) + ' words</span>' +
       '<span class="pcv-row">' +
-        '<span class="pcv-bar" role="progressbar" aria-label="Lesson progress" aria-valuenow="' + done + '" aria-valuemin="0" aria-valuemax="' + STEPS.length + '"><span style="width:' + pct + '%"></span></span>' +
+        '<span class="pcv-bar" role="progressbar" aria-label="Lesson progress" aria-valuenow="' + done + '" aria-valuemin="0" aria-valuemax="' + stepsForLesson(m).length + '"><span style="width:' + pct + '%"></span></span>' +
         '<span class="pcv-ico" aria-hidden="true">' + prevIconFor(m.theme) + '</span>' +
       '</span>' +
     '</span>' +
@@ -11993,14 +12040,14 @@ async function apRenderSupportThread(v, userId) {
 
 
 /* ---------------- lesson view ---------------- */
-function lessonTabsHTML() {
+function lessonTabsHTML(m) {
   const tabs = [
     ['words', 'Words', ICO.book],
     ['quiz', 'Quiz', ICO.quiz],
     ['podcast', 'Podcast', ICO.headphones],
     ['shadowing', 'Shadowing', ICO.mic],
     ['grammar', 'Grammar', ICO.grid]
-  ];
+  ].filter(function (t) { return t[0] !== 'podcast' || lessonHasPodcast(m); });
   return '<div class="lesson-tabs" role="tablist" aria-label="Lesson sections">' + tabs.map(function (t) {
     return '<button class="lesson-tab" role="tab" aria-selected="' + (state.lessonTab === t[0]) + '" data-action="lesson-tab" data-tab="' + t[0] + '"><span class="lt-ico">' + t[2] + '</span><span>' + t[1] + '</span></button>';
   }).join('') + '</div>';
@@ -12018,14 +12065,15 @@ function renderLesson(v, dateStr) {
   let html = '<div class="lesson-head"><div class="hero-date">' + esc(m.date) + (m.date === todayStr() ? ' · <b>Today</b>' : '') + '</div>' +
     '<h1 class="lesson-title">' + esc(m.theme || 'Daily lesson') + '</h1>' +
     '<p><span class="badge-level">' + esc(levelLabel(normalizeLevel(m.level))) + '</span></p></div>' +
-    lessonTabsHTML() + '<div id="lesson-body"></div>';
+    lessonTabsHTML(m) + '<div id="lesson-body"></div>';
   v.innerHTML = html;
   renderLessonTab($('#lesson-body'));
 }
 
 function renderLessonTab(body) {
   const m = state.lesson;
-  const tab = state.lessonTab;
+  let tab = state.lessonTab;
+  if (tab === 'podcast' && !lessonHasPodcast(m)) tab = 'words';
   /* Steps are marked only on genuine completion (2026-10-14 rule):
      words = scrolled to the last word (observeWordsEnd), quiz = finished,
      podcast = fully listened (checkTrackCompletion) or summary done,
@@ -12036,6 +12084,7 @@ function renderLessonTab(body) {
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); wireShadowingPractice(body, m); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
   else if (tab === 'grammar') { body.innerHTML = grammarTabHTML(m); wireAudioCards(body); }
+  try { body.classList.toggle('fa-tr-off', !faTrVisible(m)); } catch (e) {}
   refreshTrackCards();
   centerActiveLessonTab();
 }
@@ -12072,6 +12121,7 @@ function wordsTabHTML(m) {
       (w.pronunciation ? '<div class="word-pron">/' + esc(w.pronunciation) + '/</div>' : '') +
       (w.meaning ? '<div class="word-meaning">' + esc(w.meaning) + '</div>' : '') +
       (w.example ? '<div class="word-example">"' + esc(w.example) + '"</div>' : '') +
+      (w.example_fa ? '<div class="word-example-fa" dir="rtl">' + esc(w.example_fa) + '</div>' : '') +
       (w.persian ? '<div class="word-fa" dir="auto">' + esc(w.persian) + '</div>' : '') +
     '</div>';
   }).join('') || '<div class="empty">No words in this lesson.</div>';
@@ -12090,7 +12140,7 @@ function wordsTabHTML(m) {
         speeds: false, download: true
       })
     : '';
-  return cards + pronCard + cta;
+  return faToggleBtn(m) + cards + pronCard + cta;
 }
 
 /* Inner HTML of the designed "Start recording" button (Alireza's asset, 2026-10-15).
@@ -12110,7 +12160,7 @@ function podcastTabHTML(m) {
   if (!html) html = '<div class="empty">No audio in this lesson yet.</div>';
   /* Podcast summary challenge: record a spoken summary (up to 2 min), get AI transcription + grammar scoring. */
   /* Podcast summary challenge: designed card (Alireza's asset set, 2026-10-15). */
-  html += '<div class="sum-card">' +
+  if (normalizeLevel(m.level) !== 'a1' && normalizeLevel(m.level) !== 'a2') html += '<div class="sum-card">' +
     '<div class="sum-photo"><img class="sum-wave" src="media/summary/sum-wave.png" alt=""></div>' +
     '<div class="sum-panel">' +
       '<div class="sum-head">' +
@@ -12361,7 +12411,7 @@ function shadowingTabHTML(m) {
     '<p class="muted">Tap the play button to hear a sentence, then the mic button ' +
     'to record yourself reading it aloud (up to 15 seconds). ' +
     'You get a score for each sentence — tap 🔊 on a red word to hear it.</p>' +
-    '<div id="sp-sentences"></div></div>';
+    faToggleBtn(m) + '<div id="sp-sentences"></div></div>';
 }
 
 /* Speech-loop guard: on Android Chrome the Web Speech service sometimes
@@ -12588,6 +12638,11 @@ async function wireShadowingPractice(body, m) {
   }
   const sentences = splitSentences(targetText,
     (m.shadowing && m.shadowing.sentence_audio || []).length);
+  let faLines = [];
+  if (m.shadowing && m.shadowing.transcript_fa) {
+    try { const faText = await (await fetch(m.shadowing.transcript_fa)).text(); faLines = faText.split(/\r?\n/); }
+    catch (e) { faLines = []; }
+  }
 
   if (!SR && !useServerSTT) {
     list.innerHTML = '<div class="empty">🎤 Voice practice needs Chrome or Edge (Android or desktop).</div>';
@@ -12607,6 +12662,7 @@ async function wireShadowingPractice(body, m) {
       '<button class="sp-mic" data-i="' + i + '" aria-label="Record sentence ' + (i + 1) + '"><img src="/icons/sp-rec.png" alt=""></button>' +
       '<button class="save-word-btn sp-save" data-i="' + i + '" aria-label="Save sentence ' + (i + 1) + ' for review" title="Save for later practice"><img src="/icons/bookmark.png" alt=""></button>' +
       '</div></div>' +
+      (faLines[i] && faLines[i].trim() ? '<div class="sp-sent-fa" dir="rtl">' + esc(faLines[i].trim()) + '</div>' : '') +
       '<div class="sp-sent-live hidden"><span class="sp-pulse"></span>' +
       '<span class="sp-sent-live-text" dir="auto"></span><span class="sp-sent-count"></span></div>' +
       '<div class="sp-sent-result"></div></div>';
@@ -16267,6 +16323,10 @@ function bindEvents() {
       state.lessonTab = t.getAttribute('data-tab') || 'words';
       go('lesson', d);
     }
+    else if (a === 'toggle-lesson-fa') {
+      state.lessonFaShow = !state.lessonFaShow;
+      renderLessonTab($('#lesson-body'));
+    }
     else if (a === 'lesson-tab') {
       if (!quizGuardOk()) return;
       state.lessonTab = t.getAttribute('data-tab');
@@ -16529,7 +16589,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611122234';
+var APP_VERSION = '202611122252';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
