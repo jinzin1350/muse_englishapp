@@ -21,5 +21,14 @@
 "fcp-continuous.w1": "be + -ing",
 "x.fcp-continuous-s01": "In progress at a future time: *will be lying*.",
 "x.fcp-continuous-s02": "In progress: *will be having*.",
-"x.fcp-continuous-s03": "In progress at a future time: *will be sitting*."
+"x.fcp-continuous-s03": "In progress at a future time: *will be sitting*.",
+"x.fcp-continuous-b01": "In progress when you arrive: *will be waiting*.",
+"x.fcp-continuous-b02": "In progress: *will be flying*.",
+"q.fcp-continuous-b03": "Which sentence describes an action in progress at a future time?",
+"x.fcp-continuous-b03": "*Will be + -ing* = in progress then.",
+"x.fcp-continuous-b04": "*Will be + -ing*.",
+"x.fcp-continuous-b05": "In progress: *will be working*.",
+"x.fcp-continuous-b06": "In progress then: *will be living*.",
+"x.fcp-continuous-b07": "In progress: *will be running*.",
+"x.fcp-continuous-b08": "*Will be + -ing*."
 }

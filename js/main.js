@@ -8363,7 +8363,7 @@ function renderGrammarTopicV3(v, t) {
     : '<div class="g-intro">' + (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('') + '</div>';
   var faT = faLv.length ? gFaTitle(t.slug) : '';
   v.innerHTML = '<div class="g-topic gt3-topic">' +
-    '<a class="g-back" href="#/grammar">‹ All guides</a>' +
+    '<a class="g-back" href="#/grammar">‹ ' + (faT ? '<span class="g-back-fa" lang="fa">همهٔ راهنماها</span>' : 'All guides') + '</a>' +
     '<div class="g-hero">' + (faT ? '<h1 dir="rtl" lang="fa" class="g-h1-fa">' + esc(faT) + '</h1><div class="g-h1-en" dir="ltr">' + esc(t.h1) + '</div>'
       : '<h1>' + esc(t.h1) + '</h1>') + '</div>' +
     bar + intro + sections + '</div>';

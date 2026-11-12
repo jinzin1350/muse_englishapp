@@ -37,3 +37,23 @@ x.qt-intonation-s01: سؤال واقعی: لحن رو به بالا.
 q.qt-intonation-s02: لحنِ رو به پایین در سؤال ضمیمه معمولاً چه معنایی دارد؟
 x.qt-intonation-s02: رو به پایین یعنی درخواست موافقت.
 x.qt-intonation-s03: درخواست موافقت (لحن رو به پایین).
+
+# app exercises (the app's practice bank)
+x.qt-basic-b01: *Can* ← *can't you?*
+x.qt-basic-b02: *Was* ← *wasn't it?*
+x.qt-basic-b03: منفی ← مثبت: *do they?*
+x.qt-basic-b04: گذشتهٔ ساده ← *didn't she?*
+x.qt-basic-b05: *Will* ← *won't you?*
+x.qt-basic-b06: منفی ← مثبت: *did he?*
+x.qt-basic-b07: *Have* ← *haven't we?*
+x.qt-basic-b08: *You* ← *don't you?*
+q.qt-intonation-b01: کدام موقعیت لحن رو به بالا لازم دارد؟
+x.qt-intonation-b01: مطمئن نبودن یعنی لحن رو به بالا.
+x.qt-intonation-b02: رو به بالا یعنی چک کردن.
+q.qt-intonation-b03: کدام‌یک گپ روزمرهٔ معمولی با لحن رو به پایین است؟
+x.qt-intonation-b03: سؤال ضمیمه‌ای که موافقت می‌خواهد.
+x.qt-intonation-b04: جملهٔ منفی + لحن رو به بالا اغلب نگرانی را نشان می‌دهد.
+x.qt-intonation-b05: موافقت: *isn't it?*
+x.qt-intonation-b06: چک کردن: *don't you?* (رو به بالا).
+x.qt-intonation-b07: موافقت: *didn't we?*
+x.qt-intonation-b08: جملهٔ مثبت ← سؤال ضمیمهٔ منفی: *isn't it?*

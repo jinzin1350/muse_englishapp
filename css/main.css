@@ -4957,7 +4957,7 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
 @font-face{font-family:"Vazirmatn";src:url("/fa/fonts/Vazirmatn-ExtraBold.woff2") format("woff2");font-weight:800 900;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+08A0-08FF,U+FB50-FDFF,U+FE70-FEFF,U+200C-200F}
 .gt3-fa, .gt3-fa h2, .gt3-fa h3, .gt3-fa .gt3-practice-t, .gt3-fa .gt3-more, .g-intro-fa, .g-h1-fa, .gh-fa-t, .gt-q-fa,
 .gt-sheet-msg[lang="fa"], .gt-sheet-explain[lang="fa"], .gt-report[lang="fa"], .gt-report[lang="fa"] h1, .gt-report[lang="fa"] .gt-btn,
-.g-ex-note[lang="fa"], .g-mwhy[lang="fa"], .g2-mtitle, .gt-mode[lang="fa"] { font-family: "Vazirmatn", "Avenir Next", "Trebuchet MS", system-ui, sans-serif; }
+.g-ex-note[lang="fa"], .g-mwhy[lang="fa"], .g2-mtitle, .gt-mode[lang="fa"], .g-back-fa { font-family: "Vazirmatn", "Avenir Next", "Trebuchet MS", system-ui, sans-serif; }
 [lang="fa"] em[dir="ltr"] { unicode-bidi: isolate; }
 .gt3-fa em[dir="ltr"], .g-intro-fa em[dir="ltr"] { display: inline-block; }
 .gt3-fa .gt3-quick { border-left: 1.5px solid color-mix(in srgb, var(--lv, #F26522) 32%, #ffffff); border-right: 5px solid var(--lv, #F26522); }

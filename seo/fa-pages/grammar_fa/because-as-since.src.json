@@ -23,5 +23,15 @@
 "bas-as-since.w1": "not as + so",
 "x.bas-as-since-s01": "Known reason: *As*.",
 "x.bas-as-since-s02": "Answer to *Why?*: *Because*.",
-"x.bas-as-since-s03": "Known reason: *Since*."
+"x.bas-as-since-s03": "Known reason: *Since*.",
+"x.bas-as-since-b01": "Known reason: *Since*.",
+"x.bas-as-since-b02": "Known reason: *As*.",
+"x.bas-as-since-b03": "One linker: *Since* + clause.",
+"q.bas-as-since-b04": "In *Since you're tired, I'll drive*, *since* means:",
+"x.bas-as-since-b04": "*Since* = because.",
+"x.bas-as-since-b05": "Answer to *Why?*: *Because*.",
+"x.bas-as-since-b06": "Known reason: *As*.",
+"x.bas-as-since-b07": "Reason: *since*.",
+"x.bas-as-since-b08": "Known reason: *As*.",
+"x.bas-as-since-b09": "Not *as* + *so*."
 }

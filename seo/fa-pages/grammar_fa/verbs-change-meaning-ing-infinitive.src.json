@@ -16,5 +16,14 @@
 "vcm-like-start.w1": "avoid -ing + -ing",
 "x.vcm-like-start-s01": "After *would like*, only *to*.",
 "x.vcm-like-start-s02": "Avoid two *-ing* forms: *beginning to snow*.",
-"x.vcm-like-start-s03": "*Start* + *-ing* or *to*: both correct."
+"x.vcm-like-start-s03": "*Start* + *-ing* or *to*: both correct.",
+"x.vcm-like-start-b01": "*Continue* + *-ing* (or *to work*).",
+"q.vcm-like-start-b02": "Which pair has the SAME meaning?",
+"x.vcm-like-start-b02": "With *hate*, the meaning is the same.",
+"x.vcm-like-start-b03": "*Would prefer* + *to*.",
+"x.vcm-like-start-b04": "*Begin* + *-ing* (or *to play*).",
+"x.vcm-like-start-b05": "*Would love* + *to*.",
+"x.vcm-like-start-b06": "Avoid two *-ing* forms: *continuing to rise*.",
+"x.vcm-like-start-b07": "*Like* + *-ing* or *to*.",
+"x.vcm-like-start-b08": "Avoid two *-ing* forms: *starting to talk*."
 }

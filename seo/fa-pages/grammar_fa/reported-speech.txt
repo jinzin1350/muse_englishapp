@@ -98,3 +98,56 @@ x.rs-questions-s03: ترتیب جملهٔ خبری، بدون *does*: *started*.
 x.rs-orders-requests-s01: *Ask* + شخص + *to* + فعل.
 x.rs-orders-requests-s02: منفی: *not to* + فعل.
 x.rs-orders-requests-s03: *Tell* + شخص + *to* + فعل.
+
+# app exercises (the app's practice bank)
+x.rs-said-told-b01: *Tell* + شخص + قصه.
+x.rs-said-told-b02: *Say sorry*.
+x.rs-said-told-b03: *Tell* + شخص + (*that*).
+x.rs-said-told-b04: *Tell* + شخص + آدرس.
+x.rs-said-told-b05: *Tell the truth*.
+x.rs-said-told-b06: *Say to* + شخص.
+x.rs-said-told-b07: *Tell* + شخص.
+x.rs-said-told-b08: *Say* + شخص نمی‌شود: *told me* بیاورید.
+x.rs-backshift-b01: *Can't* ← *couldn't*.
+x.rs-backshift-b02: حال استمراری ← گذشتهٔ استمراری.
+x.rs-backshift-b03: *Am going to* ← *was going to*.
+x.rs-backshift-b04: حال ← گذشته: *liked*.
+x.rs-backshift-b05: حال ساده ← گذشتهٔ ساده.
+x.rs-backshift-b06: *Will* ← *would*.
+x.rs-backshift-b07: حال کامل ← گذشتهٔ کامل.
+x.rs-backshift-b08: یک قدم به عقب: *was moving*.
+x.rs-no-backshift-b01: *Says* (حال): زمان عوض نمی‌شود.
+q.rs-no-backshift-b02: *“I live in Rome.”* او هنوز آنجا زندگی می‌کند. کدام نقل قول درست است؟
+x.rs-no-backshift-b02: هنوز درست است: زمان حال می‌تواند بماند.
+x.rs-no-backshift-b03: فعل نقل قولِ حال: *has got*.
+q.rs-no-backshift-b04: در کدام جمله زمان **باید** عوض شود؟
+x.rs-no-backshift-b04: اگر دیگر درست نیست و فعل نقل قول گذشته است، زمان یک قدم به عقب می‌رود.
+x.rs-no-backshift-b05: فعل نقل قولِ حال: زمان عوض نمی‌شود.
+x.rs-no-backshift-b06: فعل نقل قولِ حال: زمان عوض نمی‌شود.
+x.rs-no-backshift-b07: فعل نقل قولِ حال: *will* می‌ماند.
+x.rs-no-backshift-b08: فعل نقل قولِ حال: زمان عوض نمی‌شود.
+x.rs-time-place-b01: *Here* ← *there*.
+x.rs-time-place-b02: *Next week* ← *the following week*.
+x.rs-time-place-b03: *Ago* ← *before*.
+x.rs-time-place-b04: همان روز: لازم نیست عوض شود.
+x.rs-time-place-b05: *Today* ← *that day*.
+x.rs-time-place-b06: *Last week* ← *the previous week*.
+x.rs-time-place-b07: *This* ← *that*.
+x.rs-time-place-b08: خیلی بعد نقل شده: *the next day*.
+x.rs-questions-b01: *If* + ترتیب جملهٔ خبری، *can* ← *could*.
+q.rs-questions-b02: کدام نقل سؤال درست است؟
+x.rs-questions-b02: ترتیب جملهٔ خبری، بدون علامت سؤال.
+x.rs-questions-b03: ترتیب جملهٔ خبری، حال کامل ← گذشتهٔ کامل.
+x.rs-questions-b04: ترتیب جملهٔ خبری: فاعل + فعل.
+x.rs-questions-b05: سؤال بله/نه: *if* یا *whether*.
+x.rs-questions-b06: ترتیب جملهٔ خبری و یک قدم به عقب.
+x.rs-questions-b07: ترتیب جملهٔ خبری: *it cost*.
+x.rs-questions-b08: ترتیب جملهٔ خبری: *where I was going*.
+x.rs-orders-requests-b01: درخواست: *asked me to lend*.
+x.rs-orders-requests-b02: منفی: *not to be*.
+x.rs-orders-requests-b03: *Tell* + شخص + *to* + فعل.
+x.rs-orders-requests-b04: درخواست: *asked*.
+x.rs-orders-requests-b05: منفی: *not to touch*.
+x.rs-orders-requests-b06: *Ask* + شخص + *to* + فعل.
+x.rs-orders-requests-b07: *Tell* + شخص + *to* + فعل.
+x.rs-orders-requests-b08: دستور منفی: *not to eat*.
