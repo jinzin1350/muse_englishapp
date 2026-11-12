@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "philips-sonicare-4300-black",
+      "name_fa": "مسواک برقی فیلیپس سونیکر ۴۳۰۰",
+      "name_en": "Philips Sonicare ProtectiveClean 4300 Electric Toothbrush, Black, Model HX3684/24",
+      "price_cad": 80.71,
+      "regular_cad": 119.99,
+      "discount_pct": 33,
+      "added_fa": "پنجشنبه، ۱۲ نوامبر ۲۰۲۶",
+      "image": "img/philips-sonicare-4300-black.jpg",
+      "url": "https://www.amazon.ca/dp/B0CZMDW1TR?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "سنسور فشار و تایمر هوشمند؛ پلاک بیشتری از مسواک دستی پاک می‌کند"
+    },
+    {
+      "id": "dyson-hotcool-am09-black",
+      "name_fa": "پنکه و بخاری دایسون هات‌اندکول AM09",
+      "name_en": "Dyson Hot+Cool Fan Heater AM09 - Black",
+      "price_cad": 359.99,
+      "regular_cad": 549.99,
+      "discount_pct": 35,
+      "added_fa": "پنجشنبه، ۱۲ نوامبر ۲۰۲۶",
+      "image": "img/dyson-hotcool-am09-black.jpg",
+      "url": "https://www.amazon.ca/dp/B0CYN7T6X7?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "گرمایش و خنک‌کنندگی بدون تیغه؛ یک دستگاه برای همه فصل‌های کانادا"
+    },
+    {
       "id": "ninja-blast-denim-blue",
       "name_fa": "مخلوط‌کن همراه نینجا بلست",
       "name_en": "Ninja Blast Portable Blender, Cordless, 18oz. Vessel, Personal Blender for Shakes & Smoothies, BPA Free, Leakproof Lid & Sip Spout, USB-C Rechargeable, Dishwasher Safe Parts, Denim Blue, BC151NVC",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "نویزکنسلینگ قوی سونی، باتری تا ۳۵ ساعت و وزن سبک ۱۹۲ گرمی"
-    },
-    {
-      "id": "blink-mini-2k-plus-2-pack-white",
-      "name_fa": "دوربین امنیتی بلینک مینی ۲کی پلاس، بسته دوتایی",
-      "name_en": "Blink Mini 2K+ (newest model) - Plug-in Home & Pet Indoor Security Camera - 2 cameras (White)",
-      "price_cad": 64.99,
-      "regular_cad": 124.99,
-      "discount_pct": 48,
-      "added_fa": "سه‌شنبه، ۱۰ نوامبر ۲۰۲۶",
-      "image": "img/blink-mini-2k-plus-2-pack-white.jpg",
-      "url": "https://www.amazon.ca/dp/B0F39WLHRQ?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "تصویر ۲کی، دید در شب رنگی و تشخیص حرکت؛ بسته دوتایی برای دو اتاق"
-    },
-    {
-      "id": "adidas-womens-all-szn-fleece-loose-pants",
-      "name_fa": "شلوار پشمی زنانه آدیداس آل سیزن",
-      "name_en": "adidas Women's All SZN Fleece Loose Pants, Wonder Sage, X-Small",
-      "price_cad": 35.0,
-      "regular_cad": 70.0,
-      "discount_pct": 50,
-      "added_fa": "سه‌شنبه، ۱۰ نوامبر ۲۰۲۶",
-      "image": "img/adidas-womens-all-szn-fleece-loose-pants.jpg",
-      "url": "https://www.amazon.ca/dp/B0F4SXWBVS?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پارچه گرم و نرم پشمی، مناسب پاییز و زمستان کانادا"
     }
   ],
-  "updated_fa": "چهارشنبه ۲۰ آبان"
+  "updated_fa": "پنجشنبه ۲۱ آبان"
 }
