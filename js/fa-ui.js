@@ -338,7 +338,23 @@ var t = {
   /* ---- grammar check-up entry ---- */
   'Check your grammar!': 'گرامرتان را بسنجید!', '30 questions · A1 to C1 · about 20 minutes': '۳۰ سؤال، از A1 تا C1، حدود ۲۰ دقیقه',
   'Take your time — when you finish you get a personal report showing exactly which grammar topics to work on.': 'با حوصله جواب بدهید؛ آخر کار یک گزارش شخصی می‌گیرید که دقیقاً نشان می‌دهد روی کدام مبحث‌های گرامر کار کنید.',
-  'START': 'شروع', '‹ Back to grammar guides': '‹ بازگشت به راهنماهای گرامر'
+  'START': 'شروع', '‹ Back to grammar guides': '‹ بازگشت به راهنماهای گرامر',
+  /* Muse additions — Persian text by Claude */
+  'Beginner': 'مبتدی',
+  'I\'m starting from zero': 'از صفر شروع می‌کنم',
+  'I understand simple sentences': 'جمله‌های ساده را می‌فهمم',
+  'Upper-intermediate': 'بالاتر از متوسط',
+  'I speak well but want to improve': 'خوب صحبت می‌کنم ولی می‌خواهم بهتر شوم',
+  'Your level': 'سطح شما',
+  'Save level': 'ذخیرهٔ سطح',
+  'Daily lesson reminder': 'یادآوری درس روزانه',
+  'A new lesson is ready for you every day at 8 AM. Want a short notification when it’s ready?': 'هر روز ساعت ۸ صبح یک درس تازه برایتان آماده می‌شود. می‌خواهید وقتی آماده شد، با یک اعلان کوتاه خبرتان کنیم؟',
+  'Yes, notify me': 'بله، خبرم کنید',
+  'Show Persian translation': 'نمایش ترجمهٔ فارسی',
+  'Hide Persian translation': 'پنهان کردن ترجمهٔ فارسی',
+  'How was this lesson?': 'این درس چطور بود؟',
+  'Thanks for your feedback!': 'ممنون از نظرتان!'
+
 };
 
 

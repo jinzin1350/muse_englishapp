@@ -3630,16 +3630,19 @@ function renderSignin(v) {
   }
 }
 
-/* Self-declared level at signup: 3 buckets auto-mapped to CEFR tracks.
-   No waiting for manual approval — the user enters the app immediately. */
+/* Self-declared level at signup: 5 levels, A1 preselected so one tap on
+   "Start learning" continues. No waiting for manual approval — the user
+   enters the app immediately. */
 const SIGNUP_LEVELS = [
-  { id: 'a1', name: 'Elementary', desc: "I'm starting out", icon: '🌱' },
+  { id: 'a1', name: 'Beginner', desc: "I'm starting from zero", icon: '🌱' },
+  { id: 'a2', name: 'Elementary', desc: 'I understand simple sentences', icon: '🌿' },
   { id: 'b1', name: 'Intermediate', desc: 'I can hold a conversation', icon: '📊' },
+  { id: 'b2', name: 'Upper-intermediate', desc: 'I speak well but want to improve', icon: '💬' },
   { id: 'c1', name: 'Advanced', desc: "I'm fluent, I want depth", icon: '🚀' },
 ];
 function levelPickerHTML(name) {
   return '<div class="level-pick">' + SIGNUP_LEVELS.map(function (l) {
-    return '<label class="level-opt"><input type="radio" name="' + name + '" value="' + l.id + '">' +
+    return '<label class="level-opt"><input type="radio" name="' + name + '" value="' + l.id + '"' + (l.id === 'a1' ? ' checked' : '') + '>' +
       '<span class="level-card"><span class="level-ico">' + l.icon + '</span>' +
       '<span class="level-name">' + l.name + '</span>' +
       '<span class="level-desc">' + l.desc + '</span></span></label>';
@@ -7355,6 +7358,7 @@ async function enterApp() {
   state.user = {
     id: u.id, email: u.email, level: level, isAdmin: isAdmin, demo: false,
     displayName: (prof && prof.display_name) || null,
+    referredBy: (prof && prof.referred_by) || null,
     phone: (prof && prof.phone) || null,
     countryCode: (prof && prof.country_code) || null,
     country: (prof && prof.country) || null,
@@ -7466,7 +7470,7 @@ function welcomeModalHTML(fa, offerTour) {
       (offerTour
         ? '<button class="onb-cta" data-action="welcome-tour">بزن بریم، یه دور بزنیم 🌱</button>' +
           '<button class="onb-skip" data-action="modal-close">فعلاً نه</button>'
-        : '<button class="onb-cta" data-action="modal-close">شروع کن</button>') +
+        : '<button class="onb-cta" data-action="welcome-start">شروع کن</button>') +
       '</div>';
   }
   return '<div class="onb">' +
@@ -7479,7 +7483,7 @@ function welcomeModalHTML(fa, offerTour) {
     (offerTour
       ? '<button class="onb-cta" data-action="welcome-tour">Take the tour <span aria-hidden="true">\u2192</span></button>' +
         '<button class="onb-skip" data-action="modal-close">Not now</button>'
-      : '<button class="onb-cta" data-action="modal-close">Let\u2019s start</button>') +
+      : '<button class="onb-cta" data-action="welcome-start">Let\u2019s start</button>') +
     '</div>';
 }
 
@@ -7798,6 +7802,23 @@ async function saveWaitingLevel() {
     identifyPushUser(u.user.id, u.user.email, normalizeLevel(el.value));
     await maybeOfferTeacher();
   } catch (e) { if (errEl) errEl.textContent = 'Couldn\'t save — check your connection and try again.'; }
+}
+
+/* Profile self level-change (teacher-less learners only; the picker itself
+   renders only when profiles.referred_by is empty). Same set_level RPC the
+   waiting view uses — profiles has no user UPDATE policy. */
+async function saveMyLevel() {
+  const sel = document.getElementById('my-level-select');
+  if (!sel || !sb) return;
+  try {
+    const r = await sb.rpc('set_level', { p_level: sel.value });
+    if (r.error || r.data !== true) throw new Error('set_level failed');
+    state.user.level = sel.value;
+    state.lessons = await loadLessons(sel.value);
+    state.lesson = state.lessons[0] || null;
+    const v = document.querySelector('#view');
+    if (v) renderProfile(v);
+  } catch (e) { /* keep the old level on screen; the select still shows the unsaved pick */ }
 }
 
 /* Teacher offer: after the level is picked (new users) and once for existing
@@ -11725,6 +11746,18 @@ function renderProfile(v) {
     '<div><div style="font-weight:700;word-break:break-all">' + esc(u.email) + '</div>' +
     '<div class="muted">' + esc(u.level ? levelLabel(normalizeLevel(u.level)) : 'Level pending — your teacher will assign it') + '</div></div></div>' +
   '</div>' +
+
+  ((!u.referredBy && !u.demo)
+    ? '<div class="section-title"><h2>Your level</h2></div>' +
+      '<div class="card plain"><div style="display:flex;gap:0.6rem;align-items:center;flex-wrap:wrap">' +
+      '<select id="my-level-select" class="input" style="flex:1;min-width:180px">' +
+      SIGNUP_LEVELS.concat(u.level === 'c2' ? [{ id: 'c2', name: 'Proficiency' }] : []).map(function (l) {
+        return '<option value="' + l.id + '"' + (normalizeLevel(u.level) === l.id ? ' selected' : '') + '>' + l.id.toUpperCase() + ' · ' + l.name + '</option>';
+      }).join('') +
+      '</select>' +
+      '<button class="btn btn-orange" data-action="save-my-level" style="padding:0.6rem 1.1rem">Save level</button>' +
+      '</div></div>'
+    : '') +
 
   '<div class="section-title"><h2>Notifications</h2></div>' +
   '<div class="card plain">' +
@@ -16190,6 +16223,7 @@ function bindEvents() {
     else if (a === 'skip-fwd') { const card = t.closest('[data-audio-card]'); if (card) skipCard(card, 10); }
     else if (a === 'check-level') checkLevel();
     else if (a === 'save-level') saveWaitingLevel();
+    else if (a === 'save-my-level') saveMyLevel();
     else if (a === 'save-country') saveCountryManual();
     else if (a === 'logout') doLogout();
     else if (a === 'tut-replay') startTutorial();
@@ -16428,6 +16462,7 @@ function bindEvents() {
     const ma = t.getAttribute('data-action');
     if (ma === 'modal-close') closeModal();
     else if (ma === 'welcome-tour') { closeModal(); startTutorial(); }
+    else if (ma === 'welcome-start') { closeModal(); state.lessonTab = 'words'; if (state.lessons && state.lessons.length) go('lesson', state.lessons[0].date); else go('lesson'); }
     else if (ma === 'teacher-message-send') teacherMessageSend(parseInt(t.getAttribute('data-i'), 10), t);
     else if (ma === 'assignment-create') createAssignment(t);
     else if (ma === 'assignment-cancel') cancelScheduledAssignment(parseInt(t.getAttribute('data-i'), 10), t);
@@ -16461,7 +16496,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611122149';
+var APP_VERSION = '202611122209';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
