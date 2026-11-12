@@ -372,7 +372,8 @@ function maybeSoftPushPrompt() {
   } catch (e) {}
 }
 function showSoftPushPrompt() {
-  const fa = uiLang() === 'fa';  /* same rule as the Persian app UI (A1–B1, Profile › App language) */
+  const lvl = (state.user && state.user.level) || '';
+  const fa = (lvl === 'a1' || lvl === 'a2');
   const html = fa
     ? '<div dir="rtl" style="text-align:right"><div class="modal-ico">\uD83D\uDD14</div>' +
       '<h2>یادآوری مرور لغت‌ها</h2>' +
@@ -16460,7 +16461,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611121800';
+var APP_VERSION = '202611121758';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
