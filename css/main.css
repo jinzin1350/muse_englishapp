@@ -484,6 +484,12 @@ p { margin: 0 0 0.75em; }
 .sp-sent-fa { color: var(--muted); font-size: 14px; margin: 4px 0 2px; }
 .lesson-fa-toggle { margin: 0 0 12px; }
 .fa-tr-off .word-example-fa, .fa-tr-off .sp-sent-fa { display: none !important; }
+.rate-card { text-align: center; }
+.rate-title { margin: 4px 0 10px; }
+.rate-btns { display: flex; justify-content: center; gap: 10px; }
+.rate-btn { font-size: 30px; line-height: 1; padding: 10px 14px; border-radius: 14px; border: 1px solid var(--line, #e5e0d8); background: #fff; cursor: pointer; }
+.rate-btn:active { transform: scale(1.12); }
+.rate-thanks { margin: 6px 0; font-weight: 600; }
 .speaker-btn {
   border: 1px solid var(--line); background: #fff; border-radius: 999px;
   font-size: 1.1rem; padding: 0.35rem 0.7rem; cursor: pointer; line-height: 1;

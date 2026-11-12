@@ -12070,6 +12070,30 @@ function renderLesson(v, dateStr) {
   renderLessonTab($('#lesson-body'));
 }
 
+/* Task 5 (2026-11-12): one-tap lesson rating, once per lesson. */
+function maybeShowLessonRating(body, m) {
+  try {
+    if (!m || !m.date || !state.user || state.user.demo) return;
+    if (localStorage.getItem('el_lesson_rated_' + m.date)) return;
+    const d = getDayProgress(m.date);
+    const steps = stepsForDate(m.date);
+    if (!steps.length || !steps.every(function (x) { return !!d[x]; })) return;
+    localStorage.setItem('el_lesson_rated_' + m.date, 'shown');
+    const fa = (typeof uiLang === 'function' && uiLang() === 'fa');
+    const dict = window.MUSE_FA_UI && window.MUSE_FA_UI.t;
+    const T = function (en) { return fa && dict && dict[en] ? dict[en] : en; };
+    const card = document.createElement('div');
+    card.className = 'card plain rate-card';
+    card.innerHTML = (fa ? '<div dir="rtl">' : '<div>') +
+      '<h3 class="rate-title">' + T('How was this lesson?') + '</h3>' +
+      '<div class="rate-btns">' +
+      ['\uD83D\uDE1E', '\uD83D\uDE10', '\uD83D\uDE42', '\uD83D\uDE0D'].map(function (e, i) {
+        return '<button class="rate-btn" data-action="lesson-rate" data-score="' + (i + 1) + '" aria-label="Rate ' + (i + 1) + ' of 4">' + e + '</button>';
+      }).join('') + '</div></div>';
+    body.prepend(card);
+  } catch (e) {}
+}
+
 function renderLessonTab(body) {
   const m = state.lesson;
   let tab = state.lessonTab;
@@ -12085,6 +12109,7 @@ function renderLessonTab(body) {
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
   else if (tab === 'grammar') { body.innerHTML = grammarTabHTML(m); wireAudioCards(body); }
   try { body.classList.toggle('fa-tr-off', !faTrVisible(m)); } catch (e) {}
+  maybeShowLessonRating(body, m);
   refreshTrackCards();
   centerActiveLessonTab();
 }
@@ -16323,6 +16348,18 @@ function bindEvents() {
       state.lessonTab = t.getAttribute('data-tab') || 'words';
       go('lesson', d);
     }
+    else if (a === 'lesson-rate') {
+      const sc = parseInt(t.getAttribute('data-score'), 10);
+      const lm = state.lesson;
+      try { trackEvent('lesson_rating', { score: sc, level: lm && lm.level, date: lm && lm.date }); } catch (e) {}
+      const card = t.closest('.rate-card');
+      if (card) {
+        const fa = (typeof uiLang === 'function' && uiLang() === 'fa');
+        const dict = window.MUSE_FA_UI && window.MUSE_FA_UI.t;
+        const thanks = fa && dict && dict['Thanks for your feedback!'] ? dict['Thanks for your feedback!'] : 'Thanks for your feedback!';
+        card.innerHTML = '<p class="rate-thanks">' + thanks + '</p>';
+      }
+    }
     else if (a === 'toggle-lesson-fa') {
       state.lessonFaShow = !state.lessonFaShow;
       renderLessonTab($('#lesson-body'));
@@ -16589,7 +16626,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611122252';
+var APP_VERSION = '202611122259';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
