@@ -360,19 +360,45 @@ function pushSubscribed() {
    "Yes" here, which keeps acceptance high and never burns the browser
    prompt on a cold ask. The manual Enable buttons (Home card, Profile)
    still go straight to promptPush. */
-function maybeSoftPushPrompt() {
+function maybeSoftPushPrompt(kind) {
   try {
-    if (!state.user || state.user.demo) return;
+    if (!state.user || state.user.demo || state.user.isAdmin) return;
     if (!oneSignalReady() || pushSubscribed()) return;
     if (!('Notification' in window) || Notification.permission === 'denied') return;
     if (localStorage.getItem('el_push_soft_asked') === '1') return;
+    if (kind === 'quiz') { scheduleQuizSoftPrompt(0); return; }
     if (((state.savedWords || []).length) !== 1) return;
     localStorage.setItem('el_push_soft_asked', '1');
-    setTimeout(showSoftPushPrompt, 400);
+    setTimeout(function () { showSoftPushPrompt('save'); }, 400);
   } catch (e) {}
 }
-function showSoftPushPrompt() {
+/* The quiz prompt waits until no other modal is up (results/celebration
+   first), retrying a few times; the asked-flag is set only when it shows. */
+function scheduleQuizSoftPrompt(tries) {
+  setTimeout(function () {
+    try {
+      if (localStorage.getItem('el_push_soft_asked') === '1') return;
+      if (document.getElementById('app-modal')) { if (tries < 3) scheduleQuizSoftPrompt(tries + 1); return; }
+      localStorage.setItem('el_push_soft_asked', '1');
+      showSoftPushPrompt('quiz');
+    } catch (e) {}
+  }, 1500);
+}
+function showSoftPushPrompt(kind) {
   const fa = uiLang() === 'fa';  /* same rule as the Persian app UI (A1–B1, Profile › App language) */
+  if (kind === 'quiz') {
+    const T = function (en) { if (fa) { var r = faLookup(en); if (r != null) return r; } return en; };
+    const qhtml = (fa ? '<div dir="rtl" style="text-align:right">' : '<div>') +
+      '<div class="modal-ico">\uD83D\uDD14</div>' +
+      '<h2>' + esc(T('Daily lesson reminder')) + '</h2>' +
+      '<p class="muted">' + esc(T('A new lesson is ready for you every day at 8 AM. Want a short notification when it’s ready?')) + '</p>' +
+      '<button class="btn btn-orange btn-block" id="soft-push-yes" style="padding:0.95rem 1rem;font-size:1.05rem;border-radius:14px;margin-top:0.8rem">' + esc(T('Yes, notify me')) + '</button>' +
+      '<button class="btn btn-block" id="soft-push-no" style="background:#FFF8EE;border:1.5px solid #EBD5B8;color:#8C5A28;font-weight:700;padding:0.9rem 1rem;font-size:1rem;border-radius:14px;margin-top:0.6rem;box-shadow:0 2px 8px rgba(160,110,40,.10);cursor:pointer">' + esc(T('Not now')) + '</button></div>';
+    const qov = showModal(qhtml);
+    qov.querySelector('#soft-push-yes').addEventListener('click', function () { closeModal(); promptPush(null); });
+    qov.querySelector('#soft-push-no').addEventListener('click', function () { closeModal(); });
+    return;
+  }
   const html = fa
     ? '<div dir="rtl" style="text-align:right"><div class="modal-ico">\uD83D\uDD14</div>' +
       '<h2>یادآوری مرور لغت‌ها</h2>' +
@@ -13315,6 +13341,13 @@ function finishQuiz() {
   });
   bumpStat('quizzes_completed', 1);
   trackEvent('quiz_completed', { kind: q.kind, score: q.correct, total: total, date: q.date, level: q.level, theme: q.theme || '' });
+  if (q.kind === 'word') {
+    try {
+      var wqN = parseInt(localStorage.getItem('el_word_quiz_done') || '0', 10) + 1;
+      localStorage.setItem('el_word_quiz_done', String(wqN));
+      if (wqN === 1) maybeSoftPushPrompt('quiz');
+    } catch (e) {}
+  }
   if (q.kind === 'word' && q.date) {
     const firstTime = !((getDayProgress(q.date) || {}).quiz);
     markStep(q.date, 'quiz', { score: q.correct, total: total });
@@ -16496,7 +16529,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611122209';
+var APP_VERSION = '202611122234';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
