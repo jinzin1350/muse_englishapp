@@ -13,6 +13,7 @@
   <title>Muse English: Free Daily English Lessons (A1–C2)</title>
   <meta name="description" content="Learn English with a free daily lesson for your level, A1 to C2: new words with photos and audio, a podcast with transcript, shadowing, grammar and a quiz.">
   <link rel="canonical" href="https://museenglishapp.com/">
+  <link rel="alternate" hreflang="en" href="https://museenglishapp.com/en/">
   <link rel="alternate" hreflang="fa" href="https://museenglishapp.com/fa/">
   <link rel="alternate" hreflang="x-default" href="https://museenglishapp.com/">
   <meta property="og:type" content="website">
@@ -108,8 +109,8 @@
       var inApp = (isAppRoute && hash !== '#/') || signedIn || standalone || appQuery || usedBefore;
       /* PERSIAN HOME (Alireza 2026-11-10, Claude): whenever the static landing
          would show on a bare '/' (or the anonymous '#/' home), open the
-         Persian home page /fa/ instead (2026-11-12: /en/ was removed and
-         301s to /fa/, so there is no language choice any more).
+         home page instead: /fa/ by default, /en/ if the visitor picked
+         English (localStorage muse_home_lang, set by the language links).
          Never when any app signal is on, never with another hash (OAuth
          '#access_token=…', in-page '#how-it-works'), never with auth query
          params (?code=…), never on /teachers or the panel paths. Crawlers
@@ -124,8 +125,10 @@
           ['code', 'error', 'error_description', 'access_token', 'token_hash', 'type'].forEach(function (k) { if (q3.has(k)) authQuery = true; });
         } catch (e) {}
         if ((path === '/' || path === '/index.html') && bareHash && !authQuery) {
+          var homeLang = null;
+          try { homeLang = localStorage.getItem('muse_home_lang'); } catch (e) {}
           try { document.documentElement.style.visibility = 'hidden'; } catch (e) {}
-          window.location.replace('/fa/' + window.location.search);
+          window.location.replace((homeLang === 'en' ? '/en/' : '/fa/') + window.location.search);
           return;
         }
       }
@@ -312,7 +315,7 @@ html:not(.app-mode) #splash{display:none!important}
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Muse English">
-  <link rel="stylesheet" href="/css/main.css?v=2cc878e4">
+  <link rel="stylesheet" href="/css/main.css?v=05c4ea76">
   <!-- Supabase JS client (auth + database) -->
   <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <!-- Capture OneSignal SDK console output for diagnostics (runs before the SDK) -->
@@ -509,8 +512,7 @@ setTimeout(function () {
   </nav>
 
   <script src="/js/config.js"></script>
-  <script defer src="/js/fa-ui.js?v=8efba186"></script>
-  <script defer src="/js/main.js?v=7e24c60c"></script>
+  <script defer src="/js/main.js?v=2609fd4c"></script>
 
 <script>
 document.addEventListener('click', function(e) {
