@@ -1,0 +1,32 @@
+# App guard (Claude, 2026-11-12): runs on every push to main.
+# 1) tools/check_app.py: js/main.js is the build of src/app, syntax, Claude's Persian work present,
+#    no /en/ leftovers, cache hashes. 2) tools/smoke_test.js: the app opens and its key screens render
+#    in demo mode (default, Persian and English UI). GitHub emails the pusher when this fails.
+name: app-check
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Static checks
+        run: python3 tools/check_app.py
+      - name: Install Playwright
+        run: |
+          npm install --no-save --no-package-lock playwright@1.48.2
+          npx playwright install --with-deps chromium
+      - name: Smoke test
+        run: |
+          python3 -m http.server 8765 >/dev/null 2>&1 &
+          sleep 2
+          node tools/smoke_test.js
