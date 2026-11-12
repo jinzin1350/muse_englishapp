@@ -90,3 +90,56 @@ x.pst-sequence-s01: اتفاق‌ها به ترتیب: گذشتهٔ ساده.
 x.pst-sequence-s02: آن دوره تمام شده (بازنشسته شده)، پس گذشتهٔ ساده.
 x.pst-sequence-s03: اتفاق بعدیِ ماجرا: گذشتهٔ ساده.
 x.pst-tricky-verbs-s01: گذشتهٔ *fall* می‌شود *fell*. (*felt* گذشتهٔ *feel* است.)
+
+# app exercises (the app's practice bank)
+x.pst-regular-b01: *Open* + *-ed* = *opened*.
+q.pst-regular-b02: گذشتهٔ سادهٔ *plan* کدام است؟
+x.pst-regular-b02: *Plan*: یک حرف صدادار + یک حرف بی‌صدا، پس *n* دوتا می‌شود: *planned*.
+q.pst-regular-b03: در کدام فعل *-ed* یک هجای اضافه (/ɪd/) خوانده می‌شود؟
+x.pst-regular-b03: بعد از *t* یا *d* یک هجا اضافه می‌شود: *want-ed*.
+x.pst-regular-b04: *Play* ← *played*.
+x.pst-regular-b05: حرف صدادار + *y*: فقط *-ed* اضافه کنید.
+x.pst-regular-b06: حرف بی‌صدا + *y*، پس *ied* (*was trying* هم درست است).
+x.pst-regular-b07: یک حرف صدادار + یک حرف بی‌صدا: *p* دوتا می‌شود.
+x.pst-regular-b08: *Move* به *-e* ختم می‌شود: فقط *-d* اضافه کنید.
+x.pst-irregular-b01: *Go* ← *went*.
+x.pst-irregular-b02: *Leave* ← *left*.
+x.pst-irregular-b03: *Take* ← *took*.
+x.pst-irregular-b04: *Give* ← *gave*.
+x.pst-irregular-b05: *Eat* ← *ate*.
+x.pst-irregular-b06: *Write* ← *wrote*.
+x.pst-irregular-b07: *Cost* تغییر نمی‌کند.
+x.pst-irregular-b08: *Come* ← *came*.
+x.pst-negative-questions-b01: سؤال در گذشته: *Did… like?*
+x.pst-negative-questions-b02: سؤال با کلمهٔ پرسشی: *did* + فاعل + شکل سادهٔ فعل.
+x.pst-negative-questions-b03: *Didn't* + شکل سادهٔ *have*.
+x.pst-negative-questions-b04: *Who* خودش فاعل است، پس *did* نمی‌آید: *Who broke…?*
+x.pst-negative-questions-b05: *Didn't* + شکل سادهٔ فعل.
+x.pst-negative-questions-b06: *Did* + فاعل + شکل سادهٔ فعل.
+x.pst-negative-questions-b07: سؤال با کلمهٔ پرسشی: *Where did they go?*
+x.pst-negative-questions-b08: بعد از *did* شکل سادهٔ فعل: *buy*.
+x.pst-time-ago-b01: *In* + سال.
+x.pst-time-ago-b02: *An hour ago*.
+x.pst-time-ago-b03: سؤال دربارهٔ زمانِ تمام‌شده: *When did…?*
+x.pst-time-ago-b04: *Last Saturday* (بدون *the* و بدون *on*).
+x.pst-time-ago-b05: *Ago*، پس گذشتهٔ ساده.
+x.pst-time-ago-b06: *When* + سؤال در گذشتهٔ ساده.
+x.pst-time-ago-b07: *Last summer* یعنی زمانِ تمام‌شده.
+x.pst-time-ago-b08: *In 2012* زمانِ تمام‌شده است: گذشتهٔ ساده.
+x.pst-sequence-b01: برای اتفاق بعدی گذشتهٔ ساده.
+x.pst-sequence-b02: اتفاق‌ها به ترتیب در گذشته: گذشتهٔ ساده.
+x.pst-sequence-b03: عادت گذشته: گذشتهٔ ساده (یا *used to go*).
+q.pst-sequence-b04: کدام جمله اتفاق‌ها را درست و به ترتیب تعریف می‌کند؟
+x.pst-sequence-b04: هر سه اتفاق با گذشتهٔ ساده آمده‌اند.
+x.pst-sequence-b05: *Find* ← *found*.
+x.pst-sequence-b06: اتفاق بعدی: *go* ← *went*.
+x.pst-sequence-b07: اتفاق بعدی: *came*.
+x.pst-sequence-b08: گذشتهٔ ساده را نگه دارید: *ate*.
+x.pst-tricky-verbs-b01: *Think* ← *thought*.
+x.pst-tricky-verbs-b02: *Leave* ← *left* (یعنی ترک کردن).
+x.pst-tricky-verbs-b03: *Feel* ← *felt*.
+x.pst-tricky-verbs-b04: پولش را داد: *buy* ← *bought*.
+x.pst-tricky-verbs-b05: *Win* ← *won*.
+x.pst-tricky-verbs-b06: *Lose* ← *lost*.
+x.pst-tricky-verbs-b07: *Catch* ← *caught*.
+x.pst-tricky-verbs-b08: *Fall* ← *fell*.
