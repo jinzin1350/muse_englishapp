@@ -4975,3 +4975,187 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
 .gt-sheet-msg[lang="fa"] b[dir="ltr"] { display: inline-block; unicode-bidi: isolate; }
 .gt-q-fa { display: block; text-align: right; }
 .gt-sheet-msg[lang="fa"], .gt-sheet-explain[lang="fa"] { text-align: right; }
+
+/* ---- Public sample lesson #/preview, Persian (2026-11-12, Claude) ----
+   Same look as the /fa/ pages: white header, cream hero, orange pill buttons,
+   navy CTA band with the mascot, dark footer. Prefix pv-. */
+body.view-preview #view{max-width:none;padding:0;margin:0}
+.pv{--pv-o:#FF9600;--pv-od:#E8590C;--pv-ink:#1c2430;--pv-mut:#5b6472;--pv-line:#f1e6d3;--pv-soft:#FFF9F1;
+  font-family:"Vazirmatn",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--pv-ink);background:#fff;line-height:1.75;text-align:right}
+.pv [dir="ltr"]{text-align:left;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.pv a{color:var(--pv-od)}
+.pv button{font-family:inherit}
+.pv :focus-visible{outline:3px solid var(--pv-o);outline-offset:2px;border-radius:10px}
+.pv-wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+.pv h1,.pv h2,.pv h3,.pv h4{letter-spacing:0;font-family:inherit}
+
+/* header */
+.pv-nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid #f3e9d8}
+.pv-nav-in{display:flex;align-items:center;gap:18px;padding-top:12px;padding-bottom:12px}
+.pv-brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:20px;color:var(--pv-ink)!important;text-decoration:none;font-family:"Fredoka",system-ui,sans-serif}
+.pv-brand img{width:34px;height:34px;border-radius:9px}
+.pv-links{display:flex;gap:16px;margin-inline-start:auto}
+.pv-links a{color:#4a5568;text-decoration:none;font-size:15px;font-weight:500}
+.pv-links a:hover{color:var(--pv-od)}
+.pv-acts{display:flex;align-items:center;gap:6px}
+.pv-alink{color:#4a5568!important;text-decoration:none;font-weight:700;font-size:14.5px;padding:6px 10px;border-radius:10px}
+.pv-alink:hover{background:#FFF3E2;color:var(--pv-od)!important}
+.pv-btn{display:inline-flex;align-items:center;justify-content:center;background:var(--pv-o);color:#fff!important;padding:14px 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;box-shadow:0 8px 22px rgba(255,150,0,.32)}
+.pv-btn:hover{background:#f58a00}
+.pv-btn-sm{padding:9px 18px;font-size:14.5px;box-shadow:0 4px 14px rgba(255,150,0,.32)}
+.pv-btn-ghost{display:inline-flex;align-items:center;justify-content:center;color:#fff!important;border:1.5px solid rgba(255,255,255,.45);padding:13px 22px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none}
+.pv-btn-ghost:hover{border-color:#fff}
+
+/* hero */
+.pv-hero{background:linear-gradient(180deg,#FFF3E2 0%,#FFF9F1 60%,#fff 100%);padding:52px 0 70px}
+.pv-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.pv-badge{display:inline-block;background:#fff;border:1px solid #f5e3c2;color:#b96a00;font-weight:700;font-size:13px;padding:5px 14px;border-radius:999px;margin-bottom:16px}
+.pv-hero h1{font-size:clamp(30px,4.3vw,48px);line-height:1.3;font-weight:800;margin:0 0 14px}
+.pv-lead{font-size:clamp(16px,1.6vw,18px);color:var(--pv-mut);max-width:33em;margin:0 0 26px}
+.pv-pick-t{display:block;font-weight:700;font-size:15px;margin-bottom:10px}
+.pv-chips{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;max-width:560px}
+.pv-chip{display:flex;flex-direction:column;align-items:center;gap:1px;background:#fff;border:1.5px solid #eadfcb;border-radius:14px;padding:8px 2px 7px;cursor:pointer;color:var(--pv-ink)}
+.pv-chip b{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;font-weight:800;line-height:1.3}
+.pv-chip span{font-size:11.5px;color:var(--pv-mut);line-height:1.4;white-space:nowrap}
+.pv-chip:hover{border-color:var(--pv-o)}
+.pv-chip[aria-pressed="true"]{background:var(--pv-o);border-color:var(--pv-o);color:#fff;box-shadow:0 6px 16px rgba(255,150,0,.3)}
+.pv-chip[aria-pressed="true"] span{color:#fff}
+.pv-lvdesc{margin:10px 0 0;color:var(--pv-mut);font-size:14.5px;min-height:1.75em}
+
+/* hero cover: three of the lesson's own word photos + the lesson ticket */
+.pv-cover{position:relative}
+.pv-cover:empty{height:390px}
+.pv-collage{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:390px}
+.pv-collage.pv-n1{grid-template-columns:1fr}
+.pv-collage.pv-n2{grid-template-columns:1fr 1fr}
+.pv-collage.pv-n2 .pv-tile-1{grid-row:1 / span 2}
+.pv-tile{position:relative;margin:0;border-radius:22px;overflow:hidden;background:#fbf0de;box-shadow:0 18px 40px rgba(255,140,0,.16),0 4px 12px rgba(0,0,0,.07)}
+.pv-tile-0{grid-row:1 / span 2}
+.pv-tile img{width:100%;height:100%;object-fit:cover;display:block}
+.pv-tile figcaption{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.93);padding:2px 11px;border-radius:999px;font-weight:600;font-size:13px;color:var(--pv-ink);max-width:calc(100% - 20px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pv-ticket{position:absolute;bottom:-26px;inset-inline-end:22px;display:flex;flex-direction:column;gap:1px;background:#fff;border-radius:18px;padding:13px 20px 14px;box-shadow:0 16px 36px rgba(28,36,48,.15);min-width:210px;max-width:80%}
+.pv-ticket-lv{color:#b96a00;font-weight:700;font-size:13px}
+.pv-ticket b{font-size:19px;font-weight:800;line-height:1.5}
+.pv-ticket-date{font-size:13px;color:var(--pv-mut)}
+
+/* lesson map (the parts, in order) */
+.pv-map{padding:34px 0 4px}
+.pv-map .pv-wrap{display:flex;align-items:center;gap:10px 14px;flex-wrap:wrap}
+.pv-map-t{font-weight:700;color:var(--pv-mut);font-size:14.5px}
+.pv-map ol{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0}
+.pv-map button{display:inline-flex;align-items:center;gap:8px;background:var(--pv-soft);border:1px solid #f3e9d8;border-radius:999px;padding:6px 14px 6px 8px;font-size:14.5px;font-weight:600;color:var(--pv-ink);cursor:pointer}
+.pv-map button:hover{border-color:var(--pv-o)}
+.pv-map button b{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--pv-o);color:#fff;font-size:12.5px}
+
+/* sections */
+.pv-sec{padding:46px 0;scroll-margin-top:70px}
+.pv-sec-tint{background:var(--pv-soft);border-top:1px solid #f6ecdc;border-bottom:1px solid #f6ecdc}
+.pv-head{display:flex;align-items:flex-start;gap:14px;margin-bottom:22px}
+.pv-step{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#FFF3E2;border:1.5px solid #ffd9a8;color:var(--pv-od);font-weight:800;font-size:18px;margin-top:2px}
+.pv-head h2{margin:0;font-size:clamp(22px,2.5vw,28px);font-weight:800;line-height:1.4}
+.pv-head p{margin:2px 0 0;color:var(--pv-mut);font-size:15.5px;max-width:40em}
+.pv-empty{color:var(--pv-mut);padding:40px 0}
+
+/* words */
+.pv-words{display:grid;grid-template-columns:repeat(var(--pv-cols,4),minmax(0,1fr));gap:16px}
+@media (max-width:1020px){.pv-words{grid-template-columns:repeat(auto-fill,minmax(190px,1fr))}}
+.pv-word{display:flex;flex-direction:column;background:#fff;border:1px solid var(--pv-line);border-radius:20px;overflow:hidden}
+.pv-ph{aspect-ratio:4/3;background:#fbf0de}
+.pv-ph img{width:100%;height:100%;object-fit:cover;display:block}
+.pv-wb{padding:12px 14px 15px}
+.pv-wtop{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.pv-wtop b{display:block;font-size:17px;font-weight:700;line-height:1.35;overflow-wrap:anywhere}
+.pv-pos{display:block;font-size:12px;color:#8a93a3;line-height:1.4}
+.pv-say{flex:none;display:grid;place-items:center;width:36px;height:36px;border:0;border-radius:50%;background:#FFF3E2;color:var(--pv-od);cursor:pointer}
+.pv-say:hover{background:#ffe6c4}
+.pv-fa{margin:8px 0 4px;font-size:17px;font-weight:700;line-height:1.6}
+.pv-ex,.pv-def{margin:0;font-size:13.5px;color:var(--pv-mut);line-height:1.55}
+.pv-ex{font-style:italic}
+
+/* podcast + shadowing */
+.pv-listen{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.pv-col{scroll-margin-top:70px}
+.pv-listen .audio-card2{margin:0}
+.pv .ap-chip[lang="fa"]{font-family:"Vazirmatn",system-ui,sans-serif}
+
+/* grammar */
+.pv-gram{background:#fff;border:1px solid var(--pv-line);border-radius:22px;padding:22px 24px 18px;max-width:780px}
+.pv-gram h3{margin:0 0 10px;font-size:21px;font-weight:800;line-height:1.4}
+.pv-gex{margin:0 0 16px;padding:0 0 0 20px}
+.pv-gex li{margin:6px 0;font-size:16px;line-height:1.6}
+.pv-gex strong{color:var(--pv-od)}
+.pv-gnote{color:#8a93a3;font-size:13px}
+.pv-glink{display:block;padding-top:12px;border-top:1px solid #f6ecdc;font-weight:700;text-decoration:none}
+.pv-glink:hover{text-decoration:underline}
+
+/* quiz */
+.pv-quiz{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:16px}
+.pv-q{background:#fff;border:1px solid var(--pv-line);border-radius:20px;padding:18px}
+.pv-qt{margin:0 0 12px;font-size:16px;font-weight:600;line-height:1.5}
+.pv-qn{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--pv-ink);color:#fff;font-size:12px;margin-right:8px;vertical-align:1px}
+.pv-opts{display:grid;gap:8px}
+.pv-opt{text-align:left;background:#fff;border:1.5px solid #eadfcb;border-radius:12px;padding:9px 12px;font-size:15px;color:var(--pv-ink);cursor:pointer;line-height:1.45;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif!important}
+.pv-opt:hover:not(:disabled){border-color:var(--pv-o)}
+.pv-opt:disabled{cursor:default}
+.pv-opt.pv-right{background:#e9f8ee;border-color:#2f9e44;color:#1b6b30}
+.pv-opt.pv-wrong{background:#fdecec;border-color:#e03131;color:#a51d1d}
+.pv-qfb{margin:10px 0 0;font-weight:700}
+.pv-qfb:empty{margin:0}
+.pv-qfb b{unicode-bidi:isolate}
+.pv-fb-ok{color:#2b8a3e}
+.pv-fb-no{color:#c92a2a}
+.pv-qmore{margin:18px 0 0;color:var(--pv-mut);max-width:46em}
+
+/* CTA band (same as /fa/) */
+.pv-cta{padding:56px 0 64px}
+.pv-cta-in{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:24px 32px;flex-wrap:wrap;padding:44px 44px 44px 210px;border-radius:28px;color:#fff;
+  background:url("/media/landing/mascot-cta.webp") no-repeat left 26px bottom -8px / 170px auto,radial-gradient(900px 420px at 30% 120%,rgba(255,140,0,.35),transparent 65%),linear-gradient(180deg,#0e1930 0%,#16233d 100%)}
+.pv-cta h2{margin:0 0 8px;color:#fff;font-size:clamp(23px,2.8vw,32px);font-weight:800;line-height:1.4}
+.pv-cta p{margin:0;color:#c3cede;font-size:16px}
+.pv-cta-btns{display:flex;flex-wrap:wrap;gap:10px}
+
+/* footer (same as /fa/) */
+.pv-foot{background:#101828;color:#cbd5e1;padding:44px 0 30px}
+.pv-foot-grid{display:flex;gap:28px 48px;flex-wrap:wrap}
+.pv-foot-brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:19px;color:#fff;margin-bottom:12px;font-family:"Fredoka",system-ui,sans-serif}
+.pv-foot-brand img{width:32px;height:32px;border-radius:8px}
+.pv-foot h4{color:#fff;margin:0 0 10px;font-size:15px}
+.pv-foot ul{list-style:none;padding:0;margin:0}
+.pv-foot li{margin:7px 0;font-size:14px}
+.pv-foot a{color:#cbd5e1;text-decoration:none}
+.pv-foot a:hover{color:#fff}
+.pv-foot p{margin:0;font-size:14px}
+.pv-foot-base{margin-top:28px;padding-top:18px;border-top:1px solid #243049;font-size:13px;color:#94a3b8}
+
+@media (max-width:1020px){
+  .pv-links{display:none}
+  .pv-acts{margin-inline-start:auto}
+}
+@media (max-width:860px){
+  .pv-hero{padding:34px 0 56px}
+  .pv-hero-grid{grid-template-columns:1fr;gap:28px}
+  .pv-collage,.pv-cover:empty{height:280px}
+  .pv-listen{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .pv-wrap{padding:0 16px}
+  .pv-brand{font-size:18px}
+  .pv-brand img{width:30px;height:30px}
+  .pv-chips{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pv-collage,.pv-cover:empty{height:240px}
+  .pv-collage{gap:8px}
+  .pv-tile{border-radius:16px}
+  .pv-ticket{inset-inline-end:12px;bottom:-22px;padding:10px 16px 11px}
+  .pv-ticket b{font-size:17px}
+  .pv-words{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .pv-wb{padding:10px 11px 12px}
+  .pv-wtop b{font-size:15.5px}
+  .pv-fa{font-size:15.5px}
+  .pv-say{width:32px;height:32px}
+  .pv-sec{padding:36px 0}
+  .pv-gram{padding:18px 16px 14px}
+  .pv-cta{padding:40px 0 48px}
+  .pv-cta-in{padding:30px 20px 176px;background-position:center bottom -10px,0 0,0 0;background-size:118px auto,auto,auto;text-align:center;justify-content:center}
+  .pv-cta-btns{flex-direction:column;width:100%}
+  .pv-cta-btns a{width:100%}
+}

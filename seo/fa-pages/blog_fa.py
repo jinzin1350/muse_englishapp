@@ -1118,7 +1118,18 @@ def no_en_step():
         except OSError: pass
     return n
 
-EXTRA_STEPS = [vocab_step, grammar_step, about_step, no_en_step]
+def app_fa_step():
+    """Persian labels the app's public sample lesson (#/preview) reads: lesson themes and level blurbs."""
+    p = os.path.join(REPO, "data", "fa", "themes.json")
+    d = {"themes": THEMES, "levels": {k: {"name": v[0], "desc": v[1]} for k, v in BLOG_LV.items()}}
+    t = json.dumps(d, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n"
+    if os.path.exists(p) and open(p, encoding="utf-8").read() == t:
+        return 0
+    os.makedirs(os.path.dirname(p), exist_ok=True)
+    write(p, t)
+    return 1
+
+EXTRA_STEPS = [vocab_step, grammar_step, about_step, no_en_step, app_fa_step]
 
 if __name__ == "__main__":
     main()
