@@ -1094,6 +1094,7 @@ def main():
         if ch: write(p, t); changed += 1
     for extra in EXTRA_STEPS:
         changed += extra()
+    changed += GF.export_app(REPO, GRAM_FA)  # Persian grammar for the app: data/grammar/fa/
     print("blog_fa: %d files changed" % changed)
     if GF.STALE:
         UNKNOWN.update("grammar text changed, Persian skipped: " + x for x in GF.STALE)

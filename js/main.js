@@ -7874,6 +7874,67 @@ function grammarBlocksHTML(blocks) {
   }).join('');
 }
 
+/* Persian grammar (2026-11-11, Claude, Alireza's order): A1–B1 sections in Persian;
+   example sentences, exercise sentences and answers stay English. Data:
+   /data/grammar/fa/<slug>.json + index.json, written by seo/fa-pages/grammar_fa.py
+   (export_app, run by blog_fa.py — never edit by hand). The strings in it are
+   pre-rendered, escaped HTML (English islands as <em dir="ltr">). No file, or a
+   level missing from its "lv" list = that part stays English. */
+var _gFa = {};
+var _gFaIdx = null;
+function gFaLoad(slug) {
+  if (Object.prototype.hasOwnProperty.call(_gFa, slug)) return Promise.resolve(_gFa[slug]);
+  return fetch('/data/grammar/fa/' + encodeURIComponent(slug) + '.json')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .catch(function () { return null; })
+    .then(function (d) { _gFa[slug] = (d && d.lv && d.lv.length) ? d : null; return _gFa[slug]; });
+}
+function gFaIndex() {
+  if (_gFaIdx) return Promise.resolve(_gFaIdx);
+  return fetch('/data/grammar/fa/index.json')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .catch(function () { return null; })
+    .then(function (d) { _gFaIdx = (d && d.titles) ? d : { titles: {}, fa: [] }; return _gFaIdx; });
+}
+function gFaTitle(slug) { return (_gFaIdx && _gFaIdx.titles && _gFaIdx.titles[slug]) || ''; }
+function gFaFor(slug, lv) {
+  var d = _gFa[slug];
+  return (d && d.lv && d.lv.indexOf(lv) !== -1) ? d : null;
+}
+function grammarBlocksHTMLFa(blocks, fb) {
+  fb = fb || [];
+  return (blocks || []).map(function (b, i) {
+    var f = fb[i], t = b.type;
+    if (t === 'p') return f ? '<p>' + f + '</p>' : '<p dir="ltr">' + gMd(b.md) + '</p>';
+    if (t === 'tip') return f ? '<div class="g-tip">' + f + '</div>' : '<div class="g-tip" dir="ltr">' + gMd(b.md) + '</div>';
+    if (t === 'list') {
+      var fl = f || {};
+      return (b.md ? (fl.md ? '<p>' + fl.md + '</p>' : '<p dir="ltr">' + gMd(b.md) + '</p>') : '') +
+        '<ul class="g-list">' + (b.items || []).map(function (it, j) {
+          var w = fl.items && fl.items[j];
+          return w ? '<li>' + w + '</li>' : '<li dir="ltr">' + gMd(it) + '</li>';
+        }).join('') + '</ul>';
+    }
+    if (t === 'table') {
+      var ft = f || {};
+      var heads = (b.headers || []).map(function (hh, ci) {
+        var fh = ft.h ? ft.h[ci] : null;
+        return (fh !== undefined && fh !== null) ? '<th>' + fh + '</th>' : '<th dir="ltr">' + gMd(hh) + '</th>';
+      }).join('');
+      var rows = (b.rows || []).map(function (r, ri) {
+        return '<tr>' + r.map(function (c, ci) {
+          var lab = (ft.hl && ft.hl[ci]) || (b.headers || [])[ci] || '';
+          var la = lab ? ' data-label="' + esc(lab) + '"' : '';
+          var fc = ft.c && ft.c[ri] ? ft.c[ri][ci] : null;
+          return fc ? '<td' + la + '>' + fc + '</td>' : '<td dir="ltr"' + la + '>' + gMd(c) + '</td>';
+        }).join('') + '</tr>';
+      }).join('');
+      return '<div class="gwrap"><table class="g-table"><thead><tr>' + heads + '</tr></thead><tbody>' + rows + '</tbody></table></div>';
+    }
+    return grammarBlocksHTML([b]);
+  }).join('');
+}
+
 /* ---------------- grammar hub (#/grammar) ---------------- */
 
 /* Hub v2 design tokens (mockup 2026-10-17) */
@@ -7985,12 +8046,13 @@ function paintGrammarList() {
   if (!wrap) return;
   var f = state.gFilter || { level: 'all', q: '' };
   var needAll = f.level === 'all' || !!f.q;
-  (needAll ? loadAllGrammar() : loadGrammarLevel(f.level)).then(function (topics) {
+  Promise.all([needAll ? loadAllGrammar() : loadGrammarLevel(f.level), gFaIndex()]).then(function (res) {
+    var topics = res[0];
     var prog = grammarProgress();
     var q = (f.q || '').toLowerCase();
     var list = topics.filter(function (t) {
       if (f.level !== 'all' && t.level !== f.level) return false;
-      if (q && (t.h1 || '').toLowerCase().indexOf(q) === -1) return false;
+      if (q && (t.h1 || '').toLowerCase().indexOf(q) === -1 && gFaTitle(t.slug).indexOf(f.q) === -1) return false;
       return true;
     });
     if (!list.length) { wrap.innerHTML = '<div class="empty">No topics match.</div>'; return; }
@@ -8011,7 +8073,9 @@ function grammarCardHTML(t, p) {
   else status = '<span class="gh-status">\uD83D\uDCC4 10 exercises per level</span>';
   return '<a class="gh-card" href="#/grammar/' + esc(t.slug) + '">' +
     '<span class="gh-ico"><img src="' + ghIconSrc(t.slug) + '" alt="" loading="lazy"></span>' +
-    '<span class="gh-card-main"><span class="gh-titlerow">' + ghLvBadge(t.level) + '<b>' + esc(t.h1) + '</b></span>' + status + '</span>' +
+    '<span class="gh-card-main"><span class="gh-titlerow">' + ghLvBadge(t.level) +
+      (gFaTitle(t.slug) ? '<b dir="rtl" lang="fa" class="gh-fa-t">' + esc(gFaTitle(t.slug)) + '</b>' : '<b>' + esc(t.h1) + '</b>') + '</span>' +
+      (gFaTitle(t.slug) ? '<span class="gh-en-t" dir="ltr">' + esc(t.h1) + '</span>' : '') + status + '</span>' +
     '<span class="gh-chev" aria-hidden="true">›</span></a>';
 }
 
@@ -8027,7 +8091,10 @@ function renderGrammarTopic(v, slug) {
       v.innerHTML = '<div class="g-topic"><div class="empty">Guide not found. <a href="#/grammar">Back to all guides</a></div></div>';
       return;
     }
-    if (t.v2) { renderGrammarTopicV3(v, t); return; }
+    if (t.v2) {
+      Promise.all([gFaLoad(t.slug), gFaIndex()]).then(function () { renderGrammarTopicV3(v, t); });
+      return;
+    }
     var prog = grammarProgress()[t.slug];
     var sections = (t.sections || []).map(function (s) {
       return '<section class="g-section"><h2>' + esc(s.h2) + '</h2>' + grammarBlocksHTML(s.blocks) + '</section>';
@@ -8225,9 +8292,36 @@ function renderGrammarTopicV3(v, t) {
     var lv = (ex.level || '').toLowerCase();
     (exByLevel[lv] = exByLevel[lv] || []).push(ex);
   });
+  var FA = _gFa[t.slug] || null;
+  var faLv = FA ? FA.lv : [];
+  function faPoint(p, lv) {
+    var P = (FA.p && FA.p[p.id]) || {};
+    var examples = (p.examples || []).map(function (e, k) {
+      var n = P.n && P.n[k];
+      return '<li><div class="g-ex-text">' + gMd(e.text) + '</div>' +
+        (e.note ? (n ? '<div class="g-ex-note" dir="rtl" lang="fa">' + n + '</div>' : '<div class="g-ex-note">' + gMd(e.note) + '</div>') : '') + '</li>';
+    }).join('');
+    var mistakes = (p.mistakes || []).map(function (m, k) {
+      var w = P.w && P.w[k];
+      return '<div class="g-mistake"><div class="g-mline bad">❌ ' + gMd(m.wrong) + '</div>' +
+        '<div class="g-mline good">✅ ' + gMd(m.right) + '</div>' +
+        (m.why ? (w ? '<div class="g-mwhy" dir="rtl" lang="fa">' + w + '</div>' : '<div class="g-mwhy">' + gMd(m.why) + '</div>') : '') + '</div>';
+    }).join('');
+    var body = grammarBlocksHTMLFa(p.blocks, P.b) +
+      (examples ? '<ol class="g-examples" dir="ltr">' + examples + '</ol>' : '') +
+      (mistakes ? '<div class="g2-mistakes" dir="ltr"><div class="g2-mtitle" dir="rtl" lang="fa">اشتباه‌های رایج</div>' + mistakes + '</div>' : '');
+    return '<div class="gt3-point">' +
+      '<h3 id="' + esc(p.id) + '">' + (P.t || '<span dir="ltr">' + esc(p.title) + '</span>') + ' <span class="gh-lv">' + lv.toUpperCase() + '</span></h3>' +
+      (p.summary ? '<div class="gt3-quick"><div class="gt3-quick-tag"><svg class="gt3-bolt" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M13 2 4.5 13.5H11L9.8 22 19 10h-6.5L13 2z" fill="currentColor"/></svg> قاعده در ۱۰ ثانیه</div><div class="gt3-quick-body"' + (P.s ? '' : ' dir="ltr"') + '>' + (P.s || gMd(p.summary)) + '</div></div>' : '') +
+      (body ? '<button class="gt3-more" type="button" data-show="مثال‌ها و جزئیات" data-hide="بستن مثال‌ها و جزئیات">مثال‌ها و جزئیات <span class="gt3-chev">›</span></button>' +
+        '<div class="gt3-body">' + body + '</div>' : '') +
+      '</div>';
+  }
   var sections = levels.map(function (lv) {
     var grad = GH_LV_GRAD[lv] || GH_LV_GRAD.all;
+    var fa = faLv.indexOf(lv) !== -1;
     var pts = (byLevel[lv] || []).map(function (p) {
+      if (fa) return faPoint(p, lv);
       var blocks = grammarBlocksHTML(p.blocks);
       var examples = (p.examples || []).map(function (e) {
         return '<li><div class="g-ex-text">' + gMd(e.text) + '</div>' +
@@ -8249,21 +8343,30 @@ function renderGrammarTopicV3(v, t) {
         '</div>';
     }).join('');
     var exs = exByLevel[lv] || [];
-    var practice = exs.length ? '<div class="gt3-practice"><div class="gt3-practice-t">Ready to practise?</div>' +
-      '<p class="gt3-practice-n">' + Math.min(exs.length, 10) + ' exercises for ' + lv.toUpperCase() + '</p>' +
-      '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button></div>' : '';
-    return '<section class="gt3-sec" id="g2-' + lv + '" style="--lv:' + (GH_LV_COLORS[lv] || '#8A93A6') + '">' +
-      '<div class="gt3-sec-head"><span class="gt3-lv-badge" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv.toUpperCase() + '</span>' +
-      '<h2>' + (TW_LEVEL_LABEL[lv] || lv.toUpperCase()) + '</h2></div>' +
+    var nEx = Math.min(exs.length, 10);
+    var practice = !exs.length ? '' : fa
+      ? '<div class="gt3-practice"><div class="gt3-practice-t">آماده‌ای تمرین کنی؟</div>' +
+        '<p class="gt3-practice-n">' + nEx + ' تمرین برای سطح <bdi>' + lv.toUpperCase() + '</bdi></p>' +
+        '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">شروع تمرین‌های <bdi>' + lv.toUpperCase() + '</bdi></button></div>'
+      : '<div class="gt3-practice"><div class="gt3-practice-t">Ready to practise?</div>' +
+        '<p class="gt3-practice-n">' + nEx + ' exercises for ' + lv.toUpperCase() + '</p>' +
+        '<button class="btn btn-primary g-start" data-g2quiz="' + lv + '">Start ' + lv.toUpperCase() + ' exercises →</button></div>';
+    return '<section class="gt3-sec' + (fa ? ' gt3-fa" dir="rtl" lang="fa' : '') + '" id="g2-' + lv + '" style="--lv:' + (GH_LV_COLORS[lv] || '#8A93A6') + '">' +
+      '<div class="gt3-sec-head"><span class="gt3-lv-badge" dir="ltr" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' + lv.toUpperCase() + '</span>' +
+      '<h2>' + (fa ? esc((FA.lvfa && FA.lvfa[lv]) || '') : (TW_LEVEL_LABEL[lv] || lv.toUpperCase())) + '</h2></div>' +
       '<div class="g-fa-audio" data-fa-lv="' + lv + '"></div>' +
       '<div class="g-en-audio" data-en-lv="' + lv + '"></div>' +
       pts + practice + '</section>';
   }).join('');
-  var intro = (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('');
+  var intro = (FA && FA.intro)
+    ? '<div class="g-intro g-intro-fa" dir="rtl" lang="fa">' + FA.intro.map(function (p) { return '<p>' + p + '</p>'; }).join('') + '</div>'
+    : '<div class="g-intro">' + (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('') + '</div>';
+  var faT = faLv.length ? gFaTitle(t.slug) : '';
   v.innerHTML = '<div class="g-topic gt3-topic">' +
     '<a class="g-back" href="#/grammar">‹ All guides</a>' +
-    '<div class="g-hero"><h1>' + esc(t.h1) + '</h1></div>' +
-    bar + '<div class="g-intro">' + intro + '</div>' + sections + '</div>';
+    '<div class="g-hero">' + (faT ? '<h1 dir="rtl" lang="fa" class="g-h1-fa">' + esc(faT) + '</h1><div class="g-h1-en" dir="ltr">' + esc(t.h1) + '</div>'
+      : '<h1>' + esc(t.h1) + '</h1>') + '</div>' +
+    bar + intro + sections + '</div>';
   Array.prototype.forEach.call(v.querySelectorAll('[data-g2lv]'), function (a) {
     a.addEventListener('click', function (e) {
       e.preventDefault();
@@ -8281,7 +8384,7 @@ function renderGrammarTopicV3(v, t) {
       var body = btn.nextElementSibling;
       var open = body.classList.toggle('open');
       btn.classList.toggle('open', open);
-      btn.firstChild.textContent = open ? 'Hide examples & details ' : 'Show examples & details ';
+      btn.firstChild.textContent = (open ? (btn.getAttribute('data-hide') || 'Hide examples & details') : (btn.getAttribute('data-show') || 'Show examples & details')) + ' ';
     });
   });
   paintFaAudioBars(v, t.slug);
@@ -8320,6 +8423,7 @@ function renderGrammarQuizV2() {
   var it = q.items[q.idx];
   var n = q.items.length;
   var letters = ['A', 'B', 'C', 'D'];
+  var F = gFaFor(q.topic.slug, q.v2level);
   
   var inputHTML = '';
   if (it.type === 'mcq') {
@@ -8335,9 +8439,9 @@ function renderGrammarQuizV2() {
         '<span class="gt-opt-text">' + esc(op) + '</span></button>';
     }).join('') + '</div>';
   } else if (it.type === 'gap') {
-    inputHTML = '<div class="gt-gap-wrap"><input type="text" id="g2-gap-input" class="gt-gap-input" ' +
-      'placeholder="Type your answer" ' + (q.answered ? 'disabled' : '') + ' value="' + esc(it.typed || '') + '">' +
-      (q.answered ? '' : '<button class="gt-btn gt-btn-green" id="g2-gap-check">CHECK</button>') + '</div>';
+    inputHTML = '<div class="gt-gap-wrap"><input type="text" id="g2-gap-input" class="gt-gap-input" dir="ltr" ' +
+      'placeholder="' + (F ? 'جواب را بنویسید' : 'Type your answer') + '" ' + (q.answered ? 'disabled' : '') + ' value="' + esc(it.typed || '') + '">' +
+      (q.answered ? '' : '<button class="gt-btn gt-btn-green" id="g2-gap-check">' + (F ? 'بررسی' : 'CHECK') + '</button>') + '</div>';
   } else if (it.type === 'error') {
     inputHTML = '<div class="gt-opts gt-error-segs">' + (it.segments || []).map(function (seg, i) {
       var cls = 'gt-opt';
@@ -8360,21 +8464,27 @@ function renderGrammarQuizV2() {
     } else {
       correctText = esc((it.accept || []).join(' / '));
     }
+    var fx = F && F.x ? F.x[it.id] : null;
     sheet = '<div class="gt-sheet ' + (good ? 'good' : 'bad') + '"><div class="gt-sheet-inner">' +
-      '<div class="gt-sheet-msg">' + (good ? '🎉 Correct!' : '💡 Correct answer: <b>' + correctText + '</b>') + '</div>' +
-      (it.explanation ? '<div class="gt-sheet-explain">' + gMd(it.explanation) + '</div>' : '') +
+      (F ? '<div class="gt-sheet-msg" dir="rtl" lang="fa">' + (good ? '🎉 درست است!' : '💡 جواب درست: <b dir="ltr">' + correctText + '</b>') + '</div>'
+         : '<div class="gt-sheet-msg">' + (good ? '🎉 Correct!' : '💡 Correct answer: <b>' + correctText + '</b>') + '</div>') +
+      (fx ? '<div class="gt-sheet-explain" dir="rtl" lang="fa">' + fx + '</div>'
+         : (it.explanation ? '<div class="gt-sheet-explain">' + gMd(it.explanation) + '</div>' : '')) +
       '<button class="gt-btn ' + (good ? 'gt-btn-green' : 'gt-btn-red') + ' gt-btn-block" id="g-next-btn">' +
-      (q.idx + 1 >= n ? 'SEE RESULTS' : 'CONTINUE') + '</button>' +
+      (F ? (q.idx + 1 >= n ? 'دیدن نتیجه' : 'ادامه') : (q.idx + 1 >= n ? 'SEE RESULTS' : 'CONTINUE')) + '</button>' +
       '</div></div>';
   }
+  var qHTML = esc(it.prompt).replace(/___/g, '…');
+  if (F && it.type === 'error') qHTML = '<span dir="rtl" lang="fa" class="gt-q-fa">' + F.err + '</span>';
+  else if (F && F.q && F.q[it.id]) qHTML = '<span dir="rtl" lang="fa" class="gt-q-fa">' + F.q[it.id] + '</span>';
   
   var barPct = Math.round((q.idx + (q.answered ? 1 : 0)) / n * 100);
   v.innerHTML = '<div class="g-quiz gt-wrap">' +
     '<div class="gt-card"><div class="gt-top"><button class="gt-x" id="g-quiz-quit" aria-label="Back to guide">✕</button>' +
     '<div class="gt-progress"><span style="width:' + barPct + '%"></span></div>' +
     '<div class="gt-qcount">' + (q.idx + 1) + '/' + n + '</div></div>' +
-    (q.firstRun ? '' : '<div class="gt-mode">Practice mode — no points</div>') +
-    '<div class="gt-q">' + esc(it.prompt).replace(/___/g, '…') + '</div>' +
+    (q.firstRun ? '' : (F ? '<div class="gt-mode" dir="rtl" lang="fa">حالت تمرین: بدون امتیاز</div>' : '<div class="gt-mode">Practice mode — no points</div>')) +
+    '<div class="gt-q">' + qHTML + '</div>' +
     inputHTML + '</div>' + sheet + '</div>';
   
   // Wire up events
@@ -8567,20 +8677,24 @@ function finishGrammarQuiz() {
   state.gquiz = null;
   document.body.classList.remove('duo-playing');
   var v = document.getElementById('view');
-  var msg = correct === total ? 'Perfect!'
-    : correct >= total * 0.7 ? 'Great job!'
-    : correct >= total * 0.4 ? 'Good effort!'
-    : 'Keep practising!';
+  var F = q.v2 ? gFaFor(slug, q.v2level) : null;
+  var L = F ? ['عالی بود!', 'آفرین!', 'تلاش خوبی بود!', 'باز هم تمرین کن!', '۲۰ امتیاز جایزهٔ تمام کردن گرفتی!', 'دوباره', '📖 برگشت به این راهنما', 'همهٔ راهنماها']
+    : ['Perfect!', 'Great job!', 'Good effort!', 'Keep practising!', '+20 completion bonus earned!', 'TRY AGAIN', '📖 Back to this guide', 'All guides'];
+  var msg = correct === total ? L[0]
+    : correct >= total * 0.7 ? L[1]
+    : correct >= total * 0.4 ? L[2]
+    : L[3];
   var mascot = correct === total ? '🏆' : correct >= total * 0.7 ? '🎉' : '📝';
-  v.innerHTML = '<div class="g-quiz gt-wrap"><div class="gt-report">' +
+  var sub = F && gFaTitle(slug) ? '<p class="gt-sub" dir="rtl" lang="fa">' + esc(gFaTitle(slug)) + '</p>' : '<p class="gt-sub">' + esc(topic.h1) + '</p>';
+  v.innerHTML = '<div class="g-quiz gt-wrap"><div class="gt-report"' + (F ? ' dir="rtl" lang="fa"' : '') + '>' +
     '<div class="gt-mascot">' + mascot + '</div>' +
     '<h1>' + msg + '</h1>' +
-    '<div class="gt-score"><b>' + correct + '</b><span>/' + total + '</span></div>' +
-    '<p class="gt-sub">' + esc(topic.h1) + '</p>' +
-    (bonus ? '<p class="g-xp-note">+20 completion bonus earned!</p>' : '') +
-    '<div class="gt-end-btns"><button class="gt-btn gt-btn-green gt-btn-big" id="g-retry-btn">TRY AGAIN</button>' +
-    '<button class="gt-btn gt-btn-ghost" id="g-back-btn">📖 Back to this guide</button>' +
-    '<a class="gt-btn gt-btn-ghost" href="#/grammar">All guides</a></div>' +
+    '<div class="gt-score" dir="ltr"><b>' + correct + '</b><span>/' + total + '</span></div>' +
+    sub +
+    (bonus ? '<p class="g-xp-note">' + L[4] + '</p>' : '') +
+    '<div class="gt-end-btns"><button class="gt-btn gt-btn-green gt-btn-big" id="g-retry-btn">' + L[5] + '</button>' +
+    '<button class="gt-btn gt-btn-ghost" id="g-back-btn">' + L[6] + '</button>' +
+    '<a class="gt-btn gt-btn-ghost" href="#/grammar">' + L[7] + '</a></div>' +
     '</div></div>';
   document.getElementById('g-retry-btn').addEventListener('click', function () {
     if (q.v2) startGrammarQuizV2(topic, q.v2level);
