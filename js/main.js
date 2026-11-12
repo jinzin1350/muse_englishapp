@@ -7833,7 +7833,7 @@ async function maybeOfferTeacher() {
 /* ---------------- choose your teacher (Persian, one-time offer) ---------------- */
 function tchOfferCardHTML(t) {
   const photo = t.photo_url
-    ? '<img class="tch-offer-photo" src="' + esc(t.photo_url) + '" alt="' + esc(t.display_name || '') + '">'
+    ? '<img class="tch-offer-photo" src="' + esc(t.photo_url) + '" alt="' + esc(t.display_name || '') + '" onerror="var d=document.createElement(\'div\');d.className=\'tch-offer-photo tch-offer-initial\';d.textContent=\'' + (t.display_name || '?').trim().charAt(0).replace(/['\\]/g, '') + '\';this.replaceWith(d)">'
     : '<div class="tch-offer-photo tch-offer-initial">' + esc((t.display_name || '?').trim().charAt(0)) + '</div>';
   const exp = (t.experience_years !== null && t.experience_years !== undefined && t.experience_years !== '')
     ? '<div class="muted">🎓 ' + t.experience_years + ' سال سابقه تدریس</div>' : '';
@@ -7849,8 +7849,9 @@ function tchOfferCardHTML(t) {
 var ct2Teachers = [];
 var ct2Selected = null;
 function ct2PhotoHTML(t, cls) {
-  if (t.photo_url) return '<img class="' + cls + '" src="' + esc(t.photo_url) + '" alt="' + esc(t.display_name || '') + '" loading="lazy">';
-  return '<div class="' + cls + ' ct2-initial">' + esc((t.display_name || '?').trim().charAt(0).toUpperCase()) + '</div>';
+  var ini = (t.display_name || '?').trim().charAt(0).toUpperCase();
+  if (t.photo_url) return '<img class="' + cls + '" src="' + esc(t.photo_url) + '" alt="' + esc(t.display_name || '') + '" loading="lazy" onerror="var d=document.createElement(\'div\');d.className=\'' + cls + ' ct2-initial\';d.textContent=\'' + ini.replace(/['\\]/g, '') + '\';this.replaceWith(d)">';
+  return '<div class="' + cls + ' ct2-initial">' + esc(ini) + '</div>';
 }
 function ct2PeopleSVG() {
   return '<svg class="ct2-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="9" cy="8" r="3.4" fill="#7C6AF0"/><path d="M2.8 19.2c.7-3.2 3.3-5 6.2-5s5.5 1.8 6.2 5" stroke="#7C6AF0" stroke-width="2.2" stroke-linecap="round"/><circle cx="16.8" cy="9.2" r="2.7" fill="#9A8CF8"/><path d="M15.4 14.4c2.9.3 5 2 5.6 4.8" stroke="#9A8CF8" stroke-width="2.2" stroke-linecap="round"/></svg>';
@@ -7900,7 +7901,7 @@ async function renderChooseTeacher(v) {
     '<div class="ct2-wrap" dir="rtl" lang="fa">' +
     '<div class="ct2-banner"><div class="ct2-banner-txt"><h1>\u06CC\u06A9 \u0627\u0633\u062A\u0627\u062F \u0631\u0627 \u0627\u0646\u062A\u062E\u0627\u0628 \u06A9\u0646</h1>' +
     '<p>\u0627\u0633\u0627\u062A\u06CC\u062F \u0645\u0633\u06CC\u0631 \u06CC\u0627\u062F\u06AF\u06CC\u0631\u06CC\u062A \u0631\u0648 \u062F\u0646\u0628\u0627\u0644 \u0645\u06CC\u200C\u06A9\u0646\u0646\u060C \u062A\u0645\u0631\u06CC\u0646 \u0645\u06CC\u200C\u062F\u0646 \u0648 \u0631\u0627\u0647\u0646\u0645\u0627\u06CC\u06CC\u062A \u0645\u06CC\u200C\u06A9\u0646\u0646.</p></div>' +
-    '<img class="ct2-mascot" src="/media/teachers/mascot-graduate.png" alt=""></div>' +
+    '<img class="ct2-mascot" src="/media/teachers/mascot-graduate.png" alt="" onerror="this.style.display=\'none\'"></div>' +
     '<div id="ct2-list"><div class="empty">\u062F\u0631 \u062D\u0627\u0644 \u0628\u0627\u0631\u06AF\u0630\u0627\u0631\u06CC \u0627\u0633\u062A\u0627\u062F\u0647\u0627\u2026</div></div>' +
     '<div class="ct2-skipwrap"><button class="onb-skip" id="ct2-skip">\u0641\u0639\u0644\u0627\u064B \u0627\u0633\u062A\u0627\u062F \u0646\u0645\u06CC\u200C\u062E\u0648\u0627\u0645</button></div>' +
     '</div>';
@@ -16460,7 +16461,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611121952';
+var APP_VERSION = '202611122149';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -18615,7 +18616,7 @@ async function apRenderTeachers(v) {
           var hasProf = x.photo_url || x.experience_years || x.bio;
           var profHtml = hasProf
             ? '<div class="apt-prof">' +
-              (x.photo_url ? '<img class="apt-prof-photo" src="' + esc(x.photo_url) + '" alt="">' : '') +
+              (x.photo_url ? '<img class="apt-prof-photo" src="' + esc(x.photo_url) + '" alt="" onerror="this.style.display=\'none\'">' : '') +
               '<div class="apt-prof-txt">' +
               (x.experience_years ? '<div>🎓 <b>' + esc(String(x.experience_years)) + '</b> years teaching experience</div>' : '<div class="muted">Experience not set</div>') +
               (x.bio ? '<div class="muted">' + esc(x.bio) + '</div>' : '<div class="muted">No bio yet</div>') +
