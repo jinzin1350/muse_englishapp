@@ -1,0 +1,93 @@
+# Persian work by Claude (2026-11-10 to 2026-11-12): what it is and how not to break it
+
+Written by Claude for Alireza. Muse: read this before any change to `js/main.js`, `index.html`,
+`css/main.css`, `blog/**`, `data/grammar/**`, `fa/**` or the sitemaps.
+
+## What was built
+
+| Area | What it does | Where it lives | Commits |
+|---|---|---|---|
+| Persian /fa/ pages | Persian home, IELTS, immigration and from-zero pages | `fa/**/index.html` (copy from `seo/fa-pages/content.py`) | e55fced5 and later |
+| Persian-first blog | Persian frame (menus, footers, headings, buttons, meta) on every blog page; Persian meaning on word cards | `seo/fa-pages/blog_fa.py`, `fa/assets/blog-fa.css` | b16a2b04, 5ef31941 |
+| Grammar guides on the blog | All 92 guides: A1–B1 explained in Persian with English examples; B2–C2 stay English | `seo/fa-pages/grammar_fa.py`, `seo/fa-pages/grammar_fa/*.txt` → `blog/grammar/**` | 91605045, 9ea9bf26, f10d7cfa, b499bc91, bb573c68 |
+| Grammar guides in the app | Same Persian A1–B1 guides inside the app: topic page, exercises, answer explanations (all 2,665 practice-bank items), results screen | `data/grammar/fa/*.json` (generated) + grammar code in `js/main.js` | 61371cc0, 06ba64cd, 01b4a40e, 5764bba7 |
+| /en/ removed | `/en`, `/en/`, `/en/*` → 301 to `/fa/`; no EN links, no `hreflang="en"`; bare `/` always opens `/fa/` | `_redirects`, `index.html`, `fa/**`, sitemaps | 73b0ee63 |
+| Sample lesson page | `#/preview` redesigned in Persian, in the look of the /fa/ pages; level picker A1–C2 | `pv*` code in `js/main.js`, `pv-` CSS in `css/main.css`, `data/fa/themes.json` | bae492a8 |
+| Persian app UI | Menus, buttons and labels in Persian for A1–B1 learners and on sign-in / sign-up; B2+ English; Profile › App language switch | `js/fa-ui.js` (labels) + engine in `js/main.js` | 4ca574ff |
+| Restores | Put the Persian back after it was overwritten | — | f11eba06, 472e949a, 0985c977 |
+
+## The three things that broke it, and the rule for each
+
+1. **The daily job rebuilt `blog/**` without the Persian step** (2026-11-11 dff1d491 and 2026-11-12 5c382b6e,
+   426 pages back to English).
+   Rule: the LAST step of the daily job, and of any rebuild of `blog/**` or `data/grammar/**`, is
+   `python3 seo/fa-pages/blog_fa.py .`, right before the commit. A second run must print `blog_fa: 0 files changed`.
+
+2. **A commit made from an old copy of the files** (2026-11-12 d4b19da8, "OneSignal diagnostics").
+   It was based on 115b9e7b and replaced the whole of `js/main.js` and `index.html`, so a one-line change
+   deleted ~600 lines: the Persian app UI, the Persian grammar in the app and the new sample lesson page.
+   It also put `/en/` back.
+   Rule: before editing, `git fetch origin && git reset --hard origin/main` (or `git pull --rebase`), and edit
+   the current file in place. Never copy `js/main.js`, `index.html` or `css/main.css` over from a saved copy.
+   Before pushing, run `git diff --stat origin/main`. If a file shows lines you did not mean to change
+   (for example hundreds of deletions in `js/main.js` for a one-line fix), stop and redo the change on top of
+   `origin/main`.
+
+3. **`/en/` coming back from the sitemap generator.**
+   Rule: drop `/en/` from your sitemap generator. Don't recreate `en/index.html` (`make_en.py` was deleted).
+   `blog_fa.py` also strips `/en/` from the sitemaps as a safety net.
+
+## Do not edit or remove (Claude-owned)
+
+Files:
+- `js/fa-ui.js`: Persian labels for the app.
+- `seo/fa-pages/blog_fa.py`, `seo/fa-pages/grammar_fa.py`, `seo/fa-pages/grammar_fa/*.txt`,
+  `seo/fa-pages/content.py`, `seo/fa-pages/render.py`.
+- Generated, never hand-edited: `data/grammar/fa/*.json`, `data/fa/themes.json`, `fa/assets/blog-fa.css`.
+
+Code in `js/main.js` (keep these names and blocks):
+- Persian app UI engine: `FA_OFF_VIEWS`, `FA_SKIP`, `uiLang`, `faNum`, `faLookup`, `faAttrs`, `faApply`,
+  `faWalk`, `faMulti`, `faLoadThemes`, `faSync`, `faRestore`, `setUiLang`.
+- The hooks into the rest of the app:
+  - the `faSync();` call at the top of `show()`;
+  - `_faOn ? ...` on the streak banner and quests markup;
+  - the "App language" card in `renderProfile` and the `ui-lang` action;
+  - `tutLang()` returning `uiLang()`;
+  - the `o.fa` labels in `audioCardHTML`.
+- Grammar in Persian:
+  - `gFaLoad`, `gFaIndex`, `gFaTitle`, `gFaFor`, `grammarBlocksHTMLFa`;
+  - the Persian branches in `renderGrammarTopicV3`, `renderGrammarQuizV2` and the results screen.
+- Sample lesson page: `PV_*`, all `pv*` functions, `renderPreview`, and `view-preview` in `show()`.
+
+CSS in `css/main.css`: the Persian grammar block (Vazirmatn `@font-face` …), the `pv-` block and the
+`ui-fa` block at the end.
+
+`index.html` must always have:
+- `<script defer src="/js/fa-ui.js?v=…">` right before `main.js`;
+- no `hreflang="en"`;
+- the bare-`/` redirect going only to `/fa/` (no `muse_home_lang`);
+- `?v=` hashes that match the files.
+
+Don't run `seo/fa-pages/render.py` yet. The live `fa/**/index.html` have GTM and the mobile hamburger
+menu, which `render.py` does not produce, so running it would remove both.
+
+## What to report to Alireza (Claude adds the Persian)
+
+- `blog_fa.py` lines `no Persian label yet …`: a new theme, topic or guide.
+- `blog_fa.py` lines `grammar text changed, Persian skipped: …`: English grammar text changed after translation.
+- Any new or renamed visible label in `js/main.js`. It shows in English until Claude adds it to `js/fa-ui.js`.
+- Any change to exercise text or ids in `data/grammar/a1.json`, `a2.json`, `b1.json`.
+
+Don't mark learner UI with `dir="ltr"` or `lang="en"`; the Persian engine skips those elements.
+
+## Self-check after every push (all must pass)
+
+```
+grep -c "function faSync" js/main.js          # 1
+grep -c "function pvBodyHTML" js/main.js      # 1
+grep -c "function gFaLoad" js/main.js         # 1
+grep -c "fa-ui.js" index.html                 # 1
+grep -c 'hreflang="en"' index.html            # 0
+grep -c "museenglishapp.com/en/" sitemap*.xml # 0 for every file
+python3 seo/fa-pages/blog_fa.py .             # blog_fa: 0 files changed
+```
