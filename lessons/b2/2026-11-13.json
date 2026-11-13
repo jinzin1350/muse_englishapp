@@ -1,0 +1,324 @@
+{
+  "date": "2026-11-13",
+  "theme": "education & learning",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "absorbing",
+      "pos": "adjective",
+      "meaning": "very interesting and keeps your full attention",
+      "example": "The book was so absorbing, I couldn't put it down.",
+      "pronunciation": "ub-ZORB-ing",
+      "persian": "جذاب، گیرا",
+      "photo": "media/b2/2026-11-13/photos/absorbing.jpg",
+      "word_audio": "media/b2/2026-11-13/word-audio/absorbing.mp3"
+    },
+    {
+      "word": "academic",
+      "pos": "adjective",
+      "meaning": "related to education, studying, and thinking",
+      "example": "She has a strong academic background in science.",
+      "pronunciation": "ak-uh-DEM-ik",
+      "persian": "دانشگاهی، تحصیلی",
+      "photo": "media/b2/2026-11-13/photos/academic.jpg",
+      "word_audio": "media/b2/2026-11-13/word-audio/academic.mp3"
+    },
+    {
+      "word": "accept",
+      "pos": "verb",
+      "meaning": "to agree to take something or agree with an idea",
+      "example": "I accept your apology.",
+      "pronunciation": "ak-SEPT",
+      "persian": "پذیرفتن، قبول کردن",
+      "photo": "media/b2/2026-11-13/photos/accept.jpg",
+      "word_audio": "media/b2/2026-11-13/word-audio/accept.mp3"
+    },
+    {
+      "word": "active",
+      "pos": "adjective",
+      "meaning": "always doing things, not sitting still",
+      "example": "My dog is very active and loves to run.",
+      "pronunciation": "AK-tiv",
+      "persian": "فعال، پرتحرک",
+      "photo": "media/b2/2026-11-13/photos/active.jpg",
+      "word_audio": "media/b2/2026-11-13/word-audio/active.mp3"
+    },
+    {
+      "word": "admission",
+      "pos": "noun",
+      "meaning": "The right to enter a place or join a group.",
+      "example": "Admission to the museum is free.",
+      "pronunciation": "ad-MISH-un",
+      "persian": "پذیرش، ورود",
+      "photo": "media/b2/2026-11-13/photos/admission.jpg",
+      "word_audio": "media/b2/2026-11-13/word-audio/admission.mp3"
+    },
+    {
+      "word": "advice",
+      "pos": "uncountable noun",
+      "meaning": "Suggestions about what someone should do.",
+      "example": "Can you give me some advice?",
+      "pronunciation": "ad-VYSS",
+      "persian": "نصیحت، مشاوره",
+      "photo": "media/b2/2026-11-13/photos/advice.jpg",
+      "word_audio": "media/b2/2026-11-13/word-audio/advice.mp3"
+    },
+    {
+      "word": "aloud",
+      "pos": "adverb",
+      "meaning": "Speaking so others can hear.",
+      "example": "Please read the story aloud.",
+      "pronunciation": "uh-LOWD",
+      "persian": "با صدای بلند",
+      "photo": "media/b2/2026-11-13/photos/aloud.jpg",
+      "word_audio": "media/b2/2026-11-13/word-audio/aloud.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-11-13/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Learning That Sticks",
+    "audio": "media/b2/2026-11-13/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-11-13/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's First Term",
+    "audio": "media/b2/2026-11-13/shadowing.mp3",
+    "transcript": "media/b2/2026-11-13/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-11-13/shadowing-sentences/001.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/002.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/003.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/004.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/005.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/006.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/007.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/008.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/009.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/010.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/011.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/012.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/013.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/014.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/015.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/016.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/017.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/018.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/019.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/020.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/021.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/022.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/023.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/024.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/025.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/026.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/027.mp3",
+      "media/b2/2026-11-13/shadowing-sentences/028.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'absorbing' mean?",
+      "options": [
+        "related to education, studying, and thinking",
+        "very interesting and keeps your full attention",
+        "always doing things, not sitting still",
+        "to agree to take something or agree with an idea"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'academic' mean?",
+      "options": [
+        "always doing things, not sitting still",
+        "related to education, studying, and thinking",
+        "The right to enter a place or join a group.",
+        "to agree to take something or agree with an idea"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'accept' mean?",
+      "options": [
+        "always doing things, not sitting still",
+        "Suggestions about what someone should do.",
+        "to agree to take something or agree with an idea",
+        "The right to enter a place or join a group."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'active' mean?",
+      "options": [
+        "always doing things, not sitting still",
+        "The right to enter a place or join a group.",
+        "Suggestions about what someone should do.",
+        "Speaking so others can hear."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'admission' mean?",
+      "options": [
+        "The right to enter a place or join a group.",
+        "Suggestions about what someone should do.",
+        "very interesting and keeps your full attention",
+        "Speaking so others can hear."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'advice' mean?",
+      "options": [
+        "very interesting and keeps your full attention",
+        "Suggestions about what someone should do.",
+        "Speaking so others can hear.",
+        "related to education, studying, and thinking"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'aloud' mean?",
+      "options": [
+        "very interesting and keeps your full attention",
+        "Speaking so others can hear.",
+        "related to education, studying, and thinking",
+        "to agree to take something or agree with an idea"
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Gerund or Infinitive",
+    "explanation": "A **gerund** is the **-ing** form of a verb used like a noun: *Swimming is good for you*. An **infinitive** is **to** + base verb: *I want **to swim**.*\n\nSome verbs are followed by **-ing**: **enjoy**, **avoid**, **finish**, **mind**, **suggest**, **keep** and **consider**. An *absorbing* book is easy to **enjoy reading**, and most learners do not **mind practising** a little every day.\n\nOther verbs are followed by **to** + infinitive: **want**, **decide**, **hope**, **plan**, **promise**, **agree**, **refuse** and **learn**. When the college offers you a place, you **decide to accept** it, and you **promise to work** hard.\n\nSome verbs take a person plus **to**: **ask**, **tell**, **invite**, **encourage**, **allow**, **remind** and **advise**. A teacher can **advise you to read** academic texts *aloud* and **remind you to review** your notes.\n\nAfter a preposition, always use **-ing**: interested **in learning**, good **at drawing**, thanks **for helping**. Remember that in *look forward to* and *be used to*, **to** is a preposition, so it also takes **-ing**.\n\nVerbs like **like**, **love**, **hate**, **prefer**, **start** and **continue** can take both forms with little change in meaning. But after **would like**, **would love** and **would prefer**, always use **to**: *I would like **to join** an active study group.*",
+    "examples": [
+      "*I **enjoy cooking**.* (enjoy + -ing)",
+      "*We **decided to stay** at home.* (decide + to)",
+      "*I **enjoy reading** before bed.* (enjoy + -ing)",
+      "*He **promised to call** me.* (promise + to)",
+      "*She's good **at drawing**.* (preposition + -ing)",
+      "*Have you **finished cleaning** the kitchen?* (finish + -ing)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite using 'enjoy': She likes reading academic books aloud.",
+        "a": "She enjoys reading academic books aloud."
+      },
+      {
+        "q": "Rewrite using 'decide': They chose to accept the admission offer.",
+        "a": "They decided to accept the admission offer."
+      },
+      {
+        "q": "Rewrite using 'interested in': He wants to learn about absorbing novels.",
+        "a": "He is interested in learning about absorbing novels."
+      },
+      {
+        "q": "Rewrite using 'promise': She said she would give me advice.",
+        "a": "She promised to give me advice."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I enjoy ___ in the sea.",
+        "options": [
+          "swim",
+          "to swim",
+          "swimming",
+          "swam"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We decided ___ at home.",
+        "options": [
+          "to stay",
+          "stay",
+          "staying",
+          "stayed"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Would you mind ___ the window?",
+        "options": [
+          "open",
+          "opening",
+          "to open",
+          "opened"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She refused ___ me.",
+        "options": [
+          "helping",
+          "help",
+          "helped",
+          "to help"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I'm interested in ___ photography.",
+        "options": [
+          "learning",
+          "learn",
+          "to learn",
+          "learned"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He promised ___ late again.",
+        "options": [
+          "not being",
+          "not to be",
+          "to not being",
+          "not be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My parents want ___ a doctor.",
+        "options": [
+          "that I become",
+          "I become",
+          "me to become",
+          "me becoming"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ a new language takes a lot of time.",
+        "options": [
+          "Learn",
+          "To learning",
+          "Learned",
+          "Learning"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I'm looking forward to ___ you.",
+        "options": [
+          "see",
+          "saw",
+          "seeing",
+          "seen"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They can't afford ___ a house.",
+        "options": [
+          "to buy",
+          "buying",
+          "buy",
+          "bought"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "date": "2026-11-13",
+  "theme": "food & cooking",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "coconut",
+      "pos": "noun",
+      "meaning": "A large, hard fruit with white flesh and milk inside.",
+      "example": "I love the taste of fresh coconut water.",
+      "example_fa": "من طعم آب نارگیل تازه را دوست دارم.",
+      "pronunciation": "KOH-kuh-nut",
+      "persian": "نارگیل",
+      "photo": "media/a2/2026-11-13/photos/coconut.jpg",
+      "word_audio": "media/a2/2026-11-13/word-audio/coconut.mp3"
+    },
+    {
+      "word": "coffee",
+      "pos": "noun",
+      "meaning": "A dark brown drink made from roasted beans.",
+      "example": "I drink coffee every morning.",
+      "example_fa": "من هر صبح قهوه می‌نوشم.",
+      "pronunciation": "KOF-ee",
+      "persian": "قهوه",
+      "photo": "media/a2/2026-11-13/photos/coffee.jpg",
+      "word_audio": "media/a2/2026-11-13/word-audio/coffee.mp3"
+    },
+    {
+      "word": "cook n",
+      "pos": "noun",
+      "meaning": "A person who prepares food.",
+      "example": "My mother is a great cook.",
+      "example_fa": "مادرم آشپز خیلی خوبی است.",
+      "pronunciation": "KOOK",
+      "persian": "آشپز",
+      "photo": "media/a2/2026-11-13/photos/cook n.jpg",
+      "word_audio": "media/a2/2026-11-13/word-audio/cook n.mp3"
+    },
+    {
+      "word": "cooker",
+      "pos": "noun",
+      "meaning": "A piece of kitchen equipment for cooking food.",
+      "example": "We bought a new electric cooker.",
+      "example_fa": "ما یک اجاق برقی جدید خریدیم.",
+      "pronunciation": "KOOK-er",
+      "persian": "اجاق گاز",
+      "photo": "media/a2/2026-11-13/photos/cooker.jpg",
+      "word_audio": "media/a2/2026-11-13/word-audio/cooker.mp3"
+    },
+    {
+      "word": "courgette",
+      "pos": "noun",
+      "meaning": "A long green vegetable, like a small marrow.",
+      "example": "I like to eat courgette with my dinner.",
+      "example_fa": "دوست دارم همراه شامم کدو سبز بخورم.",
+      "pronunciation": "kor-ZHET",
+      "persian": "کدو سبز",
+      "photo": "media/a2/2026-11-13/photos/courgette.jpg",
+      "word_audio": "media/a2/2026-11-13/word-audio/courgette.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-13/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Food and Cooking",
+    "audio": "media/a2/2026-11-13/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-13/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Cook and the Coconut",
+    "audio": "media/a2/2026-11-13/shadowing.mp3",
+    "transcript": "media/a2/2026-11-13/shadowing-transcript.txt",
+    "transcript_fa": "media/a2/2026-11-13/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-13/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-13/shadowing-sentences/015.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'coconut' mean?",
+      "options": [
+        "A piece of kitchen equipment for cooking food.",
+        "A large, hard fruit with white flesh and milk inside.",
+        "A person who prepares food.",
+        "A dark brown drink made from roasted beans."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'coffee' mean?",
+      "options": [
+        "A dark brown drink made from roasted beans.",
+        "A long green vegetable, like a small marrow.",
+        "A piece of kitchen equipment for cooking food.",
+        "A large, hard fruit with white flesh and milk inside."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cook n' mean?",
+      "options": [
+        "A piece of kitchen equipment for cooking food.",
+        "A person who prepares food.",
+        "A long green vegetable, like a small marrow.",
+        "A dark brown drink made from roasted beans."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cooker' mean?",
+      "options": [
+        "A dark brown drink made from roasted beans.",
+        "A large, hard fruit with white flesh and milk inside.",
+        "A piece of kitchen equipment for cooking food.",
+        "A person who prepares food."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'courgette' mean?",
+      "options": [
+        "A piece of kitchen equipment for cooking food.",
+        "A person who prepares food.",
+        "A long green vegetable, like a small marrow.",
+        "A large, hard fruit with white flesh and milk inside."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Verb + -ing or To-Infinitive (want to, enjoy -ing)",
+    "explanation": "When one verb follows another, the second verb is **to + verb** or **verb-ing**. It depends on the **first** verb.\n\nSome verbs take **to**: **want to**, **need to**, **decide to**, **hope to**, **plan to** and **promise to**. Our cook **wants to buy** a fresh coconut.\n\nOther verbs take **-ing**: **enjoy**, **finish**, **mind**, **keep**, **miss** and **avoid**. I **enjoy cooking** courgette on the cooker.\n\nAfter **like**, **love** and **start**, both forms can be OK. But after **would like**, always use **to**: I **would like to drink** coffee.\n\nFor negatives, put **not** before **to** or **-ing**. After a preposition, always use **-ing**: I am good **at cooking**.",
+    "examples": [
+      "*I **want to learn** Italian.* (want to)",
+      "*We **decided to stay** at home.* (decide to)",
+      "*I **enjoy cooking** for my friends.* (enjoy -ing)",
+      "*Have you **finished eating**?* (finish -ing)",
+      "*Do you **mind waiting** a few minutes?* (mind -ing)",
+      "*I **need to buy** some new shoes.* (need to)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with 'want to': I want (drink) coffee.",
+        "a": "I want to drink coffee."
+      },
+      {
+        "q": "Rewrite with '-ing': I enjoy (cook) courgette.",
+        "a": "I enjoy cooking courgette."
+      },
+      {
+        "q": "Rewrite with 'decide to': We decided (buy) a new cooker.",
+        "a": "We decided to buy a new cooker."
+      },
+      {
+        "q": "Rewrite with '-ing': Have you finished (eat) the coconut?",
+        "a": "Have you finished eating the coconut?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I want ___ a new phone.",
+        "options": [
+          "buying",
+          "buy",
+          "buys",
+          "to buy"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She enjoys ___ to music.",
+        "options": [
+          "listening",
+          "to listen",
+          "listen",
+          "listens"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We decided ___ at home last night.",
+        "options": [
+          "staying",
+          "stay",
+          "to stay",
+          "stayed"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Have you finished ___ your homework?",
+        "options": [
+          "to do",
+          "doing",
+          "do",
+          "did"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I hope ___ you again soon.",
+        "options": [
+          "seeing",
+          "to see",
+          "see",
+          "saw"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He doesn't mind ___ late.",
+        "options": [
+          "to work",
+          "work",
+          "working",
+          "works"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "They're planning ___ to Spain in July.",
+        "options": [
+          "to travel",
+          "travelling",
+          "travel",
+          "travels"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "My brother keeps ___ my clothes without asking!",
+        "options": [
+          "to borrow",
+          "borrow",
+          "borrows",
+          "borrowing"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I need ___ some milk on the way home.",
+        "options": [
+          "to buy",
+          "buying",
+          "buy",
+          "bought"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Would you like ___ to the beach with us?",
+        "options": [
+          "going",
+          "to go",
+          "go",
+          "went"
+        ],
+        "answer": 1
+      }
+    ],
+    "audio": "media/a2/2026-11-13/grammar-en.mp3"
+  }
+}

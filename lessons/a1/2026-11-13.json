@@ -1,0 +1,273 @@
+{
+  "date": "2026-11-13",
+  "theme": "health & body",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "face",
+      "pos": "noun",
+      "meaning": "The front part of your head.",
+      "example": "She has a happy face.",
+      "example_fa": "او چهره‌ای شاد دارد.",
+      "pronunciation": "FAYSS",
+      "persian": "صورت",
+      "photo": "media/a1/2026-11-13/photos/face.jpg",
+      "word_audio": "media/a1/2026-11-13/word-audio/face.mp3"
+    },
+    {
+      "word": "fat",
+      "pos": "adjective",
+      "meaning": "Having a lot of flesh on your body.",
+      "example": "The cat is quite fat.",
+      "example_fa": "گربه کاملاً چاق است.",
+      "pronunciation": "FAT",
+      "persian": "چاق",
+      "photo": "media/a1/2026-11-13/photos/fat.jpg",
+      "word_audio": "media/a1/2026-11-13/word-audio/fat.mp3"
+    },
+    {
+      "word": "feet",
+      "pos": "noun",
+      "meaning": "The parts of your body you stand on. (plural of foot)",
+      "example": "My feet hurt after walking all day.",
+      "example_fa": "پاهایم بعد از راه رفتن تمام روز درد می‌کنند.",
+      "pronunciation": "FEET",
+      "persian": "پاها",
+      "photo": "media/a1/2026-11-13/photos/feet.jpg",
+      "word_audio": "media/a1/2026-11-13/word-audio/feet.mp3"
+    },
+    {
+      "word": "fine",
+      "pos": "adjective",
+      "meaning": "Good or acceptable.",
+      "example": "I feel fine today, thank you.",
+      "example_fa": "امروز حالم خوب است، ممنون.",
+      "pronunciation": "FYNE",
+      "persian": "خوب، عالی",
+      "photo": "media/a1/2026-11-13/photos/fine.jpg",
+      "word_audio": "media/a1/2026-11-13/word-audio/fine.mp3"
+    },
+    {
+      "word": "good for you",
+      "pos": "phrase",
+      "meaning": "used to say something is healthy or positive for you.",
+      "example": "Eating fruit is good for you.",
+      "example_fa": "خوردن میوه برای تو خوب است.",
+      "pronunciation": "GOOD fer YOO",
+      "persian": "برای تو خوب است",
+      "photo": "media/a1/2026-11-13/photos/good-for-you.jpg",
+      "word_audio": "media/a1/2026-11-13/word-audio/good-for-you.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-13/pronunciation.mp3",
+  "podcast": null,
+  "shadowing": {
+    "title": "A Fine Day for My Face and Feet",
+    "audio": "media/a1/2026-11-13/shadowing.mp3",
+    "transcript": "media/a1/2026-11-13/shadowing-transcript.txt",
+    "transcript_fa": "media/a1/2026-11-13/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-13/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-13/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-13/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-13/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-13/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-13/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-13/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-13/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-13/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-13/shadowing-sentences/010.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'face' mean?",
+      "options": [
+        "Having a lot of flesh on your body.",
+        "Good or acceptable.",
+        "The parts of your body you stand on. (plural of foot)",
+        "used to say something is healthy or positive for you.",
+        "The front part of your head."
+      ],
+      "answer": 4
+    },
+    {
+      "question": "What does 'fat' mean?",
+      "options": [
+        "The parts of your body you stand on. (plural of foot)",
+        "The front part of your head.",
+        "Having a lot of flesh on your body.",
+        "Good or acceptable.",
+        "used to say something is healthy or positive for you."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'feet' mean?",
+      "options": [
+        "Having a lot of flesh on your body.",
+        "used to say something is healthy or positive for you.",
+        "The parts of your body you stand on. (plural of foot)",
+        "Good or acceptable.",
+        "The front part of your head."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'fine' mean?",
+      "options": [
+        "Good or acceptable.",
+        "The parts of your body you stand on. (plural of foot)",
+        "Having a lot of flesh on your body.",
+        "used to say something is healthy or positive for you.",
+        "The front part of your head."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'good for you' mean?",
+      "options": [
+        "Having a lot of flesh on your body.",
+        "used to say something is healthy or positive for you.",
+        "The parts of your body you stand on. (plural of foot)",
+        "The front part of your head.",
+        "Good or acceptable."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Question Words and Question Forms",
+    "explanation": "**Question words** ask for information. Use **what** for things, **where** for places, **when** for time, **who** for people, and **why** for reasons.\n\nUse **how** for ways and for how a person is. **How are you?** I am **fine** today.\n\nThe word order is **question word + be / do / can + subject + verb**. For example, **Where do you live?**\n\nWith **be**, put **am**, **is**, or **are** before the person. **How old are you?** is correct, and **How old you are?** is wrong.\n\nWith other verbs, use **do** or **does** and the base verb. **What do you want?** After **did**, use the base verb too: **Where did you go?**\n\nWhen **who** or **what** is the subject, do not use **do**. **Who lives here?** is correct. Look at my **face** and ask me a question!",
+    "examples": [
+      "*What **is** your name?* (be)",
+      "*Where **do** your parents live?* (do + base verb)",
+      "*When **did** you start learning English?* (did + base verb)",
+      "*Who **is** that man?* (people)",
+      "*Why **are** you laughing?* (present continuous)",
+      "*How **do** you spell your surname?* (the way)"
+    ],
+    "practice": [
+      {
+        "q": "Where you live? (add do)",
+        "a": "Where do you live?"
+      },
+      {
+        "q": "How old you are? (put are before you)",
+        "a": "How old are you?"
+      },
+      {
+        "q": "Why you are late? (put are before you)",
+        "a": "Why are you late?"
+      },
+      {
+        "q": "What time the film starts? (add does and use start)",
+        "a": "What time does the film start?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "___ do you live? – In Toronto.",
+        "options": [
+          "What",
+          "Where",
+          "When",
+          "Who"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ are you sad? – Because I lost my phone.",
+        "options": [
+          "Why",
+          "What",
+          "How",
+          "Where"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ is that woman? – She's my aunt.",
+        "options": [
+          "What",
+          "Which",
+          "Whose",
+          "Who"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ is your birthday? – In May.",
+        "options": [
+          "Where",
+          "Who",
+          "When",
+          "Which"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ bag is this? – It's Anna's.",
+        "options": [
+          "Who",
+          "Whose",
+          "Who's",
+          "How"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct question.",
+        "options": [
+          "Where did you go last weekend?",
+          "Where you went last weekend?",
+          "Where did you went last weekend?",
+          "Where you did go last weekend?"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Where ___ you from?",
+        "options": [
+          "do",
+          "is",
+          "are",
+          "does"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "What time ___ the shop open?",
+        "options": [
+          "is",
+          "do",
+          "are",
+          "does"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ do you go to the gym? – Three times a week.",
+        "options": [
+          "How long",
+          "How many",
+          "How often",
+          "When"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Who ___ in that house?",
+        "options": [
+          "lives",
+          "is live",
+          "do live",
+          "live"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a1/2026-11-13/grammar-en.mp3"
+  }
+}

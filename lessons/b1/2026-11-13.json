@@ -1,0 +1,324 @@
+{
+  "date": "2026-11-13",
+  "theme": "travel & transport",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "nearest",
+      "pos": "adjective",
+      "meaning": "Closest in distance.",
+      "example": "Where is the nearest bus stop?",
+      "example_fa": "نزدیک‌ترین ایستگاه اتوبوس کجاست؟",
+      "pronunciation": "NEER-ist",
+      "persian": "نزدیک‌ترین",
+      "photo": "media/b1/2026-11-13/photos/nearest.jpg",
+      "word_audio": "media/b1/2026-11-13/word-audio/nearest.mp3"
+    },
+    {
+      "word": "on board",
+      "pos": "phrase",
+      "meaning": "On a ship, train, or aircraft.",
+      "example": "All passengers are now on board the plane.",
+      "example_fa": "همه مسافران اکنون سوار هواپیما هستند.",
+      "pronunciation": "on BORD",
+      "persian": "سوار (کشتی، هواپیما)",
+      "photo": "media/b1/2026-11-13/photos/on board.jpg",
+      "word_audio": "media/b1/2026-11-13/word-audio/on board.mp3"
+    },
+    {
+      "word": "on time",
+      "pos": "phrase",
+      "meaning": "Punctually; at the correct time.",
+      "example": "The train arrived on time.",
+      "example_fa": "قطار سر وقت رسید.",
+      "pronunciation": "on TYME",
+      "persian": "سر وقت، به موقع",
+      "photo": "media/b1/2026-11-13/photos/on time.jpg",
+      "word_audio": "media/b1/2026-11-13/word-audio/on time.mp3"
+    },
+    {
+      "word": "plane",
+      "pos": "noun",
+      "meaning": "an aircraft that flies in the sky.",
+      "example": "We traveled by plane to London.",
+      "example_fa": "ما با هواپیما به لندن سفر کردیم.",
+      "pronunciation": "PLAYN",
+      "persian": "هواپیما",
+      "photo": "media/b1/2026-11-13/photos/plane.jpg",
+      "word_audio": "media/b1/2026-11-13/word-audio/plane.mp3"
+    },
+    {
+      "word": "plenty",
+      "pos": "pronoun",
+      "meaning": "a lot of something, more than enough.",
+      "example": "We have plenty of time.",
+      "example_fa": "ما وقت زیادی داریم.",
+      "pronunciation": "PLEN-tee",
+      "persian": "فراوان، زیاد",
+      "photo": "media/b1/2026-11-13/photos/plenty.jpg",
+      "word_audio": "media/b1/2026-11-13/word-audio/plenty.mp3"
+    },
+    {
+      "word": "protection",
+      "pos": "noun",
+      "meaning": "The act of keeping safe.",
+      "example": "Sunscreen offers good skin protection.",
+      "example_fa": "ضدآفتاب محافظت خوبی از پوست می‌کند.",
+      "pronunciation": "pruh-TEK-shun",
+      "persian": "محافظت",
+      "photo": "media/b1/2026-11-13/photos/protection.jpg",
+      "word_audio": "media/b1/2026-11-13/word-audio/protection.mp3"
+    },
+    {
+      "word": "public transport",
+      "pos": "noun",
+      "meaning": "Buses, trains, etc., for everyone to use.",
+      "example": "I use public transport to get to work.",
+      "example_fa": "من برای رفتن به سر کار از حمل‌ونقل عمومی استفاده می‌کنم.",
+      "pronunciation": "PUB-lik TRANS-port",
+      "persian": "حمل و نقل عمومی",
+      "photo": "media/b1/2026-11-13/photos/public transport.jpg",
+      "word_audio": "media/b1/2026-11-13/word-audio/public transport.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-11-13/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Travel and Transport",
+    "audio": "media/b1/2026-11-13/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-11-13/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Journey by Train",
+    "audio": "media/b1/2026-11-13/shadowing.mp3",
+    "transcript": "media/b1/2026-11-13/shadowing-transcript.txt",
+    "transcript_fa": "media/b1/2026-11-13/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/b1/2026-11-13/shadowing-sentences/001.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/002.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/003.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/004.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/005.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/006.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/007.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/008.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/009.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/010.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/011.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/012.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/013.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/014.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/015.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/016.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/017.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/018.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/019.mp3",
+      "media/b1/2026-11-13/shadowing-sentences/020.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'nearest' mean?",
+      "options": [
+        "Buses, trains, etc., for everyone to use.",
+        "Closest in distance.",
+        "On a ship, train, or aircraft.",
+        "an aircraft that flies in the sky."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'on board' mean?",
+      "options": [
+        "a lot of something, more than enough.",
+        "On a ship, train, or aircraft.",
+        "an aircraft that flies in the sky.",
+        "Punctually; at the correct time."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'on time' mean?",
+      "options": [
+        "Buses, trains, etc., for everyone to use.",
+        "a lot of something, more than enough.",
+        "Punctually; at the correct time.",
+        "The act of keeping safe."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'plane' mean?",
+      "options": [
+        "On a ship, train, or aircraft.",
+        "Buses, trains, etc., for everyone to use.",
+        "Punctually; at the correct time.",
+        "an aircraft that flies in the sky."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'plenty' mean?",
+      "options": [
+        "On a ship, train, or aircraft.",
+        "a lot of something, more than enough.",
+        "Punctually; at the correct time.",
+        "Closest in distance."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'protection' mean?",
+      "options": [
+        "The act of keeping safe.",
+        "On a ship, train, or aircraft.",
+        "Punctually; at the correct time.",
+        "a lot of something, more than enough."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'public transport' mean?",
+      "options": [
+        "On a ship, train, or aircraft.",
+        "Punctually; at the correct time.",
+        "an aircraft that flies in the sky.",
+        "Buses, trains, etc., for everyone to use."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Present Perfect for Experience (ever, never)",
+    "explanation": "We use the **present perfect** to talk about experiences in our life up to now. We do not say exactly when they happened: *I've been to London. She's never flown on a plane.*\n\nThe form is **have / has + past participle**. Use **have** with I, you, we and they, and **has** with he, she and it.\n\nUse **ever** in questions, to ask about any time in a life: **Have you ever** travelled by public transport? Use **never** with a positive verb to say not at any time: *I've **never** been on board a ship.*\n\n**Been to** means you went and came back, like a trip by plane last year. **Gone to** means you went and you are still there: *Sam isn't here; he's **gone to** the nearest station.*\n\nWhen you say exactly when, use the **past simple**, not the present perfect. Say *I **went** by plane in 2022*, not *I've been by plane in 2022*.\n\nYou can also say how often an experience happened. *I've used public transport **three times** this week, and every bus arrived on time.*",
+    "examples": [
+      "*I**'ve been** to Canada twice.* (experience + how many times)",
+      "*Have you **ever eaten** octopus?* (ever in a question)",
+      "*She**'s never driven** a car.* (never + past participle)",
+      "*They**'ve never been** on a plane.* (never)",
+      "*I**'ve seen** this film three times.* (how many times)",
+      "*It's the most beautiful place I**'ve ever seen**.* (superlative + ever)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with the past participle: Have you ever went on a plane?",
+        "a": "Have you ever been on a plane?"
+      },
+      {
+        "q": "Rewrite with never: I haven't been on board a ship at any time in my life.",
+        "a": "I've never been on board a ship."
+      },
+      {
+        "q": "Ask about experience: you / ever / travel by public transport?",
+        "a": "Have you ever travelled by public transport?"
+      },
+      {
+        "q": "Rewrite with the past simple: I've taken the plane to London in 2022.",
+        "a": "I took the plane to London in 2022."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Have you ever ___ to Australia?",
+        "options": [
+          "went",
+          "go",
+          "been",
+          "being"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I've never ___ sushi.",
+        "options": [
+          "eaten",
+          "eat",
+          "ate",
+          "eating"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ she ever met a famous person?",
+        "options": [
+          "Have",
+          "Has",
+          "Did",
+          "Is"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "We ___ been to that restaurant. Is it good?",
+        "options": [
+          "haven't never",
+          "are never",
+          "has never",
+          "have never"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "My brother ___ in a band.",
+        "options": [
+          "has never play",
+          "has never played",
+          "have never played",
+          "never has play"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Have you ever seen a ghost? – No, I ___.",
+        "options": [
+          "didn't",
+          "don't",
+          "haven't",
+          "hasn't"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I've seen this film ___ times.",
+        "options": [
+          "three",
+          "ever",
+          "never",
+          "since"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "It's the best pizza I've ___ eaten.",
+        "options": [
+          "never",
+          "yet",
+          "already",
+          "ever"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Sam isn't here. He's ___ to the shops.",
+        "options": [
+          "been",
+          "went",
+          "go",
+          "gone"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She's never ___ a horse.",
+        "options": [
+          "rode",
+          "ride",
+          "ridden",
+          "riding"
+        ],
+        "answer": 2
+      }
+    ]
+  }
+}
