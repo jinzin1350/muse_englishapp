@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "roborock-f25-gt",
+      "name_fa": "جارو و تی مرطوب روبوراک F25 GT",
+      "name_en": "roborock F25 GT Vacuum Mop All in One, Wet Dry Vacuum Cleaner Cordless, 20000Pa Floor Cleaner Machine for Tile Hardwood Wood Vinyl Floor, Edge to Edge Self Cleaning Electric Mop with 180° Lie-Flat",
+      "price_cad": 209.99,
+      "regular_cad": 279.99,
+      "discount_pct": 25,
+      "added_fa": "جمعه، ۱۳ نوامبر ۲۰۲۶",
+      "image": "img/roborock-f25-gt.jpg",
+      "url": "https://www.amazon.ca/dp/B0DQ7HD168?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "جارو و شست‌وشوی هم‌زمان کف با مکش ۲۰٬۰۰۰ پاسکال و خودشویی با آب داغ"
+    },
+    {
+      "id": "sony-wh-1000xm6-black",
+      "name_fa": "هدفون نویزکنسلینگ سونی WH-1000XM6",
+      "name_en": "Sony WH-1000XM6 The Best Noise Canceling Wireless Headphones, HD NC Processor QN3, 12 Microphones, 30-Hour Battery, Black",
+      "price_cad": 299.98,
+      "regular_cad": 599.99,
+      "discount_pct": 50,
+      "added_fa": "جمعه، ۱۳ نوامبر ۲۰۲۶",
+      "image": "img/sony-wh-1000xm6-black.jpg",
+      "url": "https://www.amazon.ca/dp/B0F3PQHWTZ?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "قوی‌ترین نویزکنسلینگ سونی با باتری ۳۰ ساعته، حالا نصف قیمت عرضهٔ کانادا"
+    },
+    {
       "id": "conair-digitalaire-4in1",
       "name_fa": "حالت‌دهنده مو کان‌ایر دیجیتال‌ایر",
       "name_en": "Conair DigitalAire 4-in-1 Styling System, 1600W High-Speed Digital Motor",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "گرمایش و خنک‌کنندگی بدون تیغه؛ یک دستگاه برای همه فصل‌های کانادا"
-    },
-    {
-      "id": "ninja-blast-denim-blue",
-      "name_fa": "مخلوط‌کن همراه نینجا بلست",
-      "name_en": "Ninja Blast Portable Blender, Cordless, 18oz. Vessel, Personal Blender for Shakes & Smoothies, BPA Free, Leakproof Lid & Sip Spout, USB-C Rechargeable, Dishwasher Safe Parts, Denim Blue, BC151NVC",
-      "price_cad": 49.93,
-      "regular_cad": 69.99,
-      "discount_pct": 29,
-      "added_fa": "چهارشنبه، ۱۱ نوامبر ۲۰۲۶",
-      "image": "img/ninja-blast-denim-blue.jpg",
-      "url": "https://www.amazon.ca/dp/B0CNF63GQZ?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "بی‌سیم و قابل شارژ با یواس‌بی‌سی؛ یخ و میوه یخ‌زده را خرد می‌کند"
-    },
-    {
-      "id": "soundcore-q20i-blue",
-      "name_fa": "هدفون بی‌سیم ساندکور کیو۲۰آی انکر",
-      "name_en": "soundcore by Anker Q20i Hybrid Active Noise Cancelling Headphones, Wireless Over-Ear Bluetooth, 40H Long ANC Playtime, Hi-Res Audio, Big Bass, Customize via an App, Transparency Mode, Ideal for Travel, Blue",
-      "price_cad": 49.99,
-      "regular_cad": 99.99,
-      "discount_pct": 50,
-      "added_fa": "چهارشنبه، ۱۱ نوامبر ۲۰۲۶",
-      "image": "img/soundcore-q20i-blue.jpg",
-      "url": "https://www.amazon.ca/dp/B0C3KWT5V6?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "حذف نویز ترکیبی، باتری تا ۴۰ ساعت و تنظیم با اپلیکیشن ساندکور"
     }
   ],
-  "updated_fa": "پنجشنبه ۲۱ آبان"
+  "updated_fa": "جمعه ۲۲ آبان"
 }
