@@ -1,0 +1,278 @@
+{
+  "date": "2026-11-14",
+  "theme": "cities & daily life",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "bath",
+      "pos": "noun",
+      "meaning": "Washing your body in a tub of water.",
+      "example": "I like to take a warm bath at night.",
+      "example_fa": "دوست دارم شب‌ها حمام آب گرم بگیرم.",
+      "pronunciation": "BAHTH",
+      "persian": "حمام، وان",
+      "photo": "media/a2/2026-11-14/photos/bath.jpg",
+      "word_audio": "media/a2/2026-11-14/word-audio/bath.mp3"
+    },
+    {
+      "word": "bathroom",
+      "pos": "noun",
+      "meaning": "A room with a toilet and a bath or shower.",
+      "example": "The bathroom is upstairs, next to my room.",
+      "example_fa": "حمام طبقه بالاست، کنار اتاق من.",
+      "pronunciation": "BAHTH-room",
+      "persian": "حمام، دستشویی",
+      "photo": "media/a2/2026-11-14/photos/bathroom.jpg",
+      "word_audio": "media/a2/2026-11-14/word-audio/bathroom.mp3"
+    },
+    {
+      "word": "block of flats",
+      "pos": "phrase",
+      "meaning": "A large building with many apartments.",
+      "example": "They live in a block of flats downtown.",
+      "example_fa": "آن‌ها در یک بلوک آپارتمانی در مرکز شهر زندگی می‌کنند.",
+      "pronunciation": "BLOK uv FLATS",
+      "persian": "آپارتمان، بلوک آپارتمانی",
+      "photo": "media/a2/2026-11-14/photos/block-of-flats.jpg",
+      "word_audio": "media/a2/2026-11-14/word-audio/block-of-flats.mp3"
+    },
+    {
+      "word": "bother",
+      "pos": "verb",
+      "meaning": "To make an effort to do something.",
+      "example": "Don't bother to call me, I'll be home late.",
+      "example_fa": "زحمت نکش به من زنگ بزنی، دیر به خانه می‌آیم.",
+      "pronunciation": "BAH-ther",
+      "persian": "زحمت کشیدن",
+      "photo": "media/a2/2026-11-14/photos/bother.jpg",
+      "word_audio": "media/a2/2026-11-14/word-audio/bother.mp3"
+    },
+    {
+      "word": "brush your teeth",
+      "pos": "phrase",
+      "meaning": "clean your teeth with a brush",
+      "example": "Remember to brush your teeth every morning.",
+      "example_fa": "یادت باشد هر صبح دندان‌هایت را مسواک بزنی.",
+      "pronunciation": "BRUSH yor TEETH",
+      "persian": "مسواک زدن",
+      "photo": "media/a2/2026-11-14/photos/brush-your-teeth.jpg",
+      "word_audio": "media/a2/2026-11-14/word-audio/brush-your-teeth.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-14/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: A New Home in the City",
+    "audio": "media/a2/2026-11-14/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-14/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A New Home in the Block of Flats",
+    "audio": "media/a2/2026-11-14/shadowing.mp3",
+    "transcript": "media/a2/2026-11-14/shadowing-transcript.txt",
+    "transcript_fa": "media/a2/2026-11-14/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-14/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-14/shadowing-sentences/015.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'bath' mean?",
+      "options": [
+        "A room with a toilet and a bath or shower.",
+        "Washing your body in a tub of water.",
+        "To make an effort to do something.",
+        "A large building with many apartments."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bathroom' mean?",
+      "options": [
+        "A room with a toilet and a bath or shower.",
+        "A large building with many apartments.",
+        "Washing your body in a tub of water.",
+        "clean your teeth with a brush"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'block of flats' mean?",
+      "options": [
+        "To make an effort to do something.",
+        "A large building with many apartments.",
+        "clean your teeth with a brush",
+        "Washing your body in a tub of water."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bother' mean?",
+      "options": [
+        "clean your teeth with a brush",
+        "A room with a toilet and a bath or shower.",
+        "To make an effort to do something.",
+        "Washing your body in a tub of water."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'brush your teeth' mean?",
+      "options": [
+        "A large building with many apartments.",
+        "clean your teeth with a brush",
+        "A room with a toilet and a bath or shower.",
+        "To make an effort to do something."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Infinitive of Purpose (I went out to buy milk)",
+    "explanation": "We use **to + verb** to say **why** we do something. *I went to the shop **to buy** some milk* answers the question *Why?*\n\nThis is called the **infinitive of purpose**. *She is learning English **to get** a better job.*\n\nBefore a noun, use **for + noun**, not **to**. *We went to the café **for** a coffee*, but *We went to the café **to drink** a coffee.*\n\nDo not use **for** before a verb. Say *I came here **to see** you*, never *for see* or *for to see*.\n\n**In order to** and **so as to** mean the same as **to**, but they are more formal. *They studied hard **in order to** pass the exam.*\n\nFor a negative purpose, use **in order not to** or **so as not to**. *Speak quietly **so as not to** wake the baby.*\n\nIn our **block of flats**, I go to the **bathroom** **to brush** my teeth. At night, I take a **bath** **to feel** calm, and I do not **bother** to cook late.",
+    "examples": [
+      "*I went to the bakery **to buy** some bread.* (to + verb)",
+      "*She's saving money **to buy** a car.* (purpose)",
+      "*We went to the café **for** a coffee.* (for + noun)",
+      "*He called me **to ask** about the meeting.* (to + verb)",
+      "*They studied hard **in order to** pass the exam.* (formal)",
+      "*Close the window **so as not to** let the cold in.* (negative purpose)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite using to + verb: I went to the bathroom because I wanted to brush my teeth.",
+        "a": "I went to the bathroom to brush my teeth."
+      },
+      {
+        "q": "Rewrite using to + verb: She takes a bath because she wants to feel calm.",
+        "a": "She takes a bath to feel calm."
+      },
+      {
+        "q": "Rewrite using for + noun: I went out because I wanted some food.",
+        "a": "I went out for some food."
+      },
+      {
+        "q": "Rewrite using in order not to: People in the block of flats speak quietly because they do not want to wake the baby.",
+        "a": "People in the block of flats speak quietly in order not to wake the baby."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I went to the bakery ___ some bread.",
+        "options": [
+          "for buy",
+          "for to buy",
+          "to buy",
+          "buying"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She's saving money ___ a car.",
+        "options": [
+          "for buy",
+          "to buy",
+          "to buying",
+          "buy"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Why are you learning English? – ___ get a better job.",
+        "options": [
+          "For",
+          "For to",
+          "Because",
+          "To"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We went to the supermarket ___ some food.",
+        "options": [
+          "for",
+          "to",
+          "for to",
+          "for buy"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He called me ___ about the meeting.",
+        "options": [
+          "to ask",
+          "for ask",
+          "asking for",
+          "for asking"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I use this app ___ new words.",
+        "options": [
+          "for learn",
+          "for to learn",
+          "learn",
+          "to learn"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "They got up early ___ the first train.",
+        "options": [
+          "for catch",
+          "to catch",
+          "catching",
+          "for to catch"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She went to the doctor's ___ a check-up.",
+        "options": [
+          "to",
+          "for to",
+          "for",
+          "for having"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "We'll leave early ___ the traffic.",
+        "options": [
+          "for avoid",
+          "to avoid",
+          "avoid",
+          "for to avoid"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I'm going to the station ___ my aunt. She's arriving at 6.",
+        "options": [
+          "to meet",
+          "for meet",
+          "for meeting",
+          "meet"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a2/2026-11-14/grammar-en.mp3"
+  }
+}

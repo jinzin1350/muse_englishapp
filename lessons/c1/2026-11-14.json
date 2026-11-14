@@ -1,0 +1,326 @@
+{
+ "date": "2026-11-14",
+ "theme": "technology",
+ "level": "c1",
+ "cefr": "C1",
+ "words": [
+  {
+   "word": "MP3 player",
+   "pos": "noun",
+   "meaning": "A portable electronic device for playing digital audio.",
+   "example": "I used my MP3 player to listen to music on the bus.",
+   "pronunciation": "em-pee-THREE PLAY-er",
+   "persian": "پخش کننده MP3",
+   "photo": "media/c1/2026-11-14/photos/mp3-player.jpg",
+   "word_audio": "media/c1/2026-11-14/word-audio/mp3-player.mp3"
+  },
+  {
+   "word": "nanotechnology",
+   "pos": "noun",
+   "meaning": "Technology dealing with dimensions and tolerances of nanometers.",
+   "example": "Nanotechnology has potential applications in medicine and electronics.",
+   "pronunciation": "NAN-oh-tek-NOL-uh-jee",
+   "persian": "فناوری نانو",
+   "photo": "media/c1/2026-11-14/photos/nanotechnology.jpg",
+   "word_audio": "media/c1/2026-11-14/word-audio/nanotechnology.mp3"
+  },
+  {
+   "word": "nuclear family",
+   "pos": "noun phrase",
+   "meaning": "A family unit of parents and their children.",
+   "example": "The nuclear family is still common in many cultures.",
+   "pronunciation": "NOO-klee-er FAM-uh-lee",
+   "persian": "خانواده هسته‌ای (والدین و فرزندان)",
+   "photo": "media/c1/2026-11-14/photos/nuclear-family.jpg",
+   "word_audio": "media/c1/2026-11-14/word-audio/nuclear-family.mp3"
+  },
+  {
+   "word": "population explosion",
+   "pos": "noun",
+   "meaning": "A sudden, rapid increase in population size.",
+   "example": "The population explosion puts strain on global resources.",
+   "pronunciation": "pop-yuh-LAY-shun ek-SPLOH-zhun",
+   "persian": "انفجار جمعیت",
+   "photo": "media/c1/2026-11-14/photos/population-explosion.jpg",
+   "word_audio": "media/c1/2026-11-14/word-audio/population-explosion.mp3"
+  },
+  {
+   "word": "router",
+   "pos": "noun",
+   "meaning": "a device that sends internet signals to computers",
+   "example": "My Wi-Fi router needs to be reset.",
+   "pronunciation": "ROW-ter",
+   "persian": "روتر",
+   "photo": "media/c1/2026-11-14/photos/router.jpg",
+   "word_audio": "media/c1/2026-11-14/word-audio/router.mp3"
+  },
+  {
+   "word": "satellite communications",
+   "pos": "phrase",
+   "meaning": "Communication using artificial satellites to transmit signals.",
+   "example": "Remote areas often rely on satellite communications for internet access.",
+   "pronunciation": "SAT-uh-lite kuh-myoo-nih-KAY-shuns",
+   "persian": "ارتباطات ماهواره‌ای",
+   "photo": "media/c1/2026-11-14/photos/satellite-communications.jpg",
+   "word_audio": "media/c1/2026-11-14/word-audio/satellite-communications.mp3"
+  },
+  {
+   "word": "smart building",
+   "pos": "noun phrase",
+   "meaning": "A building using technology to manage systems efficiently.",
+   "example": "The new office is a smart building with automated climate control.",
+   "pronunciation": "SMART BIL-ding",
+   "persian": "ساختمان هوشمند",
+   "photo": "media/c1/2026-11-14/photos/smart-building.jpg",
+   "word_audio": "media/c1/2026-11-14/word-audio/smart-building.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/c1/2026-11-14/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Technology That Connects Us",
+  "audio": "media/c1/2026-11-14/podcast.mp3",
+  "cover": null,
+  "transcript": "media/c1/2026-11-14/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Morning the Router Stopped",
+  "audio": "media/c1/2026-11-14/shadowing.mp3",
+  "transcript": "media/c1/2026-11-14/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/c1/2026-11-14/shadowing-sentences/001.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/002.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/003.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/004.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/005.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/006.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/007.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/008.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/009.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/010.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/011.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/012.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/013.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/014.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/015.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/016.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/017.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/018.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/019.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/020.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/021.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/022.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/023.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/024.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/025.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/026.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/027.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/028.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/029.mp3",
+   "media/c1/2026-11-14/shadowing-sentences/030.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'MP3 player' mean?",
+   "options": [
+    "A portable electronic device for playing digital audio.",
+    "a device that sends internet signals to computers",
+    "A family unit of parents and their children.",
+    "A building using technology to manage systems efficiently."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'nanotechnology' mean?",
+   "options": [
+    "A sudden, rapid increase in population size.",
+    "Technology dealing with dimensions and tolerances of nanometers.",
+    "Communication using artificial satellites to transmit signals.",
+    "A portable electronic device for playing digital audio."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'nuclear family' mean?",
+   "options": [
+    "Communication using artificial satellites to transmit signals.",
+    "A portable electronic device for playing digital audio.",
+    "A family unit of parents and their children.",
+    "Technology dealing with dimensions and tolerances of nanometers."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'population explosion' mean?",
+   "options": [
+    "Technology dealing with dimensions and tolerances of nanometers.",
+    "A building using technology to manage systems efficiently.",
+    "A portable electronic device for playing digital audio.",
+    "A sudden, rapid increase in population size."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'router' mean?",
+   "options": [
+    "A family unit of parents and their children.",
+    "a device that sends internet signals to computers",
+    "A building using technology to manage systems efficiently.",
+    "Technology dealing with dimensions and tolerances of nanometers."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'satellite communications' mean?",
+   "options": [
+    "A portable electronic device for playing digital audio.",
+    "A sudden, rapid increase in population size.",
+    "Communication using artificial satellites to transmit signals.",
+    "A family unit of parents and their children."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'smart building' mean?",
+   "options": [
+    "A building using technology to manage systems efficiently.",
+    "A family unit of parents and their children.",
+    "a device that sends internet signals to computers",
+    "A portable electronic device for playing digital audio."
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "title": "Mixed Conditionals",
+  "explanation": "**Mixed conditionals** combine two different times. Both the condition and the result are imagined, but one is in the **past** and the other is in the **present**.\n\nFor a past condition with a present result, use **if + past perfect, would + base verb**, often with *now*. If the engineers **had used** better nanotechnology, the router **would be** faster now.\n\nFor a present condition with a past result, use **if + past simple, would have + past participle**. The present condition is usually a general fact, like living far from a smart building or relying on satellite communications.\n\nCompare the pure conditionals: the second conditional imagines a present condition and result, while the third imagines a past condition and result. Mixed conditionals simply **mix** the two times.\n\n**Could** and **might** can also appear in the result clause. If the city **had planned** for the population explosion, it **might be** less crowded now.",
+  "examples": [
+   "*If I **had studied** medicine, I **would be** a doctor now.* (past → present)",
+   "*If she **hadn't missed** the flight, she **would be** in Rome now.* (past → present)",
+   "*If I **weren't** afraid of heights, I **would have gone** on the roller coaster.* (present → past)",
+   "*If he **were** more organised, he **wouldn't have forgotten** the meeting.* (present → past)",
+   "*If you **had told** me earlier, I **wouldn't be** so worried now.* (past → present)",
+   "*If I **spoke** better English, I **would have passed** the interview.* (present → past)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite as a mixed conditional (past condition, present result): I did not reset the router, so I have no internet now.",
+    "a": "If I had reset the router, I would have internet now."
+   },
+   {
+    "q": "Rewrite as a mixed conditional (present condition, past result): I do not speak French, so I did not understand the film on satellite communications.",
+    "a": "If I spoke French, I would have understood the film on satellite communications."
+   },
+   {
+    "q": "Rewrite as a mixed conditional (past condition, present result): They did not move into a smart building, so their bills are high now.",
+    "a": "If they had moved into a smart building, their bills would be lower now."
+   },
+   {
+    "q": "Rewrite as a mixed conditional (present condition, past result): Our nuclear family lives far away, so we missed the celebration yesterday.",
+    "a": "If our nuclear family didn't live far away, we wouldn't have missed the celebration yesterday."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If I had taken that job, I ___ rich now.",
+    "options": [
+     "would be",
+     "would have been",
+     "will be",
+     "am"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "If she ___ the train, she would be here now.",
+    "options": [
+     "didn't miss",
+     "hadn't missed",
+     "wouldn't miss",
+     "doesn't miss"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "If I spoke Japanese, I ___ the film last night.",
+    "options": [
+     "would understand",
+     "will understand",
+     "would have understood",
+     "understood"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "If he ___ so lazy, he would have finished the project on time.",
+    "options": [
+     "hadn't",
+     "isn't",
+     "wouldn't be",
+     "weren't"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "If we had left earlier, we ___ there by now.",
+    "options": [
+     "would have been",
+     "would be",
+     "will be",
+     "are"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "Choose the mixed conditional.",
+    "options": [
+     "If I had more money, I'd buy a car.",
+     "If I'd had more money, I'd have bought a car.",
+     "If I'd saved more money, I'd have a car now.",
+     "If I have more money, I'll buy a car."
+    ],
+    "answer": 2
+   },
+   {
+    "question": "If I ___ afraid of flying, I would have visited you in Australia.",
+    "options": [
+     "weren't",
+     "wasn't been",
+     "am not",
+     "won't be"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "If you had gone to bed earlier, you ___ so tired now.",
+    "options": [
+     "wouldn't have been",
+     "won't be",
+     "aren't",
+     "wouldn't be"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "If she had accepted his offer, she ___ in Paris now.",
+    "options": [
+     "would have lived",
+     "lives",
+     "would live",
+     "will live"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "If I ___ a car, I would have driven you to the airport yesterday.",
+    "options": [
+     "have",
+     "had",
+     "would have",
+     "will have"
+    ],
+    "answer": 1
+   }
+  ]
+ }
+}
