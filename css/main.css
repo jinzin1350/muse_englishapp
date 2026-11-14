@@ -2535,7 +2535,7 @@ body.duo-playing{padding-bottom:0!important;}
 .an-wa .ok{color:#1d7a3f}
 
 /* ---------- onboarding v2 (2026-10-04, his design) ---------- */
-.modal-card:has(.onb) { max-width: 600px; padding: 0; overflow: hidden; border-radius: 26px; }
+.modal-card:has(.onb) { max-width: 600px; padding: 0; overflow-y: auto; border-radius: 26px; }
 .onb { background: linear-gradient(180deg, #fffdf8 0%, #fff6ea 100%); color: #17212b;
   border-radius: 26px; padding: 1.4rem 1.6rem 1.5rem; text-align: left; }
 .onb-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem; }
@@ -2585,7 +2585,7 @@ body.duo-playing{padding-bottom:0!important;}
 @media (max-width: 520px) {
   .onb-body { flex-direction: column; }
   .onb[dir="rtl"] .onb-body { flex-direction: column; }
-  .onb-img { max-width: 200px; }
+  .onb-img { flex: none; width: 200px; max-width: 62%; height: auto; }
   .onb-title { font-size: 1.7rem; }
 }
 
