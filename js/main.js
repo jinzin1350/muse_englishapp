@@ -5123,20 +5123,26 @@ function buildTutorialSteps() {
   /* 4-step core-loop tour: words -> quiz -> streak -> podcast.
      Each step highlights one stable UI target (tab buttons + streak banner),
      one sentence each, skippable, ends at today's lesson. */
-  return [
+  const steps = [
     { id: 'words', view: 'lesson', selector: '.lesson-tab[data-tab="words"]',
       kicker: '📝', title: T('کلمات', 'Words'),
       text: T('کلمات امروز رو اینجا یاد بگیر', 'Learn today\u2019s words here') },
     { id: 'quiz', selector: '.lesson-tab[data-tab="quiz"]',
       kicker: '🎯', title: T('کوییز', 'Quiz'),
       text: T('کوییز بده و XP بگیر', 'Take the quiz and earn XP') },
-    { id: 'streak', view: 'home', selector: '.stk-link',
+    { id: 'streak', view: 'home', selector: '.stk-link, .hm-streak',
       kicker: '🔥', title: T('استریک', 'Streak'),
       text: T('هر روز بیا تا استریکت نپره', 'Come back every day to keep your streak') },
     { id: 'podcast', view: 'lesson', selector: '.lesson-tab[data-tab="podcast"]',
       kicker: '🎧', title: T('پادکست', 'Podcast'),
       text: T('کلمات امروز رو توی مکالمه بشنو', 'Hear today\u2019s words in conversation') }
   ];
+  /* A1 lessons have no podcast, so the podcast tab does not exist for A1
+     learners — touring it would dead-wait and skip. */
+  if (state.user && state.user.level === 'a1') {
+    return steps.filter(function (s) { return s.id !== 'podcast'; });
+  }
+  return steps;
 }
 /* One persistent overlay for the whole tour: the dim NEVER lifts between
    steps (fixes the unlocked-screen gap). The hole glides to each target,
@@ -5222,6 +5228,16 @@ async function tutorialStep() {
   if (!tutState.active || tutState.i !== myStep) return;
   if (s.selector && !el) { tutorialNext(); return; } // missing target -> skip gracefully
   tutRenderStep(s, el, steps.length);
+  /* Settle passes: sticky bars, images and fonts can shift the target for a
+     moment after a view change — re-place from the fresh rect so the hole
+     ends up on the target, not where it was mid-layout. */
+  [450, 1200].forEach(function (ms) {
+    setTimeout(function () {
+      if (!tutState.active || tutState.i !== myStep) return;
+      const el2 = s.selector ? document.querySelector(s.selector) : null;
+      if (el2) tutPlaceStep(s, el2, true);
+    }, ms);
+  });
 }
 /* Fade the hole+text out while the next target loads — the dim stays up,
    so the screen is never interactive mid-tour. */
@@ -5236,14 +5252,14 @@ function tutRenderStep(s, el, n) {
   const hole = document.getElementById('tut-hole');
   const text = document.getElementById('tut-text');
   if (!hole || !text || !el) return;
+  /* Instant scroll: the page CSS animates scrolling (scroll-behavior:
+     smooth), and measuring the target mid-animation strands the hole at
+     stale coordinates — force an instant jump, then measure. */
+  const de = document.documentElement;
+  const prevSb = de.style.scrollBehavior;
+  de.style.scrollBehavior = 'auto';
   try { el.scrollIntoView({ block: 'center' }); } catch (e) {}
-  const r = el.getBoundingClientRect();
-  const pad = 8;
-  hole.style.left = Math.max(6, r.left - pad) + 'px';
-  hole.style.top = Math.max(6, r.top - pad) + 'px';
-  hole.style.width = (r.width + pad * 2) + 'px';
-  hole.style.height = (r.height + pad * 2) + 'px';
-  hole.style.opacity = '1';
+  de.style.scrollBehavior = prevSb;
   /* One block: counter + title + body + Next + Skip, positioned in the
      largest free area (above or below the hole) and clamped to the viewport.
      The button can never cover the text, hide behind it, or fly off-screen. */
@@ -5254,22 +5270,7 @@ function tutRenderStep(s, el, n) {
     '<button id="tut-skip">' + (fa ? 'رد شو' : 'Skip tour') + '</button>';
   text.setAttribute('dir', fa ? 'rtl' : 'ltr');
   text.setAttribute('lang', fa ? 'fa' : 'en');
-  const w = Math.min(340, window.innerWidth - 40);
-  text.style.width = w + 'px';
-  let left = r.left + r.width / 2 - w / 2;
-  left = Math.max(20, Math.min(window.innerWidth - w - 20, left));
-  text.style.left = left + 'px';
-  text.style.visibility = 'hidden';
-  text.style.opacity = '0';
-  text.style.transform = 'translateY(8px)';
-  const vh = window.innerHeight;
-  const h = text.offsetHeight || 230;
-  const above = r.top, below = vh - r.bottom;
-  let top = above >= below ? Math.max(12, above - h - 20) : r.bottom + 20;
-  top = Math.max(12, Math.min(vh - h - 12, top));
-  text.style.top = top + 'px';
-  text.style.bottom = 'auto';
-  text.style.visibility = '';
+  tutPlaceStep(s, el);
   const nx = document.getElementById('tut-next');
   if (nx) nx.addEventListener('click', function (e) { e.stopPropagation(); tutorialNext(); });
   const sk = document.getElementById('tut-skip');
@@ -5279,6 +5280,39 @@ function tutRenderStep(s, el, n) {
     text.style.opacity = '1';
     text.style.transform = 'translateY(0)';
   });
+}
+/* Geometry only: place the hole + text block from the target's CURRENT
+   rect. Split out of tutRenderStep so settle passes can re-place after
+   late layout shifts without rebuilding the text or its listeners. */
+function tutPlaceStep(s, el, keepVisible) {
+  const hole = document.getElementById('tut-hole');
+  const text = document.getElementById('tut-text');
+  if (!hole || !text || !el) return;
+  const r = el.getBoundingClientRect();
+  const pad = 8;
+  hole.style.left = Math.max(6, r.left - pad) + 'px';
+  hole.style.top = Math.max(6, r.top - pad) + 'px';
+  hole.style.width = (r.width + pad * 2) + 'px';
+  hole.style.height = (r.height + pad * 2) + 'px';
+  hole.style.opacity = '1';
+  const w = Math.min(340, window.innerWidth - 40);
+  text.style.width = w + 'px';
+  let left = r.left + r.width / 2 - w / 2;
+  left = Math.max(20, Math.min(window.innerWidth - w - 20, left));
+  text.style.left = left + 'px';
+  if (!keepVisible) {
+    text.style.visibility = 'hidden';
+    text.style.opacity = '0';
+    text.style.transform = 'translateY(8px)';
+  }
+  const vh = window.innerHeight;
+  const h = text.offsetHeight || 230;
+  const above = r.top, below = vh - r.bottom;
+  let top = above >= below ? Math.max(12, above - h - 20) : r.bottom + 20;
+  top = Math.max(12, Math.min(vh - h - 12, top));
+  text.style.top = top + 'px';
+  text.style.bottom = 'auto';
+  if (!keepVisible) text.style.visibility = '';
 }
 function tutCounter(i, n, fa) {
   if (fa) {
@@ -14231,7 +14265,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611142223';
+var APP_VERSION = '202611142325';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
