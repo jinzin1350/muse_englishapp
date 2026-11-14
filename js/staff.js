@@ -2615,13 +2615,27 @@ async function apRenderSupport(v) {
   try { var r = await sb.rpc('admin_support_threads'); if (r.error) throw r.error; rows = r.data || []; } catch (e) { rows = null; }
   if (!rows) { host.innerHTML = '<div class="empty">Could not load support threads — is the support migration installed?</div>'; return; }
   if (!rows.length) { host.innerHTML = '<div class="empty">No support messages yet.</div>'; return; }
-  host.innerHTML = rows.map(function (t) {
+  var mode = 'needs';
+  function rowHTML(t) {
     return '<a class="ap-sup-row" href="/manage/support/' + esc(t.user_id) + '">' +
       '<span class="ap-sup-main"><b>' + esc(t.display_name || t.email || t.user_id) + '</b> ' +
       '<span class="muted">' + esc(t.email || '') + (t.level ? ' · ' + esc(t.level) : '') + '</span>' +
       '<span class="ap-sup-last" dir="auto">' + (t.last_from_admin ? 'You: ' : '') + esc(t.last_body || '') + '</span></span>' +
       (t.unread ? '<span class="sup-badge">' + t.unread + '</span>' : '') + '</a>';
-  }).join('');
+  }
+  function renderList() {
+    var needs = rows.filter(function (t) { return !t.last_from_admin; });
+    var shown = mode === 'needs' ? needs : rows;
+    host.innerHTML =
+      '<div style="display:flex;gap:.5rem;margin-bottom:.8rem">' +
+      '<button type="button" id="ap-sup-needs" class="btn ' + (mode === 'needs' ? 'btn-orange' : 'btn-ghost') + ' btn-sm">Needs reply (' + needs.length + ')</button>' +
+      '<button type="button" id="ap-sup-all" class="btn ' + (mode === 'all' ? 'btn-orange' : 'btn-ghost') + ' btn-sm">All (' + rows.length + ')</button>' +
+      '</div>' +
+      (shown.length ? shown.map(rowHTML).join('') : '<div class="empty">' + (mode === 'needs' ? 'No threads waiting for a reply. 🎉' : 'No support messages yet.') + '</div>');
+    host.querySelector('#ap-sup-needs').addEventListener('click', function () { mode = 'needs'; renderList(); });
+    host.querySelector('#ap-sup-all').addEventListener('click', function () { mode = 'all'; renderList(); });
+  }
+  renderList();
 }
 
 async function apRenderSupportThread(v, userId) {
