@@ -5009,12 +5009,95 @@ async function maybeShowWelcome() {
   const fa = (lvl === 'a1' || lvl === 'a2');
   const offerTour = !tutorialSeen();
   showModal(welcomeModalHTML(fa, offerTour), true);
+  window._introAfterWelcome = true; /* intro popup (features + install) chains after the welcome exits */
   // Mark as seen (DB first, localStorage as backup so it never double-shows).
   const now = new Date().toISOString();
   u.welcomeSeenAt = now;
   try { localStorage.setItem('el_welcome_seen_' + u.id, '1'); } catch (e) {}
   try { if (sb) await sb.rpc('set_welcome_seen'); } catch (e) {}
   try { if (sb) await sb.rpc('send_welcome_message', { p_body: welcomeBody(fa) }); } catch (e) {}
+}
+
+/* ---------------- intro popup: features + install (Alireza, 2026-11-14) ----------------
+   A separate popup chained right AFTER the welcome modal exits (start,
+   close, or the end of the guided tour). New users told us they leave
+   because they (1) don't know the app can be installed and (2) don't know
+   what it can do. Once per account: it inherits the welcome's once-only
+   gate via window._introAfterWelcome, plus a local seen-flag as backup. */
+function consumeIntroAfterWelcome() {
+  if (!window._introAfterWelcome) return;
+  window._introAfterWelcome = false;
+  setTimeout(function () { maybeShowIntroPopup(0); }, 400);
+}
+function maybeShowIntroPopup(tries) {
+  try {
+    const u = state.user;
+    if (!u || u.demo || u.isAdmin) return;
+    if (pwaIsStandalone()) return; /* already installed — nothing to sell */
+    if (localStorage.getItem('el_intro_seen_' + u.id)) return;
+    if (document.getElementById('app-modal')) { /* another modal is up — wait it out, briefly */
+      if (tries < 3) setTimeout(function () { maybeShowIntroPopup(tries + 1); }, 1200);
+      return;
+    }
+    localStorage.setItem('el_intro_seen_' + u.id, '1');
+    showIntroPopup();
+  } catch (e) {}
+}
+function showIntroPopup() {
+  const fa = uiLang() === 'fa';
+  pwaHideBanner(); /* never stack the install surfaces */
+  const iosSheet = document.getElementById('pwa-ios');
+  if (iosSheet) iosSheet.classList.add('hidden');
+  pwaSnooze();
+  const canPrompt = !!pwaDeferredPrompt;
+  const ios = pwaIsIos();
+  const feat = fa
+    ? '<div style="line-height:2">' +
+      '<div>\uD83D\uDCDA <b>درس روزانه</b> — هر روز یه درس تازه، با پادکست و تمرین تلفظ</div>' +
+      '<div>\uD83D\uDD01 <b>مرور هوشمند لغت</b> — لغت ذخیره کن؛ خودش سر وقت برای مرور برمی‌گرده</div>' +
+      '<div>\u270D\uFE0F <b>گرامر قدم‌به‌قدم</b> — برای سطح‌های A1 تا B1 با توضیح فارسی</div>' +
+      '<div>\uD83C\uDF93 <b>آزمون آیلتس</b> — یه آزمون کامل و رایگان، با نمره‌دهی معلم</div></div>'
+    : '<div style="line-height:2">' +
+      '<div>\uD83D\uDCDA <b>Daily lessons</b> — a fresh lesson every day, with a podcast and pronunciation practice</div>' +
+      '<div>\uD83D\uDD01 <b>Smart word review</b> — save words and they come back for review right on time</div>' +
+      '<div>\u270D\uFE0F <b>Step-by-step grammar</b> — with Persian explanations for levels A1–B1</div>' +
+      '<div>\uD83C\uDF93 <b>IELTS mock test</b> — one full test, free, scored by a teacher</div></div>';
+  const installLine = fa
+    ? '<p class="muted" style="margin-top:0.9rem">\uD83D\uDCF2 <b>میوز انگلیش یه اپه!</b> نصبش کن تا همیشه روی گوشی‌ت باشه و لازم نباشه هر بار سایت رو باز کنی.</p>'
+    : '<p class="muted" style="margin-top:0.9rem">\uD83D\uDCF2 <b>Muse English is an app!</b> Install it so it lives on your phone — no need to open the site every time.</p>';
+  const iosSteps = fa
+    ? '<p class="muted">توی سافاری روی دکمهٔ اشتراک‌گذاری بزن و گزینهٔ «افزودن به صفحهٔ اصلی» رو انتخاب کن (Add to Home Screen)</p>'
+    : '<p class="muted">In Safari, tap the Share button and choose \u201CAdd to Home Screen\u201D.</p>';
+  const btnStyle = 'padding:0.95rem 1rem;font-size:1.05rem;border-radius:14px;margin-top:0.8rem';
+  const noStyle = 'background:#FFF8EE;border:1.5px solid #EBD5B8;color:#8C5A28;font-weight:700;padding:0.9rem 1rem;font-size:1rem;border-radius:14px;margin-top:0.6rem;box-shadow:0 2px 8px rgba(160,110,40,.10);cursor:pointer';
+  const closeBtn = canPrompt
+    ? '<button class="btn btn-block" id="intro-close" style="' + noStyle + '">' + (fa ? 'فعلاً نه' : 'Not now') + '</button>'
+    : '<button class="btn btn-orange btn-block" id="intro-close" style="' + btnStyle + '">' + (fa ? 'باشه، شروع کنیم' : 'Got it — let\u2019s start') + '</button>';
+  const html = (fa ? '<div dir="rtl" style="text-align:right">' : '<div>') +
+    '<div class="modal-ico">\uD83D\uDE80</div>' +
+    '<h2>' + (fa ? 'میوز انگلیش چیا داره؟' : 'What can Muse English do?') + '</h2>' +
+    feat + installLine +
+    (canPrompt
+      ? '<button class="btn btn-orange btn-block" id="intro-install" style="' + btnStyle + '">' + (fa ? '\uD83D\uDCF2 نصب اپ' : '\uD83D\uDCF2 Install the app') + '</button>'
+      : (ios ? iosSteps : '')) +
+    closeBtn + '</div>';
+  const ov = showModal(html);
+  try { trackEvent('intro_popup', { action: 'seen', ios: ios ? 1 : 0, prompt: canPrompt ? 1 : 0 }); } catch (e) {}
+  const inst = ov.querySelector('#intro-install');
+  if (inst) inst.addEventListener('click', function () {
+    try { trackEvent('intro_popup', { action: 'install' }); } catch (e) {}
+    closeModal();
+    if (pwaDeferredPrompt) {
+      const dp = pwaDeferredPrompt;
+      pwaDeferredPrompt = null;
+      dp.prompt();
+      dp.userChoice.then(function () { pwaSnooze(); }).catch(function () {});
+    }
+  });
+  ov.querySelector('#intro-close').addEventListener('click', function () {
+    try { trackEvent('intro_popup', { action: 'dismiss' }); } catch (e) {}
+    closeModal();
+  });
 }
 
 /* ---------------- guided first-run tutorial ----------------
@@ -5076,6 +5159,7 @@ function endTutorial() {
   window.removeEventListener('resize', tutReposition);
   closeTutorialUI();
   markTutorialSeen();
+  consumeIntroAfterWelcome();
 }
 function tutorialNext() {
   if (!tutState.active) return;
@@ -14111,9 +14195,9 @@ function bindEvents() {
     const t = e.target.closest('#app-modal [data-action]');
     if (!t) return;
     const ma = t.getAttribute('data-action');
-    if (ma === 'modal-close') closeModal();
+    if (ma === 'modal-close') { closeModal(); consumeIntroAfterWelcome(); }
     else if (ma === 'welcome-tour') { closeModal(); startTutorial(); }
-    else if (ma === 'welcome-start') { closeModal(); state.lessonTab = 'words'; if (state.lessons && state.lessons.length) go('lesson', state.lessons[0].date); else go('lesson'); }
+    else if (ma === 'welcome-start') { closeModal(); state.lessonTab = 'words'; if (state.lessons && state.lessons.length) go('lesson', state.lessons[0].date); else go('lesson');  consumeIntroAfterWelcome(); }
     else if (ma === 'teacher-message-send') teacherMessageSend(parseInt(t.getAttribute('data-i'), 10), t);
     else if (ma === 'assignment-create') createAssignment(t);
     else if (ma === 'assignment-cancel') cancelScheduledAssignment(parseInt(t.getAttribute('data-i'), 10), t);
@@ -14147,7 +14231,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611141730';
+var APP_VERSION = '202611142223';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

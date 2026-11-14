@@ -278,9 +278,9 @@ function bindEvents() {
     const t = e.target.closest('#app-modal [data-action]');
     if (!t) return;
     const ma = t.getAttribute('data-action');
-    if (ma === 'modal-close') closeModal();
+    if (ma === 'modal-close') { closeModal(); consumeIntroAfterWelcome(); }
     else if (ma === 'welcome-tour') { closeModal(); startTutorial(); }
-    else if (ma === 'welcome-start') { closeModal(); state.lessonTab = 'words'; if (state.lessons && state.lessons.length) go('lesson', state.lessons[0].date); else go('lesson'); }
+    else if (ma === 'welcome-start') { closeModal(); state.lessonTab = 'words'; if (state.lessons && state.lessons.length) go('lesson', state.lessons[0].date); else go('lesson');  consumeIntroAfterWelcome(); }
     else if (ma === 'teacher-message-send') teacherMessageSend(parseInt(t.getAttribute('data-i'), 10), t);
     else if (ma === 'assignment-create') createAssignment(t);
     else if (ma === 'assignment-cancel') cancelScheduledAssignment(parseInt(t.getAttribute('data-i'), 10), t);
