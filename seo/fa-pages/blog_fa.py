@@ -184,7 +184,7 @@ def S(t, old, new):
     return t.replace(old, new)
 
 POS = [("noun phrase", "گروه اسمی"), ("verb phrase", "گروه فعلی"), ("adjective phrase", "گروه وصفی"), ("adverbial phrase", "گروه قیدی"),
-       ("phrasal verb", "فعل عبارتی"), ("proper noun", "اسم خاص"), ("uncountable noun", "اسم غیرقابل‌شمارش"), ("noun (plural)", "اسم جمع"),
+       ("phrasal verb", "فعل عبارتی"), ("proper noun", "اسم خاص"), ("uncountable noun", "اسم غیرقابل‌شمارش"), ("noun (plural)", "اسم جمع"), ("plural noun", "اسم جمع"),
        ("modal verb", "فعل وجهی"), ("auxiliary verb", "فعل کمکی"), ("noun", "اسم"), ("verb", "فعل"), ("adjective", "صفت"),
        ("adverb", "قید"), ("phrase", "عبارت"), ("idiom", "اصطلاح"), ("preposition", "حرف اضافه"), ("conjunction", "حرف ربط"),
        ("pronoun", "ضمیر"), ("number", "عدد"), ("abbreviation", "مخفف"), ("suffix", "پسوند"), ("prefix", "پیشوند"),
@@ -456,7 +456,7 @@ VT = {
     "work-jobs": ("کار و شغل", "شغل‌ها، محیط کار و انگلیسی تجاری"),
 }
 SUB = {
-    "body-parts": "اعضای بدن", "illnesses-symptoms": "بیماری‌ها و علائم", "doctor-hospital": "پیش دکتر و در بیمارستان",
+    "appearance": "توصیف ظاهر", "body-parts": "اعضای بدن", "illnesses-symptoms": "بیماری‌ها و علائم", "doctor-hospital": "پیش دکتر و در بیمارستان",
     "healthy-lifestyle": "سبک زندگی سالم و عادت‌ها", "mental-health": "سلامت روان و آرامش", "medicine-public-health": "پزشکی و بهداشت عمومی",
     "daily-routine": "کارهای روزانه", "places-in-town": "جاهای شهر", "urban-rural-life": "زندگی شهری و روستایی",
     "school-classroom": "مدرسه و کلاس", "studying-exams": "درس خواندن و امتحان", "language-learning": "یادگیری زبان",
