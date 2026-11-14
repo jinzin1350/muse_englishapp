@@ -1,6 +1,62 @@
 {
   "products": [
     {
+      "id": "picassotiles-60-pt60",
+      "name_fa": "کاشی مغناطیسی پیکاسوتایلز ۶۰ تکه",
+      "name_en": "PicassoTiles 60 Piece Magnetic Tiles Set PT60",
+      "price_cad": 36.79,
+      "regular_cad": 45.99,
+      "discount_pct": 20,
+      "added_fa": "شنبه، ۱۴ نوامبر ۲۰۲۶",
+      "image": "img/picassotiles-60-pt60.jpg",
+      "url": "https://www.amazon.ca/dp/B00APVXSM6?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "بازی آموزشی ساخت‌وساز سه‌بعدی برای کودکان سه سال به بالا"
+    },
+    {
+      "id": "jbl-vibe-beam-2-black",
+      "name_fa": "ایرباد جی‌بی‌ال وایب بیم ۲",
+      "name_en": "JBL Vibe Beam 2 True Wireless Noise Cancelling Earbuds, Black",
+      "price_cad": 49.98,
+      "regular_cad": 99.98,
+      "discount_pct": 50,
+      "added_fa": "شنبه، ۱۴ نوامبر ۲۰۲۶",
+      "image": "img/jbl-vibe-beam-2-black.jpg",
+      "url": "https://www.amazon.ca/dp/B0DN45YMP6?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "حذف نویز فعال، بیس عمیق و پخش تا ۴۰ ساعت با کیس شارژ"
+    },
+    {
+      "id": "dyson-v8-origin",
+      "name_fa": "جاروشارژی دایسون وی۸ اوریجین",
+      "name_en": "Dyson V8 Origin Cordless Vacuum",
+      "price_cad": 349.99,
+      "regular_cad": 499.99,
+      "discount_pct": 30,
+      "added_fa": "شنبه، ۱۴ نوامبر ۲۰۲۶",
+      "image": "img/dyson-v8-origin.jpg",
+      "url": "https://www.amazon.ca/dp/B0BLTQ1M7T?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "مکش قوی، فیلتراسیون کامل و تبدیل سریع به جاروی دستی"
+    },
+    {
+      "id": "acer-nitro-ed270r",
+      "name_fa": "مانیتور گیمینگ ایسر نیترو ۲۷ اینچ",
+      "name_en": "Acer Nitro ED270R MBMIIPHX 27\" FHD 1500R Curved Gaming Monitor, 165Hz, AMD FreeSync Premium",
+      "price_cad": 159.99,
+      "regular_cad": 279.99,
+      "discount_pct": 43,
+      "added_fa": "شنبه، ۱۴ نوامبر ۲۰۲۶",
+      "image": "img/acer-nitro-ed270r.jpg",
+      "url": "https://www.amazon.ca/dp/B0B6JWXZZP?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "نمایشگر خمیده فول‌اچ‌دی با نرخ نوسازی ۱۶۵ هرتز و فری‌سینک پریمیوم"
+    },
+    {
       "id": "shark-flexstyle-hd440bkc",
       "name_fa": "حالت‌دهنده مو شارک فلکس‌استایل",
       "name_en": "Shark FlexStyle Hair Styling System, Portable & Powerful Blow Dryer Brush, Hair Curler & Volumizer, 6 Styling Tools Included, Black, HD440BKC (Canadian Version)",
@@ -55,63 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "تمیزی سونیک ملایم با تایمر دو دقیقه‌ای و باتری تا دو هفته"
-    },
-    {
-      "id": "roborock-f25-gt",
-      "name_fa": "جارو و تی مرطوب روبوراک F25 GT",
-      "name_en": "roborock F25 GT Vacuum Mop All in One, Wet Dry Vacuum Cleaner Cordless, 20000Pa Floor Cleaner Machine for Tile Hardwood Wood Vinyl Floor, Edge to Edge Self Cleaning Electric Mop with 180° Lie-Flat",
-      "price_cad": 209.99,
-      "regular_cad": 279.99,
-      "discount_pct": 25,
-      "added_fa": "جمعه، ۱۳ نوامبر ۲۰۲۶",
-      "image": "img/roborock-f25-gt.jpg",
-      "url": "https://www.amazon.ca/dp/B0DQ7HD168?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "جارو و شست‌وشوی هم‌زمان کف با مکش ۲۰٬۰۰۰ پاسکال و خودشویی با آب داغ"
-    },
-    {
-      "id": "sony-wh-1000xm6-black",
-      "name_fa": "هدفون نویزکنسلینگ سونی WH-1000XM6",
-      "name_en": "Sony WH-1000XM6 The Best Noise Canceling Wireless Headphones, HD NC Processor QN3, 12 Microphones, 30-Hour Battery, Black",
-      "price_cad": 299.98,
-      "regular_cad": 599.99,
-      "discount_pct": 50,
-      "added_fa": "جمعه، ۱۳ نوامبر ۲۰۲۶",
-      "image": "img/sony-wh-1000xm6-black.jpg",
-      "url": "https://www.amazon.ca/dp/B0F3PQHWTZ?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "قوی‌ترین نویزکنسلینگ سونی با باتری ۳۰ ساعته، حالا نصف قیمت عرضهٔ کانادا"
-    },
-    {
-      "id": "conair-digitalaire-4in1",
-      "name_fa": "حالت‌دهنده مو کان‌ایر دیجیتال‌ایر",
-      "name_en": "Conair DigitalAire 4-in-1 Styling System, 1600W High-Speed Digital Motor",
-      "price_cad": 83.46,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "پنجشنبه، ۱۲ نوامبر ۲۰۲۶",
-      "image": "img/conair-digitalaire-4in1.jpg",
-      "url": "https://www.amazon.ca/dp/B0DDYDXFSL?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "خشک‌کردن و حالت‌دادن هم‌زمان با چهار سری برای فر، موج، حجم و صاف‌کردن"
-    },
-    {
-      "id": "eero-6-plus-3pack",
-      "name_fa": "وای‌فای مش ایرو ۶ پلاس، بسته سه‌تایی",
-      "name_en": "Amazon eero 6+ mesh Wi-Fi system, supports internet plans up to 1 Gbps, coverage up to 4,500 sq. ft., connect 75+ devices, 3-pack",
-      "price_cad": 279.99,
-      "regular_cad": 419.99,
-      "discount_pct": 33,
-      "added_fa": "پنجشنبه، ۱۲ نوامبر ۲۰۲۶",
-      "image": "img/eero-6-plus-3pack.jpg",
-      "url": "https://www.amazon.ca/dp/B08ZK16PWR?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پوشش تا حدود ۴۱۸ متر مربع با سه دستگاه و پشتیبانی از بیش از ۷۵ دستگاه"
     }
   ],
-  "updated_fa": "جمعه ۲۲ آبان"
+  "updated_fa": "شنبه ۲۳ آبان"
 }
