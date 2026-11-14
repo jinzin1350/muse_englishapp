@@ -1,5 +1,5 @@
 -- Ask Muse (AI tutor chat): chat storage and the daily question quota.
--- Claude, 2026-11-14. Approved by Alireza (chats saved in the database, 10 questions a day).
+-- Claude, 2026-11-14. Approved by Alireza (chats saved in the database, 10 questions a day). Applied on Supabase 2026-11-14.
 -- Additive only: two new tables and new functions. No existing table is changed.
 --
 -- Who uses what

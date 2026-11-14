@@ -5176,3 +5176,92 @@ html.ui-fa [data-fa]{font-family:"Vazirmatn",system-ui,-apple-system,"Segoe UI",
 .ui-lang-row .btn{margin:0;min-width:96px}
 .ui-lang-row [lang="fa"]{font-family:"Vazirmatn",system-ui,sans-serif}
 .ui-lang-note{margin:.6rem 0 0;font-size:.85rem}
+
+/* ===== Ask Muse (از Muse بپرس): AI tutor chat. Claude, 2026-11-14. Owned by Claude: src/app/17-ask-muse.js ===== */
+#askm-fab{position:fixed;right:16px;bottom:calc(86px + env(safe-area-inset-bottom));z-index:65;width:60px;height:60px;padding:0;border-radius:50%;
+  border:2px solid #FFD6AE;background:#FFF6EA;box-shadow:0 8px 22px rgba(200,75,49,.28),0 2px 6px rgba(23,33,43,.12);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:transform .15s ease}
+#askm-fab[hidden]{display:none}
+#askm-fab img{width:54px;height:54px;border-radius:50%;object-fit:cover;display:block}
+#askm-fab:active{transform:scale(.94)}
+#askm-fab:focus-visible{outline:3px solid var(--tomato);outline-offset:3px}
+.askm-fab-dot{position:absolute;top:-3px;left:-3px;width:22px;height:22px;border-radius:50%;background:var(--tomato);color:#fff;
+  font:800 13px/22px system-ui,sans-serif;text-align:center;border:2px solid #FFF6EA}
+body:has(#mini-player:not(.hidden)) #askm-fab{bottom:calc(166px + env(safe-area-inset-bottom))}
+body.duo-playing #askm-fab,html.askm-on #askm-fab{display:none}
+@media (min-width:1024px){
+  #askm-fab{right:28px;bottom:28px}
+  body:has(#mini-player:not(.hidden)) #askm-fab{bottom:108px}
+}
+
+.askm{position:fixed;inset:0;z-index:9000;font-family:"Vazirmatn","Avenir Next","Trebuchet MS",system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}
+.askm[hidden]{display:none}
+html.askm-on,html.askm-on body{overflow:hidden}
+.askm-backdrop{position:absolute;inset:0;background:rgba(23,33,43,.45);opacity:0;transition:opacity .2s ease}
+.askm.open .askm-backdrop{opacity:1}
+.askm-panel{position:absolute;left:0;right:0;bottom:0;height:min(88dvh,720px);display:flex;flex-direction:column;background:#FFFDF6;
+  border-radius:24px 24px 0 0;box-shadow:0 -14px 40px rgba(23,33,43,.2);padding-bottom:env(safe-area-inset-bottom);
+  transform:translateY(100%);transition:transform .24s cubic-bezier(.2,.8,.2,1);overflow:hidden}
+.askm.open .askm-panel{transform:none}
+@media (min-width:700px){
+  .askm-panel{left:auto;right:24px;bottom:24px;width:420px;height:min(680px,calc(100dvh - 48px));border-radius:24px}
+}
+.askm-head{display:flex;align-items:center;gap:10px;padding:12px 12px 10px 14px;background:#FFF4E6;border-bottom:1px solid #F3E3CC}
+.askm-ava{width:42px;height:42px;border-radius:50%;background:#FFE4C7;flex:0 0 auto}
+.askm-head-t{flex:1;min-width:0}
+.askm-head h2{margin:0;font-size:1.05rem;font-weight:800;line-height:1.3;font-family:inherit}
+.askm-quota{margin:1px 0 0;font-size:.78rem;color:var(--muted)}
+.askm-ibtn{width:40px;height:40px;border:0;border-radius:50%;background:transparent;color:var(--ink);font-size:1.05rem;cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
+.askm-ibtn:hover{background:#F6E6D2}
+.askm-ibtn:focus-visible,.askm-chip:focus-visible,.askm-link:focus-visible,.askm-send:focus-visible,.askm-upgrade:focus-visible,.askm-retry:focus-visible{outline:3px solid var(--tomato);outline-offset:2px}
+.askm-list{flex:1;overflow-y:auto;overscroll-behavior:contain;padding:14px 14px 6px;display:flex;flex-direction:column;gap:10px}
+.askm-msg{max-width:86%;padding:10px 13px;border-radius:18px;font-size:.96rem;line-height:1.75;overflow-wrap:anywhere}
+.askm-msg p{margin:0 0 .45em}
+.askm-msg p:last-child,.askm-msg ul:last-child,.askm-msg .askm-links:last-child{margin-bottom:0}
+.askm-msg ul{margin:.1em 0 .45em;padding-inline-start:1.2em}
+.askm-msg li{margin:.1em 0}
+.askm-msg.muse{align-self:flex-start;background:#FFF0DF;border:1px solid #F7DCBE;border-start-start-radius:6px}
+.askm-msg.muse b{color:#A83B26}
+.askm-msg.me{align-self:flex-end;background:var(--tomato);color:#fff;border-end-end-radius:6px}
+.askm-msg.err{background:#FDEDEA;border-color:#F3C5BD}
+.askm-links{display:flex;flex-wrap:wrap;gap:6px;margin:.35em 0 .45em}
+.askm-link{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;border:1.5px solid var(--herb);background:#fff;
+  color:var(--herb-dark);font-weight:700;font-size:.86rem;line-height:1.3;font-family:inherit;cursor:pointer;text-align:start}
+.askm-link:hover{background:#EEF6F1}
+.askm-dots{display:inline-flex;gap:5px;padding:4px 2px}
+.askm-dots i{width:7px;height:7px;border-radius:50%;background:#D99A6C;animation:askm-dot 1s infinite ease-in-out}
+.askm-dots i:nth-child(2){animation-delay:.15s}.askm-dots i:nth-child(3){animation-delay:.3s}
+@keyframes askm-dot{0%,80%,100%{transform:translateY(0);opacity:.5}40%{transform:translateY(-4px);opacity:1}}
+.askm-retry{margin-top:6px;padding:6px 12px;border-radius:10px;border:1.5px solid var(--tomato);background:#fff;color:var(--tomato-dark);font-weight:700;font-size:.85rem;font-family:inherit;cursor:pointer}
+.askm-chips{display:flex;gap:8px;overflow-x:auto;padding:4px 14px 8px;scrollbar-width:none}
+.askm-chips::-webkit-scrollbar{display:none}
+.askm-chips[hidden]{display:none}
+.askm-chip{flex:0 0 auto;padding:8px 13px;border-radius:999px;border:1px solid #EAD6BC;background:#fff;color:var(--ink);font-weight:500;font-size:.86rem;line-height:1.4;
+  font-family:inherit;cursor:pointer;white-space:nowrap}
+.askm-chip:hover{border-color:var(--tomato)}
+.askm-form{display:flex;align-items:flex-end;gap:8px;padding:8px 12px 6px;border-top:1px solid #F3E3CC;background:#FFFDF6}
+.askm-form textarea{flex:1;resize:none;min-height:44px;max-height:120px;padding:10px 14px;border:1.5px solid #EAD6BC;border-radius:22px;
+  background:#fff;color:var(--ink);font-size:16px;line-height:1.5;font-family:inherit}
+.askm-form textarea:focus{outline:none;border-color:var(--tomato);box-shadow:0 0 0 3px rgba(200,75,49,.15)}
+.askm-form textarea:disabled{background:#F5F0E6}
+.askm-send{width:44px;height:44px;flex:0 0 auto;border:0;border-radius:50%;background:var(--tomato);color:#fff;cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center}
+.askm-send:disabled{opacity:.45;cursor:default}
+.askm[dir="rtl"] .askm-send svg{transform:scaleX(-1)}
+.askm-note{margin:0 0 8px;padding:0 14px;font-size:.72rem;color:var(--muted);text-align:center}
+.askm-limit{align-self:stretch;margin:2px 0;padding:14px;border-radius:16px;background:#FFF7E3;border:1.5px dashed #EBBF63;line-height:1.7}
+.askm-limit b{display:block;font-size:.98rem}
+.askm-limit p{margin:.25em 0 .7em;font-size:.9rem}
+.askm-upgrade{width:100%;padding:11px 14px;border:0;border-radius:12px;background:var(--tomato);color:#fff;font-weight:800;font-size:.95rem;font-family:inherit;cursor:pointer}
+.askm-why{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin:.5rem 0 .35rem;padding:9px 14px;border-radius:14px;
+  border:2px solid #F6CDA6;background:#FFF5EA;color:#A83B26;font:800 .95rem/1.3 "Vazirmatn","Avenir Next","Trebuchet MS",system-ui,sans-serif;cursor:pointer}
+.askm-why img{width:26px;height:26px;border-radius:50%}
+.askm-why:focus-visible{outline:3px solid var(--tomato);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){
+  .askm-panel,.askm-backdrop,#askm-fab{transition:none}
+  .askm-dots i{animation:none;opacity:.8}
+}
+.ap-askm-q{padding:.6rem 0;border-bottom:1px solid #F1E9DA}
+.ap-askm-q:last-child{border-bottom:0}
+.ap-askm-text{margin-top:.2rem;line-height:1.6;unicode-bidi:plaintext;white-space:pre-wrap}

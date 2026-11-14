@@ -241,6 +241,7 @@ function show(view, arg) {
   else if (view === 'words') renderWords(v, arg);
   else if (view === 'tricky') renderTricky(v, arg);
   else if (view === 'ptest') renderPTest(v, arg);
+  askMuseSync();   /* Ask Muse button (src/app/17-ask-muse.js, Claude) */
 }
 
 /* ---------------- chrome (headers / profile menu / nav) ---------------- */

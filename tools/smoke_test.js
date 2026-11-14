@@ -16,6 +16,12 @@ async function run(browser, lang) {
   await ctx.route('**/js/config.js*', r => r.fulfill({ contentType: 'application/javascript', body: DEMO_CONFIG }));
   await ctx.route(/jsdelivr|onesignal|hotjar|googletagmanager|google-analytics|clarity|doubleclick/i, r => r.abort());
   if (lang) await ctx.addInitScript(l => { try { localStorage.setItem('muse_ui_lang', l); } catch (e) {} }, lang);
+  /* Ask Muse server mocked: enabled, and a short streamed answer with an app link */
+  await ctx.route('**/api/assistant', r => r.request().method() === 'GET'
+    ? r.fulfill({ contentType: 'application/json', body: '{"enabled":true}' })
+    : r.fulfill({ contentType: 'text/event-stream', body: ['{"type":"start","remaining":9,"limit":10}',
+        '{"type":"delta","t":"**went** is the past of go.\\n[[grammar:past-simple]]"}', '{"type":"done","remaining":9,"limit":10}']
+        .map(function (e) { return 'data: ' + e + '\n\n'; }).join('') }));
   const pg = await ctx.newPage();
   pg.setDefaultTimeout(8000);
   const errors = [];
@@ -51,6 +57,16 @@ async function run(browser, lang) {
   check(await has('.ui-lang-card'), tag + 'profile renders with App language switch');
   await go('#/review');
   check((await pg.textContent('#view')).trim().length > 50, tag + 'review renders');
+
+  /* Ask Muse (src/app/17-ask-muse.js) */
+  await go('#/home', 1500);
+  check(await has('#askm-fab:not([hidden])'), tag + 'Ask Muse button shows on home');
+  await pg.click('#askm-fab'); await pg.waitForTimeout(500);
+  check(await has('#askm:not([hidden]) .askm-chip'), tag + 'Ask Muse chat opens with suggestions');
+  await pg.click('.askm-chip'); await pg.waitForTimeout(1000);
+  check(await has('.askm-msg.muse b') && await has('.askm-link[data-askm-arg="past-simple"]'), tag + 'Ask Muse shows the streamed answer and the app link');
+  await pg.click('#askm-x'); await pg.waitForTimeout(400);
+  check(await pg.$eval('#askm', function (e) { return e.hidden; }), tag + 'Ask Muse chat closes');
 
   check(staffReqs === 0, tag + 'learner never downloads js/staff.js (requests: ' + staffReqs + ')');
   check(errors.length === 0, tag + 'no page errors' + (errors.length ? ': ' + errors.slice(0, 3).join(' | ') : ''));

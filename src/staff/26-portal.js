@@ -1435,7 +1435,7 @@ function apArmIdle() {
   reset();
 }
 function apShell(active, bodyHTML) {
-  const items = [['dashboard', '📊 Dashboard'], ['users', '👥 Users'], ['daily', '📊 Daily study'], ['teachers', '🍎 Teachers'], ['telegram', '🤖 Telegram'], ['support', '💬 Support']];
+  const items = [['dashboard', '📊 Dashboard'], ['users', '👥 Users'], ['daily', '📊 Daily study'], ['teachers', '🍎 Teachers'], ['telegram', '🤖 Telegram'], ['support', '💬 Support'], ['ask-muse', '🔥 Ask Muse']];
   const nav = items.map(function (it) {
     const href = '/manage' + (it[0] === 'dashboard' ? '' : '/' + it[0]);
     return '<a href="' + href + '" data-apnav="' + it[0] + '"' +
@@ -2207,6 +2207,7 @@ async function renderAdminPanel() {
   else if (sp.section === 'telegram') apRenderTelegram(v);
   else if (sp.section === 'support' && sp.arg) apRenderSupportThread(v, sp.arg);
   else if (sp.section === 'support') apRenderSupport(v);
+  else if (sp.section === 'ask-muse') apRenderAskMuse(v);
   else apRenderDashboard(v);
   hideSplashSoon();
 }

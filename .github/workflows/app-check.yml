@@ -21,6 +21,8 @@ jobs:
           node-version: '20'
       - name: Static checks
         run: python3 tools/check_app.py
+      - name: Ask Muse server tests (Supabase and DeepSeek mocked)
+        run: node tools/test_assistant.mjs
       - name: Install Playwright
         run: |
           npm install --no-save --no-package-lock playwright@1.48.2

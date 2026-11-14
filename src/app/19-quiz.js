@@ -435,6 +435,7 @@ function duoFooter(q, cur) {
     '<div class="duo-tray-text">' + esc(duoTrayText(q, cur)) + '</div></div></div>' +
     ((!ok && cur.explanation) ? '<div class="duo-explain">💡 ' + esc(cur.explanation) + '</div>' : '') +
     ((!ok && cur.kind === 'tricky' && cur.lesson) ? '<a class="duo-lesson-link" href="' + cur.lesson + '">📖 Review the lesson</a>' : '') +
+    (ok ? '' : askMuseWhyHTML()) +
     '<button class="duo-continue ' + (ok ? 'ok' : 'bad') + '" data-action="duo-next">' +
     (last ? 'See my score' : 'Continue') + ' <span>→</span></button>' +
     '</div></div>';

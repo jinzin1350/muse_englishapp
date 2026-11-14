@@ -107,6 +107,78 @@ def lazy_landing_images(h):
     return h[:a] + block + h[b:]
 
 
+ASSISTANT_FN = os.path.join(REPO, 'functions', 'api', 'assistant.js')
+
+
+def _lv_range(levels):
+    order = ['a1', 'a2', 'b1', 'b2', 'c1', 'c2']
+    lv = [l for l in order if l in [str(x).lower() for x in (levels or [])]]
+    if not lv:
+        return ''
+    return ' [' + (lv[0].upper() if len(lv) == 1 else lv[0].upper() + '-' + lv[-1].upper()) + ']'
+
+
+def assistant_links():
+    """slug -> title for the app's Ask Muse link buttons (data/ask-muse-links.json)."""
+    out = {'g': {}, 'v': {}}
+    try:
+        g = json.load(open(os.path.join(REPO, 'data', 'grammar', 'v2-index.json'), encoding='utf-8'))
+        for slug, t in (g.get('topics') or {}).items():
+            out['g'][slug] = (t.get('h1') or slug).strip()
+    except (OSError, ValueError, AttributeError):
+        pass
+    try:
+        for c in json.load(open(os.path.join(REPO, 'data', 'vocab', 'categories.json'), encoding='utf-8')):
+            out['v'][c['slug']] = (c.get('title') or c['slug']).strip()
+    except (OSError, ValueError, KeyError, TypeError):
+        pass
+    return json.dumps(out, ensure_ascii=False, separators=(',', ':'), sort_keys=True) + '\n'
+
+
+def assistant_catalog():
+    """Link catalog for the Ask Muse system prompt (functions/api/assistant.js): every grammar guide
+    and vocabulary topic the model may link to. Same text for every learner, so it stays cached."""
+    lines = ['Grammar guides (slug: title [levels])']
+    try:
+        g = json.load(open(os.path.join(REPO, 'data', 'grammar', 'v2-index.json'), encoding='utf-8'))
+        for slug, t in (g.get('topics') or {}).items():
+            lines.append('%s: %s%s' % (slug, (t.get('h1') or slug).strip(), _lv_range(t.get('levels'))))
+    except (OSError, ValueError, AttributeError):
+        pass
+    lines.append('Vocabulary topics (slug: title [levels])')
+    try:
+        for c in json.load(open(os.path.join(REPO, 'data', 'vocab', 'categories.json'), encoding='utf-8')):
+            lines.append('%s: %s%s' % (c['slug'], (c.get('title') or c['slug']).strip(), _lv_range(c.get('levels'))))
+    except (OSError, ValueError, KeyError, TypeError):
+        pass
+    return '\n'.join(l.replace('`', "'").replace('${', '$ {') for l in lines)
+
+
+def fix_assistant_catalog():
+    """Rewrite the generated CATALOG block in functions/api/assistant.js and data/ask-muse-links.json.
+    Returns True if anything changed."""
+    changed = False
+    links_p = os.path.join(REPO, 'data', 'ask-muse-links.json')
+    links = assistant_links()
+    if not os.path.exists(links_p) or read(links_p) != links:
+        with open(links_p, 'w', encoding='utf-8', newline='') as f:
+            f.write(links)
+        changed = True
+    if not os.path.exists(ASSISTANT_FN):
+        return changed
+    src = read(ASSISTANT_FN)
+    a, b = src.find('/* CATALOG:START'), src.find('/* CATALOG:END */')
+    if a < 0 or b < a:
+        return changed
+    head_end = src.index('*/', a) + 2
+    new = src[:head_end] + '\nconst CATALOG = `' + assistant_catalog() + '`;\n' + src[b:]
+    if new != src:
+        with open(ASSISTANT_FN, 'w', encoding='utf-8', newline='') as f:
+            f.write(new)
+        changed = True
+    return changed
+
+
 def fix_hashes():
     """Point the ?v= cache-busters in index.html at the current file contents, and keep the hidden
     landing's images lazy (see lazy_landing_images)."""
@@ -142,6 +214,8 @@ def main():
             print('build_app: %s already up to date' % rel)
     if fix_hashes():
         print('build_app: updated ?v= hashes in index.html')
+    if fix_assistant_catalog():
+        print('build_app: updated the Ask Muse link catalog in functions/api/assistant.js')
 
 
 if __name__ == '__main__':

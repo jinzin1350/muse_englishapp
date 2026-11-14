@@ -20,6 +20,7 @@ staff code" rule: a staff function called from learner code must be listed in `S
 | Sample lesson page | `#/preview` redesigned in Persian, in the look of the /fa/ pages; level picker A1–C2 | `pv*` code in `js/main.js`, `pv-` CSS in `css/main.css`, `data/fa/themes.json` | bae492a8 |
 | Persian app UI | Menus, buttons and labels in Persian for A1–B1 learners and on sign-in / sign-up; B2+ English; Profile › App language switch | `js/fa-ui.js` (labels) + engine in `js/main.js` | 4ca574ff |
 | Restores | Put the Persian back after it was overwritten | — | f11eba06, 472e949a, 0985c977 |
+| Ask Muse (از Muse بپرس) | AI tutor chat in the app: floating button, chat sheet, "Why? Ask Muse" under wrong answers, 10 questions a day (VIP 50), upgrade card, admin usage page | `src/app/17-ask-muse.js`, `functions/api/assistant.js`, `supabase/ask-muse.sql`, `src/staff/18-admin-ask-muse.js`, `askm-` CSS, `media/ask-muse/`, `data/ask-muse-links.json` (generated) | 2026-11-14 |
 
 ## The three things that broke it, and the rule for each
 
@@ -63,6 +64,15 @@ Code (keep these names and blocks; files are in `src/app/`):
   - `gFaLoad`, `gFaIndex`, `gFaTitle`, `gFaFor`, `grammarBlocksHTMLFa`;
   - the Persian branches in `renderGrammarTopicV3`, `renderGrammarQuizV2` and the results screen.
 - `08-preview.js` (whole file) — sample lesson page: `PV_*`, all `pv*` functions, `renderPreview`; plus `view-preview` in `show()`.
+- Ask Muse:
+  - `17-ask-muse.js` (whole file), `functions/api/assistant.js` (whole file), `supabase/ask-muse.sql`,
+    `src/staff/18-admin-ask-muse.js`, the `askm-` / `ap-askm-` CSS at the end of `css/main.css`;
+  - hooks: `askMuseSync();` at the end of `show()`, `askMuseWhyHTML()` in `duoFooter` (`19-quiz.js`) and in the two
+    grammar answer sheets (`14-grammar.js`), the `ask-muse` item and route in `src/staff/26-portal.js`;
+  - rules that keep it cheap (DeepSeek bills a repeated prompt start 50x cheaper): don't put anything that changes
+    (dates, counters, user data) into `SYSTEM` in `assistant.js`; keep model `deepseek-flash` with
+    `thinking: {type: "disabled"}`; don't change the database tables or the daily limits without Alireza;
+  - the database functions never delete anything (failed questions are marked `failed`).
 
 CSS in `css/main.css`: the Persian grammar block (Vazirmatn `@font-face` …), the `pv-` block and the
 `ui-fa` block at the end.

@@ -533,6 +533,7 @@ function renderGrammarQuizV2() {
          : '<div class="gt-sheet-msg">' + (good ? '🎉 Correct!' : '💡 Correct answer: <b>' + correctText + '</b>') + '</div>') +
       (fx ? '<div class="gt-sheet-explain" dir="rtl" lang="fa">' + fx + '</div>'
          : (it.explanation ? '<div class="gt-sheet-explain">' + gMd(it.explanation) + '</div>' : '')) +
+      (good ? '' : askMuseWhyHTML()) +
       '<button class="gt-btn ' + (good ? 'gt-btn-green' : 'gt-btn-red') + ' gt-btn-block" id="g-next-btn">' +
       (F ? (q.idx + 1 >= n ? 'دیدن نتیجه' : 'ادامه') : (q.idx + 1 >= n ? 'SEE RESULTS' : 'CONTINUE')) + '</button>' +
       '</div></div>';
@@ -662,6 +663,7 @@ function renderGrammarQuiz() {
     sheet = '<div class="gt-sheet ' + (good ? 'good' : 'bad') + '"><div class="gt-sheet-inner">' +
       '<div class="gt-sheet-msg">' + (good ? '🎉 Correct!' : '💡 Correct answer: <b>' + esc(it.options[it.answer]) + '</b>') + '</div>' +
       (it.explanation ? '<div class="gt-sheet-explain">' + gMd(it.explanation) + '</div>' : '') +
+      (good ? '' : askMuseWhyHTML()) +
       '<button class="gt-btn ' + (good ? 'gt-btn-green' : 'gt-btn-red') + ' gt-btn-block" id="g-next-btn">' +
       (q.idx + 1 >= n ? 'SEE RESULTS' : 'CONTINUE') + '</button>' +
       '</div></div>';

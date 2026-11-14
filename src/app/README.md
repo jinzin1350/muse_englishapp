@@ -60,6 +60,7 @@ lesson page), and the Persian parts of `14-grammar.js` (`gFa*`, `grammarBlocksHT
 | 14-grammar | grammar hub, topic, quiz, banner, placement test, check-up |
 | 15-ielts | IELTS full mock |
 | 16-home-profile-support | mobile home v2, desktop home, profile, support |
+| 17-ask-muse | Ask Muse AI tutor chat: button, chat sheet, "Why? Ask Muse" (Claude-owned) |
 | 18-lesson-view | lesson view |
 | 19-quiz | quiz engine, Duolingo-style player |
 | 20-streak-celebrations | streak engine, streak card, celebrations, rank climb, podcast milestones |
@@ -77,5 +78,6 @@ lesson page), and the Persian parts of `14-grammar.js` (`gFa*`, `grammarBlocksHT
 | 10-teacher-dashboard | teacher dashboard, students, messages, assignments, planner, AI reports |
 | 11-analytics | learning analytics, admin analytics, funnel + cohorts |
 | 17-admin-panel | admin panel support threads |
+| 18-admin-ask-muse | /manage/ask-muse: Ask Muse questions, cache share, cost (Claude-owned) |
 | 23-admin-reports | daily study report, admin tools (users, levels, teachers) |
 | 26-portal | teacher portal (`/teachers`) and admin panel (`/manage`) |
