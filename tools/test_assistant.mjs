@@ -106,6 +106,8 @@ async function post(body, token, env) {
   check(m[m.length - 1].content === begin.body.p_prompt, 'last message = the new question');
   check(!/20\d\d-\d\d-\d\d|\d{1,2}:\d\d|\$\{/.test(_test.SYSTEM), 'system prompt has no date, time or template leftovers');
   check(_test.SYSTEM.includes('[[grammar:SLUG]]') && /past-simple: /.test(_test.SYSTEM), 'system prompt carries the link catalog');
+  check(_test.SYSTEM.includes('ONLY ENGLISH-LEARNING QUESTIONS') && _test.SYSTEM.includes('من فقط به سؤال‌های زبان انگلیسی جواب میدم'),
+    'system prompt refuses questions that are not about English');
 
   const fin = calls.find(c => c.url.includes('ai_chat_finish'));
   check(fin && fin.body.p_nonce === 'n-123' && fin.body.p_message_id === 7, 'answer saved with the nonce');
