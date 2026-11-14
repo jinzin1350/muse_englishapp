@@ -625,7 +625,7 @@ function supportMsgHTML(m, fa, asAdmin) {
   var mine = asAdmin ? !!m.from_admin : !m.from_admin;
   var who = mine ? (fa ? 'شما' : 'You') : (asAdmin ? 'Learner' : 'Muse English');
   return '<div class="sup-msg ' + (mine ? 'me' : 'them') + '">' +
-    '<div class="sup-bubble">' + esc(m.body).replace(/\n/g, '<br>') + '</div>' +
+    '<div class="sup-bubble" dir="auto">' + esc(m.body).replace(/\n/g, '<br>') + '</div>' +
     '<div class="sup-time">' + who + ' · ' + supTime(m.created_at) + '</div></div>';
 }
 
@@ -635,7 +635,7 @@ async function renderSupport(v) {
     '<h1 class="sup-title">💬 ' + (fa ? 'پشتیبانی' : 'Support') + '</h1>' +
     '<p class="muted">' + (fa ? 'سؤالت رو این‌جا بپرس؛ جواب هم این‌جا میاد. معمولاً ظرف یه روز جواب می‌دیم.' : 'Ask your question here — the reply lands right here too. We usually reply within a day.') + '</p>' +
     '<div id="sup-thread" class="sup-thread"><div class="empty">…</div></div>' +
-    '<div class="sup-composer"><textarea id="sup-input" rows="3" maxlength="2000" placeholder="' + (fa ? 'سؤالت رو بنویس…' : 'Write your question…') + '"></textarea>' +
+    '<div class="sup-composer"><textarea id="sup-input" dir="auto" rows="3" maxlength="2000" placeholder="' + (fa ? 'سؤالت رو بنویس…' : 'Write your question…') + '"></textarea>' +
     '<div class="form-error" id="sup-error" role="alert"></div>' +
     '<button class="btn btn-orange btn-block" id="sup-send">' + (fa ? 'ارسال' : 'Send') + '</button></div></div>';
   var host = document.getElementById('sup-thread');

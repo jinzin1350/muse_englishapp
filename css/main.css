@@ -4949,7 +4949,7 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
 .sup-msg{display:flex;flex-direction:column;max-width:85%}
 .sup-msg.me{align-self:flex-end;align-items:flex-end}
 .sup-msg.them{align-self:flex-start;align-items:flex-start}
-.sup-bubble{padding:.6rem .8rem;border-radius:16px;font-size:.92rem;line-height:1.55}
+.sup-bubble{padding:.6rem .8rem;border-radius:16px;font-size:.92rem;line-height:1.55;unicode-bidi:plaintext;text-align:start}
 .sup-msg.me .sup-bubble{background:#EE4D1C;color:#fff;border-bottom-right-radius:6px}
 .sup-msg.them .sup-bubble{background:#fff;border:1.5px solid #EFE3D3;border-bottom-left-radius:6px}
 .sup-time{font-size:.68rem;color:#9AA0AE;margin-top:.15rem}

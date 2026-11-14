@@ -36,7 +36,7 @@ async function apRenderSupportThread(v, userId) {
   v.innerHTML = apShell('support',
     '<div class="ap-head"><h1>💬 Support thread</h1><p class="muted"><a href="/manage/support">← All threads</a></p></div>' +
     '<div id="ap-sup-thread" class="sup-thread"><div class="empty">Loading…</div></div>' +
-    '<div class="sup-composer"><textarea id="ap-sup-input" rows="3" maxlength="2000" placeholder="Write your reply…"></textarea>' +
+    '<div class="sup-composer"><textarea id="ap-sup-input" dir="auto" rows="3" maxlength="2000" placeholder="Write your reply…"></textarea>' +
     '<div class="form-error" id="ap-sup-error" role="alert"></div>' +
     '<button class="btn btn-orange btn-block" id="ap-sup-send">Send reply</button></div>');
   apWireChrome(v);
