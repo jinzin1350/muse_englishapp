@@ -10649,13 +10649,22 @@ function spSentResultHTML(a, said, pts, slim) {
    matches (or comes closest to) the clip count is used. */
 function splitSentences(text, audioCount) {
   const lines = String(text || '').split('\n').map(function (s) { return s.trim(); }).filter(Boolean);
-  const lineItems = [];
-  lines.forEach(function (ln, idx) {
+  const parsed = lines.map(function (ln) {
     const numbered = ln.match(/^\d+\.\s*(.+)$/);
-    const s = (numbered ? numbered[1] : ln).trim();
-    if (idx === 0 && !numbered && !/[.!?…]$/.test(s)) return; /* title line */
-    if (s.length > 1) lineItems.push(s);
+    return (numbered ? numbered[1] : ln).trim();
   });
+  const firstIsTitle = parsed.length > 0 && !/^\d+\.\s/.test(lines[0]) && !/[.!?…]$/.test(parsed[0]);
+  const keep = function (s) { return s.length > 1; };
+  const withTitle = parsed.filter(keep);
+  const withoutTitle = firstIsTitle ? parsed.slice(1).filter(keep) : withTitle;
+  /* The first line counts as a title only when dropping it keeps the
+     sentences aligned with the per-sentence clips. Some transcripts have
+     no title and no end punctuation (e.g. review lessons) — dropping their
+     first sentence there shifted every row onto the previous clip. */
+  let lineItems;
+  if (audioCount && withTitle.length === audioCount) lineItems = withTitle;
+  else if (audioCount && withoutTitle.length === audioCount) lineItems = withoutTitle;
+  else lineItems = withoutTitle;
   if (!audioCount || lineItems.length === audioCount) return lineItems;
   const sentItems = [];
   lineItems.forEach(function (s) {
@@ -14265,7 +14274,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611142325';
+var APP_VERSION = '202611150817';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
