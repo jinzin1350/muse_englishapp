@@ -9402,7 +9402,8 @@ function renderProfile(v) {
   '</div>' +
 
   (u.isAdmin ? '<div class="section-title"><h2>Admin</h2></div>' +
-    '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/admin" style="margin-top:0">🛠 Open admin panel</a></div>' : '') +
+    '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/admin" style="margin-top:0">🛠 Open admin panel</a>' +
+    '<a class="btn btn-ghost btn-block" href="/manage" style="margin-top:0.6rem">🛠 Manage panel</a></div>' : '') +
 
   '<div class="section-title"><h2>Teaching</h2></div>' +
   (state.teacher
@@ -14274,7 +14275,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611152017';
+var APP_VERSION = '202611152255';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

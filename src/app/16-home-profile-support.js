@@ -527,7 +527,8 @@ function renderProfile(v) {
   '</div>' +
 
   (u.isAdmin ? '<div class="section-title"><h2>Admin</h2></div>' +
-    '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/admin" style="margin-top:0">🛠 Open admin panel</a></div>' : '') +
+    '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/admin" style="margin-top:0">🛠 Open admin panel</a>' +
+    '<a class="btn btn-ghost btn-block" href="/manage" style="margin-top:0.6rem">🛠 Manage panel</a></div>' : '') +
 
   '<div class="section-title"><h2>Teaching</h2></div>' +
   (state.teacher
