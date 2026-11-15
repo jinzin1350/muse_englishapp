@@ -1445,7 +1445,7 @@ function apShell(active, bodyHTML) {
     '<div class="ap-brand">🛠 Admin panel</div>' +
     (apVerified ? '<div class="ap-who">' + esc(apVerified.email) + '</div>' : '') +
     '<nav class="ap-nav">' + nav + '</nav>' +
-    '<div class="ap-foot"><button class="ap-logout" id="ap-logout" type="button">Sign out</button>' +
+    '<div class="ap-foot"><a class="ap-logout" href="/#/home" style="text-decoration:none;text-align:center;background:#FF7B2E;color:#fff;">📱 Back to app</a><button class="ap-logout" id="ap-logout" type="button">Sign out</button>' +
     '<div class="ap-note">audited access</div></div>' +
     '</aside><main class="ap-main">' + bodyHTML + '</main></div>';
 }

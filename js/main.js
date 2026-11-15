@@ -3272,7 +3272,7 @@ function setChrome() {
    tools/build_app.py adds a small stand-in for each staff entry point (see
    STAFF_ENTRIES there) that loads the file and then calls the real function. */
 var __staffApi = null, __staffP = null;
-var STAFF_JS_URL = '/js/staff.js?v=3cef8f2a';
+var STAFF_JS_URL = '/js/staff.js?v=4a7b7169';
 function __evalStaff(__staffSrc) { eval(__staffSrc); }
 function loadStaff() {
   if (__staffApi) return Promise.resolve(__staffApi);
@@ -14274,7 +14274,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611150817';
+var APP_VERSION = '202611152017';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
