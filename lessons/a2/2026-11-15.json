@@ -1,0 +1,278 @@
+{
+  "date": "2026-11-15",
+  "theme": "work & career",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "accountant",
+      "pos": "noun",
+      "meaning": "a person who keeps or examines financial records",
+      "example": "My accountant helps me with my taxes.",
+      "example_fa": "حسابدارم در امور مالیاتی به من کمک می‌کند.",
+      "pronunciation": "uh-KOWN-tunt",
+      "persian": "حسابدار",
+      "photo": "media/a2/2026-11-15/photos/accountant.jpg",
+      "word_audio": "media/a2/2026-11-15/word-audio/accountant.mp3"
+    },
+    {
+      "word": "achieve",
+      "pos": "verb",
+      "meaning": "to succeed in doing something good",
+      "example": "She wants to achieve her dreams.",
+      "example_fa": "او می‌خواهد به رویاهایش برسد.",
+      "pronunciation": "uh-CHEEV",
+      "persian": "به دست آوردن، موفق شدن",
+      "photo": "media/a2/2026-11-15/photos/achieve.jpg",
+      "word_audio": "media/a2/2026-11-15/word-audio/achieve.mp3"
+    },
+    {
+      "word": "achievement",
+      "pos": "noun",
+      "meaning": "something good that you have done",
+      "example": "Winning the race was a great achievement.",
+      "example_fa": "برنده شدن در مسابقه دستاورد بزرگی بود.",
+      "pronunciation": "uh-CHEEV-munt",
+      "persian": "دستاورد، موفقیت",
+      "photo": "media/a2/2026-11-15/photos/achievement.jpg",
+      "word_audio": "media/a2/2026-11-15/word-audio/achievement.mp3"
+    },
+    {
+      "word": "admin",
+      "pos": "noun",
+      "meaning": "Short for administration; managing an organization.",
+      "example": "She works in admin at the office.",
+      "example_fa": "او در بخش اداری دفتر کار می‌کند.",
+      "pronunciation": "AD-min",
+      "persian": "امور اداری، مدیریت",
+      "photo": "media/a2/2026-11-15/photos/admin.jpg",
+      "word_audio": "media/a2/2026-11-15/word-audio/admin.mp3"
+    },
+    {
+      "word": "advise",
+      "pos": "verb",
+      "meaning": "To give suggestions about what someone should do.",
+      "example": "I advise you to study hard.",
+      "example_fa": "به تو توصیه می‌کنم سخت درس بخوانی.",
+      "pronunciation": "ad-VYZ",
+      "persian": "نصیحت کردن، مشاوره دادن",
+      "photo": "media/a2/2026-11-15/photos/advise.jpg",
+      "word_audio": "media/a2/2026-11-15/word-audio/advise.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-15/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Working Hard, Dreaming Big",
+    "audio": "media/a2/2026-11-15/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-15/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara and Her Big Goal",
+    "audio": "media/a2/2026-11-15/shadowing.mp3",
+    "transcript": "media/a2/2026-11-15/shadowing-transcript.txt",
+    "transcript_fa": "media/a2/2026-11-15/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-15/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-15/shadowing-sentences/015.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'accountant' mean?",
+      "options": [
+        "to succeed in doing something good",
+        "To give suggestions about what someone should do.",
+        "a person who keeps or examines financial records",
+        "Short for administration; managing an organization."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'achieve' mean?",
+      "options": [
+        "To give suggestions about what someone should do.",
+        "to succeed in doing something good",
+        "a person who keeps or examines financial records",
+        "Short for administration; managing an organization."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'achievement' mean?",
+      "options": [
+        "a person who keeps or examines financial records",
+        "Short for administration; managing an organization.",
+        "To give suggestions about what someone should do.",
+        "something good that you have done"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'admin' mean?",
+      "options": [
+        "To give suggestions about what someone should do.",
+        "to succeed in doing something good",
+        "Short for administration; managing an organization.",
+        "a person who keeps or examines financial records"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'advise' mean?",
+      "options": [
+        "something good that you have done",
+        "a person who keeps or examines financial records",
+        "To give suggestions about what someone should do.",
+        "Short for administration; managing an organization."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Adverbs of Manner (slowly, well, hard)",
+    "explanation": "**Adverbs of manner** tell us **how** someone does something. The accountant works **carefully**, and Sara studies **quietly**.\n\nAn **adjective** describes a noun: a **careful** accountant. An **adverb** describes a verb: she works **carefully** in admin.\n\nMost adverbs are adjective + **-ly**: quick becomes **quickly**, careful becomes **carefully**. After a consonant + y, use **-ily**: happy becomes **happily**, easy becomes **easily**.\n\nSome adverbs are special: good becomes **well**, and **fast**, **hard**, **late** and **early** do not change. Sara sings **well**, and she works **hard** to achieve her goals.\n\nPut the adverb **after the verb**, or **after the object** if there is one. Say *She speaks English **slowly***, never *She speaks slowly English*.\n\nAfter **be**, **look**, **feel**, **seem**, **sound**, **taste** and **smell**, use an **adjective**, not an adverb. *You **look happy*** and *This achievement **sounds great***.",
+    "examples": [
+      "*Please read the instructions **carefully**.* (careful → carefully)",
+      "*The children played **happily** in the garden.* (happy → happily)",
+      "*He speaks Spanish very **well**.* (good → well)",
+      "*She works **hard** and never complains.* (hard, not hardly)",
+      "*I passed the test **easily**.* (easy → easily)",
+      "*You **look tired**.* (look + adjective)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite using an adverb: The accountant works in a careful way.",
+        "a": "The accountant works carefully."
+      },
+      {
+        "q": "Rewrite using an adverb: Sara did a good job on the exam. She did ___ on the exam.",
+        "a": "She did well on the exam."
+      },
+      {
+        "q": "Rewrite using an adverb: They are happy workers in admin. They work ___.",
+        "a": "They work happily."
+      },
+      {
+        "q": "Rewrite using an adverb: He is a fast runner, so he can achieve a lot. He runs ___.",
+        "a": "He runs fast."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "She speaks English very ___.",
+        "options": [
+          "good",
+          "well",
+          "goodly",
+          "best"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Read the instructions ___ before you start.",
+        "options": [
+          "careful",
+          "carefuly",
+          "care",
+          "carefully"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He runs very ___. He always wins.",
+        "options": [
+          "fast",
+          "fastly",
+          "fastest",
+          "faster"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "The children played ___ in the garden.",
+        "options": [
+          "happy",
+          "happyly",
+          "happily",
+          "happiness"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I passed the test ___. It wasn't difficult at all.",
+        "options": [
+          "easy",
+          "easyly",
+          "easily",
+          "ease"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "She works very ___. She's always busy.",
+        "options": [
+          "hard",
+          "hardly",
+          "hardy",
+          "harder"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "You look ___ today. Did something good happen?",
+        "options": [
+          "happily",
+          "happyly",
+          "happiness",
+          "happy"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She sings ___. Everyone loves her voice.",
+        "options": [
+          "beautiful",
+          "beautifully",
+          "beauty",
+          "beautifuly"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He asked ___ for the bill.",
+        "options": [
+          "polite",
+          "politeness",
+          "politelly",
+          "politely"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "She speaks well French.",
+          "She well speaks French.",
+          "She speaks French well.",
+          "She speaks French good."
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a2/2026-11-15/grammar-en.mp3"
+  }
+}

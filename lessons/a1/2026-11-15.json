@@ -1,0 +1,268 @@
+{
+  "date": "2026-11-15",
+  "theme": "home & housing",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "alcohol",
+      "pos": "noun",
+      "meaning": "drinks like beer or wine",
+      "example": "Do you drink alcohol?",
+      "example_fa": "آیا الکل می‌نوشید؟",
+      "pronunciation": "AL-kuh-hol",
+      "persian": "الکل، مشروب",
+      "photo": "media/a1/2026-11-15/photos/alcohol.jpg",
+      "word_audio": "media/a1/2026-11-15/word-audio/alcohol.mp3"
+    },
+    {
+      "word": "American",
+      "pos": "adjective",
+      "meaning": "From America.",
+      "example": "He is an American student.",
+      "example_fa": "او یک دانش‌آموز آمریکایی است.",
+      "pronunciation": "uh-MER-i-kun",
+      "persian": "آمریکایی",
+      "photo": "media/a1/2026-11-15/photos/American.jpg",
+      "word_audio": "media/a1/2026-11-15/word-audio/American.mp3"
+    },
+    {
+      "word": "Antarctica",
+      "pos": "proper noun",
+      "meaning": "The coldest continent at the South Pole.",
+      "example": "Antarctica is covered in ice.",
+      "example_fa": "قطب جنوب پوشیده از یخ است.",
+      "pronunciation": "an-TARK-ti-kuh",
+      "persian": "قطب جنوب",
+      "photo": "media/a1/2026-11-15/photos/Antarctica.jpg",
+      "word_audio": "media/a1/2026-11-15/word-audio/Antarctica.mp3"
+    },
+    {
+      "word": "anyway",
+      "pos": "adverb",
+      "meaning": "Used to change the subject or end a conversation.",
+      "example": "It's late, I should go anyway.",
+      "example_fa": "دیر شده است، به هر حال باید بروم.",
+      "pronunciation": "EN-ee-way",
+      "persian": "به هر حال، در هر صورت",
+      "photo": "media/a1/2026-11-15/photos/anyway.jpg",
+      "word_audio": "media/a1/2026-11-15/word-audio/anyway.mp3"
+    },
+    {
+      "word": "apple pie",
+      "pos": "noun",
+      "meaning": "A sweet dessert made with apples in pastry.",
+      "example": "My grandma makes the best apple pie.",
+      "example_fa": "مادربزرگم بهترین پای سیب را درست می‌کند.",
+      "pronunciation": "AP-ul PY",
+      "persian": "پای سیب",
+      "photo": "media/a1/2026-11-15/photos/apple pie.jpg",
+      "word_audio": "media/a1/2026-11-15/word-audio/apple pie.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-15/pronunciation.mp3",
+  "podcast": null,
+  "shadowing": {
+    "title": "Apple Pie at Home",
+    "audio": "media/a1/2026-11-15/shadowing.mp3",
+    "transcript": "media/a1/2026-11-15/shadowing-transcript.txt",
+    "transcript_fa": "media/a1/2026-11-15/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-15/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-15/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-15/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-15/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-15/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-15/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-15/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-15/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-15/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-15/shadowing-sentences/010.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'alcohol' mean?",
+      "options": [
+        "From America.",
+        "drinks like beer or wine",
+        "A sweet dessert made with apples in pastry.",
+        "Used to change the subject or end a conversation."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'American' mean?",
+      "options": [
+        "From America.",
+        "The coldest continent at the South Pole.",
+        "drinks like beer or wine",
+        "A sweet dessert made with apples in pastry."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'Antarctica' mean?",
+      "options": [
+        "Used to change the subject or end a conversation.",
+        "From America.",
+        "A sweet dessert made with apples in pastry.",
+        "The coldest continent at the South Pole."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'anyway' mean?",
+      "options": [
+        "drinks like beer or wine",
+        "Used to change the subject or end a conversation.",
+        "The coldest continent at the South Pole.",
+        "From America."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'apple pie' mean?",
+      "options": [
+        "The coldest continent at the South Pole.",
+        "From America.",
+        "A sweet dessert made with apples in pastry.",
+        "drinks like beer or wine"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Imperatives (Open the door, Don't be late)",
+    "explanation": "We use the **imperative** to tell people what to do. We use it for instructions, directions, warnings, and advice.\n\nThe form is very easy. Use the **base form** of the verb, with no subject: **Open** the door. **Eat** the apple pie.\n\nFor a negative, use **Don't** + verb. Say **Don't drink** alcohol, not *Not drink*.\n\nWith *be*, say **Be** careful and **Don't be** late. Late is not a verb, so you need **be**.\n\nUse **Let's** + verb for an idea with a friend. **Let's** eat apple pie. **Let's not** go to Antarctica today.\n\nAdd **please** to be polite. **Please sit down** and **Close the door, please** are friendly.\n\n**Always** and **Never** go before the verb. **Never** drink alcohol and drive.",
+    "examples": [
+      "* **Sit** down, please.* (polite instruction)",
+      "* **Don't** forget your keys.* (negative)",
+      "* **Turn** right at the traffic lights.* (directions)",
+      "* **Be** careful. The floor is wet.* (warning with be)",
+      "* **Don't be** sad. Everything will be OK.* (negative with be)",
+      "* **Let's** have a pizza tonight.* (suggestion)"
+    ],
+    "practice": [
+      {
+        "q": "Make negative: Drink alcohol.",
+        "a": "Don't drink alcohol."
+      },
+      {
+        "q": "Make a suggestion with Let's: Eat apple pie.",
+        "a": "Let's eat apple pie."
+      },
+      {
+        "q": "Rewrite with Don't be: Be late for your American friend.",
+        "a": "Don't be late for your American friend."
+      },
+      {
+        "q": "Make polite with please: Bring the apple pie.",
+        "a": "Please bring the apple pie."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "___ the door, please. It's cold.",
+        "options": [
+          "Closes",
+          "Close",
+          "Closing",
+          "To close"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ touch that! It's hot.",
+        "options": [
+          "No",
+          "Not",
+          "Doesn't",
+          "Don't"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "___ late for class tomorrow.",
+        "options": [
+          "Don't be",
+          "Don't",
+          "Not be",
+          "Be not"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "It's a beautiful day. ___ go to the park!",
+        "options": [
+          "Let",
+          "Let us to",
+          "Let's",
+          "Lets"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ the lights when you leave.",
+        "options": [
+          "Turning off",
+          "Turns off",
+          "Turn off",
+          "To turning off"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Turn left at the bank and ___ straight on.",
+        "options": [
+          "go",
+          "goes",
+          "going",
+          "to go"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ your hands before dinner.",
+        "options": [
+          "Washing",
+          "To wash",
+          "Washes",
+          "Wash"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Please ___ your phone in class.",
+        "options": [
+          "not use",
+          "don't use",
+          "no use",
+          "doesn't use"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ forget your umbrella. It's going to rain.",
+        "options": [
+          "Don't",
+          "Not",
+          "No",
+          "Doesn't"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "Let's to have a pizza.",
+          "Let's having a pizza.",
+          "Let's have a pizza.",
+          "Let's has a pizza."
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a1/2026-11-15/grammar-en.mp3"
+  }
+}
