@@ -1,0 +1,392 @@
+{
+  "date": "2026-11-16",
+  "theme": "review day",
+  "level": "b2",
+  "cefr": "B2",
+  "review": true,
+  "review_of": [
+    "2026-11-13",
+    "2026-11-14",
+    "2026-11-15"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "corporation",
+      "pos": "noun",
+      "meaning": "A large company or business.",
+      "example": "She works for a multinational corporation.",
+      "pronunciation": "kor-puh-RAY-shun",
+      "persian": "شرکت بزرگ، ابرشرکت",
+      "photo": "media/b2/2026-11-14/photos/corporation.jpg",
+      "word_audio": "media/b2/2026-11-14/word-audio/corporation.mp3"
+    },
+    {
+      "word": "academic",
+      "pos": "adjective",
+      "meaning": "related to education, studying, and thinking",
+      "example": "She has a strong academic background in science.",
+      "pronunciation": "ak-uh-DEM-ik",
+      "persian": "دانشگاهی، تحصیلی",
+      "photo": "media/b2/2026-11-13/photos/academic.jpg",
+      "word_audio": "media/b2/2026-11-13/word-audio/academic.mp3"
+    },
+    {
+      "word": "childminder",
+      "pos": "noun",
+      "meaning": "A person who looks after children in their own home.",
+      "example": "The childminder picks up the kids from school.",
+      "pronunciation": "CHYLD-myn-der",
+      "persian": "پرستار کودک (در خانه خود)",
+      "photo": "media/b2/2026-11-14/photos/childminder.jpg",
+      "word_audio": "media/b2/2026-11-14/word-audio/childminder.mp3"
+    },
+    {
+      "word": "custom-built",
+      "pos": "adjective",
+      "meaning": "Made specially for a particular person or purpose.",
+      "example": "They live in a beautiful custom-built house.",
+      "pronunciation": "KUS-tum-BILT",
+      "persian": "سفارشی‌ساز، دست‌ساز",
+      "photo": "media/b2/2026-11-14/photos/custom-built.jpg",
+      "word_audio": "media/b2/2026-11-14/word-audio/custom-built.mp3"
+    },
+    {
+      "word": "button",
+      "pos": "noun",
+      "meaning": "A small, round piece used to fasten clothes.",
+      "example": "My shirt has a missing button.",
+      "pronunciation": "BUT-un",
+      "persian": "دکمه",
+      "photo": "media/b2/2026-11-15/photos/button.jpg",
+      "word_audio": "media/b2/2026-11-15/word-audio/button.mp3"
+    },
+    {
+      "word": "camcorder",
+      "pos": "noun",
+      "meaning": "A portable video camera.",
+      "example": "He used a camcorder to record the wedding.",
+      "pronunciation": "KAM-kor-der",
+      "persian": "دوربین فیلمبرداری",
+      "photo": "media/b2/2026-11-15/photos/camcorder.jpg",
+      "word_audio": "media/b2/2026-11-15/word-audio/camcorder.mp3"
+    },
+    {
+      "word": "civil servant",
+      "pos": "noun",
+      "meaning": "Someone who works for the government.",
+      "example": "My aunt is a civil servant.",
+      "pronunciation": "SIV-ul SER-vunt",
+      "persian": "کارمند دولت",
+      "photo": "media/b2/2026-11-14/photos/civil-servant.jpg",
+      "word_audio": "media/b2/2026-11-14/word-audio/civil-servant.mp3"
+    },
+    {
+      "word": "back up",
+      "pos": "phrasal verb",
+      "meaning": "To support someone or something.",
+      "example": "Can you back up my story?",
+      "pronunciation": "BAK UP",
+      "persian": "حمایت کردن، پشتیبانی کردن",
+      "photo": "media/b2/2026-11-15/photos/back-up.jpg",
+      "word_audio": "media/b2/2026-11-15/word-audio/back-up.mp3"
+    },
+    {
+      "word": "cable",
+      "pos": "noun",
+      "meaning": "A thick wire carrying electricity or signals.",
+      "example": "We need a new cable to connect the TV.",
+      "pronunciation": "KAY-bul",
+      "persian": "کابل، سیم",
+      "photo": "media/b2/2026-11-15/photos/cable.jpg",
+      "word_audio": "media/b2/2026-11-15/word-audio/cable.mp3"
+    },
+    {
+      "word": "active",
+      "pos": "adjective",
+      "meaning": "always doing things, not sitting still",
+      "example": "My dog is very active and loves to run.",
+      "pronunciation": "AK-tiv",
+      "persian": "فعال، پرتحرک",
+      "photo": "media/b2/2026-11-13/photos/active.jpg",
+      "word_audio": "media/b2/2026-11-13/word-audio/active.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-11-16/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day Film Stories",
+    "audio": "media/b2/2026-11-16/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-11-16/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Lena's Academic Film",
+    "audio": "media/b2/2026-11-16/shadowing.mp3",
+    "transcript": "media/b2/2026-11-16/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-11-16/shadowing-sentences/001.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/002.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/003.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/004.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/005.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/006.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/007.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/008.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/009.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/010.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/011.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/012.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/013.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/014.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/015.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/016.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/017.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/018.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/019.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/020.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/021.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/022.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/023.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/024.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/025.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/026.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/027.mp3",
+      "media/b2/2026-11-16/shadowing-sentences/028.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'corporation' mean?",
+      "options": [
+        "Made specially for a particular person or purpose.",
+        "A large company or business.",
+        "always doing things, not sitting still",
+        "A thick wire carrying electricity or signals."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'academic' mean?",
+      "options": [
+        "Made specially for a particular person or purpose.",
+        "related to education, studying, and thinking",
+        "A large company or business.",
+        "A portable video camera."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'childminder' mean?",
+      "options": [
+        "A portable video camera.",
+        "A person who looks after children in their own home.",
+        "always doing things, not sitting still",
+        "A large company or business."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'custom-built' mean?",
+      "options": [
+        "Made specially for a particular person or purpose.",
+        "A portable video camera.",
+        "related to education, studying, and thinking",
+        "A person who looks after children in their own home."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'button' mean?",
+      "options": [
+        "Someone who works for the government.",
+        "Made specially for a particular person or purpose.",
+        "A small, round piece used to fasten clothes.",
+        "To support someone or something."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'camcorder' mean?",
+      "options": [
+        "always doing things, not sitting still",
+        "A small, round piece used to fasten clothes.",
+        "A portable video camera.",
+        "A person who looks after children in their own home."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'civil servant' mean?",
+      "options": [
+        "To support someone or something.",
+        "A portable video camera.",
+        "A large company or business.",
+        "Someone who works for the government."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'back up' mean?",
+      "options": [
+        "A thick wire carrying electricity or signals.",
+        "A small, round piece used to fasten clothes.",
+        "Made specially for a particular person or purpose.",
+        "To support someone or something."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'cable' mean?",
+      "options": [
+        "A small, round piece used to fasten clothes.",
+        "Made specially for a particular person or purpose.",
+        "A large company or business.",
+        "A thick wire carrying electricity or signals."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'active' mean?",
+      "options": [
+        "always doing things, not sitting still",
+        "A large company or business.",
+        "To support someone or something.",
+        "Made specially for a particular person or purpose."
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Phrasal Verbs: Word Order (turn it off, look after them)",
+    "explanation": "A **phrasal verb** is a verb plus a particle like **up**, **off**, **out** or **after**: *turn off, look after, give up*. Where the object goes depends on the type of verb.\n\nWith **separable** verbs, a noun can go before or after the particle: *Turn **the TV** off* or *Turn off **the TV***. But a pronoun always goes **in the middle**: *Turn **it** off*, never *turn off it*.\n\nA **custom-built** desk in a **corporation** office was *put together* in the middle position, and an **active** **civil servant** can *pick **you** up* at seven — the pronoun sits between the verb and the particle.\n\nWith **inseparable** verbs, the object always goes after the particle: *Look after **the kids*** and *look after **them***. A **childminder** *looks after **children***, and she never *looks children after*.\n\n**Three-part** verbs keep the object at the very end: *look forward to **the trip*** and *run out of **milk***. When the **cable** for the **camcorder** fails, a good team does not *run out of **patience***.\n\nSome phrasal verbs have **no object** at all: *The car **broke down*** and *I **woke up** at six*. Press the **button**, *switch **it** off*, and remember: if friends **back up** your plan, check a dictionary — *turn sth off* is separable, *look after sb* is inseparable.",
+    "examples": [
+      "*It's cold. **Put** your coat **on**.* (separable, noun in the middle)",
+      "*Where's my coat? I want to **put it on**.* (pronoun in the middle)",
+      "*Can you **pick me up** at 7?* (separable)",
+      "*Who's going to **look after** the dog?* (inseparable)",
+      "*We've **run out of** coffee.* (three-part)",
+      "*The plane **took off** on time.* (no object)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with the pronoun in the middle: Turn off the camcorder. (it)",
+        "a": "Turn it off."
+      },
+      {
+        "q": "Rewrite with the pronoun in the middle: Pick up the civil servant at seven. (him)",
+        "a": "Pick him up at seven."
+      },
+      {
+        "q": "Rewrite correctly: The childminder looks the children after.",
+        "a": "The childminder looks after the children."
+      },
+      {
+        "q": "Rewrite with the full three-part verb: We have run out ___ cable for the button machine.",
+        "a": "We have run out of cable for the button machine."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "The music is too loud. Can you turn ___?",
+        "options": [
+          "it down",
+          "down it",
+          "it to down",
+          "down"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I've lost my keys. Can you help me look ___?",
+        "options": [
+          "them for",
+          "for they",
+          "for them",
+          "them"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "This form is important. Please fill ___ carefully.",
+        "options": [
+          "in it",
+          "it in",
+          "it",
+          "in"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "My grandmother looks ___ when my parents are at work.",
+        "options": [
+          "us after",
+          "after we",
+          "us",
+          "after us"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Your shoes are dirty. Take ___ before you come in.",
+        "options": [
+          "off them",
+          "off",
+          "them",
+          "them off"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "We've run ___ milk. Can you buy some?",
+        "options": [
+          "out of",
+          "out",
+          "of out",
+          "off"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I'm really looking ___ the holidays.",
+        "options": [
+          "forward",
+          "forward the",
+          "forward to",
+          "to forward"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "If you don't know the word, look ___ in a dictionary.",
+        "options": [
+          "up it",
+          "it up",
+          "it",
+          "up"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ran ___ my old teacher at the supermarket yesterday.",
+        "options": [
+          "across into",
+          "into",
+          "her into",
+          "in"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "Turn off it, please.",
+          "Turn it, please, off.",
+          "Turn please it off.",
+          "Turn it off, please."
+        ],
+        "answer": 3
+      }
+    ]
+  }
+}
