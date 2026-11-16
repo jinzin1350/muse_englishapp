@@ -1,0 +1,395 @@
+{
+  "date": "2026-11-16",
+  "theme": "review day",
+  "level": "b1",
+  "cefr": "B1",
+  "review": true,
+  "review_of": [
+    "2026-11-13",
+    "2026-11-14",
+    "2026-11-15"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "nearest",
+      "pos": "adjective",
+      "meaning": "Closest in distance.",
+      "example": "Where is the nearest bus stop?",
+      "example_fa": "نزدیک‌ترین ایستگاه اتوبوس کجاست؟",
+      "pronunciation": "NEER-ist",
+      "persian": "نزدیک‌ترین",
+      "photo": "media/b1/2026-11-13/photos/nearest.jpg",
+      "word_audio": "media/b1/2026-11-13/word-audio/nearest.mp3"
+    },
+    {
+      "word": "on board",
+      "pos": "phrase",
+      "meaning": "On a ship, train, or aircraft.",
+      "example": "All passengers are now on board the plane.",
+      "example_fa": "همه مسافران اکنون سوار هواپیما هستند.",
+      "pronunciation": "on BORD",
+      "persian": "سوار (کشتی، هواپیما)",
+      "photo": "media/b1/2026-11-13/photos/on board.jpg",
+      "word_audio": "media/b1/2026-11-13/word-audio/on board.mp3"
+    },
+    {
+      "word": "height",
+      "pos": "noun",
+      "meaning": "How tall a person or thing is.",
+      "example": "What is your height?",
+      "example_fa": "قدت چقدر است؟",
+      "pronunciation": "HYT",
+      "persian": "قد، ارتفاع",
+      "photo": "media/b1/2026-11-15/photos/height.jpg",
+      "word_audio": "media/b1/2026-11-15/word-audio/height.mp3"
+    },
+    {
+      "word": "wheelchair",
+      "pos": "noun",
+      "meaning": "chair with wheels for disabled people",
+      "example": "He uses a wheelchair to move around.",
+      "example_fa": "او برای جابه‌جا شدن از ویلچر استفاده می‌کند.",
+      "pronunciation": "WEEL-chair",
+      "persian": "ویلچر",
+      "photo": "media/b1/2026-11-14/photos/wheelchair.jpg",
+      "word_audio": "media/b1/2026-11-14/word-audio/wheelchair.mp3"
+    },
+    {
+      "word": "serious [bad]",
+      "pos": "adjective",
+      "meaning": "bad or dangerous; needing attention",
+      "example": "He has a serious illness.",
+      "example_fa": "او یک بیماری جدی دارد.",
+      "pronunciation": "SEER-ee-us",
+      "persian": "جدی، وخیم",
+      "photo": "media/b1/2026-11-14/photos/serious-bad.jpg",
+      "word_audio": "media/b1/2026-11-14/word-audio/serious-bad.mp3"
+    },
+    {
+      "word": "get used to sth get",
+      "pos": "phrase",
+      "meaning": "Become familiar with something and feel comfortable.",
+      "example": "I'm getting used to the cold weather.",
+      "example_fa": "دارم به هوای سرد عادت می‌کنم.",
+      "pronunciation": "get YOOST too",
+      "persian": "به چیزی عادت کردن",
+      "photo": "media/b1/2026-11-15/photos/get-used-to-sth-get.jpg",
+      "word_audio": "media/b1/2026-11-15/word-audio/get-used-to-sth-get.mp3"
+    },
+    {
+      "word": "relax",
+      "pos": "verb",
+      "meaning": "To rest and feel calm.",
+      "example": "I like to relax after work.",
+      "example_fa": "دوست دارم بعد از کار استراحت کنم.",
+      "pronunciation": "ree-LAKS",
+      "persian": "استراحت کردن، آرام شدن",
+      "photo": "media/b1/2026-11-14/photos/relax.jpg",
+      "word_audio": "media/b1/2026-11-14/word-audio/relax.mp3"
+    },
+    {
+      "word": "plane",
+      "pos": "noun",
+      "meaning": "an aircraft that flies in the sky.",
+      "example": "We traveled by plane to London.",
+      "example_fa": "ما با هواپیما به لندن سفر کردیم.",
+      "pronunciation": "PLAYN",
+      "persian": "هواپیما",
+      "photo": "media/b1/2026-11-13/photos/plane.jpg",
+      "word_audio": "media/b1/2026-11-13/word-audio/plane.mp3"
+    },
+    {
+      "word": "grey",
+      "pos": "adjective",
+      "meaning": "a color between black and white.",
+      "example": "The sky was grey and cloudy.",
+      "example_fa": "آسمان خاکستری و ابری بود.",
+      "pronunciation": "GRAY",
+      "persian": "خاکستری",
+      "photo": "media/b1/2026-11-15/photos/grey.jpg",
+      "word_audio": "media/b1/2026-11-15/word-audio/grey.mp3"
+    },
+    {
+      "word": "have something/nothing in common",
+      "pos": "phrase",
+      "meaning": "Share similar interests or not.",
+      "example": "We have nothing in common, but we are good friends.",
+      "example_fa": "ما هیچ وجه اشتراکی نداریم، اما دوستان خوبی هستیم.",
+      "pronunciation": "hav SUM-thing NUTH-ing in KOM-un",
+      "persian": "وجه اشتراک داشتن/نداشتن",
+      "photo": "media/b1/2026-11-15/photos/have-something-nothing-in-common.jpg",
+      "word_audio": "media/b1/2026-11-15/word-audio/have-something-nothing-in-common.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-11-16/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day Travel Stories",
+    "audio": "media/b1/2026-11-16/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-11-16/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Nina and Tom Fly on a Grey Day",
+    "audio": "media/b1/2026-11-16/shadowing.mp3",
+    "transcript": "media/b1/2026-11-16/shadowing-transcript.txt",
+    "transcript_fa": "media/b1/2026-11-16/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/b1/2026-11-16/shadowing-sentences/001.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/002.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/003.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/004.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/005.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/006.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/007.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/008.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/009.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/010.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/011.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/012.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/013.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/014.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/015.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/016.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/017.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/018.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/019.mp3",
+      "media/b1/2026-11-16/shadowing-sentences/020.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'nearest' mean?",
+      "options": [
+        "Share similar interests or not.",
+        "bad or dangerous; needing attention",
+        "How tall a person or thing is.",
+        "Closest in distance."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'on board' mean?",
+      "options": [
+        "a color between black and white.",
+        "Become familiar with something and feel comfortable.",
+        "On a ship, train, or aircraft.",
+        "Share similar interests or not."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'height' mean?",
+      "options": [
+        "On a ship, train, or aircraft.",
+        "How tall a person or thing is.",
+        "Share similar interests or not.",
+        "chair with wheels for disabled people"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'wheelchair' mean?",
+      "options": [
+        "chair with wheels for disabled people",
+        "Closest in distance.",
+        "How tall a person or thing is.",
+        "a color between black and white."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'serious [bad]' mean?",
+      "options": [
+        "Share similar interests or not.",
+        "a color between black and white.",
+        "bad or dangerous; needing attention",
+        "To rest and feel calm."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'get used to sth get' mean?",
+      "options": [
+        "a color between black and white.",
+        "Become familiar with something and feel comfortable.",
+        "To rest and feel calm.",
+        "On a ship, train, or aircraft."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'relax' mean?",
+      "options": [
+        "bad or dangerous; needing attention",
+        "To rest and feel calm.",
+        "an aircraft that flies in the sky.",
+        "chair with wheels for disabled people"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'plane' mean?",
+      "options": [
+        "How tall a person or thing is.",
+        "an aircraft that flies in the sky.",
+        "Become familiar with something and feel comfortable.",
+        "On a ship, train, or aircraft."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'grey' mean?",
+      "options": [
+        "an aircraft that flies in the sky.",
+        "Share similar interests or not.",
+        "Closest in distance.",
+        "a color between black and white."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'have something/nothing in common' mean?",
+      "options": [
+        "Closest in distance.",
+        "To rest and feel calm.",
+        "a color between black and white.",
+        "Share similar interests or not."
+      ],
+      "answer": 3
+    }
+  ],
+  "grammar": {
+    "title": "Used To",
+    "explanation": "We use **used to** + base verb for past habits and past states that are **not true now**. Nina **used to take** the plane every month, but she does not travel so often now.\n\nThe positive form is subject + **used to** + base verb. The negative is **didn't use to**, and questions start with **Did** you **use to**...? After **did** and **didn't**, write **use to** with no d.\n\n**Used to** is only for the past, and there is no present form. For a present habit, use the present simple with **usually**: *I **usually relax** after work.*\n\nFor past habits, you can also use **would** + base verb, for repeated actions only. Do not use **would** for past states: say *I **used to have** a dog*, not *I would have a dog*.\n\nDo not mix **used to** with **be used to** and **get used to**. **Be used to** + -ing or a noun means something is normal for you now, and **get used to** means it is becoming normal: *I am **getting used to** the grey winter weather.*\n\nDo not use **used to** for one single action, or to say how long something lasted. Use the **past simple** for that: *We **went** by plane to London in 2022.*",
+    "examples": [
+      "*I **used to walk** to school when I was a child.* (past habit)",
+      "*There **used to be** a bakery on this street.* (past state)",
+      "*My dad **didn't use to cook**, but now he loves it.* (negative)",
+      "***Did** you **use to play** an instrument?* (question)",
+      "*She **used to have** blonde hair.* (past state)",
+      "*I**'m** not **used to** driving on the right.* (be used to + -ing)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with used to: In the past, I travelled by plane every month. I do not do it now.",
+        "a": "I used to travel by plane every month."
+      },
+      {
+        "q": "Rewrite with didn't use to: He used to relax after work.",
+        "a": "He didn't use to relax after work."
+      },
+      {
+        "q": "Rewrite as a question: You used to live near the nearest station.",
+        "a": "Did you use to live near the nearest station?"
+      },
+      {
+        "q": "Rewrite with get used to: The cold grey weather is becoming normal for me.",
+        "a": "I am getting used to the cold grey weather."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "I ___ swim every day when I lived near the sea.",
+        "options": [
+          "used to",
+          "use to",
+          "was used to",
+          "am used to"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "___ you use to have a pet?",
+        "options": [
+          "Do",
+          "Were",
+          "Have",
+          "Did"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "There ___ a cinema in our town, but it closed.",
+        "options": [
+          "use to be",
+          "used to be",
+          "used to being",
+          "was used to be"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "When I was a child, we ___ go to the beach every Sunday.",
+        "options": [
+          "will",
+          "use to",
+          "would",
+          "are used to"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "My grandparents ___ in a small village.",
+        "options": [
+          "used to live",
+          "used to living",
+          "use to live",
+          "were used to live"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I ___ have long hair when I was at school.",
+        "options": [
+          "would",
+          "was used to",
+          "use to",
+          "used to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "I've lived in Canada for years, so I ___ the cold.",
+        "options": [
+          "used to",
+          "am used to",
+          "use to",
+          "am used"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "She ___ like coffee, but now she drinks it every day.",
+        "options": [
+          "didn't used",
+          "doesn't use to",
+          "didn't use to",
+          "not used to"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "It took me months to ___ driving on the left.",
+        "options": [
+          "used to",
+          "use to",
+          "be use to",
+          "get used to"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "He ___ to Japan once, in 2015.",
+        "options": [
+          "went",
+          "used to go",
+          "was used to go",
+          "use to go"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}
