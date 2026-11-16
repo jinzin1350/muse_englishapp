@@ -1,0 +1,394 @@
+{
+  "date": "2026-11-16",
+  "theme": "review day",
+  "level": "c2",
+  "cefr": "C2",
+  "review": true,
+  "review_of": [
+    "2026-11-13",
+    "2026-11-14",
+    "2026-11-15"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "chuck it down",
+      "pos": "phrasal verb",
+      "meaning": "To rain very heavily.",
+      "example": "It's really chucking it down outside; bring an umbrella.",
+      "pronunciation": "CHUK it DOWN",
+      "persian": "باران شدید باریدن",
+      "photo": "media/c2/2026-11-14/photos/chuck-it-down.jpg",
+      "word_audio": "media/c2/2026-11-14/word-audio/chuck-it-down.mp3"
+    },
+    {
+      "word": "ease debt",
+      "pos": "phrase",
+      "meaning": "To reduce the burden or amount of money owed.",
+      "example": "The government introduced policies to ease debt for students.",
+      "pronunciation": "EEZ DET",
+      "persian": "کاهش بدهی، سبک کردن بدهی",
+      "photo": "media/c2/2026-11-15/photos/ease-debt.jpg",
+      "word_audio": "media/c2/2026-11-15/word-audio/ease-debt.mp3"
+    },
+    {
+      "word": "carnivore",
+      "pos": "noun",
+      "meaning": "An animal that eats only meat.",
+      "example": "Lions are carnivores, hunting other animals for food.",
+      "pronunciation": "KAR-nuh-vor",
+      "persian": "گوشتخوار",
+      "photo": "media/c2/2026-11-14/photos/carnivore.jpg",
+      "word_audio": "media/c2/2026-11-14/word-audio/carnivore.mp3"
+    },
+    {
+      "word": "brutal suppression",
+      "pos": "noun phrase",
+      "meaning": "Harsh and violent control or crushing of dissent.",
+      "example": "The government's brutal suppression of protests drew international condemnation.",
+      "pronunciation": "BROO-tul suh-PRESH-un",
+      "persian": "سرکوب وحشیانه",
+      "photo": "media/c2/2026-11-14/photos/brutal-suppression.jpg",
+      "word_audio": "media/c2/2026-11-14/word-audio/brutal-suppression.mp3"
+    },
+    {
+      "word": "ceasefire",
+      "pos": "noun",
+      "meaning": "A temporary agreement to stop fighting in a war.",
+      "example": "Both sides agreed to a temporary ceasefire.",
+      "pronunciation": "SEES-fyre",
+      "persian": "آتش‌بس",
+      "photo": "media/c2/2026-11-14/photos/ceasefire.jpg",
+      "word_audio": "media/c2/2026-11-14/word-audio/ceasefire.mp3"
+    },
+    {
+      "word": "bulk up",
+      "pos": "phrasal verb",
+      "meaning": "To gain muscle mass and become bigger.",
+      "example": "He's trying to bulk up for the bodybuilding competition.",
+      "pronunciation": "BULK UP",
+      "persian": "عضله آوردن، حجم گرفتن",
+      "photo": "media/c2/2026-11-13/photos/bulk up.jpg",
+      "word_audio": "media/c2/2026-11-13/word-audio/bulk up.mp3"
+    },
+    {
+      "word": "development grant",
+      "pos": "noun phrase",
+      "meaning": "Money given to support growth or improvement projects.",
+      "example": "The startup received a development grant for its innovative project.",
+      "pronunciation": "duh-VEL-up-munt GRANT",
+      "persian": "کمک هزینه توسعه",
+      "photo": "media/c2/2026-11-15/photos/development-grant.jpg",
+      "word_audio": "media/c2/2026-11-15/word-audio/development-grant.mp3"
+    },
+    {
+      "word": "determined effort",
+      "pos": "noun phrase",
+      "meaning": "A strong, persistent attempt to achieve a goal.",
+      "example": "Achieving financial independence requires determined effort and planning.",
+      "pronunciation": "duh-TUR-mind EF-urt",
+      "persian": "تلاش مصمم، کوشش جدی",
+      "photo": "media/c2/2026-11-15/photos/determined-effort.jpg",
+      "word_audio": "media/c2/2026-11-15/word-audio/determined-effort.mp3"
+    },
+    {
+      "word": "blissfully unaware",
+      "pos": "adjective phrase",
+      "meaning": "Happily not knowing about something negative.",
+      "example": "She was blissfully unaware of the gossip circulating about her.",
+      "pronunciation": "BLISS-fuh-lee un-uh-WAIR",
+      "persian": "بی‌خبر و بی‌خیال، غافل",
+      "photo": "media/c2/2026-11-13/photos/blissfully unaware.jpg",
+      "word_audio": "media/c2/2026-11-13/word-audio/blissfully unaware.mp3"
+    },
+    {
+      "word": "blissfully happy",
+      "pos": "adjective phrase",
+      "meaning": "Extremely and perfectly happy.",
+      "example": "The newlyweds looked blissfully happy together.",
+      "pronunciation": "BLISS-fuh-lee HAP-ee",
+      "persian": "غرق در خوشبختی، بسیار شاد",
+      "photo": "media/c2/2026-11-13/photos/blissfully happy.jpg",
+      "word_audio": "media/c2/2026-11-13/word-audio/blissfully happy.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c2/2026-11-16/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review — Happiness, Storms and New Beginnings",
+    "audio": "media/c2/2026-11-16/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c2/2026-11-16/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Town After the Ceasefire",
+    "audio": "media/c2/2026-11-16/shadowing.mp3",
+    "transcript": "media/c2/2026-11-16/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c2/2026-11-16/shadowing-sentences/001.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/002.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/003.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/004.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/005.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/006.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/007.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/008.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/009.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/010.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/011.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/012.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/013.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/014.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/015.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/016.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/017.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/018.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/019.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/020.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/021.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/022.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/023.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/024.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/025.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/026.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/027.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/028.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/029.mp3",
+      "media/c2/2026-11-16/shadowing-sentences/030.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'chuck it down' mean?",
+      "options": [
+        "Extremely and perfectly happy.",
+        "To rain very heavily.",
+        "Money given to support growth or improvement projects.",
+        "Harsh and violent control or crushing of dissent."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'ease debt' mean?",
+      "options": [
+        "To rain very heavily.",
+        "A strong, persistent attempt to achieve a goal.",
+        "Money given to support growth or improvement projects.",
+        "To reduce the burden or amount of money owed."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'carnivore' mean?",
+      "options": [
+        "Money given to support growth or improvement projects.",
+        "A strong, persistent attempt to achieve a goal.",
+        "To reduce the burden or amount of money owed.",
+        "An animal that eats only meat."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'brutal suppression' mean?",
+      "options": [
+        "Extremely and perfectly happy.",
+        "To gain muscle mass and become bigger.",
+        "Harsh and violent control or crushing of dissent.",
+        "To reduce the burden or amount of money owed."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'ceasefire' mean?",
+      "options": [
+        "A temporary agreement to stop fighting in a war.",
+        "To gain muscle mass and become bigger.",
+        "A strong, persistent attempt to achieve a goal.",
+        "Extremely and perfectly happy."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bulk up' mean?",
+      "options": [
+        "A strong, persistent attempt to achieve a goal.",
+        "To gain muscle mass and become bigger.",
+        "Happily not knowing about something negative.",
+        "To reduce the burden or amount of money owed."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'development grant' mean?",
+      "options": [
+        "Harsh and violent control or crushing of dissent.",
+        "Extremely and perfectly happy.",
+        "To rain very heavily.",
+        "Money given to support growth or improvement projects."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'determined effort' mean?",
+      "options": [
+        "Money given to support growth or improvement projects.",
+        "To rain very heavily.",
+        "To gain muscle mass and become bigger.",
+        "A strong, persistent attempt to achieve a goal."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'blissfully unaware' mean?",
+      "options": [
+        "Happily not knowing about something negative.",
+        "Harsh and violent control or crushing of dissent.",
+        "A strong, persistent attempt to achieve a goal.",
+        "To gain muscle mass and become bigger."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'blissfully happy' mean?",
+      "options": [
+        "Extremely and perfectly happy.",
+        "To reduce the burden or amount of money owed.",
+        "Happily not knowing about something negative.",
+        "To gain muscle mass and become bigger."
+      ],
+      "answer": 0
+    }
+  ],
+  "grammar": {
+    "title": "Fronting and Word Order for Emphasis",
+    "explanation": "**Fronting** means moving part of a sentence to the **beginning** for emphasis or dramatic effect. Instead of *a castle stood on the hill*, say ***On the hill stood** a castle*.\n\nAfter a fronted place or direction, a simple verb can come **before a noun subject**. Say ***Into the room walked** a tall man*, or, when it started to chuck it down, ***Down came** the rain*.\n\nWith a **pronoun** subject, do **not** invert. Say *here **it comes*** and *here **they are***, never *here comes it*.\n\nFront an adjective or participle with **be** plus the subject for a formal effect. ***Gone are** the days* of easy money, and ***Lucky are** those* whose determined effort helped them ease debt.\n\nUse **So** plus an adjective plus **be** plus the subject plus **that** for degree. ***So loud was** the music **that** we could not hear each other*, even in a town blissfully happy after a ceasefire.\n\nUse **Such** plus **be** plus a noun plus **that** in the same way. ***Such was** his anger **that** he could not speak* about the brutal suppression.\n\nYou can also front an **object** or a clause with **no inversion**. The rest stays in normal order: ***Coffee** I love; **tea** I cannot stand*, and ***What he said next** I will never forget*.",
+    "examples": [
+      "***Here comes** the bus!* (here + verb + noun)",
+      "***On the top of the hill stood** an old castle.* (place + verb + subject)",
+      "***Into the room walked** a man in a black coat.* (direction + verb + subject)",
+      "***Gone are** the days of cheap flights.* (participle fronting)",
+      "***So difficult was** the exam **that** only two students passed.* (so + adjective + be + subject + that)",
+      "***Lucky are** those who love their jobs.* (adjective fronting)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with fronting: A castle stood on the top of the hill.",
+        "a": "On the top of the hill stood a castle."
+      },
+      {
+        "q": "Rewrite with fronting: The days of cheap flights are gone.",
+        "a": "Gone are the days of cheap flights."
+      },
+      {
+        "q": "Rewrite using so...that fronting: The exam was so difficult that only two students passed.",
+        "a": "So difficult was the exam that only two students passed."
+      },
+      {
+        "q": "Rewrite with a fronted object for contrast: I love coffee, but I cannot stand tea.",
+        "a": "Coffee I love; tea I cannot stand."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Look! Here ___!",
+        "options": [
+          "the bus comes",
+          "does the bus come",
+          "comes it",
+          "comes the bus"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Look, there's Tom. Here ___ now.",
+        "options": [
+          "comes he",
+          "he comes",
+          "does he come",
+          "he does come"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "On the top of the hill ___ an old castle.",
+        "options": [
+          "stood",
+          "did stand",
+          "was standing it",
+          "stood it"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "So loud ___ that we couldn't hear each other.",
+        "options": [
+          "the music was",
+          "the music was being",
+          "was the music",
+          "did the music be"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "___ the days when we could leave our doors unlocked.",
+        "options": [
+          "Gone are",
+          "Gone is",
+          "Are gone",
+          "Gone were being"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Such ___ his anger that he couldn't speak.",
+        "options": [
+          "did",
+          "has",
+          "is being",
+          "was"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Into the room ___ a tall man in a black coat.",
+        "options": [
+          "did walk",
+          "walked he",
+          "walked",
+          "was walk"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Coffee I love; tea ___.",
+        "options": [
+          "can't I stand",
+          "I can't stand",
+          "can I not stand",
+          "I stand can't"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Choose the correct sentence.",
+        "options": [
+          "Here are they.",
+          "Here they come are.",
+          "Here they are.",
+          "Here are come they."
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Lucky ___ those who have good friends.",
+        "options": [
+          "is",
+          "are",
+          "do",
+          "have"
+        ],
+        "answer": 1
+      }
+    ]
+  }
+}
