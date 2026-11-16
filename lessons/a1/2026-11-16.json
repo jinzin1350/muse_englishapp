@@ -1,0 +1,381 @@
+{
+  "date": "2026-11-16",
+  "theme": "review day",
+  "level": "a1",
+  "cefr": "A1",
+  "review": true,
+  "review_of": [
+    "2026-11-13",
+    "2026-11-14",
+    "2026-11-15"
+  ],
+  "review_window_words": 15,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "face",
+      "pos": "noun",
+      "meaning": "The front part of your head.",
+      "example": "She has a happy face.",
+      "example_fa": "او چهره‌ای شاد دارد.",
+      "pronunciation": "FAYSS",
+      "persian": "صورت",
+      "photo": "media/a1/2026-11-13/photos/face.jpg",
+      "word_audio": "media/a1/2026-11-13/word-audio/face.mp3"
+    },
+    {
+      "word": "fine",
+      "pos": "adjective",
+      "meaning": "Good or acceptable.",
+      "example": "I feel fine today, thank you.",
+      "example_fa": "امروز حالم خوب است، ممنون.",
+      "pronunciation": "FYNE",
+      "persian": "خوب، عالی",
+      "photo": "media/a1/2026-11-13/photos/fine.jpg",
+      "word_audio": "media/a1/2026-11-13/word-audio/fine.mp3"
+    },
+    {
+      "word": "apple pie",
+      "pos": "noun",
+      "meaning": "A sweet dessert made with apples in pastry.",
+      "example": "My grandma makes the best apple pie.",
+      "example_fa": "مادربزرگم بهترین پای سیب را درست می‌کند.",
+      "pronunciation": "AP-ul PY",
+      "persian": "پای سیب",
+      "photo": "media/a1/2026-11-15/photos/apple pie.jpg",
+      "word_audio": "media/a1/2026-11-15/word-audio/apple pie.mp3"
+    },
+    {
+      "example": "My grandson is learning to walk now.",
+      "example_fa": "نوه پسر من الان دارد راه رفتن یاد می‌گیرد.",
+      "meaning": "the son of your son or daughter.",
+      "persian": "نوه (پسر)",
+      "photo": "media/a1/2026-11-14/photos/grandson.jpg",
+      "pos": "noun",
+      "pronunciation": "GRAN-sun",
+      "word": "grandson",
+      "word_audio": "media/a1/2026-11-14/word-audio/grandson.mp3"
+    },
+    {
+      "word": "American",
+      "pos": "adjective",
+      "meaning": "From America.",
+      "example": "He is an American student.",
+      "example_fa": "او یک دانش‌آموز آمریکایی است.",
+      "pronunciation": "uh-MER-i-kun",
+      "persian": "آمریکایی",
+      "photo": "media/a1/2026-11-15/photos/American.jpg",
+      "word_audio": "media/a1/2026-11-15/word-audio/American.mp3"
+    },
+    {
+      "word": "alcohol",
+      "pos": "noun",
+      "meaning": "drinks like beer or wine",
+      "example": "Do you drink alcohol?",
+      "example_fa": "آیا الکل می‌نوشید؟",
+      "pronunciation": "AL-kuh-hol",
+      "persian": "الکل، مشروب",
+      "photo": "media/a1/2026-11-15/photos/alcohol.jpg",
+      "word_audio": "media/a1/2026-11-15/word-audio/alcohol.mp3"
+    },
+    {
+      "word": "good for you",
+      "pos": "phrase",
+      "meaning": "used to say something is healthy or positive for you.",
+      "example": "Eating fruit is good for you.",
+      "example_fa": "خوردن میوه برای تو خوب است.",
+      "pronunciation": "GOOD fer YOO",
+      "persian": "برای تو خوب است",
+      "photo": "media/a1/2026-11-13/photos/good-for-you.jpg",
+      "word_audio": "media/a1/2026-11-13/word-audio/good-for-you.mp3"
+    },
+    {
+      "example": "They plan to get married next year.",
+      "example_fa": "آن‌ها قصد دارند سال آینده ازدواج کنند.",
+      "meaning": "to become husband and wife.",
+      "persian": "ازدواج کردن",
+      "photo": "media/a1/2026-11-14/photos/get-married-get.jpg",
+      "pos": "phrase",
+      "pronunciation": "get MA-rid get",
+      "word": "get married get",
+      "word_audio": "media/a1/2026-11-14/word-audio/get-married-get.mp3"
+    },
+    {
+      "word": "feet",
+      "pos": "noun",
+      "meaning": "The parts of your body you stand on. (plural of foot)",
+      "example": "My feet hurt after walking all day.",
+      "example_fa": "پاهایم بعد از راه رفتن تمام روز درد می‌کنند.",
+      "pronunciation": "FEET",
+      "persian": "پاها",
+      "photo": "media/a1/2026-11-13/photos/feet.jpg",
+      "word_audio": "media/a1/2026-11-13/word-audio/feet.mp3"
+    },
+    {
+      "word": "Antarctica",
+      "pos": "proper noun",
+      "meaning": "The coldest continent at the South Pole.",
+      "example": "Antarctica is covered in ice.",
+      "example_fa": "قطب جنوب پوشیده از یخ است.",
+      "pronunciation": "an-TARK-ti-kuh",
+      "persian": "قطب جنوب",
+      "photo": "media/a1/2026-11-15/photos/Antarctica.jpg",
+      "word_audio": "media/a1/2026-11-15/word-audio/Antarctica.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-16/pronunciation.mp3",
+  "podcast": null,
+  "shadowing": {
+    "title": "A Happy Day for My Grandson",
+    "audio": "media/a1/2026-11-16/shadowing.mp3",
+    "transcript": "media/a1/2026-11-16/shadowing-transcript.txt",
+    "transcript_fa": "media/a1/2026-11-16/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-16/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-16/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-16/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-16/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-16/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-16/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-16/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-16/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-16/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-16/shadowing-sentences/010.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'face' mean?",
+      "options": [
+        "used to say something is healthy or positive for you.",
+        "The front part of your head.",
+        "The coldest continent at the South Pole.",
+        "drinks like beer or wine"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'fine' mean?",
+      "options": [
+        "The coldest continent at the South Pole.",
+        "the son of your son or daughter.",
+        "drinks like beer or wine",
+        "Good or acceptable."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'apple pie' mean?",
+      "options": [
+        "used to say something is healthy or positive for you.",
+        "The coldest continent at the South Pole.",
+        "A sweet dessert made with apples in pastry.",
+        "to become husband and wife."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'grandson' mean?",
+      "options": [
+        "A sweet dessert made with apples in pastry.",
+        "the son of your son or daughter.",
+        "to become husband and wife.",
+        "used to say something is healthy or positive for you."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'American' mean?",
+      "options": [
+        "Good or acceptable.",
+        "From America.",
+        "The parts of your body you stand on. (plural of foot)",
+        "The front part of your head."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'alcohol' mean?",
+      "options": [
+        "drinks like beer or wine",
+        "A sweet dessert made with apples in pastry.",
+        "The front part of your head.",
+        "used to say something is healthy or positive for you."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'good for you' mean?",
+      "options": [
+        "From America.",
+        "to become husband and wife.",
+        "used to say something is healthy or positive for you.",
+        "The parts of your body you stand on. (plural of foot)"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'get married get' mean?",
+      "options": [
+        "drinks like beer or wine",
+        "to become husband and wife.",
+        "The coldest continent at the South Pole.",
+        "The parts of your body you stand on. (plural of foot)"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'feet' mean?",
+      "options": [
+        "The parts of your body you stand on. (plural of foot)",
+        "The coldest continent at the South Pole.",
+        "the son of your son or daughter.",
+        "The front part of your head."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'Antarctica' mean?",
+      "options": [
+        "drinks like beer or wine",
+        "The front part of your head.",
+        "The coldest continent at the South Pole.",
+        "The parts of your body you stand on. (plural of foot)"
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "Prepositions of Place (in, on, under, next to)",
+    "explanation": "**Prepositions of place** tell us **where** something is.\n\nUse **in** for inside something. The apple pie is **in** the box, and your face is **in** the mirror.\n\nUse **on** for a surface. The apple pie is **on** the table.\n\nUse **under** for below something. Your **feet** are **under** the table.\n\nUse **next to** for at the side. Sit **next to** your grandson.\n\nUse **between** for in the middle of two things. Use **behind** for at the back, and **in front of** for facing the front.\n\nUse **at** for a point or a fixed phrase. Wait **at** the bus stop, and stay **at** home if you do not feel **fine**.",
+    "examples": [
+      "*My books are **in** my bag.* (inside)",
+      "*There's a clock **on** the wall.* (surface)",
+      "*Your shoes are **under** the bed.* (below)",
+      "*Our house is **next to** a park.* (at the side)",
+      "*The café is **between** the bank and the cinema.* (two things)",
+      "*Wait for me **at** the bus stop.* (a point)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with in: The apple pie is inside the box.",
+        "a": "The apple pie is in the box."
+      },
+      {
+        "q": "Rewrite with under: Your shoes are below the bed.",
+        "a": "Your shoes are under the bed."
+      },
+      {
+        "q": "Rewrite with next to: Sit at the side of your grandson.",
+        "a": "Sit next to your grandson."
+      },
+      {
+        "q": "Rewrite with on: Put the apple pie on top of the table.",
+        "a": "Put the apple pie on the table."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "The milk is ___ the fridge. It's nice and cold.",
+        "options": [
+          "on",
+          "at",
+          "under",
+          "in"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "There's a picture ___ the wall.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "under"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "The ball is ___ the table. (The table is above it.)",
+        "options": [
+          "on",
+          "in",
+          "under",
+          "between"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The bank is ___ the post office and the supermarket.",
+        "options": [
+          "between",
+          "next",
+          "in",
+          "at"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I live ___ Toronto.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "under"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "Sit ___ me. There's a free chair here.",
+        "options": [
+          "next",
+          "between",
+          "next to",
+          "in"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Are you ___ home? – No, I'm at work.",
+        "options": [
+          "in",
+          "at",
+          "on",
+          "to"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Don't stand ___ the TV! I can't see.",
+        "options": [
+          "behind",
+          "under",
+          "between",
+          "in front of"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Wait for me ___ the bus stop.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "under"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "The supermarket is ___ the bank. Just cross the street.",
+        "options": [
+          "opposite",
+          "between",
+          "under",
+          "in"
+        ],
+        "answer": 0
+      }
+    ],
+    "audio": "media/a1/2026-11-16/grammar-en.mp3"
+  }
+}
