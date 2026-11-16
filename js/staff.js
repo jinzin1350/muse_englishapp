@@ -2666,7 +2666,7 @@ async function apRenderSupportThread(v, userId) {
     apFile = null;
     if (apFileInp) apFileInp.value = '';
     if (apPrevBox) apPrevBox.classList.add('hidden');
-    if (apPrevImg) apPrevImg.removeAttribute('src');
+    if (apPrevImg) { apPrevImg.removeAttribute('src'); apPrevImg.style.display = ''; }
   }
   if (apFileInp) apFileInp.addEventListener('change', function () {
     var f = apFileInp.files && apFileInp.files[0];
@@ -2676,7 +2676,11 @@ async function apRenderSupportThread(v, userId) {
     if (f.size > 10 * 1024 * 1024) { apClearFile(); if (err) err.textContent = 'That photo is too big — pick a smaller one.'; return; }
     apFile = f;
     if (err) err.textContent = '';
-    if (apPrevImg && apPrevBox) { apPrevImg.src = URL.createObjectURL(f); apPrevBox.classList.remove('hidden'); }
+    if (apPrevImg && apPrevBox) {
+      apPrevImg.onerror = function () { apPrevImg.style.display = 'none'; };
+      apPrevImg.src = URL.createObjectURL(f);
+      apPrevBox.classList.remove('hidden');
+    }
   });
   var apPrevX = v.querySelector('#ap-sup-preview-x');
   if (apPrevX) apPrevX.addEventListener('click', apClearFile);

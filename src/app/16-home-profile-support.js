@@ -624,16 +624,17 @@ function supTime(ts) {
 
 /* Support photo attachments (2026-11-16, Alireza's order): a message may
    carry ONE photo. The image lives in the teacher-photos bucket under
-   support/<user_id>/ (the same bucket learners already upload IELTS
-   speaking audio to), and its public URL rides as the last line of the
-   message body — no schema change. supSplitBody separates it back out. */
+   <user_id>/support/ (bucket policies require the first folder segment
+   to be the uploader's own id), and its public URL rides as the last
+   line of the message body — no schema change. supSplitBody separates
+   it back out. */
 function supSplitBody(body) {
   var lines = String(body || '').split('\n');
   var img = '';
   var kept = [];
   lines.forEach(function (ln) {
     var t = ln.trim();
-    if (!img && /^https?:\/\/\S+$/.test(t) && t.indexOf('/teacher-photos/support/') !== -1) { img = t; return; }
+    if (!img && /^https?:\/\/\S+$/.test(t) && t.indexOf('teacher-photos') !== -1 && t.indexOf('/support/') !== -1) { img = t; return; }
     kept.push(ln);
   });
   return { text: kept.join('\n').replace(/\n{2,}$/g, '').trim(), img: img };
@@ -664,7 +665,9 @@ function supCompressImage(file) {
 async function supUploadImage(file) {
   if (!sb || !state.user || !state.user.id) return '';
   var blob = await supCompressImage(file);
-  var path = 'support/' + state.user.id + '/' + Date.now() + '.jpg';
+  /* Path MUST start with the user's own id: the bucket's insert/update
+     policies require (storage.foldername(name))[1] = auth.uid(). */
+  var path = state.user.id + '/support/' + Date.now() + '.jpg';
   try {
     var up = await sb.storage.from('teacher-photos').upload(path, blob, { contentType: 'image/jpeg', upsert: true });
     if (up.error) return '';
@@ -716,7 +719,7 @@ async function renderSupport(v) {
     supFile = null;
     if (fileInp) fileInp.value = '';
     if (prevBox) prevBox.classList.add('hidden');
-    if (prevImg) prevImg.removeAttribute('src');
+    if (prevImg) { prevImg.removeAttribute('src'); prevImg.style.display = ''; }
   }
   if (fileInp) fileInp.addEventListener('change', function () {
     var f = fileInp.files && fileInp.files[0];
@@ -726,7 +729,11 @@ async function renderSupport(v) {
     if (f.size > 10 * 1024 * 1024) { supClearFile(); if (err) err.textContent = fa ? 'عکس خیلی بزرگه؛ یه عکس کوچیک‌تر انتخاب کن.' : 'That photo is too big — pick a smaller one.'; return; }
     supFile = f;
     if (err) err.textContent = '';
-    if (prevImg && prevBox) { prevImg.src = URL.createObjectURL(f); prevBox.classList.remove('hidden'); }
+    if (prevImg && prevBox) {
+      prevImg.onerror = function () { prevImg.style.display = 'none'; };
+      prevImg.src = URL.createObjectURL(f);
+      prevBox.classList.remove('hidden');
+    }
   });
   var prevX = document.getElementById('sup-preview-x');
   if (prevX) prevX.addEventListener('click', supClearFile);
