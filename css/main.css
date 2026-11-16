@@ -3499,6 +3499,11 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .install-banner-arrow{font-size:24px;font-weight:700;flex:0 0 auto;}
 .inst-sec{font-weight:800;font-size:15.5px;margin:14px 0 6px;color:#232B4D;}
 .inst-steps{margin:0;padding-inline-start:20px;line-height:2;font-size:14.5px;color:#3C4C5E;}
+.inst-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:15px 18px;margin-top:10px;border:none;border-radius:16px;font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;text-decoration:none;}
+.inst-btn-primary{background:linear-gradient(180deg,#FF8A2A,#F26522);color:#fff;box-shadow:0 6px 16px rgba(242,101,34,.35);}
+.inst-btn-primary:active{transform:scale(.99);}
+.inst-btn-soft{background:#FDEBD7;color:#E8590C;}
+.inst-btn-ghost{background:#fff;color:#7C8499;border:1.5px solid #EFE7DA;}
 .hm-card{display:flex;align-items:center;gap:14px;background:#fff;border-radius:24px;padding:16px;margin-bottom:13px;text-decoration:none;box-shadow:0 6px 20px rgba(35,43,77,.06);border:1px solid #FBF0DC;}
 .hm-card:active{transform:scale(.99);}
 .hm-icon{flex:0 0 auto;width:66px;height:66px;border-radius:19px;background:#232B4D;display:flex;align-items:center;justify-content:center;font-size:31px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);}

@@ -2489,12 +2489,12 @@ function showInstallGuide() {
     '<p class="muted" style="margin:0;line-height:1.8">' + (fa
       ? 'میوز انگلیش یه اپه؛ کافیه یه بار نصبش کنی تا آیکونش بیاد روی صفحهٔ گوشی‌ت و همیشه با یه لمس باز بشه.'
       : 'Muse English is an app — install it once and its icon lives on your home screen, one tap away.') + '</p>' +
-    (ios ? '' : '<button class="btn btn-orange btn-block" data-action="install-now" style="margin-top:12px">📲 ' + (fa ? 'نصب اپ' : 'Install the app') + '</button>') +
+    (ios ? '' : '<button class="inst-btn inst-btn-primary" data-action="install-now" style="margin-top:14px">📲 ' + (fa ? 'نصب اپ' : 'Install the app') + '</button>') +
     '<div class="inst-sec">🤖 ' + (fa ? 'اندروید (کروم)' : 'Android (Chrome)') + '</div>' + stepList(androidSteps) +
     '<div class="inst-sec">🍎 ' + (fa ? 'آیفون (سافاری)' : 'iPhone (Safari)') + '</div>' + stepList(iosSteps) +
     '<p class="muted" style="margin:14px 0 0;line-height:1.8">' + (fa ? 'جایی گیر کردی؟ به پشتیبانی پیام بده 💬' : 'Stuck somewhere? Message support 💬') + '</p>' +
-    '<button class="btn btn-ghost btn-block" data-action="install-support" style="margin-top:8px">💬 ' + (fa ? 'پیام به پشتیبانی' : 'Message support') + '</button>' +
-    '<button class="btn btn-ghost btn-block" data-action="modal-close" style="margin-top:8px">' + (fa ? 'بستن' : 'Close') + '</button>' +
+    '<button class="inst-btn inst-btn-soft" data-action="install-support">💬 ' + (fa ? 'پیام به پشتیبانی' : 'Message support') + '</button>' +
+    '<button class="inst-btn inst-btn-ghost" data-action="modal-close">' + (fa ? 'بستن' : 'Close') + '</button>' +
     '</div>';
   showModal(html);
   try { trackEvent('install_guide', { action: 'open', ios: ios }); } catch (e) {}
@@ -14433,7 +14433,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611161516';
+var APP_VERSION = '202611161556';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
