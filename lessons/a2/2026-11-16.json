@@ -1,0 +1,391 @@
+{
+  "date": "2026-11-16",
+  "theme": "review day",
+  "level": "a2",
+  "cefr": "A2",
+  "review": true,
+  "review_of": [
+    "2026-11-13",
+    "2026-11-14",
+    "2026-11-15"
+  ],
+  "review_window_words": 15,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "advise",
+      "pos": "verb",
+      "meaning": "To give suggestions about what someone should do.",
+      "example": "I advise you to study hard.",
+      "example_fa": "به تو توصیه می‌کنم سخت درس بخوانی.",
+      "pronunciation": "ad-VYZ",
+      "persian": "نصیحت کردن، مشاوره دادن",
+      "photo": "media/a2/2026-11-15/photos/advise.jpg",
+      "word_audio": "media/a2/2026-11-15/word-audio/advise.mp3"
+    },
+    {
+      "word": "brush your teeth",
+      "pos": "phrase",
+      "meaning": "clean your teeth with a brush",
+      "example": "Remember to brush your teeth every morning.",
+      "example_fa": "یادت باشد هر صبح دندان‌هایت را مسواک بزنی.",
+      "pronunciation": "BRUSH yor TEETH",
+      "persian": "مسواک زدن",
+      "photo": "media/a2/2026-11-14/photos/brush-your-teeth.jpg",
+      "word_audio": "media/a2/2026-11-14/word-audio/brush-your-teeth.mp3"
+    },
+    {
+      "word": "courgette",
+      "pos": "noun",
+      "meaning": "A long green vegetable, like a small marrow.",
+      "example": "I like to eat courgette with my dinner.",
+      "example_fa": "دوست دارم همراه شامم کدو سبز بخورم.",
+      "pronunciation": "kor-ZHET",
+      "persian": "کدو سبز",
+      "photo": "media/a2/2026-11-13/photos/courgette.jpg",
+      "word_audio": "media/a2/2026-11-13/word-audio/courgette.mp3"
+    },
+    {
+      "word": "coffee",
+      "pos": "noun",
+      "meaning": "A dark brown drink made from roasted beans.",
+      "example": "I drink coffee every morning.",
+      "example_fa": "من هر صبح قهوه می‌نوشم.",
+      "pronunciation": "KOF-ee",
+      "persian": "قهوه",
+      "photo": "media/a2/2026-11-13/photos/coffee.jpg",
+      "word_audio": "media/a2/2026-11-13/word-audio/coffee.mp3"
+    },
+    {
+      "word": "bother",
+      "pos": "verb",
+      "meaning": "To make an effort to do something.",
+      "example": "Don't bother to call me, I'll be home late.",
+      "example_fa": "زحمت نکش به من زنگ بزنی، دیر به خانه می‌آیم.",
+      "pronunciation": "BAH-ther",
+      "persian": "زحمت کشیدن",
+      "photo": "media/a2/2026-11-14/photos/bother.jpg",
+      "word_audio": "media/a2/2026-11-14/word-audio/bother.mp3"
+    },
+    {
+      "word": "bath",
+      "pos": "noun",
+      "meaning": "Washing your body in a tub of water.",
+      "example": "I like to take a warm bath at night.",
+      "example_fa": "دوست دارم شب‌ها حمام آب گرم بگیرم.",
+      "pronunciation": "BAHTH",
+      "persian": "حمام، وان",
+      "photo": "media/a2/2026-11-14/photos/bath.jpg",
+      "word_audio": "media/a2/2026-11-14/word-audio/bath.mp3"
+    },
+    {
+      "word": "accountant",
+      "pos": "noun",
+      "meaning": "a person who keeps or examines financial records",
+      "example": "My accountant helps me with my taxes.",
+      "example_fa": "حسابدارم در امور مالیاتی به من کمک می‌کند.",
+      "pronunciation": "uh-KOWN-tunt",
+      "persian": "حسابدار",
+      "photo": "media/a2/2026-11-15/photos/accountant.jpg",
+      "word_audio": "media/a2/2026-11-15/word-audio/accountant.mp3"
+    },
+    {
+      "word": "achieve",
+      "pos": "verb",
+      "meaning": "to succeed in doing something good",
+      "example": "She wants to achieve her dreams.",
+      "example_fa": "او می‌خواهد به رویاهایش برسد.",
+      "pronunciation": "uh-CHEEV",
+      "persian": "به دست آوردن، موفق شدن",
+      "photo": "media/a2/2026-11-15/photos/achieve.jpg",
+      "word_audio": "media/a2/2026-11-15/word-audio/achieve.mp3"
+    },
+    {
+      "word": "block of flats",
+      "pos": "phrase",
+      "meaning": "A large building with many apartments.",
+      "example": "They live in a block of flats downtown.",
+      "example_fa": "آن‌ها در یک بلوک آپارتمانی در مرکز شهر زندگی می‌کنند.",
+      "pronunciation": "BLOK uv FLATS",
+      "persian": "آپارتمان، بلوک آپارتمانی",
+      "photo": "media/a2/2026-11-14/photos/block-of-flats.jpg",
+      "word_audio": "media/a2/2026-11-14/word-audio/block-of-flats.mp3"
+    },
+    {
+      "word": "cooker",
+      "pos": "noun",
+      "meaning": "A piece of kitchen equipment for cooking food.",
+      "example": "We bought a new electric cooker.",
+      "example_fa": "ما یک اجاق برقی جدید خریدیم.",
+      "pronunciation": "KOOK-er",
+      "persian": "اجاق گاز",
+      "photo": "media/a2/2026-11-13/photos/cooker.jpg",
+      "word_audio": "media/a2/2026-11-13/word-audio/cooker.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-16/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day at Home",
+    "audio": "media/a2/2026-11-16/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-16/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Anna and Her Quiet Home",
+    "audio": "media/a2/2026-11-16/shadowing.mp3",
+    "transcript": "media/a2/2026-11-16/shadowing-transcript.txt",
+    "transcript_fa": "media/a2/2026-11-16/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-16/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-16/shadowing-sentences/015.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'advise' mean?",
+      "options": [
+        "A piece of kitchen equipment for cooking food.",
+        "a person who keeps or examines financial records",
+        "To give suggestions about what someone should do.",
+        "A long green vegetable, like a small marrow."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'brush your teeth' mean?",
+      "options": [
+        "To make an effort to do something.",
+        "a person who keeps or examines financial records",
+        "clean your teeth with a brush",
+        "to succeed in doing something good"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'courgette' mean?",
+      "options": [
+        "To make an effort to do something.",
+        "A long green vegetable, like a small marrow.",
+        "A piece of kitchen equipment for cooking food.",
+        "to succeed in doing something good"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'coffee' mean?",
+      "options": [
+        "A dark brown drink made from roasted beans.",
+        "To give suggestions about what someone should do.",
+        "to succeed in doing something good",
+        "Washing your body in a tub of water."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bother' mean?",
+      "options": [
+        "To make an effort to do something.",
+        "A dark brown drink made from roasted beans.",
+        "A large building with many apartments.",
+        "clean your teeth with a brush"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bath' mean?",
+      "options": [
+        "clean your teeth with a brush",
+        "Washing your body in a tub of water.",
+        "a person who keeps or examines financial records",
+        "A piece of kitchen equipment for cooking food."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'accountant' mean?",
+      "options": [
+        "A large building with many apartments.",
+        "to succeed in doing something good",
+        "A long green vegetable, like a small marrow.",
+        "a person who keeps or examines financial records"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'achieve' mean?",
+      "options": [
+        "to succeed in doing something good",
+        "clean your teeth with a brush",
+        "To give suggestions about what someone should do.",
+        "A large building with many apartments."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'block of flats' mean?",
+      "options": [
+        "to succeed in doing something good",
+        "A long green vegetable, like a small marrow.",
+        "Washing your body in a tub of water.",
+        "A large building with many apartments."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'cooker' mean?",
+      "options": [
+        "a person who keeps or examines financial records",
+        "A piece of kitchen equipment for cooking food.",
+        "clean your teeth with a brush",
+        "A dark brown drink made from roasted beans."
+      ],
+      "answer": 1
+    }
+  ],
+  "grammar": {
+    "title": "Present Simple",
+    "explanation": "We use the **present simple** for habits, routines and things that are true. I **drink** coffee every morning, and Anna **lives** in a block of flats.\n\nWith **he**, **she** and **it**, add **-s** to the verb. Our accountant **works** in an office, and she **cooks** courgette on the cooker.\n\nFor negatives, use **don't** or **doesn't** + the base verb. She **doesn't eat** meat, and I **don't bother** in the morning.\n\nFor questions, use **Do** or **Does** + the base verb. **Do** you **like** coffee?\n\nWords like **always**, **usually** and **never** go before the main verb. I **usually** brush my teeth and take a bath in the morning.",
+    "examples": [
+      "*I **live** in a small flat.* (I + base verb)",
+      "*My brother **works** in a hospital.* (he + -s)",
+      "*We **don't watch** TV in the morning.* (don't + base verb)",
+      "*She **doesn't eat** meat.* (doesn't + base verb)",
+      "***Do** you **like** coffee?* (question with do)",
+      "***Does** your sister **speak** English?* (question with does)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite using the present simple: She ___ (live) in a block of flats.",
+        "a": "She lives in a block of flats."
+      },
+      {
+        "q": "Rewrite using the present simple: He ___ (drink) coffee every morning.",
+        "a": "He drinks coffee every morning."
+      },
+      {
+        "q": "Rewrite using the present simple: They ___ (not watch) TV in the morning.",
+        "a": "They don't watch TV in the morning."
+      },
+      {
+        "q": "Rewrite as a question: You like courgette.",
+        "a": "Do you like courgette?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "My brother ___ in a bank.",
+        "options": [
+          "work",
+          "works",
+          "working",
+          "is work"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "I ___ coffee every morning.",
+        "options": [
+          "drinks",
+          "am drink",
+          "drinking",
+          "drink"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She ___ meat.",
+        "options": [
+          "don't eat",
+          "doesn't eat",
+          "doesn't eats",
+          "not eat"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "___ you live near here?",
+        "options": [
+          "Does",
+          "Are",
+          "Is",
+          "Do"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "What time ___ the film start?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "are"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "We ___ to work on Fridays.",
+        "options": [
+          "don't drive",
+          "doesn't drive",
+          "not drive",
+          "don't drives"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "My dad ___ the news every evening.",
+        "options": [
+          "watchs",
+          "watches",
+          "watching",
+          "watchies"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Lucy ___ hard for her exams.",
+        "options": [
+          "studies",
+          "studys",
+          "studyes",
+          "study"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "He ___ two brothers.",
+        "options": [
+          "haves",
+          "have",
+          "is have",
+          "has"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Choose the correct question.",
+        "options": [
+          "Does she likes music?",
+          "Do she like music?",
+          "Does she like music?",
+          "She likes music does?"
+        ],
+        "answer": 2
+      }
+    ],
+    "audio": "media/a2/2026-11-16/grammar-en.mp3"
+  }
+}
