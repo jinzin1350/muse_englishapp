@@ -622,11 +622,65 @@ function supTime(ts) {
   } catch (e) { return ''; }
 }
 
+/* Support photo attachments (2026-11-16, Alireza's order): a message may
+   carry ONE photo. The image lives in the teacher-photos bucket under
+   support/<user_id>/ (the same bucket learners already upload IELTS
+   speaking audio to), and its public URL rides as the last line of the
+   message body — no schema change. supSplitBody separates it back out. */
+function supSplitBody(body) {
+  var lines = String(body || '').split('\n');
+  var img = '';
+  var kept = [];
+  lines.forEach(function (ln) {
+    var t = ln.trim();
+    if (!img && /^https?:\/\/\S+$/.test(t) && t.indexOf('/teacher-photos/support/') !== -1) { img = t; return; }
+    kept.push(ln);
+  });
+  return { text: kept.join('\n').replace(/\n{2,}$/g, '').trim(), img: img };
+}
+
+function supCompressImage(file) {
+  return new Promise(function (resolve) {
+    try {
+      var url = URL.createObjectURL(file);
+      var im = new Image();
+      im.onload = function () {
+        try {
+          var max = 1200, w = im.naturalWidth || im.width, h = im.naturalHeight || im.height;
+          var sc = Math.min(1, max / Math.max(w, h));
+          var cw = Math.max(1, Math.round(w * sc)), ch = Math.max(1, Math.round(h * sc));
+          var cv = document.createElement('canvas'); cv.width = cw; cv.height = ch;
+          cv.getContext('2d').drawImage(im, 0, 0, cw, ch);
+          URL.revokeObjectURL(url);
+          cv.toBlob(function (b) { resolve(b || file); }, 'image/jpeg', 0.82);
+        } catch (e) { resolve(file); }
+      };
+      im.onerror = function () { URL.revokeObjectURL(url); resolve(file); };
+      im.src = url;
+    } catch (e) { resolve(file); }
+  });
+}
+
+async function supUploadImage(file) {
+  if (!sb || !state.user || !state.user.id) return '';
+  var blob = await supCompressImage(file);
+  var path = 'support/' + state.user.id + '/' + Date.now() + '.jpg';
+  try {
+    var up = await sb.storage.from('teacher-photos').upload(path, blob, { contentType: 'image/jpeg', upsert: true });
+    if (up.error) return '';
+    return sb.storage.from('teacher-photos').getPublicUrl(path).data.publicUrl || '';
+  } catch (e) { return ''; }
+}
+
 function supportMsgHTML(m, fa, asAdmin) {
   var mine = asAdmin ? !!m.from_admin : !m.from_admin;
   var who = mine ? (fa ? 'شما' : 'You') : (asAdmin ? 'Learner' : 'Muse English');
+  var parts = supSplitBody(m.body);
+  var inner = '';
+  if (parts.img) inner += '<a href="' + esc(parts.img) + '" target="_blank" rel="noopener"><img class="sup-img" loading="lazy" src="' + esc(parts.img) + '" alt="' + (fa ? 'عکس' : 'Photo') + '"></a>';
+  if (parts.text) inner += (parts.img ? '<div class="sup-img-cap">' : '<div>') + esc(parts.text).replace(/\n/g, '<br>') + '</div>';
   return '<div class="sup-msg ' + (mine ? 'me' : 'them') + '">' +
-    '<div class="sup-bubble" dir="auto">' + esc(m.body).replace(/\n/g, '<br>') + '</div>' +
+    '<div class="sup-bubble" dir="auto">' + inner + '</div>' +
     '<div class="sup-time">' + who + ' · ' + supTime(m.created_at) + '</div></div>';
 }
 
@@ -637,6 +691,8 @@ async function renderSupport(v) {
     '<p class="muted">' + (fa ? 'سؤالت رو این‌جا بپرس؛ جواب هم این‌جا میاد. معمولاً ظرف یه روز جواب می‌دیم.' : 'Ask your question here — the reply lands right here too. We usually reply within a day.') + '</p>' +
     '<div id="sup-thread" class="sup-thread"><div class="empty">…</div></div>' +
     '<div class="sup-composer"><textarea id="sup-input" dir="auto" rows="3" maxlength="2000" placeholder="' + (fa ? 'سؤالت رو بنویس…' : 'Write your question…') + '"></textarea>' +
+    '<div class="sup-attach-row"><label class="btn btn-ghost btn-sm sup-attach-btn">📷 ' + (fa ? 'افزودن عکس' : 'Add a photo') + '<input type="file" id="sup-file" accept="image/*" hidden></label>' +
+    '<span class="sup-preview hidden" id="sup-preview"><img id="sup-preview-img" alt=""><button type="button" class="sup-preview-x" id="sup-preview-x" aria-label="×">×</button></span></div>' +
     '<div class="form-error" id="sup-error" role="alert"></div>' +
     '<button class="btn btn-orange btn-block" id="sup-send">' + (fa ? 'ارسال' : 'Send') + '</button></div></div>';
   var host = document.getElementById('sup-thread');
@@ -652,19 +708,51 @@ async function renderSupport(v) {
     host.innerHTML = msgs.map(function (m) { return supportMsgHTML(m, fa, false); }).join('');
   }
   paintSupportBadges();
+  var supFile = null;
+  var fileInp = document.getElementById('sup-file');
+  var prevBox = document.getElementById('sup-preview');
+  var prevImg = document.getElementById('sup-preview-img');
+  function supClearFile() {
+    supFile = null;
+    if (fileInp) fileInp.value = '';
+    if (prevBox) prevBox.classList.add('hidden');
+    if (prevImg) prevImg.removeAttribute('src');
+  }
+  if (fileInp) fileInp.addEventListener('change', function () {
+    var f = fileInp.files && fileInp.files[0];
+    var err = document.getElementById('sup-error');
+    if (!f) { supClearFile(); return; }
+    if (!/^image\//.test(f.type || '')) { supClearFile(); if (err) err.textContent = fa ? 'فقط عکس می‌تونی بفرستی.' : 'You can only send a photo.'; return; }
+    if (f.size > 10 * 1024 * 1024) { supClearFile(); if (err) err.textContent = fa ? 'عکس خیلی بزرگه؛ یه عکس کوچیک‌تر انتخاب کن.' : 'That photo is too big — pick a smaller one.'; return; }
+    supFile = f;
+    if (err) err.textContent = '';
+    if (prevImg && prevBox) { prevImg.src = URL.createObjectURL(f); prevBox.classList.remove('hidden'); }
+  });
+  var prevX = document.getElementById('sup-preview-x');
+  if (prevX) prevX.addEventListener('click', supClearFile);
   var btn = document.getElementById('sup-send');
   if (btn) btn.addEventListener('click', async function () {
     var inp = document.getElementById('sup-input');
     var err = document.getElementById('sup-error');
     var body = ((inp && inp.value) || '').trim();
-    if (!body) { if (err) err.textContent = fa ? 'اول سؤالت رو بنویس.' : 'Write your question first.'; return; }
+    if (!body && !supFile) { if (err) err.textContent = fa ? 'اول سؤالت رو بنویس یا یه عکس اضافه کن.' : 'Write your question first, or add a photo.'; return; }
     btn.disabled = true;
+    if (supFile) {
+      var imgUrl = await supUploadImage(supFile);
+      if (!imgUrl) {
+        if (err) err.textContent = fa ? 'عکس آپلود نشد؛ اتصالت رو چک کن و دوباره تلاش کن.' : 'The photo could not be uploaded — check your connection and try again.';
+        btn.disabled = false;
+        return;
+      }
+      body = (body ? body.slice(0, 1800) + '\n' : '') + imgUrl;
+    }
     var ok = false;
     try { var rr = await sb.rpc('send_support_message', { p_body: body }); ok = !rr.error && rr.data === true; } catch (e) { ok = false; }
     if (ok) {
       if (host.querySelector('.empty')) host.innerHTML = '';
       host.insertAdjacentHTML('beforeend', supportMsgHTML({ from_admin: false, body: body, created_at: new Date().toISOString() }, fa, false));
       inp.value = ''; if (err) err.textContent = '';
+      supClearFile();
       window.scrollTo(0, document.body.scrollHeight);
     } else {
       if (err) err.textContent = fa ? 'ارسال نشد؛ اتصالت رو چک کن و دوباره تلاش کن.' : 'Could not send — check your connection and try again.';

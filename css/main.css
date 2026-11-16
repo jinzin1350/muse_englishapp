@@ -4956,6 +4956,14 @@ button.hm-btn, button.g-b-cta { border: none; cursor: pointer; font-family: inhe
 .sup-composer{margin-top:1rem}
 .sup-composer textarea{width:100%;border:1.5px solid #E7DFD2;border-radius:14px;padding:.7rem;font:inherit;resize:vertical;box-sizing:border-box}
 .sup-composer .btn{padding:.85rem 1rem;border-radius:14px;font-size:1rem;cursor:pointer}
+.sup-img{display:block;max-width:230px;width:100%;height:auto;border-radius:12px}
+.sup-img-cap{margin-top:.45rem}
+.sup-attach-row{display:flex;align-items:center;gap:.6rem;margin:.55rem 0 .1rem}
+.sup-attach-btn{cursor:pointer;padding:.45rem .8rem!important;font-size:.85rem!important}
+.sup-preview{position:relative;display:inline-block}
+.sup-preview.hidden{display:none}
+.sup-preview img{width:56px;height:56px;object-fit:cover;border-radius:10px;border:1.5px solid #EFE3D3;display:block}
+.sup-preview-x{position:absolute;top:-8px;inset-inline-end:-8px;width:20px;height:20px;border-radius:50%;border:none;background:#232838;color:#fff;font-size:.85rem;line-height:1;cursor:pointer;padding:0}
 .ap-sup-row{display:flex;align-items:center;gap:.7rem;background:#fff;border:1.5px solid #EFE3D3;border-radius:14px;padding:.7rem .9rem;margin-bottom:.55rem;text-decoration:none;color:#232838}
 .ap-sup-main{flex:1;display:flex;flex-direction:column;gap:.1rem;min-width:0}
 .ap-sup-last{font-size:.82rem;color:#6B7280;white-space:normal;overflow:visible;overflow-wrap:anywhere;line-height:1.5}
