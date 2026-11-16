@@ -1,0 +1,392 @@
+{
+  "date": "2026-11-16",
+  "theme": "review day",
+  "level": "c1",
+  "cefr": "C1",
+  "review": true,
+  "review_of": [
+    "2026-11-13",
+    "2026-11-14",
+    "2026-11-15"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10,
+  "words": [
+    {
+      "word": "MP3 player",
+      "pos": "noun",
+      "meaning": "A portable electronic device for playing digital audio.",
+      "example": "I used my MP3 player to listen to music on the bus.",
+      "pronunciation": "em-pee-THREE PLAY-er",
+      "persian": "پخش کننده MP3",
+      "photo": "media/c1/2026-11-14/photos/mp3-player.jpg",
+      "word_audio": "media/c1/2026-11-14/word-audio/mp3-player.mp3"
+    },
+    {
+      "word": "population explosion",
+      "pos": "noun",
+      "meaning": "A sudden, rapid increase in population size.",
+      "example": "The population explosion puts strain on global resources.",
+      "pronunciation": "pop-yuh-LAY-shun ek-SPLOH-zhun",
+      "persian": "انفجار جمعیت",
+      "photo": "media/c1/2026-11-14/photos/population-explosion.jpg",
+      "word_audio": "media/c1/2026-11-14/word-audio/population-explosion.mp3"
+    },
+    {
+      "word": "bureaucratic",
+      "pos": "adjective",
+      "meaning": "Relating to a system of administration with many rules.",
+      "example": "Dealing with the bureaucratic paperwork was frustrating.",
+      "pronunciation": "byoor-uh-KRAT-ik",
+      "persian": "بوروکراتیک، دیوان‌سالارانه",
+      "photo": "media/c1/2026-11-15/photos/bureaucratic.jpg",
+      "word_audio": "media/c1/2026-11-15/word-audio/bureaucratic.mp3"
+    },
+    {
+      "word": "nuclear family",
+      "pos": "noun phrase",
+      "meaning": "A family unit of parents and their children.",
+      "example": "The nuclear family is still common in many cultures.",
+      "pronunciation": "NOO-klee-er FAM-uh-lee",
+      "persian": "خانواده هسته‌ای (والدین و فرزندان)",
+      "photo": "media/c1/2026-11-14/photos/nuclear-family.jpg",
+      "word_audio": "media/c1/2026-11-14/word-audio/nuclear-family.mp3"
+    },
+    {
+      "word": "bursary",
+      "pos": "noun",
+      "meaning": "A grant, usually for students, to help with costs.",
+      "example": "She received a bursary to cover her university tuition fees.",
+      "pronunciation": "BUR-suh-ree",
+      "persian": "کمک هزینه تحصیلی",
+      "photo": "media/c1/2026-11-15/photos/bursary.jpg",
+      "word_audio": "media/c1/2026-11-15/word-audio/bursary.mp3"
+    },
+    {
+      "word": "deep poverty",
+      "pos": "noun phrase",
+      "meaning": "Extreme lack of money and basic necessities.",
+      "example": "Millions of people worldwide live in deep poverty.",
+      "pronunciation": "DEEP PUV-er-tee",
+      "persian": "فقر شدید",
+      "photo": "media/c1/2026-11-13/photos/deep poverty.jpg",
+      "word_audio": "media/c1/2026-11-13/word-audio/deep poverty.mp3"
+    },
+    {
+      "word": "debtor country",
+      "pos": "noun phrase",
+      "meaning": "A country that owes money to other countries.",
+      "example": "The debtor country sought an extension on its loan repayments.",
+      "pronunciation": "DET-er KUN-tree",
+      "persian": "کشور بدهکار",
+      "photo": "media/c1/2026-11-13/photos/debtor country.jpg",
+      "word_audio": "media/c1/2026-11-13/word-audio/debtor country.mp3"
+    },
+    {
+      "word": "bury yourself in your books",
+      "pos": "idiom",
+      "meaning": "To study very hard and intensely, ignoring everything else.",
+      "example": "He had to bury himself in his books before the final exams.",
+      "pronunciation": "BER-ee yor-SELF in yor BOOKS",
+      "persian": "غرق مطالعه شدن",
+      "photo": "media/c1/2026-11-15/photos/bury-yourself-in-your-books.jpg",
+      "word_audio": "media/c1/2026-11-15/word-audio/bury-yourself-in-your-books.mp3"
+    },
+    {
+      "word": "debit card",
+      "pos": "noun",
+      "meaning": "A card used to pay directly from a bank account.",
+      "example": "I paid for groceries with my debit card.",
+      "pronunciation": "DEB-it KARD",
+      "persian": "کارت بانکی، کارت بدهی",
+      "photo": "media/c1/2026-11-13/photos/debit card.jpg",
+      "word_audio": "media/c1/2026-11-13/word-audio/debit card.mp3"
+    },
+    {
+      "word": "debt relief",
+      "pos": "noun phrase",
+      "meaning": "The partial or total cancellation of debts.",
+      "example": "The organization advocates for debt relief for poor countries.",
+      "pronunciation": "DET ri-LEEF",
+      "persian": "بخشودگی بدهی",
+      "photo": "media/c1/2026-11-13/photos/debt relief.jpg",
+      "word_audio": "media/c1/2026-11-13/word-audio/debt relief.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-11-16/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day — Sara and the Bursary",
+    "audio": "media/c1/2026-11-16/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-11-16/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Bursary and the Bus Ride",
+    "audio": "media/c1/2026-11-16/shadowing.mp3",
+    "transcript": "media/c1/2026-11-16/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-11-16/shadowing-sentences/001.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/002.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/003.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/004.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/005.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/006.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/007.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/008.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/009.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/010.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/011.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/012.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/013.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/014.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/015.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/016.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/017.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/018.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/019.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/020.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/021.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/022.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/023.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/024.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/025.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/026.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/027.mp3",
+      "media/c1/2026-11-16/shadowing-sentences/028.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'MP3 player' mean?",
+      "options": [
+        "A card used to pay directly from a bank account.",
+        "A family unit of parents and their children.",
+        "A country that owes money to other countries.",
+        "A portable electronic device for playing digital audio."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'population explosion' mean?",
+      "options": [
+        "Extreme lack of money and basic necessities.",
+        "To study very hard and intensely, ignoring everything else.",
+        "A card used to pay directly from a bank account.",
+        "A sudden, rapid increase in population size."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'bureaucratic' mean?",
+      "options": [
+        "A country that owes money to other countries.",
+        "To study very hard and intensely, ignoring everything else.",
+        "A card used to pay directly from a bank account.",
+        "Relating to a system of administration with many rules."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'nuclear family' mean?",
+      "options": [
+        "Extreme lack of money and basic necessities.",
+        "A family unit of parents and their children.",
+        "A card used to pay directly from a bank account.",
+        "A portable electronic device for playing digital audio."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bursary' mean?",
+      "options": [
+        "A country that owes money to other countries.",
+        "To study very hard and intensely, ignoring everything else.",
+        "A grant, usually for students, to help with costs.",
+        "A portable electronic device for playing digital audio."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'deep poverty' mean?",
+      "options": [
+        "Extreme lack of money and basic necessities.",
+        "To study very hard and intensely, ignoring everything else.",
+        "A family unit of parents and their children.",
+        "Relating to a system of administration with many rules."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'debtor country' mean?",
+      "options": [
+        "A country that owes money to other countries.",
+        "Extreme lack of money and basic necessities.",
+        "A card used to pay directly from a bank account.",
+        "Relating to a system of administration with many rules."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bury yourself in your books' mean?",
+      "options": [
+        "A family unit of parents and their children.",
+        "A sudden, rapid increase in population size.",
+        "A card used to pay directly from a bank account.",
+        "To study very hard and intensely, ignoring everything else."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'debit card' mean?",
+      "options": [
+        "A card used to pay directly from a bank account.",
+        "A sudden, rapid increase in population size.",
+        "A portable electronic device for playing digital audio.",
+        "The partial or total cancellation of debts."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'debt relief' mean?",
+      "options": [
+        "To study very hard and intensely, ignoring everything else.",
+        "A portable electronic device for playing digital audio.",
+        "The partial or total cancellation of debts.",
+        "A card used to pay directly from a bank account."
+      ],
+      "answer": 2
+    }
+  ],
+  "grammar": {
+    "title": "The Unreal Past (It's time we left, I'd rather you didn't)",
+    "explanation": "After certain expressions, we use a **past tense** to talk about the **present or future**. The past form shows the situation is **unreal**, imagined or wanted, as when a student in a **nuclear family** says it is time she received her **bursary**.\n\nUse **It's time**, **It's high time** and **It's about time** + subject + **past** when something should happen now. **It's about time** adds criticism, for example when a **bureaucratic** office still has not offered **debt relief** to a **debtor country**.\n\nWith **would rather**, use the **base form** for the same subject: **I'd rather stay**. With a different subject, use subject + **past**: **I'd rather you didn't** pay by **debit card**, and for the past use the **past perfect**.\n\nAfter **as if** and **as though**, use the **past** for an unreal present and the **past perfect** for an unreal past. In formal English, use **were** for all persons: he spends as if he **were** rich, although he lives in **deep poverty**.\n\n**Suppose**, **supposing** and **imagine** + **past** introduce an imagined situation. **Wish** and **if only** + **past** express a present regret, while **wish** + **past perfect** regrets the past.\n\nDo not use the present after these patterns. Say **It's time we went**, not we go, and **I'd rather you didn't**, even when a **population explosion** or an **MP3 player** makes the example feel very present.",
+    "examples": [
+      "*It's time we **went** home.* (it's time)",
+      "*It's high time the government **did** something about pollution.* (high time)",
+      "*I'd rather you **didn't** tell anyone.* (would rather + past)",
+      "*I'd rather **stay** in tonight.* (same subject: base form)",
+      "*He spends money as if he **were** a millionaire.* (as if)",
+      "*She looked as though she **had seen** a ghost.* (unreal past: past perfect)"
+    ],
+    "practice": [
+      {
+        "q": "Rewrite with 'It's time': We should leave now. (we / go home)",
+        "a": "It's time we went home."
+      },
+      {
+        "q": "Rewrite with 'I'd rather you': I prefer that you do not pay by debit card.",
+        "a": "I'd rather you didn't pay by debit card."
+      },
+      {
+        "q": "Rewrite with 'as if': He talks in a way that suggests he knows everything, but he does not.",
+        "a": "He talks as if he knew everything."
+      },
+      {
+        "q": "Rewrite with 'Suppose': Imagine you won a bursary tomorrow. What would you do?",
+        "a": "Suppose you won a bursary tomorrow. What would you do?"
+      }
+    ],
+    "quiz": [
+      {
+        "question": "It's late. It's time we ___ home.",
+        "options": [
+          "go",
+          "are going",
+          "went",
+          "will go"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "I'd rather you ___ smoke in the house.",
+        "options": [
+          "doesn't",
+          "didn't",
+          "won't",
+          "not"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "He talks as if he ___ everything, but he doesn't.",
+        "options": [
+          "knew",
+          "is knowing",
+          "has known",
+          "will know"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "I'd rather ___ at home tonight. I'm tired.",
+        "options": [
+          "staying",
+          "stayed",
+          "to stay",
+          "stay"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "Suppose you ___ a million dollars. What would you do?",
+        "options": [
+          "won",
+          "winning",
+          "will win",
+          "have won"
+        ],
+        "answer": 0
+      },
+      {
+        "question": "It's high time the government ___ something about pollution.",
+        "options": [
+          "does",
+          "do",
+          "will do",
+          "did"
+        ],
+        "answer": 3
+      },
+      {
+        "question": "She looked as though she ___ a ghost.",
+        "options": [
+          "sees",
+          "will see",
+          "had seen",
+          "is seeing"
+        ],
+        "answer": 2
+      },
+      {
+        "question": "Would you rather I ___ you tomorrow?",
+        "options": [
+          "calls",
+          "called",
+          "will call",
+          "calling"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "Imagine you ___ in the 18th century. How would your life be different?",
+        "options": [
+          "would live",
+          "lived",
+          "will live",
+          "have lived"
+        ],
+        "answer": 1
+      },
+      {
+        "question": "It's about time you ___ a job!",
+        "options": [
+          "got",
+          "get",
+          "will get",
+          "are getting"
+        ],
+        "answer": 0
+      }
+    ]
+  }
+}
