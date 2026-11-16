@@ -1446,7 +1446,7 @@ body{background:#FFF9F3;}
 
 /* Streak banner v2 (2026-10-09): cream illustrated card per Alireza's mockup.
    Dynamic day count rendered as HTML text over the illustration. */
-.stk-link{position:relative;display:block;overflow:hidden;border-radius:24px;margin-bottom:14px;
+.stk-link{position:relative;display:block;overflow:hidden;border-radius:24px;margin-bottom:14px;width:94%;margin-left:auto;margin-right:auto;
   background:#FFF9F1;border:1px solid #F2E5D2;min-height:128px;text-decoration:none;
   box-shadow:0 8px 24px rgba(178,132,52,.10);}
 .stk-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center;}
@@ -3474,7 +3474,7 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 /* Home banner */
 #home-grammar-wrap { margin: 0.85rem 0; }
 /* ==== home mockup redesign (2026-10-20, Alireza's supplied mockup) — mobile top of home: streak + continue/vocab/words cards + daily quests ==== */
-.hm-streak{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#FFF6E9 0%,#FDEBD3 100%);border-radius:28px;padding:18px 16px;margin-bottom:14px;text-decoration:none;box-shadow:0 6px 20px rgba(240,140,40,.10);}
+.hm-streak{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#FFF6E9 0%,#FDEBD3 100%);border-radius:28px;padding:18px 16px;margin-bottom:14px;width:94%;margin-left:auto;margin-right:auto;text-decoration:none;box-shadow:0 6px 20px rgba(240,140,40,.10);}
 .hm-streak-mascot{flex:0 0 auto;width:104px;height:104px;border-radius:22px;overflow:hidden;}
 .hm-streak-mascot img{width:100%;height:100%;object-fit:cover;display:block;}
 .hm-streak-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px;text-align:left;}
@@ -3483,6 +3483,14 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 .hm-streak-sub{font-size:14px;color:#7C8499;line-height:1.45;}
 .hm-streak-go{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:#fff;border:1.5px solid #F1DFC2;color:#232B4D;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:600;box-shadow:0 3px 10px rgba(120,80,0,.08);}
 .hm-streak:active .hm-streak-go{background:#FDEBD3;}
+.install-banner{display:flex;align-items:center;gap:12px;width:94%;margin:0 auto 14px;padding:14px 16px;border:none;border-radius:20px;background:linear-gradient(135deg,#FF9F2E,#FF7B2E);color:#fff;cursor:pointer;text-align:start;box-shadow:0 8px 22px rgba(242,101,34,.30);font-family:inherit;}
+.install-banner-ico{font-size:26px;flex:0 0 auto;}
+.install-banner-txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px;}
+.install-banner-txt b{font-size:16.5px;font-weight:800;}
+.install-banner-txt span{font-size:13px;opacity:.92;}
+.install-banner-arrow{font-size:24px;font-weight:700;flex:0 0 auto;}
+.inst-sec{font-weight:800;font-size:15.5px;margin:14px 0 6px;color:#232B4D;}
+.inst-steps{margin:0;padding-inline-start:20px;line-height:2;font-size:14.5px;color:#3C4C5E;}
 .hm-card{display:flex;align-items:center;gap:14px;background:#fff;border-radius:24px;padding:16px;margin-bottom:13px;text-decoration:none;box-shadow:0 6px 20px rgba(35,43,77,.06);border:1px solid #FBF0DC;}
 .hm-card:active{transform:scale(.99);}
 .hm-icon{flex:0 0 auto;width:66px;height:66px;border-radius:19px;background:#232B4D;display:flex;align-items:center;justify-content:center;font-size:31px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);}

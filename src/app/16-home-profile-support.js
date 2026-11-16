@@ -9,6 +9,7 @@ function paintHome(v, mistakes, attempts) {
   // 0b — Streak banner (mockup v5): mascot artwork bg, painted with local
   // data first, then refreshed with cloud state by refreshHomeStreak().
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
+  html += installBannerHTML();
 
   // 0b1 — Today's lesson + Daily quests FIRST, right under the streak
   // (2026-11-09, Alireza's order: new users must get the point of the app
@@ -461,6 +462,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   const today = lessons[0] || null;
   let html = '<div class="dhome">';
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
+  html += installBannerHTML();
   html += '<div class="dh-grid">' + dhQuestsHTML() +
     '<div class="dh-col">' + dhLessonHTML(today) + dhMistakesHTML(mistakes) + '</div></div>';
   html += '<div id="home-review-wrap"></div><div id="home-tricky-wrap"></div><div id="home-cards-wrap"></div>';

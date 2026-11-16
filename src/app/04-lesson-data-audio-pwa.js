@@ -389,6 +389,64 @@ function pwaSnoozed() {
 function pwaSnooze() {
   try { localStorage.setItem('pwa_prompt', JSON.stringify({ dismissed: Date.now() })); } catch (e) {}
 }
+/* Install guide (2026-11-16, Alireza's order): many learners still struggle to
+   install the app, so Home carries a banner right under the streak banner
+   that opens a step-by-step install guide (Android / iPhone) with a support
+   escape hatch. Hidden once the app runs installed (standalone). */
+function installBannerHTML() {
+  if (!state.user || state.user.demo || pwaIsStandalone()) return '';
+  const fa = uiLang() === 'fa';
+  return '<button type="button" class="install-banner" data-action="install-guide">' +
+    '<span class="install-banner-ico" aria-hidden="true">📲</span>' +
+    '<span class="install-banner-txt"><b>' + (fa ? 'آموزش نصب اپ میوز' : 'How to install the Muse app') + '</b>' +
+    '<span>' + (fa ? 'اپ رو روی صفحهٔ گوشی‌ت بذار — با یه لمس باز می‌شه' : 'Put Muse on your home screen — one tap to open') + '</span></span>' +
+    '<span class="install-banner-arrow" aria-hidden="true">›</span></button>';
+}
+function showInstallGuide() {
+  const fa = uiLang() === 'fa';
+  const ios = pwaIsIos();
+  const androidSteps = fa
+    ? ['توی کروم، روی سه‌نقطهٔ بالای صفحه بزن', 'گزینهٔ «نصب برنامه» رو انتخاب کن (Install app)', 'روی «نصب» بزن (Install)']
+    : ['In Chrome, tap the three dots at the top of the screen', 'Choose “Install app”', 'Tap “Install”'];
+  const iosSteps = fa
+    ? ['روی دکمهٔ اشتراک‌گذاری بزن (Share)', 'گزینهٔ «افزودن به صفحهٔ اصلی» رو انتخاب کن (Add to Home Screen)', 'روی «افزودن» بزن (Add)']
+    : ['Tap the Share button', 'Choose “Add to Home Screen”', 'Tap “Add”'];
+  const stepList = function (arr) {
+    return '<ol class="inst-steps">' + arr.map(function (s) { return '<li>' + s + '</li>'; }).join('') + '</ol>';
+  };
+  const html = '<div style="text-align:start">' +
+    '<h3 style="margin:0 0 6px;font-size:19px;">📲 ' + (fa ? 'آموزش نصب اپ میوز' : 'How to install the Muse app') + '</h3>' +
+    '<p class="muted" style="margin:0;line-height:1.8">' + (fa
+      ? 'میوز انگلیش یه اپه؛ کافیه یه بار نصبش کنی تا آیکونش بیاد روی صفحهٔ گوشی‌ت و همیشه با یه لمس باز بشه.'
+      : 'Muse English is an app — install it once and its icon lives on your home screen, one tap away.') + '</p>' +
+    (ios ? '' : '<button class="btn btn-orange btn-block" data-action="install-now" style="margin-top:12px">📲 ' + (fa ? 'نصب اپ' : 'Install the app') + '</button>') +
+    '<div class="inst-sec">🤖 ' + (fa ? 'اندروید (کروم)' : 'Android (Chrome)') + '</div>' + stepList(androidSteps) +
+    '<div class="inst-sec">🍎 ' + (fa ? 'آیفون (سافاری)' : 'iPhone (Safari)') + '</div>' + stepList(iosSteps) +
+    '<p class="muted" style="margin:14px 0 0;line-height:1.8">' + (fa ? 'جایی گیر کردی؟ به پشتیبانی پیام بده 💬' : 'Stuck somewhere? Message support 💬') + '</p>' +
+    '<button class="btn btn-ghost btn-block" data-action="install-support" style="margin-top:8px">💬 ' + (fa ? 'پیام به پشتیبانی' : 'Message support') + '</button>' +
+    '<button class="btn btn-ghost btn-block" data-action="modal-close" style="margin-top:8px">' + (fa ? 'بستن' : 'Close') + '</button>' +
+    '</div>';
+  showModal(html);
+  try { trackEvent('install_guide', { action: 'open', ios: ios }); } catch (e) {}
+}
+function installNowFromGuide() {
+  try { trackEvent('install_guide', { action: 'install' }); } catch (e) {}
+  if (pwaIsIos()) {
+    closeModal();
+    const sheet = document.getElementById('pwa-ios');
+    if (sheet) sheet.classList.remove('hidden');
+    return;
+  }
+  if (pwaDeferredPrompt) {
+    pwaDeferredPrompt.prompt();
+    pwaDeferredPrompt.userChoice.then(function () {
+      pwaDeferredPrompt = null;
+      pwaHideBanner();
+      pwaSnooze();
+      closeModal();
+    }).catch(function () {});
+  }
+}
 function pwaShowBanner() {
   if (pwaIsIos()) return; /* iOS never gets the banner — it gets the guide sheet directly. */
   if (pwaIsStandalone() || pwaSnoozed()) return;

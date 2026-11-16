@@ -29,6 +29,7 @@ function bindEvents() {
     else if (a === 'save-country') saveCountryManual();
     else if (a === 'logout') doLogout();
     else if (a === 'tut-replay') startTutorial();
+    else if (a === 'install-guide') showInstallGuide();
     else if (a === 'ui-lang') setUiLang(t.getAttribute('data-lang') === 'en' ? 'en' : 'fa');
     else if (a === 'open-lesson') { state.lessonTab = 'words'; go('lesson', t.getAttribute('data-date')); }
     else if (a === 'today-cta') {
@@ -279,6 +280,8 @@ function bindEvents() {
     if (!t) return;
     const ma = t.getAttribute('data-action');
     if (ma === 'modal-close') { closeModal(); consumeIntroAfterWelcome(); }
+    else if (ma === 'install-now') installNowFromGuide();
+    else if (ma === 'install-support') { closeModal(); go('support'); }
     else if (ma === 'welcome-tour') { closeModal(); startTutorial(); }
     else if (ma === 'welcome-start') { closeModal(); state.lessonTab = 'words'; if (state.lessons && state.lessons.length) go('lesson', state.lessons[0].date); else go('lesson');  consumeIntroAfterWelcome(); }
     else if (ma === 'teacher-message-send') teacherMessageSend(parseInt(t.getAttribute('data-i'), 10), t);
