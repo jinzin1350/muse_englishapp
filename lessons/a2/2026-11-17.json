@@ -1,0 +1,278 @@
+{
+ "date": "2026-11-17",
+ "theme": "emotions & character",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "approximately",
+   "pos": "adverb",
+   "meaning": "About; not exactly, but close to.",
+   "example": "The journey takes approximately two hours.",
+   "example_fa": "سفر تقریباً دو ساعت طول می‌کشد.",
+   "pronunciation": "uh-PROK-sih-mut-lee",
+   "persian": "تقریباً، حدوداً",
+   "photo": "media/a2/2026-11-17/photos/approximately.jpg",
+   "word_audio": "media/a2/2026-11-17/word-audio/approximately.mp3"
+  },
+  {
+   "word": "athletic",
+   "pos": "adjective",
+   "meaning": "Strong, healthy, and good at sports.",
+   "example": "He has an athletic build.",
+   "example_fa": "او اندامی ورزشی و قوی دارد.",
+   "pronunciation": "ath-LET-ik",
+   "persian": "ورزشی، قوی",
+   "photo": "media/a2/2026-11-17/photos/athletic.jpg",
+   "word_audio": "media/a2/2026-11-17/word-audio/athletic.mp3"
+  },
+  {
+   "word": "attractive",
+   "pos": "adjective",
+   "meaning": "Pleasant or beautiful to look at.",
+   "example": "She has a very attractive smile.",
+   "example_fa": "او لبخند بسیار جذابی دارد.",
+   "pronunciation": "uh-TRAK-tiv",
+   "persian": "جذاب، زیبا",
+   "photo": "media/a2/2026-11-17/photos/attractive.jpg",
+   "word_audio": "media/a2/2026-11-17/word-audio/attractive.mp3"
+  },
+  {
+   "word": "average [typical]",
+   "pos": "adjective",
+   "meaning": "Not special or unusual; typical.",
+   "example": "He is an average student, not the best.",
+   "example_fa": "او دانش‌آموزی معمولی است، نه بهترین دانش‌آموز.",
+   "pronunciation": "AV-rij",
+   "persian": "معمولی، متوسط",
+   "photo": "media/a2/2026-11-17/photos/average.jpg",
+   "word_audio": "media/a2/2026-11-17/word-audio/average.mp3"
+  },
+  {
+   "word": "beautiful",
+   "pos": "adjective",
+   "meaning": "Very pleasing to the senses; lovely.",
+   "example": "She is a beautiful woman.",
+   "example_fa": "او زن زیبایی است.",
+   "pronunciation": "BYOO-tih-ful",
+   "persian": "زیبا، قشنگ",
+   "photo": "media/a2/2026-11-17/photos/beautiful.jpg",
+   "word_audio": "media/a2/2026-11-17/word-audio/beautiful.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-11-17/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Emotions and Character",
+  "audio": "media/a2/2026-11-17/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-11-17/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara the Athletic Girl",
+  "audio": "media/a2/2026-11-17/shadowing.mp3",
+  "transcript": "media/a2/2026-11-17/shadowing-transcript.txt",
+  "transcript_fa": "media/a2/2026-11-17/shadowing-transcript-fa.txt",
+  "sentence_audio": [
+   "media/a2/2026-11-17/shadowing-sentences/001.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/002.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/003.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/004.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/005.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/006.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/007.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/008.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/009.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/010.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/011.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/012.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/013.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/014.mp3",
+   "media/a2/2026-11-17/shadowing-sentences/015.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'approximately' mean?",
+   "options": [
+    "About; not exactly, but close to.",
+    "Strong, healthy, and good at sports.",
+    "Pleasant or beautiful to look at.",
+    "Very pleasing to the senses; lovely."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'athletic' mean?",
+   "options": [
+    "Strong, healthy, and good at sports.",
+    "Pleasant or beautiful to look at.",
+    "Not special or unusual; typical.",
+    "About; not exactly, but close to."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'attractive' mean?",
+   "options": [
+    "Pleasant or beautiful to look at.",
+    "Not special or unusual; typical.",
+    "Very pleasing to the senses; lovely.",
+    "Strong, healthy, and good at sports."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'average [typical]' mean?",
+   "options": [
+    "Not special or unusual; typical.",
+    "Very pleasing to the senses; lovely.",
+    "About; not exactly, but close to.",
+    "Pleasant or beautiful to look at."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'beautiful' mean?",
+   "options": [
+    "Very pleasing to the senses; lovely.",
+    "About; not exactly, but close to.",
+    "Strong, healthy, and good at sports.",
+    "Not special or unusual; typical."
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "title": "Zero and First Conditional",
+  "explanation": "The **zero conditional** talks about things that are always true. We use **if** + present simple in both parts.\n\nThe **first conditional** talks about a real possibility in the future. We use **if** + present simple, then **will** + verb.\n\nDo not use **will** in the if part. Say **if it rains**, not if it will rain.\n\nUse **when** when you are sure something will happen. Use **unless** to mean if not.\n\nAn average student can learn this fast. If you practise a little every day, you **will** see beautiful progress, and in approximately one month it will feel attractive and easy.",
+  "examples": [
+   "*If you heat water to 100°C, it **boils**.* (zero: always true)",
+   "*Plants die if they **don't get** water.* (zero)",
+   "*If it **rains** tomorrow, we**'ll stay** at home.* (first)",
+   "*If she **gets** the job, she**'ll move** to London.* (first)",
+   "*We**'ll be** late if we **don't leave** now.* (first, if second)",
+   "*I'll call you **when** I **get** home.* (when + present)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with the zero conditional: Heat ice and it melts.",
+    "a": "If you heat ice, it melts."
+   },
+   {
+    "q": "Rewrite with the first conditional: Train hard and Sara will win.",
+    "a": "If Sara trains hard, she will win."
+   },
+   {
+    "q": "Rewrite with unless: If you do not hurry, you will miss the bus.",
+    "a": "Unless you hurry, you will miss the bus."
+   },
+   {
+    "q": "Rewrite with when: I am sure I will get home, and then I will call you.",
+    "a": "I'll call you when I get home."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "If you heat water to 100°C, it ___.",
+    "options": [
+     "boils",
+     "boiled",
+     "would boil",
+     "is boiling"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "If it ___ tomorrow, we'll stay at home.",
+    "options": [
+     "will rain",
+     "rained",
+     "would rain",
+     "rains"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "If you study hard, you ___ the exam.",
+    "options": [
+     "passed",
+     "would pass",
+     "will pass",
+     "had passed"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I'll call you when I ___ home.",
+    "options": [
+     "will get",
+     "get",
+     "got",
+     "would get"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "___ you hurry, you'll miss the bus.",
+    "options": [
+     "If",
+     "When",
+     "As",
+     "Unless"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "If you mix red and white, you ___ pink.",
+    "options": [
+     "got",
+     "get",
+     "would get",
+     "had got"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "If she ___ the job, she'll move to London.",
+    "options": [
+     "gets",
+     "will get",
+     "would get",
+     "got"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Plants die if they ___ water.",
+    "options": [
+     "won't get",
+     "don't get",
+     "didn't get",
+     "wouldn't get"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "We ___ late if we don't leave now.",
+    "options": [
+     "are",
+     "would be",
+     "will be",
+     "were"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "You can't come in ___ you have a ticket.",
+    "options": [
+     "if",
+     "unless",
+     "when",
+     "as"
+    ],
+    "answer": 1
+   }
+  ],
+  "audio": "media/a2/2026-11-17/grammar-en.mp3"
+ }
+}

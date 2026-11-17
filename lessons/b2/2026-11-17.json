@@ -1,0 +1,324 @@
+{
+ "date": "2026-11-17",
+ "theme": "nature & environment",
+ "level": "b2",
+ "cefr": "B2",
+ "words": [
+  {
+   "word": "carbon footprint",
+   "pos": "noun",
+   "meaning": "The amount of carbon dioxide produced by a person.",
+   "example": "We should reduce our carbon footprint to help the planet.",
+   "pronunciation": "KAR-bun FOOT-print",
+   "persian": "ردپای کربن",
+   "photo": "media/b2/2026-11-17/photos/carbon-footprint.jpg",
+   "word_audio": "media/b2/2026-11-17/word-audio/carbon-footprint.mp3"
+  },
+  {
+   "word": "casualty",
+   "pos": "noun",
+   "meaning": "A person injured or killed in an accident or war.",
+   "example": "There were many casualties in the earthquake.",
+   "pronunciation": "KAZH-oo-ul-tee",
+   "persian": "تلفات، مصدوم",
+   "photo": "media/b2/2026-11-17/photos/casualty.jpg",
+   "word_audio": "media/b2/2026-11-17/word-audio/casualty.mp3"
+  },
+  {
+   "word": "cholera",
+   "pos": "noun",
+   "meaning": "A serious disease causing severe diarrhoea.",
+   "example": "Cholera can spread quickly in poor areas.",
+   "pronunciation": "KOL-uh-ruh",
+   "persian": "وبا",
+   "photo": "media/b2/2026-11-17/photos/cholera.jpg",
+   "word_audio": "media/b2/2026-11-17/word-audio/cholera.mp3"
+  },
+  {
+   "word": "civil war",
+   "pos": "noun phrase",
+   "meaning": "A war between groups in the same country.",
+   "example": "The country suffered a long civil war.",
+   "pronunciation": "SIV-ul WOR",
+   "persian": "جنگ داخلی",
+   "photo": "media/b2/2026-11-17/photos/civil-war.jpg",
+   "word_audio": "media/b2/2026-11-17/word-audio/civil-war.mp3"
+  },
+  {
+   "word": "claw",
+   "pos": "noun",
+   "meaning": "A sharp, curved nail on an animal's foot.",
+   "example": "The cat sharpened its claws on the tree.",
+   "pronunciation": "KLAW",
+   "persian": "پنجه، چنگال",
+   "photo": "media/b2/2026-11-17/photos/claw.jpg",
+   "word_audio": "media/b2/2026-11-17/word-audio/claw.mp3"
+  },
+  {
+   "word": "climate change",
+   "pos": "noun phrase",
+   "meaning": "Changes in global weather patterns.",
+   "example": "Climate change is a serious global problem.",
+   "pronunciation": "KLY-mut CHAYNJ",
+   "persian": "تغییرات اقلیمی",
+   "photo": "media/b2/2026-11-17/photos/climate-change.jpg",
+   "word_audio": "media/b2/2026-11-17/word-audio/climate-change.mp3"
+  },
+  {
+   "word": "conservation",
+   "pos": "noun",
+   "meaning": "Protecting animals, plants, and natural resources.",
+   "example": "Wildlife conservation is very important.",
+   "pronunciation": "kon-sur-VAY-shun",
+   "persian": "حفاظت (محیط زیست)",
+   "photo": "media/b2/2026-11-17/photos/conservation.jpg",
+   "word_audio": "media/b2/2026-11-17/word-audio/conservation.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b2/2026-11-17/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Nature and Environment",
+  "audio": "media/b2/2026-11-17/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b2/2026-11-17/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Village by the Sea",
+  "audio": "media/b2/2026-11-17/shadowing.mp3",
+  "transcript": "media/b2/2026-11-17/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b2/2026-11-17/shadowing-sentences/001.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/002.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/003.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/004.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/005.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/006.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/007.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/008.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/009.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/010.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/011.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/012.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/013.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/014.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/015.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/016.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/017.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/018.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/019.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/020.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/021.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/022.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/023.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/024.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/025.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/026.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/027.mp3",
+   "media/b2/2026-11-17/shadowing-sentences/028.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'carbon footprint' mean?",
+   "options": [
+    "The amount of carbon dioxide produced by a person.",
+    "A sharp, curved nail on an animal's foot.",
+    "Protecting animals, plants, and natural resources.",
+    "Changes in global weather patterns."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'casualty' mean?",
+   "options": [
+    "A sharp, curved nail on an animal's foot.",
+    "A serious disease causing severe diarrhoea.",
+    "A person injured or killed in an accident or war.",
+    "Protecting animals, plants, and natural resources."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'cholera' mean?",
+   "options": [
+    "Changes in global weather patterns.",
+    "Protecting animals, plants, and natural resources.",
+    "A serious disease causing severe diarrhoea.",
+    "A war between groups in the same country."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'civil war' mean?",
+   "options": [
+    "The amount of carbon dioxide produced by a person.",
+    "A war between groups in the same country.",
+    "A sharp, curved nail on an animal's foot.",
+    "Protecting animals, plants, and natural resources."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'claw' mean?",
+   "options": [
+    "A war between groups in the same country.",
+    "A serious disease causing severe diarrhoea.",
+    "A sharp, curved nail on an animal's foot.",
+    "A person injured or killed in an accident or war."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'climate change' mean?",
+   "options": [
+    "A serious disease causing severe diarrhoea.",
+    "Changes in global weather patterns.",
+    "Protecting animals, plants, and natural resources.",
+    "A person injured or killed in an accident or war."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'conservation' mean?",
+   "options": [
+    "Protecting animals, plants, and natural resources.",
+    "The amount of carbon dioxide produced by a person.",
+    "A serious disease causing severe diarrhoea.",
+    "A sharp, curved nail on an animal's foot."
+   ],
+   "answer": 0
+  }
+ ],
+ "grammar": {
+  "examples": [
+   "*I **went** to Paris in 2019.* (finished time)",
+   "*I**'ve been** to Paris three times.* (experience)",
+   "*We **had** dinner two hours ago.* (ago)",
+   "*She**'s lived** here since 2015.* (since: still true)",
+   "*She **broke** her leg last year.* (finished time)",
+   "*This is the best film I**'ve** ever **seen**.* (superlative + present perfect)"
+  ],
+  "explanation": "Use the **past simple** for a **finished** time in the past. The time is over, like *yesterday*, *last year*, *in 2019*, or *two years ago*.\n\nUse the **present perfect** when the time is **not finished**, or when the past connects to **now**. We form it with **have** or **has** + the past participle, for example **have worked** and **has gone**.\n\nFor life experience with no time given, use the **present perfect**: *I**'ve been** to Paris three times.* For a specific past moment, use the **past simple**, especially in **when** questions.\n\nUse **since** with a starting point and **for** with a period, when something continues up to now: *She**'s lived** here **since** 2015.* Never use the **present perfect** with a finished time expression.\n\nThink about **conservation** work as an example. A team **planted** trees last spring, a finished action, but they **have protected** the forest since 2020, and that protection continues today.",
+  "practice": [
+   {
+    "a": "I visited the conservation centre yesterday.",
+    "q": "Rewrite with the past simple and a finished time: I have visited the conservation centre. (yesterday)"
+   },
+   {
+    "a": "She has worked on conservation since 2020.",
+    "q": "Rewrite with the present perfect and since: She works on conservation. She started in 2020 and still works there."
+   },
+   {
+    "a": "When did you see the eagle's claw?",
+    "q": "Rewrite as a when question with the past simple: You saw the eagle's claw. Ask when."
+   },
+   {
+    "a": "We have known about climate change for ten years.",
+    "q": "Rewrite with the present perfect and for: We know about climate change. We have known for ten years, up to now."
+   }
+  ],
+  "quiz": [
+   {
+    "answer": 3,
+    "options": [
+     "have been",
+     "have gone",
+     "was going",
+     "went"
+    ],
+    "question": "I ___ to Paris in 2019."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "lived",
+     "has lived",
+     "lives",
+     "is living"
+    ],
+    "question": "She ___ here since 2015. She loves it."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "had",
+     "have had",
+     "have",
+     "has had"
+    ],
+    "question": "We ___ dinner two hours ago."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "Did",
+     "Do",
+     "Have",
+     "Has"
+    ],
+    "question": "___ you ever eaten sushi?"
+   },
+   {
+    "answer": 0,
+    "options": [
+     "did",
+     "have",
+     "has",
+     "are"
+    ],
+    "question": "When ___ you start learning English?"
+   },
+   {
+    "answer": 2,
+    "options": [
+     "drank",
+     "drink",
+     "have drunk",
+     "had drunk"
+    ],
+    "question": "I ___ three cups of coffee so far today."
+   },
+   {
+    "answer": 1,
+    "options": [
+     "has lived",
+     "lived",
+     "lives",
+     "has been living"
+    ],
+    "question": "My grandfather ___ in Italy for ten years before he moved to Canada."
+   },
+   {
+    "answer": 3,
+    "options": [
+     "did",
+     "do",
+     "are",
+     "have"
+    ],
+    "question": "How long ___ you known each other? – Since we were at school."
+   },
+   {
+    "answer": 2,
+    "options": [
+     "has broken",
+     "breaks",
+     "broke",
+     "has been breaking"
+    ],
+    "question": "She ___ her leg last year, but it's fine now."
+   },
+   {
+    "answer": 0,
+    "options": [
+     "have known",
+     "knew",
+     "know",
+     "are knowing"
+    ],
+    "question": "We ___ each other for five years. We're best friends."
+   }
+  ],
+  "title": "Present Perfect vs Past Simple"
+ }
+}

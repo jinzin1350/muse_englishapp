@@ -1,0 +1,268 @@
+{
+ "date": "2026-11-17",
+ "theme": "travel & transport",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "by coach",
+   "pos": "phrase",
+   "meaning": "Using a long-distance bus.",
+   "example": "We went to the beach by coach.",
+   "example_fa": "ما با اتوبوس بین‌شهری به ساحل رفتیم.",
+   "pronunciation": "by KOCH",
+   "persian": "با اتوبوس بین شهری",
+   "photo": "media/a1/2026-11-17/photos/by-coach.jpg",
+   "word_audio": "media/a1/2026-11-17/word-audio/by-coach.mp3"
+  },
+  {
+   "word": "by ferry",
+   "pos": "phrase",
+   "meaning": "Using a boat that carries people/vehicles.",
+   "example": "We crossed the lake by ferry.",
+   "example_fa": "ما با کشتی مسافربری از دریاچه عبور کردیم.",
+   "pronunciation": "by FEH-ree",
+   "persian": "با کشتی/قایق مسافربری",
+   "photo": "media/a1/2026-11-17/photos/by-ferry.jpg",
+   "word_audio": "media/a1/2026-11-17/word-audio/by-ferry.mp3"
+  },
+  {
+   "word": "by plane",
+   "pos": "phrase",
+   "meaning": "Using an airplane as transport.",
+   "example": "They went to Paris by plane.",
+   "example_fa": "آن‌ها با هواپیما به پاریس رفتند.",
+   "pronunciation": "by PLAYN",
+   "persian": "با هواپیما",
+   "photo": "media/a1/2026-11-17/photos/by-plane.jpg",
+   "word_audio": "media/a1/2026-11-17/word-audio/by-plane.mp3"
+  },
+  {
+   "word": "camera",
+   "pos": "noun",
+   "meaning": "A device for taking photos or videos.",
+   "example": "I bought a new camera.",
+   "example_fa": "من یک دوربین جدید خریدم.",
+   "pronunciation": "KAM-ruh",
+   "persian": "دوربین",
+   "photo": "media/a1/2026-11-17/photos/camera.jpg",
+   "word_audio": "media/a1/2026-11-17/word-audio/camera.mp3"
+  },
+  {
+   "word": "change",
+   "pos": "noun",
+   "meaning": "Money returned when you pay more than the cost.",
+   "example": "Here is your change, sir.",
+   "example_fa": "آقا، بفرمایید، این باقی‌مانده پولتان است.",
+   "pronunciation": "CHAYNJ",
+   "persian": "باقیمانده پول، خرد",
+   "photo": "media/a1/2026-11-17/photos/change.jpg",
+   "word_audio": "media/a1/2026-11-17/word-audio/change.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-11-17/pronunciation.mp3",
+ "podcast": null,
+ "shadowing": {
+  "title": "A Trip with My Camera",
+  "audio": "media/a1/2026-11-17/shadowing.mp3",
+  "transcript": "media/a1/2026-11-17/shadowing-transcript.txt",
+  "transcript_fa": "media/a1/2026-11-17/shadowing-transcript-fa.txt",
+  "sentence_audio": [
+   "media/a1/2026-11-17/shadowing-sentences/001.mp3",
+   "media/a1/2026-11-17/shadowing-sentences/002.mp3",
+   "media/a1/2026-11-17/shadowing-sentences/003.mp3",
+   "media/a1/2026-11-17/shadowing-sentences/004.mp3",
+   "media/a1/2026-11-17/shadowing-sentences/005.mp3",
+   "media/a1/2026-11-17/shadowing-sentences/006.mp3",
+   "media/a1/2026-11-17/shadowing-sentences/007.mp3",
+   "media/a1/2026-11-17/shadowing-sentences/008.mp3",
+   "media/a1/2026-11-17/shadowing-sentences/009.mp3",
+   "media/a1/2026-11-17/shadowing-sentences/010.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'by coach' mean?",
+   "options": [
+    "Using a long-distance bus.",
+    "Using a boat that carries people/vehicles.",
+    "A device for taking photos or videos.",
+    "Using an airplane as transport."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'by ferry' mean?",
+   "options": [
+    "Using an airplane as transport.",
+    "Using a boat that carries people/vehicles.",
+    "Using a long-distance bus.",
+    "A device for taking photos or videos."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'by plane' mean?",
+   "options": [
+    "Using an airplane as transport.",
+    "A device for taking photos or videos.",
+    "Using a boat that carries people/vehicles.",
+    "Using a long-distance bus."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'camera' mean?",
+   "options": [
+    "Using an airplane as transport.",
+    "Using a long-distance bus.",
+    "Using a boat that carries people/vehicles.",
+    "A device for taking photos or videos."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'change' mean?",
+   "options": [
+    "Using a long-distance bus.",
+    "Money returned when you pay more than the cost.",
+    "Using a boat that carries people/vehicles.",
+    "Using an airplane as transport."
+   ],
+   "answer": 1
+  }
+ ],
+ "grammar": {
+  "title": "Prepositions of Time: In, On, At",
+  "explanation": "We use **in**, **on** and **at** to talk about time.\n\nUse **at** for clock times. We go by coach **at** 9 o'clock, and the film starts **at** 8 pm.\n\nUse **on** for days and dates. We travel by ferry **on** Monday, and my birthday is **on** 12 October.\n\nUse **in** for months, years and seasons. We go by plane **in** July, and I was born **in** 1998.\n\nUse **in** for parts of the day: **in** the morning, **in** the afternoon, **in** the evening. But say **at** night.\n\nDo not use **in**, **on** or **at** before **next**, **last**, **this** or **every**. Say **next Friday**, not on next Friday.",
+  "examples": [
+   "*The film starts **at** 8 pm.* (clock time)",
+   "*My birthday is **on** 12 October.* (date)",
+   "*We go skiing **in** winter.* (season)",
+   "*I was born **in** 1998.* (year)",
+   "*I work **on** Mondays and Wednesdays.* (days)",
+   "*I can't sleep **at** night.* (fixed phrase)"
+  ],
+  "practice": [
+   {
+    "q": "Rewrite with at: We go by plane at the time of noon.",
+    "a": "We go by plane at noon."
+   },
+   {
+    "q": "Rewrite with on: We go by ferry on the day Monday.",
+    "a": "We go by ferry on Monday."
+   },
+   {
+    "q": "Rewrite with in: Our trip is in the month of July.",
+    "a": "Our trip is in July."
+   },
+   {
+    "q": "Rewrite with no preposition: We travel on next Friday.",
+    "a": "We travel next Friday."
+   }
+  ],
+  "quiz": [
+   {
+    "question": "The lesson starts ___ 9:15.",
+    "options": [
+     "in",
+     "on",
+     "at",
+     "(no preposition)"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "My sister was born ___ 2010.",
+    "options": [
+     "in",
+     "at",
+     "on",
+     "(no preposition)"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "We have a test ___ Friday.",
+    "options": [
+     "at",
+     "on",
+     "in",
+     "of"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "I usually drink coffee ___ the morning.",
+    "options": [
+     "at",
+     "on",
+     "of",
+     "in"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "The shops are closed ___ Christmas Day.",
+    "options": [
+     "on",
+     "in",
+     "at",
+     "to"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "It's very cold here ___ January.",
+    "options": [
+     "on",
+     "at",
+     "in",
+     "to"
+    ],
+    "answer": 2
+   },
+   {
+    "question": "I don't like walking alone ___ night.",
+    "options": [
+     "in",
+     "at",
+     "on",
+     "of"
+    ],
+    "answer": 1
+   },
+   {
+    "question": "We're going to Paris ___ next month.",
+    "options": [
+     "in",
+     "on",
+     "at",
+     "(no preposition)"
+    ],
+    "answer": 3
+   },
+   {
+    "question": "Our flight leaves ___ midnight.",
+    "options": [
+     "at",
+     "in",
+     "on",
+     "of"
+    ],
+    "answer": 0
+   },
+   {
+    "question": "Her birthday is ___ 21 March.",
+    "options": [
+     "in",
+     "at",
+     "of",
+     "on"
+    ],
+    "answer": 3
+   }
+  ],
+  "audio": "media/a1/2026-11-17/grammar-en.mp3"
+ }
+}
