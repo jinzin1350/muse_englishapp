@@ -2714,6 +2714,10 @@ body.duo-playing{padding-bottom:0!important;}
 .ap-table th { text-align: left; font-size: .72rem; text-transform: uppercase; letter-spacing: .04em;
   color: #8a8272; padding: .5rem .6rem; border-bottom: 2px solid #eee7d8; white-space: nowrap; }
 .ap-table td { padding: .55rem .6rem; border-bottom: 1px solid #f0ead9; vertical-align: top; }
+.ap-table td.ap-nowrap { white-space: nowrap; }
+.ap-email { display: inline-block; max-width: 185px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; vertical-align: bottom; }
+.ap-weekrow { display: flex; justify-content: space-between; align-items: center; padding: .5rem 0; border-bottom: 1px solid #f0ead9; }
+.ap-weekrow:last-child { border-bottom: none; }
 .ap-table tbody tr:hover { background: #faf7ef; }
 .ap-table small.muted { font-size: .75rem; }
 .ap-search { margin-bottom: .6rem; }

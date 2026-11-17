@@ -1586,6 +1586,42 @@ function apFunnelHTML(steps, cohorts) {
   }
   return html;
 }
+/* Usage minutes (2026-11-17, Alireza's order): total app time for ALL users —
+   per week (Mon–Sun) and all-time — aggregated client-side from daily_stats
+   (admin-readable; paginated because PostgREST caps each response). */
+function apWeekStartStr(dayStr) {
+  const d = new Date(dayStr + 'T12:00:00');
+  d.setDate(d.getDate() - ((d.getDay() + 6) % 7));
+  return fmtDate(d);
+}
+async function apFetchUsageMinutes() {
+  const PAGE = 1000;
+  let totalSec = 0;
+  const byWeek = {};
+  for (let from = 0; from < 60000; from += PAGE) {
+    const r = await sb.from('daily_stats').select('day,seconds_in_app')
+      .order('day', { ascending: true }).range(from, from + PAGE - 1);
+    if (r.error) throw r.error;
+    const data = r.data || [];
+    data.forEach(function (row) {
+      const sec = Number(row.seconds_in_app) || 0;
+      totalSec += sec;
+      const wk = apWeekStartStr(String(row.day).slice(0, 10));
+      byWeek[wk] = (byWeek[wk] || 0) + sec;
+    });
+    if (data.length < PAGE) break;
+  }
+  const curWk = apWeekStartStr(todayStr());
+  const weeks = [];
+  for (let i = 3; i >= 0; i--) {
+    const d = new Date(curWk + 'T12:00:00');
+    d.setDate(d.getDate() - 7 * i);
+    const wk = fmtDate(d);
+    weeks.push({ start: wk, minutes: Math.round((byWeek[wk] || 0) / 60), current: i === 0 });
+  }
+  return { totalMin: Math.round(totalSec / 60), weeks: weeks };
+}
+function apFmtNum(n) { return Number(n || 0).toLocaleString('en-US'); }
 async function apRenderDashboard(v) {
   v.innerHTML = apShell('dashboard',
     '<div class="ap-head"><h1>Dashboard</h1><p class="muted">Whole-product overview.</p></div>' +
@@ -1599,6 +1635,7 @@ async function apRenderDashboard(v) {
       sb.rpc('admin_teacher_board'),
       sb.rpc('admin_funnel').then(function (r) { return r.data || []; }, function () { return []; }),
       sb.rpc('admin_cohorts').then(function (r) { return r.data || []; }, function () { return []; }),
+      apFetchUsageMinutes().then(function (u) { return u; }, function () { return null; }),
     ]);
     if (rs[0].error) throw rs[0].error;
     if (rs[1].error) throw rs[1].error;
@@ -1608,6 +1645,7 @@ async function apRenderDashboard(v) {
     const series = rs[1].data || [];
     const users = rs[2].data || [];
     const board = rs[3].data || [];
+    const usage = rs[6];
     const today = todayStr();
     const atRisk = users
       .filter(function (u) { return u.last_active && apDaysBetween(today, String(u.last_active).slice(0, 10)) >= 7; })
@@ -1621,8 +1659,13 @@ async function apRenderDashboard(v) {
       apKpi('XP · 30d', ov.xp_30d || 0, '') +
       apKpi('Lessons · 30d', ov.lessons_30d || 0, '') +
       apKpi('Podcast hrs · 30d', ov.podcast_hours_30d || 0, '') +
+      (usage ? apKpi('⏱ App minutes · all time', apFmtNum(usage.totalMin), 'all users, since day one') : '') +
       apKpi('Teachers', (ov.total_teachers || 0) + ' approved', (ov.pending_teachers || 0) + ' pending') +
       '</div>' +
+      (usage ? '<div class="card"><h3>⏱ Time in app per week (all users)</h3>' +
+        usage.weeks.map(function (w) {
+          return '<div class="ap-weekrow"><span>Week of ' + esc(w.start) + (w.current ? ' · <b>this week so far</b>' : '') + '</span><b>' + apFmtNum(w.minutes) + ' min</b></div>';
+        }).join('') + '</div>' : '') +
       '<div class="card"><h3>Product activity · 30 days</h3><div id="ap-chart">' + apChartHTML(series) + '</div></div>' +
       '<div class="card"><h3>👩‍🏫 Teacher leaderboard</h3>' + apBoardHTML(board) + '</div>' +
       apFunnelHTML(rs[4], rs[5]) +
@@ -1633,7 +1676,7 @@ async function apRenderDashboard(v) {
         return '<tr data-apuser="' + esc(u.user_id) + '"><td><b>' + esc(u.display_name || (u.email || '?').split('@')[0]) +
           '</b><br><small class="muted">' + esc(u.email || '') + '</small></td>' +
           '<td>' + esc(String(u.level || '—').toUpperCase()) + '</td>' +
-          '<td>' + esc(String(u.last_active).slice(0, 10)) + '</td>' +
+          '<td class="ap-nowrap">' + esc(String(u.last_active).slice(0, 10)) + '</td>' +
           '<td><b>' + idle + '</b></td><td>' + (u.xp_total || 0) + '</td></tr>';
       }).join('') + '</tbody></table></div>' : '<div class="empty">Nobody idle. 🎉</div>') +
       '</div>');
@@ -1693,14 +1736,14 @@ function apUsersTableHTML(users) {
     '</tr></thead><tbody>' +
     rows.map(function (u) {
       return '<tr data-apuser="' + esc(u.user_id) + '"><td><b>' + esc(u.display_name || (u.email || '?').split('@')[0]) +
-        '</b><br><small class="muted">' + esc(u.email || '') + (u.referred_by ? ' · 📣' + esc(u.referred_by) : '') + '</small></td>' +
-        '<td>' + (u.phone ? esc(u.phone) : '<span class="muted">—</span>') + '</td>' +
+        '</b><br><small class="muted"><span class="ap-email">' + esc(u.email || '') + '</span>' + (u.referred_by ? ' · 📣' + esc(u.referred_by) : '') + '</small></td>' +
+        '<td class="ap-nowrap">' + (u.phone ? esc(u.phone) : '<span class="muted">—</span>') + '</td>' +
         '<td>' + esc(String(u.level || '—').toUpperCase()) + '</td>' +
         '<td>' + (u.current_streak || 0) + '</td>' +
         '<td><b>' + (u.xp_total || 0) + '</b></td><td>' + (u.xp_7d || 0) + '</td>' +
         '<td>' + Math.round((Number(u.seconds_30d) || 0) / 60) + '</td>' +
-        '<td>' + esc(u.last_active ? String(u.last_active).slice(0, 10) : '—') + '</td>' +
-        '<td>' + esc(String(u.created_at || '').slice(0, 10)) + '</td></tr>';
+        '<td class="ap-nowrap">' + esc(u.last_active ? String(u.last_active).slice(0, 10) : '—') + '</td>' +
+        '<td class="ap-nowrap">' + esc(String(u.created_at || '').slice(0, 10)) + '</td></tr>';
     }).join('') + '</tbody></table></div>';
 }
 async function apRenderUsers(v) {
