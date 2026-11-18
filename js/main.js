@@ -10416,7 +10416,11 @@ function lessonTabsHTML(m) {
   ].filter(function (t) { return t[0] !== 'podcast' || lessonHasPodcast(m); });
   return '<div class="lesson-tabs" role="tablist" aria-label="Lesson sections">' + tabs.map(function (t) {
     return '<button class="lesson-tab" role="tab" aria-selected="' + (state.lessonTab === t[0]) + '" data-action="lesson-tab" data-tab="' + t[0] + '"><span class="lt-ico">' + t[2] + '</span><span>' + t[1] + '</span></button>';
-  }).join('') + '</div>';
+  }).join('') +
+  /* Grammar is no longer a lesson step (2026-11-17): this tab is the door
+     to the Grammar Path — Alireza's order: whoever taps Grammar in the
+     lesson lands on the path. */
+  '<a class="lesson-tab lt-grammar" href="#/grammar"><span class="lt-ico">' + ICO.doc + '</span><span>Grammar</span></a></div>';
 }
 
 function renderLesson(v, dateStr) {
@@ -14605,7 +14609,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611180453';
+var APP_VERSION = '202611180455';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

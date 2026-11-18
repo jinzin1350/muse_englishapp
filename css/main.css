@@ -1335,6 +1335,7 @@ body{background:#FFF9F3;}
 .lesson-tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;border:0;background:none;border-radius:14px;padding:.6rem .2rem;font-size:.73rem;font-weight:600;color:#8B93A7;cursor:pointer;min-width:62px;}
 .lesson-tab .lt-ico{color:#B9C2D0;}
 .lesson-tab .lt-ico svg{width:21px;height:21px;}
+a.lesson-tab{text-decoration:none;}
 .lesson-tab[aria-selected="true"]{background:#16233F;color:#fff;box-shadow:0 6px 14px rgba(22,35,63,.35);}
 .lesson-tab[aria-selected="true"] .lt-ico{color:#FFB020;}
 
