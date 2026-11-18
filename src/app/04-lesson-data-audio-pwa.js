@@ -598,7 +598,9 @@ function cardAudioTitle(card) {
    migration still hold relative media/<level>/<date>/... paths for
    pre-2026-10-10 lessons; those files now live only on R2. Translate the
    stale path at playback time so old snapshots play again. */
-var R2_MEDIA_BASE = 'https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/';
+/* 2026-11-18: same-origin proxy (functions/r2) — *.r2.dev is blocked in
+   Iran without a VPN; museenglishapp.com/r2/ streams from the bucket. */
+var R2_MEDIA_BASE = 'https://museenglishapp.com/r2/';
 function playableSrc(src) {
   if (src && player._blobFor === src && player._blobUrl) return player._blobUrl;
   if (src && src.indexOf('media/') === 0) {

@@ -314,7 +314,8 @@ html:not(.app-mode) #splash{display:none!important}
   <meta name="apple-mobile-web-app-title" content="Muse English">
   <link rel="stylesheet" href="/css/main.css?v=bb6d3e65">
   <!-- Supabase JS client (auth + database) -->
-  <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- 2026-11-18: supabase-js v2.119.0 self-hosted (jsdelivr is unreliable from Iran) -->
+  <script defer src="/js/vendor/supabase.min.js"></script>
   <!-- Capture OneSignal SDK console output for diagnostics (runs before the SDK) -->
   <script>
   window.__osLogs = [];
@@ -510,7 +511,7 @@ setTimeout(function () {
 
   <script src="/js/config.js"></script>
   <script defer src="/js/fa-ui.js?v=7a51f0f1"></script>
-  <script defer src="/js/main.js?v=1ad3bae5"></script>
+  <script defer src="/js/main.js?v=e0ac4f10"></script>
 
 <script>
 document.addEventListener('click', function(e) {

@@ -2674,7 +2674,9 @@ function cardAudioTitle(card) {
    migration still hold relative media/<level>/<date>/... paths for
    pre-2026-10-10 lessons; those files now live only on R2. Translate the
    stale path at playback time so old snapshots play again. */
-var R2_MEDIA_BASE = 'https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/';
+/* 2026-11-18: same-origin proxy (functions/r2) — *.r2.dev is blocked in
+   Iran without a VPN; museenglishapp.com/r2/ streams from the bucket. */
+var R2_MEDIA_BASE = 'https://museenglishapp.com/r2/';
 function playableSrc(src) {
   if (src && player._blobFor === src && player._blobUrl) return player._blobUrl;
   if (src && src.indexOf('media/') === 0) {
@@ -14700,7 +14702,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611180539';
+var APP_VERSION = '202611181619';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

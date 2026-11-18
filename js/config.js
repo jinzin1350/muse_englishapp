@@ -4,7 +4,9 @@
    ============================================================ */
 const APP_CONFIG = {
   // Supabase project URL, e.g. "https://abcxyz.supabase.co"
-  SUPABASE_URL: "https://hxkxowjbnbfyqiifuydn.supabase.co",
+  // 2026-11-18: same-origin proxy (functions/sb) — *.supabase.co is blocked
+  // in Iran without a VPN; museenglishapp.com/sb forwards to the project.
+  SUPABASE_URL: "https://museenglishapp.com/sb",
 
   // Supabase "anon" public key (safe to embed in a frontend)
   SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4a3hvd2pibmJmeXFpaWZ1eWRuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA3NDM5MzQsImV4cCI6MjEwNjMxOTkzNH0.M0fviKDLncJomoldPABR5BDhQjLIdM8WowfoT-FA8ik",
