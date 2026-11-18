@@ -8024,6 +8024,10 @@ var GP_LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1'];
 var GP_LEVEL_TITLES = { a1: 'A1 · Beginner', a2: 'A2 · Elementary', b1: 'B1 · Intermediate', b2: 'B2 · Upper Intermediate', c1: 'C1 · C2 · Advanced' };
 var GP_FAMILY_ORDER = ['verb-basics', 'present-tenses', 'articles', 'nouns', 'determiners', 'pronouns', 'past-tenses', 'adjectives-and-adverbs', 'prepositions', 'present-perfect-tenses', 'future-forms', 'questions', 'modal-verbs', 'verb-patterns', 'linking-words', 'conditionals', 'passive', 'relative-clauses', 'reporting', 'sentence-structure', 'academic-english'];
 var GP_OFFSETS = [0, 46, 78, 46, 0, -46, -78, -46];
+/* Level rank for the learner's own start point: the path starts at the
+   learner's level (2026-11-17, Alireza's order). Earlier levels stay open
+   to browse; the step-by-step unlock chain runs from their level onward. */
+var GP_RANK = { a1: 0, a2: 1, b1: 2, b2: 3, c1: 4, c2: 4 };
 
 function gpFa() { try { return uiLang() === 'fa'; } catch (e) { return false; } }
 function gpT(fa, en) { return gpFa() ? fa : en; }
@@ -8066,12 +8070,9 @@ function renderGrammarPath(v) {
     '<div id="gtest-banner-wrap"></div>' +
     '<div class="gp-progress"><div class="gp-progress-txt" id="gp-progress-txt"></div>' +
     '<div class="gp-bar"><div class="gp-bar-fill" id="gp-bar-fill"></div></div></div>' +
-    '<button class="gp-listbtn" id="gp-tolist" type="button">' + (fa ? '\uD83D\uDCCB لیست موضوع‌ها' : '\uD83D\uDCCB Topic list') + '</button>' +
     '<div class="gp-hint" id="gp-hint" hidden></div>' +
     '<div id="gp-body"><div class="empty">Loading…</div></div></div>';
   if (typeof paintGTestBanner === 'function') paintGTestBanner();
-  var toList = document.getElementById('gp-tolist');
-  if (toList) toList.addEventListener('click', function () { state.gView = 'list'; renderGrammar(v); });
   Promise.all([gpLoadIndex(), (typeof gFaIndex === 'function' ? gFaIndex() : Promise.resolve())]).then(function (res) {
     paintGrammarPath(res[0]);
   }).catch(function () {
@@ -8087,23 +8088,35 @@ function paintGrammarPath(index) {
   var order = gpOrder(index);
   var prog = grammarProgress();
   var doneCount = 0;
-  var allPrevDone = true;
   var currentSlug = null;
   var html = '';
   var curLevel = null, curFamily = null, nodeIdx = 0;
+  /* Start point = the learner's own level (2026-11-17, Alireza's order):
+     earlier levels are always playable so they can browse/review them;
+     from their own level onward the chain unlocks step by step, and
+     "current" is the first unfinished node at or after their level. */
+  var userLv = normalizeLevel(state.user && state.user.level) || 'a1';
+  var userRank = GP_RANK[userLv] || 0;
+  var startIdx = order.length;
+  order.forEach(function (t, k) {
+    if (startIdx === order.length && (GP_RANK[t.level] || 0) >= userRank) startIdx = k;
+  });
+  var chainOk = true;
+  var rowIdx = 0;
   order.forEach(function (t) {
     var p = prog[t.slug];
     var done = !!(p && p.done);
     if (done) doneCount++;
-    var playable = done || allPrevDone;
-    var isCurrent = playable && !done && !currentSlug;
+    var playable = done || rowIdx < startIdx || chainOk;
+    var isCurrent = playable && !done && rowIdx >= startIdx && !currentSlug;
     if (isCurrent) currentSlug = t.slug;
-    if (!done) allPrevDone = false;
+    if (rowIdx >= startIdx && !done) chainOk = false;
+    rowIdx++;
     if (t.level !== curLevel) {
       curLevel = t.level; curFamily = null;
       var lvCount = order.filter(function (x) { return x.level === curLevel; }).length;
       var grad = (typeof GH_LV_GRAD !== 'undefined' && GH_LV_GRAD[curLevel]) || ['#F6AC68', '#E8833A'];
-      html += '<div class="gp-sec" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' +
+      html += '<div class="gp-sec" id="gp-sec-' + curLevel + '" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' +
         '<b>' + esc(GP_LEVEL_TITLES[curLevel] || curLevel.toUpperCase()) + '</b>' +
         '<span>' + lvCount + (fa ? ' درس' : ' lessons') + '</span></div>';
     }
@@ -8146,6 +8159,10 @@ function paintGrammarPath(index) {
   if (currentSlug) {
     var cur = body.querySelector('.gp-node.current');
     if (cur) setTimeout(function () { cur.scrollIntoView({ block: 'center', behavior: 'smooth' }); }, 350);
+  } else if (startIdx < order.length) {
+    /* Everything from their level on is done: land them on their level. */
+    var sec = document.getElementById('gp-sec-' + (GP_LEVELS[userRank] || 'a1'));
+    if (sec) setTimeout(function () { sec.scrollIntoView({ block: 'start', behavior: 'smooth' }); }, 350);
   }
 }
 /* ---------------- IELTS Academic full mock (#/ielts) ----------------
@@ -14588,7 +14605,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611180422';
+var APP_VERSION = '202611180453';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
