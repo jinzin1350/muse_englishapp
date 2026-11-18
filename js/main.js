@@ -5194,7 +5194,7 @@ function buildTutorialSteps() {
     { id: 'words', view: 'lesson', selector: '.lesson-tab[data-tab="words"]',
       kicker: '📝', title: T('کلمات', 'Words'),
       text: T('کلمات امروز رو اینجا یاد بگیر', 'Learn today\u2019s words here') },
-    { id: 'quiz', selector: '.lesson-tab[data-tab="quiz"]',
+    { id: 'quiz', selector: '.start-quiz-cta',
       kicker: '🎯', title: T('کوییز', 'Quiz'),
       text: T('کوییز بده و XP بگیر', 'Take the quiz and earn XP') },
     { id: 'streak', view: 'home', selector: '.stk-link, .hm-streak',
@@ -10422,7 +10422,8 @@ window.addEventListener('hashchange', function () { if (ASKM.open) askmClose(); 
 function lessonTabsHTML(m) {
   const tabs = [
     ['words', 'Words', ICO.book],
-    ['quiz', 'Quiz', ICO.quiz],
+    /* No Quiz tab (2026-11-18, Alireza's order): the quiz starts straight
+       from the button at the end of the Words page. */
     ['podcast', 'Podcast', ICO.headphones],
     ['shadowing', 'Shadowing', ICO.mic],
     /* Lesson Path tab (2026-11-18, Alireza's order): all previous lessons
@@ -10483,6 +10484,7 @@ function renderLessonTab(body) {
   const m = state.lesson;
   let tab = state.lessonTab;
   if (tab === 'podcast' && !lessonHasPodcast(m)) tab = 'words';
+  if (tab === 'quiz') tab = 'words'; /* Quiz tab removed 2026-11-18: stale links land on Words, whose bottom button starts the quiz. */
   /* Steps are marked only on genuine completion (2026-10-14 rule):
      words = scrolled to the last word (observeWordsEnd), quiz = finished,
      podcast = fully listened (checkTrackCompletion) or summary done,
@@ -10536,10 +10538,11 @@ function wordsTabHTML(m) {
       (w.persian ? '<div class="word-fa" dir="auto">' + esc(w.persian) + '</div>' : '') +
     '</div>';
   }).join('') || '<div class="empty">No words in this lesson.</div>';
-  /* Enticing Start-Quiz CTA at the end of the words list (flame mascot button).
-     Reuses the lesson-tab action so it behaves exactly like tapping the Quiz tab. */
-  const cta = (m.words && m.words.length)
-    ? '<button class="start-quiz-cta" data-action="lesson-tab" data-tab="quiz" aria-label="Start the word quiz">' +
+  /* Start-Quiz CTA at the end of the words list (flame mascot button).
+     Starts the word quiz DIRECTLY (2026-11-18, Alireza's order — the Quiz
+     tab page is gone; this button is the quiz door now). */
+  const cta = (m.words && m.words.length && (m.quiz || []).length)
+    ? '<button class="start-quiz-cta" data-action="quiz-start" data-kind="word" aria-label="Start the word quiz">' +
       '<img src="/media/celebration/start-quiz.webp" alt="Start Quiz"></button>'
     : '';
   /* All-words pronunciation audio after the last word card (moved from podcast tab 2026-10-11). */
@@ -14697,7 +14700,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611180513';
+var APP_VERSION = '202611180539';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

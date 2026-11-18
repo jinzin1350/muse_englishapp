@@ -2,7 +2,8 @@
 function lessonTabsHTML(m) {
   const tabs = [
     ['words', 'Words', ICO.book],
-    ['quiz', 'Quiz', ICO.quiz],
+    /* No Quiz tab (2026-11-18, Alireza's order): the quiz starts straight
+       from the button at the end of the Words page. */
     ['podcast', 'Podcast', ICO.headphones],
     ['shadowing', 'Shadowing', ICO.mic],
     /* Lesson Path tab (2026-11-18, Alireza's order): all previous lessons
@@ -63,6 +64,7 @@ function renderLessonTab(body) {
   const m = state.lesson;
   let tab = state.lessonTab;
   if (tab === 'podcast' && !lessonHasPodcast(m)) tab = 'words';
+  if (tab === 'quiz') tab = 'words'; /* Quiz tab removed 2026-11-18: stale links land on Words, whose bottom button starts the quiz. */
   /* Steps are marked only on genuine completion (2026-10-14 rule):
      words = scrolled to the last word (observeWordsEnd), quiz = finished,
      podcast = fully listened (checkTrackCompletion) or summary done,
@@ -116,10 +118,11 @@ function wordsTabHTML(m) {
       (w.persian ? '<div class="word-fa" dir="auto">' + esc(w.persian) + '</div>' : '') +
     '</div>';
   }).join('') || '<div class="empty">No words in this lesson.</div>';
-  /* Enticing Start-Quiz CTA at the end of the words list (flame mascot button).
-     Reuses the lesson-tab action so it behaves exactly like tapping the Quiz tab. */
-  const cta = (m.words && m.words.length)
-    ? '<button class="start-quiz-cta" data-action="lesson-tab" data-tab="quiz" aria-label="Start the word quiz">' +
+  /* Start-Quiz CTA at the end of the words list (flame mascot button).
+     Starts the word quiz DIRECTLY (2026-11-18, Alireza's order — the Quiz
+     tab page is gone; this button is the quiz door now). */
+  const cta = (m.words && m.words.length && (m.quiz || []).length)
+    ? '<button class="start-quiz-cta" data-action="quiz-start" data-kind="word" aria-label="Start the word quiz">' +
       '<img src="/media/celebration/start-quiz.webp" alt="Start Quiz"></button>'
     : '';
   /* All-words pronunciation audio after the last word card (moved from podcast tab 2026-10-11). */

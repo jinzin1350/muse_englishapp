@@ -630,7 +630,7 @@ function buildTutorialSteps() {
     { id: 'words', view: 'lesson', selector: '.lesson-tab[data-tab="words"]',
       kicker: '📝', title: T('کلمات', 'Words'),
       text: T('کلمات امروز رو اینجا یاد بگیر', 'Learn today\u2019s words here') },
-    { id: 'quiz', selector: '.lesson-tab[data-tab="quiz"]',
+    { id: 'quiz', selector: '.start-quiz-cta',
       kicker: '🎯', title: T('کوییز', 'Quiz'),
       text: T('کوییز بده و XP بگیر', 'Take the quiz and earn XP') },
     { id: 'streak', view: 'home', selector: '.stk-link, .hm-streak',
