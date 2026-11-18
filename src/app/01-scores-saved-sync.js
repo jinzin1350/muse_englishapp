@@ -555,21 +555,50 @@ async function kvPullAll() {
     const lsKey = KV_SYNC_KEYS[ki];
     const m = meta[lsKey] || { u: 0, dirty: false };
     const row = byKey[lsKey];
-    if (row && lsKey === 'ela_progress_v1') {
+    if (lsKey === 'ela_progress_v1') {
       /* Lesson progress: merge per date with the cloud copy (union), keep
          the merged blob locally, and push it back when the cloud is
-         missing days this device has (2026-11-18). */
-      const cloudU = Date.parse(row.updated_at) || 0;
+         missing days this device has (2026-11-18). Runs with or without
+         a cloud row: server-recorded word quizzes (quiz_attempts) are
+         authoritative for the quiz step — they survive device changes
+         that wipe the local blob — so the best score per lesson date is
+         folded in here too (Alireza's order, 2026-11-18). */
+      const cloudU = row ? (Date.parse(row.updated_at) || 0) : 0;
       let localVal = null;
       try { localVal = JSON.parse(localStorage.getItem(kvStorageKey(lsKey)) || 'null'); } catch (e) {}
-      const merged = kvMergeProgress(localVal, row.value);
-      const mergedStr = JSON.stringify(merged);
-      if (mergedStr !== JSON.stringify(localVal)) {
-        try { localStorage.setItem(kvStorageKey(lsKey), mergedStr); } catch (e) {}
-        changed = true;
+      const merged = kvMergeProgress(localVal, row ? row.value : null);
+      try {
+        const qres = await sb.from('quiz_attempts').select('date,score,total,created_at')
+          .eq('user_id', state.user.id).eq('kind', 'word').limit(1000);
+        if (qres && !qres.error && Array.isArray(qres.data)) {
+          const best = {};
+          qres.data.forEach(function (r) {
+            if (!r || !r.date) return;
+            if (!best[r.date] || (r.score || 0) > (best[r.date].score || 0)) best[r.date] = r;
+          });
+          Object.keys(best).forEach(function (d) {
+            const day = merged[d] || {};
+            const rec = { score: best[d].score, total: best[d].total };
+            if (!day.quiz) {
+              day.quiz = rec;
+              const ts = Date.parse(best[d].created_at) || 0;
+              if (ts > (day.updatedAt || 0)) day.updatedAt = ts;
+              merged[d] = day;
+            } else if (typeof day.quiz === 'object' && (rec.score || 0) > (day.quiz.score || 0)) {
+              day.quiz = rec;
+            }
+          });
+        }
+      } catch (e) {}
+      if (Object.keys(merged).length) {
+        const mergedStr = JSON.stringify(merged);
+        if (mergedStr !== JSON.stringify(localVal)) {
+          try { localStorage.setItem(kvStorageKey(lsKey), mergedStr); } catch (e) {}
+          changed = true;
+        }
+        if (row) { m.u = Math.max(m.u || 0, cloudU); m.dirty = false; meta[lsKey] = m; }
+        if (mergedStr !== JSON.stringify(row ? row.value : null)) kvPush(lsKey);
       }
-      m.u = Math.max(m.u || 0, cloudU); m.dirty = false; meta[lsKey] = m;
-      if (mergedStr !== JSON.stringify(row.value)) kvPush(lsKey);
     } else if (row) {
       const cloudU = Date.parse(row.updated_at) || 0;
       if (m.dirty && (m.u || 0) >= cloudU) {
