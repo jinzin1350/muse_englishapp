@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "bissell-spotclean-proheat-2694b",
+      "name_fa": "لکه‌بر فرش و مبل بیسل SpotClean ProHeat مدل 2694B",
+      "name_en": "BISSELL SpotClean ProHeat Portable Carpet & Upholstery Cleaner, 2694B",
+      "price_cad": 97.99,
+      "regular_cad": 149.99,
+      "discount_pct": 35,
+      "added_fa": "چهارشنبه، ۱۸ نوامبر ۲۰۲۶",
+      "image": "img/bissell-spotclean-proheat-2694b.jpg",
+      "url": "https://www.amazon.ca/dp/B08DBM534X?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "فناوری HeatWave برای آب گرم ثابت، ابزار پله سه‌کاره و مخزن‌های جداشدنی"
+    },
+    {
+      "id": "braun-mq5000-vario-hand-blender",
+      "name_fa": "همزن دستی براون MultiQuick 5 Vario مدل MQ5000",
+      "name_en": "Braun MQ5000 Vario Hand Blender Stick - 21-Speed Immersion Blender, 400W, SplashControl",
+      "price_cad": 44.99,
+      "regular_cad": 79.99,
+      "discount_pct": 44,
+      "added_fa": "چهارشنبه، ۱۸ نوامبر ۲۰۲۶",
+      "image": "img/braun-mq5000-vario-hand-blender.jpg",
+      "url": "https://www.amazon.ca/dp/B07NZFZGTM?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "۲۱ سرعت و حالت توربو، تیغه استیل و فناوری ضد پاشش؛ برای سوپ و اسموتی"
+    },
+    {
       "id": "soundcore-space-one",
       "name_fa": "هدفون ساندکور Space One",
       "name_en": "soundcore by Anker Space One Active Noise Cancelling Headphones",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "شارژ بی‌سیم Qi2 پانزده وات، فوق باریک و مناسب آیفون‌های مگ‌سیف"
-    },
-    {
-      "id": "dreamegg-d1-nova-black",
-      "name_fa": "دستگاه صدای سفید دریم‌اگ D1 Nova مشکی",
-      "name_en": "Dreamegg D1 Nova Sound Machine - White Noise Machine Alarm Clock, Black",
-      "price_cad": 16.49,
-      "regular_cad": null,
-      "discount_pct": null,
-      "added_fa": "دوشنبه، ۱۶ نوامبر ۲۰۲۶",
-      "image": "img/dreamegg-d1-nova-black.jpg",
-      "url": "https://www.amazon.ca/dp/B0FCY2PTZ4?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "۲۵ صدای آرام‌بخش، نور شب ده‌رنگ و ساعت زنگ‌دار"
-    },
-    {
-      "id": "craftsman-57pc-mechanics-tool-set-cmm99447",
-      "name_fa": "ست ابزار کرافتسمن ۵۷ تکه CMMT99447",
-      "name_en": "CRAFTSMAN 57 Piece Mechanics Tool Set/Home Tool Set (CMMT99447)",
-      "price_cad": 59.99,
-      "regular_cad": 119.99,
-      "discount_pct": 50,
-      "added_fa": "دوشنبه، ۱۶ نوامبر ۲۰۲۶",
-      "image": "img/craftsman-57pc-mechanics-tool-set-cmm99447.jpg",
-      "url": "https://www.amazon.ca/dp/B0D2PN4785?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "فولاد آلیاژی؛ چکش، بکس، جغجغه، پیچ‌گوشتی و آلن"
     }
   ],
-  "updated_fa": "سه‌شنبه ۲۶ آبان"
+  "updated_fa": "چهارشنبه ۲۷ آبان"
 }
