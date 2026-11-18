@@ -8121,9 +8121,10 @@ function paintGrammarPath(index) {
     var isCurrent = playable && !done && rowIdx >= startIdx && !currentSlug;
     if (isCurrent) currentSlug = t.slug;
     if (rowIdx >= startIdx && !done) chainOk = false;
-    /* Earlier-level lessons he has not read yet wear a lock as a MARKER
-       ("not read yet") but stay tappable — Alireza's order 2026-11-18.
-       Lessons ahead of his current one are hard-locked buttons. */
+    /* Earlier-level lessons he has not read yet wear the RED unread node
+       but stay tappable (Alireza's correction 2026-11-18: a lock means
+       "cannot open" — unread is not locked). Lessons ahead of his current
+       one are hard-locked buttons and keep the lock. */
     var preStart = rowIdx < startIdx;
     rowIdx++;
     if (t.level !== curLevel) {
@@ -8143,7 +8144,10 @@ function paintGrammarPath(index) {
     var title = (fa && typeof gFaTitle === 'function' && gFaTitle(t.slug)) ? gFaTitle(t.slug) : t.h1;
     var score = done ? '<span class="gp-score">✓ ' + (p.best || 0) + '/' + (p.total || 16) + '</span>'
       : (p && p.attempts ? '<span class="gp-score">' + (fa ? 'بهترین: ' : 'Best: ') + (p.best || 0) + '/' + (p.total || 16) + '</span>' : '');
-    var inner = '<span class="gp-node-sym">' + (done ? '✓' : (isCurrent ? '★' : '\uD83D\uDD12')) + '</span>';
+    /* Symbol rule (Alireza's correction 2026-11-18): a lock means "you
+       cannot open this" — it belongs ONLY on hard-locked lessons. A lesson
+       that is open but not yet read wears a book on the red unread node. */
+    var inner = '<span class="gp-node-sym">' + (done ? '✓' : (isCurrent ? '★' : (playable ? '\uD83D\uDCD6' : '\uD83D\uDD12'))) + '</span>';
     var nodeHtml = playable
       ? '<a class="gp-node' + (done ? ' done' : '') + (isCurrent ? ' current' : '') + ((preStart && !done) ? ' unread' : '') + '" href="#/grammar/' + esc(t.slug) + '/' + esc(t.level) + '" aria-label="' + esc(t.h1) + '">' + inner + '</a>'
       : '<button class="gp-node locked" type="button" data-gplocked="1" aria-label="' + esc(t.h1) + '">' + inner + '</button>';
@@ -11608,12 +11612,20 @@ function grammarTabHTML(m) {
    2026-11-18, Alireza's order: the Lesson tab shows all previous lessons as
    a winding path, drawn like the Grammar Path. One node = one lesson,
    oldest at the top, newest at the bottom, grouped by month. A lesson is
-   ticked (green check) when its words were read to the end — the same
-   `words` flag the streak rule uses. Unread lessons wear the lock marker
-   ("not read yet", same as the Grammar Path) but stay tappable. The view
-   auto-scrolls to the first unread lesson. Not a lesson step: STEPS and
+   ticked (green check) only when it is fully studied — words read AND the
+   word quiz done — the app's standard completion rule (same as the streak
+   rule). Lessons not yet studied wear a RED node ("not read yet") but stay
+   tappable: a lock is reserved for things the learner genuinely cannot
+   open (Alireza's correction 2026-11-18 — no lock for "unread"). The view
+   auto-scrolls to the first unstudied lesson. Not a lesson step: STEPS and
    streak/XP rules are untouched. */
 var LP_OFFSETS = [0, 46, 78, 46, 0, -46, -78, -46];
+
+/* Studied = words read AND word quiz done (the app's completion rule). */
+function lpDone(date) {
+  var p = getDayProgress(date);
+  return !!(p && p.words && p.quiz);
+}
 var LP_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 function renderLessonPath(body) {
@@ -11629,7 +11641,7 @@ function renderLessonPath(body) {
   var readCount = 0;
   var currentDate = null;
   lessons.forEach(function (m) {
-    if (getDayProgress(m.date).words) readCount++;
+    if (lpDone(m.date)) readCount++;
     else if (!currentDate) currentDate = m.date;
   });
   var html = '<div class="gp-progress"><div class="gp-progress-txt">' +
@@ -11652,10 +11664,10 @@ function renderLessonPath(body) {
         '<b>' + LP_MONTHS[parseInt(parts[1], 10) - 1] + ' ' + parts[0] + '</b>' +
         '<span>' + monthCount[mon] + (fa ? ' درس' : ' lessons') + '</span></div>';
     }
-    var done = !!getDayProgress(m.date).words;
+    var done = lpDone(m.date);
     var isCurrent = m.date === currentDate;
     var dx = LP_OFFSETS[idx % LP_OFFSETS.length]; idx++;
-    var sym = done ? '✓' : (isCurrent ? '★' : '\uD83D\uDD12');
+    var sym = done ? '✓' : (isCurrent ? '★' : '\uD83D\uDCD6');
     var cls = 'gp-node' + (done ? ' done' : '') + (isCurrent ? ' current' : '') +
       (!done && !isCurrent ? ' unread' : '');
     html += '<div class="gp-row" style="transform:translateX(' + dx + 'px)">' +
@@ -11663,7 +11675,7 @@ function renderLessonPath(body) {
       '<a class="' + cls + '" href="#/lesson/' + m.date + '" data-lpdate="' + m.date + '" aria-label="' + esc(m.theme || m.date) + '">' +
       '<span class="gp-node-sym">' + sym + '</span></a>' +
       '<span class="gp-label">' + esc(m.theme || m.date) + '</span>' +
-      '<span class="gp-score">' + esc(m.date) + (m.date === todayStr() ? (fa ? ' · امروز' : ' · Today') : '') + '</span>' +
+      '<span class="lp-date' + (done ? ' done' : '') + '">' + esc(m.date) + (m.date === todayStr() ? (fa ? ' · امروز' : ' · Today') : '') + '</span>' +
       '</div>';
   });
   body.innerHTML = html;
@@ -14702,7 +14714,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611181641';
+var APP_VERSION = '202611181701';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
