@@ -184,6 +184,9 @@ function onRoute() {
   if (view !== 'landing') {
     try { localStorage.setItem('muse_app_used', '1'); } catch (e) {}
   }
+  /* Grammar Path lesson deep link: #/grammar/<slug>/<level> opens the topic
+     as a single-level lesson (only that level's points + practice). */
+  state.gPathLevel = (view === 'grammar' && r.arg && ['a1', 'a2', 'b1', 'b2', 'c1', 'c2'].indexOf(r.arg2) !== -1) ? r.arg2 : null;
   show(view, r.arg);
 }
 

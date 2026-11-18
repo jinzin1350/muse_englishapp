@@ -105,7 +105,7 @@ function paintGrammarPath(index) {
       : (p && p.attempts ? '<span class="gp-score">' + (fa ? 'بهترین: ' : 'Best: ') + (p.best || 0) + '/' + (p.total || 16) + '</span>' : '');
     var inner = '<span class="gp-node-sym">' + (done ? '✓' : (playable ? '★' : '\uD83D\uDD12')) + '</span>';
     var nodeHtml = playable
-      ? '<a class="gp-node' + (done ? ' done' : '') + (isCurrent ? ' current' : '') + '" href="#/grammar/' + esc(t.slug) + '" aria-label="' + esc(t.h1) + '">' + inner + '</a>'
+      ? '<a class="gp-node' + (done ? ' done' : '') + (isCurrent ? ' current' : '') + '" href="#/grammar/' + esc(t.slug) + '/' + esc(t.level) + '" aria-label="' + esc(t.h1) + '">' + inner + '</a>'
       : '<button class="gp-node locked" type="button" data-gplocked="1" aria-label="' + esc(t.h1) + '">' + inner + '</button>';
     html += '<div class="gp-row" style="transform:translateX(' + dx + 'px)">' +
       (isCurrent ? '<span class="gp-start">' + (fa ? 'شروع' : 'START') + '</span>' : '') +

@@ -159,7 +159,7 @@ function renderGrammarTopic(v, slug) {
       return;
     }
     if (t.v2) {
-      Promise.all([gFaLoad(t.slug), gFaIndex()]).then(function () { renderGrammarTopicV3(v, t); });
+      Promise.all([gFaLoad(t.slug), gFaIndex()]).then(function () { renderGrammarTopicV3(v, t, state.gPathLevel); });
       return;
     }
     var prog = grammarProgress()[t.slug];
@@ -344,9 +344,14 @@ function paintEnAudioBars(v, slug) {
 /* Topic page V3 (2026-10-20): anti-wall-of-text layout — quick-rule card per point,
    visual blocks, examples & details behind an accordion. LIVE for all v2 topics
    since 2026-10-20 (his order); renderGrammarTopicV2 kept for rollback. */
-function renderGrammarTopicV3(v, t) {
+function renderGrammarTopicV3(v, t, onlyLevel) {
   var levels = t.v2_levels || [];
-  var bar = '<div class="g2-levelbar">' + levels.map(function (lv) {
+  /* Grammar Path lesson mode (2026-11-17, Alireza's order): one node = one
+     lesson on one page — render ONLY the node's level section, no stacked
+     levels behind it. Direct guide visits (no level) keep the full page. */
+  var lessonMode = !!(onlyLevel && levels.indexOf(onlyLevel) !== -1);
+  if (lessonMode) levels = [onlyLevel];
+  var bar = lessonMode ? '' : '<div class="g2-levelbar">' + levels.map(function (lv) {
     return '<a href="#/grammar/' + esc(t.slug) + '" data-g2lv="' + lv + '">' + lv.toUpperCase() + '</a>';
   }).join('') + '</div>';
   var byLevel = {};
@@ -430,7 +435,9 @@ function renderGrammarTopicV3(v, t) {
     : '<div class="g-intro">' + (t.intro || []).map(function (p) { return '<p>' + gMd(p) + '</p>'; }).join('') + '</div>';
   var faT = faLv.length ? gFaTitle(t.slug) : '';
   v.innerHTML = '<div class="g-topic gt3-topic">' +
-    '<a class="g-back" href="#/grammar">‹ ' + (faT ? '<span class="g-back-fa" lang="fa">همهٔ راهنماها</span>' : 'All guides') + '</a>' +
+    '<a class="g-back" href="#/grammar">‹ ' + (lessonMode
+      ? (gpFa() ? '<span class="g-back-fa" lang="fa">مسیر گرامر</span>' : 'Grammar path')
+      : (faT ? '<span class="g-back-fa" lang="fa">همهٔ راهنماها</span>' : 'All guides')) + '</a>' +
     '<div class="g-hero">' + (faT ? '<h1 dir="rtl" lang="fa" class="g-h1-fa">' + esc(faT) + '</h1><div class="g-h1-en" dir="ltr">' + esc(t.h1) + '</div>'
       : '<h1>' + esc(t.h1) + '</h1>') + '</div>' +
     bar + intro + sections + '</div>';
