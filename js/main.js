@@ -4189,6 +4189,18 @@ function fmtMsgTime(ts) {
     return d.toDateString() === new Date().toDateString() ? 'today ' + hm : fmtDate(d) + ' ' + hm;
   } catch (e) { return ''; }
 }
+/* Turn URLs in an already-escaped line of text into tappable links
+   (2026-11-18, Alireza's order): inbox bodies are plain text, so a link
+   pasted into a message (e.g. the Instagram promo) must render as an
+   anchor. Runs AFTER esc(), so the input has no raw HTML; trailing
+   sentence punctuation is peeled off the URL and kept as text. */
+function linkifyEscaped(s) {
+  return s.replace(/https?:\/\/[^\s<]+/g, function (u) {
+    let tail = '';
+    while (/[.,;:!?]$/.test(u)) { tail = u.slice(-1) + tail; u = u.slice(0, -1); }
+    return '<a href="' + u + '" target="_blank" rel="noopener">' + u + '</a>' + tail;
+  });
+}
 function inboxListHTML(msgs) {
   if (!msgs.length) return '<div class="empty">No messages yet. When your teacher writes to you, it shows up here. 💌</div>';
   return msgs.map(function (m) {
@@ -4215,7 +4227,7 @@ function inboxListHTML(msgs) {
          (e.g. the weekly recap) renders in the right order. */
       bodyHTML = esc(m.body).split('\n').map(function (ln) {
         return ln.trim()
-          ? '<span class="msg2-line" dir="auto">' + ln + '</span>'
+          ? '<span class="msg2-line" dir="auto">' + linkifyEscaped(ln) + '</span>'
           : '<span class="msg2-gap"></span>';
       }).join('');
     }
@@ -14818,7 +14830,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611181818';
+var APP_VERSION = '202611181854';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
