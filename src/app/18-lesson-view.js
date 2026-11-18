@@ -4,8 +4,7 @@ function lessonTabsHTML(m) {
     ['words', 'Words', ICO.book],
     ['quiz', 'Quiz', ICO.quiz],
     ['podcast', 'Podcast', ICO.headphones],
-    ['shadowing', 'Shadowing', ICO.mic],
-    ['grammar', 'Grammar', ICO.grid]
+    ['shadowing', 'Shadowing', ICO.mic]
   ].filter(function (t) { return t[0] !== 'podcast' || lessonHasPodcast(m); });
   return '<div class="lesson-tabs" role="tablist" aria-label="Lesson sections">' + tabs.map(function (t) {
     return '<button class="lesson-tab" role="tab" aria-selected="' + (state.lessonTab === t[0]) + '" data-action="lesson-tab" data-tab="' + t[0] + '"><span class="lt-ico">' + t[2] + '</span><span>' + t[1] + '</span></button>';

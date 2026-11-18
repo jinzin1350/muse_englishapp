@@ -64,6 +64,7 @@ function paintGhHeader() {
 
 function renderGrammar(v, slug) {
   if (slug) { renderGrammarTopic(v, slug); return; }
+  if (state.gView !== 'list' && typeof renderGrammarPath === 'function') { renderGrammarPath(v); return; }
   if (!state.gFilter) state.gFilter = { level: normalizeLevel(state.user && state.user.level) || 'a1', q: '' };
   var f = state.gFilter;
   v.innerHTML = '<div class="g-hub">' +
@@ -73,6 +74,7 @@ function renderGrammar(v, slug) {
       '<p>Clear explanations, real examples and practice exercises for every level.</p>' +
     '</div><img class="gh-mascot" src="/media/grammar/mascot-guides.webp" alt="Grammar mascot"></div>' +
     '<img class="gh-feats-img" src="/media/grammar/feats-strip.webp" alt="Simple explanations, real examples, practice exercises">' +
+    '<button class="gp-listbtn" id="g-topath" type="button">\uD83D\uDDFA️ Grammar path</button>' +
     '<div id="gtest-banner-wrap"></div>' +
     '<div class="gh-filters" role="tablist">' +
     GH_LEVELS.map(function (lv) {
@@ -87,6 +89,8 @@ function renderGrammar(v, slug) {
   paintGhHeader();
   paintGrammarList();
   paintGTestBanner();
+  var toPath = v.querySelector('#g-topath');
+  if (toPath) toPath.addEventListener('click', function () { state.gView = 'path'; renderGrammar(v); });
   Array.prototype.forEach.call(v.querySelectorAll('[data-glevel]'), function (btn) {
     btn.addEventListener('click', function () {
       state.gFilter.level = btn.getAttribute('data-glevel');

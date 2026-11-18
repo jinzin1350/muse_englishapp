@@ -457,7 +457,7 @@ function srsGradeCloud(k, e) {
    write wins by updated_at. All fire-and-forget — before the user_kv
    migration runs, the calls fail silently and local remains the working
    record, the same pattern as saved-word SRS cloud writes. */
-var KV_SYNC_KEYS = ['muse_wordmap_v1', 'muse_tricky_v1', 'muse_mistakes_srs_v1'];
+var KV_SYNC_KEYS = ['muse_wordmap_v1', 'muse_tricky_v1', 'muse_mistakes_srs_v1', 'muse_grammar_v1'];
 function kvMetaAll() {
   try { return JSON.parse(localStorage.getItem('muse_kv_meta') || '{}') || {}; }
   catch (e) { return {}; }
@@ -465,9 +465,14 @@ function kvMetaAll() {
 function kvMetaSet(m) {
   try { localStorage.setItem('muse_kv_meta', JSON.stringify(m)); } catch (e) {}
 }
+/* Grammar progress lives under the per-user lsKey() name (ela_…_<email>),
+   not the raw sync key — resolve the real storage key per sync key. */
+function kvStorageKey(key) {
+  return key === 'muse_grammar_v1' ? lsKey(key) : key;
+}
 function kvLocalEmpty(lsKey) {
   try {
-    const v = JSON.parse(localStorage.getItem(lsKey) || 'null');
+    const v = JSON.parse(localStorage.getItem(kvStorageKey(lsKey)) || 'null');
     if (!v) return true;
     if (lsKey === 'muse_wordmap_v1') return !(v.words && Object.keys(v.words).length);
     return !Object.keys(v).length;
@@ -476,7 +481,7 @@ function kvLocalEmpty(lsKey) {
 async function kvPush(lsKey) {
   if (!cloudReady() || !state.user) return;
   let val = null;
-  try { val = JSON.parse(localStorage.getItem(lsKey) || 'null'); } catch (e) {}
+  try { val = JSON.parse(localStorage.getItem(kvStorageKey(lsKey)) || 'null'); } catch (e) {}
   if (val === null) return;
   const meta = kvMetaAll();
   const m = meta[lsKey] || { u: 0, dirty: false };
@@ -520,7 +525,7 @@ async function kvPullAll() {
       if (m.dirty && (m.u || 0) >= cloudU) {
         kvPush(lsKey);
       } else if (cloudU > (m.u || 0)) {
-        try { localStorage.setItem(lsKey, JSON.stringify(row.value)); } catch (e) {}
+        try { localStorage.setItem(kvStorageKey(lsKey), JSON.stringify(row.value)); } catch (e) {}
         m.u = cloudU; m.dirty = false; meta[lsKey] = m; changed = true;
       }
     } else if (!kvLocalEmpty(lsKey)) {

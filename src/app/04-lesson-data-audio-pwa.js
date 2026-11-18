@@ -1,7 +1,7 @@
 /* ---------------- lesson progress: lightweight per-user localStorage ----------------
    Tracks which steps of each daily lesson the learner has engaged with.
    Steps: words → quiz (reward!) → bonus: podcast → shadowing → grammar. */
-const STEPS = ['words', 'quiz', 'podcast', 'shadowing', 'grammar'];
+const STEPS = ['words', 'quiz', 'podcast', 'shadowing'];
 /* Task 4 (2026-11-12): lessons may have no podcast (A1) and may carry Persian
    help (shadowing.transcript_fa, words[].example_fa). Steps/visibility derive
    from the manifest so old and new formats both work. */

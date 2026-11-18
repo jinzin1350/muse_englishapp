@@ -257,7 +257,7 @@ function grammarProgress() {
   var p = lsGet('muse_grammar_v1');
   return (p && typeof p === 'object' && !Array.isArray(p)) ? p : {};
 }
-function setGrammarProgress(p) { lsSet('muse_grammar_v1', p); }
+function setGrammarProgress(p) { lsSet('muse_grammar_v1', p); try { kvSchedulePush('muse_grammar_v1'); } catch (e) {} }
 
 function loadGrammarLevel(lv) {
   if (state.grammarCache[lv]) return Promise.resolve(state.grammarCache[lv]);

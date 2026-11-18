@@ -813,7 +813,7 @@ function srsGradeCloud(k, e) {
    write wins by updated_at. All fire-and-forget — before the user_kv
    migration runs, the calls fail silently and local remains the working
    record, the same pattern as saved-word SRS cloud writes. */
-var KV_SYNC_KEYS = ['muse_wordmap_v1', 'muse_tricky_v1', 'muse_mistakes_srs_v1'];
+var KV_SYNC_KEYS = ['muse_wordmap_v1', 'muse_tricky_v1', 'muse_mistakes_srs_v1', 'muse_grammar_v1'];
 function kvMetaAll() {
   try { return JSON.parse(localStorage.getItem('muse_kv_meta') || '{}') || {}; }
   catch (e) { return {}; }
@@ -821,9 +821,14 @@ function kvMetaAll() {
 function kvMetaSet(m) {
   try { localStorage.setItem('muse_kv_meta', JSON.stringify(m)); } catch (e) {}
 }
+/* Grammar progress lives under the per-user lsKey() name (ela_…_<email>),
+   not the raw sync key — resolve the real storage key per sync key. */
+function kvStorageKey(key) {
+  return key === 'muse_grammar_v1' ? lsKey(key) : key;
+}
 function kvLocalEmpty(lsKey) {
   try {
-    const v = JSON.parse(localStorage.getItem(lsKey) || 'null');
+    const v = JSON.parse(localStorage.getItem(kvStorageKey(lsKey)) || 'null');
     if (!v) return true;
     if (lsKey === 'muse_wordmap_v1') return !(v.words && Object.keys(v.words).length);
     return !Object.keys(v).length;
@@ -832,7 +837,7 @@ function kvLocalEmpty(lsKey) {
 async function kvPush(lsKey) {
   if (!cloudReady() || !state.user) return;
   let val = null;
-  try { val = JSON.parse(localStorage.getItem(lsKey) || 'null'); } catch (e) {}
+  try { val = JSON.parse(localStorage.getItem(kvStorageKey(lsKey)) || 'null'); } catch (e) {}
   if (val === null) return;
   const meta = kvMetaAll();
   const m = meta[lsKey] || { u: 0, dirty: false };
@@ -876,7 +881,7 @@ async function kvPullAll() {
       if (m.dirty && (m.u || 0) >= cloudU) {
         kvPush(lsKey);
       } else if (cloudU > (m.u || 0)) {
-        try { localStorage.setItem(lsKey, JSON.stringify(row.value)); } catch (e) {}
+        try { localStorage.setItem(kvStorageKey(lsKey), JSON.stringify(row.value)); } catch (e) {}
         m.u = cloudU; m.dirty = false; meta[lsKey] = m; changed = true;
       }
     } else if (!kvLocalEmpty(lsKey)) {
@@ -1419,8 +1424,8 @@ function questDefs() {
       progress: function () { return done('shadowing_complete'); },
       unit: '', link: lessonLink('shadowing') },
     { key: 'grammar', icon: '📖', xp: 20, target: 1, title: 'Take a grammar quiz',
-      progress: function () { return done('grammar_quiz'); },
-      unit: '', link: lessonLink('grammar') },
+      progress: function () { return (done('grammar_quiz') || done('grammar_topic_done')) ? 1 : 0; },
+      unit: '', link: '#/grammar' },
     { key: 'review', icon: '🔁', xp: 15, target: 1, title: 'Answer your review questions',
       progress: function () { return done('deck_review'); },
       unit: '', link: '#/review' },
@@ -2071,7 +2076,7 @@ function rowHTML(r, isMe) {
 /* ---------------- lesson progress: lightweight per-user localStorage ----------------
    Tracks which steps of each daily lesson the learner has engaged with.
    Steps: words → quiz (reward!) → bonus: podcast → shadowing → grammar. */
-const STEPS = ['words', 'quiz', 'podcast', 'shadowing', 'grammar'];
+const STEPS = ['words', 'quiz', 'podcast', 'shadowing'];
 /* Task 4 (2026-11-12): lessons may have no podcast (A1) and may carry Persian
    help (shadowing.transcript_fa, words[].example_fa). Steps/visibility derive
    from the manifest so old and new formats both work. */
@@ -3216,7 +3221,7 @@ function onRoute() {
       }, function () {});
     }
     /* Deep link into a lesson tab, e.g. #/lesson/2026-10-09/quiz (quest links). */
-    if (view === 'lesson' && r.arg2 && ['words', 'quiz', 'podcast', 'shadowing', 'grammar'].indexOf(r.arg2) !== -1) {
+    if (view === 'lesson' && r.arg2 && ['words', 'quiz', 'podcast', 'shadowing'].indexOf(r.arg2) !== -1) {
       state.lessonTab = r.arg2;
     }
   }
@@ -5936,7 +5941,7 @@ function grammarProgress() {
   var p = lsGet('muse_grammar_v1');
   return (p && typeof p === 'object' && !Array.isArray(p)) ? p : {};
 }
-function setGrammarProgress(p) { lsSet('muse_grammar_v1', p); }
+function setGrammarProgress(p) { lsSet('muse_grammar_v1', p); try { kvSchedulePush('muse_grammar_v1'); } catch (e) {} }
 
 function loadGrammarLevel(lv) {
   if (state.grammarCache[lv]) return Promise.resolve(state.grammarCache[lv]);
@@ -6150,6 +6155,7 @@ function paintGhHeader() {
 
 function renderGrammar(v, slug) {
   if (slug) { renderGrammarTopic(v, slug); return; }
+  if (state.gView !== 'list' && typeof renderGrammarPath === 'function') { renderGrammarPath(v); return; }
   if (!state.gFilter) state.gFilter = { level: normalizeLevel(state.user && state.user.level) || 'a1', q: '' };
   var f = state.gFilter;
   v.innerHTML = '<div class="g-hub">' +
@@ -6159,6 +6165,7 @@ function renderGrammar(v, slug) {
       '<p>Clear explanations, real examples and practice exercises for every level.</p>' +
     '</div><img class="gh-mascot" src="/media/grammar/mascot-guides.webp" alt="Grammar mascot"></div>' +
     '<img class="gh-feats-img" src="/media/grammar/feats-strip.webp" alt="Simple explanations, real examples, practice exercises">' +
+    '<button class="gp-listbtn" id="g-topath" type="button">\uD83D\uDDFA️ Grammar path</button>' +
     '<div id="gtest-banner-wrap"></div>' +
     '<div class="gh-filters" role="tablist">' +
     GH_LEVELS.map(function (lv) {
@@ -6173,6 +6180,8 @@ function renderGrammar(v, slug) {
   paintGhHeader();
   paintGrammarList();
   paintGTestBanner();
+  var toPath = v.querySelector('#g-topath');
+  if (toPath) toPath.addEventListener('click', function () { state.gView = 'path'; renderGrammar(v); });
   Array.prototype.forEach.call(v.querySelectorAll('[data-glevel]'), function (btn) {
     btn.addEventListener('click', function () {
       state.gFilter.level = btn.getAttribute('data-glevel');
@@ -7992,6 +8001,143 @@ function renderHome(v) {
   }
 }
 
+/* ---------------- grammar path (#/grammar, Duolingo-style) ----------------
+   2026-11-17, Alireza's order: grammar becomes a step-by-step path from the
+   first A1 lesson to the last C1/C2 lesson, replacing the flat topic list as
+   the main grammar view (the list stays one tap away). Order: each topic sits
+   at its entry level (first of its v2 `levels`); inside a level, families
+   follow GP_FAMILY_ORDER and topics keep their teaching order inside the
+   family (both from data/grammar/v2-index.json). A node unlocks when every
+   node before it is complete; completed nodes stay tappable for review.
+   Progress = the existing muse_grammar_v1 store (grammarProgress()). */
+var GP_LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1'];
+var GP_LEVEL_TITLES = { a1: 'A1 · Beginner', a2: 'A2 · Elementary', b1: 'B1 · Intermediate', b2: 'B2 · Upper Intermediate', c1: 'C1 · C2 · Advanced' };
+var GP_FAMILY_ORDER = ['verb-basics', 'present-tenses', 'articles', 'nouns', 'determiners', 'pronouns', 'past-tenses', 'adjectives-and-adverbs', 'prepositions', 'present-perfect-tenses', 'future-forms', 'questions', 'modal-verbs', 'verb-patterns', 'linking-words', 'conditionals', 'passive', 'relative-clauses', 'reporting', 'sentence-structure', 'academic-english'];
+var GP_OFFSETS = [0, 46, 78, 46, 0, -46, -78, -46];
+
+function gpFa() { try { return uiLang() === 'fa'; } catch (e) { return false; } }
+function gpT(fa, en) { return gpFa() ? fa : en; }
+
+function gpLoadIndex() {
+  if (state.gpIndex) return Promise.resolve(state.gpIndex);
+  return fetch('/data/grammar/v2-index.json').then(function (res) {
+    if (!res.ok) throw new Error('grammar path index missing');
+    return res.json();
+  }).then(function (d) { state.gpIndex = d; return d; });
+}
+
+function gpOrder(index) {
+  var famIdx = {};
+  Object.keys(index.families).forEach(function (fk) {
+    index.families[fk].topics.forEach(function (slug, i) { famIdx[slug] = i; });
+  });
+  var rows = Object.keys(index.topics).map(function (slug) {
+    var t = index.topics[slug];
+    var lv = (t.levels && t.levels[0]) || 'a1';
+    return { slug: slug, h1: t.h1, family: t.family, level: lv };
+  });
+  rows.sort(function (a, b) {
+    var dl = GP_LEVELS.indexOf(a.level) - GP_LEVELS.indexOf(b.level);
+    if (dl) return dl;
+    var df = GP_FAMILY_ORDER.indexOf(a.family) - GP_FAMILY_ORDER.indexOf(b.family);
+    if (df) return df;
+    return (famIdx[a.slug] || 0) - (famIdx[b.slug] || 0);
+  });
+  return rows;
+}
+
+function renderGrammarPath(v) {
+  var fa = gpFa();
+  v.innerHTML = '<div class="g-hub gp-wrap">' +
+    '<div class="gh-crumb"><span>\uD83D\uDCD6</span> Grammar <span class="gh-crumb-sep">›</span> <b>' + (fa ? 'مسیر گرامر' : 'Grammar Path') + '</b></div>' +
+    '<div class="gp-head"><div class="gp-head-t"><h1>' + (fa ? 'مسیر گرامر' : 'Grammar <em>Path</em>') + '</h1>' +
+    '<p>' + (fa ? 'درس‌به‌درس، از اولین درس A1 تا آخر C2 — هر درس رو تموم کن تا درس بعدی باز بشه.' : 'Lesson by lesson, from the first A1 lesson to the end of C2 — finish a lesson to unlock the next.') + '</p></div>' +
+    '<img class="gh-mascot" src="/media/grammar/mascot-guides.webp" alt=""></div>' +
+    '<div id="gtest-banner-wrap"></div>' +
+    '<div class="gp-progress"><div class="gp-progress-txt" id="gp-progress-txt"></div>' +
+    '<div class="gp-bar"><div class="gp-bar-fill" id="gp-bar-fill"></div></div></div>' +
+    '<button class="gp-listbtn" id="gp-tolist" type="button">' + (fa ? '\uD83D\uDCCB لیست موضوع‌ها' : '\uD83D\uDCCB Topic list') + '</button>' +
+    '<div class="gp-hint" id="gp-hint" hidden></div>' +
+    '<div id="gp-body"><div class="empty">Loading…</div></div></div>';
+  if (typeof paintGTestBanner === 'function') paintGTestBanner();
+  var toList = document.getElementById('gp-tolist');
+  if (toList) toList.addEventListener('click', function () { state.gView = 'list'; renderGrammar(v); });
+  Promise.all([gpLoadIndex(), (typeof gFaIndex === 'function' ? gFaIndex() : Promise.resolve())]).then(function (res) {
+    paintGrammarPath(res[0]);
+  }).catch(function () {
+    var b = document.getElementById('gp-body');
+    if (b) b.innerHTML = '<div class="empty">Could not load the grammar path. Check your connection and try again.</div>';
+  });
+}
+
+function paintGrammarPath(index) {
+  var body = document.getElementById('gp-body');
+  if (!body) return;
+  var fa = gpFa();
+  var order = gpOrder(index);
+  var prog = grammarProgress();
+  var doneCount = 0;
+  var allPrevDone = true;
+  var currentSlug = null;
+  var html = '';
+  var curLevel = null, curFamily = null, nodeIdx = 0;
+  order.forEach(function (t) {
+    var p = prog[t.slug];
+    var done = !!(p && p.done);
+    if (done) doneCount++;
+    var playable = done || allPrevDone;
+    var isCurrent = playable && !done && !currentSlug;
+    if (isCurrent) currentSlug = t.slug;
+    if (!done) allPrevDone = false;
+    if (t.level !== curLevel) {
+      curLevel = t.level; curFamily = null;
+      var lvCount = order.filter(function (x) { return x.level === curLevel; }).length;
+      var grad = (typeof GH_LV_GRAD !== 'undefined' && GH_LV_GRAD[curLevel]) || ['#F6AC68', '#E8833A'];
+      html += '<div class="gp-sec" style="background:linear-gradient(135deg,' + grad[0] + ',' + grad[1] + ')">' +
+        '<b>' + esc(GP_LEVEL_TITLES[curLevel] || curLevel.toUpperCase()) + '</b>' +
+        '<span>' + lvCount + (fa ? ' درس' : ' lessons') + '</span></div>';
+    }
+    var fam = index.families[t.family];
+    if (fam && t.family !== curFamily) {
+      curFamily = t.family;
+      html += '<div class="gp-fam">' + esc(fam.title) + '</div>';
+    }
+    var dx = GP_OFFSETS[nodeIdx % GP_OFFSETS.length]; nodeIdx++;
+    var title = (fa && typeof gFaTitle === 'function' && gFaTitle(t.slug)) ? gFaTitle(t.slug) : t.h1;
+    var score = done ? '<span class="gp-score">✓ ' + (p.best || 0) + '/' + (p.total || 16) + '</span>'
+      : (p && p.attempts ? '<span class="gp-score">' + (fa ? 'بهترین: ' : 'Best: ') + (p.best || 0) + '/' + (p.total || 16) + '</span>' : '');
+    var inner = '<span class="gp-node-sym">' + (done ? '✓' : (playable ? '★' : '\uD83D\uDD12')) + '</span>';
+    var nodeHtml = playable
+      ? '<a class="gp-node' + (done ? ' done' : '') + (isCurrent ? ' current' : '') + '" href="#/grammar/' + esc(t.slug) + '" aria-label="' + esc(t.h1) + '">' + inner + '</a>'
+      : '<button class="gp-node locked" type="button" data-gplocked="1" aria-label="' + esc(t.h1) + '">' + inner + '</button>';
+    html += '<div class="gp-row" style="transform:translateX(' + dx + 'px)">' +
+      (isCurrent ? '<span class="gp-start">' + (fa ? 'شروع' : 'START') + '</span>' : '') +
+      nodeHtml +
+      '<span class="gp-label"' + (fa && title !== t.h1 ? ' dir="rtl" lang="fa"' : '') + '>' + esc(title) + '</span>' + score +
+      '</div>';
+  });
+  body.innerHTML = html;
+  var txt = document.getElementById('gp-progress-txt');
+  if (txt) txt.textContent = fa
+    ? (doneCount + ' از ' + order.length + ' درس کامل شده')
+    : (doneCount + ' of ' + order.length + ' lessons complete');
+  var fill = document.getElementById('gp-bar-fill');
+  if (fill) fill.style.width = (order.length ? Math.round(doneCount / order.length * 100) : 0) + '%';
+  Array.prototype.forEach.call(body.querySelectorAll('[data-gplocked]'), function (btn) {
+    btn.addEventListener('click', function () {
+      var hint = document.getElementById('gp-hint');
+      if (hint) {
+        hint.hidden = false;
+        hint.textContent = fa ? 'اول درس‌های قبل رو کامل کن تا این درس باز بشه \uD83D\uDD12' : 'Finish the lessons before this one to unlock it \uD83D\uDD12';
+      }
+      btn.classList.remove('shake'); void btn.offsetWidth; btn.classList.add('shake');
+    });
+  });
+  if (currentSlug) {
+    var cur = body.querySelector('.gp-node.current');
+    if (cur) setTimeout(function () { cur.scrollIntoView({ block: 'center', behavior: 'smooth' }); }, 350);
+  }
+}
 /* ---------------- IELTS Academic full mock (#/ielts) ----------------
    Modelled on the official format (ielts.org) and the British Council
    computer familiarisation test: timed sections, one sitting per skill,
@@ -10239,8 +10385,7 @@ function lessonTabsHTML(m) {
     ['words', 'Words', ICO.book],
     ['quiz', 'Quiz', ICO.quiz],
     ['podcast', 'Podcast', ICO.headphones],
-    ['shadowing', 'Shadowing', ICO.mic],
-    ['grammar', 'Grammar', ICO.grid]
+    ['shadowing', 'Shadowing', ICO.mic]
   ].filter(function (t) { return t[0] !== 'podcast' || lessonHasPodcast(m); });
   return '<div class="lesson-tabs" role="tablist" aria-label="Lesson sections">' + tabs.map(function (t) {
     return '<button class="lesson-tab" role="tab" aria-selected="' + (state.lessonTab === t[0]) + '" data-action="lesson-tab" data-tab="' + t[0] + '"><span class="lt-ico">' + t[2] + '</span><span>' + t[1] + '</span></button>';
@@ -14433,7 +14578,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611171912';
+var APP_VERSION = '202611180412';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

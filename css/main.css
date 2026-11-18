@@ -3592,6 +3592,34 @@ button.hq-xp.is-claim:active { transform: scale(.96); }
 body.view-grammar #view { background: #FDF8F1; }
 .g-hub { max-width: var(--content-w); margin: 0 auto; padding: 0.3rem 0 2.5rem; }
 .g-hub #gtest-banner-wrap { margin-bottom: 0.75rem; }
+/* Grammar Path (2026-11-17): Duolingo-style winding path of lesson nodes. */
+.gp-head { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.4rem; }
+.gp-head-t { flex: 1 1 auto; min-width: 0; }
+.gp-head-t h1 { font-family: "Fredoka", "Avenir Next", "Trebuchet MS", sans-serif; font-weight: 700; font-size: 2rem; line-height: 1.12; letter-spacing: -0.01em; color: #232B4D; margin: 0 0 0.45rem; }
+.gp-head-t h1 em { font-style: normal; color: #F26522; }
+.gp-head-t p { color: #6B7280; margin: 0; font-size: 0.95rem; }
+.gp-progress { margin: 0.7rem 0 0.2rem; }
+.gp-progress-txt { font-weight: 700; color: #232B4D; font-size: 0.92rem; margin-bottom: 0.35rem; }
+.gp-bar { height: 12px; border-radius: 999px; background: #EFE9DC; overflow: hidden; }
+.gp-bar-fill { height: 100%; width: 0; border-radius: 999px; background: linear-gradient(90deg, #FFB03A, #F26522); transition: width .5s ease; }
+.gp-listbtn { display: inline-flex; align-items: center; gap: 0.4rem; margin: 0.6rem 0 0.2rem; padding: 0.55rem 1rem; border-radius: 999px; border: 1.5px solid #EFE7DA; background: #fff; color: #232B4D; font-weight: 700; font-size: 0.9rem; cursor: pointer; }
+.gp-listbtn:active { transform: scale(0.97); }
+.gp-hint { margin: 0.55rem 0 0; padding: 0.6rem 0.8rem; border-radius: 12px; background: #FFF4E5; color: #9A5B13; font-size: 0.88rem; font-weight: 600; }
+.gp-sec { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin: 1.4rem 0 0.4rem; padding: 0.85rem 1.1rem; border-radius: 16px; color: #fff; box-shadow: 0 4px 14px rgba(35, 43, 77, 0.12); }
+.gp-sec b { font-size: 1.05rem; }
+.gp-sec span { font-size: 0.85rem; opacity: 0.92; white-space: nowrap; }
+.gp-fam { text-align: center; color: #8A93A6; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.03em; text-transform: uppercase; margin: 1rem 0 0.2rem; }
+.gp-row { display: flex; flex-direction: column; align-items: center; width: 170px; margin: 0.55rem auto 0; position: relative; }
+.gp-node { width: 66px; height: 66px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, #FFB03A, #F26522); color: #fff; font-size: 1.45rem; text-decoration: none; border: none; cursor: pointer; box-shadow: 0 5px 0 #D14E12, 0 8px 16px rgba(242, 101, 34, 0.28); position: relative; z-index: 1; }
+.gp-node.done { background: linear-gradient(180deg, #58CC02, #46A302); box-shadow: 0 5px 0 #3B8A02, 0 8px 16px rgba(88, 204, 2, 0.25); }
+.gp-node.locked { background: #E3DED2; color: #A39E8F; box-shadow: 0 5px 0 #CFC9BA; font-size: 1.2rem; }
+.gp-node.current { animation: gpPulse 1.6s ease-in-out infinite; }
+@keyframes gpPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+.gp-node.shake { animation: gpShake 0.4s ease; }
+@keyframes gpShake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+.gp-start { position: absolute; top: -14px; z-index: 2; background: #fff; color: #F26522; font-weight: 800; font-size: 0.78rem; letter-spacing: 0.04em; padding: 0.28rem 0.7rem; border-radius: 999px; border: 2px solid #F26522; box-shadow: 0 3px 8px rgba(35, 43, 77, 0.15); }
+.gp-label { margin-top: 0.45rem; text-align: center; font-weight: 700; color: #232B4D; font-size: 0.92rem; line-height: 1.25; }
+.gp-score { margin-top: 0.15rem; color: #46A302; font-weight: 700; font-size: 0.8rem; }
 .gh-crumb { display: flex; align-items: center; gap: 0.32rem; color: #9AA1B5; font-size: 0.85rem; margin-bottom: 0.3rem; }
 .gh-crumb b { color: #232B4D; font-weight: 700; }
 .gh-crumb-sep { color: #C6CCDD; }
