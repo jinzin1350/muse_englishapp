@@ -174,7 +174,7 @@ function onRoute() {
       }, function () {});
     }
     /* Deep link into a lesson tab, e.g. #/lesson/2026-10-09/quiz (quest links). */
-    if (view === 'lesson' && r.arg2 && ['words', 'quiz', 'podcast', 'shadowing'].indexOf(r.arg2) !== -1) {
+    if (view === 'lesson' && r.arg2 && ['words', 'quiz', 'podcast', 'shadowing', 'grammar'].indexOf(r.arg2) !== -1) {
       state.lessonTab = r.arg2;
     }
   }

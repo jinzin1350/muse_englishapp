@@ -8,15 +8,15 @@ function lessonTabsHTML(m) {
     ['shadowing', 'Shadowing', ICO.mic],
     /* Lesson Path tab (2026-11-18, Alireza's order): all previous lessons
        as a winding path, ticked once read. Not a lesson step. */
-    ['lessonpath', 'Lesson', ICO.list]
+    ['lessonpath', 'Lesson', ICO.list],
+    /* Grammar tab (2026-11-18, Alireza's correction): a REAL lesson tab
+       like the others — the Grammar Path renders inside the lesson body,
+       NOT a link away to a separate page. Not a lesson step. */
+    ['grammar', 'Grammar', ICO.doc]
   ].filter(function (t) { return t[0] !== 'podcast' || lessonHasPodcast(m); });
   return '<div class="lesson-tabs" role="tablist" aria-label="Lesson sections">' + tabs.map(function (t) {
     return '<button class="lesson-tab" role="tab" aria-selected="' + (state.lessonTab === t[0]) + '" data-action="lesson-tab" data-tab="' + t[0] + '"><span class="lt-ico">' + t[2] + '</span><span>' + t[1] + '</span></button>';
-  }).join('') +
-  /* Grammar is no longer a lesson step (2026-11-17): this tab is the door
-     to the Grammar Path — Alireza's order: whoever taps Grammar in the
-     lesson lands on the path. */
-  '<a class="lesson-tab lt-grammar" href="#/grammar"><span class="lt-ico">' + ICO.doc + '</span><span>Grammar</span></a></div>';
+  }).join('') + '</div>';
 }
 
 function renderLesson(v, dateStr) {
@@ -75,7 +75,7 @@ function renderLessonTab(body) {
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); wireShadowingPractice(body, m); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
   else if (tab === 'lessonpath') renderLessonPath(body);
-  else if (tab === 'grammar') { body.innerHTML = grammarTabHTML(m); wireAudioCards(body); }
+  else if (tab === 'grammar') renderGrammarPath(body); /* Grammar Path inside the lesson (2026-11-18) — no navigation away. */
   try { body.classList.toggle('fa-tr-off', !faTrVisible(m)); } catch (e) {}
   maybeShowLessonRating(body, m);
   refreshTrackCards();
