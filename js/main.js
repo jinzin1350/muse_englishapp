@@ -8111,6 +8111,10 @@ function paintGrammarPath(index) {
     var isCurrent = playable && !done && rowIdx >= startIdx && !currentSlug;
     if (isCurrent) currentSlug = t.slug;
     if (rowIdx >= startIdx && !done) chainOk = false;
+    /* Earlier-level lessons he has not read yet wear a lock as a MARKER
+       ("not read yet") but stay tappable — Alireza's order 2026-11-18.
+       Lessons ahead of his current one are hard-locked buttons. */
+    var preStart = rowIdx < startIdx;
     rowIdx++;
     if (t.level !== curLevel) {
       curLevel = t.level; curFamily = null;
@@ -8129,9 +8133,9 @@ function paintGrammarPath(index) {
     var title = (fa && typeof gFaTitle === 'function' && gFaTitle(t.slug)) ? gFaTitle(t.slug) : t.h1;
     var score = done ? '<span class="gp-score">✓ ' + (p.best || 0) + '/' + (p.total || 16) + '</span>'
       : (p && p.attempts ? '<span class="gp-score">' + (fa ? 'بهترین: ' : 'Best: ') + (p.best || 0) + '/' + (p.total || 16) + '</span>' : '');
-    var inner = '<span class="gp-node-sym">' + (done ? '✓' : (playable ? '★' : '\uD83D\uDD12')) + '</span>';
+    var inner = '<span class="gp-node-sym">' + (done ? '✓' : (isCurrent ? '★' : '\uD83D\uDD12')) + '</span>';
     var nodeHtml = playable
-      ? '<a class="gp-node' + (done ? ' done' : '') + (isCurrent ? ' current' : '') + '" href="#/grammar/' + esc(t.slug) + '/' + esc(t.level) + '" aria-label="' + esc(t.h1) + '">' + inner + '</a>'
+      ? '<a class="gp-node' + (done ? ' done' : '') + (isCurrent ? ' current' : '') + ((preStart && !done) ? ' unread' : '') + '" href="#/grammar/' + esc(t.slug) + '/' + esc(t.level) + '" aria-label="' + esc(t.h1) + '">' + inner + '</a>'
       : '<button class="gp-node locked" type="button" data-gplocked="1" aria-label="' + esc(t.h1) + '">' + inner + '</button>';
     html += '<div class="gp-row" style="transform:translateX(' + dx + 'px)">' +
       (isCurrent ? '<span class="gp-start">' + (fa ? 'شروع' : 'START') + '</span>' : '') +
@@ -14609,7 +14613,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611180455';
+var APP_VERSION = '202611180505';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

@@ -3614,6 +3614,7 @@ body.view-grammar #view { background: #FDF8F1; }
 .gp-node { width: 66px; height: 66px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg, #FFB03A, #F26522); color: #fff; font-size: 1.45rem; text-decoration: none; border: none; cursor: pointer; box-shadow: 0 5px 0 #D14E12, 0 8px 16px rgba(242, 101, 34, 0.28); position: relative; z-index: 1; }
 .gp-node.done { background: linear-gradient(180deg, #58CC02, #46A302); box-shadow: 0 5px 0 #3B8A02, 0 8px 16px rgba(88, 204, 2, 0.25); }
 .gp-node.locked { background: #E3DED2; color: #A39E8F; box-shadow: 0 5px 0 #CFC9BA; font-size: 1.2rem; }
+.gp-node.unread { background: #fff; color: #A39E8F; border: 2px dashed #CFC9BA; box-shadow: 0 5px 0 #E3DED2; font-size: 1.2rem; }
 .gp-node.current { animation: gpPulse 1.6s ease-in-out infinite; }
 @keyframes gpPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
 .gp-node.shake { animation: gpShake 0.4s ease; }
