@@ -1235,6 +1235,7 @@ var ICO = {
   headphones: svgIcon('<path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>'),
   mic: svgIcon('<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/>'),
   quiz: svgIcon('<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/>'),
+  list: svgIcon('<line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/>'),
   doc: svgIcon('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>'),
   book: svgIcon('<path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/>'),
   check: svgIcon('<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>'),
@@ -10423,7 +10424,10 @@ function lessonTabsHTML(m) {
     ['words', 'Words', ICO.book],
     ['quiz', 'Quiz', ICO.quiz],
     ['podcast', 'Podcast', ICO.headphones],
-    ['shadowing', 'Shadowing', ICO.mic]
+    ['shadowing', 'Shadowing', ICO.mic],
+    /* Lesson Path tab (2026-11-18, Alireza's order): all previous lessons
+       as a winding path, ticked once read. Not a lesson step. */
+    ['lessonpath', 'Lesson', ICO.list]
   ].filter(function (t) { return t[0] !== 'podcast' || lessonHasPodcast(m); });
   return '<div class="lesson-tabs" role="tablist" aria-label="Lesson sections">' + tabs.map(function (t) {
     return '<button class="lesson-tab" role="tab" aria-selected="' + (state.lessonTab === t[0]) + '" data-action="lesson-tab" data-tab="' + t[0] + '"><span class="lt-ico">' + t[2] + '</span><span>' + t[1] + '</span></button>';
@@ -10488,6 +10492,7 @@ function renderLessonTab(body) {
   else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); wireSummaryChallenge(body, m); }
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); wireShadowingPractice(body, m); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
+  else if (tab === 'lessonpath') renderLessonPath(body);
   else if (tab === 'grammar') { body.innerHTML = grammarTabHTML(m); wireAudioCards(body); }
   try { body.classList.toggle('fa-tr-off', !faTrVisible(m)); } catch (e) {}
   maybeShowLessonRating(body, m);
@@ -11594,6 +11599,78 @@ function grammarTabHTML(m) {
     quizBtn + '</div>';
 }
 
+/* ---------------- lesson path (Lesson tab in the lesson view) ----------------
+   2026-11-18, Alireza's order: the Lesson tab shows all previous lessons as
+   a winding path, drawn like the Grammar Path. One node = one lesson,
+   oldest at the top, newest at the bottom, grouped by month. A lesson is
+   ticked (green check) when its words were read to the end — the same
+   `words` flag the streak rule uses. Unread lessons wear the lock marker
+   ("not read yet", same as the Grammar Path) but stay tappable. The view
+   auto-scrolls to the first unread lesson. Not a lesson step: STEPS and
+   streak/XP rules are untouched. */
+var LP_OFFSETS = [0, 46, 78, 46, 0, -46, -78, -46];
+var LP_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+function renderLessonPath(body) {
+  var fa = false;
+  try { fa = uiLang() === 'fa'; } catch (e) {}
+  var lessons = (state.lessons || []).slice().sort(function (a, b) {
+    return a.date < b.date ? -1 : (a.date > b.date ? 1 : 0);
+  });
+  if (!lessons.length) {
+    body.innerHTML = '<div class="empty">No lessons yet.</div>';
+    return;
+  }
+  var readCount = 0;
+  var currentDate = null;
+  lessons.forEach(function (m) {
+    if (getDayProgress(m.date).words) readCount++;
+    else if (!currentDate) currentDate = m.date;
+  });
+  var html = '<div class="gp-progress"><div class="gp-progress-txt">' +
+    (fa ? (readCount + ' از ' + lessons.length + ' درس خوانده شده')
+        : (readCount + ' of ' + lessons.length + ' lessons read')) + '</div>' +
+    '<div class="gp-bar"><div class="gp-bar-fill" style="width:' +
+    Math.round(readCount / lessons.length * 100) + '%"></div></div></div>';
+  var monthCount = {};
+  lessons.forEach(function (m) {
+    var k = m.date.slice(0, 7);
+    monthCount[k] = (monthCount[k] || 0) + 1;
+  });
+  var curMonth = null, idx = 0;
+  lessons.forEach(function (m) {
+    var mon = m.date.slice(0, 7);
+    if (mon !== curMonth) {
+      curMonth = mon;
+      var parts = m.date.split('-');
+      html += '<div class="gp-sec" style="background:linear-gradient(135deg,#F6AC68,#E8833A)">' +
+        '<b>' + LP_MONTHS[parseInt(parts[1], 10) - 1] + ' ' + parts[0] + '</b>' +
+        '<span>' + monthCount[mon] + (fa ? ' درس' : ' lessons') + '</span></div>';
+    }
+    var done = !!getDayProgress(m.date).words;
+    var isCurrent = m.date === currentDate;
+    var dx = LP_OFFSETS[idx % LP_OFFSETS.length]; idx++;
+    var sym = done ? '✓' : (isCurrent ? '★' : '\uD83D\uDD12');
+    var cls = 'gp-node' + (done ? ' done' : '') + (isCurrent ? ' current' : '') +
+      (!done && !isCurrent ? ' unread' : '');
+    html += '<div class="gp-row" style="transform:translateX(' + dx + 'px)">' +
+      (isCurrent ? '<span class="gp-start">' + (fa ? 'شروع' : 'START') + '</span>' : '') +
+      '<a class="' + cls + '" href="#/lesson/' + m.date + '" data-lpdate="' + m.date + '" aria-label="' + esc(m.theme || m.date) + '">' +
+      '<span class="gp-node-sym">' + sym + '</span></a>' +
+      '<span class="gp-label">' + esc(m.theme || m.date) + '</span>' +
+      '<span class="gp-score">' + esc(m.date) + (m.date === todayStr() ? (fa ? ' · امروز' : ' · Today') : '') + '</span>' +
+      '</div>';
+  });
+  body.innerHTML = html;
+  /* Opening a lesson from the path lands on its Words tab. */
+  Array.prototype.forEach.call(body.querySelectorAll('[data-lpdate]'), function (a) {
+    a.addEventListener('click', function () { state.lessonTab = 'words'; });
+  });
+  if (currentDate) {
+    var cur = body.querySelector('.gp-node.current');
+    if (cur) setTimeout(function () { cur.scrollIntoView({ block: 'center', behavior: 'smooth' }); }, 350);
+  }
+}
 /* ---------------- quiz engine ---------------- */
 async function startQuiz(kind, dateStr) {
   let m = state.lesson;
@@ -14620,7 +14697,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611180508';
+var APP_VERSION = '202611180513';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

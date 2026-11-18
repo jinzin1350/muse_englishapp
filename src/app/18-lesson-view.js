@@ -4,7 +4,10 @@ function lessonTabsHTML(m) {
     ['words', 'Words', ICO.book],
     ['quiz', 'Quiz', ICO.quiz],
     ['podcast', 'Podcast', ICO.headphones],
-    ['shadowing', 'Shadowing', ICO.mic]
+    ['shadowing', 'Shadowing', ICO.mic],
+    /* Lesson Path tab (2026-11-18, Alireza's order): all previous lessons
+       as a winding path, ticked once read. Not a lesson step. */
+    ['lessonpath', 'Lesson', ICO.list]
   ].filter(function (t) { return t[0] !== 'podcast' || lessonHasPodcast(m); });
   return '<div class="lesson-tabs" role="tablist" aria-label="Lesson sections">' + tabs.map(function (t) {
     return '<button class="lesson-tab" role="tab" aria-selected="' + (state.lessonTab === t[0]) + '" data-action="lesson-tab" data-tab="' + t[0] + '"><span class="lt-ico">' + t[2] + '</span><span>' + t[1] + '</span></button>';
@@ -69,6 +72,7 @@ function renderLessonTab(body) {
   else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); wireSummaryChallenge(body, m); }
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); wireShadowingPractice(body, m); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
+  else if (tab === 'lessonpath') renderLessonPath(body);
   else if (tab === 'grammar') { body.innerHTML = grammarTabHTML(m); wireAudioCards(body); }
   try { body.classList.toggle('fa-tr-off', !faTrVisible(m)); } catch (e) {}
   maybeShowLessonRating(body, m);
