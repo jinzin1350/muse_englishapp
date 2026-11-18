@@ -6577,6 +6577,9 @@ function startGrammarQuizV2(topic, level) {
   state.gquiz = {
     topic: topic, idx: 0, correct: 0, answered: false, picked: -1,
     firstRun: !rec.claimed, v2: true, v2level: level,
+    /* Started from a Grammar Path lesson page: the results screen returns
+       straight to the path, not to the guide (Alireza's order 2026-11-18). */
+    fromPath: state.gPathLevel === level,
     items: shuffleArr(items).slice(0, 10)
   };
   state.gquiz.items.forEach(function (it) { delete it.typed; });
@@ -6862,15 +6865,19 @@ function finishGrammarQuiz() {
     '<div class="gt-score" dir="ltr"><b>' + correct + '</b><span>/' + total + '</span></div>' +
     sub +
     (bonus ? '<p class="g-xp-note">' + L[4] + '</p>' : '') +
-    '<div class="gt-end-btns"><button class="gt-btn gt-btn-green gt-btn-big" id="g-retry-btn">' + L[5] + '</button>' +
-    '<button class="gt-btn gt-btn-ghost" id="g-back-btn">' + L[6] + '</button>' +
-    '<a class="gt-btn gt-btn-ghost" href="#/grammar">' + L[7] + '</a></div>' +
+    (q.fromPath
+      ? '<div class="gt-end-btns"><a class="gt-btn gt-btn-green gt-btn-big" href="#/grammar">' + (F ? '🗺️ برگشت به مسیر گرامر' : '🗺️ Back to the Grammar Path') + '</a>' +
+        '<button class="gt-btn gt-btn-ghost" id="g-retry-btn">' + L[5] + '</button></div>'
+      : '<div class="gt-end-btns"><button class="gt-btn gt-btn-green gt-btn-big" id="g-retry-btn">' + L[5] + '</button>' +
+        '<button class="gt-btn gt-btn-ghost" id="g-back-btn">' + L[6] + '</button>' +
+        '<a class="gt-btn gt-btn-ghost" href="#/grammar">' + L[7] + '</a></div>') +
     '</div></div>';
   document.getElementById('g-retry-btn').addEventListener('click', function () {
     if (q.v2) startGrammarQuizV2(topic, q.v2level);
     else startGrammarQuiz(topic);
   });
-  document.getElementById('g-back-btn').addEventListener('click', function () { go('grammar', slug); });
+  var backBtn = document.getElementById('g-back-btn');
+  if (backBtn) backBtn.addEventListener('click', function () { go('grammar', slug); });
   window.scrollTo(0, 0);
 }
 
@@ -14613,7 +14620,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611180505';
+var APP_VERSION = '202611180508';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
