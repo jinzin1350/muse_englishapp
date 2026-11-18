@@ -1,0 +1,192 @@
+{
+  "date": "2026-11-18",
+  "theme": "money & shopping",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "basket",
+      "pos": "noun",
+      "meaning": "A container made of woven material.",
+      "example": "She put the fruit in a basket.",
+      "pronunciation": "BASS-kit",
+      "persian": "سبد",
+      "photo": "media/b2/2026-11-18/photos/basket.jpg",
+      "word_audio": "media/b2/2026-11-18/word-audio/basket.mp3"
+    },
+    {
+      "word": "colour",
+      "pos": "noun",
+      "meaning": "The appearance of something from light.",
+      "example": "Red is my favourite colour.",
+      "pronunciation": "KUL-ur",
+      "persian": "رنگ",
+      "photo": "media/b2/2026-11-18/photos/colour.jpg",
+      "word_audio": "media/b2/2026-11-18/word-audio/colour.mp3"
+    },
+    {
+      "word": "credit card",
+      "pos": "noun",
+      "meaning": "A plastic card used to buy things now and pay later.",
+      "example": "I paid with my credit card.",
+      "pronunciation": "KRED-it KARD",
+      "persian": "کارت اعتباری",
+      "photo": "media/b2/2026-11-18/photos/credit-card.jpg",
+      "word_audio": "media/b2/2026-11-18/word-audio/credit-card.mp3"
+    },
+    {
+      "word": "credit limit",
+      "pos": "noun",
+      "meaning": "The maximum amount of money you can borrow.",
+      "example": "I reached my credit limit this month.",
+      "pronunciation": "KRED-it LIM-it",
+      "persian": "سقف اعتبار",
+      "photo": "media/b2/2026-11-18/photos/credit-limit.jpg",
+      "word_audio": "media/b2/2026-11-18/word-audio/credit-limit.mp3"
+    },
+    {
+      "word": "credit rating",
+      "pos": "noun",
+      "meaning": "An assessment of your ability to repay debts.",
+      "example": "A good credit rating helps you borrow money.",
+      "pronunciation": "KRED-it RAY-ting",
+      "persian": "رتبه اعتباری",
+      "photo": "media/b2/2026-11-18/photos/credit-rating.jpg",
+      "word_audio": "media/b2/2026-11-18/word-audio/credit-rating.mp3"
+    },
+    {
+      "word": "current account",
+      "pos": "noun",
+      "meaning": "A bank account for daily money transactions.",
+      "example": "I need to check my current account balance.",
+      "pronunciation": "KUR-unt uh-KOUNT",
+      "persian": "حساب جاری",
+      "photo": "media/b2/2026-11-18/photos/current-account.jpg",
+      "word_audio": "media/b2/2026-11-18/word-audio/current-account.mp3"
+    },
+    {
+      "word": "department store",
+      "pos": "noun",
+      "meaning": "A large shop selling many types of goods.",
+      "example": "We bought new clothes at the department store.",
+      "pronunciation": "dih-PART-munt STOR",
+      "persian": "فروشگاه بزرگ",
+      "photo": "media/b2/2026-11-18/photos/department-store.jpg",
+      "word_audio": "media/b2/2026-11-18/word-audio/department-store.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-11-18/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Money and Shopping",
+    "audio": "media/b2/2026-11-18/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-11-18/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Careful Basket at the Department Store",
+    "audio": "media/b2/2026-11-18/shadowing.mp3",
+    "transcript": "media/b2/2026-11-18/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-11-18/shadowing-sentences/001.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/002.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/003.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/004.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/005.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/006.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/007.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/008.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/009.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/010.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/011.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/012.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/013.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/014.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/015.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/016.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/017.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/018.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/019.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/020.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/021.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/022.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/023.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/024.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/025.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/026.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/027.mp3",
+      "media/b2/2026-11-18/shadowing-sentences/028.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'basket' mean?",
+      "options": [
+        "A large shop selling many types of goods.",
+        "The maximum amount of money you can borrow.",
+        "A container made of woven material.",
+        "The appearance of something from light."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'colour' mean?",
+      "options": [
+        "A bank account for daily money transactions.",
+        "A large shop selling many types of goods.",
+        "A plastic card used to buy things now and pay later.",
+        "The appearance of something from light."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'credit card' mean?",
+      "options": [
+        "A plastic card used to buy things now and pay later.",
+        "A container made of woven material.",
+        "The maximum amount of money you can borrow.",
+        "A large shop selling many types of goods."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'credit limit' mean?",
+      "options": [
+        "A container made of woven material.",
+        "The maximum amount of money you can borrow.",
+        "A large shop selling many types of goods.",
+        "The appearance of something from light."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'credit rating' mean?",
+      "options": [
+        "A plastic card used to buy things now and pay later.",
+        "The appearance of something from light.",
+        "A bank account for daily money transactions.",
+        "An assessment of your ability to repay debts."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'current account' mean?",
+      "options": [
+        "A large shop selling many types of goods.",
+        "The appearance of something from light.",
+        "An assessment of your ability to repay debts.",
+        "A bank account for daily money transactions."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'department store' mean?",
+      "options": [
+        "A large shop selling many types of goods.",
+        "A bank account for daily money transactions.",
+        "The appearance of something from light.",
+        "A container made of woven material."
+      ],
+      "answer": 0
+    }
+  ]
+}

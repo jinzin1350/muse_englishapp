@@ -1,0 +1,145 @@
+{
+ "date": "2026-11-18",
+ "theme": "travel & transport",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "bike",
+   "pos": "noun",
+   "meaning": "A bicycle.",
+   "example": "Let's ride our bikes to the park.",
+   "example_fa": "بیا با دوچرخه‌هایمان به پارک برویم.",
+   "pronunciation": "BYKE",
+   "persian": "دوچرخه",
+   "photo": "media/a2/2026-11-18/photos/bike.jpg",
+   "word_audio": "media/a2/2026-11-18/word-audio/bike.mp3"
+  },
+  {
+   "word": "boarding card",
+   "pos": "noun",
+   "meaning": "A ticket allowing you to get on a plane.",
+   "example": "Show your boarding card at the gate.",
+   "example_fa": "کارت پروازت را در گیت نشان بده.",
+   "pronunciation": "BOR-ding KARD",
+   "persian": "کارت پرواز",
+   "photo": "media/a2/2026-11-18/photos/boarding-card.jpg",
+   "word_audio": "media/a2/2026-11-18/word-audio/boarding-card.mp3"
+  },
+  {
+   "word": "brake n, v",
+   "pos": "noun, verb",
+   "meaning": "A device used to slow or stop a vehicle.",
+   "example": "Press the brake pedal to stop the car.",
+   "example_fa": "پدال ترمز را فشار بده تا ماشین متوقف شود.",
+   "pronunciation": "BRAYK",
+   "persian": "ترمز (اسم و فعل)",
+   "photo": "media/a2/2026-11-18/photos/brake-n-v.jpg",
+   "word_audio": "media/a2/2026-11-18/word-audio/brake-n-v.mp3"
+  },
+  {
+   "word": "bus stop",
+   "pos": "noun",
+   "meaning": "A place where a bus stops for people.",
+   "example": "I wait for the bus at the bus stop.",
+   "example_fa": "من در ایستگاه اتوبوس منتظر اتوبوس می‌مانم.",
+   "pronunciation": "BUS stop",
+   "persian": "ایستگاه اتوبوس",
+   "photo": "media/a2/2026-11-18/photos/bus-stop.jpg",
+   "word_audio": "media/a2/2026-11-18/word-audio/bus-stop.mp3"
+  },
+  {
+   "word": "by bus",
+   "pos": "phrase",
+   "meaning": "Using a bus as transport.",
+   "example": "I go to work by bus.",
+   "example_fa": "من با اتوبوس سر کار می‌روم.",
+   "pronunciation": "by BUS",
+   "persian": "با اتوبوس",
+   "photo": "media/a2/2026-11-18/photos/by-bus.jpg",
+   "word_audio": "media/a2/2026-11-18/word-audio/by-bus.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-11-18/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Travel in the City",
+  "audio": "media/a2/2026-11-18/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-11-18/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Trip to the Airport",
+  "audio": "media/a2/2026-11-18/shadowing.mp3",
+  "transcript": "media/a2/2026-11-18/shadowing-transcript.txt",
+  "transcript_fa": "media/a2/2026-11-18/shadowing-transcript-fa.txt",
+  "sentence_audio": [
+   "media/a2/2026-11-18/shadowing-sentences/001.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/002.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/003.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/004.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/005.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/006.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/007.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/008.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/009.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/010.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/011.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/012.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/013.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/014.mp3",
+   "media/a2/2026-11-18/shadowing-sentences/015.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'bike' mean?",
+   "options": [
+    "A place where a bus stops for people.",
+    "A bicycle.",
+    "A ticket allowing you to get on a plane.",
+    "A device used to slow or stop a vehicle."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'boarding card' mean?",
+   "options": [
+    "A place where a bus stops for people.",
+    "A ticket allowing you to get on a plane.",
+    "A device used to slow or stop a vehicle.",
+    "Using a bus as transport."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'brake n, v' mean?",
+   "options": [
+    "A device used to slow or stop a vehicle.",
+    "Using a bus as transport.",
+    "A ticket allowing you to get on a plane.",
+    "A place where a bus stops for people."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'bus stop' mean?",
+   "options": [
+    "Using a bus as transport.",
+    "A device used to slow or stop a vehicle.",
+    "A ticket allowing you to get on a plane.",
+    "A place where a bus stops for people."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'by bus' mean?",
+   "options": [
+    "A ticket allowing you to get on a plane.",
+    "A place where a bus stops for people.",
+    "Using a bus as transport.",
+    "A bicycle."
+   ],
+   "answer": 2
+  }
+ ]
+}
