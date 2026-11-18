@@ -590,6 +590,27 @@ async function kvPullAll() {
           });
         }
       } catch (e) {}
+      /* Same for the words step: the words_viewed points record in
+         scores (ref = lesson date) is written by the same scroll
+         observer that sets the local flag, so it is authoritative
+         server-side proof the words were read to the end — fold it in
+         the same way (2026-11-18). */
+      try {
+        const sres = await sb.from('scores').select('ref,created_at')
+          .eq('user_id', state.user.id).eq('action', 'words_viewed').limit(1000);
+        if (sres && !sres.error && Array.isArray(sres.data)) {
+          sres.data.forEach(function (r) {
+            if (!r || !/^\d{4}-\d{2}-\d{2}$/.test(r.ref || '')) return;
+            const day = merged[r.ref] || {};
+            if (!day.words) {
+              day.words = true;
+              const ts = Date.parse(r.created_at) || 0;
+              if (ts > (day.updatedAt || 0)) day.updatedAt = ts;
+              merged[r.ref] = day;
+            }
+          });
+        }
+      } catch (e) {}
       if (Object.keys(merged).length) {
         const mergedStr = JSON.stringify(merged);
         if (mergedStr !== JSON.stringify(localVal)) {
