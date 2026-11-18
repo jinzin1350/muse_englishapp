@@ -457,7 +457,7 @@ function srsGradeCloud(k, e) {
    write wins by updated_at. All fire-and-forget — before the user_kv
    migration runs, the calls fail silently and local remains the working
    record, the same pattern as saved-word SRS cloud writes. */
-var KV_SYNC_KEYS = ['muse_wordmap_v1', 'muse_tricky_v1', 'muse_mistakes_srs_v1', 'muse_grammar_v1'];
+var KV_SYNC_KEYS = ['muse_wordmap_v1', 'muse_tricky_v1', 'muse_mistakes_srs_v1', 'muse_grammar_v1', 'ela_progress_v1'];
 function kvMetaAll() {
   try { return JSON.parse(localStorage.getItem('muse_kv_meta') || '{}') || {}; }
   catch (e) { return {}; }
@@ -466,9 +466,13 @@ function kvMetaSet(m) {
   try { localStorage.setItem('muse_kv_meta', JSON.stringify(m)); } catch (e) {}
 }
 /* Grammar progress lives under the per-user lsKey() name (ela_…_<email>),
-   not the raw sync key — resolve the real storage key per sync key. */
+   not the raw sync key — resolve the real storage key per sync key.
+   Lesson progress (ela_progress_v1, added 2026-11-18 on Alireza's order)
+   lives under progressKey() (ela_progress_<email>). */
 function kvStorageKey(key) {
-  return key === 'muse_grammar_v1' ? lsKey(key) : key;
+  if (key === 'muse_grammar_v1') return lsKey(key);
+  if (key === 'ela_progress_v1') return progressKey();
+  return key;
 }
 function kvLocalEmpty(lsKey) {
   try {
@@ -503,6 +507,37 @@ function kvSchedulePush(lsKey) {
   if (_kvTimers[lsKey]) clearTimeout(_kvTimers[lsKey]);
   _kvTimers[lsKey] = setTimeout(function () { kvPush(lsKey); }, 1200);
 }
+/* Lesson progress merges PER DATE (union), never whole-blob replace:
+   two devices usually hold disjoint days, and replacing would erase the
+   other device's studied lessons. Step flags are monotonic (once done,
+   done): boolean steps OR together; quiz keeps the better score record;
+   updatedAt takes the max. */
+function kvMergeProgress(local, cloud) {
+  local = local || {}; cloud = cloud || {};
+  var out = {};
+  var seen = {};
+  Object.keys(local).concat(Object.keys(cloud)).forEach(function (d) { seen[d] = 1; });
+  Object.keys(seen).forEach(function (d) {
+    var a = local[d] || {}, b = cloud[d] || {};
+    var newer = (b.updatedAt || 0) > (a.updatedAt || 0) ? b : a;
+    var day = {};
+    Object.keys(newer).forEach(function (k) { day[k] = newer[k]; });
+    ['words', 'podcast', 'shadowing', 'grammar', 'streakRecorded'].forEach(function (f) {
+      if (a[f] || b[f]) day[f] = true;
+    });
+    if (a.quiz || b.quiz) {
+      var qa = a.quiz, qb = b.quiz;
+      if (qa && qb && typeof qa === 'object' && typeof qb === 'object') {
+        day.quiz = (qb.score || 0) > (qa.score || 0) ? qb : qa;
+      } else {
+        day.quiz = typeof qb === 'object' ? qb : (typeof qa === 'object' ? qa : true);
+      }
+    }
+    day.updatedAt = Math.max(a.updatedAt || 0, b.updatedAt || 0);
+    out[d] = day;
+  });
+  return out;
+}
 async function kvPullAll() {
   if (state._kvPulled || !cloudReady() || !state.user) return;
   state._kvPulled = true;
@@ -520,7 +555,22 @@ async function kvPullAll() {
     const lsKey = KV_SYNC_KEYS[ki];
     const m = meta[lsKey] || { u: 0, dirty: false };
     const row = byKey[lsKey];
-    if (row) {
+    if (row && lsKey === 'ela_progress_v1') {
+      /* Lesson progress: merge per date with the cloud copy (union), keep
+         the merged blob locally, and push it back when the cloud is
+         missing days this device has (2026-11-18). */
+      const cloudU = Date.parse(row.updated_at) || 0;
+      let localVal = null;
+      try { localVal = JSON.parse(localStorage.getItem(kvStorageKey(lsKey)) || 'null'); } catch (e) {}
+      const merged = kvMergeProgress(localVal, row.value);
+      const mergedStr = JSON.stringify(merged);
+      if (mergedStr !== JSON.stringify(localVal)) {
+        try { localStorage.setItem(kvStorageKey(lsKey), mergedStr); } catch (e) {}
+        changed = true;
+      }
+      m.u = Math.max(m.u || 0, cloudU); m.dirty = false; meta[lsKey] = m;
+      if (mergedStr !== JSON.stringify(row.value)) kvPush(lsKey);
+    } else if (row) {
       const cloudU = Date.parse(row.updated_at) || 0;
       if (m.dirty && (m.u || 0) >= cloudU) {
         kvPush(lsKey);

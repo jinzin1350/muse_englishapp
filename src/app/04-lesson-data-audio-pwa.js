@@ -69,6 +69,10 @@ function markStep(dateStr, step, extra) {
         }).catch(function () {});
       } catch (e) {}
     }
+    /* Cross-device sync of lesson progress (2026-11-18, Alireza's order):
+       debounced push of the whole progress blob to user_kv; the pull side
+       merges per date, so studying on any device counts everywhere. */
+    try { kvSchedulePush('ela_progress_v1'); } catch (e) {}
   } catch (e) {}
 }
 function dayDoneCount(dateStr) {
