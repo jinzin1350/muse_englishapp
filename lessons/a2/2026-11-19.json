@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-19",
+  "theme": "health & body",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "cancer",
+      "pos": "noun",
+      "meaning": "A very serious illness.",
+      "example": "Doctors are looking for a cure for cancer.",
+      "example_fa": "پزشکان به دنبال درمانی برای سرطان هستند.",
+      "pronunciation": "KAN-ser",
+      "persian": "سرطان",
+      "photo": "media/a2/2026-11-19/photos/cancer.jpg",
+      "word_audio": "media/a2/2026-11-19/word-audio/cancer.mp3"
+    },
+    {
+      "word": "check [examine]",
+      "pos": "verb",
+      "meaning": "To look at something carefully to see if it is correct.",
+      "example": "Please check your answers before you finish.",
+      "example_fa": "لطفاً قبل از تمام کردن، پاسخ‌هایت را بررسی کن.",
+      "pronunciation": "CHEK",
+      "persian": "بررسی کردن، چک کردن",
+      "photo": "media/a2/2026-11-19/photos/check.jpg",
+      "word_audio": "media/a2/2026-11-19/word-audio/check.mp3"
+    },
+    {
+      "word": "cheek",
+      "pos": "noun",
+      "meaning": "The soft part of your face below your eye.",
+      "example": "She kissed her baby's soft cheek.",
+      "example_fa": "او گونه نرم نوزادش را بوسید.",
+      "pronunciation": "CHEEK",
+      "persian": "گونه",
+      "photo": "media/a2/2026-11-19/photos/cheek.jpg",
+      "word_audio": "media/a2/2026-11-19/word-audio/cheek.mp3"
+    },
+    {
+      "word": "chest",
+      "pos": "noun",
+      "meaning": "The front part of your body between your neck and stomach.",
+      "example": "He felt a pain in his chest.",
+      "example_fa": "او دردی در سینه‌اش احساس کرد.",
+      "pronunciation": "CHEST",
+      "persian": "سینه",
+      "photo": "media/a2/2026-11-19/photos/chest.jpg",
+      "word_audio": "media/a2/2026-11-19/word-audio/chest.mp3"
+    },
+    {
+      "word": "chin",
+      "pos": "noun",
+      "meaning": "The part of your face below your mouth.",
+      "example": "He has a small scar on his chin.",
+      "example_fa": "او جای زخم کوچکی روی چانه‌اش دارد.",
+      "pronunciation": "CHIN",
+      "persian": "چانه",
+      "photo": "media/a2/2026-11-19/photos/chin.jpg",
+      "word_audio": "media/a2/2026-11-19/word-audio/chin.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-19/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: A Visit to the Doctor",
+    "audio": "media/a2/2026-11-19/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-19/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Visit to the Doctor",
+    "audio": "media/a2/2026-11-19/shadowing.mp3",
+    "transcript": "media/a2/2026-11-19/shadowing-transcript.txt",
+    "transcript_fa": "media/a2/2026-11-19/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-19/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-19/shadowing-sentences/015.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'cancer' mean?",
+      "options": [
+        "The soft part of your face below your eye.",
+        "A very serious illness.",
+        "The front part of your body between your neck and stomach.",
+        "To look at something carefully to see if it is correct."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'check [examine]' mean?",
+      "options": [
+        "The front part of your body between your neck and stomach.",
+        "To look at something carefully to see if it is correct.",
+        "A very serious illness.",
+        "The part of your face below your mouth."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cheek' mean?",
+      "options": [
+        "The part of your face below your mouth.",
+        "The front part of your body between your neck and stomach.",
+        "A very serious illness.",
+        "The soft part of your face below your eye."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'chest' mean?",
+      "options": [
+        "The front part of your body between your neck and stomach.",
+        "To look at something carefully to see if it is correct.",
+        "The part of your face below your mouth.",
+        "A very serious illness."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'chin' mean?",
+      "options": [
+        "The front part of your body between your neck and stomach.",
+        "A very serious illness.",
+        "To look at something carefully to see if it is correct.",
+        "The part of your face below your mouth."
+      ],
+      "answer": 3
+    }
+  ]
+}

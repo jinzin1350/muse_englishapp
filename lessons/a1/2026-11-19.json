@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-19",
+  "theme": "food & cooking",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "hot dog",
+      "pos": "noun",
+      "meaning": "A sausage in a long bread roll.",
+      "example": "I want a hot dog for lunch.",
+      "example_fa": "برای ناهار هات داگ می‌خواهم.",
+      "pronunciation": "HOT dog",
+      "persian": "هات داگ",
+      "photo": "media/a1/2026-11-19/photos/hot-dog.jpg",
+      "word_audio": "media/a1/2026-11-19/word-audio/hot-dog.mp3"
+    },
+    {
+      "word": "light",
+      "pos": "noun",
+      "meaning": "The brightness that helps you see.",
+      "example": "Turn on the light, please.",
+      "example_fa": "لطفاً چراغ را روشن کن.",
+      "pronunciation": "LYTE",
+      "persian": "نور، چراغ",
+      "photo": "media/a1/2026-11-19/photos/light.jpg",
+      "word_audio": "media/a1/2026-11-19/word-audio/light.mp3"
+    },
+    {
+      "word": "meat",
+      "pos": "noun",
+      "meaning": "Animal flesh eaten as food.",
+      "example": "I like to eat chicken meat.",
+      "example_fa": "دوست دارم گوشت مرغ بخورم.",
+      "pronunciation": "MEET",
+      "persian": "گوشت",
+      "photo": "media/a1/2026-11-19/photos/meat.jpg",
+      "word_audio": "media/a1/2026-11-19/word-audio/meat.mp3"
+    },
+    {
+      "word": "mineral water",
+      "pos": "noun",
+      "meaning": "Water from a spring, often bottled.",
+      "example": "I prefer mineral water to tap water.",
+      "example_fa": "آب معدنی را به آب شیر ترجیح می‌دهم.",
+      "pronunciation": "MIN-uh-rul WAW-ter",
+      "persian": "آب معدنی",
+      "photo": "media/a1/2026-11-19/photos/mineral-water.jpg",
+      "word_audio": "media/a1/2026-11-19/word-audio/mineral-water.mp3"
+    },
+    {
+      "word": "mushroom(s)",
+      "pos": "noun",
+      "meaning": "A type of fungus you can eat.",
+      "example": "Do you like to eat mushrooms?",
+      "example_fa": "دوست داری قارچ بخوری؟",
+      "pronunciation": "MUSH-room",
+      "persian": "قارچ",
+      "photo": "media/a1/2026-11-19/photos/mushroom.jpg",
+      "word_audio": "media/a1/2026-11-19/word-audio/mushroom.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-19/pronunciation.mp3",
+  "podcast": null,
+  "shadowing": {
+    "title": "Lunch in the Kitchen",
+    "audio": "media/a1/2026-11-19/shadowing.mp3",
+    "transcript": "media/a1/2026-11-19/shadowing-transcript.txt",
+    "transcript_fa": "media/a1/2026-11-19/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-19/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-19/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-19/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-19/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-19/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-19/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-19/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-19/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-19/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-19/shadowing-sentences/010.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'hot dog' mean?",
+      "options": [
+        "Water from a spring, often bottled.",
+        "A sausage in a long bread roll.",
+        "A type of fungus you can eat.",
+        "Animal flesh eaten as food."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'light' mean?",
+      "options": [
+        "A type of fungus you can eat.",
+        "Water from a spring, often bottled.",
+        "The brightness that helps you see.",
+        "Animal flesh eaten as food."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'meat' mean?",
+      "options": [
+        "A sausage in a long bread roll.",
+        "Animal flesh eaten as food.",
+        "A type of fungus you can eat.",
+        "Water from a spring, often bottled."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'mineral water' mean?",
+      "options": [
+        "Water from a spring, often bottled.",
+        "The brightness that helps you see.",
+        "A sausage in a long bread roll.",
+        "A type of fungus you can eat."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'mushroom(s)' mean?",
+      "options": [
+        "The brightness that helps you see.",
+        "Animal flesh eaten as food.",
+        "A type of fungus you can eat.",
+        "Water from a spring, often bottled."
+      ],
+      "answer": 2
+    }
+  ]
+}
