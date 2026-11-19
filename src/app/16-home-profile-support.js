@@ -1,8 +1,27 @@
+/* Home painted with an empty lesson list (the entry batch failed, see
+   loadLessons): try ONE background reload per 20s and repaint in place
+   when it lands, instead of stranding the user on the empty card. */
+let _lessonsReloadAt = 0;
+function maybeReloadLessons(v) {
+  if (!state.user || state.user.demo || !state.user.level) return;
+  const now = Date.now();
+  if (now - _lessonsReloadAt < 20000) return;
+  _lessonsReloadAt = now;
+  const level = normalizeLevel(state.user.level) || 'b2';
+  loadLessons(level).then(function (ls) {
+    if (!ls.length) return;
+    state.lessons = ls;
+    state.lesson = ls[0];
+    if (state.view === 'home' && !state.quiz) { paintHome(v, lsGet('mistakes'), lsGet('scores')); refreshQuests(); }
+  }).catch(function () {});
+}
+
 /* ---------------- Mobile Home v2 (2026-10-19 redesign) ---------------- */
 function paintHome(v, mistakes, attempts) {
   if (isDesktop()) { paintHomeDesktop(v, mistakes, attempts); return; }
   const lessons = state.lessons;
   const today = lessons[0] || null;
+  if (!today) maybeReloadLessons(v);
 
   let html = '';
 
@@ -460,6 +479,7 @@ function dhChallengeHTML() {
 function paintHomeDesktop(v, mistakes, attempts) {
   const lessons = state.lessons;
   const today = lessons[0] || null;
+  if (!today) maybeReloadLessons(v);
   let html = '<div class="dhome">';
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
   html += installBannerHTML();

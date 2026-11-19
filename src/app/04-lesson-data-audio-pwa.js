@@ -749,7 +749,7 @@ async function fetchLesson(level, dateStr) {
   return r.json();
 }
 
-async function loadLessons(level) {
+async function loadLessonsOnce(level) {
   // All day-manifests fetch concurrently (one batch instead of ~11 sequential
   // round trips); assembled newest-first with the original stop rule.
   const days = [];
@@ -770,6 +770,21 @@ async function loadLessons(level) {
     }
   }
   return found; // newest first
+}
+
+/* Lessons load ONCE at entry; a single transient network failure on that
+   batch (common on flaky connections) used to leave the whole session
+   with an empty Home and a misleading "No lessons published yet" card
+   (2026-11-18, first-day desktop user in a session recording). Retry the
+   whole batch when it comes back empty — lessons are published daily,
+   so an empty result is a load failure, not a real state. */
+async function loadLessons(level) {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const found = await loadLessonsOnce(level);
+    if (found.length) return found;
+    if (attempt < 2) await new Promise(function (res) { setTimeout(res, 1200); });
+  }
+  return [];
 }
 
 /* A recent public lesson (b2 track) used for the landing preview. */

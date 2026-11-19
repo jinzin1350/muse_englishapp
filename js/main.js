@@ -2925,7 +2925,7 @@ async function fetchLesson(level, dateStr) {
   return r.json();
 }
 
-async function loadLessons(level) {
+async function loadLessonsOnce(level) {
   // All day-manifests fetch concurrently (one batch instead of ~11 sequential
   // round trips); assembled newest-first with the original stop rule.
   const days = [];
@@ -2946,6 +2946,21 @@ async function loadLessons(level) {
     }
   }
   return found; // newest first
+}
+
+/* Lessons load ONCE at entry; a single transient network failure on that
+   batch (common on flaky connections) used to leave the whole session
+   with an empty Home and a misleading "No lessons published yet" card
+   (2026-11-18, first-day desktop user in a session recording). Retry the
+   whole batch when it comes back empty — lessons are published daily,
+   so an empty result is a load failure, not a real state. */
+async function loadLessons(level) {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const found = await loadLessonsOnce(level);
+    if (found.length) return found;
+    if (attempt < 2) await new Promise(function (res) { setTimeout(res, 1200); });
+  }
+  return [];
 }
 
 /* A recent public lesson (b2 track) used for the landing preview. */
@@ -9238,11 +9253,30 @@ function ieltsPaintResults(v, res, data) {
 }
 
 
+/* Home painted with an empty lesson list (the entry batch failed, see
+   loadLessons): try ONE background reload per 20s and repaint in place
+   when it lands, instead of stranding the user on the empty card. */
+let _lessonsReloadAt = 0;
+function maybeReloadLessons(v) {
+  if (!state.user || state.user.demo || !state.user.level) return;
+  const now = Date.now();
+  if (now - _lessonsReloadAt < 20000) return;
+  _lessonsReloadAt = now;
+  const level = normalizeLevel(state.user.level) || 'b2';
+  loadLessons(level).then(function (ls) {
+    if (!ls.length) return;
+    state.lessons = ls;
+    state.lesson = ls[0];
+    if (state.view === 'home' && !state.quiz) { paintHome(v, lsGet('mistakes'), lsGet('scores')); refreshQuests(); }
+  }).catch(function () {});
+}
+
 /* ---------------- Mobile Home v2 (2026-10-19 redesign) ---------------- */
 function paintHome(v, mistakes, attempts) {
   if (isDesktop()) { paintHomeDesktop(v, mistakes, attempts); return; }
   const lessons = state.lessons;
   const today = lessons[0] || null;
+  if (!today) maybeReloadLessons(v);
 
   let html = '';
 
@@ -9700,6 +9734,7 @@ function dhChallengeHTML() {
 function paintHomeDesktop(v, mistakes, attempts) {
   const lessons = state.lessons;
   const today = lessons[0] || null;
+  if (!today) maybeReloadLessons(v);
   let html = '<div class="dhome">';
   html += '<div id="home-streak-wrap">' + streakBannerHTML(getStreakLocal()) + '</div>';
   html += installBannerHTML();
@@ -14830,7 +14865,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611181854';
+var APP_VERSION = '202611190247';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
