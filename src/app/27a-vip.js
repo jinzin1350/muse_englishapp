@@ -43,6 +43,42 @@ function paintVip(v) {
        : 'Find a practice partner among the top learners in the Challenge and chat with them. Only VIPs can message other learners and reply.',
     fa ? 'به‌زودی' : 'Coming soon') +
 
+  vipFeatureHTML('❤️',
+    fa ? 'قلب نامحدود' : 'Unlimited hearts',
+    fa ? 'با VIP قلب‌هات تموم نمی‌شن؛ هر چقدر اشتباه کنی، درس و تمرین همیشه برات بازه.'
+       : 'With VIP your hearts never run out — make as many mistakes as you like, lessons and practice always stay open.',
+    fa ? 'به‌زودی' : 'Coming soon') +
+
+  vipFeatureHTML('📥',
+    fa ? 'دانلود آفلاین درس‌ها' : 'Offline lesson downloads',
+    fa ? 'پادکست و شدویینگ هر درس رو دانلود کن و بدون اینترنت گوش بده — توی راه، توی مترو، هر جا.'
+       : 'Download each lesson’s podcast and shadowing audio and listen offline — on the road, on the subway, anywhere.',
+    fa ? 'به‌زودی' : 'Coming soon') +
+
+  vipFeatureHTML('🧊',
+    fa ? 'محافظ استریک' : 'Streak protection',
+    fa ? 'یه روز درس جا بیفته، استریکت نمی‌سوزه؛ VIP محافظ‌های بیشتری برای نگه داشتن زنجیره‌ت داره.'
+       : 'Miss a day and your streak survives — VIPs get extra freezes to protect their chain.',
+    fa ? 'به‌زودی' : 'Coming soon') +
+
+  vipFeatureHTML('✍️',
+    fa ? 'بازخورد رایتینگ آیلتس' : 'IELTS writing feedback',
+    fa ? 'رایتینگ‌های تمرین آیلتس‌ت رو بفرست و بازخورد و نمرهٔ تقریبی بگیر تا بدونی کجای کاری.'
+       : 'Submit your IELTS practice writing and get feedback with an estimated band, so you know where you stand.',
+    fa ? 'به‌زودی' : 'Coming soon') +
+
+  vipFeatureHTML('📊',
+    fa ? 'گزارش پیشرفت پیشرفته' : 'Advanced progress report',
+    fa ? 'نمودار کامل پیشرفت، تحلیل نقاط قوت و ضعف و اینکه دقیقاً روی چی باید تمرکز کنی.'
+       : 'Full progress charts, a breakdown of your strengths and weak spots, and exactly what to focus on next.',
+    fa ? 'به‌زودی' : 'Coming soon') +
+
+  vipFeatureHTML('🚀',
+    fa ? 'پشتیبانی اولویت‌دار' : 'Priority support',
+    fa ? 'سؤال یا مشکلی داشتی، پیام VIPها اول صف جواب می‌گیرن.'
+       : 'Questions or problems? VIP messages jump to the front of the support queue.',
+    fa ? 'به‌زودی' : 'Coming soon') +
+
   '<p class="muted" style="text-align:center;margin:1rem 0">' + esc(fa ? 'امکانات بیشتری برای VIP در راهه…' : 'More VIP features are on the way…') + '</p>' +
 
   (isVip
