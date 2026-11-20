@@ -539,6 +539,9 @@ function renderProfile(v) {
       '</div></div>'
     : '') +
 
+  '<div class="section-title"><h2>VIP</h2></div>' +
+  '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/vip" style="margin-top:0">👑 Muse VIP</a></div>' +
+
   '<div class="section-title"><h2>Notifications</h2></div>' +
   '<div class="card plain">' +
     '<p class="muted" style="margin-top:0">Get a short notification when your daily lesson is ready. We’ll only ask for permission if you tap the button below.</p>' +
