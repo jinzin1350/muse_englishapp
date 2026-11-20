@@ -1,0 +1,260 @@
+{
+  "date": "2026-11-20",
+  "theme": "review day",
+  "level": "c1",
+  "cefr": "C1",
+  "words": [
+    {
+      "word": "anaesthetist",
+      "pos": "noun",
+      "meaning": "A medical doctor specializing in administering anaesthesia.",
+      "example": "The anaesthetist carefully monitored the patient's vital signs.",
+      "pronunciation": "uh-NEES-thuh-tist",
+      "persian": "متخصص بیهوشی",
+      "photo": "media/c1/2026-11-18/photos/anaesthetist.jpg",
+      "word_audio": "media/c1/2026-11-18/word-audio/anaesthetist.mp3"
+    },
+    {
+      "word": "adverse",
+      "pos": "adjective",
+      "meaning": "Unfavorable or harmful.",
+      "example": "The drug had several adverse side effects.",
+      "pronunciation": "ad-VERS",
+      "persian": "نامطلوب، مضر",
+      "photo": "media/c1/2026-11-18/photos/adverse.jpg",
+      "word_audio": "media/c1/2026-11-18/word-audio/adverse.mp3"
+    },
+    {
+      "word": "squat",
+      "pos": "verb",
+      "meaning": "To illegally occupy an empty building or land.",
+      "example": "The activists decided to squat in the abandoned factory.",
+      "pronunciation": "SKWAHT",
+      "persian": "تصرف غیرقانونی (ملک)",
+      "photo": "media/c1/2026-11-19/photos/squat.jpg",
+      "word_audio": "media/c1/2026-11-19/word-audio/squat.mp3"
+    },
+    {
+      "word": "child labour",
+      "pos": "noun",
+      "meaning": "The employment of children in industry or business.",
+      "example": "Many organizations fight against child labour worldwide.",
+      "pronunciation": "CHYLD LAY-bur",
+      "persian": "کار کودک",
+      "photo": "media/c1/2026-11-17/photos/child-labour.jpg",
+      "word_audio": "media/c1/2026-11-17/word-audio/child-labour.mp3"
+    },
+    {
+      "word": "collaboration",
+      "pos": "noun",
+      "meaning": "The act of working together to create something.",
+      "example": "The project was a successful collaboration between two teams.",
+      "pronunciation": "kuh-lab-uh-RAY-shun",
+      "persian": "همکاری، مشارکت",
+      "photo": "media/c1/2026-11-17/photos/collaboration.jpg",
+      "word_audio": "media/c1/2026-11-17/word-audio/collaboration.mp3"
+    },
+    {
+      "word": "aches and pains",
+      "pos": "idiom",
+      "meaning": "Minor physical discomforts or soreness.",
+      "example": "After the long hike, I had a lot of aches and pains.",
+      "pronunciation": "AYKS and PAYNZ",
+      "persian": "درد و کوفتگی، دردهای جزئی",
+      "photo": "media/c1/2026-11-18/photos/aches-and-pains.jpg",
+      "word_audio": "media/c1/2026-11-18/word-audio/aches-and-pains.mp3"
+    },
+    {
+      "word": "matter of life and death",
+      "pos": "idiom",
+      "meaning": "A situation that is extremely important and serious.",
+      "example": "For a surgeon, every decision can be a matter of life and death.",
+      "pronunciation": "MAT-er uv LIFE and DEATH",
+      "persian": "مسئله مرگ و زندگی",
+      "photo": "media/c1/2026-11-19/photos/matter-of-life-and-death.jpg",
+      "word_audio": "media/c1/2026-11-19/word-audio/matter-of-life-and-death.mp3"
+    },
+    {
+      "word": "alternative medicine",
+      "pos": "noun phrase",
+      "meaning": "Medical treatments not part of conventional Western medicine.",
+      "example": "She explored alternative medicine for her chronic pain.",
+      "pronunciation": "awl-TUR-nuh-tiv MED-uh-sin",
+      "persian": "طب جایگزین",
+      "photo": "media/c1/2026-11-18/photos/alternative-medicine.jpg",
+      "word_audio": "media/c1/2026-11-18/word-audio/alternative-medicine.mp3"
+    },
+    {
+      "word": "career",
+      "pos": "noun",
+      "meaning": "A profession or occupation pursued for a lifetime.",
+      "example": "She decided to pursue a career in medicine.",
+      "pronunciation": "kuh-REER",
+      "persian": "شغل، حرفه",
+      "photo": "media/c1/2026-11-17/photos/career.jpg",
+      "word_audio": "media/c1/2026-11-17/word-audio/career.mp3"
+    },
+    {
+      "word": "acute",
+      "pos": "adjective",
+      "meaning": "(Of a condition) severe and sudden in onset.",
+      "example": "He suffered an acute appendicitis attack.",
+      "pronunciation": "uh-KYOOT",
+      "persian": "حاد، شدید",
+      "photo": "media/c1/2026-11-18/photos/acute.jpg",
+      "word_audio": "media/c1/2026-11-18/word-audio/acute.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/c1/2026-11-20/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Work Health and Homes",
+    "audio": "media/c1/2026-11-20/podcast.mp3",
+    "cover": null,
+    "transcript": "media/c1/2026-11-20/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Clinic, the Flat, and the Long Night",
+    "audio": "media/c1/2026-11-20/shadowing.mp3",
+    "transcript": "media/c1/2026-11-20/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/c1/2026-11-20/shadowing-sentences/001.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/002.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/003.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/004.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/005.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/006.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/007.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/008.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/009.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/010.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/011.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/012.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/013.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/014.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/015.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/016.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/017.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/018.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/019.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/020.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/021.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/022.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/023.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/024.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/025.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/026.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/027.mp3",
+      "media/c1/2026-11-20/shadowing-sentences/028.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'anaesthetist' mean?",
+      "options": [
+        "A situation that is extremely important and serious.",
+        "Minor physical discomforts or soreness.",
+        "A medical doctor specializing in administering anaesthesia.",
+        "A profession or occupation pursued for a lifetime."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'adverse' mean?",
+      "options": [
+        "The employment of children in industry or business.",
+        "A profession or occupation pursued for a lifetime.",
+        "A medical doctor specializing in administering anaesthesia.",
+        "Unfavorable or harmful."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'squat' mean?",
+      "options": [
+        "(Of a condition) severe and sudden in onset.",
+        "To illegally occupy an empty building or land.",
+        "Medical treatments not part of conventional Western medicine.",
+        "A situation that is extremely important and serious."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'child labour' mean?",
+      "options": [
+        "The employment of children in industry or business.",
+        "The act of working together to create something.",
+        "(Of a condition) severe and sudden in onset.",
+        "Unfavorable or harmful."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'collaboration' mean?",
+      "options": [
+        "A situation that is extremely important and serious.",
+        "A medical doctor specializing in administering anaesthesia.",
+        "The act of working together to create something.",
+        "Unfavorable or harmful."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'aches and pains' mean?",
+      "options": [
+        "(Of a condition) severe and sudden in onset.",
+        "Minor physical discomforts or soreness.",
+        "To illegally occupy an empty building or land.",
+        "A situation that is extremely important and serious."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'matter of life and death' mean?",
+      "options": [
+        "The employment of children in industry or business.",
+        "To illegally occupy an empty building or land.",
+        "A situation that is extremely important and serious.",
+        "The act of working together to create something."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'alternative medicine' mean?",
+      "options": [
+        "A medical doctor specializing in administering anaesthesia.",
+        "Unfavorable or harmful.",
+        "The act of working together to create something.",
+        "Medical treatments not part of conventional Western medicine."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'career' mean?",
+      "options": [
+        "A situation that is extremely important and serious.",
+        "Unfavorable or harmful.",
+        "A profession or occupation pursued for a lifetime.",
+        "The employment of children in industry or business."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'acute' mean?",
+      "options": [
+        "A profession or occupation pursued for a lifetime.",
+        "Unfavorable or harmful.",
+        "(Of a condition) severe and sudden in onset.",
+        "A medical doctor specializing in administering anaesthesia."
+      ],
+      "answer": 2
+    }
+  ],
+  "review": true,
+  "review_of": [
+    "2026-11-17",
+    "2026-11-18",
+    "2026-11-19"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10
+}

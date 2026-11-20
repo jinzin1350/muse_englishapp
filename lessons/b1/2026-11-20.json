@@ -1,0 +1,263 @@
+{
+ "date": "2026-11-20",
+ "theme": "review day",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "example": "The boat sailed on a rough sea.",
+   "example_fa": "قایق روی دریای مواج حرکت کرد.",
+   "meaning": "With big waves, not calm.",
+   "persian": "مواج، طوفانی",
+   "photo": "media/b1/2026-11-19/photos/rough.jpg",
+   "pos": "adjective",
+   "pronunciation": "RUF",
+   "word": "rough (sea)",
+   "word_audio": "media/b1/2026-11-19/word-audio/rough.mp3"
+  },
+  {
+   "word": "above all",
+   "pos": "idiom",
+   "meaning": "most importantly; more than anything else",
+   "example": "Above all, we must protect our planet.",
+   "example_fa": "مهم‌تر از همه، باید از سیاره‌مان محافظت کنیم.",
+   "pronunciation": "uh-BUV AWL",
+   "persian": "مهمتر از همه",
+   "photo": "media/b1/2026-11-17/photos/above-all.jpg",
+   "word_audio": "media/b1/2026-11-17/word-audio/above-all.mp3"
+  },
+  {
+   "word": "a piece of sth",
+   "pos": "phrase",
+   "meaning": "one part of a larger thing",
+   "example": "Can I have a piece of cake, please?",
+   "example_fa": "می‌توانم یک تکه کیک داشته باشم، لطفاً؟",
+   "pronunciation": "uh PEES uv SUM-thing",
+   "persian": "یک تکه از چیزی",
+   "photo": "media/b1/2026-11-17/photos/a-piece-of-sth.jpg",
+   "word_audio": "media/b1/2026-11-17/word-audio/a-piece-of-sth.mp3"
+  },
+  {
+   "word": "ability",
+   "pos": "noun",
+   "meaning": "the power or skill to do something",
+   "example": "She has a great ability to learn new languages.",
+   "example_fa": "او توانایی زیادی در یادگیری زبان‌های جدید دارد.",
+   "pronunciation": "uh-BIL-uh-tee",
+   "persian": "توانایی، قابلیت",
+   "photo": "media/b1/2026-11-17/photos/ability.jpg",
+   "word_audio": "media/b1/2026-11-17/word-audio/ability.mp3"
+  },
+  {
+   "example": "I recommend this hotel; it's very nice.",
+   "example_fa": "این هتل را توصیه می‌کنم؛ خیلی خوب است.",
+   "meaning": "To suggest something good to someone.",
+   "persian": "توصیه کردن، پیشنهاد کردن",
+   "photo": "media/b1/2026-11-19/photos/recommend.jpg",
+   "pos": "verb",
+   "pronunciation": "rek-uh-MEND",
+   "word": "recommend",
+   "word_audio": "media/b1/2026-11-19/word-audio/recommend.mp3"
+  },
+  {
+   "example": "We built a castle in the sand.",
+   "example_fa": "ما در شن‌ها یک قلعه ساختیم.",
+   "meaning": "Tiny grains of rock found on beaches.",
+   "persian": "شن، ماسه",
+   "photo": "media/b1/2026-11-19/photos/sand.jpg",
+   "pos": "noun",
+   "pronunciation": "SAND",
+   "word": "sand",
+   "word_audio": "media/b1/2026-11-19/word-audio/sand.mp3"
+  },
+  {
+   "example": "My car is old but very reliable.",
+   "example_fa": "ماشین من قدیمی است اما خیلی قابل اعتماد است.",
+   "meaning": "Able to be trusted or depended on.",
+   "persian": "قابل اعتماد",
+   "photo": "media/b1/2026-11-19/photos/reliable.jpg",
+   "pos": "adjective",
+   "pronunciation": "ri-LY-uh-bul",
+   "word": "reliable",
+   "word_audio": "media/b1/2026-11-19/word-audio/reliable.mp3"
+  },
+  {
+   "example": "The shop is just round the corner.",
+   "example_fa": "مغازه درست سر پیچ است.",
+   "meaning": "Very near, happening soon.",
+   "persian": "نزدیک، در شرف وقوع",
+   "photo": "media/b1/2026-11-19/photos/round-the-corner.jpg",
+   "pos": "phrase",
+   "pronunciation": "ROWND thuh KOR-ner",
+   "word": "round the corner",
+   "word_audio": "media/b1/2026-11-19/word-audio/round-the-corner.mp3"
+  },
+  {
+   "word": "actor",
+   "pos": "noun",
+   "meaning": "a person who performs in plays or films",
+   "example": "He is a famous actor from Hollywood.",
+   "example_fa": "او بازیگر معروفی از هالیوود است.",
+   "pronunciation": "AK-tuh",
+   "persian": "بازیگر",
+   "photo": "media/b1/2026-11-17/photos/actor.jpg",
+   "word_audio": "media/b1/2026-11-17/word-audio/actor.mp3"
+  },
+  {
+   "word": "according to",
+   "pos": "prepositional phrase",
+   "meaning": "as stated by or reported by",
+   "example": "According to the news, it will rain tomorrow.",
+   "example_fa": "طبق اخبار، فردا باران خواهد بارید.",
+   "pronunciation": "uh-KOR-ding too",
+   "persian": "طبق، بر اساس",
+   "photo": "media/b1/2026-11-17/photos/according-to.jpg",
+   "word_audio": "media/b1/2026-11-17/word-audio/according-to.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-11-20/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: A Seaside Review",
+  "audio": "media/b1/2026-11-20/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-11-20/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Actor by the Sea",
+  "audio": "media/b1/2026-11-20/shadowing.mp3",
+  "transcript": "media/b1/2026-11-20/shadowing-transcript.txt",
+  "transcript_fa": "media/b1/2026-11-20/shadowing-transcript-fa.txt",
+  "sentence_audio": [
+   "media/b1/2026-11-20/shadowing-sentences/001.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/002.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/003.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/004.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/005.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/006.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/007.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/008.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/009.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/010.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/011.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/012.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/013.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/014.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/015.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/016.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/017.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/018.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/019.mp3",
+   "media/b1/2026-11-20/shadowing-sentences/020.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'rough (sea)' mean?",
+   "options": [
+    "Able to be trusted or depended on.",
+    "With big waves, not calm.",
+    "most importantly; more than anything else",
+    "Tiny grains of rock found on beaches."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'above all' mean?",
+   "options": [
+    "one part of a larger thing",
+    "most importantly; more than anything else",
+    "Able to be trusted or depended on.",
+    "a person who performs in plays or films"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'a piece of sth' mean?",
+   "options": [
+    "the power or skill to do something",
+    "Tiny grains of rock found on beaches.",
+    "one part of a larger thing",
+    "Very near, happening soon."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'ability' mean?",
+   "options": [
+    "as stated by or reported by",
+    "the power or skill to do something",
+    "Tiny grains of rock found on beaches.",
+    "With big waves, not calm."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'recommend' mean?",
+   "options": [
+    "most importantly; more than anything else",
+    "one part of a larger thing",
+    "Tiny grains of rock found on beaches.",
+    "To suggest something good to someone."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'sand' mean?",
+   "options": [
+    "Very near, happening soon.",
+    "Tiny grains of rock found on beaches.",
+    "as stated by or reported by",
+    "most importantly; more than anything else"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'reliable' mean?",
+   "options": [
+    "the power or skill to do something",
+    "Tiny grains of rock found on beaches.",
+    "Able to be trusted or depended on.",
+    "To suggest something good to someone."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'round the corner' mean?",
+   "options": [
+    "Tiny grains of rock found on beaches.",
+    "Very near, happening soon.",
+    "most importantly; more than anything else",
+    "a person who performs in plays or films"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'actor' mean?",
+   "options": [
+    "To suggest something good to someone.",
+    "as stated by or reported by",
+    "a person who performs in plays or films",
+    "Able to be trusted or depended on."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'according to' mean?",
+   "options": [
+    "as stated by or reported by",
+    "To suggest something good to someone.",
+    "With big waves, not calm.",
+    "most importantly; more than anything else"
+   ],
+   "answer": 0
+  }
+ ],
+ "review": true,
+ "review_of": [
+  "2026-11-17",
+  "2026-11-18",
+  "2026-11-19"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10
+}
