@@ -5296,6 +5296,28 @@ html.ui-fa [data-fa]{font-family:"Vazirmatn",system-ui,-apple-system,"Segoe UI",
 .vip-member h2{margin:0 0 .3rem;color:#7a5200}
 .vip-member p{margin:0}
 
+/* ---------- Pricing page ---------- */
+.prc-grid{display:grid;gap:1.1rem;margin-top:1.3rem}
+@media(min-width:640px){.prc-grid{grid-template-columns:1fr 1fr}}
+.prc-card{background:#fff;border:2px solid #ead9c2;border-radius:22px;padding:1.6rem 1.2rem 1.4rem;
+  text-align:center;position:relative;box-shadow:0 10px 26px rgba(60,40,10,.08)}
+.prc-card.mine{border-color:#e8b93e;box-shadow:0 18px 38px rgba(185,122,15,.25)}
+.prc-yours{position:absolute;top:-0.85rem;left:50%;transform:translateX(-50%);white-space:nowrap;
+  background:linear-gradient(135deg,#f6c453,#e8a020);color:#4a3205;font-weight:800;font-size:.82rem;
+  padding:.32rem .95rem;border-radius:999px;box-shadow:0 6px 14px rgba(185,122,15,.35)}
+.prc-region{font-weight:800;color:#7a5a18;font-size:1.02rem}
+.prc-amount{font-size:2.5rem;font-weight:900;margin:.45rem 0 .1rem;color:#3a2a10;line-height:1.15}
+.prc-per{color:#8a7a63;margin:0}
+.prc-note{font-size:.86rem;color:#8a7a63;margin:.9rem 0 0}
+.prc-cmp{background:#fff;border:1px solid #ead9c2;border-radius:18px;overflow:hidden;margin-top:1.5rem;
+  box-shadow:0 8px 22px rgba(60,40,10,.06)}
+.prc-row{display:flex;align-items:center;gap:.6rem;padding:.72rem 1rem;border-top:1px solid #f3e8d8}
+.prc-row:first-child{border-top:none;background:#fdf6ea;font-weight:800}
+.prc-row .prc-f{flex:1;font-size:.95rem}
+.prc-row .prc-v{width:5.6rem;text-align:center;font-size:.92rem}
+.prc-yes{color:#d99a1f;font-weight:900}
+.prc-no{color:#c9bda6}
+
 /* ===== Ask Muse (از Muse بپرس): AI tutor chat. Claude, 2026-11-14. Owned by Claude: src/app/17-ask-muse.js ===== */
 #askm-fab{position:fixed;right:16px;bottom:calc(86px + env(safe-area-inset-bottom));z-index:65;width:60px;height:60px;padding:0;border-radius:50%;
   border:2px solid #FFD6AE;background:#FFF6EA;box-shadow:0 8px 22px rgba(200,75,49,.28),0 2px 6px rgba(23,33,43,.12);cursor:pointer;

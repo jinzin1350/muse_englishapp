@@ -30,8 +30,12 @@ function vipIsIranPhone(phone) {
   return false;
 }
 
+function vipAmount(fa, iran) {
+  return iran ? (fa ? '۱۹۹٬۰۰۰ تومان' : '199,000 Toman') : '$6.99';
+}
+
 function vipPriceHTML(fa, iran) {
-  const amount = iran ? (fa ? '۱۹۹٬۰۰۰ تومان' : '199,000 Toman') : '$6.99';
+  const amount = vipAmount(fa, iran);
   const perks = fa
     ? ['روزی ۳۰ سؤال از Muse', 'چت VIP و همهٔ امکانات ویژه', 'امکاناتی که بعداً اضافه بشن هم شامل می‌شن']
     : ['30 Ask Muse questions a day', 'VIP chat and every VIP feature', 'Future VIP features included'];
@@ -118,8 +122,87 @@ function paintVip(v) {
 
   (isVip
     ? '<div class="vip-member"><h2>' + esc(fa ? '⭐ ممنون که VIP هستی!' : '⭐ Thanks for being VIP!') + '</h2>' +
-      '<p>' + esc(fa ? 'همهٔ امکانات فعال و در حال اضافه شدن، اول برای تو باز می‌شن.' : 'Every feature — live and upcoming — unlocks for you first.') + '</p></div>'
-    : vipPriceHTML(fa, vipIsIranPhone(u.phone)));
+      '<p>' + esc(fa ? 'همهٔ امکانات فعال و در حال اضافه شدن، اول برای تو باز می‌شن.' : 'Every feature — live and upcoming — unlocks for you first.') + '</p>' +
+      '<p style="margin:.4rem 0 0;font-weight:800">' + esc((fa ? 'پلن شما: ماهانه ' : 'Your plan: ') + vipAmount(fa, vipIsIranPhone(u.phone)) + (fa ? '' : ' / month')) + '</p></div>'
+    : vipPriceHTML(fa, vipIsIranPhone(u.phone))) +
+    '<p style="text-align:center;margin-top:1.1rem"><a href="#/pricing" style="font-weight:800;color:#c47b12">' + esc(fa ? 'مقایسهٔ کامل پلن‌ها و تعرفه‌ها' : 'Compare plans & full pricing') + '</a></p>';
+}
+
+/* ---------- Pricing page (#/pricing): both tariffs, the user's own plan
+   (by profile phone, never IP) highlighted, Free vs VIP comparison. ---------- */
+function prcCardHTML(fa, iranCard, mine, isVip) {
+  const region = iranCard ? (fa ? 'ایران' : 'Iran') : (fa ? 'بین‌المللی' : 'International');
+  const note = iranCard
+    ? (fa ? 'برای شماره تلفن ایران (‎+98)' : 'For Iran phone numbers (+98)')
+    : (fa ? 'برای شماره تلفن خارج از ایران' : 'For phone numbers outside Iran');
+  return '<div class="prc-card' + (mine ? ' mine' : '') + '">' +
+    (mine ? '<div class="prc-yours">' + esc(fa ? 'پلن شما' : 'Your plan') + '</div>' : '') +
+    '<div class="prc-region">' + esc(region) + '</div>' +
+    '<div class="prc-amount">' + esc(vipAmount(fa, iranCard)) + '</div>' +
+    '<p class="prc-per">' + esc(fa ? 'در ماه' : 'per month') + '</p>' +
+    (mine && !isVip
+      ? '<a class="btn btn-orange btn-block" href="#/support" style="padding:0.9rem 1.1rem;font-size:1.05rem;margin-top:1rem">' + esc(fa ? 'فعال‌سازی VIP' : 'Activate VIP') + '</a>'
+      : '') +
+    '<p class="prc-note">' + esc(note) + '</p>' +
+  '</div>';
+}
+
+function paintPricing(v) {
+  if (!v) return;
+  const fa = vipFa();
+  const u = state.user || {};
+  const isVip = u.isVip === true;
+  const iran = vipIsIranPhone(u.phone);
+  const yes = '<span class="prc-yes">✓</span>';
+  const no = '<span class="prc-no">—</span>';
+  const rows = fa ? [
+    ['سؤال از Muse', '۱۰ در روز', '۳۰ در روز'],
+    ['چت VIP (پارتنر زبان)', null, 'yes'],
+    ['قلب', 'محدود', 'نامحدود'],
+    ['دانلود آفلاین درس‌ها', null, 'yes'],
+    ['محافظ استریک', null, 'yes'],
+    ['بازخورد رایتینگ آیلتس', null, 'yes'],
+    ['گزارش پیشرفت پیشرفته', null, 'yes'],
+    ['پشتیبانی اولویت‌دار', null, 'yes']
+  ] : [
+    ['Ask Muse questions', '10 / day', '30 / day'],
+    ['VIP chat (language partner)', null, 'yes'],
+    ['Hearts', 'Limited', 'Unlimited'],
+    ['Offline lesson downloads', null, 'yes'],
+    ['Streak protection', null, 'yes'],
+    ['IELTS writing feedback', null, 'yes'],
+    ['Advanced progress report', null, 'yes'],
+    ['Priority support', null, 'yes']
+  ];
+  const cmp = '<div class="prc-cmp">' +
+    '<div class="prc-row"><div class="prc-f"></div><div class="prc-v">' + esc(fa ? 'رایگان' : 'Free') + '</div><div class="prc-v">VIP 👑</div></div>' +
+    rows.map(function (r) {
+      return '<div class="prc-row"><div class="prc-f">' + esc(r[0]) + '</div>' +
+        '<div class="prc-v">' + (r[1] ? esc(r[1]) : no) + '</div>' +
+        '<div class="prc-v">' + (r[2] === 'yes' ? yes : esc(r[2])) + '</div></div>';
+    }).join('') + '</div>';
+
+  v.innerHTML =
+    '<div class="vip-hero"><div class="vip-crown">👑</div>' +
+      '<h1>' + esc(fa ? 'تعرفه‌های ' : 'Muse ') + '<span class="vip-gold">VIP</span>' + (fa ? '' : ' pricing') + '</h1>' +
+      '<p class="vip-sub">' + esc(fa ? 'قیمت بر اساس شماره تلفنت مشخص می‌شه — یه اشتراک، همهٔ امکانات VIP.' : 'Your price follows your phone number — one plan, every VIP feature.') + '</p></div>' +
+    '<div class="prc-grid">' + prcCardHTML(fa, true, iran, isVip) + prcCardHTML(fa, false, !iran, isVip) + '</div>' +
+    '<p class="muted" style="text-align:center;margin-top:.9rem;font-size:.88rem">' + esc(fa ? 'پرداخت آنلاین به‌زودی وصل می‌شه؛ فعلاً فعال‌سازی از پشتیبانیه.' : 'Online payment is coming soon; activation is via Support for now.') + '</p>' +
+    '<h2 class="vip-sec-title">' + esc(fa ? 'مقایسهٔ پلن‌ها' : 'Compare plans') + '</h2>' + cmp +
+    '<p style="text-align:center;margin-top:1.2rem"><a href="#/vip" style="font-weight:800;color:#c47b12">' + esc(fa ? 'دیدن امکانات VIP' : 'See VIP features') + '</a></p>';
+}
+
+function renderPricing(v) {
+  paintPricing(v);
+  const u = state.user || {};
+  if (u.isVip === undefined && sb && u.id) {
+    sb.from('profiles').select('is_vip').eq('id', u.id).single().then(function (r) {
+      if (r && r.data) {
+        state.user.isVip = !!r.data.is_vip;
+        if (state.view === 'pricing') paintPricing(document.getElementById('view'));
+      }
+    }).catch(function () {});
+  }
 }
 
 function renderVip(v) {
