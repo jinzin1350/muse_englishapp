@@ -14869,7 +14869,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611202320';
+var APP_VERSION = '202611202333';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -15481,20 +15481,20 @@ function finishVocabQuiz() {
   window.scrollTo(0, 0);
 }
 
-/* Muse VIP page (#/vip) — what VIP members get.
+/* Muse VIP landing page (#/vip) — premium dark/gold hero + feature grid.
    Copy is bilingual inline (FA for fa UI, EN otherwise), same pattern as
    the Grammar Path / install guide. New labels reported to Alireza for
-   Claude's fa-ui.js dictionary. */
+   Claude's fa-ui.js dictionary. Styles: .vip-* in css/main.css. */
 function vipFa() { try { return uiLang() === 'fa'; } catch (e) { return false; } }
 
-function vipFeatureHTML(icon, title, desc, badge) {
-  return '<div class="card plain" style="display:flex;gap:0.85rem;align-items:flex-start">' +
-    '<div style="font-size:1.7rem;line-height:1.2" aria-hidden="true">' + icon + '</div>' +
+function vipFeatureHTML(icon, tint, title, desc, badge, badgeKind) {
+  return '<div class="vip-card">' +
+    '<div class="vip-ico vip-t-' + tint + '" aria-hidden="true">' + icon + '</div>' +
     '<div style="flex:1;min-width:0">' +
-      '<div style="font-weight:800;font-size:1.05rem">' + esc(title) +
-      (badge ? ' <span style="display:inline-block;background:#fff1e6;color:#e2630a;border:1px solid #f5c79b;border-radius:999px;padding:0.05rem 0.55rem;font-size:0.72rem;font-weight:700;vertical-align:middle">' + esc(badge) + '</span>' : '') +
-      '</div>' +
-      '<p class="muted" style="margin:0.3rem 0 0">' + esc(desc) + '</p>' +
+      '<h3>' + esc(title) +
+      (badge ? '<span class="vip-badge ' + badgeKind + '">' + esc(badge) + '</span>' : '') +
+      '</h3>' +
+      '<p>' + esc(desc) + '</p>' +
     '</div></div>';
 }
 
@@ -15502,72 +15502,80 @@ function paintVip(v) {
   const fa = vipFa();
   const u = state.user || {};
   const isVip = u.isVip === true;
+  const soon = fa ? 'به‌زودی' : 'Coming soon';
   v.innerHTML =
-  '<div style="background:linear-gradient(135deg,#f59e0b,#e2630a);border-radius:20px;padding:1.4rem 1.2rem;color:#fff;text-align:center;margin-bottom:1rem">' +
-    '<div style="font-size:2.6rem;line-height:1" aria-hidden="true">👑</div>' +
-    '<h1 style="margin:0.4rem 0 0.2rem;color:#fff">Muse VIP</h1>' +
-    '<p style="margin:0;opacity:0.95">' + esc(fa ? 'تجربهٔ کامل Muse English' : 'The full Muse English experience') + '</p>' +
-    (isVip
-      ? '<p style="margin:0.7rem 0 0;font-weight:800">' + esc(fa ? '⭐ اشتراک VIP شما فعاله' : '⭐ Your VIP is active') + '</p>'
-      : '') +
+  '<div class="vip-hero">' +
+    '<div class="vip-crown" aria-hidden="true">👑</div>' +
+    '<h1>Muse <span class="vip-gold">VIP</span></h1>' +
+    '<p class="vip-herotag">' + esc(fa ? 'تجربهٔ کامل Muse English — همهٔ امکانات، بدون محدودیت' : 'The full Muse English experience — every feature, no limits') + '</p>' +
+    '<div class="vip-chips">' +
+      '<span class="vip-chip">' + esc(fa ? '🤖 روزی ۳۰ سؤال از Muse' : '🤖 30 Ask Muse questions a day') + '</span>' +
+      '<span class="vip-chip">' + esc(fa ? '💬 چت با زبان‌آموزها' : '💬 Learner chat') + '</span>' +
+      '<span class="vip-chip">' + esc(fa ? '❤️ قلب نامحدود' : '❤️ Unlimited hearts') + '</span>' +
+    '</div>' +
+    (isVip ? '<div><span class="vip-active-pill">' + esc(fa ? '⭐ اشتراک VIP شما فعاله' : '⭐ Your VIP is active') + '</span></div>' : '') +
   '</div>' +
 
-  '<div class="section-title"><h2>' + esc(fa ? 'امکانات VIP' : 'VIP features') + '</h2></div>' +
+  '<div class="vip-sec-title"><h2>' + esc(fa ? 'امکانات VIP' : 'VIP features') + '</h2></div>' +
+  '<div class="vip-grid">' +
 
-  vipFeatureHTML('🤖',
+  vipFeatureHTML('🤖', 'violet',
     fa ? 'از Muse بپرس — سؤال بیشتر' : 'Ask Muse — more questions',
     fa ? 'هر سؤالی دربارهٔ انگلیسی داری از Muse بپرس. با VIP روزی ۳۰ سؤال می‌تونی بپرسی؛ توی حالت عادی فقط ۱۰ سؤال در روز.'
        : 'Ask Muse anything about English. VIPs get 30 questions a day; the free limit is 10 a day.',
-    '') +
+    fa ? 'فعال' : 'Live', 'live') +
 
-  vipFeatureHTML('💬',
+  vipFeatureHTML('💬', 'sky',
     fa ? 'چت با VIPها — پارتنر زبان' : 'VIP chat — language partners',
     fa ? 'از بین زبان‌آموزهای برتر چلنج یه پارتنر تمرین پیدا کن و باهاش چت کن. فقط VIPها می‌تونن به بقیه پیام بدن و جواب پیام‌ها رو بدن.'
        : 'Find a practice partner among the top learners in the Challenge and chat with them. Only VIPs can message other learners and reply.',
-    fa ? 'به‌زودی' : 'Coming soon') +
+    soon, 'soon') +
 
-  vipFeatureHTML('❤️',
+  vipFeatureHTML('❤️', 'rose',
     fa ? 'قلب نامحدود' : 'Unlimited hearts',
     fa ? 'با VIP قلب‌هات تموم نمی‌شن؛ هر چقدر اشتباه کنی، درس و تمرین همیشه برات بازه.'
        : 'With VIP your hearts never run out — make as many mistakes as you like, lessons and practice always stay open.',
-    fa ? 'به‌زودی' : 'Coming soon') +
+    soon, 'soon') +
 
-  vipFeatureHTML('📥',
+  vipFeatureHTML('📥', 'teal',
     fa ? 'دانلود آفلاین درس‌ها' : 'Offline lesson downloads',
     fa ? 'پادکست و شدویینگ هر درس رو دانلود کن و بدون اینترنت گوش بده — توی راه، توی مترو، هر جا.'
        : 'Download each lesson’s podcast and shadowing audio and listen offline — on the road, on the subway, anywhere.',
-    fa ? 'به‌زودی' : 'Coming soon') +
+    soon, 'soon') +
 
-  vipFeatureHTML('🧊',
+  vipFeatureHTML('🧊', 'ice',
     fa ? 'محافظ استریک' : 'Streak protection',
     fa ? 'یه روز درس جا بیفته، استریکت نمی‌سوزه؛ VIP محافظ‌های بیشتری برای نگه داشتن زنجیره‌ت داره.'
        : 'Miss a day and your streak survives — VIPs get extra freezes to protect their chain.',
-    fa ? 'به‌زودی' : 'Coming soon') +
+    soon, 'soon') +
 
-  vipFeatureHTML('✍️',
+  vipFeatureHTML('✍️', 'gold',
     fa ? 'بازخورد رایتینگ آیلتس' : 'IELTS writing feedback',
     fa ? 'رایتینگ‌های تمرین آیلتس‌ت رو بفرست و بازخورد و نمرهٔ تقریبی بگیر تا بدونی کجای کاری.'
        : 'Submit your IELTS practice writing and get feedback with an estimated band, so you know where you stand.',
-    fa ? 'به‌زودی' : 'Coming soon') +
+    soon, 'soon') +
 
-  vipFeatureHTML('📊',
+  vipFeatureHTML('📊', 'green',
     fa ? 'گزارش پیشرفت پیشرفته' : 'Advanced progress report',
     fa ? 'نمودار کامل پیشرفت، تحلیل نقاط قوت و ضعف و اینکه دقیقاً روی چی باید تمرکز کنی.'
        : 'Full progress charts, a breakdown of your strengths and weak spots, and exactly what to focus on next.',
-    fa ? 'به‌زودی' : 'Coming soon') +
+    soon, 'soon') +
 
-  vipFeatureHTML('🚀',
+  vipFeatureHTML('🚀', 'orange',
     fa ? 'پشتیبانی اولویت‌دار' : 'Priority support',
     fa ? 'سؤال یا مشکلی داشتی، پیام VIPها اول صف جواب می‌گیرن.'
        : 'Questions or problems? VIP messages jump to the front of the support queue.',
-    fa ? 'به‌زودی' : 'Coming soon') +
+    soon, 'soon') +
 
-  '<p class="muted" style="text-align:center;margin:1rem 0">' + esc(fa ? 'امکانات بیشتری برای VIP در راهه…' : 'More VIP features are on the way…') + '</p>' +
+  '</div>' +
 
   (isVip
-    ? '<div class="card plain" style="text-align:center"><p style="margin:0;font-weight:700">' + esc(fa ? '⭐ ممنون که VIP هستی!' : '⭐ Thanks for being VIP!') + '</p></div>'
-    : '<a class="btn btn-orange btn-block" href="#/support" style="padding:0.9rem 1.1rem;font-size:1.02rem">' + esc(fa ? 'فعال‌سازی VIP' : 'Activate VIP') + '</a>' +
-      '<p class="muted" style="text-align:center;margin-top:0.5rem">' + esc(fa ? 'برای فعال‌سازی VIP به پشتیبانی پیام بده.' : 'Message Support to activate VIP.') + '</p>');
+    ? '<div class="vip-member"><h2>' + esc(fa ? '⭐ ممنون که VIP هستی!' : '⭐ Thanks for being VIP!') + '</h2>' +
+      '<p>' + esc(fa ? 'همهٔ امکانات فعال و در حال اضافه شدن، اول برای تو باز می‌شن.' : 'Every feature — live and upcoming — unlocks for you first.') + '</p></div>'
+    : '<div class="vip-cta"><h2>' + esc(fa ? 'همین حالا VIP شو' : 'Go VIP today') + '</h2>' +
+      '<p>' + esc(fa ? 'با فعال‌سازی VIP همهٔ این امکانات برات باز می‌شه.' : 'Activate VIP and unlock all of it.') + '</p>' +
+      '<a class="vip-cta-btn" href="#/support">' + esc(fa ? 'فعال‌سازی VIP' : 'Activate VIP') + '</a>' +
+      '<p style="margin:.8rem auto 0;font-size:.85rem">' + esc(fa ? 'برای فعال‌سازی به پشتیبانی پیام بده.' : 'Message Support to activate.') + '</p></div>');
 }
 
 function renderVip(v) {

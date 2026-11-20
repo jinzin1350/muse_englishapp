@@ -5244,6 +5244,50 @@ html.ui-fa [data-fa]{font-family:"Vazirmatn",system-ui,-apple-system,"Segoe UI",
 .ui-lang-row [lang="fa"]{font-family:"Vazirmatn",system-ui,sans-serif}
 .ui-lang-note{margin:.6rem 0 0;font-size:.85rem}
 
+/* ===== Muse VIP landing (#/vip) — 2026-11-20 ===== */
+.vip-hero{position:relative;overflow:hidden;border-radius:24px;padding:2rem 1.3rem 1.6rem;text-align:center;color:#fff;
+  background:radial-gradient(120% 90% at 50% 0%,#4a2680 0%,#2a1650 46%,#17102e 100%);
+  box-shadow:0 18px 40px rgba(38,18,80,.35)}
+.vip-hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(45% 32% at 50% 0%,rgba(245,197,81,.35),rgba(245,197,81,0) 70%)}
+.vip-hero>*{position:relative}
+.vip-crown{width:76px;height:76px;margin:0 auto;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:2.3rem;background:radial-gradient(circle at 35% 30%,#ffe9a8,#f5c451 55%,#d99a1f);
+  box-shadow:0 10px 26px rgba(245,197,81,.45),inset 0 2px 6px rgba(255,255,255,.65)}
+.vip-hero h1{margin:.85rem 0 .3rem;font-size:2.15rem;letter-spacing:.01em;color:#fff}
+.vip-hero h1 .vip-gold{background:linear-gradient(92deg,#ffe9a8,#f5c451 55%,#eda93b);-webkit-background-clip:text;background-clip:text;color:transparent}
+.vip-herotag{margin:0 auto;max-width:26rem;color:rgba(255,255,255,.86);font-size:1.02rem;line-height:1.55}
+.vip-chips{display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin-top:1.05rem}
+.vip-chip{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);color:#ffe9a8;
+  border-radius:999px;padding:.32rem .8rem;font-size:.83rem;font-weight:700;backdrop-filter:blur(4px)}
+.vip-active-pill{display:inline-block;margin-top:1rem;background:rgba(245,197,81,.16);border:1px solid rgba(245,197,81,.55);
+  color:#ffe9a8;border-radius:999px;padding:.42rem 1rem;font-weight:800;font-size:.92rem}
+.vip-sec-title{display:flex;align-items:center;gap:.7rem;margin:1.5rem 0 .9rem}
+.vip-sec-title h2{margin:0;font-size:1.28rem}
+.vip-sec-title::after{content:"";flex:1;height:3px;border-radius:3px;background:linear-gradient(90deg,#f5c451,rgba(245,197,81,0))}
+.vip-grid{display:grid;grid-template-columns:1fr;gap:.8rem}
+@media (min-width:720px){.vip-grid{grid-template-columns:1fr 1fr}}
+.vip-card{display:flex;gap:.9rem;align-items:flex-start;background:#fff;border:1px solid #f3e7d7;border-radius:18px;
+  padding:1.05rem 1rem;box-shadow:0 6px 18px rgba(120,72,20,.06)}
+.vip-ico{flex:none;width:54px;height:54px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:1.65rem}
+.vip-t-violet{background:#efe9fd}.vip-t-sky{background:#e3f0fe}.vip-t-rose{background:#ffe7ee}.vip-t-teal{background:#ddf5f0}
+.vip-t-ice{background:#e0f4fe}.vip-t-gold{background:#fdf0d3}.vip-t-green{background:#e2f6e4}.vip-t-orange{background:#ffecdd}
+.vip-card h3{margin:0;font-size:1.04rem;font-weight:800;display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+.vip-card p{margin:.32rem 0 0;color:#8a7a63;font-size:.93rem;line-height:1.55}
+.vip-badge{font-size:.7rem;font-weight:800;border-radius:999px;padding:.14rem .55rem;letter-spacing:.01em}
+.vip-badge.soon{background:#fff4d6;color:#a86e00;border:1px solid #f0d48a}
+.vip-badge.live{background:#e2f6e4;color:#1d7a35;border:1px solid #a9dcb2}
+.vip-cta{margin-top:1.4rem;border-radius:22px;padding:1.5rem 1.2rem;text-align:center;color:#fff;
+  background:linear-gradient(135deg,#f59e0b,#e2630a);box-shadow:0 14px 32px rgba(226,99,10,.32)}
+.vip-cta h2{margin:0 0 .35rem;color:#fff;font-size:1.45rem}
+.vip-cta p{margin:0 auto .95rem;max-width:24rem;color:rgba(255,255,255,.92)}
+.vip-cta .vip-cta-btn{display:inline-block;background:#fff;color:#d95d06;font-weight:800;font-size:1.05rem;
+  border-radius:14px;padding:.85rem 2rem;text-decoration:none;box-shadow:0 8px 20px rgba(120,50,0,.25)}
+.vip-member{margin-top:1.4rem;border-radius:22px;padding:1.4rem 1.2rem;text-align:center;
+  background:linear-gradient(135deg,#fdf0d3,#fbe3a1);border:1px solid #f0d48a;color:#7a5200}
+.vip-member h2{margin:0 0 .3rem;color:#7a5200}
+.vip-member p{margin:0}
+
 /* ===== Ask Muse (از Muse بپرس): AI tutor chat. Claude, 2026-11-14. Owned by Claude: src/app/17-ask-muse.js ===== */
 #askm-fab{position:fixed;right:16px;bottom:calc(86px + env(safe-area-inset-bottom));z-index:65;width:60px;height:60px;padding:0;border-radius:50%;
   border:2px solid #FFD6AE;background:#FFF6EA;box-shadow:0 8px 22px rgba(200,75,49,.28),0 2px 6px rgba(23,33,43,.12);cursor:pointer;
