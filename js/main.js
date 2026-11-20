@@ -14869,7 +14869,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611202333';
+var APP_VERSION = '202611202341';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -15498,6 +15498,36 @@ function vipFeatureHTML(icon, tint, title, desc, badge, badgeKind) {
     '</div></div>';
 }
 
+/* Pricing region comes ONLY from the profile phone (never IP — VPNs make
+   IP useless for this). Iran: +98 / 0098 / 989… / 09xxxxxxxxx numbers.
+   Anything else (or no phone yet) gets the international price. */
+function vipIsIranPhone(phone) {
+  if (!phone) return false;
+  var p = String(phone)
+    .replace(/[۰-۹]/g, function (d) { return '۰۱۲۳۴۵۶۷۸۹'.indexOf(d); })
+    .replace(/[٠-٩]/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'.indexOf(d); })
+    .replace(/[\s\-()]/g, '');
+  if (p.indexOf('+98') === 0 || p.indexOf('0098') === 0) return true;
+  if (/^09\d{9}$/.test(p)) return true;
+  if (/^989\d{9}$/.test(p)) return true;
+  return false;
+}
+
+function vipPriceHTML(fa, iran) {
+  const amount = iran ? (fa ? '۱۹۹٬۰۰۰ تومان' : '199,000 Toman') : '$6.99';
+  const perks = fa
+    ? ['روزی ۳۰ سؤال از Muse', 'چت VIP و همهٔ امکانات ویژه', 'امکاناتی که بعداً اضافه بشن هم شامل می‌شن']
+    : ['30 Ask Muse questions a day', 'VIP chat and every VIP feature', 'Future VIP features included'];
+  return '<div class="vip-price">' +
+    '<div class="vip-plan">' + esc(fa ? 'اشتراک ماهانهٔ VIP' : 'VIP monthly plan') + '</div>' +
+    '<div class="vip-amount">' + esc(amount) + '</div>' +
+    '<p class="vip-per">' + esc(fa ? 'در ماه' : 'per month') + '</p>' +
+    '<ul class="vip-perks">' + perks.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>' +
+    '<a class="btn btn-orange btn-block" href="#/support" style="padding:0.9rem 1.1rem;font-size:1.05rem;margin-top:0.9rem">' + esc(fa ? 'فعال‌سازی VIP' : 'Activate VIP') + '</a>' +
+    '<p class="muted" style="margin:0.6rem 0 0;font-size:0.85rem">' + esc(fa ? 'برای فعال‌سازی به پشتیبانی پیام بده.' : 'Message Support to activate.') + '</p>' +
+  '</div>';
+}
+
 function paintVip(v) {
   const fa = vipFa();
   const u = state.user || {};
@@ -15572,10 +15602,7 @@ function paintVip(v) {
   (isVip
     ? '<div class="vip-member"><h2>' + esc(fa ? '⭐ ممنون که VIP هستی!' : '⭐ Thanks for being VIP!') + '</h2>' +
       '<p>' + esc(fa ? 'همهٔ امکانات فعال و در حال اضافه شدن، اول برای تو باز می‌شن.' : 'Every feature — live and upcoming — unlocks for you first.') + '</p></div>'
-    : '<div class="vip-cta"><h2>' + esc(fa ? 'همین حالا VIP شو' : 'Go VIP today') + '</h2>' +
-      '<p>' + esc(fa ? 'با فعال‌سازی VIP همهٔ این امکانات برات باز می‌شه.' : 'Activate VIP and unlock all of it.') + '</p>' +
-      '<a class="vip-cta-btn" href="#/support">' + esc(fa ? 'فعال‌سازی VIP' : 'Activate VIP') + '</a>' +
-      '<p style="margin:.8rem auto 0;font-size:.85rem">' + esc(fa ? 'برای فعال‌سازی به پشتیبانی پیام بده.' : 'Message Support to activate.') + '</p></div>');
+    : vipPriceHTML(fa, vipIsIranPhone(u.phone)));
 }
 
 function renderVip(v) {

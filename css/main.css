@@ -5283,6 +5283,14 @@ html.ui-fa [data-fa]{font-family:"Vazirmatn",system-ui,-apple-system,"Segoe UI",
 .vip-cta p{margin:0 auto .95rem;max-width:24rem;color:rgba(255,255,255,.92)}
 .vip-cta .vip-cta-btn{display:inline-block;background:#fff;color:#d95d06;font-weight:800;font-size:1.05rem;
   border-radius:14px;padding:.85rem 2rem;text-decoration:none;box-shadow:0 8px 20px rgba(120,50,0,.25)}
+.vip-price{margin-top:1.4rem;background:#fff;border:2px solid #f0d48a;border-radius:22px;padding:1.5rem 1.2rem;
+  text-align:center;box-shadow:0 14px 32px rgba(185,122,15,.14)}
+.vip-price .vip-plan{font-weight:800;color:#a86e00;font-size:.95rem;letter-spacing:.02em}
+.vip-price .vip-amount{font-size:2.3rem;font-weight:900;margin:.35rem 0 .1rem;color:#3a2a10;line-height:1.15}
+.vip-price .vip-per{color:#8a7a63;margin:0}
+.vip-perks{list-style:none;margin:1rem auto .2rem;padding:0;max-width:19rem;text-align:start}
+.vip-perks li{padding:.34rem 0;font-size:.97rem;display:flex;gap:.55rem;align-items:baseline}
+.vip-perks li::before{content:"✓";color:#d99a1f;font-weight:900}
 .vip-member{margin-top:1.4rem;border-radius:22px;padding:1.4rem 1.2rem;text-align:center;
   background:linear-gradient(135deg,#fdf0d3,#fbe3a1);border:1px solid #f0d48a;color:#7a5200}
 .vip-member h2{margin:0 0 .3rem;color:#7a5200}
