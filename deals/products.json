@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "dyson-v11-origin",
+      "name_fa": "جارو شارژی دایسون V11 Origin",
+      "name_en": "Dyson V11 Origin Cordless Vacuum",
+      "price_cad": 499.99,
+      "regular_cad": 799.99,
+      "discount_pct": 38,
+      "added_fa": "جمعه، ۲۰ نوامبر ۲۰۲۶",
+      "image": "img/dyson-v11-origin.jpg",
+      "url": "https://www.amazon.ca/dp/B00FZPRUTY?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "مکش قدرتمند، باتری تا ۶۰ دقیقه و مناسب موی حیوانات"
+    },
+    {
+      "id": "ninja-slushi-fs301c",
+      "name_fa": "دستگاه نوشیدنی یخی نینجا SLUSHi",
+      "name_en": "Ninja SLUSHi Professional Frozen Drink & Ice Machine with RapidChill Technology, Slushie Maker, 5 Preset Programs for Frozen Margaritas, Frappés, and More, FS301C (Canadian Version)",
+      "price_cad": 279.99,
+      "regular_cad": 449.99,
+      "discount_pct": 38,
+      "added_fa": "جمعه، ۲۰ نوامبر ۲۰۲۶",
+      "image": "img/ninja-slushi-fs301c.jpg",
+      "url": "https://www.amazon.ca/dp/B0D88SMLS2?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "بدون نیاز به یخ، پنج برنامه آماده و مخزن بزرگ ۲.۶ لیتری"
+    },
+    {
       "id": "eufy-solocam-s340",
       "name_fa": "دوربین خورشیدی یوفی SoloCam S340",
       "name_en": "eufy Security SoloCam S340, Solar Security Camera, Wireless Outdoor Camera, 360° Surveillance, No Blind Spots, 2.4 GHz Wi-Fi, No Monthly Fee, HomeBase S380 Compatible",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "ضدآب IP68، باتری ۲۸ ساعته و پاوربانک داخلی"
-    },
-    {
-      "id": "amazon-basics-ups-800va",
-      "name_fa": "یو‌پی‌اس آمازون بیسیکس ۸۰۰ ولت‌آمپر",
-      "name_en": "Amazon Basics Standby UPS Battery Backup 800VA 450W Surge Protector, 12 Outlets, Black",
-      "price_cad": 99.99,
-      "regular_cad": 135.89,
-      "discount_pct": 26,
-      "added_fa": "چهارشنبه، ۱۸ نوامبر ۲۰۲۶",
-      "image": "img/amazon-basics-ups-800va.jpg",
-      "url": "https://www.amazon.ca/dp/B073Q3BSPG?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "۸۰۰ ولت‌آمپر، ۱۲ خروجی و محافظ نوسان برق"
-    },
-    {
-      "id": "ring-indoor-cam-2nd-gen",
-      "name_fa": "دوربین داخلی رینگ نسل دوم",
-      "name_en": "Ring Indoor Cam (2nd Gen) | 1080p HD Video & Colour Night Vision, Two-Way Talk, Manual Privacy Cover, White",
-      "price_cad": 34.99,
-      "regular_cad": 69.99,
-      "discount_pct": 50,
-      "added_fa": "چهارشنبه، ۱۸ نوامبر ۲۰۲۶",
-      "image": "img/ring-indoor-cam-2nd-gen.jpg",
-      "url": "https://www.amazon.ca/dp/B0B6GKV165?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "ویدیوی HD، دید در شب رنگی و درپوش حریم خصوصی"
     }
   ],
-  "updated_fa": "پنجشنبه ۲۸ آبان"
+  "updated_fa": "جمعه ۲۹ آبان"
 }
