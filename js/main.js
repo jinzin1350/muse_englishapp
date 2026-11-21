@@ -14869,7 +14869,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611210002';
+var APP_VERSION = '202611210007';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -15610,24 +15610,24 @@ function paintVip(v) {
       '<p style="margin:.4rem 0 0;font-weight:800">' + esc((fa ? 'پلن شما: ماهانه ' : 'Your plan: ') + vipAmount(fa, iran) + (fa ? '' : ' / month')) + '</p></div>'
     : '') +
     '<h2 class="vip-sec-title">' + esc(fa ? 'تعرفه‌ها' : 'Pricing') + '</h2>' +
-    '<div class="prc-grid">' + prcCardHTML(fa, true, iran, isVip) + prcCardHTML(fa, false, !iran, isVip) + '</div>' +
+    '<div class="prc-single">' + prcCardHTML(fa, iran, isVip) + '</div>' +
     '<p class="muted" style="text-align:center;margin-top:.9rem;font-size:.88rem">' + esc(fa ? 'قیمت بر اساس شماره تلفنت مشخص می‌شه؛ پرداخت آنلاین به‌زودی وصل می‌شه و فعلاً فعال‌سازی از پشتیبانیه.' : 'Your price follows your phone number. Online payment is coming soon; activation is via Support for now.') + '</p>' +
     vipCompareHTML(fa);
 }
 
 /* ---------- Pricing section on the VIP page: both tariffs, the user's
    own plan (by profile phone, never IP) highlighted, Free vs VIP table. ---------- */
-function prcCardHTML(fa, iranCard, mine, isVip) {
-  const region = iranCard ? (fa ? 'ایران' : 'Iran') : (fa ? 'بین‌المللی' : 'International');
+/* ONE price card: the visitor sees ONLY their own region's price —
+   Iran phone → Toman, any other phone → USD. Never both. */
+function prcCardHTML(fa, iranCard, isVip) {
   const note = iranCard
     ? (fa ? 'برای شماره تلفن ایران (‎+98)' : 'For Iran phone numbers (+98)')
     : (fa ? 'برای شماره تلفن خارج از ایران' : 'For phone numbers outside Iran');
-  return '<div class="prc-card' + (mine ? ' mine' : '') + '">' +
-    (mine ? '<div class="prc-yours">' + esc(fa ? 'پلن شما' : 'Your plan') + '</div>' : '') +
-    '<div class="prc-region">' + esc(region) + '</div>' +
+  return '<div class="prc-card mine">' +
+    '<div class="prc-region">' + esc(fa ? 'اشتراک ماهانهٔ VIP' : 'VIP monthly plan') + '</div>' +
     '<div class="prc-amount">' + esc(vipAmount(fa, iranCard)) + '</div>' +
     '<p class="prc-per">' + esc(fa ? 'در ماه' : 'per month') + '</p>' +
-    (mine && !isVip
+    (!isVip
       ? '<a class="btn btn-orange btn-block" href="#/support" style="padding:0.9rem 1.1rem;font-size:1.05rem;margin-top:1rem">' + esc(fa ? 'فعال‌سازی VIP' : 'Activate VIP') + '</a>'
       : '') +
     '<p class="prc-note">' + esc(note) + '</p>' +

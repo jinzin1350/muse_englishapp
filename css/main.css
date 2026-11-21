@@ -5297,6 +5297,7 @@ html.ui-fa [data-fa]{font-family:"Vazirmatn",system-ui,-apple-system,"Segoe UI",
 .vip-member p{margin:0}
 
 /* ---------- Pricing page ---------- */
+.prc-single{max-width:26rem;margin:1.3rem auto 0}
 .prc-grid{display:grid;gap:1.1rem;margin-top:1.3rem}
 @media(min-width:640px){.prc-grid{grid-template-columns:1fr 1fr}}
 .prc-card{background:#fff;border:2px solid #ead9c2;border-radius:22px;padding:1.6rem 1.2rem 1.4rem;
