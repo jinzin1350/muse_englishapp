@@ -45,6 +45,7 @@ function chtSoonHTML(fa) {
 
 function renderChatRoute(v, arg) {
   document.body.classList.add('cht-open');
+  try { trackEvent('chat_view', { view: arg ? 'thread' : 'list' }); } catch (e) {}
   if (arg) renderChatThread(v, arg);
   else renderChat(v);
 }
