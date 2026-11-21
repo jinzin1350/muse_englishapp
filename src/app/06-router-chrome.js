@@ -41,7 +41,7 @@ function shouldEnterAppMode() {
 }
 
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest', 'certificate'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'support', 'vip', 'ptest', 'certificate'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'support', 'vip', 'chat', 'ptest', 'certificate'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 /* Return-after-signup (Claude for Alireza, 2026-11-10): a signed-out visitor
    who opens one of these routes (e.g. the /fa/ielts/ CTA -> #/ielts) sees the
@@ -198,6 +198,7 @@ function show(view, arg) {
   if (view !== 'grammar') { state.gquiz = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'grammar-test') { gtestStopTimer(); state.gtest = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'ielts') { ieltsStopMedia(); }
+  if (view !== 'chat') { chtStopPoll(); }
   if (view !== 'vocab') { state.vquiz = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'ptest') { if (state.ptest) { document.body.classList.remove('duo-playing'); } state.ptest = null; }
   /* Desktop home uses the mockup v6 dashboard layout. */
@@ -229,6 +230,7 @@ function show(view, arg) {
   else if (view === 'inbox') renderInbox(v);
   else if (view === 'support') renderSupport(v);
   else if (view === 'vip') renderVip(v);
+  else if (view === 'chat') renderChatRoute(v, arg);
   else if (view === 'homework') renderHomework(v);
   else if (view === 'admin') renderAdmin(v);
   else if (view === 'admin-teacher') renderAdminTeacherView(v, arg);

@@ -4,8 +4,8 @@
    Claude's fa-ui.js dictionary. Styles: .vip-* in css/main.css. */
 function vipFa() { try { return uiLang() === 'fa'; } catch (e) { return false; } }
 
-function vipFeatureHTML(icon, tint, title, desc, badge, badgeKind) {
-  return '<div class="vip-card">' +
+function vipFeatureHTML(icon, tint, title, desc, badge, badgeKind, link) {
+  const card = '<div class="vip-card">' +
     '<div class="vip-ico vip-t-' + tint + '" aria-hidden="true">' + icon + '</div>' +
     '<div style="flex:1;min-width:0">' +
       '<h3>' + esc(title) +
@@ -13,6 +13,7 @@ function vipFeatureHTML(icon, tint, title, desc, badge, badgeKind) {
       '</h3>' +
       '<p>' + esc(desc) + '</p>' +
     '</div></div>';
+  return link ? '<a href="' + link + '" style="text-decoration:none;color:inherit;display:block">' + card + '</a>' : card;
 }
 
 /* Pricing region comes ONLY from the profile phone (never IP — VPNs make
@@ -81,7 +82,7 @@ function paintVip(v) {
     fa ? 'چت با VIPها — پارتنر زبان' : 'VIP chat — language partners',
     fa ? 'از بین زبان‌آموزهای برتر چلنج یه پارتنر تمرین پیدا کن و باهاش چت کن. فقط VIPها می‌تونن به بقیه پیام بدن و جواب پیام‌ها رو بدن.'
        : 'Find a practice partner among the top learners in the Challenge and chat with them. Only VIPs can message other learners and reply.',
-    soon, 'soon') +
+    fa ? 'فعال' : 'Live', 'live', '#/chat') +
 
   vipFeatureHTML('❤️', 'rose',
     fa ? 'قلب نامحدود' : 'Unlimited hearts',

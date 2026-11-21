@@ -540,7 +540,8 @@ function renderProfile(v) {
     : '') +
 
   '<div class="section-title"><h2>VIP</h2></div>' +
-  '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/vip" style="margin-top:0">👑 Muse VIP</a></div>' +
+  '<div class="card plain"><a class="btn btn-ghost btn-block" href="#/vip" style="margin-top:0">👑 Muse VIP</a>' +
+  '<a class="btn btn-ghost btn-block" href="#/chat" style="margin-top:0.6rem">💬 ' + (uiLang() === 'fa' ? 'چت VIP (پارتنر زبان)' : 'VIP Chat (language partner)') + '</a></div>' +
 
   '<div class="section-title"><h2>Notifications</h2></div>' +
   '<div class="card plain">' +

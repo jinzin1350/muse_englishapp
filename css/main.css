@@ -5319,6 +5319,35 @@ html.ui-fa [data-fa]{font-family:"Vazirmatn",system-ui,-apple-system,"Segoe UI",
 .prc-yes{color:#d99a1f;font-weight:900}
 .prc-no{color:#c9bda6}
 
+/* ---------- VIP chat (پارتنر زبان) ---------- */
+.cht-row{display:flex;gap:.7rem;align-items:center;background:#fff;border:1px solid #ead9c2;
+  border-radius:16px;padding:.8rem .9rem;margin-top:.6rem;box-shadow:0 6px 16px rgba(60,40,10,.05)}
+.cht-av{width:2.6rem;height:2.6rem;border-radius:50%;flex:none;color:#fff;font-weight:800;font-size:1.05rem;
+  background:linear-gradient(135deg,#7b4dff,#b98cff);display:flex;align-items:center;justify-content:center}
+.cht-name{font-weight:700}
+.cht-meta{color:#8a7a63;font-size:.84rem;margin-top:.15rem}
+.cht-snippet{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:15rem}
+.cht-lvl{background:#efe7ff;color:#5b3df0;border-radius:999px;font-size:.7rem;font-weight:800;padding:.12rem .5rem}
+.cht-chip{background:#fdf0d5;color:#a86e00;border-radius:999px;font-size:.78rem;font-weight:800;padding:.35rem .7rem;white-space:nowrap}
+.cht-badge{background:#e5484d;color:#fff;border-radius:999px;font-size:.72rem;font-weight:800;padding:.12rem .5rem}
+.cht-switch{position:relative;width:3rem;height:1.7rem;flex:none}
+.cht-switch input{opacity:0;width:100%;height:100%;position:absolute;margin:0;cursor:pointer;z-index:1}
+.cht-switch span{position:absolute;inset:0;background:#e5d9c8;border-radius:999px;transition:.2s}
+.cht-switch span::after{content:"";position:absolute;top:.2rem;inset-inline-start:.2rem;width:1.3rem;height:1.3rem;
+  background:#fff;border-radius:50%;transition:.2s;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+.cht-switch input:checked + span{background:#f2630a}
+.cht-switch input:checked + span::after{transform:translateX(1.3rem)}
+.cht-head{display:flex;gap:.6rem;align-items:center;margin-top:.4rem}
+.cht-back{font-weight:800;color:#c47b12;text-decoration:none}
+.cht-msgs{display:flex;flex-direction:column;gap:.45rem;margin-top:1rem}
+.cht-b{max-width:78%;padding:.55rem .8rem;border-radius:16px;background:#fff;border:1px solid #ead9c2;
+  align-self:flex-start;white-space:pre-wrap;word-break:break-word;line-height:1.5}
+.cht-b.me{align-self:flex-end;background:linear-gradient(135deg,#ff8a3d,#f2630a);color:#fff;border-color:transparent}
+.cht-time{display:block;font-size:.64rem;opacity:.65;margin-top:.2rem;text-align:end}
+.cht-inputbar{display:flex;gap:.5rem;margin-top:1rem}
+.cht-input{flex:1;border:1.5px solid #ead9c2;border-radius:14px;padding:.75rem .9rem;font:inherit;background:#fff;min-width:0}
+.cht-input:focus{outline:none;border-color:#f2630a}
+
 /* ===== Ask Muse (از Muse بپرس): AI tutor chat. Claude, 2026-11-14. Owned by Claude: src/app/17-ask-muse.js ===== */
 #askm-fab{position:fixed;right:16px;bottom:calc(86px + env(safe-area-inset-bottom));z-index:65;width:60px;height:60px;padding:0;border-radius:50%;
   border:2px solid #FFD6AE;background:#FFF6EA;box-shadow:0 8px 22px rgba(200,75,49,.28),0 2px 6px rgba(23,33,43,.12);cursor:pointer;
