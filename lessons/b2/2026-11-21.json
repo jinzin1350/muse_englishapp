@@ -1,0 +1,192 @@
+{
+ "date": "2026-11-21",
+ "theme": "travel & transport",
+ "level": "b2",
+ "cefr": "B2",
+ "words": [
+  {
+   "word": "bike",
+   "pos": "noun",
+   "meaning": "A bicycle.",
+   "example": "Let's ride our bikes to the park.",
+   "pronunciation": "BYK",
+   "persian": "دوچرخه",
+   "photo": "media/b2/2026-11-21/photos/bike.jpg",
+   "word_audio": "media/b2/2026-11-21/word-audio/bike.mp3"
+  },
+  {
+   "word": "bus stop",
+   "pos": "noun",
+   "meaning": "A place where a bus stops for people.",
+   "example": "I wait for the bus at the bus stop.",
+   "pronunciation": "BUS stop",
+   "persian": "ایستگاه اتوبوس",
+   "photo": "media/b2/2026-11-21/photos/bus-stop.jpg",
+   "word_audio": "media/b2/2026-11-21/word-audio/bus-stop.mp3"
+  },
+  {
+   "word": "campsite",
+   "pos": "noun",
+   "meaning": "A place where people can camp.",
+   "example": "We found a nice campsite by the lake.",
+   "pronunciation": "KAMP-syt",
+   "persian": "محل کمپینگ",
+   "photo": "media/b2/2026-11-21/photos/campsite.jpg",
+   "word_audio": "media/b2/2026-11-21/word-audio/campsite.mp3"
+  },
+  {
+   "word": "caravan",
+   "pos": "noun",
+   "meaning": "A vehicle for living in, pulled by a car.",
+   "example": "We took our caravan on holiday to the coast.",
+   "pronunciation": "KA-ruh-van",
+   "persian": "کاروان، خانه متحرک",
+   "photo": "media/b2/2026-11-21/photos/caravan.jpg",
+   "word_audio": "media/b2/2026-11-21/word-audio/caravan.mp3"
+  },
+  {
+   "word": "delightful",
+   "pos": "adjective",
+   "meaning": "Very pleasant and enjoyable.",
+   "example": "We had a delightful time at the beach.",
+   "pronunciation": "dih-LYT-ful",
+   "persian": "دلپذیر، لذت‌بخش",
+   "photo": "media/b2/2026-11-21/photos/delightful.jpg",
+   "word_audio": "media/b2/2026-11-21/word-audio/delightful.mp3"
+  },
+  {
+   "word": "early morning",
+   "pos": "noun phrase",
+   "meaning": "The first part of the morning.",
+   "example": "We left in the early morning.",
+   "pronunciation": "ER-lee MOR-ning",
+   "persian": "صبح زود",
+   "photo": "media/b2/2026-11-21/photos/early-morning.jpg",
+   "word_audio": "media/b2/2026-11-21/word-audio/early-morning.mp3"
+  },
+  {
+   "word": "exceptional",
+   "pos": "adjective",
+   "meaning": "Much greater than usual; outstanding.",
+   "example": "The hotel offered exceptional service.",
+   "pronunciation": "ik-SEP-shuh-nul",
+   "persian": "استثنایی، فوق‌العاده",
+   "photo": "media/b2/2026-11-21/photos/exceptional.jpg",
+   "word_audio": "media/b2/2026-11-21/word-audio/exceptional.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b2/2026-11-21/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: A Delightful Journey",
+  "audio": "media/b2/2026-11-21/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b2/2026-11-21/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "A Delightful Journey to the Lake",
+  "audio": "media/b2/2026-11-21/shadowing.mp3",
+  "transcript": "media/b2/2026-11-21/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b2/2026-11-21/shadowing-sentences/001.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/002.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/003.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/004.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/005.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/006.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/007.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/008.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/009.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/010.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/011.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/012.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/013.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/014.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/015.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/016.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/017.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/018.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/019.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/020.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/021.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/022.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/023.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/024.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/025.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/026.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/027.mp3",
+   "media/b2/2026-11-21/shadowing-sentences/028.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'bike' mean?",
+   "options": [
+    "A bicycle.",
+    "The first part of the morning.",
+    "A place where a bus stops for people.",
+    "A place where people can camp."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'bus stop' mean?",
+   "options": [
+    "A bicycle.",
+    "Much greater than usual; outstanding.",
+    "The first part of the morning.",
+    "A place where a bus stops for people."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'campsite' mean?",
+   "options": [
+    "A bicycle.",
+    "A place where people can camp.",
+    "Very pleasant and enjoyable.",
+    "Much greater than usual; outstanding."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'caravan' mean?",
+   "options": [
+    "A vehicle for living in, pulled by a car.",
+    "A place where a bus stops for people.",
+    "A bicycle.",
+    "A place where people can camp."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'delightful' mean?",
+   "options": [
+    "Much greater than usual; outstanding.",
+    "Very pleasant and enjoyable.",
+    "The first part of the morning.",
+    "A vehicle for living in, pulled by a car."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'early morning' mean?",
+   "options": [
+    "Very pleasant and enjoyable.",
+    "The first part of the morning.",
+    "A bicycle.",
+    "A vehicle for living in, pulled by a car."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'exceptional' mean?",
+   "options": [
+    "A bicycle.",
+    "A place where people can camp.",
+    "Much greater than usual; outstanding.",
+    "The first part of the morning."
+   ],
+   "answer": 2
+  }
+ ]
+}

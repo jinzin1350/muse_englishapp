@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-21",
+  "theme": "food & cooking",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "crab",
+      "pos": "noun",
+      "meaning": "A sea animal with a hard shell and ten legs.",
+      "example": "We saw a crab walking on the beach.",
+      "example_fa": "ما یک خرچنگ را دیدیم که در ساحل راه می‌رفت.",
+      "pronunciation": "KRAB",
+      "persian": "خرچنگ",
+      "photo": "media/a2/2026-11-21/photos/crab.jpg",
+      "word_audio": "media/a2/2026-11-21/word-audio/crab.mp3"
+    },
+    {
+      "word": "cucumber",
+      "pos": "noun",
+      "meaning": "A long green vegetable, often used in salads.",
+      "example": "I like cucumber in my salad.",
+      "example_fa": "من خیار را در سالادم دوست دارم.",
+      "pronunciation": "KYOO-kum-ber",
+      "persian": "خیار",
+      "photo": "media/a2/2026-11-21/photos/cucumber.jpg",
+      "word_audio": "media/a2/2026-11-21/word-audio/cucumber.mp3"
+    },
+    {
+      "word": "dangerous",
+      "pos": "adjective",
+      "meaning": "Likely to cause harm or injury.",
+      "example": "Don't play with fire, it's dangerous.",
+      "example_fa": "با آتش بازی نکن، خطرناک است.",
+      "pronunciation": "DAYN-jer-us",
+      "persian": "خطرناک",
+      "photo": "media/a2/2026-11-21/photos/dangerous.jpg",
+      "word_audio": "media/a2/2026-11-21/word-audio/dangerous.mp3"
+    },
+    {
+      "word": "drink",
+      "pos": "noun, verb",
+      "meaning": "A liquid you can swallow. To swallow liquid.",
+      "example": "I need a cold drink.",
+      "example_fa": "من به یک نوشیدنی سرد نیاز دارم.",
+      "pronunciation": "DRINK",
+      "persian": "نوشیدنی، نوشیدن",
+      "photo": "media/a2/2026-11-21/photos/drink.jpg",
+      "word_audio": "media/a2/2026-11-21/word-audio/drink.mp3"
+    },
+    {
+      "word": "fish",
+      "pos": "noun",
+      "meaning": "An animal that lives in water and swims.",
+      "example": "I like to eat fish for dinner.",
+      "example_fa": "من دوست دارم برای شام ماهی بخورم.",
+      "pronunciation": "FISH",
+      "persian": "ماهی",
+      "photo": "media/a2/2026-11-21/photos/fish.jpg",
+      "word_audio": "media/a2/2026-11-21/word-audio/fish.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-21/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Food at the Beach",
+    "audio": "media/a2/2026-11-21/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-21/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Beach Lunch with Sara",
+    "audio": "media/a2/2026-11-21/shadowing.mp3",
+    "transcript": "media/a2/2026-11-21/shadowing-transcript.txt",
+    "transcript_fa": "media/a2/2026-11-21/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-21/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-21/shadowing-sentences/015.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'crab' mean?",
+      "options": [
+        "A long green vegetable, often used in salads.",
+        "A liquid you can swallow. To swallow liquid.",
+        "A sea animal with a hard shell and ten legs.",
+        "Likely to cause harm or injury."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'cucumber' mean?",
+      "options": [
+        "A long green vegetable, often used in salads.",
+        "A sea animal with a hard shell and ten legs.",
+        "Likely to cause harm or injury.",
+        "An animal that lives in water and swims."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'dangerous' mean?",
+      "options": [
+        "A long green vegetable, often used in salads.",
+        "Likely to cause harm or injury.",
+        "A sea animal with a hard shell and ten legs.",
+        "A liquid you can swallow. To swallow liquid."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'drink' mean?",
+      "options": [
+        "A sea animal with a hard shell and ten legs.",
+        "An animal that lives in water and swims.",
+        "A liquid you can swallow. To swallow liquid.",
+        "A long green vegetable, often used in salads."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'fish' mean?",
+      "options": [
+        "Likely to cause harm or injury.",
+        "An animal that lives in water and swims.",
+        "A sea animal with a hard shell and ten legs.",
+        "A long green vegetable, often used in salads."
+      ],
+      "answer": 1
+    }
+  ]
+}
