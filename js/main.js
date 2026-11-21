@@ -3210,7 +3210,7 @@ function shouldEnterAppMode() {
 }
 
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest', 'certificate'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'support', 'vip', 'pricing', 'ptest', 'certificate'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'support', 'vip', 'ptest', 'certificate'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 /* Return-after-signup (Claude for Alireza, 2026-11-10): a signed-out visitor
    who opens one of these routes (e.g. the /fa/ielts/ CTA -> #/ielts) sees the
@@ -3398,7 +3398,6 @@ function show(view, arg) {
   else if (view === 'inbox') renderInbox(v);
   else if (view === 'support') renderSupport(v);
   else if (view === 'vip') renderVip(v);
-  else if (view === 'pricing') renderPricing(v);
   else if (view === 'homework') renderHomework(v);
   else if (view === 'admin') renderAdmin(v);
   else if (view === 'admin-teacher') renderAdminTeacherView(v, arg);
@@ -14870,7 +14869,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611202355';
+var APP_VERSION = '202611210002';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -15518,25 +15517,26 @@ function vipAmount(fa, iran) {
   return iran ? (fa ? '۱۹۹٬۰۰۰ تومان' : '199,000 Toman') : '$6.99';
 }
 
-function vipPriceHTML(fa, iran) {
-  const amount = vipAmount(fa, iran);
-  const perks = fa
-    ? ['روزی ۳۰ سؤال از Muse', 'چت VIP و همهٔ امکانات ویژه', 'امکاناتی که بعداً اضافه بشن هم شامل می‌شن']
-    : ['30 Ask Muse questions a day', 'VIP chat and every VIP feature', 'Future VIP features included'];
-  return '<div class="vip-price">' +
-    '<div class="vip-plan">' + esc(fa ? 'اشتراک ماهانهٔ VIP' : 'VIP monthly plan') + '</div>' +
-    '<div class="vip-amount">' + esc(amount) + '</div>' +
-    '<p class="vip-per">' + esc(fa ? 'در ماه' : 'per month') + '</p>' +
-    '<ul class="vip-perks">' + perks.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>' +
-    '<a class="btn btn-orange btn-block" href="#/support" style="padding:0.9rem 1.1rem;font-size:1.05rem;margin-top:0.9rem">' + esc(fa ? 'فعال‌سازی VIP' : 'Activate VIP') + '</a>' +
-    '<p class="muted" style="margin:0.6rem 0 0;font-size:0.85rem">' + esc(fa ? 'برای فعال‌سازی به پشتیبانی پیام بده.' : 'Message Support to activate.') + '</p>' +
-  '</div>';
+function renderVip(v) {
+  paintVip(v);
+  const u = state.user || {};
+  if (u.isVip === undefined && sb && u.id) {
+    try {
+      sb.from('profiles').select('is_vip').eq('id', u.id).single().then(function (r) {
+        if (r && r.data) {
+          state.user.isVip = !!r.data.is_vip;
+          if (state.view === 'vip') paintVip(document.getElementById('view'));
+        }
+      }).catch(function () {});
+    } catch (e) {}
+  }
 }
 
 function paintVip(v) {
   const fa = vipFa();
   const u = state.user || {};
   const isVip = u.isVip === true;
+  const iran = vipIsIranPhone(u.phone);
   const soon = fa ? 'به‌زودی' : 'Coming soon';
   v.innerHTML =
   '<div class="vip-hero">' +
@@ -15607,13 +15607,16 @@ function paintVip(v) {
   (isVip
     ? '<div class="vip-member"><h2>' + esc(fa ? '⭐ ممنون که VIP هستی!' : '⭐ Thanks for being VIP!') + '</h2>' +
       '<p>' + esc(fa ? 'همهٔ امکانات فعال و در حال اضافه شدن، اول برای تو باز می‌شن.' : 'Every feature — live and upcoming — unlocks for you first.') + '</p>' +
-      '<p style="margin:.4rem 0 0;font-weight:800">' + esc((fa ? 'پلن شما: ماهانه ' : 'Your plan: ') + vipAmount(fa, vipIsIranPhone(u.phone)) + (fa ? '' : ' / month')) + '</p></div>'
-    : vipPriceHTML(fa, vipIsIranPhone(u.phone))) +
-    '<p style="text-align:center;margin-top:1.1rem"><a href="#/pricing" style="font-weight:800;color:#c47b12">' + esc(fa ? 'مقایسهٔ کامل پلن‌ها و تعرفه‌ها' : 'Compare plans & full pricing') + '</a></p>';
+      '<p style="margin:.4rem 0 0;font-weight:800">' + esc((fa ? 'پلن شما: ماهانه ' : 'Your plan: ') + vipAmount(fa, iran) + (fa ? '' : ' / month')) + '</p></div>'
+    : '') +
+    '<h2 class="vip-sec-title">' + esc(fa ? 'تعرفه‌ها' : 'Pricing') + '</h2>' +
+    '<div class="prc-grid">' + prcCardHTML(fa, true, iran, isVip) + prcCardHTML(fa, false, !iran, isVip) + '</div>' +
+    '<p class="muted" style="text-align:center;margin-top:.9rem;font-size:.88rem">' + esc(fa ? 'قیمت بر اساس شماره تلفنت مشخص می‌شه؛ پرداخت آنلاین به‌زودی وصل می‌شه و فعلاً فعال‌سازی از پشتیبانیه.' : 'Your price follows your phone number. Online payment is coming soon; activation is via Support for now.') + '</p>' +
+    vipCompareHTML(fa);
 }
 
-/* ---------- Pricing page (#/pricing): both tariffs, the user's own plan
-   (by profile phone, never IP) highlighted, Free vs VIP comparison. ---------- */
+/* ---------- Pricing section on the VIP page: both tariffs, the user's
+   own plan (by profile phone, never IP) highlighted, Free vs VIP table. ---------- */
 function prcCardHTML(fa, iranCard, mine, isVip) {
   const region = iranCard ? (fa ? 'ایران' : 'Iran') : (fa ? 'بین‌المللی' : 'International');
   const note = iranCard
@@ -15631,12 +15634,7 @@ function prcCardHTML(fa, iranCard, mine, isVip) {
   '</div>';
 }
 
-function paintPricing(v) {
-  if (!v) return;
-  const fa = vipFa();
-  const u = state.user || {};
-  const isVip = u.isVip === true;
-  const iran = vipIsIranPhone(u.phone);
+function vipCompareHTML(fa) {
   const yes = '<span class="prc-yes">✓</span>';
   const no = '<span class="prc-no">—</span>';
   const rows = fa ? [
@@ -15658,50 +15656,14 @@ function paintPricing(v) {
     ['Advanced progress report', null, 'yes'],
     ['Priority support', null, 'yes']
   ];
-  const cmp = '<div class="prc-cmp">' +
+  return '<h2 class="vip-sec-title">' + esc(fa ? 'مقایسهٔ پلن‌ها' : 'Compare plans') + '</h2>' +
+    '<div class="prc-cmp">' +
     '<div class="prc-row"><div class="prc-f"></div><div class="prc-v">' + esc(fa ? 'رایگان' : 'Free') + '</div><div class="prc-v">VIP 👑</div></div>' +
     rows.map(function (r) {
       return '<div class="prc-row"><div class="prc-f">' + esc(r[0]) + '</div>' +
         '<div class="prc-v">' + (r[1] ? esc(r[1]) : no) + '</div>' +
         '<div class="prc-v">' + (r[2] === 'yes' ? yes : esc(r[2])) + '</div></div>';
     }).join('') + '</div>';
-
-  v.innerHTML =
-    '<div class="vip-hero"><div class="vip-crown">👑</div>' +
-      '<h1>' + esc(fa ? 'تعرفه‌های ' : 'Muse ') + '<span class="vip-gold">VIP</span>' + (fa ? '' : ' pricing') + '</h1>' +
-      '<p class="vip-sub">' + esc(fa ? 'قیمت بر اساس شماره تلفنت مشخص می‌شه — یه اشتراک، همهٔ امکانات VIP.' : 'Your price follows your phone number — one plan, every VIP feature.') + '</p></div>' +
-    '<div class="prc-grid">' + prcCardHTML(fa, true, iran, isVip) + prcCardHTML(fa, false, !iran, isVip) + '</div>' +
-    '<p class="muted" style="text-align:center;margin-top:.9rem;font-size:.88rem">' + esc(fa ? 'پرداخت آنلاین به‌زودی وصل می‌شه؛ فعلاً فعال‌سازی از پشتیبانیه.' : 'Online payment is coming soon; activation is via Support for now.') + '</p>' +
-    '<h2 class="vip-sec-title">' + esc(fa ? 'مقایسهٔ پلن‌ها' : 'Compare plans') + '</h2>' + cmp +
-    '<p style="text-align:center;margin-top:1.2rem"><a href="#/vip" style="font-weight:800;color:#c47b12">' + esc(fa ? 'دیدن امکانات VIP' : 'See VIP features') + '</a></p>';
-}
-
-function renderPricing(v) {
-  paintPricing(v);
-  const u = state.user || {};
-  if (u.isVip === undefined && sb && u.id) {
-    sb.from('profiles').select('is_vip').eq('id', u.id).single().then(function (r) {
-      if (r && r.data) {
-        state.user.isVip = !!r.data.is_vip;
-        if (state.view === 'pricing') paintPricing(document.getElementById('view'));
-      }
-    }).catch(function () {});
-  }
-}
-
-function renderVip(v) {
-  paintVip(v);
-  const u = state.user;
-  if (u && u.isVip === undefined && u.id && !u.demo) {
-    try {
-      sb.from('profiles').select('is_vip').eq('id', u.id).single().then(function (pr) {
-        if (pr && pr.data) {
-          state.user.isVip = !!pr.data.is_vip;
-          if (state.view === 'vip') paintVip(v);
-        }
-      }).catch(function () {});
-    } catch (e) {}
-  }
 }
 /* ---------------- word map (#/words): WordUp-style vocab study ----------------
    v2 (2026-11-07, Alireza's screenshots): dashboard (Words Uncovered /
