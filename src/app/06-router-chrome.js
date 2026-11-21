@@ -198,7 +198,7 @@ function show(view, arg) {
   if (view !== 'grammar') { state.gquiz = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'grammar-test') { gtestStopTimer(); state.gtest = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'ielts') { ieltsStopMedia(); }
-  if (view !== 'chat') { chtStopPoll(); }
+  if (view !== 'chat') { chtStopPoll(); document.body.classList.remove('cht-open'); }
   if (view !== 'vocab') { state.vquiz = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'ptest') { if (state.ptest) { document.body.classList.remove('duo-playing'); } state.ptest = null; }
   /* Desktop home uses the mockup v6 dashboard layout. */

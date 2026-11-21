@@ -5320,6 +5320,7 @@ html.ui-fa [data-fa]{font-family:"Vazirmatn",system-ui,-apple-system,"Segoe UI",
 .prc-no{color:#c9bda6}
 
 /* ---------- VIP chat (پارتنر زبان) ---------- */
+body.cht-open #askm-fab{display:none !important;}
 .cht-row{display:flex;gap:.7rem;align-items:center;background:#fff;border:1px solid #ead9c2;
   border-radius:16px;padding:.8rem .9rem;margin-top:.6rem;box-shadow:0 6px 16px rgba(60,40,10,.05)}
 .cht-av{width:2.6rem;height:2.6rem;border-radius:50%;flex:none;color:#fff;font-weight:800;font-size:1.05rem;

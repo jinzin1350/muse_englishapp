@@ -44,6 +44,7 @@ function chtSoonHTML(fa) {
 }
 
 function renderChatRoute(v, arg) {
+  document.body.classList.add('cht-open');
   if (arg) renderChatThread(v, arg);
   else renderChat(v);
 }
@@ -74,12 +75,6 @@ function paintChat(v, me, reqs, convs, dir, blocked) {
     '<p class="vip-sub">' + esc(fa ? 'یه پارتنر زبان پیدا کن و هر روز با هم انگلیسی تمرین کنین.' : 'Find a language partner and practise English together every day.') + '</p></div>';
 
   h += '<div id="cht-note" class="muted" style="text-align:center;margin-top:.7rem"></div>';
-
-  /* opt-in */
-  h += '<div class="cht-row"><div style="flex:1">' +
-    '<div class="cht-name">' + esc(fa ? 'منو توی لیست پارتنرها نشون بده' : 'Show me in the partner list') + '</div>' +
-    '<div class="cht-meta">' + esc(fa ? 'بقیهٔ زبان‌آموزها می‌تونن پیدات کنن و بهت درخواست چت بدن.' : 'Other learners can find you and send you a chat request.') + '</div></div>' +
-    '<label class="cht-switch"><input type="checkbox" id="cht-optin"' + (me.opt_in ? ' checked' : '') + '><span></span></label></div>';
 
   /* non-VIP upsell */
   if (!me.is_vip) {
@@ -162,12 +157,6 @@ function paintChat(v, me, reqs, convs, dir, blocked) {
 
   const note = function (msg) { const n = document.getElementById('cht-note'); if (n) n.textContent = msg; };
   const repaint = function () { renderChat(v); };
-
-  const opt = document.getElementById('cht-optin');
-  if (opt) opt.addEventListener('change', async function () {
-    const r = await chtRpc('chat_set_optin', { p_on: !!opt.checked });
-    note(r.ok ? (fa ? 'ذخیره شد ✓' : 'Saved ✓') : (fa ? 'خطا پیش اومد.' : 'Something went wrong.'));
-  });
 
   v.querySelectorAll('[data-reqto]').forEach(function (btn) {
     btn.addEventListener('click', async function () {
