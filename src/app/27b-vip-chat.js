@@ -61,7 +61,7 @@ async function renderChat(v) {
   const reqs = await chtRpc('chat_list_requests');
   const convs = await chtRpc('chat_list_conversations');
   const blocked = await chtRpc('chat_list_blocked');
-  const dir = me.is_vip ? await chtRpc('chat_directory') : { ok: true, data: [] };
+  const dir = await chtRpc('chat_directory');
   paintChat(v, me, reqs.data || [], convs.data || [], dir.data || [], blocked.data || []);
 }
 
@@ -124,8 +124,8 @@ function paintChat(v, me, reqs, convs, dir, blocked) {
     h += '<p class="muted" style="text-align:center">' + esc(fa ? 'هنوز گفتگویی نداری. از لیست پایین یه پارتنر پیدا کن.' : 'No chats yet. Find a partner in the list below.') + '</p>';
   }
 
-  /* directory (VIP only) */
-  if (me.is_vip) {
+  /* directory — everyone can look; sending a request needs VIP */
+  {
     h += '<h2 class="vip-sec-title">' + esc(fa ? 'پیدا کردن پارتنر' : 'Find a partner') + '</h2>';
     if (dir.length) {
       h += dir.map(function (d) {
@@ -167,7 +167,7 @@ function paintChat(v, me, reqs, convs, dir, blocked) {
       if (code === 'ok') { note(fa ? 'درخواست فرستاده شد ✓' : 'Request sent ✓'); repaint(); }
       else if (code === 'limit') { note(fa ? 'امروز ۵ تا درخواست فرستادی؛ فردا دوباره تلاش کن.' : 'You sent 5 requests today; try again tomorrow.'); btn.disabled = false; }
       else if (code === 'exists') { note(fa ? 'از قبل با این کاربر درخواست داری.' : 'You already have a request with this learner.'); repaint(); }
-      else if (code === 'not_vip') { note(fa ? 'فقط اعضای VIP می‌تونن درخواست بدن.' : 'Only VIP members can send requests.'); btn.disabled = false; }
+      else if (code === 'not_vip') { note(fa ? 'شما VIP نیستید! برای فرستادن درخواست چت باید VIP بشید 👑' : "You're not VIP! To send a chat request you need VIP 👑"); btn.disabled = false; }
       else { note(fa ? 'خطا پیش اومد، دوباره تلاش کن.' : 'Something went wrong, try again.'); btn.disabled = false; }
     });
   });
