@@ -136,6 +136,7 @@ function paintChat(v, me, reqs, convs, dir, blocked) {
         return '<div class="cht-row">' + chtAvatar(d.display_name) +
           '<div style="flex:1;min-width:0"><span class="cht-name">' + esc(d.display_name || '') + '</span>' + chtLvl(d.level) +
           (d.is_vip ? ' <span class="cht-lvl" style="background:#fdf0d5;color:#a86e00">VIP 👑</span>' : '') +
+          (typeof d.points === 'number' ? '<div class="cht-meta">💎 ' + esc(Number(d.points).toLocaleString('en-US')) + '</div>' : '') +
           '</div>' + action + '</div>';
       }).join('');
     } else {
