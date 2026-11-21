@@ -175,7 +175,7 @@ function paintChat(v, me, reqs, convs, dir, blocked) {
       const r = await chtRpc('chat_send_request', { p_to: btn.getAttribute('data-reqto') });
       const code = r.ok ? String(r.data) : 'error';
       if (code === 'ok') { note(fa ? 'درخواست فرستاده شد ✓' : 'Request sent ✓'); repaint(); }
-      else if (code === 'limit') { note(fa ? 'امروز ۳ تا درخواست فرستادی؛ فردا دوباره تلاش کن.' : 'You sent 3 requests today; try again tomorrow.'); btn.disabled = false; }
+      else if (code === 'limit') { note(fa ? 'امروز ۵ تا درخواست فرستادی؛ فردا دوباره تلاش کن.' : 'You sent 5 requests today; try again tomorrow.'); btn.disabled = false; }
       else if (code === 'exists') { note(fa ? 'از قبل با این کاربر درخواست داری.' : 'You already have a request with this learner.'); repaint(); }
       else if (code === 'not_vip') { note(fa ? 'فقط اعضای VIP می‌تونن درخواست بدن.' : 'Only VIP members can send requests.'); btn.disabled = false; }
       else { note(fa ? 'خطا پیش اومد، دوباره تلاش کن.' : 'Something went wrong, try again.'); btn.disabled = false; }
