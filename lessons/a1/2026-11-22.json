@@ -1,0 +1,140 @@
+{
+ "date": "2026-11-22",
+ "theme": "food & cooking",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "onion",
+   "pos": "noun",
+   "meaning": "A round vegetable with a strong smell.",
+   "example": "I need an onion for the soup.",
+   "pronunciation": "UN-yun",
+   "persian": "پیاز",
+   "example_fa": "برای سوپ به یک پیاز نیاز دارم.",
+   "photo": "media/a1/2026-11-22/photos/onion.jpg",
+   "word_audio": "media/a1/2026-11-22/word-audio/onion.mp3"
+  },
+  {
+   "word": "pasta",
+   "pos": "noun",
+   "meaning": "Italian food made from flour and water.",
+   "example": "I love eating pasta with tomato sauce.",
+   "pronunciation": "PAS-tuh",
+   "persian": "پاستا",
+   "example_fa": "دوست دارم پاستا را با سس گوجه‌فرنگی بخورم.",
+   "photo": "media/a1/2026-11-22/photos/pasta.jpg",
+   "word_audio": "media/a1/2026-11-22/word-audio/pasta.mp3"
+  },
+  {
+   "word": "pea(s)",
+   "pos": "noun",
+   "meaning": "Small, round, green vegetable.",
+   "example": "I like to eat peas with my dinner.",
+   "pronunciation": "PEEZ",
+   "persian": "نخود فرنگی",
+   "example_fa": "دوست دارم با شامم نخود فرنگی بخورم.",
+   "photo": "media/a1/2026-11-22/photos/peas.jpg",
+   "word_audio": "media/a1/2026-11-22/word-audio/peas.mp3"
+  },
+  {
+   "word": "pear",
+   "pos": "noun",
+   "meaning": "A sweet fruit, wide at the bottom.",
+   "example": "I like to eat a juicy pear.",
+   "pronunciation": "PAIR",
+   "persian": "گلابی",
+   "example_fa": "دوست دارم یک گلابی آبدار بخورم.",
+   "photo": "media/a1/2026-11-22/photos/pear.jpg",
+   "word_audio": "media/a1/2026-11-22/word-audio/pear.mp3"
+  },
+  {
+   "word": "pepper",
+   "pos": "noun",
+   "meaning": "A spice for food, or a vegetable.",
+   "example": "I like red pepper in my salad.",
+   "pronunciation": "PEP-er",
+   "persian": "فلفل",
+   "example_fa": "فلفل قرمز را در سالادم دوست دارم.",
+   "photo": "media/a1/2026-11-22/photos/pepper.jpg",
+   "word_audio": "media/a1/2026-11-22/word-audio/pepper.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-11-22/pronunciation.mp3",
+ "podcast": null,
+ "shadowing": {
+  "title": "Cooking Pasta Today",
+  "audio": "media/a1/2026-11-22/shadowing.mp3",
+  "transcript": "media/a1/2026-11-22/shadowing-transcript.txt",
+  "transcript_fa": "media/a1/2026-11-22/shadowing-transcript-fa.txt",
+  "sentence_audio": [
+   "media/a1/2026-11-22/shadowing-sentences/001.mp3",
+   "media/a1/2026-11-22/shadowing-sentences/002.mp3",
+   "media/a1/2026-11-22/shadowing-sentences/003.mp3",
+   "media/a1/2026-11-22/shadowing-sentences/004.mp3",
+   "media/a1/2026-11-22/shadowing-sentences/005.mp3",
+   "media/a1/2026-11-22/shadowing-sentences/006.mp3",
+   "media/a1/2026-11-22/shadowing-sentences/007.mp3",
+   "media/a1/2026-11-22/shadowing-sentences/008.mp3",
+   "media/a1/2026-11-22/shadowing-sentences/009.mp3",
+   "media/a1/2026-11-22/shadowing-sentences/010.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'onion' mean?",
+   "options": [
+    "A sweet fruit, wide at the bottom.",
+    "Italian food made from flour and water.",
+    "Small, round, green vegetable.",
+    "A round vegetable with a strong smell.",
+    "A spice for food, or a vegetable."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'pasta' mean?",
+   "options": [
+    "A sweet fruit, wide at the bottom.",
+    "Small, round, green vegetable.",
+    "A spice for food, or a vegetable.",
+    "Italian food made from flour and water.",
+    "A round vegetable with a strong smell."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'pea(s)' mean?",
+   "options": [
+    "Italian food made from flour and water.",
+    "Small, round, green vegetable.",
+    "A round vegetable with a strong smell.",
+    "A sweet fruit, wide at the bottom.",
+    "A spice for food, or a vegetable."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'pear' mean?",
+   "options": [
+    "Italian food made from flour and water.",
+    "A sweet fruit, wide at the bottom.",
+    "Small, round, green vegetable.",
+    "A spice for food, or a vegetable.",
+    "A round vegetable with a strong smell."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'pepper' mean?",
+   "options": [
+    "A round vegetable with a strong smell.",
+    "Small, round, green vegetable.",
+    "Italian food made from flour and water.",
+    "A sweet fruit, wide at the bottom.",
+    "A spice for food, or a vegetable."
+   ],
+   "answer": 4
+  }
+ ]
+}

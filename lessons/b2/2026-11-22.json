@@ -1,0 +1,192 @@
+{
+ "date": "2026-11-22",
+ "theme": "health & body",
+ "level": "b2",
+ "cefr": "B2",
+ "words": [
+  {
+   "word": "break",
+   "pos": "verb",
+   "meaning": "To injure a bone in your body.",
+   "example": "He fell and broke his arm during the game.",
+   "pronunciation": "BRAYK",
+   "persian": "شکستن (استخوان)",
+   "photo": "media/b2/2026-11-22/photos/break.jpg",
+   "word_audio": "media/b2/2026-11-22/word-audio/break.mp3"
+  },
+  {
+   "word": "breath",
+   "pos": "noun",
+   "meaning": "The air you take in and let out.",
+   "example": "Take a deep breath and relax.",
+   "pronunciation": "BRETH",
+   "persian": "نفس",
+   "photo": "media/b2/2026-11-22/photos/breath.jpg",
+   "word_audio": "media/b2/2026-11-22/word-audio/breath.mp3"
+  },
+  {
+   "word": "breathe",
+   "pos": "verb",
+   "meaning": "To take air in and let it out.",
+   "example": "It's hard to breathe in this smoky room.",
+   "pronunciation": "BREETH",
+   "persian": "نفس کشیدن",
+   "photo": "media/b2/2026-11-22/photos/breathe.jpg",
+   "word_audio": "media/b2/2026-11-22/word-audio/breathe.mp3"
+  },
+  {
+   "word": "breathless",
+   "pos": "adjective",
+   "meaning": "Unable to breathe easily, often after exercise.",
+   "example": "I felt breathless after running up the stairs.",
+   "pronunciation": "BRETH-lus",
+   "persian": "نفس‌نفس‌زنان، بی‌نفس",
+   "photo": "media/b2/2026-11-22/photos/breathless.jpg",
+   "word_audio": "media/b2/2026-11-22/word-audio/breathless.mp3"
+  },
+  {
+   "word": "bug",
+   "pos": "noun",
+   "meaning": "a minor illness or infection",
+   "example": "I caught a stomach bug last week.",
+   "pronunciation": "BUG",
+   "persian": "بیماری خفیف، ویروس",
+   "photo": "media/b2/2026-11-22/photos/bug.jpg",
+   "word_audio": "media/b2/2026-11-22/word-audio/bug.mp3"
+  },
+  {
+   "word": "chest pains",
+   "pos": "noun",
+   "meaning": "A feeling of discomfort or pain in the chest.",
+   "example": "He went to the doctor because of chest pains.",
+   "pronunciation": "CHEST PAYNZ",
+   "persian": "درد قفسه سینه",
+   "photo": "media/b2/2026-11-22/photos/chest-pains.jpg",
+   "word_audio": "media/b2/2026-11-22/word-audio/chest-pains.mp3"
+  },
+  {
+   "word": "chew",
+   "pos": "verb",
+   "meaning": "To break food into small pieces with your teeth.",
+   "example": "Please chew your food slowly.",
+   "pronunciation": "CHOO",
+   "persian": "جویدن",
+   "photo": "media/b2/2026-11-22/photos/chew.jpg",
+   "word_audio": "media/b2/2026-11-22/word-audio/chew.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b2/2026-11-22/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Health and the Body",
+  "audio": "media/b2/2026-11-22/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b2/2026-11-22/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "The Week Sara Felt Breathless",
+  "audio": "media/b2/2026-11-22/shadowing.mp3",
+  "transcript": "media/b2/2026-11-22/shadowing-transcript.txt",
+  "sentence_audio": [
+   "media/b2/2026-11-22/shadowing-sentences/001.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/002.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/003.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/004.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/005.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/006.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/007.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/008.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/009.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/010.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/011.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/012.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/013.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/014.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/015.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/016.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/017.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/018.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/019.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/020.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/021.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/022.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/023.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/024.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/025.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/026.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/027.mp3",
+   "media/b2/2026-11-22/shadowing-sentences/028.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'break' mean?",
+   "options": [
+    "To injure a bone in your body.",
+    "To break food into small pieces with your teeth.",
+    "Unable to breathe easily, often after exercise.",
+    "The air you take in and let out."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'breath' mean?",
+   "options": [
+    "a minor illness or infection",
+    "To take air in and let it out.",
+    "The air you take in and let out.",
+    "A feeling of discomfort or pain in the chest."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'breathe' mean?",
+   "options": [
+    "The air you take in and let out.",
+    "To take air in and let it out.",
+    "To injure a bone in your body.",
+    "A feeling of discomfort or pain in the chest."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'breathless' mean?",
+   "options": [
+    "The air you take in and let out.",
+    "Unable to breathe easily, often after exercise.",
+    "To injure a bone in your body.",
+    "a minor illness or infection"
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'bug' mean?",
+   "options": [
+    "To take air in and let it out.",
+    "a minor illness or infection",
+    "To break food into small pieces with your teeth.",
+    "To injure a bone in your body."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'chest pains' mean?",
+   "options": [
+    "Unable to breathe easily, often after exercise.",
+    "The air you take in and let out.",
+    "A feeling of discomfort or pain in the chest.",
+    "To injure a bone in your body."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'chew' mean?",
+   "options": [
+    "A feeling of discomfort or pain in the chest.",
+    "To take air in and let it out.",
+    "Unable to breathe easily, often after exercise.",
+    "To break food into small pieces with your teeth."
+   ],
+   "answer": 3
+  }
+ ]
+}

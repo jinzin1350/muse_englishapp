@@ -1,0 +1,145 @@
+{
+ "date": "2026-11-22",
+ "theme": "technology",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "access (to sth)",
+   "pos": "noun",
+   "meaning": "the ability to enter or use something",
+   "example": "Do you have internet access at home?",
+   "pronunciation": "AK-ses",
+   "persian": "دسترسی (به چیزی)",
+   "example_fa": "آیا در خانه به اینترنت دسترسی داری؟",
+   "photo": "media/a2/2026-11-22/photos/access.jpg",
+   "word_audio": "media/a2/2026-11-22/word-audio/access.mp3"
+  },
+  {
+   "word": "computer",
+   "pos": "noun",
+   "meaning": "An electronic machine for storing and processing data.",
+   "example": "I use my computer for work.",
+   "pronunciation": "kum-PYOO-ter",
+   "persian": "کامپیوتر",
+   "example_fa": "من از کامپیوترم برای کار استفاده می‌کنم.",
+   "photo": "media/a2/2026-11-22/photos/computer.jpg",
+   "word_audio": "media/a2/2026-11-22/word-audio/computer.mp3"
+  },
+  {
+   "word": "crash",
+   "pos": "verb",
+   "meaning": "To hit something hard, often causing damage.",
+   "example": "The car crashed into a tree.",
+   "pronunciation": "KRASH",
+   "persian": "تصادف کردن، سقوط کردن",
+   "example_fa": "ماشین به یک درخت برخورد کرد.",
+   "photo": "media/a2/2026-11-22/photos/crash.jpg",
+   "word_audio": "media/a2/2026-11-22/word-audio/crash.mp3"
+  },
+  {
+   "word": "display",
+   "pos": "verb",
+   "meaning": "To show something publicly.",
+   "example": "The museum will display ancient artifacts.",
+   "pronunciation": "dis-PLAY",
+   "persian": "نمایش دادن",
+   "example_fa": "موزه آثار باستانی را به نمایش خواهد گذاشت.",
+   "photo": "media/a2/2026-11-22/photos/display.jpg",
+   "word_audio": "media/a2/2026-11-22/word-audio/display.mp3"
+  },
+  {
+   "word": "install",
+   "pos": "verb",
+   "meaning": "To put equipment in place for use.",
+   "example": "We need to install new software on the computer.",
+   "pronunciation": "in-STALL",
+   "persian": "نصب کردن",
+   "example_fa": "باید نرم‌افزار جدیدی روی کامپیوتر نصب کنیم.",
+   "photo": "media/a2/2026-11-22/photos/install.jpg",
+   "word_audio": "media/a2/2026-11-22/word-audio/install.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-11-22/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Technology at Home",
+  "audio": "media/a2/2026-11-22/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-11-22/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Sara and Her Computer",
+  "audio": "media/a2/2026-11-22/shadowing.mp3",
+  "transcript": "media/a2/2026-11-22/shadowing-transcript.txt",
+  "transcript_fa": "media/a2/2026-11-22/shadowing-transcript-fa.txt",
+  "sentence_audio": [
+   "media/a2/2026-11-22/shadowing-sentences/001.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/002.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/003.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/004.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/005.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/006.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/007.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/008.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/009.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/010.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/011.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/012.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/013.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/014.mp3",
+   "media/a2/2026-11-22/shadowing-sentences/015.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'access (to sth)' mean?",
+   "options": [
+    "To hit something hard, often causing damage.",
+    "To show something publicly.",
+    "An electronic machine for storing and processing data.",
+    "the ability to enter or use something"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'computer' mean?",
+   "options": [
+    "An electronic machine for storing and processing data.",
+    "To show something publicly.",
+    "To hit something hard, often causing damage.",
+    "the ability to enter or use something"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'crash' mean?",
+   "options": [
+    "the ability to enter or use something",
+    "To put equipment in place for use.",
+    "An electronic machine for storing and processing data.",
+    "To hit something hard, often causing damage."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'display' mean?",
+   "options": [
+    "An electronic machine for storing and processing data.",
+    "To show something publicly.",
+    "To put equipment in place for use.",
+    "To hit something hard, often causing damage."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'install' mean?",
+   "options": [
+    "To put equipment in place for use.",
+    "To show something publicly.",
+    "To hit something hard, often causing damage.",
+    "the ability to enter or use something"
+   ],
+   "answer": 0
+  }
+ ]
+}
