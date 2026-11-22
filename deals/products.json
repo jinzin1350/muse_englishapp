@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "shark-pet-cordless-stick-vacuum-ix141",
+      "name_fa": "جاروشارژی شارک Pet Cordless مدل IX141",
+      "name_en": "Shark Pet Cordless Stick Vacuum with Large Dust Cup, LED Headlights, Removable Handheld Vac, Lightweight, Crevice Tool, Carpet & Hard Floors, 40min Runtime, Ice Blue, IX141AMZ",
+      "price_cad": 179.99,
+      "regular_cad": 349.99,
+      "discount_pct": 49,
+      "added_fa": "یکشنبه، ۲۲ نوامبر ۲۰۲۶",
+      "image": "img/shark-pet-cordless-stick-vacuum-ix141.jpg",
+      "url": "https://www.amazon.ca/dp/B0FLF2LCHS?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "سبک و بی‌سیم، عالی برای موی حیوانات، با باتری تا ۴۰ دقیقه و چراغ LED"
+    },
+    {
+      "id": "ninja-professional-plus-duo-blender-bn751c",
+      "name_fa": "مخلوط‌کن نینجا Professional Plus DUO مدل BN751C",
+      "name_en": "Ninja BN751C Professional Plus Blender DUO with Auto-iQ, 1400 Peak Watts, 72 oz Pitcher, Two 24 oz To-Go Cups",
+      "price_cad": 99.99,
+      "regular_cad": 219.99,
+      "discount_pct": 55,
+      "added_fa": "یکشنبه، ۲۲ نوامبر ۲۰۲۶",
+      "image": "img/ninja-professional-plus-duo-blender-bn751c.jpg",
+      "url": "https://www.amazon.ca/dp/B08GKZSVMS?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "موتور ۱۴۰۰ وات، پارچ بزرگ ۷۲ اونسی و دو لیوان همراه برای اسموتی روزانه"
+    },
+    {
       "id": "jbl-tour-one-m3",
       "name_fa": "هدفون بی‌سیم جی‌بی‌ال Tour One M3",
       "name_en": "JBL Tour One M3 - Wireless Over-Ear Noise Cancelling Headphones, Hi-Res Audio, Spatial 360 Sound, 70Hrs Playback, Latte",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "ظرفیت بالا با سه پورت ۱۰۰ واتی و کابل‌های داخلی، مناسب لپ‌تاپ و سفر"
-    },
-    {
-      "id": "fire-tv-stick-hd",
-      "name_fa": "استیک استریم آمازون Fire TV Stick HD",
-      "name_en": "Fire TV Stick HD streaming device, hundreds of thousands of movies and TV episodes, Alexa Voice Remote",
-      "price_cad": 22.99,
-      "regular_cad": 69.99,
-      "discount_pct": 67,
-      "added_fa": "جمعه، ۲۰ نوامبر ۲۰۲۶",
-      "image": "img/fire-tv-stick-hd.jpg",
-      "url": "https://www.amazon.ca/dp/B0CQN248PX?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "استریم HD سریع، ریموت صوتی الکسا و کنترل تلویزیون با یک ریموت"
-    },
-    {
-      "id": "blink-outdoor-4-3-camera",
-      "name_fa": "دوربین امنیتی بلینک Outdoor 4 پک سه‌تایی",
-      "name_en": "Blink Outdoor 4 – Wireless smart security camera, two-year battery life, 1080p HD day and infrared night live view, two-way talk – 3 camera system",
-      "price_cad": 90.99,
-      "regular_cad": 259.99,
-      "discount_pct": 65,
-      "added_fa": "جمعه، ۲۰ نوامبر ۲۰۲۶",
-      "image": "img/blink-outdoor-4-3-camera.jpg",
-      "url": "https://www.amazon.ca/dp/B0B1N56YXG?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "سه دوربین بی‌سیم، باتری تا ۲ سال و دید در شب مادون قرمز"
     }
   ],
-  "updated_fa": "شنبه ۳۰ آبان"
+  "updated_fa": "یکشنبه ۱ آذر"
 }
