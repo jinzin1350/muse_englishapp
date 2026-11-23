@@ -1,0 +1,145 @@
+{
+ "date": "2026-11-23",
+ "theme": "family & relationships",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "adult",
+   "pos": "noun",
+   "meaning": "A person who is fully grown.",
+   "example": "Children must be accompanied by an adult.",
+   "pronunciation": "AD-ult",
+   "persian": "بزرگسال",
+   "example_fa": "کودکان باید همراه یک بزرگسال باشند.",
+   "photo": "media/a2/2026-11-23/photos/adult.jpg",
+   "word_audio": "media/a2/2026-11-23/word-audio/adult.mp3"
+  },
+  {
+   "word": "alive",
+   "pos": "adjective",
+   "meaning": "Not dead; living.",
+   "example": "Is your cat still alive?",
+   "pronunciation": "uh-LYVE",
+   "persian": "زنده",
+   "example_fa": "آیا گربه‌ات هنوز زنده است؟",
+   "photo": "media/a2/2026-11-23/photos/alive.jpg",
+   "word_audio": "media/a2/2026-11-23/word-audio/alive.mp3"
+  },
+  {
+   "word": "allow",
+   "pos": "verb",
+   "meaning": "To let someone do something.",
+   "example": "My parents allow me to play outside.",
+   "pronunciation": "uh-LOW",
+   "persian": "اجازه دادن",
+   "example_fa": "پدر و مادرم به من اجازه می‌دهند بیرون بازی کنم.",
+   "photo": "media/a2/2026-11-23/photos/allow.jpg",
+   "word_audio": "media/a2/2026-11-23/word-audio/allow.mp3"
+  },
+  {
+   "word": "almost",
+   "pos": "adverb",
+   "meaning": "Very nearly; not quite.",
+   "example": "I almost missed the bus this morning.",
+   "pronunciation": "AWL-mohst",
+   "persian": "تقریباً",
+   "example_fa": "امروز صبح تقریباً اتوبوس را از دست دادم.",
+   "photo": "media/a2/2026-11-23/photos/almost.jpg",
+   "word_audio": "media/a2/2026-11-23/word-audio/almost.mp3"
+  },
+  {
+   "word": "alone",
+   "pos": "adjective",
+   "meaning": "Without other people.",
+   "example": "She likes to read alone in her room.",
+   "pronunciation": "uh-LOHN",
+   "persian": "تنها، به تنهایی",
+   "example_fa": "او دوست دارد در اتاقش تنها کتاب بخواند.",
+   "photo": "media/a2/2026-11-23/photos/alone.jpg",
+   "word_audio": "media/a2/2026-11-23/word-audio/alone.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-11-23/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Family and Growing Up",
+  "audio": "media/a2/2026-11-23/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-11-23/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Nina and Her Family",
+  "audio": "media/a2/2026-11-23/shadowing.mp3",
+  "transcript": "media/a2/2026-11-23/shadowing-transcript.txt",
+  "transcript_fa": "media/a2/2026-11-23/shadowing-transcript-fa.txt",
+  "sentence_audio": [
+   "media/a2/2026-11-23/shadowing-sentences/001.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/002.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/003.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/004.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/005.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/006.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/007.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/008.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/009.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/010.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/011.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/012.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/013.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/014.mp3",
+   "media/a2/2026-11-23/shadowing-sentences/015.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'adult' mean?",
+   "options": [
+    "To let someone do something.",
+    "Without other people.",
+    "Not dead; living.",
+    "A person who is fully grown."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'alive' mean?",
+   "options": [
+    "To let someone do something.",
+    "Very nearly; not quite.",
+    "Not dead; living.",
+    "Without other people."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'allow' mean?",
+   "options": [
+    "Not dead; living.",
+    "To let someone do something.",
+    "Very nearly; not quite.",
+    "Without other people."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'almost' mean?",
+   "options": [
+    "Very nearly; not quite.",
+    "To let someone do something.",
+    "Without other people.",
+    "A person who is fully grown."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'alone' mean?",
+   "options": [
+    "A person who is fully grown.",
+    "Without other people.",
+    "Not dead; living.",
+    "Very nearly; not quite."
+   ],
+   "answer": 1
+  }
+ ]
+}

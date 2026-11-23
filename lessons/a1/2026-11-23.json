@@ -1,0 +1,135 @@
+{
+ "date": "2026-11-23",
+ "theme": "cities & daily life",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "Can I help with …?",
+   "pos": "phrase",
+   "meaning": "A polite way to offer assistance.",
+   "example": "Can I help with dinner tonight?",
+   "pronunciation": "kuhn EYE HELP with",
+   "persian": "می‌توانم کمک کنم؟",
+   "example_fa": "می‌توانم امشب با شام کمک کنم؟",
+   "photo": "media/a1/2026-11-23/photos/can-i-help-with.jpg",
+   "word_audio": "media/a1/2026-11-23/word-audio/can-i-help-with.mp3"
+  },
+  {
+   "word": "Can I...?",
+   "pos": "phrase",
+   "meaning": "A polite way to ask permission.",
+   "example": "Can I open the window?",
+   "pronunciation": "kan EYE",
+   "persian": "می‌توانم...؟",
+   "example_fa": "می‌توانم پنجره را باز کنم؟",
+   "photo": "media/a1/2026-11-23/photos/can-i.jpg",
+   "word_audio": "media/a1/2026-11-23/word-audio/can-i.mp3"
+  },
+  {
+   "word": "Can you tell me the way …?",
+   "pos": "phrase",
+   "meaning": "A polite way to ask for directions.",
+   "example": "Can you tell me the way to the station?",
+   "pronunciation": "kuhn YOO TEL mee thuh WAY",
+   "persian": "می‌توانید راه را بگویید؟",
+   "example_fa": "می‌توانید راه ایستگاه را به من بگویید؟",
+   "photo": "media/a1/2026-11-23/photos/can-you-tell-me-the-way.jpg",
+   "word_audio": "media/a1/2026-11-23/word-audio/can-you-tell-me-the-way.mp3"
+  },
+  {
+   "word": "carpet",
+   "pos": "noun",
+   "meaning": "A thick covering for floors, often made of wool.",
+   "example": "We have a soft carpet in our living room.",
+   "pronunciation": "KAR-pit",
+   "persian": "فرش، قالی",
+   "example_fa": "ما در اتاق نشیمنمان یک فرش نرم داریم.",
+   "photo": "media/a1/2026-11-23/photos/carpet.jpg",
+   "word_audio": "media/a1/2026-11-23/word-audio/carpet.mp3"
+  },
+  {
+   "word": "cash machine",
+   "pos": "noun",
+   "meaning": "A machine where you can get money.",
+   "example": "I need to find a cash machine.",
+   "pronunciation": "KASH muh-SHEEN",
+   "persian": "خودپرداز",
+   "example_fa": "باید یک خودپرداز پیدا کنم.",
+   "photo": "media/a1/2026-11-23/photos/cash-machine.jpg",
+   "word_audio": "media/a1/2026-11-23/word-audio/cash-machine.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-11-23/pronunciation.mp3",
+ "podcast": null,
+ "shadowing": {
+  "title": "A Day in the City",
+  "audio": "media/a1/2026-11-23/shadowing.mp3",
+  "transcript": "media/a1/2026-11-23/shadowing-transcript.txt",
+  "transcript_fa": "media/a1/2026-11-23/shadowing-transcript-fa.txt",
+  "sentence_audio": [
+   "media/a1/2026-11-23/shadowing-sentences/001.mp3",
+   "media/a1/2026-11-23/shadowing-sentences/002.mp3",
+   "media/a1/2026-11-23/shadowing-sentences/003.mp3",
+   "media/a1/2026-11-23/shadowing-sentences/004.mp3",
+   "media/a1/2026-11-23/shadowing-sentences/005.mp3",
+   "media/a1/2026-11-23/shadowing-sentences/006.mp3",
+   "media/a1/2026-11-23/shadowing-sentences/007.mp3",
+   "media/a1/2026-11-23/shadowing-sentences/008.mp3",
+   "media/a1/2026-11-23/shadowing-sentences/009.mp3",
+   "media/a1/2026-11-23/shadowing-sentences/010.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'Can I help with …?' mean?",
+   "options": [
+    "A machine where you can get money.",
+    "A polite way to offer assistance.",
+    "A thick covering for floors, often made of wool.",
+    "A polite way to ask permission."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'Can I...?' mean?",
+   "options": [
+    "A machine where you can get money.",
+    "A polite way to offer assistance.",
+    "A polite way to ask permission.",
+    "A polite way to ask for directions."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'Can you tell me the way …?' mean?",
+   "options": [
+    "A polite way to ask for directions.",
+    "A polite way to ask permission.",
+    "A machine where you can get money.",
+    "A polite way to offer assistance."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'carpet' mean?",
+   "options": [
+    "A thick covering for floors, often made of wool.",
+    "A polite way to ask for directions.",
+    "A polite way to ask permission.",
+    "A polite way to offer assistance."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'cash machine' mean?",
+   "options": [
+    "A polite way to ask permission.",
+    "A thick covering for floors, often made of wool.",
+    "A polite way to ask for directions.",
+    "A machine where you can get money."
+   ],
+   "answer": 3
+  }
+ ]
+}
