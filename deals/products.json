@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "philips-sonicare-diamondclean-9000",
+      "name_fa": "مسواک برقی فیلیپس سونیکر دایموندکلین ۹۰۰۰",
+      "name_en": "Philips Sonicare DiamondClean 9000 Electric Toothbrush",
+      "price_cad": 124.95,
+      "regular_cad": 249.99,
+      "discount_pct": 50,
+      "added_fa": "دوشنبه، ۲۳ نوامبر ۲۰۲۶",
+      "image": "img/philips-sonicare-diamondclean-9000.jpg",
+      "url": "https://www.amazon.ca/dp/B0B5VSKMFR?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "سنسور فشار و ۱۲ حالت مسواک‌زدن، تمیزی حرفه‌ای دندان در خانه"
+    },
+    {
+      "id": "bose-quietcomfort-headphones",
+      "name_fa": "هدفون نویزکنسلینگ بوز کوایت‌کامفورت",
+      "name_en": "Bose QuietComfort Wireless Noise Cancelling Headphones",
+      "price_cad": 249.0,
+      "regular_cad": 479.0,
+      "discount_pct": 48,
+      "added_fa": "دوشنبه، ۲۳ نوامبر ۲۰۲۶",
+      "image": "img/bose-quietcomfort-headphones.jpg",
+      "url": "https://www.amazon.ca/dp/B0CCZC9J1V?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "نویزکنسلینگ افسانه‌ای بوز، باتری ۲۴ ساعته و صدای شفاف برای سفر و کار"
+    },
+    {
       "id": "kindle-paperwhite-16gb-2024",
       "name_fa": "کتاب‌خوان آمازون Kindle Paperwhite ۱۶ گیگ",
       "name_en": "Amazon Kindle Paperwhite 16GB (2024 model) - 7 inch glare-free display and weeks of battery life - Black",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "موتور ۱۴۰۰ وات، پارچ بزرگ ۷۲ اونسی و دو لیوان همراه برای اسموتی روزانه"
-    },
-    {
-      "id": "jbl-tour-one-m3",
-      "name_fa": "هدفون بی‌سیم جی‌بی‌ال Tour One M3",
-      "name_en": "JBL Tour One M3 - Wireless Over-Ear Noise Cancelling Headphones, Hi-Res Audio, Spatial 360 Sound, 70Hrs Playback, Latte",
-      "price_cad": 199.98,
-      "regular_cad": 499.98,
-      "discount_pct": 60,
-      "added_fa": "شنبه، ۲۱ نوامبر ۲۰۲۶",
-      "image": "img/jbl-tour-one-m3.jpg",
-      "url": "https://www.amazon.ca/dp/B0DZJ3CSDY?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "نویزکنسلینگ تطبیقی، صدای با کیفیت بالا و باتری تا ۷۰ ساعت"
-    },
-    {
-      "id": "philips-sonicare-4300-hx3684-24",
-      "name_fa": "مسواک برقی فیلیپس Sonicare 4300 مدل HX3684/24",
-      "name_en": "Philips Sonicare ProtectiveClean 4300 Electric Toothbrush, Sonic Toothbrush with Two Intensity Levels, Pressure Sensor and Timer, Black, Model HX3684/24",
-      "price_cad": 59.95,
-      "regular_cad": 119.99,
-      "discount_pct": 50,
-      "added_fa": "شنبه، ۲۱ نوامبر ۲۰۲۶",
-      "image": "img/philips-sonicare-4300-hx3684-24.jpg",
-      "url": "https://www.amazon.ca/dp/B0CZMDW1TR?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "پاک‌کردن پلاک تا ۷ برابر بهتر، حسگر فشار و باتری تا ۱۴ روز"
     }
   ],
-  "updated_fa": "یکشنبه ۱ آذر"
+  "updated_fa": "دوشنبه ۲ آذر"
 }
