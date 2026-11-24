@@ -11340,5 +11340,243 @@
   "note_fa": "واژه‌ای رسمی است؛ بیشتر در محیط کاری و اداری برای فرایندها و سفارش‌ها استفاده می‌شود.",
   "photo": "https://pub-5aaa53ee00ca494d8f187772bc99ec9d.r2.dev/expedite.jpg",
   "audio": "https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/expedite.mp3"
+ },
+ {
+  "antonyms": [],
+  "example_en": "Failing to act on a security warning can put the company at risk.",
+  "examples_extra": [
+   "Failing to act quickly made the problem worse.",
+   "The report criticized the manager for failing to act."
+  ],
+  "family": {
+   "noun": "failure",
+   "verb": "fail"
+  },
+  "levels": [
+   "b2"
+  ],
+  "meaning_en": "Not doing something that you should have done.",
+  "meaning_fa": "عمل نکردن، کوتاهی کردن",
+  "note_fa": "در متن‌های رسمی و اداری یعنی وظیفه‌ای را که باید انجام می‌دادی انجام نداده‌ای؛ نزدیک به neglect است.",
+  "phonetic": "ˈfeɪlɪŋ tə ækt",
+  "pos": "phrase",
+  "synonyms": [
+   "neglect",
+   "inaction"
+  ],
+  "word": "failing to act",
+  "photo": "",
+  "audio": ""
+ },
+ {
+  "antonyms": [],
+  "example_en": "Sharing passwords can lead to disciplinary action.",
+  "examples_extra": [
+   "The company took disciplinary action against the employee.",
+   "Disciplinary action may be taken if the rules are broken again."
+  ],
+  "family": {
+   "noun": "discipline",
+   "verb": "discipline"
+  },
+  "levels": [
+   "b2"
+  ],
+  "meaning_en": "Punishment by an employer when an employee breaks the rules.",
+  "meaning_fa": "اقدام انضباطی",
+  "note_fa": "اقدامی است که کارفرما علیه کارمند خاطی انجام می‌دهد؛ از تذکر کتبی تا اخراج.",
+  "phonetic": "ˈdɪsəplɪnəri ˈækʃən",
+  "pos": "noun",
+  "synonyms": [
+   "punishment",
+   "sanction"
+  ],
+  "word": "disciplinary action",
+  "photo": "",
+  "audio": ""
+ },
+ {
+  "antonyms": [
+   "hiring"
+  ],
+  "example_en": "Bribery can result in immediate dismissal.",
+  "examples_extra": [
+   "His dismissal came after repeated warnings.",
+   "Unfair dismissal is against the law."
+  ],
+  "family": {
+   "verb": "dismiss"
+  },
+  "levels": [
+   "b2"
+  ],
+  "meaning_en": "The act of removing someone from their job, usually because of bad behaviour.",
+  "meaning_fa": "اخراج",
+  "note_fa": "اسمِ dismiss است؛ اخراج از کار، معمولاً به دلیل تخلف.",
+  "phonetic": "dɪsˈmɪsəl",
+  "pos": "noun",
+  "synonyms": [
+   "firing",
+   "termination"
+  ],
+  "word": "dismissal",
+  "photo": "",
+  "audio": ""
+ },
+ {
+  "antonyms": [],
+  "example_en": "A data breach can cause serious harm to the company's reputation.",
+  "examples_extra": [
+   "The accident caused serious harm to two workers.",
+   "Leaking passwords can cause serious harm to customers."
+  ],
+  "family": {
+   "verb": "harm"
+  },
+  "levels": [
+   "b2"
+  ],
+  "meaning_en": "Severe damage or injury to a person, company, or thing.",
+  "meaning_fa": "آسیب جدی",
+  "note_fa": "harm یعنی آسیب و ضرر و serious آن را شدید می‌کند؛ هم برای آدم به کار می‌رود هم برای اعتبار شرکت.",
+  "phonetic": "ˈsɪəriəs hɑːm",
+  "pos": "phrase",
+  "synonyms": [
+   "severe damage"
+  ],
+  "word": "serious harm",
+  "photo": "",
+  "audio": ""
+ },
+ {
+  "antonyms": [],
+  "example_en": "The company may face civil liability for the leak.",
+  "examples_extra": [
+   "The firm accepted civil liability for the error.",
+   "Civil liability can cost the company millions."
+  ],
+  "family": {
+   "adjective": "liable"
+  },
+  "levels": [
+   "c1"
+  ],
+  "meaning_en": "Legal responsibility for your actions that can lead to a claim for money in a civil court.",
+  "meaning_fa": "مسئولیت حقوقی مدنی",
+  "note_fa": "مسئولیت مدنی؛ یعنی از نظر حقوقی باید خسارت مالیِ کاری را که کرده‌ای بدهی، بدون اینکه جرم کیفری باشد.",
+  "phonetic": "ˈsɪvəl ˌlaɪəˈbɪləti",
+  "pos": "noun",
+  "synonyms": [
+   "legal responsibility"
+  ],
+  "word": "civil liability",
+  "photo": "",
+  "audio": ""
+ },
+ {
+  "antonyms": [],
+  "example_en": "The supplier was placed on a denylist after the investigation.",
+  "examples_extra": [
+   "The company was added to the denylist.",
+   "Being on a denylist can end future contracts."
+  ],
+  "family": {
+   "noun": "blacklist"
+  },
+  "levels": [
+   "c1"
+  ],
+  "meaning_en": "An official list of people or companies that are not allowed to do something, such as bidding for government contracts.",
+  "meaning_fa": "لیست سیاه",
+  "note_fa": "لیستی از افراد یا شرکت‌هایی که اجازهٔ کاری، مثلاً شرکت در مناقصهٔ دولتی، ندارند؛ مترادف رایج‌ترش blacklist است.",
+  "phonetic": "dɪˈnaɪ lɪst",
+  "pos": "noun",
+  "synonyms": [
+   "blacklist"
+  ],
+  "word": "denylist",
+  "photo": "",
+  "audio": ""
+ },
+ {
+  "antonyms": [
+   "allowed to"
+  ],
+  "example_en": "He was prevented from bidding on government contracts.",
+  "examples_extra": [
+   "She was prevented from entering the building.",
+   "We were prevented from travelling by bad weather."
+  ],
+  "family": {
+   "noun": "prevention",
+   "verb": "prevent"
+  },
+  "levels": [
+   "b2"
+  ],
+  "meaning_en": "Stopped from doing something; not allowed to do something.",
+  "meaning_fa": "منع شدن از انجام کاری",
+  "note_fa": "الگوی prevent sb from doing sth یعنی مانع کسی شدن که کاری را بکند؛ اینجا به صورت مجهول آمده و بعدش فعل ing می‌آید.",
+  "phonetic": "prɪˈventɪd frəm",
+  "pos": "phrase",
+  "synonyms": [
+   "barred from",
+   "stopped from"
+  ],
+  "word": "prevented from",
+  "photo": "",
+  "audio": ""
+ },
+ {
+  "antonyms": [],
+  "example_en": "Several companies are bidding for the government contract.",
+  "examples_extra": [
+   "Bidding closes at noon on Friday.",
+   "Only approved suppliers may take part in the bidding."
+  ],
+  "family": {
+   "noun": "bidder",
+   "verb": "bid"
+  },
+  "levels": [
+   "b2"
+  ],
+  "meaning_en": "The process of offering to do work or supply goods for a stated price, in competition with other companies.",
+  "meaning_fa": "شرکت در مناقصه",
+  "note_fa": "شرکت در مناقصه؛ bid یعنی برای گرفتن یک قرارداد پیشنهاد قیمت دادن.",
+  "phonetic": "ˈbɪdɪŋ",
+  "pos": "noun",
+  "synonyms": [
+   "tendering",
+   "offering"
+  ],
+  "word": "bidding",
+  "photo": "",
+  "audio": ""
+ },
+ {
+  "antonyms": [],
+  "example_en": "Being blacklisted means losing future business opportunities.",
+  "examples_extra": [
+   "The ban means losing business opportunities for years.",
+   "Trade shows are a good way to find new business opportunities."
+  ],
+  "family": {
+   "noun": "opportunity"
+  },
+  "levels": [
+   "b2"
+  ],
+  "meaning_en": "Chances to do business, win contracts, or make money.",
+  "meaning_fa": "فرصت‌های تجاری",
+  "note_fa": "فرصت‌های کاری و تجاری؛ opportunity یعنی فرصت و با business برای قرارداد و درآمد آینده به کار می‌رود.",
+  "phonetic": "ˈbɪznəs ˌɒpəˈtjuːnətiz",
+  "pos": "noun",
+  "synonyms": [
+   "business chances"
+  ],
+  "word": "business opportunities",
+  "photo": "",
+  "audio": ""
  }
 ]
