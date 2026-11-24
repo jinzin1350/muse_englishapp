@@ -1,0 +1,258 @@
+{
+ "date": "2026-11-24",
+ "theme": "review day",
+ "level": "a2",
+ "cefr": "A2",
+ "words": [
+  {
+   "word": "access (to sth)",
+   "pos": "noun",
+   "meaning": "the ability to enter or use something",
+   "example": "Do you have internet access at home?",
+   "pronunciation": "AK-ses",
+   "persian": "دسترسی (به چیزی)",
+   "example_fa": "آیا در خانه به اینترنت دسترسی داری؟",
+   "photo": "media/a2/2026-11-22/photos/access.jpg",
+   "word_audio": "media/a2/2026-11-22/word-audio/access.mp3"
+  },
+  {
+   "word": "drink",
+   "pos": "noun, verb",
+   "meaning": "A liquid you can swallow. To swallow liquid.",
+   "example": "I need a cold drink.",
+   "example_fa": "من به یک نوشیدنی سرد نیاز دارم.",
+   "pronunciation": "DRINK",
+   "persian": "نوشیدنی، نوشیدن",
+   "photo": "media/a2/2026-11-21/photos/drink.jpg",
+   "word_audio": "media/a2/2026-11-21/word-audio/drink.mp3"
+  },
+  {
+   "word": "alive",
+   "pos": "adjective",
+   "meaning": "Not dead; living.",
+   "example": "Is your cat still alive?",
+   "pronunciation": "uh-LYVE",
+   "persian": "زنده",
+   "example_fa": "آیا گربه‌ات هنوز زنده است؟",
+   "photo": "media/a2/2026-11-23/photos/alive.jpg",
+   "word_audio": "media/a2/2026-11-23/word-audio/alive.mp3"
+  },
+  {
+   "word": "cucumber",
+   "pos": "noun",
+   "meaning": "A long green vegetable, often used in salads.",
+   "example": "I like cucumber in my salad.",
+   "example_fa": "من خیار را در سالادم دوست دارم.",
+   "pronunciation": "KYOO-kum-ber",
+   "persian": "خیار",
+   "photo": "media/a2/2026-11-21/photos/cucumber.jpg",
+   "word_audio": "media/a2/2026-11-21/word-audio/cucumber.mp3"
+  },
+  {
+   "word": "install",
+   "pos": "verb",
+   "meaning": "To put equipment in place for use.",
+   "example": "We need to install new software on the computer.",
+   "pronunciation": "in-STALL",
+   "persian": "نصب کردن",
+   "example_fa": "باید نرم‌افزار جدیدی روی کامپیوتر نصب کنیم.",
+   "photo": "media/a2/2026-11-22/photos/install.jpg",
+   "word_audio": "media/a2/2026-11-22/word-audio/install.mp3"
+  },
+  {
+   "word": "allow",
+   "pos": "verb",
+   "meaning": "To let someone do something.",
+   "example": "My parents allow me to play outside.",
+   "pronunciation": "uh-LOW",
+   "persian": "اجازه دادن",
+   "example_fa": "پدر و مادرم به من اجازه می‌دهند بیرون بازی کنم.",
+   "photo": "media/a2/2026-11-23/photos/allow.jpg",
+   "word_audio": "media/a2/2026-11-23/word-audio/allow.mp3"
+  },
+  {
+   "word": "almost",
+   "pos": "adverb",
+   "meaning": "Very nearly; not quite.",
+   "example": "I almost missed the bus this morning.",
+   "pronunciation": "AWL-mohst",
+   "persian": "تقریباً",
+   "example_fa": "امروز صبح تقریباً اتوبوس را از دست دادم.",
+   "photo": "media/a2/2026-11-23/photos/almost.jpg",
+   "word_audio": "media/a2/2026-11-23/word-audio/almost.mp3"
+  },
+  {
+   "word": "alone",
+   "pos": "adjective",
+   "meaning": "Without other people.",
+   "example": "She likes to read alone in her room.",
+   "pronunciation": "uh-LOHN",
+   "persian": "تنها، به تنهایی",
+   "example_fa": "او دوست دارد در اتاقش تنها کتاب بخواند.",
+   "photo": "media/a2/2026-11-23/photos/alone.jpg",
+   "word_audio": "media/a2/2026-11-23/word-audio/alone.mp3"
+  },
+  {
+   "word": "fish",
+   "pos": "noun",
+   "meaning": "An animal that lives in water and swims.",
+   "example": "I like to eat fish for dinner.",
+   "example_fa": "من دوست دارم برای شام ماهی بخورم.",
+   "pronunciation": "FISH",
+   "persian": "ماهی",
+   "photo": "media/a2/2026-11-21/photos/fish.jpg",
+   "word_audio": "media/a2/2026-11-21/word-audio/fish.mp3"
+  },
+  {
+   "word": "display",
+   "pos": "verb",
+   "meaning": "To show something publicly.",
+   "example": "The museum will display ancient artifacts.",
+   "pronunciation": "dis-PLAY",
+   "persian": "نمایش دادن",
+   "example_fa": "موزه آثار باستانی را به نمایش خواهد گذاشت.",
+   "photo": "media/a2/2026-11-22/photos/display.jpg",
+   "word_audio": "media/a2/2026-11-22/word-audio/display.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a2/2026-11-24/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day Fun",
+  "audio": "media/a2/2026-11-24/podcast.mp3",
+  "cover": null,
+  "transcript": "media/a2/2026-11-24/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Anna's Morning at Home",
+  "audio": "media/a2/2026-11-24/shadowing.mp3",
+  "transcript": "media/a2/2026-11-24/shadowing-transcript.txt",
+  "transcript_fa": "media/a2/2026-11-24/shadowing-transcript-fa.txt",
+  "sentence_audio": [
+   "media/a2/2026-11-24/shadowing-sentences/001.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/002.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/003.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/004.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/005.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/006.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/007.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/008.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/009.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/010.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/011.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/012.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/013.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/014.mp3",
+   "media/a2/2026-11-24/shadowing-sentences/015.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'access (to sth)' mean?",
+   "options": [
+    "A liquid you can swallow. To swallow liquid.",
+    "To put equipment in place for use.",
+    "To show something publicly.",
+    "the ability to enter or use something"
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'drink' mean?",
+   "options": [
+    "To let someone do something.",
+    "A liquid you can swallow. To swallow liquid.",
+    "the ability to enter or use something",
+    "A long green vegetable, often used in salads."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'alive' mean?",
+   "options": [
+    "Not dead; living.",
+    "An animal that lives in water and swims.",
+    "To show something publicly.",
+    "To let someone do something."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'cucumber' mean?",
+   "options": [
+    "To put equipment in place for use.",
+    "To show something publicly.",
+    "Not dead; living.",
+    "A long green vegetable, often used in salads."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'install' mean?",
+   "options": [
+    "Not dead; living.",
+    "Without other people.",
+    "Very nearly; not quite.",
+    "To put equipment in place for use."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'allow' mean?",
+   "options": [
+    "Very nearly; not quite.",
+    "A liquid you can swallow. To swallow liquid.",
+    "To let someone do something.",
+    "An animal that lives in water and swims."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'almost' mean?",
+   "options": [
+    "An animal that lives in water and swims.",
+    "Very nearly; not quite.",
+    "To put equipment in place for use.",
+    "Without other people."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'alone' mean?",
+   "options": [
+    "A liquid you can swallow. To swallow liquid.",
+    "Not dead; living.",
+    "Without other people.",
+    "To let someone do something."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'fish' mean?",
+   "options": [
+    "Not dead; living.",
+    "An animal that lives in water and swims.",
+    "the ability to enter or use something",
+    "To put equipment in place for use."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'display' mean?",
+   "options": [
+    "To show something publicly.",
+    "Very nearly; not quite.",
+    "A liquid you can swallow. To swallow liquid.",
+    "An animal that lives in water and swims."
+   ],
+   "answer": 0
+  }
+ ],
+ "review": true,
+ "review_of": [
+  "2026-11-21",
+  "2026-11-22",
+  "2026-11-23"
+ ],
+ "review_window_words": 15,
+ "review_sampled": 10
+}

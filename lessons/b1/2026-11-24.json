@@ -1,0 +1,263 @@
+{
+  "date": "2026-11-24",
+  "theme": "review day",
+  "level": "b1",
+  "cefr": "B1",
+  "words": [
+    {
+      "word": "after that",
+      "pos": "phrase",
+      "meaning": "next, following a previous event",
+      "example": "We ate dinner, and after that, we watched a movie.",
+      "pronunciation": "AF-ter THAT",
+      "persian": "بعد از آن، سپس",
+      "example_fa": "شام خوردیم و بعد از آن فیلم تماشا کردیم.",
+      "photo": "media/b1/2026-11-22/photos/after-that.jpg",
+      "word_audio": "media/b1/2026-11-22/word-audio/after-that.mp3"
+    },
+    {
+      "word": "enemy",
+      "pos": "noun",
+      "meaning": "A person or group that hates another.",
+      "example": "They were once enemies, but now they are friends.",
+      "pronunciation": "EN-uh-mee",
+      "persian": "دشمن",
+      "example_fa": "آن‌ها زمانی دشمن بودند، اما حالا دوست هستند.",
+      "photo": "media/b1/2026-11-23/photos/enemy.jpg",
+      "word_audio": "media/b1/2026-11-23/word-audio/enemy.mp3"
+    },
+    {
+      "word": "ages",
+      "pos": "noun",
+      "meaning": "a very long time",
+      "example": "I haven't seen you for ages!",
+      "pronunciation": "AY-jiz",
+      "persian": "مدت‌ها، خیلی وقت",
+      "example_fa": "خیلی وقت است که تو را ندیده‌ام!",
+      "photo": "media/b1/2026-11-22/photos/ages.jpg",
+      "word_audio": "media/b1/2026-11-22/word-audio/ages.mp3"
+    },
+    {
+      "word": "afterwards",
+      "pos": "adverb",
+      "meaning": "at a later time",
+      "example": "We went to the cinema and ate afterwards.",
+      "pronunciation": "AF-ter-werdz",
+      "persian": "بعداً، سپس",
+      "example_fa": "به سینما رفتیم و بعداً غذا خوردیم.",
+      "photo": "media/b1/2026-11-22/photos/afterwards.jpg",
+      "word_audio": "media/b1/2026-11-22/word-audio/afterwards.mp3"
+    },
+    {
+      "word": "waste",
+      "pos": "verb",
+      "meaning": "To use something badly or unnecessarily.",
+      "example": "Don't waste water when you shower.",
+      "pronunciation": "WAYST",
+      "persian": "هدر دادن",
+      "example_fa": "وقتی دوش می‌گیری آب را هدر نده.",
+      "photo": "media/b1/2026-11-22/photos/waste.jpg",
+      "word_audio": "media/b1/2026-11-22/word-audio/waste.mp3"
+    },
+    {
+      "word": "tent",
+      "pos": "noun",
+      "meaning": "A portable shelter made of cloth.",
+      "example": "We slept in a tent when we went camping.",
+      "example_fa": "وقتی به اردو رفتیم، در یک چادر خوابیدیم.",
+      "pronunciation": "TENT",
+      "persian": "چادر",
+      "photo": "media/b1/2026-11-21/photos/tent.jpg",
+      "word_audio": "media/b1/2026-11-21/word-audio/tent.mp3"
+    },
+    {
+      "word": "team",
+      "pos": "noun",
+      "meaning": "A group of people working or playing together.",
+      "example": "Our football team won the game.",
+      "example_fa": "تیم فوتبال ما بازی را برد.",
+      "pronunciation": "TEEM",
+      "persian": "تیم، گروه",
+      "photo": "media/b1/2026-11-21/photos/team.jpg",
+      "word_audio": "media/b1/2026-11-21/word-audio/team.mp3"
+    },
+    {
+      "word": "against [touching]",
+      "pos": "preposition",
+      "meaning": "touching something or someone",
+      "example": "He leaned his bike against the wall.",
+      "pronunciation": "uh-GENST",
+      "persian": "به، تکیه بر",
+      "example_fa": "دوچرخه‌اش را به دیوار تکیه داد.",
+      "photo": "media/b1/2026-11-22/photos/against.jpg",
+      "word_audio": "media/b1/2026-11-22/word-audio/against.mp3"
+    },
+    {
+      "word": "efficient",
+      "pos": "adjective",
+      "meaning": "Working well without wasting time or energy.",
+      "example": "The new system is very efficient.",
+      "pronunciation": "ih-FISH-unt",
+      "persian": "کارآمد، موثر",
+      "example_fa": "سیستم جدید بسیار کارآمد است.",
+      "photo": "media/b1/2026-11-23/photos/efficient.jpg",
+      "word_audio": "media/b1/2026-11-23/word-audio/efficient.mp3"
+    },
+    {
+      "word": "ages ago",
+      "pos": "phrase",
+      "meaning": "a very long time in the past",
+      "example": "I visited that city ages ago.",
+      "pronunciation": "AY-jiz uh-GOH",
+      "persian": "خیلی وقت پیش",
+      "example_fa": "خیلی وقت پیش از آن شهر دیدن کردم.",
+      "photo": "media/b1/2026-11-22/photos/ages-ago.jpg",
+      "word_audio": "media/b1/2026-11-22/word-audio/ages-ago.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b1/2026-11-24/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Looking Back and Camping Again",
+    "audio": "media/b1/2026-11-24/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b1/2026-11-24/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "The Team at the Old Campsite",
+    "audio": "media/b1/2026-11-24/shadowing.mp3",
+    "transcript": "media/b1/2026-11-24/shadowing-transcript.txt",
+    "transcript_fa": "media/b1/2026-11-24/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/b1/2026-11-24/shadowing-sentences/001.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/002.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/003.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/004.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/005.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/006.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/007.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/008.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/009.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/010.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/011.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/012.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/013.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/014.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/015.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/016.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/017.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/018.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/019.mp3",
+      "media/b1/2026-11-24/shadowing-sentences/020.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'after that' mean?",
+      "options": [
+        "next, following a previous event",
+        "a very long time",
+        "touching something or someone",
+        "A portable shelter made of cloth."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'enemy' mean?",
+      "options": [
+        "A group of people working or playing together.",
+        "at a later time",
+        "next, following a previous event",
+        "A person or group that hates another."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'ages' mean?",
+      "options": [
+        "Working well without wasting time or energy.",
+        "at a later time",
+        "a very long time",
+        "A group of people working or playing together."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'afterwards' mean?",
+      "options": [
+        "A portable shelter made of cloth.",
+        "touching something or someone",
+        "A group of people working or playing together.",
+        "at a later time"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'waste' mean?",
+      "options": [
+        "a very long time in the past",
+        "Working well without wasting time or energy.",
+        "To use something badly or unnecessarily.",
+        "next, following a previous event"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'tent' mean?",
+      "options": [
+        "A portable shelter made of cloth.",
+        "a very long time",
+        "A group of people working or playing together.",
+        "next, following a previous event"
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'team' mean?",
+      "options": [
+        "a very long time",
+        "A group of people working or playing together.",
+        "A portable shelter made of cloth.",
+        "next, following a previous event"
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'against [touching]' mean?",
+      "options": [
+        "Working well without wasting time or energy.",
+        "a very long time",
+        "touching something or someone",
+        "A person or group that hates another."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'efficient' mean?",
+      "options": [
+        "a very long time",
+        "Working well without wasting time or energy.",
+        "at a later time",
+        "A group of people working or playing together."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'ages ago' mean?",
+      "options": [
+        "at a later time",
+        "a very long time in the past",
+        "A person or group that hates another.",
+        "a very long time"
+      ],
+      "answer": 1
+    }
+  ],
+  "review": true,
+  "review_of": [
+    "2026-11-21",
+    "2026-11-22",
+    "2026-11-23"
+  ],
+  "review_window_words": 21,
+  "review_sampled": 10
+}

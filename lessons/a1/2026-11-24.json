@@ -1,0 +1,248 @@
+{
+ "date": "2026-11-24",
+ "theme": "review day",
+ "level": "a1",
+ "cefr": "A1",
+ "words": [
+  {
+   "word": "pepper",
+   "pos": "noun",
+   "meaning": "A spice for food, or a vegetable.",
+   "example": "I like red pepper in my salad.",
+   "pronunciation": "PEP-er",
+   "persian": "فلفل",
+   "example_fa": "فلفل قرمز را در سالادم دوست دارم.",
+   "photo": "media/a1/2026-11-22/photos/pepper.jpg",
+   "word_audio": "media/a1/2026-11-22/word-audio/pepper.mp3"
+  },
+  {
+   "example": "The doctor said he had a heart attack.",
+   "example_fa": "دکتر گفت که او سکته قلبی کرده است.",
+   "meaning": "A sudden serious medical problem with your heart.",
+   "persian": "سکته قلبی کردن",
+   "photo": "media/a1/2026-11-21/photos/have-a-heart-attack.jpg",
+   "pos": "phrase",
+   "pronunciation": "hav uh HART uh-TAK",
+   "word": "have a heart attack",
+   "word_audio": "media/a1/2026-11-21/word-audio/have-a-heart-attack.mp3"
+  },
+  {
+   "example": "I have a headache, so I need to rest.",
+   "example_fa": "سردرد دارم، پس باید استراحت کنم.",
+   "meaning": "Feel pain in your head.",
+   "persian": "سردرد داشتن",
+   "photo": "media/a1/2026-11-21/photos/have-a-headache.jpg",
+   "pos": "phrase",
+   "pronunciation": "hav uh HED-ayk",
+   "word": "have a headache",
+   "word_audio": "media/a1/2026-11-21/word-audio/have-a-headache.mp3"
+  },
+  {
+   "word": "pasta",
+   "pos": "noun",
+   "meaning": "Italian food made from flour and water.",
+   "example": "I love eating pasta with tomato sauce.",
+   "pronunciation": "PAS-tuh",
+   "persian": "پاستا",
+   "example_fa": "دوست دارم پاستا را با سس گوجه‌فرنگی بخورم.",
+   "photo": "media/a1/2026-11-22/photos/pasta.jpg",
+   "word_audio": "media/a1/2026-11-22/word-audio/pasta.mp3"
+  },
+  {
+   "word": "pea(s)",
+   "pos": "noun",
+   "meaning": "Small, round, green vegetable.",
+   "example": "I like to eat peas with my dinner.",
+   "pronunciation": "PEEZ",
+   "persian": "نخود فرنگی",
+   "example_fa": "دوست دارم با شامم نخود فرنگی بخورم.",
+   "photo": "media/a1/2026-11-22/photos/peas.jpg",
+   "word_audio": "media/a1/2026-11-22/word-audio/peas.mp3"
+  },
+  {
+   "word": "Can I...?",
+   "pos": "phrase",
+   "meaning": "A polite way to ask permission.",
+   "example": "Can I open the window?",
+   "pronunciation": "kan EYE",
+   "persian": "می‌توانم...؟",
+   "example_fa": "می‌توانم پنجره را باز کنم؟",
+   "photo": "media/a1/2026-11-23/photos/can-i.jpg",
+   "word_audio": "media/a1/2026-11-23/word-audio/can-i.mp3"
+  },
+  {
+   "example": "I have a cold and a cough.",
+   "example_fa": "سرما خورده‌ام و سرفه می‌کنم.",
+   "meaning": "To be sick with a common illness.",
+   "persian": "سرما خوردن",
+   "photo": "media/a1/2026-11-21/photos/have-a-cold.jpg",
+   "pos": "verb phrase",
+   "pronunciation": "hav uh KOHLD",
+   "word": "have a cold",
+   "word_audio": "media/a1/2026-11-21/word-audio/have-a-cold.mp3"
+  },
+  {
+   "word": "carpet",
+   "pos": "noun",
+   "meaning": "A thick covering for floors, often made of wool.",
+   "example": "We have a soft carpet in our living room.",
+   "pronunciation": "KAR-pit",
+   "persian": "فرش، قالی",
+   "example_fa": "ما در اتاق نشیمنمان یک فرش نرم داریم.",
+   "photo": "media/a1/2026-11-23/photos/carpet.jpg",
+   "word_audio": "media/a1/2026-11-23/word-audio/carpet.mp3"
+  },
+  {
+   "example": "I have toothache, so I need a dentist.",
+   "example_fa": "دندان‌درد دارم، پس به دندان‌پزشک نیاز دارم.",
+   "meaning": "Feel pain in your tooth.",
+   "persian": "دندان‌درد داشتن",
+   "photo": "media/a1/2026-11-21/photos/have-toothache.jpg",
+   "pos": "phrase",
+   "pronunciation": "hav TOOTH-ayk",
+   "word": "have toothache",
+   "word_audio": "media/a1/2026-11-21/word-audio/have-toothache.mp3"
+  },
+  {
+   "word": "Can you tell me the way …?",
+   "pos": "phrase",
+   "meaning": "A polite way to ask for directions.",
+   "example": "Can you tell me the way to the station?",
+   "pronunciation": "kuhn YOO TEL mee thuh WAY",
+   "persian": "می‌توانید راه را بگویید؟",
+   "example_fa": "می‌توانید راه ایستگاه را به من بگویید؟",
+   "photo": "media/a1/2026-11-23/photos/can-you-tell-me-the-way.jpg",
+   "word_audio": "media/a1/2026-11-23/word-audio/can-you-tell-me-the-way.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/a1/2026-11-24/pronunciation.mp3",
+ "podcast": null,
+ "shadowing": {
+  "title": "A Sick Day at Home",
+  "audio": "media/a1/2026-11-24/shadowing.mp3",
+  "transcript": "media/a1/2026-11-24/shadowing-transcript.txt",
+  "transcript_fa": "media/a1/2026-11-24/shadowing-transcript-fa.txt",
+  "sentence_audio": [
+   "media/a1/2026-11-24/shadowing-sentences/001.mp3",
+   "media/a1/2026-11-24/shadowing-sentences/002.mp3",
+   "media/a1/2026-11-24/shadowing-sentences/003.mp3",
+   "media/a1/2026-11-24/shadowing-sentences/004.mp3",
+   "media/a1/2026-11-24/shadowing-sentences/005.mp3",
+   "media/a1/2026-11-24/shadowing-sentences/006.mp3",
+   "media/a1/2026-11-24/shadowing-sentences/007.mp3",
+   "media/a1/2026-11-24/shadowing-sentences/008.mp3",
+   "media/a1/2026-11-24/shadowing-sentences/009.mp3",
+   "media/a1/2026-11-24/shadowing-sentences/010.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'pepper' mean?",
+   "options": [
+    "Feel pain in your head.",
+    "To be sick with a common illness.",
+    "A spice for food, or a vegetable.",
+    "Italian food made from flour and water."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'have a heart attack' mean?",
+   "options": [
+    "A sudden serious medical problem with your heart.",
+    "A polite way to ask permission.",
+    "Feel pain in your tooth.",
+    "Italian food made from flour and water."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'have a headache' mean?",
+   "options": [
+    "A sudden serious medical problem with your heart.",
+    "Feel pain in your head.",
+    "Feel pain in your tooth.",
+    "A thick covering for floors, often made of wool."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'pasta' mean?",
+   "options": [
+    "A sudden serious medical problem with your heart.",
+    "Italian food made from flour and water.",
+    "A polite way to ask permission.",
+    "A spice for food, or a vegetable."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'pea(s)' mean?",
+   "options": [
+    "Small, round, green vegetable.",
+    "Feel pain in your tooth.",
+    "A thick covering for floors, often made of wool.",
+    "Feel pain in your head."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'Can I...?' mean?",
+   "options": [
+    "A polite way to ask permission.",
+    "To be sick with a common illness.",
+    "A thick covering for floors, often made of wool.",
+    "A sudden serious medical problem with your heart."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'have a cold' mean?",
+   "options": [
+    "A polite way to ask permission.",
+    "Small, round, green vegetable.",
+    "A sudden serious medical problem with your heart.",
+    "To be sick with a common illness."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'carpet' mean?",
+   "options": [
+    "To be sick with a common illness.",
+    "Italian food made from flour and water.",
+    "A polite way to ask for directions.",
+    "A thick covering for floors, often made of wool."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'have toothache' mean?",
+   "options": [
+    "Small, round, green vegetable.",
+    "Feel pain in your tooth.",
+    "To be sick with a common illness.",
+    "Feel pain in your head."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'Can you tell me the way …?' mean?",
+   "options": [
+    "A polite way to ask for directions.",
+    "Feel pain in your head.",
+    "To be sick with a common illness.",
+    "Small, round, green vegetable."
+   ],
+   "answer": 0
+  }
+ ],
+ "review": true,
+ "review_of": [
+  "2026-11-21",
+  "2026-11-22",
+  "2026-11-23"
+ ],
+ "review_window_words": 15,
+ "review_sampled": 10
+}
