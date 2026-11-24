@@ -8438,7 +8438,7 @@ function paintIeltsBanner() {
    always pass; students need profiles.is_vip = true (Admin panel toggle). */
 /* FREE MODE (Alireza 2026-11-10): the mock is free for every signed-in
    learner "for now". Set IELTS_MOCK_FREE = false to restore the VIP gate.
-   If you flip it back, the /fa/ielts/ page copy must change the same day. */
+   If you flip it back, the /fa/ielts/ page copy and llms.txt (IELTS lines) must change the same day. */
 var IELTS_MOCK_FREE = true;
 async function ieltsFetchVip() {
   if (!state.user) return false;

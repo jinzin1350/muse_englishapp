@@ -74,6 +74,9 @@ for fn, what in (('function faSync', 'Persian app UI engine (src/app/05-fa-ui-en
         problems.append('missing "%s": the %s was removed. Restore it from git history.' % (fn, what))
 if not re.search(r'<script[^>]+src="/js/fa-ui\.js\?v=[0-9a-f]+"', index):
     problems.append('index.html lost the <script src="/js/fa-ui.js?v=…"> tag (Persian app labels).')
+if 'static.hotjar.com' in index and 'HOTJAR_AUTH_GATE' not in index:
+    problems.append('index.html loads Hotjar without HOTJAR_AUTH_GATE: Hotjar would record the login tokens '
+                    'in the address after Google sign-in. Restore the gated snippet.')
 if 'hreflang="en"' in index:
     problems.append('index.html has hreflang="en" again (/en/ was removed on 2026-11-12).')
 if 'muse_home_lang' in index:

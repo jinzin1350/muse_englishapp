@@ -342,15 +342,29 @@ html:not(.app-mode) #splash{display:none!important}
   <!-- OneSignal Web Push SDK (initialized only when a real App ID is configured) -->
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
   <!-- Hotjar Tracking Code for https://muse-englishapp.pages.dev/ -->
+  <!-- HOTJAR_AUTH_GATE (2026-11-24): after Google sign-in the page opens with the login tokens in the
+       address (#access_token=...&refresh_token=...). Hotjar saved those addresses in its recordings, so
+       Hotjar now loads only once the address has no login tokens (the sign-in code removes them within
+       a second). Keep this gate; tools/check_app.py checks for it. -->
   <script>
-      (function(h,o,t,j,a,r){
-          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-          h._hjSettings={hjid:6788856,hjsv:6};
-          a=o.getElementsByTagName('head')[0];
-          r=o.createElement('script');r.async=1;
-          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-          a.appendChild(r);
-      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    (function () {
+      var AUTH = /(access_token|refresh_token|provider_token|token_hash)=|[?&]code=/;
+      function hotjar() {
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:6788856,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+      }
+      if (!AUTH.test(location.href)) { hotjar(); return; }
+      var tries = 0, timer = setInterval(function () {
+        if (!AUTH.test(location.href)) { clearInterval(timer); hotjar(); }
+        else if (++tries > 60) clearInterval(timer);   /* still there after 30 s: don't record this visit */
+      }, 500);
+    })();
   </script>
 </head>
 <body>
@@ -512,7 +526,7 @@ setTimeout(function () {
 
   <script src="/js/config.js"></script>
   <script defer src="/js/fa-ui.js?v=7a51f0f1"></script>
-  <script defer src="/js/main.js?v=efeeb8fc"></script>
+  <script defer src="/js/main.js?v=2199454f"></script>
 
 <script>
 document.addEventListener('click', function(e) {
