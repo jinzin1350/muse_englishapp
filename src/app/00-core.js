@@ -151,16 +151,42 @@ function teacherInviteLink(code) {
 function teacherIeltsLink(code) {
   return window.location.origin + '/?ref=' + encodeURIComponent(code) + '#/ielts';
 }
+/* Time in app (daily_stats.seconds_in_app). 2026-11-24: counts only while the learner is
+   actually there: the page is visible AND (they touched / typed / scrolled in the last 3 minutes
+   OR audio/video is playing). Before this, a tab left open on a computer kept counting for hours. */
+var HB_IDLE_MS = 3 * 60 * 1000;
+var _hbLastInput = Date.now();
+var _hbMedia = [];
+(function () {
+  try {
+    ['pointerdown', 'keydown', 'touchstart', 'wheel', 'scroll'].forEach(function (ev) {
+      document.addEventListener(ev, function () { _hbLastInput = Date.now(); }, { passive: true, capture: true });
+    });
+    var origPlay = HTMLMediaElement.prototype.play;
+    HTMLMediaElement.prototype.play = function () {
+      try { if (_hbMedia.indexOf(this) === -1) { _hbMedia.push(this); if (_hbMedia.length > 30) _hbMedia.shift(); } } catch (e) {}
+      return origPlay.apply(this, arguments);
+    };
+  } catch (e) {}
+})();
+function hbMediaPlaying() {
+  try {
+    for (var i = 0; i < _hbMedia.length; i++) { var m = _hbMedia[i]; if (m && !m.paused && !m.ended) return true; }
+    if (window.speechSynthesis && window.speechSynthesis.speaking) return true;
+  } catch (e) {}
+  return false;
+}
 function initHeartbeat() {
   setInterval(function () {
     try {
       if (!state.user || state.user.demo) return;
       if (document.visibilityState !== 'visible') return;
+      if (Date.now() - _hbLastInput > HB_IDLE_MS && !hbMediaPlaying()) return;
       bumpStat('seconds_in_app', 30);
     } catch (e) {}
   }, 30000);
   document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState === 'visible') initHeartbeat._last = Date.now();
+    if (document.visibilityState === 'visible') { initHeartbeat._last = Date.now(); _hbLastInput = Date.now(); }
   });
 }
 

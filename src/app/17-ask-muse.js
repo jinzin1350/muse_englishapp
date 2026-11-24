@@ -11,7 +11,8 @@
 var ASKM = { enabled: null, p: null, open: false, busy: false, loaded: false, msgs: [], quota: null,
   fresh: false, links: null, linksP: null, ctx: null, lastFocus: null };
 var ASKM_HIDE = { landing: 1, signin: 1, signup: 1, preview: 1, waiting: 1, ielts: 1, 'grammar-test': 1, ptest: 1,
-  certificate: 1, admin: 1, 'admin-teacher': 1, teacher: 1, planner: 1, 'choose-teacher': 1, 'become-teacher': 1, support: 1 };
+  certificate: 1, admin: 1, 'admin-teacher': 1, teacher: 1, planner: 1, 'choose-teacher': 1, 'become-teacher': 1, support: 1,
+  'first-steps': 1 };
 
 function askmFa() { try { return uiLang() === 'fa'; } catch (e) { return true; } }
 function askmT(fa, en) { return askmFa() ? fa : en; }

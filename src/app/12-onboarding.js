@@ -483,7 +483,11 @@ function welcomeModalHTML(fa, offerTour) {
       '<p>درس جدیدت هر روز ساعت <b class="onb-hl">۸ صبح</b> به وقت خودت آماده‌ست.</p>' +
       '<p>فقط کافیه روزی حدود <b>۱۰ دقیقه</b> وقت بذاری — کلی کلمه، جمله و نکته جدید یاد می‌گیری.</p>' +
       '</div>' + img + '</div>' +
-      (offerTour
+      (firstStepsEligible()   /* 2026-11-24: new learners start with the 3-step first lesson (17a-first-steps.js) */
+        ? '<button class="onb-cta" data-fs-start="welcome">اولین درس ۳ دقیقه‌ای رو شروع کن 🚀</button>' +
+          '<div class="onb-alts">' + (offerTour ? '<button class="onb-skip" data-action="welcome-tour">یه دور توی اپ بزنیم</button>' : '') +
+          '<button class="onb-skip" data-action="modal-close">فعلاً نه</button></div>'
+        : offerTour
         ? '<button class="onb-cta" data-action="welcome-tour">بزن بریم، یه دور بزنیم 🌱</button>' +
           '<button class="onb-skip" data-action="modal-close">فعلاً نه</button>'
         : '<button class="onb-cta" data-action="welcome-start">شروع کن</button>') +
@@ -496,7 +500,11 @@ function welcomeModalHTML(fa, offerTour) {
     '<p>Your new lesson is ready every day at <b class="onb-hl">8:00 AM</b>, your time.</p>' +
     '<p>Just spend about <b>10 minutes</b> a day — you\u2019ll pick up loads of new words, sentences and tips.</p>' +
     '</div>' + img + '</div>' +
-    (offerTour
+    (firstStepsEligible()
+      ? '<button class="onb-cta" data-fs-start="welcome">Start your 3-minute first lesson \uD83D\uDE80</button>' +
+        '<div class="onb-alts">' + (offerTour ? '<button class="onb-skip" data-action="welcome-tour">Take the tour</button>' : '') +
+        '<button class="onb-skip" data-action="modal-close">Not now</button></div>'
+      : offerTour
       ? '<button class="onb-cta" data-action="welcome-tour">Take the tour <span aria-hidden="true">\u2192</span></button>' +
         '<button class="onb-skip" data-action="modal-close">Not now</button>'
       : '<button class="onb-cta" data-action="welcome-start">Let\u2019s start</button>') +
