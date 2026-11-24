@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "ninja-crispi-4-in-1-glass-air-fryer",
+      "name_fa": "سرخ‌کن بدون روغن شیشه‌ای نینجا کریسپی ۴ در ۱",
+      "name_en": "Ninja Crispi Portable Glass Air Fryer Cooking System – 4-Qt & 6-Cup CleanCrisp Containers, FN101CGY (Canadian Version)",
+      "price_cad": 159.98,
+      "regular_cad": 219.99,
+      "discount_pct": 27,
+      "added_fa": "سه‌شنبه، ۲۴ نوامبر ۲۰۲۶",
+      "image": "img/ninja-crispi-4-in-1-glass-air-fryer.jpg",
+      "url": "https://www.amazon.ca/dp/B0DJLBKVSS?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "ظرف شیشه‌ای بدون مواد مضر، پخت و سرو و نگهداری در یک ظرف"
+    },
+    {
+      "id": "govee-permanent-outdoor-lights-2-100ft",
+      "name_fa": "چراغ‌های دائمی فضای باز گووی ۲، ۱۰۰ فوت",
+      "name_en": "Govee Permanent Outdoor Lights 2, 100ft RGBIC Outdoor Lights with 72 LED Lights, IP67 Waterproof, 100+ Scene Modes, Works with Alexa, Google Assistant, White",
+      "price_cad": 249.99,
+      "regular_cad": 399.99,
+      "discount_pct": 38,
+      "added_fa": "سه‌شنبه، ۲۴ نوامبر ۲۰۲۶",
+      "image": "img/govee-permanent-outdoor-lights-2-100ft.jpg",
+      "url": "https://www.amazon.ca/dp/B0D14WP9TB?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "نورپردازی دائمی بام و حیاط، ضدآب و قابل کنترل با اپ و الکسا"
+    },
+    {
       "id": "philips-sonicare-diamondclean-9000",
       "name_fa": "مسواک برقی فیلیپس Sonicare DiamondClean 9000",
       "name_en": "Philips Sonicare DiamondClean 9000 Electric Toothbrush, 1 Brush Head, Blue/Black, HX9911/92",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "نویزکنسلینگ افسانه‌ای بوز، باتری ۲۴ ساعته و صدای شفاف برای سفر و کار"
-    },
-    {
-      "id": "kindle-paperwhite-16gb-2024",
-      "name_fa": "کتاب‌خوان آمازون Kindle Paperwhite ۱۶ گیگ",
-      "name_en": "Amazon Kindle Paperwhite 16GB (2024 model) - 7 inch glare-free display and weeks of battery life - Black",
-      "price_cad": 179.99,
-      "regular_cad": 279.99,
-      "discount_pct": 36,
-      "added_fa": "یکشنبه، ۲۲ نوامبر ۲۰۲۶",
-      "image": "img/kindle-paperwhite-16gb-2024.jpg",
-      "url": "https://www.amazon.ca/dp/B0CFPWLGF2?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "صفحه ۷ اینچی ضدبازتاب، ضد آب و باتری تا ۱۲ هفته"
-    },
-    {
-      "id": "amazon-echo-dot-5th-gen",
-      "name_fa": "اسپیکر هوشمند آمازون Echo Dot",
-      "name_en": "Amazon Echo Dot (5th Gen), Vibrant sounding Alexa speaker, Great for bedrooms, dining rooms and offices, Charcoal",
-      "price_cad": 44.99,
-      "regular_cad": 104.99,
-      "discount_pct": 57,
-      "added_fa": "یکشنبه، ۲۲ نوامبر ۲۰۲۶",
-      "image": "img/amazon-echo-dot-5th-gen.jpg",
-      "url": "https://www.amazon.ca/dp/B09B93ZDG4?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "اسپیکر هوشمند الکسا، صدای شفاف و کنترل خانه هوشمند با صدا"
     }
   ],
-  "updated_fa": "دوشنبه ۲ آذر"
+  "updated_fa": "سه‌شنبه ۳ آذر"
 }
