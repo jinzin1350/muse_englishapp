@@ -68,15 +68,6 @@ async function run(browser, lang) {
   await pg.click('#askm-x'); await pg.waitForTimeout(400);
   check(await pg.$eval('#askm', function (e) { return e.hidden; }), tag + 'Ask Muse chat closes');
 
-  /* First lesson in 3 steps (src/app/17a-first-steps.js) */
-  check(await has('.fs-card[data-fs-start="home"]'), tag + 'first-lesson card shows on home');
-  await pg.click('.fs-card[data-fs-start="home"]'); await pg.waitForTimeout(1500);
-  check(pg.url().includes('#/first-steps') && await has('.fs .fs-w'), tag + 'first-lesson flow opens on its first word');
-  await pg.click('[data-fs="next-word"]'); await pg.waitForTimeout(300);
-  check(await has('.fs .fs-w'), tag + 'first-lesson moves to the next word');
-  await pg.click('[data-fs="exit"]'); await pg.waitForTimeout(1500);
-  check(!pg.url().includes('#/first-steps') && await has('.fs-card[data-fs-start="home"]'), tag + 'first-lesson exit returns home, card still offered');
-
   check(staffReqs === 0, tag + 'learner never downloads js/staff.js (requests: ' + staffReqs + ')');
   check(errors.length === 0, tag + 'no page errors' + (errors.length ? ': ' + errors.slice(0, 3).join(' | ') : ''));
   await ctx.close();

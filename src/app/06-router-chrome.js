@@ -41,7 +41,7 @@ function shouldEnterAppMode() {
 }
 
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest', 'certificate'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'support', 'vip', 'chat', 'ptest', 'certificate', 'first-steps'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'support', 'vip', 'chat', 'ptest', 'certificate'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 /* Return-after-signup (Claude for Alireza, 2026-11-10): a signed-out visitor
    who opens one of these routes (e.g. the /fa/ielts/ CTA -> #/ielts) sees the
@@ -225,7 +225,6 @@ function show(view, arg) {
   else if (view === 'scores') renderScores(v);
   else if (view === 'progress') renderScores(v); /* merged into Scores 2026-10-09 */
   else if (view === 'review') renderMistakes(v, arg);
-  else if (view === 'first-steps') renderFirstSteps(v);   /* src/app/17a-first-steps.js */
   else if (view === 'profile') renderProfile(v);
   else if (view === 'challenge') renderChallenge(v);
   else if (view === 'inbox') renderInbox(v);
