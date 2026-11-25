@@ -12021,31 +12021,42 @@ function quizDoorHTML(m) {
 }
 
 /* ---- end-of-words nudge ---- */
-function qzNudgeWatch(body, m) {
+/* needLeave: the last card must first leave the screen and come back. Used after the
+   pop-up was blocked by the first-lesson tour (its quiz step scrolls the page to the
+   quiz button by itself) or by another pop-up: the learner gets the nudge the next
+   time THEY scroll to the end, not stacked right after the tour. Fix 2026-11-25. */
+function qzNudgeWatch(body, m, needLeave) {
   try {
     if (_qzObs) { try { _qzObs.disconnect(); } catch (e) {} _qzObs = null; }
     if (!m || !m.date || !(m.quiz || []).length || typeof IntersectionObserver === 'undefined') return;
     if (_qzNudged[m.date] || qzQuizDone(m)) return;
     var cards = body.querySelectorAll('.word-card');
     if (!cards.length) return;
-    _qzObs = new IntersectionObserver(function (entries) {
+    var armed = !needLeave;
+    var obs = new IntersectionObserver(function (entries) {
       for (var i = 0; i < entries.length; i++) {
-        if (!entries[i].isIntersecting) continue;
-        try { _qzObs.disconnect(); } catch (e) {}
-        _qzObs = null;
-        setTimeout(function () { qzNudgeShow(m); }, 900);
+        if (!entries[i].isIntersecting) { armed = true; continue; }
+        if (!armed) continue;
+        try { obs.disconnect(); } catch (e) {}
+        if (_qzObs === obs) _qzObs = null;
+        setTimeout(function () {
+          if (qzNudgeShow(m) === 'blocked' && body.isConnected) qzNudgeWatch(body, m, true);
+        }, 900);
         break;
       }
     }, { threshold: 0.6 });
-    _qzObs.observe(cards[cards.length - 1]);
+    _qzObs = obs;
+    obs.observe(cards[cards.length - 1]);
   } catch (e) {}
 }
 
+/* Returns 'blocked' when only a tour / pop-up stood in the way (the watcher re-arms). */
 function qzNudgeShow(m) {
   if (_qzNudged[m.date]) return;
   if (state.view !== 'lesson' || state.lessonTab !== 'words' || state.quiz) return;
   if (!state.lesson || state.lesson.date !== m.date || qzQuizDone(m)) return;
-  if (document.getElementById('app-modal') || document.getElementById('qz-nudge') || document.getElementById('tut-ov')) return;
+  if (document.getElementById('qz-nudge')) return;
+  if (document.getElementById('app-modal') || document.getElementById('tut-ov')) return 'blocked';
   _qzNudged[m.date] = 1;
   var fa = qzFa();
   var n = qzDeckSize(m), t = qzMinutes(n);
@@ -15314,7 +15325,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611251629';
+var APP_VERSION = '202611252352';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
