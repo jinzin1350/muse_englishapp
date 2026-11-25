@@ -11996,8 +11996,8 @@ function qzDeckSize(m) {
 function qzMinutes(n) { return Math.max(1, Math.round(n * 10 / 60)); }
 function qzSizeText(m) {
   var n = qzDeckSize(m), t = qzMinutes(n);
-  return qzFa() ? (qzNum(n) + ' سؤال کوتاه · حدود ' + qzNum(t) + ' دقیقه')
-               : (n + ' short questions · about ' + t + ' min');
+  /* Time only, no question count (Alireza 2026-11-25: "14 questions" sounds like a lot). */
+  return qzFa() ? ('حدود ' + qzNum(t) + ' دقیقه') : ('about ' + t + ' min');
 }
 function qzQuizDone(m) { try { return !!((getDayProgress(m.date) || {}).quiz); } catch (e) { return false; } }
 
@@ -12056,8 +12056,8 @@ function qzNudgeShow(m) {
       '<img class="qz-nudge-ico" src="/media/ask-muse/atish-face.webp" alt="" width="72" height="72">' +
       '<h3 id="qz-nudge-t">' + (fa ? 'آفرین! همهٔ لغت‌ها رو دیدی 👏' : 'Nice! You’ve seen all the words 👏') + '</h3>' +
       '<p>' + (fa
-        ? 'حالا نوبت آزمونه: <b>' + qzNum(n) + ' سؤال کوتاه، حدود ' + qzNum(t) + ' دقیقه</b>. الان که لغت‌ها یادته، بهترین وقتشه.'
-        : 'Now the quiz: <b>' + n + ' short questions, about ' + t + ' min</b>. Best time is now, while the words are fresh.') + '</p>' +
+        ? 'حالا نوبت آزمونه، <b>فقط حدود ' + qzNum(t) + ' دقیقه</b>. الان که لغت‌ها یادته، بهترین وقتشه.'
+        : 'Now the quiz, <b>just about ' + t + ' min</b>. Best time is now, while the words are fresh.') + '</p>' +
       (m.date === todayStr()
         ? '<p class="qz-nudge-streak">' + (fa ? 'با تموم کردنش، امروز توی روزهای پیاپیت ثبت میشه 🔥' : 'Finish it and today counts toward your streak 🔥') + '</p>'
         : '') +
@@ -15152,7 +15152,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611251559';
+var APP_VERSION = '202611251609';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
