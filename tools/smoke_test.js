@@ -53,6 +53,15 @@ async function run(browser, lang) {
   check(!(await has('#qz-nudge')), tag + 'quiz pop-up closes with Later');
   await pg.click('.qz-door-btn'); await pg.waitForTimeout(1500);
   check(await has('[data-action="duo-opt"], [data-action="duo-pick"], [data-action="duo-check"], .duo-q'), tag + 'word quiz starts from the door');
+  /* Podcast & shadowing library (src/app/18c-library.js, 2026-11-25) */
+  await go('#/home', 1800);
+  check(await has('#home-library-wrap a[href="#/podcasts"]') && await has('#home-library-wrap a[href="#/shadowings"]'), tag + 'home shows the podcast and shadowing banners');
+  await go('#/podcasts/b1', 1800);
+  check((await pg.$$('.lib-row')).length > 10, tag + 'podcast library lists episodes');
+  await pg.click('.lib-row'); await pg.waitForTimeout(2000);
+  check(await has('.lesson-tab[data-tab="podcast"][aria-selected="true"]') && await has('.lib-more[href="#/podcasts"]'), tag + 'library opens the lesson on its Podcast tab');
+  await go('#/shadowings/a1', 1800);
+  check((await pg.$$('.lib-row')).length > 10, tag + 'shadowing library lists stories');
   await go('#/grammar/past-simple', 2200);
   check(await has('.gt3-topic, .g-topic'), tag + 'grammar guide renders');
   await go('#/profile');

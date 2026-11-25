@@ -47,6 +47,7 @@ function paintHome(v, mistakes, attempts) {
   html += prevLessonsHTML(lessons);
 
   // 0b2 — Grammar guides banner (smart: explore / continue / completed)
+  html += '<div id="home-library-wrap">' + libraryBannersHTML() + '</div>'; /* podcast & shadowing library: 18c-library.js, Claude */
   html += '<div id="home-review-wrap"></div><div id="home-tricky-wrap"></div><div id="home-cards-wrap"></div>';
   html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-ielts-wrap"></div>';
@@ -485,6 +486,7 @@ function paintHomeDesktop(v, mistakes, attempts) {
   html += installBannerHTML();
   html += '<div class="dh-grid">' + dhQuestsHTML() +
     '<div class="dh-col">' + dhLessonHTML(today) + dhMistakesHTML(mistakes) + '</div></div>';
+  html += '<div id="home-library-wrap">' + libraryBannersHTML() + '</div>'; /* podcast & shadowing library: 18c-library.js, Claude */
   html += '<div id="home-review-wrap"></div><div id="home-tricky-wrap"></div><div id="home-cards-wrap"></div>';
   html += '<div id="home-grammar-wrap"></div>';
   html += '<div id="home-ielts-wrap"></div>';

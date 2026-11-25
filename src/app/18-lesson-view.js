@@ -73,8 +73,8 @@ function renderLessonTab(body) {
      shadowing = all sentences practiced, grammar = grammar quiz finished.
      Opening a tab no longer marks anything. */
   if (tab === 'words') { body.innerHTML = wordsTabHTML(m); observeWordsEnd(body, m); qzNudgeWatch(body, m); refreshSavedWordButtons(body); }
-  else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); wireSummaryChallenge(body, m); }
-  else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); wireShadowingPractice(body, m); }
+  else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m) + libraryTabLinkHTML('podcast'); wireAudioCards(body); warmPodcast(m); wireSummaryChallenge(body, m); }
+  else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m) + libraryTabLinkHTML('shadowing'); wireAudioCards(body); wireShadowingPractice(body, m); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
   else if (tab === 'lessonpath') renderLessonPath(body);
   else if (tab === 'grammar') renderGrammarPath(body); /* Grammar Path inside the lesson (2026-11-18) — no navigation away. */

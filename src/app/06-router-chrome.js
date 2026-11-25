@@ -41,7 +41,7 @@ function shouldEnterAppMode() {
 }
 
 const PUBLIC_VIEWS = ['landing', 'signin', 'signup', 'preview', 'ptest', 'certificate'];
-const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'support', 'vip', 'chat', 'ptest', 'certificate'];
+const LEARNER_VIEWS = ['home', 'lesson', 'lessons', 'scores', 'review', 'profile', 'admin', 'admin-teacher', 'waiting', 'challenge', 'teacher', 'become-teacher', 'inbox', 'homework', 'planner', 'choose-teacher', 'progress', 'grammar', 'grammar-test', 'ielts', 'vocab', 'sentences', 'words', 'tricky', 'support', 'vip', 'chat', 'ptest', 'certificate', 'podcasts', 'shadowings'];
 const INPAGE_ANCHORS = ['how-it-works', 'levels'];
 /* Return-after-signup (Claude for Alireza, 2026-11-10): a signed-out visitor
    who opens one of these routes (e.g. the /fa/ielts/ CTA -> #/ielts) sees the
@@ -194,7 +194,7 @@ function show(view, arg) {
   state.view = view;
   faSync();
   if (view !== 'admin-teacher') state.viewTeacher = null; /* leaving view-as-teacher mode */
-  if (view !== 'lesson') { qzTrackLeave('nav'); qzNudgeDrop(); state.quiz = null; } /* quiz tracking: 18b-quiz-door.js */
+  if (view !== 'lesson') { qzTrackLeave('nav'); qzNudgeDrop(); libLeaveLesson(); state.quiz = null; } /* quiz tracking: 18b-quiz-door.js; library: 18c-library.js */
   if (view !== 'grammar') { state.gquiz = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'grammar-test') { gtestStopTimer(); state.gtest = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'ielts') { ieltsStopMedia(); }
@@ -243,6 +243,7 @@ function show(view, arg) {
   else if (view === 'grammar-test') renderGrammarTest(v, arg);
   else if (view === 'ielts') renderIelts(v, arg);
   else if (view === 'vocab') renderVocab(v, arg);
+  else if (view === 'podcasts' || view === 'shadowings') renderLibrary(v, view === 'podcasts' ? 'podcast' : 'shadowing', arg); /* 18c-library.js, Claude */
   else if (view === 'sentences') renderSentences(v, arg);
   else if (view === 'words') renderWords(v, arg);
   else if (view === 'tricky') renderTricky(v, arg);
@@ -271,7 +272,7 @@ function setChrome() {
       const tv = t.getAttribute('data-view');
       // The lessons archive is a sub-page of Home: keep Home highlighted there.
       // Same for the grammar section and the grammar placement test (entered from the home banner).
-      const active = tv === state.view || ((state.view === 'lessons' || state.view === 'grammar' || state.view === 'grammar-test' || state.view === 'ielts' || state.view === 'vocab' || state.view === 'sentences') && tv === 'home');
+      const active = tv === state.view || ((state.view === 'lessons' || state.view === 'grammar' || state.view === 'grammar-test' || state.view === 'ielts' || state.view === 'vocab' || state.view === 'sentences' || state.view === 'podcasts' || state.view === 'shadowings') && tv === 'home');
       t.classList.toggle('active', active);
       if (active) t.setAttribute('aria-current', 'page');
       else t.removeAttribute('aria-current');

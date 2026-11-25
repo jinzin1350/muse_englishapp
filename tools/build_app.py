@@ -179,6 +179,52 @@ def fix_assistant_catalog():
     return changed
 
 
+LIB_LEVELS = ('a1', 'a2', 'b1', 'b2', 'c1', 'c2')
+
+
+def library_index(level):
+    """Podcasts and shadowing stories of one level, newest first, for the in-app library
+    (src/app/18c-library.js, Claude 2026-11-25). Built from lessons/<level>/*.json, so the
+    daily lesson commits refresh it on every deploy (check_app.py --deploy)."""
+    try:
+        fa = json.load(open(os.path.join(REPO, 'data', 'fa', 'themes.json'), encoding='utf-8')).get('themes', {})
+    except (OSError, ValueError):
+        fa = {}
+    d = os.path.join(REPO, 'lessons', level)
+    out = []
+    for name in sorted(os.listdir(d) if os.path.isdir(d) else [], reverse=True):
+        if not re.match(r'^\d{4}-\d{2}-\d{2}\.json$', name):
+            continue
+        try:
+            m = json.load(open(os.path.join(d, name), encoding='utf-8'))
+        except (OSError, ValueError):
+            continue
+        pod, sh = m.get('podcast') or {}, m.get('shadowing') or {}
+        p = (pod.get('title') or 'Podcast').strip() if isinstance(pod, dict) and pod.get('audio') else ''
+        s_ = (sh.get('title') or 'Shadowing').strip() if isinstance(sh, dict) and sh.get('audio') else ''
+        if not (p or s_):
+            continue
+        theme = (m.get('theme') or '').strip()
+        k = theme.lower()
+        tf = fa.get(k) or fa.get(k.replace(' and ', ' & ')) or fa.get(k.replace(' and ', ' & ').replace(' \u2014 ', ' - ')) or ''
+        out.append({'d': name[:10], 't': theme, 'tf': tf, 'p': p, 's': s_})
+    return json.dumps(out, ensure_ascii=False, separators=(',', ':')) + '\n'
+
+
+def fix_library_index():
+    """Write data/library/<level>.json for every level. Returns True if anything changed."""
+    changed = False
+    os.makedirs(os.path.join(REPO, 'data', 'library'), exist_ok=True)
+    for lv in LIB_LEVELS:
+        p = os.path.join(REPO, 'data', 'library', lv + '.json')
+        text = library_index(lv)
+        if not os.path.exists(p) or read(p) != text:
+            with open(p, 'w', encoding='utf-8', newline='') as f:
+                f.write(text)
+            changed = True
+    return changed
+
+
 def fix_hashes():
     """Point the ?v= cache-busters in index.html at the current file contents, and keep the hidden
     landing's images lazy (see lazy_landing_images)."""
@@ -216,6 +262,8 @@ def main():
         print('build_app: updated ?v= hashes in index.html')
     if fix_assistant_catalog():
         print('build_app: updated the Ask Muse link catalog in functions/api/assistant.js')
+    if fix_library_index():
+        print('build_app: updated the podcast/shadowing library index (data/library/)')
 
 
 if __name__ == '__main__':

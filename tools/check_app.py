@@ -49,6 +49,8 @@ if DEPLOY:
         print('check_app: fixed ?v= hashes in index.html for this deploy')
     if build_app.fix_assistant_catalog():
         print('check_app: updated the Ask Muse link catalog for this deploy')
+    if build_app.fix_library_index():
+        print('check_app: updated the podcast/shadowing library index for this deploy')
 
 # 1. js/main.js must be the build of src/app, js/staff.js the build of src/staff
 if build_app.build_text() != read('js/main.js'):
