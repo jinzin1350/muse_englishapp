@@ -5449,3 +5449,51 @@ html.askm-on,html.askm-on body{overflow:hidden}
 .ap-askm-q{padding:.6rem 0;border-bottom:1px solid #F1E9DA}
 .ap-askm-q:last-child{border-bottom:0}
 .ap-askm-text{margin-top:.2rem;line-height:1.6;unicode-bidi:plaintext;white-space:pre-wrap}
+
+/* ============ Quiz door + end-of-words nudge (src/app/18b-quiz-door.js, Claude 2026-11-25) ============
+   Replaces the English "Start Quiz" image under the pronunciation card. */
+.qz-door{max-width:460px;margin:1.1rem auto 2.4rem;text-align:center;}
+.qz-door-btn{display:flex;align-items:center;gap:12px;width:100%;min-height:84px;padding:12px 18px 12px 12px;border:0;border-radius:24px;cursor:pointer;
+  background:linear-gradient(135deg,#FF9A3C 0%,#F0652A 100%);color:#fff;text-align:start;font:inherit;
+  box-shadow:0 12px 26px rgba(240,101,42,.35),inset 0 -4px 0 rgba(150,50,10,.22);transition:transform .12s ease;}
+.qz-door[dir=rtl] .qz-door-btn{padding:12px 12px 12px 18px;}
+/* keeps .start-quiz-cta only as the tour's target: drop that class's float animation, glow and size */
+.qz-door-btn.start-quiz-cta{animation:none;filter:none;max-width:none;margin:0;}
+.qz-door-btn.start-quiz-cta img.qz-door-ico{display:block;width:56px;height:56px;}
+.qz-door-btn:active{transform:scale(.97);}
+.qz-door-btn:focus-visible{outline:3px solid #17212B;outline-offset:3px;}
+.qz-door-ico{flex:none;width:56px;height:56px;border-radius:50%;background:#FFF3E6;padding:4px;object-fit:contain;}
+.qz-door-txt{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0;}
+.qz-door-txt b{font-size:21px;line-height:1.25;font-weight:800;}
+.qz-door-txt small{font-size:14px;line-height:1.4;opacity:.95;font-weight:600;}
+.qz-door-go{flex:none;font-size:34px;line-height:1;font-weight:700;opacity:.9;}
+.qz-door.is-done .qz-door-btn{background:linear-gradient(135deg,#5E9C7D 0%,#39745A 100%);box-shadow:0 10px 22px rgba(57,116,90,.28),inset 0 -4px 0 rgba(20,60,40,.2);}
+.qz-door-note{margin:.7rem .5rem 0;color:#7A4B12;font-size:14px;line-height:1.7;font-weight:600;}
+.qz-nudge{position:fixed;inset:0;z-index:90;display:flex;align-items:flex-end;justify-content:center;pointer-events:none;}
+.qz-nudge-back{position:absolute;inset:0;background:rgba(23,33,43,.45);opacity:0;transition:opacity .2s ease;pointer-events:auto;}
+.qz-nudge-card{position:relative;width:100%;max-width:460px;margin:0 auto;padding:22px 20px calc(18px + env(safe-area-inset-bottom));border-radius:24px 24px 0 0;
+  background:var(--card,#FFFDF6);text-align:center;box-shadow:0 -12px 32px rgba(23,33,43,.18);transform:translateY(105%);transition:transform .22s ease-out;pointer-events:auto;}
+.qz-nudge.on .qz-nudge-back{opacity:1;}
+.qz-nudge.on .qz-nudge-card{transform:none;}
+.qz-nudge-ico{display:block;width:72px;height:72px;margin:-56px auto 6px;border-radius:50%;background:#FFF3E6;padding:6px;box-shadow:0 6px 16px rgba(240,101,42,.25);object-fit:contain;}
+.qz-nudge-card h3{margin:4px 0 6px;font-size:20px;line-height:1.35;color:var(--ink,#17212B);}
+.qz-nudge-card p{margin:0 0 6px;font-size:15.5px;line-height:1.8;color:#3E4757;}
+.qz-nudge-streak{color:#7A4B12 !important;font-weight:600;font-size:14.5px !important;}
+.qz-nudge-go{display:block;width:100%;margin:12px 0 6px;padding:15px 18px;border:0;border-radius:16px;cursor:pointer;font:inherit;font-size:18px;font-weight:800;color:#fff;
+  background:linear-gradient(135deg,#FF9A3C 0%,#F0652A 100%);box-shadow:0 10px 22px rgba(240,101,42,.32);}
+.qz-nudge-later{display:block;width:100%;padding:10px;border:0;background:none;cursor:pointer;font:inherit;font-size:15px;font-weight:700;color:var(--muted,#6B7280);}
+.qz-nudge-go:focus-visible,.qz-nudge-later:focus-visible{outline:3px solid #17212B;outline-offset:2px;}
+/* desktop: the card sits under the content column (#view: 680px wide, 216px from the left); the dim covers the whole screen */
+@media (min-width:1024px){ body.logged-in .qz-nudge{justify-content:flex-start;} body.logged-in .qz-nudge-card{margin:0 0 0 calc(216px + (min(680px, 100vw - 216px) - 460px) / 2);} }
+@media (prefers-reduced-motion:reduce){ .qz-nudge-card,.qz-nudge-back,.qz-door-btn{transition:none;} }
+/* admin: quiz funnel page (src/staff/19b-admin-quiz-funnel.js, Claude 2026-11-25) */
+.ap-seg{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 1rem;}
+.ap-seg-btn{padding:7px 14px;border-radius:999px;border:1px solid var(--line,#E7DECB);background:#fff;color:var(--ink,#17212B);font:inherit;font-size:14px;font-weight:600;cursor:pointer;}
+.ap-seg-btn.on{background:var(--ink,#17212B);border-color:var(--ink,#17212B);color:#fff;}
+.ap-qf-row{display:grid;grid-template-columns:minmax(120px,1.1fr) 2fr auto;align-items:center;gap:10px;margin:10px 0;}
+.ap-qf-lab{font-size:15px;line-height:1.3;}
+.ap-qf-lab small{display:block;color:var(--muted,#6B7280);font-size:12px;}
+.ap-qf-bar{height:14px;border-radius:999px;background:#DCE8EA;overflow:hidden;}
+.ap-qf-bar i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#C84B31,#A83B26);}
+.ap-qf-n{white-space:nowrap;font-size:15px;color:var(--muted,#6B7280);}
+.ap-qf-n b{color:var(--ink,#17212B);margin-inline-end:4px;}

@@ -93,6 +93,7 @@ function beginQuizSession(kind, m, questions, prog) {
     date: m.date, level: m.level, theme: m.theme
   };
   state._sbKey = null;
+  qzTrackStart(state.quiz, prog); /* 18b-quiz-door.js */
   saveQuizProgress();
   renderQuizView();
 }
@@ -195,6 +196,7 @@ function nextQuiz() {
 
 function finishQuiz() {
   const q = state.quiz;
+  qzTrackDone(q); /* 18b-quiz-door.js */
   document.body.classList.remove('duo-playing');
   /* Fix 2: completion clears the saved in-progress state. */
   if (q && (q.kind === 'word' || q.kind === 'grammar')) clearQuizProgress(q.kind, q.date);
@@ -215,7 +217,7 @@ function finishQuiz() {
     missed: missedSnap.length ? missedSnap.slice(0, 30) : undefined
   });
   bumpStat('quizzes_completed', 1);
-  trackEvent('quiz_completed', { kind: q.kind, score: q.correct, total: total, date: q.date, level: q.level, theme: q.theme || '' });
+  trackEvent('quiz_completed', { kind: q.kind, score: q.correct, total: total, date: q.date, level: q.level, theme: q.theme || '', secs: qzSecs() });
   if (q.kind === 'word') {
     try {
       var wqN = parseInt(localStorage.getItem('el_word_quiz_done') || '0', 10) + 1;
@@ -739,6 +741,7 @@ function duoQuit() {
   /* Fix 2: quitting saves progress (resume on re-entry); only completion or
      an explicit "start over" clears it. */
   saveProgressAny();
+  qzTrackLeave('quit'); /* 18b-quiz-door.js */
   state.quiz = null;
   document.body.classList.remove('duo-playing');
   const m = document.getElementById('duo-exit-modal');

@@ -3477,7 +3477,7 @@ function show(view, arg) {
   state.view = view;
   faSync();
   if (view !== 'admin-teacher') state.viewTeacher = null; /* leaving view-as-teacher mode */
-  if (view !== 'lesson') { state.quiz = null; }
+  if (view !== 'lesson') { qzTrackLeave('nav'); qzNudgeDrop(); state.quiz = null; } /* quiz tracking: 18b-quiz-door.js */
   if (view !== 'grammar') { state.gquiz = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'grammar-test') { gtestStopTimer(); state.gtest = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'ielts') { ieltsStopMedia(); }
@@ -3578,7 +3578,7 @@ function setChrome() {
    tools/build_app.py adds a small stand-in for each staff entry point (see
    STAFF_ENTRIES there) that loads the file and then calls the real function. */
 var __staffApi = null, __staffP = null;
-var STAFF_JS_URL = '/js/staff.js?v=170d731f';
+var STAFF_JS_URL = '/js/staff.js?v=0cd3623f';
 function __evalStaff(__staffSrc) { eval(__staffSrc); }
 function loadStaff() {
   if (__staffApi) return Promise.resolve(__staffApi);
@@ -10723,6 +10723,8 @@ function renderLesson(v, dateStr) {
     const found = state.lessons.find(function (m) { return m.date === dateStr; });
     if (found) state.lesson = found;
   }
+  qzTrackLeave('nav'); /* the lesson page replaced a running quiz (18b-quiz-door.js) */
+  qzNudgeDrop();
   const m = state.lesson;
   if (!m) { v.innerHTML = '<div class="empty">No lesson available.</div>'; return; }
   if (m.date) awardPoints('lesson_open', 5, m.date, false, { theme: m.theme || '' });
@@ -10769,7 +10771,7 @@ function renderLessonTab(body) {
      podcast = fully listened (checkTrackCompletion) or summary done,
      shadowing = all sentences practiced, grammar = grammar quiz finished.
      Opening a tab no longer marks anything. */
-  if (tab === 'words') { body.innerHTML = wordsTabHTML(m); observeWordsEnd(body, m); refreshSavedWordButtons(body); }
+  if (tab === 'words') { body.innerHTML = wordsTabHTML(m); observeWordsEnd(body, m); qzNudgeWatch(body, m); refreshSavedWordButtons(body); }
   else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); wireSummaryChallenge(body, m); }
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); wireShadowingPractice(body, m); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
@@ -10817,23 +10819,10 @@ function wordsTabHTML(m) {
       (w.persian ? '<div class="word-fa" dir="auto">' + esc(w.persian) + '</div>' : '') +
     '</div>';
   }).join('') || '<div class="empty">No words in this lesson.</div>';
-  /* Start-Quiz CTA at the end of the words list (flame mascot button).
-     Starts the word quiz DIRECTLY (2026-11-18, Alireza's order — the Quiz
-     tab page is gone; this button is the quiz door now). */
-  const cta = (m.words && m.words.length && (m.quiz || []).length)
-    ? '<button class="start-quiz-cta" data-action="quiz-start" data-kind="word" aria-label="Start the word quiz">' +
-      '<img src="/media/celebration/start-quiz.webp" alt="Start Quiz"></button>'
-    : '';
-  /* All-words pronunciation audio after the last word card (moved from podcast tab 2026-10-11). */
-  const pronCard = m.pronunciation_audio
-    ? audioCardHTML({
-        id: 'card-pron', src: m.pronunciation_audio,
-        title: 'Pronunciation — all words',
-        sub: 'Listen to all ' + (m.words || []).length + ' words read aloud',
-        speeds: false, download: true
-      })
-    : '';
-  return faToggleBtn(m) + cards + pronCard + cta;
+  /* 2026-11-25, Alireza's order: the "Pronunciation — all words" card is gone
+     and the quiz door sits right after the last word: a big text button with
+     the real question count and time (src/app/18b-quiz-door.js, Claude). */
+  return faToggleBtn(m) + cards + quizDoorHTML(m);
 }
 
 /* Inner HTML of the designed "Start recording" button (Alireza's asset, 2026-10-15).
@@ -11961,6 +11950,179 @@ function renderLessonPath(body) {
     if (cur) setTimeout(function () { cur.scrollIntoView({ block: 'center', behavior: 'smooth' }); }, 350);
   }
 }
+/* ---------------- quiz door + end-of-words nudge + quiz tracking ----------------
+   Claude, 2026-11-25, Alireza's order. The funnel's biggest leak: learners
+   scroll to the last word (words_viewed) but never take the quiz (108 of 187
+   new learners in 30 days). The old door was an English image button parked
+   under the "Pronunciation — all words" card, below the fold when the last
+   word was on screen.
+   - quizDoorHTML(m): a big text button right after the last word (Persian for
+     fa learners), with the real question count and time. Keeps the class
+     .start-quiz-cta because the tour (12-onboarding.js) points at it.
+   - qzNudgeWatch(body, m): when the last word card comes into view and the
+     quiz isn't done, a bottom sheet says "now the quiz, ~N min" once per
+     lesson per page load.
+   - Tracking (app_events; no DB change):
+       quiz_start {kind, date, level, total, resumed, at, from}
+       quiz_exit  {kind, date, how: quit|nav|hidden, at, answered, correct, total, hearts, secs}
+       quiz_nudge {action: shown|go|later, date}
+     quiz_completed (19-quiz.js) now also carries secs.
+     Only lesson quizzes (word, grammar) are tracked. */
+
+var _qzSess = null;          /* the running lesson quiz: {kind, date, t0, done, ended, hid} */
+var _qzNudged = {};          /* lesson dates already nudged in this page load */
+var _qzObs = null;
+
+function qzFa() { try { return uiLang() === 'fa'; } catch (e) { return false; } }
+function qzNum(n) { return qzFa() ? faNum(n) : String(n); }
+
+/* How many questions buildDuoDeck() (19-quiz.js) will make for this lesson:
+   the lesson's own questions + up to 3 Persian->English + up to 2 listening
+   + up to 2 sentence-building, capped at 14. Keep in step with buildDuoDeck. */
+function qzDeckSize(m) {
+  var words = (m.words || []).filter(function (w) { return w && w.word; });
+  var ex = words.filter(function (w) {
+    if (!w.example) return false;
+    var k = w.example.replace(/["“”']/g, '').trim().split(/\s+/).length;
+    return k >= 4 && k <= 12;
+  }).length;
+  var n = (m.quiz || []).length +
+    Math.min(3, words.filter(function (w) { return w.persian; }).length) +
+    Math.min(2, words.filter(function (w) { return w.word_audio; }).length) +
+    Math.min(2, ex);
+  return Math.min(14, n);
+}
+/* About 10 seconds a question (sentence building is slower, plain choices faster). */
+function qzMinutes(n) { return Math.max(1, Math.round(n * 10 / 60)); }
+function qzSizeText(m) {
+  var n = qzDeckSize(m), t = qzMinutes(n);
+  return qzFa() ? (qzNum(n) + ' سؤال کوتاه · حدود ' + qzNum(t) + ' دقیقه')
+               : (n + ' short questions · about ' + t + ' min');
+}
+function qzQuizDone(m) { try { return !!((getDayProgress(m.date) || {}).quiz); } catch (e) { return false; } }
+
+function quizDoorHTML(m) {
+  if (!(m && m.words && m.words.length && (m.quiz || []).length)) return '';
+  var fa = qzFa(), done = qzQuizDone(m);
+  var main = done ? (fa ? 'دوباره آزمون بده' : 'Take the quiz again') : (fa ? 'شروع آزمون' : 'Start the quiz');
+  var sub = done ? (fa ? '✅ آزمون این درس رو دادی' : '✅ You’ve done this quiz') : qzSizeText(m);
+  var streak = (!done && m.date === todayStr())
+    ? '<p class="qz-door-note">' + (fa ? 'با تموم کردن آزمون، امروز توی روزهای پیاپیت ثبت میشه 🔥' : 'Finish it and today counts toward your streak 🔥') + '</p>'
+    : '';
+  return '<div class="qz-door' + (done ? ' is-done' : '') + '" data-fa-skip' + (fa ? ' dir="rtl" lang="fa"' : '') + '>' +
+    '<button class="qz-door-btn start-quiz-cta" data-action="quiz-start" data-kind="word" data-from="words_end">' +
+      '<img class="qz-door-ico" src="/media/ask-muse/atish-face.webp" alt="" width="56" height="56">' +
+      '<span class="qz-door-txt"><b>' + main + '</b><small>' + sub + '</small></span>' +
+      '<span class="qz-door-go" aria-hidden="true">›</span>' + /* bidi-mirrored: shows as ‹ in Persian */
+    '</button>' + streak + '</div>';
+}
+
+/* ---- end-of-words nudge ---- */
+function qzNudgeWatch(body, m) {
+  try {
+    if (_qzObs) { try { _qzObs.disconnect(); } catch (e) {} _qzObs = null; }
+    if (!m || !m.date || !(m.quiz || []).length || typeof IntersectionObserver === 'undefined') return;
+    if (_qzNudged[m.date] || qzQuizDone(m)) return;
+    var cards = body.querySelectorAll('.word-card');
+    if (!cards.length) return;
+    _qzObs = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (!entries[i].isIntersecting) continue;
+        try { _qzObs.disconnect(); } catch (e) {}
+        _qzObs = null;
+        setTimeout(function () { qzNudgeShow(m); }, 900);
+        break;
+      }
+    }, { threshold: 0.6 });
+    _qzObs.observe(cards[cards.length - 1]);
+  } catch (e) {}
+}
+
+function qzNudgeShow(m) {
+  if (_qzNudged[m.date]) return;
+  if (state.view !== 'lesson' || state.lessonTab !== 'words' || state.quiz) return;
+  if (!state.lesson || state.lesson.date !== m.date || qzQuizDone(m)) return;
+  if (document.getElementById('app-modal') || document.getElementById('qz-nudge') || document.getElementById('tut-ov')) return;
+  _qzNudged[m.date] = 1;
+  var fa = qzFa();
+  var n = qzDeckSize(m), t = qzMinutes(n);
+  var el = document.createElement('div');
+  el.id = 'qz-nudge';
+  el.className = 'qz-nudge';
+  el.setAttribute('data-fa-skip', '');
+  el.innerHTML =
+    '<div class="qz-nudge-back" data-qn="later"></div>' +
+    '<div class="qz-nudge-card" role="dialog" aria-modal="true" aria-labelledby="qz-nudge-t"' + (fa ? ' dir="rtl" lang="fa"' : '') + '>' +
+      '<img class="qz-nudge-ico" src="/media/ask-muse/atish-face.webp" alt="" width="72" height="72">' +
+      '<h3 id="qz-nudge-t">' + (fa ? 'آفرین! همهٔ لغت‌ها رو دیدی 👏' : 'Nice! You’ve seen all the words 👏') + '</h3>' +
+      '<p>' + (fa
+        ? 'حالا نوبت آزمونه: <b>' + qzNum(n) + ' سؤال کوتاه، حدود ' + qzNum(t) + ' دقیقه</b>. الان که لغت‌ها یادته، بهترین وقتشه.'
+        : 'Now the quiz: <b>' + n + ' short questions, about ' + t + ' min</b>. Best time is now, while the words are fresh.') + '</p>' +
+      (m.date === todayStr()
+        ? '<p class="qz-nudge-streak">' + (fa ? 'با تموم کردنش، امروز توی روزهای پیاپیت ثبت میشه 🔥' : 'Finish it and today counts toward your streak 🔥') + '</p>'
+        : '') +
+      '<button class="qz-nudge-go" data-qn="go">' + (fa ? 'شروع آزمون' : 'Start the quiz') + '</button>' +
+      '<button class="qz-nudge-later" data-qn="later">' + (fa ? 'بعداً' : 'Later') + '</button>' +
+    '</div>';
+  document.body.appendChild(el);
+  requestAnimationFrame(function () { el.classList.add('on'); });
+  var go = el.querySelector('.qz-nudge-go');
+  try { go.focus({ preventScroll: true }); } catch (e) {}
+  try { trackEvent('quiz_nudge', { action: 'shown', date: m.date }); } catch (e) {}
+  var close = function (action) {
+    document.removeEventListener('keydown', onKey);
+    el.classList.remove('on');
+    setTimeout(function () { if (el.parentNode) el.parentNode.removeChild(el); }, 220);
+    try { trackEvent('quiz_nudge', { action: action, date: m.date }); } catch (e) {}
+    if (action === 'go') { state._quizFrom = 'nudge'; startQuiz('word', m.date); }
+  };
+  var onKey = function (e) { if (e.key === 'Escape') close('later'); };
+  document.addEventListener('keydown', onKey);
+  el.addEventListener('click', function (e) {
+    var a = e.target.closest('[data-qn]');
+    if (a) close(a.getAttribute('data-qn'));
+  });
+}
+/* Leaving the lesson (or starting the quiz another way) drops a waiting nudge. */
+function qzNudgeDrop() {
+  var el = document.getElementById('qz-nudge');
+  if (el && el.parentNode) el.parentNode.removeChild(el);
+}
+
+/* ---- quiz tracking ---- */
+function qzSecs() { return _qzSess ? Math.round((Date.now() - _qzSess.t0) / 1000) : null; }
+function qzTrackStart(q, prog) {
+  if (!q || (q.kind !== 'word' && q.kind !== 'grammar')) return;
+  qzNudgeDrop();
+  _qzSess = { kind: q.kind, date: q.date, t0: Date.now(), done: false, ended: false, hid: false };
+  try {
+    trackEvent('quiz_start', { kind: q.kind, date: q.date, level: q.level, total: q.questions.length,
+      resumed: prog ? 1 : 0, at: (q.idx || 0) + 1, from: state._quizFrom || '' });
+  } catch (e) {}
+  state._quizFrom = '';
+}
+function qzTrackDone(q) {
+  if (_qzSess && q && q.kind === _qzSess.kind && q.date === _qzSess.date) _qzSess.done = true;
+}
+/* how: 'quit' (✕ / Quit / back to lesson), 'nav' (went to another screen),
+   'hidden' (app or tab put in the background: may still come back). */
+function qzTrackLeave(how) {
+  var s = _qzSess;
+  if (!s || s.done || s.ended) return;
+  var q = (state.quiz && state.quiz.kind === s.kind) ? state.quiz
+    : ((state.pausedQuiz && state.pausedQuiz.kind === s.kind) ? state.pausedQuiz : null);
+  if (how === 'hidden') { if (s.hid || !q) return; s.hid = true; }
+  else { s.ended = true; _qzSess = null; }
+  try {
+    trackEvent('quiz_exit', { kind: s.kind, date: s.date, how: how,
+      at: q ? (q.idx || 0) + 1 : null, answered: q ? (q.log || []).filter(Boolean).length : null,
+      correct: q ? q.correct : null, total: q ? q.questions.length : null, hearts: q ? q.hearts : null,
+      secs: Math.round((Date.now() - s.t0) / 1000) });
+  } catch (e) {}
+}
+document.addEventListener('visibilitychange', function () {
+  if (document.visibilityState === 'hidden' && state.quiz) qzTrackLeave('hidden');
+});
 /* ---------------- quiz engine ---------------- */
 async function startQuiz(kind, dateStr) {
   let m = state.lesson;
@@ -12056,6 +12218,7 @@ function beginQuizSession(kind, m, questions, prog) {
     date: m.date, level: m.level, theme: m.theme
   };
   state._sbKey = null;
+  qzTrackStart(state.quiz, prog); /* 18b-quiz-door.js */
   saveQuizProgress();
   renderQuizView();
 }
@@ -12158,6 +12321,7 @@ function nextQuiz() {
 
 function finishQuiz() {
   const q = state.quiz;
+  qzTrackDone(q); /* 18b-quiz-door.js */
   document.body.classList.remove('duo-playing');
   /* Fix 2: completion clears the saved in-progress state. */
   if (q && (q.kind === 'word' || q.kind === 'grammar')) clearQuizProgress(q.kind, q.date);
@@ -12178,7 +12342,7 @@ function finishQuiz() {
     missed: missedSnap.length ? missedSnap.slice(0, 30) : undefined
   });
   bumpStat('quizzes_completed', 1);
-  trackEvent('quiz_completed', { kind: q.kind, score: q.correct, total: total, date: q.date, level: q.level, theme: q.theme || '' });
+  trackEvent('quiz_completed', { kind: q.kind, score: q.correct, total: total, date: q.date, level: q.level, theme: q.theme || '', secs: qzSecs() });
   if (q.kind === 'word') {
     try {
       var wqN = parseInt(localStorage.getItem('el_word_quiz_done') || '0', 10) + 1;
@@ -12702,6 +12866,7 @@ function duoQuit() {
   /* Fix 2: quitting saves progress (resume on re-entry); only completion or
      an explicit "start over" clears it. */
   saveProgressAny();
+  qzTrackLeave('quit'); /* 18b-quiz-door.js */
   state.quiz = null;
   document.body.classList.remove('duo-playing');
   const m = document.getElementById('duo-exit-modal');
@@ -14738,7 +14903,7 @@ function bindEvents() {
       t.setAttribute('aria-expanded', String(!t.closest('[data-audio-card]').querySelector('.transcript-panel').classList.contains('hidden')));
     }
     else if (a === 'speed') { player.el.playbackRate = parseFloat(t.getAttribute('data-rate')); refreshTrackCards(); }
-    else if (a === 'quiz-start') startQuiz(t.getAttribute('data-kind'));
+    else if (a === 'quiz-start') { state._quizFrom = t.getAttribute('data-from') || ''; startQuiz(t.getAttribute('data-kind')); }
     else if (a === 'quiz-opt') answerQuiz(parseInt(t.getAttribute('data-idx'), 10));
     else if (a === 'quiz-next') nextQuiz();
     else if (a === 'duo-opt') duoAnswer(parseInt(t.getAttribute('data-idx'), 10));
@@ -14987,7 +15152,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611250559';
+var APP_VERSION = '202611251559';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

@@ -68,7 +68,7 @@ function bindEvents() {
       t.setAttribute('aria-expanded', String(!t.closest('[data-audio-card]').querySelector('.transcript-panel').classList.contains('hidden')));
     }
     else if (a === 'speed') { player.el.playbackRate = parseFloat(t.getAttribute('data-rate')); refreshTrackCards(); }
-    else if (a === 'quiz-start') startQuiz(t.getAttribute('data-kind'));
+    else if (a === 'quiz-start') { state._quizFrom = t.getAttribute('data-from') || ''; startQuiz(t.getAttribute('data-kind')); }
     else if (a === 'quiz-opt') answerQuiz(parseInt(t.getAttribute('data-idx'), 10));
     else if (a === 'quiz-next') nextQuiz();
     else if (a === 'duo-opt') duoAnswer(parseInt(t.getAttribute('data-idx'), 10));

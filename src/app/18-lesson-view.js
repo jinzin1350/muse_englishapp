@@ -24,6 +24,8 @@ function renderLesson(v, dateStr) {
     const found = state.lessons.find(function (m) { return m.date === dateStr; });
     if (found) state.lesson = found;
   }
+  qzTrackLeave('nav'); /* the lesson page replaced a running quiz (18b-quiz-door.js) */
+  qzNudgeDrop();
   const m = state.lesson;
   if (!m) { v.innerHTML = '<div class="empty">No lesson available.</div>'; return; }
   if (m.date) awardPoints('lesson_open', 5, m.date, false, { theme: m.theme || '' });
@@ -70,7 +72,7 @@ function renderLessonTab(body) {
      podcast = fully listened (checkTrackCompletion) or summary done,
      shadowing = all sentences practiced, grammar = grammar quiz finished.
      Opening a tab no longer marks anything. */
-  if (tab === 'words') { body.innerHTML = wordsTabHTML(m); observeWordsEnd(body, m); refreshSavedWordButtons(body); }
+  if (tab === 'words') { body.innerHTML = wordsTabHTML(m); observeWordsEnd(body, m); qzNudgeWatch(body, m); refreshSavedWordButtons(body); }
   else if (tab === 'podcast') { body.innerHTML = podcastTabHTML(m); wireAudioCards(body); warmPodcast(m); wireSummaryChallenge(body, m); }
   else if (tab === 'shadowing') { body.innerHTML = shadowingTabHTML(m); wireAudioCards(body); wireShadowingPractice(body, m); }
   else if (tab === 'quiz') body.innerHTML = quizTabHTML(m);
@@ -118,23 +120,10 @@ function wordsTabHTML(m) {
       (w.persian ? '<div class="word-fa" dir="auto">' + esc(w.persian) + '</div>' : '') +
     '</div>';
   }).join('') || '<div class="empty">No words in this lesson.</div>';
-  /* Start-Quiz CTA at the end of the words list (flame mascot button).
-     Starts the word quiz DIRECTLY (2026-11-18, Alireza's order — the Quiz
-     tab page is gone; this button is the quiz door now). */
-  const cta = (m.words && m.words.length && (m.quiz || []).length)
-    ? '<button class="start-quiz-cta" data-action="quiz-start" data-kind="word" aria-label="Start the word quiz">' +
-      '<img src="/media/celebration/start-quiz.webp" alt="Start Quiz"></button>'
-    : '';
-  /* All-words pronunciation audio after the last word card (moved from podcast tab 2026-10-11). */
-  const pronCard = m.pronunciation_audio
-    ? audioCardHTML({
-        id: 'card-pron', src: m.pronunciation_audio,
-        title: 'Pronunciation — all words',
-        sub: 'Listen to all ' + (m.words || []).length + ' words read aloud',
-        speeds: false, download: true
-      })
-    : '';
-  return faToggleBtn(m) + cards + pronCard + cta;
+  /* 2026-11-25, Alireza's order: the "Pronunciation — all words" card is gone
+     and the quiz door sits right after the last word: a big text button with
+     the real question count and time (src/app/18b-quiz-door.js, Claude). */
+  return faToggleBtn(m) + cards + quizDoorHTML(m);
 }
 
 /* Inner HTML of the designed "Start recording" button (Alireza's asset, 2026-10-15).

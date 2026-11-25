@@ -44,13 +44,15 @@ async function run(browser, lang) {
 
   await go('#/lesson', 2200);
   check(await has('.lesson-tab'), tag + 'lesson view renders');
-  const quizTab = await pg.$('.lesson-tab[data-tab="quiz"]');
-  if (quizTab) {
-    await quizTab.click(); await pg.waitForTimeout(700);
-    const start = await pg.$('[data-action="quiz-start"]');
-    if (start) { await start.click(); await pg.waitForTimeout(1500); }
-    check(await has('[data-action="duo-opt"], [data-action="duo-pick"], [data-action="duo-check"], .duo-q'), tag + 'word quiz starts');
-  }
+  /* Quiz door + end-of-words pop-up (src/app/18b-quiz-door.js, 2026-11-25) */
+  check(await has('.qz-door-btn[data-action="quiz-start"]') && !(await has('#card-pron')), tag + 'quiz door after the words, no pronunciation card');
+  await pg.evaluate(function () { var c = document.querySelectorAll('.word-card'); if (c.length) c[c.length - 1].scrollIntoView({ block: 'center' }); });
+  await pg.waitForTimeout(2200);
+  check(await has('#qz-nudge .qz-nudge-go'), tag + 'quiz pop-up appears at the last word');
+  if (await has('#qz-nudge')) { await pg.click('#qz-nudge .qz-nudge-later'); await pg.waitForTimeout(500); }
+  check(!(await has('#qz-nudge')), tag + 'quiz pop-up closes with Later');
+  await pg.click('.qz-door-btn'); await pg.waitForTimeout(1500);
+  check(await has('[data-action="duo-opt"], [data-action="duo-pick"], [data-action="duo-check"], .duo-q'), tag + 'word quiz starts from the door');
   await go('#/grammar/past-simple', 2200);
   check(await has('.gt3-topic, .g-topic'), tag + 'grammar guide renders');
   await go('#/profile');

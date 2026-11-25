@@ -194,7 +194,7 @@ function show(view, arg) {
   state.view = view;
   faSync();
   if (view !== 'admin-teacher') state.viewTeacher = null; /* leaving view-as-teacher mode */
-  if (view !== 'lesson') { state.quiz = null; }
+  if (view !== 'lesson') { qzTrackLeave('nav'); qzNudgeDrop(); state.quiz = null; } /* quiz tracking: 18b-quiz-door.js */
   if (view !== 'grammar') { state.gquiz = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'grammar-test') { gtestStopTimer(); state.gtest = null; document.body.classList.remove('duo-playing'); }
   if (view !== 'ielts') { ieltsStopMedia(); }
