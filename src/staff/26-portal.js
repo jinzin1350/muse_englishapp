@@ -1435,7 +1435,7 @@ function apArmIdle() {
   reset();
 }
 function apShell(active, bodyHTML) {
-  const items = [['dashboard', '📊 Dashboard'], ['users', '👥 Users'], ['daily', '📊 Daily study'], ['teachers', '🍎 Teachers'], ['telegram', '🤖 Telegram'], ['support', '💬 Support'], ['ask-muse', '🔥 Ask Muse']];
+  const items = [['dashboard', '📊 Dashboard'], ['users', '👥 Users'], ['daily', '📊 Daily study'], ['teachers', '🍎 Teachers'], ['telegram', '🤖 Telegram'], ['support', '💬 Support'], ['ask-muse', '🔥 Ask Muse'], ['installs', '📲 App installs']];
   const nav = items.map(function (it) {
     const href = '/manage' + (it[0] === 'dashboard' ? '' : '/' + it[0]);
     return '<a href="' + href + '" data-apnav="' + it[0] + '"' +
@@ -2251,6 +2251,7 @@ async function renderAdminPanel() {
   else if (sp.section === 'support' && sp.arg) apRenderSupportThread(v, sp.arg);
   else if (sp.section === 'support') apRenderSupport(v);
   else if (sp.section === 'ask-muse') apRenderAskMuse(v);
+  else if (sp.section === 'installs') apRenderInstalls(v);  /* src/staff/19-admin-installs.js, Claude */
   else apRenderDashboard(v);
   hideSplashSoon();
 }

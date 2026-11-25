@@ -248,6 +248,7 @@ function show(view, arg) {
   else if (view === 'tricky') renderTricky(v, arg);
   else if (view === 'ptest') renderPTest(v, arg);
   askMuseSync();   /* Ask Muse button (src/app/17-ask-muse.js, Claude) */
+  pwaTrackOpen();  /* installed-app vs browser opens (src/app/04-lesson-data-audio-pwa.js, Claude) */
 }
 
 /* ---------------- chrome (headers / profile menu / nav) ---------------- */

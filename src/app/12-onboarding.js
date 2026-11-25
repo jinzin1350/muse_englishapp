@@ -594,7 +594,7 @@ function showIntroPopup() {
       const dp = pwaDeferredPrompt;
       pwaDeferredPrompt = null;
       dp.prompt();
-      dp.userChoice.then(function () { pwaSnooze(); }).catch(function () {});
+      dp.userChoice.then(function (c) { pwaTrackChoice(c, 'intro'); pwaSnooze(); }).catch(function () {});
     }
   });
   ov.querySelector('#intro-close').addEventListener('click', function () {

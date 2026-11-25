@@ -2582,35 +2582,115 @@ function installBannerHTML() {
     '<span>' + (fa ? 'اپ رو روی صفحهٔ گوشی‌ت بذار — با یه لمس باز می‌شه' : 'Put Muse on your home screen — one tap to open') + '</span></span>' +
     '<span class="install-banner-arrow" aria-hidden="true">›</span></button>';
 }
+/* Install guide v2 (Claude, 2026-11-25, Alireza's order): the big orange
+   "Install the app" button misled people. It did nothing whenever the browser
+   gives no one-tap install (in-app browsers, iPhone, already installed), so
+   learners tapped it 4x and gave up. Now the guide leads with the steps for
+   THIS browser (install happens from the browser's own menu); the one-tap
+   button only appears when the browser really offers it, and is styled as an
+   optional shortcut, not the way to install. In-app browsers (Instagram,
+   Telegram, Facebook, WebViews) get "open in Chrome/Safari first" + copy link. */
+function pwaEnv() {
+  const ua = navigator.userAgent || '';
+  const os = pwaIsIos() ? 'ios' : /android/i.test(ua) ? 'android'
+    : /windows|macintosh|cros|linux/i.test(ua) ? 'desktop' : 'other';
+  const inapp = /instagram/i.test(ua) ? 'instagram' : /FBAN|FBAV|FB_IAB/i.test(ua) ? 'facebook'
+    : /telegram/i.test(ua) ? 'telegram' : (os === 'android' && /; wv\)/i.test(ua)) ? 'webview' : '';
+  const browser = inapp ? 'inapp-' + inapp : /SamsungBrowser/i.test(ua) ? 'samsung'
+    : /firefox|fxios/i.test(ua) ? 'firefox' : /edg\//i.test(ua) ? 'edge' : /OPR\/|opera/i.test(ua) ? 'opera'
+    : /crios|chrome|chromium/i.test(ua) ? 'chrome' : /safari/i.test(ua) ? 'safari' : 'other';
+  return { os: os, browser: browser, inapp: inapp };
+}
+function instKey(k) { return '<span class="inst-key" dir="ltr">' + k + '</span>'; }
+function instSteps(kind, fa) {
+  const S = {
+    chrome: fa
+      ? ['روی ' + instKey('⋮') + ' کروم بزن. بالا یا پایین صفحه‌ست، کنار آدرس سایت.',
+         '«نصب برنامه» یا «افزودن به صفحهٔ اصلی» رو انتخاب کن <span class="muted" dir="ltr">(Install app / Add to Home screen)</span>',
+         'روی «نصب» بزن <span class="muted" dir="ltr">(Install)</span>']
+      : ['Tap Chrome’s ' + instKey('⋮') + ' menu, at the top or bottom of the screen next to the address.',
+         'Choose “Install app” or “Add to Home screen”.', 'Tap “Install”.'],
+    samsung: fa
+      ? ['روی ' + instKey('☰') + ' پایین صفحه بزن.',
+         '«افزودن صفحه به» رو انتخاب کن <span class="muted" dir="ltr">(Add page to)</span>',
+         '«صفحهٔ اصلی» رو بزن <span class="muted" dir="ltr">(Home screen)</span>']
+      : ['Tap ' + instKey('☰') + ' at the bottom of the screen.', 'Choose “Add page to”.', 'Tap “Home screen”.'],
+    other: fa
+      ? ['منوی مرورگر رو باز کن (' + instKey('⋮') + ' یا ' + instKey('☰') + ').',
+         '«نصب» یا «افزودن به صفحهٔ اصلی» رو انتخاب کن <span class="muted" dir="ltr">(Install / Add to Home screen)</span>',
+         'تأیید کن. اگه این گزینه نبود، سایت رو توی کروم باز کن.']
+      : ['Open the browser menu (' + instKey('⋮') + ' or ' + instKey('☰') + ').',
+         'Choose “Install” or “Add to Home screen”.', 'Confirm. If the option is missing, open the site in Chrome.'],
+    ios: fa
+      ? ['توی سافاری، روی دکمهٔ اشتراک‌گذاری ' + instKey('⬆︎') + ' بزن <span class="muted" dir="ltr">(Share)</span>',
+         '«افزودن به صفحهٔ اصلی» رو انتخاب کن. اگه ندیدیش، کمی پایین برو <span class="muted" dir="ltr">(Add to Home Screen)</span>',
+         'روی «افزودن» بزن <span class="muted" dir="ltr">(Add)</span>']
+      : ['In Safari, tap the Share button ' + instKey('⬆︎') + '.', 'Choose “Add to Home Screen” (scroll down if you don’t see it).', 'Tap “Add”.'],
+    desktop: fa
+      ? ['توی نوار آدرس کروم یا اج، روی آیکون نصب ' + instKey('⊕') + ' بزن. یا از منوی ' + instKey('⋮') + ' گزینهٔ «نصب Muse English» رو بزن.',
+         'روی «نصب» بزن <span class="muted" dir="ltr">(Install)</span>']
+      : ['In Chrome or Edge, click the install icon ' + instKey('⊕') + ' in the address bar, or choose “Install Muse English” from the ' + instKey('⋮') + ' menu.',
+         'Click “Install”.']
+  };
+  return '<ol class="inst-steps">' + S[kind].map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ol>';
+}
 function showInstallGuide() {
   const fa = uiLang() === 'fa';
-  const ios = pwaIsIos();
-  const androidSteps = fa
-    ? ['توی کروم، روی سه‌نقطهٔ بالای صفحه بزن', 'گزینهٔ «نصب برنامه» رو انتخاب کن (Install app)', 'روی «نصب» بزن (Install)']
-    : ['In Chrome, tap the three dots at the top of the screen', 'Choose “Install app”', 'Tap “Install”'];
-  const iosSteps = fa
-    ? ['روی دکمهٔ اشتراک‌گذاری بزن (Share)', 'گزینهٔ «افزودن به صفحهٔ اصلی» رو انتخاب کن (Add to Home Screen)', 'روی «افزودن» بزن (Add)']
-    : ['Tap the Share button', 'Choose “Add to Home Screen”', 'Tap “Add”'];
-  const stepList = function (arr) {
-    return '<ol class="inst-steps">' + arr.map(function (s) { return '<li>' + s + '</li>'; }).join('') + '</ol>';
+  const env = pwaEnv();
+  const canPrompt = !!pwaDeferredPrompt && !env.inapp;
+  const T = function (f, e) { return fa ? f : e; };
+  const kind = env.os === 'ios' ? 'ios' : env.os === 'desktop' ? 'desktop'
+    : env.browser === 'samsung' ? 'samsung' : env.browser === 'chrome' ? 'chrome' : 'other';
+  const title = {
+    ios: T('🍎 آیفون (سافاری)', '🍎 iPhone (Safari)'), chrome: T('🤖 اندروید (کروم)', '🤖 Android (Chrome)'),
+    samsung: T('🤖 اینترنت سامسونگ', '🤖 Samsung Internet'), other: T('🤖 اندروید', '🤖 Android'),
+    desktop: T('💻 کامپیوتر', '💻 Computer')
   };
-  const html = '<div style="text-align:start">' +
-    '<h3 style="margin:0 0 6px;font-size:19px;">📲 ' + (fa ? 'آموزش نصب اپ میوز' : 'How to install the Muse app') + '</h3>' +
-    '<p class="muted" style="margin:0;line-height:1.8">' + (fa
-      ? 'میوز انگلیش یه اپه؛ کافیه یه بار نصبش کنی تا آیکونش بیاد روی صفحهٔ گوشی‌ت و همیشه با یه لمس باز بشه.'
-      : 'Muse English is an app — install it once and its icon lives on your home screen, one tap away.') + '</p>' +
-    (ios ? '' : '<button class="inst-btn inst-btn-primary" data-action="install-now" style="margin-top:14px">📲 ' + (fa ? 'نصب اپ' : 'Install the app') + '</button>') +
-    '<div class="inst-sec">🤖 ' + (fa ? 'اندروید (کروم)' : 'Android (Chrome)') + '</div>' + stepList(androidSteps) +
-    '<div class="inst-sec">🍎 ' + (fa ? 'آیفون (سافاری)' : 'iPhone (Safari)') + '</div>' + stepList(iosSteps) +
-    '<p class="muted" style="margin:14px 0 0;line-height:1.8">' + (fa ? 'جایی گیر کردی؟ به پشتیبانی پیام بده 💬' : 'Stuck somewhere? Message support 💬') + '</p>' +
-    '<button class="inst-btn inst-btn-soft" data-action="install-support">💬 ' + (fa ? 'پیام به پشتیبانی' : 'Message support') + '</button>' +
-    '<button class="inst-btn inst-btn-ghost" data-action="modal-close">' + (fa ? 'بستن' : 'Close') + '</button>' +
+  const others = ['chrome', 'samsung', 'ios', 'desktop'].filter(function (k) { return k !== kind; });
+  let main;
+  if (env.inapp) {
+    main = '<div class="inst-warn">' + T(
+      'الان سایت توی مرورگرِ داخلِ یه برنامهٔ دیگه (مثل اینستاگرام یا تلگرام) باز شده، و از اینجا نصب نمیشه. اول سایت رو توی ' + (env.os === 'ios' ? 'سافاری' : 'کروم') + ' باز کن:',
+      'This page is open inside another app (like Instagram or Telegram), and it can’t be installed from here. Open it in ' + (env.os === 'ios' ? 'Safari' : 'Chrome') + ' first:') + '</div>' +
+      '<ol class="inst-steps"><li>' + T('روی ' + instKey('⋯') + ' یا ' + instKey('⋮') + ' بالای صفحه بزن و «باز کردن در مرورگر» رو انتخاب کن <span class="muted" dir="ltr">(Open in browser)</span>',
+        'Tap ' + instKey('⋯') + ' or ' + instKey('⋮') + ' at the top and choose “Open in browser”.') + '</li>' +
+      '<li>' + T('یا لینک رو کپی کن و توی مرورگر بازش کن:', 'Or copy the link and open it in your browser:') + '</li></ol>' +
+      '<button class="inst-btn inst-btn-soft" data-inst="copy">🔗 ' + T('کپی لینک سایت', 'Copy the site link') + '</button>' +
+      '<p class="muted inst-small">' + T('بعد از باز شدن توی مرورگر، دوباره همین راهنما رو باز کن.', 'Once it’s open in the browser, open this guide again.') + '</p>';
+  } else {
+    main = '<div class="inst-sec">' + title[kind] + '</div>' + instSteps(kind, fa);
+  }
+  const quick = canPrompt
+    ? '<div class="inst-quick"><span>' + T('روی گوشی تو یه راه کوتاه‌تر هم هست:', 'Your browser also offers a shortcut:') + '</span>' +
+      '<button class="inst-link" data-action="install-now">⚡ ' + T('نصب مستقیم با یه لمس', 'One-tap install') + '</button></div>'
+    : '';
+  const more = '<details class="inst-more"><summary>' + T('گوشی یا مرورگرت فرق داره؟', 'Different phone or browser?') + '</summary>' +
+    others.map(function (k) { return '<div class="inst-sec">' + title[k] + '</div>' + instSteps(k, fa); }).join('') + '</details>';
+  const html = '<div class="inst" style="text-align:start"' + (fa ? ' dir="rtl"' : '') + '>' +
+    '<h3 style="margin:0 0 6px;font-size:19px;">📲 ' + T('آموزش نصب اپ میوز', 'How to install the Muse app') + '</h3>' +
+    '<p class="muted" style="margin:0;line-height:1.8">' + T(
+      'نصب از <b>منوی مرورگرت</b> انجام میشه. این مراحل رو برو تا آیکون میوز بیاد روی صفحهٔ گوشی‌ت و همیشه با یه لمس باز بشه.',
+      'You install it from <b>your browser’s menu</b>. Follow these steps and the Muse icon will sit on your home screen, one tap away.') + '</p>' +
+    main + quick + more +
+    '<p class="muted" style="margin:14px 0 0;line-height:1.8">' + T('جایی گیر کردی؟ به پشتیبانی پیام بده 💬', 'Stuck somewhere? Message support 💬') + '</p>' +
+    '<button class="inst-btn inst-btn-soft" data-action="install-support">💬 ' + T('پیام به پشتیبانی', 'Message support') + '</button>' +
+    '<button class="inst-btn inst-btn-ghost" data-action="modal-close">' + T('بستن', 'Close') + '</button>' +
     '</div>';
-  showModal(html);
-  try { trackEvent('install_guide', { action: 'open', ios: ios }); } catch (e) {}
+  const ov = showModal(html);
+  const cp = ov.querySelector('[data-inst="copy"]');
+  if (cp) cp.addEventListener('click', function () {
+    const url = window.location.origin + '/';
+    const done = function () { cp.textContent = '✅ ' + T('کپی شد', 'Copied'); };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(url).then(done, function () { window.prompt('', url); }); }
+      else { window.prompt('', url); }
+    } catch (e) {}
+    try { trackEvent('install_guide', { action: 'copy_link', browser: env.browser }); } catch (e) {}
+  });
+  try { trackEvent('install_guide', { action: 'open', ios: env.os === 'ios', os: env.os, browser: env.browser, can_prompt: canPrompt ? 1 : 0 }); } catch (e) {}
 }
 function installNowFromGuide() {
-  try { trackEvent('install_guide', { action: 'install' }); } catch (e) {}
+  try { trackEvent('install_guide', { action: 'install', can_prompt: pwaDeferredPrompt ? 1 : 0 }); } catch (e) {}
   if (pwaIsIos()) {
     closeModal();
     const sheet = document.getElementById('pwa-ios');
@@ -2618,14 +2698,46 @@ function installNowFromGuide() {
     return;
   }
   if (pwaDeferredPrompt) {
-    pwaDeferredPrompt.prompt();
-    pwaDeferredPrompt.userChoice.then(function () {
-      pwaDeferredPrompt = null;
+    const dp = pwaDeferredPrompt;
+    pwaDeferredPrompt = null;
+    dp.prompt();
+    dp.userChoice.then(function (c) {
+      pwaTrackChoice(c, 'guide');
       pwaHideBanner();
       pwaSnooze();
       closeModal();
     }).catch(function () {});
+  } else {
+    /* The shortcut is gone (already used once): drop the button, the steps above still work. */
+    const q = document.querySelector('#app-modal .inst-quick');
+    if (q) q.remove();
   }
+}
+/* ---- install tracking (Claude, 2026-11-25). All rows go to app_events. ----
+   app_open      {standalone 1|0, os, browser}  once a day per user per mode (installed / browser)
+   pwa_installed {os, browser}                  the browser confirmed an install (Android/desktop; iPhone never reports)
+   install_prompt{outcome accepted|dismissed, from banner|guide|intro}
+   install_guide {action open|install|copy_link, os, browser, can_prompt} */
+let _pwaOpenChecked = false, _pwaInstalledPending = false;
+function pwaTrackChoice(c, from) {
+  try { const env = pwaEnv(); trackEvent('install_prompt', { outcome: (c && c.outcome) || 'unknown', from: from, os: env.os, browser: env.browser }); } catch (e) {}
+}
+function pwaTrackInstalled() {
+  if (!sb || !state.user || state.user.demo) { _pwaInstalledPending = true; return; }
+  try { const env = pwaEnv(); trackEvent('pwa_installed', { os: env.os, browser: env.browser }); } catch (e) {}
+}
+function pwaTrackOpen() {
+  if (_pwaOpenChecked || !sb || !state.user || state.user.demo) return;
+  _pwaOpenChecked = true;
+  if (_pwaInstalledPending) { _pwaInstalledPending = false; pwaTrackInstalled(); }
+  const mode = pwaIsStandalone() ? '1' : '0', day = todayStr(), uid = String(state.user.id || '');
+  let log = null;
+  try { log = JSON.parse(localStorage.getItem('muse_open_log') || 'null'); } catch (e) { log = null; }
+  if (!log || log.u !== uid || log.d !== day) log = { u: uid, d: day, m: {} };
+  if (log.m[mode]) return;
+  log.m[mode] = 1;
+  try { localStorage.setItem('muse_open_log', JSON.stringify(log)); } catch (e) {}
+  try { const env = pwaEnv(); trackEvent('app_open', { standalone: mode === '1' ? 1 : 0, os: env.os, browser: env.browser }); } catch (e) {}
 }
 function pwaShowBanner() {
   if (pwaIsIos()) return; /* iOS never gets the banner — it gets the guide sheet directly. */
@@ -2673,7 +2785,8 @@ function initPwaPrompt() {
     }
     if (pwaDeferredPrompt) {
       pwaDeferredPrompt.prompt();
-      pwaDeferredPrompt.userChoice.then(function () {
+      pwaDeferredPrompt.userChoice.then(function (c) {
+        pwaTrackChoice(c, 'banner');
         pwaDeferredPrompt = null;
         pwaHideBanner();
         pwaSnooze();
@@ -2703,6 +2816,7 @@ function initPwaPrompt() {
   window.addEventListener('appinstalled', function () {
     pwaHideBanner();
     pwaSnooze();
+    pwaTrackInstalled();
   });
 }
 
@@ -3417,6 +3531,7 @@ function show(view, arg) {
   else if (view === 'tricky') renderTricky(v, arg);
   else if (view === 'ptest') renderPTest(v, arg);
   askMuseSync();   /* Ask Muse button (src/app/17-ask-muse.js, Claude) */
+  pwaTrackOpen();  /* installed-app vs browser opens (src/app/04-lesson-data-audio-pwa.js, Claude) */
 }
 
 /* ---------------- chrome (headers / profile menu / nav) ---------------- */
@@ -3463,7 +3578,7 @@ function setChrome() {
    tools/build_app.py adds a small stand-in for each staff entry point (see
    STAFF_ENTRIES there) that loads the file and then calls the real function. */
 var __staffApi = null, __staffP = null;
-var STAFF_JS_URL = '/js/staff.js?v=25757cf4';
+var STAFF_JS_URL = '/js/staff.js?v=170d731f';
 function __evalStaff(__staffSrc) { eval(__staffSrc); }
 function loadStaff() {
   if (__staffApi) return Promise.resolve(__staffApi);
@@ -5294,7 +5409,7 @@ function showIntroPopup() {
       const dp = pwaDeferredPrompt;
       pwaDeferredPrompt = null;
       dp.prompt();
-      dp.userChoice.then(function () { pwaSnooze(); }).catch(function () {});
+      dp.userChoice.then(function (c) { pwaTrackChoice(c, 'intro'); pwaSnooze(); }).catch(function () {});
     }
   });
   ov.querySelector('#intro-close').addEventListener('click', function () {
@@ -14872,7 +14987,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611212343';
+var APP_VERSION = '202611250559';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
