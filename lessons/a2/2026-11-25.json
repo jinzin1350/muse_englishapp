@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-25",
+  "theme": "health & body",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "cold",
+      "pos": "noun",
+      "meaning": "A common illness that makes you sneeze and cough.",
+      "example": "I have a cold and feel tired.",
+      "pronunciation": "KOHLD",
+      "persian": "سرماخوردگی",
+      "example_fa": "سرماخوردگی دارم و احساس خستگی می‌کنم.",
+      "photo": "media/a2/2026-11-25/photos/cold.jpg",
+      "word_audio": "media/a2/2026-11-25/word-audio/cold.mp3"
+    },
+    {
+      "word": "comb your hair",
+      "pos": "phrase",
+      "meaning": "To make your hair neat with a comb.",
+      "example": "Please comb your hair before school.",
+      "pronunciation": "KOHM yor HAIR",
+      "persian": "موهای خود را شانه کردن",
+      "example_fa": "لطفاً قبل از مدرسه موهایت را شانه کن.",
+      "photo": "media/a2/2026-11-25/photos/comb-your-hair.jpg",
+      "word_audio": "media/a2/2026-11-25/word-audio/comb-your-hair.mp3"
+    },
+    {
+      "word": "cry",
+      "pos": "verb",
+      "meaning": "To produce tears from your eyes, usually from sadness.",
+      "example": "The baby started to cry loudly.",
+      "pronunciation": "KRY",
+      "persian": "گریه کردن",
+      "example_fa": "نوزاد شروع کرد به بلند گریه کردن.",
+      "photo": "media/a2/2026-11-25/photos/cry.jpg",
+      "word_audio": "media/a2/2026-11-25/word-audio/cry.mp3"
+    },
+    {
+      "word": "cut [injure]",
+      "pos": "verb",
+      "meaning": "To make an opening in skin with something sharp.",
+      "example": "Be careful not to cut your finger.",
+      "pronunciation": "KUT",
+      "persian": "بریدن، زخمی کردن",
+      "example_fa": "مراقب باش انگشتت را نبری.",
+      "photo": "media/a2/2026-11-25/photos/cut.jpg",
+      "word_audio": "media/a2/2026-11-25/word-audio/cut.mp3"
+    },
+    {
+      "word": "dentist",
+      "pos": "noun",
+      "meaning": "A doctor who takes care of teeth.",
+      "example": "I have an appointment with the dentist.",
+      "pronunciation": "DEN-tist",
+      "persian": "دندانپزشک",
+      "example_fa": "با دندانپزشک قرار ملاقات دارم.",
+      "photo": "media/a2/2026-11-25/photos/dentist.jpg",
+      "word_audio": "media/a2/2026-11-25/word-audio/dentist.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-25/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: A Sick Day",
+    "audio": "media/a2/2026-11-25/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-25/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara's Sick Day",
+    "audio": "media/a2/2026-11-25/shadowing.mp3",
+    "transcript": "media/a2/2026-11-25/shadowing-transcript.txt",
+    "transcript_fa": "media/a2/2026-11-25/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-25/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-25/shadowing-sentences/015.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'cold' mean?",
+      "options": [
+        "A doctor who takes care of teeth.",
+        "A common illness that makes you sneeze and cough.",
+        "To produce tears from your eyes, usually from sadness.",
+        "To make your hair neat with a comb."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'comb your hair' mean?",
+      "options": [
+        "To produce tears from your eyes, usually from sadness.",
+        "A common illness that makes you sneeze and cough.",
+        "To make an opening in skin with something sharp.",
+        "To make your hair neat with a comb."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'cry' mean?",
+      "options": [
+        "A common illness that makes you sneeze and cough.",
+        "To produce tears from your eyes, usually from sadness.",
+        "To make an opening in skin with something sharp.",
+        "A doctor who takes care of teeth."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'cut [injure]' mean?",
+      "options": [
+        "To make your hair neat with a comb.",
+        "To make an opening in skin with something sharp.",
+        "To produce tears from your eyes, usually from sadness.",
+        "A common illness that makes you sneeze and cough."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'dentist' mean?",
+      "options": [
+        "A doctor who takes care of teeth.",
+        "To produce tears from your eyes, usually from sadness.",
+        "To make your hair neat with a comb.",
+        "A common illness that makes you sneeze and cough."
+      ],
+      "answer": 0
+    }
+  ]
+}

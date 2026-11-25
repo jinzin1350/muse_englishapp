@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-25",
+  "theme": "nature & environment",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "degrees",
+      "pos": "noun",
+      "meaning": "A unit for measuring temperature.",
+      "example": "It's 25 degrees outside today.",
+      "pronunciation": "dih-GREEZ",
+      "persian": "درجه (دما)",
+      "example_fa": "امروز بیرون ۲۵ درجه است.",
+      "photo": "media/a1/2026-11-25/photos/degrees.jpg",
+      "word_audio": "media/a1/2026-11-25/word-audio/degrees.mp3"
+    },
+    {
+      "word": "dry",
+      "pos": "adjective",
+      "meaning": "Not wet.",
+      "example": "Please hang the clothes to dry.",
+      "pronunciation": "DRY",
+      "persian": "خشک",
+      "example_fa": "لطفاً لباس‌ها را آویزان کن تا خشک شوند.",
+      "photo": "media/a1/2026-11-25/photos/dry.jpg",
+      "word_audio": "media/a1/2026-11-25/word-audio/dry.mp3"
+    },
+    {
+      "word": "fog",
+      "pos": "noun",
+      "meaning": "Thick cloud close to the ground.",
+      "example": "The fog made it hard to see.",
+      "pronunciation": "FOG",
+      "persian": "مه",
+      "example_fa": "مه دیدن را سخت کرد.",
+      "photo": "media/a1/2026-11-25/photos/fog.jpg",
+      "word_audio": "media/a1/2026-11-25/word-audio/fog.mp3"
+    },
+    {
+      "word": "foggy",
+      "pos": "adjective",
+      "meaning": "Full of fog; unclear.",
+      "example": "It was a cold and foggy morning.",
+      "pronunciation": "FOG-ee",
+      "persian": "مه‌آلود",
+      "example_fa": "صبح سرد و مه‌آلودی بود.",
+      "photo": "media/a1/2026-11-25/photos/foggy.jpg",
+      "word_audio": "media/a1/2026-11-25/word-audio/foggy.mp3"
+    },
+    {
+      "word": "hurricane",
+      "pos": "noun",
+      "meaning": "A very strong storm with powerful winds and rain.",
+      "example": "The hurricane caused a lot of damage.",
+      "pronunciation": "HUR-ih-kun",
+      "persian": "طوفان، گردباد",
+      "example_fa": "طوفان خسارت زیادی به بار آورد.",
+      "photo": "media/a1/2026-11-25/photos/hurricane.jpg",
+      "word_audio": "media/a1/2026-11-25/word-audio/hurricane.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-25/pronunciation.mp3",
+  "podcast": null,
+  "shadowing": {
+    "title": "A Foggy Morning",
+    "audio": "media/a1/2026-11-25/shadowing.mp3",
+    "transcript": "media/a1/2026-11-25/shadowing-transcript.txt",
+    "transcript_fa": "media/a1/2026-11-25/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-25/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-25/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-25/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-25/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-25/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-25/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-25/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-25/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-25/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-25/shadowing-sentences/010.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'degrees' mean?",
+      "options": [
+        "A very strong storm with powerful winds and rain.",
+        "Full of fog; unclear.",
+        "Thick cloud close to the ground.",
+        "A unit for measuring temperature."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'dry' mean?",
+      "options": [
+        "Not wet.",
+        "A unit for measuring temperature.",
+        "Thick cloud close to the ground.",
+        "Full of fog; unclear."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'fog' mean?",
+      "options": [
+        "A unit for measuring temperature.",
+        "Thick cloud close to the ground.",
+        "Full of fog; unclear.",
+        "Not wet."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'foggy' mean?",
+      "options": [
+        "A unit for measuring temperature.",
+        "Thick cloud close to the ground.",
+        "Full of fog; unclear.",
+        "Not wet."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'hurricane' mean?",
+      "options": [
+        "Not wet.",
+        "Full of fog; unclear.",
+        "A unit for measuring temperature.",
+        "A very strong storm with powerful winds and rain."
+      ],
+      "answer": 3
+    }
+  ]
+}

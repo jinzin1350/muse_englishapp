@@ -1,0 +1,192 @@
+{
+  "date": "2026-11-25",
+  "theme": "education & learning",
+  "level": "b2",
+  "cefr": "B2",
+  "words": [
+    {
+      "word": "architecture",
+      "pos": "noun",
+      "meaning": "The art and science of designing buildings.",
+      "example": "I love studying old Roman architecture.",
+      "pronunciation": "AR-ki-tek-cher",
+      "persian": "معماری",
+      "photo": "media/b2/2026-11-25/photos/architecture.jpg",
+      "word_audio": "media/b2/2026-11-25/word-audio/architecture.mp3"
+    },
+    {
+      "word": "argue",
+      "pos": "verb",
+      "meaning": "To speak angrily because you disagree.",
+      "example": "My brothers often argue about video games.",
+      "pronunciation": "AR-gyoo",
+      "persian": "بحث کردن، جر و بحث کردن",
+      "photo": "media/b2/2026-11-25/photos/argue.jpg",
+      "word_audio": "media/b2/2026-11-25/word-audio/argue.mp3"
+    },
+    {
+      "word": "art",
+      "pos": "noun",
+      "meaning": "Pictures, drawings, or sculptures.",
+      "example": "I like to draw and make art.",
+      "pronunciation": "ART",
+      "persian": "هنر",
+      "photo": "media/b2/2026-11-25/photos/art.jpg",
+      "word_audio": "media/b2/2026-11-25/word-audio/art.mp3"
+    },
+    {
+      "word": "arts",
+      "pos": "noun",
+      "meaning": "Subjects like history, literature, and languages.",
+      "example": "I study arts at university.",
+      "pronunciation": "ARTS",
+      "persian": "علوم انسانی، هنرها",
+      "photo": "media/b2/2026-11-25/photos/arts.jpg",
+      "word_audio": "media/b2/2026-11-25/word-audio/arts.mp3"
+    },
+    {
+      "word": "bachelor’s degree",
+      "pos": "noun phrase",
+      "meaning": "First university degree after three or four years of study.",
+      "example": "She earned her bachelor's degree in economics.",
+      "pronunciation": "BACH-uh-lerz duh-GREE",
+      "persian": "مدرک کارشناسی",
+      "photo": "media/b2/2026-11-25/photos/bachelors-degree.jpg",
+      "word_audio": "media/b2/2026-11-25/word-audio/bachelors-degree.mp3"
+    },
+    {
+      "word": "basic",
+      "pos": "adjective",
+      "meaning": "Simple and necessary, forming the main part.",
+      "example": "You need to learn basic English words first.",
+      "pronunciation": "BAY-sik",
+      "persian": "اساسی، پایه، ابتدایی",
+      "photo": "media/b2/2026-11-25/photos/basic.jpg",
+      "word_audio": "media/b2/2026-11-25/word-audio/basic.mp3"
+    },
+    {
+      "word": "bewitching",
+      "pos": "adjective",
+      "meaning": "So beautiful or charming it attracts you.",
+      "example": "She had a bewitching smile.",
+      "pronunciation": "bi-WICH-ing",
+      "persian": "فریبنده، دلربا",
+      "photo": "media/b2/2026-11-25/photos/bewitching.jpg",
+      "word_audio": "media/b2/2026-11-25/word-audio/bewitching.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/b2/2026-11-25/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Education and Learning",
+    "audio": "media/b2/2026-11-25/podcast.mp3",
+    "cover": null,
+    "transcript": "media/b2/2026-11-25/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Nina and the Bewitching University",
+    "audio": "media/b2/2026-11-25/shadowing.mp3",
+    "transcript": "media/b2/2026-11-25/shadowing-transcript.txt",
+    "sentence_audio": [
+      "media/b2/2026-11-25/shadowing-sentences/001.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/002.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/003.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/004.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/005.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/006.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/007.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/008.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/009.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/010.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/011.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/012.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/013.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/014.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/015.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/016.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/017.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/018.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/019.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/020.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/021.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/022.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/023.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/024.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/025.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/026.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/027.mp3",
+      "media/b2/2026-11-25/shadowing-sentences/028.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'architecture' mean?",
+      "options": [
+        "Subjects like history, literature, and languages.",
+        "Pictures, drawings, or sculptures.",
+        "First university degree after three or four years of study.",
+        "The art and science of designing buildings."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'argue' mean?",
+      "options": [
+        "To speak angrily because you disagree.",
+        "First university degree after three or four years of study.",
+        "The art and science of designing buildings.",
+        "Simple and necessary, forming the main part."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'art' mean?",
+      "options": [
+        "Pictures, drawings, or sculptures.",
+        "First university degree after three or four years of study.",
+        "The art and science of designing buildings.",
+        "Simple and necessary, forming the main part."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'arts' mean?",
+      "options": [
+        "Pictures, drawings, or sculptures.",
+        "Subjects like history, literature, and languages.",
+        "Simple and necessary, forming the main part.",
+        "To speak angrily because you disagree."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'bachelor’s degree' mean?",
+      "options": [
+        "The art and science of designing buildings.",
+        "Subjects like history, literature, and languages.",
+        "So beautiful or charming it attracts you.",
+        "First university degree after three or four years of study."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'basic' mean?",
+      "options": [
+        "Simple and necessary, forming the main part.",
+        "First university degree after three or four years of study.",
+        "To speak angrily because you disagree.",
+        "The art and science of designing buildings."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'bewitching' mean?",
+      "options": [
+        "Pictures, drawings, or sculptures.",
+        "The art and science of designing buildings.",
+        "So beautiful or charming it attracts you.",
+        "First university degree after three or four years of study."
+      ],
+      "answer": 2
+    }
+  ]
+}
