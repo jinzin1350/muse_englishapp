@@ -182,3 +182,21 @@ function qzTrackLeave(how) {
 document.addEventListener('visibilitychange', function () {
   if (document.visibilityState === 'hidden' && state.quiz) qzTrackLeave('hidden');
 });
+
+/* ---- 🔊 next to word answers in the quiz (Alireza 2026-11-26) ----
+   Persian -> English questions show four English words; a learner who has
+   forgotten how one sounds taps 🔊 beside it. Uses the lesson's own word
+   recording (same as the word card); browser speech if there is none. */
+function qzOptAudio(cur, i, word) {
+  if (cur.optAudio && cur.optAudio[i]) return cur.optAudio[i];
+  try {
+    var w = ((state.lesson && state.lesson.words) || []).find(function (x) { return x && x.word === word; });
+    return (w && w.word_audio) || '';
+  } catch (e) { return ''; }
+}
+function qzSayBtnHTML(word, audio) {
+  var label = (qzFa() ? 'شنیدن تلفظ ' : 'Hear ') + word;
+  return audio
+    ? '<button class="duo-say" data-action="play-track" data-src="' + esc(audio) + '" data-title="' + esc(word) + '" aria-label="' + esc(label) + '" title="' + esc(label) + '">🔊</button>'
+    : '<button class="duo-say" data-action="sp-say-saved" data-text="' + esc(word) + '" aria-label="' + esc(label) + '" title="' + esc(label) + '">🔊</button>';
+}

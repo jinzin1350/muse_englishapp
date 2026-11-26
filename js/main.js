@@ -12146,6 +12146,24 @@ function qzTrackLeave(how) {
 document.addEventListener('visibilitychange', function () {
   if (document.visibilityState === 'hidden' && state.quiz) qzTrackLeave('hidden');
 });
+
+/* ---- 🔊 next to word answers in the quiz (Alireza 2026-11-26) ----
+   Persian -> English questions show four English words; a learner who has
+   forgotten how one sounds taps 🔊 beside it. Uses the lesson's own word
+   recording (same as the word card); browser speech if there is none. */
+function qzOptAudio(cur, i, word) {
+  if (cur.optAudio && cur.optAudio[i]) return cur.optAudio[i];
+  try {
+    var w = ((state.lesson && state.lesson.words) || []).find(function (x) { return x && x.word === word; });
+    return (w && w.word_audio) || '';
+  } catch (e) { return ''; }
+}
+function qzSayBtnHTML(word, audio) {
+  var label = (qzFa() ? 'شنیدن تلفظ ' : 'Hear ') + word;
+  return audio
+    ? '<button class="duo-say" data-action="play-track" data-src="' + esc(audio) + '" data-title="' + esc(word) + '" aria-label="' + esc(label) + '" title="' + esc(label) + '">🔊</button>'
+    : '<button class="duo-say" data-action="sp-say-saved" data-text="' + esc(word) + '" aria-label="' + esc(label) + '" title="' + esc(label) + '">🔊</button>';
+}
 /* ---------------- podcast & shadowing library (#/podcasts, #/shadowings) ----------------
    Claude, 2026-11-25, Alireza's order: every podcast and every shadowing story,
    by level, in two separate sections. Two home banners lead in (no tabs: tabs
@@ -12651,7 +12669,8 @@ function buildDuoDeck(m) {
     if (opts.length < 2) return;
     deck.push({
       qtype: 'reverse', question: '\u00AB' + w.persian + '\u00BB به انگلیسی چی میشه؟', rtl: true,
-      options: opts, answer: opts.indexOf(w.word), kind: 'word', word: w.word
+      options: opts, answer: opts.indexOf(w.word), kind: 'word', word: w.word,
+      optAudio: opts.map(function (o) { const x = words.find(function (y) { return y.word === o; }); return (x && x.word_audio) || ''; }) /* 🔊 per option: 18b-quiz-door.js */
     });
   });
   /* LISTEN: hear the pronunciation -> pick the word */
@@ -12796,9 +12815,11 @@ function renderDuoQuizView() {
         else if (i === q.picked) { cls += ' bad'; badge = '<span class="opt-badge">✕</span>'; }
         else cls += ' dim';
       }
-      return '<button class="' + cls + '" data-action="duo-opt" data-idx="' + i + '"' +
+      const optBtn = '<button class="' + cls + '" data-action="duo-opt" data-idx="' + i + '"' +
         (q.answered ? ' disabled' : '') + '><span class="opt-key">' + letters[i] + '</span>' +
         '<span class="opt-text">' + esc(opt) + '</span>' + badge + '</button>';
+      /* Word answers get a 🔊 next to them (Alireza 2026-11-26): hear the word before picking. */
+      return cur.qtype === 'reverse' ? '<div class="duo-opt-row">' + optBtn + qzSayBtnHTML(opt, qzOptAudio(cur, i, opt)) + '</div>' : optBtn;
     }).join('') + '</div>';
   }
   html += '</div>';
@@ -15334,7 +15355,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611260023';
+var APP_VERSION = '202611260047';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
