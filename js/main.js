@@ -2552,6 +2552,12 @@ function seekWhenReady(card, fn) {
 
 /* ---------------- PWA install prompt (Android + iOS) ---------------- */
 let pwaDeferredPrompt = null;
+/* PAUSED 2026-11-26 (Alireza): no install pop-ups shown on their own until he decides.
+   Off: the intro "What can Muse English do? + Install" pop-up (12-onboarding.js),
+   the bottom install banner (#pwa-prompt) and the iPhone sheet on first launch.
+   Still on: the home "how to install" card and the install guide, which only
+   open when the learner taps them. Set to false to bring the pop-ups back. */
+const INSTALL_POPUPS_OFF = true;
 
 function pwaIsIos() {
   return /iphone|ipad|ipod/i.test(navigator.userAgent || '') && !window.MSStream;
@@ -2740,6 +2746,7 @@ function pwaTrackOpen() {
   try { const env = pwaEnv(); trackEvent('app_open', { standalone: mode === '1' ? 1 : 0, os: env.os, browser: env.browser }); } catch (e) {}
 }
 function pwaShowBanner() {
+  if (INSTALL_POPUPS_OFF) return;
   if (pwaIsIos()) return; /* iOS never gets the banner — it gets the guide sheet directly. */
   if (pwaIsStandalone() || pwaSnoozed()) return;
   // Never pop the install banner over the splash/loading screen — wait until
@@ -2757,6 +2764,7 @@ function pwaHideBanner() {
   if (el) el.classList.add('hidden');
 }
 function pwaShowIosSheet() {
+  if (INSTALL_POPUPS_OFF) return;
   if (pwaIsStandalone() || pwaSnoozed()) return;
   // Never pop the guide over the splash/loading screen — wait until
   // the first content is actually on screen.
@@ -5350,6 +5358,7 @@ function consumeIntroAfterWelcome() {
 }
 function maybeShowIntroPopup(tries) {
   try {
+    if (INSTALL_POPUPS_OFF) return; /* paused 2026-11-26, see 04-lesson-data-audio-pwa.js */
     const u = state.user;
     if (!u || u.demo || u.isAdmin) return;
     if (pwaIsStandalone()) return; /* already installed — nothing to sell */
@@ -15325,7 +15334,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611252352';
+var APP_VERSION = '202611260023';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;

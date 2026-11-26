@@ -534,6 +534,7 @@ function consumeIntroAfterWelcome() {
 }
 function maybeShowIntroPopup(tries) {
   try {
+    if (INSTALL_POPUPS_OFF) return; /* paused 2026-11-26, see 04-lesson-data-audio-pwa.js */
     const u = state.user;
     if (!u || u.demo || u.isAdmin) return;
     if (pwaIsStandalone()) return; /* already installed — nothing to sell */
