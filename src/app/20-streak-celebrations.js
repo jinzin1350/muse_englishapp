@@ -219,6 +219,9 @@ var QCEL_ZONES = {
 };
 function launchCelebration(info) {
   closeCelebration();
+  /* Lesson quizzes: the Persian "what's next" sheet (18d-next-step.js, 2026-11-26).
+     Anything else, or if it can't build, the classic two images below. */
+  if (nextStepShow(info)) return;
   celState = { info: info };
   qcelShow('a');
 }

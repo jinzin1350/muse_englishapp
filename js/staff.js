@@ -2866,7 +2866,7 @@ async function apRenderQuizFunnel(v) {
     if (since < AP_QF_START) since = AP_QF_START;
     var res = await Promise.all([
       apQfFetch('scores', 'user_id,action,ref,created_at', 'action', ['lesson_open', 'words_viewed'], since),
-      apQfFetch('app_events', 'user_id,event,meta,created_at', 'event', ['quiz_nudge', 'quiz_start', 'quiz_exit', 'quiz_completed'], since),
+      apQfFetch('app_events', 'user_id,event,meta,created_at', 'event', ['quiz_nudge', 'quiz_start', 'quiz_exit', 'quiz_completed', 'next_step'], since),
       sb.from('teachers').select('user_id'),
       sb.from('profiles').select('id').in('email', (APP_CONFIG.ADMIN_EMAILS || []))
     ]);
@@ -2882,7 +2882,7 @@ async function apRenderQuizFunnel(v) {
     var P = {};
     var pair = function (uid, date) {
       var k = uid + '|' + date;
-      return P[k] || (P[k] = { open: 0, words: 0, nudge: 0, nudgeGo: 0, nudgeLater: 0, start: 0, from: '', done: 0, exitAt: 0, exitHow: '', secs: null });
+      return P[k] || (P[k] = { open: 0, words: 0, nudge: 0, nudgeGo: 0, nudgeLater: 0, start: 0, from: '', done: 0, exitAt: 0, exitHow: '', secs: null, ns: 0, nsStep: '', nsGo: 0, nsLater: 0 });
     };
     scores.forEach(function (r) {
       if (staff[r.user_id] || !r.ref || r.created_at < since) return;
@@ -2892,6 +2892,12 @@ async function apRenderQuizFunnel(v) {
     events.forEach(function (r) {
       var m = r.meta || {};
       if (staff[r.user_id] || !m.date || r.created_at < since) return;
+      if (r.event === 'next_step') {   /* "what's next" sheet after the quiz (src/app/18d-next-step.js, 2026-11-26) */
+        if (m.after !== 'word_quiz') return;
+        var n = pair(r.user_id, m.date);
+        if (m.action === 'shown') { n.ns = 1; n.nsStep = m.step || ''; } else if (m.action === 'go') n.nsGo = 1; else if (m.action === 'later') n.nsLater = 1;
+        return;
+      }
       if (r.event !== 'quiz_nudge' && m.kind !== 'word') return;
       var p = pair(r.user_id, m.date);
       if (r.event === 'quiz_nudge') {
@@ -2903,7 +2909,12 @@ async function apRenderQuizFunnel(v) {
         if (at >= p.exitAt) { p.exitAt = at; p.exitHow = m.how || ''; }
       }
     });
-    var rows = Object.keys(P).map(function (k) { return P[k]; }).filter(function (p) { return p.open || p.words || p.start; });
+    var all = Object.keys(P).map(function (k) { return P[k]; });
+    var rows = all.filter(function (p) { return p.open || p.words || p.start; });
+    var nsRows = all.filter(function (p) { return p.ns; });
+    var nsSteps = {};
+    nsRows.forEach(function (p) { var s = nsSteps[p.nsStep] || (nsSteps[p.nsStep] = { shown: 0, go: 0 }); s.shown++; if (p.nsGo) s.go++; });
+    var nsLabel = { podcast: 'Podcast', shadowing: 'Shadowing', grammar: 'Grammar', none: 'Nothing left (all done)' };
     var c = function (f) { return rows.filter(f).length; };
     var opened = c(function (p) { return p.open; }) || 0;
     var words = c(function (p) { return p.words; });
@@ -2945,6 +2956,16 @@ async function apRenderQuizFunnel(v) {
         (quitters.length ? '<div class="ap-tablewrap"><table class="ap-table"><thead><tr><th>Last question reached</th><th>Learners</th></tr></thead><tbody>' +
           buckets.map(function (b) { return '<tr><td>' + b[0] + '</td><td>' + quitters.filter(function (p) { return b[1](p.exitAt); }).length + '</td></tr>'; }).join('') +
           '</tbody></table></div>' : '<div class="empty">Nobody has left a quiz halfway yet.</div>') +
+      '</div>' +
+      '<div class="card"><h3>After the quiz: the “what’s next” pop-up</h3>' +
+        (nsRows.length ? '<p class="muted">Shown after a learner’s first finish of a lesson’s word quiz (from 26 Nov). ' +
+          '<b>' + nsRows.filter(function (p) { return p.nsGo; }).length + '</b> of ' + nsRows.length + ' tapped Go (' + pct(nsRows.filter(function (p) { return p.nsGo; }).length, nsRows.length) + '), ' +
+          nsRows.filter(function (p) { return p.nsLater; }).length + ' tapped Later.</p>' +
+          '<div class="ap-tablewrap"><table class="ap-table"><thead><tr><th>Next step offered</th><th>Shown</th><th>Tapped Go</th></tr></thead><tbody>' +
+          Object.keys(nsSteps).sort(function (a, b) { return nsSteps[b].shown - nsSteps[a].shown; }).map(function (k) {
+            return '<tr><td>' + esc(nsLabel[k] || k) + '</td><td>' + nsSteps[k].shown + '</td><td>' + nsSteps[k].go + ' (' + pct(nsSteps[k].go, nsSteps[k].shown) + ')</td></tr>';
+          }).join('') + '</tbody></table></div>'
+        : '<div class="empty">Nobody has seen it yet.</div>') +
       '</div>' +
       '<div class="card"><h3>What started the quiz</h3>' +
         (started ? '<div class="ap-tablewrap"><table class="ap-table"><thead><tr><th>Button</th><th>Quizzes started</th></tr></thead><tbody>' +
