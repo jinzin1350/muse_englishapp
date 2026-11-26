@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-26",
+  "theme": "money & shopping",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "checkout [supermarket]",
+      "pos": "noun",
+      "meaning": "The place in a shop where you pay.",
+      "example": "The queue at the checkout was very long.",
+      "example_fa": "صف صندوق فروشگاه خیلی طولانی بود.",
+      "pronunciation": "CHEK-owt",
+      "persian": "صندوق فروشگاه",
+      "photo": "media/a2/2026-11-26/photos/checkout.jpg",
+      "word_audio": "media/a2/2026-11-26/word-audio/checkout.mp3"
+    },
+    {
+      "word": "convenient",
+      "pos": "adjective",
+      "meaning": "Easy to use or suitable for your needs.",
+      "example": "The shop is very convenient for me.",
+      "example_fa": "این فروشگاه برای من خیلی راحت و مناسب است.",
+      "pronunciation": "kun-VEE-nee-unt",
+      "persian": "راحت، مناسب",
+      "photo": "media/a2/2026-11-26/photos/convenient.jpg",
+      "word_audio": "media/a2/2026-11-26/word-audio/convenient.mp3"
+    },
+    {
+      "word": "customs",
+      "pos": "noun",
+      "meaning": "The place where bags are checked when entering a country.",
+      "example": "We went through customs at the airport.",
+      "example_fa": "ما در فرودگاه از گمرک عبور کردیم.",
+      "pronunciation": "KUS-tumz",
+      "persian": "گمرک",
+      "photo": "media/a2/2026-11-26/photos/customs.jpg",
+      "word_audio": "media/a2/2026-11-26/word-audio/customs.mp3"
+    },
+    {
+      "word": "dollar",
+      "pos": "noun",
+      "meaning": "A unit of money in many countries.",
+      "example": "This coffee costs three dollars.",
+      "example_fa": "این قهوه سه دلار قیمت دارد.",
+      "pronunciation": "DOL-uh",
+      "persian": "دلار",
+      "photo": "media/a2/2026-11-26/photos/dollar.jpg",
+      "word_audio": "media/a2/2026-11-26/word-audio/dollar.mp3"
+    },
+    {
+      "word": "earn",
+      "pos": "verb",
+      "meaning": "To get money for working.",
+      "example": "I earn money by teaching English.",
+      "example_fa": "من با تدریس انگلیسی پول درمی‌آورم.",
+      "pronunciation": "URN",
+      "persian": "کسب درآمد کردن",
+      "photo": "media/a2/2026-11-26/photos/earn.jpg",
+      "word_audio": "media/a2/2026-11-26/word-audio/earn.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-26/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Money and Shopping",
+    "audio": "media/a2/2026-11-26/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-26/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "Sara and the Convenient Shop",
+    "audio": "media/a2/2026-11-26/shadowing.mp3",
+    "transcript": "media/a2/2026-11-26/shadowing-transcript.txt",
+    "transcript_fa": "media/a2/2026-11-26/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-26/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-26/shadowing-sentences/015.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'checkout [supermarket]' mean?",
+      "options": [
+        "Easy to use or suitable for your needs.",
+        "The place where bags are checked when entering a country.",
+        "The place in a shop where you pay.",
+        "A unit of money in many countries."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'convenient' mean?",
+      "options": [
+        "A unit of money in many countries.",
+        "Easy to use or suitable for your needs.",
+        "To get money for working.",
+        "The place where bags are checked when entering a country."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'customs' mean?",
+      "options": [
+        "The place where bags are checked when entering a country.",
+        "A unit of money in many countries.",
+        "Easy to use or suitable for your needs.",
+        "The place in a shop where you pay."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'dollar' mean?",
+      "options": [
+        "A unit of money in many countries.",
+        "The place where bags are checked when entering a country.",
+        "To get money for working.",
+        "The place in a shop where you pay."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'earn' mean?",
+      "options": [
+        "Easy to use or suitable for your needs.",
+        "To get money for working.",
+        "The place in a shop where you pay.",
+        "A unit of money in many countries."
+      ],
+      "answer": 1
+    }
+  ]
+}

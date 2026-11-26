@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-26",
+  "theme": "sports & fitness",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "favourite",
+      "pos": "adjective",
+      "meaning": "Liked more than others.",
+      "example": "My favourite sport is football.",
+      "example_fa": "ورزش مورد علاقه من فوتبال است.",
+      "pronunciation": "FAY-vuh-rit",
+      "persian": "مورد علاقه",
+      "photo": "media/a1/2026-11-26/photos/favourite.jpg",
+      "word_audio": "media/a1/2026-11-26/word-audio/favourite.mp3"
+    },
+    {
+      "word": "football",
+      "pos": "noun",
+      "meaning": "A game played with a ball between two teams.",
+      "example": "Do you want to play football?",
+      "example_fa": "آیا می‌خواهی فوتبال بازی کنی؟",
+      "pronunciation": "FOOT-bawl",
+      "persian": "فوتبال",
+      "photo": "media/a1/2026-11-26/photos/football.jpg",
+      "word_audio": "media/a1/2026-11-26/word-audio/football.mp3"
+    },
+    {
+      "word": "go",
+      "pos": "verb",
+      "meaning": "Move from one place to another.",
+      "example": "I go home after work.",
+      "example_fa": "بعد از کار به خانه می‌روم.",
+      "pronunciation": "GOH",
+      "persian": "رفتن",
+      "photo": "media/a1/2026-11-26/photos/go.jpg",
+      "word_audio": "media/a1/2026-11-26/word-audio/go.mp3"
+    },
+    {
+      "word": "horse racing",
+      "pos": "noun phrase",
+      "meaning": "A sport where horses run against each other.",
+      "example": "Horse racing is popular in many countries.",
+      "example_fa": "اسب‌دوانی در بسیاری از کشورها محبوب است.",
+      "pronunciation": "HORS RAY-sing",
+      "persian": "اسب‌دوانی",
+      "photo": "media/a1/2026-11-26/photos/horse-racing.jpg",
+      "word_audio": "media/a1/2026-11-26/word-audio/horse-racing.mp3"
+    },
+    {
+      "word": "judo",
+      "pos": "noun",
+      "meaning": "A Japanese sport where you throw your opponent.",
+      "example": "My brother likes judo; he goes to class every week.",
+      "example_fa": "برادرم جودو را دوست دارد؛ او هر هفته به کلاس می‌رود.",
+      "pronunciation": "JOO-doh",
+      "persian": "جودو",
+      "photo": "media/a1/2026-11-26/photos/judo.jpg",
+      "word_audio": "media/a1/2026-11-26/word-audio/judo.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-26/pronunciation.mp3",
+  "podcast": null,
+  "shadowing": {
+    "title": "My Favourite Sports Day",
+    "audio": "media/a1/2026-11-26/shadowing.mp3",
+    "transcript": "media/a1/2026-11-26/shadowing-transcript.txt",
+    "transcript_fa": "media/a1/2026-11-26/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-26/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-26/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-26/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-26/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-26/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-26/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-26/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-26/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-26/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-26/shadowing-sentences/010.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'favourite' mean?",
+      "options": [
+        "Liked more than others.",
+        "A game played with a ball between two teams.",
+        "A sport where horses run against each other.",
+        "Move from one place to another."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'football' mean?",
+      "options": [
+        "A game played with a ball between two teams.",
+        "A sport where horses run against each other.",
+        "Liked more than others.",
+        "Move from one place to another."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'go' mean?",
+      "options": [
+        "Move from one place to another.",
+        "Liked more than others.",
+        "A game played with a ball between two teams.",
+        "A sport where horses run against each other."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'horse racing' mean?",
+      "options": [
+        "Move from one place to another.",
+        "A game played with a ball between two teams.",
+        "A sport where horses run against each other.",
+        "Liked more than others."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'judo' mean?",
+      "options": [
+        "Move from one place to another.",
+        "A Japanese sport where you throw your opponent.",
+        "A game played with a ball between two teams.",
+        "Liked more than others."
+      ],
+      "answer": 1
+    }
+  ]
+}
