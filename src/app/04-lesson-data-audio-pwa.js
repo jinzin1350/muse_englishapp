@@ -727,8 +727,12 @@ function cardAudioTitle(card) {
 /* 2026-11-18: same-origin proxy (functions/r2) — *.r2.dev is blocked in
    Iran without a VPN; museenglishapp.com/r2/ streams from the bucket. */
 var R2_MEDIA_BASE = 'https://museenglishapp.com/r2/';
+var R2_PUBLIC_BASE = 'https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/'; /* same bucket as functions/r2 UPSTREAM */
 function playableSrc(src) {
   if (src && player._blobFor === src && player._blobUrl) return player._blobUrl;
+  /* 2026-11-26: vocab-bank / saved-word recordings are stored as the bucket's public
+     *.r2.dev address (blocked in Iran): play them through the same /r2/ proxy. */
+  if (src && src.indexOf(R2_PUBLIC_BASE) === 0) return R2_MEDIA_BASE + src.slice(R2_PUBLIC_BASE.length);
   if (src && src.indexOf('media/') === 0) {
     var m = /^media\/[^/]+\/(\d{4}-\d{2}-\d{2})\//.exec(src);
     if (m && m[1] < '2026-10-10') return R2_MEDIA_BASE + encodeURI(src);

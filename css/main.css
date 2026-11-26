@@ -5542,3 +5542,4 @@ html.askm-on,html.askm-on body{overflow:hidden}
   display:flex;align-items:center;justify-content:center;box-shadow:0 2px 0 #F1E8D8;}
 .duo-say:active{transform:translateY(1px) scale(.97);}
 .duo-say:focus-visible{outline:3px solid #F0652A;outline-offset:2px;}
+.duo-say.is-empty{visibility:hidden;}

@@ -2903,8 +2903,12 @@ function cardAudioTitle(card) {
 /* 2026-11-18: same-origin proxy (functions/r2) — *.r2.dev is blocked in
    Iran without a VPN; museenglishapp.com/r2/ streams from the bucket. */
 var R2_MEDIA_BASE = 'https://museenglishapp.com/r2/';
+var R2_PUBLIC_BASE = 'https://pub-b26d6db3b0dd4beeb7e10e9ab20e4012.r2.dev/'; /* same bucket as functions/r2 UPSTREAM */
 function playableSrc(src) {
   if (src && player._blobFor === src && player._blobUrl) return player._blobUrl;
+  /* 2026-11-26: vocab-bank / saved-word recordings are stored as the bucket's public
+     *.r2.dev address (blocked in Iran): play them through the same /r2/ proxy. */
+  if (src && src.indexOf(R2_PUBLIC_BASE) === 0) return R2_MEDIA_BASE + src.slice(R2_PUBLIC_BASE.length);
   if (src && src.indexOf('media/') === 0) {
     var m = /^media\/[^/]+\/(\d{4}-\d{2}-\d{2})\//.exec(src);
     if (m && m[1] < '2026-10-10') return R2_MEDIA_BASE + encodeURI(src);
@@ -12148,21 +12152,23 @@ document.addEventListener('visibilitychange', function () {
 });
 
 /* ---- 🔊 next to word answers in the quiz (Alireza 2026-11-26) ----
-   Persian -> English questions show four English words; a learner who has
-   forgotten how one sounds taps 🔊 beside it. Uses the lesson's own word
-   recording (same as the word card); browser speech if there is none. */
+   Persian -> English questions (lesson quiz and saved-words quiz) show four
+   English words; a learner who forgot how one sounds taps 🔊 beside it.
+   Only the app's own recordings: the lesson word audio or the saved word's
+   audio (the same file as on the word card / saved list). No browser voice:
+   a word without a recording gets no button (an empty slot keeps rows aligned). */
 function qzOptAudio(cur, i, word) {
   if (cur.optAudio && cur.optAudio[i]) return cur.optAudio[i];
-  try {
-    var w = ((state.lesson && state.lesson.words) || []).find(function (x) { return x && x.word === word; });
-    return (w && w.word_audio) || '';
-  } catch (e) { return ''; }
+  var hit = function (list) {
+    var w = (list || []).find(function (x) { return x && x.word === word && x.word_audio; });
+    return w ? w.word_audio : '';
+  };
+  try { return hit(state.lesson && state.lesson.words) || hit(state.savedWords) || ''; } catch (e) { return ''; }
 }
 function qzSayBtnHTML(word, audio) {
+  if (!audio) return '<span class="duo-say is-empty" aria-hidden="true"></span>';
   var label = (qzFa() ? 'شنیدن تلفظ ' : 'Hear ') + word;
-  return audio
-    ? '<button class="duo-say" data-action="play-track" data-src="' + esc(audio) + '" data-title="' + esc(word) + '" aria-label="' + esc(label) + '" title="' + esc(label) + '">🔊</button>'
-    : '<button class="duo-say" data-action="sp-say-saved" data-text="' + esc(word) + '" aria-label="' + esc(label) + '" title="' + esc(label) + '">🔊</button>';
+  return '<button class="duo-say" data-action="play-track" data-src="' + esc(audio) + '" data-title="' + esc(word) + '" aria-label="' + esc(label) + '" title="' + esc(label) + '">🔊</button>';
 }
 /* ---------------- podcast & shadowing library (#/podcasts, #/shadowings) ----------------
    Claude, 2026-11-25, Alireza's order: every podcast and every shadowing story,
@@ -14705,7 +14711,8 @@ function buildSavedDeck(arr, pool) {
     if (opts.length < 2) return;
     deck.push({
       qtype: 'reverse', question: '«' + x.persian + '» به انگلیسی چی میشه؟', rtl: true,
-      options: opts, answer: opts.indexOf(x.word), kind: 'saved', word: x.word
+      options: opts, answer: opts.indexOf(x.word), kind: 'saved', word: x.word,
+      optAudio: opts.map(function (o) { const y = poolWords.find(function (p) { return p.word === o; }); return (y && y.word_audio) || ''; }) /* 🔊 per option: 18b-quiz-door.js */
     });
   });
   shuffleArr(words.filter(function (x) { return x.word_audio; })).slice(0, 3).forEach(function (x) {
@@ -15355,7 +15362,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611260047';
+var APP_VERSION = '202611260059';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
@@ -15841,7 +15848,7 @@ function playVocabAudio(src) {
     }
     if (_vcAudio) { try { _vcAudio.pause(); } catch (e) {} }
     _vcAudioSrc = src;
-    _vcAudio = new Audio(src);
+    _vcAudio = new Audio(playableSrc(src)); /* r2.dev -> /r2/ proxy for Iran (2026-11-26) */
     _vcAudio.play().catch(function () {});
   } catch (e) {}
 }

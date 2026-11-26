@@ -276,7 +276,7 @@ function playVocabAudio(src) {
     }
     if (_vcAudio) { try { _vcAudio.pause(); } catch (e) {} }
     _vcAudioSrc = src;
-    _vcAudio = new Audio(src);
+    _vcAudio = new Audio(playableSrc(src)); /* r2.dev -> /r2/ proxy for Iran (2026-11-26) */
     _vcAudio.play().catch(function () {});
   } catch (e) {}
 }

@@ -761,7 +761,8 @@ function buildSavedDeck(arr, pool) {
     if (opts.length < 2) return;
     deck.push({
       qtype: 'reverse', question: '«' + x.persian + '» به انگلیسی چی میشه؟', rtl: true,
-      options: opts, answer: opts.indexOf(x.word), kind: 'saved', word: x.word
+      options: opts, answer: opts.indexOf(x.word), kind: 'saved', word: x.word,
+      optAudio: opts.map(function (o) { const y = poolWords.find(function (p) { return p.word === o; }); return (y && y.word_audio) || ''; }) /* 🔊 per option: 18b-quiz-door.js */
     });
   });
   shuffleArr(words.filter(function (x) { return x.word_audio; })).slice(0, 3).forEach(function (x) {

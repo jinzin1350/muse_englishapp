@@ -184,19 +184,21 @@ document.addEventListener('visibilitychange', function () {
 });
 
 /* ---- 🔊 next to word answers in the quiz (Alireza 2026-11-26) ----
-   Persian -> English questions show four English words; a learner who has
-   forgotten how one sounds taps 🔊 beside it. Uses the lesson's own word
-   recording (same as the word card); browser speech if there is none. */
+   Persian -> English questions (lesson quiz and saved-words quiz) show four
+   English words; a learner who forgot how one sounds taps 🔊 beside it.
+   Only the app's own recordings: the lesson word audio or the saved word's
+   audio (the same file as on the word card / saved list). No browser voice:
+   a word without a recording gets no button (an empty slot keeps rows aligned). */
 function qzOptAudio(cur, i, word) {
   if (cur.optAudio && cur.optAudio[i]) return cur.optAudio[i];
-  try {
-    var w = ((state.lesson && state.lesson.words) || []).find(function (x) { return x && x.word === word; });
-    return (w && w.word_audio) || '';
-  } catch (e) { return ''; }
+  var hit = function (list) {
+    var w = (list || []).find(function (x) { return x && x.word === word && x.word_audio; });
+    return w ? w.word_audio : '';
+  };
+  try { return hit(state.lesson && state.lesson.words) || hit(state.savedWords) || ''; } catch (e) { return ''; }
 }
 function qzSayBtnHTML(word, audio) {
+  if (!audio) return '<span class="duo-say is-empty" aria-hidden="true"></span>';
   var label = (qzFa() ? 'شنیدن تلفظ ' : 'Hear ') + word;
-  return audio
-    ? '<button class="duo-say" data-action="play-track" data-src="' + esc(audio) + '" data-title="' + esc(word) + '" aria-label="' + esc(label) + '" title="' + esc(label) + '">🔊</button>'
-    : '<button class="duo-say" data-action="sp-say-saved" data-text="' + esc(word) + '" aria-label="' + esc(label) + '" title="' + esc(label) + '">🔊</button>';
+  return '<button class="duo-say" data-action="play-track" data-src="' + esc(audio) + '" data-title="' + esc(word) + '" aria-label="' + esc(label) + '" title="' + esc(label) + '">🔊</button>';
 }
