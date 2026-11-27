@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-27",
+  "theme": "travel & transport",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "by car",
+      "pos": "phrase",
+      "meaning": "Using a car as transport.",
+      "example": "We travel by car on weekends.",
+      "example_fa": "ما آخر هفته‌ها با ماشین سفر می‌کنیم.",
+      "pronunciation": "by-KAR",
+      "persian": "با ماشین",
+      "photo": "media/a2/2026-11-27/photos/by car.jpg",
+      "word_audio": "media/a2/2026-11-27/word-audio/by car.mp3"
+    },
+    {
+      "word": "by train",
+      "pos": "phrase",
+      "meaning": "Using a train as transport.",
+      "example": "He travels to London by train.",
+      "example_fa": "او با قطار به لندن سفر می‌کند.",
+      "pronunciation": "by-TRAYN",
+      "persian": "با قطار",
+      "photo": "media/a2/2026-11-27/photos/by train.jpg",
+      "word_audio": "media/a2/2026-11-27/word-audio/by train.mp3"
+    },
+    {
+      "word": "cabin crew",
+      "pos": "noun",
+      "meaning": "People who serve passengers on an aircraft.",
+      "example": "The cabin crew helped us find our seats.",
+      "example_fa": "خدمه پرواز به ما کمک کردند صندلی‌هایمان را پیدا کنیم.",
+      "pronunciation": "KAB-in KROO",
+      "persian": "خدمه پرواز",
+      "photo": "media/a2/2026-11-27/photos/cabin crew.jpg",
+      "word_audio": "media/a2/2026-11-27/word-audio/cabin crew.mp3"
+    },
+    {
+      "word": "camping",
+      "pos": "noun",
+      "meaning": "Staying outdoors in a tent.",
+      "example": "We love going camping in the summer.",
+      "example_fa": "ما عاشق این هستیم که تابستان به کمپینگ برویم.",
+      "pronunciation": "KAMP-ing",
+      "persian": "چادر زدن، کمپینگ",
+      "photo": "media/a2/2026-11-27/photos/camping.jpg",
+      "word_audio": "media/a2/2026-11-27/word-audio/camping.mp3"
+    },
+    {
+      "word": "car",
+      "pos": "noun",
+      "meaning": "A vehicle with wheels for driving on roads.",
+      "example": "My dad drives a red car.",
+      "example_fa": "پدرم یک ماشین قرمز می‌راند.",
+      "pronunciation": "KAR",
+      "persian": "ماشین، خودرو",
+      "photo": "media/a2/2026-11-27/photos/car.jpg",
+      "word_audio": "media/a2/2026-11-27/word-audio/car.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-27/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Travel and Transport",
+    "audio": "media/a2/2026-11-27/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-27/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Happy Camping Trip",
+    "audio": "media/a2/2026-11-27/shadowing.mp3",
+    "transcript": "media/a2/2026-11-27/shadowing-transcript.txt",
+    "transcript_fa": "media/a2/2026-11-27/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-27/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-27/shadowing-sentences/015.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'by car' mean?",
+      "options": [
+        "Using a train as transport.",
+        "Using a car as transport.",
+        "People who serve passengers on an aircraft.",
+        "Staying outdoors in a tent."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'by train' mean?",
+      "options": [
+        "People who serve passengers on an aircraft.",
+        "Using a car as transport.",
+        "A vehicle with wheels for driving on roads.",
+        "Using a train as transport."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'cabin crew' mean?",
+      "options": [
+        "Staying outdoors in a tent.",
+        "People who serve passengers on an aircraft.",
+        "Using a car as transport.",
+        "A vehicle with wheels for driving on roads."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'camping' mean?",
+      "options": [
+        "A vehicle with wheels for driving on roads.",
+        "Using a car as transport.",
+        "Using a train as transport.",
+        "Staying outdoors in a tent."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'car' mean?",
+      "options": [
+        "Using a car as transport.",
+        "Staying outdoors in a tent.",
+        "People who serve passengers on an aircraft.",
+        "A vehicle with wheels for driving on roads."
+      ],
+      "answer": 3
+    }
+  ]
+}

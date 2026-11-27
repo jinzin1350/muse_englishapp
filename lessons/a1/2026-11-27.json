@@ -1,0 +1,135 @@
+{
+  "date": "2026-11-27",
+  "theme": "family & relationships",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "ill",
+      "pos": "adjective",
+      "meaning": "Not feeling well, sick.",
+      "example": "She felt ill and went home from school.",
+      "example_fa": "او احساس بیماری کرد و از مدرسه به خانه رفت.",
+      "pronunciation": "ILL",
+      "persian": "بیمار، ناخوش",
+      "photo": "media/a1/2026-11-27/photos/ill.jpg",
+      "word_audio": "media/a1/2026-11-27/word-audio/ill.mp3"
+    },
+    {
+      "word": "marriage",
+      "pos": "noun",
+      "meaning": "The state of being married.",
+      "example": "Their marriage lasted for fifty years.",
+      "example_fa": "ازدواج آن‌ها پنجاه سال طول کشید.",
+      "pronunciation": "MA-rij",
+      "persian": "ازدواج",
+      "photo": "media/a1/2026-11-27/photos/marriage.jpg",
+      "word_audio": "media/a1/2026-11-27/word-audio/marriage.mp3"
+    },
+    {
+      "word": "married",
+      "pos": "adjective",
+      "meaning": "Having a husband or wife.",
+      "example": "Are you married or single?",
+      "example_fa": "آیا متأهل هستی یا مجرد؟",
+      "pronunciation": "MA-rid",
+      "persian": "متأهل",
+      "photo": "media/a1/2026-11-27/photos/married.jpg",
+      "word_audio": "media/a1/2026-11-27/word-audio/married.mp3"
+    },
+    {
+      "word": "middle-aged",
+      "pos": "adjective",
+      "meaning": "Between young and old, usually 40-60.",
+      "example": "My parents are middle-aged.",
+      "example_fa": "پدر و مادرم میانسال هستند.",
+      "pronunciation": "MID-ul-AYJD",
+      "persian": "میانسال",
+      "photo": "media/a1/2026-11-27/photos/middle-aged.jpg",
+      "word_audio": "media/a1/2026-11-27/word-audio/middle-aged.mp3"
+    },
+    {
+      "word": "nephew",
+      "pos": "noun",
+      "meaning": "The son of your brother or sister.",
+      "example": "My nephew is five years old.",
+      "example_fa": "برادرزاده‌ام پنج سال دارد.",
+      "pronunciation": "NEF-yoo",
+      "persian": "خواهرزاده، برادرزاده",
+      "photo": "media/a1/2026-11-27/photos/nephew.jpg",
+      "word_audio": "media/a1/2026-11-27/word-audio/nephew.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-27/pronunciation.mp3",
+  "podcast": null,
+  "shadowing": {
+    "title": "My Family Day",
+    "audio": "media/a1/2026-11-27/shadowing.mp3",
+    "transcript": "media/a1/2026-11-27/shadowing-transcript.txt",
+    "transcript_fa": "media/a1/2026-11-27/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-27/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-27/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-27/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-27/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-27/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-27/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-27/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-27/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-27/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-27/shadowing-sentences/010.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'ill' mean?",
+      "options": [
+        "Between young and old, usually 40-60.",
+        "The state of being married.",
+        "Not feeling well, sick.",
+        "Having a husband or wife."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'marriage' mean?",
+      "options": [
+        "Having a husband or wife.",
+        "The son of your brother or sister.",
+        "Between young and old, usually 40-60.",
+        "The state of being married."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'married' mean?",
+      "options": [
+        "Not feeling well, sick.",
+        "Having a husband or wife.",
+        "The state of being married.",
+        "The son of your brother or sister."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'middle-aged' mean?",
+      "options": [
+        "Having a husband or wife.",
+        "Between young and old, usually 40-60.",
+        "The son of your brother or sister.",
+        "The state of being married."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'nephew' mean?",
+      "options": [
+        "Between young and old, usually 40-60.",
+        "Not feeling well, sick.",
+        "The son of your brother or sister.",
+        "The state of being married."
+      ],
+      "answer": 2
+    }
+  ]
+}
