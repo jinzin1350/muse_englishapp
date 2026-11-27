@@ -5413,6 +5413,12 @@ html.askm-on,html.askm-on body{overflow:hidden}
 .askm-link{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;border:1.5px solid var(--herb);background:#fff;
   color:var(--herb-dark);font-weight:700;font-size:.86rem;line-height:1.3;font-family:inherit;cursor:pointer;text-align:start}
 .askm-link:hover{background:#EEF6F1}
+/* in a quiz, links stay put (src/app/17-ask-muse.js askmInQuiz, 2026-11-26) */
+.askm-later{display:none;white-space:nowrap;font-size:.74rem;font-weight:700;color:#8A6A4A;background:#F6EBDD;border-radius:999px;padding:1px 7px}
+.askm-inquiz .askm-later{display:inline}
+.askm-inquiz .askm-link{border-style:dashed;border-color:#C9B79F;color:#6B5B48}
+.askm-inquiz .askm-link:hover{background:#FBF6EE}
+.askm-later-note{flex-basis:100%;margin:2px 0 0 !important;font-size:.82rem;color:#7A5A3A;background:#FFF6EA;border-radius:10px;padding:7px 10px}
 .askm-dots{display:inline-flex;gap:5px;padding:4px 2px}
 .askm-dots i{width:7px;height:7px;border-radius:50%;background:#D99A6C;animation:askm-dot 1s infinite ease-in-out}
 .askm-dots i:nth-child(2){animation-delay:.15s}.askm-dots i:nth-child(3){animation-delay:.3s}

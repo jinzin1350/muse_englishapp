@@ -10192,7 +10192,10 @@ async function renderSupport(v) {
      (that is, once DEEPSEEK_API_KEY is set in Cloudflare).
    - askMuseWhyHTML(): "Ask Muse why" button under a wrong answer (word quizzes, grammar quizzes).
    - Hooks elsewhere: askMuseSync() at the end of show(); askMuseWhyHTML() in duoFooter and the two
-     grammar answer sheets; '[data-fa-skip]' keeps the Persian UI engine out of the chat. */
+     grammar answer sheets; '[data-fa-skip]' keeps the Persian UI engine out of the chat.
+   - 2026-11-26 (Alireza): links in Muse's answers never leave a running quiz (body.duo-playing).
+     There they show "after the quiz" and a tap only explains that; everywhere else they open the page.
+     Before, a tap killed the quiz (3 of 10 mid-quiz exits since Nov 25 were these links). */
 var ASKM = { enabled: null, p: null, open: false, busy: false, loaded: false, msgs: [], quota: null,
   fresh: false, links: null, linksP: null, ctx: null, lastFocus: null };
 var ASKM_HIDE = { landing: 1, signin: 1, signup: 1, preview: 1, waiting: 1, ielts: 1, 'grammar-test': 1, ptest: 1,
@@ -10339,8 +10342,11 @@ function askmLinkHTML(kind, slug) {
   else if (kind === 'support') { ico = '💬'; label = askmT('پشتیبانی', 'Support'); }
   else return '';
   return '<button type="button" class="askm-link" data-askm-go="' + kind + '" data-askm-arg="' + esc(slug || '') + '">' +
-    '<span aria-hidden="true">' + ico + '</span><span dir="auto">' + esc(label) + '</span></button>';
+    '<span aria-hidden="true">' + ico + '</span><span dir="auto">' + esc(label) + '</span>' +
+    '<small class="askm-later">' + askmT('بعد از آزمون', 'after the quiz') + '</small></button>';
 }
+/* A quiz is on screen (word, grammar, vocab…): Muse's links must not take the learner out of it. */
+function askmInQuiz() { return document.body.classList.contains('duo-playing'); }
 
 /* Muse's text -> safe HTML (escape first; then bold, bullets, app links; dir=auto per paragraph) */
 function askmFmt(text, streaming) {
@@ -10416,6 +10422,19 @@ function askmBuild() {
     var lk = e.target.closest('[data-askm-go]');
     if (lk) {
       var k = lk.getAttribute('data-askm-go'), a = lk.getAttribute('data-askm-arg') || undefined;
+      if (askmInQuiz()) {   /* stay in the quiz; say where to find it afterwards */
+        trackEvent('ask_muse_link', { kind: k, arg: a || '', held: 1 });
+        var box = lk.closest('.askm-links') || lk.parentNode;
+        if (box && !box.querySelector('.askm-later-note')) {
+          var n = document.createElement('p');
+          n.className = 'askm-later-note';
+          n.setAttribute('dir', 'auto');
+          n.textContent = askmT('الان وسط آزمونی، برای همین این صفحه باز نمیشه. آزمون رو که تموم کردی، دوباره Muse رو باز کن و همین دکمه رو بزن.',
+            'You\u2019re in the middle of a quiz, so this won\u2019t open now. When you finish the quiz, open Muse again and tap this button.');
+          box.appendChild(n);
+        }
+        return;
+      }
       trackEvent('ask_muse_link', { kind: k, arg: a || '' });
       askmClose();
       go(k, a);
@@ -10481,6 +10500,7 @@ function askMuseOpen(opts) {
   askmLabels();
   ASKM.ctx = opts.ctx || askmContext();
   ASKM.lastFocus = document.activeElement;
+  el.classList.toggle('askm-inquiz', askmInQuiz());
   el.hidden = false;
   document.documentElement.classList.add('askm-on');
   requestAnimationFrame(function () { el.classList.add('open'); });
@@ -15482,7 +15502,7 @@ function bindEvents() {
 /* Auto-refresh on new deploy (2026-10-09): APP_VERSION is baked into this bundle
    at push time. If the server's version.json is newer, reload once so the user
    never keeps running a stale cached bundle. Skipped mid-quiz. */
-var APP_VERSION = '202611262142';
+var APP_VERSION = '202611270029';
 function checkAppVersion() {
   try {
     if (!APP_VERSION || APP_VERSION === '__APP_VERSION__') return;
