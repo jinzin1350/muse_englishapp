@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "garmin-vivoactive-6",
+      "name_fa": "ساعت هوشمند گارمین ویوواکتیو ۶",
+      "name_en": "Garmin vivoactive 6 GPS Smartwatch",
+      "price_cad": 329.99,
+      "regular_cad": 439.99,
+      "discount_pct": 25,
+      "added_fa": "جمعه، ۲۷ نوامبر ۲۰۲۶",
+      "image": "img/garmin-vivoactive-6.jpg",
+      "url": "https://www.amazon.ca/dp/B0F38FCHD2?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "نمایشگر AMOLED، جی‌پی‌اس و تا ۱۱ روز شارژ برای ورزش و سلامتی"
+    },
+    {
+      "id": "apple-airpods-pro-3",
+      "name_fa": "ایرپادز پرو ۳ اپل",
+      "name_en": "Apple AirPods Pro 3",
+      "price_cad": 228.99,
+      "regular_cad": 329.0,
+      "discount_pct": 30,
+      "added_fa": "جمعه، ۲۷ نوامبر ۲۰۲۶",
+      "image": "img/apple-airpods-pro-3.jpg",
+      "url": "https://www.amazon.ca/dp/B0FQG8RW95?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "حذف نویز فعال قوی‌تر، ترجمه زنده و سنجش ضربان قلب برای تمرین"
+    },
+    {
       "id": "cuisinart-pure-indulgence-ice-30bcp1",
       "name_fa": "بستنی‌ساز کوییزینارت Pure Indulgence",
       "name_en": "Cuisinart Pure Indulgence 2-Qt Ice Cream Maker ICE-30BCP1",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "دو سبد مستقل ۴ کوارتی، پخت هم‌زمان دو غذا با پایان هم‌زمان و ۶ برنامه پخت"
-    },
-    {
-      "id": "apple-airtag-1-pack",
-      "name_fa": "ردیاب اپل ایرتگ تک‌عددی",
-      "name_en": "Apple AirTag 1 Pack",
-      "price_cad": 24.99,
-      "regular_cad": 39.0,
-      "discount_pct": 36,
-      "added_fa": "چهارشنبه، ۲۵ نوامبر ۲۰۲۶",
-      "image": "img/apple-airtag-1-pack.jpg",
-      "url": "https://www.amazon.ca/dp/B0933BVK6T?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "یافتن دقیق کلید و چمدان با شبکه Find My اپل"
-    },
-    {
-      "id": "jbl-flip-essential-2-gunmetal",
-      "name_fa": "اسپیکر بلوتوثی جی‌بی‌ال Flip Essential 2",
-      "name_en": "JBL Flip Essential 2 Portable Waterproof Bluetooth Speaker, Gun Metal",
-      "price_cad": 89.98,
-      "regular_cad": 159.98,
-      "discount_pct": 44,
-      "added_fa": "چهارشنبه، ۲۵ نوامبر ۲۰۲۶",
-      "image": "img/jbl-flip-essential-2-gunmetal.jpg",
-      "url": "https://www.amazon.ca/dp/B0C3NNGWFN?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "ضدآب، صدای قدرتمند ۲۰ واتی و تا ۱۰ ساعت پخش"
     }
   ],
-  "updated_fa": "پنجشنبه ۵ آذر"
+  "updated_fa": "جمعه ۶ آذر"
 }
