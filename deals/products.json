@@ -1,6 +1,34 @@
 {
   "products": [
     {
+      "id": "keurig-k-mini-go-gray",
+      "name_fa": "قهوه‌ساز کیوریگ K-Mini Go",
+      "name_en": "Keurig K-Mini Go Single Serve K-Cup Pod Coffee Maker, Gray",
+      "price_cad": 69.99,
+      "regular_cad": 119.99,
+      "discount_pct": 42,
+      "added_fa": "شنبه، ۲۸ نوامبر ۲۰۲۶",
+      "image": "img/keurig-k-mini-go-gray.jpg",
+      "url": "https://www.amazon.ca/dp/B0FQQTN6L7?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "کم‌جا با مخزن ۱٫۲۴ لیتری؛ ایده‌آل برای خانه و دفتر کوچک"
+    },
+    {
+      "id": "ninja-foodi-possiblecooker-pro-mc1001c",
+      "name_fa": "مولتی‌کوکر نینجا Foodi PossibleCooker PRO",
+      "name_en": "Ninja MC1001C Foodi PossibleCooker PRO 8.5 Quart Multi-Cooker",
+      "price_cad": 139.99,
+      "regular_cad": 199.99,
+      "discount_pct": 30,
+      "added_fa": "شنبه، ۲۸ نوامبر ۲۰۲۶",
+      "image": "img/ninja-foodi-possiblecooker-pro-mc1001c.jpg",
+      "url": "https://www.amazon.ca/dp/B0BDSLFXQ1?tag=alirezaebra0d-20",
+      "source": "amazon",
+      "item_no": null,
+      "blurb_fa": "هشت‌کاره ۸٫۵ کوارتی؛ جای ۱۴ وسیلهٔ آشپزخانه را می‌گیرد"
+    },
+    {
       "id": "shure-mv7-plus-podcast-microphone",
       "name_fa": "میکروفون شور MV7+",
       "name_en": "Shure MV7+ Podcast Dynamic Microphone",
@@ -83,35 +111,7 @@
       "source": "amazon",
       "item_no": null,
       "blurb_fa": "حذف نویز فعال قوی‌تر، ترجمه زنده و سنجش ضربان قلب برای تمرین"
-    },
-    {
-      "id": "cuisinart-pure-indulgence-ice-30bcp1",
-      "name_fa": "بستنی‌ساز کوییزینارت Pure Indulgence",
-      "name_en": "Cuisinart Pure Indulgence 2-Qt Ice Cream Maker ICE-30BCP1",
-      "price_cad": 94.03,
-      "regular_cad": 179.99,
-      "discount_pct": 48,
-      "added_fa": "پنجشنبه، ۲۶ نوامبر ۲۰۲۶",
-      "image": "img/cuisinart-pure-indulgence-ice-30bcp1.jpg",
-      "url": "https://www.amazon.ca/dp/B0006ONQOC?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "دو کوارت بستنی خانگی در حدود ۲۵ دقیقه، کاملاً خودکار"
-    },
-    {
-      "id": "corsair-t3-rush-fabric-gaming-chair-grey-white",
-      "name_fa": "صندلی گیمینگ کورسیر T3 RUSH",
-      "name_en": "Corsair T3 RUSH Fabric Gaming Chair (2023) Grey/White",
-      "price_cad": 299.99,
-      "regular_cad": 449.99,
-      "discount_pct": 33,
-      "added_fa": "پنجشنبه، ۲۶ نوامبر ۲۰۲۶",
-      "image": "img/corsair-t3-rush-fabric-gaming-chair-grey-white.jpg",
-      "url": "https://www.amazon.ca/dp/B0BMB5WFHW?tag=alirezaebra0d-20",
-      "source": "amazon",
-      "item_no": null,
-      "blurb_fa": "روکش پارچه‌ای تنفس‌پذیر، بالش گردن و تکیه‌گاه کمری فوم حافظه‌دار"
     }
   ],
-  "updated_fa": "جمعه ۶ آذر"
+  "updated_fa": "شنبه ۷ آذر"
 }
