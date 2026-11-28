@@ -1,0 +1,248 @@
+{
+  "date": "2026-11-28",
+  "theme": "review day",
+  "level": "a1",
+  "cefr": "A1",
+  "words": [
+    {
+      "word": "dry",
+      "pos": "adjective",
+      "meaning": "Not wet.",
+      "example": "Please hang the clothes to dry.",
+      "pronunciation": "DRY",
+      "persian": "خشک",
+      "example_fa": "لطفاً لباس‌ها را آویزان کن تا خشک شوند.",
+      "photo": "media/a1/2026-11-25/photos/dry.jpg",
+      "word_audio": "media/a1/2026-11-25/word-audio/dry.mp3"
+    },
+    {
+      "word": "judo",
+      "pos": "noun",
+      "meaning": "A Japanese sport where you throw your opponent.",
+      "example": "My brother likes judo; he goes to class every week.",
+      "example_fa": "برادرم جودو را دوست دارد؛ او هر هفته به کلاس می‌رود.",
+      "pronunciation": "JOO-doh",
+      "persian": "جودو",
+      "photo": "media/a1/2026-11-26/photos/judo.jpg",
+      "word_audio": "media/a1/2026-11-26/word-audio/judo.mp3"
+    },
+    {
+      "word": "favourite",
+      "pos": "adjective",
+      "meaning": "Liked more than others.",
+      "example": "My favourite sport is football.",
+      "example_fa": "ورزش مورد علاقه من فوتبال است.",
+      "pronunciation": "FAY-vuh-rit",
+      "persian": "مورد علاقه",
+      "photo": "media/a1/2026-11-26/photos/favourite.jpg",
+      "word_audio": "media/a1/2026-11-26/word-audio/favourite.mp3"
+    },
+    {
+      "word": "ill",
+      "pos": "adjective",
+      "meaning": "Not feeling well, sick.",
+      "example": "She felt ill and went home from school.",
+      "example_fa": "او احساس بیماری کرد و از مدرسه به خانه رفت.",
+      "pronunciation": "ILL",
+      "persian": "بیمار، ناخوش",
+      "photo": "media/a1/2026-11-27/photos/ill.jpg",
+      "word_audio": "media/a1/2026-11-27/word-audio/ill.mp3"
+    },
+    {
+      "word": "fog",
+      "pos": "noun",
+      "meaning": "Thick cloud close to the ground.",
+      "example": "The fog made it hard to see.",
+      "pronunciation": "FOG",
+      "persian": "مه",
+      "example_fa": "مه دیدن را سخت کرد.",
+      "photo": "media/a1/2026-11-25/photos/fog.jpg",
+      "word_audio": "media/a1/2026-11-25/word-audio/fog.mp3"
+    },
+    {
+      "word": "horse racing",
+      "pos": "noun phrase",
+      "meaning": "A sport where horses run against each other.",
+      "example": "Horse racing is popular in many countries.",
+      "example_fa": "اسب‌دوانی در بسیاری از کشورها محبوب است.",
+      "pronunciation": "HORS RAY-sing",
+      "persian": "اسب‌دوانی",
+      "photo": "media/a1/2026-11-26/photos/horse-racing.jpg",
+      "word_audio": "media/a1/2026-11-26/word-audio/horse-racing.mp3"
+    },
+    {
+      "word": "foggy",
+      "pos": "adjective",
+      "meaning": "Full of fog; unclear.",
+      "example": "It was a cold and foggy morning.",
+      "pronunciation": "FOG-ee",
+      "persian": "مه‌آلود",
+      "example_fa": "صبح سرد و مه‌آلودی بود.",
+      "photo": "media/a1/2026-11-25/photos/foggy.jpg",
+      "word_audio": "media/a1/2026-11-25/word-audio/foggy.mp3"
+    },
+    {
+      "word": "hurricane",
+      "pos": "noun",
+      "meaning": "A very strong storm with powerful winds and rain.",
+      "example": "The hurricane caused a lot of damage.",
+      "pronunciation": "HUR-ih-kun",
+      "persian": "طوفان، گردباد",
+      "example_fa": "طوفان خسارت زیادی به بار آورد.",
+      "photo": "media/a1/2026-11-25/photos/hurricane.jpg",
+      "word_audio": "media/a1/2026-11-25/word-audio/hurricane.mp3"
+    },
+    {
+      "word": "middle-aged",
+      "pos": "adjective",
+      "meaning": "Between young and old, usually 40-60.",
+      "example": "My parents are middle-aged.",
+      "example_fa": "پدر و مادرم میانسال هستند.",
+      "pronunciation": "MID-ul-AYJD",
+      "persian": "میانسال",
+      "photo": "media/a1/2026-11-27/photos/middle-aged.jpg",
+      "word_audio": "media/a1/2026-11-27/word-audio/middle-aged.mp3"
+    },
+    {
+      "word": "nephew",
+      "pos": "noun",
+      "meaning": "The son of your brother or sister.",
+      "example": "My nephew is five years old.",
+      "example_fa": "برادرزاده‌ام پنج سال دارد.",
+      "pronunciation": "NEF-yoo",
+      "persian": "خواهرزاده، برادرزاده",
+      "photo": "media/a1/2026-11-27/photos/nephew.jpg",
+      "word_audio": "media/a1/2026-11-27/word-audio/nephew.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a1/2026-11-28/pronunciation.mp3",
+  "podcast": null,
+  "shadowing": {
+    "title": "A Foggy Day with My Nephew",
+    "audio": "media/a1/2026-11-28/shadowing.mp3",
+    "transcript": "media/a1/2026-11-28/shadowing-transcript.txt",
+    "transcript_fa": "media/a1/2026-11-28/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a1/2026-11-28/shadowing-sentences/001.mp3",
+      "media/a1/2026-11-28/shadowing-sentences/002.mp3",
+      "media/a1/2026-11-28/shadowing-sentences/003.mp3",
+      "media/a1/2026-11-28/shadowing-sentences/004.mp3",
+      "media/a1/2026-11-28/shadowing-sentences/005.mp3",
+      "media/a1/2026-11-28/shadowing-sentences/006.mp3",
+      "media/a1/2026-11-28/shadowing-sentences/007.mp3",
+      "media/a1/2026-11-28/shadowing-sentences/008.mp3",
+      "media/a1/2026-11-28/shadowing-sentences/009.mp3",
+      "media/a1/2026-11-28/shadowing-sentences/010.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'dry' mean?",
+      "options": [
+        "Between young and old, usually 40-60.",
+        "Not wet.",
+        "Thick cloud close to the ground.",
+        "A sport where horses run against each other."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'judo' mean?",
+      "options": [
+        "Not feeling well, sick.",
+        "Full of fog; unclear.",
+        "A sport where horses run against each other.",
+        "A Japanese sport where you throw your opponent."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'favourite' mean?",
+      "options": [
+        "A sport where horses run against each other.",
+        "Thick cloud close to the ground.",
+        "Not wet.",
+        "Liked more than others."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'ill' mean?",
+      "options": [
+        "Thick cloud close to the ground.",
+        "Not feeling well, sick.",
+        "The son of your brother or sister.",
+        "A Japanese sport where you throw your opponent."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'fog' mean?",
+      "options": [
+        "Full of fog; unclear.",
+        "A very strong storm with powerful winds and rain.",
+        "Thick cloud close to the ground.",
+        "Liked more than others."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'horse racing' mean?",
+      "options": [
+        "A Japanese sport where you throw your opponent.",
+        "Not feeling well, sick.",
+        "Full of fog; unclear.",
+        "A sport where horses run against each other."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'foggy' mean?",
+      "options": [
+        "A sport where horses run against each other.",
+        "Full of fog; unclear.",
+        "Thick cloud close to the ground.",
+        "Not feeling well, sick."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'hurricane' mean?",
+      "options": [
+        "A very strong storm with powerful winds and rain.",
+        "Between young and old, usually 40-60.",
+        "Thick cloud close to the ground.",
+        "Not wet."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'middle-aged' mean?",
+      "options": [
+        "Full of fog; unclear.",
+        "Not wet.",
+        "Between young and old, usually 40-60.",
+        "A sport where horses run against each other."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'nephew' mean?",
+      "options": [
+        "A sport where horses run against each other.",
+        "A very strong storm with powerful winds and rain.",
+        "The son of your brother or sister.",
+        "Liked more than others."
+      ],
+      "answer": 2
+    }
+  ],
+  "review": true,
+  "review_of": [
+    "2026-11-25",
+    "2026-11-26",
+    "2026-11-27"
+  ],
+  "review_window_words": 15,
+  "review_sampled": 10
+}

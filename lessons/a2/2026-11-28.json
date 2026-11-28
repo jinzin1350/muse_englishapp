@@ -1,0 +1,258 @@
+{
+  "date": "2026-11-28",
+  "theme": "review day",
+  "level": "a2",
+  "cefr": "A2",
+  "words": [
+    {
+      "word": "dentist",
+      "pos": "noun",
+      "meaning": "A doctor who takes care of teeth.",
+      "example": "I have an appointment with the dentist.",
+      "pronunciation": "DEN-tist",
+      "persian": "دندانپزشک",
+      "example_fa": "با دندانپزشک قرار ملاقات دارم.",
+      "photo": "media/a2/2026-11-25/photos/dentist.jpg",
+      "word_audio": "media/a2/2026-11-25/word-audio/dentist.mp3"
+    },
+    {
+      "word": "earn",
+      "pos": "verb",
+      "meaning": "To get money for working.",
+      "example": "I earn money by teaching English.",
+      "example_fa": "من با تدریس انگلیسی پول درمی‌آورم.",
+      "pronunciation": "URN",
+      "persian": "کسب درآمد کردن",
+      "photo": "media/a2/2026-11-26/photos/earn.jpg",
+      "word_audio": "media/a2/2026-11-26/word-audio/earn.mp3"
+    },
+    {
+      "word": "cold",
+      "pos": "noun",
+      "meaning": "A common illness that makes you sneeze and cough.",
+      "example": "I have a cold and feel tired.",
+      "pronunciation": "KOHLD",
+      "persian": "سرماخوردگی",
+      "example_fa": "سرماخوردگی دارم و احساس خستگی می‌کنم.",
+      "photo": "media/a2/2026-11-25/photos/cold.jpg",
+      "word_audio": "media/a2/2026-11-25/word-audio/cold.mp3"
+    },
+    {
+      "word": "checkout [supermarket]",
+      "pos": "noun",
+      "meaning": "The place in a shop where you pay.",
+      "example": "The queue at the checkout was very long.",
+      "example_fa": "صف صندوق فروشگاه خیلی طولانی بود.",
+      "pronunciation": "CHEK-owt",
+      "persian": "صندوق فروشگاه",
+      "photo": "media/a2/2026-11-26/photos/checkout.jpg",
+      "word_audio": "media/a2/2026-11-26/word-audio/checkout.mp3"
+    },
+    {
+      "word": "dollar",
+      "pos": "noun",
+      "meaning": "A unit of money in many countries.",
+      "example": "This coffee costs three dollars.",
+      "example_fa": "این قهوه سه دلار قیمت دارد.",
+      "pronunciation": "DOL-uh",
+      "persian": "دلار",
+      "photo": "media/a2/2026-11-26/photos/dollar.jpg",
+      "word_audio": "media/a2/2026-11-26/word-audio/dollar.mp3"
+    },
+    {
+      "word": "cut [injure]",
+      "pos": "verb",
+      "meaning": "To make an opening in skin with something sharp.",
+      "example": "Be careful not to cut your finger.",
+      "pronunciation": "KUT",
+      "persian": "بریدن، زخمی کردن",
+      "example_fa": "مراقب باش انگشتت را نبری.",
+      "photo": "media/a2/2026-11-25/photos/cut.jpg",
+      "word_audio": "media/a2/2026-11-25/word-audio/cut.mp3"
+    },
+    {
+      "word": "cabin crew",
+      "pos": "noun",
+      "meaning": "People who serve passengers on an aircraft.",
+      "example": "The cabin crew helped us find our seats.",
+      "example_fa": "خدمه پرواز به ما کمک کردند صندلی‌هایمان را پیدا کنیم.",
+      "pronunciation": "KAB-in KROO",
+      "persian": "خدمه پرواز",
+      "photo": "media/a2/2026-11-27/photos/cabin crew.jpg",
+      "word_audio": "media/a2/2026-11-27/word-audio/cabin crew.mp3"
+    },
+    {
+      "word": "comb your hair",
+      "pos": "phrase",
+      "meaning": "To make your hair neat with a comb.",
+      "example": "Please comb your hair before school.",
+      "pronunciation": "KOHM yor HAIR",
+      "persian": "موهای خود را شانه کردن",
+      "example_fa": "لطفاً قبل از مدرسه موهایت را شانه کن.",
+      "photo": "media/a2/2026-11-25/photos/comb-your-hair.jpg",
+      "word_audio": "media/a2/2026-11-25/word-audio/comb-your-hair.mp3"
+    },
+    {
+      "word": "camping",
+      "pos": "noun",
+      "meaning": "Staying outdoors in a tent.",
+      "example": "We love going camping in the summer.",
+      "example_fa": "ما عاشق این هستیم که تابستان به کمپینگ برویم.",
+      "pronunciation": "KAMP-ing",
+      "persian": "چادر زدن، کمپینگ",
+      "photo": "media/a2/2026-11-27/photos/camping.jpg",
+      "word_audio": "media/a2/2026-11-27/word-audio/camping.mp3"
+    },
+    {
+      "word": "cry",
+      "pos": "verb",
+      "meaning": "To produce tears from your eyes, usually from sadness.",
+      "example": "The baby started to cry loudly.",
+      "pronunciation": "KRY",
+      "persian": "گریه کردن",
+      "example_fa": "نوزاد شروع کرد به بلند گریه کردن.",
+      "photo": "media/a2/2026-11-25/photos/cry.jpg",
+      "word_audio": "media/a2/2026-11-25/word-audio/cry.mp3"
+    }
+  ],
+  "pronunciation_audio": "media/a2/2026-11-28/pronunciation.mp3",
+  "podcast": {
+    "title": "Muse English: Review Day",
+    "audio": "media/a2/2026-11-28/podcast.mp3",
+    "cover": null,
+    "transcript": "media/a2/2026-11-28/podcast-transcript.txt"
+  },
+  "shadowing": {
+    "title": "A Busy Day of Travel and Health",
+    "audio": "media/a2/2026-11-28/shadowing.mp3",
+    "transcript": "media/a2/2026-11-28/shadowing-transcript.txt",
+    "transcript_fa": "media/a2/2026-11-28/shadowing-transcript-fa.txt",
+    "sentence_audio": [
+      "media/a2/2026-11-28/shadowing-sentences/001.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/002.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/003.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/004.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/005.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/006.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/007.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/008.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/009.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/010.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/011.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/012.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/013.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/014.mp3",
+      "media/a2/2026-11-28/shadowing-sentences/015.mp3"
+    ]
+  },
+  "quiz": [
+    {
+      "question": "What does 'dentist' mean?",
+      "options": [
+        "The place in a shop where you pay.",
+        "A doctor who takes care of teeth.",
+        "To make your hair neat with a comb.",
+        "To produce tears from your eyes, usually from sadness."
+      ],
+      "answer": 1
+    },
+    {
+      "question": "What does 'earn' mean?",
+      "options": [
+        "To get money for working.",
+        "Staying outdoors in a tent.",
+        "To make an opening in skin with something sharp.",
+        "A unit of money in many countries."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cold' mean?",
+      "options": [
+        "To produce tears from your eyes, usually from sadness.",
+        "To get money for working.",
+        "A doctor who takes care of teeth.",
+        "A common illness that makes you sneeze and cough."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'checkout [supermarket]' mean?",
+      "options": [
+        "To produce tears from your eyes, usually from sadness.",
+        "To get money for working.",
+        "The place in a shop where you pay.",
+        "To make your hair neat with a comb."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'dollar' mean?",
+      "options": [
+        "A unit of money in many countries.",
+        "A common illness that makes you sneeze and cough.",
+        "The place in a shop where you pay.",
+        "To make your hair neat with a comb."
+      ],
+      "answer": 0
+    },
+    {
+      "question": "What does 'cut [injure]' mean?",
+      "options": [
+        "A doctor who takes care of teeth.",
+        "To produce tears from your eyes, usually from sadness.",
+        "To make an opening in skin with something sharp.",
+        "The place in a shop where you pay."
+      ],
+      "answer": 2
+    },
+    {
+      "question": "What does 'cabin crew' mean?",
+      "options": [
+        "A doctor who takes care of teeth.",
+        "To get money for working.",
+        "To produce tears from your eyes, usually from sadness.",
+        "People who serve passengers on an aircraft."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'comb your hair' mean?",
+      "options": [
+        "A unit of money in many countries.",
+        "The place in a shop where you pay.",
+        "To produce tears from your eyes, usually from sadness.",
+        "To make your hair neat with a comb."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'camping' mean?",
+      "options": [
+        "To produce tears from your eyes, usually from sadness.",
+        "To make your hair neat with a comb.",
+        "A unit of money in many countries.",
+        "Staying outdoors in a tent."
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does 'cry' mean?",
+      "options": [
+        "To make an opening in skin with something sharp.",
+        "To get money for working.",
+        "To produce tears from your eyes, usually from sadness.",
+        "To make your hair neat with a comb."
+      ],
+      "answer": 2
+    }
+  ],
+  "review": true,
+  "review_of": [
+    "2026-11-25",
+    "2026-11-26",
+    "2026-11-27"
+  ],
+  "review_window_words": 15,
+  "review_sampled": 10
+}

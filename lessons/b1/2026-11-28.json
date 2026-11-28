@@ -1,0 +1,263 @@
+{
+ "date": "2026-11-28",
+ "theme": "review day",
+ "level": "b1",
+ "cefr": "B1",
+ "words": [
+  {
+   "word": "love v",
+   "pos": "verb",
+   "meaning": "feel a strong liking or affection for someone/something.",
+   "example": "I love spending time with my friends.",
+   "example_fa": "من عاشق وقت گذراندن با دوستانم هستم.",
+   "pronunciation": "LUV",
+   "persian": "دوست داشتن، عاشق بودن",
+   "photo": "media/b1/2026-11-27/photos/love-v.jpg",
+   "word_audio": "media/b1/2026-11-27/word-audio/love-v.mp3"
+  },
+  {
+   "word": "me neither",
+   "pos": "phrase",
+   "meaning": "I don't either (used for negative statements).",
+   "example": "\"I don't like coffee.\" \"Me neither.\"",
+   "example_fa": "«من قهوه دوست ندارم.» «من هم همین‌طور.»",
+   "pronunciation": "mee NY-thuh",
+   "persian": "من هم همینطور (منفی)",
+   "photo": "media/b1/2026-11-27/photos/me-neither.jpg",
+   "word_audio": "media/b1/2026-11-27/word-audio/me-neither.mp3"
+  },
+  {
+   "word": "although",
+   "pos": "conjunction",
+   "meaning": "Despite the fact that.",
+   "example": "Although it was raining, we went for a walk.",
+   "pronunciation": "awl-THOH",
+   "persian": "اگرچه، با اینکه",
+   "example_fa": "اگرچه باران می‌بارید، به پیاده‌روی رفتیم.",
+   "photo": "media/b1/2026-11-25/photos/although.jpg",
+   "word_audio": "media/b1/2026-11-25/word-audio/although.mp3"
+  },
+  {
+   "word": "among",
+   "pos": "preposition",
+   "meaning": "In the middle of several things or people.",
+   "example": "The house is hidden among the trees.",
+   "example_fa": "خانه در میان درختان پنهان است.",
+   "pronunciation": "uh-MUNG",
+   "persian": "در میان، بین",
+   "photo": "media/b1/2026-11-26/photos/among.jpg",
+   "word_audio": "media/b1/2026-11-26/word-audio/among.mp3"
+  },
+  {
+   "word": "annoying",
+   "pos": "adjective",
+   "meaning": "Making you feel a little angry or irritated.",
+   "example": "That buzzing sound is very annoying.",
+   "example_fa": "آن صدای وزوز بسیار آزاردهنده است.",
+   "pronunciation": "uh-NOY-ing",
+   "persian": "آزاردهنده، کلافه‌کننده",
+   "photo": "media/b1/2026-11-26/photos/annoying.jpg",
+   "word_audio": "media/b1/2026-11-26/word-audio/annoying.mp3"
+  },
+  {
+   "word": "interests",
+   "pos": "noun (plural)",
+   "meaning": "Hobby or activities you enjoy doing.",
+   "example": "My interests include reading and hiking.",
+   "example_fa": "علایق من شامل کتاب خواندن و پیاده‌روی در طبیعت است.",
+   "pronunciation": "IN-trusts",
+   "persian": "علایق، سرگرمی‌ها",
+   "photo": "media/b1/2026-11-27/photos/interests.jpg",
+   "word_audio": "media/b1/2026-11-27/word-audio/interests.mp3"
+  },
+  {
+   "word": "interested in",
+   "pos": "adjective + preposition",
+   "meaning": "Wanting to know or learn about something.",
+   "example": "I am interested in learning new languages.",
+   "example_fa": "من به یادگیری زبان‌های جدید علاقه‌مند هستم.",
+   "pronunciation": "IN-truh-stid in",
+   "persian": "علاقه‌مند به",
+   "photo": "media/b1/2026-11-27/photos/interested-in.jpg",
+   "word_audio": "media/b1/2026-11-27/word-audio/interested-in.mp3"
+  },
+  {
+   "word": "angrily",
+   "pos": "adverb",
+   "meaning": "In an angry way.",
+   "example": "She shouted angrily at her brother.",
+   "example_fa": "او با عصبانیت سر برادرش فریاد زد.",
+   "pronunciation": "ANG-gruh-lee",
+   "persian": "با عصبانیت",
+   "photo": "media/b1/2026-11-26/photos/angrily.jpg",
+   "word_audio": "media/b1/2026-11-26/word-audio/angrily.mp3"
+  },
+  {
+   "word": "agree [say yes]",
+   "pos": "verb",
+   "meaning": "to say yes to a suggestion",
+   "example": "She agreed to help me with my homework.",
+   "pronunciation": "uh-GREE",
+   "persian": "قبول کردن، موافقت کردن",
+   "example_fa": "او قبول کرد در انجام تکالیفم به من کمک کند.",
+   "photo": "media/b1/2026-11-25/photos/agree.jpg",
+   "word_audio": "media/b1/2026-11-25/word-audio/agree.mp3"
+  },
+  {
+   "word": "also",
+   "pos": "adverb",
+   "meaning": "In addition; too.",
+   "example": "I like pizza, and I also like pasta.",
+   "pronunciation": "AWL-soh",
+   "persian": "همچنین، نیز",
+   "example_fa": "من پیتزا دوست دارم و همچنین پاستا را هم دوست دارم.",
+   "photo": "media/b1/2026-11-25/photos/also.jpg",
+   "word_audio": "media/b1/2026-11-25/word-audio/also.mp3"
+  }
+ ],
+ "pronunciation_audio": "media/b1/2026-11-28/pronunciation.mp3",
+ "podcast": {
+  "title": "Muse English: Review Day Among Friends",
+  "audio": "media/b1/2026-11-28/podcast.mp3",
+  "cover": null,
+  "transcript": "media/b1/2026-11-28/podcast-transcript.txt"
+ },
+ "shadowing": {
+  "title": "Among Friends: A Review Shadowing Story",
+  "audio": "media/b1/2026-11-28/shadowing.mp3",
+  "transcript": "media/b1/2026-11-28/shadowing-transcript.txt",
+  "transcript_fa": "media/b1/2026-11-28/shadowing-transcript-fa.txt",
+  "sentence_audio": [
+   "media/b1/2026-11-28/shadowing-sentences/001.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/002.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/003.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/004.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/005.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/006.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/007.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/008.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/009.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/010.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/011.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/012.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/013.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/014.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/015.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/016.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/017.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/018.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/019.mp3",
+   "media/b1/2026-11-28/shadowing-sentences/020.mp3"
+  ]
+ },
+ "quiz": [
+  {
+   "question": "What does 'love v' mean?",
+   "options": [
+    "I don't either (used for negative statements).",
+    "Wanting to know or learn about something.",
+    "feel a strong liking or affection for someone/something.",
+    "In addition; too."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'me neither' mean?",
+   "options": [
+    "I don't either (used for negative statements).",
+    "Despite the fact that.",
+    "In the middle of several things or people.",
+    "Making you feel a little angry or irritated."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'although' mean?",
+   "options": [
+    "to say yes to a suggestion",
+    "feel a strong liking or affection for someone/something.",
+    "Despite the fact that.",
+    "In addition; too."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'among' mean?",
+   "options": [
+    "Hobby or activities you enjoy doing.",
+    "to say yes to a suggestion",
+    "feel a strong liking or affection for someone/something.",
+    "In the middle of several things or people."
+   ],
+   "answer": 3
+  },
+  {
+   "question": "What does 'annoying' mean?",
+   "options": [
+    "Making you feel a little angry or irritated.",
+    "In addition; too.",
+    "Wanting to know or learn about something.",
+    "to say yes to a suggestion"
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'interests' mean?",
+   "options": [
+    "In addition; too.",
+    "Hobby or activities you enjoy doing.",
+    "I don't either (used for negative statements).",
+    "Despite the fact that."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'interested in' mean?",
+   "options": [
+    "Hobby or activities you enjoy doing.",
+    "In the middle of several things or people.",
+    "Wanting to know or learn about something.",
+    "In addition; too."
+   ],
+   "answer": 2
+  },
+  {
+   "question": "What does 'angrily' mean?",
+   "options": [
+    "In an angry way.",
+    "feel a strong liking or affection for someone/something.",
+    "to say yes to a suggestion",
+    "In the middle of several things or people."
+   ],
+   "answer": 0
+  },
+  {
+   "question": "What does 'agree [say yes]' mean?",
+   "options": [
+    "Despite the fact that.",
+    "to say yes to a suggestion",
+    "In the middle of several things or people.",
+    "In addition; too."
+   ],
+   "answer": 1
+  },
+  {
+   "question": "What does 'also' mean?",
+   "options": [
+    "Wanting to know or learn about something.",
+    "In the middle of several things or people.",
+    "In addition; too.",
+    "feel a strong liking or affection for someone/something."
+   ],
+   "answer": 2
+  }
+ ],
+ "review": true,
+ "review_of": [
+  "2026-11-25",
+  "2026-11-26",
+  "2026-11-27"
+ ],
+ "review_window_words": 21,
+ "review_sampled": 10
+}
